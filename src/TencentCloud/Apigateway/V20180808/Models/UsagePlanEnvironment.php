@@ -18,7 +18,7 @@ namespace TencentCloud\Apigateway\V20180808\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 使用计划绑定详情
+ * 使用计划绑定环境详情。
  *
  * @method string getServiceId() 获取绑定的服务唯一 ID。
 注意：此字段可能返回 null，表示取不到有效值。

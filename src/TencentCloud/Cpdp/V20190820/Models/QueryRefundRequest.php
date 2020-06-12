@@ -30,6 +30,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMidasSecretId(string $MidasSecretId) 设置聚鑫分配的安全ID
  * @method string getMidasSignature() 获取按照聚鑫安全密钥计算的签名
  * @method void setMidasSignature(string $MidasSignature) 设置按照聚鑫安全密钥计算的签名
+ * @method string getMidasEnvironment() 获取环境名:
+release: 现网环境
+sandbox: 沙箱环境
+development: 开发环境
+缺省: release
+ * @method void setMidasEnvironment(string $MidasEnvironment) 设置环境名:
+release: 现网环境
+sandbox: 沙箱环境
+development: 开发环境
+缺省: release
  */
 class QueryRefundRequest extends AbstractModel
 {
@@ -59,11 +69,25 @@ class QueryRefundRequest extends AbstractModel
     public $MidasSignature;
 
     /**
+     * @var string 环境名:
+release: 现网环境
+sandbox: 沙箱环境
+development: 开发环境
+缺省: release
+     */
+    public $MidasEnvironment;
+
+    /**
      * @param string $UserId 用户ID，长度不小于5位，仅支持字母和数字的组合。
      * @param string $RefundId 退款订单号，仅支持数字、字母、下划线（_）、横杠字符（-）、点（.）的组合。
      * @param string $MidasAppId 聚鑫分配的支付主MidasAppId
      * @param string $MidasSecretId 聚鑫分配的安全ID
      * @param string $MidasSignature 按照聚鑫安全密钥计算的签名
+     * @param string $MidasEnvironment 环境名:
+release: 现网环境
+sandbox: 沙箱环境
+development: 开发环境
+缺省: release
      */
     function __construct()
     {
@@ -96,6 +120,10 @@ class QueryRefundRequest extends AbstractModel
 
         if (array_key_exists("MidasSignature",$param) and $param["MidasSignature"] !== null) {
             $this->MidasSignature = $param["MidasSignature"];
+        }
+
+        if (array_key_exists("MidasEnvironment",$param) and $param["MidasEnvironment"] !== null) {
+            $this->MidasEnvironment = $param["MidasEnvironment"];
         }
     }
 }

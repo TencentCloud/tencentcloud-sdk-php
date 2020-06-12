@@ -44,6 +44,16 @@ type=by_user根据用户id 查订单 。
  * @method void setOutTradeNo(string $OutTradeNo) 设置业务订单号，OutTradeNo与 TransactionId不能同时为 空，都传优先使用 OutTradeNo
  * @method string getTransactionId() 获取聚鑫订单号，OutTradeNo与 TransactionId不能同时为 空，都传优先使用 OutTradeNo
  * @method void setTransactionId(string $TransactionId) 设置聚鑫订单号，OutTradeNo与 TransactionId不能同时为 空，都传优先使用 OutTradeNo
+ * @method string getMidasEnvironment() 获取环境名:
+release: 现网环境
+sandbox: 沙箱环境
+development: 开发环境
+缺省: release
+ * @method void setMidasEnvironment(string $MidasEnvironment) 设置环境名:
+release: 现网环境
+sandbox: 沙箱环境
+development: 开发环境
+缺省: release
  */
 class QueryOrderRequest extends AbstractModel
 {
@@ -104,6 +114,15 @@ type=by_user根据用户id 查订单 。
     public $TransactionId;
 
     /**
+     * @var string 环境名:
+release: 现网环境
+sandbox: 沙箱环境
+development: 开发环境
+缺省: release
+     */
+    public $MidasEnvironment;
+
+    /**
      * @param string $MidasAppId 聚鑫分配的支付主 MidasAppId
      * @param string $UserId 用户ID，长度不小于5位， 仅支持字母和数字的组合
      * @param string $Type type=by_order根据订单号 查订单；
@@ -116,6 +135,11 @@ type=by_user根据用户id 查订单 。
      * @param string $EndTime 查询结束时间，Unix时间戳。Type=by_order时必填
      * @param string $OutTradeNo 业务订单号，OutTradeNo与 TransactionId不能同时为 空，都传优先使用 OutTradeNo
      * @param string $TransactionId 聚鑫订单号，OutTradeNo与 TransactionId不能同时为 空，都传优先使用 OutTradeNo
+     * @param string $MidasEnvironment 环境名:
+release: 现网环境
+sandbox: 沙箱环境
+development: 开发环境
+缺省: release
      */
     function __construct()
     {
@@ -172,6 +196,10 @@ type=by_user根据用户id 查订单 。
 
         if (array_key_exists("TransactionId",$param) and $param["TransactionId"] !== null) {
             $this->TransactionId = $param["TransactionId"];
+        }
+
+        if (array_key_exists("MidasEnvironment",$param) and $param["MidasEnvironment"] !== null) {
+            $this->MidasEnvironment = $param["MidasEnvironment"];
         }
     }
 }

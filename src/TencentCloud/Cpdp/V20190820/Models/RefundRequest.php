@@ -42,6 +42,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPlatformRefundAmt(integer $PlatformRefundAmt) 设置平台应收金额，单位：分
  * @method array getSubOrderRefundList() 获取支持多个子订单批量退款单 个子订单退款支持传 SubOutTradeNo ，也支持传 SubOutTradeNoList ，都传的时候以 SubOutTradeNoList 为准。  如果传了子单退款细节，外 部不需要再传退款金额，平 台应退，商户应退金额，我 们可以直接根据子单退款算出来总和。
  * @method void setSubOrderRefundList(array $SubOrderRefundList) 设置支持多个子订单批量退款单 个子订单退款支持传 SubOutTradeNo ，也支持传 SubOutTradeNoList ，都传的时候以 SubOutTradeNoList 为准。  如果传了子单退款细节，外 部不需要再传退款金额，平 台应退，商户应退金额，我 们可以直接根据子单退款算出来总和。
+ * @method string getMidasEnvironment() 获取环境名:
+release: 现网环境
+sandbox: 沙箱环境
+development: 开发环境
+缺省: release
+ * @method void setMidasEnvironment(string $MidasEnvironment) 设置环境名:
+release: 现网环境
+sandbox: 沙箱环境
+development: 开发环境
+缺省: release
  */
 class RefundRequest extends AbstractModel
 {
@@ -101,6 +111,15 @@ class RefundRequest extends AbstractModel
     public $SubOrderRefundList;
 
     /**
+     * @var string 环境名:
+release: 现网环境
+sandbox: 沙箱环境
+development: 开发环境
+缺省: release
+     */
+    public $MidasEnvironment;
+
+    /**
      * @param string $UserId 用户ID，长度不小于5位， 仅支持字母和数字的组合
      * @param string $RefundId 退款订单号，仅支持数字、 字母、下划线（_）、横杠字 符（-）、点（.）的组合
      * @param string $MidasAppId 聚鑫分配的支付主MidasAppId
@@ -112,6 +131,11 @@ class RefundRequest extends AbstractModel
      * @param string $TransactionId 调用下单接口获取的聚鑫交 易订单。  OutTradeNo ,TransactionId 二选一,不能都为空,优先使用 OutTradeNo
      * @param integer $PlatformRefundAmt 平台应收金额，单位：分
      * @param array $SubOrderRefundList 支持多个子订单批量退款单 个子订单退款支持传 SubOutTradeNo ，也支持传 SubOutTradeNoList ，都传的时候以 SubOutTradeNoList 为准。  如果传了子单退款细节，外 部不需要再传退款金额，平 台应退，商户应退金额，我 们可以直接根据子单退款算出来总和。
+     * @param string $MidasEnvironment 环境名:
+release: 现网环境
+sandbox: 沙箱环境
+development: 开发环境
+缺省: release
      */
     function __construct()
     {
@@ -173,6 +197,10 @@ class RefundRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->SubOrderRefundList, $obj);
             }
+        }
+
+        if (array_key_exists("MidasEnvironment",$param) and $param["MidasEnvironment"] !== null) {
+            $this->MidasEnvironment = $param["MidasEnvironment"];
         }
     }
 }

@@ -68,6 +68,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWxOpenId(string $WxOpenId) 设置微信公众号/小程序支付时为必选，需要传微信下的openid
  * @method string getWxSubOpenId() 获取在服务商模式下，微信公众号/小程序支付时wx_sub_openid和wx_openid二选一
  * @method void setWxSubOpenId(string $WxSubOpenId) 设置在服务商模式下，微信公众号/小程序支付时wx_sub_openid和wx_openid二选一
+ * @method string getMidasEnvironment() 获取环境名:
+release: 现网环境
+sandbox: 沙箱环境
+development: 开发环境
+缺省: release
+ * @method void setMidasEnvironment(string $MidasEnvironment) 设置环境名:
+release: 现网环境
+sandbox: 沙箱环境
+development: 开发环境
+缺省: release
  */
 class UnifiedOrderRequest extends AbstractModel
 {
@@ -184,6 +194,15 @@ class UnifiedOrderRequest extends AbstractModel
     public $WxSubOpenId;
 
     /**
+     * @var string 环境名:
+release: 现网环境
+sandbox: 沙箱环境
+development: 开发环境
+缺省: release
+     */
+    public $MidasEnvironment;
+
+    /**
      * @param string $CurrencyType ISO 货币代码，CNY
      * @param string $MidasAppId 聚鑫分配的支付主MidasAppId
      * @param string $OutTradeNo 支付订单号，仅支持数字、字母、下划线（_）、横杠字符（-）、点（.）的组合
@@ -208,6 +227,11 @@ class UnifiedOrderRequest extends AbstractModel
      * @param integer $TotalPlatformIncome 平台应收金额，单位：分
      * @param string $WxOpenId 微信公众号/小程序支付时为必选，需要传微信下的openid
      * @param string $WxSubOpenId 在服务商模式下，微信公众号/小程序支付时wx_sub_openid和wx_openid二选一
+     * @param string $MidasEnvironment 环境名:
+release: 现网环境
+sandbox: 沙箱环境
+development: 开发环境
+缺省: release
      */
     function __construct()
     {
@@ -313,6 +337,10 @@ class UnifiedOrderRequest extends AbstractModel
 
         if (array_key_exists("WxSubOpenId",$param) and $param["WxSubOpenId"] !== null) {
             $this->WxSubOpenId = $param["WxSubOpenId"];
+        }
+
+        if (array_key_exists("MidasEnvironment",$param) and $param["MidasEnvironment"] !== null) {
+            $this->MidasEnvironment = $param["MidasEnvironment"];
         }
     }
 }

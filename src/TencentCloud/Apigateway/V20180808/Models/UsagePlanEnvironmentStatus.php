@@ -18,7 +18,7 @@ namespace TencentCloud\Apigateway\V20180808\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 使用计划绑定详情
+ * 使用计划绑定环境的列表。
  *
  * @method integer getTotalCount() 获取使用计划绑定的服务的环境数。
 注意：此字段可能返回 null，表示取不到有效值。

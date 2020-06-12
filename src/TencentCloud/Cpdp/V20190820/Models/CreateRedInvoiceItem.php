@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrderSn(string $OrderSn) 设置业务开票号
  * @method string getRedSerialNo() 获取红字信息表编码
  * @method void setRedSerialNo(string $RedSerialNo) 设置红字信息表编码
+ * @method string getStoreNo() 获取门店编号
+ * @method void setStoreNo(string $StoreNo) 设置门店编号
  */
 class CreateRedInvoiceItem extends AbstractModel
 {
@@ -52,10 +54,16 @@ class CreateRedInvoiceItem extends AbstractModel
     public $RedSerialNo;
 
     /**
+     * @var string 门店编号
+     */
+    public $StoreNo;
+
+    /**
      * @param string $OrderId 订单号
      * @param string $CallbackUrl 发票结果回传地址
      * @param string $OrderSn 业务开票号
      * @param string $RedSerialNo 红字信息表编码
+     * @param string $StoreNo 门店编号
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class CreateRedInvoiceItem extends AbstractModel
 
         if (array_key_exists("RedSerialNo",$param) and $param["RedSerialNo"] !== null) {
             $this->RedSerialNo = $param["RedSerialNo"];
+        }
+
+        if (array_key_exists("StoreNo",$param) and $param["StoreNo"] !== null) {
+            $this->StoreNo = $param["StoreNo"];
         }
     }
 }

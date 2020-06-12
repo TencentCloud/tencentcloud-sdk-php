@@ -96,6 +96,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProfile(string $Profile) 设置接入环境。沙箱环境填sandbox。
  * @method integer getUndoPart() 获取撤销部分商品。0-不撤销，1-撤销
  * @method void setUndoPart(integer $UndoPart) 设置撤销部分商品。0-不撤销，1-撤销
+ * @method string getOrderDate() 获取订单下单时间（格式 YYYMMDD）
+ * @method void setOrderDate(string $OrderDate) 设置订单下单时间（格式 YYYMMDD）
+ * @method integer getDiscount() 获取订单级别（单位为分）
+ * @method void setDiscount(integer $Discount) 设置订单级别（单位为分）
+ * @method string getStoreNo() 获取门店编码
+ * @method void setStoreNo(string $StoreNo) 设置门店编码
  */
 class CreateInvoiceRequest extends AbstractModel
 {
@@ -266,6 +272,21 @@ class CreateInvoiceRequest extends AbstractModel
     public $UndoPart;
 
     /**
+     * @var string 订单下单时间（格式 YYYMMDD）
+     */
+    public $OrderDate;
+
+    /**
+     * @var integer 订单级别（单位为分）
+     */
+    public $Discount;
+
+    /**
+     * @var string 门店编码
+     */
+    public $StoreNo;
+
+    /**
      * @param integer $InvoicePlatformId 开票平台ID。0：高灯
      * @param integer $TitleType 抬头类型：1：个人/政府事业单位；2：企业
      * @param string $BuyerTitle 购方名称
@@ -304,6 +325,9 @@ class CreateInvoiceRequest extends AbstractModel
      * @param array $Items 项目商品明细
      * @param string $Profile 接入环境。沙箱环境填sandbox。
      * @param integer $UndoPart 撤销部分商品。0-不撤销，1-撤销
+     * @param string $OrderDate 订单下单时间（格式 YYYMMDD）
+     * @param integer $Discount 订单级别（单位为分）
+     * @param string $StoreNo 门店编码
      */
     function __construct()
     {
@@ -449,6 +473,18 @@ class CreateInvoiceRequest extends AbstractModel
 
         if (array_key_exists("UndoPart",$param) and $param["UndoPart"] !== null) {
             $this->UndoPart = $param["UndoPart"];
+        }
+
+        if (array_key_exists("OrderDate",$param) and $param["OrderDate"] !== null) {
+            $this->OrderDate = $param["OrderDate"];
+        }
+
+        if (array_key_exists("Discount",$param) and $param["Discount"] !== null) {
+            $this->Discount = $param["Discount"];
+        }
+
+        if (array_key_exists("StoreNo",$param) and $param["StoreNo"] !== null) {
+            $this->StoreNo = $param["StoreNo"];
         }
     }
 }

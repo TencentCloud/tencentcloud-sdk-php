@@ -32,6 +32,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOutTradeNo(string $OutTradeNo) 设置业务订单号，OutTradeNo ， TransactionId二选一，不能都为空,优先使用 OutTradeNo
  * @method string getTransactionId() 获取聚鑫订单号，OutTradeNo ， TransactionId二选一，不能都为空,优先使用 OutTradeNo
  * @method void setTransactionId(string $TransactionId) 设置聚鑫订单号，OutTradeNo ， TransactionId二选一，不能都为空,优先使用 OutTradeNo
+ * @method string getMidasEnvironment() 获取环境名:
+release: 现网环境
+sandbox: 沙箱环境
+development: 开发环境
+缺省: release
+ * @method void setMidasEnvironment(string $MidasEnvironment) 设置环境名:
+release: 现网环境
+sandbox: 沙箱环境
+development: 开发环境
+缺省: release
  */
 class CloseOrderRequest extends AbstractModel
 {
@@ -66,12 +76,26 @@ class CloseOrderRequest extends AbstractModel
     public $TransactionId;
 
     /**
+     * @var string 环境名:
+release: 现网环境
+sandbox: 沙箱环境
+development: 开发环境
+缺省: release
+     */
+    public $MidasEnvironment;
+
+    /**
      * @param string $MidasAppId 聚鑫分配的支付主MidasAppId
      * @param string $UserId 用户ID，长度不小于5位， 仅支持字母和数字的组合
      * @param string $MidasSecretId 聚鑫分配的安全ID
      * @param string $MidasSignature 按照聚鑫安全密钥计算的签名
      * @param string $OutTradeNo 业务订单号，OutTradeNo ， TransactionId二选一，不能都为空,优先使用 OutTradeNo
      * @param string $TransactionId 聚鑫订单号，OutTradeNo ， TransactionId二选一，不能都为空,优先使用 OutTradeNo
+     * @param string $MidasEnvironment 环境名:
+release: 现网环境
+sandbox: 沙箱环境
+development: 开发环境
+缺省: release
      */
     function __construct()
     {
@@ -108,6 +132,10 @@ class CloseOrderRequest extends AbstractModel
 
         if (array_key_exists("TransactionId",$param) and $param["TransactionId"] !== null) {
             $this->TransactionId = $param["TransactionId"];
+        }
+
+        if (array_key_exists("MidasEnvironment",$param) and $param["MidasEnvironment"] !== null) {
+            $this->MidasEnvironment = $param["MidasEnvironment"];
         }
     }
 }

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getSecretName() 获取用户自定义密钥名称。
  * @method void setSecretName(string $SecretName) 设置用户自定义密钥名称。
- * @method string getAccessKeyType() 获取密钥类型，支持 auto 和 manunal（自定义密钥），默认为 auto。
- * @method void setAccessKeyType(string $AccessKeyType) 设置密钥类型，支持 auto 和 manunal（自定义密钥），默认为 auto。
+ * @method string getAccessKeyType() 获取密钥类型，支持 auto 和 manual（自定义密钥），默认为 auto。
+ * @method void setAccessKeyType(string $AccessKeyType) 设置密钥类型，支持 auto 和 manual（自定义密钥），默认为 auto。
  * @method string getAccessKeyId() 获取用户自定义密钥 ID，AccessKeyType 为 manual 时必传。长度为5 - 50字符，由字母、数字、英文下划线组成。
  * @method void setAccessKeyId(string $AccessKeyId) 设置用户自定义密钥 ID，AccessKeyType 为 manual 时必传。长度为5 - 50字符，由字母、数字、英文下划线组成。
  * @method string getAccessKeySecret() 获取用户自定义密钥 Key，AccessKeyType 为 manual 时必传。长度为10 - 50字符，由字母、数字、英文下划线。
@@ -37,7 +37,7 @@ class CreateApiKeyRequest extends AbstractModel
     public $SecretName;
 
     /**
-     * @var string 密钥类型，支持 auto 和 manunal（自定义密钥），默认为 auto。
+     * @var string 密钥类型，支持 auto 和 manual（自定义密钥），默认为 auto。
      */
     public $AccessKeyType;
 
@@ -53,7 +53,7 @@ class CreateApiKeyRequest extends AbstractModel
 
     /**
      * @param string $SecretName 用户自定义密钥名称。
-     * @param string $AccessKeyType 密钥类型，支持 auto 和 manunal（自定义密钥），默认为 auto。
+     * @param string $AccessKeyType 密钥类型，支持 auto 和 manual（自定义密钥），默认为 auto。
      * @param string $AccessKeyId 用户自定义密钥 ID，AccessKeyType 为 manual 时必传。长度为5 - 50字符，由字母、数字、英文下划线组成。
      * @param string $AccessKeySecret 用户自定义密钥 Key，AccessKeyType 为 manual 时必传。长度为10 - 50字符，由字母、数字、英文下划线。
      */

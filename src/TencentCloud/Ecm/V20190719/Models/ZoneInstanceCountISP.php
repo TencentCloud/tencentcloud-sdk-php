@@ -24,8 +24,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZone(string $Zone) 设置创建实例的可用区。
  * @method integer getInstanceCount() 获取在当前可用区欲创建的实例数目。
  * @method void setInstanceCount(integer $InstanceCount) 设置在当前可用区欲创建的实例数目。
- * @method string getISP() 获取运营商。
- * @method void setISP(string $ISP) 设置运营商。
+ * @method string getISP() 获取运营商，CTCC电信，CUCC联通，CMCC移动，多个运营商用英文分号连接";"。
+ * @method void setISP(string $ISP) 设置运营商，CTCC电信，CUCC联通，CMCC移动，多个运营商用英文分号连接";"。
+ * @method string getVpcId() 获取指定私有网络编号，SubnetId与VpcId必须同时指定或不指定
+ * @method void setVpcId(string $VpcId) 设置指定私有网络编号，SubnetId与VpcId必须同时指定或不指定
+ * @method string getSubnetId() 获取指定子网编号，SubnetId与VpcId必须同时指定或不指定
+ * @method void setSubnetId(string $SubnetId) 设置指定子网编号，SubnetId与VpcId必须同时指定或不指定
+ * @method array getPrivateIpAddresses() 获取指定主网卡内网IP。条件：SubnetId与VpcId必须同时指定，并且IP数量与InstanceCount相同，多IP主机副网卡内网IP在相同子网内通过DHCP获取。
+ * @method void setPrivateIpAddresses(array $PrivateIpAddresses) 设置指定主网卡内网IP。条件：SubnetId与VpcId必须同时指定，并且IP数量与InstanceCount相同，多IP主机副网卡内网IP在相同子网内通过DHCP获取。
  */
 class ZoneInstanceCountISP extends AbstractModel
 {
@@ -40,14 +46,32 @@ class ZoneInstanceCountISP extends AbstractModel
     public $InstanceCount;
 
     /**
-     * @var string 运营商。
+     * @var string 运营商，CTCC电信，CUCC联通，CMCC移动，多个运营商用英文分号连接";"。
      */
     public $ISP;
 
     /**
+     * @var string 指定私有网络编号，SubnetId与VpcId必须同时指定或不指定
+     */
+    public $VpcId;
+
+    /**
+     * @var string 指定子网编号，SubnetId与VpcId必须同时指定或不指定
+     */
+    public $SubnetId;
+
+    /**
+     * @var array 指定主网卡内网IP。条件：SubnetId与VpcId必须同时指定，并且IP数量与InstanceCount相同，多IP主机副网卡内网IP在相同子网内通过DHCP获取。
+     */
+    public $PrivateIpAddresses;
+
+    /**
      * @param string $Zone 创建实例的可用区。
      * @param integer $InstanceCount 在当前可用区欲创建的实例数目。
-     * @param string $ISP 运营商。
+     * @param string $ISP 运营商，CTCC电信，CUCC联通，CMCC移动，多个运营商用英文分号连接";"。
+     * @param string $VpcId 指定私有网络编号，SubnetId与VpcId必须同时指定或不指定
+     * @param string $SubnetId 指定子网编号，SubnetId与VpcId必须同时指定或不指定
+     * @param array $PrivateIpAddresses 指定主网卡内网IP。条件：SubnetId与VpcId必须同时指定，并且IP数量与InstanceCount相同，多IP主机副网卡内网IP在相同子网内通过DHCP获取。
      */
     function __construct()
     {
@@ -72,6 +96,18 @@ class ZoneInstanceCountISP extends AbstractModel
 
         if (array_key_exists("ISP",$param) and $param["ISP"] !== null) {
             $this->ISP = $param["ISP"];
+        }
+
+        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
+            $this->VpcId = $param["VpcId"];
+        }
+
+        if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
+            $this->SubnetId = $param["SubnetId"];
+        }
+
+        if (array_key_exists("PrivateIpAddresses",$param) and $param["PrivateIpAddresses"] !== null) {
+            $this->PrivateIpAddresses = $param["PrivateIpAddresses"];
         }
     }
 }

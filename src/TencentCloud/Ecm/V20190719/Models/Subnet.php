@@ -48,6 +48,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTagSet(array $TagSet) 设置标签键值对。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getZone() 获取所在区域
+ * @method void setZone(string $Zone) 设置所在区域
  */
 class Subnet extends AbstractModel
 {
@@ -118,6 +120,11 @@ class Subnet extends AbstractModel
     public $TagSet;
 
     /**
+     * @var string 所在区域
+     */
+    public $Zone;
+
+    /**
      * @param string $VpcId VPC实例ID。
      * @param string $SubnetId 子网实例ID，例如：subnet-bthucmmy。
      * @param string $SubnetName 子网名称。
@@ -132,6 +139,7 @@ class Subnet extends AbstractModel
      * @param boolean $IsRemoteVpcSnat 是否为 SNAT 地址池子网。
      * @param array $TagSet 标签键值对。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Zone 所在区域
      */
     function __construct()
     {
@@ -201,6 +209,10 @@ class Subnet extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->TagSet, $obj);
             }
+        }
+
+        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
+            $this->Zone = $param["Zone"];
         }
     }
 }

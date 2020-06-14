@@ -15,12 +15,19 @@
     
     unix环境在命令行中执行以下命令安装。
     > curl -sS https://getcomposer.org/installer | php
-2. 使用 `composer require tencentcloud/tencentcloud-sdk-php` 添加依赖。
+    > sudo mv composer.phar /usr/local/bin/composer
+2. 建议中国大陆地区的用户设置腾讯云镜像源：`composer config -g repos.packagist composer https://mirrors.tencent.com/composer/`，执行命令 `composer require tencentcloud/tencentcloud-sdk-php` 添加依赖。
 3. 在代码中添加以下引用代码。注意：如下仅为示例，composer 会在项目根目录下生成 vendor 目录，`/path/to/`为项目根目录的实际绝对路径，如果是在当前目录执行，可以省略绝对路径。
     > require '/path/to/vendor/autoload.php';
 
 # 示例
-以查询可用区接口为例:
+
+推荐使用 [API 3.0 Explorer](https://console.cloud.tencent.com/api/explorer)，提供在线调用、签名验证、SDK 代码生成和快速检索接口等能力，能显著降低使用云 API 3.0 和 SDK 的难度。
+
+还可以参考 SDK 仓库中 [examples](https://github.com/TencentCloud/tencentcloud-sdk-php/tree/master/examples) 目录中的示例，展示了更多的用法。
+
+下面以查询可用区接口为例:
+
 ```php
 <?php
 require 'vendor/autoload.php';
@@ -49,10 +56,6 @@ catch(TencentCloudSDKException $e) {
     echo $e;
 }
 ```
-
-## 更多示例
-
-您可以在 [github examples](https://github.com/tencentcloud/tencentcloud-sdk-php/tree/master/examples) 目录下找到更详细的示例。
 
 # 常见问题
 

@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTotalPage(integer $TotalPage) 设置总页数。
  * @method array getDataInfoList() 获取省份，运营商，国家或地区汇总数据列表。
  * @method void setDataInfoList(array $DataInfoList) 设置省份，运营商，国家或地区汇总数据列表。
- * @method float getAvgFluxPerSecond() 获取平均带宽。
- * @method void setAvgFluxPerSecond(float $AvgFluxPerSecond) 设置平均带宽。
+ * @method float getAvgFluxPerSecond() 获取下载速度，单位：MB/s，计算方式：总流量/总时长。
+ * @method void setAvgFluxPerSecond(float $AvgFluxPerSecond) 设置下载速度，单位：MB/s，计算方式：总流量/总时长。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -84,7 +84,7 @@ class DescribeProIspPlaySumInfoListResponse extends AbstractModel
     public $DataInfoList;
 
     /**
-     * @var float 平均带宽。
+     * @var float 下载速度，单位：MB/s，计算方式：总流量/总时长。
      */
     public $AvgFluxPerSecond;
 
@@ -102,7 +102,7 @@ class DescribeProIspPlaySumInfoListResponse extends AbstractModel
      * @param integer $TotalNum 总记录数。
      * @param integer $TotalPage 总页数。
      * @param array $DataInfoList 省份，运营商，国家或地区汇总数据列表。
-     * @param float $AvgFluxPerSecond 平均带宽。
+     * @param float $AvgFluxPerSecond 下载速度，单位：MB/s，计算方式：总流量/总时长。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

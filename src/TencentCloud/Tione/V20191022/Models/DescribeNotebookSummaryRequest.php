@@ -18,24 +18,16 @@ namespace TencentCloud\Tione\V20191022\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeNotebookInstance请求参数结构体
+ * DescribeNotebookSummary请求参数结构体
  *
- * @method string getNotebookInstanceName() 获取Notebook实例名称
-规则：^[a-zA-Z0-9](-*[a-zA-Z0-9])*$
- * @method void setNotebookInstanceName(string $NotebookInstanceName) 设置Notebook实例名称
-规则：^[a-zA-Z0-9](-*[a-zA-Z0-9])*$
+
  */
-class DescribeNotebookInstanceRequest extends AbstractModel
+class DescribeNotebookSummaryRequest extends AbstractModel
 {
-    /**
-     * @var string Notebook实例名称
-规则：^[a-zA-Z0-9](-*[a-zA-Z0-9])*$
-     */
-    public $NotebookInstanceName;
+
 
     /**
-     * @param string $NotebookInstanceName Notebook实例名称
-规则：^[a-zA-Z0-9](-*[a-zA-Z0-9])*$
+
      */
     function __construct()
     {
@@ -50,8 +42,6 @@ class DescribeNotebookInstanceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("NotebookInstanceName",$param) and $param["NotebookInstanceName"] !== null) {
-            $this->NotebookInstanceName = $param["NotebookInstanceName"];
-        }
+
     }
 }

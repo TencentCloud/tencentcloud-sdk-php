@@ -21,7 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * UpdateNotebookInstance请求参数结构体
  *
  * @method string getNotebookInstanceName() 获取Notebook实例名称
+规则：^[a-zA-Z0-9](-*[a-zA-Z0-9])*$
  * @method void setNotebookInstanceName(string $NotebookInstanceName) 设置Notebook实例名称
+规则：^[a-zA-Z0-9](-*[a-zA-Z0-9])*$
  * @method string getRoleArn() 获取角色的资源描述
  * @method void setRoleArn(string $RoleArn) 设置角色的资源描述
  * @method string getRootAccess() 获取Root访问权限
@@ -33,13 +35,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getLifecycleScriptsName() 获取notebook生命周期脚本名称
  * @method void setLifecycleScriptsName(string $LifecycleScriptsName) 设置notebook生命周期脚本名称
  * @method boolean getDisassociateLifecycleScript() 获取是否解绑生命周期脚本，默认 false。
-如果本来就没有绑定脚本，则忽略此参数；
-如果本来有绑定脚本，此参数为 true 则解绑；
-如果本来有绑定脚本，此参数为 false，则需要额外填入 LifecycleScriptsName
+该值为true时，LifecycleScriptsName将被忽略
  * @method void setDisassociateLifecycleScript(boolean $DisassociateLifecycleScript) 设置是否解绑生命周期脚本，默认 false。
-如果本来就没有绑定脚本，则忽略此参数；
-如果本来有绑定脚本，此参数为 true 则解绑；
-如果本来有绑定脚本，此参数为 false，则需要额外填入 LifecycleScriptsName
+该值为true时，LifecycleScriptsName将被忽略
  * @method string getDefaultCodeRepository() 获取默认存储库名称
 可以是已创建的存储库名称或者已https://开头的公共git库
  * @method void setDefaultCodeRepository(string $DefaultCodeRepository) 设置默认存储库名称
@@ -58,11 +56,20 @@ use TencentCloud\Common\AbstractModel;
 该值为true时，AdditionalCodeRepositories将被忽略
  * @method string getClsAccess() 获取是否开启CLS日志服务，可取值Enabled/Disabled
  * @method void setClsAccess(string $ClsAccess) 设置是否开启CLS日志服务，可取值Enabled/Disabled
+ * @method string getAutoStopping() 获取自动停止，可取值Enabled/Disabled
+取值为Disabled的时候StoppingCondition将被忽略
+取值为Enabled的时候读取StoppingCondition作为自动停止的配置
+ * @method void setAutoStopping(string $AutoStopping) 设置自动停止，可取值Enabled/Disabled
+取值为Disabled的时候StoppingCondition将被忽略
+取值为Enabled的时候读取StoppingCondition作为自动停止的配置
+ * @method StoppingCondition getStoppingCondition() 获取自动停止配置，只在AutoStopping为Enabled的时候生效
+ * @method void setStoppingCondition(StoppingCondition $StoppingCondition) 设置自动停止配置，只在AutoStopping为Enabled的时候生效
  */
 class UpdateNotebookInstanceRequest extends AbstractModel
 {
     /**
      * @var string Notebook实例名称
+规则：^[a-zA-Z0-9](-*[a-zA-Z0-9])*$
      */
     public $NotebookInstanceName;
 
@@ -93,9 +100,7 @@ class UpdateNotebookInstanceRequest extends AbstractModel
 
     /**
      * @var boolean 是否解绑生命周期脚本，默认 false。
-如果本来就没有绑定脚本，则忽略此参数；
-如果本来有绑定脚本，此参数为 true 则解绑；
-如果本来有绑定脚本，此参数为 false，则需要额外填入 LifecycleScriptsName
+该值为true时，LifecycleScriptsName将被忽略
      */
     public $DisassociateLifecycleScript;
 
@@ -129,16 +134,27 @@ class UpdateNotebookInstanceRequest extends AbstractModel
     public $ClsAccess;
 
     /**
+     * @var string 自动停止，可取值Enabled/Disabled
+取值为Disabled的时候StoppingCondition将被忽略
+取值为Enabled的时候读取StoppingCondition作为自动停止的配置
+     */
+    public $AutoStopping;
+
+    /**
+     * @var StoppingCondition 自动停止配置，只在AutoStopping为Enabled的时候生效
+     */
+    public $StoppingCondition;
+
+    /**
      * @param string $NotebookInstanceName Notebook实例名称
+规则：^[a-zA-Z0-9](-*[a-zA-Z0-9])*$
      * @param string $RoleArn 角色的资源描述
      * @param string $RootAccess Root访问权限
      * @param integer $VolumeSizeInGB 数据卷大小(GB)
      * @param string $InstanceType 算力资源类型
      * @param string $LifecycleScriptsName notebook生命周期脚本名称
      * @param boolean $DisassociateLifecycleScript 是否解绑生命周期脚本，默认 false。
-如果本来就没有绑定脚本，则忽略此参数；
-如果本来有绑定脚本，此参数为 true 则解绑；
-如果本来有绑定脚本，此参数为 false，则需要额外填入 LifecycleScriptsName
+该值为true时，LifecycleScriptsName将被忽略
      * @param string $DefaultCodeRepository 默认存储库名称
 可以是已创建的存储库名称或者已https://开头的公共git库
      * @param array $AdditionalCodeRepositories 其他存储库列表
@@ -148,6 +164,10 @@ class UpdateNotebookInstanceRequest extends AbstractModel
      * @param boolean $DisassociateAdditionalCodeRepositories 是否取消关联其他存储库，默认false
 该值为true时，AdditionalCodeRepositories将被忽略
      * @param string $ClsAccess 是否开启CLS日志服务，可取值Enabled/Disabled
+     * @param string $AutoStopping 自动停止，可取值Enabled/Disabled
+取值为Disabled的时候StoppingCondition将被忽略
+取值为Enabled的时候读取StoppingCondition作为自动停止的配置
+     * @param StoppingCondition $StoppingCondition 自动停止配置，只在AutoStopping为Enabled的时候生效
      */
     function __construct()
     {
@@ -208,6 +228,15 @@ class UpdateNotebookInstanceRequest extends AbstractModel
 
         if (array_key_exists("ClsAccess",$param) and $param["ClsAccess"] !== null) {
             $this->ClsAccess = $param["ClsAccess"];
+        }
+
+        if (array_key_exists("AutoStopping",$param) and $param["AutoStopping"] !== null) {
+            $this->AutoStopping = $param["AutoStopping"];
+        }
+
+        if (array_key_exists("StoppingCondition",$param) and $param["StoppingCondition"] !== null) {
+            $this->StoppingCondition = new StoppingCondition();
+            $this->StoppingCondition->deserialize($param["StoppingCondition"]);
         }
     }
 }

@@ -36,12 +36,18 @@ search-by-name - String - 是否必填：否 -（过滤条件）按照名称检�
 lifecycle-name - String - 是否必填：否 -（过滤条件）按照生命周期脚本名称过滤。
 default-code-repo-name - String - 是否必填：否 -（过滤条件）按照默认存储库名称过滤。
 additional-code-repo-name - String - 是否必填：否 -（过滤条件）按照其他存储库名称过滤。
+billing-status - String - 是否必填：否 - （过滤条件）按照计费状态过滤，可取以下值
+   StorageOnly：仅存储计费的实例
+   Computing：计算和存储都计费的实例
  * @method void setFilters(array $Filters) 设置过滤条件。
 instance-name - String - 是否必填：否 -（过滤条件）按照名称过滤。
 search-by-name - String - 是否必填：否 -（过滤条件）按照名称检索，模糊匹配。
 lifecycle-name - String - 是否必填：否 -（过滤条件）按照生命周期脚本名称过滤。
 default-code-repo-name - String - 是否必填：否 -（过滤条件）按照默认存储库名称过滤。
 additional-code-repo-name - String - 是否必填：否 -（过滤条件）按照其他存储库名称过滤。
+billing-status - String - 是否必填：否 - （过滤条件）按照计费状态过滤，可取以下值
+   StorageOnly：仅存储计费的实例
+   Computing：计算和存储都计费的实例
  * @method string getSortBy() 获取【废弃字段】排序字段
  * @method void setSortBy(string $SortBy) 设置【废弃字段】排序字段
  */
@@ -71,6 +77,9 @@ search-by-name - String - 是否必填：否 -（过滤条件）按照名称检�
 lifecycle-name - String - 是否必填：否 -（过滤条件）按照生命周期脚本名称过滤。
 default-code-repo-name - String - 是否必填：否 -（过滤条件）按照默认存储库名称过滤。
 additional-code-repo-name - String - 是否必填：否 -（过滤条件）按照其他存储库名称过滤。
+billing-status - String - 是否必填：否 - （过滤条件）按照计费状态过滤，可取以下值
+   StorageOnly：仅存储计费的实例
+   Computing：计算和存储都计费的实例
      */
     public $Filters;
 
@@ -91,6 +100,9 @@ search-by-name - String - 是否必填：否 -（过滤条件）按照名称检�
 lifecycle-name - String - 是否必填：否 -（过滤条件）按照生命周期脚本名称过滤。
 default-code-repo-name - String - 是否必填：否 -（过滤条件）按照默认存储库名称过滤。
 additional-code-repo-name - String - 是否必填：否 -（过滤条件）按照其他存储库名称过滤。
+billing-status - String - 是否必填：否 - （过滤条件）按照计费状态过滤，可取以下值
+   StorageOnly：仅存储计费的实例
+   Computing：计算和存储都计费的实例
      * @param string $SortBy 【废弃字段】排序字段
      */
     function __construct()

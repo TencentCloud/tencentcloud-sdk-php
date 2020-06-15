@@ -63,8 +63,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLogUrl(string $LogUrl) 设置Notebook实例日志链接
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNotebookInstanceStatus() 获取Notebook实例状态
+
+Pending: 创建中
+Inservice: 运行中
+Stopping: 停止中
+Stopped: 已停止
+Failed: 失败
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNotebookInstanceStatus(string $NotebookInstanceStatus) 设置Notebook实例状态
+
+Pending: 创建中
+Inservice: 运行中
+Stopping: 停止中
+Stopped: 已停止
+Failed: 失败
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceId() 获取Notebook实例ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -89,6 +101,18 @@ use TencentCloud\Common\AbstractModel;
  * @method string getClsAccess() 获取是否开启CLS日志服务
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClsAccess(string $ClsAccess) 设置是否开启CLS日志服务
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getPrepay() 获取是否预付费实例
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPrepay(boolean $Prepay) 设置是否预付费实例
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDeadline() 获取实例运行截止时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDeadline(string $Deadline) 设置实例运行截止时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method StoppingCondition getStoppingCondition() 获取自动停止配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStoppingCondition(StoppingCondition $StoppingCondition) 设置自动停止配置
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -162,6 +186,12 @@ class DescribeNotebookInstanceResponse extends AbstractModel
 
     /**
      * @var string Notebook实例状态
+
+Pending: 创建中
+Inservice: 运行中
+Stopping: 停止中
+Stopped: 已停止
+Failed: 失败
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NotebookInstanceStatus;
@@ -199,6 +229,24 @@ class DescribeNotebookInstanceResponse extends AbstractModel
     public $ClsAccess;
 
     /**
+     * @var boolean 是否预付费实例
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Prepay;
+
+    /**
+     * @var string 实例运行截止时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Deadline;
+
+    /**
+     * @var StoppingCondition 自动停止配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $StoppingCondition;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -226,6 +274,12 @@ class DescribeNotebookInstanceResponse extends AbstractModel
      * @param string $LogUrl Notebook实例日志链接
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NotebookInstanceStatus Notebook实例状态
+
+Pending: 创建中
+Inservice: 运行中
+Stopping: 停止中
+Stopped: 已停止
+Failed: 失败
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceId Notebook实例ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -238,6 +292,12 @@ class DescribeNotebookInstanceResponse extends AbstractModel
 每个元素可以是已创建的存储库名称或者已https://开头的公共git库
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClsAccess 是否开启CLS日志服务
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $Prepay 是否预付费实例
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Deadline 实例运行截止时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param StoppingCondition $StoppingCondition 自动停止配置
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -320,6 +380,19 @@ class DescribeNotebookInstanceResponse extends AbstractModel
 
         if (array_key_exists("ClsAccess",$param) and $param["ClsAccess"] !== null) {
             $this->ClsAccess = $param["ClsAccess"];
+        }
+
+        if (array_key_exists("Prepay",$param) and $param["Prepay"] !== null) {
+            $this->Prepay = $param["Prepay"];
+        }
+
+        if (array_key_exists("Deadline",$param) and $param["Deadline"] !== null) {
+            $this->Deadline = $param["Deadline"];
+        }
+
+        if (array_key_exists("StoppingCondition",$param) and $param["StoppingCondition"] !== null) {
+            $this->StoppingCondition = new StoppingCondition();
+            $this->StoppingCondition->deserialize($param["StoppingCondition"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

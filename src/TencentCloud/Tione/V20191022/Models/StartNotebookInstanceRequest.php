@@ -21,17 +21,45 @@ use TencentCloud\Common\AbstractModel;
  * StartNotebookInstance请求参数结构体
  *
  * @method string getNotebookInstanceName() 获取Notebook实例名称
+规则：^[a-zA-Z0-9](-*[a-zA-Z0-9])*$
  * @method void setNotebookInstanceName(string $NotebookInstanceName) 设置Notebook实例名称
+规则：^[a-zA-Z0-9](-*[a-zA-Z0-9])*$
+ * @method string getAutoStopping() 获取自动停止，可取值Enabled/Disabled
+取值为Disabled的时候StoppingCondition将被忽略
+取值为Enabled的时候读取StoppingCondition作为自动停止的配置
+ * @method void setAutoStopping(string $AutoStopping) 设置自动停止，可取值Enabled/Disabled
+取值为Disabled的时候StoppingCondition将被忽略
+取值为Enabled的时候读取StoppingCondition作为自动停止的配置
+ * @method StoppingCondition getStoppingCondition() 获取自动停止配置，只在AutoStopping为Enabled的时候生效
+ * @method void setStoppingCondition(StoppingCondition $StoppingCondition) 设置自动停止配置，只在AutoStopping为Enabled的时候生效
  */
 class StartNotebookInstanceRequest extends AbstractModel
 {
     /**
      * @var string Notebook实例名称
+规则：^[a-zA-Z0-9](-*[a-zA-Z0-9])*$
      */
     public $NotebookInstanceName;
 
     /**
+     * @var string 自动停止，可取值Enabled/Disabled
+取值为Disabled的时候StoppingCondition将被忽略
+取值为Enabled的时候读取StoppingCondition作为自动停止的配置
+     */
+    public $AutoStopping;
+
+    /**
+     * @var StoppingCondition 自动停止配置，只在AutoStopping为Enabled的时候生效
+     */
+    public $StoppingCondition;
+
+    /**
      * @param string $NotebookInstanceName Notebook实例名称
+规则：^[a-zA-Z0-9](-*[a-zA-Z0-9])*$
+     * @param string $AutoStopping 自动停止，可取值Enabled/Disabled
+取值为Disabled的时候StoppingCondition将被忽略
+取值为Enabled的时候读取StoppingCondition作为自动停止的配置
+     * @param StoppingCondition $StoppingCondition 自动停止配置，只在AutoStopping为Enabled的时候生效
      */
     function __construct()
     {
@@ -48,6 +76,15 @@ class StartNotebookInstanceRequest extends AbstractModel
         }
         if (array_key_exists("NotebookInstanceName",$param) and $param["NotebookInstanceName"] !== null) {
             $this->NotebookInstanceName = $param["NotebookInstanceName"];
+        }
+
+        if (array_key_exists("AutoStopping",$param) and $param["AutoStopping"] !== null) {
+            $this->AutoStopping = $param["AutoStopping"];
+        }
+
+        if (array_key_exists("StoppingCondition",$param) and $param["StoppingCondition"] !== null) {
+            $this->StoppingCondition = new StoppingCondition();
+            $this->StoppingCondition->deserialize($param["StoppingCondition"]);
         }
     }
 }

@@ -96,10 +96,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProfile(string $Profile) 设置接入环境。沙箱环境填sandbox。
  * @method integer getUndoPart() 获取撤销部分商品。0-不撤销，1-撤销
  * @method void setUndoPart(integer $UndoPart) 设置撤销部分商品。0-不撤销，1-撤销
- * @method string getOrderDate() 获取订单下单时间（格式 YYYMMDD）
- * @method void setOrderDate(string $OrderDate) 设置订单下单时间（格式 YYYMMDD）
- * @method integer getDiscount() 获取订单级别（单位为分）
- * @method void setDiscount(integer $Discount) 设置订单级别（单位为分）
+ * @method string getOrderDate() 获取订单下单时间（格式 YYYYMMDD）
+ * @method void setOrderDate(string $OrderDate) 设置订单下单时间（格式 YYYYMMDD）
+ * @method integer getDiscount() 获取订单级别折扣（单位为分）
+ * @method void setDiscount(integer $Discount) 设置订单级别折扣（单位为分）
  * @method string getStoreNo() 获取门店编码
  * @method void setStoreNo(string $StoreNo) 设置门店编码
  */
@@ -272,12 +272,12 @@ class CreateInvoiceRequest extends AbstractModel
     public $UndoPart;
 
     /**
-     * @var string 订单下单时间（格式 YYYMMDD）
+     * @var string 订单下单时间（格式 YYYYMMDD）
      */
     public $OrderDate;
 
     /**
-     * @var integer 订单级别（单位为分）
+     * @var integer 订单级别折扣（单位为分）
      */
     public $Discount;
 
@@ -325,8 +325,8 @@ class CreateInvoiceRequest extends AbstractModel
      * @param array $Items 项目商品明细
      * @param string $Profile 接入环境。沙箱环境填sandbox。
      * @param integer $UndoPart 撤销部分商品。0-不撤销，1-撤销
-     * @param string $OrderDate 订单下单时间（格式 YYYMMDD）
-     * @param integer $Discount 订单级别（单位为分）
+     * @param string $OrderDate 订单下单时间（格式 YYYYMMDD）
+     * @param integer $Discount 订单级别折扣（单位为分）
      * @param string $StoreNo 门店编码
      */
     function __construct()

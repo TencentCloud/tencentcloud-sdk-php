@@ -32,17 +32,47 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNotebookInstanceName(string $NotebookInstanceName) 设置notebook实例名字
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getNotebookInstanceStatus() 获取notebook实例状态
+ * @method string getNotebookInstanceStatus() 获取notebook实例状态，取值范围：
+Pending: 创建中
+Inservice: 运行中
+Stopping: 停止中
+Stopped: 已停止
+Failed: 失败
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNotebookInstanceStatus(string $NotebookInstanceStatus) 设置notebook实例状态
+ * @method void setNotebookInstanceStatus(string $NotebookInstanceStatus) 设置notebook实例状态，取值范围：
+Pending: 创建中
+Inservice: 运行中
+Stopping: 停止中
+Stopped: 已停止
+Failed: 失败
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceType() 获取算力类型
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceType(string $InstanceType) 设置算力类型
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getInstanceId() 获取算力Id
+ * @method string getInstanceId() 获取实例ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInstanceId(string $InstanceId) 设置算力Id
+ * @method void setInstanceId(string $InstanceId) 设置实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getStartupTime() 获取启动时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStartupTime(string $StartupTime) 设置启动时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDeadline() 获取运行截止时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDeadline(string $Deadline) 设置运行截止时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method StoppingCondition getStoppingCondition() 获取自动停止配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStoppingCondition(StoppingCondition $StoppingCondition) 设置自动停止配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getPrepay() 获取是否是预付费实例
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPrepay(boolean $Prepay) 设置是否是预付费实例
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method BillingLabel getBillingLabel() 获取计费标识
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBillingLabel(BillingLabel $BillingLabel) 设置计费标识
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class NotebookInstanceSummary extends AbstractModel
@@ -66,7 +96,12 @@ class NotebookInstanceSummary extends AbstractModel
     public $NotebookInstanceName;
 
     /**
-     * @var string notebook实例状态
+     * @var string notebook实例状态，取值范围：
+Pending: 创建中
+Inservice: 运行中
+Stopping: 停止中
+Stopped: 已停止
+Failed: 失败
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NotebookInstanceStatus;
@@ -78,10 +113,40 @@ class NotebookInstanceSummary extends AbstractModel
     public $InstanceType;
 
     /**
-     * @var string 算力Id
+     * @var string 实例ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceId;
+
+    /**
+     * @var string 启动时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $StartupTime;
+
+    /**
+     * @var string 运行截止时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Deadline;
+
+    /**
+     * @var StoppingCondition 自动停止配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $StoppingCondition;
+
+    /**
+     * @var boolean 是否是预付费实例
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Prepay;
+
+    /**
+     * @var BillingLabel 计费标识
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BillingLabel;
 
     /**
      * @param string $CreationTime 创建时间
@@ -90,11 +155,26 @@ class NotebookInstanceSummary extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NotebookInstanceName notebook实例名字
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $NotebookInstanceStatus notebook实例状态
+     * @param string $NotebookInstanceStatus notebook实例状态，取值范围：
+Pending: 创建中
+Inservice: 运行中
+Stopping: 停止中
+Stopped: 已停止
+Failed: 失败
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceType 算力类型
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $InstanceId 算力Id
+     * @param string $InstanceId 实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $StartupTime 启动时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Deadline 运行截止时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param StoppingCondition $StoppingCondition 自动停止配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $Prepay 是否是预付费实例
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BillingLabel $BillingLabel 计费标识
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -132,6 +212,28 @@ class NotebookInstanceSummary extends AbstractModel
 
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("StartupTime",$param) and $param["StartupTime"] !== null) {
+            $this->StartupTime = $param["StartupTime"];
+        }
+
+        if (array_key_exists("Deadline",$param) and $param["Deadline"] !== null) {
+            $this->Deadline = $param["Deadline"];
+        }
+
+        if (array_key_exists("StoppingCondition",$param) and $param["StoppingCondition"] !== null) {
+            $this->StoppingCondition = new StoppingCondition();
+            $this->StoppingCondition->deserialize($param["StoppingCondition"]);
+        }
+
+        if (array_key_exists("Prepay",$param) and $param["Prepay"] !== null) {
+            $this->Prepay = $param["Prepay"];
+        }
+
+        if (array_key_exists("BillingLabel",$param) and $param["BillingLabel"] !== null) {
+            $this->BillingLabel = new BillingLabel();
+            $this->BillingLabel->deserialize($param["BillingLabel"]);
         }
     }
 }

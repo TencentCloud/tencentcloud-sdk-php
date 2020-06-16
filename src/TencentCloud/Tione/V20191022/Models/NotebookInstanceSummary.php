@@ -74,6 +74,14 @@ Failed: 失败
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBillingLabel(BillingLabel $BillingLabel) 设置计费标识
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getRuntimeInSeconds() 获取运行时长，秒
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRuntimeInSeconds(integer $RuntimeInSeconds) 设置运行时长，秒
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getRemainTimeInSeconds() 获取剩余时长，秒
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRemainTimeInSeconds(integer $RemainTimeInSeconds) 设置剩余时长，秒
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class NotebookInstanceSummary extends AbstractModel
 {
@@ -149,6 +157,18 @@ Failed: 失败
     public $BillingLabel;
 
     /**
+     * @var integer 运行时长，秒
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RuntimeInSeconds;
+
+    /**
+     * @var integer 剩余时长，秒
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RemainTimeInSeconds;
+
+    /**
      * @param string $CreationTime 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LastModifiedTime 最近修改时间
@@ -175,6 +195,10 @@ Failed: 失败
      * @param boolean $Prepay 是否是预付费实例
 注意：此字段可能返回 null，表示取不到有效值。
      * @param BillingLabel $BillingLabel 计费标识
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $RuntimeInSeconds 运行时长，秒
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $RemainTimeInSeconds 剩余时长，秒
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -234,6 +258,14 @@ Failed: 失败
         if (array_key_exists("BillingLabel",$param) and $param["BillingLabel"] !== null) {
             $this->BillingLabel = new BillingLabel();
             $this->BillingLabel->deserialize($param["BillingLabel"]);
+        }
+
+        if (array_key_exists("RuntimeInSeconds",$param) and $param["RuntimeInSeconds"] !== null) {
+            $this->RuntimeInSeconds = $param["RuntimeInSeconds"];
+        }
+
+        if (array_key_exists("RemainTimeInSeconds",$param) and $param["RemainTimeInSeconds"] !== null) {
+            $this->RemainTimeInSeconds = $param["RemainTimeInSeconds"];
         }
     }
 }

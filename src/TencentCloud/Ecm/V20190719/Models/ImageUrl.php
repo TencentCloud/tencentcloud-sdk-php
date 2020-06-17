@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Live\V20180801\Models;
+namespace TencentCloud\Ecm\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeLiveWatermark请求参数结构体
+ * 镜像文件信息
  *
- * @method integer getWatermarkId() 获取DescribeLiveWatermarks接口返回的水印 ID。
- * @method void setWatermarkId(integer $WatermarkId) 设置DescribeLiveWatermarks接口返回的水印 ID。
+ * @method string getImageFile() 获取镜像文件COS链接，如设置私有读写，需授权腾讯云ECM运营账号访问权限。
+ * @method void setImageFile(string $ImageFile) 设置镜像文件COS链接，如设置私有读写，需授权腾讯云ECM运营账号访问权限。
  */
-class DescribeLiveWatermarkRequest extends AbstractModel
+class ImageUrl extends AbstractModel
 {
     /**
-     * @var integer DescribeLiveWatermarks接口返回的水印 ID。
+     * @var string 镜像文件COS链接，如设置私有读写，需授权腾讯云ECM运营账号访问权限。
      */
-    public $WatermarkId;
+    public $ImageFile;
 
     /**
-     * @param integer $WatermarkId DescribeLiveWatermarks接口返回的水印 ID。
+     * @param string $ImageFile 镜像文件COS链接，如设置私有读写，需授权腾讯云ECM运营账号访问权限。
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class DescribeLiveWatermarkRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("WatermarkId",$param) and $param["WatermarkId"] !== null) {
-            $this->WatermarkId = $param["WatermarkId"];
+        if (array_key_exists("ImageFile",$param) and $param["ImageFile"] !== null) {
+            $this->ImageFile = $param["ImageFile"];
         }
     }
 }

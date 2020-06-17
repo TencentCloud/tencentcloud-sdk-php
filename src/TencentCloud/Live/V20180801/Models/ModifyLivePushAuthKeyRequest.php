@@ -23,11 +23,17 @@ use TencentCloud\Common\AbstractModel;
  * @method string getDomainName() 获取推流域名。
  * @method void setDomainName(string $DomainName) 设置推流域名。
  * @method integer getEnable() 获取是否启用，0：关闭，1：启用。
+不传表示不修改当前值。
  * @method void setEnable(integer $Enable) 设置是否启用，0：关闭，1：启用。
+不传表示不修改当前值。
  * @method string getMasterAuthKey() 获取主鉴权key。
+不传表示不修改当前值。
  * @method void setMasterAuthKey(string $MasterAuthKey) 设置主鉴权key。
+不传表示不修改当前值。
  * @method string getBackupAuthKey() 获取备鉴权key。
+不传表示不修改当前值。
  * @method void setBackupAuthKey(string $BackupAuthKey) 设置备鉴权key。
+不传表示不修改当前值。
  * @method integer getAuthDelta() 获取有效时间，单位：秒。
  * @method void setAuthDelta(integer $AuthDelta) 设置有效时间，单位：秒。
  */
@@ -40,16 +46,19 @@ class ModifyLivePushAuthKeyRequest extends AbstractModel
 
     /**
      * @var integer 是否启用，0：关闭，1：启用。
+不传表示不修改当前值。
      */
     public $Enable;
 
     /**
      * @var string 主鉴权key。
+不传表示不修改当前值。
      */
     public $MasterAuthKey;
 
     /**
      * @var string 备鉴权key。
+不传表示不修改当前值。
      */
     public $BackupAuthKey;
 
@@ -61,8 +70,11 @@ class ModifyLivePushAuthKeyRequest extends AbstractModel
     /**
      * @param string $DomainName 推流域名。
      * @param integer $Enable 是否启用，0：关闭，1：启用。
+不传表示不修改当前值。
      * @param string $MasterAuthKey 主鉴权key。
+不传表示不修改当前值。
      * @param string $BackupAuthKey 备鉴权key。
+不传表示不修改当前值。
      * @param integer $AuthDelta 有效时间，单位：秒。
      */
     function __construct()

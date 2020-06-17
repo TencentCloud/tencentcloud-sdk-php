@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyLiveRecordTemplate请求参数结构体
  *
- * @method integer getTemplateId() 获取模板 ID。
- * @method void setTemplateId(integer $TemplateId) 设置模板 ID。
+ * @method integer getTemplateId() 获取DescribeRecordTemplates接口获取到的模板 ID。
+ * @method void setTemplateId(integer $TemplateId) 设置DescribeRecordTemplates接口获取到的模板 ID。
  * @method string getTemplateName() 获取模板名称。
  * @method void setTemplateName(string $TemplateName) 设置模板名称。
  * @method string getDescription() 获取描述信息。
@@ -42,7 +42,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyLiveRecordTemplateRequest extends AbstractModel
 {
     /**
-     * @var integer 模板 ID。
+     * @var integer DescribeRecordTemplates接口获取到的模板 ID。
      */
     public $TemplateId;
 
@@ -87,7 +87,7 @@ class ModifyLiveRecordTemplateRequest extends AbstractModel
     public $Mp3Param;
 
     /**
-     * @param integer $TemplateId 模板 ID。
+     * @param integer $TemplateId DescribeRecordTemplates接口获取到的模板 ID。
      * @param string $TemplateName 模板名称。
      * @param string $Description 描述信息。
      * @param RecordParam $FlvParam FLV 录制参数，开启 FLV 录制时设置。

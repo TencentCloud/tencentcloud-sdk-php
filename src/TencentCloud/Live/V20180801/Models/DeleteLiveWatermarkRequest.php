@@ -22,20 +22,24 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getWatermarkId() 获取水印 ID。
 在添加水印接口 [AddLiveWatermark](/document/product/267/30154) 调用返回值中获取水印 ID。
+或DescribeLiveWatermarks接口返回的水印ID。
  * @method void setWatermarkId(integer $WatermarkId) 设置水印 ID。
 在添加水印接口 [AddLiveWatermark](/document/product/267/30154) 调用返回值中获取水印 ID。
+或DescribeLiveWatermarks接口返回的水印ID。
  */
 class DeleteLiveWatermarkRequest extends AbstractModel
 {
     /**
      * @var integer 水印 ID。
 在添加水印接口 [AddLiveWatermark](/document/product/267/30154) 调用返回值中获取水印 ID。
+或DescribeLiveWatermarks接口返回的水印ID。
      */
     public $WatermarkId;
 
     /**
      * @param integer $WatermarkId 水印 ID。
 在添加水印接口 [AddLiveWatermark](/document/product/267/30154) 调用返回值中获取水印 ID。
+或DescribeLiveWatermarks接口返回的水印ID。
      */
     function __construct()
     {

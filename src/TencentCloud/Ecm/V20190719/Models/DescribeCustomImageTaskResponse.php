@@ -14,26 +14,33 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cam\V20190116\Models;
+namespace TencentCloud\Ecm\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * UpdatePolicy返回参数结构体
+ * DescribeCustomImageTask返回参数结构体
  *
- * @method integer getPolicyId() 获取策略id，入参是PolicyName时，才会返回
+ * @method array getImageTaskSet() 获取导入任务详情
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPolicyId(integer $PolicyId) 设置策略id，入参是PolicyName时，才会返回
+ * @method void setImageTaskSet(array $ImageTaskSet) 设置导入任务详情
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTotalCount() 获取总数
+ * @method void setTotalCount(integer $TotalCount) 设置总数
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class UpdatePolicyResponse extends AbstractModel
+class DescribeCustomImageTaskResponse extends AbstractModel
 {
     /**
-     * @var integer 策略id，入参是PolicyName时，才会返回
+     * @var array 导入任务详情
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $PolicyId;
+    public $ImageTaskSet;
+
+    /**
+     * @var integer 总数
+     */
+    public $TotalCount;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -41,8 +48,9 @@ class UpdatePolicyResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $PolicyId 策略id，入参是PolicyName时，才会返回
+     * @param array $ImageTaskSet 导入任务详情
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $TotalCount 总数
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -58,8 +66,17 @@ class UpdatePolicyResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PolicyId",$param) and $param["PolicyId"] !== null) {
-            $this->PolicyId = $param["PolicyId"];
+        if (array_key_exists("ImageTaskSet",$param) and $param["ImageTaskSet"] !== null) {
+            $this->ImageTaskSet = [];
+            foreach ($param["ImageTaskSet"] as $key => $value){
+                $obj = new ImageTask();
+                $obj->deserialize($value);
+                array_push($this->ImageTaskSet, $obj);
+            }
+        }
+
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -20,6 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeVpcs请求参数结构体
  *
+ * @method string getEcmRegion() 获取地域
+ * @method void setEcmRegion(string $EcmRegion) 设置地域
  * @method array getVpcIds() 获取VPC实例ID。形如：vpc-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpcIds和Filters。
  * @method void setVpcIds(array $VpcIds) 设置VPC实例ID。形如：vpc-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpcIds和Filters。
  * @method array getFilters() 获取过滤条件，参数不支持同时指定VpcIds和Filters。
@@ -40,11 +42,14 @@ tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值
  * @method void setOffset(integer $Offset) 设置偏移量
  * @method integer getLimit() 获取返回数量
  * @method void setLimit(integer $Limit) 设置返回数量
- * @method string getEcmRegion() 获取地域
- * @method void setEcmRegion(string $EcmRegion) 设置地域
  */
 class DescribeVpcsRequest extends AbstractModel
 {
+    /**
+     * @var string 地域
+     */
+    public $EcmRegion;
+
     /**
      * @var array VPC实例ID。形如：vpc-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpcIds和Filters。
      */
@@ -72,11 +77,7 @@ tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值
     public $Limit;
 
     /**
-     * @var string 地域
-     */
-    public $EcmRegion;
-
-    /**
+     * @param string $EcmRegion 地域
      * @param array $VpcIds VPC实例ID。形如：vpc-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpcIds和Filters。
      * @param array $Filters 过滤条件，参数不支持同时指定VpcIds和Filters。
 vpc-name - String - （过滤条件）VPC实例名称。
@@ -87,7 +88,6 @@ tag-key - String -是否必填：否- （过滤条件）按照标签键进行过
 tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。使用请参考示例
      * @param integer $Offset 偏移量
      * @param integer $Limit 返回数量
-     * @param string $EcmRegion 地域
      */
     function __construct()
     {
@@ -102,6 +102,10 @@ tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值
         if ($param === null) {
             return;
         }
+        if (array_key_exists("EcmRegion",$param) and $param["EcmRegion"] !== null) {
+            $this->EcmRegion = $param["EcmRegion"];
+        }
+
         if (array_key_exists("VpcIds",$param) and $param["VpcIds"] !== null) {
             $this->VpcIds = $param["VpcIds"];
         }
@@ -121,10 +125,6 @@ tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
-        }
-
-        if (array_key_exists("EcmRegion",$param) and $param["EcmRegion"] !== null) {
-            $this->EcmRegion = $param["EcmRegion"];
         }
     }
 }

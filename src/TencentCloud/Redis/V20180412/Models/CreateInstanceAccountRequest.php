@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAccountPassword(string $AccountPassword) 设置子账号密码
  * @method array getReadonlyPolicy() 获取路由策略：填写master或者replication，表示主节点或者从节点
  * @method void setReadonlyPolicy(array $ReadonlyPolicy) 设置路由策略：填写master或者replication，表示主节点或者从节点
- * @method string getPrivilege() 获取读写策略：填写r、w、rw，表示只读、只写、读写
- * @method void setPrivilege(string $Privilege) 设置读写策略：填写r、w、rw，表示只读、只写、读写
+ * @method string getPrivilege() 获取读写策略：填写r、rw，表示只读、读写
+ * @method void setPrivilege(string $Privilege) 设置读写策略：填写r、rw，表示只读、读写
  * @method string getRemark() 获取子账号描述信息
  * @method void setRemark(string $Remark) 设置子账号描述信息
  */
@@ -56,7 +56,7 @@ class CreateInstanceAccountRequest extends AbstractModel
     public $ReadonlyPolicy;
 
     /**
-     * @var string 读写策略：填写r、w、rw，表示只读、只写、读写
+     * @var string 读写策略：填写r、rw，表示只读、读写
      */
     public $Privilege;
 
@@ -70,7 +70,7 @@ class CreateInstanceAccountRequest extends AbstractModel
      * @param string $AccountName 子账号名称
      * @param string $AccountPassword 子账号密码
      * @param array $ReadonlyPolicy 路由策略：填写master或者replication，表示主节点或者从节点
-     * @param string $Privilege 读写策略：填写r、w、rw，表示只读、只写、读写
+     * @param string $Privilege 读写策略：填写r、rw，表示只读、读写
      * @param string $Remark 子账号描述信息
      */
     function __construct()

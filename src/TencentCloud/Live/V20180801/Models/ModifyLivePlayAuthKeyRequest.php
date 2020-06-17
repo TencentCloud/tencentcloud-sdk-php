@@ -20,50 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyLivePlayAuthKey请求参数结构体
  *
- * @method string getDomainName() 获取域名。
- * @method void setDomainName(string $DomainName) 设置域名。
+ * @method string getDomainName() 获取播放域名。
+ * @method void setDomainName(string $DomainName) 设置播放域名。
  * @method integer getEnable() 获取是否启用，0：关闭，1：启用。
+不传表示不修改当前值。
  * @method void setEnable(integer $Enable) 设置是否启用，0：关闭，1：启用。
+不传表示不修改当前值。
  * @method string getAuthKey() 获取鉴权key。
+不传表示不修改当前值。
  * @method void setAuthKey(string $AuthKey) 设置鉴权key。
+不传表示不修改当前值。
  * @method integer getAuthDelta() 获取有效时间，单位：秒。
+不传表示不修改当前值。
  * @method void setAuthDelta(integer $AuthDelta) 设置有效时间，单位：秒。
- * @method string getAuthBackKey() 获取鉴权backkey。
- * @method void setAuthBackKey(string $AuthBackKey) 设置鉴权backkey。
+不传表示不修改当前值。
+ * @method string getAuthBackKey() 获取鉴权备用key。
+不传表示不修改当前值。
+ * @method void setAuthBackKey(string $AuthBackKey) 设置鉴权备用key。
+不传表示不修改当前值。
  */
 class ModifyLivePlayAuthKeyRequest extends AbstractModel
 {
     /**
-     * @var string 域名。
+     * @var string 播放域名。
      */
     public $DomainName;
 
     /**
      * @var integer 是否启用，0：关闭，1：启用。
+不传表示不修改当前值。
      */
     public $Enable;
 
     /**
      * @var string 鉴权key。
+不传表示不修改当前值。
      */
     public $AuthKey;
 
     /**
      * @var integer 有效时间，单位：秒。
+不传表示不修改当前值。
      */
     public $AuthDelta;
 
     /**
-     * @var string 鉴权backkey。
+     * @var string 鉴权备用key。
+不传表示不修改当前值。
      */
     public $AuthBackKey;
 
     /**
-     * @param string $DomainName 域名。
+     * @param string $DomainName 播放域名。
      * @param integer $Enable 是否启用，0：关闭，1：启用。
+不传表示不修改当前值。
      * @param string $AuthKey 鉴权key。
+不传表示不修改当前值。
      * @param integer $AuthDelta 有效时间，单位：秒。
-     * @param string $AuthBackKey 鉴权backkey。
+不传表示不修改当前值。
+     * @param string $AuthBackKey 鉴权备用key。
+不传表示不修改当前值。
      */
     function __construct()
     {

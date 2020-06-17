@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsNonStaticIpMode(boolean $IsNonStaticIpMode) 设置集群VPC-CNI模式是否为非固定IP，默认: FALSE 固定IP。
  * @method boolean getDeletionProtection() 获取是否启用集群删除保护
  * @method void setDeletionProtection(boolean $DeletionProtection) 设置是否启用集群删除保护
+ * @method string getKubeProxyMode() 获取集群的网络代理模型
+ * @method void setKubeProxyMode(string $KubeProxyMode) 设置集群的网络代理模型
  */
 class ClusterAdvancedSettings extends AbstractModel
 {
@@ -80,6 +82,11 @@ class ClusterAdvancedSettings extends AbstractModel
     public $DeletionProtection;
 
     /**
+     * @var string 集群的网络代理模型
+     */
+    public $KubeProxyMode;
+
+    /**
      * @param boolean $IPVS 是否启用IPVS
      * @param boolean $AsEnabled 是否启用集群节点自动扩缩容(创建集群流程不支持开启此功能)
      * @param string $ContainerRuntime 集群使用的runtime类型，包括"docker"和"containerd"两种类型，默认为"docker"
@@ -88,6 +95,7 @@ class ClusterAdvancedSettings extends AbstractModel
      * @param string $NetworkType 集群网络类型（包括GR(全局路由)和VPC-CNI两种模式，默认为GR。
      * @param boolean $IsNonStaticIpMode 集群VPC-CNI模式是否为非固定IP，默认: FALSE 固定IP。
      * @param boolean $DeletionProtection 是否启用集群删除保护
+     * @param string $KubeProxyMode 集群的网络代理模型
      */
     function __construct()
     {
@@ -133,6 +141,10 @@ class ClusterAdvancedSettings extends AbstractModel
 
         if (array_key_exists("DeletionProtection",$param) and $param["DeletionProtection"] !== null) {
             $this->DeletionProtection = $param["DeletionProtection"];
+        }
+
+        if (array_key_exists("KubeProxyMode",$param) and $param["KubeProxyMode"] !== null) {
+            $this->KubeProxyMode = $param["KubeProxyMode"];
         }
     }
 }

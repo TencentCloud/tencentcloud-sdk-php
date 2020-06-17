@@ -59,9 +59,11 @@ statusCode：回源状态码，返回 2xx、3xx、4xx、5xx 汇总数据，单�
  * @method array getDomains() 获取指定查询域名列表，最多可一次性查询 30 个加速域名明细
  * @method void setDomains(array $Domains) 设置指定查询域名列表，最多可一次性查询 30 个加速域名明细
  * @method integer getProject() 获取指定要查询的项目 ID，[前往查看项目 ID](https://console.cloud.tencent.com/project)
-未填充域名情况下，指定项目查询，若填充了具体域名信息，以域名为主
+未填充域名情况下，指定项目查询，最多可一次性查询 30 个加速域名明细
+若填充了具体域名信息，以域名为主
  * @method void setProject(integer $Project) 设置指定要查询的项目 ID，[前往查看项目 ID](https://console.cloud.tencent.com/project)
-未填充域名情况下，指定项目查询，若填充了具体域名信息，以域名为主
+未填充域名情况下，指定项目查询，最多可一次性查询 30 个加速域名明细
+若填充了具体域名信息，以域名为主
  * @method string getInterval() 获取时间粒度，支持以下几种模式：
 min：1 分钟粒度，指定查询区间 24 小时内（含 24 小时），可返回 1 分钟粒度明细数据（指定查询服务地域为中国境外时不支持 1 分钟粒度）
 5min：5 分钟粒度，指定查询区间 31 天内（含 31 天），可返回 5 分钟粒度明细数据
@@ -122,7 +124,8 @@ statusCode：回源状态码，返回 2xx、3xx、4xx、5xx 汇总数据，单�
 
     /**
      * @var integer 指定要查询的项目 ID，[前往查看项目 ID](https://console.cloud.tencent.com/project)
-未填充域名情况下，指定项目查询，若填充了具体域名信息，以域名为主
+未填充域名情况下，指定项目查询，最多可一次性查询 30 个加速域名明细
+若填充了具体域名信息，以域名为主
      */
     public $Project;
 
@@ -169,7 +172,8 @@ statusCode：回源状态码，返回 2xx、3xx、4xx、5xx 汇总数据，单�
 支持指定具体状态码查询，若未产生过，则返回为空
      * @param array $Domains 指定查询域名列表，最多可一次性查询 30 个加速域名明细
      * @param integer $Project 指定要查询的项目 ID，[前往查看项目 ID](https://console.cloud.tencent.com/project)
-未填充域名情况下，指定项目查询，若填充了具体域名信息，以域名为主
+未填充域名情况下，指定项目查询，最多可一次性查询 30 个加速域名明细
+若填充了具体域名信息，以域名为主
      * @param string $Interval 时间粒度，支持以下几种模式：
 min：1 分钟粒度，指定查询区间 24 小时内（含 24 小时），可返回 1 分钟粒度明细数据（指定查询服务地域为中国境外时不支持 1 分钟粒度）
 5min：5 分钟粒度，指定查询区间 31 天内（含 31 天），可返回 5 分钟粒度明细数据

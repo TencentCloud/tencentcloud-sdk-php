@@ -14,24 +14,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Live\V20180801\Models;
+namespace TencentCloud\Ecm\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeLiveWatermark请求参数结构体
+ * DescribeImportImageOs请求参数结构体
  *
- * @method integer getWatermarkId() 获取DescribeLiveWatermarks接口返回的水印 ID。
- * @method void setWatermarkId(integer $WatermarkId) 设置DescribeLiveWatermarks接口返回的水印 ID。
+
  */
-class DescribeLiveWatermarkRequest extends AbstractModel
+class DescribeImportImageOsRequest extends AbstractModel
 {
-    /**
-     * @var integer DescribeLiveWatermarks接口返回的水印 ID。
-     */
-    public $WatermarkId;
+
 
     /**
-     * @param integer $WatermarkId DescribeLiveWatermarks接口返回的水印 ID。
+
      */
     function __construct()
     {
@@ -46,8 +42,6 @@ class DescribeLiveWatermarkRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("WatermarkId",$param) and $param["WatermarkId"] !== null) {
-            $this->WatermarkId = $param["WatermarkId"];
-        }
+
     }
 }

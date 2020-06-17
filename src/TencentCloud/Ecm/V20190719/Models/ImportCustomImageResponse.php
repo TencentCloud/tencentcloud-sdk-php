@@ -14,26 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cam\V20190116\Models;
+namespace TencentCloud\Ecm\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * UpdatePolicy返回参数结构体
+ * ImportCustomImage返回参数结构体
  *
- * @method integer getPolicyId() 获取策略id，入参是PolicyName时，才会返回
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPolicyId(integer $PolicyId) 设置策略id，入参是PolicyName时，才会返回
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getImageId() 获取镜像ID
+ * @method void setImageId(string $ImageId) 设置镜像ID
+ * @method integer getTaskId() 获取异步任务ID，可根据DescribeCustomImageTask查询任务信息
+ * @method void setTaskId(integer $TaskId) 设置异步任务ID，可根据DescribeCustomImageTask查询任务信息
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class UpdatePolicyResponse extends AbstractModel
+class ImportCustomImageResponse extends AbstractModel
 {
     /**
-     * @var integer 策略id，入参是PolicyName时，才会返回
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 镜像ID
      */
-    public $PolicyId;
+    public $ImageId;
+
+    /**
+     * @var integer 异步任务ID，可根据DescribeCustomImageTask查询任务信息
+     */
+    public $TaskId;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -41,8 +45,8 @@ class UpdatePolicyResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $PolicyId 策略id，入参是PolicyName时，才会返回
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ImageId 镜像ID
+     * @param integer $TaskId 异步任务ID，可根据DescribeCustomImageTask查询任务信息
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -58,8 +62,12 @@ class UpdatePolicyResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PolicyId",$param) and $param["PolicyId"] !== null) {
-            $this->PolicyId = $param["PolicyId"];
+        if (array_key_exists("ImageId",$param) and $param["ImageId"] !== null) {
+            $this->ImageId = $param["ImageId"];
+        }
+
+        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
+            $this->TaskId = $param["TaskId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

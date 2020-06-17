@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeLiveRecordTemplate请求参数结构体
  *
- * @method integer getTemplateId() 获取模板 ID。
- * @method void setTemplateId(integer $TemplateId) 设置模板 ID。
+ * @method integer getTemplateId() 获取DescribeRecordTemplates接口获取到的模板 ID。
+ * @method void setTemplateId(integer $TemplateId) 设置DescribeRecordTemplates接口获取到的模板 ID。
  */
 class DescribeLiveRecordTemplateRequest extends AbstractModel
 {
     /**
-     * @var integer 模板 ID。
+     * @var integer DescribeRecordTemplates接口获取到的模板 ID。
      */
     public $TemplateId;
 
     /**
-     * @param integer $TemplateId 模板 ID。
+     * @param integer $TemplateId DescribeRecordTemplates接口获取到的模板 ID。
      */
     function __construct()
     {

@@ -18,29 +18,26 @@ namespace TencentCloud\Ecm\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeImage返回参数结构体
+ * DescribeImportImageOs返回参数结构体
  *
- * @method integer getTotalCount() 获取镜像总数
- * @method void setTotalCount(integer $TotalCount) 设置镜像总数
- * @method array getImageSet() 获取镜像数组
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setImageSet(array $ImageSet) 设置镜像数组
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method ImageOsList getImportImageOsListSupported() 获取支持的导入镜像的操作系统类型
+ * @method void setImportImageOsListSupported(ImageOsList $ImportImageOsListSupported) 设置支持的导入镜像的操作系统类型
+ * @method array getImportImageOsVersionSet() 获取支持的导入镜像的操作系统版本
+ * @method void setImportImageOsVersionSet(array $ImportImageOsVersionSet) 设置支持的导入镜像的操作系统版本
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeImageResponse extends AbstractModel
+class DescribeImportImageOsResponse extends AbstractModel
 {
     /**
-     * @var integer 镜像总数
+     * @var ImageOsList 支持的导入镜像的操作系统类型
      */
-    public $TotalCount;
+    public $ImportImageOsListSupported;
 
     /**
-     * @var array 镜像数组
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var array 支持的导入镜像的操作系统版本
      */
-    public $ImageSet;
+    public $ImportImageOsVersionSet;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -48,9 +45,8 @@ class DescribeImageResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 镜像总数
-     * @param array $ImageSet 镜像数组
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param ImageOsList $ImportImageOsListSupported 支持的导入镜像的操作系统类型
+     * @param array $ImportImageOsVersionSet 支持的导入镜像的操作系统版本
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -66,16 +62,17 @@ class DescribeImageResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists("ImportImageOsListSupported",$param) and $param["ImportImageOsListSupported"] !== null) {
+            $this->ImportImageOsListSupported = new ImageOsList();
+            $this->ImportImageOsListSupported->deserialize($param["ImportImageOsListSupported"]);
         }
 
-        if (array_key_exists("ImageSet",$param) and $param["ImageSet"] !== null) {
-            $this->ImageSet = [];
-            foreach ($param["ImageSet"] as $key => $value){
-                $obj = new Image();
+        if (array_key_exists("ImportImageOsVersionSet",$param) and $param["ImportImageOsVersionSet"] !== null) {
+            $this->ImportImageOsVersionSet = [];
+            foreach ($param["ImportImageOsVersionSet"] as $key => $value){
+                $obj = new OsVersion();
                 $obj->deserialize($value);
-                array_push($this->ImageSet, $obj);
+                array_push($this->ImportImageOsVersionSet, $obj);
             }
         }
 

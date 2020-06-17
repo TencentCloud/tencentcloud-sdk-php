@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteLiveCert请求参数结构体
  *
- * @method integer getCertId() 获取证书Id。
- * @method void setCertId(integer $CertId) 设置证书Id。
+ * @method integer getCertId() 获取DescribeLiveCerts接口获取到的证书Id。
+ * @method void setCertId(integer $CertId) 设置DescribeLiveCerts接口获取到的证书Id。
  */
 class DeleteLiveCertRequest extends AbstractModel
 {
     /**
-     * @var integer 证书Id。
+     * @var integer DescribeLiveCerts接口获取到的证书Id。
      */
     public $CertId;
 
     /**
-     * @param integer $CertId 证书Id。
+     * @param integer $CertId DescribeLiveCerts接口获取到的证书Id。
      */
     function __construct()
     {

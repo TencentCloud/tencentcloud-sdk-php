@@ -23,11 +23,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getPictureUrl() 获取水印图片 URL。
  * @method void setPictureUrl(string $PictureUrl) 设置水印图片 URL。
  * @method string getWatermarkName() 获取水印名称。
+最长16字节。
  * @method void setWatermarkName(string $WatermarkName) 设置水印名称。
- * @method integer getXPosition() 获取显示位置，X轴偏移，默认 0。
- * @method void setXPosition(integer $XPosition) 设置显示位置，X轴偏移，默认 0。
- * @method integer getYPosition() 获取显示位置，Y轴偏移，默认 0。
- * @method void setYPosition(integer $YPosition) 设置显示位置，Y轴偏移，默认 0。
+最长16字节。
+ * @method integer getXPosition() 获取显示位置，X轴偏移，单位是百分比，默认 0。
+ * @method void setXPosition(integer $XPosition) 设置显示位置，X轴偏移，单位是百分比，默认 0。
+ * @method integer getYPosition() 获取显示位置，Y轴偏移，单位是百分比，默认 0。
+ * @method void setYPosition(integer $YPosition) 设置显示位置，Y轴偏移，单位是百分比，默认 0。
  * @method integer getWidth() 获取水印宽度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。默认原始宽度。
  * @method void setWidth(integer $Width) 设置水印宽度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。默认原始宽度。
  * @method integer getHeight() 获取水印高度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。默认原始高度。
@@ -42,16 +44,17 @@ class AddLiveWatermarkRequest extends AbstractModel
 
     /**
      * @var string 水印名称。
+最长16字节。
      */
     public $WatermarkName;
 
     /**
-     * @var integer 显示位置，X轴偏移，默认 0。
+     * @var integer 显示位置，X轴偏移，单位是百分比，默认 0。
      */
     public $XPosition;
 
     /**
-     * @var integer 显示位置，Y轴偏移，默认 0。
+     * @var integer 显示位置，Y轴偏移，单位是百分比，默认 0。
      */
     public $YPosition;
 
@@ -68,8 +71,9 @@ class AddLiveWatermarkRequest extends AbstractModel
     /**
      * @param string $PictureUrl 水印图片 URL。
      * @param string $WatermarkName 水印名称。
-     * @param integer $XPosition 显示位置，X轴偏移，默认 0。
-     * @param integer $YPosition 显示位置，Y轴偏移，默认 0。
+最长16字节。
+     * @param integer $XPosition 显示位置，X轴偏移，单位是百分比，默认 0。
+     * @param integer $YPosition 显示位置，Y轴偏移，单位是百分比，默认 0。
      * @param integer $Width 水印宽度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。默认原始宽度。
      * @param integer $Height 水印高度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。默认原始高度。
      */

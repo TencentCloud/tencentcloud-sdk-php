@@ -38,6 +38,14 @@ use TencentCloud\Common\AbstractModel;
 支持的图片大小：所下载图片经 Base64 编码后不超过 3M。图片下载时间不超过 3 秒。
 图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。
 非腾讯云存储的 Url 速度和稳定性可能受一定影响。
+ * @method boolean getEnableCoordPoint() 获取单词四点坐标开关，开启可返回图片中单词的四点坐标。
+该参数默认值为false。
+ * @method void setEnableCoordPoint(boolean $EnableCoordPoint) 设置单词四点坐标开关，开启可返回图片中单词的四点坐标。
+该参数默认值为false。
+ * @method boolean getEnableCandWord() 获取候选字开关，开启可返回识别时多个可能的候选字（每个候选字对应其置信度）。
+该参数默认值为false。
+ * @method void setEnableCandWord(boolean $EnableCandWord) 设置候选字开关，开启可返回识别时多个可能的候选字（每个候选字对应其置信度）。
+该参数默认值为false。
  */
 class EnglishOCRRequest extends AbstractModel
 {
@@ -59,6 +67,18 @@ class EnglishOCRRequest extends AbstractModel
     public $ImageUrl;
 
     /**
+     * @var boolean 单词四点坐标开关，开启可返回图片中单词的四点坐标。
+该参数默认值为false。
+     */
+    public $EnableCoordPoint;
+
+    /**
+     * @var boolean 候选字开关，开启可返回识别时多个可能的候选字（每个候选字对应其置信度）。
+该参数默认值为false。
+     */
+    public $EnableCandWord;
+
+    /**
      * @param string $ImageBase64 图片的 Base64 值。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经Base64编码后不超过 3M。图片下载时间不超过 3 秒。
@@ -68,6 +88,10 @@ class EnglishOCRRequest extends AbstractModel
 支持的图片大小：所下载图片经 Base64 编码后不超过 3M。图片下载时间不超过 3 秒。
 图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。
 非腾讯云存储的 Url 速度和稳定性可能受一定影响。
+     * @param boolean $EnableCoordPoint 单词四点坐标开关，开启可返回图片中单词的四点坐标。
+该参数默认值为false。
+     * @param boolean $EnableCandWord 候选字开关，开启可返回识别时多个可能的候选字（每个候选字对应其置信度）。
+该参数默认值为false。
      */
     function __construct()
     {
@@ -88,6 +112,14 @@ class EnglishOCRRequest extends AbstractModel
 
         if (array_key_exists("ImageUrl",$param) and $param["ImageUrl"] !== null) {
             $this->ImageUrl = $param["ImageUrl"];
+        }
+
+        if (array_key_exists("EnableCoordPoint",$param) and $param["EnableCoordPoint"] !== null) {
+            $this->EnableCoordPoint = $param["EnableCoordPoint"];
+        }
+
+        if (array_key_exists("EnableCandWord",$param) and $param["EnableCandWord"] !== null) {
+            $this->EnableCandWord = $param["EnableCandWord"];
         }
     }
 }

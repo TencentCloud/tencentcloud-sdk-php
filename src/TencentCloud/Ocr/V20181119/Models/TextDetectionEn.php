@@ -20,31 +20,37 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 英文识别结果
  *
- * @method string getDetectedText() 获取识别出的文本行内容
- * @method void setDetectedText(string $DetectedText) 设置识别出的文本行内容
- * @method integer getConfidence() 获取置信度 0 ~100
- * @method void setConfidence(integer $Confidence) 设置置信度 0 ~100
- * @method array getPolygon() 获取文本行坐标，以四个顶点坐标表示
+ * @method string getDetectedText() 获取识别出的文本行内容。
+ * @method void setDetectedText(string $DetectedText) 设置识别出的文本行内容。
+ * @method integer getConfidence() 获取置信度 0 ~100。
+ * @method void setConfidence(integer $Confidence) 设置置信度 0 ~100。
+ * @method array getPolygon() 获取文本行坐标，以四个顶点坐标表示。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPolygon(array $Polygon) 设置文本行坐标，以四个顶点坐标表示
+ * @method void setPolygon(array $Polygon) 设置文本行坐标，以四个顶点坐标表示。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAdvancedInfo() 获取此字段为扩展字段。目前EnglishOCR接口返回内容为空。
  * @method void setAdvancedInfo(string $AdvancedInfo) 设置此字段为扩展字段。目前EnglishOCR接口返回内容为空。
+ * @method array getWordCoordPoint() 获取单词在原图中的四点坐标。
+ * @method void setWordCoordPoint(array $WordCoordPoint) 设置单词在原图中的四点坐标。
+ * @method array getCandWord() 获取候选字符集(包含候选字Character以及置信度Confidence)。
+ * @method void setCandWord(array $CandWord) 设置候选字符集(包含候选字Character以及置信度Confidence)。
+ * @method array getWords() 获取识别出来的单词信息（包括单词Character和单词置信度confidence）
+ * @method void setWords(array $Words) 设置识别出来的单词信息（包括单词Character和单词置信度confidence）
  */
 class TextDetectionEn extends AbstractModel
 {
     /**
-     * @var string 识别出的文本行内容
+     * @var string 识别出的文本行内容。
      */
     public $DetectedText;
 
     /**
-     * @var integer 置信度 0 ~100
+     * @var integer 置信度 0 ~100。
      */
     public $Confidence;
 
     /**
-     * @var array 文本行坐标，以四个顶点坐标表示
+     * @var array 文本行坐标，以四个顶点坐标表示。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Polygon;
@@ -55,11 +61,29 @@ class TextDetectionEn extends AbstractModel
     public $AdvancedInfo;
 
     /**
-     * @param string $DetectedText 识别出的文本行内容
-     * @param integer $Confidence 置信度 0 ~100
-     * @param array $Polygon 文本行坐标，以四个顶点坐标表示
+     * @var array 单词在原图中的四点坐标。
+     */
+    public $WordCoordPoint;
+
+    /**
+     * @var array 候选字符集(包含候选字Character以及置信度Confidence)。
+     */
+    public $CandWord;
+
+    /**
+     * @var array 识别出来的单词信息（包括单词Character和单词置信度confidence）
+     */
+    public $Words;
+
+    /**
+     * @param string $DetectedText 识别出的文本行内容。
+     * @param integer $Confidence 置信度 0 ~100。
+     * @param array $Polygon 文本行坐标，以四个顶点坐标表示。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AdvancedInfo 此字段为扩展字段。目前EnglishOCR接口返回内容为空。
+     * @param array $WordCoordPoint 单词在原图中的四点坐标。
+     * @param array $CandWord 候选字符集(包含候选字Character以及置信度Confidence)。
+     * @param array $Words 识别出来的单词信息（包括单词Character和单词置信度confidence）
      */
     function __construct()
     {
@@ -93,6 +117,33 @@ class TextDetectionEn extends AbstractModel
 
         if (array_key_exists("AdvancedInfo",$param) and $param["AdvancedInfo"] !== null) {
             $this->AdvancedInfo = $param["AdvancedInfo"];
+        }
+
+        if (array_key_exists("WordCoordPoint",$param) and $param["WordCoordPoint"] !== null) {
+            $this->WordCoordPoint = [];
+            foreach ($param["WordCoordPoint"] as $key => $value){
+                $obj = new WordCoordPoint();
+                $obj->deserialize($value);
+                array_push($this->WordCoordPoint, $obj);
+            }
+        }
+
+        if (array_key_exists("CandWord",$param) and $param["CandWord"] !== null) {
+            $this->CandWord = [];
+            foreach ($param["CandWord"] as $key => $value){
+                $obj = new CandWord();
+                $obj->deserialize($value);
+                array_push($this->CandWord, $obj);
+            }
+        }
+
+        if (array_key_exists("Words",$param) and $param["Words"] !== null) {
+            $this->Words = [];
+            foreach ($param["Words"] as $key => $value){
+                $obj = new Words();
+                $obj->deserialize($value);
+                array_push($this->Words, $obj);
+            }
         }
     }
 }

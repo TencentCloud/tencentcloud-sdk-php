@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getStreamName() 获取流名称。
  * @method void setStreamName(string $StreamName) 设置流名称。
- * @method integer getTaskId() 获取任务ID，全局唯一标识录制任务。
- * @method void setTaskId(integer $TaskId) 设置任务ID，全局唯一标识录制任务。
+ * @method integer getTaskId() 获取任务ID，由CreateLiveRecord接口返回。
+ * @method void setTaskId(integer $TaskId) 设置任务ID，由CreateLiveRecord接口返回。
  */
 class StopLiveRecordRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class StopLiveRecordRequest extends AbstractModel
     public $StreamName;
 
     /**
-     * @var integer 任务ID，全局唯一标识录制任务。
+     * @var integer 任务ID，由CreateLiveRecord接口返回。
      */
     public $TaskId;
 
     /**
      * @param string $StreamName 流名称。
-     * @param integer $TaskId 任务ID，全局唯一标识录制任务。
+     * @param integer $TaskId 任务ID，由CreateLiveRecord接口返回。
      */
     function __construct()
     {

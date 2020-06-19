@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
 分别表示按权重轮询、最小连接数， 默认为 WRR。此参数仅适用于TCP/UDP/TCP_SSL监听器。
  * @method integer getSniSwitch() 获取是否开启SNI特性，此参数仅适用于HTTPS监听器。
  * @method void setSniSwitch(integer $SniSwitch) 设置是否开启SNI特性，此参数仅适用于HTTPS监听器。
+ * @method string getTargetType() 获取后端目标类型，NODE表示绑定普通节点，TARGETGROUP表示绑定目标组。
+ * @method void setTargetType(string $TargetType) 设置后端目标类型，NODE表示绑定普通节点，TARGETGROUP表示绑定目标组。
  */
 class CreateListenerRequest extends AbstractModel
 {
@@ -90,6 +92,11 @@ class CreateListenerRequest extends AbstractModel
     public $SniSwitch;
 
     /**
+     * @var string 后端目标类型，NODE表示绑定普通节点，TARGETGROUP表示绑定目标组。
+     */
+    public $TargetType;
+
+    /**
      * @param string $LoadBalancerId 负载均衡实例 ID
      * @param array $Ports 要将监听器创建到哪些端口，每个端口对应一个新的监听器
      * @param string $Protocol 监听器协议： TCP | UDP | HTTP | HTTPS | TCP_SSL（TCP_SSL 正在内测中，如需使用请通过工单申请）
@@ -100,6 +107,7 @@ class CreateListenerRequest extends AbstractModel
      * @param string $Scheduler 监听器转发的方式。可选值：WRR、LEAST_CONN
 分别表示按权重轮询、最小连接数， 默认为 WRR。此参数仅适用于TCP/UDP/TCP_SSL监听器。
      * @param integer $SniSwitch 是否开启SNI特性，此参数仅适用于HTTPS监听器。
+     * @param string $TargetType 后端目标类型，NODE表示绑定普通节点，TARGETGROUP表示绑定目标组。
      */
     function __construct()
     {
@@ -150,6 +158,10 @@ class CreateListenerRequest extends AbstractModel
 
         if (array_key_exists("SniSwitch",$param) and $param["SniSwitch"] !== null) {
             $this->SniSwitch = $param["SniSwitch"];
+        }
+
+        if (array_key_exists("TargetType",$param) and $param["TargetType"] !== null) {
+            $this->TargetType = $param["TargetType"];
         }
     }
 }

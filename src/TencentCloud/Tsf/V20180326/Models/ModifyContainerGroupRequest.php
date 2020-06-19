@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUpdateType(integer $UpdateType) 设置更新方式：0:快速更新 1:滚动更新
  * @method integer getUpdateIvl() 获取更新间隔,单位秒
  * @method void setUpdateIvl(integer $UpdateIvl) 设置更新间隔,单位秒
+ * @method string getSubnetId() 获取子网ID
+ * @method void setSubnetId(string $SubnetId) 设置子网ID
  */
 class ModifyContainerGroupRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class ModifyContainerGroupRequest extends AbstractModel
     public $UpdateIvl;
 
     /**
+     * @var string 子网ID
+     */
+    public $SubnetId;
+
+    /**
      * @param string $GroupId 部署组ID
      * @param integer $AccessType 0:公网 1:集群内访问 2：NodePort
      * @param array $ProtocolPorts ProtocolPorts数组
      * @param integer $UpdateType 更新方式：0:快速更新 1:滚动更新
      * @param integer $UpdateIvl 更新间隔,单位秒
+     * @param string $SubnetId 子网ID
      */
     function __construct()
     {
@@ -101,6 +109,10 @@ class ModifyContainerGroupRequest extends AbstractModel
 
         if (array_key_exists("UpdateIvl",$param) and $param["UpdateIvl"] !== null) {
             $this->UpdateIvl = $param["UpdateIvl"];
+        }
+
+        if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
+            $this->SubnetId = $param["SubnetId"];
         }
     }
 }

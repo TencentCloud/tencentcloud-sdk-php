@@ -104,6 +104,8 @@ use TencentCloud\As\V20180419\Models as Models;
 * 可以根据定时任务ID、定时任务名称或者伸缩组ID等信息来查询定时任务的详细信息。过滤信息详细请见过滤器`Filter`。
 * 如果参数为空，返回当前用户一定数量（Limit所指定的数量，默认为20）的定时任务。
  * @method Models\DetachInstancesResponse DetachInstances(Models\DetachInstancesRequest $req) 本接口（DetachInstances）用于从伸缩组移出 CVM 实例，本接口不会销毁实例。
+* 如果移出指定实例后，伸缩组内处于`IN_SERVICE`状态的实例数量小于伸缩组最小值，接口将报错
+* 如果伸缩组处于`DISABLED`状态，移出操作不校验`IN_SERVICE`实例数量和最小值的关系
  * @method Models\DisableAutoScalingGroupResponse DisableAutoScalingGroup(Models\DisableAutoScalingGroupRequest $req) 本接口（DisableAutoScalingGroup）用于停用指定伸缩组。
  * @method Models\EnableAutoScalingGroupResponse EnableAutoScalingGroup(Models\EnableAutoScalingGroupRequest $req) 本接口（EnableAutoScalingGroup）用于启用指定伸缩组。
  * @method Models\ExecuteScalingPolicyResponse ExecuteScalingPolicy(Models\ExecuteScalingPolicyRequest $req) 本接口（ExecuteScalingPolicy）用于执行伸缩策略。
@@ -127,6 +129,8 @@ use TencentCloud\As\V20180419\Models as Models;
  * @method Models\PreviewPaiDomainNameResponse PreviewPaiDomainName(Models\PreviewPaiDomainNameRequest $req) 本接口（PreviewPaiDomainName）用于预览PAI实例域名。
 
  * @method Models\RemoveInstancesResponse RemoveInstances(Models\RemoveInstancesRequest $req) 本接口（RemoveInstances）用于从伸缩组删除 CVM 实例。根据当前的产品逻辑，如果实例由弹性伸缩自动创建，则实例会被销毁；如果实例系创建后加入伸缩组的，则会从伸缩组中移除，保留实例。
+* 如果删除指定实例后，伸缩组内处于`IN_SERVICE`状态的实例数量小于伸缩组最小值，接口将报错
+* 如果伸缩组处于`DISABLED`状态，删除操作不校验`IN_SERVICE`实例数量和最小值的关系
  * @method Models\SetInstancesProtectionResponse SetInstancesProtection(Models\SetInstancesProtectionRequest $req) 本接口（SetInstancesProtection）用于设置实例移除保护。
 子机设置为移除保护之后，当发生不健康替换、报警策略、期望值变更等触发缩容时，将不对此子机缩容操作。
  * @method Models\StartAutoScalingInstancesResponse StartAutoScalingInstances(Models\StartAutoScalingInstancesRequest $req) 本接口（StartAutoScalingInstances）用于开启伸缩组内 CVM 实例。

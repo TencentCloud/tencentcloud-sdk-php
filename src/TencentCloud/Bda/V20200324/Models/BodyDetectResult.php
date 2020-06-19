@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
 通常情况建议使用阈值0.32，可适用大多数情况。
  * @method BodyRect getBodyRect() 获取图中检测出来的人体框
  * @method void setBodyRect(BodyRect $BodyRect) 设置图中检测出来的人体框
+ * @method BodyAttributeInfo getBodyAttributeInfo() 获取图中检测出的人体属性信息。
+ * @method void setBodyAttributeInfo(BodyAttributeInfo $BodyAttributeInfo) 设置图中检测出的人体属性信息。
  */
 class BodyDetectResult extends AbstractModel
 {
@@ -44,10 +46,16 @@ class BodyDetectResult extends AbstractModel
     public $BodyRect;
 
     /**
+     * @var BodyAttributeInfo 图中检测出的人体属性信息。
+     */
+    public $BodyAttributeInfo;
+
+    /**
      * @param float $Confidence 检测出的人体置信度。 
 误识率百分之十对应的阈值是0.14；误识率百分之五对应的阈值是0.32；误识率百分之二对应的阈值是0.62；误识率百分之一对应的阈值是0.81。 
 通常情况建议使用阈值0.32，可适用大多数情况。
      * @param BodyRect $BodyRect 图中检测出来的人体框
+     * @param BodyAttributeInfo $BodyAttributeInfo 图中检测出的人体属性信息。
      */
     function __construct()
     {
@@ -69,6 +77,11 @@ class BodyDetectResult extends AbstractModel
         if (array_key_exists("BodyRect",$param) and $param["BodyRect"] !== null) {
             $this->BodyRect = new BodyRect();
             $this->BodyRect->deserialize($param["BodyRect"]);
+        }
+
+        if (array_key_exists("BodyAttributeInfo",$param) and $param["BodyAttributeInfo"] !== null) {
+            $this->BodyAttributeInfo = new BodyAttributeInfo();
+            $this->BodyAttributeInfo->deserialize($param["BodyAttributeInfo"]);
         }
     }
 }

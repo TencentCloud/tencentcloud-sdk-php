@@ -24,7 +24,7 @@ use TencentCloud\Trtc\V20190722\Models as Models;
 
 /**
  * @method Models\CreateTroubleInfoResponse CreateTroubleInfo(Models\CreateTroubleInfoRequest $req) 创建异常信息
- * @method Models\DescribeCallDetailResponse DescribeCallDetail(Models\DescribeCallDetailRequest $req) 查询指定时间内的用户列表及用户通话质量数据。可查询5天内数据，查询起止时间不超过1个小时，查询用户不超过6个
+ * @method Models\DescribeCallDetailResponse DescribeCallDetail(Models\DescribeCallDetailRequest $req) 查询指定时间内的用户列表及用户通话质量数据。可查询5天内数据，查询起止时间不超过1个小时，查询用户不超过6个，不支持跨天查询。
  * @method Models\DescribeDetailEventResponse DescribeDetailEvent(Models\DescribeDetailEventRequest $req) 查询用户某次通话内的进退房，视频开关等详细事件。可查询5天内数据。
  * @method Models\DescribeHistoryScaleResponse DescribeHistoryScale(Models\DescribeHistoryScaleRequest $req) 可查询sdkqppid 每天的房间数和用户数，每分钟1次，可查询最近5天的数据。当天未结束，无法查到当天的房间数与用户数。
  * @method Models\DescribeRealtimeNetworkResponse DescribeRealtimeNetwork(Models\DescribeRealtimeNetworkRequest $req) 查询sdkappid维度下实时网络状态，包括上行丢包与下行丢包。可查询24小时内数据，查询起止时间不超过1个小时。

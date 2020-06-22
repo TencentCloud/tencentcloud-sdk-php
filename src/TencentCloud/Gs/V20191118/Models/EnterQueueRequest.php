@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserId(string $UserId) 设置用户ID
  * @method integer getSetNumber() 获取资源池编号
  * @method void setSetNumber(integer $SetNumber) 设置资源池编号
+ * @method string getUserIp() 获取游戏用户IP，用于就近调度，例如125.127.178.228
+ * @method void setUserIp(string $UserIp) 设置游戏用户IP，用于就近调度，例如125.127.178.228
  */
 class EnterQueueRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class EnterQueueRequest extends AbstractModel
     public $SetNumber;
 
     /**
+     * @var string 游戏用户IP，用于就近调度，例如125.127.178.228
+     */
+    public $UserIp;
+
+    /**
      * @param boolean $First true：第一次请求排队 false：已在排队中，查询当前排名
      * @param string $GameId 游戏ID
      * @param string $UserId 用户ID
      * @param integer $SetNumber 资源池编号
+     * @param string $UserIp 游戏用户IP，用于就近调度，例如125.127.178.228
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class EnterQueueRequest extends AbstractModel
 
         if (array_key_exists("SetNumber",$param) and $param["SetNumber"] !== null) {
             $this->SetNumber = $param["SetNumber"];
+        }
+
+        if (array_key_exists("UserIp",$param) and $param["UserIp"] !== null) {
+            $this->UserIp = $param["UserIp"];
         }
     }
 }

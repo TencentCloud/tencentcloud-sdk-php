@@ -21,9 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * UpdateNotebookInstance请求参数结构体
  *
  * @method string getNotebookInstanceName() 获取Notebook实例名称
-规则：^[a-zA-Z0-9](-*[a-zA-Z0-9])*$
+规则：“^\[a-zA-Z0-9\](-\*\[a-zA-Z0-9\])\*$”
  * @method void setNotebookInstanceName(string $NotebookInstanceName) 设置Notebook实例名称
-规则：^[a-zA-Z0-9](-*[a-zA-Z0-9])*$
+规则：“^\[a-zA-Z0-9\](-\*\[a-zA-Z0-9\])\*$”
  * @method string getRoleArn() 获取角色的资源描述
  * @method void setRoleArn(string $RoleArn) 设置角色的资源描述
  * @method string getRootAccess() 获取Root访问权限
@@ -69,7 +69,7 @@ class UpdateNotebookInstanceRequest extends AbstractModel
 {
     /**
      * @var string Notebook实例名称
-规则：^[a-zA-Z0-9](-*[a-zA-Z0-9])*$
+规则：“^\[a-zA-Z0-9\](-\*\[a-zA-Z0-9\])\*$”
      */
     public $NotebookInstanceName;
 
@@ -147,7 +147,7 @@ class UpdateNotebookInstanceRequest extends AbstractModel
 
     /**
      * @param string $NotebookInstanceName Notebook实例名称
-规则：^[a-zA-Z0-9](-*[a-zA-Z0-9])*$
+规则：“^\[a-zA-Z0-9\](-\*\[a-zA-Z0-9\])\*$”
      * @param string $RoleArn 角色的资源描述
      * @param string $RootAccess Root访问权限
      * @param integer $VolumeSizeInGB 数据卷大小(GB)

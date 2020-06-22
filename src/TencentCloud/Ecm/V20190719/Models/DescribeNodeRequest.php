@@ -20,14 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeNode请求参数结构体
  *
-
+ * @method array getFilters() 获取过滤条件，name取值为： InstanceFamily-实例系列
+ * @method void setFilters(array $Filters) 设置过滤条件，name取值为： InstanceFamily-实例系列
  */
 class DescribeNodeRequest extends AbstractModel
 {
-
+    /**
+     * @var array 过滤条件，name取值为： InstanceFamily-实例系列
+     */
+    public $Filters;
 
     /**
-
+     * @param array $Filters 过滤条件，name取值为： InstanceFamily-实例系列
      */
     function __construct()
     {
@@ -42,6 +46,13 @@ class DescribeNodeRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+            $this->Filters = [];
+            foreach ($param["Filters"] as $key => $value){
+                $obj = new Filter();
+                $obj->deserialize($value);
+                array_push($this->Filters, $obj);
+            }
+        }
     }
 }

@@ -14,28 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tione\V20191022\Models;
+namespace TencentCloud\Nlp\V20190408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeNotebookInstance请求参数结构体
+ * DescribeDict请求参数结构体
  *
- * @method string getNotebookInstanceName() 获取Notebook实例名称
-规则：“^\[a-zA-Z0-9\](-\*\[a-zA-Z0-9\])\*$”
- * @method void setNotebookInstanceName(string $NotebookInstanceName) 设置Notebook实例名称
-规则：“^\[a-zA-Z0-9\](-\*\[a-zA-Z0-9\])\*$”
+ * @method string getDictId() 获取自定义词库ID。
+ * @method void setDictId(string $DictId) 设置自定义词库ID。
+ * @method string getName() 获取自定义词库名称，模糊搜索。
+ * @method void setName(string $Name) 设置自定义词库名称，模糊搜索。
  */
-class DescribeNotebookInstanceRequest extends AbstractModel
+class DescribeDictRequest extends AbstractModel
 {
     /**
-     * @var string Notebook实例名称
-规则：“^\[a-zA-Z0-9\](-\*\[a-zA-Z0-9\])\*$”
+     * @var string 自定义词库ID。
      */
-    public $NotebookInstanceName;
+    public $DictId;
 
     /**
-     * @param string $NotebookInstanceName Notebook实例名称
-规则：“^\[a-zA-Z0-9\](-\*\[a-zA-Z0-9\])\*$”
+     * @var string 自定义词库名称，模糊搜索。
+     */
+    public $Name;
+
+    /**
+     * @param string $DictId 自定义词库ID。
+     * @param string $Name 自定义词库名称，模糊搜索。
      */
     function __construct()
     {
@@ -50,8 +54,12 @@ class DescribeNotebookInstanceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("NotebookInstanceName",$param) and $param["NotebookInstanceName"] !== null) {
-            $this->NotebookInstanceName = $param["NotebookInstanceName"];
+        if (array_key_exists("DictId",$param) and $param["DictId"] !== null) {
+            $this->DictId = $param["DictId"];
+        }
+
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
         }
     }
 }

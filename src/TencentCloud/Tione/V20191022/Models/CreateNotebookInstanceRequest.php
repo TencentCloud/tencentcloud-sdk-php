@@ -21,9 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * CreateNotebookInstance请求参数结构体
  *
  * @method string getNotebookInstanceName() 获取Notebook实例名称，不能超过63个字符
-规则：^[a-zA-Z0-9](-*[a-zA-Z0-9])*$
+规则：“^\[a-zA-Z0-9\](-\*\[a-zA-Z0-9\])\*$”
  * @method void setNotebookInstanceName(string $NotebookInstanceName) 设置Notebook实例名称，不能超过63个字符
-规则：^[a-zA-Z0-9](-*[a-zA-Z0-9])*$
+规则：“^\[a-zA-Z0-9\](-\*\[a-zA-Z0-9\])\*$”
  * @method string getInstanceType() 获取Notebook算力类型
 参考https://cloud.tencent.com/document/product/851/41239
  * @method void setInstanceType(string $InstanceType) 设置Notebook算力类型
@@ -79,7 +79,7 @@ class CreateNotebookInstanceRequest extends AbstractModel
 {
     /**
      * @var string Notebook实例名称，不能超过63个字符
-规则：^[a-zA-Z0-9](-*[a-zA-Z0-9])*$
+规则：“^\[a-zA-Z0-9\](-\*\[a-zA-Z0-9\])\*$”
      */
     public $NotebookInstanceName;
 
@@ -154,7 +154,7 @@ class CreateNotebookInstanceRequest extends AbstractModel
 
     /**
      * @param string $NotebookInstanceName Notebook实例名称，不能超过63个字符
-规则：^[a-zA-Z0-9](-*[a-zA-Z0-9])*$
+规则：“^\[a-zA-Z0-9\](-\*\[a-zA-Z0-9\])\*$”
      * @param string $InstanceType Notebook算力类型
 参考https://cloud.tencent.com/document/product/851/41239
      * @param integer $VolumeSizeInGB 数据卷大小(GB)

@@ -21,9 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * CreatePresignedNotebookInstanceUrl请求参数结构体
  *
  * @method string getNotebookInstanceName() 获取Notebook实例名称
-规则：^[a-zA-Z0-9](-*[a-zA-Z0-9])*$
+规则：“^\[a-zA-Z0-9\](-\*\[a-zA-Z0-9\])\*$”
  * @method void setNotebookInstanceName(string $NotebookInstanceName) 设置Notebook实例名称
-规则：^[a-zA-Z0-9](-*[a-zA-Z0-9])*$
+规则：“^\[a-zA-Z0-9\](-\*\[a-zA-Z0-9\])\*$”
  * @method integer getSessionExpirationDurationInSeconds() 获取session有效时间，秒，取值范围[1800, 43200]
  * @method void setSessionExpirationDurationInSeconds(integer $SessionExpirationDurationInSeconds) 设置session有效时间，秒，取值范围[1800, 43200]
  */
@@ -31,7 +31,7 @@ class CreatePresignedNotebookInstanceUrlRequest extends AbstractModel
 {
     /**
      * @var string Notebook实例名称
-规则：^[a-zA-Z0-9](-*[a-zA-Z0-9])*$
+规则：“^\[a-zA-Z0-9\](-\*\[a-zA-Z0-9\])\*$”
      */
     public $NotebookInstanceName;
 
@@ -42,7 +42,7 @@ class CreatePresignedNotebookInstanceUrlRequest extends AbstractModel
 
     /**
      * @param string $NotebookInstanceName Notebook实例名称
-规则：^[a-zA-Z0-9](-*[a-zA-Z0-9])*$
+规则：“^\[a-zA-Z0-9\](-\*\[a-zA-Z0-9\])\*$”
      * @param integer $SessionExpirationDurationInSeconds session有效时间，秒，取值范围[1800, 43200]
      */
     function __construct()

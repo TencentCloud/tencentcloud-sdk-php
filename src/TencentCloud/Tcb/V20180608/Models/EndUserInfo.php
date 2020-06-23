@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsAnonymous(boolean $IsAnonymous) 设置是否为匿名用户
  * @method boolean getIsDisabled() 获取是否禁用账户
  * @method void setIsDisabled(boolean $IsDisabled) 设置是否禁用账户
+ * @method boolean getHasPassword() 获取是否设置过密码
+ * @method void setHasPassword(boolean $HasPassword) 设置是否设置过密码
  */
 class EndUserInfo extends AbstractModel
 {
@@ -108,6 +110,11 @@ class EndUserInfo extends AbstractModel
     public $IsDisabled;
 
     /**
+     * @var boolean 是否设置过密码
+     */
+    public $HasPassword;
+
+    /**
      * @param string $UUId 用户唯一ID
      * @param string $WXOpenId 微信ID
      * @param string $QQOpenId qq ID
@@ -120,6 +127,7 @@ class EndUserInfo extends AbstractModel
      * @param string $CreateTime 创建时间
      * @param boolean $IsAnonymous 是否为匿名用户
      * @param boolean $IsDisabled 是否禁用账户
+     * @param boolean $HasPassword 是否设置过密码
      */
     function __construct()
     {
@@ -180,6 +188,10 @@ class EndUserInfo extends AbstractModel
 
         if (array_key_exists("IsDisabled",$param) and $param["IsDisabled"] !== null) {
             $this->IsDisabled = $param["IsDisabled"];
+        }
+
+        if (array_key_exists("HasPassword",$param) and $param["HasPassword"] !== null) {
+            $this->HasPassword = $param["HasPassword"];
         }
     }
 }

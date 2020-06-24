@@ -31,8 +31,7 @@ use TencentCloud\Common\AbstractModel;
 <li>ac3。</li>
 当外层参数 Container 为 mp4 或 flv 时，可选值为：
 <li>libfdk_aac：更适合 mp4；</li>
-<li>libmp3lame：更适合 flv；</li>
-<li>mp2。</li>
+<li>libmp3lame：更适合 flv。</li>
 当外层参数 Container 为 hls 时，可选值为：
 <li>libfdk_aac；</li>
 <li>libmp3lame。</li>
@@ -47,8 +46,7 @@ use TencentCloud\Common\AbstractModel;
 <li>ac3。</li>
 当外层参数 Container 为 mp4 或 flv 时，可选值为：
 <li>libfdk_aac：更适合 mp4；</li>
-<li>libmp3lame：更适合 flv；</li>
-<li>mp2。</li>
+<li>libmp3lame：更适合 flv。</li>
 当外层参数 Container 为 hls 时，可选值为：
 <li>libfdk_aac；</li>
 <li>libmp3lame。</li>
@@ -91,8 +89,7 @@ class AudioTemplateInfo extends AbstractModel
 <li>ac3。</li>
 当外层参数 Container 为 mp4 或 flv 时，可选值为：
 <li>libfdk_aac：更适合 mp4；</li>
-<li>libmp3lame：更适合 flv；</li>
-<li>mp2。</li>
+<li>libmp3lame：更适合 flv。</li>
 当外层参数 Container 为 hls 时，可选值为：
 <li>libfdk_aac；</li>
 <li>libmp3lame。</li>
@@ -135,8 +132,7 @@ class AudioTemplateInfo extends AbstractModel
 <li>ac3。</li>
 当外层参数 Container 为 mp4 或 flv 时，可选值为：
 <li>libfdk_aac：更适合 mp4；</li>
-<li>libmp3lame：更适合 flv；</li>
-<li>mp2。</li>
+<li>libmp3lame：更适合 flv。</li>
 当外层参数 Container 为 hls 时，可选值为：
 <li>libfdk_aac；</li>
 <li>libmp3lame。</li>

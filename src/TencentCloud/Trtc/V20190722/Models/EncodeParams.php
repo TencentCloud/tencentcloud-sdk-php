@@ -20,82 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * MCU混流输出流编码参数
  *
- * @method integer getAudioSampleRate() 获取混流-输出流音频采样率
- * @method void setAudioSampleRate(integer $AudioSampleRate) 设置混流-输出流音频采样率
- * @method integer getAudioBitrate() 获取混流-输出流音频码率，单位Kbps
- * @method void setAudioBitrate(integer $AudioBitrate) 设置混流-输出流音频码率，单位Kbps
- * @method integer getAudioChannels() 获取混流-输出流音频声道数
- * @method void setAudioChannels(integer $AudioChannels) 设置混流-输出流音频声道数
- * @method integer getVideoWidth() 获取混流-输出流宽，音视频输出时必填
- * @method void setVideoWidth(integer $VideoWidth) 设置混流-输出流宽，音视频输出时必填
- * @method integer getVideoHeight() 获取混流-输出流高，音视频输出时必填
- * @method void setVideoHeight(integer $VideoHeight) 设置混流-输出流高，音视频输出时必填
- * @method integer getVideoBitrate() 获取混流-输出流码率，单位Kbps，音视频输出时必填
- * @method void setVideoBitrate(integer $VideoBitrate) 设置混流-输出流码率，单位Kbps，音视频输出时必填
- * @method integer getVideoFramerate() 获取混流-输出流帧率，音视频输出时必填
- * @method void setVideoFramerate(integer $VideoFramerate) 设置混流-输出流帧率，音视频输出时必填
- * @method integer getVideoGop() 获取混流-输出流gop，音视频输出时必填
- * @method void setVideoGop(integer $VideoGop) 设置混流-输出流gop，音视频输出时必填
- * @method integer getBackgroundColor() 获取混流-输出流背景色
- * @method void setBackgroundColor(integer $BackgroundColor) 设置混流-输出流背景色
+ * @method integer getAudioSampleRate() 获取混流-输出流音频采样率。取值为[96000, 88200, 64000, 48000, 44100, 32000,24000, 22050, 16000, 12000, 11025, 8000]。
+ * @method void setAudioSampleRate(integer $AudioSampleRate) 设置混流-输出流音频采样率。取值为[96000, 88200, 64000, 48000, 44100, 32000,24000, 22050, 16000, 12000, 11025, 8000]。
+ * @method integer getAudioBitrate() 获取混流-输出流音频码率。取值范围[8,500]，单位为Kbps。
+ * @method void setAudioBitrate(integer $AudioBitrate) 设置混流-输出流音频码率。取值范围[8,500]，单位为Kbps。
+ * @method integer getAudioChannels() 获取混流-输出流音频声道数，取值范围[1,2]。
+ * @method void setAudioChannels(integer $AudioChannels) 设置混流-输出流音频声道数，取值范围[1,2]。
+ * @method integer getVideoWidth() 获取混流-输出流宽，音视频输出时必填。取值范围[0,1920]，单位为像素值。
+ * @method void setVideoWidth(integer $VideoWidth) 设置混流-输出流宽，音视频输出时必填。取值范围[0,1920]，单位为像素值。
+ * @method integer getVideoHeight() 获取混流-输出流高，音视频输出时必填。取值范围[0,1080]，单位为像素值。
+ * @method void setVideoHeight(integer $VideoHeight) 设置混流-输出流高，音视频输出时必填。取值范围[0,1080]，单位为像素值。
+ * @method integer getVideoBitrate() 获取混流-输出流码率，音视频输出时必填。取值范围[1,10000]，单位为Kbps。
+ * @method void setVideoBitrate(integer $VideoBitrate) 设置混流-输出流码率，音视频输出时必填。取值范围[1,10000]，单位为Kbps。
+ * @method integer getVideoFramerate() 获取混流-输出流帧率，音视频输出时必填。取值为[6,12,15,24,30,48,60]，不在上述帧率值内系统会自动调整。
+ * @method void setVideoFramerate(integer $VideoFramerate) 设置混流-输出流帧率，音视频输出时必填。取值为[6,12,15,24,30,48,60]，不在上述帧率值内系统会自动调整。
+ * @method integer getVideoGop() 获取混流-输出流gop，音视频输出时必填。取值范围[1,5]，单位为秒。
+ * @method void setVideoGop(integer $VideoGop) 设置混流-输出流gop，音视频输出时必填。取值范围[1,5]，单位为秒。
+ * @method integer getBackgroundColor() 获取混流-输出流背景色。
+ * @method void setBackgroundColor(integer $BackgroundColor) 设置混流-输出流背景色。
  */
 class EncodeParams extends AbstractModel
 {
     /**
-     * @var integer 混流-输出流音频采样率
+     * @var integer 混流-输出流音频采样率。取值为[96000, 88200, 64000, 48000, 44100, 32000,24000, 22050, 16000, 12000, 11025, 8000]。
      */
     public $AudioSampleRate;
 
     /**
-     * @var integer 混流-输出流音频码率，单位Kbps
+     * @var integer 混流-输出流音频码率。取值范围[8,500]，单位为Kbps。
      */
     public $AudioBitrate;
 
     /**
-     * @var integer 混流-输出流音频声道数
+     * @var integer 混流-输出流音频声道数，取值范围[1,2]。
      */
     public $AudioChannels;
 
     /**
-     * @var integer 混流-输出流宽，音视频输出时必填
+     * @var integer 混流-输出流宽，音视频输出时必填。取值范围[0,1920]，单位为像素值。
      */
     public $VideoWidth;
 
     /**
-     * @var integer 混流-输出流高，音视频输出时必填
+     * @var integer 混流-输出流高，音视频输出时必填。取值范围[0,1080]，单位为像素值。
      */
     public $VideoHeight;
 
     /**
-     * @var integer 混流-输出流码率，单位Kbps，音视频输出时必填
+     * @var integer 混流-输出流码率，音视频输出时必填。取值范围[1,10000]，单位为Kbps。
      */
     public $VideoBitrate;
 
     /**
-     * @var integer 混流-输出流帧率，音视频输出时必填
+     * @var integer 混流-输出流帧率，音视频输出时必填。取值为[6,12,15,24,30,48,60]，不在上述帧率值内系统会自动调整。
      */
     public $VideoFramerate;
 
     /**
-     * @var integer 混流-输出流gop，音视频输出时必填
+     * @var integer 混流-输出流gop，音视频输出时必填。取值范围[1,5]，单位为秒。
      */
     public $VideoGop;
 
     /**
-     * @var integer 混流-输出流背景色
+     * @var integer 混流-输出流背景色。
      */
     public $BackgroundColor;
 
     /**
-     * @param integer $AudioSampleRate 混流-输出流音频采样率
-     * @param integer $AudioBitrate 混流-输出流音频码率，单位Kbps
-     * @param integer $AudioChannels 混流-输出流音频声道数
-     * @param integer $VideoWidth 混流-输出流宽，音视频输出时必填
-     * @param integer $VideoHeight 混流-输出流高，音视频输出时必填
-     * @param integer $VideoBitrate 混流-输出流码率，单位Kbps，音视频输出时必填
-     * @param integer $VideoFramerate 混流-输出流帧率，音视频输出时必填
-     * @param integer $VideoGop 混流-输出流gop，音视频输出时必填
-     * @param integer $BackgroundColor 混流-输出流背景色
+     * @param integer $AudioSampleRate 混流-输出流音频采样率。取值为[96000, 88200, 64000, 48000, 44100, 32000,24000, 22050, 16000, 12000, 11025, 8000]。
+     * @param integer $AudioBitrate 混流-输出流音频码率。取值范围[8,500]，单位为Kbps。
+     * @param integer $AudioChannels 混流-输出流音频声道数，取值范围[1,2]。
+     * @param integer $VideoWidth 混流-输出流宽，音视频输出时必填。取值范围[0,1920]，单位为像素值。
+     * @param integer $VideoHeight 混流-输出流高，音视频输出时必填。取值范围[0,1080]，单位为像素值。
+     * @param integer $VideoBitrate 混流-输出流码率，音视频输出时必填。取值范围[1,10000]，单位为Kbps。
+     * @param integer $VideoFramerate 混流-输出流帧率，音视频输出时必填。取值为[6,12,15,24,30,48,60]，不在上述帧率值内系统会自动调整。
+     * @param integer $VideoGop 混流-输出流gop，音视频输出时必填。取值范围[1,5]，单位为秒。
+     * @param integer $BackgroundColor 混流-输出流背景色。
      */
     function __construct()
     {

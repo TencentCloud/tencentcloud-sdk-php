@@ -39,6 +39,7 @@ use TencentCloud\Gse\V20191112\Models as Models;
  * @method Models\SearchGameServerSessionsResponse SearchGameServerSessions(Models\SearchGameServerSessionsRequest $req) 本接口（SearchGameServerSessions）用于搜索游戏服务器会话列表
  * @method Models\SetServerWeightResponse SetServerWeight(Models\SetServerWeightRequest $req) 设置服务器权重
  * @method Models\StartGameServerSessionPlacementResponse StartGameServerSessionPlacement(Models\StartGameServerSessionPlacementRequest $req) 本接口（StartGameServerSessionPlacement）用于开始放置游戏服务器会话
+ * @method Models\StartMatchPlacementResponse StartMatchPlacement(Models\StartMatchPlacementRequest $req) 本接口（StartMatchPlacement）用于开始匹配放置游戏服务器会话
  * @method Models\StopGameServerSessionPlacementResponse StopGameServerSessionPlacement(Models\StopGameServerSessionPlacementRequest $req) 本接口（StopGameServerSessionPlacement）用于停止放置游戏服务器会话
  * @method Models\UpdateGameServerSessionResponse UpdateGameServerSession(Models\UpdateGameServerSessionRequest $req) 本接口（UpdateGameServerSession）用于更新游戏服务器会话
  */

@@ -34,6 +34,7 @@ use TencentCloud\Kms\V20190118\Models as Models;
  * @method Models\DescribeKeyResponse DescribeKey(Models\DescribeKeyRequest $req) 用于获取指定KeyId的主密钥属性详情信息。
  * @method Models\DescribeKeysResponse DescribeKeys(Models\DescribeKeysRequest $req) 该接口用于批量获取主密钥属性信息。
  * @method Models\DescribeWhiteBoxDecryptKeyResponse DescribeWhiteBoxDecryptKey(Models\DescribeWhiteBoxDecryptKeyRequest $req) 获取白盒解密密钥
+ * @method Models\DescribeWhiteBoxDeviceFingerprintsResponse DescribeWhiteBoxDeviceFingerprints(Models\DescribeWhiteBoxDeviceFingerprintsRequest $req) 获取指定密钥的设备指纹列表
  * @method Models\DescribeWhiteBoxKeyResponse DescribeWhiteBoxKey(Models\DescribeWhiteBoxKeyRequest $req) 展示白盒密钥的信息
  * @method Models\DescribeWhiteBoxKeyDetailsResponse DescribeWhiteBoxKeyDetails(Models\DescribeWhiteBoxKeyDetailsRequest $req) 获取白盒密钥列表
  * @method Models\DescribeWhiteBoxServiceStatusResponse DescribeWhiteBoxServiceStatus(Models\DescribeWhiteBoxServiceStatusRequest $req) 获取白盒密钥服务状态
@@ -60,6 +61,7 @@ use TencentCloud\Kms\V20190118\Models as Models;
  * @method Models\ListAlgorithmsResponse ListAlgorithms(Models\ListAlgorithmsRequest $req) 列出当前Region支持的加密方式
  * @method Models\ListKeyDetailResponse ListKeyDetail(Models\ListKeyDetailRequest $req) 根据指定Offset和Limit获取主密钥列表详情。
  * @method Models\ListKeysResponse ListKeys(Models\ListKeysRequest $req) 列出账号下面状态为Enabled， Disabled 和 PendingImport 的CMK KeyId 列表
+ * @method Models\OverwriteWhiteBoxDeviceFingerprintsResponse OverwriteWhiteBoxDeviceFingerprints(Models\OverwriteWhiteBoxDeviceFingerprintsRequest $req) 覆盖指定密钥的设备指纹信息
  * @method Models\ReEncryptResponse ReEncrypt(Models\ReEncryptRequest $req) 使用指定CMK对密文重新加密。
  * @method Models\ScheduleKeyDeletionResponse ScheduleKeyDeletion(Models\ScheduleKeyDeletionRequest $req) CMK计划删除接口，用于指定CMK删除的时间，可选时间区间为[7,30]天
  * @method Models\UpdateAliasResponse UpdateAlias(Models\UpdateAliasRequest $req) 用于修改CMK的别名。对于处于PendingDelete状态的CMK禁止修改。

@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * StartNotebookInstance请求参数结构体
  *
  * @method string getNotebookInstanceName() 获取Notebook实例名称
-规则：^[a-zA-Z0-9](-*[a-zA-Z0-9])*$
  * @method void setNotebookInstanceName(string $NotebookInstanceName) 设置Notebook实例名称
-规则：^[a-zA-Z0-9](-*[a-zA-Z0-9])*$
  * @method string getAutoStopping() 获取自动停止，可取值Enabled/Disabled
 取值为Disabled的时候StoppingCondition将被忽略
 取值为Enabled的时候读取StoppingCondition作为自动停止的配置
@@ -37,7 +35,6 @@ class StartNotebookInstanceRequest extends AbstractModel
 {
     /**
      * @var string Notebook实例名称
-规则：^[a-zA-Z0-9](-*[a-zA-Z0-9])*$
      */
     public $NotebookInstanceName;
 
@@ -55,7 +52,6 @@ class StartNotebookInstanceRequest extends AbstractModel
 
     /**
      * @param string $NotebookInstanceName Notebook实例名称
-规则：^[a-zA-Z0-9](-*[a-zA-Z0-9])*$
      * @param string $AutoStopping 自动停止，可取值Enabled/Disabled
 取值为Disabled的时候StoppingCondition将被忽略
 取值为Enabled的时候读取StoppingCondition作为自动停止的配置

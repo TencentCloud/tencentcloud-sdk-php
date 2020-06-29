@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeReportData请求参数结构体
  *
- * @method string getStartTime() 获取查询起始时间
- * @method void setStartTime(string $StartTime) 设置查询起始时间
- * @method string getEndTime() 获取查询结束时间
- * @method void setEndTime(string $EndTime) 设置查询结束时间
+ * @method string getStartTime() 获取查询起始时间：yyyy-MM-dd
+ * @method void setStartTime(string $StartTime) 设置查询起始时间：yyyy-MM-dd
+ * @method string getEndTime() 获取查询结束时间：yyyy-MM-dd
+ * @method void setEndTime(string $EndTime) 设置查询结束时间：yyyy-MM-dd
  * @method string getReportType() 获取报表类型
 daily：日报表
-weekly：周报表
-monthly：月报表
+weekly：周报表（周一至周日）
+monthly：月报表（自然月）
  * @method void setReportType(string $ReportType) 设置报表类型
 daily：日报表
-weekly：周报表
-monthly：月报表
+weekly：周报表（周一至周日）
+monthly：月报表（自然月）
  * @method string getArea() 获取域名加速区域
 mainland：中国境内
 overseas：中国境外
@@ -48,20 +48,20 @@ overseas：中国境外
 class DescribeReportDataRequest extends AbstractModel
 {
     /**
-     * @var string 查询起始时间
+     * @var string 查询起始时间：yyyy-MM-dd
      */
     public $StartTime;
 
     /**
-     * @var string 查询结束时间
+     * @var string 查询结束时间：yyyy-MM-dd
      */
     public $EndTime;
 
     /**
      * @var string 报表类型
 daily：日报表
-weekly：周报表
-monthly：月报表
+weekly：周报表（周一至周日）
+monthly：月报表（自然月）
      */
     public $ReportType;
 
@@ -88,12 +88,12 @@ overseas：中国境外
     public $Project;
 
     /**
-     * @param string $StartTime 查询起始时间
-     * @param string $EndTime 查询结束时间
+     * @param string $StartTime 查询起始时间：yyyy-MM-dd
+     * @param string $EndTime 查询结束时间：yyyy-MM-dd
      * @param string $ReportType 报表类型
 daily：日报表
-weekly：周报表
-monthly：月报表
+weekly：周报表（周一至周日）
+monthly：月报表（自然月）
      * @param string $Area 域名加速区域
 mainland：中国境内
 overseas：中国境外

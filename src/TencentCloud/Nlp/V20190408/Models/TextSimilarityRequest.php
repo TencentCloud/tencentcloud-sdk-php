@@ -20,29 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * TextSimilarity请求参数结构体
  *
- * @method string getSrcText() 获取需要与目标句子计算相似度的源句子（仅支持UTF-8格式，不超过500字）
- * @method void setSrcText(string $SrcText) 设置需要与目标句子计算相似度的源句子（仅支持UTF-8格式，不超过500字）
- * @method array getTargetText() 获取需要与源句子计算相似度的一个或多个目标句子（仅支持UTF-8格式，目标句子的数量不超过100个，每个句子不超过500字）
+ * @method string getSrcText() 获取需要与目标句子计算相似度的源句子（仅支持UTF-8格式，不超过500字符）
+ * @method void setSrcText(string $SrcText) 设置需要与目标句子计算相似度的源句子（仅支持UTF-8格式，不超过500字符）
+ * @method array getTargetText() 获取需要与源句子计算相似度的一个或多个目标句子（仅支持UTF-8格式，目标句子的数量不超过100个，每个句子不超过500字符）
 注意：每成功计算1个目标句子与源句子的相似度算1次调用
- * @method void setTargetText(array $TargetText) 设置需要与源句子计算相似度的一个或多个目标句子（仅支持UTF-8格式，目标句子的数量不超过100个，每个句子不超过500字）
+ * @method void setTargetText(array $TargetText) 设置需要与源句子计算相似度的一个或多个目标句子（仅支持UTF-8格式，目标句子的数量不超过100个，每个句子不超过500字符）
 注意：每成功计算1个目标句子与源句子的相似度算1次调用
  */
 class TextSimilarityRequest extends AbstractModel
 {
     /**
-     * @var string 需要与目标句子计算相似度的源句子（仅支持UTF-8格式，不超过500字）
+     * @var string 需要与目标句子计算相似度的源句子（仅支持UTF-8格式，不超过500字符）
      */
     public $SrcText;
 
     /**
-     * @var array 需要与源句子计算相似度的一个或多个目标句子（仅支持UTF-8格式，目标句子的数量不超过100个，每个句子不超过500字）
+     * @var array 需要与源句子计算相似度的一个或多个目标句子（仅支持UTF-8格式，目标句子的数量不超过100个，每个句子不超过500字符）
 注意：每成功计算1个目标句子与源句子的相似度算1次调用
      */
     public $TargetText;
 
     /**
-     * @param string $SrcText 需要与目标句子计算相似度的源句子（仅支持UTF-8格式，不超过500字）
-     * @param array $TargetText 需要与源句子计算相似度的一个或多个目标句子（仅支持UTF-8格式，目标句子的数量不超过100个，每个句子不超过500字）
+     * @param string $SrcText 需要与目标句子计算相似度的源句子（仅支持UTF-8格式，不超过500字符）
+     * @param array $TargetText 需要与源句子计算相似度的一个或多个目标句子（仅支持UTF-8格式，目标句子的数量不超过100个，每个句子不超过500字符）
 注意：每成功计算1个目标句子与源句子的相似度算1次调用
      */
     function __construct()

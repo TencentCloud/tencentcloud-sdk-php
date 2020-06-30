@@ -36,8 +36,50 @@ use TencentCloud\Common\AbstractModel;
 <li>block。</li>
  * @method string getName() 获取涉政人物、违规图标名字。
  * @method void setName(string $Name) 设置涉政人物、违规图标名字。
- * @method string getLabel() 获取嫌疑片段鉴政结果标签。
- * @method void setLabel(string $Label) 设置嫌疑片段鉴政结果标签。
+ * @method string getLabel() 获取嫌疑片段鉴政结果标签。内容审核模板[画面鉴政任务控制参数](https://cloud.tencent.com/document/api/266/31773#PoliticalImgReviewTemplateInfo)里 LabelSet 参数与此参数取值范围的对应关系：
+violation_photo：
+<li>violation_photo：违规图标。</li>
+politician：
+<li>nation_politician：国家领导人；</li>
+<li>province_politician: 省部级领导人；</li>
+<li>bureau_politician：厅局级领导人；</li>
+<li>county_politician：县处级领导人；</li>
+<li>rural_politician：乡科级领导人；</li>
+<li>sensitive_politician：敏感政治人物。</li>
+entertainment：
+<li>sensitive_entertainment：敏感娱乐人物。</li>
+sport：
+<li>sensitive_sport：敏感体育人物。</li>
+entrepreneur：
+<li>sensitive_entrepreneur：敏感商业人物。</li>
+scholar：
+<li>sensitive_scholar：敏感教育学者。</li>
+celebrity：
+<li>sensitive_celebrity：敏感知名人物。</li>
+military：
+<li>sensitive_military：敏感军事人物。</li>
+ * @method void setLabel(string $Label) 设置嫌疑片段鉴政结果标签。内容审核模板[画面鉴政任务控制参数](https://cloud.tencent.com/document/api/266/31773#PoliticalImgReviewTemplateInfo)里 LabelSet 参数与此参数取值范围的对应关系：
+violation_photo：
+<li>violation_photo：违规图标。</li>
+politician：
+<li>nation_politician：国家领导人；</li>
+<li>province_politician: 省部级领导人；</li>
+<li>bureau_politician：厅局级领导人；</li>
+<li>county_politician：县处级领导人；</li>
+<li>rural_politician：乡科级领导人；</li>
+<li>sensitive_politician：敏感政治人物。</li>
+entertainment：
+<li>sensitive_entertainment：敏感娱乐人物。</li>
+sport：
+<li>sensitive_sport：敏感体育人物。</li>
+entrepreneur：
+<li>sensitive_entrepreneur：敏感商业人物。</li>
+scholar：
+<li>sensitive_scholar：敏感教育学者。</li>
+celebrity：
+<li>sensitive_celebrity：敏感知名人物。</li>
+military：
+<li>sensitive_military：敏感军事人物。</li>
  * @method string getUrl() 获取嫌疑图片 URL （图片不会永久存储，到达
  PicUrlExpireTime 时间点后图片将被删除）。
  * @method void setUrl(string $Url) 设置嫌疑图片 URL （图片不会永久存储，到达
@@ -80,7 +122,28 @@ class MediaContentReviewPoliticalSegmentItem extends AbstractModel
     public $Name;
 
     /**
-     * @var string 嫌疑片段鉴政结果标签。
+     * @var string 嫌疑片段鉴政结果标签。内容审核模板[画面鉴政任务控制参数](https://cloud.tencent.com/document/api/266/31773#PoliticalImgReviewTemplateInfo)里 LabelSet 参数与此参数取值范围的对应关系：
+violation_photo：
+<li>violation_photo：违规图标。</li>
+politician：
+<li>nation_politician：国家领导人；</li>
+<li>province_politician: 省部级领导人；</li>
+<li>bureau_politician：厅局级领导人；</li>
+<li>county_politician：县处级领导人；</li>
+<li>rural_politician：乡科级领导人；</li>
+<li>sensitive_politician：敏感政治人物。</li>
+entertainment：
+<li>sensitive_entertainment：敏感娱乐人物。</li>
+sport：
+<li>sensitive_sport：敏感体育人物。</li>
+entrepreneur：
+<li>sensitive_entrepreneur：敏感商业人物。</li>
+scholar：
+<li>sensitive_scholar：敏感教育学者。</li>
+celebrity：
+<li>sensitive_celebrity：敏感知名人物。</li>
+military：
+<li>sensitive_military：敏感军事人物。</li>
      */
     public $Label;
 
@@ -114,7 +177,28 @@ class MediaContentReviewPoliticalSegmentItem extends AbstractModel
 <li>review。</li>
 <li>block。</li>
      * @param string $Name 涉政人物、违规图标名字。
-     * @param string $Label 嫌疑片段鉴政结果标签。
+     * @param string $Label 嫌疑片段鉴政结果标签。内容审核模板[画面鉴政任务控制参数](https://cloud.tencent.com/document/api/266/31773#PoliticalImgReviewTemplateInfo)里 LabelSet 参数与此参数取值范围的对应关系：
+violation_photo：
+<li>violation_photo：违规图标。</li>
+politician：
+<li>nation_politician：国家领导人；</li>
+<li>province_politician: 省部级领导人；</li>
+<li>bureau_politician：厅局级领导人；</li>
+<li>county_politician：县处级领导人；</li>
+<li>rural_politician：乡科级领导人；</li>
+<li>sensitive_politician：敏感政治人物。</li>
+entertainment：
+<li>sensitive_entertainment：敏感娱乐人物。</li>
+sport：
+<li>sensitive_sport：敏感体育人物。</li>
+entrepreneur：
+<li>sensitive_entrepreneur：敏感商业人物。</li>
+scholar：
+<li>sensitive_scholar：敏感教育学者。</li>
+celebrity：
+<li>sensitive_celebrity：敏感知名人物。</li>
+military：
+<li>sensitive_military：敏感军事人物。</li>
      * @param string $Url 嫌疑图片 URL （图片不会永久存储，到达
  PicUrlExpireTime 时间点后图片将被删除）。
      * @param array $AreaCoordSet 涉政人物、违规图标出现的区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。

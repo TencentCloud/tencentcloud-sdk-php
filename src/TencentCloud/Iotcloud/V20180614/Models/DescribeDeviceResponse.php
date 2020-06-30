@@ -82,6 +82,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClientIP(string $ClientIP) 设置MQTT客户端IP地址
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getFirmwareUpdateTime() 获取设备固件更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFirmwareUpdateTime(integer $FirmwareUpdateTime) 设置设备固件更新时间
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -211,6 +215,12 @@ class DescribeDeviceResponse extends AbstractModel
     public $ClientIP;
 
     /**
+     * @var integer 设备固件更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FirmwareUpdateTime;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -246,6 +256,8 @@ class DescribeDeviceResponse extends AbstractModel
      * @param array $Labels 设备标签
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClientIP MQTT客户端IP地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $FirmwareUpdateTime 设备固件更新时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -362,6 +374,10 @@ class DescribeDeviceResponse extends AbstractModel
 
         if (array_key_exists("ClientIP",$param) and $param["ClientIP"] !== null) {
             $this->ClientIP = $param["ClientIP"];
+        }
+
+        if (array_key_exists("FirmwareUpdateTime",$param) and $param["FirmwareUpdateTime"] !== null) {
+            $this->FirmwareUpdateTime = $param["FirmwareUpdateTime"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

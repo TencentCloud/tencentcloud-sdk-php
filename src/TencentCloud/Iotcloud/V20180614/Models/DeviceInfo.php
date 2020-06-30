@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTags(array $Tags) 设置设备属性
  * @method integer getDeviceType() 获取设备类型
  * @method void setDeviceType(integer $DeviceType) 设置设备类型
- * @method string getImei() 获取IMEI
- * @method void setImei(string $Imei) 设置IMEI
+ * @method string getImei() 获取国际移动设备识别码 IMEI
+ * @method void setImei(string $Imei) 设置国际移动设备识别码 IMEI
  * @method integer getIsp() 获取运营商类型
  * @method void setIsp(integer $Isp) 设置运营商类型
  * @method string getNbiotDeviceID() 获取NB IOT运营商处的DeviceID
@@ -77,6 +77,14 @@ use TencentCloud\Common\AbstractModel;
  * @method array getLabels() 获取设备标签
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLabels(array $Labels) 设置设备标签
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getClientIP() 获取MQTT客户端IP地址
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setClientIP(string $ClientIP) 设置MQTT客户端IP地址
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getFirmwareUpdateTime() 获取ota最后更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFirmwareUpdateTime(integer $FirmwareUpdateTime) 设置ota最后更新时间
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class DeviceInfo extends AbstractModel
@@ -122,7 +130,7 @@ class DeviceInfo extends AbstractModel
     public $DeviceType;
 
     /**
-     * @var string IMEI
+     * @var string 国际移动设备识别码 IMEI
      */
     public $Imei;
 
@@ -199,6 +207,18 @@ class DeviceInfo extends AbstractModel
     public $Labels;
 
     /**
+     * @var string MQTT客户端IP地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ClientIP;
+
+    /**
+     * @var integer ota最后更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FirmwareUpdateTime;
+
+    /**
      * @param string $DeviceName 设备名
      * @param integer $Online 设备是否在线，0不在线，1在线
      * @param integer $LoginTime 设备登录时间
@@ -207,7 +227,7 @@ class DeviceInfo extends AbstractModel
      * @param string $DevicePsk 设备密钥，密钥加密的设备返回
      * @param array $Tags 设备属性
      * @param integer $DeviceType 设备类型
-     * @param string $Imei IMEI
+     * @param string $Imei 国际移动设备识别码 IMEI
      * @param integer $Isp 运营商类型
      * @param string $NbiotDeviceID NB IOT运营商处的DeviceID
      * @param integer $ConnIP IP地址
@@ -227,6 +247,10 @@ class DeviceInfo extends AbstractModel
      * @param integer $EnableState 设备可用状态，0禁用，1启用
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Labels 设备标签
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ClientIP MQTT客户端IP地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $FirmwareUpdateTime ota最后更新时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -338,6 +362,14 @@ class DeviceInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Labels, $obj);
             }
+        }
+
+        if (array_key_exists("ClientIP",$param) and $param["ClientIP"] !== null) {
+            $this->ClientIP = $param["ClientIP"];
+        }
+
+        if (array_key_exists("FirmwareUpdateTime",$param) and $param["FirmwareUpdateTime"] !== null) {
+            $this->FirmwareUpdateTime = $param["FirmwareUpdateTime"];
         }
     }
 }

@@ -14,39 +14,39 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cdn\V20180606\Models;
+namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 组成CacheKey
+ * 创建预付费接口返回的Data
  *
- * @method string getSwitch() 获取是否组成Cachekey
+ * @method integer getFlowId() 获取CreateInstancePre返回固定为0，不能作为CheckTaskStatus的查询条件。只是为了保证和后台数据结构对齐。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSwitch(string $Switch) 设置是否组成Cachekey
+ * @method void setFlowId(integer $FlowId) 设置CreateInstancePre返回固定为0，不能作为CheckTaskStatus的查询条件。只是为了保证和后台数据结构对齐。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getValue() 获取组成CacheKey的header 逗号分隔
+ * @method array getDealNames() 获取订单号列表
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setValue(string $Value) 设置组成CacheKey的header 逗号分隔
+ * @method void setDealNames(array $DealNames) 设置订单号列表
 注意：此字段可能返回 null，表示取不到有效值。
  */
-class HeaderKey extends AbstractModel
+class CreateInstancePreData extends AbstractModel
 {
     /**
-     * @var string 是否组成Cachekey
+     * @var integer CreateInstancePre返回固定为0，不能作为CheckTaskStatus的查询条件。只是为了保证和后台数据结构对齐。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Switch;
+    public $FlowId;
 
     /**
-     * @var string 组成CacheKey的header 逗号分隔
+     * @var array 订单号列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Value;
+    public $DealNames;
 
     /**
-     * @param string $Switch 是否组成Cachekey
+     * @param integer $FlowId CreateInstancePre返回固定为0，不能作为CheckTaskStatus的查询条件。只是为了保证和后台数据结构对齐。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Value 组成CacheKey的header 逗号分隔
+     * @param array $DealNames 订单号列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -62,12 +62,12 @@ class HeaderKey extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Switch",$param) and $param["Switch"] !== null) {
-            $this->Switch = $param["Switch"];
+        if (array_key_exists("FlowId",$param) and $param["FlowId"] !== null) {
+            $this->FlowId = $param["FlowId"];
         }
 
-        if (array_key_exists("Value",$param) and $param["Value"] !== null) {
-            $this->Value = $param["Value"];
+        if (array_key_exists("DealNames",$param) and $param["DealNames"] !== null) {
+            $this->DealNames = $param["DealNames"];
         }
     }
 }

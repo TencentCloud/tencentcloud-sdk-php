@@ -50,8 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStorageRegion(string $StorageRegion) 设置媒体文件存储地区，如 ap-guangzhou，参见[地域列表](https://cloud.tencent.com/document/api/213/15692#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8)。
  * @method array getTagSet() 获取媒体文件的标签信息。
  * @method void setTagSet(array $TagSet) 设置媒体文件的标签信息。
- * @method string getVid() 获取直播录制文件的唯一标识
- * @method void setVid(string $Vid) 设置直播录制文件的唯一标识
+ * @method string getVid() 获取直播录制文件的唯一标识。
+ * @method void setVid(string $Vid) 设置直播录制文件的唯一标识。
  * @method string getCategory() 获取文件类型：
 <li>Video: 视频文件</li>
 <li>Audio: 音频文件</li>
@@ -60,6 +60,8 @@ use TencentCloud\Common\AbstractModel;
 <li>Video: 视频文件</li>
 <li>Audio: 音频文件</li>
 <li>Image: 图片文件</li>
+ * @method string getStatus() 获取文件状态：Normal：正常，Forbidden：封禁。
+ * @method void setStatus(string $Status) 设置文件状态：Normal：正常，Forbidden：封禁。
  */
 class MediaBasicInfo extends AbstractModel
 {
@@ -135,7 +137,7 @@ class MediaBasicInfo extends AbstractModel
     public $TagSet;
 
     /**
-     * @var string 直播录制文件的唯一标识
+     * @var string 直播录制文件的唯一标识。
      */
     public $Vid;
 
@@ -146,6 +148,11 @@ class MediaBasicInfo extends AbstractModel
 <li>Image: 图片文件</li>
      */
     public $Category;
+
+    /**
+     * @var string 文件状态：Normal：正常，Forbidden：封禁。
+     */
+    public $Status;
 
     /**
      * @param string $Name 媒体文件名称。
@@ -163,11 +170,12 @@ class MediaBasicInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StorageRegion 媒体文件存储地区，如 ap-guangzhou，参见[地域列表](https://cloud.tencent.com/document/api/213/15692#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8)。
      * @param array $TagSet 媒体文件的标签信息。
-     * @param string $Vid 直播录制文件的唯一标识
+     * @param string $Vid 直播录制文件的唯一标识。
      * @param string $Category 文件类型：
 <li>Video: 视频文件</li>
 <li>Audio: 音频文件</li>
 <li>Image: 图片文件</li>
+     * @param string $Status 文件状态：Normal：正常，Forbidden：封禁。
      */
     function __construct()
     {
@@ -245,6 +253,10 @@ class MediaBasicInfo extends AbstractModel
 
         if (array_key_exists("Category",$param) and $param["Category"] !== null) {
             $this->Category = $param["Category"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
     }
 }

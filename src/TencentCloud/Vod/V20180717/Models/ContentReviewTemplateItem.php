@@ -41,12 +41,10 @@ use TencentCloud\Common\AbstractModel;
  * @method ProhibitedConfigureInfo getProhibitedConfigure() 获取违禁控制参数。违禁内容包括：
 <li>谩骂；</li>
 <li>涉毒违法。</li>
-注意：此参数尚未支持。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProhibitedConfigure(ProhibitedConfigureInfo $ProhibitedConfigure) 设置违禁控制参数。违禁内容包括：
 <li>谩骂；</li>
 <li>涉毒违法。</li>
-注意：此参数尚未支持。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method UserDefineConfigureInfo getUserDefineConfigure() 获取用户自定义内容审核控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -104,7 +102,6 @@ class ContentReviewTemplateItem extends AbstractModel
      * @var ProhibitedConfigureInfo 违禁控制参数。违禁内容包括：
 <li>谩骂；</li>
 <li>涉毒违法。</li>
-注意：此参数尚未支持。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProhibitedConfigure;
@@ -150,7 +147,6 @@ class ContentReviewTemplateItem extends AbstractModel
      * @param ProhibitedConfigureInfo $ProhibitedConfigure 违禁控制参数。违禁内容包括：
 <li>谩骂；</li>
 <li>涉毒违法。</li>
-注意：此参数尚未支持。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param UserDefineConfigureInfo $UserDefineConfigure 用户自定义内容审核控制参数。
 注意：此字段可能返回 null，表示取不到有效值。

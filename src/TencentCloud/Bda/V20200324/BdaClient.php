@@ -50,6 +50,8 @@ use TencentCloud\Bda\V20200324\Models as Models;
  * @method Models\DeletePersonResponse DeletePerson(Models\DeletePersonRequest $req) 删除人员。
  * @method Models\DetectBodyResponse DetectBody(Models\DetectBodyRequest $req) 检测给定图片中的人体（Body）的位置信息（属性信息将在后续开放）。
 
+ * @method Models\DetectBodyJointsResponse DetectBodyJoints(Models\DetectBodyJointsRequest $req) 检测图片中人体的14个关键点。建议用于人体图像清晰、无遮挡的场景。支持一张图片中存在多个人体的识别。
+
  * @method Models\GetGroupListResponse GetGroupList(Models\GetGroupListRequest $req) 获取人体库列表。
  * @method Models\GetPersonListResponse GetPersonList(Models\GetPersonListRequest $req) 获取指定人体库中的人员列表。
  * @method Models\ModifyGroupResponse ModifyGroup(Models\ModifyGroupRequest $req) 修改人体库名称、备注。

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDomain() 获取域名
  * @method void setDomain(string $Domain) 设置域名
- * @method integer getProjectId() 获取项目 ID
- * @method void setProjectId(integer $ProjectId) 设置项目 ID
+ * @method integer getProjectId() 获取项目 ID
+ * @method void setProjectId(integer $ProjectId) 设置项目 ID
  * @method Origin getOrigin() 获取源站配置
  * @method void setOrigin(Origin $Origin) 设置源站配置
  * @method IpFilter getIpFilter() 获取IP 黑白名单配置
@@ -94,6 +94,8 @@ global：全球加速
  * @method void setOriginPullTimeout(OriginPullTimeout $OriginPullTimeout) 设置回源超时配置
  * @method AwsPrivateAccess getAwsPrivateAccess() 获取回源S3私有鉴权
  * @method void setAwsPrivateAccess(AwsPrivateAccess $AwsPrivateAccess) 设置回源S3私有鉴权
+ * @method UserAgentFilter getUserAgentFilter() 获取UA黑白名单配置
+ * @method void setUserAgentFilter(UserAgentFilter $UserAgentFilter) 设置UA黑白名单配置
  */
 class UpdateDomainConfigRequest extends AbstractModel
 {
@@ -103,7 +105,7 @@ class UpdateDomainConfigRequest extends AbstractModel
     public $Domain;
 
     /**
-     * @var integer 项目 ID
+     * @var integer 项目 ID
      */
     public $ProjectId;
 
@@ -255,8 +257,13 @@ global：全球加速
     public $AwsPrivateAccess;
 
     /**
+     * @var UserAgentFilter UA黑白名单配置
+     */
+    public $UserAgentFilter;
+
+    /**
      * @param string $Domain 域名
-     * @param integer $ProjectId 项目 ID
+     * @param integer $ProjectId 项目 ID
      * @param Origin $Origin 源站配置
      * @param IpFilter $IpFilter IP 黑白名单配置
      * @param IpFreqLimit $IpFreqLimit IP 限频配置
@@ -292,6 +299,7 @@ overseas：中国境外加速
 global：全球加速
      * @param OriginPullTimeout $OriginPullTimeout 回源超时配置
      * @param AwsPrivateAccess $AwsPrivateAccess 回源S3私有鉴权
+     * @param UserAgentFilter $UserAgentFilter UA黑白名单配置
      */
     function __construct()
     {
@@ -450,6 +458,11 @@ global：全球加速
         if (array_key_exists("AwsPrivateAccess",$param) and $param["AwsPrivateAccess"] !== null) {
             $this->AwsPrivateAccess = new AwsPrivateAccess();
             $this->AwsPrivateAccess->deserialize($param["AwsPrivateAccess"]);
+        }
+
+        if (array_key_exists("UserAgentFilter",$param) and $param["UserAgentFilter"] !== null) {
+            $this->UserAgentFilter = new UserAgentFilter();
+            $this->UserAgentFilter->deserialize($param["UserAgentFilter"]);
         }
     }
 }

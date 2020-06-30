@@ -52,6 +52,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSslStatus(string $SslStatus) 设置https证书部署状态，closed，deploying，deployed，failed分别表示已关闭，部署中，部署成功，部署失败。不可作为入参使用。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method Hsts getHsts() 获取Hsts配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHsts(Hsts $Hsts) 设置Hsts配置
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Https extends AbstractModel
 {
@@ -104,6 +108,12 @@ class Https extends AbstractModel
     public $SslStatus;
 
     /**
+     * @var Hsts Hsts配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Hsts;
+
+    /**
      * @param string $Switch https配置开关，on或off。开启https配置的域名在部署中状态，开关保持off。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Http2 是否开启http2，on或off。
@@ -119,6 +129,8 @@ class Https extends AbstractModel
      * @param string $Spdy 是否开启Spdy，on或off。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SslStatus https证书部署状态，closed，deploying，deployed，failed分别表示已关闭，部署中，部署成功，部署失败。不可作为入参使用。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Hsts $Hsts Hsts配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -166,6 +178,11 @@ class Https extends AbstractModel
 
         if (array_key_exists("SslStatus",$param) and $param["SslStatus"] !== null) {
             $this->SslStatus = $param["SslStatus"];
+        }
+
+        if (array_key_exists("Hsts",$param) and $param["Hsts"] !== null) {
+            $this->Hsts = new Hsts();
+            $this->Hsts->deserialize($param["Hsts"]);
         }
     }
 }

@@ -35,13 +35,13 @@ index：首页
  * @method array getCacheContents() 获取CacheType 对应类型下的匹配内容：
 all 时填充 *
 file 时填充后缀名，如 jpg、txt
-directory 时填充路径，如 /xxx/test/
+directory 时填充路径，如 /xxx/test
 path 时填充绝对路径，如 /xxx/test.html
 index 时填充 /
  * @method void setCacheContents(array $CacheContents) 设置CacheType 对应类型下的匹配内容：
 all 时填充 *
 file 时填充后缀名，如 jpg、txt
-directory 时填充路径，如 /xxx/test/
+directory 时填充路径，如 /xxx/test
 path 时填充绝对路径，如 /xxx/test.html
 index 时填充 /
  * @method integer getCacheTime() 获取缓存过期时间设置
@@ -65,7 +65,7 @@ index：首页
      * @var array CacheType 对应类型下的匹配内容：
 all 时填充 *
 file 时填充后缀名，如 jpg、txt
-directory 时填充路径，如 /xxx/test/
+directory 时填充路径，如 /xxx/test
 path 时填充绝对路径，如 /xxx/test.html
 index 时填充 /
      */
@@ -87,7 +87,7 @@ index：首页
      * @param array $CacheContents CacheType 对应类型下的匹配内容：
 all 时填充 *
 file 时填充后缀名，如 jpg、txt
-directory 时填充路径，如 /xxx/test/
+directory 时填充路径，如 /xxx/test
 path 时填充绝对路径，如 /xxx/test.html
 index 时填充 /
      * @param integer $CacheTime 缓存过期时间设置

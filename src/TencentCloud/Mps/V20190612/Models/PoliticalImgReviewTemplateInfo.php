@@ -29,13 +29,21 @@ use TencentCloud\Common\AbstractModel;
  * @method array getLabelSet() 获取画面鉴政过滤标签，审核结果包含选择的标签则返回结果，如果过滤标签为空，则审核结果全部返回，可选值为：
 <li>violation_photo：违规图标；</li>
 <li>politician：政治人物；</li>
-<li>entertainment：娱乐明星；</li>
-<li>sport：体育明星。</li>
+<li>entertainment：娱乐人物；</li>
+<li>sport：体育人物；</li>
+<li>entrepreneur：商业人物；</li>
+<li>scholar：教育学者；</li>
+<li>celebrity：知名人物；</li>
+<li>military：军事人物。</li>
  * @method void setLabelSet(array $LabelSet) 设置画面鉴政过滤标签，审核结果包含选择的标签则返回结果，如果过滤标签为空，则审核结果全部返回，可选值为：
 <li>violation_photo：违规图标；</li>
 <li>politician：政治人物；</li>
-<li>entertainment：娱乐明星；</li>
-<li>sport：体育明星。</li>
+<li>entertainment：娱乐人物；</li>
+<li>sport：体育人物；</li>
+<li>entrepreneur：商业人物；</li>
+<li>scholar：教育学者；</li>
+<li>celebrity：知名人物；</li>
+<li>military：军事人物。</li>
  * @method integer getBlockConfidence() 获取判定涉嫌违规的分数阈值，当智能审核达到该分数以上，认为涉嫌违规，不填默认为 97 分。取值范围：0~100。
  * @method void setBlockConfidence(integer $BlockConfidence) 设置判定涉嫌违规的分数阈值，当智能审核达到该分数以上，认为涉嫌违规，不填默认为 97 分。取值范围：0~100。
  * @method integer getReviewConfidence() 获取判定需人工复核是否违规的分数阈值，当智能审核达到该分数以上，认为需人工复核，不填默认为 95 分。取值范围：0~100。
@@ -54,8 +62,12 @@ class PoliticalImgReviewTemplateInfo extends AbstractModel
      * @var array 画面鉴政过滤标签，审核结果包含选择的标签则返回结果，如果过滤标签为空，则审核结果全部返回，可选值为：
 <li>violation_photo：违规图标；</li>
 <li>politician：政治人物；</li>
-<li>entertainment：娱乐明星；</li>
-<li>sport：体育明星。</li>
+<li>entertainment：娱乐人物；</li>
+<li>sport：体育人物；</li>
+<li>entrepreneur：商业人物；</li>
+<li>scholar：教育学者；</li>
+<li>celebrity：知名人物；</li>
+<li>military：军事人物。</li>
      */
     public $LabelSet;
 
@@ -76,8 +88,12 @@ class PoliticalImgReviewTemplateInfo extends AbstractModel
      * @param array $LabelSet 画面鉴政过滤标签，审核结果包含选择的标签则返回结果，如果过滤标签为空，则审核结果全部返回，可选值为：
 <li>violation_photo：违规图标；</li>
 <li>politician：政治人物；</li>
-<li>entertainment：娱乐明星；</li>
-<li>sport：体育明星。</li>
+<li>entertainment：娱乐人物；</li>
+<li>sport：体育人物；</li>
+<li>entrepreneur：商业人物；</li>
+<li>scholar：教育学者；</li>
+<li>celebrity：知名人物；</li>
+<li>military：军事人物。</li>
      * @param integer $BlockConfidence 判定涉嫌违规的分数阈值，当智能审核达到该分数以上，认为涉嫌违规，不填默认为 97 分。取值范围：0~100。
      * @param integer $ReviewConfidence 判定需人工复核是否违规的分数阈值，当智能审核达到该分数以上，认为需人工复核，不填默认为 95 分。取值范围：0~100。
      */

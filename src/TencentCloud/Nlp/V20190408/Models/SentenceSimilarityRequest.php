@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SentenceSimilarity请求参数结构体
  *
- * @method string getSrcText() 获取计算相似度的源句子（仅支持UTF-8格式，不超过500字）
- * @method void setSrcText(string $SrcText) 设置计算相似度的源句子（仅支持UTF-8格式，不超过500字）
- * @method string getTargetText() 获取计算相似度的目标句子（仅支持UTF-8格式，不超过500字）
- * @method void setTargetText(string $TargetText) 设置计算相似度的目标句子（仅支持UTF-8格式，不超过500字）
+ * @method string getSrcText() 获取计算相似度的源句子（仅支持UTF-8格式，不超过500字符）
+ * @method void setSrcText(string $SrcText) 设置计算相似度的源句子（仅支持UTF-8格式，不超过500字符）
+ * @method string getTargetText() 获取计算相似度的目标句子（仅支持UTF-8格式，不超过500字符）
+ * @method void setTargetText(string $TargetText) 设置计算相似度的目标句子（仅支持UTF-8格式，不超过500字符）
  */
 class SentenceSimilarityRequest extends AbstractModel
 {
     /**
-     * @var string 计算相似度的源句子（仅支持UTF-8格式，不超过500字）
+     * @var string 计算相似度的源句子（仅支持UTF-8格式，不超过500字符）
      */
     public $SrcText;
 
     /**
-     * @var string 计算相似度的目标句子（仅支持UTF-8格式，不超过500字）
+     * @var string 计算相似度的目标句子（仅支持UTF-8格式，不超过500字符）
      */
     public $TargetText;
 
     /**
-     * @param string $SrcText 计算相似度的源句子（仅支持UTF-8格式，不超过500字）
-     * @param string $TargetText 计算相似度的目标句子（仅支持UTF-8格式，不超过500字）
+     * @param string $SrcText 计算相似度的源句子（仅支持UTF-8格式，不超过500字符）
+     * @param string $TargetText 计算相似度的目标句子（仅支持UTF-8格式，不超过500字符）
      */
     function __construct()
     {

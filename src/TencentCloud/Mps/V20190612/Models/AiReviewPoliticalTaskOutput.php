@@ -30,12 +30,16 @@ use TencentCloud\Common\AbstractModel;
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
- * @method string getLabel() 获取视频鉴政结果标签，取值范围：
-<li>politician：政治人物。</li>
+ * @method string getLabel() 获取视频鉴政结果标签。内容审核模板[画面鉴政任务控制参数](https://cloud.tencent.com/document/api/862/37615#AiReviewPoliticalTaskOutput)里 LabelSet 参数与此参数取值范围的对应关系：
+violation_photo：
 <li>violation_photo：违规图标。</li>
- * @method void setLabel(string $Label) 设置视频鉴政结果标签，取值范围：
+其他（即 politician/entertainment/sport/entrepreneur/scholar/celebrity/military）：
 <li>politician：政治人物。</li>
+ * @method void setLabel(string $Label) 设置视频鉴政结果标签。内容审核模板[画面鉴政任务控制参数](https://cloud.tencent.com/document/api/862/37615#AiReviewPoliticalTaskOutput)里 LabelSet 参数与此参数取值范围的对应关系：
+violation_photo：
 <li>violation_photo：违规图标。</li>
+其他（即 politician/entertainment/sport/entrepreneur/scholar/celebrity/military）：
+<li>politician：政治人物。</li>
  * @method array getSegmentSet() 获取有涉政嫌疑的视频片段列表。
  * @method void setSegmentSet(array $SegmentSet) 设置有涉政嫌疑的视频片段列表。
  */
@@ -55,9 +59,11 @@ class AiReviewPoliticalTaskOutput extends AbstractModel
     public $Suggestion;
 
     /**
-     * @var string 视频鉴政结果标签，取值范围：
-<li>politician：政治人物。</li>
+     * @var string 视频鉴政结果标签。内容审核模板[画面鉴政任务控制参数](https://cloud.tencent.com/document/api/862/37615#AiReviewPoliticalTaskOutput)里 LabelSet 参数与此参数取值范围的对应关系：
+violation_photo：
 <li>violation_photo：违规图标。</li>
+其他（即 politician/entertainment/sport/entrepreneur/scholar/celebrity/military）：
+<li>politician：政治人物。</li>
      */
     public $Label;
 
@@ -72,9 +78,11 @@ class AiReviewPoliticalTaskOutput extends AbstractModel
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
-     * @param string $Label 视频鉴政结果标签，取值范围：
-<li>politician：政治人物。</li>
+     * @param string $Label 视频鉴政结果标签。内容审核模板[画面鉴政任务控制参数](https://cloud.tencent.com/document/api/862/37615#AiReviewPoliticalTaskOutput)里 LabelSet 参数与此参数取值范围的对应关系：
+violation_photo：
 <li>violation_photo：违规图标。</li>
+其他（即 politician/entertainment/sport/entrepreneur/scholar/celebrity/military）：
+<li>politician：政治人物。</li>
      * @param array $SegmentSet 有涉政嫌疑的视频片段列表。
      */
     function __construct()

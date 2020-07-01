@@ -18,16 +18,16 @@ namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 描述实例的网络连接信息
+ * 描述实例的网络连接信息。
  *
  * @method string getAddress() 获取DNS域名
  * @method void setAddress(string $Address) 设置DNS域名
- * @method string getIp() 获取Ip
- * @method void setIp(string $Ip) 设置Ip
+ * @method string getIp() 获取IP地址
+ * @method void setIp(string $Ip) 设置IP地址
  * @method integer getPort() 获取连接Port地址
  * @method void setPort(integer $Port) 设置连接Port地址
- * @method string getNetType() 获取网络类型，1、inner（内网地址）；2、public（外网地址）
- * @method void setNetType(string $NetType) 设置网络类型，1、inner（内网地址）；2、public（外网地址）
+ * @method string getNetType() 获取网络类型，1、inner（基础网络内网地址）；2、private（私有网络内网地址）；3、public（基础网络或私有网络的外网地址）；
+ * @method void setNetType(string $NetType) 设置网络类型，1、inner（基础网络内网地址）；2、private（私有网络内网地址）；3、public（基础网络或私有网络的外网地址）；
  * @method string getStatus() 获取网络连接状态
  * @method void setStatus(string $Status) 设置网络连接状态
  */
@@ -39,7 +39,7 @@ class DBInstanceNetInfo extends AbstractModel
     public $Address;
 
     /**
-     * @var string Ip
+     * @var string IP地址
      */
     public $Ip;
 
@@ -49,7 +49,7 @@ class DBInstanceNetInfo extends AbstractModel
     public $Port;
 
     /**
-     * @var string 网络类型，1、inner（内网地址）；2、public（外网地址）
+     * @var string 网络类型，1、inner（基础网络内网地址）；2、private（私有网络内网地址）；3、public（基础网络或私有网络的外网地址）；
      */
     public $NetType;
 
@@ -60,9 +60,9 @@ class DBInstanceNetInfo extends AbstractModel
 
     /**
      * @param string $Address DNS域名
-     * @param string $Ip Ip
+     * @param string $Ip IP地址
      * @param integer $Port 连接Port地址
-     * @param string $NetType 网络类型，1、inner（内网地址）；2、public（外网地址）
+     * @param string $NetType 网络类型，1、inner（基础网络内网地址）；2、private（私有网络内网地址）；3、public（基础网络或私有网络的外网地址）；
      * @param string $Status 网络连接状态
      */
     function __construct()

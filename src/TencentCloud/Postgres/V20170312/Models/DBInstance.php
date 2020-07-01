@@ -28,14 +28,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProjectId(integer $ProjectId) 设置项目ID
  * @method string getVpcId() 获取私有网络ID
  * @method void setVpcId(string $VpcId) 设置私有网络ID
- * @method string getSubnetId() 获取SubnetId
- * @method void setSubnetId(string $SubnetId) 设置SubnetId
+ * @method string getSubnetId() 获取子网ID
+ * @method void setSubnetId(string $SubnetId) 设置子网ID
  * @method string getDBInstanceId() 获取实例ID
  * @method void setDBInstanceId(string $DBInstanceId) 设置实例ID
  * @method string getDBInstanceName() 获取实例名称
  * @method void setDBInstanceName(string $DBInstanceName) 设置实例名称
- * @method string getDBInstanceStatus() 获取实例状态
- * @method void setDBInstanceStatus(string $DBInstanceStatus) 设置实例状态
+ * @method string getDBInstanceStatus() 获取实例状态，分别为：applying（申请中）、init(待初始化)、initing(初始化中)、running(运行中)、limited run（受限运行）、isolated（已隔离）、recycling（回收中）、recycled（已回收）、job running（任务执行中）、offline（下线）、migrating（迁移中）、expanding（扩容中）、readonly（只读）、restarting（重启中）
+ * @method void setDBInstanceStatus(string $DBInstanceStatus) 设置实例状态，分别为：applying（申请中）、init(待初始化)、initing(初始化中)、running(运行中)、limited run（受限运行）、isolated（已隔离）、recycling（回收中）、recycled（已回收）、job running（任务执行中）、offline（下线）、migrating（迁移中）、expanding（扩容中）、readonly（只读）、restarting（重启中）
  * @method integer getDBInstanceMemory() 获取实例分配的内存大小，单位：GB
  * @method void setDBInstanceMemory(integer $DBInstanceMemory) 设置实例分配的内存大小，单位：GB
  * @method integer getDBInstanceStorage() 获取实例分配的存储空间大小，单位：GB
@@ -72,6 +72,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAppId(integer $AppId) 设置用户的AppId
  * @method integer getUid() 获取实例的Uid
  * @method void setUid(integer $Uid) 设置实例的Uid
+ * @method integer getSupportIpv6() 获取实例是否支持Ipv6，1：支持，0：不支持
+ * @method void setSupportIpv6(integer $SupportIpv6) 设置实例是否支持Ipv6，1：支持，0：不支持
  */
 class DBInstance extends AbstractModel
 {
@@ -96,7 +98,7 @@ class DBInstance extends AbstractModel
     public $VpcId;
 
     /**
-     * @var string SubnetId
+     * @var string 子网ID
      */
     public $SubnetId;
 
@@ -111,7 +113,7 @@ class DBInstance extends AbstractModel
     public $DBInstanceName;
 
     /**
-     * @var string 实例状态
+     * @var string 实例状态，分别为：applying（申请中）、init(待初始化)、initing(初始化中)、running(运行中)、limited run（受限运行）、isolated（已隔离）、recycling（回收中）、recycled（已回收）、job running（任务执行中）、offline（下线）、migrating（迁移中）、expanding（扩容中）、readonly（只读）、restarting（重启中）
      */
     public $DBInstanceStatus;
 
@@ -206,14 +208,19 @@ class DBInstance extends AbstractModel
     public $Uid;
 
     /**
+     * @var integer 实例是否支持Ipv6，1：支持，0：不支持
+     */
+    public $SupportIpv6;
+
+    /**
      * @param string $Region 实例所属地域，如: ap-guangzhou，对应RegionSet的Region字段
      * @param string $Zone 实例所属可用区， 如：ap-guangzhou-3，对应ZoneSet的Zone字段
      * @param integer $ProjectId 项目ID
      * @param string $VpcId 私有网络ID
-     * @param string $SubnetId SubnetId
+     * @param string $SubnetId 子网ID
      * @param string $DBInstanceId 实例ID
      * @param string $DBInstanceName 实例名称
-     * @param string $DBInstanceStatus 实例状态
+     * @param string $DBInstanceStatus 实例状态，分别为：applying（申请中）、init(待初始化)、initing(初始化中)、running(运行中)、limited run（受限运行）、isolated（已隔离）、recycling（回收中）、recycled（已回收）、job running（任务执行中）、offline（下线）、migrating（迁移中）、expanding（扩容中）、readonly（只读）、restarting（重启中）
      * @param integer $DBInstanceMemory 实例分配的内存大小，单位：GB
      * @param integer $DBInstanceStorage 实例分配的存储空间大小，单位：GB
      * @param integer $DBInstanceCpu 实例分配的CPU数量，单位：个
@@ -232,6 +239,7 @@ class DBInstance extends AbstractModel
      * @param string $Type 机器类型
      * @param integer $AppId 用户的AppId
      * @param integer $Uid 实例的Uid
+     * @param integer $SupportIpv6 实例是否支持Ipv6，1：支持，0：不支持
      */
     function __construct()
     {
@@ -353,6 +361,10 @@ class DBInstance extends AbstractModel
 
         if (array_key_exists("Uid",$param) and $param["Uid"] !== null) {
             $this->Uid = $param["Uid"];
+        }
+
+        if (array_key_exists("SupportIpv6",$param) and $param["SupportIpv6"] !== null) {
+            $this->SupportIpv6 = $param["SupportIpv6"];
         }
     }
 }

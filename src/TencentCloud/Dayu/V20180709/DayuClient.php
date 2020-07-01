@@ -129,6 +129,8 @@ use TencentCloud\Dayu\V20180709\Models as Models;
  * @method Models\ModifyL4RulesResponse ModifyL4Rules(Models\ModifyL4RulesRequest $req) 修改L4转发规则
  * @method Models\ModifyL7RulesResponse ModifyL7Rules(Models\ModifyL7RulesRequest $req) 修改L7转发规则
  * @method Models\ModifyNetReturnSwitchResponse ModifyNetReturnSwitch(Models\ModifyNetReturnSwitchRequest $req) 在客户收攻击或者被封堵时，切回到源站，并设置回切的时长
+ * @method Models\ModifyNewDomainRulesResponse ModifyNewDomainRules(Models\ModifyNewDomainRulesRequest $req) 修改7层转发规则
+ * @method Models\ModifyNewL4RuleResponse ModifyNewL4Rule(Models\ModifyNewL4RuleRequest $req) 修改4层转发规则
  * @method Models\ModifyResBindDDoSPolicyResponse ModifyResBindDDoSPolicy(Models\ModifyResBindDDoSPolicyRequest $req) 资源实例绑定DDoS高级策略
  * @method Models\ModifyResourceRenewFlagResponse ModifyResourceRenewFlag(Models\ModifyResourceRenewFlagRequest $req) 修改资源自动续费标记
  */

@@ -66,6 +66,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setModifyTime(string $ModifyTime) 设置修改时间
  * @method integer getHttpsToHttpEnable() 获取是否开启Https协议使用Http回源，取值[0(关闭), 1(开启)]，不填写默认是关闭
  * @method void setHttpsToHttpEnable(integer $HttpsToHttpEnable) 设置是否开启Https协议使用Http回源，取值[0(关闭), 1(开启)]，不填写默认是关闭
+ * @method integer getVirtualPort() 获取接入端口值
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVirtualPort(integer $VirtualPort) 设置接入端口值
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class NewL7RuleEntry extends AbstractModel
 {
@@ -185,6 +189,12 @@ class NewL7RuleEntry extends AbstractModel
     public $HttpsToHttpEnable;
 
     /**
+     * @var integer 接入端口值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $VirtualPort;
+
+    /**
      * @param string $Protocol 转发协议，取值[http, https]
      * @param string $Domain 转发域名
      * @param integer $SourceType 回源方式，取值[1(域名回源)，2(IP回源)]
@@ -208,6 +218,8 @@ class NewL7RuleEntry extends AbstractModel
      * @param string $Ip 资源Ip
      * @param string $ModifyTime 修改时间
      * @param integer $HttpsToHttpEnable 是否开启Https协议使用Http回源，取值[0(关闭), 1(开启)]，不填写默认是关闭
+     * @param integer $VirtualPort 接入端口值
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -317,6 +329,10 @@ class NewL7RuleEntry extends AbstractModel
 
         if (array_key_exists("HttpsToHttpEnable",$param) and $param["HttpsToHttpEnable"] !== null) {
             $this->HttpsToHttpEnable = $param["HttpsToHttpEnable"];
+        }
+
+        if (array_key_exists("VirtualPort",$param) and $param["VirtualPort"] !== null) {
+            $this->VirtualPort = $param["VirtualPort"];
         }
     }
 }

@@ -50,6 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setActivityId(integer $ActivityId) 设置活动ID
  * @method string getName() 获取实例名(后续支持)
  * @method void setName(string $Name) 设置实例名(后续支持)
+ * @method integer getNeedSupportIpv6() 获取是否需要支持Ipv6，1：是，0：否
+ * @method void setNeedSupportIpv6(integer $NeedSupportIpv6) 设置是否需要支持Ipv6，1：是，0：否
  */
 class CreateDBInstancesRequest extends AbstractModel
 {
@@ -129,6 +131,11 @@ class CreateDBInstancesRequest extends AbstractModel
     public $Name;
 
     /**
+     * @var integer 是否需要支持Ipv6，1：是，0：否
+     */
+    public $NeedSupportIpv6;
+
+    /**
      * @param string $SpecCode 售卖规格ID。该参数可以通过调用DescribeProductConfig的返回值中的SpecCode字段来获取。
      * @param string $DBVersion PostgreSQL内核版本，目前支持：9.3.5、9.5.4、10.4三种版本。
      * @param integer $Storage 实例容量大小，单位：GB。
@@ -144,6 +151,7 @@ class CreateDBInstancesRequest extends AbstractModel
      * @param integer $AutoRenewFlag 续费标记：0-正常续费（默认）；1-自动续费；
      * @param integer $ActivityId 活动ID
      * @param string $Name 实例名(后续支持)
+     * @param integer $NeedSupportIpv6 是否需要支持Ipv6，1：是，0：否
      */
     function __construct()
     {
@@ -216,6 +224,10 @@ class CreateDBInstancesRequest extends AbstractModel
 
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
             $this->Name = $param["Name"];
+        }
+
+        if (array_key_exists("NeedSupportIpv6",$param) and $param["NeedSupportIpv6"] !== null) {
+            $this->NeedSupportIpv6 = $param["NeedSupportIpv6"];
         }
     }
 }

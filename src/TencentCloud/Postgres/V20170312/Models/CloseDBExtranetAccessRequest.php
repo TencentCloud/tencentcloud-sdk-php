@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDBInstanceId() 获取实例ID，形如postgres-6r233v55
  * @method void setDBInstanceId(string $DBInstanceId) 设置实例ID，形如postgres-6r233v55
+ * @method integer getIsIpv6() 获取是否关闭Ipv6外网，1：是，0：否
+ * @method void setIsIpv6(integer $IsIpv6) 设置是否关闭Ipv6外网，1：是，0：否
  */
 class CloseDBExtranetAccessRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class CloseDBExtranetAccessRequest extends AbstractModel
     public $DBInstanceId;
 
     /**
+     * @var integer 是否关闭Ipv6外网，1：是，0：否
+     */
+    public $IsIpv6;
+
+    /**
      * @param string $DBInstanceId 实例ID，形如postgres-6r233v55
+     * @param integer $IsIpv6 是否关闭Ipv6外网，1：是，0：否
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class CloseDBExtranetAccessRequest extends AbstractModel
         }
         if (array_key_exists("DBInstanceId",$param) and $param["DBInstanceId"] !== null) {
             $this->DBInstanceId = $param["DBInstanceId"];
+        }
+
+        if (array_key_exists("IsIpv6",$param) and $param["IsIpv6"] !== null) {
+            $this->IsIpv6 = $param["IsIpv6"];
         }
     }
 }

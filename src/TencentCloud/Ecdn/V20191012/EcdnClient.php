@@ -41,7 +41,7 @@ use TencentCloud\Ecdn\V20191012\Models as Models;
 + 状态码 5xx 汇总及各 5 开头状态码明细（单位为 个）
  * @method Models\DescribePurgeQuotaResponse DescribePurgeQuota(Models\DescribePurgeQuotaRequest $req) 查询刷新接口的用量配额。
  * @method Models\DescribePurgeTasksResponse DescribePurgeTasks(Models\DescribePurgeTasksRequest $req) DescribePurgeTasks 用于查询刷新任务提交历史记录及执行进度。
- * @method Models\PurgePathCacheResponse PurgePathCache(Models\PurgePathCacheRequest $req) PurgeUrlsCache 用于批量刷新目录缓存，一次提交将返回一个刷新任务id。
+ * @method Models\PurgePathCacheResponse PurgePathCache(Models\PurgePathCacheRequest $req) PurgePathCache 用于批量刷新目录缓存，一次提交将返回一个刷新任务id。
  * @method Models\PurgeUrlsCacheResponse PurgeUrlsCache(Models\PurgeUrlsCacheRequest $req) PurgeUrlsCache 用于批量刷新Url，一次提交将返回一个刷新任务id。
  * @method Models\StartEcdnDomainResponse StartEcdnDomain(Models\StartEcdnDomainRequest $req) 本接口（StartEcdnDomain）用于启用加速域名，待启用域名必须处于已下线状态。
  * @method Models\StopEcdnDomainResponse StopEcdnDomain(Models\StopEcdnDomainRequest $req) 本接口（StopCdnDomain）用于停止加速域名，待停用加速域名必须处于已上线或部署中状态。

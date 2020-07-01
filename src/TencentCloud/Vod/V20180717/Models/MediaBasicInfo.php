@@ -61,7 +61,11 @@ use TencentCloud\Common\AbstractModel;
 <li>Audio: 音频文件</li>
 <li>Image: 图片文件</li>
  * @method string getStatus() 获取文件状态：Normal：正常，Forbidden：封禁。
+
+*注意：此字段暂不支持。
  * @method void setStatus(string $Status) 设置文件状态：Normal：正常，Forbidden：封禁。
+
+*注意：此字段暂不支持。
  */
 class MediaBasicInfo extends AbstractModel
 {
@@ -151,6 +155,8 @@ class MediaBasicInfo extends AbstractModel
 
     /**
      * @var string 文件状态：Normal：正常，Forbidden：封禁。
+
+*注意：此字段暂不支持。
      */
     public $Status;
 
@@ -176,6 +182,8 @@ class MediaBasicInfo extends AbstractModel
 <li>Audio: 音频文件</li>
 <li>Image: 图片文件</li>
      * @param string $Status 文件状态：Normal：正常，Forbidden：封禁。
+
+*注意：此字段暂不支持。
      */
     function __construct()
     {

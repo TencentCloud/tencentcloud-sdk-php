@@ -62,21 +62,21 @@ class DescribeEipsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("EipSet",$param) and $param["EipSet"] !== null) {
+        if (array_key_exists('EipSet',$param) and $param['EipSet'] !== null) {
             $this->EipSet = [];
-            foreach ($param["EipSet"] as $key => $value){
+            foreach ($param['EipSet'] as $key => $value){
                 $obj = new EipInfo();
                 $obj->deserialize($value);
                 array_push($this->EipSet, $obj);
             }
         }
 
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

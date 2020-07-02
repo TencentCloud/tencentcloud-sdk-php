@@ -46,8 +46,8 @@ class DeleteOrganizationNodesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("NodeIds",$param) and $param["NodeIds"] !== null) {
-            $this->NodeIds = $param["NodeIds"];
+        if (array_key_exists('NodeIds',$param) and $param['NodeIds'] !== null) {
+            $this->NodeIds = $param['NodeIds'];
         }
     }
 }

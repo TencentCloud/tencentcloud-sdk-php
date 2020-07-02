@@ -122,32 +122,32 @@ class Microservice extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MicroserviceId",$param) and $param["MicroserviceId"] !== null) {
-            $this->MicroserviceId = $param["MicroserviceId"];
+        if (array_key_exists('MicroserviceId',$param) and $param['MicroserviceId'] !== null) {
+            $this->MicroserviceId = $param['MicroserviceId'];
         }
 
-        if (array_key_exists("MicroserviceName",$param) and $param["MicroserviceName"] !== null) {
-            $this->MicroserviceName = $param["MicroserviceName"];
+        if (array_key_exists('MicroserviceName',$param) and $param['MicroserviceName'] !== null) {
+            $this->MicroserviceName = $param['MicroserviceName'];
         }
 
-        if (array_key_exists("MicroserviceDesc",$param) and $param["MicroserviceDesc"] !== null) {
-            $this->MicroserviceDesc = $param["MicroserviceDesc"];
+        if (array_key_exists('MicroserviceDesc',$param) and $param['MicroserviceDesc'] !== null) {
+            $this->MicroserviceDesc = $param['MicroserviceDesc'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
-            $this->UpdateTime = $param["UpdateTime"];
+        if (array_key_exists('UpdateTime',$param) and $param['UpdateTime'] !== null) {
+            $this->UpdateTime = $param['UpdateTime'];
         }
 
-        if (array_key_exists("NamespaceId",$param) and $param["NamespaceId"] !== null) {
-            $this->NamespaceId = $param["NamespaceId"];
+        if (array_key_exists('NamespaceId',$param) and $param['NamespaceId'] !== null) {
+            $this->NamespaceId = $param['NamespaceId'];
         }
 
-        if (array_key_exists("RunInstanceCount",$param) and $param["RunInstanceCount"] !== null) {
-            $this->RunInstanceCount = $param["RunInstanceCount"];
+        if (array_key_exists('RunInstanceCount',$param) and $param['RunInstanceCount'] !== null) {
+            $this->RunInstanceCount = $param['RunInstanceCount'];
         }
     }
 }

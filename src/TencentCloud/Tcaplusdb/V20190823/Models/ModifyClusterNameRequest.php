@@ -54,12 +54,12 @@ class ModifyClusterNameRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
-            $this->ClusterId = $param["ClusterId"];
+        if (array_key_exists('ClusterId',$param) and $param['ClusterId'] !== null) {
+            $this->ClusterId = $param['ClusterId'];
         }
 
-        if (array_key_exists("ClusterName",$param) and $param["ClusterName"] !== null) {
-            $this->ClusterName = $param["ClusterName"];
+        if (array_key_exists('ClusterName',$param) and $param['ClusterName'] !== null) {
+            $this->ClusterName = $param['ClusterName'];
         }
     }
 }

@@ -54,12 +54,12 @@ class PullSmsSendStatusRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
+        if (array_key_exists('Limit',$param) and $param['Limit'] !== null) {
+            $this->Limit = $param['Limit'];
         }
 
-        if (array_key_exists("SmsSdkAppid",$param) and $param["SmsSdkAppid"] !== null) {
-            $this->SmsSdkAppid = $param["SmsSdkAppid"];
+        if (array_key_exists('SmsSdkAppid',$param) and $param['SmsSdkAppid'] !== null) {
+            $this->SmsSdkAppid = $param['SmsSdkAppid'];
         }
     }
 }

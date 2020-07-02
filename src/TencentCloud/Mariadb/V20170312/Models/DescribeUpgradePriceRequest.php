@@ -70,16 +70,16 @@ class DescribeUpgradePriceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("Memory",$param) and $param["Memory"] !== null) {
-            $this->Memory = $param["Memory"];
+        if (array_key_exists('Memory',$param) and $param['Memory'] !== null) {
+            $this->Memory = $param['Memory'];
         }
 
-        if (array_key_exists("Storage",$param) and $param["Storage"] !== null) {
-            $this->Storage = $param["Storage"];
+        if (array_key_exists('Storage',$param) and $param['Storage'] !== null) {
+            $this->Storage = $param['Storage'];
         }
     }
 }

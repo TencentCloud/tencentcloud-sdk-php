@@ -50,7 +50,7 @@ abstract class QcloudApi_Module_Base extends QcloudApi_Common_Base
      * 请求方法
      * @var string
      */
-    protected $_requestMethod = "GET";
+    protected $_requestMethod = 'GET';
 
     /**
      * __construct

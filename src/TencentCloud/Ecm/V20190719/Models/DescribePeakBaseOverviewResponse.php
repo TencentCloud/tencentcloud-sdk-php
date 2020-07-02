@@ -58,17 +58,17 @@ class DescribePeakBaseOverviewResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PeakFamilyInfoSet",$param) and $param["PeakFamilyInfoSet"] !== null) {
+        if (array_key_exists('PeakFamilyInfoSet',$param) and $param['PeakFamilyInfoSet'] !== null) {
             $this->PeakFamilyInfoSet = [];
-            foreach ($param["PeakFamilyInfoSet"] as $key => $value){
+            foreach ($param['PeakFamilyInfoSet'] as $key => $value){
                 $obj = new PeakFamilyInfo();
                 $obj->deserialize($value);
                 array_push($this->PeakFamilyInfoSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

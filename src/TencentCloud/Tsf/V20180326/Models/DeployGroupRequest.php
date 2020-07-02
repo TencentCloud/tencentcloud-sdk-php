@@ -62,16 +62,16 @@ class DeployGroupRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
-            $this->GroupId = $param["GroupId"];
+        if (array_key_exists('GroupId',$param) and $param['GroupId'] !== null) {
+            $this->GroupId = $param['GroupId'];
         }
 
-        if (array_key_exists("PkgId",$param) and $param["PkgId"] !== null) {
-            $this->PkgId = $param["PkgId"];
+        if (array_key_exists('PkgId',$param) and $param['PkgId'] !== null) {
+            $this->PkgId = $param['PkgId'];
         }
 
-        if (array_key_exists("StartupParameters",$param) and $param["StartupParameters"] !== null) {
-            $this->StartupParameters = $param["StartupParameters"];
+        if (array_key_exists('StartupParameters',$param) and $param['StartupParameters'] !== null) {
+            $this->StartupParameters = $param['StartupParameters'];
         }
     }
 }

@@ -78,24 +78,24 @@ class MediaImageSpriteInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Height",$param) and $param["Height"] !== null) {
-            $this->Height = $param["Height"];
+        if (array_key_exists('Height',$param) and $param['Height'] !== null) {
+            $this->Height = $param['Height'];
         }
 
-        if (array_key_exists("Width",$param) and $param["Width"] !== null) {
-            $this->Width = $param["Width"];
+        if (array_key_exists('Width',$param) and $param['Width'] !== null) {
+            $this->Width = $param['Width'];
         }
 
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("ImageUrlSet",$param) and $param["ImageUrlSet"] !== null) {
-            $this->ImageUrlSet = $param["ImageUrlSet"];
+        if (array_key_exists('ImageUrlSet',$param) and $param['ImageUrlSet'] !== null) {
+            $this->ImageUrlSet = $param['ImageUrlSet'];
         }
 
-        if (array_key_exists("WebVttUrl",$param) and $param["WebVttUrl"] !== null) {
-            $this->WebVttUrl = $param["WebVttUrl"];
+        if (array_key_exists('WebVttUrl',$param) and $param['WebVttUrl'] !== null) {
+            $this->WebVttUrl = $param['WebVttUrl'];
         }
     }
 }

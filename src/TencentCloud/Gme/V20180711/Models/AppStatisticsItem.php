@@ -82,23 +82,23 @@ class AppStatisticsItem extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RealtimeSpeechStatisticsItem",$param) and $param["RealtimeSpeechStatisticsItem"] !== null) {
+        if (array_key_exists('RealtimeSpeechStatisticsItem',$param) and $param['RealtimeSpeechStatisticsItem'] !== null) {
             $this->RealtimeSpeechStatisticsItem = new RealTimeSpeechStatisticsItem();
-            $this->RealtimeSpeechStatisticsItem->deserialize($param["RealtimeSpeechStatisticsItem"]);
+            $this->RealtimeSpeechStatisticsItem->deserialize($param['RealtimeSpeechStatisticsItem']);
         }
 
-        if (array_key_exists("VoiceMessageStatisticsItem",$param) and $param["VoiceMessageStatisticsItem"] !== null) {
+        if (array_key_exists('VoiceMessageStatisticsItem',$param) and $param['VoiceMessageStatisticsItem'] !== null) {
             $this->VoiceMessageStatisticsItem = new VoiceMessageStatisticsItem();
-            $this->VoiceMessageStatisticsItem->deserialize($param["VoiceMessageStatisticsItem"]);
+            $this->VoiceMessageStatisticsItem->deserialize($param['VoiceMessageStatisticsItem']);
         }
 
-        if (array_key_exists("VoiceFilterStatisticsItem",$param) and $param["VoiceFilterStatisticsItem"] !== null) {
+        if (array_key_exists('VoiceFilterStatisticsItem',$param) and $param['VoiceFilterStatisticsItem'] !== null) {
             $this->VoiceFilterStatisticsItem = new VoiceFilterStatisticsItem();
-            $this->VoiceFilterStatisticsItem->deserialize($param["VoiceFilterStatisticsItem"]);
+            $this->VoiceFilterStatisticsItem->deserialize($param['VoiceFilterStatisticsItem']);
         }
 
-        if (array_key_exists("Date",$param) and $param["Date"] !== null) {
-            $this->Date = $param["Date"];
+        if (array_key_exists('Date',$param) and $param['Date'] !== null) {
+            $this->Date = $param['Date'];
         }
     }
 }

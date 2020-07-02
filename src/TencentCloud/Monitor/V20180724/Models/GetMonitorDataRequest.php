@@ -86,33 +86,33 @@ class GetMonitorDataRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Namespace",$param) and $param["Namespace"] !== null) {
-            $this->Namespace = $param["Namespace"];
+        if (array_key_exists('Namespace',$param) and $param['Namespace'] !== null) {
+            $this->Namespace = $param['Namespace'];
         }
 
-        if (array_key_exists("MetricName",$param) and $param["MetricName"] !== null) {
-            $this->MetricName = $param["MetricName"];
+        if (array_key_exists('MetricName',$param) and $param['MetricName'] !== null) {
+            $this->MetricName = $param['MetricName'];
         }
 
-        if (array_key_exists("Instances",$param) and $param["Instances"] !== null) {
+        if (array_key_exists('Instances',$param) and $param['Instances'] !== null) {
             $this->Instances = [];
-            foreach ($param["Instances"] as $key => $value){
+            foreach ($param['Instances'] as $key => $value){
                 $obj = new Instance();
                 $obj->deserialize($value);
                 array_push($this->Instances, $obj);
             }
         }
 
-        if (array_key_exists("Period",$param) and $param["Period"] !== null) {
-            $this->Period = $param["Period"];
+        if (array_key_exists('Period',$param) and $param['Period'] !== null) {
+            $this->Period = $param['Period'];
         }
 
-        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
-            $this->StartTime = $param["StartTime"];
+        if (array_key_exists('StartTime',$param) and $param['StartTime'] !== null) {
+            $this->StartTime = $param['StartTime'];
         }
 
-        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
-            $this->EndTime = $param["EndTime"];
+        if (array_key_exists('EndTime',$param) and $param['EndTime'] !== null) {
+            $this->EndTime = $param['EndTime'];
         }
     }
 }

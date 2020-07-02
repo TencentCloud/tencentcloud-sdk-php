@@ -62,16 +62,16 @@ class MigratePrivateIpAddressRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SourceNetworkInterfaceId",$param) and $param["SourceNetworkInterfaceId"] !== null) {
-            $this->SourceNetworkInterfaceId = $param["SourceNetworkInterfaceId"];
+        if (array_key_exists('SourceNetworkInterfaceId',$param) and $param['SourceNetworkInterfaceId'] !== null) {
+            $this->SourceNetworkInterfaceId = $param['SourceNetworkInterfaceId'];
         }
 
-        if (array_key_exists("DestinationNetworkInterfaceId",$param) and $param["DestinationNetworkInterfaceId"] !== null) {
-            $this->DestinationNetworkInterfaceId = $param["DestinationNetworkInterfaceId"];
+        if (array_key_exists('DestinationNetworkInterfaceId',$param) and $param['DestinationNetworkInterfaceId'] !== null) {
+            $this->DestinationNetworkInterfaceId = $param['DestinationNetworkInterfaceId'];
         }
 
-        if (array_key_exists("PrivateIpAddress",$param) and $param["PrivateIpAddress"] !== null) {
-            $this->PrivateIpAddress = $param["PrivateIpAddress"];
+        if (array_key_exists('PrivateIpAddress',$param) and $param['PrivateIpAddress'] !== null) {
+            $this->PrivateIpAddress = $param['PrivateIpAddress'];
         }
     }
 }

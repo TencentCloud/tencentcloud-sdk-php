@@ -82,16 +82,16 @@ global：预热全球节点
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Urls",$param) and $param["Urls"] !== null) {
-            $this->Urls = $param["Urls"];
+        if (array_key_exists('Urls',$param) and $param['Urls'] !== null) {
+            $this->Urls = $param['Urls'];
         }
 
-        if (array_key_exists("UserAgent",$param) and $param["UserAgent"] !== null) {
-            $this->UserAgent = $param["UserAgent"];
+        if (array_key_exists('UserAgent',$param) and $param['UserAgent'] !== null) {
+            $this->UserAgent = $param['UserAgent'];
         }
 
-        if (array_key_exists("Area",$param) and $param["Area"] !== null) {
-            $this->Area = $param["Area"];
+        if (array_key_exists('Area',$param) and $param['Area'] !== null) {
+            $this->Area = $param['Area'];
         }
     }
 }

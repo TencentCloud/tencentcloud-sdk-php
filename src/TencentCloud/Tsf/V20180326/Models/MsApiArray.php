@@ -78,20 +78,20 @@ class MsApiArray extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Path",$param) and $param["Path"] !== null) {
-            $this->Path = $param["Path"];
+        if (array_key_exists('Path',$param) and $param['Path'] !== null) {
+            $this->Path = $param['Path'];
         }
 
-        if (array_key_exists("Method",$param) and $param["Method"] !== null) {
-            $this->Method = $param["Method"];
+        if (array_key_exists('Method',$param) and $param['Method'] !== null) {
+            $this->Method = $param['Method'];
         }
 
-        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
-            $this->Description = $param["Description"];
+        if (array_key_exists('Description',$param) and $param['Description'] !== null) {
+            $this->Description = $param['Description'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
     }
 }

@@ -54,13 +54,13 @@ class ShopHourTrafficInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Date",$param) and $param["Date"] !== null) {
-            $this->Date = $param["Date"];
+        if (array_key_exists('Date',$param) and $param['Date'] !== null) {
+            $this->Date = $param['Date'];
         }
 
-        if (array_key_exists("HourTrafficInfoDetailSet",$param) and $param["HourTrafficInfoDetailSet"] !== null) {
+        if (array_key_exists('HourTrafficInfoDetailSet',$param) and $param['HourTrafficInfoDetailSet'] !== null) {
             $this->HourTrafficInfoDetailSet = [];
-            foreach ($param["HourTrafficInfoDetailSet"] as $key => $value){
+            foreach ($param['HourTrafficInfoDetailSet'] as $key => $value){
                 $obj = new HourTrafficInfoDetail();
                 $obj->deserialize($value);
                 array_push($this->HourTrafficInfoDetailSet, $obj);

@@ -54,12 +54,12 @@ class TableColumn extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Col",$param) and $param["Col"] !== null) {
-            $this->Col = $param["Col"];
+        if (array_key_exists('Col',$param) and $param['Col'] !== null) {
+            $this->Col = $param['Col'];
         }
 
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists('Type',$param) and $param['Type'] !== null) {
+            $this->Type = $param['Type'];
         }
     }
 }

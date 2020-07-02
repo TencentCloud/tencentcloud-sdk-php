@@ -118,16 +118,16 @@ default 时填充 "no max-age"
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CacheType",$param) and $param["CacheType"] !== null) {
-            $this->CacheType = $param["CacheType"];
+        if (array_key_exists('CacheType',$param) and $param['CacheType'] !== null) {
+            $this->CacheType = $param['CacheType'];
         }
 
-        if (array_key_exists("CacheContents",$param) and $param["CacheContents"] !== null) {
-            $this->CacheContents = $param["CacheContents"];
+        if (array_key_exists('CacheContents',$param) and $param['CacheContents'] !== null) {
+            $this->CacheContents = $param['CacheContents'];
         }
 
-        if (array_key_exists("CacheTime",$param) and $param["CacheTime"] !== null) {
-            $this->CacheTime = $param["CacheTime"];
+        if (array_key_exists('CacheTime',$param) and $param['CacheTime'] !== null) {
+            $this->CacheTime = $param['CacheTime'];
         }
     }
 }

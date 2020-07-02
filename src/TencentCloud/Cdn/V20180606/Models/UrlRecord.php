@@ -86,20 +86,20 @@ class UrlRecord extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("RealUrl",$param) and $param["RealUrl"] !== null) {
-            $this->RealUrl = $param["RealUrl"];
+        if (array_key_exists('RealUrl',$param) and $param['RealUrl'] !== null) {
+            $this->RealUrl = $param['RealUrl'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
-            $this->UpdateTime = $param["UpdateTime"];
+        if (array_key_exists('UpdateTime',$param) and $param['UpdateTime'] !== null) {
+            $this->UpdateTime = $param['UpdateTime'];
         }
     }
 }

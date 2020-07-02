@@ -66,21 +66,21 @@ class DescribeInstancesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("Registries",$param) and $param["Registries"] !== null) {
+        if (array_key_exists('Registries',$param) and $param['Registries'] !== null) {
             $this->Registries = [];
-            foreach ($param["Registries"] as $key => $value){
+            foreach ($param['Registries'] as $key => $value){
                 $obj = new Registry();
                 $obj->deserialize($value);
                 array_push($this->Registries, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

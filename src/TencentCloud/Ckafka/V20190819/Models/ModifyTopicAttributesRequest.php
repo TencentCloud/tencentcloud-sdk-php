@@ -118,44 +118,44 @@ class ModifyTopicAttributesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("TopicName",$param) and $param["TopicName"] !== null) {
-            $this->TopicName = $param["TopicName"];
+        if (array_key_exists('TopicName',$param) and $param['TopicName'] !== null) {
+            $this->TopicName = $param['TopicName'];
         }
 
-        if (array_key_exists("Note",$param) and $param["Note"] !== null) {
-            $this->Note = $param["Note"];
+        if (array_key_exists('Note',$param) and $param['Note'] !== null) {
+            $this->Note = $param['Note'];
         }
 
-        if (array_key_exists("EnableWhiteList",$param) and $param["EnableWhiteList"] !== null) {
-            $this->EnableWhiteList = $param["EnableWhiteList"];
+        if (array_key_exists('EnableWhiteList',$param) and $param['EnableWhiteList'] !== null) {
+            $this->EnableWhiteList = $param['EnableWhiteList'];
         }
 
-        if (array_key_exists("MinInsyncReplicas",$param) and $param["MinInsyncReplicas"] !== null) {
-            $this->MinInsyncReplicas = $param["MinInsyncReplicas"];
+        if (array_key_exists('MinInsyncReplicas',$param) and $param['MinInsyncReplicas'] !== null) {
+            $this->MinInsyncReplicas = $param['MinInsyncReplicas'];
         }
 
-        if (array_key_exists("UncleanLeaderElectionEnable",$param) and $param["UncleanLeaderElectionEnable"] !== null) {
-            $this->UncleanLeaderElectionEnable = $param["UncleanLeaderElectionEnable"];
+        if (array_key_exists('UncleanLeaderElectionEnable',$param) and $param['UncleanLeaderElectionEnable'] !== null) {
+            $this->UncleanLeaderElectionEnable = $param['UncleanLeaderElectionEnable'];
         }
 
-        if (array_key_exists("RetentionMs",$param) and $param["RetentionMs"] !== null) {
-            $this->RetentionMs = $param["RetentionMs"];
+        if (array_key_exists('RetentionMs',$param) and $param['RetentionMs'] !== null) {
+            $this->RetentionMs = $param['RetentionMs'];
         }
 
-        if (array_key_exists("SegmentMs",$param) and $param["SegmentMs"] !== null) {
-            $this->SegmentMs = $param["SegmentMs"];
+        if (array_key_exists('SegmentMs',$param) and $param['SegmentMs'] !== null) {
+            $this->SegmentMs = $param['SegmentMs'];
         }
 
-        if (array_key_exists("MaxMessageBytes",$param) and $param["MaxMessageBytes"] !== null) {
-            $this->MaxMessageBytes = $param["MaxMessageBytes"];
+        if (array_key_exists('MaxMessageBytes',$param) and $param['MaxMessageBytes'] !== null) {
+            $this->MaxMessageBytes = $param['MaxMessageBytes'];
         }
 
-        if (array_key_exists("CleanUpPolicy",$param) and $param["CleanUpPolicy"] !== null) {
-            $this->CleanUpPolicy = $param["CleanUpPolicy"];
+        if (array_key_exists('CleanUpPolicy',$param) and $param['CleanUpPolicy'] !== null) {
+            $this->CleanUpPolicy = $param['CleanUpPolicy'];
         }
     }
 }

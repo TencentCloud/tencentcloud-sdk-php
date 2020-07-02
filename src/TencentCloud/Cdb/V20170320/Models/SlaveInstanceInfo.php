@@ -70,20 +70,20 @@ class SlaveInstanceInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Vport",$param) and $param["Vport"] !== null) {
-            $this->Vport = $param["Vport"];
+        if (array_key_exists('Vport',$param) and $param['Vport'] !== null) {
+            $this->Vport = $param['Vport'];
         }
 
-        if (array_key_exists("Region",$param) and $param["Region"] !== null) {
-            $this->Region = $param["Region"];
+        if (array_key_exists('Region',$param) and $param['Region'] !== null) {
+            $this->Region = $param['Region'];
         }
 
-        if (array_key_exists("Vip",$param) and $param["Vip"] !== null) {
-            $this->Vip = $param["Vip"];
+        if (array_key_exists('Vip',$param) and $param['Vip'] !== null) {
+            $this->Vip = $param['Vip'];
         }
 
-        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
-            $this->Zone = $param["Zone"];
+        if (array_key_exists('Zone',$param) and $param['Zone'] !== null) {
+            $this->Zone = $param['Zone'];
         }
     }
 }

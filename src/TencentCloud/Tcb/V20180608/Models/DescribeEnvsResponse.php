@@ -54,17 +54,17 @@ class DescribeEnvsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("EnvList",$param) and $param["EnvList"] !== null) {
+        if (array_key_exists('EnvList',$param) and $param['EnvList'] !== null) {
             $this->EnvList = [];
-            foreach ($param["EnvList"] as $key => $value){
+            foreach ($param['EnvList'] as $key => $value){
                 $obj = new EnvInfo();
                 $obj->deserialize($value);
                 array_push($this->EnvList, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

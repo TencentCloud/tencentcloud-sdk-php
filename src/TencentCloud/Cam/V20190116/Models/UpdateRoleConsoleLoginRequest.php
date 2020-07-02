@@ -62,16 +62,16 @@ class UpdateRoleConsoleLoginRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ConsoleLogin",$param) and $param["ConsoleLogin"] !== null) {
-            $this->ConsoleLogin = $param["ConsoleLogin"];
+        if (array_key_exists('ConsoleLogin',$param) and $param['ConsoleLogin'] !== null) {
+            $this->ConsoleLogin = $param['ConsoleLogin'];
         }
 
-        if (array_key_exists("RoleId",$param) and $param["RoleId"] !== null) {
-            $this->RoleId = $param["RoleId"];
+        if (array_key_exists('RoleId',$param) and $param['RoleId'] !== null) {
+            $this->RoleId = $param['RoleId'];
         }
 
-        if (array_key_exists("RoleName",$param) and $param["RoleName"] !== null) {
-            $this->RoleName = $param["RoleName"];
+        if (array_key_exists('RoleName',$param) and $param['RoleName'] !== null) {
+            $this->RoleName = $param['RoleName'];
         }
     }
 }

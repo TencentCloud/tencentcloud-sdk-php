@@ -62,16 +62,16 @@ class DiskInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DiskTypeId",$param) and $param["DiskTypeId"] !== null) {
-            $this->DiskTypeId = $param["DiskTypeId"];
+        if (array_key_exists('DiskTypeId',$param) and $param['DiskTypeId'] !== null) {
+            $this->DiskTypeId = $param['DiskTypeId'];
         }
 
-        if (array_key_exists("Size",$param) and $param["Size"] !== null) {
-            $this->Size = $param["Size"];
+        if (array_key_exists('Size',$param) and $param['Size'] !== null) {
+            $this->Size = $param['Size'];
         }
 
-        if (array_key_exists("DiskDescription",$param) and $param["DiskDescription"] !== null) {
-            $this->DiskDescription = $param["DiskDescription"];
+        if (array_key_exists('DiskDescription',$param) and $param['DiskDescription'] !== null) {
+            $this->DiskDescription = $param['DiskDescription'];
         }
     }
 }

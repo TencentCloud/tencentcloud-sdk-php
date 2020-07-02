@@ -54,12 +54,12 @@ class DescribeIPProductInfoRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Business",$param) and $param["Business"] !== null) {
-            $this->Business = $param["Business"];
+        if (array_key_exists('Business',$param) and $param['Business'] !== null) {
+            $this->Business = $param['Business'];
         }
 
-        if (array_key_exists("IpList",$param) and $param["IpList"] !== null) {
-            $this->IpList = $param["IpList"];
+        if (array_key_exists('IpList',$param) and $param['IpList'] !== null) {
+            $this->IpList = $param['IpList'];
         }
     }
 }

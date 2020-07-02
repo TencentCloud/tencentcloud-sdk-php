@@ -46,8 +46,8 @@ class DescribeComponentInfoRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ComponentId",$param) and $param["ComponentId"] !== null) {
-            $this->ComponentId = $param["ComponentId"];
+        if (array_key_exists('ComponentId',$param) and $param['ComponentId'] !== null) {
+            $this->ComponentId = $param['ComponentId'];
         }
     }
 }

@@ -62,16 +62,16 @@ class ChatBotRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Query",$param) and $param["Query"] !== null) {
-            $this->Query = $param["Query"];
+        if (array_key_exists('Query',$param) and $param['Query'] !== null) {
+            $this->Query = $param['Query'];
         }
 
-        if (array_key_exists("Flag",$param) and $param["Flag"] !== null) {
-            $this->Flag = $param["Flag"];
+        if (array_key_exists('Flag',$param) and $param['Flag'] !== null) {
+            $this->Flag = $param['Flag'];
         }
 
-        if (array_key_exists("OpenId",$param) and $param["OpenId"] !== null) {
-            $this->OpenId = $param["OpenId"];
+        if (array_key_exists('OpenId',$param) and $param['OpenId'] !== null) {
+            $this->OpenId = $param['OpenId'];
         }
     }
 }

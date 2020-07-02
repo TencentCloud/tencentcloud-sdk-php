@@ -67,12 +67,12 @@ class MediaDeleteItem extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists('Type',$param) and $param['Type'] !== null) {
+            $this->Type = $param['Type'];
         }
 
-        if (array_key_exists("Definition",$param) and $param["Definition"] !== null) {
-            $this->Definition = $param["Definition"];
+        if (array_key_exists('Definition',$param) and $param['Definition'] !== null) {
+            $this->Definition = $param['Definition'];
         }
     }
 }

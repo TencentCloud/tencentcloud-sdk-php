@@ -86,28 +86,28 @@ class UploadOtaVersionRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ProductId",$param) and $param["ProductId"] !== null) {
-            $this->ProductId = $param["ProductId"];
+        if (array_key_exists('ProductId',$param) and $param['ProductId'] !== null) {
+            $this->ProductId = $param['ProductId'];
         }
 
-        if (array_key_exists("OtaVersion",$param) and $param["OtaVersion"] !== null) {
-            $this->OtaVersion = $param["OtaVersion"];
+        if (array_key_exists('OtaVersion',$param) and $param['OtaVersion'] !== null) {
+            $this->OtaVersion = $param['OtaVersion'];
         }
 
-        if (array_key_exists("VersionUrl",$param) and $param["VersionUrl"] !== null) {
-            $this->VersionUrl = $param["VersionUrl"];
+        if (array_key_exists('VersionUrl',$param) and $param['VersionUrl'] !== null) {
+            $this->VersionUrl = $param['VersionUrl'];
         }
 
-        if (array_key_exists("FileSize",$param) and $param["FileSize"] !== null) {
-            $this->FileSize = $param["FileSize"];
+        if (array_key_exists('FileSize',$param) and $param['FileSize'] !== null) {
+            $this->FileSize = $param['FileSize'];
         }
 
-        if (array_key_exists("Md5",$param) and $param["Md5"] !== null) {
-            $this->Md5 = $param["Md5"];
+        if (array_key_exists('Md5',$param) and $param['Md5'] !== null) {
+            $this->Md5 = $param['Md5'];
         }
 
-        if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
-            $this->Operator = $param["Operator"];
+        if (array_key_exists('Operator',$param) and $param['Operator'] !== null) {
+            $this->Operator = $param['Operator'];
         }
     }
 }

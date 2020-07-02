@@ -62,13 +62,13 @@ class UsagePlanBindSecretStatus extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("AccessKeyList",$param) and $param["AccessKeyList"] !== null) {
+        if (array_key_exists('AccessKeyList',$param) and $param['AccessKeyList'] !== null) {
             $this->AccessKeyList = [];
-            foreach ($param["AccessKeyList"] as $key => $value){
+            foreach ($param['AccessKeyList'] as $key => $value){
                 $obj = new UsagePlanBindSecret();
                 $obj->deserialize($value);
                 array_push($this->AccessKeyList, $obj);

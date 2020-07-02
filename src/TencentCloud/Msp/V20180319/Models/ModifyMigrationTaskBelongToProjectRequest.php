@@ -54,12 +54,12 @@ class ModifyMigrationTaskBelongToProjectRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
-            $this->TaskId = $param["TaskId"];
+        if (array_key_exists('TaskId',$param) and $param['TaskId'] !== null) {
+            $this->TaskId = $param['TaskId'];
         }
 
-        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
-            $this->ProjectId = $param["ProjectId"];
+        if (array_key_exists('ProjectId',$param) and $param['ProjectId'] !== null) {
+            $this->ProjectId = $param['ProjectId'];
         }
     }
 }

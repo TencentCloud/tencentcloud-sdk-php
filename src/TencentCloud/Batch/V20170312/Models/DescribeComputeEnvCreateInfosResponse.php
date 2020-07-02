@@ -62,21 +62,21 @@ class DescribeComputeEnvCreateInfosResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("ComputeEnvCreateInfoSet",$param) and $param["ComputeEnvCreateInfoSet"] !== null) {
+        if (array_key_exists('ComputeEnvCreateInfoSet',$param) and $param['ComputeEnvCreateInfoSet'] !== null) {
             $this->ComputeEnvCreateInfoSet = [];
-            foreach ($param["ComputeEnvCreateInfoSet"] as $key => $value){
+            foreach ($param['ComputeEnvCreateInfoSet'] as $key => $value){
                 $obj = new ComputeEnvCreateInfo();
                 $obj->deserialize($value);
                 array_push($this->ComputeEnvCreateInfoSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

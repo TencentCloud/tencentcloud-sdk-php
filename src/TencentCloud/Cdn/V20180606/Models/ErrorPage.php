@@ -70,13 +70,13 @@ off：关闭
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Switch",$param) and $param["Switch"] !== null) {
-            $this->Switch = $param["Switch"];
+        if (array_key_exists('Switch',$param) and $param['Switch'] !== null) {
+            $this->Switch = $param['Switch'];
         }
 
-        if (array_key_exists("PageRules",$param) and $param["PageRules"] !== null) {
+        if (array_key_exists('PageRules',$param) and $param['PageRules'] !== null) {
             $this->PageRules = [];
-            foreach ($param["PageRules"] as $key => $value){
+            foreach ($param['PageRules'] as $key => $value){
                 $obj = new ErrorPageRule();
                 $obj->deserialize($value);
                 array_push($this->PageRules, $obj);

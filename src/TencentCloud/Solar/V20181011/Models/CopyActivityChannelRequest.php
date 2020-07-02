@@ -62,16 +62,16 @@ class CopyActivityChannelRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ActivityId",$param) and $param["ActivityId"] !== null) {
-            $this->ActivityId = $param["ActivityId"];
+        if (array_key_exists('ActivityId',$param) and $param['ActivityId'] !== null) {
+            $this->ActivityId = $param['ActivityId'];
         }
 
-        if (array_key_exists("ChannelFrom",$param) and $param["ChannelFrom"] !== null) {
-            $this->ChannelFrom = $param["ChannelFrom"];
+        if (array_key_exists('ChannelFrom',$param) and $param['ChannelFrom'] !== null) {
+            $this->ChannelFrom = $param['ChannelFrom'];
         }
 
-        if (array_key_exists("ChannelTo",$param) and $param["ChannelTo"] !== null) {
-            $this->ChannelTo = $param["ChannelTo"];
+        if (array_key_exists('ChannelTo',$param) and $param['ChannelTo'] !== null) {
+            $this->ChannelTo = $param['ChannelTo'];
         }
     }
 }

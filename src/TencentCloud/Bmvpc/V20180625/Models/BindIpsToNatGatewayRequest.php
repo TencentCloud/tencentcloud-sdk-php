@@ -62,17 +62,17 @@ class BindIpsToNatGatewayRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("NatId",$param) and $param["NatId"] !== null) {
-            $this->NatId = $param["NatId"];
+        if (array_key_exists('NatId',$param) and $param['NatId'] !== null) {
+            $this->NatId = $param['NatId'];
         }
 
-        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
-            $this->VpcId = $param["VpcId"];
+        if (array_key_exists('VpcId',$param) and $param['VpcId'] !== null) {
+            $this->VpcId = $param['VpcId'];
         }
 
-        if (array_key_exists("IpInfoSet",$param) and $param["IpInfoSet"] !== null) {
+        if (array_key_exists('IpInfoSet',$param) and $param['IpInfoSet'] !== null) {
             $this->IpInfoSet = [];
-            foreach ($param["IpInfoSet"] as $key => $value){
+            foreach ($param['IpInfoSet'] as $key => $value){
                 $obj = new IpInfo();
                 $obj->deserialize($value);
                 array_push($this->IpInfoSet, $obj);

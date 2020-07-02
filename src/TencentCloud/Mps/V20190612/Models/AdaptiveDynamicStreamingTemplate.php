@@ -150,49 +150,49 @@ class AdaptiveDynamicStreamingTemplate extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Definition",$param) and $param["Definition"] !== null) {
-            $this->Definition = $param["Definition"];
+        if (array_key_exists('Definition',$param) and $param['Definition'] !== null) {
+            $this->Definition = $param['Definition'];
         }
 
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists('Type',$param) and $param['Type'] !== null) {
+            $this->Type = $param['Type'];
         }
 
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("Comment",$param) and $param["Comment"] !== null) {
-            $this->Comment = $param["Comment"];
+        if (array_key_exists('Comment',$param) and $param['Comment'] !== null) {
+            $this->Comment = $param['Comment'];
         }
 
-        if (array_key_exists("Format",$param) and $param["Format"] !== null) {
-            $this->Format = $param["Format"];
+        if (array_key_exists('Format',$param) and $param['Format'] !== null) {
+            $this->Format = $param['Format'];
         }
 
-        if (array_key_exists("StreamInfos",$param) and $param["StreamInfos"] !== null) {
+        if (array_key_exists('StreamInfos',$param) and $param['StreamInfos'] !== null) {
             $this->StreamInfos = [];
-            foreach ($param["StreamInfos"] as $key => $value){
+            foreach ($param['StreamInfos'] as $key => $value){
                 $obj = new AdaptiveStreamTemplate();
                 $obj->deserialize($value);
                 array_push($this->StreamInfos, $obj);
             }
         }
 
-        if (array_key_exists("DisableHigherVideoBitrate",$param) and $param["DisableHigherVideoBitrate"] !== null) {
-            $this->DisableHigherVideoBitrate = $param["DisableHigherVideoBitrate"];
+        if (array_key_exists('DisableHigherVideoBitrate',$param) and $param['DisableHigherVideoBitrate'] !== null) {
+            $this->DisableHigherVideoBitrate = $param['DisableHigherVideoBitrate'];
         }
 
-        if (array_key_exists("DisableHigherVideoResolution",$param) and $param["DisableHigherVideoResolution"] !== null) {
-            $this->DisableHigherVideoResolution = $param["DisableHigherVideoResolution"];
+        if (array_key_exists('DisableHigherVideoResolution',$param) and $param['DisableHigherVideoResolution'] !== null) {
+            $this->DisableHigherVideoResolution = $param['DisableHigherVideoResolution'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
-            $this->UpdateTime = $param["UpdateTime"];
+        if (array_key_exists('UpdateTime',$param) and $param['UpdateTime'] !== null) {
+            $this->UpdateTime = $param['UpdateTime'];
         }
     }
 }

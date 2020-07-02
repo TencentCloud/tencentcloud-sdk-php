@@ -62,16 +62,16 @@ class LocalDiskInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LocalDiskType",$param) and $param["LocalDiskType"] !== null) {
-            $this->LocalDiskType = $param["LocalDiskType"];
+        if (array_key_exists('LocalDiskType',$param) and $param['LocalDiskType'] !== null) {
+            $this->LocalDiskType = $param['LocalDiskType'];
         }
 
-        if (array_key_exists("LocalDiskSize",$param) and $param["LocalDiskSize"] !== null) {
-            $this->LocalDiskSize = $param["LocalDiskSize"];
+        if (array_key_exists('LocalDiskSize',$param) and $param['LocalDiskSize'] !== null) {
+            $this->LocalDiskSize = $param['LocalDiskSize'];
         }
 
-        if (array_key_exists("LocalDiskCount",$param) and $param["LocalDiskCount"] !== null) {
-            $this->LocalDiskCount = $param["LocalDiskCount"];
+        if (array_key_exists('LocalDiskCount',$param) and $param['LocalDiskCount'] !== null) {
+            $this->LocalDiskCount = $param['LocalDiskCount'];
         }
     }
 }

@@ -62,21 +62,21 @@ class DescribeWorkersInfoResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("WorkerNum",$param) and $param["WorkerNum"] !== null) {
-            $this->WorkerNum = $param["WorkerNum"];
+        if (array_key_exists('WorkerNum',$param) and $param['WorkerNum'] !== null) {
+            $this->WorkerNum = $param['WorkerNum'];
         }
 
-        if (array_key_exists("WorkerDetail",$param) and $param["WorkerDetail"] !== null) {
+        if (array_key_exists('WorkerDetail',$param) and $param['WorkerDetail'] !== null) {
             $this->WorkerDetail = [];
-            foreach ($param["WorkerDetail"] as $key => $value){
+            foreach ($param['WorkerDetail'] as $key => $value){
                 $obj = new WorkerDetail();
                 $obj->deserialize($value);
                 array_push($this->WorkerDetail, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

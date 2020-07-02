@@ -54,13 +54,13 @@ class ConsumerGroup extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ConsumerGroupName",$param) and $param["ConsumerGroupName"] !== null) {
-            $this->ConsumerGroupName = $param["ConsumerGroupName"];
+        if (array_key_exists('ConsumerGroupName',$param) and $param['ConsumerGroupName'] !== null) {
+            $this->ConsumerGroupName = $param['ConsumerGroupName'];
         }
 
-        if (array_key_exists("SubscribedInfo",$param) and $param["SubscribedInfo"] !== null) {
+        if (array_key_exists('SubscribedInfo',$param) and $param['SubscribedInfo'] !== null) {
             $this->SubscribedInfo = [];
-            foreach ($param["SubscribedInfo"] as $key => $value){
+            foreach ($param['SubscribedInfo'] as $key => $value){
                 $obj = new SubscribedInfo();
                 $obj->deserialize($value);
                 array_push($this->SubscribedInfo, $obj);

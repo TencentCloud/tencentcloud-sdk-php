@@ -54,13 +54,13 @@ class CreateRuntimeResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Runtime",$param) and $param["Runtime"] !== null) {
+        if (array_key_exists('Runtime',$param) and $param['Runtime'] !== null) {
             $this->Runtime = new Runtime();
-            $this->Runtime->deserialize($param["Runtime"]);
+            $this->Runtime->deserialize($param['Runtime']);
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

@@ -70,20 +70,20 @@ class SyncOption extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SyncObject",$param) and $param["SyncObject"] !== null) {
-            $this->SyncObject = $param["SyncObject"];
+        if (array_key_exists('SyncObject',$param) and $param['SyncObject'] !== null) {
+            $this->SyncObject = $param['SyncObject'];
         }
 
-        if (array_key_exists("RunMode",$param) and $param["RunMode"] !== null) {
-            $this->RunMode = $param["RunMode"];
+        if (array_key_exists('RunMode',$param) and $param['RunMode'] !== null) {
+            $this->RunMode = $param['RunMode'];
         }
 
-        if (array_key_exists("SyncType",$param) and $param["SyncType"] !== null) {
-            $this->SyncType = $param["SyncType"];
+        if (array_key_exists('SyncType',$param) and $param['SyncType'] !== null) {
+            $this->SyncType = $param['SyncType'];
         }
 
-        if (array_key_exists("ConsistencyType",$param) and $param["ConsistencyType"] !== null) {
-            $this->ConsistencyType = $param["ConsistencyType"];
+        if (array_key_exists('ConsistencyType',$param) and $param['ConsistencyType'] !== null) {
+            $this->ConsistencyType = $param['ConsistencyType'];
         }
     }
 }

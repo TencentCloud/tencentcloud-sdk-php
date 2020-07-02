@@ -82,20 +82,20 @@ class DescribeWorkflowsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("WorkflowIds",$param) and $param["WorkflowIds"] !== null) {
-            $this->WorkflowIds = $param["WorkflowIds"];
+        if (array_key_exists('WorkflowIds',$param) and $param['WorkflowIds'] !== null) {
+            $this->WorkflowIds = $param['WorkflowIds'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
+        if (array_key_exists('Offset',$param) and $param['Offset'] !== null) {
+            $this->Offset = $param['Offset'];
         }
 
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
+        if (array_key_exists('Limit',$param) and $param['Limit'] !== null) {
+            $this->Limit = $param['Limit'];
         }
     }
 }

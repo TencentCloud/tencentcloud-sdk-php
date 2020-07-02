@@ -62,21 +62,21 @@ class DescribeSuperPlayerConfigsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("PlayerConfigSet",$param) and $param["PlayerConfigSet"] !== null) {
+        if (array_key_exists('PlayerConfigSet',$param) and $param['PlayerConfigSet'] !== null) {
             $this->PlayerConfigSet = [];
-            foreach ($param["PlayerConfigSet"] as $key => $value){
+            foreach ($param['PlayerConfigSet'] as $key => $value){
                 $obj = new PlayerConfig();
                 $obj->deserialize($value);
                 array_push($this->PlayerConfigSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

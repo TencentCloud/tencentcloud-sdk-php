@@ -58,13 +58,13 @@ class Album extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AlbumName",$param) and $param["AlbumName"] !== null) {
-            $this->AlbumName = $param["AlbumName"];
+        if (array_key_exists('AlbumName',$param) and $param['AlbumName'] !== null) {
+            $this->AlbumName = $param['AlbumName'];
         }
 
-        if (array_key_exists("ImagePathMap",$param) and $param["ImagePathMap"] !== null) {
+        if (array_key_exists('ImagePathMap',$param) and $param['ImagePathMap'] !== null) {
             $this->ImagePathMap = [];
-            foreach ($param["ImagePathMap"] as $key => $value){
+            foreach ($param['ImagePathMap'] as $key => $value){
                 $obj = new ImagePath();
                 $obj->deserialize($value);
                 array_push($this->ImagePathMap, $obj);

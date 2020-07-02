@@ -70,31 +70,31 @@ class CompareIdlFilesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
-            $this->ClusterId = $param["ClusterId"];
+        if (array_key_exists('ClusterId',$param) and $param['ClusterId'] !== null) {
+            $this->ClusterId = $param['ClusterId'];
         }
 
-        if (array_key_exists("SelectedTables",$param) and $param["SelectedTables"] !== null) {
+        if (array_key_exists('SelectedTables',$param) and $param['SelectedTables'] !== null) {
             $this->SelectedTables = [];
-            foreach ($param["SelectedTables"] as $key => $value){
+            foreach ($param['SelectedTables'] as $key => $value){
                 $obj = new SelectedTableInfoNew();
                 $obj->deserialize($value);
                 array_push($this->SelectedTables, $obj);
             }
         }
 
-        if (array_key_exists("ExistingIdlFiles",$param) and $param["ExistingIdlFiles"] !== null) {
+        if (array_key_exists('ExistingIdlFiles',$param) and $param['ExistingIdlFiles'] !== null) {
             $this->ExistingIdlFiles = [];
-            foreach ($param["ExistingIdlFiles"] as $key => $value){
+            foreach ($param['ExistingIdlFiles'] as $key => $value){
                 $obj = new IdlFileInfo();
                 $obj->deserialize($value);
                 array_push($this->ExistingIdlFiles, $obj);
             }
         }
 
-        if (array_key_exists("NewIdlFiles",$param) and $param["NewIdlFiles"] !== null) {
+        if (array_key_exists('NewIdlFiles',$param) and $param['NewIdlFiles'] !== null) {
             $this->NewIdlFiles = [];
-            foreach ($param["NewIdlFiles"] as $key => $value){
+            foreach ($param['NewIdlFiles'] as $key => $value){
                 $obj = new IdlFileInfo();
                 $obj->deserialize($value);
                 array_push($this->NewIdlFiles, $obj);

@@ -54,12 +54,12 @@ class AddMemberInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MemberId",$param) and $param["MemberId"] !== null) {
-            $this->MemberId = $param["MemberId"];
+        if (array_key_exists('MemberId',$param) and $param['MemberId'] !== null) {
+            $this->MemberId = $param['MemberId'];
         }
 
-        if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
-            $this->Remark = $param["Remark"];
+        if (array_key_exists('Remark',$param) and $param['Remark'] !== null) {
+            $this->Remark = $param['Remark'];
         }
     }
 }

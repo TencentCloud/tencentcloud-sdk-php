@@ -54,12 +54,12 @@ class QueryApplicationMaterialRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DeclareId",$param) and $param["DeclareId"] !== null) {
-            $this->DeclareId = $param["DeclareId"];
+        if (array_key_exists('DeclareId',$param) and $param['DeclareId'] !== null) {
+            $this->DeclareId = $param['DeclareId'];
         }
 
-        if (array_key_exists("Profile",$param) and $param["Profile"] !== null) {
-            $this->Profile = $param["Profile"];
+        if (array_key_exists('Profile',$param) and $param['Profile'] !== null) {
+            $this->Profile = $param['Profile'];
         }
     }
 }

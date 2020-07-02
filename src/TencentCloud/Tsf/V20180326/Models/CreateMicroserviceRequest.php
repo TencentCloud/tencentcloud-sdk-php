@@ -62,16 +62,16 @@ class CreateMicroserviceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("NamespaceId",$param) and $param["NamespaceId"] !== null) {
-            $this->NamespaceId = $param["NamespaceId"];
+        if (array_key_exists('NamespaceId',$param) and $param['NamespaceId'] !== null) {
+            $this->NamespaceId = $param['NamespaceId'];
         }
 
-        if (array_key_exists("MicroserviceName",$param) and $param["MicroserviceName"] !== null) {
-            $this->MicroserviceName = $param["MicroserviceName"];
+        if (array_key_exists('MicroserviceName',$param) and $param['MicroserviceName'] !== null) {
+            $this->MicroserviceName = $param['MicroserviceName'];
         }
 
-        if (array_key_exists("MicroserviceDesc",$param) and $param["MicroserviceDesc"] !== null) {
-            $this->MicroserviceDesc = $param["MicroserviceDesc"];
+        if (array_key_exists('MicroserviceDesc',$param) and $param['MicroserviceDesc'] !== null) {
+            $this->MicroserviceDesc = $param['MicroserviceDesc'];
         }
     }
 }

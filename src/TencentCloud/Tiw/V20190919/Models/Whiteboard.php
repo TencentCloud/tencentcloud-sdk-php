@@ -62,16 +62,16 @@ class Whiteboard extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Width",$param) and $param["Width"] !== null) {
-            $this->Width = $param["Width"];
+        if (array_key_exists('Width',$param) and $param['Width'] !== null) {
+            $this->Width = $param['Width'];
         }
 
-        if (array_key_exists("Height",$param) and $param["Height"] !== null) {
-            $this->Height = $param["Height"];
+        if (array_key_exists('Height',$param) and $param['Height'] !== null) {
+            $this->Height = $param['Height'];
         }
 
-        if (array_key_exists("InitParam",$param) and $param["InitParam"] !== null) {
-            $this->InitParam = $param["InitParam"];
+        if (array_key_exists('InitParam',$param) and $param['InitParam'] !== null) {
+            $this->InitParam = $param['InitParam'];
         }
     }
 }

@@ -62,21 +62,21 @@ class DescribeInstanceParamRecordsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("InstanceParamHistory",$param) and $param["InstanceParamHistory"] !== null) {
+        if (array_key_exists('InstanceParamHistory',$param) and $param['InstanceParamHistory'] !== null) {
             $this->InstanceParamHistory = [];
-            foreach ($param["InstanceParamHistory"] as $key => $value){
+            foreach ($param['InstanceParamHistory'] as $key => $value){
                 $obj = new InstanceParamHistory();
                 $obj->deserialize($value);
                 array_push($this->InstanceParamHistory, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

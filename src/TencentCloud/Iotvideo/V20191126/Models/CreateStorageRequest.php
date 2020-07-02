@@ -62,16 +62,16 @@ class CreateStorageRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PkgId",$param) and $param["PkgId"] !== null) {
-            $this->PkgId = $param["PkgId"];
+        if (array_key_exists('PkgId',$param) and $param['PkgId'] !== null) {
+            $this->PkgId = $param['PkgId'];
         }
 
-        if (array_key_exists("Tid",$param) and $param["Tid"] !== null) {
-            $this->Tid = $param["Tid"];
+        if (array_key_exists('Tid',$param) and $param['Tid'] !== null) {
+            $this->Tid = $param['Tid'];
         }
 
-        if (array_key_exists("UserTag",$param) and $param["UserTag"] !== null) {
-            $this->UserTag = $param["UserTag"];
+        if (array_key_exists('UserTag',$param) and $param['UserTag'] !== null) {
+            $this->UserTag = $param['UserTag'];
         }
     }
 }

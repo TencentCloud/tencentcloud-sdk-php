@@ -70,20 +70,20 @@ class DescribeSiteQuotaResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Total",$param) and $param["Total"] !== null) {
-            $this->Total = $param["Total"];
+        if (array_key_exists('Total',$param) and $param['Total'] !== null) {
+            $this->Total = $param['Total'];
         }
 
-        if (array_key_exists("Used",$param) and $param["Used"] !== null) {
-            $this->Used = $param["Used"];
+        if (array_key_exists('Used',$param) and $param['Used'] !== null) {
+            $this->Used = $param['Used'];
         }
 
-        if (array_key_exists("Available",$param) and $param["Available"] !== null) {
-            $this->Available = $param["Available"];
+        if (array_key_exists('Available',$param) and $param['Available'] !== null) {
+            $this->Available = $param['Available'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

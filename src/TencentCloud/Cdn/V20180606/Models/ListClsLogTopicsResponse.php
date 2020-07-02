@@ -66,22 +66,22 @@ class ListClsLogTopicsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Logset",$param) and $param["Logset"] !== null) {
+        if (array_key_exists('Logset',$param) and $param['Logset'] !== null) {
             $this->Logset = new LogSetInfo();
-            $this->Logset->deserialize($param["Logset"]);
+            $this->Logset->deserialize($param['Logset']);
         }
 
-        if (array_key_exists("Topics",$param) and $param["Topics"] !== null) {
+        if (array_key_exists('Topics',$param) and $param['Topics'] !== null) {
             $this->Topics = [];
-            foreach ($param["Topics"] as $key => $value){
+            foreach ($param['Topics'] as $key => $value){
                 $obj = new TopicInfo();
                 $obj->deserialize($value);
                 array_push($this->Topics, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

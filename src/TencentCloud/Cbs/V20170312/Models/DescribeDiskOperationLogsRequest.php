@@ -66,21 +66,21 @@ class DescribeDiskOperationLogsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+        if (array_key_exists('Filters',$param) and $param['Filters'] !== null) {
             $this->Filters = [];
-            foreach ($param["Filters"] as $key => $value){
+            foreach ($param['Filters'] as $key => $value){
                 $obj = new Filter();
                 $obj->deserialize($value);
                 array_push($this->Filters, $obj);
             }
         }
 
-        if (array_key_exists("BeginTime",$param) and $param["BeginTime"] !== null) {
-            $this->BeginTime = $param["BeginTime"];
+        if (array_key_exists('BeginTime',$param) and $param['BeginTime'] !== null) {
+            $this->BeginTime = $param['BeginTime'];
         }
 
-        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
-            $this->EndTime = $param["EndTime"];
+        if (array_key_exists('EndTime',$param) and $param['EndTime'] !== null) {
+            $this->EndTime = $param['EndTime'];
         }
     }
 }

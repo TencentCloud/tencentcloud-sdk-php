@@ -62,12 +62,12 @@ class TriggerInvokeResult extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ReturnCode",$param) and $param["ReturnCode"] !== null) {
-            $this->ReturnCode = $param["ReturnCode"];
+        if (array_key_exists('ReturnCode',$param) and $param['ReturnCode'] !== null) {
+            $this->ReturnCode = $param['ReturnCode'];
         }
 
-        if (array_key_exists("ReturnMsg",$param) and $param["ReturnMsg"] !== null) {
-            $this->ReturnMsg = $param["ReturnMsg"];
+        if (array_key_exists('ReturnMsg',$param) and $param['ReturnMsg'] !== null) {
+            $this->ReturnMsg = $param['ReturnMsg'];
         }
     }
 }

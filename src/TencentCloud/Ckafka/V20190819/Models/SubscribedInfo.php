@@ -70,17 +70,17 @@ class SubscribedInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TopicName",$param) and $param["TopicName"] !== null) {
-            $this->TopicName = $param["TopicName"];
+        if (array_key_exists('TopicName',$param) and $param['TopicName'] !== null) {
+            $this->TopicName = $param['TopicName'];
         }
 
-        if (array_key_exists("Partition",$param) and $param["Partition"] !== null) {
-            $this->Partition = $param["Partition"];
+        if (array_key_exists('Partition',$param) and $param['Partition'] !== null) {
+            $this->Partition = $param['Partition'];
         }
 
-        if (array_key_exists("PartitionOffset",$param) and $param["PartitionOffset"] !== null) {
+        if (array_key_exists('PartitionOffset',$param) and $param['PartitionOffset'] !== null) {
             $this->PartitionOffset = [];
-            foreach ($param["PartitionOffset"] as $key => $value){
+            foreach ($param['PartitionOffset'] as $key => $value){
                 $obj = new PartitionOffset();
                 $obj->deserialize($value);
                 array_push($this->PartitionOffset, $obj);

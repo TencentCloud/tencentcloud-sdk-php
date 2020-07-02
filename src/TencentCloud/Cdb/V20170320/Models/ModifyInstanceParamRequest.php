@@ -54,13 +54,13 @@ class ModifyInstanceParamRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceIds",$param) and $param["InstanceIds"] !== null) {
-            $this->InstanceIds = $param["InstanceIds"];
+        if (array_key_exists('InstanceIds',$param) and $param['InstanceIds'] !== null) {
+            $this->InstanceIds = $param['InstanceIds'];
         }
 
-        if (array_key_exists("ParamList",$param) and $param["ParamList"] !== null) {
+        if (array_key_exists('ParamList',$param) and $param['ParamList'] !== null) {
             $this->ParamList = [];
-            foreach ($param["ParamList"] as $key => $value){
+            foreach ($param['ParamList'] as $key => $value){
                 $obj = new Parameter();
                 $obj->deserialize($value);
                 array_push($this->ParamList, $obj);

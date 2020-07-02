@@ -70,20 +70,20 @@ class ScanFileHashRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Key",$param) and $param["Key"] !== null) {
-            $this->Key = $param["Key"];
+        if (array_key_exists('Key',$param) and $param['Key'] !== null) {
+            $this->Key = $param['Key'];
         }
 
-        if (array_key_exists("Md5s",$param) and $param["Md5s"] !== null) {
-            $this->Md5s = $param["Md5s"];
+        if (array_key_exists('Md5s',$param) and $param['Md5s'] !== null) {
+            $this->Md5s = $param['Md5s'];
         }
 
-        if (array_key_exists("WithCategory",$param) and $param["WithCategory"] !== null) {
-            $this->WithCategory = $param["WithCategory"];
+        if (array_key_exists('WithCategory',$param) and $param['WithCategory'] !== null) {
+            $this->WithCategory = $param['WithCategory'];
         }
 
-        if (array_key_exists("SensitiveLevel",$param) and $param["SensitiveLevel"] !== null) {
-            $this->SensitiveLevel = $param["SensitiveLevel"];
+        if (array_key_exists('SensitiveLevel',$param) and $param['SensitiveLevel'] !== null) {
+            $this->SensitiveLevel = $param['SensitiveLevel'];
         }
     }
 }

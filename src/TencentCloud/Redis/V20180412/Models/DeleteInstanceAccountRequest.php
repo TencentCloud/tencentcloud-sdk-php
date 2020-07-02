@@ -54,12 +54,12 @@ class DeleteInstanceAccountRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("AccountName",$param) and $param["AccountName"] !== null) {
-            $this->AccountName = $param["AccountName"];
+        if (array_key_exists('AccountName',$param) and $param['AccountName'] !== null) {
+            $this->AccountName = $param['AccountName'];
         }
     }
 }

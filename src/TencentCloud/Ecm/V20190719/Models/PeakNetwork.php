@@ -62,16 +62,16 @@ class PeakNetwork extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RecordTime",$param) and $param["RecordTime"] !== null) {
-            $this->RecordTime = $param["RecordTime"];
+        if (array_key_exists('RecordTime',$param) and $param['RecordTime'] !== null) {
+            $this->RecordTime = $param['RecordTime'];
         }
 
-        if (array_key_exists("PeakInNetwork",$param) and $param["PeakInNetwork"] !== null) {
-            $this->PeakInNetwork = $param["PeakInNetwork"];
+        if (array_key_exists('PeakInNetwork',$param) and $param['PeakInNetwork'] !== null) {
+            $this->PeakInNetwork = $param['PeakInNetwork'];
         }
 
-        if (array_key_exists("PeakOutNetwork",$param) and $param["PeakOutNetwork"] !== null) {
-            $this->PeakOutNetwork = $param["PeakOutNetwork"];
+        if (array_key_exists('PeakOutNetwork',$param) and $param['PeakOutNetwork'] !== null) {
+            $this->PeakOutNetwork = $param['PeakOutNetwork'];
         }
     }
 }

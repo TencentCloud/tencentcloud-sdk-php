@@ -62,16 +62,16 @@ class GetFunctionAddressResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Url",$param) and $param["Url"] !== null) {
-            $this->Url = $param["Url"];
+        if (array_key_exists('Url',$param) and $param['Url'] !== null) {
+            $this->Url = $param['Url'];
         }
 
-        if (array_key_exists("CodeSha256",$param) and $param["CodeSha256"] !== null) {
-            $this->CodeSha256 = $param["CodeSha256"];
+        if (array_key_exists('CodeSha256',$param) and $param['CodeSha256'] !== null) {
+            $this->CodeSha256 = $param['CodeSha256'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

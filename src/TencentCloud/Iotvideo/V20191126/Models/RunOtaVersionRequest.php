@@ -78,24 +78,24 @@ class RunOtaVersionRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ProductId",$param) and $param["ProductId"] !== null) {
-            $this->ProductId = $param["ProductId"];
+        if (array_key_exists('ProductId',$param) and $param['ProductId'] !== null) {
+            $this->ProductId = $param['ProductId'];
         }
 
-        if (array_key_exists("OtaVersion",$param) and $param["OtaVersion"] !== null) {
-            $this->OtaVersion = $param["OtaVersion"];
+        if (array_key_exists('OtaVersion',$param) and $param['OtaVersion'] !== null) {
+            $this->OtaVersion = $param['OtaVersion'];
         }
 
-        if (array_key_exists("GrayValue",$param) and $param["GrayValue"] !== null) {
-            $this->GrayValue = $param["GrayValue"];
+        if (array_key_exists('GrayValue',$param) and $param['GrayValue'] !== null) {
+            $this->GrayValue = $param['GrayValue'];
         }
 
-        if (array_key_exists("OldVersions",$param) and $param["OldVersions"] !== null) {
-            $this->OldVersions = $param["OldVersions"];
+        if (array_key_exists('OldVersions',$param) and $param['OldVersions'] !== null) {
+            $this->OldVersions = $param['OldVersions'];
         }
 
-        if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
-            $this->Operator = $param["Operator"];
+        if (array_key_exists('Operator',$param) and $param['Operator'] !== null) {
+            $this->Operator = $param['Operator'];
         }
     }
 }

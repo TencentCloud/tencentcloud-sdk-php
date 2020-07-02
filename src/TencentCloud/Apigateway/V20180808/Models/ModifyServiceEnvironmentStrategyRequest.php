@@ -62,16 +62,16 @@ class ModifyServiceEnvironmentStrategyRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ServiceId",$param) and $param["ServiceId"] !== null) {
-            $this->ServiceId = $param["ServiceId"];
+        if (array_key_exists('ServiceId',$param) and $param['ServiceId'] !== null) {
+            $this->ServiceId = $param['ServiceId'];
         }
 
-        if (array_key_exists("Strategy",$param) and $param["Strategy"] !== null) {
-            $this->Strategy = $param["Strategy"];
+        if (array_key_exists('Strategy',$param) and $param['Strategy'] !== null) {
+            $this->Strategy = $param['Strategy'];
         }
 
-        if (array_key_exists("EnvironmentNames",$param) and $param["EnvironmentNames"] !== null) {
-            $this->EnvironmentNames = $param["EnvironmentNames"];
+        if (array_key_exists('EnvironmentNames',$param) and $param['EnvironmentNames'] !== null) {
+            $this->EnvironmentNames = $param['EnvironmentNames'];
         }
     }
 }

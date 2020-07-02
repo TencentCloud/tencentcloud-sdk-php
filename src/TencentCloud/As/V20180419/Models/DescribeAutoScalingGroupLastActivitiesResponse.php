@@ -54,17 +54,17 @@ class DescribeAutoScalingGroupLastActivitiesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ActivitySet",$param) and $param["ActivitySet"] !== null) {
+        if (array_key_exists('ActivitySet',$param) and $param['ActivitySet'] !== null) {
             $this->ActivitySet = [];
-            foreach ($param["ActivitySet"] as $key => $value){
+            foreach ($param['ActivitySet'] as $key => $value){
                 $obj = new Activity();
                 $obj->deserialize($value);
                 array_push($this->ActivitySet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

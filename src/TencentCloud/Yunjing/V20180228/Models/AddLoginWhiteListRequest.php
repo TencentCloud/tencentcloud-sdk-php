@@ -46,9 +46,9 @@ class AddLoginWhiteListRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Rules",$param) and $param["Rules"] !== null) {
+        if (array_key_exists('Rules',$param) and $param['Rules'] !== null) {
             $this->Rules = new LoginWhiteListsRule();
-            $this->Rules->deserialize($param["Rules"]);
+            $this->Rules->deserialize($param['Rules']);
         }
     }
 }

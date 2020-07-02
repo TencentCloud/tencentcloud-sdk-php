@@ -46,8 +46,8 @@ class DeleteWorkflowRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("WorkflowId",$param) and $param["WorkflowId"] !== null) {
-            $this->WorkflowId = $param["WorkflowId"];
+        if (array_key_exists('WorkflowId',$param) and $param['WorkflowId'] !== null) {
+            $this->WorkflowId = $param['WorkflowId'];
         }
     }
 }

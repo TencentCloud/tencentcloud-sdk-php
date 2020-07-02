@@ -62,16 +62,16 @@ class PluginInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PluginType",$param) and $param["PluginType"] !== null) {
-            $this->PluginType = $param["PluginType"];
+        if (array_key_exists('PluginType',$param) and $param['PluginType'] !== null) {
+            $this->PluginType = $param['PluginType'];
         }
 
-        if (array_key_exists("PluginName",$param) and $param["PluginName"] !== null) {
-            $this->PluginName = $param["PluginName"];
+        if (array_key_exists('PluginName',$param) and $param['PluginName'] !== null) {
+            $this->PluginName = $param['PluginName'];
         }
 
-        if (array_key_exists("PluginDesc",$param) and $param["PluginDesc"] !== null) {
-            $this->PluginDesc = $param["PluginDesc"];
+        if (array_key_exists('PluginDesc',$param) and $param['PluginDesc'] !== null) {
+            $this->PluginDesc = $param['PluginDesc'];
         }
     }
 }

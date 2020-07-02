@@ -46,8 +46,8 @@ class DescribeSecurityRulesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SecurityRuleIds",$param) and $param["SecurityRuleIds"] !== null) {
-            $this->SecurityRuleIds = $param["SecurityRuleIds"];
+        if (array_key_exists('SecurityRuleIds',$param) and $param['SecurityRuleIds'] !== null) {
+            $this->SecurityRuleIds = $param['SecurityRuleIds'];
         }
     }
 }

@@ -54,17 +54,17 @@ class DescribeProjectStockResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ProjectStocks",$param) and $param["ProjectStocks"] !== null) {
+        if (array_key_exists('ProjectStocks',$param) and $param['ProjectStocks'] !== null) {
             $this->ProjectStocks = [];
-            foreach ($param["ProjectStocks"] as $key => $value){
+            foreach ($param['ProjectStocks'] as $key => $value){
                 $obj = new ProjectStock();
                 $obj->deserialize($value);
                 array_push($this->ProjectStocks, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

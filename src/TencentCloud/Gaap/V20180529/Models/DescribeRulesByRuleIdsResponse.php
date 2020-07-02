@@ -62,21 +62,21 @@ class DescribeRulesByRuleIdsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("RuleSet",$param) and $param["RuleSet"] !== null) {
+        if (array_key_exists('RuleSet',$param) and $param['RuleSet'] !== null) {
             $this->RuleSet = [];
-            foreach ($param["RuleSet"] as $key => $value){
+            foreach ($param['RuleSet'] as $key => $value){
                 $obj = new RuleInfo();
                 $obj->deserialize($value);
                 array_push($this->RuleSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

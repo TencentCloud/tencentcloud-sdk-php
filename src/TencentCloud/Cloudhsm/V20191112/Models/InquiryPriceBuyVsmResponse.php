@@ -106,28 +106,28 @@ class InquiryPriceBuyVsmResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCost",$param) and $param["TotalCost"] !== null) {
-            $this->TotalCost = $param["TotalCost"];
+        if (array_key_exists('TotalCost',$param) and $param['TotalCost'] !== null) {
+            $this->TotalCost = $param['TotalCost'];
         }
 
-        if (array_key_exists("GoodsNum",$param) and $param["GoodsNum"] !== null) {
-            $this->GoodsNum = $param["GoodsNum"];
+        if (array_key_exists('GoodsNum',$param) and $param['GoodsNum'] !== null) {
+            $this->GoodsNum = $param['GoodsNum'];
         }
 
-        if (array_key_exists("TimeSpan",$param) and $param["TimeSpan"] !== null) {
-            $this->TimeSpan = $param["TimeSpan"];
+        if (array_key_exists('TimeSpan',$param) and $param['TimeSpan'] !== null) {
+            $this->TimeSpan = $param['TimeSpan'];
         }
 
-        if (array_key_exists("TimeUnit",$param) and $param["TimeUnit"] !== null) {
-            $this->TimeUnit = $param["TimeUnit"];
+        if (array_key_exists('TimeUnit',$param) and $param['TimeUnit'] !== null) {
+            $this->TimeUnit = $param['TimeUnit'];
         }
 
-        if (array_key_exists("OriginalCost",$param) and $param["OriginalCost"] !== null) {
-            $this->OriginalCost = $param["OriginalCost"];
+        if (array_key_exists('OriginalCost',$param) and $param['OriginalCost'] !== null) {
+            $this->OriginalCost = $param['OriginalCost'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

@@ -62,21 +62,21 @@ class DeleteMediaRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FileId",$param) and $param["FileId"] !== null) {
-            $this->FileId = $param["FileId"];
+        if (array_key_exists('FileId',$param) and $param['FileId'] !== null) {
+            $this->FileId = $param['FileId'];
         }
 
-        if (array_key_exists("DeleteParts",$param) and $param["DeleteParts"] !== null) {
+        if (array_key_exists('DeleteParts',$param) and $param['DeleteParts'] !== null) {
             $this->DeleteParts = [];
-            foreach ($param["DeleteParts"] as $key => $value){
+            foreach ($param['DeleteParts'] as $key => $value){
                 $obj = new MediaDeleteItem();
                 $obj->deserialize($value);
                 array_push($this->DeleteParts, $obj);
             }
         }
 
-        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
-            $this->SubAppId = $param["SubAppId"];
+        if (array_key_exists('SubAppId',$param) and $param['SubAppId'] !== null) {
+            $this->SubAppId = $param['SubAppId'];
         }
     }
 }

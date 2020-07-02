@@ -126,40 +126,40 @@ class BackupInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("BackupType",$param) and $param["BackupType"] !== null) {
-            $this->BackupType = $param["BackupType"];
+        if (array_key_exists('BackupType',$param) and $param['BackupType'] !== null) {
+            $this->BackupType = $param['BackupType'];
         }
 
-        if (array_key_exists("BackupName",$param) and $param["BackupName"] !== null) {
-            $this->BackupName = $param["BackupName"];
+        if (array_key_exists('BackupName',$param) and $param['BackupName'] !== null) {
+            $this->BackupName = $param['BackupName'];
         }
 
-        if (array_key_exists("BackupDesc",$param) and $param["BackupDesc"] !== null) {
-            $this->BackupDesc = $param["BackupDesc"];
+        if (array_key_exists('BackupDesc',$param) and $param['BackupDesc'] !== null) {
+            $this->BackupDesc = $param['BackupDesc'];
         }
 
-        if (array_key_exists("BackupSize",$param) and $param["BackupSize"] !== null) {
-            $this->BackupSize = $param["BackupSize"];
+        if (array_key_exists('BackupSize',$param) and $param['BackupSize'] !== null) {
+            $this->BackupSize = $param['BackupSize'];
         }
 
-        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
-            $this->StartTime = $param["StartTime"];
+        if (array_key_exists('StartTime',$param) and $param['StartTime'] !== null) {
+            $this->StartTime = $param['StartTime'];
         }
 
-        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
-            $this->EndTime = $param["EndTime"];
+        if (array_key_exists('EndTime',$param) and $param['EndTime'] !== null) {
+            $this->EndTime = $param['EndTime'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("BackupMethod",$param) and $param["BackupMethod"] !== null) {
-            $this->BackupMethod = $param["BackupMethod"];
+        if (array_key_exists('BackupMethod',$param) and $param['BackupMethod'] !== null) {
+            $this->BackupMethod = $param['BackupMethod'];
         }
     }
 }

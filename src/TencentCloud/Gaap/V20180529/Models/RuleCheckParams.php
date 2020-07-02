@@ -90,28 +90,28 @@ class RuleCheckParams extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DelayLoop",$param) and $param["DelayLoop"] !== null) {
-            $this->DelayLoop = $param["DelayLoop"];
+        if (array_key_exists('DelayLoop',$param) and $param['DelayLoop'] !== null) {
+            $this->DelayLoop = $param['DelayLoop'];
         }
 
-        if (array_key_exists("ConnectTimeout",$param) and $param["ConnectTimeout"] !== null) {
-            $this->ConnectTimeout = $param["ConnectTimeout"];
+        if (array_key_exists('ConnectTimeout',$param) and $param['ConnectTimeout'] !== null) {
+            $this->ConnectTimeout = $param['ConnectTimeout'];
         }
 
-        if (array_key_exists("Path",$param) and $param["Path"] !== null) {
-            $this->Path = $param["Path"];
+        if (array_key_exists('Path',$param) and $param['Path'] !== null) {
+            $this->Path = $param['Path'];
         }
 
-        if (array_key_exists("Method",$param) and $param["Method"] !== null) {
-            $this->Method = $param["Method"];
+        if (array_key_exists('Method',$param) and $param['Method'] !== null) {
+            $this->Method = $param['Method'];
         }
 
-        if (array_key_exists("StatusCode",$param) and $param["StatusCode"] !== null) {
-            $this->StatusCode = $param["StatusCode"];
+        if (array_key_exists('StatusCode',$param) and $param['StatusCode'] !== null) {
+            $this->StatusCode = $param['StatusCode'];
         }
 
-        if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
-            $this->Domain = $param["Domain"];
+        if (array_key_exists('Domain',$param) and $param['Domain'] !== null) {
+            $this->Domain = $param['Domain'];
         }
     }
 }

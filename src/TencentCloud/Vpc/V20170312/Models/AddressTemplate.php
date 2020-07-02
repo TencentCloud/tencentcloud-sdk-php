@@ -70,20 +70,20 @@ class AddressTemplate extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AddressTemplateName",$param) and $param["AddressTemplateName"] !== null) {
-            $this->AddressTemplateName = $param["AddressTemplateName"];
+        if (array_key_exists('AddressTemplateName',$param) and $param['AddressTemplateName'] !== null) {
+            $this->AddressTemplateName = $param['AddressTemplateName'];
         }
 
-        if (array_key_exists("AddressTemplateId",$param) and $param["AddressTemplateId"] !== null) {
-            $this->AddressTemplateId = $param["AddressTemplateId"];
+        if (array_key_exists('AddressTemplateId',$param) and $param['AddressTemplateId'] !== null) {
+            $this->AddressTemplateId = $param['AddressTemplateId'];
         }
 
-        if (array_key_exists("AddressSet",$param) and $param["AddressSet"] !== null) {
-            $this->AddressSet = $param["AddressSet"];
+        if (array_key_exists('AddressSet',$param) and $param['AddressSet'] !== null) {
+            $this->AddressSet = $param['AddressSet'];
         }
 
-        if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
-            $this->CreatedTime = $param["CreatedTime"];
+        if (array_key_exists('CreatedTime',$param) and $param['CreatedTime'] !== null) {
+            $this->CreatedTime = $param['CreatedTime'];
         }
     }
 }

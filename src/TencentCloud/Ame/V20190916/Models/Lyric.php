@@ -62,16 +62,16 @@ class Lyric extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Url",$param) and $param["Url"] !== null) {
-            $this->Url = $param["Url"];
+        if (array_key_exists('Url',$param) and $param['Url'] !== null) {
+            $this->Url = $param['Url'];
         }
 
-        if (array_key_exists("FileNameExt",$param) and $param["FileNameExt"] !== null) {
-            $this->FileNameExt = $param["FileNameExt"];
+        if (array_key_exists('FileNameExt',$param) and $param['FileNameExt'] !== null) {
+            $this->FileNameExt = $param['FileNameExt'];
         }
 
-        if (array_key_exists("SubItemType",$param) and $param["SubItemType"] !== null) {
-            $this->SubItemType = $param["SubItemType"];
+        if (array_key_exists('SubItemType',$param) and $param['SubItemType'] !== null) {
+            $this->SubItemType = $param['SubItemType'];
         }
     }
 }

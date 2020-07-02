@@ -70,18 +70,18 @@ class DescribeModuleDetailResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Module",$param) and $param["Module"] !== null) {
+        if (array_key_exists('Module',$param) and $param['Module'] !== null) {
             $this->Module = new Module();
-            $this->Module->deserialize($param["Module"]);
+            $this->Module->deserialize($param['Module']);
         }
 
-        if (array_key_exists("ModuleCounter",$param) and $param["ModuleCounter"] !== null) {
+        if (array_key_exists('ModuleCounter',$param) and $param['ModuleCounter'] !== null) {
             $this->ModuleCounter = new ModuleCounter();
-            $this->ModuleCounter->deserialize($param["ModuleCounter"]);
+            $this->ModuleCounter->deserialize($param['ModuleCounter']);
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

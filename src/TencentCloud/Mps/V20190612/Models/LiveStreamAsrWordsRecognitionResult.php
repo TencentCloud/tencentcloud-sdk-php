@@ -70,20 +70,20 @@ class LiveStreamAsrWordsRecognitionResult extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Word",$param) and $param["Word"] !== null) {
-            $this->Word = $param["Word"];
+        if (array_key_exists('Word',$param) and $param['Word'] !== null) {
+            $this->Word = $param['Word'];
         }
 
-        if (array_key_exists("StartPtsTime",$param) and $param["StartPtsTime"] !== null) {
-            $this->StartPtsTime = $param["StartPtsTime"];
+        if (array_key_exists('StartPtsTime',$param) and $param['StartPtsTime'] !== null) {
+            $this->StartPtsTime = $param['StartPtsTime'];
         }
 
-        if (array_key_exists("EndPtsTime",$param) and $param["EndPtsTime"] !== null) {
-            $this->EndPtsTime = $param["EndPtsTime"];
+        if (array_key_exists('EndPtsTime',$param) and $param['EndPtsTime'] !== null) {
+            $this->EndPtsTime = $param['EndPtsTime'];
         }
 
-        if (array_key_exists("Confidence",$param) and $param["Confidence"] !== null) {
-            $this->Confidence = $param["Confidence"];
+        if (array_key_exists('Confidence',$param) and $param['Confidence'] !== null) {
+            $this->Confidence = $param['Confidence'];
         }
     }
 }

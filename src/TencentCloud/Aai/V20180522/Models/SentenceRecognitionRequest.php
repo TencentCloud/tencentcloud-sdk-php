@@ -110,40 +110,40 @@ class SentenceRecognitionRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
-            $this->ProjectId = $param["ProjectId"];
+        if (array_key_exists('ProjectId',$param) and $param['ProjectId'] !== null) {
+            $this->ProjectId = $param['ProjectId'];
         }
 
-        if (array_key_exists("SubServiceType",$param) and $param["SubServiceType"] !== null) {
-            $this->SubServiceType = $param["SubServiceType"];
+        if (array_key_exists('SubServiceType',$param) and $param['SubServiceType'] !== null) {
+            $this->SubServiceType = $param['SubServiceType'];
         }
 
-        if (array_key_exists("EngSerViceType",$param) and $param["EngSerViceType"] !== null) {
-            $this->EngSerViceType = $param["EngSerViceType"];
+        if (array_key_exists('EngSerViceType',$param) and $param['EngSerViceType'] !== null) {
+            $this->EngSerViceType = $param['EngSerViceType'];
         }
 
-        if (array_key_exists("SourceType",$param) and $param["SourceType"] !== null) {
-            $this->SourceType = $param["SourceType"];
+        if (array_key_exists('SourceType',$param) and $param['SourceType'] !== null) {
+            $this->SourceType = $param['SourceType'];
         }
 
-        if (array_key_exists("VoiceFormat",$param) and $param["VoiceFormat"] !== null) {
-            $this->VoiceFormat = $param["VoiceFormat"];
+        if (array_key_exists('VoiceFormat',$param) and $param['VoiceFormat'] !== null) {
+            $this->VoiceFormat = $param['VoiceFormat'];
         }
 
-        if (array_key_exists("UsrAudioKey",$param) and $param["UsrAudioKey"] !== null) {
-            $this->UsrAudioKey = $param["UsrAudioKey"];
+        if (array_key_exists('UsrAudioKey',$param) and $param['UsrAudioKey'] !== null) {
+            $this->UsrAudioKey = $param['UsrAudioKey'];
         }
 
-        if (array_key_exists("Url",$param) and $param["Url"] !== null) {
-            $this->Url = $param["Url"];
+        if (array_key_exists('Url',$param) and $param['Url'] !== null) {
+            $this->Url = $param['Url'];
         }
 
-        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
-            $this->Data = $param["Data"];
+        if (array_key_exists('Data',$param) and $param['Data'] !== null) {
+            $this->Data = $param['Data'];
         }
 
-        if (array_key_exists("DataLen",$param) and $param["DataLen"] !== null) {
-            $this->DataLen = $param["DataLen"];
+        if (array_key_exists('DataLen',$param) and $param['DataLen'] !== null) {
+            $this->DataLen = $param['DataLen'];
         }
     }
 }

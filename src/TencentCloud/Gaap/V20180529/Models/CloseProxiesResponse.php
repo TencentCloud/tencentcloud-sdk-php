@@ -62,16 +62,16 @@ class CloseProxiesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InvalidStatusInstanceSet",$param) and $param["InvalidStatusInstanceSet"] !== null) {
-            $this->InvalidStatusInstanceSet = $param["InvalidStatusInstanceSet"];
+        if (array_key_exists('InvalidStatusInstanceSet',$param) and $param['InvalidStatusInstanceSet'] !== null) {
+            $this->InvalidStatusInstanceSet = $param['InvalidStatusInstanceSet'];
         }
 
-        if (array_key_exists("OperationFailedInstanceSet",$param) and $param["OperationFailedInstanceSet"] !== null) {
-            $this->OperationFailedInstanceSet = $param["OperationFailedInstanceSet"];
+        if (array_key_exists('OperationFailedInstanceSet',$param) and $param['OperationFailedInstanceSet'] !== null) {
+            $this->OperationFailedInstanceSet = $param['OperationFailedInstanceSet'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

@@ -118,40 +118,40 @@ class DomainCertInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CertId",$param) and $param["CertId"] !== null) {
-            $this->CertId = $param["CertId"];
+        if (array_key_exists('CertId',$param) and $param['CertId'] !== null) {
+            $this->CertId = $param['CertId'];
         }
 
-        if (array_key_exists("CertName",$param) and $param["CertName"] !== null) {
-            $this->CertName = $param["CertName"];
+        if (array_key_exists('CertName',$param) and $param['CertName'] !== null) {
+            $this->CertName = $param['CertName'];
         }
 
-        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
-            $this->Description = $param["Description"];
+        if (array_key_exists('Description',$param) and $param['Description'] !== null) {
+            $this->Description = $param['Description'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("HttpsCrt",$param) and $param["HttpsCrt"] !== null) {
-            $this->HttpsCrt = $param["HttpsCrt"];
+        if (array_key_exists('HttpsCrt',$param) and $param['HttpsCrt'] !== null) {
+            $this->HttpsCrt = $param['HttpsCrt'];
         }
 
-        if (array_key_exists("CertType",$param) and $param["CertType"] !== null) {
-            $this->CertType = $param["CertType"];
+        if (array_key_exists('CertType',$param) and $param['CertType'] !== null) {
+            $this->CertType = $param['CertType'];
         }
 
-        if (array_key_exists("CertExpireTime",$param) and $param["CertExpireTime"] !== null) {
-            $this->CertExpireTime = $param["CertExpireTime"];
+        if (array_key_exists('CertExpireTime',$param) and $param['CertExpireTime'] !== null) {
+            $this->CertExpireTime = $param['CertExpireTime'];
         }
 
-        if (array_key_exists("DomainName",$param) and $param["DomainName"] !== null) {
-            $this->DomainName = $param["DomainName"];
+        if (array_key_exists('DomainName',$param) and $param['DomainName'] !== null) {
+            $this->DomainName = $param['DomainName'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
     }
 }

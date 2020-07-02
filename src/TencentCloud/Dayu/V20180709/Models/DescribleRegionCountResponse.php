@@ -54,17 +54,17 @@ class DescribleRegionCountResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RegionList",$param) and $param["RegionList"] !== null) {
+        if (array_key_exists('RegionList',$param) and $param['RegionList'] !== null) {
             $this->RegionList = [];
-            foreach ($param["RegionList"] as $key => $value){
+            foreach ($param['RegionList'] as $key => $value){
                 $obj = new RegionInstanceCount();
                 $obj->deserialize($value);
                 array_push($this->RegionList, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

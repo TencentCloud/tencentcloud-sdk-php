@@ -62,12 +62,12 @@ class ErrlogItem extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Timestamp",$param) and $param["Timestamp"] !== null) {
-            $this->Timestamp = $param["Timestamp"];
+        if (array_key_exists('Timestamp',$param) and $param['Timestamp'] !== null) {
+            $this->Timestamp = $param['Timestamp'];
         }
 
-        if (array_key_exists("Content",$param) and $param["Content"] !== null) {
-            $this->Content = $param["Content"];
+        if (array_key_exists('Content',$param) and $param['Content'] !== null) {
+            $this->Content = $param['Content'];
         }
     }
 }

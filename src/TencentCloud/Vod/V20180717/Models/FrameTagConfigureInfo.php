@@ -62,12 +62,12 @@ class FrameTagConfigureInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Switch",$param) and $param["Switch"] !== null) {
-            $this->Switch = $param["Switch"];
+        if (array_key_exists('Switch',$param) and $param['Switch'] !== null) {
+            $this->Switch = $param['Switch'];
         }
 
-        if (array_key_exists("ScreenshotInterval",$param) and $param["ScreenshotInterval"] !== null) {
-            $this->ScreenshotInterval = $param["ScreenshotInterval"];
+        if (array_key_exists('ScreenshotInterval',$param) and $param['ScreenshotInterval'] !== null) {
+            $this->ScreenshotInterval = $param['ScreenshotInterval'];
         }
     }
 }

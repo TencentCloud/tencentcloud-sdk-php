@@ -66,16 +66,16 @@ class MonitorMetric extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Metric",$param) and $param["Metric"] !== null) {
-            $this->Metric = $param["Metric"];
+        if (array_key_exists('Metric',$param) and $param['Metric'] !== null) {
+            $this->Metric = $param['Metric'];
         }
 
-        if (array_key_exists("Unit",$param) and $param["Unit"] !== null) {
-            $this->Unit = $param["Unit"];
+        if (array_key_exists('Unit',$param) and $param['Unit'] !== null) {
+            $this->Unit = $param['Unit'];
         }
 
-        if (array_key_exists("Values",$param) and $param["Values"] !== null) {
-            $this->Values = $param["Values"];
+        if (array_key_exists('Values',$param) and $param['Values'] !== null) {
+            $this->Values = $param['Values'];
         }
     }
 }

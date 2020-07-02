@@ -86,28 +86,28 @@ class DescribeResourceTagsByResourceIdsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ServiceType",$param) and $param["ServiceType"] !== null) {
-            $this->ServiceType = $param["ServiceType"];
+        if (array_key_exists('ServiceType',$param) and $param['ServiceType'] !== null) {
+            $this->ServiceType = $param['ServiceType'];
         }
 
-        if (array_key_exists("ResourcePrefix",$param) and $param["ResourcePrefix"] !== null) {
-            $this->ResourcePrefix = $param["ResourcePrefix"];
+        if (array_key_exists('ResourcePrefix',$param) and $param['ResourcePrefix'] !== null) {
+            $this->ResourcePrefix = $param['ResourcePrefix'];
         }
 
-        if (array_key_exists("ResourceIds",$param) and $param["ResourceIds"] !== null) {
-            $this->ResourceIds = $param["ResourceIds"];
+        if (array_key_exists('ResourceIds',$param) and $param['ResourceIds'] !== null) {
+            $this->ResourceIds = $param['ResourceIds'];
         }
 
-        if (array_key_exists("ResourceRegion",$param) and $param["ResourceRegion"] !== null) {
-            $this->ResourceRegion = $param["ResourceRegion"];
+        if (array_key_exists('ResourceRegion',$param) and $param['ResourceRegion'] !== null) {
+            $this->ResourceRegion = $param['ResourceRegion'];
         }
 
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
+        if (array_key_exists('Offset',$param) and $param['Offset'] !== null) {
+            $this->Offset = $param['Offset'];
         }
 
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
+        if (array_key_exists('Limit',$param) and $param['Limit'] !== null) {
+            $this->Limit = $param['Limit'];
         }
     }
 }

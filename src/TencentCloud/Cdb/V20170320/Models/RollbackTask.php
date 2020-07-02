@@ -90,29 +90,29 @@ class RollbackTask extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Info",$param) and $param["Info"] !== null) {
-            $this->Info = $param["Info"];
+        if (array_key_exists('Info',$param) and $param['Info'] !== null) {
+            $this->Info = $param['Info'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("Progress",$param) and $param["Progress"] !== null) {
-            $this->Progress = $param["Progress"];
+        if (array_key_exists('Progress',$param) and $param['Progress'] !== null) {
+            $this->Progress = $param['Progress'];
         }
 
-        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
-            $this->StartTime = $param["StartTime"];
+        if (array_key_exists('StartTime',$param) and $param['StartTime'] !== null) {
+            $this->StartTime = $param['StartTime'];
         }
 
-        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
-            $this->EndTime = $param["EndTime"];
+        if (array_key_exists('EndTime',$param) and $param['EndTime'] !== null) {
+            $this->EndTime = $param['EndTime'];
         }
 
-        if (array_key_exists("Detail",$param) and $param["Detail"] !== null) {
+        if (array_key_exists('Detail',$param) and $param['Detail'] !== null) {
             $this->Detail = [];
-            foreach ($param["Detail"] as $key => $value){
+            foreach ($param['Detail'] as $key => $value){
                 $obj = new RollbackInstancesInfo();
                 $obj->deserialize($value);
                 array_push($this->Detail, $obj);

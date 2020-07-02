@@ -46,8 +46,8 @@ class CreateTraceIdsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Tids",$param) and $param["Tids"] !== null) {
-            $this->Tids = $param["Tids"];
+        if (array_key_exists('Tids',$param) and $param['Tids'] !== null) {
+            $this->Tids = $param['Tids'];
         }
     }
 }

@@ -54,12 +54,12 @@ class EipAclMap extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("EipId",$param) and $param["EipId"] !== null) {
-            $this->EipId = $param["EipId"];
+        if (array_key_exists('EipId',$param) and $param['EipId'] !== null) {
+            $this->EipId = $param['EipId'];
         }
 
-        if (array_key_exists("AclId",$param) and $param["AclId"] !== null) {
-            $this->AclId = $param["AclId"];
+        if (array_key_exists('AclId',$param) and $param['AclId'] !== null) {
+            $this->AclId = $param['AclId'];
         }
     }
 }

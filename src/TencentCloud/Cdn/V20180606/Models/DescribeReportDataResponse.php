@@ -62,26 +62,26 @@ class DescribeReportDataResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DomainReport",$param) and $param["DomainReport"] !== null) {
+        if (array_key_exists('DomainReport',$param) and $param['DomainReport'] !== null) {
             $this->DomainReport = [];
-            foreach ($param["DomainReport"] as $key => $value){
+            foreach ($param['DomainReport'] as $key => $value){
                 $obj = new ReportData();
                 $obj->deserialize($value);
                 array_push($this->DomainReport, $obj);
             }
         }
 
-        if (array_key_exists("ProjectReport",$param) and $param["ProjectReport"] !== null) {
+        if (array_key_exists('ProjectReport',$param) and $param['ProjectReport'] !== null) {
             $this->ProjectReport = [];
-            foreach ($param["ProjectReport"] as $key => $value){
+            foreach ($param['ProjectReport'] as $key => $value){
                 $obj = new ReportData();
                 $obj->deserialize($value);
                 array_push($this->ProjectReport, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

@@ -58,17 +58,17 @@ class DescribeTargetHealthResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LoadBalancers",$param) and $param["LoadBalancers"] !== null) {
+        if (array_key_exists('LoadBalancers',$param) and $param['LoadBalancers'] !== null) {
             $this->LoadBalancers = [];
-            foreach ($param["LoadBalancers"] as $key => $value){
+            foreach ($param['LoadBalancers'] as $key => $value){
                 $obj = new LoadBalancerHealth();
                 $obj->deserialize($value);
                 array_push($this->LoadBalancers, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

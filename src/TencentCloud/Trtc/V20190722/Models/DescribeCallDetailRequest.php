@@ -138,28 +138,28 @@ bigvHeight：上/下行分辨率高
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CommId",$param) and $param["CommId"] !== null) {
-            $this->CommId = $param["CommId"];
+        if (array_key_exists('CommId',$param) and $param['CommId'] !== null) {
+            $this->CommId = $param['CommId'];
         }
 
-        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
-            $this->StartTime = $param["StartTime"];
+        if (array_key_exists('StartTime',$param) and $param['StartTime'] !== null) {
+            $this->StartTime = $param['StartTime'];
         }
 
-        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
-            $this->EndTime = $param["EndTime"];
+        if (array_key_exists('EndTime',$param) and $param['EndTime'] !== null) {
+            $this->EndTime = $param['EndTime'];
         }
 
-        if (array_key_exists("SdkAppId",$param) and $param["SdkAppId"] !== null) {
-            $this->SdkAppId = $param["SdkAppId"];
+        if (array_key_exists('SdkAppId',$param) and $param['SdkAppId'] !== null) {
+            $this->SdkAppId = $param['SdkAppId'];
         }
 
-        if (array_key_exists("UserIds",$param) and $param["UserIds"] !== null) {
-            $this->UserIds = $param["UserIds"];
+        if (array_key_exists('UserIds',$param) and $param['UserIds'] !== null) {
+            $this->UserIds = $param['UserIds'];
         }
 
-        if (array_key_exists("DataType",$param) and $param["DataType"] !== null) {
-            $this->DataType = $param["DataType"];
+        if (array_key_exists('DataType',$param) and $param['DataType'] !== null) {
+            $this->DataType = $param['DataType'];
         }
     }
 }

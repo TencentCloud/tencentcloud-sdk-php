@@ -62,16 +62,16 @@ class CaptchaUserAllAppId extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CaptchaAppId",$param) and $param["CaptchaAppId"] !== null) {
-            $this->CaptchaAppId = $param["CaptchaAppId"];
+        if (array_key_exists('CaptchaAppId',$param) and $param['CaptchaAppId'] !== null) {
+            $this->CaptchaAppId = $param['CaptchaAppId'];
         }
 
-        if (array_key_exists("AppName",$param) and $param["AppName"] !== null) {
-            $this->AppName = $param["AppName"];
+        if (array_key_exists('AppName',$param) and $param['AppName'] !== null) {
+            $this->AppName = $param['AppName'];
         }
 
-        if (array_key_exists("TcAppId",$param) and $param["TcAppId"] !== null) {
-            $this->TcAppId = $param["TcAppId"];
+        if (array_key_exists('TcAppId',$param) and $param['TcAppId'] !== null) {
+            $this->TcAppId = $param['TcAppId'];
         }
     }
 }

@@ -70,25 +70,25 @@ class DescribeWorkersResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RegionDetail",$param) and $param["RegionDetail"] !== null) {
+        if (array_key_exists('RegionDetail',$param) and $param['RegionDetail'] !== null) {
             $this->RegionDetail = [];
-            foreach ($param["RegionDetail"] as $key => $value){
+            foreach ($param['RegionDetail'] as $key => $value){
                 $obj = new WorkerRegionInfo();
                 $obj->deserialize($value);
                 array_push($this->RegionDetail, $obj);
             }
         }
 
-        if (array_key_exists("Idle",$param) and $param["Idle"] !== null) {
-            $this->Idle = $param["Idle"];
+        if (array_key_exists('Idle',$param) and $param['Idle'] !== null) {
+            $this->Idle = $param['Idle'];
         }
 
-        if (array_key_exists("RegionNum",$param) and $param["RegionNum"] !== null) {
-            $this->RegionNum = $param["RegionNum"];
+        if (array_key_exists('RegionNum',$param) and $param['RegionNum'] !== null) {
+            $this->RegionNum = $param['RegionNum'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

@@ -29,12 +29,12 @@ class ClientProfile
     /**
      * @var string  hmacsha1算法
      */
-    public static $SIGN_HMAC_SHA1 = "HmacSHA1";
+    public static $SIGN_HMAC_SHA1 = 'HmacSHA1';
 
     /**
      * @var string hmacsha256算法
      */
-    public static $SIGN_HMAC_SHA256 = "HmacSHA256";
+    public static $SIGN_HMAC_SHA256 = 'HmacSHA256';
 
     /**
      * @var string 签名V3

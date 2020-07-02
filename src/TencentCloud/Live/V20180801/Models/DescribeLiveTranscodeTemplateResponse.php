@@ -54,13 +54,13 @@ class DescribeLiveTranscodeTemplateResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Template",$param) and $param["Template"] !== null) {
+        if (array_key_exists('Template',$param) and $param['Template'] !== null) {
             $this->Template = new TemplateInfo();
-            $this->Template->deserialize($param["Template"]);
+            $this->Template->deserialize($param['Template']);
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

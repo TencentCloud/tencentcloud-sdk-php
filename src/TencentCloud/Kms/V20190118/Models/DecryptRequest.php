@@ -54,12 +54,12 @@ class DecryptRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CiphertextBlob",$param) and $param["CiphertextBlob"] !== null) {
-            $this->CiphertextBlob = $param["CiphertextBlob"];
+        if (array_key_exists('CiphertextBlob',$param) and $param['CiphertextBlob'] !== null) {
+            $this->CiphertextBlob = $param['CiphertextBlob'];
         }
 
-        if (array_key_exists("EncryptionContext",$param) and $param["EncryptionContext"] !== null) {
-            $this->EncryptionContext = $param["EncryptionContext"];
+        if (array_key_exists('EncryptionContext',$param) and $param['EncryptionContext'] !== null) {
+            $this->EncryptionContext = $param['EncryptionContext'];
         }
     }
 }

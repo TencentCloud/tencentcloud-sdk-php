@@ -86,28 +86,28 @@ class ExecuteFunctionRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FunctionName",$param) and $param["FunctionName"] !== null) {
-            $this->FunctionName = $param["FunctionName"];
+        if (array_key_exists('FunctionName',$param) and $param['FunctionName'] !== null) {
+            $this->FunctionName = $param['FunctionName'];
         }
 
-        if (array_key_exists("FunctionArg",$param) and $param["FunctionArg"] !== null) {
-            $this->FunctionArg = $param["FunctionArg"];
+        if (array_key_exists('FunctionArg',$param) and $param['FunctionArg'] !== null) {
+            $this->FunctionArg = $param['FunctionArg'];
         }
 
-        if (array_key_exists("SessionContext",$param) and $param["SessionContext"] !== null) {
-            $this->SessionContext = $param["SessionContext"];
+        if (array_key_exists('SessionContext',$param) and $param['SessionContext'] !== null) {
+            $this->SessionContext = $param['SessionContext'];
         }
 
-        if (array_key_exists("SessionId",$param) and $param["SessionId"] !== null) {
-            $this->SessionId = $param["SessionId"];
+        if (array_key_exists('SessionId',$param) and $param['SessionId'] !== null) {
+            $this->SessionId = $param['SessionId'];
         }
 
-        if (array_key_exists("ExtInfo",$param) and $param["ExtInfo"] !== null) {
-            $this->ExtInfo = $param["ExtInfo"];
+        if (array_key_exists('ExtInfo',$param) and $param['ExtInfo'] !== null) {
+            $this->ExtInfo = $param['ExtInfo'];
         }
 
-        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
-            $this->SubAppId = $param["SubAppId"];
+        if (array_key_exists('SubAppId',$param) and $param['SubAppId'] !== null) {
+            $this->SubAppId = $param['SubAppId'];
         }
     }
 }

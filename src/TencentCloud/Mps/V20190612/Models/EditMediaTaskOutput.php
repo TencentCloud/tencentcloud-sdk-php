@@ -54,13 +54,13 @@ class EditMediaTaskOutput extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("OutputStorage",$param) and $param["OutputStorage"] !== null) {
+        if (array_key_exists('OutputStorage',$param) and $param['OutputStorage'] !== null) {
             $this->OutputStorage = new TaskOutputStorage();
-            $this->OutputStorage->deserialize($param["OutputStorage"]);
+            $this->OutputStorage->deserialize($param['OutputStorage']);
         }
 
-        if (array_key_exists("Path",$param) and $param["Path"] !== null) {
-            $this->Path = $param["Path"];
+        if (array_key_exists('Path',$param) and $param['Path'] !== null) {
+            $this->Path = $param['Path'];
         }
     }
 }

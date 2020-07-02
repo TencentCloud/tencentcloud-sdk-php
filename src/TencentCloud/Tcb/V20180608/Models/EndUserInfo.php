@@ -150,60 +150,60 @@ class EndUserInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("UUId",$param) and $param["UUId"] !== null) {
-            $this->UUId = $param["UUId"];
+        if (array_key_exists('UUId',$param) and $param['UUId'] !== null) {
+            $this->UUId = $param['UUId'];
         }
 
-        if (array_key_exists("WXOpenId",$param) and $param["WXOpenId"] !== null) {
-            $this->WXOpenId = $param["WXOpenId"];
+        if (array_key_exists('WXOpenId',$param) and $param['WXOpenId'] !== null) {
+            $this->WXOpenId = $param['WXOpenId'];
         }
 
-        if (array_key_exists("QQOpenId",$param) and $param["QQOpenId"] !== null) {
-            $this->QQOpenId = $param["QQOpenId"];
+        if (array_key_exists('QQOpenId',$param) and $param['QQOpenId'] !== null) {
+            $this->QQOpenId = $param['QQOpenId'];
         }
 
-        if (array_key_exists("Phone",$param) and $param["Phone"] !== null) {
-            $this->Phone = $param["Phone"];
+        if (array_key_exists('Phone',$param) and $param['Phone'] !== null) {
+            $this->Phone = $param['Phone'];
         }
 
-        if (array_key_exists("Email",$param) and $param["Email"] !== null) {
-            $this->Email = $param["Email"];
+        if (array_key_exists('Email',$param) and $param['Email'] !== null) {
+            $this->Email = $param['Email'];
         }
 
-        if (array_key_exists("NickName",$param) and $param["NickName"] !== null) {
-            $this->NickName = $param["NickName"];
+        if (array_key_exists('NickName',$param) and $param['NickName'] !== null) {
+            $this->NickName = $param['NickName'];
         }
 
-        if (array_key_exists("Gender",$param) and $param["Gender"] !== null) {
-            $this->Gender = $param["Gender"];
+        if (array_key_exists('Gender',$param) and $param['Gender'] !== null) {
+            $this->Gender = $param['Gender'];
         }
 
-        if (array_key_exists("AvatarUrl",$param) and $param["AvatarUrl"] !== null) {
-            $this->AvatarUrl = $param["AvatarUrl"];
+        if (array_key_exists('AvatarUrl',$param) and $param['AvatarUrl'] !== null) {
+            $this->AvatarUrl = $param['AvatarUrl'];
         }
 
-        if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
-            $this->UpdateTime = $param["UpdateTime"];
+        if (array_key_exists('UpdateTime',$param) and $param['UpdateTime'] !== null) {
+            $this->UpdateTime = $param['UpdateTime'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("IsAnonymous",$param) and $param["IsAnonymous"] !== null) {
-            $this->IsAnonymous = $param["IsAnonymous"];
+        if (array_key_exists('IsAnonymous',$param) and $param['IsAnonymous'] !== null) {
+            $this->IsAnonymous = $param['IsAnonymous'];
         }
 
-        if (array_key_exists("IsDisabled",$param) and $param["IsDisabled"] !== null) {
-            $this->IsDisabled = $param["IsDisabled"];
+        if (array_key_exists('IsDisabled',$param) and $param['IsDisabled'] !== null) {
+            $this->IsDisabled = $param['IsDisabled'];
         }
 
-        if (array_key_exists("HasPassword",$param) and $param["HasPassword"] !== null) {
-            $this->HasPassword = $param["HasPassword"];
+        if (array_key_exists('HasPassword',$param) and $param['HasPassword'] !== null) {
+            $this->HasPassword = $param['HasPassword'];
         }
 
-        if (array_key_exists("UserName",$param) and $param["UserName"] !== null) {
-            $this->UserName = $param["UserName"];
+        if (array_key_exists('UserName',$param) and $param['UserName'] !== null) {
+            $this->UserName = $param['UserName'];
         }
     }
 }

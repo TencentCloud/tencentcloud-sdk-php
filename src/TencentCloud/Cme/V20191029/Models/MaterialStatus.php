@@ -58,8 +58,8 @@ class MaterialStatus extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("EditorUsableStatus",$param) and $param["EditorUsableStatus"] !== null) {
-            $this->EditorUsableStatus = $param["EditorUsableStatus"];
+        if (array_key_exists('EditorUsableStatus',$param) and $param['EditorUsableStatus'] !== null) {
+            $this->EditorUsableStatus = $param['EditorUsableStatus'];
         }
     }
 }

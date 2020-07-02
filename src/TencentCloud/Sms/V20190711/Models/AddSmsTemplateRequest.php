@@ -86,24 +86,24 @@ class AddSmsTemplateRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TemplateName",$param) and $param["TemplateName"] !== null) {
-            $this->TemplateName = $param["TemplateName"];
+        if (array_key_exists('TemplateName',$param) and $param['TemplateName'] !== null) {
+            $this->TemplateName = $param['TemplateName'];
         }
 
-        if (array_key_exists("TemplateContent",$param) and $param["TemplateContent"] !== null) {
-            $this->TemplateContent = $param["TemplateContent"];
+        if (array_key_exists('TemplateContent',$param) and $param['TemplateContent'] !== null) {
+            $this->TemplateContent = $param['TemplateContent'];
         }
 
-        if (array_key_exists("SmsType",$param) and $param["SmsType"] !== null) {
-            $this->SmsType = $param["SmsType"];
+        if (array_key_exists('SmsType',$param) and $param['SmsType'] !== null) {
+            $this->SmsType = $param['SmsType'];
         }
 
-        if (array_key_exists("International",$param) and $param["International"] !== null) {
-            $this->International = $param["International"];
+        if (array_key_exists('International',$param) and $param['International'] !== null) {
+            $this->International = $param['International'];
         }
 
-        if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
-            $this->Remark = $param["Remark"];
+        if (array_key_exists('Remark',$param) and $param['Remark'] !== null) {
+            $this->Remark = $param['Remark'];
         }
     }
 }

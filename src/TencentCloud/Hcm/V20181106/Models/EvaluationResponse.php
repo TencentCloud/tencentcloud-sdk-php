@@ -74,25 +74,25 @@ class EvaluationResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SessionId",$param) and $param["SessionId"] !== null) {
-            $this->SessionId = $param["SessionId"];
+        if (array_key_exists('SessionId',$param) and $param['SessionId'] !== null) {
+            $this->SessionId = $param['SessionId'];
         }
 
-        if (array_key_exists("Items",$param) and $param["Items"] !== null) {
+        if (array_key_exists('Items',$param) and $param['Items'] !== null) {
             $this->Items = [];
-            foreach ($param["Items"] as $key => $value){
+            foreach ($param['Items'] as $key => $value){
                 $obj = new Item();
                 $obj->deserialize($value);
                 array_push($this->Items, $obj);
             }
         }
 
-        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
-            $this->TaskId = $param["TaskId"];
+        if (array_key_exists('TaskId',$param) and $param['TaskId'] !== null) {
+            $this->TaskId = $param['TaskId'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

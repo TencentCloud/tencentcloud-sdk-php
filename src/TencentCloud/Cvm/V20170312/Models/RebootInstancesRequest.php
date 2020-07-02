@@ -62,16 +62,16 @@ class RebootInstancesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceIds",$param) and $param["InstanceIds"] !== null) {
-            $this->InstanceIds = $param["InstanceIds"];
+        if (array_key_exists('InstanceIds',$param) and $param['InstanceIds'] !== null) {
+            $this->InstanceIds = $param['InstanceIds'];
         }
 
-        if (array_key_exists("ForceReboot",$param) and $param["ForceReboot"] !== null) {
-            $this->ForceReboot = $param["ForceReboot"];
+        if (array_key_exists('ForceReboot',$param) and $param['ForceReboot'] !== null) {
+            $this->ForceReboot = $param['ForceReboot'];
         }
 
-        if (array_key_exists("StopType",$param) and $param["StopType"] !== null) {
-            $this->StopType = $param["StopType"];
+        if (array_key_exists('StopType',$param) and $param['StopType'] !== null) {
+            $this->StopType = $param['StopType'];
         }
     }
 }

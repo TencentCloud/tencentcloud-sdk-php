@@ -54,12 +54,12 @@ class CopyPersonRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PersonId",$param) and $param["PersonId"] !== null) {
-            $this->PersonId = $param["PersonId"];
+        if (array_key_exists('PersonId',$param) and $param['PersonId'] !== null) {
+            $this->PersonId = $param['PersonId'];
         }
 
-        if (array_key_exists("GroupIds",$param) and $param["GroupIds"] !== null) {
-            $this->GroupIds = $param["GroupIds"];
+        if (array_key_exists('GroupIds',$param) and $param['GroupIds'] !== null) {
+            $this->GroupIds = $param['GroupIds'];
         }
     }
 }

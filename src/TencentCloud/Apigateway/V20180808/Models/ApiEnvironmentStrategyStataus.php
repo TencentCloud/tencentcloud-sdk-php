@@ -62,13 +62,13 @@ class ApiEnvironmentStrategyStataus extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("ApiEnvironmentStrategySet",$param) and $param["ApiEnvironmentStrategySet"] !== null) {
+        if (array_key_exists('ApiEnvironmentStrategySet',$param) and $param['ApiEnvironmentStrategySet'] !== null) {
             $this->ApiEnvironmentStrategySet = [];
-            foreach ($param["ApiEnvironmentStrategySet"] as $key => $value){
+            foreach ($param['ApiEnvironmentStrategySet'] as $key => $value){
                 $obj = new ApiEnvironmentStrategy();
                 $obj->deserialize($value);
                 array_push($this->ApiEnvironmentStrategySet, $obj);

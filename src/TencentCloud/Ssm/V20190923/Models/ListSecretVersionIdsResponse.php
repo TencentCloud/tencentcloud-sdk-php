@@ -66,21 +66,21 @@ class ListSecretVersionIdsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SecretName",$param) and $param["SecretName"] !== null) {
-            $this->SecretName = $param["SecretName"];
+        if (array_key_exists('SecretName',$param) and $param['SecretName'] !== null) {
+            $this->SecretName = $param['SecretName'];
         }
 
-        if (array_key_exists("Versions",$param) and $param["Versions"] !== null) {
+        if (array_key_exists('Versions',$param) and $param['Versions'] !== null) {
             $this->Versions = [];
-            foreach ($param["Versions"] as $key => $value){
+            foreach ($param['Versions'] as $key => $value){
                 $obj = new VersionInfo();
                 $obj->deserialize($value);
                 array_push($this->Versions, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

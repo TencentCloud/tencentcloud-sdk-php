@@ -74,16 +74,16 @@ class ApplicationAttribute extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceCount",$param) and $param["InstanceCount"] !== null) {
-            $this->InstanceCount = $param["InstanceCount"];
+        if (array_key_exists('InstanceCount',$param) and $param['InstanceCount'] !== null) {
+            $this->InstanceCount = $param['InstanceCount'];
         }
 
-        if (array_key_exists("RunInstanceCount",$param) and $param["RunInstanceCount"] !== null) {
-            $this->RunInstanceCount = $param["RunInstanceCount"];
+        if (array_key_exists('RunInstanceCount',$param) and $param['RunInstanceCount'] !== null) {
+            $this->RunInstanceCount = $param['RunInstanceCount'];
         }
 
-        if (array_key_exists("GroupCount",$param) and $param["GroupCount"] !== null) {
-            $this->GroupCount = $param["GroupCount"];
+        if (array_key_exists('GroupCount',$param) and $param['GroupCount'] !== null) {
+            $this->GroupCount = $param['GroupCount'];
         }
     }
 }

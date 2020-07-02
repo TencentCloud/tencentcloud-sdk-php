@@ -62,21 +62,21 @@ class DescribeServiceConfigsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ServiceConfigs",$param) and $param["ServiceConfigs"] !== null) {
+        if (array_key_exists('ServiceConfigs',$param) and $param['ServiceConfigs'] !== null) {
             $this->ServiceConfigs = [];
-            foreach ($param["ServiceConfigs"] as $key => $value){
+            foreach ($param['ServiceConfigs'] as $key => $value){
                 $obj = new Config();
                 $obj->deserialize($value);
                 array_push($this->ServiceConfigs, $obj);
             }
         }
 
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

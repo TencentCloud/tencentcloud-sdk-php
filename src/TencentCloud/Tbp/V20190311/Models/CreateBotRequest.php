@@ -54,12 +54,12 @@ class CreateBotRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BotName",$param) and $param["BotName"] !== null) {
-            $this->BotName = $param["BotName"];
+        if (array_key_exists('BotName',$param) and $param['BotName'] !== null) {
+            $this->BotName = $param['BotName'];
         }
 
-        if (array_key_exists("BotCnName",$param) and $param["BotCnName"] !== null) {
-            $this->BotCnName = $param["BotCnName"];
+        if (array_key_exists('BotCnName',$param) and $param['BotCnName'] !== null) {
+            $this->BotCnName = $param['BotCnName'];
         }
     }
 }

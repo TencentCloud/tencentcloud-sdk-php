@@ -68,17 +68,17 @@ class RegionDetected extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Category",$param) and $param["Category"] !== null) {
-            $this->Category = $param["Category"];
+        if (array_key_exists('Category',$param) and $param['Category'] !== null) {
+            $this->Category = $param['Category'];
         }
 
-        if (array_key_exists("CategoryScore",$param) and $param["CategoryScore"] !== null) {
-            $this->CategoryScore = $param["CategoryScore"];
+        if (array_key_exists('CategoryScore',$param) and $param['CategoryScore'] !== null) {
+            $this->CategoryScore = $param['CategoryScore'];
         }
 
-        if (array_key_exists("Location",$param) and $param["Location"] !== null) {
+        if (array_key_exists('Location',$param) and $param['Location'] !== null) {
             $this->Location = new Location();
-            $this->Location->deserialize($param["Location"]);
+            $this->Location->deserialize($param['Location']);
         }
     }
 }

@@ -62,16 +62,16 @@ class DeleteClsLogTopicRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TopicId",$param) and $param["TopicId"] !== null) {
-            $this->TopicId = $param["TopicId"];
+        if (array_key_exists('TopicId',$param) and $param['TopicId'] !== null) {
+            $this->TopicId = $param['TopicId'];
         }
 
-        if (array_key_exists("LogsetId",$param) and $param["LogsetId"] !== null) {
-            $this->LogsetId = $param["LogsetId"];
+        if (array_key_exists('LogsetId',$param) and $param['LogsetId'] !== null) {
+            $this->LogsetId = $param['LogsetId'];
         }
 
-        if (array_key_exists("Channel",$param) and $param["Channel"] !== null) {
-            $this->Channel = $param["Channel"];
+        if (array_key_exists('Channel',$param) and $param['Channel'] !== null) {
+            $this->Channel = $param['Channel'];
         }
     }
 }

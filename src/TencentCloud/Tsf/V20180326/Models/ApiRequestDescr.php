@@ -90,28 +90,28 @@ class ApiRequestDescr extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists('Type',$param) and $param['Type'] !== null) {
+            $this->Type = $param['Type'];
         }
 
-        if (array_key_exists("In",$param) and $param["In"] !== null) {
-            $this->In = $param["In"];
+        if (array_key_exists('In',$param) and $param['In'] !== null) {
+            $this->In = $param['In'];
         }
 
-        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
-            $this->Description = $param["Description"];
+        if (array_key_exists('Description',$param) and $param['Description'] !== null) {
+            $this->Description = $param['Description'];
         }
 
-        if (array_key_exists("Required",$param) and $param["Required"] !== null) {
-            $this->Required = $param["Required"];
+        if (array_key_exists('Required',$param) and $param['Required'] !== null) {
+            $this->Required = $param['Required'];
         }
 
-        if (array_key_exists("DefaultValue",$param) and $param["DefaultValue"] !== null) {
-            $this->DefaultValue = $param["DefaultValue"];
+        if (array_key_exists('DefaultValue',$param) and $param['DefaultValue'] !== null) {
+            $this->DefaultValue = $param['DefaultValue'];
         }
     }
 }

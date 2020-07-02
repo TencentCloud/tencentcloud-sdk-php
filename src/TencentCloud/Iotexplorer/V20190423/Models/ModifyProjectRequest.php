@@ -62,16 +62,16 @@ class ModifyProjectRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
-            $this->ProjectId = $param["ProjectId"];
+        if (array_key_exists('ProjectId',$param) and $param['ProjectId'] !== null) {
+            $this->ProjectId = $param['ProjectId'];
         }
 
-        if (array_key_exists("ProjectName",$param) and $param["ProjectName"] !== null) {
-            $this->ProjectName = $param["ProjectName"];
+        if (array_key_exists('ProjectName',$param) and $param['ProjectName'] !== null) {
+            $this->ProjectName = $param['ProjectName'];
         }
 
-        if (array_key_exists("ProjectDesc",$param) and $param["ProjectDesc"] !== null) {
-            $this->ProjectDesc = $param["ProjectDesc"];
+        if (array_key_exists('ProjectDesc',$param) and $param['ProjectDesc'] !== null) {
+            $this->ProjectDesc = $param['ProjectDesc'];
         }
     }
 }

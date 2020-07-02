@@ -54,18 +54,18 @@ class OperationDetail extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("OldInfo",$param) and $param["OldInfo"] !== null) {
+        if (array_key_exists('OldInfo',$param) and $param['OldInfo'] !== null) {
             $this->OldInfo = [];
-            foreach ($param["OldInfo"] as $key => $value){
+            foreach ($param['OldInfo'] as $key => $value){
                 $obj = new KeyValue();
                 $obj->deserialize($value);
                 array_push($this->OldInfo, $obj);
             }
         }
 
-        if (array_key_exists("NewInfo",$param) and $param["NewInfo"] !== null) {
+        if (array_key_exists('NewInfo',$param) and $param['NewInfo'] !== null) {
             $this->NewInfo = [];
-            foreach ($param["NewInfo"] as $key => $value){
+            foreach ($param['NewInfo'] as $key => $value){
                 $obj = new KeyValue();
                 $obj->deserialize($value);
                 array_push($this->NewInfo, $obj);

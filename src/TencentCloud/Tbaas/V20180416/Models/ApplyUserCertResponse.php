@@ -62,16 +62,16 @@ class ApplyUserCertResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CertId",$param) and $param["CertId"] !== null) {
-            $this->CertId = $param["CertId"];
+        if (array_key_exists('CertId',$param) and $param['CertId'] !== null) {
+            $this->CertId = $param['CertId'];
         }
 
-        if (array_key_exists("CertDn",$param) and $param["CertDn"] !== null) {
-            $this->CertDn = $param["CertDn"];
+        if (array_key_exists('CertDn',$param) and $param['CertDn'] !== null) {
+            $this->CertDn = $param['CertDn'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

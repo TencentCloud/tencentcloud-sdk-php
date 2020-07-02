@@ -54,17 +54,17 @@ class FinanBillSliceOCRResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FinanBillSliceInfos",$param) and $param["FinanBillSliceInfos"] !== null) {
+        if (array_key_exists('FinanBillSliceInfos',$param) and $param['FinanBillSliceInfos'] !== null) {
             $this->FinanBillSliceInfos = [];
-            foreach ($param["FinanBillSliceInfos"] as $key => $value){
+            foreach ($param['FinanBillSliceInfos'] as $key => $value){
                 $obj = new FinanBillSliceInfo();
                 $obj->deserialize($value);
                 array_push($this->FinanBillSliceInfos, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

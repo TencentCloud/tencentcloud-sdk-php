@@ -54,12 +54,12 @@ class CreateNotebookLifecycleScriptResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("NotebookLifecycleScriptsName",$param) and $param["NotebookLifecycleScriptsName"] !== null) {
-            $this->NotebookLifecycleScriptsName = $param["NotebookLifecycleScriptsName"];
+        if (array_key_exists('NotebookLifecycleScriptsName',$param) and $param['NotebookLifecycleScriptsName'] !== null) {
+            $this->NotebookLifecycleScriptsName = $param['NotebookLifecycleScriptsName'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

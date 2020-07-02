@@ -54,13 +54,13 @@ class InstanceDBDetail extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("DBDetails",$param) and $param["DBDetails"] !== null) {
+        if (array_key_exists('DBDetails',$param) and $param['DBDetails'] !== null) {
             $this->DBDetails = [];
-            foreach ($param["DBDetails"] as $key => $value){
+            foreach ($param['DBDetails'] as $key => $value){
                 $obj = new DBDetail();
                 $obj->deserialize($value);
                 array_push($this->DBDetails, $obj);

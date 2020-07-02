@@ -70,7 +70,7 @@ class CmsClient extends AbstractClient
 
     public function returnResponse($action, $response)
     {
-        $respClass = "TencentCloud"."\\".ucfirst("cms")."\\"."V20190321\\Models"."\\".ucfirst($action)."Response";
+        $respClass = 'TencentCloud'."\\".ucfirst('cms')."\\"."V20190321\\Models"."\\".ucfirst($action).'Response';
         $obj = new $respClass();
         $obj->deserialize($response);
         return $obj;

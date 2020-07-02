@@ -70,17 +70,17 @@ class LoadBalancerHealth extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LoadBalancerId",$param) and $param["LoadBalancerId"] !== null) {
-            $this->LoadBalancerId = $param["LoadBalancerId"];
+        if (array_key_exists('LoadBalancerId',$param) and $param['LoadBalancerId'] !== null) {
+            $this->LoadBalancerId = $param['LoadBalancerId'];
         }
 
-        if (array_key_exists("LoadBalancerName",$param) and $param["LoadBalancerName"] !== null) {
-            $this->LoadBalancerName = $param["LoadBalancerName"];
+        if (array_key_exists('LoadBalancerName',$param) and $param['LoadBalancerName'] !== null) {
+            $this->LoadBalancerName = $param['LoadBalancerName'];
         }
 
-        if (array_key_exists("Listeners",$param) and $param["Listeners"] !== null) {
+        if (array_key_exists('Listeners',$param) and $param['Listeners'] !== null) {
             $this->Listeners = [];
-            foreach ($param["Listeners"] as $key => $value){
+            foreach ($param['Listeners'] as $key => $value){
                 $obj = new ListenerHealth();
                 $obj->deserialize($value);
                 array_push($this->Listeners, $obj);

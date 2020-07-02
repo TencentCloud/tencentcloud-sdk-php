@@ -90,33 +90,33 @@ class DescribeStationsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Total",$param) and $param["Total"] !== null) {
-            $this->Total = $param["Total"];
+        if (array_key_exists('Total',$param) and $param['Total'] !== null) {
+            $this->Total = $param['Total'];
         }
 
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
+        if (array_key_exists('Offset',$param) and $param['Offset'] !== null) {
+            $this->Offset = $param['Offset'];
         }
 
-        if (array_key_exists("Size",$param) and $param["Size"] !== null) {
-            $this->Size = $param["Size"];
+        if (array_key_exists('Size',$param) and $param['Size'] !== null) {
+            $this->Size = $param['Size'];
         }
 
-        if (array_key_exists("HaveMore",$param) and $param["HaveMore"] !== null) {
-            $this->HaveMore = $param["HaveMore"];
+        if (array_key_exists('HaveMore',$param) and $param['HaveMore'] !== null) {
+            $this->HaveMore = $param['HaveMore'];
         }
 
-        if (array_key_exists("Stations",$param) and $param["Stations"] !== null) {
+        if (array_key_exists('Stations',$param) and $param['Stations'] !== null) {
             $this->Stations = [];
-            foreach ($param["Stations"] as $key => $value){
+            foreach ($param['Stations'] as $key => $value){
                 $obj = new Station();
                 $obj->deserialize($value);
                 array_push($this->Stations, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

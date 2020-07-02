@@ -90,20 +90,20 @@ class CreateDirectConnectGatewayRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DirectConnectGatewayName",$param) and $param["DirectConnectGatewayName"] !== null) {
-            $this->DirectConnectGatewayName = $param["DirectConnectGatewayName"];
+        if (array_key_exists('DirectConnectGatewayName',$param) and $param['DirectConnectGatewayName'] !== null) {
+            $this->DirectConnectGatewayName = $param['DirectConnectGatewayName'];
         }
 
-        if (array_key_exists("NetworkType",$param) and $param["NetworkType"] !== null) {
-            $this->NetworkType = $param["NetworkType"];
+        if (array_key_exists('NetworkType',$param) and $param['NetworkType'] !== null) {
+            $this->NetworkType = $param['NetworkType'];
         }
 
-        if (array_key_exists("NetworkInstanceId",$param) and $param["NetworkInstanceId"] !== null) {
-            $this->NetworkInstanceId = $param["NetworkInstanceId"];
+        if (array_key_exists('NetworkInstanceId',$param) and $param['NetworkInstanceId'] !== null) {
+            $this->NetworkInstanceId = $param['NetworkInstanceId'];
         }
 
-        if (array_key_exists("GatewayType",$param) and $param["GatewayType"] !== null) {
-            $this->GatewayType = $param["GatewayType"];
+        if (array_key_exists('GatewayType',$param) and $param['GatewayType'] !== null) {
+            $this->GatewayType = $param['GatewayType'];
         }
     }
 }

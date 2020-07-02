@@ -119,9 +119,9 @@ abstract class AbstractModel
     {
         $act = substr($member,0,3);
         $attr = substr($member,3);
-        if ($act === "get") {
+        if ($act === 'get') {
             return $this->$attr;
-        } else if ($act === "set") {
+        } else if ($act === 'set') {
             $this->$attr = $param[0];
         }
     }

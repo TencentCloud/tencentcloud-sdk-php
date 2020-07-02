@@ -54,12 +54,12 @@ class ZoneInstanceInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ZoneName",$param) and $param["ZoneName"] !== null) {
-            $this->ZoneName = $param["ZoneName"];
+        if (array_key_exists('ZoneName',$param) and $param['ZoneName'] !== null) {
+            $this->ZoneName = $param['ZoneName'];
         }
 
-        if (array_key_exists("InstanceNum",$param) and $param["InstanceNum"] !== null) {
-            $this->InstanceNum = $param["InstanceNum"];
+        if (array_key_exists('InstanceNum',$param) and $param['InstanceNum'] !== null) {
+            $this->InstanceNum = $param['InstanceNum'];
         }
     }
 }

@@ -70,16 +70,16 @@ class IpFilter extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Switch",$param) and $param["Switch"] !== null) {
-            $this->Switch = $param["Switch"];
+        if (array_key_exists('Switch',$param) and $param['Switch'] !== null) {
+            $this->Switch = $param['Switch'];
         }
 
-        if (array_key_exists("FilterType",$param) and $param["FilterType"] !== null) {
-            $this->FilterType = $param["FilterType"];
+        if (array_key_exists('FilterType',$param) and $param['FilterType'] !== null) {
+            $this->FilterType = $param['FilterType'];
         }
 
-        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
-            $this->Filters = $param["Filters"];
+        if (array_key_exists('Filters',$param) and $param['Filters'] !== null) {
+            $this->Filters = $param['Filters'];
         }
     }
 }

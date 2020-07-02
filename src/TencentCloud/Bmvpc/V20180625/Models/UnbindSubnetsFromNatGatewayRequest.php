@@ -62,16 +62,16 @@ class UnbindSubnetsFromNatGatewayRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("NatId",$param) and $param["NatId"] !== null) {
-            $this->NatId = $param["NatId"];
+        if (array_key_exists('NatId',$param) and $param['NatId'] !== null) {
+            $this->NatId = $param['NatId'];
         }
 
-        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
-            $this->VpcId = $param["VpcId"];
+        if (array_key_exists('VpcId',$param) and $param['VpcId'] !== null) {
+            $this->VpcId = $param['VpcId'];
         }
 
-        if (array_key_exists("SubnetIds",$param) and $param["SubnetIds"] !== null) {
-            $this->SubnetIds = $param["SubnetIds"];
+        if (array_key_exists('SubnetIds',$param) and $param['SubnetIds'] !== null) {
+            $this->SubnetIds = $param['SubnetIds'];
         }
     }
 }

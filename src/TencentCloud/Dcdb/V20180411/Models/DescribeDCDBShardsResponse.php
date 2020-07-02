@@ -62,21 +62,21 @@ class DescribeDCDBShardsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("Shards",$param) and $param["Shards"] !== null) {
+        if (array_key_exists('Shards',$param) and $param['Shards'] !== null) {
             $this->Shards = [];
-            foreach ($param["Shards"] as $key => $value){
+            foreach ($param['Shards'] as $key => $value){
                 $obj = new DCDBShardInfo();
                 $obj->deserialize($value);
                 array_push($this->Shards, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

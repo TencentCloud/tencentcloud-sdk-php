@@ -90,28 +90,28 @@ class ComposeMediaTaskOutput extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FileType",$param) and $param["FileType"] !== null) {
-            $this->FileType = $param["FileType"];
+        if (array_key_exists('FileType',$param) and $param['FileType'] !== null) {
+            $this->FileType = $param['FileType'];
         }
 
-        if (array_key_exists("FileId",$param) and $param["FileId"] !== null) {
-            $this->FileId = $param["FileId"];
+        if (array_key_exists('FileId',$param) and $param['FileId'] !== null) {
+            $this->FileId = $param['FileId'];
         }
 
-        if (array_key_exists("FileUrl",$param) and $param["FileUrl"] !== null) {
-            $this->FileUrl = $param["FileUrl"];
+        if (array_key_exists('FileUrl',$param) and $param['FileUrl'] !== null) {
+            $this->FileUrl = $param['FileUrl'];
         }
 
-        if (array_key_exists("MediaName",$param) and $param["MediaName"] !== null) {
-            $this->MediaName = $param["MediaName"];
+        if (array_key_exists('MediaName',$param) and $param['MediaName'] !== null) {
+            $this->MediaName = $param['MediaName'];
         }
 
-        if (array_key_exists("ClassId",$param) and $param["ClassId"] !== null) {
-            $this->ClassId = $param["ClassId"];
+        if (array_key_exists('ClassId',$param) and $param['ClassId'] !== null) {
+            $this->ClassId = $param['ClassId'];
         }
 
-        if (array_key_exists("ExpireTime",$param) and $param["ExpireTime"] !== null) {
-            $this->ExpireTime = $param["ExpireTime"];
+        if (array_key_exists('ExpireTime',$param) and $param['ExpireTime'] !== null) {
+            $this->ExpireTime = $param['ExpireTime'];
         }
     }
 }

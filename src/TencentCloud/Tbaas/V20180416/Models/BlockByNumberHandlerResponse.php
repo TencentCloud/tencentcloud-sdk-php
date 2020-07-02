@@ -54,12 +54,12 @@ class BlockByNumberHandlerResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BlockJson",$param) and $param["BlockJson"] !== null) {
-            $this->BlockJson = $param["BlockJson"];
+        if (array_key_exists('BlockJson',$param) and $param['BlockJson'] !== null) {
+            $this->BlockJson = $param['BlockJson'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

@@ -54,13 +54,13 @@ class DescribeCCAlarmThresholdResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CCAlarmThreshold",$param) and $param["CCAlarmThreshold"] !== null) {
+        if (array_key_exists('CCAlarmThreshold',$param) and $param['CCAlarmThreshold'] !== null) {
             $this->CCAlarmThreshold = new CCAlarmThreshold();
-            $this->CCAlarmThreshold->deserialize($param["CCAlarmThreshold"]);
+            $this->CCAlarmThreshold->deserialize($param['CCAlarmThreshold']);
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

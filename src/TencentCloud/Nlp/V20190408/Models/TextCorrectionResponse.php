@@ -62,21 +62,21 @@ class TextCorrectionResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CCITokens",$param) and $param["CCITokens"] !== null) {
+        if (array_key_exists('CCITokens',$param) and $param['CCITokens'] !== null) {
             $this->CCITokens = [];
-            foreach ($param["CCITokens"] as $key => $value){
+            foreach ($param['CCITokens'] as $key => $value){
                 $obj = new CCIToken();
                 $obj->deserialize($value);
                 array_push($this->CCITokens, $obj);
             }
         }
 
-        if (array_key_exists("ResultText",$param) and $param["ResultText"] !== null) {
-            $this->ResultText = $param["ResultText"];
+        if (array_key_exists('ResultText',$param) and $param['ResultText'] !== null) {
+            $this->ResultText = $param['ResultText'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

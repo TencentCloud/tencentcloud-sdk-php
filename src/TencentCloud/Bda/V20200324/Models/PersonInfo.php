@@ -62,17 +62,17 @@ class PersonInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PersonName",$param) and $param["PersonName"] !== null) {
-            $this->PersonName = $param["PersonName"];
+        if (array_key_exists('PersonName',$param) and $param['PersonName'] !== null) {
+            $this->PersonName = $param['PersonName'];
         }
 
-        if (array_key_exists("PersonId",$param) and $param["PersonId"] !== null) {
-            $this->PersonId = $param["PersonId"];
+        if (array_key_exists('PersonId',$param) and $param['PersonId'] !== null) {
+            $this->PersonId = $param['PersonId'];
         }
 
-        if (array_key_exists("TraceInfos",$param) and $param["TraceInfos"] !== null) {
+        if (array_key_exists('TraceInfos',$param) and $param['TraceInfos'] !== null) {
             $this->TraceInfos = [];
-            foreach ($param["TraceInfos"] as $key => $value){
+            foreach ($param['TraceInfos'] as $key => $value){
                 $obj = new TraceInfo();
                 $obj->deserialize($value);
                 array_push($this->TraceInfos, $obj);

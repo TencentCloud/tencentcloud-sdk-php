@@ -46,9 +46,9 @@ class Attribute extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+        if (array_key_exists('Tags',$param) and $param['Tags'] !== null) {
             $this->Tags = [];
-            foreach ($param["Tags"] as $key => $value){
+            foreach ($param['Tags'] as $key => $value){
                 $obj = new DeviceTag();
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);

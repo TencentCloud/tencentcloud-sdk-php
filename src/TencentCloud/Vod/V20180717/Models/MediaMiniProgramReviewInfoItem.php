@@ -86,26 +86,26 @@ class MediaMiniProgramReviewInfoItem extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Definition",$param) and $param["Definition"] !== null) {
-            $this->Definition = $param["Definition"];
+        if (array_key_exists('Definition',$param) and $param['Definition'] !== null) {
+            $this->Definition = $param['Definition'];
         }
 
-        if (array_key_exists("MetaData",$param) and $param["MetaData"] !== null) {
+        if (array_key_exists('MetaData',$param) and $param['MetaData'] !== null) {
             $this->MetaData = new MediaMetaData();
-            $this->MetaData->deserialize($param["MetaData"]);
+            $this->MetaData->deserialize($param['MetaData']);
         }
 
-        if (array_key_exists("Url",$param) and $param["Url"] !== null) {
-            $this->Url = $param["Url"];
+        if (array_key_exists('Url',$param) and $param['Url'] !== null) {
+            $this->Url = $param['Url'];
         }
 
-        if (array_key_exists("ReviewResult",$param) and $param["ReviewResult"] !== null) {
-            $this->ReviewResult = $param["ReviewResult"];
+        if (array_key_exists('ReviewResult',$param) and $param['ReviewResult'] !== null) {
+            $this->ReviewResult = $param['ReviewResult'];
         }
 
-        if (array_key_exists("ReviewSummary",$param) and $param["ReviewSummary"] !== null) {
+        if (array_key_exists('ReviewSummary',$param) and $param['ReviewSummary'] !== null) {
             $this->ReviewSummary = [];
-            foreach ($param["ReviewSummary"] as $key => $value){
+            foreach ($param['ReviewSummary'] as $key => $value){
                 $obj = new MediaMiniProgramReviewElem();
                 $obj->deserialize($value);
                 array_push($this->ReviewSummary, $obj);

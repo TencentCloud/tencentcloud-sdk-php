@@ -62,16 +62,16 @@ class ModifyProxyGroupAttributeRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
-            $this->GroupId = $param["GroupId"];
+        if (array_key_exists('GroupId',$param) and $param['GroupId'] !== null) {
+            $this->GroupId = $param['GroupId'];
         }
 
-        if (array_key_exists("GroupName",$param) and $param["GroupName"] !== null) {
-            $this->GroupName = $param["GroupName"];
+        if (array_key_exists('GroupName',$param) and $param['GroupName'] !== null) {
+            $this->GroupName = $param['GroupName'];
         }
 
-        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
-            $this->ProjectId = $param["ProjectId"];
+        if (array_key_exists('ProjectId',$param) and $param['ProjectId'] !== null) {
+            $this->ProjectId = $param['ProjectId'];
         }
     }
 }

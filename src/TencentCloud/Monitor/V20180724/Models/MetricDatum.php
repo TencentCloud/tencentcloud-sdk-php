@@ -54,12 +54,12 @@ class MetricDatum extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MetricName",$param) and $param["MetricName"] !== null) {
-            $this->MetricName = $param["MetricName"];
+        if (array_key_exists('MetricName',$param) and $param['MetricName'] !== null) {
+            $this->MetricName = $param['MetricName'];
         }
 
-        if (array_key_exists("Value",$param) and $param["Value"] !== null) {
-            $this->Value = $param["Value"];
+        if (array_key_exists('Value',$param) and $param['Value'] !== null) {
+            $this->Value = $param['Value'];
         }
     }
 }

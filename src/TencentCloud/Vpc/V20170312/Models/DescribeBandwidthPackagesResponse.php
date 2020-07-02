@@ -62,21 +62,21 @@ class DescribeBandwidthPackagesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("BandwidthPackageSet",$param) and $param["BandwidthPackageSet"] !== null) {
+        if (array_key_exists('BandwidthPackageSet',$param) and $param['BandwidthPackageSet'] !== null) {
             $this->BandwidthPackageSet = [];
-            foreach ($param["BandwidthPackageSet"] as $key => $value){
+            foreach ($param['BandwidthPackageSet'] as $key => $value){
                 $obj = new BandwidthPackage();
                 $obj->deserialize($value);
                 array_push($this->BandwidthPackageSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

@@ -86,28 +86,28 @@ class CountryAreaMap extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("NationCountryName",$param) and $param["NationCountryName"] !== null) {
-            $this->NationCountryName = $param["NationCountryName"];
+        if (array_key_exists('NationCountryName',$param) and $param['NationCountryName'] !== null) {
+            $this->NationCountryName = $param['NationCountryName'];
         }
 
-        if (array_key_exists("NationCountryInnerCode",$param) and $param["NationCountryInnerCode"] !== null) {
-            $this->NationCountryInnerCode = $param["NationCountryInnerCode"];
+        if (array_key_exists('NationCountryInnerCode',$param) and $param['NationCountryInnerCode'] !== null) {
+            $this->NationCountryInnerCode = $param['NationCountryInnerCode'];
         }
 
-        if (array_key_exists("GeographicalZoneName",$param) and $param["GeographicalZoneName"] !== null) {
-            $this->GeographicalZoneName = $param["GeographicalZoneName"];
+        if (array_key_exists('GeographicalZoneName',$param) and $param['GeographicalZoneName'] !== null) {
+            $this->GeographicalZoneName = $param['GeographicalZoneName'];
         }
 
-        if (array_key_exists("GeographicalZoneInnerCode",$param) and $param["GeographicalZoneInnerCode"] !== null) {
-            $this->GeographicalZoneInnerCode = $param["GeographicalZoneInnerCode"];
+        if (array_key_exists('GeographicalZoneInnerCode',$param) and $param['GeographicalZoneInnerCode'] !== null) {
+            $this->GeographicalZoneInnerCode = $param['GeographicalZoneInnerCode'];
         }
 
-        if (array_key_exists("ContinentName",$param) and $param["ContinentName"] !== null) {
-            $this->ContinentName = $param["ContinentName"];
+        if (array_key_exists('ContinentName',$param) and $param['ContinentName'] !== null) {
+            $this->ContinentName = $param['ContinentName'];
         }
 
-        if (array_key_exists("ContinentInnerCode",$param) and $param["ContinentInnerCode"] !== null) {
-            $this->ContinentInnerCode = $param["ContinentInnerCode"];
+        if (array_key_exists('ContinentInnerCode',$param) and $param['ContinentInnerCode'] !== null) {
+            $this->ContinentInnerCode = $param['ContinentInnerCode'];
         }
     }
 }

@@ -62,12 +62,12 @@ class ExtraInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ZhiTong",$param) and $param["ZhiTong"] !== null) {
-            $this->ZhiTong = $param["ZhiTong"];
+        if (array_key_exists('ZhiTong',$param) and $param['ZhiTong'] !== null) {
+            $this->ZhiTong = $param['ZhiTong'];
         }
 
-        if (array_key_exists("TgwGroupName",$param) and $param["TgwGroupName"] !== null) {
-            $this->TgwGroupName = $param["TgwGroupName"];
+        if (array_key_exists('TgwGroupName',$param) and $param['TgwGroupName'] !== null) {
+            $this->TgwGroupName = $param['TgwGroupName'];
         }
     }
 }

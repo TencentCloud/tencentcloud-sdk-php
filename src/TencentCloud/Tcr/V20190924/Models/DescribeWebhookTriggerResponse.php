@@ -62,21 +62,21 @@ class DescribeWebhookTriggerResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("Triggers",$param) and $param["Triggers"] !== null) {
+        if (array_key_exists('Triggers',$param) and $param['Triggers'] !== null) {
             $this->Triggers = [];
-            foreach ($param["Triggers"] as $key => $value){
+            foreach ($param['Triggers'] as $key => $value){
                 $obj = new WebhookTrigger();
                 $obj->deserialize($value);
                 array_push($this->Triggers, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

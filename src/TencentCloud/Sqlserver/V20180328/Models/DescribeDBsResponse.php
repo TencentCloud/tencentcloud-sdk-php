@@ -62,21 +62,21 @@ class DescribeDBsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("DBInstances",$param) and $param["DBInstances"] !== null) {
+        if (array_key_exists('DBInstances',$param) and $param['DBInstances'] !== null) {
             $this->DBInstances = [];
-            foreach ($param["DBInstances"] as $key => $value){
+            foreach ($param['DBInstances'] as $key => $value){
                 $obj = new InstanceDBDetail();
                 $obj->deserialize($value);
                 array_push($this->DBInstances, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

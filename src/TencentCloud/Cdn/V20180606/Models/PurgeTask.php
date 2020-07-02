@@ -114,28 +114,28 @@ delete：刷新全部资源
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
-            $this->TaskId = $param["TaskId"];
+        if (array_key_exists('TaskId',$param) and $param['TaskId'] !== null) {
+            $this->TaskId = $param['TaskId'];
         }
 
-        if (array_key_exists("Url",$param) and $param["Url"] !== null) {
-            $this->Url = $param["Url"];
+        if (array_key_exists('Url',$param) and $param['Url'] !== null) {
+            $this->Url = $param['Url'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("PurgeType",$param) and $param["PurgeType"] !== null) {
-            $this->PurgeType = $param["PurgeType"];
+        if (array_key_exists('PurgeType',$param) and $param['PurgeType'] !== null) {
+            $this->PurgeType = $param['PurgeType'];
         }
 
-        if (array_key_exists("FlushType",$param) and $param["FlushType"] !== null) {
-            $this->FlushType = $param["FlushType"];
+        if (array_key_exists('FlushType',$param) and $param['FlushType'] !== null) {
+            $this->FlushType = $param['FlushType'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
     }
 }

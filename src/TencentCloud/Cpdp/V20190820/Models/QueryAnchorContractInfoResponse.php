@@ -54,17 +54,17 @@ class QueryAnchorContractInfoResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AnchorContractInfoList",$param) and $param["AnchorContractInfoList"] !== null) {
+        if (array_key_exists('AnchorContractInfoList',$param) and $param['AnchorContractInfoList'] !== null) {
             $this->AnchorContractInfoList = [];
-            foreach ($param["AnchorContractInfoList"] as $key => $value){
+            foreach ($param['AnchorContractInfoList'] as $key => $value){
                 $obj = new AnchorContractInfo();
                 $obj->deserialize($value);
                 array_push($this->AnchorContractInfoList, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

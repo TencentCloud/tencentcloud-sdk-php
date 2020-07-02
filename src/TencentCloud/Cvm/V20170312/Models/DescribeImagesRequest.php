@@ -98,29 +98,29 @@ class DescribeImagesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ImageIds",$param) and $param["ImageIds"] !== null) {
-            $this->ImageIds = $param["ImageIds"];
+        if (array_key_exists('ImageIds',$param) and $param['ImageIds'] !== null) {
+            $this->ImageIds = $param['ImageIds'];
         }
 
-        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+        if (array_key_exists('Filters',$param) and $param['Filters'] !== null) {
             $this->Filters = [];
-            foreach ($param["Filters"] as $key => $value){
+            foreach ($param['Filters'] as $key => $value){
                 $obj = new Filter();
                 $obj->deserialize($value);
                 array_push($this->Filters, $obj);
             }
         }
 
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
+        if (array_key_exists('Offset',$param) and $param['Offset'] !== null) {
+            $this->Offset = $param['Offset'];
         }
 
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
+        if (array_key_exists('Limit',$param) and $param['Limit'] !== null) {
+            $this->Limit = $param['Limit'];
         }
 
-        if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
-            $this->InstanceType = $param["InstanceType"];
+        if (array_key_exists('InstanceType',$param) and $param['InstanceType'] !== null) {
+            $this->InstanceType = $param['InstanceType'];
         }
     }
 }

@@ -66,7 +66,7 @@ class DcClient extends AbstractClient
 
     public function returnResponse($action, $response)
     {
-        $respClass = "TencentCloud"."\\".ucfirst("dc")."\\"."V20180410\\Models"."\\".ucfirst($action)."Response";
+        $respClass = 'TencentCloud'."\\".ucfirst('dc')."\\"."V20180410\\Models"."\\".ucfirst($action).'Response';
         $obj = new $respClass();
         $obj->deserialize($response);
         return $obj;

@@ -70,13 +70,13 @@ all：账号维度明细数据
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Resource",$param) and $param["Resource"] !== null) {
-            $this->Resource = $param["Resource"];
+        if (array_key_exists('Resource',$param) and $param['Resource'] !== null) {
+            $this->Resource = $param['Resource'];
         }
 
-        if (array_key_exists("CdnData",$param) and $param["CdnData"] !== null) {
+        if (array_key_exists('CdnData',$param) and $param['CdnData'] !== null) {
             $this->CdnData = [];
-            foreach ($param["CdnData"] as $key => $value){
+            foreach ($param['CdnData'] as $key => $value){
                 $obj = new CdnData();
                 $obj->deserialize($value);
                 array_push($this->CdnData, $obj);

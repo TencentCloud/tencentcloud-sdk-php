@@ -102,36 +102,36 @@ class AddInstancesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
-            $this->ClusterId = $param["ClusterId"];
+        if (array_key_exists('ClusterId',$param) and $param['ClusterId'] !== null) {
+            $this->ClusterId = $param['ClusterId'];
         }
 
-        if (array_key_exists("InstanceIdList",$param) and $param["InstanceIdList"] !== null) {
-            $this->InstanceIdList = $param["InstanceIdList"];
+        if (array_key_exists('InstanceIdList',$param) and $param['InstanceIdList'] !== null) {
+            $this->InstanceIdList = $param['InstanceIdList'];
         }
 
-        if (array_key_exists("OsName",$param) and $param["OsName"] !== null) {
-            $this->OsName = $param["OsName"];
+        if (array_key_exists('OsName',$param) and $param['OsName'] !== null) {
+            $this->OsName = $param['OsName'];
         }
 
-        if (array_key_exists("ImageId",$param) and $param["ImageId"] !== null) {
-            $this->ImageId = $param["ImageId"];
+        if (array_key_exists('ImageId',$param) and $param['ImageId'] !== null) {
+            $this->ImageId = $param['ImageId'];
         }
 
-        if (array_key_exists("Password",$param) and $param["Password"] !== null) {
-            $this->Password = $param["Password"];
+        if (array_key_exists('Password',$param) and $param['Password'] !== null) {
+            $this->Password = $param['Password'];
         }
 
-        if (array_key_exists("KeyId",$param) and $param["KeyId"] !== null) {
-            $this->KeyId = $param["KeyId"];
+        if (array_key_exists('KeyId',$param) and $param['KeyId'] !== null) {
+            $this->KeyId = $param['KeyId'];
         }
 
-        if (array_key_exists("SgId",$param) and $param["SgId"] !== null) {
-            $this->SgId = $param["SgId"];
+        if (array_key_exists('SgId',$param) and $param['SgId'] !== null) {
+            $this->SgId = $param['SgId'];
         }
 
-        if (array_key_exists("InstanceImportMode",$param) and $param["InstanceImportMode"] !== null) {
-            $this->InstanceImportMode = $param["InstanceImportMode"];
+        if (array_key_exists('InstanceImportMode',$param) and $param['InstanceImportMode'] !== null) {
+            $this->InstanceImportMode = $param['InstanceImportMode'];
         }
     }
 }

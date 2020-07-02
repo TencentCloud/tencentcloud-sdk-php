@@ -78,24 +78,24 @@ class CreateTeamRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Platform",$param) and $param["Platform"] !== null) {
-            $this->Platform = $param["Platform"];
+        if (array_key_exists('Platform',$param) and $param['Platform'] !== null) {
+            $this->Platform = $param['Platform'];
         }
 
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("OwnerId",$param) and $param["OwnerId"] !== null) {
-            $this->OwnerId = $param["OwnerId"];
+        if (array_key_exists('OwnerId',$param) and $param['OwnerId'] !== null) {
+            $this->OwnerId = $param['OwnerId'];
         }
 
-        if (array_key_exists("OwnerRemark",$param) and $param["OwnerRemark"] !== null) {
-            $this->OwnerRemark = $param["OwnerRemark"];
+        if (array_key_exists('OwnerRemark',$param) and $param['OwnerRemark'] !== null) {
+            $this->OwnerRemark = $param['OwnerRemark'];
         }
 
-        if (array_key_exists("TeamId",$param) and $param["TeamId"] !== null) {
-            $this->TeamId = $param["TeamId"];
+        if (array_key_exists('TeamId',$param) and $param['TeamId'] !== null) {
+            $this->TeamId = $param['TeamId'];
         }
     }
 }

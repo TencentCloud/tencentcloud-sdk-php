@@ -70,20 +70,20 @@ class DescribeBindingPolicyObjectListInstance extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("UniqueId",$param) and $param["UniqueId"] !== null) {
-            $this->UniqueId = $param["UniqueId"];
+        if (array_key_exists('UniqueId',$param) and $param['UniqueId'] !== null) {
+            $this->UniqueId = $param['UniqueId'];
         }
 
-        if (array_key_exists("Dimensions",$param) and $param["Dimensions"] !== null) {
-            $this->Dimensions = $param["Dimensions"];
+        if (array_key_exists('Dimensions',$param) and $param['Dimensions'] !== null) {
+            $this->Dimensions = $param['Dimensions'];
         }
 
-        if (array_key_exists("IsShielded",$param) and $param["IsShielded"] !== null) {
-            $this->IsShielded = $param["IsShielded"];
+        if (array_key_exists('IsShielded',$param) and $param['IsShielded'] !== null) {
+            $this->IsShielded = $param['IsShielded'];
         }
 
-        if (array_key_exists("Region",$param) and $param["Region"] !== null) {
-            $this->Region = $param["Region"];
+        if (array_key_exists('Region',$param) and $param['Region'] !== null) {
+            $this->Region = $param['Region'];
         }
     }
 }

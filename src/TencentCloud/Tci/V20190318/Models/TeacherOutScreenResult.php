@@ -82,24 +82,24 @@ OutScreen：不在屏幕内
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Class",$param) and $param["Class"] !== null) {
-            $this->Class = $param["Class"];
+        if (array_key_exists('Class',$param) and $param['Class'] !== null) {
+            $this->Class = $param['Class'];
         }
 
-        if (array_key_exists("Height",$param) and $param["Height"] !== null) {
-            $this->Height = $param["Height"];
+        if (array_key_exists('Height',$param) and $param['Height'] !== null) {
+            $this->Height = $param['Height'];
         }
 
-        if (array_key_exists("Left",$param) and $param["Left"] !== null) {
-            $this->Left = $param["Left"];
+        if (array_key_exists('Left',$param) and $param['Left'] !== null) {
+            $this->Left = $param['Left'];
         }
 
-        if (array_key_exists("Top",$param) and $param["Top"] !== null) {
-            $this->Top = $param["Top"];
+        if (array_key_exists('Top',$param) and $param['Top'] !== null) {
+            $this->Top = $param['Top'];
         }
 
-        if (array_key_exists("Width",$param) and $param["Width"] !== null) {
-            $this->Width = $param["Width"];
+        if (array_key_exists('Width',$param) and $param['Width'] !== null) {
+            $this->Width = $param['Width'];
         }
     }
 }

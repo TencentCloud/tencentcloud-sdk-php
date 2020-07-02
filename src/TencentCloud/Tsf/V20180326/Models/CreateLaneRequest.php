@@ -62,17 +62,17 @@ class CreateLaneRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LaneName",$param) and $param["LaneName"] !== null) {
-            $this->LaneName = $param["LaneName"];
+        if (array_key_exists('LaneName',$param) and $param['LaneName'] !== null) {
+            $this->LaneName = $param['LaneName'];
         }
 
-        if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
-            $this->Remark = $param["Remark"];
+        if (array_key_exists('Remark',$param) and $param['Remark'] !== null) {
+            $this->Remark = $param['Remark'];
         }
 
-        if (array_key_exists("LaneGroupList",$param) and $param["LaneGroupList"] !== null) {
+        if (array_key_exists('LaneGroupList',$param) and $param['LaneGroupList'] !== null) {
             $this->LaneGroupList = [];
-            foreach ($param["LaneGroupList"] as $key => $value){
+            foreach ($param['LaneGroupList'] as $key => $value){
                 $obj = new LaneGroup();
                 $obj->deserialize($value);
                 array_push($this->LaneGroupList, $obj);

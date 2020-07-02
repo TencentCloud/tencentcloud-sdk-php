@@ -94,28 +94,28 @@ class PullSmsReplyStatusByPhoneNumberRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SendDateTime",$param) and $param["SendDateTime"] !== null) {
-            $this->SendDateTime = $param["SendDateTime"];
+        if (array_key_exists('SendDateTime',$param) and $param['SendDateTime'] !== null) {
+            $this->SendDateTime = $param['SendDateTime'];
         }
 
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
+        if (array_key_exists('Offset',$param) and $param['Offset'] !== null) {
+            $this->Offset = $param['Offset'];
         }
 
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
+        if (array_key_exists('Limit',$param) and $param['Limit'] !== null) {
+            $this->Limit = $param['Limit'];
         }
 
-        if (array_key_exists("PhoneNumber",$param) and $param["PhoneNumber"] !== null) {
-            $this->PhoneNumber = $param["PhoneNumber"];
+        if (array_key_exists('PhoneNumber',$param) and $param['PhoneNumber'] !== null) {
+            $this->PhoneNumber = $param['PhoneNumber'];
         }
 
-        if (array_key_exists("SmsSdkAppid",$param) and $param["SmsSdkAppid"] !== null) {
-            $this->SmsSdkAppid = $param["SmsSdkAppid"];
+        if (array_key_exists('SmsSdkAppid',$param) and $param['SmsSdkAppid'] !== null) {
+            $this->SmsSdkAppid = $param['SmsSdkAppid'];
         }
 
-        if (array_key_exists("EndDateTime",$param) and $param["EndDateTime"] !== null) {
-            $this->EndDateTime = $param["EndDateTime"];
+        if (array_key_exists('EndDateTime',$param) and $param['EndDateTime'] !== null) {
+            $this->EndDateTime = $param['EndDateTime'];
         }
     }
 }

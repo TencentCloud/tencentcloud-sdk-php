@@ -54,13 +54,13 @@ class RenewDiskRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DiskChargePrepaid",$param) and $param["DiskChargePrepaid"] !== null) {
+        if (array_key_exists('DiskChargePrepaid',$param) and $param['DiskChargePrepaid'] !== null) {
             $this->DiskChargePrepaid = new DiskChargePrepaid();
-            $this->DiskChargePrepaid->deserialize($param["DiskChargePrepaid"]);
+            $this->DiskChargePrepaid->deserialize($param['DiskChargePrepaid']);
         }
 
-        if (array_key_exists("DiskId",$param) and $param["DiskId"] !== null) {
-            $this->DiskId = $param["DiskId"];
+        if (array_key_exists('DiskId',$param) and $param['DiskId'] !== null) {
+            $this->DiskId = $param['DiskId'];
         }
     }
 }

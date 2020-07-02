@@ -54,17 +54,17 @@ class CodeDetect extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ModerationDetail",$param) and $param["ModerationDetail"] !== null) {
+        if (array_key_exists('ModerationDetail',$param) and $param['ModerationDetail'] !== null) {
             $this->ModerationDetail = [];
-            foreach ($param["ModerationDetail"] as $key => $value){
+            foreach ($param['ModerationDetail'] as $key => $value){
                 $obj = new CodeDetail();
                 $obj->deserialize($value);
                 array_push($this->ModerationDetail, $obj);
             }
         }
 
-        if (array_key_exists("ModerationCode",$param) and $param["ModerationCode"] !== null) {
-            $this->ModerationCode = $param["ModerationCode"];
+        if (array_key_exists('ModerationCode',$param) and $param['ModerationCode'] !== null) {
+            $this->ModerationCode = $param['ModerationCode'];
         }
     }
 }

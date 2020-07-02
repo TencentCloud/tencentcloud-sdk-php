@@ -70,26 +70,26 @@ class ModifyRoGroupInfoRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RoGroupId",$param) and $param["RoGroupId"] !== null) {
-            $this->RoGroupId = $param["RoGroupId"];
+        if (array_key_exists('RoGroupId',$param) and $param['RoGroupId'] !== null) {
+            $this->RoGroupId = $param['RoGroupId'];
         }
 
-        if (array_key_exists("RoGroupInfo",$param) and $param["RoGroupInfo"] !== null) {
+        if (array_key_exists('RoGroupInfo',$param) and $param['RoGroupInfo'] !== null) {
             $this->RoGroupInfo = new RoGroupAttr();
-            $this->RoGroupInfo->deserialize($param["RoGroupInfo"]);
+            $this->RoGroupInfo->deserialize($param['RoGroupInfo']);
         }
 
-        if (array_key_exists("RoWeightValues",$param) and $param["RoWeightValues"] !== null) {
+        if (array_key_exists('RoWeightValues',$param) and $param['RoWeightValues'] !== null) {
             $this->RoWeightValues = [];
-            foreach ($param["RoWeightValues"] as $key => $value){
+            foreach ($param['RoWeightValues'] as $key => $value){
                 $obj = new RoWeightValue();
                 $obj->deserialize($value);
                 array_push($this->RoWeightValues, $obj);
             }
         }
 
-        if (array_key_exists("IsBalanceRoLoad",$param) and $param["IsBalanceRoLoad"] !== null) {
-            $this->IsBalanceRoLoad = $param["IsBalanceRoLoad"];
+        if (array_key_exists('IsBalanceRoLoad',$param) and $param['IsBalanceRoLoad'] !== null) {
+            $this->IsBalanceRoLoad = $param['IsBalanceRoLoad'];
         }
     }
 }

@@ -62,17 +62,17 @@ class InstanceResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceList",$param) and $param["InstanceList"] !== null) {
+        if (array_key_exists('InstanceList',$param) and $param['InstanceList'] !== null) {
             $this->InstanceList = [];
-            foreach ($param["InstanceList"] as $key => $value){
+            foreach ($param['InstanceList'] as $key => $value){
                 $obj = new Instance();
                 $obj->deserialize($value);
                 array_push($this->InstanceList, $obj);
             }
         }
 
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
     }
 }

@@ -62,16 +62,16 @@ class ReplaceCertResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("NewCertId",$param) and $param["NewCertId"] !== null) {
-            $this->NewCertId = $param["NewCertId"];
+        if (array_key_exists('NewCertId',$param) and $param['NewCertId'] !== null) {
+            $this->NewCertId = $param['NewCertId'];
         }
 
-        if (array_key_exists("OldCertId",$param) and $param["OldCertId"] !== null) {
-            $this->OldCertId = $param["OldCertId"];
+        if (array_key_exists('OldCertId',$param) and $param['OldCertId'] !== null) {
+            $this->OldCertId = $param['OldCertId'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

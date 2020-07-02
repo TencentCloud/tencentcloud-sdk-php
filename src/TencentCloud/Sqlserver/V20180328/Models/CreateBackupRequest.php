@@ -62,16 +62,16 @@ class CreateBackupRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Strategy",$param) and $param["Strategy"] !== null) {
-            $this->Strategy = $param["Strategy"];
+        if (array_key_exists('Strategy',$param) and $param['Strategy'] !== null) {
+            $this->Strategy = $param['Strategy'];
         }
 
-        if (array_key_exists("DBNames",$param) and $param["DBNames"] !== null) {
-            $this->DBNames = $param["DBNames"];
+        if (array_key_exists('DBNames',$param) and $param['DBNames'] !== null) {
+            $this->DBNames = $param['DBNames'];
         }
 
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
     }
 }

@@ -46,8 +46,8 @@ class DescribeListenerRealServersRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ListenerId",$param) and $param["ListenerId"] !== null) {
-            $this->ListenerId = $param["ListenerId"];
+        if (array_key_exists('ListenerId',$param) and $param['ListenerId'] !== null) {
+            $this->ListenerId = $param['ListenerId'];
         }
     }
 }

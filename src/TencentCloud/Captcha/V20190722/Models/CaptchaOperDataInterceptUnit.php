@@ -70,20 +70,20 @@ class CaptchaOperDataInterceptUnit extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DateKey",$param) and $param["DateKey"] !== null) {
-            $this->DateKey = $param["DateKey"];
+        if (array_key_exists('DateKey',$param) and $param['DateKey'] !== null) {
+            $this->DateKey = $param['DateKey'];
         }
 
-        if (array_key_exists("AllStopCnt",$param) and $param["AllStopCnt"] !== null) {
-            $this->AllStopCnt = $param["AllStopCnt"];
+        if (array_key_exists('AllStopCnt',$param) and $param['AllStopCnt'] !== null) {
+            $this->AllStopCnt = $param['AllStopCnt'];
         }
 
-        if (array_key_exists("PicStopCnt",$param) and $param["PicStopCnt"] !== null) {
-            $this->PicStopCnt = $param["PicStopCnt"];
+        if (array_key_exists('PicStopCnt',$param) and $param['PicStopCnt'] !== null) {
+            $this->PicStopCnt = $param['PicStopCnt'];
         }
 
-        if (array_key_exists("StrategyStopCnt",$param) and $param["StrategyStopCnt"] !== null) {
-            $this->StrategyStopCnt = $param["StrategyStopCnt"];
+        if (array_key_exists('StrategyStopCnt',$param) and $param['StrategyStopCnt'] !== null) {
+            $this->StrategyStopCnt = $param['StrategyStopCnt'];
         }
     }
 }

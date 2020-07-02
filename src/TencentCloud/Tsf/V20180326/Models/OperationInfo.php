@@ -74,19 +74,19 @@ class OperationInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Init",$param) and $param["Init"] !== null) {
+        if (array_key_exists('Init',$param) and $param['Init'] !== null) {
             $this->Init = new OperationInfoDetail();
-            $this->Init->deserialize($param["Init"]);
+            $this->Init->deserialize($param['Init']);
         }
 
-        if (array_key_exists("AddInstance",$param) and $param["AddInstance"] !== null) {
+        if (array_key_exists('AddInstance',$param) and $param['AddInstance'] !== null) {
             $this->AddInstance = new OperationInfoDetail();
-            $this->AddInstance->deserialize($param["AddInstance"]);
+            $this->AddInstance->deserialize($param['AddInstance']);
         }
 
-        if (array_key_exists("Destroy",$param) and $param["Destroy"] !== null) {
+        if (array_key_exists('Destroy',$param) and $param['Destroy'] !== null) {
             $this->Destroy = new OperationInfoDetail();
-            $this->Destroy->deserialize($param["Destroy"]);
+            $this->Destroy->deserialize($param['Destroy']);
         }
     }
 }

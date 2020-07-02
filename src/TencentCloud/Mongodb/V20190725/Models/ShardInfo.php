@@ -102,36 +102,36 @@ class ShardInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("UsedVolume",$param) and $param["UsedVolume"] !== null) {
-            $this->UsedVolume = $param["UsedVolume"];
+        if (array_key_exists('UsedVolume',$param) and $param['UsedVolume'] !== null) {
+            $this->UsedVolume = $param['UsedVolume'];
         }
 
-        if (array_key_exists("ReplicaSetId",$param) and $param["ReplicaSetId"] !== null) {
-            $this->ReplicaSetId = $param["ReplicaSetId"];
+        if (array_key_exists('ReplicaSetId',$param) and $param['ReplicaSetId'] !== null) {
+            $this->ReplicaSetId = $param['ReplicaSetId'];
         }
 
-        if (array_key_exists("ReplicaSetName",$param) and $param["ReplicaSetName"] !== null) {
-            $this->ReplicaSetName = $param["ReplicaSetName"];
+        if (array_key_exists('ReplicaSetName',$param) and $param['ReplicaSetName'] !== null) {
+            $this->ReplicaSetName = $param['ReplicaSetName'];
         }
 
-        if (array_key_exists("Memory",$param) and $param["Memory"] !== null) {
-            $this->Memory = $param["Memory"];
+        if (array_key_exists('Memory',$param) and $param['Memory'] !== null) {
+            $this->Memory = $param['Memory'];
         }
 
-        if (array_key_exists("Volume",$param) and $param["Volume"] !== null) {
-            $this->Volume = $param["Volume"];
+        if (array_key_exists('Volume',$param) and $param['Volume'] !== null) {
+            $this->Volume = $param['Volume'];
         }
 
-        if (array_key_exists("OplogSize",$param) and $param["OplogSize"] !== null) {
-            $this->OplogSize = $param["OplogSize"];
+        if (array_key_exists('OplogSize',$param) and $param['OplogSize'] !== null) {
+            $this->OplogSize = $param['OplogSize'];
         }
 
-        if (array_key_exists("SecondaryNum",$param) and $param["SecondaryNum"] !== null) {
-            $this->SecondaryNum = $param["SecondaryNum"];
+        if (array_key_exists('SecondaryNum',$param) and $param['SecondaryNum'] !== null) {
+            $this->SecondaryNum = $param['SecondaryNum'];
         }
 
-        if (array_key_exists("RealReplicaSetId",$param) and $param["RealReplicaSetId"] !== null) {
-            $this->RealReplicaSetId = $param["RealReplicaSetId"];
+        if (array_key_exists('RealReplicaSetId',$param) and $param['RealReplicaSetId'] !== null) {
+            $this->RealReplicaSetId = $param['RealReplicaSetId'];
         }
     }
 }

@@ -110,40 +110,40 @@ class CreateCfsFileSystemResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CreationTime",$param) and $param["CreationTime"] !== null) {
-            $this->CreationTime = $param["CreationTime"];
+        if (array_key_exists('CreationTime',$param) and $param['CreationTime'] !== null) {
+            $this->CreationTime = $param['CreationTime'];
         }
 
-        if (array_key_exists("CreationToken",$param) and $param["CreationToken"] !== null) {
-            $this->CreationToken = $param["CreationToken"];
+        if (array_key_exists('CreationToken',$param) and $param['CreationToken'] !== null) {
+            $this->CreationToken = $param['CreationToken'];
         }
 
-        if (array_key_exists("FileSystemId",$param) and $param["FileSystemId"] !== null) {
-            $this->FileSystemId = $param["FileSystemId"];
+        if (array_key_exists('FileSystemId',$param) and $param['FileSystemId'] !== null) {
+            $this->FileSystemId = $param['FileSystemId'];
         }
 
-        if (array_key_exists("LifeCycleState",$param) and $param["LifeCycleState"] !== null) {
-            $this->LifeCycleState = $param["LifeCycleState"];
+        if (array_key_exists('LifeCycleState',$param) and $param['LifeCycleState'] !== null) {
+            $this->LifeCycleState = $param['LifeCycleState'];
         }
 
-        if (array_key_exists("SizeByte",$param) and $param["SizeByte"] !== null) {
-            $this->SizeByte = $param["SizeByte"];
+        if (array_key_exists('SizeByte',$param) and $param['SizeByte'] !== null) {
+            $this->SizeByte = $param['SizeByte'];
         }
 
-        if (array_key_exists("ZoneId",$param) and $param["ZoneId"] !== null) {
-            $this->ZoneId = $param["ZoneId"];
+        if (array_key_exists('ZoneId',$param) and $param['ZoneId'] !== null) {
+            $this->ZoneId = $param['ZoneId'];
         }
 
-        if (array_key_exists("FsName",$param) and $param["FsName"] !== null) {
-            $this->FsName = $param["FsName"];
+        if (array_key_exists('FsName',$param) and $param['FsName'] !== null) {
+            $this->FsName = $param['FsName'];
         }
 
-        if (array_key_exists("Encrypted",$param) and $param["Encrypted"] !== null) {
-            $this->Encrypted = $param["Encrypted"];
+        if (array_key_exists('Encrypted',$param) and $param['Encrypted'] !== null) {
+            $this->Encrypted = $param['Encrypted'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

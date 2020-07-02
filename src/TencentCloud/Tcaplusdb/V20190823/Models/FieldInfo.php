@@ -70,20 +70,20 @@ class FieldInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FieldName",$param) and $param["FieldName"] !== null) {
-            $this->FieldName = $param["FieldName"];
+        if (array_key_exists('FieldName',$param) and $param['FieldName'] !== null) {
+            $this->FieldName = $param['FieldName'];
         }
 
-        if (array_key_exists("IsPrimaryKey",$param) and $param["IsPrimaryKey"] !== null) {
-            $this->IsPrimaryKey = $param["IsPrimaryKey"];
+        if (array_key_exists('IsPrimaryKey',$param) and $param['IsPrimaryKey'] !== null) {
+            $this->IsPrimaryKey = $param['IsPrimaryKey'];
         }
 
-        if (array_key_exists("FieldType",$param) and $param["FieldType"] !== null) {
-            $this->FieldType = $param["FieldType"];
+        if (array_key_exists('FieldType',$param) and $param['FieldType'] !== null) {
+            $this->FieldType = $param['FieldType'];
         }
 
-        if (array_key_exists("FieldSize",$param) and $param["FieldSize"] !== null) {
-            $this->FieldSize = $param["FieldSize"];
+        if (array_key_exists('FieldSize',$param) and $param['FieldSize'] !== null) {
+            $this->FieldSize = $param['FieldSize'];
         }
     }
 }

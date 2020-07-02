@@ -46,8 +46,8 @@ class DescribeRegionsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RegionId",$param) and $param["RegionId"] !== null) {
-            $this->RegionId = $param["RegionId"];
+        if (array_key_exists('RegionId',$param) and $param['RegionId'] !== null) {
+            $this->RegionId = $param['RegionId'];
         }
     }
 }

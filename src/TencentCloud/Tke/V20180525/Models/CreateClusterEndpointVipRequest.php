@@ -54,12 +54,12 @@ class CreateClusterEndpointVipRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
-            $this->ClusterId = $param["ClusterId"];
+        if (array_key_exists('ClusterId',$param) and $param['ClusterId'] !== null) {
+            $this->ClusterId = $param['ClusterId'];
         }
 
-        if (array_key_exists("SecurityPolicies",$param) and $param["SecurityPolicies"] !== null) {
-            $this->SecurityPolicies = $param["SecurityPolicies"];
+        if (array_key_exists('SecurityPolicies',$param) and $param['SecurityPolicies'] !== null) {
+            $this->SecurityPolicies = $param['SecurityPolicies'];
         }
     }
 }

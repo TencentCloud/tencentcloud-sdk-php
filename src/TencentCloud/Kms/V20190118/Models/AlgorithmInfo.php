@@ -54,12 +54,12 @@ class AlgorithmInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("KeyUsage",$param) and $param["KeyUsage"] !== null) {
-            $this->KeyUsage = $param["KeyUsage"];
+        if (array_key_exists('KeyUsage',$param) and $param['KeyUsage'] !== null) {
+            $this->KeyUsage = $param['KeyUsage'];
         }
 
-        if (array_key_exists("Algorithm",$param) and $param["Algorithm"] !== null) {
-            $this->Algorithm = $param["Algorithm"];
+        if (array_key_exists('Algorithm',$param) and $param['Algorithm'] !== null) {
+            $this->Algorithm = $param['Algorithm'];
         }
     }
 }

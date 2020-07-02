@@ -46,8 +46,8 @@ class DescribeCallerDisplayListRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BizAppId",$param) and $param["BizAppId"] !== null) {
-            $this->BizAppId = $param["BizAppId"];
+        if (array_key_exists('BizAppId',$param) and $param['BizAppId'] !== null) {
+            $this->BizAppId = $param['BizAppId'];
         }
     }
 }

@@ -70,25 +70,25 @@ class DescribeAlarmsByTaskResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AlarmInfos",$param) and $param["AlarmInfos"] !== null) {
+        if (array_key_exists('AlarmInfos',$param) and $param['AlarmInfos'] !== null) {
             $this->AlarmInfos = [];
-            foreach ($param["AlarmInfos"] as $key => $value){
+            foreach ($param['AlarmInfos'] as $key => $value){
                 $obj = new AlarmInfo();
                 $obj->deserialize($value);
                 array_push($this->AlarmInfos, $obj);
             }
         }
 
-        if (array_key_exists("FaultRatio",$param) and $param["FaultRatio"] !== null) {
-            $this->FaultRatio = $param["FaultRatio"];
+        if (array_key_exists('FaultRatio',$param) and $param['FaultRatio'] !== null) {
+            $this->FaultRatio = $param['FaultRatio'];
         }
 
-        if (array_key_exists("FaultTimeSpec",$param) and $param["FaultTimeSpec"] !== null) {
-            $this->FaultTimeSpec = $param["FaultTimeSpec"];
+        if (array_key_exists('FaultTimeSpec',$param) and $param['FaultTimeSpec'] !== null) {
+            $this->FaultTimeSpec = $param['FaultTimeSpec'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

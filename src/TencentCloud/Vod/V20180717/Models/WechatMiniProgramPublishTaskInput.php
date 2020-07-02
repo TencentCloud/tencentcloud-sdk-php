@@ -46,8 +46,8 @@ class WechatMiniProgramPublishTaskInput extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SourceDefinition",$param) and $param["SourceDefinition"] !== null) {
-            $this->SourceDefinition = $param["SourceDefinition"];
+        if (array_key_exists('SourceDefinition',$param) and $param['SourceDefinition'] !== null) {
+            $this->SourceDefinition = $param['SourceDefinition'];
         }
     }
 }

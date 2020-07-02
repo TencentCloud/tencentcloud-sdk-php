@@ -54,12 +54,12 @@ class DeleteLoadBalancerSnatIpsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LoadBalancerId",$param) and $param["LoadBalancerId"] !== null) {
-            $this->LoadBalancerId = $param["LoadBalancerId"];
+        if (array_key_exists('LoadBalancerId',$param) and $param['LoadBalancerId'] !== null) {
+            $this->LoadBalancerId = $param['LoadBalancerId'];
         }
 
-        if (array_key_exists("Ips",$param) and $param["Ips"] !== null) {
-            $this->Ips = $param["Ips"];
+        if (array_key_exists('Ips',$param) and $param['Ips'] !== null) {
+            $this->Ips = $param['Ips'];
         }
     }
 }

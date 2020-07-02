@@ -98,20 +98,20 @@ class DetailResult extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("EvilLabel",$param) and $param["EvilLabel"] !== null) {
-            $this->EvilLabel = $param["EvilLabel"];
+        if (array_key_exists('EvilLabel',$param) and $param['EvilLabel'] !== null) {
+            $this->EvilLabel = $param['EvilLabel'];
         }
 
-        if (array_key_exists("EvilType",$param) and $param["EvilType"] !== null) {
-            $this->EvilType = $param["EvilType"];
+        if (array_key_exists('EvilType',$param) and $param['EvilType'] !== null) {
+            $this->EvilType = $param['EvilType'];
         }
 
-        if (array_key_exists("Keywords",$param) and $param["Keywords"] !== null) {
-            $this->Keywords = $param["Keywords"];
+        if (array_key_exists('Keywords',$param) and $param['Keywords'] !== null) {
+            $this->Keywords = $param['Keywords'];
         }
 
-        if (array_key_exists("Score",$param) and $param["Score"] !== null) {
-            $this->Score = $param["Score"];
+        if (array_key_exists('Score',$param) and $param['Score'] !== null) {
+            $this->Score = $param['Score'];
         }
     }
 }

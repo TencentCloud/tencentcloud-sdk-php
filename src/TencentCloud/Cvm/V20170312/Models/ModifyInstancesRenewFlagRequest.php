@@ -54,12 +54,12 @@ class ModifyInstancesRenewFlagRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceIds",$param) and $param["InstanceIds"] !== null) {
-            $this->InstanceIds = $param["InstanceIds"];
+        if (array_key_exists('InstanceIds',$param) and $param['InstanceIds'] !== null) {
+            $this->InstanceIds = $param['InstanceIds'];
         }
 
-        if (array_key_exists("RenewFlag",$param) and $param["RenewFlag"] !== null) {
-            $this->RenewFlag = $param["RenewFlag"];
+        if (array_key_exists('RenewFlag',$param) and $param['RenewFlag'] !== null) {
+            $this->RenewFlag = $param['RenewFlag'];
         }
     }
 }

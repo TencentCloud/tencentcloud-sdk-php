@@ -57,7 +57,7 @@ class CisClient extends AbstractClient
 
     public function returnResponse($action, $response)
     {
-        $respClass = "TencentCloud"."\\".ucfirst("cis")."\\"."V20180408\\Models"."\\".ucfirst($action)."Response";
+        $respClass = 'TencentCloud'."\\".ucfirst('cis')."\\"."V20180408\\Models"."\\".ucfirst($action).'Response';
         $obj = new $respClass();
         $obj->deserialize($response);
         return $obj;

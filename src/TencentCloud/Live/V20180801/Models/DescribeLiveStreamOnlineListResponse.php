@@ -86,33 +86,33 @@ class DescribeLiveStreamOnlineListResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalNum",$param) and $param["TotalNum"] !== null) {
-            $this->TotalNum = $param["TotalNum"];
+        if (array_key_exists('TotalNum',$param) and $param['TotalNum'] !== null) {
+            $this->TotalNum = $param['TotalNum'];
         }
 
-        if (array_key_exists("TotalPage",$param) and $param["TotalPage"] !== null) {
-            $this->TotalPage = $param["TotalPage"];
+        if (array_key_exists('TotalPage',$param) and $param['TotalPage'] !== null) {
+            $this->TotalPage = $param['TotalPage'];
         }
 
-        if (array_key_exists("PageNum",$param) and $param["PageNum"] !== null) {
-            $this->PageNum = $param["PageNum"];
+        if (array_key_exists('PageNum',$param) and $param['PageNum'] !== null) {
+            $this->PageNum = $param['PageNum'];
         }
 
-        if (array_key_exists("PageSize",$param) and $param["PageSize"] !== null) {
-            $this->PageSize = $param["PageSize"];
+        if (array_key_exists('PageSize',$param) and $param['PageSize'] !== null) {
+            $this->PageSize = $param['PageSize'];
         }
 
-        if (array_key_exists("OnlineInfo",$param) and $param["OnlineInfo"] !== null) {
+        if (array_key_exists('OnlineInfo',$param) and $param['OnlineInfo'] !== null) {
             $this->OnlineInfo = [];
-            foreach ($param["OnlineInfo"] as $key => $value){
+            foreach ($param['OnlineInfo'] as $key => $value){
                 $obj = new StreamOnlineInfo();
                 $obj->deserialize($value);
                 array_push($this->OnlineInfo, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

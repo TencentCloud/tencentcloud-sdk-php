@@ -70,20 +70,20 @@ class DeleteClusterInstancesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
-            $this->ClusterId = $param["ClusterId"];
+        if (array_key_exists('ClusterId',$param) and $param['ClusterId'] !== null) {
+            $this->ClusterId = $param['ClusterId'];
         }
 
-        if (array_key_exists("InstanceIds",$param) and $param["InstanceIds"] !== null) {
-            $this->InstanceIds = $param["InstanceIds"];
+        if (array_key_exists('InstanceIds',$param) and $param['InstanceIds'] !== null) {
+            $this->InstanceIds = $param['InstanceIds'];
         }
 
-        if (array_key_exists("InstanceDeleteMode",$param) and $param["InstanceDeleteMode"] !== null) {
-            $this->InstanceDeleteMode = $param["InstanceDeleteMode"];
+        if (array_key_exists('InstanceDeleteMode',$param) and $param['InstanceDeleteMode'] !== null) {
+            $this->InstanceDeleteMode = $param['InstanceDeleteMode'];
         }
 
-        if (array_key_exists("ForceDelete",$param) and $param["ForceDelete"] !== null) {
-            $this->ForceDelete = $param["ForceDelete"];
+        if (array_key_exists('ForceDelete',$param) and $param['ForceDelete'] !== null) {
+            $this->ForceDelete = $param['ForceDelete'];
         }
     }
 }

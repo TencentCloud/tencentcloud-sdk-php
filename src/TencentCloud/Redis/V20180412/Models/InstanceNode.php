@@ -54,13 +54,13 @@ class InstanceNode extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
-            $this->Id = $param["Id"];
+        if (array_key_exists('Id',$param) and $param['Id'] !== null) {
+            $this->Id = $param['Id'];
         }
 
-        if (array_key_exists("InstanceClusterNode",$param) and $param["InstanceClusterNode"] !== null) {
+        if (array_key_exists('InstanceClusterNode',$param) and $param['InstanceClusterNode'] !== null) {
             $this->InstanceClusterNode = [];
-            foreach ($param["InstanceClusterNode"] as $key => $value){
+            foreach ($param['InstanceClusterNode'] as $key => $value){
                 $obj = new InstanceClusterNode();
                 $obj->deserialize($value);
                 array_push($this->InstanceClusterNode, $obj);

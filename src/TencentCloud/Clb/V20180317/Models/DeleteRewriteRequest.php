@@ -70,21 +70,21 @@ class DeleteRewriteRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LoadBalancerId",$param) and $param["LoadBalancerId"] !== null) {
-            $this->LoadBalancerId = $param["LoadBalancerId"];
+        if (array_key_exists('LoadBalancerId',$param) and $param['LoadBalancerId'] !== null) {
+            $this->LoadBalancerId = $param['LoadBalancerId'];
         }
 
-        if (array_key_exists("SourceListenerId",$param) and $param["SourceListenerId"] !== null) {
-            $this->SourceListenerId = $param["SourceListenerId"];
+        if (array_key_exists('SourceListenerId',$param) and $param['SourceListenerId'] !== null) {
+            $this->SourceListenerId = $param['SourceListenerId'];
         }
 
-        if (array_key_exists("TargetListenerId",$param) and $param["TargetListenerId"] !== null) {
-            $this->TargetListenerId = $param["TargetListenerId"];
+        if (array_key_exists('TargetListenerId',$param) and $param['TargetListenerId'] !== null) {
+            $this->TargetListenerId = $param['TargetListenerId'];
         }
 
-        if (array_key_exists("RewriteInfos",$param) and $param["RewriteInfos"] !== null) {
+        if (array_key_exists('RewriteInfos',$param) and $param['RewriteInfos'] !== null) {
             $this->RewriteInfos = [];
-            foreach ($param["RewriteInfos"] as $key => $value){
+            foreach ($param['RewriteInfos'] as $key => $value){
                 $obj = new RewriteLocationMap();
                 $obj->deserialize($value);
                 array_push($this->RewriteInfos, $obj);

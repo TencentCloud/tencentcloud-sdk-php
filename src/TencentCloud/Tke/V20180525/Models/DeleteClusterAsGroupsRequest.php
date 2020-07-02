@@ -62,16 +62,16 @@ class DeleteClusterAsGroupsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
-            $this->ClusterId = $param["ClusterId"];
+        if (array_key_exists('ClusterId',$param) and $param['ClusterId'] !== null) {
+            $this->ClusterId = $param['ClusterId'];
         }
 
-        if (array_key_exists("AutoScalingGroupIds",$param) and $param["AutoScalingGroupIds"] !== null) {
-            $this->AutoScalingGroupIds = $param["AutoScalingGroupIds"];
+        if (array_key_exists('AutoScalingGroupIds',$param) and $param['AutoScalingGroupIds'] !== null) {
+            $this->AutoScalingGroupIds = $param['AutoScalingGroupIds'];
         }
 
-        if (array_key_exists("KeepInstance",$param) and $param["KeepInstance"] !== null) {
-            $this->KeepInstance = $param["KeepInstance"];
+        if (array_key_exists('KeepInstance',$param) and $param['KeepInstance'] !== null) {
+            $this->KeepInstance = $param['KeepInstance'];
         }
     }
 }

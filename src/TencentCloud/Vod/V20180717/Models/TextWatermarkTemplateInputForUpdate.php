@@ -86,20 +86,20 @@ class TextWatermarkTemplateInputForUpdate extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FontType",$param) and $param["FontType"] !== null) {
-            $this->FontType = $param["FontType"];
+        if (array_key_exists('FontType',$param) and $param['FontType'] !== null) {
+            $this->FontType = $param['FontType'];
         }
 
-        if (array_key_exists("FontSize",$param) and $param["FontSize"] !== null) {
-            $this->FontSize = $param["FontSize"];
+        if (array_key_exists('FontSize',$param) and $param['FontSize'] !== null) {
+            $this->FontSize = $param['FontSize'];
         }
 
-        if (array_key_exists("FontColor",$param) and $param["FontColor"] !== null) {
-            $this->FontColor = $param["FontColor"];
+        if (array_key_exists('FontColor',$param) and $param['FontColor'] !== null) {
+            $this->FontColor = $param['FontColor'];
         }
 
-        if (array_key_exists("FontAlpha",$param) and $param["FontAlpha"] !== null) {
-            $this->FontAlpha = $param["FontAlpha"];
+        if (array_key_exists('FontAlpha',$param) and $param['FontAlpha'] !== null) {
+            $this->FontAlpha = $param['FontAlpha'];
         }
     }
 }

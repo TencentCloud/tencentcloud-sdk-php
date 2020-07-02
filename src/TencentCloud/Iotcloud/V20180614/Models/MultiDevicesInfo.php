@@ -86,28 +86,28 @@ class MultiDevicesInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DeviceName",$param) and $param["DeviceName"] !== null) {
-            $this->DeviceName = $param["DeviceName"];
+        if (array_key_exists('DeviceName',$param) and $param['DeviceName'] !== null) {
+            $this->DeviceName = $param['DeviceName'];
         }
 
-        if (array_key_exists("DevicePsk",$param) and $param["DevicePsk"] !== null) {
-            $this->DevicePsk = $param["DevicePsk"];
+        if (array_key_exists('DevicePsk',$param) and $param['DevicePsk'] !== null) {
+            $this->DevicePsk = $param['DevicePsk'];
         }
 
-        if (array_key_exists("DeviceCert",$param) and $param["DeviceCert"] !== null) {
-            $this->DeviceCert = $param["DeviceCert"];
+        if (array_key_exists('DeviceCert',$param) and $param['DeviceCert'] !== null) {
+            $this->DeviceCert = $param['DeviceCert'];
         }
 
-        if (array_key_exists("DevicePrivateKey",$param) and $param["DevicePrivateKey"] !== null) {
-            $this->DevicePrivateKey = $param["DevicePrivateKey"];
+        if (array_key_exists('DevicePrivateKey',$param) and $param['DevicePrivateKey'] !== null) {
+            $this->DevicePrivateKey = $param['DevicePrivateKey'];
         }
 
-        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
-            $this->Result = $param["Result"];
+        if (array_key_exists('Result',$param) and $param['Result'] !== null) {
+            $this->Result = $param['Result'];
         }
 
-        if (array_key_exists("ErrMsg",$param) and $param["ErrMsg"] !== null) {
-            $this->ErrMsg = $param["ErrMsg"];
+        if (array_key_exists('ErrMsg',$param) and $param['ErrMsg'] !== null) {
+            $this->ErrMsg = $param['ErrMsg'];
         }
     }
 }

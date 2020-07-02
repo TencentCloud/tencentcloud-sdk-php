@@ -62,16 +62,16 @@ class DescribeDBLogFilesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("ShardId",$param) and $param["ShardId"] !== null) {
-            $this->ShardId = $param["ShardId"];
+        if (array_key_exists('ShardId',$param) and $param['ShardId'] !== null) {
+            $this->ShardId = $param['ShardId'];
         }
 
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists('Type',$param) and $param['Type'] !== null) {
+            $this->Type = $param['Type'];
         }
     }
 }

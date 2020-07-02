@@ -58,13 +58,13 @@ class GenderInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Gender",$param) and $param["Gender"] !== null) {
-            $this->Gender = $param["Gender"];
+        if (array_key_exists('Gender',$param) and $param['Gender'] !== null) {
+            $this->Gender = $param['Gender'];
         }
 
-        if (array_key_exists("FaceRect",$param) and $param["FaceRect"] !== null) {
+        if (array_key_exists('FaceRect',$param) and $param['FaceRect'] !== null) {
             $this->FaceRect = new FaceRect();
-            $this->FaceRect->deserialize($param["FaceRect"]);
+            $this->FaceRect->deserialize($param['FaceRect']);
         }
     }
 }

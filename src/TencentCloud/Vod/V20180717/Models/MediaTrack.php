@@ -74,13 +74,13 @@ class MediaTrack extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists('Type',$param) and $param['Type'] !== null) {
+            $this->Type = $param['Type'];
         }
 
-        if (array_key_exists("TrackItems",$param) and $param["TrackItems"] !== null) {
+        if (array_key_exists('TrackItems',$param) and $param['TrackItems'] !== null) {
             $this->TrackItems = [];
-            foreach ($param["TrackItems"] as $key => $value){
+            foreach ($param['TrackItems'] as $key => $value){
                 $obj = new MediaTrackItem();
                 $obj->deserialize($value);
                 array_push($this->TrackItems, $obj);

@@ -94,32 +94,32 @@ class ListEventHistoryRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ProductId",$param) and $param["ProductId"] !== null) {
-            $this->ProductId = $param["ProductId"];
+        if (array_key_exists('ProductId',$param) and $param['ProductId'] !== null) {
+            $this->ProductId = $param['ProductId'];
         }
 
-        if (array_key_exists("DeviceName",$param) and $param["DeviceName"] !== null) {
-            $this->DeviceName = $param["DeviceName"];
+        if (array_key_exists('DeviceName',$param) and $param['DeviceName'] !== null) {
+            $this->DeviceName = $param['DeviceName'];
         }
 
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists('Type',$param) and $param['Type'] !== null) {
+            $this->Type = $param['Type'];
         }
 
-        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
-            $this->StartTime = $param["StartTime"];
+        if (array_key_exists('StartTime',$param) and $param['StartTime'] !== null) {
+            $this->StartTime = $param['StartTime'];
         }
 
-        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
-            $this->EndTime = $param["EndTime"];
+        if (array_key_exists('EndTime',$param) and $param['EndTime'] !== null) {
+            $this->EndTime = $param['EndTime'];
         }
 
-        if (array_key_exists("Context",$param) and $param["Context"] !== null) {
-            $this->Context = $param["Context"];
+        if (array_key_exists('Context',$param) and $param['Context'] !== null) {
+            $this->Context = $param['Context'];
         }
 
-        if (array_key_exists("Size",$param) and $param["Size"] !== null) {
-            $this->Size = $param["Size"];
+        if (array_key_exists('Size',$param) and $param['Size'] !== null) {
+            $this->Size = $param['Size'];
         }
     }
 }

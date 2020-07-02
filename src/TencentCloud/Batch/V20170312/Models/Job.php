@@ -102,51 +102,51 @@ class Job extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Tasks",$param) and $param["Tasks"] !== null) {
+        if (array_key_exists('Tasks',$param) and $param['Tasks'] !== null) {
             $this->Tasks = [];
-            foreach ($param["Tasks"] as $key => $value){
+            foreach ($param['Tasks'] as $key => $value){
                 $obj = new Task();
                 $obj->deserialize($value);
                 array_push($this->Tasks, $obj);
             }
         }
 
-        if (array_key_exists("JobName",$param) and $param["JobName"] !== null) {
-            $this->JobName = $param["JobName"];
+        if (array_key_exists('JobName',$param) and $param['JobName'] !== null) {
+            $this->JobName = $param['JobName'];
         }
 
-        if (array_key_exists("JobDescription",$param) and $param["JobDescription"] !== null) {
-            $this->JobDescription = $param["JobDescription"];
+        if (array_key_exists('JobDescription',$param) and $param['JobDescription'] !== null) {
+            $this->JobDescription = $param['JobDescription'];
         }
 
-        if (array_key_exists("Priority",$param) and $param["Priority"] !== null) {
-            $this->Priority = $param["Priority"];
+        if (array_key_exists('Priority',$param) and $param['Priority'] !== null) {
+            $this->Priority = $param['Priority'];
         }
 
-        if (array_key_exists("Dependences",$param) and $param["Dependences"] !== null) {
+        if (array_key_exists('Dependences',$param) and $param['Dependences'] !== null) {
             $this->Dependences = [];
-            foreach ($param["Dependences"] as $key => $value){
+            foreach ($param['Dependences'] as $key => $value){
                 $obj = new Dependence();
                 $obj->deserialize($value);
                 array_push($this->Dependences, $obj);
             }
         }
 
-        if (array_key_exists("Notifications",$param) and $param["Notifications"] !== null) {
+        if (array_key_exists('Notifications',$param) and $param['Notifications'] !== null) {
             $this->Notifications = [];
-            foreach ($param["Notifications"] as $key => $value){
+            foreach ($param['Notifications'] as $key => $value){
                 $obj = new Notification();
                 $obj->deserialize($value);
                 array_push($this->Notifications, $obj);
             }
         }
 
-        if (array_key_exists("TaskExecutionDependOn",$param) and $param["TaskExecutionDependOn"] !== null) {
-            $this->TaskExecutionDependOn = $param["TaskExecutionDependOn"];
+        if (array_key_exists('TaskExecutionDependOn',$param) and $param['TaskExecutionDependOn'] !== null) {
+            $this->TaskExecutionDependOn = $param['TaskExecutionDependOn'];
         }
 
-        if (array_key_exists("StateIfCreateCvmFailed",$param) and $param["StateIfCreateCvmFailed"] !== null) {
-            $this->StateIfCreateCvmFailed = $param["StateIfCreateCvmFailed"];
+        if (array_key_exists('StateIfCreateCvmFailed',$param) and $param['StateIfCreateCvmFailed'] !== null) {
+            $this->StateIfCreateCvmFailed = $param['StateIfCreateCvmFailed'];
         }
     }
 }

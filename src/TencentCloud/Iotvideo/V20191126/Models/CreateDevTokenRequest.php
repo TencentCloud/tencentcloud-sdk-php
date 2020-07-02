@@ -62,16 +62,16 @@ class CreateDevTokenRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AccessId",$param) and $param["AccessId"] !== null) {
-            $this->AccessId = $param["AccessId"];
+        if (array_key_exists('AccessId',$param) and $param['AccessId'] !== null) {
+            $this->AccessId = $param['AccessId'];
         }
 
-        if (array_key_exists("Tids",$param) and $param["Tids"] !== null) {
-            $this->Tids = $param["Tids"];
+        if (array_key_exists('Tids',$param) and $param['Tids'] !== null) {
+            $this->Tids = $param['Tids'];
         }
 
-        if (array_key_exists("TtlMinutes",$param) and $param["TtlMinutes"] !== null) {
-            $this->TtlMinutes = $param["TtlMinutes"];
+        if (array_key_exists('TtlMinutes',$param) and $param['TtlMinutes'] !== null) {
+            $this->TtlMinutes = $param['TtlMinutes'];
         }
     }
 }

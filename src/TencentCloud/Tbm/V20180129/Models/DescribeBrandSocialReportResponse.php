@@ -62,21 +62,21 @@ class DescribeBrandSocialReportResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("DateCountSet",$param) and $param["DateCountSet"] !== null) {
+        if (array_key_exists('DateCountSet',$param) and $param['DateCountSet'] !== null) {
             $this->DateCountSet = [];
-            foreach ($param["DateCountSet"] as $key => $value){
+            foreach ($param['DateCountSet'] as $key => $value){
                 $obj = new DateCount();
                 $obj->deserialize($value);
                 array_push($this->DateCountSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

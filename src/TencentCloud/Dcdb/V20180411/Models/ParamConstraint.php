@@ -74,21 +74,21 @@ class ParamConstraint extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists('Type',$param) and $param['Type'] !== null) {
+            $this->Type = $param['Type'];
         }
 
-        if (array_key_exists("Enum",$param) and $param["Enum"] !== null) {
-            $this->Enum = $param["Enum"];
+        if (array_key_exists('Enum',$param) and $param['Enum'] !== null) {
+            $this->Enum = $param['Enum'];
         }
 
-        if (array_key_exists("Range",$param) and $param["Range"] !== null) {
+        if (array_key_exists('Range',$param) and $param['Range'] !== null) {
             $this->Range = new ConstraintRange();
-            $this->Range->deserialize($param["Range"]);
+            $this->Range->deserialize($param['Range']);
         }
 
-        if (array_key_exists("String",$param) and $param["String"] !== null) {
-            $this->String = $param["String"];
+        if (array_key_exists('String',$param) and $param['String'] !== null) {
+            $this->String = $param['String'];
         }
     }
 }

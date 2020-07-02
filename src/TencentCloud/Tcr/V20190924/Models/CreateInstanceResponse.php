@@ -54,12 +54,12 @@ class CreateInstanceResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RegistryId",$param) and $param["RegistryId"] !== null) {
-            $this->RegistryId = $param["RegistryId"];
+        if (array_key_exists('RegistryId',$param) and $param['RegistryId'] !== null) {
+            $this->RegistryId = $param['RegistryId'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

@@ -70,20 +70,20 @@ class NerToken extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BeginOffset",$param) and $param["BeginOffset"] !== null) {
-            $this->BeginOffset = $param["BeginOffset"];
+        if (array_key_exists('BeginOffset',$param) and $param['BeginOffset'] !== null) {
+            $this->BeginOffset = $param['BeginOffset'];
         }
 
-        if (array_key_exists("Length",$param) and $param["Length"] !== null) {
-            $this->Length = $param["Length"];
+        if (array_key_exists('Length',$param) and $param['Length'] !== null) {
+            $this->Length = $param['Length'];
         }
 
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists('Type',$param) and $param['Type'] !== null) {
+            $this->Type = $param['Type'];
         }
 
-        if (array_key_exists("Word",$param) and $param["Word"] !== null) {
-            $this->Word = $param["Word"];
+        if (array_key_exists('Word',$param) and $param['Word'] !== null) {
+            $this->Word = $param['Word'];
         }
     }
 }

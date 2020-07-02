@@ -94,32 +94,32 @@ class DescribeTagsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TagKey",$param) and $param["TagKey"] !== null) {
-            $this->TagKey = $param["TagKey"];
+        if (array_key_exists('TagKey',$param) and $param['TagKey'] !== null) {
+            $this->TagKey = $param['TagKey'];
         }
 
-        if (array_key_exists("TagValue",$param) and $param["TagValue"] !== null) {
-            $this->TagValue = $param["TagValue"];
+        if (array_key_exists('TagValue',$param) and $param['TagValue'] !== null) {
+            $this->TagValue = $param['TagValue'];
         }
 
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
+        if (array_key_exists('Offset',$param) and $param['Offset'] !== null) {
+            $this->Offset = $param['Offset'];
         }
 
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
+        if (array_key_exists('Limit',$param) and $param['Limit'] !== null) {
+            $this->Limit = $param['Limit'];
         }
 
-        if (array_key_exists("CreateUin",$param) and $param["CreateUin"] !== null) {
-            $this->CreateUin = $param["CreateUin"];
+        if (array_key_exists('CreateUin',$param) and $param['CreateUin'] !== null) {
+            $this->CreateUin = $param['CreateUin'];
         }
 
-        if (array_key_exists("TagKeys",$param) and $param["TagKeys"] !== null) {
-            $this->TagKeys = $param["TagKeys"];
+        if (array_key_exists('TagKeys',$param) and $param['TagKeys'] !== null) {
+            $this->TagKeys = $param['TagKeys'];
         }
 
-        if (array_key_exists("ShowProject",$param) and $param["ShowProject"] !== null) {
-            $this->ShowProject = $param["ShowProject"];
+        if (array_key_exists('ShowProject',$param) and $param['ShowProject'] !== null) {
+            $this->ShowProject = $param['ShowProject'];
         }
     }
 }

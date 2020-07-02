@@ -62,16 +62,16 @@ class GenderAgeTrafficDetail extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Gender",$param) and $param["Gender"] !== null) {
-            $this->Gender = $param["Gender"];
+        if (array_key_exists('Gender',$param) and $param['Gender'] !== null) {
+            $this->Gender = $param['Gender'];
         }
 
-        if (array_key_exists("AgeGap",$param) and $param["AgeGap"] !== null) {
-            $this->AgeGap = $param["AgeGap"];
+        if (array_key_exists('AgeGap',$param) and $param['AgeGap'] !== null) {
+            $this->AgeGap = $param['AgeGap'];
         }
 
-        if (array_key_exists("TrafficCount",$param) and $param["TrafficCount"] !== null) {
-            $this->TrafficCount = $param["TrafficCount"];
+        if (array_key_exists('TrafficCount',$param) and $param['TrafficCount'] !== null) {
+            $this->TrafficCount = $param['TrafficCount'];
         }
     }
 }

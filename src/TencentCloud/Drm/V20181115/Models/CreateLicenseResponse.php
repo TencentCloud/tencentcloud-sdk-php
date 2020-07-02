@@ -62,16 +62,16 @@ class CreateLicenseResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("License",$param) and $param["License"] !== null) {
-            $this->License = $param["License"];
+        if (array_key_exists('License',$param) and $param['License'] !== null) {
+            $this->License = $param['License'];
         }
 
-        if (array_key_exists("ContentId",$param) and $param["ContentId"] !== null) {
-            $this->ContentId = $param["ContentId"];
+        if (array_key_exists('ContentId',$param) and $param['ContentId'] !== null) {
+            $this->ContentId = $param['ContentId'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

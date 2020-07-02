@@ -54,17 +54,17 @@ class DescribeDeviceHardwareInfoResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DeviceHardwareInfoSet",$param) and $param["DeviceHardwareInfoSet"] !== null) {
+        if (array_key_exists('DeviceHardwareInfoSet',$param) and $param['DeviceHardwareInfoSet'] !== null) {
             $this->DeviceHardwareInfoSet = [];
-            foreach ($param["DeviceHardwareInfoSet"] as $key => $value){
+            foreach ($param['DeviceHardwareInfoSet'] as $key => $value){
                 $obj = new DeviceHardwareInfo();
                 $obj->deserialize($value);
                 array_push($this->DeviceHardwareInfoSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

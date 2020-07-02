@@ -54,12 +54,12 @@ class CreateLoadBalancerResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LoadBalancerIds",$param) and $param["LoadBalancerIds"] !== null) {
-            $this->LoadBalancerIds = $param["LoadBalancerIds"];
+        if (array_key_exists('LoadBalancerIds',$param) and $param['LoadBalancerIds'] !== null) {
+            $this->LoadBalancerIds = $param['LoadBalancerIds'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

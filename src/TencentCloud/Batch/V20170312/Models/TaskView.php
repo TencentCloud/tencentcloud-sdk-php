@@ -74,20 +74,20 @@ class TaskView extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TaskName",$param) and $param["TaskName"] !== null) {
-            $this->TaskName = $param["TaskName"];
+        if (array_key_exists('TaskName',$param) and $param['TaskName'] !== null) {
+            $this->TaskName = $param['TaskName'];
         }
 
-        if (array_key_exists("TaskState",$param) and $param["TaskState"] !== null) {
-            $this->TaskState = $param["TaskState"];
+        if (array_key_exists('TaskState',$param) and $param['TaskState'] !== null) {
+            $this->TaskState = $param['TaskState'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
-            $this->EndTime = $param["EndTime"];
+        if (array_key_exists('EndTime',$param) and $param['EndTime'] !== null) {
+            $this->EndTime = $param['EndTime'];
         }
     }
 }

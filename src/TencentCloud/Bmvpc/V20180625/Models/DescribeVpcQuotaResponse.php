@@ -54,17 +54,17 @@ class DescribeVpcQuotaResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("VpcQuotaSet",$param) and $param["VpcQuotaSet"] !== null) {
+        if (array_key_exists('VpcQuotaSet',$param) and $param['VpcQuotaSet'] !== null) {
             $this->VpcQuotaSet = [];
-            foreach ($param["VpcQuotaSet"] as $key => $value){
+            foreach ($param['VpcQuotaSet'] as $key => $value){
                 $obj = new VpcQuota();
                 $obj->deserialize($value);
                 array_push($this->VpcQuotaSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

@@ -46,8 +46,8 @@ class DeleteDictRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DictId",$param) and $param["DictId"] !== null) {
-            $this->DictId = $param["DictId"];
+        if (array_key_exists('DictId',$param) and $param['DictId'] !== null) {
+            $this->DictId = $param['DictId'];
         }
     }
 }

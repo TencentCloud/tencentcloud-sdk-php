@@ -54,12 +54,12 @@ class AddressTemplateItem extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("From",$param) and $param["From"] !== null) {
-            $this->From = $param["From"];
+        if (array_key_exists('From',$param) and $param['From'] !== null) {
+            $this->From = $param['From'];
         }
 
-        if (array_key_exists("To",$param) and $param["To"] !== null) {
-            $this->To = $param["To"];
+        if (array_key_exists('To',$param) and $param['To'] !== null) {
+            $this->To = $param['To'];
         }
     }
 }

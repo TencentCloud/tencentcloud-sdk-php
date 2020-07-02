@@ -78,24 +78,24 @@ class CreateSealRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Module",$param) and $param["Module"] !== null) {
-            $this->Module = $param["Module"];
+        if (array_key_exists('Module',$param) and $param['Module'] !== null) {
+            $this->Module = $param['Module'];
         }
 
-        if (array_key_exists("Operation",$param) and $param["Operation"] !== null) {
-            $this->Operation = $param["Operation"];
+        if (array_key_exists('Operation',$param) and $param['Operation'] !== null) {
+            $this->Operation = $param['Operation'];
         }
 
-        if (array_key_exists("AccountResId",$param) and $param["AccountResId"] !== null) {
-            $this->AccountResId = $param["AccountResId"];
+        if (array_key_exists('AccountResId',$param) and $param['AccountResId'] !== null) {
+            $this->AccountResId = $param['AccountResId'];
         }
 
-        if (array_key_exists("ImgUrl",$param) and $param["ImgUrl"] !== null) {
-            $this->ImgUrl = $param["ImgUrl"];
+        if (array_key_exists('ImgUrl',$param) and $param['ImgUrl'] !== null) {
+            $this->ImgUrl = $param['ImgUrl'];
         }
 
-        if (array_key_exists("ImgData",$param) and $param["ImgData"] !== null) {
-            $this->ImgData = $param["ImgData"];
+        if (array_key_exists('ImgData',$param) and $param['ImgData'] !== null) {
+            $this->ImgData = $param['ImgData'];
         }
     }
 }

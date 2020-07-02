@@ -66,16 +66,16 @@ class RegistryCondition extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists('Type',$param) and $param['Type'] !== null) {
+            $this->Type = $param['Type'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("Reason",$param) and $param["Reason"] !== null) {
-            $this->Reason = $param["Reason"];
+        if (array_key_exists('Reason',$param) and $param['Reason'] !== null) {
+            $this->Reason = $param['Reason'];
         }
     }
 }

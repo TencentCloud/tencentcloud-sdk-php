@@ -94,32 +94,32 @@ class CreateUDPListenersRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ListenerName",$param) and $param["ListenerName"] !== null) {
-            $this->ListenerName = $param["ListenerName"];
+        if (array_key_exists('ListenerName',$param) and $param['ListenerName'] !== null) {
+            $this->ListenerName = $param['ListenerName'];
         }
 
-        if (array_key_exists("Ports",$param) and $param["Ports"] !== null) {
-            $this->Ports = $param["Ports"];
+        if (array_key_exists('Ports',$param) and $param['Ports'] !== null) {
+            $this->Ports = $param['Ports'];
         }
 
-        if (array_key_exists("Scheduler",$param) and $param["Scheduler"] !== null) {
-            $this->Scheduler = $param["Scheduler"];
+        if (array_key_exists('Scheduler',$param) and $param['Scheduler'] !== null) {
+            $this->Scheduler = $param['Scheduler'];
         }
 
-        if (array_key_exists("RealServerType",$param) and $param["RealServerType"] !== null) {
-            $this->RealServerType = $param["RealServerType"];
+        if (array_key_exists('RealServerType',$param) and $param['RealServerType'] !== null) {
+            $this->RealServerType = $param['RealServerType'];
         }
 
-        if (array_key_exists("ProxyId",$param) and $param["ProxyId"] !== null) {
-            $this->ProxyId = $param["ProxyId"];
+        if (array_key_exists('ProxyId',$param) and $param['ProxyId'] !== null) {
+            $this->ProxyId = $param['ProxyId'];
         }
 
-        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
-            $this->GroupId = $param["GroupId"];
+        if (array_key_exists('GroupId',$param) and $param['GroupId'] !== null) {
+            $this->GroupId = $param['GroupId'];
         }
 
-        if (array_key_exists("RealServerPorts",$param) and $param["RealServerPorts"] !== null) {
-            $this->RealServerPorts = $param["RealServerPorts"];
+        if (array_key_exists('RealServerPorts',$param) and $param['RealServerPorts'] !== null) {
+            $this->RealServerPorts = $param['RealServerPorts'];
         }
     }
 }

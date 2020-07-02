@@ -46,8 +46,8 @@ class DestroyDBInstanceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DBInstanceId",$param) and $param["DBInstanceId"] !== null) {
-            $this->DBInstanceId = $param["DBInstanceId"];
+        if (array_key_exists('DBInstanceId',$param) and $param['DBInstanceId'] !== null) {
+            $this->DBInstanceId = $param['DBInstanceId'];
         }
     }
 }

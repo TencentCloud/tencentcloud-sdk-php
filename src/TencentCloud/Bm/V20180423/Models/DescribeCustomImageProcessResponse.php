@@ -54,17 +54,17 @@ class DescribeCustomImageProcessResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CustomImageProcessSet",$param) and $param["CustomImageProcessSet"] !== null) {
+        if (array_key_exists('CustomImageProcessSet',$param) and $param['CustomImageProcessSet'] !== null) {
             $this->CustomImageProcessSet = [];
-            foreach ($param["CustomImageProcessSet"] as $key => $value){
+            foreach ($param['CustomImageProcessSet'] as $key => $value){
                 $obj = new CustomImageProcess();
                 $obj->deserialize($value);
                 array_push($this->CustomImageProcessSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

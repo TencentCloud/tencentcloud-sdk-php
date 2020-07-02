@@ -130,32 +130,32 @@ UTC 格式，例如：2016-06-29T19:00:00Z。
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DomainName",$param) and $param["DomainName"] !== null) {
-            $this->DomainName = $param["DomainName"];
+        if (array_key_exists('DomainName',$param) and $param['DomainName'] !== null) {
+            $this->DomainName = $param['DomainName'];
         }
 
-        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
-            $this->EndTime = $param["EndTime"];
+        if (array_key_exists('EndTime',$param) and $param['EndTime'] !== null) {
+            $this->EndTime = $param['EndTime'];
         }
 
-        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
-            $this->StartTime = $param["StartTime"];
+        if (array_key_exists('StartTime',$param) and $param['StartTime'] !== null) {
+            $this->StartTime = $param['StartTime'];
         }
 
-        if (array_key_exists("AppName",$param) and $param["AppName"] !== null) {
-            $this->AppName = $param["AppName"];
+        if (array_key_exists('AppName',$param) and $param['AppName'] !== null) {
+            $this->AppName = $param['AppName'];
         }
 
-        if (array_key_exists("PageNum",$param) and $param["PageNum"] !== null) {
-            $this->PageNum = $param["PageNum"];
+        if (array_key_exists('PageNum',$param) and $param['PageNum'] !== null) {
+            $this->PageNum = $param['PageNum'];
         }
 
-        if (array_key_exists("PageSize",$param) and $param["PageSize"] !== null) {
-            $this->PageSize = $param["PageSize"];
+        if (array_key_exists('PageSize',$param) and $param['PageSize'] !== null) {
+            $this->PageSize = $param['PageSize'];
         }
 
-        if (array_key_exists("StreamName",$param) and $param["StreamName"] !== null) {
-            $this->StreamName = $param["StreamName"];
+        if (array_key_exists('StreamName',$param) and $param['StreamName'] !== null) {
+            $this->StreamName = $param['StreamName'];
         }
     }
 }

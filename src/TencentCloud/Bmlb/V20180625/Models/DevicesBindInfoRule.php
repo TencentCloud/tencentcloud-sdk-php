@@ -62,17 +62,17 @@ class DevicesBindInfoRule extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
-            $this->Domain = $param["Domain"];
+        if (array_key_exists('Domain',$param) and $param['Domain'] !== null) {
+            $this->Domain = $param['Domain'];
         }
 
-        if (array_key_exists("DomainId",$param) and $param["DomainId"] !== null) {
-            $this->DomainId = $param["DomainId"];
+        if (array_key_exists('DomainId',$param) and $param['DomainId'] !== null) {
+            $this->DomainId = $param['DomainId'];
         }
 
-        if (array_key_exists("LocationSet",$param) and $param["LocationSet"] !== null) {
+        if (array_key_exists('LocationSet',$param) and $param['LocationSet'] !== null) {
             $this->LocationSet = [];
-            foreach ($param["LocationSet"] as $key => $value){
+            foreach ($param['LocationSet'] as $key => $value){
                 $obj = new DevicesBindInfoLocation();
                 $obj->deserialize($value);
                 array_push($this->LocationSet, $obj);

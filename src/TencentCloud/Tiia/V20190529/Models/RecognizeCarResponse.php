@@ -62,26 +62,26 @@ class RecognizeCarResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CarCoords",$param) and $param["CarCoords"] !== null) {
+        if (array_key_exists('CarCoords',$param) and $param['CarCoords'] !== null) {
             $this->CarCoords = [];
-            foreach ($param["CarCoords"] as $key => $value){
+            foreach ($param['CarCoords'] as $key => $value){
                 $obj = new Coord();
                 $obj->deserialize($value);
                 array_push($this->CarCoords, $obj);
             }
         }
 
-        if (array_key_exists("CarTags",$param) and $param["CarTags"] !== null) {
+        if (array_key_exists('CarTags',$param) and $param['CarTags'] !== null) {
             $this->CarTags = [];
-            foreach ($param["CarTags"] as $key => $value){
+            foreach ($param['CarTags'] as $key => $value){
                 $obj = new CarTagItem();
                 $obj->deserialize($value);
                 array_push($this->CarTags, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

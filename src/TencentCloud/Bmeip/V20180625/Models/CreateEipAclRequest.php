@@ -54,12 +54,12 @@ class CreateEipAclRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AclName",$param) and $param["AclName"] !== null) {
-            $this->AclName = $param["AclName"];
+        if (array_key_exists('AclName',$param) and $param['AclName'] !== null) {
+            $this->AclName = $param['AclName'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
     }
 }

@@ -54,12 +54,12 @@ class SecurityPolicyDatabase extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LocalCidrBlock",$param) and $param["LocalCidrBlock"] !== null) {
-            $this->LocalCidrBlock = $param["LocalCidrBlock"];
+        if (array_key_exists('LocalCidrBlock',$param) and $param['LocalCidrBlock'] !== null) {
+            $this->LocalCidrBlock = $param['LocalCidrBlock'];
         }
 
-        if (array_key_exists("RemoteCidrBlock",$param) and $param["RemoteCidrBlock"] !== null) {
-            $this->RemoteCidrBlock = $param["RemoteCidrBlock"];
+        if (array_key_exists('RemoteCidrBlock',$param) and $param['RemoteCidrBlock'] !== null) {
+            $this->RemoteCidrBlock = $param['RemoteCidrBlock'];
         }
     }
 }

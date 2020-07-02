@@ -54,12 +54,12 @@ class AccountStatistics extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Username",$param) and $param["Username"] !== null) {
-            $this->Username = $param["Username"];
+        if (array_key_exists('Username',$param) and $param['Username'] !== null) {
+            $this->Username = $param['Username'];
         }
 
-        if (array_key_exists("MachineNum",$param) and $param["MachineNum"] !== null) {
-            $this->MachineNum = $param["MachineNum"];
+        if (array_key_exists('MachineNum',$param) and $param['MachineNum'] !== null) {
+            $this->MachineNum = $param['MachineNum'];
         }
     }
 }

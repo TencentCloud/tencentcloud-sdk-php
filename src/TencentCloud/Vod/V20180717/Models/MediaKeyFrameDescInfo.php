@@ -46,9 +46,9 @@ class MediaKeyFrameDescInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("KeyFrameDescSet",$param) and $param["KeyFrameDescSet"] !== null) {
+        if (array_key_exists('KeyFrameDescSet',$param) and $param['KeyFrameDescSet'] !== null) {
             $this->KeyFrameDescSet = [];
-            foreach ($param["KeyFrameDescSet"] as $key => $value){
+            foreach ($param['KeyFrameDescSet'] as $key => $value){
                 $obj = new MediaKeyFrameDescItem();
                 $obj->deserialize($value);
                 array_push($this->KeyFrameDescSet, $obj);

@@ -54,12 +54,12 @@ class VpcLimit extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LimitType",$param) and $param["LimitType"] !== null) {
-            $this->LimitType = $param["LimitType"];
+        if (array_key_exists('LimitType',$param) and $param['LimitType'] !== null) {
+            $this->LimitType = $param['LimitType'];
         }
 
-        if (array_key_exists("LimitValue",$param) and $param["LimitValue"] !== null) {
-            $this->LimitValue = $param["LimitValue"];
+        if (array_key_exists('LimitValue',$param) and $param['LimitValue'] !== null) {
+            $this->LimitValue = $param['LimitValue'];
         }
     }
 }

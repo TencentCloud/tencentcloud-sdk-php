@@ -58,13 +58,13 @@ class CardList extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Total",$param) and $param["Total"] !== null) {
-            $this->Total = $param["Total"];
+        if (array_key_exists('Total',$param) and $param['Total'] !== null) {
+            $this->Total = $param['Total'];
         }
 
-        if (array_key_exists("List",$param) and $param["List"] !== null) {
+        if (array_key_exists('List',$param) and $param['List'] !== null) {
             $this->List = [];
-            foreach ($param["List"] as $key => $value){
+            foreach ($param['List'] as $key => $value){
                 $obj = new CardInfo();
                 $obj->deserialize($value);
                 array_push($this->List, $obj);

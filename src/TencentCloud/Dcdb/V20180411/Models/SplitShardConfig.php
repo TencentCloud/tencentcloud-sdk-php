@@ -70,20 +70,20 @@ class SplitShardConfig extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ShardInstanceIds",$param) and $param["ShardInstanceIds"] !== null) {
-            $this->ShardInstanceIds = $param["ShardInstanceIds"];
+        if (array_key_exists('ShardInstanceIds',$param) and $param['ShardInstanceIds'] !== null) {
+            $this->ShardInstanceIds = $param['ShardInstanceIds'];
         }
 
-        if (array_key_exists("SplitRate",$param) and $param["SplitRate"] !== null) {
-            $this->SplitRate = $param["SplitRate"];
+        if (array_key_exists('SplitRate',$param) and $param['SplitRate'] !== null) {
+            $this->SplitRate = $param['SplitRate'];
         }
 
-        if (array_key_exists("ShardMemory",$param) and $param["ShardMemory"] !== null) {
-            $this->ShardMemory = $param["ShardMemory"];
+        if (array_key_exists('ShardMemory',$param) and $param['ShardMemory'] !== null) {
+            $this->ShardMemory = $param['ShardMemory'];
         }
 
-        if (array_key_exists("ShardStorage",$param) and $param["ShardStorage"] !== null) {
-            $this->ShardStorage = $param["ShardStorage"];
+        if (array_key_exists('ShardStorage',$param) and $param['ShardStorage'] !== null) {
+            $this->ShardStorage = $param['ShardStorage'];
         }
     }
 }

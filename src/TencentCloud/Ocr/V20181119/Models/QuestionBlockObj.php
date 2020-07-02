@@ -46,9 +46,9 @@ class QuestionBlockObj extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("QuestionArr",$param) and $param["QuestionArr"] !== null) {
+        if (array_key_exists('QuestionArr',$param) and $param['QuestionArr'] !== null) {
             $this->QuestionArr = [];
-            foreach ($param["QuestionArr"] as $key => $value){
+            foreach ($param['QuestionArr'] as $key => $value){
                 $obj = new QuestionObj();
                 $obj->deserialize($value);
                 array_push($this->QuestionArr, $obj);

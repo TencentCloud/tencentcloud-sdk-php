@@ -62,17 +62,17 @@ class GroupStatisticsInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
-            $this->GroupId = $param["GroupId"];
+        if (array_key_exists('GroupId',$param) and $param['GroupId'] !== null) {
+            $this->GroupId = $param['GroupId'];
         }
 
-        if (array_key_exists("GroupName",$param) and $param["GroupName"] !== null) {
-            $this->GroupName = $param["GroupName"];
+        if (array_key_exists('GroupName',$param) and $param['GroupName'] !== null) {
+            $this->GroupName = $param['GroupName'];
         }
 
-        if (array_key_exists("ProxySet",$param) and $param["ProxySet"] !== null) {
+        if (array_key_exists('ProxySet',$param) and $param['ProxySet'] !== null) {
             $this->ProxySet = [];
-            foreach ($param["ProxySet"] as $key => $value){
+            foreach ($param['ProxySet'] as $key => $value){
                 $obj = new ProxySimpleInfo();
                 $obj->deserialize($value);
                 array_push($this->ProxySet, $obj);

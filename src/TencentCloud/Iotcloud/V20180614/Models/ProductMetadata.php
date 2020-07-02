@@ -46,8 +46,8 @@ class ProductMetadata extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CreationDate",$param) and $param["CreationDate"] !== null) {
-            $this->CreationDate = $param["CreationDate"];
+        if (array_key_exists('CreationDate',$param) and $param['CreationDate'] !== null) {
+            $this->CreationDate = $param['CreationDate'];
         }
     }
 }

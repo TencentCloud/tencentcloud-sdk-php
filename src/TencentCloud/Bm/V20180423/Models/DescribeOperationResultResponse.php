@@ -90,21 +90,21 @@ class DescribeOperationResultResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TaskStatus",$param) and $param["TaskStatus"] !== null) {
-            $this->TaskStatus = $param["TaskStatus"];
+        if (array_key_exists('TaskStatus',$param) and $param['TaskStatus'] !== null) {
+            $this->TaskStatus = $param['TaskStatus'];
         }
 
-        if (array_key_exists("SubtaskStatusSet",$param) and $param["SubtaskStatusSet"] !== null) {
+        if (array_key_exists('SubtaskStatusSet',$param) and $param['SubtaskStatusSet'] !== null) {
             $this->SubtaskStatusSet = [];
-            foreach ($param["SubtaskStatusSet"] as $key => $value){
+            foreach ($param['SubtaskStatusSet'] as $key => $value){
                 $obj = new SubtaskStatus();
                 $obj->deserialize($value);
                 array_push($this->SubtaskStatusSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

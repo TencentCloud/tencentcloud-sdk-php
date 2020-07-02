@@ -58,13 +58,13 @@ class DescribeConfigsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
+        if (array_key_exists('Result',$param) and $param['Result'] !== null) {
             $this->Result = new TsfPageConfig();
-            $this->Result->deserialize($param["Result"]);
+            $this->Result->deserialize($param['Result']);
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

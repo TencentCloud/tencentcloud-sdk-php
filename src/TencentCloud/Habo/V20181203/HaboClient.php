@@ -52,7 +52,7 @@ class HaboClient extends AbstractClient
 
     public function returnResponse($action, $response)
     {
-        $respClass = "TencentCloud"."\\".ucfirst("habo")."\\"."V20181203\\Models"."\\".ucfirst($action)."Response";
+        $respClass = 'TencentCloud'."\\".ucfirst('habo')."\\"."V20181203\\Models"."\\".ucfirst($action).'Response';
         $obj = new $respClass();
         $obj->deserialize($response);
         return $obj;

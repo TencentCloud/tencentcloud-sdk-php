@@ -46,8 +46,8 @@ class CreateVulsMisinformationRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("VulIds",$param) and $param["VulIds"] !== null) {
-            $this->VulIds = $param["VulIds"];
+        if (array_key_exists('VulIds',$param) and $param['VulIds'] !== null) {
+            $this->VulIds = $param['VulIds'];
         }
     }
 }

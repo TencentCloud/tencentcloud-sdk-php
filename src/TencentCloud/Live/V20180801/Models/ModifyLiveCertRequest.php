@@ -86,28 +86,28 @@ class ModifyLiveCertRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CertId",$param) and $param["CertId"] !== null) {
-            $this->CertId = $param["CertId"];
+        if (array_key_exists('CertId',$param) and $param['CertId'] !== null) {
+            $this->CertId = $param['CertId'];
         }
 
-        if (array_key_exists("CertType",$param) and $param["CertType"] !== null) {
-            $this->CertType = $param["CertType"];
+        if (array_key_exists('CertType',$param) and $param['CertType'] !== null) {
+            $this->CertType = $param['CertType'];
         }
 
-        if (array_key_exists("CertName",$param) and $param["CertName"] !== null) {
-            $this->CertName = $param["CertName"];
+        if (array_key_exists('CertName',$param) and $param['CertName'] !== null) {
+            $this->CertName = $param['CertName'];
         }
 
-        if (array_key_exists("HttpsCrt",$param) and $param["HttpsCrt"] !== null) {
-            $this->HttpsCrt = $param["HttpsCrt"];
+        if (array_key_exists('HttpsCrt',$param) and $param['HttpsCrt'] !== null) {
+            $this->HttpsCrt = $param['HttpsCrt'];
         }
 
-        if (array_key_exists("HttpsKey",$param) and $param["HttpsKey"] !== null) {
-            $this->HttpsKey = $param["HttpsKey"];
+        if (array_key_exists('HttpsKey',$param) and $param['HttpsKey'] !== null) {
+            $this->HttpsKey = $param['HttpsKey'];
         }
 
-        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
-            $this->Description = $param["Description"];
+        if (array_key_exists('Description',$param) and $param['Description'] !== null) {
+            $this->Description = $param['Description'];
         }
     }
 }

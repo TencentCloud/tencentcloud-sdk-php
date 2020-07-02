@@ -118,44 +118,44 @@ class DevicesData extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Tid",$param) and $param["Tid"] !== null) {
-            $this->Tid = $param["Tid"];
+        if (array_key_exists('Tid',$param) and $param['Tid'] !== null) {
+            $this->Tid = $param['Tid'];
         }
 
-        if (array_key_exists("DeviceName",$param) and $param["DeviceName"] !== null) {
-            $this->DeviceName = $param["DeviceName"];
+        if (array_key_exists('DeviceName',$param) and $param['DeviceName'] !== null) {
+            $this->DeviceName = $param['DeviceName'];
         }
 
-        if (array_key_exists("ActiveTime",$param) and $param["ActiveTime"] !== null) {
-            $this->ActiveTime = $param["ActiveTime"];
+        if (array_key_exists('ActiveTime',$param) and $param['ActiveTime'] !== null) {
+            $this->ActiveTime = $param['ActiveTime'];
         }
 
-        if (array_key_exists("Disabled",$param) and $param["Disabled"] !== null) {
-            $this->Disabled = $param["Disabled"];
+        if (array_key_exists('Disabled',$param) and $param['Disabled'] !== null) {
+            $this->Disabled = $param['Disabled'];
         }
 
-        if (array_key_exists("StreamStatus",$param) and $param["StreamStatus"] !== null) {
-            $this->StreamStatus = $param["StreamStatus"];
+        if (array_key_exists('StreamStatus',$param) and $param['StreamStatus'] !== null) {
+            $this->StreamStatus = $param['StreamStatus'];
         }
 
-        if (array_key_exists("OtaVersion",$param) and $param["OtaVersion"] !== null) {
-            $this->OtaVersion = $param["OtaVersion"];
+        if (array_key_exists('OtaVersion',$param) and $param['OtaVersion'] !== null) {
+            $this->OtaVersion = $param['OtaVersion'];
         }
 
-        if (array_key_exists("Online",$param) and $param["Online"] !== null) {
-            $this->Online = $param["Online"];
+        if (array_key_exists('Online',$param) and $param['Online'] !== null) {
+            $this->Online = $param['Online'];
         }
 
-        if (array_key_exists("LastOnlineTime",$param) and $param["LastOnlineTime"] !== null) {
-            $this->LastOnlineTime = $param["LastOnlineTime"];
+        if (array_key_exists('LastOnlineTime',$param) and $param['LastOnlineTime'] !== null) {
+            $this->LastOnlineTime = $param['LastOnlineTime'];
         }
 
-        if (array_key_exists("IotModel",$param) and $param["IotModel"] !== null) {
-            $this->IotModel = $param["IotModel"];
+        if (array_key_exists('IotModel',$param) and $param['IotModel'] !== null) {
+            $this->IotModel = $param['IotModel'];
         }
 
-        if (array_key_exists("LastUpdateTime",$param) and $param["LastUpdateTime"] !== null) {
-            $this->LastUpdateTime = $param["LastUpdateTime"];
+        if (array_key_exists('LastUpdateTime',$param) and $param['LastUpdateTime'] !== null) {
+            $this->LastUpdateTime = $param['LastUpdateTime'];
         }
     }
 }

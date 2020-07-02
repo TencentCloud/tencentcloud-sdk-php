@@ -54,12 +54,12 @@ class RsgAsActivityRelatedInstance extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("InstanceStatus",$param) and $param["InstanceStatus"] !== null) {
-            $this->InstanceStatus = $param["InstanceStatus"];
+        if (array_key_exists('InstanceStatus',$param) and $param['InstanceStatus'] !== null) {
+            $this->InstanceStatus = $param['InstanceStatus'];
         }
     }
 }

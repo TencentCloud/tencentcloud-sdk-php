@@ -62,16 +62,16 @@ class DescribeBasicCCThresholdResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CCEnable",$param) and $param["CCEnable"] !== null) {
-            $this->CCEnable = $param["CCEnable"];
+        if (array_key_exists('CCEnable',$param) and $param['CCEnable'] !== null) {
+            $this->CCEnable = $param['CCEnable'];
         }
 
-        if (array_key_exists("CCThreshold",$param) and $param["CCThreshold"] !== null) {
-            $this->CCThreshold = $param["CCThreshold"];
+        if (array_key_exists('CCThreshold',$param) and $param['CCThreshold'] !== null) {
+            $this->CCThreshold = $param['CCThreshold'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

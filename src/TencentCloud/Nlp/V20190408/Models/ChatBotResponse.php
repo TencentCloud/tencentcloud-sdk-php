@@ -62,16 +62,16 @@ class ChatBotResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Confidence",$param) and $param["Confidence"] !== null) {
-            $this->Confidence = $param["Confidence"];
+        if (array_key_exists('Confidence',$param) and $param['Confidence'] !== null) {
+            $this->Confidence = $param['Confidence'];
         }
 
-        if (array_key_exists("Reply",$param) and $param["Reply"] !== null) {
-            $this->Reply = $param["Reply"];
+        if (array_key_exists('Reply',$param) and $param['Reply'] !== null) {
+            $this->Reply = $param['Reply'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

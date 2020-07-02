@@ -54,12 +54,12 @@ class SecurityTrend extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Date",$param) and $param["Date"] !== null) {
-            $this->Date = $param["Date"];
+        if (array_key_exists('Date',$param) and $param['Date'] !== null) {
+            $this->Date = $param['Date'];
         }
 
-        if (array_key_exists("EventNum",$param) and $param["EventNum"] !== null) {
-            $this->EventNum = $param["EventNum"];
+        if (array_key_exists('EventNum',$param) and $param['EventNum'] !== null) {
+            $this->EventNum = $param['EventNum'];
         }
     }
 }

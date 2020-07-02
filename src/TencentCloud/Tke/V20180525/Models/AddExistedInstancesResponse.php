@@ -82,20 +82,20 @@ class AddExistedInstancesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FailedInstanceIds",$param) and $param["FailedInstanceIds"] !== null) {
-            $this->FailedInstanceIds = $param["FailedInstanceIds"];
+        if (array_key_exists('FailedInstanceIds',$param) and $param['FailedInstanceIds'] !== null) {
+            $this->FailedInstanceIds = $param['FailedInstanceIds'];
         }
 
-        if (array_key_exists("SuccInstanceIds",$param) and $param["SuccInstanceIds"] !== null) {
-            $this->SuccInstanceIds = $param["SuccInstanceIds"];
+        if (array_key_exists('SuccInstanceIds',$param) and $param['SuccInstanceIds'] !== null) {
+            $this->SuccInstanceIds = $param['SuccInstanceIds'];
         }
 
-        if (array_key_exists("TimeoutInstanceIds",$param) and $param["TimeoutInstanceIds"] !== null) {
-            $this->TimeoutInstanceIds = $param["TimeoutInstanceIds"];
+        if (array_key_exists('TimeoutInstanceIds',$param) and $param['TimeoutInstanceIds'] !== null) {
+            $this->TimeoutInstanceIds = $param['TimeoutInstanceIds'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

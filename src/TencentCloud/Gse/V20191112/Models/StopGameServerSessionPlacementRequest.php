@@ -46,8 +46,8 @@ class StopGameServerSessionPlacementRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PlacementId",$param) and $param["PlacementId"] !== null) {
-            $this->PlacementId = $param["PlacementId"];
+        if (array_key_exists('PlacementId',$param) and $param['PlacementId'] !== null) {
+            $this->PlacementId = $param['PlacementId'];
         }
     }
 }

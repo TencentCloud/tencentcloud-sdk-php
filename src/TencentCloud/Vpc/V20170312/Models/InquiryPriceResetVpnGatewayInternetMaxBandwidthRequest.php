@@ -54,12 +54,12 @@ class InquiryPriceResetVpnGatewayInternetMaxBandwidthRequest extends AbstractMod
         if ($param === null) {
             return;
         }
-        if (array_key_exists("VpnGatewayId",$param) and $param["VpnGatewayId"] !== null) {
-            $this->VpnGatewayId = $param["VpnGatewayId"];
+        if (array_key_exists('VpnGatewayId',$param) and $param['VpnGatewayId'] !== null) {
+            $this->VpnGatewayId = $param['VpnGatewayId'];
         }
 
-        if (array_key_exists("InternetMaxBandwidthOut",$param) and $param["InternetMaxBandwidthOut"] !== null) {
-            $this->InternetMaxBandwidthOut = $param["InternetMaxBandwidthOut"];
+        if (array_key_exists('InternetMaxBandwidthOut',$param) and $param['InternetMaxBandwidthOut'] !== null) {
+            $this->InternetMaxBandwidthOut = $param['InternetMaxBandwidthOut'];
         }
     }
 }

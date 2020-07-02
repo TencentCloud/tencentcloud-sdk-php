@@ -54,13 +54,13 @@ class DeleteSmsTemplateResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DeleteTemplateStatus",$param) and $param["DeleteTemplateStatus"] !== null) {
+        if (array_key_exists('DeleteTemplateStatus',$param) and $param['DeleteTemplateStatus'] !== null) {
             $this->DeleteTemplateStatus = new DeleteTemplateStatus();
-            $this->DeleteTemplateStatus->deserialize($param["DeleteTemplateStatus"]);
+            $this->DeleteTemplateStatus->deserialize($param['DeleteTemplateStatus']);
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

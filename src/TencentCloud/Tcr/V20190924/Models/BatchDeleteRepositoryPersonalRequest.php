@@ -46,8 +46,8 @@ class BatchDeleteRepositoryPersonalRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RepoNames",$param) and $param["RepoNames"] !== null) {
-            $this->RepoNames = $param["RepoNames"];
+        if (array_key_exists('RepoNames',$param) and $param['RepoNames'] !== null) {
+            $this->RepoNames = $param['RepoNames'];
         }
     }
 }

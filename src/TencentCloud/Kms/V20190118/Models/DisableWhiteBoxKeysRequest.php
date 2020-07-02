@@ -46,8 +46,8 @@ class DisableWhiteBoxKeysRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("KeyIds",$param) and $param["KeyIds"] !== null) {
-            $this->KeyIds = $param["KeyIds"];
+        if (array_key_exists('KeyIds',$param) and $param['KeyIds'] !== null) {
+            $this->KeyIds = $param['KeyIds'];
         }
     }
 }

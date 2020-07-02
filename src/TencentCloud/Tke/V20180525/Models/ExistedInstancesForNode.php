@@ -62,18 +62,18 @@ class ExistedInstancesForNode extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("NodeRole",$param) and $param["NodeRole"] !== null) {
-            $this->NodeRole = $param["NodeRole"];
+        if (array_key_exists('NodeRole',$param) and $param['NodeRole'] !== null) {
+            $this->NodeRole = $param['NodeRole'];
         }
 
-        if (array_key_exists("ExistedInstancesPara",$param) and $param["ExistedInstancesPara"] !== null) {
+        if (array_key_exists('ExistedInstancesPara',$param) and $param['ExistedInstancesPara'] !== null) {
             $this->ExistedInstancesPara = new ExistedInstancesPara();
-            $this->ExistedInstancesPara->deserialize($param["ExistedInstancesPara"]);
+            $this->ExistedInstancesPara->deserialize($param['ExistedInstancesPara']);
         }
 
-        if (array_key_exists("InstanceAdvancedSettingsOverride",$param) and $param["InstanceAdvancedSettingsOverride"] !== null) {
+        if (array_key_exists('InstanceAdvancedSettingsOverride',$param) and $param['InstanceAdvancedSettingsOverride'] !== null) {
             $this->InstanceAdvancedSettingsOverride = new InstanceAdvancedSettings();
-            $this->InstanceAdvancedSettingsOverride->deserialize($param["InstanceAdvancedSettingsOverride"]);
+            $this->InstanceAdvancedSettingsOverride->deserialize($param['InstanceAdvancedSettingsOverride']);
         }
     }
 }

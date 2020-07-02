@@ -90,24 +90,24 @@ class TaskSimpleInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
-            $this->TaskId = $param["TaskId"];
+        if (array_key_exists('TaskId',$param) and $param['TaskId'] !== null) {
+            $this->TaskId = $param['TaskId'];
         }
 
-        if (array_key_exists("TaskType",$param) and $param["TaskType"] !== null) {
-            $this->TaskType = $param["TaskType"];
+        if (array_key_exists('TaskType',$param) and $param['TaskType'] !== null) {
+            $this->TaskType = $param['TaskType'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("BeginProcessTime",$param) and $param["BeginProcessTime"] !== null) {
-            $this->BeginProcessTime = $param["BeginProcessTime"];
+        if (array_key_exists('BeginProcessTime',$param) and $param['BeginProcessTime'] !== null) {
+            $this->BeginProcessTime = $param['BeginProcessTime'];
         }
 
-        if (array_key_exists("FinishTime",$param) and $param["FinishTime"] !== null) {
-            $this->FinishTime = $param["FinishTime"];
+        if (array_key_exists('FinishTime',$param) and $param['FinishTime'] !== null) {
+            $this->FinishTime = $param['FinishTime'];
         }
     }
 }

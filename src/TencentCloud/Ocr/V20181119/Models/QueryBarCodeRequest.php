@@ -46,8 +46,8 @@ class QueryBarCodeRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BarCode",$param) and $param["BarCode"] !== null) {
-            $this->BarCode = $param["BarCode"];
+        if (array_key_exists('BarCode',$param) and $param['BarCode'] !== null) {
+            $this->BarCode = $param['BarCode'];
         }
     }
 }

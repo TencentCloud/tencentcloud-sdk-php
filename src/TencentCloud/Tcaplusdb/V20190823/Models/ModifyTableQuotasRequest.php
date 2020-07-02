@@ -54,13 +54,13 @@ class ModifyTableQuotasRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
-            $this->ClusterId = $param["ClusterId"];
+        if (array_key_exists('ClusterId',$param) and $param['ClusterId'] !== null) {
+            $this->ClusterId = $param['ClusterId'];
         }
 
-        if (array_key_exists("TableQuotas",$param) and $param["TableQuotas"] !== null) {
+        if (array_key_exists('TableQuotas',$param) and $param['TableQuotas'] !== null) {
             $this->TableQuotas = [];
-            foreach ($param["TableQuotas"] as $key => $value){
+            foreach ($param['TableQuotas'] as $key => $value){
                 $obj = new SelectedTableInfoNew();
                 $obj->deserialize($value);
                 array_push($this->TableQuotas, $obj);

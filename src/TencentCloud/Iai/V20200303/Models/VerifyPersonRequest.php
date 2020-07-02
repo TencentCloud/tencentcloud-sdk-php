@@ -130,24 +130,24 @@ class VerifyPersonRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Image",$param) and $param["Image"] !== null) {
-            $this->Image = $param["Image"];
+        if (array_key_exists('Image',$param) and $param['Image'] !== null) {
+            $this->Image = $param['Image'];
         }
 
-        if (array_key_exists("Url",$param) and $param["Url"] !== null) {
-            $this->Url = $param["Url"];
+        if (array_key_exists('Url',$param) and $param['Url'] !== null) {
+            $this->Url = $param['Url'];
         }
 
-        if (array_key_exists("PersonId",$param) and $param["PersonId"] !== null) {
-            $this->PersonId = $param["PersonId"];
+        if (array_key_exists('PersonId',$param) and $param['PersonId'] !== null) {
+            $this->PersonId = $param['PersonId'];
         }
 
-        if (array_key_exists("QualityControl",$param) and $param["QualityControl"] !== null) {
-            $this->QualityControl = $param["QualityControl"];
+        if (array_key_exists('QualityControl',$param) and $param['QualityControl'] !== null) {
+            $this->QualityControl = $param['QualityControl'];
         }
 
-        if (array_key_exists("NeedRotateDetection",$param) and $param["NeedRotateDetection"] !== null) {
-            $this->NeedRotateDetection = $param["NeedRotateDetection"];
+        if (array_key_exists('NeedRotateDetection',$param) and $param['NeedRotateDetection'] !== null) {
+            $this->NeedRotateDetection = $param['NeedRotateDetection'];
         }
     }
 }

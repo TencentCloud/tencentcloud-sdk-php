@@ -54,12 +54,12 @@ class ResourceDeleteOption extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ResourceType",$param) and $param["ResourceType"] !== null) {
-            $this->ResourceType = $param["ResourceType"];
+        if (array_key_exists('ResourceType',$param) and $param['ResourceType'] !== null) {
+            $this->ResourceType = $param['ResourceType'];
         }
 
-        if (array_key_exists("DeleteMode",$param) and $param["DeleteMode"] !== null) {
-            $this->DeleteMode = $param["DeleteMode"];
+        if (array_key_exists('DeleteMode',$param) and $param['DeleteMode'] !== null) {
+            $this->DeleteMode = $param['DeleteMode'];
         }
     }
 }

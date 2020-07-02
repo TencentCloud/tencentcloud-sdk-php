@@ -62,21 +62,21 @@ class DescribeInstanceLogsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("InstanceLogList",$param) and $param["InstanceLogList"] !== null) {
+        if (array_key_exists('InstanceLogList',$param) and $param['InstanceLogList'] !== null) {
             $this->InstanceLogList = [];
-            foreach ($param["InstanceLogList"] as $key => $value){
+            foreach ($param['InstanceLogList'] as $key => $value){
                 $obj = new InstanceLog();
                 $obj->deserialize($value);
                 array_push($this->InstanceLogList, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

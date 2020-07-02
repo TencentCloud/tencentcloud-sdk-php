@@ -62,21 +62,21 @@ class DescribeClusterAsGroupsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("ClusterAsGroupSet",$param) and $param["ClusterAsGroupSet"] !== null) {
+        if (array_key_exists('ClusterAsGroupSet',$param) and $param['ClusterAsGroupSet'] !== null) {
             $this->ClusterAsGroupSet = [];
-            foreach ($param["ClusterAsGroupSet"] as $key => $value){
+            foreach ($param['ClusterAsGroupSet'] as $key => $value){
                 $obj = new ClusterAsGroup();
                 $obj->deserialize($value);
                 array_push($this->ClusterAsGroupSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

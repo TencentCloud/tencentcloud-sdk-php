@@ -46,8 +46,8 @@ class DeleteOrganizationMembersRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Uins",$param) and $param["Uins"] !== null) {
-            $this->Uins = $param["Uins"];
+        if (array_key_exists('Uins',$param) and $param['Uins'] !== null) {
+            $this->Uins = $param['Uins'];
         }
     }
 }

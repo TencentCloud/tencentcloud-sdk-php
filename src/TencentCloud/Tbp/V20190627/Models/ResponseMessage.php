@@ -50,9 +50,9 @@ class ResponseMessage extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("GroupList",$param) and $param["GroupList"] !== null) {
+        if (array_key_exists('GroupList',$param) and $param['GroupList'] !== null) {
             $this->GroupList = [];
-            foreach ($param["GroupList"] as $key => $value){
+            foreach ($param['GroupList'] as $key => $value){
                 $obj = new Group();
                 $obj->deserialize($value);
                 array_push($this->GroupList, $obj);

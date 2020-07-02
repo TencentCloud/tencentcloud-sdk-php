@@ -70,16 +70,16 @@ class DescribeAsyncRequestInfoResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("Info",$param) and $param["Info"] !== null) {
-            $this->Info = $param["Info"];
+        if (array_key_exists('Info',$param) and $param['Info'] !== null) {
+            $this->Info = $param['Info'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

@@ -62,16 +62,16 @@ class CustomImageProcess extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("StepName",$param) and $param["StepName"] !== null) {
-            $this->StepName = $param["StepName"];
+        if (array_key_exists('StepName',$param) and $param['StepName'] !== null) {
+            $this->StepName = $param['StepName'];
         }
 
-        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
-            $this->StartTime = $param["StartTime"];
+        if (array_key_exists('StartTime',$param) and $param['StartTime'] !== null) {
+            $this->StartTime = $param['StartTime'];
         }
 
-        if (array_key_exists("StepType",$param) and $param["StepType"] !== null) {
-            $this->StepType = $param["StepType"];
+        if (array_key_exists('StepType',$param) and $param['StepType'] !== null) {
+            $this->StepType = $param['StepType'];
         }
     }
 }

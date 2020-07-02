@@ -46,8 +46,8 @@ class DescribeApiKeyRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AccessKeyId",$param) and $param["AccessKeyId"] !== null) {
-            $this->AccessKeyId = $param["AccessKeyId"];
+        if (array_key_exists('AccessKeyId',$param) and $param['AccessKeyId'] !== null) {
+            $this->AccessKeyId = $param['AccessKeyId'];
         }
     }
 }

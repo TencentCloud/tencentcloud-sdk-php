@@ -66,21 +66,21 @@ class DescribeRecordsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RecordList",$param) and $param["RecordList"] !== null) {
+        if (array_key_exists('RecordList',$param) and $param['RecordList'] !== null) {
             $this->RecordList = [];
-            foreach ($param["RecordList"] as $key => $value){
+            foreach ($param['RecordList'] as $key => $value){
                 $obj = new SingleRecord();
                 $obj->deserialize($value);
                 array_push($this->RecordList, $obj);
             }
         }
 
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

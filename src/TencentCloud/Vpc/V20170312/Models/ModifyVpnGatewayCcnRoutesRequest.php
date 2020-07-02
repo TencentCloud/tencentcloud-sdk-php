@@ -54,13 +54,13 @@ class ModifyVpnGatewayCcnRoutesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("VpnGatewayId",$param) and $param["VpnGatewayId"] !== null) {
-            $this->VpnGatewayId = $param["VpnGatewayId"];
+        if (array_key_exists('VpnGatewayId',$param) and $param['VpnGatewayId'] !== null) {
+            $this->VpnGatewayId = $param['VpnGatewayId'];
         }
 
-        if (array_key_exists("Routes",$param) and $param["Routes"] !== null) {
+        if (array_key_exists('Routes',$param) and $param['Routes'] !== null) {
             $this->Routes = [];
-            foreach ($param["Routes"] as $key => $value){
+            foreach ($param['Routes'] as $key => $value){
                 $obj = new VpngwCcnRoutes();
                 $obj->deserialize($value);
                 array_push($this->Routes, $obj);

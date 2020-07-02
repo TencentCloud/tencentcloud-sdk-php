@@ -62,16 +62,16 @@ class SimultaneousInterpretingResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AsrText",$param) and $param["AsrText"] !== null) {
-            $this->AsrText = $param["AsrText"];
+        if (array_key_exists('AsrText',$param) and $param['AsrText'] !== null) {
+            $this->AsrText = $param['AsrText'];
         }
 
-        if (array_key_exists("NmtText",$param) and $param["NmtText"] !== null) {
-            $this->NmtText = $param["NmtText"];
+        if (array_key_exists('NmtText',$param) and $param['NmtText'] !== null) {
+            $this->NmtText = $param['NmtText'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

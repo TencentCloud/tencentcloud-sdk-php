@@ -78,24 +78,24 @@ class ReEncryptResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CiphertextBlob",$param) and $param["CiphertextBlob"] !== null) {
-            $this->CiphertextBlob = $param["CiphertextBlob"];
+        if (array_key_exists('CiphertextBlob',$param) and $param['CiphertextBlob'] !== null) {
+            $this->CiphertextBlob = $param['CiphertextBlob'];
         }
 
-        if (array_key_exists("KeyId",$param) and $param["KeyId"] !== null) {
-            $this->KeyId = $param["KeyId"];
+        if (array_key_exists('KeyId',$param) and $param['KeyId'] !== null) {
+            $this->KeyId = $param['KeyId'];
         }
 
-        if (array_key_exists("SourceKeyId",$param) and $param["SourceKeyId"] !== null) {
-            $this->SourceKeyId = $param["SourceKeyId"];
+        if (array_key_exists('SourceKeyId',$param) and $param['SourceKeyId'] !== null) {
+            $this->SourceKeyId = $param['SourceKeyId'];
         }
 
-        if (array_key_exists("ReEncrypted",$param) and $param["ReEncrypted"] !== null) {
-            $this->ReEncrypted = $param["ReEncrypted"];
+        if (array_key_exists('ReEncrypted',$param) and $param['ReEncrypted'] !== null) {
+            $this->ReEncrypted = $param['ReEncrypted'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

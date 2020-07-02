@@ -54,13 +54,13 @@ class InquirePriceCreateDBInstancesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Price",$param) and $param["Price"] !== null) {
+        if (array_key_exists('Price',$param) and $param['Price'] !== null) {
             $this->Price = new DBInstancePrice();
-            $this->Price->deserialize($param["Price"]);
+            $this->Price->deserialize($param['Price']);
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

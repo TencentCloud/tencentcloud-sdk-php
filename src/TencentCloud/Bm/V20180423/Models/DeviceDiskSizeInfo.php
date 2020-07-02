@@ -54,12 +54,12 @@ class DeviceDiskSizeInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DiskName",$param) and $param["DiskName"] !== null) {
-            $this->DiskName = $param["DiskName"];
+        if (array_key_exists('DiskName',$param) and $param['DiskName'] !== null) {
+            $this->DiskName = $param['DiskName'];
         }
 
-        if (array_key_exists("DiskSize",$param) and $param["DiskSize"] !== null) {
-            $this->DiskSize = $param["DiskSize"];
+        if (array_key_exists('DiskSize',$param) and $param['DiskSize'] !== null) {
+            $this->DiskSize = $param['DiskSize'];
         }
     }
 }

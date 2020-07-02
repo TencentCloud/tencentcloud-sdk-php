@@ -78,24 +78,24 @@ class QQAccountInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("QQOpenId",$param) and $param["QQOpenId"] !== null) {
-            $this->QQOpenId = $param["QQOpenId"];
+        if (array_key_exists('QQOpenId',$param) and $param['QQOpenId'] !== null) {
+            $this->QQOpenId = $param['QQOpenId'];
         }
 
-        if (array_key_exists("AppIdUser",$param) and $param["AppIdUser"] !== null) {
-            $this->AppIdUser = $param["AppIdUser"];
+        if (array_key_exists('AppIdUser',$param) and $param['AppIdUser'] !== null) {
+            $this->AppIdUser = $param['AppIdUser'];
         }
 
-        if (array_key_exists("AssociateAccount",$param) and $param["AssociateAccount"] !== null) {
-            $this->AssociateAccount = $param["AssociateAccount"];
+        if (array_key_exists('AssociateAccount',$param) and $param['AssociateAccount'] !== null) {
+            $this->AssociateAccount = $param['AssociateAccount'];
         }
 
-        if (array_key_exists("MobilePhone",$param) and $param["MobilePhone"] !== null) {
-            $this->MobilePhone = $param["MobilePhone"];
+        if (array_key_exists('MobilePhone',$param) and $param['MobilePhone'] !== null) {
+            $this->MobilePhone = $param['MobilePhone'];
         }
 
-        if (array_key_exists("DeviceId",$param) and $param["DeviceId"] !== null) {
-            $this->DeviceId = $param["DeviceId"];
+        if (array_key_exists('DeviceId',$param) and $param['DeviceId'] !== null) {
+            $this->DeviceId = $param['DeviceId'];
         }
     }
 }

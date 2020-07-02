@@ -62,16 +62,16 @@ class UpdateJobRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("JobId",$param) and $param["JobId"] !== null) {
-            $this->JobId = $param["JobId"];
+        if (array_key_exists('JobId',$param) and $param['JobId'] !== null) {
+            $this->JobId = $param['JobId'];
         }
 
-        if (array_key_exists("JobAction",$param) and $param["JobAction"] !== null) {
-            $this->JobAction = $param["JobAction"];
+        if (array_key_exists('JobAction',$param) and $param['JobAction'] !== null) {
+            $this->JobAction = $param['JobAction'];
         }
 
-        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
-            $this->Description = $param["Description"];
+        if (array_key_exists('Description',$param) and $param['Description'] !== null) {
+            $this->Description = $param['Description'];
         }
     }
 }

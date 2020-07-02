@@ -54,12 +54,12 @@ class CosBackup extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("IsAutoBackup",$param) and $param["IsAutoBackup"] !== null) {
-            $this->IsAutoBackup = $param["IsAutoBackup"];
+        if (array_key_exists('IsAutoBackup',$param) and $param['IsAutoBackup'] !== null) {
+            $this->IsAutoBackup = $param['IsAutoBackup'];
         }
 
-        if (array_key_exists("BackupTime",$param) and $param["BackupTime"] !== null) {
-            $this->BackupTime = $param["BackupTime"];
+        if (array_key_exists('BackupTime',$param) and $param['BackupTime'] !== null) {
+            $this->BackupTime = $param['BackupTime'];
         }
     }
 }

@@ -58,13 +58,13 @@ class Assignment extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Version",$param) and $param["Version"] !== null) {
-            $this->Version = $param["Version"];
+        if (array_key_exists('Version',$param) and $param['Version'] !== null) {
+            $this->Version = $param['Version'];
         }
 
-        if (array_key_exists("Topics",$param) and $param["Topics"] !== null) {
+        if (array_key_exists('Topics',$param) and $param['Topics'] !== null) {
             $this->Topics = [];
-            foreach ($param["Topics"] as $key => $value){
+            foreach ($param['Topics'] as $key => $value){
                 $obj = new GroupInfoTopics();
                 $obj->deserialize($value);
                 array_push($this->Topics, $obj);

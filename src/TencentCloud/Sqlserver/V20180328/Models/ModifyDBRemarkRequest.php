@@ -54,13 +54,13 @@ class ModifyDBRemarkRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("DBRemarks",$param) and $param["DBRemarks"] !== null) {
+        if (array_key_exists('DBRemarks',$param) and $param['DBRemarks'] !== null) {
             $this->DBRemarks = [];
-            foreach ($param["DBRemarks"] as $key => $value){
+            foreach ($param['DBRemarks'] as $key => $value){
                 $obj = new DBRemark();
                 $obj->deserialize($value);
                 array_push($this->DBRemarks, $obj);

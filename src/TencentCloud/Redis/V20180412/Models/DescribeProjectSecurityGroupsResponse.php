@@ -62,21 +62,21 @@ class DescribeProjectSecurityGroupsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Groups",$param) and $param["Groups"] !== null) {
+        if (array_key_exists('Groups',$param) and $param['Groups'] !== null) {
             $this->Groups = [];
-            foreach ($param["Groups"] as $key => $value){
+            foreach ($param['Groups'] as $key => $value){
                 $obj = new SecurityGroup();
                 $obj->deserialize($value);
                 array_push($this->Groups, $obj);
             }
         }
 
-        if (array_key_exists("Total",$param) and $param["Total"] !== null) {
-            $this->Total = $param["Total"];
+        if (array_key_exists('Total',$param) and $param['Total'] !== null) {
+            $this->Total = $param['Total'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

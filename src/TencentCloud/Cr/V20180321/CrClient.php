@@ -63,7 +63,7 @@ class CrClient extends AbstractClient
 
     public function returnResponse($action, $response)
     {
-        $respClass = "TencentCloud"."\\".ucfirst("cr")."\\"."V20180321\\Models"."\\".ucfirst($action)."Response";
+        $respClass = 'TencentCloud'."\\".ucfirst('cr')."\\"."V20180321\\Models"."\\".ucfirst($action).'Response';
         $obj = new $respClass();
         $obj->deserialize($response);
         return $obj;
@@ -72,9 +72,9 @@ class CrClient extends AbstractClient
     public function UploadDataFile($req)
     {
         $options = array(
-            "IsMultipart" => true,
-            "BinaryParams" => array("File"),
+            'IsMultipart' => true,
+            'BinaryParams' => array('File'),
         );
-        return $this->doRequestWithOptions("UploadDataFile", $req, $options);
+        return $this->doRequestWithOptions('UploadDataFile', $req, $options);
     }
 }

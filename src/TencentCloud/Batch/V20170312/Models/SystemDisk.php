@@ -62,16 +62,16 @@ class SystemDisk extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DiskType",$param) and $param["DiskType"] !== null) {
-            $this->DiskType = $param["DiskType"];
+        if (array_key_exists('DiskType',$param) and $param['DiskType'] !== null) {
+            $this->DiskType = $param['DiskType'];
         }
 
-        if (array_key_exists("DiskId",$param) and $param["DiskId"] !== null) {
-            $this->DiskId = $param["DiskId"];
+        if (array_key_exists('DiskId',$param) and $param['DiskId'] !== null) {
+            $this->DiskId = $param['DiskId'];
         }
 
-        if (array_key_exists("DiskSize",$param) and $param["DiskSize"] !== null) {
-            $this->DiskSize = $param["DiskSize"];
+        if (array_key_exists('DiskSize',$param) and $param['DiskSize'] !== null) {
+            $this->DiskSize = $param['DiskSize'];
         }
     }
 }

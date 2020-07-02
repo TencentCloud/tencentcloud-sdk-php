@@ -54,12 +54,12 @@ class RunIotModelRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ProductId",$param) and $param["ProductId"] !== null) {
-            $this->ProductId = $param["ProductId"];
+        if (array_key_exists('ProductId',$param) and $param['ProductId'] !== null) {
+            $this->ProductId = $param['ProductId'];
         }
 
-        if (array_key_exists("IotModel",$param) and $param["IotModel"] !== null) {
-            $this->IotModel = $param["IotModel"];
+        if (array_key_exists('IotModel',$param) and $param['IotModel'] !== null) {
+            $this->IotModel = $param['IotModel'];
         }
     }
 }

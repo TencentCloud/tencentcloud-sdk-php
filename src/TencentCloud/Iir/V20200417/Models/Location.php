@@ -70,20 +70,20 @@ class Location extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("XMin",$param) and $param["XMin"] !== null) {
-            $this->XMin = $param["XMin"];
+        if (array_key_exists('XMin',$param) and $param['XMin'] !== null) {
+            $this->XMin = $param['XMin'];
         }
 
-        if (array_key_exists("YMin",$param) and $param["YMin"] !== null) {
-            $this->YMin = $param["YMin"];
+        if (array_key_exists('YMin',$param) and $param['YMin'] !== null) {
+            $this->YMin = $param['YMin'];
         }
 
-        if (array_key_exists("XMax",$param) and $param["XMax"] !== null) {
-            $this->XMax = $param["XMax"];
+        if (array_key_exists('XMax',$param) and $param['XMax'] !== null) {
+            $this->XMax = $param['XMax'];
         }
 
-        if (array_key_exists("YMax",$param) and $param["YMax"] !== null) {
-            $this->YMax = $param["YMax"];
+        if (array_key_exists('YMax',$param) and $param['YMax'] !== null) {
+            $this->YMax = $param['YMax'];
         }
     }
 }

@@ -62,16 +62,16 @@ class TablePrivilege extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Database",$param) and $param["Database"] !== null) {
-            $this->Database = $param["Database"];
+        if (array_key_exists('Database',$param) and $param['Database'] !== null) {
+            $this->Database = $param['Database'];
         }
 
-        if (array_key_exists("Table",$param) and $param["Table"] !== null) {
-            $this->Table = $param["Table"];
+        if (array_key_exists('Table',$param) and $param['Table'] !== null) {
+            $this->Table = $param['Table'];
         }
 
-        if (array_key_exists("Privileges",$param) and $param["Privileges"] !== null) {
-            $this->Privileges = $param["Privileges"];
+        if (array_key_exists('Privileges',$param) and $param['Privileges'] !== null) {
+            $this->Privileges = $param['Privileges'];
         }
     }
 }

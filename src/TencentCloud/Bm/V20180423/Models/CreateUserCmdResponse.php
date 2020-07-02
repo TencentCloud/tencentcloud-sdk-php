@@ -54,12 +54,12 @@ class CreateUserCmdResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CmdId",$param) and $param["CmdId"] !== null) {
-            $this->CmdId = $param["CmdId"];
+        if (array_key_exists('CmdId',$param) and $param['CmdId'] !== null) {
+            $this->CmdId = $param['CmdId'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

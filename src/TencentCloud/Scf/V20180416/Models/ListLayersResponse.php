@@ -62,21 +62,21 @@ class ListLayersResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Layers",$param) and $param["Layers"] !== null) {
+        if (array_key_exists('Layers',$param) and $param['Layers'] !== null) {
             $this->Layers = [];
-            foreach ($param["Layers"] as $key => $value){
+            foreach ($param['Layers'] as $key => $value){
                 $obj = new LayerVersionInfo();
                 $obj->deserialize($value);
                 array_push($this->Layers, $obj);
             }
         }
 
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

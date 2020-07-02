@@ -54,12 +54,12 @@ class AddIp6RulesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Ip6RuleSet",$param) and $param["Ip6RuleSet"] !== null) {
-            $this->Ip6RuleSet = $param["Ip6RuleSet"];
+        if (array_key_exists('Ip6RuleSet',$param) and $param['Ip6RuleSet'] !== null) {
+            $this->Ip6RuleSet = $param['Ip6RuleSet'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

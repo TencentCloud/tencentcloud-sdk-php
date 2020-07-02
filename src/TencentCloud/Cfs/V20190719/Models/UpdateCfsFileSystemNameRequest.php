@@ -54,12 +54,12 @@ class UpdateCfsFileSystemNameRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FileSystemId",$param) and $param["FileSystemId"] !== null) {
-            $this->FileSystemId = $param["FileSystemId"];
+        if (array_key_exists('FileSystemId',$param) and $param['FileSystemId'] !== null) {
+            $this->FileSystemId = $param['FileSystemId'];
         }
 
-        if (array_key_exists("FsName",$param) and $param["FsName"] !== null) {
-            $this->FsName = $param["FsName"];
+        if (array_key_exists('FsName',$param) and $param['FsName'] !== null) {
+            $this->FsName = $param['FsName'];
         }
     }
 }

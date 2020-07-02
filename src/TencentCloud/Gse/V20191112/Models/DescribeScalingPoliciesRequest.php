@@ -70,20 +70,20 @@ class DescribeScalingPoliciesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FleetId",$param) and $param["FleetId"] !== null) {
-            $this->FleetId = $param["FleetId"];
+        if (array_key_exists('FleetId',$param) and $param['FleetId'] !== null) {
+            $this->FleetId = $param['FleetId'];
         }
 
-        if (array_key_exists("StatusFilter",$param) and $param["StatusFilter"] !== null) {
-            $this->StatusFilter = $param["StatusFilter"];
+        if (array_key_exists('StatusFilter',$param) and $param['StatusFilter'] !== null) {
+            $this->StatusFilter = $param['StatusFilter'];
         }
 
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
+        if (array_key_exists('Offset',$param) and $param['Offset'] !== null) {
+            $this->Offset = $param['Offset'];
         }
 
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
+        if (array_key_exists('Limit',$param) and $param['Limit'] !== null) {
+            $this->Limit = $param['Limit'];
         }
     }
 }

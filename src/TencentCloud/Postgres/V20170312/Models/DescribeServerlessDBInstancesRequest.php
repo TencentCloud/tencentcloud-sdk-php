@@ -62,21 +62,21 @@ class DescribeServerlessDBInstancesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Filter",$param) and $param["Filter"] !== null) {
+        if (array_key_exists('Filter',$param) and $param['Filter'] !== null) {
             $this->Filter = [];
-            foreach ($param["Filter"] as $key => $value){
+            foreach ($param['Filter'] as $key => $value){
                 $obj = new Filter();
                 $obj->deserialize($value);
                 array_push($this->Filter, $obj);
             }
         }
 
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
+        if (array_key_exists('Limit',$param) and $param['Limit'] !== null) {
+            $this->Limit = $param['Limit'];
         }
 
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
+        if (array_key_exists('Offset',$param) and $param['Offset'] !== null) {
+            $this->Offset = $param['Offset'];
         }
     }
 }

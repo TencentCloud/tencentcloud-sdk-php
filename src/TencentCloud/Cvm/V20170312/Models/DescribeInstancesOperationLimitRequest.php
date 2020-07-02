@@ -58,12 +58,12 @@ class DescribeInstancesOperationLimitRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceIds",$param) and $param["InstanceIds"] !== null) {
-            $this->InstanceIds = $param["InstanceIds"];
+        if (array_key_exists('InstanceIds',$param) and $param['InstanceIds'] !== null) {
+            $this->InstanceIds = $param['InstanceIds'];
         }
 
-        if (array_key_exists("Operation",$param) and $param["Operation"] !== null) {
-            $this->Operation = $param["Operation"];
+        if (array_key_exists('Operation',$param) and $param['Operation'] !== null) {
+            $this->Operation = $param['Operation'];
         }
     }
 }

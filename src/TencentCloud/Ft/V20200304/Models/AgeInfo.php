@@ -58,13 +58,13 @@ class AgeInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Age",$param) and $param["Age"] !== null) {
-            $this->Age = $param["Age"];
+        if (array_key_exists('Age',$param) and $param['Age'] !== null) {
+            $this->Age = $param['Age'];
         }
 
-        if (array_key_exists("FaceRect",$param) and $param["FaceRect"] !== null) {
+        if (array_key_exists('FaceRect',$param) and $param['FaceRect'] !== null) {
             $this->FaceRect = new FaceRect();
-            $this->FaceRect->deserialize($param["FaceRect"]);
+            $this->FaceRect->deserialize($param['FaceRect']);
         }
     }
 }

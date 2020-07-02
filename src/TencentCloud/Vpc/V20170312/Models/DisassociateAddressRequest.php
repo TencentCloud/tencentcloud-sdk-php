@@ -54,12 +54,12 @@ class DisassociateAddressRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AddressId",$param) and $param["AddressId"] !== null) {
-            $this->AddressId = $param["AddressId"];
+        if (array_key_exists('AddressId',$param) and $param['AddressId'] !== null) {
+            $this->AddressId = $param['AddressId'];
         }
 
-        if (array_key_exists("ReallocateNormalPublicIp",$param) and $param["ReallocateNormalPublicIp"] !== null) {
-            $this->ReallocateNormalPublicIp = $param["ReallocateNormalPublicIp"];
+        if (array_key_exists('ReallocateNormalPublicIp',$param) and $param['ReallocateNormalPublicIp'] !== null) {
+            $this->ReallocateNormalPublicIp = $param['ReallocateNormalPublicIp'];
         }
     }
 }

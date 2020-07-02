@@ -62,16 +62,16 @@ class CheckAssistantCidrRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
-            $this->VpcId = $param["VpcId"];
+        if (array_key_exists('VpcId',$param) and $param['VpcId'] !== null) {
+            $this->VpcId = $param['VpcId'];
         }
 
-        if (array_key_exists("NewCidrBlocks",$param) and $param["NewCidrBlocks"] !== null) {
-            $this->NewCidrBlocks = $param["NewCidrBlocks"];
+        if (array_key_exists('NewCidrBlocks',$param) and $param['NewCidrBlocks'] !== null) {
+            $this->NewCidrBlocks = $param['NewCidrBlocks'];
         }
 
-        if (array_key_exists("OldCidrBlocks",$param) and $param["OldCidrBlocks"] !== null) {
-            $this->OldCidrBlocks = $param["OldCidrBlocks"];
+        if (array_key_exists('OldCidrBlocks',$param) and $param['OldCidrBlocks'] !== null) {
+            $this->OldCidrBlocks = $param['OldCidrBlocks'];
         }
     }
 }

@@ -54,17 +54,17 @@ class DescribeDomainPriceListResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PriceList",$param) and $param["PriceList"] !== null) {
+        if (array_key_exists('PriceList',$param) and $param['PriceList'] !== null) {
             $this->PriceList = [];
-            foreach ($param["PriceList"] as $key => $value){
+            foreach ($param['PriceList'] as $key => $value){
                 $obj = new PriceInfo();
                 $obj->deserialize($value);
                 array_push($this->PriceList, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

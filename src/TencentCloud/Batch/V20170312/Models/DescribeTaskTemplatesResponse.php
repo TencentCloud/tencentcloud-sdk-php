@@ -62,21 +62,21 @@ class DescribeTaskTemplatesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TaskTemplateSet",$param) and $param["TaskTemplateSet"] !== null) {
+        if (array_key_exists('TaskTemplateSet',$param) and $param['TaskTemplateSet'] !== null) {
             $this->TaskTemplateSet = [];
-            foreach ($param["TaskTemplateSet"] as $key => $value){
+            foreach ($param['TaskTemplateSet'] as $key => $value){
                 $obj = new TaskTemplateView();
                 $obj->deserialize($value);
                 array_push($this->TaskTemplateSet, $obj);
             }
         }
 
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

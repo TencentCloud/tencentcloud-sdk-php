@@ -94,32 +94,32 @@ class SignInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AccountResId",$param) and $param["AccountResId"] !== null) {
-            $this->AccountResId = $param["AccountResId"];
+        if (array_key_exists('AccountResId',$param) and $param['AccountResId'] !== null) {
+            $this->AccountResId = $param['AccountResId'];
         }
 
-        if (array_key_exists("AuthorizationTime",$param) and $param["AuthorizationTime"] !== null) {
-            $this->AuthorizationTime = $param["AuthorizationTime"];
+        if (array_key_exists('AuthorizationTime',$param) and $param['AuthorizationTime'] !== null) {
+            $this->AuthorizationTime = $param['AuthorizationTime'];
         }
 
-        if (array_key_exists("Location",$param) and $param["Location"] !== null) {
-            $this->Location = $param["Location"];
+        if (array_key_exists('Location',$param) and $param['Location'] !== null) {
+            $this->Location = $param['Location'];
         }
 
-        if (array_key_exists("SealId",$param) and $param["SealId"] !== null) {
-            $this->SealId = $param["SealId"];
+        if (array_key_exists('SealId',$param) and $param['SealId'] !== null) {
+            $this->SealId = $param['SealId'];
         }
 
-        if (array_key_exists("ImageData",$param) and $param["ImageData"] !== null) {
-            $this->ImageData = $param["ImageData"];
+        if (array_key_exists('ImageData',$param) and $param['ImageData'] !== null) {
+            $this->ImageData = $param['ImageData'];
         }
 
-        if (array_key_exists("CertType",$param) and $param["CertType"] !== null) {
-            $this->CertType = $param["CertType"];
+        if (array_key_exists('CertType',$param) and $param['CertType'] !== null) {
+            $this->CertType = $param['CertType'];
         }
 
-        if (array_key_exists("SignLocation",$param) and $param["SignLocation"] !== null) {
-            $this->SignLocation = $param["SignLocation"];
+        if (array_key_exists('SignLocation',$param) and $param['SignLocation'] !== null) {
+            $this->SignLocation = $param['SignLocation'];
         }
     }
 }

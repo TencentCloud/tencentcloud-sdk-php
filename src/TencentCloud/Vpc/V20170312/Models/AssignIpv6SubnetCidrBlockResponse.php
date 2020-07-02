@@ -54,17 +54,17 @@ class AssignIpv6SubnetCidrBlockResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Ipv6SubnetCidrBlockSet",$param) and $param["Ipv6SubnetCidrBlockSet"] !== null) {
+        if (array_key_exists('Ipv6SubnetCidrBlockSet',$param) and $param['Ipv6SubnetCidrBlockSet'] !== null) {
             $this->Ipv6SubnetCidrBlockSet = [];
-            foreach ($param["Ipv6SubnetCidrBlockSet"] as $key => $value){
+            foreach ($param['Ipv6SubnetCidrBlockSet'] as $key => $value){
                 $obj = new Ipv6SubnetCidrBlock();
                 $obj->deserialize($value);
                 array_push($this->Ipv6SubnetCidrBlockSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

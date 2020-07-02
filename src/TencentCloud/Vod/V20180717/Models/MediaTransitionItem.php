@@ -54,13 +54,13 @@ class MediaTransitionItem extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Duration",$param) and $param["Duration"] !== null) {
-            $this->Duration = $param["Duration"];
+        if (array_key_exists('Duration',$param) and $param['Duration'] !== null) {
+            $this->Duration = $param['Duration'];
         }
 
-        if (array_key_exists("Transitions",$param) and $param["Transitions"] !== null) {
+        if (array_key_exists('Transitions',$param) and $param['Transitions'] !== null) {
             $this->Transitions = [];
-            foreach ($param["Transitions"] as $key => $value){
+            foreach ($param['Transitions'] as $key => $value){
                 $obj = new TransitionOpertion();
                 $obj->deserialize($value);
                 array_push($this->Transitions, $obj);

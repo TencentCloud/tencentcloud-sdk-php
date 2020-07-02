@@ -54,12 +54,12 @@ class DeleteUsualLoginPlacesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Uuid",$param) and $param["Uuid"] !== null) {
-            $this->Uuid = $param["Uuid"];
+        if (array_key_exists('Uuid',$param) and $param['Uuid'] !== null) {
+            $this->Uuid = $param['Uuid'];
         }
 
-        if (array_key_exists("CityIds",$param) and $param["CityIds"] !== null) {
-            $this->CityIds = $param["CityIds"];
+        if (array_key_exists('CityIds',$param) and $param['CityIds'] !== null) {
+            $this->CityIds = $param['CityIds'];
         }
     }
 }

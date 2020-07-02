@@ -170,48 +170,48 @@ class TextVehicleFront extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PlateNo",$param) and $param["PlateNo"] !== null) {
-            $this->PlateNo = $param["PlateNo"];
+        if (array_key_exists('PlateNo',$param) and $param['PlateNo'] !== null) {
+            $this->PlateNo = $param['PlateNo'];
         }
 
-        if (array_key_exists("VehicleType",$param) and $param["VehicleType"] !== null) {
-            $this->VehicleType = $param["VehicleType"];
+        if (array_key_exists('VehicleType',$param) and $param['VehicleType'] !== null) {
+            $this->VehicleType = $param['VehicleType'];
         }
 
-        if (array_key_exists("Owner",$param) and $param["Owner"] !== null) {
-            $this->Owner = $param["Owner"];
+        if (array_key_exists('Owner',$param) and $param['Owner'] !== null) {
+            $this->Owner = $param['Owner'];
         }
 
-        if (array_key_exists("Address",$param) and $param["Address"] !== null) {
-            $this->Address = $param["Address"];
+        if (array_key_exists('Address',$param) and $param['Address'] !== null) {
+            $this->Address = $param['Address'];
         }
 
-        if (array_key_exists("UseCharacter",$param) and $param["UseCharacter"] !== null) {
-            $this->UseCharacter = $param["UseCharacter"];
+        if (array_key_exists('UseCharacter',$param) and $param['UseCharacter'] !== null) {
+            $this->UseCharacter = $param['UseCharacter'];
         }
 
-        if (array_key_exists("Model",$param) and $param["Model"] !== null) {
-            $this->Model = $param["Model"];
+        if (array_key_exists('Model',$param) and $param['Model'] !== null) {
+            $this->Model = $param['Model'];
         }
 
-        if (array_key_exists("Vin",$param) and $param["Vin"] !== null) {
-            $this->Vin = $param["Vin"];
+        if (array_key_exists('Vin',$param) and $param['Vin'] !== null) {
+            $this->Vin = $param['Vin'];
         }
 
-        if (array_key_exists("EngineNo",$param) and $param["EngineNo"] !== null) {
-            $this->EngineNo = $param["EngineNo"];
+        if (array_key_exists('EngineNo',$param) and $param['EngineNo'] !== null) {
+            $this->EngineNo = $param['EngineNo'];
         }
 
-        if (array_key_exists("RegisterDate",$param) and $param["RegisterDate"] !== null) {
-            $this->RegisterDate = $param["RegisterDate"];
+        if (array_key_exists('RegisterDate',$param) and $param['RegisterDate'] !== null) {
+            $this->RegisterDate = $param['RegisterDate'];
         }
 
-        if (array_key_exists("IssueDate",$param) and $param["IssueDate"] !== null) {
-            $this->IssueDate = $param["IssueDate"];
+        if (array_key_exists('IssueDate',$param) and $param['IssueDate'] !== null) {
+            $this->IssueDate = $param['IssueDate'];
         }
 
-        if (array_key_exists("Seal",$param) and $param["Seal"] !== null) {
-            $this->Seal = $param["Seal"];
+        if (array_key_exists('Seal',$param) and $param['Seal'] !== null) {
+            $this->Seal = $param['Seal'];
         }
     }
 }

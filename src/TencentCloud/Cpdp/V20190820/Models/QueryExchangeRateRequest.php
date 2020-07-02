@@ -62,16 +62,16 @@ class QueryExchangeRateRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SourceCurrency",$param) and $param["SourceCurrency"] !== null) {
-            $this->SourceCurrency = $param["SourceCurrency"];
+        if (array_key_exists('SourceCurrency',$param) and $param['SourceCurrency'] !== null) {
+            $this->SourceCurrency = $param['SourceCurrency'];
         }
 
-        if (array_key_exists("TargetCurrency",$param) and $param["TargetCurrency"] !== null) {
-            $this->TargetCurrency = $param["TargetCurrency"];
+        if (array_key_exists('TargetCurrency',$param) and $param['TargetCurrency'] !== null) {
+            $this->TargetCurrency = $param['TargetCurrency'];
         }
 
-        if (array_key_exists("Profile",$param) and $param["Profile"] !== null) {
-            $this->Profile = $param["Profile"];
+        if (array_key_exists('Profile',$param) and $param['Profile'] !== null) {
+            $this->Profile = $param['Profile'];
         }
     }
 }

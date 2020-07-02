@@ -54,13 +54,13 @@ class DeleteNatGatewayDestinationIpPortTranslationNatRuleRequest extends Abstrac
         if ($param === null) {
             return;
         }
-        if (array_key_exists("NatGatewayId",$param) and $param["NatGatewayId"] !== null) {
-            $this->NatGatewayId = $param["NatGatewayId"];
+        if (array_key_exists('NatGatewayId',$param) and $param['NatGatewayId'] !== null) {
+            $this->NatGatewayId = $param['NatGatewayId'];
         }
 
-        if (array_key_exists("DestinationIpPortTranslationNatRules",$param) and $param["DestinationIpPortTranslationNatRules"] !== null) {
+        if (array_key_exists('DestinationIpPortTranslationNatRules',$param) and $param['DestinationIpPortTranslationNatRules'] !== null) {
             $this->DestinationIpPortTranslationNatRules = [];
-            foreach ($param["DestinationIpPortTranslationNatRules"] as $key => $value){
+            foreach ($param['DestinationIpPortTranslationNatRules'] as $key => $value){
                 $obj = new DestinationIpPortTranslationNatRule();
                 $obj->deserialize($value);
                 array_push($this->DestinationIpPortTranslationNatRules, $obj);

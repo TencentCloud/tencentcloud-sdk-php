@@ -70,20 +70,20 @@ class CreateAppUsrResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CunionId",$param) and $param["CunionId"] !== null) {
-            $this->CunionId = $param["CunionId"];
+        if (array_key_exists('CunionId',$param) and $param['CunionId'] !== null) {
+            $this->CunionId = $param['CunionId'];
         }
 
-        if (array_key_exists("AccessId",$param) and $param["AccessId"] !== null) {
-            $this->AccessId = $param["AccessId"];
+        if (array_key_exists('AccessId',$param) and $param['AccessId'] !== null) {
+            $this->AccessId = $param['AccessId'];
         }
 
-        if (array_key_exists("NewRegist",$param) and $param["NewRegist"] !== null) {
-            $this->NewRegist = $param["NewRegist"];
+        if (array_key_exists('NewRegist',$param) and $param['NewRegist'] !== null) {
+            $this->NewRegist = $param['NewRegist'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

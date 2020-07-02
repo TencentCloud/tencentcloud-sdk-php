@@ -82,21 +82,21 @@ class OpeningEndingTaskResult extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("ErrCode",$param) and $param["ErrCode"] !== null) {
-            $this->ErrCode = $param["ErrCode"];
+        if (array_key_exists('ErrCode',$param) and $param['ErrCode'] !== null) {
+            $this->ErrCode = $param['ErrCode'];
         }
 
-        if (array_key_exists("ErrMsg",$param) and $param["ErrMsg"] !== null) {
-            $this->ErrMsg = $param["ErrMsg"];
+        if (array_key_exists('ErrMsg',$param) and $param['ErrMsg'] !== null) {
+            $this->ErrMsg = $param['ErrMsg'];
         }
 
-        if (array_key_exists("Item",$param) and $param["Item"] !== null) {
+        if (array_key_exists('Item',$param) and $param['Item'] !== null) {
             $this->Item = new OpeningEndingTaskResultItem();
-            $this->Item->deserialize($param["Item"]);
+            $this->Item->deserialize($param['Item']);
         }
     }
 }

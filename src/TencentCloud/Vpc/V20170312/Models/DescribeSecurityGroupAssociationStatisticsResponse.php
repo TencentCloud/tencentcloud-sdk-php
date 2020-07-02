@@ -54,17 +54,17 @@ class DescribeSecurityGroupAssociationStatisticsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SecurityGroupAssociationStatisticsSet",$param) and $param["SecurityGroupAssociationStatisticsSet"] !== null) {
+        if (array_key_exists('SecurityGroupAssociationStatisticsSet',$param) and $param['SecurityGroupAssociationStatisticsSet'] !== null) {
             $this->SecurityGroupAssociationStatisticsSet = [];
-            foreach ($param["SecurityGroupAssociationStatisticsSet"] as $key => $value){
+            foreach ($param['SecurityGroupAssociationStatisticsSet'] as $key => $value){
                 $obj = new SecurityGroupAssociationStatistics();
                 $obj->deserialize($value);
                 array_push($this->SecurityGroupAssociationStatisticsSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

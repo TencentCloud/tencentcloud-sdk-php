@@ -62,21 +62,21 @@ class DescribeImagesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ImageInfoList",$param) and $param["ImageInfoList"] !== null) {
+        if (array_key_exists('ImageInfoList',$param) and $param['ImageInfoList'] !== null) {
             $this->ImageInfoList = [];
-            foreach ($param["ImageInfoList"] as $key => $value){
+            foreach ($param['ImageInfoList'] as $key => $value){
                 $obj = new TcrImageInfo();
                 $obj->deserialize($value);
                 array_push($this->ImageInfoList, $obj);
             }
         }
 
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

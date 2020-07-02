@@ -54,12 +54,12 @@ class UnbindAutoSnapshotPolicyRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DiskIds",$param) and $param["DiskIds"] !== null) {
-            $this->DiskIds = $param["DiskIds"];
+        if (array_key_exists('DiskIds',$param) and $param['DiskIds'] !== null) {
+            $this->DiskIds = $param['DiskIds'];
         }
 
-        if (array_key_exists("AutoSnapshotPolicyId",$param) and $param["AutoSnapshotPolicyId"] !== null) {
-            $this->AutoSnapshotPolicyId = $param["AutoSnapshotPolicyId"];
+        if (array_key_exists('AutoSnapshotPolicyId',$param) and $param['AutoSnapshotPolicyId'] !== null) {
+            $this->AutoSnapshotPolicyId = $param['AutoSnapshotPolicyId'];
         }
     }
 }

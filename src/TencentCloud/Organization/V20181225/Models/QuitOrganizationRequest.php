@@ -46,8 +46,8 @@ class QuitOrganizationRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("OrgId",$param) and $param["OrgId"] !== null) {
-            $this->OrgId = $param["OrgId"];
+        if (array_key_exists('OrgId',$param) and $param['OrgId'] !== null) {
+            $this->OrgId = $param['OrgId'];
         }
     }
 }

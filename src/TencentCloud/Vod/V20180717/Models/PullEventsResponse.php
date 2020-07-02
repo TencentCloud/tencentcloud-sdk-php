@@ -58,17 +58,17 @@ class PullEventsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("EventSet",$param) and $param["EventSet"] !== null) {
+        if (array_key_exists('EventSet',$param) and $param['EventSet'] !== null) {
             $this->EventSet = [];
-            foreach ($param["EventSet"] as $key => $value){
+            foreach ($param['EventSet'] as $key => $value){
                 $obj = new EventContent();
                 $obj->deserialize($value);
                 array_push($this->EventSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

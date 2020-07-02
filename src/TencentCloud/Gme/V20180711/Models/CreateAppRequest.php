@@ -102,40 +102,40 @@ class CreateAppRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AppName",$param) and $param["AppName"] !== null) {
-            $this->AppName = $param["AppName"];
+        if (array_key_exists('AppName',$param) and $param['AppName'] !== null) {
+            $this->AppName = $param['AppName'];
         }
 
-        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
-            $this->ProjectId = $param["ProjectId"];
+        if (array_key_exists('ProjectId',$param) and $param['ProjectId'] !== null) {
+            $this->ProjectId = $param['ProjectId'];
         }
 
-        if (array_key_exists("EngineList",$param) and $param["EngineList"] !== null) {
-            $this->EngineList = $param["EngineList"];
+        if (array_key_exists('EngineList',$param) and $param['EngineList'] !== null) {
+            $this->EngineList = $param['EngineList'];
         }
 
-        if (array_key_exists("RegionList",$param) and $param["RegionList"] !== null) {
-            $this->RegionList = $param["RegionList"];
+        if (array_key_exists('RegionList',$param) and $param['RegionList'] !== null) {
+            $this->RegionList = $param['RegionList'];
         }
 
-        if (array_key_exists("RealtimeSpeechConf",$param) and $param["RealtimeSpeechConf"] !== null) {
+        if (array_key_exists('RealtimeSpeechConf',$param) and $param['RealtimeSpeechConf'] !== null) {
             $this->RealtimeSpeechConf = new RealtimeSpeechConf();
-            $this->RealtimeSpeechConf->deserialize($param["RealtimeSpeechConf"]);
+            $this->RealtimeSpeechConf->deserialize($param['RealtimeSpeechConf']);
         }
 
-        if (array_key_exists("VoiceMessageConf",$param) and $param["VoiceMessageConf"] !== null) {
+        if (array_key_exists('VoiceMessageConf',$param) and $param['VoiceMessageConf'] !== null) {
             $this->VoiceMessageConf = new VoiceMessageConf();
-            $this->VoiceMessageConf->deserialize($param["VoiceMessageConf"]);
+            $this->VoiceMessageConf->deserialize($param['VoiceMessageConf']);
         }
 
-        if (array_key_exists("VoiceFilterConf",$param) and $param["VoiceFilterConf"] !== null) {
+        if (array_key_exists('VoiceFilterConf',$param) and $param['VoiceFilterConf'] !== null) {
             $this->VoiceFilterConf = new VoiceFilterConf();
-            $this->VoiceFilterConf->deserialize($param["VoiceFilterConf"]);
+            $this->VoiceFilterConf->deserialize($param['VoiceFilterConf']);
         }
 
-        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+        if (array_key_exists('Tags',$param) and $param['Tags'] !== null) {
             $this->Tags = [];
-            foreach ($param["Tags"] as $key => $value){
+            foreach ($param['Tags'] as $key => $value){
                 $obj = new Tag();
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);

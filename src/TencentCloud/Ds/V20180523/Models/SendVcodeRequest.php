@@ -70,20 +70,20 @@ class SendVcodeRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Module",$param) and $param["Module"] !== null) {
-            $this->Module = $param["Module"];
+        if (array_key_exists('Module',$param) and $param['Module'] !== null) {
+            $this->Module = $param['Module'];
         }
 
-        if (array_key_exists("Operation",$param) and $param["Operation"] !== null) {
-            $this->Operation = $param["Operation"];
+        if (array_key_exists('Operation',$param) and $param['Operation'] !== null) {
+            $this->Operation = $param['Operation'];
         }
 
-        if (array_key_exists("ContractResId",$param) and $param["ContractResId"] !== null) {
-            $this->ContractResId = $param["ContractResId"];
+        if (array_key_exists('ContractResId',$param) and $param['ContractResId'] !== null) {
+            $this->ContractResId = $param['ContractResId'];
         }
 
-        if (array_key_exists("AccountResId",$param) and $param["AccountResId"] !== null) {
-            $this->AccountResId = $param["AccountResId"];
+        if (array_key_exists('AccountResId',$param) and $param['AccountResId'] !== null) {
+            $this->AccountResId = $param['AccountResId'];
         }
     }
 }

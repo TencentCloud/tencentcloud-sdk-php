@@ -102,28 +102,28 @@ class BodyMovementResult extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Confidence",$param) and $param["Confidence"] !== null) {
-            $this->Confidence = $param["Confidence"];
+        if (array_key_exists('Confidence',$param) and $param['Confidence'] !== null) {
+            $this->Confidence = $param['Confidence'];
         }
 
-        if (array_key_exists("Height",$param) and $param["Height"] !== null) {
-            $this->Height = $param["Height"];
+        if (array_key_exists('Height',$param) and $param['Height'] !== null) {
+            $this->Height = $param['Height'];
         }
 
-        if (array_key_exists("Left",$param) and $param["Left"] !== null) {
-            $this->Left = $param["Left"];
+        if (array_key_exists('Left',$param) and $param['Left'] !== null) {
+            $this->Left = $param['Left'];
         }
 
-        if (array_key_exists("Movements",$param) and $param["Movements"] !== null) {
-            $this->Movements = $param["Movements"];
+        if (array_key_exists('Movements',$param) and $param['Movements'] !== null) {
+            $this->Movements = $param['Movements'];
         }
 
-        if (array_key_exists("Top",$param) and $param["Top"] !== null) {
-            $this->Top = $param["Top"];
+        if (array_key_exists('Top',$param) and $param['Top'] !== null) {
+            $this->Top = $param['Top'];
         }
 
-        if (array_key_exists("Width",$param) and $param["Width"] !== null) {
-            $this->Width = $param["Width"];
+        if (array_key_exists('Width',$param) and $param['Width'] !== null) {
+            $this->Width = $param['Width'];
         }
     }
 }

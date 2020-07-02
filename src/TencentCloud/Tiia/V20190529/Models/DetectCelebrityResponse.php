@@ -78,22 +78,22 @@ FalseRate1Percent, FalseRate5Permil, FalseRate1Permil分别代表误识率在百
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Faces",$param) and $param["Faces"] !== null) {
+        if (array_key_exists('Faces',$param) and $param['Faces'] !== null) {
             $this->Faces = [];
-            foreach ($param["Faces"] as $key => $value){
+            foreach ($param['Faces'] as $key => $value){
                 $obj = new Face();
                 $obj->deserialize($value);
                 array_push($this->Faces, $obj);
             }
         }
 
-        if (array_key_exists("Threshold",$param) and $param["Threshold"] !== null) {
+        if (array_key_exists('Threshold',$param) and $param['Threshold'] !== null) {
             $this->Threshold = new Threshold();
-            $this->Threshold->deserialize($param["Threshold"]);
+            $this->Threshold->deserialize($param['Threshold']);
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

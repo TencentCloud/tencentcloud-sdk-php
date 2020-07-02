@@ -90,20 +90,20 @@ class NetDetectIpState extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DetectDestinationIp",$param) and $param["DetectDestinationIp"] !== null) {
-            $this->DetectDestinationIp = $param["DetectDestinationIp"];
+        if (array_key_exists('DetectDestinationIp',$param) and $param['DetectDestinationIp'] !== null) {
+            $this->DetectDestinationIp = $param['DetectDestinationIp'];
         }
 
-        if (array_key_exists("State",$param) and $param["State"] !== null) {
-            $this->State = $param["State"];
+        if (array_key_exists('State',$param) and $param['State'] !== null) {
+            $this->State = $param['State'];
         }
 
-        if (array_key_exists("Delay",$param) and $param["Delay"] !== null) {
-            $this->Delay = $param["Delay"];
+        if (array_key_exists('Delay',$param) and $param['Delay'] !== null) {
+            $this->Delay = $param['Delay'];
         }
 
-        if (array_key_exists("PacketLossRate",$param) and $param["PacketLossRate"] !== null) {
-            $this->PacketLossRate = $param["PacketLossRate"];
+        if (array_key_exists('PacketLossRate',$param) and $param['PacketLossRate'] !== null) {
+            $this->PacketLossRate = $param['PacketLossRate'];
         }
     }
 }

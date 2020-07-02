@@ -74,20 +74,20 @@ BASE64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
         if ($param === null) {
             return;
         }
-        if (array_key_exists("IdCard",$param) and $param["IdCard"] !== null) {
-            $this->IdCard = $param["IdCard"];
+        if (array_key_exists('IdCard',$param) and $param['IdCard'] !== null) {
+            $this->IdCard = $param['IdCard'];
         }
 
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("ImageBase64",$param) and $param["ImageBase64"] !== null) {
-            $this->ImageBase64 = $param["ImageBase64"];
+        if (array_key_exists('ImageBase64',$param) and $param['ImageBase64'] !== null) {
+            $this->ImageBase64 = $param['ImageBase64'];
         }
 
-        if (array_key_exists("Optional",$param) and $param["Optional"] !== null) {
-            $this->Optional = $param["Optional"];
+        if (array_key_exists('Optional',$param) and $param['Optional'] !== null) {
+            $this->Optional = $param['Optional'];
         }
     }
 }

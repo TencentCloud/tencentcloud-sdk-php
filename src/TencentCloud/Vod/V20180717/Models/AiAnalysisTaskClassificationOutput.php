@@ -46,9 +46,9 @@ class AiAnalysisTaskClassificationOutput extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ClassificationSet",$param) and $param["ClassificationSet"] !== null) {
+        if (array_key_exists('ClassificationSet',$param) and $param['ClassificationSet'] !== null) {
             $this->ClassificationSet = [];
-            foreach ($param["ClassificationSet"] as $key => $value){
+            foreach ($param['ClassificationSet'] as $key => $value){
                 $obj = new MediaAiAnalysisClassificationItem();
                 $obj->deserialize($value);
                 array_push($this->ClassificationSet, $obj);

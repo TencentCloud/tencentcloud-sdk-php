@@ -86,28 +86,28 @@ class TidKeysInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Tid",$param) and $param["Tid"] !== null) {
-            $this->Tid = $param["Tid"];
+        if (array_key_exists('Tid',$param) and $param['Tid'] !== null) {
+            $this->Tid = $param['Tid'];
         }
 
-        if (array_key_exists("PublicKey",$param) and $param["PublicKey"] !== null) {
-            $this->PublicKey = $param["PublicKey"];
+        if (array_key_exists('PublicKey',$param) and $param['PublicKey'] !== null) {
+            $this->PublicKey = $param['PublicKey'];
         }
 
-        if (array_key_exists("PrivateKey",$param) and $param["PrivateKey"] !== null) {
-            $this->PrivateKey = $param["PrivateKey"];
+        if (array_key_exists('PrivateKey',$param) and $param['PrivateKey'] !== null) {
+            $this->PrivateKey = $param['PrivateKey'];
         }
 
-        if (array_key_exists("Psk",$param) and $param["Psk"] !== null) {
-            $this->Psk = $param["Psk"];
+        if (array_key_exists('Psk',$param) and $param['Psk'] !== null) {
+            $this->Psk = $param['Psk'];
         }
 
-        if (array_key_exists("DownloadUrl",$param) and $param["DownloadUrl"] !== null) {
-            $this->DownloadUrl = $param["DownloadUrl"];
+        if (array_key_exists('DownloadUrl',$param) and $param['DownloadUrl'] !== null) {
+            $this->DownloadUrl = $param['DownloadUrl'];
         }
 
-        if (array_key_exists("DeviceCode",$param) and $param["DeviceCode"] !== null) {
-            $this->DeviceCode = $param["DeviceCode"];
+        if (array_key_exists('DeviceCode',$param) and $param['DeviceCode'] !== null) {
+            $this->DeviceCode = $param['DeviceCode'];
         }
     }
 }

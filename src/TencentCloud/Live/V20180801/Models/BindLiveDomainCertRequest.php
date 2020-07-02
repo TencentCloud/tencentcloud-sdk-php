@@ -62,16 +62,16 @@ class BindLiveDomainCertRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CertId",$param) and $param["CertId"] !== null) {
-            $this->CertId = $param["CertId"];
+        if (array_key_exists('CertId',$param) and $param['CertId'] !== null) {
+            $this->CertId = $param['CertId'];
         }
 
-        if (array_key_exists("DomainName",$param) and $param["DomainName"] !== null) {
-            $this->DomainName = $param["DomainName"];
+        if (array_key_exists('DomainName',$param) and $param['DomainName'] !== null) {
+            $this->DomainName = $param['DomainName'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
     }
 }

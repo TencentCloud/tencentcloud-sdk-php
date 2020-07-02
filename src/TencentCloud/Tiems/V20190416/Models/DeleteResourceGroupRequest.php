@@ -46,8 +46,8 @@ class DeleteResourceGroupRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ResourceGroupId",$param) and $param["ResourceGroupId"] !== null) {
-            $this->ResourceGroupId = $param["ResourceGroupId"];
+        if (array_key_exists('ResourceGroupId',$param) and $param['ResourceGroupId'] !== null) {
+            $this->ResourceGroupId = $param['ResourceGroupId'];
         }
     }
 }

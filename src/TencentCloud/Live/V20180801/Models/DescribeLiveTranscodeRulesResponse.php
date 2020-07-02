@@ -54,17 +54,17 @@ class DescribeLiveTranscodeRulesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Rules",$param) and $param["Rules"] !== null) {
+        if (array_key_exists('Rules',$param) and $param['Rules'] !== null) {
             $this->Rules = [];
-            foreach ($param["Rules"] as $key => $value){
+            foreach ($param['Rules'] as $key => $value){
                 $obj = new RuleInfo();
                 $obj->deserialize($value);
                 array_push($this->Rules, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

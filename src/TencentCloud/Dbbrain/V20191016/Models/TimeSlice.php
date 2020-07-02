@@ -54,12 +54,12 @@ class TimeSlice extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Count",$param) and $param["Count"] !== null) {
-            $this->Count = $param["Count"];
+        if (array_key_exists('Count',$param) and $param['Count'] !== null) {
+            $this->Count = $param['Count'];
         }
 
-        if (array_key_exists("Timestamp",$param) and $param["Timestamp"] !== null) {
-            $this->Timestamp = $param["Timestamp"];
+        if (array_key_exists('Timestamp',$param) and $param['Timestamp'] !== null) {
+            $this->Timestamp = $param['Timestamp'];
         }
     }
 }

@@ -62,21 +62,21 @@ class DescribePurgeTasksResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PurgeLogs",$param) and $param["PurgeLogs"] !== null) {
+        if (array_key_exists('PurgeLogs',$param) and $param['PurgeLogs'] !== null) {
             $this->PurgeLogs = [];
-            foreach ($param["PurgeLogs"] as $key => $value){
+            foreach ($param['PurgeLogs'] as $key => $value){
                 $obj = new PurgeTask();
                 $obj->deserialize($value);
                 array_push($this->PurgeLogs, $obj);
             }
         }
 
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

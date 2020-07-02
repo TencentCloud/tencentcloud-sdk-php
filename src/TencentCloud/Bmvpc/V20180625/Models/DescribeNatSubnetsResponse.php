@@ -54,17 +54,17 @@ class DescribeNatSubnetsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("NatSubnetInfoSet",$param) and $param["NatSubnetInfoSet"] !== null) {
+        if (array_key_exists('NatSubnetInfoSet',$param) and $param['NatSubnetInfoSet'] !== null) {
             $this->NatSubnetInfoSet = [];
-            foreach ($param["NatSubnetInfoSet"] as $key => $value){
+            foreach ($param['NatSubnetInfoSet'] as $key => $value){
                 $obj = new NatSubnetInfo();
                 $obj->deserialize($value);
                 array_push($this->NatSubnetInfoSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

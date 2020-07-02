@@ -78,24 +78,24 @@ class Library extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("LibraryId",$param) and $param["LibraryId"] !== null) {
-            $this->LibraryId = $param["LibraryId"];
+        if (array_key_exists('LibraryId',$param) and $param['LibraryId'] !== null) {
+            $this->LibraryId = $param['LibraryId'];
         }
 
-        if (array_key_exists("LibraryName",$param) and $param["LibraryName"] !== null) {
-            $this->LibraryName = $param["LibraryName"];
+        if (array_key_exists('LibraryName',$param) and $param['LibraryName'] !== null) {
+            $this->LibraryName = $param['LibraryName'];
         }
 
-        if (array_key_exists("PersonCount",$param) and $param["PersonCount"] !== null) {
-            $this->PersonCount = $param["PersonCount"];
+        if (array_key_exists('PersonCount',$param) and $param['PersonCount'] !== null) {
+            $this->PersonCount = $param['PersonCount'];
         }
 
-        if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
-            $this->UpdateTime = $param["UpdateTime"];
+        if (array_key_exists('UpdateTime',$param) and $param['UpdateTime'] !== null) {
+            $this->UpdateTime = $param['UpdateTime'];
         }
     }
 }

@@ -134,16 +134,16 @@ class MixedInvoiceOCRRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ImageBase64",$param) and $param["ImageBase64"] !== null) {
-            $this->ImageBase64 = $param["ImageBase64"];
+        if (array_key_exists('ImageBase64',$param) and $param['ImageBase64'] !== null) {
+            $this->ImageBase64 = $param['ImageBase64'];
         }
 
-        if (array_key_exists("ImageUrl",$param) and $param["ImageUrl"] !== null) {
-            $this->ImageUrl = $param["ImageUrl"];
+        if (array_key_exists('ImageUrl',$param) and $param['ImageUrl'] !== null) {
+            $this->ImageUrl = $param['ImageUrl'];
         }
 
-        if (array_key_exists("Types",$param) and $param["Types"] !== null) {
-            $this->Types = $param["Types"];
+        if (array_key_exists('Types',$param) and $param['Types'] !== null) {
+            $this->Types = $param['Types'];
         }
     }
 }

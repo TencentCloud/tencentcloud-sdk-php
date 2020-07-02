@@ -74,27 +74,27 @@ class ExclusiveCluster extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("L4Clusters",$param) and $param["L4Clusters"] !== null) {
+        if (array_key_exists('L4Clusters',$param) and $param['L4Clusters'] !== null) {
             $this->L4Clusters = [];
-            foreach ($param["L4Clusters"] as $key => $value){
+            foreach ($param['L4Clusters'] as $key => $value){
                 $obj = new ClusterItem();
                 $obj->deserialize($value);
                 array_push($this->L4Clusters, $obj);
             }
         }
 
-        if (array_key_exists("L7Clusters",$param) and $param["L7Clusters"] !== null) {
+        if (array_key_exists('L7Clusters',$param) and $param['L7Clusters'] !== null) {
             $this->L7Clusters = [];
-            foreach ($param["L7Clusters"] as $key => $value){
+            foreach ($param['L7Clusters'] as $key => $value){
                 $obj = new ClusterItem();
                 $obj->deserialize($value);
                 array_push($this->L7Clusters, $obj);
             }
         }
 
-        if (array_key_exists("ClassicalCluster",$param) and $param["ClassicalCluster"] !== null) {
+        if (array_key_exists('ClassicalCluster',$param) and $param['ClassicalCluster'] !== null) {
             $this->ClassicalCluster = new ClusterItem();
-            $this->ClassicalCluster->deserialize($param["ClassicalCluster"]);
+            $this->ClassicalCluster->deserialize($param['ClassicalCluster']);
         }
     }
 }

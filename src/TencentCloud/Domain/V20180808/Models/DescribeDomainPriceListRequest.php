@@ -62,16 +62,16 @@ class DescribeDomainPriceListRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TldList",$param) and $param["TldList"] !== null) {
-            $this->TldList = $param["TldList"];
+        if (array_key_exists('TldList',$param) and $param['TldList'] !== null) {
+            $this->TldList = $param['TldList'];
         }
 
-        if (array_key_exists("Year",$param) and $param["Year"] !== null) {
-            $this->Year = $param["Year"];
+        if (array_key_exists('Year',$param) and $param['Year'] !== null) {
+            $this->Year = $param['Year'];
         }
 
-        if (array_key_exists("Operation",$param) and $param["Operation"] !== null) {
-            $this->Operation = $param["Operation"];
+        if (array_key_exists('Operation',$param) and $param['Operation'] !== null) {
+            $this->Operation = $param['Operation'];
         }
     }
 }

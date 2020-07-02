@@ -54,12 +54,12 @@ class DeleteDDoSPolicyCaseRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Business",$param) and $param["Business"] !== null) {
-            $this->Business = $param["Business"];
+        if (array_key_exists('Business',$param) and $param['Business'] !== null) {
+            $this->Business = $param['Business'];
         }
 
-        if (array_key_exists("SceneId",$param) and $param["SceneId"] !== null) {
-            $this->SceneId = $param["SceneId"];
+        if (array_key_exists('SceneId',$param) and $param['SceneId'] !== null) {
+            $this->SceneId = $param['SceneId'];
         }
     }
 }

@@ -62,27 +62,27 @@ class ActionStatistic extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ActionCount",$param) and $param["ActionCount"] !== null) {
+        if (array_key_exists('ActionCount',$param) and $param['ActionCount'] !== null) {
             $this->ActionCount = [];
-            foreach ($param["ActionCount"] as $key => $value){
+            foreach ($param['ActionCount'] as $key => $value){
                 $obj = new ActionCountStatistic();
                 $obj->deserialize($value);
                 array_push($this->ActionCount, $obj);
             }
         }
 
-        if (array_key_exists("ActionDuration",$param) and $param["ActionDuration"] !== null) {
+        if (array_key_exists('ActionDuration',$param) and $param['ActionDuration'] !== null) {
             $this->ActionDuration = [];
-            foreach ($param["ActionDuration"] as $key => $value){
+            foreach ($param['ActionDuration'] as $key => $value){
                 $obj = new ActionDurationStatistic();
                 $obj->deserialize($value);
                 array_push($this->ActionDuration, $obj);
             }
         }
 
-        if (array_key_exists("ActionDurationRatio",$param) and $param["ActionDurationRatio"] !== null) {
+        if (array_key_exists('ActionDurationRatio',$param) and $param['ActionDurationRatio'] !== null) {
             $this->ActionDurationRatio = [];
-            foreach ($param["ActionDurationRatio"] as $key => $value){
+            foreach ($param['ActionDurationRatio'] as $key => $value){
                 $obj = new ActionDurationRatioStatistic();
                 $obj->deserialize($value);
                 array_push($this->ActionDurationRatio, $obj);

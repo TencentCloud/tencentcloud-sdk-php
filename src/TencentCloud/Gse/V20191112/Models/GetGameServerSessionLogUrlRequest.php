@@ -46,8 +46,8 @@ class GetGameServerSessionLogUrlRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("GameServerSessionId",$param) and $param["GameServerSessionId"] !== null) {
-            $this->GameServerSessionId = $param["GameServerSessionId"];
+        if (array_key_exists('GameServerSessionId',$param) and $param['GameServerSessionId'] !== null) {
+            $this->GameServerSessionId = $param['GameServerSessionId'];
         }
     }
 }

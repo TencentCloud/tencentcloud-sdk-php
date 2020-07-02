@@ -70,20 +70,20 @@ class ExpressRatioStatistic extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Count",$param) and $param["Count"] !== null) {
-            $this->Count = $param["Count"];
+        if (array_key_exists('Count',$param) and $param['Count'] !== null) {
+            $this->Count = $param['Count'];
         }
 
-        if (array_key_exists("Express",$param) and $param["Express"] !== null) {
-            $this->Express = $param["Express"];
+        if (array_key_exists('Express',$param) and $param['Express'] !== null) {
+            $this->Express = $param['Express'];
         }
 
-        if (array_key_exists("Ratio",$param) and $param["Ratio"] !== null) {
-            $this->Ratio = $param["Ratio"];
+        if (array_key_exists('Ratio',$param) and $param['Ratio'] !== null) {
+            $this->Ratio = $param['Ratio'];
         }
 
-        if (array_key_exists("RatioUseDuration",$param) and $param["RatioUseDuration"] !== null) {
-            $this->RatioUseDuration = $param["RatioUseDuration"];
+        if (array_key_exists('RatioUseDuration',$param) and $param['RatioUseDuration'] !== null) {
+            $this->RatioUseDuration = $param['RatioUseDuration'];
         }
     }
 }

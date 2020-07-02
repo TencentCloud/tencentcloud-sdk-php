@@ -46,9 +46,9 @@ class Environment extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Variables",$param) and $param["Variables"] !== null) {
+        if (array_key_exists('Variables',$param) and $param['Variables'] !== null) {
             $this->Variables = [];
-            foreach ($param["Variables"] as $key => $value){
+            foreach ($param['Variables'] as $key => $value){
                 $obj = new Variable();
                 $obj->deserialize($value);
                 array_push($this->Variables, $obj);

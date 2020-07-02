@@ -70,21 +70,21 @@ class DescribeUsgRuleResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SgRules",$param) and $param["SgRules"] !== null) {
+        if (array_key_exists('SgRules',$param) and $param['SgRules'] !== null) {
             $this->SgRules = [];
-            foreach ($param["SgRules"] as $key => $value){
+            foreach ($param['SgRules'] as $key => $value){
                 $obj = new UsgRuleDetail();
                 $obj->deserialize($value);
                 array_push($this->SgRules, $obj);
             }
         }
 
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

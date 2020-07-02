@@ -54,13 +54,13 @@ class OverwriteWhiteBoxDeviceFingerprintsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("KeyId",$param) and $param["KeyId"] !== null) {
-            $this->KeyId = $param["KeyId"];
+        if (array_key_exists('KeyId',$param) and $param['KeyId'] !== null) {
+            $this->KeyId = $param['KeyId'];
         }
 
-        if (array_key_exists("DeviceFingerprints",$param) and $param["DeviceFingerprints"] !== null) {
+        if (array_key_exists('DeviceFingerprints',$param) and $param['DeviceFingerprints'] !== null) {
             $this->DeviceFingerprints = [];
-            foreach ($param["DeviceFingerprints"] as $key => $value){
+            foreach ($param['DeviceFingerprints'] as $key => $value){
                 $obj = new DeviceFingerprint();
                 $obj->deserialize($value);
                 array_push($this->DeviceFingerprints, $obj);

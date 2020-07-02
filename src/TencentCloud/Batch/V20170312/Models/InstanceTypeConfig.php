@@ -78,24 +78,24 @@ class InstanceTypeConfig extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Mem",$param) and $param["Mem"] !== null) {
-            $this->Mem = $param["Mem"];
+        if (array_key_exists('Mem',$param) and $param['Mem'] !== null) {
+            $this->Mem = $param['Mem'];
         }
 
-        if (array_key_exists("Cpu",$param) and $param["Cpu"] !== null) {
-            $this->Cpu = $param["Cpu"];
+        if (array_key_exists('Cpu',$param) and $param['Cpu'] !== null) {
+            $this->Cpu = $param['Cpu'];
         }
 
-        if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
-            $this->InstanceType = $param["InstanceType"];
+        if (array_key_exists('InstanceType',$param) and $param['InstanceType'] !== null) {
+            $this->InstanceType = $param['InstanceType'];
         }
 
-        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
-            $this->Zone = $param["Zone"];
+        if (array_key_exists('Zone',$param) and $param['Zone'] !== null) {
+            $this->Zone = $param['Zone'];
         }
 
-        if (array_key_exists("InstanceFamily",$param) and $param["InstanceFamily"] !== null) {
-            $this->InstanceFamily = $param["InstanceFamily"];
+        if (array_key_exists('InstanceFamily',$param) and $param['InstanceFamily'] !== null) {
+            $this->InstanceFamily = $param['InstanceFamily'];
         }
     }
 }

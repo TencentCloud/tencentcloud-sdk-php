@@ -54,17 +54,17 @@ class DescribeProxiesStatusResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceStatusSet",$param) and $param["InstanceStatusSet"] !== null) {
+        if (array_key_exists('InstanceStatusSet',$param) and $param['InstanceStatusSet'] !== null) {
             $this->InstanceStatusSet = [];
-            foreach ($param["InstanceStatusSet"] as $key => $value){
+            foreach ($param['InstanceStatusSet'] as $key => $value){
                 $obj = new ProxyStatus();
                 $obj->deserialize($value);
                 array_push($this->InstanceStatusSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

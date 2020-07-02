@@ -62,16 +62,16 @@ class LoginActionMfaFlag extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Phone",$param) and $param["Phone"] !== null) {
-            $this->Phone = $param["Phone"];
+        if (array_key_exists('Phone',$param) and $param['Phone'] !== null) {
+            $this->Phone = $param['Phone'];
         }
 
-        if (array_key_exists("Stoken",$param) and $param["Stoken"] !== null) {
-            $this->Stoken = $param["Stoken"];
+        if (array_key_exists('Stoken',$param) and $param['Stoken'] !== null) {
+            $this->Stoken = $param['Stoken'];
         }
 
-        if (array_key_exists("Wechat",$param) and $param["Wechat"] !== null) {
-            $this->Wechat = $param["Wechat"];
+        if (array_key_exists('Wechat',$param) and $param['Wechat'] !== null) {
+            $this->Wechat = $param['Wechat'];
         }
     }
 }

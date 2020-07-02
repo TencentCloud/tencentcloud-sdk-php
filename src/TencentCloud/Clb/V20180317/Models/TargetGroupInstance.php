@@ -70,20 +70,20 @@ class TargetGroupInstance extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BindIP",$param) and $param["BindIP"] !== null) {
-            $this->BindIP = $param["BindIP"];
+        if (array_key_exists('BindIP',$param) and $param['BindIP'] !== null) {
+            $this->BindIP = $param['BindIP'];
         }
 
-        if (array_key_exists("Port",$param) and $param["Port"] !== null) {
-            $this->Port = $param["Port"];
+        if (array_key_exists('Port',$param) and $param['Port'] !== null) {
+            $this->Port = $param['Port'];
         }
 
-        if (array_key_exists("Weight",$param) and $param["Weight"] !== null) {
-            $this->Weight = $param["Weight"];
+        if (array_key_exists('Weight',$param) and $param['Weight'] !== null) {
+            $this->Weight = $param['Weight'];
         }
 
-        if (array_key_exists("NewPort",$param) and $param["NewPort"] !== null) {
-            $this->NewPort = $param["NewPort"];
+        if (array_key_exists('NewPort',$param) and $param['NewPort'] !== null) {
+            $this->NewPort = $param['NewPort'];
         }
     }
 }

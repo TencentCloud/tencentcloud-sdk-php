@@ -62,16 +62,16 @@ class ModifyLaneRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LaneId",$param) and $param["LaneId"] !== null) {
-            $this->LaneId = $param["LaneId"];
+        if (array_key_exists('LaneId',$param) and $param['LaneId'] !== null) {
+            $this->LaneId = $param['LaneId'];
         }
 
-        if (array_key_exists("LaneName",$param) and $param["LaneName"] !== null) {
-            $this->LaneName = $param["LaneName"];
+        if (array_key_exists('LaneName',$param) and $param['LaneName'] !== null) {
+            $this->LaneName = $param['LaneName'];
         }
 
-        if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
-            $this->Remark = $param["Remark"];
+        if (array_key_exists('Remark',$param) and $param['Remark'] !== null) {
+            $this->Remark = $param['Remark'];
         }
     }
 }

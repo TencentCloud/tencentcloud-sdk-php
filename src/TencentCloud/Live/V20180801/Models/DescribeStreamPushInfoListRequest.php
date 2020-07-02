@@ -78,24 +78,24 @@ class DescribeStreamPushInfoListRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("StreamName",$param) and $param["StreamName"] !== null) {
-            $this->StreamName = $param["StreamName"];
+        if (array_key_exists('StreamName',$param) and $param['StreamName'] !== null) {
+            $this->StreamName = $param['StreamName'];
         }
 
-        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
-            $this->StartTime = $param["StartTime"];
+        if (array_key_exists('StartTime',$param) and $param['StartTime'] !== null) {
+            $this->StartTime = $param['StartTime'];
         }
 
-        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
-            $this->EndTime = $param["EndTime"];
+        if (array_key_exists('EndTime',$param) and $param['EndTime'] !== null) {
+            $this->EndTime = $param['EndTime'];
         }
 
-        if (array_key_exists("PushDomain",$param) and $param["PushDomain"] !== null) {
-            $this->PushDomain = $param["PushDomain"];
+        if (array_key_exists('PushDomain',$param) and $param['PushDomain'] !== null) {
+            $this->PushDomain = $param['PushDomain'];
         }
 
-        if (array_key_exists("AppName",$param) and $param["AppName"] !== null) {
-            $this->AppName = $param["AppName"];
+        if (array_key_exists('AppName',$param) and $param['AppName'] !== null) {
+            $this->AppName = $param['AppName'];
         }
     }
 }

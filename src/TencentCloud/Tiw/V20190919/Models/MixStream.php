@@ -94,25 +94,25 @@ class MixStream extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Enabled",$param) and $param["Enabled"] !== null) {
-            $this->Enabled = $param["Enabled"];
+        if (array_key_exists('Enabled',$param) and $param['Enabled'] !== null) {
+            $this->Enabled = $param['Enabled'];
         }
 
-        if (array_key_exists("DisableAudio",$param) and $param["DisableAudio"] !== null) {
-            $this->DisableAudio = $param["DisableAudio"];
+        if (array_key_exists('DisableAudio',$param) and $param['DisableAudio'] !== null) {
+            $this->DisableAudio = $param['DisableAudio'];
         }
 
-        if (array_key_exists("ModelId",$param) and $param["ModelId"] !== null) {
-            $this->ModelId = $param["ModelId"];
+        if (array_key_exists('ModelId',$param) and $param['ModelId'] !== null) {
+            $this->ModelId = $param['ModelId'];
         }
 
-        if (array_key_exists("TeacherId",$param) and $param["TeacherId"] !== null) {
-            $this->TeacherId = $param["TeacherId"];
+        if (array_key_exists('TeacherId',$param) and $param['TeacherId'] !== null) {
+            $this->TeacherId = $param['TeacherId'];
         }
 
-        if (array_key_exists("Custom",$param) and $param["Custom"] !== null) {
+        if (array_key_exists('Custom',$param) and $param['Custom'] !== null) {
             $this->Custom = new CustomLayout();
-            $this->Custom->deserialize($param["Custom"]);
+            $this->Custom->deserialize($param['Custom']);
         }
     }
 }

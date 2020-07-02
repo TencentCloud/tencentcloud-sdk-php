@@ -102,24 +102,24 @@ class OnlineScamInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ContentLabel",$param) and $param["ContentLabel"] !== null) {
-            $this->ContentLabel = $param["ContentLabel"];
+        if (array_key_exists('ContentLabel',$param) and $param['ContentLabel'] !== null) {
+            $this->ContentLabel = $param['ContentLabel'];
         }
 
-        if (array_key_exists("ContentRiskLevel",$param) and $param["ContentRiskLevel"] !== null) {
-            $this->ContentRiskLevel = $param["ContentRiskLevel"];
+        if (array_key_exists('ContentRiskLevel',$param) and $param['ContentRiskLevel'] !== null) {
+            $this->ContentRiskLevel = $param['ContentRiskLevel'];
         }
 
-        if (array_key_exists("ContentType",$param) and $param["ContentType"] !== null) {
-            $this->ContentType = $param["ContentType"];
+        if (array_key_exists('ContentType',$param) and $param['ContentType'] !== null) {
+            $this->ContentType = $param['ContentType'];
         }
 
-        if (array_key_exists("FraudType",$param) and $param["FraudType"] !== null) {
-            $this->FraudType = $param["FraudType"];
+        if (array_key_exists('FraudType',$param) and $param['FraudType'] !== null) {
+            $this->FraudType = $param['FraudType'];
         }
 
-        if (array_key_exists("FraudAccount",$param) and $param["FraudAccount"] !== null) {
-            $this->FraudAccount = $param["FraudAccount"];
+        if (array_key_exists('FraudAccount',$param) and $param['FraudAccount'] !== null) {
+            $this->FraudAccount = $param['FraudAccount'];
         }
     }
 }

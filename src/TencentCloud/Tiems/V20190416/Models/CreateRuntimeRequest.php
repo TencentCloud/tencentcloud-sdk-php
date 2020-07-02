@@ -78,24 +78,24 @@ class CreateRuntimeRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("Image",$param) and $param["Image"] !== null) {
-            $this->Image = $param["Image"];
+        if (array_key_exists('Image',$param) and $param['Image'] !== null) {
+            $this->Image = $param['Image'];
         }
 
-        if (array_key_exists("Framework",$param) and $param["Framework"] !== null) {
-            $this->Framework = $param["Framework"];
+        if (array_key_exists('Framework',$param) and $param['Framework'] !== null) {
+            $this->Framework = $param['Framework'];
         }
 
-        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
-            $this->Description = $param["Description"];
+        if (array_key_exists('Description',$param) and $param['Description'] !== null) {
+            $this->Description = $param['Description'];
         }
 
-        if (array_key_exists("HealthCheckOn",$param) and $param["HealthCheckOn"] !== null) {
-            $this->HealthCheckOn = $param["HealthCheckOn"];
+        if (array_key_exists('HealthCheckOn',$param) and $param['HealthCheckOn'] !== null) {
+            $this->HealthCheckOn = $param['HealthCheckOn'];
         }
     }
 }

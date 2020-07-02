@@ -54,12 +54,12 @@ class DownloadDialogueTextResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TextReportUrl",$param) and $param["TextReportUrl"] !== null) {
-            $this->TextReportUrl = $param["TextReportUrl"];
+        if (array_key_exists('TextReportUrl',$param) and $param['TextReportUrl'] !== null) {
+            $this->TextReportUrl = $param['TextReportUrl'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

@@ -54,13 +54,13 @@ class ReplaceCertForLoadBalancersRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("OldCertificateId",$param) and $param["OldCertificateId"] !== null) {
-            $this->OldCertificateId = $param["OldCertificateId"];
+        if (array_key_exists('OldCertificateId',$param) and $param['OldCertificateId'] !== null) {
+            $this->OldCertificateId = $param['OldCertificateId'];
         }
 
-        if (array_key_exists("Certificate",$param) and $param["Certificate"] !== null) {
+        if (array_key_exists('Certificate',$param) and $param['Certificate'] !== null) {
             $this->Certificate = new CertificateInput();
-            $this->Certificate->deserialize($param["Certificate"]);
+            $this->Certificate->deserialize($param['Certificate']);
         }
     }
 }

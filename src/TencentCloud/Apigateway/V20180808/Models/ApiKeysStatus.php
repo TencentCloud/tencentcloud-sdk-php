@@ -62,13 +62,13 @@ class ApiKeysStatus extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("ApiKeySet",$param) and $param["ApiKeySet"] !== null) {
+        if (array_key_exists('ApiKeySet',$param) and $param['ApiKeySet'] !== null) {
             $this->ApiKeySet = [];
-            foreach ($param["ApiKeySet"] as $key => $value){
+            foreach ($param['ApiKeySet'] as $key => $value){
                 $obj = new ApiKey();
                 $obj->deserialize($value);
                 array_push($this->ApiKeySet, $obj);

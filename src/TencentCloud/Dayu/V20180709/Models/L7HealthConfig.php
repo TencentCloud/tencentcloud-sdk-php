@@ -110,40 +110,40 @@ class L7HealthConfig extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Protocol",$param) and $param["Protocol"] !== null) {
-            $this->Protocol = $param["Protocol"];
+        if (array_key_exists('Protocol',$param) and $param['Protocol'] !== null) {
+            $this->Protocol = $param['Protocol'];
         }
 
-        if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
-            $this->Domain = $param["Domain"];
+        if (array_key_exists('Domain',$param) and $param['Domain'] !== null) {
+            $this->Domain = $param['Domain'];
         }
 
-        if (array_key_exists("Enable",$param) and $param["Enable"] !== null) {
-            $this->Enable = $param["Enable"];
+        if (array_key_exists('Enable',$param) and $param['Enable'] !== null) {
+            $this->Enable = $param['Enable'];
         }
 
-        if (array_key_exists("Interval",$param) and $param["Interval"] !== null) {
-            $this->Interval = $param["Interval"];
+        if (array_key_exists('Interval',$param) and $param['Interval'] !== null) {
+            $this->Interval = $param['Interval'];
         }
 
-        if (array_key_exists("KickNum",$param) and $param["KickNum"] !== null) {
-            $this->KickNum = $param["KickNum"];
+        if (array_key_exists('KickNum',$param) and $param['KickNum'] !== null) {
+            $this->KickNum = $param['KickNum'];
         }
 
-        if (array_key_exists("AliveNum",$param) and $param["AliveNum"] !== null) {
-            $this->AliveNum = $param["AliveNum"];
+        if (array_key_exists('AliveNum',$param) and $param['AliveNum'] !== null) {
+            $this->AliveNum = $param['AliveNum'];
         }
 
-        if (array_key_exists("Method",$param) and $param["Method"] !== null) {
-            $this->Method = $param["Method"];
+        if (array_key_exists('Method',$param) and $param['Method'] !== null) {
+            $this->Method = $param['Method'];
         }
 
-        if (array_key_exists("StatusCode",$param) and $param["StatusCode"] !== null) {
-            $this->StatusCode = $param["StatusCode"];
+        if (array_key_exists('StatusCode',$param) and $param['StatusCode'] !== null) {
+            $this->StatusCode = $param['StatusCode'];
         }
 
-        if (array_key_exists("Url",$param) and $param["Url"] !== null) {
-            $this->Url = $param["Url"];
+        if (array_key_exists('Url',$param) and $param['Url'] !== null) {
+            $this->Url = $param['Url'];
         }
     }
 }

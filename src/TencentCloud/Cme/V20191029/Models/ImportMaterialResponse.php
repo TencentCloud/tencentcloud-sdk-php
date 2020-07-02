@@ -62,16 +62,16 @@ class ImportMaterialResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MaterialId",$param) and $param["MaterialId"] !== null) {
-            $this->MaterialId = $param["MaterialId"];
+        if (array_key_exists('MaterialId',$param) and $param['MaterialId'] !== null) {
+            $this->MaterialId = $param['MaterialId'];
         }
 
-        if (array_key_exists("PreProcessTaskId",$param) and $param["PreProcessTaskId"] !== null) {
-            $this->PreProcessTaskId = $param["PreProcessTaskId"];
+        if (array_key_exists('PreProcessTaskId',$param) and $param['PreProcessTaskId'] !== null) {
+            $this->PreProcessTaskId = $param['PreProcessTaskId'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

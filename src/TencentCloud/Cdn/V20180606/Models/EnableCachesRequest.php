@@ -46,8 +46,8 @@ class EnableCachesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Urls",$param) and $param["Urls"] !== null) {
-            $this->Urls = $param["Urls"];
+        if (array_key_exists('Urls',$param) and $param['Urls'] !== null) {
+            $this->Urls = $param['Urls'];
         }
     }
 }

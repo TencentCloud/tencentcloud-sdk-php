@@ -62,16 +62,16 @@ class DescribeL7RulesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LoadBalancerId",$param) and $param["LoadBalancerId"] !== null) {
-            $this->LoadBalancerId = $param["LoadBalancerId"];
+        if (array_key_exists('LoadBalancerId',$param) and $param['LoadBalancerId'] !== null) {
+            $this->LoadBalancerId = $param['LoadBalancerId'];
         }
 
-        if (array_key_exists("ListenerId",$param) and $param["ListenerId"] !== null) {
-            $this->ListenerId = $param["ListenerId"];
+        if (array_key_exists('ListenerId',$param) and $param['ListenerId'] !== null) {
+            $this->ListenerId = $param['ListenerId'];
         }
 
-        if (array_key_exists("DomainIds",$param) and $param["DomainIds"] !== null) {
-            $this->DomainIds = $param["DomainIds"];
+        if (array_key_exists('DomainIds',$param) and $param['DomainIds'] !== null) {
+            $this->DomainIds = $param['DomainIds'];
         }
     }
 }

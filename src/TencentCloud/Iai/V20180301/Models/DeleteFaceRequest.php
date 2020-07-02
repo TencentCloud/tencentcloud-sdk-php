@@ -54,12 +54,12 @@ class DeleteFaceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PersonId",$param) and $param["PersonId"] !== null) {
-            $this->PersonId = $param["PersonId"];
+        if (array_key_exists('PersonId',$param) and $param['PersonId'] !== null) {
+            $this->PersonId = $param['PersonId'];
         }
 
-        if (array_key_exists("FaceIds",$param) and $param["FaceIds"] !== null) {
-            $this->FaceIds = $param["FaceIds"];
+        if (array_key_exists('FaceIds',$param) and $param['FaceIds'] !== null) {
+            $this->FaceIds = $param['FaceIds'];
         }
     }
 }

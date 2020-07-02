@@ -46,9 +46,9 @@ class LogoDetail extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AppLogoDetail",$param) and $param["AppLogoDetail"] !== null) {
+        if (array_key_exists('AppLogoDetail',$param) and $param['AppLogoDetail'] !== null) {
             $this->AppLogoDetail = [];
-            foreach ($param["AppLogoDetail"] as $key => $value){
+            foreach ($param['AppLogoDetail'] as $key => $value){
                 $obj = new Logo();
                 $obj->deserialize($value);
                 array_push($this->AppLogoDetail, $obj);

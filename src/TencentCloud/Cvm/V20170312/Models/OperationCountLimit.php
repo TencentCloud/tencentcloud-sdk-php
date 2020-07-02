@@ -70,20 +70,20 @@ class OperationCountLimit extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Operation",$param) and $param["Operation"] !== null) {
-            $this->Operation = $param["Operation"];
+        if (array_key_exists('Operation',$param) and $param['Operation'] !== null) {
+            $this->Operation = $param['Operation'];
         }
 
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("CurrentCount",$param) and $param["CurrentCount"] !== null) {
-            $this->CurrentCount = $param["CurrentCount"];
+        if (array_key_exists('CurrentCount',$param) and $param['CurrentCount'] !== null) {
+            $this->CurrentCount = $param['CurrentCount'];
         }
 
-        if (array_key_exists("LimitCount",$param) and $param["LimitCount"] !== null) {
-            $this->LimitCount = $param["LimitCount"];
+        if (array_key_exists('LimitCount',$param) and $param['LimitCount'] !== null) {
+            $this->LimitCount = $param['LimitCount'];
         }
     }
 }

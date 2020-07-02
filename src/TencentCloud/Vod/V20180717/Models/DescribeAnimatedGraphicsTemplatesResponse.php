@@ -62,21 +62,21 @@ class DescribeAnimatedGraphicsTemplatesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("AnimatedGraphicsTemplateSet",$param) and $param["AnimatedGraphicsTemplateSet"] !== null) {
+        if (array_key_exists('AnimatedGraphicsTemplateSet',$param) and $param['AnimatedGraphicsTemplateSet'] !== null) {
             $this->AnimatedGraphicsTemplateSet = [];
-            foreach ($param["AnimatedGraphicsTemplateSet"] as $key => $value){
+            foreach ($param['AnimatedGraphicsTemplateSet'] as $key => $value){
                 $obj = new AnimatedGraphicsTemplate();
                 $obj->deserialize($value);
                 array_push($this->AnimatedGraphicsTemplateSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

@@ -54,12 +54,12 @@ class RenewInstanceResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DealName",$param) and $param["DealName"] !== null) {
-            $this->DealName = $param["DealName"];
+        if (array_key_exists('DealName',$param) and $param['DealName'] !== null) {
+            $this->DealName = $param['DealName'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

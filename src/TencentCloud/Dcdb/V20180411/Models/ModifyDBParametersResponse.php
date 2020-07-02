@@ -62,21 +62,21 @@ class ModifyDBParametersResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
+        if (array_key_exists('Result',$param) and $param['Result'] !== null) {
             $this->Result = [];
-            foreach ($param["Result"] as $key => $value){
+            foreach ($param['Result'] as $key => $value){
                 $obj = new ParamModifyResult();
                 $obj->deserialize($value);
                 array_push($this->Result, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

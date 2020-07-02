@@ -66,12 +66,12 @@ class OutputVideoStream extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Codec",$param) and $param["Codec"] !== null) {
-            $this->Codec = $param["Codec"];
+        if (array_key_exists('Codec',$param) and $param['Codec'] !== null) {
+            $this->Codec = $param['Codec'];
         }
 
-        if (array_key_exists("Fps",$param) and $param["Fps"] !== null) {
-            $this->Fps = $param["Fps"];
+        if (array_key_exists('Fps',$param) and $param['Fps'] !== null) {
+            $this->Fps = $param['Fps'];
         }
     }
 }

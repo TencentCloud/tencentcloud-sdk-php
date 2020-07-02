@@ -54,12 +54,12 @@ class PlacedPlayerSession extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PlayerId",$param) and $param["PlayerId"] !== null) {
-            $this->PlayerId = $param["PlayerId"];
+        if (array_key_exists('PlayerId',$param) and $param['PlayerId'] !== null) {
+            $this->PlayerId = $param['PlayerId'];
         }
 
-        if (array_key_exists("PlayerSessionId",$param) and $param["PlayerSessionId"] !== null) {
-            $this->PlayerSessionId = $param["PlayerSessionId"];
+        if (array_key_exists('PlayerSessionId',$param) and $param['PlayerSessionId'] !== null) {
+            $this->PlayerSessionId = $param['PlayerSessionId'];
         }
     }
 }

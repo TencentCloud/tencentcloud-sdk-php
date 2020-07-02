@@ -46,8 +46,8 @@ class CoverBySnapshotTaskOutput extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CoverUrl",$param) and $param["CoverUrl"] !== null) {
-            $this->CoverUrl = $param["CoverUrl"];
+        if (array_key_exists('CoverUrl',$param) and $param['CoverUrl'] !== null) {
+            $this->CoverUrl = $param['CoverUrl'];
         }
     }
 }

@@ -82,24 +82,24 @@ class ProductModelDefinition extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ProductId",$param) and $param["ProductId"] !== null) {
-            $this->ProductId = $param["ProductId"];
+        if (array_key_exists('ProductId',$param) and $param['ProductId'] !== null) {
+            $this->ProductId = $param['ProductId'];
         }
 
-        if (array_key_exists("ModelDefine",$param) and $param["ModelDefine"] !== null) {
-            $this->ModelDefine = $param["ModelDefine"];
+        if (array_key_exists('ModelDefine',$param) and $param['ModelDefine'] !== null) {
+            $this->ModelDefine = $param['ModelDefine'];
         }
 
-        if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
-            $this->UpdateTime = $param["UpdateTime"];
+        if (array_key_exists('UpdateTime',$param) and $param['UpdateTime'] !== null) {
+            $this->UpdateTime = $param['UpdateTime'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("CategoryModel",$param) and $param["CategoryModel"] !== null) {
-            $this->CategoryModel = $param["CategoryModel"];
+        if (array_key_exists('CategoryModel',$param) and $param['CategoryModel'] !== null) {
+            $this->CategoryModel = $param['CategoryModel'];
         }
     }
 }

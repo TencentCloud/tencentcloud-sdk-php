@@ -78,24 +78,24 @@ class SignLocation extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SignOnPage",$param) and $param["SignOnPage"] !== null) {
-            $this->SignOnPage = $param["SignOnPage"];
+        if (array_key_exists('SignOnPage',$param) and $param['SignOnPage'] !== null) {
+            $this->SignOnPage = $param['SignOnPage'];
         }
 
-        if (array_key_exists("SignLocationLBX",$param) and $param["SignLocationLBX"] !== null) {
-            $this->SignLocationLBX = $param["SignLocationLBX"];
+        if (array_key_exists('SignLocationLBX',$param) and $param['SignLocationLBX'] !== null) {
+            $this->SignLocationLBX = $param['SignLocationLBX'];
         }
 
-        if (array_key_exists("SignLocationLBY",$param) and $param["SignLocationLBY"] !== null) {
-            $this->SignLocationLBY = $param["SignLocationLBY"];
+        if (array_key_exists('SignLocationLBY',$param) and $param['SignLocationLBY'] !== null) {
+            $this->SignLocationLBY = $param['SignLocationLBY'];
         }
 
-        if (array_key_exists("SignLocationRUX",$param) and $param["SignLocationRUX"] !== null) {
-            $this->SignLocationRUX = $param["SignLocationRUX"];
+        if (array_key_exists('SignLocationRUX',$param) and $param['SignLocationRUX'] !== null) {
+            $this->SignLocationRUX = $param['SignLocationRUX'];
         }
 
-        if (array_key_exists("SignLocationRUY",$param) and $param["SignLocationRUY"] !== null) {
-            $this->SignLocationRUY = $param["SignLocationRUY"];
+        if (array_key_exists('SignLocationRUY',$param) and $param['SignLocationRUY'] !== null) {
+            $this->SignLocationRUY = $param['SignLocationRUY'];
         }
     }
 }

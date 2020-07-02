@@ -110,28 +110,28 @@ class ModifyBlockIPListRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LoadBalancerIds",$param) and $param["LoadBalancerIds"] !== null) {
-            $this->LoadBalancerIds = $param["LoadBalancerIds"];
+        if (array_key_exists('LoadBalancerIds',$param) and $param['LoadBalancerIds'] !== null) {
+            $this->LoadBalancerIds = $param['LoadBalancerIds'];
         }
 
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists('Type',$param) and $param['Type'] !== null) {
+            $this->Type = $param['Type'];
         }
 
-        if (array_key_exists("ClientIPField",$param) and $param["ClientIPField"] !== null) {
-            $this->ClientIPField = $param["ClientIPField"];
+        if (array_key_exists('ClientIPField',$param) and $param['ClientIPField'] !== null) {
+            $this->ClientIPField = $param['ClientIPField'];
         }
 
-        if (array_key_exists("BlockIPList",$param) and $param["BlockIPList"] !== null) {
-            $this->BlockIPList = $param["BlockIPList"];
+        if (array_key_exists('BlockIPList',$param) and $param['BlockIPList'] !== null) {
+            $this->BlockIPList = $param['BlockIPList'];
         }
 
-        if (array_key_exists("ExpireTime",$param) and $param["ExpireTime"] !== null) {
-            $this->ExpireTime = $param["ExpireTime"];
+        if (array_key_exists('ExpireTime',$param) and $param['ExpireTime'] !== null) {
+            $this->ExpireTime = $param['ExpireTime'];
         }
 
-        if (array_key_exists("AddStrategy",$param) and $param["AddStrategy"] !== null) {
-            $this->AddStrategy = $param["AddStrategy"];
+        if (array_key_exists('AddStrategy',$param) and $param['AddStrategy'] !== null) {
+            $this->AddStrategy = $param['AddStrategy'];
         }
     }
 }

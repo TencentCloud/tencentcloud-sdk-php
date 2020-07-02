@@ -62,16 +62,16 @@ class TaskType extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TypeId",$param) and $param["TypeId"] !== null) {
-            $this->TypeId = $param["TypeId"];
+        if (array_key_exists('TypeId',$param) and $param['TypeId'] !== null) {
+            $this->TypeId = $param['TypeId'];
         }
 
-        if (array_key_exists("TypeName",$param) and $param["TypeName"] !== null) {
-            $this->TypeName = $param["TypeName"];
+        if (array_key_exists('TypeName',$param) and $param['TypeName'] !== null) {
+            $this->TypeName = $param['TypeName'];
         }
 
-        if (array_key_exists("TaskSubType",$param) and $param["TaskSubType"] !== null) {
-            $this->TaskSubType = $param["TaskSubType"];
+        if (array_key_exists('TaskSubType',$param) and $param['TaskSubType'] !== null) {
+            $this->TaskSubType = $param['TaskSubType'];
         }
     }
 }

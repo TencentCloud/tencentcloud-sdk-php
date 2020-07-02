@@ -94,33 +94,33 @@ class DescribeItemsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
+        if (array_key_exists('Offset',$param) and $param['Offset'] !== null) {
+            $this->Offset = $param['Offset'];
         }
 
-        if (array_key_exists("Size",$param) and $param["Size"] !== null) {
-            $this->Size = $param["Size"];
+        if (array_key_exists('Size',$param) and $param['Size'] !== null) {
+            $this->Size = $param['Size'];
         }
 
-        if (array_key_exists("Total",$param) and $param["Total"] !== null) {
-            $this->Total = $param["Total"];
+        if (array_key_exists('Total',$param) and $param['Total'] !== null) {
+            $this->Total = $param['Total'];
         }
 
-        if (array_key_exists("HaveMore",$param) and $param["HaveMore"] !== null) {
-            $this->HaveMore = $param["HaveMore"];
+        if (array_key_exists('HaveMore',$param) and $param['HaveMore'] !== null) {
+            $this->HaveMore = $param['HaveMore'];
         }
 
-        if (array_key_exists("Items",$param) and $param["Items"] !== null) {
+        if (array_key_exists('Items',$param) and $param['Items'] !== null) {
             $this->Items = [];
-            foreach ($param["Items"] as $key => $value){
+            foreach ($param['Items'] as $key => $value){
                 $obj = new Item();
                 $obj->deserialize($value);
                 array_push($this->Items, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

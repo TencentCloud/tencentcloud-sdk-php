@@ -46,8 +46,8 @@ class CCAlarmThreshold extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AlarmThreshold",$param) and $param["AlarmThreshold"] !== null) {
-            $this->AlarmThreshold = $param["AlarmThreshold"];
+        if (array_key_exists('AlarmThreshold',$param) and $param['AlarmThreshold'] !== null) {
+            $this->AlarmThreshold = $param['AlarmThreshold'];
         }
     }
 }

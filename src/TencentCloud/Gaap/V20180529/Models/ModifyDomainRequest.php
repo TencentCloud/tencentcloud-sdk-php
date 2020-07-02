@@ -122,28 +122,28 @@ class ModifyDomainRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ListenerId",$param) and $param["ListenerId"] !== null) {
-            $this->ListenerId = $param["ListenerId"];
+        if (array_key_exists('ListenerId',$param) and $param['ListenerId'] !== null) {
+            $this->ListenerId = $param['ListenerId'];
         }
 
-        if (array_key_exists("OldDomain",$param) and $param["OldDomain"] !== null) {
-            $this->OldDomain = $param["OldDomain"];
+        if (array_key_exists('OldDomain',$param) and $param['OldDomain'] !== null) {
+            $this->OldDomain = $param['OldDomain'];
         }
 
-        if (array_key_exists("NewDomain",$param) and $param["NewDomain"] !== null) {
-            $this->NewDomain = $param["NewDomain"];
+        if (array_key_exists('NewDomain',$param) and $param['NewDomain'] !== null) {
+            $this->NewDomain = $param['NewDomain'];
         }
 
-        if (array_key_exists("CertificateId",$param) and $param["CertificateId"] !== null) {
-            $this->CertificateId = $param["CertificateId"];
+        if (array_key_exists('CertificateId',$param) and $param['CertificateId'] !== null) {
+            $this->CertificateId = $param['CertificateId'];
         }
 
-        if (array_key_exists("ClientCertificateId",$param) and $param["ClientCertificateId"] !== null) {
-            $this->ClientCertificateId = $param["ClientCertificateId"];
+        if (array_key_exists('ClientCertificateId',$param) and $param['ClientCertificateId'] !== null) {
+            $this->ClientCertificateId = $param['ClientCertificateId'];
         }
 
-        if (array_key_exists("PolyClientCertificateIds",$param) and $param["PolyClientCertificateIds"] !== null) {
-            $this->PolyClientCertificateIds = $param["PolyClientCertificateIds"];
+        if (array_key_exists('PolyClientCertificateIds',$param) and $param['PolyClientCertificateIds'] !== null) {
+            $this->PolyClientCertificateIds = $param['PolyClientCertificateIds'];
         }
     }
 }

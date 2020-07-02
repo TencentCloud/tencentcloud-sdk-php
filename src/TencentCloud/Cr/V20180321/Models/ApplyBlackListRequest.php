@@ -70,25 +70,25 @@ class ApplyBlackListRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Module",$param) and $param["Module"] !== null) {
-            $this->Module = $param["Module"];
+        if (array_key_exists('Module',$param) and $param['Module'] !== null) {
+            $this->Module = $param['Module'];
         }
 
-        if (array_key_exists("Operation",$param) and $param["Operation"] !== null) {
-            $this->Operation = $param["Operation"];
+        if (array_key_exists('Operation',$param) and $param['Operation'] !== null) {
+            $this->Operation = $param['Operation'];
         }
 
-        if (array_key_exists("BlackList",$param) and $param["BlackList"] !== null) {
+        if (array_key_exists('BlackList',$param) and $param['BlackList'] !== null) {
             $this->BlackList = [];
-            foreach ($param["BlackList"] as $key => $value){
+            foreach ($param['BlackList'] as $key => $value){
                 $obj = new SingleBlackApply();
                 $obj->deserialize($value);
                 array_push($this->BlackList, $obj);
             }
         }
 
-        if (array_key_exists("InstId",$param) and $param["InstId"] !== null) {
-            $this->InstId = $param["InstId"];
+        if (array_key_exists('InstId',$param) and $param['InstId'] !== null) {
+            $this->InstId = $param['InstId'];
         }
     }
 }

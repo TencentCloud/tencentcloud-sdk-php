@@ -146,17 +146,17 @@ class SvgWatermarkInputForUpdate extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Width",$param) and $param["Width"] !== null) {
-            $this->Width = $param["Width"];
+        if (array_key_exists('Width',$param) and $param['Width'] !== null) {
+            $this->Width = $param['Width'];
         }
 
-        if (array_key_exists("Height",$param) and $param["Height"] !== null) {
-            $this->Height = $param["Height"];
+        if (array_key_exists('Height',$param) and $param['Height'] !== null) {
+            $this->Height = $param['Height'];
         }
 
-        if (array_key_exists("CycleConfig",$param) and $param["CycleConfig"] !== null) {
+        if (array_key_exists('CycleConfig',$param) and $param['CycleConfig'] !== null) {
             $this->CycleConfig = new WatermarkCycleConfigForUpdate();
-            $this->CycleConfig->deserialize($param["CycleConfig"]);
+            $this->CycleConfig->deserialize($param['CycleConfig']);
         }
     }
 }

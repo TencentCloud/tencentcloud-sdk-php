@@ -78,24 +78,24 @@ class TaskNotifyConfig extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CmqModel",$param) and $param["CmqModel"] !== null) {
-            $this->CmqModel = $param["CmqModel"];
+        if (array_key_exists('CmqModel',$param) and $param['CmqModel'] !== null) {
+            $this->CmqModel = $param['CmqModel'];
         }
 
-        if (array_key_exists("CmqRegion",$param) and $param["CmqRegion"] !== null) {
-            $this->CmqRegion = $param["CmqRegion"];
+        if (array_key_exists('CmqRegion',$param) and $param['CmqRegion'] !== null) {
+            $this->CmqRegion = $param['CmqRegion'];
         }
 
-        if (array_key_exists("QueueName",$param) and $param["QueueName"] !== null) {
-            $this->QueueName = $param["QueueName"];
+        if (array_key_exists('QueueName',$param) and $param['QueueName'] !== null) {
+            $this->QueueName = $param['QueueName'];
         }
 
-        if (array_key_exists("TopicName",$param) and $param["TopicName"] !== null) {
-            $this->TopicName = $param["TopicName"];
+        if (array_key_exists('TopicName',$param) and $param['TopicName'] !== null) {
+            $this->TopicName = $param['TopicName'];
         }
 
-        if (array_key_exists("NotifyMode",$param) and $param["NotifyMode"] !== null) {
-            $this->NotifyMode = $param["NotifyMode"];
+        if (array_key_exists('NotifyMode',$param) and $param['NotifyMode'] !== null) {
+            $this->NotifyMode = $param['NotifyMode'];
         }
     }
 }

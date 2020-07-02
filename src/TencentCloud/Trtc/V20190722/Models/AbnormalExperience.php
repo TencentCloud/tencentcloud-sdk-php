@@ -78,29 +78,29 @@ class AbnormalExperience extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("UserId",$param) and $param["UserId"] !== null) {
-            $this->UserId = $param["UserId"];
+        if (array_key_exists('UserId',$param) and $param['UserId'] !== null) {
+            $this->UserId = $param['UserId'];
         }
 
-        if (array_key_exists("ExperienceId",$param) and $param["ExperienceId"] !== null) {
-            $this->ExperienceId = $param["ExperienceId"];
+        if (array_key_exists('ExperienceId',$param) and $param['ExperienceId'] !== null) {
+            $this->ExperienceId = $param['ExperienceId'];
         }
 
-        if (array_key_exists("RoomId",$param) and $param["RoomId"] !== null) {
-            $this->RoomId = $param["RoomId"];
+        if (array_key_exists('RoomId',$param) and $param['RoomId'] !== null) {
+            $this->RoomId = $param['RoomId'];
         }
 
-        if (array_key_exists("AbnormalEventList",$param) and $param["AbnormalEventList"] !== null) {
+        if (array_key_exists('AbnormalEventList',$param) and $param['AbnormalEventList'] !== null) {
             $this->AbnormalEventList = [];
-            foreach ($param["AbnormalEventList"] as $key => $value){
+            foreach ($param['AbnormalEventList'] as $key => $value){
                 $obj = new AbnormalEvent();
                 $obj->deserialize($value);
                 array_push($this->AbnormalEventList, $obj);
             }
         }
 
-        if (array_key_exists("EventTime",$param) and $param["EventTime"] !== null) {
-            $this->EventTime = $param["EventTime"];
+        if (array_key_exists('EventTime',$param) and $param['EventTime'] !== null) {
+            $this->EventTime = $param['EventTime'];
         }
     }
 }

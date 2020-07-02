@@ -54,13 +54,13 @@ class DescribeDevicePartitionResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DevicePartition",$param) and $param["DevicePartition"] !== null) {
+        if (array_key_exists('DevicePartition',$param) and $param['DevicePartition'] !== null) {
             $this->DevicePartition = new DevicePartition();
-            $this->DevicePartition->deserialize($param["DevicePartition"]);
+            $this->DevicePartition->deserialize($param['DevicePartition']);
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

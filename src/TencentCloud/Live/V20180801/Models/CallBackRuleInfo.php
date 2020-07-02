@@ -78,24 +78,24 @@ class CallBackRuleInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
-            $this->UpdateTime = $param["UpdateTime"];
+        if (array_key_exists('UpdateTime',$param) and $param['UpdateTime'] !== null) {
+            $this->UpdateTime = $param['UpdateTime'];
         }
 
-        if (array_key_exists("TemplateId",$param) and $param["TemplateId"] !== null) {
-            $this->TemplateId = $param["TemplateId"];
+        if (array_key_exists('TemplateId',$param) and $param['TemplateId'] !== null) {
+            $this->TemplateId = $param['TemplateId'];
         }
 
-        if (array_key_exists("DomainName",$param) and $param["DomainName"] !== null) {
-            $this->DomainName = $param["DomainName"];
+        if (array_key_exists('DomainName',$param) and $param['DomainName'] !== null) {
+            $this->DomainName = $param['DomainName'];
         }
 
-        if (array_key_exists("AppName",$param) and $param["AppName"] !== null) {
-            $this->AppName = $param["AppName"];
+        if (array_key_exists('AppName',$param) and $param['AppName'] !== null) {
+            $this->AppName = $param['AppName'];
         }
     }
 }

@@ -62,12 +62,12 @@ class DescribeLiveForbidStreamListRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PageNum",$param) and $param["PageNum"] !== null) {
-            $this->PageNum = $param["PageNum"];
+        if (array_key_exists('PageNum',$param) and $param['PageNum'] !== null) {
+            $this->PageNum = $param['PageNum'];
         }
 
-        if (array_key_exists("PageSize",$param) and $param["PageSize"] !== null) {
-            $this->PageSize = $param["PageSize"];
+        if (array_key_exists('PageSize',$param) and $param['PageSize'] !== null) {
+            $this->PageSize = $param['PageSize'];
         }
     }
 }

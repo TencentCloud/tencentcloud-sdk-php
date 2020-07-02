@@ -46,8 +46,8 @@ class ListAccessKeysRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TargetUin",$param) and $param["TargetUin"] !== null) {
-            $this->TargetUin = $param["TargetUin"];
+        if (array_key_exists('TargetUin',$param) and $param['TargetUin'] !== null) {
+            $this->TargetUin = $param['TargetUin'];
         }
     }
 }

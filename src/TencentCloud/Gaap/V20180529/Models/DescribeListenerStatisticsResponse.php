@@ -54,17 +54,17 @@ class DescribeListenerStatisticsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("StatisticsData",$param) and $param["StatisticsData"] !== null) {
+        if (array_key_exists('StatisticsData',$param) and $param['StatisticsData'] !== null) {
             $this->StatisticsData = [];
-            foreach ($param["StatisticsData"] as $key => $value){
+            foreach ($param['StatisticsData'] as $key => $value){
                 $obj = new MetricStatisticsInfo();
                 $obj->deserialize($value);
                 array_push($this->StatisticsData, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

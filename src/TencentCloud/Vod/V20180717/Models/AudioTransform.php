@@ -62,13 +62,13 @@ class AudioTransform extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists('Type',$param) and $param['Type'] !== null) {
+            $this->Type = $param['Type'];
         }
 
-        if (array_key_exists("VolumeParam",$param) and $param["VolumeParam"] !== null) {
+        if (array_key_exists('VolumeParam',$param) and $param['VolumeParam'] !== null) {
             $this->VolumeParam = new AudioVolumeParam();
-            $this->VolumeParam->deserialize($param["VolumeParam"]);
+            $this->VolumeParam->deserialize($param['VolumeParam']);
         }
     }
 }

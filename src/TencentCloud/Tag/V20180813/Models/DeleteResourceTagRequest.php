@@ -54,12 +54,12 @@ class DeleteResourceTagRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TagKey",$param) and $param["TagKey"] !== null) {
-            $this->TagKey = $param["TagKey"];
+        if (array_key_exists('TagKey',$param) and $param['TagKey'] !== null) {
+            $this->TagKey = $param['TagKey'];
         }
 
-        if (array_key_exists("Resource",$param) and $param["Resource"] !== null) {
-            $this->Resource = $param["Resource"];
+        if (array_key_exists('Resource',$param) and $param['Resource'] !== null) {
+            $this->Resource = $param['Resource'];
         }
     }
 }

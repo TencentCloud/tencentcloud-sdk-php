@@ -62,16 +62,16 @@ class UpdateDictRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DictId",$param) and $param["DictId"] !== null) {
-            $this->DictId = $param["DictId"];
+        if (array_key_exists('DictId',$param) and $param['DictId'] !== null) {
+            $this->DictId = $param['DictId'];
         }
 
-        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
-            $this->Description = $param["Description"];
+        if (array_key_exists('Description',$param) and $param['Description'] !== null) {
+            $this->Description = $param['Description'];
         }
 
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
     }
 }

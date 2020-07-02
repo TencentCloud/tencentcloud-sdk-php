@@ -78,25 +78,25 @@ class ListVersionByFunctionResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FunctionVersion",$param) and $param["FunctionVersion"] !== null) {
-            $this->FunctionVersion = $param["FunctionVersion"];
+        if (array_key_exists('FunctionVersion',$param) and $param['FunctionVersion'] !== null) {
+            $this->FunctionVersion = $param['FunctionVersion'];
         }
 
-        if (array_key_exists("Versions",$param) and $param["Versions"] !== null) {
+        if (array_key_exists('Versions',$param) and $param['Versions'] !== null) {
             $this->Versions = [];
-            foreach ($param["Versions"] as $key => $value){
+            foreach ($param['Versions'] as $key => $value){
                 $obj = new FunctionVersion();
                 $obj->deserialize($value);
                 array_push($this->Versions, $obj);
             }
         }
 
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

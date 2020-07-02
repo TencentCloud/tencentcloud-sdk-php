@@ -70,20 +70,20 @@ class Docker extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("User",$param) and $param["User"] !== null) {
-            $this->User = $param["User"];
+        if (array_key_exists('User',$param) and $param['User'] !== null) {
+            $this->User = $param['User'];
         }
 
-        if (array_key_exists("Password",$param) and $param["Password"] !== null) {
-            $this->Password = $param["Password"];
+        if (array_key_exists('Password',$param) and $param['Password'] !== null) {
+            $this->Password = $param['Password'];
         }
 
-        if (array_key_exists("Image",$param) and $param["Image"] !== null) {
-            $this->Image = $param["Image"];
+        if (array_key_exists('Image',$param) and $param['Image'] !== null) {
+            $this->Image = $param['Image'];
         }
 
-        if (array_key_exists("Server",$param) and $param["Server"] !== null) {
-            $this->Server = $param["Server"];
+        if (array_key_exists('Server',$param) and $param['Server'] !== null) {
+            $this->Server = $param['Server'];
         }
     }
 }

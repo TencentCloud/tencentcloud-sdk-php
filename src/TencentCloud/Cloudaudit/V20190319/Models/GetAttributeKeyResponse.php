@@ -54,17 +54,17 @@ class GetAttributeKeyResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AttributeKeyDetails",$param) and $param["AttributeKeyDetails"] !== null) {
+        if (array_key_exists('AttributeKeyDetails',$param) and $param['AttributeKeyDetails'] !== null) {
             $this->AttributeKeyDetails = [];
-            foreach ($param["AttributeKeyDetails"] as $key => $value){
+            foreach ($param['AttributeKeyDetails'] as $key => $value){
                 $obj = new AttributeKeyDetail();
                 $obj->deserialize($value);
                 array_push($this->AttributeKeyDetails, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

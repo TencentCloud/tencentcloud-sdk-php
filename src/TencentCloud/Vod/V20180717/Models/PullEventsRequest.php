@@ -54,12 +54,12 @@ class PullEventsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ExtInfo",$param) and $param["ExtInfo"] !== null) {
-            $this->ExtInfo = $param["ExtInfo"];
+        if (array_key_exists('ExtInfo',$param) and $param['ExtInfo'] !== null) {
+            $this->ExtInfo = $param['ExtInfo'];
         }
 
-        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
-            $this->SubAppId = $param["SubAppId"];
+        if (array_key_exists('SubAppId',$param) and $param['SubAppId'] !== null) {
+            $this->SubAppId = $param['SubAppId'];
         }
     }
 }

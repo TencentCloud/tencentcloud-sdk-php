@@ -174,72 +174,72 @@ class DescribeAttackLogInfoResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
-            $this->Id = $param["Id"];
+        if (array_key_exists('Id',$param) and $param['Id'] !== null) {
+            $this->Id = $param['Id'];
         }
 
-        if (array_key_exists("Quuid",$param) and $param["Quuid"] !== null) {
-            $this->Quuid = $param["Quuid"];
+        if (array_key_exists('Quuid',$param) and $param['Quuid'] !== null) {
+            $this->Quuid = $param['Quuid'];
         }
 
-        if (array_key_exists("SrcPort",$param) and $param["SrcPort"] !== null) {
-            $this->SrcPort = $param["SrcPort"];
+        if (array_key_exists('SrcPort',$param) and $param['SrcPort'] !== null) {
+            $this->SrcPort = $param['SrcPort'];
         }
 
-        if (array_key_exists("SrcIp",$param) and $param["SrcIp"] !== null) {
-            $this->SrcIp = $param["SrcIp"];
+        if (array_key_exists('SrcIp',$param) and $param['SrcIp'] !== null) {
+            $this->SrcIp = $param['SrcIp'];
         }
 
-        if (array_key_exists("DstPort",$param) and $param["DstPort"] !== null) {
-            $this->DstPort = $param["DstPort"];
+        if (array_key_exists('DstPort',$param) and $param['DstPort'] !== null) {
+            $this->DstPort = $param['DstPort'];
         }
 
-        if (array_key_exists("DstIp",$param) and $param["DstIp"] !== null) {
-            $this->DstIp = $param["DstIp"];
+        if (array_key_exists('DstIp',$param) and $param['DstIp'] !== null) {
+            $this->DstIp = $param['DstIp'];
         }
 
-        if (array_key_exists("HttpMethod",$param) and $param["HttpMethod"] !== null) {
-            $this->HttpMethod = $param["HttpMethod"];
+        if (array_key_exists('HttpMethod',$param) and $param['HttpMethod'] !== null) {
+            $this->HttpMethod = $param['HttpMethod'];
         }
 
-        if (array_key_exists("HttpHost",$param) and $param["HttpHost"] !== null) {
-            $this->HttpHost = $param["HttpHost"];
+        if (array_key_exists('HttpHost',$param) and $param['HttpHost'] !== null) {
+            $this->HttpHost = $param['HttpHost'];
         }
 
-        if (array_key_exists("HttpHead",$param) and $param["HttpHead"] !== null) {
-            $this->HttpHead = $param["HttpHead"];
+        if (array_key_exists('HttpHead',$param) and $param['HttpHead'] !== null) {
+            $this->HttpHead = $param['HttpHead'];
         }
 
-        if (array_key_exists("HttpUserAgent",$param) and $param["HttpUserAgent"] !== null) {
-            $this->HttpUserAgent = $param["HttpUserAgent"];
+        if (array_key_exists('HttpUserAgent',$param) and $param['HttpUserAgent'] !== null) {
+            $this->HttpUserAgent = $param['HttpUserAgent'];
         }
 
-        if (array_key_exists("HttpReferer",$param) and $param["HttpReferer"] !== null) {
-            $this->HttpReferer = $param["HttpReferer"];
+        if (array_key_exists('HttpReferer',$param) and $param['HttpReferer'] !== null) {
+            $this->HttpReferer = $param['HttpReferer'];
         }
 
-        if (array_key_exists("VulType",$param) and $param["VulType"] !== null) {
-            $this->VulType = $param["VulType"];
+        if (array_key_exists('VulType',$param) and $param['VulType'] !== null) {
+            $this->VulType = $param['VulType'];
         }
 
-        if (array_key_exists("HttpCgi",$param) and $param["HttpCgi"] !== null) {
-            $this->HttpCgi = $param["HttpCgi"];
+        if (array_key_exists('HttpCgi',$param) and $param['HttpCgi'] !== null) {
+            $this->HttpCgi = $param['HttpCgi'];
         }
 
-        if (array_key_exists("HttpParam",$param) and $param["HttpParam"] !== null) {
-            $this->HttpParam = $param["HttpParam"];
+        if (array_key_exists('HttpParam',$param) and $param['HttpParam'] !== null) {
+            $this->HttpParam = $param['HttpParam'];
         }
 
-        if (array_key_exists("CreatedAt",$param) and $param["CreatedAt"] !== null) {
-            $this->CreatedAt = $param["CreatedAt"];
+        if (array_key_exists('CreatedAt',$param) and $param['CreatedAt'] !== null) {
+            $this->CreatedAt = $param['CreatedAt'];
         }
 
-        if (array_key_exists("HttpContent",$param) and $param["HttpContent"] !== null) {
-            $this->HttpContent = $param["HttpContent"];
+        if (array_key_exists('HttpContent',$param) and $param['HttpContent'] !== null) {
+            $this->HttpContent = $param['HttpContent'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

@@ -46,8 +46,8 @@ class ParseLiveStreamProcessNotificationRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Content",$param) and $param["Content"] !== null) {
-            $this->Content = $param["Content"];
+        if (array_key_exists('Content',$param) and $param['Content'] !== null) {
+            $this->Content = $param['Content'];
         }
     }
 }

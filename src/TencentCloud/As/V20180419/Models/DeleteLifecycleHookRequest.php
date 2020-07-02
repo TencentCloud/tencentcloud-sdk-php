@@ -46,8 +46,8 @@ class DeleteLifecycleHookRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LifecycleHookId",$param) and $param["LifecycleHookId"] !== null) {
-            $this->LifecycleHookId = $param["LifecycleHookId"];
+        if (array_key_exists('LifecycleHookId',$param) and $param['LifecycleHookId'] !== null) {
+            $this->LifecycleHookId = $param['LifecycleHookId'];
         }
     }
 }

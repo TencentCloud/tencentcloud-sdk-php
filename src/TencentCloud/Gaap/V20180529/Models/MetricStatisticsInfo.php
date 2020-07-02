@@ -54,13 +54,13 @@ class MetricStatisticsInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MetricName",$param) and $param["MetricName"] !== null) {
-            $this->MetricName = $param["MetricName"];
+        if (array_key_exists('MetricName',$param) and $param['MetricName'] !== null) {
+            $this->MetricName = $param['MetricName'];
         }
 
-        if (array_key_exists("MetricData",$param) and $param["MetricData"] !== null) {
+        if (array_key_exists('MetricData',$param) and $param['MetricData'] !== null) {
             $this->MetricData = [];
-            foreach ($param["MetricData"] as $key => $value){
+            foreach ($param['MetricData'] as $key => $value){
                 $obj = new StatisticsDataInfo();
                 $obj->deserialize($value);
                 array_push($this->MetricData, $obj);

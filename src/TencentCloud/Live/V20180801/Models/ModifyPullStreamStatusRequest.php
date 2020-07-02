@@ -54,12 +54,12 @@ class ModifyPullStreamStatusRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ConfigIds",$param) and $param["ConfigIds"] !== null) {
-            $this->ConfigIds = $param["ConfigIds"];
+        if (array_key_exists('ConfigIds',$param) and $param['ConfigIds'] !== null) {
+            $this->ConfigIds = $param['ConfigIds'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
     }
 }

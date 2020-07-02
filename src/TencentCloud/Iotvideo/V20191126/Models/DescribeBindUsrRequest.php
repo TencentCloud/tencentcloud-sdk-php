@@ -54,12 +54,12 @@ class DescribeBindUsrRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Tid",$param) and $param["Tid"] !== null) {
-            $this->Tid = $param["Tid"];
+        if (array_key_exists('Tid',$param) and $param['Tid'] !== null) {
+            $this->Tid = $param['Tid'];
         }
 
-        if (array_key_exists("AccessId",$param) and $param["AccessId"] !== null) {
-            $this->AccessId = $param["AccessId"];
+        if (array_key_exists('AccessId',$param) and $param['AccessId'] !== null) {
+            $this->AccessId = $param['AccessId'];
         }
     }
 }

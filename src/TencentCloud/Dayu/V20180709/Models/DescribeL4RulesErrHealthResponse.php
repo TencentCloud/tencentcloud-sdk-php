@@ -94,30 +94,30 @@ SourceIp表示源站IP，SourcePort表示源站端口，AbnormalStatTime表示�
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Total",$param) and $param["Total"] !== null) {
-            $this->Total = $param["Total"];
+        if (array_key_exists('Total',$param) and $param['Total'] !== null) {
+            $this->Total = $param['Total'];
         }
 
-        if (array_key_exists("ErrHealths",$param) and $param["ErrHealths"] !== null) {
+        if (array_key_exists('ErrHealths',$param) and $param['ErrHealths'] !== null) {
             $this->ErrHealths = [];
-            foreach ($param["ErrHealths"] as $key => $value){
+            foreach ($param['ErrHealths'] as $key => $value){
                 $obj = new KeyValue();
                 $obj->deserialize($value);
                 array_push($this->ErrHealths, $obj);
             }
         }
 
-        if (array_key_exists("ExtErrHealths",$param) and $param["ExtErrHealths"] !== null) {
+        if (array_key_exists('ExtErrHealths',$param) and $param['ExtErrHealths'] !== null) {
             $this->ExtErrHealths = [];
-            foreach ($param["ExtErrHealths"] as $key => $value){
+            foreach ($param['ExtErrHealths'] as $key => $value){
                 $obj = new KeyValueRecord();
                 $obj->deserialize($value);
                 array_push($this->ExtErrHealths, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

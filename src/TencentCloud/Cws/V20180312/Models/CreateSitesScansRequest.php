@@ -62,16 +62,16 @@ class CreateSitesScansRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SiteIds",$param) and $param["SiteIds"] !== null) {
-            $this->SiteIds = $param["SiteIds"];
+        if (array_key_exists('SiteIds',$param) and $param['SiteIds'] !== null) {
+            $this->SiteIds = $param['SiteIds'];
         }
 
-        if (array_key_exists("ScannerType",$param) and $param["ScannerType"] !== null) {
-            $this->ScannerType = $param["ScannerType"];
+        if (array_key_exists('ScannerType',$param) and $param['ScannerType'] !== null) {
+            $this->ScannerType = $param['ScannerType'];
         }
 
-        if (array_key_exists("RateLimit",$param) and $param["RateLimit"] !== null) {
-            $this->RateLimit = $param["RateLimit"];
+        if (array_key_exists('RateLimit',$param) and $param['RateLimit'] !== null) {
+            $this->RateLimit = $param['RateLimit'];
         }
     }
 }

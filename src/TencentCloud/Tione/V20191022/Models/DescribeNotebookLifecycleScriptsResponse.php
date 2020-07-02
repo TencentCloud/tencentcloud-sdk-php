@@ -62,21 +62,21 @@ class DescribeNotebookLifecycleScriptsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("NotebookLifecycleScriptsSet",$param) and $param["NotebookLifecycleScriptsSet"] !== null) {
+        if (array_key_exists('NotebookLifecycleScriptsSet',$param) and $param['NotebookLifecycleScriptsSet'] !== null) {
             $this->NotebookLifecycleScriptsSet = [];
-            foreach ($param["NotebookLifecycleScriptsSet"] as $key => $value){
+            foreach ($param['NotebookLifecycleScriptsSet'] as $key => $value){
                 $obj = new NotebookLifecycleScriptsSummary();
                 $obj->deserialize($value);
                 array_push($this->NotebookLifecycleScriptsSet, $obj);
             }
         }
 
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

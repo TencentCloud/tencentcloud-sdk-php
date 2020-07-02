@@ -78,29 +78,29 @@ class DescribePersonTraceResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MallId",$param) and $param["MallId"] !== null) {
-            $this->MallId = $param["MallId"];
+        if (array_key_exists('MallId',$param) and $param['MallId'] !== null) {
+            $this->MallId = $param['MallId'];
         }
 
-        if (array_key_exists("MallCode",$param) and $param["MallCode"] !== null) {
-            $this->MallCode = $param["MallCode"];
+        if (array_key_exists('MallCode',$param) and $param['MallCode'] !== null) {
+            $this->MallCode = $param['MallCode'];
         }
 
-        if (array_key_exists("PersonId",$param) and $param["PersonId"] !== null) {
-            $this->PersonId = $param["PersonId"];
+        if (array_key_exists('PersonId',$param) and $param['PersonId'] !== null) {
+            $this->PersonId = $param['PersonId'];
         }
 
-        if (array_key_exists("TraceRouteSet",$param) and $param["TraceRouteSet"] !== null) {
+        if (array_key_exists('TraceRouteSet',$param) and $param['TraceRouteSet'] !== null) {
             $this->TraceRouteSet = [];
-            foreach ($param["TraceRouteSet"] as $key => $value){
+            foreach ($param['TraceRouteSet'] as $key => $value){
                 $obj = new PersonTraceRoute();
                 $obj->deserialize($value);
                 array_push($this->TraceRouteSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

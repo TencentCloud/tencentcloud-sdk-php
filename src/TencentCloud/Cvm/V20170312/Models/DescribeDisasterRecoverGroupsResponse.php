@@ -62,21 +62,21 @@ class DescribeDisasterRecoverGroupsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DisasterRecoverGroupSet",$param) and $param["DisasterRecoverGroupSet"] !== null) {
+        if (array_key_exists('DisasterRecoverGroupSet',$param) and $param['DisasterRecoverGroupSet'] !== null) {
             $this->DisasterRecoverGroupSet = [];
-            foreach ($param["DisasterRecoverGroupSet"] as $key => $value){
+            foreach ($param['DisasterRecoverGroupSet'] as $key => $value){
                 $obj = new DisasterRecoverGroup();
                 $obj->deserialize($value);
                 array_push($this->DisasterRecoverGroupSet, $obj);
             }
         }
 
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

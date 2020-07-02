@@ -46,8 +46,8 @@ class DescribeLoadBalancerListByCertIdRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CertIds",$param) and $param["CertIds"] !== null) {
-            $this->CertIds = $param["CertIds"];
+        if (array_key_exists('CertIds',$param) and $param['CertIds'] !== null) {
+            $this->CertIds = $param['CertIds'];
         }
     }
 }

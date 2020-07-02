@@ -62,21 +62,21 @@ class DescribeGatewayFlowMonitorDetailResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("GatewayFlowMonitorDetailSet",$param) and $param["GatewayFlowMonitorDetailSet"] !== null) {
+        if (array_key_exists('GatewayFlowMonitorDetailSet',$param) and $param['GatewayFlowMonitorDetailSet'] !== null) {
             $this->GatewayFlowMonitorDetailSet = [];
-            foreach ($param["GatewayFlowMonitorDetailSet"] as $key => $value){
+            foreach ($param['GatewayFlowMonitorDetailSet'] as $key => $value){
                 $obj = new GatewayFlowMonitorDetail();
                 $obj->deserialize($value);
                 array_push($this->GatewayFlowMonitorDetailSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

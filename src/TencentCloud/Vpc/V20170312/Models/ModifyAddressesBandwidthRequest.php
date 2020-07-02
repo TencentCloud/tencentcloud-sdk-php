@@ -70,20 +70,20 @@ class ModifyAddressesBandwidthRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AddressIds",$param) and $param["AddressIds"] !== null) {
-            $this->AddressIds = $param["AddressIds"];
+        if (array_key_exists('AddressIds',$param) and $param['AddressIds'] !== null) {
+            $this->AddressIds = $param['AddressIds'];
         }
 
-        if (array_key_exists("InternetMaxBandwidthOut",$param) and $param["InternetMaxBandwidthOut"] !== null) {
-            $this->InternetMaxBandwidthOut = $param["InternetMaxBandwidthOut"];
+        if (array_key_exists('InternetMaxBandwidthOut',$param) and $param['InternetMaxBandwidthOut'] !== null) {
+            $this->InternetMaxBandwidthOut = $param['InternetMaxBandwidthOut'];
         }
 
-        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
-            $this->StartTime = $param["StartTime"];
+        if (array_key_exists('StartTime',$param) and $param['StartTime'] !== null) {
+            $this->StartTime = $param['StartTime'];
         }
 
-        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
-            $this->EndTime = $param["EndTime"];
+        if (array_key_exists('EndTime',$param) and $param['EndTime'] !== null) {
+            $this->EndTime = $param['EndTime'];
         }
     }
 }

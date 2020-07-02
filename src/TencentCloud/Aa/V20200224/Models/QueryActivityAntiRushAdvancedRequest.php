@@ -46,9 +46,9 @@ class QueryActivityAntiRushAdvancedRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BusinessSecurityData",$param) and $param["BusinessSecurityData"] !== null) {
+        if (array_key_exists('BusinessSecurityData',$param) and $param['BusinessSecurityData'] !== null) {
             $this->BusinessSecurityData = new InputActivityAntiRushAdvanced();
-            $this->BusinessSecurityData->deserialize($param["BusinessSecurityData"]);
+            $this->BusinessSecurityData->deserialize($param['BusinessSecurityData']);
         }
     }
 }

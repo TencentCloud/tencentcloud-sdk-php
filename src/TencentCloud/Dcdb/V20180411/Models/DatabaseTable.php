@@ -46,8 +46,8 @@ class DatabaseTable extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Table",$param) and $param["Table"] !== null) {
-            $this->Table = $param["Table"];
+        if (array_key_exists('Table',$param) and $param['Table'] !== null) {
+            $this->Table = $param['Table'];
         }
     }
 }

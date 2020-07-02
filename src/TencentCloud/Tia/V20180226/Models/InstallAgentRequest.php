@@ -62,16 +62,16 @@ class InstallAgentRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Cluster",$param) and $param["Cluster"] !== null) {
-            $this->Cluster = $param["Cluster"];
+        if (array_key_exists('Cluster',$param) and $param['Cluster'] !== null) {
+            $this->Cluster = $param['Cluster'];
         }
 
-        if (array_key_exists("TiaVersion",$param) and $param["TiaVersion"] !== null) {
-            $this->TiaVersion = $param["TiaVersion"];
+        if (array_key_exists('TiaVersion',$param) and $param['TiaVersion'] !== null) {
+            $this->TiaVersion = $param['TiaVersion'];
         }
 
-        if (array_key_exists("Update",$param) and $param["Update"] !== null) {
-            $this->Update = $param["Update"];
+        if (array_key_exists('Update',$param) and $param['Update'] !== null) {
+            $this->Update = $param['Update'];
         }
     }
 }

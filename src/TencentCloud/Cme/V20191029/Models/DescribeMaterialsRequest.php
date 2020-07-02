@@ -78,21 +78,21 @@ class DescribeMaterialsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Platform",$param) and $param["Platform"] !== null) {
-            $this->Platform = $param["Platform"];
+        if (array_key_exists('Platform',$param) and $param['Platform'] !== null) {
+            $this->Platform = $param['Platform'];
         }
 
-        if (array_key_exists("MaterialIds",$param) and $param["MaterialIds"] !== null) {
-            $this->MaterialIds = $param["MaterialIds"];
+        if (array_key_exists('MaterialIds',$param) and $param['MaterialIds'] !== null) {
+            $this->MaterialIds = $param['MaterialIds'];
         }
 
-        if (array_key_exists("Sort",$param) and $param["Sort"] !== null) {
+        if (array_key_exists('Sort',$param) and $param['Sort'] !== null) {
             $this->Sort = new SortBy();
-            $this->Sort->deserialize($param["Sort"]);
+            $this->Sort->deserialize($param['Sort']);
         }
 
-        if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
-            $this->Operator = $param["Operator"];
+        if (array_key_exists('Operator',$param) and $param['Operator'] !== null) {
+            $this->Operator = $param['Operator'];
         }
     }
 }

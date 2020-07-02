@@ -78,24 +78,24 @@ class TargetServicesReq extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("VmIp",$param) and $param["VmIp"] !== null) {
-            $this->VmIp = $param["VmIp"];
+        if (array_key_exists('VmIp',$param) and $param['VmIp'] !== null) {
+            $this->VmIp = $param['VmIp'];
         }
 
-        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
-            $this->VpcId = $param["VpcId"];
+        if (array_key_exists('VpcId',$param) and $param['VpcId'] !== null) {
+            $this->VpcId = $param['VpcId'];
         }
 
-        if (array_key_exists("VmPort",$param) and $param["VmPort"] !== null) {
-            $this->VmPort = $param["VmPort"];
+        if (array_key_exists('VmPort',$param) and $param['VmPort'] !== null) {
+            $this->VmPort = $param['VmPort'];
         }
 
-        if (array_key_exists("HostIp",$param) and $param["HostIp"] !== null) {
-            $this->HostIp = $param["HostIp"];
+        if (array_key_exists('HostIp',$param) and $param['HostIp'] !== null) {
+            $this->HostIp = $param['HostIp'];
         }
 
-        if (array_key_exists("DockerIp",$param) and $param["DockerIp"] !== null) {
-            $this->DockerIp = $param["DockerIp"];
+        if (array_key_exists('DockerIp',$param) and $param['DockerIp'] !== null) {
+            $this->DockerIp = $param['DockerIp'];
         }
     }
 }

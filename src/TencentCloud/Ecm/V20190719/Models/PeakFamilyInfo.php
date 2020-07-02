@@ -54,14 +54,14 @@ class PeakFamilyInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceFamily",$param) and $param["InstanceFamily"] !== null) {
+        if (array_key_exists('InstanceFamily',$param) and $param['InstanceFamily'] !== null) {
             $this->InstanceFamily = new InstanceFamilyTypeConfig();
-            $this->InstanceFamily->deserialize($param["InstanceFamily"]);
+            $this->InstanceFamily->deserialize($param['InstanceFamily']);
         }
 
-        if (array_key_exists("PeakBaseSet",$param) and $param["PeakBaseSet"] !== null) {
+        if (array_key_exists('PeakBaseSet',$param) and $param['PeakBaseSet'] !== null) {
             $this->PeakBaseSet = [];
-            foreach ($param["PeakBaseSet"] as $key => $value){
+            foreach ($param['PeakBaseSet'] as $key => $value){
                 $obj = new PeakBase();
                 $obj->deserialize($value);
                 array_push($this->PeakBaseSet, $obj);

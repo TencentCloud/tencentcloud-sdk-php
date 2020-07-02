@@ -54,8 +54,8 @@ class DescribeLivePackageInfoRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PackageType",$param) and $param["PackageType"] !== null) {
-            $this->PackageType = $param["PackageType"];
+        if (array_key_exists('PackageType',$param) and $param['PackageType'] !== null) {
+            $this->PackageType = $param['PackageType'];
         }
     }
 }

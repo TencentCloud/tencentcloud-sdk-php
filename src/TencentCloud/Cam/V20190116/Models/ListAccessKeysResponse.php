@@ -58,17 +58,17 @@ class ListAccessKeysResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AccessKeys",$param) and $param["AccessKeys"] !== null) {
+        if (array_key_exists('AccessKeys',$param) and $param['AccessKeys'] !== null) {
             $this->AccessKeys = [];
-            foreach ($param["AccessKeys"] as $key => $value){
+            foreach ($param['AccessKeys'] as $key => $value){
                 $obj = new AccessKey();
                 $obj->deserialize($value);
                 array_push($this->AccessKeys, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

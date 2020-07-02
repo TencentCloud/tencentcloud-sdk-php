@@ -78,24 +78,24 @@ class DescribeUserLimitResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MaxTaskNum",$param) and $param["MaxTaskNum"] !== null) {
-            $this->MaxTaskNum = $param["MaxTaskNum"];
+        if (array_key_exists('MaxTaskNum',$param) and $param['MaxTaskNum'] !== null) {
+            $this->MaxTaskNum = $param['MaxTaskNum'];
         }
 
-        if (array_key_exists("MaxAgentNum",$param) and $param["MaxAgentNum"] !== null) {
-            $this->MaxAgentNum = $param["MaxAgentNum"];
+        if (array_key_exists('MaxAgentNum',$param) and $param['MaxAgentNum'] !== null) {
+            $this->MaxAgentNum = $param['MaxAgentNum'];
         }
 
-        if (array_key_exists("MaxGroupNum",$param) and $param["MaxGroupNum"] !== null) {
-            $this->MaxGroupNum = $param["MaxGroupNum"];
+        if (array_key_exists('MaxGroupNum',$param) and $param['MaxGroupNum'] !== null) {
+            $this->MaxGroupNum = $param['MaxGroupNum'];
         }
 
-        if (array_key_exists("MinPeriod",$param) and $param["MinPeriod"] !== null) {
-            $this->MinPeriod = $param["MinPeriod"];
+        if (array_key_exists('MinPeriod',$param) and $param['MinPeriod'] !== null) {
+            $this->MinPeriod = $param['MinPeriod'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

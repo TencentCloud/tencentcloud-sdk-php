@@ -54,12 +54,12 @@ class PersonGroupInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
-            $this->GroupId = $param["GroupId"];
+        if (array_key_exists('GroupId',$param) and $param['GroupId'] !== null) {
+            $this->GroupId = $param['GroupId'];
         }
 
-        if (array_key_exists("PersonExDescriptions",$param) and $param["PersonExDescriptions"] !== null) {
-            $this->PersonExDescriptions = $param["PersonExDescriptions"];
+        if (array_key_exists('PersonExDescriptions',$param) and $param['PersonExDescriptions'] !== null) {
+            $this->PersonExDescriptions = $param['PersonExDescriptions'];
         }
     }
 }

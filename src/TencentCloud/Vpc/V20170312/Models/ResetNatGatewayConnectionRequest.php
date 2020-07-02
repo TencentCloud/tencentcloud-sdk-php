@@ -54,12 +54,12 @@ class ResetNatGatewayConnectionRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("NatGatewayId",$param) and $param["NatGatewayId"] !== null) {
-            $this->NatGatewayId = $param["NatGatewayId"];
+        if (array_key_exists('NatGatewayId',$param) and $param['NatGatewayId'] !== null) {
+            $this->NatGatewayId = $param['NatGatewayId'];
         }
 
-        if (array_key_exists("MaxConcurrentConnection",$param) and $param["MaxConcurrentConnection"] !== null) {
-            $this->MaxConcurrentConnection = $param["MaxConcurrentConnection"];
+        if (array_key_exists('MaxConcurrentConnection',$param) and $param['MaxConcurrentConnection'] !== null) {
+            $this->MaxConcurrentConnection = $param['MaxConcurrentConnection'];
         }
     }
 }

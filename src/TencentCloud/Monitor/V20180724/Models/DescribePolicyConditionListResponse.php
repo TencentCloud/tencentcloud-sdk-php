@@ -54,17 +54,17 @@ class DescribePolicyConditionListResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Conditions",$param) and $param["Conditions"] !== null) {
+        if (array_key_exists('Conditions',$param) and $param['Conditions'] !== null) {
             $this->Conditions = [];
-            foreach ($param["Conditions"] as $key => $value){
+            foreach ($param['Conditions'] as $key => $value){
                 $obj = new DescribePolicyConditionListCondition();
                 $obj->deserialize($value);
                 array_push($this->Conditions, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

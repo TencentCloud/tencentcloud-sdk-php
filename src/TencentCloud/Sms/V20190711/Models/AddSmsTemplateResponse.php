@@ -54,13 +54,13 @@ class AddSmsTemplateResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AddTemplateStatus",$param) and $param["AddTemplateStatus"] !== null) {
+        if (array_key_exists('AddTemplateStatus',$param) and $param['AddTemplateStatus'] !== null) {
             $this->AddTemplateStatus = new AddTemplateStatus();
-            $this->AddTemplateStatus->deserialize($param["AddTemplateStatus"]);
+            $this->AddTemplateStatus->deserialize($param['AddTemplateStatus']);
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

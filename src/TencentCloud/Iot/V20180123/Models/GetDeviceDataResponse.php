@@ -54,12 +54,12 @@ class GetDeviceDataResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DeviceData",$param) and $param["DeviceData"] !== null) {
-            $this->DeviceData = $param["DeviceData"];
+        if (array_key_exists('DeviceData',$param) and $param['DeviceData'] !== null) {
+            $this->DeviceData = $param['DeviceData'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

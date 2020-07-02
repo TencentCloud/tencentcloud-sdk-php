@@ -110,28 +110,28 @@ class ProjectInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ProjectName",$param) and $param["ProjectName"] !== null) {
-            $this->ProjectName = $param["ProjectName"];
+        if (array_key_exists('ProjectName',$param) and $param['ProjectName'] !== null) {
+            $this->ProjectName = $param['ProjectName'];
         }
 
-        if (array_key_exists("ProjectCreatorUin",$param) and $param["ProjectCreatorUin"] !== null) {
-            $this->ProjectCreatorUin = $param["ProjectCreatorUin"];
+        if (array_key_exists('ProjectCreatorUin',$param) and $param['ProjectCreatorUin'] !== null) {
+            $this->ProjectCreatorUin = $param['ProjectCreatorUin'];
         }
 
-        if (array_key_exists("ProjectCreateTime",$param) and $param["ProjectCreateTime"] !== null) {
-            $this->ProjectCreateTime = $param["ProjectCreateTime"];
+        if (array_key_exists('ProjectCreateTime',$param) and $param['ProjectCreateTime'] !== null) {
+            $this->ProjectCreateTime = $param['ProjectCreateTime'];
         }
 
-        if (array_key_exists("ProjectResume",$param) and $param["ProjectResume"] !== null) {
-            $this->ProjectResume = $param["ProjectResume"];
+        if (array_key_exists('ProjectResume',$param) and $param['ProjectResume'] !== null) {
+            $this->ProjectResume = $param['ProjectResume'];
         }
 
-        if (array_key_exists("OwnerUin",$param) and $param["OwnerUin"] !== null) {
-            $this->OwnerUin = $param["OwnerUin"];
+        if (array_key_exists('OwnerUin',$param) and $param['OwnerUin'] !== null) {
+            $this->OwnerUin = $param['OwnerUin'];
         }
 
-        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
-            $this->ProjectId = $param["ProjectId"];
+        if (array_key_exists('ProjectId',$param) and $param['ProjectId'] !== null) {
+            $this->ProjectId = $param['ProjectId'];
         }
     }
 }

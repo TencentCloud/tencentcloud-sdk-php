@@ -62,13 +62,13 @@ class GroupResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("GroupList",$param) and $param["GroupList"] !== null) {
+        if (array_key_exists('GroupList',$param) and $param['GroupList'] !== null) {
             $this->GroupList = [];
-            foreach ($param["GroupList"] as $key => $value){
+            foreach ($param['GroupList'] as $key => $value){
                 $obj = new DescribeGroup();
                 $obj->deserialize($value);
                 array_push($this->GroupList, $obj);

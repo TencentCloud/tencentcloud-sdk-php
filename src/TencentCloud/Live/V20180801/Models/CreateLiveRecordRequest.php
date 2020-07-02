@@ -186,44 +186,44 @@ eg. record_interval=3600&storage_time=2592000。
         if ($param === null) {
             return;
         }
-        if (array_key_exists("StreamName",$param) and $param["StreamName"] !== null) {
-            $this->StreamName = $param["StreamName"];
+        if (array_key_exists('StreamName',$param) and $param['StreamName'] !== null) {
+            $this->StreamName = $param['StreamName'];
         }
 
-        if (array_key_exists("AppName",$param) and $param["AppName"] !== null) {
-            $this->AppName = $param["AppName"];
+        if (array_key_exists('AppName',$param) and $param['AppName'] !== null) {
+            $this->AppName = $param['AppName'];
         }
 
-        if (array_key_exists("DomainName",$param) and $param["DomainName"] !== null) {
-            $this->DomainName = $param["DomainName"];
+        if (array_key_exists('DomainName',$param) and $param['DomainName'] !== null) {
+            $this->DomainName = $param['DomainName'];
         }
 
-        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
-            $this->StartTime = $param["StartTime"];
+        if (array_key_exists('StartTime',$param) and $param['StartTime'] !== null) {
+            $this->StartTime = $param['StartTime'];
         }
 
-        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
-            $this->EndTime = $param["EndTime"];
+        if (array_key_exists('EndTime',$param) and $param['EndTime'] !== null) {
+            $this->EndTime = $param['EndTime'];
         }
 
-        if (array_key_exists("RecordType",$param) and $param["RecordType"] !== null) {
-            $this->RecordType = $param["RecordType"];
+        if (array_key_exists('RecordType',$param) and $param['RecordType'] !== null) {
+            $this->RecordType = $param['RecordType'];
         }
 
-        if (array_key_exists("FileFormat",$param) and $param["FileFormat"] !== null) {
-            $this->FileFormat = $param["FileFormat"];
+        if (array_key_exists('FileFormat',$param) and $param['FileFormat'] !== null) {
+            $this->FileFormat = $param['FileFormat'];
         }
 
-        if (array_key_exists("Highlight",$param) and $param["Highlight"] !== null) {
-            $this->Highlight = $param["Highlight"];
+        if (array_key_exists('Highlight',$param) and $param['Highlight'] !== null) {
+            $this->Highlight = $param['Highlight'];
         }
 
-        if (array_key_exists("MixStream",$param) and $param["MixStream"] !== null) {
-            $this->MixStream = $param["MixStream"];
+        if (array_key_exists('MixStream',$param) and $param['MixStream'] !== null) {
+            $this->MixStream = $param['MixStream'];
         }
 
-        if (array_key_exists("StreamParam",$param) and $param["StreamParam"] !== null) {
-            $this->StreamParam = $param["StreamParam"];
+        if (array_key_exists('StreamParam',$param) and $param['StreamParam'] !== null) {
+            $this->StreamParam = $param['StreamParam'];
         }
     }
 }

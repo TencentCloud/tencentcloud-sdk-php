@@ -62,21 +62,21 @@ class DescribeAgentPayDealsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AgentPayDealSet",$param) and $param["AgentPayDealSet"] !== null) {
+        if (array_key_exists('AgentPayDealSet',$param) and $param['AgentPayDealSet'] !== null) {
             $this->AgentPayDealSet = [];
-            foreach ($param["AgentPayDealSet"] as $key => $value){
+            foreach ($param['AgentPayDealSet'] as $key => $value){
                 $obj = new AgentDealElem();
                 $obj->deserialize($value);
                 array_push($this->AgentPayDealSet, $obj);
             }
         }
 
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

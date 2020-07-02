@@ -94,35 +94,35 @@ class AllocateHostsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Placement",$param) and $param["Placement"] !== null) {
+        if (array_key_exists('Placement',$param) and $param['Placement'] !== null) {
             $this->Placement = new Placement();
-            $this->Placement->deserialize($param["Placement"]);
+            $this->Placement->deserialize($param['Placement']);
         }
 
-        if (array_key_exists("ClientToken",$param) and $param["ClientToken"] !== null) {
-            $this->ClientToken = $param["ClientToken"];
+        if (array_key_exists('ClientToken',$param) and $param['ClientToken'] !== null) {
+            $this->ClientToken = $param['ClientToken'];
         }
 
-        if (array_key_exists("HostChargePrepaid",$param) and $param["HostChargePrepaid"] !== null) {
+        if (array_key_exists('HostChargePrepaid',$param) and $param['HostChargePrepaid'] !== null) {
             $this->HostChargePrepaid = new ChargePrepaid();
-            $this->HostChargePrepaid->deserialize($param["HostChargePrepaid"]);
+            $this->HostChargePrepaid->deserialize($param['HostChargePrepaid']);
         }
 
-        if (array_key_exists("HostChargeType",$param) and $param["HostChargeType"] !== null) {
-            $this->HostChargeType = $param["HostChargeType"];
+        if (array_key_exists('HostChargeType',$param) and $param['HostChargeType'] !== null) {
+            $this->HostChargeType = $param['HostChargeType'];
         }
 
-        if (array_key_exists("HostType",$param) and $param["HostType"] !== null) {
-            $this->HostType = $param["HostType"];
+        if (array_key_exists('HostType',$param) and $param['HostType'] !== null) {
+            $this->HostType = $param['HostType'];
         }
 
-        if (array_key_exists("HostCount",$param) and $param["HostCount"] !== null) {
-            $this->HostCount = $param["HostCount"];
+        if (array_key_exists('HostCount',$param) and $param['HostCount'] !== null) {
+            $this->HostCount = $param['HostCount'];
         }
 
-        if (array_key_exists("TagSpecification",$param) and $param["TagSpecification"] !== null) {
+        if (array_key_exists('TagSpecification',$param) and $param['TagSpecification'] !== null) {
             $this->TagSpecification = [];
-            foreach ($param["TagSpecification"] as $key => $value){
+            foreach ($param['TagSpecification'] as $key => $value){
                 $obj = new TagSpecification();
                 $obj->deserialize($value);
                 array_push($this->TagSpecification, $obj);

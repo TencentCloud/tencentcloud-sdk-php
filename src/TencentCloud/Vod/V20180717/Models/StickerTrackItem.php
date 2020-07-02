@@ -178,41 +178,41 @@ class StickerTrackItem extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SourceMedia",$param) and $param["SourceMedia"] !== null) {
-            $this->SourceMedia = $param["SourceMedia"];
+        if (array_key_exists('SourceMedia',$param) and $param['SourceMedia'] !== null) {
+            $this->SourceMedia = $param['SourceMedia'];
         }
 
-        if (array_key_exists("Duration",$param) and $param["Duration"] !== null) {
-            $this->Duration = $param["Duration"];
+        if (array_key_exists('Duration',$param) and $param['Duration'] !== null) {
+            $this->Duration = $param['Duration'];
         }
 
-        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
-            $this->StartTime = $param["StartTime"];
+        if (array_key_exists('StartTime',$param) and $param['StartTime'] !== null) {
+            $this->StartTime = $param['StartTime'];
         }
 
-        if (array_key_exists("CoordinateOrigin",$param) and $param["CoordinateOrigin"] !== null) {
-            $this->CoordinateOrigin = $param["CoordinateOrigin"];
+        if (array_key_exists('CoordinateOrigin',$param) and $param['CoordinateOrigin'] !== null) {
+            $this->CoordinateOrigin = $param['CoordinateOrigin'];
         }
 
-        if (array_key_exists("XPos",$param) and $param["XPos"] !== null) {
-            $this->XPos = $param["XPos"];
+        if (array_key_exists('XPos',$param) and $param['XPos'] !== null) {
+            $this->XPos = $param['XPos'];
         }
 
-        if (array_key_exists("YPos",$param) and $param["YPos"] !== null) {
-            $this->YPos = $param["YPos"];
+        if (array_key_exists('YPos',$param) and $param['YPos'] !== null) {
+            $this->YPos = $param['YPos'];
         }
 
-        if (array_key_exists("Width",$param) and $param["Width"] !== null) {
-            $this->Width = $param["Width"];
+        if (array_key_exists('Width',$param) and $param['Width'] !== null) {
+            $this->Width = $param['Width'];
         }
 
-        if (array_key_exists("Height",$param) and $param["Height"] !== null) {
-            $this->Height = $param["Height"];
+        if (array_key_exists('Height',$param) and $param['Height'] !== null) {
+            $this->Height = $param['Height'];
         }
 
-        if (array_key_exists("ImageOperations",$param) and $param["ImageOperations"] !== null) {
+        if (array_key_exists('ImageOperations',$param) and $param['ImageOperations'] !== null) {
             $this->ImageOperations = [];
-            foreach ($param["ImageOperations"] as $key => $value){
+            foreach ($param['ImageOperations'] as $key => $value){
                 $obj = new ImageTransform();
                 $obj->deserialize($value);
                 array_push($this->ImageOperations, $obj);

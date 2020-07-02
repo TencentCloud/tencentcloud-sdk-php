@@ -46,8 +46,8 @@ class VerifyResultRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ResultId",$param) and $param["ResultId"] !== null) {
-            $this->ResultId = $param["ResultId"];
+        if (array_key_exists('ResultId',$param) and $param['ResultId'] !== null) {
+            $this->ResultId = $param['ResultId'];
         }
     }
 }

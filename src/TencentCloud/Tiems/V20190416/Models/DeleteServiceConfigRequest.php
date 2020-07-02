@@ -54,12 +54,12 @@ class DeleteServiceConfigRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ServiceConfigId",$param) and $param["ServiceConfigId"] !== null) {
-            $this->ServiceConfigId = $param["ServiceConfigId"];
+        if (array_key_exists('ServiceConfigId',$param) and $param['ServiceConfigId'] !== null) {
+            $this->ServiceConfigId = $param['ServiceConfigId'];
         }
 
-        if (array_key_exists("ServiceConfigName",$param) and $param["ServiceConfigName"] !== null) {
-            $this->ServiceConfigName = $param["ServiceConfigName"];
+        if (array_key_exists('ServiceConfigName',$param) and $param['ServiceConfigName'] !== null) {
+            $this->ServiceConfigName = $param['ServiceConfigName'];
         }
     }
 }

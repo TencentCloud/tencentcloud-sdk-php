@@ -142,57 +142,57 @@ class MigrateTask extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MigrateId",$param) and $param["MigrateId"] !== null) {
-            $this->MigrateId = $param["MigrateId"];
+        if (array_key_exists('MigrateId',$param) and $param['MigrateId'] !== null) {
+            $this->MigrateId = $param['MigrateId'];
         }
 
-        if (array_key_exists("MigrateName",$param) and $param["MigrateName"] !== null) {
-            $this->MigrateName = $param["MigrateName"];
+        if (array_key_exists('MigrateName',$param) and $param['MigrateName'] !== null) {
+            $this->MigrateName = $param['MigrateName'];
         }
 
-        if (array_key_exists("AppId",$param) and $param["AppId"] !== null) {
-            $this->AppId = $param["AppId"];
+        if (array_key_exists('AppId',$param) and $param['AppId'] !== null) {
+            $this->AppId = $param['AppId'];
         }
 
-        if (array_key_exists("Region",$param) and $param["Region"] !== null) {
-            $this->Region = $param["Region"];
+        if (array_key_exists('Region',$param) and $param['Region'] !== null) {
+            $this->Region = $param['Region'];
         }
 
-        if (array_key_exists("SourceType",$param) and $param["SourceType"] !== null) {
-            $this->SourceType = $param["SourceType"];
+        if (array_key_exists('SourceType',$param) and $param['SourceType'] !== null) {
+            $this->SourceType = $param['SourceType'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
-            $this->StartTime = $param["StartTime"];
+        if (array_key_exists('StartTime',$param) and $param['StartTime'] !== null) {
+            $this->StartTime = $param['StartTime'];
         }
 
-        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
-            $this->EndTime = $param["EndTime"];
+        if (array_key_exists('EndTime',$param) and $param['EndTime'] !== null) {
+            $this->EndTime = $param['EndTime'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("Message",$param) and $param["Message"] !== null) {
-            $this->Message = $param["Message"];
+        if (array_key_exists('Message',$param) and $param['Message'] !== null) {
+            $this->Message = $param['Message'];
         }
 
-        if (array_key_exists("CheckFlag",$param) and $param["CheckFlag"] !== null) {
-            $this->CheckFlag = $param["CheckFlag"];
+        if (array_key_exists('CheckFlag',$param) and $param['CheckFlag'] !== null) {
+            $this->CheckFlag = $param['CheckFlag'];
         }
 
-        if (array_key_exists("Progress",$param) and $param["Progress"] !== null) {
-            $this->Progress = $param["Progress"];
+        if (array_key_exists('Progress',$param) and $param['Progress'] !== null) {
+            $this->Progress = $param['Progress'];
         }
 
-        if (array_key_exists("MigrateDetail",$param) and $param["MigrateDetail"] !== null) {
+        if (array_key_exists('MigrateDetail',$param) and $param['MigrateDetail'] !== null) {
             $this->MigrateDetail = new MigrateDetail();
-            $this->MigrateDetail->deserialize($param["MigrateDetail"]);
+            $this->MigrateDetail->deserialize($param['MigrateDetail']);
         }
     }
 }

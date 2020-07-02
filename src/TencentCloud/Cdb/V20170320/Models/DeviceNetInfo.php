@@ -78,24 +78,24 @@ class DeviceNetInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Conn",$param) and $param["Conn"] !== null) {
-            $this->Conn = $param["Conn"];
+        if (array_key_exists('Conn',$param) and $param['Conn'] !== null) {
+            $this->Conn = $param['Conn'];
         }
 
-        if (array_key_exists("PackageIn",$param) and $param["PackageIn"] !== null) {
-            $this->PackageIn = $param["PackageIn"];
+        if (array_key_exists('PackageIn',$param) and $param['PackageIn'] !== null) {
+            $this->PackageIn = $param['PackageIn'];
         }
 
-        if (array_key_exists("PackageOut",$param) and $param["PackageOut"] !== null) {
-            $this->PackageOut = $param["PackageOut"];
+        if (array_key_exists('PackageOut',$param) and $param['PackageOut'] !== null) {
+            $this->PackageOut = $param['PackageOut'];
         }
 
-        if (array_key_exists("FlowIn",$param) and $param["FlowIn"] !== null) {
-            $this->FlowIn = $param["FlowIn"];
+        if (array_key_exists('FlowIn',$param) and $param['FlowIn'] !== null) {
+            $this->FlowIn = $param['FlowIn'];
         }
 
-        if (array_key_exists("FlowOut",$param) and $param["FlowOut"] !== null) {
-            $this->FlowOut = $param["FlowOut"];
+        if (array_key_exists('FlowOut',$param) and $param['FlowOut'] !== null) {
+            $this->FlowOut = $param['FlowOut'];
         }
     }
 }

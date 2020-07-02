@@ -46,8 +46,8 @@ class DescribeCertDomainsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Cert",$param) and $param["Cert"] !== null) {
-            $this->Cert = $param["Cert"];
+        if (array_key_exists('Cert',$param) and $param['Cert'] !== null) {
+            $this->Cert = $param['Cert'];
         }
     }
 }

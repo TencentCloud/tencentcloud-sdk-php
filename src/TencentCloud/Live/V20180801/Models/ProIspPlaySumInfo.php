@@ -70,20 +70,20 @@ class ProIspPlaySumInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("TotalFlux",$param) and $param["TotalFlux"] !== null) {
-            $this->TotalFlux = $param["TotalFlux"];
+        if (array_key_exists('TotalFlux',$param) and $param['TotalFlux'] !== null) {
+            $this->TotalFlux = $param['TotalFlux'];
         }
 
-        if (array_key_exists("TotalRequest",$param) and $param["TotalRequest"] !== null) {
-            $this->TotalRequest = $param["TotalRequest"];
+        if (array_key_exists('TotalRequest',$param) and $param['TotalRequest'] !== null) {
+            $this->TotalRequest = $param['TotalRequest'];
         }
 
-        if (array_key_exists("AvgFluxPerSecond",$param) and $param["AvgFluxPerSecond"] !== null) {
-            $this->AvgFluxPerSecond = $param["AvgFluxPerSecond"];
+        if (array_key_exists('AvgFluxPerSecond',$param) and $param['AvgFluxPerSecond'] !== null) {
+            $this->AvgFluxPerSecond = $param['AvgFluxPerSecond'];
         }
     }
 }

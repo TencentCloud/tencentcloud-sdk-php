@@ -54,12 +54,12 @@ class AssociateNetworkInterfaceSecurityGroupsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("NetworkInterfaceIds",$param) and $param["NetworkInterfaceIds"] !== null) {
-            $this->NetworkInterfaceIds = $param["NetworkInterfaceIds"];
+        if (array_key_exists('NetworkInterfaceIds',$param) and $param['NetworkInterfaceIds'] !== null) {
+            $this->NetworkInterfaceIds = $param['NetworkInterfaceIds'];
         }
 
-        if (array_key_exists("SecurityGroupIds",$param) and $param["SecurityGroupIds"] !== null) {
-            $this->SecurityGroupIds = $param["SecurityGroupIds"];
+        if (array_key_exists('SecurityGroupIds',$param) and $param['SecurityGroupIds'] !== null) {
+            $this->SecurityGroupIds = $param['SecurityGroupIds'];
         }
     }
 }

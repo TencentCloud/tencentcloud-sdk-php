@@ -62,16 +62,16 @@ class DescribeDasbImageIdsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BaseImageId",$param) and $param["BaseImageId"] !== null) {
-            $this->BaseImageId = $param["BaseImageId"];
+        if (array_key_exists('BaseImageId',$param) and $param['BaseImageId'] !== null) {
+            $this->BaseImageId = $param['BaseImageId'];
         }
 
-        if (array_key_exists("AiImageId",$param) and $param["AiImageId"] !== null) {
-            $this->AiImageId = $param["AiImageId"];
+        if (array_key_exists('AiImageId',$param) and $param['AiImageId'] !== null) {
+            $this->AiImageId = $param['AiImageId'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

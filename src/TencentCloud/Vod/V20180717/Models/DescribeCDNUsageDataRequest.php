@@ -118,28 +118,28 @@ class DescribeCDNUsageDataRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
-            $this->StartTime = $param["StartTime"];
+        if (array_key_exists('StartTime',$param) and $param['StartTime'] !== null) {
+            $this->StartTime = $param['StartTime'];
         }
 
-        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
-            $this->EndTime = $param["EndTime"];
+        if (array_key_exists('EndTime',$param) and $param['EndTime'] !== null) {
+            $this->EndTime = $param['EndTime'];
         }
 
-        if (array_key_exists("DataType",$param) and $param["DataType"] !== null) {
-            $this->DataType = $param["DataType"];
+        if (array_key_exists('DataType',$param) and $param['DataType'] !== null) {
+            $this->DataType = $param['DataType'];
         }
 
-        if (array_key_exists("DataInterval",$param) and $param["DataInterval"] !== null) {
-            $this->DataInterval = $param["DataInterval"];
+        if (array_key_exists('DataInterval',$param) and $param['DataInterval'] !== null) {
+            $this->DataInterval = $param['DataInterval'];
         }
 
-        if (array_key_exists("DomainNames",$param) and $param["DomainNames"] !== null) {
-            $this->DomainNames = $param["DomainNames"];
+        if (array_key_exists('DomainNames',$param) and $param['DomainNames'] !== null) {
+            $this->DomainNames = $param['DomainNames'];
         }
 
-        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
-            $this->SubAppId = $param["SubAppId"];
+        if (array_key_exists('SubAppId',$param) and $param['SubAppId'] !== null) {
+            $this->SubAppId = $param['SubAppId'];
         }
     }
 }

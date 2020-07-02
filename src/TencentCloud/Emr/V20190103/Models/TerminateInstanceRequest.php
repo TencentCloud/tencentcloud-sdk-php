@@ -54,12 +54,12 @@ class TerminateInstanceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("ResourceIds",$param) and $param["ResourceIds"] !== null) {
-            $this->ResourceIds = $param["ResourceIds"];
+        if (array_key_exists('ResourceIds',$param) and $param['ResourceIds'] !== null) {
+            $this->ResourceIds = $param['ResourceIds'];
         }
     }
 }

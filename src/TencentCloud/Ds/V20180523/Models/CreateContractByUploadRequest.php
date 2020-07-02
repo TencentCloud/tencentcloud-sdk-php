@@ -102,41 +102,41 @@ class CreateContractByUploadRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Module",$param) and $param["Module"] !== null) {
-            $this->Module = $param["Module"];
+        if (array_key_exists('Module',$param) and $param['Module'] !== null) {
+            $this->Module = $param['Module'];
         }
 
-        if (array_key_exists("Operation",$param) and $param["Operation"] !== null) {
-            $this->Operation = $param["Operation"];
+        if (array_key_exists('Operation',$param) and $param['Operation'] !== null) {
+            $this->Operation = $param['Operation'];
         }
 
-        if (array_key_exists("SignInfos",$param) and $param["SignInfos"] !== null) {
+        if (array_key_exists('SignInfos',$param) and $param['SignInfos'] !== null) {
             $this->SignInfos = [];
-            foreach ($param["SignInfos"] as $key => $value){
+            foreach ($param['SignInfos'] as $key => $value){
                 $obj = new SignInfo();
                 $obj->deserialize($value);
                 array_push($this->SignInfos, $obj);
             }
         }
 
-        if (array_key_exists("ContractFile",$param) and $param["ContractFile"] !== null) {
-            $this->ContractFile = $param["ContractFile"];
+        if (array_key_exists('ContractFile',$param) and $param['ContractFile'] !== null) {
+            $this->ContractFile = $param['ContractFile'];
         }
 
-        if (array_key_exists("ContractName",$param) and $param["ContractName"] !== null) {
-            $this->ContractName = $param["ContractName"];
+        if (array_key_exists('ContractName',$param) and $param['ContractName'] !== null) {
+            $this->ContractName = $param['ContractName'];
         }
 
-        if (array_key_exists("Remarks",$param) and $param["Remarks"] !== null) {
-            $this->Remarks = $param["Remarks"];
+        if (array_key_exists('Remarks',$param) and $param['Remarks'] !== null) {
+            $this->Remarks = $param['Remarks'];
         }
 
-        if (array_key_exists("Initiator",$param) and $param["Initiator"] !== null) {
-            $this->Initiator = $param["Initiator"];
+        if (array_key_exists('Initiator',$param) and $param['Initiator'] !== null) {
+            $this->Initiator = $param['Initiator'];
         }
 
-        if (array_key_exists("ExpireTime",$param) and $param["ExpireTime"] !== null) {
-            $this->ExpireTime = $param["ExpireTime"];
+        if (array_key_exists('ExpireTime',$param) and $param['ExpireTime'] !== null) {
+            $this->ExpireTime = $param['ExpireTime'];
         }
     }
 }

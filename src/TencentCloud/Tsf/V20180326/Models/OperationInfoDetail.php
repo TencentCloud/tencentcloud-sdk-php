@@ -74,16 +74,16 @@ class OperationInfoDetail extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DisabledReason",$param) and $param["DisabledReason"] !== null) {
-            $this->DisabledReason = $param["DisabledReason"];
+        if (array_key_exists('DisabledReason',$param) and $param['DisabledReason'] !== null) {
+            $this->DisabledReason = $param['DisabledReason'];
         }
 
-        if (array_key_exists("Enabled",$param) and $param["Enabled"] !== null) {
-            $this->Enabled = $param["Enabled"];
+        if (array_key_exists('Enabled',$param) and $param['Enabled'] !== null) {
+            $this->Enabled = $param['Enabled'];
         }
 
-        if (array_key_exists("Supported",$param) and $param["Supported"] !== null) {
-            $this->Supported = $param["Supported"];
+        if (array_key_exists('Supported',$param) and $param['Supported'] !== null) {
+            $this->Supported = $param['Supported'];
         }
     }
 }

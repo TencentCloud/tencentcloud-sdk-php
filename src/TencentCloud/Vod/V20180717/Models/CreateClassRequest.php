@@ -62,16 +62,16 @@ class CreateClassRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ParentId",$param) and $param["ParentId"] !== null) {
-            $this->ParentId = $param["ParentId"];
+        if (array_key_exists('ParentId',$param) and $param['ParentId'] !== null) {
+            $this->ParentId = $param['ParentId'];
         }
 
-        if (array_key_exists("ClassName",$param) and $param["ClassName"] !== null) {
-            $this->ClassName = $param["ClassName"];
+        if (array_key_exists('ClassName',$param) and $param['ClassName'] !== null) {
+            $this->ClassName = $param['ClassName'];
         }
 
-        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
-            $this->SubAppId = $param["SubAppId"];
+        if (array_key_exists('SubAppId',$param) and $param['SubAppId'] !== null) {
+            $this->SubAppId = $param['SubAppId'];
         }
     }
 }

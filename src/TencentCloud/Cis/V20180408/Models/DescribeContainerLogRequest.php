@@ -70,20 +70,20 @@ class DescribeContainerLogRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceName",$param) and $param["InstanceName"] !== null) {
-            $this->InstanceName = $param["InstanceName"];
+        if (array_key_exists('InstanceName',$param) and $param['InstanceName'] !== null) {
+            $this->InstanceName = $param['InstanceName'];
         }
 
-        if (array_key_exists("ContainerName",$param) and $param["ContainerName"] !== null) {
-            $this->ContainerName = $param["ContainerName"];
+        if (array_key_exists('ContainerName',$param) and $param['ContainerName'] !== null) {
+            $this->ContainerName = $param['ContainerName'];
         }
 
-        if (array_key_exists("Tail",$param) and $param["Tail"] !== null) {
-            $this->Tail = $param["Tail"];
+        if (array_key_exists('Tail',$param) and $param['Tail'] !== null) {
+            $this->Tail = $param['Tail'];
         }
 
-        if (array_key_exists("SinceTime",$param) and $param["SinceTime"] !== null) {
-            $this->SinceTime = $param["SinceTime"];
+        if (array_key_exists('SinceTime',$param) and $param['SinceTime'] !== null) {
+            $this->SinceTime = $param['SinceTime'];
         }
     }
 }

@@ -46,8 +46,8 @@ class DescribeLiveDomainPlayInfoListRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PlayDomains",$param) and $param["PlayDomains"] !== null) {
-            $this->PlayDomains = $param["PlayDomains"];
+        if (array_key_exists('PlayDomains',$param) and $param['PlayDomains'] !== null) {
+            $this->PlayDomains = $param['PlayDomains'];
         }
     }
 }

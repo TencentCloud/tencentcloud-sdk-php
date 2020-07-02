@@ -54,13 +54,13 @@ class SendStatusStatisticsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SendStatusStatistics",$param) and $param["SendStatusStatistics"] !== null) {
+        if (array_key_exists('SendStatusStatistics',$param) and $param['SendStatusStatistics'] !== null) {
             $this->SendStatusStatistics = new SendStatusStatistics();
-            $this->SendStatusStatistics->deserialize($param["SendStatusStatistics"]);
+            $this->SendStatusStatistics->deserialize($param['SendStatusStatistics']);
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

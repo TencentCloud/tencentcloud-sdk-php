@@ -54,12 +54,12 @@ class DimensionsDetail extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Isp",$param) and $param["Isp"] !== null) {
-            $this->Isp = $param["Isp"];
+        if (array_key_exists('Isp',$param) and $param['Isp'] !== null) {
+            $this->Isp = $param['Isp'];
         }
 
-        if (array_key_exists("Province",$param) and $param["Province"] !== null) {
-            $this->Province = $param["Province"];
+        if (array_key_exists('Province',$param) and $param['Province'] !== null) {
+            $this->Province = $param['Province'];
         }
     }
 }

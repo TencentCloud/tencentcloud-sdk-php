@@ -114,36 +114,36 @@ class DescribeDCDBPriceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
-            $this->Zone = $param["Zone"];
+        if (array_key_exists('Zone',$param) and $param['Zone'] !== null) {
+            $this->Zone = $param['Zone'];
         }
 
-        if (array_key_exists("Count",$param) and $param["Count"] !== null) {
-            $this->Count = $param["Count"];
+        if (array_key_exists('Count',$param) and $param['Count'] !== null) {
+            $this->Count = $param['Count'];
         }
 
-        if (array_key_exists("Period",$param) and $param["Period"] !== null) {
-            $this->Period = $param["Period"];
+        if (array_key_exists('Period',$param) and $param['Period'] !== null) {
+            $this->Period = $param['Period'];
         }
 
-        if (array_key_exists("ShardNodeCount",$param) and $param["ShardNodeCount"] !== null) {
-            $this->ShardNodeCount = $param["ShardNodeCount"];
+        if (array_key_exists('ShardNodeCount',$param) and $param['ShardNodeCount'] !== null) {
+            $this->ShardNodeCount = $param['ShardNodeCount'];
         }
 
-        if (array_key_exists("ShardMemory",$param) and $param["ShardMemory"] !== null) {
-            $this->ShardMemory = $param["ShardMemory"];
+        if (array_key_exists('ShardMemory',$param) and $param['ShardMemory'] !== null) {
+            $this->ShardMemory = $param['ShardMemory'];
         }
 
-        if (array_key_exists("ShardStorage",$param) and $param["ShardStorage"] !== null) {
-            $this->ShardStorage = $param["ShardStorage"];
+        if (array_key_exists('ShardStorage',$param) and $param['ShardStorage'] !== null) {
+            $this->ShardStorage = $param['ShardStorage'];
         }
 
-        if (array_key_exists("ShardCount",$param) and $param["ShardCount"] !== null) {
-            $this->ShardCount = $param["ShardCount"];
+        if (array_key_exists('ShardCount',$param) and $param['ShardCount'] !== null) {
+            $this->ShardCount = $param['ShardCount'];
         }
 
-        if (array_key_exists("Paymode",$param) and $param["Paymode"] !== null) {
-            $this->Paymode = $param["Paymode"];
+        if (array_key_exists('Paymode',$param) and $param['Paymode'] !== null) {
+            $this->Paymode = $param['Paymode'];
         }
     }
 }

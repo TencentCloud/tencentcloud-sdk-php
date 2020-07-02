@@ -46,8 +46,8 @@ class DeleteScanInstancesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AppSids",$param) and $param["AppSids"] !== null) {
-            $this->AppSids = $param["AppSids"];
+        if (array_key_exists('AppSids',$param) and $param['AppSids'] !== null) {
+            $this->AppSids = $param['AppSids'];
         }
     }
 }

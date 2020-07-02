@@ -102,36 +102,36 @@ class DescribeCallBackStatusResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ErrorCode",$param) and $param["ErrorCode"] !== null) {
-            $this->ErrorCode = $param["ErrorCode"];
+        if (array_key_exists('ErrorCode',$param) and $param['ErrorCode'] !== null) {
+            $this->ErrorCode = $param['ErrorCode'];
         }
 
-        if (array_key_exists("Msg",$param) and $param["Msg"] !== null) {
-            $this->Msg = $param["Msg"];
+        if (array_key_exists('Msg',$param) and $param['Msg'] !== null) {
+            $this->Msg = $param['Msg'];
         }
 
-        if (array_key_exists("AppId",$param) and $param["AppId"] !== null) {
-            $this->AppId = $param["AppId"];
+        if (array_key_exists('AppId',$param) and $param['AppId'] !== null) {
+            $this->AppId = $param['AppId'];
         }
 
-        if (array_key_exists("CallId",$param) and $param["CallId"] !== null) {
-            $this->CallId = $param["CallId"];
+        if (array_key_exists('CallId',$param) and $param['CallId'] !== null) {
+            $this->CallId = $param['CallId'];
         }
 
-        if (array_key_exists("Src",$param) and $param["Src"] !== null) {
-            $this->Src = $param["Src"];
+        if (array_key_exists('Src',$param) and $param['Src'] !== null) {
+            $this->Src = $param['Src'];
         }
 
-        if (array_key_exists("Dst",$param) and $param["Dst"] !== null) {
-            $this->Dst = $param["Dst"];
+        if (array_key_exists('Dst',$param) and $param['Dst'] !== null) {
+            $this->Dst = $param['Dst'];
         }
 
-        if (array_key_exists("CallStatus",$param) and $param["CallStatus"] !== null) {
-            $this->CallStatus = $param["CallStatus"];
+        if (array_key_exists('CallStatus',$param) and $param['CallStatus'] !== null) {
+            $this->CallStatus = $param['CallStatus'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

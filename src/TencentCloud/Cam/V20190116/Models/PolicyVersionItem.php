@@ -74,16 +74,16 @@ class PolicyVersionItem extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("VersionId",$param) and $param["VersionId"] !== null) {
-            $this->VersionId = $param["VersionId"];
+        if (array_key_exists('VersionId',$param) and $param['VersionId'] !== null) {
+            $this->VersionId = $param['VersionId'];
         }
 
-        if (array_key_exists("CreateDate",$param) and $param["CreateDate"] !== null) {
-            $this->CreateDate = $param["CreateDate"];
+        if (array_key_exists('CreateDate',$param) and $param['CreateDate'] !== null) {
+            $this->CreateDate = $param['CreateDate'];
         }
 
-        if (array_key_exists("IsDefaultVersion",$param) and $param["IsDefaultVersion"] !== null) {
-            $this->IsDefaultVersion = $param["IsDefaultVersion"];
+        if (array_key_exists('IsDefaultVersion',$param) and $param['IsDefaultVersion'] !== null) {
+            $this->IsDefaultVersion = $param['IsDefaultVersion'];
         }
     }
 }

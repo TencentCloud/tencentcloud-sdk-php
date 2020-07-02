@@ -66,16 +66,16 @@ class CertificateOutput extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SSLMode",$param) and $param["SSLMode"] !== null) {
-            $this->SSLMode = $param["SSLMode"];
+        if (array_key_exists('SSLMode',$param) and $param['SSLMode'] !== null) {
+            $this->SSLMode = $param['SSLMode'];
         }
 
-        if (array_key_exists("CertId",$param) and $param["CertId"] !== null) {
-            $this->CertId = $param["CertId"];
+        if (array_key_exists('CertId',$param) and $param['CertId'] !== null) {
+            $this->CertId = $param['CertId'];
         }
 
-        if (array_key_exists("CertCaId",$param) and $param["CertCaId"] !== null) {
-            $this->CertCaId = $param["CertCaId"];
+        if (array_key_exists('CertCaId',$param) and $param['CertCaId'] !== null) {
+            $this->CertCaId = $param['CertCaId'];
         }
     }
 }

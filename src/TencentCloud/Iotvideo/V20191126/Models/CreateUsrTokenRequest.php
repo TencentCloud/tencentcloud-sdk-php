@@ -62,16 +62,16 @@ class CreateUsrTokenRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AccessId",$param) and $param["AccessId"] !== null) {
-            $this->AccessId = $param["AccessId"];
+        if (array_key_exists('AccessId',$param) and $param['AccessId'] !== null) {
+            $this->AccessId = $param['AccessId'];
         }
 
-        if (array_key_exists("UniqueId",$param) and $param["UniqueId"] !== null) {
-            $this->UniqueId = $param["UniqueId"];
+        if (array_key_exists('UniqueId',$param) and $param['UniqueId'] !== null) {
+            $this->UniqueId = $param['UniqueId'];
         }
 
-        if (array_key_exists("TtlMinutes",$param) and $param["TtlMinutes"] !== null) {
-            $this->TtlMinutes = $param["TtlMinutes"];
+        if (array_key_exists('TtlMinutes',$param) and $param['TtlMinutes'] !== null) {
+            $this->TtlMinutes = $param['TtlMinutes'];
         }
     }
 }

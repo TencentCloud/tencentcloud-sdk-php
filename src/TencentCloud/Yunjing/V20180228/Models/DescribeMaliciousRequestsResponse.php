@@ -62,21 +62,21 @@ class DescribeMaliciousRequestsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("MaliciousRequests",$param) and $param["MaliciousRequests"] !== null) {
+        if (array_key_exists('MaliciousRequests',$param) and $param['MaliciousRequests'] !== null) {
             $this->MaliciousRequests = [];
-            foreach ($param["MaliciousRequests"] as $key => $value){
+            foreach ($param['MaliciousRequests'] as $key => $value){
                 $obj = new MaliciousRequest();
                 $obj->deserialize($value);
                 array_push($this->MaliciousRequests, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

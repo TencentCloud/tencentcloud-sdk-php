@@ -54,13 +54,13 @@ class CreateFileSystemResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FileSystem",$param) and $param["FileSystem"] !== null) {
+        if (array_key_exists('FileSystem',$param) and $param['FileSystem'] !== null) {
             $this->FileSystem = new FileSystem();
-            $this->FileSystem->deserialize($param["FileSystem"]);
+            $this->FileSystem->deserialize($param['FileSystem']);
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

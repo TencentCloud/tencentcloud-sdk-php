@@ -70,18 +70,18 @@ class BodyDetectResult extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Confidence",$param) and $param["Confidence"] !== null) {
-            $this->Confidence = $param["Confidence"];
+        if (array_key_exists('Confidence',$param) and $param['Confidence'] !== null) {
+            $this->Confidence = $param['Confidence'];
         }
 
-        if (array_key_exists("BodyRect",$param) and $param["BodyRect"] !== null) {
+        if (array_key_exists('BodyRect',$param) and $param['BodyRect'] !== null) {
             $this->BodyRect = new BodyRect();
-            $this->BodyRect->deserialize($param["BodyRect"]);
+            $this->BodyRect->deserialize($param['BodyRect']);
         }
 
-        if (array_key_exists("BodyAttributeInfo",$param) and $param["BodyAttributeInfo"] !== null) {
+        if (array_key_exists('BodyAttributeInfo',$param) and $param['BodyAttributeInfo'] !== null) {
             $this->BodyAttributeInfo = new BodyAttributeInfo();
-            $this->BodyAttributeInfo->deserialize($param["BodyAttributeInfo"]);
+            $this->BodyAttributeInfo->deserialize($param['BodyAttributeInfo']);
         }
     }
 }

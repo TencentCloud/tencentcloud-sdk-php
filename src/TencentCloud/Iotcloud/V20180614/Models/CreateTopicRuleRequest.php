@@ -54,13 +54,13 @@ class CreateTopicRuleRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RuleName",$param) and $param["RuleName"] !== null) {
-            $this->RuleName = $param["RuleName"];
+        if (array_key_exists('RuleName',$param) and $param['RuleName'] !== null) {
+            $this->RuleName = $param['RuleName'];
         }
 
-        if (array_key_exists("TopicRulePayload",$param) and $param["TopicRulePayload"] !== null) {
+        if (array_key_exists('TopicRulePayload',$param) and $param['TopicRulePayload'] !== null) {
             $this->TopicRulePayload = new TopicRulePayload();
-            $this->TopicRulePayload->deserialize($param["TopicRulePayload"]);
+            $this->TopicRulePayload->deserialize($param['TopicRulePayload']);
         }
     }
 }

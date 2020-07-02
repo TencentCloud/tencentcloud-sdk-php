@@ -46,8 +46,8 @@ class FNRResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
     }
 }

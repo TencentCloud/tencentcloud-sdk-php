@@ -54,12 +54,12 @@ class Words extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Confidence",$param) and $param["Confidence"] !== null) {
-            $this->Confidence = $param["Confidence"];
+        if (array_key_exists('Confidence',$param) and $param['Confidence'] !== null) {
+            $this->Confidence = $param['Confidence'];
         }
 
-        if (array_key_exists("Character",$param) and $param["Character"] !== null) {
-            $this->Character = $param["Character"];
+        if (array_key_exists('Character',$param) and $param['Character'] !== null) {
+            $this->Character = $param['Character'];
         }
     }
 }

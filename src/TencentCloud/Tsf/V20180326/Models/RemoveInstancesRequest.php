@@ -54,12 +54,12 @@ class RemoveInstancesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
-            $this->ClusterId = $param["ClusterId"];
+        if (array_key_exists('ClusterId',$param) and $param['ClusterId'] !== null) {
+            $this->ClusterId = $param['ClusterId'];
         }
 
-        if (array_key_exists("InstanceIdList",$param) and $param["InstanceIdList"] !== null) {
-            $this->InstanceIdList = $param["InstanceIdList"];
+        if (array_key_exists('InstanceIdList',$param) and $param['InstanceIdList'] !== null) {
+            $this->InstanceIdList = $param['InstanceIdList'];
         }
     }
 }

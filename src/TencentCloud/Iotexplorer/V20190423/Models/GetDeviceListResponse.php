@@ -70,21 +70,21 @@ class GetDeviceListResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Devices",$param) and $param["Devices"] !== null) {
+        if (array_key_exists('Devices',$param) and $param['Devices'] !== null) {
             $this->Devices = [];
-            foreach ($param["Devices"] as $key => $value){
+            foreach ($param['Devices'] as $key => $value){
                 $obj = new DeviceInfo();
                 $obj->deserialize($value);
                 array_push($this->Devices, $obj);
             }
         }
 
-        if (array_key_exists("Total",$param) and $param["Total"] !== null) {
-            $this->Total = $param["Total"];
+        if (array_key_exists('Total',$param) and $param['Total'] !== null) {
+            $this->Total = $param['Total'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

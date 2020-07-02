@@ -62,16 +62,16 @@ class AccessKey extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AccessKeyId",$param) and $param["AccessKeyId"] !== null) {
-            $this->AccessKeyId = $param["AccessKeyId"];
+        if (array_key_exists('AccessKeyId',$param) and $param['AccessKeyId'] !== null) {
+            $this->AccessKeyId = $param['AccessKeyId'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
     }
 }

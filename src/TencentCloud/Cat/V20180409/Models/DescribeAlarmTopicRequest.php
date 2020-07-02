@@ -46,8 +46,8 @@ class DescribeAlarmTopicRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("NeedAdd",$param) and $param["NeedAdd"] !== null) {
-            $this->NeedAdd = $param["NeedAdd"];
+        if (array_key_exists('NeedAdd',$param) and $param['NeedAdd'] !== null) {
+            $this->NeedAdd = $param['NeedAdd'];
         }
     }
 }

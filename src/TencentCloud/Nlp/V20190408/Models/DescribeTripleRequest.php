@@ -46,8 +46,8 @@ class DescribeTripleRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TripleCondition",$param) and $param["TripleCondition"] !== null) {
-            $this->TripleCondition = $param["TripleCondition"];
+        if (array_key_exists('TripleCondition',$param) and $param['TripleCondition'] !== null) {
+            $this->TripleCondition = $param['TripleCondition'];
         }
     }
 }

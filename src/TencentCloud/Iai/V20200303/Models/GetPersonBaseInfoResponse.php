@@ -70,20 +70,20 @@ class GetPersonBaseInfoResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PersonName",$param) and $param["PersonName"] !== null) {
-            $this->PersonName = $param["PersonName"];
+        if (array_key_exists('PersonName',$param) and $param['PersonName'] !== null) {
+            $this->PersonName = $param['PersonName'];
         }
 
-        if (array_key_exists("Gender",$param) and $param["Gender"] !== null) {
-            $this->Gender = $param["Gender"];
+        if (array_key_exists('Gender',$param) and $param['Gender'] !== null) {
+            $this->Gender = $param['Gender'];
         }
 
-        if (array_key_exists("FaceIds",$param) and $param["FaceIds"] !== null) {
-            $this->FaceIds = $param["FaceIds"];
+        if (array_key_exists('FaceIds',$param) and $param['FaceIds'] !== null) {
+            $this->FaceIds = $param['FaceIds'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

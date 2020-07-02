@@ -94,32 +94,32 @@ class CreateRsgAsGroupRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RsgId",$param) and $param["RsgId"] !== null) {
-            $this->RsgId = $param["RsgId"];
+        if (array_key_exists('RsgId',$param) and $param['RsgId'] !== null) {
+            $this->RsgId = $param['RsgId'];
         }
 
-        if (array_key_exists("MaxSize",$param) and $param["MaxSize"] !== null) {
-            $this->MaxSize = $param["MaxSize"];
+        if (array_key_exists('MaxSize',$param) and $param['MaxSize'] !== null) {
+            $this->MaxSize = $param['MaxSize'];
         }
 
-        if (array_key_exists("MinSize",$param) and $param["MinSize"] !== null) {
-            $this->MinSize = $param["MinSize"];
+        if (array_key_exists('MinSize',$param) and $param['MinSize'] !== null) {
+            $this->MinSize = $param['MinSize'];
         }
 
-        if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
-            $this->InstanceType = $param["InstanceType"];
+        if (array_key_exists('InstanceType',$param) and $param['InstanceType'] !== null) {
+            $this->InstanceType = $param['InstanceType'];
         }
 
-        if (array_key_exists("Cluster",$param) and $param["Cluster"] !== null) {
-            $this->Cluster = $param["Cluster"];
+        if (array_key_exists('Cluster',$param) and $param['Cluster'] !== null) {
+            $this->Cluster = $param['Cluster'];
         }
 
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("DesiredSize",$param) and $param["DesiredSize"] !== null) {
-            $this->DesiredSize = $param["DesiredSize"];
+        if (array_key_exists('DesiredSize',$param) and $param['DesiredSize'] !== null) {
+            $this->DesiredSize = $param['DesiredSize'];
         }
     }
 }

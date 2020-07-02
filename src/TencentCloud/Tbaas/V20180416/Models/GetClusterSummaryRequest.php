@@ -78,24 +78,24 @@ class GetClusterSummaryRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Module",$param) and $param["Module"] !== null) {
-            $this->Module = $param["Module"];
+        if (array_key_exists('Module',$param) and $param['Module'] !== null) {
+            $this->Module = $param['Module'];
         }
 
-        if (array_key_exists("Operation",$param) and $param["Operation"] !== null) {
-            $this->Operation = $param["Operation"];
+        if (array_key_exists('Operation',$param) and $param['Operation'] !== null) {
+            $this->Operation = $param['Operation'];
         }
 
-        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
-            $this->ClusterId = $param["ClusterId"];
+        if (array_key_exists('ClusterId',$param) and $param['ClusterId'] !== null) {
+            $this->ClusterId = $param['ClusterId'];
         }
 
-        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
-            $this->GroupId = $param["GroupId"];
+        if (array_key_exists('GroupId',$param) and $param['GroupId'] !== null) {
+            $this->GroupId = $param['GroupId'];
         }
 
-        if (array_key_exists("GroupName",$param) and $param["GroupName"] !== null) {
-            $this->GroupName = $param["GroupName"];
+        if (array_key_exists('GroupName',$param) and $param['GroupName'] !== null) {
+            $this->GroupName = $param['GroupName'];
         }
     }
 }

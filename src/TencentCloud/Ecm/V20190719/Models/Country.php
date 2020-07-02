@@ -54,12 +54,12 @@ class Country extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CountryId",$param) and $param["CountryId"] !== null) {
-            $this->CountryId = $param["CountryId"];
+        if (array_key_exists('CountryId',$param) and $param['CountryId'] !== null) {
+            $this->CountryId = $param['CountryId'];
         }
 
-        if (array_key_exists("CountryName",$param) and $param["CountryName"] !== null) {
-            $this->CountryName = $param["CountryName"];
+        if (array_key_exists('CountryName',$param) and $param['CountryName'] !== null) {
+            $this->CountryName = $param['CountryName'];
         }
     }
 }

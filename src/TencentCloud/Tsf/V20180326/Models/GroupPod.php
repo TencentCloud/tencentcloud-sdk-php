@@ -206,60 +206,60 @@ class GroupPod extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PodName",$param) and $param["PodName"] !== null) {
-            $this->PodName = $param["PodName"];
+        if (array_key_exists('PodName',$param) and $param['PodName'] !== null) {
+            $this->PodName = $param['PodName'];
         }
 
-        if (array_key_exists("PodId",$param) and $param["PodId"] !== null) {
-            $this->PodId = $param["PodId"];
+        if (array_key_exists('PodId',$param) and $param['PodId'] !== null) {
+            $this->PodId = $param['PodId'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("Reason",$param) and $param["Reason"] !== null) {
-            $this->Reason = $param["Reason"];
+        if (array_key_exists('Reason',$param) and $param['Reason'] !== null) {
+            $this->Reason = $param['Reason'];
         }
 
-        if (array_key_exists("NodeIp",$param) and $param["NodeIp"] !== null) {
-            $this->NodeIp = $param["NodeIp"];
+        if (array_key_exists('NodeIp',$param) and $param['NodeIp'] !== null) {
+            $this->NodeIp = $param['NodeIp'];
         }
 
-        if (array_key_exists("Ip",$param) and $param["Ip"] !== null) {
-            $this->Ip = $param["Ip"];
+        if (array_key_exists('Ip',$param) and $param['Ip'] !== null) {
+            $this->Ip = $param['Ip'];
         }
 
-        if (array_key_exists("RestartCount",$param) and $param["RestartCount"] !== null) {
-            $this->RestartCount = $param["RestartCount"];
+        if (array_key_exists('RestartCount',$param) and $param['RestartCount'] !== null) {
+            $this->RestartCount = $param['RestartCount'];
         }
 
-        if (array_key_exists("ReadyCount",$param) and $param["ReadyCount"] !== null) {
-            $this->ReadyCount = $param["ReadyCount"];
+        if (array_key_exists('ReadyCount',$param) and $param['ReadyCount'] !== null) {
+            $this->ReadyCount = $param['ReadyCount'];
         }
 
-        if (array_key_exists("Runtime",$param) and $param["Runtime"] !== null) {
-            $this->Runtime = $param["Runtime"];
+        if (array_key_exists('Runtime',$param) and $param['Runtime'] !== null) {
+            $this->Runtime = $param['Runtime'];
         }
 
-        if (array_key_exists("CreatedAt",$param) and $param["CreatedAt"] !== null) {
-            $this->CreatedAt = $param["CreatedAt"];
+        if (array_key_exists('CreatedAt',$param) and $param['CreatedAt'] !== null) {
+            $this->CreatedAt = $param['CreatedAt'];
         }
 
-        if (array_key_exists("ServiceInstanceStatus",$param) and $param["ServiceInstanceStatus"] !== null) {
-            $this->ServiceInstanceStatus = $param["ServiceInstanceStatus"];
+        if (array_key_exists('ServiceInstanceStatus',$param) and $param['ServiceInstanceStatus'] !== null) {
+            $this->ServiceInstanceStatus = $param['ServiceInstanceStatus'];
         }
 
-        if (array_key_exists("InstanceAvailableStatus",$param) and $param["InstanceAvailableStatus"] !== null) {
-            $this->InstanceAvailableStatus = $param["InstanceAvailableStatus"];
+        if (array_key_exists('InstanceAvailableStatus',$param) and $param['InstanceAvailableStatus'] !== null) {
+            $this->InstanceAvailableStatus = $param['InstanceAvailableStatus'];
         }
 
-        if (array_key_exists("InstanceStatus",$param) and $param["InstanceStatus"] !== null) {
-            $this->InstanceStatus = $param["InstanceStatus"];
+        if (array_key_exists('InstanceStatus',$param) and $param['InstanceStatus'] !== null) {
+            $this->InstanceStatus = $param['InstanceStatus'];
         }
 
-        if (array_key_exists("NodeInstanceId",$param) and $param["NodeInstanceId"] !== null) {
-            $this->NodeInstanceId = $param["NodeInstanceId"];
+        if (array_key_exists('NodeInstanceId',$param) and $param['NodeInstanceId'] !== null) {
+            $this->NodeInstanceId = $param['NodeInstanceId'];
         }
     }
 }

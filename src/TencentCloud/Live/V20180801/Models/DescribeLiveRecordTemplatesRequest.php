@@ -54,8 +54,8 @@ class DescribeLiveRecordTemplatesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("IsDelayLive",$param) and $param["IsDelayLive"] !== null) {
-            $this->IsDelayLive = $param["IsDelayLive"];
+        if (array_key_exists('IsDelayLive',$param) and $param['IsDelayLive'] !== null) {
+            $this->IsDelayLive = $param['IsDelayLive'];
         }
     }
 }

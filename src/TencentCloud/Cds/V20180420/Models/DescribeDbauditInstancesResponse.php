@@ -62,21 +62,21 @@ class DescribeDbauditInstancesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("CdsAuditInstanceSet",$param) and $param["CdsAuditInstanceSet"] !== null) {
+        if (array_key_exists('CdsAuditInstanceSet',$param) and $param['CdsAuditInstanceSet'] !== null) {
             $this->CdsAuditInstanceSet = [];
-            foreach ($param["CdsAuditInstanceSet"] as $key => $value){
+            foreach ($param['CdsAuditInstanceSet'] as $key => $value){
                 $obj = new CdsAuditInstance();
                 $obj->deserialize($value);
                 array_push($this->CdsAuditInstanceSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

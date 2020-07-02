@@ -70,25 +70,25 @@ class DescribeBlockIPListResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BlockedIPCount",$param) and $param["BlockedIPCount"] !== null) {
-            $this->BlockedIPCount = $param["BlockedIPCount"];
+        if (array_key_exists('BlockedIPCount',$param) and $param['BlockedIPCount'] !== null) {
+            $this->BlockedIPCount = $param['BlockedIPCount'];
         }
 
-        if (array_key_exists("ClientIPField",$param) and $param["ClientIPField"] !== null) {
-            $this->ClientIPField = $param["ClientIPField"];
+        if (array_key_exists('ClientIPField',$param) and $param['ClientIPField'] !== null) {
+            $this->ClientIPField = $param['ClientIPField'];
         }
 
-        if (array_key_exists("BlockedIPList",$param) and $param["BlockedIPList"] !== null) {
+        if (array_key_exists('BlockedIPList',$param) and $param['BlockedIPList'] !== null) {
             $this->BlockedIPList = [];
-            foreach ($param["BlockedIPList"] as $key => $value){
+            foreach ($param['BlockedIPList'] as $key => $value){
                 $obj = new BlockedIP();
                 $obj->deserialize($value);
                 array_push($this->BlockedIPList, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

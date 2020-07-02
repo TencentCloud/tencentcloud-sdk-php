@@ -54,17 +54,17 @@ class DescribeDDoSPolicyResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DDosPolicyList",$param) and $param["DDosPolicyList"] !== null) {
+        if (array_key_exists('DDosPolicyList',$param) and $param['DDosPolicyList'] !== null) {
             $this->DDosPolicyList = [];
-            foreach ($param["DDosPolicyList"] as $key => $value){
+            foreach ($param['DDosPolicyList'] as $key => $value){
                 $obj = new DDosPolicy();
                 $obj->deserialize($value);
                 array_push($this->DDosPolicyList, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

@@ -54,12 +54,12 @@ class DeleteCCFrequencyRulesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Business",$param) and $param["Business"] !== null) {
-            $this->Business = $param["Business"];
+        if (array_key_exists('Business',$param) and $param['Business'] !== null) {
+            $this->Business = $param['Business'];
         }
 
-        if (array_key_exists("CCFrequencyRuleId",$param) and $param["CCFrequencyRuleId"] !== null) {
-            $this->CCFrequencyRuleId = $param["CCFrequencyRuleId"];
+        if (array_key_exists('CCFrequencyRuleId',$param) and $param['CCFrequencyRuleId'] !== null) {
+            $this->CCFrequencyRuleId = $param['CCFrequencyRuleId'];
         }
     }
 }

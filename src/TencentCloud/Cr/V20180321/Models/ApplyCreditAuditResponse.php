@@ -54,12 +54,12 @@ class ApplyCreditAuditResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RequestDate",$param) and $param["RequestDate"] !== null) {
-            $this->RequestDate = $param["RequestDate"];
+        if (array_key_exists('RequestDate',$param) and $param['RequestDate'] !== null) {
+            $this->RequestDate = $param['RequestDate'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

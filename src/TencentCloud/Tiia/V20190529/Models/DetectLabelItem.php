@@ -70,20 +70,20 @@ class DetectLabelItem extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("Confidence",$param) and $param["Confidence"] !== null) {
-            $this->Confidence = $param["Confidence"];
+        if (array_key_exists('Confidence',$param) and $param['Confidence'] !== null) {
+            $this->Confidence = $param['Confidence'];
         }
 
-        if (array_key_exists("FirstCategory",$param) and $param["FirstCategory"] !== null) {
-            $this->FirstCategory = $param["FirstCategory"];
+        if (array_key_exists('FirstCategory',$param) and $param['FirstCategory'] !== null) {
+            $this->FirstCategory = $param['FirstCategory'];
         }
 
-        if (array_key_exists("SecondCategory",$param) and $param["SecondCategory"] !== null) {
-            $this->SecondCategory = $param["SecondCategory"];
+        if (array_key_exists('SecondCategory',$param) and $param['SecondCategory'] !== null) {
+            $this->SecondCategory = $param['SecondCategory'];
         }
     }
 }

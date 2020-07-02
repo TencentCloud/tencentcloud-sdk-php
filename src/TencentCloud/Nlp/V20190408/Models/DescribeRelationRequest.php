@@ -54,12 +54,12 @@ class DescribeRelationRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LeftEntityName",$param) and $param["LeftEntityName"] !== null) {
-            $this->LeftEntityName = $param["LeftEntityName"];
+        if (array_key_exists('LeftEntityName',$param) and $param['LeftEntityName'] !== null) {
+            $this->LeftEntityName = $param['LeftEntityName'];
         }
 
-        if (array_key_exists("RightEntityName",$param) and $param["RightEntityName"] !== null) {
-            $this->RightEntityName = $param["RightEntityName"];
+        if (array_key_exists('RightEntityName',$param) and $param['RightEntityName'] !== null) {
+            $this->RightEntityName = $param['RightEntityName'];
         }
     }
 }

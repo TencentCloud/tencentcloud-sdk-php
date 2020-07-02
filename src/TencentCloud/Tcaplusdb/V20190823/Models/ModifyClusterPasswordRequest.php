@@ -78,24 +78,24 @@ class ModifyClusterPasswordRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
-            $this->ClusterId = $param["ClusterId"];
+        if (array_key_exists('ClusterId',$param) and $param['ClusterId'] !== null) {
+            $this->ClusterId = $param['ClusterId'];
         }
 
-        if (array_key_exists("OldPassword",$param) and $param["OldPassword"] !== null) {
-            $this->OldPassword = $param["OldPassword"];
+        if (array_key_exists('OldPassword',$param) and $param['OldPassword'] !== null) {
+            $this->OldPassword = $param['OldPassword'];
         }
 
-        if (array_key_exists("OldPasswordExpireTime",$param) and $param["OldPasswordExpireTime"] !== null) {
-            $this->OldPasswordExpireTime = $param["OldPasswordExpireTime"];
+        if (array_key_exists('OldPasswordExpireTime',$param) and $param['OldPasswordExpireTime'] !== null) {
+            $this->OldPasswordExpireTime = $param['OldPasswordExpireTime'];
         }
 
-        if (array_key_exists("NewPassword",$param) and $param["NewPassword"] !== null) {
-            $this->NewPassword = $param["NewPassword"];
+        if (array_key_exists('NewPassword',$param) and $param['NewPassword'] !== null) {
+            $this->NewPassword = $param['NewPassword'];
         }
 
-        if (array_key_exists("Mode",$param) and $param["Mode"] !== null) {
-            $this->Mode = $param["Mode"];
+        if (array_key_exists('Mode',$param) and $param['Mode'] !== null) {
+            $this->Mode = $param['Mode'];
         }
     }
 }

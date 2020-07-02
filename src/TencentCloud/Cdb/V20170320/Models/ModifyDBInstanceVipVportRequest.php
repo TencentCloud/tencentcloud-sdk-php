@@ -86,28 +86,28 @@ class ModifyDBInstanceVipVportRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("DstIp",$param) and $param["DstIp"] !== null) {
-            $this->DstIp = $param["DstIp"];
+        if (array_key_exists('DstIp',$param) and $param['DstIp'] !== null) {
+            $this->DstIp = $param['DstIp'];
         }
 
-        if (array_key_exists("DstPort",$param) and $param["DstPort"] !== null) {
-            $this->DstPort = $param["DstPort"];
+        if (array_key_exists('DstPort',$param) and $param['DstPort'] !== null) {
+            $this->DstPort = $param['DstPort'];
         }
 
-        if (array_key_exists("UniqVpcId",$param) and $param["UniqVpcId"] !== null) {
-            $this->UniqVpcId = $param["UniqVpcId"];
+        if (array_key_exists('UniqVpcId',$param) and $param['UniqVpcId'] !== null) {
+            $this->UniqVpcId = $param['UniqVpcId'];
         }
 
-        if (array_key_exists("UniqSubnetId",$param) and $param["UniqSubnetId"] !== null) {
-            $this->UniqSubnetId = $param["UniqSubnetId"];
+        if (array_key_exists('UniqSubnetId',$param) and $param['UniqSubnetId'] !== null) {
+            $this->UniqSubnetId = $param['UniqSubnetId'];
         }
 
-        if (array_key_exists("ReleaseDuration",$param) and $param["ReleaseDuration"] !== null) {
-            $this->ReleaseDuration = $param["ReleaseDuration"];
+        if (array_key_exists('ReleaseDuration',$param) and $param['ReleaseDuration'] !== null) {
+            $this->ReleaseDuration = $param['ReleaseDuration'];
         }
     }
 }

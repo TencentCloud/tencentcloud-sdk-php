@@ -62,21 +62,21 @@ class DescribeAgentBillsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("AgentBillSet",$param) and $param["AgentBillSet"] !== null) {
+        if (array_key_exists('AgentBillSet',$param) and $param['AgentBillSet'] !== null) {
             $this->AgentBillSet = [];
-            foreach ($param["AgentBillSet"] as $key => $value){
+            foreach ($param['AgentBillSet'] as $key => $value){
                 $obj = new AgentBillElem();
                 $obj->deserialize($value);
                 array_push($this->AgentBillSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

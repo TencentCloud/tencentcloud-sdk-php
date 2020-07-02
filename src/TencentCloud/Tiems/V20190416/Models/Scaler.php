@@ -70,21 +70,21 @@ class Scaler extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MaxReplicas",$param) and $param["MaxReplicas"] !== null) {
-            $this->MaxReplicas = $param["MaxReplicas"];
+        if (array_key_exists('MaxReplicas',$param) and $param['MaxReplicas'] !== null) {
+            $this->MaxReplicas = $param['MaxReplicas'];
         }
 
-        if (array_key_exists("MinReplicas",$param) and $param["MinReplicas"] !== null) {
-            $this->MinReplicas = $param["MinReplicas"];
+        if (array_key_exists('MinReplicas',$param) and $param['MinReplicas'] !== null) {
+            $this->MinReplicas = $param['MinReplicas'];
         }
 
-        if (array_key_exists("StartReplicas",$param) and $param["StartReplicas"] !== null) {
-            $this->StartReplicas = $param["StartReplicas"];
+        if (array_key_exists('StartReplicas',$param) and $param['StartReplicas'] !== null) {
+            $this->StartReplicas = $param['StartReplicas'];
         }
 
-        if (array_key_exists("HpaMetrics",$param) and $param["HpaMetrics"] !== null) {
+        if (array_key_exists('HpaMetrics',$param) and $param['HpaMetrics'] !== null) {
             $this->HpaMetrics = [];
-            foreach ($param["HpaMetrics"] as $key => $value){
+            foreach ($param['HpaMetrics'] as $key => $value){
                 $obj = new Option();
                 $obj->deserialize($value);
                 array_push($this->HpaMetrics, $obj);

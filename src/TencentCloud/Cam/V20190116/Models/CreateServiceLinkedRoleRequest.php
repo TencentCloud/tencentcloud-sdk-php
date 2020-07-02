@@ -62,16 +62,16 @@ class CreateServiceLinkedRoleRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("QCSServiceName",$param) and $param["QCSServiceName"] !== null) {
-            $this->QCSServiceName = $param["QCSServiceName"];
+        if (array_key_exists('QCSServiceName',$param) and $param['QCSServiceName'] !== null) {
+            $this->QCSServiceName = $param['QCSServiceName'];
         }
 
-        if (array_key_exists("CustomSuffix",$param) and $param["CustomSuffix"] !== null) {
-            $this->CustomSuffix = $param["CustomSuffix"];
+        if (array_key_exists('CustomSuffix',$param) and $param['CustomSuffix'] !== null) {
+            $this->CustomSuffix = $param['CustomSuffix'];
         }
 
-        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
-            $this->Description = $param["Description"];
+        if (array_key_exists('Description',$param) and $param['Description'] !== null) {
+            $this->Description = $param['Description'];
         }
     }
 }

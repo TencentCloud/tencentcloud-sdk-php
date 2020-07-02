@@ -54,12 +54,12 @@ class ZoneDayFlow extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Day",$param) and $param["Day"] !== null) {
-            $this->Day = $param["Day"];
+        if (array_key_exists('Day',$param) and $param['Day'] !== null) {
+            $this->Day = $param['Day'];
         }
 
-        if (array_key_exists("FlowCount",$param) and $param["FlowCount"] !== null) {
-            $this->FlowCount = $param["FlowCount"];
+        if (array_key_exists('FlowCount',$param) and $param['FlowCount'] !== null) {
+            $this->FlowCount = $param['FlowCount'];
         }
     }
 }

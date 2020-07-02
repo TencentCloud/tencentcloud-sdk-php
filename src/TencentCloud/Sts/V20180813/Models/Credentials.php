@@ -62,16 +62,16 @@ class Credentials extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Token",$param) and $param["Token"] !== null) {
-            $this->Token = $param["Token"];
+        if (array_key_exists('Token',$param) and $param['Token'] !== null) {
+            $this->Token = $param['Token'];
         }
 
-        if (array_key_exists("TmpSecretId",$param) and $param["TmpSecretId"] !== null) {
-            $this->TmpSecretId = $param["TmpSecretId"];
+        if (array_key_exists('TmpSecretId',$param) and $param['TmpSecretId'] !== null) {
+            $this->TmpSecretId = $param['TmpSecretId'];
         }
 
-        if (array_key_exists("TmpSecretKey",$param) and $param["TmpSecretKey"] !== null) {
-            $this->TmpSecretKey = $param["TmpSecretKey"];
+        if (array_key_exists('TmpSecretKey',$param) and $param['TmpSecretKey'] !== null) {
+            $this->TmpSecretKey = $param['TmpSecretKey'];
         }
     }
 }

@@ -90,25 +90,25 @@ class DescribeAllKeysResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Keys",$param) and $param["Keys"] !== null) {
+        if (array_key_exists('Keys',$param) and $param['Keys'] !== null) {
             $this->Keys = [];
-            foreach ($param["Keys"] as $key => $value){
+            foreach ($param['Keys'] as $key => $value){
                 $obj = new Key();
                 $obj->deserialize($value);
                 array_push($this->Keys, $obj);
             }
         }
 
-        if (array_key_exists("SessionKey",$param) and $param["SessionKey"] !== null) {
-            $this->SessionKey = $param["SessionKey"];
+        if (array_key_exists('SessionKey',$param) and $param['SessionKey'] !== null) {
+            $this->SessionKey = $param['SessionKey'];
         }
 
-        if (array_key_exists("ContentId",$param) and $param["ContentId"] !== null) {
-            $this->ContentId = $param["ContentId"];
+        if (array_key_exists('ContentId',$param) and $param['ContentId'] !== null) {
+            $this->ContentId = $param['ContentId'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

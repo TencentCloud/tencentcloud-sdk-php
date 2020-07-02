@@ -70,20 +70,20 @@ class RollbackInstanceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists('Type',$param) and $param['Type'] !== null) {
+            $this->Type = $param['Type'];
         }
 
-        if (array_key_exists("DBs",$param) and $param["DBs"] !== null) {
-            $this->DBs = $param["DBs"];
+        if (array_key_exists('DBs',$param) and $param['DBs'] !== null) {
+            $this->DBs = $param['DBs'];
         }
 
-        if (array_key_exists("Time",$param) and $param["Time"] !== null) {
-            $this->Time = $param["Time"];
+        if (array_key_exists('Time',$param) and $param['Time'] !== null) {
+            $this->Time = $param['Time'];
         }
     }
 }

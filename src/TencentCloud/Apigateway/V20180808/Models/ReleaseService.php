@@ -62,12 +62,12 @@ class ReleaseService extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ReleaseDesc",$param) and $param["ReleaseDesc"] !== null) {
-            $this->ReleaseDesc = $param["ReleaseDesc"];
+        if (array_key_exists('ReleaseDesc',$param) and $param['ReleaseDesc'] !== null) {
+            $this->ReleaseDesc = $param['ReleaseDesc'];
         }
 
-        if (array_key_exists("ReleaseVersion",$param) and $param["ReleaseVersion"] !== null) {
-            $this->ReleaseVersion = $param["ReleaseVersion"];
+        if (array_key_exists('ReleaseVersion',$param) and $param['ReleaseVersion'] !== null) {
+            $this->ReleaseVersion = $param['ReleaseVersion'];
         }
     }
 }

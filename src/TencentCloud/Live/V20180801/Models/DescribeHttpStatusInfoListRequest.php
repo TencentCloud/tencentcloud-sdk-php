@@ -78,16 +78,16 @@ StartTime不能为3个月前。
         if ($param === null) {
             return;
         }
-        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
-            $this->StartTime = $param["StartTime"];
+        if (array_key_exists('StartTime',$param) and $param['StartTime'] !== null) {
+            $this->StartTime = $param['StartTime'];
         }
 
-        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
-            $this->EndTime = $param["EndTime"];
+        if (array_key_exists('EndTime',$param) and $param['EndTime'] !== null) {
+            $this->EndTime = $param['EndTime'];
         }
 
-        if (array_key_exists("PlayDomains",$param) and $param["PlayDomains"] !== null) {
-            $this->PlayDomains = $param["PlayDomains"];
+        if (array_key_exists('PlayDomains',$param) and $param['PlayDomains'] !== null) {
+            $this->PlayDomains = $param['PlayDomains'];
         }
     }
 }

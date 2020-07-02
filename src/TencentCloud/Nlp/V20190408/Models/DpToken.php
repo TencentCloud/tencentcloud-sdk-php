@@ -70,20 +70,20 @@ class DpToken extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("HeadId",$param) and $param["HeadId"] !== null) {
-            $this->HeadId = $param["HeadId"];
+        if (array_key_exists('HeadId',$param) and $param['HeadId'] !== null) {
+            $this->HeadId = $param['HeadId'];
         }
 
-        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
-            $this->Id = $param["Id"];
+        if (array_key_exists('Id',$param) and $param['Id'] !== null) {
+            $this->Id = $param['Id'];
         }
 
-        if (array_key_exists("Relation",$param) and $param["Relation"] !== null) {
-            $this->Relation = $param["Relation"];
+        if (array_key_exists('Relation',$param) and $param['Relation'] !== null) {
+            $this->Relation = $param['Relation'];
         }
 
-        if (array_key_exists("Word",$param) and $param["Word"] !== null) {
-            $this->Word = $param["Word"];
+        if (array_key_exists('Word',$param) and $param['Word'] !== null) {
+            $this->Word = $param['Word'];
         }
     }
 }

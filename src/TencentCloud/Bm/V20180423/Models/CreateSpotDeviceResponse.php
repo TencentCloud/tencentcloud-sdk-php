@@ -62,16 +62,16 @@ class CreateSpotDeviceResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ResourceIds",$param) and $param["ResourceIds"] !== null) {
-            $this->ResourceIds = $param["ResourceIds"];
+        if (array_key_exists('ResourceIds',$param) and $param['ResourceIds'] !== null) {
+            $this->ResourceIds = $param['ResourceIds'];
         }
 
-        if (array_key_exists("FlowId",$param) and $param["FlowId"] !== null) {
-            $this->FlowId = $param["FlowId"];
+        if (array_key_exists('FlowId',$param) and $param['FlowId'] !== null) {
+            $this->FlowId = $param['FlowId'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

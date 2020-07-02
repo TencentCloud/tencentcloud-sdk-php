@@ -102,29 +102,29 @@ class MediaSampleSnapshotItem extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Definition",$param) and $param["Definition"] !== null) {
-            $this->Definition = $param["Definition"];
+        if (array_key_exists('Definition',$param) and $param['Definition'] !== null) {
+            $this->Definition = $param['Definition'];
         }
 
-        if (array_key_exists("SampleType",$param) and $param["SampleType"] !== null) {
-            $this->SampleType = $param["SampleType"];
+        if (array_key_exists('SampleType',$param) and $param['SampleType'] !== null) {
+            $this->SampleType = $param['SampleType'];
         }
 
-        if (array_key_exists("Interval",$param) and $param["Interval"] !== null) {
-            $this->Interval = $param["Interval"];
+        if (array_key_exists('Interval',$param) and $param['Interval'] !== null) {
+            $this->Interval = $param['Interval'];
         }
 
-        if (array_key_exists("Storage",$param) and $param["Storage"] !== null) {
+        if (array_key_exists('Storage',$param) and $param['Storage'] !== null) {
             $this->Storage = new TaskOutputStorage();
-            $this->Storage->deserialize($param["Storage"]);
+            $this->Storage->deserialize($param['Storage']);
         }
 
-        if (array_key_exists("ImagePathSet",$param) and $param["ImagePathSet"] !== null) {
-            $this->ImagePathSet = $param["ImagePathSet"];
+        if (array_key_exists('ImagePathSet',$param) and $param['ImagePathSet'] !== null) {
+            $this->ImagePathSet = $param['ImagePathSet'];
         }
 
-        if (array_key_exists("WaterMarkDefinition",$param) and $param["WaterMarkDefinition"] !== null) {
-            $this->WaterMarkDefinition = $param["WaterMarkDefinition"];
+        if (array_key_exists('WaterMarkDefinition',$param) and $param['WaterMarkDefinition'] !== null) {
+            $this->WaterMarkDefinition = $param['WaterMarkDefinition'];
         }
     }
 }

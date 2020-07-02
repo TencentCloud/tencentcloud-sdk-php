@@ -90,24 +90,24 @@ class DescribeProxyGroupStatisticsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
-            $this->GroupId = $param["GroupId"];
+        if (array_key_exists('GroupId',$param) and $param['GroupId'] !== null) {
+            $this->GroupId = $param['GroupId'];
         }
 
-        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
-            $this->StartTime = $param["StartTime"];
+        if (array_key_exists('StartTime',$param) and $param['StartTime'] !== null) {
+            $this->StartTime = $param['StartTime'];
         }
 
-        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
-            $this->EndTime = $param["EndTime"];
+        if (array_key_exists('EndTime',$param) and $param['EndTime'] !== null) {
+            $this->EndTime = $param['EndTime'];
         }
 
-        if (array_key_exists("MetricNames",$param) and $param["MetricNames"] !== null) {
-            $this->MetricNames = $param["MetricNames"];
+        if (array_key_exists('MetricNames',$param) and $param['MetricNames'] !== null) {
+            $this->MetricNames = $param['MetricNames'];
         }
 
-        if (array_key_exists("Granularity",$param) and $param["Granularity"] !== null) {
-            $this->Granularity = $param["Granularity"];
+        if (array_key_exists('Granularity',$param) and $param['Granularity'] !== null) {
+            $this->Granularity = $param['Granularity'];
         }
     }
 }

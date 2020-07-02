@@ -78,29 +78,29 @@ class DescribeTrafficPackagesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("TrafficPackages",$param) and $param["TrafficPackages"] !== null) {
+        if (array_key_exists('TrafficPackages',$param) and $param['TrafficPackages'] !== null) {
             $this->TrafficPackages = [];
-            foreach ($param["TrafficPackages"] as $key => $value){
+            foreach ($param['TrafficPackages'] as $key => $value){
                 $obj = new TrafficPackage();
                 $obj->deserialize($value);
                 array_push($this->TrafficPackages, $obj);
             }
         }
 
-        if (array_key_exists("ExpiringCount",$param) and $param["ExpiringCount"] !== null) {
-            $this->ExpiringCount = $param["ExpiringCount"];
+        if (array_key_exists('ExpiringCount',$param) and $param['ExpiringCount'] !== null) {
+            $this->ExpiringCount = $param['ExpiringCount'];
         }
 
-        if (array_key_exists("EnabledCount",$param) and $param["EnabledCount"] !== null) {
-            $this->EnabledCount = $param["EnabledCount"];
+        if (array_key_exists('EnabledCount',$param) and $param['EnabledCount'] !== null) {
+            $this->EnabledCount = $param['EnabledCount'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

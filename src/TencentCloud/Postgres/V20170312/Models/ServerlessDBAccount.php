@@ -74,16 +74,16 @@ class ServerlessDBAccount extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DBUser",$param) and $param["DBUser"] !== null) {
-            $this->DBUser = $param["DBUser"];
+        if (array_key_exists('DBUser',$param) and $param['DBUser'] !== null) {
+            $this->DBUser = $param['DBUser'];
         }
 
-        if (array_key_exists("DBPassword",$param) and $param["DBPassword"] !== null) {
-            $this->DBPassword = $param["DBPassword"];
+        if (array_key_exists('DBPassword',$param) and $param['DBPassword'] !== null) {
+            $this->DBPassword = $param['DBPassword'];
         }
 
-        if (array_key_exists("DBConnLimit",$param) and $param["DBConnLimit"] !== null) {
-            $this->DBConnLimit = $param["DBConnLimit"];
+        if (array_key_exists('DBConnLimit',$param) and $param['DBConnLimit'] !== null) {
+            $this->DBConnLimit = $param['DBConnLimit'];
         }
     }
 }

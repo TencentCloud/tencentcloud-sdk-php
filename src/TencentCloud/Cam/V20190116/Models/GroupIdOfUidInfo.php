@@ -54,12 +54,12 @@ class GroupIdOfUidInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Uid",$param) and $param["Uid"] !== null) {
-            $this->Uid = $param["Uid"];
+        if (array_key_exists('Uid',$param) and $param['Uid'] !== null) {
+            $this->Uid = $param['Uid'];
         }
 
-        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
-            $this->GroupId = $param["GroupId"];
+        if (array_key_exists('GroupId',$param) and $param['GroupId'] !== null) {
+            $this->GroupId = $param['GroupId'];
         }
     }
 }

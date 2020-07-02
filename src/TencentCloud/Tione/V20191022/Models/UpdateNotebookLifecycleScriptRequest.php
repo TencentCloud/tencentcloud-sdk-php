@@ -70,16 +70,16 @@ base64后的脚本长度不能超过16384个字符
         if ($param === null) {
             return;
         }
-        if (array_key_exists("NotebookLifecycleScriptsName",$param) and $param["NotebookLifecycleScriptsName"] !== null) {
-            $this->NotebookLifecycleScriptsName = $param["NotebookLifecycleScriptsName"];
+        if (array_key_exists('NotebookLifecycleScriptsName',$param) and $param['NotebookLifecycleScriptsName'] !== null) {
+            $this->NotebookLifecycleScriptsName = $param['NotebookLifecycleScriptsName'];
         }
 
-        if (array_key_exists("CreateScript",$param) and $param["CreateScript"] !== null) {
-            $this->CreateScript = $param["CreateScript"];
+        if (array_key_exists('CreateScript',$param) and $param['CreateScript'] !== null) {
+            $this->CreateScript = $param['CreateScript'];
         }
 
-        if (array_key_exists("StartScript",$param) and $param["StartScript"] !== null) {
-            $this->StartScript = $param["StartScript"];
+        if (array_key_exists('StartScript',$param) and $param['StartScript'] !== null) {
+            $this->StartScript = $param['StartScript'];
         }
     }
 }

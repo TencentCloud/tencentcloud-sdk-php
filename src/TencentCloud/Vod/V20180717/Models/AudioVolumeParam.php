@@ -82,12 +82,12 @@ class AudioVolumeParam extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Mute",$param) and $param["Mute"] !== null) {
-            $this->Mute = $param["Mute"];
+        if (array_key_exists('Mute',$param) and $param['Mute'] !== null) {
+            $this->Mute = $param['Mute'];
         }
 
-        if (array_key_exists("Gain",$param) and $param["Gain"] !== null) {
-            $this->Gain = $param["Gain"];
+        if (array_key_exists('Gain',$param) and $param['Gain'] !== null) {
+            $this->Gain = $param['Gain'];
         }
     }
 }

@@ -54,12 +54,12 @@ class DeleteAssistantCidrRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
-            $this->VpcId = $param["VpcId"];
+        if (array_key_exists('VpcId',$param) and $param['VpcId'] !== null) {
+            $this->VpcId = $param['VpcId'];
         }
 
-        if (array_key_exists("CidrBlocks",$param) and $param["CidrBlocks"] !== null) {
-            $this->CidrBlocks = $param["CidrBlocks"];
+        if (array_key_exists('CidrBlocks',$param) and $param['CidrBlocks'] !== null) {
+            $this->CidrBlocks = $param['CidrBlocks'];
         }
     }
 }

@@ -58,17 +58,17 @@ class UserResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Users",$param) and $param["Users"] !== null) {
+        if (array_key_exists('Users',$param) and $param['Users'] !== null) {
             $this->Users = [];
-            foreach ($param["Users"] as $key => $value){
+            foreach ($param['Users'] as $key => $value){
                 $obj = new User();
                 $obj->deserialize($value);
                 array_push($this->Users, $obj);
             }
         }
 
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
     }
 }

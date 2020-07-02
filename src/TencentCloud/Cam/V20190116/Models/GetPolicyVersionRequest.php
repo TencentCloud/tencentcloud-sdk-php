@@ -54,12 +54,12 @@ class GetPolicyVersionRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PolicyId",$param) and $param["PolicyId"] !== null) {
-            $this->PolicyId = $param["PolicyId"];
+        if (array_key_exists('PolicyId',$param) and $param['PolicyId'] !== null) {
+            $this->PolicyId = $param['PolicyId'];
         }
 
-        if (array_key_exists("VersionId",$param) and $param["VersionId"] !== null) {
-            $this->VersionId = $param["VersionId"];
+        if (array_key_exists('VersionId',$param) and $param['VersionId'] !== null) {
+            $this->VersionId = $param['VersionId'];
         }
     }
 }

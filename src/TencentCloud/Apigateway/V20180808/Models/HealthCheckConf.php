@@ -70,20 +70,20 @@ class HealthCheckConf extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("IsHealthCheck",$param) and $param["IsHealthCheck"] !== null) {
-            $this->IsHealthCheck = $param["IsHealthCheck"];
+        if (array_key_exists('IsHealthCheck',$param) and $param['IsHealthCheck'] !== null) {
+            $this->IsHealthCheck = $param['IsHealthCheck'];
         }
 
-        if (array_key_exists("RequestVolumeThreshold",$param) and $param["RequestVolumeThreshold"] !== null) {
-            $this->RequestVolumeThreshold = $param["RequestVolumeThreshold"];
+        if (array_key_exists('RequestVolumeThreshold',$param) and $param['RequestVolumeThreshold'] !== null) {
+            $this->RequestVolumeThreshold = $param['RequestVolumeThreshold'];
         }
 
-        if (array_key_exists("SleepWindowInMilliseconds",$param) and $param["SleepWindowInMilliseconds"] !== null) {
-            $this->SleepWindowInMilliseconds = $param["SleepWindowInMilliseconds"];
+        if (array_key_exists('SleepWindowInMilliseconds',$param) and $param['SleepWindowInMilliseconds'] !== null) {
+            $this->SleepWindowInMilliseconds = $param['SleepWindowInMilliseconds'];
         }
 
-        if (array_key_exists("ErrorThresholdPercentage",$param) and $param["ErrorThresholdPercentage"] !== null) {
-            $this->ErrorThresholdPercentage = $param["ErrorThresholdPercentage"];
+        if (array_key_exists('ErrorThresholdPercentage',$param) and $param['ErrorThresholdPercentage'] !== null) {
+            $this->ErrorThresholdPercentage = $param['ErrorThresholdPercentage'];
         }
     }
 }

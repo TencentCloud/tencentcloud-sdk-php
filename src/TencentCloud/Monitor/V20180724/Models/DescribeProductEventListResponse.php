@@ -78,26 +78,26 @@ class DescribeProductEventListResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Events",$param) and $param["Events"] !== null) {
+        if (array_key_exists('Events',$param) and $param['Events'] !== null) {
             $this->Events = [];
-            foreach ($param["Events"] as $key => $value){
+            foreach ($param['Events'] as $key => $value){
                 $obj = new DescribeProductEventListEvents();
                 $obj->deserialize($value);
                 array_push($this->Events, $obj);
             }
         }
 
-        if (array_key_exists("OverView",$param) and $param["OverView"] !== null) {
+        if (array_key_exists('OverView',$param) and $param['OverView'] !== null) {
             $this->OverView = new DescribeProductEventListOverView();
-            $this->OverView->deserialize($param["OverView"]);
+            $this->OverView->deserialize($param['OverView']);
         }
 
-        if (array_key_exists("Total",$param) and $param["Total"] !== null) {
-            $this->Total = $param["Total"];
+        if (array_key_exists('Total',$param) and $param['Total'] !== null) {
+            $this->Total = $param['Total'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

@@ -70,30 +70,30 @@ class VerifyIdlFilesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("IdlFiles",$param) and $param["IdlFiles"] !== null) {
+        if (array_key_exists('IdlFiles',$param) and $param['IdlFiles'] !== null) {
             $this->IdlFiles = [];
-            foreach ($param["IdlFiles"] as $key => $value){
+            foreach ($param['IdlFiles'] as $key => $value){
                 $obj = new IdlFileInfo();
                 $obj->deserialize($value);
                 array_push($this->IdlFiles, $obj);
             }
         }
 
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("TableInfos",$param) and $param["TableInfos"] !== null) {
+        if (array_key_exists('TableInfos',$param) and $param['TableInfos'] !== null) {
             $this->TableInfos = [];
-            foreach ($param["TableInfos"] as $key => $value){
+            foreach ($param['TableInfos'] as $key => $value){
                 $obj = new ParsedTableInfoNew();
                 $obj->deserialize($value);
                 array_push($this->TableInfos, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

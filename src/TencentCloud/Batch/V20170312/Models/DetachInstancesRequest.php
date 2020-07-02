@@ -54,12 +54,12 @@ class DetachInstancesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("EnvId",$param) and $param["EnvId"] !== null) {
-            $this->EnvId = $param["EnvId"];
+        if (array_key_exists('EnvId',$param) and $param['EnvId'] !== null) {
+            $this->EnvId = $param['EnvId'];
         }
 
-        if (array_key_exists("InstanceIds",$param) and $param["InstanceIds"] !== null) {
-            $this->InstanceIds = $param["InstanceIds"];
+        if (array_key_exists('InstanceIds',$param) and $param['InstanceIds'] !== null) {
+            $this->InstanceIds = $param['InstanceIds'];
         }
     }
 }

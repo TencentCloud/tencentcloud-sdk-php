@@ -67,22 +67,22 @@ class ResultsReturnsByGroup extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FaceRect",$param) and $param["FaceRect"] !== null) {
+        if (array_key_exists('FaceRect',$param) and $param['FaceRect'] !== null) {
             $this->FaceRect = new FaceRect();
-            $this->FaceRect->deserialize($param["FaceRect"]);
+            $this->FaceRect->deserialize($param['FaceRect']);
         }
 
-        if (array_key_exists("GroupCandidates",$param) and $param["GroupCandidates"] !== null) {
+        if (array_key_exists('GroupCandidates',$param) and $param['GroupCandidates'] !== null) {
             $this->GroupCandidates = [];
-            foreach ($param["GroupCandidates"] as $key => $value){
+            foreach ($param['GroupCandidates'] as $key => $value){
                 $obj = new GroupCandidate();
                 $obj->deserialize($value);
                 array_push($this->GroupCandidates, $obj);
             }
         }
 
-        if (array_key_exists("RetCode",$param) and $param["RetCode"] !== null) {
-            $this->RetCode = $param["RetCode"];
+        if (array_key_exists('RetCode',$param) and $param['RetCode'] !== null) {
+            $this->RetCode = $param['RetCode'];
         }
     }
 }

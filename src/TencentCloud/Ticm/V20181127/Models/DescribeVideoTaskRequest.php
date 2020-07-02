@@ -46,8 +46,8 @@ class DescribeVideoTaskRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("VodTaskId",$param) and $param["VodTaskId"] !== null) {
-            $this->VodTaskId = $param["VodTaskId"];
+        if (array_key_exists('VodTaskId',$param) and $param['VodTaskId'] !== null) {
+            $this->VodTaskId = $param['VodTaskId'];
         }
     }
 }

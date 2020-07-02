@@ -110,33 +110,33 @@ class Route extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AccessType",$param) and $param["AccessType"] !== null) {
-            $this->AccessType = $param["AccessType"];
+        if (array_key_exists('AccessType',$param) and $param['AccessType'] !== null) {
+            $this->AccessType = $param['AccessType'];
         }
 
-        if (array_key_exists("RouteId",$param) and $param["RouteId"] !== null) {
-            $this->RouteId = $param["RouteId"];
+        if (array_key_exists('RouteId',$param) and $param['RouteId'] !== null) {
+            $this->RouteId = $param['RouteId'];
         }
 
-        if (array_key_exists("VipType",$param) and $param["VipType"] !== null) {
-            $this->VipType = $param["VipType"];
+        if (array_key_exists('VipType',$param) and $param['VipType'] !== null) {
+            $this->VipType = $param['VipType'];
         }
 
-        if (array_key_exists("VipList",$param) and $param["VipList"] !== null) {
+        if (array_key_exists('VipList',$param) and $param['VipList'] !== null) {
             $this->VipList = [];
-            foreach ($param["VipList"] as $key => $value){
+            foreach ($param['VipList'] as $key => $value){
                 $obj = new VipEntity();
                 $obj->deserialize($value);
                 array_push($this->VipList, $obj);
             }
         }
 
-        if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
-            $this->Domain = $param["Domain"];
+        if (array_key_exists('Domain',$param) and $param['Domain'] !== null) {
+            $this->Domain = $param['Domain'];
         }
 
-        if (array_key_exists("DomainPort",$param) and $param["DomainPort"] !== null) {
-            $this->DomainPort = $param["DomainPort"];
+        if (array_key_exists('DomainPort',$param) and $param['DomainPort'] !== null) {
+            $this->DomainPort = $param['DomainPort'];
         }
     }
 }

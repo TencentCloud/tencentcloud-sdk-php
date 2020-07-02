@@ -54,12 +54,12 @@ class DeleteNotebookLifecycleScriptRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("NotebookLifecycleScriptsName",$param) and $param["NotebookLifecycleScriptsName"] !== null) {
-            $this->NotebookLifecycleScriptsName = $param["NotebookLifecycleScriptsName"];
+        if (array_key_exists('NotebookLifecycleScriptsName',$param) and $param['NotebookLifecycleScriptsName'] !== null) {
+            $this->NotebookLifecycleScriptsName = $param['NotebookLifecycleScriptsName'];
         }
 
-        if (array_key_exists("Forcible",$param) and $param["Forcible"] !== null) {
-            $this->Forcible = $param["Forcible"];
+        if (array_key_exists('Forcible',$param) and $param['Forcible'] !== null) {
+            $this->Forcible = $param['Forcible'];
         }
     }
 }

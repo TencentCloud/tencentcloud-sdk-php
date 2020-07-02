@@ -54,12 +54,12 @@ class LanguageDetectRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Text",$param) and $param["Text"] !== null) {
-            $this->Text = $param["Text"];
+        if (array_key_exists('Text',$param) and $param['Text'] !== null) {
+            $this->Text = $param['Text'];
         }
 
-        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
-            $this->ProjectId = $param["ProjectId"];
+        if (array_key_exists('ProjectId',$param) and $param['ProjectId'] !== null) {
+            $this->ProjectId = $param['ProjectId'];
         }
     }
 }

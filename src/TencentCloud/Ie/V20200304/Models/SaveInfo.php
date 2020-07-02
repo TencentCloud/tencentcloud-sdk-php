@@ -58,13 +58,13 @@ class SaveInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists('Type',$param) and $param['Type'] !== null) {
+            $this->Type = $param['Type'];
         }
 
-        if (array_key_exists("CosInfo",$param) and $param["CosInfo"] !== null) {
+        if (array_key_exists('CosInfo',$param) and $param['CosInfo'] !== null) {
             $this->CosInfo = new CosInfo();
-            $this->CosInfo->deserialize($param["CosInfo"]);
+            $this->CosInfo->deserialize($param['CosInfo']);
         }
     }
 }

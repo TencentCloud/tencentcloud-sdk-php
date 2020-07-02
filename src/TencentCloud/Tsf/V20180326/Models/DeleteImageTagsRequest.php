@@ -46,9 +46,9 @@ class DeleteImageTagsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ImageTags",$param) and $param["ImageTags"] !== null) {
+        if (array_key_exists('ImageTags',$param) and $param['ImageTags'] !== null) {
             $this->ImageTags = [];
-            foreach ($param["ImageTags"] as $key => $value){
+            foreach ($param['ImageTags'] as $key => $value){
                 $obj = new DeleteImageTag();
                 $obj->deserialize($value);
                 array_push($this->ImageTags, $obj);

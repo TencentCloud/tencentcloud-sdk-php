@@ -54,17 +54,17 @@ class SendSmsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SendStatusSet",$param) and $param["SendStatusSet"] !== null) {
+        if (array_key_exists('SendStatusSet',$param) and $param['SendStatusSet'] !== null) {
             $this->SendStatusSet = [];
-            foreach ($param["SendStatusSet"] as $key => $value){
+            foreach ($param['SendStatusSet'] as $key => $value){
                 $obj = new SendStatus();
                 $obj->deserialize($value);
                 array_push($this->SendStatusSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

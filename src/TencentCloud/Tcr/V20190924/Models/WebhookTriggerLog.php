@@ -102,36 +102,36 @@ class WebhookTriggerLog extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
-            $this->Id = $param["Id"];
+        if (array_key_exists('Id',$param) and $param['Id'] !== null) {
+            $this->Id = $param['Id'];
         }
 
-        if (array_key_exists("TriggerId",$param) and $param["TriggerId"] !== null) {
-            $this->TriggerId = $param["TriggerId"];
+        if (array_key_exists('TriggerId',$param) and $param['TriggerId'] !== null) {
+            $this->TriggerId = $param['TriggerId'];
         }
 
-        if (array_key_exists("EventType",$param) and $param["EventType"] !== null) {
-            $this->EventType = $param["EventType"];
+        if (array_key_exists('EventType',$param) and $param['EventType'] !== null) {
+            $this->EventType = $param['EventType'];
         }
 
-        if (array_key_exists("NotifyType",$param) and $param["NotifyType"] !== null) {
-            $this->NotifyType = $param["NotifyType"];
+        if (array_key_exists('NotifyType',$param) and $param['NotifyType'] !== null) {
+            $this->NotifyType = $param['NotifyType'];
         }
 
-        if (array_key_exists("Detail",$param) and $param["Detail"] !== null) {
-            $this->Detail = $param["Detail"];
+        if (array_key_exists('Detail',$param) and $param['Detail'] !== null) {
+            $this->Detail = $param['Detail'];
         }
 
-        if (array_key_exists("CreationTime",$param) and $param["CreationTime"] !== null) {
-            $this->CreationTime = $param["CreationTime"];
+        if (array_key_exists('CreationTime',$param) and $param['CreationTime'] !== null) {
+            $this->CreationTime = $param['CreationTime'];
         }
 
-        if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
-            $this->UpdateTime = $param["UpdateTime"];
+        if (array_key_exists('UpdateTime',$param) and $param['UpdateTime'] !== null) {
+            $this->UpdateTime = $param['UpdateTime'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
     }
 }

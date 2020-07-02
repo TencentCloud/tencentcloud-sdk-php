@@ -54,13 +54,13 @@ class CreateVpcResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Vpc",$param) and $param["Vpc"] !== null) {
+        if (array_key_exists('Vpc',$param) and $param['Vpc'] !== null) {
             $this->Vpc = new VpcInfo();
-            $this->Vpc->deserialize($param["Vpc"]);
+            $this->Vpc->deserialize($param['Vpc']);
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

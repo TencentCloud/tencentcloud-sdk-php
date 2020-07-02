@@ -54,17 +54,17 @@ class DescribeLiveDelayInfoListResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DelayInfoList",$param) and $param["DelayInfoList"] !== null) {
+        if (array_key_exists('DelayInfoList',$param) and $param['DelayInfoList'] !== null) {
             $this->DelayInfoList = [];
-            foreach ($param["DelayInfoList"] as $key => $value){
+            foreach ($param['DelayInfoList'] as $key => $value){
                 $obj = new DelayInfo();
                 $obj->deserialize($value);
                 array_push($this->DelayInfoList, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

@@ -78,16 +78,16 @@ RealServer表示源站。
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TagKey",$param) and $param["TagKey"] !== null) {
-            $this->TagKey = $param["TagKey"];
+        if (array_key_exists('TagKey',$param) and $param['TagKey'] !== null) {
+            $this->TagKey = $param['TagKey'];
         }
 
-        if (array_key_exists("TagValue",$param) and $param["TagValue"] !== null) {
-            $this->TagValue = $param["TagValue"];
+        if (array_key_exists('TagValue',$param) and $param['TagValue'] !== null) {
+            $this->TagValue = $param['TagValue'];
         }
 
-        if (array_key_exists("ResourceType",$param) and $param["ResourceType"] !== null) {
-            $this->ResourceType = $param["ResourceType"];
+        if (array_key_exists('ResourceType',$param) and $param['ResourceType'] !== null) {
+            $this->ResourceType = $param['ResourceType'];
         }
     }
 }

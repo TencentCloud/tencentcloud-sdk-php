@@ -54,17 +54,17 @@ class AddRealServersResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RealServerSet",$param) and $param["RealServerSet"] !== null) {
+        if (array_key_exists('RealServerSet',$param) and $param['RealServerSet'] !== null) {
             $this->RealServerSet = [];
-            foreach ($param["RealServerSet"] as $key => $value){
+            foreach ($param['RealServerSet'] as $key => $value){
                 $obj = new NewRealServer();
                 $obj->deserialize($value);
                 array_push($this->RealServerSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

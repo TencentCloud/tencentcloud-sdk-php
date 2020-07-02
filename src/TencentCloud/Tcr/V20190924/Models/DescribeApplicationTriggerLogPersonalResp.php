@@ -58,13 +58,13 @@ class DescribeApplicationTriggerLogPersonalResp extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("LogInfo",$param) and $param["LogInfo"] !== null) {
+        if (array_key_exists('LogInfo',$param) and $param['LogInfo'] !== null) {
             $this->LogInfo = [];
-            foreach ($param["LogInfo"] as $key => $value){
+            foreach ($param['LogInfo'] as $key => $value){
                 $obj = new TriggerLogResp();
                 $obj->deserialize($value);
                 array_push($this->LogInfo, $obj);

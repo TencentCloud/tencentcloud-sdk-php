@@ -54,12 +54,12 @@ class SwitchBashRulesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
-            $this->Id = $param["Id"];
+        if (array_key_exists('Id',$param) and $param['Id'] !== null) {
+            $this->Id = $param['Id'];
         }
 
-        if (array_key_exists("Disabled",$param) and $param["Disabled"] !== null) {
-            $this->Disabled = $param["Disabled"];
+        if (array_key_exists('Disabled',$param) and $param['Disabled'] !== null) {
+            $this->Disabled = $param['Disabled'];
         }
     }
 }

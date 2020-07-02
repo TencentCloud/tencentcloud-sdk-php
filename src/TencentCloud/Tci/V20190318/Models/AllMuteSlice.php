@@ -62,21 +62,21 @@ class AllMuteSlice extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MuteSlice",$param) and $param["MuteSlice"] !== null) {
+        if (array_key_exists('MuteSlice',$param) and $param['MuteSlice'] !== null) {
             $this->MuteSlice = [];
-            foreach ($param["MuteSlice"] as $key => $value){
+            foreach ($param['MuteSlice'] as $key => $value){
                 $obj = new MuteSlice();
                 $obj->deserialize($value);
                 array_push($this->MuteSlice, $obj);
             }
         }
 
-        if (array_key_exists("MuteRatio",$param) and $param["MuteRatio"] !== null) {
-            $this->MuteRatio = $param["MuteRatio"];
+        if (array_key_exists('MuteRatio',$param) and $param['MuteRatio'] !== null) {
+            $this->MuteRatio = $param['MuteRatio'];
         }
 
-        if (array_key_exists("TotalMuteDuration",$param) and $param["TotalMuteDuration"] !== null) {
-            $this->TotalMuteDuration = $param["TotalMuteDuration"];
+        if (array_key_exists('TotalMuteDuration',$param) and $param['TotalMuteDuration'] !== null) {
+            $this->TotalMuteDuration = $param['TotalMuteDuration'];
         }
     }
 }

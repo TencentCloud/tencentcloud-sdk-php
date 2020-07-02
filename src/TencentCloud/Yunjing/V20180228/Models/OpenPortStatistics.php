@@ -54,12 +54,12 @@ class OpenPortStatistics extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Port",$param) and $param["Port"] !== null) {
-            $this->Port = $param["Port"];
+        if (array_key_exists('Port',$param) and $param['Port'] !== null) {
+            $this->Port = $param['Port'];
         }
 
-        if (array_key_exists("MachineNum",$param) and $param["MachineNum"] !== null) {
-            $this->MachineNum = $param["MachineNum"];
+        if (array_key_exists('MachineNum',$param) and $param['MachineNum'] !== null) {
+            $this->MachineNum = $param['MachineNum'];
         }
     }
 }

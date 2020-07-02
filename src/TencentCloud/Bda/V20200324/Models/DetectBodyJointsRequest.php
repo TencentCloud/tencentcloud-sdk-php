@@ -74,12 +74,12 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Image",$param) and $param["Image"] !== null) {
-            $this->Image = $param["Image"];
+        if (array_key_exists('Image',$param) and $param['Image'] !== null) {
+            $this->Image = $param['Image'];
         }
 
-        if (array_key_exists("Url",$param) and $param["Url"] !== null) {
-            $this->Url = $param["Url"];
+        if (array_key_exists('Url',$param) and $param['Url'] !== null) {
+            $this->Url = $param['Url'];
         }
     }
 }

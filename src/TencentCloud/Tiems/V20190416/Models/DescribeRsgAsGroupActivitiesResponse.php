@@ -66,21 +66,21 @@ class DescribeRsgAsGroupActivitiesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RsgAsGroupActivitySet",$param) and $param["RsgAsGroupActivitySet"] !== null) {
+        if (array_key_exists('RsgAsGroupActivitySet',$param) and $param['RsgAsGroupActivitySet'] !== null) {
             $this->RsgAsGroupActivitySet = [];
-            foreach ($param["RsgAsGroupActivitySet"] as $key => $value){
+            foreach ($param['RsgAsGroupActivitySet'] as $key => $value){
                 $obj = new RsgAsGroupActivity();
                 $obj->deserialize($value);
                 array_push($this->RsgAsGroupActivitySet, $obj);
             }
         }
 
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

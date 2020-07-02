@@ -158,64 +158,64 @@ class DescribeDBInstancesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceIds",$param) and $param["InstanceIds"] !== null) {
-            $this->InstanceIds = $param["InstanceIds"];
+        if (array_key_exists('InstanceIds',$param) and $param['InstanceIds'] !== null) {
+            $this->InstanceIds = $param['InstanceIds'];
         }
 
-        if (array_key_exists("SearchName",$param) and $param["SearchName"] !== null) {
-            $this->SearchName = $param["SearchName"];
+        if (array_key_exists('SearchName',$param) and $param['SearchName'] !== null) {
+            $this->SearchName = $param['SearchName'];
         }
 
-        if (array_key_exists("SearchKey",$param) and $param["SearchKey"] !== null) {
-            $this->SearchKey = $param["SearchKey"];
+        if (array_key_exists('SearchKey',$param) and $param['SearchKey'] !== null) {
+            $this->SearchKey = $param['SearchKey'];
         }
 
-        if (array_key_exists("ProjectIds",$param) and $param["ProjectIds"] !== null) {
-            $this->ProjectIds = $param["ProjectIds"];
+        if (array_key_exists('ProjectIds',$param) and $param['ProjectIds'] !== null) {
+            $this->ProjectIds = $param['ProjectIds'];
         }
 
-        if (array_key_exists("IsFilterVpc",$param) and $param["IsFilterVpc"] !== null) {
-            $this->IsFilterVpc = $param["IsFilterVpc"];
+        if (array_key_exists('IsFilterVpc',$param) and $param['IsFilterVpc'] !== null) {
+            $this->IsFilterVpc = $param['IsFilterVpc'];
         }
 
-        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
-            $this->VpcId = $param["VpcId"];
+        if (array_key_exists('VpcId',$param) and $param['VpcId'] !== null) {
+            $this->VpcId = $param['VpcId'];
         }
 
-        if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
-            $this->SubnetId = $param["SubnetId"];
+        if (array_key_exists('SubnetId',$param) and $param['SubnetId'] !== null) {
+            $this->SubnetId = $param['SubnetId'];
         }
 
-        if (array_key_exists("OrderBy",$param) and $param["OrderBy"] !== null) {
-            $this->OrderBy = $param["OrderBy"];
+        if (array_key_exists('OrderBy',$param) and $param['OrderBy'] !== null) {
+            $this->OrderBy = $param['OrderBy'];
         }
 
-        if (array_key_exists("OrderByType",$param) and $param["OrderByType"] !== null) {
-            $this->OrderByType = $param["OrderByType"];
+        if (array_key_exists('OrderByType',$param) and $param['OrderByType'] !== null) {
+            $this->OrderByType = $param['OrderByType'];
         }
 
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
+        if (array_key_exists('Offset',$param) and $param['Offset'] !== null) {
+            $this->Offset = $param['Offset'];
         }
 
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
+        if (array_key_exists('Limit',$param) and $param['Limit'] !== null) {
+            $this->Limit = $param['Limit'];
         }
 
-        if (array_key_exists("OriginSerialIds",$param) and $param["OriginSerialIds"] !== null) {
-            $this->OriginSerialIds = $param["OriginSerialIds"];
+        if (array_key_exists('OriginSerialIds',$param) and $param['OriginSerialIds'] !== null) {
+            $this->OriginSerialIds = $param['OriginSerialIds'];
         }
 
-        if (array_key_exists("IsFilterExcluster",$param) and $param["IsFilterExcluster"] !== null) {
-            $this->IsFilterExcluster = $param["IsFilterExcluster"];
+        if (array_key_exists('IsFilterExcluster',$param) and $param['IsFilterExcluster'] !== null) {
+            $this->IsFilterExcluster = $param['IsFilterExcluster'];
         }
 
-        if (array_key_exists("ExclusterType",$param) and $param["ExclusterType"] !== null) {
-            $this->ExclusterType = $param["ExclusterType"];
+        if (array_key_exists('ExclusterType',$param) and $param['ExclusterType'] !== null) {
+            $this->ExclusterType = $param['ExclusterType'];
         }
 
-        if (array_key_exists("ExclusterIds",$param) and $param["ExclusterIds"] !== null) {
-            $this->ExclusterIds = $param["ExclusterIds"];
+        if (array_key_exists('ExclusterIds',$param) and $param['ExclusterIds'] !== null) {
+            $this->ExclusterIds = $param['ExclusterIds'];
         }
     }
 }

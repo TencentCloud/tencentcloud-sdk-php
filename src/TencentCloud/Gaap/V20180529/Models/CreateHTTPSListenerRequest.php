@@ -122,40 +122,40 @@ class CreateHTTPSListenerRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ListenerName",$param) and $param["ListenerName"] !== null) {
-            $this->ListenerName = $param["ListenerName"];
+        if (array_key_exists('ListenerName',$param) and $param['ListenerName'] !== null) {
+            $this->ListenerName = $param['ListenerName'];
         }
 
-        if (array_key_exists("Port",$param) and $param["Port"] !== null) {
-            $this->Port = $param["Port"];
+        if (array_key_exists('Port',$param) and $param['Port'] !== null) {
+            $this->Port = $param['Port'];
         }
 
-        if (array_key_exists("CertificateId",$param) and $param["CertificateId"] !== null) {
-            $this->CertificateId = $param["CertificateId"];
+        if (array_key_exists('CertificateId',$param) and $param['CertificateId'] !== null) {
+            $this->CertificateId = $param['CertificateId'];
         }
 
-        if (array_key_exists("ForwardProtocol",$param) and $param["ForwardProtocol"] !== null) {
-            $this->ForwardProtocol = $param["ForwardProtocol"];
+        if (array_key_exists('ForwardProtocol',$param) and $param['ForwardProtocol'] !== null) {
+            $this->ForwardProtocol = $param['ForwardProtocol'];
         }
 
-        if (array_key_exists("ProxyId",$param) and $param["ProxyId"] !== null) {
-            $this->ProxyId = $param["ProxyId"];
+        if (array_key_exists('ProxyId',$param) and $param['ProxyId'] !== null) {
+            $this->ProxyId = $param['ProxyId'];
         }
 
-        if (array_key_exists("AuthType",$param) and $param["AuthType"] !== null) {
-            $this->AuthType = $param["AuthType"];
+        if (array_key_exists('AuthType',$param) and $param['AuthType'] !== null) {
+            $this->AuthType = $param['AuthType'];
         }
 
-        if (array_key_exists("ClientCertificateId",$param) and $param["ClientCertificateId"] !== null) {
-            $this->ClientCertificateId = $param["ClientCertificateId"];
+        if (array_key_exists('ClientCertificateId',$param) and $param['ClientCertificateId'] !== null) {
+            $this->ClientCertificateId = $param['ClientCertificateId'];
         }
 
-        if (array_key_exists("PolyClientCertificateIds",$param) and $param["PolyClientCertificateIds"] !== null) {
-            $this->PolyClientCertificateIds = $param["PolyClientCertificateIds"];
+        if (array_key_exists('PolyClientCertificateIds',$param) and $param['PolyClientCertificateIds'] !== null) {
+            $this->PolyClientCertificateIds = $param['PolyClientCertificateIds'];
         }
 
-        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
-            $this->GroupId = $param["GroupId"];
+        if (array_key_exists('GroupId',$param) and $param['GroupId'] !== null) {
+            $this->GroupId = $param['GroupId'];
         }
     }
 }

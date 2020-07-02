@@ -70,20 +70,20 @@ class ResultSummary extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LogTime",$param) and $param["LogTime"] !== null) {
-            $this->LogTime = $param["LogTime"];
+        if (array_key_exists('LogTime',$param) and $param['LogTime'] !== null) {
+            $this->LogTime = $param['LogTime'];
         }
 
-        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
-            $this->TaskId = $param["TaskId"];
+        if (array_key_exists('TaskId',$param) and $param['TaskId'] !== null) {
+            $this->TaskId = $param['TaskId'];
         }
 
-        if (array_key_exists("AvailRatio",$param) and $param["AvailRatio"] !== null) {
-            $this->AvailRatio = $param["AvailRatio"];
+        if (array_key_exists('AvailRatio',$param) and $param['AvailRatio'] !== null) {
+            $this->AvailRatio = $param['AvailRatio'];
         }
 
-        if (array_key_exists("ReponseTime",$param) and $param["ReponseTime"] !== null) {
-            $this->ReponseTime = $param["ReponseTime"];
+        if (array_key_exists('ReponseTime',$param) and $param['ReponseTime'] !== null) {
+            $this->ReponseTime = $param['ReponseTime'];
         }
     }
 }

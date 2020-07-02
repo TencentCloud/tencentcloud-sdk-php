@@ -70,21 +70,21 @@ class ManageClsTopicDomainsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LogsetId",$param) and $param["LogsetId"] !== null) {
-            $this->LogsetId = $param["LogsetId"];
+        if (array_key_exists('LogsetId',$param) and $param['LogsetId'] !== null) {
+            $this->LogsetId = $param['LogsetId'];
         }
 
-        if (array_key_exists("TopicId",$param) and $param["TopicId"] !== null) {
-            $this->TopicId = $param["TopicId"];
+        if (array_key_exists('TopicId',$param) and $param['TopicId'] !== null) {
+            $this->TopicId = $param['TopicId'];
         }
 
-        if (array_key_exists("Channel",$param) and $param["Channel"] !== null) {
-            $this->Channel = $param["Channel"];
+        if (array_key_exists('Channel',$param) and $param['Channel'] !== null) {
+            $this->Channel = $param['Channel'];
         }
 
-        if (array_key_exists("DomainAreaConfigs",$param) and $param["DomainAreaConfigs"] !== null) {
+        if (array_key_exists('DomainAreaConfigs',$param) and $param['DomainAreaConfigs'] !== null) {
             $this->DomainAreaConfigs = [];
-            foreach ($param["DomainAreaConfigs"] as $key => $value){
+            foreach ($param['DomainAreaConfigs'] as $key => $value){
                 $obj = new DomainAreaConfig();
                 $obj->deserialize($value);
                 array_push($this->DomainAreaConfigs, $obj);

@@ -46,8 +46,8 @@ class DescribeShieldResultRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ItemId",$param) and $param["ItemId"] !== null) {
-            $this->ItemId = $param["ItemId"];
+        if (array_key_exists('ItemId',$param) and $param['ItemId'] !== null) {
+            $this->ItemId = $param['ItemId'];
         }
     }
 }

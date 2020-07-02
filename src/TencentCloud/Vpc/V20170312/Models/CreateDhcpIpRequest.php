@@ -70,20 +70,20 @@ class CreateDhcpIpRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
-            $this->VpcId = $param["VpcId"];
+        if (array_key_exists('VpcId',$param) and $param['VpcId'] !== null) {
+            $this->VpcId = $param['VpcId'];
         }
 
-        if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
-            $this->SubnetId = $param["SubnetId"];
+        if (array_key_exists('SubnetId',$param) and $param['SubnetId'] !== null) {
+            $this->SubnetId = $param['SubnetId'];
         }
 
-        if (array_key_exists("DhcpIpName",$param) and $param["DhcpIpName"] !== null) {
-            $this->DhcpIpName = $param["DhcpIpName"];
+        if (array_key_exists('DhcpIpName',$param) and $param['DhcpIpName'] !== null) {
+            $this->DhcpIpName = $param['DhcpIpName'];
         }
 
-        if (array_key_exists("SecondaryPrivateIpAddressCount",$param) and $param["SecondaryPrivateIpAddressCount"] !== null) {
-            $this->SecondaryPrivateIpAddressCount = $param["SecondaryPrivateIpAddressCount"];
+        if (array_key_exists('SecondaryPrivateIpAddressCount',$param) and $param['SecondaryPrivateIpAddressCount'] !== null) {
+            $this->SecondaryPrivateIpAddressCount = $param['SecondaryPrivateIpAddressCount'];
         }
     }
 }

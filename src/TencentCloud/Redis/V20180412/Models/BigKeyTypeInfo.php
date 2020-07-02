@@ -70,20 +70,20 @@ class BigKeyTypeInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists('Type',$param) and $param['Type'] !== null) {
+            $this->Type = $param['Type'];
         }
 
-        if (array_key_exists("Count",$param) and $param["Count"] !== null) {
-            $this->Count = $param["Count"];
+        if (array_key_exists('Count',$param) and $param['Count'] !== null) {
+            $this->Count = $param['Count'];
         }
 
-        if (array_key_exists("Size",$param) and $param["Size"] !== null) {
-            $this->Size = $param["Size"];
+        if (array_key_exists('Size',$param) and $param['Size'] !== null) {
+            $this->Size = $param['Size'];
         }
 
-        if (array_key_exists("Updatetime",$param) and $param["Updatetime"] !== null) {
-            $this->Updatetime = $param["Updatetime"];
+        if (array_key_exists('Updatetime',$param) and $param['Updatetime'] !== null) {
+            $this->Updatetime = $param['Updatetime'];
         }
     }
 }

@@ -54,12 +54,12 @@ class CallBackPhoneCode extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Nation",$param) and $param["Nation"] !== null) {
-            $this->Nation = $param["Nation"];
+        if (array_key_exists('Nation',$param) and $param['Nation'] !== null) {
+            $this->Nation = $param['Nation'];
         }
 
-        if (array_key_exists("Phone",$param) and $param["Phone"] !== null) {
-            $this->Phone = $param["Phone"];
+        if (array_key_exists('Phone',$param) and $param['Phone'] !== null) {
+            $this->Phone = $param['Phone'];
         }
     }
 }

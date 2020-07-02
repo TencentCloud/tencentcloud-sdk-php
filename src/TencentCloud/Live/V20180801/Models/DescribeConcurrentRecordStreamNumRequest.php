@@ -90,24 +90,24 @@ NormalLive：普通直播。
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LiveType",$param) and $param["LiveType"] !== null) {
-            $this->LiveType = $param["LiveType"];
+        if (array_key_exists('LiveType',$param) and $param['LiveType'] !== null) {
+            $this->LiveType = $param['LiveType'];
         }
 
-        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
-            $this->StartTime = $param["StartTime"];
+        if (array_key_exists('StartTime',$param) and $param['StartTime'] !== null) {
+            $this->StartTime = $param['StartTime'];
         }
 
-        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
-            $this->EndTime = $param["EndTime"];
+        if (array_key_exists('EndTime',$param) and $param['EndTime'] !== null) {
+            $this->EndTime = $param['EndTime'];
         }
 
-        if (array_key_exists("MainlandOrOversea",$param) and $param["MainlandOrOversea"] !== null) {
-            $this->MainlandOrOversea = $param["MainlandOrOversea"];
+        if (array_key_exists('MainlandOrOversea',$param) and $param['MainlandOrOversea'] !== null) {
+            $this->MainlandOrOversea = $param['MainlandOrOversea'];
         }
 
-        if (array_key_exists("PushDomains",$param) and $param["PushDomains"] !== null) {
-            $this->PushDomains = $param["PushDomains"];
+        if (array_key_exists('PushDomains',$param) and $param['PushDomains'] !== null) {
+            $this->PushDomains = $param['PushDomains'];
         }
     }
 }

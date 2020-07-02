@@ -54,17 +54,17 @@ class DescribeDevicesBindInfoResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LoadBalancerSet",$param) and $param["LoadBalancerSet"] !== null) {
+        if (array_key_exists('LoadBalancerSet',$param) and $param['LoadBalancerSet'] !== null) {
             $this->LoadBalancerSet = [];
-            foreach ($param["LoadBalancerSet"] as $key => $value){
+            foreach ($param['LoadBalancerSet'] as $key => $value){
                 $obj = new DevicesBindInfoLoadBalancer();
                 $obj->deserialize($value);
                 array_push($this->LoadBalancerSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

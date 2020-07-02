@@ -54,13 +54,13 @@ class ZoneTrafficInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Date",$param) and $param["Date"] !== null) {
-            $this->Date = $param["Date"];
+        if (array_key_exists('Date',$param) and $param['Date'] !== null) {
+            $this->Date = $param['Date'];
         }
 
-        if (array_key_exists("ZoneTrafficInfoDetailSet",$param) and $param["ZoneTrafficInfoDetailSet"] !== null) {
+        if (array_key_exists('ZoneTrafficInfoDetailSet',$param) and $param['ZoneTrafficInfoDetailSet'] !== null) {
             $this->ZoneTrafficInfoDetailSet = [];
-            foreach ($param["ZoneTrafficInfoDetailSet"] as $key => $value){
+            foreach ($param['ZoneTrafficInfoDetailSet'] as $key => $value){
                 $obj = new ZoneTrafficInfoDetail();
                 $obj->deserialize($value);
                 array_push($this->ZoneTrafficInfoDetailSet, $obj);

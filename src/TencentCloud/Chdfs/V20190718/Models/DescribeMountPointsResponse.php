@@ -54,17 +54,17 @@ class DescribeMountPointsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MountPoints",$param) and $param["MountPoints"] !== null) {
+        if (array_key_exists('MountPoints',$param) and $param['MountPoints'] !== null) {
             $this->MountPoints = [];
-            foreach ($param["MountPoints"] as $key => $value){
+            foreach ($param['MountPoints'] as $key => $value){
                 $obj = new MountPoint();
                 $obj->deserialize($value);
                 array_push($this->MountPoints, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

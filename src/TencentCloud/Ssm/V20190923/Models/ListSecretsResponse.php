@@ -62,21 +62,21 @@ class ListSecretsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("SecretMetadatas",$param) and $param["SecretMetadatas"] !== null) {
+        if (array_key_exists('SecretMetadatas',$param) and $param['SecretMetadatas'] !== null) {
             $this->SecretMetadatas = [];
-            foreach ($param["SecretMetadatas"] as $key => $value){
+            foreach ($param['SecretMetadatas'] as $key => $value){
                 $obj = new SecretMetadata();
                 $obj->deserialize($value);
                 array_push($this->SecretMetadatas, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

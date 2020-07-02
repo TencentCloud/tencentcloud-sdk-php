@@ -74,16 +74,16 @@ class MultiDiskMC extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Count",$param) and $param["Count"] !== null) {
-            $this->Count = $param["Count"];
+        if (array_key_exists('Count',$param) and $param['Count'] !== null) {
+            $this->Count = $param['Count'];
         }
 
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists('Type',$param) and $param['Type'] !== null) {
+            $this->Type = $param['Type'];
         }
 
-        if (array_key_exists("Volume",$param) and $param["Volume"] !== null) {
-            $this->Volume = $param["Volume"];
+        if (array_key_exists('Volume',$param) and $param['Volume'] !== null) {
+            $this->Volume = $param['Volume'];
         }
     }
 }

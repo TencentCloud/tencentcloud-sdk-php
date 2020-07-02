@@ -54,18 +54,18 @@ class CreateScanInstancesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AppInfos",$param) and $param["AppInfos"] !== null) {
+        if (array_key_exists('AppInfos',$param) and $param['AppInfos'] !== null) {
             $this->AppInfos = [];
-            foreach ($param["AppInfos"] as $key => $value){
+            foreach ($param['AppInfos'] as $key => $value){
                 $obj = new AppInfo();
                 $obj->deserialize($value);
                 array_push($this->AppInfos, $obj);
             }
         }
 
-        if (array_key_exists("ScanInfo",$param) and $param["ScanInfo"] !== null) {
+        if (array_key_exists('ScanInfo',$param) and $param['ScanInfo'] !== null) {
             $this->ScanInfo = new ScanInfo();
-            $this->ScanInfo->deserialize($param["ScanInfo"]);
+            $this->ScanInfo->deserialize($param['ScanInfo']);
         }
     }
 }

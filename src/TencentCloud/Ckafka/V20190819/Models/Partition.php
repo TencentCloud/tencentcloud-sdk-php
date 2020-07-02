@@ -46,8 +46,8 @@ class Partition extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PartitionId",$param) and $param["PartitionId"] !== null) {
-            $this->PartitionId = $param["PartitionId"];
+        if (array_key_exists('PartitionId',$param) and $param['PartitionId'] !== null) {
+            $this->PartitionId = $param['PartitionId'];
         }
     }
 }

@@ -74,20 +74,20 @@ class ProtocolPort extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Protocol",$param) and $param["Protocol"] !== null) {
-            $this->Protocol = $param["Protocol"];
+        if (array_key_exists('Protocol',$param) and $param['Protocol'] !== null) {
+            $this->Protocol = $param['Protocol'];
         }
 
-        if (array_key_exists("Port",$param) and $param["Port"] !== null) {
-            $this->Port = $param["Port"];
+        if (array_key_exists('Port',$param) and $param['Port'] !== null) {
+            $this->Port = $param['Port'];
         }
 
-        if (array_key_exists("TargetPort",$param) and $param["TargetPort"] !== null) {
-            $this->TargetPort = $param["TargetPort"];
+        if (array_key_exists('TargetPort',$param) and $param['TargetPort'] !== null) {
+            $this->TargetPort = $param['TargetPort'];
         }
 
-        if (array_key_exists("NodePort",$param) and $param["NodePort"] !== null) {
-            $this->NodePort = $param["NodePort"];
+        if (array_key_exists('NodePort',$param) and $param['NodePort'] !== null) {
+            $this->NodePort = $param['NodePort'];
         }
     }
 }

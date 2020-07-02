@@ -46,8 +46,8 @@ class DescribeOsInfoRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DeviceClassCode",$param) and $param["DeviceClassCode"] !== null) {
-            $this->DeviceClassCode = $param["DeviceClassCode"];
+        if (array_key_exists('DeviceClassCode',$param) and $param['DeviceClassCode'] !== null) {
+            $this->DeviceClassCode = $param['DeviceClassCode'];
         }
     }
 }

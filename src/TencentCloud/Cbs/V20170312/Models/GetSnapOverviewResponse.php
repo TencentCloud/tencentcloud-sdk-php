@@ -78,24 +78,24 @@ class GetSnapOverviewResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalSize",$param) and $param["TotalSize"] !== null) {
-            $this->TotalSize = $param["TotalSize"];
+        if (array_key_exists('TotalSize',$param) and $param['TotalSize'] !== null) {
+            $this->TotalSize = $param['TotalSize'];
         }
 
-        if (array_key_exists("RealTradeSize",$param) and $param["RealTradeSize"] !== null) {
-            $this->RealTradeSize = $param["RealTradeSize"];
+        if (array_key_exists('RealTradeSize',$param) and $param['RealTradeSize'] !== null) {
+            $this->RealTradeSize = $param['RealTradeSize'];
         }
 
-        if (array_key_exists("FreeQuota",$param) and $param["FreeQuota"] !== null) {
-            $this->FreeQuota = $param["FreeQuota"];
+        if (array_key_exists('FreeQuota',$param) and $param['FreeQuota'] !== null) {
+            $this->FreeQuota = $param['FreeQuota'];
         }
 
-        if (array_key_exists("TotalNums",$param) and $param["TotalNums"] !== null) {
-            $this->TotalNums = $param["TotalNums"];
+        if (array_key_exists('TotalNums',$param) and $param['TotalNums'] !== null) {
+            $this->TotalNums = $param['TotalNums'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

@@ -62,21 +62,21 @@ class SubmitOpenClassTaskResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ImageResults",$param) and $param["ImageResults"] !== null) {
+        if (array_key_exists('ImageResults',$param) and $param['ImageResults'] !== null) {
             $this->ImageResults = [];
-            foreach ($param["ImageResults"] as $key => $value){
+            foreach ($param['ImageResults'] as $key => $value){
                 $obj = new ImageTaskResult();
                 $obj->deserialize($value);
                 array_push($this->ImageResults, $obj);
             }
         }
 
-        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
-            $this->TaskId = $param["TaskId"];
+        if (array_key_exists('TaskId',$param) and $param['TaskId'] !== null) {
+            $this->TaskId = $param['TaskId'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

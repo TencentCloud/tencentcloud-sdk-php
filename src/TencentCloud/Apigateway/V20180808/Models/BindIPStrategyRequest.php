@@ -70,20 +70,20 @@ class BindIPStrategyRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ServiceId",$param) and $param["ServiceId"] !== null) {
-            $this->ServiceId = $param["ServiceId"];
+        if (array_key_exists('ServiceId',$param) and $param['ServiceId'] !== null) {
+            $this->ServiceId = $param['ServiceId'];
         }
 
-        if (array_key_exists("StrategyId",$param) and $param["StrategyId"] !== null) {
-            $this->StrategyId = $param["StrategyId"];
+        if (array_key_exists('StrategyId',$param) and $param['StrategyId'] !== null) {
+            $this->StrategyId = $param['StrategyId'];
         }
 
-        if (array_key_exists("EnvironmentName",$param) and $param["EnvironmentName"] !== null) {
-            $this->EnvironmentName = $param["EnvironmentName"];
+        if (array_key_exists('EnvironmentName',$param) and $param['EnvironmentName'] !== null) {
+            $this->EnvironmentName = $param['EnvironmentName'];
         }
 
-        if (array_key_exists("BindApiIds",$param) and $param["BindApiIds"] !== null) {
-            $this->BindApiIds = $param["BindApiIds"];
+        if (array_key_exists('BindApiIds',$param) and $param['BindApiIds'] !== null) {
+            $this->BindApiIds = $param['BindApiIds'];
         }
     }
 }

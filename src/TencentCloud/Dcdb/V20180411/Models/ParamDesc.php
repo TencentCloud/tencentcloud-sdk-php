@@ -90,29 +90,29 @@ class ParamDesc extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Param",$param) and $param["Param"] !== null) {
-            $this->Param = $param["Param"];
+        if (array_key_exists('Param',$param) and $param['Param'] !== null) {
+            $this->Param = $param['Param'];
         }
 
-        if (array_key_exists("Value",$param) and $param["Value"] !== null) {
-            $this->Value = $param["Value"];
+        if (array_key_exists('Value',$param) and $param['Value'] !== null) {
+            $this->Value = $param['Value'];
         }
 
-        if (array_key_exists("SetValue",$param) and $param["SetValue"] !== null) {
-            $this->SetValue = $param["SetValue"];
+        if (array_key_exists('SetValue',$param) and $param['SetValue'] !== null) {
+            $this->SetValue = $param['SetValue'];
         }
 
-        if (array_key_exists("Default",$param) and $param["Default"] !== null) {
-            $this->Default = $param["Default"];
+        if (array_key_exists('Default',$param) and $param['Default'] !== null) {
+            $this->Default = $param['Default'];
         }
 
-        if (array_key_exists("Constraint",$param) and $param["Constraint"] !== null) {
+        if (array_key_exists('Constraint',$param) and $param['Constraint'] !== null) {
             $this->Constraint = new ParamConstraint();
-            $this->Constraint->deserialize($param["Constraint"]);
+            $this->Constraint->deserialize($param['Constraint']);
         }
 
-        if (array_key_exists("HaveSetValue",$param) and $param["HaveSetValue"] !== null) {
-            $this->HaveSetValue = $param["HaveSetValue"];
+        if (array_key_exists('HaveSetValue',$param) and $param['HaveSetValue'] !== null) {
+            $this->HaveSetValue = $param['HaveSetValue'];
         }
     }
 }

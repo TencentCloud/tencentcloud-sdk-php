@@ -74,20 +74,20 @@ class BankCardVerificationRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("IdCard",$param) and $param["IdCard"] !== null) {
-            $this->IdCard = $param["IdCard"];
+        if (array_key_exists('IdCard',$param) and $param['IdCard'] !== null) {
+            $this->IdCard = $param['IdCard'];
         }
 
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("BankCard",$param) and $param["BankCard"] !== null) {
-            $this->BankCard = $param["BankCard"];
+        if (array_key_exists('BankCard',$param) and $param['BankCard'] !== null) {
+            $this->BankCard = $param['BankCard'];
         }
 
-        if (array_key_exists("CertType",$param) and $param["CertType"] !== null) {
-            $this->CertType = $param["CertType"];
+        if (array_key_exists('CertType',$param) and $param['CertType'] !== null) {
+            $this->CertType = $param['CertType'];
         }
     }
 }

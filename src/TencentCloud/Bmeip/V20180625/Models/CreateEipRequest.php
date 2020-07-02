@@ -94,32 +94,32 @@ class CreateEipRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("GoodsNum",$param) and $param["GoodsNum"] !== null) {
-            $this->GoodsNum = $param["GoodsNum"];
+        if (array_key_exists('GoodsNum',$param) and $param['GoodsNum'] !== null) {
+            $this->GoodsNum = $param['GoodsNum'];
         }
 
-        if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {
-            $this->PayMode = $param["PayMode"];
+        if (array_key_exists('PayMode',$param) and $param['PayMode'] !== null) {
+            $this->PayMode = $param['PayMode'];
         }
 
-        if (array_key_exists("Bandwidth",$param) and $param["Bandwidth"] !== null) {
-            $this->Bandwidth = $param["Bandwidth"];
+        if (array_key_exists('Bandwidth',$param) and $param['Bandwidth'] !== null) {
+            $this->Bandwidth = $param['Bandwidth'];
         }
 
-        if (array_key_exists("SetType",$param) and $param["SetType"] !== null) {
-            $this->SetType = $param["SetType"];
+        if (array_key_exists('SetType',$param) and $param['SetType'] !== null) {
+            $this->SetType = $param['SetType'];
         }
 
-        if (array_key_exists("Exclusive",$param) and $param["Exclusive"] !== null) {
-            $this->Exclusive = $param["Exclusive"];
+        if (array_key_exists('Exclusive',$param) and $param['Exclusive'] !== null) {
+            $this->Exclusive = $param['Exclusive'];
         }
 
-        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
-            $this->VpcId = $param["VpcId"];
+        if (array_key_exists('VpcId',$param) and $param['VpcId'] !== null) {
+            $this->VpcId = $param['VpcId'];
         }
 
-        if (array_key_exists("IpList",$param) and $param["IpList"] !== null) {
-            $this->IpList = $param["IpList"];
+        if (array_key_exists('IpList',$param) and $param['IpList'] !== null) {
+            $this->IpList = $param['IpList'];
         }
     }
 }

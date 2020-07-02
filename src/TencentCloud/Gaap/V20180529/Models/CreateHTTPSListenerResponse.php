@@ -54,12 +54,12 @@ class CreateHTTPSListenerResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ListenerId",$param) and $param["ListenerId"] !== null) {
-            $this->ListenerId = $param["ListenerId"];
+        if (array_key_exists('ListenerId',$param) and $param['ListenerId'] !== null) {
+            $this->ListenerId = $param['ListenerId'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

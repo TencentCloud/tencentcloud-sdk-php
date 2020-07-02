@@ -62,21 +62,21 @@ class DescribeHostsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("HostSet",$param) and $param["HostSet"] !== null) {
+        if (array_key_exists('HostSet',$param) and $param['HostSet'] !== null) {
             $this->HostSet = [];
-            foreach ($param["HostSet"] as $key => $value){
+            foreach ($param['HostSet'] as $key => $value){
                 $obj = new HostItem();
                 $obj->deserialize($value);
                 array_push($this->HostSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

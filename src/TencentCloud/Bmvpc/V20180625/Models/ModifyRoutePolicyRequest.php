@@ -54,13 +54,13 @@ class ModifyRoutePolicyRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RouteTableId",$param) and $param["RouteTableId"] !== null) {
-            $this->RouteTableId = $param["RouteTableId"];
+        if (array_key_exists('RouteTableId',$param) and $param['RouteTableId'] !== null) {
+            $this->RouteTableId = $param['RouteTableId'];
         }
 
-        if (array_key_exists("RoutePolicy",$param) and $param["RoutePolicy"] !== null) {
+        if (array_key_exists('RoutePolicy',$param) and $param['RoutePolicy'] !== null) {
             $this->RoutePolicy = new RoutePolicy();
-            $this->RoutePolicy->deserialize($param["RoutePolicy"]);
+            $this->RoutePolicy->deserialize($param['RoutePolicy']);
         }
     }
 }

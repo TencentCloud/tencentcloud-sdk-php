@@ -58,12 +58,12 @@ class DeviceFingerprint extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Identity",$param) and $param["Identity"] !== null) {
-            $this->Identity = $param["Identity"];
+        if (array_key_exists('Identity',$param) and $param['Identity'] !== null) {
+            $this->Identity = $param['Identity'];
         }
 
-        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
-            $this->Description = $param["Description"];
+        if (array_key_exists('Description',$param) and $param['Description'] !== null) {
+            $this->Description = $param['Description'];
         }
     }
 }

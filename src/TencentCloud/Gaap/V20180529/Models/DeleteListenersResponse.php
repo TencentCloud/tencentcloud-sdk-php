@@ -70,20 +70,20 @@ class DeleteListenersResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("OperationFailedListenerSet",$param) and $param["OperationFailedListenerSet"] !== null) {
-            $this->OperationFailedListenerSet = $param["OperationFailedListenerSet"];
+        if (array_key_exists('OperationFailedListenerSet',$param) and $param['OperationFailedListenerSet'] !== null) {
+            $this->OperationFailedListenerSet = $param['OperationFailedListenerSet'];
         }
 
-        if (array_key_exists("OperationSucceedListenerSet",$param) and $param["OperationSucceedListenerSet"] !== null) {
-            $this->OperationSucceedListenerSet = $param["OperationSucceedListenerSet"];
+        if (array_key_exists('OperationSucceedListenerSet',$param) and $param['OperationSucceedListenerSet'] !== null) {
+            $this->OperationSucceedListenerSet = $param['OperationSucceedListenerSet'];
         }
 
-        if (array_key_exists("InvalidStatusListenerSet",$param) and $param["InvalidStatusListenerSet"] !== null) {
-            $this->InvalidStatusListenerSet = $param["InvalidStatusListenerSet"];
+        if (array_key_exists('InvalidStatusListenerSet',$param) and $param['InvalidStatusListenerSet'] !== null) {
+            $this->InvalidStatusListenerSet = $param['InvalidStatusListenerSet'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

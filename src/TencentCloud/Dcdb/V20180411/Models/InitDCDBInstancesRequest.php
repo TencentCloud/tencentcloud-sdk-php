@@ -54,13 +54,13 @@ class InitDCDBInstancesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceIds",$param) and $param["InstanceIds"] !== null) {
-            $this->InstanceIds = $param["InstanceIds"];
+        if (array_key_exists('InstanceIds',$param) and $param['InstanceIds'] !== null) {
+            $this->InstanceIds = $param['InstanceIds'];
         }
 
-        if (array_key_exists("Params",$param) and $param["Params"] !== null) {
+        if (array_key_exists('Params',$param) and $param['Params'] !== null) {
             $this->Params = [];
-            foreach ($param["Params"] as $key => $value){
+            foreach ($param['Params'] as $key => $value){
                 $obj = new DBParamValue();
                 $obj->deserialize($value);
                 array_push($this->Params, $obj);

@@ -46,8 +46,8 @@ class RiskDetail extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RiskCode",$param) and $param["RiskCode"] !== null) {
-            $this->RiskCode = $param["RiskCode"];
+        if (array_key_exists('RiskCode',$param) and $param['RiskCode'] !== null) {
+            $this->RiskCode = $param['RiskCode'];
         }
     }
 }

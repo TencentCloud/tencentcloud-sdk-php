@@ -62,16 +62,16 @@ class ModifyInstancesAttributeRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceIds",$param) and $param["InstanceIds"] !== null) {
-            $this->InstanceIds = $param["InstanceIds"];
+        if (array_key_exists('InstanceIds',$param) and $param['InstanceIds'] !== null) {
+            $this->InstanceIds = $param['InstanceIds'];
         }
 
-        if (array_key_exists("InstanceName",$param) and $param["InstanceName"] !== null) {
-            $this->InstanceName = $param["InstanceName"];
+        if (array_key_exists('InstanceName',$param) and $param['InstanceName'] !== null) {
+            $this->InstanceName = $param['InstanceName'];
         }
 
-        if (array_key_exists("SecurityGroups",$param) and $param["SecurityGroups"] !== null) {
-            $this->SecurityGroups = $param["SecurityGroups"];
+        if (array_key_exists('SecurityGroups',$param) and $param['SecurityGroups'] !== null) {
+            $this->SecurityGroups = $param['SecurityGroups'];
         }
     }
 }

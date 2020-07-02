@@ -86,20 +86,20 @@ class DeviceData extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DeviceCert",$param) and $param["DeviceCert"] !== null) {
-            $this->DeviceCert = $param["DeviceCert"];
+        if (array_key_exists('DeviceCert',$param) and $param['DeviceCert'] !== null) {
+            $this->DeviceCert = $param['DeviceCert'];
         }
 
-        if (array_key_exists("DeviceName",$param) and $param["DeviceName"] !== null) {
-            $this->DeviceName = $param["DeviceName"];
+        if (array_key_exists('DeviceName',$param) and $param['DeviceName'] !== null) {
+            $this->DeviceName = $param['DeviceName'];
         }
 
-        if (array_key_exists("DevicePrivateKey",$param) and $param["DevicePrivateKey"] !== null) {
-            $this->DevicePrivateKey = $param["DevicePrivateKey"];
+        if (array_key_exists('DevicePrivateKey',$param) and $param['DevicePrivateKey'] !== null) {
+            $this->DevicePrivateKey = $param['DevicePrivateKey'];
         }
 
-        if (array_key_exists("DevicePsk",$param) and $param["DevicePsk"] !== null) {
-            $this->DevicePsk = $param["DevicePsk"];
+        if (array_key_exists('DevicePsk',$param) and $param['DevicePsk'] !== null) {
+            $this->DevicePsk = $param['DevicePsk'];
         }
     }
 }

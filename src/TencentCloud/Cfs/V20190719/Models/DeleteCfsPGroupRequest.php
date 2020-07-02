@@ -46,8 +46,8 @@ class DeleteCfsPGroupRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PGroupId",$param) and $param["PGroupId"] !== null) {
-            $this->PGroupId = $param["PGroupId"];
+        if (array_key_exists('PGroupId',$param) and $param['PGroupId'] !== null) {
+            $this->PGroupId = $param['PGroupId'];
         }
     }
 }

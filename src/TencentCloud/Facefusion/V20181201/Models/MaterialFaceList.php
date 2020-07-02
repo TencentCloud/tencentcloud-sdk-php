@@ -54,13 +54,13 @@ class MaterialFaceList extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FaceId",$param) and $param["FaceId"] !== null) {
-            $this->FaceId = $param["FaceId"];
+        if (array_key_exists('FaceId',$param) and $param['FaceId'] !== null) {
+            $this->FaceId = $param['FaceId'];
         }
 
-        if (array_key_exists("FaceInfo",$param) and $param["FaceInfo"] !== null) {
+        if (array_key_exists('FaceInfo',$param) and $param['FaceInfo'] !== null) {
             $this->FaceInfo = new FaceInfo();
-            $this->FaceInfo->deserialize($param["FaceInfo"]);
+            $this->FaceInfo->deserialize($param['FaceInfo']);
         }
     }
 }

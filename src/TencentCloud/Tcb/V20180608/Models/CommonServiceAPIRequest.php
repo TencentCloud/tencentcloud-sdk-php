@@ -54,12 +54,12 @@ class CommonServiceAPIRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Service",$param) and $param["Service"] !== null) {
-            $this->Service = $param["Service"];
+        if (array_key_exists('Service',$param) and $param['Service'] !== null) {
+            $this->Service = $param['Service'];
         }
 
-        if (array_key_exists("JSONData",$param) and $param["JSONData"] !== null) {
-            $this->JSONData = $param["JSONData"];
+        if (array_key_exists('JSONData',$param) and $param['JSONData'] !== null) {
+            $this->JSONData = $param['JSONData'];
         }
     }
 }

@@ -54,17 +54,17 @@ class DescribeCountryAreaMappingResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CountryAreaMappingList",$param) and $param["CountryAreaMappingList"] !== null) {
+        if (array_key_exists('CountryAreaMappingList',$param) and $param['CountryAreaMappingList'] !== null) {
             $this->CountryAreaMappingList = [];
-            foreach ($param["CountryAreaMappingList"] as $key => $value){
+            foreach ($param['CountryAreaMappingList'] as $key => $value){
                 $obj = new CountryAreaMap();
                 $obj->deserialize($value);
                 array_push($this->CountryAreaMappingList, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

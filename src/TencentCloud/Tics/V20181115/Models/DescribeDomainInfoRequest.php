@@ -54,12 +54,12 @@ class DescribeDomainInfoRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Key",$param) and $param["Key"] !== null) {
-            $this->Key = $param["Key"];
+        if (array_key_exists('Key',$param) and $param['Key'] !== null) {
+            $this->Key = $param['Key'];
         }
 
-        if (array_key_exists("Option",$param) and $param["Option"] !== null) {
-            $this->Option = $param["Option"];
+        if (array_key_exists('Option',$param) and $param['Option'] !== null) {
+            $this->Option = $param['Option'];
         }
     }
 }

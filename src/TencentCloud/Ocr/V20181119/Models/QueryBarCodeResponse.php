@@ -62,21 +62,21 @@ class QueryBarCodeResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BarCode",$param) and $param["BarCode"] !== null) {
-            $this->BarCode = $param["BarCode"];
+        if (array_key_exists('BarCode',$param) and $param['BarCode'] !== null) {
+            $this->BarCode = $param['BarCode'];
         }
 
-        if (array_key_exists("ProductDataRecords",$param) and $param["ProductDataRecords"] !== null) {
+        if (array_key_exists('ProductDataRecords',$param) and $param['ProductDataRecords'] !== null) {
             $this->ProductDataRecords = [];
-            foreach ($param["ProductDataRecords"] as $key => $value){
+            foreach ($param['ProductDataRecords'] as $key => $value){
                 $obj = new ProductDataRecord();
                 $obj->deserialize($value);
                 array_push($this->ProductDataRecords, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

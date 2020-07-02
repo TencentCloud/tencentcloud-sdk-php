@@ -70,20 +70,20 @@ class DeliverTidNotifyResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RemaindCount",$param) and $param["RemaindCount"] !== null) {
-            $this->RemaindCount = $param["RemaindCount"];
+        if (array_key_exists('RemaindCount',$param) and $param['RemaindCount'] !== null) {
+            $this->RemaindCount = $param['RemaindCount'];
         }
 
-        if (array_key_exists("Tid",$param) and $param["Tid"] !== null) {
-            $this->Tid = $param["Tid"];
+        if (array_key_exists('Tid',$param) and $param['Tid'] !== null) {
+            $this->Tid = $param['Tid'];
         }
 
-        if (array_key_exists("ProductKey",$param) and $param["ProductKey"] !== null) {
-            $this->ProductKey = $param["ProductKey"];
+        if (array_key_exists('ProductKey',$param) and $param['ProductKey'] !== null) {
+            $this->ProductKey = $param['ProductKey'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

@@ -142,45 +142,45 @@ class PullUploadTask extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
-            $this->TaskId = $param["TaskId"];
+        if (array_key_exists('TaskId',$param) and $param['TaskId'] !== null) {
+            $this->TaskId = $param['TaskId'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("ErrCode",$param) and $param["ErrCode"] !== null) {
-            $this->ErrCode = $param["ErrCode"];
+        if (array_key_exists('ErrCode',$param) and $param['ErrCode'] !== null) {
+            $this->ErrCode = $param['ErrCode'];
         }
 
-        if (array_key_exists("Message",$param) and $param["Message"] !== null) {
-            $this->Message = $param["Message"];
+        if (array_key_exists('Message',$param) and $param['Message'] !== null) {
+            $this->Message = $param['Message'];
         }
 
-        if (array_key_exists("FileId",$param) and $param["FileId"] !== null) {
-            $this->FileId = $param["FileId"];
+        if (array_key_exists('FileId',$param) and $param['FileId'] !== null) {
+            $this->FileId = $param['FileId'];
         }
 
-        if (array_key_exists("MediaBasicInfo",$param) and $param["MediaBasicInfo"] !== null) {
+        if (array_key_exists('MediaBasicInfo',$param) and $param['MediaBasicInfo'] !== null) {
             $this->MediaBasicInfo = new MediaBasicInfo();
-            $this->MediaBasicInfo->deserialize($param["MediaBasicInfo"]);
+            $this->MediaBasicInfo->deserialize($param['MediaBasicInfo']);
         }
 
-        if (array_key_exists("FileUrl",$param) and $param["FileUrl"] !== null) {
-            $this->FileUrl = $param["FileUrl"];
+        if (array_key_exists('FileUrl',$param) and $param['FileUrl'] !== null) {
+            $this->FileUrl = $param['FileUrl'];
         }
 
-        if (array_key_exists("ProcedureTaskId",$param) and $param["ProcedureTaskId"] !== null) {
-            $this->ProcedureTaskId = $param["ProcedureTaskId"];
+        if (array_key_exists('ProcedureTaskId',$param) and $param['ProcedureTaskId'] !== null) {
+            $this->ProcedureTaskId = $param['ProcedureTaskId'];
         }
 
-        if (array_key_exists("SessionContext",$param) and $param["SessionContext"] !== null) {
-            $this->SessionContext = $param["SessionContext"];
+        if (array_key_exists('SessionContext',$param) and $param['SessionContext'] !== null) {
+            $this->SessionContext = $param['SessionContext'];
         }
 
-        if (array_key_exists("SessionId",$param) and $param["SessionId"] !== null) {
-            $this->SessionId = $param["SessionId"];
+        if (array_key_exists('SessionId',$param) and $param['SessionId'] !== null) {
+            $this->SessionId = $param['SessionId'];
         }
     }
 }

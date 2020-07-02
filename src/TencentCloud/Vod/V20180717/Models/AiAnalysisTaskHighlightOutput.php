@@ -46,9 +46,9 @@ class AiAnalysisTaskHighlightOutput extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("HighlightSet",$param) and $param["HighlightSet"] !== null) {
+        if (array_key_exists('HighlightSet',$param) and $param['HighlightSet'] !== null) {
             $this->HighlightSet = [];
-            foreach ($param["HighlightSet"] as $key => $value){
+            foreach ($param['HighlightSet'] as $key => $value){
                 $obj = new MediaAiAnalysisHighlightItem();
                 $obj->deserialize($value);
                 array_push($this->HighlightSet, $obj);

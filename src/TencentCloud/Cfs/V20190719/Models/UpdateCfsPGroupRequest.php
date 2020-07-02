@@ -62,16 +62,16 @@ class UpdateCfsPGroupRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PGroupId",$param) and $param["PGroupId"] !== null) {
-            $this->PGroupId = $param["PGroupId"];
+        if (array_key_exists('PGroupId',$param) and $param['PGroupId'] !== null) {
+            $this->PGroupId = $param['PGroupId'];
         }
 
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("DescInfo",$param) and $param["DescInfo"] !== null) {
-            $this->DescInfo = $param["DescInfo"];
+        if (array_key_exists('DescInfo',$param) and $param['DescInfo'] !== null) {
+            $this->DescInfo = $param['DescInfo'];
         }
     }
 }

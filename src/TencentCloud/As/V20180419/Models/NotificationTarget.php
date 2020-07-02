@@ -70,16 +70,16 @@ class NotificationTarget extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TargetType",$param) and $param["TargetType"] !== null) {
-            $this->TargetType = $param["TargetType"];
+        if (array_key_exists('TargetType',$param) and $param['TargetType'] !== null) {
+            $this->TargetType = $param['TargetType'];
         }
 
-        if (array_key_exists("QueueName",$param) and $param["QueueName"] !== null) {
-            $this->QueueName = $param["QueueName"];
+        if (array_key_exists('QueueName',$param) and $param['QueueName'] !== null) {
+            $this->QueueName = $param['QueueName'];
         }
 
-        if (array_key_exists("TopicName",$param) and $param["TopicName"] !== null) {
-            $this->TopicName = $param["TopicName"];
+        if (array_key_exists('TopicName',$param) and $param['TopicName'] !== null) {
+            $this->TopicName = $param['TopicName'];
         }
     }
 }

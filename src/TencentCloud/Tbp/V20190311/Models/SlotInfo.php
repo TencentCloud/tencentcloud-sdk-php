@@ -62,12 +62,12 @@ class SlotInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SlotName",$param) and $param["SlotName"] !== null) {
-            $this->SlotName = $param["SlotName"];
+        if (array_key_exists('SlotName',$param) and $param['SlotName'] !== null) {
+            $this->SlotName = $param['SlotName'];
         }
 
-        if (array_key_exists("SlotValue",$param) and $param["SlotValue"] !== null) {
-            $this->SlotValue = $param["SlotValue"];
+        if (array_key_exists('SlotValue',$param) and $param['SlotValue'] !== null) {
+            $this->SlotValue = $param['SlotValue'];
         }
     }
 }

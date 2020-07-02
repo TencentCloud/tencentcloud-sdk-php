@@ -90,34 +90,34 @@ class DescribeRealServersRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
-            $this->ProjectId = $param["ProjectId"];
+        if (array_key_exists('ProjectId',$param) and $param['ProjectId'] !== null) {
+            $this->ProjectId = $param['ProjectId'];
         }
 
-        if (array_key_exists("SearchValue",$param) and $param["SearchValue"] !== null) {
-            $this->SearchValue = $param["SearchValue"];
+        if (array_key_exists('SearchValue',$param) and $param['SearchValue'] !== null) {
+            $this->SearchValue = $param['SearchValue'];
         }
 
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
+        if (array_key_exists('Offset',$param) and $param['Offset'] !== null) {
+            $this->Offset = $param['Offset'];
         }
 
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
+        if (array_key_exists('Limit',$param) and $param['Limit'] !== null) {
+            $this->Limit = $param['Limit'];
         }
 
-        if (array_key_exists("TagSet",$param) and $param["TagSet"] !== null) {
+        if (array_key_exists('TagSet',$param) and $param['TagSet'] !== null) {
             $this->TagSet = [];
-            foreach ($param["TagSet"] as $key => $value){
+            foreach ($param['TagSet'] as $key => $value){
                 $obj = new TagPair();
                 $obj->deserialize($value);
                 array_push($this->TagSet, $obj);
             }
         }
 
-        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+        if (array_key_exists('Filters',$param) and $param['Filters'] !== null) {
             $this->Filters = [];
-            foreach ($param["Filters"] as $key => $value){
+            foreach ($param['Filters'] as $key => $value){
                 $obj = new Filter();
                 $obj->deserialize($value);
                 array_push($this->Filters, $obj);

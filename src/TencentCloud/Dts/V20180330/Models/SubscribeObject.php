@@ -74,16 +74,16 @@ class SubscribeObject extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ObjectsType",$param) and $param["ObjectsType"] !== null) {
-            $this->ObjectsType = $param["ObjectsType"];
+        if (array_key_exists('ObjectsType',$param) and $param['ObjectsType'] !== null) {
+            $this->ObjectsType = $param['ObjectsType'];
         }
 
-        if (array_key_exists("DatabaseName",$param) and $param["DatabaseName"] !== null) {
-            $this->DatabaseName = $param["DatabaseName"];
+        if (array_key_exists('DatabaseName',$param) and $param['DatabaseName'] !== null) {
+            $this->DatabaseName = $param['DatabaseName'];
         }
 
-        if (array_key_exists("TableNames",$param) and $param["TableNames"] !== null) {
-            $this->TableNames = $param["TableNames"];
+        if (array_key_exists('TableNames',$param) and $param['TableNames'] !== null) {
+            $this->TableNames = $param['TableNames'];
         }
     }
 }

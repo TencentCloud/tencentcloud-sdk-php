@@ -78,24 +78,24 @@ class DescribeAgentClientGradeResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AuditStatus",$param) and $param["AuditStatus"] !== null) {
-            $this->AuditStatus = $param["AuditStatus"];
+        if (array_key_exists('AuditStatus',$param) and $param['AuditStatus'] !== null) {
+            $this->AuditStatus = $param['AuditStatus'];
         }
 
-        if (array_key_exists("AuthState",$param) and $param["AuthState"] !== null) {
-            $this->AuthState = $param["AuthState"];
+        if (array_key_exists('AuthState',$param) and $param['AuthState'] !== null) {
+            $this->AuthState = $param['AuthState'];
         }
 
-        if (array_key_exists("ClientGrade",$param) and $param["ClientGrade"] !== null) {
-            $this->ClientGrade = $param["ClientGrade"];
+        if (array_key_exists('ClientGrade',$param) and $param['ClientGrade'] !== null) {
+            $this->ClientGrade = $param['ClientGrade'];
         }
 
-        if (array_key_exists("ClientType",$param) and $param["ClientType"] !== null) {
-            $this->ClientType = $param["ClientType"];
+        if (array_key_exists('ClientType',$param) and $param['ClientType'] !== null) {
+            $this->ClientType = $param['ClientType'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

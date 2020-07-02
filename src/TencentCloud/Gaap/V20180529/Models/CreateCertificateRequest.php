@@ -98,20 +98,20 @@ class CreateCertificateRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CertificateType",$param) and $param["CertificateType"] !== null) {
-            $this->CertificateType = $param["CertificateType"];
+        if (array_key_exists('CertificateType',$param) and $param['CertificateType'] !== null) {
+            $this->CertificateType = $param['CertificateType'];
         }
 
-        if (array_key_exists("CertificateContent",$param) and $param["CertificateContent"] !== null) {
-            $this->CertificateContent = $param["CertificateContent"];
+        if (array_key_exists('CertificateContent',$param) and $param['CertificateContent'] !== null) {
+            $this->CertificateContent = $param['CertificateContent'];
         }
 
-        if (array_key_exists("CertificateAlias",$param) and $param["CertificateAlias"] !== null) {
-            $this->CertificateAlias = $param["CertificateAlias"];
+        if (array_key_exists('CertificateAlias',$param) and $param['CertificateAlias'] !== null) {
+            $this->CertificateAlias = $param['CertificateAlias'];
         }
 
-        if (array_key_exists("CertificateKey",$param) and $param["CertificateKey"] !== null) {
-            $this->CertificateKey = $param["CertificateKey"];
+        if (array_key_exists('CertificateKey',$param) and $param['CertificateKey'] !== null) {
+            $this->CertificateKey = $param['CertificateKey'];
         }
     }
 }

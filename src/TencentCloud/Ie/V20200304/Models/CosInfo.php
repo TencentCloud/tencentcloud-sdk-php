@@ -78,21 +78,21 @@ class CosInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Region",$param) and $param["Region"] !== null) {
-            $this->Region = $param["Region"];
+        if (array_key_exists('Region',$param) and $param['Region'] !== null) {
+            $this->Region = $param['Region'];
         }
 
-        if (array_key_exists("Bucket",$param) and $param["Bucket"] !== null) {
-            $this->Bucket = $param["Bucket"];
+        if (array_key_exists('Bucket',$param) and $param['Bucket'] !== null) {
+            $this->Bucket = $param['Bucket'];
         }
 
-        if (array_key_exists("Path",$param) and $param["Path"] !== null) {
-            $this->Path = $param["Path"];
+        if (array_key_exists('Path',$param) and $param['Path'] !== null) {
+            $this->Path = $param['Path'];
         }
 
-        if (array_key_exists("CosAuthMode",$param) and $param["CosAuthMode"] !== null) {
+        if (array_key_exists('CosAuthMode',$param) and $param['CosAuthMode'] !== null) {
             $this->CosAuthMode = new CosAuthMode();
-            $this->CosAuthMode->deserialize($param["CosAuthMode"]);
+            $this->CosAuthMode->deserialize($param['CosAuthMode']);
         }
     }
 }

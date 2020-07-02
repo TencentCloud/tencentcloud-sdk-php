@@ -74,20 +74,20 @@ Values:Y , N(default)
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ItemId",$param) and $param["ItemId"] !== null) {
-            $this->ItemId = $param["ItemId"];
+        if (array_key_exists('ItemId',$param) and $param['ItemId'] !== null) {
+            $this->ItemId = $param['ItemId'];
         }
 
-        if (array_key_exists("IdentityId",$param) and $param["IdentityId"] !== null) {
-            $this->IdentityId = $param["IdentityId"];
+        if (array_key_exists('IdentityId',$param) and $param['IdentityId'] !== null) {
+            $this->IdentityId = $param['IdentityId'];
         }
 
-        if (array_key_exists("SubItemType",$param) and $param["SubItemType"] !== null) {
-            $this->SubItemType = $param["SubItemType"];
+        if (array_key_exists('SubItemType',$param) and $param['SubItemType'] !== null) {
+            $this->SubItemType = $param['SubItemType'];
         }
 
-        if (array_key_exists("Ssl",$param) and $param["Ssl"] !== null) {
-            $this->Ssl = $param["Ssl"];
+        if (array_key_exists('Ssl',$param) and $param['Ssl'] !== null) {
+            $this->Ssl = $param['Ssl'];
         }
     }
 }

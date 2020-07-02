@@ -66,21 +66,21 @@ class DescribeVpcsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("VpcSet",$param) and $param["VpcSet"] !== null) {
+        if (array_key_exists('VpcSet',$param) and $param['VpcSet'] !== null) {
             $this->VpcSet = [];
-            foreach ($param["VpcSet"] as $key => $value){
+            foreach ($param['VpcSet'] as $key => $value){
                 $obj = new VpcInfo();
                 $obj->deserialize($value);
                 array_push($this->VpcSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

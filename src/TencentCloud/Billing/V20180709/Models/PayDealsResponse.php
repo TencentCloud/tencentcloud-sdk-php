@@ -70,20 +70,20 @@ class PayDealsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("OrderIds",$param) and $param["OrderIds"] !== null) {
-            $this->OrderIds = $param["OrderIds"];
+        if (array_key_exists('OrderIds',$param) and $param['OrderIds'] !== null) {
+            $this->OrderIds = $param['OrderIds'];
         }
 
-        if (array_key_exists("ResourceIds",$param) and $param["ResourceIds"] !== null) {
-            $this->ResourceIds = $param["ResourceIds"];
+        if (array_key_exists('ResourceIds',$param) and $param['ResourceIds'] !== null) {
+            $this->ResourceIds = $param['ResourceIds'];
         }
 
-        if (array_key_exists("BigDealIds",$param) and $param["BigDealIds"] !== null) {
-            $this->BigDealIds = $param["BigDealIds"];
+        if (array_key_exists('BigDealIds',$param) and $param['BigDealIds'] !== null) {
+            $this->BigDealIds = $param['BigDealIds'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

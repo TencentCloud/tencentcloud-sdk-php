@@ -62,16 +62,16 @@ class SendCustomAlarmMsgRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Module",$param) and $param["Module"] !== null) {
-            $this->Module = $param["Module"];
+        if (array_key_exists('Module',$param) and $param['Module'] !== null) {
+            $this->Module = $param['Module'];
         }
 
-        if (array_key_exists("PolicyId",$param) and $param["PolicyId"] !== null) {
-            $this->PolicyId = $param["PolicyId"];
+        if (array_key_exists('PolicyId',$param) and $param['PolicyId'] !== null) {
+            $this->PolicyId = $param['PolicyId'];
         }
 
-        if (array_key_exists("Msg",$param) and $param["Msg"] !== null) {
-            $this->Msg = $param["Msg"];
+        if (array_key_exists('Msg',$param) and $param['Msg'] !== null) {
+            $this->Msg = $param['Msg'];
         }
     }
 }

@@ -94,32 +94,32 @@ class ClusterCIDRSettings extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ClusterCIDR",$param) and $param["ClusterCIDR"] !== null) {
-            $this->ClusterCIDR = $param["ClusterCIDR"];
+        if (array_key_exists('ClusterCIDR',$param) and $param['ClusterCIDR'] !== null) {
+            $this->ClusterCIDR = $param['ClusterCIDR'];
         }
 
-        if (array_key_exists("IgnoreClusterCIDRConflict",$param) and $param["IgnoreClusterCIDRConflict"] !== null) {
-            $this->IgnoreClusterCIDRConflict = $param["IgnoreClusterCIDRConflict"];
+        if (array_key_exists('IgnoreClusterCIDRConflict',$param) and $param['IgnoreClusterCIDRConflict'] !== null) {
+            $this->IgnoreClusterCIDRConflict = $param['IgnoreClusterCIDRConflict'];
         }
 
-        if (array_key_exists("MaxNodePodNum",$param) and $param["MaxNodePodNum"] !== null) {
-            $this->MaxNodePodNum = $param["MaxNodePodNum"];
+        if (array_key_exists('MaxNodePodNum',$param) and $param['MaxNodePodNum'] !== null) {
+            $this->MaxNodePodNum = $param['MaxNodePodNum'];
         }
 
-        if (array_key_exists("MaxClusterServiceNum",$param) and $param["MaxClusterServiceNum"] !== null) {
-            $this->MaxClusterServiceNum = $param["MaxClusterServiceNum"];
+        if (array_key_exists('MaxClusterServiceNum',$param) and $param['MaxClusterServiceNum'] !== null) {
+            $this->MaxClusterServiceNum = $param['MaxClusterServiceNum'];
         }
 
-        if (array_key_exists("ServiceCIDR",$param) and $param["ServiceCIDR"] !== null) {
-            $this->ServiceCIDR = $param["ServiceCIDR"];
+        if (array_key_exists('ServiceCIDR',$param) and $param['ServiceCIDR'] !== null) {
+            $this->ServiceCIDR = $param['ServiceCIDR'];
         }
 
-        if (array_key_exists("EniSubnetIds",$param) and $param["EniSubnetIds"] !== null) {
-            $this->EniSubnetIds = $param["EniSubnetIds"];
+        if (array_key_exists('EniSubnetIds',$param) and $param['EniSubnetIds'] !== null) {
+            $this->EniSubnetIds = $param['EniSubnetIds'];
         }
 
-        if (array_key_exists("ClaimExpiredSeconds",$param) and $param["ClaimExpiredSeconds"] !== null) {
-            $this->ClaimExpiredSeconds = $param["ClaimExpiredSeconds"];
+        if (array_key_exists('ClaimExpiredSeconds',$param) and $param['ClaimExpiredSeconds'] !== null) {
+            $this->ClaimExpiredSeconds = $param['ClaimExpiredSeconds'];
         }
     }
 }

@@ -54,12 +54,12 @@ class VipEntity extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Vip",$param) and $param["Vip"] !== null) {
-            $this->Vip = $param["Vip"];
+        if (array_key_exists('Vip',$param) and $param['Vip'] !== null) {
+            $this->Vip = $param['Vip'];
         }
 
-        if (array_key_exists("Vport",$param) and $param["Vport"] !== null) {
-            $this->Vport = $param["Vport"];
+        if (array_key_exists('Vport',$param) and $param['Vport'] !== null) {
+            $this->Vport = $param['Vport'];
         }
     }
 }

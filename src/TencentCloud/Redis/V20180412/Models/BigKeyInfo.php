@@ -78,24 +78,24 @@ class BigKeyInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DB",$param) and $param["DB"] !== null) {
-            $this->DB = $param["DB"];
+        if (array_key_exists('DB',$param) and $param['DB'] !== null) {
+            $this->DB = $param['DB'];
         }
 
-        if (array_key_exists("Key",$param) and $param["Key"] !== null) {
-            $this->Key = $param["Key"];
+        if (array_key_exists('Key',$param) and $param['Key'] !== null) {
+            $this->Key = $param['Key'];
         }
 
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists('Type',$param) and $param['Type'] !== null) {
+            $this->Type = $param['Type'];
         }
 
-        if (array_key_exists("Size",$param) and $param["Size"] !== null) {
-            $this->Size = $param["Size"];
+        if (array_key_exists('Size',$param) and $param['Size'] !== null) {
+            $this->Size = $param['Size'];
         }
 
-        if (array_key_exists("Updatetime",$param) and $param["Updatetime"] !== null) {
-            $this->Updatetime = $param["Updatetime"];
+        if (array_key_exists('Updatetime',$param) and $param['Updatetime'] !== null) {
+            $this->Updatetime = $param['Updatetime'];
         }
     }
 }

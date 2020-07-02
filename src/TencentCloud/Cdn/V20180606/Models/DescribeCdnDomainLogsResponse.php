@@ -62,21 +62,21 @@ class DescribeCdnDomainLogsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DomainLogs",$param) and $param["DomainLogs"] !== null) {
+        if (array_key_exists('DomainLogs',$param) and $param['DomainLogs'] !== null) {
             $this->DomainLogs = [];
-            foreach ($param["DomainLogs"] as $key => $value){
+            foreach ($param['DomainLogs'] as $key => $value){
                 $obj = new DomainLog();
                 $obj->deserialize($value);
                 array_push($this->DomainLogs, $obj);
             }
         }
 
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

@@ -54,12 +54,12 @@ class CreateClassResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ClassId",$param) and $param["ClassId"] !== null) {
-            $this->ClassId = $param["ClassId"];
+        if (array_key_exists('ClassId',$param) and $param['ClassId'] !== null) {
+            $this->ClassId = $param['ClassId'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

@@ -54,17 +54,17 @@ class DescribeDbauditUsedRegionsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RegionSet",$param) and $param["RegionSet"] !== null) {
+        if (array_key_exists('RegionSet',$param) and $param['RegionSet'] !== null) {
             $this->RegionSet = [];
-            foreach ($param["RegionSet"] as $key => $value){
+            foreach ($param['RegionSet'] as $key => $value){
                 $obj = new RegionInfo();
                 $obj->deserialize($value);
                 array_push($this->RegionSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

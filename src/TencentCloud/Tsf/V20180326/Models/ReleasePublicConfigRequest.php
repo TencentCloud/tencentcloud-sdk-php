@@ -62,16 +62,16 @@ class ReleasePublicConfigRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ConfigId",$param) and $param["ConfigId"] !== null) {
-            $this->ConfigId = $param["ConfigId"];
+        if (array_key_exists('ConfigId',$param) and $param['ConfigId'] !== null) {
+            $this->ConfigId = $param['ConfigId'];
         }
 
-        if (array_key_exists("NamespaceId",$param) and $param["NamespaceId"] !== null) {
-            $this->NamespaceId = $param["NamespaceId"];
+        if (array_key_exists('NamespaceId',$param) and $param['NamespaceId'] !== null) {
+            $this->NamespaceId = $param['NamespaceId'];
         }
 
-        if (array_key_exists("ReleaseDesc",$param) and $param["ReleaseDesc"] !== null) {
-            $this->ReleaseDesc = $param["ReleaseDesc"];
+        if (array_key_exists('ReleaseDesc',$param) and $param['ReleaseDesc'] !== null) {
+            $this->ReleaseDesc = $param['ReleaseDesc'];
         }
     }
 }

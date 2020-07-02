@@ -46,8 +46,8 @@ class Artist extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ArtistName",$param) and $param["ArtistName"] !== null) {
-            $this->ArtistName = $param["ArtistName"];
+        if (array_key_exists('ArtistName',$param) and $param['ArtistName'] !== null) {
+            $this->ArtistName = $param['ArtistName'];
         }
     }
 }

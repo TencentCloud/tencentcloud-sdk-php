@@ -46,9 +46,9 @@ class AddUserToGroupRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Info",$param) and $param["Info"] !== null) {
+        if (array_key_exists('Info',$param) and $param['Info'] !== null) {
             $this->Info = [];
-            foreach ($param["Info"] as $key => $value){
+            foreach ($param['Info'] as $key => $value){
                 $obj = new GroupIdOfUidInfo();
                 $obj->deserialize($value);
                 array_push($this->Info, $obj);

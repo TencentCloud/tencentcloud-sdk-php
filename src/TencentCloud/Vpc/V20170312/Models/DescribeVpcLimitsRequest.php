@@ -46,8 +46,8 @@ class DescribeVpcLimitsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LimitTypes",$param) and $param["LimitTypes"] !== null) {
-            $this->LimitTypes = $param["LimitTypes"];
+        if (array_key_exists('LimitTypes',$param) and $param['LimitTypes'] !== null) {
+            $this->LimitTypes = $param['LimitTypes'];
         }
     }
 }

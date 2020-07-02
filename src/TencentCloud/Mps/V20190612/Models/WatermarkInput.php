@@ -114,29 +114,29 @@ class WatermarkInput extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Definition",$param) and $param["Definition"] !== null) {
-            $this->Definition = $param["Definition"];
+        if (array_key_exists('Definition',$param) and $param['Definition'] !== null) {
+            $this->Definition = $param['Definition'];
         }
 
-        if (array_key_exists("RawParameter",$param) and $param["RawParameter"] !== null) {
+        if (array_key_exists('RawParameter',$param) and $param['RawParameter'] !== null) {
             $this->RawParameter = new RawWatermarkParameter();
-            $this->RawParameter->deserialize($param["RawParameter"]);
+            $this->RawParameter->deserialize($param['RawParameter']);
         }
 
-        if (array_key_exists("TextContent",$param) and $param["TextContent"] !== null) {
-            $this->TextContent = $param["TextContent"];
+        if (array_key_exists('TextContent',$param) and $param['TextContent'] !== null) {
+            $this->TextContent = $param['TextContent'];
         }
 
-        if (array_key_exists("SvgContent",$param) and $param["SvgContent"] !== null) {
-            $this->SvgContent = $param["SvgContent"];
+        if (array_key_exists('SvgContent',$param) and $param['SvgContent'] !== null) {
+            $this->SvgContent = $param['SvgContent'];
         }
 
-        if (array_key_exists("StartTimeOffset",$param) and $param["StartTimeOffset"] !== null) {
-            $this->StartTimeOffset = $param["StartTimeOffset"];
+        if (array_key_exists('StartTimeOffset',$param) and $param['StartTimeOffset'] !== null) {
+            $this->StartTimeOffset = $param['StartTimeOffset'];
         }
 
-        if (array_key_exists("EndTimeOffset",$param) and $param["EndTimeOffset"] !== null) {
-            $this->EndTimeOffset = $param["EndTimeOffset"];
+        if (array_key_exists('EndTimeOffset',$param) and $param['EndTimeOffset'] !== null) {
+            $this->EndTimeOffset = $param['EndTimeOffset'];
         }
     }
 }

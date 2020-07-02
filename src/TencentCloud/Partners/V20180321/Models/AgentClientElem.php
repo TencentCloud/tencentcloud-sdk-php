@@ -126,44 +126,44 @@ class AgentClientElem extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Uin",$param) and $param["Uin"] !== null) {
-            $this->Uin = $param["Uin"];
+        if (array_key_exists('Uin',$param) and $param['Uin'] !== null) {
+            $this->Uin = $param['Uin'];
         }
 
-        if (array_key_exists("ClientUin",$param) and $param["ClientUin"] !== null) {
-            $this->ClientUin = $param["ClientUin"];
+        if (array_key_exists('ClientUin',$param) and $param['ClientUin'] !== null) {
+            $this->ClientUin = $param['ClientUin'];
         }
 
-        if (array_key_exists("ApplyTime",$param) and $param["ApplyTime"] !== null) {
-            $this->ApplyTime = $param["ApplyTime"];
+        if (array_key_exists('ApplyTime',$param) and $param['ApplyTime'] !== null) {
+            $this->ApplyTime = $param['ApplyTime'];
         }
 
-        if (array_key_exists("ClientFlag",$param) and $param["ClientFlag"] !== null) {
-            $this->ClientFlag = $param["ClientFlag"];
+        if (array_key_exists('ClientFlag',$param) and $param['ClientFlag'] !== null) {
+            $this->ClientFlag = $param['ClientFlag'];
         }
 
-        if (array_key_exists("Mail",$param) and $param["Mail"] !== null) {
-            $this->Mail = $param["Mail"];
+        if (array_key_exists('Mail',$param) and $param['Mail'] !== null) {
+            $this->Mail = $param['Mail'];
         }
 
-        if (array_key_exists("Phone",$param) and $param["Phone"] !== null) {
-            $this->Phone = $param["Phone"];
+        if (array_key_exists('Phone',$param) and $param['Phone'] !== null) {
+            $this->Phone = $param['Phone'];
         }
 
-        if (array_key_exists("HasOverdueBill",$param) and $param["HasOverdueBill"] !== null) {
-            $this->HasOverdueBill = $param["HasOverdueBill"];
+        if (array_key_exists('HasOverdueBill',$param) and $param['HasOverdueBill'] !== null) {
+            $this->HasOverdueBill = $param['HasOverdueBill'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("SalesUin",$param) and $param["SalesUin"] !== null) {
-            $this->SalesUin = $param["SalesUin"];
+        if (array_key_exists('SalesUin',$param) and $param['SalesUin'] !== null) {
+            $this->SalesUin = $param['SalesUin'];
         }
 
-        if (array_key_exists("SalesName",$param) and $param["SalesName"] !== null) {
-            $this->SalesName = $param["SalesName"];
+        if (array_key_exists('SalesName',$param) and $param['SalesName'] !== null) {
+            $this->SalesName = $param['SalesName'];
         }
     }
 }

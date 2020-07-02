@@ -54,12 +54,12 @@ class ParamModifyResult extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Param",$param) and $param["Param"] !== null) {
-            $this->Param = $param["Param"];
+        if (array_key_exists('Param',$param) and $param['Param'] !== null) {
+            $this->Param = $param['Param'];
         }
 
-        if (array_key_exists("Code",$param) and $param["Code"] !== null) {
-            $this->Code = $param["Code"];
+        if (array_key_exists('Code',$param) and $param['Code'] !== null) {
+            $this->Code = $param['Code'];
         }
     }
 }

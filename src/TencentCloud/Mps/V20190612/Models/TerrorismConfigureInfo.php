@@ -54,14 +54,14 @@ class TerrorismConfigureInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ImgReviewInfo",$param) and $param["ImgReviewInfo"] !== null) {
+        if (array_key_exists('ImgReviewInfo',$param) and $param['ImgReviewInfo'] !== null) {
             $this->ImgReviewInfo = new TerrorismImgReviewTemplateInfo();
-            $this->ImgReviewInfo->deserialize($param["ImgReviewInfo"]);
+            $this->ImgReviewInfo->deserialize($param['ImgReviewInfo']);
         }
 
-        if (array_key_exists("OcrReviewInfo",$param) and $param["OcrReviewInfo"] !== null) {
+        if (array_key_exists('OcrReviewInfo',$param) and $param['OcrReviewInfo'] !== null) {
             $this->OcrReviewInfo = new TerrorismOcrReviewTemplateInfo();
-            $this->OcrReviewInfo->deserialize($param["OcrReviewInfo"]);
+            $this->OcrReviewInfo->deserialize($param['OcrReviewInfo']);
         }
     }
 }

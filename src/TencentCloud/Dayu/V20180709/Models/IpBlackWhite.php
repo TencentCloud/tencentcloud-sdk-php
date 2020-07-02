@@ -54,12 +54,12 @@ class IpBlackWhite extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Ip",$param) and $param["Ip"] !== null) {
-            $this->Ip = $param["Ip"];
+        if (array_key_exists('Ip',$param) and $param['Ip'] !== null) {
+            $this->Ip = $param['Ip'];
         }
 
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists('Type',$param) and $param['Type'] !== null) {
+            $this->Type = $param['Type'];
         }
     }
 }

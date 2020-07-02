@@ -46,8 +46,8 @@ class DeleteIp6TranslatorsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Ip6TranslatorIds",$param) and $param["Ip6TranslatorIds"] !== null) {
-            $this->Ip6TranslatorIds = $param["Ip6TranslatorIds"];
+        if (array_key_exists('Ip6TranslatorIds',$param) and $param['Ip6TranslatorIds'] !== null) {
+            $this->Ip6TranslatorIds = $param['Ip6TranslatorIds'];
         }
     }
 }

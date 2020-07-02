@@ -86,33 +86,33 @@ class QueryBalanceResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ResultCount",$param) and $param["ResultCount"] !== null) {
-            $this->ResultCount = $param["ResultCount"];
+        if (array_key_exists('ResultCount',$param) and $param['ResultCount'] !== null) {
+            $this->ResultCount = $param['ResultCount'];
         }
 
-        if (array_key_exists("StartRecordOffset",$param) and $param["StartRecordOffset"] !== null) {
-            $this->StartRecordOffset = $param["StartRecordOffset"];
+        if (array_key_exists('StartRecordOffset',$param) and $param['StartRecordOffset'] !== null) {
+            $this->StartRecordOffset = $param['StartRecordOffset'];
         }
 
-        if (array_key_exists("EndFlag",$param) and $param["EndFlag"] !== null) {
-            $this->EndFlag = $param["EndFlag"];
+        if (array_key_exists('EndFlag',$param) and $param['EndFlag'] !== null) {
+            $this->EndFlag = $param['EndFlag'];
         }
 
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("QueryItems",$param) and $param["QueryItems"] !== null) {
+        if (array_key_exists('QueryItems',$param) and $param['QueryItems'] !== null) {
             $this->QueryItems = [];
-            foreach ($param["QueryItems"] as $key => $value){
+            foreach ($param['QueryItems'] as $key => $value){
                 $obj = new QueryItem();
                 $obj->deserialize($value);
                 array_push($this->QueryItems, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

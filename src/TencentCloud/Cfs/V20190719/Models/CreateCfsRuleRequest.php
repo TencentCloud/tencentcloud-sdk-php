@@ -78,24 +78,24 @@ class CreateCfsRuleRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PGroupId",$param) and $param["PGroupId"] !== null) {
-            $this->PGroupId = $param["PGroupId"];
+        if (array_key_exists('PGroupId',$param) and $param['PGroupId'] !== null) {
+            $this->PGroupId = $param['PGroupId'];
         }
 
-        if (array_key_exists("AuthClientIp",$param) and $param["AuthClientIp"] !== null) {
-            $this->AuthClientIp = $param["AuthClientIp"];
+        if (array_key_exists('AuthClientIp',$param) and $param['AuthClientIp'] !== null) {
+            $this->AuthClientIp = $param['AuthClientIp'];
         }
 
-        if (array_key_exists("Priority",$param) and $param["Priority"] !== null) {
-            $this->Priority = $param["Priority"];
+        if (array_key_exists('Priority',$param) and $param['Priority'] !== null) {
+            $this->Priority = $param['Priority'];
         }
 
-        if (array_key_exists("RWPermission",$param) and $param["RWPermission"] !== null) {
-            $this->RWPermission = $param["RWPermission"];
+        if (array_key_exists('RWPermission',$param) and $param['RWPermission'] !== null) {
+            $this->RWPermission = $param['RWPermission'];
         }
 
-        if (array_key_exists("UserPermission",$param) and $param["UserPermission"] !== null) {
-            $this->UserPermission = $param["UserPermission"];
+        if (array_key_exists('UserPermission',$param) and $param['UserPermission'] !== null) {
+            $this->UserPermission = $param['UserPermission'];
         }
     }
 }

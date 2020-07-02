@@ -62,12 +62,12 @@ class UsagePlanBindEnvironment extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("EnvironmentName",$param) and $param["EnvironmentName"] !== null) {
-            $this->EnvironmentName = $param["EnvironmentName"];
+        if (array_key_exists('EnvironmentName',$param) and $param['EnvironmentName'] !== null) {
+            $this->EnvironmentName = $param['EnvironmentName'];
         }
 
-        if (array_key_exists("ServiceId",$param) and $param["ServiceId"] !== null) {
-            $this->ServiceId = $param["ServiceId"];
+        if (array_key_exists('ServiceId',$param) and $param['ServiceId'] !== null) {
+            $this->ServiceId = $param['ServiceId'];
         }
     }
 }

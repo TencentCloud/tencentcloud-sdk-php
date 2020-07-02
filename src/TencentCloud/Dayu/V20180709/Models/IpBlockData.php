@@ -78,24 +78,24 @@ class IpBlockData extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Ip",$param) and $param["Ip"] !== null) {
-            $this->Ip = $param["Ip"];
+        if (array_key_exists('Ip',$param) and $param['Ip'] !== null) {
+            $this->Ip = $param['Ip'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("BlockTime",$param) and $param["BlockTime"] !== null) {
-            $this->BlockTime = $param["BlockTime"];
+        if (array_key_exists('BlockTime',$param) and $param['BlockTime'] !== null) {
+            $this->BlockTime = $param['BlockTime'];
         }
 
-        if (array_key_exists("UnBlockTime",$param) and $param["UnBlockTime"] !== null) {
-            $this->UnBlockTime = $param["UnBlockTime"];
+        if (array_key_exists('UnBlockTime',$param) and $param['UnBlockTime'] !== null) {
+            $this->UnBlockTime = $param['UnBlockTime'];
         }
 
-        if (array_key_exists("ActionType",$param) and $param["ActionType"] !== null) {
-            $this->ActionType = $param["ActionType"];
+        if (array_key_exists('ActionType',$param) and $param['ActionType'] !== null) {
+            $this->ActionType = $param['ActionType'];
         }
     }
 }

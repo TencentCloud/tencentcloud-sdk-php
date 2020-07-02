@@ -46,8 +46,8 @@ class DeleteServiceLinkedRoleRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RoleName",$param) and $param["RoleName"] !== null) {
-            $this->RoleName = $param["RoleName"];
+        if (array_key_exists('RoleName',$param) and $param['RoleName'] !== null) {
+            $this->RoleName = $param['RoleName'];
         }
     }
 }

@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDataBackupOverview请求参数结构体
  *
- * @method string getProduct() 获取需要查询的云数据库产品类型，目前仅支持 "mysql"。
- * @method void setProduct(string $Product) 设置需要查询的云数据库产品类型，目前仅支持 "mysql"。
+ * @method string getProduct() 获取需要查询的云数据库产品类型，目前仅支持 'mysql'。
+ * @method void setProduct(string $Product) 设置需要查询的云数据库产品类型，目前仅支持 'mysql'。
  */
 class DescribeDataBackupOverviewRequest extends AbstractModel
 {
     /**
-     * @var string 需要查询的云数据库产品类型，目前仅支持 "mysql"。
+     * @var string 需要查询的云数据库产品类型，目前仅支持 'mysql'。
      */
     public $Product;
 
     /**
-     * @param string $Product 需要查询的云数据库产品类型，目前仅支持 "mysql"。
+     * @param string $Product 需要查询的云数据库产品类型，目前仅支持 'mysql'。
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class DescribeDataBackupOverviewRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Product",$param) and $param["Product"] !== null) {
-            $this->Product = $param["Product"];
+        if (array_key_exists('Product',$param) and $param['Product'] !== null) {
+            $this->Product = $param['Product'];
         }
     }
 }

@@ -62,17 +62,17 @@ class DescribeL4BackendsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LoadBalancerId",$param) and $param["LoadBalancerId"] !== null) {
-            $this->LoadBalancerId = $param["LoadBalancerId"];
+        if (array_key_exists('LoadBalancerId',$param) and $param['LoadBalancerId'] !== null) {
+            $this->LoadBalancerId = $param['LoadBalancerId'];
         }
 
-        if (array_key_exists("ListenerId",$param) and $param["ListenerId"] !== null) {
-            $this->ListenerId = $param["ListenerId"];
+        if (array_key_exists('ListenerId',$param) and $param['ListenerId'] !== null) {
+            $this->ListenerId = $param['ListenerId'];
         }
 
-        if (array_key_exists("BackendSet",$param) and $param["BackendSet"] !== null) {
+        if (array_key_exists('BackendSet',$param) and $param['BackendSet'] !== null) {
             $this->BackendSet = [];
-            foreach ($param["BackendSet"] as $key => $value){
+            foreach ($param['BackendSet'] as $key => $value){
                 $obj = new DescribeL4Backend();
                 $obj->deserialize($value);
                 array_push($this->BackendSet, $obj);

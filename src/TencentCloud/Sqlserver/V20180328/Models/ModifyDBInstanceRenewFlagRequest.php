@@ -46,9 +46,9 @@ class ModifyDBInstanceRenewFlagRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RenewFlags",$param) and $param["RenewFlags"] !== null) {
+        if (array_key_exists('RenewFlags',$param) and $param['RenewFlags'] !== null) {
             $this->RenewFlags = [];
-            foreach ($param["RenewFlags"] as $key => $value){
+            foreach ($param['RenewFlags'] as $key => $value){
                 $obj = new InstanceRenewInfo();
                 $obj->deserialize($value);
                 array_push($this->RenewFlags, $obj);

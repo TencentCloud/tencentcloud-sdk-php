@@ -62,17 +62,17 @@ class DrmOutputObject extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BucketName",$param) and $param["BucketName"] !== null) {
-            $this->BucketName = $param["BucketName"];
+        if (array_key_exists('BucketName',$param) and $param['BucketName'] !== null) {
+            $this->BucketName = $param['BucketName'];
         }
 
-        if (array_key_exists("ObjectName",$param) and $param["ObjectName"] !== null) {
-            $this->ObjectName = $param["ObjectName"];
+        if (array_key_exists('ObjectName',$param) and $param['ObjectName'] !== null) {
+            $this->ObjectName = $param['ObjectName'];
         }
 
-        if (array_key_exists("Para",$param) and $param["Para"] !== null) {
+        if (array_key_exists('Para',$param) and $param['Para'] !== null) {
             $this->Para = new DrmOutputPara();
-            $this->Para->deserialize($param["Para"]);
+            $this->Para->deserialize($param['Para']);
         }
     }
 }

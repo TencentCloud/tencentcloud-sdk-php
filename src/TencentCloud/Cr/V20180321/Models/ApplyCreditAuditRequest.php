@@ -94,32 +94,32 @@ class ApplyCreditAuditRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Module",$param) and $param["Module"] !== null) {
-            $this->Module = $param["Module"];
+        if (array_key_exists('Module',$param) and $param['Module'] !== null) {
+            $this->Module = $param['Module'];
         }
 
-        if (array_key_exists("Operation",$param) and $param["Operation"] !== null) {
-            $this->Operation = $param["Operation"];
+        if (array_key_exists('Operation',$param) and $param['Operation'] !== null) {
+            $this->Operation = $param['Operation'];
         }
 
-        if (array_key_exists("InstId",$param) and $param["InstId"] !== null) {
-            $this->InstId = $param["InstId"];
+        if (array_key_exists('InstId',$param) and $param['InstId'] !== null) {
+            $this->InstId = $param['InstId'];
         }
 
-        if (array_key_exists("ProductId",$param) and $param["ProductId"] !== null) {
-            $this->ProductId = $param["ProductId"];
+        if (array_key_exists('ProductId',$param) and $param['ProductId'] !== null) {
+            $this->ProductId = $param['ProductId'];
         }
 
-        if (array_key_exists("CaseId",$param) and $param["CaseId"] !== null) {
-            $this->CaseId = $param["CaseId"];
+        if (array_key_exists('CaseId',$param) and $param['CaseId'] !== null) {
+            $this->CaseId = $param['CaseId'];
         }
 
-        if (array_key_exists("CallbackUrl",$param) and $param["CallbackUrl"] !== null) {
-            $this->CallbackUrl = $param["CallbackUrl"];
+        if (array_key_exists('CallbackUrl',$param) and $param['CallbackUrl'] !== null) {
+            $this->CallbackUrl = $param['CallbackUrl'];
         }
 
-        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
-            $this->Data = $param["Data"];
+        if (array_key_exists('Data',$param) and $param['Data'] !== null) {
+            $this->Data = $param['Data'];
         }
     }
 }

@@ -46,8 +46,8 @@ class RejectVpcPeerConnectionRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("VpcPeerConnectionId",$param) and $param["VpcPeerConnectionId"] !== null) {
-            $this->VpcPeerConnectionId = $param["VpcPeerConnectionId"];
+        if (array_key_exists('VpcPeerConnectionId',$param) and $param['VpcPeerConnectionId'] !== null) {
+            $this->VpcPeerConnectionId = $param['VpcPeerConnectionId'];
         }
     }
 }

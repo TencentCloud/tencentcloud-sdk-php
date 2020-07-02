@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GestureResult
  *
- * @method string getClass() 获取识别结果，包含"USPEAK":听你说，"LISTEN":听我说，"GOOD":GOOD，"TOOLS":拿教具，"OTHERS":其他
- * @method void setClass(string $Class) 设置识别结果，包含"USPEAK":听你说，"LISTEN":听我说，"GOOD":GOOD，"TOOLS":拿教具，"OTHERS":其他
+ * @method string getClass() 获取识别结果，包含'USPEAK':听你说，'LISTEN':听我说，'GOOD':GOOD，'TOOLS':拿教具，'OTHERS':其他
+ * @method void setClass(string $Class) 设置识别结果，包含'USPEAK':听你说，'LISTEN':听我说，'GOOD':GOOD，'TOOLS':拿教具，'OTHERS':其他
  * @method float getConfidence() 获取置信度
  * @method void setConfidence(float $Confidence) 设置置信度
  * @method integer getHeight() 获取识别结果高度
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class GestureResult extends AbstractModel
 {
     /**
-     * @var string 识别结果，包含"USPEAK":听你说，"LISTEN":听我说，"GOOD":GOOD，"TOOLS":拿教具，"OTHERS":其他
+     * @var string 识别结果，包含'USPEAK':听你说，'LISTEN':听我说，'GOOD':GOOD，'TOOLS':拿教具，'OTHERS':其他
      */
     public $Class;
 
@@ -66,7 +66,7 @@ class GestureResult extends AbstractModel
     public $Width;
 
     /**
-     * @param string $Class 识别结果，包含"USPEAK":听你说，"LISTEN":听我说，"GOOD":GOOD，"TOOLS":拿教具，"OTHERS":其他
+     * @param string $Class 识别结果，包含'USPEAK':听你说，'LISTEN':听我说，'GOOD':GOOD，'TOOLS':拿教具，'OTHERS':其他
      * @param float $Confidence 置信度
      * @param integer $Height 识别结果高度
      * @param integer $Left 识别结果左坐标
@@ -86,28 +86,28 @@ class GestureResult extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Class",$param) and $param["Class"] !== null) {
-            $this->Class = $param["Class"];
+        if (array_key_exists('Class',$param) and $param['Class'] !== null) {
+            $this->Class = $param['Class'];
         }
 
-        if (array_key_exists("Confidence",$param) and $param["Confidence"] !== null) {
-            $this->Confidence = $param["Confidence"];
+        if (array_key_exists('Confidence',$param) and $param['Confidence'] !== null) {
+            $this->Confidence = $param['Confidence'];
         }
 
-        if (array_key_exists("Height",$param) and $param["Height"] !== null) {
-            $this->Height = $param["Height"];
+        if (array_key_exists('Height',$param) and $param['Height'] !== null) {
+            $this->Height = $param['Height'];
         }
 
-        if (array_key_exists("Left",$param) and $param["Left"] !== null) {
-            $this->Left = $param["Left"];
+        if (array_key_exists('Left',$param) and $param['Left'] !== null) {
+            $this->Left = $param['Left'];
         }
 
-        if (array_key_exists("Top",$param) and $param["Top"] !== null) {
-            $this->Top = $param["Top"];
+        if (array_key_exists('Top',$param) and $param['Top'] !== null) {
+            $this->Top = $param['Top'];
         }
 
-        if (array_key_exists("Width",$param) and $param["Width"] !== null) {
-            $this->Width = $param["Width"];
+        if (array_key_exists('Width',$param) and $param['Width'] !== null) {
+            $this->Width = $param['Width'];
         }
     }
 }

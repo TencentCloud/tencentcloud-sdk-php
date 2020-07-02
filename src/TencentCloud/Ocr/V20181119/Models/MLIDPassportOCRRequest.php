@@ -58,12 +58,12 @@ class MLIDPassportOCRRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ImageBase64",$param) and $param["ImageBase64"] !== null) {
-            $this->ImageBase64 = $param["ImageBase64"];
+        if (array_key_exists('ImageBase64',$param) and $param['ImageBase64'] !== null) {
+            $this->ImageBase64 = $param['ImageBase64'];
         }
 
-        if (array_key_exists("RetImage",$param) and $param["RetImage"] !== null) {
-            $this->RetImage = $param["RetImage"];
+        if (array_key_exists('RetImage',$param) and $param['RetImage'] !== null) {
+            $this->RetImage = $param['RetImage'];
         }
     }
 }

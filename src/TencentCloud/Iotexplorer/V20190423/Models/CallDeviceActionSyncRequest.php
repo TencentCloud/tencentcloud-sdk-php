@@ -70,20 +70,20 @@ class CallDeviceActionSyncRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ProductId",$param) and $param["ProductId"] !== null) {
-            $this->ProductId = $param["ProductId"];
+        if (array_key_exists('ProductId',$param) and $param['ProductId'] !== null) {
+            $this->ProductId = $param['ProductId'];
         }
 
-        if (array_key_exists("DeviceName",$param) and $param["DeviceName"] !== null) {
-            $this->DeviceName = $param["DeviceName"];
+        if (array_key_exists('DeviceName',$param) and $param['DeviceName'] !== null) {
+            $this->DeviceName = $param['DeviceName'];
         }
 
-        if (array_key_exists("ActionId",$param) and $param["ActionId"] !== null) {
-            $this->ActionId = $param["ActionId"];
+        if (array_key_exists('ActionId',$param) and $param['ActionId'] !== null) {
+            $this->ActionId = $param['ActionId'];
         }
 
-        if (array_key_exists("InputParams",$param) and $param["InputParams"] !== null) {
-            $this->InputParams = $param["InputParams"];
+        if (array_key_exists('InputParams',$param) and $param['InputParams'] !== null) {
+            $this->InputParams = $param['InputParams'];
         }
     }
 }

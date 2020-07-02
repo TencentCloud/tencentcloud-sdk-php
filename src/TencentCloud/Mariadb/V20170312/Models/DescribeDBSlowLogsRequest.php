@@ -110,40 +110,40 @@ class DescribeDBSlowLogsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
+        if (array_key_exists('Offset',$param) and $param['Offset'] !== null) {
+            $this->Offset = $param['Offset'];
         }
 
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
+        if (array_key_exists('Limit',$param) and $param['Limit'] !== null) {
+            $this->Limit = $param['Limit'];
         }
 
-        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
-            $this->StartTime = $param["StartTime"];
+        if (array_key_exists('StartTime',$param) and $param['StartTime'] !== null) {
+            $this->StartTime = $param['StartTime'];
         }
 
-        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
-            $this->EndTime = $param["EndTime"];
+        if (array_key_exists('EndTime',$param) and $param['EndTime'] !== null) {
+            $this->EndTime = $param['EndTime'];
         }
 
-        if (array_key_exists("Db",$param) and $param["Db"] !== null) {
-            $this->Db = $param["Db"];
+        if (array_key_exists('Db',$param) and $param['Db'] !== null) {
+            $this->Db = $param['Db'];
         }
 
-        if (array_key_exists("OrderBy",$param) and $param["OrderBy"] !== null) {
-            $this->OrderBy = $param["OrderBy"];
+        if (array_key_exists('OrderBy',$param) and $param['OrderBy'] !== null) {
+            $this->OrderBy = $param['OrderBy'];
         }
 
-        if (array_key_exists("OrderByType",$param) and $param["OrderByType"] !== null) {
-            $this->OrderByType = $param["OrderByType"];
+        if (array_key_exists('OrderByType',$param) and $param['OrderByType'] !== null) {
+            $this->OrderByType = $param['OrderByType'];
         }
 
-        if (array_key_exists("Slave",$param) and $param["Slave"] !== null) {
-            $this->Slave = $param["Slave"];
+        if (array_key_exists('Slave',$param) and $param['Slave'] !== null) {
+            $this->Slave = $param['Slave'];
         }
     }
 }

@@ -54,17 +54,17 @@ class DescribeShardSpecResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SpecConfig",$param) and $param["SpecConfig"] !== null) {
+        if (array_key_exists('SpecConfig',$param) and $param['SpecConfig'] !== null) {
             $this->SpecConfig = [];
-            foreach ($param["SpecConfig"] as $key => $value){
+            foreach ($param['SpecConfig'] as $key => $value){
                 $obj = new SpecConfig();
                 $obj->deserialize($value);
                 array_push($this->SpecConfig, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

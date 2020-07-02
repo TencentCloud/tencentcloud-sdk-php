@@ -54,12 +54,12 @@ class ConditionBusiness extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BusinessCode",$param) and $param["BusinessCode"] !== null) {
-            $this->BusinessCode = $param["BusinessCode"];
+        if (array_key_exists('BusinessCode',$param) and $param['BusinessCode'] !== null) {
+            $this->BusinessCode = $param['BusinessCode'];
         }
 
-        if (array_key_exists("BusinessCodeName",$param) and $param["BusinessCodeName"] !== null) {
-            $this->BusinessCodeName = $param["BusinessCodeName"];
+        if (array_key_exists('BusinessCodeName',$param) and $param['BusinessCodeName'] !== null) {
+            $this->BusinessCodeName = $param['BusinessCodeName'];
         }
     }
 }

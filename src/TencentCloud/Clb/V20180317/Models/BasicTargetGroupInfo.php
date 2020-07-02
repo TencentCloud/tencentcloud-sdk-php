@@ -54,12 +54,12 @@ class BasicTargetGroupInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TargetGroupId",$param) and $param["TargetGroupId"] !== null) {
-            $this->TargetGroupId = $param["TargetGroupId"];
+        if (array_key_exists('TargetGroupId',$param) and $param['TargetGroupId'] !== null) {
+            $this->TargetGroupId = $param['TargetGroupId'];
         }
 
-        if (array_key_exists("TargetGroupName",$param) and $param["TargetGroupName"] !== null) {
-            $this->TargetGroupName = $param["TargetGroupName"];
+        if (array_key_exists('TargetGroupName',$param) and $param['TargetGroupName'] !== null) {
+            $this->TargetGroupName = $param['TargetGroupName'];
         }
     }
 }

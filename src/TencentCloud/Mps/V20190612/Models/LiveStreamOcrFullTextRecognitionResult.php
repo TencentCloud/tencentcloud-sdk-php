@@ -78,24 +78,24 @@ class LiveStreamOcrFullTextRecognitionResult extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Text",$param) and $param["Text"] !== null) {
-            $this->Text = $param["Text"];
+        if (array_key_exists('Text',$param) and $param['Text'] !== null) {
+            $this->Text = $param['Text'];
         }
 
-        if (array_key_exists("StartPtsTime",$param) and $param["StartPtsTime"] !== null) {
-            $this->StartPtsTime = $param["StartPtsTime"];
+        if (array_key_exists('StartPtsTime',$param) and $param['StartPtsTime'] !== null) {
+            $this->StartPtsTime = $param['StartPtsTime'];
         }
 
-        if (array_key_exists("EndPtsTime",$param) and $param["EndPtsTime"] !== null) {
-            $this->EndPtsTime = $param["EndPtsTime"];
+        if (array_key_exists('EndPtsTime',$param) and $param['EndPtsTime'] !== null) {
+            $this->EndPtsTime = $param['EndPtsTime'];
         }
 
-        if (array_key_exists("Confidence",$param) and $param["Confidence"] !== null) {
-            $this->Confidence = $param["Confidence"];
+        if (array_key_exists('Confidence',$param) and $param['Confidence'] !== null) {
+            $this->Confidence = $param['Confidence'];
         }
 
-        if (array_key_exists("AreaCoordSet",$param) and $param["AreaCoordSet"] !== null) {
-            $this->AreaCoordSet = $param["AreaCoordSet"];
+        if (array_key_exists('AreaCoordSet',$param) and $param['AreaCoordSet'] !== null) {
+            $this->AreaCoordSet = $param['AreaCoordSet'];
         }
     }
 }

@@ -54,17 +54,17 @@ class DeviceCpuInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Rate",$param) and $param["Rate"] !== null) {
+        if (array_key_exists('Rate',$param) and $param['Rate'] !== null) {
             $this->Rate = [];
-            foreach ($param["Rate"] as $key => $value){
+            foreach ($param['Rate'] as $key => $value){
                 $obj = new DeviceCpuRateInfo();
                 $obj->deserialize($value);
                 array_push($this->Rate, $obj);
             }
         }
 
-        if (array_key_exists("Load",$param) and $param["Load"] !== null) {
-            $this->Load = $param["Load"];
+        if (array_key_exists('Load',$param) and $param['Load'] !== null) {
+            $this->Load = $param['Load'];
         }
     }
 }

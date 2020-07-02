@@ -74,20 +74,20 @@ SD、HD、UHD1、UHD2、AUDIO
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Track",$param) and $param["Track"] !== null) {
-            $this->Track = $param["Track"];
+        if (array_key_exists('Track',$param) and $param['Track'] !== null) {
+            $this->Track = $param['Track'];
         }
 
-        if (array_key_exists("Key",$param) and $param["Key"] !== null) {
-            $this->Key = $param["Key"];
+        if (array_key_exists('Key',$param) and $param['Key'] !== null) {
+            $this->Key = $param['Key'];
         }
 
-        if (array_key_exists("KeyId",$param) and $param["KeyId"] !== null) {
-            $this->KeyId = $param["KeyId"];
+        if (array_key_exists('KeyId',$param) and $param['KeyId'] !== null) {
+            $this->KeyId = $param['KeyId'];
         }
 
-        if (array_key_exists("Iv",$param) and $param["Iv"] !== null) {
-            $this->Iv = $param["Iv"];
+        if (array_key_exists('Iv',$param) and $param['Iv'] !== null) {
+            $this->Iv = $param['Iv'];
         }
     }
 }

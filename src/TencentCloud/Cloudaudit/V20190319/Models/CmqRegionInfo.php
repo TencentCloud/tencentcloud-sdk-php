@@ -54,12 +54,12 @@ class CmqRegionInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CmqRegion",$param) and $param["CmqRegion"] !== null) {
-            $this->CmqRegion = $param["CmqRegion"];
+        if (array_key_exists('CmqRegion',$param) and $param['CmqRegion'] !== null) {
+            $this->CmqRegion = $param['CmqRegion'];
         }
 
-        if (array_key_exists("CmqRegionName",$param) and $param["CmqRegionName"] !== null) {
-            $this->CmqRegionName = $param["CmqRegionName"];
+        if (array_key_exists('CmqRegionName',$param) and $param['CmqRegionName'] !== null) {
+            $this->CmqRegionName = $param['CmqRegionName'];
         }
     }
 }

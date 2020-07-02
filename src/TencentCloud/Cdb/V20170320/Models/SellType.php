@@ -62,17 +62,17 @@ class SellType extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TypeName",$param) and $param["TypeName"] !== null) {
-            $this->TypeName = $param["TypeName"];
+        if (array_key_exists('TypeName',$param) and $param['TypeName'] !== null) {
+            $this->TypeName = $param['TypeName'];
         }
 
-        if (array_key_exists("EngineVersion",$param) and $param["EngineVersion"] !== null) {
-            $this->EngineVersion = $param["EngineVersion"];
+        if (array_key_exists('EngineVersion',$param) and $param['EngineVersion'] !== null) {
+            $this->EngineVersion = $param['EngineVersion'];
         }
 
-        if (array_key_exists("Configs",$param) and $param["Configs"] !== null) {
+        if (array_key_exists('Configs',$param) and $param['Configs'] !== null) {
             $this->Configs = [];
-            foreach ($param["Configs"] as $key => $value){
+            foreach ($param['Configs'] as $key => $value){
                 $obj = new SellConfig();
                 $obj->deserialize($value);
                 array_push($this->Configs, $obj);

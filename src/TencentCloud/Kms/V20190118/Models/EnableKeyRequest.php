@@ -46,8 +46,8 @@ class EnableKeyRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("KeyId",$param) and $param["KeyId"] !== null) {
-            $this->KeyId = $param["KeyId"];
+        if (array_key_exists('KeyId',$param) and $param['KeyId'] !== null) {
+            $this->KeyId = $param['KeyId'];
         }
     }
 }

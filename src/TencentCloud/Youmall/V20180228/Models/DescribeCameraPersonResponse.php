@@ -86,33 +86,33 @@ class DescribeCameraPersonResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CompanyId",$param) and $param["CompanyId"] !== null) {
-            $this->CompanyId = $param["CompanyId"];
+        if (array_key_exists('CompanyId',$param) and $param['CompanyId'] !== null) {
+            $this->CompanyId = $param['CompanyId'];
         }
 
-        if (array_key_exists("ShopId",$param) and $param["ShopId"] !== null) {
-            $this->ShopId = $param["ShopId"];
+        if (array_key_exists('ShopId',$param) and $param['ShopId'] !== null) {
+            $this->ShopId = $param['ShopId'];
         }
 
-        if (array_key_exists("CameraId",$param) and $param["CameraId"] !== null) {
-            $this->CameraId = $param["CameraId"];
+        if (array_key_exists('CameraId',$param) and $param['CameraId'] !== null) {
+            $this->CameraId = $param['CameraId'];
         }
 
-        if (array_key_exists("PosId",$param) and $param["PosId"] !== null) {
-            $this->PosId = $param["PosId"];
+        if (array_key_exists('PosId',$param) and $param['PosId'] !== null) {
+            $this->PosId = $param['PosId'];
         }
 
-        if (array_key_exists("Infos",$param) and $param["Infos"] !== null) {
+        if (array_key_exists('Infos',$param) and $param['Infos'] !== null) {
             $this->Infos = [];
-            foreach ($param["Infos"] as $key => $value){
+            foreach ($param['Infos'] as $key => $value){
                 $obj = new CameraPersonInfo();
                 $obj->deserialize($value);
                 array_push($this->Infos, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

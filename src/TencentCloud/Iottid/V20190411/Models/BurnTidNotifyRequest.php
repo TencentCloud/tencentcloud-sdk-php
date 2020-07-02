@@ -54,12 +54,12 @@ class BurnTidNotifyRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("OrderId",$param) and $param["OrderId"] !== null) {
-            $this->OrderId = $param["OrderId"];
+        if (array_key_exists('OrderId',$param) and $param['OrderId'] !== null) {
+            $this->OrderId = $param['OrderId'];
         }
 
-        if (array_key_exists("Tid",$param) and $param["Tid"] !== null) {
-            $this->Tid = $param["Tid"];
+        if (array_key_exists('Tid',$param) and $param['Tid'] !== null) {
+            $this->Tid = $param['Tid'];
         }
     }
 }

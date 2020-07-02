@@ -94,37 +94,37 @@ class SelectedTableWithField extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TableGroupId",$param) and $param["TableGroupId"] !== null) {
-            $this->TableGroupId = $param["TableGroupId"];
+        if (array_key_exists('TableGroupId',$param) and $param['TableGroupId'] !== null) {
+            $this->TableGroupId = $param['TableGroupId'];
         }
 
-        if (array_key_exists("TableName",$param) and $param["TableName"] !== null) {
-            $this->TableName = $param["TableName"];
+        if (array_key_exists('TableName',$param) and $param['TableName'] !== null) {
+            $this->TableName = $param['TableName'];
         }
 
-        if (array_key_exists("TableInstanceId",$param) and $param["TableInstanceId"] !== null) {
-            $this->TableInstanceId = $param["TableInstanceId"];
+        if (array_key_exists('TableInstanceId',$param) and $param['TableInstanceId'] !== null) {
+            $this->TableInstanceId = $param['TableInstanceId'];
         }
 
-        if (array_key_exists("TableIdlType",$param) and $param["TableIdlType"] !== null) {
-            $this->TableIdlType = $param["TableIdlType"];
+        if (array_key_exists('TableIdlType',$param) and $param['TableIdlType'] !== null) {
+            $this->TableIdlType = $param['TableIdlType'];
         }
 
-        if (array_key_exists("TableType",$param) and $param["TableType"] !== null) {
-            $this->TableType = $param["TableType"];
+        if (array_key_exists('TableType',$param) and $param['TableType'] !== null) {
+            $this->TableType = $param['TableType'];
         }
 
-        if (array_key_exists("SelectedFields",$param) and $param["SelectedFields"] !== null) {
+        if (array_key_exists('SelectedFields',$param) and $param['SelectedFields'] !== null) {
             $this->SelectedFields = [];
-            foreach ($param["SelectedFields"] as $key => $value){
+            foreach ($param['SelectedFields'] as $key => $value){
                 $obj = new FieldInfo();
                 $obj->deserialize($value);
                 array_push($this->SelectedFields, $obj);
             }
         }
 
-        if (array_key_exists("ShardNum",$param) and $param["ShardNum"] !== null) {
-            $this->ShardNum = $param["ShardNum"];
+        if (array_key_exists('ShardNum',$param) and $param['ShardNum'] !== null) {
+            $this->ShardNum = $param['ShardNum'];
         }
     }
 }

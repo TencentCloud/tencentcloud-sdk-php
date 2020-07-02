@@ -62,16 +62,16 @@ class TrajectorySunData extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Zones",$param) and $param["Zones"] !== null) {
-            $this->Zones = $param["Zones"];
+        if (array_key_exists('Zones',$param) and $param['Zones'] !== null) {
+            $this->Zones = $param['Zones'];
         }
 
-        if (array_key_exists("Count",$param) and $param["Count"] !== null) {
-            $this->Count = $param["Count"];
+        if (array_key_exists('Count',$param) and $param['Count'] !== null) {
+            $this->Count = $param['Count'];
         }
 
-        if (array_key_exists("AvgStayTime",$param) and $param["AvgStayTime"] !== null) {
-            $this->AvgStayTime = $param["AvgStayTime"];
+        if (array_key_exists('AvgStayTime',$param) and $param['AvgStayTime'] !== null) {
+            $this->AvgStayTime = $param['AvgStayTime'];
         }
     }
 }

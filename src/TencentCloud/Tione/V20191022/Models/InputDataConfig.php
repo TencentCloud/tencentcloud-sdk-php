@@ -86,21 +86,21 @@ class InputDataConfig extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ChannelName",$param) and $param["ChannelName"] !== null) {
-            $this->ChannelName = $param["ChannelName"];
+        if (array_key_exists('ChannelName',$param) and $param['ChannelName'] !== null) {
+            $this->ChannelName = $param['ChannelName'];
         }
 
-        if (array_key_exists("DataSource",$param) and $param["DataSource"] !== null) {
+        if (array_key_exists('DataSource',$param) and $param['DataSource'] !== null) {
             $this->DataSource = new DataSource();
-            $this->DataSource->deserialize($param["DataSource"]);
+            $this->DataSource->deserialize($param['DataSource']);
         }
 
-        if (array_key_exists("InputMode",$param) and $param["InputMode"] !== null) {
-            $this->InputMode = $param["InputMode"];
+        if (array_key_exists('InputMode',$param) and $param['InputMode'] !== null) {
+            $this->InputMode = $param['InputMode'];
         }
 
-        if (array_key_exists("ContentType",$param) and $param["ContentType"] !== null) {
-            $this->ContentType = $param["ContentType"];
+        if (array_key_exists('ContentType',$param) and $param['ContentType'] !== null) {
+            $this->ContentType = $param['ContentType'];
         }
     }
 }

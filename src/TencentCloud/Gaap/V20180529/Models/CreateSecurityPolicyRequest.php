@@ -62,16 +62,16 @@ class CreateSecurityPolicyRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DefaultAction",$param) and $param["DefaultAction"] !== null) {
-            $this->DefaultAction = $param["DefaultAction"];
+        if (array_key_exists('DefaultAction',$param) and $param['DefaultAction'] !== null) {
+            $this->DefaultAction = $param['DefaultAction'];
         }
 
-        if (array_key_exists("ProxyId",$param) and $param["ProxyId"] !== null) {
-            $this->ProxyId = $param["ProxyId"];
+        if (array_key_exists('ProxyId',$param) and $param['ProxyId'] !== null) {
+            $this->ProxyId = $param['ProxyId'];
         }
 
-        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
-            $this->GroupId = $param["GroupId"];
+        if (array_key_exists('GroupId',$param) and $param['GroupId'] !== null) {
+            $this->GroupId = $param['GroupId'];
         }
     }
 }

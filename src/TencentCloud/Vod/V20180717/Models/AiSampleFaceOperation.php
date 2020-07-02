@@ -74,16 +74,16 @@ class AiSampleFaceOperation extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists('Type',$param) and $param['Type'] !== null) {
+            $this->Type = $param['Type'];
         }
 
-        if (array_key_exists("FaceIds",$param) and $param["FaceIds"] !== null) {
-            $this->FaceIds = $param["FaceIds"];
+        if (array_key_exists('FaceIds',$param) and $param['FaceIds'] !== null) {
+            $this->FaceIds = $param['FaceIds'];
         }
 
-        if (array_key_exists("FaceContents",$param) and $param["FaceContents"] !== null) {
-            $this->FaceContents = $param["FaceContents"];
+        if (array_key_exists('FaceContents',$param) and $param['FaceContents'] !== null) {
+            $this->FaceContents = $param['FaceContents'];
         }
     }
 }

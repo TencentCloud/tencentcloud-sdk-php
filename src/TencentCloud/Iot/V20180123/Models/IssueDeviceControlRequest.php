@@ -70,20 +70,20 @@ class IssueDeviceControlRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ProductId",$param) and $param["ProductId"] !== null) {
-            $this->ProductId = $param["ProductId"];
+        if (array_key_exists('ProductId',$param) and $param['ProductId'] !== null) {
+            $this->ProductId = $param['ProductId'];
         }
 
-        if (array_key_exists("DeviceName",$param) and $param["DeviceName"] !== null) {
-            $this->DeviceName = $param["DeviceName"];
+        if (array_key_exists('DeviceName',$param) and $param['DeviceName'] !== null) {
+            $this->DeviceName = $param['DeviceName'];
         }
 
-        if (array_key_exists("ControlData",$param) and $param["ControlData"] !== null) {
-            $this->ControlData = $param["ControlData"];
+        if (array_key_exists('ControlData',$param) and $param['ControlData'] !== null) {
+            $this->ControlData = $param['ControlData'];
         }
 
-        if (array_key_exists("Metadata",$param) and $param["Metadata"] !== null) {
-            $this->Metadata = $param["Metadata"];
+        if (array_key_exists('Metadata',$param) and $param['Metadata'] !== null) {
+            $this->Metadata = $param['Metadata'];
         }
     }
 }

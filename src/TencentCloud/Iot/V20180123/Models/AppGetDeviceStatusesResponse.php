@@ -54,17 +54,17 @@ class AppGetDeviceStatusesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DeviceStatuses",$param) and $param["DeviceStatuses"] !== null) {
+        if (array_key_exists('DeviceStatuses',$param) and $param['DeviceStatuses'] !== null) {
             $this->DeviceStatuses = [];
-            foreach ($param["DeviceStatuses"] as $key => $value){
+            foreach ($param['DeviceStatuses'] as $key => $value){
                 $obj = new DeviceStatus();
                 $obj->deserialize($value);
                 array_push($this->DeviceStatuses, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

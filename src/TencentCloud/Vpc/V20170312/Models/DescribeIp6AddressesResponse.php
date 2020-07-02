@@ -62,21 +62,21 @@ class DescribeIp6AddressesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("AddressSet",$param) and $param["AddressSet"] !== null) {
+        if (array_key_exists('AddressSet',$param) and $param['AddressSet'] !== null) {
             $this->AddressSet = [];
-            foreach ($param["AddressSet"] as $key => $value){
+            foreach ($param['AddressSet'] as $key => $value){
                 $obj = new Address();
                 $obj->deserialize($value);
                 array_push($this->AddressSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

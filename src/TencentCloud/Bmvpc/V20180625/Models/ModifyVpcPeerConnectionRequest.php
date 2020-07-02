@@ -62,16 +62,16 @@ class ModifyVpcPeerConnectionRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("VpcPeerConnectionId",$param) and $param["VpcPeerConnectionId"] !== null) {
-            $this->VpcPeerConnectionId = $param["VpcPeerConnectionId"];
+        if (array_key_exists('VpcPeerConnectionId',$param) and $param['VpcPeerConnectionId'] !== null) {
+            $this->VpcPeerConnectionId = $param['VpcPeerConnectionId'];
         }
 
-        if (array_key_exists("Bandwidth",$param) and $param["Bandwidth"] !== null) {
-            $this->Bandwidth = $param["Bandwidth"];
+        if (array_key_exists('Bandwidth',$param) and $param['Bandwidth'] !== null) {
+            $this->Bandwidth = $param['Bandwidth'];
         }
 
-        if (array_key_exists("VpcPeerConnectionName",$param) and $param["VpcPeerConnectionName"] !== null) {
-            $this->VpcPeerConnectionName = $param["VpcPeerConnectionName"];
+        if (array_key_exists('VpcPeerConnectionName',$param) and $param['VpcPeerConnectionName'] !== null) {
+            $this->VpcPeerConnectionName = $param['VpcPeerConnectionName'];
         }
     }
 }

@@ -78,24 +78,24 @@ class CreateAccountResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("UserName",$param) and $param["UserName"] !== null) {
-            $this->UserName = $param["UserName"];
+        if (array_key_exists('UserName',$param) and $param['UserName'] !== null) {
+            $this->UserName = $param['UserName'];
         }
 
-        if (array_key_exists("Host",$param) and $param["Host"] !== null) {
-            $this->Host = $param["Host"];
+        if (array_key_exists('Host',$param) and $param['Host'] !== null) {
+            $this->Host = $param['Host'];
         }
 
-        if (array_key_exists("ReadOnly",$param) and $param["ReadOnly"] !== null) {
-            $this->ReadOnly = $param["ReadOnly"];
+        if (array_key_exists('ReadOnly',$param) and $param['ReadOnly'] !== null) {
+            $this->ReadOnly = $param['ReadOnly'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

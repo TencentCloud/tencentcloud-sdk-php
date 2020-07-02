@@ -54,13 +54,13 @@ class DescribeDefaultSubnetResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Subnet",$param) and $param["Subnet"] !== null) {
+        if (array_key_exists('Subnet',$param) and $param['Subnet'] !== null) {
             $this->Subnet = new Subnet();
-            $this->Subnet->deserialize($param["Subnet"]);
+            $this->Subnet->deserialize($param['Subnet']);
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

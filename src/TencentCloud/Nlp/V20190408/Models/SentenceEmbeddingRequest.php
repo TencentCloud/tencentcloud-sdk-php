@@ -46,8 +46,8 @@ class SentenceEmbeddingRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Text",$param) and $param["Text"] !== null) {
-            $this->Text = $param["Text"];
+        if (array_key_exists('Text',$param) and $param['Text'] !== null) {
+            $this->Text = $param['Text'];
         }
     }
 }

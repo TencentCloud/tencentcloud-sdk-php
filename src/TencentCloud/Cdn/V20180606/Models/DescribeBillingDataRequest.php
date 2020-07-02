@@ -178,36 +178,36 @@ bandwidth：计费带宽
         if ($param === null) {
             return;
         }
-        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
-            $this->StartTime = $param["StartTime"];
+        if (array_key_exists('StartTime',$param) and $param['StartTime'] !== null) {
+            $this->StartTime = $param['StartTime'];
         }
 
-        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
-            $this->EndTime = $param["EndTime"];
+        if (array_key_exists('EndTime',$param) and $param['EndTime'] !== null) {
+            $this->EndTime = $param['EndTime'];
         }
 
-        if (array_key_exists("Interval",$param) and $param["Interval"] !== null) {
-            $this->Interval = $param["Interval"];
+        if (array_key_exists('Interval',$param) and $param['Interval'] !== null) {
+            $this->Interval = $param['Interval'];
         }
 
-        if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
-            $this->Domain = $param["Domain"];
+        if (array_key_exists('Domain',$param) and $param['Domain'] !== null) {
+            $this->Domain = $param['Domain'];
         }
 
-        if (array_key_exists("Project",$param) and $param["Project"] !== null) {
-            $this->Project = $param["Project"];
+        if (array_key_exists('Project',$param) and $param['Project'] !== null) {
+            $this->Project = $param['Project'];
         }
 
-        if (array_key_exists("Area",$param) and $param["Area"] !== null) {
-            $this->Area = $param["Area"];
+        if (array_key_exists('Area',$param) and $param['Area'] !== null) {
+            $this->Area = $param['Area'];
         }
 
-        if (array_key_exists("District",$param) and $param["District"] !== null) {
-            $this->District = $param["District"];
+        if (array_key_exists('District',$param) and $param['District'] !== null) {
+            $this->District = $param['District'];
         }
 
-        if (array_key_exists("Metric",$param) and $param["Metric"] !== null) {
-            $this->Metric = $param["Metric"];
+        if (array_key_exists('Metric',$param) and $param['Metric'] !== null) {
+            $this->Metric = $param['Metric'];
         }
     }
 }

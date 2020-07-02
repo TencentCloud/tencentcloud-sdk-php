@@ -78,29 +78,29 @@ class DescribePersonVisitInfoResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CompanyId",$param) and $param["CompanyId"] !== null) {
-            $this->CompanyId = $param["CompanyId"];
+        if (array_key_exists('CompanyId',$param) and $param['CompanyId'] !== null) {
+            $this->CompanyId = $param['CompanyId'];
         }
 
-        if (array_key_exists("ShopId",$param) and $param["ShopId"] !== null) {
-            $this->ShopId = $param["ShopId"];
+        if (array_key_exists('ShopId',$param) and $param['ShopId'] !== null) {
+            $this->ShopId = $param['ShopId'];
         }
 
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("PersonVisitInfoSet",$param) and $param["PersonVisitInfoSet"] !== null) {
+        if (array_key_exists('PersonVisitInfoSet',$param) and $param['PersonVisitInfoSet'] !== null) {
             $this->PersonVisitInfoSet = [];
-            foreach ($param["PersonVisitInfoSet"] as $key => $value){
+            foreach ($param['PersonVisitInfoSet'] as $key => $value){
                 $obj = new PersonVisitInfo();
                 $obj->deserialize($value);
                 array_push($this->PersonVisitInfoSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

@@ -46,9 +46,9 @@ class EditMediaTaskInput extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FileInfoSet",$param) and $param["FileInfoSet"] !== null) {
+        if (array_key_exists('FileInfoSet',$param) and $param['FileInfoSet'] !== null) {
             $this->FileInfoSet = [];
-            foreach ($param["FileInfoSet"] as $key => $value){
+            foreach ($param['FileInfoSet'] as $key => $value){
                 $obj = new EditMediaFileInfo();
                 $obj->deserialize($value);
                 array_push($this->FileInfoSet, $obj);

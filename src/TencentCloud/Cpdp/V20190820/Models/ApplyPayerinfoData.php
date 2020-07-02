@@ -74,20 +74,20 @@ class ApplyPayerinfoData extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MerchantId",$param) and $param["MerchantId"] !== null) {
-            $this->MerchantId = $param["MerchantId"];
+        if (array_key_exists('MerchantId',$param) and $param['MerchantId'] !== null) {
+            $this->MerchantId = $param['MerchantId'];
         }
 
-        if (array_key_exists("PayerId",$param) and $param["PayerId"] !== null) {
-            $this->PayerId = $param["PayerId"];
+        if (array_key_exists('PayerId',$param) and $param['PayerId'] !== null) {
+            $this->PayerId = $param['PayerId'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("FailReason",$param) and $param["FailReason"] !== null) {
-            $this->FailReason = $param["FailReason"];
+        if (array_key_exists('FailReason',$param) and $param['FailReason'] !== null) {
+            $this->FailReason = $param['FailReason'];
         }
     }
 }

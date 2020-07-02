@@ -102,36 +102,36 @@ class L4HealthConfig extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Protocol",$param) and $param["Protocol"] !== null) {
-            $this->Protocol = $param["Protocol"];
+        if (array_key_exists('Protocol',$param) and $param['Protocol'] !== null) {
+            $this->Protocol = $param['Protocol'];
         }
 
-        if (array_key_exists("VirtualPort",$param) and $param["VirtualPort"] !== null) {
-            $this->VirtualPort = $param["VirtualPort"];
+        if (array_key_exists('VirtualPort',$param) and $param['VirtualPort'] !== null) {
+            $this->VirtualPort = $param['VirtualPort'];
         }
 
-        if (array_key_exists("Enable",$param) and $param["Enable"] !== null) {
-            $this->Enable = $param["Enable"];
+        if (array_key_exists('Enable',$param) and $param['Enable'] !== null) {
+            $this->Enable = $param['Enable'];
         }
 
-        if (array_key_exists("TimeOut",$param) and $param["TimeOut"] !== null) {
-            $this->TimeOut = $param["TimeOut"];
+        if (array_key_exists('TimeOut',$param) and $param['TimeOut'] !== null) {
+            $this->TimeOut = $param['TimeOut'];
         }
 
-        if (array_key_exists("Interval",$param) and $param["Interval"] !== null) {
-            $this->Interval = $param["Interval"];
+        if (array_key_exists('Interval',$param) and $param['Interval'] !== null) {
+            $this->Interval = $param['Interval'];
         }
 
-        if (array_key_exists("KickNum",$param) and $param["KickNum"] !== null) {
-            $this->KickNum = $param["KickNum"];
+        if (array_key_exists('KickNum',$param) and $param['KickNum'] !== null) {
+            $this->KickNum = $param['KickNum'];
         }
 
-        if (array_key_exists("AliveNum",$param) and $param["AliveNum"] !== null) {
-            $this->AliveNum = $param["AliveNum"];
+        if (array_key_exists('AliveNum',$param) and $param['AliveNum'] !== null) {
+            $this->AliveNum = $param['AliveNum'];
         }
 
-        if (array_key_exists("KeepTime",$param) and $param["KeepTime"] !== null) {
-            $this->KeepTime = $param["KeepTime"];
+        if (array_key_exists('KeepTime',$param) and $param['KeepTime'] !== null) {
+            $this->KeepTime = $param['KeepTime'];
         }
     }
 }

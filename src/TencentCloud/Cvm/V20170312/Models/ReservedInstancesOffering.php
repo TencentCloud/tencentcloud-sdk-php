@@ -146,40 +146,40 @@ class ReservedInstancesOffering extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
-            $this->Zone = $param["Zone"];
+        if (array_key_exists('Zone',$param) and $param['Zone'] !== null) {
+            $this->Zone = $param['Zone'];
         }
 
-        if (array_key_exists("CurrencyCode",$param) and $param["CurrencyCode"] !== null) {
-            $this->CurrencyCode = $param["CurrencyCode"];
+        if (array_key_exists('CurrencyCode',$param) and $param['CurrencyCode'] !== null) {
+            $this->CurrencyCode = $param['CurrencyCode'];
         }
 
-        if (array_key_exists("Duration",$param) and $param["Duration"] !== null) {
-            $this->Duration = $param["Duration"];
+        if (array_key_exists('Duration',$param) and $param['Duration'] !== null) {
+            $this->Duration = $param['Duration'];
         }
 
-        if (array_key_exists("FixedPrice",$param) and $param["FixedPrice"] !== null) {
-            $this->FixedPrice = $param["FixedPrice"];
+        if (array_key_exists('FixedPrice',$param) and $param['FixedPrice'] !== null) {
+            $this->FixedPrice = $param['FixedPrice'];
         }
 
-        if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
-            $this->InstanceType = $param["InstanceType"];
+        if (array_key_exists('InstanceType',$param) and $param['InstanceType'] !== null) {
+            $this->InstanceType = $param['InstanceType'];
         }
 
-        if (array_key_exists("OfferingType",$param) and $param["OfferingType"] !== null) {
-            $this->OfferingType = $param["OfferingType"];
+        if (array_key_exists('OfferingType',$param) and $param['OfferingType'] !== null) {
+            $this->OfferingType = $param['OfferingType'];
         }
 
-        if (array_key_exists("ReservedInstancesOfferingId",$param) and $param["ReservedInstancesOfferingId"] !== null) {
-            $this->ReservedInstancesOfferingId = $param["ReservedInstancesOfferingId"];
+        if (array_key_exists('ReservedInstancesOfferingId',$param) and $param['ReservedInstancesOfferingId'] !== null) {
+            $this->ReservedInstancesOfferingId = $param['ReservedInstancesOfferingId'];
         }
 
-        if (array_key_exists("ProductDescription",$param) and $param["ProductDescription"] !== null) {
-            $this->ProductDescription = $param["ProductDescription"];
+        if (array_key_exists('ProductDescription',$param) and $param['ProductDescription'] !== null) {
+            $this->ProductDescription = $param['ProductDescription'];
         }
 
-        if (array_key_exists("UsagePrice",$param) and $param["UsagePrice"] !== null) {
-            $this->UsagePrice = $param["UsagePrice"];
+        if (array_key_exists('UsagePrice',$param) and $param['UsagePrice'] !== null) {
+            $this->UsagePrice = $param['UsagePrice'];
         }
     }
 }

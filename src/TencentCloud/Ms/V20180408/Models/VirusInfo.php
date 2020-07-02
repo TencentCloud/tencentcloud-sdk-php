@@ -62,16 +62,16 @@ class VirusInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SafeType",$param) and $param["SafeType"] !== null) {
-            $this->SafeType = $param["SafeType"];
+        if (array_key_exists('SafeType',$param) and $param['SafeType'] !== null) {
+            $this->SafeType = $param['SafeType'];
         }
 
-        if (array_key_exists("VirusName",$param) and $param["VirusName"] !== null) {
-            $this->VirusName = $param["VirusName"];
+        if (array_key_exists('VirusName',$param) and $param['VirusName'] !== null) {
+            $this->VirusName = $param['VirusName'];
         }
 
-        if (array_key_exists("VirusDesc",$param) and $param["VirusDesc"] !== null) {
-            $this->VirusDesc = $param["VirusDesc"];
+        if (array_key_exists('VirusDesc',$param) and $param['VirusDesc'] !== null) {
+            $this->VirusDesc = $param['VirusDesc'];
         }
     }
 }

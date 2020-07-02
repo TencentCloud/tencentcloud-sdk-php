@@ -62,21 +62,21 @@ class DescribeWorkflowsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("WorkflowInfoSet",$param) and $param["WorkflowInfoSet"] !== null) {
+        if (array_key_exists('WorkflowInfoSet',$param) and $param['WorkflowInfoSet'] !== null) {
             $this->WorkflowInfoSet = [];
-            foreach ($param["WorkflowInfoSet"] as $key => $value){
+            foreach ($param['WorkflowInfoSet'] as $key => $value){
                 $obj = new WorkflowInfo();
                 $obj->deserialize($value);
                 array_push($this->WorkflowInfoSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

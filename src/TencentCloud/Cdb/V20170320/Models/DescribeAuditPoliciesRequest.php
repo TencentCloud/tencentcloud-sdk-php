@@ -90,28 +90,28 @@ class DescribeAuditPoliciesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("PolicyId",$param) and $param["PolicyId"] !== null) {
-            $this->PolicyId = $param["PolicyId"];
+        if (array_key_exists('PolicyId',$param) and $param['PolicyId'] !== null) {
+            $this->PolicyId = $param['PolicyId'];
         }
 
-        if (array_key_exists("PolicyName",$param) and $param["PolicyName"] !== null) {
-            $this->PolicyName = $param["PolicyName"];
+        if (array_key_exists('PolicyName',$param) and $param['PolicyName'] !== null) {
+            $this->PolicyName = $param['PolicyName'];
         }
 
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
+        if (array_key_exists('Limit',$param) and $param['Limit'] !== null) {
+            $this->Limit = $param['Limit'];
         }
 
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
+        if (array_key_exists('Offset',$param) and $param['Offset'] !== null) {
+            $this->Offset = $param['Offset'];
         }
 
-        if (array_key_exists("RuleId",$param) and $param["RuleId"] !== null) {
-            $this->RuleId = $param["RuleId"];
+        if (array_key_exists('RuleId',$param) and $param['RuleId'] !== null) {
+            $this->RuleId = $param['RuleId'];
         }
     }
 }

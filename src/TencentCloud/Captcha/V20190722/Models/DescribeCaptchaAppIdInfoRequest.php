@@ -46,8 +46,8 @@ class DescribeCaptchaAppIdInfoRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CaptchaAppId",$param) and $param["CaptchaAppId"] !== null) {
-            $this->CaptchaAppId = $param["CaptchaAppId"];
+        if (array_key_exists('CaptchaAppId',$param) and $param['CaptchaAppId'] !== null) {
+            $this->CaptchaAppId = $param['CaptchaAppId'];
         }
     }
 }

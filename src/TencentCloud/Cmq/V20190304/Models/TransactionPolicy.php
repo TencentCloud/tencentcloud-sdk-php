@@ -62,12 +62,12 @@ class TransactionPolicy extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FirstQueryInterval",$param) and $param["FirstQueryInterval"] !== null) {
-            $this->FirstQueryInterval = $param["FirstQueryInterval"];
+        if (array_key_exists('FirstQueryInterval',$param) and $param['FirstQueryInterval'] !== null) {
+            $this->FirstQueryInterval = $param['FirstQueryInterval'];
         }
 
-        if (array_key_exists("MaxQueryCount",$param) and $param["MaxQueryCount"] !== null) {
-            $this->MaxQueryCount = $param["MaxQueryCount"];
+        if (array_key_exists('MaxQueryCount',$param) and $param['MaxQueryCount'] !== null) {
+            $this->MaxQueryCount = $param['MaxQueryCount'];
         }
     }
 }

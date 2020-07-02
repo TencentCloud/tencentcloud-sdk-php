@@ -54,12 +54,12 @@ class UpdateCfsFileSystemSizeLimitRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FsLimit",$param) and $param["FsLimit"] !== null) {
-            $this->FsLimit = $param["FsLimit"];
+        if (array_key_exists('FsLimit',$param) and $param['FsLimit'] !== null) {
+            $this->FsLimit = $param['FsLimit'];
         }
 
-        if (array_key_exists("FileSystemId",$param) and $param["FileSystemId"] !== null) {
-            $this->FileSystemId = $param["FileSystemId"];
+        if (array_key_exists('FileSystemId',$param) and $param['FileSystemId'] !== null) {
+            $this->FileSystemId = $param['FileSystemId'];
         }
     }
 }

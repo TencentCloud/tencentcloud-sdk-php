@@ -58,12 +58,12 @@ class UploadDataJsonResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
-            $this->Data = $param["Data"];
+        if (array_key_exists('Data',$param) and $param['Data'] !== null) {
+            $this->Data = $param['Data'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

@@ -70,20 +70,20 @@ class ImageMaterial extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Height",$param) and $param["Height"] !== null) {
-            $this->Height = $param["Height"];
+        if (array_key_exists('Height',$param) and $param['Height'] !== null) {
+            $this->Height = $param['Height'];
         }
 
-        if (array_key_exists("Width",$param) and $param["Width"] !== null) {
-            $this->Width = $param["Width"];
+        if (array_key_exists('Width',$param) and $param['Width'] !== null) {
+            $this->Width = $param['Width'];
         }
 
-        if (array_key_exists("MaterialUrl",$param) and $param["MaterialUrl"] !== null) {
-            $this->MaterialUrl = $param["MaterialUrl"];
+        if (array_key_exists('MaterialUrl',$param) and $param['MaterialUrl'] !== null) {
+            $this->MaterialUrl = $param['MaterialUrl'];
         }
 
-        if (array_key_exists("Size",$param) and $param["Size"] !== null) {
-            $this->Size = $param["Size"];
+        if (array_key_exists('Size',$param) and $param['Size'] !== null) {
+            $this->Size = $param['Size'];
         }
     }
 }

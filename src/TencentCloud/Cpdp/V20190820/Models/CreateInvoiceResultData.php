@@ -62,16 +62,16 @@ class CreateInvoiceResultData extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("State",$param) and $param["State"] !== null) {
-            $this->State = $param["State"];
+        if (array_key_exists('State',$param) and $param['State'] !== null) {
+            $this->State = $param['State'];
         }
 
-        if (array_key_exists("InvoiceId",$param) and $param["InvoiceId"] !== null) {
-            $this->InvoiceId = $param["InvoiceId"];
+        if (array_key_exists('InvoiceId',$param) and $param['InvoiceId'] !== null) {
+            $this->InvoiceId = $param['InvoiceId'];
         }
 
-        if (array_key_exists("OrderSn",$param) and $param["OrderSn"] !== null) {
-            $this->OrderSn = $param["OrderSn"];
+        if (array_key_exists('OrderSn',$param) and $param['OrderSn'] !== null) {
+            $this->OrderSn = $param['OrderSn'];
         }
     }
 }

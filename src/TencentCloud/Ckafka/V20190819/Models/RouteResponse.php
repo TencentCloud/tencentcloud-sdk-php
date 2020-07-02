@@ -50,9 +50,9 @@ class RouteResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Routers",$param) and $param["Routers"] !== null) {
+        if (array_key_exists('Routers',$param) and $param['Routers'] !== null) {
             $this->Routers = [];
-            foreach ($param["Routers"] as $key => $value){
+            foreach ($param['Routers'] as $key => $value){
                 $obj = new Route();
                 $obj->deserialize($value);
                 array_push($this->Routers, $obj);

@@ -54,12 +54,12 @@ class GetActionSequenceResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ActionSequence",$param) and $param["ActionSequence"] !== null) {
-            $this->ActionSequence = $param["ActionSequence"];
+        if (array_key_exists('ActionSequence',$param) and $param['ActionSequence'] !== null) {
+            $this->ActionSequence = $param['ActionSequence'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

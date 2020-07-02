@@ -54,12 +54,12 @@ class CheckDomainRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DomainName",$param) and $param["DomainName"] !== null) {
-            $this->DomainName = $param["DomainName"];
+        if (array_key_exists('DomainName',$param) and $param['DomainName'] !== null) {
+            $this->DomainName = $param['DomainName'];
         }
 
-        if (array_key_exists("Period",$param) and $param["Period"] !== null) {
-            $this->Period = $param["Period"];
+        if (array_key_exists('Period',$param) and $param['Period'] !== null) {
+            $this->Period = $param['Period'];
         }
     }
 }

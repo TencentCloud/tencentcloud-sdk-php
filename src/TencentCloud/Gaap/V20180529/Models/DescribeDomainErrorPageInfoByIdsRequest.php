@@ -46,8 +46,8 @@ class DescribeDomainErrorPageInfoByIdsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ErrorPageIds",$param) and $param["ErrorPageIds"] !== null) {
-            $this->ErrorPageIds = $param["ErrorPageIds"];
+        if (array_key_exists('ErrorPageIds',$param) and $param['ErrorPageIds'] !== null) {
+            $this->ErrorPageIds = $param['ErrorPageIds'];
         }
     }
 }

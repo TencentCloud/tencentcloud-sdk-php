@@ -54,12 +54,12 @@ class SetAutoRenewRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceIds",$param) and $param["InstanceIds"] !== null) {
-            $this->InstanceIds = $param["InstanceIds"];
+        if (array_key_exists('InstanceIds',$param) and $param['InstanceIds'] !== null) {
+            $this->InstanceIds = $param['InstanceIds'];
         }
 
-        if (array_key_exists("AutoRenewFlag",$param) and $param["AutoRenewFlag"] !== null) {
-            $this->AutoRenewFlag = $param["AutoRenewFlag"];
+        if (array_key_exists('AutoRenewFlag',$param) and $param['AutoRenewFlag'] !== null) {
+            $this->AutoRenewFlag = $param['AutoRenewFlag'];
         }
     }
 }

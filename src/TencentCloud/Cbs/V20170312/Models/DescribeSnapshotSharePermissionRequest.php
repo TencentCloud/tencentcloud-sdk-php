@@ -46,8 +46,8 @@ class DescribeSnapshotSharePermissionRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SnapshotId",$param) and $param["SnapshotId"] !== null) {
-            $this->SnapshotId = $param["SnapshotId"];
+        if (array_key_exists('SnapshotId',$param) and $param['SnapshotId'] !== null) {
+            $this->SnapshotId = $param['SnapshotId'];
         }
     }
 }

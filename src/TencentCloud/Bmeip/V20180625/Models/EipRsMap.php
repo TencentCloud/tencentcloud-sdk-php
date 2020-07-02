@@ -54,12 +54,12 @@ class EipRsMap extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("EipId",$param) and $param["EipId"] !== null) {
-            $this->EipId = $param["EipId"];
+        if (array_key_exists('EipId',$param) and $param['EipId'] !== null) {
+            $this->EipId = $param['EipId'];
         }
 
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
     }
 }

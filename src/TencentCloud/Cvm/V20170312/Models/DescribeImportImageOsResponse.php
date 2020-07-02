@@ -62,22 +62,22 @@ class DescribeImportImageOsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ImportImageOsListSupported",$param) and $param["ImportImageOsListSupported"] !== null) {
+        if (array_key_exists('ImportImageOsListSupported',$param) and $param['ImportImageOsListSupported'] !== null) {
             $this->ImportImageOsListSupported = new ImageOsList();
-            $this->ImportImageOsListSupported->deserialize($param["ImportImageOsListSupported"]);
+            $this->ImportImageOsListSupported->deserialize($param['ImportImageOsListSupported']);
         }
 
-        if (array_key_exists("ImportImageOsVersionSet",$param) and $param["ImportImageOsVersionSet"] !== null) {
+        if (array_key_exists('ImportImageOsVersionSet',$param) and $param['ImportImageOsVersionSet'] !== null) {
             $this->ImportImageOsVersionSet = [];
-            foreach ($param["ImportImageOsVersionSet"] as $key => $value){
+            foreach ($param['ImportImageOsVersionSet'] as $key => $value){
                 $obj = new OsVersion();
                 $obj->deserialize($value);
                 array_push($this->ImportImageOsVersionSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

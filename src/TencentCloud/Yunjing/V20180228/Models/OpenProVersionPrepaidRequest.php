@@ -54,14 +54,14 @@ class OpenProVersionPrepaidRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ChargePrepaid",$param) and $param["ChargePrepaid"] !== null) {
+        if (array_key_exists('ChargePrepaid',$param) and $param['ChargePrepaid'] !== null) {
             $this->ChargePrepaid = new ChargePrepaid();
-            $this->ChargePrepaid->deserialize($param["ChargePrepaid"]);
+            $this->ChargePrepaid->deserialize($param['ChargePrepaid']);
         }
 
-        if (array_key_exists("Machines",$param) and $param["Machines"] !== null) {
+        if (array_key_exists('Machines',$param) and $param['Machines'] !== null) {
             $this->Machines = [];
-            foreach ($param["Machines"] as $key => $value){
+            foreach ($param['Machines'] as $key => $value){
                 $obj = new ProVersionMachine();
                 $obj->deserialize($value);
                 array_push($this->Machines, $obj);

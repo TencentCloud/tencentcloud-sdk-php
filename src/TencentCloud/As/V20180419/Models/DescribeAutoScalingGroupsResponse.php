@@ -62,21 +62,21 @@ class DescribeAutoScalingGroupsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AutoScalingGroupSet",$param) and $param["AutoScalingGroupSet"] !== null) {
+        if (array_key_exists('AutoScalingGroupSet',$param) and $param['AutoScalingGroupSet'] !== null) {
             $this->AutoScalingGroupSet = [];
-            foreach ($param["AutoScalingGroupSet"] as $key => $value){
+            foreach ($param['AutoScalingGroupSet'] as $key => $value){
                 $obj = new AutoScalingGroup();
                 $obj->deserialize($value);
                 array_push($this->AutoScalingGroupSet, $obj);
             }
         }
 
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

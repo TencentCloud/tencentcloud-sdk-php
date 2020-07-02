@@ -54,12 +54,12 @@ class SyncImagesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ImageIds",$param) and $param["ImageIds"] !== null) {
-            $this->ImageIds = $param["ImageIds"];
+        if (array_key_exists('ImageIds',$param) and $param['ImageIds'] !== null) {
+            $this->ImageIds = $param['ImageIds'];
         }
 
-        if (array_key_exists("DestinationRegions",$param) and $param["DestinationRegions"] !== null) {
-            $this->DestinationRegions = $param["DestinationRegions"];
+        if (array_key_exists('DestinationRegions',$param) and $param['DestinationRegions'] !== null) {
+            $this->DestinationRegions = $param['DestinationRegions'];
         }
     }
 }

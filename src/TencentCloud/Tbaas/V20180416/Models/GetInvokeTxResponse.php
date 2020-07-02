@@ -70,20 +70,20 @@ class GetInvokeTxResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TxValidationCode",$param) and $param["TxValidationCode"] !== null) {
-            $this->TxValidationCode = $param["TxValidationCode"];
+        if (array_key_exists('TxValidationCode',$param) and $param['TxValidationCode'] !== null) {
+            $this->TxValidationCode = $param['TxValidationCode'];
         }
 
-        if (array_key_exists("TxValidationMsg",$param) and $param["TxValidationMsg"] !== null) {
-            $this->TxValidationMsg = $param["TxValidationMsg"];
+        if (array_key_exists('TxValidationMsg',$param) and $param['TxValidationMsg'] !== null) {
+            $this->TxValidationMsg = $param['TxValidationMsg'];
         }
 
-        if (array_key_exists("BlockId",$param) and $param["BlockId"] !== null) {
-            $this->BlockId = $param["BlockId"];
+        if (array_key_exists('BlockId',$param) and $param['BlockId'] !== null) {
+            $this->BlockId = $param['BlockId'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

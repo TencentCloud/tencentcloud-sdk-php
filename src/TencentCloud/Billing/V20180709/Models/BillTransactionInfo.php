@@ -110,40 +110,40 @@ class BillTransactionInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ActionType",$param) and $param["ActionType"] !== null) {
-            $this->ActionType = $param["ActionType"];
+        if (array_key_exists('ActionType',$param) and $param['ActionType'] !== null) {
+            $this->ActionType = $param['ActionType'];
         }
 
-        if (array_key_exists("Amount",$param) and $param["Amount"] !== null) {
-            $this->Amount = $param["Amount"];
+        if (array_key_exists('Amount',$param) and $param['Amount'] !== null) {
+            $this->Amount = $param['Amount'];
         }
 
-        if (array_key_exists("Balance",$param) and $param["Balance"] !== null) {
-            $this->Balance = $param["Balance"];
+        if (array_key_exists('Balance',$param) and $param['Balance'] !== null) {
+            $this->Balance = $param['Balance'];
         }
 
-        if (array_key_exists("BillId",$param) and $param["BillId"] !== null) {
-            $this->BillId = $param["BillId"];
+        if (array_key_exists('BillId',$param) and $param['BillId'] !== null) {
+            $this->BillId = $param['BillId'];
         }
 
-        if (array_key_exists("OperationInfo",$param) and $param["OperationInfo"] !== null) {
-            $this->OperationInfo = $param["OperationInfo"];
+        if (array_key_exists('OperationInfo',$param) and $param['OperationInfo'] !== null) {
+            $this->OperationInfo = $param['OperationInfo'];
         }
 
-        if (array_key_exists("OperationTime",$param) and $param["OperationTime"] !== null) {
-            $this->OperationTime = $param["OperationTime"];
+        if (array_key_exists('OperationTime',$param) and $param['OperationTime'] !== null) {
+            $this->OperationTime = $param['OperationTime'];
         }
 
-        if (array_key_exists("Cash",$param) and $param["Cash"] !== null) {
-            $this->Cash = $param["Cash"];
+        if (array_key_exists('Cash',$param) and $param['Cash'] !== null) {
+            $this->Cash = $param['Cash'];
         }
 
-        if (array_key_exists("Incentive",$param) and $param["Incentive"] !== null) {
-            $this->Incentive = $param["Incentive"];
+        if (array_key_exists('Incentive',$param) and $param['Incentive'] !== null) {
+            $this->Incentive = $param['Incentive'];
         }
 
-        if (array_key_exists("Freezing",$param) and $param["Freezing"] !== null) {
-            $this->Freezing = $param["Freezing"];
+        if (array_key_exists('Freezing',$param) and $param['Freezing'] !== null) {
+            $this->Freezing = $param['Freezing'];
         }
     }
 }

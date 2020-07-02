@@ -46,8 +46,8 @@ class PreviewPaiDomainNameRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DomainNameType",$param) and $param["DomainNameType"] !== null) {
-            $this->DomainNameType = $param["DomainNameType"];
+        if (array_key_exists('DomainNameType',$param) and $param['DomainNameType'] !== null) {
+            $this->DomainNameType = $param['DomainNameType'];
         }
     }
 }

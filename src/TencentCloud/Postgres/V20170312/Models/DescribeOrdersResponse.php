@@ -62,21 +62,21 @@ class DescribeOrdersResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("Deals",$param) and $param["Deals"] !== null) {
+        if (array_key_exists('Deals',$param) and $param['Deals'] !== null) {
             $this->Deals = [];
-            foreach ($param["Deals"] as $key => $value){
+            foreach ($param['Deals'] as $key => $value){
                 $obj = new PgDeal();
                 $obj->deserialize($value);
                 array_push($this->Deals, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

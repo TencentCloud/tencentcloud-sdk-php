@@ -54,17 +54,17 @@ class DescribeTeamsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TeamSet",$param) and $param["TeamSet"] !== null) {
+        if (array_key_exists('TeamSet',$param) and $param['TeamSet'] !== null) {
             $this->TeamSet = [];
-            foreach ($param["TeamSet"] as $key => $value){
+            foreach ($param['TeamSet'] as $key => $value){
                 $obj = new TeamInfo();
                 $obj->deserialize($value);
                 array_push($this->TeamSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

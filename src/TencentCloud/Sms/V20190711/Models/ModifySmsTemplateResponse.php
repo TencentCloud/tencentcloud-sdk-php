@@ -54,13 +54,13 @@ class ModifySmsTemplateResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ModifyTemplateStatus",$param) and $param["ModifyTemplateStatus"] !== null) {
+        if (array_key_exists('ModifyTemplateStatus',$param) and $param['ModifyTemplateStatus'] !== null) {
             $this->ModifyTemplateStatus = new ModifyTemplateStatus();
-            $this->ModifyTemplateStatus->deserialize($param["ModifyTemplateStatus"]);
+            $this->ModifyTemplateStatus->deserialize($param['ModifyTemplateStatus']);
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

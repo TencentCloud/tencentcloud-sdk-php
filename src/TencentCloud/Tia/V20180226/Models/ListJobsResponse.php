@@ -54,17 +54,17 @@ class ListJobsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Jobs",$param) and $param["Jobs"] !== null) {
+        if (array_key_exists('Jobs',$param) and $param['Jobs'] !== null) {
             $this->Jobs = [];
-            foreach ($param["Jobs"] as $key => $value){
+            foreach ($param['Jobs'] as $key => $value){
                 $obj = new Job();
                 $obj->deserialize($value);
                 array_push($this->Jobs, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

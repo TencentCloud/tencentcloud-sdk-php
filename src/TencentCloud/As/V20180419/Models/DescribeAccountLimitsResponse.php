@@ -78,24 +78,24 @@ class DescribeAccountLimitsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MaxNumberOfLaunchConfigurations",$param) and $param["MaxNumberOfLaunchConfigurations"] !== null) {
-            $this->MaxNumberOfLaunchConfigurations = $param["MaxNumberOfLaunchConfigurations"];
+        if (array_key_exists('MaxNumberOfLaunchConfigurations',$param) and $param['MaxNumberOfLaunchConfigurations'] !== null) {
+            $this->MaxNumberOfLaunchConfigurations = $param['MaxNumberOfLaunchConfigurations'];
         }
 
-        if (array_key_exists("NumberOfLaunchConfigurations",$param) and $param["NumberOfLaunchConfigurations"] !== null) {
-            $this->NumberOfLaunchConfigurations = $param["NumberOfLaunchConfigurations"];
+        if (array_key_exists('NumberOfLaunchConfigurations',$param) and $param['NumberOfLaunchConfigurations'] !== null) {
+            $this->NumberOfLaunchConfigurations = $param['NumberOfLaunchConfigurations'];
         }
 
-        if (array_key_exists("MaxNumberOfAutoScalingGroups",$param) and $param["MaxNumberOfAutoScalingGroups"] !== null) {
-            $this->MaxNumberOfAutoScalingGroups = $param["MaxNumberOfAutoScalingGroups"];
+        if (array_key_exists('MaxNumberOfAutoScalingGroups',$param) and $param['MaxNumberOfAutoScalingGroups'] !== null) {
+            $this->MaxNumberOfAutoScalingGroups = $param['MaxNumberOfAutoScalingGroups'];
         }
 
-        if (array_key_exists("NumberOfAutoScalingGroups",$param) and $param["NumberOfAutoScalingGroups"] !== null) {
-            $this->NumberOfAutoScalingGroups = $param["NumberOfAutoScalingGroups"];
+        if (array_key_exists('NumberOfAutoScalingGroups',$param) and $param['NumberOfAutoScalingGroups'] !== null) {
+            $this->NumberOfAutoScalingGroups = $param['NumberOfAutoScalingGroups'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

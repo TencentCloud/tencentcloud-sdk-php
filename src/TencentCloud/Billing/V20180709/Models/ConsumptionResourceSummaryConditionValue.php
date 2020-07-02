@@ -70,36 +70,36 @@ class ConsumptionResourceSummaryConditionValue extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Business",$param) and $param["Business"] !== null) {
+        if (array_key_exists('Business',$param) and $param['Business'] !== null) {
             $this->Business = [];
-            foreach ($param["Business"] as $key => $value){
+            foreach ($param['Business'] as $key => $value){
                 $obj = new ConditionBusiness();
                 $obj->deserialize($value);
                 array_push($this->Business, $obj);
             }
         }
 
-        if (array_key_exists("Project",$param) and $param["Project"] !== null) {
+        if (array_key_exists('Project',$param) and $param['Project'] !== null) {
             $this->Project = [];
-            foreach ($param["Project"] as $key => $value){
+            foreach ($param['Project'] as $key => $value){
                 $obj = new ConditionProject();
                 $obj->deserialize($value);
                 array_push($this->Project, $obj);
             }
         }
 
-        if (array_key_exists("Region",$param) and $param["Region"] !== null) {
+        if (array_key_exists('Region',$param) and $param['Region'] !== null) {
             $this->Region = [];
-            foreach ($param["Region"] as $key => $value){
+            foreach ($param['Region'] as $key => $value){
                 $obj = new ConditionRegion();
                 $obj->deserialize($value);
                 array_push($this->Region, $obj);
             }
         }
 
-        if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {
+        if (array_key_exists('PayMode',$param) and $param['PayMode'] !== null) {
             $this->PayMode = [];
-            foreach ($param["PayMode"] as $key => $value){
+            foreach ($param['PayMode'] as $key => $value){
                 $obj = new ConditionPayMode();
                 $obj->deserialize($value);
                 array_push($this->PayMode, $obj);

@@ -54,12 +54,12 @@ class SimilarWordsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Text",$param) and $param["Text"] !== null) {
-            $this->Text = $param["Text"];
+        if (array_key_exists('Text',$param) and $param['Text'] !== null) {
+            $this->Text = $param['Text'];
         }
 
-        if (array_key_exists("WordNumber",$param) and $param["WordNumber"] !== null) {
-            $this->WordNumber = $param["WordNumber"];
+        if (array_key_exists('WordNumber',$param) and $param['WordNumber'] !== null) {
+            $this->WordNumber = $param['WordNumber'];
         }
     }
 }

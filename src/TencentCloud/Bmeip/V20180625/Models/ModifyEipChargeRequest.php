@@ -62,16 +62,16 @@ class ModifyEipChargeRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {
-            $this->PayMode = $param["PayMode"];
+        if (array_key_exists('PayMode',$param) and $param['PayMode'] !== null) {
+            $this->PayMode = $param['PayMode'];
         }
 
-        if (array_key_exists("EipIds",$param) and $param["EipIds"] !== null) {
-            $this->EipIds = $param["EipIds"];
+        if (array_key_exists('EipIds',$param) and $param['EipIds'] !== null) {
+            $this->EipIds = $param['EipIds'];
         }
 
-        if (array_key_exists("Bandwidth",$param) and $param["Bandwidth"] !== null) {
-            $this->Bandwidth = $param["Bandwidth"];
+        if (array_key_exists('Bandwidth',$param) and $param['Bandwidth'] !== null) {
+            $this->Bandwidth = $param['Bandwidth'];
         }
     }
 }

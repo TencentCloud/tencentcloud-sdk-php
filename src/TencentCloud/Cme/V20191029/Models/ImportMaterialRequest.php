@@ -98,33 +98,33 @@ class ImportMaterialRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Platform",$param) and $param["Platform"] !== null) {
-            $this->Platform = $param["Platform"];
+        if (array_key_exists('Platform',$param) and $param['Platform'] !== null) {
+            $this->Platform = $param['Platform'];
         }
 
-        if (array_key_exists("VodFileId",$param) and $param["VodFileId"] !== null) {
-            $this->VodFileId = $param["VodFileId"];
+        if (array_key_exists('VodFileId',$param) and $param['VodFileId'] !== null) {
+            $this->VodFileId = $param['VodFileId'];
         }
 
-        if (array_key_exists("Owner",$param) and $param["Owner"] !== null) {
+        if (array_key_exists('Owner',$param) and $param['Owner'] !== null) {
             $this->Owner = new Entity();
-            $this->Owner->deserialize($param["Owner"]);
+            $this->Owner->deserialize($param['Owner']);
         }
 
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("ClassPath",$param) and $param["ClassPath"] !== null) {
-            $this->ClassPath = $param["ClassPath"];
+        if (array_key_exists('ClassPath',$param) and $param['ClassPath'] !== null) {
+            $this->ClassPath = $param['ClassPath'];
         }
 
-        if (array_key_exists("PreProcessDefinition",$param) and $param["PreProcessDefinition"] !== null) {
-            $this->PreProcessDefinition = $param["PreProcessDefinition"];
+        if (array_key_exists('PreProcessDefinition',$param) and $param['PreProcessDefinition'] !== null) {
+            $this->PreProcessDefinition = $param['PreProcessDefinition'];
         }
 
-        if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
-            $this->Operator = $param["Operator"];
+        if (array_key_exists('Operator',$param) and $param['Operator'] !== null) {
+            $this->Operator = $param['Operator'];
         }
     }
 }

@@ -54,12 +54,12 @@ class DownloadCustomerGatewayConfigurationResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CustomerGatewayConfiguration",$param) and $param["CustomerGatewayConfiguration"] !== null) {
-            $this->CustomerGatewayConfiguration = $param["CustomerGatewayConfiguration"];
+        if (array_key_exists('CustomerGatewayConfiguration',$param) and $param['CustomerGatewayConfiguration'] !== null) {
+            $this->CustomerGatewayConfiguration = $param['CustomerGatewayConfiguration'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

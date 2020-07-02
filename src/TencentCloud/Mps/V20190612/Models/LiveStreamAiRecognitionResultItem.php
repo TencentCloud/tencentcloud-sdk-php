@@ -126,49 +126,49 @@ OcrFullTextRecognition 时有效。
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists('Type',$param) and $param['Type'] !== null) {
+            $this->Type = $param['Type'];
         }
 
-        if (array_key_exists("FaceRecognitionResultSet",$param) and $param["FaceRecognitionResultSet"] !== null) {
+        if (array_key_exists('FaceRecognitionResultSet',$param) and $param['FaceRecognitionResultSet'] !== null) {
             $this->FaceRecognitionResultSet = [];
-            foreach ($param["FaceRecognitionResultSet"] as $key => $value){
+            foreach ($param['FaceRecognitionResultSet'] as $key => $value){
                 $obj = new LiveStreamFaceRecognitionResult();
                 $obj->deserialize($value);
                 array_push($this->FaceRecognitionResultSet, $obj);
             }
         }
 
-        if (array_key_exists("AsrWordsRecognitionResultSet",$param) and $param["AsrWordsRecognitionResultSet"] !== null) {
+        if (array_key_exists('AsrWordsRecognitionResultSet',$param) and $param['AsrWordsRecognitionResultSet'] !== null) {
             $this->AsrWordsRecognitionResultSet = [];
-            foreach ($param["AsrWordsRecognitionResultSet"] as $key => $value){
+            foreach ($param['AsrWordsRecognitionResultSet'] as $key => $value){
                 $obj = new LiveStreamAsrWordsRecognitionResult();
                 $obj->deserialize($value);
                 array_push($this->AsrWordsRecognitionResultSet, $obj);
             }
         }
 
-        if (array_key_exists("OcrWordsRecognitionResultSet",$param) and $param["OcrWordsRecognitionResultSet"] !== null) {
+        if (array_key_exists('OcrWordsRecognitionResultSet',$param) and $param['OcrWordsRecognitionResultSet'] !== null) {
             $this->OcrWordsRecognitionResultSet = [];
-            foreach ($param["OcrWordsRecognitionResultSet"] as $key => $value){
+            foreach ($param['OcrWordsRecognitionResultSet'] as $key => $value){
                 $obj = new LiveStreamOcrWordsRecognitionResult();
                 $obj->deserialize($value);
                 array_push($this->OcrWordsRecognitionResultSet, $obj);
             }
         }
 
-        if (array_key_exists("AsrFullTextRecognitionResultSet",$param) and $param["AsrFullTextRecognitionResultSet"] !== null) {
+        if (array_key_exists('AsrFullTextRecognitionResultSet',$param) and $param['AsrFullTextRecognitionResultSet'] !== null) {
             $this->AsrFullTextRecognitionResultSet = [];
-            foreach ($param["AsrFullTextRecognitionResultSet"] as $key => $value){
+            foreach ($param['AsrFullTextRecognitionResultSet'] as $key => $value){
                 $obj = new LiveStreamAsrFullTextRecognitionResult();
                 $obj->deserialize($value);
                 array_push($this->AsrFullTextRecognitionResultSet, $obj);
             }
         }
 
-        if (array_key_exists("OcrFullTextRecognitionResultSet",$param) and $param["OcrFullTextRecognitionResultSet"] !== null) {
+        if (array_key_exists('OcrFullTextRecognitionResultSet',$param) and $param['OcrFullTextRecognitionResultSet'] !== null) {
             $this->OcrFullTextRecognitionResultSet = [];
-            foreach ($param["OcrFullTextRecognitionResultSet"] as $key => $value){
+            foreach ($param['OcrFullTextRecognitionResultSet'] as $key => $value){
                 $obj = new LiveStreamOcrFullTextRecognitionResult();
                 $obj->deserialize($value);
                 array_push($this->OcrFullTextRecognitionResultSet, $obj);

@@ -142,28 +142,28 @@ bandwidth：带宽计费
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PayType",$param) and $param["PayType"] !== null) {
-            $this->PayType = $param["PayType"];
+        if (array_key_exists('PayType',$param) and $param['PayType'] !== null) {
+            $this->PayType = $param['PayType'];
         }
 
-        if (array_key_exists("BillingCycle",$param) and $param["BillingCycle"] !== null) {
-            $this->BillingCycle = $param["BillingCycle"];
+        if (array_key_exists('BillingCycle',$param) and $param['BillingCycle'] !== null) {
+            $this->BillingCycle = $param['BillingCycle'];
         }
 
-        if (array_key_exists("StatType",$param) and $param["StatType"] !== null) {
-            $this->StatType = $param["StatType"];
+        if (array_key_exists('StatType',$param) and $param['StatType'] !== null) {
+            $this->StatType = $param['StatType'];
         }
 
-        if (array_key_exists("RegionType",$param) and $param["RegionType"] !== null) {
-            $this->RegionType = $param["RegionType"];
+        if (array_key_exists('RegionType',$param) and $param['RegionType'] !== null) {
+            $this->RegionType = $param['RegionType'];
         }
 
-        if (array_key_exists("CurrentPayType",$param) and $param["CurrentPayType"] !== null) {
-            $this->CurrentPayType = $param["CurrentPayType"];
+        if (array_key_exists('CurrentPayType',$param) and $param['CurrentPayType'] !== null) {
+            $this->CurrentPayType = $param['CurrentPayType'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

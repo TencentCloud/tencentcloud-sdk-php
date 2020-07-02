@@ -54,17 +54,17 @@ class DescribeAccessGroupsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AccessGroups",$param) and $param["AccessGroups"] !== null) {
+        if (array_key_exists('AccessGroups',$param) and $param['AccessGroups'] !== null) {
             $this->AccessGroups = [];
-            foreach ($param["AccessGroups"] as $key => $value){
+            foreach ($param['AccessGroups'] as $key => $value){
                 $obj = new AccessGroup();
                 $obj->deserialize($value);
                 array_push($this->AccessGroups, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

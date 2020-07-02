@@ -70,20 +70,20 @@ class AddMachineTagRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Quuid",$param) and $param["Quuid"] !== null) {
-            $this->Quuid = $param["Quuid"];
+        if (array_key_exists('Quuid',$param) and $param['Quuid'] !== null) {
+            $this->Quuid = $param['Quuid'];
         }
 
-        if (array_key_exists("TagId",$param) and $param["TagId"] !== null) {
-            $this->TagId = $param["TagId"];
+        if (array_key_exists('TagId',$param) and $param['TagId'] !== null) {
+            $this->TagId = $param['TagId'];
         }
 
-        if (array_key_exists("MRegion",$param) and $param["MRegion"] !== null) {
-            $this->MRegion = $param["MRegion"];
+        if (array_key_exists('MRegion',$param) and $param['MRegion'] !== null) {
+            $this->MRegion = $param['MRegion'];
         }
 
-        if (array_key_exists("MArea",$param) and $param["MArea"] !== null) {
-            $this->MArea = $param["MArea"];
+        if (array_key_exists('MArea',$param) and $param['MArea'] !== null) {
+            $this->MArea = $param['MArea'];
         }
     }
 }

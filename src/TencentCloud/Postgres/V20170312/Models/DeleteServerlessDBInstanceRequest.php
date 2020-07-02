@@ -54,12 +54,12 @@ class DeleteServerlessDBInstanceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DBInstanceName",$param) and $param["DBInstanceName"] !== null) {
-            $this->DBInstanceName = $param["DBInstanceName"];
+        if (array_key_exists('DBInstanceName',$param) and $param['DBInstanceName'] !== null) {
+            $this->DBInstanceName = $param['DBInstanceName'];
         }
 
-        if (array_key_exists("DBInstanceId",$param) and $param["DBInstanceId"] !== null) {
-            $this->DBInstanceId = $param["DBInstanceId"];
+        if (array_key_exists('DBInstanceId',$param) and $param['DBInstanceId'] !== null) {
+            $this->DBInstanceId = $param['DBInstanceId'];
         }
     }
 }

@@ -126,49 +126,49 @@ class DeviceClassPartitionInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RaidId",$param) and $param["RaidId"] !== null) {
-            $this->RaidId = $param["RaidId"];
+        if (array_key_exists('RaidId',$param) and $param['RaidId'] !== null) {
+            $this->RaidId = $param['RaidId'];
         }
 
-        if (array_key_exists("Raid",$param) and $param["Raid"] !== null) {
-            $this->Raid = $param["Raid"];
+        if (array_key_exists('Raid',$param) and $param['Raid'] !== null) {
+            $this->Raid = $param['Raid'];
         }
 
-        if (array_key_exists("RaidDisplay",$param) and $param["RaidDisplay"] !== null) {
-            $this->RaidDisplay = $param["RaidDisplay"];
+        if (array_key_exists('RaidDisplay',$param) and $param['RaidDisplay'] !== null) {
+            $this->RaidDisplay = $param['RaidDisplay'];
         }
 
-        if (array_key_exists("SystemDiskSize",$param) and $param["SystemDiskSize"] !== null) {
-            $this->SystemDiskSize = $param["SystemDiskSize"];
+        if (array_key_exists('SystemDiskSize',$param) and $param['SystemDiskSize'] !== null) {
+            $this->SystemDiskSize = $param['SystemDiskSize'];
         }
 
-        if (array_key_exists("SysRootSpace",$param) and $param["SysRootSpace"] !== null) {
-            $this->SysRootSpace = $param["SysRootSpace"];
+        if (array_key_exists('SysRootSpace',$param) and $param['SysRootSpace'] !== null) {
+            $this->SysRootSpace = $param['SysRootSpace'];
         }
 
-        if (array_key_exists("SysSwaporuefiSpace",$param) and $param["SysSwaporuefiSpace"] !== null) {
-            $this->SysSwaporuefiSpace = $param["SysSwaporuefiSpace"];
+        if (array_key_exists('SysSwaporuefiSpace',$param) and $param['SysSwaporuefiSpace'] !== null) {
+            $this->SysSwaporuefiSpace = $param['SysSwaporuefiSpace'];
         }
 
-        if (array_key_exists("SysUsrlocalSpace",$param) and $param["SysUsrlocalSpace"] !== null) {
-            $this->SysUsrlocalSpace = $param["SysUsrlocalSpace"];
+        if (array_key_exists('SysUsrlocalSpace',$param) and $param['SysUsrlocalSpace'] !== null) {
+            $this->SysUsrlocalSpace = $param['SysUsrlocalSpace'];
         }
 
-        if (array_key_exists("SysDataSpace",$param) and $param["SysDataSpace"] !== null) {
-            $this->SysDataSpace = $param["SysDataSpace"];
+        if (array_key_exists('SysDataSpace',$param) and $param['SysDataSpace'] !== null) {
+            $this->SysDataSpace = $param['SysDataSpace'];
         }
 
-        if (array_key_exists("SysIsUefiType",$param) and $param["SysIsUefiType"] !== null) {
-            $this->SysIsUefiType = $param["SysIsUefiType"];
+        if (array_key_exists('SysIsUefiType',$param) and $param['SysIsUefiType'] !== null) {
+            $this->SysIsUefiType = $param['SysIsUefiType'];
         }
 
-        if (array_key_exists("DataDiskSize",$param) and $param["DataDiskSize"] !== null) {
-            $this->DataDiskSize = $param["DataDiskSize"];
+        if (array_key_exists('DataDiskSize',$param) and $param['DataDiskSize'] !== null) {
+            $this->DataDiskSize = $param['DataDiskSize'];
         }
 
-        if (array_key_exists("DeviceDiskSizeInfoSet",$param) and $param["DeviceDiskSizeInfoSet"] !== null) {
+        if (array_key_exists('DeviceDiskSizeInfoSet',$param) and $param['DeviceDiskSizeInfoSet'] !== null) {
             $this->DeviceDiskSizeInfoSet = [];
-            foreach ($param["DeviceDiskSizeInfoSet"] as $key => $value){
+            foreach ($param['DeviceDiskSizeInfoSet'] as $key => $value){
                 $obj = new DeviceDiskSizeInfo();
                 $obj->deserialize($value);
                 array_push($this->DeviceDiskSizeInfoSet, $obj);

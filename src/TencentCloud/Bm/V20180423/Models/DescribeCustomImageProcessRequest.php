@@ -46,8 +46,8 @@ class DescribeCustomImageProcessRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ImageId",$param) and $param["ImageId"] !== null) {
-            $this->ImageId = $param["ImageId"];
+        if (array_key_exists('ImageId',$param) and $param['ImageId'] !== null) {
+            $this->ImageId = $param['ImageId'];
         }
     }
 }

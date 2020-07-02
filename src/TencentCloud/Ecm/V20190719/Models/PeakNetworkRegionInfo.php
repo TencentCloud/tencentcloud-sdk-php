@@ -58,13 +58,13 @@ class PeakNetworkRegionInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Region",$param) and $param["Region"] !== null) {
-            $this->Region = $param["Region"];
+        if (array_key_exists('Region',$param) and $param['Region'] !== null) {
+            $this->Region = $param['Region'];
         }
 
-        if (array_key_exists("PeakNetworkSet",$param) and $param["PeakNetworkSet"] !== null) {
+        if (array_key_exists('PeakNetworkSet',$param) and $param['PeakNetworkSet'] !== null) {
             $this->PeakNetworkSet = [];
-            foreach ($param["PeakNetworkSet"] as $key => $value){
+            foreach ($param['PeakNetworkSet'] as $key => $value){
                 $obj = new PeakNetwork();
                 $obj->deserialize($value);
                 array_push($this->PeakNetworkSet, $obj);

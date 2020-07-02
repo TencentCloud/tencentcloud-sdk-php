@@ -62,16 +62,16 @@ class UpdateGroupRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
-            $this->GroupId = $param["GroupId"];
+        if (array_key_exists('GroupId',$param) and $param['GroupId'] !== null) {
+            $this->GroupId = $param['GroupId'];
         }
 
-        if (array_key_exists("GroupName",$param) and $param["GroupName"] !== null) {
-            $this->GroupName = $param["GroupName"];
+        if (array_key_exists('GroupName',$param) and $param['GroupName'] !== null) {
+            $this->GroupName = $param['GroupName'];
         }
 
-        if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
-            $this->Remark = $param["Remark"];
+        if (array_key_exists('Remark',$param) and $param['Remark'] !== null) {
+            $this->Remark = $param['Remark'];
         }
     }
 }

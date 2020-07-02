@@ -46,8 +46,8 @@ class DeleteDomainErrorPageInfoRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ErrorPageId",$param) and $param["ErrorPageId"] !== null) {
-            $this->ErrorPageId = $param["ErrorPageId"];
+        if (array_key_exists('ErrorPageId',$param) and $param['ErrorPageId'] !== null) {
+            $this->ErrorPageId = $param['ErrorPageId'];
         }
     }
 }

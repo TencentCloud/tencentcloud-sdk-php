@@ -86,28 +86,28 @@ class DescribeIndustryNewsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("IndustryId",$param) and $param["IndustryId"] !== null) {
-            $this->IndustryId = $param["IndustryId"];
+        if (array_key_exists('IndustryId',$param) and $param['IndustryId'] !== null) {
+            $this->IndustryId = $param['IndustryId'];
         }
 
-        if (array_key_exists("StartDate",$param) and $param["StartDate"] !== null) {
-            $this->StartDate = $param["StartDate"];
+        if (array_key_exists('StartDate',$param) and $param['StartDate'] !== null) {
+            $this->StartDate = $param['StartDate'];
         }
 
-        if (array_key_exists("EndDate",$param) and $param["EndDate"] !== null) {
-            $this->EndDate = $param["EndDate"];
+        if (array_key_exists('EndDate',$param) and $param['EndDate'] !== null) {
+            $this->EndDate = $param['EndDate'];
         }
 
-        if (array_key_exists("ShowList",$param) and $param["ShowList"] !== null) {
-            $this->ShowList = $param["ShowList"];
+        if (array_key_exists('ShowList',$param) and $param['ShowList'] !== null) {
+            $this->ShowList = $param['ShowList'];
         }
 
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
+        if (array_key_exists('Offset',$param) and $param['Offset'] !== null) {
+            $this->Offset = $param['Offset'];
         }
 
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
+        if (array_key_exists('Limit',$param) and $param['Limit'] !== null) {
+            $this->Limit = $param['Limit'];
         }
     }
 }

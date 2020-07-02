@@ -70,21 +70,21 @@ class DownloadCustomerGatewayConfigurationRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("VpnGatewayId",$param) and $param["VpnGatewayId"] !== null) {
-            $this->VpnGatewayId = $param["VpnGatewayId"];
+        if (array_key_exists('VpnGatewayId',$param) and $param['VpnGatewayId'] !== null) {
+            $this->VpnGatewayId = $param['VpnGatewayId'];
         }
 
-        if (array_key_exists("VpnConnectionId",$param) and $param["VpnConnectionId"] !== null) {
-            $this->VpnConnectionId = $param["VpnConnectionId"];
+        if (array_key_exists('VpnConnectionId',$param) and $param['VpnConnectionId'] !== null) {
+            $this->VpnConnectionId = $param['VpnConnectionId'];
         }
 
-        if (array_key_exists("CustomerGatewayVendor",$param) and $param["CustomerGatewayVendor"] !== null) {
+        if (array_key_exists('CustomerGatewayVendor',$param) and $param['CustomerGatewayVendor'] !== null) {
             $this->CustomerGatewayVendor = new CustomerGatewayVendor();
-            $this->CustomerGatewayVendor->deserialize($param["CustomerGatewayVendor"]);
+            $this->CustomerGatewayVendor->deserialize($param['CustomerGatewayVendor']);
         }
 
-        if (array_key_exists("InterfaceName",$param) and $param["InterfaceName"] !== null) {
-            $this->InterfaceName = $param["InterfaceName"];
+        if (array_key_exists('InterfaceName',$param) and $param['InterfaceName'] !== null) {
+            $this->InterfaceName = $param['InterfaceName'];
         }
     }
 }

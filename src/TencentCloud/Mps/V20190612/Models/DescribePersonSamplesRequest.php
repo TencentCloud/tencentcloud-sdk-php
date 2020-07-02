@@ -106,28 +106,28 @@ class DescribePersonSamplesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists('Type',$param) and $param['Type'] !== null) {
+            $this->Type = $param['Type'];
         }
 
-        if (array_key_exists("PersonIds",$param) and $param["PersonIds"] !== null) {
-            $this->PersonIds = $param["PersonIds"];
+        if (array_key_exists('PersonIds',$param) and $param['PersonIds'] !== null) {
+            $this->PersonIds = $param['PersonIds'];
         }
 
-        if (array_key_exists("Names",$param) and $param["Names"] !== null) {
-            $this->Names = $param["Names"];
+        if (array_key_exists('Names',$param) and $param['Names'] !== null) {
+            $this->Names = $param['Names'];
         }
 
-        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
-            $this->Tags = $param["Tags"];
+        if (array_key_exists('Tags',$param) and $param['Tags'] !== null) {
+            $this->Tags = $param['Tags'];
         }
 
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
+        if (array_key_exists('Offset',$param) and $param['Offset'] !== null) {
+            $this->Offset = $param['Offset'];
         }
 
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
+        if (array_key_exists('Limit',$param) and $param['Limit'] !== null) {
+            $this->Limit = $param['Limit'];
         }
     }
 }

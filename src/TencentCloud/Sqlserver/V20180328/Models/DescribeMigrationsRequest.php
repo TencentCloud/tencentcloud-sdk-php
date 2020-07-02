@@ -86,28 +86,28 @@ class DescribeMigrationsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("StatusSet",$param) and $param["StatusSet"] !== null) {
-            $this->StatusSet = $param["StatusSet"];
+        if (array_key_exists('StatusSet',$param) and $param['StatusSet'] !== null) {
+            $this->StatusSet = $param['StatusSet'];
         }
 
-        if (array_key_exists("MigrateName",$param) and $param["MigrateName"] !== null) {
-            $this->MigrateName = $param["MigrateName"];
+        if (array_key_exists('MigrateName',$param) and $param['MigrateName'] !== null) {
+            $this->MigrateName = $param['MigrateName'];
         }
 
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
+        if (array_key_exists('Limit',$param) and $param['Limit'] !== null) {
+            $this->Limit = $param['Limit'];
         }
 
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
+        if (array_key_exists('Offset',$param) and $param['Offset'] !== null) {
+            $this->Offset = $param['Offset'];
         }
 
-        if (array_key_exists("OrderBy",$param) and $param["OrderBy"] !== null) {
-            $this->OrderBy = $param["OrderBy"];
+        if (array_key_exists('OrderBy',$param) and $param['OrderBy'] !== null) {
+            $this->OrderBy = $param['OrderBy'];
         }
 
-        if (array_key_exists("OrderByType",$param) and $param["OrderByType"] !== null) {
-            $this->OrderByType = $param["OrderByType"];
+        if (array_key_exists('OrderByType',$param) and $param['OrderByType'] !== null) {
+            $this->OrderByType = $param['OrderByType'];
         }
     }
 }

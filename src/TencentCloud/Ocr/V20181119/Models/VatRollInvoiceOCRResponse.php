@@ -62,21 +62,21 @@ class VatRollInvoiceOCRResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("VatRollInvoiceInfos",$param) and $param["VatRollInvoiceInfos"] !== null) {
+        if (array_key_exists('VatRollInvoiceInfos',$param) and $param['VatRollInvoiceInfos'] !== null) {
             $this->VatRollInvoiceInfos = [];
-            foreach ($param["VatRollInvoiceInfos"] as $key => $value){
+            foreach ($param['VatRollInvoiceInfos'] as $key => $value){
                 $obj = new VatRollInvoiceInfo();
                 $obj->deserialize($value);
                 array_push($this->VatRollInvoiceInfos, $obj);
             }
         }
 
-        if (array_key_exists("Angle",$param) and $param["Angle"] !== null) {
-            $this->Angle = $param["Angle"];
+        if (array_key_exists('Angle',$param) and $param['Angle'] !== null) {
+            $this->Angle = $param['Angle'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

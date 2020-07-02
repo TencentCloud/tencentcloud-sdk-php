@@ -54,12 +54,12 @@ class RegisteredStatus extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CunionId",$param) and $param["CunionId"] !== null) {
-            $this->CunionId = $param["CunionId"];
+        if (array_key_exists('CunionId',$param) and $param['CunionId'] !== null) {
+            $this->CunionId = $param['CunionId'];
         }
 
-        if (array_key_exists("IsRegisted",$param) and $param["IsRegisted"] !== null) {
-            $this->IsRegisted = $param["IsRegisted"];
+        if (array_key_exists('IsRegisted',$param) and $param['IsRegisted'] !== null) {
+            $this->IsRegisted = $param['IsRegisted'];
         }
     }
 }

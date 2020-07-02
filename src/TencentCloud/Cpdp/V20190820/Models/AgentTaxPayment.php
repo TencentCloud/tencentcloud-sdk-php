@@ -94,32 +94,32 @@ class AgentTaxPayment extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AnchorId",$param) and $param["AnchorId"] !== null) {
-            $this->AnchorId = $param["AnchorId"];
+        if (array_key_exists('AnchorId',$param) and $param['AnchorId'] !== null) {
+            $this->AnchorId = $param['AnchorId'];
         }
 
-        if (array_key_exists("AnchorName",$param) and $param["AnchorName"] !== null) {
-            $this->AnchorName = $param["AnchorName"];
+        if (array_key_exists('AnchorName',$param) and $param['AnchorName'] !== null) {
+            $this->AnchorName = $param['AnchorName'];
         }
 
-        if (array_key_exists("AnchorIDCard",$param) and $param["AnchorIDCard"] !== null) {
-            $this->AnchorIDCard = $param["AnchorIDCard"];
+        if (array_key_exists('AnchorIDCard',$param) and $param['AnchorIDCard'] !== null) {
+            $this->AnchorIDCard = $param['AnchorIDCard'];
         }
 
-        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
-            $this->StartTime = $param["StartTime"];
+        if (array_key_exists('StartTime',$param) and $param['StartTime'] !== null) {
+            $this->StartTime = $param['StartTime'];
         }
 
-        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
-            $this->EndTime = $param["EndTime"];
+        if (array_key_exists('EndTime',$param) and $param['EndTime'] !== null) {
+            $this->EndTime = $param['EndTime'];
         }
 
-        if (array_key_exists("Amount",$param) and $param["Amount"] !== null) {
-            $this->Amount = $param["Amount"];
+        if (array_key_exists('Amount',$param) and $param['Amount'] !== null) {
+            $this->Amount = $param['Amount'];
         }
 
-        if (array_key_exists("Tax",$param) and $param["Tax"] !== null) {
-            $this->Tax = $param["Tax"];
+        if (array_key_exists('Tax',$param) and $param['Tax'] !== null) {
+            $this->Tax = $param['Tax'];
         }
     }
 }

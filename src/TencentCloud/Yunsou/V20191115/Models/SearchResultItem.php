@@ -78,24 +78,24 @@ class SearchResultItem extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DocAbs",$param) and $param["DocAbs"] !== null) {
-            $this->DocAbs = $param["DocAbs"];
+        if (array_key_exists('DocAbs',$param) and $param['DocAbs'] !== null) {
+            $this->DocAbs = $param['DocAbs'];
         }
 
-        if (array_key_exists("DocId",$param) and $param["DocId"] !== null) {
-            $this->DocId = $param["DocId"];
+        if (array_key_exists('DocId',$param) and $param['DocId'] !== null) {
+            $this->DocId = $param['DocId'];
         }
 
-        if (array_key_exists("DocMeta",$param) and $param["DocMeta"] !== null) {
-            $this->DocMeta = $param["DocMeta"];
+        if (array_key_exists('DocMeta',$param) and $param['DocMeta'] !== null) {
+            $this->DocMeta = $param['DocMeta'];
         }
 
-        if (array_key_exists("L2Score",$param) and $param["L2Score"] !== null) {
-            $this->L2Score = $param["L2Score"];
+        if (array_key_exists('L2Score',$param) and $param['L2Score'] !== null) {
+            $this->L2Score = $param['L2Score'];
         }
 
-        if (array_key_exists("SearchDebuginfo",$param) and $param["SearchDebuginfo"] !== null) {
-            $this->SearchDebuginfo = $param["SearchDebuginfo"];
+        if (array_key_exists('SearchDebuginfo',$param) and $param['SearchDebuginfo'] !== null) {
+            $this->SearchDebuginfo = $param['SearchDebuginfo'];
         }
     }
 }

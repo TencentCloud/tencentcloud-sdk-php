@@ -78,24 +78,24 @@ class MediaClassInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ClassId",$param) and $param["ClassId"] !== null) {
-            $this->ClassId = $param["ClassId"];
+        if (array_key_exists('ClassId',$param) and $param['ClassId'] !== null) {
+            $this->ClassId = $param['ClassId'];
         }
 
-        if (array_key_exists("ParentId",$param) and $param["ParentId"] !== null) {
-            $this->ParentId = $param["ParentId"];
+        if (array_key_exists('ParentId',$param) and $param['ParentId'] !== null) {
+            $this->ParentId = $param['ParentId'];
         }
 
-        if (array_key_exists("ClassName",$param) and $param["ClassName"] !== null) {
-            $this->ClassName = $param["ClassName"];
+        if (array_key_exists('ClassName',$param) and $param['ClassName'] !== null) {
+            $this->ClassName = $param['ClassName'];
         }
 
-        if (array_key_exists("Level",$param) and $param["Level"] !== null) {
-            $this->Level = $param["Level"];
+        if (array_key_exists('Level',$param) and $param['Level'] !== null) {
+            $this->Level = $param['Level'];
         }
 
-        if (array_key_exists("SubClassIdSet",$param) and $param["SubClassIdSet"] !== null) {
-            $this->SubClassIdSet = $param["SubClassIdSet"];
+        if (array_key_exists('SubClassIdSet',$param) and $param['SubClassIdSet'] !== null) {
+            $this->SubClassIdSet = $param['SubClassIdSet'];
         }
     }
 }

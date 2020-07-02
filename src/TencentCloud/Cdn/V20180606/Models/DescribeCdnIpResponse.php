@@ -54,17 +54,17 @@ class DescribeCdnIpResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Ips",$param) and $param["Ips"] !== null) {
+        if (array_key_exists('Ips',$param) and $param['Ips'] !== null) {
             $this->Ips = [];
-            foreach ($param["Ips"] as $key => $value){
+            foreach ($param['Ips'] as $key => $value){
                 $obj = new CdnIp();
                 $obj->deserialize($value);
                 array_push($this->Ips, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

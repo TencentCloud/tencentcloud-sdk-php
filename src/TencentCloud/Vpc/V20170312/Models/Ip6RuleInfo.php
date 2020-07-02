@@ -70,20 +70,20 @@ class Ip6RuleInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Vport6",$param) and $param["Vport6"] !== null) {
-            $this->Vport6 = $param["Vport6"];
+        if (array_key_exists('Vport6',$param) and $param['Vport6'] !== null) {
+            $this->Vport6 = $param['Vport6'];
         }
 
-        if (array_key_exists("Protocol",$param) and $param["Protocol"] !== null) {
-            $this->Protocol = $param["Protocol"];
+        if (array_key_exists('Protocol',$param) and $param['Protocol'] !== null) {
+            $this->Protocol = $param['Protocol'];
         }
 
-        if (array_key_exists("Vip",$param) and $param["Vip"] !== null) {
-            $this->Vip = $param["Vip"];
+        if (array_key_exists('Vip',$param) and $param['Vip'] !== null) {
+            $this->Vip = $param['Vip'];
         }
 
-        if (array_key_exists("Vport",$param) and $param["Vport"] !== null) {
-            $this->Vport = $param["Vport"];
+        if (array_key_exists('Vport',$param) and $param['Vport'] !== null) {
+            $this->Vport = $param['Vport'];
         }
     }
 }

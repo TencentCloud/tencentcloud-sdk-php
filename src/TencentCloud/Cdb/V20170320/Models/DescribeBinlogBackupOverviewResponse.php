@@ -62,16 +62,16 @@ class DescribeBinlogBackupOverviewResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BinlogBackupVolume",$param) and $param["BinlogBackupVolume"] !== null) {
-            $this->BinlogBackupVolume = $param["BinlogBackupVolume"];
+        if (array_key_exists('BinlogBackupVolume',$param) and $param['BinlogBackupVolume'] !== null) {
+            $this->BinlogBackupVolume = $param['BinlogBackupVolume'];
         }
 
-        if (array_key_exists("BinlogBackupCount",$param) and $param["BinlogBackupCount"] !== null) {
-            $this->BinlogBackupCount = $param["BinlogBackupCount"];
+        if (array_key_exists('BinlogBackupCount',$param) and $param['BinlogBackupCount'] !== null) {
+            $this->BinlogBackupCount = $param['BinlogBackupCount'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

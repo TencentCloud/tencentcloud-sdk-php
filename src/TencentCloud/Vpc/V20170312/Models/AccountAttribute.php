@@ -54,12 +54,12 @@ class AccountAttribute extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AttributeName",$param) and $param["AttributeName"] !== null) {
-            $this->AttributeName = $param["AttributeName"];
+        if (array_key_exists('AttributeName',$param) and $param['AttributeName'] !== null) {
+            $this->AttributeName = $param['AttributeName'];
         }
 
-        if (array_key_exists("AttributeValues",$param) and $param["AttributeValues"] !== null) {
-            $this->AttributeValues = $param["AttributeValues"];
+        if (array_key_exists('AttributeValues',$param) and $param['AttributeValues'] !== null) {
+            $this->AttributeValues = $param['AttributeValues'];
         }
     }
 }

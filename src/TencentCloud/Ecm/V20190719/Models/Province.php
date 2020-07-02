@@ -54,12 +54,12 @@ class Province extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ProvinceId",$param) and $param["ProvinceId"] !== null) {
-            $this->ProvinceId = $param["ProvinceId"];
+        if (array_key_exists('ProvinceId',$param) and $param['ProvinceId'] !== null) {
+            $this->ProvinceId = $param['ProvinceId'];
         }
 
-        if (array_key_exists("ProvinceName",$param) and $param["ProvinceName"] !== null) {
-            $this->ProvinceName = $param["ProvinceName"];
+        if (array_key_exists('ProvinceName',$param) and $param['ProvinceName'] !== null) {
+            $this->ProvinceName = $param['ProvinceName'];
         }
     }
 }

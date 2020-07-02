@@ -54,12 +54,12 @@ class CaptchaOperDataTryTimesDistributeUnit extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TryCount",$param) and $param["TryCount"] !== null) {
-            $this->TryCount = $param["TryCount"];
+        if (array_key_exists('TryCount',$param) and $param['TryCount'] !== null) {
+            $this->TryCount = $param['TryCount'];
         }
 
-        if (array_key_exists("UserCount",$param) and $param["UserCount"] !== null) {
-            $this->UserCount = $param["UserCount"];
+        if (array_key_exists('UserCount',$param) and $param['UserCount'] !== null) {
+            $this->UserCount = $param['UserCount'];
         }
     }
 }

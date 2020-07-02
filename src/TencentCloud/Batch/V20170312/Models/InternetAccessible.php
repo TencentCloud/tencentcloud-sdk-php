@@ -70,20 +70,20 @@ class InternetAccessible extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InternetChargeType",$param) and $param["InternetChargeType"] !== null) {
-            $this->InternetChargeType = $param["InternetChargeType"];
+        if (array_key_exists('InternetChargeType',$param) and $param['InternetChargeType'] !== null) {
+            $this->InternetChargeType = $param['InternetChargeType'];
         }
 
-        if (array_key_exists("InternetMaxBandwidthOut",$param) and $param["InternetMaxBandwidthOut"] !== null) {
-            $this->InternetMaxBandwidthOut = $param["InternetMaxBandwidthOut"];
+        if (array_key_exists('InternetMaxBandwidthOut',$param) and $param['InternetMaxBandwidthOut'] !== null) {
+            $this->InternetMaxBandwidthOut = $param['InternetMaxBandwidthOut'];
         }
 
-        if (array_key_exists("PublicIpAssigned",$param) and $param["PublicIpAssigned"] !== null) {
-            $this->PublicIpAssigned = $param["PublicIpAssigned"];
+        if (array_key_exists('PublicIpAssigned',$param) and $param['PublicIpAssigned'] !== null) {
+            $this->PublicIpAssigned = $param['PublicIpAssigned'];
         }
 
-        if (array_key_exists("BandwidthPackageId",$param) and $param["BandwidthPackageId"] !== null) {
-            $this->BandwidthPackageId = $param["BandwidthPackageId"];
+        if (array_key_exists('BandwidthPackageId',$param) and $param['BandwidthPackageId'] !== null) {
+            $this->BandwidthPackageId = $param['BandwidthPackageId'];
         }
     }
 }

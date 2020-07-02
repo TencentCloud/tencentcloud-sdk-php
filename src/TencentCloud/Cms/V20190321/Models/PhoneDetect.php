@@ -78,20 +78,20 @@ class PhoneDetect extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("EvilType",$param) and $param["EvilType"] !== null) {
-            $this->EvilType = $param["EvilType"];
+        if (array_key_exists('EvilType',$param) and $param['EvilType'] !== null) {
+            $this->EvilType = $param['EvilType'];
         }
 
-        if (array_key_exists("HitFlag",$param) and $param["HitFlag"] !== null) {
-            $this->HitFlag = $param["HitFlag"];
+        if (array_key_exists('HitFlag',$param) and $param['HitFlag'] !== null) {
+            $this->HitFlag = $param['HitFlag'];
         }
 
-        if (array_key_exists("Labels",$param) and $param["Labels"] !== null) {
-            $this->Labels = $param["Labels"];
+        if (array_key_exists('Labels',$param) and $param['Labels'] !== null) {
+            $this->Labels = $param['Labels'];
         }
 
-        if (array_key_exists("Score",$param) and $param["Score"] !== null) {
-            $this->Score = $param["Score"];
+        if (array_key_exists('Score',$param) and $param['Score'] !== null) {
+            $this->Score = $param['Score'];
         }
     }
 }

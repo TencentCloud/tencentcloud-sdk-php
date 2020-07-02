@@ -62,16 +62,16 @@ class DirectConnectGatewayCcnRoute extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RouteId",$param) and $param["RouteId"] !== null) {
-            $this->RouteId = $param["RouteId"];
+        if (array_key_exists('RouteId',$param) and $param['RouteId'] !== null) {
+            $this->RouteId = $param['RouteId'];
         }
 
-        if (array_key_exists("DestinationCidrBlock",$param) and $param["DestinationCidrBlock"] !== null) {
-            $this->DestinationCidrBlock = $param["DestinationCidrBlock"];
+        if (array_key_exists('DestinationCidrBlock',$param) and $param['DestinationCidrBlock'] !== null) {
+            $this->DestinationCidrBlock = $param['DestinationCidrBlock'];
         }
 
-        if (array_key_exists("ASPath",$param) and $param["ASPath"] !== null) {
-            $this->ASPath = $param["ASPath"];
+        if (array_key_exists('ASPath',$param) and $param['ASPath'] !== null) {
+            $this->ASPath = $param['ASPath'];
         }
     }
 }

@@ -54,12 +54,12 @@ class VideoModerationResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("VodTaskId",$param) and $param["VodTaskId"] !== null) {
-            $this->VodTaskId = $param["VodTaskId"];
+        if (array_key_exists('VodTaskId',$param) and $param['VodTaskId'] !== null) {
+            $this->VodTaskId = $param['VodTaskId'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

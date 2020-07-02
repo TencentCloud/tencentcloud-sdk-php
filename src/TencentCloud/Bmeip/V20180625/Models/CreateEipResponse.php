@@ -62,16 +62,16 @@ class CreateEipResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("EipIds",$param) and $param["EipIds"] !== null) {
-            $this->EipIds = $param["EipIds"];
+        if (array_key_exists('EipIds',$param) and $param['EipIds'] !== null) {
+            $this->EipIds = $param['EipIds'];
         }
 
-        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
-            $this->TaskId = $param["TaskId"];
+        if (array_key_exists('TaskId',$param) and $param['TaskId'] !== null) {
+            $this->TaskId = $param['TaskId'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

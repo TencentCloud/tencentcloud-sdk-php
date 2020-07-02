@@ -106,20 +106,20 @@ class CreateTextSampleRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Contents",$param) and $param["Contents"] !== null) {
-            $this->Contents = $param["Contents"];
+        if (array_key_exists('Contents',$param) and $param['Contents'] !== null) {
+            $this->Contents = $param['Contents'];
         }
 
-        if (array_key_exists("EvilType",$param) and $param["EvilType"] !== null) {
-            $this->EvilType = $param["EvilType"];
+        if (array_key_exists('EvilType',$param) and $param['EvilType'] !== null) {
+            $this->EvilType = $param['EvilType'];
         }
 
-        if (array_key_exists("Label",$param) and $param["Label"] !== null) {
-            $this->Label = $param["Label"];
+        if (array_key_exists('Label',$param) and $param['Label'] !== null) {
+            $this->Label = $param['Label'];
         }
 
-        if (array_key_exists("Test",$param) and $param["Test"] !== null) {
-            $this->Test = $param["Test"];
+        if (array_key_exists('Test',$param) and $param['Test'] !== null) {
+            $this->Test = $param['Test'];
         }
     }
 }

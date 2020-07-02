@@ -70,21 +70,21 @@ class ISPCounter extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ProviderName",$param) and $param["ProviderName"] !== null) {
-            $this->ProviderName = $param["ProviderName"];
+        if (array_key_exists('ProviderName',$param) and $param['ProviderName'] !== null) {
+            $this->ProviderName = $param['ProviderName'];
         }
 
-        if (array_key_exists("ProviderNodeNum",$param) and $param["ProviderNodeNum"] !== null) {
-            $this->ProviderNodeNum = $param["ProviderNodeNum"];
+        if (array_key_exists('ProviderNodeNum',$param) and $param['ProviderNodeNum'] !== null) {
+            $this->ProviderNodeNum = $param['ProviderNodeNum'];
         }
 
-        if (array_key_exists("ProvederInstanceNum",$param) and $param["ProvederInstanceNum"] !== null) {
-            $this->ProvederInstanceNum = $param["ProvederInstanceNum"];
+        if (array_key_exists('ProvederInstanceNum',$param) and $param['ProvederInstanceNum'] !== null) {
+            $this->ProvederInstanceNum = $param['ProvederInstanceNum'];
         }
 
-        if (array_key_exists("ZoneInstanceInfoSet",$param) and $param["ZoneInstanceInfoSet"] !== null) {
+        if (array_key_exists('ZoneInstanceInfoSet',$param) and $param['ZoneInstanceInfoSet'] !== null) {
             $this->ZoneInstanceInfoSet = [];
-            foreach ($param["ZoneInstanceInfoSet"] as $key => $value){
+            foreach ($param['ZoneInstanceInfoSet'] as $key => $value){
                 $obj = new ZoneInstanceInfo();
                 $obj->deserialize($value);
                 array_push($this->ZoneInstanceInfoSet, $obj);

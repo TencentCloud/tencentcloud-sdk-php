@@ -62,16 +62,16 @@ class ModifyDBNameRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("OldDBName",$param) and $param["OldDBName"] !== null) {
-            $this->OldDBName = $param["OldDBName"];
+        if (array_key_exists('OldDBName',$param) and $param['OldDBName'] !== null) {
+            $this->OldDBName = $param['OldDBName'];
         }
 
-        if (array_key_exists("NewDBName",$param) and $param["NewDBName"] !== null) {
-            $this->NewDBName = $param["NewDBName"];
+        if (array_key_exists('NewDBName',$param) and $param['NewDBName'] !== null) {
+            $this->NewDBName = $param['NewDBName'];
         }
     }
 }

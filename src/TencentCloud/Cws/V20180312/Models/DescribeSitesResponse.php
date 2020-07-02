@@ -62,21 +62,21 @@ class DescribeSitesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("Sites",$param) and $param["Sites"] !== null) {
+        if (array_key_exists('Sites',$param) and $param['Sites'] !== null) {
             $this->Sites = [];
-            foreach ($param["Sites"] as $key => $value){
+            foreach ($param['Sites'] as $key => $value){
                 $obj = new Site();
                 $obj->deserialize($value);
                 array_push($this->Sites, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

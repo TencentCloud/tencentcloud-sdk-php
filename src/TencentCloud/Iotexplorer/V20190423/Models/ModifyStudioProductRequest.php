@@ -78,24 +78,24 @@ class ModifyStudioProductRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ProductId",$param) and $param["ProductId"] !== null) {
-            $this->ProductId = $param["ProductId"];
+        if (array_key_exists('ProductId',$param) and $param['ProductId'] !== null) {
+            $this->ProductId = $param['ProductId'];
         }
 
-        if (array_key_exists("ProductName",$param) and $param["ProductName"] !== null) {
-            $this->ProductName = $param["ProductName"];
+        if (array_key_exists('ProductName',$param) and $param['ProductName'] !== null) {
+            $this->ProductName = $param['ProductName'];
         }
 
-        if (array_key_exists("ProductDesc",$param) and $param["ProductDesc"] !== null) {
-            $this->ProductDesc = $param["ProductDesc"];
+        if (array_key_exists('ProductDesc',$param) and $param['ProductDesc'] !== null) {
+            $this->ProductDesc = $param['ProductDesc'];
         }
 
-        if (array_key_exists("ModuleId",$param) and $param["ModuleId"] !== null) {
-            $this->ModuleId = $param["ModuleId"];
+        if (array_key_exists('ModuleId',$param) and $param['ModuleId'] !== null) {
+            $this->ModuleId = $param['ModuleId'];
         }
 
-        if (array_key_exists("EnableProductScript",$param) and $param["EnableProductScript"] !== null) {
-            $this->EnableProductScript = $param["EnableProductScript"];
+        if (array_key_exists('EnableProductScript',$param) and $param['EnableProductScript'] !== null) {
+            $this->EnableProductScript = $param['EnableProductScript'];
         }
     }
 }

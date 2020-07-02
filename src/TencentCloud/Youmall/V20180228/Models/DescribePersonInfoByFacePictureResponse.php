@@ -102,36 +102,36 @@ class DescribePersonInfoByFacePictureResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CompanyId",$param) and $param["CompanyId"] !== null) {
-            $this->CompanyId = $param["CompanyId"];
+        if (array_key_exists('CompanyId',$param) and $param['CompanyId'] !== null) {
+            $this->CompanyId = $param['CompanyId'];
         }
 
-        if (array_key_exists("ShopId",$param) and $param["ShopId"] !== null) {
-            $this->ShopId = $param["ShopId"];
+        if (array_key_exists('ShopId',$param) and $param['ShopId'] !== null) {
+            $this->ShopId = $param['ShopId'];
         }
 
-        if (array_key_exists("PersonId",$param) and $param["PersonId"] !== null) {
-            $this->PersonId = $param["PersonId"];
+        if (array_key_exists('PersonId',$param) and $param['PersonId'] !== null) {
+            $this->PersonId = $param['PersonId'];
         }
 
-        if (array_key_exists("PictureUrl",$param) and $param["PictureUrl"] !== null) {
-            $this->PictureUrl = $param["PictureUrl"];
+        if (array_key_exists('PictureUrl',$param) and $param['PictureUrl'] !== null) {
+            $this->PictureUrl = $param['PictureUrl'];
         }
 
-        if (array_key_exists("PersonType",$param) and $param["PersonType"] !== null) {
-            $this->PersonType = $param["PersonType"];
+        if (array_key_exists('PersonType',$param) and $param['PersonType'] !== null) {
+            $this->PersonType = $param['PersonType'];
         }
 
-        if (array_key_exists("FirstVisitTime",$param) and $param["FirstVisitTime"] !== null) {
-            $this->FirstVisitTime = $param["FirstVisitTime"];
+        if (array_key_exists('FirstVisitTime',$param) and $param['FirstVisitTime'] !== null) {
+            $this->FirstVisitTime = $param['FirstVisitTime'];
         }
 
-        if (array_key_exists("VisitTimes",$param) and $param["VisitTimes"] !== null) {
-            $this->VisitTimes = $param["VisitTimes"];
+        if (array_key_exists('VisitTimes',$param) and $param['VisitTimes'] !== null) {
+            $this->VisitTimes = $param['VisitTimes'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

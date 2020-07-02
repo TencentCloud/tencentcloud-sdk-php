@@ -54,8 +54,8 @@ class DeleteLiveWatermarkRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("WatermarkId",$param) and $param["WatermarkId"] !== null) {
-            $this->WatermarkId = $param["WatermarkId"];
+        if (array_key_exists('WatermarkId',$param) and $param['WatermarkId'] !== null) {
+            $this->WatermarkId = $param['WatermarkId'];
         }
     }
 }

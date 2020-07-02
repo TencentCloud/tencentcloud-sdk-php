@@ -54,17 +54,17 @@ class PullSmsSendStatusResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PullSmsSendStatusSet",$param) and $param["PullSmsSendStatusSet"] !== null) {
+        if (array_key_exists('PullSmsSendStatusSet',$param) and $param['PullSmsSendStatusSet'] !== null) {
             $this->PullSmsSendStatusSet = [];
-            foreach ($param["PullSmsSendStatusSet"] as $key => $value){
+            foreach ($param['PullSmsSendStatusSet'] as $key => $value){
                 $obj = new PullSmsSendStatus();
                 $obj->deserialize($value);
                 array_push($this->PullSmsSendStatusSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

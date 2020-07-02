@@ -126,36 +126,36 @@ class QueryRegisterProtectionResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CodeDesc",$param) and $param["CodeDesc"] !== null) {
-            $this->CodeDesc = $param["CodeDesc"];
+        if (array_key_exists('CodeDesc',$param) and $param['CodeDesc'] !== null) {
+            $this->CodeDesc = $param['CodeDesc'];
         }
 
-        if (array_key_exists("AssociateAccount",$param) and $param["AssociateAccount"] !== null) {
-            $this->AssociateAccount = $param["AssociateAccount"];
+        if (array_key_exists('AssociateAccount',$param) and $param['AssociateAccount'] !== null) {
+            $this->AssociateAccount = $param['AssociateAccount'];
         }
 
-        if (array_key_exists("RegisterTime",$param) and $param["RegisterTime"] !== null) {
-            $this->RegisterTime = $param["RegisterTime"];
+        if (array_key_exists('RegisterTime',$param) and $param['RegisterTime'] !== null) {
+            $this->RegisterTime = $param['RegisterTime'];
         }
 
-        if (array_key_exists("Uid",$param) and $param["Uid"] !== null) {
-            $this->Uid = $param["Uid"];
+        if (array_key_exists('Uid',$param) and $param['Uid'] !== null) {
+            $this->Uid = $param['Uid'];
         }
 
-        if (array_key_exists("RegisterIp",$param) and $param["RegisterIp"] !== null) {
-            $this->RegisterIp = $param["RegisterIp"];
+        if (array_key_exists('RegisterIp',$param) and $param['RegisterIp'] !== null) {
+            $this->RegisterIp = $param['RegisterIp'];
         }
 
-        if (array_key_exists("Level",$param) and $param["Level"] !== null) {
-            $this->Level = $param["Level"];
+        if (array_key_exists('Level',$param) and $param['Level'] !== null) {
+            $this->Level = $param['Level'];
         }
 
-        if (array_key_exists("RiskType",$param) and $param["RiskType"] !== null) {
-            $this->RiskType = $param["RiskType"];
+        if (array_key_exists('RiskType',$param) and $param['RiskType'] !== null) {
+            $this->RiskType = $param['RiskType'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

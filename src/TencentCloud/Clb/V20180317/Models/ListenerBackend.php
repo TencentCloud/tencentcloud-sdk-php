@@ -98,38 +98,38 @@ class ListenerBackend extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ListenerId",$param) and $param["ListenerId"] !== null) {
-            $this->ListenerId = $param["ListenerId"];
+        if (array_key_exists('ListenerId',$param) and $param['ListenerId'] !== null) {
+            $this->ListenerId = $param['ListenerId'];
         }
 
-        if (array_key_exists("Protocol",$param) and $param["Protocol"] !== null) {
-            $this->Protocol = $param["Protocol"];
+        if (array_key_exists('Protocol',$param) and $param['Protocol'] !== null) {
+            $this->Protocol = $param['Protocol'];
         }
 
-        if (array_key_exists("Port",$param) and $param["Port"] !== null) {
-            $this->Port = $param["Port"];
+        if (array_key_exists('Port',$param) and $param['Port'] !== null) {
+            $this->Port = $param['Port'];
         }
 
-        if (array_key_exists("Rules",$param) and $param["Rules"] !== null) {
+        if (array_key_exists('Rules',$param) and $param['Rules'] !== null) {
             $this->Rules = [];
-            foreach ($param["Rules"] as $key => $value){
+            foreach ($param['Rules'] as $key => $value){
                 $obj = new RuleTargets();
                 $obj->deserialize($value);
                 array_push($this->Rules, $obj);
             }
         }
 
-        if (array_key_exists("Targets",$param) and $param["Targets"] !== null) {
+        if (array_key_exists('Targets',$param) and $param['Targets'] !== null) {
             $this->Targets = [];
-            foreach ($param["Targets"] as $key => $value){
+            foreach ($param['Targets'] as $key => $value){
                 $obj = new Backend();
                 $obj->deserialize($value);
                 array_push($this->Targets, $obj);
             }
         }
 
-        if (array_key_exists("EndPort",$param) and $param["EndPort"] !== null) {
-            $this->EndPort = $param["EndPort"];
+        if (array_key_exists('EndPort',$param) and $param['EndPort'] !== null) {
+            $this->EndPort = $param['EndPort'];
         }
     }
 }

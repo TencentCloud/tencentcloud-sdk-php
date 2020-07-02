@@ -62,16 +62,16 @@ class ModifySnapshotsSharePermissionRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AccountIds",$param) and $param["AccountIds"] !== null) {
-            $this->AccountIds = $param["AccountIds"];
+        if (array_key_exists('AccountIds',$param) and $param['AccountIds'] !== null) {
+            $this->AccountIds = $param['AccountIds'];
         }
 
-        if (array_key_exists("Permission",$param) and $param["Permission"] !== null) {
-            $this->Permission = $param["Permission"];
+        if (array_key_exists('Permission',$param) and $param['Permission'] !== null) {
+            $this->Permission = $param['Permission'];
         }
 
-        if (array_key_exists("SnapshotIds",$param) and $param["SnapshotIds"] !== null) {
-            $this->SnapshotIds = $param["SnapshotIds"];
+        if (array_key_exists('SnapshotIds',$param) and $param['SnapshotIds'] !== null) {
+            $this->SnapshotIds = $param['SnapshotIds'];
         }
     }
 }

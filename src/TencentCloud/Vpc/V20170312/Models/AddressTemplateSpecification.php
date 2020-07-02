@@ -54,12 +54,12 @@ class AddressTemplateSpecification extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AddressId",$param) and $param["AddressId"] !== null) {
-            $this->AddressId = $param["AddressId"];
+        if (array_key_exists('AddressId',$param) and $param['AddressId'] !== null) {
+            $this->AddressId = $param['AddressId'];
         }
 
-        if (array_key_exists("AddressGroupId",$param) and $param["AddressGroupId"] !== null) {
-            $this->AddressGroupId = $param["AddressGroupId"];
+        if (array_key_exists('AddressGroupId',$param) and $param['AddressGroupId'] !== null) {
+            $this->AddressGroupId = $param['AddressGroupId'];
         }
     }
 }

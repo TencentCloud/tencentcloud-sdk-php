@@ -62,21 +62,21 @@ class DescribeServicesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Services",$param) and $param["Services"] !== null) {
+        if (array_key_exists('Services',$param) and $param['Services'] !== null) {
             $this->Services = [];
-            foreach ($param["Services"] as $key => $value){
+            foreach ($param['Services'] as $key => $value){
                 $obj = new ModelService();
                 $obj->deserialize($value);
                 array_push($this->Services, $obj);
             }
         }
 
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

@@ -18,7 +18,7 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 标签绑定的资源类型，当前支持类型："cluster"
+ * 标签绑定的资源类型，当前支持类型：'cluster'
  *
  * @method string getKey() 获取标签键
  * @method void setKey(string $Key) 设置标签键
@@ -54,12 +54,12 @@ class Tag extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Key",$param) and $param["Key"] !== null) {
-            $this->Key = $param["Key"];
+        if (array_key_exists('Key',$param) and $param['Key'] !== null) {
+            $this->Key = $param['Key'];
         }
 
-        if (array_key_exists("Value",$param) and $param["Value"] !== null) {
-            $this->Value = $param["Value"];
+        if (array_key_exists('Value',$param) and $param['Value'] !== null) {
+            $this->Value = $param['Value'];
         }
     }
 }

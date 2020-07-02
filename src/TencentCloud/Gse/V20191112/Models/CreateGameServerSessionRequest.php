@@ -110,45 +110,45 @@ class CreateGameServerSessionRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MaximumPlayerSessionCount",$param) and $param["MaximumPlayerSessionCount"] !== null) {
-            $this->MaximumPlayerSessionCount = $param["MaximumPlayerSessionCount"];
+        if (array_key_exists('MaximumPlayerSessionCount',$param) and $param['MaximumPlayerSessionCount'] !== null) {
+            $this->MaximumPlayerSessionCount = $param['MaximumPlayerSessionCount'];
         }
 
-        if (array_key_exists("AliasId",$param) and $param["AliasId"] !== null) {
-            $this->AliasId = $param["AliasId"];
+        if (array_key_exists('AliasId',$param) and $param['AliasId'] !== null) {
+            $this->AliasId = $param['AliasId'];
         }
 
-        if (array_key_exists("CreatorId",$param) and $param["CreatorId"] !== null) {
-            $this->CreatorId = $param["CreatorId"];
+        if (array_key_exists('CreatorId',$param) and $param['CreatorId'] !== null) {
+            $this->CreatorId = $param['CreatorId'];
         }
 
-        if (array_key_exists("FleetId",$param) and $param["FleetId"] !== null) {
-            $this->FleetId = $param["FleetId"];
+        if (array_key_exists('FleetId',$param) and $param['FleetId'] !== null) {
+            $this->FleetId = $param['FleetId'];
         }
 
-        if (array_key_exists("GameProperties",$param) and $param["GameProperties"] !== null) {
+        if (array_key_exists('GameProperties',$param) and $param['GameProperties'] !== null) {
             $this->GameProperties = [];
-            foreach ($param["GameProperties"] as $key => $value){
+            foreach ($param['GameProperties'] as $key => $value){
                 $obj = new GameProperty();
                 $obj->deserialize($value);
                 array_push($this->GameProperties, $obj);
             }
         }
 
-        if (array_key_exists("GameServerSessionData",$param) and $param["GameServerSessionData"] !== null) {
-            $this->GameServerSessionData = $param["GameServerSessionData"];
+        if (array_key_exists('GameServerSessionData',$param) and $param['GameServerSessionData'] !== null) {
+            $this->GameServerSessionData = $param['GameServerSessionData'];
         }
 
-        if (array_key_exists("GameServerSessionId",$param) and $param["GameServerSessionId"] !== null) {
-            $this->GameServerSessionId = $param["GameServerSessionId"];
+        if (array_key_exists('GameServerSessionId',$param) and $param['GameServerSessionId'] !== null) {
+            $this->GameServerSessionId = $param['GameServerSessionId'];
         }
 
-        if (array_key_exists("IdempotencyToken",$param) and $param["IdempotencyToken"] !== null) {
-            $this->IdempotencyToken = $param["IdempotencyToken"];
+        if (array_key_exists('IdempotencyToken',$param) and $param['IdempotencyToken'] !== null) {
+            $this->IdempotencyToken = $param['IdempotencyToken'];
         }
 
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
     }
 }

@@ -86,29 +86,29 @@ class ClusterAsGroup extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AutoScalingGroupId",$param) and $param["AutoScalingGroupId"] !== null) {
-            $this->AutoScalingGroupId = $param["AutoScalingGroupId"];
+        if (array_key_exists('AutoScalingGroupId',$param) and $param['AutoScalingGroupId'] !== null) {
+            $this->AutoScalingGroupId = $param['AutoScalingGroupId'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("IsUnschedulable",$param) and $param["IsUnschedulable"] !== null) {
-            $this->IsUnschedulable = $param["IsUnschedulable"];
+        if (array_key_exists('IsUnschedulable',$param) and $param['IsUnschedulable'] !== null) {
+            $this->IsUnschedulable = $param['IsUnschedulable'];
         }
 
-        if (array_key_exists("Labels",$param) and $param["Labels"] !== null) {
+        if (array_key_exists('Labels',$param) and $param['Labels'] !== null) {
             $this->Labels = [];
-            foreach ($param["Labels"] as $key => $value){
+            foreach ($param['Labels'] as $key => $value){
                 $obj = new Label();
                 $obj->deserialize($value);
                 array_push($this->Labels, $obj);
             }
         }
 
-        if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
-            $this->CreatedTime = $param["CreatedTime"];
+        if (array_key_exists('CreatedTime',$param) and $param['CreatedTime'] !== null) {
+            $this->CreatedTime = $param['CreatedTime'];
         }
     }
 }

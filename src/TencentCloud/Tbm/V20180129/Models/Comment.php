@@ -62,16 +62,16 @@ class Comment extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Date",$param) and $param["Date"] !== null) {
-            $this->Date = $param["Date"];
+        if (array_key_exists('Date',$param) and $param['Date'] !== null) {
+            $this->Date = $param['Date'];
         }
 
-        if (array_key_exists("NegCommentCount",$param) and $param["NegCommentCount"] !== null) {
-            $this->NegCommentCount = $param["NegCommentCount"];
+        if (array_key_exists('NegCommentCount',$param) and $param['NegCommentCount'] !== null) {
+            $this->NegCommentCount = $param['NegCommentCount'];
         }
 
-        if (array_key_exists("PosCommentCount",$param) and $param["PosCommentCount"] !== null) {
-            $this->PosCommentCount = $param["PosCommentCount"];
+        if (array_key_exists('PosCommentCount',$param) and $param['PosCommentCount'] !== null) {
+            $this->PosCommentCount = $param['PosCommentCount'];
         }
     }
 }

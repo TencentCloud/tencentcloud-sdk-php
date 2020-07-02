@@ -66,21 +66,21 @@ class DescribeBillResourceSummaryResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ResourceSummarySet",$param) and $param["ResourceSummarySet"] !== null) {
+        if (array_key_exists('ResourceSummarySet',$param) and $param['ResourceSummarySet'] !== null) {
             $this->ResourceSummarySet = [];
-            foreach ($param["ResourceSummarySet"] as $key => $value){
+            foreach ($param['ResourceSummarySet'] as $key => $value){
                 $obj = new BillResourceSummary();
                 $obj->deserialize($value);
                 array_push($this->ResourceSummarySet, $obj);
             }
         }
 
-        if (array_key_exists("Total",$param) and $param["Total"] !== null) {
-            $this->Total = $param["Total"];
+        if (array_key_exists('Total',$param) and $param['Total'] !== null) {
+            $this->Total = $param['Total'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

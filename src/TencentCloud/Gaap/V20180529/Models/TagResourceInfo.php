@@ -66,12 +66,12 @@ RealServer表示源站
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ResourceType",$param) and $param["ResourceType"] !== null) {
-            $this->ResourceType = $param["ResourceType"];
+        if (array_key_exists('ResourceType',$param) and $param['ResourceType'] !== null) {
+            $this->ResourceType = $param['ResourceType'];
         }
 
-        if (array_key_exists("ResourceId",$param) and $param["ResourceId"] !== null) {
-            $this->ResourceId = $param["ResourceId"];
+        if (array_key_exists('ResourceId',$param) and $param['ResourceId'] !== null) {
+            $this->ResourceId = $param['ResourceId'];
         }
     }
 }

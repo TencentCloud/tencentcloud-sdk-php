@@ -70,20 +70,20 @@ class SubnetInput extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CidrBlock",$param) and $param["CidrBlock"] !== null) {
-            $this->CidrBlock = $param["CidrBlock"];
+        if (array_key_exists('CidrBlock',$param) and $param['CidrBlock'] !== null) {
+            $this->CidrBlock = $param['CidrBlock'];
         }
 
-        if (array_key_exists("SubnetName",$param) and $param["SubnetName"] !== null) {
-            $this->SubnetName = $param["SubnetName"];
+        if (array_key_exists('SubnetName',$param) and $param['SubnetName'] !== null) {
+            $this->SubnetName = $param['SubnetName'];
         }
 
-        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
-            $this->Zone = $param["Zone"];
+        if (array_key_exists('Zone',$param) and $param['Zone'] !== null) {
+            $this->Zone = $param['Zone'];
         }
 
-        if (array_key_exists("RouteTableId",$param) and $param["RouteTableId"] !== null) {
-            $this->RouteTableId = $param["RouteTableId"];
+        if (array_key_exists('RouteTableId',$param) and $param['RouteTableId'] !== null) {
+            $this->RouteTableId = $param['RouteTableId'];
         }
     }
 }

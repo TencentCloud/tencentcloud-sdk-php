@@ -70,20 +70,20 @@ class DownloadBillResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FileName",$param) and $param["FileName"] !== null) {
-            $this->FileName = $param["FileName"];
+        if (array_key_exists('FileName',$param) and $param['FileName'] !== null) {
+            $this->FileName = $param['FileName'];
         }
 
-        if (array_key_exists("FileMD5",$param) and $param["FileMD5"] !== null) {
-            $this->FileMD5 = $param["FileMD5"];
+        if (array_key_exists('FileMD5',$param) and $param['FileMD5'] !== null) {
+            $this->FileMD5 = $param['FileMD5'];
         }
 
-        if (array_key_exists("DownloadUrl",$param) and $param["DownloadUrl"] !== null) {
-            $this->DownloadUrl = $param["DownloadUrl"];
+        if (array_key_exists('DownloadUrl',$param) and $param['DownloadUrl'] !== null) {
+            $this->DownloadUrl = $param['DownloadUrl'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

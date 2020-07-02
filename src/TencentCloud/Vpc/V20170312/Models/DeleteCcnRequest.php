@@ -46,8 +46,8 @@ class DeleteCcnRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CcnId",$param) and $param["CcnId"] !== null) {
-            $this->CcnId = $param["CcnId"];
+        if (array_key_exists('CcnId',$param) and $param['CcnId'] !== null) {
+            $this->CcnId = $param['CcnId'];
         }
     }
 }

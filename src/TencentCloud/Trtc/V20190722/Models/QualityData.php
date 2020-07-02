@@ -74,25 +74,25 @@ class QualityData extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Content",$param) and $param["Content"] !== null) {
+        if (array_key_exists('Content',$param) and $param['Content'] !== null) {
             $this->Content = [];
-            foreach ($param["Content"] as $key => $value){
+            foreach ($param['Content'] as $key => $value){
                 $obj = new TimeValue();
                 $obj->deserialize($value);
                 array_push($this->Content, $obj);
             }
         }
 
-        if (array_key_exists("UserId",$param) and $param["UserId"] !== null) {
-            $this->UserId = $param["UserId"];
+        if (array_key_exists('UserId',$param) and $param['UserId'] !== null) {
+            $this->UserId = $param['UserId'];
         }
 
-        if (array_key_exists("PeerId",$param) and $param["PeerId"] !== null) {
-            $this->PeerId = $param["PeerId"];
+        if (array_key_exists('PeerId',$param) and $param['PeerId'] !== null) {
+            $this->PeerId = $param['PeerId'];
         }
 
-        if (array_key_exists("DataType",$param) and $param["DataType"] !== null) {
-            $this->DataType = $param["DataType"];
+        if (array_key_exists('DataType',$param) and $param['DataType'] !== null) {
+            $this->DataType = $param['DataType'];
         }
     }
 }

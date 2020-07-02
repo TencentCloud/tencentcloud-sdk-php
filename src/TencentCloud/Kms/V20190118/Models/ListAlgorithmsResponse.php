@@ -62,26 +62,26 @@ class ListAlgorithmsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SymmetricAlgorithms",$param) and $param["SymmetricAlgorithms"] !== null) {
+        if (array_key_exists('SymmetricAlgorithms',$param) and $param['SymmetricAlgorithms'] !== null) {
             $this->SymmetricAlgorithms = [];
-            foreach ($param["SymmetricAlgorithms"] as $key => $value){
+            foreach ($param['SymmetricAlgorithms'] as $key => $value){
                 $obj = new AlgorithmInfo();
                 $obj->deserialize($value);
                 array_push($this->SymmetricAlgorithms, $obj);
             }
         }
 
-        if (array_key_exists("AsymmetricAlgorithms",$param) and $param["AsymmetricAlgorithms"] !== null) {
+        if (array_key_exists('AsymmetricAlgorithms',$param) and $param['AsymmetricAlgorithms'] !== null) {
             $this->AsymmetricAlgorithms = [];
-            foreach ($param["AsymmetricAlgorithms"] as $key => $value){
+            foreach ($param['AsymmetricAlgorithms'] as $key => $value){
                 $obj = new AlgorithmInfo();
                 $obj->deserialize($value);
                 array_push($this->AsymmetricAlgorithms, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

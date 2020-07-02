@@ -62,16 +62,16 @@ class CreateUserCmdRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Alias",$param) and $param["Alias"] !== null) {
-            $this->Alias = $param["Alias"];
+        if (array_key_exists('Alias',$param) and $param['Alias'] !== null) {
+            $this->Alias = $param['Alias'];
         }
 
-        if (array_key_exists("OsType",$param) and $param["OsType"] !== null) {
-            $this->OsType = $param["OsType"];
+        if (array_key_exists('OsType',$param) and $param['OsType'] !== null) {
+            $this->OsType = $param['OsType'];
         }
 
-        if (array_key_exists("Content",$param) and $param["Content"] !== null) {
-            $this->Content = $param["Content"];
+        if (array_key_exists('Content',$param) and $param['Content'] !== null) {
+            $this->Content = $param['Content'];
         }
     }
 }

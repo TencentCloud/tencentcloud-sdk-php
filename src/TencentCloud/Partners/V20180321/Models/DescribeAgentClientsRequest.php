@@ -102,36 +102,36 @@ class DescribeAgentClientsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ClientUin",$param) and $param["ClientUin"] !== null) {
-            $this->ClientUin = $param["ClientUin"];
+        if (array_key_exists('ClientUin',$param) and $param['ClientUin'] !== null) {
+            $this->ClientUin = $param['ClientUin'];
         }
 
-        if (array_key_exists("ClientName",$param) and $param["ClientName"] !== null) {
-            $this->ClientName = $param["ClientName"];
+        if (array_key_exists('ClientName',$param) and $param['ClientName'] !== null) {
+            $this->ClientName = $param['ClientName'];
         }
 
-        if (array_key_exists("ClientFlag",$param) and $param["ClientFlag"] !== null) {
-            $this->ClientFlag = $param["ClientFlag"];
+        if (array_key_exists('ClientFlag',$param) and $param['ClientFlag'] !== null) {
+            $this->ClientFlag = $param['ClientFlag'];
         }
 
-        if (array_key_exists("OrderDirection",$param) and $param["OrderDirection"] !== null) {
-            $this->OrderDirection = $param["OrderDirection"];
+        if (array_key_exists('OrderDirection',$param) and $param['OrderDirection'] !== null) {
+            $this->OrderDirection = $param['OrderDirection'];
         }
 
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
+        if (array_key_exists('Offset',$param) and $param['Offset'] !== null) {
+            $this->Offset = $param['Offset'];
         }
 
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
+        if (array_key_exists('Limit',$param) and $param['Limit'] !== null) {
+            $this->Limit = $param['Limit'];
         }
 
-        if (array_key_exists("SalesUin",$param) and $param["SalesUin"] !== null) {
-            $this->SalesUin = $param["SalesUin"];
+        if (array_key_exists('SalesUin',$param) and $param['SalesUin'] !== null) {
+            $this->SalesUin = $param['SalesUin'];
         }
 
-        if (array_key_exists("SalesName",$param) and $param["SalesName"] !== null) {
-            $this->SalesName = $param["SalesName"];
+        if (array_key_exists('SalesName',$param) and $param['SalesName'] !== null) {
+            $this->SalesName = $param['SalesName'];
         }
     }
 }

@@ -54,13 +54,13 @@ class DescribeLiveWatermarkResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Watermark",$param) and $param["Watermark"] !== null) {
+        if (array_key_exists('Watermark',$param) and $param['Watermark'] !== null) {
             $this->Watermark = new WatermarkInfo();
-            $this->Watermark->deserialize($param["Watermark"]);
+            $this->Watermark->deserialize($param['Watermark']);
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

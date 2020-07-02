@@ -58,17 +58,17 @@ class DescribePostpayPackageFreeQuotasResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PackageFreeQuotaInfos",$param) and $param["PackageFreeQuotaInfos"] !== null) {
+        if (array_key_exists('PackageFreeQuotaInfos',$param) and $param['PackageFreeQuotaInfos'] !== null) {
             $this->PackageFreeQuotaInfos = [];
-            foreach ($param["PackageFreeQuotaInfos"] as $key => $value){
+            foreach ($param['PackageFreeQuotaInfos'] as $key => $value){
                 $obj = new PackageFreeQuotaInfo();
                 $obj->deserialize($value);
                 array_push($this->PackageFreeQuotaInfos, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

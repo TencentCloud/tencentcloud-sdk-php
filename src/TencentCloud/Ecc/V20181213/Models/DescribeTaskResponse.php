@@ -78,21 +78,21 @@ class DescribeTaskResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Content",$param) and $param["Content"] !== null) {
-            $this->Content = $param["Content"];
+        if (array_key_exists('Content',$param) and $param['Content'] !== null) {
+            $this->Content = $param['Content'];
         }
 
-        if (array_key_exists("CorrectData",$param) and $param["CorrectData"] !== null) {
+        if (array_key_exists('CorrectData',$param) and $param['CorrectData'] !== null) {
             $this->CorrectData = new CorrectData();
-            $this->CorrectData->deserialize($param["CorrectData"]);
+            $this->CorrectData->deserialize($param['CorrectData']);
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

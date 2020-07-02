@@ -78,35 +78,35 @@ class DescribeMapInfoResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MapInfoList",$param) and $param["MapInfoList"] !== null) {
+        if (array_key_exists('MapInfoList',$param) and $param['MapInfoList'] !== null) {
             $this->MapInfoList = [];
-            foreach ($param["MapInfoList"] as $key => $value){
+            foreach ($param['MapInfoList'] as $key => $value){
                 $obj = new MapInfo();
                 $obj->deserialize($value);
                 array_push($this->MapInfoList, $obj);
             }
         }
 
-        if (array_key_exists("ServerRegionRelation",$param) and $param["ServerRegionRelation"] !== null) {
+        if (array_key_exists('ServerRegionRelation',$param) and $param['ServerRegionRelation'] !== null) {
             $this->ServerRegionRelation = [];
-            foreach ($param["ServerRegionRelation"] as $key => $value){
+            foreach ($param['ServerRegionRelation'] as $key => $value){
                 $obj = new RegionMapRelation();
                 $obj->deserialize($value);
                 array_push($this->ServerRegionRelation, $obj);
             }
         }
 
-        if (array_key_exists("ClientRegionRelation",$param) and $param["ClientRegionRelation"] !== null) {
+        if (array_key_exists('ClientRegionRelation',$param) and $param['ClientRegionRelation'] !== null) {
             $this->ClientRegionRelation = [];
-            foreach ($param["ClientRegionRelation"] as $key => $value){
+            foreach ($param['ClientRegionRelation'] as $key => $value){
                 $obj = new RegionMapRelation();
                 $obj->deserialize($value);
                 array_push($this->ClientRegionRelation, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

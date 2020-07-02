@@ -54,12 +54,12 @@ class RenameInstanceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("NewName",$param) and $param["NewName"] !== null) {
-            $this->NewName = $param["NewName"];
+        if (array_key_exists('NewName',$param) and $param['NewName'] !== null) {
+            $this->NewName = $param['NewName'];
         }
     }
 }

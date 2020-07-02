@@ -54,13 +54,13 @@ class DescribeEditingTaskResultResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TaskResult",$param) and $param["TaskResult"] !== null) {
+        if (array_key_exists('TaskResult',$param) and $param['TaskResult'] !== null) {
             $this->TaskResult = new EditingTaskResult();
-            $this->TaskResult->deserialize($param["TaskResult"]);
+            $this->TaskResult->deserialize($param['TaskResult']);
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

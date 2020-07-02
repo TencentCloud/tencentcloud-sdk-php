@@ -78,25 +78,25 @@ class DescribeProjectsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PageNo",$param) and $param["PageNo"] !== null) {
-            $this->PageNo = $param["PageNo"];
+        if (array_key_exists('PageNo',$param) and $param['PageNo'] !== null) {
+            $this->PageNo = $param['PageNo'];
         }
 
-        if (array_key_exists("PageSize",$param) and $param["PageSize"] !== null) {
-            $this->PageSize = $param["PageSize"];
+        if (array_key_exists('PageSize',$param) and $param['PageSize'] !== null) {
+            $this->PageSize = $param['PageSize'];
         }
 
-        if (array_key_exists("SearchWord",$param) and $param["SearchWord"] !== null) {
-            $this->SearchWord = $param["SearchWord"];
+        if (array_key_exists('SearchWord',$param) and $param['SearchWord'] !== null) {
+            $this->SearchWord = $param['SearchWord'];
         }
 
-        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+        if (array_key_exists('Filters',$param) and $param['Filters'] !== null) {
             $this->Filters = new Filters();
-            $this->Filters->deserialize($param["Filters"]);
+            $this->Filters->deserialize($param['Filters']);
         }
 
-        if (array_key_exists("ProjectStatus",$param) and $param["ProjectStatus"] !== null) {
-            $this->ProjectStatus = $param["ProjectStatus"];
+        if (array_key_exists('ProjectStatus',$param) and $param['ProjectStatus'] !== null) {
+            $this->ProjectStatus = $param['ProjectStatus'];
         }
     }
 }

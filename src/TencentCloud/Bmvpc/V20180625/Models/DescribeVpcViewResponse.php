@@ -54,13 +54,13 @@ class DescribeVpcViewResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("VpcView",$param) and $param["VpcView"] !== null) {
+        if (array_key_exists('VpcView',$param) and $param['VpcView'] !== null) {
             $this->VpcView = new VpcViewInfo();
-            $this->VpcView->deserialize($param["VpcView"]);
+            $this->VpcView->deserialize($param['VpcView']);
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

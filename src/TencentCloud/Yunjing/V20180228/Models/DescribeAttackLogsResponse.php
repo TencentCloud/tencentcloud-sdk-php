@@ -66,21 +66,21 @@ class DescribeAttackLogsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AttackLogs",$param) and $param["AttackLogs"] !== null) {
+        if (array_key_exists('AttackLogs',$param) and $param['AttackLogs'] !== null) {
             $this->AttackLogs = [];
-            foreach ($param["AttackLogs"] as $key => $value){
+            foreach ($param['AttackLogs'] as $key => $value){
                 $obj = new DefendAttackLog();
                 $obj->deserialize($value);
                 array_push($this->AttackLogs, $obj);
             }
         }
 
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

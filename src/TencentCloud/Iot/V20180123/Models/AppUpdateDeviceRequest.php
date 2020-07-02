@@ -70,20 +70,20 @@ class AppUpdateDeviceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AccessToken",$param) and $param["AccessToken"] !== null) {
-            $this->AccessToken = $param["AccessToken"];
+        if (array_key_exists('AccessToken',$param) and $param['AccessToken'] !== null) {
+            $this->AccessToken = $param['AccessToken'];
         }
 
-        if (array_key_exists("ProductId",$param) and $param["ProductId"] !== null) {
-            $this->ProductId = $param["ProductId"];
+        if (array_key_exists('ProductId',$param) and $param['ProductId'] !== null) {
+            $this->ProductId = $param['ProductId'];
         }
 
-        if (array_key_exists("DeviceName",$param) and $param["DeviceName"] !== null) {
-            $this->DeviceName = $param["DeviceName"];
+        if (array_key_exists('DeviceName',$param) and $param['DeviceName'] !== null) {
+            $this->DeviceName = $param['DeviceName'];
         }
 
-        if (array_key_exists("AliasName",$param) and $param["AliasName"] !== null) {
-            $this->AliasName = $param["AliasName"];
+        if (array_key_exists('AliasName',$param) and $param['AliasName'] !== null) {
+            $this->AliasName = $param['AliasName'];
         }
     }
 }

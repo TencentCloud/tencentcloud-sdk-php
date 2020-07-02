@@ -50,8 +50,8 @@ class GameServerSessionQueueDestination extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DestinationArn",$param) and $param["DestinationArn"] !== null) {
-            $this->DestinationArn = $param["DestinationArn"];
+        if (array_key_exists('DestinationArn',$param) and $param['DestinationArn'] !== null) {
+            $this->DestinationArn = $param['DestinationArn'];
         }
     }
 }

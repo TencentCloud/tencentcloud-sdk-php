@@ -62,16 +62,16 @@ class DeleteAccountResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DelSuccessList",$param) and $param["DelSuccessList"] !== null) {
-            $this->DelSuccessList = $param["DelSuccessList"];
+        if (array_key_exists('DelSuccessList',$param) and $param['DelSuccessList'] !== null) {
+            $this->DelSuccessList = $param['DelSuccessList'];
         }
 
-        if (array_key_exists("DelFailedList",$param) and $param["DelFailedList"] !== null) {
-            $this->DelFailedList = $param["DelFailedList"];
+        if (array_key_exists('DelFailedList',$param) and $param['DelFailedList'] !== null) {
+            $this->DelFailedList = $param['DelFailedList'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

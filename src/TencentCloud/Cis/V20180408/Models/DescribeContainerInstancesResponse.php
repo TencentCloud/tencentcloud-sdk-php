@@ -62,21 +62,21 @@ class DescribeContainerInstancesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ContainerInstanceList",$param) and $param["ContainerInstanceList"] !== null) {
+        if (array_key_exists('ContainerInstanceList',$param) and $param['ContainerInstanceList'] !== null) {
             $this->ContainerInstanceList = [];
-            foreach ($param["ContainerInstanceList"] as $key => $value){
+            foreach ($param['ContainerInstanceList'] as $key => $value){
                 $obj = new ContainerInstance();
                 $obj->deserialize($value);
                 array_push($this->ContainerInstanceList, $obj);
             }
         }
 
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

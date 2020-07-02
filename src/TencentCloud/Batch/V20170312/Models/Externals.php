@@ -74,17 +74,17 @@ class Externals extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ReleaseAddress",$param) and $param["ReleaseAddress"] !== null) {
-            $this->ReleaseAddress = $param["ReleaseAddress"];
+        if (array_key_exists('ReleaseAddress',$param) and $param['ReleaseAddress'] !== null) {
+            $this->ReleaseAddress = $param['ReleaseAddress'];
         }
 
-        if (array_key_exists("UnsupportNetworks",$param) and $param["UnsupportNetworks"] !== null) {
-            $this->UnsupportNetworks = $param["UnsupportNetworks"];
+        if (array_key_exists('UnsupportNetworks',$param) and $param['UnsupportNetworks'] !== null) {
+            $this->UnsupportNetworks = $param['UnsupportNetworks'];
         }
 
-        if (array_key_exists("StorageBlockAttr",$param) and $param["StorageBlockAttr"] !== null) {
+        if (array_key_exists('StorageBlockAttr',$param) and $param['StorageBlockAttr'] !== null) {
             $this->StorageBlockAttr = new StorageBlock();
-            $this->StorageBlockAttr->deserialize($param["StorageBlockAttr"]);
+            $this->StorageBlockAttr->deserialize($param['StorageBlockAttr']);
         }
     }
 }

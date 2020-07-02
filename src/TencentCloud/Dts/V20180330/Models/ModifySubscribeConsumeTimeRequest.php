@@ -54,12 +54,12 @@ class ModifySubscribeConsumeTimeRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SubscribeId",$param) and $param["SubscribeId"] !== null) {
-            $this->SubscribeId = $param["SubscribeId"];
+        if (array_key_exists('SubscribeId',$param) and $param['SubscribeId'] !== null) {
+            $this->SubscribeId = $param['SubscribeId'];
         }
 
-        if (array_key_exists("ConsumeStartTime",$param) and $param["ConsumeStartTime"] !== null) {
-            $this->ConsumeStartTime = $param["ConsumeStartTime"];
+        if (array_key_exists('ConsumeStartTime',$param) and $param['ConsumeStartTime'] !== null) {
+            $this->ConsumeStartTime = $param['ConsumeStartTime'];
         }
     }
 }

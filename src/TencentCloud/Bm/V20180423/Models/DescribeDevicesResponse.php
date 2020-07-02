@@ -62,21 +62,21 @@ class DescribeDevicesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("DeviceInfoSet",$param) and $param["DeviceInfoSet"] !== null) {
+        if (array_key_exists('DeviceInfoSet',$param) and $param['DeviceInfoSet'] !== null) {
             $this->DeviceInfoSet = [];
-            foreach ($param["DeviceInfoSet"] as $key => $value){
+            foreach ($param['DeviceInfoSet'] as $key => $value){
                 $obj = new DeviceInfo();
                 $obj->deserialize($value);
                 array_push($this->DeviceInfoSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

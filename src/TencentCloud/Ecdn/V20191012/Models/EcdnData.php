@@ -54,13 +54,13 @@ class EcdnData extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Metrics",$param) and $param["Metrics"] !== null) {
-            $this->Metrics = $param["Metrics"];
+        if (array_key_exists('Metrics',$param) and $param['Metrics'] !== null) {
+            $this->Metrics = $param['Metrics'];
         }
 
-        if (array_key_exists("DetailData",$param) and $param["DetailData"] !== null) {
+        if (array_key_exists('DetailData',$param) and $param['DetailData'] !== null) {
             $this->DetailData = [];
-            foreach ($param["DetailData"] as $key => $value){
+            foreach ($param['DetailData'] as $key => $value){
                 $obj = new TimestampData();
                 $obj->deserialize($value);
                 array_push($this->DetailData, $obj);

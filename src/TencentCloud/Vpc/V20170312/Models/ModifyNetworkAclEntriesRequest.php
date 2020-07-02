@@ -54,13 +54,13 @@ class ModifyNetworkAclEntriesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("NetworkAclId",$param) and $param["NetworkAclId"] !== null) {
-            $this->NetworkAclId = $param["NetworkAclId"];
+        if (array_key_exists('NetworkAclId',$param) and $param['NetworkAclId'] !== null) {
+            $this->NetworkAclId = $param['NetworkAclId'];
         }
 
-        if (array_key_exists("NetworkAclEntrySet",$param) and $param["NetworkAclEntrySet"] !== null) {
+        if (array_key_exists('NetworkAclEntrySet',$param) and $param['NetworkAclEntrySet'] !== null) {
             $this->NetworkAclEntrySet = new NetworkAclEntrySet();
-            $this->NetworkAclEntrySet->deserialize($param["NetworkAclEntrySet"]);
+            $this->NetworkAclEntrySet->deserialize($param['NetworkAclEntrySet']);
         }
     }
 }

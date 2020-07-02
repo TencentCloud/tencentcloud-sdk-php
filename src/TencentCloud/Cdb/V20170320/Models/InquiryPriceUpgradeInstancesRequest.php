@@ -78,24 +78,24 @@ class InquiryPriceUpgradeInstancesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("Memory",$param) and $param["Memory"] !== null) {
-            $this->Memory = $param["Memory"];
+        if (array_key_exists('Memory',$param) and $param['Memory'] !== null) {
+            $this->Memory = $param['Memory'];
         }
 
-        if (array_key_exists("Volume",$param) and $param["Volume"] !== null) {
-            $this->Volume = $param["Volume"];
+        if (array_key_exists('Volume',$param) and $param['Volume'] !== null) {
+            $this->Volume = $param['Volume'];
         }
 
-        if (array_key_exists("Cpu",$param) and $param["Cpu"] !== null) {
-            $this->Cpu = $param["Cpu"];
+        if (array_key_exists('Cpu',$param) and $param['Cpu'] !== null) {
+            $this->Cpu = $param['Cpu'];
         }
 
-        if (array_key_exists("ProtectMode",$param) and $param["ProtectMode"] !== null) {
-            $this->ProtectMode = $param["ProtectMode"];
+        if (array_key_exists('ProtectMode',$param) and $param['ProtectMode'] !== null) {
+            $this->ProtectMode = $param['ProtectMode'];
         }
     }
 }

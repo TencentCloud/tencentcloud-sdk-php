@@ -54,17 +54,17 @@ class DescribeAccountAttributesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AccountAttributeSet",$param) and $param["AccountAttributeSet"] !== null) {
+        if (array_key_exists('AccountAttributeSet',$param) and $param['AccountAttributeSet'] !== null) {
             $this->AccountAttributeSet = [];
-            foreach ($param["AccountAttributeSet"] as $key => $value){
+            foreach ($param['AccountAttributeSet'] as $key => $value){
                 $obj = new AccountAttribute();
                 $obj->deserialize($value);
                 array_push($this->AccountAttributeSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

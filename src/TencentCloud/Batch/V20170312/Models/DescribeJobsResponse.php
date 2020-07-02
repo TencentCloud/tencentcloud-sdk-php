@@ -62,21 +62,21 @@ class DescribeJobsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("JobSet",$param) and $param["JobSet"] !== null) {
+        if (array_key_exists('JobSet',$param) and $param['JobSet'] !== null) {
             $this->JobSet = [];
-            foreach ($param["JobSet"] as $key => $value){
+            foreach ($param['JobSet'] as $key => $value){
                 $obj = new JobView();
                 $obj->deserialize($value);
                 array_push($this->JobSet, $obj);
             }
         }
 
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

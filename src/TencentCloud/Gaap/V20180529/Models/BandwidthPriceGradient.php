@@ -54,12 +54,12 @@ class BandwidthPriceGradient extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BandwidthRange",$param) and $param["BandwidthRange"] !== null) {
-            $this->BandwidthRange = $param["BandwidthRange"];
+        if (array_key_exists('BandwidthRange',$param) and $param['BandwidthRange'] !== null) {
+            $this->BandwidthRange = $param['BandwidthRange'];
         }
 
-        if (array_key_exists("BandwidthUnitPrice",$param) and $param["BandwidthUnitPrice"] !== null) {
-            $this->BandwidthUnitPrice = $param["BandwidthUnitPrice"];
+        if (array_key_exists('BandwidthUnitPrice',$param) and $param['BandwidthUnitPrice'] !== null) {
+            $this->BandwidthUnitPrice = $param['BandwidthUnitPrice'];
         }
     }
 }

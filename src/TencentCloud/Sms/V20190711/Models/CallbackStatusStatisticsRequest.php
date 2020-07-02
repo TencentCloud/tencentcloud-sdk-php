@@ -90,24 +90,24 @@ class CallbackStatusStatisticsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("StartDateTime",$param) and $param["StartDateTime"] !== null) {
-            $this->StartDateTime = $param["StartDateTime"];
+        if (array_key_exists('StartDateTime',$param) and $param['StartDateTime'] !== null) {
+            $this->StartDateTime = $param['StartDateTime'];
         }
 
-        if (array_key_exists("EndDataTime",$param) and $param["EndDataTime"] !== null) {
-            $this->EndDataTime = $param["EndDataTime"];
+        if (array_key_exists('EndDataTime',$param) and $param['EndDataTime'] !== null) {
+            $this->EndDataTime = $param['EndDataTime'];
         }
 
-        if (array_key_exists("SmsSdkAppid",$param) and $param["SmsSdkAppid"] !== null) {
-            $this->SmsSdkAppid = $param["SmsSdkAppid"];
+        if (array_key_exists('SmsSdkAppid',$param) and $param['SmsSdkAppid'] !== null) {
+            $this->SmsSdkAppid = $param['SmsSdkAppid'];
         }
 
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
+        if (array_key_exists('Limit',$param) and $param['Limit'] !== null) {
+            $this->Limit = $param['Limit'];
         }
 
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
+        if (array_key_exists('Offset',$param) and $param['Offset'] !== null) {
+            $this->Offset = $param['Offset'];
         }
     }
 }

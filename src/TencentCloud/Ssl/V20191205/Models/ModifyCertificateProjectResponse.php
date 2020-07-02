@@ -70,16 +70,16 @@ class ModifyCertificateProjectResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SuccessCertificates",$param) and $param["SuccessCertificates"] !== null) {
-            $this->SuccessCertificates = $param["SuccessCertificates"];
+        if (array_key_exists('SuccessCertificates',$param) and $param['SuccessCertificates'] !== null) {
+            $this->SuccessCertificates = $param['SuccessCertificates'];
         }
 
-        if (array_key_exists("FailCertificates",$param) and $param["FailCertificates"] !== null) {
-            $this->FailCertificates = $param["FailCertificates"];
+        if (array_key_exists('FailCertificates',$param) and $param['FailCertificates'] !== null) {
+            $this->FailCertificates = $param['FailCertificates'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

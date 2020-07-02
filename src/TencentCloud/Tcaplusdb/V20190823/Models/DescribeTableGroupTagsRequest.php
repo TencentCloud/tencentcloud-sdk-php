@@ -54,12 +54,12 @@ class DescribeTableGroupTagsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
-            $this->ClusterId = $param["ClusterId"];
+        if (array_key_exists('ClusterId',$param) and $param['ClusterId'] !== null) {
+            $this->ClusterId = $param['ClusterId'];
         }
 
-        if (array_key_exists("TableGroupIds",$param) and $param["TableGroupIds"] !== null) {
-            $this->TableGroupIds = $param["TableGroupIds"];
+        if (array_key_exists('TableGroupIds',$param) and $param['TableGroupIds'] !== null) {
+            $this->TableGroupIds = $param['TableGroupIds'];
         }
     }
 }

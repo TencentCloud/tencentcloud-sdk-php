@@ -62,21 +62,21 @@ class DescribeProjectsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ProjectList",$param) and $param["ProjectList"] !== null) {
+        if (array_key_exists('ProjectList',$param) and $param['ProjectList'] !== null) {
             $this->ProjectList = [];
-            foreach ($param["ProjectList"] as $key => $value){
+            foreach ($param['ProjectList'] as $key => $value){
                 $obj = new ProjectInfo();
                 $obj->deserialize($value);
                 array_push($this->ProjectList, $obj);
             }
         }
 
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

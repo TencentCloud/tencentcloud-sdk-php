@@ -62,21 +62,21 @@ class DeleteIdlFilesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("IdlFileInfos",$param) and $param["IdlFileInfos"] !== null) {
+        if (array_key_exists('IdlFileInfos',$param) and $param['IdlFileInfos'] !== null) {
             $this->IdlFileInfos = [];
-            foreach ($param["IdlFileInfos"] as $key => $value){
+            foreach ($param['IdlFileInfos'] as $key => $value){
                 $obj = new IdlFileInfoWithoutContent();
                 $obj->deserialize($value);
                 array_push($this->IdlFileInfos, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

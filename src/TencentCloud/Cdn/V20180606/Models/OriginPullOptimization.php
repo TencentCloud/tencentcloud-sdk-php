@@ -74,12 +74,12 @@ CNToOV：境内回源境外
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Switch",$param) and $param["Switch"] !== null) {
-            $this->Switch = $param["Switch"];
+        if (array_key_exists('Switch',$param) and $param['Switch'] !== null) {
+            $this->Switch = $param['Switch'];
         }
 
-        if (array_key_exists("OptimizationType",$param) and $param["OptimizationType"] !== null) {
-            $this->OptimizationType = $param["OptimizationType"];
+        if (array_key_exists('OptimizationType',$param) and $param['OptimizationType'] !== null) {
+            $this->OptimizationType = $param['OptimizationType'];
         }
     }
 }

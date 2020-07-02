@@ -106,20 +106,20 @@ class EnglishOCRRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ImageBase64",$param) and $param["ImageBase64"] !== null) {
-            $this->ImageBase64 = $param["ImageBase64"];
+        if (array_key_exists('ImageBase64',$param) and $param['ImageBase64'] !== null) {
+            $this->ImageBase64 = $param['ImageBase64'];
         }
 
-        if (array_key_exists("ImageUrl",$param) and $param["ImageUrl"] !== null) {
-            $this->ImageUrl = $param["ImageUrl"];
+        if (array_key_exists('ImageUrl',$param) and $param['ImageUrl'] !== null) {
+            $this->ImageUrl = $param['ImageUrl'];
         }
 
-        if (array_key_exists("EnableCoordPoint",$param) and $param["EnableCoordPoint"] !== null) {
-            $this->EnableCoordPoint = $param["EnableCoordPoint"];
+        if (array_key_exists('EnableCoordPoint',$param) and $param['EnableCoordPoint'] !== null) {
+            $this->EnableCoordPoint = $param['EnableCoordPoint'];
         }
 
-        if (array_key_exists("EnableCandWord",$param) and $param["EnableCandWord"] !== null) {
-            $this->EnableCandWord = $param["EnableCandWord"];
+        if (array_key_exists('EnableCandWord',$param) and $param['EnableCandWord'] !== null) {
+            $this->EnableCandWord = $param['EnableCandWord'];
         }
     }
 }

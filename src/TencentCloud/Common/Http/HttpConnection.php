@@ -37,8 +37,8 @@ class HttpConnection
     private  function getOptions()
     {
         $options = ["allow_redirects" => false];
-        $options["timeout"] = $this->profile->getHttpProfile()->getReqTimeout();
-        $options["proxy"] = $this->profile->getHttpProfile()->getProxy();
+        $options['timeout'] = $this->profile->getHttpProfile()->getReqTimeout();
+        $options['proxy'] = $this->profile->getHttpProfile()->getProxy();
         return $options;
     }
 
@@ -47,11 +47,11 @@ class HttpConnection
         $options = $this->getOptions();
 
         if ($query) {
-            $options["query"] = $query;
+            $options['query'] = $query;
         }
 
         if ($headers) {
-            $options["headers"] = $headers;
+            $options['headers'] = $headers;
         }
         return $this->client->get($uri, $options);
     }
@@ -60,7 +60,7 @@ class HttpConnection
     {
         $options  = $this->getOptions();
         if ($headers) {
-            $options["headers"] = $headers;
+            $options['headers'] = $headers;
         }
 
         if ($body) {
@@ -73,11 +73,11 @@ class HttpConnection
     {
         $options  = $this->getOptions();
         if ($headers) {
-            $options["headers"] = $headers;
+            $options['headers'] = $headers;
         }
 
         if ($body) {
-            $options["body"] = $body;
+            $options['body'] = $body;
         }
         return $this->client->post($uri, $options);
     }

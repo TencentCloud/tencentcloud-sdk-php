@@ -54,12 +54,12 @@ class PeerSet extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PeerName",$param) and $param["PeerName"] !== null) {
-            $this->PeerName = $param["PeerName"];
+        if (array_key_exists('PeerName',$param) and $param['PeerName'] !== null) {
+            $this->PeerName = $param['PeerName'];
         }
 
-        if (array_key_exists("OrgName",$param) and $param["OrgName"] !== null) {
-            $this->OrgName = $param["OrgName"];
+        if (array_key_exists('OrgName',$param) and $param['OrgName'] !== null) {
+            $this->OrgName = $param['OrgName'];
         }
     }
 }

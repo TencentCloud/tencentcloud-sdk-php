@@ -62,16 +62,16 @@ class DescribeMultiDevTaskResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
-            $this->TaskId = $param["TaskId"];
+        if (array_key_exists('TaskId',$param) and $param['TaskId'] !== null) {
+            $this->TaskId = $param['TaskId'];
         }
 
-        if (array_key_exists("TaskStatus",$param) and $param["TaskStatus"] !== null) {
-            $this->TaskStatus = $param["TaskStatus"];
+        if (array_key_exists('TaskStatus',$param) and $param['TaskStatus'] !== null) {
+            $this->TaskStatus = $param['TaskStatus'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

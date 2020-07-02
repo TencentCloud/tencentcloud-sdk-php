@@ -62,16 +62,16 @@ class RemoveBandwidthPackageResourcesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BandwidthPackageId",$param) and $param["BandwidthPackageId"] !== null) {
-            $this->BandwidthPackageId = $param["BandwidthPackageId"];
+        if (array_key_exists('BandwidthPackageId',$param) and $param['BandwidthPackageId'] !== null) {
+            $this->BandwidthPackageId = $param['BandwidthPackageId'];
         }
 
-        if (array_key_exists("ResourceType",$param) and $param["ResourceType"] !== null) {
-            $this->ResourceType = $param["ResourceType"];
+        if (array_key_exists('ResourceType',$param) and $param['ResourceType'] !== null) {
+            $this->ResourceType = $param['ResourceType'];
         }
 
-        if (array_key_exists("ResourceIds",$param) and $param["ResourceIds"] !== null) {
-            $this->ResourceIds = $param["ResourceIds"];
+        if (array_key_exists('ResourceIds',$param) and $param['ResourceIds'] !== null) {
+            $this->ResourceIds = $param['ResourceIds'];
         }
     }
 }

@@ -90,29 +90,29 @@ class GetPersonListResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PersonInfos",$param) and $param["PersonInfos"] !== null) {
+        if (array_key_exists('PersonInfos',$param) and $param['PersonInfos'] !== null) {
             $this->PersonInfos = [];
-            foreach ($param["PersonInfos"] as $key => $value){
+            foreach ($param['PersonInfos'] as $key => $value){
                 $obj = new PersonInfo();
                 $obj->deserialize($value);
                 array_push($this->PersonInfos, $obj);
             }
         }
 
-        if (array_key_exists("PersonNum",$param) and $param["PersonNum"] !== null) {
-            $this->PersonNum = $param["PersonNum"];
+        if (array_key_exists('PersonNum',$param) and $param['PersonNum'] !== null) {
+            $this->PersonNum = $param['PersonNum'];
         }
 
-        if (array_key_exists("FaceNum",$param) and $param["FaceNum"] !== null) {
-            $this->FaceNum = $param["FaceNum"];
+        if (array_key_exists('FaceNum',$param) and $param['FaceNum'] !== null) {
+            $this->FaceNum = $param['FaceNum'];
         }
 
-        if (array_key_exists("FaceModelVersion",$param) and $param["FaceModelVersion"] !== null) {
-            $this->FaceModelVersion = $param["FaceModelVersion"];
+        if (array_key_exists('FaceModelVersion',$param) and $param['FaceModelVersion'] !== null) {
+            $this->FaceModelVersion = $param['FaceModelVersion'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

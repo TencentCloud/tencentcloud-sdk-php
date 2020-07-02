@@ -62,21 +62,21 @@ class DescribeTeamMembersResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("MemberSet",$param) and $param["MemberSet"] !== null) {
+        if (array_key_exists('MemberSet',$param) and $param['MemberSet'] !== null) {
             $this->MemberSet = [];
-            foreach ($param["MemberSet"] as $key => $value){
+            foreach ($param['MemberSet'] as $key => $value){
                 $obj = new TeamMemberInfo();
                 $obj->deserialize($value);
                 array_push($this->MemberSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

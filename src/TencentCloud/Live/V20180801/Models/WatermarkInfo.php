@@ -110,40 +110,40 @@ class WatermarkInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("WatermarkId",$param) and $param["WatermarkId"] !== null) {
-            $this->WatermarkId = $param["WatermarkId"];
+        if (array_key_exists('WatermarkId',$param) and $param['WatermarkId'] !== null) {
+            $this->WatermarkId = $param['WatermarkId'];
         }
 
-        if (array_key_exists("PictureUrl",$param) and $param["PictureUrl"] !== null) {
-            $this->PictureUrl = $param["PictureUrl"];
+        if (array_key_exists('PictureUrl',$param) and $param['PictureUrl'] !== null) {
+            $this->PictureUrl = $param['PictureUrl'];
         }
 
-        if (array_key_exists("XPosition",$param) and $param["XPosition"] !== null) {
-            $this->XPosition = $param["XPosition"];
+        if (array_key_exists('XPosition',$param) and $param['XPosition'] !== null) {
+            $this->XPosition = $param['XPosition'];
         }
 
-        if (array_key_exists("YPosition",$param) and $param["YPosition"] !== null) {
-            $this->YPosition = $param["YPosition"];
+        if (array_key_exists('YPosition',$param) and $param['YPosition'] !== null) {
+            $this->YPosition = $param['YPosition'];
         }
 
-        if (array_key_exists("WatermarkName",$param) and $param["WatermarkName"] !== null) {
-            $this->WatermarkName = $param["WatermarkName"];
+        if (array_key_exists('WatermarkName',$param) and $param['WatermarkName'] !== null) {
+            $this->WatermarkName = $param['WatermarkName'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("Width",$param) and $param["Width"] !== null) {
-            $this->Width = $param["Width"];
+        if (array_key_exists('Width',$param) and $param['Width'] !== null) {
+            $this->Width = $param['Width'];
         }
 
-        if (array_key_exists("Height",$param) and $param["Height"] !== null) {
-            $this->Height = $param["Height"];
+        if (array_key_exists('Height',$param) and $param['Height'] !== null) {
+            $this->Height = $param['Height'];
         }
     }
 }

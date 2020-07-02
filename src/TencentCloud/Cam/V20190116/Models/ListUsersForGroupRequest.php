@@ -62,16 +62,16 @@ class ListUsersForGroupRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
-            $this->GroupId = $param["GroupId"];
+        if (array_key_exists('GroupId',$param) and $param['GroupId'] !== null) {
+            $this->GroupId = $param['GroupId'];
         }
 
-        if (array_key_exists("Page",$param) and $param["Page"] !== null) {
-            $this->Page = $param["Page"];
+        if (array_key_exists('Page',$param) and $param['Page'] !== null) {
+            $this->Page = $param['Page'];
         }
 
-        if (array_key_exists("Rp",$param) and $param["Rp"] !== null) {
-            $this->Rp = $param["Rp"];
+        if (array_key_exists('Rp',$param) and $param['Rp'] !== null) {
+            $this->Rp = $param['Rp'];
         }
     }
 }

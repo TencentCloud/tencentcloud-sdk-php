@@ -50,8 +50,8 @@ class CommonMixControlParams extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("UseMixCropCenter",$param) and $param["UseMixCropCenter"] !== null) {
-            $this->UseMixCropCenter = $param["UseMixCropCenter"];
+        if (array_key_exists('UseMixCropCenter',$param) and $param['UseMixCropCenter'] !== null) {
+            $this->UseMixCropCenter = $param['UseMixCropCenter'];
         }
     }
 }

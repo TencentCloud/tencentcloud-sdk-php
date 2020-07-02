@@ -110,40 +110,40 @@ class OpenPort extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
-            $this->Id = $param["Id"];
+        if (array_key_exists('Id',$param) and $param['Id'] !== null) {
+            $this->Id = $param['Id'];
         }
 
-        if (array_key_exists("Uuid",$param) and $param["Uuid"] !== null) {
-            $this->Uuid = $param["Uuid"];
+        if (array_key_exists('Uuid',$param) and $param['Uuid'] !== null) {
+            $this->Uuid = $param['Uuid'];
         }
 
-        if (array_key_exists("Port",$param) and $param["Port"] !== null) {
-            $this->Port = $param["Port"];
+        if (array_key_exists('Port',$param) and $param['Port'] !== null) {
+            $this->Port = $param['Port'];
         }
 
-        if (array_key_exists("MachineIp",$param) and $param["MachineIp"] !== null) {
-            $this->MachineIp = $param["MachineIp"];
+        if (array_key_exists('MachineIp',$param) and $param['MachineIp'] !== null) {
+            $this->MachineIp = $param['MachineIp'];
         }
 
-        if (array_key_exists("MachineName",$param) and $param["MachineName"] !== null) {
-            $this->MachineName = $param["MachineName"];
+        if (array_key_exists('MachineName',$param) and $param['MachineName'] !== null) {
+            $this->MachineName = $param['MachineName'];
         }
 
-        if (array_key_exists("ProcessName",$param) and $param["ProcessName"] !== null) {
-            $this->ProcessName = $param["ProcessName"];
+        if (array_key_exists('ProcessName',$param) and $param['ProcessName'] !== null) {
+            $this->ProcessName = $param['ProcessName'];
         }
 
-        if (array_key_exists("Pid",$param) and $param["Pid"] !== null) {
-            $this->Pid = $param["Pid"];
+        if (array_key_exists('Pid',$param) and $param['Pid'] !== null) {
+            $this->Pid = $param['Pid'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("ModifyTime",$param) and $param["ModifyTime"] !== null) {
-            $this->ModifyTime = $param["ModifyTime"];
+        if (array_key_exists('ModifyTime',$param) and $param['ModifyTime'] !== null) {
+            $this->ModifyTime = $param['ModifyTime'];
         }
     }
 }

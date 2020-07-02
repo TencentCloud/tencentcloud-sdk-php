@@ -46,8 +46,8 @@ class RouteFilterPrefix extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Cidr",$param) and $param["Cidr"] !== null) {
-            $this->Cidr = $param["Cidr"];
+        if (array_key_exists('Cidr',$param) and $param['Cidr'] !== null) {
+            $this->Cidr = $param['Cidr'];
         }
     }
 }

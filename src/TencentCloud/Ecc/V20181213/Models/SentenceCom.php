@@ -54,18 +54,18 @@ class SentenceCom extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Suggestions",$param) and $param["Suggestions"] !== null) {
+        if (array_key_exists('Suggestions',$param) and $param['Suggestions'] !== null) {
             $this->Suggestions = [];
-            foreach ($param["Suggestions"] as $key => $value){
+            foreach ($param['Suggestions'] as $key => $value){
                 $obj = new SentenceSuggest();
                 $obj->deserialize($value);
                 array_push($this->Suggestions, $obj);
             }
         }
 
-        if (array_key_exists("Sentence",$param) and $param["Sentence"] !== null) {
+        if (array_key_exists('Sentence',$param) and $param['Sentence'] !== null) {
             $this->Sentence = new SentenceItem();
-            $this->Sentence->deserialize($param["Sentence"]);
+            $this->Sentence->deserialize($param['Sentence']);
         }
     }
 }

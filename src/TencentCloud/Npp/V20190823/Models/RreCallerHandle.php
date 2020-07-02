@@ -86,33 +86,33 @@ class RreCallerHandle extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ReadPrompt",$param) and $param["ReadPrompt"] !== null) {
-            $this->ReadPrompt = $param["ReadPrompt"];
+        if (array_key_exists('ReadPrompt',$param) and $param['ReadPrompt'] !== null) {
+            $this->ReadPrompt = $param['ReadPrompt'];
         }
 
-        if (array_key_exists("InterruptPrompt",$param) and $param["InterruptPrompt"] !== null) {
-            $this->InterruptPrompt = $param["InterruptPrompt"];
+        if (array_key_exists('InterruptPrompt',$param) and $param['InterruptPrompt'] !== null) {
+            $this->InterruptPrompt = $param['InterruptPrompt'];
         }
 
-        if (array_key_exists("KeyList",$param) and $param["KeyList"] !== null) {
+        if (array_key_exists('KeyList',$param) and $param['KeyList'] !== null) {
             $this->KeyList = [];
-            foreach ($param["KeyList"] as $key => $value){
+            foreach ($param['KeyList'] as $key => $value){
                 $obj = new KeyList();
                 $obj->deserialize($value);
                 array_push($this->KeyList, $obj);
             }
         }
 
-        if (array_key_exists("RepeatTimes",$param) and $param["RepeatTimes"] !== null) {
-            $this->RepeatTimes = $param["RepeatTimes"];
+        if (array_key_exists('RepeatTimes',$param) and $param['RepeatTimes'] !== null) {
+            $this->RepeatTimes = $param['RepeatTimes'];
         }
 
-        if (array_key_exists("KeyPressUrl",$param) and $param["KeyPressUrl"] !== null) {
-            $this->KeyPressUrl = $param["KeyPressUrl"];
+        if (array_key_exists('KeyPressUrl',$param) and $param['KeyPressUrl'] !== null) {
+            $this->KeyPressUrl = $param['KeyPressUrl'];
         }
 
-        if (array_key_exists("PromptGender",$param) and $param["PromptGender"] !== null) {
-            $this->PromptGender = $param["PromptGender"];
+        if (array_key_exists('PromptGender',$param) and $param['PromptGender'] !== null) {
+            $this->PromptGender = $param['PromptGender'];
         }
     }
 }

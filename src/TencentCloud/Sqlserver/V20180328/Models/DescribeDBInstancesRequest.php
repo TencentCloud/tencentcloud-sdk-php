@@ -150,36 +150,36 @@ class DescribeDBInstancesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
-            $this->ProjectId = $param["ProjectId"];
+        if (array_key_exists('ProjectId',$param) and $param['ProjectId'] !== null) {
+            $this->ProjectId = $param['ProjectId'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
+        if (array_key_exists('Offset',$param) and $param['Offset'] !== null) {
+            $this->Offset = $param['Offset'];
         }
 
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
+        if (array_key_exists('Limit',$param) and $param['Limit'] !== null) {
+            $this->Limit = $param['Limit'];
         }
 
-        if (array_key_exists("InstanceIdSet",$param) and $param["InstanceIdSet"] !== null) {
-            $this->InstanceIdSet = $param["InstanceIdSet"];
+        if (array_key_exists('InstanceIdSet',$param) and $param['InstanceIdSet'] !== null) {
+            $this->InstanceIdSet = $param['InstanceIdSet'];
         }
 
-        if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {
-            $this->PayMode = $param["PayMode"];
+        if (array_key_exists('PayMode',$param) and $param['PayMode'] !== null) {
+            $this->PayMode = $param['PayMode'];
         }
 
-        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
-            $this->VpcId = $param["VpcId"];
+        if (array_key_exists('VpcId',$param) and $param['VpcId'] !== null) {
+            $this->VpcId = $param['VpcId'];
         }
 
-        if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
-            $this->SubnetId = $param["SubnetId"];
+        if (array_key_exists('SubnetId',$param) and $param['SubnetId'] !== null) {
+            $this->SubnetId = $param['SubnetId'];
         }
     }
 }

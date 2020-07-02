@@ -62,21 +62,21 @@ class DescribeNewL7RulesErrHealthResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Total",$param) and $param["Total"] !== null) {
-            $this->Total = $param["Total"];
+        if (array_key_exists('Total',$param) and $param['Total'] !== null) {
+            $this->Total = $param['Total'];
         }
 
-        if (array_key_exists("ErrHealths",$param) and $param["ErrHealths"] !== null) {
+        if (array_key_exists('ErrHealths',$param) and $param['ErrHealths'] !== null) {
             $this->ErrHealths = [];
-            foreach ($param["ErrHealths"] as $key => $value){
+            foreach ($param['ErrHealths'] as $key => $value){
                 $obj = new KeyValue();
                 $obj->deserialize($value);
                 array_push($this->ErrHealths, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

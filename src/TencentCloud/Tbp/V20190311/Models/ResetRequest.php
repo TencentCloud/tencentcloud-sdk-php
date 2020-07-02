@@ -70,20 +70,20 @@ class ResetRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BotId",$param) and $param["BotId"] !== null) {
-            $this->BotId = $param["BotId"];
+        if (array_key_exists('BotId',$param) and $param['BotId'] !== null) {
+            $this->BotId = $param['BotId'];
         }
 
-        if (array_key_exists("UserId",$param) and $param["UserId"] !== null) {
-            $this->UserId = $param["UserId"];
+        if (array_key_exists('UserId',$param) and $param['UserId'] !== null) {
+            $this->UserId = $param['UserId'];
         }
 
-        if (array_key_exists("BotVersion",$param) and $param["BotVersion"] !== null) {
-            $this->BotVersion = $param["BotVersion"];
+        if (array_key_exists('BotVersion',$param) and $param['BotVersion'] !== null) {
+            $this->BotVersion = $param['BotVersion'];
         }
 
-        if (array_key_exists("BotEnv",$param) and $param["BotEnv"] !== null) {
-            $this->BotEnv = $param["BotEnv"];
+        if (array_key_exists('BotEnv',$param) and $param['BotEnv'] !== null) {
+            $this->BotEnv = $param['BotEnv'];
         }
     }
 }

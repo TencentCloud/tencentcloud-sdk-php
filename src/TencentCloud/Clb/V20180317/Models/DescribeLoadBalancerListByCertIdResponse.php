@@ -54,17 +54,17 @@ class DescribeLoadBalancerListByCertIdResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CertSet",$param) and $param["CertSet"] !== null) {
+        if (array_key_exists('CertSet',$param) and $param['CertSet'] !== null) {
             $this->CertSet = [];
-            foreach ($param["CertSet"] as $key => $value){
+            foreach ($param['CertSet'] as $key => $value){
                 $obj = new CertIdRelatedWithLoadBalancers();
                 $obj->deserialize($value);
                 array_push($this->CertSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

@@ -62,17 +62,17 @@ class CreateL4RulesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Business",$param) and $param["Business"] !== null) {
-            $this->Business = $param["Business"];
+        if (array_key_exists('Business',$param) and $param['Business'] !== null) {
+            $this->Business = $param['Business'];
         }
 
-        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
-            $this->Id = $param["Id"];
+        if (array_key_exists('Id',$param) and $param['Id'] !== null) {
+            $this->Id = $param['Id'];
         }
 
-        if (array_key_exists("Rules",$param) and $param["Rules"] !== null) {
+        if (array_key_exists('Rules',$param) and $param['Rules'] !== null) {
             $this->Rules = [];
-            foreach ($param["Rules"] as $key => $value){
+            foreach ($param['Rules'] as $key => $value){
                 $obj = new L4RuleEntry();
                 $obj->deserialize($value);
                 array_push($this->Rules, $obj);

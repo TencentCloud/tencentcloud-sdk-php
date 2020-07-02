@@ -62,16 +62,16 @@ class DescribeApiVersionsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MicroserviceId",$param) and $param["MicroserviceId"] !== null) {
-            $this->MicroserviceId = $param["MicroserviceId"];
+        if (array_key_exists('MicroserviceId',$param) and $param['MicroserviceId'] !== null) {
+            $this->MicroserviceId = $param['MicroserviceId'];
         }
 
-        if (array_key_exists("Path",$param) and $param["Path"] !== null) {
-            $this->Path = $param["Path"];
+        if (array_key_exists('Path',$param) and $param['Path'] !== null) {
+            $this->Path = $param['Path'];
         }
 
-        if (array_key_exists("Method",$param) and $param["Method"] !== null) {
-            $this->Method = $param["Method"];
+        if (array_key_exists('Method',$param) and $param['Method'] !== null) {
+            $this->Method = $param['Method'];
         }
     }
 }

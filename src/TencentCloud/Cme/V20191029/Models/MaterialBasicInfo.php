@@ -114,46 +114,46 @@ class MaterialBasicInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MaterialId",$param) and $param["MaterialId"] !== null) {
-            $this->MaterialId = $param["MaterialId"];
+        if (array_key_exists('MaterialId',$param) and $param['MaterialId'] !== null) {
+            $this->MaterialId = $param['MaterialId'];
         }
 
-        if (array_key_exists("MaterialType",$param) and $param["MaterialType"] !== null) {
-            $this->MaterialType = $param["MaterialType"];
+        if (array_key_exists('MaterialType',$param) and $param['MaterialType'] !== null) {
+            $this->MaterialType = $param['MaterialType'];
         }
 
-        if (array_key_exists("Owner",$param) and $param["Owner"] !== null) {
+        if (array_key_exists('Owner',$param) and $param['Owner'] !== null) {
             $this->Owner = new Entity();
-            $this->Owner->deserialize($param["Owner"]);
+            $this->Owner->deserialize($param['Owner']);
         }
 
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
-            $this->UpdateTime = $param["UpdateTime"];
+        if (array_key_exists('UpdateTime',$param) and $param['UpdateTime'] !== null) {
+            $this->UpdateTime = $param['UpdateTime'];
         }
 
-        if (array_key_exists("ClassPath",$param) and $param["ClassPath"] !== null) {
-            $this->ClassPath = $param["ClassPath"];
+        if (array_key_exists('ClassPath',$param) and $param['ClassPath'] !== null) {
+            $this->ClassPath = $param['ClassPath'];
         }
 
-        if (array_key_exists("TagInfoSet",$param) and $param["TagInfoSet"] !== null) {
+        if (array_key_exists('TagInfoSet',$param) and $param['TagInfoSet'] !== null) {
             $this->TagInfoSet = [];
-            foreach ($param["TagInfoSet"] as $key => $value){
+            foreach ($param['TagInfoSet'] as $key => $value){
                 $obj = new MaterialTagInfo();
                 $obj->deserialize($value);
                 array_push($this->TagInfoSet, $obj);
             }
         }
 
-        if (array_key_exists("PreviewUrl",$param) and $param["PreviewUrl"] !== null) {
-            $this->PreviewUrl = $param["PreviewUrl"];
+        if (array_key_exists('PreviewUrl',$param) and $param['PreviewUrl'] !== null) {
+            $this->PreviewUrl = $param['PreviewUrl'];
         }
     }
 }

@@ -70,20 +70,20 @@ class GetTransByHashHandlerRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Module",$param) and $param["Module"] !== null) {
-            $this->Module = $param["Module"];
+        if (array_key_exists('Module',$param) and $param['Module'] !== null) {
+            $this->Module = $param['Module'];
         }
 
-        if (array_key_exists("Operation",$param) and $param["Operation"] !== null) {
-            $this->Operation = $param["Operation"];
+        if (array_key_exists('Operation',$param) and $param['Operation'] !== null) {
+            $this->Operation = $param['Operation'];
         }
 
-        if (array_key_exists("GroupPk",$param) and $param["GroupPk"] !== null) {
-            $this->GroupPk = $param["GroupPk"];
+        if (array_key_exists('GroupPk',$param) and $param['GroupPk'] !== null) {
+            $this->GroupPk = $param['GroupPk'];
         }
 
-        if (array_key_exists("TransHash",$param) and $param["TransHash"] !== null) {
-            $this->TransHash = $param["TransHash"];
+        if (array_key_exists('TransHash',$param) and $param['TransHash'] !== null) {
+            $this->TransHash = $param['TransHash'];
         }
     }
 }

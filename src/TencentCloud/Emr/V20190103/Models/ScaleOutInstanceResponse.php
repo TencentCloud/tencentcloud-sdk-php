@@ -102,28 +102,28 @@ class ScaleOutInstanceResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("DealNames",$param) and $param["DealNames"] !== null) {
-            $this->DealNames = $param["DealNames"];
+        if (array_key_exists('DealNames',$param) and $param['DealNames'] !== null) {
+            $this->DealNames = $param['DealNames'];
         }
 
-        if (array_key_exists("ClientToken",$param) and $param["ClientToken"] !== null) {
-            $this->ClientToken = $param["ClientToken"];
+        if (array_key_exists('ClientToken',$param) and $param['ClientToken'] !== null) {
+            $this->ClientToken = $param['ClientToken'];
         }
 
-        if (array_key_exists("FlowId",$param) and $param["FlowId"] !== null) {
-            $this->FlowId = $param["FlowId"];
+        if (array_key_exists('FlowId',$param) and $param['FlowId'] !== null) {
+            $this->FlowId = $param['FlowId'];
         }
 
-        if (array_key_exists("BillId",$param) and $param["BillId"] !== null) {
-            $this->BillId = $param["BillId"];
+        if (array_key_exists('BillId',$param) and $param['BillId'] !== null) {
+            $this->BillId = $param['BillId'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

@@ -82,16 +82,16 @@ class ImageTransform extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists('Type',$param) and $param['Type'] !== null) {
+            $this->Type = $param['Type'];
         }
 
-        if (array_key_exists("RotateAngle",$param) and $param["RotateAngle"] !== null) {
-            $this->RotateAngle = $param["RotateAngle"];
+        if (array_key_exists('RotateAngle',$param) and $param['RotateAngle'] !== null) {
+            $this->RotateAngle = $param['RotateAngle'];
         }
 
-        if (array_key_exists("Flip",$param) and $param["Flip"] !== null) {
-            $this->Flip = $param["Flip"];
+        if (array_key_exists('Flip',$param) and $param['Flip'] !== null) {
+            $this->Flip = $param['Flip'];
         }
     }
 }

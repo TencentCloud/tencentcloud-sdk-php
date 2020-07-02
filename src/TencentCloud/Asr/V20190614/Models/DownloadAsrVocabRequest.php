@@ -46,8 +46,8 @@ class DownloadAsrVocabRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("VocabId",$param) and $param["VocabId"] !== null) {
-            $this->VocabId = $param["VocabId"];
+        if (array_key_exists('VocabId',$param) and $param['VocabId'] !== null) {
+            $this->VocabId = $param['VocabId'];
         }
     }
 }

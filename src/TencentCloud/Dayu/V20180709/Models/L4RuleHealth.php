@@ -86,28 +86,28 @@ class L4RuleHealth extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RuleId",$param) and $param["RuleId"] !== null) {
-            $this->RuleId = $param["RuleId"];
+        if (array_key_exists('RuleId',$param) and $param['RuleId'] !== null) {
+            $this->RuleId = $param['RuleId'];
         }
 
-        if (array_key_exists("Enable",$param) and $param["Enable"] !== null) {
-            $this->Enable = $param["Enable"];
+        if (array_key_exists('Enable',$param) and $param['Enable'] !== null) {
+            $this->Enable = $param['Enable'];
         }
 
-        if (array_key_exists("TimeOut",$param) and $param["TimeOut"] !== null) {
-            $this->TimeOut = $param["TimeOut"];
+        if (array_key_exists('TimeOut',$param) and $param['TimeOut'] !== null) {
+            $this->TimeOut = $param['TimeOut'];
         }
 
-        if (array_key_exists("Interval",$param) and $param["Interval"] !== null) {
-            $this->Interval = $param["Interval"];
+        if (array_key_exists('Interval',$param) and $param['Interval'] !== null) {
+            $this->Interval = $param['Interval'];
         }
 
-        if (array_key_exists("KickNum",$param) and $param["KickNum"] !== null) {
-            $this->KickNum = $param["KickNum"];
+        if (array_key_exists('KickNum',$param) and $param['KickNum'] !== null) {
+            $this->KickNum = $param['KickNum'];
         }
 
-        if (array_key_exists("AliveNum",$param) and $param["AliveNum"] !== null) {
-            $this->AliveNum = $param["AliveNum"];
+        if (array_key_exists('AliveNum',$param) and $param['AliveNum'] !== null) {
+            $this->AliveNum = $param['AliveNum'];
         }
     }
 }

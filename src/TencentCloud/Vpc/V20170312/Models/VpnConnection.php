@@ -158,71 +158,71 @@ class VpnConnection extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("VpnConnectionId",$param) and $param["VpnConnectionId"] !== null) {
-            $this->VpnConnectionId = $param["VpnConnectionId"];
+        if (array_key_exists('VpnConnectionId',$param) and $param['VpnConnectionId'] !== null) {
+            $this->VpnConnectionId = $param['VpnConnectionId'];
         }
 
-        if (array_key_exists("VpnConnectionName",$param) and $param["VpnConnectionName"] !== null) {
-            $this->VpnConnectionName = $param["VpnConnectionName"];
+        if (array_key_exists('VpnConnectionName',$param) and $param['VpnConnectionName'] !== null) {
+            $this->VpnConnectionName = $param['VpnConnectionName'];
         }
 
-        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
-            $this->VpcId = $param["VpcId"];
+        if (array_key_exists('VpcId',$param) and $param['VpcId'] !== null) {
+            $this->VpcId = $param['VpcId'];
         }
 
-        if (array_key_exists("VpnGatewayId",$param) and $param["VpnGatewayId"] !== null) {
-            $this->VpnGatewayId = $param["VpnGatewayId"];
+        if (array_key_exists('VpnGatewayId',$param) and $param['VpnGatewayId'] !== null) {
+            $this->VpnGatewayId = $param['VpnGatewayId'];
         }
 
-        if (array_key_exists("CustomerGatewayId",$param) and $param["CustomerGatewayId"] !== null) {
-            $this->CustomerGatewayId = $param["CustomerGatewayId"];
+        if (array_key_exists('CustomerGatewayId',$param) and $param['CustomerGatewayId'] !== null) {
+            $this->CustomerGatewayId = $param['CustomerGatewayId'];
         }
 
-        if (array_key_exists("PreShareKey",$param) and $param["PreShareKey"] !== null) {
-            $this->PreShareKey = $param["PreShareKey"];
+        if (array_key_exists('PreShareKey',$param) and $param['PreShareKey'] !== null) {
+            $this->PreShareKey = $param['PreShareKey'];
         }
 
-        if (array_key_exists("VpnProto",$param) and $param["VpnProto"] !== null) {
-            $this->VpnProto = $param["VpnProto"];
+        if (array_key_exists('VpnProto',$param) and $param['VpnProto'] !== null) {
+            $this->VpnProto = $param['VpnProto'];
         }
 
-        if (array_key_exists("EncryptProto",$param) and $param["EncryptProto"] !== null) {
-            $this->EncryptProto = $param["EncryptProto"];
+        if (array_key_exists('EncryptProto',$param) and $param['EncryptProto'] !== null) {
+            $this->EncryptProto = $param['EncryptProto'];
         }
 
-        if (array_key_exists("RouteType",$param) and $param["RouteType"] !== null) {
-            $this->RouteType = $param["RouteType"];
+        if (array_key_exists('RouteType',$param) and $param['RouteType'] !== null) {
+            $this->RouteType = $param['RouteType'];
         }
 
-        if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
-            $this->CreatedTime = $param["CreatedTime"];
+        if (array_key_exists('CreatedTime',$param) and $param['CreatedTime'] !== null) {
+            $this->CreatedTime = $param['CreatedTime'];
         }
 
-        if (array_key_exists("State",$param) and $param["State"] !== null) {
-            $this->State = $param["State"];
+        if (array_key_exists('State',$param) and $param['State'] !== null) {
+            $this->State = $param['State'];
         }
 
-        if (array_key_exists("NetStatus",$param) and $param["NetStatus"] !== null) {
-            $this->NetStatus = $param["NetStatus"];
+        if (array_key_exists('NetStatus',$param) and $param['NetStatus'] !== null) {
+            $this->NetStatus = $param['NetStatus'];
         }
 
-        if (array_key_exists("SecurityPolicyDatabaseSet",$param) and $param["SecurityPolicyDatabaseSet"] !== null) {
+        if (array_key_exists('SecurityPolicyDatabaseSet',$param) and $param['SecurityPolicyDatabaseSet'] !== null) {
             $this->SecurityPolicyDatabaseSet = [];
-            foreach ($param["SecurityPolicyDatabaseSet"] as $key => $value){
+            foreach ($param['SecurityPolicyDatabaseSet'] as $key => $value){
                 $obj = new SecurityPolicyDatabase();
                 $obj->deserialize($value);
                 array_push($this->SecurityPolicyDatabaseSet, $obj);
             }
         }
 
-        if (array_key_exists("IKEOptionsSpecification",$param) and $param["IKEOptionsSpecification"] !== null) {
+        if (array_key_exists('IKEOptionsSpecification',$param) and $param['IKEOptionsSpecification'] !== null) {
             $this->IKEOptionsSpecification = new IKEOptionsSpecification();
-            $this->IKEOptionsSpecification->deserialize($param["IKEOptionsSpecification"]);
+            $this->IKEOptionsSpecification->deserialize($param['IKEOptionsSpecification']);
         }
 
-        if (array_key_exists("IPSECOptionsSpecification",$param) and $param["IPSECOptionsSpecification"] !== null) {
+        if (array_key_exists('IPSECOptionsSpecification',$param) and $param['IPSECOptionsSpecification'] !== null) {
             $this->IPSECOptionsSpecification = new IPSECOptionsSpecification();
-            $this->IPSECOptionsSpecification->deserialize($param["IPSECOptionsSpecification"]);
+            $this->IPSECOptionsSpecification->deserialize($param['IPSECOptionsSpecification']);
         }
     }
 }

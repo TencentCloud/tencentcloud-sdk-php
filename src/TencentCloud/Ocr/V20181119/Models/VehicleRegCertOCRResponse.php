@@ -54,17 +54,17 @@ class VehicleRegCertOCRResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("VehicleRegCertInfos",$param) and $param["VehicleRegCertInfos"] !== null) {
+        if (array_key_exists('VehicleRegCertInfos',$param) and $param['VehicleRegCertInfos'] !== null) {
             $this->VehicleRegCertInfos = [];
-            foreach ($param["VehicleRegCertInfos"] as $key => $value){
+            foreach ($param['VehicleRegCertInfos'] as $key => $value){
                 $obj = new VehicleRegCertInfo();
                 $obj->deserialize($value);
                 array_push($this->VehicleRegCertInfos, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

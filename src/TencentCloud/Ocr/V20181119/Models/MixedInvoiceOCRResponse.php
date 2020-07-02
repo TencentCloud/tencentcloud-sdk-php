@@ -54,17 +54,17 @@ class MixedInvoiceOCRResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MixedInvoiceItems",$param) and $param["MixedInvoiceItems"] !== null) {
+        if (array_key_exists('MixedInvoiceItems',$param) and $param['MixedInvoiceItems'] !== null) {
             $this->MixedInvoiceItems = [];
-            foreach ($param["MixedInvoiceItems"] as $key => $value){
+            foreach ($param['MixedInvoiceItems'] as $key => $value){
                 $obj = new MixedInvoiceItem();
                 $obj->deserialize($value);
                 array_push($this->MixedInvoiceItems, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

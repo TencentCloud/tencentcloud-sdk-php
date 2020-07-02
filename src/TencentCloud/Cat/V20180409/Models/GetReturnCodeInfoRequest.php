@@ -70,20 +70,20 @@ class GetReturnCodeInfoRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
-            $this->TaskId = $param["TaskId"];
+        if (array_key_exists('TaskId',$param) and $param['TaskId'] !== null) {
+            $this->TaskId = $param['TaskId'];
         }
 
-        if (array_key_exists("BeginTime",$param) and $param["BeginTime"] !== null) {
-            $this->BeginTime = $param["BeginTime"];
+        if (array_key_exists('BeginTime',$param) and $param['BeginTime'] !== null) {
+            $this->BeginTime = $param['BeginTime'];
         }
 
-        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
-            $this->EndTime = $param["EndTime"];
+        if (array_key_exists('EndTime',$param) and $param['EndTime'] !== null) {
+            $this->EndTime = $param['EndTime'];
         }
 
-        if (array_key_exists("Province",$param) and $param["Province"] !== null) {
-            $this->Province = $param["Province"];
+        if (array_key_exists('Province',$param) and $param['Province'] !== null) {
+            $this->Province = $param['Province'];
         }
     }
 }

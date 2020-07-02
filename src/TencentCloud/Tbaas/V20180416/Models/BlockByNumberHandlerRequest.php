@@ -70,20 +70,20 @@ class BlockByNumberHandlerRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Module",$param) and $param["Module"] !== null) {
-            $this->Module = $param["Module"];
+        if (array_key_exists('Module',$param) and $param['Module'] !== null) {
+            $this->Module = $param['Module'];
         }
 
-        if (array_key_exists("Operation",$param) and $param["Operation"] !== null) {
-            $this->Operation = $param["Operation"];
+        if (array_key_exists('Operation',$param) and $param['Operation'] !== null) {
+            $this->Operation = $param['Operation'];
         }
 
-        if (array_key_exists("GroupPk",$param) and $param["GroupPk"] !== null) {
-            $this->GroupPk = $param["GroupPk"];
+        if (array_key_exists('GroupPk',$param) and $param['GroupPk'] !== null) {
+            $this->GroupPk = $param['GroupPk'];
         }
 
-        if (array_key_exists("BlockNumber",$param) and $param["BlockNumber"] !== null) {
-            $this->BlockNumber = $param["BlockNumber"];
+        if (array_key_exists('BlockNumber',$param) and $param['BlockNumber'] !== null) {
+            $this->BlockNumber = $param['BlockNumber'];
         }
     }
 }

@@ -54,17 +54,17 @@ class ListAuditsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AuditSummarys",$param) and $param["AuditSummarys"] !== null) {
+        if (array_key_exists('AuditSummarys',$param) and $param['AuditSummarys'] !== null) {
             $this->AuditSummarys = [];
-            foreach ($param["AuditSummarys"] as $key => $value){
+            foreach ($param['AuditSummarys'] as $key => $value){
                 $obj = new AuditSummary();
                 $obj->deserialize($value);
                 array_push($this->AuditSummarys, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

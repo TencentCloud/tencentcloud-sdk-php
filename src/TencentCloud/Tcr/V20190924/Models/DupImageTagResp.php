@@ -46,8 +46,8 @@ class DupImageTagResp extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Digest",$param) and $param["Digest"] !== null) {
-            $this->Digest = $param["Digest"];
+        if (array_key_exists('Digest',$param) and $param['Digest'] !== null) {
+            $this->Digest = $param['Digest'];
         }
     }
 }

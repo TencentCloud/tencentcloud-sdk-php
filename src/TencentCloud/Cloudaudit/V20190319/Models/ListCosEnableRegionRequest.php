@@ -46,8 +46,8 @@ class ListCosEnableRegionRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("WebsiteType",$param) and $param["WebsiteType"] !== null) {
-            $this->WebsiteType = $param["WebsiteType"];
+        if (array_key_exists('WebsiteType',$param) and $param['WebsiteType'] !== null) {
+            $this->WebsiteType = $param['WebsiteType'];
         }
     }
 }

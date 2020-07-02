@@ -54,12 +54,12 @@ class BgpPeer extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Asn",$param) and $param["Asn"] !== null) {
-            $this->Asn = $param["Asn"];
+        if (array_key_exists('Asn',$param) and $param['Asn'] !== null) {
+            $this->Asn = $param['Asn'];
         }
 
-        if (array_key_exists("AuthKey",$param) and $param["AuthKey"] !== null) {
-            $this->AuthKey = $param["AuthKey"];
+        if (array_key_exists('AuthKey',$param) and $param['AuthKey'] !== null) {
+            $this->AuthKey = $param['AuthKey'];
         }
     }
 }

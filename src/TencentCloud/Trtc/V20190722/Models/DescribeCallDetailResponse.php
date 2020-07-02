@@ -78,30 +78,30 @@ class DescribeCallDetailResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Total",$param) and $param["Total"] !== null) {
-            $this->Total = $param["Total"];
+        if (array_key_exists('Total',$param) and $param['Total'] !== null) {
+            $this->Total = $param['Total'];
         }
 
-        if (array_key_exists("UserList",$param) and $param["UserList"] !== null) {
+        if (array_key_exists('UserList',$param) and $param['UserList'] !== null) {
             $this->UserList = [];
-            foreach ($param["UserList"] as $key => $value){
+            foreach ($param['UserList'] as $key => $value){
                 $obj = new UserInformation();
                 $obj->deserialize($value);
                 array_push($this->UserList, $obj);
             }
         }
 
-        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
+        if (array_key_exists('Data',$param) and $param['Data'] !== null) {
             $this->Data = [];
-            foreach ($param["Data"] as $key => $value){
+            foreach ($param['Data'] as $key => $value){
                 $obj = new QualityData();
                 $obj->deserialize($value);
                 array_push($this->Data, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

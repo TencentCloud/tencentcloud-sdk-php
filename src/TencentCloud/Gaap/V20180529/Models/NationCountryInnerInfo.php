@@ -54,12 +54,12 @@ class NationCountryInnerInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("NationCountryName",$param) and $param["NationCountryName"] !== null) {
-            $this->NationCountryName = $param["NationCountryName"];
+        if (array_key_exists('NationCountryName',$param) and $param['NationCountryName'] !== null) {
+            $this->NationCountryName = $param['NationCountryName'];
         }
 
-        if (array_key_exists("NationCountryInnerCode",$param) and $param["NationCountryInnerCode"] !== null) {
-            $this->NationCountryInnerCode = $param["NationCountryInnerCode"];
+        if (array_key_exists('NationCountryInnerCode',$param) and $param['NationCountryInnerCode'] !== null) {
+            $this->NationCountryInnerCode = $param['NationCountryInnerCode'];
         }
     }
 }

@@ -62,21 +62,21 @@ class GetBlockTransactionListForUserResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("TransactionList",$param) and $param["TransactionList"] !== null) {
+        if (array_key_exists('TransactionList',$param) and $param['TransactionList'] !== null) {
             $this->TransactionList = [];
-            foreach ($param["TransactionList"] as $key => $value){
+            foreach ($param['TransactionList'] as $key => $value){
                 $obj = new TransactionItem();
                 $obj->deserialize($value);
                 array_push($this->TransactionList, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

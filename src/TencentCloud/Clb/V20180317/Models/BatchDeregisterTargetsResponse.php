@@ -54,12 +54,12 @@ class BatchDeregisterTargetsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FailListenerIdSet",$param) and $param["FailListenerIdSet"] !== null) {
-            $this->FailListenerIdSet = $param["FailListenerIdSet"];
+        if (array_key_exists('FailListenerIdSet',$param) and $param['FailListenerIdSet'] !== null) {
+            $this->FailListenerIdSet = $param['FailListenerIdSet'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

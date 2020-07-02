@@ -62,16 +62,16 @@ class ModifyIp6AddressesBandwidthRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InternetMaxBandwidthOut",$param) and $param["InternetMaxBandwidthOut"] !== null) {
-            $this->InternetMaxBandwidthOut = $param["InternetMaxBandwidthOut"];
+        if (array_key_exists('InternetMaxBandwidthOut',$param) and $param['InternetMaxBandwidthOut'] !== null) {
+            $this->InternetMaxBandwidthOut = $param['InternetMaxBandwidthOut'];
         }
 
-        if (array_key_exists("Ip6Addresses",$param) and $param["Ip6Addresses"] !== null) {
-            $this->Ip6Addresses = $param["Ip6Addresses"];
+        if (array_key_exists('Ip6Addresses',$param) and $param['Ip6Addresses'] !== null) {
+            $this->Ip6Addresses = $param['Ip6Addresses'];
         }
 
-        if (array_key_exists("Ip6AddressIds",$param) and $param["Ip6AddressIds"] !== null) {
-            $this->Ip6AddressIds = $param["Ip6AddressIds"];
+        if (array_key_exists('Ip6AddressIds',$param) and $param['Ip6AddressIds'] !== null) {
+            $this->Ip6AddressIds = $param['Ip6AddressIds'];
         }
     }
 }

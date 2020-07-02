@@ -54,12 +54,12 @@ class QuitQueueRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("UserId",$param) and $param["UserId"] !== null) {
-            $this->UserId = $param["UserId"];
+        if (array_key_exists('UserId',$param) and $param['UserId'] !== null) {
+            $this->UserId = $param['UserId'];
         }
 
-        if (array_key_exists("SetNumber",$param) and $param["SetNumber"] !== null) {
-            $this->SetNumber = $param["SetNumber"];
+        if (array_key_exists('SetNumber',$param) and $param['SetNumber'] !== null) {
+            $this->SetNumber = $param['SetNumber'];
         }
     }
 }

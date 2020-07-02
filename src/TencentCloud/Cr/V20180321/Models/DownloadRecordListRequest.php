@@ -70,20 +70,20 @@ class DownloadRecordListRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Module",$param) and $param["Module"] !== null) {
-            $this->Module = $param["Module"];
+        if (array_key_exists('Module',$param) and $param['Module'] !== null) {
+            $this->Module = $param['Module'];
         }
 
-        if (array_key_exists("Operation",$param) and $param["Operation"] !== null) {
-            $this->Operation = $param["Operation"];
+        if (array_key_exists('Operation',$param) and $param['Operation'] !== null) {
+            $this->Operation = $param['Operation'];
         }
 
-        if (array_key_exists("BizDate",$param) and $param["BizDate"] !== null) {
-            $this->BizDate = $param["BizDate"];
+        if (array_key_exists('BizDate',$param) and $param['BizDate'] !== null) {
+            $this->BizDate = $param['BizDate'];
         }
 
-        if (array_key_exists("InstId",$param) and $param["InstId"] !== null) {
-            $this->InstId = $param["InstId"];
+        if (array_key_exists('InstId',$param) and $param['InstId'] !== null) {
+            $this->InstId = $param['InstId'];
         }
     }
 }

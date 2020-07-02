@@ -54,12 +54,12 @@ class ModifyRealServerNameRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RealServerName",$param) and $param["RealServerName"] !== null) {
-            $this->RealServerName = $param["RealServerName"];
+        if (array_key_exists('RealServerName',$param) and $param['RealServerName'] !== null) {
+            $this->RealServerName = $param['RealServerName'];
         }
 
-        if (array_key_exists("RealServerId",$param) and $param["RealServerId"] !== null) {
-            $this->RealServerId = $param["RealServerId"];
+        if (array_key_exists('RealServerId',$param) and $param['RealServerId'] !== null) {
+            $this->RealServerId = $param['RealServerId'];
         }
     }
 }

@@ -54,12 +54,12 @@ class ModifyDbauditInstancesRenewFlagRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("AutoRenewFlag",$param) and $param["AutoRenewFlag"] !== null) {
-            $this->AutoRenewFlag = $param["AutoRenewFlag"];
+        if (array_key_exists('AutoRenewFlag',$param) and $param['AutoRenewFlag'] !== null) {
+            $this->AutoRenewFlag = $param['AutoRenewFlag'];
         }
     }
 }

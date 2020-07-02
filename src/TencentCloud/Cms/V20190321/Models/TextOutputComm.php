@@ -70,20 +70,20 @@ class TextOutputComm extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AppID",$param) and $param["AppID"] !== null) {
-            $this->AppID = $param["AppID"];
+        if (array_key_exists('AppID',$param) and $param['AppID'] !== null) {
+            $this->AppID = $param['AppID'];
         }
 
-        if (array_key_exists("BUCtrlID",$param) and $param["BUCtrlID"] !== null) {
-            $this->BUCtrlID = $param["BUCtrlID"];
+        if (array_key_exists('BUCtrlID',$param) and $param['BUCtrlID'] !== null) {
+            $this->BUCtrlID = $param['BUCtrlID'];
         }
 
-        if (array_key_exists("SendTime",$param) and $param["SendTime"] !== null) {
-            $this->SendTime = $param["SendTime"];
+        if (array_key_exists('SendTime',$param) and $param['SendTime'] !== null) {
+            $this->SendTime = $param['SendTime'];
         }
 
-        if (array_key_exists("Uin",$param) and $param["Uin"] !== null) {
-            $this->Uin = $param["Uin"];
+        if (array_key_exists('Uin',$param) and $param['Uin'] !== null) {
+            $this->Uin = $param['Uin'];
         }
     }
 }

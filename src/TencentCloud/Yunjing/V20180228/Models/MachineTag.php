@@ -54,12 +54,12 @@ class MachineTag extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Rid",$param) and $param["Rid"] !== null) {
-            $this->Rid = $param["Rid"];
+        if (array_key_exists('Rid',$param) and $param['Rid'] !== null) {
+            $this->Rid = $param['Rid'];
         }
 
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
     }
 }

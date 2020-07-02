@@ -190,71 +190,71 @@ Windows 实例：名字符长度为[2, 15]，允许字母（不限制大小写�
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ZoneInstanceCountISPSet",$param) and $param["ZoneInstanceCountISPSet"] !== null) {
+        if (array_key_exists('ZoneInstanceCountISPSet',$param) and $param['ZoneInstanceCountISPSet'] !== null) {
             $this->ZoneInstanceCountISPSet = [];
-            foreach ($param["ZoneInstanceCountISPSet"] as $key => $value){
+            foreach ($param['ZoneInstanceCountISPSet'] as $key => $value){
                 $obj = new ZoneInstanceCountISP();
                 $obj->deserialize($value);
                 array_push($this->ZoneInstanceCountISPSet, $obj);
             }
         }
 
-        if (array_key_exists("Password",$param) and $param["Password"] !== null) {
-            $this->Password = $param["Password"];
+        if (array_key_exists('Password',$param) and $param['Password'] !== null) {
+            $this->Password = $param['Password'];
         }
 
-        if (array_key_exists("InternetMaxBandwidthOut",$param) and $param["InternetMaxBandwidthOut"] !== null) {
-            $this->InternetMaxBandwidthOut = $param["InternetMaxBandwidthOut"];
+        if (array_key_exists('InternetMaxBandwidthOut',$param) and $param['InternetMaxBandwidthOut'] !== null) {
+            $this->InternetMaxBandwidthOut = $param['InternetMaxBandwidthOut'];
         }
 
-        if (array_key_exists("ModuleId",$param) and $param["ModuleId"] !== null) {
-            $this->ModuleId = $param["ModuleId"];
+        if (array_key_exists('ModuleId',$param) and $param['ModuleId'] !== null) {
+            $this->ModuleId = $param['ModuleId'];
         }
 
-        if (array_key_exists("ImageId",$param) and $param["ImageId"] !== null) {
-            $this->ImageId = $param["ImageId"];
+        if (array_key_exists('ImageId',$param) and $param['ImageId'] !== null) {
+            $this->ImageId = $param['ImageId'];
         }
 
-        if (array_key_exists("InstanceName",$param) and $param["InstanceName"] !== null) {
-            $this->InstanceName = $param["InstanceName"];
+        if (array_key_exists('InstanceName',$param) and $param['InstanceName'] !== null) {
+            $this->InstanceName = $param['InstanceName'];
         }
 
-        if (array_key_exists("HostName",$param) and $param["HostName"] !== null) {
-            $this->HostName = $param["HostName"];
+        if (array_key_exists('HostName',$param) and $param['HostName'] !== null) {
+            $this->HostName = $param['HostName'];
         }
 
-        if (array_key_exists("ClientToken",$param) and $param["ClientToken"] !== null) {
-            $this->ClientToken = $param["ClientToken"];
+        if (array_key_exists('ClientToken',$param) and $param['ClientToken'] !== null) {
+            $this->ClientToken = $param['ClientToken'];
         }
 
-        if (array_key_exists("EnhancedService",$param) and $param["EnhancedService"] !== null) {
+        if (array_key_exists('EnhancedService',$param) and $param['EnhancedService'] !== null) {
             $this->EnhancedService = new EnhancedService();
-            $this->EnhancedService->deserialize($param["EnhancedService"]);
+            $this->EnhancedService->deserialize($param['EnhancedService']);
         }
 
-        if (array_key_exists("TagSpecification",$param) and $param["TagSpecification"] !== null) {
+        if (array_key_exists('TagSpecification',$param) and $param['TagSpecification'] !== null) {
             $this->TagSpecification = [];
-            foreach ($param["TagSpecification"] as $key => $value){
+            foreach ($param['TagSpecification'] as $key => $value){
                 $obj = new TagSpecification();
                 $obj->deserialize($value);
                 array_push($this->TagSpecification, $obj);
             }
         }
 
-        if (array_key_exists("UserData",$param) and $param["UserData"] !== null) {
-            $this->UserData = $param["UserData"];
+        if (array_key_exists('UserData',$param) and $param['UserData'] !== null) {
+            $this->UserData = $param['UserData'];
         }
 
-        if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
-            $this->InstanceType = $param["InstanceType"];
+        if (array_key_exists('InstanceType',$param) and $param['InstanceType'] !== null) {
+            $this->InstanceType = $param['InstanceType'];
         }
 
-        if (array_key_exists("DataDiskSize",$param) and $param["DataDiskSize"] !== null) {
-            $this->DataDiskSize = $param["DataDiskSize"];
+        if (array_key_exists('DataDiskSize',$param) and $param['DataDiskSize'] !== null) {
+            $this->DataDiskSize = $param['DataDiskSize'];
         }
 
-        if (array_key_exists("SecurityGroupIds",$param) and $param["SecurityGroupIds"] !== null) {
-            $this->SecurityGroupIds = $param["SecurityGroupIds"];
+        if (array_key_exists('SecurityGroupIds',$param) and $param['SecurityGroupIds'] !== null) {
+            $this->SecurityGroupIds = $param['SecurityGroupIds'];
         }
     }
 }

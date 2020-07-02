@@ -46,8 +46,8 @@ class GenerateRandomRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("NumberOfBytes",$param) and $param["NumberOfBytes"] !== null) {
-            $this->NumberOfBytes = $param["NumberOfBytes"];
+        if (array_key_exists('NumberOfBytes',$param) and $param['NumberOfBytes'] !== null) {
+            $this->NumberOfBytes = $param['NumberOfBytes'];
         }
     }
 }

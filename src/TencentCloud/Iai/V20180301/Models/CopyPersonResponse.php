@@ -62,16 +62,16 @@ class CopyPersonResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SucGroupNum",$param) and $param["SucGroupNum"] !== null) {
-            $this->SucGroupNum = $param["SucGroupNum"];
+        if (array_key_exists('SucGroupNum',$param) and $param['SucGroupNum'] !== null) {
+            $this->SucGroupNum = $param['SucGroupNum'];
         }
 
-        if (array_key_exists("SucGroupIds",$param) and $param["SucGroupIds"] !== null) {
-            $this->SucGroupIds = $param["SucGroupIds"];
+        if (array_key_exists('SucGroupIds',$param) and $param['SucGroupIds'] !== null) {
+            $this->SucGroupIds = $param['SucGroupIds'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

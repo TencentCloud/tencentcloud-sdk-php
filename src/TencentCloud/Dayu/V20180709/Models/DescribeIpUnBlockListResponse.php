@@ -78,29 +78,29 @@ class DescribeIpUnBlockListResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BeginTime",$param) and $param["BeginTime"] !== null) {
-            $this->BeginTime = $param["BeginTime"];
+        if (array_key_exists('BeginTime',$param) and $param['BeginTime'] !== null) {
+            $this->BeginTime = $param['BeginTime'];
         }
 
-        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
-            $this->EndTime = $param["EndTime"];
+        if (array_key_exists('EndTime',$param) and $param['EndTime'] !== null) {
+            $this->EndTime = $param['EndTime'];
         }
 
-        if (array_key_exists("List",$param) and $param["List"] !== null) {
+        if (array_key_exists('List',$param) and $param['List'] !== null) {
             $this->List = [];
-            foreach ($param["List"] as $key => $value){
+            foreach ($param['List'] as $key => $value){
                 $obj = new IpUnBlockData();
                 $obj->deserialize($value);
                 array_push($this->List, $obj);
             }
         }
 
-        if (array_key_exists("Total",$param) and $param["Total"] !== null) {
-            $this->Total = $param["Total"];
+        if (array_key_exists('Total',$param) and $param['Total'] !== null) {
+            $this->Total = $param['Total'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

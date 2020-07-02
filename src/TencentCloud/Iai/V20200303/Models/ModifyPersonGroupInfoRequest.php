@@ -62,17 +62,17 @@ class ModifyPersonGroupInfoRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
-            $this->GroupId = $param["GroupId"];
+        if (array_key_exists('GroupId',$param) and $param['GroupId'] !== null) {
+            $this->GroupId = $param['GroupId'];
         }
 
-        if (array_key_exists("PersonId",$param) and $param["PersonId"] !== null) {
-            $this->PersonId = $param["PersonId"];
+        if (array_key_exists('PersonId',$param) and $param['PersonId'] !== null) {
+            $this->PersonId = $param['PersonId'];
         }
 
-        if (array_key_exists("PersonExDescriptionInfos",$param) and $param["PersonExDescriptionInfos"] !== null) {
+        if (array_key_exists('PersonExDescriptionInfos',$param) and $param['PersonExDescriptionInfos'] !== null) {
             $this->PersonExDescriptionInfos = [];
-            foreach ($param["PersonExDescriptionInfos"] as $key => $value){
+            foreach ($param['PersonExDescriptionInfos'] as $key => $value){
                 $obj = new PersonExDescriptionInfo();
                 $obj->deserialize($value);
                 array_push($this->PersonExDescriptionInfos, $obj);

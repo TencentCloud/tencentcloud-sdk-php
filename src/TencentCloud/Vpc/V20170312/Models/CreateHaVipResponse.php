@@ -54,13 +54,13 @@ class CreateHaVipResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("HaVip",$param) and $param["HaVip"] !== null) {
+        if (array_key_exists('HaVip',$param) and $param['HaVip'] !== null) {
             $this->HaVip = new HaVip();
-            $this->HaVip->deserialize($param["HaVip"]);
+            $this->HaVip->deserialize($param['HaVip']);
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

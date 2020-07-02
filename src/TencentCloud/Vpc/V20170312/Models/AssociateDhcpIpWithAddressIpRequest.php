@@ -54,12 +54,12 @@ class AssociateDhcpIpWithAddressIpRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DhcpIpId",$param) and $param["DhcpIpId"] !== null) {
-            $this->DhcpIpId = $param["DhcpIpId"];
+        if (array_key_exists('DhcpIpId',$param) and $param['DhcpIpId'] !== null) {
+            $this->DhcpIpId = $param['DhcpIpId'];
         }
 
-        if (array_key_exists("AddressIp",$param) and $param["AddressIp"] !== null) {
-            $this->AddressIp = $param["AddressIp"];
+        if (array_key_exists('AddressIp',$param) and $param['AddressIp'] !== null) {
+            $this->AddressIp = $param['AddressIp'];
         }
     }
 }

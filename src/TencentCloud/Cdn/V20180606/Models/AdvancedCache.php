@@ -103,21 +103,21 @@ off：关闭
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CacheRules",$param) and $param["CacheRules"] !== null) {
+        if (array_key_exists('CacheRules',$param) and $param['CacheRules'] !== null) {
             $this->CacheRules = [];
-            foreach ($param["CacheRules"] as $key => $value){
+            foreach ($param['CacheRules'] as $key => $value){
                 $obj = new AdvanceCacheRule();
                 $obj->deserialize($value);
                 array_push($this->CacheRules, $obj);
             }
         }
 
-        if (array_key_exists("IgnoreCacheControl",$param) and $param["IgnoreCacheControl"] !== null) {
-            $this->IgnoreCacheControl = $param["IgnoreCacheControl"];
+        if (array_key_exists('IgnoreCacheControl',$param) and $param['IgnoreCacheControl'] !== null) {
+            $this->IgnoreCacheControl = $param['IgnoreCacheControl'];
         }
 
-        if (array_key_exists("IgnoreSetCookie",$param) and $param["IgnoreSetCookie"] !== null) {
-            $this->IgnoreSetCookie = $param["IgnoreSetCookie"];
+        if (array_key_exists('IgnoreSetCookie',$param) and $param['IgnoreSetCookie'] !== null) {
+            $this->IgnoreSetCookie = $param['IgnoreSetCookie'];
         }
     }
 }

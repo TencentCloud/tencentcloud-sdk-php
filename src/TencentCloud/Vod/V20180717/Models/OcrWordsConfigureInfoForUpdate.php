@@ -66,12 +66,12 @@ class OcrWordsConfigureInfoForUpdate extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Switch",$param) and $param["Switch"] !== null) {
-            $this->Switch = $param["Switch"];
+        if (array_key_exists('Switch',$param) and $param['Switch'] !== null) {
+            $this->Switch = $param['Switch'];
         }
 
-        if (array_key_exists("LabelSet",$param) and $param["LabelSet"] !== null) {
-            $this->LabelSet = $param["LabelSet"];
+        if (array_key_exists('LabelSet',$param) and $param['LabelSet'] !== null) {
+            $this->LabelSet = $param['LabelSet'];
         }
     }
 }

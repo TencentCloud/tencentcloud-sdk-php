@@ -106,36 +106,36 @@ class SendSmsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PhoneNumberSet",$param) and $param["PhoneNumberSet"] !== null) {
-            $this->PhoneNumberSet = $param["PhoneNumberSet"];
+        if (array_key_exists('PhoneNumberSet',$param) and $param['PhoneNumberSet'] !== null) {
+            $this->PhoneNumberSet = $param['PhoneNumberSet'];
         }
 
-        if (array_key_exists("TemplateID",$param) and $param["TemplateID"] !== null) {
-            $this->TemplateID = $param["TemplateID"];
+        if (array_key_exists('TemplateID',$param) and $param['TemplateID'] !== null) {
+            $this->TemplateID = $param['TemplateID'];
         }
 
-        if (array_key_exists("SmsSdkAppid",$param) and $param["SmsSdkAppid"] !== null) {
-            $this->SmsSdkAppid = $param["SmsSdkAppid"];
+        if (array_key_exists('SmsSdkAppid',$param) and $param['SmsSdkAppid'] !== null) {
+            $this->SmsSdkAppid = $param['SmsSdkAppid'];
         }
 
-        if (array_key_exists("Sign",$param) and $param["Sign"] !== null) {
-            $this->Sign = $param["Sign"];
+        if (array_key_exists('Sign',$param) and $param['Sign'] !== null) {
+            $this->Sign = $param['Sign'];
         }
 
-        if (array_key_exists("TemplateParamSet",$param) and $param["TemplateParamSet"] !== null) {
-            $this->TemplateParamSet = $param["TemplateParamSet"];
+        if (array_key_exists('TemplateParamSet',$param) and $param['TemplateParamSet'] !== null) {
+            $this->TemplateParamSet = $param['TemplateParamSet'];
         }
 
-        if (array_key_exists("ExtendCode",$param) and $param["ExtendCode"] !== null) {
-            $this->ExtendCode = $param["ExtendCode"];
+        if (array_key_exists('ExtendCode',$param) and $param['ExtendCode'] !== null) {
+            $this->ExtendCode = $param['ExtendCode'];
         }
 
-        if (array_key_exists("SessionContext",$param) and $param["SessionContext"] !== null) {
-            $this->SessionContext = $param["SessionContext"];
+        if (array_key_exists('SessionContext',$param) and $param['SessionContext'] !== null) {
+            $this->SessionContext = $param['SessionContext'];
         }
 
-        if (array_key_exists("SenderId",$param) and $param["SenderId"] !== null) {
-            $this->SenderId = $param["SenderId"];
+        if (array_key_exists('SenderId',$param) and $param['SenderId'] !== null) {
+            $this->SenderId = $param['SenderId'];
         }
     }
 }

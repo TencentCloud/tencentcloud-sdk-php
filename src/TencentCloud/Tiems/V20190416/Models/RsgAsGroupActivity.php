@@ -134,57 +134,57 @@ class RsgAsGroupActivity extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
-            $this->Id = $param["Id"];
+        if (array_key_exists('Id',$param) and $param['Id'] !== null) {
+            $this->Id = $param['Id'];
         }
 
-        if (array_key_exists("RsgAsGroupId",$param) and $param["RsgAsGroupId"] !== null) {
-            $this->RsgAsGroupId = $param["RsgAsGroupId"];
+        if (array_key_exists('RsgAsGroupId',$param) and $param['RsgAsGroupId'] !== null) {
+            $this->RsgAsGroupId = $param['RsgAsGroupId'];
         }
 
-        if (array_key_exists("ActivityType",$param) and $param["ActivityType"] !== null) {
-            $this->ActivityType = $param["ActivityType"];
+        if (array_key_exists('ActivityType',$param) and $param['ActivityType'] !== null) {
+            $this->ActivityType = $param['ActivityType'];
         }
 
-        if (array_key_exists("StatusCode",$param) and $param["StatusCode"] !== null) {
-            $this->StatusCode = $param["StatusCode"];
+        if (array_key_exists('StatusCode',$param) and $param['StatusCode'] !== null) {
+            $this->StatusCode = $param['StatusCode'];
         }
 
-        if (array_key_exists("StatusMessage",$param) and $param["StatusMessage"] !== null) {
-            $this->StatusMessage = $param["StatusMessage"];
+        if (array_key_exists('StatusMessage',$param) and $param['StatusMessage'] !== null) {
+            $this->StatusMessage = $param['StatusMessage'];
         }
 
-        if (array_key_exists("Cause",$param) and $param["Cause"] !== null) {
-            $this->Cause = $param["Cause"];
+        if (array_key_exists('Cause',$param) and $param['Cause'] !== null) {
+            $this->Cause = $param['Cause'];
         }
 
-        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
-            $this->Description = $param["Description"];
+        if (array_key_exists('Description',$param) and $param['Description'] !== null) {
+            $this->Description = $param['Description'];
         }
 
-        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
-            $this->StartTime = $param["StartTime"];
+        if (array_key_exists('StartTime',$param) and $param['StartTime'] !== null) {
+            $this->StartTime = $param['StartTime'];
         }
 
-        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
-            $this->EndTime = $param["EndTime"];
+        if (array_key_exists('EndTime',$param) and $param['EndTime'] !== null) {
+            $this->EndTime = $param['EndTime'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("RsgAsActivityRelatedInstance",$param) and $param["RsgAsActivityRelatedInstance"] !== null) {
+        if (array_key_exists('RsgAsActivityRelatedInstance',$param) and $param['RsgAsActivityRelatedInstance'] !== null) {
             $this->RsgAsActivityRelatedInstance = [];
-            foreach ($param["RsgAsActivityRelatedInstance"] as $key => $value){
+            foreach ($param['RsgAsActivityRelatedInstance'] as $key => $value){
                 $obj = new RsgAsActivityRelatedInstance();
                 $obj->deserialize($value);
                 array_push($this->RsgAsActivityRelatedInstance, $obj);
             }
         }
 
-        if (array_key_exists("StatusMessageSimplified",$param) and $param["StatusMessageSimplified"] !== null) {
-            $this->StatusMessageSimplified = $param["StatusMessageSimplified"];
+        if (array_key_exists('StatusMessageSimplified',$param) and $param['StatusMessageSimplified'] !== null) {
+            $this->StatusMessageSimplified = $param['StatusMessageSimplified'];
         }
     }
 }

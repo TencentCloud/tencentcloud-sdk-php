@@ -62,12 +62,12 @@ class DescribeSmsTemplateListRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TemplateIdSet",$param) and $param["TemplateIdSet"] !== null) {
-            $this->TemplateIdSet = $param["TemplateIdSet"];
+        if (array_key_exists('TemplateIdSet',$param) and $param['TemplateIdSet'] !== null) {
+            $this->TemplateIdSet = $param['TemplateIdSet'];
         }
 
-        if (array_key_exists("International",$param) and $param["International"] !== null) {
-            $this->International = $param["International"];
+        if (array_key_exists('International',$param) and $param['International'] !== null) {
+            $this->International = $param['International'];
         }
     }
 }

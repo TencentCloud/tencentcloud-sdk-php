@@ -46,8 +46,8 @@ class DeleteIotDataTypeRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TypeId",$param) and $param["TypeId"] !== null) {
-            $this->TypeId = $param["TypeId"];
+        if (array_key_exists('TypeId',$param) and $param['TypeId'] !== null) {
+            $this->TypeId = $param['TypeId'];
         }
     }
 }

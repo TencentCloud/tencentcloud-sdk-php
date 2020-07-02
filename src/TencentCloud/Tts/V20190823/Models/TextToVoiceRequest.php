@@ -126,44 +126,44 @@ class TextToVoiceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Text",$param) and $param["Text"] !== null) {
-            $this->Text = $param["Text"];
+        if (array_key_exists('Text',$param) and $param['Text'] !== null) {
+            $this->Text = $param['Text'];
         }
 
-        if (array_key_exists("SessionId",$param) and $param["SessionId"] !== null) {
-            $this->SessionId = $param["SessionId"];
+        if (array_key_exists('SessionId',$param) and $param['SessionId'] !== null) {
+            $this->SessionId = $param['SessionId'];
         }
 
-        if (array_key_exists("ModelType",$param) and $param["ModelType"] !== null) {
-            $this->ModelType = $param["ModelType"];
+        if (array_key_exists('ModelType',$param) and $param['ModelType'] !== null) {
+            $this->ModelType = $param['ModelType'];
         }
 
-        if (array_key_exists("Volume",$param) and $param["Volume"] !== null) {
-            $this->Volume = $param["Volume"];
+        if (array_key_exists('Volume',$param) and $param['Volume'] !== null) {
+            $this->Volume = $param['Volume'];
         }
 
-        if (array_key_exists("Speed",$param) and $param["Speed"] !== null) {
-            $this->Speed = $param["Speed"];
+        if (array_key_exists('Speed',$param) and $param['Speed'] !== null) {
+            $this->Speed = $param['Speed'];
         }
 
-        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
-            $this->ProjectId = $param["ProjectId"];
+        if (array_key_exists('ProjectId',$param) and $param['ProjectId'] !== null) {
+            $this->ProjectId = $param['ProjectId'];
         }
 
-        if (array_key_exists("VoiceType",$param) and $param["VoiceType"] !== null) {
-            $this->VoiceType = $param["VoiceType"];
+        if (array_key_exists('VoiceType',$param) and $param['VoiceType'] !== null) {
+            $this->VoiceType = $param['VoiceType'];
         }
 
-        if (array_key_exists("PrimaryLanguage",$param) and $param["PrimaryLanguage"] !== null) {
-            $this->PrimaryLanguage = $param["PrimaryLanguage"];
+        if (array_key_exists('PrimaryLanguage',$param) and $param['PrimaryLanguage'] !== null) {
+            $this->PrimaryLanguage = $param['PrimaryLanguage'];
         }
 
-        if (array_key_exists("SampleRate",$param) and $param["SampleRate"] !== null) {
-            $this->SampleRate = $param["SampleRate"];
+        if (array_key_exists('SampleRate',$param) and $param['SampleRate'] !== null) {
+            $this->SampleRate = $param['SampleRate'];
         }
 
-        if (array_key_exists("Codec",$param) and $param["Codec"] !== null) {
-            $this->Codec = $param["Codec"];
+        if (array_key_exists('Codec',$param) and $param['Codec'] !== null) {
+            $this->Codec = $param['Codec'];
         }
     }
 }

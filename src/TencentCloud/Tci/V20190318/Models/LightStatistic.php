@@ -54,18 +54,18 @@ class LightStatistic extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LightDistribution",$param) and $param["LightDistribution"] !== null) {
+        if (array_key_exists('LightDistribution',$param) and $param['LightDistribution'] !== null) {
             $this->LightDistribution = [];
-            foreach ($param["LightDistribution"] as $key => $value){
+            foreach ($param['LightDistribution'] as $key => $value){
                 $obj = new LightDistributionStatistic();
                 $obj->deserialize($value);
                 array_push($this->LightDistribution, $obj);
             }
         }
 
-        if (array_key_exists("LightLevelRatio",$param) and $param["LightLevelRatio"] !== null) {
+        if (array_key_exists('LightLevelRatio',$param) and $param['LightLevelRatio'] !== null) {
             $this->LightLevelRatio = [];
-            foreach ($param["LightLevelRatio"] as $key => $value){
+            foreach ($param['LightLevelRatio'] as $key => $value){
                 $obj = new LightLevelRatioStatistic();
                 $obj->deserialize($value);
                 array_push($this->LightLevelRatio, $obj);

@@ -70,20 +70,20 @@ class GenerateDataKeyRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("KeyId",$param) and $param["KeyId"] !== null) {
-            $this->KeyId = $param["KeyId"];
+        if (array_key_exists('KeyId',$param) and $param['KeyId'] !== null) {
+            $this->KeyId = $param['KeyId'];
         }
 
-        if (array_key_exists("KeySpec",$param) and $param["KeySpec"] !== null) {
-            $this->KeySpec = $param["KeySpec"];
+        if (array_key_exists('KeySpec',$param) and $param['KeySpec'] !== null) {
+            $this->KeySpec = $param['KeySpec'];
         }
 
-        if (array_key_exists("NumberOfBytes",$param) and $param["NumberOfBytes"] !== null) {
-            $this->NumberOfBytes = $param["NumberOfBytes"];
+        if (array_key_exists('NumberOfBytes',$param) and $param['NumberOfBytes'] !== null) {
+            $this->NumberOfBytes = $param['NumberOfBytes'];
         }
 
-        if (array_key_exists("EncryptionContext",$param) and $param["EncryptionContext"] !== null) {
-            $this->EncryptionContext = $param["EncryptionContext"];
+        if (array_key_exists('EncryptionContext',$param) and $param['EncryptionContext'] !== null) {
+            $this->EncryptionContext = $param['EncryptionContext'];
         }
     }
 }

@@ -78,29 +78,29 @@ class CreateLaneRuleRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RuleName",$param) and $param["RuleName"] !== null) {
-            $this->RuleName = $param["RuleName"];
+        if (array_key_exists('RuleName',$param) and $param['RuleName'] !== null) {
+            $this->RuleName = $param['RuleName'];
         }
 
-        if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
-            $this->Remark = $param["Remark"];
+        if (array_key_exists('Remark',$param) and $param['Remark'] !== null) {
+            $this->Remark = $param['Remark'];
         }
 
-        if (array_key_exists("RuleTagList",$param) and $param["RuleTagList"] !== null) {
+        if (array_key_exists('RuleTagList',$param) and $param['RuleTagList'] !== null) {
             $this->RuleTagList = [];
-            foreach ($param["RuleTagList"] as $key => $value){
+            foreach ($param['RuleTagList'] as $key => $value){
                 $obj = new LaneRuleTag();
                 $obj->deserialize($value);
                 array_push($this->RuleTagList, $obj);
             }
         }
 
-        if (array_key_exists("RuleTagRelationship",$param) and $param["RuleTagRelationship"] !== null) {
-            $this->RuleTagRelationship = $param["RuleTagRelationship"];
+        if (array_key_exists('RuleTagRelationship',$param) and $param['RuleTagRelationship'] !== null) {
+            $this->RuleTagRelationship = $param['RuleTagRelationship'];
         }
 
-        if (array_key_exists("LaneId",$param) and $param["LaneId"] !== null) {
-            $this->LaneId = $param["LaneId"];
+        if (array_key_exists('LaneId',$param) and $param['LaneId'] !== null) {
+            $this->LaneId = $param['LaneId'];
         }
     }
 }

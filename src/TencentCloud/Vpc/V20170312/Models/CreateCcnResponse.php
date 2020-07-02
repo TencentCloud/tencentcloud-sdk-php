@@ -54,13 +54,13 @@ class CreateCcnResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Ccn",$param) and $param["Ccn"] !== null) {
+        if (array_key_exists('Ccn',$param) and $param['Ccn'] !== null) {
             $this->Ccn = new CCN();
-            $this->Ccn->deserialize($param["Ccn"]);
+            $this->Ccn->deserialize($param['Ccn']);
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

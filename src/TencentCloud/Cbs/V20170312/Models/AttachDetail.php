@@ -62,16 +62,16 @@ class AttachDetail extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("AttachedDiskCount",$param) and $param["AttachedDiskCount"] !== null) {
-            $this->AttachedDiskCount = $param["AttachedDiskCount"];
+        if (array_key_exists('AttachedDiskCount',$param) and $param['AttachedDiskCount'] !== null) {
+            $this->AttachedDiskCount = $param['AttachedDiskCount'];
         }
 
-        if (array_key_exists("MaxAttachCount",$param) and $param["MaxAttachCount"] !== null) {
-            $this->MaxAttachCount = $param["MaxAttachCount"];
+        if (array_key_exists('MaxAttachCount',$param) and $param['MaxAttachCount'] !== null) {
+            $this->MaxAttachCount = $param['MaxAttachCount'];
         }
     }
 }

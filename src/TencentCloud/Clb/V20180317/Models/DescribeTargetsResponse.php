@@ -58,17 +58,17 @@ class DescribeTargetsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Listeners",$param) and $param["Listeners"] !== null) {
+        if (array_key_exists('Listeners',$param) and $param['Listeners'] !== null) {
             $this->Listeners = [];
-            foreach ($param["Listeners"] as $key => $value){
+            foreach ($param['Listeners'] as $key => $value){
                 $obj = new ListenerBackend();
                 $obj->deserialize($value);
                 array_push($this->Listeners, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

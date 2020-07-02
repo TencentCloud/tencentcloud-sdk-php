@@ -118,51 +118,51 @@ class CreateWorkflowRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("WorkflowName",$param) and $param["WorkflowName"] !== null) {
-            $this->WorkflowName = $param["WorkflowName"];
+        if (array_key_exists('WorkflowName',$param) and $param['WorkflowName'] !== null) {
+            $this->WorkflowName = $param['WorkflowName'];
         }
 
-        if (array_key_exists("Trigger",$param) and $param["Trigger"] !== null) {
+        if (array_key_exists('Trigger',$param) and $param['Trigger'] !== null) {
             $this->Trigger = new WorkflowTrigger();
-            $this->Trigger->deserialize($param["Trigger"]);
+            $this->Trigger->deserialize($param['Trigger']);
         }
 
-        if (array_key_exists("OutputStorage",$param) and $param["OutputStorage"] !== null) {
+        if (array_key_exists('OutputStorage',$param) and $param['OutputStorage'] !== null) {
             $this->OutputStorage = new TaskOutputStorage();
-            $this->OutputStorage->deserialize($param["OutputStorage"]);
+            $this->OutputStorage->deserialize($param['OutputStorage']);
         }
 
-        if (array_key_exists("OutputDir",$param) and $param["OutputDir"] !== null) {
-            $this->OutputDir = $param["OutputDir"];
+        if (array_key_exists('OutputDir',$param) and $param['OutputDir'] !== null) {
+            $this->OutputDir = $param['OutputDir'];
         }
 
-        if (array_key_exists("MediaProcessTask",$param) and $param["MediaProcessTask"] !== null) {
+        if (array_key_exists('MediaProcessTask',$param) and $param['MediaProcessTask'] !== null) {
             $this->MediaProcessTask = new MediaProcessTaskInput();
-            $this->MediaProcessTask->deserialize($param["MediaProcessTask"]);
+            $this->MediaProcessTask->deserialize($param['MediaProcessTask']);
         }
 
-        if (array_key_exists("AiContentReviewTask",$param) and $param["AiContentReviewTask"] !== null) {
+        if (array_key_exists('AiContentReviewTask',$param) and $param['AiContentReviewTask'] !== null) {
             $this->AiContentReviewTask = new AiContentReviewTaskInput();
-            $this->AiContentReviewTask->deserialize($param["AiContentReviewTask"]);
+            $this->AiContentReviewTask->deserialize($param['AiContentReviewTask']);
         }
 
-        if (array_key_exists("AiAnalysisTask",$param) and $param["AiAnalysisTask"] !== null) {
+        if (array_key_exists('AiAnalysisTask',$param) and $param['AiAnalysisTask'] !== null) {
             $this->AiAnalysisTask = new AiAnalysisTaskInput();
-            $this->AiAnalysisTask->deserialize($param["AiAnalysisTask"]);
+            $this->AiAnalysisTask->deserialize($param['AiAnalysisTask']);
         }
 
-        if (array_key_exists("AiRecognitionTask",$param) and $param["AiRecognitionTask"] !== null) {
+        if (array_key_exists('AiRecognitionTask',$param) and $param['AiRecognitionTask'] !== null) {
             $this->AiRecognitionTask = new AiRecognitionTaskInput();
-            $this->AiRecognitionTask->deserialize($param["AiRecognitionTask"]);
+            $this->AiRecognitionTask->deserialize($param['AiRecognitionTask']);
         }
 
-        if (array_key_exists("TaskNotifyConfig",$param) and $param["TaskNotifyConfig"] !== null) {
+        if (array_key_exists('TaskNotifyConfig',$param) and $param['TaskNotifyConfig'] !== null) {
             $this->TaskNotifyConfig = new TaskNotifyConfig();
-            $this->TaskNotifyConfig->deserialize($param["TaskNotifyConfig"]);
+            $this->TaskNotifyConfig->deserialize($param['TaskNotifyConfig']);
         }
 
-        if (array_key_exists("TaskPriority",$param) and $param["TaskPriority"] !== null) {
-            $this->TaskPriority = $param["TaskPriority"];
+        if (array_key_exists('TaskPriority',$param) and $param['TaskPriority'] !== null) {
+            $this->TaskPriority = $param['TaskPriority'];
         }
     }
 }

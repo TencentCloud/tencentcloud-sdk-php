@@ -78,16 +78,16 @@ Computing: 计算和存储都计费
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Label",$param) and $param["Label"] !== null) {
-            $this->Label = $param["Label"];
+        if (array_key_exists('Label',$param) and $param['Label'] !== null) {
+            $this->Label = $param['Label'];
         }
 
-        if (array_key_exists("VolumeSize",$param) and $param["VolumeSize"] !== null) {
-            $this->VolumeSize = $param["VolumeSize"];
+        if (array_key_exists('VolumeSize',$param) and $param['VolumeSize'] !== null) {
+            $this->VolumeSize = $param['VolumeSize'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
     }
 }

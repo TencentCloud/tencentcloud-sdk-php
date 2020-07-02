@@ -62,16 +62,16 @@ class InitDCDBInstancesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FlowIds",$param) and $param["FlowIds"] !== null) {
-            $this->FlowIds = $param["FlowIds"];
+        if (array_key_exists('FlowIds',$param) and $param['FlowIds'] !== null) {
+            $this->FlowIds = $param['FlowIds'];
         }
 
-        if (array_key_exists("InstanceIds",$param) and $param["InstanceIds"] !== null) {
-            $this->InstanceIds = $param["InstanceIds"];
+        if (array_key_exists('InstanceIds',$param) and $param['InstanceIds'] !== null) {
+            $this->InstanceIds = $param['InstanceIds'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

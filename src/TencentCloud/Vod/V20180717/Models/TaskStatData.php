@@ -210,22 +210,22 @@ class TaskStatData extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TaskType",$param) and $param["TaskType"] !== null) {
-            $this->TaskType = $param["TaskType"];
+        if (array_key_exists('TaskType',$param) and $param['TaskType'] !== null) {
+            $this->TaskType = $param['TaskType'];
         }
 
-        if (array_key_exists("Summary",$param) and $param["Summary"] !== null) {
+        if (array_key_exists('Summary',$param) and $param['Summary'] !== null) {
             $this->Summary = [];
-            foreach ($param["Summary"] as $key => $value){
+            foreach ($param['Summary'] as $key => $value){
                 $obj = new TaskStatDataItem();
                 $obj->deserialize($value);
                 array_push($this->Summary, $obj);
             }
         }
 
-        if (array_key_exists("Details",$param) and $param["Details"] !== null) {
+        if (array_key_exists('Details',$param) and $param['Details'] !== null) {
             $this->Details = [];
-            foreach ($param["Details"] as $key => $value){
+            foreach ($param['Details'] as $key => $value){
                 $obj = new SpecificationDataItem();
                 $obj->deserialize($value);
                 array_push($this->Details, $obj);

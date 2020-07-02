@@ -190,36 +190,36 @@ expired = 过期
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ReturnCode",$param) and $param["ReturnCode"] !== null) {
-            $this->ReturnCode = $param["ReturnCode"];
+        if (array_key_exists('ReturnCode',$param) and $param['ReturnCode'] !== null) {
+            $this->ReturnCode = $param['ReturnCode'];
         }
 
-        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
-            $this->Result = $param["Result"];
+        if (array_key_exists('Result',$param) and $param['Result'] !== null) {
+            $this->Result = $param['Result'];
         }
 
-        if (array_key_exists("Confidence",$param) and $param["Confidence"] !== null) {
-            $this->Confidence = $param["Confidence"];
+        if (array_key_exists('Confidence',$param) and $param['Confidence'] !== null) {
+            $this->Confidence = $param['Confidence'];
         }
 
-        if (array_key_exists("ThreatTypes",$param) and $param["ThreatTypes"] !== null) {
-            $this->ThreatTypes = $param["ThreatTypes"];
+        if (array_key_exists('ThreatTypes',$param) and $param['ThreatTypes'] !== null) {
+            $this->ThreatTypes = $param['ThreatTypes'];
         }
 
-        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
-            $this->Tags = $param["Tags"];
+        if (array_key_exists('Tags',$param) and $param['Tags'] !== null) {
+            $this->Tags = $param['Tags'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("Context",$param) and $param["Context"] !== null) {
-            $this->Context = $param["Context"];
+        if (array_key_exists('Context',$param) and $param['Context'] !== null) {
+            $this->Context = $param['Context'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

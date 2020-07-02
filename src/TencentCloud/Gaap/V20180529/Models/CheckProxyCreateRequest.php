@@ -78,24 +78,24 @@ class CheckProxyCreateRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AccessRegion",$param) and $param["AccessRegion"] !== null) {
-            $this->AccessRegion = $param["AccessRegion"];
+        if (array_key_exists('AccessRegion',$param) and $param['AccessRegion'] !== null) {
+            $this->AccessRegion = $param['AccessRegion'];
         }
 
-        if (array_key_exists("RealServerRegion",$param) and $param["RealServerRegion"] !== null) {
-            $this->RealServerRegion = $param["RealServerRegion"];
+        if (array_key_exists('RealServerRegion',$param) and $param['RealServerRegion'] !== null) {
+            $this->RealServerRegion = $param['RealServerRegion'];
         }
 
-        if (array_key_exists("Bandwidth",$param) and $param["Bandwidth"] !== null) {
-            $this->Bandwidth = $param["Bandwidth"];
+        if (array_key_exists('Bandwidth',$param) and $param['Bandwidth'] !== null) {
+            $this->Bandwidth = $param['Bandwidth'];
         }
 
-        if (array_key_exists("Concurrent",$param) and $param["Concurrent"] !== null) {
-            $this->Concurrent = $param["Concurrent"];
+        if (array_key_exists('Concurrent',$param) and $param['Concurrent'] !== null) {
+            $this->Concurrent = $param['Concurrent'];
         }
 
-        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
-            $this->GroupId = $param["GroupId"];
+        if (array_key_exists('GroupId',$param) and $param['GroupId'] !== null) {
+            $this->GroupId = $param['GroupId'];
         }
     }
 }

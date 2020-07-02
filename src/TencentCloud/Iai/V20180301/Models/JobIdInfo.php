@@ -74,16 +74,16 @@ Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00
         if ($param === null) {
             return;
         }
-        if (array_key_exists("JobId",$param) and $param["JobId"] !== null) {
-            $this->JobId = $param["JobId"];
+        if (array_key_exists('JobId',$param) and $param['JobId'] !== null) {
+            $this->JobId = $param['JobId'];
         }
 
-        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
-            $this->StartTime = $param["StartTime"];
+        if (array_key_exists('StartTime',$param) and $param['StartTime'] !== null) {
+            $this->StartTime = $param['StartTime'];
         }
 
-        if (array_key_exists("JobStatus",$param) and $param["JobStatus"] !== null) {
-            $this->JobStatus = $param["JobStatus"];
+        if (array_key_exists('JobStatus',$param) and $param['JobStatus'] !== null) {
+            $this->JobStatus = $param['JobStatus'];
         }
     }
 }

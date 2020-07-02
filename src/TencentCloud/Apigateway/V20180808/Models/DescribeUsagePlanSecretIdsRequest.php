@@ -62,16 +62,16 @@ class DescribeUsagePlanSecretIdsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("UsagePlanId",$param) and $param["UsagePlanId"] !== null) {
-            $this->UsagePlanId = $param["UsagePlanId"];
+        if (array_key_exists('UsagePlanId',$param) and $param['UsagePlanId'] !== null) {
+            $this->UsagePlanId = $param['UsagePlanId'];
         }
 
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
+        if (array_key_exists('Limit',$param) and $param['Limit'] !== null) {
+            $this->Limit = $param['Limit'];
         }
 
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
+        if (array_key_exists('Offset',$param) and $param['Offset'] !== null) {
+            $this->Offset = $param['Offset'];
         }
     }
 }

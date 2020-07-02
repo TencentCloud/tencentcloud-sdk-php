@@ -134,52 +134,52 @@ class SendWxTouchTaskRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
-            $this->GroupId = $param["GroupId"];
+        if (array_key_exists('GroupId',$param) and $param['GroupId'] !== null) {
+            $this->GroupId = $param['GroupId'];
         }
 
-        if (array_key_exists("DistinctFlag",$param) and $param["DistinctFlag"] !== null) {
-            $this->DistinctFlag = $param["DistinctFlag"];
+        if (array_key_exists('DistinctFlag',$param) and $param['DistinctFlag'] !== null) {
+            $this->DistinctFlag = $param['DistinctFlag'];
         }
 
-        if (array_key_exists("IsSendNow",$param) and $param["IsSendNow"] !== null) {
-            $this->IsSendNow = $param["IsSendNow"];
+        if (array_key_exists('IsSendNow',$param) and $param['IsSendNow'] !== null) {
+            $this->IsSendNow = $param['IsSendNow'];
         }
 
-        if (array_key_exists("SendDate",$param) and $param["SendDate"] !== null) {
-            $this->SendDate = $param["SendDate"];
+        if (array_key_exists('SendDate',$param) and $param['SendDate'] !== null) {
+            $this->SendDate = $param['SendDate'];
         }
 
-        if (array_key_exists("TaskName",$param) and $param["TaskName"] !== null) {
-            $this->TaskName = $param["TaskName"];
+        if (array_key_exists('TaskName',$param) and $param['TaskName'] !== null) {
+            $this->TaskName = $param['TaskName'];
         }
 
-        if (array_key_exists("WxTouchType",$param) and $param["WxTouchType"] !== null) {
-            $this->WxTouchType = $param["WxTouchType"];
+        if (array_key_exists('WxTouchType',$param) and $param['WxTouchType'] !== null) {
+            $this->WxTouchType = $param['WxTouchType'];
         }
 
-        if (array_key_exists("Title",$param) and $param["Title"] !== null) {
-            $this->Title = $param["Title"];
+        if (array_key_exists('Title',$param) and $param['Title'] !== null) {
+            $this->Title = $param['Title'];
         }
 
-        if (array_key_exists("Content",$param) and $param["Content"] !== null) {
-            $this->Content = $param["Content"];
+        if (array_key_exists('Content',$param) and $param['Content'] !== null) {
+            $this->Content = $param['Content'];
         }
 
-        if (array_key_exists("NewsId",$param) and $param["NewsId"] !== null) {
-            $this->NewsId = $param["NewsId"];
+        if (array_key_exists('NewsId',$param) and $param['NewsId'] !== null) {
+            $this->NewsId = $param['NewsId'];
         }
 
-        if (array_key_exists("SmallProgramId",$param) and $param["SmallProgramId"] !== null) {
-            $this->SmallProgramId = $param["SmallProgramId"];
+        if (array_key_exists('SmallProgramId',$param) and $param['SmallProgramId'] !== null) {
+            $this->SmallProgramId = $param['SmallProgramId'];
         }
 
-        if (array_key_exists("TemplateId",$param) and $param["TemplateId"] !== null) {
-            $this->TemplateId = $param["TemplateId"];
+        if (array_key_exists('TemplateId',$param) and $param['TemplateId'] !== null) {
+            $this->TemplateId = $param['TemplateId'];
         }
 
-        if (array_key_exists("WxAppId",$param) and $param["WxAppId"] !== null) {
-            $this->WxAppId = $param["WxAppId"];
+        if (array_key_exists('WxAppId',$param) and $param['WxAppId'] !== null) {
+            $this->WxAppId = $param['WxAppId'];
         }
     }
 }

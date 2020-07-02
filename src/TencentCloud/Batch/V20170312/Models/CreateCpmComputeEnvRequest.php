@@ -62,18 +62,18 @@ class CreateCpmComputeEnvRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ComputeEnv",$param) and $param["ComputeEnv"] !== null) {
+        if (array_key_exists('ComputeEnv',$param) and $param['ComputeEnv'] !== null) {
             $this->ComputeEnv = new NamedCpmComputeEnv();
-            $this->ComputeEnv->deserialize($param["ComputeEnv"]);
+            $this->ComputeEnv->deserialize($param['ComputeEnv']);
         }
 
-        if (array_key_exists("Placement",$param) and $param["Placement"] !== null) {
+        if (array_key_exists('Placement',$param) and $param['Placement'] !== null) {
             $this->Placement = new Placement();
-            $this->Placement->deserialize($param["Placement"]);
+            $this->Placement->deserialize($param['Placement']);
         }
 
-        if (array_key_exists("ClientToken",$param) and $param["ClientToken"] !== null) {
-            $this->ClientToken = $param["ClientToken"];
+        if (array_key_exists('ClientToken',$param) and $param['ClientToken'] !== null) {
+            $this->ClientToken = $param['ClientToken'];
         }
     }
 }

@@ -54,12 +54,12 @@ class CreateAccessGroupRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AccessGroupName",$param) and $param["AccessGroupName"] !== null) {
-            $this->AccessGroupName = $param["AccessGroupName"];
+        if (array_key_exists('AccessGroupName',$param) and $param['AccessGroupName'] !== null) {
+            $this->AccessGroupName = $param['AccessGroupName'];
         }
 
-        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
-            $this->Description = $param["Description"];
+        if (array_key_exists('Description',$param) and $param['Description'] !== null) {
+            $this->Description = $param['Description'];
         }
     }
 }

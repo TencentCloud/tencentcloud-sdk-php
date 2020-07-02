@@ -70,30 +70,30 @@ class DescribleL7RulesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Rules",$param) and $param["Rules"] !== null) {
+        if (array_key_exists('Rules',$param) and $param['Rules'] !== null) {
             $this->Rules = [];
-            foreach ($param["Rules"] as $key => $value){
+            foreach ($param['Rules'] as $key => $value){
                 $obj = new L7RuleEntry();
                 $obj->deserialize($value);
                 array_push($this->Rules, $obj);
             }
         }
 
-        if (array_key_exists("Total",$param) and $param["Total"] !== null) {
-            $this->Total = $param["Total"];
+        if (array_key_exists('Total',$param) and $param['Total'] !== null) {
+            $this->Total = $param['Total'];
         }
 
-        if (array_key_exists("Healths",$param) and $param["Healths"] !== null) {
+        if (array_key_exists('Healths',$param) and $param['Healths'] !== null) {
             $this->Healths = [];
-            foreach ($param["Healths"] as $key => $value){
+            foreach ($param['Healths'] as $key => $value){
                 $obj = new L7RuleHealth();
                 $obj->deserialize($value);
                 array_push($this->Healths, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

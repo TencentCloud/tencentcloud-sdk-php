@@ -62,16 +62,16 @@ class ModifySecurityGroupAttributeRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SecurityGroupId",$param) and $param["SecurityGroupId"] !== null) {
-            $this->SecurityGroupId = $param["SecurityGroupId"];
+        if (array_key_exists('SecurityGroupId',$param) and $param['SecurityGroupId'] !== null) {
+            $this->SecurityGroupId = $param['SecurityGroupId'];
         }
 
-        if (array_key_exists("GroupName",$param) and $param["GroupName"] !== null) {
-            $this->GroupName = $param["GroupName"];
+        if (array_key_exists('GroupName',$param) and $param['GroupName'] !== null) {
+            $this->GroupName = $param['GroupName'];
         }
 
-        if (array_key_exists("GroupDescription",$param) and $param["GroupDescription"] !== null) {
-            $this->GroupDescription = $param["GroupDescription"];
+        if (array_key_exists('GroupDescription',$param) and $param['GroupDescription'] !== null) {
+            $this->GroupDescription = $param['GroupDescription'];
         }
     }
 }

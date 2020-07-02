@@ -54,12 +54,12 @@ class DeleteCertificateResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DeleteResult",$param) and $param["DeleteResult"] !== null) {
-            $this->DeleteResult = $param["DeleteResult"];
+        if (array_key_exists('DeleteResult',$param) and $param['DeleteResult'] !== null) {
+            $this->DeleteResult = $param['DeleteResult'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

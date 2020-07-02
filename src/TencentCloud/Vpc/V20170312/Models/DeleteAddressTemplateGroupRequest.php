@@ -46,8 +46,8 @@ class DeleteAddressTemplateGroupRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AddressTemplateGroupId",$param) and $param["AddressTemplateGroupId"] !== null) {
-            $this->AddressTemplateGroupId = $param["AddressTemplateGroupId"];
+        if (array_key_exists('AddressTemplateGroupId',$param) and $param['AddressTemplateGroupId'] !== null) {
+            $this->AddressTemplateGroupId = $param['AddressTemplateGroupId'];
         }
     }
 }

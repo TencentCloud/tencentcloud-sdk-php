@@ -62,16 +62,16 @@ class ListAttachedUserPoliciesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TargetUin",$param) and $param["TargetUin"] !== null) {
-            $this->TargetUin = $param["TargetUin"];
+        if (array_key_exists('TargetUin',$param) and $param['TargetUin'] !== null) {
+            $this->TargetUin = $param['TargetUin'];
         }
 
-        if (array_key_exists("Page",$param) and $param["Page"] !== null) {
-            $this->Page = $param["Page"];
+        if (array_key_exists('Page',$param) and $param['Page'] !== null) {
+            $this->Page = $param['Page'];
         }
 
-        if (array_key_exists("Rp",$param) and $param["Rp"] !== null) {
-            $this->Rp = $param["Rp"];
+        if (array_key_exists('Rp',$param) and $param['Rp'] !== null) {
+            $this->Rp = $param['Rp'];
         }
     }
 }

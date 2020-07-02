@@ -54,12 +54,12 @@ class OtaPubHistory extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("OtaVersion",$param) and $param["OtaVersion"] !== null) {
-            $this->OtaVersion = $param["OtaVersion"];
+        if (array_key_exists('OtaVersion',$param) and $param['OtaVersion'] !== null) {
+            $this->OtaVersion = $param['OtaVersion'];
         }
 
-        if (array_key_exists("PublishTime",$param) and $param["PublishTime"] !== null) {
-            $this->PublishTime = $param["PublishTime"];
+        if (array_key_exists('PublishTime',$param) and $param['PublishTime'] !== null) {
+            $this->PublishTime = $param['PublishTime'];
         }
     }
 }

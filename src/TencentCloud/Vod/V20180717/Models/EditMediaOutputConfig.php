@@ -74,20 +74,20 @@ class EditMediaOutputConfig extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MediaName",$param) and $param["MediaName"] !== null) {
-            $this->MediaName = $param["MediaName"];
+        if (array_key_exists('MediaName',$param) and $param['MediaName'] !== null) {
+            $this->MediaName = $param['MediaName'];
         }
 
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists('Type',$param) and $param['Type'] !== null) {
+            $this->Type = $param['Type'];
         }
 
-        if (array_key_exists("ClassId",$param) and $param["ClassId"] !== null) {
-            $this->ClassId = $param["ClassId"];
+        if (array_key_exists('ClassId',$param) and $param['ClassId'] !== null) {
+            $this->ClassId = $param['ClassId'];
         }
 
-        if (array_key_exists("ExpireTime",$param) and $param["ExpireTime"] !== null) {
-            $this->ExpireTime = $param["ExpireTime"];
+        if (array_key_exists('ExpireTime',$param) and $param['ExpireTime'] !== null) {
+            $this->ExpireTime = $param['ExpireTime'];
         }
     }
 }

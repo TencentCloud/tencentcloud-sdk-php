@@ -54,12 +54,12 @@ class ListLayerVersionsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LayerName",$param) and $param["LayerName"] !== null) {
-            $this->LayerName = $param["LayerName"];
+        if (array_key_exists('LayerName',$param) and $param['LayerName'] !== null) {
+            $this->LayerName = $param['LayerName'];
         }
 
-        if (array_key_exists("CompatibleRuntime",$param) and $param["CompatibleRuntime"] !== null) {
-            $this->CompatibleRuntime = $param["CompatibleRuntime"];
+        if (array_key_exists('CompatibleRuntime',$param) and $param['CompatibleRuntime'] !== null) {
+            $this->CompatibleRuntime = $param['CompatibleRuntime'];
         }
     }
 }

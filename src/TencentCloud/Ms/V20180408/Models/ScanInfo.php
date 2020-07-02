@@ -54,12 +54,12 @@ class ScanInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CallbackUrl",$param) and $param["CallbackUrl"] !== null) {
-            $this->CallbackUrl = $param["CallbackUrl"];
+        if (array_key_exists('CallbackUrl',$param) and $param['CallbackUrl'] !== null) {
+            $this->CallbackUrl = $param['CallbackUrl'];
         }
 
-        if (array_key_exists("ScanTypes",$param) and $param["ScanTypes"] !== null) {
-            $this->ScanTypes = $param["ScanTypes"];
+        if (array_key_exists('ScanTypes',$param) and $param['ScanTypes'] !== null) {
+            $this->ScanTypes = $param['ScanTypes'];
         }
     }
 }

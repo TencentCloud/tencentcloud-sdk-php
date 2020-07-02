@@ -54,12 +54,12 @@ class SetVocabStateRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("VocabId",$param) and $param["VocabId"] !== null) {
-            $this->VocabId = $param["VocabId"];
+        if (array_key_exists('VocabId',$param) and $param['VocabId'] !== null) {
+            $this->VocabId = $param['VocabId'];
         }
 
-        if (array_key_exists("State",$param) and $param["State"] !== null) {
-            $this->State = $param["State"];
+        if (array_key_exists('State',$param) and $param['State'] !== null) {
+            $this->State = $param['State'];
         }
     }
 }

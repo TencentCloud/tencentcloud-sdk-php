@@ -62,16 +62,16 @@ class DeleteSecretResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SecretName",$param) and $param["SecretName"] !== null) {
-            $this->SecretName = $param["SecretName"];
+        if (array_key_exists('SecretName',$param) and $param['SecretName'] !== null) {
+            $this->SecretName = $param['SecretName'];
         }
 
-        if (array_key_exists("DeleteTime",$param) and $param["DeleteTime"] !== null) {
-            $this->DeleteTime = $param["DeleteTime"];
+        if (array_key_exists('DeleteTime',$param) and $param['DeleteTime'] !== null) {
+            $this->DeleteTime = $param['DeleteTime'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

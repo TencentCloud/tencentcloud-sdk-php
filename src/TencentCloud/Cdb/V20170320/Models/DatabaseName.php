@@ -46,8 +46,8 @@ class DatabaseName extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DatabaseName",$param) and $param["DatabaseName"] !== null) {
-            $this->DatabaseName = $param["DatabaseName"];
+        if (array_key_exists('DatabaseName',$param) and $param['DatabaseName'] !== null) {
+            $this->DatabaseName = $param['DatabaseName'];
         }
     }
 }

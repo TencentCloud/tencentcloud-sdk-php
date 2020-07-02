@@ -78,23 +78,23 @@ class DescribeDBPerformanceDetailsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Master",$param) and $param["Master"] !== null) {
+        if (array_key_exists('Master',$param) and $param['Master'] !== null) {
             $this->Master = new PerformanceMonitorSet();
-            $this->Master->deserialize($param["Master"]);
+            $this->Master->deserialize($param['Master']);
         }
 
-        if (array_key_exists("Slave1",$param) and $param["Slave1"] !== null) {
+        if (array_key_exists('Slave1',$param) and $param['Slave1'] !== null) {
             $this->Slave1 = new PerformanceMonitorSet();
-            $this->Slave1->deserialize($param["Slave1"]);
+            $this->Slave1->deserialize($param['Slave1']);
         }
 
-        if (array_key_exists("Slave2",$param) and $param["Slave2"] !== null) {
+        if (array_key_exists('Slave2',$param) and $param['Slave2'] !== null) {
             $this->Slave2 = new PerformanceMonitorSet();
-            $this->Slave2->deserialize($param["Slave2"]);
+            $this->Slave2->deserialize($param['Slave2']);
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

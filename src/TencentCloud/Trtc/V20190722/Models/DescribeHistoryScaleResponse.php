@@ -66,21 +66,21 @@ class DescribeHistoryScaleResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Total",$param) and $param["Total"] !== null) {
-            $this->Total = $param["Total"];
+        if (array_key_exists('Total',$param) and $param['Total'] !== null) {
+            $this->Total = $param['Total'];
         }
 
-        if (array_key_exists("ScaleList",$param) and $param["ScaleList"] !== null) {
+        if (array_key_exists('ScaleList',$param) and $param['ScaleList'] !== null) {
             $this->ScaleList = [];
-            foreach ($param["ScaleList"] as $key => $value){
+            foreach ($param['ScaleList'] as $key => $value){
                 $obj = new ScaleInfomation();
                 $obj->deserialize($value);
                 array_push($this->ScaleList, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

@@ -54,12 +54,12 @@ class BindTrafficMirrorListenersRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TrafficMirrorId",$param) and $param["TrafficMirrorId"] !== null) {
-            $this->TrafficMirrorId = $param["TrafficMirrorId"];
+        if (array_key_exists('TrafficMirrorId',$param) and $param['TrafficMirrorId'] !== null) {
+            $this->TrafficMirrorId = $param['TrafficMirrorId'];
         }
 
-        if (array_key_exists("ListenerIds",$param) and $param["ListenerIds"] !== null) {
-            $this->ListenerIds = $param["ListenerIds"];
+        if (array_key_exists('ListenerIds',$param) and $param['ListenerIds'] !== null) {
+            $this->ListenerIds = $param['ListenerIds'];
         }
     }
 }

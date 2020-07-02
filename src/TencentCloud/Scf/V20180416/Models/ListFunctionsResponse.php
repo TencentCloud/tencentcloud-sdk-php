@@ -62,21 +62,21 @@ class ListFunctionsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Functions",$param) and $param["Functions"] !== null) {
+        if (array_key_exists('Functions',$param) and $param['Functions'] !== null) {
             $this->Functions = [];
-            foreach ($param["Functions"] as $key => $value){
+            foreach ($param['Functions'] as $key => $value){
                 $obj = new FunctionInfo();
                 $obj->deserialize($value);
                 array_push($this->Functions, $obj);
             }
         }
 
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

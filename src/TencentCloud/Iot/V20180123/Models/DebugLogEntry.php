@@ -102,36 +102,36 @@ class DebugLogEntry extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
-            $this->Id = $param["Id"];
+        if (array_key_exists('Id',$param) and $param['Id'] !== null) {
+            $this->Id = $param['Id'];
         }
 
-        if (array_key_exists("Event",$param) and $param["Event"] !== null) {
-            $this->Event = $param["Event"];
+        if (array_key_exists('Event',$param) and $param['Event'] !== null) {
+            $this->Event = $param['Event'];
         }
 
-        if (array_key_exists("LogType",$param) and $param["LogType"] !== null) {
-            $this->LogType = $param["LogType"];
+        if (array_key_exists('LogType',$param) and $param['LogType'] !== null) {
+            $this->LogType = $param['LogType'];
         }
 
-        if (array_key_exists("Timestamp",$param) and $param["Timestamp"] !== null) {
-            $this->Timestamp = $param["Timestamp"];
+        if (array_key_exists('Timestamp',$param) and $param['Timestamp'] !== null) {
+            $this->Timestamp = $param['Timestamp'];
         }
 
-        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
-            $this->Result = $param["Result"];
+        if (array_key_exists('Result',$param) and $param['Result'] !== null) {
+            $this->Result = $param['Result'];
         }
 
-        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
-            $this->Data = $param["Data"];
+        if (array_key_exists('Data',$param) and $param['Data'] !== null) {
+            $this->Data = $param['Data'];
         }
 
-        if (array_key_exists("Topic",$param) and $param["Topic"] !== null) {
-            $this->Topic = $param["Topic"];
+        if (array_key_exists('Topic',$param) and $param['Topic'] !== null) {
+            $this->Topic = $param['Topic'];
         }
 
-        if (array_key_exists("DeviceName",$param) and $param["DeviceName"] !== null) {
-            $this->DeviceName = $param["DeviceName"];
+        if (array_key_exists('DeviceName',$param) and $param['DeviceName'] !== null) {
+            $this->DeviceName = $param['DeviceName'];
         }
     }
 }

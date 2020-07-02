@@ -66,21 +66,21 @@ class DescribeExistedInstancesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ExistedInstanceSet",$param) and $param["ExistedInstanceSet"] !== null) {
+        if (array_key_exists('ExistedInstanceSet',$param) and $param['ExistedInstanceSet'] !== null) {
             $this->ExistedInstanceSet = [];
-            foreach ($param["ExistedInstanceSet"] as $key => $value){
+            foreach ($param['ExistedInstanceSet'] as $key => $value){
                 $obj = new ExistedInstance();
                 $obj->deserialize($value);
                 array_push($this->ExistedInstanceSet, $obj);
             }
         }
 
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

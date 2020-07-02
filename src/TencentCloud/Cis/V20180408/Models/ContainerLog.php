@@ -62,16 +62,16 @@ class ContainerLog extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("Log",$param) and $param["Log"] !== null) {
-            $this->Log = $param["Log"];
+        if (array_key_exists('Log',$param) and $param['Log'] !== null) {
+            $this->Log = $param['Log'];
         }
 
-        if (array_key_exists("Time",$param) and $param["Time"] !== null) {
-            $this->Time = $param["Time"];
+        if (array_key_exists('Time',$param) and $param['Time'] !== null) {
+            $this->Time = $param['Time'];
         }
     }
 }

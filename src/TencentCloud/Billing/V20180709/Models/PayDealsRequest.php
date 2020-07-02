@@ -70,20 +70,20 @@ class PayDealsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("OrderIds",$param) and $param["OrderIds"] !== null) {
-            $this->OrderIds = $param["OrderIds"];
+        if (array_key_exists('OrderIds',$param) and $param['OrderIds'] !== null) {
+            $this->OrderIds = $param['OrderIds'];
         }
 
-        if (array_key_exists("AutoVoucher",$param) and $param["AutoVoucher"] !== null) {
-            $this->AutoVoucher = $param["AutoVoucher"];
+        if (array_key_exists('AutoVoucher',$param) and $param['AutoVoucher'] !== null) {
+            $this->AutoVoucher = $param['AutoVoucher'];
         }
 
-        if (array_key_exists("VoucherIds",$param) and $param["VoucherIds"] !== null) {
-            $this->VoucherIds = $param["VoucherIds"];
+        if (array_key_exists('VoucherIds',$param) and $param['VoucherIds'] !== null) {
+            $this->VoucherIds = $param['VoucherIds'];
         }
 
-        if (array_key_exists("BigDealIds",$param) and $param["BigDealIds"] !== null) {
-            $this->BigDealIds = $param["BigDealIds"];
+        if (array_key_exists('BigDealIds',$param) and $param['BigDealIds'] !== null) {
+            $this->BigDealIds = $param['BigDealIds'];
         }
     }
 }

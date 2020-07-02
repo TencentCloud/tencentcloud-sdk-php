@@ -62,21 +62,21 @@ class ListAttachedRolePoliciesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("List",$param) and $param["List"] !== null) {
+        if (array_key_exists('List',$param) and $param['List'] !== null) {
             $this->List = [];
-            foreach ($param["List"] as $key => $value){
+            foreach ($param['List'] as $key => $value){
                 $obj = new AttachedPolicyOfRole();
                 $obj->deserialize($value);
                 array_push($this->List, $obj);
             }
         }
 
-        if (array_key_exists("TotalNum",$param) and $param["TotalNum"] !== null) {
-            $this->TotalNum = $param["TotalNum"];
+        if (array_key_exists('TotalNum',$param) and $param['TotalNum'] !== null) {
+            $this->TotalNum = $param['TotalNum'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

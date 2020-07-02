@@ -46,8 +46,8 @@ class ListClsLogTopicsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Channel",$param) and $param["Channel"] !== null) {
-            $this->Channel = $param["Channel"];
+        if (array_key_exists('Channel',$param) and $param['Channel'] !== null) {
+            $this->Channel = $param['Channel'];
         }
     }
 }

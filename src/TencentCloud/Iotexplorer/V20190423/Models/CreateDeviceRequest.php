@@ -94,32 +94,32 @@ class CreateDeviceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ProductId",$param) and $param["ProductId"] !== null) {
-            $this->ProductId = $param["ProductId"];
+        if (array_key_exists('ProductId',$param) and $param['ProductId'] !== null) {
+            $this->ProductId = $param['ProductId'];
         }
 
-        if (array_key_exists("DeviceName",$param) and $param["DeviceName"] !== null) {
-            $this->DeviceName = $param["DeviceName"];
+        if (array_key_exists('DeviceName',$param) and $param['DeviceName'] !== null) {
+            $this->DeviceName = $param['DeviceName'];
         }
 
-        if (array_key_exists("DevAddr",$param) and $param["DevAddr"] !== null) {
-            $this->DevAddr = $param["DevAddr"];
+        if (array_key_exists('DevAddr',$param) and $param['DevAddr'] !== null) {
+            $this->DevAddr = $param['DevAddr'];
         }
 
-        if (array_key_exists("AppKey",$param) and $param["AppKey"] !== null) {
-            $this->AppKey = $param["AppKey"];
+        if (array_key_exists('AppKey',$param) and $param['AppKey'] !== null) {
+            $this->AppKey = $param['AppKey'];
         }
 
-        if (array_key_exists("DevEUI",$param) and $param["DevEUI"] !== null) {
-            $this->DevEUI = $param["DevEUI"];
+        if (array_key_exists('DevEUI',$param) and $param['DevEUI'] !== null) {
+            $this->DevEUI = $param['DevEUI'];
         }
 
-        if (array_key_exists("AppSKey",$param) and $param["AppSKey"] !== null) {
-            $this->AppSKey = $param["AppSKey"];
+        if (array_key_exists('AppSKey',$param) and $param['AppSKey'] !== null) {
+            $this->AppSKey = $param['AppSKey'];
         }
 
-        if (array_key_exists("NwkSKey",$param) and $param["NwkSKey"] !== null) {
-            $this->NwkSKey = $param["NwkSKey"];
+        if (array_key_exists('NwkSKey',$param) and $param['NwkSKey'] !== null) {
+            $this->NwkSKey = $param['NwkSKey'];
         }
     }
 }

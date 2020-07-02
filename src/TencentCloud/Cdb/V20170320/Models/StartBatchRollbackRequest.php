@@ -46,9 +46,9 @@ class StartBatchRollbackRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Instances",$param) and $param["Instances"] !== null) {
+        if (array_key_exists('Instances',$param) and $param['Instances'] !== null) {
             $this->Instances = [];
-            foreach ($param["Instances"] as $key => $value){
+            foreach ($param['Instances'] as $key => $value){
                 $obj = new RollbackInstancesInfo();
                 $obj->deserialize($value);
                 array_push($this->Instances, $obj);

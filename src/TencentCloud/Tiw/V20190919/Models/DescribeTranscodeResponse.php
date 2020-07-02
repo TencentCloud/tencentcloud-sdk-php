@@ -162,48 +162,48 @@ class DescribeTranscodeResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Pages",$param) and $param["Pages"] !== null) {
-            $this->Pages = $param["Pages"];
+        if (array_key_exists('Pages',$param) and $param['Pages'] !== null) {
+            $this->Pages = $param['Pages'];
         }
 
-        if (array_key_exists("Progress",$param) and $param["Progress"] !== null) {
-            $this->Progress = $param["Progress"];
+        if (array_key_exists('Progress',$param) and $param['Progress'] !== null) {
+            $this->Progress = $param['Progress'];
         }
 
-        if (array_key_exists("Resolution",$param) and $param["Resolution"] !== null) {
-            $this->Resolution = $param["Resolution"];
+        if (array_key_exists('Resolution',$param) and $param['Resolution'] !== null) {
+            $this->Resolution = $param['Resolution'];
         }
 
-        if (array_key_exists("ResultUrl",$param) and $param["ResultUrl"] !== null) {
-            $this->ResultUrl = $param["ResultUrl"];
+        if (array_key_exists('ResultUrl',$param) and $param['ResultUrl'] !== null) {
+            $this->ResultUrl = $param['ResultUrl'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
-            $this->TaskId = $param["TaskId"];
+        if (array_key_exists('TaskId',$param) and $param['TaskId'] !== null) {
+            $this->TaskId = $param['TaskId'];
         }
 
-        if (array_key_exists("Title",$param) and $param["Title"] !== null) {
-            $this->Title = $param["Title"];
+        if (array_key_exists('Title',$param) and $param['Title'] !== null) {
+            $this->Title = $param['Title'];
         }
 
-        if (array_key_exists("ThumbnailUrl",$param) and $param["ThumbnailUrl"] !== null) {
-            $this->ThumbnailUrl = $param["ThumbnailUrl"];
+        if (array_key_exists('ThumbnailUrl',$param) and $param['ThumbnailUrl'] !== null) {
+            $this->ThumbnailUrl = $param['ThumbnailUrl'];
         }
 
-        if (array_key_exists("ThumbnailResolution",$param) and $param["ThumbnailResolution"] !== null) {
-            $this->ThumbnailResolution = $param["ThumbnailResolution"];
+        if (array_key_exists('ThumbnailResolution',$param) and $param['ThumbnailResolution'] !== null) {
+            $this->ThumbnailResolution = $param['ThumbnailResolution'];
         }
 
-        if (array_key_exists("CompressFileUrl",$param) and $param["CompressFileUrl"] !== null) {
-            $this->CompressFileUrl = $param["CompressFileUrl"];
+        if (array_key_exists('CompressFileUrl',$param) and $param['CompressFileUrl'] !== null) {
+            $this->CompressFileUrl = $param['CompressFileUrl'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

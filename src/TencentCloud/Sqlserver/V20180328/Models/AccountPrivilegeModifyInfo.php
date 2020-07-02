@@ -54,13 +54,13 @@ class AccountPrivilegeModifyInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("UserName",$param) and $param["UserName"] !== null) {
-            $this->UserName = $param["UserName"];
+        if (array_key_exists('UserName',$param) and $param['UserName'] !== null) {
+            $this->UserName = $param['UserName'];
         }
 
-        if (array_key_exists("DBPrivileges",$param) and $param["DBPrivileges"] !== null) {
+        if (array_key_exists('DBPrivileges',$param) and $param['DBPrivileges'] !== null) {
             $this->DBPrivileges = [];
-            foreach ($param["DBPrivileges"] as $key => $value){
+            foreach ($param['DBPrivileges'] as $key => $value){
                 $obj = new DBPrivilegeModifyInfo();
                 $obj->deserialize($value);
                 array_push($this->DBPrivileges, $obj);

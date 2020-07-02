@@ -62,16 +62,16 @@ class CreateLoadBalancerBzConf extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BzPayMode",$param) and $param["BzPayMode"] !== null) {
-            $this->BzPayMode = $param["BzPayMode"];
+        if (array_key_exists('BzPayMode',$param) and $param['BzPayMode'] !== null) {
+            $this->BzPayMode = $param['BzPayMode'];
         }
 
-        if (array_key_exists("BzL4Metrics",$param) and $param["BzL4Metrics"] !== null) {
-            $this->BzL4Metrics = $param["BzL4Metrics"];
+        if (array_key_exists('BzL4Metrics',$param) and $param['BzL4Metrics'] !== null) {
+            $this->BzL4Metrics = $param['BzL4Metrics'];
         }
 
-        if (array_key_exists("BzL7Metrics",$param) and $param["BzL7Metrics"] !== null) {
-            $this->BzL7Metrics = $param["BzL7Metrics"];
+        if (array_key_exists('BzL7Metrics',$param) and $param['BzL7Metrics'] !== null) {
+            $this->BzL7Metrics = $param['BzL7Metrics'];
         }
     }
 }

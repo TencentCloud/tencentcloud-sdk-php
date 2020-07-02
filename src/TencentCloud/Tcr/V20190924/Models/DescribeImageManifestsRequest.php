@@ -70,20 +70,20 @@ class DescribeImageManifestsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RegistryId",$param) and $param["RegistryId"] !== null) {
-            $this->RegistryId = $param["RegistryId"];
+        if (array_key_exists('RegistryId',$param) and $param['RegistryId'] !== null) {
+            $this->RegistryId = $param['RegistryId'];
         }
 
-        if (array_key_exists("NamespaceName",$param) and $param["NamespaceName"] !== null) {
-            $this->NamespaceName = $param["NamespaceName"];
+        if (array_key_exists('NamespaceName',$param) and $param['NamespaceName'] !== null) {
+            $this->NamespaceName = $param['NamespaceName'];
         }
 
-        if (array_key_exists("RepositoryName",$param) and $param["RepositoryName"] !== null) {
-            $this->RepositoryName = $param["RepositoryName"];
+        if (array_key_exists('RepositoryName',$param) and $param['RepositoryName'] !== null) {
+            $this->RepositoryName = $param['RepositoryName'];
         }
 
-        if (array_key_exists("ImageVersion",$param) and $param["ImageVersion"] !== null) {
-            $this->ImageVersion = $param["ImageVersion"];
+        if (array_key_exists('ImageVersion',$param) and $param['ImageVersion'] !== null) {
+            $this->ImageVersion = $param['ImageVersion'];
         }
     }
 }

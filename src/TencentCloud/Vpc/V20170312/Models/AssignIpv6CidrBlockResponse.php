@@ -54,12 +54,12 @@ class AssignIpv6CidrBlockResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Ipv6CidrBlock",$param) and $param["Ipv6CidrBlock"] !== null) {
-            $this->Ipv6CidrBlock = $param["Ipv6CidrBlock"];
+        if (array_key_exists('Ipv6CidrBlock',$param) and $param['Ipv6CidrBlock'] !== null) {
+            $this->Ipv6CidrBlock = $param['Ipv6CidrBlock'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

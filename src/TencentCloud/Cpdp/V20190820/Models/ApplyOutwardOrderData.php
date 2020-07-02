@@ -62,16 +62,16 @@ class ApplyOutwardOrderData extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MerchantId",$param) and $param["MerchantId"] !== null) {
-            $this->MerchantId = $param["MerchantId"];
+        if (array_key_exists('MerchantId',$param) and $param['MerchantId'] !== null) {
+            $this->MerchantId = $param['MerchantId'];
         }
 
-        if (array_key_exists("TransactionId",$param) and $param["TransactionId"] !== null) {
-            $this->TransactionId = $param["TransactionId"];
+        if (array_key_exists('TransactionId',$param) and $param['TransactionId'] !== null) {
+            $this->TransactionId = $param['TransactionId'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
     }
 }

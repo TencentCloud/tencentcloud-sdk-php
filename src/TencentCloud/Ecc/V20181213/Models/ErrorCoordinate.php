@@ -46,8 +46,8 @@ class ErrorCoordinate extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Coordinate",$param) and $param["Coordinate"] !== null) {
-            $this->Coordinate = $param["Coordinate"];
+        if (array_key_exists('Coordinate',$param) and $param['Coordinate'] !== null) {
+            $this->Coordinate = $param['Coordinate'];
         }
     }
 }

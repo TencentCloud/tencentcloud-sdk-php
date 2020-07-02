@@ -62,16 +62,16 @@ class DomainLogs extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
-            $this->StartTime = $param["StartTime"];
+        if (array_key_exists('StartTime',$param) and $param['StartTime'] !== null) {
+            $this->StartTime = $param['StartTime'];
         }
 
-        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
-            $this->EndTime = $param["EndTime"];
+        if (array_key_exists('EndTime',$param) and $param['EndTime'] !== null) {
+            $this->EndTime = $param['EndTime'];
         }
 
-        if (array_key_exists("LogPath",$param) and $param["LogPath"] !== null) {
-            $this->LogPath = $param["LogPath"];
+        if (array_key_exists('LogPath',$param) and $param['LogPath'] !== null) {
+            $this->LogPath = $param['LogPath'];
         }
     }
 }

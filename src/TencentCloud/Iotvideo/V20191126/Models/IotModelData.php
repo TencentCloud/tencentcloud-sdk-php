@@ -54,12 +54,12 @@ class IotModelData extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Revision",$param) and $param["Revision"] !== null) {
-            $this->Revision = $param["Revision"];
+        if (array_key_exists('Revision',$param) and $param['Revision'] !== null) {
+            $this->Revision = $param['Revision'];
         }
 
-        if (array_key_exists("ReleaseTime",$param) and $param["ReleaseTime"] !== null) {
-            $this->ReleaseTime = $param["ReleaseTime"];
+        if (array_key_exists('ReleaseTime',$param) and $param['ReleaseTime'] !== null) {
+            $this->ReleaseTime = $param['ReleaseTime'];
         }
     }
 }

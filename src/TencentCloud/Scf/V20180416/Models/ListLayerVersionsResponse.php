@@ -54,17 +54,17 @@ class ListLayerVersionsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LayerVersions",$param) and $param["LayerVersions"] !== null) {
+        if (array_key_exists('LayerVersions',$param) and $param['LayerVersions'] !== null) {
             $this->LayerVersions = [];
-            foreach ($param["LayerVersions"] as $key => $value){
+            foreach ($param['LayerVersions'] as $key => $value){
                 $obj = new LayerVersionInfo();
                 $obj->deserialize($value);
                 array_push($this->LayerVersions, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

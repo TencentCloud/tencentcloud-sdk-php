@@ -78,24 +78,24 @@ class WaterPrintPolicy extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TcpPortList",$param) and $param["TcpPortList"] !== null) {
-            $this->TcpPortList = $param["TcpPortList"];
+        if (array_key_exists('TcpPortList',$param) and $param['TcpPortList'] !== null) {
+            $this->TcpPortList = $param['TcpPortList'];
         }
 
-        if (array_key_exists("UdpPortList",$param) and $param["UdpPortList"] !== null) {
-            $this->UdpPortList = $param["UdpPortList"];
+        if (array_key_exists('UdpPortList',$param) and $param['UdpPortList'] !== null) {
+            $this->UdpPortList = $param['UdpPortList'];
         }
 
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
+        if (array_key_exists('Offset',$param) and $param['Offset'] !== null) {
+            $this->Offset = $param['Offset'];
         }
 
-        if (array_key_exists("RemoveSwitch",$param) and $param["RemoveSwitch"] !== null) {
-            $this->RemoveSwitch = $param["RemoveSwitch"];
+        if (array_key_exists('RemoveSwitch',$param) and $param['RemoveSwitch'] !== null) {
+            $this->RemoveSwitch = $param['RemoveSwitch'];
         }
 
-        if (array_key_exists("OpenStatus",$param) and $param["OpenStatus"] !== null) {
-            $this->OpenStatus = $param["OpenStatus"];
+        if (array_key_exists('OpenStatus',$param) and $param['OpenStatus'] !== null) {
+            $this->OpenStatus = $param['OpenStatus'];
         }
     }
 }

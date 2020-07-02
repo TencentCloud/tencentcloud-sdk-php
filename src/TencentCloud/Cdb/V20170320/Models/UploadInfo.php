@@ -54,12 +54,12 @@ class UploadInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AllSliceNum",$param) and $param["AllSliceNum"] !== null) {
-            $this->AllSliceNum = $param["AllSliceNum"];
+        if (array_key_exists('AllSliceNum',$param) and $param['AllSliceNum'] !== null) {
+            $this->AllSliceNum = $param['AllSliceNum'];
         }
 
-        if (array_key_exists("CompleteNum",$param) and $param["CompleteNum"] !== null) {
-            $this->CompleteNum = $param["CompleteNum"];
+        if (array_key_exists('CompleteNum',$param) and $param['CompleteNum'] !== null) {
+            $this->CompleteNum = $param['CompleteNum'];
         }
     }
 }

@@ -150,61 +150,61 @@ class CreateServiceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Scaler",$param) and $param["Scaler"] !== null) {
+        if (array_key_exists('Scaler',$param) and $param['Scaler'] !== null) {
             $this->Scaler = new Scaler();
-            $this->Scaler->deserialize($param["Scaler"]);
+            $this->Scaler->deserialize($param['Scaler']);
         }
 
-        if (array_key_exists("ServiceConfigId",$param) and $param["ServiceConfigId"] !== null) {
-            $this->ServiceConfigId = $param["ServiceConfigId"];
+        if (array_key_exists('ServiceConfigId',$param) and $param['ServiceConfigId'] !== null) {
+            $this->ServiceConfigId = $param['ServiceConfigId'];
         }
 
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("ScaleMode",$param) and $param["ScaleMode"] !== null) {
-            $this->ScaleMode = $param["ScaleMode"];
+        if (array_key_exists('ScaleMode',$param) and $param['ScaleMode'] !== null) {
+            $this->ScaleMode = $param['ScaleMode'];
         }
 
-        if (array_key_exists("ResourceGroupId",$param) and $param["ResourceGroupId"] !== null) {
-            $this->ResourceGroupId = $param["ResourceGroupId"];
+        if (array_key_exists('ResourceGroupId',$param) and $param['ResourceGroupId'] !== null) {
+            $this->ResourceGroupId = $param['ResourceGroupId'];
         }
 
-        if (array_key_exists("Cpu",$param) and $param["Cpu"] !== null) {
-            $this->Cpu = $param["Cpu"];
+        if (array_key_exists('Cpu',$param) and $param['Cpu'] !== null) {
+            $this->Cpu = $param['Cpu'];
         }
 
-        if (array_key_exists("Memory",$param) and $param["Memory"] !== null) {
-            $this->Memory = $param["Memory"];
+        if (array_key_exists('Memory',$param) and $param['Memory'] !== null) {
+            $this->Memory = $param['Memory'];
         }
 
-        if (array_key_exists("Cluster",$param) and $param["Cluster"] !== null) {
-            $this->Cluster = $param["Cluster"];
+        if (array_key_exists('Cluster',$param) and $param['Cluster'] !== null) {
+            $this->Cluster = $param['Cluster'];
         }
 
-        if (array_key_exists("Authentication",$param) and $param["Authentication"] !== null) {
-            $this->Authentication = $param["Authentication"];
+        if (array_key_exists('Authentication',$param) and $param['Authentication'] !== null) {
+            $this->Authentication = $param['Authentication'];
         }
 
-        if (array_key_exists("Gpu",$param) and $param["Gpu"] !== null) {
-            $this->Gpu = $param["Gpu"];
+        if (array_key_exists('Gpu',$param) and $param['Gpu'] !== null) {
+            $this->Gpu = $param['Gpu'];
         }
 
-        if (array_key_exists("GpuMemory",$param) and $param["GpuMemory"] !== null) {
-            $this->GpuMemory = $param["GpuMemory"];
+        if (array_key_exists('GpuMemory',$param) and $param['GpuMemory'] !== null) {
+            $this->GpuMemory = $param['GpuMemory'];
         }
 
-        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
-            $this->Description = $param["Description"];
+        if (array_key_exists('Description',$param) and $param['Description'] !== null) {
+            $this->Description = $param['Description'];
         }
 
-        if (array_key_exists("GpuType",$param) and $param["GpuType"] !== null) {
-            $this->GpuType = $param["GpuType"];
+        if (array_key_exists('GpuType',$param) and $param['GpuType'] !== null) {
+            $this->GpuType = $param['GpuType'];
         }
 
-        if (array_key_exists("LogTopicId",$param) and $param["LogTopicId"] !== null) {
-            $this->LogTopicId = $param["LogTopicId"];
+        if (array_key_exists('LogTopicId',$param) and $param['LogTopicId'] !== null) {
+            $this->LogTopicId = $param['LogTopicId'];
         }
     }
 }

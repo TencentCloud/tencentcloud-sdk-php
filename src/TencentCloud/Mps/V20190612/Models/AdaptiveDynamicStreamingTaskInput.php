@@ -90,34 +90,34 @@ class AdaptiveDynamicStreamingTaskInput extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Definition",$param) and $param["Definition"] !== null) {
-            $this->Definition = $param["Definition"];
+        if (array_key_exists('Definition',$param) and $param['Definition'] !== null) {
+            $this->Definition = $param['Definition'];
         }
 
-        if (array_key_exists("WatermarkSet",$param) and $param["WatermarkSet"] !== null) {
+        if (array_key_exists('WatermarkSet',$param) and $param['WatermarkSet'] !== null) {
             $this->WatermarkSet = [];
-            foreach ($param["WatermarkSet"] as $key => $value){
+            foreach ($param['WatermarkSet'] as $key => $value){
                 $obj = new WatermarkInput();
                 $obj->deserialize($value);
                 array_push($this->WatermarkSet, $obj);
             }
         }
 
-        if (array_key_exists("OutputStorage",$param) and $param["OutputStorage"] !== null) {
+        if (array_key_exists('OutputStorage',$param) and $param['OutputStorage'] !== null) {
             $this->OutputStorage = new TaskOutputStorage();
-            $this->OutputStorage->deserialize($param["OutputStorage"]);
+            $this->OutputStorage->deserialize($param['OutputStorage']);
         }
 
-        if (array_key_exists("OutputObjectPath",$param) and $param["OutputObjectPath"] !== null) {
-            $this->OutputObjectPath = $param["OutputObjectPath"];
+        if (array_key_exists('OutputObjectPath',$param) and $param['OutputObjectPath'] !== null) {
+            $this->OutputObjectPath = $param['OutputObjectPath'];
         }
 
-        if (array_key_exists("SubStreamObjectName",$param) and $param["SubStreamObjectName"] !== null) {
-            $this->SubStreamObjectName = $param["SubStreamObjectName"];
+        if (array_key_exists('SubStreamObjectName',$param) and $param['SubStreamObjectName'] !== null) {
+            $this->SubStreamObjectName = $param['SubStreamObjectName'];
         }
 
-        if (array_key_exists("SegmentObjectName",$param) and $param["SegmentObjectName"] !== null) {
-            $this->SegmentObjectName = $param["SegmentObjectName"];
+        if (array_key_exists('SegmentObjectName',$param) and $param['SegmentObjectName'] !== null) {
+            $this->SegmentObjectName = $param['SegmentObjectName'];
         }
     }
 }

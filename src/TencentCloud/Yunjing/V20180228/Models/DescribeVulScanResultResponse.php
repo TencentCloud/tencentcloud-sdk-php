@@ -86,28 +86,28 @@ class DescribeVulScanResultResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("VulNum",$param) and $param["VulNum"] !== null) {
-            $this->VulNum = $param["VulNum"];
+        if (array_key_exists('VulNum',$param) and $param['VulNum'] !== null) {
+            $this->VulNum = $param['VulNum'];
         }
 
-        if (array_key_exists("ProVersionNum",$param) and $param["ProVersionNum"] !== null) {
-            $this->ProVersionNum = $param["ProVersionNum"];
+        if (array_key_exists('ProVersionNum',$param) and $param['ProVersionNum'] !== null) {
+            $this->ProVersionNum = $param['ProVersionNum'];
         }
 
-        if (array_key_exists("ImpactedHostNum",$param) and $param["ImpactedHostNum"] !== null) {
-            $this->ImpactedHostNum = $param["ImpactedHostNum"];
+        if (array_key_exists('ImpactedHostNum',$param) and $param['ImpactedHostNum'] !== null) {
+            $this->ImpactedHostNum = $param['ImpactedHostNum'];
         }
 
-        if (array_key_exists("HostNum",$param) and $param["HostNum"] !== null) {
-            $this->HostNum = $param["HostNum"];
+        if (array_key_exists('HostNum',$param) and $param['HostNum'] !== null) {
+            $this->HostNum = $param['HostNum'];
         }
 
-        if (array_key_exists("BasicVersionNum",$param) and $param["BasicVersionNum"] !== null) {
-            $this->BasicVersionNum = $param["BasicVersionNum"];
+        if (array_key_exists('BasicVersionNum',$param) and $param['BasicVersionNum'] !== null) {
+            $this->BasicVersionNum = $param['BasicVersionNum'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

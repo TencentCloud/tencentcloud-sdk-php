@@ -46,8 +46,8 @@ class DeleteBandwidthPackageRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BandwidthPackageId",$param) and $param["BandwidthPackageId"] !== null) {
-            $this->BandwidthPackageId = $param["BandwidthPackageId"];
+        if (array_key_exists('BandwidthPackageId',$param) and $param['BandwidthPackageId'] !== null) {
+            $this->BandwidthPackageId = $param['BandwidthPackageId'];
         }
     }
 }

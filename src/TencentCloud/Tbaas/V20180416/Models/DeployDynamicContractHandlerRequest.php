@@ -94,32 +94,32 @@ class DeployDynamicContractHandlerRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Module",$param) and $param["Module"] !== null) {
-            $this->Module = $param["Module"];
+        if (array_key_exists('Module',$param) and $param['Module'] !== null) {
+            $this->Module = $param['Module'];
         }
 
-        if (array_key_exists("Operation",$param) and $param["Operation"] !== null) {
-            $this->Operation = $param["Operation"];
+        if (array_key_exists('Operation',$param) and $param['Operation'] !== null) {
+            $this->Operation = $param['Operation'];
         }
 
-        if (array_key_exists("GroupPk",$param) and $param["GroupPk"] !== null) {
-            $this->GroupPk = $param["GroupPk"];
+        if (array_key_exists('GroupPk',$param) and $param['GroupPk'] !== null) {
+            $this->GroupPk = $param['GroupPk'];
         }
 
-        if (array_key_exists("ContractName",$param) and $param["ContractName"] !== null) {
-            $this->ContractName = $param["ContractName"];
+        if (array_key_exists('ContractName',$param) and $param['ContractName'] !== null) {
+            $this->ContractName = $param['ContractName'];
         }
 
-        if (array_key_exists("AbiInfo",$param) and $param["AbiInfo"] !== null) {
-            $this->AbiInfo = $param["AbiInfo"];
+        if (array_key_exists('AbiInfo',$param) and $param['AbiInfo'] !== null) {
+            $this->AbiInfo = $param['AbiInfo'];
         }
 
-        if (array_key_exists("ByteCodeBin",$param) and $param["ByteCodeBin"] !== null) {
-            $this->ByteCodeBin = $param["ByteCodeBin"];
+        if (array_key_exists('ByteCodeBin',$param) and $param['ByteCodeBin'] !== null) {
+            $this->ByteCodeBin = $param['ByteCodeBin'];
         }
 
-        if (array_key_exists("ConstructorParams",$param) and $param["ConstructorParams"] !== null) {
-            $this->ConstructorParams = $param["ConstructorParams"];
+        if (array_key_exists('ConstructorParams',$param) and $param['ConstructorParams'] !== null) {
+            $this->ConstructorParams = $param['ConstructorParams'];
         }
     }
 }

@@ -54,17 +54,17 @@ class InsuranceBillOCRResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InsuranceBillInfos",$param) and $param["InsuranceBillInfos"] !== null) {
+        if (array_key_exists('InsuranceBillInfos',$param) and $param['InsuranceBillInfos'] !== null) {
             $this->InsuranceBillInfos = [];
-            foreach ($param["InsuranceBillInfos"] as $key => $value){
+            foreach ($param['InsuranceBillInfos'] as $key => $value){
                 $obj = new InsuranceBillInfo();
                 $obj->deserialize($value);
                 array_push($this->InsuranceBillInfos, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

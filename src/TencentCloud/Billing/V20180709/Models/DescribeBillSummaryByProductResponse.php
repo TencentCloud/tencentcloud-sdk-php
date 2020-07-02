@@ -78,26 +78,26 @@ class DescribeBillSummaryByProductResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Ready",$param) and $param["Ready"] !== null) {
-            $this->Ready = $param["Ready"];
+        if (array_key_exists('Ready',$param) and $param['Ready'] !== null) {
+            $this->Ready = $param['Ready'];
         }
 
-        if (array_key_exists("SummaryTotal",$param) and $param["SummaryTotal"] !== null) {
+        if (array_key_exists('SummaryTotal',$param) and $param['SummaryTotal'] !== null) {
             $this->SummaryTotal = new BusinessSummaryTotal();
-            $this->SummaryTotal->deserialize($param["SummaryTotal"]);
+            $this->SummaryTotal->deserialize($param['SummaryTotal']);
         }
 
-        if (array_key_exists("SummaryOverview",$param) and $param["SummaryOverview"] !== null) {
+        if (array_key_exists('SummaryOverview',$param) and $param['SummaryOverview'] !== null) {
             $this->SummaryOverview = [];
-            foreach ($param["SummaryOverview"] as $key => $value){
+            foreach ($param['SummaryOverview'] as $key => $value){
                 $obj = new BusinessSummaryOverviewItem();
                 $obj->deserialize($value);
                 array_push($this->SummaryOverview, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

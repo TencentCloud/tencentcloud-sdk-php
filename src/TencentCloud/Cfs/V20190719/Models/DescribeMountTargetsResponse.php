@@ -62,21 +62,21 @@ class DescribeMountTargetsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MountTargets",$param) and $param["MountTargets"] !== null) {
+        if (array_key_exists('MountTargets',$param) and $param['MountTargets'] !== null) {
             $this->MountTargets = [];
-            foreach ($param["MountTargets"] as $key => $value){
+            foreach ($param['MountTargets'] as $key => $value){
                 $obj = new MountInfo();
                 $obj->deserialize($value);
                 array_push($this->MountTargets, $obj);
             }
         }
 
-        if (array_key_exists("NumberOfMountTargets",$param) and $param["NumberOfMountTargets"] !== null) {
-            $this->NumberOfMountTargets = $param["NumberOfMountTargets"];
+        if (array_key_exists('NumberOfMountTargets',$param) and $param['NumberOfMountTargets'] !== null) {
+            $this->NumberOfMountTargets = $param['NumberOfMountTargets'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

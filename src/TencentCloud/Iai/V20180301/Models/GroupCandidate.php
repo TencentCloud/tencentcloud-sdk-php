@@ -54,13 +54,13 @@ class GroupCandidate extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
-            $this->GroupId = $param["GroupId"];
+        if (array_key_exists('GroupId',$param) and $param['GroupId'] !== null) {
+            $this->GroupId = $param['GroupId'];
         }
 
-        if (array_key_exists("Candidates",$param) and $param["Candidates"] !== null) {
+        if (array_key_exists('Candidates',$param) and $param['Candidates'] !== null) {
             $this->Candidates = [];
-            foreach ($param["Candidates"] as $key => $value){
+            foreach ($param['Candidates'] as $key => $value){
                 $obj = new Candidate();
                 $obj->deserialize($value);
                 array_push($this->Candidates, $obj);

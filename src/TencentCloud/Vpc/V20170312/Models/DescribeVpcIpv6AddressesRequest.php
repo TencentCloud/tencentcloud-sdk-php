@@ -70,20 +70,20 @@ class DescribeVpcIpv6AddressesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
-            $this->VpcId = $param["VpcId"];
+        if (array_key_exists('VpcId',$param) and $param['VpcId'] !== null) {
+            $this->VpcId = $param['VpcId'];
         }
 
-        if (array_key_exists("Ipv6Addresses",$param) and $param["Ipv6Addresses"] !== null) {
-            $this->Ipv6Addresses = $param["Ipv6Addresses"];
+        if (array_key_exists('Ipv6Addresses',$param) and $param['Ipv6Addresses'] !== null) {
+            $this->Ipv6Addresses = $param['Ipv6Addresses'];
         }
 
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
+        if (array_key_exists('Offset',$param) and $param['Offset'] !== null) {
+            $this->Offset = $param['Offset'];
         }
 
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
+        if (array_key_exists('Limit',$param) and $param['Limit'] !== null) {
+            $this->Limit = $param['Limit'];
         }
     }
 }

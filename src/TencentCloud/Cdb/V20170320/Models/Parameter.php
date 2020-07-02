@@ -54,12 +54,12 @@ class Parameter extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("CurrentValue",$param) and $param["CurrentValue"] !== null) {
-            $this->CurrentValue = $param["CurrentValue"];
+        if (array_key_exists('CurrentValue',$param) and $param['CurrentValue'] !== null) {
+            $this->CurrentValue = $param['CurrentValue'];
         }
     }
 }

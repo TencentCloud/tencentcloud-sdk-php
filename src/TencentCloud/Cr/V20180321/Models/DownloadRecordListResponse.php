@@ -54,12 +54,12 @@ class DownloadRecordListResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RecordListUrl",$param) and $param["RecordListUrl"] !== null) {
-            $this->RecordListUrl = $param["RecordListUrl"];
+        if (array_key_exists('RecordListUrl',$param) and $param['RecordListUrl'] !== null) {
+            $this->RecordListUrl = $param['RecordListUrl'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

@@ -70,20 +70,20 @@ class OpeningEndingTaskResultItem extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("OpeningTimeOffset",$param) and $param["OpeningTimeOffset"] !== null) {
-            $this->OpeningTimeOffset = $param["OpeningTimeOffset"];
+        if (array_key_exists('OpeningTimeOffset',$param) and $param['OpeningTimeOffset'] !== null) {
+            $this->OpeningTimeOffset = $param['OpeningTimeOffset'];
         }
 
-        if (array_key_exists("OpeningConfidence",$param) and $param["OpeningConfidence"] !== null) {
-            $this->OpeningConfidence = $param["OpeningConfidence"];
+        if (array_key_exists('OpeningConfidence',$param) and $param['OpeningConfidence'] !== null) {
+            $this->OpeningConfidence = $param['OpeningConfidence'];
         }
 
-        if (array_key_exists("EndingTimeOffset",$param) and $param["EndingTimeOffset"] !== null) {
-            $this->EndingTimeOffset = $param["EndingTimeOffset"];
+        if (array_key_exists('EndingTimeOffset',$param) and $param['EndingTimeOffset'] !== null) {
+            $this->EndingTimeOffset = $param['EndingTimeOffset'];
         }
 
-        if (array_key_exists("EndingConfidence",$param) and $param["EndingConfidence"] !== null) {
-            $this->EndingConfidence = $param["EndingConfidence"];
+        if (array_key_exists('EndingConfidence',$param) and $param['EndingConfidence'] !== null) {
+            $this->EndingConfidence = $param['EndingConfidence'];
         }
     }
 }

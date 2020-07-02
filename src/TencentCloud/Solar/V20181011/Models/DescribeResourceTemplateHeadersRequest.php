@@ -46,8 +46,8 @@ class DescribeResourceTemplateHeadersRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("WxAppId",$param) and $param["WxAppId"] !== null) {
-            $this->WxAppId = $param["WxAppId"];
+        if (array_key_exists('WxAppId',$param) and $param['WxAppId'] !== null) {
+            $this->WxAppId = $param['WxAppId'];
         }
     }
 }

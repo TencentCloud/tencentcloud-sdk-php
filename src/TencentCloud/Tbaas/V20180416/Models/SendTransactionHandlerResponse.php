@@ -54,12 +54,12 @@ class SendTransactionHandlerResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TransactionRsp",$param) and $param["TransactionRsp"] !== null) {
-            $this->TransactionRsp = $param["TransactionRsp"];
+        if (array_key_exists('TransactionRsp',$param) and $param['TransactionRsp'] !== null) {
+            $this->TransactionRsp = $param['TransactionRsp'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

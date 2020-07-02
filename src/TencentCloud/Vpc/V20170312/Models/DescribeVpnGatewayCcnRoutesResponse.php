@@ -62,21 +62,21 @@ class DescribeVpnGatewayCcnRoutesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RouteSet",$param) and $param["RouteSet"] !== null) {
+        if (array_key_exists('RouteSet',$param) and $param['RouteSet'] !== null) {
             $this->RouteSet = [];
-            foreach ($param["RouteSet"] as $key => $value){
+            foreach ($param['RouteSet'] as $key => $value){
                 $obj = new VpngwCcnRoutes();
                 $obj->deserialize($value);
                 array_push($this->RouteSet, $obj);
             }
         }
 
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

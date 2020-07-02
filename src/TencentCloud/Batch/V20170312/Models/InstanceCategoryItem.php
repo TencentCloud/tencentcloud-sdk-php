@@ -54,12 +54,12 @@ class InstanceCategoryItem extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceCategory",$param) and $param["InstanceCategory"] !== null) {
-            $this->InstanceCategory = $param["InstanceCategory"];
+        if (array_key_exists('InstanceCategory',$param) and $param['InstanceCategory'] !== null) {
+            $this->InstanceCategory = $param['InstanceCategory'];
         }
 
-        if (array_key_exists("InstanceFamilySet",$param) and $param["InstanceFamilySet"] !== null) {
-            $this->InstanceFamilySet = $param["InstanceFamilySet"];
+        if (array_key_exists('InstanceFamilySet',$param) and $param['InstanceFamilySet'] !== null) {
+            $this->InstanceFamilySet = $param['InstanceFamilySet'];
         }
     }
 }

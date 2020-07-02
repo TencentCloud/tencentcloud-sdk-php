@@ -62,21 +62,21 @@ class DescribeKeyPairsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("KeyPairSet",$param) and $param["KeyPairSet"] !== null) {
+        if (array_key_exists('KeyPairSet',$param) and $param['KeyPairSet'] !== null) {
             $this->KeyPairSet = [];
-            foreach ($param["KeyPairSet"] as $key => $value){
+            foreach ($param['KeyPairSet'] as $key => $value){
                 $obj = new KeyPair();
                 $obj->deserialize($value);
                 array_push($this->KeyPairSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

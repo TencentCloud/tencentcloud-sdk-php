@@ -62,16 +62,16 @@ class DescribeCaptchaOperDataRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CaptchaAppId",$param) and $param["CaptchaAppId"] !== null) {
-            $this->CaptchaAppId = $param["CaptchaAppId"];
+        if (array_key_exists('CaptchaAppId',$param) and $param['CaptchaAppId'] !== null) {
+            $this->CaptchaAppId = $param['CaptchaAppId'];
         }
 
-        if (array_key_exists("Start",$param) and $param["Start"] !== null) {
-            $this->Start = $param["Start"];
+        if (array_key_exists('Start',$param) and $param['Start'] !== null) {
+            $this->Start = $param['Start'];
         }
 
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists('Type',$param) and $param['Type'] !== null) {
+            $this->Type = $param['Type'];
         }
     }
 }

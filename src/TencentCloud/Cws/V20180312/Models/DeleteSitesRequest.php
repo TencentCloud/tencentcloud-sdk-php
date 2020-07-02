@@ -46,8 +46,8 @@ class DeleteSitesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SiteIds",$param) and $param["SiteIds"] !== null) {
-            $this->SiteIds = $param["SiteIds"];
+        if (array_key_exists('SiteIds',$param) and $param['SiteIds'] !== null) {
+            $this->SiteIds = $param['SiteIds'];
         }
     }
 }

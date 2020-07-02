@@ -62,17 +62,17 @@ class CreateL7RulesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LoadBalancerId",$param) and $param["LoadBalancerId"] !== null) {
-            $this->LoadBalancerId = $param["LoadBalancerId"];
+        if (array_key_exists('LoadBalancerId',$param) and $param['LoadBalancerId'] !== null) {
+            $this->LoadBalancerId = $param['LoadBalancerId'];
         }
 
-        if (array_key_exists("ListenerId",$param) and $param["ListenerId"] !== null) {
-            $this->ListenerId = $param["ListenerId"];
+        if (array_key_exists('ListenerId',$param) and $param['ListenerId'] !== null) {
+            $this->ListenerId = $param['ListenerId'];
         }
 
-        if (array_key_exists("RuleSet",$param) and $param["RuleSet"] !== null) {
+        if (array_key_exists('RuleSet',$param) and $param['RuleSet'] !== null) {
             $this->RuleSet = [];
-            foreach ($param["RuleSet"] as $key => $value){
+            foreach ($param['RuleSet'] as $key => $value){
                 $obj = new CreateL7Rule();
                 $obj->deserialize($value);
                 array_push($this->RuleSet, $obj);

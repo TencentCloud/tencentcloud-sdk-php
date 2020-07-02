@@ -98,24 +98,24 @@ class SubscribeRegionConf extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RegionName",$param) and $param["RegionName"] !== null) {
-            $this->RegionName = $param["RegionName"];
+        if (array_key_exists('RegionName',$param) and $param['RegionName'] !== null) {
+            $this->RegionName = $param['RegionName'];
         }
 
-        if (array_key_exists("Region",$param) and $param["Region"] !== null) {
-            $this->Region = $param["Region"];
+        if (array_key_exists('Region',$param) and $param['Region'] !== null) {
+            $this->Region = $param['Region'];
         }
 
-        if (array_key_exists("Area",$param) and $param["Area"] !== null) {
-            $this->Area = $param["Area"];
+        if (array_key_exists('Area',$param) and $param['Area'] !== null) {
+            $this->Area = $param['Area'];
         }
 
-        if (array_key_exists("IsDefaultRegion",$param) and $param["IsDefaultRegion"] !== null) {
-            $this->IsDefaultRegion = $param["IsDefaultRegion"];
+        if (array_key_exists('IsDefaultRegion',$param) and $param['IsDefaultRegion'] !== null) {
+            $this->IsDefaultRegion = $param['IsDefaultRegion'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
     }
 }

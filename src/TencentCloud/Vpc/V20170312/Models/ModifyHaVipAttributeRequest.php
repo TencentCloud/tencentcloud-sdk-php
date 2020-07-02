@@ -54,12 +54,12 @@ class ModifyHaVipAttributeRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("HaVipId",$param) and $param["HaVipId"] !== null) {
-            $this->HaVipId = $param["HaVipId"];
+        if (array_key_exists('HaVipId',$param) and $param['HaVipId'] !== null) {
+            $this->HaVipId = $param['HaVipId'];
         }
 
-        if (array_key_exists("HaVipName",$param) and $param["HaVipName"] !== null) {
-            $this->HaVipName = $param["HaVipName"];
+        if (array_key_exists('HaVipName',$param) and $param['HaVipName'] !== null) {
+            $this->HaVipName = $param['HaVipName'];
         }
     }
 }

@@ -46,8 +46,8 @@ class DescribeAccessRegionsByDestRegionRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DestRegion",$param) and $param["DestRegion"] !== null) {
-            $this->DestRegion = $param["DestRegion"];
+        if (array_key_exists('DestRegion',$param) and $param['DestRegion'] !== null) {
+            $this->DestRegion = $param['DestRegion'];
         }
     }
 }

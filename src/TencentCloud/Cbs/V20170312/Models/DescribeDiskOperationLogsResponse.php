@@ -54,17 +54,17 @@ class DescribeDiskOperationLogsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DiskOperationLogSet",$param) and $param["DiskOperationLogSet"] !== null) {
+        if (array_key_exists('DiskOperationLogSet',$param) and $param['DiskOperationLogSet'] !== null) {
             $this->DiskOperationLogSet = [];
-            foreach ($param["DiskOperationLogSet"] as $key => $value){
+            foreach ($param['DiskOperationLogSet'] as $key => $value){
                 $obj = new DiskOperationLog();
                 $obj->deserialize($value);
                 array_push($this->DiskOperationLogSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

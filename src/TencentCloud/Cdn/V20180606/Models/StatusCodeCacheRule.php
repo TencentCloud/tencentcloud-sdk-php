@@ -58,12 +58,12 @@ class StatusCodeCacheRule extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("StatusCode",$param) and $param["StatusCode"] !== null) {
-            $this->StatusCode = $param["StatusCode"];
+        if (array_key_exists('StatusCode',$param) and $param['StatusCode'] !== null) {
+            $this->StatusCode = $param['StatusCode'];
         }
 
-        if (array_key_exists("CacheTime",$param) and $param["CacheTime"] !== null) {
-            $this->CacheTime = $param["CacheTime"];
+        if (array_key_exists('CacheTime',$param) and $param['CacheTime'] !== null) {
+            $this->CacheTime = $param['CacheTime'];
         }
     }
 }

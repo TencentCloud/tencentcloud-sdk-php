@@ -94,33 +94,33 @@ class GetCcnRegionBandwidthLimitsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CcnId",$param) and $param["CcnId"] !== null) {
-            $this->CcnId = $param["CcnId"];
+        if (array_key_exists('CcnId',$param) and $param['CcnId'] !== null) {
+            $this->CcnId = $param['CcnId'];
         }
 
-        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+        if (array_key_exists('Filters',$param) and $param['Filters'] !== null) {
             $this->Filters = [];
-            foreach ($param["Filters"] as $key => $value){
+            foreach ($param['Filters'] as $key => $value){
                 $obj = new Filter();
                 $obj->deserialize($value);
                 array_push($this->Filters, $obj);
             }
         }
 
-        if (array_key_exists("SortedBy",$param) and $param["SortedBy"] !== null) {
-            $this->SortedBy = $param["SortedBy"];
+        if (array_key_exists('SortedBy',$param) and $param['SortedBy'] !== null) {
+            $this->SortedBy = $param['SortedBy'];
         }
 
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
+        if (array_key_exists('Offset',$param) and $param['Offset'] !== null) {
+            $this->Offset = $param['Offset'];
         }
 
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
+        if (array_key_exists('Limit',$param) and $param['Limit'] !== null) {
+            $this->Limit = $param['Limit'];
         }
 
-        if (array_key_exists("OrderBy",$param) and $param["OrderBy"] !== null) {
-            $this->OrderBy = $param["OrderBy"];
+        if (array_key_exists('OrderBy',$param) and $param['OrderBy'] !== null) {
+            $this->OrderBy = $param['OrderBy'];
         }
     }
 }

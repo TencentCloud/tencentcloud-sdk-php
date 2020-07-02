@@ -66,13 +66,13 @@ off：关闭
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Switch",$param) and $param["Switch"] !== null) {
-            $this->Switch = $param["Switch"];
+        if (array_key_exists('Switch',$param) and $param['Switch'] !== null) {
+            $this->Switch = $param['Switch'];
         }
 
-        if (array_key_exists("CompressionRules",$param) and $param["CompressionRules"] !== null) {
+        if (array_key_exists('CompressionRules',$param) and $param['CompressionRules'] !== null) {
             $this->CompressionRules = [];
-            foreach ($param["CompressionRules"] as $key => $value){
+            foreach ($param['CompressionRules'] as $key => $value){
                 $obj = new CompressionRule();
                 $obj->deserialize($value);
                 array_push($this->CompressionRules, $obj);

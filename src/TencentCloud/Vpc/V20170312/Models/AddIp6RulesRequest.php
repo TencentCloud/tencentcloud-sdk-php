@@ -62,21 +62,21 @@ class AddIp6RulesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Ip6TranslatorId",$param) and $param["Ip6TranslatorId"] !== null) {
-            $this->Ip6TranslatorId = $param["Ip6TranslatorId"];
+        if (array_key_exists('Ip6TranslatorId',$param) and $param['Ip6TranslatorId'] !== null) {
+            $this->Ip6TranslatorId = $param['Ip6TranslatorId'];
         }
 
-        if (array_key_exists("Ip6RuleInfos",$param) and $param["Ip6RuleInfos"] !== null) {
+        if (array_key_exists('Ip6RuleInfos',$param) and $param['Ip6RuleInfos'] !== null) {
             $this->Ip6RuleInfos = [];
-            foreach ($param["Ip6RuleInfos"] as $key => $value){
+            foreach ($param['Ip6RuleInfos'] as $key => $value){
                 $obj = new Ip6RuleInfo();
                 $obj->deserialize($value);
                 array_push($this->Ip6RuleInfos, $obj);
             }
         }
 
-        if (array_key_exists("Ip6RuleName",$param) and $param["Ip6RuleName"] !== null) {
-            $this->Ip6RuleName = $param["Ip6RuleName"];
+        if (array_key_exists('Ip6RuleName',$param) and $param['Ip6RuleName'] !== null) {
+            $this->Ip6RuleName = $param['Ip6RuleName'];
         }
     }
 }

@@ -46,9 +46,9 @@ class GenderPortraitInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PortraitSet",$param) and $param["PortraitSet"] !== null) {
+        if (array_key_exists('PortraitSet',$param) and $param['PortraitSet'] !== null) {
             $this->PortraitSet = [];
-            foreach ($param["PortraitSet"] as $key => $value){
+            foreach ($param['PortraitSet'] as $key => $value){
                 $obj = new GenderPortrait();
                 $obj->deserialize($value);
                 array_push($this->PortraitSet, $obj);

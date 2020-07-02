@@ -62,26 +62,26 @@ class EntityRelationContent extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Object",$param) and $param["Object"] !== null) {
+        if (array_key_exists('Object',$param) and $param['Object'] !== null) {
             $this->Object = [];
-            foreach ($param["Object"] as $key => $value){
+            foreach ($param['Object'] as $key => $value){
                 $obj = new EntityRelationObject();
                 $obj->deserialize($value);
                 array_push($this->Object, $obj);
             }
         }
 
-        if (array_key_exists("Subject",$param) and $param["Subject"] !== null) {
+        if (array_key_exists('Subject',$param) and $param['Subject'] !== null) {
             $this->Subject = [];
-            foreach ($param["Subject"] as $key => $value){
+            foreach ($param['Subject'] as $key => $value){
                 $obj = new EntityRelationSubject();
                 $obj->deserialize($value);
                 array_push($this->Subject, $obj);
             }
         }
 
-        if (array_key_exists("Relation",$param) and $param["Relation"] !== null) {
-            $this->Relation = $param["Relation"];
+        if (array_key_exists('Relation',$param) and $param['Relation'] !== null) {
+            $this->Relation = $param['Relation'];
         }
     }
 }

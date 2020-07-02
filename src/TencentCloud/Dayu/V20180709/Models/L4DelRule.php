@@ -62,16 +62,16 @@ class L4DelRule extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
-            $this->Id = $param["Id"];
+        if (array_key_exists('Id',$param) and $param['Id'] !== null) {
+            $this->Id = $param['Id'];
         }
 
-        if (array_key_exists("Ip",$param) and $param["Ip"] !== null) {
-            $this->Ip = $param["Ip"];
+        if (array_key_exists('Ip',$param) and $param['Ip'] !== null) {
+            $this->Ip = $param['Ip'];
         }
 
-        if (array_key_exists("RuleIdList",$param) and $param["RuleIdList"] !== null) {
-            $this->RuleIdList = $param["RuleIdList"];
+        if (array_key_exists('RuleIdList',$param) and $param['RuleIdList'] !== null) {
+            $this->RuleIdList = $param['RuleIdList'];
         }
     }
 }

@@ -70,30 +70,30 @@ class DescribeHardwareSpecificationResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CpuInfoSet",$param) and $param["CpuInfoSet"] !== null) {
+        if (array_key_exists('CpuInfoSet',$param) and $param['CpuInfoSet'] !== null) {
             $this->CpuInfoSet = [];
-            foreach ($param["CpuInfoSet"] as $key => $value){
+            foreach ($param['CpuInfoSet'] as $key => $value){
                 $obj = new CpuInfo();
                 $obj->deserialize($value);
                 array_push($this->CpuInfoSet, $obj);
             }
         }
 
-        if (array_key_exists("MemSet",$param) and $param["MemSet"] !== null) {
-            $this->MemSet = $param["MemSet"];
+        if (array_key_exists('MemSet',$param) and $param['MemSet'] !== null) {
+            $this->MemSet = $param['MemSet'];
         }
 
-        if (array_key_exists("DiskInfoSet",$param) and $param["DiskInfoSet"] !== null) {
+        if (array_key_exists('DiskInfoSet',$param) and $param['DiskInfoSet'] !== null) {
             $this->DiskInfoSet = [];
-            foreach ($param["DiskInfoSet"] as $key => $value){
+            foreach ($param['DiskInfoSet'] as $key => $value){
                 $obj = new DiskInfo();
                 $obj->deserialize($value);
                 array_push($this->DiskInfoSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

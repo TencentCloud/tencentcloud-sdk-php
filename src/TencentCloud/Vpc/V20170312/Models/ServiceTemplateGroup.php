@@ -78,25 +78,25 @@ class ServiceTemplateGroup extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ServiceTemplateGroupId",$param) and $param["ServiceTemplateGroupId"] !== null) {
-            $this->ServiceTemplateGroupId = $param["ServiceTemplateGroupId"];
+        if (array_key_exists('ServiceTemplateGroupId',$param) and $param['ServiceTemplateGroupId'] !== null) {
+            $this->ServiceTemplateGroupId = $param['ServiceTemplateGroupId'];
         }
 
-        if (array_key_exists("ServiceTemplateGroupName",$param) and $param["ServiceTemplateGroupName"] !== null) {
-            $this->ServiceTemplateGroupName = $param["ServiceTemplateGroupName"];
+        if (array_key_exists('ServiceTemplateGroupName',$param) and $param['ServiceTemplateGroupName'] !== null) {
+            $this->ServiceTemplateGroupName = $param['ServiceTemplateGroupName'];
         }
 
-        if (array_key_exists("ServiceTemplateIdSet",$param) and $param["ServiceTemplateIdSet"] !== null) {
-            $this->ServiceTemplateIdSet = $param["ServiceTemplateIdSet"];
+        if (array_key_exists('ServiceTemplateIdSet',$param) and $param['ServiceTemplateIdSet'] !== null) {
+            $this->ServiceTemplateIdSet = $param['ServiceTemplateIdSet'];
         }
 
-        if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
-            $this->CreatedTime = $param["CreatedTime"];
+        if (array_key_exists('CreatedTime',$param) and $param['CreatedTime'] !== null) {
+            $this->CreatedTime = $param['CreatedTime'];
         }
 
-        if (array_key_exists("ServiceTemplateSet",$param) and $param["ServiceTemplateSet"] !== null) {
+        if (array_key_exists('ServiceTemplateSet',$param) and $param['ServiceTemplateSet'] !== null) {
             $this->ServiceTemplateSet = [];
-            foreach ($param["ServiceTemplateSet"] as $key => $value){
+            foreach ($param['ServiceTemplateSet'] as $key => $value){
                 $obj = new ServiceTemplate();
                 $obj->deserialize($value);
                 array_push($this->ServiceTemplateSet, $obj);

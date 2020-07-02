@@ -58,12 +58,12 @@ class Concat extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Enabled",$param) and $param["Enabled"] !== null) {
-            $this->Enabled = $param["Enabled"];
+        if (array_key_exists('Enabled',$param) and $param['Enabled'] !== null) {
+            $this->Enabled = $param['Enabled'];
         }
 
-        if (array_key_exists("Image",$param) and $param["Image"] !== null) {
-            $this->Image = $param["Image"];
+        if (array_key_exists('Image',$param) and $param['Image'] !== null) {
+            $this->Image = $param['Image'];
         }
     }
 }

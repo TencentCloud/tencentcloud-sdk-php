@@ -66,21 +66,21 @@ class DescribeRouteTableConflictsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("HasConflict",$param) and $param["HasConflict"] !== null) {
-            $this->HasConflict = $param["HasConflict"];
+        if (array_key_exists('HasConflict',$param) and $param['HasConflict'] !== null) {
+            $this->HasConflict = $param['HasConflict'];
         }
 
-        if (array_key_exists("RouteTableConflictSet",$param) and $param["RouteTableConflictSet"] !== null) {
+        if (array_key_exists('RouteTableConflictSet',$param) and $param['RouteTableConflictSet'] !== null) {
             $this->RouteTableConflictSet = [];
-            foreach ($param["RouteTableConflictSet"] as $key => $value){
+            foreach ($param['RouteTableConflictSet'] as $key => $value){
                 $obj = new RouteTableConflict();
                 $obj->deserialize($value);
                 array_push($this->RouteTableConflictSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

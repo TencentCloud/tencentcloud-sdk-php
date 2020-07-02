@@ -62,16 +62,16 @@ class SubProjectInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SubProjectId",$param) and $param["SubProjectId"] !== null) {
-            $this->SubProjectId = $param["SubProjectId"];
+        if (array_key_exists('SubProjectId',$param) and $param['SubProjectId'] !== null) {
+            $this->SubProjectId = $param['SubProjectId'];
         }
 
-        if (array_key_exists("SubProjectName",$param) and $param["SubProjectName"] !== null) {
-            $this->SubProjectName = $param["SubProjectName"];
+        if (array_key_exists('SubProjectName',$param) and $param['SubProjectName'] !== null) {
+            $this->SubProjectName = $param['SubProjectName'];
         }
 
-        if (array_key_exists("SubProjectStatus",$param) and $param["SubProjectStatus"] !== null) {
-            $this->SubProjectStatus = $param["SubProjectStatus"];
+        if (array_key_exists('SubProjectStatus',$param) and $param['SubProjectStatus'] !== null) {
+            $this->SubProjectStatus = $param['SubProjectStatus'];
         }
     }
 }

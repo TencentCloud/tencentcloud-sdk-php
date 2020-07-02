@@ -70,20 +70,20 @@ class CreateFacePictureResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PersonId",$param) and $param["PersonId"] !== null) {
-            $this->PersonId = $param["PersonId"];
+        if (array_key_exists('PersonId',$param) and $param['PersonId'] !== null) {
+            $this->PersonId = $param['PersonId'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("PictureUrl",$param) and $param["PictureUrl"] !== null) {
-            $this->PictureUrl = $param["PictureUrl"];
+        if (array_key_exists('PictureUrl',$param) and $param['PictureUrl'] !== null) {
+            $this->PictureUrl = $param['PictureUrl'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

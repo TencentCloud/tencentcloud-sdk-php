@@ -54,17 +54,17 @@ class GetAsrVocabListResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("VocabList",$param) and $param["VocabList"] !== null) {
+        if (array_key_exists('VocabList',$param) and $param['VocabList'] !== null) {
             $this->VocabList = [];
-            foreach ($param["VocabList"] as $key => $value){
+            foreach ($param['VocabList'] as $key => $value){
                 $obj = new Vocab();
                 $obj->deserialize($value);
                 array_push($this->VocabList, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

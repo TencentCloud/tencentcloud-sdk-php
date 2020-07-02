@@ -70,20 +70,20 @@ class TcrImageInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Digest",$param) and $param["Digest"] !== null) {
-            $this->Digest = $param["Digest"];
+        if (array_key_exists('Digest',$param) and $param['Digest'] !== null) {
+            $this->Digest = $param['Digest'];
         }
 
-        if (array_key_exists("Size",$param) and $param["Size"] !== null) {
-            $this->Size = $param["Size"];
+        if (array_key_exists('Size',$param) and $param['Size'] !== null) {
+            $this->Size = $param['Size'];
         }
 
-        if (array_key_exists("ImageVersion",$param) and $param["ImageVersion"] !== null) {
-            $this->ImageVersion = $param["ImageVersion"];
+        if (array_key_exists('ImageVersion',$param) and $param['ImageVersion'] !== null) {
+            $this->ImageVersion = $param['ImageVersion'];
         }
 
-        if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
-            $this->UpdateTime = $param["UpdateTime"];
+        if (array_key_exists('UpdateTime',$param) and $param['UpdateTime'] !== null) {
+            $this->UpdateTime = $param['UpdateTime'];
         }
     }
 }

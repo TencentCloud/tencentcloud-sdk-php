@@ -54,17 +54,17 @@ class DescribeInstanceFamilyConfigsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceFamilyConfigSet",$param) and $param["InstanceFamilyConfigSet"] !== null) {
+        if (array_key_exists('InstanceFamilyConfigSet',$param) and $param['InstanceFamilyConfigSet'] !== null) {
             $this->InstanceFamilyConfigSet = [];
-            foreach ($param["InstanceFamilyConfigSet"] as $key => $value){
+            foreach ($param['InstanceFamilyConfigSet'] as $key => $value){
                 $obj = new InstanceFamilyConfig();
                 $obj->deserialize($value);
                 array_push($this->InstanceFamilyConfigSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

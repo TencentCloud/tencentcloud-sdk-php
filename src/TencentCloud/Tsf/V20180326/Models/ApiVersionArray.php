@@ -74,16 +74,16 @@ class ApiVersionArray extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ApplicationId",$param) and $param["ApplicationId"] !== null) {
-            $this->ApplicationId = $param["ApplicationId"];
+        if (array_key_exists('ApplicationId',$param) and $param['ApplicationId'] !== null) {
+            $this->ApplicationId = $param['ApplicationId'];
         }
 
-        if (array_key_exists("ApplicationName",$param) and $param["ApplicationName"] !== null) {
-            $this->ApplicationName = $param["ApplicationName"];
+        if (array_key_exists('ApplicationName',$param) and $param['ApplicationName'] !== null) {
+            $this->ApplicationName = $param['ApplicationName'];
         }
 
-        if (array_key_exists("PkgVersion",$param) and $param["PkgVersion"] !== null) {
-            $this->PkgVersion = $param["PkgVersion"];
+        if (array_key_exists('PkgVersion',$param) and $param['PkgVersion'] !== null) {
+            $this->PkgVersion = $param['PkgVersion'];
         }
     }
 }

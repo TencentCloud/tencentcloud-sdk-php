@@ -62,14 +62,14 @@ class SpecificConfig extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Mainland",$param) and $param["Mainland"] !== null) {
+        if (array_key_exists('Mainland',$param) and $param['Mainland'] !== null) {
             $this->Mainland = new MainlandConfig();
-            $this->Mainland->deserialize($param["Mainland"]);
+            $this->Mainland->deserialize($param['Mainland']);
         }
 
-        if (array_key_exists("Overseas",$param) and $param["Overseas"] !== null) {
+        if (array_key_exists('Overseas',$param) and $param['Overseas'] !== null) {
             $this->Overseas = new OverseaConfig();
-            $this->Overseas->deserialize($param["Overseas"]);
+            $this->Overseas->deserialize($param['Overseas']);
         }
     }
 }

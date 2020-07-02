@@ -106,32 +106,32 @@ class RevokeMemberRechargeThirdPayResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TxnReturnCode",$param) and $param["TxnReturnCode"] !== null) {
-            $this->TxnReturnCode = $param["TxnReturnCode"];
+        if (array_key_exists('TxnReturnCode',$param) and $param['TxnReturnCode'] !== null) {
+            $this->TxnReturnCode = $param['TxnReturnCode'];
         }
 
-        if (array_key_exists("TxnReturnMsg",$param) and $param["TxnReturnMsg"] !== null) {
-            $this->TxnReturnMsg = $param["TxnReturnMsg"];
+        if (array_key_exists('TxnReturnMsg',$param) and $param['TxnReturnMsg'] !== null) {
+            $this->TxnReturnMsg = $param['TxnReturnMsg'];
         }
 
-        if (array_key_exists("CnsmrSeqNo",$param) and $param["CnsmrSeqNo"] !== null) {
-            $this->CnsmrSeqNo = $param["CnsmrSeqNo"];
+        if (array_key_exists('CnsmrSeqNo',$param) and $param['CnsmrSeqNo'] !== null) {
+            $this->CnsmrSeqNo = $param['CnsmrSeqNo'];
         }
 
-        if (array_key_exists("FrontSeqNo",$param) and $param["FrontSeqNo"] !== null) {
-            $this->FrontSeqNo = $param["FrontSeqNo"];
+        if (array_key_exists('FrontSeqNo',$param) and $param['FrontSeqNo'] !== null) {
+            $this->FrontSeqNo = $param['FrontSeqNo'];
         }
 
-        if (array_key_exists("ReservedMsgOne",$param) and $param["ReservedMsgOne"] !== null) {
-            $this->ReservedMsgOne = $param["ReservedMsgOne"];
+        if (array_key_exists('ReservedMsgOne',$param) and $param['ReservedMsgOne'] !== null) {
+            $this->ReservedMsgOne = $param['ReservedMsgOne'];
         }
 
-        if (array_key_exists("ReservedMsgTwo",$param) and $param["ReservedMsgTwo"] !== null) {
-            $this->ReservedMsgTwo = $param["ReservedMsgTwo"];
+        if (array_key_exists('ReservedMsgTwo',$param) and $param['ReservedMsgTwo'] !== null) {
+            $this->ReservedMsgTwo = $param['ReservedMsgTwo'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

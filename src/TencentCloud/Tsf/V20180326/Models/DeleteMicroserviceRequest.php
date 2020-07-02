@@ -46,8 +46,8 @@ class DeleteMicroserviceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MicroserviceId",$param) and $param["MicroserviceId"] !== null) {
-            $this->MicroserviceId = $param["MicroserviceId"];
+        if (array_key_exists('MicroserviceId',$param) and $param['MicroserviceId'] !== null) {
+            $this->MicroserviceId = $param['MicroserviceId'];
         }
     }
 }

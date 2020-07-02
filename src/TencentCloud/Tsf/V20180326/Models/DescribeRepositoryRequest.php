@@ -46,8 +46,8 @@ class DescribeRepositoryRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RepositoryId",$param) and $param["RepositoryId"] !== null) {
-            $this->RepositoryId = $param["RepositoryId"];
+        if (array_key_exists('RepositoryId',$param) and $param['RepositoryId'] !== null) {
+            $this->RepositoryId = $param['RepositoryId'];
         }
     }
 }

@@ -106,28 +106,28 @@ class HTTPListener extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ListenerId",$param) and $param["ListenerId"] !== null) {
-            $this->ListenerId = $param["ListenerId"];
+        if (array_key_exists('ListenerId',$param) and $param['ListenerId'] !== null) {
+            $this->ListenerId = $param['ListenerId'];
         }
 
-        if (array_key_exists("ListenerName",$param) and $param["ListenerName"] !== null) {
-            $this->ListenerName = $param["ListenerName"];
+        if (array_key_exists('ListenerName',$param) and $param['ListenerName'] !== null) {
+            $this->ListenerName = $param['ListenerName'];
         }
 
-        if (array_key_exists("Port",$param) and $param["Port"] !== null) {
-            $this->Port = $param["Port"];
+        if (array_key_exists('Port',$param) and $param['Port'] !== null) {
+            $this->Port = $param['Port'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("Protocol",$param) and $param["Protocol"] !== null) {
-            $this->Protocol = $param["Protocol"];
+        if (array_key_exists('Protocol',$param) and $param['Protocol'] !== null) {
+            $this->Protocol = $param['Protocol'];
         }
 
-        if (array_key_exists("ListenerStatus",$param) and $param["ListenerStatus"] !== null) {
-            $this->ListenerStatus = $param["ListenerStatus"];
+        if (array_key_exists('ListenerStatus',$param) and $param['ListenerStatus'] !== null) {
+            $this->ListenerStatus = $param['ListenerStatus'];
         }
     }
 }

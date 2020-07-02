@@ -78,29 +78,29 @@ class AccountCreateInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("UserName",$param) and $param["UserName"] !== null) {
-            $this->UserName = $param["UserName"];
+        if (array_key_exists('UserName',$param) and $param['UserName'] !== null) {
+            $this->UserName = $param['UserName'];
         }
 
-        if (array_key_exists("Password",$param) and $param["Password"] !== null) {
-            $this->Password = $param["Password"];
+        if (array_key_exists('Password',$param) and $param['Password'] !== null) {
+            $this->Password = $param['Password'];
         }
 
-        if (array_key_exists("DBPrivileges",$param) and $param["DBPrivileges"] !== null) {
+        if (array_key_exists('DBPrivileges',$param) and $param['DBPrivileges'] !== null) {
             $this->DBPrivileges = [];
-            foreach ($param["DBPrivileges"] as $key => $value){
+            foreach ($param['DBPrivileges'] as $key => $value){
                 $obj = new DBPrivilege();
                 $obj->deserialize($value);
                 array_push($this->DBPrivileges, $obj);
             }
         }
 
-        if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
-            $this->Remark = $param["Remark"];
+        if (array_key_exists('Remark',$param) and $param['Remark'] !== null) {
+            $this->Remark = $param['Remark'];
         }
 
-        if (array_key_exists("IsAdmin",$param) and $param["IsAdmin"] !== null) {
-            $this->IsAdmin = $param["IsAdmin"];
+        if (array_key_exists('IsAdmin',$param) and $param['IsAdmin'] !== null) {
+            $this->IsAdmin = $param['IsAdmin'];
         }
     }
 }

@@ -118,45 +118,45 @@ class CreateCfsFileSystemRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
-            $this->Zone = $param["Zone"];
+        if (array_key_exists('Zone',$param) and $param['Zone'] !== null) {
+            $this->Zone = $param['Zone'];
         }
 
-        if (array_key_exists("NetInterface",$param) and $param["NetInterface"] !== null) {
-            $this->NetInterface = $param["NetInterface"];
+        if (array_key_exists('NetInterface',$param) and $param['NetInterface'] !== null) {
+            $this->NetInterface = $param['NetInterface'];
         }
 
-        if (array_key_exists("PGroupId",$param) and $param["PGroupId"] !== null) {
-            $this->PGroupId = $param["PGroupId"];
+        if (array_key_exists('PGroupId',$param) and $param['PGroupId'] !== null) {
+            $this->PGroupId = $param['PGroupId'];
         }
 
-        if (array_key_exists("Protocol",$param) and $param["Protocol"] !== null) {
-            $this->Protocol = $param["Protocol"];
+        if (array_key_exists('Protocol',$param) and $param['Protocol'] !== null) {
+            $this->Protocol = $param['Protocol'];
         }
 
-        if (array_key_exists("StorageType",$param) and $param["StorageType"] !== null) {
-            $this->StorageType = $param["StorageType"];
+        if (array_key_exists('StorageType',$param) and $param['StorageType'] !== null) {
+            $this->StorageType = $param['StorageType'];
         }
 
-        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
-            $this->VpcId = $param["VpcId"];
+        if (array_key_exists('VpcId',$param) and $param['VpcId'] !== null) {
+            $this->VpcId = $param['VpcId'];
         }
 
-        if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
-            $this->SubnetId = $param["SubnetId"];
+        if (array_key_exists('SubnetId',$param) and $param['SubnetId'] !== null) {
+            $this->SubnetId = $param['SubnetId'];
         }
 
-        if (array_key_exists("MountIP",$param) and $param["MountIP"] !== null) {
-            $this->MountIP = $param["MountIP"];
+        if (array_key_exists('MountIP',$param) and $param['MountIP'] !== null) {
+            $this->MountIP = $param['MountIP'];
         }
 
-        if (array_key_exists("FsName",$param) and $param["FsName"] !== null) {
-            $this->FsName = $param["FsName"];
+        if (array_key_exists('FsName',$param) and $param['FsName'] !== null) {
+            $this->FsName = $param['FsName'];
         }
 
-        if (array_key_exists("ResourceTags",$param) and $param["ResourceTags"] !== null) {
+        if (array_key_exists('ResourceTags',$param) and $param['ResourceTags'] !== null) {
             $this->ResourceTags = [];
-            foreach ($param["ResourceTags"] as $key => $value){
+            foreach ($param['ResourceTags'] as $key => $value){
                 $obj = new TagInfo();
                 $obj->deserialize($value);
                 array_push($this->ResourceTags, $obj);

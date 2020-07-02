@@ -102,16 +102,16 @@ class MediaMiniProgramReviewElem extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists('Type',$param) and $param['Type'] !== null) {
+            $this->Type = $param['Type'];
         }
 
-        if (array_key_exists("Suggestion",$param) and $param["Suggestion"] !== null) {
-            $this->Suggestion = $param["Suggestion"];
+        if (array_key_exists('Suggestion',$param) and $param['Suggestion'] !== null) {
+            $this->Suggestion = $param['Suggestion'];
         }
 
-        if (array_key_exists("Confidence",$param) and $param["Confidence"] !== null) {
-            $this->Confidence = $param["Confidence"];
+        if (array_key_exists('Confidence',$param) and $param['Confidence'] !== null) {
+            $this->Confidence = $param['Confidence'];
         }
     }
 }

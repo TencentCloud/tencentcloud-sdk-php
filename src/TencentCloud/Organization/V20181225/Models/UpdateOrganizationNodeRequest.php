@@ -62,16 +62,16 @@ class UpdateOrganizationNodeRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("NodeId",$param) and $param["NodeId"] !== null) {
-            $this->NodeId = $param["NodeId"];
+        if (array_key_exists('NodeId',$param) and $param['NodeId'] !== null) {
+            $this->NodeId = $param['NodeId'];
         }
 
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("ParentNodeId",$param) and $param["ParentNodeId"] !== null) {
-            $this->ParentNodeId = $param["ParentNodeId"];
+        if (array_key_exists('ParentNodeId',$param) and $param['ParentNodeId'] !== null) {
+            $this->ParentNodeId = $param['ParentNodeId'];
         }
     }
 }

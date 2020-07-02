@@ -66,21 +66,21 @@ class DescribeSharedSpaceResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("AuthorizerSet",$param) and $param["AuthorizerSet"] !== null) {
+        if (array_key_exists('AuthorizerSet',$param) and $param['AuthorizerSet'] !== null) {
             $this->AuthorizerSet = [];
-            foreach ($param["AuthorizerSet"] as $key => $value){
+            foreach ($param['AuthorizerSet'] as $key => $value){
                 $obj = new Authorizer();
                 $obj->deserialize($value);
                 array_push($this->AuthorizerSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

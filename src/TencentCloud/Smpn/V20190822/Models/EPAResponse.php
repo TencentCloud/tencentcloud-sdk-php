@@ -46,8 +46,8 @@ class EPAResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RetCode",$param) and $param["RetCode"] !== null) {
-            $this->RetCode = $param["RetCode"];
+        if (array_key_exists('RetCode',$param) and $param['RetCode'] !== null) {
+            $this->RetCode = $param['RetCode'];
         }
     }
 }

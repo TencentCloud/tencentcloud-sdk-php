@@ -70,21 +70,21 @@ class CreateTargetGroupRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TargetGroupName",$param) and $param["TargetGroupName"] !== null) {
-            $this->TargetGroupName = $param["TargetGroupName"];
+        if (array_key_exists('TargetGroupName',$param) and $param['TargetGroupName'] !== null) {
+            $this->TargetGroupName = $param['TargetGroupName'];
         }
 
-        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
-            $this->VpcId = $param["VpcId"];
+        if (array_key_exists('VpcId',$param) and $param['VpcId'] !== null) {
+            $this->VpcId = $param['VpcId'];
         }
 
-        if (array_key_exists("Port",$param) and $param["Port"] !== null) {
-            $this->Port = $param["Port"];
+        if (array_key_exists('Port',$param) and $param['Port'] !== null) {
+            $this->Port = $param['Port'];
         }
 
-        if (array_key_exists("TargetGroupInstances",$param) and $param["TargetGroupInstances"] !== null) {
+        if (array_key_exists('TargetGroupInstances',$param) and $param['TargetGroupInstances'] !== null) {
             $this->TargetGroupInstances = [];
-            foreach ($param["TargetGroupInstances"] as $key => $value){
+            foreach ($param['TargetGroupInstances'] as $key => $value){
                 $obj = new TargetGroupInstance();
                 $obj->deserialize($value);
                 array_push($this->TargetGroupInstances, $obj);

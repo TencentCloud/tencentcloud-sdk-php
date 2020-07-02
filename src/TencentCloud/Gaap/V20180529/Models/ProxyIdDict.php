@@ -46,8 +46,8 @@ class ProxyIdDict extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ProxyId",$param) and $param["ProxyId"] !== null) {
-            $this->ProxyId = $param["ProxyId"];
+        if (array_key_exists('ProxyId',$param) and $param['ProxyId'] !== null) {
+            $this->ProxyId = $param['ProxyId'];
         }
     }
 }

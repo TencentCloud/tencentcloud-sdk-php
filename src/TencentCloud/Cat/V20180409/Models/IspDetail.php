@@ -66,16 +66,16 @@ class IspDetail extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("IspName",$param) and $param["IspName"] !== null) {
-            $this->IspName = $param["IspName"];
+        if (array_key_exists('IspName',$param) and $param['IspName'] !== null) {
+            $this->IspName = $param['IspName'];
         }
 
-        if (array_key_exists("AvailRatio",$param) and $param["AvailRatio"] !== null) {
-            $this->AvailRatio = $param["AvailRatio"];
+        if (array_key_exists('AvailRatio',$param) and $param['AvailRatio'] !== null) {
+            $this->AvailRatio = $param['AvailRatio'];
         }
 
-        if (array_key_exists("AvgTime",$param) and $param["AvgTime"] !== null) {
-            $this->AvgTime = $param["AvgTime"];
+        if (array_key_exists('AvgTime',$param) and $param['AvgTime'] !== null) {
+            $this->AvgTime = $param['AvgTime'];
         }
     }
 }

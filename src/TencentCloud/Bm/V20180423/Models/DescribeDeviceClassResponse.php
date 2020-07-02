@@ -54,17 +54,17 @@ class DescribeDeviceClassResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DeviceClassSet",$param) and $param["DeviceClassSet"] !== null) {
+        if (array_key_exists('DeviceClassSet',$param) and $param['DeviceClassSet'] !== null) {
             $this->DeviceClassSet = [];
-            foreach ($param["DeviceClassSet"] as $key => $value){
+            foreach ($param['DeviceClassSet'] as $key => $value){
                 $obj = new DeviceClass();
                 $obj->deserialize($value);
                 array_push($this->DeviceClassSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

@@ -46,9 +46,9 @@ class MediaMiniProgramReviewInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MiniProgramReviewList",$param) and $param["MiniProgramReviewList"] !== null) {
+        if (array_key_exists('MiniProgramReviewList',$param) and $param['MiniProgramReviewList'] !== null) {
             $this->MiniProgramReviewList = [];
-            foreach ($param["MiniProgramReviewList"] as $key => $value){
+            foreach ($param['MiniProgramReviewList'] as $key => $value){
                 $obj = new MediaMiniProgramReviewInfoItem();
                 $obj->deserialize($value);
                 array_push($this->MiniProgramReviewList, $obj);

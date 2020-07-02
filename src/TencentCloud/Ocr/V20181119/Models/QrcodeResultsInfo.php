@@ -62,17 +62,17 @@ class QrcodeResultsInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TypeName",$param) and $param["TypeName"] !== null) {
-            $this->TypeName = $param["TypeName"];
+        if (array_key_exists('TypeName',$param) and $param['TypeName'] !== null) {
+            $this->TypeName = $param['TypeName'];
         }
 
-        if (array_key_exists("Url",$param) and $param["Url"] !== null) {
-            $this->Url = $param["Url"];
+        if (array_key_exists('Url',$param) and $param['Url'] !== null) {
+            $this->Url = $param['Url'];
         }
 
-        if (array_key_exists("Position",$param) and $param["Position"] !== null) {
+        if (array_key_exists('Position',$param) and $param['Position'] !== null) {
             $this->Position = new QrcodePositionObj();
-            $this->Position->deserialize($param["Position"]);
+            $this->Position->deserialize($param['Position']);
         }
     }
 }

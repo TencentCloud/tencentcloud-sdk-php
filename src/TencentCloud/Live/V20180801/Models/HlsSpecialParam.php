@@ -46,8 +46,8 @@ class HlsSpecialParam extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FlowContinueDuration",$param) and $param["FlowContinueDuration"] !== null) {
-            $this->FlowContinueDuration = $param["FlowContinueDuration"];
+        if (array_key_exists('FlowContinueDuration',$param) and $param['FlowContinueDuration'] !== null) {
+            $this->FlowContinueDuration = $param['FlowContinueDuration'];
         }
     }
 }

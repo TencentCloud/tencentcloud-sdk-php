@@ -118,45 +118,45 @@ class LoRaGatewayItem extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("GatewayId",$param) and $param["GatewayId"] !== null) {
-            $this->GatewayId = $param["GatewayId"];
+        if (array_key_exists('GatewayId',$param) and $param['GatewayId'] !== null) {
+            $this->GatewayId = $param['GatewayId'];
         }
 
-        if (array_key_exists("IsPublic",$param) and $param["IsPublic"] !== null) {
-            $this->IsPublic = $param["IsPublic"];
+        if (array_key_exists('IsPublic',$param) and $param['IsPublic'] !== null) {
+            $this->IsPublic = $param['IsPublic'];
         }
 
-        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
-            $this->Description = $param["Description"];
+        if (array_key_exists('Description',$param) and $param['Description'] !== null) {
+            $this->Description = $param['Description'];
         }
 
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("Position",$param) and $param["Position"] !== null) {
-            $this->Position = $param["Position"];
+        if (array_key_exists('Position',$param) and $param['Position'] !== null) {
+            $this->Position = $param['Position'];
         }
 
-        if (array_key_exists("PositionDetails",$param) and $param["PositionDetails"] !== null) {
-            $this->PositionDetails = $param["PositionDetails"];
+        if (array_key_exists('PositionDetails',$param) and $param['PositionDetails'] !== null) {
+            $this->PositionDetails = $param['PositionDetails'];
         }
 
-        if (array_key_exists("Location",$param) and $param["Location"] !== null) {
+        if (array_key_exists('Location',$param) and $param['Location'] !== null) {
             $this->Location = new LoRaGatewayLocation();
-            $this->Location->deserialize($param["Location"]);
+            $this->Location->deserialize($param['Location']);
         }
 
-        if (array_key_exists("UpdatedAt",$param) and $param["UpdatedAt"] !== null) {
-            $this->UpdatedAt = $param["UpdatedAt"];
+        if (array_key_exists('UpdatedAt',$param) and $param['UpdatedAt'] !== null) {
+            $this->UpdatedAt = $param['UpdatedAt'];
         }
 
-        if (array_key_exists("CreatedAt",$param) and $param["CreatedAt"] !== null) {
-            $this->CreatedAt = $param["CreatedAt"];
+        if (array_key_exists('CreatedAt',$param) and $param['CreatedAt'] !== null) {
+            $this->CreatedAt = $param['CreatedAt'];
         }
 
-        if (array_key_exists("LastSeenAt",$param) and $param["LastSeenAt"] !== null) {
-            $this->LastSeenAt = $param["LastSeenAt"];
+        if (array_key_exists('LastSeenAt',$param) and $param['LastSeenAt'] !== null) {
+            $this->LastSeenAt = $param['LastSeenAt'];
         }
     }
 }

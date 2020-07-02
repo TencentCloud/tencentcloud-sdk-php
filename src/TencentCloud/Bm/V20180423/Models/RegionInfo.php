@@ -70,21 +70,21 @@ class RegionInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Region",$param) and $param["Region"] !== null) {
-            $this->Region = $param["Region"];
+        if (array_key_exists('Region',$param) and $param['Region'] !== null) {
+            $this->Region = $param['Region'];
         }
 
-        if (array_key_exists("RegionId",$param) and $param["RegionId"] !== null) {
-            $this->RegionId = $param["RegionId"];
+        if (array_key_exists('RegionId',$param) and $param['RegionId'] !== null) {
+            $this->RegionId = $param['RegionId'];
         }
 
-        if (array_key_exists("RegionDescription",$param) and $param["RegionDescription"] !== null) {
-            $this->RegionDescription = $param["RegionDescription"];
+        if (array_key_exists('RegionDescription',$param) and $param['RegionDescription'] !== null) {
+            $this->RegionDescription = $param['RegionDescription'];
         }
 
-        if (array_key_exists("ZoneInfoSet",$param) and $param["ZoneInfoSet"] !== null) {
+        if (array_key_exists('ZoneInfoSet',$param) and $param['ZoneInfoSet'] !== null) {
             $this->ZoneInfoSet = [];
-            foreach ($param["ZoneInfoSet"] as $key => $value){
+            foreach ($param['ZoneInfoSet'] as $key => $value){
                 $obj = new ZoneInfo();
                 $obj->deserialize($value);
                 array_push($this->ZoneInfoSet, $obj);

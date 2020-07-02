@@ -70,20 +70,20 @@ class CreateFaceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PersonId",$param) and $param["PersonId"] !== null) {
-            $this->PersonId = $param["PersonId"];
+        if (array_key_exists('PersonId',$param) and $param['PersonId'] !== null) {
+            $this->PersonId = $param['PersonId'];
         }
 
-        if (array_key_exists("Images",$param) and $param["Images"] !== null) {
-            $this->Images = $param["Images"];
+        if (array_key_exists('Images',$param) and $param['Images'] !== null) {
+            $this->Images = $param['Images'];
         }
 
-        if (array_key_exists("LibraryId",$param) and $param["LibraryId"] !== null) {
-            $this->LibraryId = $param["LibraryId"];
+        if (array_key_exists('LibraryId',$param) and $param['LibraryId'] !== null) {
+            $this->LibraryId = $param['LibraryId'];
         }
 
-        if (array_key_exists("Urls",$param) and $param["Urls"] !== null) {
-            $this->Urls = $param["Urls"];
+        if (array_key_exists('Urls',$param) and $param['Urls'] !== null) {
+            $this->Urls = $param['Urls'];
         }
     }
 }

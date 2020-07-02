@@ -70,20 +70,20 @@ class ModifyAutoBackupConfigRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("WeekDays",$param) and $param["WeekDays"] !== null) {
-            $this->WeekDays = $param["WeekDays"];
+        if (array_key_exists('WeekDays',$param) and $param['WeekDays'] !== null) {
+            $this->WeekDays = $param['WeekDays'];
         }
 
-        if (array_key_exists("TimePeriod",$param) and $param["TimePeriod"] !== null) {
-            $this->TimePeriod = $param["TimePeriod"];
+        if (array_key_exists('TimePeriod',$param) and $param['TimePeriod'] !== null) {
+            $this->TimePeriod = $param['TimePeriod'];
         }
 
-        if (array_key_exists("AutoBackupType",$param) and $param["AutoBackupType"] !== null) {
-            $this->AutoBackupType = $param["AutoBackupType"];
+        if (array_key_exists('AutoBackupType',$param) and $param['AutoBackupType'] !== null) {
+            $this->AutoBackupType = $param['AutoBackupType'];
         }
     }
 }

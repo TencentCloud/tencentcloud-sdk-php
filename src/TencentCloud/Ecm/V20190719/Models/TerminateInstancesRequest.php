@@ -62,16 +62,16 @@ class TerminateInstancesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceIdSet",$param) and $param["InstanceIdSet"] !== null) {
-            $this->InstanceIdSet = $param["InstanceIdSet"];
+        if (array_key_exists('InstanceIdSet',$param) and $param['InstanceIdSet'] !== null) {
+            $this->InstanceIdSet = $param['InstanceIdSet'];
         }
 
-        if (array_key_exists("TerminateDelay",$param) and $param["TerminateDelay"] !== null) {
-            $this->TerminateDelay = $param["TerminateDelay"];
+        if (array_key_exists('TerminateDelay',$param) and $param['TerminateDelay'] !== null) {
+            $this->TerminateDelay = $param['TerminateDelay'];
         }
 
-        if (array_key_exists("TerminateTime",$param) and $param["TerminateTime"] !== null) {
-            $this->TerminateTime = $param["TerminateTime"];
+        if (array_key_exists('TerminateTime',$param) and $param['TerminateTime'] !== null) {
+            $this->TerminateTime = $param['TerminateTime'];
         }
     }
 }

@@ -62,26 +62,26 @@ class GetResultSummaryResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RealData",$param) and $param["RealData"] !== null) {
+        if (array_key_exists('RealData',$param) and $param['RealData'] !== null) {
             $this->RealData = [];
-            foreach ($param["RealData"] as $key => $value){
+            foreach ($param['RealData'] as $key => $value){
                 $obj = new ResultSummary();
                 $obj->deserialize($value);
                 array_push($this->RealData, $obj);
             }
         }
 
-        if (array_key_exists("DayData",$param) and $param["DayData"] !== null) {
+        if (array_key_exists('DayData',$param) and $param['DayData'] !== null) {
             $this->DayData = [];
-            foreach ($param["DayData"] as $key => $value){
+            foreach ($param['DayData'] as $key => $value){
                 $obj = new ResultSummary();
                 $obj->deserialize($value);
                 array_push($this->DayData, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

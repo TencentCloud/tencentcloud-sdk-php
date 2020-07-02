@@ -62,16 +62,16 @@ class ExecuteScalingPolicyRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AutoScalingPolicyId",$param) and $param["AutoScalingPolicyId"] !== null) {
-            $this->AutoScalingPolicyId = $param["AutoScalingPolicyId"];
+        if (array_key_exists('AutoScalingPolicyId',$param) and $param['AutoScalingPolicyId'] !== null) {
+            $this->AutoScalingPolicyId = $param['AutoScalingPolicyId'];
         }
 
-        if (array_key_exists("HonorCooldown",$param) and $param["HonorCooldown"] !== null) {
-            $this->HonorCooldown = $param["HonorCooldown"];
+        if (array_key_exists('HonorCooldown',$param) and $param['HonorCooldown'] !== null) {
+            $this->HonorCooldown = $param['HonorCooldown'];
         }
 
-        if (array_key_exists("TriggerSource",$param) and $param["TriggerSource"] !== null) {
-            $this->TriggerSource = $param["TriggerSource"];
+        if (array_key_exists('TriggerSource',$param) and $param['TriggerSource'] !== null) {
+            $this->TriggerSource = $param['TriggerSource'];
         }
     }
 }

@@ -46,9 +46,9 @@ class EnhanceTaDegreeRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BspData",$param) and $param["BspData"] !== null) {
+        if (array_key_exists('BspData',$param) and $param['BspData'] !== null) {
             $this->BspData = new InputTaBspData();
-            $this->BspData->deserialize($param["BspData"]);
+            $this->BspData->deserialize($param['BspData']);
         }
     }
 }

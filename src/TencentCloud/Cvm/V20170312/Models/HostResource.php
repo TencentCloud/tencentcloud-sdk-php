@@ -94,32 +94,32 @@ class HostResource extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CpuTotal",$param) and $param["CpuTotal"] !== null) {
-            $this->CpuTotal = $param["CpuTotal"];
+        if (array_key_exists('CpuTotal',$param) and $param['CpuTotal'] !== null) {
+            $this->CpuTotal = $param['CpuTotal'];
         }
 
-        if (array_key_exists("CpuAvailable",$param) and $param["CpuAvailable"] !== null) {
-            $this->CpuAvailable = $param["CpuAvailable"];
+        if (array_key_exists('CpuAvailable',$param) and $param['CpuAvailable'] !== null) {
+            $this->CpuAvailable = $param['CpuAvailable'];
         }
 
-        if (array_key_exists("MemTotal",$param) and $param["MemTotal"] !== null) {
-            $this->MemTotal = $param["MemTotal"];
+        if (array_key_exists('MemTotal',$param) and $param['MemTotal'] !== null) {
+            $this->MemTotal = $param['MemTotal'];
         }
 
-        if (array_key_exists("MemAvailable",$param) and $param["MemAvailable"] !== null) {
-            $this->MemAvailable = $param["MemAvailable"];
+        if (array_key_exists('MemAvailable',$param) and $param['MemAvailable'] !== null) {
+            $this->MemAvailable = $param['MemAvailable'];
         }
 
-        if (array_key_exists("DiskTotal",$param) and $param["DiskTotal"] !== null) {
-            $this->DiskTotal = $param["DiskTotal"];
+        if (array_key_exists('DiskTotal',$param) and $param['DiskTotal'] !== null) {
+            $this->DiskTotal = $param['DiskTotal'];
         }
 
-        if (array_key_exists("DiskAvailable",$param) and $param["DiskAvailable"] !== null) {
-            $this->DiskAvailable = $param["DiskAvailable"];
+        if (array_key_exists('DiskAvailable',$param) and $param['DiskAvailable'] !== null) {
+            $this->DiskAvailable = $param['DiskAvailable'];
         }
 
-        if (array_key_exists("DiskType",$param) and $param["DiskType"] !== null) {
-            $this->DiskType = $param["DiskType"];
+        if (array_key_exists('DiskType',$param) and $param['DiskType'] !== null) {
+            $this->DiskType = $param['DiskType'];
         }
     }
 }

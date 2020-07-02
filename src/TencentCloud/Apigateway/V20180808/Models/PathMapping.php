@@ -54,12 +54,12 @@ class PathMapping extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Path",$param) and $param["Path"] !== null) {
-            $this->Path = $param["Path"];
+        if (array_key_exists('Path',$param) and $param['Path'] !== null) {
+            $this->Path = $param['Path'];
         }
 
-        if (array_key_exists("Environment",$param) and $param["Environment"] !== null) {
-            $this->Environment = $param["Environment"];
+        if (array_key_exists('Environment',$param) and $param['Environment'] !== null) {
+            $this->Environment = $param['Environment'];
         }
     }
 }

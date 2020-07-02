@@ -62,16 +62,16 @@ class ModifyHTTPListenerAttributeRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ListenerId",$param) and $param["ListenerId"] !== null) {
-            $this->ListenerId = $param["ListenerId"];
+        if (array_key_exists('ListenerId',$param) and $param['ListenerId'] !== null) {
+            $this->ListenerId = $param['ListenerId'];
         }
 
-        if (array_key_exists("ListenerName",$param) and $param["ListenerName"] !== null) {
-            $this->ListenerName = $param["ListenerName"];
+        if (array_key_exists('ListenerName',$param) and $param['ListenerName'] !== null) {
+            $this->ListenerName = $param['ListenerName'];
         }
 
-        if (array_key_exists("ProxyId",$param) and $param["ProxyId"] !== null) {
-            $this->ProxyId = $param["ProxyId"];
+        if (array_key_exists('ProxyId',$param) and $param['ProxyId'] !== null) {
+            $this->ProxyId = $param['ProxyId'];
         }
     }
 }

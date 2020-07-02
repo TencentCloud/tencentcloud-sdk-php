@@ -78,30 +78,30 @@ class CreateProxyGroupRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
-            $this->ProjectId = $param["ProjectId"];
+        if (array_key_exists('ProjectId',$param) and $param['ProjectId'] !== null) {
+            $this->ProjectId = $param['ProjectId'];
         }
 
-        if (array_key_exists("GroupName",$param) and $param["GroupName"] !== null) {
-            $this->GroupName = $param["GroupName"];
+        if (array_key_exists('GroupName',$param) and $param['GroupName'] !== null) {
+            $this->GroupName = $param['GroupName'];
         }
 
-        if (array_key_exists("RealServerRegion",$param) and $param["RealServerRegion"] !== null) {
-            $this->RealServerRegion = $param["RealServerRegion"];
+        if (array_key_exists('RealServerRegion',$param) and $param['RealServerRegion'] !== null) {
+            $this->RealServerRegion = $param['RealServerRegion'];
         }
 
-        if (array_key_exists("TagSet",$param) and $param["TagSet"] !== null) {
+        if (array_key_exists('TagSet',$param) and $param['TagSet'] !== null) {
             $this->TagSet = [];
-            foreach ($param["TagSet"] as $key => $value){
+            foreach ($param['TagSet'] as $key => $value){
                 $obj = new TagPair();
                 $obj->deserialize($value);
                 array_push($this->TagSet, $obj);
             }
         }
 
-        if (array_key_exists("AccessRegionSet",$param) and $param["AccessRegionSet"] !== null) {
+        if (array_key_exists('AccessRegionSet',$param) and $param['AccessRegionSet'] !== null) {
             $this->AccessRegionSet = [];
-            foreach ($param["AccessRegionSet"] as $key => $value){
+            foreach ($param['AccessRegionSet'] as $key => $value){
                 $obj = new AccessConfiguration();
                 $obj->deserialize($value);
                 array_push($this->AccessRegionSet, $obj);

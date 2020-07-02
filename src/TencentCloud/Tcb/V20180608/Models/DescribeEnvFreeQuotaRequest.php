@@ -58,12 +58,12 @@ class DescribeEnvFreeQuotaRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("EnvId",$param) and $param["EnvId"] !== null) {
-            $this->EnvId = $param["EnvId"];
+        if (array_key_exists('EnvId',$param) and $param['EnvId'] !== null) {
+            $this->EnvId = $param['EnvId'];
         }
 
-        if (array_key_exists("ResourceTypes",$param) and $param["ResourceTypes"] !== null) {
-            $this->ResourceTypes = $param["ResourceTypes"];
+        if (array_key_exists('ResourceTypes',$param) and $param['ResourceTypes'] !== null) {
+            $this->ResourceTypes = $param['ResourceTypes'];
         }
     }
 }

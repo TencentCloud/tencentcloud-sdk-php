@@ -46,8 +46,8 @@ class SoInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SoFileNames",$param) and $param["SoFileNames"] !== null) {
-            $this->SoFileNames = $param["SoFileNames"];
+        if (array_key_exists('SoFileNames',$param) and $param['SoFileNames'] !== null) {
+            $this->SoFileNames = $param['SoFileNames'];
         }
     }
 }

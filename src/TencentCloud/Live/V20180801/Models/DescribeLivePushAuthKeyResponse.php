@@ -54,13 +54,13 @@ class DescribeLivePushAuthKeyResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PushAuthKeyInfo",$param) and $param["PushAuthKeyInfo"] !== null) {
+        if (array_key_exists('PushAuthKeyInfo',$param) and $param['PushAuthKeyInfo'] !== null) {
             $this->PushAuthKeyInfo = new PushAuthKeyInfo();
-            $this->PushAuthKeyInfo->deserialize($param["PushAuthKeyInfo"]);
+            $this->PushAuthKeyInfo->deserialize($param['PushAuthKeyInfo']);
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

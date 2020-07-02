@@ -46,9 +46,9 @@ class MediaSnapshotByTimeOffsetInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SnapshotByTimeOffsetSet",$param) and $param["SnapshotByTimeOffsetSet"] !== null) {
+        if (array_key_exists('SnapshotByTimeOffsetSet',$param) and $param['SnapshotByTimeOffsetSet'] !== null) {
             $this->SnapshotByTimeOffsetSet = [];
-            foreach ($param["SnapshotByTimeOffsetSet"] as $key => $value){
+            foreach ($param['SnapshotByTimeOffsetSet'] as $key => $value){
                 $obj = new MediaSnapshotByTimeOffsetItem();
                 $obj->deserialize($value);
                 array_push($this->SnapshotByTimeOffsetSet, $obj);

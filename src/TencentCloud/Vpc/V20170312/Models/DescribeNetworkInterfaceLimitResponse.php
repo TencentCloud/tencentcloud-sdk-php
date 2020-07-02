@@ -62,16 +62,16 @@ class DescribeNetworkInterfaceLimitResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("EniQuantity",$param) and $param["EniQuantity"] !== null) {
-            $this->EniQuantity = $param["EniQuantity"];
+        if (array_key_exists('EniQuantity',$param) and $param['EniQuantity'] !== null) {
+            $this->EniQuantity = $param['EniQuantity'];
         }
 
-        if (array_key_exists("EniPrivateIpAddressQuantity",$param) and $param["EniPrivateIpAddressQuantity"] !== null) {
-            $this->EniPrivateIpAddressQuantity = $param["EniPrivateIpAddressQuantity"];
+        if (array_key_exists('EniPrivateIpAddressQuantity',$param) and $param['EniPrivateIpAddressQuantity'] !== null) {
+            $this->EniPrivateIpAddressQuantity = $param['EniPrivateIpAddressQuantity'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

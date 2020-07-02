@@ -110,46 +110,46 @@ class MediaMetaData extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Size",$param) and $param["Size"] !== null) {
-            $this->Size = $param["Size"];
+        if (array_key_exists('Size',$param) and $param['Size'] !== null) {
+            $this->Size = $param['Size'];
         }
 
-        if (array_key_exists("Container",$param) and $param["Container"] !== null) {
-            $this->Container = $param["Container"];
+        if (array_key_exists('Container',$param) and $param['Container'] !== null) {
+            $this->Container = $param['Container'];
         }
 
-        if (array_key_exists("Bitrate",$param) and $param["Bitrate"] !== null) {
-            $this->Bitrate = $param["Bitrate"];
+        if (array_key_exists('Bitrate',$param) and $param['Bitrate'] !== null) {
+            $this->Bitrate = $param['Bitrate'];
         }
 
-        if (array_key_exists("Height",$param) and $param["Height"] !== null) {
-            $this->Height = $param["Height"];
+        if (array_key_exists('Height',$param) and $param['Height'] !== null) {
+            $this->Height = $param['Height'];
         }
 
-        if (array_key_exists("Width",$param) and $param["Width"] !== null) {
-            $this->Width = $param["Width"];
+        if (array_key_exists('Width',$param) and $param['Width'] !== null) {
+            $this->Width = $param['Width'];
         }
 
-        if (array_key_exists("Duration",$param) and $param["Duration"] !== null) {
-            $this->Duration = $param["Duration"];
+        if (array_key_exists('Duration',$param) and $param['Duration'] !== null) {
+            $this->Duration = $param['Duration'];
         }
 
-        if (array_key_exists("Rotate",$param) and $param["Rotate"] !== null) {
-            $this->Rotate = $param["Rotate"];
+        if (array_key_exists('Rotate',$param) and $param['Rotate'] !== null) {
+            $this->Rotate = $param['Rotate'];
         }
 
-        if (array_key_exists("VideoStreamInfoSet",$param) and $param["VideoStreamInfoSet"] !== null) {
+        if (array_key_exists('VideoStreamInfoSet',$param) and $param['VideoStreamInfoSet'] !== null) {
             $this->VideoStreamInfoSet = [];
-            foreach ($param["VideoStreamInfoSet"] as $key => $value){
+            foreach ($param['VideoStreamInfoSet'] as $key => $value){
                 $obj = new VideoStreamInfo();
                 $obj->deserialize($value);
                 array_push($this->VideoStreamInfoSet, $obj);
             }
         }
 
-        if (array_key_exists("AudioStreamInfoSet",$param) and $param["AudioStreamInfoSet"] !== null) {
+        if (array_key_exists('AudioStreamInfoSet',$param) and $param['AudioStreamInfoSet'] !== null) {
             $this->AudioStreamInfoSet = [];
-            foreach ($param["AudioStreamInfoSet"] as $key => $value){
+            foreach ($param['AudioStreamInfoSet'] as $key => $value){
                 $obj = new AudioStreamInfo();
                 $obj->deserialize($value);
                 array_push($this->AudioStreamInfoSet, $obj);

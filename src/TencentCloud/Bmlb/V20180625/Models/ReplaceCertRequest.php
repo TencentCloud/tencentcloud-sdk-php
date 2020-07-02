@@ -78,24 +78,24 @@ class ReplaceCertRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("OldCertId",$param) and $param["OldCertId"] !== null) {
-            $this->OldCertId = $param["OldCertId"];
+        if (array_key_exists('OldCertId',$param) and $param['OldCertId'] !== null) {
+            $this->OldCertId = $param['OldCertId'];
         }
 
-        if (array_key_exists("NewCert",$param) and $param["NewCert"] !== null) {
-            $this->NewCert = $param["NewCert"];
+        if (array_key_exists('NewCert',$param) and $param['NewCert'] !== null) {
+            $this->NewCert = $param['NewCert'];
         }
 
-        if (array_key_exists("NewAlias",$param) and $param["NewAlias"] !== null) {
-            $this->NewAlias = $param["NewAlias"];
+        if (array_key_exists('NewAlias',$param) and $param['NewAlias'] !== null) {
+            $this->NewAlias = $param['NewAlias'];
         }
 
-        if (array_key_exists("NewKey",$param) and $param["NewKey"] !== null) {
-            $this->NewKey = $param["NewKey"];
+        if (array_key_exists('NewKey',$param) and $param['NewKey'] !== null) {
+            $this->NewKey = $param['NewKey'];
         }
 
-        if (array_key_exists("DeleteOld",$param) and $param["DeleteOld"] !== null) {
-            $this->DeleteOld = $param["DeleteOld"];
+        if (array_key_exists('DeleteOld',$param) and $param['DeleteOld'] !== null) {
+            $this->DeleteOld = $param['DeleteOld'];
         }
     }
 }

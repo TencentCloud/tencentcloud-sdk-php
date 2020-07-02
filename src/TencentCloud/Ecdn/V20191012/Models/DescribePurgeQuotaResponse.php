@@ -62,18 +62,18 @@ class DescribePurgeQuotaResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("UrlPurge",$param) and $param["UrlPurge"] !== null) {
+        if (array_key_exists('UrlPurge',$param) and $param['UrlPurge'] !== null) {
             $this->UrlPurge = new Quota();
-            $this->UrlPurge->deserialize($param["UrlPurge"]);
+            $this->UrlPurge->deserialize($param['UrlPurge']);
         }
 
-        if (array_key_exists("PathPurge",$param) and $param["PathPurge"] !== null) {
+        if (array_key_exists('PathPurge',$param) and $param['PathPurge'] !== null) {
             $this->PathPurge = new Quota();
-            $this->PathPurge->deserialize($param["PathPurge"]);
+            $this->PathPurge->deserialize($param['PathPurge']);
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

@@ -86,28 +86,28 @@ class DescribeRepositoriesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RegistryId",$param) and $param["RegistryId"] !== null) {
-            $this->RegistryId = $param["RegistryId"];
+        if (array_key_exists('RegistryId',$param) and $param['RegistryId'] !== null) {
+            $this->RegistryId = $param['RegistryId'];
         }
 
-        if (array_key_exists("NamespaceName",$param) and $param["NamespaceName"] !== null) {
-            $this->NamespaceName = $param["NamespaceName"];
+        if (array_key_exists('NamespaceName',$param) and $param['NamespaceName'] !== null) {
+            $this->NamespaceName = $param['NamespaceName'];
         }
 
-        if (array_key_exists("RepositoryName",$param) and $param["RepositoryName"] !== null) {
-            $this->RepositoryName = $param["RepositoryName"];
+        if (array_key_exists('RepositoryName',$param) and $param['RepositoryName'] !== null) {
+            $this->RepositoryName = $param['RepositoryName'];
         }
 
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
+        if (array_key_exists('Offset',$param) and $param['Offset'] !== null) {
+            $this->Offset = $param['Offset'];
         }
 
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
+        if (array_key_exists('Limit',$param) and $param['Limit'] !== null) {
+            $this->Limit = $param['Limit'];
         }
 
-        if (array_key_exists("SortBy",$param) and $param["SortBy"] !== null) {
-            $this->SortBy = $param["SortBy"];
+        if (array_key_exists('SortBy',$param) and $param['SortBy'] !== null) {
+            $this->SortBy = $param['SortBy'];
         }
     }
 }

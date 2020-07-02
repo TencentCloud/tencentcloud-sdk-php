@@ -90,29 +90,29 @@ class DescribeCallerDisplayListResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AppId",$param) and $param["AppId"] !== null) {
-            $this->AppId = $param["AppId"];
+        if (array_key_exists('AppId',$param) and $param['AppId'] !== null) {
+            $this->AppId = $param['AppId'];
         }
 
-        if (array_key_exists("CodeList",$param) and $param["CodeList"] !== null) {
+        if (array_key_exists('CodeList',$param) and $param['CodeList'] !== null) {
             $this->CodeList = [];
-            foreach ($param["CodeList"] as $key => $value){
+            foreach ($param['CodeList'] as $key => $value){
                 $obj = new CallBackPhoneCode();
                 $obj->deserialize($value);
                 array_push($this->CodeList, $obj);
             }
         }
 
-        if (array_key_exists("ErrorCode",$param) and $param["ErrorCode"] !== null) {
-            $this->ErrorCode = $param["ErrorCode"];
+        if (array_key_exists('ErrorCode',$param) and $param['ErrorCode'] !== null) {
+            $this->ErrorCode = $param['ErrorCode'];
         }
 
-        if (array_key_exists("Msg",$param) and $param["Msg"] !== null) {
-            $this->Msg = $param["Msg"];
+        if (array_key_exists('Msg',$param) and $param['Msg'] !== null) {
+            $this->Msg = $param['Msg'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

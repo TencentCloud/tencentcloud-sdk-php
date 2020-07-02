@@ -62,21 +62,21 @@ class AssignPrivateIpAddressesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("NetworkInterfaceId",$param) and $param["NetworkInterfaceId"] !== null) {
-            $this->NetworkInterfaceId = $param["NetworkInterfaceId"];
+        if (array_key_exists('NetworkInterfaceId',$param) and $param['NetworkInterfaceId'] !== null) {
+            $this->NetworkInterfaceId = $param['NetworkInterfaceId'];
         }
 
-        if (array_key_exists("PrivateIpAddresses",$param) and $param["PrivateIpAddresses"] !== null) {
+        if (array_key_exists('PrivateIpAddresses',$param) and $param['PrivateIpAddresses'] !== null) {
             $this->PrivateIpAddresses = [];
-            foreach ($param["PrivateIpAddresses"] as $key => $value){
+            foreach ($param['PrivateIpAddresses'] as $key => $value){
                 $obj = new PrivateIpAddressSpecification();
                 $obj->deserialize($value);
                 array_push($this->PrivateIpAddresses, $obj);
             }
         }
 
-        if (array_key_exists("SecondaryPrivateIpAddressCount",$param) and $param["SecondaryPrivateIpAddressCount"] !== null) {
-            $this->SecondaryPrivateIpAddressCount = $param["SecondaryPrivateIpAddressCount"];
+        if (array_key_exists('SecondaryPrivateIpAddressCount',$param) and $param['SecondaryPrivateIpAddressCount'] !== null) {
+            $this->SecondaryPrivateIpAddressCount = $param['SecondaryPrivateIpAddressCount'];
         }
     }
 }

@@ -46,9 +46,9 @@ class MediaTranscodeInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TranscodeSet",$param) and $param["TranscodeSet"] !== null) {
+        if (array_key_exists('TranscodeSet',$param) and $param['TranscodeSet'] !== null) {
             $this->TranscodeSet = [];
-            foreach ($param["TranscodeSet"] as $key => $value){
+            foreach ($param['TranscodeSet'] as $key => $value){
                 $obj = new MediaTranscodeItem();
                 $obj->deserialize($value);
                 array_push($this->TranscodeSet, $obj);

@@ -78,24 +78,24 @@ class LogServiceInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LogsetName",$param) and $param["LogsetName"] !== null) {
-            $this->LogsetName = $param["LogsetName"];
+        if (array_key_exists('LogsetName',$param) and $param['LogsetName'] !== null) {
+            $this->LogsetName = $param['LogsetName'];
         }
 
-        if (array_key_exists("LogsetId",$param) and $param["LogsetId"] !== null) {
-            $this->LogsetId = $param["LogsetId"];
+        if (array_key_exists('LogsetId',$param) and $param['LogsetId'] !== null) {
+            $this->LogsetId = $param['LogsetId'];
         }
 
-        if (array_key_exists("TopicName",$param) and $param["TopicName"] !== null) {
-            $this->TopicName = $param["TopicName"];
+        if (array_key_exists('TopicName',$param) and $param['TopicName'] !== null) {
+            $this->TopicName = $param['TopicName'];
         }
 
-        if (array_key_exists("TopicId",$param) and $param["TopicId"] !== null) {
-            $this->TopicId = $param["TopicId"];
+        if (array_key_exists('TopicId',$param) and $param['TopicId'] !== null) {
+            $this->TopicId = $param['TopicId'];
         }
 
-        if (array_key_exists("Region",$param) and $param["Region"] !== null) {
-            $this->Region = $param["Region"];
+        if (array_key_exists('Region',$param) and $param['Region'] !== null) {
+            $this->Region = $param['Region'];
         }
     }
 }

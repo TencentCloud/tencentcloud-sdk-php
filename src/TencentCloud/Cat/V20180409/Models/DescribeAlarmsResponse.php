@@ -62,21 +62,21 @@ class DescribeAlarmsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("AlarmInfos",$param) and $param["AlarmInfos"] !== null) {
+        if (array_key_exists('AlarmInfos',$param) and $param['AlarmInfos'] !== null) {
             $this->AlarmInfos = [];
-            foreach ($param["AlarmInfos"] as $key => $value){
+            foreach ($param['AlarmInfos'] as $key => $value){
                 $obj = new AlarmInfo();
                 $obj->deserialize($value);
                 array_push($this->AlarmInfos, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

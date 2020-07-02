@@ -54,13 +54,13 @@ class DomainSets extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("DomainSet",$param) and $param["DomainSet"] !== null) {
+        if (array_key_exists('DomainSet',$param) and $param['DomainSet'] !== null) {
             $this->DomainSet = [];
-            foreach ($param["DomainSet"] as $key => $value){
+            foreach ($param['DomainSet'] as $key => $value){
                 $obj = new DomainSetList();
                 $obj->deserialize($value);
                 array_push($this->DomainSet, $obj);

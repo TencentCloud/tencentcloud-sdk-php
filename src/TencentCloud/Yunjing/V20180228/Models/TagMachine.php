@@ -94,32 +94,32 @@ class TagMachine extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
-            $this->Id = $param["Id"];
+        if (array_key_exists('Id',$param) and $param['Id'] !== null) {
+            $this->Id = $param['Id'];
         }
 
-        if (array_key_exists("Quuid",$param) and $param["Quuid"] !== null) {
-            $this->Quuid = $param["Quuid"];
+        if (array_key_exists('Quuid',$param) and $param['Quuid'] !== null) {
+            $this->Quuid = $param['Quuid'];
         }
 
-        if (array_key_exists("MachineName",$param) and $param["MachineName"] !== null) {
-            $this->MachineName = $param["MachineName"];
+        if (array_key_exists('MachineName',$param) and $param['MachineName'] !== null) {
+            $this->MachineName = $param['MachineName'];
         }
 
-        if (array_key_exists("MachineIp",$param) and $param["MachineIp"] !== null) {
-            $this->MachineIp = $param["MachineIp"];
+        if (array_key_exists('MachineIp',$param) and $param['MachineIp'] !== null) {
+            $this->MachineIp = $param['MachineIp'];
         }
 
-        if (array_key_exists("MachineWanIp",$param) and $param["MachineWanIp"] !== null) {
-            $this->MachineWanIp = $param["MachineWanIp"];
+        if (array_key_exists('MachineWanIp',$param) and $param['MachineWanIp'] !== null) {
+            $this->MachineWanIp = $param['MachineWanIp'];
         }
 
-        if (array_key_exists("MachineRegion",$param) and $param["MachineRegion"] !== null) {
-            $this->MachineRegion = $param["MachineRegion"];
+        if (array_key_exists('MachineRegion',$param) and $param['MachineRegion'] !== null) {
+            $this->MachineRegion = $param['MachineRegion'];
         }
 
-        if (array_key_exists("MachineType",$param) and $param["MachineType"] !== null) {
-            $this->MachineType = $param["MachineType"];
+        if (array_key_exists('MachineType',$param) and $param['MachineType'] !== null) {
+            $this->MachineType = $param['MachineType'];
         }
     }
 }

@@ -106,25 +106,25 @@ class CreateFileSampleRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Contents",$param) and $param["Contents"] !== null) {
+        if (array_key_exists('Contents',$param) and $param['Contents'] !== null) {
             $this->Contents = [];
-            foreach ($param["Contents"] as $key => $value){
+            foreach ($param['Contents'] as $key => $value){
                 $obj = new FileSample();
                 $obj->deserialize($value);
                 array_push($this->Contents, $obj);
             }
         }
 
-        if (array_key_exists("EvilType",$param) and $param["EvilType"] !== null) {
-            $this->EvilType = $param["EvilType"];
+        if (array_key_exists('EvilType',$param) and $param['EvilType'] !== null) {
+            $this->EvilType = $param['EvilType'];
         }
 
-        if (array_key_exists("FileType",$param) and $param["FileType"] !== null) {
-            $this->FileType = $param["FileType"];
+        if (array_key_exists('FileType',$param) and $param['FileType'] !== null) {
+            $this->FileType = $param['FileType'];
         }
 
-        if (array_key_exists("Label",$param) and $param["Label"] !== null) {
-            $this->Label = $param["Label"];
+        if (array_key_exists('Label',$param) and $param['Label'] !== null) {
+            $this->Label = $param['Label'];
         }
     }
 }

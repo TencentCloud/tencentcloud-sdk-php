@@ -102,41 +102,41 @@ class DescribeBillListResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TransactionList",$param) and $param["TransactionList"] !== null) {
+        if (array_key_exists('TransactionList',$param) and $param['TransactionList'] !== null) {
             $this->TransactionList = [];
-            foreach ($param["TransactionList"] as $key => $value){
+            foreach ($param['TransactionList'] as $key => $value){
                 $obj = new BillTransactionInfo();
                 $obj->deserialize($value);
                 array_push($this->TransactionList, $obj);
             }
         }
 
-        if (array_key_exists("Total",$param) and $param["Total"] !== null) {
-            $this->Total = $param["Total"];
+        if (array_key_exists('Total',$param) and $param['Total'] !== null) {
+            $this->Total = $param['Total'];
         }
 
-        if (array_key_exists("ReturnAmount",$param) and $param["ReturnAmount"] !== null) {
-            $this->ReturnAmount = $param["ReturnAmount"];
+        if (array_key_exists('ReturnAmount',$param) and $param['ReturnAmount'] !== null) {
+            $this->ReturnAmount = $param['ReturnAmount'];
         }
 
-        if (array_key_exists("RechargeAmount",$param) and $param["RechargeAmount"] !== null) {
-            $this->RechargeAmount = $param["RechargeAmount"];
+        if (array_key_exists('RechargeAmount',$param) and $param['RechargeAmount'] !== null) {
+            $this->RechargeAmount = $param['RechargeAmount'];
         }
 
-        if (array_key_exists("BlockAmount",$param) and $param["BlockAmount"] !== null) {
-            $this->BlockAmount = $param["BlockAmount"];
+        if (array_key_exists('BlockAmount',$param) and $param['BlockAmount'] !== null) {
+            $this->BlockAmount = $param['BlockAmount'];
         }
 
-        if (array_key_exists("UnblockAmount",$param) and $param["UnblockAmount"] !== null) {
-            $this->UnblockAmount = $param["UnblockAmount"];
+        if (array_key_exists('UnblockAmount',$param) and $param['UnblockAmount'] !== null) {
+            $this->UnblockAmount = $param['UnblockAmount'];
         }
 
-        if (array_key_exists("DeductAmount",$param) and $param["DeductAmount"] !== null) {
-            $this->DeductAmount = $param["DeductAmount"];
+        if (array_key_exists('DeductAmount',$param) and $param['DeductAmount'] !== null) {
+            $this->DeductAmount = $param['DeductAmount'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

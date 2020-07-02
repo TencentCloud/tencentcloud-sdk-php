@@ -18,7 +18,7 @@ namespace TencentCloud\Tics\V20181115\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * { "source": "inergj_ai_predict", "stamp": "msraminer", "time": 1531994023 }
+ * { 'source': "inergj_ai_predict", 'stamp': 'msraminer', 'time': 1531994023 }
  *
  * @method string getSource() 获取来源
  * @method void setSource(string $Source) 设置来源
@@ -62,16 +62,16 @@ class IntelligenceType extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Source",$param) and $param["Source"] !== null) {
-            $this->Source = $param["Source"];
+        if (array_key_exists('Source',$param) and $param['Source'] !== null) {
+            $this->Source = $param['Source'];
         }
 
-        if (array_key_exists("Stamp",$param) and $param["Stamp"] !== null) {
-            $this->Stamp = $param["Stamp"];
+        if (array_key_exists('Stamp',$param) and $param['Stamp'] !== null) {
+            $this->Stamp = $param['Stamp'];
         }
 
-        if (array_key_exists("Time",$param) and $param["Time"] !== null) {
-            $this->Time = $param["Time"];
+        if (array_key_exists('Time',$param) and $param['Time'] !== null) {
+            $this->Time = $param['Time'];
         }
     }
 }

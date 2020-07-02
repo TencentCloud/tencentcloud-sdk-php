@@ -62,21 +62,21 @@ class DescribeLifecycleHooksResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LifecycleHookSet",$param) and $param["LifecycleHookSet"] !== null) {
+        if (array_key_exists('LifecycleHookSet',$param) and $param['LifecycleHookSet'] !== null) {
             $this->LifecycleHookSet = [];
-            foreach ($param["LifecycleHookSet"] as $key => $value){
+            foreach ($param['LifecycleHookSet'] as $key => $value){
                 $obj = new LifecycleHook();
                 $obj->deserialize($value);
                 array_push($this->LifecycleHookSet, $obj);
             }
         }
 
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

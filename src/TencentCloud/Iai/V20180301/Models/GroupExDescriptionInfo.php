@@ -58,12 +58,12 @@ class GroupExDescriptionInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("GroupExDescriptionIndex",$param) and $param["GroupExDescriptionIndex"] !== null) {
-            $this->GroupExDescriptionIndex = $param["GroupExDescriptionIndex"];
+        if (array_key_exists('GroupExDescriptionIndex',$param) and $param['GroupExDescriptionIndex'] !== null) {
+            $this->GroupExDescriptionIndex = $param['GroupExDescriptionIndex'];
         }
 
-        if (array_key_exists("GroupExDescription",$param) and $param["GroupExDescription"] !== null) {
-            $this->GroupExDescription = $param["GroupExDescription"];
+        if (array_key_exists('GroupExDescription',$param) and $param['GroupExDescription'] !== null) {
+            $this->GroupExDescription = $param['GroupExDescription'];
         }
     }
 }

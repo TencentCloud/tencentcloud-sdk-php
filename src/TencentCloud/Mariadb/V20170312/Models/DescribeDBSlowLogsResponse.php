@@ -86,33 +86,33 @@ class DescribeDBSlowLogsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
+        if (array_key_exists('Data',$param) and $param['Data'] !== null) {
             $this->Data = [];
-            foreach ($param["Data"] as $key => $value){
+            foreach ($param['Data'] as $key => $value){
                 $obj = new SlowLogData();
                 $obj->deserialize($value);
                 array_push($this->Data, $obj);
             }
         }
 
-        if (array_key_exists("LockTimeSum",$param) and $param["LockTimeSum"] !== null) {
-            $this->LockTimeSum = $param["LockTimeSum"];
+        if (array_key_exists('LockTimeSum',$param) and $param['LockTimeSum'] !== null) {
+            $this->LockTimeSum = $param['LockTimeSum'];
         }
 
-        if (array_key_exists("QueryCount",$param) and $param["QueryCount"] !== null) {
-            $this->QueryCount = $param["QueryCount"];
+        if (array_key_exists('QueryCount',$param) and $param['QueryCount'] !== null) {
+            $this->QueryCount = $param['QueryCount'];
         }
 
-        if (array_key_exists("Total",$param) and $param["Total"] !== null) {
-            $this->Total = $param["Total"];
+        if (array_key_exists('Total',$param) and $param['Total'] !== null) {
+            $this->Total = $param['Total'];
         }
 
-        if (array_key_exists("QueryTimeSum",$param) and $param["QueryTimeSum"] !== null) {
-            $this->QueryTimeSum = $param["QueryTimeSum"];
+        if (array_key_exists('QueryTimeSum',$param) and $param['QueryTimeSum'] !== null) {
+            $this->QueryTimeSum = $param['QueryTimeSum'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

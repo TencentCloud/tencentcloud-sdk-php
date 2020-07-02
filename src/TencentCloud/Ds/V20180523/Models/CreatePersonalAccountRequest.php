@@ -86,28 +86,28 @@ class CreatePersonalAccountRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Module",$param) and $param["Module"] !== null) {
-            $this->Module = $param["Module"];
+        if (array_key_exists('Module',$param) and $param['Module'] !== null) {
+            $this->Module = $param['Module'];
         }
 
-        if (array_key_exists("Operation",$param) and $param["Operation"] !== null) {
-            $this->Operation = $param["Operation"];
+        if (array_key_exists('Operation',$param) and $param['Operation'] !== null) {
+            $this->Operation = $param['Operation'];
         }
 
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("IdentType",$param) and $param["IdentType"] !== null) {
-            $this->IdentType = $param["IdentType"];
+        if (array_key_exists('IdentType',$param) and $param['IdentType'] !== null) {
+            $this->IdentType = $param['IdentType'];
         }
 
-        if (array_key_exists("IdentNo",$param) and $param["IdentNo"] !== null) {
-            $this->IdentNo = $param["IdentNo"];
+        if (array_key_exists('IdentNo',$param) and $param['IdentNo'] !== null) {
+            $this->IdentNo = $param['IdentNo'];
         }
 
-        if (array_key_exists("MobilePhone",$param) and $param["MobilePhone"] !== null) {
-            $this->MobilePhone = $param["MobilePhone"];
+        if (array_key_exists('MobilePhone',$param) and $param['MobilePhone'] !== null) {
+            $this->MobilePhone = $param['MobilePhone'];
         }
     }
 }

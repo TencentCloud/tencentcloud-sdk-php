@@ -54,12 +54,12 @@ class DescribeTeamsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Platform",$param) and $param["Platform"] !== null) {
-            $this->Platform = $param["Platform"];
+        if (array_key_exists('Platform',$param) and $param['Platform'] !== null) {
+            $this->Platform = $param['Platform'];
         }
 
-        if (array_key_exists("TeamIds",$param) and $param["TeamIds"] !== null) {
-            $this->TeamIds = $param["TeamIds"];
+        if (array_key_exists('TeamIds',$param) and $param['TeamIds'] !== null) {
+            $this->TeamIds = $param['TeamIds'];
         }
     }
 }

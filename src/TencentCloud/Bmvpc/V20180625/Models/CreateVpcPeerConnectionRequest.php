@@ -86,28 +86,28 @@ class CreateVpcPeerConnectionRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
-            $this->VpcId = $param["VpcId"];
+        if (array_key_exists('VpcId',$param) and $param['VpcId'] !== null) {
+            $this->VpcId = $param['VpcId'];
         }
 
-        if (array_key_exists("PeerVpcId",$param) and $param["PeerVpcId"] !== null) {
-            $this->PeerVpcId = $param["PeerVpcId"];
+        if (array_key_exists('PeerVpcId',$param) and $param['PeerVpcId'] !== null) {
+            $this->PeerVpcId = $param['PeerVpcId'];
         }
 
-        if (array_key_exists("PeerRegion",$param) and $param["PeerRegion"] !== null) {
-            $this->PeerRegion = $param["PeerRegion"];
+        if (array_key_exists('PeerRegion',$param) and $param['PeerRegion'] !== null) {
+            $this->PeerRegion = $param['PeerRegion'];
         }
 
-        if (array_key_exists("VpcPeerConnectionName",$param) and $param["VpcPeerConnectionName"] !== null) {
-            $this->VpcPeerConnectionName = $param["VpcPeerConnectionName"];
+        if (array_key_exists('VpcPeerConnectionName',$param) and $param['VpcPeerConnectionName'] !== null) {
+            $this->VpcPeerConnectionName = $param['VpcPeerConnectionName'];
         }
 
-        if (array_key_exists("PeerUin",$param) and $param["PeerUin"] !== null) {
-            $this->PeerUin = $param["PeerUin"];
+        if (array_key_exists('PeerUin',$param) and $param['PeerUin'] !== null) {
+            $this->PeerUin = $param['PeerUin'];
         }
 
-        if (array_key_exists("Bandwidth",$param) and $param["Bandwidth"] !== null) {
-            $this->Bandwidth = $param["Bandwidth"];
+        if (array_key_exists('Bandwidth',$param) and $param['Bandwidth'] !== null) {
+            $this->Bandwidth = $param['Bandwidth'];
         }
     }
 }

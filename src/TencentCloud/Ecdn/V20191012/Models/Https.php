@@ -146,43 +146,43 @@ class Https extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Switch",$param) and $param["Switch"] !== null) {
-            $this->Switch = $param["Switch"];
+        if (array_key_exists('Switch',$param) and $param['Switch'] !== null) {
+            $this->Switch = $param['Switch'];
         }
 
-        if (array_key_exists("Http2",$param) and $param["Http2"] !== null) {
-            $this->Http2 = $param["Http2"];
+        if (array_key_exists('Http2',$param) and $param['Http2'] !== null) {
+            $this->Http2 = $param['Http2'];
         }
 
-        if (array_key_exists("OcspStapling",$param) and $param["OcspStapling"] !== null) {
-            $this->OcspStapling = $param["OcspStapling"];
+        if (array_key_exists('OcspStapling',$param) and $param['OcspStapling'] !== null) {
+            $this->OcspStapling = $param['OcspStapling'];
         }
 
-        if (array_key_exists("VerifyClient",$param) and $param["VerifyClient"] !== null) {
-            $this->VerifyClient = $param["VerifyClient"];
+        if (array_key_exists('VerifyClient',$param) and $param['VerifyClient'] !== null) {
+            $this->VerifyClient = $param['VerifyClient'];
         }
 
-        if (array_key_exists("CertInfo",$param) and $param["CertInfo"] !== null) {
+        if (array_key_exists('CertInfo',$param) and $param['CertInfo'] !== null) {
             $this->CertInfo = new ServerCert();
-            $this->CertInfo->deserialize($param["CertInfo"]);
+            $this->CertInfo->deserialize($param['CertInfo']);
         }
 
-        if (array_key_exists("ClientCertInfo",$param) and $param["ClientCertInfo"] !== null) {
+        if (array_key_exists('ClientCertInfo',$param) and $param['ClientCertInfo'] !== null) {
             $this->ClientCertInfo = new ClientCert();
-            $this->ClientCertInfo->deserialize($param["ClientCertInfo"]);
+            $this->ClientCertInfo->deserialize($param['ClientCertInfo']);
         }
 
-        if (array_key_exists("Spdy",$param) and $param["Spdy"] !== null) {
-            $this->Spdy = $param["Spdy"];
+        if (array_key_exists('Spdy',$param) and $param['Spdy'] !== null) {
+            $this->Spdy = $param['Spdy'];
         }
 
-        if (array_key_exists("SslStatus",$param) and $param["SslStatus"] !== null) {
-            $this->SslStatus = $param["SslStatus"];
+        if (array_key_exists('SslStatus',$param) and $param['SslStatus'] !== null) {
+            $this->SslStatus = $param['SslStatus'];
         }
 
-        if (array_key_exists("Hsts",$param) and $param["Hsts"] !== null) {
+        if (array_key_exists('Hsts',$param) and $param['Hsts'] !== null) {
             $this->Hsts = new Hsts();
-            $this->Hsts->deserialize($param["Hsts"]);
+            $this->Hsts->deserialize($param['Hsts']);
         }
     }
 }

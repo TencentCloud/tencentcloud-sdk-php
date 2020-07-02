@@ -62,21 +62,21 @@ class DescribeFlowLogsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FlowLog",$param) and $param["FlowLog"] !== null) {
+        if (array_key_exists('FlowLog',$param) and $param['FlowLog'] !== null) {
             $this->FlowLog = [];
-            foreach ($param["FlowLog"] as $key => $value){
+            foreach ($param['FlowLog'] as $key => $value){
                 $obj = new FlowLog();
                 $obj->deserialize($value);
                 array_push($this->FlowLog, $obj);
             }
         }
 
-        if (array_key_exists("TotalNum",$param) and $param["TotalNum"] !== null) {
-            $this->TotalNum = $param["TotalNum"];
+        if (array_key_exists('TotalNum',$param) and $param['TotalNum'] !== null) {
+            $this->TotalNum = $param['TotalNum'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

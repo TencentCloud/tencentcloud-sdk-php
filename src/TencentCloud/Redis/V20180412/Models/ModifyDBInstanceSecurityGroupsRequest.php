@@ -62,16 +62,16 @@ class ModifyDBInstanceSecurityGroupsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Product",$param) and $param["Product"] !== null) {
-            $this->Product = $param["Product"];
+        if (array_key_exists('Product',$param) and $param['Product'] !== null) {
+            $this->Product = $param['Product'];
         }
 
-        if (array_key_exists("SecurityGroupIds",$param) and $param["SecurityGroupIds"] !== null) {
-            $this->SecurityGroupIds = $param["SecurityGroupIds"];
+        if (array_key_exists('SecurityGroupIds',$param) and $param['SecurityGroupIds'] !== null) {
+            $this->SecurityGroupIds = $param['SecurityGroupIds'];
         }
 
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
     }
 }

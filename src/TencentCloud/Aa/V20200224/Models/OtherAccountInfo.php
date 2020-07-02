@@ -82,16 +82,16 @@ AccountType是10004时，填入手机号的MD5值。
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AccountId",$param) and $param["AccountId"] !== null) {
-            $this->AccountId = $param["AccountId"];
+        if (array_key_exists('AccountId',$param) and $param['AccountId'] !== null) {
+            $this->AccountId = $param['AccountId'];
         }
 
-        if (array_key_exists("MobilePhone",$param) and $param["MobilePhone"] !== null) {
-            $this->MobilePhone = $param["MobilePhone"];
+        if (array_key_exists('MobilePhone',$param) and $param['MobilePhone'] !== null) {
+            $this->MobilePhone = $param['MobilePhone'];
         }
 
-        if (array_key_exists("DeviceId",$param) and $param["DeviceId"] !== null) {
-            $this->DeviceId = $param["DeviceId"];
+        if (array_key_exists('DeviceId',$param) and $param['DeviceId'] !== null) {
+            $this->DeviceId = $param['DeviceId'];
         }
     }
 }

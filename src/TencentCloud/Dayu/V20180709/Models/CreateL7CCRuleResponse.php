@@ -54,17 +54,17 @@ class CreateL7CCRuleResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RuleConfig",$param) and $param["RuleConfig"] !== null) {
+        if (array_key_exists('RuleConfig',$param) and $param['RuleConfig'] !== null) {
             $this->RuleConfig = [];
-            foreach ($param["RuleConfig"] as $key => $value){
+            foreach ($param['RuleConfig'] as $key => $value){
                 $obj = new CCRuleConfig();
                 $obj->deserialize($value);
                 array_push($this->RuleConfig, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

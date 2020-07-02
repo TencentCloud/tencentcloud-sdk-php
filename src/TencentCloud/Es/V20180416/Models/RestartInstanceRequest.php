@@ -54,12 +54,12 @@ class RestartInstanceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("ForceRestart",$param) and $param["ForceRestart"] !== null) {
-            $this->ForceRestart = $param["ForceRestart"];
+        if (array_key_exists('ForceRestart',$param) and $param['ForceRestart'] !== null) {
+            $this->ForceRestart = $param['ForceRestart'];
         }
     }
 }

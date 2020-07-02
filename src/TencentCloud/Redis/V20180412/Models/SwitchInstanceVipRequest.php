@@ -78,24 +78,24 @@ class SwitchInstanceVipRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SrcInstanceId",$param) and $param["SrcInstanceId"] !== null) {
-            $this->SrcInstanceId = $param["SrcInstanceId"];
+        if (array_key_exists('SrcInstanceId',$param) and $param['SrcInstanceId'] !== null) {
+            $this->SrcInstanceId = $param['SrcInstanceId'];
         }
 
-        if (array_key_exists("DstInstanceId",$param) and $param["DstInstanceId"] !== null) {
-            $this->DstInstanceId = $param["DstInstanceId"];
+        if (array_key_exists('DstInstanceId',$param) and $param['DstInstanceId'] !== null) {
+            $this->DstInstanceId = $param['DstInstanceId'];
         }
 
-        if (array_key_exists("TimeDelay",$param) and $param["TimeDelay"] !== null) {
-            $this->TimeDelay = $param["TimeDelay"];
+        if (array_key_exists('TimeDelay',$param) and $param['TimeDelay'] !== null) {
+            $this->TimeDelay = $param['TimeDelay'];
         }
 
-        if (array_key_exists("ForceSwitch",$param) and $param["ForceSwitch"] !== null) {
-            $this->ForceSwitch = $param["ForceSwitch"];
+        if (array_key_exists('ForceSwitch',$param) and $param['ForceSwitch'] !== null) {
+            $this->ForceSwitch = $param['ForceSwitch'];
         }
 
-        if (array_key_exists("SwitchTime",$param) and $param["SwitchTime"] !== null) {
-            $this->SwitchTime = $param["SwitchTime"];
+        if (array_key_exists('SwitchTime',$param) and $param['SwitchTime'] !== null) {
+            $this->SwitchTime = $param['SwitchTime'];
         }
     }
 }

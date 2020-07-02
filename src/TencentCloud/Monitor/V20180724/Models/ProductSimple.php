@@ -66,16 +66,16 @@ class ProductSimple extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Namespace",$param) and $param["Namespace"] !== null) {
-            $this->Namespace = $param["Namespace"];
+        if (array_key_exists('Namespace',$param) and $param['Namespace'] !== null) {
+            $this->Namespace = $param['Namespace'];
         }
 
-        if (array_key_exists("ProductName",$param) and $param["ProductName"] !== null) {
-            $this->ProductName = $param["ProductName"];
+        if (array_key_exists('ProductName',$param) and $param['ProductName'] !== null) {
+            $this->ProductName = $param['ProductName'];
         }
 
-        if (array_key_exists("ProductEnName",$param) and $param["ProductEnName"] !== null) {
-            $this->ProductEnName = $param["ProductEnName"];
+        if (array_key_exists('ProductEnName',$param) and $param['ProductEnName'] !== null) {
+            $this->ProductEnName = $param['ProductEnName'];
         }
     }
 }

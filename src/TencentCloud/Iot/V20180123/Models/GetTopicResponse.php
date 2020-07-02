@@ -54,13 +54,13 @@ class GetTopicResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Topic",$param) and $param["Topic"] !== null) {
+        if (array_key_exists('Topic',$param) and $param['Topic'] !== null) {
             $this->Topic = new Topic();
-            $this->Topic->deserialize($param["Topic"]);
+            $this->Topic->deserialize($param['Topic']);
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

@@ -62,21 +62,21 @@ class DescribeScanResultsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ScanSet",$param) and $param["ScanSet"] !== null) {
+        if (array_key_exists('ScanSet',$param) and $param['ScanSet'] !== null) {
             $this->ScanSet = [];
-            foreach ($param["ScanSet"] as $key => $value){
+            foreach ($param['ScanSet'] as $key => $value){
                 $obj = new ScanSetInfo();
                 $obj->deserialize($value);
                 array_push($this->ScanSet, $obj);
             }
         }
 
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

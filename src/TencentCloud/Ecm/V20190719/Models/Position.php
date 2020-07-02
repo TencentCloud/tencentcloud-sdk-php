@@ -86,34 +86,34 @@ class Position extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ZoneInfo",$param) and $param["ZoneInfo"] !== null) {
+        if (array_key_exists('ZoneInfo',$param) and $param['ZoneInfo'] !== null) {
             $this->ZoneInfo = new ZoneInfo();
-            $this->ZoneInfo->deserialize($param["ZoneInfo"]);
+            $this->ZoneInfo->deserialize($param['ZoneInfo']);
         }
 
-        if (array_key_exists("Country",$param) and $param["Country"] !== null) {
+        if (array_key_exists('Country',$param) and $param['Country'] !== null) {
             $this->Country = new Country();
-            $this->Country->deserialize($param["Country"]);
+            $this->Country->deserialize($param['Country']);
         }
 
-        if (array_key_exists("Area",$param) and $param["Area"] !== null) {
+        if (array_key_exists('Area',$param) and $param['Area'] !== null) {
             $this->Area = new Area();
-            $this->Area->deserialize($param["Area"]);
+            $this->Area->deserialize($param['Area']);
         }
 
-        if (array_key_exists("Province",$param) and $param["Province"] !== null) {
+        if (array_key_exists('Province',$param) and $param['Province'] !== null) {
             $this->Province = new Province();
-            $this->Province->deserialize($param["Province"]);
+            $this->Province->deserialize($param['Province']);
         }
 
-        if (array_key_exists("City",$param) and $param["City"] !== null) {
+        if (array_key_exists('City',$param) and $param['City'] !== null) {
             $this->City = new City();
-            $this->City->deserialize($param["City"]);
+            $this->City->deserialize($param['City']);
         }
 
-        if (array_key_exists("RegionInfo",$param) and $param["RegionInfo"] !== null) {
+        if (array_key_exists('RegionInfo',$param) and $param['RegionInfo'] !== null) {
             $this->RegionInfo = new RegionInfo();
-            $this->RegionInfo->deserialize($param["RegionInfo"]);
+            $this->RegionInfo->deserialize($param['RegionInfo']);
         }
     }
 }

@@ -58,8 +58,8 @@ overseas：境外计费方式查询
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Area",$param) and $param["Area"] !== null) {
-            $this->Area = $param["Area"];
+        if (array_key_exists('Area',$param) and $param['Area'] !== null) {
+            $this->Area = $param['Area'];
         }
     }
 }

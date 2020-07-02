@@ -182,52 +182,52 @@ class WithdrawItem extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BookingFlag",$param) and $param["BookingFlag"] !== null) {
-            $this->BookingFlag = $param["BookingFlag"];
+        if (array_key_exists('BookingFlag',$param) and $param['BookingFlag'] !== null) {
+            $this->BookingFlag = $param['BookingFlag'];
         }
 
-        if (array_key_exists("TranStatus",$param) and $param["TranStatus"] !== null) {
-            $this->TranStatus = $param["TranStatus"];
+        if (array_key_exists('TranStatus',$param) and $param['TranStatus'] !== null) {
+            $this->TranStatus = $param['TranStatus'];
         }
 
-        if (array_key_exists("BookingMsg",$param) and $param["BookingMsg"] !== null) {
-            $this->BookingMsg = $param["BookingMsg"];
+        if (array_key_exists('BookingMsg',$param) and $param['BookingMsg'] !== null) {
+            $this->BookingMsg = $param['BookingMsg'];
         }
 
-        if (array_key_exists("TranNetMemberCode",$param) and $param["TranNetMemberCode"] !== null) {
-            $this->TranNetMemberCode = $param["TranNetMemberCode"];
+        if (array_key_exists('TranNetMemberCode',$param) and $param['TranNetMemberCode'] !== null) {
+            $this->TranNetMemberCode = $param['TranNetMemberCode'];
         }
 
-        if (array_key_exists("SubAcctNo",$param) and $param["SubAcctNo"] !== null) {
-            $this->SubAcctNo = $param["SubAcctNo"];
+        if (array_key_exists('SubAcctNo',$param) and $param['SubAcctNo'] !== null) {
+            $this->SubAcctNo = $param['SubAcctNo'];
         }
 
-        if (array_key_exists("SubAcctName",$param) and $param["SubAcctName"] !== null) {
-            $this->SubAcctName = $param["SubAcctName"];
+        if (array_key_exists('SubAcctName',$param) and $param['SubAcctName'] !== null) {
+            $this->SubAcctName = $param['SubAcctName'];
         }
 
-        if (array_key_exists("TranAmt",$param) and $param["TranAmt"] !== null) {
-            $this->TranAmt = $param["TranAmt"];
+        if (array_key_exists('TranAmt',$param) and $param['TranAmt'] !== null) {
+            $this->TranAmt = $param['TranAmt'];
         }
 
-        if (array_key_exists("Commission",$param) and $param["Commission"] !== null) {
-            $this->Commission = $param["Commission"];
+        if (array_key_exists('Commission',$param) and $param['Commission'] !== null) {
+            $this->Commission = $param['Commission'];
         }
 
-        if (array_key_exists("TranDate",$param) and $param["TranDate"] !== null) {
-            $this->TranDate = $param["TranDate"];
+        if (array_key_exists('TranDate',$param) and $param['TranDate'] !== null) {
+            $this->TranDate = $param['TranDate'];
         }
 
-        if (array_key_exists("TranTime",$param) and $param["TranTime"] !== null) {
-            $this->TranTime = $param["TranTime"];
+        if (array_key_exists('TranTime',$param) and $param['TranTime'] !== null) {
+            $this->TranTime = $param['TranTime'];
         }
 
-        if (array_key_exists("FrontSeqNo",$param) and $param["FrontSeqNo"] !== null) {
-            $this->FrontSeqNo = $param["FrontSeqNo"];
+        if (array_key_exists('FrontSeqNo',$param) and $param['FrontSeqNo'] !== null) {
+            $this->FrontSeqNo = $param['FrontSeqNo'];
         }
 
-        if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
-            $this->Remark = $param["Remark"];
+        if (array_key_exists('Remark',$param) and $param['Remark'] !== null) {
+            $this->Remark = $param['Remark'];
         }
     }
 }

@@ -66,16 +66,16 @@ class WatermarkCycleConfigForUpdate extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
-            $this->StartTime = $param["StartTime"];
+        if (array_key_exists('StartTime',$param) and $param['StartTime'] !== null) {
+            $this->StartTime = $param['StartTime'];
         }
 
-        if (array_key_exists("DisplayDuration",$param) and $param["DisplayDuration"] !== null) {
-            $this->DisplayDuration = $param["DisplayDuration"];
+        if (array_key_exists('DisplayDuration',$param) and $param['DisplayDuration'] !== null) {
+            $this->DisplayDuration = $param['DisplayDuration'];
         }
 
-        if (array_key_exists("CycleDuration",$param) and $param["CycleDuration"] !== null) {
-            $this->CycleDuration = $param["CycleDuration"];
+        if (array_key_exists('CycleDuration',$param) and $param['CycleDuration'] !== null) {
+            $this->CycleDuration = $param['CycleDuration'];
         }
     }
 }

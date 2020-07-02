@@ -54,12 +54,12 @@ class TraceInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TraceId",$param) and $param["TraceId"] !== null) {
-            $this->TraceId = $param["TraceId"];
+        if (array_key_exists('TraceId',$param) and $param['TraceId'] !== null) {
+            $this->TraceId = $param['TraceId'];
         }
 
-        if (array_key_exists("BodyIds",$param) and $param["BodyIds"] !== null) {
-            $this->BodyIds = $param["BodyIds"];
+        if (array_key_exists('BodyIds',$param) and $param['BodyIds'] !== null) {
+            $this->BodyIds = $param['BodyIds'];
         }
     }
 }

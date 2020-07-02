@@ -62,21 +62,21 @@ class DetectBodyResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BodyDetectResults",$param) and $param["BodyDetectResults"] !== null) {
+        if (array_key_exists('BodyDetectResults',$param) and $param['BodyDetectResults'] !== null) {
             $this->BodyDetectResults = [];
-            foreach ($param["BodyDetectResults"] as $key => $value){
+            foreach ($param['BodyDetectResults'] as $key => $value){
                 $obj = new BodyDetectResult();
                 $obj->deserialize($value);
                 array_push($this->BodyDetectResults, $obj);
             }
         }
 
-        if (array_key_exists("BodyModelVersion",$param) and $param["BodyModelVersion"] !== null) {
-            $this->BodyModelVersion = $param["BodyModelVersion"];
+        if (array_key_exists('BodyModelVersion',$param) and $param['BodyModelVersion'] !== null) {
+            $this->BodyModelVersion = $param['BodyModelVersion'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

@@ -114,28 +114,28 @@ BLOCK：违规
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Code",$param) and $param["Code"] !== null) {
-            $this->Code = $param["Code"];
+        if (array_key_exists('Code',$param) and $param['Code'] !== null) {
+            $this->Code = $param['Code'];
         }
 
-        if (array_key_exists("Msg",$param) and $param["Msg"] !== null) {
-            $this->Msg = $param["Msg"];
+        if (array_key_exists('Msg',$param) and $param['Msg'] !== null) {
+            $this->Msg = $param['Msg'];
         }
 
-        if (array_key_exists("Suggestion",$param) and $param["Suggestion"] !== null) {
-            $this->Suggestion = $param["Suggestion"];
+        if (array_key_exists('Suggestion',$param) and $param['Suggestion'] !== null) {
+            $this->Suggestion = $param['Suggestion'];
         }
 
-        if (array_key_exists("Confidence",$param) and $param["Confidence"] !== null) {
-            $this->Confidence = $param["Confidence"];
+        if (array_key_exists('Confidence',$param) and $param['Confidence'] !== null) {
+            $this->Confidence = $param['Confidence'];
         }
 
-        if (array_key_exists("AdvancedInfo",$param) and $param["AdvancedInfo"] !== null) {
-            $this->AdvancedInfo = $param["AdvancedInfo"];
+        if (array_key_exists('AdvancedInfo',$param) and $param['AdvancedInfo'] !== null) {
+            $this->AdvancedInfo = $param['AdvancedInfo'];
         }
 
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists('Type',$param) and $param['Type'] !== null) {
+            $this->Type = $param['Type'];
         }
     }
 }

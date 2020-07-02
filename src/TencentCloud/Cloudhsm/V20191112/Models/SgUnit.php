@@ -86,20 +86,20 @@ class SgUnit extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SgId",$param) and $param["SgId"] !== null) {
-            $this->SgId = $param["SgId"];
+        if (array_key_exists('SgId',$param) and $param['SgId'] !== null) {
+            $this->SgId = $param['SgId'];
         }
 
-        if (array_key_exists("SgName",$param) and $param["SgName"] !== null) {
-            $this->SgName = $param["SgName"];
+        if (array_key_exists('SgName',$param) and $param['SgName'] !== null) {
+            $this->SgName = $param['SgName'];
         }
 
-        if (array_key_exists("SgRemark",$param) and $param["SgRemark"] !== null) {
-            $this->SgRemark = $param["SgRemark"];
+        if (array_key_exists('SgRemark',$param) and $param['SgRemark'] !== null) {
+            $this->SgRemark = $param['SgRemark'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
     }
 }

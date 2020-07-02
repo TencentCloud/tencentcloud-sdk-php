@@ -54,12 +54,12 @@ class AssociateSubDeviceToGatewayProductRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SubDeviceProductId",$param) and $param["SubDeviceProductId"] !== null) {
-            $this->SubDeviceProductId = $param["SubDeviceProductId"];
+        if (array_key_exists('SubDeviceProductId',$param) and $param['SubDeviceProductId'] !== null) {
+            $this->SubDeviceProductId = $param['SubDeviceProductId'];
         }
 
-        if (array_key_exists("GatewayProductId",$param) and $param["GatewayProductId"] !== null) {
-            $this->GatewayProductId = $param["GatewayProductId"];
+        if (array_key_exists('GatewayProductId',$param) and $param['GatewayProductId'] !== null) {
+            $this->GatewayProductId = $param['GatewayProductId'];
         }
     }
 }

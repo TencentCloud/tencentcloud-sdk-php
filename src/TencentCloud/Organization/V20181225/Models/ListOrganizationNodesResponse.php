@@ -54,17 +54,17 @@ class ListOrganizationNodesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Nodes",$param) and $param["Nodes"] !== null) {
+        if (array_key_exists('Nodes',$param) and $param['Nodes'] !== null) {
             $this->Nodes = [];
-            foreach ($param["Nodes"] as $key => $value){
+            foreach ($param['Nodes'] as $key => $value){
                 $obj = new OrgNode();
                 $obj->deserialize($value);
                 array_push($this->Nodes, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

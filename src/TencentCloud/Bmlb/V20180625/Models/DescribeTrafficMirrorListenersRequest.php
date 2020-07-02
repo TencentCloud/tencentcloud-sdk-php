@@ -118,44 +118,44 @@ class DescribeTrafficMirrorListenersRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TrafficMirrorId",$param) and $param["TrafficMirrorId"] !== null) {
-            $this->TrafficMirrorId = $param["TrafficMirrorId"];
+        if (array_key_exists('TrafficMirrorId',$param) and $param['TrafficMirrorId'] !== null) {
+            $this->TrafficMirrorId = $param['TrafficMirrorId'];
         }
 
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
+        if (array_key_exists('Offset',$param) and $param['Offset'] !== null) {
+            $this->Offset = $param['Offset'];
         }
 
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
+        if (array_key_exists('Limit',$param) and $param['Limit'] !== null) {
+            $this->Limit = $param['Limit'];
         }
 
-        if (array_key_exists("SearchLoadBalancerIds",$param) and $param["SearchLoadBalancerIds"] !== null) {
-            $this->SearchLoadBalancerIds = $param["SearchLoadBalancerIds"];
+        if (array_key_exists('SearchLoadBalancerIds',$param) and $param['SearchLoadBalancerIds'] !== null) {
+            $this->SearchLoadBalancerIds = $param['SearchLoadBalancerIds'];
         }
 
-        if (array_key_exists("SearchLoadBalancerNames",$param) and $param["SearchLoadBalancerNames"] !== null) {
-            $this->SearchLoadBalancerNames = $param["SearchLoadBalancerNames"];
+        if (array_key_exists('SearchLoadBalancerNames',$param) and $param['SearchLoadBalancerNames'] !== null) {
+            $this->SearchLoadBalancerNames = $param['SearchLoadBalancerNames'];
         }
 
-        if (array_key_exists("SearchVips",$param) and $param["SearchVips"] !== null) {
-            $this->SearchVips = $param["SearchVips"];
+        if (array_key_exists('SearchVips',$param) and $param['SearchVips'] !== null) {
+            $this->SearchVips = $param['SearchVips'];
         }
 
-        if (array_key_exists("SearchListenerIds",$param) and $param["SearchListenerIds"] !== null) {
-            $this->SearchListenerIds = $param["SearchListenerIds"];
+        if (array_key_exists('SearchListenerIds',$param) and $param['SearchListenerIds'] !== null) {
+            $this->SearchListenerIds = $param['SearchListenerIds'];
         }
 
-        if (array_key_exists("SearchListenerNames",$param) and $param["SearchListenerNames"] !== null) {
-            $this->SearchListenerNames = $param["SearchListenerNames"];
+        if (array_key_exists('SearchListenerNames',$param) and $param['SearchListenerNames'] !== null) {
+            $this->SearchListenerNames = $param['SearchListenerNames'];
         }
 
-        if (array_key_exists("SearchProtocols",$param) and $param["SearchProtocols"] !== null) {
-            $this->SearchProtocols = $param["SearchProtocols"];
+        if (array_key_exists('SearchProtocols',$param) and $param['SearchProtocols'] !== null) {
+            $this->SearchProtocols = $param['SearchProtocols'];
         }
 
-        if (array_key_exists("SearchLoadBalancerPorts",$param) and $param["SearchLoadBalancerPorts"] !== null) {
-            $this->SearchLoadBalancerPorts = $param["SearchLoadBalancerPorts"];
+        if (array_key_exists('SearchLoadBalancerPorts',$param) and $param['SearchLoadBalancerPorts'] !== null) {
+            $this->SearchLoadBalancerPorts = $param['SearchLoadBalancerPorts'];
         }
     }
 }

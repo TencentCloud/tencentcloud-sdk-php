@@ -54,12 +54,12 @@ class ModifyDBInstanceProjectRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceIdSet",$param) and $param["InstanceIdSet"] !== null) {
-            $this->InstanceIdSet = $param["InstanceIdSet"];
+        if (array_key_exists('InstanceIdSet',$param) and $param['InstanceIdSet'] !== null) {
+            $this->InstanceIdSet = $param['InstanceIdSet'];
         }
 
-        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
-            $this->ProjectId = $param["ProjectId"];
+        if (array_key_exists('ProjectId',$param) and $param['ProjectId'] !== null) {
+            $this->ProjectId = $param['ProjectId'];
         }
     }
 }

@@ -110,32 +110,32 @@ class ReplicaInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("EniIp",$param) and $param["EniIp"] !== null) {
-            $this->EniIp = $param["EniIp"];
+        if (array_key_exists('EniIp',$param) and $param['EniIp'] !== null) {
+            $this->EniIp = $param['EniIp'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("Message",$param) and $param["Message"] !== null) {
-            $this->Message = $param["Message"];
+        if (array_key_exists('Message',$param) and $param['Message'] !== null) {
+            $this->Message = $param['Message'];
         }
 
-        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
-            $this->StartTime = $param["StartTime"];
+        if (array_key_exists('StartTime',$param) and $param['StartTime'] !== null) {
+            $this->StartTime = $param['StartTime'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("Restarted",$param) and $param["Restarted"] !== null) {
-            $this->Restarted = $param["Restarted"];
+        if (array_key_exists('Restarted',$param) and $param['Restarted'] !== null) {
+            $this->Restarted = $param['Restarted'];
         }
     }
 }

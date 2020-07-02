@@ -86,28 +86,28 @@ class ClsLogObject extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TopicId",$param) and $param["TopicId"] !== null) {
-            $this->TopicId = $param["TopicId"];
+        if (array_key_exists('TopicId',$param) and $param['TopicId'] !== null) {
+            $this->TopicId = $param['TopicId'];
         }
 
-        if (array_key_exists("TopicName",$param) and $param["TopicName"] !== null) {
-            $this->TopicName = $param["TopicName"];
+        if (array_key_exists('TopicName',$param) and $param['TopicName'] !== null) {
+            $this->TopicName = $param['TopicName'];
         }
 
-        if (array_key_exists("Timestamp",$param) and $param["Timestamp"] !== null) {
-            $this->Timestamp = $param["Timestamp"];
+        if (array_key_exists('Timestamp',$param) and $param['Timestamp'] !== null) {
+            $this->Timestamp = $param['Timestamp'];
         }
 
-        if (array_key_exists("Content",$param) and $param["Content"] !== null) {
-            $this->Content = $param["Content"];
+        if (array_key_exists('Content',$param) and $param['Content'] !== null) {
+            $this->Content = $param['Content'];
         }
 
-        if (array_key_exists("Filename",$param) and $param["Filename"] !== null) {
-            $this->Filename = $param["Filename"];
+        if (array_key_exists('Filename',$param) and $param['Filename'] !== null) {
+            $this->Filename = $param['Filename'];
         }
 
-        if (array_key_exists("Source",$param) and $param["Source"] !== null) {
-            $this->Source = $param["Source"];
+        if (array_key_exists('Source',$param) and $param['Source'] !== null) {
+            $this->Source = $param['Source'];
         }
     }
 }

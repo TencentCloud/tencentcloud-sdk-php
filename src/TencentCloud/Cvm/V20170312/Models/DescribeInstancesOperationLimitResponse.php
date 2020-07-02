@@ -54,17 +54,17 @@ class DescribeInstancesOperationLimitResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceOperationLimitSet",$param) and $param["InstanceOperationLimitSet"] !== null) {
+        if (array_key_exists('InstanceOperationLimitSet',$param) and $param['InstanceOperationLimitSet'] !== null) {
             $this->InstanceOperationLimitSet = [];
-            foreach ($param["InstanceOperationLimitSet"] as $key => $value){
+            foreach ($param['InstanceOperationLimitSet'] as $key => $value){
                 $obj = new OperationCountLimit();
                 $obj->deserialize($value);
                 array_push($this->InstanceOperationLimitSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

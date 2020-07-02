@@ -102,16 +102,16 @@ class DescribeMediaInfosRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FileIds",$param) and $param["FileIds"] !== null) {
-            $this->FileIds = $param["FileIds"];
+        if (array_key_exists('FileIds',$param) and $param['FileIds'] !== null) {
+            $this->FileIds = $param['FileIds'];
         }
 
-        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
-            $this->Filters = $param["Filters"];
+        if (array_key_exists('Filters',$param) and $param['Filters'] !== null) {
+            $this->Filters = $param['Filters'];
         }
 
-        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
-            $this->SubAppId = $param["SubAppId"];
+        if (array_key_exists('SubAppId',$param) and $param['SubAppId'] !== null) {
+            $this->SubAppId = $param['SubAppId'];
         }
     }
 }

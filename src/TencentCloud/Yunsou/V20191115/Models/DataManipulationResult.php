@@ -86,29 +86,29 @@ class DataManipulationResult extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AppId",$param) and $param["AppId"] !== null) {
-            $this->AppId = $param["AppId"];
+        if (array_key_exists('AppId',$param) and $param['AppId'] !== null) {
+            $this->AppId = $param['AppId'];
         }
 
-        if (array_key_exists("Seq",$param) and $param["Seq"] !== null) {
-            $this->Seq = $param["Seq"];
+        if (array_key_exists('Seq',$param) and $param['Seq'] !== null) {
+            $this->Seq = $param['Seq'];
         }
 
-        if (array_key_exists("TotalResult",$param) and $param["TotalResult"] !== null) {
-            $this->TotalResult = $param["TotalResult"];
+        if (array_key_exists('TotalResult',$param) and $param['TotalResult'] !== null) {
+            $this->TotalResult = $param['TotalResult'];
         }
 
-        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
+        if (array_key_exists('Result',$param) and $param['Result'] !== null) {
             $this->Result = [];
-            foreach ($param["Result"] as $key => $value){
+            foreach ($param['Result'] as $key => $value){
                 $obj = new DataManipulationResultItem();
                 $obj->deserialize($value);
                 array_push($this->Result, $obj);
             }
         }
 
-        if (array_key_exists("ErrorResult",$param) and $param["ErrorResult"] !== null) {
-            $this->ErrorResult = $param["ErrorResult"];
+        if (array_key_exists('ErrorResult',$param) and $param['ErrorResult'] !== null) {
+            $this->ErrorResult = $param['ErrorResult'];
         }
     }
 }

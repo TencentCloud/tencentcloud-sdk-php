@@ -54,12 +54,12 @@ class HttpStatusInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("HttpStatus",$param) and $param["HttpStatus"] !== null) {
-            $this->HttpStatus = $param["HttpStatus"];
+        if (array_key_exists('HttpStatus',$param) and $param['HttpStatus'] !== null) {
+            $this->HttpStatus = $param['HttpStatus'];
         }
 
-        if (array_key_exists("Num",$param) and $param["Num"] !== null) {
-            $this->Num = $param["Num"];
+        if (array_key_exists('Num',$param) and $param['Num'] !== null) {
+            $this->Num = $param['Num'];
         }
     }
 }

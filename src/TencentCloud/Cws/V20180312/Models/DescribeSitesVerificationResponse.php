@@ -62,21 +62,21 @@ class DescribeSitesVerificationResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("SitesVerification",$param) and $param["SitesVerification"] !== null) {
+        if (array_key_exists('SitesVerification',$param) and $param['SitesVerification'] !== null) {
             $this->SitesVerification = [];
-            foreach ($param["SitesVerification"] as $key => $value){
+            foreach ($param['SitesVerification'] as $key => $value){
                 $obj = new SitesVerification();
                 $obj->deserialize($value);
                 array_push($this->SitesVerification, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

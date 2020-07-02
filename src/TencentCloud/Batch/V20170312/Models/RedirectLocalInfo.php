@@ -70,20 +70,20 @@ class RedirectLocalInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("StdoutLocalPath",$param) and $param["StdoutLocalPath"] !== null) {
-            $this->StdoutLocalPath = $param["StdoutLocalPath"];
+        if (array_key_exists('StdoutLocalPath',$param) and $param['StdoutLocalPath'] !== null) {
+            $this->StdoutLocalPath = $param['StdoutLocalPath'];
         }
 
-        if (array_key_exists("StderrLocalPath",$param) and $param["StderrLocalPath"] !== null) {
-            $this->StderrLocalPath = $param["StderrLocalPath"];
+        if (array_key_exists('StderrLocalPath',$param) and $param['StderrLocalPath'] !== null) {
+            $this->StderrLocalPath = $param['StderrLocalPath'];
         }
 
-        if (array_key_exists("StdoutLocalFileName",$param) and $param["StdoutLocalFileName"] !== null) {
-            $this->StdoutLocalFileName = $param["StdoutLocalFileName"];
+        if (array_key_exists('StdoutLocalFileName',$param) and $param['StdoutLocalFileName'] !== null) {
+            $this->StdoutLocalFileName = $param['StdoutLocalFileName'];
         }
 
-        if (array_key_exists("StderrLocalFileName",$param) and $param["StderrLocalFileName"] !== null) {
-            $this->StderrLocalFileName = $param["StderrLocalFileName"];
+        if (array_key_exists('StderrLocalFileName',$param) and $param['StderrLocalFileName'] !== null) {
+            $this->StderrLocalFileName = $param['StderrLocalFileName'];
         }
     }
 }

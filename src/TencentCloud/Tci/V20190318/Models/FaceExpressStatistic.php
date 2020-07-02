@@ -54,13 +54,13 @@ class FaceExpressStatistic extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PersonId",$param) and $param["PersonId"] !== null) {
-            $this->PersonId = $param["PersonId"];
+        if (array_key_exists('PersonId',$param) and $param['PersonId'] !== null) {
+            $this->PersonId = $param['PersonId'];
         }
 
-        if (array_key_exists("ExpressRatio",$param) and $param["ExpressRatio"] !== null) {
+        if (array_key_exists('ExpressRatio',$param) and $param['ExpressRatio'] !== null) {
             $this->ExpressRatio = [];
-            foreach ($param["ExpressRatio"] as $key => $value){
+            foreach ($param['ExpressRatio'] as $key => $value){
                 $obj = new ExpressRatioStatistic();
                 $obj->deserialize($value);
                 array_push($this->ExpressRatio, $obj);

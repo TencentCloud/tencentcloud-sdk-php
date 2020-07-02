@@ -54,12 +54,12 @@ class RunSecurityServiceEnabled extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Enabled",$param) and $param["Enabled"] !== null) {
-            $this->Enabled = $param["Enabled"];
+        if (array_key_exists('Enabled',$param) and $param['Enabled'] !== null) {
+            $this->Enabled = $param['Enabled'];
         }
 
-        if (array_key_exists("Version",$param) and $param["Version"] !== null) {
-            $this->Version = $param["Version"];
+        if (array_key_exists('Version',$param) and $param['Version'] !== null) {
+            $this->Version = $param['Version'];
         }
     }
 }

@@ -70,20 +70,20 @@ class OutputParams extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("StreamId",$param) and $param["StreamId"] !== null) {
-            $this->StreamId = $param["StreamId"];
+        if (array_key_exists('StreamId',$param) and $param['StreamId'] !== null) {
+            $this->StreamId = $param['StreamId'];
         }
 
-        if (array_key_exists("PureAudioStream",$param) and $param["PureAudioStream"] !== null) {
-            $this->PureAudioStream = $param["PureAudioStream"];
+        if (array_key_exists('PureAudioStream',$param) and $param['PureAudioStream'] !== null) {
+            $this->PureAudioStream = $param['PureAudioStream'];
         }
 
-        if (array_key_exists("RecordId",$param) and $param["RecordId"] !== null) {
-            $this->RecordId = $param["RecordId"];
+        if (array_key_exists('RecordId',$param) and $param['RecordId'] !== null) {
+            $this->RecordId = $param['RecordId'];
         }
 
-        if (array_key_exists("RecordAudioOnly",$param) and $param["RecordAudioOnly"] !== null) {
-            $this->RecordAudioOnly = $param["RecordAudioOnly"];
+        if (array_key_exists('RecordAudioOnly',$param) and $param['RecordAudioOnly'] !== null) {
+            $this->RecordAudioOnly = $param['RecordAudioOnly'];
         }
     }
 }

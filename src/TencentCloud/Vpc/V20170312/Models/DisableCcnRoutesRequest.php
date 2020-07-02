@@ -54,12 +54,12 @@ class DisableCcnRoutesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CcnId",$param) and $param["CcnId"] !== null) {
-            $this->CcnId = $param["CcnId"];
+        if (array_key_exists('CcnId',$param) and $param['CcnId'] !== null) {
+            $this->CcnId = $param['CcnId'];
         }
 
-        if (array_key_exists("RouteIds",$param) and $param["RouteIds"] !== null) {
-            $this->RouteIds = $param["RouteIds"];
+        if (array_key_exists('RouteIds',$param) and $param['RouteIds'] !== null) {
+            $this->RouteIds = $param['RouteIds'];
         }
     }
 }

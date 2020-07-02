@@ -54,13 +54,13 @@ class DailyTracePoint extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TraceDate",$param) and $param["TraceDate"] !== null) {
-            $this->TraceDate = $param["TraceDate"];
+        if (array_key_exists('TraceDate',$param) and $param['TraceDate'] !== null) {
+            $this->TraceDate = $param['TraceDate'];
         }
 
-        if (array_key_exists("TracePointSet",$param) and $param["TracePointSet"] !== null) {
+        if (array_key_exists('TracePointSet',$param) and $param['TracePointSet'] !== null) {
             $this->TracePointSet = [];
-            foreach ($param["TracePointSet"] as $key => $value){
+            foreach ($param['TracePointSet'] as $key => $value){
                 $obj = new PersonTracePoint();
                 $obj->deserialize($value);
                 array_push($this->TracePointSet, $obj);

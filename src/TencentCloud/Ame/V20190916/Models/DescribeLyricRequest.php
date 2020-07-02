@@ -54,12 +54,12 @@ class DescribeLyricRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ItemId",$param) and $param["ItemId"] !== null) {
-            $this->ItemId = $param["ItemId"];
+        if (array_key_exists('ItemId',$param) and $param['ItemId'] !== null) {
+            $this->ItemId = $param['ItemId'];
         }
 
-        if (array_key_exists("SubItemType",$param) and $param["SubItemType"] !== null) {
-            $this->SubItemType = $param["SubItemType"];
+        if (array_key_exists('SubItemType',$param) and $param['SubItemType'] !== null) {
+            $this->SubItemType = $param['SubItemType'];
         }
     }
 }

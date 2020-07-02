@@ -146,49 +146,49 @@ class TaskInstanceView extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TaskInstanceIndex",$param) and $param["TaskInstanceIndex"] !== null) {
-            $this->TaskInstanceIndex = $param["TaskInstanceIndex"];
+        if (array_key_exists('TaskInstanceIndex',$param) and $param['TaskInstanceIndex'] !== null) {
+            $this->TaskInstanceIndex = $param['TaskInstanceIndex'];
         }
 
-        if (array_key_exists("TaskInstanceState",$param) and $param["TaskInstanceState"] !== null) {
-            $this->TaskInstanceState = $param["TaskInstanceState"];
+        if (array_key_exists('TaskInstanceState',$param) and $param['TaskInstanceState'] !== null) {
+            $this->TaskInstanceState = $param['TaskInstanceState'];
         }
 
-        if (array_key_exists("ExitCode",$param) and $param["ExitCode"] !== null) {
-            $this->ExitCode = $param["ExitCode"];
+        if (array_key_exists('ExitCode',$param) and $param['ExitCode'] !== null) {
+            $this->ExitCode = $param['ExitCode'];
         }
 
-        if (array_key_exists("StateReason",$param) and $param["StateReason"] !== null) {
-            $this->StateReason = $param["StateReason"];
+        if (array_key_exists('StateReason',$param) and $param['StateReason'] !== null) {
+            $this->StateReason = $param['StateReason'];
         }
 
-        if (array_key_exists("ComputeNodeInstanceId",$param) and $param["ComputeNodeInstanceId"] !== null) {
-            $this->ComputeNodeInstanceId = $param["ComputeNodeInstanceId"];
+        if (array_key_exists('ComputeNodeInstanceId',$param) and $param['ComputeNodeInstanceId'] !== null) {
+            $this->ComputeNodeInstanceId = $param['ComputeNodeInstanceId'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("LaunchTime",$param) and $param["LaunchTime"] !== null) {
-            $this->LaunchTime = $param["LaunchTime"];
+        if (array_key_exists('LaunchTime',$param) and $param['LaunchTime'] !== null) {
+            $this->LaunchTime = $param['LaunchTime'];
         }
 
-        if (array_key_exists("RunningTime",$param) and $param["RunningTime"] !== null) {
-            $this->RunningTime = $param["RunningTime"];
+        if (array_key_exists('RunningTime',$param) and $param['RunningTime'] !== null) {
+            $this->RunningTime = $param['RunningTime'];
         }
 
-        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
-            $this->EndTime = $param["EndTime"];
+        if (array_key_exists('EndTime',$param) and $param['EndTime'] !== null) {
+            $this->EndTime = $param['EndTime'];
         }
 
-        if (array_key_exists("RedirectInfo",$param) and $param["RedirectInfo"] !== null) {
+        if (array_key_exists('RedirectInfo',$param) and $param['RedirectInfo'] !== null) {
             $this->RedirectInfo = new RedirectInfo();
-            $this->RedirectInfo->deserialize($param["RedirectInfo"]);
+            $this->RedirectInfo->deserialize($param['RedirectInfo']);
         }
 
-        if (array_key_exists("StateDetailedReason",$param) and $param["StateDetailedReason"] !== null) {
-            $this->StateDetailedReason = $param["StateDetailedReason"];
+        if (array_key_exists('StateDetailedReason',$param) and $param['StateDetailedReason'] !== null) {
+            $this->StateDetailedReason = $param['StateDetailedReason'];
         }
     }
 }

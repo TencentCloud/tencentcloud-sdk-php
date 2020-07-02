@@ -54,12 +54,12 @@ class WordTimePair extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Mbtm",$param) and $param["Mbtm"] !== null) {
-            $this->Mbtm = $param["Mbtm"];
+        if (array_key_exists('Mbtm',$param) and $param['Mbtm'] !== null) {
+            $this->Mbtm = $param['Mbtm'];
         }
 
-        if (array_key_exists("Metm",$param) and $param["Metm"] !== null) {
-            $this->Metm = $param["Metm"];
+        if (array_key_exists('Metm',$param) and $param['Metm'] !== null) {
+            $this->Metm = $param['Metm'];
         }
     }
 }

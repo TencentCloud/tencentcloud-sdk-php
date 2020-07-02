@@ -58,13 +58,13 @@ class GroupOffsetTopic extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Topic",$param) and $param["Topic"] !== null) {
-            $this->Topic = $param["Topic"];
+        if (array_key_exists('Topic',$param) and $param['Topic'] !== null) {
+            $this->Topic = $param['Topic'];
         }
 
-        if (array_key_exists("Partitions",$param) and $param["Partitions"] !== null) {
+        if (array_key_exists('Partitions',$param) and $param['Partitions'] !== null) {
             $this->Partitions = [];
-            foreach ($param["Partitions"] as $key => $value){
+            foreach ($param['Partitions'] as $key => $value){
                 $obj = new GroupOffsetPartition();
                 $obj->deserialize($value);
                 array_push($this->Partitions, $obj);

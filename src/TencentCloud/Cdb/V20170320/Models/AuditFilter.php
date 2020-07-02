@@ -90,16 +90,16 @@ NEQ – 不等于；
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists('Type',$param) and $param['Type'] !== null) {
+            $this->Type = $param['Type'];
         }
 
-        if (array_key_exists("Compare",$param) and $param["Compare"] !== null) {
-            $this->Compare = $param["Compare"];
+        if (array_key_exists('Compare',$param) and $param['Compare'] !== null) {
+            $this->Compare = $param['Compare'];
         }
 
-        if (array_key_exists("Value",$param) and $param["Value"] !== null) {
-            $this->Value = $param["Value"];
+        if (array_key_exists('Value',$param) and $param['Value'] !== null) {
+            $this->Value = $param['Value'];
         }
     }
 }

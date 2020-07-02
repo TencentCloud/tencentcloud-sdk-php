@@ -54,13 +54,13 @@ class AttendanceInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Face",$param) and $param["Face"] !== null) {
+        if (array_key_exists('Face',$param) and $param['Face'] !== null) {
             $this->Face = new FrameInfo();
-            $this->Face->deserialize($param["Face"]);
+            $this->Face->deserialize($param['Face']);
         }
 
-        if (array_key_exists("PersonId",$param) and $param["PersonId"] !== null) {
-            $this->PersonId = $param["PersonId"];
+        if (array_key_exists('PersonId',$param) and $param['PersonId'] !== null) {
+            $this->PersonId = $param['PersonId'];
         }
     }
 }

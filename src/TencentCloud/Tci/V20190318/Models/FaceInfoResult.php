@@ -94,32 +94,32 @@ class FaceInfoResult extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FaceRatio",$param) and $param["FaceRatio"] !== null) {
-            $this->FaceRatio = $param["FaceRatio"];
+        if (array_key_exists('FaceRatio',$param) and $param['FaceRatio'] !== null) {
+            $this->FaceRatio = $param['FaceRatio'];
         }
 
-        if (array_key_exists("FrameHeight",$param) and $param["FrameHeight"] !== null) {
-            $this->FrameHeight = $param["FrameHeight"];
+        if (array_key_exists('FrameHeight',$param) and $param['FrameHeight'] !== null) {
+            $this->FrameHeight = $param['FrameHeight'];
         }
 
-        if (array_key_exists("FrameWidth",$param) and $param["FrameWidth"] !== null) {
-            $this->FrameWidth = $param["FrameWidth"];
+        if (array_key_exists('FrameWidth',$param) and $param['FrameWidth'] !== null) {
+            $this->FrameWidth = $param['FrameWidth'];
         }
 
-        if (array_key_exists("Height",$param) and $param["Height"] !== null) {
-            $this->Height = $param["Height"];
+        if (array_key_exists('Height',$param) and $param['Height'] !== null) {
+            $this->Height = $param['Height'];
         }
 
-        if (array_key_exists("Left",$param) and $param["Left"] !== null) {
-            $this->Left = $param["Left"];
+        if (array_key_exists('Left',$param) and $param['Left'] !== null) {
+            $this->Left = $param['Left'];
         }
 
-        if (array_key_exists("Top",$param) and $param["Top"] !== null) {
-            $this->Top = $param["Top"];
+        if (array_key_exists('Top',$param) and $param['Top'] !== null) {
+            $this->Top = $param['Top'];
         }
 
-        if (array_key_exists("Width",$param) and $param["Width"] !== null) {
-            $this->Width = $param["Width"];
+        if (array_key_exists('Width',$param) and $param['Width'] !== null) {
+            $this->Width = $param['Width'];
         }
     }
 }

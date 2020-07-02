@@ -62,16 +62,16 @@ class ImageModerationRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FileContent",$param) and $param["FileContent"] !== null) {
-            $this->FileContent = $param["FileContent"];
+        if (array_key_exists('FileContent',$param) and $param['FileContent'] !== null) {
+            $this->FileContent = $param['FileContent'];
         }
 
-        if (array_key_exists("FileMD5",$param) and $param["FileMD5"] !== null) {
-            $this->FileMD5 = $param["FileMD5"];
+        if (array_key_exists('FileMD5',$param) and $param['FileMD5'] !== null) {
+            $this->FileMD5 = $param['FileMD5'];
         }
 
-        if (array_key_exists("FileUrl",$param) and $param["FileUrl"] !== null) {
-            $this->FileUrl = $param["FileUrl"];
+        if (array_key_exists('FileUrl',$param) and $param['FileUrl'] !== null) {
+            $this->FileUrl = $param['FileUrl'];
         }
     }
 }

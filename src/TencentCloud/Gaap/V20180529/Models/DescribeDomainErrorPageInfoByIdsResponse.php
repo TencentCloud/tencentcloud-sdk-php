@@ -58,17 +58,17 @@ class DescribeDomainErrorPageInfoByIdsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ErrorPageSet",$param) and $param["ErrorPageSet"] !== null) {
+        if (array_key_exists('ErrorPageSet',$param) and $param['ErrorPageSet'] !== null) {
             $this->ErrorPageSet = [];
-            foreach ($param["ErrorPageSet"] as $key => $value){
+            foreach ($param['ErrorPageSet'] as $key => $value){
                 $obj = new DomainErrorPageInfo();
                 $obj->deserialize($value);
                 array_push($this->ErrorPageSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

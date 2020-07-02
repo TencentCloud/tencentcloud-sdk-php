@@ -46,8 +46,8 @@ class CreateIotDataTypeRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("IotDataType",$param) and $param["IotDataType"] !== null) {
-            $this->IotDataType = $param["IotDataType"];
+        if (array_key_exists('IotDataType',$param) and $param['IotDataType'] !== null) {
+            $this->IotDataType = $param['IotDataType'];
         }
     }
 }

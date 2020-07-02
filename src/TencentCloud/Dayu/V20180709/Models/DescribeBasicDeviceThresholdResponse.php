@@ -54,12 +54,12 @@ class DescribeBasicDeviceThresholdResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Threshold",$param) and $param["Threshold"] !== null) {
-            $this->Threshold = $param["Threshold"];
+        if (array_key_exists('Threshold',$param) and $param['Threshold'] !== null) {
+            $this->Threshold = $param['Threshold'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

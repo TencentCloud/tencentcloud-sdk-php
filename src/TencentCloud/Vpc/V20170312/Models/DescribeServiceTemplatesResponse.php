@@ -62,21 +62,21 @@ class DescribeServiceTemplatesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("ServiceTemplateSet",$param) and $param["ServiceTemplateSet"] !== null) {
+        if (array_key_exists('ServiceTemplateSet',$param) and $param['ServiceTemplateSet'] !== null) {
             $this->ServiceTemplateSet = [];
-            foreach ($param["ServiceTemplateSet"] as $key => $value){
+            foreach ($param['ServiceTemplateSet'] as $key => $value){
                 $obj = new ServiceTemplate();
                 $obj->deserialize($value);
                 array_push($this->ServiceTemplateSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

@@ -102,37 +102,37 @@ class Ip6Translator extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Ip6TranslatorId",$param) and $param["Ip6TranslatorId"] !== null) {
-            $this->Ip6TranslatorId = $param["Ip6TranslatorId"];
+        if (array_key_exists('Ip6TranslatorId',$param) and $param['Ip6TranslatorId'] !== null) {
+            $this->Ip6TranslatorId = $param['Ip6TranslatorId'];
         }
 
-        if (array_key_exists("Ip6TranslatorName",$param) and $param["Ip6TranslatorName"] !== null) {
-            $this->Ip6TranslatorName = $param["Ip6TranslatorName"];
+        if (array_key_exists('Ip6TranslatorName',$param) and $param['Ip6TranslatorName'] !== null) {
+            $this->Ip6TranslatorName = $param['Ip6TranslatorName'];
         }
 
-        if (array_key_exists("Vip6",$param) and $param["Vip6"] !== null) {
-            $this->Vip6 = $param["Vip6"];
+        if (array_key_exists('Vip6',$param) and $param['Vip6'] !== null) {
+            $this->Vip6 = $param['Vip6'];
         }
 
-        if (array_key_exists("IspName",$param) and $param["IspName"] !== null) {
-            $this->IspName = $param["IspName"];
+        if (array_key_exists('IspName',$param) and $param['IspName'] !== null) {
+            $this->IspName = $param['IspName'];
         }
 
-        if (array_key_exists("TranslatorStatus",$param) and $param["TranslatorStatus"] !== null) {
-            $this->TranslatorStatus = $param["TranslatorStatus"];
+        if (array_key_exists('TranslatorStatus',$param) and $param['TranslatorStatus'] !== null) {
+            $this->TranslatorStatus = $param['TranslatorStatus'];
         }
 
-        if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
-            $this->CreatedTime = $param["CreatedTime"];
+        if (array_key_exists('CreatedTime',$param) and $param['CreatedTime'] !== null) {
+            $this->CreatedTime = $param['CreatedTime'];
         }
 
-        if (array_key_exists("Ip6RuleCount",$param) and $param["Ip6RuleCount"] !== null) {
-            $this->Ip6RuleCount = $param["Ip6RuleCount"];
+        if (array_key_exists('Ip6RuleCount',$param) and $param['Ip6RuleCount'] !== null) {
+            $this->Ip6RuleCount = $param['Ip6RuleCount'];
         }
 
-        if (array_key_exists("IP6RuleSet",$param) and $param["IP6RuleSet"] !== null) {
+        if (array_key_exists('IP6RuleSet',$param) and $param['IP6RuleSet'] !== null) {
             $this->IP6RuleSet = [];
-            foreach ($param["IP6RuleSet"] as $key => $value){
+            foreach ($param['IP6RuleSet'] as $key => $value){
                 $obj = new Ip6Rule();
                 $obj->deserialize($value);
                 array_push($this->IP6RuleSet, $obj);

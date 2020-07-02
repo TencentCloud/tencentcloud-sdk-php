@@ -78,16 +78,16 @@ class GetFederationTokenRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("Policy",$param) and $param["Policy"] !== null) {
-            $this->Policy = $param["Policy"];
+        if (array_key_exists('Policy',$param) and $param['Policy'] !== null) {
+            $this->Policy = $param['Policy'];
         }
 
-        if (array_key_exists("DurationSeconds",$param) and $param["DurationSeconds"] !== null) {
-            $this->DurationSeconds = $param["DurationSeconds"];
+        if (array_key_exists('DurationSeconds',$param) and $param['DurationSeconds'] !== null) {
+            $this->DurationSeconds = $param['DurationSeconds'];
         }
     }
 }

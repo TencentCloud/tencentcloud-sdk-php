@@ -62,21 +62,21 @@ class DescribeOpenPortStatisticsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("OpenPortStatistics",$param) and $param["OpenPortStatistics"] !== null) {
+        if (array_key_exists('OpenPortStatistics',$param) and $param['OpenPortStatistics'] !== null) {
             $this->OpenPortStatistics = [];
-            foreach ($param["OpenPortStatistics"] as $key => $value){
+            foreach ($param['OpenPortStatistics'] as $key => $value){
                 $obj = new OpenPortStatistics();
                 $obj->deserialize($value);
                 array_push($this->OpenPortStatistics, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

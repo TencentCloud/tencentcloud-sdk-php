@@ -54,17 +54,17 @@ class DescribeRelationResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Content",$param) and $param["Content"] !== null) {
+        if (array_key_exists('Content',$param) and $param['Content'] !== null) {
             $this->Content = [];
-            foreach ($param["Content"] as $key => $value){
+            foreach ($param['Content'] as $key => $value){
                 $obj = new EntityRelationContent();
                 $obj->deserialize($value);
                 array_push($this->Content, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

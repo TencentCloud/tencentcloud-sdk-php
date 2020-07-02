@@ -74,20 +74,20 @@ class CallDeviceActionSyncResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ClientToken",$param) and $param["ClientToken"] !== null) {
-            $this->ClientToken = $param["ClientToken"];
+        if (array_key_exists('ClientToken',$param) and $param['ClientToken'] !== null) {
+            $this->ClientToken = $param['ClientToken'];
         }
 
-        if (array_key_exists("OutputParams",$param) and $param["OutputParams"] !== null) {
-            $this->OutputParams = $param["OutputParams"];
+        if (array_key_exists('OutputParams',$param) and $param['OutputParams'] !== null) {
+            $this->OutputParams = $param['OutputParams'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

@@ -54,13 +54,13 @@ class CreateDefaultSecurityGroupResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SecurityGroup",$param) and $param["SecurityGroup"] !== null) {
+        if (array_key_exists('SecurityGroup',$param) and $param['SecurityGroup'] !== null) {
             $this->SecurityGroup = new SecurityGroup();
-            $this->SecurityGroup->deserialize($param["SecurityGroup"]);
+            $this->SecurityGroup->deserialize($param['SecurityGroup']);
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

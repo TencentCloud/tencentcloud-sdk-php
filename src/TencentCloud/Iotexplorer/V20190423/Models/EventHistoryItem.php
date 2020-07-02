@@ -110,28 +110,28 @@ class EventHistoryItem extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TimeStamp",$param) and $param["TimeStamp"] !== null) {
-            $this->TimeStamp = $param["TimeStamp"];
+        if (array_key_exists('TimeStamp',$param) and $param['TimeStamp'] !== null) {
+            $this->TimeStamp = $param['TimeStamp'];
         }
 
-        if (array_key_exists("ProductId",$param) and $param["ProductId"] !== null) {
-            $this->ProductId = $param["ProductId"];
+        if (array_key_exists('ProductId',$param) and $param['ProductId'] !== null) {
+            $this->ProductId = $param['ProductId'];
         }
 
-        if (array_key_exists("DeviceName",$param) and $param["DeviceName"] !== null) {
-            $this->DeviceName = $param["DeviceName"];
+        if (array_key_exists('DeviceName',$param) and $param['DeviceName'] !== null) {
+            $this->DeviceName = $param['DeviceName'];
         }
 
-        if (array_key_exists("EventId",$param) and $param["EventId"] !== null) {
-            $this->EventId = $param["EventId"];
+        if (array_key_exists('EventId',$param) and $param['EventId'] !== null) {
+            $this->EventId = $param['EventId'];
         }
 
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists('Type',$param) and $param['Type'] !== null) {
+            $this->Type = $param['Type'];
         }
 
-        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
-            $this->Data = $param["Data"];
+        if (array_key_exists('Data',$param) and $param['Data'] !== null) {
+            $this->Data = $param['Data'];
         }
     }
 }

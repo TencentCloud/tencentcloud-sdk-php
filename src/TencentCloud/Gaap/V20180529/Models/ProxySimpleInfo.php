@@ -62,17 +62,17 @@ class ProxySimpleInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ProxyId",$param) and $param["ProxyId"] !== null) {
-            $this->ProxyId = $param["ProxyId"];
+        if (array_key_exists('ProxyId',$param) and $param['ProxyId'] !== null) {
+            $this->ProxyId = $param['ProxyId'];
         }
 
-        if (array_key_exists("ProxyName",$param) and $param["ProxyName"] !== null) {
-            $this->ProxyName = $param["ProxyName"];
+        if (array_key_exists('ProxyName',$param) and $param['ProxyName'] !== null) {
+            $this->ProxyName = $param['ProxyName'];
         }
 
-        if (array_key_exists("ListenerList",$param) and $param["ListenerList"] !== null) {
+        if (array_key_exists('ListenerList',$param) and $param['ListenerList'] !== null) {
             $this->ListenerList = [];
-            foreach ($param["ListenerList"] as $key => $value){
+            foreach ($param['ListenerList'] as $key => $value){
                 $obj = new ListenerInfo();
                 $obj->deserialize($value);
                 array_push($this->ListenerList, $obj);

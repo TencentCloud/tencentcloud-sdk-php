@@ -66,13 +66,13 @@ off：关闭
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Switch",$param) and $param["Switch"] !== null) {
-            $this->Switch = $param["Switch"];
+        if (array_key_exists('Switch',$param) and $param['Switch'] !== null) {
+            $this->Switch = $param['Switch'];
         }
 
-        if (array_key_exists("RefererRules",$param) and $param["RefererRules"] !== null) {
+        if (array_key_exists('RefererRules',$param) and $param['RefererRules'] !== null) {
             $this->RefererRules = [];
-            foreach ($param["RefererRules"] as $key => $value){
+            foreach ($param['RefererRules'] as $key => $value){
                 $obj = new RefererRule();
                 $obj->deserialize($value);
                 array_push($this->RefererRules, $obj);

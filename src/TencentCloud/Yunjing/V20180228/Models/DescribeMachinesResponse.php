@@ -62,21 +62,21 @@ class DescribeMachinesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Machines",$param) and $param["Machines"] !== null) {
+        if (array_key_exists('Machines',$param) and $param['Machines'] !== null) {
             $this->Machines = [];
-            foreach ($param["Machines"] as $key => $value){
+            foreach ($param['Machines'] as $key => $value){
                 $obj = new Machine();
                 $obj->deserialize($value);
                 array_push($this->Machines, $obj);
             }
         }
 
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

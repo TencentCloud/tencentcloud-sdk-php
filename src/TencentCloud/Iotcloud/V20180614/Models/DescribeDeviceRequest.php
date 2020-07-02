@@ -54,12 +54,12 @@ class DescribeDeviceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ProductID",$param) and $param["ProductID"] !== null) {
-            $this->ProductID = $param["ProductID"];
+        if (array_key_exists('ProductID',$param) and $param['ProductID'] !== null) {
+            $this->ProductID = $param['ProductID'];
         }
 
-        if (array_key_exists("DeviceName",$param) and $param["DeviceName"] !== null) {
-            $this->DeviceName = $param["DeviceName"];
+        if (array_key_exists('DeviceName',$param) and $param['DeviceName'] !== null) {
+            $this->DeviceName = $param['DeviceName'];
         }
     }
 }

@@ -70,20 +70,20 @@ class TargetGroupAssociation extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LoadBalancerId",$param) and $param["LoadBalancerId"] !== null) {
-            $this->LoadBalancerId = $param["LoadBalancerId"];
+        if (array_key_exists('LoadBalancerId',$param) and $param['LoadBalancerId'] !== null) {
+            $this->LoadBalancerId = $param['LoadBalancerId'];
         }
 
-        if (array_key_exists("ListenerId",$param) and $param["ListenerId"] !== null) {
-            $this->ListenerId = $param["ListenerId"];
+        if (array_key_exists('ListenerId',$param) and $param['ListenerId'] !== null) {
+            $this->ListenerId = $param['ListenerId'];
         }
 
-        if (array_key_exists("TargetGroupId",$param) and $param["TargetGroupId"] !== null) {
-            $this->TargetGroupId = $param["TargetGroupId"];
+        if (array_key_exists('TargetGroupId',$param) and $param['TargetGroupId'] !== null) {
+            $this->TargetGroupId = $param['TargetGroupId'];
         }
 
-        if (array_key_exists("LocationId",$param) and $param["LocationId"] !== null) {
-            $this->LocationId = $param["LocationId"];
+        if (array_key_exists('LocationId',$param) and $param['LocationId'] !== null) {
+            $this->LocationId = $param['LocationId'];
         }
     }
 }

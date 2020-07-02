@@ -54,12 +54,12 @@ class ClientConnection extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("IP",$param) and $param["IP"] !== null) {
-            $this->IP = $param["IP"];
+        if (array_key_exists('IP',$param) and $param['IP'] !== null) {
+            $this->IP = $param['IP'];
         }
 
-        if (array_key_exists("Count",$param) and $param["Count"] !== null) {
-            $this->Count = $param["Count"];
+        if (array_key_exists('Count',$param) and $param['Count'] !== null) {
+            $this->Count = $param['Count'];
         }
     }
 }

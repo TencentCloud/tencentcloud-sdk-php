@@ -46,8 +46,8 @@ class DescribeInstanceStatusRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RegistryIds",$param) and $param["RegistryIds"] !== null) {
-            $this->RegistryIds = $param["RegistryIds"];
+        if (array_key_exists('RegistryIds',$param) and $param['RegistryIds'] !== null) {
+            $this->RegistryIds = $param['RegistryIds'];
         }
     }
 }

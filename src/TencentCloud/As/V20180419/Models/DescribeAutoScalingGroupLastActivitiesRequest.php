@@ -46,8 +46,8 @@ class DescribeAutoScalingGroupLastActivitiesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AutoScalingGroupIds",$param) and $param["AutoScalingGroupIds"] !== null) {
-            $this->AutoScalingGroupIds = $param["AutoScalingGroupIds"];
+        if (array_key_exists('AutoScalingGroupIds',$param) and $param['AutoScalingGroupIds'] !== null) {
+            $this->AutoScalingGroupIds = $param['AutoScalingGroupIds'];
         }
     }
 }

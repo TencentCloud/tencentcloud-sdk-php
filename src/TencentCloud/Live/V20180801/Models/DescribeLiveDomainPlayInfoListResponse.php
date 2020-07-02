@@ -94,37 +94,37 @@ class DescribeLiveDomainPlayInfoListResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Time",$param) and $param["Time"] !== null) {
-            $this->Time = $param["Time"];
+        if (array_key_exists('Time',$param) and $param['Time'] !== null) {
+            $this->Time = $param['Time'];
         }
 
-        if (array_key_exists("TotalBandwidth",$param) and $param["TotalBandwidth"] !== null) {
-            $this->TotalBandwidth = $param["TotalBandwidth"];
+        if (array_key_exists('TotalBandwidth',$param) and $param['TotalBandwidth'] !== null) {
+            $this->TotalBandwidth = $param['TotalBandwidth'];
         }
 
-        if (array_key_exists("TotalFlux",$param) and $param["TotalFlux"] !== null) {
-            $this->TotalFlux = $param["TotalFlux"];
+        if (array_key_exists('TotalFlux',$param) and $param['TotalFlux'] !== null) {
+            $this->TotalFlux = $param['TotalFlux'];
         }
 
-        if (array_key_exists("TotalRequest",$param) and $param["TotalRequest"] !== null) {
-            $this->TotalRequest = $param["TotalRequest"];
+        if (array_key_exists('TotalRequest',$param) and $param['TotalRequest'] !== null) {
+            $this->TotalRequest = $param['TotalRequest'];
         }
 
-        if (array_key_exists("TotalOnline",$param) and $param["TotalOnline"] !== null) {
-            $this->TotalOnline = $param["TotalOnline"];
+        if (array_key_exists('TotalOnline',$param) and $param['TotalOnline'] !== null) {
+            $this->TotalOnline = $param['TotalOnline'];
         }
 
-        if (array_key_exists("DomainInfoList",$param) and $param["DomainInfoList"] !== null) {
+        if (array_key_exists('DomainInfoList',$param) and $param['DomainInfoList'] !== null) {
             $this->DomainInfoList = [];
-            foreach ($param["DomainInfoList"] as $key => $value){
+            foreach ($param['DomainInfoList'] as $key => $value){
                 $obj = new DomainInfoList();
                 $obj->deserialize($value);
                 array_push($this->DomainInfoList, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

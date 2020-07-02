@@ -70,25 +70,25 @@ class GetDeviceLogResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DeviceLog",$param) and $param["DeviceLog"] !== null) {
+        if (array_key_exists('DeviceLog',$param) and $param['DeviceLog'] !== null) {
             $this->DeviceLog = [];
-            foreach ($param["DeviceLog"] as $key => $value){
+            foreach ($param['DeviceLog'] as $key => $value){
                 $obj = new DeviceLogEntry();
                 $obj->deserialize($value);
                 array_push($this->DeviceLog, $obj);
             }
         }
 
-        if (array_key_exists("ScrollId",$param) and $param["ScrollId"] !== null) {
-            $this->ScrollId = $param["ScrollId"];
+        if (array_key_exists('ScrollId',$param) and $param['ScrollId'] !== null) {
+            $this->ScrollId = $param['ScrollId'];
         }
 
-        if (array_key_exists("ScrollTimeout",$param) and $param["ScrollTimeout"] !== null) {
-            $this->ScrollTimeout = $param["ScrollTimeout"];
+        if (array_key_exists('ScrollTimeout',$param) and $param['ScrollTimeout'] !== null) {
+            $this->ScrollTimeout = $param['ScrollTimeout'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

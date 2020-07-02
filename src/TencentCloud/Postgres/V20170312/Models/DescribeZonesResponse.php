@@ -62,21 +62,21 @@ class DescribeZonesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("ZoneSet",$param) and $param["ZoneSet"] !== null) {
+        if (array_key_exists('ZoneSet',$param) and $param['ZoneSet'] !== null) {
             $this->ZoneSet = [];
-            foreach ($param["ZoneSet"] as $key => $value){
+            foreach ($param['ZoneSet'] as $key => $value){
                 $obj = new ZoneInfo();
                 $obj->deserialize($value);
                 array_push($this->ZoneSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

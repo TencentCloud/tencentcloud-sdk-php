@@ -62,17 +62,17 @@ class GroupProIspDataInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ProvinceName",$param) and $param["ProvinceName"] !== null) {
-            $this->ProvinceName = $param["ProvinceName"];
+        if (array_key_exists('ProvinceName',$param) and $param['ProvinceName'] !== null) {
+            $this->ProvinceName = $param['ProvinceName'];
         }
 
-        if (array_key_exists("IspName",$param) and $param["IspName"] !== null) {
-            $this->IspName = $param["IspName"];
+        if (array_key_exists('IspName',$param) and $param['IspName'] !== null) {
+            $this->IspName = $param['IspName'];
         }
 
-        if (array_key_exists("DetailInfoList",$param) and $param["DetailInfoList"] !== null) {
+        if (array_key_exists('DetailInfoList',$param) and $param['DetailInfoList'] !== null) {
             $this->DetailInfoList = [];
-            foreach ($param["DetailInfoList"] as $key => $value){
+            foreach ($param['DetailInfoList'] as $key => $value){
                 $obj = new CdnPlayStatData();
                 $obj->deserialize($value);
                 array_push($this->DetailInfoList, $obj);

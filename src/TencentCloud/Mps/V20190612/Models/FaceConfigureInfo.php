@@ -118,24 +118,24 @@ class FaceConfigureInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Switch",$param) and $param["Switch"] !== null) {
-            $this->Switch = $param["Switch"];
+        if (array_key_exists('Switch',$param) and $param['Switch'] !== null) {
+            $this->Switch = $param['Switch'];
         }
 
-        if (array_key_exists("Score",$param) and $param["Score"] !== null) {
-            $this->Score = $param["Score"];
+        if (array_key_exists('Score',$param) and $param['Score'] !== null) {
+            $this->Score = $param['Score'];
         }
 
-        if (array_key_exists("DefaultLibraryLabelSet",$param) and $param["DefaultLibraryLabelSet"] !== null) {
-            $this->DefaultLibraryLabelSet = $param["DefaultLibraryLabelSet"];
+        if (array_key_exists('DefaultLibraryLabelSet',$param) and $param['DefaultLibraryLabelSet'] !== null) {
+            $this->DefaultLibraryLabelSet = $param['DefaultLibraryLabelSet'];
         }
 
-        if (array_key_exists("UserDefineLibraryLabelSet",$param) and $param["UserDefineLibraryLabelSet"] !== null) {
-            $this->UserDefineLibraryLabelSet = $param["UserDefineLibraryLabelSet"];
+        if (array_key_exists('UserDefineLibraryLabelSet',$param) and $param['UserDefineLibraryLabelSet'] !== null) {
+            $this->UserDefineLibraryLabelSet = $param['UserDefineLibraryLabelSet'];
         }
 
-        if (array_key_exists("FaceLibrary",$param) and $param["FaceLibrary"] !== null) {
-            $this->FaceLibrary = $param["FaceLibrary"];
+        if (array_key_exists('FaceLibrary',$param) and $param['FaceLibrary'] !== null) {
+            $this->FaceLibrary = $param['FaceLibrary'];
         }
     }
 }

@@ -62,17 +62,17 @@ class ClusterAsGroupAttribute extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AutoScalingGroupId",$param) and $param["AutoScalingGroupId"] !== null) {
-            $this->AutoScalingGroupId = $param["AutoScalingGroupId"];
+        if (array_key_exists('AutoScalingGroupId',$param) and $param['AutoScalingGroupId'] !== null) {
+            $this->AutoScalingGroupId = $param['AutoScalingGroupId'];
         }
 
-        if (array_key_exists("AutoScalingGroupEnabled",$param) and $param["AutoScalingGroupEnabled"] !== null) {
-            $this->AutoScalingGroupEnabled = $param["AutoScalingGroupEnabled"];
+        if (array_key_exists('AutoScalingGroupEnabled',$param) and $param['AutoScalingGroupEnabled'] !== null) {
+            $this->AutoScalingGroupEnabled = $param['AutoScalingGroupEnabled'];
         }
 
-        if (array_key_exists("AutoScalingGroupRange",$param) and $param["AutoScalingGroupRange"] !== null) {
+        if (array_key_exists('AutoScalingGroupRange',$param) and $param['AutoScalingGroupRange'] !== null) {
             $this->AutoScalingGroupRange = new AutoScalingGroupRange();
-            $this->AutoScalingGroupRange->deserialize($param["AutoScalingGroupRange"]);
+            $this->AutoScalingGroupRange->deserialize($param['AutoScalingGroupRange']);
         }
     }
 }

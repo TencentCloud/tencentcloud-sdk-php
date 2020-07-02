@@ -78,24 +78,24 @@ class ModifyUsagePlanRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("UsagePlanId",$param) and $param["UsagePlanId"] !== null) {
-            $this->UsagePlanId = $param["UsagePlanId"];
+        if (array_key_exists('UsagePlanId',$param) and $param['UsagePlanId'] !== null) {
+            $this->UsagePlanId = $param['UsagePlanId'];
         }
 
-        if (array_key_exists("UsagePlanName",$param) and $param["UsagePlanName"] !== null) {
-            $this->UsagePlanName = $param["UsagePlanName"];
+        if (array_key_exists('UsagePlanName',$param) and $param['UsagePlanName'] !== null) {
+            $this->UsagePlanName = $param['UsagePlanName'];
         }
 
-        if (array_key_exists("UsagePlanDesc",$param) and $param["UsagePlanDesc"] !== null) {
-            $this->UsagePlanDesc = $param["UsagePlanDesc"];
+        if (array_key_exists('UsagePlanDesc',$param) and $param['UsagePlanDesc'] !== null) {
+            $this->UsagePlanDesc = $param['UsagePlanDesc'];
         }
 
-        if (array_key_exists("MaxRequestNum",$param) and $param["MaxRequestNum"] !== null) {
-            $this->MaxRequestNum = $param["MaxRequestNum"];
+        if (array_key_exists('MaxRequestNum',$param) and $param['MaxRequestNum'] !== null) {
+            $this->MaxRequestNum = $param['MaxRequestNum'];
         }
 
-        if (array_key_exists("MaxRequestNumPreSec",$param) and $param["MaxRequestNumPreSec"] !== null) {
-            $this->MaxRequestNumPreSec = $param["MaxRequestNumPreSec"];
+        if (array_key_exists('MaxRequestNumPreSec',$param) and $param['MaxRequestNumPreSec'] !== null) {
+            $this->MaxRequestNumPreSec = $param['MaxRequestNumPreSec'];
         }
     }
 }

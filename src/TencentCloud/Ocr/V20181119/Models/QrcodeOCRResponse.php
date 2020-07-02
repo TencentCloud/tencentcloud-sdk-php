@@ -62,22 +62,22 @@ class QrcodeOCRResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CodeResults",$param) and $param["CodeResults"] !== null) {
+        if (array_key_exists('CodeResults',$param) and $param['CodeResults'] !== null) {
             $this->CodeResults = [];
-            foreach ($param["CodeResults"] as $key => $value){
+            foreach ($param['CodeResults'] as $key => $value){
                 $obj = new QrcodeResultsInfo();
                 $obj->deserialize($value);
                 array_push($this->CodeResults, $obj);
             }
         }
 
-        if (array_key_exists("ImgSize",$param) and $param["ImgSize"] !== null) {
+        if (array_key_exists('ImgSize',$param) and $param['ImgSize'] !== null) {
             $this->ImgSize = new QrcodeImgSize();
-            $this->ImgSize->deserialize($param["ImgSize"]);
+            $this->ImgSize->deserialize($param['ImgSize']);
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

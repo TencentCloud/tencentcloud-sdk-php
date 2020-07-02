@@ -110,40 +110,40 @@ class PublishVersionResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FunctionVersion",$param) and $param["FunctionVersion"] !== null) {
-            $this->FunctionVersion = $param["FunctionVersion"];
+        if (array_key_exists('FunctionVersion',$param) and $param['FunctionVersion'] !== null) {
+            $this->FunctionVersion = $param['FunctionVersion'];
         }
 
-        if (array_key_exists("CodeSize",$param) and $param["CodeSize"] !== null) {
-            $this->CodeSize = $param["CodeSize"];
+        if (array_key_exists('CodeSize',$param) and $param['CodeSize'] !== null) {
+            $this->CodeSize = $param['CodeSize'];
         }
 
-        if (array_key_exists("MemorySize",$param) and $param["MemorySize"] !== null) {
-            $this->MemorySize = $param["MemorySize"];
+        if (array_key_exists('MemorySize',$param) and $param['MemorySize'] !== null) {
+            $this->MemorySize = $param['MemorySize'];
         }
 
-        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
-            $this->Description = $param["Description"];
+        if (array_key_exists('Description',$param) and $param['Description'] !== null) {
+            $this->Description = $param['Description'];
         }
 
-        if (array_key_exists("Handler",$param) and $param["Handler"] !== null) {
-            $this->Handler = $param["Handler"];
+        if (array_key_exists('Handler',$param) and $param['Handler'] !== null) {
+            $this->Handler = $param['Handler'];
         }
 
-        if (array_key_exists("Timeout",$param) and $param["Timeout"] !== null) {
-            $this->Timeout = $param["Timeout"];
+        if (array_key_exists('Timeout',$param) and $param['Timeout'] !== null) {
+            $this->Timeout = $param['Timeout'];
         }
 
-        if (array_key_exists("Runtime",$param) and $param["Runtime"] !== null) {
-            $this->Runtime = $param["Runtime"];
+        if (array_key_exists('Runtime',$param) and $param['Runtime'] !== null) {
+            $this->Runtime = $param['Runtime'];
         }
 
-        if (array_key_exists("Namespace",$param) and $param["Namespace"] !== null) {
-            $this->Namespace = $param["Namespace"];
+        if (array_key_exists('Namespace',$param) and $param['Namespace'] !== null) {
+            $this->Namespace = $param['Namespace'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

@@ -54,12 +54,12 @@ class CommandTake extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Cmd",$param) and $param["Cmd"] !== null) {
-            $this->Cmd = $param["Cmd"];
+        if (array_key_exists('Cmd',$param) and $param['Cmd'] !== null) {
+            $this->Cmd = $param['Cmd'];
         }
 
-        if (array_key_exists("Took",$param) and $param["Took"] !== null) {
-            $this->Took = $param["Took"];
+        if (array_key_exists('Took',$param) and $param['Took'] !== null) {
+            $this->Took = $param['Took'];
         }
     }
 }

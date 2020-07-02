@@ -62,16 +62,16 @@ class ExpandShardConfig extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ShardInstanceIds",$param) and $param["ShardInstanceIds"] !== null) {
-            $this->ShardInstanceIds = $param["ShardInstanceIds"];
+        if (array_key_exists('ShardInstanceIds',$param) and $param['ShardInstanceIds'] !== null) {
+            $this->ShardInstanceIds = $param['ShardInstanceIds'];
         }
 
-        if (array_key_exists("ShardMemory",$param) and $param["ShardMemory"] !== null) {
-            $this->ShardMemory = $param["ShardMemory"];
+        if (array_key_exists('ShardMemory',$param) and $param['ShardMemory'] !== null) {
+            $this->ShardMemory = $param['ShardMemory'];
         }
 
-        if (array_key_exists("ShardStorage",$param) and $param["ShardStorage"] !== null) {
-            $this->ShardStorage = $param["ShardStorage"];
+        if (array_key_exists('ShardStorage',$param) and $param['ShardStorage'] !== null) {
+            $this->ShardStorage = $param['ShardStorage'];
         }
     }
 }

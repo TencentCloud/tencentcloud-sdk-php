@@ -54,14 +54,14 @@ class CustomLayout extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Canvas",$param) and $param["Canvas"] !== null) {
+        if (array_key_exists('Canvas',$param) and $param['Canvas'] !== null) {
             $this->Canvas = new Canvas();
-            $this->Canvas->deserialize($param["Canvas"]);
+            $this->Canvas->deserialize($param['Canvas']);
         }
 
-        if (array_key_exists("InputStreamList",$param) and $param["InputStreamList"] !== null) {
+        if (array_key_exists('InputStreamList',$param) and $param['InputStreamList'] !== null) {
             $this->InputStreamList = [];
-            foreach ($param["InputStreamList"] as $key => $value){
+            foreach ($param['InputStreamList'] as $key => $value){
                 $obj = new StreamLayout();
                 $obj->deserialize($value);
                 array_push($this->InputStreamList, $obj);

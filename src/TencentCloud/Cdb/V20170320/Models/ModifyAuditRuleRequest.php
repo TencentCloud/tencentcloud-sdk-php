@@ -78,29 +78,29 @@ class ModifyAuditRuleRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RuleId",$param) and $param["RuleId"] !== null) {
-            $this->RuleId = $param["RuleId"];
+        if (array_key_exists('RuleId',$param) and $param['RuleId'] !== null) {
+            $this->RuleId = $param['RuleId'];
         }
 
-        if (array_key_exists("RuleName",$param) and $param["RuleName"] !== null) {
-            $this->RuleName = $param["RuleName"];
+        if (array_key_exists('RuleName',$param) and $param['RuleName'] !== null) {
+            $this->RuleName = $param['RuleName'];
         }
 
-        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
-            $this->Description = $param["Description"];
+        if (array_key_exists('Description',$param) and $param['Description'] !== null) {
+            $this->Description = $param['Description'];
         }
 
-        if (array_key_exists("RuleFilters",$param) and $param["RuleFilters"] !== null) {
+        if (array_key_exists('RuleFilters',$param) and $param['RuleFilters'] !== null) {
             $this->RuleFilters = [];
-            foreach ($param["RuleFilters"] as $key => $value){
+            foreach ($param['RuleFilters'] as $key => $value){
                 $obj = new AuditFilter();
                 $obj->deserialize($value);
                 array_push($this->RuleFilters, $obj);
             }
         }
 
-        if (array_key_exists("AuditAll",$param) and $param["AuditAll"] !== null) {
-            $this->AuditAll = $param["AuditAll"];
+        if (array_key_exists('AuditAll',$param) and $param['AuditAll'] !== null) {
+            $this->AuditAll = $param['AuditAll'];
         }
     }
 }

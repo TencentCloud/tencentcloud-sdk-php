@@ -86,28 +86,28 @@ class Event extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FirstSeen",$param) and $param["FirstSeen"] !== null) {
-            $this->FirstSeen = $param["FirstSeen"];
+        if (array_key_exists('FirstSeen',$param) and $param['FirstSeen'] !== null) {
+            $this->FirstSeen = $param['FirstSeen'];
         }
 
-        if (array_key_exists("LastSeen",$param) and $param["LastSeen"] !== null) {
-            $this->LastSeen = $param["LastSeen"];
+        if (array_key_exists('LastSeen',$param) and $param['LastSeen'] !== null) {
+            $this->LastSeen = $param['LastSeen'];
         }
 
-        if (array_key_exists("Level",$param) and $param["Level"] !== null) {
-            $this->Level = $param["Level"];
+        if (array_key_exists('Level',$param) and $param['Level'] !== null) {
+            $this->Level = $param['Level'];
         }
 
-        if (array_key_exists("Count",$param) and $param["Count"] !== null) {
-            $this->Count = $param["Count"];
+        if (array_key_exists('Count',$param) and $param['Count'] !== null) {
+            $this->Count = $param['Count'];
         }
 
-        if (array_key_exists("Reason",$param) and $param["Reason"] !== null) {
-            $this->Reason = $param["Reason"];
+        if (array_key_exists('Reason',$param) and $param['Reason'] !== null) {
+            $this->Reason = $param['Reason'];
         }
 
-        if (array_key_exists("Message",$param) and $param["Message"] !== null) {
-            $this->Message = $param["Message"];
+        if (array_key_exists('Message',$param) and $param['Message'] !== null) {
+            $this->Message = $param['Message'];
         }
     }
 }

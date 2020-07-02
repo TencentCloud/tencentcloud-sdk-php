@@ -70,20 +70,20 @@ class ModifyTopicAttributeRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TopicName",$param) and $param["TopicName"] !== null) {
-            $this->TopicName = $param["TopicName"];
+        if (array_key_exists('TopicName',$param) and $param['TopicName'] !== null) {
+            $this->TopicName = $param['TopicName'];
         }
 
-        if (array_key_exists("MaxMsgSize",$param) and $param["MaxMsgSize"] !== null) {
-            $this->MaxMsgSize = $param["MaxMsgSize"];
+        if (array_key_exists('MaxMsgSize',$param) and $param['MaxMsgSize'] !== null) {
+            $this->MaxMsgSize = $param['MaxMsgSize'];
         }
 
-        if (array_key_exists("MsgRetentionSeconds",$param) and $param["MsgRetentionSeconds"] !== null) {
-            $this->MsgRetentionSeconds = $param["MsgRetentionSeconds"];
+        if (array_key_exists('MsgRetentionSeconds',$param) and $param['MsgRetentionSeconds'] !== null) {
+            $this->MsgRetentionSeconds = $param['MsgRetentionSeconds'];
         }
 
-        if (array_key_exists("Trace",$param) and $param["Trace"] !== null) {
-            $this->Trace = $param["Trace"];
+        if (array_key_exists('Trace',$param) and $param['Trace'] !== null) {
+            $this->Trace = $param['Trace'];
         }
     }
 }

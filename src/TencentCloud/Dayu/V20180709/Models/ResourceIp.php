@@ -54,12 +54,12 @@ class ResourceIp extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
-            $this->Id = $param["Id"];
+        if (array_key_exists('Id',$param) and $param['Id'] !== null) {
+            $this->Id = $param['Id'];
         }
 
-        if (array_key_exists("IpList",$param) and $param["IpList"] !== null) {
-            $this->IpList = $param["IpList"];
+        if (array_key_exists('IpList',$param) and $param['IpList'] !== null) {
+            $this->IpList = $param['IpList'];
         }
     }
 }

@@ -102,36 +102,36 @@ class DescribeCertificatesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
+        if (array_key_exists('Offset',$param) and $param['Offset'] !== null) {
+            $this->Offset = $param['Offset'];
         }
 
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
+        if (array_key_exists('Limit',$param) and $param['Limit'] !== null) {
+            $this->Limit = $param['Limit'];
         }
 
-        if (array_key_exists("SearchKey",$param) and $param["SearchKey"] !== null) {
-            $this->SearchKey = $param["SearchKey"];
+        if (array_key_exists('SearchKey',$param) and $param['SearchKey'] !== null) {
+            $this->SearchKey = $param['SearchKey'];
         }
 
-        if (array_key_exists("CertificateType",$param) and $param["CertificateType"] !== null) {
-            $this->CertificateType = $param["CertificateType"];
+        if (array_key_exists('CertificateType',$param) and $param['CertificateType'] !== null) {
+            $this->CertificateType = $param['CertificateType'];
         }
 
-        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
-            $this->ProjectId = $param["ProjectId"];
+        if (array_key_exists('ProjectId',$param) and $param['ProjectId'] !== null) {
+            $this->ProjectId = $param['ProjectId'];
         }
 
-        if (array_key_exists("ExpirationSort",$param) and $param["ExpirationSort"] !== null) {
-            $this->ExpirationSort = $param["ExpirationSort"];
+        if (array_key_exists('ExpirationSort',$param) and $param['ExpirationSort'] !== null) {
+            $this->ExpirationSort = $param['ExpirationSort'];
         }
 
-        if (array_key_exists("CertificateStatus",$param) and $param["CertificateStatus"] !== null) {
-            $this->CertificateStatus = $param["CertificateStatus"];
+        if (array_key_exists('CertificateStatus',$param) and $param['CertificateStatus'] !== null) {
+            $this->CertificateStatus = $param['CertificateStatus'];
         }
 
-        if (array_key_exists("Deployable",$param) and $param["Deployable"] !== null) {
-            $this->Deployable = $param["Deployable"];
+        if (array_key_exists('Deployable',$param) and $param['Deployable'] !== null) {
+            $this->Deployable = $param['Deployable'];
         }
     }
 }

@@ -62,16 +62,16 @@ class SetInstancesProtectionRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AutoScalingGroupId",$param) and $param["AutoScalingGroupId"] !== null) {
-            $this->AutoScalingGroupId = $param["AutoScalingGroupId"];
+        if (array_key_exists('AutoScalingGroupId',$param) and $param['AutoScalingGroupId'] !== null) {
+            $this->AutoScalingGroupId = $param['AutoScalingGroupId'];
         }
 
-        if (array_key_exists("InstanceIds",$param) and $param["InstanceIds"] !== null) {
-            $this->InstanceIds = $param["InstanceIds"];
+        if (array_key_exists('InstanceIds',$param) and $param['InstanceIds'] !== null) {
+            $this->InstanceIds = $param['InstanceIds'];
         }
 
-        if (array_key_exists("ProtectedFromScaleIn",$param) and $param["ProtectedFromScaleIn"] !== null) {
-            $this->ProtectedFromScaleIn = $param["ProtectedFromScaleIn"];
+        if (array_key_exists('ProtectedFromScaleIn',$param) and $param['ProtectedFromScaleIn'] !== null) {
+            $this->ProtectedFromScaleIn = $param['ProtectedFromScaleIn'];
         }
     }
 }

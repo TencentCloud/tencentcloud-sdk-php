@@ -62,17 +62,17 @@ class RenewInstancesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceIds",$param) and $param["InstanceIds"] !== null) {
-            $this->InstanceIds = $param["InstanceIds"];
+        if (array_key_exists('InstanceIds',$param) and $param['InstanceIds'] !== null) {
+            $this->InstanceIds = $param['InstanceIds'];
         }
 
-        if (array_key_exists("InstanceChargePrepaid",$param) and $param["InstanceChargePrepaid"] !== null) {
+        if (array_key_exists('InstanceChargePrepaid',$param) and $param['InstanceChargePrepaid'] !== null) {
             $this->InstanceChargePrepaid = new InstanceChargePrepaid();
-            $this->InstanceChargePrepaid->deserialize($param["InstanceChargePrepaid"]);
+            $this->InstanceChargePrepaid->deserialize($param['InstanceChargePrepaid']);
         }
 
-        if (array_key_exists("RenewPortableDataDisk",$param) and $param["RenewPortableDataDisk"] !== null) {
-            $this->RenewPortableDataDisk = $param["RenewPortableDataDisk"];
+        if (array_key_exists('RenewPortableDataDisk',$param) and $param['RenewPortableDataDisk'] !== null) {
+            $this->RenewPortableDataDisk = $param['RenewPortableDataDisk'];
         }
     }
 }

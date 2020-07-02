@@ -54,12 +54,12 @@ class PlaybackPolicy extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LicenseDurationSeconds",$param) and $param["LicenseDurationSeconds"] !== null) {
-            $this->LicenseDurationSeconds = $param["LicenseDurationSeconds"];
+        if (array_key_exists('LicenseDurationSeconds',$param) and $param['LicenseDurationSeconds'] !== null) {
+            $this->LicenseDurationSeconds = $param['LicenseDurationSeconds'];
         }
 
-        if (array_key_exists("PlaybackDurationSeconds",$param) and $param["PlaybackDurationSeconds"] !== null) {
-            $this->PlaybackDurationSeconds = $param["PlaybackDurationSeconds"];
+        if (array_key_exists('PlaybackDurationSeconds',$param) and $param['PlaybackDurationSeconds'] !== null) {
+            $this->PlaybackDurationSeconds = $param['PlaybackDurationSeconds'];
         }
     }
 }

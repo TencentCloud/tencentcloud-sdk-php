@@ -66,21 +66,21 @@ class GetLoRaGatewayListResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Total",$param) and $param["Total"] !== null) {
-            $this->Total = $param["Total"];
+        if (array_key_exists('Total',$param) and $param['Total'] !== null) {
+            $this->Total = $param['Total'];
         }
 
-        if (array_key_exists("Gateways",$param) and $param["Gateways"] !== null) {
+        if (array_key_exists('Gateways',$param) and $param['Gateways'] !== null) {
             $this->Gateways = [];
-            foreach ($param["Gateways"] as $key => $value){
+            foreach ($param['Gateways'] as $key => $value){
                 $obj = new LoRaGatewayItem();
                 $obj->deserialize($value);
                 array_push($this->Gateways, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

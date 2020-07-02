@@ -54,12 +54,12 @@ class AppUpdateUserRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AccessToken",$param) and $param["AccessToken"] !== null) {
-            $this->AccessToken = $param["AccessToken"];
+        if (array_key_exists('AccessToken',$param) and $param['AccessToken'] !== null) {
+            $this->AccessToken = $param['AccessToken'];
         }
 
-        if (array_key_exists("NickName",$param) and $param["NickName"] !== null) {
-            $this->NickName = $param["NickName"];
+        if (array_key_exists('NickName',$param) and $param['NickName'] !== null) {
+            $this->NickName = $param['NickName'];
         }
     }
 }

@@ -54,12 +54,12 @@ class AsymmetricSm2DecryptRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("KeyId",$param) and $param["KeyId"] !== null) {
-            $this->KeyId = $param["KeyId"];
+        if (array_key_exists('KeyId',$param) and $param['KeyId'] !== null) {
+            $this->KeyId = $param['KeyId'];
         }
 
-        if (array_key_exists("Ciphertext",$param) and $param["Ciphertext"] !== null) {
-            $this->Ciphertext = $param["Ciphertext"];
+        if (array_key_exists('Ciphertext',$param) and $param['Ciphertext'] !== null) {
+            $this->Ciphertext = $param['Ciphertext'];
         }
     }
 }

@@ -86,24 +86,24 @@ class PlayAuthKeyInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DomainName",$param) and $param["DomainName"] !== null) {
-            $this->DomainName = $param["DomainName"];
+        if (array_key_exists('DomainName',$param) and $param['DomainName'] !== null) {
+            $this->DomainName = $param['DomainName'];
         }
 
-        if (array_key_exists("Enable",$param) and $param["Enable"] !== null) {
-            $this->Enable = $param["Enable"];
+        if (array_key_exists('Enable',$param) and $param['Enable'] !== null) {
+            $this->Enable = $param['Enable'];
         }
 
-        if (array_key_exists("AuthKey",$param) and $param["AuthKey"] !== null) {
-            $this->AuthKey = $param["AuthKey"];
+        if (array_key_exists('AuthKey',$param) and $param['AuthKey'] !== null) {
+            $this->AuthKey = $param['AuthKey'];
         }
 
-        if (array_key_exists("AuthDelta",$param) and $param["AuthDelta"] !== null) {
-            $this->AuthDelta = $param["AuthDelta"];
+        if (array_key_exists('AuthDelta',$param) and $param['AuthDelta'] !== null) {
+            $this->AuthDelta = $param['AuthDelta'];
         }
 
-        if (array_key_exists("AuthBackKey",$param) and $param["AuthBackKey"] !== null) {
-            $this->AuthBackKey = $param["AuthBackKey"];
+        if (array_key_exists('AuthBackKey',$param) and $param['AuthBackKey'] !== null) {
+            $this->AuthBackKey = $param['AuthBackKey'];
         }
     }
 }

@@ -54,12 +54,12 @@ class SetBashEventsStatusRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Ids",$param) and $param["Ids"] !== null) {
-            $this->Ids = $param["Ids"];
+        if (array_key_exists('Ids',$param) and $param['Ids'] !== null) {
+            $this->Ids = $param['Ids'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
     }
 }

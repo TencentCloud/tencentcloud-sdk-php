@@ -62,16 +62,16 @@ class QueryMerchantBalanceData extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Currency",$param) and $param["Currency"] !== null) {
-            $this->Currency = $param["Currency"];
+        if (array_key_exists('Currency',$param) and $param['Currency'] !== null) {
+            $this->Currency = $param['Currency'];
         }
 
-        if (array_key_exists("Balance",$param) and $param["Balance"] !== null) {
-            $this->Balance = $param["Balance"];
+        if (array_key_exists('Balance',$param) and $param['Balance'] !== null) {
+            $this->Balance = $param['Balance'];
         }
 
-        if (array_key_exists("MerchantId",$param) and $param["MerchantId"] !== null) {
-            $this->MerchantId = $param["MerchantId"];
+        if (array_key_exists('MerchantId',$param) and $param['MerchantId'] !== null) {
+            $this->MerchantId = $param['MerchantId'];
         }
     }
 }

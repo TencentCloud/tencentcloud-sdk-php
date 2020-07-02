@@ -62,16 +62,16 @@ class SetLoadBalancerClsLogRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LoadBalancerId",$param) and $param["LoadBalancerId"] !== null) {
-            $this->LoadBalancerId = $param["LoadBalancerId"];
+        if (array_key_exists('LoadBalancerId',$param) and $param['LoadBalancerId'] !== null) {
+            $this->LoadBalancerId = $param['LoadBalancerId'];
         }
 
-        if (array_key_exists("LogSetId",$param) and $param["LogSetId"] !== null) {
-            $this->LogSetId = $param["LogSetId"];
+        if (array_key_exists('LogSetId',$param) and $param['LogSetId'] !== null) {
+            $this->LogSetId = $param['LogSetId'];
         }
 
-        if (array_key_exists("LogTopicId",$param) and $param["LogTopicId"] !== null) {
-            $this->LogTopicId = $param["LogTopicId"];
+        if (array_key_exists('LogTopicId',$param) and $param['LogTopicId'] !== null) {
+            $this->LogTopicId = $param['LogTopicId'];
         }
     }
 }

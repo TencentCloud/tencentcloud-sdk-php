@@ -86,30 +86,30 @@ class DescribeShieldResultResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TaskStatus",$param) and $param["TaskStatus"] !== null) {
-            $this->TaskStatus = $param["TaskStatus"];
+        if (array_key_exists('TaskStatus',$param) and $param['TaskStatus'] !== null) {
+            $this->TaskStatus = $param['TaskStatus'];
         }
 
-        if (array_key_exists("AppDetailInfo",$param) and $param["AppDetailInfo"] !== null) {
+        if (array_key_exists('AppDetailInfo',$param) and $param['AppDetailInfo'] !== null) {
             $this->AppDetailInfo = new AppDetailInfo();
-            $this->AppDetailInfo->deserialize($param["AppDetailInfo"]);
+            $this->AppDetailInfo->deserialize($param['AppDetailInfo']);
         }
 
-        if (array_key_exists("ShieldInfo",$param) and $param["ShieldInfo"] !== null) {
+        if (array_key_exists('ShieldInfo',$param) and $param['ShieldInfo'] !== null) {
             $this->ShieldInfo = new ShieldInfo();
-            $this->ShieldInfo->deserialize($param["ShieldInfo"]);
+            $this->ShieldInfo->deserialize($param['ShieldInfo']);
         }
 
-        if (array_key_exists("StatusDesc",$param) and $param["StatusDesc"] !== null) {
-            $this->StatusDesc = $param["StatusDesc"];
+        if (array_key_exists('StatusDesc',$param) and $param['StatusDesc'] !== null) {
+            $this->StatusDesc = $param['StatusDesc'];
         }
 
-        if (array_key_exists("StatusRef",$param) and $param["StatusRef"] !== null) {
-            $this->StatusRef = $param["StatusRef"];
+        if (array_key_exists('StatusRef',$param) and $param['StatusRef'] !== null) {
+            $this->StatusRef = $param['StatusRef'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

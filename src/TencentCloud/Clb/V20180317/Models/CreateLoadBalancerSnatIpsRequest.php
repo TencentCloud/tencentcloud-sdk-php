@@ -54,13 +54,13 @@ class CreateLoadBalancerSnatIpsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LoadBalancerId",$param) and $param["LoadBalancerId"] !== null) {
-            $this->LoadBalancerId = $param["LoadBalancerId"];
+        if (array_key_exists('LoadBalancerId',$param) and $param['LoadBalancerId'] !== null) {
+            $this->LoadBalancerId = $param['LoadBalancerId'];
         }
 
-        if (array_key_exists("SnatIps",$param) and $param["SnatIps"] !== null) {
+        if (array_key_exists('SnatIps',$param) and $param['SnatIps'] !== null) {
             $this->SnatIps = [];
-            foreach ($param["SnatIps"] as $key => $value){
+            foreach ($param['SnatIps'] as $key => $value){
                 $obj = new SnatIp();
                 $obj->deserialize($value);
                 array_push($this->SnatIps, $obj);

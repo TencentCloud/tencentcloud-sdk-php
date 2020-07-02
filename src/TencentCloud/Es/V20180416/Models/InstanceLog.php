@@ -70,20 +70,20 @@ class InstanceLog extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Time",$param) and $param["Time"] !== null) {
-            $this->Time = $param["Time"];
+        if (array_key_exists('Time',$param) and $param['Time'] !== null) {
+            $this->Time = $param['Time'];
         }
 
-        if (array_key_exists("Level",$param) and $param["Level"] !== null) {
-            $this->Level = $param["Level"];
+        if (array_key_exists('Level',$param) and $param['Level'] !== null) {
+            $this->Level = $param['Level'];
         }
 
-        if (array_key_exists("Ip",$param) and $param["Ip"] !== null) {
-            $this->Ip = $param["Ip"];
+        if (array_key_exists('Ip',$param) and $param['Ip'] !== null) {
+            $this->Ip = $param['Ip'];
         }
 
-        if (array_key_exists("Message",$param) and $param["Message"] !== null) {
-            $this->Message = $param["Message"];
+        if (array_key_exists('Message',$param) and $param['Message'] !== null) {
+            $this->Message = $param['Message'];
         }
     }
 }

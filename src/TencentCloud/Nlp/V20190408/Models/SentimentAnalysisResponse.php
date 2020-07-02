@@ -90,24 +90,24 @@ class SentimentAnalysisResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Negative",$param) and $param["Negative"] !== null) {
-            $this->Negative = $param["Negative"];
+        if (array_key_exists('Negative',$param) and $param['Negative'] !== null) {
+            $this->Negative = $param['Negative'];
         }
 
-        if (array_key_exists("Neutral",$param) and $param["Neutral"] !== null) {
-            $this->Neutral = $param["Neutral"];
+        if (array_key_exists('Neutral',$param) and $param['Neutral'] !== null) {
+            $this->Neutral = $param['Neutral'];
         }
 
-        if (array_key_exists("Positive",$param) and $param["Positive"] !== null) {
-            $this->Positive = $param["Positive"];
+        if (array_key_exists('Positive',$param) and $param['Positive'] !== null) {
+            $this->Positive = $param['Positive'];
         }
 
-        if (array_key_exists("Sentiment",$param) and $param["Sentiment"] !== null) {
-            $this->Sentiment = $param["Sentiment"];
+        if (array_key_exists('Sentiment',$param) and $param['Sentiment'] !== null) {
+            $this->Sentiment = $param['Sentiment'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

@@ -62,21 +62,21 @@ class DescribeVpnConnectionsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("VpnConnectionSet",$param) and $param["VpnConnectionSet"] !== null) {
+        if (array_key_exists('VpnConnectionSet',$param) and $param['VpnConnectionSet'] !== null) {
             $this->VpnConnectionSet = [];
-            foreach ($param["VpnConnectionSet"] as $key => $value){
+            foreach ($param['VpnConnectionSet'] as $key => $value){
                 $obj = new VpnConnection();
                 $obj->deserialize($value);
                 array_push($this->VpnConnectionSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

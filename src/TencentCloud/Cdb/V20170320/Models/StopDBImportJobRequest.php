@@ -46,8 +46,8 @@ class StopDBImportJobRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AsyncRequestId",$param) and $param["AsyncRequestId"] !== null) {
-            $this->AsyncRequestId = $param["AsyncRequestId"];
+        if (array_key_exists('AsyncRequestId',$param) and $param['AsyncRequestId'] !== null) {
+            $this->AsyncRequestId = $param['AsyncRequestId'];
         }
     }
 }

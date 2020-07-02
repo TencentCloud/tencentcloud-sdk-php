@@ -66,21 +66,21 @@ class DescribeNodeResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("NodeSet",$param) and $param["NodeSet"] !== null) {
+        if (array_key_exists('NodeSet',$param) and $param['NodeSet'] !== null) {
             $this->NodeSet = [];
-            foreach ($param["NodeSet"] as $key => $value){
+            foreach ($param['NodeSet'] as $key => $value){
                 $obj = new Node();
                 $obj->deserialize($value);
                 array_push($this->NodeSet, $obj);
             }
         }
 
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

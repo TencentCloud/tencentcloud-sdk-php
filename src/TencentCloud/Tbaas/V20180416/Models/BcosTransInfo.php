@@ -94,32 +94,32 @@ class BcosTransInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BlockNumber",$param) and $param["BlockNumber"] !== null) {
-            $this->BlockNumber = $param["BlockNumber"];
+        if (array_key_exists('BlockNumber',$param) and $param['BlockNumber'] !== null) {
+            $this->BlockNumber = $param['BlockNumber'];
         }
 
-        if (array_key_exists("BlockTimestamp",$param) and $param["BlockTimestamp"] !== null) {
-            $this->BlockTimestamp = $param["BlockTimestamp"];
+        if (array_key_exists('BlockTimestamp',$param) and $param['BlockTimestamp'] !== null) {
+            $this->BlockTimestamp = $param['BlockTimestamp'];
         }
 
-        if (array_key_exists("TransHash",$param) and $param["TransHash"] !== null) {
-            $this->TransHash = $param["TransHash"];
+        if (array_key_exists('TransHash',$param) and $param['TransHash'] !== null) {
+            $this->TransHash = $param['TransHash'];
         }
 
-        if (array_key_exists("TransFrom",$param) and $param["TransFrom"] !== null) {
-            $this->TransFrom = $param["TransFrom"];
+        if (array_key_exists('TransFrom',$param) and $param['TransFrom'] !== null) {
+            $this->TransFrom = $param['TransFrom'];
         }
 
-        if (array_key_exists("TransTo",$param) and $param["TransTo"] !== null) {
-            $this->TransTo = $param["TransTo"];
+        if (array_key_exists('TransTo',$param) and $param['TransTo'] !== null) {
+            $this->TransTo = $param['TransTo'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("ModifyTime",$param) and $param["ModifyTime"] !== null) {
-            $this->ModifyTime = $param["ModifyTime"];
+        if (array_key_exists('ModifyTime',$param) and $param['ModifyTime'] !== null) {
+            $this->ModifyTime = $param['ModifyTime'];
         }
     }
 }

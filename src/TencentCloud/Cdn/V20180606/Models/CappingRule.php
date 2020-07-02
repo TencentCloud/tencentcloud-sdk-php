@@ -94,16 +94,16 @@ path 时填充绝对路径，如 /xxx/test.html
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RuleType",$param) and $param["RuleType"] !== null) {
-            $this->RuleType = $param["RuleType"];
+        if (array_key_exists('RuleType',$param) and $param['RuleType'] !== null) {
+            $this->RuleType = $param['RuleType'];
         }
 
-        if (array_key_exists("RulePaths",$param) and $param["RulePaths"] !== null) {
-            $this->RulePaths = $param["RulePaths"];
+        if (array_key_exists('RulePaths',$param) and $param['RulePaths'] !== null) {
+            $this->RulePaths = $param['RulePaths'];
         }
 
-        if (array_key_exists("KBpsThreshold",$param) and $param["KBpsThreshold"] !== null) {
-            $this->KBpsThreshold = $param["KBpsThreshold"];
+        if (array_key_exists('KBpsThreshold',$param) and $param['KBpsThreshold'] !== null) {
+            $this->KBpsThreshold = $param['KBpsThreshold'];
         }
     }
 }

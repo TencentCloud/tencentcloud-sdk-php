@@ -94,32 +94,32 @@ class CreateApplicationRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ApplicationName",$param) and $param["ApplicationName"] !== null) {
-            $this->ApplicationName = $param["ApplicationName"];
+        if (array_key_exists('ApplicationName',$param) and $param['ApplicationName'] !== null) {
+            $this->ApplicationName = $param['ApplicationName'];
         }
 
-        if (array_key_exists("ApplicationType",$param) and $param["ApplicationType"] !== null) {
-            $this->ApplicationType = $param["ApplicationType"];
+        if (array_key_exists('ApplicationType',$param) and $param['ApplicationType'] !== null) {
+            $this->ApplicationType = $param['ApplicationType'];
         }
 
-        if (array_key_exists("MicroserviceType",$param) and $param["MicroserviceType"] !== null) {
-            $this->MicroserviceType = $param["MicroserviceType"];
+        if (array_key_exists('MicroserviceType',$param) and $param['MicroserviceType'] !== null) {
+            $this->MicroserviceType = $param['MicroserviceType'];
         }
 
-        if (array_key_exists("ApplicationDesc",$param) and $param["ApplicationDesc"] !== null) {
-            $this->ApplicationDesc = $param["ApplicationDesc"];
+        if (array_key_exists('ApplicationDesc',$param) and $param['ApplicationDesc'] !== null) {
+            $this->ApplicationDesc = $param['ApplicationDesc'];
         }
 
-        if (array_key_exists("ApplicationLogConfig",$param) and $param["ApplicationLogConfig"] !== null) {
-            $this->ApplicationLogConfig = $param["ApplicationLogConfig"];
+        if (array_key_exists('ApplicationLogConfig',$param) and $param['ApplicationLogConfig'] !== null) {
+            $this->ApplicationLogConfig = $param['ApplicationLogConfig'];
         }
 
-        if (array_key_exists("ApplicationResourceType",$param) and $param["ApplicationResourceType"] !== null) {
-            $this->ApplicationResourceType = $param["ApplicationResourceType"];
+        if (array_key_exists('ApplicationResourceType',$param) and $param['ApplicationResourceType'] !== null) {
+            $this->ApplicationResourceType = $param['ApplicationResourceType'];
         }
 
-        if (array_key_exists("ApplicationRuntimeType",$param) and $param["ApplicationRuntimeType"] !== null) {
-            $this->ApplicationRuntimeType = $param["ApplicationRuntimeType"];
+        if (array_key_exists('ApplicationRuntimeType',$param) and $param['ApplicationRuntimeType'] !== null) {
+            $this->ApplicationRuntimeType = $param['ApplicationRuntimeType'];
         }
     }
 }

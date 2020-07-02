@@ -62,21 +62,21 @@ class DescribeLaunchConfigurationsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("LaunchConfigurationSet",$param) and $param["LaunchConfigurationSet"] !== null) {
+        if (array_key_exists('LaunchConfigurationSet',$param) and $param['LaunchConfigurationSet'] !== null) {
             $this->LaunchConfigurationSet = [];
-            foreach ($param["LaunchConfigurationSet"] as $key => $value){
+            foreach ($param['LaunchConfigurationSet'] as $key => $value){
                 $obj = new LaunchConfiguration();
                 $obj->deserialize($value);
                 array_push($this->LaunchConfigurationSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

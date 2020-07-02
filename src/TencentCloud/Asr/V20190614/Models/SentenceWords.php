@@ -74,16 +74,16 @@ class SentenceWords extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Word",$param) and $param["Word"] !== null) {
-            $this->Word = $param["Word"];
+        if (array_key_exists('Word',$param) and $param['Word'] !== null) {
+            $this->Word = $param['Word'];
         }
 
-        if (array_key_exists("OffsetStartMs",$param) and $param["OffsetStartMs"] !== null) {
-            $this->OffsetStartMs = $param["OffsetStartMs"];
+        if (array_key_exists('OffsetStartMs',$param) and $param['OffsetStartMs'] !== null) {
+            $this->OffsetStartMs = $param['OffsetStartMs'];
         }
 
-        if (array_key_exists("OffsetEndMs",$param) and $param["OffsetEndMs"] !== null) {
-            $this->OffsetEndMs = $param["OffsetEndMs"];
+        if (array_key_exists('OffsetEndMs',$param) and $param['OffsetEndMs'] !== null) {
+            $this->OffsetEndMs = $param['OffsetEndMs'];
         }
     }
 }

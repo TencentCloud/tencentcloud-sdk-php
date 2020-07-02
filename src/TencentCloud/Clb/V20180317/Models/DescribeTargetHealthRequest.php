@@ -46,8 +46,8 @@ class DescribeTargetHealthRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LoadBalancerIds",$param) and $param["LoadBalancerIds"] !== null) {
-            $this->LoadBalancerIds = $param["LoadBalancerIds"];
+        if (array_key_exists('LoadBalancerIds',$param) and $param['LoadBalancerIds'] !== null) {
+            $this->LoadBalancerIds = $param['LoadBalancerIds'];
         }
     }
 }

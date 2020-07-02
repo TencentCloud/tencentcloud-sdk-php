@@ -62,16 +62,16 @@ class EditMediaStreamInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("StreamId",$param) and $param["StreamId"] !== null) {
-            $this->StreamId = $param["StreamId"];
+        if (array_key_exists('StreamId',$param) and $param['StreamId'] !== null) {
+            $this->StreamId = $param['StreamId'];
         }
 
-        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
-            $this->StartTime = $param["StartTime"];
+        if (array_key_exists('StartTime',$param) and $param['StartTime'] !== null) {
+            $this->StartTime = $param['StartTime'];
         }
 
-        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
-            $this->EndTime = $param["EndTime"];
+        if (array_key_exists('EndTime',$param) and $param['EndTime'] !== null) {
+            $this->EndTime = $param['EndTime'];
         }
     }
 }

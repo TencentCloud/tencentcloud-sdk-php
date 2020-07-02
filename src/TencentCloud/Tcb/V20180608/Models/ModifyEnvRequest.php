@@ -54,12 +54,12 @@ class ModifyEnvRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("EnvId",$param) and $param["EnvId"] !== null) {
-            $this->EnvId = $param["EnvId"];
+        if (array_key_exists('EnvId',$param) and $param['EnvId'] !== null) {
+            $this->EnvId = $param['EnvId'];
         }
 
-        if (array_key_exists("Alias",$param) and $param["Alias"] !== null) {
-            $this->Alias = $param["Alias"];
+        if (array_key_exists('Alias',$param) and $param['Alias'] !== null) {
+            $this->Alias = $param['Alias'];
         }
     }
 }

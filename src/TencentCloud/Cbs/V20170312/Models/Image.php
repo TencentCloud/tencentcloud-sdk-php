@@ -54,12 +54,12 @@ class Image extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ImageId",$param) and $param["ImageId"] !== null) {
-            $this->ImageId = $param["ImageId"];
+        if (array_key_exists('ImageId',$param) and $param['ImageId'] !== null) {
+            $this->ImageId = $param['ImageId'];
         }
 
-        if (array_key_exists("ImageName",$param) and $param["ImageName"] !== null) {
-            $this->ImageName = $param["ImageName"];
+        if (array_key_exists('ImageName',$param) and $param['ImageName'] !== null) {
+            $this->ImageName = $param['ImageName'];
         }
     }
 }

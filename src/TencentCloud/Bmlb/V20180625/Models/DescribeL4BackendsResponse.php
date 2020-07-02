@@ -54,17 +54,17 @@ class DescribeL4BackendsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BackendSet",$param) and $param["BackendSet"] !== null) {
+        if (array_key_exists('BackendSet',$param) and $param['BackendSet'] !== null) {
             $this->BackendSet = [];
-            foreach ($param["BackendSet"] as $key => $value){
+            foreach ($param['BackendSet'] as $key => $value){
                 $obj = new L4Backend();
                 $obj->deserialize($value);
                 array_push($this->BackendSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

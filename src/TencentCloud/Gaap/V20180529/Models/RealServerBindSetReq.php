@@ -70,20 +70,20 @@ class RealServerBindSetReq extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RealServerId",$param) and $param["RealServerId"] !== null) {
-            $this->RealServerId = $param["RealServerId"];
+        if (array_key_exists('RealServerId',$param) and $param['RealServerId'] !== null) {
+            $this->RealServerId = $param['RealServerId'];
         }
 
-        if (array_key_exists("RealServerPort",$param) and $param["RealServerPort"] !== null) {
-            $this->RealServerPort = $param["RealServerPort"];
+        if (array_key_exists('RealServerPort',$param) and $param['RealServerPort'] !== null) {
+            $this->RealServerPort = $param['RealServerPort'];
         }
 
-        if (array_key_exists("RealServerIP",$param) and $param["RealServerIP"] !== null) {
-            $this->RealServerIP = $param["RealServerIP"];
+        if (array_key_exists('RealServerIP',$param) and $param['RealServerIP'] !== null) {
+            $this->RealServerIP = $param['RealServerIP'];
         }
 
-        if (array_key_exists("RealServerWeight",$param) and $param["RealServerWeight"] !== null) {
-            $this->RealServerWeight = $param["RealServerWeight"];
+        if (array_key_exists('RealServerWeight',$param) and $param['RealServerWeight'] !== null) {
+            $this->RealServerWeight = $param['RealServerWeight'];
         }
     }
 }

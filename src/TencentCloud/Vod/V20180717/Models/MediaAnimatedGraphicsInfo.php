@@ -46,9 +46,9 @@ class MediaAnimatedGraphicsInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AnimatedGraphicsSet",$param) and $param["AnimatedGraphicsSet"] !== null) {
+        if (array_key_exists('AnimatedGraphicsSet',$param) and $param['AnimatedGraphicsSet'] !== null) {
             $this->AnimatedGraphicsSet = [];
-            foreach ($param["AnimatedGraphicsSet"] as $key => $value){
+            foreach ($param['AnimatedGraphicsSet'] as $key => $value){
                 $obj = new MediaAnimatedGraphicsItem();
                 $obj->deserialize($value);
                 array_push($this->AnimatedGraphicsSet, $obj);

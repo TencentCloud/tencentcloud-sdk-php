@@ -94,24 +94,24 @@ class ModifyCertificateRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ListenerId",$param) and $param["ListenerId"] !== null) {
-            $this->ListenerId = $param["ListenerId"];
+        if (array_key_exists('ListenerId',$param) and $param['ListenerId'] !== null) {
+            $this->ListenerId = $param['ListenerId'];
         }
 
-        if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
-            $this->Domain = $param["Domain"];
+        if (array_key_exists('Domain',$param) and $param['Domain'] !== null) {
+            $this->Domain = $param['Domain'];
         }
 
-        if (array_key_exists("CertificateId",$param) and $param["CertificateId"] !== null) {
-            $this->CertificateId = $param["CertificateId"];
+        if (array_key_exists('CertificateId',$param) and $param['CertificateId'] !== null) {
+            $this->CertificateId = $param['CertificateId'];
         }
 
-        if (array_key_exists("ClientCertificateId",$param) and $param["ClientCertificateId"] !== null) {
-            $this->ClientCertificateId = $param["ClientCertificateId"];
+        if (array_key_exists('ClientCertificateId',$param) and $param['ClientCertificateId'] !== null) {
+            $this->ClientCertificateId = $param['ClientCertificateId'];
         }
 
-        if (array_key_exists("PolyClientCertificateIds",$param) and $param["PolyClientCertificateIds"] !== null) {
-            $this->PolyClientCertificateIds = $param["PolyClientCertificateIds"];
+        if (array_key_exists('PolyClientCertificateIds',$param) and $param['PolyClientCertificateIds'] !== null) {
+            $this->PolyClientCertificateIds = $param['PolyClientCertificateIds'];
         }
     }
 }

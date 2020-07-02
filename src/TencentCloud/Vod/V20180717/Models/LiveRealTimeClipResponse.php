@@ -82,25 +82,25 @@ class LiveRealTimeClipResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Url",$param) and $param["Url"] !== null) {
-            $this->Url = $param["Url"];
+        if (array_key_exists('Url',$param) and $param['Url'] !== null) {
+            $this->Url = $param['Url'];
         }
 
-        if (array_key_exists("FileId",$param) and $param["FileId"] !== null) {
-            $this->FileId = $param["FileId"];
+        if (array_key_exists('FileId',$param) and $param['FileId'] !== null) {
+            $this->FileId = $param['FileId'];
         }
 
-        if (array_key_exists("VodTaskId",$param) and $param["VodTaskId"] !== null) {
-            $this->VodTaskId = $param["VodTaskId"];
+        if (array_key_exists('VodTaskId',$param) and $param['VodTaskId'] !== null) {
+            $this->VodTaskId = $param['VodTaskId'];
         }
 
-        if (array_key_exists("MetaData",$param) and $param["MetaData"] !== null) {
+        if (array_key_exists('MetaData',$param) and $param['MetaData'] !== null) {
             $this->MetaData = new MediaMetaData();
-            $this->MetaData->deserialize($param["MetaData"]);
+            $this->MetaData->deserialize($param['MetaData']);
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

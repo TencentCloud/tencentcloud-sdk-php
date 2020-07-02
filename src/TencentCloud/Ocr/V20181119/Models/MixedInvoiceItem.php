@@ -138,26 +138,26 @@ FailedOperation.UnKnowError：表示识别失败；
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Code",$param) and $param["Code"] !== null) {
-            $this->Code = $param["Code"];
+        if (array_key_exists('Code',$param) and $param['Code'] !== null) {
+            $this->Code = $param['Code'];
         }
 
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists('Type',$param) and $param['Type'] !== null) {
+            $this->Type = $param['Type'];
         }
 
-        if (array_key_exists("Rect",$param) and $param["Rect"] !== null) {
+        if (array_key_exists('Rect',$param) and $param['Rect'] !== null) {
             $this->Rect = new Rect();
-            $this->Rect->deserialize($param["Rect"]);
+            $this->Rect->deserialize($param['Rect']);
         }
 
-        if (array_key_exists("Angle",$param) and $param["Angle"] !== null) {
-            $this->Angle = $param["Angle"];
+        if (array_key_exists('Angle',$param) and $param['Angle'] !== null) {
+            $this->Angle = $param['Angle'];
         }
 
-        if (array_key_exists("SingleInvoiceInfos",$param) and $param["SingleInvoiceInfos"] !== null) {
+        if (array_key_exists('SingleInvoiceInfos',$param) and $param['SingleInvoiceInfos'] !== null) {
             $this->SingleInvoiceInfos = [];
-            foreach ($param["SingleInvoiceInfos"] as $key => $value){
+            foreach ($param['SingleInvoiceInfos'] as $key => $value){
                 $obj = new SingleInvoiceInfo();
                 $obj->deserialize($value);
                 array_push($this->SingleInvoiceInfos, $obj);

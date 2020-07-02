@@ -110,24 +110,24 @@ class DescribeWordSamplesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Usages",$param) and $param["Usages"] !== null) {
-            $this->Usages = $param["Usages"];
+        if (array_key_exists('Usages',$param) and $param['Usages'] !== null) {
+            $this->Usages = $param['Usages'];
         }
 
-        if (array_key_exists("Keywords",$param) and $param["Keywords"] !== null) {
-            $this->Keywords = $param["Keywords"];
+        if (array_key_exists('Keywords',$param) and $param['Keywords'] !== null) {
+            $this->Keywords = $param['Keywords'];
         }
 
-        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
-            $this->Tags = $param["Tags"];
+        if (array_key_exists('Tags',$param) and $param['Tags'] !== null) {
+            $this->Tags = $param['Tags'];
         }
 
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
+        if (array_key_exists('Offset',$param) and $param['Offset'] !== null) {
+            $this->Offset = $param['Offset'];
         }
 
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
+        if (array_key_exists('Limit',$param) and $param['Limit'] !== null) {
+            $this->Limit = $param['Limit'];
         }
     }
 }

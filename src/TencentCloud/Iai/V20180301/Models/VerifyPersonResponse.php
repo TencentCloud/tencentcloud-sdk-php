@@ -70,20 +70,20 @@ class VerifyPersonResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Score",$param) and $param["Score"] !== null) {
-            $this->Score = $param["Score"];
+        if (array_key_exists('Score',$param) and $param['Score'] !== null) {
+            $this->Score = $param['Score'];
         }
 
-        if (array_key_exists("IsMatch",$param) and $param["IsMatch"] !== null) {
-            $this->IsMatch = $param["IsMatch"];
+        if (array_key_exists('IsMatch',$param) and $param['IsMatch'] !== null) {
+            $this->IsMatch = $param['IsMatch'];
         }
 
-        if (array_key_exists("FaceModelVersion",$param) and $param["FaceModelVersion"] !== null) {
-            $this->FaceModelVersion = $param["FaceModelVersion"];
+        if (array_key_exists('FaceModelVersion',$param) and $param['FaceModelVersion'] !== null) {
+            $this->FaceModelVersion = $param['FaceModelVersion'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

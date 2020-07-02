@@ -54,12 +54,12 @@ class UpdatePayTypeRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Area",$param) and $param["Area"] !== null) {
-            $this->Area = $param["Area"];
+        if (array_key_exists('Area',$param) and $param['Area'] !== null) {
+            $this->Area = $param['Area'];
         }
 
-        if (array_key_exists("PayType",$param) and $param["PayType"] !== null) {
-            $this->PayType = $param["PayType"];
+        if (array_key_exists('PayType',$param) and $param['PayType'] !== null) {
+            $this->PayType = $param['PayType'];
         }
     }
 }

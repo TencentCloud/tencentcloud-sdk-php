@@ -62,16 +62,16 @@ class BlockedIP extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("IP",$param) and $param["IP"] !== null) {
-            $this->IP = $param["IP"];
+        if (array_key_exists('IP',$param) and $param['IP'] !== null) {
+            $this->IP = $param['IP'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("ExpireTime",$param) and $param["ExpireTime"] !== null) {
-            $this->ExpireTime = $param["ExpireTime"];
+        if (array_key_exists('ExpireTime',$param) and $param['ExpireTime'] !== null) {
+            $this->ExpireTime = $param['ExpireTime'];
         }
     }
 }

@@ -46,9 +46,9 @@ class RespLimit extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LimitInfo",$param) and $param["LimitInfo"] !== null) {
+        if (array_key_exists('LimitInfo',$param) and $param['LimitInfo'] !== null) {
             $this->LimitInfo = [];
-            foreach ($param["LimitInfo"] as $key => $value){
+            foreach ($param['LimitInfo'] as $key => $value){
                 $obj = new Limit();
                 $obj->deserialize($value);
                 array_push($this->LimitInfo, $obj);

@@ -62,21 +62,21 @@ class DescribeBrandPosCommentsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BrandCommentSet",$param) and $param["BrandCommentSet"] !== null) {
+        if (array_key_exists('BrandCommentSet',$param) and $param['BrandCommentSet'] !== null) {
             $this->BrandCommentSet = [];
-            foreach ($param["BrandCommentSet"] as $key => $value){
+            foreach ($param['BrandCommentSet'] as $key => $value){
                 $obj = new CommentInfo();
                 $obj->deserialize($value);
                 array_push($this->BrandCommentSet, $obj);
             }
         }
 
-        if (array_key_exists("TotalComments",$param) and $param["TotalComments"] !== null) {
-            $this->TotalComments = $param["TotalComments"];
+        if (array_key_exists('TotalComments',$param) and $param['TotalComments'] !== null) {
+            $this->TotalComments = $param['TotalComments'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

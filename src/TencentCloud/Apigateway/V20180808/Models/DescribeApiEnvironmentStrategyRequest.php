@@ -78,24 +78,24 @@ class DescribeApiEnvironmentStrategyRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ServiceId",$param) and $param["ServiceId"] !== null) {
-            $this->ServiceId = $param["ServiceId"];
+        if (array_key_exists('ServiceId',$param) and $param['ServiceId'] !== null) {
+            $this->ServiceId = $param['ServiceId'];
         }
 
-        if (array_key_exists("EnvironmentNames",$param) and $param["EnvironmentNames"] !== null) {
-            $this->EnvironmentNames = $param["EnvironmentNames"];
+        if (array_key_exists('EnvironmentNames',$param) and $param['EnvironmentNames'] !== null) {
+            $this->EnvironmentNames = $param['EnvironmentNames'];
         }
 
-        if (array_key_exists("ApiId",$param) and $param["ApiId"] !== null) {
-            $this->ApiId = $param["ApiId"];
+        if (array_key_exists('ApiId',$param) and $param['ApiId'] !== null) {
+            $this->ApiId = $param['ApiId'];
         }
 
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
+        if (array_key_exists('Limit',$param) and $param['Limit'] !== null) {
+            $this->Limit = $param['Limit'];
         }
 
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
+        if (array_key_exists('Offset',$param) and $param['Offset'] !== null) {
+            $this->Offset = $param['Offset'];
         }
     }
 }

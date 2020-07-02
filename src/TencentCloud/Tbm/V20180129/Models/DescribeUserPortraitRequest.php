@@ -46,8 +46,8 @@ class DescribeUserPortraitRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BrandId",$param) and $param["BrandId"] !== null) {
-            $this->BrandId = $param["BrandId"];
+        if (array_key_exists('BrandId',$param) and $param['BrandId'] !== null) {
+            $this->BrandId = $param['BrandId'];
         }
     }
 }

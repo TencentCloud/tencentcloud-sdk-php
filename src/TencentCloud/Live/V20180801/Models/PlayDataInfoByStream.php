@@ -54,12 +54,12 @@ class PlayDataInfoByStream extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("StreamName",$param) and $param["StreamName"] !== null) {
-            $this->StreamName = $param["StreamName"];
+        if (array_key_exists('StreamName',$param) and $param['StreamName'] !== null) {
+            $this->StreamName = $param['StreamName'];
         }
 
-        if (array_key_exists("TotalFlux",$param) and $param["TotalFlux"] !== null) {
-            $this->TotalFlux = $param["TotalFlux"];
+        if (array_key_exists('TotalFlux',$param) and $param['TotalFlux'] !== null) {
+            $this->TotalFlux = $param['TotalFlux'];
         }
     }
 }

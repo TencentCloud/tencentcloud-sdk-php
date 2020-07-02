@@ -62,16 +62,16 @@ class ScanFileRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Key",$param) and $param["Key"] !== null) {
-            $this->Key = $param["Key"];
+        if (array_key_exists('Key',$param) and $param['Key'] !== null) {
+            $this->Key = $param['Key'];
         }
 
-        if (array_key_exists("Sample",$param) and $param["Sample"] !== null) {
-            $this->Sample = $param["Sample"];
+        if (array_key_exists('Sample',$param) and $param['Sample'] !== null) {
+            $this->Sample = $param['Sample'];
         }
 
-        if (array_key_exists("Md5",$param) and $param["Md5"] !== null) {
-            $this->Md5 = $param["Md5"];
+        if (array_key_exists('Md5',$param) and $param['Md5'] !== null) {
+            $this->Md5 = $param['Md5'];
         }
     }
 }

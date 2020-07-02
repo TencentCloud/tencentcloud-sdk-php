@@ -78,12 +78,12 @@ class StatDataItem extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Time",$param) and $param["Time"] !== null) {
-            $this->Time = $param["Time"];
+        if (array_key_exists('Time',$param) and $param['Time'] !== null) {
+            $this->Time = $param['Time'];
         }
 
-        if (array_key_exists("Value",$param) and $param["Value"] !== null) {
-            $this->Value = $param["Value"];
+        if (array_key_exists('Value',$param) and $param['Value'] !== null) {
+            $this->Value = $param['Value'];
         }
     }
 }

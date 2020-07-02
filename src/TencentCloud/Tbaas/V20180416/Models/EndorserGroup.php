@@ -54,12 +54,12 @@ class EndorserGroup extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("EndorserGroupName",$param) and $param["EndorserGroupName"] !== null) {
-            $this->EndorserGroupName = $param["EndorserGroupName"];
+        if (array_key_exists('EndorserGroupName',$param) and $param['EndorserGroupName'] !== null) {
+            $this->EndorserGroupName = $param['EndorserGroupName'];
         }
 
-        if (array_key_exists("EndorserPeerList",$param) and $param["EndorserPeerList"] !== null) {
-            $this->EndorserPeerList = $param["EndorserPeerList"];
+        if (array_key_exists('EndorserPeerList',$param) and $param['EndorserPeerList'] !== null) {
+            $this->EndorserPeerList = $param['EndorserPeerList'];
         }
     }
 }

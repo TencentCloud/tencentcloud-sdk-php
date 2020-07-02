@@ -54,12 +54,12 @@ class ConditionPayMode extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {
-            $this->PayMode = $param["PayMode"];
+        if (array_key_exists('PayMode',$param) and $param['PayMode'] !== null) {
+            $this->PayMode = $param['PayMode'];
         }
 
-        if (array_key_exists("PayModeName",$param) and $param["PayModeName"] !== null) {
-            $this->PayModeName = $param["PayModeName"];
+        if (array_key_exists('PayModeName',$param) and $param['PayModeName'] !== null) {
+            $this->PayModeName = $param['PayModeName'];
         }
     }
 }

@@ -54,17 +54,17 @@ class DescribeTaskDetailResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Tasks",$param) and $param["Tasks"] !== null) {
+        if (array_key_exists('Tasks',$param) and $param['Tasks'] !== null) {
             $this->Tasks = [];
-            foreach ($param["Tasks"] as $key => $value){
+            foreach ($param['Tasks'] as $key => $value){
                 $obj = new CatTaskDetail();
                 $obj->deserialize($value);
                 array_push($this->Tasks, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

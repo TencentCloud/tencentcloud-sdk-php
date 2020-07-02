@@ -122,32 +122,32 @@ class LaneRuleTag extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TagId",$param) and $param["TagId"] !== null) {
-            $this->TagId = $param["TagId"];
+        if (array_key_exists('TagId',$param) and $param['TagId'] !== null) {
+            $this->TagId = $param['TagId'];
         }
 
-        if (array_key_exists("TagName",$param) and $param["TagName"] !== null) {
-            $this->TagName = $param["TagName"];
+        if (array_key_exists('TagName',$param) and $param['TagName'] !== null) {
+            $this->TagName = $param['TagName'];
         }
 
-        if (array_key_exists("TagOperator",$param) and $param["TagOperator"] !== null) {
-            $this->TagOperator = $param["TagOperator"];
+        if (array_key_exists('TagOperator',$param) and $param['TagOperator'] !== null) {
+            $this->TagOperator = $param['TagOperator'];
         }
 
-        if (array_key_exists("TagValue",$param) and $param["TagValue"] !== null) {
-            $this->TagValue = $param["TagValue"];
+        if (array_key_exists('TagValue',$param) and $param['TagValue'] !== null) {
+            $this->TagValue = $param['TagValue'];
         }
 
-        if (array_key_exists("LaneRuleId",$param) and $param["LaneRuleId"] !== null) {
-            $this->LaneRuleId = $param["LaneRuleId"];
+        if (array_key_exists('LaneRuleId',$param) and $param['LaneRuleId'] !== null) {
+            $this->LaneRuleId = $param['LaneRuleId'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
-            $this->UpdateTime = $param["UpdateTime"];
+        if (array_key_exists('UpdateTime',$param) and $param['UpdateTime'] !== null) {
+            $this->UpdateTime = $param['UpdateTime'];
         }
     }
 }

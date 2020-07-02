@@ -54,12 +54,12 @@ class DeleteContainerInstanceResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Msg",$param) and $param["Msg"] !== null) {
-            $this->Msg = $param["Msg"];
+        if (array_key_exists('Msg',$param) and $param['Msg'] !== null) {
+            $this->Msg = $param['Msg'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

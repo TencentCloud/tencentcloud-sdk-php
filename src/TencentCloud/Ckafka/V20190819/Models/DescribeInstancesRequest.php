@@ -86,28 +86,28 @@ class DescribeInstancesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("SearchWord",$param) and $param["SearchWord"] !== null) {
-            $this->SearchWord = $param["SearchWord"];
+        if (array_key_exists('SearchWord',$param) and $param['SearchWord'] !== null) {
+            $this->SearchWord = $param['SearchWord'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
+        if (array_key_exists('Offset',$param) and $param['Offset'] !== null) {
+            $this->Offset = $param['Offset'];
         }
 
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
+        if (array_key_exists('Limit',$param) and $param['Limit'] !== null) {
+            $this->Limit = $param['Limit'];
         }
 
-        if (array_key_exists("TagKey",$param) and $param["TagKey"] !== null) {
-            $this->TagKey = $param["TagKey"];
+        if (array_key_exists('TagKey',$param) and $param['TagKey'] !== null) {
+            $this->TagKey = $param['TagKey'];
         }
     }
 }

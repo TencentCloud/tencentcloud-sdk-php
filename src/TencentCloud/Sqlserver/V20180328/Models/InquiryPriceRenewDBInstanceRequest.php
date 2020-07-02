@@ -62,16 +62,16 @@ class InquiryPriceRenewDBInstanceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("Period",$param) and $param["Period"] !== null) {
-            $this->Period = $param["Period"];
+        if (array_key_exists('Period',$param) and $param['Period'] !== null) {
+            $this->Period = $param['Period'];
         }
 
-        if (array_key_exists("TimeUnit",$param) and $param["TimeUnit"] !== null) {
-            $this->TimeUnit = $param["TimeUnit"];
+        if (array_key_exists('TimeUnit',$param) and $param['TimeUnit'] !== null) {
+            $this->TimeUnit = $param['TimeUnit'];
         }
     }
 }

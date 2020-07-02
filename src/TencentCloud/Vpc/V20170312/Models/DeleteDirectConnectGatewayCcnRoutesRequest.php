@@ -54,12 +54,12 @@ class DeleteDirectConnectGatewayCcnRoutesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DirectConnectGatewayId",$param) and $param["DirectConnectGatewayId"] !== null) {
-            $this->DirectConnectGatewayId = $param["DirectConnectGatewayId"];
+        if (array_key_exists('DirectConnectGatewayId',$param) and $param['DirectConnectGatewayId'] !== null) {
+            $this->DirectConnectGatewayId = $param['DirectConnectGatewayId'];
         }
 
-        if (array_key_exists("RouteIds",$param) and $param["RouteIds"] !== null) {
-            $this->RouteIds = $param["RouteIds"];
+        if (array_key_exists('RouteIds',$param) and $param['RouteIds'] !== null) {
+            $this->RouteIds = $param['RouteIds'];
         }
     }
 }

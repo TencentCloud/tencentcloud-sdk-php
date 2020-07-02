@@ -54,12 +54,12 @@ class ConstraintRange extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Min",$param) and $param["Min"] !== null) {
-            $this->Min = $param["Min"];
+        if (array_key_exists('Min',$param) and $param['Min'] !== null) {
+            $this->Min = $param['Min'];
         }
 
-        if (array_key_exists("Max",$param) and $param["Max"] !== null) {
-            $this->Max = $param["Max"];
+        if (array_key_exists('Max',$param) and $param['Max'] !== null) {
+            $this->Max = $param['Max'];
         }
     }
 }

@@ -78,24 +78,24 @@ class ModifyIp6RuleRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Ip6TranslatorId",$param) and $param["Ip6TranslatorId"] !== null) {
-            $this->Ip6TranslatorId = $param["Ip6TranslatorId"];
+        if (array_key_exists('Ip6TranslatorId',$param) and $param['Ip6TranslatorId'] !== null) {
+            $this->Ip6TranslatorId = $param['Ip6TranslatorId'];
         }
 
-        if (array_key_exists("Ip6RuleId",$param) and $param["Ip6RuleId"] !== null) {
-            $this->Ip6RuleId = $param["Ip6RuleId"];
+        if (array_key_exists('Ip6RuleId',$param) and $param['Ip6RuleId'] !== null) {
+            $this->Ip6RuleId = $param['Ip6RuleId'];
         }
 
-        if (array_key_exists("Ip6RuleName",$param) and $param["Ip6RuleName"] !== null) {
-            $this->Ip6RuleName = $param["Ip6RuleName"];
+        if (array_key_exists('Ip6RuleName',$param) and $param['Ip6RuleName'] !== null) {
+            $this->Ip6RuleName = $param['Ip6RuleName'];
         }
 
-        if (array_key_exists("Vip",$param) and $param["Vip"] !== null) {
-            $this->Vip = $param["Vip"];
+        if (array_key_exists('Vip',$param) and $param['Vip'] !== null) {
+            $this->Vip = $param['Vip'];
         }
 
-        if (array_key_exists("Vport",$param) and $param["Vport"] !== null) {
-            $this->Vport = $param["Vport"];
+        if (array_key_exists('Vport',$param) and $param['Vport'] !== null) {
+            $this->Vport = $param['Vport'];
         }
     }
 }

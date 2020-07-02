@@ -54,13 +54,13 @@ class AppAddUserResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AppUser",$param) and $param["AppUser"] !== null) {
+        if (array_key_exists('AppUser',$param) and $param['AppUser'] !== null) {
             $this->AppUser = new AppUser();
-            $this->AppUser->deserialize($param["AppUser"]);
+            $this->AppUser->deserialize($param['AppUser']);
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

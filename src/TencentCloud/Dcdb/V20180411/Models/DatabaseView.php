@@ -46,8 +46,8 @@ class DatabaseView extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("View",$param) and $param["View"] !== null) {
-            $this->View = $param["View"];
+        if (array_key_exists('View',$param) and $param['View'] !== null) {
+            $this->View = $param['View'];
         }
     }
 }

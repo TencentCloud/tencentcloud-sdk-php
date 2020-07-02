@@ -62,16 +62,16 @@ class VerifySitesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SuccessNumber",$param) and $param["SuccessNumber"] !== null) {
-            $this->SuccessNumber = $param["SuccessNumber"];
+        if (array_key_exists('SuccessNumber',$param) and $param['SuccessNumber'] !== null) {
+            $this->SuccessNumber = $param['SuccessNumber'];
         }
 
-        if (array_key_exists("FailNumber",$param) and $param["FailNumber"] !== null) {
-            $this->FailNumber = $param["FailNumber"];
+        if (array_key_exists('FailNumber',$param) and $param['FailNumber'] !== null) {
+            $this->FailNumber = $param['FailNumber'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

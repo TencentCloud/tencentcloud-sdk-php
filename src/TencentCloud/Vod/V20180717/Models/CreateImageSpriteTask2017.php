@@ -110,36 +110,36 @@ class CreateImageSpriteTask2017 extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
-            $this->TaskId = $param["TaskId"];
+        if (array_key_exists('TaskId',$param) and $param['TaskId'] !== null) {
+            $this->TaskId = $param['TaskId'];
         }
 
-        if (array_key_exists("ErrCode",$param) and $param["ErrCode"] !== null) {
-            $this->ErrCode = $param["ErrCode"];
+        if (array_key_exists('ErrCode',$param) and $param['ErrCode'] !== null) {
+            $this->ErrCode = $param['ErrCode'];
         }
 
-        if (array_key_exists("Message",$param) and $param["Message"] !== null) {
-            $this->Message = $param["Message"];
+        if (array_key_exists('Message',$param) and $param['Message'] !== null) {
+            $this->Message = $param['Message'];
         }
 
-        if (array_key_exists("FileId",$param) and $param["FileId"] !== null) {
-            $this->FileId = $param["FileId"];
+        if (array_key_exists('FileId',$param) and $param['FileId'] !== null) {
+            $this->FileId = $param['FileId'];
         }
 
-        if (array_key_exists("Definition",$param) and $param["Definition"] !== null) {
-            $this->Definition = $param["Definition"];
+        if (array_key_exists('Definition',$param) and $param['Definition'] !== null) {
+            $this->Definition = $param['Definition'];
         }
 
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("ImageSpriteUrlSet",$param) and $param["ImageSpriteUrlSet"] !== null) {
-            $this->ImageSpriteUrlSet = $param["ImageSpriteUrlSet"];
+        if (array_key_exists('ImageSpriteUrlSet',$param) and $param['ImageSpriteUrlSet'] !== null) {
+            $this->ImageSpriteUrlSet = $param['ImageSpriteUrlSet'];
         }
 
-        if (array_key_exists("WebVttUrl",$param) and $param["WebVttUrl"] !== null) {
-            $this->WebVttUrl = $param["WebVttUrl"];
+        if (array_key_exists('WebVttUrl',$param) and $param['WebVttUrl'] !== null) {
+            $this->WebVttUrl = $param['WebVttUrl'];
         }
     }
 }

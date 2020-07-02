@@ -54,13 +54,13 @@ class CreateVirtualSubnetWithVlanRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
-            $this->VpcId = $param["VpcId"];
+        if (array_key_exists('VpcId',$param) and $param['VpcId'] !== null) {
+            $this->VpcId = $param['VpcId'];
         }
 
-        if (array_key_exists("SubnetSet",$param) and $param["SubnetSet"] !== null) {
+        if (array_key_exists('SubnetSet',$param) and $param['SubnetSet'] !== null) {
             $this->SubnetSet = [];
-            foreach ($param["SubnetSet"] as $key => $value){
+            foreach ($param['SubnetSet'] as $key => $value){
                 $obj = new SubnetCreateInputInfo();
                 $obj->deserialize($value);
                 array_push($this->SubnetSet, $obj);

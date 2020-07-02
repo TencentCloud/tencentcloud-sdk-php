@@ -82,16 +82,16 @@ class Canvas extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Color",$param) and $param["Color"] !== null) {
-            $this->Color = $param["Color"];
+        if (array_key_exists('Color',$param) and $param['Color'] !== null) {
+            $this->Color = $param['Color'];
         }
 
-        if (array_key_exists("Width",$param) and $param["Width"] !== null) {
-            $this->Width = $param["Width"];
+        if (array_key_exists('Width',$param) and $param['Width'] !== null) {
+            $this->Width = $param['Width'];
         }
 
-        if (array_key_exists("Height",$param) and $param["Height"] !== null) {
-            $this->Height = $param["Height"];
+        if (array_key_exists('Height',$param) and $param['Height'] !== null) {
+            $this->Height = $param['Height'];
         }
     }
 }

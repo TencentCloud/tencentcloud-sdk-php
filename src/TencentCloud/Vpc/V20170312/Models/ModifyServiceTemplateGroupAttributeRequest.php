@@ -62,16 +62,16 @@ class ModifyServiceTemplateGroupAttributeRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ServiceTemplateGroupId",$param) and $param["ServiceTemplateGroupId"] !== null) {
-            $this->ServiceTemplateGroupId = $param["ServiceTemplateGroupId"];
+        if (array_key_exists('ServiceTemplateGroupId',$param) and $param['ServiceTemplateGroupId'] !== null) {
+            $this->ServiceTemplateGroupId = $param['ServiceTemplateGroupId'];
         }
 
-        if (array_key_exists("ServiceTemplateGroupName",$param) and $param["ServiceTemplateGroupName"] !== null) {
-            $this->ServiceTemplateGroupName = $param["ServiceTemplateGroupName"];
+        if (array_key_exists('ServiceTemplateGroupName',$param) and $param['ServiceTemplateGroupName'] !== null) {
+            $this->ServiceTemplateGroupName = $param['ServiceTemplateGroupName'];
         }
 
-        if (array_key_exists("ServiceTemplateIds",$param) and $param["ServiceTemplateIds"] !== null) {
-            $this->ServiceTemplateIds = $param["ServiceTemplateIds"];
+        if (array_key_exists('ServiceTemplateIds',$param) and $param['ServiceTemplateIds'] !== null) {
+            $this->ServiceTemplateIds = $param['ServiceTemplateIds'];
         }
     }
 }

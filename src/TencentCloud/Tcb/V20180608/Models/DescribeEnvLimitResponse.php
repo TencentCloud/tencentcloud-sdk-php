@@ -110,40 +110,40 @@ class DescribeEnvLimitResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MaxEnvNum",$param) and $param["MaxEnvNum"] !== null) {
-            $this->MaxEnvNum = $param["MaxEnvNum"];
+        if (array_key_exists('MaxEnvNum',$param) and $param['MaxEnvNum'] !== null) {
+            $this->MaxEnvNum = $param['MaxEnvNum'];
         }
 
-        if (array_key_exists("CurrentEnvNum",$param) and $param["CurrentEnvNum"] !== null) {
-            $this->CurrentEnvNum = $param["CurrentEnvNum"];
+        if (array_key_exists('CurrentEnvNum',$param) and $param['CurrentEnvNum'] !== null) {
+            $this->CurrentEnvNum = $param['CurrentEnvNum'];
         }
 
-        if (array_key_exists("MaxFreeEnvNum",$param) and $param["MaxFreeEnvNum"] !== null) {
-            $this->MaxFreeEnvNum = $param["MaxFreeEnvNum"];
+        if (array_key_exists('MaxFreeEnvNum',$param) and $param['MaxFreeEnvNum'] !== null) {
+            $this->MaxFreeEnvNum = $param['MaxFreeEnvNum'];
         }
 
-        if (array_key_exists("CurrentFreeEnvNum",$param) and $param["CurrentFreeEnvNum"] !== null) {
-            $this->CurrentFreeEnvNum = $param["CurrentFreeEnvNum"];
+        if (array_key_exists('CurrentFreeEnvNum',$param) and $param['CurrentFreeEnvNum'] !== null) {
+            $this->CurrentFreeEnvNum = $param['CurrentFreeEnvNum'];
         }
 
-        if (array_key_exists("MaxDeleteTotal",$param) and $param["MaxDeleteTotal"] !== null) {
-            $this->MaxDeleteTotal = $param["MaxDeleteTotal"];
+        if (array_key_exists('MaxDeleteTotal',$param) and $param['MaxDeleteTotal'] !== null) {
+            $this->MaxDeleteTotal = $param['MaxDeleteTotal'];
         }
 
-        if (array_key_exists("CurrentDeleteTotal",$param) and $param["CurrentDeleteTotal"] !== null) {
-            $this->CurrentDeleteTotal = $param["CurrentDeleteTotal"];
+        if (array_key_exists('CurrentDeleteTotal',$param) and $param['CurrentDeleteTotal'] !== null) {
+            $this->CurrentDeleteTotal = $param['CurrentDeleteTotal'];
         }
 
-        if (array_key_exists("MaxDeleteMonthly",$param) and $param["MaxDeleteMonthly"] !== null) {
-            $this->MaxDeleteMonthly = $param["MaxDeleteMonthly"];
+        if (array_key_exists('MaxDeleteMonthly',$param) and $param['MaxDeleteMonthly'] !== null) {
+            $this->MaxDeleteMonthly = $param['MaxDeleteMonthly'];
         }
 
-        if (array_key_exists("CurrentDeleteMonthly",$param) and $param["CurrentDeleteMonthly"] !== null) {
-            $this->CurrentDeleteMonthly = $param["CurrentDeleteMonthly"];
+        if (array_key_exists('CurrentDeleteMonthly',$param) and $param['CurrentDeleteMonthly'] !== null) {
+            $this->CurrentDeleteMonthly = $param['CurrentDeleteMonthly'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

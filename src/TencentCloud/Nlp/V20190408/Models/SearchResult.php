@@ -70,20 +70,20 @@ class SearchResult extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("IsExist",$param) and $param["IsExist"] !== null) {
-            $this->IsExist = $param["IsExist"];
+        if (array_key_exists('IsExist',$param) and $param['IsExist'] !== null) {
+            $this->IsExist = $param['IsExist'];
         }
 
-        if (array_key_exists("MatchText",$param) and $param["MatchText"] !== null) {
-            $this->MatchText = $param["MatchText"];
+        if (array_key_exists('MatchText',$param) and $param['MatchText'] !== null) {
+            $this->MatchText = $param['MatchText'];
         }
 
-        if (array_key_exists("Text",$param) and $param["Text"] !== null) {
-            $this->Text = $param["Text"];
+        if (array_key_exists('Text',$param) and $param['Text'] !== null) {
+            $this->Text = $param['Text'];
         }
 
-        if (array_key_exists("Pos",$param) and $param["Pos"] !== null) {
-            $this->Pos = $param["Pos"];
+        if (array_key_exists('Pos',$param) and $param['Pos'] !== null) {
+            $this->Pos = $param['Pos'];
         }
     }
 }

@@ -74,21 +74,21 @@ class GetFederationTokenResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Credentials",$param) and $param["Credentials"] !== null) {
+        if (array_key_exists('Credentials',$param) and $param['Credentials'] !== null) {
             $this->Credentials = new Credentials();
-            $this->Credentials->deserialize($param["Credentials"]);
+            $this->Credentials->deserialize($param['Credentials']);
         }
 
-        if (array_key_exists("ExpiredTime",$param) and $param["ExpiredTime"] !== null) {
-            $this->ExpiredTime = $param["ExpiredTime"];
+        if (array_key_exists('ExpiredTime',$param) and $param['ExpiredTime'] !== null) {
+            $this->ExpiredTime = $param['ExpiredTime'];
         }
 
-        if (array_key_exists("Expiration",$param) and $param["Expiration"] !== null) {
-            $this->Expiration = $param["Expiration"];
+        if (array_key_exists('Expiration',$param) and $param['Expiration'] !== null) {
+            $this->Expiration = $param['Expiration'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

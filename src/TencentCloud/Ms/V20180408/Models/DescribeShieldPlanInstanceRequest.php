@@ -54,12 +54,12 @@ class DescribeShieldPlanInstanceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ResourceId",$param) and $param["ResourceId"] !== null) {
-            $this->ResourceId = $param["ResourceId"];
+        if (array_key_exists('ResourceId',$param) and $param['ResourceId'] !== null) {
+            $this->ResourceId = $param['ResourceId'];
         }
 
-        if (array_key_exists("Pid",$param) and $param["Pid"] !== null) {
-            $this->Pid = $param["Pid"];
+        if (array_key_exists('Pid',$param) and $param['Pid'] !== null) {
+            $this->Pid = $param['Pid'];
         }
     }
 }

@@ -94,39 +94,39 @@ class TextWaybill extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RecName",$param) and $param["RecName"] !== null) {
+        if (array_key_exists('RecName',$param) and $param['RecName'] !== null) {
             $this->RecName = new WaybillObj();
-            $this->RecName->deserialize($param["RecName"]);
+            $this->RecName->deserialize($param['RecName']);
         }
 
-        if (array_key_exists("RecNum",$param) and $param["RecNum"] !== null) {
+        if (array_key_exists('RecNum',$param) and $param['RecNum'] !== null) {
             $this->RecNum = new WaybillObj();
-            $this->RecNum->deserialize($param["RecNum"]);
+            $this->RecNum->deserialize($param['RecNum']);
         }
 
-        if (array_key_exists("RecAddr",$param) and $param["RecAddr"] !== null) {
+        if (array_key_exists('RecAddr',$param) and $param['RecAddr'] !== null) {
             $this->RecAddr = new WaybillObj();
-            $this->RecAddr->deserialize($param["RecAddr"]);
+            $this->RecAddr->deserialize($param['RecAddr']);
         }
 
-        if (array_key_exists("SenderName",$param) and $param["SenderName"] !== null) {
+        if (array_key_exists('SenderName',$param) and $param['SenderName'] !== null) {
             $this->SenderName = new WaybillObj();
-            $this->SenderName->deserialize($param["SenderName"]);
+            $this->SenderName->deserialize($param['SenderName']);
         }
 
-        if (array_key_exists("SenderNum",$param) and $param["SenderNum"] !== null) {
+        if (array_key_exists('SenderNum',$param) and $param['SenderNum'] !== null) {
             $this->SenderNum = new WaybillObj();
-            $this->SenderNum->deserialize($param["SenderNum"]);
+            $this->SenderNum->deserialize($param['SenderNum']);
         }
 
-        if (array_key_exists("SenderAddr",$param) and $param["SenderAddr"] !== null) {
+        if (array_key_exists('SenderAddr',$param) and $param['SenderAddr'] !== null) {
             $this->SenderAddr = new WaybillObj();
-            $this->SenderAddr->deserialize($param["SenderAddr"]);
+            $this->SenderAddr->deserialize($param['SenderAddr']);
         }
 
-        if (array_key_exists("WaybillNum",$param) and $param["WaybillNum"] !== null) {
+        if (array_key_exists('WaybillNum',$param) and $param['WaybillNum'] !== null) {
             $this->WaybillNum = new WaybillObj();
-            $this->WaybillNum->deserialize($param["WaybillNum"]);
+            $this->WaybillNum->deserialize($param['WaybillNum']);
         }
     }
 }

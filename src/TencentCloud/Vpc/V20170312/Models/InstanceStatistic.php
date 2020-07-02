@@ -54,12 +54,12 @@ class InstanceStatistic extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
-            $this->InstanceType = $param["InstanceType"];
+        if (array_key_exists('InstanceType',$param) and $param['InstanceType'] !== null) {
+            $this->InstanceType = $param['InstanceType'];
         }
 
-        if (array_key_exists("InstanceCount",$param) and $param["InstanceCount"] !== null) {
-            $this->InstanceCount = $param["InstanceCount"];
+        if (array_key_exists('InstanceCount',$param) and $param['InstanceCount'] !== null) {
+            $this->InstanceCount = $param['InstanceCount'];
         }
     }
 }

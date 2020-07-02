@@ -62,21 +62,21 @@ class DescribeDBXlogsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("XlogList",$param) and $param["XlogList"] !== null) {
+        if (array_key_exists('XlogList',$param) and $param['XlogList'] !== null) {
             $this->XlogList = [];
-            foreach ($param["XlogList"] as $key => $value){
+            foreach ($param['XlogList'] as $key => $value){
                 $obj = new Xlog();
                 $obj->deserialize($value);
                 array_push($this->XlogList, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

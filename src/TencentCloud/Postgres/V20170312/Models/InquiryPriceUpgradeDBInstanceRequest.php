@@ -70,20 +70,20 @@ class InquiryPriceUpgradeDBInstanceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Storage",$param) and $param["Storage"] !== null) {
-            $this->Storage = $param["Storage"];
+        if (array_key_exists('Storage',$param) and $param['Storage'] !== null) {
+            $this->Storage = $param['Storage'];
         }
 
-        if (array_key_exists("Memory",$param) and $param["Memory"] !== null) {
-            $this->Memory = $param["Memory"];
+        if (array_key_exists('Memory',$param) and $param['Memory'] !== null) {
+            $this->Memory = $param['Memory'];
         }
 
-        if (array_key_exists("DBInstanceId",$param) and $param["DBInstanceId"] !== null) {
-            $this->DBInstanceId = $param["DBInstanceId"];
+        if (array_key_exists('DBInstanceId',$param) and $param['DBInstanceId'] !== null) {
+            $this->DBInstanceId = $param['DBInstanceId'];
         }
 
-        if (array_key_exists("InstanceChargeType",$param) and $param["InstanceChargeType"] !== null) {
-            $this->InstanceChargeType = $param["InstanceChargeType"];
+        if (array_key_exists('InstanceChargeType',$param) and $param['InstanceChargeType'] !== null) {
+            $this->InstanceChargeType = $param['InstanceChargeType'];
         }
     }
 }

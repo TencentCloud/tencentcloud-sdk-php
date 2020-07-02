@@ -70,20 +70,20 @@ class VideoModerationRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("VideoUrl",$param) and $param["VideoUrl"] !== null) {
-            $this->VideoUrl = $param["VideoUrl"];
+        if (array_key_exists('VideoUrl',$param) and $param['VideoUrl'] !== null) {
+            $this->VideoUrl = $param['VideoUrl'];
         }
 
-        if (array_key_exists("DeveloperId",$param) and $param["DeveloperId"] !== null) {
-            $this->DeveloperId = $param["DeveloperId"];
+        if (array_key_exists('DeveloperId',$param) and $param['DeveloperId'] !== null) {
+            $this->DeveloperId = $param['DeveloperId'];
         }
 
-        if (array_key_exists("CBUrl",$param) and $param["CBUrl"] !== null) {
-            $this->CBUrl = $param["CBUrl"];
+        if (array_key_exists('CBUrl',$param) and $param['CBUrl'] !== null) {
+            $this->CBUrl = $param['CBUrl'];
         }
 
-        if (array_key_exists("Extra",$param) and $param["Extra"] !== null) {
-            $this->Extra = $param["Extra"];
+        if (array_key_exists('Extra',$param) and $param['Extra'] !== null) {
+            $this->Extra = $param['Extra'];
         }
     }
 }

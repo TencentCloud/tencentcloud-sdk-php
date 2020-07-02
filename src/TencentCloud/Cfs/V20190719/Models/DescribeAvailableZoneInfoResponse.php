@@ -54,17 +54,17 @@ class DescribeAvailableZoneInfoResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RegionZones",$param) and $param["RegionZones"] !== null) {
+        if (array_key_exists('RegionZones',$param) and $param['RegionZones'] !== null) {
             $this->RegionZones = [];
-            foreach ($param["RegionZones"] as $key => $value){
+            foreach ($param['RegionZones'] as $key => $value){
                 $obj = new AvailableRegion();
                 $obj->deserialize($value);
                 array_push($this->RegionZones, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

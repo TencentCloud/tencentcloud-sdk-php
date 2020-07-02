@@ -70,25 +70,25 @@ class CreateRedInvoiceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InvoicePlatformId",$param) and $param["InvoicePlatformId"] !== null) {
-            $this->InvoicePlatformId = $param["InvoicePlatformId"];
+        if (array_key_exists('InvoicePlatformId',$param) and $param['InvoicePlatformId'] !== null) {
+            $this->InvoicePlatformId = $param['InvoicePlatformId'];
         }
 
-        if (array_key_exists("Invoices",$param) and $param["Invoices"] !== null) {
+        if (array_key_exists('Invoices',$param) and $param['Invoices'] !== null) {
             $this->Invoices = [];
-            foreach ($param["Invoices"] as $key => $value){
+            foreach ($param['Invoices'] as $key => $value){
                 $obj = new CreateRedInvoiceItem();
                 $obj->deserialize($value);
                 array_push($this->Invoices, $obj);
             }
         }
 
-        if (array_key_exists("Profile",$param) and $param["Profile"] !== null) {
-            $this->Profile = $param["Profile"];
+        if (array_key_exists('Profile',$param) and $param['Profile'] !== null) {
+            $this->Profile = $param['Profile'];
         }
 
-        if (array_key_exists("InvoiceChannel",$param) and $param["InvoiceChannel"] !== null) {
-            $this->InvoiceChannel = $param["InvoiceChannel"];
+        if (array_key_exists('InvoiceChannel',$param) and $param['InvoiceChannel'] !== null) {
+            $this->InvoiceChannel = $param['InvoiceChannel'];
         }
     }
 }

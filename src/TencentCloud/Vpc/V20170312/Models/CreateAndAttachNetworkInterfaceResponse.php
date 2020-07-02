@@ -54,13 +54,13 @@ class CreateAndAttachNetworkInterfaceResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("NetworkInterface",$param) and $param["NetworkInterface"] !== null) {
+        if (array_key_exists('NetworkInterface',$param) and $param['NetworkInterface'] !== null) {
             $this->NetworkInterface = new NetworkInterface();
-            $this->NetworkInterface->deserialize($param["NetworkInterface"]);
+            $this->NetworkInterface->deserialize($param['NetworkInterface']);
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

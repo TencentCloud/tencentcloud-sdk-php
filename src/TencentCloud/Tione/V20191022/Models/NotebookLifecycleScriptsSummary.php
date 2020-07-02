@@ -62,16 +62,16 @@ class NotebookLifecycleScriptsSummary extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("NotebookLifecycleScriptsName",$param) and $param["NotebookLifecycleScriptsName"] !== null) {
-            $this->NotebookLifecycleScriptsName = $param["NotebookLifecycleScriptsName"];
+        if (array_key_exists('NotebookLifecycleScriptsName',$param) and $param['NotebookLifecycleScriptsName'] !== null) {
+            $this->NotebookLifecycleScriptsName = $param['NotebookLifecycleScriptsName'];
         }
 
-        if (array_key_exists("CreationTime",$param) and $param["CreationTime"] !== null) {
-            $this->CreationTime = $param["CreationTime"];
+        if (array_key_exists('CreationTime',$param) and $param['CreationTime'] !== null) {
+            $this->CreationTime = $param['CreationTime'];
         }
 
-        if (array_key_exists("LastModifiedTime",$param) and $param["LastModifiedTime"] !== null) {
-            $this->LastModifiedTime = $param["LastModifiedTime"];
+        if (array_key_exists('LastModifiedTime',$param) and $param['LastModifiedTime'] !== null) {
+            $this->LastModifiedTime = $param['LastModifiedTime'];
         }
     }
 }

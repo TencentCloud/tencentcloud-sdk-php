@@ -74,20 +74,20 @@ class RevokeRechargeByThirdPayResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RequestType",$param) and $param["RequestType"] !== null) {
-            $this->RequestType = $param["RequestType"];
+        if (array_key_exists('RequestType',$param) and $param['RequestType'] !== null) {
+            $this->RequestType = $param['RequestType'];
         }
 
-        if (array_key_exists("ReservedMessage",$param) and $param["ReservedMessage"] !== null) {
-            $this->ReservedMessage = $param["ReservedMessage"];
+        if (array_key_exists('ReservedMessage',$param) and $param['ReservedMessage'] !== null) {
+            $this->ReservedMessage = $param['ReservedMessage'];
         }
 
-        if (array_key_exists("FrontSequenceNumber",$param) and $param["FrontSequenceNumber"] !== null) {
-            $this->FrontSequenceNumber = $param["FrontSequenceNumber"];
+        if (array_key_exists('FrontSequenceNumber',$param) and $param['FrontSequenceNumber'] !== null) {
+            $this->FrontSequenceNumber = $param['FrontSequenceNumber'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

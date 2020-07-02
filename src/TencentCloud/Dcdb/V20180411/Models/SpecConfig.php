@@ -54,13 +54,13 @@ class SpecConfig extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Machine",$param) and $param["Machine"] !== null) {
-            $this->Machine = $param["Machine"];
+        if (array_key_exists('Machine',$param) and $param['Machine'] !== null) {
+            $this->Machine = $param['Machine'];
         }
 
-        if (array_key_exists("SpecConfigInfos",$param) and $param["SpecConfigInfos"] !== null) {
+        if (array_key_exists('SpecConfigInfos',$param) and $param['SpecConfigInfos'] !== null) {
             $this->SpecConfigInfos = [];
-            foreach ($param["SpecConfigInfos"] as $key => $value){
+            foreach ($param['SpecConfigInfos'] as $key => $value){
                 $obj = new SpecConfigInfo();
                 $obj->deserialize($value);
                 array_push($this->SpecConfigInfos, $obj);

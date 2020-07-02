@@ -70,20 +70,20 @@ class CreateBasicDDoSAlarmThresholdRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Business",$param) and $param["Business"] !== null) {
-            $this->Business = $param["Business"];
+        if (array_key_exists('Business',$param) and $param['Business'] !== null) {
+            $this->Business = $param['Business'];
         }
 
-        if (array_key_exists("Method",$param) and $param["Method"] !== null) {
-            $this->Method = $param["Method"];
+        if (array_key_exists('Method',$param) and $param['Method'] !== null) {
+            $this->Method = $param['Method'];
         }
 
-        if (array_key_exists("AlarmType",$param) and $param["AlarmType"] !== null) {
-            $this->AlarmType = $param["AlarmType"];
+        if (array_key_exists('AlarmType',$param) and $param['AlarmType'] !== null) {
+            $this->AlarmType = $param['AlarmType'];
         }
 
-        if (array_key_exists("AlarmThreshold",$param) and $param["AlarmThreshold"] !== null) {
-            $this->AlarmThreshold = $param["AlarmThreshold"];
+        if (array_key_exists('AlarmThreshold',$param) and $param['AlarmThreshold'] !== null) {
+            $this->AlarmThreshold = $param['AlarmThreshold'];
         }
     }
 }

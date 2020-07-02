@@ -218,64 +218,64 @@ class Service extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InnerHttpsPort",$param) and $param["InnerHttpsPort"] !== null) {
-            $this->InnerHttpsPort = $param["InnerHttpsPort"];
+        if (array_key_exists('InnerHttpsPort',$param) and $param['InnerHttpsPort'] !== null) {
+            $this->InnerHttpsPort = $param['InnerHttpsPort'];
         }
 
-        if (array_key_exists("ServiceDesc",$param) and $param["ServiceDesc"] !== null) {
-            $this->ServiceDesc = $param["ServiceDesc"];
+        if (array_key_exists('ServiceDesc',$param) and $param['ServiceDesc'] !== null) {
+            $this->ServiceDesc = $param['ServiceDesc'];
         }
 
-        if (array_key_exists("Protocol",$param) and $param["Protocol"] !== null) {
-            $this->Protocol = $param["Protocol"];
+        if (array_key_exists('Protocol',$param) and $param['Protocol'] !== null) {
+            $this->Protocol = $param['Protocol'];
         }
 
-        if (array_key_exists("ModifiedTime",$param) and $param["ModifiedTime"] !== null) {
-            $this->ModifiedTime = $param["ModifiedTime"];
+        if (array_key_exists('ModifiedTime',$param) and $param['ModifiedTime'] !== null) {
+            $this->ModifiedTime = $param['ModifiedTime'];
         }
 
-        if (array_key_exists("NetTypes",$param) and $param["NetTypes"] !== null) {
-            $this->NetTypes = $param["NetTypes"];
+        if (array_key_exists('NetTypes',$param) and $param['NetTypes'] !== null) {
+            $this->NetTypes = $param['NetTypes'];
         }
 
-        if (array_key_exists("ExclusiveSetName",$param) and $param["ExclusiveSetName"] !== null) {
-            $this->ExclusiveSetName = $param["ExclusiveSetName"];
+        if (array_key_exists('ExclusiveSetName',$param) and $param['ExclusiveSetName'] !== null) {
+            $this->ExclusiveSetName = $param['ExclusiveSetName'];
         }
 
-        if (array_key_exists("ServiceId",$param) and $param["ServiceId"] !== null) {
-            $this->ServiceId = $param["ServiceId"];
+        if (array_key_exists('ServiceId',$param) and $param['ServiceId'] !== null) {
+            $this->ServiceId = $param['ServiceId'];
         }
 
-        if (array_key_exists("IpVersion",$param) and $param["IpVersion"] !== null) {
-            $this->IpVersion = $param["IpVersion"];
+        if (array_key_exists('IpVersion',$param) and $param['IpVersion'] !== null) {
+            $this->IpVersion = $param['IpVersion'];
         }
 
-        if (array_key_exists("AvailableEnvironments",$param) and $param["AvailableEnvironments"] !== null) {
-            $this->AvailableEnvironments = $param["AvailableEnvironments"];
+        if (array_key_exists('AvailableEnvironments',$param) and $param['AvailableEnvironments'] !== null) {
+            $this->AvailableEnvironments = $param['AvailableEnvironments'];
         }
 
-        if (array_key_exists("ServiceName",$param) and $param["ServiceName"] !== null) {
-            $this->ServiceName = $param["ServiceName"];
+        if (array_key_exists('ServiceName',$param) and $param['ServiceName'] !== null) {
+            $this->ServiceName = $param['ServiceName'];
         }
 
-        if (array_key_exists("OuterSubDomain",$param) and $param["OuterSubDomain"] !== null) {
-            $this->OuterSubDomain = $param["OuterSubDomain"];
+        if (array_key_exists('OuterSubDomain',$param) and $param['OuterSubDomain'] !== null) {
+            $this->OuterSubDomain = $param['OuterSubDomain'];
         }
 
-        if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
-            $this->CreatedTime = $param["CreatedTime"];
+        if (array_key_exists('CreatedTime',$param) and $param['CreatedTime'] !== null) {
+            $this->CreatedTime = $param['CreatedTime'];
         }
 
-        if (array_key_exists("InnerHttpPort",$param) and $param["InnerHttpPort"] !== null) {
-            $this->InnerHttpPort = $param["InnerHttpPort"];
+        if (array_key_exists('InnerHttpPort',$param) and $param['InnerHttpPort'] !== null) {
+            $this->InnerHttpPort = $param['InnerHttpPort'];
         }
 
-        if (array_key_exists("InnerSubDomain",$param) and $param["InnerSubDomain"] !== null) {
-            $this->InnerSubDomain = $param["InnerSubDomain"];
+        if (array_key_exists('InnerSubDomain',$param) and $param['InnerSubDomain'] !== null) {
+            $this->InnerSubDomain = $param['InnerSubDomain'];
         }
 
-        if (array_key_exists("TradeIsolateStatus",$param) and $param["TradeIsolateStatus"] !== null) {
-            $this->TradeIsolateStatus = $param["TradeIsolateStatus"];
+        if (array_key_exists('TradeIsolateStatus',$param) and $param['TradeIsolateStatus'] !== null) {
+            $this->TradeIsolateStatus = $param['TradeIsolateStatus'];
         }
     }
 }

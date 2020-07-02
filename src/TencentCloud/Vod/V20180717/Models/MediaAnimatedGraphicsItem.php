@@ -118,44 +118,44 @@ class MediaAnimatedGraphicsItem extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Url",$param) and $param["Url"] !== null) {
-            $this->Url = $param["Url"];
+        if (array_key_exists('Url',$param) and $param['Url'] !== null) {
+            $this->Url = $param['Url'];
         }
 
-        if (array_key_exists("Definition",$param) and $param["Definition"] !== null) {
-            $this->Definition = $param["Definition"];
+        if (array_key_exists('Definition',$param) and $param['Definition'] !== null) {
+            $this->Definition = $param['Definition'];
         }
 
-        if (array_key_exists("Container",$param) and $param["Container"] !== null) {
-            $this->Container = $param["Container"];
+        if (array_key_exists('Container',$param) and $param['Container'] !== null) {
+            $this->Container = $param['Container'];
         }
 
-        if (array_key_exists("Height",$param) and $param["Height"] !== null) {
-            $this->Height = $param["Height"];
+        if (array_key_exists('Height',$param) and $param['Height'] !== null) {
+            $this->Height = $param['Height'];
         }
 
-        if (array_key_exists("Width",$param) and $param["Width"] !== null) {
-            $this->Width = $param["Width"];
+        if (array_key_exists('Width',$param) and $param['Width'] !== null) {
+            $this->Width = $param['Width'];
         }
 
-        if (array_key_exists("Bitrate",$param) and $param["Bitrate"] !== null) {
-            $this->Bitrate = $param["Bitrate"];
+        if (array_key_exists('Bitrate',$param) and $param['Bitrate'] !== null) {
+            $this->Bitrate = $param['Bitrate'];
         }
 
-        if (array_key_exists("Size",$param) and $param["Size"] !== null) {
-            $this->Size = $param["Size"];
+        if (array_key_exists('Size',$param) and $param['Size'] !== null) {
+            $this->Size = $param['Size'];
         }
 
-        if (array_key_exists("Md5",$param) and $param["Md5"] !== null) {
-            $this->Md5 = $param["Md5"];
+        if (array_key_exists('Md5',$param) and $param['Md5'] !== null) {
+            $this->Md5 = $param['Md5'];
         }
 
-        if (array_key_exists("StartTimeOffset",$param) and $param["StartTimeOffset"] !== null) {
-            $this->StartTimeOffset = $param["StartTimeOffset"];
+        if (array_key_exists('StartTimeOffset',$param) and $param['StartTimeOffset'] !== null) {
+            $this->StartTimeOffset = $param['StartTimeOffset'];
         }
 
-        if (array_key_exists("EndTimeOffset",$param) and $param["EndTimeOffset"] !== null) {
-            $this->EndTimeOffset = $param["EndTimeOffset"];
+        if (array_key_exists('EndTimeOffset',$param) and $param['EndTimeOffset'] !== null) {
+            $this->EndTimeOffset = $param['EndTimeOffset'];
         }
     }
 }

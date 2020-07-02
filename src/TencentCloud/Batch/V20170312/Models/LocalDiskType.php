@@ -78,24 +78,24 @@ class LocalDiskType extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists('Type',$param) and $param['Type'] !== null) {
+            $this->Type = $param['Type'];
         }
 
-        if (array_key_exists("PartitionType",$param) and $param["PartitionType"] !== null) {
-            $this->PartitionType = $param["PartitionType"];
+        if (array_key_exists('PartitionType',$param) and $param['PartitionType'] !== null) {
+            $this->PartitionType = $param['PartitionType'];
         }
 
-        if (array_key_exists("MinSize",$param) and $param["MinSize"] !== null) {
-            $this->MinSize = $param["MinSize"];
+        if (array_key_exists('MinSize',$param) and $param['MinSize'] !== null) {
+            $this->MinSize = $param['MinSize'];
         }
 
-        if (array_key_exists("MaxSize",$param) and $param["MaxSize"] !== null) {
-            $this->MaxSize = $param["MaxSize"];
+        if (array_key_exists('MaxSize',$param) and $param['MaxSize'] !== null) {
+            $this->MaxSize = $param['MaxSize'];
         }
 
-        if (array_key_exists("Required",$param) and $param["Required"] !== null) {
-            $this->Required = $param["Required"];
+        if (array_key_exists('Required',$param) and $param['Required'] !== null) {
+            $this->Required = $param['Required'];
         }
     }
 }

@@ -54,13 +54,13 @@ class DescribeDDoSAlarmThresholdResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DDoSAlarmThreshold",$param) and $param["DDoSAlarmThreshold"] !== null) {
+        if (array_key_exists('DDoSAlarmThreshold',$param) and $param['DDoSAlarmThreshold'] !== null) {
             $this->DDoSAlarmThreshold = new DDoSAlarmThreshold();
-            $this->DDoSAlarmThreshold->deserialize($param["DDoSAlarmThreshold"]);
+            $this->DDoSAlarmThreshold->deserialize($param['DDoSAlarmThreshold']);
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

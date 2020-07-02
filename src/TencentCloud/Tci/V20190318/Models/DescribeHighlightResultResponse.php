@@ -70,25 +70,25 @@ class DescribeHighlightResultResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("HighlightsInfo",$param) and $param["HighlightsInfo"] !== null) {
+        if (array_key_exists('HighlightsInfo',$param) and $param['HighlightsInfo'] !== null) {
             $this->HighlightsInfo = [];
-            foreach ($param["HighlightsInfo"] as $key => $value){
+            foreach ($param['HighlightsInfo'] as $key => $value){
                 $obj = new HighlightsInfomation();
                 $obj->deserialize($value);
                 array_push($this->HighlightsInfo, $obj);
             }
         }
 
-        if (array_key_exists("JobId",$param) and $param["JobId"] !== null) {
-            $this->JobId = $param["JobId"];
+        if (array_key_exists('JobId',$param) and $param['JobId'] !== null) {
+            $this->JobId = $param['JobId'];
         }
 
-        if (array_key_exists("Progress",$param) and $param["Progress"] !== null) {
-            $this->Progress = $param["Progress"];
+        if (array_key_exists('Progress',$param) and $param['Progress'] !== null) {
+            $this->Progress = $param['Progress'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

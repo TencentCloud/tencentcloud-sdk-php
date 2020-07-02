@@ -82,20 +82,20 @@ VPN网关实例ID，形如，`vpn-ltjahce6`。
         if ($param === null) {
             return;
         }
-        if (array_key_exists("GatewayId",$param) and $param["GatewayId"] !== null) {
-            $this->GatewayId = $param["GatewayId"];
+        if (array_key_exists('GatewayId',$param) and $param['GatewayId'] !== null) {
+            $this->GatewayId = $param['GatewayId'];
         }
 
-        if (array_key_exists("IpAddresses",$param) and $param["IpAddresses"] !== null) {
-            $this->IpAddresses = $param["IpAddresses"];
+        if (array_key_exists('IpAddresses',$param) and $param['IpAddresses'] !== null) {
+            $this->IpAddresses = $param['IpAddresses'];
         }
 
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
+        if (array_key_exists('Offset',$param) and $param['Offset'] !== null) {
+            $this->Offset = $param['Offset'];
         }
 
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
+        if (array_key_exists('Limit',$param) and $param['Limit'] !== null) {
+            $this->Limit = $param['Limit'];
         }
     }
 }

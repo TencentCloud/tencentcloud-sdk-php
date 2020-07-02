@@ -62,12 +62,12 @@ class TextClassificationRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Text",$param) and $param["Text"] !== null) {
-            $this->Text = $param["Text"];
+        if (array_key_exists('Text',$param) and $param['Text'] !== null) {
+            $this->Text = $param['Text'];
         }
 
-        if (array_key_exists("Flag",$param) and $param["Flag"] !== null) {
-            $this->Flag = $param["Flag"];
+        if (array_key_exists('Flag',$param) and $param['Flag'] !== null) {
+            $this->Flag = $param['Flag'];
         }
     }
 }

@@ -110,28 +110,28 @@ class CosCredentials extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SessionToken",$param) and $param["SessionToken"] !== null) {
-            $this->SessionToken = $param["SessionToken"];
+        if (array_key_exists('SessionToken',$param) and $param['SessionToken'] !== null) {
+            $this->SessionToken = $param['SessionToken'];
         }
 
-        if (array_key_exists("TmpAppId",$param) and $param["TmpAppId"] !== null) {
-            $this->TmpAppId = $param["TmpAppId"];
+        if (array_key_exists('TmpAppId',$param) and $param['TmpAppId'] !== null) {
+            $this->TmpAppId = $param['TmpAppId'];
         }
 
-        if (array_key_exists("TmpSecretId",$param) and $param["TmpSecretId"] !== null) {
-            $this->TmpSecretId = $param["TmpSecretId"];
+        if (array_key_exists('TmpSecretId',$param) and $param['TmpSecretId'] !== null) {
+            $this->TmpSecretId = $param['TmpSecretId'];
         }
 
-        if (array_key_exists("TmpSecretKey",$param) and $param["TmpSecretKey"] !== null) {
-            $this->TmpSecretKey = $param["TmpSecretKey"];
+        if (array_key_exists('TmpSecretKey',$param) and $param['TmpSecretKey'] !== null) {
+            $this->TmpSecretKey = $param['TmpSecretKey'];
         }
 
-        if (array_key_exists("ExpiredTime",$param) and $param["ExpiredTime"] !== null) {
-            $this->ExpiredTime = $param["ExpiredTime"];
+        if (array_key_exists('ExpiredTime',$param) and $param['ExpiredTime'] !== null) {
+            $this->ExpiredTime = $param['ExpiredTime'];
         }
 
-        if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
-            $this->Domain = $param["Domain"];
+        if (array_key_exists('Domain',$param) and $param['Domain'] !== null) {
+            $this->Domain = $param['Domain'];
         }
     }
 }

@@ -114,34 +114,34 @@ class ExportVideoByEditorTrackDataRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Platform",$param) and $param["Platform"] !== null) {
-            $this->Platform = $param["Platform"];
+        if (array_key_exists('Platform',$param) and $param['Platform'] !== null) {
+            $this->Platform = $param['Platform'];
         }
 
-        if (array_key_exists("Definition",$param) and $param["Definition"] !== null) {
-            $this->Definition = $param["Definition"];
+        if (array_key_exists('Definition',$param) and $param['Definition'] !== null) {
+            $this->Definition = $param['Definition'];
         }
 
-        if (array_key_exists("ExportDestination",$param) and $param["ExportDestination"] !== null) {
-            $this->ExportDestination = $param["ExportDestination"];
+        if (array_key_exists('ExportDestination',$param) and $param['ExportDestination'] !== null) {
+            $this->ExportDestination = $param['ExportDestination'];
         }
 
-        if (array_key_exists("TrackData",$param) and $param["TrackData"] !== null) {
-            $this->TrackData = $param["TrackData"];
+        if (array_key_exists('TrackData',$param) and $param['TrackData'] !== null) {
+            $this->TrackData = $param['TrackData'];
         }
 
-        if (array_key_exists("CMEExportInfo",$param) and $param["CMEExportInfo"] !== null) {
+        if (array_key_exists('CMEExportInfo',$param) and $param['CMEExportInfo'] !== null) {
             $this->CMEExportInfo = new CMEExportInfo();
-            $this->CMEExportInfo->deserialize($param["CMEExportInfo"]);
+            $this->CMEExportInfo->deserialize($param['CMEExportInfo']);
         }
 
-        if (array_key_exists("VODExportInfo",$param) and $param["VODExportInfo"] !== null) {
+        if (array_key_exists('VODExportInfo',$param) and $param['VODExportInfo'] !== null) {
             $this->VODExportInfo = new VODExportInfo();
-            $this->VODExportInfo->deserialize($param["VODExportInfo"]);
+            $this->VODExportInfo->deserialize($param['VODExportInfo']);
         }
 
-        if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
-            $this->Operator = $param["Operator"];
+        if (array_key_exists('Operator',$param) and $param['Operator'] !== null) {
+            $this->Operator = $param['Operator'];
         }
     }
 }

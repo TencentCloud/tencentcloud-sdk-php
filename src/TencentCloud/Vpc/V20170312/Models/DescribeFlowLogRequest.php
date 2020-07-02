@@ -54,12 +54,12 @@ class DescribeFlowLogRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
-            $this->VpcId = $param["VpcId"];
+        if (array_key_exists('VpcId',$param) and $param['VpcId'] !== null) {
+            $this->VpcId = $param['VpcId'];
         }
 
-        if (array_key_exists("FlowLogId",$param) and $param["FlowLogId"] !== null) {
-            $this->FlowLogId = $param["FlowLogId"];
+        if (array_key_exists('FlowLogId',$param) and $param['FlowLogId'] !== null) {
+            $this->FlowLogId = $param['FlowLogId'];
         }
     }
 }

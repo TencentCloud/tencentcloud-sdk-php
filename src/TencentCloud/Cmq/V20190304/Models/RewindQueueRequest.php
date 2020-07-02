@@ -54,12 +54,12 @@ class RewindQueueRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("QueueName",$param) and $param["QueueName"] !== null) {
-            $this->QueueName = $param["QueueName"];
+        if (array_key_exists('QueueName',$param) and $param['QueueName'] !== null) {
+            $this->QueueName = $param['QueueName'];
         }
 
-        if (array_key_exists("StartConsumeTime",$param) and $param["StartConsumeTime"] !== null) {
-            $this->StartConsumeTime = $param["StartConsumeTime"];
+        if (array_key_exists('StartConsumeTime',$param) and $param['StartConsumeTime'] !== null) {
+            $this->StartConsumeTime = $param['StartConsumeTime'];
         }
     }
 }

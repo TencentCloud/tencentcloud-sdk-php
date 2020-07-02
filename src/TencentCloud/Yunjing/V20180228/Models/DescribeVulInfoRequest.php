@@ -46,8 +46,8 @@ class DescribeVulInfoRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("VulId",$param) and $param["VulId"] !== null) {
-            $this->VulId = $param["VulId"];
+        if (array_key_exists('VulId',$param) and $param['VulId'] !== null) {
+            $this->VulId = $param['VulId'];
         }
     }
 }

@@ -98,20 +98,20 @@ PEM 格式，需要进行 Base 64 编码
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Certificate",$param) and $param["Certificate"] !== null) {
-            $this->Certificate = $param["Certificate"];
+        if (array_key_exists('Certificate',$param) and $param['Certificate'] !== null) {
+            $this->Certificate = $param['Certificate'];
         }
 
-        if (array_key_exists("CertName",$param) and $param["CertName"] !== null) {
-            $this->CertName = $param["CertName"];
+        if (array_key_exists('CertName',$param) and $param['CertName'] !== null) {
+            $this->CertName = $param['CertName'];
         }
 
-        if (array_key_exists("ExpireTime",$param) and $param["ExpireTime"] !== null) {
-            $this->ExpireTime = $param["ExpireTime"];
+        if (array_key_exists('ExpireTime',$param) and $param['ExpireTime'] !== null) {
+            $this->ExpireTime = $param['ExpireTime'];
         }
 
-        if (array_key_exists("DeployTime",$param) and $param["DeployTime"] !== null) {
-            $this->DeployTime = $param["DeployTime"];
+        if (array_key_exists('DeployTime',$param) and $param['DeployTime'] !== null) {
+            $this->DeployTime = $param['DeployTime'];
         }
     }
 }

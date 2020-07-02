@@ -154,44 +154,44 @@ class SetAuthenticationRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ListenerId",$param) and $param["ListenerId"] !== null) {
-            $this->ListenerId = $param["ListenerId"];
+        if (array_key_exists('ListenerId',$param) and $param['ListenerId'] !== null) {
+            $this->ListenerId = $param['ListenerId'];
         }
 
-        if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
-            $this->Domain = $param["Domain"];
+        if (array_key_exists('Domain',$param) and $param['Domain'] !== null) {
+            $this->Domain = $param['Domain'];
         }
 
-        if (array_key_exists("BasicAuth",$param) and $param["BasicAuth"] !== null) {
-            $this->BasicAuth = $param["BasicAuth"];
+        if (array_key_exists('BasicAuth',$param) and $param['BasicAuth'] !== null) {
+            $this->BasicAuth = $param['BasicAuth'];
         }
 
-        if (array_key_exists("GaapAuth",$param) and $param["GaapAuth"] !== null) {
-            $this->GaapAuth = $param["GaapAuth"];
+        if (array_key_exists('GaapAuth',$param) and $param['GaapAuth'] !== null) {
+            $this->GaapAuth = $param['GaapAuth'];
         }
 
-        if (array_key_exists("RealServerAuth",$param) and $param["RealServerAuth"] !== null) {
-            $this->RealServerAuth = $param["RealServerAuth"];
+        if (array_key_exists('RealServerAuth',$param) and $param['RealServerAuth'] !== null) {
+            $this->RealServerAuth = $param['RealServerAuth'];
         }
 
-        if (array_key_exists("BasicAuthConfId",$param) and $param["BasicAuthConfId"] !== null) {
-            $this->BasicAuthConfId = $param["BasicAuthConfId"];
+        if (array_key_exists('BasicAuthConfId',$param) and $param['BasicAuthConfId'] !== null) {
+            $this->BasicAuthConfId = $param['BasicAuthConfId'];
         }
 
-        if (array_key_exists("GaapCertificateId",$param) and $param["GaapCertificateId"] !== null) {
-            $this->GaapCertificateId = $param["GaapCertificateId"];
+        if (array_key_exists('GaapCertificateId',$param) and $param['GaapCertificateId'] !== null) {
+            $this->GaapCertificateId = $param['GaapCertificateId'];
         }
 
-        if (array_key_exists("RealServerCertificateId",$param) and $param["RealServerCertificateId"] !== null) {
-            $this->RealServerCertificateId = $param["RealServerCertificateId"];
+        if (array_key_exists('RealServerCertificateId',$param) and $param['RealServerCertificateId'] !== null) {
+            $this->RealServerCertificateId = $param['RealServerCertificateId'];
         }
 
-        if (array_key_exists("RealServerCertificateDomain",$param) and $param["RealServerCertificateDomain"] !== null) {
-            $this->RealServerCertificateDomain = $param["RealServerCertificateDomain"];
+        if (array_key_exists('RealServerCertificateDomain',$param) and $param['RealServerCertificateDomain'] !== null) {
+            $this->RealServerCertificateDomain = $param['RealServerCertificateDomain'];
         }
 
-        if (array_key_exists("PolyRealServerCertificateIds",$param) and $param["PolyRealServerCertificateIds"] !== null) {
-            $this->PolyRealServerCertificateIds = $param["PolyRealServerCertificateIds"];
+        if (array_key_exists('PolyRealServerCertificateIds',$param) and $param['PolyRealServerCertificateIds'] !== null) {
+            $this->PolyRealServerCertificateIds = $param['PolyRealServerCertificateIds'];
         }
     }
 }

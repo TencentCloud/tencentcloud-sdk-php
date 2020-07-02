@@ -46,9 +46,9 @@ class KeyValueRecord extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Record",$param) and $param["Record"] !== null) {
+        if (array_key_exists('Record',$param) and $param['Record'] !== null) {
             $this->Record = [];
-            foreach ($param["Record"] as $key => $value){
+            foreach ($param['Record'] as $key => $value){
                 $obj = new KeyValue();
                 $obj->deserialize($value);
                 array_push($this->Record, $obj);

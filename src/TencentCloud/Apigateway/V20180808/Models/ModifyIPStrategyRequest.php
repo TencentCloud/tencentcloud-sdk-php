@@ -62,16 +62,16 @@ class ModifyIPStrategyRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ServiceId",$param) and $param["ServiceId"] !== null) {
-            $this->ServiceId = $param["ServiceId"];
+        if (array_key_exists('ServiceId',$param) and $param['ServiceId'] !== null) {
+            $this->ServiceId = $param['ServiceId'];
         }
 
-        if (array_key_exists("StrategyId",$param) and $param["StrategyId"] !== null) {
-            $this->StrategyId = $param["StrategyId"];
+        if (array_key_exists('StrategyId',$param) and $param['StrategyId'] !== null) {
+            $this->StrategyId = $param['StrategyId'];
         }
 
-        if (array_key_exists("StrategyData",$param) and $param["StrategyData"] !== null) {
-            $this->StrategyData = $param["StrategyData"];
+        if (array_key_exists('StrategyData',$param) and $param['StrategyData'] !== null) {
+            $this->StrategyData = $param['StrategyData'];
         }
     }
 }

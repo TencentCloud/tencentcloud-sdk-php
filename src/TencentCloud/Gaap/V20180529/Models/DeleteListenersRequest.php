@@ -70,20 +70,20 @@ class DeleteListenersRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ListenerIds",$param) and $param["ListenerIds"] !== null) {
-            $this->ListenerIds = $param["ListenerIds"];
+        if (array_key_exists('ListenerIds',$param) and $param['ListenerIds'] !== null) {
+            $this->ListenerIds = $param['ListenerIds'];
         }
 
-        if (array_key_exists("Force",$param) and $param["Force"] !== null) {
-            $this->Force = $param["Force"];
+        if (array_key_exists('Force',$param) and $param['Force'] !== null) {
+            $this->Force = $param['Force'];
         }
 
-        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
-            $this->GroupId = $param["GroupId"];
+        if (array_key_exists('GroupId',$param) and $param['GroupId'] !== null) {
+            $this->GroupId = $param['GroupId'];
         }
 
-        if (array_key_exists("ProxyId",$param) and $param["ProxyId"] !== null) {
-            $this->ProxyId = $param["ProxyId"];
+        if (array_key_exists('ProxyId',$param) and $param['ProxyId'] !== null) {
+            $this->ProxyId = $param['ProxyId'];
         }
     }
 }

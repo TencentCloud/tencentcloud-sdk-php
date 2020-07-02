@@ -94,32 +94,32 @@ class InquiryPriceCreateProxyRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AccessRegion",$param) and $param["AccessRegion"] !== null) {
-            $this->AccessRegion = $param["AccessRegion"];
+        if (array_key_exists('AccessRegion',$param) and $param['AccessRegion'] !== null) {
+            $this->AccessRegion = $param['AccessRegion'];
         }
 
-        if (array_key_exists("Bandwidth",$param) and $param["Bandwidth"] !== null) {
-            $this->Bandwidth = $param["Bandwidth"];
+        if (array_key_exists('Bandwidth',$param) and $param['Bandwidth'] !== null) {
+            $this->Bandwidth = $param['Bandwidth'];
         }
 
-        if (array_key_exists("DestRegion",$param) and $param["DestRegion"] !== null) {
-            $this->DestRegion = $param["DestRegion"];
+        if (array_key_exists('DestRegion',$param) and $param['DestRegion'] !== null) {
+            $this->DestRegion = $param['DestRegion'];
         }
 
-        if (array_key_exists("Concurrency",$param) and $param["Concurrency"] !== null) {
-            $this->Concurrency = $param["Concurrency"];
+        if (array_key_exists('Concurrency',$param) and $param['Concurrency'] !== null) {
+            $this->Concurrency = $param['Concurrency'];
         }
 
-        if (array_key_exists("RealServerRegion",$param) and $param["RealServerRegion"] !== null) {
-            $this->RealServerRegion = $param["RealServerRegion"];
+        if (array_key_exists('RealServerRegion',$param) and $param['RealServerRegion'] !== null) {
+            $this->RealServerRegion = $param['RealServerRegion'];
         }
 
-        if (array_key_exists("Concurrent",$param) and $param["Concurrent"] !== null) {
-            $this->Concurrent = $param["Concurrent"];
+        if (array_key_exists('Concurrent',$param) and $param['Concurrent'] !== null) {
+            $this->Concurrent = $param['Concurrent'];
         }
 
-        if (array_key_exists("BillingType",$param) and $param["BillingType"] !== null) {
-            $this->BillingType = $param["BillingType"];
+        if (array_key_exists('BillingType',$param) and $param['BillingType'] !== null) {
+            $this->BillingType = $param['BillingType'];
         }
     }
 }

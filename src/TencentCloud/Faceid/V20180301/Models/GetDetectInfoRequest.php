@@ -70,16 +70,16 @@ class GetDetectInfoRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BizToken",$param) and $param["BizToken"] !== null) {
-            $this->BizToken = $param["BizToken"];
+        if (array_key_exists('BizToken',$param) and $param['BizToken'] !== null) {
+            $this->BizToken = $param['BizToken'];
         }
 
-        if (array_key_exists("RuleId",$param) and $param["RuleId"] !== null) {
-            $this->RuleId = $param["RuleId"];
+        if (array_key_exists('RuleId',$param) and $param['RuleId'] !== null) {
+            $this->RuleId = $param['RuleId'];
         }
 
-        if (array_key_exists("InfoType",$param) and $param["InfoType"] !== null) {
-            $this->InfoType = $param["InfoType"];
+        if (array_key_exists('InfoType',$param) and $param['InfoType'] !== null) {
+            $this->InfoType = $param['InfoType'];
         }
     }
 }

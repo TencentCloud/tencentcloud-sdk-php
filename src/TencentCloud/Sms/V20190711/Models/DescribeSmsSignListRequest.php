@@ -62,12 +62,12 @@ class DescribeSmsSignListRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SignIdSet",$param) and $param["SignIdSet"] !== null) {
-            $this->SignIdSet = $param["SignIdSet"];
+        if (array_key_exists('SignIdSet',$param) and $param['SignIdSet'] !== null) {
+            $this->SignIdSet = $param['SignIdSet'];
         }
 
-        if (array_key_exists("International",$param) and $param["International"] !== null) {
-            $this->International = $param["International"];
+        if (array_key_exists('International',$param) and $param['International'] !== null) {
+            $this->International = $param['International'];
         }
     }
 }

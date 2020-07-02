@@ -62,17 +62,17 @@ class ConflictSource extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ConflictSourceId",$param) and $param["ConflictSourceId"] !== null) {
-            $this->ConflictSourceId = $param["ConflictSourceId"];
+        if (array_key_exists('ConflictSourceId',$param) and $param['ConflictSourceId'] !== null) {
+            $this->ConflictSourceId = $param['ConflictSourceId'];
         }
 
-        if (array_key_exists("SourceItem",$param) and $param["SourceItem"] !== null) {
-            $this->SourceItem = $param["SourceItem"];
+        if (array_key_exists('SourceItem',$param) and $param['SourceItem'] !== null) {
+            $this->SourceItem = $param['SourceItem'];
         }
 
-        if (array_key_exists("ConflictItemSet",$param) and $param["ConflictItemSet"] !== null) {
+        if (array_key_exists('ConflictItemSet',$param) and $param['ConflictItemSet'] !== null) {
             $this->ConflictItemSet = [];
-            foreach ($param["ConflictItemSet"] as $key => $value){
+            foreach ($param['ConflictItemSet'] as $key => $value){
                 $obj = new ConflictItem();
                 $obj->deserialize($value);
                 array_push($this->ConflictItemSet, $obj);

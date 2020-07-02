@@ -78,24 +78,24 @@ class ScanDetail extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Label",$param) and $param["Label"] !== null) {
-            $this->Label = $param["Label"];
+        if (array_key_exists('Label',$param) and $param['Label'] !== null) {
+            $this->Label = $param['Label'];
         }
 
-        if (array_key_exists("Rate",$param) and $param["Rate"] !== null) {
-            $this->Rate = $param["Rate"];
+        if (array_key_exists('Rate',$param) and $param['Rate'] !== null) {
+            $this->Rate = $param['Rate'];
         }
 
-        if (array_key_exists("KeyWord",$param) and $param["KeyWord"] !== null) {
-            $this->KeyWord = $param["KeyWord"];
+        if (array_key_exists('KeyWord',$param) and $param['KeyWord'] !== null) {
+            $this->KeyWord = $param['KeyWord'];
         }
 
-        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
-            $this->StartTime = $param["StartTime"];
+        if (array_key_exists('StartTime',$param) and $param['StartTime'] !== null) {
+            $this->StartTime = $param['StartTime'];
         }
 
-        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
-            $this->EndTime = $param["EndTime"];
+        if (array_key_exists('EndTime',$param) and $param['EndTime'] !== null) {
+            $this->EndTime = $param['EndTime'];
         }
     }
 }

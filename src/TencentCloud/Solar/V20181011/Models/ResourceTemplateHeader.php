@@ -94,24 +94,24 @@ class ResourceTemplateHeader extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Content",$param) and $param["Content"] !== null) {
-            $this->Content = $param["Content"];
+        if (array_key_exists('Content',$param) and $param['Content'] !== null) {
+            $this->Content = $param['Content'];
         }
 
-        if (array_key_exists("Example",$param) and $param["Example"] !== null) {
-            $this->Example = $param["Example"];
+        if (array_key_exists('Example',$param) and $param['Example'] !== null) {
+            $this->Example = $param['Example'];
         }
 
-        if (array_key_exists("KeyArray",$param) and $param["KeyArray"] !== null) {
-            $this->KeyArray = $param["KeyArray"];
+        if (array_key_exists('KeyArray',$param) and $param['KeyArray'] !== null) {
+            $this->KeyArray = $param['KeyArray'];
         }
 
-        if (array_key_exists("TemplateId",$param) and $param["TemplateId"] !== null) {
-            $this->TemplateId = $param["TemplateId"];
+        if (array_key_exists('TemplateId',$param) and $param['TemplateId'] !== null) {
+            $this->TemplateId = $param['TemplateId'];
         }
 
-        if (array_key_exists("Title",$param) and $param["Title"] !== null) {
-            $this->Title = $param["Title"];
+        if (array_key_exists('Title',$param) and $param['Title'] !== null) {
+            $this->Title = $param['Title'];
         }
     }
 }

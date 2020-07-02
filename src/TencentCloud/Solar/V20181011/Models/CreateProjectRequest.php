@@ -78,24 +78,24 @@ class CreateProjectRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ProjectName",$param) and $param["ProjectName"] !== null) {
-            $this->ProjectName = $param["ProjectName"];
+        if (array_key_exists('ProjectName',$param) and $param['ProjectName'] !== null) {
+            $this->ProjectName = $param['ProjectName'];
         }
 
-        if (array_key_exists("ProjectOrg",$param) and $param["ProjectOrg"] !== null) {
-            $this->ProjectOrg = $param["ProjectOrg"];
+        if (array_key_exists('ProjectOrg',$param) and $param['ProjectOrg'] !== null) {
+            $this->ProjectOrg = $param['ProjectOrg'];
         }
 
-        if (array_key_exists("ProjectBudget",$param) and $param["ProjectBudget"] !== null) {
-            $this->ProjectBudget = $param["ProjectBudget"];
+        if (array_key_exists('ProjectBudget',$param) and $param['ProjectBudget'] !== null) {
+            $this->ProjectBudget = $param['ProjectBudget'];
         }
 
-        if (array_key_exists("ProjectIntroduction",$param) and $param["ProjectIntroduction"] !== null) {
-            $this->ProjectIntroduction = $param["ProjectIntroduction"];
+        if (array_key_exists('ProjectIntroduction',$param) and $param['ProjectIntroduction'] !== null) {
+            $this->ProjectIntroduction = $param['ProjectIntroduction'];
         }
 
-        if (array_key_exists("ProjectOrgId",$param) and $param["ProjectOrgId"] !== null) {
-            $this->ProjectOrgId = $param["ProjectOrgId"];
+        if (array_key_exists('ProjectOrgId',$param) and $param['ProjectOrgId'] !== null) {
+            $this->ProjectOrgId = $param['ProjectOrgId'];
         }
     }
 }

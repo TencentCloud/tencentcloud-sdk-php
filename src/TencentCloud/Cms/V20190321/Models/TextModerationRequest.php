@@ -70,20 +70,20 @@ class TextModerationRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Content",$param) and $param["Content"] !== null) {
-            $this->Content = $param["Content"];
+        if (array_key_exists('Content',$param) and $param['Content'] !== null) {
+            $this->Content = $param['Content'];
         }
 
-        if (array_key_exists("BizType",$param) and $param["BizType"] !== null) {
-            $this->BizType = $param["BizType"];
+        if (array_key_exists('BizType',$param) and $param['BizType'] !== null) {
+            $this->BizType = $param['BizType'];
         }
 
-        if (array_key_exists("DataId",$param) and $param["DataId"] !== null) {
-            $this->DataId = $param["DataId"];
+        if (array_key_exists('DataId',$param) and $param['DataId'] !== null) {
+            $this->DataId = $param['DataId'];
         }
 
-        if (array_key_exists("SdkAppId",$param) and $param["SdkAppId"] !== null) {
-            $this->SdkAppId = $param["SdkAppId"];
+        if (array_key_exists('SdkAppId',$param) and $param['SdkAppId'] !== null) {
+            $this->SdkAppId = $param['SdkAppId'];
         }
     }
 }

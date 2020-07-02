@@ -78,24 +78,24 @@ class ServiceConfig extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Product",$param) and $param["Product"] !== null) {
-            $this->Product = $param["Product"];
+        if (array_key_exists('Product',$param) and $param['Product'] !== null) {
+            $this->Product = $param['Product'];
         }
 
-        if (array_key_exists("UniqVpcId",$param) and $param["UniqVpcId"] !== null) {
-            $this->UniqVpcId = $param["UniqVpcId"];
+        if (array_key_exists('UniqVpcId',$param) and $param['UniqVpcId'] !== null) {
+            $this->UniqVpcId = $param['UniqVpcId'];
         }
 
-        if (array_key_exists("Url",$param) and $param["Url"] !== null) {
-            $this->Url = $param["Url"];
+        if (array_key_exists('Url',$param) and $param['Url'] !== null) {
+            $this->Url = $param['Url'];
         }
 
-        if (array_key_exists("Path",$param) and $param["Path"] !== null) {
-            $this->Path = $param["Path"];
+        if (array_key_exists('Path',$param) and $param['Path'] !== null) {
+            $this->Path = $param['Path'];
         }
 
-        if (array_key_exists("Method",$param) and $param["Method"] !== null) {
-            $this->Method = $param["Method"];
+        if (array_key_exists('Method',$param) and $param['Method'] !== null) {
+            $this->Method = $param['Method'];
         }
     }
 }

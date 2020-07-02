@@ -70,18 +70,18 @@ class AdaptiveStreamTemplate extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Video",$param) and $param["Video"] !== null) {
+        if (array_key_exists('Video',$param) and $param['Video'] !== null) {
             $this->Video = new VideoTemplateInfo();
-            $this->Video->deserialize($param["Video"]);
+            $this->Video->deserialize($param['Video']);
         }
 
-        if (array_key_exists("Audio",$param) and $param["Audio"] !== null) {
+        if (array_key_exists('Audio',$param) and $param['Audio'] !== null) {
             $this->Audio = new AudioTemplateInfo();
-            $this->Audio->deserialize($param["Audio"]);
+            $this->Audio->deserialize($param['Audio']);
         }
 
-        if (array_key_exists("RemoveAudio",$param) and $param["RemoveAudio"] !== null) {
-            $this->RemoveAudio = $param["RemoveAudio"];
+        if (array_key_exists('RemoveAudio',$param) and $param['RemoveAudio'] !== null) {
+            $this->RemoveAudio = $param['RemoveAudio'];
         }
     }
 }

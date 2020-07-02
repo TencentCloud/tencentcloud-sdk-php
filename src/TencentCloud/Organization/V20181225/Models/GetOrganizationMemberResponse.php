@@ -102,36 +102,36 @@ class GetOrganizationMemberResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Uin",$param) and $param["Uin"] !== null) {
-            $this->Uin = $param["Uin"];
+        if (array_key_exists('Uin',$param) and $param['Uin'] !== null) {
+            $this->Uin = $param['Uin'];
         }
 
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
-            $this->Remark = $param["Remark"];
+        if (array_key_exists('Remark',$param) and $param['Remark'] !== null) {
+            $this->Remark = $param['Remark'];
         }
 
-        if (array_key_exists("JoinTime",$param) and $param["JoinTime"] !== null) {
-            $this->JoinTime = $param["JoinTime"];
+        if (array_key_exists('JoinTime',$param) and $param['JoinTime'] !== null) {
+            $this->JoinTime = $param['JoinTime'];
         }
 
-        if (array_key_exists("NodeId",$param) and $param["NodeId"] !== null) {
-            $this->NodeId = $param["NodeId"];
+        if (array_key_exists('NodeId',$param) and $param['NodeId'] !== null) {
+            $this->NodeId = $param['NodeId'];
         }
 
-        if (array_key_exists("NodeName",$param) and $param["NodeName"] !== null) {
-            $this->NodeName = $param["NodeName"];
+        if (array_key_exists('NodeName',$param) and $param['NodeName'] !== null) {
+            $this->NodeName = $param['NodeName'];
         }
 
-        if (array_key_exists("ParentNodeId",$param) and $param["ParentNodeId"] !== null) {
-            $this->ParentNodeId = $param["ParentNodeId"];
+        if (array_key_exists('ParentNodeId',$param) and $param['ParentNodeId'] !== null) {
+            $this->ParentNodeId = $param['ParentNodeId'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

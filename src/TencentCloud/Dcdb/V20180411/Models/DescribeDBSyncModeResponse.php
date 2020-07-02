@@ -62,16 +62,16 @@ class DescribeDBSyncModeResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SyncMode",$param) and $param["SyncMode"] !== null) {
-            $this->SyncMode = $param["SyncMode"];
+        if (array_key_exists('SyncMode',$param) and $param['SyncMode'] !== null) {
+            $this->SyncMode = $param['SyncMode'];
         }
 
-        if (array_key_exists("IsModifying",$param) and $param["IsModifying"] !== null) {
-            $this->IsModifying = $param["IsModifying"];
+        if (array_key_exists('IsModifying',$param) and $param['IsModifying'] !== null) {
+            $this->IsModifying = $param['IsModifying'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

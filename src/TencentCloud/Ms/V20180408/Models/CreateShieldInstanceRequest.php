@@ -54,14 +54,14 @@ class CreateShieldInstanceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AppInfo",$param) and $param["AppInfo"] !== null) {
+        if (array_key_exists('AppInfo',$param) and $param['AppInfo'] !== null) {
             $this->AppInfo = new AppInfo();
-            $this->AppInfo->deserialize($param["AppInfo"]);
+            $this->AppInfo->deserialize($param['AppInfo']);
         }
 
-        if (array_key_exists("ServiceInfo",$param) and $param["ServiceInfo"] !== null) {
+        if (array_key_exists('ServiceInfo',$param) and $param['ServiceInfo'] !== null) {
             $this->ServiceInfo = new ServiceInfo();
-            $this->ServiceInfo->deserialize($param["ServiceInfo"]);
+            $this->ServiceInfo->deserialize($param['ServiceInfo']);
         }
     }
 }

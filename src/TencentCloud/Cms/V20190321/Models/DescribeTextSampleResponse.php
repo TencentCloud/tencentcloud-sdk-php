@@ -62,21 +62,21 @@ class DescribeTextSampleResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TextSampleSet",$param) and $param["TextSampleSet"] !== null) {
+        if (array_key_exists('TextSampleSet',$param) and $param['TextSampleSet'] !== null) {
             $this->TextSampleSet = [];
-            foreach ($param["TextSampleSet"] as $key => $value){
+            foreach ($param['TextSampleSet'] as $key => $value){
                 $obj = new TextSample();
                 $obj->deserialize($value);
                 array_push($this->TextSampleSet, $obj);
             }
         }
 
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

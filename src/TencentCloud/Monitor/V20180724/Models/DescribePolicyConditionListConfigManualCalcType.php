@@ -58,12 +58,12 @@ class DescribePolicyConditionListConfigManualCalcType extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Keys",$param) and $param["Keys"] !== null) {
-            $this->Keys = $param["Keys"];
+        if (array_key_exists('Keys',$param) and $param['Keys'] !== null) {
+            $this->Keys = $param['Keys'];
         }
 
-        if (array_key_exists("Need",$param) and $param["Need"] !== null) {
-            $this->Need = $param["Need"];
+        if (array_key_exists('Need',$param) and $param['Need'] !== null) {
+            $this->Need = $param['Need'];
         }
     }
 }

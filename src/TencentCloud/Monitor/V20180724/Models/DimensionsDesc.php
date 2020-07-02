@@ -46,8 +46,8 @@ class DimensionsDesc extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Dimensions",$param) and $param["Dimensions"] !== null) {
-            $this->Dimensions = $param["Dimensions"];
+        if (array_key_exists('Dimensions',$param) and $param['Dimensions'] !== null) {
+            $this->Dimensions = $param['Dimensions'];
         }
     }
 }

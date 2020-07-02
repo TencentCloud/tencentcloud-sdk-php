@@ -46,8 +46,8 @@ class DatabaseProcedure extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Proc",$param) and $param["Proc"] !== null) {
-            $this->Proc = $param["Proc"];
+        if (array_key_exists('Proc',$param) and $param['Proc'] !== null) {
+            $this->Proc = $param['Proc'];
         }
     }
 }

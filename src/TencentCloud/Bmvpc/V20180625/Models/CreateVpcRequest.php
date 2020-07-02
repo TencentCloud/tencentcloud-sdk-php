@@ -78,29 +78,29 @@ class CreateVpcRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("VpcName",$param) and $param["VpcName"] !== null) {
-            $this->VpcName = $param["VpcName"];
+        if (array_key_exists('VpcName',$param) and $param['VpcName'] !== null) {
+            $this->VpcName = $param['VpcName'];
         }
 
-        if (array_key_exists("CidrBlock",$param) and $param["CidrBlock"] !== null) {
-            $this->CidrBlock = $param["CidrBlock"];
+        if (array_key_exists('CidrBlock',$param) and $param['CidrBlock'] !== null) {
+            $this->CidrBlock = $param['CidrBlock'];
         }
 
-        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
-            $this->Zone = $param["Zone"];
+        if (array_key_exists('Zone',$param) and $param['Zone'] !== null) {
+            $this->Zone = $param['Zone'];
         }
 
-        if (array_key_exists("SubnetSet",$param) and $param["SubnetSet"] !== null) {
+        if (array_key_exists('SubnetSet',$param) and $param['SubnetSet'] !== null) {
             $this->SubnetSet = [];
-            foreach ($param["SubnetSet"] as $key => $value){
+            foreach ($param['SubnetSet'] as $key => $value){
                 $obj = new VpcSubnetCreateInfo();
                 $obj->deserialize($value);
                 array_push($this->SubnetSet, $obj);
             }
         }
 
-        if (array_key_exists("EnableMonitoring",$param) and $param["EnableMonitoring"] !== null) {
-            $this->EnableMonitoring = $param["EnableMonitoring"];
+        if (array_key_exists('EnableMonitoring',$param) and $param['EnableMonitoring'] !== null) {
+            $this->EnableMonitoring = $param['EnableMonitoring'];
         }
     }
 }

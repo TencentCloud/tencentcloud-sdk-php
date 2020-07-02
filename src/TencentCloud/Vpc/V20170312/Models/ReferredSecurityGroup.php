@@ -54,12 +54,12 @@ class ReferredSecurityGroup extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SecurityGroupId",$param) and $param["SecurityGroupId"] !== null) {
-            $this->SecurityGroupId = $param["SecurityGroupId"];
+        if (array_key_exists('SecurityGroupId',$param) and $param['SecurityGroupId'] !== null) {
+            $this->SecurityGroupId = $param['SecurityGroupId'];
         }
 
-        if (array_key_exists("ReferredSecurityGroupIds",$param) and $param["ReferredSecurityGroupIds"] !== null) {
-            $this->ReferredSecurityGroupIds = $param["ReferredSecurityGroupIds"];
+        if (array_key_exists('ReferredSecurityGroupIds',$param) and $param['ReferredSecurityGroupIds'] !== null) {
+            $this->ReferredSecurityGroupIds = $param['ReferredSecurityGroupIds'];
         }
     }
 }

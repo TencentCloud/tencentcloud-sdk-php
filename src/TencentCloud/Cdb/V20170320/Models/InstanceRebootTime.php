@@ -54,12 +54,12 @@ class InstanceRebootTime extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("TimeInSeconds",$param) and $param["TimeInSeconds"] !== null) {
-            $this->TimeInSeconds = $param["TimeInSeconds"];
+        if (array_key_exists('TimeInSeconds',$param) and $param['TimeInSeconds'] !== null) {
+            $this->TimeInSeconds = $param['TimeInSeconds'];
         }
     }
 }

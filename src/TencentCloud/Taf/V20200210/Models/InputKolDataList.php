@@ -78,24 +78,24 @@ class InputKolDataList extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists('Type',$param) and $param['Type'] !== null) {
+            $this->Type = $param['Type'];
         }
 
-        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
-            $this->Id = $param["Id"];
+        if (array_key_exists('Id',$param) and $param['Id'] !== null) {
+            $this->Id = $param['Id'];
         }
 
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("Phone",$param) and $param["Phone"] !== null) {
-            $this->Phone = $param["Phone"];
+        if (array_key_exists('Phone',$param) and $param['Phone'] !== null) {
+            $this->Phone = $param['Phone'];
         }
 
-        if (array_key_exists("AgentInfo",$param) and $param["AgentInfo"] !== null) {
-            $this->AgentInfo = $param["AgentInfo"];
+        if (array_key_exists('AgentInfo',$param) and $param['AgentInfo'] !== null) {
+            $this->AgentInfo = $param['AgentInfo'];
         }
     }
 }

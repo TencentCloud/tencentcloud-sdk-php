@@ -62,16 +62,16 @@ class InquiryPriceOpenProVersionPrepaidResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("OriginalPrice",$param) and $param["OriginalPrice"] !== null) {
-            $this->OriginalPrice = $param["OriginalPrice"];
+        if (array_key_exists('OriginalPrice',$param) and $param['OriginalPrice'] !== null) {
+            $this->OriginalPrice = $param['OriginalPrice'];
         }
 
-        if (array_key_exists("DiscountPrice",$param) and $param["DiscountPrice"] !== null) {
-            $this->DiscountPrice = $param["DiscountPrice"];
+        if (array_key_exists('DiscountPrice',$param) and $param['DiscountPrice'] !== null) {
+            $this->DiscountPrice = $param['DiscountPrice'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

@@ -62,21 +62,21 @@ class DescribeNetworkAclsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("NetworkAclSet",$param) and $param["NetworkAclSet"] !== null) {
+        if (array_key_exists('NetworkAclSet',$param) and $param['NetworkAclSet'] !== null) {
             $this->NetworkAclSet = [];
-            foreach ($param["NetworkAclSet"] as $key => $value){
+            foreach ($param['NetworkAclSet'] as $key => $value){
                 $obj = new NetworkAcl();
                 $obj->deserialize($value);
                 array_push($this->NetworkAclSet, $obj);
             }
         }
 
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

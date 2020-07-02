@@ -54,12 +54,12 @@ class ModifyModuleNetworkRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ModuleId",$param) and $param["ModuleId"] !== null) {
-            $this->ModuleId = $param["ModuleId"];
+        if (array_key_exists('ModuleId',$param) and $param['ModuleId'] !== null) {
+            $this->ModuleId = $param['ModuleId'];
         }
 
-        if (array_key_exists("DefaultBandwidth",$param) and $param["DefaultBandwidth"] !== null) {
-            $this->DefaultBandwidth = $param["DefaultBandwidth"];
+        if (array_key_exists('DefaultBandwidth',$param) and $param['DefaultBandwidth'] !== null) {
+            $this->DefaultBandwidth = $param['DefaultBandwidth'];
         }
     }
 }

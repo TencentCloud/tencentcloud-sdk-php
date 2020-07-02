@@ -142,40 +142,40 @@ class GetPolicyResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PolicyName",$param) and $param["PolicyName"] !== null) {
-            $this->PolicyName = $param["PolicyName"];
+        if (array_key_exists('PolicyName',$param) and $param['PolicyName'] !== null) {
+            $this->PolicyName = $param['PolicyName'];
         }
 
-        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
-            $this->Description = $param["Description"];
+        if (array_key_exists('Description',$param) and $param['Description'] !== null) {
+            $this->Description = $param['Description'];
         }
 
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists('Type',$param) and $param['Type'] !== null) {
+            $this->Type = $param['Type'];
         }
 
-        if (array_key_exists("AddTime",$param) and $param["AddTime"] !== null) {
-            $this->AddTime = $param["AddTime"];
+        if (array_key_exists('AddTime',$param) and $param['AddTime'] !== null) {
+            $this->AddTime = $param['AddTime'];
         }
 
-        if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
-            $this->UpdateTime = $param["UpdateTime"];
+        if (array_key_exists('UpdateTime',$param) and $param['UpdateTime'] !== null) {
+            $this->UpdateTime = $param['UpdateTime'];
         }
 
-        if (array_key_exists("PolicyDocument",$param) and $param["PolicyDocument"] !== null) {
-            $this->PolicyDocument = $param["PolicyDocument"];
+        if (array_key_exists('PolicyDocument',$param) and $param['PolicyDocument'] !== null) {
+            $this->PolicyDocument = $param['PolicyDocument'];
         }
 
-        if (array_key_exists("PresetAlias",$param) and $param["PresetAlias"] !== null) {
-            $this->PresetAlias = $param["PresetAlias"];
+        if (array_key_exists('PresetAlias',$param) and $param['PresetAlias'] !== null) {
+            $this->PresetAlias = $param['PresetAlias'];
         }
 
-        if (array_key_exists("IsServiceLinkedRolePolicy",$param) and $param["IsServiceLinkedRolePolicy"] !== null) {
-            $this->IsServiceLinkedRolePolicy = $param["IsServiceLinkedRolePolicy"];
+        if (array_key_exists('IsServiceLinkedRolePolicy',$param) and $param['IsServiceLinkedRolePolicy'] !== null) {
+            $this->IsServiceLinkedRolePolicy = $param['IsServiceLinkedRolePolicy'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

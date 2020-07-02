@@ -126,48 +126,48 @@ class SitesVerification extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
-            $this->Domain = $param["Domain"];
+        if (array_key_exists('Domain',$param) and $param['Domain'] !== null) {
+            $this->Domain = $param['Domain'];
         }
 
-        if (array_key_exists("TxtName",$param) and $param["TxtName"] !== null) {
-            $this->TxtName = $param["TxtName"];
+        if (array_key_exists('TxtName',$param) and $param['TxtName'] !== null) {
+            $this->TxtName = $param['TxtName'];
         }
 
-        if (array_key_exists("TxtText",$param) and $param["TxtText"] !== null) {
-            $this->TxtText = $param["TxtText"];
+        if (array_key_exists('TxtText',$param) and $param['TxtText'] !== null) {
+            $this->TxtText = $param['TxtText'];
         }
 
-        if (array_key_exists("ValidTo",$param) and $param["ValidTo"] !== null) {
-            $this->ValidTo = $param["ValidTo"];
+        if (array_key_exists('ValidTo',$param) and $param['ValidTo'] !== null) {
+            $this->ValidTo = $param['ValidTo'];
         }
 
-        if (array_key_exists("VerifyStatus",$param) and $param["VerifyStatus"] !== null) {
-            $this->VerifyStatus = $param["VerifyStatus"];
+        if (array_key_exists('VerifyStatus',$param) and $param['VerifyStatus'] !== null) {
+            $this->VerifyStatus = $param['VerifyStatus'];
         }
 
-        if (array_key_exists("CreatedAt",$param) and $param["CreatedAt"] !== null) {
-            $this->CreatedAt = $param["CreatedAt"];
+        if (array_key_exists('CreatedAt',$param) and $param['CreatedAt'] !== null) {
+            $this->CreatedAt = $param['CreatedAt'];
         }
 
-        if (array_key_exists("UpdatedAt",$param) and $param["UpdatedAt"] !== null) {
-            $this->UpdatedAt = $param["UpdatedAt"];
+        if (array_key_exists('UpdatedAt',$param) and $param['UpdatedAt'] !== null) {
+            $this->UpdatedAt = $param['UpdatedAt'];
         }
 
-        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
-            $this->Id = $param["Id"];
+        if (array_key_exists('Id',$param) and $param['Id'] !== null) {
+            $this->Id = $param['Id'];
         }
 
-        if (array_key_exists("Appid",$param) and $param["Appid"] !== null) {
-            $this->Appid = $param["Appid"];
+        if (array_key_exists('Appid',$param) and $param['Appid'] !== null) {
+            $this->Appid = $param['Appid'];
         }
 
-        if (array_key_exists("VerifyUrl",$param) and $param["VerifyUrl"] !== null) {
-            $this->VerifyUrl = $param["VerifyUrl"];
+        if (array_key_exists('VerifyUrl',$param) and $param['VerifyUrl'] !== null) {
+            $this->VerifyUrl = $param['VerifyUrl'];
         }
 
-        if (array_key_exists("VerifyFileUrl",$param) and $param["VerifyFileUrl"] !== null) {
-            $this->VerifyFileUrl = $param["VerifyFileUrl"];
+        if (array_key_exists('VerifyFileUrl',$param) and $param['VerifyFileUrl'] !== null) {
+            $this->VerifyFileUrl = $param['VerifyFileUrl'];
         }
     }
 }

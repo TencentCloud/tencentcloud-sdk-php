@@ -54,17 +54,17 @@ class DescribePolicyCaseResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CaseList",$param) and $param["CaseList"] !== null) {
+        if (array_key_exists('CaseList',$param) and $param['CaseList'] !== null) {
             $this->CaseList = [];
-            foreach ($param["CaseList"] as $key => $value){
+            foreach ($param['CaseList'] as $key => $value){
                 $obj = new KeyValueRecord();
                 $obj->deserialize($value);
                 array_push($this->CaseList, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

@@ -46,8 +46,8 @@ class CreateNamespacePersonalRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Namespace",$param) and $param["Namespace"] !== null) {
-            $this->Namespace = $param["Namespace"];
+        if (array_key_exists('Namespace',$param) and $param['Namespace'] !== null) {
+            $this->Namespace = $param['Namespace'];
         }
     }
 }

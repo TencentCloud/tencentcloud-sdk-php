@@ -62,21 +62,21 @@ class ListGroupsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalNum",$param) and $param["TotalNum"] !== null) {
-            $this->TotalNum = $param["TotalNum"];
+        if (array_key_exists('TotalNum',$param) and $param['TotalNum'] !== null) {
+            $this->TotalNum = $param['TotalNum'];
         }
 
-        if (array_key_exists("GroupInfo",$param) and $param["GroupInfo"] !== null) {
+        if (array_key_exists('GroupInfo',$param) and $param['GroupInfo'] !== null) {
             $this->GroupInfo = [];
-            foreach ($param["GroupInfo"] as $key => $value){
+            foreach ($param['GroupInfo'] as $key => $value){
                 $obj = new GroupInfo();
                 $obj->deserialize($value);
                 array_push($this->GroupInfo, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

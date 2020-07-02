@@ -78,24 +78,24 @@ class ZoneInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
-            $this->Zone = $param["Zone"];
+        if (array_key_exists('Zone',$param) and $param['Zone'] !== null) {
+            $this->Zone = $param['Zone'];
         }
 
-        if (array_key_exists("ZoneName",$param) and $param["ZoneName"] !== null) {
-            $this->ZoneName = $param["ZoneName"];
+        if (array_key_exists('ZoneName',$param) and $param['ZoneName'] !== null) {
+            $this->ZoneName = $param['ZoneName'];
         }
 
-        if (array_key_exists("ZoneId",$param) and $param["ZoneId"] !== null) {
-            $this->ZoneId = $param["ZoneId"];
+        if (array_key_exists('ZoneId',$param) and $param['ZoneId'] !== null) {
+            $this->ZoneId = $param['ZoneId'];
         }
 
-        if (array_key_exists("ZoneState",$param) and $param["ZoneState"] !== null) {
-            $this->ZoneState = $param["ZoneState"];
+        if (array_key_exists('ZoneState',$param) and $param['ZoneState'] !== null) {
+            $this->ZoneState = $param['ZoneState'];
         }
 
-        if (array_key_exists("ZoneSupportIpv6",$param) and $param["ZoneSupportIpv6"] !== null) {
-            $this->ZoneSupportIpv6 = $param["ZoneSupportIpv6"];
+        if (array_key_exists('ZoneSupportIpv6',$param) and $param['ZoneSupportIpv6'] !== null) {
+            $this->ZoneSupportIpv6 = $param['ZoneSupportIpv6'];
         }
     }
 }

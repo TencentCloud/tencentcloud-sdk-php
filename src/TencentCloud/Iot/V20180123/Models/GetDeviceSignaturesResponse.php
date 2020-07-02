@@ -54,17 +54,17 @@ class GetDeviceSignaturesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DeviceSignatures",$param) and $param["DeviceSignatures"] !== null) {
+        if (array_key_exists('DeviceSignatures',$param) and $param['DeviceSignatures'] !== null) {
             $this->DeviceSignatures = [];
-            foreach ($param["DeviceSignatures"] as $key => $value){
+            foreach ($param['DeviceSignatures'] as $key => $value){
                 $obj = new DeviceSignature();
                 $obj->deserialize($value);
                 array_push($this->DeviceSignatures, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

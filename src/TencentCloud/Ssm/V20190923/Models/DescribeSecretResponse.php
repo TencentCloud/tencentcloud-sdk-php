@@ -102,36 +102,36 @@ class DescribeSecretResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SecretName",$param) and $param["SecretName"] !== null) {
-            $this->SecretName = $param["SecretName"];
+        if (array_key_exists('SecretName',$param) and $param['SecretName'] !== null) {
+            $this->SecretName = $param['SecretName'];
         }
 
-        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
-            $this->Description = $param["Description"];
+        if (array_key_exists('Description',$param) and $param['Description'] !== null) {
+            $this->Description = $param['Description'];
         }
 
-        if (array_key_exists("KmsKeyId",$param) and $param["KmsKeyId"] !== null) {
-            $this->KmsKeyId = $param["KmsKeyId"];
+        if (array_key_exists('KmsKeyId',$param) and $param['KmsKeyId'] !== null) {
+            $this->KmsKeyId = $param['KmsKeyId'];
         }
 
-        if (array_key_exists("CreateUin",$param) and $param["CreateUin"] !== null) {
-            $this->CreateUin = $param["CreateUin"];
+        if (array_key_exists('CreateUin',$param) and $param['CreateUin'] !== null) {
+            $this->CreateUin = $param['CreateUin'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("DeleteTime",$param) and $param["DeleteTime"] !== null) {
-            $this->DeleteTime = $param["DeleteTime"];
+        if (array_key_exists('DeleteTime',$param) and $param['DeleteTime'] !== null) {
+            $this->DeleteTime = $param['DeleteTime'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

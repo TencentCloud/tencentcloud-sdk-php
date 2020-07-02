@@ -54,12 +54,12 @@ class AddSignStatus extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SignId",$param) and $param["SignId"] !== null) {
-            $this->SignId = $param["SignId"];
+        if (array_key_exists('SignId',$param) and $param['SignId'] !== null) {
+            $this->SignId = $param['SignId'];
         }
 
-        if (array_key_exists("SignApplyId",$param) and $param["SignApplyId"] !== null) {
-            $this->SignApplyId = $param["SignApplyId"];
+        if (array_key_exists('SignApplyId',$param) and $param['SignApplyId'] !== null) {
+            $this->SignApplyId = $param['SignApplyId'];
         }
     }
 }

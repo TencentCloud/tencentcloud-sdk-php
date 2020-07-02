@@ -190,44 +190,44 @@ UTC 格式，例如：2018-12-29T20:00:00Z。
         if ($param === null) {
             return;
         }
-        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
-            $this->StartTime = $param["StartTime"];
+        if (array_key_exists('StartTime',$param) and $param['StartTime'] !== null) {
+            $this->StartTime = $param['StartTime'];
         }
 
-        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
-            $this->EndTime = $param["EndTime"];
+        if (array_key_exists('EndTime',$param) and $param['EndTime'] !== null) {
+            $this->EndTime = $param['EndTime'];
         }
 
-        if (array_key_exists("AppName",$param) and $param["AppName"] !== null) {
-            $this->AppName = $param["AppName"];
+        if (array_key_exists('AppName',$param) and $param['AppName'] !== null) {
+            $this->AppName = $param['AppName'];
         }
 
-        if (array_key_exists("DomainName",$param) and $param["DomainName"] !== null) {
-            $this->DomainName = $param["DomainName"];
+        if (array_key_exists('DomainName',$param) and $param['DomainName'] !== null) {
+            $this->DomainName = $param['DomainName'];
         }
 
-        if (array_key_exists("StreamName",$param) and $param["StreamName"] !== null) {
-            $this->StreamName = $param["StreamName"];
+        if (array_key_exists('StreamName',$param) and $param['StreamName'] !== null) {
+            $this->StreamName = $param['StreamName'];
         }
 
-        if (array_key_exists("PageNum",$param) and $param["PageNum"] !== null) {
-            $this->PageNum = $param["PageNum"];
+        if (array_key_exists('PageNum',$param) and $param['PageNum'] !== null) {
+            $this->PageNum = $param['PageNum'];
         }
 
-        if (array_key_exists("PageSize",$param) and $param["PageSize"] !== null) {
-            $this->PageSize = $param["PageSize"];
+        if (array_key_exists('PageSize',$param) and $param['PageSize'] !== null) {
+            $this->PageSize = $param['PageSize'];
         }
 
-        if (array_key_exists("IsFilter",$param) and $param["IsFilter"] !== null) {
-            $this->IsFilter = $param["IsFilter"];
+        if (array_key_exists('IsFilter',$param) and $param['IsFilter'] !== null) {
+            $this->IsFilter = $param['IsFilter'];
         }
 
-        if (array_key_exists("IsStrict",$param) and $param["IsStrict"] !== null) {
-            $this->IsStrict = $param["IsStrict"];
+        if (array_key_exists('IsStrict',$param) and $param['IsStrict'] !== null) {
+            $this->IsStrict = $param['IsStrict'];
         }
 
-        if (array_key_exists("IsAsc",$param) and $param["IsAsc"] !== null) {
-            $this->IsAsc = $param["IsAsc"];
+        if (array_key_exists('IsAsc',$param) and $param['IsAsc'] !== null) {
+            $this->IsAsc = $param['IsAsc'];
         }
     }
 }

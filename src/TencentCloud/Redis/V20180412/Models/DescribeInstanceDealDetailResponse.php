@@ -54,17 +54,17 @@ class DescribeInstanceDealDetailResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DealDetails",$param) and $param["DealDetails"] !== null) {
+        if (array_key_exists('DealDetails',$param) and $param['DealDetails'] !== null) {
             $this->DealDetails = [];
-            foreach ($param["DealDetails"] as $key => $value){
+            foreach ($param['DealDetails'] as $key => $value){
                 $obj = new TradeDealDetail();
                 $obj->deserialize($value);
                 array_push($this->DealDetails, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

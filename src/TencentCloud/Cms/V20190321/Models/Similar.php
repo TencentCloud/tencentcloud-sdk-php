@@ -86,16 +86,16 @@ class Similar extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("EvilType",$param) and $param["EvilType"] !== null) {
-            $this->EvilType = $param["EvilType"];
+        if (array_key_exists('EvilType',$param) and $param['EvilType'] !== null) {
+            $this->EvilType = $param['EvilType'];
         }
 
-        if (array_key_exists("HitFlag",$param) and $param["HitFlag"] !== null) {
-            $this->HitFlag = $param["HitFlag"];
+        if (array_key_exists('HitFlag',$param) and $param['HitFlag'] !== null) {
+            $this->HitFlag = $param['HitFlag'];
         }
 
-        if (array_key_exists("SeedUrl",$param) and $param["SeedUrl"] !== null) {
-            $this->SeedUrl = $param["SeedUrl"];
+        if (array_key_exists('SeedUrl',$param) and $param['SeedUrl'] !== null) {
+            $this->SeedUrl = $param['SeedUrl'];
         }
     }
 }

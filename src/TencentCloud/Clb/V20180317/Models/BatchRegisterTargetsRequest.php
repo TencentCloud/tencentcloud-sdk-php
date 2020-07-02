@@ -54,13 +54,13 @@ class BatchRegisterTargetsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LoadBalancerId",$param) and $param["LoadBalancerId"] !== null) {
-            $this->LoadBalancerId = $param["LoadBalancerId"];
+        if (array_key_exists('LoadBalancerId',$param) and $param['LoadBalancerId'] !== null) {
+            $this->LoadBalancerId = $param['LoadBalancerId'];
         }
 
-        if (array_key_exists("Targets",$param) and $param["Targets"] !== null) {
+        if (array_key_exists('Targets',$param) and $param['Targets'] !== null) {
             $this->Targets = [];
-            foreach ($param["Targets"] as $key => $value){
+            foreach ($param['Targets'] as $key => $value){
                 $obj = new BatchTarget();
                 $obj->deserialize($value);
                 array_push($this->Targets, $obj);

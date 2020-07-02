@@ -62,16 +62,16 @@ class ModifySubnetAttributeRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
-            $this->SubnetId = $param["SubnetId"];
+        if (array_key_exists('SubnetId',$param) and $param['SubnetId'] !== null) {
+            $this->SubnetId = $param['SubnetId'];
         }
 
-        if (array_key_exists("SubnetName",$param) and $param["SubnetName"] !== null) {
-            $this->SubnetName = $param["SubnetName"];
+        if (array_key_exists('SubnetName',$param) and $param['SubnetName'] !== null) {
+            $this->SubnetName = $param['SubnetName'];
         }
 
-        if (array_key_exists("EnableBroadcast",$param) and $param["EnableBroadcast"] !== null) {
-            $this->EnableBroadcast = $param["EnableBroadcast"];
+        if (array_key_exists('EnableBroadcast',$param) and $param['EnableBroadcast'] !== null) {
+            $this->EnableBroadcast = $param['EnableBroadcast'];
         }
     }
 }

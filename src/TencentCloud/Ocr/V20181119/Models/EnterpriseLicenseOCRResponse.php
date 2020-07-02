@@ -62,21 +62,21 @@ class EnterpriseLicenseOCRResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("EnterpriseLicenseInfos",$param) and $param["EnterpriseLicenseInfos"] !== null) {
+        if (array_key_exists('EnterpriseLicenseInfos',$param) and $param['EnterpriseLicenseInfos'] !== null) {
             $this->EnterpriseLicenseInfos = [];
-            foreach ($param["EnterpriseLicenseInfos"] as $key => $value){
+            foreach ($param['EnterpriseLicenseInfos'] as $key => $value){
                 $obj = new EnterpriseLicenseInfo();
                 $obj->deserialize($value);
                 array_push($this->EnterpriseLicenseInfos, $obj);
             }
         }
 
-        if (array_key_exists("Angle",$param) and $param["Angle"] !== null) {
-            $this->Angle = $param["Angle"];
+        if (array_key_exists('Angle',$param) and $param['Angle'] !== null) {
+            $this->Angle = $param['Angle'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

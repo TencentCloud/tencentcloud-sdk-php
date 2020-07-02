@@ -62,17 +62,17 @@ class ClipTask2017 extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
-            $this->TaskId = $param["TaskId"];
+        if (array_key_exists('TaskId',$param) and $param['TaskId'] !== null) {
+            $this->TaskId = $param['TaskId'];
         }
 
-        if (array_key_exists("SrcFileId",$param) and $param["SrcFileId"] !== null) {
-            $this->SrcFileId = $param["SrcFileId"];
+        if (array_key_exists('SrcFileId',$param) and $param['SrcFileId'] !== null) {
+            $this->SrcFileId = $param['SrcFileId'];
         }
 
-        if (array_key_exists("FileInfo",$param) and $param["FileInfo"] !== null) {
+        if (array_key_exists('FileInfo',$param) and $param['FileInfo'] !== null) {
             $this->FileInfo = new ClipFileInfo2017();
-            $this->FileInfo->deserialize($param["FileInfo"]);
+            $this->FileInfo->deserialize($param['FileInfo']);
         }
     }
 }

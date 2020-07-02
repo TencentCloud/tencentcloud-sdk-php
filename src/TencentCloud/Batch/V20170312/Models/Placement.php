@@ -78,24 +78,24 @@ class Placement extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
-            $this->Zone = $param["Zone"];
+        if (array_key_exists('Zone',$param) and $param['Zone'] !== null) {
+            $this->Zone = $param['Zone'];
         }
 
-        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
-            $this->ProjectId = $param["ProjectId"];
+        if (array_key_exists('ProjectId',$param) and $param['ProjectId'] !== null) {
+            $this->ProjectId = $param['ProjectId'];
         }
 
-        if (array_key_exists("HostIds",$param) and $param["HostIds"] !== null) {
-            $this->HostIds = $param["HostIds"];
+        if (array_key_exists('HostIds',$param) and $param['HostIds'] !== null) {
+            $this->HostIds = $param['HostIds'];
         }
 
-        if (array_key_exists("HostIps",$param) and $param["HostIps"] !== null) {
-            $this->HostIps = $param["HostIps"];
+        if (array_key_exists('HostIps',$param) and $param['HostIps'] !== null) {
+            $this->HostIps = $param['HostIps'];
         }
 
-        if (array_key_exists("HostId",$param) and $param["HostId"] !== null) {
-            $this->HostId = $param["HostId"];
+        if (array_key_exists('HostId',$param) and $param['HostId'] !== null) {
+            $this->HostId = $param['HostId'];
         }
     }
 }

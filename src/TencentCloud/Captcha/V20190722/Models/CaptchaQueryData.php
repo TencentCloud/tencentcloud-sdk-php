@@ -54,12 +54,12 @@ class CaptchaQueryData extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Cnt",$param) and $param["Cnt"] !== null) {
-            $this->Cnt = $param["Cnt"];
+        if (array_key_exists('Cnt',$param) and $param['Cnt'] !== null) {
+            $this->Cnt = $param['Cnt'];
         }
 
-        if (array_key_exists("Date",$param) and $param["Date"] !== null) {
-            $this->Date = $param["Date"];
+        if (array_key_exists('Date',$param) and $param['Date'] !== null) {
+            $this->Date = $param['Date'];
         }
     }
 }

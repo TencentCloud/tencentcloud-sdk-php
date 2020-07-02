@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDBInstanceCharset返回参数结构体
  *
- * @method string getCharset() 获取实例的默认字符集，如 "latin1"，"utf8" 等。
- * @method void setCharset(string $Charset) 设置实例的默认字符集，如 "latin1"，"utf8" 等。
+ * @method string getCharset() 获取实例的默认字符集，如 'latin1'，'utf8' 等。
+ * @method void setCharset(string $Charset) 设置实例的默认字符集，如 'latin1'，'utf8' 等。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeDBInstanceCharsetResponse extends AbstractModel
 {
     /**
-     * @var string 实例的默认字符集，如 "latin1"，"utf8" 等。
+     * @var string 实例的默认字符集，如 'latin1'，'utf8' 等。
      */
     public $Charset;
 
@@ -38,7 +38,7 @@ class DescribeDBInstanceCharsetResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Charset 实例的默认字符集，如 "latin1"，"utf8" 等。
+     * @param string $Charset 实例的默认字符集，如 'latin1'，'utf8' 等。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,12 +54,12 @@ class DescribeDBInstanceCharsetResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Charset",$param) and $param["Charset"] !== null) {
-            $this->Charset = $param["Charset"];
+        if (array_key_exists('Charset',$param) and $param['Charset'] !== null) {
+            $this->Charset = $param['Charset'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

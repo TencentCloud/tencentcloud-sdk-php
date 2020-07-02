@@ -102,28 +102,28 @@ AVAILABLE：可用的
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Address",$param) and $param["Address"] !== null) {
-            $this->Address = $param["Address"];
+        if (array_key_exists('Address',$param) and $param['Address'] !== null) {
+            $this->Address = $param['Address'];
         }
 
-        if (array_key_exists("Primary",$param) and $param["Primary"] !== null) {
-            $this->Primary = $param["Primary"];
+        if (array_key_exists('Primary',$param) and $param['Primary'] !== null) {
+            $this->Primary = $param['Primary'];
         }
 
-        if (array_key_exists("AddressId",$param) and $param["AddressId"] !== null) {
-            $this->AddressId = $param["AddressId"];
+        if (array_key_exists('AddressId',$param) and $param['AddressId'] !== null) {
+            $this->AddressId = $param['AddressId'];
         }
 
-        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
-            $this->Description = $param["Description"];
+        if (array_key_exists('Description',$param) and $param['Description'] !== null) {
+            $this->Description = $param['Description'];
         }
 
-        if (array_key_exists("IsWanIpBlocked",$param) and $param["IsWanIpBlocked"] !== null) {
-            $this->IsWanIpBlocked = $param["IsWanIpBlocked"];
+        if (array_key_exists('IsWanIpBlocked',$param) and $param['IsWanIpBlocked'] !== null) {
+            $this->IsWanIpBlocked = $param['IsWanIpBlocked'];
         }
 
-        if (array_key_exists("State",$param) and $param["State"] !== null) {
-            $this->State = $param["State"];
+        if (array_key_exists('State',$param) and $param['State'] !== null) {
+            $this->State = $param['State'];
         }
     }
 }

@@ -86,28 +86,28 @@ class ModifyL4BackendPortRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LoadBalancerId",$param) and $param["LoadBalancerId"] !== null) {
-            $this->LoadBalancerId = $param["LoadBalancerId"];
+        if (array_key_exists('LoadBalancerId',$param) and $param['LoadBalancerId'] !== null) {
+            $this->LoadBalancerId = $param['LoadBalancerId'];
         }
 
-        if (array_key_exists("ListenerId",$param) and $param["ListenerId"] !== null) {
-            $this->ListenerId = $param["ListenerId"];
+        if (array_key_exists('ListenerId',$param) and $param['ListenerId'] !== null) {
+            $this->ListenerId = $param['ListenerId'];
         }
 
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("Port",$param) and $param["Port"] !== null) {
-            $this->Port = $param["Port"];
+        if (array_key_exists('Port',$param) and $param['Port'] !== null) {
+            $this->Port = $param['Port'];
         }
 
-        if (array_key_exists("NewPort",$param) and $param["NewPort"] !== null) {
-            $this->NewPort = $param["NewPort"];
+        if (array_key_exists('NewPort',$param) and $param['NewPort'] !== null) {
+            $this->NewPort = $param['NewPort'];
         }
 
-        if (array_key_exists("BindType",$param) and $param["BindType"] !== null) {
-            $this->BindType = $param["BindType"];
+        if (array_key_exists('BindType',$param) and $param['BindType'] !== null) {
+            $this->BindType = $param['BindType'];
         }
     }
 }

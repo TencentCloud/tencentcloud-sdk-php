@@ -70,20 +70,20 @@ class QueryMerchantInfoForManagementRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InvoicePlatformId",$param) and $param["InvoicePlatformId"] !== null) {
-            $this->InvoicePlatformId = $param["InvoicePlatformId"];
+        if (array_key_exists('InvoicePlatformId',$param) and $param['InvoicePlatformId'] !== null) {
+            $this->InvoicePlatformId = $param['InvoicePlatformId'];
         }
 
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
+        if (array_key_exists('Offset',$param) and $param['Offset'] !== null) {
+            $this->Offset = $param['Offset'];
         }
 
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
+        if (array_key_exists('Limit',$param) and $param['Limit'] !== null) {
+            $this->Limit = $param['Limit'];
         }
 
-        if (array_key_exists("Profile",$param) and $param["Profile"] !== null) {
-            $this->Profile = $param["Profile"];
+        if (array_key_exists('Profile',$param) and $param['Profile'] !== null) {
+            $this->Profile = $param['Profile'];
         }
     }
 }

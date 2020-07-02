@@ -54,12 +54,12 @@ class GetTransByHashHandlerResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TransactionJson",$param) and $param["TransactionJson"] !== null) {
-            $this->TransactionJson = $param["TransactionJson"];
+        if (array_key_exists('TransactionJson',$param) and $param['TransactionJson'] !== null) {
+            $this->TransactionJson = $param['TransactionJson'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

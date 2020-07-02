@@ -62,18 +62,18 @@ class SubmitJobRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Placement",$param) and $param["Placement"] !== null) {
+        if (array_key_exists('Placement',$param) and $param['Placement'] !== null) {
             $this->Placement = new Placement();
-            $this->Placement->deserialize($param["Placement"]);
+            $this->Placement->deserialize($param['Placement']);
         }
 
-        if (array_key_exists("Job",$param) and $param["Job"] !== null) {
+        if (array_key_exists('Job',$param) and $param['Job'] !== null) {
             $this->Job = new Job();
-            $this->Job->deserialize($param["Job"]);
+            $this->Job->deserialize($param['Job']);
         }
 
-        if (array_key_exists("ClientToken",$param) and $param["ClientToken"] !== null) {
-            $this->ClientToken = $param["ClientToken"];
+        if (array_key_exists('ClientToken',$param) and $param['ClientToken'] !== null) {
+            $this->ClientToken = $param['ClientToken'];
         }
     }
 }

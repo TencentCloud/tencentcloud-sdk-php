@@ -54,12 +54,12 @@ class QrcodeImgSize extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Wide",$param) and $param["Wide"] !== null) {
-            $this->Wide = $param["Wide"];
+        if (array_key_exists('Wide',$param) and $param['Wide'] !== null) {
+            $this->Wide = $param['Wide'];
         }
 
-        if (array_key_exists("High",$param) and $param["High"] !== null) {
-            $this->High = $param["High"];
+        if (array_key_exists('High',$param) and $param['High'] !== null) {
+            $this->High = $param['High'];
         }
     }
 }

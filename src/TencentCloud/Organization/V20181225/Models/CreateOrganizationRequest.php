@@ -46,8 +46,8 @@ class CreateOrganizationRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("OrgType",$param) and $param["OrgType"] !== null) {
-            $this->OrgType = $param["OrgType"];
+        if (array_key_exists('OrgType',$param) and $param['OrgType'] !== null) {
+            $this->OrgType = $param['OrgType'];
         }
     }
 }

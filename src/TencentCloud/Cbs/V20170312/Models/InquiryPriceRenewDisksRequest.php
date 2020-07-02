@@ -70,25 +70,25 @@ class InquiryPriceRenewDisksRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DiskIds",$param) and $param["DiskIds"] !== null) {
-            $this->DiskIds = $param["DiskIds"];
+        if (array_key_exists('DiskIds',$param) and $param['DiskIds'] !== null) {
+            $this->DiskIds = $param['DiskIds'];
         }
 
-        if (array_key_exists("DiskChargePrepaids",$param) and $param["DiskChargePrepaids"] !== null) {
+        if (array_key_exists('DiskChargePrepaids',$param) and $param['DiskChargePrepaids'] !== null) {
             $this->DiskChargePrepaids = [];
-            foreach ($param["DiskChargePrepaids"] as $key => $value){
+            foreach ($param['DiskChargePrepaids'] as $key => $value){
                 $obj = new DiskChargePrepaid();
                 $obj->deserialize($value);
                 array_push($this->DiskChargePrepaids, $obj);
             }
         }
 
-        if (array_key_exists("NewDeadline",$param) and $param["NewDeadline"] !== null) {
-            $this->NewDeadline = $param["NewDeadline"];
+        if (array_key_exists('NewDeadline',$param) and $param['NewDeadline'] !== null) {
+            $this->NewDeadline = $param['NewDeadline'];
         }
 
-        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
-            $this->ProjectId = $param["ProjectId"];
+        if (array_key_exists('ProjectId',$param) and $param['ProjectId'] !== null) {
+            $this->ProjectId = $param['ProjectId'];
         }
     }
 }

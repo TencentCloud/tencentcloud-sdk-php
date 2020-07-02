@@ -46,8 +46,8 @@ class DescribeItemByIdRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ItemIDs",$param) and $param["ItemIDs"] !== null) {
-            $this->ItemIDs = $param["ItemIDs"];
+        if (array_key_exists('ItemIDs',$param) and $param['ItemIDs'] !== null) {
+            $this->ItemIDs = $param['ItemIDs'];
         }
     }
 }

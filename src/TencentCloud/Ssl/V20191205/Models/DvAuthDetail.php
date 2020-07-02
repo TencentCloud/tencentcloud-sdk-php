@@ -110,29 +110,29 @@ class DvAuthDetail extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DvAuthKey",$param) and $param["DvAuthKey"] !== null) {
-            $this->DvAuthKey = $param["DvAuthKey"];
+        if (array_key_exists('DvAuthKey',$param) and $param['DvAuthKey'] !== null) {
+            $this->DvAuthKey = $param['DvAuthKey'];
         }
 
-        if (array_key_exists("DvAuthValue",$param) and $param["DvAuthValue"] !== null) {
-            $this->DvAuthValue = $param["DvAuthValue"];
+        if (array_key_exists('DvAuthValue',$param) and $param['DvAuthValue'] !== null) {
+            $this->DvAuthValue = $param['DvAuthValue'];
         }
 
-        if (array_key_exists("DvAuthDomain",$param) and $param["DvAuthDomain"] !== null) {
-            $this->DvAuthDomain = $param["DvAuthDomain"];
+        if (array_key_exists('DvAuthDomain',$param) and $param['DvAuthDomain'] !== null) {
+            $this->DvAuthDomain = $param['DvAuthDomain'];
         }
 
-        if (array_key_exists("DvAuthPath",$param) and $param["DvAuthPath"] !== null) {
-            $this->DvAuthPath = $param["DvAuthPath"];
+        if (array_key_exists('DvAuthPath',$param) and $param['DvAuthPath'] !== null) {
+            $this->DvAuthPath = $param['DvAuthPath'];
         }
 
-        if (array_key_exists("DvAuthKeySubDomain",$param) and $param["DvAuthKeySubDomain"] !== null) {
-            $this->DvAuthKeySubDomain = $param["DvAuthKeySubDomain"];
+        if (array_key_exists('DvAuthKeySubDomain',$param) and $param['DvAuthKeySubDomain'] !== null) {
+            $this->DvAuthKeySubDomain = $param['DvAuthKeySubDomain'];
         }
 
-        if (array_key_exists("DvAuths",$param) and $param["DvAuths"] !== null) {
+        if (array_key_exists('DvAuths',$param) and $param['DvAuths'] !== null) {
             $this->DvAuths = [];
-            foreach ($param["DvAuths"] as $key => $value){
+            foreach ($param['DvAuths'] as $key => $value){
                 $obj = new DvAuths();
                 $obj->deserialize($value);
                 array_push($this->DvAuths, $obj);

@@ -54,13 +54,13 @@ class UpdateProductResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Product",$param) and $param["Product"] !== null) {
+        if (array_key_exists('Product',$param) and $param['Product'] !== null) {
             $this->Product = new Product();
-            $this->Product->deserialize($param["Product"]);
+            $this->Product->deserialize($param['Product']);
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

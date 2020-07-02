@@ -54,13 +54,13 @@ class DescribeLiveCertResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CertInfo",$param) and $param["CertInfo"] !== null) {
+        if (array_key_exists('CertInfo',$param) and $param['CertInfo'] !== null) {
             $this->CertInfo = new CertInfo();
-            $this->CertInfo->deserialize($param["CertInfo"]);
+            $this->CertInfo->deserialize($param['CertInfo']);
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

@@ -94,33 +94,33 @@ class CarTagItem extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Serial",$param) and $param["Serial"] !== null) {
-            $this->Serial = $param["Serial"];
+        if (array_key_exists('Serial',$param) and $param['Serial'] !== null) {
+            $this->Serial = $param['Serial'];
         }
 
-        if (array_key_exists("Brand",$param) and $param["Brand"] !== null) {
-            $this->Brand = $param["Brand"];
+        if (array_key_exists('Brand',$param) and $param['Brand'] !== null) {
+            $this->Brand = $param['Brand'];
         }
 
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists('Type',$param) and $param['Type'] !== null) {
+            $this->Type = $param['Type'];
         }
 
-        if (array_key_exists("Color",$param) and $param["Color"] !== null) {
-            $this->Color = $param["Color"];
+        if (array_key_exists('Color',$param) and $param['Color'] !== null) {
+            $this->Color = $param['Color'];
         }
 
-        if (array_key_exists("Confidence",$param) and $param["Confidence"] !== null) {
-            $this->Confidence = $param["Confidence"];
+        if (array_key_exists('Confidence',$param) and $param['Confidence'] !== null) {
+            $this->Confidence = $param['Confidence'];
         }
 
-        if (array_key_exists("Year",$param) and $param["Year"] !== null) {
-            $this->Year = $param["Year"];
+        if (array_key_exists('Year',$param) and $param['Year'] !== null) {
+            $this->Year = $param['Year'];
         }
 
-        if (array_key_exists("CarLocation",$param) and $param["CarLocation"] !== null) {
+        if (array_key_exists('CarLocation',$param) and $param['CarLocation'] !== null) {
             $this->CarLocation = [];
-            foreach ($param["CarLocation"] as $key => $value){
+            foreach ($param['CarLocation'] as $key => $value){
                 $obj = new Coord();
                 $obj->deserialize($value);
                 array_push($this->CarLocation, $obj);

@@ -54,12 +54,12 @@ class DBSwitchInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SwitchTime",$param) and $param["SwitchTime"] !== null) {
-            $this->SwitchTime = $param["SwitchTime"];
+        if (array_key_exists('SwitchTime',$param) and $param['SwitchTime'] !== null) {
+            $this->SwitchTime = $param['SwitchTime'];
         }
 
-        if (array_key_exists("SwitchType",$param) and $param["SwitchType"] !== null) {
-            $this->SwitchType = $param["SwitchType"];
+        if (array_key_exists('SwitchType',$param) and $param['SwitchType'] !== null) {
+            $this->SwitchType = $param['SwitchType'];
         }
     }
 }

@@ -46,9 +46,9 @@ class AiAnalysisTaskTagOutput extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TagSet",$param) and $param["TagSet"] !== null) {
+        if (array_key_exists('TagSet',$param) and $param['TagSet'] !== null) {
             $this->TagSet = [];
-            foreach ($param["TagSet"] as $key => $value){
+            foreach ($param['TagSet'] as $key => $value){
                 $obj = new MediaAiAnalysisTagItem();
                 $obj->deserialize($value);
                 array_push($this->TagSet, $obj);

@@ -70,13 +70,13 @@ off：关闭
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Switch",$param) and $param["Switch"] !== null) {
-            $this->Switch = $param["Switch"];
+        if (array_key_exists('Switch',$param) and $param['Switch'] !== null) {
+            $this->Switch = $param['Switch'];
         }
 
-        if (array_key_exists("CacheRules",$param) and $param["CacheRules"] !== null) {
+        if (array_key_exists('CacheRules',$param) and $param['CacheRules'] !== null) {
             $this->CacheRules = [];
-            foreach ($param["CacheRules"] as $key => $value){
+            foreach ($param['CacheRules'] as $key => $value){
                 $obj = new StatusCodeCacheRule();
                 $obj->deserialize($value);
                 array_push($this->CacheRules, $obj);

@@ -62,16 +62,16 @@ class InputMapping extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SourcePath",$param) and $param["SourcePath"] !== null) {
-            $this->SourcePath = $param["SourcePath"];
+        if (array_key_exists('SourcePath',$param) and $param['SourcePath'] !== null) {
+            $this->SourcePath = $param['SourcePath'];
         }
 
-        if (array_key_exists("DestinationPath",$param) and $param["DestinationPath"] !== null) {
-            $this->DestinationPath = $param["DestinationPath"];
+        if (array_key_exists('DestinationPath',$param) and $param['DestinationPath'] !== null) {
+            $this->DestinationPath = $param['DestinationPath'];
         }
 
-        if (array_key_exists("MountOptionParameter",$param) and $param["MountOptionParameter"] !== null) {
-            $this->MountOptionParameter = $param["MountOptionParameter"];
+        if (array_key_exists('MountOptionParameter',$param) and $param['MountOptionParameter'] !== null) {
+            $this->MountOptionParameter = $param['MountOptionParameter'];
         }
     }
 }

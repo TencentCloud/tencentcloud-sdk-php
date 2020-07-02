@@ -54,12 +54,12 @@ class DuplicateImagePersonalRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SrcImage",$param) and $param["SrcImage"] !== null) {
-            $this->SrcImage = $param["SrcImage"];
+        if (array_key_exists('SrcImage',$param) and $param['SrcImage'] !== null) {
+            $this->SrcImage = $param['SrcImage'];
         }
 
-        if (array_key_exists("DestImage",$param) and $param["DestImage"] !== null) {
-            $this->DestImage = $param["DestImage"];
+        if (array_key_exists('DestImage',$param) and $param['DestImage'] !== null) {
+            $this->DestImage = $param['DestImage'];
         }
     }
 }

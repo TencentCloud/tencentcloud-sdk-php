@@ -62,17 +62,17 @@ class CreateWebhookTriggerRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RegistryId",$param) and $param["RegistryId"] !== null) {
-            $this->RegistryId = $param["RegistryId"];
+        if (array_key_exists('RegistryId',$param) and $param['RegistryId'] !== null) {
+            $this->RegistryId = $param['RegistryId'];
         }
 
-        if (array_key_exists("Trigger",$param) and $param["Trigger"] !== null) {
+        if (array_key_exists('Trigger',$param) and $param['Trigger'] !== null) {
             $this->Trigger = new WebhookTrigger();
-            $this->Trigger->deserialize($param["Trigger"]);
+            $this->Trigger->deserialize($param['Trigger']);
         }
 
-        if (array_key_exists("Namespace",$param) and $param["Namespace"] !== null) {
-            $this->Namespace = $param["Namespace"];
+        if (array_key_exists('Namespace',$param) and $param['Namespace'] !== null) {
+            $this->Namespace = $param['Namespace'];
         }
     }
 }

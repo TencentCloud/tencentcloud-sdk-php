@@ -66,21 +66,21 @@ class DescribeCodeRepositoriesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("CodeRepoSet",$param) and $param["CodeRepoSet"] !== null) {
+        if (array_key_exists('CodeRepoSet',$param) and $param['CodeRepoSet'] !== null) {
             $this->CodeRepoSet = [];
-            foreach ($param["CodeRepoSet"] as $key => $value){
+            foreach ($param['CodeRepoSet'] as $key => $value){
                 $obj = new CodeRepoSummary();
                 $obj->deserialize($value);
                 array_push($this->CodeRepoSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

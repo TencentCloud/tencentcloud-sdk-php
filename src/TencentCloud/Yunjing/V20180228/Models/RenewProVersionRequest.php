@@ -54,13 +54,13 @@ class RenewProVersionRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ChargePrepaid",$param) and $param["ChargePrepaid"] !== null) {
+        if (array_key_exists('ChargePrepaid',$param) and $param['ChargePrepaid'] !== null) {
             $this->ChargePrepaid = new ChargePrepaid();
-            $this->ChargePrepaid->deserialize($param["ChargePrepaid"]);
+            $this->ChargePrepaid->deserialize($param['ChargePrepaid']);
         }
 
-        if (array_key_exists("Quuid",$param) and $param["Quuid"] !== null) {
-            $this->Quuid = $param["Quuid"];
+        if (array_key_exists('Quuid',$param) and $param['Quuid'] !== null) {
+            $this->Quuid = $param['Quuid'];
         }
     }
 }

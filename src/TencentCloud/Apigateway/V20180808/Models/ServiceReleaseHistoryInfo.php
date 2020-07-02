@@ -74,16 +74,16 @@ class ServiceReleaseHistoryInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("VersionName",$param) and $param["VersionName"] !== null) {
-            $this->VersionName = $param["VersionName"];
+        if (array_key_exists('VersionName',$param) and $param['VersionName'] !== null) {
+            $this->VersionName = $param['VersionName'];
         }
 
-        if (array_key_exists("VersionDesc",$param) and $param["VersionDesc"] !== null) {
-            $this->VersionDesc = $param["VersionDesc"];
+        if (array_key_exists('VersionDesc',$param) and $param['VersionDesc'] !== null) {
+            $this->VersionDesc = $param['VersionDesc'];
         }
 
-        if (array_key_exists("ReleaseTime",$param) and $param["ReleaseTime"] !== null) {
-            $this->ReleaseTime = $param["ReleaseTime"];
+        if (array_key_exists('ReleaseTime',$param) and $param['ReleaseTime'] !== null) {
+            $this->ReleaseTime = $param['ReleaseTime'];
         }
     }
 }

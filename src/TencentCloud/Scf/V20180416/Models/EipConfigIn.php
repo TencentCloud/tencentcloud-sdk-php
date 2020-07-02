@@ -46,8 +46,8 @@ class EipConfigIn extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("EipStatus",$param) and $param["EipStatus"] !== null) {
-            $this->EipStatus = $param["EipStatus"];
+        if (array_key_exists('EipStatus',$param) and $param['EipStatus'] !== null) {
+            $this->EipStatus = $param['EipStatus'];
         }
     }
 }

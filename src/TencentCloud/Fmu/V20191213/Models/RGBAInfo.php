@@ -70,20 +70,20 @@ class RGBAInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("R",$param) and $param["R"] !== null) {
-            $this->R = $param["R"];
+        if (array_key_exists('R',$param) and $param['R'] !== null) {
+            $this->R = $param['R'];
         }
 
-        if (array_key_exists("G",$param) and $param["G"] !== null) {
-            $this->G = $param["G"];
+        if (array_key_exists('G',$param) and $param['G'] !== null) {
+            $this->G = $param['G'];
         }
 
-        if (array_key_exists("B",$param) and $param["B"] !== null) {
-            $this->B = $param["B"];
+        if (array_key_exists('B',$param) and $param['B'] !== null) {
+            $this->B = $param['B'];
         }
 
-        if (array_key_exists("A",$param) and $param["A"] !== null) {
-            $this->A = $param["A"];
+        if (array_key_exists('A',$param) and $param['A'] !== null) {
+            $this->A = $param['A'];
         }
     }
 }

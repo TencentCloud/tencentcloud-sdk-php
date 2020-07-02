@@ -86,31 +86,31 @@ class CreateMigrationRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MigrateName",$param) and $param["MigrateName"] !== null) {
-            $this->MigrateName = $param["MigrateName"];
+        if (array_key_exists('MigrateName',$param) and $param['MigrateName'] !== null) {
+            $this->MigrateName = $param['MigrateName'];
         }
 
-        if (array_key_exists("MigrateType",$param) and $param["MigrateType"] !== null) {
-            $this->MigrateType = $param["MigrateType"];
+        if (array_key_exists('MigrateType',$param) and $param['MigrateType'] !== null) {
+            $this->MigrateType = $param['MigrateType'];
         }
 
-        if (array_key_exists("SourceType",$param) and $param["SourceType"] !== null) {
-            $this->SourceType = $param["SourceType"];
+        if (array_key_exists('SourceType',$param) and $param['SourceType'] !== null) {
+            $this->SourceType = $param['SourceType'];
         }
 
-        if (array_key_exists("Source",$param) and $param["Source"] !== null) {
+        if (array_key_exists('Source',$param) and $param['Source'] !== null) {
             $this->Source = new MigrateSource();
-            $this->Source->deserialize($param["Source"]);
+            $this->Source->deserialize($param['Source']);
         }
 
-        if (array_key_exists("Target",$param) and $param["Target"] !== null) {
+        if (array_key_exists('Target',$param) and $param['Target'] !== null) {
             $this->Target = new MigrateTarget();
-            $this->Target->deserialize($param["Target"]);
+            $this->Target->deserialize($param['Target']);
         }
 
-        if (array_key_exists("MigrateDBSet",$param) and $param["MigrateDBSet"] !== null) {
+        if (array_key_exists('MigrateDBSet',$param) and $param['MigrateDBSet'] !== null) {
             $this->MigrateDBSet = [];
-            foreach ($param["MigrateDBSet"] as $key => $value){
+            foreach ($param['MigrateDBSet'] as $key => $value){
                 $obj = new MigrateDB();
                 $obj->deserialize($value);
                 array_push($this->MigrateDBSet, $obj);

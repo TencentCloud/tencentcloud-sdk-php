@@ -118,45 +118,45 @@ class PutScalingPolicyRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FleetId",$param) and $param["FleetId"] !== null) {
-            $this->FleetId = $param["FleetId"];
+        if (array_key_exists('FleetId',$param) and $param['FleetId'] !== null) {
+            $this->FleetId = $param['FleetId'];
         }
 
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("ScalingAdjustment",$param) and $param["ScalingAdjustment"] !== null) {
-            $this->ScalingAdjustment = $param["ScalingAdjustment"];
+        if (array_key_exists('ScalingAdjustment',$param) and $param['ScalingAdjustment'] !== null) {
+            $this->ScalingAdjustment = $param['ScalingAdjustment'];
         }
 
-        if (array_key_exists("ScalingAdjustmentType",$param) and $param["ScalingAdjustmentType"] !== null) {
-            $this->ScalingAdjustmentType = $param["ScalingAdjustmentType"];
+        if (array_key_exists('ScalingAdjustmentType',$param) and $param['ScalingAdjustmentType'] !== null) {
+            $this->ScalingAdjustmentType = $param['ScalingAdjustmentType'];
         }
 
-        if (array_key_exists("Threshold",$param) and $param["Threshold"] !== null) {
-            $this->Threshold = $param["Threshold"];
+        if (array_key_exists('Threshold',$param) and $param['Threshold'] !== null) {
+            $this->Threshold = $param['Threshold'];
         }
 
-        if (array_key_exists("ComparisonOperator",$param) and $param["ComparisonOperator"] !== null) {
-            $this->ComparisonOperator = $param["ComparisonOperator"];
+        if (array_key_exists('ComparisonOperator',$param) and $param['ComparisonOperator'] !== null) {
+            $this->ComparisonOperator = $param['ComparisonOperator'];
         }
 
-        if (array_key_exists("EvaluationPeriods",$param) and $param["EvaluationPeriods"] !== null) {
-            $this->EvaluationPeriods = $param["EvaluationPeriods"];
+        if (array_key_exists('EvaluationPeriods',$param) and $param['EvaluationPeriods'] !== null) {
+            $this->EvaluationPeriods = $param['EvaluationPeriods'];
         }
 
-        if (array_key_exists("MetricName",$param) and $param["MetricName"] !== null) {
-            $this->MetricName = $param["MetricName"];
+        if (array_key_exists('MetricName',$param) and $param['MetricName'] !== null) {
+            $this->MetricName = $param['MetricName'];
         }
 
-        if (array_key_exists("PolicyType",$param) and $param["PolicyType"] !== null) {
-            $this->PolicyType = $param["PolicyType"];
+        if (array_key_exists('PolicyType',$param) and $param['PolicyType'] !== null) {
+            $this->PolicyType = $param['PolicyType'];
         }
 
-        if (array_key_exists("TargetConfiguration",$param) and $param["TargetConfiguration"] !== null) {
+        if (array_key_exists('TargetConfiguration',$param) and $param['TargetConfiguration'] !== null) {
             $this->TargetConfiguration = new TargetConfiguration();
-            $this->TargetConfiguration->deserialize($param["TargetConfiguration"]);
+            $this->TargetConfiguration->deserialize($param['TargetConfiguration']);
         }
     }
 }

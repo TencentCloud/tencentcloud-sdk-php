@@ -62,17 +62,17 @@ class MediaAiAnalysisFrameTagSegmentItem extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("StartTimeOffset",$param) and $param["StartTimeOffset"] !== null) {
-            $this->StartTimeOffset = $param["StartTimeOffset"];
+        if (array_key_exists('StartTimeOffset',$param) and $param['StartTimeOffset'] !== null) {
+            $this->StartTimeOffset = $param['StartTimeOffset'];
         }
 
-        if (array_key_exists("EndTimeOffset",$param) and $param["EndTimeOffset"] !== null) {
-            $this->EndTimeOffset = $param["EndTimeOffset"];
+        if (array_key_exists('EndTimeOffset',$param) and $param['EndTimeOffset'] !== null) {
+            $this->EndTimeOffset = $param['EndTimeOffset'];
         }
 
-        if (array_key_exists("TagSet",$param) and $param["TagSet"] !== null) {
+        if (array_key_exists('TagSet',$param) and $param['TagSet'] !== null) {
             $this->TagSet = [];
-            foreach ($param["TagSet"] as $key => $value){
+            foreach ($param['TagSet'] as $key => $value){
                 $obj = new MediaAiAnalysisFrameTagItem();
                 $obj->deserialize($value);
                 array_push($this->TagSet, $obj);

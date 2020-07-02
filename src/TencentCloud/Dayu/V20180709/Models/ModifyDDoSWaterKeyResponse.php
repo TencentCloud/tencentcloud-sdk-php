@@ -54,17 +54,17 @@ class ModifyDDoSWaterKeyResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("KeyList",$param) and $param["KeyList"] !== null) {
+        if (array_key_exists('KeyList',$param) and $param['KeyList'] !== null) {
             $this->KeyList = [];
-            foreach ($param["KeyList"] as $key => $value){
+            foreach ($param['KeyList'] as $key => $value){
                 $obj = new WaterPrintKey();
                 $obj->deserialize($value);
                 array_push($this->KeyList, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

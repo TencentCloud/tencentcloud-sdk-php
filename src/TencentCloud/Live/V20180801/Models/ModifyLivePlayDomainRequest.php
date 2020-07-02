@@ -54,12 +54,12 @@ class ModifyLivePlayDomainRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DomainName",$param) and $param["DomainName"] !== null) {
-            $this->DomainName = $param["DomainName"];
+        if (array_key_exists('DomainName',$param) and $param['DomainName'] !== null) {
+            $this->DomainName = $param['DomainName'];
         }
 
-        if (array_key_exists("PlayType",$param) and $param["PlayType"] !== null) {
-            $this->PlayType = $param["PlayType"];
+        if (array_key_exists('PlayType',$param) and $param['PlayType'] !== null) {
+            $this->PlayType = $param['PlayType'];
         }
     }
 }

@@ -98,24 +98,24 @@ class DetectInfoIdCardData extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("OcrFront",$param) and $param["OcrFront"] !== null) {
-            $this->OcrFront = $param["OcrFront"];
+        if (array_key_exists('OcrFront',$param) and $param['OcrFront'] !== null) {
+            $this->OcrFront = $param['OcrFront'];
         }
 
-        if (array_key_exists("OcrBack",$param) and $param["OcrBack"] !== null) {
-            $this->OcrBack = $param["OcrBack"];
+        if (array_key_exists('OcrBack',$param) and $param['OcrBack'] !== null) {
+            $this->OcrBack = $param['OcrBack'];
         }
 
-        if (array_key_exists("ProcessedFrontImage",$param) and $param["ProcessedFrontImage"] !== null) {
-            $this->ProcessedFrontImage = $param["ProcessedFrontImage"];
+        if (array_key_exists('ProcessedFrontImage',$param) and $param['ProcessedFrontImage'] !== null) {
+            $this->ProcessedFrontImage = $param['ProcessedFrontImage'];
         }
 
-        if (array_key_exists("ProcessedBackImage",$param) and $param["ProcessedBackImage"] !== null) {
-            $this->ProcessedBackImage = $param["ProcessedBackImage"];
+        if (array_key_exists('ProcessedBackImage',$param) and $param['ProcessedBackImage'] !== null) {
+            $this->ProcessedBackImage = $param['ProcessedBackImage'];
         }
 
-        if (array_key_exists("Avatar",$param) and $param["Avatar"] !== null) {
-            $this->Avatar = $param["Avatar"];
+        if (array_key_exists('Avatar',$param) and $param['Avatar'] !== null) {
+            $this->Avatar = $param['Avatar'];
         }
     }
 }

@@ -54,12 +54,12 @@ class GetKeyRotationStatusResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("KeyRotationEnabled",$param) and $param["KeyRotationEnabled"] !== null) {
-            $this->KeyRotationEnabled = $param["KeyRotationEnabled"];
+        if (array_key_exists('KeyRotationEnabled',$param) and $param['KeyRotationEnabled'] !== null) {
+            $this->KeyRotationEnabled = $param['KeyRotationEnabled'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

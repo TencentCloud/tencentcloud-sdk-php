@@ -62,19 +62,19 @@ class UserDefineConfigureInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FaceReviewInfo",$param) and $param["FaceReviewInfo"] !== null) {
+        if (array_key_exists('FaceReviewInfo',$param) and $param['FaceReviewInfo'] !== null) {
             $this->FaceReviewInfo = new UserDefineFaceReviewTemplateInfo();
-            $this->FaceReviewInfo->deserialize($param["FaceReviewInfo"]);
+            $this->FaceReviewInfo->deserialize($param['FaceReviewInfo']);
         }
 
-        if (array_key_exists("AsrReviewInfo",$param) and $param["AsrReviewInfo"] !== null) {
+        if (array_key_exists('AsrReviewInfo',$param) and $param['AsrReviewInfo'] !== null) {
             $this->AsrReviewInfo = new UserDefineAsrTextReviewTemplateInfo();
-            $this->AsrReviewInfo->deserialize($param["AsrReviewInfo"]);
+            $this->AsrReviewInfo->deserialize($param['AsrReviewInfo']);
         }
 
-        if (array_key_exists("OcrReviewInfo",$param) and $param["OcrReviewInfo"] !== null) {
+        if (array_key_exists('OcrReviewInfo',$param) and $param['OcrReviewInfo'] !== null) {
             $this->OcrReviewInfo = new UserDefineOcrTextReviewTemplateInfo();
-            $this->OcrReviewInfo->deserialize($param["OcrReviewInfo"]);
+            $this->OcrReviewInfo->deserialize($param['OcrReviewInfo']);
         }
     }
 }

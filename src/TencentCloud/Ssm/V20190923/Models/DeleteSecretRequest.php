@@ -54,12 +54,12 @@ class DeleteSecretRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SecretName",$param) and $param["SecretName"] !== null) {
-            $this->SecretName = $param["SecretName"];
+        if (array_key_exists('SecretName',$param) and $param['SecretName'] !== null) {
+            $this->SecretName = $param['SecretName'];
         }
 
-        if (array_key_exists("RecoveryWindowInDays",$param) and $param["RecoveryWindowInDays"] !== null) {
-            $this->RecoveryWindowInDays = $param["RecoveryWindowInDays"];
+        if (array_key_exists('RecoveryWindowInDays',$param) and $param['RecoveryWindowInDays'] !== null) {
+            $this->RecoveryWindowInDays = $param['RecoveryWindowInDays'];
         }
     }
 }

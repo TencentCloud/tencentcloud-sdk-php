@@ -70,20 +70,20 @@ class DescribeMaterialListRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ActivityId",$param) and $param["ActivityId"] !== null) {
-            $this->ActivityId = $param["ActivityId"];
+        if (array_key_exists('ActivityId',$param) and $param['ActivityId'] !== null) {
+            $this->ActivityId = $param['ActivityId'];
         }
 
-        if (array_key_exists("MaterialId",$param) and $param["MaterialId"] !== null) {
-            $this->MaterialId = $param["MaterialId"];
+        if (array_key_exists('MaterialId',$param) and $param['MaterialId'] !== null) {
+            $this->MaterialId = $param['MaterialId'];
         }
 
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
+        if (array_key_exists('Limit',$param) and $param['Limit'] !== null) {
+            $this->Limit = $param['Limit'];
         }
 
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
+        if (array_key_exists('Offset',$param) and $param['Offset'] !== null) {
+            $this->Offset = $param['Offset'];
         }
     }
 }

@@ -78,24 +78,24 @@ class ModifyDevicePropertyRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Tid",$param) and $param["Tid"] !== null) {
-            $this->Tid = $param["Tid"];
+        if (array_key_exists('Tid',$param) and $param['Tid'] !== null) {
+            $this->Tid = $param['Tid'];
         }
 
-        if (array_key_exists("Wakeup",$param) and $param["Wakeup"] !== null) {
-            $this->Wakeup = $param["Wakeup"];
+        if (array_key_exists('Wakeup',$param) and $param['Wakeup'] !== null) {
+            $this->Wakeup = $param['Wakeup'];
         }
 
-        if (array_key_exists("Branch",$param) and $param["Branch"] !== null) {
-            $this->Branch = $param["Branch"];
+        if (array_key_exists('Branch',$param) and $param['Branch'] !== null) {
+            $this->Branch = $param['Branch'];
         }
 
-        if (array_key_exists("Value",$param) and $param["Value"] !== null) {
-            $this->Value = $param["Value"];
+        if (array_key_exists('Value',$param) and $param['Value'] !== null) {
+            $this->Value = $param['Value'];
         }
 
-        if (array_key_exists("IsNum",$param) and $param["IsNum"] !== null) {
-            $this->IsNum = $param["IsNum"];
+        if (array_key_exists('IsNum',$param) and $param['IsNum'] !== null) {
+            $this->IsNum = $param['IsNum'];
         }
     }
 }

@@ -62,21 +62,21 @@ class DescribeAccessPointsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AccessPointSet",$param) and $param["AccessPointSet"] !== null) {
+        if (array_key_exists('AccessPointSet',$param) and $param['AccessPointSet'] !== null) {
             $this->AccessPointSet = [];
-            foreach ($param["AccessPointSet"] as $key => $value){
+            foreach ($param['AccessPointSet'] as $key => $value){
                 $obj = new AccessPoint();
                 $obj->deserialize($value);
                 array_push($this->AccessPointSet, $obj);
             }
         }
 
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

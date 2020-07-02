@@ -86,28 +86,28 @@ class DeleteRuleRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LoadBalancerId",$param) and $param["LoadBalancerId"] !== null) {
-            $this->LoadBalancerId = $param["LoadBalancerId"];
+        if (array_key_exists('LoadBalancerId',$param) and $param['LoadBalancerId'] !== null) {
+            $this->LoadBalancerId = $param['LoadBalancerId'];
         }
 
-        if (array_key_exists("ListenerId",$param) and $param["ListenerId"] !== null) {
-            $this->ListenerId = $param["ListenerId"];
+        if (array_key_exists('ListenerId',$param) and $param['ListenerId'] !== null) {
+            $this->ListenerId = $param['ListenerId'];
         }
 
-        if (array_key_exists("LocationIds",$param) and $param["LocationIds"] !== null) {
-            $this->LocationIds = $param["LocationIds"];
+        if (array_key_exists('LocationIds',$param) and $param['LocationIds'] !== null) {
+            $this->LocationIds = $param['LocationIds'];
         }
 
-        if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
-            $this->Domain = $param["Domain"];
+        if (array_key_exists('Domain',$param) and $param['Domain'] !== null) {
+            $this->Domain = $param['Domain'];
         }
 
-        if (array_key_exists("Url",$param) and $param["Url"] !== null) {
-            $this->Url = $param["Url"];
+        if (array_key_exists('Url',$param) and $param['Url'] !== null) {
+            $this->Url = $param['Url'];
         }
 
-        if (array_key_exists("NewDefaultServerDomain",$param) and $param["NewDefaultServerDomain"] !== null) {
-            $this->NewDefaultServerDomain = $param["NewDefaultServerDomain"];
+        if (array_key_exists('NewDefaultServerDomain',$param) and $param['NewDefaultServerDomain'] !== null) {
+            $this->NewDefaultServerDomain = $param['NewDefaultServerDomain'];
         }
     }
 }

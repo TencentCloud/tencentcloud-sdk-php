@@ -46,8 +46,8 @@ class DeleteAutoSnapshotPoliciesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AutoSnapshotPolicyIds",$param) and $param["AutoSnapshotPolicyIds"] !== null) {
-            $this->AutoSnapshotPolicyIds = $param["AutoSnapshotPolicyIds"];
+        if (array_key_exists('AutoSnapshotPolicyIds',$param) and $param['AutoSnapshotPolicyIds'] !== null) {
+            $this->AutoSnapshotPolicyIds = $param['AutoSnapshotPolicyIds'];
         }
     }
 }

@@ -62,14 +62,14 @@ class DataSource extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CosDataSource",$param) and $param["CosDataSource"] !== null) {
+        if (array_key_exists('CosDataSource',$param) and $param['CosDataSource'] !== null) {
             $this->CosDataSource = new CosDataSource();
-            $this->CosDataSource->deserialize($param["CosDataSource"]);
+            $this->CosDataSource->deserialize($param['CosDataSource']);
         }
 
-        if (array_key_exists("FileSystemDataSource",$param) and $param["FileSystemDataSource"] !== null) {
+        if (array_key_exists('FileSystemDataSource',$param) and $param['FileSystemDataSource'] !== null) {
             $this->FileSystemDataSource = new FileSystemDataSource();
-            $this->FileSystemDataSource->deserialize($param["FileSystemDataSource"]);
+            $this->FileSystemDataSource->deserialize($param['FileSystemDataSource']);
         }
     }
 }

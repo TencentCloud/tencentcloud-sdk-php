@@ -54,13 +54,13 @@ class CreateTriggerResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TriggerInfo",$param) and $param["TriggerInfo"] !== null) {
+        if (array_key_exists('TriggerInfo',$param) and $param['TriggerInfo'] !== null) {
             $this->TriggerInfo = new Trigger();
-            $this->TriggerInfo->deserialize($param["TriggerInfo"]);
+            $this->TriggerInfo->deserialize($param['TriggerInfo']);
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

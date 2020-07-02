@@ -46,8 +46,8 @@ class DescribeVpcResourceDashboardRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("VpcIds",$param) and $param["VpcIds"] !== null) {
-            $this->VpcIds = $param["VpcIds"];
+        if (array_key_exists('VpcIds',$param) and $param['VpcIds'] !== null) {
+            $this->VpcIds = $param['VpcIds'];
         }
     }
 }

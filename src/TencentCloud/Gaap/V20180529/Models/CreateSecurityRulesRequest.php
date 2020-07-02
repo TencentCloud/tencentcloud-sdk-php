@@ -54,13 +54,13 @@ class CreateSecurityRulesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PolicyId",$param) and $param["PolicyId"] !== null) {
-            $this->PolicyId = $param["PolicyId"];
+        if (array_key_exists('PolicyId',$param) and $param['PolicyId'] !== null) {
+            $this->PolicyId = $param['PolicyId'];
         }
 
-        if (array_key_exists("RuleList",$param) and $param["RuleList"] !== null) {
+        if (array_key_exists('RuleList',$param) and $param['RuleList'] !== null) {
             $this->RuleList = [];
-            foreach ($param["RuleList"] as $key => $value){
+            foreach ($param['RuleList'] as $key => $value){
                 $obj = new SecurityPolicyRuleIn();
                 $obj->deserialize($value);
                 array_push($this->RuleList, $obj);

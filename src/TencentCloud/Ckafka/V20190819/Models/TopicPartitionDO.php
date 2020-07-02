@@ -70,20 +70,20 @@ class TopicPartitionDO extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Partition",$param) and $param["Partition"] !== null) {
-            $this->Partition = $param["Partition"];
+        if (array_key_exists('Partition',$param) and $param['Partition'] !== null) {
+            $this->Partition = $param['Partition'];
         }
 
-        if (array_key_exists("LeaderStatus",$param) and $param["LeaderStatus"] !== null) {
-            $this->LeaderStatus = $param["LeaderStatus"];
+        if (array_key_exists('LeaderStatus',$param) and $param['LeaderStatus'] !== null) {
+            $this->LeaderStatus = $param['LeaderStatus'];
         }
 
-        if (array_key_exists("IsrNum",$param) and $param["IsrNum"] !== null) {
-            $this->IsrNum = $param["IsrNum"];
+        if (array_key_exists('IsrNum',$param) and $param['IsrNum'] !== null) {
+            $this->IsrNum = $param['IsrNum'];
         }
 
-        if (array_key_exists("ReplicaNum",$param) and $param["ReplicaNum"] !== null) {
-            $this->ReplicaNum = $param["ReplicaNum"];
+        if (array_key_exists('ReplicaNum',$param) and $param['ReplicaNum'] !== null) {
+            $this->ReplicaNum = $param['ReplicaNum'];
         }
     }
 }

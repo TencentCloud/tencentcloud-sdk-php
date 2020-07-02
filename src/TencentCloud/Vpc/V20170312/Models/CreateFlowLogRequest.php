@@ -94,32 +94,32 @@ class CreateFlowLogRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
-            $this->VpcId = $param["VpcId"];
+        if (array_key_exists('VpcId',$param) and $param['VpcId'] !== null) {
+            $this->VpcId = $param['VpcId'];
         }
 
-        if (array_key_exists("FlowLogName",$param) and $param["FlowLogName"] !== null) {
-            $this->FlowLogName = $param["FlowLogName"];
+        if (array_key_exists('FlowLogName',$param) and $param['FlowLogName'] !== null) {
+            $this->FlowLogName = $param['FlowLogName'];
         }
 
-        if (array_key_exists("ResourceType",$param) and $param["ResourceType"] !== null) {
-            $this->ResourceType = $param["ResourceType"];
+        if (array_key_exists('ResourceType',$param) and $param['ResourceType'] !== null) {
+            $this->ResourceType = $param['ResourceType'];
         }
 
-        if (array_key_exists("ResourceId",$param) and $param["ResourceId"] !== null) {
-            $this->ResourceId = $param["ResourceId"];
+        if (array_key_exists('ResourceId',$param) and $param['ResourceId'] !== null) {
+            $this->ResourceId = $param['ResourceId'];
         }
 
-        if (array_key_exists("TrafficType",$param) and $param["TrafficType"] !== null) {
-            $this->TrafficType = $param["TrafficType"];
+        if (array_key_exists('TrafficType',$param) and $param['TrafficType'] !== null) {
+            $this->TrafficType = $param['TrafficType'];
         }
 
-        if (array_key_exists("CloudLogId",$param) and $param["CloudLogId"] !== null) {
-            $this->CloudLogId = $param["CloudLogId"];
+        if (array_key_exists('CloudLogId',$param) and $param['CloudLogId'] !== null) {
+            $this->CloudLogId = $param['CloudLogId'];
         }
 
-        if (array_key_exists("FlowLogDescription",$param) and $param["FlowLogDescription"] !== null) {
-            $this->FlowLogDescription = $param["FlowLogDescription"];
+        if (array_key_exists('FlowLogDescription',$param) and $param['FlowLogDescription'] !== null) {
+            $this->FlowLogDescription = $param['FlowLogDescription'];
         }
     }
 }

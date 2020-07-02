@@ -62,16 +62,16 @@ class AppGetTokenRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("UserName",$param) and $param["UserName"] !== null) {
-            $this->UserName = $param["UserName"];
+        if (array_key_exists('UserName',$param) and $param['UserName'] !== null) {
+            $this->UserName = $param['UserName'];
         }
 
-        if (array_key_exists("Password",$param) and $param["Password"] !== null) {
-            $this->Password = $param["Password"];
+        if (array_key_exists('Password',$param) and $param['Password'] !== null) {
+            $this->Password = $param['Password'];
         }
 
-        if (array_key_exists("Expire",$param) and $param["Expire"] !== null) {
-            $this->Expire = $param["Expire"];
+        if (array_key_exists('Expire',$param) and $param['Expire'] !== null) {
+            $this->Expire = $param['Expire'];
         }
     }
 }

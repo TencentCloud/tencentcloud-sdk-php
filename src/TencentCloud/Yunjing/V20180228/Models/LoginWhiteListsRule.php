@@ -86,33 +86,33 @@ class LoginWhiteListsRule extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Places",$param) and $param["Places"] !== null) {
+        if (array_key_exists('Places',$param) and $param['Places'] !== null) {
             $this->Places = [];
-            foreach ($param["Places"] as $key => $value){
+            foreach ($param['Places'] as $key => $value){
                 $obj = new Place();
                 $obj->deserialize($value);
                 array_push($this->Places, $obj);
             }
         }
 
-        if (array_key_exists("SrcIp",$param) and $param["SrcIp"] !== null) {
-            $this->SrcIp = $param["SrcIp"];
+        if (array_key_exists('SrcIp',$param) and $param['SrcIp'] !== null) {
+            $this->SrcIp = $param['SrcIp'];
         }
 
-        if (array_key_exists("UserName",$param) and $param["UserName"] !== null) {
-            $this->UserName = $param["UserName"];
+        if (array_key_exists('UserName',$param) and $param['UserName'] !== null) {
+            $this->UserName = $param['UserName'];
         }
 
-        if (array_key_exists("IsGlobal",$param) and $param["IsGlobal"] !== null) {
-            $this->IsGlobal = $param["IsGlobal"];
+        if (array_key_exists('IsGlobal',$param) and $param['IsGlobal'] !== null) {
+            $this->IsGlobal = $param['IsGlobal'];
         }
 
-        if (array_key_exists("HostIp",$param) and $param["HostIp"] !== null) {
-            $this->HostIp = $param["HostIp"];
+        if (array_key_exists('HostIp',$param) and $param['HostIp'] !== null) {
+            $this->HostIp = $param['HostIp'];
         }
 
-        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
-            $this->Id = $param["Id"];
+        if (array_key_exists('Id',$param) and $param['Id'] !== null) {
+            $this->Id = $param['Id'];
         }
     }
 }

@@ -78,24 +78,24 @@ class UpdateDeviceShadowRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ProductId",$param) and $param["ProductId"] !== null) {
-            $this->ProductId = $param["ProductId"];
+        if (array_key_exists('ProductId',$param) and $param['ProductId'] !== null) {
+            $this->ProductId = $param['ProductId'];
         }
 
-        if (array_key_exists("DeviceName",$param) and $param["DeviceName"] !== null) {
-            $this->DeviceName = $param["DeviceName"];
+        if (array_key_exists('DeviceName',$param) and $param['DeviceName'] !== null) {
+            $this->DeviceName = $param['DeviceName'];
         }
 
-        if (array_key_exists("State",$param) and $param["State"] !== null) {
-            $this->State = $param["State"];
+        if (array_key_exists('State',$param) and $param['State'] !== null) {
+            $this->State = $param['State'];
         }
 
-        if (array_key_exists("ShadowVersion",$param) and $param["ShadowVersion"] !== null) {
-            $this->ShadowVersion = $param["ShadowVersion"];
+        if (array_key_exists('ShadowVersion',$param) and $param['ShadowVersion'] !== null) {
+            $this->ShadowVersion = $param['ShadowVersion'];
         }
 
-        if (array_key_exists("Prefix",$param) and $param["Prefix"] !== null) {
-            $this->Prefix = $param["Prefix"];
+        if (array_key_exists('Prefix',$param) and $param['Prefix'] !== null) {
+            $this->Prefix = $param['Prefix'];
         }
     }
 }

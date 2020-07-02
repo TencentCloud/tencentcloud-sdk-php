@@ -62,16 +62,16 @@ class CustomResult extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Keywords",$param) and $param["Keywords"] !== null) {
-            $this->Keywords = $param["Keywords"];
+        if (array_key_exists('Keywords',$param) and $param['Keywords'] !== null) {
+            $this->Keywords = $param['Keywords'];
         }
 
-        if (array_key_exists("LibId",$param) and $param["LibId"] !== null) {
-            $this->LibId = $param["LibId"];
+        if (array_key_exists('LibId',$param) and $param['LibId'] !== null) {
+            $this->LibId = $param['LibId'];
         }
 
-        if (array_key_exists("LibName",$param) and $param["LibName"] !== null) {
-            $this->LibName = $param["LibName"];
+        if (array_key_exists('LibName',$param) and $param['LibName'] !== null) {
+            $this->LibName = $param['LibName'];
         }
     }
 }

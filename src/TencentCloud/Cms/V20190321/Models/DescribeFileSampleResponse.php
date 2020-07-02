@@ -62,21 +62,21 @@ class DescribeFileSampleResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FileSampleSet",$param) and $param["FileSampleSet"] !== null) {
+        if (array_key_exists('FileSampleSet',$param) and $param['FileSampleSet'] !== null) {
             $this->FileSampleSet = [];
-            foreach ($param["FileSampleSet"] as $key => $value){
+            foreach ($param['FileSampleSet'] as $key => $value){
                 $obj = new FileSampleInfo();
                 $obj->deserialize($value);
                 array_push($this->FileSampleSet, $obj);
             }
         }
 
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

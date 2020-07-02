@@ -106,37 +106,37 @@ class FuseFaceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
-            $this->ProjectId = $param["ProjectId"];
+        if (array_key_exists('ProjectId',$param) and $param['ProjectId'] !== null) {
+            $this->ProjectId = $param['ProjectId'];
         }
 
-        if (array_key_exists("ModelId",$param) and $param["ModelId"] !== null) {
-            $this->ModelId = $param["ModelId"];
+        if (array_key_exists('ModelId',$param) and $param['ModelId'] !== null) {
+            $this->ModelId = $param['ModelId'];
         }
 
-        if (array_key_exists("RspImgType",$param) and $param["RspImgType"] !== null) {
-            $this->RspImgType = $param["RspImgType"];
+        if (array_key_exists('RspImgType',$param) and $param['RspImgType'] !== null) {
+            $this->RspImgType = $param['RspImgType'];
         }
 
-        if (array_key_exists("MergeInfos",$param) and $param["MergeInfos"] !== null) {
+        if (array_key_exists('MergeInfos',$param) and $param['MergeInfos'] !== null) {
             $this->MergeInfos = [];
-            foreach ($param["MergeInfos"] as $key => $value){
+            foreach ($param['MergeInfos'] as $key => $value){
                 $obj = new MergeInfo();
                 $obj->deserialize($value);
                 array_push($this->MergeInfos, $obj);
             }
         }
 
-        if (array_key_exists("FuseProfileDegree",$param) and $param["FuseProfileDegree"] !== null) {
-            $this->FuseProfileDegree = $param["FuseProfileDegree"];
+        if (array_key_exists('FuseProfileDegree',$param) and $param['FuseProfileDegree'] !== null) {
+            $this->FuseProfileDegree = $param['FuseProfileDegree'];
         }
 
-        if (array_key_exists("FuseFaceDegree",$param) and $param["FuseFaceDegree"] !== null) {
-            $this->FuseFaceDegree = $param["FuseFaceDegree"];
+        if (array_key_exists('FuseFaceDegree',$param) and $param['FuseFaceDegree'] !== null) {
+            $this->FuseFaceDegree = $param['FuseFaceDegree'];
         }
 
-        if (array_key_exists("CelebrityIdentify",$param) and $param["CelebrityIdentify"] !== null) {
-            $this->CelebrityIdentify = $param["CelebrityIdentify"];
+        if (array_key_exists('CelebrityIdentify',$param) and $param['CelebrityIdentify'] !== null) {
+            $this->CelebrityIdentify = $param['CelebrityIdentify'];
         }
     }
 }

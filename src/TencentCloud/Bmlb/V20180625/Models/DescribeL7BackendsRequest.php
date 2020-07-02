@@ -78,24 +78,24 @@ class DescribeL7BackendsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LoadBalancerId",$param) and $param["LoadBalancerId"] !== null) {
-            $this->LoadBalancerId = $param["LoadBalancerId"];
+        if (array_key_exists('LoadBalancerId',$param) and $param['LoadBalancerId'] !== null) {
+            $this->LoadBalancerId = $param['LoadBalancerId'];
         }
 
-        if (array_key_exists("ListenerId",$param) and $param["ListenerId"] !== null) {
-            $this->ListenerId = $param["ListenerId"];
+        if (array_key_exists('ListenerId',$param) and $param['ListenerId'] !== null) {
+            $this->ListenerId = $param['ListenerId'];
         }
 
-        if (array_key_exists("DomainId",$param) and $param["DomainId"] !== null) {
-            $this->DomainId = $param["DomainId"];
+        if (array_key_exists('DomainId',$param) and $param['DomainId'] !== null) {
+            $this->DomainId = $param['DomainId'];
         }
 
-        if (array_key_exists("LocationId",$param) and $param["LocationId"] !== null) {
-            $this->LocationId = $param["LocationId"];
+        if (array_key_exists('LocationId',$param) and $param['LocationId'] !== null) {
+            $this->LocationId = $param['LocationId'];
         }
 
-        if (array_key_exists("QueryType",$param) and $param["QueryType"] !== null) {
-            $this->QueryType = $param["QueryType"];
+        if (array_key_exists('QueryType',$param) and $param['QueryType'] !== null) {
+            $this->QueryType = $param['QueryType'];
         }
     }
 }

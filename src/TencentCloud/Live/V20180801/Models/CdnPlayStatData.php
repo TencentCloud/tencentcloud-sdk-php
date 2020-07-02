@@ -78,24 +78,24 @@ class CdnPlayStatData extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Time",$param) and $param["Time"] !== null) {
-            $this->Time = $param["Time"];
+        if (array_key_exists('Time',$param) and $param['Time'] !== null) {
+            $this->Time = $param['Time'];
         }
 
-        if (array_key_exists("Bandwidth",$param) and $param["Bandwidth"] !== null) {
-            $this->Bandwidth = $param["Bandwidth"];
+        if (array_key_exists('Bandwidth',$param) and $param['Bandwidth'] !== null) {
+            $this->Bandwidth = $param['Bandwidth'];
         }
 
-        if (array_key_exists("Flux",$param) and $param["Flux"] !== null) {
-            $this->Flux = $param["Flux"];
+        if (array_key_exists('Flux',$param) and $param['Flux'] !== null) {
+            $this->Flux = $param['Flux'];
         }
 
-        if (array_key_exists("Request",$param) and $param["Request"] !== null) {
-            $this->Request = $param["Request"];
+        if (array_key_exists('Request',$param) and $param['Request'] !== null) {
+            $this->Request = $param['Request'];
         }
 
-        if (array_key_exists("Online",$param) and $param["Online"] !== null) {
-            $this->Online = $param["Online"];
+        if (array_key_exists('Online',$param) and $param['Online'] !== null) {
+            $this->Online = $param['Online'];
         }
     }
 }

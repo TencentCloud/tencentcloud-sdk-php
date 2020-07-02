@@ -54,17 +54,17 @@ class ListCosEnableRegionResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("EnableRegions",$param) and $param["EnableRegions"] !== null) {
+        if (array_key_exists('EnableRegions',$param) and $param['EnableRegions'] !== null) {
             $this->EnableRegions = [];
-            foreach ($param["EnableRegions"] as $key => $value){
+            foreach ($param['EnableRegions'] as $key => $value){
                 $obj = new CosRegionInfo();
                 $obj->deserialize($value);
                 array_push($this->EnableRegions, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

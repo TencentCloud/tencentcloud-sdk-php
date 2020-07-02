@@ -58,12 +58,12 @@ class DeleteFairPlayPemRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BailorId",$param) and $param["BailorId"] !== null) {
-            $this->BailorId = $param["BailorId"];
+        if (array_key_exists('BailorId',$param) and $param['BailorId'] !== null) {
+            $this->BailorId = $param['BailorId'];
         }
 
-        if (array_key_exists("FairPlayPemId",$param) and $param["FairPlayPemId"] !== null) {
-            $this->FairPlayPemId = $param["FairPlayPemId"];
+        if (array_key_exists('FairPlayPemId',$param) and $param['FairPlayPemId'] !== null) {
+            $this->FairPlayPemId = $param['FairPlayPemId'];
         }
     }
 }

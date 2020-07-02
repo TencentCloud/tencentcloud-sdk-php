@@ -54,12 +54,12 @@ class ModifyLogFileRetentionPeriodRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("Days",$param) and $param["Days"] !== null) {
-            $this->Days = $param["Days"];
+        if (array_key_exists('Days',$param) and $param['Days'] !== null) {
+            $this->Days = $param['Days'];
         }
     }
 }

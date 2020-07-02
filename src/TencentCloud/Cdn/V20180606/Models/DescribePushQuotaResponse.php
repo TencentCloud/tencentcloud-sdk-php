@@ -54,17 +54,17 @@ class DescribePushQuotaResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("UrlPush",$param) and $param["UrlPush"] !== null) {
+        if (array_key_exists('UrlPush',$param) and $param['UrlPush'] !== null) {
             $this->UrlPush = [];
-            foreach ($param["UrlPush"] as $key => $value){
+            foreach ($param['UrlPush'] as $key => $value){
                 $obj = new Quota();
                 $obj->deserialize($value);
                 array_push($this->UrlPush, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

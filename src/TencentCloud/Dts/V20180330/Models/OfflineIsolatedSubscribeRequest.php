@@ -46,8 +46,8 @@ class OfflineIsolatedSubscribeRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SubscribeId",$param) and $param["SubscribeId"] !== null) {
-            $this->SubscribeId = $param["SubscribeId"];
+        if (array_key_exists('SubscribeId',$param) and $param['SubscribeId'] !== null) {
+            $this->SubscribeId = $param['SubscribeId'];
         }
     }
 }

@@ -54,12 +54,12 @@ class Area extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AreaId",$param) and $param["AreaId"] !== null) {
-            $this->AreaId = $param["AreaId"];
+        if (array_key_exists('AreaId',$param) and $param['AreaId'] !== null) {
+            $this->AreaId = $param['AreaId'];
         }
 
-        if (array_key_exists("AreaName",$param) and $param["AreaName"] !== null) {
-            $this->AreaName = $param["AreaName"];
+        if (array_key_exists('AreaName',$param) and $param['AreaName'] !== null) {
+            $this->AreaName = $param['AreaName'];
         }
     }
 }

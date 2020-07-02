@@ -54,13 +54,13 @@ class ReplaceDirectConnectGatewayCcnRoutesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DirectConnectGatewayId",$param) and $param["DirectConnectGatewayId"] !== null) {
-            $this->DirectConnectGatewayId = $param["DirectConnectGatewayId"];
+        if (array_key_exists('DirectConnectGatewayId',$param) and $param['DirectConnectGatewayId'] !== null) {
+            $this->DirectConnectGatewayId = $param['DirectConnectGatewayId'];
         }
 
-        if (array_key_exists("Routes",$param) and $param["Routes"] !== null) {
+        if (array_key_exists('Routes',$param) and $param['Routes'] !== null) {
             $this->Routes = [];
-            foreach ($param["Routes"] as $key => $value){
+            foreach ($param['Routes'] as $key => $value){
                 $obj = new DirectConnectGatewayCcnRoute();
                 $obj->deserialize($value);
                 array_push($this->Routes, $obj);

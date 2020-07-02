@@ -142,28 +142,28 @@ class PackageFreeQuotaInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ResourceType",$param) and $param["ResourceType"] !== null) {
-            $this->ResourceType = $param["ResourceType"];
+        if (array_key_exists('ResourceType',$param) and $param['ResourceType'] !== null) {
+            $this->ResourceType = $param['ResourceType'];
         }
 
-        if (array_key_exists("ResourceMetric",$param) and $param["ResourceMetric"] !== null) {
-            $this->ResourceMetric = $param["ResourceMetric"];
+        if (array_key_exists('ResourceMetric',$param) and $param['ResourceMetric'] !== null) {
+            $this->ResourceMetric = $param['ResourceMetric'];
         }
 
-        if (array_key_exists("FreeQuota",$param) and $param["FreeQuota"] !== null) {
-            $this->FreeQuota = $param["FreeQuota"];
+        if (array_key_exists('FreeQuota',$param) and $param['FreeQuota'] !== null) {
+            $this->FreeQuota = $param['FreeQuota'];
         }
 
-        if (array_key_exists("MetricUnit",$param) and $param["MetricUnit"] !== null) {
-            $this->MetricUnit = $param["MetricUnit"];
+        if (array_key_exists('MetricUnit',$param) and $param['MetricUnit'] !== null) {
+            $this->MetricUnit = $param['MetricUnit'];
         }
 
-        if (array_key_exists("DeductType",$param) and $param["DeductType"] !== null) {
-            $this->DeductType = $param["DeductType"];
+        if (array_key_exists('DeductType',$param) and $param['DeductType'] !== null) {
+            $this->DeductType = $param['DeductType'];
         }
 
-        if (array_key_exists("FreeQuotaType",$param) and $param["FreeQuotaType"] !== null) {
-            $this->FreeQuotaType = $param["FreeQuotaType"];
+        if (array_key_exists('FreeQuotaType',$param) and $param['FreeQuotaType'] !== null) {
+            $this->FreeQuotaType = $param['FreeQuotaType'];
         }
     }
 }

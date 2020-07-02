@@ -62,21 +62,21 @@ class DescribeTargetGroupsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("TargetGroupSet",$param) and $param["TargetGroupSet"] !== null) {
+        if (array_key_exists('TargetGroupSet',$param) and $param['TargetGroupSet'] !== null) {
             $this->TargetGroupSet = [];
-            foreach ($param["TargetGroupSet"] as $key => $value){
+            foreach ($param['TargetGroupSet'] as $key => $value){
                 $obj = new TargetGroupInfo();
                 $obj->deserialize($value);
                 array_push($this->TargetGroupSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

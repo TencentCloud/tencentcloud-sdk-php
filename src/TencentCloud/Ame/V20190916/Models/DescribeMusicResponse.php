@@ -58,13 +58,13 @@ class DescribeMusicResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Music",$param) and $param["Music"] !== null) {
+        if (array_key_exists('Music',$param) and $param['Music'] !== null) {
             $this->Music = new Music();
-            $this->Music->deserialize($param["Music"]);
+            $this->Music->deserialize($param['Music']);
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

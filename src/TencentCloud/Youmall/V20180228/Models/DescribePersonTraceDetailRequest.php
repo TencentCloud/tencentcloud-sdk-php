@@ -62,16 +62,16 @@ class DescribePersonTraceDetailRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MallId",$param) and $param["MallId"] !== null) {
-            $this->MallId = $param["MallId"];
+        if (array_key_exists('MallId',$param) and $param['MallId'] !== null) {
+            $this->MallId = $param['MallId'];
         }
 
-        if (array_key_exists("PersonId",$param) and $param["PersonId"] !== null) {
-            $this->PersonId = $param["PersonId"];
+        if (array_key_exists('PersonId',$param) and $param['PersonId'] !== null) {
+            $this->PersonId = $param['PersonId'];
         }
 
-        if (array_key_exists("TraceId",$param) and $param["TraceId"] !== null) {
-            $this->TraceId = $param["TraceId"];
+        if (array_key_exists('TraceId',$param) and $param['TraceId'] !== null) {
+            $this->TraceId = $param['TraceId'];
         }
     }
 }

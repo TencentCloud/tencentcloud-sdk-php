@@ -54,13 +54,13 @@ class CreateLoRaGatewayResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Gateway",$param) and $param["Gateway"] !== null) {
+        if (array_key_exists('Gateway',$param) and $param['Gateway'] !== null) {
             $this->Gateway = new LoRaGatewayItem();
-            $this->Gateway->deserialize($param["Gateway"]);
+            $this->Gateway->deserialize($param['Gateway']);
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

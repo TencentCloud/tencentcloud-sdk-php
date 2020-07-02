@@ -82,24 +82,24 @@ class CcnRegionBandwidthLimit extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Region",$param) and $param["Region"] !== null) {
-            $this->Region = $param["Region"];
+        if (array_key_exists('Region',$param) and $param['Region'] !== null) {
+            $this->Region = $param['Region'];
         }
 
-        if (array_key_exists("BandwidthLimit",$param) and $param["BandwidthLimit"] !== null) {
-            $this->BandwidthLimit = $param["BandwidthLimit"];
+        if (array_key_exists('BandwidthLimit',$param) and $param['BandwidthLimit'] !== null) {
+            $this->BandwidthLimit = $param['BandwidthLimit'];
         }
 
-        if (array_key_exists("IsBm",$param) and $param["IsBm"] !== null) {
-            $this->IsBm = $param["IsBm"];
+        if (array_key_exists('IsBm',$param) and $param['IsBm'] !== null) {
+            $this->IsBm = $param['IsBm'];
         }
 
-        if (array_key_exists("DstRegion",$param) and $param["DstRegion"] !== null) {
-            $this->DstRegion = $param["DstRegion"];
+        if (array_key_exists('DstRegion',$param) and $param['DstRegion'] !== null) {
+            $this->DstRegion = $param['DstRegion'];
         }
 
-        if (array_key_exists("DstIsBm",$param) and $param["DstIsBm"] !== null) {
-            $this->DstIsBm = $param["DstIsBm"];
+        if (array_key_exists('DstIsBm',$param) and $param['DstIsBm'] !== null) {
+            $this->DstIsBm = $param['DstIsBm'];
         }
     }
 }

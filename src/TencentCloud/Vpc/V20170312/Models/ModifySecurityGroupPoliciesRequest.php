@@ -62,17 +62,17 @@ class ModifySecurityGroupPoliciesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SecurityGroupId",$param) and $param["SecurityGroupId"] !== null) {
-            $this->SecurityGroupId = $param["SecurityGroupId"];
+        if (array_key_exists('SecurityGroupId',$param) and $param['SecurityGroupId'] !== null) {
+            $this->SecurityGroupId = $param['SecurityGroupId'];
         }
 
-        if (array_key_exists("SecurityGroupPolicySet",$param) and $param["SecurityGroupPolicySet"] !== null) {
+        if (array_key_exists('SecurityGroupPolicySet',$param) and $param['SecurityGroupPolicySet'] !== null) {
             $this->SecurityGroupPolicySet = new SecurityGroupPolicySet();
-            $this->SecurityGroupPolicySet->deserialize($param["SecurityGroupPolicySet"]);
+            $this->SecurityGroupPolicySet->deserialize($param['SecurityGroupPolicySet']);
         }
 
-        if (array_key_exists("SortPolicys",$param) and $param["SortPolicys"] !== null) {
-            $this->SortPolicys = $param["SortPolicys"];
+        if (array_key_exists('SortPolicys',$param) and $param['SortPolicys'] !== null) {
+            $this->SortPolicys = $param['SortPolicys'];
         }
     }
 }

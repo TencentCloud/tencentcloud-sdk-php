@@ -58,12 +58,12 @@ class IpFreqLimit extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Switch",$param) and $param["Switch"] !== null) {
-            $this->Switch = $param["Switch"];
+        if (array_key_exists('Switch',$param) and $param['Switch'] !== null) {
+            $this->Switch = $param['Switch'];
         }
 
-        if (array_key_exists("Qps",$param) and $param["Qps"] !== null) {
-            $this->Qps = $param["Qps"];
+        if (array_key_exists('Qps',$param) and $param['Qps'] !== null) {
+            $this->Qps = $param['Qps'];
         }
     }
 }

@@ -46,9 +46,9 @@ class UnbindEipAclsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("EipIdAclIdList",$param) and $param["EipIdAclIdList"] !== null) {
+        if (array_key_exists('EipIdAclIdList',$param) and $param['EipIdAclIdList'] !== null) {
             $this->EipIdAclIdList = [];
-            foreach ($param["EipIdAclIdList"] as $key => $value){
+            foreach ($param['EipIdAclIdList'] as $key => $value){
                 $obj = new EipAclMap();
                 $obj->deserialize($value);
                 array_push($this->EipIdAclIdList, $obj);

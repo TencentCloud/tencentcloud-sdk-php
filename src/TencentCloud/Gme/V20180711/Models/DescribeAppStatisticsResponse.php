@@ -46,9 +46,9 @@ class DescribeAppStatisticsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AppStatistics",$param) and $param["AppStatistics"] !== null) {
+        if (array_key_exists('AppStatistics',$param) and $param['AppStatistics'] !== null) {
             $this->AppStatistics = [];
-            foreach ($param["AppStatistics"] as $key => $value){
+            foreach ($param['AppStatistics'] as $key => $value){
                 $obj = new AppStatisticsItem();
                 $obj->deserialize($value);
                 array_push($this->AppStatistics, $obj);

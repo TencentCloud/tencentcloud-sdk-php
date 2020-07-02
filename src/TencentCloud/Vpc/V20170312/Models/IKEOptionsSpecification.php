@@ -134,52 +134,52 @@ class IKEOptionsSpecification extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PropoEncryAlgorithm",$param) and $param["PropoEncryAlgorithm"] !== null) {
-            $this->PropoEncryAlgorithm = $param["PropoEncryAlgorithm"];
+        if (array_key_exists('PropoEncryAlgorithm',$param) and $param['PropoEncryAlgorithm'] !== null) {
+            $this->PropoEncryAlgorithm = $param['PropoEncryAlgorithm'];
         }
 
-        if (array_key_exists("PropoAuthenAlgorithm",$param) and $param["PropoAuthenAlgorithm"] !== null) {
-            $this->PropoAuthenAlgorithm = $param["PropoAuthenAlgorithm"];
+        if (array_key_exists('PropoAuthenAlgorithm',$param) and $param['PropoAuthenAlgorithm'] !== null) {
+            $this->PropoAuthenAlgorithm = $param['PropoAuthenAlgorithm'];
         }
 
-        if (array_key_exists("ExchangeMode",$param) and $param["ExchangeMode"] !== null) {
-            $this->ExchangeMode = $param["ExchangeMode"];
+        if (array_key_exists('ExchangeMode',$param) and $param['ExchangeMode'] !== null) {
+            $this->ExchangeMode = $param['ExchangeMode'];
         }
 
-        if (array_key_exists("LocalIdentity",$param) and $param["LocalIdentity"] !== null) {
-            $this->LocalIdentity = $param["LocalIdentity"];
+        if (array_key_exists('LocalIdentity',$param) and $param['LocalIdentity'] !== null) {
+            $this->LocalIdentity = $param['LocalIdentity'];
         }
 
-        if (array_key_exists("RemoteIdentity",$param) and $param["RemoteIdentity"] !== null) {
-            $this->RemoteIdentity = $param["RemoteIdentity"];
+        if (array_key_exists('RemoteIdentity',$param) and $param['RemoteIdentity'] !== null) {
+            $this->RemoteIdentity = $param['RemoteIdentity'];
         }
 
-        if (array_key_exists("LocalAddress",$param) and $param["LocalAddress"] !== null) {
-            $this->LocalAddress = $param["LocalAddress"];
+        if (array_key_exists('LocalAddress',$param) and $param['LocalAddress'] !== null) {
+            $this->LocalAddress = $param['LocalAddress'];
         }
 
-        if (array_key_exists("RemoteAddress",$param) and $param["RemoteAddress"] !== null) {
-            $this->RemoteAddress = $param["RemoteAddress"];
+        if (array_key_exists('RemoteAddress',$param) and $param['RemoteAddress'] !== null) {
+            $this->RemoteAddress = $param['RemoteAddress'];
         }
 
-        if (array_key_exists("LocalFqdnName",$param) and $param["LocalFqdnName"] !== null) {
-            $this->LocalFqdnName = $param["LocalFqdnName"];
+        if (array_key_exists('LocalFqdnName',$param) and $param['LocalFqdnName'] !== null) {
+            $this->LocalFqdnName = $param['LocalFqdnName'];
         }
 
-        if (array_key_exists("RemoteFqdnName",$param) and $param["RemoteFqdnName"] !== null) {
-            $this->RemoteFqdnName = $param["RemoteFqdnName"];
+        if (array_key_exists('RemoteFqdnName',$param) and $param['RemoteFqdnName'] !== null) {
+            $this->RemoteFqdnName = $param['RemoteFqdnName'];
         }
 
-        if (array_key_exists("DhGroupName",$param) and $param["DhGroupName"] !== null) {
-            $this->DhGroupName = $param["DhGroupName"];
+        if (array_key_exists('DhGroupName',$param) and $param['DhGroupName'] !== null) {
+            $this->DhGroupName = $param['DhGroupName'];
         }
 
-        if (array_key_exists("IKESaLifetimeSeconds",$param) and $param["IKESaLifetimeSeconds"] !== null) {
-            $this->IKESaLifetimeSeconds = $param["IKESaLifetimeSeconds"];
+        if (array_key_exists('IKESaLifetimeSeconds',$param) and $param['IKESaLifetimeSeconds'] !== null) {
+            $this->IKESaLifetimeSeconds = $param['IKESaLifetimeSeconds'];
         }
 
-        if (array_key_exists("IKEVersion",$param) and $param["IKEVersion"] !== null) {
-            $this->IKEVersion = $param["IKEVersion"];
+        if (array_key_exists('IKEVersion',$param) and $param['IKEVersion'] !== null) {
+            $this->IKEVersion = $param['IKEVersion'];
         }
     }
 }

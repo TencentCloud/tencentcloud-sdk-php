@@ -54,12 +54,12 @@ class DeleteLiveDomainRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DomainName",$param) and $param["DomainName"] !== null) {
-            $this->DomainName = $param["DomainName"];
+        if (array_key_exists('DomainName',$param) and $param['DomainName'] !== null) {
+            $this->DomainName = $param['DomainName'];
         }
 
-        if (array_key_exists("DomainType",$param) and $param["DomainType"] !== null) {
-            $this->DomainType = $param["DomainType"];
+        if (array_key_exists('DomainType',$param) and $param['DomainType'] !== null) {
+            $this->DomainType = $param['DomainType'];
         }
     }
 }

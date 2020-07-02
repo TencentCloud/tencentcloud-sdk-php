@@ -54,12 +54,12 @@ class DeleteVocabRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("VocabLibName",$param) and $param["VocabLibName"] !== null) {
-            $this->VocabLibName = $param["VocabLibName"];
+        if (array_key_exists('VocabLibName',$param) and $param['VocabLibName'] !== null) {
+            $this->VocabLibName = $param['VocabLibName'];
         }
 
-        if (array_key_exists("VocabList",$param) and $param["VocabList"] !== null) {
-            $this->VocabList = $param["VocabList"];
+        if (array_key_exists('VocabList',$param) and $param['VocabList'] !== null) {
+            $this->VocabList = $param['VocabList'];
         }
     }
 }

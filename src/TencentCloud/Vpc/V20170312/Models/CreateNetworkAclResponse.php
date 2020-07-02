@@ -54,13 +54,13 @@ class CreateNetworkAclResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("NetworkAcl",$param) and $param["NetworkAcl"] !== null) {
+        if (array_key_exists('NetworkAcl',$param) and $param['NetworkAcl'] !== null) {
             $this->NetworkAcl = new NetworkAcl();
-            $this->NetworkAcl->deserialize($param["NetworkAcl"]);
+            $this->NetworkAcl->deserialize($param['NetworkAcl']);
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

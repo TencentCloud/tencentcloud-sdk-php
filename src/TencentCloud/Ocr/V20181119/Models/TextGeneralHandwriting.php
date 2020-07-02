@@ -78,25 +78,25 @@ class TextGeneralHandwriting extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DetectedText",$param) and $param["DetectedText"] !== null) {
-            $this->DetectedText = $param["DetectedText"];
+        if (array_key_exists('DetectedText',$param) and $param['DetectedText'] !== null) {
+            $this->DetectedText = $param['DetectedText'];
         }
 
-        if (array_key_exists("Confidence",$param) and $param["Confidence"] !== null) {
-            $this->Confidence = $param["Confidence"];
+        if (array_key_exists('Confidence',$param) and $param['Confidence'] !== null) {
+            $this->Confidence = $param['Confidence'];
         }
 
-        if (array_key_exists("Polygon",$param) and $param["Polygon"] !== null) {
+        if (array_key_exists('Polygon',$param) and $param['Polygon'] !== null) {
             $this->Polygon = [];
-            foreach ($param["Polygon"] as $key => $value){
+            foreach ($param['Polygon'] as $key => $value){
                 $obj = new Coord();
                 $obj->deserialize($value);
                 array_push($this->Polygon, $obj);
             }
         }
 
-        if (array_key_exists("AdvancedInfo",$param) and $param["AdvancedInfo"] !== null) {
-            $this->AdvancedInfo = $param["AdvancedInfo"];
+        if (array_key_exists('AdvancedInfo',$param) and $param['AdvancedInfo'] !== null) {
+            $this->AdvancedInfo = $param['AdvancedInfo'];
         }
     }
 }

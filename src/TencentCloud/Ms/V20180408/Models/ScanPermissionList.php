@@ -46,9 +46,9 @@ class ScanPermissionList extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PermissionList",$param) and $param["PermissionList"] !== null) {
+        if (array_key_exists('PermissionList',$param) and $param['PermissionList'] !== null) {
             $this->PermissionList = [];
-            foreach ($param["PermissionList"] as $key => $value){
+            foreach ($param['PermissionList'] as $key => $value){
                 $obj = new ScanPermissionInfo();
                 $obj->deserialize($value);
                 array_push($this->PermissionList, $obj);

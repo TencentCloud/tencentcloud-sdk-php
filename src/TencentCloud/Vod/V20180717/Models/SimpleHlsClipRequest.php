@@ -70,20 +70,20 @@ class SimpleHlsClipRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Url",$param) and $param["Url"] !== null) {
-            $this->Url = $param["Url"];
+        if (array_key_exists('Url',$param) and $param['Url'] !== null) {
+            $this->Url = $param['Url'];
         }
 
-        if (array_key_exists("StartTimeOffset",$param) and $param["StartTimeOffset"] !== null) {
-            $this->StartTimeOffset = $param["StartTimeOffset"];
+        if (array_key_exists('StartTimeOffset',$param) and $param['StartTimeOffset'] !== null) {
+            $this->StartTimeOffset = $param['StartTimeOffset'];
         }
 
-        if (array_key_exists("EndTimeOffset",$param) and $param["EndTimeOffset"] !== null) {
-            $this->EndTimeOffset = $param["EndTimeOffset"];
+        if (array_key_exists('EndTimeOffset',$param) and $param['EndTimeOffset'] !== null) {
+            $this->EndTimeOffset = $param['EndTimeOffset'];
         }
 
-        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
-            $this->SubAppId = $param["SubAppId"];
+        if (array_key_exists('SubAppId',$param) and $param['SubAppId'] !== null) {
+            $this->SubAppId = $param['SubAppId'];
         }
     }
 }

@@ -58,13 +58,13 @@ class FavorResp extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("RepoInfo",$param) and $param["RepoInfo"] !== null) {
+        if (array_key_exists('RepoInfo',$param) and $param['RepoInfo'] !== null) {
             $this->RepoInfo = [];
-            foreach ($param["RepoInfo"] as $key => $value){
+            foreach ($param['RepoInfo'] as $key => $value){
                 $obj = new Favors();
                 $obj->deserialize($value);
                 array_push($this->RepoInfo, $obj);

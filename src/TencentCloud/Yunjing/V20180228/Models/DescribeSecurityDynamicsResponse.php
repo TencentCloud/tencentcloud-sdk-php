@@ -62,21 +62,21 @@ class DescribeSecurityDynamicsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SecurityDynamics",$param) and $param["SecurityDynamics"] !== null) {
+        if (array_key_exists('SecurityDynamics',$param) and $param['SecurityDynamics'] !== null) {
             $this->SecurityDynamics = [];
-            foreach ($param["SecurityDynamics"] as $key => $value){
+            foreach ($param['SecurityDynamics'] as $key => $value){
                 $obj = new SecurityDynamic();
                 $obj->deserialize($value);
                 array_push($this->SecurityDynamics, $obj);
             }
         }
 
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

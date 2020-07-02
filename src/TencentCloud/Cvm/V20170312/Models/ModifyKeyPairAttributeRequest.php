@@ -62,16 +62,16 @@ class ModifyKeyPairAttributeRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("KeyId",$param) and $param["KeyId"] !== null) {
-            $this->KeyId = $param["KeyId"];
+        if (array_key_exists('KeyId',$param) and $param['KeyId'] !== null) {
+            $this->KeyId = $param['KeyId'];
         }
 
-        if (array_key_exists("KeyName",$param) and $param["KeyName"] !== null) {
-            $this->KeyName = $param["KeyName"];
+        if (array_key_exists('KeyName',$param) and $param['KeyName'] !== null) {
+            $this->KeyName = $param['KeyName'];
         }
 
-        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
-            $this->Description = $param["Description"];
+        if (array_key_exists('Description',$param) and $param['Description'] !== null) {
+            $this->Description = $param['Description'];
         }
     }
 }

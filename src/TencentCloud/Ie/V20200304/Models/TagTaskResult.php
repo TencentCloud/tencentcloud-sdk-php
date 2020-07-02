@@ -82,21 +82,21 @@ class TagTaskResult extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("ErrCode",$param) and $param["ErrCode"] !== null) {
-            $this->ErrCode = $param["ErrCode"];
+        if (array_key_exists('ErrCode',$param) and $param['ErrCode'] !== null) {
+            $this->ErrCode = $param['ErrCode'];
         }
 
-        if (array_key_exists("ErrMsg",$param) and $param["ErrMsg"] !== null) {
-            $this->ErrMsg = $param["ErrMsg"];
+        if (array_key_exists('ErrMsg',$param) and $param['ErrMsg'] !== null) {
+            $this->ErrMsg = $param['ErrMsg'];
         }
 
-        if (array_key_exists("ItemSet",$param) and $param["ItemSet"] !== null) {
+        if (array_key_exists('ItemSet',$param) and $param['ItemSet'] !== null) {
             $this->ItemSet = [];
-            foreach ($param["ItemSet"] as $key => $value){
+            foreach ($param['ItemSet'] as $key => $value){
                 $obj = new TagTaskResultItem();
                 $obj->deserialize($value);
                 array_push($this->ItemSet, $obj);

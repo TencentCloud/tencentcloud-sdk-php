@@ -54,12 +54,12 @@ class L4RuleSource extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Source",$param) and $param["Source"] !== null) {
-            $this->Source = $param["Source"];
+        if (array_key_exists('Source',$param) and $param['Source'] !== null) {
+            $this->Source = $param['Source'];
         }
 
-        if (array_key_exists("Weight",$param) and $param["Weight"] !== null) {
-            $this->Weight = $param["Weight"];
+        if (array_key_exists('Weight',$param) and $param['Weight'] !== null) {
+            $this->Weight = $param['Weight'];
         }
     }
 }

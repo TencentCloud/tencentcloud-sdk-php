@@ -54,13 +54,13 @@ class AdaptiveDynamicStreamingTaskInput extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Definition",$param) and $param["Definition"] !== null) {
-            $this->Definition = $param["Definition"];
+        if (array_key_exists('Definition',$param) and $param['Definition'] !== null) {
+            $this->Definition = $param['Definition'];
         }
 
-        if (array_key_exists("WatermarkSet",$param) and $param["WatermarkSet"] !== null) {
+        if (array_key_exists('WatermarkSet',$param) and $param['WatermarkSet'] !== null) {
             $this->WatermarkSet = [];
-            foreach ($param["WatermarkSet"] as $key => $value){
+            foreach ($param['WatermarkSet'] as $key => $value){
                 $obj = new WatermarkInput();
                 $obj->deserialize($value);
                 array_push($this->WatermarkSet, $obj);

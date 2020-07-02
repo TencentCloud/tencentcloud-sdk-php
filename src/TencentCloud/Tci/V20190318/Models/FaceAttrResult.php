@@ -54,12 +54,12 @@ class FaceAttrResult extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Age",$param) and $param["Age"] !== null) {
-            $this->Age = $param["Age"];
+        if (array_key_exists('Age',$param) and $param['Age'] !== null) {
+            $this->Age = $param['Age'];
         }
 
-        if (array_key_exists("Sex",$param) and $param["Sex"] !== null) {
-            $this->Sex = $param["Sex"];
+        if (array_key_exists('Sex',$param) and $param['Sex'] !== null) {
+            $this->Sex = $param['Sex'];
         }
     }
 }

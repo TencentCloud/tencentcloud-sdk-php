@@ -54,13 +54,13 @@ class AcceptAttachCcnInstancesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CcnId",$param) and $param["CcnId"] !== null) {
-            $this->CcnId = $param["CcnId"];
+        if (array_key_exists('CcnId',$param) and $param['CcnId'] !== null) {
+            $this->CcnId = $param['CcnId'];
         }
 
-        if (array_key_exists("Instances",$param) and $param["Instances"] !== null) {
+        if (array_key_exists('Instances',$param) and $param['Instances'] !== null) {
             $this->Instances = [];
-            foreach ($param["Instances"] as $key => $value){
+            foreach ($param['Instances'] as $key => $value){
                 $obj = new CcnInstance();
                 $obj->deserialize($value);
                 array_push($this->Instances, $obj);

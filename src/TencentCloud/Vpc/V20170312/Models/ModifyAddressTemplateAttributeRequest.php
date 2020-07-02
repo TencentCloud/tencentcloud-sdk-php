@@ -62,16 +62,16 @@ class ModifyAddressTemplateAttributeRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AddressTemplateId",$param) and $param["AddressTemplateId"] !== null) {
-            $this->AddressTemplateId = $param["AddressTemplateId"];
+        if (array_key_exists('AddressTemplateId',$param) and $param['AddressTemplateId'] !== null) {
+            $this->AddressTemplateId = $param['AddressTemplateId'];
         }
 
-        if (array_key_exists("AddressTemplateName",$param) and $param["AddressTemplateName"] !== null) {
-            $this->AddressTemplateName = $param["AddressTemplateName"];
+        if (array_key_exists('AddressTemplateName',$param) and $param['AddressTemplateName'] !== null) {
+            $this->AddressTemplateName = $param['AddressTemplateName'];
         }
 
-        if (array_key_exists("Addresses",$param) and $param["Addresses"] !== null) {
-            $this->Addresses = $param["Addresses"];
+        if (array_key_exists('Addresses',$param) and $param['Addresses'] !== null) {
+            $this->Addresses = $param['Addresses'];
         }
     }
 }

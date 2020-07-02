@@ -98,24 +98,24 @@ class FairPlayPemDigestInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FairPlayPemId",$param) and $param["FairPlayPemId"] !== null) {
-            $this->FairPlayPemId = $param["FairPlayPemId"];
+        if (array_key_exists('FairPlayPemId',$param) and $param['FairPlayPemId'] !== null) {
+            $this->FairPlayPemId = $param['FairPlayPemId'];
         }
 
-        if (array_key_exists("Priority",$param) and $param["Priority"] !== null) {
-            $this->Priority = $param["Priority"];
+        if (array_key_exists('Priority',$param) and $param['Priority'] !== null) {
+            $this->Priority = $param['Priority'];
         }
 
-        if (array_key_exists("Md5Pem",$param) and $param["Md5Pem"] !== null) {
-            $this->Md5Pem = $param["Md5Pem"];
+        if (array_key_exists('Md5Pem',$param) and $param['Md5Pem'] !== null) {
+            $this->Md5Pem = $param['Md5Pem'];
         }
 
-        if (array_key_exists("Md5Ask",$param) and $param["Md5Ask"] !== null) {
-            $this->Md5Ask = $param["Md5Ask"];
+        if (array_key_exists('Md5Ask',$param) and $param['Md5Ask'] !== null) {
+            $this->Md5Ask = $param['Md5Ask'];
         }
 
-        if (array_key_exists("Md5PemDecryptKey",$param) and $param["Md5PemDecryptKey"] !== null) {
-            $this->Md5PemDecryptKey = $param["Md5PemDecryptKey"];
+        if (array_key_exists('Md5PemDecryptKey',$param) and $param['Md5PemDecryptKey'] !== null) {
+            $this->Md5PemDecryptKey = $param['Md5PemDecryptKey'];
         }
     }
 }

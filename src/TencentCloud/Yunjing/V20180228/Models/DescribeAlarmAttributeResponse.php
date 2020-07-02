@@ -110,24 +110,24 @@ class DescribeAlarmAttributeResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Offline",$param) and $param["Offline"] !== null) {
-            $this->Offline = $param["Offline"];
+        if (array_key_exists('Offline',$param) and $param['Offline'] !== null) {
+            $this->Offline = $param['Offline'];
         }
 
-        if (array_key_exists("Malware",$param) and $param["Malware"] !== null) {
-            $this->Malware = $param["Malware"];
+        if (array_key_exists('Malware',$param) and $param['Malware'] !== null) {
+            $this->Malware = $param['Malware'];
         }
 
-        if (array_key_exists("NonlocalLogin",$param) and $param["NonlocalLogin"] !== null) {
-            $this->NonlocalLogin = $param["NonlocalLogin"];
+        if (array_key_exists('NonlocalLogin',$param) and $param['NonlocalLogin'] !== null) {
+            $this->NonlocalLogin = $param['NonlocalLogin'];
         }
 
-        if (array_key_exists("CrackSuccess",$param) and $param["CrackSuccess"] !== null) {
-            $this->CrackSuccess = $param["CrackSuccess"];
+        if (array_key_exists('CrackSuccess',$param) and $param['CrackSuccess'] !== null) {
+            $this->CrackSuccess = $param['CrackSuccess'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

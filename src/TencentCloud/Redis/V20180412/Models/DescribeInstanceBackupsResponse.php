@@ -62,21 +62,21 @@ class DescribeInstanceBackupsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("BackupSet",$param) and $param["BackupSet"] !== null) {
+        if (array_key_exists('BackupSet',$param) and $param['BackupSet'] !== null) {
             $this->BackupSet = [];
-            foreach ($param["BackupSet"] as $key => $value){
+            foreach ($param['BackupSet'] as $key => $value){
                 $obj = new RedisBackupSet();
                 $obj->deserialize($value);
                 array_push($this->BackupSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

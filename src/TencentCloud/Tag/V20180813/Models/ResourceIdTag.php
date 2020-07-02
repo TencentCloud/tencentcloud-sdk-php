@@ -62,13 +62,13 @@ class ResourceIdTag extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ResourceId",$param) and $param["ResourceId"] !== null) {
-            $this->ResourceId = $param["ResourceId"];
+        if (array_key_exists('ResourceId',$param) and $param['ResourceId'] !== null) {
+            $this->ResourceId = $param['ResourceId'];
         }
 
-        if (array_key_exists("TagKeyValues",$param) and $param["TagKeyValues"] !== null) {
+        if (array_key_exists('TagKeyValues',$param) and $param['TagKeyValues'] !== null) {
             $this->TagKeyValues = [];
-            foreach ($param["TagKeyValues"] as $key => $value){
+            foreach ($param['TagKeyValues'] as $key => $value){
                 $obj = new Tag();
                 $obj->deserialize($value);
                 array_push($this->TagKeyValues, $obj);

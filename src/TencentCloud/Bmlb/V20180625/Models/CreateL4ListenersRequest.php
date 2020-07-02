@@ -54,13 +54,13 @@ class CreateL4ListenersRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LoadBalancerId",$param) and $param["LoadBalancerId"] !== null) {
-            $this->LoadBalancerId = $param["LoadBalancerId"];
+        if (array_key_exists('LoadBalancerId',$param) and $param['LoadBalancerId'] !== null) {
+            $this->LoadBalancerId = $param['LoadBalancerId'];
         }
 
-        if (array_key_exists("ListenerSet",$param) and $param["ListenerSet"] !== null) {
+        if (array_key_exists('ListenerSet',$param) and $param['ListenerSet'] !== null) {
             $this->ListenerSet = [];
-            foreach ($param["ListenerSet"] as $key => $value){
+            foreach ($param['ListenerSet'] as $key => $value){
                 $obj = new CreateL4Listener();
                 $obj->deserialize($value);
                 array_push($this->ListenerSet, $obj);

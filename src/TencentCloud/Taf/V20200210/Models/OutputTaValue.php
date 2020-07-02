@@ -62,12 +62,12 @@ class OutputTaValue extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("IsCheck",$param) and $param["IsCheck"] !== null) {
-            $this->IsCheck = $param["IsCheck"];
+        if (array_key_exists('IsCheck',$param) and $param['IsCheck'] !== null) {
+            $this->IsCheck = $param['IsCheck'];
         }
 
-        if (array_key_exists("IsMatch",$param) and $param["IsMatch"] !== null) {
-            $this->IsMatch = $param["IsMatch"];
+        if (array_key_exists('IsMatch',$param) and $param['IsMatch'] !== null) {
+            $this->IsMatch = $param['IsMatch'];
         }
     }
 }

@@ -126,48 +126,48 @@ class CreateL7Rule extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
-            $this->Domain = $param["Domain"];
+        if (array_key_exists('Domain',$param) and $param['Domain'] !== null) {
+            $this->Domain = $param['Domain'];
         }
 
-        if (array_key_exists("Url",$param) and $param["Url"] !== null) {
-            $this->Url = $param["Url"];
+        if (array_key_exists('Url',$param) and $param['Url'] !== null) {
+            $this->Url = $param['Url'];
         }
 
-        if (array_key_exists("SessionExpire",$param) and $param["SessionExpire"] !== null) {
-            $this->SessionExpire = $param["SessionExpire"];
+        if (array_key_exists('SessionExpire',$param) and $param['SessionExpire'] !== null) {
+            $this->SessionExpire = $param['SessionExpire'];
         }
 
-        if (array_key_exists("HealthSwitch",$param) and $param["HealthSwitch"] !== null) {
-            $this->HealthSwitch = $param["HealthSwitch"];
+        if (array_key_exists('HealthSwitch',$param) and $param['HealthSwitch'] !== null) {
+            $this->HealthSwitch = $param['HealthSwitch'];
         }
 
-        if (array_key_exists("IntervalTime",$param) and $param["IntervalTime"] !== null) {
-            $this->IntervalTime = $param["IntervalTime"];
+        if (array_key_exists('IntervalTime',$param) and $param['IntervalTime'] !== null) {
+            $this->IntervalTime = $param['IntervalTime'];
         }
 
-        if (array_key_exists("HealthNum",$param) and $param["HealthNum"] !== null) {
-            $this->HealthNum = $param["HealthNum"];
+        if (array_key_exists('HealthNum',$param) and $param['HealthNum'] !== null) {
+            $this->HealthNum = $param['HealthNum'];
         }
 
-        if (array_key_exists("UnhealthNum",$param) and $param["UnhealthNum"] !== null) {
-            $this->UnhealthNum = $param["UnhealthNum"];
+        if (array_key_exists('UnhealthNum',$param) and $param['UnhealthNum'] !== null) {
+            $this->UnhealthNum = $param['UnhealthNum'];
         }
 
-        if (array_key_exists("HttpCodes",$param) and $param["HttpCodes"] !== null) {
-            $this->HttpCodes = $param["HttpCodes"];
+        if (array_key_exists('HttpCodes',$param) and $param['HttpCodes'] !== null) {
+            $this->HttpCodes = $param['HttpCodes'];
         }
 
-        if (array_key_exists("HttpCheckPath",$param) and $param["HttpCheckPath"] !== null) {
-            $this->HttpCheckPath = $param["HttpCheckPath"];
+        if (array_key_exists('HttpCheckPath',$param) and $param['HttpCheckPath'] !== null) {
+            $this->HttpCheckPath = $param['HttpCheckPath'];
         }
 
-        if (array_key_exists("HttpCheckDomain",$param) and $param["HttpCheckDomain"] !== null) {
-            $this->HttpCheckDomain = $param["HttpCheckDomain"];
+        if (array_key_exists('HttpCheckDomain',$param) and $param['HttpCheckDomain'] !== null) {
+            $this->HttpCheckDomain = $param['HttpCheckDomain'];
         }
 
-        if (array_key_exists("BalanceMode",$param) and $param["BalanceMode"] !== null) {
-            $this->BalanceMode = $param["BalanceMode"];
+        if (array_key_exists('BalanceMode',$param) and $param['BalanceMode'] !== null) {
+            $this->BalanceMode = $param['BalanceMode'];
         }
     }
 }

@@ -70,20 +70,20 @@ class RegisterCallbackRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CompanyId",$param) and $param["CompanyId"] !== null) {
-            $this->CompanyId = $param["CompanyId"];
+        if (array_key_exists('CompanyId',$param) and $param['CompanyId'] !== null) {
+            $this->CompanyId = $param['CompanyId'];
         }
 
-        if (array_key_exists("BackUrl",$param) and $param["BackUrl"] !== null) {
-            $this->BackUrl = $param["BackUrl"];
+        if (array_key_exists('BackUrl',$param) and $param['BackUrl'] !== null) {
+            $this->BackUrl = $param['BackUrl'];
         }
 
-        if (array_key_exists("Time",$param) and $param["Time"] !== null) {
-            $this->Time = $param["Time"];
+        if (array_key_exists('Time',$param) and $param['Time'] !== null) {
+            $this->Time = $param['Time'];
         }
 
-        if (array_key_exists("NeedFacePic",$param) and $param["NeedFacePic"] !== null) {
-            $this->NeedFacePic = $param["NeedFacePic"];
+        if (array_key_exists('NeedFacePic',$param) and $param['NeedFacePic'] !== null) {
+            $this->NeedFacePic = $param['NeedFacePic'];
         }
     }
 }

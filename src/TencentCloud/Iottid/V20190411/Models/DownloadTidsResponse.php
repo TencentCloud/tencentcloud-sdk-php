@@ -58,17 +58,17 @@ class DownloadTidsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TidSet",$param) and $param["TidSet"] !== null) {
+        if (array_key_exists('TidSet',$param) and $param['TidSet'] !== null) {
             $this->TidSet = [];
-            foreach ($param["TidSet"] as $key => $value){
+            foreach ($param['TidSet'] as $key => $value){
                 $obj = new TidKeysInfo();
                 $obj->deserialize($value);
                 array_push($this->TidSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

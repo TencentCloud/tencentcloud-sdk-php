@@ -62,21 +62,21 @@ class DescribeCCSelfDefinePolicyResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Total",$param) and $param["Total"] !== null) {
-            $this->Total = $param["Total"];
+        if (array_key_exists('Total',$param) and $param['Total'] !== null) {
+            $this->Total = $param['Total'];
         }
 
-        if (array_key_exists("Policys",$param) and $param["Policys"] !== null) {
+        if (array_key_exists('Policys',$param) and $param['Policys'] !== null) {
             $this->Policys = [];
-            foreach ($param["Policys"] as $key => $value){
+            foreach ($param['Policys'] as $key => $value){
                 $obj = new CCPolicy();
                 $obj->deserialize($value);
                 array_push($this->Policys, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

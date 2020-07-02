@@ -70,20 +70,20 @@ class NatSubnetInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
-            $this->SubnetId = $param["SubnetId"];
+        if (array_key_exists('SubnetId',$param) and $param['SubnetId'] !== null) {
+            $this->SubnetId = $param['SubnetId'];
         }
 
-        if (array_key_exists("SubnetNatType",$param) and $param["SubnetNatType"] !== null) {
-            $this->SubnetNatType = $param["SubnetNatType"];
+        if (array_key_exists('SubnetNatType',$param) and $param['SubnetNatType'] !== null) {
+            $this->SubnetNatType = $param['SubnetNatType'];
         }
 
-        if (array_key_exists("CidrBlock",$param) and $param["CidrBlock"] !== null) {
-            $this->CidrBlock = $param["CidrBlock"];
+        if (array_key_exists('CidrBlock',$param) and $param['CidrBlock'] !== null) {
+            $this->CidrBlock = $param['CidrBlock'];
         }
     }
 }

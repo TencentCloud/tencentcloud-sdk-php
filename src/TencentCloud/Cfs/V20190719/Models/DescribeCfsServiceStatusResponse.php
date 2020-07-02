@@ -54,12 +54,12 @@ class DescribeCfsServiceStatusResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CfsServiceStatus",$param) and $param["CfsServiceStatus"] !== null) {
-            $this->CfsServiceStatus = $param["CfsServiceStatus"];
+        if (array_key_exists('CfsServiceStatus',$param) and $param['CfsServiceStatus'] !== null) {
+            $this->CfsServiceStatus = $param['CfsServiceStatus'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

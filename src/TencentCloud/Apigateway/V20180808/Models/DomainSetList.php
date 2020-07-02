@@ -86,28 +86,28 @@ class DomainSetList extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DomainName",$param) and $param["DomainName"] !== null) {
-            $this->DomainName = $param["DomainName"];
+        if (array_key_exists('DomainName',$param) and $param['DomainName'] !== null) {
+            $this->DomainName = $param['DomainName'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("CertificateId",$param) and $param["CertificateId"] !== null) {
-            $this->CertificateId = $param["CertificateId"];
+        if (array_key_exists('CertificateId',$param) and $param['CertificateId'] !== null) {
+            $this->CertificateId = $param['CertificateId'];
         }
 
-        if (array_key_exists("IsDefaultMapping",$param) and $param["IsDefaultMapping"] !== null) {
-            $this->IsDefaultMapping = $param["IsDefaultMapping"];
+        if (array_key_exists('IsDefaultMapping',$param) and $param['IsDefaultMapping'] !== null) {
+            $this->IsDefaultMapping = $param['IsDefaultMapping'];
         }
 
-        if (array_key_exists("Protocol",$param) and $param["Protocol"] !== null) {
-            $this->Protocol = $param["Protocol"];
+        if (array_key_exists('Protocol',$param) and $param['Protocol'] !== null) {
+            $this->Protocol = $param['Protocol'];
         }
 
-        if (array_key_exists("NetType",$param) and $param["NetType"] !== null) {
-            $this->NetType = $param["NetType"];
+        if (array_key_exists('NetType',$param) and $param['NetType'] !== null) {
+            $this->NetType = $param['NetType'];
         }
     }
 }

@@ -70,16 +70,16 @@ class OutputSendTrafficSecuritySmsMsg extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Code",$param) and $param["Code"] !== null) {
-            $this->Code = $param["Code"];
+        if (array_key_exists('Code',$param) and $param['Code'] !== null) {
+            $this->Code = $param['Code'];
         }
 
-        if (array_key_exists("Message",$param) and $param["Message"] !== null) {
-            $this->Message = $param["Message"];
+        if (array_key_exists('Message',$param) and $param['Message'] !== null) {
+            $this->Message = $param['Message'];
         }
 
-        if (array_key_exists("Value",$param) and $param["Value"] !== null) {
-            $this->Value = $param["Value"];
+        if (array_key_exists('Value',$param) and $param['Value'] !== null) {
+            $this->Value = $param['Value'];
         }
     }
 }

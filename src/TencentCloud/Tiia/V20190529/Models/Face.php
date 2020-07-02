@@ -114,45 +114,45 @@ class Face extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("Labels",$param) and $param["Labels"] !== null) {
+        if (array_key_exists('Labels',$param) and $param['Labels'] !== null) {
             $this->Labels = [];
-            foreach ($param["Labels"] as $key => $value){
+            foreach ($param['Labels'] as $key => $value){
                 $obj = new Labels();
                 $obj->deserialize($value);
                 array_push($this->Labels, $obj);
             }
         }
 
-        if (array_key_exists("BasicInfo",$param) and $param["BasicInfo"] !== null) {
-            $this->BasicInfo = $param["BasicInfo"];
+        if (array_key_exists('BasicInfo',$param) and $param['BasicInfo'] !== null) {
+            $this->BasicInfo = $param['BasicInfo'];
         }
 
-        if (array_key_exists("Confidence",$param) and $param["Confidence"] !== null) {
-            $this->Confidence = $param["Confidence"];
+        if (array_key_exists('Confidence',$param) and $param['Confidence'] !== null) {
+            $this->Confidence = $param['Confidence'];
         }
 
-        if (array_key_exists("X",$param) and $param["X"] !== null) {
-            $this->X = $param["X"];
+        if (array_key_exists('X',$param) and $param['X'] !== null) {
+            $this->X = $param['X'];
         }
 
-        if (array_key_exists("Y",$param) and $param["Y"] !== null) {
-            $this->Y = $param["Y"];
+        if (array_key_exists('Y',$param) and $param['Y'] !== null) {
+            $this->Y = $param['Y'];
         }
 
-        if (array_key_exists("Width",$param) and $param["Width"] !== null) {
-            $this->Width = $param["Width"];
+        if (array_key_exists('Width',$param) and $param['Width'] !== null) {
+            $this->Width = $param['Width'];
         }
 
-        if (array_key_exists("Height",$param) and $param["Height"] !== null) {
-            $this->Height = $param["Height"];
+        if (array_key_exists('Height',$param) and $param['Height'] !== null) {
+            $this->Height = $param['Height'];
         }
 
-        if (array_key_exists("ID",$param) and $param["ID"] !== null) {
-            $this->ID = $param["ID"];
+        if (array_key_exists('ID',$param) and $param['ID'] !== null) {
+            $this->ID = $param['ID'];
         }
     }
 }

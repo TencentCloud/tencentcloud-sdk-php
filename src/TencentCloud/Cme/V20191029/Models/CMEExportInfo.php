@@ -78,25 +78,25 @@ class CMEExportInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Owner",$param) and $param["Owner"] !== null) {
+        if (array_key_exists('Owner',$param) and $param['Owner'] !== null) {
             $this->Owner = new Entity();
-            $this->Owner->deserialize($param["Owner"]);
+            $this->Owner->deserialize($param['Owner']);
         }
 
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
-            $this->Description = $param["Description"];
+        if (array_key_exists('Description',$param) and $param['Description'] !== null) {
+            $this->Description = $param['Description'];
         }
 
-        if (array_key_exists("ClassPath",$param) and $param["ClassPath"] !== null) {
-            $this->ClassPath = $param["ClassPath"];
+        if (array_key_exists('ClassPath',$param) and $param['ClassPath'] !== null) {
+            $this->ClassPath = $param['ClassPath'];
         }
 
-        if (array_key_exists("TagSet",$param) and $param["TagSet"] !== null) {
-            $this->TagSet = $param["TagSet"];
+        if (array_key_exists('TagSet',$param) and $param['TagSet'] !== null) {
+            $this->TagSet = $param['TagSet'];
         }
     }
 }

@@ -54,13 +54,13 @@ class DescribeLiveDomainResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DomainInfo",$param) and $param["DomainInfo"] !== null) {
+        if (array_key_exists('DomainInfo',$param) and $param['DomainInfo'] !== null) {
             $this->DomainInfo = new DomainInfo();
-            $this->DomainInfo->deserialize($param["DomainInfo"]);
+            $this->DomainInfo->deserialize($param['DomainInfo']);
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

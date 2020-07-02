@@ -62,21 +62,21 @@ class DescribeBackupsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("Backups",$param) and $param["Backups"] !== null) {
+        if (array_key_exists('Backups',$param) and $param['Backups'] !== null) {
             $this->Backups = [];
-            foreach ($param["Backups"] as $key => $value){
+            foreach ($param['Backups'] as $key => $value){
                 $obj = new Backup();
                 $obj->deserialize($value);
                 array_push($this->Backups, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

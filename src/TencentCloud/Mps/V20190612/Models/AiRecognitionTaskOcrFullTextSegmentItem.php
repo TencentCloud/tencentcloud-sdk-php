@@ -62,17 +62,17 @@ class AiRecognitionTaskOcrFullTextSegmentItem extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("StartTimeOffset",$param) and $param["StartTimeOffset"] !== null) {
-            $this->StartTimeOffset = $param["StartTimeOffset"];
+        if (array_key_exists('StartTimeOffset',$param) and $param['StartTimeOffset'] !== null) {
+            $this->StartTimeOffset = $param['StartTimeOffset'];
         }
 
-        if (array_key_exists("EndTimeOffset",$param) and $param["EndTimeOffset"] !== null) {
-            $this->EndTimeOffset = $param["EndTimeOffset"];
+        if (array_key_exists('EndTimeOffset',$param) and $param['EndTimeOffset'] !== null) {
+            $this->EndTimeOffset = $param['EndTimeOffset'];
         }
 
-        if (array_key_exists("TextSet",$param) and $param["TextSet"] !== null) {
+        if (array_key_exists('TextSet',$param) and $param['TextSet'] !== null) {
             $this->TextSet = [];
-            foreach ($param["TextSet"] as $key => $value){
+            foreach ($param['TextSet'] as $key => $value){
                 $obj = new AiRecognitionTaskOcrFullTextSegmentTextItem();
                 $obj->deserialize($value);
                 array_push($this->TextSet, $obj);

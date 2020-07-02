@@ -62,16 +62,16 @@ class PublishVersionRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FunctionName",$param) and $param["FunctionName"] !== null) {
-            $this->FunctionName = $param["FunctionName"];
+        if (array_key_exists('FunctionName',$param) and $param['FunctionName'] !== null) {
+            $this->FunctionName = $param['FunctionName'];
         }
 
-        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
-            $this->Description = $param["Description"];
+        if (array_key_exists('Description',$param) and $param['Description'] !== null) {
+            $this->Description = $param['Description'];
         }
 
-        if (array_key_exists("Namespace",$param) and $param["Namespace"] !== null) {
-            $this->Namespace = $param["Namespace"];
+        if (array_key_exists('Namespace',$param) and $param['Namespace'] !== null) {
+            $this->Namespace = $param['Namespace'];
         }
     }
 }

@@ -70,20 +70,20 @@ class LogInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LogName",$param) and $param["LogName"] !== null) {
-            $this->LogName = $param["LogName"];
+        if (array_key_exists('LogName',$param) and $param['LogName'] !== null) {
+            $this->LogName = $param['LogName'];
         }
 
-        if (array_key_exists("LogUrl",$param) and $param["LogUrl"] !== null) {
-            $this->LogUrl = $param["LogUrl"];
+        if (array_key_exists('LogUrl',$param) and $param['LogUrl'] !== null) {
+            $this->LogUrl = $param['LogUrl'];
         }
 
-        if (array_key_exists("LogTime",$param) and $param["LogTime"] !== null) {
-            $this->LogTime = $param["LogTime"];
+        if (array_key_exists('LogTime',$param) and $param['LogTime'] !== null) {
+            $this->LogTime = $param['LogTime'];
         }
 
-        if (array_key_exists("FileSize",$param) and $param["FileSize"] !== null) {
-            $this->FileSize = $param["FileSize"];
+        if (array_key_exists('FileSize',$param) and $param['FileSize'] !== null) {
+            $this->FileSize = $param['FileSize'];
         }
     }
 }

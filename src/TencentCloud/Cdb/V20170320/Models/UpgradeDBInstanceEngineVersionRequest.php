@@ -70,20 +70,20 @@ class UpgradeDBInstanceEngineVersionRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("EngineVersion",$param) and $param["EngineVersion"] !== null) {
-            $this->EngineVersion = $param["EngineVersion"];
+        if (array_key_exists('EngineVersion',$param) and $param['EngineVersion'] !== null) {
+            $this->EngineVersion = $param['EngineVersion'];
         }
 
-        if (array_key_exists("WaitSwitch",$param) and $param["WaitSwitch"] !== null) {
-            $this->WaitSwitch = $param["WaitSwitch"];
+        if (array_key_exists('WaitSwitch',$param) and $param['WaitSwitch'] !== null) {
+            $this->WaitSwitch = $param['WaitSwitch'];
         }
 
-        if (array_key_exists("UpgradeSubversion",$param) and $param["UpgradeSubversion"] !== null) {
-            $this->UpgradeSubversion = $param["UpgradeSubversion"];
+        if (array_key_exists('UpgradeSubversion',$param) and $param['UpgradeSubversion'] !== null) {
+            $this->UpgradeSubversion = $param['UpgradeSubversion'];
         }
     }
 }

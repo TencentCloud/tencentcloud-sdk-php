@@ -62,21 +62,21 @@ class DutyPaidProofOCRResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DutyPaidProofInfos",$param) and $param["DutyPaidProofInfos"] !== null) {
+        if (array_key_exists('DutyPaidProofInfos',$param) and $param['DutyPaidProofInfos'] !== null) {
             $this->DutyPaidProofInfos = [];
-            foreach ($param["DutyPaidProofInfos"] as $key => $value){
+            foreach ($param['DutyPaidProofInfos'] as $key => $value){
                 $obj = new DutyPaidProofInfo();
                 $obj->deserialize($value);
                 array_push($this->DutyPaidProofInfos, $obj);
             }
         }
 
-        if (array_key_exists("Angle",$param) and $param["Angle"] !== null) {
-            $this->Angle = $param["Angle"];
+        if (array_key_exists('Angle',$param) and $param['Angle'] !== null) {
+            $this->Angle = $param['Angle'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

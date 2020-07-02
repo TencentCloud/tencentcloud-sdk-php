@@ -54,12 +54,12 @@ class CosRegionInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CosRegion",$param) and $param["CosRegion"] !== null) {
-            $this->CosRegion = $param["CosRegion"];
+        if (array_key_exists('CosRegion',$param) and $param['CosRegion'] !== null) {
+            $this->CosRegion = $param['CosRegion'];
         }
 
-        if (array_key_exists("CosRegionName",$param) and $param["CosRegionName"] !== null) {
-            $this->CosRegionName = $param["CosRegionName"];
+        if (array_key_exists('CosRegionName',$param) and $param['CosRegionName'] !== null) {
+            $this->CosRegionName = $param['CosRegionName'];
         }
     }
 }

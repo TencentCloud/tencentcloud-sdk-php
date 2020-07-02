@@ -54,13 +54,13 @@ class CallbackStatusStatisticsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CallbackStatusStatistics",$param) and $param["CallbackStatusStatistics"] !== null) {
+        if (array_key_exists('CallbackStatusStatistics',$param) and $param['CallbackStatusStatistics'] !== null) {
             $this->CallbackStatusStatistics = new CallbackStatusStatistics();
-            $this->CallbackStatusStatistics->deserialize($param["CallbackStatusStatistics"]);
+            $this->CallbackStatusStatistics->deserialize($param['CallbackStatusStatistics']);
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

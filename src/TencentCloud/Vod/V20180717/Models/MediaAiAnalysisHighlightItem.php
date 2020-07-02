@@ -78,25 +78,25 @@ class MediaAiAnalysisHighlightItem extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("HighlightUrl",$param) and $param["HighlightUrl"] !== null) {
-            $this->HighlightUrl = $param["HighlightUrl"];
+        if (array_key_exists('HighlightUrl',$param) and $param['HighlightUrl'] !== null) {
+            $this->HighlightUrl = $param['HighlightUrl'];
         }
 
-        if (array_key_exists("CovImgUrl",$param) and $param["CovImgUrl"] !== null) {
-            $this->CovImgUrl = $param["CovImgUrl"];
+        if (array_key_exists('CovImgUrl',$param) and $param['CovImgUrl'] !== null) {
+            $this->CovImgUrl = $param['CovImgUrl'];
         }
 
-        if (array_key_exists("Confidence",$param) and $param["Confidence"] !== null) {
-            $this->Confidence = $param["Confidence"];
+        if (array_key_exists('Confidence',$param) and $param['Confidence'] !== null) {
+            $this->Confidence = $param['Confidence'];
         }
 
-        if (array_key_exists("Duration",$param) and $param["Duration"] !== null) {
-            $this->Duration = $param["Duration"];
+        if (array_key_exists('Duration',$param) and $param['Duration'] !== null) {
+            $this->Duration = $param['Duration'];
         }
 
-        if (array_key_exists("SegmentSet",$param) and $param["SegmentSet"] !== null) {
+        if (array_key_exists('SegmentSet',$param) and $param['SegmentSet'] !== null) {
             $this->SegmentSet = [];
-            foreach ($param["SegmentSet"] as $key => $value){
+            foreach ($param['SegmentSet'] as $key => $value){
                 $obj = new HighlightSegmentItem();
                 $obj->deserialize($value);
                 array_push($this->SegmentSet, $obj);

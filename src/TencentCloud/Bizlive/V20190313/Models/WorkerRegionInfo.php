@@ -54,12 +54,12 @@ class WorkerRegionInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Idle",$param) and $param["Idle"] !== null) {
-            $this->Idle = $param["Idle"];
+        if (array_key_exists('Idle',$param) and $param['Idle'] !== null) {
+            $this->Idle = $param['Idle'];
         }
 
-        if (array_key_exists("Region",$param) and $param["Region"] !== null) {
-            $this->Region = $param["Region"];
+        if (array_key_exists('Region',$param) and $param['Region'] !== null) {
+            $this->Region = $param['Region'];
         }
     }
 }

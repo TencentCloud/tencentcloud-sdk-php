@@ -58,17 +58,17 @@ class DescribeClientConnectionsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Clients",$param) and $param["Clients"] !== null) {
+        if (array_key_exists('Clients',$param) and $param['Clients'] !== null) {
             $this->Clients = [];
-            foreach ($param["Clients"] as $key => $value){
+            foreach ($param['Clients'] as $key => $value){
                 $obj = new ClientConnection();
                 $obj->deserialize($value);
                 array_push($this->Clients, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

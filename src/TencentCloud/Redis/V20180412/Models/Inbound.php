@@ -102,36 +102,36 @@ class Inbound extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Action",$param) and $param["Action"] !== null) {
-            $this->Action = $param["Action"];
+        if (array_key_exists('Action',$param) and $param['Action'] !== null) {
+            $this->Action = $param['Action'];
         }
 
-        if (array_key_exists("AddressModule",$param) and $param["AddressModule"] !== null) {
-            $this->AddressModule = $param["AddressModule"];
+        if (array_key_exists('AddressModule',$param) and $param['AddressModule'] !== null) {
+            $this->AddressModule = $param['AddressModule'];
         }
 
-        if (array_key_exists("CidrIp",$param) and $param["CidrIp"] !== null) {
-            $this->CidrIp = $param["CidrIp"];
+        if (array_key_exists('CidrIp',$param) and $param['CidrIp'] !== null) {
+            $this->CidrIp = $param['CidrIp'];
         }
 
-        if (array_key_exists("Desc",$param) and $param["Desc"] !== null) {
-            $this->Desc = $param["Desc"];
+        if (array_key_exists('Desc',$param) and $param['Desc'] !== null) {
+            $this->Desc = $param['Desc'];
         }
 
-        if (array_key_exists("IpProtocol",$param) and $param["IpProtocol"] !== null) {
-            $this->IpProtocol = $param["IpProtocol"];
+        if (array_key_exists('IpProtocol',$param) and $param['IpProtocol'] !== null) {
+            $this->IpProtocol = $param['IpProtocol'];
         }
 
-        if (array_key_exists("PortRange",$param) and $param["PortRange"] !== null) {
-            $this->PortRange = $param["PortRange"];
+        if (array_key_exists('PortRange',$param) and $param['PortRange'] !== null) {
+            $this->PortRange = $param['PortRange'];
         }
 
-        if (array_key_exists("ServiceModule",$param) and $param["ServiceModule"] !== null) {
-            $this->ServiceModule = $param["ServiceModule"];
+        if (array_key_exists('ServiceModule',$param) and $param['ServiceModule'] !== null) {
+            $this->ServiceModule = $param['ServiceModule'];
         }
 
-        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
-            $this->Id = $param["Id"];
+        if (array_key_exists('Id',$param) and $param['Id'] !== null) {
+            $this->Id = $param['Id'];
         }
     }
 }

@@ -146,41 +146,41 @@ class IPStrategy extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("StrategyId",$param) and $param["StrategyId"] !== null) {
-            $this->StrategyId = $param["StrategyId"];
+        if (array_key_exists('StrategyId',$param) and $param['StrategyId'] !== null) {
+            $this->StrategyId = $param['StrategyId'];
         }
 
-        if (array_key_exists("StrategyName",$param) and $param["StrategyName"] !== null) {
-            $this->StrategyName = $param["StrategyName"];
+        if (array_key_exists('StrategyName',$param) and $param['StrategyName'] !== null) {
+            $this->StrategyName = $param['StrategyName'];
         }
 
-        if (array_key_exists("StrategyType",$param) and $param["StrategyType"] !== null) {
-            $this->StrategyType = $param["StrategyType"];
+        if (array_key_exists('StrategyType',$param) and $param['StrategyType'] !== null) {
+            $this->StrategyType = $param['StrategyType'];
         }
 
-        if (array_key_exists("StrategyData",$param) and $param["StrategyData"] !== null) {
-            $this->StrategyData = $param["StrategyData"];
+        if (array_key_exists('StrategyData',$param) and $param['StrategyData'] !== null) {
+            $this->StrategyData = $param['StrategyData'];
         }
 
-        if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
-            $this->CreatedTime = $param["CreatedTime"];
+        if (array_key_exists('CreatedTime',$param) and $param['CreatedTime'] !== null) {
+            $this->CreatedTime = $param['CreatedTime'];
         }
 
-        if (array_key_exists("ModifiedTime",$param) and $param["ModifiedTime"] !== null) {
-            $this->ModifiedTime = $param["ModifiedTime"];
+        if (array_key_exists('ModifiedTime',$param) and $param['ModifiedTime'] !== null) {
+            $this->ModifiedTime = $param['ModifiedTime'];
         }
 
-        if (array_key_exists("ServiceId",$param) and $param["ServiceId"] !== null) {
-            $this->ServiceId = $param["ServiceId"];
+        if (array_key_exists('ServiceId',$param) and $param['ServiceId'] !== null) {
+            $this->ServiceId = $param['ServiceId'];
         }
 
-        if (array_key_exists("BindApiTotalCount",$param) and $param["BindApiTotalCount"] !== null) {
-            $this->BindApiTotalCount = $param["BindApiTotalCount"];
+        if (array_key_exists('BindApiTotalCount',$param) and $param['BindApiTotalCount'] !== null) {
+            $this->BindApiTotalCount = $param['BindApiTotalCount'];
         }
 
-        if (array_key_exists("BindApis",$param) and $param["BindApis"] !== null) {
+        if (array_key_exists('BindApis',$param) and $param['BindApis'] !== null) {
             $this->BindApis = [];
-            foreach ($param["BindApis"] as $key => $value){
+            foreach ($param['BindApis'] as $key => $value){
                 $obj = new DesApisStatus();
                 $obj->deserialize($value);
                 array_push($this->BindApis, $obj);

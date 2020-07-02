@@ -54,12 +54,12 @@ class DeleteClassRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ClassId",$param) and $param["ClassId"] !== null) {
-            $this->ClassId = $param["ClassId"];
+        if (array_key_exists('ClassId',$param) and $param['ClassId'] !== null) {
+            $this->ClassId = $param['ClassId'];
         }
 
-        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
-            $this->SubAppId = $param["SubAppId"];
+        if (array_key_exists('SubAppId',$param) and $param['SubAppId'] !== null) {
+            $this->SubAppId = $param['SubAppId'];
         }
     }
 }

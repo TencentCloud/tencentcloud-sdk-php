@@ -62,21 +62,21 @@ class DescribeShopInfoResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("ShopInfoSet",$param) and $param["ShopInfoSet"] !== null) {
+        if (array_key_exists('ShopInfoSet',$param) and $param['ShopInfoSet'] !== null) {
             $this->ShopInfoSet = [];
-            foreach ($param["ShopInfoSet"] as $key => $value){
+            foreach ($param['ShopInfoSet'] as $key => $value){
                 $obj = new ShopInfo();
                 $obj->deserialize($value);
                 array_push($this->ShopInfoSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

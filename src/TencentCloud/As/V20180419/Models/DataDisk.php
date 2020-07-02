@@ -74,16 +74,16 @@ class DataDisk extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DiskType",$param) and $param["DiskType"] !== null) {
-            $this->DiskType = $param["DiskType"];
+        if (array_key_exists('DiskType',$param) and $param['DiskType'] !== null) {
+            $this->DiskType = $param['DiskType'];
         }
 
-        if (array_key_exists("DiskSize",$param) and $param["DiskSize"] !== null) {
-            $this->DiskSize = $param["DiskSize"];
+        if (array_key_exists('DiskSize',$param) and $param['DiskSize'] !== null) {
+            $this->DiskSize = $param['DiskSize'];
         }
 
-        if (array_key_exists("SnapshotId",$param) and $param["SnapshotId"] !== null) {
-            $this->SnapshotId = $param["SnapshotId"];
+        if (array_key_exists('SnapshotId',$param) and $param['SnapshotId'] !== null) {
+            $this->SnapshotId = $param['SnapshotId'];
         }
     }
 }

@@ -58,13 +58,13 @@ class DescribeClusterAsGroupOptionResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ClusterAsGroupOption",$param) and $param["ClusterAsGroupOption"] !== null) {
+        if (array_key_exists('ClusterAsGroupOption',$param) and $param['ClusterAsGroupOption'] !== null) {
             $this->ClusterAsGroupOption = new ClusterAsGroupOption();
-            $this->ClusterAsGroupOption->deserialize($param["ClusterAsGroupOption"]);
+            $this->ClusterAsGroupOption->deserialize($param['ClusterAsGroupOption']);
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

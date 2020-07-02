@@ -62,21 +62,21 @@ class DescribeGatewayFlowQosResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("GatewayQosSet",$param) and $param["GatewayQosSet"] !== null) {
+        if (array_key_exists('GatewayQosSet',$param) and $param['GatewayQosSet'] !== null) {
             $this->GatewayQosSet = [];
-            foreach ($param["GatewayQosSet"] as $key => $value){
+            foreach ($param['GatewayQosSet'] as $key => $value){
                 $obj = new GatewayQos();
                 $obj->deserialize($value);
                 array_push($this->GatewayQosSet, $obj);
             }
         }
 
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

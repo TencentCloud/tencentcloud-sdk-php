@@ -46,9 +46,9 @@ class DescribeMediaMetaDataRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InputInfo",$param) and $param["InputInfo"] !== null) {
+        if (array_key_exists('InputInfo',$param) and $param['InputInfo'] !== null) {
             $this->InputInfo = new MediaInputInfo();
-            $this->InputInfo->deserialize($param["InputInfo"]);
+            $this->InputInfo->deserialize($param['InputInfo']);
         }
     }
 }

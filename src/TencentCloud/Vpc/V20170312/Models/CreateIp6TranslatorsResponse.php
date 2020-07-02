@@ -54,12 +54,12 @@ class CreateIp6TranslatorsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Ip6TranslatorSet",$param) and $param["Ip6TranslatorSet"] !== null) {
-            $this->Ip6TranslatorSet = $param["Ip6TranslatorSet"];
+        if (array_key_exists('Ip6TranslatorSet',$param) and $param['Ip6TranslatorSet'] !== null) {
+            $this->Ip6TranslatorSet = $param['Ip6TranslatorSet'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

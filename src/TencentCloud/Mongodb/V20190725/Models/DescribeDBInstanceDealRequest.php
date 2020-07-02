@@ -46,8 +46,8 @@ class DescribeDBInstanceDealRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DealId",$param) and $param["DealId"] !== null) {
-            $this->DealId = $param["DealId"];
+        if (array_key_exists('DealId',$param) and $param['DealId'] !== null) {
+            $this->DealId = $param['DealId'];
         }
     }
 }

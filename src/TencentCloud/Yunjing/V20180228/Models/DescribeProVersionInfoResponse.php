@@ -70,20 +70,20 @@ class DescribeProVersionInfoResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PostPayCost",$param) and $param["PostPayCost"] !== null) {
-            $this->PostPayCost = $param["PostPayCost"];
+        if (array_key_exists('PostPayCost',$param) and $param['PostPayCost'] !== null) {
+            $this->PostPayCost = $param['PostPayCost'];
         }
 
-        if (array_key_exists("IsAutoOpenProVersion",$param) and $param["IsAutoOpenProVersion"] !== null) {
-            $this->IsAutoOpenProVersion = $param["IsAutoOpenProVersion"];
+        if (array_key_exists('IsAutoOpenProVersion',$param) and $param['IsAutoOpenProVersion'] !== null) {
+            $this->IsAutoOpenProVersion = $param['IsAutoOpenProVersion'];
         }
 
-        if (array_key_exists("ProVersionNum",$param) and $param["ProVersionNum"] !== null) {
-            $this->ProVersionNum = $param["ProVersionNum"];
+        if (array_key_exists('ProVersionNum',$param) and $param['ProVersionNum'] !== null) {
+            $this->ProVersionNum = $param['ProVersionNum'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

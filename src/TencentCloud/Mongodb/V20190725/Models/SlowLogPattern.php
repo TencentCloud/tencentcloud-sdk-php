@@ -70,20 +70,20 @@ class SlowLogPattern extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Pattern",$param) and $param["Pattern"] !== null) {
-            $this->Pattern = $param["Pattern"];
+        if (array_key_exists('Pattern',$param) and $param['Pattern'] !== null) {
+            $this->Pattern = $param['Pattern'];
         }
 
-        if (array_key_exists("MaxTime",$param) and $param["MaxTime"] !== null) {
-            $this->MaxTime = $param["MaxTime"];
+        if (array_key_exists('MaxTime',$param) and $param['MaxTime'] !== null) {
+            $this->MaxTime = $param['MaxTime'];
         }
 
-        if (array_key_exists("AverageTime",$param) and $param["AverageTime"] !== null) {
-            $this->AverageTime = $param["AverageTime"];
+        if (array_key_exists('AverageTime',$param) and $param['AverageTime'] !== null) {
+            $this->AverageTime = $param['AverageTime'];
         }
 
-        if (array_key_exists("Total",$param) and $param["Total"] !== null) {
-            $this->Total = $param["Total"];
+        if (array_key_exists('Total',$param) and $param['Total'] !== null) {
+            $this->Total = $param['Total'];
         }
     }
 }

@@ -86,28 +86,28 @@ class ModifyDiskAttributesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DiskIds",$param) and $param["DiskIds"] !== null) {
-            $this->DiskIds = $param["DiskIds"];
+        if (array_key_exists('DiskIds',$param) and $param['DiskIds'] !== null) {
+            $this->DiskIds = $param['DiskIds'];
         }
 
-        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
-            $this->ProjectId = $param["ProjectId"];
+        if (array_key_exists('ProjectId',$param) and $param['ProjectId'] !== null) {
+            $this->ProjectId = $param['ProjectId'];
         }
 
-        if (array_key_exists("DiskName",$param) and $param["DiskName"] !== null) {
-            $this->DiskName = $param["DiskName"];
+        if (array_key_exists('DiskName',$param) and $param['DiskName'] !== null) {
+            $this->DiskName = $param['DiskName'];
         }
 
-        if (array_key_exists("Portable",$param) and $param["Portable"] !== null) {
-            $this->Portable = $param["Portable"];
+        if (array_key_exists('Portable',$param) and $param['Portable'] !== null) {
+            $this->Portable = $param['Portable'];
         }
 
-        if (array_key_exists("DeleteWithInstance",$param) and $param["DeleteWithInstance"] !== null) {
-            $this->DeleteWithInstance = $param["DeleteWithInstance"];
+        if (array_key_exists('DeleteWithInstance',$param) and $param['DeleteWithInstance'] !== null) {
+            $this->DeleteWithInstance = $param['DeleteWithInstance'];
         }
 
-        if (array_key_exists("DiskType",$param) and $param["DiskType"] !== null) {
-            $this->DiskType = $param["DiskType"];
+        if (array_key_exists('DiskType',$param) and $param['DiskType'] !== null) {
+            $this->DiskType = $param['DiskType'];
         }
     }
 }

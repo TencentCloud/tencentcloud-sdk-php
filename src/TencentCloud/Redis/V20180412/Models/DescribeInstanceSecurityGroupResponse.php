@@ -54,17 +54,17 @@ class DescribeInstanceSecurityGroupResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceSecurityGroupsDetail",$param) and $param["InstanceSecurityGroupsDetail"] !== null) {
+        if (array_key_exists('InstanceSecurityGroupsDetail',$param) and $param['InstanceSecurityGroupsDetail'] !== null) {
             $this->InstanceSecurityGroupsDetail = [];
-            foreach ($param["InstanceSecurityGroupsDetail"] as $key => $value){
+            foreach ($param['InstanceSecurityGroupsDetail'] as $key => $value){
                 $obj = new InstanceSecurityGroupDetail();
                 $obj->deserialize($value);
                 array_push($this->InstanceSecurityGroupsDetail, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

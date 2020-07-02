@@ -90,24 +90,24 @@ class CreateTraceResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TraceId",$param) and $param["TraceId"] !== null) {
-            $this->TraceId = $param["TraceId"];
+        if (array_key_exists('TraceId',$param) and $param['TraceId'] !== null) {
+            $this->TraceId = $param['TraceId'];
         }
 
-        if (array_key_exists("BodyModelVersion",$param) and $param["BodyModelVersion"] !== null) {
-            $this->BodyModelVersion = $param["BodyModelVersion"];
+        if (array_key_exists('BodyModelVersion',$param) and $param['BodyModelVersion'] !== null) {
+            $this->BodyModelVersion = $param['BodyModelVersion'];
         }
 
-        if (array_key_exists("InputRetCode",$param) and $param["InputRetCode"] !== null) {
-            $this->InputRetCode = $param["InputRetCode"];
+        if (array_key_exists('InputRetCode',$param) and $param['InputRetCode'] !== null) {
+            $this->InputRetCode = $param['InputRetCode'];
         }
 
-        if (array_key_exists("InputRetCodeDetails",$param) and $param["InputRetCodeDetails"] !== null) {
-            $this->InputRetCodeDetails = $param["InputRetCodeDetails"];
+        if (array_key_exists('InputRetCodeDetails',$param) and $param['InputRetCodeDetails'] !== null) {
+            $this->InputRetCodeDetails = $param['InputRetCodeDetails'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

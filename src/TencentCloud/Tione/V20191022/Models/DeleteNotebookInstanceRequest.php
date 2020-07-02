@@ -46,8 +46,8 @@ class DeleteNotebookInstanceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("NotebookInstanceName",$param) and $param["NotebookInstanceName"] !== null) {
-            $this->NotebookInstanceName = $param["NotebookInstanceName"];
+        if (array_key_exists('NotebookInstanceName',$param) and $param['NotebookInstanceName'] !== null) {
+            $this->NotebookInstanceName = $param['NotebookInstanceName'];
         }
     }
 }

@@ -46,8 +46,8 @@ class DealGoodsPriceElem extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RealTotalCost",$param) and $param["RealTotalCost"] !== null) {
-            $this->RealTotalCost = $param["RealTotalCost"];
+        if (array_key_exists('RealTotalCost',$param) and $param['RealTotalCost'] !== null) {
+            $this->RealTotalCost = $param['RealTotalCost'];
         }
     }
 }

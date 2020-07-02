@@ -90,28 +90,28 @@ class DescribeDevicesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ProductId",$param) and $param["ProductId"] !== null) {
-            $this->ProductId = $param["ProductId"];
+        if (array_key_exists('ProductId',$param) and $param['ProductId'] !== null) {
+            $this->ProductId = $param['ProductId'];
         }
 
-        if (array_key_exists("ReturnModel",$param) and $param["ReturnModel"] !== null) {
-            $this->ReturnModel = $param["ReturnModel"];
+        if (array_key_exists('ReturnModel',$param) and $param['ReturnModel'] !== null) {
+            $this->ReturnModel = $param['ReturnModel'];
         }
 
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
+        if (array_key_exists('Limit',$param) and $param['Limit'] !== null) {
+            $this->Limit = $param['Limit'];
         }
 
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
+        if (array_key_exists('Offset',$param) and $param['Offset'] !== null) {
+            $this->Offset = $param['Offset'];
         }
 
-        if (array_key_exists("OtaVersion",$param) and $param["OtaVersion"] !== null) {
-            $this->OtaVersion = $param["OtaVersion"];
+        if (array_key_exists('OtaVersion',$param) and $param['OtaVersion'] !== null) {
+            $this->OtaVersion = $param['OtaVersion'];
         }
 
-        if (array_key_exists("DeviceName",$param) and $param["DeviceName"] !== null) {
-            $this->DeviceName = $param["DeviceName"];
+        if (array_key_exists('DeviceName',$param) and $param['DeviceName'] !== null) {
+            $this->DeviceName = $param['DeviceName'];
         }
     }
 }

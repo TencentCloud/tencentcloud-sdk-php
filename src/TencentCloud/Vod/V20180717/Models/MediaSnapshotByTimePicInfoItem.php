@@ -62,16 +62,16 @@ class MediaSnapshotByTimePicInfoItem extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TimeOffset",$param) and $param["TimeOffset"] !== null) {
-            $this->TimeOffset = $param["TimeOffset"];
+        if (array_key_exists('TimeOffset',$param) and $param['TimeOffset'] !== null) {
+            $this->TimeOffset = $param['TimeOffset'];
         }
 
-        if (array_key_exists("Url",$param) and $param["Url"] !== null) {
-            $this->Url = $param["Url"];
+        if (array_key_exists('Url',$param) and $param['Url'] !== null) {
+            $this->Url = $param['Url'];
         }
 
-        if (array_key_exists("WaterMarkDefinition",$param) and $param["WaterMarkDefinition"] !== null) {
-            $this->WaterMarkDefinition = $param["WaterMarkDefinition"];
+        if (array_key_exists('WaterMarkDefinition',$param) and $param['WaterMarkDefinition'] !== null) {
+            $this->WaterMarkDefinition = $param['WaterMarkDefinition'];
         }
     }
 }

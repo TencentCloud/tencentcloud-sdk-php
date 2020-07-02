@@ -54,12 +54,12 @@ class OpenDBExtranetAccessRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DBInstanceId",$param) and $param["DBInstanceId"] !== null) {
-            $this->DBInstanceId = $param["DBInstanceId"];
+        if (array_key_exists('DBInstanceId',$param) and $param['DBInstanceId'] !== null) {
+            $this->DBInstanceId = $param['DBInstanceId'];
         }
 
-        if (array_key_exists("IsIpv6",$param) and $param["IsIpv6"] !== null) {
-            $this->IsIpv6 = $param["IsIpv6"];
+        if (array_key_exists('IsIpv6',$param) and $param['IsIpv6'] !== null) {
+            $this->IsIpv6 = $param['IsIpv6'];
         }
     }
 }

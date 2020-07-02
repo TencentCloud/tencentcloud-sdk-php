@@ -78,25 +78,25 @@ class TaskTemplateView extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TaskTemplateId",$param) and $param["TaskTemplateId"] !== null) {
-            $this->TaskTemplateId = $param["TaskTemplateId"];
+        if (array_key_exists('TaskTemplateId',$param) and $param['TaskTemplateId'] !== null) {
+            $this->TaskTemplateId = $param['TaskTemplateId'];
         }
 
-        if (array_key_exists("TaskTemplateName",$param) and $param["TaskTemplateName"] !== null) {
-            $this->TaskTemplateName = $param["TaskTemplateName"];
+        if (array_key_exists('TaskTemplateName',$param) and $param['TaskTemplateName'] !== null) {
+            $this->TaskTemplateName = $param['TaskTemplateName'];
         }
 
-        if (array_key_exists("TaskTemplateDescription",$param) and $param["TaskTemplateDescription"] !== null) {
-            $this->TaskTemplateDescription = $param["TaskTemplateDescription"];
+        if (array_key_exists('TaskTemplateDescription',$param) and $param['TaskTemplateDescription'] !== null) {
+            $this->TaskTemplateDescription = $param['TaskTemplateDescription'];
         }
 
-        if (array_key_exists("TaskTemplateInfo",$param) and $param["TaskTemplateInfo"] !== null) {
+        if (array_key_exists('TaskTemplateInfo',$param) and $param['TaskTemplateInfo'] !== null) {
             $this->TaskTemplateInfo = new Task();
-            $this->TaskTemplateInfo->deserialize($param["TaskTemplateInfo"]);
+            $this->TaskTemplateInfo->deserialize($param['TaskTemplateInfo']);
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
     }
 }

@@ -158,40 +158,40 @@ class IdCardOCRVerificationResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
-            $this->Result = $param["Result"];
+        if (array_key_exists('Result',$param) and $param['Result'] !== null) {
+            $this->Result = $param['Result'];
         }
 
-        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
-            $this->Description = $param["Description"];
+        if (array_key_exists('Description',$param) and $param['Description'] !== null) {
+            $this->Description = $param['Description'];
         }
 
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("IdCard",$param) and $param["IdCard"] !== null) {
-            $this->IdCard = $param["IdCard"];
+        if (array_key_exists('IdCard',$param) and $param['IdCard'] !== null) {
+            $this->IdCard = $param['IdCard'];
         }
 
-        if (array_key_exists("Sex",$param) and $param["Sex"] !== null) {
-            $this->Sex = $param["Sex"];
+        if (array_key_exists('Sex',$param) and $param['Sex'] !== null) {
+            $this->Sex = $param['Sex'];
         }
 
-        if (array_key_exists("Nation",$param) and $param["Nation"] !== null) {
-            $this->Nation = $param["Nation"];
+        if (array_key_exists('Nation',$param) and $param['Nation'] !== null) {
+            $this->Nation = $param['Nation'];
         }
 
-        if (array_key_exists("Birth",$param) and $param["Birth"] !== null) {
-            $this->Birth = $param["Birth"];
+        if (array_key_exists('Birth',$param) and $param['Birth'] !== null) {
+            $this->Birth = $param['Birth'];
         }
 
-        if (array_key_exists("Address",$param) and $param["Address"] !== null) {
-            $this->Address = $param["Address"];
+        if (array_key_exists('Address',$param) and $param['Address'] !== null) {
+            $this->Address = $param['Address'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

@@ -46,8 +46,8 @@ class EnableTopicRuleRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RuleName",$param) and $param["RuleName"] !== null) {
-            $this->RuleName = $param["RuleName"];
+        if (array_key_exists('RuleName',$param) and $param['RuleName'] !== null) {
+            $this->RuleName = $param['RuleName'];
         }
     }
 }

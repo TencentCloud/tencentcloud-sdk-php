@@ -46,8 +46,8 @@ class CreateAppUsrRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CunionId",$param) and $param["CunionId"] !== null) {
-            $this->CunionId = $param["CunionId"];
+        if (array_key_exists('CunionId',$param) and $param['CunionId'] !== null) {
+            $this->CunionId = $param['CunionId'];
         }
     }
 }

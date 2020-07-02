@@ -70,21 +70,21 @@ class ModifyInstancesVpcAttributeRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceIds",$param) and $param["InstanceIds"] !== null) {
-            $this->InstanceIds = $param["InstanceIds"];
+        if (array_key_exists('InstanceIds',$param) and $param['InstanceIds'] !== null) {
+            $this->InstanceIds = $param['InstanceIds'];
         }
 
-        if (array_key_exists("VirtualPrivateCloud",$param) and $param["VirtualPrivateCloud"] !== null) {
+        if (array_key_exists('VirtualPrivateCloud',$param) and $param['VirtualPrivateCloud'] !== null) {
             $this->VirtualPrivateCloud = new VirtualPrivateCloud();
-            $this->VirtualPrivateCloud->deserialize($param["VirtualPrivateCloud"]);
+            $this->VirtualPrivateCloud->deserialize($param['VirtualPrivateCloud']);
         }
 
-        if (array_key_exists("ForceStop",$param) and $param["ForceStop"] !== null) {
-            $this->ForceStop = $param["ForceStop"];
+        if (array_key_exists('ForceStop',$param) and $param['ForceStop'] !== null) {
+            $this->ForceStop = $param['ForceStop'];
         }
 
-        if (array_key_exists("ReserveHostName",$param) and $param["ReserveHostName"] !== null) {
-            $this->ReserveHostName = $param["ReserveHostName"];
+        if (array_key_exists('ReserveHostName',$param) and $param['ReserveHostName'] !== null) {
+            $this->ReserveHostName = $param['ReserveHostName'];
         }
     }
 }

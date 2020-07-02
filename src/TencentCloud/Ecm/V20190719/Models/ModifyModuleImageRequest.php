@@ -54,12 +54,12 @@ class ModifyModuleImageRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DefaultImageId",$param) and $param["DefaultImageId"] !== null) {
-            $this->DefaultImageId = $param["DefaultImageId"];
+        if (array_key_exists('DefaultImageId',$param) and $param['DefaultImageId'] !== null) {
+            $this->DefaultImageId = $param['DefaultImageId'];
         }
 
-        if (array_key_exists("ModuleId",$param) and $param["ModuleId"] !== null) {
-            $this->ModuleId = $param["ModuleId"];
+        if (array_key_exists('ModuleId',$param) and $param['ModuleId'] !== null) {
+            $this->ModuleId = $param['ModuleId'];
         }
     }
 }

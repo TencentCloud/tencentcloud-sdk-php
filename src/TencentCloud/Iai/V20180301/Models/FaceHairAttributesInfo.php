@@ -74,16 +74,16 @@ class FaceHairAttributesInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Length",$param) and $param["Length"] !== null) {
-            $this->Length = $param["Length"];
+        if (array_key_exists('Length',$param) and $param['Length'] !== null) {
+            $this->Length = $param['Length'];
         }
 
-        if (array_key_exists("Bang",$param) and $param["Bang"] !== null) {
-            $this->Bang = $param["Bang"];
+        if (array_key_exists('Bang',$param) and $param['Bang'] !== null) {
+            $this->Bang = $param['Bang'];
         }
 
-        if (array_key_exists("Color",$param) and $param["Color"] !== null) {
-            $this->Color = $param["Color"];
+        if (array_key_exists('Color',$param) and $param['Color'] !== null) {
+            $this->Color = $param['Color'];
         }
     }
 }

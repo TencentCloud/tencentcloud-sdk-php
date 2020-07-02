@@ -174,69 +174,69 @@ class RoGroup extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RoGroupMode",$param) and $param["RoGroupMode"] !== null) {
-            $this->RoGroupMode = $param["RoGroupMode"];
+        if (array_key_exists('RoGroupMode',$param) and $param['RoGroupMode'] !== null) {
+            $this->RoGroupMode = $param['RoGroupMode'];
         }
 
-        if (array_key_exists("RoGroupId",$param) and $param["RoGroupId"] !== null) {
-            $this->RoGroupId = $param["RoGroupId"];
+        if (array_key_exists('RoGroupId',$param) and $param['RoGroupId'] !== null) {
+            $this->RoGroupId = $param['RoGroupId'];
         }
 
-        if (array_key_exists("RoGroupName",$param) and $param["RoGroupName"] !== null) {
-            $this->RoGroupName = $param["RoGroupName"];
+        if (array_key_exists('RoGroupName',$param) and $param['RoGroupName'] !== null) {
+            $this->RoGroupName = $param['RoGroupName'];
         }
 
-        if (array_key_exists("RoOfflineDelay",$param) and $param["RoOfflineDelay"] !== null) {
-            $this->RoOfflineDelay = $param["RoOfflineDelay"];
+        if (array_key_exists('RoOfflineDelay',$param) and $param['RoOfflineDelay'] !== null) {
+            $this->RoOfflineDelay = $param['RoOfflineDelay'];
         }
 
-        if (array_key_exists("RoMaxDelayTime",$param) and $param["RoMaxDelayTime"] !== null) {
-            $this->RoMaxDelayTime = $param["RoMaxDelayTime"];
+        if (array_key_exists('RoMaxDelayTime',$param) and $param['RoMaxDelayTime'] !== null) {
+            $this->RoMaxDelayTime = $param['RoMaxDelayTime'];
         }
 
-        if (array_key_exists("MinRoInGroup",$param) and $param["MinRoInGroup"] !== null) {
-            $this->MinRoInGroup = $param["MinRoInGroup"];
+        if (array_key_exists('MinRoInGroup',$param) and $param['MinRoInGroup'] !== null) {
+            $this->MinRoInGroup = $param['MinRoInGroup'];
         }
 
-        if (array_key_exists("WeightMode",$param) and $param["WeightMode"] !== null) {
-            $this->WeightMode = $param["WeightMode"];
+        if (array_key_exists('WeightMode',$param) and $param['WeightMode'] !== null) {
+            $this->WeightMode = $param['WeightMode'];
         }
 
-        if (array_key_exists("Weight",$param) and $param["Weight"] !== null) {
-            $this->Weight = $param["Weight"];
+        if (array_key_exists('Weight',$param) and $param['Weight'] !== null) {
+            $this->Weight = $param['Weight'];
         }
 
-        if (array_key_exists("RoInstances",$param) and $param["RoInstances"] !== null) {
+        if (array_key_exists('RoInstances',$param) and $param['RoInstances'] !== null) {
             $this->RoInstances = [];
-            foreach ($param["RoInstances"] as $key => $value){
+            foreach ($param['RoInstances'] as $key => $value){
                 $obj = new RoInstanceInfo();
                 $obj->deserialize($value);
                 array_push($this->RoInstances, $obj);
             }
         }
 
-        if (array_key_exists("Vip",$param) and $param["Vip"] !== null) {
-            $this->Vip = $param["Vip"];
+        if (array_key_exists('Vip',$param) and $param['Vip'] !== null) {
+            $this->Vip = $param['Vip'];
         }
 
-        if (array_key_exists("Vport",$param) and $param["Vport"] !== null) {
-            $this->Vport = $param["Vport"];
+        if (array_key_exists('Vport',$param) and $param['Vport'] !== null) {
+            $this->Vport = $param['Vport'];
         }
 
-        if (array_key_exists("UniqVpcId",$param) and $param["UniqVpcId"] !== null) {
-            $this->UniqVpcId = $param["UniqVpcId"];
+        if (array_key_exists('UniqVpcId',$param) and $param['UniqVpcId'] !== null) {
+            $this->UniqVpcId = $param['UniqVpcId'];
         }
 
-        if (array_key_exists("UniqSubnetId",$param) and $param["UniqSubnetId"] !== null) {
-            $this->UniqSubnetId = $param["UniqSubnetId"];
+        if (array_key_exists('UniqSubnetId',$param) and $param['UniqSubnetId'] !== null) {
+            $this->UniqSubnetId = $param['UniqSubnetId'];
         }
 
-        if (array_key_exists("RoGroupRegion",$param) and $param["RoGroupRegion"] !== null) {
-            $this->RoGroupRegion = $param["RoGroupRegion"];
+        if (array_key_exists('RoGroupRegion',$param) and $param['RoGroupRegion'] !== null) {
+            $this->RoGroupRegion = $param['RoGroupRegion'];
         }
 
-        if (array_key_exists("RoGroupZone",$param) and $param["RoGroupZone"] !== null) {
-            $this->RoGroupZone = $param["RoGroupZone"];
+        if (array_key_exists('RoGroupZone',$param) and $param['RoGroupZone'] !== null) {
+            $this->RoGroupZone = $param['RoGroupZone'];
         }
     }
 }

@@ -94,28 +94,28 @@ class DescribeComponentInfoResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
-            $this->Id = $param["Id"];
+        if (array_key_exists('Id',$param) and $param['Id'] !== null) {
+            $this->Id = $param['Id'];
         }
 
-        if (array_key_exists("ComponentName",$param) and $param["ComponentName"] !== null) {
-            $this->ComponentName = $param["ComponentName"];
+        if (array_key_exists('ComponentName',$param) and $param['ComponentName'] !== null) {
+            $this->ComponentName = $param['ComponentName'];
         }
 
-        if (array_key_exists("ComponentType",$param) and $param["ComponentType"] !== null) {
-            $this->ComponentType = $param["ComponentType"];
+        if (array_key_exists('ComponentType',$param) and $param['ComponentType'] !== null) {
+            $this->ComponentType = $param['ComponentType'];
         }
 
-        if (array_key_exists("Homepage",$param) and $param["Homepage"] !== null) {
-            $this->Homepage = $param["Homepage"];
+        if (array_key_exists('Homepage',$param) and $param['Homepage'] !== null) {
+            $this->Homepage = $param['Homepage'];
         }
 
-        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
-            $this->Description = $param["Description"];
+        if (array_key_exists('Description',$param) and $param['Description'] !== null) {
+            $this->Description = $param['Description'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

@@ -62,21 +62,21 @@ class DescribeComponentStatisticsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("ComponentStatistics",$param) and $param["ComponentStatistics"] !== null) {
+        if (array_key_exists('ComponentStatistics',$param) and $param['ComponentStatistics'] !== null) {
             $this->ComponentStatistics = [];
-            foreach ($param["ComponentStatistics"] as $key => $value){
+            foreach ($param['ComponentStatistics'] as $key => $value){
                 $obj = new ComponentStatistics();
                 $obj->deserialize($value);
                 array_push($this->ComponentStatistics, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

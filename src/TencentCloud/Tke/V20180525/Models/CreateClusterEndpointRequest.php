@@ -62,16 +62,16 @@ class CreateClusterEndpointRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
-            $this->ClusterId = $param["ClusterId"];
+        if (array_key_exists('ClusterId',$param) and $param['ClusterId'] !== null) {
+            $this->ClusterId = $param['ClusterId'];
         }
 
-        if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
-            $this->SubnetId = $param["SubnetId"];
+        if (array_key_exists('SubnetId',$param) and $param['SubnetId'] !== null) {
+            $this->SubnetId = $param['SubnetId'];
         }
 
-        if (array_key_exists("IsExtranet",$param) and $param["IsExtranet"] !== null) {
-            $this->IsExtranet = $param["IsExtranet"];
+        if (array_key_exists('IsExtranet',$param) and $param['IsExtranet'] !== null) {
+            $this->IsExtranet = $param['IsExtranet'];
         }
     }
 }

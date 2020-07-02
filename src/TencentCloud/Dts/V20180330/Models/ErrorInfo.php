@@ -54,12 +54,12 @@ class ErrorInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ErrorLog",$param) and $param["ErrorLog"] !== null) {
-            $this->ErrorLog = $param["ErrorLog"];
+        if (array_key_exists('ErrorLog',$param) and $param['ErrorLog'] !== null) {
+            $this->ErrorLog = $param['ErrorLog'];
         }
 
-        if (array_key_exists("HelpDoc",$param) and $param["HelpDoc"] !== null) {
-            $this->HelpDoc = $param["HelpDoc"];
+        if (array_key_exists('HelpDoc',$param) and $param['HelpDoc'] !== null) {
+            $this->HelpDoc = $param['HelpDoc'];
         }
     }
 }

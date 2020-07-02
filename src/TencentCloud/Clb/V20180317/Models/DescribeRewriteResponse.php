@@ -54,17 +54,17 @@ class DescribeRewriteResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RewriteSet",$param) and $param["RewriteSet"] !== null) {
+        if (array_key_exists('RewriteSet',$param) and $param['RewriteSet'] !== null) {
             $this->RewriteSet = [];
-            foreach ($param["RewriteSet"] as $key => $value){
+            foreach ($param['RewriteSet'] as $key => $value){
                 $obj = new RuleOutput();
                 $obj->deserialize($value);
                 array_push($this->RewriteSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

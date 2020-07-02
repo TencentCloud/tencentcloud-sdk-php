@@ -142,33 +142,33 @@ Stopped：已停止
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CreationTime",$param) and $param["CreationTime"] !== null) {
-            $this->CreationTime = $param["CreationTime"];
+        if (array_key_exists('CreationTime',$param) and $param['CreationTime'] !== null) {
+            $this->CreationTime = $param['CreationTime'];
         }
 
-        if (array_key_exists("LastModifiedTime",$param) and $param["LastModifiedTime"] !== null) {
-            $this->LastModifiedTime = $param["LastModifiedTime"];
+        if (array_key_exists('LastModifiedTime',$param) and $param['LastModifiedTime'] !== null) {
+            $this->LastModifiedTime = $param['LastModifiedTime'];
         }
 
-        if (array_key_exists("TrainingJobName",$param) and $param["TrainingJobName"] !== null) {
-            $this->TrainingJobName = $param["TrainingJobName"];
+        if (array_key_exists('TrainingJobName',$param) and $param['TrainingJobName'] !== null) {
+            $this->TrainingJobName = $param['TrainingJobName'];
         }
 
-        if (array_key_exists("TrainingJobStatus",$param) and $param["TrainingJobStatus"] !== null) {
-            $this->TrainingJobStatus = $param["TrainingJobStatus"];
+        if (array_key_exists('TrainingJobStatus',$param) and $param['TrainingJobStatus'] !== null) {
+            $this->TrainingJobStatus = $param['TrainingJobStatus'];
         }
 
-        if (array_key_exists("TrainingEndTime",$param) and $param["TrainingEndTime"] !== null) {
-            $this->TrainingEndTime = $param["TrainingEndTime"];
+        if (array_key_exists('TrainingEndTime',$param) and $param['TrainingEndTime'] !== null) {
+            $this->TrainingEndTime = $param['TrainingEndTime'];
         }
 
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("ResourceConfig",$param) and $param["ResourceConfig"] !== null) {
+        if (array_key_exists('ResourceConfig',$param) and $param['ResourceConfig'] !== null) {
             $this->ResourceConfig = new ResourceConfig();
-            $this->ResourceConfig->deserialize($param["ResourceConfig"]);
+            $this->ResourceConfig->deserialize($param['ResourceConfig']);
         }
     }
 }

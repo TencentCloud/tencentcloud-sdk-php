@@ -86,28 +86,28 @@ class DescribeTaskInfoResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
-            $this->StartTime = $param["StartTime"];
+        if (array_key_exists('StartTime',$param) and $param['StartTime'] !== null) {
+            $this->StartTime = $param['StartTime'];
         }
 
-        if (array_key_exists("TaskType",$param) and $param["TaskType"] !== null) {
-            $this->TaskType = $param["TaskType"];
+        if (array_key_exists('TaskType',$param) and $param['TaskType'] !== null) {
+            $this->TaskType = $param['TaskType'];
         }
 
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("TaskMessage",$param) and $param["TaskMessage"] !== null) {
-            $this->TaskMessage = $param["TaskMessage"];
+        if (array_key_exists('TaskMessage',$param) and $param['TaskMessage'] !== null) {
+            $this->TaskMessage = $param['TaskMessage'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

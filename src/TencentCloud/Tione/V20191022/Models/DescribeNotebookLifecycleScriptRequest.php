@@ -46,8 +46,8 @@ class DescribeNotebookLifecycleScriptRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("NotebookLifecycleScriptsName",$param) and $param["NotebookLifecycleScriptsName"] !== null) {
-            $this->NotebookLifecycleScriptsName = $param["NotebookLifecycleScriptsName"];
+        if (array_key_exists('NotebookLifecycleScriptsName',$param) and $param['NotebookLifecycleScriptsName'] !== null) {
+            $this->NotebookLifecycleScriptsName = $param['NotebookLifecycleScriptsName'];
         }
     }
 }

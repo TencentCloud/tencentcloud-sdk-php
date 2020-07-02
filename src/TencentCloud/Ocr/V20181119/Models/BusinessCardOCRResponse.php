@@ -62,21 +62,21 @@ class BusinessCardOCRResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BusinessCardInfos",$param) and $param["BusinessCardInfos"] !== null) {
+        if (array_key_exists('BusinessCardInfos',$param) and $param['BusinessCardInfos'] !== null) {
             $this->BusinessCardInfos = [];
-            foreach ($param["BusinessCardInfos"] as $key => $value){
+            foreach ($param['BusinessCardInfos'] as $key => $value){
                 $obj = new BusinessCardInfo();
                 $obj->deserialize($value);
                 array_push($this->BusinessCardInfos, $obj);
             }
         }
 
-        if (array_key_exists("RetImageBase64",$param) and $param["RetImageBase64"] !== null) {
-            $this->RetImageBase64 = $param["RetImageBase64"];
+        if (array_key_exists('RetImageBase64',$param) and $param['RetImageBase64'] !== null) {
+            $this->RetImageBase64 = $param['RetImageBase64'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

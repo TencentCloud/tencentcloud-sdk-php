@@ -66,12 +66,12 @@ last：表示回源层节点
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
-            $this->Domain = $param["Domain"];
+        if (array_key_exists('Domain',$param) and $param['Domain'] !== null) {
+            $this->Domain = $param['Domain'];
         }
 
-        if (array_key_exists("Layer",$param) and $param["Layer"] !== null) {
-            $this->Layer = $param["Layer"];
+        if (array_key_exists('Layer',$param) and $param['Layer'] !== null) {
+            $this->Layer = $param['Layer'];
         }
     }
 }

@@ -70,12 +70,12 @@ class MediaSourceData extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SourceType",$param) and $param["SourceType"] !== null) {
-            $this->SourceType = $param["SourceType"];
+        if (array_key_exists('SourceType',$param) and $param['SourceType'] !== null) {
+            $this->SourceType = $param['SourceType'];
         }
 
-        if (array_key_exists("SourceContext",$param) and $param["SourceContext"] !== null) {
-            $this->SourceContext = $param["SourceContext"];
+        if (array_key_exists('SourceContext',$param) and $param['SourceContext'] !== null) {
+            $this->SourceContext = $param['SourceContext'];
         }
     }
 }

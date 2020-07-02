@@ -62,16 +62,16 @@ class DelayDistribution extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Ladder",$param) and $param["Ladder"] !== null) {
-            $this->Ladder = $param["Ladder"];
+        if (array_key_exists('Ladder',$param) and $param['Ladder'] !== null) {
+            $this->Ladder = $param['Ladder'];
         }
 
-        if (array_key_exists("Size",$param) and $param["Size"] !== null) {
-            $this->Size = $param["Size"];
+        if (array_key_exists('Size',$param) and $param['Size'] !== null) {
+            $this->Size = $param['Size'];
         }
 
-        if (array_key_exists("Updatetime",$param) and $param["Updatetime"] !== null) {
-            $this->Updatetime = $param["Updatetime"];
+        if (array_key_exists('Updatetime',$param) and $param['Updatetime'] !== null) {
+            $this->Updatetime = $param['Updatetime'];
         }
     }
 }

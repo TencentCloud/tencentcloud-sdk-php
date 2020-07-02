@@ -70,20 +70,20 @@ class DescribeUserBaseInfoInstanceResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("UserUin",$param) and $param["UserUin"] !== null) {
-            $this->UserUin = $param["UserUin"];
+        if (array_key_exists('UserUin',$param) and $param['UserUin'] !== null) {
+            $this->UserUin = $param['UserUin'];
         }
 
-        if (array_key_exists("UserAppid",$param) and $param["UserAppid"] !== null) {
-            $this->UserAppid = $param["UserAppid"];
+        if (array_key_exists('UserAppid',$param) and $param['UserAppid'] !== null) {
+            $this->UserAppid = $param['UserAppid'];
         }
 
-        if (array_key_exists("TimeStamp",$param) and $param["TimeStamp"] !== null) {
-            $this->TimeStamp = $param["TimeStamp"];
+        if (array_key_exists('TimeStamp',$param) and $param['TimeStamp'] !== null) {
+            $this->TimeStamp = $param['TimeStamp'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

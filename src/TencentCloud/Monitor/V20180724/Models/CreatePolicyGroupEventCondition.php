@@ -70,20 +70,20 @@ class CreatePolicyGroupEventCondition extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("EventId",$param) and $param["EventId"] !== null) {
-            $this->EventId = $param["EventId"];
+        if (array_key_exists('EventId',$param) and $param['EventId'] !== null) {
+            $this->EventId = $param['EventId'];
         }
 
-        if (array_key_exists("AlarmNotifyType",$param) and $param["AlarmNotifyType"] !== null) {
-            $this->AlarmNotifyType = $param["AlarmNotifyType"];
+        if (array_key_exists('AlarmNotifyType',$param) and $param['AlarmNotifyType'] !== null) {
+            $this->AlarmNotifyType = $param['AlarmNotifyType'];
         }
 
-        if (array_key_exists("AlarmNotifyPeriod",$param) and $param["AlarmNotifyPeriod"] !== null) {
-            $this->AlarmNotifyPeriod = $param["AlarmNotifyPeriod"];
+        if (array_key_exists('AlarmNotifyPeriod',$param) and $param['AlarmNotifyPeriod'] !== null) {
+            $this->AlarmNotifyPeriod = $param['AlarmNotifyPeriod'];
         }
 
-        if (array_key_exists("RuleId",$param) and $param["RuleId"] !== null) {
-            $this->RuleId = $param["RuleId"];
+        if (array_key_exists('RuleId',$param) and $param['RuleId'] !== null) {
+            $this->RuleId = $param['RuleId'];
         }
     }
 }

@@ -70,25 +70,25 @@ class RollbackTablesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
-            $this->ClusterId = $param["ClusterId"];
+        if (array_key_exists('ClusterId',$param) and $param['ClusterId'] !== null) {
+            $this->ClusterId = $param['ClusterId'];
         }
 
-        if (array_key_exists("SelectedTables",$param) and $param["SelectedTables"] !== null) {
+        if (array_key_exists('SelectedTables',$param) and $param['SelectedTables'] !== null) {
             $this->SelectedTables = [];
-            foreach ($param["SelectedTables"] as $key => $value){
+            foreach ($param['SelectedTables'] as $key => $value){
                 $obj = new SelectedTableInfoNew();
                 $obj->deserialize($value);
                 array_push($this->SelectedTables, $obj);
             }
         }
 
-        if (array_key_exists("RollbackTime",$param) and $param["RollbackTime"] !== null) {
-            $this->RollbackTime = $param["RollbackTime"];
+        if (array_key_exists('RollbackTime',$param) and $param['RollbackTime'] !== null) {
+            $this->RollbackTime = $param['RollbackTime'];
         }
 
-        if (array_key_exists("Mode",$param) and $param["Mode"] !== null) {
-            $this->Mode = $param["Mode"];
+        if (array_key_exists('Mode',$param) and $param['Mode'] !== null) {
+            $this->Mode = $param['Mode'];
         }
     }
 }

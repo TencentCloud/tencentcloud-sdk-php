@@ -66,21 +66,21 @@ class GetModelListResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ModelIdNum",$param) and $param["ModelIdNum"] !== null) {
-            $this->ModelIdNum = $param["ModelIdNum"];
+        if (array_key_exists('ModelIdNum',$param) and $param['ModelIdNum'] !== null) {
+            $this->ModelIdNum = $param['ModelIdNum'];
         }
 
-        if (array_key_exists("ModelInfos",$param) and $param["ModelInfos"] !== null) {
+        if (array_key_exists('ModelInfos',$param) and $param['ModelInfos'] !== null) {
             $this->ModelInfos = [];
-            foreach ($param["ModelInfos"] as $key => $value){
+            foreach ($param['ModelInfos'] as $key => $value){
                 $obj = new ModelInfo();
                 $obj->deserialize($value);
                 array_push($this->ModelInfos, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

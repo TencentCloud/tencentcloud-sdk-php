@@ -62,21 +62,21 @@ class InvoiceGeneralOCRResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InvoiceGeneralInfos",$param) and $param["InvoiceGeneralInfos"] !== null) {
+        if (array_key_exists('InvoiceGeneralInfos',$param) and $param['InvoiceGeneralInfos'] !== null) {
             $this->InvoiceGeneralInfos = [];
-            foreach ($param["InvoiceGeneralInfos"] as $key => $value){
+            foreach ($param['InvoiceGeneralInfos'] as $key => $value){
                 $obj = new InvoiceGeneralInfo();
                 $obj->deserialize($value);
                 array_push($this->InvoiceGeneralInfos, $obj);
             }
         }
 
-        if (array_key_exists("Angle",$param) and $param["Angle"] !== null) {
-            $this->Angle = $param["Angle"];
+        if (array_key_exists('Angle',$param) and $param['Angle'] !== null) {
+            $this->Angle = $param['Angle'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

@@ -62,21 +62,21 @@ class DescribeTasksResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TaskSet",$param) and $param["TaskSet"] !== null) {
+        if (array_key_exists('TaskSet',$param) and $param['TaskSet'] !== null) {
             $this->TaskSet = [];
-            foreach ($param["TaskSet"] as $key => $value){
+            foreach ($param['TaskSet'] as $key => $value){
                 $obj = new TaskSimpleInfo();
                 $obj->deserialize($value);
                 array_push($this->TaskSet, $obj);
             }
         }
 
-        if (array_key_exists("ScrollToken",$param) and $param["ScrollToken"] !== null) {
-            $this->ScrollToken = $param["ScrollToken"];
+        if (array_key_exists('ScrollToken',$param) and $param['ScrollToken'] !== null) {
+            $this->ScrollToken = $param['ScrollToken'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

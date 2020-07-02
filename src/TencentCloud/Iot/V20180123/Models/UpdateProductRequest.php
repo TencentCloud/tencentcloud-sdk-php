@@ -70,21 +70,21 @@ class UpdateProductRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ProductId",$param) and $param["ProductId"] !== null) {
-            $this->ProductId = $param["ProductId"];
+        if (array_key_exists('ProductId',$param) and $param['ProductId'] !== null) {
+            $this->ProductId = $param['ProductId'];
         }
 
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
-            $this->Description = $param["Description"];
+        if (array_key_exists('Description',$param) and $param['Description'] !== null) {
+            $this->Description = $param['Description'];
         }
 
-        if (array_key_exists("DataTemplate",$param) and $param["DataTemplate"] !== null) {
+        if (array_key_exists('DataTemplate',$param) and $param['DataTemplate'] !== null) {
             $this->DataTemplate = [];
-            foreach ($param["DataTemplate"] as $key => $value){
+            foreach ($param['DataTemplate'] as $key => $value){
                 $obj = new DataTemplate();
                 $obj->deserialize($value);
                 array_push($this->DataTemplate, $obj);

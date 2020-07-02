@@ -54,13 +54,13 @@ class PublicNetConfigOut extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PublicNetStatus",$param) and $param["PublicNetStatus"] !== null) {
-            $this->PublicNetStatus = $param["PublicNetStatus"];
+        if (array_key_exists('PublicNetStatus',$param) and $param['PublicNetStatus'] !== null) {
+            $this->PublicNetStatus = $param['PublicNetStatus'];
         }
 
-        if (array_key_exists("EipConfig",$param) and $param["EipConfig"] !== null) {
+        if (array_key_exists('EipConfig',$param) and $param['EipConfig'] !== null) {
             $this->EipConfig = new EipConfigOut();
-            $this->EipConfig->deserialize($param["EipConfig"]);
+            $this->EipConfig->deserialize($param['EipConfig']);
         }
     }
 }

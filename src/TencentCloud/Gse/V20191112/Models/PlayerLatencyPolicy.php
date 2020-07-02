@@ -62,12 +62,12 @@ class PlayerLatencyPolicy extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MaximumIndividualPlayerLatencyMilliseconds",$param) and $param["MaximumIndividualPlayerLatencyMilliseconds"] !== null) {
-            $this->MaximumIndividualPlayerLatencyMilliseconds = $param["MaximumIndividualPlayerLatencyMilliseconds"];
+        if (array_key_exists('MaximumIndividualPlayerLatencyMilliseconds',$param) and $param['MaximumIndividualPlayerLatencyMilliseconds'] !== null) {
+            $this->MaximumIndividualPlayerLatencyMilliseconds = $param['MaximumIndividualPlayerLatencyMilliseconds'];
         }
 
-        if (array_key_exists("PolicyDurationSeconds",$param) and $param["PolicyDurationSeconds"] !== null) {
-            $this->PolicyDurationSeconds = $param["PolicyDurationSeconds"];
+        if (array_key_exists('PolicyDurationSeconds',$param) and $param['PolicyDurationSeconds'] !== null) {
+            $this->PolicyDurationSeconds = $param['PolicyDurationSeconds'];
         }
     }
 }

@@ -54,12 +54,12 @@ class ProvincePortrait extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Province",$param) and $param["Province"] !== null) {
-            $this->Province = $param["Province"];
+        if (array_key_exists('Province',$param) and $param['Province'] !== null) {
+            $this->Province = $param['Province'];
         }
 
-        if (array_key_exists("Percent",$param) and $param["Percent"] !== null) {
-            $this->Percent = $param["Percent"];
+        if (array_key_exists('Percent',$param) and $param['Percent'] !== null) {
+            $this->Percent = $param['Percent'];
         }
     }
 }

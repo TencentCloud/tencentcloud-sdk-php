@@ -54,12 +54,12 @@ class RealtimeSpeechConf extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("Quality",$param) and $param["Quality"] !== null) {
-            $this->Quality = $param["Quality"];
+        if (array_key_exists('Quality',$param) and $param['Quality'] !== null) {
+            $this->Quality = $param['Quality'];
         }
     }
 }

@@ -126,48 +126,48 @@ class Registry extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RegistryId",$param) and $param["RegistryId"] !== null) {
-            $this->RegistryId = $param["RegistryId"];
+        if (array_key_exists('RegistryId',$param) and $param['RegistryId'] !== null) {
+            $this->RegistryId = $param['RegistryId'];
         }
 
-        if (array_key_exists("RegistryName",$param) and $param["RegistryName"] !== null) {
-            $this->RegistryName = $param["RegistryName"];
+        if (array_key_exists('RegistryName',$param) and $param['RegistryName'] !== null) {
+            $this->RegistryName = $param['RegistryName'];
         }
 
-        if (array_key_exists("RegistryType",$param) and $param["RegistryType"] !== null) {
-            $this->RegistryType = $param["RegistryType"];
+        if (array_key_exists('RegistryType',$param) and $param['RegistryType'] !== null) {
+            $this->RegistryType = $param['RegistryType'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("PublicDomain",$param) and $param["PublicDomain"] !== null) {
-            $this->PublicDomain = $param["PublicDomain"];
+        if (array_key_exists('PublicDomain',$param) and $param['PublicDomain'] !== null) {
+            $this->PublicDomain = $param['PublicDomain'];
         }
 
-        if (array_key_exists("CreatedAt",$param) and $param["CreatedAt"] !== null) {
-            $this->CreatedAt = $param["CreatedAt"];
+        if (array_key_exists('CreatedAt',$param) and $param['CreatedAt'] !== null) {
+            $this->CreatedAt = $param['CreatedAt'];
         }
 
-        if (array_key_exists("RegionName",$param) and $param["RegionName"] !== null) {
-            $this->RegionName = $param["RegionName"];
+        if (array_key_exists('RegionName',$param) and $param['RegionName'] !== null) {
+            $this->RegionName = $param['RegionName'];
         }
 
-        if (array_key_exists("RegionId",$param) and $param["RegionId"] !== null) {
-            $this->RegionId = $param["RegionId"];
+        if (array_key_exists('RegionId',$param) and $param['RegionId'] !== null) {
+            $this->RegionId = $param['RegionId'];
         }
 
-        if (array_key_exists("EnableAnonymous",$param) and $param["EnableAnonymous"] !== null) {
-            $this->EnableAnonymous = $param["EnableAnonymous"];
+        if (array_key_exists('EnableAnonymous',$param) and $param['EnableAnonymous'] !== null) {
+            $this->EnableAnonymous = $param['EnableAnonymous'];
         }
 
-        if (array_key_exists("TokenValidTime",$param) and $param["TokenValidTime"] !== null) {
-            $this->TokenValidTime = $param["TokenValidTime"];
+        if (array_key_exists('TokenValidTime',$param) and $param['TokenValidTime'] !== null) {
+            $this->TokenValidTime = $param['TokenValidTime'];
         }
 
-        if (array_key_exists("InternalEndpoint",$param) and $param["InternalEndpoint"] !== null) {
-            $this->InternalEndpoint = $param["InternalEndpoint"];
+        if (array_key_exists('InternalEndpoint',$param) and $param['InternalEndpoint'] !== null) {
+            $this->InternalEndpoint = $param['InternalEndpoint'];
         }
     }
 }

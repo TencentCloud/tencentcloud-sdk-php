@@ -54,13 +54,13 @@ class TrafficMirrorReciversStatus extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LanIp",$param) and $param["LanIp"] !== null) {
-            $this->LanIp = $param["LanIp"];
+        if (array_key_exists('LanIp',$param) and $param['LanIp'] !== null) {
+            $this->LanIp = $param['LanIp'];
         }
 
-        if (array_key_exists("ReceiversPortStatusSet",$param) and $param["ReceiversPortStatusSet"] !== null) {
+        if (array_key_exists('ReceiversPortStatusSet',$param) and $param['ReceiversPortStatusSet'] !== null) {
             $this->ReceiversPortStatusSet = [];
-            foreach ($param["ReceiversPortStatusSet"] as $key => $value){
+            foreach ($param['ReceiversPortStatusSet'] as $key => $value){
                 $obj = new TrafficMirrorPortStatus();
                 $obj->deserialize($value);
                 array_push($this->ReceiversPortStatusSet, $obj);

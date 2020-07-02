@@ -106,32 +106,32 @@ class SecurityPolicyRuleOut extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Action",$param) and $param["Action"] !== null) {
-            $this->Action = $param["Action"];
+        if (array_key_exists('Action',$param) and $param['Action'] !== null) {
+            $this->Action = $param['Action'];
         }
 
-        if (array_key_exists("SourceCidr",$param) and $param["SourceCidr"] !== null) {
-            $this->SourceCidr = $param["SourceCidr"];
+        if (array_key_exists('SourceCidr',$param) and $param['SourceCidr'] !== null) {
+            $this->SourceCidr = $param['SourceCidr'];
         }
 
-        if (array_key_exists("AliasName",$param) and $param["AliasName"] !== null) {
-            $this->AliasName = $param["AliasName"];
+        if (array_key_exists('AliasName',$param) and $param['AliasName'] !== null) {
+            $this->AliasName = $param['AliasName'];
         }
 
-        if (array_key_exists("DestPortRange",$param) and $param["DestPortRange"] !== null) {
-            $this->DestPortRange = $param["DestPortRange"];
+        if (array_key_exists('DestPortRange',$param) and $param['DestPortRange'] !== null) {
+            $this->DestPortRange = $param['DestPortRange'];
         }
 
-        if (array_key_exists("RuleId",$param) and $param["RuleId"] !== null) {
-            $this->RuleId = $param["RuleId"];
+        if (array_key_exists('RuleId',$param) and $param['RuleId'] !== null) {
+            $this->RuleId = $param['RuleId'];
         }
 
-        if (array_key_exists("Protocol",$param) and $param["Protocol"] !== null) {
-            $this->Protocol = $param["Protocol"];
+        if (array_key_exists('Protocol',$param) and $param['Protocol'] !== null) {
+            $this->Protocol = $param['Protocol'];
         }
 
-        if (array_key_exists("PolicyId",$param) and $param["PolicyId"] !== null) {
-            $this->PolicyId = $param["PolicyId"];
+        if (array_key_exists('PolicyId',$param) and $param['PolicyId'] !== null) {
+            $this->PolicyId = $param['PolicyId'];
         }
     }
 }

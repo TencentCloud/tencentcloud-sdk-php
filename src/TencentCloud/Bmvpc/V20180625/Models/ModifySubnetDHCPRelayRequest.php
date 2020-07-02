@@ -78,24 +78,24 @@ class ModifySubnetDHCPRelayRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
-            $this->VpcId = $param["VpcId"];
+        if (array_key_exists('VpcId',$param) and $param['VpcId'] !== null) {
+            $this->VpcId = $param['VpcId'];
         }
 
-        if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
-            $this->SubnetId = $param["SubnetId"];
+        if (array_key_exists('SubnetId',$param) and $param['SubnetId'] !== null) {
+            $this->SubnetId = $param['SubnetId'];
         }
 
-        if (array_key_exists("EnableDHCP",$param) and $param["EnableDHCP"] !== null) {
-            $this->EnableDHCP = $param["EnableDHCP"];
+        if (array_key_exists('EnableDHCP',$param) and $param['EnableDHCP'] !== null) {
+            $this->EnableDHCP = $param['EnableDHCP'];
         }
 
-        if (array_key_exists("ServerIps",$param) and $param["ServerIps"] !== null) {
-            $this->ServerIps = $param["ServerIps"];
+        if (array_key_exists('ServerIps',$param) and $param['ServerIps'] !== null) {
+            $this->ServerIps = $param['ServerIps'];
         }
 
-        if (array_key_exists("ReservedIpCount",$param) and $param["ReservedIpCount"] !== null) {
-            $this->ReservedIpCount = $param["ReservedIpCount"];
+        if (array_key_exists('ReservedIpCount',$param) and $param['ReservedIpCount'] !== null) {
+            $this->ReservedIpCount = $param['ReservedIpCount'];
         }
     }
 }

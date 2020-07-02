@@ -54,12 +54,12 @@ class RewriteLocationMap extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SourceLocationId",$param) and $param["SourceLocationId"] !== null) {
-            $this->SourceLocationId = $param["SourceLocationId"];
+        if (array_key_exists('SourceLocationId',$param) and $param['SourceLocationId'] !== null) {
+            $this->SourceLocationId = $param['SourceLocationId'];
         }
 
-        if (array_key_exists("TargetLocationId",$param) and $param["TargetLocationId"] !== null) {
-            $this->TargetLocationId = $param["TargetLocationId"];
+        if (array_key_exists('TargetLocationId',$param) and $param['TargetLocationId'] !== null) {
+            $this->TargetLocationId = $param['TargetLocationId'];
         }
     }
 }

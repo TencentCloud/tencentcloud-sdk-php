@@ -46,8 +46,8 @@ class RevocationConfigRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ConfigReleaseId",$param) and $param["ConfigReleaseId"] !== null) {
-            $this->ConfigReleaseId = $param["ConfigReleaseId"];
+        if (array_key_exists('ConfigReleaseId',$param) and $param['ConfigReleaseId'] !== null) {
+            $this->ConfigReleaseId = $param['ConfigReleaseId'];
         }
     }
 }

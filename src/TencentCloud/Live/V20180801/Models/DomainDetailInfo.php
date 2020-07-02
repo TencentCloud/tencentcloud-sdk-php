@@ -86,24 +86,24 @@ Oversea: 表示国外数据。
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MainlandOrOversea",$param) and $param["MainlandOrOversea"] !== null) {
-            $this->MainlandOrOversea = $param["MainlandOrOversea"];
+        if (array_key_exists('MainlandOrOversea',$param) and $param['MainlandOrOversea'] !== null) {
+            $this->MainlandOrOversea = $param['MainlandOrOversea'];
         }
 
-        if (array_key_exists("Bandwidth",$param) and $param["Bandwidth"] !== null) {
-            $this->Bandwidth = $param["Bandwidth"];
+        if (array_key_exists('Bandwidth',$param) and $param['Bandwidth'] !== null) {
+            $this->Bandwidth = $param['Bandwidth'];
         }
 
-        if (array_key_exists("Flux",$param) and $param["Flux"] !== null) {
-            $this->Flux = $param["Flux"];
+        if (array_key_exists('Flux',$param) and $param['Flux'] !== null) {
+            $this->Flux = $param['Flux'];
         }
 
-        if (array_key_exists("Online",$param) and $param["Online"] !== null) {
-            $this->Online = $param["Online"];
+        if (array_key_exists('Online',$param) and $param['Online'] !== null) {
+            $this->Online = $param['Online'];
         }
 
-        if (array_key_exists("Request",$param) and $param["Request"] !== null) {
-            $this->Request = $param["Request"];
+        if (array_key_exists('Request',$param) and $param['Request'] !== null) {
+            $this->Request = $param['Request'];
         }
     }
 }

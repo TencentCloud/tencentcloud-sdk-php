@@ -54,13 +54,13 @@ class AddSmsSignResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AddSignStatus",$param) and $param["AddSignStatus"] !== null) {
+        if (array_key_exists('AddSignStatus',$param) and $param['AddSignStatus'] !== null) {
             $this->AddSignStatus = new AddSignStatus();
-            $this->AddSignStatus->deserialize($param["AddSignStatus"]);
+            $this->AddSignStatus->deserialize($param['AddSignStatus']);
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

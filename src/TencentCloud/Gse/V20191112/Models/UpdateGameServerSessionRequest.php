@@ -78,24 +78,24 @@ class UpdateGameServerSessionRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("GameServerSessionId",$param) and $param["GameServerSessionId"] !== null) {
-            $this->GameServerSessionId = $param["GameServerSessionId"];
+        if (array_key_exists('GameServerSessionId',$param) and $param['GameServerSessionId'] !== null) {
+            $this->GameServerSessionId = $param['GameServerSessionId'];
         }
 
-        if (array_key_exists("MaximumPlayerSessionCount",$param) and $param["MaximumPlayerSessionCount"] !== null) {
-            $this->MaximumPlayerSessionCount = $param["MaximumPlayerSessionCount"];
+        if (array_key_exists('MaximumPlayerSessionCount',$param) and $param['MaximumPlayerSessionCount'] !== null) {
+            $this->MaximumPlayerSessionCount = $param['MaximumPlayerSessionCount'];
         }
 
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("PlayerSessionCreationPolicy",$param) and $param["PlayerSessionCreationPolicy"] !== null) {
-            $this->PlayerSessionCreationPolicy = $param["PlayerSessionCreationPolicy"];
+        if (array_key_exists('PlayerSessionCreationPolicy',$param) and $param['PlayerSessionCreationPolicy'] !== null) {
+            $this->PlayerSessionCreationPolicy = $param['PlayerSessionCreationPolicy'];
         }
 
-        if (array_key_exists("ProtectionPolicy",$param) and $param["ProtectionPolicy"] !== null) {
-            $this->ProtectionPolicy = $param["ProtectionPolicy"];
+        if (array_key_exists('ProtectionPolicy',$param) and $param['ProtectionPolicy'] !== null) {
+            $this->ProtectionPolicy = $param['ProtectionPolicy'];
         }
     }
 }

@@ -70,21 +70,21 @@ class TaskDetail extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("Progress",$param) and $param["Progress"] !== null) {
-            $this->Progress = $param["Progress"];
+        if (array_key_exists('Progress',$param) and $param['Progress'] !== null) {
+            $this->Progress = $param['Progress'];
         }
 
-        if (array_key_exists("FinishTime",$param) and $param["FinishTime"] !== null) {
-            $this->FinishTime = $param["FinishTime"];
+        if (array_key_exists('FinishTime',$param) and $param['FinishTime'] !== null) {
+            $this->FinishTime = $param['FinishTime'];
         }
 
-        if (array_key_exists("SubTasks",$param) and $param["SubTasks"] !== null) {
+        if (array_key_exists('SubTasks',$param) and $param['SubTasks'] !== null) {
             $this->SubTasks = [];
-            foreach ($param["SubTasks"] as $key => $value){
+            foreach ($param['SubTasks'] as $key => $value){
                 $obj = new SubTaskDetail();
                 $obj->deserialize($value);
                 array_push($this->SubTasks, $obj);

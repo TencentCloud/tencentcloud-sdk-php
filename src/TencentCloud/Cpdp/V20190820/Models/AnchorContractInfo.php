@@ -78,24 +78,24 @@ class AnchorContractInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AnchorId",$param) and $param["AnchorId"] !== null) {
-            $this->AnchorId = $param["AnchorId"];
+        if (array_key_exists('AnchorId',$param) and $param['AnchorId'] !== null) {
+            $this->AnchorId = $param['AnchorId'];
         }
 
-        if (array_key_exists("AnchorName",$param) and $param["AnchorName"] !== null) {
-            $this->AnchorName = $param["AnchorName"];
+        if (array_key_exists('AnchorName',$param) and $param['AnchorName'] !== null) {
+            $this->AnchorName = $param['AnchorName'];
         }
 
-        if (array_key_exists("AgentId",$param) and $param["AgentId"] !== null) {
-            $this->AgentId = $param["AgentId"];
+        if (array_key_exists('AgentId',$param) and $param['AgentId'] !== null) {
+            $this->AgentId = $param['AgentId'];
         }
 
-        if (array_key_exists("AgentName",$param) and $param["AgentName"] !== null) {
-            $this->AgentName = $param["AgentName"];
+        if (array_key_exists('AgentName',$param) and $param['AgentName'] !== null) {
+            $this->AgentName = $param['AgentName'];
         }
 
-        if (array_key_exists("IdNo",$param) and $param["IdNo"] !== null) {
-            $this->IdNo = $param["IdNo"];
+        if (array_key_exists('IdNo',$param) and $param['IdNo'] !== null) {
+            $this->IdNo = $param['IdNo'];
         }
     }
 }

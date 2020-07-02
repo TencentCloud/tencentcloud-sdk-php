@@ -62,16 +62,16 @@ class DescribeBillSummaryByProductRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PayerUin",$param) and $param["PayerUin"] !== null) {
-            $this->PayerUin = $param["PayerUin"];
+        if (array_key_exists('PayerUin',$param) and $param['PayerUin'] !== null) {
+            $this->PayerUin = $param['PayerUin'];
         }
 
-        if (array_key_exists("BeginTime",$param) and $param["BeginTime"] !== null) {
-            $this->BeginTime = $param["BeginTime"];
+        if (array_key_exists('BeginTime',$param) and $param['BeginTime'] !== null) {
+            $this->BeginTime = $param['BeginTime'];
         }
 
-        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
-            $this->EndTime = $param["EndTime"];
+        if (array_key_exists('EndTime',$param) and $param['EndTime'] !== null) {
+            $this->EndTime = $param['EndTime'];
         }
     }
 }

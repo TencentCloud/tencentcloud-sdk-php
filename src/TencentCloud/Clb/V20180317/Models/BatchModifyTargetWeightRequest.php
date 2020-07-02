@@ -54,13 +54,13 @@ class BatchModifyTargetWeightRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LoadBalancerId",$param) and $param["LoadBalancerId"] !== null) {
-            $this->LoadBalancerId = $param["LoadBalancerId"];
+        if (array_key_exists('LoadBalancerId',$param) and $param['LoadBalancerId'] !== null) {
+            $this->LoadBalancerId = $param['LoadBalancerId'];
         }
 
-        if (array_key_exists("ModifyList",$param) and $param["ModifyList"] !== null) {
+        if (array_key_exists('ModifyList',$param) and $param['ModifyList'] !== null) {
             $this->ModifyList = [];
-            foreach ($param["ModifyList"] as $key => $value){
+            foreach ($param['ModifyList'] as $key => $value){
                 $obj = new RsWeightRule();
                 $obj->deserialize($value);
                 array_push($this->ModifyList, $obj);

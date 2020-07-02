@@ -46,9 +46,9 @@ class DisassociateTargetGroupsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Associations",$param) and $param["Associations"] !== null) {
+        if (array_key_exists('Associations',$param) and $param['Associations'] !== null) {
             $this->Associations = [];
-            foreach ($param["Associations"] as $key => $value){
+            foreach ($param['Associations'] as $key => $value){
                 $obj = new TargetGroupAssociation();
                 $obj->deserialize($value);
                 array_push($this->Associations, $obj);

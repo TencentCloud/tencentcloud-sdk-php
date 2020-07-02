@@ -58,17 +58,17 @@ class DescribeFairPlayPemResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FairPlayPems",$param) and $param["FairPlayPems"] !== null) {
+        if (array_key_exists('FairPlayPems',$param) and $param['FairPlayPems'] !== null) {
             $this->FairPlayPems = [];
-            foreach ($param["FairPlayPems"] as $key => $value){
+            foreach ($param['FairPlayPems'] as $key => $value){
                 $obj = new FairPlayPemDigestInfo();
                 $obj->deserialize($value);
                 array_push($this->FairPlayPems, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

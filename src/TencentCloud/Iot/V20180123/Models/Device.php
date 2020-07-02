@@ -86,28 +86,28 @@ class Device extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ProductId",$param) and $param["ProductId"] !== null) {
-            $this->ProductId = $param["ProductId"];
+        if (array_key_exists('ProductId',$param) and $param['ProductId'] !== null) {
+            $this->ProductId = $param['ProductId'];
         }
 
-        if (array_key_exists("DeviceName",$param) and $param["DeviceName"] !== null) {
-            $this->DeviceName = $param["DeviceName"];
+        if (array_key_exists('DeviceName',$param) and $param['DeviceName'] !== null) {
+            $this->DeviceName = $param['DeviceName'];
         }
 
-        if (array_key_exists("DeviceSecret",$param) and $param["DeviceSecret"] !== null) {
-            $this->DeviceSecret = $param["DeviceSecret"];
+        if (array_key_exists('DeviceSecret',$param) and $param['DeviceSecret'] !== null) {
+            $this->DeviceSecret = $param['DeviceSecret'];
         }
 
-        if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
-            $this->UpdateTime = $param["UpdateTime"];
+        if (array_key_exists('UpdateTime',$param) and $param['UpdateTime'] !== null) {
+            $this->UpdateTime = $param['UpdateTime'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("DeviceInfo",$param) and $param["DeviceInfo"] !== null) {
-            $this->DeviceInfo = $param["DeviceInfo"];
+        if (array_key_exists('DeviceInfo',$param) and $param['DeviceInfo'] !== null) {
+            $this->DeviceInfo = $param['DeviceInfo'];
         }
     }
 }

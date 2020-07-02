@@ -54,13 +54,13 @@ class CreateAddressTemplateResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AddressTemplate",$param) and $param["AddressTemplate"] !== null) {
+        if (array_key_exists('AddressTemplate',$param) and $param['AddressTemplate'] !== null) {
             $this->AddressTemplate = new AddressTemplate();
-            $this->AddressTemplate->deserialize($param["AddressTemplate"]);
+            $this->AddressTemplate->deserialize($param['AddressTemplate']);
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

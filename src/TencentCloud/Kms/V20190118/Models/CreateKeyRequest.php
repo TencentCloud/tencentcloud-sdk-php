@@ -78,25 +78,25 @@ class CreateKeyRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Alias",$param) and $param["Alias"] !== null) {
-            $this->Alias = $param["Alias"];
+        if (array_key_exists('Alias',$param) and $param['Alias'] !== null) {
+            $this->Alias = $param['Alias'];
         }
 
-        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
-            $this->Description = $param["Description"];
+        if (array_key_exists('Description',$param) and $param['Description'] !== null) {
+            $this->Description = $param['Description'];
         }
 
-        if (array_key_exists("KeyUsage",$param) and $param["KeyUsage"] !== null) {
-            $this->KeyUsage = $param["KeyUsage"];
+        if (array_key_exists('KeyUsage',$param) and $param['KeyUsage'] !== null) {
+            $this->KeyUsage = $param['KeyUsage'];
         }
 
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists('Type',$param) and $param['Type'] !== null) {
+            $this->Type = $param['Type'];
         }
 
-        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+        if (array_key_exists('Tags',$param) and $param['Tags'] !== null) {
             $this->Tags = [];
-            foreach ($param["Tags"] as $key => $value){
+            foreach ($param['Tags'] as $key => $value){
                 $obj = new Tag();
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);

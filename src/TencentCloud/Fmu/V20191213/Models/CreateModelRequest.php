@@ -54,12 +54,12 @@ class CreateModelRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LUTFile",$param) and $param["LUTFile"] !== null) {
-            $this->LUTFile = $param["LUTFile"];
+        if (array_key_exists('LUTFile',$param) and $param['LUTFile'] !== null) {
+            $this->LUTFile = $param['LUTFile'];
         }
 
-        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
-            $this->Description = $param["Description"];
+        if (array_key_exists('Description',$param) and $param['Description'] !== null) {
+            $this->Description = $param['Description'];
         }
     }
 }

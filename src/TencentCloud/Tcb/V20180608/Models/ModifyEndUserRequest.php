@@ -62,16 +62,16 @@ class ModifyEndUserRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("EnvId",$param) and $param["EnvId"] !== null) {
-            $this->EnvId = $param["EnvId"];
+        if (array_key_exists('EnvId',$param) and $param['EnvId'] !== null) {
+            $this->EnvId = $param['EnvId'];
         }
 
-        if (array_key_exists("UUId",$param) and $param["UUId"] !== null) {
-            $this->UUId = $param["UUId"];
+        if (array_key_exists('UUId',$param) and $param['UUId'] !== null) {
+            $this->UUId = $param['UUId'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
     }
 }

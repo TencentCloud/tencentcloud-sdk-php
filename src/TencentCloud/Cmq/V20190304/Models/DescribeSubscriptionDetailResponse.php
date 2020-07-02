@@ -66,21 +66,21 @@ class DescribeSubscriptionDetailResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("SubscriptionSet",$param) and $param["SubscriptionSet"] !== null) {
+        if (array_key_exists('SubscriptionSet',$param) and $param['SubscriptionSet'] !== null) {
             $this->SubscriptionSet = [];
-            foreach ($param["SubscriptionSet"] as $key => $value){
+            foreach ($param['SubscriptionSet'] as $key => $value){
                 $obj = new Subscription();
                 $obj->deserialize($value);
                 array_push($this->SubscriptionSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

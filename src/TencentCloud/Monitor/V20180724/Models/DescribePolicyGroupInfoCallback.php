@@ -62,16 +62,16 @@ class DescribePolicyGroupInfoCallback extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CallbackUrl",$param) and $param["CallbackUrl"] !== null) {
-            $this->CallbackUrl = $param["CallbackUrl"];
+        if (array_key_exists('CallbackUrl',$param) and $param['CallbackUrl'] !== null) {
+            $this->CallbackUrl = $param['CallbackUrl'];
         }
 
-        if (array_key_exists("ValidFlag",$param) and $param["ValidFlag"] !== null) {
-            $this->ValidFlag = $param["ValidFlag"];
+        if (array_key_exists('ValidFlag',$param) and $param['ValidFlag'] !== null) {
+            $this->ValidFlag = $param['ValidFlag'];
         }
 
-        if (array_key_exists("VerifyCode",$param) and $param["VerifyCode"] !== null) {
-            $this->VerifyCode = $param["VerifyCode"];
+        if (array_key_exists('VerifyCode',$param) and $param['VerifyCode'] !== null) {
+            $this->VerifyCode = $param['VerifyCode'];
         }
     }
 }

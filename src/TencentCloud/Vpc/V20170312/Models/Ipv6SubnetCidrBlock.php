@@ -54,12 +54,12 @@ class Ipv6SubnetCidrBlock extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
-            $this->SubnetId = $param["SubnetId"];
+        if (array_key_exists('SubnetId',$param) and $param['SubnetId'] !== null) {
+            $this->SubnetId = $param['SubnetId'];
         }
 
-        if (array_key_exists("Ipv6CidrBlock",$param) and $param["Ipv6CidrBlock"] !== null) {
-            $this->Ipv6CidrBlock = $param["Ipv6CidrBlock"];
+        if (array_key_exists('Ipv6CidrBlock',$param) and $param['Ipv6CidrBlock'] !== null) {
+            $this->Ipv6CidrBlock = $param['Ipv6CidrBlock'];
         }
     }
 }

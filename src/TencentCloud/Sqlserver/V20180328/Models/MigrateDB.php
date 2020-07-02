@@ -46,8 +46,8 @@ class MigrateDB extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DBName",$param) and $param["DBName"] !== null) {
-            $this->DBName = $param["DBName"];
+        if (array_key_exists('DBName',$param) and $param['DBName'] !== null) {
+            $this->DBName = $param['DBName'];
         }
     }
 }

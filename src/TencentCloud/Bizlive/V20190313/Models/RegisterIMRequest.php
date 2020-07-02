@@ -70,20 +70,20 @@ class RegisterIMRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Nickname",$param) and $param["Nickname"] !== null) {
-            $this->Nickname = $param["Nickname"];
+        if (array_key_exists('Nickname',$param) and $param['Nickname'] !== null) {
+            $this->Nickname = $param['Nickname'];
         }
 
-        if (array_key_exists("UserId",$param) and $param["UserId"] !== null) {
-            $this->UserId = $param["UserId"];
+        if (array_key_exists('UserId',$param) and $param['UserId'] !== null) {
+            $this->UserId = $param['UserId'];
         }
 
-        if (array_key_exists("HeadImgUrl",$param) and $param["HeadImgUrl"] !== null) {
-            $this->HeadImgUrl = $param["HeadImgUrl"];
+        if (array_key_exists('HeadImgUrl',$param) and $param['HeadImgUrl'] !== null) {
+            $this->HeadImgUrl = $param['HeadImgUrl'];
         }
 
-        if (array_key_exists("Level",$param) and $param["Level"] !== null) {
-            $this->Level = $param["Level"];
+        if (array_key_exists('Level',$param) and $param['Level'] !== null) {
+            $this->Level = $param['Level'];
         }
     }
 }

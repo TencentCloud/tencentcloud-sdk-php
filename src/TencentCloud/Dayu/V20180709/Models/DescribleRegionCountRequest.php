@@ -54,12 +54,12 @@ class DescribleRegionCountRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Business",$param) and $param["Business"] !== null) {
-            $this->Business = $param["Business"];
+        if (array_key_exists('Business',$param) and $param['Business'] !== null) {
+            $this->Business = $param['Business'];
         }
 
-        if (array_key_exists("LineList",$param) and $param["LineList"] !== null) {
-            $this->LineList = $param["LineList"];
+        if (array_key_exists('LineList',$param) and $param['LineList'] !== null) {
+            $this->LineList = $param['LineList'];
         }
     }
 }

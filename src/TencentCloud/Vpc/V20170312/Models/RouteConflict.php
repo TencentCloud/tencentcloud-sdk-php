@@ -62,17 +62,17 @@ class RouteConflict extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RouteTableId",$param) and $param["RouteTableId"] !== null) {
-            $this->RouteTableId = $param["RouteTableId"];
+        if (array_key_exists('RouteTableId',$param) and $param['RouteTableId'] !== null) {
+            $this->RouteTableId = $param['RouteTableId'];
         }
 
-        if (array_key_exists("DestinationCidrBlock",$param) and $param["DestinationCidrBlock"] !== null) {
-            $this->DestinationCidrBlock = $param["DestinationCidrBlock"];
+        if (array_key_exists('DestinationCidrBlock',$param) and $param['DestinationCidrBlock'] !== null) {
+            $this->DestinationCidrBlock = $param['DestinationCidrBlock'];
         }
 
-        if (array_key_exists("ConflictSet",$param) and $param["ConflictSet"] !== null) {
+        if (array_key_exists('ConflictSet',$param) and $param['ConflictSet'] !== null) {
             $this->ConflictSet = [];
-            foreach ($param["ConflictSet"] as $key => $value){
+            foreach ($param['ConflictSet'] as $key => $value){
                 $obj = new Route();
                 $obj->deserialize($value);
                 array_push($this->ConflictSet, $obj);

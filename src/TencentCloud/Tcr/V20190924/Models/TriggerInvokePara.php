@@ -110,28 +110,28 @@ class TriggerInvokePara extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AppId",$param) and $param["AppId"] !== null) {
-            $this->AppId = $param["AppId"];
+        if (array_key_exists('AppId',$param) and $param['AppId'] !== null) {
+            $this->AppId = $param['AppId'];
         }
 
-        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
-            $this->ClusterId = $param["ClusterId"];
+        if (array_key_exists('ClusterId',$param) and $param['ClusterId'] !== null) {
+            $this->ClusterId = $param['ClusterId'];
         }
 
-        if (array_key_exists("Namespace",$param) and $param["Namespace"] !== null) {
-            $this->Namespace = $param["Namespace"];
+        if (array_key_exists('Namespace',$param) and $param['Namespace'] !== null) {
+            $this->Namespace = $param['Namespace'];
         }
 
-        if (array_key_exists("ServiceName",$param) and $param["ServiceName"] !== null) {
-            $this->ServiceName = $param["ServiceName"];
+        if (array_key_exists('ServiceName',$param) and $param['ServiceName'] !== null) {
+            $this->ServiceName = $param['ServiceName'];
         }
 
-        if (array_key_exists("ContainerName",$param) and $param["ContainerName"] !== null) {
-            $this->ContainerName = $param["ContainerName"];
+        if (array_key_exists('ContainerName',$param) and $param['ContainerName'] !== null) {
+            $this->ContainerName = $param['ContainerName'];
         }
 
-        if (array_key_exists("ClusterRegion",$param) and $param["ClusterRegion"] !== null) {
-            $this->ClusterRegion = $param["ClusterRegion"];
+        if (array_key_exists('ClusterRegion',$param) and $param['ClusterRegion'] !== null) {
+            $this->ClusterRegion = $param['ClusterRegion'];
         }
     }
 }

@@ -46,8 +46,8 @@ class DeleteAccessRulesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AccessRuleIds",$param) and $param["AccessRuleIds"] !== null) {
-            $this->AccessRuleIds = $param["AccessRuleIds"];
+        if (array_key_exists('AccessRuleIds',$param) and $param['AccessRuleIds'] !== null) {
+            $this->AccessRuleIds = $param['AccessRuleIds'];
         }
     }
 }

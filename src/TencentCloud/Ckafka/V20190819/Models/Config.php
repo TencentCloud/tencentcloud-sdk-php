@@ -126,32 +126,32 @@ delete：日志按保存时间删除；compact：日志按 key 压缩；compact,
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Retention",$param) and $param["Retention"] !== null) {
-            $this->Retention = $param["Retention"];
+        if (array_key_exists('Retention',$param) and $param['Retention'] !== null) {
+            $this->Retention = $param['Retention'];
         }
 
-        if (array_key_exists("MinInsyncReplicas",$param) and $param["MinInsyncReplicas"] !== null) {
-            $this->MinInsyncReplicas = $param["MinInsyncReplicas"];
+        if (array_key_exists('MinInsyncReplicas',$param) and $param['MinInsyncReplicas'] !== null) {
+            $this->MinInsyncReplicas = $param['MinInsyncReplicas'];
         }
 
-        if (array_key_exists("CleanUpPolicy",$param) and $param["CleanUpPolicy"] !== null) {
-            $this->CleanUpPolicy = $param["CleanUpPolicy"];
+        if (array_key_exists('CleanUpPolicy',$param) and $param['CleanUpPolicy'] !== null) {
+            $this->CleanUpPolicy = $param['CleanUpPolicy'];
         }
 
-        if (array_key_exists("SegmentMs",$param) and $param["SegmentMs"] !== null) {
-            $this->SegmentMs = $param["SegmentMs"];
+        if (array_key_exists('SegmentMs',$param) and $param['SegmentMs'] !== null) {
+            $this->SegmentMs = $param['SegmentMs'];
         }
 
-        if (array_key_exists("UncleanLeaderElectionEnable",$param) and $param["UncleanLeaderElectionEnable"] !== null) {
-            $this->UncleanLeaderElectionEnable = $param["UncleanLeaderElectionEnable"];
+        if (array_key_exists('UncleanLeaderElectionEnable',$param) and $param['UncleanLeaderElectionEnable'] !== null) {
+            $this->UncleanLeaderElectionEnable = $param['UncleanLeaderElectionEnable'];
         }
 
-        if (array_key_exists("SegmentBytes",$param) and $param["SegmentBytes"] !== null) {
-            $this->SegmentBytes = $param["SegmentBytes"];
+        if (array_key_exists('SegmentBytes',$param) and $param['SegmentBytes'] !== null) {
+            $this->SegmentBytes = $param['SegmentBytes'];
         }
 
-        if (array_key_exists("MaxMessageBytes",$param) and $param["MaxMessageBytes"] !== null) {
-            $this->MaxMessageBytes = $param["MaxMessageBytes"];
+        if (array_key_exists('MaxMessageBytes',$param) and $param['MaxMessageBytes'] !== null) {
+            $this->MaxMessageBytes = $param['MaxMessageBytes'];
         }
     }
 }

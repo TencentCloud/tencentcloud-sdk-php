@@ -54,13 +54,13 @@ class CreateServiceTemplateGroupResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ServiceTemplateGroup",$param) and $param["ServiceTemplateGroup"] !== null) {
+        if (array_key_exists('ServiceTemplateGroup',$param) and $param['ServiceTemplateGroup'] !== null) {
             $this->ServiceTemplateGroup = new ServiceTemplateGroup();
-            $this->ServiceTemplateGroup->deserialize($param["ServiceTemplateGroup"]);
+            $this->ServiceTemplateGroup->deserialize($param['ServiceTemplateGroup']);
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

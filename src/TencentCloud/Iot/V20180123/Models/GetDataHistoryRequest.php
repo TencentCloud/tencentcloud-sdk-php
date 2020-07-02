@@ -94,32 +94,32 @@ class GetDataHistoryRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ProductId",$param) and $param["ProductId"] !== null) {
-            $this->ProductId = $param["ProductId"];
+        if (array_key_exists('ProductId',$param) and $param['ProductId'] !== null) {
+            $this->ProductId = $param['ProductId'];
         }
 
-        if (array_key_exists("DeviceNames",$param) and $param["DeviceNames"] !== null) {
-            $this->DeviceNames = $param["DeviceNames"];
+        if (array_key_exists('DeviceNames',$param) and $param['DeviceNames'] !== null) {
+            $this->DeviceNames = $param['DeviceNames'];
         }
 
-        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
-            $this->StartTime = $param["StartTime"];
+        if (array_key_exists('StartTime',$param) and $param['StartTime'] !== null) {
+            $this->StartTime = $param['StartTime'];
         }
 
-        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
-            $this->EndTime = $param["EndTime"];
+        if (array_key_exists('EndTime',$param) and $param['EndTime'] !== null) {
+            $this->EndTime = $param['EndTime'];
         }
 
-        if (array_key_exists("Size",$param) and $param["Size"] !== null) {
-            $this->Size = $param["Size"];
+        if (array_key_exists('Size',$param) and $param['Size'] !== null) {
+            $this->Size = $param['Size'];
         }
 
-        if (array_key_exists("Order",$param) and $param["Order"] !== null) {
-            $this->Order = $param["Order"];
+        if (array_key_exists('Order',$param) and $param['Order'] !== null) {
+            $this->Order = $param['Order'];
         }
 
-        if (array_key_exists("ScrollId",$param) and $param["ScrollId"] !== null) {
-            $this->ScrollId = $param["ScrollId"];
+        if (array_key_exists('ScrollId',$param) and $param['ScrollId'] !== null) {
+            $this->ScrollId = $param['ScrollId'];
         }
     }
 }

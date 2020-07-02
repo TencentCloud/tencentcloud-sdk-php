@@ -70,20 +70,20 @@ class AssociateNatGatewayAddressRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("NatGatewayId",$param) and $param["NatGatewayId"] !== null) {
-            $this->NatGatewayId = $param["NatGatewayId"];
+        if (array_key_exists('NatGatewayId',$param) and $param['NatGatewayId'] !== null) {
+            $this->NatGatewayId = $param['NatGatewayId'];
         }
 
-        if (array_key_exists("AddressCount",$param) and $param["AddressCount"] !== null) {
-            $this->AddressCount = $param["AddressCount"];
+        if (array_key_exists('AddressCount',$param) and $param['AddressCount'] !== null) {
+            $this->AddressCount = $param['AddressCount'];
         }
 
-        if (array_key_exists("PublicIpAddresses",$param) and $param["PublicIpAddresses"] !== null) {
-            $this->PublicIpAddresses = $param["PublicIpAddresses"];
+        if (array_key_exists('PublicIpAddresses',$param) and $param['PublicIpAddresses'] !== null) {
+            $this->PublicIpAddresses = $param['PublicIpAddresses'];
         }
 
-        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
-            $this->Zone = $param["Zone"];
+        if (array_key_exists('Zone',$param) and $param['Zone'] !== null) {
+            $this->Zone = $param['Zone'];
         }
     }
 }

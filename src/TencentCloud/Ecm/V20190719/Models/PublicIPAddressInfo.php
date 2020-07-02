@@ -70,21 +70,21 @@ class PublicIPAddressInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ChargeMode",$param) and $param["ChargeMode"] !== null) {
-            $this->ChargeMode = $param["ChargeMode"];
+        if (array_key_exists('ChargeMode',$param) and $param['ChargeMode'] !== null) {
+            $this->ChargeMode = $param['ChargeMode'];
         }
 
-        if (array_key_exists("PublicIPAddress",$param) and $param["PublicIPAddress"] !== null) {
-            $this->PublicIPAddress = $param["PublicIPAddress"];
+        if (array_key_exists('PublicIPAddress',$param) and $param['PublicIPAddress'] !== null) {
+            $this->PublicIPAddress = $param['PublicIPAddress'];
         }
 
-        if (array_key_exists("ISP",$param) and $param["ISP"] !== null) {
+        if (array_key_exists('ISP',$param) and $param['ISP'] !== null) {
             $this->ISP = new ISP();
-            $this->ISP->deserialize($param["ISP"]);
+            $this->ISP->deserialize($param['ISP']);
         }
 
-        if (array_key_exists("MaxBandwidthOut",$param) and $param["MaxBandwidthOut"] !== null) {
-            $this->MaxBandwidthOut = $param["MaxBandwidthOut"];
+        if (array_key_exists('MaxBandwidthOut',$param) and $param['MaxBandwidthOut'] !== null) {
+            $this->MaxBandwidthOut = $param['MaxBandwidthOut'];
         }
     }
 }

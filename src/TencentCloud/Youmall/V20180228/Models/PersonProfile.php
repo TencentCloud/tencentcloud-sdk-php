@@ -94,32 +94,32 @@ class PersonProfile extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PersonId",$param) and $param["PersonId"] !== null) {
-            $this->PersonId = $param["PersonId"];
+        if (array_key_exists('PersonId',$param) and $param['PersonId'] !== null) {
+            $this->PersonId = $param['PersonId'];
         }
 
-        if (array_key_exists("Gender",$param) and $param["Gender"] !== null) {
-            $this->Gender = $param["Gender"];
+        if (array_key_exists('Gender',$param) and $param['Gender'] !== null) {
+            $this->Gender = $param['Gender'];
         }
 
-        if (array_key_exists("Age",$param) and $param["Age"] !== null) {
-            $this->Age = $param["Age"];
+        if (array_key_exists('Age',$param) and $param['Age'] !== null) {
+            $this->Age = $param['Age'];
         }
 
-        if (array_key_exists("FirstArrivedTime",$param) and $param["FirstArrivedTime"] !== null) {
-            $this->FirstArrivedTime = $param["FirstArrivedTime"];
+        if (array_key_exists('FirstArrivedTime',$param) and $param['FirstArrivedTime'] !== null) {
+            $this->FirstArrivedTime = $param['FirstArrivedTime'];
         }
 
-        if (array_key_exists("ArrivedCount",$param) and $param["ArrivedCount"] !== null) {
-            $this->ArrivedCount = $param["ArrivedCount"];
+        if (array_key_exists('ArrivedCount',$param) and $param['ArrivedCount'] !== null) {
+            $this->ArrivedCount = $param['ArrivedCount'];
         }
 
-        if (array_key_exists("PicUrl",$param) and $param["PicUrl"] !== null) {
-            $this->PicUrl = $param["PicUrl"];
+        if (array_key_exists('PicUrl',$param) and $param['PicUrl'] !== null) {
+            $this->PicUrl = $param['PicUrl'];
         }
 
-        if (array_key_exists("Similarity",$param) and $param["Similarity"] !== null) {
-            $this->Similarity = $param["Similarity"];
+        if (array_key_exists('Similarity',$param) and $param['Similarity'] !== null) {
+            $this->Similarity = $param['Similarity'];
         }
     }
 }

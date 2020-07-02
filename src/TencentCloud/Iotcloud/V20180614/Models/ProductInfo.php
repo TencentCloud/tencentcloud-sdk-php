@@ -70,22 +70,22 @@ class ProductInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ProductId",$param) and $param["ProductId"] !== null) {
-            $this->ProductId = $param["ProductId"];
+        if (array_key_exists('ProductId',$param) and $param['ProductId'] !== null) {
+            $this->ProductId = $param['ProductId'];
         }
 
-        if (array_key_exists("ProductName",$param) and $param["ProductName"] !== null) {
-            $this->ProductName = $param["ProductName"];
+        if (array_key_exists('ProductName',$param) and $param['ProductName'] !== null) {
+            $this->ProductName = $param['ProductName'];
         }
 
-        if (array_key_exists("ProductMetadata",$param) and $param["ProductMetadata"] !== null) {
+        if (array_key_exists('ProductMetadata',$param) and $param['ProductMetadata'] !== null) {
             $this->ProductMetadata = new ProductMetadata();
-            $this->ProductMetadata->deserialize($param["ProductMetadata"]);
+            $this->ProductMetadata->deserialize($param['ProductMetadata']);
         }
 
-        if (array_key_exists("ProductProperties",$param) and $param["ProductProperties"] !== null) {
+        if (array_key_exists('ProductProperties',$param) and $param['ProductProperties'] !== null) {
             $this->ProductProperties = new ProductProperties();
-            $this->ProductProperties->deserialize($param["ProductProperties"]);
+            $this->ProductProperties->deserialize($param['ProductProperties']);
         }
     }
 }

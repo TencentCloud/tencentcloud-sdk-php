@@ -62,13 +62,13 @@ class IPStrategyApiStatus extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("ApiIdStatusSet",$param) and $param["ApiIdStatusSet"] !== null) {
+        if (array_key_exists('ApiIdStatusSet',$param) and $param['ApiIdStatusSet'] !== null) {
             $this->ApiIdStatusSet = [];
-            foreach ($param["ApiIdStatusSet"] as $key => $value){
+            foreach ($param['ApiIdStatusSet'] as $key => $value){
                 $obj = new IPStrategyApi();
                 $obj->deserialize($value);
                 array_push($this->ApiIdStatusSet, $obj);

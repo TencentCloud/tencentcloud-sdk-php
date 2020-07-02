@@ -54,13 +54,13 @@ class ModifyProjectResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Project",$param) and $param["Project"] !== null) {
+        if (array_key_exists('Project',$param) and $param['Project'] !== null) {
             $this->Project = new ProjectEntry();
-            $this->Project->deserialize($param["Project"]);
+            $this->Project->deserialize($param['Project']);
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

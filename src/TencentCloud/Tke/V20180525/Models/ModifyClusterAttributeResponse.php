@@ -82,20 +82,20 @@ class ModifyClusterAttributeResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
-            $this->ProjectId = $param["ProjectId"];
+        if (array_key_exists('ProjectId',$param) and $param['ProjectId'] !== null) {
+            $this->ProjectId = $param['ProjectId'];
         }
 
-        if (array_key_exists("ClusterName",$param) and $param["ClusterName"] !== null) {
-            $this->ClusterName = $param["ClusterName"];
+        if (array_key_exists('ClusterName',$param) and $param['ClusterName'] !== null) {
+            $this->ClusterName = $param['ClusterName'];
         }
 
-        if (array_key_exists("ClusterDesc",$param) and $param["ClusterDesc"] !== null) {
-            $this->ClusterDesc = $param["ClusterDesc"];
+        if (array_key_exists('ClusterDesc',$param) and $param['ClusterDesc'] !== null) {
+            $this->ClusterDesc = $param['ClusterDesc'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

@@ -70,25 +70,25 @@ class CodeDetail extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CodePosition",$param) and $param["CodePosition"] !== null) {
+        if (array_key_exists('CodePosition',$param) and $param['CodePosition'] !== null) {
             $this->CodePosition = [];
-            foreach ($param["CodePosition"] as $key => $value){
+            foreach ($param['CodePosition'] as $key => $value){
                 $obj = new CodePosition();
                 $obj->deserialize($value);
                 array_push($this->CodePosition, $obj);
             }
         }
 
-        if (array_key_exists("CodeCharset",$param) and $param["CodeCharset"] !== null) {
-            $this->CodeCharset = $param["CodeCharset"];
+        if (array_key_exists('CodeCharset',$param) and $param['CodeCharset'] !== null) {
+            $this->CodeCharset = $param['CodeCharset'];
         }
 
-        if (array_key_exists("CodeText",$param) and $param["CodeText"] !== null) {
-            $this->CodeText = $param["CodeText"];
+        if (array_key_exists('CodeText',$param) and $param['CodeText'] !== null) {
+            $this->CodeText = $param['CodeText'];
         }
 
-        if (array_key_exists("CodeType",$param) and $param["CodeType"] !== null) {
-            $this->CodeType = $param["CodeType"];
+        if (array_key_exists('CodeType',$param) and $param['CodeType'] !== null) {
+            $this->CodeType = $param['CodeType'];
         }
     }
 }

@@ -54,12 +54,12 @@ class DeviceSignature extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DeviceName",$param) and $param["DeviceName"] !== null) {
-            $this->DeviceName = $param["DeviceName"];
+        if (array_key_exists('DeviceName',$param) and $param['DeviceName'] !== null) {
+            $this->DeviceName = $param['DeviceName'];
         }
 
-        if (array_key_exists("DeviceSignature",$param) and $param["DeviceSignature"] !== null) {
-            $this->DeviceSignature = $param["DeviceSignature"];
+        if (array_key_exists('DeviceSignature',$param) and $param['DeviceSignature'] !== null) {
+            $this->DeviceSignature = $param['DeviceSignature'];
         }
     }
 }

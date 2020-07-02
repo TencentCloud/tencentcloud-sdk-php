@@ -70,20 +70,20 @@ class DescribeWordItemsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DictId",$param) and $param["DictId"] !== null) {
-            $this->DictId = $param["DictId"];
+        if (array_key_exists('DictId',$param) and $param['DictId'] !== null) {
+            $this->DictId = $param['DictId'];
         }
 
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
+        if (array_key_exists('Limit',$param) and $param['Limit'] !== null) {
+            $this->Limit = $param['Limit'];
         }
 
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
+        if (array_key_exists('Offset',$param) and $param['Offset'] !== null) {
+            $this->Offset = $param['Offset'];
         }
 
-        if (array_key_exists("Text",$param) and $param["Text"] !== null) {
-            $this->Text = $param["Text"];
+        if (array_key_exists('Text',$param) and $param['Text'] !== null) {
+            $this->Text = $param['Text'];
         }
     }
 }

@@ -122,34 +122,34 @@ class TriggerResp extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TriggerName",$param) and $param["TriggerName"] !== null) {
-            $this->TriggerName = $param["TriggerName"];
+        if (array_key_exists('TriggerName',$param) and $param['TriggerName'] !== null) {
+            $this->TriggerName = $param['TriggerName'];
         }
 
-        if (array_key_exists("InvokeSource",$param) and $param["InvokeSource"] !== null) {
-            $this->InvokeSource = $param["InvokeSource"];
+        if (array_key_exists('InvokeSource',$param) and $param['InvokeSource'] !== null) {
+            $this->InvokeSource = $param['InvokeSource'];
         }
 
-        if (array_key_exists("InvokeAction",$param) and $param["InvokeAction"] !== null) {
-            $this->InvokeAction = $param["InvokeAction"];
+        if (array_key_exists('InvokeAction',$param) and $param['InvokeAction'] !== null) {
+            $this->InvokeAction = $param['InvokeAction'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
-            $this->UpdateTime = $param["UpdateTime"];
+        if (array_key_exists('UpdateTime',$param) and $param['UpdateTime'] !== null) {
+            $this->UpdateTime = $param['UpdateTime'];
         }
 
-        if (array_key_exists("InvokeCondition",$param) and $param["InvokeCondition"] !== null) {
+        if (array_key_exists('InvokeCondition',$param) and $param['InvokeCondition'] !== null) {
             $this->InvokeCondition = new TriggerInvokeCondition();
-            $this->InvokeCondition->deserialize($param["InvokeCondition"]);
+            $this->InvokeCondition->deserialize($param['InvokeCondition']);
         }
 
-        if (array_key_exists("InvokePara",$param) and $param["InvokePara"] !== null) {
+        if (array_key_exists('InvokePara',$param) and $param['InvokePara'] !== null) {
             $this->InvokePara = new TriggerInvokePara();
-            $this->InvokePara->deserialize($param["InvokePara"]);
+            $this->InvokePara->deserialize($param['InvokePara']);
         }
     }
 }

@@ -54,12 +54,12 @@ class DeleteRoutePolicyRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RouteTableId",$param) and $param["RouteTableId"] !== null) {
-            $this->RouteTableId = $param["RouteTableId"];
+        if (array_key_exists('RouteTableId',$param) and $param['RouteTableId'] !== null) {
+            $this->RouteTableId = $param['RouteTableId'];
         }
 
-        if (array_key_exists("RoutePolicyId",$param) and $param["RoutePolicyId"] !== null) {
-            $this->RoutePolicyId = $param["RoutePolicyId"];
+        if (array_key_exists('RoutePolicyId',$param) and $param['RoutePolicyId'] !== null) {
+            $this->RoutePolicyId = $param['RoutePolicyId'];
         }
     }
 }

@@ -54,13 +54,13 @@ class DescribeSmpnMrlResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ResponseData",$param) and $param["ResponseData"] !== null) {
+        if (array_key_exists('ResponseData',$param) and $param['ResponseData'] !== null) {
             $this->ResponseData = new MRLResponse();
-            $this->ResponseData->deserialize($param["ResponseData"]);
+            $this->ResponseData->deserialize($param['ResponseData']);
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

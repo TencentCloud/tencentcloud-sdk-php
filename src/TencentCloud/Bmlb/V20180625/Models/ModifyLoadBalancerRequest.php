@@ -62,16 +62,16 @@ class ModifyLoadBalancerRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LoadBalancerId",$param) and $param["LoadBalancerId"] !== null) {
-            $this->LoadBalancerId = $param["LoadBalancerId"];
+        if (array_key_exists('LoadBalancerId',$param) and $param['LoadBalancerId'] !== null) {
+            $this->LoadBalancerId = $param['LoadBalancerId'];
         }
 
-        if (array_key_exists("LoadBalancerName",$param) and $param["LoadBalancerName"] !== null) {
-            $this->LoadBalancerName = $param["LoadBalancerName"];
+        if (array_key_exists('LoadBalancerName',$param) and $param['LoadBalancerName'] !== null) {
+            $this->LoadBalancerName = $param['LoadBalancerName'];
         }
 
-        if (array_key_exists("DomainPrefix",$param) and $param["DomainPrefix"] !== null) {
-            $this->DomainPrefix = $param["DomainPrefix"];
+        if (array_key_exists('DomainPrefix',$param) and $param['DomainPrefix'] !== null) {
+            $this->DomainPrefix = $param['DomainPrefix'];
         }
     }
 }

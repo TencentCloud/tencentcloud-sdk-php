@@ -62,16 +62,16 @@ class DemoteServiceUsagePlanRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("UsagePlanId",$param) and $param["UsagePlanId"] !== null) {
-            $this->UsagePlanId = $param["UsagePlanId"];
+        if (array_key_exists('UsagePlanId',$param) and $param['UsagePlanId'] !== null) {
+            $this->UsagePlanId = $param['UsagePlanId'];
         }
 
-        if (array_key_exists("ServiceId",$param) and $param["ServiceId"] !== null) {
-            $this->ServiceId = $param["ServiceId"];
+        if (array_key_exists('ServiceId',$param) and $param['ServiceId'] !== null) {
+            $this->ServiceId = $param['ServiceId'];
         }
 
-        if (array_key_exists("Environment",$param) and $param["Environment"] !== null) {
-            $this->Environment = $param["Environment"];
+        if (array_key_exists('Environment',$param) and $param['Environment'] !== null) {
+            $this->Environment = $param['Environment'];
         }
     }
 }

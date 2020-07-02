@@ -86,24 +86,24 @@ class DescribeKeysRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DrmType",$param) and $param["DrmType"] !== null) {
-            $this->DrmType = $param["DrmType"];
+        if (array_key_exists('DrmType',$param) and $param['DrmType'] !== null) {
+            $this->DrmType = $param['DrmType'];
         }
 
-        if (array_key_exists("Tracks",$param) and $param["Tracks"] !== null) {
-            $this->Tracks = $param["Tracks"];
+        if (array_key_exists('Tracks',$param) and $param['Tracks'] !== null) {
+            $this->Tracks = $param['Tracks'];
         }
 
-        if (array_key_exists("ContentType",$param) and $param["ContentType"] !== null) {
-            $this->ContentType = $param["ContentType"];
+        if (array_key_exists('ContentType',$param) and $param['ContentType'] !== null) {
+            $this->ContentType = $param['ContentType'];
         }
 
-        if (array_key_exists("RsaPublicKey",$param) and $param["RsaPublicKey"] !== null) {
-            $this->RsaPublicKey = $param["RsaPublicKey"];
+        if (array_key_exists('RsaPublicKey',$param) and $param['RsaPublicKey'] !== null) {
+            $this->RsaPublicKey = $param['RsaPublicKey'];
         }
 
-        if (array_key_exists("ContentId",$param) and $param["ContentId"] !== null) {
-            $this->ContentId = $param["ContentId"];
+        if (array_key_exists('ContentId',$param) and $param['ContentId'] !== null) {
+            $this->ContentId = $param['ContentId'];
         }
     }
 }

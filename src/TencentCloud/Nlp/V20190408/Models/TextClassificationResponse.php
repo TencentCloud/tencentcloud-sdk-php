@@ -54,17 +54,17 @@ class TextClassificationResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Classes",$param) and $param["Classes"] !== null) {
+        if (array_key_exists('Classes',$param) and $param['Classes'] !== null) {
             $this->Classes = [];
-            foreach ($param["Classes"] as $key => $value){
+            foreach ($param['Classes'] as $key => $value){
                 $obj = new ClassificationResult();
                 $obj->deserialize($value);
                 array_push($this->Classes, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

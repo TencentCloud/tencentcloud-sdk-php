@@ -46,9 +46,9 @@ class ModifyAccessRulesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AccessRules",$param) and $param["AccessRules"] !== null) {
+        if (array_key_exists('AccessRules',$param) and $param['AccessRules'] !== null) {
             $this->AccessRules = [];
-            foreach ($param["AccessRules"] as $key => $value){
+            foreach ($param['AccessRules'] as $key => $value){
                 $obj = new AccessRule();
                 $obj->deserialize($value);
                 array_push($this->AccessRules, $obj);

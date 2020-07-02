@@ -54,13 +54,13 @@ class QueryTradeResult extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
+        if (array_key_exists('Data',$param) and $param['Data'] !== null) {
             $this->Data = new QueryTradeData();
-            $this->Data->deserialize($param["Data"]);
+            $this->Data->deserialize($param['Data']);
         }
 
-        if (array_key_exists("Code",$param) and $param["Code"] !== null) {
-            $this->Code = $param["Code"];
+        if (array_key_exists('Code',$param) and $param['Code'] !== null) {
+            $this->Code = $param['Code'];
         }
     }
 }

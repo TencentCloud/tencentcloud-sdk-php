@@ -74,16 +74,16 @@ class VodAudioStreamItem extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Bitrate",$param) and $param["Bitrate"] !== null) {
-            $this->Bitrate = $param["Bitrate"];
+        if (array_key_exists('Bitrate',$param) and $param['Bitrate'] !== null) {
+            $this->Bitrate = $param['Bitrate'];
         }
 
-        if (array_key_exists("SamplingRate",$param) and $param["SamplingRate"] !== null) {
-            $this->SamplingRate = $param["SamplingRate"];
+        if (array_key_exists('SamplingRate',$param) and $param['SamplingRate'] !== null) {
+            $this->SamplingRate = $param['SamplingRate'];
         }
 
-        if (array_key_exists("Codec",$param) and $param["Codec"] !== null) {
-            $this->Codec = $param["Codec"];
+        if (array_key_exists('Codec',$param) and $param['Codec'] !== null) {
+            $this->Codec = $param['Codec'];
         }
     }
 }

@@ -54,17 +54,17 @@ class DescribeWhiteBoxKeyDetailsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("KeyInfos",$param) and $param["KeyInfos"] !== null) {
+        if (array_key_exists('KeyInfos',$param) and $param['KeyInfos'] !== null) {
             $this->KeyInfos = [];
-            foreach ($param["KeyInfos"] as $key => $value){
+            foreach ($param['KeyInfos'] as $key => $value){
                 $obj = new WhiteboxKeyInfo();
                 $obj->deserialize($value);
                 array_push($this->KeyInfos, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

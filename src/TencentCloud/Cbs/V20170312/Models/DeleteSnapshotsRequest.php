@@ -46,8 +46,8 @@ class DeleteSnapshotsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SnapshotIds",$param) and $param["SnapshotIds"] !== null) {
-            $this->SnapshotIds = $param["SnapshotIds"];
+        if (array_key_exists('SnapshotIds',$param) and $param['SnapshotIds'] !== null) {
+            $this->SnapshotIds = $param['SnapshotIds'];
         }
     }
 }

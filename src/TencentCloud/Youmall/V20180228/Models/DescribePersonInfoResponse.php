@@ -78,29 +78,29 @@ class DescribePersonInfoResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CompanyId",$param) and $param["CompanyId"] !== null) {
-            $this->CompanyId = $param["CompanyId"];
+        if (array_key_exists('CompanyId',$param) and $param['CompanyId'] !== null) {
+            $this->CompanyId = $param['CompanyId'];
         }
 
-        if (array_key_exists("ShopId",$param) and $param["ShopId"] !== null) {
-            $this->ShopId = $param["ShopId"];
+        if (array_key_exists('ShopId',$param) and $param['ShopId'] !== null) {
+            $this->ShopId = $param['ShopId'];
         }
 
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("PersonInfoSet",$param) and $param["PersonInfoSet"] !== null) {
+        if (array_key_exists('PersonInfoSet',$param) and $param['PersonInfoSet'] !== null) {
             $this->PersonInfoSet = [];
-            foreach ($param["PersonInfoSet"] as $key => $value){
+            foreach ($param['PersonInfoSet'] as $key => $value){
                 $obj = new PersonInfo();
                 $obj->deserialize($value);
                 array_push($this->PersonInfoSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

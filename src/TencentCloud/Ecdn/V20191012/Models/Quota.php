@@ -62,16 +62,16 @@ class Quota extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Batch",$param) and $param["Batch"] !== null) {
-            $this->Batch = $param["Batch"];
+        if (array_key_exists('Batch',$param) and $param['Batch'] !== null) {
+            $this->Batch = $param['Batch'];
         }
 
-        if (array_key_exists("Total",$param) and $param["Total"] !== null) {
-            $this->Total = $param["Total"];
+        if (array_key_exists('Total',$param) and $param['Total'] !== null) {
+            $this->Total = $param['Total'];
         }
 
-        if (array_key_exists("Available",$param) and $param["Available"] !== null) {
-            $this->Available = $param["Available"];
+        if (array_key_exists('Available',$param) and $param['Available'] !== null) {
+            $this->Available = $param['Available'];
         }
     }
 }

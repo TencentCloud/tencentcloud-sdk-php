@@ -70,20 +70,20 @@ class TempCertificate extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SecretId",$param) and $param["SecretId"] !== null) {
-            $this->SecretId = $param["SecretId"];
+        if (array_key_exists('SecretId',$param) and $param['SecretId'] !== null) {
+            $this->SecretId = $param['SecretId'];
         }
 
-        if (array_key_exists("SecretKey",$param) and $param["SecretKey"] !== null) {
-            $this->SecretKey = $param["SecretKey"];
+        if (array_key_exists('SecretKey',$param) and $param['SecretKey'] !== null) {
+            $this->SecretKey = $param['SecretKey'];
         }
 
-        if (array_key_exists("Token",$param) and $param["Token"] !== null) {
-            $this->Token = $param["Token"];
+        if (array_key_exists('Token',$param) and $param['Token'] !== null) {
+            $this->Token = $param['Token'];
         }
 
-        if (array_key_exists("ExpiredTime",$param) and $param["ExpiredTime"] !== null) {
-            $this->ExpiredTime = $param["ExpiredTime"];
+        if (array_key_exists('ExpiredTime',$param) and $param['ExpiredTime'] !== null) {
+            $this->ExpiredTime = $param['ExpiredTime'];
         }
     }
 }

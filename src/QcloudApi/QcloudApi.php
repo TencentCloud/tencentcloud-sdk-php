@@ -234,25 +234,25 @@ class QcloudApi
     /**
      * MODULE_STS
      */
-	const MODULE_STS = "sts";
+	const MODULE_STS = 'sts';
 
     /**
      * MODULE_ATHENA
      * 金融智能客服
      */
-    const MODULE_ATHENA = "athena";
+    const MODULE_ATHENA = 'athena';
 
     /**
      * MODULE_TBAAS
      * 区块链服务
      */
-    const MODULE_TBAAS = "tbaas";
+    const MODULE_TBAAS = 'tbaas';
 
     /**
      * MODULE_EMR
      * 弹性 MapReduce
      */
-    const MODULE_EMR = "emr";
+    const MODULE_EMR = 'emr';
 
     /**
      * load

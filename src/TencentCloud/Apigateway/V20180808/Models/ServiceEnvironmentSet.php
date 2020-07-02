@@ -62,13 +62,13 @@ class ServiceEnvironmentSet extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("EnvironmentList",$param) and $param["EnvironmentList"] !== null) {
+        if (array_key_exists('EnvironmentList',$param) and $param['EnvironmentList'] !== null) {
             $this->EnvironmentList = [];
-            foreach ($param["EnvironmentList"] as $key => $value){
+            foreach ($param['EnvironmentList'] as $key => $value){
                 $obj = new Environment();
                 $obj->deserialize($value);
                 array_push($this->EnvironmentList, $obj);

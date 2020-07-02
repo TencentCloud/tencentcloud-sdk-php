@@ -46,8 +46,8 @@ class DeleteTrafficMirrorRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TrafficMirrorIds",$param) and $param["TrafficMirrorIds"] !== null) {
-            $this->TrafficMirrorIds = $param["TrafficMirrorIds"];
+        if (array_key_exists('TrafficMirrorIds',$param) and $param['TrafficMirrorIds'] !== null) {
+            $this->TrafficMirrorIds = $param['TrafficMirrorIds'];
         }
     }
 }

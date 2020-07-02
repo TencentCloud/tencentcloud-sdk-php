@@ -62,16 +62,16 @@ class ModifyBandwidthPackageAttributeRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BandwidthPackageId",$param) and $param["BandwidthPackageId"] !== null) {
-            $this->BandwidthPackageId = $param["BandwidthPackageId"];
+        if (array_key_exists('BandwidthPackageId',$param) and $param['BandwidthPackageId'] !== null) {
+            $this->BandwidthPackageId = $param['BandwidthPackageId'];
         }
 
-        if (array_key_exists("BandwidthPackageName",$param) and $param["BandwidthPackageName"] !== null) {
-            $this->BandwidthPackageName = $param["BandwidthPackageName"];
+        if (array_key_exists('BandwidthPackageName',$param) and $param['BandwidthPackageName'] !== null) {
+            $this->BandwidthPackageName = $param['BandwidthPackageName'];
         }
 
-        if (array_key_exists("ChargeType",$param) and $param["ChargeType"] !== null) {
-            $this->ChargeType = $param["ChargeType"];
+        if (array_key_exists('ChargeType',$param) and $param['ChargeType'] !== null) {
+            $this->ChargeType = $param['ChargeType'];
         }
     }
 }

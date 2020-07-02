@@ -54,12 +54,12 @@ class Keyword extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Score",$param) and $param["Score"] !== null) {
-            $this->Score = $param["Score"];
+        if (array_key_exists('Score',$param) and $param['Score'] !== null) {
+            $this->Score = $param['Score'];
         }
 
-        if (array_key_exists("Word",$param) and $param["Word"] !== null) {
-            $this->Word = $param["Word"];
+        if (array_key_exists('Word',$param) and $param['Word'] !== null) {
+            $this->Word = $param['Word'];
         }
     }
 }

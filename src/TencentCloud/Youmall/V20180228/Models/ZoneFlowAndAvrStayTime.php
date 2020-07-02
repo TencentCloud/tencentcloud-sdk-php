@@ -70,20 +70,20 @@ class ZoneFlowAndAvrStayTime extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ZoneId",$param) and $param["ZoneId"] !== null) {
-            $this->ZoneId = $param["ZoneId"];
+        if (array_key_exists('ZoneId',$param) and $param['ZoneId'] !== null) {
+            $this->ZoneId = $param['ZoneId'];
         }
 
-        if (array_key_exists("ZoneName",$param) and $param["ZoneName"] !== null) {
-            $this->ZoneName = $param["ZoneName"];
+        if (array_key_exists('ZoneName',$param) and $param['ZoneName'] !== null) {
+            $this->ZoneName = $param['ZoneName'];
         }
 
-        if (array_key_exists("FlowCount",$param) and $param["FlowCount"] !== null) {
-            $this->FlowCount = $param["FlowCount"];
+        if (array_key_exists('FlowCount',$param) and $param['FlowCount'] !== null) {
+            $this->FlowCount = $param['FlowCount'];
         }
 
-        if (array_key_exists("AvrStayTime",$param) and $param["AvrStayTime"] !== null) {
-            $this->AvrStayTime = $param["AvrStayTime"];
+        if (array_key_exists('AvrStayTime',$param) and $param['AvrStayTime'] !== null) {
+            $this->AvrStayTime = $param['AvrStayTime'];
         }
     }
 }

@@ -54,12 +54,12 @@ class HourTrafficInfoDetail extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Hour",$param) and $param["Hour"] !== null) {
-            $this->Hour = $param["Hour"];
+        if (array_key_exists('Hour',$param) and $param['Hour'] !== null) {
+            $this->Hour = $param['Hour'];
         }
 
-        if (array_key_exists("HourTrafficTotalCount",$param) and $param["HourTrafficTotalCount"] !== null) {
-            $this->HourTrafficTotalCount = $param["HourTrafficTotalCount"];
+        if (array_key_exists('HourTrafficTotalCount',$param) and $param['HourTrafficTotalCount'] !== null) {
+            $this->HourTrafficTotalCount = $param['HourTrafficTotalCount'];
         }
     }
 }

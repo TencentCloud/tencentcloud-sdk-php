@@ -66,12 +66,12 @@ class AsrFullTextConfigureInfoForUpdate extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Switch",$param) and $param["Switch"] !== null) {
-            $this->Switch = $param["Switch"];
+        if (array_key_exists('Switch',$param) and $param['Switch'] !== null) {
+            $this->Switch = $param['Switch'];
         }
 
-        if (array_key_exists("SubtitleFormat",$param) and $param["SubtitleFormat"] !== null) {
-            $this->SubtitleFormat = $param["SubtitleFormat"];
+        if (array_key_exists('SubtitleFormat',$param) and $param['SubtitleFormat'] !== null) {
+            $this->SubtitleFormat = $param['SubtitleFormat'];
         }
     }
 }

@@ -70,20 +70,20 @@ class DeviceDiskInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("IoRatioPerSec",$param) and $param["IoRatioPerSec"] !== null) {
-            $this->IoRatioPerSec = $param["IoRatioPerSec"];
+        if (array_key_exists('IoRatioPerSec',$param) and $param['IoRatioPerSec'] !== null) {
+            $this->IoRatioPerSec = $param['IoRatioPerSec'];
         }
 
-        if (array_key_exists("IoWaitTime",$param) and $param["IoWaitTime"] !== null) {
-            $this->IoWaitTime = $param["IoWaitTime"];
+        if (array_key_exists('IoWaitTime',$param) and $param['IoWaitTime'] !== null) {
+            $this->IoWaitTime = $param['IoWaitTime'];
         }
 
-        if (array_key_exists("Read",$param) and $param["Read"] !== null) {
-            $this->Read = $param["Read"];
+        if (array_key_exists('Read',$param) and $param['Read'] !== null) {
+            $this->Read = $param['Read'];
         }
 
-        if (array_key_exists("Write",$param) and $param["Write"] !== null) {
-            $this->Write = $param["Write"];
+        if (array_key_exists('Write',$param) and $param['Write'] !== null) {
+            $this->Write = $param['Write'];
         }
     }
 }

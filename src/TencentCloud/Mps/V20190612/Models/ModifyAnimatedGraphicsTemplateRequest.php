@@ -162,40 +162,40 @@ class ModifyAnimatedGraphicsTemplateRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Definition",$param) and $param["Definition"] !== null) {
-            $this->Definition = $param["Definition"];
+        if (array_key_exists('Definition',$param) and $param['Definition'] !== null) {
+            $this->Definition = $param['Definition'];
         }
 
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("Width",$param) and $param["Width"] !== null) {
-            $this->Width = $param["Width"];
+        if (array_key_exists('Width',$param) and $param['Width'] !== null) {
+            $this->Width = $param['Width'];
         }
 
-        if (array_key_exists("Height",$param) and $param["Height"] !== null) {
-            $this->Height = $param["Height"];
+        if (array_key_exists('Height',$param) and $param['Height'] !== null) {
+            $this->Height = $param['Height'];
         }
 
-        if (array_key_exists("ResolutionAdaptive",$param) and $param["ResolutionAdaptive"] !== null) {
-            $this->ResolutionAdaptive = $param["ResolutionAdaptive"];
+        if (array_key_exists('ResolutionAdaptive',$param) and $param['ResolutionAdaptive'] !== null) {
+            $this->ResolutionAdaptive = $param['ResolutionAdaptive'];
         }
 
-        if (array_key_exists("Format",$param) and $param["Format"] !== null) {
-            $this->Format = $param["Format"];
+        if (array_key_exists('Format',$param) and $param['Format'] !== null) {
+            $this->Format = $param['Format'];
         }
 
-        if (array_key_exists("Fps",$param) and $param["Fps"] !== null) {
-            $this->Fps = $param["Fps"];
+        if (array_key_exists('Fps',$param) and $param['Fps'] !== null) {
+            $this->Fps = $param['Fps'];
         }
 
-        if (array_key_exists("Quality",$param) and $param["Quality"] !== null) {
-            $this->Quality = $param["Quality"];
+        if (array_key_exists('Quality',$param) and $param['Quality'] !== null) {
+            $this->Quality = $param['Quality'];
         }
 
-        if (array_key_exists("Comment",$param) and $param["Comment"] !== null) {
-            $this->Comment = $param["Comment"];
+        if (array_key_exists('Comment',$param) and $param['Comment'] !== null) {
+            $this->Comment = $param['Comment'];
         }
     }
 }

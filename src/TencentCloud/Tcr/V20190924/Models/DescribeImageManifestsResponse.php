@@ -62,16 +62,16 @@ class DescribeImageManifestsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Manifest",$param) and $param["Manifest"] !== null) {
-            $this->Manifest = $param["Manifest"];
+        if (array_key_exists('Manifest',$param) and $param['Manifest'] !== null) {
+            $this->Manifest = $param['Manifest'];
         }
 
-        if (array_key_exists("Config",$param) and $param["Config"] !== null) {
-            $this->Config = $param["Config"];
+        if (array_key_exists('Config',$param) and $param['Config'] !== null) {
+            $this->Config = $param['Config'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

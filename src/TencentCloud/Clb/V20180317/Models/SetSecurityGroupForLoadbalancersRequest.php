@@ -66,16 +66,16 @@ DEL 解绑安全组
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SecurityGroup",$param) and $param["SecurityGroup"] !== null) {
-            $this->SecurityGroup = $param["SecurityGroup"];
+        if (array_key_exists('SecurityGroup',$param) and $param['SecurityGroup'] !== null) {
+            $this->SecurityGroup = $param['SecurityGroup'];
         }
 
-        if (array_key_exists("OperationType",$param) and $param["OperationType"] !== null) {
-            $this->OperationType = $param["OperationType"];
+        if (array_key_exists('OperationType',$param) and $param['OperationType'] !== null) {
+            $this->OperationType = $param['OperationType'];
         }
 
-        if (array_key_exists("LoadBalancerIds",$param) and $param["LoadBalancerIds"] !== null) {
-            $this->LoadBalancerIds = $param["LoadBalancerIds"];
+        if (array_key_exists('LoadBalancerIds',$param) and $param['LoadBalancerIds'] !== null) {
+            $this->LoadBalancerIds = $param['LoadBalancerIds'];
         }
     }
 }

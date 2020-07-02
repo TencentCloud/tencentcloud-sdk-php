@@ -70,20 +70,20 @@ class UpdateSecretRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SecretName",$param) and $param["SecretName"] !== null) {
-            $this->SecretName = $param["SecretName"];
+        if (array_key_exists('SecretName',$param) and $param['SecretName'] !== null) {
+            $this->SecretName = $param['SecretName'];
         }
 
-        if (array_key_exists("VersionId",$param) and $param["VersionId"] !== null) {
-            $this->VersionId = $param["VersionId"];
+        if (array_key_exists('VersionId',$param) and $param['VersionId'] !== null) {
+            $this->VersionId = $param['VersionId'];
         }
 
-        if (array_key_exists("SecretBinary",$param) and $param["SecretBinary"] !== null) {
-            $this->SecretBinary = $param["SecretBinary"];
+        if (array_key_exists('SecretBinary',$param) and $param['SecretBinary'] !== null) {
+            $this->SecretBinary = $param['SecretBinary'];
         }
 
-        if (array_key_exists("SecretString",$param) and $param["SecretString"] !== null) {
-            $this->SecretString = $param["SecretString"];
+        if (array_key_exists('SecretString',$param) and $param['SecretString'] !== null) {
+            $this->SecretString = $param['SecretString'];
         }
     }
 }

@@ -62,21 +62,21 @@ class InstanceDataDiskMountSetting extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
-            $this->InstanceType = $param["InstanceType"];
+        if (array_key_exists('InstanceType',$param) and $param['InstanceType'] !== null) {
+            $this->InstanceType = $param['InstanceType'];
         }
 
-        if (array_key_exists("DataDisks",$param) and $param["DataDisks"] !== null) {
+        if (array_key_exists('DataDisks',$param) and $param['DataDisks'] !== null) {
             $this->DataDisks = [];
-            foreach ($param["DataDisks"] as $key => $value){
+            foreach ($param['DataDisks'] as $key => $value){
                 $obj = new DataDisk();
                 $obj->deserialize($value);
                 array_push($this->DataDisks, $obj);
             }
         }
 
-        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
-            $this->Zone = $param["Zone"];
+        if (array_key_exists('Zone',$param) and $param['Zone'] !== null) {
+            $this->Zone = $param['Zone'];
         }
     }
 }

@@ -94,32 +94,32 @@ class CreateTriggerRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FunctionName",$param) and $param["FunctionName"] !== null) {
-            $this->FunctionName = $param["FunctionName"];
+        if (array_key_exists('FunctionName',$param) and $param['FunctionName'] !== null) {
+            $this->FunctionName = $param['FunctionName'];
         }
 
-        if (array_key_exists("TriggerName",$param) and $param["TriggerName"] !== null) {
-            $this->TriggerName = $param["TriggerName"];
+        if (array_key_exists('TriggerName',$param) and $param['TriggerName'] !== null) {
+            $this->TriggerName = $param['TriggerName'];
         }
 
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists('Type',$param) and $param['Type'] !== null) {
+            $this->Type = $param['Type'];
         }
 
-        if (array_key_exists("TriggerDesc",$param) and $param["TriggerDesc"] !== null) {
-            $this->TriggerDesc = $param["TriggerDesc"];
+        if (array_key_exists('TriggerDesc',$param) and $param['TriggerDesc'] !== null) {
+            $this->TriggerDesc = $param['TriggerDesc'];
         }
 
-        if (array_key_exists("Namespace",$param) and $param["Namespace"] !== null) {
-            $this->Namespace = $param["Namespace"];
+        if (array_key_exists('Namespace',$param) and $param['Namespace'] !== null) {
+            $this->Namespace = $param['Namespace'];
         }
 
-        if (array_key_exists("Qualifier",$param) and $param["Qualifier"] !== null) {
-            $this->Qualifier = $param["Qualifier"];
+        if (array_key_exists('Qualifier',$param) and $param['Qualifier'] !== null) {
+            $this->Qualifier = $param['Qualifier'];
         }
 
-        if (array_key_exists("Enable",$param) and $param["Enable"] !== null) {
-            $this->Enable = $param["Enable"];
+        if (array_key_exists('Enable',$param) and $param['Enable'] !== null) {
+            $this->Enable = $param['Enable'];
         }
     }
 }

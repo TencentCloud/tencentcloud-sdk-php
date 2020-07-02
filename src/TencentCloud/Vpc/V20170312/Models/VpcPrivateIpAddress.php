@@ -70,20 +70,20 @@ class VpcPrivateIpAddress extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PrivateIpAddress",$param) and $param["PrivateIpAddress"] !== null) {
-            $this->PrivateIpAddress = $param["PrivateIpAddress"];
+        if (array_key_exists('PrivateIpAddress',$param) and $param['PrivateIpAddress'] !== null) {
+            $this->PrivateIpAddress = $param['PrivateIpAddress'];
         }
 
-        if (array_key_exists("CidrBlock",$param) and $param["CidrBlock"] !== null) {
-            $this->CidrBlock = $param["CidrBlock"];
+        if (array_key_exists('CidrBlock',$param) and $param['CidrBlock'] !== null) {
+            $this->CidrBlock = $param['CidrBlock'];
         }
 
-        if (array_key_exists("PrivateIpAddressType",$param) and $param["PrivateIpAddressType"] !== null) {
-            $this->PrivateIpAddressType = $param["PrivateIpAddressType"];
+        if (array_key_exists('PrivateIpAddressType',$param) and $param['PrivateIpAddressType'] !== null) {
+            $this->PrivateIpAddressType = $param['PrivateIpAddressType'];
         }
 
-        if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
-            $this->CreatedTime = $param["CreatedTime"];
+        if (array_key_exists('CreatedTime',$param) and $param['CreatedTime'] !== null) {
+            $this->CreatedTime = $param['CreatedTime'];
         }
     }
 }

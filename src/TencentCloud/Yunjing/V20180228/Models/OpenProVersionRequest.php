@@ -86,20 +86,20 @@ class OpenProVersionRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MachineType",$param) and $param["MachineType"] !== null) {
-            $this->MachineType = $param["MachineType"];
+        if (array_key_exists('MachineType',$param) and $param['MachineType'] !== null) {
+            $this->MachineType = $param['MachineType'];
         }
 
-        if (array_key_exists("MachineRegion",$param) and $param["MachineRegion"] !== null) {
-            $this->MachineRegion = $param["MachineRegion"];
+        if (array_key_exists('MachineRegion',$param) and $param['MachineRegion'] !== null) {
+            $this->MachineRegion = $param['MachineRegion'];
         }
 
-        if (array_key_exists("Quuids",$param) and $param["Quuids"] !== null) {
-            $this->Quuids = $param["Quuids"];
+        if (array_key_exists('Quuids',$param) and $param['Quuids'] !== null) {
+            $this->Quuids = $param['Quuids'];
         }
 
-        if (array_key_exists("ActivityId",$param) and $param["ActivityId"] !== null) {
-            $this->ActivityId = $param["ActivityId"];
+        if (array_key_exists('ActivityId',$param) and $param['ActivityId'] !== null) {
+            $this->ActivityId = $param['ActivityId'];
         }
     }
 }

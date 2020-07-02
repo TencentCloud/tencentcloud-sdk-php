@@ -54,13 +54,13 @@ class WaybillOCRResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TextDetections",$param) and $param["TextDetections"] !== null) {
+        if (array_key_exists('TextDetections',$param) and $param['TextDetections'] !== null) {
             $this->TextDetections = new TextWaybill();
-            $this->TextDetections->deserialize($param["TextDetections"]);
+            $this->TextDetections->deserialize($param['TextDetections']);
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

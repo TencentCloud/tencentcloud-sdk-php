@@ -70,20 +70,20 @@ class SubmitTraditionalClassTaskRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FileContent",$param) and $param["FileContent"] !== null) {
-            $this->FileContent = $param["FileContent"];
+        if (array_key_exists('FileContent',$param) and $param['FileContent'] !== null) {
+            $this->FileContent = $param['FileContent'];
         }
 
-        if (array_key_exists("FileType",$param) and $param["FileType"] !== null) {
-            $this->FileType = $param["FileType"];
+        if (array_key_exists('FileType',$param) and $param['FileType'] !== null) {
+            $this->FileType = $param['FileType'];
         }
 
-        if (array_key_exists("LibrarySet",$param) and $param["LibrarySet"] !== null) {
-            $this->LibrarySet = $param["LibrarySet"];
+        if (array_key_exists('LibrarySet',$param) and $param['LibrarySet'] !== null) {
+            $this->LibrarySet = $param['LibrarySet'];
         }
 
-        if (array_key_exists("MaxVideoDuration",$param) and $param["MaxVideoDuration"] !== null) {
-            $this->MaxVideoDuration = $param["MaxVideoDuration"];
+        if (array_key_exists('MaxVideoDuration',$param) and $param['MaxVideoDuration'] !== null) {
+            $this->MaxVideoDuration = $param['MaxVideoDuration'];
         }
     }
 }

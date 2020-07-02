@@ -46,8 +46,8 @@ class DescribeTrainingJobRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TrainingJobName",$param) and $param["TrainingJobName"] !== null) {
-            $this->TrainingJobName = $param["TrainingJobName"];
+        if (array_key_exists('TrainingJobName',$param) and $param['TrainingJobName'] !== null) {
+            $this->TrainingJobName = $param['TrainingJobName'];
         }
     }
 }

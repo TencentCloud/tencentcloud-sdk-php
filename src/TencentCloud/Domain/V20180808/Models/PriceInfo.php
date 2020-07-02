@@ -78,24 +78,24 @@ class PriceInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Tld",$param) and $param["Tld"] !== null) {
-            $this->Tld = $param["Tld"];
+        if (array_key_exists('Tld',$param) and $param['Tld'] !== null) {
+            $this->Tld = $param['Tld'];
         }
 
-        if (array_key_exists("Year",$param) and $param["Year"] !== null) {
-            $this->Year = $param["Year"];
+        if (array_key_exists('Year',$param) and $param['Year'] !== null) {
+            $this->Year = $param['Year'];
         }
 
-        if (array_key_exists("Price",$param) and $param["Price"] !== null) {
-            $this->Price = $param["Price"];
+        if (array_key_exists('Price',$param) and $param['Price'] !== null) {
+            $this->Price = $param['Price'];
         }
 
-        if (array_key_exists("RealPrice",$param) and $param["RealPrice"] !== null) {
-            $this->RealPrice = $param["RealPrice"];
+        if (array_key_exists('RealPrice',$param) and $param['RealPrice'] !== null) {
+            $this->RealPrice = $param['RealPrice'];
         }
 
-        if (array_key_exists("Operation",$param) and $param["Operation"] !== null) {
-            $this->Operation = $param["Operation"];
+        if (array_key_exists('Operation',$param) and $param['Operation'] !== null) {
+            $this->Operation = $param['Operation'];
         }
     }
 }

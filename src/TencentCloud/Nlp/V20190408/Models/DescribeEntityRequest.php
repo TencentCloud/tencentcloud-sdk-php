@@ -46,8 +46,8 @@ class DescribeEntityRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("EntityName",$param) and $param["EntityName"] !== null) {
-            $this->EntityName = $param["EntityName"];
+        if (array_key_exists('EntityName',$param) and $param['EntityName'] !== null) {
+            $this->EntityName = $param['EntityName'];
         }
     }
 }

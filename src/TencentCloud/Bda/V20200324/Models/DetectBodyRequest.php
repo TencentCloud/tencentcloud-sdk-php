@@ -126,21 +126,21 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Image",$param) and $param["Image"] !== null) {
-            $this->Image = $param["Image"];
+        if (array_key_exists('Image',$param) and $param['Image'] !== null) {
+            $this->Image = $param['Image'];
         }
 
-        if (array_key_exists("Url",$param) and $param["Url"] !== null) {
-            $this->Url = $param["Url"];
+        if (array_key_exists('Url',$param) and $param['Url'] !== null) {
+            $this->Url = $param['Url'];
         }
 
-        if (array_key_exists("MaxBodyNum",$param) and $param["MaxBodyNum"] !== null) {
-            $this->MaxBodyNum = $param["MaxBodyNum"];
+        if (array_key_exists('MaxBodyNum',$param) and $param['MaxBodyNum'] !== null) {
+            $this->MaxBodyNum = $param['MaxBodyNum'];
         }
 
-        if (array_key_exists("AttributesOptions",$param) and $param["AttributesOptions"] !== null) {
+        if (array_key_exists('AttributesOptions',$param) and $param['AttributesOptions'] !== null) {
             $this->AttributesOptions = new AttributesOptions();
-            $this->AttributesOptions->deserialize($param["AttributesOptions"]);
+            $this->AttributesOptions->deserialize($param['AttributesOptions']);
         }
     }
 }

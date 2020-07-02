@@ -62,21 +62,21 @@ class DescribeCatLogsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("CatLogs",$param) and $param["CatLogs"] !== null) {
+        if (array_key_exists('CatLogs',$param) and $param['CatLogs'] !== null) {
             $this->CatLogs = [];
-            foreach ($param["CatLogs"] as $key => $value){
+            foreach ($param['CatLogs'] as $key => $value){
                 $obj = new CatLog();
                 $obj->deserialize($value);
                 array_push($this->CatLogs, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

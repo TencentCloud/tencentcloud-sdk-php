@@ -94,29 +94,29 @@ class ListEventHistoryResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Context",$param) and $param["Context"] !== null) {
-            $this->Context = $param["Context"];
+        if (array_key_exists('Context',$param) and $param['Context'] !== null) {
+            $this->Context = $param['Context'];
         }
 
-        if (array_key_exists("Total",$param) and $param["Total"] !== null) {
-            $this->Total = $param["Total"];
+        if (array_key_exists('Total',$param) and $param['Total'] !== null) {
+            $this->Total = $param['Total'];
         }
 
-        if (array_key_exists("Listover",$param) and $param["Listover"] !== null) {
-            $this->Listover = $param["Listover"];
+        if (array_key_exists('Listover',$param) and $param['Listover'] !== null) {
+            $this->Listover = $param['Listover'];
         }
 
-        if (array_key_exists("EventHistory",$param) and $param["EventHistory"] !== null) {
+        if (array_key_exists('EventHistory',$param) and $param['EventHistory'] !== null) {
             $this->EventHistory = [];
-            foreach ($param["EventHistory"] as $key => $value){
+            foreach ($param['EventHistory'] as $key => $value){
                 $obj = new EventHistoryItem();
                 $obj->deserialize($value);
                 array_push($this->EventHistory, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

@@ -46,9 +46,9 @@ class AiAnalysisTaskCoverOutput extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CoverSet",$param) and $param["CoverSet"] !== null) {
+        if (array_key_exists('CoverSet',$param) and $param['CoverSet'] !== null) {
             $this->CoverSet = [];
-            foreach ($param["CoverSet"] as $key => $value){
+            foreach ($param['CoverSet'] as $key => $value){
                 $obj = new MediaAiAnalysisCoverItem();
                 $obj->deserialize($value);
                 array_push($this->CoverSet, $obj);

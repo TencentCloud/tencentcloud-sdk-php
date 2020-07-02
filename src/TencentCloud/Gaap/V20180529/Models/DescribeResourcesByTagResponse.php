@@ -62,21 +62,21 @@ class DescribeResourcesByTagResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("ResourceSet",$param) and $param["ResourceSet"] !== null) {
+        if (array_key_exists('ResourceSet',$param) and $param['ResourceSet'] !== null) {
             $this->ResourceSet = [];
-            foreach ($param["ResourceSet"] as $key => $value){
+            foreach ($param['ResourceSet'] as $key => $value){
                 $obj = new TagResourceInfo();
                 $obj->deserialize($value);
                 array_push($this->ResourceSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

@@ -74,16 +74,16 @@ DAILY_PUBLIC_IP_ASSIGN：用户当前地域下，重新分配公网 IP次数。
         if ($param === null) {
             return;
         }
-        if (array_key_exists("QuotaId",$param) and $param["QuotaId"] !== null) {
-            $this->QuotaId = $param["QuotaId"];
+        if (array_key_exists('QuotaId',$param) and $param['QuotaId'] !== null) {
+            $this->QuotaId = $param['QuotaId'];
         }
 
-        if (array_key_exists("QuotaCurrent",$param) and $param["QuotaCurrent"] !== null) {
-            $this->QuotaCurrent = $param["QuotaCurrent"];
+        if (array_key_exists('QuotaCurrent',$param) and $param['QuotaCurrent'] !== null) {
+            $this->QuotaCurrent = $param['QuotaCurrent'];
         }
 
-        if (array_key_exists("QuotaLimit",$param) and $param["QuotaLimit"] !== null) {
-            $this->QuotaLimit = $param["QuotaLimit"];
+        if (array_key_exists('QuotaLimit',$param) and $param['QuotaLimit'] !== null) {
+            $this->QuotaLimit = $param['QuotaLimit'];
         }
     }
 }

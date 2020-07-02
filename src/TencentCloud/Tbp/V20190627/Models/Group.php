@@ -70,16 +70,16 @@ class Group extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ContentType",$param) and $param["ContentType"] !== null) {
-            $this->ContentType = $param["ContentType"];
+        if (array_key_exists('ContentType',$param) and $param['ContentType'] !== null) {
+            $this->ContentType = $param['ContentType'];
         }
 
-        if (array_key_exists("Url",$param) and $param["Url"] !== null) {
-            $this->Url = $param["Url"];
+        if (array_key_exists('Url',$param) and $param['Url'] !== null) {
+            $this->Url = $param['Url'];
         }
 
-        if (array_key_exists("Content",$param) and $param["Content"] !== null) {
-            $this->Content = $param["Content"];
+        if (array_key_exists('Content',$param) and $param['Content'] !== null) {
+            $this->Content = $param['Content'];
         }
     }
 }

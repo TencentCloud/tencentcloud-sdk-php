@@ -86,28 +86,28 @@ class DescribePublicConfigsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ConfigId",$param) and $param["ConfigId"] !== null) {
-            $this->ConfigId = $param["ConfigId"];
+        if (array_key_exists('ConfigId',$param) and $param['ConfigId'] !== null) {
+            $this->ConfigId = $param['ConfigId'];
         }
 
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
+        if (array_key_exists('Offset',$param) and $param['Offset'] !== null) {
+            $this->Offset = $param['Offset'];
         }
 
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
+        if (array_key_exists('Limit',$param) and $param['Limit'] !== null) {
+            $this->Limit = $param['Limit'];
         }
 
-        if (array_key_exists("ConfigIdList",$param) and $param["ConfigIdList"] !== null) {
-            $this->ConfigIdList = $param["ConfigIdList"];
+        if (array_key_exists('ConfigIdList',$param) and $param['ConfigIdList'] !== null) {
+            $this->ConfigIdList = $param['ConfigIdList'];
         }
 
-        if (array_key_exists("ConfigName",$param) and $param["ConfigName"] !== null) {
-            $this->ConfigName = $param["ConfigName"];
+        if (array_key_exists('ConfigName',$param) and $param['ConfigName'] !== null) {
+            $this->ConfigName = $param['ConfigName'];
         }
 
-        if (array_key_exists("ConfigVersion",$param) and $param["ConfigVersion"] !== null) {
-            $this->ConfigVersion = $param["ConfigVersion"];
+        if (array_key_exists('ConfigVersion',$param) and $param['ConfigVersion'] !== null) {
+            $this->ConfigVersion = $param['ConfigVersion'];
         }
     }
 }

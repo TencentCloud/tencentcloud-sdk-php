@@ -138,44 +138,44 @@ class TargetGroupBackend extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TargetGroupId",$param) and $param["TargetGroupId"] !== null) {
-            $this->TargetGroupId = $param["TargetGroupId"];
+        if (array_key_exists('TargetGroupId',$param) and $param['TargetGroupId'] !== null) {
+            $this->TargetGroupId = $param['TargetGroupId'];
         }
 
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists('Type',$param) and $param['Type'] !== null) {
+            $this->Type = $param['Type'];
         }
 
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("Port",$param) and $param["Port"] !== null) {
-            $this->Port = $param["Port"];
+        if (array_key_exists('Port',$param) and $param['Port'] !== null) {
+            $this->Port = $param['Port'];
         }
 
-        if (array_key_exists("Weight",$param) and $param["Weight"] !== null) {
-            $this->Weight = $param["Weight"];
+        if (array_key_exists('Weight',$param) and $param['Weight'] !== null) {
+            $this->Weight = $param['Weight'];
         }
 
-        if (array_key_exists("PublicIpAddresses",$param) and $param["PublicIpAddresses"] !== null) {
-            $this->PublicIpAddresses = $param["PublicIpAddresses"];
+        if (array_key_exists('PublicIpAddresses',$param) and $param['PublicIpAddresses'] !== null) {
+            $this->PublicIpAddresses = $param['PublicIpAddresses'];
         }
 
-        if (array_key_exists("PrivateIpAddresses",$param) and $param["PrivateIpAddresses"] !== null) {
-            $this->PrivateIpAddresses = $param["PrivateIpAddresses"];
+        if (array_key_exists('PrivateIpAddresses',$param) and $param['PrivateIpAddresses'] !== null) {
+            $this->PrivateIpAddresses = $param['PrivateIpAddresses'];
         }
 
-        if (array_key_exists("InstanceName",$param) and $param["InstanceName"] !== null) {
-            $this->InstanceName = $param["InstanceName"];
+        if (array_key_exists('InstanceName',$param) and $param['InstanceName'] !== null) {
+            $this->InstanceName = $param['InstanceName'];
         }
 
-        if (array_key_exists("RegisteredTime",$param) and $param["RegisteredTime"] !== null) {
-            $this->RegisteredTime = $param["RegisteredTime"];
+        if (array_key_exists('RegisteredTime',$param) and $param['RegisteredTime'] !== null) {
+            $this->RegisteredTime = $param['RegisteredTime'];
         }
 
-        if (array_key_exists("EniId",$param) and $param["EniId"] !== null) {
-            $this->EniId = $param["EniId"];
+        if (array_key_exists('EniId',$param) and $param['EniId'] !== null) {
+            $this->EniId = $param['EniId'];
         }
     }
 }

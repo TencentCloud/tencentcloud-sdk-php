@@ -54,12 +54,12 @@ class Conditions extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Reason",$param) and $param["Reason"] !== null) {
-            $this->Reason = $param["Reason"];
+        if (array_key_exists('Reason',$param) and $param['Reason'] !== null) {
+            $this->Reason = $param['Reason'];
         }
 
-        if (array_key_exists("Count",$param) and $param["Count"] !== null) {
-            $this->Count = $param["Count"];
+        if (array_key_exists('Count',$param) and $param['Count'] !== null) {
+            $this->Count = $param['Count'];
         }
     }
 }

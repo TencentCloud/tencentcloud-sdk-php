@@ -86,28 +86,28 @@ class RebateInfoElem extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Uin",$param) and $param["Uin"] !== null) {
-            $this->Uin = $param["Uin"];
+        if (array_key_exists('Uin',$param) and $param['Uin'] !== null) {
+            $this->Uin = $param['Uin'];
         }
 
-        if (array_key_exists("RebateMonth",$param) and $param["RebateMonth"] !== null) {
-            $this->RebateMonth = $param["RebateMonth"];
+        if (array_key_exists('RebateMonth',$param) and $param['RebateMonth'] !== null) {
+            $this->RebateMonth = $param['RebateMonth'];
         }
 
-        if (array_key_exists("Amt",$param) and $param["Amt"] !== null) {
-            $this->Amt = $param["Amt"];
+        if (array_key_exists('Amt',$param) and $param['Amt'] !== null) {
+            $this->Amt = $param['Amt'];
         }
 
-        if (array_key_exists("MonthSales",$param) and $param["MonthSales"] !== null) {
-            $this->MonthSales = $param["MonthSales"];
+        if (array_key_exists('MonthSales',$param) and $param['MonthSales'] !== null) {
+            $this->MonthSales = $param['MonthSales'];
         }
 
-        if (array_key_exists("QuarterSales",$param) and $param["QuarterSales"] !== null) {
-            $this->QuarterSales = $param["QuarterSales"];
+        if (array_key_exists('QuarterSales',$param) and $param['QuarterSales'] !== null) {
+            $this->QuarterSales = $param['QuarterSales'];
         }
 
-        if (array_key_exists("ExceptionFlag",$param) and $param["ExceptionFlag"] !== null) {
-            $this->ExceptionFlag = $param["ExceptionFlag"];
+        if (array_key_exists('ExceptionFlag',$param) and $param['ExceptionFlag'] !== null) {
+            $this->ExceptionFlag = $param['ExceptionFlag'];
         }
     }
 }

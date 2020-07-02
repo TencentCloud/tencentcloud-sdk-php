@@ -98,20 +98,20 @@ RETURN_404：全部请求返回 404
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Switch",$param) and $param["Switch"] !== null) {
-            $this->Switch = $param["Switch"];
+        if (array_key_exists('Switch',$param) and $param['Switch'] !== null) {
+            $this->Switch = $param['Switch'];
         }
 
-        if (array_key_exists("BpsThreshold",$param) and $param["BpsThreshold"] !== null) {
-            $this->BpsThreshold = $param["BpsThreshold"];
+        if (array_key_exists('BpsThreshold',$param) and $param['BpsThreshold'] !== null) {
+            $this->BpsThreshold = $param['BpsThreshold'];
         }
 
-        if (array_key_exists("CounterMeasure",$param) and $param["CounterMeasure"] !== null) {
-            $this->CounterMeasure = $param["CounterMeasure"];
+        if (array_key_exists('CounterMeasure',$param) and $param['CounterMeasure'] !== null) {
+            $this->CounterMeasure = $param['CounterMeasure'];
         }
 
-        if (array_key_exists("LastTriggerTime",$param) and $param["LastTriggerTime"] !== null) {
-            $this->LastTriggerTime = $param["LastTriggerTime"];
+        if (array_key_exists('LastTriggerTime',$param) and $param['LastTriggerTime'] !== null) {
+            $this->LastTriggerTime = $param['LastTriggerTime'];
         }
     }
 }

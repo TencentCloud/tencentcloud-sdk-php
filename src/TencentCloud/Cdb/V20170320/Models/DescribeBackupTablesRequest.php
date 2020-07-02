@@ -86,28 +86,28 @@ class DescribeBackupTablesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
-            $this->StartTime = $param["StartTime"];
+        if (array_key_exists('StartTime',$param) and $param['StartTime'] !== null) {
+            $this->StartTime = $param['StartTime'];
         }
 
-        if (array_key_exists("DatabaseName",$param) and $param["DatabaseName"] !== null) {
-            $this->DatabaseName = $param["DatabaseName"];
+        if (array_key_exists('DatabaseName',$param) and $param['DatabaseName'] !== null) {
+            $this->DatabaseName = $param['DatabaseName'];
         }
 
-        if (array_key_exists("SearchTable",$param) and $param["SearchTable"] !== null) {
-            $this->SearchTable = $param["SearchTable"];
+        if (array_key_exists('SearchTable',$param) and $param['SearchTable'] !== null) {
+            $this->SearchTable = $param['SearchTable'];
         }
 
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
+        if (array_key_exists('Offset',$param) and $param['Offset'] !== null) {
+            $this->Offset = $param['Offset'];
         }
 
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
+        if (array_key_exists('Limit',$param) and $param['Limit'] !== null) {
+            $this->Limit = $param['Limit'];
         }
     }
 }

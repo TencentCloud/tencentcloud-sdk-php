@@ -54,12 +54,12 @@ class Dependence extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("StartTask",$param) and $param["StartTask"] !== null) {
-            $this->StartTask = $param["StartTask"];
+        if (array_key_exists('StartTask',$param) and $param['StartTask'] !== null) {
+            $this->StartTask = $param['StartTask'];
         }
 
-        if (array_key_exists("EndTask",$param) and $param["EndTask"] !== null) {
-            $this->EndTask = $param["EndTask"];
+        if (array_key_exists('EndTask',$param) and $param['EndTask'] !== null) {
+            $this->EndTask = $param['EndTask'];
         }
     }
 }

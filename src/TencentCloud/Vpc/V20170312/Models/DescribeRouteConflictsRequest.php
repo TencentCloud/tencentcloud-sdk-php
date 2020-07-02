@@ -54,12 +54,12 @@ class DescribeRouteConflictsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RouteTableId",$param) and $param["RouteTableId"] !== null) {
-            $this->RouteTableId = $param["RouteTableId"];
+        if (array_key_exists('RouteTableId',$param) and $param['RouteTableId'] !== null) {
+            $this->RouteTableId = $param['RouteTableId'];
         }
 
-        if (array_key_exists("DestinationCidrBlocks",$param) and $param["DestinationCidrBlocks"] !== null) {
-            $this->DestinationCidrBlocks = $param["DestinationCidrBlocks"];
+        if (array_key_exists('DestinationCidrBlocks',$param) and $param['DestinationCidrBlocks'] !== null) {
+            $this->DestinationCidrBlocks = $param['DestinationCidrBlocks'];
         }
     }
 }

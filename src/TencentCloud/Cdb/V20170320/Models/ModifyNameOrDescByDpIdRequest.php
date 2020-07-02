@@ -62,16 +62,16 @@ class ModifyNameOrDescByDpIdRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DeployGroupId",$param) and $param["DeployGroupId"] !== null) {
-            $this->DeployGroupId = $param["DeployGroupId"];
+        if (array_key_exists('DeployGroupId',$param) and $param['DeployGroupId'] !== null) {
+            $this->DeployGroupId = $param['DeployGroupId'];
         }
 
-        if (array_key_exists("DeployGroupName",$param) and $param["DeployGroupName"] !== null) {
-            $this->DeployGroupName = $param["DeployGroupName"];
+        if (array_key_exists('DeployGroupName',$param) and $param['DeployGroupName'] !== null) {
+            $this->DeployGroupName = $param['DeployGroupName'];
         }
 
-        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
-            $this->Description = $param["Description"];
+        if (array_key_exists('Description',$param) and $param['Description'] !== null) {
+            $this->Description = $param['Description'];
         }
     }
 }

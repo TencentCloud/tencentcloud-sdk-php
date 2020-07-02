@@ -46,8 +46,8 @@ class DeleteMonitorsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MonitorIds",$param) and $param["MonitorIds"] !== null) {
-            $this->MonitorIds = $param["MonitorIds"];
+        if (array_key_exists('MonitorIds',$param) and $param['MonitorIds'] !== null) {
+            $this->MonitorIds = $param['MonitorIds'];
         }
     }
 }

@@ -70,25 +70,25 @@ class QueryAcctInfoListResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ResultCount",$param) and $param["ResultCount"] !== null) {
-            $this->ResultCount = $param["ResultCount"];
+        if (array_key_exists('ResultCount',$param) and $param['ResultCount'] !== null) {
+            $this->ResultCount = $param['ResultCount'];
         }
 
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("QueryAcctItems",$param) and $param["QueryAcctItems"] !== null) {
+        if (array_key_exists('QueryAcctItems',$param) and $param['QueryAcctItems'] !== null) {
             $this->QueryAcctItems = [];
-            foreach ($param["QueryAcctItems"] as $key => $value){
+            foreach ($param['QueryAcctItems'] as $key => $value){
                 $obj = new QueryAcctItem();
                 $obj->deserialize($value);
                 array_push($this->QueryAcctItems, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

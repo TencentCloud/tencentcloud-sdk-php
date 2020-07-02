@@ -54,17 +54,17 @@ class DescribeCfsRulesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RuleList",$param) and $param["RuleList"] !== null) {
+        if (array_key_exists('RuleList',$param) and $param['RuleList'] !== null) {
             $this->RuleList = [];
-            foreach ($param["RuleList"] as $key => $value){
+            foreach ($param['RuleList'] as $key => $value){
                 $obj = new PGroupRuleInfo();
                 $obj->deserialize($value);
                 array_push($this->RuleList, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

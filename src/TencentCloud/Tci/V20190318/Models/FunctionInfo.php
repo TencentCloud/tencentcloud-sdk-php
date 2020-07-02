@@ -78,24 +78,24 @@ class FunctionInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("EnableAllText",$param) and $param["EnableAllText"] !== null) {
-            $this->EnableAllText = $param["EnableAllText"];
+        if (array_key_exists('EnableAllText',$param) and $param['EnableAllText'] !== null) {
+            $this->EnableAllText = $param['EnableAllText'];
         }
 
-        if (array_key_exists("EnableKeyword",$param) and $param["EnableKeyword"] !== null) {
-            $this->EnableKeyword = $param["EnableKeyword"];
+        if (array_key_exists('EnableKeyword',$param) and $param['EnableKeyword'] !== null) {
+            $this->EnableKeyword = $param['EnableKeyword'];
         }
 
-        if (array_key_exists("EnableMuteDetect",$param) and $param["EnableMuteDetect"] !== null) {
-            $this->EnableMuteDetect = $param["EnableMuteDetect"];
+        if (array_key_exists('EnableMuteDetect',$param) and $param['EnableMuteDetect'] !== null) {
+            $this->EnableMuteDetect = $param['EnableMuteDetect'];
         }
 
-        if (array_key_exists("EnableVadInfo",$param) and $param["EnableVadInfo"] !== null) {
-            $this->EnableVadInfo = $param["EnableVadInfo"];
+        if (array_key_exists('EnableVadInfo',$param) and $param['EnableVadInfo'] !== null) {
+            $this->EnableVadInfo = $param['EnableVadInfo'];
         }
 
-        if (array_key_exists("EnableVolume",$param) and $param["EnableVolume"] !== null) {
-            $this->EnableVolume = $param["EnableVolume"];
+        if (array_key_exists('EnableVolume',$param) and $param['EnableVolume'] !== null) {
+            $this->EnableVolume = $param['EnableVolume'];
         }
     }
 }

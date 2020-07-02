@@ -70,8 +70,8 @@ UserCodeException 返回函数调用发生用户代码错误的日志，
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RetCode",$param) and $param["RetCode"] !== null) {
-            $this->RetCode = $param["RetCode"];
+        if (array_key_exists('RetCode',$param) and $param['RetCode'] !== null) {
+            $this->RetCode = $param['RetCode'];
         }
     }
 }

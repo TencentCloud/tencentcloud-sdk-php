@@ -46,8 +46,8 @@ class CacheKey extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FullUrlCache",$param) and $param["FullUrlCache"] !== null) {
-            $this->FullUrlCache = $param["FullUrlCache"];
+        if (array_key_exists('FullUrlCache',$param) and $param['FullUrlCache'] !== null) {
+            $this->FullUrlCache = $param['FullUrlCache'];
         }
     }
 }

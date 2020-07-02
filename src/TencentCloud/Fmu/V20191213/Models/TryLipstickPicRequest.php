@@ -94,25 +94,25 @@ class TryLipstickPicRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LipColorInfos",$param) and $param["LipColorInfos"] !== null) {
+        if (array_key_exists('LipColorInfos',$param) and $param['LipColorInfos'] !== null) {
             $this->LipColorInfos = [];
-            foreach ($param["LipColorInfos"] as $key => $value){
+            foreach ($param['LipColorInfos'] as $key => $value){
                 $obj = new LipColorInfo();
                 $obj->deserialize($value);
                 array_push($this->LipColorInfos, $obj);
             }
         }
 
-        if (array_key_exists("Image",$param) and $param["Image"] !== null) {
-            $this->Image = $param["Image"];
+        if (array_key_exists('Image',$param) and $param['Image'] !== null) {
+            $this->Image = $param['Image'];
         }
 
-        if (array_key_exists("Url",$param) and $param["Url"] !== null) {
-            $this->Url = $param["Url"];
+        if (array_key_exists('Url',$param) and $param['Url'] !== null) {
+            $this->Url = $param['Url'];
         }
 
-        if (array_key_exists("RspImgType",$param) and $param["RspImgType"] !== null) {
-            $this->RspImgType = $param["RspImgType"];
+        if (array_key_exists('RspImgType',$param) and $param['RspImgType'] !== null) {
+            $this->RspImgType = $param['RspImgType'];
         }
     }
 }

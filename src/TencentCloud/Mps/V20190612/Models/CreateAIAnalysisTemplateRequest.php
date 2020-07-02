@@ -86,32 +86,32 @@ class CreateAIAnalysisTemplateRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("Comment",$param) and $param["Comment"] !== null) {
-            $this->Comment = $param["Comment"];
+        if (array_key_exists('Comment',$param) and $param['Comment'] !== null) {
+            $this->Comment = $param['Comment'];
         }
 
-        if (array_key_exists("ClassificationConfigure",$param) and $param["ClassificationConfigure"] !== null) {
+        if (array_key_exists('ClassificationConfigure',$param) and $param['ClassificationConfigure'] !== null) {
             $this->ClassificationConfigure = new ClassificationConfigureInfo();
-            $this->ClassificationConfigure->deserialize($param["ClassificationConfigure"]);
+            $this->ClassificationConfigure->deserialize($param['ClassificationConfigure']);
         }
 
-        if (array_key_exists("TagConfigure",$param) and $param["TagConfigure"] !== null) {
+        if (array_key_exists('TagConfigure',$param) and $param['TagConfigure'] !== null) {
             $this->TagConfigure = new TagConfigureInfo();
-            $this->TagConfigure->deserialize($param["TagConfigure"]);
+            $this->TagConfigure->deserialize($param['TagConfigure']);
         }
 
-        if (array_key_exists("CoverConfigure",$param) and $param["CoverConfigure"] !== null) {
+        if (array_key_exists('CoverConfigure',$param) and $param['CoverConfigure'] !== null) {
             $this->CoverConfigure = new CoverConfigureInfo();
-            $this->CoverConfigure->deserialize($param["CoverConfigure"]);
+            $this->CoverConfigure->deserialize($param['CoverConfigure']);
         }
 
-        if (array_key_exists("FrameTagConfigure",$param) and $param["FrameTagConfigure"] !== null) {
+        if (array_key_exists('FrameTagConfigure',$param) and $param['FrameTagConfigure'] !== null) {
             $this->FrameTagConfigure = new FrameTagConfigureInfo();
-            $this->FrameTagConfigure->deserialize($param["FrameTagConfigure"]);
+            $this->FrameTagConfigure->deserialize($param['FrameTagConfigure']);
         }
     }
 }

@@ -58,17 +58,17 @@ class DescribeClassicalLBHealthStatusResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("HealthList",$param) and $param["HealthList"] !== null) {
+        if (array_key_exists('HealthList',$param) and $param['HealthList'] !== null) {
             $this->HealthList = [];
-            foreach ($param["HealthList"] as $key => $value){
+            foreach ($param['HealthList'] as $key => $value){
                 $obj = new ClassicalHealth();
                 $obj->deserialize($value);
                 array_push($this->HealthList, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

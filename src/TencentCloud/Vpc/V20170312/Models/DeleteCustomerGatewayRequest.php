@@ -46,8 +46,8 @@ class DeleteCustomerGatewayRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CustomerGatewayId",$param) and $param["CustomerGatewayId"] !== null) {
-            $this->CustomerGatewayId = $param["CustomerGatewayId"];
+        if (array_key_exists('CustomerGatewayId',$param) and $param['CustomerGatewayId'] !== null) {
+            $this->CustomerGatewayId = $param['CustomerGatewayId'];
         }
     }
 }

@@ -58,13 +58,13 @@ class CreateGameServerSessionResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("GameServerSession",$param) and $param["GameServerSession"] !== null) {
+        if (array_key_exists('GameServerSession',$param) and $param['GameServerSession'] !== null) {
             $this->GameServerSession = new GameServerSession();
-            $this->GameServerSession->deserialize($param["GameServerSession"]);
+            $this->GameServerSession->deserialize($param['GameServerSession']);
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

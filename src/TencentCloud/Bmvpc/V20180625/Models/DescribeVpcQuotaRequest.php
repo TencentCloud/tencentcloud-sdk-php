@@ -46,8 +46,8 @@ class DescribeVpcQuotaRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TypeIds",$param) and $param["TypeIds"] !== null) {
-            $this->TypeIds = $param["TypeIds"];
+        if (array_key_exists('TypeIds',$param) and $param['TypeIds'] !== null) {
+            $this->TypeIds = $param['TypeIds'];
         }
     }
 }

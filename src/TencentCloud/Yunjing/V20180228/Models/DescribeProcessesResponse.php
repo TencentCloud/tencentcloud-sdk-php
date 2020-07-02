@@ -62,21 +62,21 @@ class DescribeProcessesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("Processes",$param) and $param["Processes"] !== null) {
+        if (array_key_exists('Processes',$param) and $param['Processes'] !== null) {
             $this->Processes = [];
-            foreach ($param["Processes"] as $key => $value){
+            foreach ($param['Processes'] as $key => $value){
                 $obj = new Process();
                 $obj->deserialize($value);
                 array_push($this->Processes, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

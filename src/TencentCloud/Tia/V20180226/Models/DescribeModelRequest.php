@@ -62,16 +62,16 @@ class DescribeModelRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("Cluster",$param) and $param["Cluster"] !== null) {
-            $this->Cluster = $param["Cluster"];
+        if (array_key_exists('Cluster',$param) and $param['Cluster'] !== null) {
+            $this->Cluster = $param['Cluster'];
         }
 
-        if (array_key_exists("ServType",$param) and $param["ServType"] !== null) {
-            $this->ServType = $param["ServType"];
+        if (array_key_exists('ServType',$param) and $param['ServType'] !== null) {
+            $this->ServType = $param['ServType'];
         }
     }
 }

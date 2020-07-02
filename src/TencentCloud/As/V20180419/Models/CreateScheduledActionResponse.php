@@ -54,12 +54,12 @@ class CreateScheduledActionResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ScheduledActionId",$param) and $param["ScheduledActionId"] !== null) {
-            $this->ScheduledActionId = $param["ScheduledActionId"];
+        if (array_key_exists('ScheduledActionId',$param) and $param['ScheduledActionId'] !== null) {
+            $this->ScheduledActionId = $param['ScheduledActionId'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

@@ -86,28 +86,28 @@ class DescribeMigrateJobsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("JobId",$param) and $param["JobId"] !== null) {
-            $this->JobId = $param["JobId"];
+        if (array_key_exists('JobId',$param) and $param['JobId'] !== null) {
+            $this->JobId = $param['JobId'];
         }
 
-        if (array_key_exists("JobName",$param) and $param["JobName"] !== null) {
-            $this->JobName = $param["JobName"];
+        if (array_key_exists('JobName',$param) and $param['JobName'] !== null) {
+            $this->JobName = $param['JobName'];
         }
 
-        if (array_key_exists("Order",$param) and $param["Order"] !== null) {
-            $this->Order = $param["Order"];
+        if (array_key_exists('Order',$param) and $param['Order'] !== null) {
+            $this->Order = $param['Order'];
         }
 
-        if (array_key_exists("OrderSeq",$param) and $param["OrderSeq"] !== null) {
-            $this->OrderSeq = $param["OrderSeq"];
+        if (array_key_exists('OrderSeq',$param) and $param['OrderSeq'] !== null) {
+            $this->OrderSeq = $param['OrderSeq'];
         }
 
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
+        if (array_key_exists('Offset',$param) and $param['Offset'] !== null) {
+            $this->Offset = $param['Offset'];
         }
 
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
+        if (array_key_exists('Limit',$param) and $param['Limit'] !== null) {
+            $this->Limit = $param['Limit'];
         }
     }
 }

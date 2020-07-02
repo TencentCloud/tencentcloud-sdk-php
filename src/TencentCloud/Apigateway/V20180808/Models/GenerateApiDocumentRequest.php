@@ -62,16 +62,16 @@ class GenerateApiDocumentRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ServiceId",$param) and $param["ServiceId"] !== null) {
-            $this->ServiceId = $param["ServiceId"];
+        if (array_key_exists('ServiceId',$param) and $param['ServiceId'] !== null) {
+            $this->ServiceId = $param['ServiceId'];
         }
 
-        if (array_key_exists("GenEnvironment",$param) and $param["GenEnvironment"] !== null) {
-            $this->GenEnvironment = $param["GenEnvironment"];
+        if (array_key_exists('GenEnvironment',$param) and $param['GenEnvironment'] !== null) {
+            $this->GenEnvironment = $param['GenEnvironment'];
         }
 
-        if (array_key_exists("GenLanguage",$param) and $param["GenLanguage"] !== null) {
-            $this->GenLanguage = $param["GenLanguage"];
+        if (array_key_exists('GenLanguage',$param) and $param['GenLanguage'] !== null) {
+            $this->GenLanguage = $param['GenLanguage'];
         }
     }
 }

@@ -46,8 +46,8 @@ class DeleteHaVipRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("HaVipId",$param) and $param["HaVipId"] !== null) {
-            $this->HaVipId = $param["HaVipId"];
+        if (array_key_exists('HaVipId',$param) and $param['HaVipId'] !== null) {
+            $this->HaVipId = $param['HaVipId'];
         }
     }
 }

@@ -70,21 +70,21 @@ class InstanceRollbackRangeTime extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Code",$param) and $param["Code"] !== null) {
-            $this->Code = $param["Code"];
+        if (array_key_exists('Code',$param) and $param['Code'] !== null) {
+            $this->Code = $param['Code'];
         }
 
-        if (array_key_exists("Message",$param) and $param["Message"] !== null) {
-            $this->Message = $param["Message"];
+        if (array_key_exists('Message',$param) and $param['Message'] !== null) {
+            $this->Message = $param['Message'];
         }
 
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("Times",$param) and $param["Times"] !== null) {
+        if (array_key_exists('Times',$param) and $param['Times'] !== null) {
             $this->Times = [];
-            foreach ($param["Times"] as $key => $value){
+            foreach ($param['Times'] as $key => $value){
                 $obj = new RollbackTimeRange();
                 $obj->deserialize($value);
                 array_push($this->Times, $obj);

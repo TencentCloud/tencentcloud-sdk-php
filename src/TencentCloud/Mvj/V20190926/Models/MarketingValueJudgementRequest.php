@@ -86,28 +86,28 @@ class MarketingValueJudgementRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AccountType",$param) and $param["AccountType"] !== null) {
-            $this->AccountType = $param["AccountType"];
+        if (array_key_exists('AccountType',$param) and $param['AccountType'] !== null) {
+            $this->AccountType = $param['AccountType'];
         }
 
-        if (array_key_exists("Uid",$param) and $param["Uid"] !== null) {
-            $this->Uid = $param["Uid"];
+        if (array_key_exists('Uid',$param) and $param['Uid'] !== null) {
+            $this->Uid = $param['Uid'];
         }
 
-        if (array_key_exists("UserIp",$param) and $param["UserIp"] !== null) {
-            $this->UserIp = $param["UserIp"];
+        if (array_key_exists('UserIp',$param) and $param['UserIp'] !== null) {
+            $this->UserIp = $param['UserIp'];
         }
 
-        if (array_key_exists("PostTime",$param) and $param["PostTime"] !== null) {
-            $this->PostTime = $param["PostTime"];
+        if (array_key_exists('PostTime',$param) and $param['PostTime'] !== null) {
+            $this->PostTime = $param['PostTime'];
         }
 
-        if (array_key_exists("Imei",$param) and $param["Imei"] !== null) {
-            $this->Imei = $param["Imei"];
+        if (array_key_exists('Imei',$param) and $param['Imei'] !== null) {
+            $this->Imei = $param['Imei'];
         }
 
-        if (array_key_exists("Referer",$param) and $param["Referer"] !== null) {
-            $this->Referer = $param["Referer"];
+        if (array_key_exists('Referer',$param) and $param['Referer'] !== null) {
+            $this->Referer = $param['Referer'];
         }
     }
 }

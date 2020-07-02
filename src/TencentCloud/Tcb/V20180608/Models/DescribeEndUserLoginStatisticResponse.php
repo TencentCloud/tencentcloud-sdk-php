@@ -58,17 +58,17 @@ class DescribeEndUserLoginStatisticResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LoginStatistics",$param) and $param["LoginStatistics"] !== null) {
+        if (array_key_exists('LoginStatistics',$param) and $param['LoginStatistics'] !== null) {
             $this->LoginStatistics = [];
-            foreach ($param["LoginStatistics"] as $key => $value){
+            foreach ($param['LoginStatistics'] as $key => $value){
                 $obj = new LoginStatistic();
                 $obj->deserialize($value);
                 array_push($this->LoginStatistics, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

@@ -110,40 +110,40 @@ class DescribeDeviceClassPartitionRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DeviceClassCode",$param) and $param["DeviceClassCode"] !== null) {
-            $this->DeviceClassCode = $param["DeviceClassCode"];
+        if (array_key_exists('DeviceClassCode',$param) and $param['DeviceClassCode'] !== null) {
+            $this->DeviceClassCode = $param['DeviceClassCode'];
         }
 
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("CpuId",$param) and $param["CpuId"] !== null) {
-            $this->CpuId = $param["CpuId"];
+        if (array_key_exists('CpuId',$param) and $param['CpuId'] !== null) {
+            $this->CpuId = $param['CpuId'];
         }
 
-        if (array_key_exists("MemSize",$param) and $param["MemSize"] !== null) {
-            $this->MemSize = $param["MemSize"];
+        if (array_key_exists('MemSize',$param) and $param['MemSize'] !== null) {
+            $this->MemSize = $param['MemSize'];
         }
 
-        if (array_key_exists("ContainRaidCard",$param) and $param["ContainRaidCard"] !== null) {
-            $this->ContainRaidCard = $param["ContainRaidCard"];
+        if (array_key_exists('ContainRaidCard',$param) and $param['ContainRaidCard'] !== null) {
+            $this->ContainRaidCard = $param['ContainRaidCard'];
         }
 
-        if (array_key_exists("SystemDiskTypeId",$param) and $param["SystemDiskTypeId"] !== null) {
-            $this->SystemDiskTypeId = $param["SystemDiskTypeId"];
+        if (array_key_exists('SystemDiskTypeId',$param) and $param['SystemDiskTypeId'] !== null) {
+            $this->SystemDiskTypeId = $param['SystemDiskTypeId'];
         }
 
-        if (array_key_exists("SystemDiskCount",$param) and $param["SystemDiskCount"] !== null) {
-            $this->SystemDiskCount = $param["SystemDiskCount"];
+        if (array_key_exists('SystemDiskCount',$param) and $param['SystemDiskCount'] !== null) {
+            $this->SystemDiskCount = $param['SystemDiskCount'];
         }
 
-        if (array_key_exists("DataDiskTypeId",$param) and $param["DataDiskTypeId"] !== null) {
-            $this->DataDiskTypeId = $param["DataDiskTypeId"];
+        if (array_key_exists('DataDiskTypeId',$param) and $param['DataDiskTypeId'] !== null) {
+            $this->DataDiskTypeId = $param['DataDiskTypeId'];
         }
 
-        if (array_key_exists("DataDiskCount",$param) and $param["DataDiskCount"] !== null) {
-            $this->DataDiskCount = $param["DataDiskCount"];
+        if (array_key_exists('DataDiskCount',$param) and $param['DataDiskCount'] !== null) {
+            $this->DataDiskCount = $param['DataDiskCount'];
         }
     }
 }

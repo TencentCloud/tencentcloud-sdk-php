@@ -70,20 +70,20 @@ class DetachRolePolicyRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PolicyId",$param) and $param["PolicyId"] !== null) {
-            $this->PolicyId = $param["PolicyId"];
+        if (array_key_exists('PolicyId',$param) and $param['PolicyId'] !== null) {
+            $this->PolicyId = $param['PolicyId'];
         }
 
-        if (array_key_exists("DetachRoleId",$param) and $param["DetachRoleId"] !== null) {
-            $this->DetachRoleId = $param["DetachRoleId"];
+        if (array_key_exists('DetachRoleId',$param) and $param['DetachRoleId'] !== null) {
+            $this->DetachRoleId = $param['DetachRoleId'];
         }
 
-        if (array_key_exists("DetachRoleName",$param) and $param["DetachRoleName"] !== null) {
-            $this->DetachRoleName = $param["DetachRoleName"];
+        if (array_key_exists('DetachRoleName',$param) and $param['DetachRoleName'] !== null) {
+            $this->DetachRoleName = $param['DetachRoleName'];
         }
 
-        if (array_key_exists("PolicyName",$param) and $param["PolicyName"] !== null) {
-            $this->PolicyName = $param["PolicyName"];
+        if (array_key_exists('PolicyName',$param) and $param['PolicyName'] !== null) {
+            $this->PolicyName = $param['PolicyName'];
         }
     }
 }

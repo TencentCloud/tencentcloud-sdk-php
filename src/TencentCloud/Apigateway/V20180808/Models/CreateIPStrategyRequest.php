@@ -70,20 +70,20 @@ class CreateIPStrategyRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ServiceId",$param) and $param["ServiceId"] !== null) {
-            $this->ServiceId = $param["ServiceId"];
+        if (array_key_exists('ServiceId',$param) and $param['ServiceId'] !== null) {
+            $this->ServiceId = $param['ServiceId'];
         }
 
-        if (array_key_exists("StrategyName",$param) and $param["StrategyName"] !== null) {
-            $this->StrategyName = $param["StrategyName"];
+        if (array_key_exists('StrategyName',$param) and $param['StrategyName'] !== null) {
+            $this->StrategyName = $param['StrategyName'];
         }
 
-        if (array_key_exists("StrategyType",$param) and $param["StrategyType"] !== null) {
-            $this->StrategyType = $param["StrategyType"];
+        if (array_key_exists('StrategyType',$param) and $param['StrategyType'] !== null) {
+            $this->StrategyType = $param['StrategyType'];
         }
 
-        if (array_key_exists("StrategyData",$param) and $param["StrategyData"] !== null) {
-            $this->StrategyData = $param["StrategyData"];
+        if (array_key_exists('StrategyData',$param) and $param['StrategyData'] !== null) {
+            $this->StrategyData = $param['StrategyData'];
         }
     }
 }

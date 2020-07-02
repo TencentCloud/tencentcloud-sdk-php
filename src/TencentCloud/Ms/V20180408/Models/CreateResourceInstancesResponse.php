@@ -54,12 +54,12 @@ class CreateResourceInstancesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ResourceSet",$param) and $param["ResourceSet"] !== null) {
-            $this->ResourceSet = $param["ResourceSet"];
+        if (array_key_exists('ResourceSet',$param) and $param['ResourceSet'] !== null) {
+            $this->ResourceSet = $param['ResourceSet'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

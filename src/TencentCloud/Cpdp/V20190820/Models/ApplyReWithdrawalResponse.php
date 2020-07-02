@@ -54,12 +54,12 @@ class ApplyReWithdrawalResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("WithdrawOrderId",$param) and $param["WithdrawOrderId"] !== null) {
-            $this->WithdrawOrderId = $param["WithdrawOrderId"];
+        if (array_key_exists('WithdrawOrderId',$param) and $param['WithdrawOrderId'] !== null) {
+            $this->WithdrawOrderId = $param['WithdrawOrderId'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

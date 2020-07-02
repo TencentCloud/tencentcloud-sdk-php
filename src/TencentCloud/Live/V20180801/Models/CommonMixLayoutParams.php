@@ -238,36 +238,36 @@ class CommonMixLayoutParams extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ImageLayer",$param) and $param["ImageLayer"] !== null) {
-            $this->ImageLayer = $param["ImageLayer"];
+        if (array_key_exists('ImageLayer',$param) and $param['ImageLayer'] !== null) {
+            $this->ImageLayer = $param['ImageLayer'];
         }
 
-        if (array_key_exists("InputType",$param) and $param["InputType"] !== null) {
-            $this->InputType = $param["InputType"];
+        if (array_key_exists('InputType',$param) and $param['InputType'] !== null) {
+            $this->InputType = $param['InputType'];
         }
 
-        if (array_key_exists("ImageWidth",$param) and $param["ImageWidth"] !== null) {
-            $this->ImageWidth = $param["ImageWidth"];
+        if (array_key_exists('ImageWidth',$param) and $param['ImageWidth'] !== null) {
+            $this->ImageWidth = $param['ImageWidth'];
         }
 
-        if (array_key_exists("ImageHeight",$param) and $param["ImageHeight"] !== null) {
-            $this->ImageHeight = $param["ImageHeight"];
+        if (array_key_exists('ImageHeight',$param) and $param['ImageHeight'] !== null) {
+            $this->ImageHeight = $param['ImageHeight'];
         }
 
-        if (array_key_exists("LocationX",$param) and $param["LocationX"] !== null) {
-            $this->LocationX = $param["LocationX"];
+        if (array_key_exists('LocationX',$param) and $param['LocationX'] !== null) {
+            $this->LocationX = $param['LocationX'];
         }
 
-        if (array_key_exists("LocationY",$param) and $param["LocationY"] !== null) {
-            $this->LocationY = $param["LocationY"];
+        if (array_key_exists('LocationY',$param) and $param['LocationY'] !== null) {
+            $this->LocationY = $param['LocationY'];
         }
 
-        if (array_key_exists("Color",$param) and $param["Color"] !== null) {
-            $this->Color = $param["Color"];
+        if (array_key_exists('Color',$param) and $param['Color'] !== null) {
+            $this->Color = $param['Color'];
         }
 
-        if (array_key_exists("WatermarkId",$param) and $param["WatermarkId"] !== null) {
-            $this->WatermarkId = $param["WatermarkId"];
+        if (array_key_exists('WatermarkId',$param) and $param['WatermarkId'] !== null) {
+            $this->WatermarkId = $param['WatermarkId'];
         }
     }
 }

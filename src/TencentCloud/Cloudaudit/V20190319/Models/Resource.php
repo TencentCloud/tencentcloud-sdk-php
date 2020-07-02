@@ -54,12 +54,12 @@ class Resource extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ResourceName",$param) and $param["ResourceName"] !== null) {
-            $this->ResourceName = $param["ResourceName"];
+        if (array_key_exists('ResourceName',$param) and $param['ResourceName'] !== null) {
+            $this->ResourceName = $param['ResourceName'];
         }
 
-        if (array_key_exists("ResourceType",$param) and $param["ResourceType"] !== null) {
-            $this->ResourceType = $param["ResourceType"];
+        if (array_key_exists('ResourceType',$param) and $param['ResourceType'] !== null) {
+            $this->ResourceType = $param['ResourceType'];
         }
     }
 }

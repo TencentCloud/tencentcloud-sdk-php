@@ -78,24 +78,24 @@ class CreateOrganizationResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("OrgId",$param) and $param["OrgId"] !== null) {
-            $this->OrgId = $param["OrgId"];
+        if (array_key_exists('OrgId',$param) and $param['OrgId'] !== null) {
+            $this->OrgId = $param['OrgId'];
         }
 
-        if (array_key_exists("Nickname",$param) and $param["Nickname"] !== null) {
-            $this->Nickname = $param["Nickname"];
+        if (array_key_exists('Nickname',$param) and $param['Nickname'] !== null) {
+            $this->Nickname = $param['Nickname'];
         }
 
-        if (array_key_exists("Mail",$param) and $param["Mail"] !== null) {
-            $this->Mail = $param["Mail"];
+        if (array_key_exists('Mail',$param) and $param['Mail'] !== null) {
+            $this->Mail = $param['Mail'];
         }
 
-        if (array_key_exists("OrgType",$param) and $param["OrgType"] !== null) {
-            $this->OrgType = $param["OrgType"];
+        if (array_key_exists('OrgType',$param) and $param['OrgType'] !== null) {
+            $this->OrgType = $param['OrgType'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

@@ -62,21 +62,21 @@ class DescribeHaVipsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("HaVipSet",$param) and $param["HaVipSet"] !== null) {
+        if (array_key_exists('HaVipSet',$param) and $param['HaVipSet'] !== null) {
             $this->HaVipSet = [];
-            foreach ($param["HaVipSet"] as $key => $value){
+            foreach ($param['HaVipSet'] as $key => $value){
                 $obj = new HaVip();
                 $obj->deserialize($value);
                 array_push($this->HaVipSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

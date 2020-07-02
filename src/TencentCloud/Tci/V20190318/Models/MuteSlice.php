@@ -54,12 +54,12 @@ class MuteSlice extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MuteBtm",$param) and $param["MuteBtm"] !== null) {
-            $this->MuteBtm = $param["MuteBtm"];
+        if (array_key_exists('MuteBtm',$param) and $param['MuteBtm'] !== null) {
+            $this->MuteBtm = $param['MuteBtm'];
         }
 
-        if (array_key_exists("MuteEtm",$param) and $param["MuteEtm"] !== null) {
-            $this->MuteEtm = $param["MuteEtm"];
+        if (array_key_exists('MuteEtm',$param) and $param['MuteEtm'] !== null) {
+            $this->MuteEtm = $param['MuteEtm'];
         }
     }
 }

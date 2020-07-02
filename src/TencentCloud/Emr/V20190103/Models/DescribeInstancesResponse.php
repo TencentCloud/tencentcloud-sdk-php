@@ -78,25 +78,25 @@ class DescribeInstancesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCnt",$param) and $param["TotalCnt"] !== null) {
-            $this->TotalCnt = $param["TotalCnt"];
+        if (array_key_exists('TotalCnt',$param) and $param['TotalCnt'] !== null) {
+            $this->TotalCnt = $param['TotalCnt'];
         }
 
-        if (array_key_exists("ClusterList",$param) and $param["ClusterList"] !== null) {
+        if (array_key_exists('ClusterList',$param) and $param['ClusterList'] !== null) {
             $this->ClusterList = [];
-            foreach ($param["ClusterList"] as $key => $value){
+            foreach ($param['ClusterList'] as $key => $value){
                 $obj = new ClusterInstancesInfo();
                 $obj->deserialize($value);
                 array_push($this->ClusterList, $obj);
             }
         }
 
-        if (array_key_exists("TagKeys",$param) and $param["TagKeys"] !== null) {
-            $this->TagKeys = $param["TagKeys"];
+        if (array_key_exists('TagKeys',$param) and $param['TagKeys'] !== null) {
+            $this->TagKeys = $param['TagKeys'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

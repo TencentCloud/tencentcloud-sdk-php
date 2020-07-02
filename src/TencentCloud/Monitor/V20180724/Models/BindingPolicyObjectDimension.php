@@ -70,20 +70,20 @@ class BindingPolicyObjectDimension extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Region",$param) and $param["Region"] !== null) {
-            $this->Region = $param["Region"];
+        if (array_key_exists('Region',$param) and $param['Region'] !== null) {
+            $this->Region = $param['Region'];
         }
 
-        if (array_key_exists("RegionId",$param) and $param["RegionId"] !== null) {
-            $this->RegionId = $param["RegionId"];
+        if (array_key_exists('RegionId',$param) and $param['RegionId'] !== null) {
+            $this->RegionId = $param['RegionId'];
         }
 
-        if (array_key_exists("Dimensions",$param) and $param["Dimensions"] !== null) {
-            $this->Dimensions = $param["Dimensions"];
+        if (array_key_exists('Dimensions',$param) and $param['Dimensions'] !== null) {
+            $this->Dimensions = $param['Dimensions'];
         }
 
-        if (array_key_exists("EventDimensions",$param) and $param["EventDimensions"] !== null) {
-            $this->EventDimensions = $param["EventDimensions"];
+        if (array_key_exists('EventDimensions',$param) and $param['EventDimensions'] !== null) {
+            $this->EventDimensions = $param['EventDimensions'];
         }
     }
 }

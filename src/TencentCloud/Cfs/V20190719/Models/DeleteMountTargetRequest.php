@@ -54,12 +54,12 @@ class DeleteMountTargetRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FileSystemId",$param) and $param["FileSystemId"] !== null) {
-            $this->FileSystemId = $param["FileSystemId"];
+        if (array_key_exists('FileSystemId',$param) and $param['FileSystemId'] !== null) {
+            $this->FileSystemId = $param['FileSystemId'];
         }
 
-        if (array_key_exists("MountTargetId",$param) and $param["MountTargetId"] !== null) {
-            $this->MountTargetId = $param["MountTargetId"];
+        if (array_key_exists('MountTargetId',$param) and $param['MountTargetId'] !== null) {
+            $this->MountTargetId = $param['MountTargetId'];
         }
     }
 }

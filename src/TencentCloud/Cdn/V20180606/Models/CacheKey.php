@@ -66,12 +66,12 @@ off：关闭全路径缓存（即开启参数过滤）
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FullUrlCache",$param) and $param["FullUrlCache"] !== null) {
-            $this->FullUrlCache = $param["FullUrlCache"];
+        if (array_key_exists('FullUrlCache',$param) and $param['FullUrlCache'] !== null) {
+            $this->FullUrlCache = $param['FullUrlCache'];
         }
 
-        if (array_key_exists("IgnoreCase",$param) and $param["IgnoreCase"] !== null) {
-            $this->IgnoreCase = $param["IgnoreCase"];
+        if (array_key_exists('IgnoreCase',$param) and $param['IgnoreCase'] !== null) {
+            $this->IgnoreCase = $param['IgnoreCase'];
         }
     }
 }

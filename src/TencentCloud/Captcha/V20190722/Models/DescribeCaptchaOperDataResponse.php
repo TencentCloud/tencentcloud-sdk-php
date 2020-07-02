@@ -78,21 +78,21 @@ class DescribeCaptchaOperDataResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CaptchaCode",$param) and $param["CaptchaCode"] !== null) {
-            $this->CaptchaCode = $param["CaptchaCode"];
+        if (array_key_exists('CaptchaCode',$param) and $param['CaptchaCode'] !== null) {
+            $this->CaptchaCode = $param['CaptchaCode'];
         }
 
-        if (array_key_exists("CaptchaMsg",$param) and $param["CaptchaMsg"] !== null) {
-            $this->CaptchaMsg = $param["CaptchaMsg"];
+        if (array_key_exists('CaptchaMsg',$param) and $param['CaptchaMsg'] !== null) {
+            $this->CaptchaMsg = $param['CaptchaMsg'];
         }
 
-        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
+        if (array_key_exists('Data',$param) and $param['Data'] !== null) {
             $this->Data = new CaptchaOperDataRes();
-            $this->Data->deserialize($param["Data"]);
+            $this->Data->deserialize($param['Data']);
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

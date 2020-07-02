@@ -54,12 +54,12 @@ class DescribeSubnetAvailableIpsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
-            $this->SubnetId = $param["SubnetId"];
+        if (array_key_exists('SubnetId',$param) and $param['SubnetId'] !== null) {
+            $this->SubnetId = $param['SubnetId'];
         }
 
-        if (array_key_exists("Cidr",$param) and $param["Cidr"] !== null) {
-            $this->Cidr = $param["Cidr"];
+        if (array_key_exists('Cidr',$param) and $param['Cidr'] !== null) {
+            $this->Cidr = $param['Cidr'];
         }
     }
 }

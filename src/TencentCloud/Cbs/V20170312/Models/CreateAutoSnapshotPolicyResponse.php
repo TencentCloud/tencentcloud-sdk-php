@@ -62,16 +62,16 @@ class CreateAutoSnapshotPolicyResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AutoSnapshotPolicyId",$param) and $param["AutoSnapshotPolicyId"] !== null) {
-            $this->AutoSnapshotPolicyId = $param["AutoSnapshotPolicyId"];
+        if (array_key_exists('AutoSnapshotPolicyId',$param) and $param['AutoSnapshotPolicyId'] !== null) {
+            $this->AutoSnapshotPolicyId = $param['AutoSnapshotPolicyId'];
         }
 
-        if (array_key_exists("NextTriggerTime",$param) and $param["NextTriggerTime"] !== null) {
-            $this->NextTriggerTime = $param["NextTriggerTime"];
+        if (array_key_exists('NextTriggerTime',$param) and $param['NextTriggerTime'] !== null) {
+            $this->NextTriggerTime = $param['NextTriggerTime'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

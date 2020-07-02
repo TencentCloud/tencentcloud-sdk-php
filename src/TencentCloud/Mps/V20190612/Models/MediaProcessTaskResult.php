@@ -146,38 +146,38 @@ class MediaProcessTaskResult extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists('Type',$param) and $param['Type'] !== null) {
+            $this->Type = $param['Type'];
         }
 
-        if (array_key_exists("TranscodeTask",$param) and $param["TranscodeTask"] !== null) {
+        if (array_key_exists('TranscodeTask',$param) and $param['TranscodeTask'] !== null) {
             $this->TranscodeTask = new MediaProcessTaskTranscodeResult();
-            $this->TranscodeTask->deserialize($param["TranscodeTask"]);
+            $this->TranscodeTask->deserialize($param['TranscodeTask']);
         }
 
-        if (array_key_exists("AnimatedGraphicTask",$param) and $param["AnimatedGraphicTask"] !== null) {
+        if (array_key_exists('AnimatedGraphicTask',$param) and $param['AnimatedGraphicTask'] !== null) {
             $this->AnimatedGraphicTask = new MediaProcessTaskAnimatedGraphicResult();
-            $this->AnimatedGraphicTask->deserialize($param["AnimatedGraphicTask"]);
+            $this->AnimatedGraphicTask->deserialize($param['AnimatedGraphicTask']);
         }
 
-        if (array_key_exists("SnapshotByTimeOffsetTask",$param) and $param["SnapshotByTimeOffsetTask"] !== null) {
+        if (array_key_exists('SnapshotByTimeOffsetTask',$param) and $param['SnapshotByTimeOffsetTask'] !== null) {
             $this->SnapshotByTimeOffsetTask = new MediaProcessTaskSnapshotByTimeOffsetResult();
-            $this->SnapshotByTimeOffsetTask->deserialize($param["SnapshotByTimeOffsetTask"]);
+            $this->SnapshotByTimeOffsetTask->deserialize($param['SnapshotByTimeOffsetTask']);
         }
 
-        if (array_key_exists("SampleSnapshotTask",$param) and $param["SampleSnapshotTask"] !== null) {
+        if (array_key_exists('SampleSnapshotTask',$param) and $param['SampleSnapshotTask'] !== null) {
             $this->SampleSnapshotTask = new MediaProcessTaskSampleSnapshotResult();
-            $this->SampleSnapshotTask->deserialize($param["SampleSnapshotTask"]);
+            $this->SampleSnapshotTask->deserialize($param['SampleSnapshotTask']);
         }
 
-        if (array_key_exists("ImageSpriteTask",$param) and $param["ImageSpriteTask"] !== null) {
+        if (array_key_exists('ImageSpriteTask',$param) and $param['ImageSpriteTask'] !== null) {
             $this->ImageSpriteTask = new MediaProcessTaskImageSpriteResult();
-            $this->ImageSpriteTask->deserialize($param["ImageSpriteTask"]);
+            $this->ImageSpriteTask->deserialize($param['ImageSpriteTask']);
         }
 
-        if (array_key_exists("AdaptiveDynamicStreamingTask",$param) and $param["AdaptiveDynamicStreamingTask"] !== null) {
+        if (array_key_exists('AdaptiveDynamicStreamingTask',$param) and $param['AdaptiveDynamicStreamingTask'] !== null) {
             $this->AdaptiveDynamicStreamingTask = new MediaProcessTaskAdaptiveDynamicStreamingResult();
-            $this->AdaptiveDynamicStreamingTask->deserialize($param["AdaptiveDynamicStreamingTask"]);
+            $this->AdaptiveDynamicStreamingTask->deserialize($param['AdaptiveDynamicStreamingTask']);
         }
     }
 }

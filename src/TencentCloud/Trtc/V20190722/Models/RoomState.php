@@ -86,28 +86,28 @@ class RoomState extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CommId",$param) and $param["CommId"] !== null) {
-            $this->CommId = $param["CommId"];
+        if (array_key_exists('CommId',$param) and $param['CommId'] !== null) {
+            $this->CommId = $param['CommId'];
         }
 
-        if (array_key_exists("RoomString",$param) and $param["RoomString"] !== null) {
-            $this->RoomString = $param["RoomString"];
+        if (array_key_exists('RoomString',$param) and $param['RoomString'] !== null) {
+            $this->RoomString = $param['RoomString'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("DestroyTime",$param) and $param["DestroyTime"] !== null) {
-            $this->DestroyTime = $param["DestroyTime"];
+        if (array_key_exists('DestroyTime',$param) and $param['DestroyTime'] !== null) {
+            $this->DestroyTime = $param['DestroyTime'];
         }
 
-        if (array_key_exists("IsFinished",$param) and $param["IsFinished"] !== null) {
-            $this->IsFinished = $param["IsFinished"];
+        if (array_key_exists('IsFinished',$param) and $param['IsFinished'] !== null) {
+            $this->IsFinished = $param['IsFinished'];
         }
 
-        if (array_key_exists("UserId",$param) and $param["UserId"] !== null) {
-            $this->UserId = $param["UserId"];
+        if (array_key_exists('UserId',$param) and $param['UserId'] !== null) {
+            $this->UserId = $param['UserId'];
         }
     }
 }

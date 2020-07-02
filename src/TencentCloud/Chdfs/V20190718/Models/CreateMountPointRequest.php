@@ -86,28 +86,28 @@ class CreateMountPointRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MountPointName",$param) and $param["MountPointName"] !== null) {
-            $this->MountPointName = $param["MountPointName"];
+        if (array_key_exists('MountPointName',$param) and $param['MountPointName'] !== null) {
+            $this->MountPointName = $param['MountPointName'];
         }
 
-        if (array_key_exists("FileSystemId",$param) and $param["FileSystemId"] !== null) {
-            $this->FileSystemId = $param["FileSystemId"];
+        if (array_key_exists('FileSystemId',$param) and $param['FileSystemId'] !== null) {
+            $this->FileSystemId = $param['FileSystemId'];
         }
 
-        if (array_key_exists("AccessGroupId",$param) and $param["AccessGroupId"] !== null) {
-            $this->AccessGroupId = $param["AccessGroupId"];
+        if (array_key_exists('AccessGroupId',$param) and $param['AccessGroupId'] !== null) {
+            $this->AccessGroupId = $param['AccessGroupId'];
         }
 
-        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
-            $this->VpcId = $param["VpcId"];
+        if (array_key_exists('VpcId',$param) and $param['VpcId'] !== null) {
+            $this->VpcId = $param['VpcId'];
         }
 
-        if (array_key_exists("MountPointStatus",$param) and $param["MountPointStatus"] !== null) {
-            $this->MountPointStatus = $param["MountPointStatus"];
+        if (array_key_exists('MountPointStatus',$param) and $param['MountPointStatus'] !== null) {
+            $this->MountPointStatus = $param['MountPointStatus'];
         }
 
-        if (array_key_exists("VpcType",$param) and $param["VpcType"] !== null) {
-            $this->VpcType = $param["VpcType"];
+        if (array_key_exists('VpcType',$param) and $param['VpcType'] !== null) {
+            $this->VpcType = $param['VpcType'];
         }
     }
 }

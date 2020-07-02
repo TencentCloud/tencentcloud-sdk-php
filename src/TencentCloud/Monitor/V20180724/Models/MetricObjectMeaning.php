@@ -54,12 +54,12 @@ class MetricObjectMeaning extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("En",$param) and $param["En"] !== null) {
-            $this->En = $param["En"];
+        if (array_key_exists('En',$param) and $param['En'] !== null) {
+            $this->En = $param['En'];
         }
 
-        if (array_key_exists("Zh",$param) and $param["Zh"] !== null) {
-            $this->Zh = $param["Zh"];
+        if (array_key_exists('Zh',$param) and $param['Zh'] !== null) {
+            $this->Zh = $param['Zh'];
         }
     }
 }

@@ -54,17 +54,17 @@ class DescribeSmsTemplateListResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DescribeTemplateStatusSet",$param) and $param["DescribeTemplateStatusSet"] !== null) {
+        if (array_key_exists('DescribeTemplateStatusSet',$param) and $param['DescribeTemplateStatusSet'] !== null) {
             $this->DescribeTemplateStatusSet = [];
-            foreach ($param["DescribeTemplateStatusSet"] as $key => $value){
+            foreach ($param['DescribeTemplateStatusSet'] as $key => $value){
                 $obj = new DescribeTemplateListStatus();
                 $obj->deserialize($value);
                 array_push($this->DescribeTemplateStatusSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

@@ -46,9 +46,9 @@ class ScanSensitiveList extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SensitiveList",$param) and $param["SensitiveList"] !== null) {
+        if (array_key_exists('SensitiveList',$param) and $param['SensitiveList'] !== null) {
             $this->SensitiveList = [];
-            foreach ($param["SensitiveList"] as $key => $value){
+            foreach ($param['SensitiveList'] as $key => $value){
                 $obj = new ScanSensitiveInfo();
                 $obj->deserialize($value);
                 array_push($this->SensitiveList, $obj);

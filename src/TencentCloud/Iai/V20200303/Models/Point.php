@@ -54,12 +54,12 @@ class Point extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("X",$param) and $param["X"] !== null) {
-            $this->X = $param["X"];
+        if (array_key_exists('X',$param) and $param['X'] !== null) {
+            $this->X = $param['X'];
         }
 
-        if (array_key_exists("Y",$param) and $param["Y"] !== null) {
-            $this->Y = $param["Y"];
+        if (array_key_exists('Y',$param) and $param['Y'] !== null) {
+            $this->Y = $param['Y'];
         }
     }
 }

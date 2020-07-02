@@ -74,20 +74,20 @@ class BindDevInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Tid",$param) and $param["Tid"] !== null) {
-            $this->Tid = $param["Tid"];
+        if (array_key_exists('Tid',$param) and $param['Tid'] !== null) {
+            $this->Tid = $param['Tid'];
         }
 
-        if (array_key_exists("DeviceName",$param) and $param["DeviceName"] !== null) {
-            $this->DeviceName = $param["DeviceName"];
+        if (array_key_exists('DeviceName',$param) and $param['DeviceName'] !== null) {
+            $this->DeviceName = $param['DeviceName'];
         }
 
-        if (array_key_exists("DeviceModel",$param) and $param["DeviceModel"] !== null) {
-            $this->DeviceModel = $param["DeviceModel"];
+        if (array_key_exists('DeviceModel',$param) and $param['DeviceModel'] !== null) {
+            $this->DeviceModel = $param['DeviceModel'];
         }
 
-        if (array_key_exists("Role",$param) and $param["Role"] !== null) {
-            $this->Role = $param["Role"];
+        if (array_key_exists('Role',$param) and $param['Role'] !== null) {
+            $this->Role = $param['Role'];
         }
     }
 }

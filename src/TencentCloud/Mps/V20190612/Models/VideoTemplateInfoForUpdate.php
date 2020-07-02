@@ -158,36 +158,36 @@ class VideoTemplateInfoForUpdate extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Codec",$param) and $param["Codec"] !== null) {
-            $this->Codec = $param["Codec"];
+        if (array_key_exists('Codec',$param) and $param['Codec'] !== null) {
+            $this->Codec = $param['Codec'];
         }
 
-        if (array_key_exists("Fps",$param) and $param["Fps"] !== null) {
-            $this->Fps = $param["Fps"];
+        if (array_key_exists('Fps',$param) and $param['Fps'] !== null) {
+            $this->Fps = $param['Fps'];
         }
 
-        if (array_key_exists("Bitrate",$param) and $param["Bitrate"] !== null) {
-            $this->Bitrate = $param["Bitrate"];
+        if (array_key_exists('Bitrate',$param) and $param['Bitrate'] !== null) {
+            $this->Bitrate = $param['Bitrate'];
         }
 
-        if (array_key_exists("ResolutionAdaptive",$param) and $param["ResolutionAdaptive"] !== null) {
-            $this->ResolutionAdaptive = $param["ResolutionAdaptive"];
+        if (array_key_exists('ResolutionAdaptive',$param) and $param['ResolutionAdaptive'] !== null) {
+            $this->ResolutionAdaptive = $param['ResolutionAdaptive'];
         }
 
-        if (array_key_exists("Width",$param) and $param["Width"] !== null) {
-            $this->Width = $param["Width"];
+        if (array_key_exists('Width',$param) and $param['Width'] !== null) {
+            $this->Width = $param['Width'];
         }
 
-        if (array_key_exists("Height",$param) and $param["Height"] !== null) {
-            $this->Height = $param["Height"];
+        if (array_key_exists('Height',$param) and $param['Height'] !== null) {
+            $this->Height = $param['Height'];
         }
 
-        if (array_key_exists("Gop",$param) and $param["Gop"] !== null) {
-            $this->Gop = $param["Gop"];
+        if (array_key_exists('Gop',$param) and $param['Gop'] !== null) {
+            $this->Gop = $param['Gop'];
         }
 
-        if (array_key_exists("FillType",$param) and $param["FillType"] !== null) {
-            $this->FillType = $param["FillType"];
+        if (array_key_exists('FillType',$param) and $param['FillType'] !== null) {
+            $this->FillType = $param['FillType'];
         }
     }
 }

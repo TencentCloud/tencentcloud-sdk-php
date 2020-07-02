@@ -62,13 +62,13 @@ class ServicesStatus extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("ServiceSet",$param) and $param["ServiceSet"] !== null) {
+        if (array_key_exists('ServiceSet',$param) and $param['ServiceSet'] !== null) {
             $this->ServiceSet = [];
-            foreach ($param["ServiceSet"] as $key => $value){
+            foreach ($param['ServiceSet'] as $key => $value){
                 $obj = new Service();
                 $obj->deserialize($value);
                 array_push($this->ServiceSet, $obj);

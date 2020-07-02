@@ -62,21 +62,21 @@ class DescribeScheduledActionsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("ScheduledActionSet",$param) and $param["ScheduledActionSet"] !== null) {
+        if (array_key_exists('ScheduledActionSet',$param) and $param['ScheduledActionSet'] !== null) {
             $this->ScheduledActionSet = [];
-            foreach ($param["ScheduledActionSet"] as $key => $value){
+            foreach ($param['ScheduledActionSet'] as $key => $value){
                 $obj = new ScheduledAction();
                 $obj->deserialize($value);
                 array_push($this->ScheduledActionSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

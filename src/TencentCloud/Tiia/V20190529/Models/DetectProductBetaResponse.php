@@ -74,22 +74,22 @@ class DetectProductBetaResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RegionDetected",$param) and $param["RegionDetected"] !== null) {
+        if (array_key_exists('RegionDetected',$param) and $param['RegionDetected'] !== null) {
             $this->RegionDetected = [];
-            foreach ($param["RegionDetected"] as $key => $value){
+            foreach ($param['RegionDetected'] as $key => $value){
                 $obj = new RegionDetected();
                 $obj->deserialize($value);
                 array_push($this->RegionDetected, $obj);
             }
         }
 
-        if (array_key_exists("ProductInfo",$param) and $param["ProductInfo"] !== null) {
+        if (array_key_exists('ProductInfo',$param) and $param['ProductInfo'] !== null) {
             $this->ProductInfo = new ProductInfo();
-            $this->ProductInfo->deserialize($param["ProductInfo"]);
+            $this->ProductInfo->deserialize($param['ProductInfo']);
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

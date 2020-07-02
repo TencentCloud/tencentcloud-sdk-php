@@ -62,21 +62,21 @@ class DescribeTrafficMirrorsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("TrafficMirrorSet",$param) and $param["TrafficMirrorSet"] !== null) {
+        if (array_key_exists('TrafficMirrorSet',$param) and $param['TrafficMirrorSet'] !== null) {
             $this->TrafficMirrorSet = [];
-            foreach ($param["TrafficMirrorSet"] as $key => $value){
+            foreach ($param['TrafficMirrorSet'] as $key => $value){
                 $obj = new TrafficMirror();
                 $obj->deserialize($value);
                 array_push($this->TrafficMirrorSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

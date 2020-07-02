@@ -54,13 +54,13 @@ class UpdateCodeRepositoryRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CodeRepositoryName",$param) and $param["CodeRepositoryName"] !== null) {
-            $this->CodeRepositoryName = $param["CodeRepositoryName"];
+        if (array_key_exists('CodeRepositoryName',$param) and $param['CodeRepositoryName'] !== null) {
+            $this->CodeRepositoryName = $param['CodeRepositoryName'];
         }
 
-        if (array_key_exists("GitSecret",$param) and $param["GitSecret"] !== null) {
+        if (array_key_exists('GitSecret',$param) and $param['GitSecret'] !== null) {
             $this->GitSecret = new GitSecret();
-            $this->GitSecret->deserialize($param["GitSecret"]);
+            $this->GitSecret->deserialize($param['GitSecret']);
         }
     }
 }

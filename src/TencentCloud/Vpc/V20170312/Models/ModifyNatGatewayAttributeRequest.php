@@ -62,16 +62,16 @@ class ModifyNatGatewayAttributeRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("NatGatewayId",$param) and $param["NatGatewayId"] !== null) {
-            $this->NatGatewayId = $param["NatGatewayId"];
+        if (array_key_exists('NatGatewayId',$param) and $param['NatGatewayId'] !== null) {
+            $this->NatGatewayId = $param['NatGatewayId'];
         }
 
-        if (array_key_exists("NatGatewayName",$param) and $param["NatGatewayName"] !== null) {
-            $this->NatGatewayName = $param["NatGatewayName"];
+        if (array_key_exists('NatGatewayName',$param) and $param['NatGatewayName'] !== null) {
+            $this->NatGatewayName = $param['NatGatewayName'];
         }
 
-        if (array_key_exists("InternetMaxBandwidthOut",$param) and $param["InternetMaxBandwidthOut"] !== null) {
-            $this->InternetMaxBandwidthOut = $param["InternetMaxBandwidthOut"];
+        if (array_key_exists('InternetMaxBandwidthOut',$param) and $param['InternetMaxBandwidthOut'] !== null) {
+            $this->InternetMaxBandwidthOut = $param['InternetMaxBandwidthOut'];
         }
     }
 }

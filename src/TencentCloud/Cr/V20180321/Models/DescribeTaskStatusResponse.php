@@ -74,20 +74,20 @@ class DescribeTaskStatusResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TaskResult",$param) and $param["TaskResult"] !== null) {
-            $this->TaskResult = $param["TaskResult"];
+        if (array_key_exists('TaskResult',$param) and $param['TaskResult'] !== null) {
+            $this->TaskResult = $param['TaskResult'];
         }
 
-        if (array_key_exists("TaskType",$param) and $param["TaskType"] !== null) {
-            $this->TaskType = $param["TaskType"];
+        if (array_key_exists('TaskType',$param) and $param['TaskType'] !== null) {
+            $this->TaskType = $param['TaskType'];
         }
 
-        if (array_key_exists("TaskFileUrl",$param) and $param["TaskFileUrl"] !== null) {
-            $this->TaskFileUrl = $param["TaskFileUrl"];
+        if (array_key_exists('TaskFileUrl',$param) and $param['TaskFileUrl'] !== null) {
+            $this->TaskFileUrl = $param['TaskFileUrl'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

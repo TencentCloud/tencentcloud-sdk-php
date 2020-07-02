@@ -54,13 +54,13 @@ class CreateTraceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PersonId",$param) and $param["PersonId"] !== null) {
-            $this->PersonId = $param["PersonId"];
+        if (array_key_exists('PersonId',$param) and $param['PersonId'] !== null) {
+            $this->PersonId = $param['PersonId'];
         }
 
-        if (array_key_exists("Trace",$param) and $param["Trace"] !== null) {
+        if (array_key_exists('Trace',$param) and $param['Trace'] !== null) {
             $this->Trace = new Trace();
-            $this->Trace->deserialize($param["Trace"]);
+            $this->Trace->deserialize($param['Trace']);
         }
     }
 }

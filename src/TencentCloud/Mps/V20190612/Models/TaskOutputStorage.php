@@ -58,13 +58,13 @@ class TaskOutputStorage extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists('Type',$param) and $param['Type'] !== null) {
+            $this->Type = $param['Type'];
         }
 
-        if (array_key_exists("CosOutputStorage",$param) and $param["CosOutputStorage"] !== null) {
+        if (array_key_exists('CosOutputStorage',$param) and $param['CosOutputStorage'] !== null) {
             $this->CosOutputStorage = new CosOutputStorage();
-            $this->CosOutputStorage->deserialize($param["CosOutputStorage"]);
+            $this->CosOutputStorage->deserialize($param['CosOutputStorage']);
         }
     }
 }

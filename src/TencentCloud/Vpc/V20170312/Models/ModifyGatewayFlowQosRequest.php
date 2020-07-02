@@ -74,16 +74,16 @@ VPN网关实例ID，形如，`vpn-ltjahce6`。
         if ($param === null) {
             return;
         }
-        if (array_key_exists("GatewayId",$param) and $param["GatewayId"] !== null) {
-            $this->GatewayId = $param["GatewayId"];
+        if (array_key_exists('GatewayId',$param) and $param['GatewayId'] !== null) {
+            $this->GatewayId = $param['GatewayId'];
         }
 
-        if (array_key_exists("Bandwidth",$param) and $param["Bandwidth"] !== null) {
-            $this->Bandwidth = $param["Bandwidth"];
+        if (array_key_exists('Bandwidth',$param) and $param['Bandwidth'] !== null) {
+            $this->Bandwidth = $param['Bandwidth'];
         }
 
-        if (array_key_exists("IpAddresses",$param) and $param["IpAddresses"] !== null) {
-            $this->IpAddresses = $param["IpAddresses"];
+        if (array_key_exists('IpAddresses',$param) and $param['IpAddresses'] !== null) {
+            $this->IpAddresses = $param['IpAddresses'];
         }
     }
 }

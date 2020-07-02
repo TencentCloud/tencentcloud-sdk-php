@@ -62,16 +62,16 @@ class DataManipulationResultItem extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
-            $this->Result = $param["Result"];
+        if (array_key_exists('Result',$param) and $param['Result'] !== null) {
+            $this->Result = $param['Result'];
         }
 
-        if (array_key_exists("DocId",$param) and $param["DocId"] !== null) {
-            $this->DocId = $param["DocId"];
+        if (array_key_exists('DocId',$param) and $param['DocId'] !== null) {
+            $this->DocId = $param['DocId'];
         }
 
-        if (array_key_exists("Errno",$param) and $param["Errno"] !== null) {
-            $this->Errno = $param["Errno"];
+        if (array_key_exists('Errno',$param) and $param['Errno'] !== null) {
+            $this->Errno = $param['Errno'];
         }
     }
 }

@@ -54,17 +54,17 @@ class DescribeInstanceCategoriesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceCategorySet",$param) and $param["InstanceCategorySet"] !== null) {
+        if (array_key_exists('InstanceCategorySet',$param) and $param['InstanceCategorySet'] !== null) {
             $this->InstanceCategorySet = [];
-            foreach ($param["InstanceCategorySet"] as $key => $value){
+            foreach ($param['InstanceCategorySet'] as $key => $value){
                 $obj = new InstanceCategoryItem();
                 $obj->deserialize($value);
                 array_push($this->InstanceCategorySet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

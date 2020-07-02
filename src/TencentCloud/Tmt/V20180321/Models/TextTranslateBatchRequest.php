@@ -222,20 +222,20 @@ hi：印地语
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Source",$param) and $param["Source"] !== null) {
-            $this->Source = $param["Source"];
+        if (array_key_exists('Source',$param) and $param['Source'] !== null) {
+            $this->Source = $param['Source'];
         }
 
-        if (array_key_exists("Target",$param) and $param["Target"] !== null) {
-            $this->Target = $param["Target"];
+        if (array_key_exists('Target',$param) and $param['Target'] !== null) {
+            $this->Target = $param['Target'];
         }
 
-        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
-            $this->ProjectId = $param["ProjectId"];
+        if (array_key_exists('ProjectId',$param) and $param['ProjectId'] !== null) {
+            $this->ProjectId = $param['ProjectId'];
         }
 
-        if (array_key_exists("SourceTextList",$param) and $param["SourceTextList"] !== null) {
-            $this->SourceTextList = $param["SourceTextList"];
+        if (array_key_exists('SourceTextList',$param) and $param['SourceTextList'] !== null) {
+            $this->SourceTextList = $param['SourceTextList'];
         }
     }
 }

@@ -110,28 +110,28 @@ class RegionInstance extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RegionName",$param) and $param["RegionName"] !== null) {
-            $this->RegionName = $param["RegionName"];
+        if (array_key_exists('RegionName',$param) and $param['RegionName'] !== null) {
+            $this->RegionName = $param['RegionName'];
         }
 
-        if (array_key_exists("RegionId",$param) and $param["RegionId"] !== null) {
-            $this->RegionId = $param["RegionId"];
+        if (array_key_exists('RegionId',$param) and $param['RegionId'] !== null) {
+            $this->RegionId = $param['RegionId'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("FeatureGates",$param) and $param["FeatureGates"] !== null) {
-            $this->FeatureGates = $param["FeatureGates"];
+        if (array_key_exists('FeatureGates',$param) and $param['FeatureGates'] !== null) {
+            $this->FeatureGates = $param['FeatureGates'];
         }
 
-        if (array_key_exists("Alias",$param) and $param["Alias"] !== null) {
-            $this->Alias = $param["Alias"];
+        if (array_key_exists('Alias',$param) and $param['Alias'] !== null) {
+            $this->Alias = $param['Alias'];
         }
 
-        if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
-            $this->Remark = $param["Remark"];
+        if (array_key_exists('Remark',$param) and $param['Remark'] !== null) {
+            $this->Remark = $param['Remark'];
         }
     }
 }

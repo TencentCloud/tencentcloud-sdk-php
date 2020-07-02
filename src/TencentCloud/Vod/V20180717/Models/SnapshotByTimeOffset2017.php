@@ -70,16 +70,16 @@ class SnapshotByTimeOffset2017 extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ErrCode",$param) and $param["ErrCode"] !== null) {
-            $this->ErrCode = $param["ErrCode"];
+        if (array_key_exists('ErrCode',$param) and $param['ErrCode'] !== null) {
+            $this->ErrCode = $param['ErrCode'];
         }
 
-        if (array_key_exists("TimeOffset",$param) and $param["TimeOffset"] !== null) {
-            $this->TimeOffset = $param["TimeOffset"];
+        if (array_key_exists('TimeOffset',$param) and $param['TimeOffset'] !== null) {
+            $this->TimeOffset = $param['TimeOffset'];
         }
 
-        if (array_key_exists("Url",$param) and $param["Url"] !== null) {
-            $this->Url = $param["Url"];
+        if (array_key_exists('Url',$param) and $param['Url'] !== null) {
+            $this->Url = $param['Url'];
         }
     }
 }

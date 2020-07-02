@@ -54,12 +54,12 @@ class LightResult extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LightLevel",$param) and $param["LightLevel"] !== null) {
-            $this->LightLevel = $param["LightLevel"];
+        if (array_key_exists('LightLevel',$param) and $param['LightLevel'] !== null) {
+            $this->LightLevel = $param['LightLevel'];
         }
 
-        if (array_key_exists("LightValue",$param) and $param["LightValue"] !== null) {
-            $this->LightValue = $param["LightValue"];
+        if (array_key_exists('LightValue',$param) and $param['LightValue'] !== null) {
+            $this->LightValue = $param['LightValue'];
         }
     }
 }

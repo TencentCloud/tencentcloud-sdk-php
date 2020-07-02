@@ -110,30 +110,30 @@ class FaceInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("X",$param) and $param["X"] !== null) {
-            $this->X = $param["X"];
+        if (array_key_exists('X',$param) and $param['X'] !== null) {
+            $this->X = $param['X'];
         }
 
-        if (array_key_exists("Y",$param) and $param["Y"] !== null) {
-            $this->Y = $param["Y"];
+        if (array_key_exists('Y',$param) and $param['Y'] !== null) {
+            $this->Y = $param['Y'];
         }
 
-        if (array_key_exists("Width",$param) and $param["Width"] !== null) {
-            $this->Width = $param["Width"];
+        if (array_key_exists('Width',$param) and $param['Width'] !== null) {
+            $this->Width = $param['Width'];
         }
 
-        if (array_key_exists("Height",$param) and $param["Height"] !== null) {
-            $this->Height = $param["Height"];
+        if (array_key_exists('Height',$param) and $param['Height'] !== null) {
+            $this->Height = $param['Height'];
         }
 
-        if (array_key_exists("FaceAttributesInfo",$param) and $param["FaceAttributesInfo"] !== null) {
+        if (array_key_exists('FaceAttributesInfo',$param) and $param['FaceAttributesInfo'] !== null) {
             $this->FaceAttributesInfo = new FaceAttributesInfo();
-            $this->FaceAttributesInfo->deserialize($param["FaceAttributesInfo"]);
+            $this->FaceAttributesInfo->deserialize($param['FaceAttributesInfo']);
         }
 
-        if (array_key_exists("FaceQualityInfo",$param) and $param["FaceQualityInfo"] !== null) {
+        if (array_key_exists('FaceQualityInfo',$param) and $param['FaceQualityInfo'] !== null) {
             $this->FaceQualityInfo = new FaceQualityInfo();
-            $this->FaceQualityInfo->deserialize($param["FaceQualityInfo"]);
+            $this->FaceQualityInfo->deserialize($param['FaceQualityInfo']);
         }
     }
 }

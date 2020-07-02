@@ -94,28 +94,28 @@ class IdlFileInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FileName",$param) and $param["FileName"] !== null) {
-            $this->FileName = $param["FileName"];
+        if (array_key_exists('FileName',$param) and $param['FileName'] !== null) {
+            $this->FileName = $param['FileName'];
         }
 
-        if (array_key_exists("FileType",$param) and $param["FileType"] !== null) {
-            $this->FileType = $param["FileType"];
+        if (array_key_exists('FileType',$param) and $param['FileType'] !== null) {
+            $this->FileType = $param['FileType'];
         }
 
-        if (array_key_exists("FileExtType",$param) and $param["FileExtType"] !== null) {
-            $this->FileExtType = $param["FileExtType"];
+        if (array_key_exists('FileExtType',$param) and $param['FileExtType'] !== null) {
+            $this->FileExtType = $param['FileExtType'];
         }
 
-        if (array_key_exists("FileSize",$param) and $param["FileSize"] !== null) {
-            $this->FileSize = $param["FileSize"];
+        if (array_key_exists('FileSize',$param) and $param['FileSize'] !== null) {
+            $this->FileSize = $param['FileSize'];
         }
 
-        if (array_key_exists("FileId",$param) and $param["FileId"] !== null) {
-            $this->FileId = $param["FileId"];
+        if (array_key_exists('FileId',$param) and $param['FileId'] !== null) {
+            $this->FileId = $param['FileId'];
         }
 
-        if (array_key_exists("FileContent",$param) and $param["FileContent"] !== null) {
-            $this->FileContent = $param["FileContent"];
+        if (array_key_exists('FileContent',$param) and $param['FileContent'] !== null) {
+            $this->FileContent = $param['FileContent'];
         }
     }
 }

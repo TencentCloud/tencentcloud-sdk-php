@@ -150,36 +150,36 @@ class LivePackageInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
-            $this->Id = $param["Id"];
+        if (array_key_exists('Id',$param) and $param['Id'] !== null) {
+            $this->Id = $param['Id'];
         }
 
-        if (array_key_exists("Total",$param) and $param["Total"] !== null) {
-            $this->Total = $param["Total"];
+        if (array_key_exists('Total',$param) and $param['Total'] !== null) {
+            $this->Total = $param['Total'];
         }
 
-        if (array_key_exists("Used",$param) and $param["Used"] !== null) {
-            $this->Used = $param["Used"];
+        if (array_key_exists('Used',$param) and $param['Used'] !== null) {
+            $this->Used = $param['Used'];
         }
 
-        if (array_key_exists("Left",$param) and $param["Left"] !== null) {
-            $this->Left = $param["Left"];
+        if (array_key_exists('Left',$param) and $param['Left'] !== null) {
+            $this->Left = $param['Left'];
         }
 
-        if (array_key_exists("BuyTime",$param) and $param["BuyTime"] !== null) {
-            $this->BuyTime = $param["BuyTime"];
+        if (array_key_exists('BuyTime',$param) and $param['BuyTime'] !== null) {
+            $this->BuyTime = $param['BuyTime'];
         }
 
-        if (array_key_exists("ExpireTime",$param) and $param["ExpireTime"] !== null) {
-            $this->ExpireTime = $param["ExpireTime"];
+        if (array_key_exists('ExpireTime',$param) and $param['ExpireTime'] !== null) {
+            $this->ExpireTime = $param['ExpireTime'];
         }
 
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists('Type',$param) and $param['Type'] !== null) {
+            $this->Type = $param['Type'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
     }
 }

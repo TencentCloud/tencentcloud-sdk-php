@@ -62,16 +62,16 @@ class DownloadUserCertResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CertName",$param) and $param["CertName"] !== null) {
-            $this->CertName = $param["CertName"];
+        if (array_key_exists('CertName',$param) and $param['CertName'] !== null) {
+            $this->CertName = $param['CertName'];
         }
 
-        if (array_key_exists("CertCtx",$param) and $param["CertCtx"] !== null) {
-            $this->CertCtx = $param["CertCtx"];
+        if (array_key_exists('CertCtx',$param) and $param['CertCtx'] !== null) {
+            $this->CertCtx = $param['CertCtx'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

@@ -54,13 +54,13 @@ class CreateRsgAsGroupResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RsgAsGroup",$param) and $param["RsgAsGroup"] !== null) {
+        if (array_key_exists('RsgAsGroup',$param) and $param['RsgAsGroup'] !== null) {
             $this->RsgAsGroup = new RsgAsGroup();
-            $this->RsgAsGroup->deserialize($param["RsgAsGroup"]);
+            $this->RsgAsGroup->deserialize($param['RsgAsGroup']);
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

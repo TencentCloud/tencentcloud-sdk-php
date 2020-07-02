@@ -54,12 +54,12 @@ class VersionInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("VersionId",$param) and $param["VersionId"] !== null) {
-            $this->VersionId = $param["VersionId"];
+        if (array_key_exists('VersionId',$param) and $param['VersionId'] !== null) {
+            $this->VersionId = $param['VersionId'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
     }
 }

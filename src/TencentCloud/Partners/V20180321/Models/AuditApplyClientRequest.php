@@ -62,16 +62,16 @@ class AuditApplyClientRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ClientUin",$param) and $param["ClientUin"] !== null) {
-            $this->ClientUin = $param["ClientUin"];
+        if (array_key_exists('ClientUin',$param) and $param['ClientUin'] !== null) {
+            $this->ClientUin = $param['ClientUin'];
         }
 
-        if (array_key_exists("AuditResult",$param) and $param["AuditResult"] !== null) {
-            $this->AuditResult = $param["AuditResult"];
+        if (array_key_exists('AuditResult',$param) and $param['AuditResult'] !== null) {
+            $this->AuditResult = $param['AuditResult'];
         }
 
-        if (array_key_exists("Note",$param) and $param["Note"] !== null) {
-            $this->Note = $param["Note"];
+        if (array_key_exists('Note',$param) and $param['Note'] !== null) {
+            $this->Note = $param['Note'];
         }
     }
 }

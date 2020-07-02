@@ -62,17 +62,17 @@ class Instance extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("ImageId",$param) and $param["ImageId"] !== null) {
-            $this->ImageId = $param["ImageId"];
+        if (array_key_exists('ImageId',$param) and $param['ImageId'] !== null) {
+            $this->ImageId = $param['ImageId'];
         }
 
-        if (array_key_exists("LoginSettings",$param) and $param["LoginSettings"] !== null) {
+        if (array_key_exists('LoginSettings',$param) and $param['LoginSettings'] !== null) {
             $this->LoginSettings = new LoginSettings();
-            $this->LoginSettings->deserialize($param["LoginSettings"]);
+            $this->LoginSettings->deserialize($param['LoginSettings']);
         }
     }
 }

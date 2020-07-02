@@ -62,16 +62,16 @@ class DeletePersonFeatureRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CompanyId",$param) and $param["CompanyId"] !== null) {
-            $this->CompanyId = $param["CompanyId"];
+        if (array_key_exists('CompanyId',$param) and $param['CompanyId'] !== null) {
+            $this->CompanyId = $param['CompanyId'];
         }
 
-        if (array_key_exists("ShopId",$param) and $param["ShopId"] !== null) {
-            $this->ShopId = $param["ShopId"];
+        if (array_key_exists('ShopId',$param) and $param['ShopId'] !== null) {
+            $this->ShopId = $param['ShopId'];
         }
 
-        if (array_key_exists("PersonId",$param) and $param["PersonId"] !== null) {
-            $this->PersonId = $param["PersonId"];
+        if (array_key_exists('PersonId',$param) and $param['PersonId'] !== null) {
+            $this->PersonId = $param['PersonId'];
         }
     }
 }

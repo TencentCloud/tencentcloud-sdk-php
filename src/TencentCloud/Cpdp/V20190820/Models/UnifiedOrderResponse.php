@@ -78,24 +78,24 @@ class UnifiedOrderResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalAmt",$param) and $param["TotalAmt"] !== null) {
-            $this->TotalAmt = $param["TotalAmt"];
+        if (array_key_exists('TotalAmt',$param) and $param['TotalAmt'] !== null) {
+            $this->TotalAmt = $param['TotalAmt'];
         }
 
-        if (array_key_exists("OutTradeNo",$param) and $param["OutTradeNo"] !== null) {
-            $this->OutTradeNo = $param["OutTradeNo"];
+        if (array_key_exists('OutTradeNo',$param) and $param['OutTradeNo'] !== null) {
+            $this->OutTradeNo = $param['OutTradeNo'];
         }
 
-        if (array_key_exists("PayInfo",$param) and $param["PayInfo"] !== null) {
-            $this->PayInfo = $param["PayInfo"];
+        if (array_key_exists('PayInfo',$param) and $param['PayInfo'] !== null) {
+            $this->PayInfo = $param['PayInfo'];
         }
 
-        if (array_key_exists("TransactionId",$param) and $param["TransactionId"] !== null) {
-            $this->TransactionId = $param["TransactionId"];
+        if (array_key_exists('TransactionId',$param) and $param['TransactionId'] !== null) {
+            $this->TransactionId = $param['TransactionId'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

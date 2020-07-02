@@ -174,24 +174,24 @@ class DescribeCaptchaResultResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CaptchaCode",$param) and $param["CaptchaCode"] !== null) {
-            $this->CaptchaCode = $param["CaptchaCode"];
+        if (array_key_exists('CaptchaCode',$param) and $param['CaptchaCode'] !== null) {
+            $this->CaptchaCode = $param['CaptchaCode'];
         }
 
-        if (array_key_exists("CaptchaMsg",$param) and $param["CaptchaMsg"] !== null) {
-            $this->CaptchaMsg = $param["CaptchaMsg"];
+        if (array_key_exists('CaptchaMsg',$param) and $param['CaptchaMsg'] !== null) {
+            $this->CaptchaMsg = $param['CaptchaMsg'];
         }
 
-        if (array_key_exists("EvilLevel",$param) and $param["EvilLevel"] !== null) {
-            $this->EvilLevel = $param["EvilLevel"];
+        if (array_key_exists('EvilLevel',$param) and $param['EvilLevel'] !== null) {
+            $this->EvilLevel = $param['EvilLevel'];
         }
 
-        if (array_key_exists("GetCaptchaTime",$param) and $param["GetCaptchaTime"] !== null) {
-            $this->GetCaptchaTime = $param["GetCaptchaTime"];
+        if (array_key_exists('GetCaptchaTime',$param) and $param['GetCaptchaTime'] !== null) {
+            $this->GetCaptchaTime = $param['GetCaptchaTime'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

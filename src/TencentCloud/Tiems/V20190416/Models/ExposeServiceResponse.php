@@ -54,13 +54,13 @@ class ExposeServiceResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Expose",$param) and $param["Expose"] !== null) {
+        if (array_key_exists('Expose',$param) and $param['Expose'] !== null) {
             $this->Expose = new ExposeInfo();
-            $this->Expose->deserialize($param["Expose"]);
+            $this->Expose->deserialize($param['Expose']);
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

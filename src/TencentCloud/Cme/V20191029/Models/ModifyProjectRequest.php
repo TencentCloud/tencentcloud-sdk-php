@@ -86,25 +86,25 @@ class ModifyProjectRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Platform",$param) and $param["Platform"] !== null) {
-            $this->Platform = $param["Platform"];
+        if (array_key_exists('Platform',$param) and $param['Platform'] !== null) {
+            $this->Platform = $param['Platform'];
         }
 
-        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
-            $this->ProjectId = $param["ProjectId"];
+        if (array_key_exists('ProjectId',$param) and $param['ProjectId'] !== null) {
+            $this->ProjectId = $param['ProjectId'];
         }
 
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("AspectRatio",$param) and $param["AspectRatio"] !== null) {
-            $this->AspectRatio = $param["AspectRatio"];
+        if (array_key_exists('AspectRatio',$param) and $param['AspectRatio'] !== null) {
+            $this->AspectRatio = $param['AspectRatio'];
         }
 
-        if (array_key_exists("Owner",$param) and $param["Owner"] !== null) {
+        if (array_key_exists('Owner',$param) and $param['Owner'] !== null) {
             $this->Owner = new Entity();
-            $this->Owner->deserialize($param["Owner"]);
+            $this->Owner->deserialize($param['Owner']);
         }
     }
 }

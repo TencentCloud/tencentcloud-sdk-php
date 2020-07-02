@@ -70,20 +70,20 @@ class CreateBindInstanceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ResourceId",$param) and $param["ResourceId"] !== null) {
-            $this->ResourceId = $param["ResourceId"];
+        if (array_key_exists('ResourceId',$param) and $param['ResourceId'] !== null) {
+            $this->ResourceId = $param['ResourceId'];
         }
 
-        if (array_key_exists("AppIconUrl",$param) and $param["AppIconUrl"] !== null) {
-            $this->AppIconUrl = $param["AppIconUrl"];
+        if (array_key_exists('AppIconUrl',$param) and $param['AppIconUrl'] !== null) {
+            $this->AppIconUrl = $param['AppIconUrl'];
         }
 
-        if (array_key_exists("AppName",$param) and $param["AppName"] !== null) {
-            $this->AppName = $param["AppName"];
+        if (array_key_exists('AppName',$param) and $param['AppName'] !== null) {
+            $this->AppName = $param['AppName'];
         }
 
-        if (array_key_exists("AppPkgName",$param) and $param["AppPkgName"] !== null) {
-            $this->AppPkgName = $param["AppPkgName"];
+        if (array_key_exists('AppPkgName',$param) and $param['AppPkgName'] !== null) {
+            $this->AppPkgName = $param['AppPkgName'];
         }
     }
 }

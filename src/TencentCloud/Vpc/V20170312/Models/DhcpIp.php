@@ -126,44 +126,44 @@ class DhcpIp extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DhcpIpId",$param) and $param["DhcpIpId"] !== null) {
-            $this->DhcpIpId = $param["DhcpIpId"];
+        if (array_key_exists('DhcpIpId',$param) and $param['DhcpIpId'] !== null) {
+            $this->DhcpIpId = $param['DhcpIpId'];
         }
 
-        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
-            $this->VpcId = $param["VpcId"];
+        if (array_key_exists('VpcId',$param) and $param['VpcId'] !== null) {
+            $this->VpcId = $param['VpcId'];
         }
 
-        if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
-            $this->SubnetId = $param["SubnetId"];
+        if (array_key_exists('SubnetId',$param) and $param['SubnetId'] !== null) {
+            $this->SubnetId = $param['SubnetId'];
         }
 
-        if (array_key_exists("DhcpIpName",$param) and $param["DhcpIpName"] !== null) {
-            $this->DhcpIpName = $param["DhcpIpName"];
+        if (array_key_exists('DhcpIpName',$param) and $param['DhcpIpName'] !== null) {
+            $this->DhcpIpName = $param['DhcpIpName'];
         }
 
-        if (array_key_exists("PrivateIpAddress",$param) and $param["PrivateIpAddress"] !== null) {
-            $this->PrivateIpAddress = $param["PrivateIpAddress"];
+        if (array_key_exists('PrivateIpAddress',$param) and $param['PrivateIpAddress'] !== null) {
+            $this->PrivateIpAddress = $param['PrivateIpAddress'];
         }
 
-        if (array_key_exists("AddressIp",$param) and $param["AddressIp"] !== null) {
-            $this->AddressIp = $param["AddressIp"];
+        if (array_key_exists('AddressIp',$param) and $param['AddressIp'] !== null) {
+            $this->AddressIp = $param['AddressIp'];
         }
 
-        if (array_key_exists("NetworkInterfaceId",$param) and $param["NetworkInterfaceId"] !== null) {
-            $this->NetworkInterfaceId = $param["NetworkInterfaceId"];
+        if (array_key_exists('NetworkInterfaceId',$param) and $param['NetworkInterfaceId'] !== null) {
+            $this->NetworkInterfaceId = $param['NetworkInterfaceId'];
         }
 
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("State",$param) and $param["State"] !== null) {
-            $this->State = $param["State"];
+        if (array_key_exists('State',$param) and $param['State'] !== null) {
+            $this->State = $param['State'];
         }
 
-        if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
-            $this->CreatedTime = $param["CreatedTime"];
+        if (array_key_exists('CreatedTime',$param) and $param['CreatedTime'] !== null) {
+            $this->CreatedTime = $param['CreatedTime'];
         }
     }
 }

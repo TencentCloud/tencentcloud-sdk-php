@@ -70,20 +70,20 @@ class ParamTemplateInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TemplateId",$param) and $param["TemplateId"] !== null) {
-            $this->TemplateId = $param["TemplateId"];
+        if (array_key_exists('TemplateId',$param) and $param['TemplateId'] !== null) {
+            $this->TemplateId = $param['TemplateId'];
         }
 
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
-            $this->Description = $param["Description"];
+        if (array_key_exists('Description',$param) and $param['Description'] !== null) {
+            $this->Description = $param['Description'];
         }
 
-        if (array_key_exists("EngineVersion",$param) and $param["EngineVersion"] !== null) {
-            $this->EngineVersion = $param["EngineVersion"];
+        if (array_key_exists('EngineVersion',$param) and $param['EngineVersion'] !== null) {
+            $this->EngineVersion = $param['EngineVersion'];
         }
     }
 }

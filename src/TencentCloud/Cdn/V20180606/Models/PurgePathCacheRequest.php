@@ -62,12 +62,12 @@ delete：刷新全部资源
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Paths",$param) and $param["Paths"] !== null) {
-            $this->Paths = $param["Paths"];
+        if (array_key_exists('Paths',$param) and $param['Paths'] !== null) {
+            $this->Paths = $param['Paths'];
         }
 
-        if (array_key_exists("FlushType",$param) and $param["FlushType"] !== null) {
-            $this->FlushType = $param["FlushType"];
+        if (array_key_exists('FlushType',$param) and $param['FlushType'] !== null) {
+            $this->FlushType = $param['FlushType'];
         }
     }
 }

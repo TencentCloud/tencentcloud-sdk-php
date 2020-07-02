@@ -62,16 +62,16 @@ class WordEmbeddingResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Dimension",$param) and $param["Dimension"] !== null) {
-            $this->Dimension = $param["Dimension"];
+        if (array_key_exists('Dimension',$param) and $param['Dimension'] !== null) {
+            $this->Dimension = $param['Dimension'];
         }
 
-        if (array_key_exists("Vector",$param) and $param["Vector"] !== null) {
-            $this->Vector = $param["Vector"];
+        if (array_key_exists('Vector',$param) and $param['Vector'] !== null) {
+            $this->Vector = $param['Vector'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

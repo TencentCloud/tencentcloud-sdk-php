@@ -78,25 +78,25 @@ class L7ListenerInfoRule extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
-            $this->Domain = $param["Domain"];
+        if (array_key_exists('Domain',$param) and $param['Domain'] !== null) {
+            $this->Domain = $param['Domain'];
         }
 
-        if (array_key_exists("DomainId",$param) and $param["DomainId"] !== null) {
-            $this->DomainId = $param["DomainId"];
+        if (array_key_exists('DomainId',$param) and $param['DomainId'] !== null) {
+            $this->DomainId = $param['DomainId'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("AddTimestamp",$param) and $param["AddTimestamp"] !== null) {
-            $this->AddTimestamp = $param["AddTimestamp"];
+        if (array_key_exists('AddTimestamp',$param) and $param['AddTimestamp'] !== null) {
+            $this->AddTimestamp = $param['AddTimestamp'];
         }
 
-        if (array_key_exists("LocationSet",$param) and $param["LocationSet"] !== null) {
+        if (array_key_exists('LocationSet',$param) and $param['LocationSet'] !== null) {
             $this->LocationSet = [];
-            foreach ($param["LocationSet"] as $key => $value){
+            foreach ($param['LocationSet'] as $key => $value){
                 $obj = new L7ListenerInfoLocation();
                 $obj->deserialize($value);
                 array_push($this->LocationSet, $obj);

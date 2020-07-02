@@ -62,19 +62,19 @@ class UpperBodyCloth extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Texture",$param) and $param["Texture"] !== null) {
+        if (array_key_exists('Texture',$param) and $param['Texture'] !== null) {
             $this->Texture = new UpperBodyClothTexture();
-            $this->Texture->deserialize($param["Texture"]);
+            $this->Texture->deserialize($param['Texture']);
         }
 
-        if (array_key_exists("Color",$param) and $param["Color"] !== null) {
+        if (array_key_exists('Color',$param) and $param['Color'] !== null) {
             $this->Color = new UpperBodyClothColor();
-            $this->Color->deserialize($param["Color"]);
+            $this->Color->deserialize($param['Color']);
         }
 
-        if (array_key_exists("Sleeve",$param) and $param["Sleeve"] !== null) {
+        if (array_key_exists('Sleeve',$param) and $param['Sleeve'] !== null) {
             $this->Sleeve = new UpperBodyClothSleeve();
-            $this->Sleeve->deserialize($param["Sleeve"]);
+            $this->Sleeve->deserialize($param['Sleeve']);
         }
     }
 }

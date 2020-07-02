@@ -62,21 +62,21 @@ class DescribeInstanceShardsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceShards",$param) and $param["InstanceShards"] !== null) {
+        if (array_key_exists('InstanceShards',$param) and $param['InstanceShards'] !== null) {
             $this->InstanceShards = [];
-            foreach ($param["InstanceShards"] as $key => $value){
+            foreach ($param['InstanceShards'] as $key => $value){
                 $obj = new InstanceClusterShard();
                 $obj->deserialize($value);
                 array_push($this->InstanceShards, $obj);
             }
         }
 
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

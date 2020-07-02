@@ -54,17 +54,17 @@ class DescribeL4ListenersResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ListenerSet",$param) and $param["ListenerSet"] !== null) {
+        if (array_key_exists('ListenerSet',$param) and $param['ListenerSet'] !== null) {
             $this->ListenerSet = [];
-            foreach ($param["ListenerSet"] as $key => $value){
+            foreach ($param['ListenerSet'] as $key => $value){
                 $obj = new L4Listener();
                 $obj->deserialize($value);
                 array_push($this->ListenerSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

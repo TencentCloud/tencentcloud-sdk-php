@@ -62,16 +62,16 @@ class DeleteCallBackRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BizAppId",$param) and $param["BizAppId"] !== null) {
-            $this->BizAppId = $param["BizAppId"];
+        if (array_key_exists('BizAppId',$param) and $param['BizAppId'] !== null) {
+            $this->BizAppId = $param['BizAppId'];
         }
 
-        if (array_key_exists("CallId",$param) and $param["CallId"] !== null) {
-            $this->CallId = $param["CallId"];
+        if (array_key_exists('CallId',$param) and $param['CallId'] !== null) {
+            $this->CallId = $param['CallId'];
         }
 
-        if (array_key_exists("CancelFlag",$param) and $param["CancelFlag"] !== null) {
-            $this->CancelFlag = $param["CancelFlag"];
+        if (array_key_exists('CancelFlag',$param) and $param['CancelFlag'] !== null) {
+            $this->CancelFlag = $param['CancelFlag'];
         }
     }
 }

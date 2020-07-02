@@ -50,8 +50,8 @@ class StoppingCondition extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MaxRuntimeInSeconds",$param) and $param["MaxRuntimeInSeconds"] !== null) {
-            $this->MaxRuntimeInSeconds = $param["MaxRuntimeInSeconds"];
+        if (array_key_exists('MaxRuntimeInSeconds',$param) and $param['MaxRuntimeInSeconds'] !== null) {
+            $this->MaxRuntimeInSeconds = $param['MaxRuntimeInSeconds'];
         }
     }
 }

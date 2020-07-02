@@ -62,21 +62,21 @@ class DescribeNatGatewayDestinationIpPortTranslationNatRulesResponse extends Abs
         if ($param === null) {
             return;
         }
-        if (array_key_exists("NatGatewayDestinationIpPortTranslationNatRuleSet",$param) and $param["NatGatewayDestinationIpPortTranslationNatRuleSet"] !== null) {
+        if (array_key_exists('NatGatewayDestinationIpPortTranslationNatRuleSet',$param) and $param['NatGatewayDestinationIpPortTranslationNatRuleSet'] !== null) {
             $this->NatGatewayDestinationIpPortTranslationNatRuleSet = [];
-            foreach ($param["NatGatewayDestinationIpPortTranslationNatRuleSet"] as $key => $value){
+            foreach ($param['NatGatewayDestinationIpPortTranslationNatRuleSet'] as $key => $value){
                 $obj = new NatGatewayDestinationIpPortTranslationNatRule();
                 $obj->deserialize($value);
                 array_push($this->NatGatewayDestinationIpPortTranslationNatRuleSet, $obj);
             }
         }
 
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

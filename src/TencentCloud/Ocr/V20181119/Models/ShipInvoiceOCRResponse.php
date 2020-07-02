@@ -62,21 +62,21 @@ class ShipInvoiceOCRResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ShipInvoiceInfos",$param) and $param["ShipInvoiceInfos"] !== null) {
+        if (array_key_exists('ShipInvoiceInfos',$param) and $param['ShipInvoiceInfos'] !== null) {
             $this->ShipInvoiceInfos = [];
-            foreach ($param["ShipInvoiceInfos"] as $key => $value){
+            foreach ($param['ShipInvoiceInfos'] as $key => $value){
                 $obj = new ShipInvoiceInfo();
                 $obj->deserialize($value);
                 array_push($this->ShipInvoiceInfos, $obj);
             }
         }
 
-        if (array_key_exists("Angle",$param) and $param["Angle"] !== null) {
-            $this->Angle = $param["Angle"];
+        if (array_key_exists('Angle',$param) and $param['Angle'] !== null) {
+            $this->Angle = $param['Angle'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

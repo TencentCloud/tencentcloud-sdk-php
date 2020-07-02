@@ -54,13 +54,13 @@ class GetRoleResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RoleInfo",$param) and $param["RoleInfo"] !== null) {
+        if (array_key_exists('RoleInfo',$param) and $param['RoleInfo'] !== null) {
             $this->RoleInfo = new RoleInfo();
-            $this->RoleInfo->deserialize($param["RoleInfo"]);
+            $this->RoleInfo->deserialize($param['RoleInfo']);
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

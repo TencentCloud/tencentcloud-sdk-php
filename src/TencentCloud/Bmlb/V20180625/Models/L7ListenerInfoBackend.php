@@ -94,32 +94,32 @@ class L7ListenerInfoBackend extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BindType",$param) and $param["BindType"] !== null) {
-            $this->BindType = $param["BindType"];
+        if (array_key_exists('BindType',$param) and $param['BindType'] !== null) {
+            $this->BindType = $param['BindType'];
         }
 
-        if (array_key_exists("Port",$param) and $param["Port"] !== null) {
-            $this->Port = $param["Port"];
+        if (array_key_exists('Port',$param) and $param['Port'] !== null) {
+            $this->Port = $param['Port'];
         }
 
-        if (array_key_exists("Weight",$param) and $param["Weight"] !== null) {
-            $this->Weight = $param["Weight"];
+        if (array_key_exists('Weight',$param) and $param['Weight'] !== null) {
+            $this->Weight = $param['Weight'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("Alias",$param) and $param["Alias"] !== null) {
-            $this->Alias = $param["Alias"];
+        if (array_key_exists('Alias',$param) and $param['Alias'] !== null) {
+            $this->Alias = $param['Alias'];
         }
 
-        if (array_key_exists("LanIp",$param) and $param["LanIp"] !== null) {
-            $this->LanIp = $param["LanIp"];
+        if (array_key_exists('LanIp',$param) and $param['LanIp'] !== null) {
+            $this->LanIp = $param['LanIp'];
         }
     }
 }

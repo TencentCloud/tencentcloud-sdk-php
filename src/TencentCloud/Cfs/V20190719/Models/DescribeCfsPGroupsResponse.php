@@ -54,17 +54,17 @@ class DescribeCfsPGroupsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PGroupList",$param) and $param["PGroupList"] !== null) {
+        if (array_key_exists('PGroupList',$param) and $param['PGroupList'] !== null) {
             $this->PGroupList = [];
-            foreach ($param["PGroupList"] as $key => $value){
+            foreach ($param['PGroupList'] as $key => $value){
                 $obj = new PGroupInfo();
                 $obj->deserialize($value);
                 array_push($this->PGroupList, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

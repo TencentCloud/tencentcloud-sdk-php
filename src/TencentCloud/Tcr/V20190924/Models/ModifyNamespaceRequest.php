@@ -62,16 +62,16 @@ class ModifyNamespaceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RegistryId",$param) and $param["RegistryId"] !== null) {
-            $this->RegistryId = $param["RegistryId"];
+        if (array_key_exists('RegistryId',$param) and $param['RegistryId'] !== null) {
+            $this->RegistryId = $param['RegistryId'];
         }
 
-        if (array_key_exists("NamespaceName",$param) and $param["NamespaceName"] !== null) {
-            $this->NamespaceName = $param["NamespaceName"];
+        if (array_key_exists('NamespaceName',$param) and $param['NamespaceName'] !== null) {
+            $this->NamespaceName = $param['NamespaceName'];
         }
 
-        if (array_key_exists("IsPublic",$param) and $param["IsPublic"] !== null) {
-            $this->IsPublic = $param["IsPublic"];
+        if (array_key_exists('IsPublic',$param) and $param['IsPublic'] !== null) {
+            $this->IsPublic = $param['IsPublic'];
         }
     }
 }

@@ -54,13 +54,13 @@ class CreateServiceTemplateResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ServiceTemplate",$param) and $param["ServiceTemplate"] !== null) {
+        if (array_key_exists('ServiceTemplate',$param) and $param['ServiceTemplate'] !== null) {
             $this->ServiceTemplate = new ServiceTemplate();
-            $this->ServiceTemplate->deserialize($param["ServiceTemplate"]);
+            $this->ServiceTemplate->deserialize($param['ServiceTemplate']);
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

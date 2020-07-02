@@ -46,8 +46,8 @@ class DescribeProjectStockRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SubProjectId",$param) and $param["SubProjectId"] !== null) {
-            $this->SubProjectId = $param["SubProjectId"];
+        if (array_key_exists('SubProjectId',$param) and $param['SubProjectId'] !== null) {
+            $this->SubProjectId = $param['SubProjectId'];
         }
     }
 }

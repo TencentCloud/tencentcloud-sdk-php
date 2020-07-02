@@ -46,8 +46,8 @@ class DescribeUsgRuleRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SgIds",$param) and $param["SgIds"] !== null) {
-            $this->SgIds = $param["SgIds"];
+        if (array_key_exists('SgIds',$param) and $param['SgIds'] !== null) {
+            $this->SgIds = $param['SgIds'];
         }
     }
 }

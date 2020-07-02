@@ -54,12 +54,12 @@ class InstanceRenewInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("RenewFlag",$param) and $param["RenewFlag"] !== null) {
-            $this->RenewFlag = $param["RenewFlag"];
+        if (array_key_exists('RenewFlag',$param) and $param['RenewFlag'] !== null) {
+            $this->RenewFlag = $param['RenewFlag'];
         }
     }
 }

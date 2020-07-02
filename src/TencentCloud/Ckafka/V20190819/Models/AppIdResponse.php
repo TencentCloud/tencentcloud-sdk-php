@@ -58,12 +58,12 @@ class AppIdResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("AppIdList",$param) and $param["AppIdList"] !== null) {
-            $this->AppIdList = $param["AppIdList"];
+        if (array_key_exists('AppIdList',$param) and $param['AppIdList'] !== null) {
+            $this->AppIdList = $param['AppIdList'];
         }
     }
 }

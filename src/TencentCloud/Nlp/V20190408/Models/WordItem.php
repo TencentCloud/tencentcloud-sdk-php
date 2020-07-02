@@ -62,16 +62,16 @@ class WordItem extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("Text",$param) and $param["Text"] !== null) {
-            $this->Text = $param["Text"];
+        if (array_key_exists('Text',$param) and $param['Text'] !== null) {
+            $this->Text = $param['Text'];
         }
 
-        if (array_key_exists("Pos",$param) and $param["Pos"] !== null) {
-            $this->Pos = $param["Pos"];
+        if (array_key_exists('Pos',$param) and $param['Pos'] !== null) {
+            $this->Pos = $param['Pos'];
         }
     }
 }

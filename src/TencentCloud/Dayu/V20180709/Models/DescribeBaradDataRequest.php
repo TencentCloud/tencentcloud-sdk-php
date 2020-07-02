@@ -154,45 +154,45 @@ avg表示均值；
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Business",$param) and $param["Business"] !== null) {
-            $this->Business = $param["Business"];
+        if (array_key_exists('Business',$param) and $param['Business'] !== null) {
+            $this->Business = $param['Business'];
         }
 
-        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
-            $this->Id = $param["Id"];
+        if (array_key_exists('Id',$param) and $param['Id'] !== null) {
+            $this->Id = $param['Id'];
         }
 
-        if (array_key_exists("MetricName",$param) and $param["MetricName"] !== null) {
-            $this->MetricName = $param["MetricName"];
+        if (array_key_exists('MetricName',$param) and $param['MetricName'] !== null) {
+            $this->MetricName = $param['MetricName'];
         }
 
-        if (array_key_exists("Period",$param) and $param["Period"] !== null) {
-            $this->Period = $param["Period"];
+        if (array_key_exists('Period',$param) and $param['Period'] !== null) {
+            $this->Period = $param['Period'];
         }
 
-        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
-            $this->StartTime = $param["StartTime"];
+        if (array_key_exists('StartTime',$param) and $param['StartTime'] !== null) {
+            $this->StartTime = $param['StartTime'];
         }
 
-        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
-            $this->EndTime = $param["EndTime"];
+        if (array_key_exists('EndTime',$param) and $param['EndTime'] !== null) {
+            $this->EndTime = $param['EndTime'];
         }
 
-        if (array_key_exists("Statistics",$param) and $param["Statistics"] !== null) {
-            $this->Statistics = $param["Statistics"];
+        if (array_key_exists('Statistics',$param) and $param['Statistics'] !== null) {
+            $this->Statistics = $param['Statistics'];
         }
 
-        if (array_key_exists("ProtocolPort",$param) and $param["ProtocolPort"] !== null) {
+        if (array_key_exists('ProtocolPort',$param) and $param['ProtocolPort'] !== null) {
             $this->ProtocolPort = [];
-            foreach ($param["ProtocolPort"] as $key => $value){
+            foreach ($param['ProtocolPort'] as $key => $value){
                 $obj = new ProtocolPort();
                 $obj->deserialize($value);
                 array_push($this->ProtocolPort, $obj);
             }
         }
 
-        if (array_key_exists("Ip",$param) and $param["Ip"] !== null) {
-            $this->Ip = $param["Ip"];
+        if (array_key_exists('Ip',$param) and $param['Ip'] !== null) {
+            $this->Ip = $param['Ip'];
         }
     }
 }

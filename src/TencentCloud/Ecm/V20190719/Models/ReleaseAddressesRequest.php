@@ -54,12 +54,12 @@ class ReleaseAddressesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("EcmRegion",$param) and $param["EcmRegion"] !== null) {
-            $this->EcmRegion = $param["EcmRegion"];
+        if (array_key_exists('EcmRegion',$param) and $param['EcmRegion'] !== null) {
+            $this->EcmRegion = $param['EcmRegion'];
         }
 
-        if (array_key_exists("AddressIds",$param) and $param["AddressIds"] !== null) {
-            $this->AddressIds = $param["AddressIds"];
+        if (array_key_exists('AddressIds',$param) and $param['AddressIds'] !== null) {
+            $this->AddressIds = $param['AddressIds'];
         }
     }
 }

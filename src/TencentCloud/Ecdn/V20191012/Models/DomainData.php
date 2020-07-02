@@ -54,13 +54,13 @@ class DomainData extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Resource",$param) and $param["Resource"] !== null) {
-            $this->Resource = $param["Resource"];
+        if (array_key_exists('Resource',$param) and $param['Resource'] !== null) {
+            $this->Resource = $param['Resource'];
         }
 
-        if (array_key_exists("DetailData",$param) and $param["DetailData"] !== null) {
+        if (array_key_exists('DetailData',$param) and $param['DetailData'] !== null) {
             $this->DetailData = [];
-            foreach ($param["DetailData"] as $key => $value){
+            foreach ($param['DetailData'] as $key => $value){
                 $obj = new DetailData();
                 $obj->deserialize($value);
                 array_push($this->DetailData, $obj);

@@ -134,28 +134,28 @@ PROCESSING :表示操作中。
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
-            $this->Operator = $param["Operator"];
+        if (array_key_exists('Operator',$param) and $param['Operator'] !== null) {
+            $this->Operator = $param['Operator'];
         }
 
-        if (array_key_exists("Operation",$param) and $param["Operation"] !== null) {
-            $this->Operation = $param["Operation"];
+        if (array_key_exists('Operation',$param) and $param['Operation'] !== null) {
+            $this->Operation = $param['Operation'];
         }
 
-        if (array_key_exists("DiskId",$param) and $param["DiskId"] !== null) {
-            $this->DiskId = $param["DiskId"];
+        if (array_key_exists('DiskId',$param) and $param['DiskId'] !== null) {
+            $this->DiskId = $param['DiskId'];
         }
 
-        if (array_key_exists("OperationState",$param) and $param["OperationState"] !== null) {
-            $this->OperationState = $param["OperationState"];
+        if (array_key_exists('OperationState',$param) and $param['OperationState'] !== null) {
+            $this->OperationState = $param['OperationState'];
         }
 
-        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
-            $this->StartTime = $param["StartTime"];
+        if (array_key_exists('StartTime',$param) and $param['StartTime'] !== null) {
+            $this->StartTime = $param['StartTime'];
         }
 
-        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
-            $this->EndTime = $param["EndTime"];
+        if (array_key_exists('EndTime',$param) and $param['EndTime'] !== null) {
+            $this->EndTime = $param['EndTime'];
         }
     }
 }

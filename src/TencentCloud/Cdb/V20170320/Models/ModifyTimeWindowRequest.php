@@ -62,16 +62,16 @@ class ModifyTimeWindowRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("TimeRanges",$param) and $param["TimeRanges"] !== null) {
-            $this->TimeRanges = $param["TimeRanges"];
+        if (array_key_exists('TimeRanges',$param) and $param['TimeRanges'] !== null) {
+            $this->TimeRanges = $param['TimeRanges'];
         }
 
-        if (array_key_exists("Weekdays",$param) and $param["Weekdays"] !== null) {
-            $this->Weekdays = $param["Weekdays"];
+        if (array_key_exists('Weekdays',$param) and $param['Weekdays'] !== null) {
+            $this->Weekdays = $param['Weekdays'];
         }
     }
 }

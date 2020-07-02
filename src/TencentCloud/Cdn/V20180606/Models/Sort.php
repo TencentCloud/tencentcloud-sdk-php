@@ -66,12 +66,12 @@ certExpireTime，证书过期时间
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Key",$param) and $param["Key"] !== null) {
-            $this->Key = $param["Key"];
+        if (array_key_exists('Key',$param) and $param['Key'] !== null) {
+            $this->Key = $param['Key'];
         }
 
-        if (array_key_exists("Sequence",$param) and $param["Sequence"] !== null) {
-            $this->Sequence = $param["Sequence"];
+        if (array_key_exists('Sequence',$param) and $param['Sequence'] !== null) {
+            $this->Sequence = $param['Sequence'];
         }
     }
 }

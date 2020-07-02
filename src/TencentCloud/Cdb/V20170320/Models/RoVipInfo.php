@@ -78,24 +78,24 @@ class RoVipInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RoVipStatus",$param) and $param["RoVipStatus"] !== null) {
-            $this->RoVipStatus = $param["RoVipStatus"];
+        if (array_key_exists('RoVipStatus',$param) and $param['RoVipStatus'] !== null) {
+            $this->RoVipStatus = $param['RoVipStatus'];
         }
 
-        if (array_key_exists("RoSubnetId",$param) and $param["RoSubnetId"] !== null) {
-            $this->RoSubnetId = $param["RoSubnetId"];
+        if (array_key_exists('RoSubnetId',$param) and $param['RoSubnetId'] !== null) {
+            $this->RoSubnetId = $param['RoSubnetId'];
         }
 
-        if (array_key_exists("RoVpcId",$param) and $param["RoVpcId"] !== null) {
-            $this->RoVpcId = $param["RoVpcId"];
+        if (array_key_exists('RoVpcId',$param) and $param['RoVpcId'] !== null) {
+            $this->RoVpcId = $param['RoVpcId'];
         }
 
-        if (array_key_exists("RoVport",$param) and $param["RoVport"] !== null) {
-            $this->RoVport = $param["RoVport"];
+        if (array_key_exists('RoVport',$param) and $param['RoVport'] !== null) {
+            $this->RoVport = $param['RoVport'];
         }
 
-        if (array_key_exists("RoVip",$param) and $param["RoVip"] !== null) {
-            $this->RoVip = $param["RoVip"];
+        if (array_key_exists('RoVip',$param) and $param['RoVip'] !== null) {
+            $this->RoVip = $param['RoVip'];
         }
     }
 }

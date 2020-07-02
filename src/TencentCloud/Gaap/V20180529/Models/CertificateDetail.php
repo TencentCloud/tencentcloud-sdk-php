@@ -146,44 +146,44 @@ class CertificateDetail extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CertificateId",$param) and $param["CertificateId"] !== null) {
-            $this->CertificateId = $param["CertificateId"];
+        if (array_key_exists('CertificateId',$param) and $param['CertificateId'] !== null) {
+            $this->CertificateId = $param['CertificateId'];
         }
 
-        if (array_key_exists("CertificateType",$param) and $param["CertificateType"] !== null) {
-            $this->CertificateType = $param["CertificateType"];
+        if (array_key_exists('CertificateType',$param) and $param['CertificateType'] !== null) {
+            $this->CertificateType = $param['CertificateType'];
         }
 
-        if (array_key_exists("CertificateAlias",$param) and $param["CertificateAlias"] !== null) {
-            $this->CertificateAlias = $param["CertificateAlias"];
+        if (array_key_exists('CertificateAlias',$param) and $param['CertificateAlias'] !== null) {
+            $this->CertificateAlias = $param['CertificateAlias'];
         }
 
-        if (array_key_exists("CertificateContent",$param) and $param["CertificateContent"] !== null) {
-            $this->CertificateContent = $param["CertificateContent"];
+        if (array_key_exists('CertificateContent',$param) and $param['CertificateContent'] !== null) {
+            $this->CertificateContent = $param['CertificateContent'];
         }
 
-        if (array_key_exists("CertificateKey",$param) and $param["CertificateKey"] !== null) {
-            $this->CertificateKey = $param["CertificateKey"];
+        if (array_key_exists('CertificateKey',$param) and $param['CertificateKey'] !== null) {
+            $this->CertificateKey = $param['CertificateKey'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("BeginTime",$param) and $param["BeginTime"] !== null) {
-            $this->BeginTime = $param["BeginTime"];
+        if (array_key_exists('BeginTime',$param) and $param['BeginTime'] !== null) {
+            $this->BeginTime = $param['BeginTime'];
         }
 
-        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
-            $this->EndTime = $param["EndTime"];
+        if (array_key_exists('EndTime',$param) and $param['EndTime'] !== null) {
+            $this->EndTime = $param['EndTime'];
         }
 
-        if (array_key_exists("IssuerCN",$param) and $param["IssuerCN"] !== null) {
-            $this->IssuerCN = $param["IssuerCN"];
+        if (array_key_exists('IssuerCN',$param) and $param['IssuerCN'] !== null) {
+            $this->IssuerCN = $param['IssuerCN'];
         }
 
-        if (array_key_exists("SubjectCN",$param) and $param["SubjectCN"] !== null) {
-            $this->SubjectCN = $param["SubjectCN"];
+        if (array_key_exists('SubjectCN',$param) and $param['SubjectCN'] !== null) {
+            $this->SubjectCN = $param['SubjectCN'];
         }
     }
 }

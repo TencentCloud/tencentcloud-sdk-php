@@ -62,21 +62,21 @@ class DescribeInstanceTokenResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("Tokens",$param) and $param["Tokens"] !== null) {
+        if (array_key_exists('Tokens',$param) and $param['Tokens'] !== null) {
             $this->Tokens = [];
-            foreach ($param["Tokens"] as $key => $value){
+            foreach ($param['Tokens'] as $key => $value){
                 $obj = new TcrInstanceToken();
                 $obj->deserialize($value);
                 array_push($this->Tokens, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

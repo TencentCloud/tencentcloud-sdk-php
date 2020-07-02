@@ -46,8 +46,8 @@ class DescribeStorageDataRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
-            $this->SubAppId = $param["SubAppId"];
+        if (array_key_exists('SubAppId',$param) and $param['SubAppId'] !== null) {
+            $this->SubAppId = $param['SubAppId'];
         }
     }
 }

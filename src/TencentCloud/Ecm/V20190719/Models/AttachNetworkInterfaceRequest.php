@@ -62,16 +62,16 @@ class AttachNetworkInterfaceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("NetworkInterfaceId",$param) and $param["NetworkInterfaceId"] !== null) {
-            $this->NetworkInterfaceId = $param["NetworkInterfaceId"];
+        if (array_key_exists('NetworkInterfaceId',$param) and $param['NetworkInterfaceId'] !== null) {
+            $this->NetworkInterfaceId = $param['NetworkInterfaceId'];
         }
 
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("EcmRegion",$param) and $param["EcmRegion"] !== null) {
-            $this->EcmRegion = $param["EcmRegion"];
+        if (array_key_exists('EcmRegion',$param) and $param['EcmRegion'] !== null) {
+            $this->EcmRegion = $param['EcmRegion'];
         }
     }
 }

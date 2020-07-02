@@ -54,17 +54,17 @@ class DescribeAgentsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Agents",$param) and $param["Agents"] !== null) {
+        if (array_key_exists('Agents',$param) and $param['Agents'] !== null) {
             $this->Agents = [];
-            foreach ($param["Agents"] as $key => $value){
+            foreach ($param['Agents'] as $key => $value){
                 $obj = new CatAgent();
                 $obj->deserialize($value);
                 array_push($this->Agents, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

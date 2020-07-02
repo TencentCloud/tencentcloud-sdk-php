@@ -86,25 +86,25 @@ CUCC：中国联通
         if ($param === null) {
             return;
         }
-        if (array_key_exists("EcmRegion",$param) and $param["EcmRegion"] !== null) {
-            $this->EcmRegion = $param["EcmRegion"];
+        if (array_key_exists('EcmRegion',$param) and $param['EcmRegion'] !== null) {
+            $this->EcmRegion = $param['EcmRegion'];
         }
 
-        if (array_key_exists("AddressCount",$param) and $param["AddressCount"] !== null) {
-            $this->AddressCount = $param["AddressCount"];
+        if (array_key_exists('AddressCount',$param) and $param['AddressCount'] !== null) {
+            $this->AddressCount = $param['AddressCount'];
         }
 
-        if (array_key_exists("InternetServiceProvider",$param) and $param["InternetServiceProvider"] !== null) {
-            $this->InternetServiceProvider = $param["InternetServiceProvider"];
+        if (array_key_exists('InternetServiceProvider',$param) and $param['InternetServiceProvider'] !== null) {
+            $this->InternetServiceProvider = $param['InternetServiceProvider'];
         }
 
-        if (array_key_exists("InternetMaxBandwidthOut",$param) and $param["InternetMaxBandwidthOut"] !== null) {
-            $this->InternetMaxBandwidthOut = $param["InternetMaxBandwidthOut"];
+        if (array_key_exists('InternetMaxBandwidthOut',$param) and $param['InternetMaxBandwidthOut'] !== null) {
+            $this->InternetMaxBandwidthOut = $param['InternetMaxBandwidthOut'];
         }
 
-        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+        if (array_key_exists('Tags',$param) and $param['Tags'] !== null) {
             $this->Tags = [];
-            foreach ($param["Tags"] as $key => $value){
+            foreach ($param['Tags'] as $key => $value){
                 $obj = new Tag();
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);

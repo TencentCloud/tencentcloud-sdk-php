@@ -62,21 +62,21 @@ class StandardVideoResult extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("HighlightsInfo",$param) and $param["HighlightsInfo"] !== null) {
+        if (array_key_exists('HighlightsInfo',$param) and $param['HighlightsInfo'] !== null) {
             $this->HighlightsInfo = [];
-            foreach ($param["HighlightsInfo"] as $key => $value){
+            foreach ($param['HighlightsInfo'] as $key => $value){
                 $obj = new HighlightsInfomation();
                 $obj->deserialize($value);
                 array_push($this->HighlightsInfo, $obj);
             }
         }
 
-        if (array_key_exists("Message",$param) and $param["Message"] !== null) {
-            $this->Message = $param["Message"];
+        if (array_key_exists('Message',$param) and $param['Message'] !== null) {
+            $this->Message = $param['Message'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
     }
 }

@@ -70,20 +70,20 @@ class ModifyNetworkInterfaceAttributeRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("NetworkInterfaceId",$param) and $param["NetworkInterfaceId"] !== null) {
-            $this->NetworkInterfaceId = $param["NetworkInterfaceId"];
+        if (array_key_exists('NetworkInterfaceId',$param) and $param['NetworkInterfaceId'] !== null) {
+            $this->NetworkInterfaceId = $param['NetworkInterfaceId'];
         }
 
-        if (array_key_exists("NetworkInterfaceName",$param) and $param["NetworkInterfaceName"] !== null) {
-            $this->NetworkInterfaceName = $param["NetworkInterfaceName"];
+        if (array_key_exists('NetworkInterfaceName',$param) and $param['NetworkInterfaceName'] !== null) {
+            $this->NetworkInterfaceName = $param['NetworkInterfaceName'];
         }
 
-        if (array_key_exists("NetworkInterfaceDescription",$param) and $param["NetworkInterfaceDescription"] !== null) {
-            $this->NetworkInterfaceDescription = $param["NetworkInterfaceDescription"];
+        if (array_key_exists('NetworkInterfaceDescription',$param) and $param['NetworkInterfaceDescription'] !== null) {
+            $this->NetworkInterfaceDescription = $param['NetworkInterfaceDescription'];
         }
 
-        if (array_key_exists("SecurityGroupIds",$param) and $param["SecurityGroupIds"] !== null) {
-            $this->SecurityGroupIds = $param["SecurityGroupIds"];
+        if (array_key_exists('SecurityGroupIds',$param) and $param['SecurityGroupIds'] !== null) {
+            $this->SecurityGroupIds = $param['SecurityGroupIds'];
         }
     }
 }

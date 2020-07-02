@@ -70,20 +70,20 @@ class CreateResourceInstancesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Pid",$param) and $param["Pid"] !== null) {
-            $this->Pid = $param["Pid"];
+        if (array_key_exists('Pid',$param) and $param['Pid'] !== null) {
+            $this->Pid = $param['Pid'];
         }
 
-        if (array_key_exists("TimeUnit",$param) and $param["TimeUnit"] !== null) {
-            $this->TimeUnit = $param["TimeUnit"];
+        if (array_key_exists('TimeUnit',$param) and $param['TimeUnit'] !== null) {
+            $this->TimeUnit = $param['TimeUnit'];
         }
 
-        if (array_key_exists("TimeSpan",$param) and $param["TimeSpan"] !== null) {
-            $this->TimeSpan = $param["TimeSpan"];
+        if (array_key_exists('TimeSpan',$param) and $param['TimeSpan'] !== null) {
+            $this->TimeSpan = $param['TimeSpan'];
         }
 
-        if (array_key_exists("ResourceNum",$param) and $param["ResourceNum"] !== null) {
-            $this->ResourceNum = $param["ResourceNum"];
+        if (array_key_exists('ResourceNum',$param) and $param['ResourceNum'] !== null) {
+            $this->ResourceNum = $param['ResourceNum'];
         }
     }
 }

@@ -78,24 +78,24 @@ class ModifyLanIpRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
-            $this->VpcId = $param["VpcId"];
+        if (array_key_exists('VpcId',$param) and $param['VpcId'] !== null) {
+            $this->VpcId = $param['VpcId'];
         }
 
-        if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
-            $this->SubnetId = $param["SubnetId"];
+        if (array_key_exists('SubnetId',$param) and $param['SubnetId'] !== null) {
+            $this->SubnetId = $param['SubnetId'];
         }
 
-        if (array_key_exists("LanIp",$param) and $param["LanIp"] !== null) {
-            $this->LanIp = $param["LanIp"];
+        if (array_key_exists('LanIp',$param) and $param['LanIp'] !== null) {
+            $this->LanIp = $param['LanIp'];
         }
 
-        if (array_key_exists("RebootDevice",$param) and $param["RebootDevice"] !== null) {
-            $this->RebootDevice = $param["RebootDevice"];
+        if (array_key_exists('RebootDevice',$param) and $param['RebootDevice'] !== null) {
+            $this->RebootDevice = $param['RebootDevice'];
         }
     }
 }

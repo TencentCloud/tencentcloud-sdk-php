@@ -78,24 +78,24 @@ class UploadCertificateRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CertificatePublicKey",$param) and $param["CertificatePublicKey"] !== null) {
-            $this->CertificatePublicKey = $param["CertificatePublicKey"];
+        if (array_key_exists('CertificatePublicKey',$param) and $param['CertificatePublicKey'] !== null) {
+            $this->CertificatePublicKey = $param['CertificatePublicKey'];
         }
 
-        if (array_key_exists("CertificatePrivateKey",$param) and $param["CertificatePrivateKey"] !== null) {
-            $this->CertificatePrivateKey = $param["CertificatePrivateKey"];
+        if (array_key_exists('CertificatePrivateKey',$param) and $param['CertificatePrivateKey'] !== null) {
+            $this->CertificatePrivateKey = $param['CertificatePrivateKey'];
         }
 
-        if (array_key_exists("CertificateType",$param) and $param["CertificateType"] !== null) {
-            $this->CertificateType = $param["CertificateType"];
+        if (array_key_exists('CertificateType',$param) and $param['CertificateType'] !== null) {
+            $this->CertificateType = $param['CertificateType'];
         }
 
-        if (array_key_exists("Alias",$param) and $param["Alias"] !== null) {
-            $this->Alias = $param["Alias"];
+        if (array_key_exists('Alias',$param) and $param['Alias'] !== null) {
+            $this->Alias = $param['Alias'];
         }
 
-        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
-            $this->ProjectId = $param["ProjectId"];
+        if (array_key_exists('ProjectId',$param) and $param['ProjectId'] !== null) {
+            $this->ProjectId = $param['ProjectId'];
         }
     }
 }

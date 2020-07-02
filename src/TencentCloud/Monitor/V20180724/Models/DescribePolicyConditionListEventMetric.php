@@ -70,20 +70,20 @@ class DescribePolicyConditionListEventMetric extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("EventId",$param) and $param["EventId"] !== null) {
-            $this->EventId = $param["EventId"];
+        if (array_key_exists('EventId',$param) and $param['EventId'] !== null) {
+            $this->EventId = $param['EventId'];
         }
 
-        if (array_key_exists("EventShowName",$param) and $param["EventShowName"] !== null) {
-            $this->EventShowName = $param["EventShowName"];
+        if (array_key_exists('EventShowName',$param) and $param['EventShowName'] !== null) {
+            $this->EventShowName = $param['EventShowName'];
         }
 
-        if (array_key_exists("NeedRecovered",$param) and $param["NeedRecovered"] !== null) {
-            $this->NeedRecovered = $param["NeedRecovered"];
+        if (array_key_exists('NeedRecovered',$param) and $param['NeedRecovered'] !== null) {
+            $this->NeedRecovered = $param['NeedRecovered'];
         }
 
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists('Type',$param) and $param['Type'] !== null) {
+            $this->Type = $param['Type'];
         }
     }
 }

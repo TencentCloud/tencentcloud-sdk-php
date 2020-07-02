@@ -46,8 +46,8 @@ class DeleteDirectConnectRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DirectConnectId",$param) and $param["DirectConnectId"] !== null) {
-            $this->DirectConnectId = $param["DirectConnectId"];
+        if (array_key_exists('DirectConnectId',$param) and $param['DirectConnectId'] !== null) {
+            $this->DirectConnectId = $param['DirectConnectId'];
         }
     }
 }

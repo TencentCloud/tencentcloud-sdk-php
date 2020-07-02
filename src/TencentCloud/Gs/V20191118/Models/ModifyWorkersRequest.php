@@ -54,12 +54,12 @@ class ModifyWorkersRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceIds",$param) and $param["InstanceIds"] !== null) {
-            $this->InstanceIds = $param["InstanceIds"];
+        if (array_key_exists('InstanceIds',$param) and $param['InstanceIds'] !== null) {
+            $this->InstanceIds = $param['InstanceIds'];
         }
 
-        if (array_key_exists("SetNo",$param) and $param["SetNo"] !== null) {
-            $this->SetNo = $param["SetNo"];
+        if (array_key_exists('SetNo',$param) and $param['SetNo'] !== null) {
+            $this->SetNo = $param['SetNo'];
         }
     }
 }

@@ -78,25 +78,25 @@ class RegionSellConf extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RegionName",$param) and $param["RegionName"] !== null) {
-            $this->RegionName = $param["RegionName"];
+        if (array_key_exists('RegionName',$param) and $param['RegionName'] !== null) {
+            $this->RegionName = $param['RegionName'];
         }
 
-        if (array_key_exists("Area",$param) and $param["Area"] !== null) {
-            $this->Area = $param["Area"];
+        if (array_key_exists('Area',$param) and $param['Area'] !== null) {
+            $this->Area = $param['Area'];
         }
 
-        if (array_key_exists("IsDefaultRegion",$param) and $param["IsDefaultRegion"] !== null) {
-            $this->IsDefaultRegion = $param["IsDefaultRegion"];
+        if (array_key_exists('IsDefaultRegion',$param) and $param['IsDefaultRegion'] !== null) {
+            $this->IsDefaultRegion = $param['IsDefaultRegion'];
         }
 
-        if (array_key_exists("Region",$param) and $param["Region"] !== null) {
-            $this->Region = $param["Region"];
+        if (array_key_exists('Region',$param) and $param['Region'] !== null) {
+            $this->Region = $param['Region'];
         }
 
-        if (array_key_exists("ZonesConf",$param) and $param["ZonesConf"] !== null) {
+        if (array_key_exists('ZonesConf',$param) and $param['ZonesConf'] !== null) {
             $this->ZonesConf = [];
-            foreach ($param["ZonesConf"] as $key => $value){
+            foreach ($param['ZonesConf'] as $key => $value){
                 $obj = new ZoneSellConf();
                 $obj->deserialize($value);
                 array_push($this->ZonesConf, $obj);

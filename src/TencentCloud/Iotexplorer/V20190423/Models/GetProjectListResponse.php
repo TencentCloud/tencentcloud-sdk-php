@@ -70,21 +70,21 @@ class GetProjectListResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Projects",$param) and $param["Projects"] !== null) {
+        if (array_key_exists('Projects',$param) and $param['Projects'] !== null) {
             $this->Projects = [];
-            foreach ($param["Projects"] as $key => $value){
+            foreach ($param['Projects'] as $key => $value){
                 $obj = new ProjectEntryEx();
                 $obj->deserialize($value);
                 array_push($this->Projects, $obj);
             }
         }
 
-        if (array_key_exists("Total",$param) and $param["Total"] !== null) {
-            $this->Total = $param["Total"];
+        if (array_key_exists('Total',$param) and $param['Total'] !== null) {
+            $this->Total = $param['Total'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

@@ -54,17 +54,17 @@ class DescribeTrafficMirrorReceiverHealthStatusResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ReceiversStatusSet",$param) and $param["ReceiversStatusSet"] !== null) {
+        if (array_key_exists('ReceiversStatusSet',$param) and $param['ReceiversStatusSet'] !== null) {
             $this->ReceiversStatusSet = [];
-            foreach ($param["ReceiversStatusSet"] as $key => $value){
+            foreach ($param['ReceiversStatusSet'] as $key => $value){
                 $obj = new TrafficMirrorReciversStatus();
                 $obj->deserialize($value);
                 array_push($this->ReceiversStatusSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

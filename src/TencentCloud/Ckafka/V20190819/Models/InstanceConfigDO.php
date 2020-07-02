@@ -62,16 +62,16 @@ class InstanceConfigDO extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AutoCreateTopicsEnable",$param) and $param["AutoCreateTopicsEnable"] !== null) {
-            $this->AutoCreateTopicsEnable = $param["AutoCreateTopicsEnable"];
+        if (array_key_exists('AutoCreateTopicsEnable',$param) and $param['AutoCreateTopicsEnable'] !== null) {
+            $this->AutoCreateTopicsEnable = $param['AutoCreateTopicsEnable'];
         }
 
-        if (array_key_exists("DefaultNumPartitions",$param) and $param["DefaultNumPartitions"] !== null) {
-            $this->DefaultNumPartitions = $param["DefaultNumPartitions"];
+        if (array_key_exists('DefaultNumPartitions',$param) and $param['DefaultNumPartitions'] !== null) {
+            $this->DefaultNumPartitions = $param['DefaultNumPartitions'];
         }
 
-        if (array_key_exists("DefaultReplicationFactor",$param) and $param["DefaultReplicationFactor"] !== null) {
-            $this->DefaultReplicationFactor = $param["DefaultReplicationFactor"];
+        if (array_key_exists('DefaultReplicationFactor',$param) and $param['DefaultReplicationFactor'] !== null) {
+            $this->DefaultReplicationFactor = $param['DefaultReplicationFactor'];
         }
     }
 }

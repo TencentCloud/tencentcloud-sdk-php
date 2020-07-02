@@ -94,53 +94,53 @@ class ModifyDDoSPolicyRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Business",$param) and $param["Business"] !== null) {
-            $this->Business = $param["Business"];
+        if (array_key_exists('Business',$param) and $param['Business'] !== null) {
+            $this->Business = $param['Business'];
         }
 
-        if (array_key_exists("PolicyId",$param) and $param["PolicyId"] !== null) {
-            $this->PolicyId = $param["PolicyId"];
+        if (array_key_exists('PolicyId',$param) and $param['PolicyId'] !== null) {
+            $this->PolicyId = $param['PolicyId'];
         }
 
-        if (array_key_exists("DropOptions",$param) and $param["DropOptions"] !== null) {
+        if (array_key_exists('DropOptions',$param) and $param['DropOptions'] !== null) {
             $this->DropOptions = [];
-            foreach ($param["DropOptions"] as $key => $value){
+            foreach ($param['DropOptions'] as $key => $value){
                 $obj = new DDoSPolicyDropOption();
                 $obj->deserialize($value);
                 array_push($this->DropOptions, $obj);
             }
         }
 
-        if (array_key_exists("PortLimits",$param) and $param["PortLimits"] !== null) {
+        if (array_key_exists('PortLimits',$param) and $param['PortLimits'] !== null) {
             $this->PortLimits = [];
-            foreach ($param["PortLimits"] as $key => $value){
+            foreach ($param['PortLimits'] as $key => $value){
                 $obj = new DDoSPolicyPortLimit();
                 $obj->deserialize($value);
                 array_push($this->PortLimits, $obj);
             }
         }
 
-        if (array_key_exists("IpAllowDenys",$param) and $param["IpAllowDenys"] !== null) {
+        if (array_key_exists('IpAllowDenys',$param) and $param['IpAllowDenys'] !== null) {
             $this->IpAllowDenys = [];
-            foreach ($param["IpAllowDenys"] as $key => $value){
+            foreach ($param['IpAllowDenys'] as $key => $value){
                 $obj = new IpBlackWhite();
                 $obj->deserialize($value);
                 array_push($this->IpAllowDenys, $obj);
             }
         }
 
-        if (array_key_exists("PacketFilters",$param) and $param["PacketFilters"] !== null) {
+        if (array_key_exists('PacketFilters',$param) and $param['PacketFilters'] !== null) {
             $this->PacketFilters = [];
-            foreach ($param["PacketFilters"] as $key => $value){
+            foreach ($param['PacketFilters'] as $key => $value){
                 $obj = new DDoSPolicyPacketFilter();
                 $obj->deserialize($value);
                 array_push($this->PacketFilters, $obj);
             }
         }
 
-        if (array_key_exists("WaterPrint",$param) and $param["WaterPrint"] !== null) {
+        if (array_key_exists('WaterPrint',$param) and $param['WaterPrint'] !== null) {
             $this->WaterPrint = [];
-            foreach ($param["WaterPrint"] as $key => $value){
+            foreach ($param['WaterPrint'] as $key => $value){
                 $obj = new WaterPrintPolicy();
                 $obj->deserialize($value);
                 array_push($this->WaterPrint, $obj);

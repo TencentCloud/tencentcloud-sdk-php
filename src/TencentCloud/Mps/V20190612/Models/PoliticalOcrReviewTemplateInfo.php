@@ -70,16 +70,16 @@ class PoliticalOcrReviewTemplateInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Switch",$param) and $param["Switch"] !== null) {
-            $this->Switch = $param["Switch"];
+        if (array_key_exists('Switch',$param) and $param['Switch'] !== null) {
+            $this->Switch = $param['Switch'];
         }
 
-        if (array_key_exists("BlockConfidence",$param) and $param["BlockConfidence"] !== null) {
-            $this->BlockConfidence = $param["BlockConfidence"];
+        if (array_key_exists('BlockConfidence',$param) and $param['BlockConfidence'] !== null) {
+            $this->BlockConfidence = $param['BlockConfidence'];
         }
 
-        if (array_key_exists("ReviewConfidence",$param) and $param["ReviewConfidence"] !== null) {
-            $this->ReviewConfidence = $param["ReviewConfidence"];
+        if (array_key_exists('ReviewConfidence',$param) and $param['ReviewConfidence'] !== null) {
+            $this->ReviewConfidence = $param['ReviewConfidence'];
         }
     }
 }

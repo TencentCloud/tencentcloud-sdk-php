@@ -70,26 +70,26 @@ class DescribeSlowLogTimeSeriesStatsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Period",$param) and $param["Period"] !== null) {
-            $this->Period = $param["Period"];
+        if (array_key_exists('Period',$param) and $param['Period'] !== null) {
+            $this->Period = $param['Period'];
         }
 
-        if (array_key_exists("TimeSeries",$param) and $param["TimeSeries"] !== null) {
+        if (array_key_exists('TimeSeries',$param) and $param['TimeSeries'] !== null) {
             $this->TimeSeries = [];
-            foreach ($param["TimeSeries"] as $key => $value){
+            foreach ($param['TimeSeries'] as $key => $value){
                 $obj = new TimeSlice();
                 $obj->deserialize($value);
                 array_push($this->TimeSeries, $obj);
             }
         }
 
-        if (array_key_exists("SeriesData",$param) and $param["SeriesData"] !== null) {
+        if (array_key_exists('SeriesData',$param) and $param['SeriesData'] !== null) {
             $this->SeriesData = new MonitorMetricSeriesData();
-            $this->SeriesData->deserialize($param["SeriesData"]);
+            $this->SeriesData->deserialize($param['SeriesData']);
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

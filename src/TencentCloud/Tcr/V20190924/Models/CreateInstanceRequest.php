@@ -54,12 +54,12 @@ class CreateInstanceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RegistryName",$param) and $param["RegistryName"] !== null) {
-            $this->RegistryName = $param["RegistryName"];
+        if (array_key_exists('RegistryName',$param) and $param['RegistryName'] !== null) {
+            $this->RegistryName = $param['RegistryName'];
         }
 
-        if (array_key_exists("RegistryType",$param) and $param["RegistryType"] !== null) {
-            $this->RegistryType = $param["RegistryType"];
+        if (array_key_exists('RegistryType',$param) and $param['RegistryType'] !== null) {
+            $this->RegistryType = $param['RegistryType'];
         }
     }
 }

@@ -102,36 +102,36 @@ class AssessQualityResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LongImage",$param) and $param["LongImage"] !== null) {
-            $this->LongImage = $param["LongImage"];
+        if (array_key_exists('LongImage',$param) and $param['LongImage'] !== null) {
+            $this->LongImage = $param['LongImage'];
         }
 
-        if (array_key_exists("BlackAndWhite",$param) and $param["BlackAndWhite"] !== null) {
-            $this->BlackAndWhite = $param["BlackAndWhite"];
+        if (array_key_exists('BlackAndWhite',$param) and $param['BlackAndWhite'] !== null) {
+            $this->BlackAndWhite = $param['BlackAndWhite'];
         }
 
-        if (array_key_exists("SmallImage",$param) and $param["SmallImage"] !== null) {
-            $this->SmallImage = $param["SmallImage"];
+        if (array_key_exists('SmallImage',$param) and $param['SmallImage'] !== null) {
+            $this->SmallImage = $param['SmallImage'];
         }
 
-        if (array_key_exists("BigImage",$param) and $param["BigImage"] !== null) {
-            $this->BigImage = $param["BigImage"];
+        if (array_key_exists('BigImage',$param) and $param['BigImage'] !== null) {
+            $this->BigImage = $param['BigImage'];
         }
 
-        if (array_key_exists("PureImage",$param) and $param["PureImage"] !== null) {
-            $this->PureImage = $param["PureImage"];
+        if (array_key_exists('PureImage',$param) and $param['PureImage'] !== null) {
+            $this->PureImage = $param['PureImage'];
         }
 
-        if (array_key_exists("ClarityScore",$param) and $param["ClarityScore"] !== null) {
-            $this->ClarityScore = $param["ClarityScore"];
+        if (array_key_exists('ClarityScore',$param) and $param['ClarityScore'] !== null) {
+            $this->ClarityScore = $param['ClarityScore'];
         }
 
-        if (array_key_exists("AestheticScore",$param) and $param["AestheticScore"] !== null) {
-            $this->AestheticScore = $param["AestheticScore"];
+        if (array_key_exists('AestheticScore',$param) and $param['AestheticScore'] !== null) {
+            $this->AestheticScore = $param['AestheticScore'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

@@ -54,17 +54,17 @@ class MixedInvoiceDetectResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InvoiceDetectInfos",$param) and $param["InvoiceDetectInfos"] !== null) {
+        if (array_key_exists('InvoiceDetectInfos',$param) and $param['InvoiceDetectInfos'] !== null) {
             $this->InvoiceDetectInfos = [];
-            foreach ($param["InvoiceDetectInfos"] as $key => $value){
+            foreach ($param['InvoiceDetectInfos'] as $key => $value){
                 $obj = new InvoiceDetectInfo();
                 $obj->deserialize($value);
                 array_push($this->InvoiceDetectInfos, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

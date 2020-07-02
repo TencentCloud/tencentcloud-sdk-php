@@ -54,12 +54,12 @@ class WordSimilarityRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SrcWord",$param) and $param["SrcWord"] !== null) {
-            $this->SrcWord = $param["SrcWord"];
+        if (array_key_exists('SrcWord',$param) and $param['SrcWord'] !== null) {
+            $this->SrcWord = $param['SrcWord'];
         }
 
-        if (array_key_exists("TargetWord",$param) and $param["TargetWord"] !== null) {
-            $this->TargetWord = $param["TargetWord"];
+        if (array_key_exists('TargetWord',$param) and $param['TargetWord'] !== null) {
+            $this->TargetWord = $param['TargetWord'];
         }
     }
 }

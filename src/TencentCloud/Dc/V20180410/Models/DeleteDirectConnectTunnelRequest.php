@@ -46,8 +46,8 @@ class DeleteDirectConnectTunnelRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DirectConnectTunnelId",$param) and $param["DirectConnectTunnelId"] !== null) {
-            $this->DirectConnectTunnelId = $param["DirectConnectTunnelId"];
+        if (array_key_exists('DirectConnectTunnelId',$param) and $param['DirectConnectTunnelId'] !== null) {
+            $this->DirectConnectTunnelId = $param['DirectConnectTunnelId'];
         }
     }
 }

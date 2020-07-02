@@ -70,20 +70,20 @@ class TextTranslateBatchResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Source",$param) and $param["Source"] !== null) {
-            $this->Source = $param["Source"];
+        if (array_key_exists('Source',$param) and $param['Source'] !== null) {
+            $this->Source = $param['Source'];
         }
 
-        if (array_key_exists("Target",$param) and $param["Target"] !== null) {
-            $this->Target = $param["Target"];
+        if (array_key_exists('Target',$param) and $param['Target'] !== null) {
+            $this->Target = $param['Target'];
         }
 
-        if (array_key_exists("TargetTextList",$param) and $param["TargetTextList"] !== null) {
-            $this->TargetTextList = $param["TargetTextList"];
+        if (array_key_exists('TargetTextList',$param) and $param['TargetTextList'] !== null) {
+            $this->TargetTextList = $param['TargetTextList'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

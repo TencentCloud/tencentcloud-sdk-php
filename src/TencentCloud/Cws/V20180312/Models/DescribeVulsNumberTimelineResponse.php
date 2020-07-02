@@ -62,21 +62,21 @@ class DescribeVulsNumberTimelineResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("VulsTimeline",$param) and $param["VulsTimeline"] !== null) {
+        if (array_key_exists('VulsTimeline',$param) and $param['VulsTimeline'] !== null) {
             $this->VulsTimeline = [];
-            foreach ($param["VulsTimeline"] as $key => $value){
+            foreach ($param['VulsTimeline'] as $key => $value){
                 $obj = new VulsTimeline();
                 $obj->deserialize($value);
                 array_push($this->VulsTimeline, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

@@ -54,12 +54,12 @@ class LoginSettings extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Password",$param) and $param["Password"] !== null) {
-            $this->Password = $param["Password"];
+        if (array_key_exists('Password',$param) and $param['Password'] !== null) {
+            $this->Password = $param['Password'];
         }
 
-        if (array_key_exists("PublicKeyId",$param) and $param["PublicKeyId"] !== null) {
-            $this->PublicKeyId = $param["PublicKeyId"];
+        if (array_key_exists('PublicKeyId',$param) and $param['PublicKeyId'] !== null) {
+            $this->PublicKeyId = $param['PublicKeyId'];
         }
     }
 }

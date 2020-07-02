@@ -102,36 +102,36 @@ class ModifyPersonRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LibraryId",$param) and $param["LibraryId"] !== null) {
-            $this->LibraryId = $param["LibraryId"];
+        if (array_key_exists('LibraryId',$param) and $param['LibraryId'] !== null) {
+            $this->LibraryId = $param['LibraryId'];
         }
 
-        if (array_key_exists("PersonId",$param) and $param["PersonId"] !== null) {
-            $this->PersonId = $param["PersonId"];
+        if (array_key_exists('PersonId',$param) and $param['PersonId'] !== null) {
+            $this->PersonId = $param['PersonId'];
         }
 
-        if (array_key_exists("JobNumber",$param) and $param["JobNumber"] !== null) {
-            $this->JobNumber = $param["JobNumber"];
+        if (array_key_exists('JobNumber',$param) and $param['JobNumber'] !== null) {
+            $this->JobNumber = $param['JobNumber'];
         }
 
-        if (array_key_exists("Mail",$param) and $param["Mail"] !== null) {
-            $this->Mail = $param["Mail"];
+        if (array_key_exists('Mail',$param) and $param['Mail'] !== null) {
+            $this->Mail = $param['Mail'];
         }
 
-        if (array_key_exists("Male",$param) and $param["Male"] !== null) {
-            $this->Male = $param["Male"];
+        if (array_key_exists('Male',$param) and $param['Male'] !== null) {
+            $this->Male = $param['Male'];
         }
 
-        if (array_key_exists("PersonName",$param) and $param["PersonName"] !== null) {
-            $this->PersonName = $param["PersonName"];
+        if (array_key_exists('PersonName',$param) and $param['PersonName'] !== null) {
+            $this->PersonName = $param['PersonName'];
         }
 
-        if (array_key_exists("PhoneNumber",$param) and $param["PhoneNumber"] !== null) {
-            $this->PhoneNumber = $param["PhoneNumber"];
+        if (array_key_exists('PhoneNumber',$param) and $param['PhoneNumber'] !== null) {
+            $this->PhoneNumber = $param['PhoneNumber'];
         }
 
-        if (array_key_exists("StudentNumber",$param) and $param["StudentNumber"] !== null) {
-            $this->StudentNumber = $param["StudentNumber"];
+        if (array_key_exists('StudentNumber',$param) and $param['StudentNumber'] !== null) {
+            $this->StudentNumber = $param['StudentNumber'];
         }
     }
 }

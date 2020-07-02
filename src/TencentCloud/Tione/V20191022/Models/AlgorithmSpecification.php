@@ -74,16 +74,16 @@ class AlgorithmSpecification extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TrainingImageName",$param) and $param["TrainingImageName"] !== null) {
-            $this->TrainingImageName = $param["TrainingImageName"];
+        if (array_key_exists('TrainingImageName',$param) and $param['TrainingImageName'] !== null) {
+            $this->TrainingImageName = $param['TrainingImageName'];
         }
 
-        if (array_key_exists("TrainingInputMode",$param) and $param["TrainingInputMode"] !== null) {
-            $this->TrainingInputMode = $param["TrainingInputMode"];
+        if (array_key_exists('TrainingInputMode',$param) and $param['TrainingInputMode'] !== null) {
+            $this->TrainingInputMode = $param['TrainingInputMode'];
         }
 
-        if (array_key_exists("AlgorithmName",$param) and $param["AlgorithmName"] !== null) {
-            $this->AlgorithmName = $param["AlgorithmName"];
+        if (array_key_exists('AlgorithmName',$param) and $param['AlgorithmName'] !== null) {
+            $this->AlgorithmName = $param['AlgorithmName'];
         }
     }
 }

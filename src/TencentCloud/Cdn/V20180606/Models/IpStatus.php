@@ -86,24 +86,24 @@ offline：下线状态
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Ip",$param) and $param["Ip"] !== null) {
-            $this->Ip = $param["Ip"];
+        if (array_key_exists('Ip',$param) and $param['Ip'] !== null) {
+            $this->Ip = $param['Ip'];
         }
 
-        if (array_key_exists("District",$param) and $param["District"] !== null) {
-            $this->District = $param["District"];
+        if (array_key_exists('District',$param) and $param['District'] !== null) {
+            $this->District = $param['District'];
         }
 
-        if (array_key_exists("Isp",$param) and $param["Isp"] !== null) {
-            $this->Isp = $param["Isp"];
+        if (array_key_exists('Isp',$param) and $param['Isp'] !== null) {
+            $this->Isp = $param['Isp'];
         }
 
-        if (array_key_exists("City",$param) and $param["City"] !== null) {
-            $this->City = $param["City"];
+        if (array_key_exists('City',$param) and $param['City'] !== null) {
+            $this->City = $param['City'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
     }
 }

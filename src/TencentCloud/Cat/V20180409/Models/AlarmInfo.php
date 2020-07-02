@@ -110,40 +110,40 @@ class AlarmInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ObjName",$param) and $param["ObjName"] !== null) {
-            $this->ObjName = $param["ObjName"];
+        if (array_key_exists('ObjName',$param) and $param['ObjName'] !== null) {
+            $this->ObjName = $param['ObjName'];
         }
 
-        if (array_key_exists("FirstOccurTime",$param) and $param["FirstOccurTime"] !== null) {
-            $this->FirstOccurTime = $param["FirstOccurTime"];
+        if (array_key_exists('FirstOccurTime',$param) and $param['FirstOccurTime'] !== null) {
+            $this->FirstOccurTime = $param['FirstOccurTime'];
         }
 
-        if (array_key_exists("LastOccurTime",$param) and $param["LastOccurTime"] !== null) {
-            $this->LastOccurTime = $param["LastOccurTime"];
+        if (array_key_exists('LastOccurTime',$param) and $param['LastOccurTime'] !== null) {
+            $this->LastOccurTime = $param['LastOccurTime'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("Content",$param) and $param["Content"] !== null) {
-            $this->Content = $param["Content"];
+        if (array_key_exists('Content',$param) and $param['Content'] !== null) {
+            $this->Content = $param['Content'];
         }
 
-        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
-            $this->TaskId = $param["TaskId"];
+        if (array_key_exists('TaskId',$param) and $param['TaskId'] !== null) {
+            $this->TaskId = $param['TaskId'];
         }
 
-        if (array_key_exists("MetricName",$param) and $param["MetricName"] !== null) {
-            $this->MetricName = $param["MetricName"];
+        if (array_key_exists('MetricName',$param) and $param['MetricName'] !== null) {
+            $this->MetricName = $param['MetricName'];
         }
 
-        if (array_key_exists("MetricValue",$param) and $param["MetricValue"] !== null) {
-            $this->MetricValue = $param["MetricValue"];
+        if (array_key_exists('MetricValue',$param) and $param['MetricValue'] !== null) {
+            $this->MetricValue = $param['MetricValue'];
         }
 
-        if (array_key_exists("ObjId",$param) and $param["ObjId"] !== null) {
-            $this->ObjId = $param["ObjId"];
+        if (array_key_exists('ObjId',$param) and $param['ObjId'] !== null) {
+            $this->ObjId = $param['ObjId'];
         }
     }
 }

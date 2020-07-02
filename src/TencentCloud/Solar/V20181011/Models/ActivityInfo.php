@@ -122,32 +122,32 @@ class ActivityInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TemplateId",$param) and $param["TemplateId"] !== null) {
-            $this->TemplateId = $param["TemplateId"];
+        if (array_key_exists('TemplateId',$param) and $param['TemplateId'] !== null) {
+            $this->TemplateId = $param['TemplateId'];
         }
 
-        if (array_key_exists("ActivityTitle",$param) and $param["ActivityTitle"] !== null) {
-            $this->ActivityTitle = $param["ActivityTitle"];
+        if (array_key_exists('ActivityTitle',$param) and $param['ActivityTitle'] !== null) {
+            $this->ActivityTitle = $param['ActivityTitle'];
         }
 
-        if (array_key_exists("ActivityDesc",$param) and $param["ActivityDesc"] !== null) {
-            $this->ActivityDesc = $param["ActivityDesc"];
+        if (array_key_exists('ActivityDesc',$param) and $param['ActivityDesc'] !== null) {
+            $this->ActivityDesc = $param['ActivityDesc'];
         }
 
-        if (array_key_exists("ActivityCover",$param) and $param["ActivityCover"] !== null) {
-            $this->ActivityCover = $param["ActivityCover"];
+        if (array_key_exists('ActivityCover',$param) and $param['ActivityCover'] !== null) {
+            $this->ActivityCover = $param['ActivityCover'];
         }
 
-        if (array_key_exists("ActivityType",$param) and $param["ActivityType"] !== null) {
-            $this->ActivityType = $param["ActivityType"];
+        if (array_key_exists('ActivityType',$param) and $param['ActivityType'] !== null) {
+            $this->ActivityType = $param['ActivityType'];
         }
 
-        if (array_key_exists("ActivityId",$param) and $param["ActivityId"] !== null) {
-            $this->ActivityId = $param["ActivityId"];
+        if (array_key_exists('ActivityId',$param) and $param['ActivityId'] !== null) {
+            $this->ActivityId = $param['ActivityId'];
         }
 
-        if (array_key_exists("PersonalConfig",$param) and $param["PersonalConfig"] !== null) {
-            $this->PersonalConfig = $param["PersonalConfig"];
+        if (array_key_exists('PersonalConfig',$param) and $param['PersonalConfig'] !== null) {
+            $this->PersonalConfig = $param['PersonalConfig'];
         }
     }
 }

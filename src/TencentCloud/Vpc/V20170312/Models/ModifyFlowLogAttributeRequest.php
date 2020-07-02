@@ -70,20 +70,20 @@ class ModifyFlowLogAttributeRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
-            $this->VpcId = $param["VpcId"];
+        if (array_key_exists('VpcId',$param) and $param['VpcId'] !== null) {
+            $this->VpcId = $param['VpcId'];
         }
 
-        if (array_key_exists("FlowLogId",$param) and $param["FlowLogId"] !== null) {
-            $this->FlowLogId = $param["FlowLogId"];
+        if (array_key_exists('FlowLogId',$param) and $param['FlowLogId'] !== null) {
+            $this->FlowLogId = $param['FlowLogId'];
         }
 
-        if (array_key_exists("FlowLogName",$param) and $param["FlowLogName"] !== null) {
-            $this->FlowLogName = $param["FlowLogName"];
+        if (array_key_exists('FlowLogName',$param) and $param['FlowLogName'] !== null) {
+            $this->FlowLogName = $param['FlowLogName'];
         }
 
-        if (array_key_exists("FlowLogDescription",$param) and $param["FlowLogDescription"] !== null) {
-            $this->FlowLogDescription = $param["FlowLogDescription"];
+        if (array_key_exists('FlowLogDescription',$param) and $param['FlowLogDescription'] !== null) {
+            $this->FlowLogDescription = $param['FlowLogDescription'];
         }
     }
 }

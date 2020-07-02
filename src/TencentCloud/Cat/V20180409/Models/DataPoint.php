@@ -54,12 +54,12 @@ class DataPoint extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LogTime",$param) and $param["LogTime"] !== null) {
-            $this->LogTime = $param["LogTime"];
+        if (array_key_exists('LogTime',$param) and $param['LogTime'] !== null) {
+            $this->LogTime = $param['LogTime'];
         }
 
-        if (array_key_exists("MetricValue",$param) and $param["MetricValue"] !== null) {
-            $this->MetricValue = $param["MetricValue"];
+        if (array_key_exists('MetricValue',$param) and $param['MetricValue'] !== null) {
+            $this->MetricValue = $param['MetricValue'];
         }
     }
 }

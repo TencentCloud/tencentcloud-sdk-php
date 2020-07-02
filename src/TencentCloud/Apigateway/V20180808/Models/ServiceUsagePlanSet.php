@@ -62,13 +62,13 @@ class ServiceUsagePlanSet extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("ServiceUsagePlanList",$param) and $param["ServiceUsagePlanList"] !== null) {
+        if (array_key_exists('ServiceUsagePlanList',$param) and $param['ServiceUsagePlanList'] !== null) {
             $this->ServiceUsagePlanList = [];
-            foreach ($param["ServiceUsagePlanList"] as $key => $value){
+            foreach ($param['ServiceUsagePlanList'] as $key => $value){
                 $obj = new ApiUsagePlan();
                 $obj->deserialize($value);
                 array_push($this->ServiceUsagePlanList, $obj);

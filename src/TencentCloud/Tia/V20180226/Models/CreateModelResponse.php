@@ -54,13 +54,13 @@ class CreateModelResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Model",$param) and $param["Model"] !== null) {
+        if (array_key_exists('Model',$param) and $param['Model'] !== null) {
             $this->Model = new Model();
-            $this->Model->deserialize($param["Model"]);
+            $this->Model->deserialize($param['Model']);
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

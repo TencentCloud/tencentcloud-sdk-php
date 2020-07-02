@@ -86,16 +86,16 @@ class CreateNotificationConfigurationRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AutoScalingGroupId",$param) and $param["AutoScalingGroupId"] !== null) {
-            $this->AutoScalingGroupId = $param["AutoScalingGroupId"];
+        if (array_key_exists('AutoScalingGroupId',$param) and $param['AutoScalingGroupId'] !== null) {
+            $this->AutoScalingGroupId = $param['AutoScalingGroupId'];
         }
 
-        if (array_key_exists("NotificationTypes",$param) and $param["NotificationTypes"] !== null) {
-            $this->NotificationTypes = $param["NotificationTypes"];
+        if (array_key_exists('NotificationTypes',$param) and $param['NotificationTypes'] !== null) {
+            $this->NotificationTypes = $param['NotificationTypes'];
         }
 
-        if (array_key_exists("NotificationUserGroupIds",$param) and $param["NotificationUserGroupIds"] !== null) {
-            $this->NotificationUserGroupIds = $param["NotificationUserGroupIds"];
+        if (array_key_exists('NotificationUserGroupIds',$param) and $param['NotificationUserGroupIds'] !== null) {
+            $this->NotificationUserGroupIds = $param['NotificationUserGroupIds'];
         }
     }
 }

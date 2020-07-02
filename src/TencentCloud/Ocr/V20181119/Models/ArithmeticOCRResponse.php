@@ -54,17 +54,17 @@ class ArithmeticOCRResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TextDetections",$param) and $param["TextDetections"] !== null) {
+        if (array_key_exists('TextDetections',$param) and $param['TextDetections'] !== null) {
             $this->TextDetections = [];
-            foreach ($param["TextDetections"] as $key => $value){
+            foreach ($param['TextDetections'] as $key => $value){
                 $obj = new TextArithmetic();
                 $obj->deserialize($value);
                 array_push($this->TextDetections, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

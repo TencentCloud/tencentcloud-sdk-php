@@ -54,12 +54,12 @@ class CreateDeployGroupResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DeployGroupId",$param) and $param["DeployGroupId"] !== null) {
-            $this->DeployGroupId = $param["DeployGroupId"];
+        if (array_key_exists('DeployGroupId',$param) and $param['DeployGroupId'] !== null) {
+            $this->DeployGroupId = $param['DeployGroupId'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

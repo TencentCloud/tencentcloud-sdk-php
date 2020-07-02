@@ -62,19 +62,19 @@ class PornConfigureInfoForUpdate extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ImgReviewInfo",$param) and $param["ImgReviewInfo"] !== null) {
+        if (array_key_exists('ImgReviewInfo',$param) and $param['ImgReviewInfo'] !== null) {
             $this->ImgReviewInfo = new PornImgReviewTemplateInfoForUpdate();
-            $this->ImgReviewInfo->deserialize($param["ImgReviewInfo"]);
+            $this->ImgReviewInfo->deserialize($param['ImgReviewInfo']);
         }
 
-        if (array_key_exists("AsrReviewInfo",$param) and $param["AsrReviewInfo"] !== null) {
+        if (array_key_exists('AsrReviewInfo',$param) and $param['AsrReviewInfo'] !== null) {
             $this->AsrReviewInfo = new PornAsrReviewTemplateInfoForUpdate();
-            $this->AsrReviewInfo->deserialize($param["AsrReviewInfo"]);
+            $this->AsrReviewInfo->deserialize($param['AsrReviewInfo']);
         }
 
-        if (array_key_exists("OcrReviewInfo",$param) and $param["OcrReviewInfo"] !== null) {
+        if (array_key_exists('OcrReviewInfo',$param) and $param['OcrReviewInfo'] !== null) {
             $this->OcrReviewInfo = new PornOcrReviewTemplateInfoForUpdate();
-            $this->OcrReviewInfo->deserialize($param["OcrReviewInfo"]);
+            $this->OcrReviewInfo->deserialize($param['OcrReviewInfo']);
         }
     }
 }

@@ -62,13 +62,13 @@ class ApiUsagePlanSet extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("ApiUsagePlanList",$param) and $param["ApiUsagePlanList"] !== null) {
+        if (array_key_exists('ApiUsagePlanList',$param) and $param['ApiUsagePlanList'] !== null) {
             $this->ApiUsagePlanList = [];
-            foreach ($param["ApiUsagePlanList"] as $key => $value){
+            foreach ($param['ApiUsagePlanList'] as $key => $value){
                 $obj = new ApiUsagePlan();
                 $obj->deserialize($value);
                 array_push($this->ApiUsagePlanList, $obj);

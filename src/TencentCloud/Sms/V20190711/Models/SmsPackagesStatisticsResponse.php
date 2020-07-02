@@ -54,17 +54,17 @@ class SmsPackagesStatisticsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SmsPackagesStatisticsSet",$param) and $param["SmsPackagesStatisticsSet"] !== null) {
+        if (array_key_exists('SmsPackagesStatisticsSet',$param) and $param['SmsPackagesStatisticsSet'] !== null) {
             $this->SmsPackagesStatisticsSet = [];
-            foreach ($param["SmsPackagesStatisticsSet"] as $key => $value){
+            foreach ($param['SmsPackagesStatisticsSet'] as $key => $value){
                 $obj = new SmsPackagesStatistics();
                 $obj->deserialize($value);
                 array_push($this->SmsPackagesStatisticsSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

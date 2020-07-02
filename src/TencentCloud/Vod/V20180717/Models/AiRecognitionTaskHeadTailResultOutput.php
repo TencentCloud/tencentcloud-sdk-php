@@ -70,20 +70,20 @@ class AiRecognitionTaskHeadTailResultOutput extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("HeadConfidence",$param) and $param["HeadConfidence"] !== null) {
-            $this->HeadConfidence = $param["HeadConfidence"];
+        if (array_key_exists('HeadConfidence',$param) and $param['HeadConfidence'] !== null) {
+            $this->HeadConfidence = $param['HeadConfidence'];
         }
 
-        if (array_key_exists("HeadTimeOffset",$param) and $param["HeadTimeOffset"] !== null) {
-            $this->HeadTimeOffset = $param["HeadTimeOffset"];
+        if (array_key_exists('HeadTimeOffset',$param) and $param['HeadTimeOffset'] !== null) {
+            $this->HeadTimeOffset = $param['HeadTimeOffset'];
         }
 
-        if (array_key_exists("TailConfidence",$param) and $param["TailConfidence"] !== null) {
-            $this->TailConfidence = $param["TailConfidence"];
+        if (array_key_exists('TailConfidence',$param) and $param['TailConfidence'] !== null) {
+            $this->TailConfidence = $param['TailConfidence'];
         }
 
-        if (array_key_exists("TailTimeOffset",$param) and $param["TailTimeOffset"] !== null) {
-            $this->TailTimeOffset = $param["TailTimeOffset"];
+        if (array_key_exists('TailTimeOffset',$param) and $param['TailTimeOffset'] !== null) {
+            $this->TailTimeOffset = $param['TailTimeOffset'];
         }
     }
 }

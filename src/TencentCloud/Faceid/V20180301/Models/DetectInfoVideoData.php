@@ -50,8 +50,8 @@ class DetectInfoVideoData extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LivenessVideo",$param) and $param["LivenessVideo"] !== null) {
-            $this->LivenessVideo = $param["LivenessVideo"];
+        if (array_key_exists('LivenessVideo',$param) and $param['LivenessVideo'] !== null) {
+            $this->LivenessVideo = $param['LivenessVideo'];
         }
     }
 }

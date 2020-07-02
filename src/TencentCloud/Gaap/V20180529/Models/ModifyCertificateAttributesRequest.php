@@ -54,12 +54,12 @@ class ModifyCertificateAttributesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CertificateId",$param) and $param["CertificateId"] !== null) {
-            $this->CertificateId = $param["CertificateId"];
+        if (array_key_exists('CertificateId',$param) and $param['CertificateId'] !== null) {
+            $this->CertificateId = $param['CertificateId'];
         }
 
-        if (array_key_exists("CertificateAlias",$param) and $param["CertificateAlias"] !== null) {
-            $this->CertificateAlias = $param["CertificateAlias"];
+        if (array_key_exists('CertificateAlias',$param) and $param['CertificateAlias'] !== null) {
+            $this->CertificateAlias = $param['CertificateAlias'];
         }
     }
 }

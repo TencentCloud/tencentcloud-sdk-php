@@ -54,17 +54,17 @@ class DescribeWhiteBoxDeviceFingerprintsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DeviceFingerprints",$param) and $param["DeviceFingerprints"] !== null) {
+        if (array_key_exists('DeviceFingerprints',$param) and $param['DeviceFingerprints'] !== null) {
             $this->DeviceFingerprints = [];
-            foreach ($param["DeviceFingerprints"] as $key => $value){
+            foreach ($param['DeviceFingerprints'] as $key => $value){
                 $obj = new DeviceFingerprint();
                 $obj->deserialize($value);
                 array_push($this->DeviceFingerprints, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

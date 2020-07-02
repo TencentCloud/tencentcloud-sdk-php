@@ -54,12 +54,12 @@ class DetachGroupPolicyRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PolicyId",$param) and $param["PolicyId"] !== null) {
-            $this->PolicyId = $param["PolicyId"];
+        if (array_key_exists('PolicyId',$param) and $param['PolicyId'] !== null) {
+            $this->PolicyId = $param['PolicyId'];
         }
 
-        if (array_key_exists("DetachGroupId",$param) and $param["DetachGroupId"] !== null) {
-            $this->DetachGroupId = $param["DetachGroupId"];
+        if (array_key_exists('DetachGroupId',$param) and $param['DetachGroupId'] !== null) {
+            $this->DetachGroupId = $param['DetachGroupId'];
         }
     }
 }

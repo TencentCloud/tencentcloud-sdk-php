@@ -94,16 +94,16 @@ SOFT_FIRST：表示优先软关机，失败再执行硬关机
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceIdSet",$param) and $param["InstanceIdSet"] !== null) {
-            $this->InstanceIdSet = $param["InstanceIdSet"];
+        if (array_key_exists('InstanceIdSet',$param) and $param['InstanceIdSet'] !== null) {
+            $this->InstanceIdSet = $param['InstanceIdSet'];
         }
 
-        if (array_key_exists("ForceReboot",$param) and $param["ForceReboot"] !== null) {
-            $this->ForceReboot = $param["ForceReboot"];
+        if (array_key_exists('ForceReboot',$param) and $param['ForceReboot'] !== null) {
+            $this->ForceReboot = $param['ForceReboot'];
         }
 
-        if (array_key_exists("StopType",$param) and $param["StopType"] !== null) {
-            $this->StopType = $param["StopType"];
+        if (array_key_exists('StopType',$param) and $param['StopType'] !== null) {
+            $this->StopType = $param['StopType'];
         }
     }
 }

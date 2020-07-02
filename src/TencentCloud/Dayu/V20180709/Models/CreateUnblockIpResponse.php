@@ -70,20 +70,20 @@ class CreateUnblockIpResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Ip",$param) and $param["Ip"] !== null) {
-            $this->Ip = $param["Ip"];
+        if (array_key_exists('Ip',$param) and $param['Ip'] !== null) {
+            $this->Ip = $param['Ip'];
         }
 
-        if (array_key_exists("ActionType",$param) and $param["ActionType"] !== null) {
-            $this->ActionType = $param["ActionType"];
+        if (array_key_exists('ActionType',$param) and $param['ActionType'] !== null) {
+            $this->ActionType = $param['ActionType'];
         }
 
-        if (array_key_exists("UnblockTime",$param) and $param["UnblockTime"] !== null) {
-            $this->UnblockTime = $param["UnblockTime"];
+        if (array_key_exists('UnblockTime',$param) and $param['UnblockTime'] !== null) {
+            $this->UnblockTime = $param['UnblockTime'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

@@ -70,20 +70,20 @@ class Environment extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("EnvironmentName",$param) and $param["EnvironmentName"] !== null) {
-            $this->EnvironmentName = $param["EnvironmentName"];
+        if (array_key_exists('EnvironmentName',$param) and $param['EnvironmentName'] !== null) {
+            $this->EnvironmentName = $param['EnvironmentName'];
         }
 
-        if (array_key_exists("Url",$param) and $param["Url"] !== null) {
-            $this->Url = $param["Url"];
+        if (array_key_exists('Url',$param) and $param['Url'] !== null) {
+            $this->Url = $param['Url'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("VersionName",$param) and $param["VersionName"] !== null) {
-            $this->VersionName = $param["VersionName"];
+        if (array_key_exists('VersionName',$param) and $param['VersionName'] !== null) {
+            $this->VersionName = $param['VersionName'];
         }
     }
 }

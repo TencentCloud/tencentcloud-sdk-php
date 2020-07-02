@@ -54,13 +54,13 @@ class DescribeSecurityGroupLimitsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SecurityGroupLimitSet",$param) and $param["SecurityGroupLimitSet"] !== null) {
+        if (array_key_exists('SecurityGroupLimitSet',$param) and $param['SecurityGroupLimitSet'] !== null) {
             $this->SecurityGroupLimitSet = new SecurityGroupLimitSet();
-            $this->SecurityGroupLimitSet->deserialize($param["SecurityGroupLimitSet"]);
+            $this->SecurityGroupLimitSet->deserialize($param['SecurityGroupLimitSet']);
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

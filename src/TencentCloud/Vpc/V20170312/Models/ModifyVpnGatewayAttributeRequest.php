@@ -62,16 +62,16 @@ class ModifyVpnGatewayAttributeRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("VpnGatewayId",$param) and $param["VpnGatewayId"] !== null) {
-            $this->VpnGatewayId = $param["VpnGatewayId"];
+        if (array_key_exists('VpnGatewayId',$param) and $param['VpnGatewayId'] !== null) {
+            $this->VpnGatewayId = $param['VpnGatewayId'];
         }
 
-        if (array_key_exists("VpnGatewayName",$param) and $param["VpnGatewayName"] !== null) {
-            $this->VpnGatewayName = $param["VpnGatewayName"];
+        if (array_key_exists('VpnGatewayName',$param) and $param['VpnGatewayName'] !== null) {
+            $this->VpnGatewayName = $param['VpnGatewayName'];
         }
 
-        if (array_key_exists("InstanceChargeType",$param) and $param["InstanceChargeType"] !== null) {
-            $this->InstanceChargeType = $param["InstanceChargeType"];
+        if (array_key_exists('InstanceChargeType',$param) and $param['InstanceChargeType'] !== null) {
+            $this->InstanceChargeType = $param['InstanceChargeType'];
         }
     }
 }

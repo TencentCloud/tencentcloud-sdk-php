@@ -74,20 +74,20 @@ class TextOutputRes extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
-            $this->Operator = $param["Operator"];
+        if (array_key_exists('Operator',$param) and $param['Operator'] !== null) {
+            $this->Operator = $param['Operator'];
         }
 
-        if (array_key_exists("ResultCode",$param) and $param["ResultCode"] !== null) {
-            $this->ResultCode = $param["ResultCode"];
+        if (array_key_exists('ResultCode',$param) and $param['ResultCode'] !== null) {
+            $this->ResultCode = $param['ResultCode'];
         }
 
-        if (array_key_exists("ResultMsg",$param) and $param["ResultMsg"] !== null) {
-            $this->ResultMsg = $param["ResultMsg"];
+        if (array_key_exists('ResultMsg',$param) and $param['ResultMsg'] !== null) {
+            $this->ResultMsg = $param['ResultMsg'];
         }
 
-        if (array_key_exists("ResultType",$param) and $param["ResultType"] !== null) {
-            $this->ResultType = $param["ResultType"];
+        if (array_key_exists('ResultType',$param) and $param['ResultType'] !== null) {
+            $this->ResultType = $param['ResultType'];
         }
     }
 }

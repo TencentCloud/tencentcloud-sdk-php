@@ -70,20 +70,20 @@ class DownloadReportRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Module",$param) and $param["Module"] !== null) {
-            $this->Module = $param["Module"];
+        if (array_key_exists('Module',$param) and $param['Module'] !== null) {
+            $this->Module = $param['Module'];
         }
 
-        if (array_key_exists("Operation",$param) and $param["Operation"] !== null) {
-            $this->Operation = $param["Operation"];
+        if (array_key_exists('Operation',$param) and $param['Operation'] !== null) {
+            $this->Operation = $param['Operation'];
         }
 
-        if (array_key_exists("ReportDate",$param) and $param["ReportDate"] !== null) {
-            $this->ReportDate = $param["ReportDate"];
+        if (array_key_exists('ReportDate',$param) and $param['ReportDate'] !== null) {
+            $this->ReportDate = $param['ReportDate'];
         }
 
-        if (array_key_exists("InstId",$param) and $param["InstId"] !== null) {
-            $this->InstId = $param["InstId"];
+        if (array_key_exists('InstId',$param) and $param['InstId'] !== null) {
+            $this->InstId = $param['InstId'];
         }
     }
 }

@@ -62,21 +62,21 @@ class DescribeTablesInRecycleResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("TableInfos",$param) and $param["TableInfos"] !== null) {
+        if (array_key_exists('TableInfos',$param) and $param['TableInfos'] !== null) {
             $this->TableInfos = [];
-            foreach ($param["TableInfos"] as $key => $value){
+            foreach ($param['TableInfos'] as $key => $value){
                 $obj = new TableInfoNew();
                 $obj->deserialize($value);
                 array_push($this->TableInfos, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

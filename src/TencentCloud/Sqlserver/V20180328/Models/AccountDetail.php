@@ -102,37 +102,37 @@ class AccountDetail extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
-            $this->Remark = $param["Remark"];
+        if (array_key_exists('Remark',$param) and $param['Remark'] !== null) {
+            $this->Remark = $param['Remark'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
-            $this->UpdateTime = $param["UpdateTime"];
+        if (array_key_exists('UpdateTime',$param) and $param['UpdateTime'] !== null) {
+            $this->UpdateTime = $param['UpdateTime'];
         }
 
-        if (array_key_exists("PassTime",$param) and $param["PassTime"] !== null) {
-            $this->PassTime = $param["PassTime"];
+        if (array_key_exists('PassTime',$param) and $param['PassTime'] !== null) {
+            $this->PassTime = $param['PassTime'];
         }
 
-        if (array_key_exists("InternalStatus",$param) and $param["InternalStatus"] !== null) {
-            $this->InternalStatus = $param["InternalStatus"];
+        if (array_key_exists('InternalStatus',$param) and $param['InternalStatus'] !== null) {
+            $this->InternalStatus = $param['InternalStatus'];
         }
 
-        if (array_key_exists("Dbs",$param) and $param["Dbs"] !== null) {
+        if (array_key_exists('Dbs',$param) and $param['Dbs'] !== null) {
             $this->Dbs = [];
-            foreach ($param["Dbs"] as $key => $value){
+            foreach ($param['Dbs'] as $key => $value){
                 $obj = new DBPrivilege();
                 $obj->deserialize($value);
                 array_push($this->Dbs, $obj);

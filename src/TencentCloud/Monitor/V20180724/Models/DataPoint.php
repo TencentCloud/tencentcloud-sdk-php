@@ -62,21 +62,21 @@ class DataPoint extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Dimensions",$param) and $param["Dimensions"] !== null) {
+        if (array_key_exists('Dimensions',$param) and $param['Dimensions'] !== null) {
             $this->Dimensions = [];
-            foreach ($param["Dimensions"] as $key => $value){
+            foreach ($param['Dimensions'] as $key => $value){
                 $obj = new Dimension();
                 $obj->deserialize($value);
                 array_push($this->Dimensions, $obj);
             }
         }
 
-        if (array_key_exists("Timestamps",$param) and $param["Timestamps"] !== null) {
-            $this->Timestamps = $param["Timestamps"];
+        if (array_key_exists('Timestamps',$param) and $param['Timestamps'] !== null) {
+            $this->Timestamps = $param['Timestamps'];
         }
 
-        if (array_key_exists("Values",$param) and $param["Values"] !== null) {
-            $this->Values = $param["Values"];
+        if (array_key_exists('Values',$param) and $param['Values'] !== null) {
+            $this->Values = $param['Values'];
         }
     }
 }

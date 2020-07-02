@@ -46,9 +46,9 @@ class AiRecognitionTaskFaceResultOutput extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ResultSet",$param) and $param["ResultSet"] !== null) {
+        if (array_key_exists('ResultSet',$param) and $param['ResultSet'] !== null) {
             $this->ResultSet = [];
-            foreach ($param["ResultSet"] as $key => $value){
+            foreach ($param['ResultSet'] as $key => $value){
                 $obj = new AiRecognitionTaskFaceResultItem();
                 $obj->deserialize($value);
                 array_push($this->ResultSet, $obj);

@@ -114,32 +114,32 @@ class QueryItem extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SubAcctNo",$param) and $param["SubAcctNo"] !== null) {
-            $this->SubAcctNo = $param["SubAcctNo"];
+        if (array_key_exists('SubAcctNo',$param) and $param['SubAcctNo'] !== null) {
+            $this->SubAcctNo = $param['SubAcctNo'];
         }
 
-        if (array_key_exists("SubAcctProperty",$param) and $param["SubAcctProperty"] !== null) {
-            $this->SubAcctProperty = $param["SubAcctProperty"];
+        if (array_key_exists('SubAcctProperty',$param) and $param['SubAcctProperty'] !== null) {
+            $this->SubAcctProperty = $param['SubAcctProperty'];
         }
 
-        if (array_key_exists("SubMchId",$param) and $param["SubMchId"] !== null) {
-            $this->SubMchId = $param["SubMchId"];
+        if (array_key_exists('SubMchId',$param) and $param['SubMchId'] !== null) {
+            $this->SubMchId = $param['SubMchId'];
         }
 
-        if (array_key_exists("SubAcctName",$param) and $param["SubAcctName"] !== null) {
-            $this->SubAcctName = $param["SubAcctName"];
+        if (array_key_exists('SubAcctName',$param) and $param['SubAcctName'] !== null) {
+            $this->SubAcctName = $param['SubAcctName'];
         }
 
-        if (array_key_exists("AcctAvailBal",$param) and $param["AcctAvailBal"] !== null) {
-            $this->AcctAvailBal = $param["AcctAvailBal"];
+        if (array_key_exists('AcctAvailBal',$param) and $param['AcctAvailBal'] !== null) {
+            $this->AcctAvailBal = $param['AcctAvailBal'];
         }
 
-        if (array_key_exists("CashAmt",$param) and $param["CashAmt"] !== null) {
-            $this->CashAmt = $param["CashAmt"];
+        if (array_key_exists('CashAmt',$param) and $param['CashAmt'] !== null) {
+            $this->CashAmt = $param['CashAmt'];
         }
 
-        if (array_key_exists("MaintenanceDate",$param) and $param["MaintenanceDate"] !== null) {
-            $this->MaintenanceDate = $param["MaintenanceDate"];
+        if (array_key_exists('MaintenanceDate',$param) and $param['MaintenanceDate'] !== null) {
+            $this->MaintenanceDate = $param['MaintenanceDate'];
         }
     }
 }

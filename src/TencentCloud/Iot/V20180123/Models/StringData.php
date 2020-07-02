@@ -70,20 +70,20 @@ class StringData extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("Desc",$param) and $param["Desc"] !== null) {
-            $this->Desc = $param["Desc"];
+        if (array_key_exists('Desc',$param) and $param['Desc'] !== null) {
+            $this->Desc = $param['Desc'];
         }
 
-        if (array_key_exists("Mode",$param) and $param["Mode"] !== null) {
-            $this->Mode = $param["Mode"];
+        if (array_key_exists('Mode',$param) and $param['Mode'] !== null) {
+            $this->Mode = $param['Mode'];
         }
 
-        if (array_key_exists("Range",$param) and $param["Range"] !== null) {
-            $this->Range = $param["Range"];
+        if (array_key_exists('Range',$param) and $param['Range'] !== null) {
+            $this->Range = $param['Range'];
         }
     }
 }

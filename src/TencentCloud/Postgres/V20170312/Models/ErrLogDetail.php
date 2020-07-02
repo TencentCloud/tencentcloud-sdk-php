@@ -70,20 +70,20 @@ class ErrLogDetail extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("UserName",$param) and $param["UserName"] !== null) {
-            $this->UserName = $param["UserName"];
+        if (array_key_exists('UserName',$param) and $param['UserName'] !== null) {
+            $this->UserName = $param['UserName'];
         }
 
-        if (array_key_exists("Database",$param) and $param["Database"] !== null) {
-            $this->Database = $param["Database"];
+        if (array_key_exists('Database',$param) and $param['Database'] !== null) {
+            $this->Database = $param['Database'];
         }
 
-        if (array_key_exists("ErrTime",$param) and $param["ErrTime"] !== null) {
-            $this->ErrTime = $param["ErrTime"];
+        if (array_key_exists('ErrTime',$param) and $param['ErrTime'] !== null) {
+            $this->ErrTime = $param['ErrTime'];
         }
 
-        if (array_key_exists("ErrMsg",$param) and $param["ErrMsg"] !== null) {
-            $this->ErrMsg = $param["ErrMsg"];
+        if (array_key_exists('ErrMsg',$param) and $param['ErrMsg'] !== null) {
+            $this->ErrMsg = $param['ErrMsg'];
         }
     }
 }

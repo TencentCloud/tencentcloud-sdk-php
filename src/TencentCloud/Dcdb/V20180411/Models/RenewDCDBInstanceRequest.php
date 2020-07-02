@@ -70,20 +70,20 @@ class RenewDCDBInstanceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("Period",$param) and $param["Period"] !== null) {
-            $this->Period = $param["Period"];
+        if (array_key_exists('Period',$param) and $param['Period'] !== null) {
+            $this->Period = $param['Period'];
         }
 
-        if (array_key_exists("AutoVoucher",$param) and $param["AutoVoucher"] !== null) {
-            $this->AutoVoucher = $param["AutoVoucher"];
+        if (array_key_exists('AutoVoucher',$param) and $param['AutoVoucher'] !== null) {
+            $this->AutoVoucher = $param['AutoVoucher'];
         }
 
-        if (array_key_exists("VoucherIds",$param) and $param["VoucherIds"] !== null) {
-            $this->VoucherIds = $param["VoucherIds"];
+        if (array_key_exists('VoucherIds',$param) and $param['VoucherIds'] !== null) {
+            $this->VoucherIds = $param['VoucherIds'];
         }
     }
 }

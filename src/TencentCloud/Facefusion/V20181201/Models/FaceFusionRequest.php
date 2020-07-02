@@ -90,28 +90,28 @@ class FaceFusionRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
-            $this->ProjectId = $param["ProjectId"];
+        if (array_key_exists('ProjectId',$param) and $param['ProjectId'] !== null) {
+            $this->ProjectId = $param['ProjectId'];
         }
 
-        if (array_key_exists("ModelId",$param) and $param["ModelId"] !== null) {
-            $this->ModelId = $param["ModelId"];
+        if (array_key_exists('ModelId',$param) and $param['ModelId'] !== null) {
+            $this->ModelId = $param['ModelId'];
         }
 
-        if (array_key_exists("Image",$param) and $param["Image"] !== null) {
-            $this->Image = $param["Image"];
+        if (array_key_exists('Image',$param) and $param['Image'] !== null) {
+            $this->Image = $param['Image'];
         }
 
-        if (array_key_exists("RspImgType",$param) and $param["RspImgType"] !== null) {
-            $this->RspImgType = $param["RspImgType"];
+        if (array_key_exists('RspImgType',$param) and $param['RspImgType'] !== null) {
+            $this->RspImgType = $param['RspImgType'];
         }
 
-        if (array_key_exists("PornDetect",$param) and $param["PornDetect"] !== null) {
-            $this->PornDetect = $param["PornDetect"];
+        if (array_key_exists('PornDetect',$param) and $param['PornDetect'] !== null) {
+            $this->PornDetect = $param['PornDetect'];
         }
 
-        if (array_key_exists("CelebrityIdentify",$param) and $param["CelebrityIdentify"] !== null) {
-            $this->CelebrityIdentify = $param["CelebrityIdentify"];
+        if (array_key_exists('CelebrityIdentify',$param) and $param['CelebrityIdentify'] !== null) {
+            $this->CelebrityIdentify = $param['CelebrityIdentify'];
         }
     }
 }

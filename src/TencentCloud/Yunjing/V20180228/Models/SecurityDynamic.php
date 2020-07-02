@@ -90,20 +90,20 @@ class SecurityDynamic extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Uuid",$param) and $param["Uuid"] !== null) {
-            $this->Uuid = $param["Uuid"];
+        if (array_key_exists('Uuid',$param) and $param['Uuid'] !== null) {
+            $this->Uuid = $param['Uuid'];
         }
 
-        if (array_key_exists("EventTime",$param) and $param["EventTime"] !== null) {
-            $this->EventTime = $param["EventTime"];
+        if (array_key_exists('EventTime',$param) and $param['EventTime'] !== null) {
+            $this->EventTime = $param['EventTime'];
         }
 
-        if (array_key_exists("EventType",$param) and $param["EventType"] !== null) {
-            $this->EventType = $param["EventType"];
+        if (array_key_exists('EventType',$param) and $param['EventType'] !== null) {
+            $this->EventType = $param['EventType'];
         }
 
-        if (array_key_exists("Message",$param) and $param["Message"] !== null) {
-            $this->Message = $param["Message"];
+        if (array_key_exists('Message',$param) and $param['Message'] !== null) {
+            $this->Message = $param['Message'];
         }
     }
 }

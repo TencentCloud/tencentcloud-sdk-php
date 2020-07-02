@@ -74,16 +74,16 @@ class TagSummaryOverviewItem extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TagValue",$param) and $param["TagValue"] !== null) {
-            $this->TagValue = $param["TagValue"];
+        if (array_key_exists('TagValue',$param) and $param['TagValue'] !== null) {
+            $this->TagValue = $param['TagValue'];
         }
 
-        if (array_key_exists("RealTotalCost",$param) and $param["RealTotalCost"] !== null) {
-            $this->RealTotalCost = $param["RealTotalCost"];
+        if (array_key_exists('RealTotalCost',$param) and $param['RealTotalCost'] !== null) {
+            $this->RealTotalCost = $param['RealTotalCost'];
         }
 
-        if (array_key_exists("RealTotalCostRatio",$param) and $param["RealTotalCostRatio"] !== null) {
-            $this->RealTotalCostRatio = $param["RealTotalCostRatio"];
+        if (array_key_exists('RealTotalCostRatio',$param) and $param['RealTotalCostRatio'] !== null) {
+            $this->RealTotalCostRatio = $param['RealTotalCostRatio'];
         }
     }
 }

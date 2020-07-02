@@ -102,36 +102,36 @@ class DescribeResourceTagsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CreateUin",$param) and $param["CreateUin"] !== null) {
-            $this->CreateUin = $param["CreateUin"];
+        if (array_key_exists('CreateUin',$param) and $param['CreateUin'] !== null) {
+            $this->CreateUin = $param['CreateUin'];
         }
 
-        if (array_key_exists("ResourceRegion",$param) and $param["ResourceRegion"] !== null) {
-            $this->ResourceRegion = $param["ResourceRegion"];
+        if (array_key_exists('ResourceRegion',$param) and $param['ResourceRegion'] !== null) {
+            $this->ResourceRegion = $param['ResourceRegion'];
         }
 
-        if (array_key_exists("ServiceType",$param) and $param["ServiceType"] !== null) {
-            $this->ServiceType = $param["ServiceType"];
+        if (array_key_exists('ServiceType',$param) and $param['ServiceType'] !== null) {
+            $this->ServiceType = $param['ServiceType'];
         }
 
-        if (array_key_exists("ResourcePrefix",$param) and $param["ResourcePrefix"] !== null) {
-            $this->ResourcePrefix = $param["ResourcePrefix"];
+        if (array_key_exists('ResourcePrefix',$param) and $param['ResourcePrefix'] !== null) {
+            $this->ResourcePrefix = $param['ResourcePrefix'];
         }
 
-        if (array_key_exists("ResourceId",$param) and $param["ResourceId"] !== null) {
-            $this->ResourceId = $param["ResourceId"];
+        if (array_key_exists('ResourceId',$param) and $param['ResourceId'] !== null) {
+            $this->ResourceId = $param['ResourceId'];
         }
 
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
+        if (array_key_exists('Offset',$param) and $param['Offset'] !== null) {
+            $this->Offset = $param['Offset'];
         }
 
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
+        if (array_key_exists('Limit',$param) and $param['Limit'] !== null) {
+            $this->Limit = $param['Limit'];
         }
 
-        if (array_key_exists("CosResourceId",$param) and $param["CosResourceId"] !== null) {
-            $this->CosResourceId = $param["CosResourceId"];
+        if (array_key_exists('CosResourceId',$param) and $param['CosResourceId'] !== null) {
+            $this->CosResourceId = $param['CosResourceId'];
         }
     }
 }

@@ -58,17 +58,17 @@ class DescribePeakNetworkOverviewResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PeakNetworkRegionSet",$param) and $param["PeakNetworkRegionSet"] !== null) {
+        if (array_key_exists('PeakNetworkRegionSet',$param) and $param['PeakNetworkRegionSet'] !== null) {
             $this->PeakNetworkRegionSet = [];
-            foreach ($param["PeakNetworkRegionSet"] as $key => $value){
+            foreach ($param['PeakNetworkRegionSet'] as $key => $value){
                 $obj = new PeakNetworkRegionInfo();
                 $obj->deserialize($value);
                 array_push($this->PeakNetworkRegionSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

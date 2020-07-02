@@ -62,16 +62,16 @@ class Quota extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("QuotaId",$param) and $param["QuotaId"] !== null) {
-            $this->QuotaId = $param["QuotaId"];
+        if (array_key_exists('QuotaId',$param) and $param['QuotaId'] !== null) {
+            $this->QuotaId = $param['QuotaId'];
         }
 
-        if (array_key_exists("QuotaCurrent",$param) and $param["QuotaCurrent"] !== null) {
-            $this->QuotaCurrent = $param["QuotaCurrent"];
+        if (array_key_exists('QuotaCurrent',$param) and $param['QuotaCurrent'] !== null) {
+            $this->QuotaCurrent = $param['QuotaCurrent'];
         }
 
-        if (array_key_exists("QuotaLimit",$param) and $param["QuotaLimit"] !== null) {
-            $this->QuotaLimit = $param["QuotaLimit"];
+        if (array_key_exists('QuotaLimit',$param) and $param['QuotaLimit'] !== null) {
+            $this->QuotaLimit = $param['QuotaLimit'];
         }
     }
 }

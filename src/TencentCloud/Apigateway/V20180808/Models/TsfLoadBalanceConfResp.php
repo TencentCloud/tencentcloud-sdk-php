@@ -86,20 +86,20 @@ class TsfLoadBalanceConfResp extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("IsLoadBalance",$param) and $param["IsLoadBalance"] !== null) {
-            $this->IsLoadBalance = $param["IsLoadBalance"];
+        if (array_key_exists('IsLoadBalance',$param) and $param['IsLoadBalance'] !== null) {
+            $this->IsLoadBalance = $param['IsLoadBalance'];
         }
 
-        if (array_key_exists("Method",$param) and $param["Method"] !== null) {
-            $this->Method = $param["Method"];
+        if (array_key_exists('Method',$param) and $param['Method'] !== null) {
+            $this->Method = $param['Method'];
         }
 
-        if (array_key_exists("SessionStickRequired",$param) and $param["SessionStickRequired"] !== null) {
-            $this->SessionStickRequired = $param["SessionStickRequired"];
+        if (array_key_exists('SessionStickRequired',$param) and $param['SessionStickRequired'] !== null) {
+            $this->SessionStickRequired = $param['SessionStickRequired'];
         }
 
-        if (array_key_exists("SessionStickTimeout",$param) and $param["SessionStickTimeout"] !== null) {
-            $this->SessionStickTimeout = $param["SessionStickTimeout"];
+        if (array_key_exists('SessionStickTimeout',$param) and $param['SessionStickTimeout'] !== null) {
+            $this->SessionStickTimeout = $param['SessionStickTimeout'];
         }
     }
 }

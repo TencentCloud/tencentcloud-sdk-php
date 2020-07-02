@@ -94,37 +94,37 @@ class TextItem extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Words",$param) and $param["Words"] !== null) {
+        if (array_key_exists('Words',$param) and $param['Words'] !== null) {
             $this->Words = [];
-            foreach ($param["Words"] as $key => $value){
+            foreach ($param['Words'] as $key => $value){
                 $obj = new Word();
                 $obj->deserialize($value);
                 array_push($this->Words, $obj);
             }
         }
 
-        if (array_key_exists("Confidence",$param) and $param["Confidence"] !== null) {
-            $this->Confidence = $param["Confidence"];
+        if (array_key_exists('Confidence',$param) and $param['Confidence'] !== null) {
+            $this->Confidence = $param['Confidence'];
         }
 
-        if (array_key_exists("Mbtm",$param) and $param["Mbtm"] !== null) {
-            $this->Mbtm = $param["Mbtm"];
+        if (array_key_exists('Mbtm',$param) and $param['Mbtm'] !== null) {
+            $this->Mbtm = $param['Mbtm'];
         }
 
-        if (array_key_exists("Metm",$param) and $param["Metm"] !== null) {
-            $this->Metm = $param["Metm"];
+        if (array_key_exists('Metm',$param) and $param['Metm'] !== null) {
+            $this->Metm = $param['Metm'];
         }
 
-        if (array_key_exists("Tag",$param) and $param["Tag"] !== null) {
-            $this->Tag = $param["Tag"];
+        if (array_key_exists('Tag',$param) and $param['Tag'] !== null) {
+            $this->Tag = $param['Tag'];
         }
 
-        if (array_key_exists("Text",$param) and $param["Text"] !== null) {
-            $this->Text = $param["Text"];
+        if (array_key_exists('Text',$param) and $param['Text'] !== null) {
+            $this->Text = $param['Text'];
         }
 
-        if (array_key_exists("TextSize",$param) and $param["TextSize"] !== null) {
-            $this->TextSize = $param["TextSize"];
+        if (array_key_exists('TextSize',$param) and $param['TextSize'] !== null) {
+            $this->TextSize = $param['TextSize'];
         }
     }
 }

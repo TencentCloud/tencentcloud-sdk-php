@@ -54,12 +54,12 @@ class PushUrlCacheRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Urls",$param) and $param["Urls"] !== null) {
-            $this->Urls = $param["Urls"];
+        if (array_key_exists('Urls',$param) and $param['Urls'] !== null) {
+            $this->Urls = $param['Urls'];
         }
 
-        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
-            $this->SubAppId = $param["SubAppId"];
+        if (array_key_exists('SubAppId',$param) and $param['SubAppId'] !== null) {
+            $this->SubAppId = $param['SubAppId'];
         }
     }
 }

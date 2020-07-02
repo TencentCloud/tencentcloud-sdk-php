@@ -62,21 +62,21 @@ class DescribeAbnormalEventResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Total",$param) and $param["Total"] !== null) {
-            $this->Total = $param["Total"];
+        if (array_key_exists('Total',$param) and $param['Total'] !== null) {
+            $this->Total = $param['Total'];
         }
 
-        if (array_key_exists("AbnormalExperienceList",$param) and $param["AbnormalExperienceList"] !== null) {
+        if (array_key_exists('AbnormalExperienceList',$param) and $param['AbnormalExperienceList'] !== null) {
             $this->AbnormalExperienceList = [];
-            foreach ($param["AbnormalExperienceList"] as $key => $value){
+            foreach ($param['AbnormalExperienceList'] as $key => $value){
                 $obj = new AbnormalExperience();
                 $obj->deserialize($value);
                 array_push($this->AbnormalExperienceList, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

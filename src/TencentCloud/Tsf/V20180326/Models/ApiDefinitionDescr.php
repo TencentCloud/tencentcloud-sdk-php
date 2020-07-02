@@ -54,13 +54,13 @@ class ApiDefinitionDescr extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("Properties",$param) and $param["Properties"] !== null) {
+        if (array_key_exists('Properties',$param) and $param['Properties'] !== null) {
             $this->Properties = [];
-            foreach ($param["Properties"] as $key => $value){
+            foreach ($param['Properties'] as $key => $value){
                 $obj = new PropertyField();
                 $obj->deserialize($value);
                 array_push($this->Properties, $obj);

@@ -90,25 +90,25 @@ IpNum：统计的IP数据
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
+        if (array_key_exists('Data',$param) and $param['Data'] !== null) {
             $this->Data = [];
-            foreach ($param["Data"] as $key => $value){
+            foreach ($param['Data'] as $key => $value){
                 $obj = new KeyValue();
                 $obj->deserialize($value);
                 array_push($this->Data, $obj);
             }
         }
 
-        if (array_key_exists("BeginDate",$param) and $param["BeginDate"] !== null) {
-            $this->BeginDate = $param["BeginDate"];
+        if (array_key_exists('BeginDate',$param) and $param['BeginDate'] !== null) {
+            $this->BeginDate = $param['BeginDate'];
         }
 
-        if (array_key_exists("EndDate",$param) and $param["EndDate"] !== null) {
-            $this->EndDate = $param["EndDate"];
+        if (array_key_exists('EndDate',$param) and $param['EndDate'] !== null) {
+            $this->EndDate = $param['EndDate'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

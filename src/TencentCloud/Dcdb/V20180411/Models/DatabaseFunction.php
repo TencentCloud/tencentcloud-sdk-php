@@ -46,8 +46,8 @@ class DatabaseFunction extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Func",$param) and $param["Func"] !== null) {
-            $this->Func = $param["Func"];
+        if (array_key_exists('Func',$param) and $param['Func'] !== null) {
+            $this->Func = $param['Func'];
         }
     }
 }

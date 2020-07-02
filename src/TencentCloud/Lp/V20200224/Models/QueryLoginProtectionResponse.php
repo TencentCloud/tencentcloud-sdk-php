@@ -214,40 +214,40 @@ RiskType
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CodeDesc",$param) and $param["CodeDesc"] !== null) {
-            $this->CodeDesc = $param["CodeDesc"];
+        if (array_key_exists('CodeDesc',$param) and $param['CodeDesc'] !== null) {
+            $this->CodeDesc = $param['CodeDesc'];
         }
 
-        if (array_key_exists("AssociateAccount",$param) and $param["AssociateAccount"] !== null) {
-            $this->AssociateAccount = $param["AssociateAccount"];
+        if (array_key_exists('AssociateAccount',$param) and $param['AssociateAccount'] !== null) {
+            $this->AssociateAccount = $param['AssociateAccount'];
         }
 
-        if (array_key_exists("LoginTime",$param) and $param["LoginTime"] !== null) {
-            $this->LoginTime = $param["LoginTime"];
+        if (array_key_exists('LoginTime',$param) and $param['LoginTime'] !== null) {
+            $this->LoginTime = $param['LoginTime'];
         }
 
-        if (array_key_exists("Uid",$param) and $param["Uid"] !== null) {
-            $this->Uid = $param["Uid"];
+        if (array_key_exists('Uid',$param) and $param['Uid'] !== null) {
+            $this->Uid = $param['Uid'];
         }
 
-        if (array_key_exists("LoginIp",$param) and $param["LoginIp"] !== null) {
-            $this->LoginIp = $param["LoginIp"];
+        if (array_key_exists('LoginIp',$param) and $param['LoginIp'] !== null) {
+            $this->LoginIp = $param['LoginIp'];
         }
 
-        if (array_key_exists("Level",$param) and $param["Level"] !== null) {
-            $this->Level = $param["Level"];
+        if (array_key_exists('Level',$param) and $param['Level'] !== null) {
+            $this->Level = $param['Level'];
         }
 
-        if (array_key_exists("RiskType",$param) and $param["RiskType"] !== null) {
-            $this->RiskType = $param["RiskType"];
+        if (array_key_exists('RiskType',$param) and $param['RiskType'] !== null) {
+            $this->RiskType = $param['RiskType'];
         }
 
-        if (array_key_exists("RootId",$param) and $param["RootId"] !== null) {
-            $this->RootId = $param["RootId"];
+        if (array_key_exists('RootId',$param) and $param['RootId'] !== null) {
+            $this->RootId = $param['RootId'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

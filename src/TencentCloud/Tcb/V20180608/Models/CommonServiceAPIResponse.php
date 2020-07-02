@@ -54,12 +54,12 @@ class CommonServiceAPIResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("JSONResp",$param) and $param["JSONResp"] !== null) {
-            $this->JSONResp = $param["JSONResp"];
+        if (array_key_exists('JSONResp',$param) and $param['JSONResp'] !== null) {
+            $this->JSONResp = $param['JSONResp'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

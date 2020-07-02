@@ -62,17 +62,17 @@ class SlowlogDetail extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalTime",$param) and $param["TotalTime"] !== null) {
-            $this->TotalTime = $param["TotalTime"];
+        if (array_key_exists('TotalTime',$param) and $param['TotalTime'] !== null) {
+            $this->TotalTime = $param['TotalTime'];
         }
 
-        if (array_key_exists("TotalCalls",$param) and $param["TotalCalls"] !== null) {
-            $this->TotalCalls = $param["TotalCalls"];
+        if (array_key_exists('TotalCalls',$param) and $param['TotalCalls'] !== null) {
+            $this->TotalCalls = $param['TotalCalls'];
         }
 
-        if (array_key_exists("NormalQueries",$param) and $param["NormalQueries"] !== null) {
+        if (array_key_exists('NormalQueries',$param) and $param['NormalQueries'] !== null) {
             $this->NormalQueries = [];
-            foreach ($param["NormalQueries"] as $key => $value){
+            foreach ($param['NormalQueries'] as $key => $value){
                 $obj = new NormalQueryItem();
                 $obj->deserialize($value);
                 array_push($this->NormalQueries, $obj);

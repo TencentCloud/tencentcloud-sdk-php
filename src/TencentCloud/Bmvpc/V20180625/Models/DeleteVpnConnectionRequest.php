@@ -46,8 +46,8 @@ class DeleteVpnConnectionRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("VpnConnectionId",$param) and $param["VpnConnectionId"] !== null) {
-            $this->VpnConnectionId = $param["VpnConnectionId"];
+        if (array_key_exists('VpnConnectionId',$param) and $param['VpnConnectionId'] !== null) {
+            $this->VpnConnectionId = $param['VpnConnectionId'];
         }
     }
 }

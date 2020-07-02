@@ -78,24 +78,24 @@ class DescribeCallBackStatusRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BizAppId",$param) and $param["BizAppId"] !== null) {
-            $this->BizAppId = $param["BizAppId"];
+        if (array_key_exists('BizAppId',$param) and $param['BizAppId'] !== null) {
+            $this->BizAppId = $param['BizAppId'];
         }
 
-        if (array_key_exists("CallId",$param) and $param["CallId"] !== null) {
-            $this->CallId = $param["CallId"];
+        if (array_key_exists('CallId',$param) and $param['CallId'] !== null) {
+            $this->CallId = $param['CallId'];
         }
 
-        if (array_key_exists("Src",$param) and $param["Src"] !== null) {
-            $this->Src = $param["Src"];
+        if (array_key_exists('Src',$param) and $param['Src'] !== null) {
+            $this->Src = $param['Src'];
         }
 
-        if (array_key_exists("Dst",$param) and $param["Dst"] !== null) {
-            $this->Dst = $param["Dst"];
+        if (array_key_exists('Dst',$param) and $param['Dst'] !== null) {
+            $this->Dst = $param['Dst'];
         }
 
-        if (array_key_exists("CallStatus",$param) and $param["CallStatus"] !== null) {
-            $this->CallStatus = $param["CallStatus"];
+        if (array_key_exists('CallStatus',$param) and $param['CallStatus'] !== null) {
+            $this->CallStatus = $param['CallStatus'];
         }
     }
 }

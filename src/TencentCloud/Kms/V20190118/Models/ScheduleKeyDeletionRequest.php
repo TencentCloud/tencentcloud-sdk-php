@@ -54,12 +54,12 @@ class ScheduleKeyDeletionRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("KeyId",$param) and $param["KeyId"] !== null) {
-            $this->KeyId = $param["KeyId"];
+        if (array_key_exists('KeyId',$param) and $param['KeyId'] !== null) {
+            $this->KeyId = $param['KeyId'];
         }
 
-        if (array_key_exists("PendingWindowInDays",$param) and $param["PendingWindowInDays"] !== null) {
-            $this->PendingWindowInDays = $param["PendingWindowInDays"];
+        if (array_key_exists('PendingWindowInDays',$param) and $param['PendingWindowInDays'] !== null) {
+            $this->PendingWindowInDays = $param['PendingWindowInDays'];
         }
     }
 }

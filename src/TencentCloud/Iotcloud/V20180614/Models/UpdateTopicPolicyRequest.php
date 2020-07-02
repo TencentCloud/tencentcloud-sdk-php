@@ -78,25 +78,25 @@ class UpdateTopicPolicyRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ProductID",$param) and $param["ProductID"] !== null) {
-            $this->ProductID = $param["ProductID"];
+        if (array_key_exists('ProductID',$param) and $param['ProductID'] !== null) {
+            $this->ProductID = $param['ProductID'];
         }
 
-        if (array_key_exists("TopicName",$param) and $param["TopicName"] !== null) {
-            $this->TopicName = $param["TopicName"];
+        if (array_key_exists('TopicName',$param) and $param['TopicName'] !== null) {
+            $this->TopicName = $param['TopicName'];
         }
 
-        if (array_key_exists("NewTopicName",$param) and $param["NewTopicName"] !== null) {
-            $this->NewTopicName = $param["NewTopicName"];
+        if (array_key_exists('NewTopicName',$param) and $param['NewTopicName'] !== null) {
+            $this->NewTopicName = $param['NewTopicName'];
         }
 
-        if (array_key_exists("Privilege",$param) and $param["Privilege"] !== null) {
-            $this->Privilege = $param["Privilege"];
+        if (array_key_exists('Privilege',$param) and $param['Privilege'] !== null) {
+            $this->Privilege = $param['Privilege'];
         }
 
-        if (array_key_exists("BrokerSubscribe",$param) and $param["BrokerSubscribe"] !== null) {
+        if (array_key_exists('BrokerSubscribe',$param) and $param['BrokerSubscribe'] !== null) {
             $this->BrokerSubscribe = new BrokerSubscribe();
-            $this->BrokerSubscribe->deserialize($param["BrokerSubscribe"]);
+            $this->BrokerSubscribe->deserialize($param['BrokerSubscribe']);
         }
     }
 }

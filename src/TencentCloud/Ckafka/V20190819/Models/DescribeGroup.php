@@ -54,12 +54,12 @@ class DescribeGroup extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Group",$param) and $param["Group"] !== null) {
-            $this->Group = $param["Group"];
+        if (array_key_exists('Group',$param) and $param['Group'] !== null) {
+            $this->Group = $param['Group'];
         }
 
-        if (array_key_exists("Protocol",$param) and $param["Protocol"] !== null) {
-            $this->Protocol = $param["Protocol"];
+        if (array_key_exists('Protocol',$param) and $param['Protocol'] !== null) {
+            $this->Protocol = $param['Protocol'];
         }
     }
 }

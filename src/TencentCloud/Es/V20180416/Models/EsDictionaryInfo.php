@@ -54,18 +54,18 @@ class EsDictionaryInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MainDict",$param) and $param["MainDict"] !== null) {
+        if (array_key_exists('MainDict',$param) and $param['MainDict'] !== null) {
             $this->MainDict = [];
-            foreach ($param["MainDict"] as $key => $value){
+            foreach ($param['MainDict'] as $key => $value){
                 $obj = new DictInfo();
                 $obj->deserialize($value);
                 array_push($this->MainDict, $obj);
             }
         }
 
-        if (array_key_exists("Stopwords",$param) and $param["Stopwords"] !== null) {
+        if (array_key_exists('Stopwords',$param) and $param['Stopwords'] !== null) {
             $this->Stopwords = [];
-            foreach ($param["Stopwords"] as $key => $value){
+            foreach ($param['Stopwords'] as $key => $value){
                 $obj = new DictInfo();
                 $obj->deserialize($value);
                 array_push($this->Stopwords, $obj);

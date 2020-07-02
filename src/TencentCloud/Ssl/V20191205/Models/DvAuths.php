@@ -110,28 +110,28 @@ class DvAuths extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DvAuthKey",$param) and $param["DvAuthKey"] !== null) {
-            $this->DvAuthKey = $param["DvAuthKey"];
+        if (array_key_exists('DvAuthKey',$param) and $param['DvAuthKey'] !== null) {
+            $this->DvAuthKey = $param['DvAuthKey'];
         }
 
-        if (array_key_exists("DvAuthValue",$param) and $param["DvAuthValue"] !== null) {
-            $this->DvAuthValue = $param["DvAuthValue"];
+        if (array_key_exists('DvAuthValue',$param) and $param['DvAuthValue'] !== null) {
+            $this->DvAuthValue = $param['DvAuthValue'];
         }
 
-        if (array_key_exists("DvAuthDomain",$param) and $param["DvAuthDomain"] !== null) {
-            $this->DvAuthDomain = $param["DvAuthDomain"];
+        if (array_key_exists('DvAuthDomain',$param) and $param['DvAuthDomain'] !== null) {
+            $this->DvAuthDomain = $param['DvAuthDomain'];
         }
 
-        if (array_key_exists("DvAuthPath",$param) and $param["DvAuthPath"] !== null) {
-            $this->DvAuthPath = $param["DvAuthPath"];
+        if (array_key_exists('DvAuthPath',$param) and $param['DvAuthPath'] !== null) {
+            $this->DvAuthPath = $param['DvAuthPath'];
         }
 
-        if (array_key_exists("DvAuthSubDomain",$param) and $param["DvAuthSubDomain"] !== null) {
-            $this->DvAuthSubDomain = $param["DvAuthSubDomain"];
+        if (array_key_exists('DvAuthSubDomain',$param) and $param['DvAuthSubDomain'] !== null) {
+            $this->DvAuthSubDomain = $param['DvAuthSubDomain'];
         }
 
-        if (array_key_exists("DvAuthVerifyType",$param) and $param["DvAuthVerifyType"] !== null) {
-            $this->DvAuthVerifyType = $param["DvAuthVerifyType"];
+        if (array_key_exists('DvAuthVerifyType',$param) and $param['DvAuthVerifyType'] !== null) {
+            $this->DvAuthVerifyType = $param['DvAuthVerifyType'];
         }
     }
 }

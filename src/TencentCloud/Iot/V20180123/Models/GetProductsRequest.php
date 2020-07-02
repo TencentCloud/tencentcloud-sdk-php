@@ -54,12 +54,12 @@ class GetProductsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
+        if (array_key_exists('Offset',$param) and $param['Offset'] !== null) {
+            $this->Offset = $param['Offset'];
         }
 
-        if (array_key_exists("Length",$param) and $param["Length"] !== null) {
-            $this->Length = $param["Length"];
+        if (array_key_exists('Length',$param) and $param['Length'] !== null) {
+            $this->Length = $param['Length'];
         }
     }
 }

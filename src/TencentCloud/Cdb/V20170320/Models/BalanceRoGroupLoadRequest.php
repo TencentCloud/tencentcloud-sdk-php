@@ -46,8 +46,8 @@ class BalanceRoGroupLoadRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RoGroupId",$param) and $param["RoGroupId"] !== null) {
-            $this->RoGroupId = $param["RoGroupId"];
+        if (array_key_exists('RoGroupId',$param) and $param['RoGroupId'] !== null) {
+            $this->RoGroupId = $param['RoGroupId'];
         }
     }
 }

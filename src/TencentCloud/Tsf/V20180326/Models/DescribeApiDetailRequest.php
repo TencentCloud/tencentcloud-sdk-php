@@ -78,24 +78,24 @@ class DescribeApiDetailRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MicroserviceId",$param) and $param["MicroserviceId"] !== null) {
-            $this->MicroserviceId = $param["MicroserviceId"];
+        if (array_key_exists('MicroserviceId',$param) and $param['MicroserviceId'] !== null) {
+            $this->MicroserviceId = $param['MicroserviceId'];
         }
 
-        if (array_key_exists("Path",$param) and $param["Path"] !== null) {
-            $this->Path = $param["Path"];
+        if (array_key_exists('Path',$param) and $param['Path'] !== null) {
+            $this->Path = $param['Path'];
         }
 
-        if (array_key_exists("Method",$param) and $param["Method"] !== null) {
-            $this->Method = $param["Method"];
+        if (array_key_exists('Method',$param) and $param['Method'] !== null) {
+            $this->Method = $param['Method'];
         }
 
-        if (array_key_exists("PkgVersion",$param) and $param["PkgVersion"] !== null) {
-            $this->PkgVersion = $param["PkgVersion"];
+        if (array_key_exists('PkgVersion',$param) and $param['PkgVersion'] !== null) {
+            $this->PkgVersion = $param['PkgVersion'];
         }
 
-        if (array_key_exists("ApplicationId",$param) and $param["ApplicationId"] !== null) {
-            $this->ApplicationId = $param["ApplicationId"];
+        if (array_key_exists('ApplicationId',$param) and $param['ApplicationId'] !== null) {
+            $this->ApplicationId = $param['ApplicationId'];
         }
     }
 }

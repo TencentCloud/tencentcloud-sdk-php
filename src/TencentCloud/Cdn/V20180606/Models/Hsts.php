@@ -70,16 +70,16 @@ class Hsts extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Switch",$param) and $param["Switch"] !== null) {
-            $this->Switch = $param["Switch"];
+        if (array_key_exists('Switch',$param) and $param['Switch'] !== null) {
+            $this->Switch = $param['Switch'];
         }
 
-        if (array_key_exists("MaxAge",$param) and $param["MaxAge"] !== null) {
-            $this->MaxAge = $param["MaxAge"];
+        if (array_key_exists('MaxAge',$param) and $param['MaxAge'] !== null) {
+            $this->MaxAge = $param['MaxAge'];
         }
 
-        if (array_key_exists("IncludeSubDomains",$param) and $param["IncludeSubDomains"] !== null) {
-            $this->IncludeSubDomains = $param["IncludeSubDomains"];
+        if (array_key_exists('IncludeSubDomains',$param) and $param['IncludeSubDomains'] !== null) {
+            $this->IncludeSubDomains = $param['IncludeSubDomains'];
         }
     }
 }

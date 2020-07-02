@@ -54,13 +54,13 @@ class DescribeSecurityGroupPoliciesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SecurityGroupPolicySet",$param) and $param["SecurityGroupPolicySet"] !== null) {
+        if (array_key_exists('SecurityGroupPolicySet',$param) and $param['SecurityGroupPolicySet'] !== null) {
             $this->SecurityGroupPolicySet = new SecurityGroupPolicySet();
-            $this->SecurityGroupPolicySet->deserialize($param["SecurityGroupPolicySet"]);
+            $this->SecurityGroupPolicySet->deserialize($param['SecurityGroupPolicySet']);
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

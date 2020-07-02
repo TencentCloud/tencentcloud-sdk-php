@@ -62,16 +62,16 @@ class RealServerStatus extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RealServerId",$param) and $param["RealServerId"] !== null) {
-            $this->RealServerId = $param["RealServerId"];
+        if (array_key_exists('RealServerId',$param) and $param['RealServerId'] !== null) {
+            $this->RealServerId = $param['RealServerId'];
         }
 
-        if (array_key_exists("BindStatus",$param) and $param["BindStatus"] !== null) {
-            $this->BindStatus = $param["BindStatus"];
+        if (array_key_exists('BindStatus',$param) and $param['BindStatus'] !== null) {
+            $this->BindStatus = $param['BindStatus'];
         }
 
-        if (array_key_exists("ProxyId",$param) and $param["ProxyId"] !== null) {
-            $this->ProxyId = $param["ProxyId"];
+        if (array_key_exists('ProxyId',$param) and $param['ProxyId'] !== null) {
+            $this->ProxyId = $param['ProxyId'];
         }
     }
 }

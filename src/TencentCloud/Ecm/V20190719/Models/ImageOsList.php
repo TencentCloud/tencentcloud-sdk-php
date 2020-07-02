@@ -62,12 +62,12 @@ class ImageOsList extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Windows",$param) and $param["Windows"] !== null) {
-            $this->Windows = $param["Windows"];
+        if (array_key_exists('Windows',$param) and $param['Windows'] !== null) {
+            $this->Windows = $param['Windows'];
         }
 
-        if (array_key_exists("Linux",$param) and $param["Linux"] !== null) {
-            $this->Linux = $param["Linux"];
+        if (array_key_exists('Linux',$param) and $param['Linux'] !== null) {
+            $this->Linux = $param['Linux'];
         }
     }
 }

@@ -62,17 +62,17 @@ class ClsSearchLogs extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Context",$param) and $param["Context"] !== null) {
-            $this->Context = $param["Context"];
+        if (array_key_exists('Context',$param) and $param['Context'] !== null) {
+            $this->Context = $param['Context'];
         }
 
-        if (array_key_exists("Listover",$param) and $param["Listover"] !== null) {
-            $this->Listover = $param["Listover"];
+        if (array_key_exists('Listover',$param) and $param['Listover'] !== null) {
+            $this->Listover = $param['Listover'];
         }
 
-        if (array_key_exists("Results",$param) and $param["Results"] !== null) {
+        if (array_key_exists('Results',$param) and $param['Results'] !== null) {
             $this->Results = [];
-            foreach ($param["Results"] as $key => $value){
+            foreach ($param['Results'] as $key => $value){
                 $obj = new ClsLogObject();
                 $obj->deserialize($value);
                 array_push($this->Results, $obj);

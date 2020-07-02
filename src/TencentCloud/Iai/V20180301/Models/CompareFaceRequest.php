@@ -186,32 +186,32 @@ B 图片的 Url、Image必须提供一个，如果都提供，只使用 Url。
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ImageA",$param) and $param["ImageA"] !== null) {
-            $this->ImageA = $param["ImageA"];
+        if (array_key_exists('ImageA',$param) and $param['ImageA'] !== null) {
+            $this->ImageA = $param['ImageA'];
         }
 
-        if (array_key_exists("ImageB",$param) and $param["ImageB"] !== null) {
-            $this->ImageB = $param["ImageB"];
+        if (array_key_exists('ImageB',$param) and $param['ImageB'] !== null) {
+            $this->ImageB = $param['ImageB'];
         }
 
-        if (array_key_exists("UrlA",$param) and $param["UrlA"] !== null) {
-            $this->UrlA = $param["UrlA"];
+        if (array_key_exists('UrlA',$param) and $param['UrlA'] !== null) {
+            $this->UrlA = $param['UrlA'];
         }
 
-        if (array_key_exists("UrlB",$param) and $param["UrlB"] !== null) {
-            $this->UrlB = $param["UrlB"];
+        if (array_key_exists('UrlB',$param) and $param['UrlB'] !== null) {
+            $this->UrlB = $param['UrlB'];
         }
 
-        if (array_key_exists("FaceModelVersion",$param) and $param["FaceModelVersion"] !== null) {
-            $this->FaceModelVersion = $param["FaceModelVersion"];
+        if (array_key_exists('FaceModelVersion',$param) and $param['FaceModelVersion'] !== null) {
+            $this->FaceModelVersion = $param['FaceModelVersion'];
         }
 
-        if (array_key_exists("QualityControl",$param) and $param["QualityControl"] !== null) {
-            $this->QualityControl = $param["QualityControl"];
+        if (array_key_exists('QualityControl',$param) and $param['QualityControl'] !== null) {
+            $this->QualityControl = $param['QualityControl'];
         }
 
-        if (array_key_exists("NeedRotateDetection",$param) and $param["NeedRotateDetection"] !== null) {
-            $this->NeedRotateDetection = $param["NeedRotateDetection"];
+        if (array_key_exists('NeedRotateDetection',$param) and $param['NeedRotateDetection'] !== null) {
+            $this->NeedRotateDetection = $param['NeedRotateDetection'];
         }
     }
 }

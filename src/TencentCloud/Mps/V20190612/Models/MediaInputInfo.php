@@ -54,13 +54,13 @@ class MediaInputInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists('Type',$param) and $param['Type'] !== null) {
+            $this->Type = $param['Type'];
         }
 
-        if (array_key_exists("CosInputInfo",$param) and $param["CosInputInfo"] !== null) {
+        if (array_key_exists('CosInputInfo',$param) and $param['CosInputInfo'] !== null) {
             $this->CosInputInfo = new CosInputInfo();
-            $this->CosInputInfo->deserialize($param["CosInputInfo"]);
+            $this->CosInputInfo->deserialize($param['CosInputInfo']);
         }
     }
 }

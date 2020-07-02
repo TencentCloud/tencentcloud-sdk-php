@@ -78,24 +78,24 @@ class AttributeKeyDetail extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Label",$param) and $param["Label"] !== null) {
-            $this->Label = $param["Label"];
+        if (array_key_exists('Label',$param) and $param['Label'] !== null) {
+            $this->Label = $param['Label'];
         }
 
-        if (array_key_exists("LabelType",$param) and $param["LabelType"] !== null) {
-            $this->LabelType = $param["LabelType"];
+        if (array_key_exists('LabelType',$param) and $param['LabelType'] !== null) {
+            $this->LabelType = $param['LabelType'];
         }
 
-        if (array_key_exists("Order",$param) and $param["Order"] !== null) {
-            $this->Order = $param["Order"];
+        if (array_key_exists('Order',$param) and $param['Order'] !== null) {
+            $this->Order = $param['Order'];
         }
 
-        if (array_key_exists("Starter",$param) and $param["Starter"] !== null) {
-            $this->Starter = $param["Starter"];
+        if (array_key_exists('Starter',$param) and $param['Starter'] !== null) {
+            $this->Starter = $param['Starter'];
         }
 
-        if (array_key_exists("Value",$param) and $param["Value"] !== null) {
-            $this->Value = $param["Value"];
+        if (array_key_exists('Value',$param) and $param['Value'] !== null) {
+            $this->Value = $param['Value'];
         }
     }
 }

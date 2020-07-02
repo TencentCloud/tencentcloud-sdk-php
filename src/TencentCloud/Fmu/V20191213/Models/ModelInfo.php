@@ -62,16 +62,16 @@ class ModelInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ModelId",$param) and $param["ModelId"] !== null) {
-            $this->ModelId = $param["ModelId"];
+        if (array_key_exists('ModelId',$param) and $param['ModelId'] !== null) {
+            $this->ModelId = $param['ModelId'];
         }
 
-        if (array_key_exists("LUTFileUrl",$param) and $param["LUTFileUrl"] !== null) {
-            $this->LUTFileUrl = $param["LUTFileUrl"];
+        if (array_key_exists('LUTFileUrl',$param) and $param['LUTFileUrl'] !== null) {
+            $this->LUTFileUrl = $param['LUTFileUrl'];
         }
 
-        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
-            $this->Description = $param["Description"];
+        if (array_key_exists('Description',$param) and $param['Description'] !== null) {
+            $this->Description = $param['Description'];
         }
     }
 }

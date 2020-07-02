@@ -62,16 +62,16 @@ class ImportImageRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ImageId",$param) and $param["ImageId"] !== null) {
-            $this->ImageId = $param["ImageId"];
+        if (array_key_exists('ImageId',$param) and $param['ImageId'] !== null) {
+            $this->ImageId = $param['ImageId'];
         }
 
-        if (array_key_exists("ImageDescription",$param) and $param["ImageDescription"] !== null) {
-            $this->ImageDescription = $param["ImageDescription"];
+        if (array_key_exists('ImageDescription',$param) and $param['ImageDescription'] !== null) {
+            $this->ImageDescription = $param['ImageDescription'];
         }
 
-        if (array_key_exists("SourceRegion",$param) and $param["SourceRegion"] !== null) {
-            $this->SourceRegion = $param["SourceRegion"];
+        if (array_key_exists('SourceRegion',$param) and $param['SourceRegion'] !== null) {
+            $this->SourceRegion = $param['SourceRegion'];
         }
     }
 }

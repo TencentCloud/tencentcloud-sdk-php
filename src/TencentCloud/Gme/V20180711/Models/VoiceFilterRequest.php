@@ -86,28 +86,28 @@ class VoiceFilterRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BizId",$param) and $param["BizId"] !== null) {
-            $this->BizId = $param["BizId"];
+        if (array_key_exists('BizId',$param) and $param['BizId'] !== null) {
+            $this->BizId = $param['BizId'];
         }
 
-        if (array_key_exists("FileId",$param) and $param["FileId"] !== null) {
-            $this->FileId = $param["FileId"];
+        if (array_key_exists('FileId',$param) and $param['FileId'] !== null) {
+            $this->FileId = $param['FileId'];
         }
 
-        if (array_key_exists("FileName",$param) and $param["FileName"] !== null) {
-            $this->FileName = $param["FileName"];
+        if (array_key_exists('FileName',$param) and $param['FileName'] !== null) {
+            $this->FileName = $param['FileName'];
         }
 
-        if (array_key_exists("FileUrl",$param) and $param["FileUrl"] !== null) {
-            $this->FileUrl = $param["FileUrl"];
+        if (array_key_exists('FileUrl',$param) and $param['FileUrl'] !== null) {
+            $this->FileUrl = $param['FileUrl'];
         }
 
-        if (array_key_exists("FileContent",$param) and $param["FileContent"] !== null) {
-            $this->FileContent = $param["FileContent"];
+        if (array_key_exists('FileContent',$param) and $param['FileContent'] !== null) {
+            $this->FileContent = $param['FileContent'];
         }
 
-        if (array_key_exists("OpenId",$param) and $param["OpenId"] !== null) {
-            $this->OpenId = $param["OpenId"];
+        if (array_key_exists('OpenId',$param) and $param['OpenId'] !== null) {
+            $this->OpenId = $param['OpenId'];
         }
     }
 }

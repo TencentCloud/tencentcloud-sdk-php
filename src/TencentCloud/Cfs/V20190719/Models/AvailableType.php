@@ -54,17 +54,17 @@ class AvailableType extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Protocols",$param) and $param["Protocols"] !== null) {
+        if (array_key_exists('Protocols',$param) and $param['Protocols'] !== null) {
             $this->Protocols = [];
-            foreach ($param["Protocols"] as $key => $value){
+            foreach ($param['Protocols'] as $key => $value){
                 $obj = new AvailableProtoStatus();
                 $obj->deserialize($value);
                 array_push($this->Protocols, $obj);
             }
         }
 
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists('Type',$param) and $param['Type'] !== null) {
+            $this->Type = $param['Type'];
         }
     }
 }

@@ -54,17 +54,17 @@ class DescribeSmsSignListResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DescribeSignListStatusSet",$param) and $param["DescribeSignListStatusSet"] !== null) {
+        if (array_key_exists('DescribeSignListStatusSet',$param) and $param['DescribeSignListStatusSet'] !== null) {
             $this->DescribeSignListStatusSet = [];
-            foreach ($param["DescribeSignListStatusSet"] as $key => $value){
+            foreach ($param['DescribeSignListStatusSet'] as $key => $value){
                 $obj = new DescribeSignListStatus();
                 $obj->deserialize($value);
                 array_push($this->DescribeSignListStatusSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

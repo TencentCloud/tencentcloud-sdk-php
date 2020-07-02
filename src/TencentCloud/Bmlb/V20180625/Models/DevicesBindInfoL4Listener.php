@@ -70,21 +70,21 @@ class DevicesBindInfoL4Listener extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ListenerId",$param) and $param["ListenerId"] !== null) {
-            $this->ListenerId = $param["ListenerId"];
+        if (array_key_exists('ListenerId',$param) and $param['ListenerId'] !== null) {
+            $this->ListenerId = $param['ListenerId'];
         }
 
-        if (array_key_exists("Protocol",$param) and $param["Protocol"] !== null) {
-            $this->Protocol = $param["Protocol"];
+        if (array_key_exists('Protocol',$param) and $param['Protocol'] !== null) {
+            $this->Protocol = $param['Protocol'];
         }
 
-        if (array_key_exists("LoadBalancerPort",$param) and $param["LoadBalancerPort"] !== null) {
-            $this->LoadBalancerPort = $param["LoadBalancerPort"];
+        if (array_key_exists('LoadBalancerPort',$param) and $param['LoadBalancerPort'] !== null) {
+            $this->LoadBalancerPort = $param['LoadBalancerPort'];
         }
 
-        if (array_key_exists("BackendSet",$param) and $param["BackendSet"] !== null) {
+        if (array_key_exists('BackendSet',$param) and $param['BackendSet'] !== null) {
             $this->BackendSet = [];
-            foreach ($param["BackendSet"] as $key => $value){
+            foreach ($param['BackendSet'] as $key => $value){
                 $obj = new DevicesBindInfoBackend();
                 $obj->deserialize($value);
                 array_push($this->BackendSet, $obj);

@@ -50,8 +50,8 @@ class CancelCommonMixStreamRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MixStreamSessionId",$param) and $param["MixStreamSessionId"] !== null) {
-            $this->MixStreamSessionId = $param["MixStreamSessionId"];
+        if (array_key_exists('MixStreamSessionId',$param) and $param['MixStreamSessionId'] !== null) {
+            $this->MixStreamSessionId = $param['MixStreamSessionId'];
         }
     }
 }

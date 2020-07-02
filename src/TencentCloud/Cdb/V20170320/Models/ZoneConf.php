@@ -70,20 +70,20 @@ class ZoneConf extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DeployMode",$param) and $param["DeployMode"] !== null) {
-            $this->DeployMode = $param["DeployMode"];
+        if (array_key_exists('DeployMode',$param) and $param['DeployMode'] !== null) {
+            $this->DeployMode = $param['DeployMode'];
         }
 
-        if (array_key_exists("MasterZone",$param) and $param["MasterZone"] !== null) {
-            $this->MasterZone = $param["MasterZone"];
+        if (array_key_exists('MasterZone',$param) and $param['MasterZone'] !== null) {
+            $this->MasterZone = $param['MasterZone'];
         }
 
-        if (array_key_exists("SlaveZone",$param) and $param["SlaveZone"] !== null) {
-            $this->SlaveZone = $param["SlaveZone"];
+        if (array_key_exists('SlaveZone',$param) and $param['SlaveZone'] !== null) {
+            $this->SlaveZone = $param['SlaveZone'];
         }
 
-        if (array_key_exists("BackupZone",$param) and $param["BackupZone"] !== null) {
-            $this->BackupZone = $param["BackupZone"];
+        if (array_key_exists('BackupZone',$param) and $param['BackupZone'] !== null) {
+            $this->BackupZone = $param['BackupZone'];
         }
     }
 }

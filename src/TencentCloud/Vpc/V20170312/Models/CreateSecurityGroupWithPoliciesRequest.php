@@ -70,21 +70,21 @@ class CreateSecurityGroupWithPoliciesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("GroupName",$param) and $param["GroupName"] !== null) {
-            $this->GroupName = $param["GroupName"];
+        if (array_key_exists('GroupName',$param) and $param['GroupName'] !== null) {
+            $this->GroupName = $param['GroupName'];
         }
 
-        if (array_key_exists("GroupDescription",$param) and $param["GroupDescription"] !== null) {
-            $this->GroupDescription = $param["GroupDescription"];
+        if (array_key_exists('GroupDescription',$param) and $param['GroupDescription'] !== null) {
+            $this->GroupDescription = $param['GroupDescription'];
         }
 
-        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
-            $this->ProjectId = $param["ProjectId"];
+        if (array_key_exists('ProjectId',$param) and $param['ProjectId'] !== null) {
+            $this->ProjectId = $param['ProjectId'];
         }
 
-        if (array_key_exists("SecurityGroupPolicySet",$param) and $param["SecurityGroupPolicySet"] !== null) {
+        if (array_key_exists('SecurityGroupPolicySet',$param) and $param['SecurityGroupPolicySet'] !== null) {
             $this->SecurityGroupPolicySet = new SecurityGroupPolicySet();
-            $this->SecurityGroupPolicySet->deserialize($param["SecurityGroupPolicySet"]);
+            $this->SecurityGroupPolicySet->deserialize($param['SecurityGroupPolicySet']);
         }
     }
 }

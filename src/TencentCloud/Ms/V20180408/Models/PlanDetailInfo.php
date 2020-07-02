@@ -70,21 +70,21 @@ class PlanDetailInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("IsDefault",$param) and $param["IsDefault"] !== null) {
-            $this->IsDefault = $param["IsDefault"];
+        if (array_key_exists('IsDefault',$param) and $param['IsDefault'] !== null) {
+            $this->IsDefault = $param['IsDefault'];
         }
 
-        if (array_key_exists("PlanId",$param) and $param["PlanId"] !== null) {
-            $this->PlanId = $param["PlanId"];
+        if (array_key_exists('PlanId',$param) and $param['PlanId'] !== null) {
+            $this->PlanId = $param['PlanId'];
         }
 
-        if (array_key_exists("PlanName",$param) and $param["PlanName"] !== null) {
-            $this->PlanName = $param["PlanName"];
+        if (array_key_exists('PlanName',$param) and $param['PlanName'] !== null) {
+            $this->PlanName = $param['PlanName'];
         }
 
-        if (array_key_exists("PlanInfo",$param) and $param["PlanInfo"] !== null) {
+        if (array_key_exists('PlanInfo',$param) and $param['PlanInfo'] !== null) {
             $this->PlanInfo = new PlanInfo();
-            $this->PlanInfo->deserialize($param["PlanInfo"]);
+            $this->PlanInfo->deserialize($param['PlanInfo']);
         }
     }
 }

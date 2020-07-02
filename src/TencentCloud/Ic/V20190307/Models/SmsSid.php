@@ -58,12 +58,12 @@ class SmsSid extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Iccid",$param) and $param["Iccid"] !== null) {
-            $this->Iccid = $param["Iccid"];
+        if (array_key_exists('Iccid',$param) and $param['Iccid'] !== null) {
+            $this->Iccid = $param['Iccid'];
         }
 
-        if (array_key_exists("Sid",$param) and $param["Sid"] !== null) {
-            $this->Sid = $param["Sid"];
+        if (array_key_exists('Sid',$param) and $param['Sid'] !== null) {
+            $this->Sid = $param['Sid'];
         }
     }
 }

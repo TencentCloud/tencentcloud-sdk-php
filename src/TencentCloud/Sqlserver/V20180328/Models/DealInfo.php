@@ -86,28 +86,28 @@ class DealInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DealName",$param) and $param["DealName"] !== null) {
-            $this->DealName = $param["DealName"];
+        if (array_key_exists('DealName',$param) and $param['DealName'] !== null) {
+            $this->DealName = $param['DealName'];
         }
 
-        if (array_key_exists("Count",$param) and $param["Count"] !== null) {
-            $this->Count = $param["Count"];
+        if (array_key_exists('Count',$param) and $param['Count'] !== null) {
+            $this->Count = $param['Count'];
         }
 
-        if (array_key_exists("FlowId",$param) and $param["FlowId"] !== null) {
-            $this->FlowId = $param["FlowId"];
+        if (array_key_exists('FlowId',$param) and $param['FlowId'] !== null) {
+            $this->FlowId = $param['FlowId'];
         }
 
-        if (array_key_exists("InstanceIdSet",$param) and $param["InstanceIdSet"] !== null) {
-            $this->InstanceIdSet = $param["InstanceIdSet"];
+        if (array_key_exists('InstanceIdSet',$param) and $param['InstanceIdSet'] !== null) {
+            $this->InstanceIdSet = $param['InstanceIdSet'];
         }
 
-        if (array_key_exists("OwnerUin",$param) and $param["OwnerUin"] !== null) {
-            $this->OwnerUin = $param["OwnerUin"];
+        if (array_key_exists('OwnerUin',$param) and $param['OwnerUin'] !== null) {
+            $this->OwnerUin = $param['OwnerUin'];
         }
 
-        if (array_key_exists("InstanceChargeType",$param) and $param["InstanceChargeType"] !== null) {
-            $this->InstanceChargeType = $param["InstanceChargeType"];
+        if (array_key_exists('InstanceChargeType',$param) and $param['InstanceChargeType'] !== null) {
+            $this->InstanceChargeType = $param['InstanceChargeType'];
         }
     }
 }

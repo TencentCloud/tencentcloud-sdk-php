@@ -90,24 +90,24 @@ class LogData extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Occurtime",$param) and $param["Occurtime"] !== null) {
-            $this->Occurtime = $param["Occurtime"];
+        if (array_key_exists('Occurtime',$param) and $param['Occurtime'] !== null) {
+            $this->Occurtime = $param['Occurtime'];
         }
 
-        if (array_key_exists("LogType",$param) and $param["LogType"] !== null) {
-            $this->LogType = $param["LogType"];
+        if (array_key_exists('LogType',$param) and $param['LogType'] !== null) {
+            $this->LogType = $param['LogType'];
         }
 
-        if (array_key_exists("DataObject",$param) and $param["DataObject"] !== null) {
-            $this->DataObject = $param["DataObject"];
+        if (array_key_exists('DataObject',$param) and $param['DataObject'] !== null) {
+            $this->DataObject = $param['DataObject'];
         }
 
-        if (array_key_exists("OldValue",$param) and $param["OldValue"] !== null) {
-            $this->OldValue = $param["OldValue"];
+        if (array_key_exists('OldValue',$param) and $param['OldValue'] !== null) {
+            $this->OldValue = $param['OldValue'];
         }
 
-        if (array_key_exists("NewValue",$param) and $param["NewValue"] !== null) {
-            $this->NewValue = $param["NewValue"];
+        if (array_key_exists('NewValue',$param) and $param['NewValue'] !== null) {
+            $this->NewValue = $param['NewValue'];
         }
     }
 }

@@ -46,8 +46,8 @@ class ModifyConfigAttributeRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("NoticeLevel",$param) and $param["NoticeLevel"] !== null) {
-            $this->NoticeLevel = $param["NoticeLevel"];
+        if (array_key_exists('NoticeLevel',$param) and $param['NoticeLevel'] !== null) {
+            $this->NoticeLevel = $param['NoticeLevel'];
         }
     }
 }

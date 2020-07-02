@@ -62,16 +62,16 @@ class SentenceItem extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Sentence",$param) and $param["Sentence"] !== null) {
-            $this->Sentence = $param["Sentence"];
+        if (array_key_exists('Sentence',$param) and $param['Sentence'] !== null) {
+            $this->Sentence = $param['Sentence'];
         }
 
-        if (array_key_exists("ParaID",$param) and $param["ParaID"] !== null) {
-            $this->ParaID = $param["ParaID"];
+        if (array_key_exists('ParaID',$param) and $param['ParaID'] !== null) {
+            $this->ParaID = $param['ParaID'];
         }
 
-        if (array_key_exists("SentenceID",$param) and $param["SentenceID"] !== null) {
-            $this->SentenceID = $param["SentenceID"];
+        if (array_key_exists('SentenceID',$param) and $param['SentenceID'] !== null) {
+            $this->SentenceID = $param['SentenceID'];
         }
     }
 }

@@ -54,12 +54,12 @@ class OperationLog extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Action",$param) and $param["Action"] !== null) {
-            $this->Action = $param["Action"];
+        if (array_key_exists('Action',$param) and $param['Action'] !== null) {
+            $this->Action = $param['Action'];
         }
 
-        if (array_key_exists("CreatedOn",$param) and $param["CreatedOn"] !== null) {
-            $this->CreatedOn = $param["CreatedOn"];
+        if (array_key_exists('CreatedOn',$param) and $param['CreatedOn'] !== null) {
+            $this->CreatedOn = $param['CreatedOn'];
         }
     }
 }

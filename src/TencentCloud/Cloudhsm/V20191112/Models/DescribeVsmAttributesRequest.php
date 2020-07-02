@@ -46,8 +46,8 @@ class DescribeVsmAttributesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ResourceId",$param) and $param["ResourceId"] !== null) {
-            $this->ResourceId = $param["ResourceId"];
+        if (array_key_exists('ResourceId',$param) and $param['ResourceId'] !== null) {
+            $this->ResourceId = $param['ResourceId'];
         }
     }
 }

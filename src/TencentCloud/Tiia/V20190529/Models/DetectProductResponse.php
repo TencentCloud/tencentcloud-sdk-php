@@ -54,17 +54,17 @@ class DetectProductResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Products",$param) and $param["Products"] !== null) {
+        if (array_key_exists('Products',$param) and $param['Products'] !== null) {
             $this->Products = [];
-            foreach ($param["Products"] as $key => $value){
+            foreach ($param['Products'] as $key => $value){
                 $obj = new Product();
                 $obj->deserialize($value);
                 array_push($this->Products, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

@@ -54,12 +54,12 @@ class ModifyContainerReplicasRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
-            $this->GroupId = $param["GroupId"];
+        if (array_key_exists('GroupId',$param) and $param['GroupId'] !== null) {
+            $this->GroupId = $param['GroupId'];
         }
 
-        if (array_key_exists("InstanceNum",$param) and $param["InstanceNum"] !== null) {
-            $this->InstanceNum = $param["InstanceNum"];
+        if (array_key_exists('InstanceNum',$param) and $param['InstanceNum'] !== null) {
+            $this->InstanceNum = $param['InstanceNum'];
         }
     }
 }

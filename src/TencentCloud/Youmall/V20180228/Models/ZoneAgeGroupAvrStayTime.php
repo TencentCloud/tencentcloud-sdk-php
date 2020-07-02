@@ -54,12 +54,12 @@ class ZoneAgeGroupAvrStayTime extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MaleAvrStayTime",$param) and $param["MaleAvrStayTime"] !== null) {
-            $this->MaleAvrStayTime = $param["MaleAvrStayTime"];
+        if (array_key_exists('MaleAvrStayTime',$param) and $param['MaleAvrStayTime'] !== null) {
+            $this->MaleAvrStayTime = $param['MaleAvrStayTime'];
         }
 
-        if (array_key_exists("FemaleAvrStayTime",$param) and $param["FemaleAvrStayTime"] !== null) {
-            $this->FemaleAvrStayTime = $param["FemaleAvrStayTime"];
+        if (array_key_exists('FemaleAvrStayTime',$param) and $param['FemaleAvrStayTime'] !== null) {
+            $this->FemaleAvrStayTime = $param['FemaleAvrStayTime'];
         }
     }
 }

@@ -62,13 +62,13 @@ class RollbackTables extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Database",$param) and $param["Database"] !== null) {
-            $this->Database = $param["Database"];
+        if (array_key_exists('Database',$param) and $param['Database'] !== null) {
+            $this->Database = $param['Database'];
         }
 
-        if (array_key_exists("Table",$param) and $param["Table"] !== null) {
+        if (array_key_exists('Table',$param) and $param['Table'] !== null) {
             $this->Table = [];
-            foreach ($param["Table"] as $key => $value){
+            foreach ($param['Table'] as $key => $value){
                 $obj = new RollbackTableName();
                 $obj->deserialize($value);
                 array_push($this->Table, $obj);

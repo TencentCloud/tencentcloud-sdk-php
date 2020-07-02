@@ -134,52 +134,52 @@ class DescribeBasicAlarmListRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Module",$param) and $param["Module"] !== null) {
-            $this->Module = $param["Module"];
+        if (array_key_exists('Module',$param) and $param['Module'] !== null) {
+            $this->Module = $param['Module'];
         }
 
-        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
-            $this->StartTime = $param["StartTime"];
+        if (array_key_exists('StartTime',$param) and $param['StartTime'] !== null) {
+            $this->StartTime = $param['StartTime'];
         }
 
-        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
-            $this->EndTime = $param["EndTime"];
+        if (array_key_exists('EndTime',$param) and $param['EndTime'] !== null) {
+            $this->EndTime = $param['EndTime'];
         }
 
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
+        if (array_key_exists('Limit',$param) and $param['Limit'] !== null) {
+            $this->Limit = $param['Limit'];
         }
 
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
+        if (array_key_exists('Offset',$param) and $param['Offset'] !== null) {
+            $this->Offset = $param['Offset'];
         }
 
-        if (array_key_exists("OccurTimeOrder",$param) and $param["OccurTimeOrder"] !== null) {
-            $this->OccurTimeOrder = $param["OccurTimeOrder"];
+        if (array_key_exists('OccurTimeOrder',$param) and $param['OccurTimeOrder'] !== null) {
+            $this->OccurTimeOrder = $param['OccurTimeOrder'];
         }
 
-        if (array_key_exists("ProjectIds",$param) and $param["ProjectIds"] !== null) {
-            $this->ProjectIds = $param["ProjectIds"];
+        if (array_key_exists('ProjectIds',$param) and $param['ProjectIds'] !== null) {
+            $this->ProjectIds = $param['ProjectIds'];
         }
 
-        if (array_key_exists("ViewNames",$param) and $param["ViewNames"] !== null) {
-            $this->ViewNames = $param["ViewNames"];
+        if (array_key_exists('ViewNames',$param) and $param['ViewNames'] !== null) {
+            $this->ViewNames = $param['ViewNames'];
         }
 
-        if (array_key_exists("AlarmStatus",$param) and $param["AlarmStatus"] !== null) {
-            $this->AlarmStatus = $param["AlarmStatus"];
+        if (array_key_exists('AlarmStatus',$param) and $param['AlarmStatus'] !== null) {
+            $this->AlarmStatus = $param['AlarmStatus'];
         }
 
-        if (array_key_exists("ObjLike",$param) and $param["ObjLike"] !== null) {
-            $this->ObjLike = $param["ObjLike"];
+        if (array_key_exists('ObjLike',$param) and $param['ObjLike'] !== null) {
+            $this->ObjLike = $param['ObjLike'];
         }
 
-        if (array_key_exists("InstanceGroupIds",$param) and $param["InstanceGroupIds"] !== null) {
-            $this->InstanceGroupIds = $param["InstanceGroupIds"];
+        if (array_key_exists('InstanceGroupIds',$param) and $param['InstanceGroupIds'] !== null) {
+            $this->InstanceGroupIds = $param['InstanceGroupIds'];
         }
 
-        if (array_key_exists("MetricNames",$param) and $param["MetricNames"] !== null) {
-            $this->MetricNames = $param["MetricNames"];
+        if (array_key_exists('MetricNames',$param) and $param['MetricNames'] !== null) {
+            $this->MetricNames = $param['MetricNames'];
         }
     }
 }

@@ -54,12 +54,12 @@ class EPARequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PhoneNumber",$param) and $param["PhoneNumber"] !== null) {
-            $this->PhoneNumber = $param["PhoneNumber"];
+        if (array_key_exists('PhoneNumber',$param) and $param['PhoneNumber'] !== null) {
+            $this->PhoneNumber = $param['PhoneNumber'];
         }
 
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
     }
 }

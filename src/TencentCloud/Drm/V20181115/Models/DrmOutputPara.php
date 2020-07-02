@@ -54,12 +54,12 @@ class DrmOutputPara extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists('Type',$param) and $param['Type'] !== null) {
+            $this->Type = $param['Type'];
         }
 
-        if (array_key_exists("Language",$param) and $param["Language"] !== null) {
-            $this->Language = $param["Language"];
+        if (array_key_exists('Language',$param) and $param['Language'] !== null) {
+            $this->Language = $param['Language'];
         }
     }
 }

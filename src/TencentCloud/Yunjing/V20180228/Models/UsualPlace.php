@@ -78,24 +78,24 @@ class UsualPlace extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
-            $this->Id = $param["Id"];
+        if (array_key_exists('Id',$param) and $param['Id'] !== null) {
+            $this->Id = $param['Id'];
         }
 
-        if (array_key_exists("Uuid",$param) and $param["Uuid"] !== null) {
-            $this->Uuid = $param["Uuid"];
+        if (array_key_exists('Uuid',$param) and $param['Uuid'] !== null) {
+            $this->Uuid = $param['Uuid'];
         }
 
-        if (array_key_exists("CountryId",$param) and $param["CountryId"] !== null) {
-            $this->CountryId = $param["CountryId"];
+        if (array_key_exists('CountryId',$param) and $param['CountryId'] !== null) {
+            $this->CountryId = $param['CountryId'];
         }
 
-        if (array_key_exists("ProvinceId",$param) and $param["ProvinceId"] !== null) {
-            $this->ProvinceId = $param["ProvinceId"];
+        if (array_key_exists('ProvinceId',$param) and $param['ProvinceId'] !== null) {
+            $this->ProvinceId = $param['ProvinceId'];
         }
 
-        if (array_key_exists("CityId",$param) and $param["CityId"] !== null) {
-            $this->CityId = $param["CityId"];
+        if (array_key_exists('CityId',$param) and $param['CityId'] !== null) {
+            $this->CityId = $param['CityId'];
         }
     }
 }

@@ -46,8 +46,8 @@ class DeleteAutoScalingGroupRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AutoScalingGroupId",$param) and $param["AutoScalingGroupId"] !== null) {
-            $this->AutoScalingGroupId = $param["AutoScalingGroupId"];
+        if (array_key_exists('AutoScalingGroupId',$param) and $param['AutoScalingGroupId'] !== null) {
+            $this->AutoScalingGroupId = $param['AutoScalingGroupId'];
         }
     }
 }

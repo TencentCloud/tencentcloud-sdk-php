@@ -54,17 +54,17 @@ class DescribeHostedDeviceOutBandInfoResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("HostedDeviceOutBandInfoSet",$param) and $param["HostedDeviceOutBandInfoSet"] !== null) {
+        if (array_key_exists('HostedDeviceOutBandInfoSet',$param) and $param['HostedDeviceOutBandInfoSet'] !== null) {
             $this->HostedDeviceOutBandInfoSet = [];
-            foreach ($param["HostedDeviceOutBandInfoSet"] as $key => $value){
+            foreach ($param['HostedDeviceOutBandInfoSet'] as $key => $value){
                 $obj = new HostedDeviceOutBandInfo();
                 $obj->deserialize($value);
                 array_push($this->HostedDeviceOutBandInfoSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

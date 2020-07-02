@@ -82,12 +82,12 @@ class HostNameSettings extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("HostName",$param) and $param["HostName"] !== null) {
-            $this->HostName = $param["HostName"];
+        if (array_key_exists('HostName',$param) and $param['HostName'] !== null) {
+            $this->HostName = $param['HostName'];
         }
 
-        if (array_key_exists("HostNameStyle",$param) and $param["HostNameStyle"] !== null) {
-            $this->HostNameStyle = $param["HostNameStyle"];
+        if (array_key_exists('HostNameStyle',$param) and $param['HostNameStyle'] !== null) {
+            $this->HostNameStyle = $param['HostNameStyle'];
         }
     }
 }

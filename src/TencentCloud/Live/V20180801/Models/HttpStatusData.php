@@ -58,13 +58,13 @@ class HttpStatusData extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Time",$param) and $param["Time"] !== null) {
-            $this->Time = $param["Time"];
+        if (array_key_exists('Time',$param) and $param['Time'] !== null) {
+            $this->Time = $param['Time'];
         }
 
-        if (array_key_exists("HttpStatusInfoList",$param) and $param["HttpStatusInfoList"] !== null) {
+        if (array_key_exists('HttpStatusInfoList',$param) and $param['HttpStatusInfoList'] !== null) {
             $this->HttpStatusInfoList = [];
-            foreach ($param["HttpStatusInfoList"] as $key => $value){
+            foreach ($param['HttpStatusInfoList'] as $key => $value){
                 $obj = new HttpStatusInfo();
                 $obj->deserialize($value);
                 array_push($this->HttpStatusInfoList, $obj);

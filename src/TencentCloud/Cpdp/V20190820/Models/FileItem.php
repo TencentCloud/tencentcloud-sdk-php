@@ -86,20 +86,20 @@ class FileItem extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FileName",$param) and $param["FileName"] !== null) {
-            $this->FileName = $param["FileName"];
+        if (array_key_exists('FileName',$param) and $param['FileName'] !== null) {
+            $this->FileName = $param['FileName'];
         }
 
-        if (array_key_exists("RandomPassword",$param) and $param["RandomPassword"] !== null) {
-            $this->RandomPassword = $param["RandomPassword"];
+        if (array_key_exists('RandomPassword',$param) and $param['RandomPassword'] !== null) {
+            $this->RandomPassword = $param['RandomPassword'];
         }
 
-        if (array_key_exists("FilePath",$param) and $param["FilePath"] !== null) {
-            $this->FilePath = $param["FilePath"];
+        if (array_key_exists('FilePath',$param) and $param['FilePath'] !== null) {
+            $this->FilePath = $param['FilePath'];
         }
 
-        if (array_key_exists("DrawCode",$param) and $param["DrawCode"] !== null) {
-            $this->DrawCode = $param["DrawCode"];
+        if (array_key_exists('DrawCode',$param) and $param['DrawCode'] !== null) {
+            $this->DrawCode = $param['DrawCode'];
         }
     }
 }

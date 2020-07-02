@@ -62,21 +62,21 @@ class DescribeDevicePositionResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("DevicePositionInfoSet",$param) and $param["DevicePositionInfoSet"] !== null) {
+        if (array_key_exists('DevicePositionInfoSet',$param) and $param['DevicePositionInfoSet'] !== null) {
             $this->DevicePositionInfoSet = [];
-            foreach ($param["DevicePositionInfoSet"] as $key => $value){
+            foreach ($param['DevicePositionInfoSet'] as $key => $value){
                 $obj = new DevicePositionInfo();
                 $obj->deserialize($value);
                 array_push($this->DevicePositionInfoSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

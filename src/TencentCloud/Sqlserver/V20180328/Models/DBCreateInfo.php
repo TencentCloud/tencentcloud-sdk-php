@@ -70,25 +70,25 @@ class DBCreateInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DBName",$param) and $param["DBName"] !== null) {
-            $this->DBName = $param["DBName"];
+        if (array_key_exists('DBName',$param) and $param['DBName'] !== null) {
+            $this->DBName = $param['DBName'];
         }
 
-        if (array_key_exists("Charset",$param) and $param["Charset"] !== null) {
-            $this->Charset = $param["Charset"];
+        if (array_key_exists('Charset',$param) and $param['Charset'] !== null) {
+            $this->Charset = $param['Charset'];
         }
 
-        if (array_key_exists("Accounts",$param) and $param["Accounts"] !== null) {
+        if (array_key_exists('Accounts',$param) and $param['Accounts'] !== null) {
             $this->Accounts = [];
-            foreach ($param["Accounts"] as $key => $value){
+            foreach ($param['Accounts'] as $key => $value){
                 $obj = new AccountPrivilege();
                 $obj->deserialize($value);
                 array_push($this->Accounts, $obj);
             }
         }
 
-        if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
-            $this->Remark = $param["Remark"];
+        if (array_key_exists('Remark',$param) and $param['Remark'] !== null) {
+            $this->Remark = $param['Remark'];
         }
     }
 }

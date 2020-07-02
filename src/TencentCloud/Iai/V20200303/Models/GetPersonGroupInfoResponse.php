@@ -78,25 +78,25 @@ class GetPersonGroupInfoResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PersonGroupInfos",$param) and $param["PersonGroupInfos"] !== null) {
+        if (array_key_exists('PersonGroupInfos',$param) and $param['PersonGroupInfos'] !== null) {
             $this->PersonGroupInfos = [];
-            foreach ($param["PersonGroupInfos"] as $key => $value){
+            foreach ($param['PersonGroupInfos'] as $key => $value){
                 $obj = new PersonGroupInfo();
                 $obj->deserialize($value);
                 array_push($this->PersonGroupInfos, $obj);
             }
         }
 
-        if (array_key_exists("GroupNum",$param) and $param["GroupNum"] !== null) {
-            $this->GroupNum = $param["GroupNum"];
+        if (array_key_exists('GroupNum',$param) and $param['GroupNum'] !== null) {
+            $this->GroupNum = $param['GroupNum'];
         }
 
-        if (array_key_exists("FaceModelVersion",$param) and $param["FaceModelVersion"] !== null) {
-            $this->FaceModelVersion = $param["FaceModelVersion"];
+        if (array_key_exists('FaceModelVersion',$param) and $param['FaceModelVersion'] !== null) {
+            $this->FaceModelVersion = $param['FaceModelVersion'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

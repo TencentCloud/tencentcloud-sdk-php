@@ -54,17 +54,17 @@ class MonitorMetricSeriesData extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Series",$param) and $param["Series"] !== null) {
+        if (array_key_exists('Series',$param) and $param['Series'] !== null) {
             $this->Series = [];
-            foreach ($param["Series"] as $key => $value){
+            foreach ($param['Series'] as $key => $value){
                 $obj = new MonitorMetric();
                 $obj->deserialize($value);
                 array_push($this->Series, $obj);
             }
         }
 
-        if (array_key_exists("Timestamp",$param) and $param["Timestamp"] !== null) {
-            $this->Timestamp = $param["Timestamp"];
+        if (array_key_exists('Timestamp',$param) and $param['Timestamp'] !== null) {
+            $this->Timestamp = $param['Timestamp'];
         }
     }
 }

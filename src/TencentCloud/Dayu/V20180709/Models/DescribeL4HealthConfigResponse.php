@@ -54,17 +54,17 @@ class DescribeL4HealthConfigResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("HealthConfig",$param) and $param["HealthConfig"] !== null) {
+        if (array_key_exists('HealthConfig',$param) and $param['HealthConfig'] !== null) {
             $this->HealthConfig = [];
-            foreach ($param["HealthConfig"] as $key => $value){
+            foreach ($param['HealthConfig'] as $key => $value){
                 $obj = new L4HealthConfig();
                 $obj->deserialize($value);
                 array_push($this->HealthConfig, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

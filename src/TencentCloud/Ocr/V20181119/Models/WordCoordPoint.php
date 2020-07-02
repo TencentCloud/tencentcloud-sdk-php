@@ -46,9 +46,9 @@ class WordCoordPoint extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("WordCoordinate",$param) and $param["WordCoordinate"] !== null) {
+        if (array_key_exists('WordCoordinate',$param) and $param['WordCoordinate'] !== null) {
             $this->WordCoordinate = [];
-            foreach ($param["WordCoordinate"] as $key => $value){
+            foreach ($param['WordCoordinate'] as $key => $value){
                 $obj = new Coord();
                 $obj->deserialize($value);
                 array_push($this->WordCoordinate, $obj);

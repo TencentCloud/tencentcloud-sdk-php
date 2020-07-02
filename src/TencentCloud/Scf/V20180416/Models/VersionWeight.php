@@ -54,12 +54,12 @@ class VersionWeight extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Version",$param) and $param["Version"] !== null) {
-            $this->Version = $param["Version"];
+        if (array_key_exists('Version',$param) and $param['Version'] !== null) {
+            $this->Version = $param['Version'];
         }
 
-        if (array_key_exists("Weight",$param) and $param["Weight"] !== null) {
-            $this->Weight = $param["Weight"];
+        if (array_key_exists('Weight',$param) and $param['Weight'] !== null) {
+            $this->Weight = $param['Weight'];
         }
     }
 }

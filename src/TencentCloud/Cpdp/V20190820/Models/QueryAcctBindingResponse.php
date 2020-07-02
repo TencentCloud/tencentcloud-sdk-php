@@ -62,21 +62,21 @@ class QueryAcctBindingResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("BankCardItems",$param) and $param["BankCardItems"] !== null) {
+        if (array_key_exists('BankCardItems',$param) and $param['BankCardItems'] !== null) {
             $this->BankCardItems = [];
-            foreach ($param["BankCardItems"] as $key => $value){
+            foreach ($param['BankCardItems'] as $key => $value){
                 $obj = new BankCardItem();
                 $obj->deserialize($value);
                 array_push($this->BankCardItems, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

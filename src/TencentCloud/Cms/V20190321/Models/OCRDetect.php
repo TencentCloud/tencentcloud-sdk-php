@@ -54,17 +54,17 @@ class OCRDetect extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Item",$param) and $param["Item"] !== null) {
+        if (array_key_exists('Item',$param) and $param['Item'] !== null) {
             $this->Item = [];
-            foreach ($param["Item"] as $key => $value){
+            foreach ($param['Item'] as $key => $value){
                 $obj = new OCRItem();
                 $obj->deserialize($value);
                 array_push($this->Item, $obj);
             }
         }
 
-        if (array_key_exists("TextInfo",$param) and $param["TextInfo"] !== null) {
-            $this->TextInfo = $param["TextInfo"];
+        if (array_key_exists('TextInfo',$param) and $param['TextInfo'] !== null) {
+            $this->TextInfo = $param['TextInfo'];
         }
     }
 }

@@ -54,17 +54,17 @@ class DescribeCvmZoneInstanceConfigInfosResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceTypeQuotaSet",$param) and $param["InstanceTypeQuotaSet"] !== null) {
+        if (array_key_exists('InstanceTypeQuotaSet',$param) and $param['InstanceTypeQuotaSet'] !== null) {
             $this->InstanceTypeQuotaSet = [];
-            foreach ($param["InstanceTypeQuotaSet"] as $key => $value){
+            foreach ($param['InstanceTypeQuotaSet'] as $key => $value){
                 $obj = new InstanceTypeQuotaItem();
                 $obj->deserialize($value);
                 array_push($this->InstanceTypeQuotaSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

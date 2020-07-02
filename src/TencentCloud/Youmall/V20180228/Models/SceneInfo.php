@@ -78,24 +78,24 @@ class SceneInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ScenePictureURL",$param) and $param["ScenePictureURL"] !== null) {
-            $this->ScenePictureURL = $param["ScenePictureURL"];
+        if (array_key_exists('ScenePictureURL',$param) and $param['ScenePictureURL'] !== null) {
+            $this->ScenePictureURL = $param['ScenePictureURL'];
         }
 
-        if (array_key_exists("HeadX",$param) and $param["HeadX"] !== null) {
-            $this->HeadX = $param["HeadX"];
+        if (array_key_exists('HeadX',$param) and $param['HeadX'] !== null) {
+            $this->HeadX = $param['HeadX'];
         }
 
-        if (array_key_exists("HeadY",$param) and $param["HeadY"] !== null) {
-            $this->HeadY = $param["HeadY"];
+        if (array_key_exists('HeadY',$param) and $param['HeadY'] !== null) {
+            $this->HeadY = $param['HeadY'];
         }
 
-        if (array_key_exists("HeadWidth",$param) and $param["HeadWidth"] !== null) {
-            $this->HeadWidth = $param["HeadWidth"];
+        if (array_key_exists('HeadWidth',$param) and $param['HeadWidth'] !== null) {
+            $this->HeadWidth = $param['HeadWidth'];
         }
 
-        if (array_key_exists("HeadHeight",$param) and $param["HeadHeight"] !== null) {
-            $this->HeadHeight = $param["HeadHeight"];
+        if (array_key_exists('HeadHeight',$param) and $param['HeadHeight'] !== null) {
+            $this->HeadHeight = $param['HeadHeight'];
         }
     }
 }

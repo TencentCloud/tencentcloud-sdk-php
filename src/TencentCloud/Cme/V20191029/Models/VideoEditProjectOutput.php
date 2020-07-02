@@ -66,17 +66,17 @@ class VideoEditProjectOutput extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("VodFileId",$param) and $param["VodFileId"] !== null) {
-            $this->VodFileId = $param["VodFileId"];
+        if (array_key_exists('VodFileId',$param) and $param['VodFileId'] !== null) {
+            $this->VodFileId = $param['VodFileId'];
         }
 
-        if (array_key_exists("URL",$param) and $param["URL"] !== null) {
-            $this->URL = $param["URL"];
+        if (array_key_exists('URL',$param) and $param['URL'] !== null) {
+            $this->URL = $param['URL'];
         }
 
-        if (array_key_exists("MetaData",$param) and $param["MetaData"] !== null) {
+        if (array_key_exists('MetaData',$param) and $param['MetaData'] !== null) {
             $this->MetaData = new MediaMetaData();
-            $this->MetaData->deserialize($param["MetaData"]);
+            $this->MetaData->deserialize($param['MetaData']);
         }
     }
 }

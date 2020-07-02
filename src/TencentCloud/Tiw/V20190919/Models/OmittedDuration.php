@@ -62,16 +62,16 @@ class OmittedDuration extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("VideoTime",$param) and $param["VideoTime"] !== null) {
-            $this->VideoTime = $param["VideoTime"];
+        if (array_key_exists('VideoTime',$param) and $param['VideoTime'] !== null) {
+            $this->VideoTime = $param['VideoTime'];
         }
 
-        if (array_key_exists("PauseTime",$param) and $param["PauseTime"] !== null) {
-            $this->PauseTime = $param["PauseTime"];
+        if (array_key_exists('PauseTime',$param) and $param['PauseTime'] !== null) {
+            $this->PauseTime = $param['PauseTime'];
         }
 
-        if (array_key_exists("ResumeTime",$param) and $param["ResumeTime"] !== null) {
-            $this->ResumeTime = $param["ResumeTime"];
+        if (array_key_exists('ResumeTime',$param) and $param['ResumeTime'] !== null) {
+            $this->ResumeTime = $param['ResumeTime'];
         }
     }
 }

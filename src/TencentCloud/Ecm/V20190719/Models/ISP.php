@@ -54,12 +54,12 @@ class ISP extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ISPId",$param) and $param["ISPId"] !== null) {
-            $this->ISPId = $param["ISPId"];
+        if (array_key_exists('ISPId',$param) and $param['ISPId'] !== null) {
+            $this->ISPId = $param['ISPId'];
         }
 
-        if (array_key_exists("ISPName",$param) and $param["ISPName"] !== null) {
-            $this->ISPName = $param["ISPName"];
+        if (array_key_exists('ISPName',$param) and $param['ISPName'] !== null) {
+            $this->ISPName = $param['ISPName'];
         }
     }
 }

@@ -58,17 +58,17 @@ class DescribeEnvFreeQuotaResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("QuotaItems",$param) and $param["QuotaItems"] !== null) {
+        if (array_key_exists('QuotaItems',$param) and $param['QuotaItems'] !== null) {
             $this->QuotaItems = [];
-            foreach ($param["QuotaItems"] as $key => $value){
+            foreach ($param['QuotaItems'] as $key => $value){
                 $obj = new PostpayEnvQuota();
                 $obj->deserialize($value);
                 array_push($this->QuotaItems, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

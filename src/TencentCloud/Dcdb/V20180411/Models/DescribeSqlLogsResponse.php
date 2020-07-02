@@ -94,37 +94,37 @@ class DescribeSqlLogsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("StartOffset",$param) and $param["StartOffset"] !== null) {
-            $this->StartOffset = $param["StartOffset"];
+        if (array_key_exists('StartOffset',$param) and $param['StartOffset'] !== null) {
+            $this->StartOffset = $param['StartOffset'];
         }
 
-        if (array_key_exists("EndOffset",$param) and $param["EndOffset"] !== null) {
-            $this->EndOffset = $param["EndOffset"];
+        if (array_key_exists('EndOffset',$param) and $param['EndOffset'] !== null) {
+            $this->EndOffset = $param['EndOffset'];
         }
 
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
+        if (array_key_exists('Offset',$param) and $param['Offset'] !== null) {
+            $this->Offset = $param['Offset'];
         }
 
-        if (array_key_exists("Count",$param) and $param["Count"] !== null) {
-            $this->Count = $param["Count"];
+        if (array_key_exists('Count',$param) and $param['Count'] !== null) {
+            $this->Count = $param['Count'];
         }
 
-        if (array_key_exists("SqlItems",$param) and $param["SqlItems"] !== null) {
+        if (array_key_exists('SqlItems',$param) and $param['SqlItems'] !== null) {
             $this->SqlItems = [];
-            foreach ($param["SqlItems"] as $key => $value){
+            foreach ($param['SqlItems'] as $key => $value){
                 $obj = new SqlLogItem();
                 $obj->deserialize($value);
                 array_push($this->SqlItems, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

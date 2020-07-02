@@ -106,28 +106,28 @@ complain：申诉进行中
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
-            $this->Id = $param["Id"];
+        if (array_key_exists('Id',$param) and $param['Id'] !== null) {
+            $this->Id = $param['Id'];
         }
 
-        if (array_key_exists("RealUrl",$param) and $param["RealUrl"] !== null) {
-            $this->RealUrl = $param["RealUrl"];
+        if (array_key_exists('RealUrl',$param) and $param['RealUrl'] !== null) {
+            $this->RealUrl = $param['RealUrl'];
         }
 
-        if (array_key_exists("DownloadUrl",$param) and $param["DownloadUrl"] !== null) {
-            $this->DownloadUrl = $param["DownloadUrl"];
+        if (array_key_exists('DownloadUrl',$param) and $param['DownloadUrl'] !== null) {
+            $this->DownloadUrl = $param['DownloadUrl'];
         }
 
-        if (array_key_exists("UrlStatus",$param) and $param["UrlStatus"] !== null) {
-            $this->UrlStatus = $param["UrlStatus"];
+        if (array_key_exists('UrlStatus',$param) and $param['UrlStatus'] !== null) {
+            $this->UrlStatus = $param['UrlStatus'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
-            $this->UpdateTime = $param["UpdateTime"];
+        if (array_key_exists('UpdateTime',$param) and $param['UpdateTime'] !== null) {
+            $this->UpdateTime = $param['UpdateTime'];
         }
     }
 }

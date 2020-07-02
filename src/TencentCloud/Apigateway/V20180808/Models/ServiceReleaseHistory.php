@@ -62,13 +62,13 @@ class ServiceReleaseHistory extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("VersionList",$param) and $param["VersionList"] !== null) {
+        if (array_key_exists('VersionList',$param) and $param['VersionList'] !== null) {
             $this->VersionList = [];
-            foreach ($param["VersionList"] as $key => $value){
+            foreach ($param['VersionList'] as $key => $value){
                 $obj = new ServiceReleaseHistoryInfo();
                 $obj->deserialize($value);
                 array_push($this->VersionList, $obj);

@@ -62,18 +62,18 @@ class SetMfaFlagRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("OpUin",$param) and $param["OpUin"] !== null) {
-            $this->OpUin = $param["OpUin"];
+        if (array_key_exists('OpUin',$param) and $param['OpUin'] !== null) {
+            $this->OpUin = $param['OpUin'];
         }
 
-        if (array_key_exists("LoginFlag",$param) and $param["LoginFlag"] !== null) {
+        if (array_key_exists('LoginFlag',$param) and $param['LoginFlag'] !== null) {
             $this->LoginFlag = new LoginActionMfaFlag();
-            $this->LoginFlag->deserialize($param["LoginFlag"]);
+            $this->LoginFlag->deserialize($param['LoginFlag']);
         }
 
-        if (array_key_exists("ActionFlag",$param) and $param["ActionFlag"] !== null) {
+        if (array_key_exists('ActionFlag',$param) and $param['ActionFlag'] !== null) {
             $this->ActionFlag = new LoginActionMfaFlag();
-            $this->ActionFlag->deserialize($param["ActionFlag"]);
+            $this->ActionFlag->deserialize($param['ActionFlag']);
         }
     }
 }

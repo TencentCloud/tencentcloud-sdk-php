@@ -86,28 +86,28 @@ class CreateGroupRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ApplicationId",$param) and $param["ApplicationId"] !== null) {
-            $this->ApplicationId = $param["ApplicationId"];
+        if (array_key_exists('ApplicationId',$param) and $param['ApplicationId'] !== null) {
+            $this->ApplicationId = $param['ApplicationId'];
         }
 
-        if (array_key_exists("NamespaceId",$param) and $param["NamespaceId"] !== null) {
-            $this->NamespaceId = $param["NamespaceId"];
+        if (array_key_exists('NamespaceId',$param) and $param['NamespaceId'] !== null) {
+            $this->NamespaceId = $param['NamespaceId'];
         }
 
-        if (array_key_exists("GroupName",$param) and $param["GroupName"] !== null) {
-            $this->GroupName = $param["GroupName"];
+        if (array_key_exists('GroupName',$param) and $param['GroupName'] !== null) {
+            $this->GroupName = $param['GroupName'];
         }
 
-        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
-            $this->ClusterId = $param["ClusterId"];
+        if (array_key_exists('ClusterId',$param) and $param['ClusterId'] !== null) {
+            $this->ClusterId = $param['ClusterId'];
         }
 
-        if (array_key_exists("GroupDesc",$param) and $param["GroupDesc"] !== null) {
-            $this->GroupDesc = $param["GroupDesc"];
+        if (array_key_exists('GroupDesc',$param) and $param['GroupDesc'] !== null) {
+            $this->GroupDesc = $param['GroupDesc'];
         }
 
-        if (array_key_exists("GroupResourceType",$param) and $param["GroupResourceType"] !== null) {
-            $this->GroupResourceType = $param["GroupResourceType"];
+        if (array_key_exists('GroupResourceType',$param) and $param['GroupResourceType'] !== null) {
+            $this->GroupResourceType = $param['GroupResourceType'];
         }
     }
 }

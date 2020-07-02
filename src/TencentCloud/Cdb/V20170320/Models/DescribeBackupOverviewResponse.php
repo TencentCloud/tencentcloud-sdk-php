@@ -78,24 +78,24 @@ class DescribeBackupOverviewResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BackupCount",$param) and $param["BackupCount"] !== null) {
-            $this->BackupCount = $param["BackupCount"];
+        if (array_key_exists('BackupCount',$param) and $param['BackupCount'] !== null) {
+            $this->BackupCount = $param['BackupCount'];
         }
 
-        if (array_key_exists("BackupVolume",$param) and $param["BackupVolume"] !== null) {
-            $this->BackupVolume = $param["BackupVolume"];
+        if (array_key_exists('BackupVolume',$param) and $param['BackupVolume'] !== null) {
+            $this->BackupVolume = $param['BackupVolume'];
         }
 
-        if (array_key_exists("BillingVolume",$param) and $param["BillingVolume"] !== null) {
-            $this->BillingVolume = $param["BillingVolume"];
+        if (array_key_exists('BillingVolume',$param) and $param['BillingVolume'] !== null) {
+            $this->BillingVolume = $param['BillingVolume'];
         }
 
-        if (array_key_exists("FreeVolume",$param) and $param["FreeVolume"] !== null) {
-            $this->FreeVolume = $param["FreeVolume"];
+        if (array_key_exists('FreeVolume',$param) and $param['FreeVolume'] !== null) {
+            $this->FreeVolume = $param['FreeVolume'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

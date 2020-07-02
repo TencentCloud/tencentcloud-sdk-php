@@ -54,12 +54,12 @@ class CreateCosSecKeyInstanceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CosRegion",$param) and $param["CosRegion"] !== null) {
-            $this->CosRegion = $param["CosRegion"];
+        if (array_key_exists('CosRegion',$param) and $param['CosRegion'] !== null) {
+            $this->CosRegion = $param['CosRegion'];
         }
 
-        if (array_key_exists("Duration",$param) and $param["Duration"] !== null) {
-            $this->Duration = $param["Duration"];
+        if (array_key_exists('Duration',$param) and $param['Duration'] !== null) {
+            $this->Duration = $param['Duration'];
         }
     }
 }

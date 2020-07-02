@@ -54,12 +54,12 @@ class DescribeL7ListenersRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LoadBalancerId",$param) and $param["LoadBalancerId"] !== null) {
-            $this->LoadBalancerId = $param["LoadBalancerId"];
+        if (array_key_exists('LoadBalancerId',$param) and $param['LoadBalancerId'] !== null) {
+            $this->LoadBalancerId = $param['LoadBalancerId'];
         }
 
-        if (array_key_exists("ListenerIds",$param) and $param["ListenerIds"] !== null) {
-            $this->ListenerIds = $param["ListenerIds"];
+        if (array_key_exists('ListenerIds',$param) and $param['ListenerIds'] !== null) {
+            $this->ListenerIds = $param['ListenerIds'];
         }
     }
 }

@@ -102,41 +102,41 @@ class WordRsp extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MemBeginTime",$param) and $param["MemBeginTime"] !== null) {
-            $this->MemBeginTime = $param["MemBeginTime"];
+        if (array_key_exists('MemBeginTime',$param) and $param['MemBeginTime'] !== null) {
+            $this->MemBeginTime = $param['MemBeginTime'];
         }
 
-        if (array_key_exists("MemEndTime",$param) and $param["MemEndTime"] !== null) {
-            $this->MemEndTime = $param["MemEndTime"];
+        if (array_key_exists('MemEndTime',$param) and $param['MemEndTime'] !== null) {
+            $this->MemEndTime = $param['MemEndTime'];
         }
 
-        if (array_key_exists("PronAccuracy",$param) and $param["PronAccuracy"] !== null) {
-            $this->PronAccuracy = $param["PronAccuracy"];
+        if (array_key_exists('PronAccuracy',$param) and $param['PronAccuracy'] !== null) {
+            $this->PronAccuracy = $param['PronAccuracy'];
         }
 
-        if (array_key_exists("PronFluency",$param) and $param["PronFluency"] !== null) {
-            $this->PronFluency = $param["PronFluency"];
+        if (array_key_exists('PronFluency',$param) and $param['PronFluency'] !== null) {
+            $this->PronFluency = $param['PronFluency'];
         }
 
-        if (array_key_exists("Word",$param) and $param["Word"] !== null) {
-            $this->Word = $param["Word"];
+        if (array_key_exists('Word',$param) and $param['Word'] !== null) {
+            $this->Word = $param['Word'];
         }
 
-        if (array_key_exists("MatchTag",$param) and $param["MatchTag"] !== null) {
-            $this->MatchTag = $param["MatchTag"];
+        if (array_key_exists('MatchTag',$param) and $param['MatchTag'] !== null) {
+            $this->MatchTag = $param['MatchTag'];
         }
 
-        if (array_key_exists("PhoneInfos",$param) and $param["PhoneInfos"] !== null) {
+        if (array_key_exists('PhoneInfos',$param) and $param['PhoneInfos'] !== null) {
             $this->PhoneInfos = [];
-            foreach ($param["PhoneInfos"] as $key => $value){
+            foreach ($param['PhoneInfos'] as $key => $value){
                 $obj = new PhoneInfo();
                 $obj->deserialize($value);
                 array_push($this->PhoneInfos, $obj);
             }
         }
 
-        if (array_key_exists("ReferenceWord",$param) and $param["ReferenceWord"] !== null) {
-            $this->ReferenceWord = $param["ReferenceWord"];
+        if (array_key_exists('ReferenceWord',$param) and $param['ReferenceWord'] !== null) {
+            $this->ReferenceWord = $param['ReferenceWord'];
         }
     }
 }

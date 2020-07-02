@@ -46,8 +46,8 @@ class DeleteApplicationTriggerPersonalRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TriggerName",$param) and $param["TriggerName"] !== null) {
-            $this->TriggerName = $param["TriggerName"];
+        if (array_key_exists('TriggerName',$param) and $param['TriggerName'] !== null) {
+            $this->TriggerName = $param['TriggerName'];
         }
     }
 }

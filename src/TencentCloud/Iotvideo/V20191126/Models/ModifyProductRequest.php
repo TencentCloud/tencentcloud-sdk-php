@@ -78,24 +78,24 @@ class ModifyProductRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ProductId",$param) and $param["ProductId"] !== null) {
-            $this->ProductId = $param["ProductId"];
+        if (array_key_exists('ProductId',$param) and $param['ProductId'] !== null) {
+            $this->ProductId = $param['ProductId'];
         }
 
-        if (array_key_exists("ProductName",$param) and $param["ProductName"] !== null) {
-            $this->ProductName = $param["ProductName"];
+        if (array_key_exists('ProductName',$param) and $param['ProductName'] !== null) {
+            $this->ProductName = $param['ProductName'];
         }
 
-        if (array_key_exists("ProductDescription",$param) and $param["ProductDescription"] !== null) {
-            $this->ProductDescription = $param["ProductDescription"];
+        if (array_key_exists('ProductDescription',$param) and $param['ProductDescription'] !== null) {
+            $this->ProductDescription = $param['ProductDescription'];
         }
 
-        if (array_key_exists("ChipManufactureId",$param) and $param["ChipManufactureId"] !== null) {
-            $this->ChipManufactureId = $param["ChipManufactureId"];
+        if (array_key_exists('ChipManufactureId',$param) and $param['ChipManufactureId'] !== null) {
+            $this->ChipManufactureId = $param['ChipManufactureId'];
         }
 
-        if (array_key_exists("ChipId",$param) and $param["ChipId"] !== null) {
-            $this->ChipId = $param["ChipId"];
+        if (array_key_exists('ChipId',$param) and $param['ChipId'] !== null) {
+            $this->ChipId = $param['ChipId'];
         }
     }
 }

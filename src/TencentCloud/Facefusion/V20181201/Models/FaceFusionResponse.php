@@ -62,21 +62,21 @@ class FaceFusionResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Image",$param) and $param["Image"] !== null) {
-            $this->Image = $param["Image"];
+        if (array_key_exists('Image',$param) and $param['Image'] !== null) {
+            $this->Image = $param['Image'];
         }
 
-        if (array_key_exists("ReviewResultSet",$param) and $param["ReviewResultSet"] !== null) {
+        if (array_key_exists('ReviewResultSet',$param) and $param['ReviewResultSet'] !== null) {
             $this->ReviewResultSet = [];
-            foreach ($param["ReviewResultSet"] as $key => $value){
+            foreach ($param['ReviewResultSet'] as $key => $value){
                 $obj = new FuseFaceReviewResult();
                 $obj->deserialize($value);
                 array_push($this->ReviewResultSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

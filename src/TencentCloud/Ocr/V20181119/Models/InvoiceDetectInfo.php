@@ -138,21 +138,21 @@ class InvoiceDetectInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Angle",$param) and $param["Angle"] !== null) {
-            $this->Angle = $param["Angle"];
+        if (array_key_exists('Angle',$param) and $param['Angle'] !== null) {
+            $this->Angle = $param['Angle'];
         }
 
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists('Type',$param) and $param['Type'] !== null) {
+            $this->Type = $param['Type'];
         }
 
-        if (array_key_exists("Rect",$param) and $param["Rect"] !== null) {
+        if (array_key_exists('Rect',$param) and $param['Rect'] !== null) {
             $this->Rect = new Rect();
-            $this->Rect->deserialize($param["Rect"]);
+            $this->Rect->deserialize($param['Rect']);
         }
 
-        if (array_key_exists("Image",$param) and $param["Image"] !== null) {
-            $this->Image = $param["Image"];
+        if (array_key_exists('Image',$param) and $param['Image'] !== null) {
+            $this->Image = $param['Image'];
         }
     }
 }

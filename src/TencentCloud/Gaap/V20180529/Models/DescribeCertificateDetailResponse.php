@@ -54,13 +54,13 @@ class DescribeCertificateDetailResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CertificateDetail",$param) and $param["CertificateDetail"] !== null) {
+        if (array_key_exists('CertificateDetail',$param) and $param['CertificateDetail'] !== null) {
             $this->CertificateDetail = new CertificateDetail();
-            $this->CertificateDetail->deserialize($param["CertificateDetail"]);
+            $this->CertificateDetail->deserialize($param['CertificateDetail']);
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

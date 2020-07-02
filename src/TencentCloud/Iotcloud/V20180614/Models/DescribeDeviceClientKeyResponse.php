@@ -54,12 +54,12 @@ class DescribeDeviceClientKeyResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ClientKey",$param) and $param["ClientKey"] !== null) {
-            $this->ClientKey = $param["ClientKey"];
+        if (array_key_exists('ClientKey',$param) and $param['ClientKey'] !== null) {
+            $this->ClientKey = $param['ClientKey'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

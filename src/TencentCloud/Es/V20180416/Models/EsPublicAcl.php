@@ -54,12 +54,12 @@ class EsPublicAcl extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BlackIpList",$param) and $param["BlackIpList"] !== null) {
-            $this->BlackIpList = $param["BlackIpList"];
+        if (array_key_exists('BlackIpList',$param) and $param['BlackIpList'] !== null) {
+            $this->BlackIpList = $param['BlackIpList'];
         }
 
-        if (array_key_exists("WhiteIpList",$param) and $param["WhiteIpList"] !== null) {
-            $this->WhiteIpList = $param["WhiteIpList"];
+        if (array_key_exists('WhiteIpList',$param) and $param['WhiteIpList'] !== null) {
+            $this->WhiteIpList = $param['WhiteIpList'];
         }
     }
 }

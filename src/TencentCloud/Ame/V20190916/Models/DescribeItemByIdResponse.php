@@ -58,17 +58,17 @@ class DescribeItemByIdResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Items",$param) and $param["Items"] !== null) {
+        if (array_key_exists('Items',$param) and $param['Items'] !== null) {
             $this->Items = [];
-            foreach ($param["Items"] as $key => $value){
+            foreach ($param['Items'] as $key => $value){
                 $obj = new Item();
                 $obj->deserialize($value);
                 array_push($this->Items, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

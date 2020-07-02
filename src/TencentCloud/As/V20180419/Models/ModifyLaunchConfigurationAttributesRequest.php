@@ -110,28 +110,28 @@ class ModifyLaunchConfigurationAttributesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LaunchConfigurationId",$param) and $param["LaunchConfigurationId"] !== null) {
-            $this->LaunchConfigurationId = $param["LaunchConfigurationId"];
+        if (array_key_exists('LaunchConfigurationId',$param) and $param['LaunchConfigurationId'] !== null) {
+            $this->LaunchConfigurationId = $param['LaunchConfigurationId'];
         }
 
-        if (array_key_exists("ImageId",$param) and $param["ImageId"] !== null) {
-            $this->ImageId = $param["ImageId"];
+        if (array_key_exists('ImageId',$param) and $param['ImageId'] !== null) {
+            $this->ImageId = $param['ImageId'];
         }
 
-        if (array_key_exists("InstanceTypes",$param) and $param["InstanceTypes"] !== null) {
-            $this->InstanceTypes = $param["InstanceTypes"];
+        if (array_key_exists('InstanceTypes',$param) and $param['InstanceTypes'] !== null) {
+            $this->InstanceTypes = $param['InstanceTypes'];
         }
 
-        if (array_key_exists("InstanceTypesCheckPolicy",$param) and $param["InstanceTypesCheckPolicy"] !== null) {
-            $this->InstanceTypesCheckPolicy = $param["InstanceTypesCheckPolicy"];
+        if (array_key_exists('InstanceTypesCheckPolicy',$param) and $param['InstanceTypesCheckPolicy'] !== null) {
+            $this->InstanceTypesCheckPolicy = $param['InstanceTypesCheckPolicy'];
         }
 
-        if (array_key_exists("LaunchConfigurationName",$param) and $param["LaunchConfigurationName"] !== null) {
-            $this->LaunchConfigurationName = $param["LaunchConfigurationName"];
+        if (array_key_exists('LaunchConfigurationName',$param) and $param['LaunchConfigurationName'] !== null) {
+            $this->LaunchConfigurationName = $param['LaunchConfigurationName'];
         }
 
-        if (array_key_exists("UserData",$param) and $param["UserData"] !== null) {
-            $this->UserData = $param["UserData"];
+        if (array_key_exists('UserData',$param) and $param['UserData'] !== null) {
+            $this->UserData = $param['UserData'];
         }
     }
 }

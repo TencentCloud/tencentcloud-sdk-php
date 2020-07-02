@@ -46,8 +46,8 @@ class DescribeRegistrationStatusRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CunionIds",$param) and $param["CunionIds"] !== null) {
-            $this->CunionIds = $param["CunionIds"];
+        if (array_key_exists('CunionIds',$param) and $param['CunionIds'] !== null) {
+            $this->CunionIds = $param['CunionIds'];
         }
     }
 }

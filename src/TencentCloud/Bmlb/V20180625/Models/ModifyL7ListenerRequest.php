@@ -142,56 +142,56 @@ class ModifyL7ListenerRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LoadBalancerId",$param) and $param["LoadBalancerId"] !== null) {
-            $this->LoadBalancerId = $param["LoadBalancerId"];
+        if (array_key_exists('LoadBalancerId',$param) and $param['LoadBalancerId'] !== null) {
+            $this->LoadBalancerId = $param['LoadBalancerId'];
         }
 
-        if (array_key_exists("ListenerId",$param) and $param["ListenerId"] !== null) {
-            $this->ListenerId = $param["ListenerId"];
+        if (array_key_exists('ListenerId',$param) and $param['ListenerId'] !== null) {
+            $this->ListenerId = $param['ListenerId'];
         }
 
-        if (array_key_exists("ListenerName",$param) and $param["ListenerName"] !== null) {
-            $this->ListenerName = $param["ListenerName"];
+        if (array_key_exists('ListenerName',$param) and $param['ListenerName'] !== null) {
+            $this->ListenerName = $param['ListenerName'];
         }
 
-        if (array_key_exists("SslMode",$param) and $param["SslMode"] !== null) {
-            $this->SslMode = $param["SslMode"];
+        if (array_key_exists('SslMode',$param) and $param['SslMode'] !== null) {
+            $this->SslMode = $param['SslMode'];
         }
 
-        if (array_key_exists("CertId",$param) and $param["CertId"] !== null) {
-            $this->CertId = $param["CertId"];
+        if (array_key_exists('CertId',$param) and $param['CertId'] !== null) {
+            $this->CertId = $param['CertId'];
         }
 
-        if (array_key_exists("CertName",$param) and $param["CertName"] !== null) {
-            $this->CertName = $param["CertName"];
+        if (array_key_exists('CertName',$param) and $param['CertName'] !== null) {
+            $this->CertName = $param['CertName'];
         }
 
-        if (array_key_exists("CertContent",$param) and $param["CertContent"] !== null) {
-            $this->CertContent = $param["CertContent"];
+        if (array_key_exists('CertContent',$param) and $param['CertContent'] !== null) {
+            $this->CertContent = $param['CertContent'];
         }
 
-        if (array_key_exists("CertKey",$param) and $param["CertKey"] !== null) {
-            $this->CertKey = $param["CertKey"];
+        if (array_key_exists('CertKey',$param) and $param['CertKey'] !== null) {
+            $this->CertKey = $param['CertKey'];
         }
 
-        if (array_key_exists("CertCaId",$param) and $param["CertCaId"] !== null) {
-            $this->CertCaId = $param["CertCaId"];
+        if (array_key_exists('CertCaId',$param) and $param['CertCaId'] !== null) {
+            $this->CertCaId = $param['CertCaId'];
         }
 
-        if (array_key_exists("CertCaName",$param) and $param["CertCaName"] !== null) {
-            $this->CertCaName = $param["CertCaName"];
+        if (array_key_exists('CertCaName',$param) and $param['CertCaName'] !== null) {
+            $this->CertCaName = $param['CertCaName'];
         }
 
-        if (array_key_exists("CertCaContent",$param) and $param["CertCaContent"] !== null) {
-            $this->CertCaContent = $param["CertCaContent"];
+        if (array_key_exists('CertCaContent',$param) and $param['CertCaContent'] !== null) {
+            $this->CertCaContent = $param['CertCaContent'];
         }
 
-        if (array_key_exists("Bandwidth",$param) and $param["Bandwidth"] !== null) {
-            $this->Bandwidth = $param["Bandwidth"];
+        if (array_key_exists('Bandwidth',$param) and $param['Bandwidth'] !== null) {
+            $this->Bandwidth = $param['Bandwidth'];
         }
 
-        if (array_key_exists("ForwardProtocol",$param) and $param["ForwardProtocol"] !== null) {
-            $this->ForwardProtocol = $param["ForwardProtocol"];
+        if (array_key_exists('ForwardProtocol',$param) and $param['ForwardProtocol'] !== null) {
+            $this->ForwardProtocol = $param['ForwardProtocol'];
         }
     }
 }

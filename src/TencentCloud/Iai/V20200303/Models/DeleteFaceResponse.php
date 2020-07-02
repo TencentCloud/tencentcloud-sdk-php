@@ -62,16 +62,16 @@ class DeleteFaceResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SucDeletedNum",$param) and $param["SucDeletedNum"] !== null) {
-            $this->SucDeletedNum = $param["SucDeletedNum"];
+        if (array_key_exists('SucDeletedNum',$param) and $param['SucDeletedNum'] !== null) {
+            $this->SucDeletedNum = $param['SucDeletedNum'];
         }
 
-        if (array_key_exists("SucFaceIds",$param) and $param["SucFaceIds"] !== null) {
-            $this->SucFaceIds = $param["SucFaceIds"];
+        if (array_key_exists('SucFaceIds',$param) and $param['SucFaceIds'] !== null) {
+            $this->SucFaceIds = $param['SucFaceIds'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

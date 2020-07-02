@@ -46,8 +46,8 @@ class RemovePayRelationForClientRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ClientUin",$param) and $param["ClientUin"] !== null) {
-            $this->ClientUin = $param["ClientUin"];
+        if (array_key_exists('ClientUin',$param) and $param['ClientUin'] !== null) {
+            $this->ClientUin = $param['ClientUin'];
         }
     }
 }

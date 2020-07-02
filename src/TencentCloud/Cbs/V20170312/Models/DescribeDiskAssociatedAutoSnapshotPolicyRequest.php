@@ -46,8 +46,8 @@ class DescribeDiskAssociatedAutoSnapshotPolicyRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DiskId",$param) and $param["DiskId"] !== null) {
-            $this->DiskId = $param["DiskId"];
+        if (array_key_exists('DiskId',$param) and $param['DiskId'] !== null) {
+            $this->DiskId = $param['DiskId'];
         }
     }
 }

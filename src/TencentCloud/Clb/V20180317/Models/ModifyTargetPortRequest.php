@@ -94,37 +94,37 @@ class ModifyTargetPortRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LoadBalancerId",$param) and $param["LoadBalancerId"] !== null) {
-            $this->LoadBalancerId = $param["LoadBalancerId"];
+        if (array_key_exists('LoadBalancerId',$param) and $param['LoadBalancerId'] !== null) {
+            $this->LoadBalancerId = $param['LoadBalancerId'];
         }
 
-        if (array_key_exists("ListenerId",$param) and $param["ListenerId"] !== null) {
-            $this->ListenerId = $param["ListenerId"];
+        if (array_key_exists('ListenerId',$param) and $param['ListenerId'] !== null) {
+            $this->ListenerId = $param['ListenerId'];
         }
 
-        if (array_key_exists("Targets",$param) and $param["Targets"] !== null) {
+        if (array_key_exists('Targets',$param) and $param['Targets'] !== null) {
             $this->Targets = [];
-            foreach ($param["Targets"] as $key => $value){
+            foreach ($param['Targets'] as $key => $value){
                 $obj = new Target();
                 $obj->deserialize($value);
                 array_push($this->Targets, $obj);
             }
         }
 
-        if (array_key_exists("NewPort",$param) and $param["NewPort"] !== null) {
-            $this->NewPort = $param["NewPort"];
+        if (array_key_exists('NewPort',$param) and $param['NewPort'] !== null) {
+            $this->NewPort = $param['NewPort'];
         }
 
-        if (array_key_exists("LocationId",$param) and $param["LocationId"] !== null) {
-            $this->LocationId = $param["LocationId"];
+        if (array_key_exists('LocationId',$param) and $param['LocationId'] !== null) {
+            $this->LocationId = $param['LocationId'];
         }
 
-        if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
-            $this->Domain = $param["Domain"];
+        if (array_key_exists('Domain',$param) and $param['Domain'] !== null) {
+            $this->Domain = $param['Domain'];
         }
 
-        if (array_key_exists("Url",$param) and $param["Url"] !== null) {
-            $this->Url = $param["Url"];
+        if (array_key_exists('Url',$param) and $param['Url'] !== null) {
+            $this->Url = $param['Url'];
         }
     }
 }

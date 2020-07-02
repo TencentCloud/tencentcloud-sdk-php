@@ -46,8 +46,8 @@ class DeleteMachineRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Uuid",$param) and $param["Uuid"] !== null) {
-            $this->Uuid = $param["Uuid"];
+        if (array_key_exists('Uuid',$param) and $param['Uuid'] !== null) {
+            $this->Uuid = $param['Uuid'];
         }
     }
 }

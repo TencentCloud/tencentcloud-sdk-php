@@ -54,12 +54,12 @@ class Credentials extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Secret",$param) and $param["Secret"] !== null) {
-            $this->Secret = $param["Secret"];
+        if (array_key_exists('Secret',$param) and $param['Secret'] !== null) {
+            $this->Secret = $param['Secret'];
         }
 
-        if (array_key_exists("UserName",$param) and $param["UserName"] !== null) {
-            $this->UserName = $param["UserName"];
+        if (array_key_exists('UserName',$param) and $param['UserName'] !== null) {
+            $this->UserName = $param['UserName'];
         }
     }
 }

@@ -98,24 +98,24 @@ class Price extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("OriginalPrice",$param) and $param["OriginalPrice"] !== null) {
-            $this->OriginalPrice = $param["OriginalPrice"];
+        if (array_key_exists('OriginalPrice',$param) and $param['OriginalPrice'] !== null) {
+            $this->OriginalPrice = $param['OriginalPrice'];
         }
 
-        if (array_key_exists("DiscountPrice",$param) and $param["DiscountPrice"] !== null) {
-            $this->DiscountPrice = $param["DiscountPrice"];
+        if (array_key_exists('DiscountPrice',$param) and $param['DiscountPrice'] !== null) {
+            $this->DiscountPrice = $param['DiscountPrice'];
         }
 
-        if (array_key_exists("UnitPrice",$param) and $param["UnitPrice"] !== null) {
-            $this->UnitPrice = $param["UnitPrice"];
+        if (array_key_exists('UnitPrice',$param) and $param['UnitPrice'] !== null) {
+            $this->UnitPrice = $param['UnitPrice'];
         }
 
-        if (array_key_exists("ChargeUnit",$param) and $param["ChargeUnit"] !== null) {
-            $this->ChargeUnit = $param["ChargeUnit"];
+        if (array_key_exists('ChargeUnit',$param) and $param['ChargeUnit'] !== null) {
+            $this->ChargeUnit = $param['ChargeUnit'];
         }
 
-        if (array_key_exists("UnitPriceDiscount",$param) and $param["UnitPriceDiscount"] !== null) {
-            $this->UnitPriceDiscount = $param["UnitPriceDiscount"];
+        if (array_key_exists('UnitPriceDiscount',$param) and $param['UnitPriceDiscount'] !== null) {
+            $this->UnitPriceDiscount = $param['UnitPriceDiscount'];
         }
     }
 }

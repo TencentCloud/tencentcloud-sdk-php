@@ -54,17 +54,17 @@ class DescribeSubAppIdsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SubAppIdInfoSet",$param) and $param["SubAppIdInfoSet"] !== null) {
+        if (array_key_exists('SubAppIdInfoSet',$param) and $param['SubAppIdInfoSet'] !== null) {
             $this->SubAppIdInfoSet = [];
-            foreach ($param["SubAppIdInfoSet"] as $key => $value){
+            foreach ($param['SubAppIdInfoSet'] as $key => $value){
                 $obj = new SubAppIdInfo();
                 $obj->deserialize($value);
                 array_push($this->SubAppIdInfoSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

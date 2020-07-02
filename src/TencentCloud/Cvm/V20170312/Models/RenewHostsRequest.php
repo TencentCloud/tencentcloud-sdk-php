@@ -54,13 +54,13 @@ class RenewHostsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("HostIds",$param) and $param["HostIds"] !== null) {
-            $this->HostIds = $param["HostIds"];
+        if (array_key_exists('HostIds',$param) and $param['HostIds'] !== null) {
+            $this->HostIds = $param['HostIds'];
         }
 
-        if (array_key_exists("HostChargePrepaid",$param) and $param["HostChargePrepaid"] !== null) {
+        if (array_key_exists('HostChargePrepaid',$param) and $param['HostChargePrepaid'] !== null) {
             $this->HostChargePrepaid = new ChargePrepaid();
-            $this->HostChargePrepaid->deserialize($param["HostChargePrepaid"]);
+            $this->HostChargePrepaid->deserialize($param['HostChargePrepaid']);
         }
     }
 }

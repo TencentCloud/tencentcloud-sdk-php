@@ -54,12 +54,12 @@ class ServiceTemplateSpecification extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ServiceId",$param) and $param["ServiceId"] !== null) {
-            $this->ServiceId = $param["ServiceId"];
+        if (array_key_exists('ServiceId',$param) and $param['ServiceId'] !== null) {
+            $this->ServiceId = $param['ServiceId'];
         }
 
-        if (array_key_exists("ServiceGroupId",$param) and $param["ServiceGroupId"] !== null) {
-            $this->ServiceGroupId = $param["ServiceGroupId"];
+        if (array_key_exists('ServiceGroupId',$param) and $param['ServiceGroupId'] !== null) {
+            $this->ServiceGroupId = $param['ServiceGroupId'];
         }
     }
 }

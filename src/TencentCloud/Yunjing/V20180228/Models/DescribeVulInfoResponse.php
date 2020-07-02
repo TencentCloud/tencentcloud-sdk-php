@@ -110,40 +110,40 @@ class DescribeVulInfoResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("VulId",$param) and $param["VulId"] !== null) {
-            $this->VulId = $param["VulId"];
+        if (array_key_exists('VulId',$param) and $param['VulId'] !== null) {
+            $this->VulId = $param['VulId'];
         }
 
-        if (array_key_exists("VulName",$param) and $param["VulName"] !== null) {
-            $this->VulName = $param["VulName"];
+        if (array_key_exists('VulName',$param) and $param['VulName'] !== null) {
+            $this->VulName = $param['VulName'];
         }
 
-        if (array_key_exists("VulLevel",$param) and $param["VulLevel"] !== null) {
-            $this->VulLevel = $param["VulLevel"];
+        if (array_key_exists('VulLevel',$param) and $param['VulLevel'] !== null) {
+            $this->VulLevel = $param['VulLevel'];
         }
 
-        if (array_key_exists("VulType",$param) and $param["VulType"] !== null) {
-            $this->VulType = $param["VulType"];
+        if (array_key_exists('VulType',$param) and $param['VulType'] !== null) {
+            $this->VulType = $param['VulType'];
         }
 
-        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
-            $this->Description = $param["Description"];
+        if (array_key_exists('Description',$param) and $param['Description'] !== null) {
+            $this->Description = $param['Description'];
         }
 
-        if (array_key_exists("RepairPlan",$param) and $param["RepairPlan"] !== null) {
-            $this->RepairPlan = $param["RepairPlan"];
+        if (array_key_exists('RepairPlan',$param) and $param['RepairPlan'] !== null) {
+            $this->RepairPlan = $param['RepairPlan'];
         }
 
-        if (array_key_exists("CveId",$param) and $param["CveId"] !== null) {
-            $this->CveId = $param["CveId"];
+        if (array_key_exists('CveId',$param) and $param['CveId'] !== null) {
+            $this->CveId = $param['CveId'];
         }
 
-        if (array_key_exists("Reference",$param) and $param["Reference"] !== null) {
-            $this->Reference = $param["Reference"];
+        if (array_key_exists('Reference',$param) and $param['Reference'] !== null) {
+            $this->Reference = $param['Reference'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

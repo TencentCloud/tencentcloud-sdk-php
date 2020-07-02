@@ -94,32 +94,32 @@ class EditBashRuleRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("Level",$param) and $param["Level"] !== null) {
-            $this->Level = $param["Level"];
+        if (array_key_exists('Level',$param) and $param['Level'] !== null) {
+            $this->Level = $param['Level'];
         }
 
-        if (array_key_exists("Rule",$param) and $param["Rule"] !== null) {
-            $this->Rule = $param["Rule"];
+        if (array_key_exists('Rule',$param) and $param['Rule'] !== null) {
+            $this->Rule = $param['Rule'];
         }
 
-        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
-            $this->Id = $param["Id"];
+        if (array_key_exists('Id',$param) and $param['Id'] !== null) {
+            $this->Id = $param['Id'];
         }
 
-        if (array_key_exists("Uuid",$param) and $param["Uuid"] !== null) {
-            $this->Uuid = $param["Uuid"];
+        if (array_key_exists('Uuid',$param) and $param['Uuid'] !== null) {
+            $this->Uuid = $param['Uuid'];
         }
 
-        if (array_key_exists("Hostip",$param) and $param["Hostip"] !== null) {
-            $this->Hostip = $param["Hostip"];
+        if (array_key_exists('Hostip',$param) and $param['Hostip'] !== null) {
+            $this->Hostip = $param['Hostip'];
         }
 
-        if (array_key_exists("IsGlobal",$param) and $param["IsGlobal"] !== null) {
-            $this->IsGlobal = $param["IsGlobal"];
+        if (array_key_exists('IsGlobal',$param) and $param['IsGlobal'] !== null) {
+            $this->IsGlobal = $param['IsGlobal'];
         }
     }
 }

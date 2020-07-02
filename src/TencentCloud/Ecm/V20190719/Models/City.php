@@ -54,12 +54,12 @@ class City extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CityId",$param) and $param["CityId"] !== null) {
-            $this->CityId = $param["CityId"];
+        if (array_key_exists('CityId',$param) and $param['CityId'] !== null) {
+            $this->CityId = $param['CityId'];
         }
 
-        if (array_key_exists("CityName",$param) and $param["CityName"] !== null) {
-            $this->CityName = $param["CityName"];
+        if (array_key_exists('CityName',$param) and $param['CityName'] !== null) {
+            $this->CityName = $param['CityName'];
         }
     }
 }

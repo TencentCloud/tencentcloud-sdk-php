@@ -62,16 +62,16 @@ class DeleteAliasRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FunctionName",$param) and $param["FunctionName"] !== null) {
-            $this->FunctionName = $param["FunctionName"];
+        if (array_key_exists('FunctionName',$param) and $param['FunctionName'] !== null) {
+            $this->FunctionName = $param['FunctionName'];
         }
 
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("Namespace",$param) and $param["Namespace"] !== null) {
-            $this->Namespace = $param["Namespace"];
+        if (array_key_exists('Namespace',$param) and $param['Namespace'] !== null) {
+            $this->Namespace = $param['Namespace'];
         }
     }
 }

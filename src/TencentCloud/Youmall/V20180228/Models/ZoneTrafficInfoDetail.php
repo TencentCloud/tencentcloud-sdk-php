@@ -70,20 +70,20 @@ class ZoneTrafficInfoDetail extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ZoneId",$param) and $param["ZoneId"] !== null) {
-            $this->ZoneId = $param["ZoneId"];
+        if (array_key_exists('ZoneId',$param) and $param['ZoneId'] !== null) {
+            $this->ZoneId = $param['ZoneId'];
         }
 
-        if (array_key_exists("ZoneName",$param) and $param["ZoneName"] !== null) {
-            $this->ZoneName = $param["ZoneName"];
+        if (array_key_exists('ZoneName',$param) and $param['ZoneName'] !== null) {
+            $this->ZoneName = $param['ZoneName'];
         }
 
-        if (array_key_exists("TrafficTotalCount",$param) and $param["TrafficTotalCount"] !== null) {
-            $this->TrafficTotalCount = $param["TrafficTotalCount"];
+        if (array_key_exists('TrafficTotalCount',$param) and $param['TrafficTotalCount'] !== null) {
+            $this->TrafficTotalCount = $param['TrafficTotalCount'];
         }
 
-        if (array_key_exists("AvgStayTime",$param) and $param["AvgStayTime"] !== null) {
-            $this->AvgStayTime = $param["AvgStayTime"];
+        if (array_key_exists('AvgStayTime',$param) and $param['AvgStayTime'] !== null) {
+            $this->AvgStayTime = $param['AvgStayTime'];
         }
     }
 }

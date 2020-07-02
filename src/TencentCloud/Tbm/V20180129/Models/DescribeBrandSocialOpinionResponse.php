@@ -78,29 +78,29 @@ class DescribeBrandSocialOpinionResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ArticleCount",$param) and $param["ArticleCount"] !== null) {
-            $this->ArticleCount = $param["ArticleCount"];
+        if (array_key_exists('ArticleCount',$param) and $param['ArticleCount'] !== null) {
+            $this->ArticleCount = $param['ArticleCount'];
         }
 
-        if (array_key_exists("FromCount",$param) and $param["FromCount"] !== null) {
-            $this->FromCount = $param["FromCount"];
+        if (array_key_exists('FromCount',$param) and $param['FromCount'] !== null) {
+            $this->FromCount = $param['FromCount'];
         }
 
-        if (array_key_exists("AdverseCount",$param) and $param["AdverseCount"] !== null) {
-            $this->AdverseCount = $param["AdverseCount"];
+        if (array_key_exists('AdverseCount',$param) and $param['AdverseCount'] !== null) {
+            $this->AdverseCount = $param['AdverseCount'];
         }
 
-        if (array_key_exists("ArticleSet",$param) and $param["ArticleSet"] !== null) {
+        if (array_key_exists('ArticleSet',$param) and $param['ArticleSet'] !== null) {
             $this->ArticleSet = [];
-            foreach ($param["ArticleSet"] as $key => $value){
+            foreach ($param['ArticleSet'] as $key => $value){
                 $obj = new BrandReportArticle();
                 $obj->deserialize($value);
                 array_push($this->ArticleSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

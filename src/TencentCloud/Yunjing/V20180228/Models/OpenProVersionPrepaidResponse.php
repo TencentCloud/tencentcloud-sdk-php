@@ -54,12 +54,12 @@ class OpenProVersionPrepaidResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DealIds",$param) and $param["DealIds"] !== null) {
-            $this->DealIds = $param["DealIds"];
+        if (array_key_exists('DealIds',$param) and $param['DealIds'] !== null) {
+            $this->DealIds = $param['DealIds'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

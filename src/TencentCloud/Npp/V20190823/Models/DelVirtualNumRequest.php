@@ -62,16 +62,16 @@ class DelVirtualNumRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BizAppId",$param) and $param["BizAppId"] !== null) {
-            $this->BizAppId = $param["BizAppId"];
+        if (array_key_exists('BizAppId',$param) and $param['BizAppId'] !== null) {
+            $this->BizAppId = $param['BizAppId'];
         }
 
-        if (array_key_exists("BindId",$param) and $param["BindId"] !== null) {
-            $this->BindId = $param["BindId"];
+        if (array_key_exists('BindId',$param) and $param['BindId'] !== null) {
+            $this->BindId = $param['BindId'];
         }
 
-        if (array_key_exists("BizId",$param) and $param["BizId"] !== null) {
-            $this->BizId = $param["BizId"];
+        if (array_key_exists('BizId',$param) and $param['BizId'] !== null) {
+            $this->BizId = $param['BizId'];
         }
     }
 }

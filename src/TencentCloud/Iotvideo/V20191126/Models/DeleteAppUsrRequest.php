@@ -46,8 +46,8 @@ class DeleteAppUsrRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AccessId",$param) and $param["AccessId"] !== null) {
-            $this->AccessId = $param["AccessId"];
+        if (array_key_exists('AccessId',$param) and $param['AccessId'] !== null) {
+            $this->AccessId = $param['AccessId'];
         }
     }
 }

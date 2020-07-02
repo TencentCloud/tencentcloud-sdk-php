@@ -70,25 +70,25 @@ class DescribeTargetGroupInstancesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("TargetGroupInstanceSet",$param) and $param["TargetGroupInstanceSet"] !== null) {
+        if (array_key_exists('TargetGroupInstanceSet',$param) and $param['TargetGroupInstanceSet'] !== null) {
             $this->TargetGroupInstanceSet = [];
-            foreach ($param["TargetGroupInstanceSet"] as $key => $value){
+            foreach ($param['TargetGroupInstanceSet'] as $key => $value){
                 $obj = new TargetGroupBackend();
                 $obj->deserialize($value);
                 array_push($this->TargetGroupInstanceSet, $obj);
             }
         }
 
-        if (array_key_exists("RealCount",$param) and $param["RealCount"] !== null) {
-            $this->RealCount = $param["RealCount"];
+        if (array_key_exists('RealCount',$param) and $param['RealCount'] !== null) {
+            $this->RealCount = $param['RealCount'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

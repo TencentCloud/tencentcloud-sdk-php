@@ -54,13 +54,13 @@ class ModifyDBParametersRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("Params",$param) and $param["Params"] !== null) {
+        if (array_key_exists('Params',$param) and $param['Params'] !== null) {
             $this->Params = [];
-            foreach ($param["Params"] as $key => $value){
+            foreach ($param['Params'] as $key => $value){
                 $obj = new DBParamValue();
                 $obj->deserialize($value);
                 array_push($this->Params, $obj);

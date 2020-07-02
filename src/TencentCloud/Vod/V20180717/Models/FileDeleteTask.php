@@ -46,8 +46,8 @@ class FileDeleteTask extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FileIdSet",$param) and $param["FileIdSet"] !== null) {
-            $this->FileIdSet = $param["FileIdSet"];
+        if (array_key_exists('FileIdSet',$param) and $param['FileIdSet'] !== null) {
+            $this->FileIdSet = $param['FileIdSet'];
         }
     }
 }

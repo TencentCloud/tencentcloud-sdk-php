@@ -62,17 +62,17 @@ class ActionTimer extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Externals",$param) and $param["Externals"] !== null) {
+        if (array_key_exists('Externals',$param) and $param['Externals'] !== null) {
             $this->Externals = new Externals();
-            $this->Externals->deserialize($param["Externals"]);
+            $this->Externals->deserialize($param['Externals']);
         }
 
-        if (array_key_exists("TimerAction",$param) and $param["TimerAction"] !== null) {
-            $this->TimerAction = $param["TimerAction"];
+        if (array_key_exists('TimerAction',$param) and $param['TimerAction'] !== null) {
+            $this->TimerAction = $param['TimerAction'];
         }
 
-        if (array_key_exists("ActionTime",$param) and $param["ActionTime"] !== null) {
-            $this->ActionTime = $param["ActionTime"];
+        if (array_key_exists('ActionTime',$param) and $param['ActionTime'] !== null) {
+            $this->ActionTime = $param['ActionTime'];
         }
     }
 }

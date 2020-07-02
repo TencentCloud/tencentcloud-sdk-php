@@ -62,21 +62,21 @@ class DescribeSlowLogResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("InstanceSlowlogDetail",$param) and $param["InstanceSlowlogDetail"] !== null) {
+        if (array_key_exists('InstanceSlowlogDetail',$param) and $param['InstanceSlowlogDetail'] !== null) {
             $this->InstanceSlowlogDetail = [];
-            foreach ($param["InstanceSlowlogDetail"] as $key => $value){
+            foreach ($param['InstanceSlowlogDetail'] as $key => $value){
                 $obj = new InstanceSlowlogDetail();
                 $obj->deserialize($value);
                 array_push($this->InstanceSlowlogDetail, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

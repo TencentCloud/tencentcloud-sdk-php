@@ -82,20 +82,20 @@ class FunctionVersion extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Version",$param) and $param["Version"] !== null) {
-            $this->Version = $param["Version"];
+        if (array_key_exists('Version',$param) and $param['Version'] !== null) {
+            $this->Version = $param['Version'];
         }
 
-        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
-            $this->Description = $param["Description"];
+        if (array_key_exists('Description',$param) and $param['Description'] !== null) {
+            $this->Description = $param['Description'];
         }
 
-        if (array_key_exists("AddTime",$param) and $param["AddTime"] !== null) {
-            $this->AddTime = $param["AddTime"];
+        if (array_key_exists('AddTime',$param) and $param['AddTime'] !== null) {
+            $this->AddTime = $param['AddTime'];
         }
 
-        if (array_key_exists("ModTime",$param) and $param["ModTime"] !== null) {
-            $this->ModTime = $param["ModTime"];
+        if (array_key_exists('ModTime',$param) and $param['ModTime'] !== null) {
+            $this->ModTime = $param['ModTime'];
         }
     }
 }

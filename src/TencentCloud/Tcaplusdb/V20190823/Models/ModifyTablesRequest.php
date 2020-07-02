@@ -62,22 +62,22 @@ class ModifyTablesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
-            $this->ClusterId = $param["ClusterId"];
+        if (array_key_exists('ClusterId',$param) and $param['ClusterId'] !== null) {
+            $this->ClusterId = $param['ClusterId'];
         }
 
-        if (array_key_exists("IdlFiles",$param) and $param["IdlFiles"] !== null) {
+        if (array_key_exists('IdlFiles',$param) and $param['IdlFiles'] !== null) {
             $this->IdlFiles = [];
-            foreach ($param["IdlFiles"] as $key => $value){
+            foreach ($param['IdlFiles'] as $key => $value){
                 $obj = new IdlFileInfo();
                 $obj->deserialize($value);
                 array_push($this->IdlFiles, $obj);
             }
         }
 
-        if (array_key_exists("SelectedTables",$param) and $param["SelectedTables"] !== null) {
+        if (array_key_exists('SelectedTables',$param) and $param['SelectedTables'] !== null) {
             $this->SelectedTables = [];
-            foreach ($param["SelectedTables"] as $key => $value){
+            foreach ($param['SelectedTables'] as $key => $value){
                 $obj = new SelectedTableInfoNew();
                 $obj->deserialize($value);
                 array_push($this->SelectedTables, $obj);

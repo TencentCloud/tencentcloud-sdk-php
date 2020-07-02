@@ -78,29 +78,29 @@ class DescribeVulsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SiteId",$param) and $param["SiteId"] !== null) {
-            $this->SiteId = $param["SiteId"];
+        if (array_key_exists('SiteId',$param) and $param['SiteId'] !== null) {
+            $this->SiteId = $param['SiteId'];
         }
 
-        if (array_key_exists("MonitorId",$param) and $param["MonitorId"] !== null) {
-            $this->MonitorId = $param["MonitorId"];
+        if (array_key_exists('MonitorId',$param) and $param['MonitorId'] !== null) {
+            $this->MonitorId = $param['MonitorId'];
         }
 
-        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+        if (array_key_exists('Filters',$param) and $param['Filters'] !== null) {
             $this->Filters = [];
-            foreach ($param["Filters"] as $key => $value){
+            foreach ($param['Filters'] as $key => $value){
                 $obj = new Filter();
                 $obj->deserialize($value);
                 array_push($this->Filters, $obj);
             }
         }
 
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
+        if (array_key_exists('Offset',$param) and $param['Offset'] !== null) {
+            $this->Offset = $param['Offset'];
         }
 
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
+        if (array_key_exists('Limit',$param) and $param['Limit'] !== null) {
+            $this->Limit = $param['Limit'];
         }
     }
 }

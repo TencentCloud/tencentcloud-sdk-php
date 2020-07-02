@@ -94,16 +94,16 @@ https：强制 https 跳转
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Switch",$param) and $param["Switch"] !== null) {
-            $this->Switch = $param["Switch"];
+        if (array_key_exists('Switch',$param) and $param['Switch'] !== null) {
+            $this->Switch = $param['Switch'];
         }
 
-        if (array_key_exists("RedirectType",$param) and $param["RedirectType"] !== null) {
-            $this->RedirectType = $param["RedirectType"];
+        if (array_key_exists('RedirectType',$param) and $param['RedirectType'] !== null) {
+            $this->RedirectType = $param['RedirectType'];
         }
 
-        if (array_key_exists("RedirectStatusCode",$param) and $param["RedirectStatusCode"] !== null) {
-            $this->RedirectStatusCode = $param["RedirectStatusCode"];
+        if (array_key_exists('RedirectStatusCode',$param) and $param['RedirectStatusCode'] !== null) {
+            $this->RedirectStatusCode = $param['RedirectStatusCode'];
         }
     }
 }

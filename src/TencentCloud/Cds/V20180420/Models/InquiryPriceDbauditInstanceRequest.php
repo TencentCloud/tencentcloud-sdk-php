@@ -78,24 +78,24 @@ class InquiryPriceDbauditInstanceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceVersion",$param) and $param["InstanceVersion"] !== null) {
-            $this->InstanceVersion = $param["InstanceVersion"];
+        if (array_key_exists('InstanceVersion',$param) and $param['InstanceVersion'] !== null) {
+            $this->InstanceVersion = $param['InstanceVersion'];
         }
 
-        if (array_key_exists("InquiryType",$param) and $param["InquiryType"] !== null) {
-            $this->InquiryType = $param["InquiryType"];
+        if (array_key_exists('InquiryType',$param) and $param['InquiryType'] !== null) {
+            $this->InquiryType = $param['InquiryType'];
         }
 
-        if (array_key_exists("TimeSpan",$param) and $param["TimeSpan"] !== null) {
-            $this->TimeSpan = $param["TimeSpan"];
+        if (array_key_exists('TimeSpan',$param) and $param['TimeSpan'] !== null) {
+            $this->TimeSpan = $param['TimeSpan'];
         }
 
-        if (array_key_exists("TimeUnit",$param) and $param["TimeUnit"] !== null) {
-            $this->TimeUnit = $param["TimeUnit"];
+        if (array_key_exists('TimeUnit',$param) and $param['TimeUnit'] !== null) {
+            $this->TimeUnit = $param['TimeUnit'];
         }
 
-        if (array_key_exists("ServiceRegion",$param) and $param["ServiceRegion"] !== null) {
-            $this->ServiceRegion = $param["ServiceRegion"];
+        if (array_key_exists('ServiceRegion',$param) and $param['ServiceRegion'] !== null) {
+            $this->ServiceRegion = $param['ServiceRegion'];
         }
     }
 }

@@ -146,40 +146,40 @@ class Subnet extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
-            $this->VpcId = $param["VpcId"];
+        if (array_key_exists('VpcId',$param) and $param['VpcId'] !== null) {
+            $this->VpcId = $param['VpcId'];
         }
 
-        if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
-            $this->SubnetId = $param["SubnetId"];
+        if (array_key_exists('SubnetId',$param) and $param['SubnetId'] !== null) {
+            $this->SubnetId = $param['SubnetId'];
         }
 
-        if (array_key_exists("SubnetName",$param) and $param["SubnetName"] !== null) {
-            $this->SubnetName = $param["SubnetName"];
+        if (array_key_exists('SubnetName',$param) and $param['SubnetName'] !== null) {
+            $this->SubnetName = $param['SubnetName'];
         }
 
-        if (array_key_exists("CidrBlock",$param) and $param["CidrBlock"] !== null) {
-            $this->CidrBlock = $param["CidrBlock"];
+        if (array_key_exists('CidrBlock',$param) and $param['CidrBlock'] !== null) {
+            $this->CidrBlock = $param['CidrBlock'];
         }
 
-        if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
-            $this->CreatedTime = $param["CreatedTime"];
+        if (array_key_exists('CreatedTime',$param) and $param['CreatedTime'] !== null) {
+            $this->CreatedTime = $param['CreatedTime'];
         }
 
-        if (array_key_exists("AvailableIpAddressCount",$param) and $param["AvailableIpAddressCount"] !== null) {
-            $this->AvailableIpAddressCount = $param["AvailableIpAddressCount"];
+        if (array_key_exists('AvailableIpAddressCount',$param) and $param['AvailableIpAddressCount'] !== null) {
+            $this->AvailableIpAddressCount = $param['AvailableIpAddressCount'];
         }
 
-        if (array_key_exists("Ipv6CidrBlock",$param) and $param["Ipv6CidrBlock"] !== null) {
-            $this->Ipv6CidrBlock = $param["Ipv6CidrBlock"];
+        if (array_key_exists('Ipv6CidrBlock',$param) and $param['Ipv6CidrBlock'] !== null) {
+            $this->Ipv6CidrBlock = $param['Ipv6CidrBlock'];
         }
 
-        if (array_key_exists("TotalIpAddressCount",$param) and $param["TotalIpAddressCount"] !== null) {
-            $this->TotalIpAddressCount = $param["TotalIpAddressCount"];
+        if (array_key_exists('TotalIpAddressCount',$param) and $param['TotalIpAddressCount'] !== null) {
+            $this->TotalIpAddressCount = $param['TotalIpAddressCount'];
         }
 
-        if (array_key_exists("IsDefault",$param) and $param["IsDefault"] !== null) {
-            $this->IsDefault = $param["IsDefault"];
+        if (array_key_exists('IsDefault',$param) and $param['IsDefault'] !== null) {
+            $this->IsDefault = $param['IsDefault'];
         }
     }
 }

@@ -82,16 +82,16 @@ class Candidate extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PersonId",$param) and $param["PersonId"] !== null) {
-            $this->PersonId = $param["PersonId"];
+        if (array_key_exists('PersonId',$param) and $param['PersonId'] !== null) {
+            $this->PersonId = $param['PersonId'];
         }
 
-        if (array_key_exists("TraceId",$param) and $param["TraceId"] !== null) {
-            $this->TraceId = $param["TraceId"];
+        if (array_key_exists('TraceId',$param) and $param['TraceId'] !== null) {
+            $this->TraceId = $param['TraceId'];
         }
 
-        if (array_key_exists("Score",$param) and $param["Score"] !== null) {
-            $this->Score = $param["Score"];
+        if (array_key_exists('Score',$param) and $param['Score'] !== null) {
+            $this->Score = $param['Score'];
         }
     }
 }

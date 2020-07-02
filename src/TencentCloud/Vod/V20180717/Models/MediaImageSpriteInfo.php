@@ -46,9 +46,9 @@ class MediaImageSpriteInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ImageSpriteSet",$param) and $param["ImageSpriteSet"] !== null) {
+        if (array_key_exists('ImageSpriteSet',$param) and $param['ImageSpriteSet'] !== null) {
             $this->ImageSpriteSet = [];
-            foreach ($param["ImageSpriteSet"] as $key => $value){
+            foreach ($param['ImageSpriteSet'] as $key => $value){
                 $obj = new MediaImageSpriteItem();
                 $obj->deserialize($value);
                 array_push($this->ImageSpriteSet, $obj);

@@ -70,21 +70,21 @@ class DescribeNetDetectStatesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("NetDetectStateSet",$param) and $param["NetDetectStateSet"] !== null) {
+        if (array_key_exists('NetDetectStateSet',$param) and $param['NetDetectStateSet'] !== null) {
             $this->NetDetectStateSet = [];
-            foreach ($param["NetDetectStateSet"] as $key => $value){
+            foreach ($param['NetDetectStateSet'] as $key => $value){
                 $obj = new NetDetectState();
                 $obj->deserialize($value);
                 array_push($this->NetDetectStateSet, $obj);
             }
         }
 
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

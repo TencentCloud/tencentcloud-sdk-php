@@ -46,8 +46,8 @@ class DeleteSmsSignRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SignId",$param) and $param["SignId"] !== null) {
-            $this->SignId = $param["SignId"];
+        if (array_key_exists('SignId',$param) and $param['SignId'] !== null) {
+            $this->SignId = $param['SignId'];
         }
     }
 }

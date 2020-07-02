@@ -54,17 +54,17 @@ class DescribeRollbackTimeResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Details",$param) and $param["Details"] !== null) {
+        if (array_key_exists('Details',$param) and $param['Details'] !== null) {
             $this->Details = [];
-            foreach ($param["Details"] as $key => $value){
+            foreach ($param['Details'] as $key => $value){
                 $obj = new DbRollbackTimeInfo();
                 $obj->deserialize($value);
                 array_push($this->Details, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

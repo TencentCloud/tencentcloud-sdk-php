@@ -54,13 +54,13 @@ class WebhookTarget extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Address",$param) and $param["Address"] !== null) {
-            $this->Address = $param["Address"];
+        if (array_key_exists('Address',$param) and $param['Address'] !== null) {
+            $this->Address = $param['Address'];
         }
 
-        if (array_key_exists("Headers",$param) and $param["Headers"] !== null) {
+        if (array_key_exists('Headers',$param) and $param['Headers'] !== null) {
             $this->Headers = [];
-            foreach ($param["Headers"] as $key => $value){
+            foreach ($param['Headers'] as $key => $value){
                 $obj = new Header();
                 $obj->deserialize($value);
                 array_push($this->Headers, $obj);

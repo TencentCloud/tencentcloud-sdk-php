@@ -62,16 +62,16 @@ class JoinGameServerSessionRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("GameServerSessionId",$param) and $param["GameServerSessionId"] !== null) {
-            $this->GameServerSessionId = $param["GameServerSessionId"];
+        if (array_key_exists('GameServerSessionId',$param) and $param['GameServerSessionId'] !== null) {
+            $this->GameServerSessionId = $param['GameServerSessionId'];
         }
 
-        if (array_key_exists("PlayerId",$param) and $param["PlayerId"] !== null) {
-            $this->PlayerId = $param["PlayerId"];
+        if (array_key_exists('PlayerId',$param) and $param['PlayerId'] !== null) {
+            $this->PlayerId = $param['PlayerId'];
         }
 
-        if (array_key_exists("PlayerData",$param) and $param["PlayerData"] !== null) {
-            $this->PlayerData = $param["PlayerData"];
+        if (array_key_exists('PlayerData',$param) and $param['PlayerData'] !== null) {
+            $this->PlayerData = $param['PlayerData'];
         }
     }
 }

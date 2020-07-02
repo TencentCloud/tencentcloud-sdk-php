@@ -54,17 +54,17 @@ class DescribeDBInstanceSpecsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Specs",$param) and $param["Specs"] !== null) {
+        if (array_key_exists('Specs',$param) and $param['Specs'] !== null) {
             $this->Specs = [];
-            foreach ($param["Specs"] as $key => $value){
+            foreach ($param['Specs'] as $key => $value){
                 $obj = new InstanceSpec();
                 $obj->deserialize($value);
                 array_push($this->Specs, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

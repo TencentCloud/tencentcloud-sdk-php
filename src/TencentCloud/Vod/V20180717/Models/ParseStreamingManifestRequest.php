@@ -62,12 +62,12 @@ class ParseStreamingManifestRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MediaManifestContent",$param) and $param["MediaManifestContent"] !== null) {
-            $this->MediaManifestContent = $param["MediaManifestContent"];
+        if (array_key_exists('MediaManifestContent',$param) and $param['MediaManifestContent'] !== null) {
+            $this->MediaManifestContent = $param['MediaManifestContent'];
         }
 
-        if (array_key_exists("ManifestType",$param) and $param["ManifestType"] !== null) {
-            $this->ManifestType = $param["ManifestType"];
+        if (array_key_exists('ManifestType',$param) and $param['ManifestType'] !== null) {
+            $this->ManifestType = $param['ManifestType'];
         }
     }
 }

@@ -58,13 +58,13 @@ class AclResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("AclList",$param) and $param["AclList"] !== null) {
+        if (array_key_exists('AclList',$param) and $param['AclList'] !== null) {
             $this->AclList = [];
-            foreach ($param["AclList"] as $key => $value){
+            foreach ($param['AclList'] as $key => $value){
                 $obj = new Acl();
                 $obj->deserialize($value);
                 array_push($this->AclList, $obj);

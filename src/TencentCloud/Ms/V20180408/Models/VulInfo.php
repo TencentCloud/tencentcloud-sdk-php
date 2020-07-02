@@ -54,17 +54,17 @@ class VulInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("VulList",$param) and $param["VulList"] !== null) {
+        if (array_key_exists('VulList',$param) and $param['VulList'] !== null) {
             $this->VulList = [];
-            foreach ($param["VulList"] as $key => $value){
+            foreach ($param['VulList'] as $key => $value){
                 $obj = new VulList();
                 $obj->deserialize($value);
                 array_push($this->VulList, $obj);
             }
         }
 
-        if (array_key_exists("VulFileScore",$param) and $param["VulFileScore"] !== null) {
-            $this->VulFileScore = $param["VulFileScore"];
+        if (array_key_exists('VulFileScore',$param) and $param['VulFileScore'] !== null) {
+            $this->VulFileScore = $param['VulFileScore'];
         }
     }
 }

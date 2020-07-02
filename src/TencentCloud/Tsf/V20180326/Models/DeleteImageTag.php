@@ -54,12 +54,12 @@ class DeleteImageTag extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RepoName",$param) and $param["RepoName"] !== null) {
-            $this->RepoName = $param["RepoName"];
+        if (array_key_exists('RepoName',$param) and $param['RepoName'] !== null) {
+            $this->RepoName = $param['RepoName'];
         }
 
-        if (array_key_exists("TagName",$param) and $param["TagName"] !== null) {
-            $this->TagName = $param["TagName"];
+        if (array_key_exists('TagName',$param) and $param['TagName'] !== null) {
+            $this->TagName = $param['TagName'];
         }
     }
 }

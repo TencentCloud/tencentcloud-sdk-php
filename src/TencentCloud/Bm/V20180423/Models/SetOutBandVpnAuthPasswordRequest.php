@@ -54,12 +54,12 @@ class SetOutBandVpnAuthPasswordRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Password",$param) and $param["Password"] !== null) {
-            $this->Password = $param["Password"];
+        if (array_key_exists('Password',$param) and $param['Password'] !== null) {
+            $this->Password = $param['Password'];
         }
 
-        if (array_key_exists("Operate",$param) and $param["Operate"] !== null) {
-            $this->Operate = $param["Operate"];
+        if (array_key_exists('Operate',$param) and $param['Operate'] !== null) {
+            $this->Operate = $param['Operate'];
         }
     }
 }

@@ -54,17 +54,17 @@ class CheckAssistantCidrResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ConflictSourceSet",$param) and $param["ConflictSourceSet"] !== null) {
+        if (array_key_exists('ConflictSourceSet',$param) and $param['ConflictSourceSet'] !== null) {
             $this->ConflictSourceSet = [];
-            foreach ($param["ConflictSourceSet"] as $key => $value){
+            foreach ($param['ConflictSourceSet'] as $key => $value){
                 $obj = new ConflictSource();
                 $obj->deserialize($value);
                 array_push($this->ConflictSourceSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

@@ -62,17 +62,17 @@ class DescribeImageTaskStatisticResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Statistic",$param) and $param["Statistic"] !== null) {
+        if (array_key_exists('Statistic',$param) and $param['Statistic'] !== null) {
             $this->Statistic = new ImageTaskStatistic();
-            $this->Statistic->deserialize($param["Statistic"]);
+            $this->Statistic->deserialize($param['Statistic']);
         }
 
-        if (array_key_exists("JobId",$param) and $param["JobId"] !== null) {
-            $this->JobId = $param["JobId"];
+        if (array_key_exists('JobId',$param) and $param['JobId'] !== null) {
+            $this->JobId = $param['JobId'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

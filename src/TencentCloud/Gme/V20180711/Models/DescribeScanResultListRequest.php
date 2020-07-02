@@ -62,16 +62,16 @@ class DescribeScanResultListRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BizId",$param) and $param["BizId"] !== null) {
-            $this->BizId = $param["BizId"];
+        if (array_key_exists('BizId',$param) and $param['BizId'] !== null) {
+            $this->BizId = $param['BizId'];
         }
 
-        if (array_key_exists("TaskIdList",$param) and $param["TaskIdList"] !== null) {
-            $this->TaskIdList = $param["TaskIdList"];
+        if (array_key_exists('TaskIdList',$param) and $param['TaskIdList'] !== null) {
+            $this->TaskIdList = $param['TaskIdList'];
         }
 
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
+        if (array_key_exists('Limit',$param) and $param['Limit'] !== null) {
+            $this->Limit = $param['Limit'];
         }
     }
 }

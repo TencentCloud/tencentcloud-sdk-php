@@ -94,32 +94,32 @@ class DescribeAgentBillsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SettleMonth",$param) and $param["SettleMonth"] !== null) {
-            $this->SettleMonth = $param["SettleMonth"];
+        if (array_key_exists('SettleMonth',$param) and $param['SettleMonth'] !== null) {
+            $this->SettleMonth = $param['SettleMonth'];
         }
 
-        if (array_key_exists("ClientUin",$param) and $param["ClientUin"] !== null) {
-            $this->ClientUin = $param["ClientUin"];
+        if (array_key_exists('ClientUin',$param) and $param['ClientUin'] !== null) {
+            $this->ClientUin = $param['ClientUin'];
         }
 
-        if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {
-            $this->PayMode = $param["PayMode"];
+        if (array_key_exists('PayMode',$param) and $param['PayMode'] !== null) {
+            $this->PayMode = $param['PayMode'];
         }
 
-        if (array_key_exists("OrderId",$param) and $param["OrderId"] !== null) {
-            $this->OrderId = $param["OrderId"];
+        if (array_key_exists('OrderId',$param) and $param['OrderId'] !== null) {
+            $this->OrderId = $param['OrderId'];
         }
 
-        if (array_key_exists("ClientRemark",$param) and $param["ClientRemark"] !== null) {
-            $this->ClientRemark = $param["ClientRemark"];
+        if (array_key_exists('ClientRemark',$param) and $param['ClientRemark'] !== null) {
+            $this->ClientRemark = $param['ClientRemark'];
         }
 
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
+        if (array_key_exists('Offset',$param) and $param['Offset'] !== null) {
+            $this->Offset = $param['Offset'];
         }
 
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
+        if (array_key_exists('Limit',$param) and $param['Limit'] !== null) {
+            $this->Limit = $param['Limit'];
         }
     }
 }

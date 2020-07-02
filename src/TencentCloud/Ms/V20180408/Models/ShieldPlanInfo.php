@@ -54,13 +54,13 @@ class ShieldPlanInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("PlanSet",$param) and $param["PlanSet"] !== null) {
+        if (array_key_exists('PlanSet',$param) and $param['PlanSet'] !== null) {
             $this->PlanSet = [];
-            foreach ($param["PlanSet"] as $key => $value){
+            foreach ($param['PlanSet'] as $key => $value){
                 $obj = new PlanDetailInfo();
                 $obj->deserialize($value);
                 array_push($this->PlanSet, $obj);

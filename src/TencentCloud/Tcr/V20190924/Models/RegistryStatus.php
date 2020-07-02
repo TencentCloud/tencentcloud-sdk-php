@@ -66,17 +66,17 @@ class RegistryStatus extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RegistryId",$param) and $param["RegistryId"] !== null) {
-            $this->RegistryId = $param["RegistryId"];
+        if (array_key_exists('RegistryId',$param) and $param['RegistryId'] !== null) {
+            $this->RegistryId = $param['RegistryId'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("Conditions",$param) and $param["Conditions"] !== null) {
+        if (array_key_exists('Conditions',$param) and $param['Conditions'] !== null) {
             $this->Conditions = [];
-            foreach ($param["Conditions"] as $key => $value){
+            foreach ($param['Conditions'] as $key => $value){
                 $obj = new RegistryCondition();
                 $obj->deserialize($value);
                 array_push($this->Conditions, $obj);

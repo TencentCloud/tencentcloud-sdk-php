@@ -46,8 +46,8 @@ class BatchUpdateShadow extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Desired",$param) and $param["Desired"] !== null) {
-            $this->Desired = $param["Desired"];
+        if (array_key_exists('Desired',$param) and $param['Desired'] !== null) {
+            $this->Desired = $param['Desired'];
         }
     }
 }

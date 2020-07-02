@@ -142,42 +142,42 @@ class CreateSuperPlayerConfigRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("Comment",$param) and $param["Comment"] !== null) {
-            $this->Comment = $param["Comment"];
+        if (array_key_exists('Comment',$param) and $param['Comment'] !== null) {
+            $this->Comment = $param['Comment'];
         }
 
-        if (array_key_exists("DrmSwitch",$param) and $param["DrmSwitch"] !== null) {
-            $this->DrmSwitch = $param["DrmSwitch"];
+        if (array_key_exists('DrmSwitch',$param) and $param['DrmSwitch'] !== null) {
+            $this->DrmSwitch = $param['DrmSwitch'];
         }
 
-        if (array_key_exists("AdaptiveDynamicStreamingDefinition",$param) and $param["AdaptiveDynamicStreamingDefinition"] !== null) {
-            $this->AdaptiveDynamicStreamingDefinition = $param["AdaptiveDynamicStreamingDefinition"];
+        if (array_key_exists('AdaptiveDynamicStreamingDefinition',$param) and $param['AdaptiveDynamicStreamingDefinition'] !== null) {
+            $this->AdaptiveDynamicStreamingDefinition = $param['AdaptiveDynamicStreamingDefinition'];
         }
 
-        if (array_key_exists("DrmStreamingsInfo",$param) and $param["DrmStreamingsInfo"] !== null) {
+        if (array_key_exists('DrmStreamingsInfo',$param) and $param['DrmStreamingsInfo'] !== null) {
             $this->DrmStreamingsInfo = new DrmStreamingsInfo();
-            $this->DrmStreamingsInfo->deserialize($param["DrmStreamingsInfo"]);
+            $this->DrmStreamingsInfo->deserialize($param['DrmStreamingsInfo']);
         }
 
-        if (array_key_exists("ImageSpriteDefinition",$param) and $param["ImageSpriteDefinition"] !== null) {
-            $this->ImageSpriteDefinition = $param["ImageSpriteDefinition"];
+        if (array_key_exists('ImageSpriteDefinition',$param) and $param['ImageSpriteDefinition'] !== null) {
+            $this->ImageSpriteDefinition = $param['ImageSpriteDefinition'];
         }
 
-        if (array_key_exists("ResolutionNames",$param) and $param["ResolutionNames"] !== null) {
+        if (array_key_exists('ResolutionNames',$param) and $param['ResolutionNames'] !== null) {
             $this->ResolutionNames = [];
-            foreach ($param["ResolutionNames"] as $key => $value){
+            foreach ($param['ResolutionNames'] as $key => $value){
                 $obj = new ResolutionNameInfo();
                 $obj->deserialize($value);
                 array_push($this->ResolutionNames, $obj);
             }
         }
 
-        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
-            $this->SubAppId = $param["SubAppId"];
+        if (array_key_exists('SubAppId',$param) and $param['SubAppId'] !== null) {
+            $this->SubAppId = $param['SubAppId'];
         }
     }
 }

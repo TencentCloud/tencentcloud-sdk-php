@@ -54,17 +54,17 @@ class DescribeInstancesDiskNumResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AttachDetail",$param) and $param["AttachDetail"] !== null) {
+        if (array_key_exists('AttachDetail',$param) and $param['AttachDetail'] !== null) {
             $this->AttachDetail = [];
-            foreach ($param["AttachDetail"] as $key => $value){
+            foreach ($param['AttachDetail'] as $key => $value){
                 $obj = new AttachDetail();
                 $obj->deserialize($value);
                 array_push($this->AttachDetail, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

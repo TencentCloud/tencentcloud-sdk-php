@@ -54,12 +54,12 @@ class DeleteSignStatus extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DeleteStatus",$param) and $param["DeleteStatus"] !== null) {
-            $this->DeleteStatus = $param["DeleteStatus"];
+        if (array_key_exists('DeleteStatus',$param) and $param['DeleteStatus'] !== null) {
+            $this->DeleteStatus = $param['DeleteStatus'];
         }
 
-        if (array_key_exists("DeleteTime",$param) and $param["DeleteTime"] !== null) {
-            $this->DeleteTime = $param["DeleteTime"];
+        if (array_key_exists('DeleteTime',$param) and $param['DeleteTime'] !== null) {
+            $this->DeleteTime = $param['DeleteTime'];
         }
     }
 }

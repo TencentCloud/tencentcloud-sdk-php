@@ -46,8 +46,8 @@ class DeleteRuntimeRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Runtime",$param) and $param["Runtime"] !== null) {
-            $this->Runtime = $param["Runtime"];
+        if (array_key_exists('Runtime',$param) and $param['Runtime'] !== null) {
+            $this->Runtime = $param['Runtime'];
         }
     }
 }

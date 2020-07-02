@@ -54,12 +54,12 @@ class MediaAiAnalysisCoverItem extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CoverPath",$param) and $param["CoverPath"] !== null) {
-            $this->CoverPath = $param["CoverPath"];
+        if (array_key_exists('CoverPath',$param) and $param['CoverPath'] !== null) {
+            $this->CoverPath = $param['CoverPath'];
         }
 
-        if (array_key_exists("Confidence",$param) and $param["Confidence"] !== null) {
-            $this->Confidence = $param["Confidence"];
+        if (array_key_exists('Confidence',$param) and $param['Confidence'] !== null) {
+            $this->Confidence = $param['Confidence'];
         }
     }
 }

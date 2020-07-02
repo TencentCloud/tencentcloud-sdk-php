@@ -70,16 +70,16 @@ class OsVersion extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("OsName",$param) and $param["OsName"] !== null) {
-            $this->OsName = $param["OsName"];
+        if (array_key_exists('OsName',$param) and $param['OsName'] !== null) {
+            $this->OsName = $param['OsName'];
         }
 
-        if (array_key_exists("OsVersions",$param) and $param["OsVersions"] !== null) {
-            $this->OsVersions = $param["OsVersions"];
+        if (array_key_exists('OsVersions',$param) and $param['OsVersions'] !== null) {
+            $this->OsVersions = $param['OsVersions'];
         }
 
-        if (array_key_exists("Architecture",$param) and $param["Architecture"] !== null) {
-            $this->Architecture = $param["Architecture"];
+        if (array_key_exists('Architecture',$param) and $param['Architecture'] !== null) {
+            $this->Architecture = $param['Architecture'];
         }
     }
 }

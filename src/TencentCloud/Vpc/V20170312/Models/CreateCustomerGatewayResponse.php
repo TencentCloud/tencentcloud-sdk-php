@@ -54,13 +54,13 @@ class CreateCustomerGatewayResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CustomerGateway",$param) and $param["CustomerGateway"] !== null) {
+        if (array_key_exists('CustomerGateway',$param) and $param['CustomerGateway'] !== null) {
             $this->CustomerGateway = new CustomerGateway();
-            $this->CustomerGateway->deserialize($param["CustomerGateway"]);
+            $this->CustomerGateway->deserialize($param['CustomerGateway']);
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

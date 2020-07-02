@@ -54,12 +54,12 @@ class SharePermission extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
-            $this->CreatedTime = $param["CreatedTime"];
+        if (array_key_exists('CreatedTime',$param) and $param['CreatedTime'] !== null) {
+            $this->CreatedTime = $param['CreatedTime'];
         }
 
-        if (array_key_exists("AccountId",$param) and $param["AccountId"] !== null) {
-            $this->AccountId = $param["AccountId"];
+        if (array_key_exists('AccountId',$param) and $param['AccountId'] !== null) {
+            $this->AccountId = $param['AccountId'];
         }
     }
 }

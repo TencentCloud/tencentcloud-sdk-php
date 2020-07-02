@@ -94,33 +94,33 @@ class SecurityGroup extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SecurityGroupId",$param) and $param["SecurityGroupId"] !== null) {
-            $this->SecurityGroupId = $param["SecurityGroupId"];
+        if (array_key_exists('SecurityGroupId',$param) and $param['SecurityGroupId'] !== null) {
+            $this->SecurityGroupId = $param['SecurityGroupId'];
         }
 
-        if (array_key_exists("SecurityGroupName",$param) and $param["SecurityGroupName"] !== null) {
-            $this->SecurityGroupName = $param["SecurityGroupName"];
+        if (array_key_exists('SecurityGroupName',$param) and $param['SecurityGroupName'] !== null) {
+            $this->SecurityGroupName = $param['SecurityGroupName'];
         }
 
-        if (array_key_exists("SecurityGroupDesc",$param) and $param["SecurityGroupDesc"] !== null) {
-            $this->SecurityGroupDesc = $param["SecurityGroupDesc"];
+        if (array_key_exists('SecurityGroupDesc',$param) and $param['SecurityGroupDesc'] !== null) {
+            $this->SecurityGroupDesc = $param['SecurityGroupDesc'];
         }
 
-        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
-            $this->ProjectId = $param["ProjectId"];
+        if (array_key_exists('ProjectId',$param) and $param['ProjectId'] !== null) {
+            $this->ProjectId = $param['ProjectId'];
         }
 
-        if (array_key_exists("IsDefault",$param) and $param["IsDefault"] !== null) {
-            $this->IsDefault = $param["IsDefault"];
+        if (array_key_exists('IsDefault',$param) and $param['IsDefault'] !== null) {
+            $this->IsDefault = $param['IsDefault'];
         }
 
-        if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
-            $this->CreatedTime = $param["CreatedTime"];
+        if (array_key_exists('CreatedTime',$param) and $param['CreatedTime'] !== null) {
+            $this->CreatedTime = $param['CreatedTime'];
         }
 
-        if (array_key_exists("TagSet",$param) and $param["TagSet"] !== null) {
+        if (array_key_exists('TagSet',$param) and $param['TagSet'] !== null) {
             $this->TagSet = [];
-            foreach ($param["TagSet"] as $key => $value){
+            foreach ($param['TagSet'] as $key => $value){
                 $obj = new Tag();
                 $obj->deserialize($value);
                 array_push($this->TagSet, $obj);

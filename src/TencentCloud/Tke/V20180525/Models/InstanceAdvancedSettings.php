@@ -118,43 +118,43 @@ class InstanceAdvancedSettings extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MountTarget",$param) and $param["MountTarget"] !== null) {
-            $this->MountTarget = $param["MountTarget"];
+        if (array_key_exists('MountTarget',$param) and $param['MountTarget'] !== null) {
+            $this->MountTarget = $param['MountTarget'];
         }
 
-        if (array_key_exists("DockerGraphPath",$param) and $param["DockerGraphPath"] !== null) {
-            $this->DockerGraphPath = $param["DockerGraphPath"];
+        if (array_key_exists('DockerGraphPath',$param) and $param['DockerGraphPath'] !== null) {
+            $this->DockerGraphPath = $param['DockerGraphPath'];
         }
 
-        if (array_key_exists("UserScript",$param) and $param["UserScript"] !== null) {
-            $this->UserScript = $param["UserScript"];
+        if (array_key_exists('UserScript',$param) and $param['UserScript'] !== null) {
+            $this->UserScript = $param['UserScript'];
         }
 
-        if (array_key_exists("Unschedulable",$param) and $param["Unschedulable"] !== null) {
-            $this->Unschedulable = $param["Unschedulable"];
+        if (array_key_exists('Unschedulable',$param) and $param['Unschedulable'] !== null) {
+            $this->Unschedulable = $param['Unschedulable'];
         }
 
-        if (array_key_exists("Labels",$param) and $param["Labels"] !== null) {
+        if (array_key_exists('Labels',$param) and $param['Labels'] !== null) {
             $this->Labels = [];
-            foreach ($param["Labels"] as $key => $value){
+            foreach ($param['Labels'] as $key => $value){
                 $obj = new Label();
                 $obj->deserialize($value);
                 array_push($this->Labels, $obj);
             }
         }
 
-        if (array_key_exists("DataDisks",$param) and $param["DataDisks"] !== null) {
+        if (array_key_exists('DataDisks',$param) and $param['DataDisks'] !== null) {
             $this->DataDisks = [];
-            foreach ($param["DataDisks"] as $key => $value){
+            foreach ($param['DataDisks'] as $key => $value){
                 $obj = new DataDisk();
                 $obj->deserialize($value);
                 array_push($this->DataDisks, $obj);
             }
         }
 
-        if (array_key_exists("ExtraArgs",$param) and $param["ExtraArgs"] !== null) {
+        if (array_key_exists('ExtraArgs',$param) and $param['ExtraArgs'] !== null) {
             $this->ExtraArgs = new InstanceExtraArgs();
-            $this->ExtraArgs->deserialize($param["ExtraArgs"]);
+            $this->ExtraArgs->deserialize($param['ExtraArgs']);
         }
     }
 }

@@ -78,24 +78,24 @@ class OrgCodeCertOCRResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("OrgCode",$param) and $param["OrgCode"] !== null) {
-            $this->OrgCode = $param["OrgCode"];
+        if (array_key_exists('OrgCode',$param) and $param['OrgCode'] !== null) {
+            $this->OrgCode = $param['OrgCode'];
         }
 
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("Address",$param) and $param["Address"] !== null) {
-            $this->Address = $param["Address"];
+        if (array_key_exists('Address',$param) and $param['Address'] !== null) {
+            $this->Address = $param['Address'];
         }
 
-        if (array_key_exists("ValidDate",$param) and $param["ValidDate"] !== null) {
-            $this->ValidDate = $param["ValidDate"];
+        if (array_key_exists('ValidDate',$param) and $param['ValidDate'] !== null) {
+            $this->ValidDate = $param['ValidDate'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

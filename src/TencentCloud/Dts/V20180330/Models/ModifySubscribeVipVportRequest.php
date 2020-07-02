@@ -70,20 +70,20 @@ class ModifySubscribeVipVportRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SubscribeId",$param) and $param["SubscribeId"] !== null) {
-            $this->SubscribeId = $param["SubscribeId"];
+        if (array_key_exists('SubscribeId',$param) and $param['SubscribeId'] !== null) {
+            $this->SubscribeId = $param['SubscribeId'];
         }
 
-        if (array_key_exists("DstUniqSubnetId",$param) and $param["DstUniqSubnetId"] !== null) {
-            $this->DstUniqSubnetId = $param["DstUniqSubnetId"];
+        if (array_key_exists('DstUniqSubnetId',$param) and $param['DstUniqSubnetId'] !== null) {
+            $this->DstUniqSubnetId = $param['DstUniqSubnetId'];
         }
 
-        if (array_key_exists("DstIp",$param) and $param["DstIp"] !== null) {
-            $this->DstIp = $param["DstIp"];
+        if (array_key_exists('DstIp',$param) and $param['DstIp'] !== null) {
+            $this->DstIp = $param['DstIp'];
         }
 
-        if (array_key_exists("DstPort",$param) and $param["DstPort"] !== null) {
-            $this->DstPort = $param["DstPort"];
+        if (array_key_exists('DstPort',$param) and $param['DstPort'] !== null) {
+            $this->DstPort = $param['DstPort'];
         }
     }
 }

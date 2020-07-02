@@ -62,16 +62,16 @@ class Authentication extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Scene",$param) and $param["Scene"] !== null) {
-            $this->Scene = $param["Scene"];
+        if (array_key_exists('Scene',$param) and $param['Scene'] !== null) {
+            $this->Scene = $param['Scene'];
         }
 
-        if (array_key_exists("SecretId",$param) and $param["SecretId"] !== null) {
-            $this->SecretId = $param["SecretId"];
+        if (array_key_exists('SecretId',$param) and $param['SecretId'] !== null) {
+            $this->SecretId = $param['SecretId'];
         }
 
-        if (array_key_exists("SecretKey",$param) and $param["SecretKey"] !== null) {
-            $this->SecretKey = $param["SecretKey"];
+        if (array_key_exists('SecretKey',$param) and $param['SecretKey'] !== null) {
+            $this->SecretKey = $param['SecretKey'];
         }
     }
 }

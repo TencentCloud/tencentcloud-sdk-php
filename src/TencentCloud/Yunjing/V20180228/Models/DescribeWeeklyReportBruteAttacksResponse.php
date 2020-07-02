@@ -62,21 +62,21 @@ class DescribeWeeklyReportBruteAttacksResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("WeeklyReportBruteAttacks",$param) and $param["WeeklyReportBruteAttacks"] !== null) {
+        if (array_key_exists('WeeklyReportBruteAttacks',$param) and $param['WeeklyReportBruteAttacks'] !== null) {
             $this->WeeklyReportBruteAttacks = [];
-            foreach ($param["WeeklyReportBruteAttacks"] as $key => $value){
+            foreach ($param['WeeklyReportBruteAttacks'] as $key => $value){
                 $obj = new WeeklyReportBruteAttack();
                 $obj->deserialize($value);
                 array_push($this->WeeklyReportBruteAttacks, $obj);
             }
         }
 
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

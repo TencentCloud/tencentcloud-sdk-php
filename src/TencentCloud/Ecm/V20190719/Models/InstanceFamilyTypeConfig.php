@@ -54,12 +54,12 @@ class InstanceFamilyTypeConfig extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceFamilyType",$param) and $param["InstanceFamilyType"] !== null) {
-            $this->InstanceFamilyType = $param["InstanceFamilyType"];
+        if (array_key_exists('InstanceFamilyType',$param) and $param['InstanceFamilyType'] !== null) {
+            $this->InstanceFamilyType = $param['InstanceFamilyType'];
         }
 
-        if (array_key_exists("InstanceFamilyTypeName",$param) and $param["InstanceFamilyTypeName"] !== null) {
-            $this->InstanceFamilyTypeName = $param["InstanceFamilyTypeName"];
+        if (array_key_exists('InstanceFamilyTypeName',$param) and $param['InstanceFamilyTypeName'] !== null) {
+            $this->InstanceFamilyTypeName = $param['InstanceFamilyTypeName'];
         }
     }
 }

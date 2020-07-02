@@ -58,12 +58,12 @@ class AbnormalEvent extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AbnormalEventId",$param) and $param["AbnormalEventId"] !== null) {
-            $this->AbnormalEventId = $param["AbnormalEventId"];
+        if (array_key_exists('AbnormalEventId',$param) and $param['AbnormalEventId'] !== null) {
+            $this->AbnormalEventId = $param['AbnormalEventId'];
         }
 
-        if (array_key_exists("PeerId",$param) and $param["PeerId"] !== null) {
-            $this->PeerId = $param["PeerId"];
+        if (array_key_exists('PeerId',$param) and $param['PeerId'] !== null) {
+            $this->PeerId = $param['PeerId'];
         }
     }
 }

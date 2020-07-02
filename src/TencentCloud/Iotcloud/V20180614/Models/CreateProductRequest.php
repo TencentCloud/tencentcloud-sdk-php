@@ -62,17 +62,17 @@ class CreateProductRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ProductName",$param) and $param["ProductName"] !== null) {
-            $this->ProductName = $param["ProductName"];
+        if (array_key_exists('ProductName',$param) and $param['ProductName'] !== null) {
+            $this->ProductName = $param['ProductName'];
         }
 
-        if (array_key_exists("ProductProperties",$param) and $param["ProductProperties"] !== null) {
+        if (array_key_exists('ProductProperties',$param) and $param['ProductProperties'] !== null) {
             $this->ProductProperties = new ProductProperties();
-            $this->ProductProperties->deserialize($param["ProductProperties"]);
+            $this->ProductProperties->deserialize($param['ProductProperties']);
         }
 
-        if (array_key_exists("Skey",$param) and $param["Skey"] !== null) {
-            $this->Skey = $param["Skey"];
+        if (array_key_exists('Skey',$param) and $param['Skey'] !== null) {
+            $this->Skey = $param['Skey'];
         }
     }
 }

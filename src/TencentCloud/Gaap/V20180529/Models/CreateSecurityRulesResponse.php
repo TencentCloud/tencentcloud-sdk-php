@@ -54,12 +54,12 @@ class CreateSecurityRulesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RuleIdList",$param) and $param["RuleIdList"] !== null) {
-            $this->RuleIdList = $param["RuleIdList"];
+        if (array_key_exists('RuleIdList',$param) and $param['RuleIdList'] !== null) {
+            $this->RuleIdList = $param['RuleIdList'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

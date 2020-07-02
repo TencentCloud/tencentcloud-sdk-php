@@ -54,17 +54,17 @@ class DescribeBaradDataResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DataList",$param) and $param["DataList"] !== null) {
+        if (array_key_exists('DataList',$param) and $param['DataList'] !== null) {
             $this->DataList = [];
-            foreach ($param["DataList"] as $key => $value){
+            foreach ($param['DataList'] as $key => $value){
                 $obj = new BaradData();
                 $obj->deserialize($value);
                 array_push($this->DataList, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

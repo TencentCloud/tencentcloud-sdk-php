@@ -62,16 +62,16 @@ class PaiInstance extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("DomainName",$param) and $param["DomainName"] !== null) {
-            $this->DomainName = $param["DomainName"];
+        if (array_key_exists('DomainName',$param) and $param['DomainName'] !== null) {
+            $this->DomainName = $param['DomainName'];
         }
 
-        if (array_key_exists("PaiMateUrl",$param) and $param["PaiMateUrl"] !== null) {
-            $this->PaiMateUrl = $param["PaiMateUrl"];
+        if (array_key_exists('PaiMateUrl',$param) and $param['PaiMateUrl'] !== null) {
+            $this->PaiMateUrl = $param['PaiMateUrl'];
         }
     }
 }

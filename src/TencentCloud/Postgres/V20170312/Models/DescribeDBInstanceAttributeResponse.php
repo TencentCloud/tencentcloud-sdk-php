@@ -54,13 +54,13 @@ class DescribeDBInstanceAttributeResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DBInstance",$param) and $param["DBInstance"] !== null) {
+        if (array_key_exists('DBInstance',$param) and $param['DBInstance'] !== null) {
             $this->DBInstance = new DBInstance();
-            $this->DBInstance->deserialize($param["DBInstance"]);
+            $this->DBInstance->deserialize($param['DBInstance']);
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

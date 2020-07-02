@@ -54,13 +54,13 @@ class DescribeBRIRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RequestData",$param) and $param["RequestData"] !== null) {
+        if (array_key_exists('RequestData',$param) and $param['RequestData'] !== null) {
             $this->RequestData = new BRIRequest();
-            $this->RequestData->deserialize($param["RequestData"]);
+            $this->RequestData->deserialize($param['RequestData']);
         }
 
-        if (array_key_exists("ResourceId",$param) and $param["ResourceId"] !== null) {
-            $this->ResourceId = $param["ResourceId"];
+        if (array_key_exists('ResourceId',$param) and $param['ResourceId'] !== null) {
+            $this->ResourceId = $param['ResourceId'];
         }
     }
 }

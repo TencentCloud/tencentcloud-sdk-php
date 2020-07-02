@@ -70,20 +70,20 @@ class MigrateNetworkInterfaceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("EcmRegion",$param) and $param["EcmRegion"] !== null) {
-            $this->EcmRegion = $param["EcmRegion"];
+        if (array_key_exists('EcmRegion',$param) and $param['EcmRegion'] !== null) {
+            $this->EcmRegion = $param['EcmRegion'];
         }
 
-        if (array_key_exists("NetworkInterfaceId",$param) and $param["NetworkInterfaceId"] !== null) {
-            $this->NetworkInterfaceId = $param["NetworkInterfaceId"];
+        if (array_key_exists('NetworkInterfaceId',$param) and $param['NetworkInterfaceId'] !== null) {
+            $this->NetworkInterfaceId = $param['NetworkInterfaceId'];
         }
 
-        if (array_key_exists("SourceInstanceId",$param) and $param["SourceInstanceId"] !== null) {
-            $this->SourceInstanceId = $param["SourceInstanceId"];
+        if (array_key_exists('SourceInstanceId',$param) and $param['SourceInstanceId'] !== null) {
+            $this->SourceInstanceId = $param['SourceInstanceId'];
         }
 
-        if (array_key_exists("DestinationInstanceId",$param) and $param["DestinationInstanceId"] !== null) {
-            $this->DestinationInstanceId = $param["DestinationInstanceId"];
+        if (array_key_exists('DestinationInstanceId',$param) and $param['DestinationInstanceId'] !== null) {
+            $this->DestinationInstanceId = $param['DestinationInstanceId'];
         }
     }
 }

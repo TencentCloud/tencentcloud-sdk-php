@@ -46,8 +46,8 @@ class SearchResultSeg extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SegStr",$param) and $param["SegStr"] !== null) {
-            $this->SegStr = $param["SegStr"];
+        if (array_key_exists('SegStr',$param) and $param['SegStr'] !== null) {
+            $this->SegStr = $param['SegStr'];
         }
     }
 }

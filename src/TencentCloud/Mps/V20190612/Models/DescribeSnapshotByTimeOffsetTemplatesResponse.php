@@ -62,21 +62,21 @@ class DescribeSnapshotByTimeOffsetTemplatesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("SnapshotByTimeOffsetTemplateSet",$param) and $param["SnapshotByTimeOffsetTemplateSet"] !== null) {
+        if (array_key_exists('SnapshotByTimeOffsetTemplateSet',$param) and $param['SnapshotByTimeOffsetTemplateSet'] !== null) {
             $this->SnapshotByTimeOffsetTemplateSet = [];
-            foreach ($param["SnapshotByTimeOffsetTemplateSet"] as $key => $value){
+            foreach ($param['SnapshotByTimeOffsetTemplateSet'] as $key => $value){
                 $obj = new SnapshotByTimeOffsetTemplate();
                 $obj->deserialize($value);
                 array_push($this->SnapshotByTimeOffsetTemplateSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

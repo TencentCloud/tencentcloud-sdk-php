@@ -54,17 +54,17 @@ class DescribeImageSharePermissionResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SharePermissionSet",$param) and $param["SharePermissionSet"] !== null) {
+        if (array_key_exists('SharePermissionSet',$param) and $param['SharePermissionSet'] !== null) {
             $this->SharePermissionSet = [];
-            foreach ($param["SharePermissionSet"] as $key => $value){
+            foreach ($param['SharePermissionSet'] as $key => $value){
                 $obj = new SharePermission();
                 $obj->deserialize($value);
                 array_push($this->SharePermissionSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

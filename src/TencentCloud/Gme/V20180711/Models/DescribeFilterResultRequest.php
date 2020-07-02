@@ -54,12 +54,12 @@ class DescribeFilterResultRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BizId",$param) and $param["BizId"] !== null) {
-            $this->BizId = $param["BizId"];
+        if (array_key_exists('BizId',$param) and $param['BizId'] !== null) {
+            $this->BizId = $param['BizId'];
         }
 
-        if (array_key_exists("FileId",$param) and $param["FileId"] !== null) {
-            $this->FileId = $param["FileId"];
+        if (array_key_exists('FileId',$param) and $param['FileId'] !== null) {
+            $this->FileId = $param['FileId'];
         }
     }
 }

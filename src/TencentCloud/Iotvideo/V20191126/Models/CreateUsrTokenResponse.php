@@ -78,24 +78,24 @@ class CreateUsrTokenResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AccessId",$param) and $param["AccessId"] !== null) {
-            $this->AccessId = $param["AccessId"];
+        if (array_key_exists('AccessId',$param) and $param['AccessId'] !== null) {
+            $this->AccessId = $param['AccessId'];
         }
 
-        if (array_key_exists("AccessToken",$param) and $param["AccessToken"] !== null) {
-            $this->AccessToken = $param["AccessToken"];
+        if (array_key_exists('AccessToken',$param) and $param['AccessToken'] !== null) {
+            $this->AccessToken = $param['AccessToken'];
         }
 
-        if (array_key_exists("ExpireTime",$param) and $param["ExpireTime"] !== null) {
-            $this->ExpireTime = $param["ExpireTime"];
+        if (array_key_exists('ExpireTime',$param) and $param['ExpireTime'] !== null) {
+            $this->ExpireTime = $param['ExpireTime'];
         }
 
-        if (array_key_exists("TerminalId",$param) and $param["TerminalId"] !== null) {
-            $this->TerminalId = $param["TerminalId"];
+        if (array_key_exists('TerminalId',$param) and $param['TerminalId'] !== null) {
+            $this->TerminalId = $param['TerminalId'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

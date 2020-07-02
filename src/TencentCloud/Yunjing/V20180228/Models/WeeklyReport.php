@@ -54,12 +54,12 @@ class WeeklyReport extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BeginDate",$param) and $param["BeginDate"] !== null) {
-            $this->BeginDate = $param["BeginDate"];
+        if (array_key_exists('BeginDate',$param) and $param['BeginDate'] !== null) {
+            $this->BeginDate = $param['BeginDate'];
         }
 
-        if (array_key_exists("EndDate",$param) and $param["EndDate"] !== null) {
-            $this->EndDate = $param["EndDate"];
+        if (array_key_exists('EndDate',$param) and $param['EndDate'] !== null) {
+            $this->EndDate = $param['EndDate'];
         }
     }
 }

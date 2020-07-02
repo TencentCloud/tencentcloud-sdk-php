@@ -62,17 +62,17 @@ class ModifyPersonTagInfoRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CompanyId",$param) and $param["CompanyId"] !== null) {
-            $this->CompanyId = $param["CompanyId"];
+        if (array_key_exists('CompanyId',$param) and $param['CompanyId'] !== null) {
+            $this->CompanyId = $param['CompanyId'];
         }
 
-        if (array_key_exists("ShopId",$param) and $param["ShopId"] !== null) {
-            $this->ShopId = $param["ShopId"];
+        if (array_key_exists('ShopId',$param) and $param['ShopId'] !== null) {
+            $this->ShopId = $param['ShopId'];
         }
 
-        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+        if (array_key_exists('Tags',$param) and $param['Tags'] !== null) {
             $this->Tags = [];
-            foreach ($param["Tags"] as $key => $value){
+            foreach ($param['Tags'] as $key => $value){
                 $obj = new PersonTagInfo();
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);

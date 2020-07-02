@@ -94,32 +94,32 @@ class AiRecognitionTaskSegmentSegmentItem extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FileId",$param) and $param["FileId"] !== null) {
-            $this->FileId = $param["FileId"];
+        if (array_key_exists('FileId',$param) and $param['FileId'] !== null) {
+            $this->FileId = $param['FileId'];
         }
 
-        if (array_key_exists("SegmentUrl",$param) and $param["SegmentUrl"] !== null) {
-            $this->SegmentUrl = $param["SegmentUrl"];
+        if (array_key_exists('SegmentUrl',$param) and $param['SegmentUrl'] !== null) {
+            $this->SegmentUrl = $param['SegmentUrl'];
         }
 
-        if (array_key_exists("Confidence",$param) and $param["Confidence"] !== null) {
-            $this->Confidence = $param["Confidence"];
+        if (array_key_exists('Confidence',$param) and $param['Confidence'] !== null) {
+            $this->Confidence = $param['Confidence'];
         }
 
-        if (array_key_exists("StartTimeOffset",$param) and $param["StartTimeOffset"] !== null) {
-            $this->StartTimeOffset = $param["StartTimeOffset"];
+        if (array_key_exists('StartTimeOffset',$param) and $param['StartTimeOffset'] !== null) {
+            $this->StartTimeOffset = $param['StartTimeOffset'];
         }
 
-        if (array_key_exists("EndTimeOffset",$param) and $param["EndTimeOffset"] !== null) {
-            $this->EndTimeOffset = $param["EndTimeOffset"];
+        if (array_key_exists('EndTimeOffset',$param) and $param['EndTimeOffset'] !== null) {
+            $this->EndTimeOffset = $param['EndTimeOffset'];
         }
 
-        if (array_key_exists("CovImgUrl",$param) and $param["CovImgUrl"] !== null) {
-            $this->CovImgUrl = $param["CovImgUrl"];
+        if (array_key_exists('CovImgUrl',$param) and $param['CovImgUrl'] !== null) {
+            $this->CovImgUrl = $param['CovImgUrl'];
         }
 
-        if (array_key_exists("SpecialInfo",$param) and $param["SpecialInfo"] !== null) {
-            $this->SpecialInfo = $param["SpecialInfo"];
+        if (array_key_exists('SpecialInfo',$param) and $param['SpecialInfo'] !== null) {
+            $this->SpecialInfo = $param['SpecialInfo'];
         }
     }
 }

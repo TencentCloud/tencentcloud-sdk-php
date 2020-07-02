@@ -46,9 +46,9 @@ class CandWord extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CandWords",$param) and $param["CandWords"] !== null) {
+        if (array_key_exists('CandWords',$param) and $param['CandWords'] !== null) {
             $this->CandWords = [];
-            foreach ($param["CandWords"] as $key => $value){
+            foreach ($param['CandWords'] as $key => $value){
                 $obj = new Words();
                 $obj->deserialize($value);
                 array_push($this->CandWords, $obj);

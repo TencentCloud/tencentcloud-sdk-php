@@ -62,21 +62,21 @@ class DescribeDisksResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("DiskSet",$param) and $param["DiskSet"] !== null) {
+        if (array_key_exists('DiskSet',$param) and $param['DiskSet'] !== null) {
             $this->DiskSet = [];
-            foreach ($param["DiskSet"] as $key => $value){
+            foreach ($param['DiskSet'] as $key => $value){
                 $obj = new Disk();
                 $obj->deserialize($value);
                 array_push($this->DiskSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

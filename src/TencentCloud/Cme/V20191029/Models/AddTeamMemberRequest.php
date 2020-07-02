@@ -70,25 +70,25 @@ class AddTeamMemberRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Platform",$param) and $param["Platform"] !== null) {
-            $this->Platform = $param["Platform"];
+        if (array_key_exists('Platform',$param) and $param['Platform'] !== null) {
+            $this->Platform = $param['Platform'];
         }
 
-        if (array_key_exists("TeamId",$param) and $param["TeamId"] !== null) {
-            $this->TeamId = $param["TeamId"];
+        if (array_key_exists('TeamId',$param) and $param['TeamId'] !== null) {
+            $this->TeamId = $param['TeamId'];
         }
 
-        if (array_key_exists("TeamMembers",$param) and $param["TeamMembers"] !== null) {
+        if (array_key_exists('TeamMembers',$param) and $param['TeamMembers'] !== null) {
             $this->TeamMembers = [];
-            foreach ($param["TeamMembers"] as $key => $value){
+            foreach ($param['TeamMembers'] as $key => $value){
                 $obj = new AddMemberInfo();
                 $obj->deserialize($value);
                 array_push($this->TeamMembers, $obj);
             }
         }
 
-        if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
-            $this->Operator = $param["Operator"];
+        if (array_key_exists('Operator',$param) and $param['Operator'] !== null) {
+            $this->Operator = $param['Operator'];
         }
     }
 }

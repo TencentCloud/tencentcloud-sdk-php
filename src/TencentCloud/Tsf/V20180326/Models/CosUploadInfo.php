@@ -94,25 +94,25 @@ class CosUploadInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PkgId",$param) and $param["PkgId"] !== null) {
-            $this->PkgId = $param["PkgId"];
+        if (array_key_exists('PkgId',$param) and $param['PkgId'] !== null) {
+            $this->PkgId = $param['PkgId'];
         }
 
-        if (array_key_exists("Bucket",$param) and $param["Bucket"] !== null) {
-            $this->Bucket = $param["Bucket"];
+        if (array_key_exists('Bucket',$param) and $param['Bucket'] !== null) {
+            $this->Bucket = $param['Bucket'];
         }
 
-        if (array_key_exists("Region",$param) and $param["Region"] !== null) {
-            $this->Region = $param["Region"];
+        if (array_key_exists('Region',$param) and $param['Region'] !== null) {
+            $this->Region = $param['Region'];
         }
 
-        if (array_key_exists("Path",$param) and $param["Path"] !== null) {
-            $this->Path = $param["Path"];
+        if (array_key_exists('Path',$param) and $param['Path'] !== null) {
+            $this->Path = $param['Path'];
         }
 
-        if (array_key_exists("Credentials",$param) and $param["Credentials"] !== null) {
+        if (array_key_exists('Credentials',$param) and $param['Credentials'] !== null) {
             $this->Credentials = new CosCredentials();
-            $this->Credentials->deserialize($param["Credentials"]);
+            $this->Credentials->deserialize($param['Credentials']);
         }
     }
 }

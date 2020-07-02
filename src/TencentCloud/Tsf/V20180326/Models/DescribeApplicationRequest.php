@@ -46,8 +46,8 @@ class DescribeApplicationRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ApplicationId",$param) and $param["ApplicationId"] !== null) {
-            $this->ApplicationId = $param["ApplicationId"];
+        if (array_key_exists('ApplicationId',$param) and $param['ApplicationId'] !== null) {
+            $this->ApplicationId = $param['ApplicationId'];
         }
     }
 }

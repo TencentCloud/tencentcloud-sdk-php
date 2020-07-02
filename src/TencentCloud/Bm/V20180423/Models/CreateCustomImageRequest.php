@@ -62,16 +62,16 @@ class CreateCustomImageRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("ImageName",$param) and $param["ImageName"] !== null) {
-            $this->ImageName = $param["ImageName"];
+        if (array_key_exists('ImageName',$param) and $param['ImageName'] !== null) {
+            $this->ImageName = $param['ImageName'];
         }
 
-        if (array_key_exists("ImageDescription",$param) and $param["ImageDescription"] !== null) {
-            $this->ImageDescription = $param["ImageDescription"];
+        if (array_key_exists('ImageDescription',$param) and $param['ImageDescription'] !== null) {
+            $this->ImageDescription = $param['ImageDescription'];
         }
     }
 }

@@ -54,12 +54,12 @@ class ModifyClientRemarkRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ClientRemark",$param) and $param["ClientRemark"] !== null) {
-            $this->ClientRemark = $param["ClientRemark"];
+        if (array_key_exists('ClientRemark',$param) and $param['ClientRemark'] !== null) {
+            $this->ClientRemark = $param['ClientRemark'];
         }
 
-        if (array_key_exists("ClientUin",$param) and $param["ClientUin"] !== null) {
-            $this->ClientUin = $param["ClientUin"];
+        if (array_key_exists('ClientUin',$param) and $param['ClientUin'] !== null) {
+            $this->ClientUin = $param['ClientUin'];
         }
     }
 }

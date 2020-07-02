@@ -46,8 +46,8 @@ class DeleteDeployGroupsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DeployGroupIds",$param) and $param["DeployGroupIds"] !== null) {
-            $this->DeployGroupIds = $param["DeployGroupIds"];
+        if (array_key_exists('DeployGroupIds',$param) and $param['DeployGroupIds'] !== null) {
+            $this->DeployGroupIds = $param['DeployGroupIds'];
         }
     }
 }

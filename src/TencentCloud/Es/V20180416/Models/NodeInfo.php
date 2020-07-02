@@ -110,33 +110,33 @@ class NodeInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("NodeNum",$param) and $param["NodeNum"] !== null) {
-            $this->NodeNum = $param["NodeNum"];
+        if (array_key_exists('NodeNum',$param) and $param['NodeNum'] !== null) {
+            $this->NodeNum = $param['NodeNum'];
         }
 
-        if (array_key_exists("NodeType",$param) and $param["NodeType"] !== null) {
-            $this->NodeType = $param["NodeType"];
+        if (array_key_exists('NodeType',$param) and $param['NodeType'] !== null) {
+            $this->NodeType = $param['NodeType'];
         }
 
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists('Type',$param) and $param['Type'] !== null) {
+            $this->Type = $param['Type'];
         }
 
-        if (array_key_exists("DiskType",$param) and $param["DiskType"] !== null) {
-            $this->DiskType = $param["DiskType"];
+        if (array_key_exists('DiskType',$param) and $param['DiskType'] !== null) {
+            $this->DiskType = $param['DiskType'];
         }
 
-        if (array_key_exists("DiskSize",$param) and $param["DiskSize"] !== null) {
-            $this->DiskSize = $param["DiskSize"];
+        if (array_key_exists('DiskSize',$param) and $param['DiskSize'] !== null) {
+            $this->DiskSize = $param['DiskSize'];
         }
 
-        if (array_key_exists("LocalDiskInfo",$param) and $param["LocalDiskInfo"] !== null) {
+        if (array_key_exists('LocalDiskInfo',$param) and $param['LocalDiskInfo'] !== null) {
             $this->LocalDiskInfo = new LocalDiskInfo();
-            $this->LocalDiskInfo->deserialize($param["LocalDiskInfo"]);
+            $this->LocalDiskInfo->deserialize($param['LocalDiskInfo']);
         }
 
-        if (array_key_exists("DiskCount",$param) and $param["DiskCount"] !== null) {
-            $this->DiskCount = $param["DiskCount"];
+        if (array_key_exists('DiskCount',$param) and $param['DiskCount'] !== null) {
+            $this->DiskCount = $param['DiskCount'];
         }
     }
 }

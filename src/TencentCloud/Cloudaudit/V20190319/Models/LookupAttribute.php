@@ -54,12 +54,12 @@ class LookupAttribute extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AttributeKey",$param) and $param["AttributeKey"] !== null) {
-            $this->AttributeKey = $param["AttributeKey"];
+        if (array_key_exists('AttributeKey',$param) and $param['AttributeKey'] !== null) {
+            $this->AttributeKey = $param['AttributeKey'];
         }
 
-        if (array_key_exists("AttributeValue",$param) and $param["AttributeValue"] !== null) {
-            $this->AttributeValue = $param["AttributeValue"];
+        if (array_key_exists('AttributeValue',$param) and $param['AttributeValue'] !== null) {
+            $this->AttributeValue = $param['AttributeValue'];
         }
     }
 }

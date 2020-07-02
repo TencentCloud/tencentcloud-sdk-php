@@ -54,12 +54,12 @@ class QueryTradeRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TradeFileId",$param) and $param["TradeFileId"] !== null) {
-            $this->TradeFileId = $param["TradeFileId"];
+        if (array_key_exists('TradeFileId',$param) and $param['TradeFileId'] !== null) {
+            $this->TradeFileId = $param['TradeFileId'];
         }
 
-        if (array_key_exists("Profile",$param) and $param["Profile"] !== null) {
-            $this->Profile = $param["Profile"];
+        if (array_key_exists('Profile',$param) and $param['Profile'] !== null) {
+            $this->Profile = $param['Profile'];
         }
     }
 }

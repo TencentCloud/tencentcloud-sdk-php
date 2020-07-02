@@ -54,12 +54,12 @@ class AlgType extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Ftp",$param) and $param["Ftp"] !== null) {
-            $this->Ftp = $param["Ftp"];
+        if (array_key_exists('Ftp',$param) and $param['Ftp'] !== null) {
+            $this->Ftp = $param['Ftp'];
         }
 
-        if (array_key_exists("Sip",$param) and $param["Sip"] !== null) {
-            $this->Sip = $param["Sip"];
+        if (array_key_exists('Sip',$param) and $param['Sip'] !== null) {
+            $this->Sip = $param['Sip'];
         }
     }
 }

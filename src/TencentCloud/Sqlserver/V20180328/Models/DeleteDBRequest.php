@@ -54,12 +54,12 @@ class DeleteDBRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("Names",$param) and $param["Names"] !== null) {
-            $this->Names = $param["Names"];
+        if (array_key_exists('Names',$param) and $param['Names'] !== null) {
+            $this->Names = $param['Names'];
         }
     }
 }

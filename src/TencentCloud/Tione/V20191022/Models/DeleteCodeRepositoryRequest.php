@@ -46,8 +46,8 @@ class DeleteCodeRepositoryRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CodeRepositoryName",$param) and $param["CodeRepositoryName"] !== null) {
-            $this->CodeRepositoryName = $param["CodeRepositoryName"];
+        if (array_key_exists('CodeRepositoryName',$param) and $param['CodeRepositoryName'] !== null) {
+            $this->CodeRepositoryName = $param['CodeRepositoryName'];
         }
     }
 }

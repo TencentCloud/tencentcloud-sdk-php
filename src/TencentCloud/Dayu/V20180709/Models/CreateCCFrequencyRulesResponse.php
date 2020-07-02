@@ -54,12 +54,12 @@ class CreateCCFrequencyRulesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CCFrequencyRuleId",$param) and $param["CCFrequencyRuleId"] !== null) {
-            $this->CCFrequencyRuleId = $param["CCFrequencyRuleId"];
+        if (array_key_exists('CCFrequencyRuleId',$param) and $param['CCFrequencyRuleId'] !== null) {
+            $this->CCFrequencyRuleId = $param['CCFrequencyRuleId'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

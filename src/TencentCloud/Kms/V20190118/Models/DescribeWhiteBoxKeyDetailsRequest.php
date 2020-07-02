@@ -46,8 +46,8 @@ class DescribeWhiteBoxKeyDetailsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("KeyStatus",$param) and $param["KeyStatus"] !== null) {
-            $this->KeyStatus = $param["KeyStatus"];
+        if (array_key_exists('KeyStatus',$param) and $param['KeyStatus'] !== null) {
+            $this->KeyStatus = $param['KeyStatus'];
         }
     }
 }

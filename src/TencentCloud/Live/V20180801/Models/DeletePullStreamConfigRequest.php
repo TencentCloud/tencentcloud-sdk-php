@@ -54,8 +54,8 @@ class DeletePullStreamConfigRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ConfigId",$param) and $param["ConfigId"] !== null) {
-            $this->ConfigId = $param["ConfigId"];
+        if (array_key_exists('ConfigId',$param) and $param['ConfigId'] !== null) {
+            $this->ConfigId = $param['ConfigId'];
         }
     }
 }

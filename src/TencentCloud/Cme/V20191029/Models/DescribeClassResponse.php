@@ -54,17 +54,17 @@ class DescribeClassResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ClassInfoSet",$param) and $param["ClassInfoSet"] !== null) {
+        if (array_key_exists('ClassInfoSet',$param) and $param['ClassInfoSet'] !== null) {
             $this->ClassInfoSet = [];
-            foreach ($param["ClassInfoSet"] as $key => $value){
+            foreach ($param['ClassInfoSet'] as $key => $value){
                 $obj = new ClassInfo();
                 $obj->deserialize($value);
                 array_push($this->ClassInfoSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

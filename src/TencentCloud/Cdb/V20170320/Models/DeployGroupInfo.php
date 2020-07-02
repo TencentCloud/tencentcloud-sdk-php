@@ -114,36 +114,36 @@ class DeployGroupInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DeployGroupId",$param) and $param["DeployGroupId"] !== null) {
-            $this->DeployGroupId = $param["DeployGroupId"];
+        if (array_key_exists('DeployGroupId',$param) and $param['DeployGroupId'] !== null) {
+            $this->DeployGroupId = $param['DeployGroupId'];
         }
 
-        if (array_key_exists("DeployGroupName",$param) and $param["DeployGroupName"] !== null) {
-            $this->DeployGroupName = $param["DeployGroupName"];
+        if (array_key_exists('DeployGroupName',$param) and $param['DeployGroupName'] !== null) {
+            $this->DeployGroupName = $param['DeployGroupName'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("Quota",$param) and $param["Quota"] !== null) {
-            $this->Quota = $param["Quota"];
+        if (array_key_exists('Quota',$param) and $param['Quota'] !== null) {
+            $this->Quota = $param['Quota'];
         }
 
-        if (array_key_exists("Affinity",$param) and $param["Affinity"] !== null) {
-            $this->Affinity = $param["Affinity"];
+        if (array_key_exists('Affinity',$param) and $param['Affinity'] !== null) {
+            $this->Affinity = $param['Affinity'];
         }
 
-        if (array_key_exists("LimitNum",$param) and $param["LimitNum"] !== null) {
-            $this->LimitNum = $param["LimitNum"];
+        if (array_key_exists('LimitNum',$param) and $param['LimitNum'] !== null) {
+            $this->LimitNum = $param['LimitNum'];
         }
 
-        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
-            $this->Description = $param["Description"];
+        if (array_key_exists('Description',$param) and $param['Description'] !== null) {
+            $this->Description = $param['Description'];
         }
 
-        if (array_key_exists("DevClass",$param) and $param["DevClass"] !== null) {
-            $this->DevClass = $param["DevClass"];
+        if (array_key_exists('DevClass',$param) and $param['DevClass'] !== null) {
+            $this->DevClass = $param['DevClass'];
         }
     }
 }

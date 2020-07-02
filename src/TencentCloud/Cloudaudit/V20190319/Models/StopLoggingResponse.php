@@ -54,12 +54,12 @@ class StopLoggingResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("IsSuccess",$param) and $param["IsSuccess"] !== null) {
-            $this->IsSuccess = $param["IsSuccess"];
+        if (array_key_exists('IsSuccess',$param) and $param['IsSuccess'] !== null) {
+            $this->IsSuccess = $param['IsSuccess'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

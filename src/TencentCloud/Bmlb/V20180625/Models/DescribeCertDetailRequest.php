@@ -46,8 +46,8 @@ class DescribeCertDetailRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CertId",$param) and $param["CertId"] !== null) {
-            $this->CertId = $param["CertId"];
+        if (array_key_exists('CertId',$param) and $param['CertId'] !== null) {
+            $this->CertId = $param['CertId'];
         }
     }
 }

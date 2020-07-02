@@ -54,12 +54,12 @@ class DescribeTaskResultRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("EcmRegion",$param) and $param["EcmRegion"] !== null) {
-            $this->EcmRegion = $param["EcmRegion"];
+        if (array_key_exists('EcmRegion',$param) and $param['EcmRegion'] !== null) {
+            $this->EcmRegion = $param['EcmRegion'];
         }
 
-        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
-            $this->TaskId = $param["TaskId"];
+        if (array_key_exists('TaskId',$param) and $param['TaskId'] !== null) {
+            $this->TaskId = $param['TaskId'];
         }
     }
 }

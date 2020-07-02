@@ -62,16 +62,16 @@ class PersonTagInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("OldType",$param) and $param["OldType"] !== null) {
-            $this->OldType = $param["OldType"];
+        if (array_key_exists('OldType',$param) and $param['OldType'] !== null) {
+            $this->OldType = $param['OldType'];
         }
 
-        if (array_key_exists("NewType",$param) and $param["NewType"] !== null) {
-            $this->NewType = $param["NewType"];
+        if (array_key_exists('NewType',$param) and $param['NewType'] !== null) {
+            $this->NewType = $param['NewType'];
         }
 
-        if (array_key_exists("PersonId",$param) and $param["PersonId"] !== null) {
-            $this->PersonId = $param["PersonId"];
+        if (array_key_exists('PersonId',$param) and $param['PersonId'] !== null) {
+            $this->PersonId = $param['PersonId'];
         }
     }
 }

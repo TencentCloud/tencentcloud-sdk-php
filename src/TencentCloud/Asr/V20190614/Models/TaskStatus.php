@@ -90,29 +90,29 @@ class TaskStatus extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
-            $this->TaskId = $param["TaskId"];
+        if (array_key_exists('TaskId',$param) and $param['TaskId'] !== null) {
+            $this->TaskId = $param['TaskId'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("StatusStr",$param) and $param["StatusStr"] !== null) {
-            $this->StatusStr = $param["StatusStr"];
+        if (array_key_exists('StatusStr',$param) and $param['StatusStr'] !== null) {
+            $this->StatusStr = $param['StatusStr'];
         }
 
-        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
-            $this->Result = $param["Result"];
+        if (array_key_exists('Result',$param) and $param['Result'] !== null) {
+            $this->Result = $param['Result'];
         }
 
-        if (array_key_exists("ErrorMsg",$param) and $param["ErrorMsg"] !== null) {
-            $this->ErrorMsg = $param["ErrorMsg"];
+        if (array_key_exists('ErrorMsg',$param) and $param['ErrorMsg'] !== null) {
+            $this->ErrorMsg = $param['ErrorMsg'];
         }
 
-        if (array_key_exists("ResultDetail",$param) and $param["ResultDetail"] !== null) {
+        if (array_key_exists('ResultDetail',$param) and $param['ResultDetail'] !== null) {
             $this->ResultDetail = [];
-            foreach ($param["ResultDetail"] as $key => $value){
+            foreach ($param['ResultDetail'] as $key => $value){
                 $obj = new SentenceDetail();
                 $obj->deserialize($value);
                 array_push($this->ResultDetail, $obj);

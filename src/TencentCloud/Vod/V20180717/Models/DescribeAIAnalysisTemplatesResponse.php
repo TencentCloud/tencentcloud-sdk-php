@@ -62,21 +62,21 @@ class DescribeAIAnalysisTemplatesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("AIAnalysisTemplateSet",$param) and $param["AIAnalysisTemplateSet"] !== null) {
+        if (array_key_exists('AIAnalysisTemplateSet',$param) and $param['AIAnalysisTemplateSet'] !== null) {
             $this->AIAnalysisTemplateSet = [];
-            foreach ($param["AIAnalysisTemplateSet"] as $key => $value){
+            foreach ($param['AIAnalysisTemplateSet'] as $key => $value){
                 $obj = new AIAnalysisTemplateItem();
                 $obj->deserialize($value);
                 array_push($this->AIAnalysisTemplateSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

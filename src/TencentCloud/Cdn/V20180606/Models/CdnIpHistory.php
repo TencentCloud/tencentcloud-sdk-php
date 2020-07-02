@@ -70,12 +70,12 @@ offline：节点下线
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("Datetime",$param) and $param["Datetime"] !== null) {
-            $this->Datetime = $param["Datetime"];
+        if (array_key_exists('Datetime',$param) and $param['Datetime'] !== null) {
+            $this->Datetime = $param['Datetime'];
         }
     }
 }

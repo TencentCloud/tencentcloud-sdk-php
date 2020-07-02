@@ -86,20 +86,20 @@ class MinorsVerificationRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists('Type',$param) and $param['Type'] !== null) {
+            $this->Type = $param['Type'];
         }
 
-        if (array_key_exists("Mobile",$param) and $param["Mobile"] !== null) {
-            $this->Mobile = $param["Mobile"];
+        if (array_key_exists('Mobile',$param) and $param['Mobile'] !== null) {
+            $this->Mobile = $param['Mobile'];
         }
 
-        if (array_key_exists("IdCard",$param) and $param["IdCard"] !== null) {
-            $this->IdCard = $param["IdCard"];
+        if (array_key_exists('IdCard',$param) and $param['IdCard'] !== null) {
+            $this->IdCard = $param['IdCard'];
         }
 
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
     }
 }

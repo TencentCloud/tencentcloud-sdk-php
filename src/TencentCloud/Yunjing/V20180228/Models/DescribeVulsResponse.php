@@ -62,21 +62,21 @@ class DescribeVulsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("Vuls",$param) and $param["Vuls"] !== null) {
+        if (array_key_exists('Vuls',$param) and $param['Vuls'] !== null) {
             $this->Vuls = [];
-            foreach ($param["Vuls"] as $key => $value){
+            foreach ($param['Vuls'] as $key => $value){
                 $obj = new Vul();
                 $obj->deserialize($value);
                 array_push($this->Vuls, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

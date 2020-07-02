@@ -78,12 +78,12 @@ class ObjectConfigureInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Switch",$param) and $param["Switch"] !== null) {
-            $this->Switch = $param["Switch"];
+        if (array_key_exists('Switch',$param) and $param['Switch'] !== null) {
+            $this->Switch = $param['Switch'];
         }
 
-        if (array_key_exists("ObjectLibrary",$param) and $param["ObjectLibrary"] !== null) {
-            $this->ObjectLibrary = $param["ObjectLibrary"];
+        if (array_key_exists('ObjectLibrary',$param) and $param['ObjectLibrary'] !== null) {
+            $this->ObjectLibrary = $param['ObjectLibrary'];
         }
     }
 }

@@ -142,48 +142,48 @@ class DescribePolicyGroupInfoCondition extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MetricShowName",$param) and $param["MetricShowName"] !== null) {
-            $this->MetricShowName = $param["MetricShowName"];
+        if (array_key_exists('MetricShowName',$param) and $param['MetricShowName'] !== null) {
+            $this->MetricShowName = $param['MetricShowName'];
         }
 
-        if (array_key_exists("Period",$param) and $param["Period"] !== null) {
-            $this->Period = $param["Period"];
+        if (array_key_exists('Period',$param) and $param['Period'] !== null) {
+            $this->Period = $param['Period'];
         }
 
-        if (array_key_exists("MetricId",$param) and $param["MetricId"] !== null) {
-            $this->MetricId = $param["MetricId"];
+        if (array_key_exists('MetricId',$param) and $param['MetricId'] !== null) {
+            $this->MetricId = $param['MetricId'];
         }
 
-        if (array_key_exists("RuleId",$param) and $param["RuleId"] !== null) {
-            $this->RuleId = $param["RuleId"];
+        if (array_key_exists('RuleId',$param) and $param['RuleId'] !== null) {
+            $this->RuleId = $param['RuleId'];
         }
 
-        if (array_key_exists("Unit",$param) and $param["Unit"] !== null) {
-            $this->Unit = $param["Unit"];
+        if (array_key_exists('Unit',$param) and $param['Unit'] !== null) {
+            $this->Unit = $param['Unit'];
         }
 
-        if (array_key_exists("AlarmNotifyType",$param) and $param["AlarmNotifyType"] !== null) {
-            $this->AlarmNotifyType = $param["AlarmNotifyType"];
+        if (array_key_exists('AlarmNotifyType',$param) and $param['AlarmNotifyType'] !== null) {
+            $this->AlarmNotifyType = $param['AlarmNotifyType'];
         }
 
-        if (array_key_exists("AlarmNotifyPeriod",$param) and $param["AlarmNotifyPeriod"] !== null) {
-            $this->AlarmNotifyPeriod = $param["AlarmNotifyPeriod"];
+        if (array_key_exists('AlarmNotifyPeriod',$param) and $param['AlarmNotifyPeriod'] !== null) {
+            $this->AlarmNotifyPeriod = $param['AlarmNotifyPeriod'];
         }
 
-        if (array_key_exists("CalcType",$param) and $param["CalcType"] !== null) {
-            $this->CalcType = $param["CalcType"];
+        if (array_key_exists('CalcType',$param) and $param['CalcType'] !== null) {
+            $this->CalcType = $param['CalcType'];
         }
 
-        if (array_key_exists("CalcValue",$param) and $param["CalcValue"] !== null) {
-            $this->CalcValue = $param["CalcValue"];
+        if (array_key_exists('CalcValue',$param) and $param['CalcValue'] !== null) {
+            $this->CalcValue = $param['CalcValue'];
         }
 
-        if (array_key_exists("ContinueTime",$param) and $param["ContinueTime"] !== null) {
-            $this->ContinueTime = $param["ContinueTime"];
+        if (array_key_exists('ContinueTime',$param) and $param['ContinueTime'] !== null) {
+            $this->ContinueTime = $param['ContinueTime'];
         }
 
-        if (array_key_exists("MetricName",$param) and $param["MetricName"] !== null) {
-            $this->MetricName = $param["MetricName"];
+        if (array_key_exists('MetricName',$param) and $param['MetricName'] !== null) {
+            $this->MetricName = $param['MetricName'];
         }
     }
 }

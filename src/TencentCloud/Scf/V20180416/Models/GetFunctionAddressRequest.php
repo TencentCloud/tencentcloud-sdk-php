@@ -62,16 +62,16 @@ class GetFunctionAddressRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FunctionName",$param) and $param["FunctionName"] !== null) {
-            $this->FunctionName = $param["FunctionName"];
+        if (array_key_exists('FunctionName',$param) and $param['FunctionName'] !== null) {
+            $this->FunctionName = $param['FunctionName'];
         }
 
-        if (array_key_exists("Qualifier",$param) and $param["Qualifier"] !== null) {
-            $this->Qualifier = $param["Qualifier"];
+        if (array_key_exists('Qualifier',$param) and $param['Qualifier'] !== null) {
+            $this->Qualifier = $param['Qualifier'];
         }
 
-        if (array_key_exists("Namespace",$param) and $param["Namespace"] !== null) {
-            $this->Namespace = $param["Namespace"];
+        if (array_key_exists('Namespace',$param) and $param['Namespace'] !== null) {
+            $this->Namespace = $param['Namespace'];
         }
     }
 }

@@ -54,17 +54,17 @@ class DescribeInstancesDeniedActionsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceOperatorSet",$param) and $param["InstanceOperatorSet"] !== null) {
+        if (array_key_exists('InstanceOperatorSet',$param) and $param['InstanceOperatorSet'] !== null) {
             $this->InstanceOperatorSet = [];
-            foreach ($param["InstanceOperatorSet"] as $key => $value){
+            foreach ($param['InstanceOperatorSet'] as $key => $value){
                 $obj = new InstanceOperator();
                 $obj->deserialize($value);
                 array_push($this->InstanceOperatorSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

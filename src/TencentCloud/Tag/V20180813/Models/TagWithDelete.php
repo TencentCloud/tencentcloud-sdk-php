@@ -62,16 +62,16 @@ class TagWithDelete extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TagKey",$param) and $param["TagKey"] !== null) {
-            $this->TagKey = $param["TagKey"];
+        if (array_key_exists('TagKey',$param) and $param['TagKey'] !== null) {
+            $this->TagKey = $param['TagKey'];
         }
 
-        if (array_key_exists("TagValue",$param) and $param["TagValue"] !== null) {
-            $this->TagValue = $param["TagValue"];
+        if (array_key_exists('TagValue',$param) and $param['TagValue'] !== null) {
+            $this->TagValue = $param['TagValue'];
         }
 
-        if (array_key_exists("CanDelete",$param) and $param["CanDelete"] !== null) {
-            $this->CanDelete = $param["CanDelete"];
+        if (array_key_exists('CanDelete',$param) and $param['CanDelete'] !== null) {
+            $this->CanDelete = $param['CanDelete'];
         }
     }
 }

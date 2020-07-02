@@ -94,32 +94,32 @@ class ModifyUploadInfoRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ApplicationId",$param) and $param["ApplicationId"] !== null) {
-            $this->ApplicationId = $param["ApplicationId"];
+        if (array_key_exists('ApplicationId',$param) and $param['ApplicationId'] !== null) {
+            $this->ApplicationId = $param['ApplicationId'];
         }
 
-        if (array_key_exists("PkgId",$param) and $param["PkgId"] !== null) {
-            $this->PkgId = $param["PkgId"];
+        if (array_key_exists('PkgId',$param) and $param['PkgId'] !== null) {
+            $this->PkgId = $param['PkgId'];
         }
 
-        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
-            $this->Result = $param["Result"];
+        if (array_key_exists('Result',$param) and $param['Result'] !== null) {
+            $this->Result = $param['Result'];
         }
 
-        if (array_key_exists("Md5",$param) and $param["Md5"] !== null) {
-            $this->Md5 = $param["Md5"];
+        if (array_key_exists('Md5',$param) and $param['Md5'] !== null) {
+            $this->Md5 = $param['Md5'];
         }
 
-        if (array_key_exists("Size",$param) and $param["Size"] !== null) {
-            $this->Size = $param["Size"];
+        if (array_key_exists('Size',$param) and $param['Size'] !== null) {
+            $this->Size = $param['Size'];
         }
 
-        if (array_key_exists("RepositoryType",$param) and $param["RepositoryType"] !== null) {
-            $this->RepositoryType = $param["RepositoryType"];
+        if (array_key_exists('RepositoryType',$param) and $param['RepositoryType'] !== null) {
+            $this->RepositoryType = $param['RepositoryType'];
         }
 
-        if (array_key_exists("RepositoryId",$param) and $param["RepositoryId"] !== null) {
-            $this->RepositoryId = $param["RepositoryId"];
+        if (array_key_exists('RepositoryId',$param) and $param['RepositoryId'] !== null) {
+            $this->RepositoryId = $param['RepositoryId'];
         }
     }
 }

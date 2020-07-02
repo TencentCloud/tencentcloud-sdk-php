@@ -54,12 +54,12 @@ class DismissRoomRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SdkAppId",$param) and $param["SdkAppId"] !== null) {
-            $this->SdkAppId = $param["SdkAppId"];
+        if (array_key_exists('SdkAppId',$param) and $param['SdkAppId'] !== null) {
+            $this->SdkAppId = $param['SdkAppId'];
         }
 
-        if (array_key_exists("RoomId",$param) and $param["RoomId"] !== null) {
-            $this->RoomId = $param["RoomId"];
+        if (array_key_exists('RoomId',$param) and $param['RoomId'] !== null) {
+            $this->RoomId = $param['RoomId'];
         }
     }
 }

@@ -62,21 +62,21 @@ class ResetDeviceStateResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SuccessCount",$param) and $param["SuccessCount"] !== null) {
-            $this->SuccessCount = $param["SuccessCount"];
+        if (array_key_exists('SuccessCount',$param) and $param['SuccessCount'] !== null) {
+            $this->SuccessCount = $param['SuccessCount'];
         }
 
-        if (array_key_exists("ResetDeviceResults",$param) and $param["ResetDeviceResults"] !== null) {
+        if (array_key_exists('ResetDeviceResults',$param) and $param['ResetDeviceResults'] !== null) {
             $this->ResetDeviceResults = [];
-            foreach ($param["ResetDeviceResults"] as $key => $value){
+            foreach ($param['ResetDeviceResults'] as $key => $value){
                 $obj = new ResetDeviceResult();
                 $obj->deserialize($value);
                 array_push($this->ResetDeviceResults, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

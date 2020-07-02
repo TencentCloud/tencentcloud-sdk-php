@@ -62,16 +62,16 @@ class CreateClusterRouteRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RouteTableName",$param) and $param["RouteTableName"] !== null) {
-            $this->RouteTableName = $param["RouteTableName"];
+        if (array_key_exists('RouteTableName',$param) and $param['RouteTableName'] !== null) {
+            $this->RouteTableName = $param['RouteTableName'];
         }
 
-        if (array_key_exists("DestinationCidrBlock",$param) and $param["DestinationCidrBlock"] !== null) {
-            $this->DestinationCidrBlock = $param["DestinationCidrBlock"];
+        if (array_key_exists('DestinationCidrBlock',$param) and $param['DestinationCidrBlock'] !== null) {
+            $this->DestinationCidrBlock = $param['DestinationCidrBlock'];
         }
 
-        if (array_key_exists("GatewayIp",$param) and $param["GatewayIp"] !== null) {
-            $this->GatewayIp = $param["GatewayIp"];
+        if (array_key_exists('GatewayIp',$param) and $param['GatewayIp'] !== null) {
+            $this->GatewayIp = $param['GatewayIp'];
         }
     }
 }

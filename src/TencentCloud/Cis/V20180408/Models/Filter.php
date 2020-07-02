@@ -54,12 +54,12 @@ class Filter extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("ValueList",$param) and $param["ValueList"] !== null) {
-            $this->ValueList = $param["ValueList"];
+        if (array_key_exists('ValueList',$param) and $param['ValueList'] !== null) {
+            $this->ValueList = $param['ValueList'];
         }
     }
 }

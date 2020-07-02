@@ -74,25 +74,25 @@ class CreateAsrVocabRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
-            $this->Description = $param["Description"];
+        if (array_key_exists('Description',$param) and $param['Description'] !== null) {
+            $this->Description = $param['Description'];
         }
 
-        if (array_key_exists("WordWeights",$param) and $param["WordWeights"] !== null) {
+        if (array_key_exists('WordWeights',$param) and $param['WordWeights'] !== null) {
             $this->WordWeights = [];
-            foreach ($param["WordWeights"] as $key => $value){
+            foreach ($param['WordWeights'] as $key => $value){
                 $obj = new HotWord();
                 $obj->deserialize($value);
                 array_push($this->WordWeights, $obj);
             }
         }
 
-        if (array_key_exists("WordWeightStr",$param) and $param["WordWeightStr"] !== null) {
-            $this->WordWeightStr = $param["WordWeightStr"];
+        if (array_key_exists('WordWeightStr',$param) and $param['WordWeightStr'] !== null) {
+            $this->WordWeightStr = $param['WordWeightStr'];
         }
     }
 }

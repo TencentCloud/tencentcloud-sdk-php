@@ -66,13 +66,13 @@ off：关闭
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Switch",$param) and $param["Switch"] !== null) {
-            $this->Switch = $param["Switch"];
+        if (array_key_exists('Switch',$param) and $param['Switch'] !== null) {
+            $this->Switch = $param['Switch'];
         }
 
-        if (array_key_exists("HeaderRules",$param) and $param["HeaderRules"] !== null) {
+        if (array_key_exists('HeaderRules',$param) and $param['HeaderRules'] !== null) {
             $this->HeaderRules = [];
-            foreach ($param["HeaderRules"] as $key => $value){
+            foreach ($param['HeaderRules'] as $key => $value){
                 $obj = new HttpHeaderPathRule();
                 $obj->deserialize($value);
                 array_push($this->HeaderRules, $obj);

@@ -50,8 +50,8 @@ class PrivateIPAddressInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PrivateIPAddress",$param) and $param["PrivateIPAddress"] !== null) {
-            $this->PrivateIPAddress = $param["PrivateIPAddress"];
+        if (array_key_exists('PrivateIPAddress',$param) and $param['PrivateIPAddress'] !== null) {
+            $this->PrivateIPAddress = $param['PrivateIPAddress'];
         }
     }
 }

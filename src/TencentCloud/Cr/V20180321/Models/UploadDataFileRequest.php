@@ -94,32 +94,32 @@ class UploadDataFileRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Module",$param) and $param["Module"] !== null) {
-            $this->Module = $param["Module"];
+        if (array_key_exists('Module',$param) and $param['Module'] !== null) {
+            $this->Module = $param['Module'];
         }
 
-        if (array_key_exists("Operation",$param) and $param["Operation"] !== null) {
-            $this->Operation = $param["Operation"];
+        if (array_key_exists('Operation',$param) and $param['Operation'] !== null) {
+            $this->Operation = $param['Operation'];
         }
 
-        if (array_key_exists("FileName",$param) and $param["FileName"] !== null) {
-            $this->FileName = $param["FileName"];
+        if (array_key_exists('FileName',$param) and $param['FileName'] !== null) {
+            $this->FileName = $param['FileName'];
         }
 
-        if (array_key_exists("UploadModel",$param) and $param["UploadModel"] !== null) {
-            $this->UploadModel = $param["UploadModel"];
+        if (array_key_exists('UploadModel',$param) and $param['UploadModel'] !== null) {
+            $this->UploadModel = $param['UploadModel'];
         }
 
-        if (array_key_exists("File",$param) and $param["File"] !== null) {
-            $this->File = $param["File"];
+        if (array_key_exists('File',$param) and $param['File'] !== null) {
+            $this->File = $param['File'];
         }
 
-        if (array_key_exists("FileUrl",$param) and $param["FileUrl"] !== null) {
-            $this->FileUrl = $param["FileUrl"];
+        if (array_key_exists('FileUrl',$param) and $param['FileUrl'] !== null) {
+            $this->FileUrl = $param['FileUrl'];
         }
 
-        if (array_key_exists("InstId",$param) and $param["InstId"] !== null) {
-            $this->InstId = $param["InstId"];
+        if (array_key_exists('InstId',$param) and $param['InstId'] !== null) {
+            $this->InstId = $param['InstId'];
         }
     }
 }

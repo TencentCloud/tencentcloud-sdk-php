@@ -62,21 +62,21 @@ class DescribeAllStreamPlayInfoListResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("QueryTime",$param) and $param["QueryTime"] !== null) {
-            $this->QueryTime = $param["QueryTime"];
+        if (array_key_exists('QueryTime',$param) and $param['QueryTime'] !== null) {
+            $this->QueryTime = $param['QueryTime'];
         }
 
-        if (array_key_exists("DataInfoList",$param) and $param["DataInfoList"] !== null) {
+        if (array_key_exists('DataInfoList',$param) and $param['DataInfoList'] !== null) {
             $this->DataInfoList = [];
-            foreach ($param["DataInfoList"] as $key => $value){
+            foreach ($param['DataInfoList'] as $key => $value){
                 $obj = new MonitorStreamPlayInfo();
                 $obj->deserialize($value);
                 array_push($this->DataInfoList, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

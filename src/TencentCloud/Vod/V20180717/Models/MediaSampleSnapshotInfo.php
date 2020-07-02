@@ -46,9 +46,9 @@ class MediaSampleSnapshotInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SampleSnapshotSet",$param) and $param["SampleSnapshotSet"] !== null) {
+        if (array_key_exists('SampleSnapshotSet',$param) and $param['SampleSnapshotSet'] !== null) {
             $this->SampleSnapshotSet = [];
-            foreach ($param["SampleSnapshotSet"] as $key => $value){
+            foreach ($param['SampleSnapshotSet'] as $key => $value){
                 $obj = new MediaSampleSnapshotItem();
                 $obj->deserialize($value);
                 array_push($this->SampleSnapshotSet, $obj);

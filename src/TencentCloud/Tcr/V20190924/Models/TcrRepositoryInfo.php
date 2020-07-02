@@ -102,32 +102,32 @@ class TcrRepositoryInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("Namespace",$param) and $param["Namespace"] !== null) {
-            $this->Namespace = $param["Namespace"];
+        if (array_key_exists('Namespace',$param) and $param['Namespace'] !== null) {
+            $this->Namespace = $param['Namespace'];
         }
 
-        if (array_key_exists("CreationTime",$param) and $param["CreationTime"] !== null) {
-            $this->CreationTime = $param["CreationTime"];
+        if (array_key_exists('CreationTime',$param) and $param['CreationTime'] !== null) {
+            $this->CreationTime = $param['CreationTime'];
         }
 
-        if (array_key_exists("Public",$param) and $param["Public"] !== null) {
-            $this->Public = $param["Public"];
+        if (array_key_exists('Public',$param) and $param['Public'] !== null) {
+            $this->Public = $param['Public'];
         }
 
-        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
-            $this->Description = $param["Description"];
+        if (array_key_exists('Description',$param) and $param['Description'] !== null) {
+            $this->Description = $param['Description'];
         }
 
-        if (array_key_exists("BriefDescription",$param) and $param["BriefDescription"] !== null) {
-            $this->BriefDescription = $param["BriefDescription"];
+        if (array_key_exists('BriefDescription',$param) and $param['BriefDescription'] !== null) {
+            $this->BriefDescription = $param['BriefDescription'];
         }
 
-        if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
-            $this->UpdateTime = $param["UpdateTime"];
+        if (array_key_exists('UpdateTime',$param) and $param['UpdateTime'] !== null) {
+            $this->UpdateTime = $param['UpdateTime'];
         }
     }
 }

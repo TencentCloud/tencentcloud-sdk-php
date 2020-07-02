@@ -62,21 +62,21 @@ class DescribeReservedInstancesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("ReservedInstancesSet",$param) and $param["ReservedInstancesSet"] !== null) {
+        if (array_key_exists('ReservedInstancesSet',$param) and $param['ReservedInstancesSet'] !== null) {
             $this->ReservedInstancesSet = [];
-            foreach ($param["ReservedInstancesSet"] as $key => $value){
+            foreach ($param['ReservedInstancesSet'] as $key => $value){
                 $obj = new ReservedInstances();
                 $obj->deserialize($value);
                 array_push($this->ReservedInstancesSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

@@ -78,25 +78,25 @@ class ModifyComputeEnvRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("EnvId",$param) and $param["EnvId"] !== null) {
-            $this->EnvId = $param["EnvId"];
+        if (array_key_exists('EnvId',$param) and $param['EnvId'] !== null) {
+            $this->EnvId = $param['EnvId'];
         }
 
-        if (array_key_exists("DesiredComputeNodeCount",$param) and $param["DesiredComputeNodeCount"] !== null) {
-            $this->DesiredComputeNodeCount = $param["DesiredComputeNodeCount"];
+        if (array_key_exists('DesiredComputeNodeCount',$param) and $param['DesiredComputeNodeCount'] !== null) {
+            $this->DesiredComputeNodeCount = $param['DesiredComputeNodeCount'];
         }
 
-        if (array_key_exists("EnvName",$param) and $param["EnvName"] !== null) {
-            $this->EnvName = $param["EnvName"];
+        if (array_key_exists('EnvName',$param) and $param['EnvName'] !== null) {
+            $this->EnvName = $param['EnvName'];
         }
 
-        if (array_key_exists("EnvDescription",$param) and $param["EnvDescription"] !== null) {
-            $this->EnvDescription = $param["EnvDescription"];
+        if (array_key_exists('EnvDescription',$param) and $param['EnvDescription'] !== null) {
+            $this->EnvDescription = $param['EnvDescription'];
         }
 
-        if (array_key_exists("EnvData",$param) and $param["EnvData"] !== null) {
+        if (array_key_exists('EnvData',$param) and $param['EnvData'] !== null) {
             $this->EnvData = new ComputeEnvData();
-            $this->EnvData->deserialize($param["EnvData"]);
+            $this->EnvData->deserialize($param['EnvData']);
         }
     }
 }

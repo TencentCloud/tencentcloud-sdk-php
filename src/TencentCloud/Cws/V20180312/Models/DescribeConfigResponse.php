@@ -94,32 +94,32 @@ class DescribeConfigResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("NoticeLevel",$param) and $param["NoticeLevel"] !== null) {
-            $this->NoticeLevel = $param["NoticeLevel"];
+        if (array_key_exists('NoticeLevel',$param) and $param['NoticeLevel'] !== null) {
+            $this->NoticeLevel = $param['NoticeLevel'];
         }
 
-        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
-            $this->Id = $param["Id"];
+        if (array_key_exists('Id',$param) and $param['Id'] !== null) {
+            $this->Id = $param['Id'];
         }
 
-        if (array_key_exists("CreatedAt",$param) and $param["CreatedAt"] !== null) {
-            $this->CreatedAt = $param["CreatedAt"];
+        if (array_key_exists('CreatedAt',$param) and $param['CreatedAt'] !== null) {
+            $this->CreatedAt = $param['CreatedAt'];
         }
 
-        if (array_key_exists("UpdatedAt",$param) and $param["UpdatedAt"] !== null) {
-            $this->UpdatedAt = $param["UpdatedAt"];
+        if (array_key_exists('UpdatedAt',$param) and $param['UpdatedAt'] !== null) {
+            $this->UpdatedAt = $param['UpdatedAt'];
         }
 
-        if (array_key_exists("Appid",$param) and $param["Appid"] !== null) {
-            $this->Appid = $param["Appid"];
+        if (array_key_exists('Appid',$param) and $param['Appid'] !== null) {
+            $this->Appid = $param['Appid'];
         }
 
-        if (array_key_exists("ContentLevel",$param) and $param["ContentLevel"] !== null) {
-            $this->ContentLevel = $param["ContentLevel"];
+        if (array_key_exists('ContentLevel',$param) and $param['ContentLevel'] !== null) {
+            $this->ContentLevel = $param['ContentLevel'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

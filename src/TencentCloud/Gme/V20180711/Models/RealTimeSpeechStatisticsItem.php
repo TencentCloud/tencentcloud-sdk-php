@@ -86,28 +86,28 @@ class RealTimeSpeechStatisticsItem extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MainLandDau",$param) and $param["MainLandDau"] !== null) {
-            $this->MainLandDau = $param["MainLandDau"];
+        if (array_key_exists('MainLandDau',$param) and $param['MainLandDau'] !== null) {
+            $this->MainLandDau = $param['MainLandDau'];
         }
 
-        if (array_key_exists("MainLandPcu",$param) and $param["MainLandPcu"] !== null) {
-            $this->MainLandPcu = $param["MainLandPcu"];
+        if (array_key_exists('MainLandPcu',$param) and $param['MainLandPcu'] !== null) {
+            $this->MainLandPcu = $param['MainLandPcu'];
         }
 
-        if (array_key_exists("MainLandDuration",$param) and $param["MainLandDuration"] !== null) {
-            $this->MainLandDuration = $param["MainLandDuration"];
+        if (array_key_exists('MainLandDuration',$param) and $param['MainLandDuration'] !== null) {
+            $this->MainLandDuration = $param['MainLandDuration'];
         }
 
-        if (array_key_exists("OverseaDau",$param) and $param["OverseaDau"] !== null) {
-            $this->OverseaDau = $param["OverseaDau"];
+        if (array_key_exists('OverseaDau',$param) and $param['OverseaDau'] !== null) {
+            $this->OverseaDau = $param['OverseaDau'];
         }
 
-        if (array_key_exists("OverseaPcu",$param) and $param["OverseaPcu"] !== null) {
-            $this->OverseaPcu = $param["OverseaPcu"];
+        if (array_key_exists('OverseaPcu',$param) and $param['OverseaPcu'] !== null) {
+            $this->OverseaPcu = $param['OverseaPcu'];
         }
 
-        if (array_key_exists("OverseaDuration",$param) and $param["OverseaDuration"] !== null) {
-            $this->OverseaDuration = $param["OverseaDuration"];
+        if (array_key_exists('OverseaDuration',$param) and $param['OverseaDuration'] !== null) {
+            $this->OverseaDuration = $param['OverseaDuration'];
         }
     }
 }

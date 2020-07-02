@@ -62,19 +62,19 @@ class LowerBodyCloth extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Color",$param) and $param["Color"] !== null) {
+        if (array_key_exists('Color',$param) and $param['Color'] !== null) {
             $this->Color = new LowerBodyClothColor();
-            $this->Color->deserialize($param["Color"]);
+            $this->Color->deserialize($param['Color']);
         }
 
-        if (array_key_exists("Length",$param) and $param["Length"] !== null) {
+        if (array_key_exists('Length',$param) and $param['Length'] !== null) {
             $this->Length = new LowerBodyClothLength();
-            $this->Length->deserialize($param["Length"]);
+            $this->Length->deserialize($param['Length']);
         }
 
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+        if (array_key_exists('Type',$param) and $param['Type'] !== null) {
             $this->Type = new LowerBodyClothType();
-            $this->Type->deserialize($param["Type"]);
+            $this->Type->deserialize($param['Type']);
         }
     }
 }

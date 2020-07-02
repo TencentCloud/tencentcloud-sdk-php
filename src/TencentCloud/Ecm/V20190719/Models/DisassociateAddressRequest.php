@@ -90,16 +90,16 @@ FALSE：表示解绑 EIP 之后不分配普通公网 IP。
         if ($param === null) {
             return;
         }
-        if (array_key_exists("EcmRegion",$param) and $param["EcmRegion"] !== null) {
-            $this->EcmRegion = $param["EcmRegion"];
+        if (array_key_exists('EcmRegion',$param) and $param['EcmRegion'] !== null) {
+            $this->EcmRegion = $param['EcmRegion'];
         }
 
-        if (array_key_exists("AddressId",$param) and $param["AddressId"] !== null) {
-            $this->AddressId = $param["AddressId"];
+        if (array_key_exists('AddressId',$param) and $param['AddressId'] !== null) {
+            $this->AddressId = $param['AddressId'];
         }
 
-        if (array_key_exists("ReallocateNormalPublicIp",$param) and $param["ReallocateNormalPublicIp"] !== null) {
-            $this->ReallocateNormalPublicIp = $param["ReallocateNormalPublicIp"];
+        if (array_key_exists('ReallocateNormalPublicIp',$param) and $param['ReallocateNormalPublicIp'] !== null) {
+            $this->ReallocateNormalPublicIp = $param['ReallocateNormalPublicIp'];
         }
     }
 }

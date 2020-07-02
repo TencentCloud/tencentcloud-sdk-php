@@ -62,12 +62,12 @@ class TEHDConfigForUpdate extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists('Type',$param) and $param['Type'] !== null) {
+            $this->Type = $param['Type'];
         }
 
-        if (array_key_exists("MaxVideoBitrate",$param) and $param["MaxVideoBitrate"] !== null) {
-            $this->MaxVideoBitrate = $param["MaxVideoBitrate"];
+        if (array_key_exists('MaxVideoBitrate',$param) and $param['MaxVideoBitrate'] !== null) {
+            $this->MaxVideoBitrate = $param['MaxVideoBitrate'];
         }
     }
 }

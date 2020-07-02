@@ -70,25 +70,25 @@ class PutMonitorDataRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Metrics",$param) and $param["Metrics"] !== null) {
+        if (array_key_exists('Metrics',$param) and $param['Metrics'] !== null) {
             $this->Metrics = [];
-            foreach ($param["Metrics"] as $key => $value){
+            foreach ($param['Metrics'] as $key => $value){
                 $obj = new MetricDatum();
                 $obj->deserialize($value);
                 array_push($this->Metrics, $obj);
             }
         }
 
-        if (array_key_exists("AnnounceIp",$param) and $param["AnnounceIp"] !== null) {
-            $this->AnnounceIp = $param["AnnounceIp"];
+        if (array_key_exists('AnnounceIp',$param) and $param['AnnounceIp'] !== null) {
+            $this->AnnounceIp = $param['AnnounceIp'];
         }
 
-        if (array_key_exists("AnnounceTimestamp",$param) and $param["AnnounceTimestamp"] !== null) {
-            $this->AnnounceTimestamp = $param["AnnounceTimestamp"];
+        if (array_key_exists('AnnounceTimestamp',$param) and $param['AnnounceTimestamp'] !== null) {
+            $this->AnnounceTimestamp = $param['AnnounceTimestamp'];
         }
 
-        if (array_key_exists("AnnounceInstance",$param) and $param["AnnounceInstance"] !== null) {
-            $this->AnnounceInstance = $param["AnnounceInstance"];
+        if (array_key_exists('AnnounceInstance',$param) and $param['AnnounceInstance'] !== null) {
+            $this->AnnounceInstance = $param['AnnounceInstance'];
         }
     }
 }

@@ -86,20 +86,20 @@ pkg表示包速率；
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InDataList",$param) and $param["InDataList"] !== null) {
-            $this->InDataList = $param["InDataList"];
+        if (array_key_exists('InDataList',$param) and $param['InDataList'] !== null) {
+            $this->InDataList = $param['InDataList'];
         }
 
-        if (array_key_exists("OutDataList",$param) and $param["OutDataList"] !== null) {
-            $this->OutDataList = $param["OutDataList"];
+        if (array_key_exists('OutDataList',$param) and $param['OutDataList'] !== null) {
+            $this->OutDataList = $param['OutDataList'];
         }
 
-        if (array_key_exists("MetricName",$param) and $param["MetricName"] !== null) {
-            $this->MetricName = $param["MetricName"];
+        if (array_key_exists('MetricName',$param) and $param['MetricName'] !== null) {
+            $this->MetricName = $param['MetricName'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

@@ -66,21 +66,21 @@ class DescribeResourceTemplateHeadersResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("TmplList",$param) and $param["TmplList"] !== null) {
+        if (array_key_exists('TmplList',$param) and $param['TmplList'] !== null) {
             $this->TmplList = [];
-            foreach ($param["TmplList"] as $key => $value){
+            foreach ($param['TmplList'] as $key => $value){
                 $obj = new ResourceTemplateHeader();
                 $obj->deserialize($value);
                 array_push($this->TmplList, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

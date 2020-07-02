@@ -78,20 +78,20 @@ class RuleQuery extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Field",$param) and $param["Field"] !== null) {
-            $this->Field = $param["Field"];
+        if (array_key_exists('Field',$param) and $param['Field'] !== null) {
+            $this->Field = $param['Field'];
         }
 
-        if (array_key_exists("Condition",$param) and $param["Condition"] !== null) {
-            $this->Condition = $param["Condition"];
+        if (array_key_exists('Condition',$param) and $param['Condition'] !== null) {
+            $this->Condition = $param['Condition'];
         }
 
-        if (array_key_exists("Topic",$param) and $param["Topic"] !== null) {
-            $this->Topic = $param["Topic"];
+        if (array_key_exists('Topic',$param) and $param['Topic'] !== null) {
+            $this->Topic = $param['Topic'];
         }
 
-        if (array_key_exists("ProductId",$param) and $param["ProductId"] !== null) {
-            $this->ProductId = $param["ProductId"];
+        if (array_key_exists('ProductId',$param) and $param['ProductId'] !== null) {
+            $this->ProductId = $param['ProductId'];
         }
     }
 }

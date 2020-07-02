@@ -74,22 +74,22 @@ class FileUploadTask extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FileId",$param) and $param["FileId"] !== null) {
-            $this->FileId = $param["FileId"];
+        if (array_key_exists('FileId',$param) and $param['FileId'] !== null) {
+            $this->FileId = $param['FileId'];
         }
 
-        if (array_key_exists("MediaBasicInfo",$param) and $param["MediaBasicInfo"] !== null) {
+        if (array_key_exists('MediaBasicInfo',$param) and $param['MediaBasicInfo'] !== null) {
             $this->MediaBasicInfo = new MediaBasicInfo();
-            $this->MediaBasicInfo->deserialize($param["MediaBasicInfo"]);
+            $this->MediaBasicInfo->deserialize($param['MediaBasicInfo']);
         }
 
-        if (array_key_exists("ProcedureTaskId",$param) and $param["ProcedureTaskId"] !== null) {
-            $this->ProcedureTaskId = $param["ProcedureTaskId"];
+        if (array_key_exists('ProcedureTaskId',$param) and $param['ProcedureTaskId'] !== null) {
+            $this->ProcedureTaskId = $param['ProcedureTaskId'];
         }
 
-        if (array_key_exists("MetaData",$param) and $param["MetaData"] !== null) {
+        if (array_key_exists('MetaData',$param) and $param['MetaData'] !== null) {
             $this->MetaData = new MediaMetaData();
-            $this->MetaData->deserialize($param["MetaData"]);
+            $this->MetaData->deserialize($param['MetaData']);
         }
     }
 }

@@ -166,48 +166,48 @@ class AttachPolicyInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PolicyId",$param) and $param["PolicyId"] !== null) {
-            $this->PolicyId = $param["PolicyId"];
+        if (array_key_exists('PolicyId',$param) and $param['PolicyId'] !== null) {
+            $this->PolicyId = $param['PolicyId'];
         }
 
-        if (array_key_exists("PolicyName",$param) and $param["PolicyName"] !== null) {
-            $this->PolicyName = $param["PolicyName"];
+        if (array_key_exists('PolicyName',$param) and $param['PolicyName'] !== null) {
+            $this->PolicyName = $param['PolicyName'];
         }
 
-        if (array_key_exists("AddTime",$param) and $param["AddTime"] !== null) {
-            $this->AddTime = $param["AddTime"];
+        if (array_key_exists('AddTime',$param) and $param['AddTime'] !== null) {
+            $this->AddTime = $param['AddTime'];
         }
 
-        if (array_key_exists("CreateMode",$param) and $param["CreateMode"] !== null) {
-            $this->CreateMode = $param["CreateMode"];
+        if (array_key_exists('CreateMode',$param) and $param['CreateMode'] !== null) {
+            $this->CreateMode = $param['CreateMode'];
         }
 
-        if (array_key_exists("PolicyType",$param) and $param["PolicyType"] !== null) {
-            $this->PolicyType = $param["PolicyType"];
+        if (array_key_exists('PolicyType',$param) and $param['PolicyType'] !== null) {
+            $this->PolicyType = $param['PolicyType'];
         }
 
-        if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
-            $this->Remark = $param["Remark"];
+        if (array_key_exists('Remark',$param) and $param['Remark'] !== null) {
+            $this->Remark = $param['Remark'];
         }
 
-        if (array_key_exists("OperateOwnerUin",$param) and $param["OperateOwnerUin"] !== null) {
-            $this->OperateOwnerUin = $param["OperateOwnerUin"];
+        if (array_key_exists('OperateOwnerUin',$param) and $param['OperateOwnerUin'] !== null) {
+            $this->OperateOwnerUin = $param['OperateOwnerUin'];
         }
 
-        if (array_key_exists("OperateUin",$param) and $param["OperateUin"] !== null) {
-            $this->OperateUin = $param["OperateUin"];
+        if (array_key_exists('OperateUin',$param) and $param['OperateUin'] !== null) {
+            $this->OperateUin = $param['OperateUin'];
         }
 
-        if (array_key_exists("OperateUinType",$param) and $param["OperateUinType"] !== null) {
-            $this->OperateUinType = $param["OperateUinType"];
+        if (array_key_exists('OperateUinType',$param) and $param['OperateUinType'] !== null) {
+            $this->OperateUinType = $param['OperateUinType'];
         }
 
-        if (array_key_exists("Deactived",$param) and $param["Deactived"] !== null) {
-            $this->Deactived = $param["Deactived"];
+        if (array_key_exists('Deactived',$param) and $param['Deactived'] !== null) {
+            $this->Deactived = $param['Deactived'];
         }
 
-        if (array_key_exists("DeactivedDetail",$param) and $param["DeactivedDetail"] !== null) {
-            $this->DeactivedDetail = $param["DeactivedDetail"];
+        if (array_key_exists('DeactivedDetail',$param) and $param['DeactivedDetail'] !== null) {
+            $this->DeactivedDetail = $param['DeactivedDetail'];
         }
     }
 }

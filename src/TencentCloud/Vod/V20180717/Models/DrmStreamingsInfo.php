@@ -46,8 +46,8 @@ class DrmStreamingsInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SimpleAesDefinition",$param) and $param["SimpleAesDefinition"] !== null) {
-            $this->SimpleAesDefinition = $param["SimpleAesDefinition"];
+        if (array_key_exists('SimpleAesDefinition',$param) and $param['SimpleAesDefinition'] !== null) {
+            $this->SimpleAesDefinition = $param['SimpleAesDefinition'];
         }
     }
 }

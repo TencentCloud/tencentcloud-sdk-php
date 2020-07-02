@@ -94,32 +94,32 @@ class SrcImage extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ImageId",$param) and $param["ImageId"] !== null) {
-            $this->ImageId = $param["ImageId"];
+        if (array_key_exists('ImageId',$param) and $param['ImageId'] !== null) {
+            $this->ImageId = $param['ImageId'];
         }
 
-        if (array_key_exists("ImageName",$param) and $param["ImageName"] !== null) {
-            $this->ImageName = $param["ImageName"];
+        if (array_key_exists('ImageName',$param) and $param['ImageName'] !== null) {
+            $this->ImageName = $param['ImageName'];
         }
 
-        if (array_key_exists("ImageOsName",$param) and $param["ImageOsName"] !== null) {
-            $this->ImageOsName = $param["ImageOsName"];
+        if (array_key_exists('ImageOsName',$param) and $param['ImageOsName'] !== null) {
+            $this->ImageOsName = $param['ImageOsName'];
         }
 
-        if (array_key_exists("ImageDescription",$param) and $param["ImageDescription"] !== null) {
-            $this->ImageDescription = $param["ImageDescription"];
+        if (array_key_exists('ImageDescription',$param) and $param['ImageDescription'] !== null) {
+            $this->ImageDescription = $param['ImageDescription'];
         }
 
-        if (array_key_exists("Region",$param) and $param["Region"] !== null) {
-            $this->Region = $param["Region"];
+        if (array_key_exists('Region',$param) and $param['Region'] !== null) {
+            $this->Region = $param['Region'];
         }
 
-        if (array_key_exists("RegionID",$param) and $param["RegionID"] !== null) {
-            $this->RegionID = $param["RegionID"];
+        if (array_key_exists('RegionID',$param) and $param['RegionID'] !== null) {
+            $this->RegionID = $param['RegionID'];
         }
 
-        if (array_key_exists("RegionName",$param) and $param["RegionName"] !== null) {
-            $this->RegionName = $param["RegionName"];
+        if (array_key_exists('RegionName',$param) and $param['RegionName'] !== null) {
+            $this->RegionName = $param['RegionName'];
         }
     }
 }

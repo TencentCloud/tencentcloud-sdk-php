@@ -110,40 +110,40 @@ class ParameterDetail extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("ParamType",$param) and $param["ParamType"] !== null) {
-            $this->ParamType = $param["ParamType"];
+        if (array_key_exists('ParamType',$param) and $param['ParamType'] !== null) {
+            $this->ParamType = $param['ParamType'];
         }
 
-        if (array_key_exists("Default",$param) and $param["Default"] !== null) {
-            $this->Default = $param["Default"];
+        if (array_key_exists('Default',$param) and $param['Default'] !== null) {
+            $this->Default = $param['Default'];
         }
 
-        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
-            $this->Description = $param["Description"];
+        if (array_key_exists('Description',$param) and $param['Description'] !== null) {
+            $this->Description = $param['Description'];
         }
 
-        if (array_key_exists("CurrentValue",$param) and $param["CurrentValue"] !== null) {
-            $this->CurrentValue = $param["CurrentValue"];
+        if (array_key_exists('CurrentValue',$param) and $param['CurrentValue'] !== null) {
+            $this->CurrentValue = $param['CurrentValue'];
         }
 
-        if (array_key_exists("NeedReboot",$param) and $param["NeedReboot"] !== null) {
-            $this->NeedReboot = $param["NeedReboot"];
+        if (array_key_exists('NeedReboot',$param) and $param['NeedReboot'] !== null) {
+            $this->NeedReboot = $param['NeedReboot'];
         }
 
-        if (array_key_exists("Max",$param) and $param["Max"] !== null) {
-            $this->Max = $param["Max"];
+        if (array_key_exists('Max',$param) and $param['Max'] !== null) {
+            $this->Max = $param['Max'];
         }
 
-        if (array_key_exists("Min",$param) and $param["Min"] !== null) {
-            $this->Min = $param["Min"];
+        if (array_key_exists('Min',$param) and $param['Min'] !== null) {
+            $this->Min = $param['Min'];
         }
 
-        if (array_key_exists("EnumValue",$param) and $param["EnumValue"] !== null) {
-            $this->EnumValue = $param["EnumValue"];
+        if (array_key_exists('EnumValue',$param) and $param['EnumValue'] !== null) {
+            $this->EnumValue = $param['EnumValue'];
         }
     }
 }

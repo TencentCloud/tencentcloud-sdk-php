@@ -54,12 +54,12 @@ class QueryMerchantBalanceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Currency",$param) and $param["Currency"] !== null) {
-            $this->Currency = $param["Currency"];
+        if (array_key_exists('Currency',$param) and $param['Currency'] !== null) {
+            $this->Currency = $param['Currency'];
         }
 
-        if (array_key_exists("Profile",$param) and $param["Profile"] !== null) {
-            $this->Profile = $param["Profile"];
+        if (array_key_exists('Profile',$param) and $param['Profile'] !== null) {
+            $this->Profile = $param['Profile'];
         }
     }
 }

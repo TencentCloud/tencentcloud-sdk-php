@@ -62,21 +62,21 @@ class FlattenListMediaResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("MaterialInfoSet",$param) and $param["MaterialInfoSet"] !== null) {
+        if (array_key_exists('MaterialInfoSet',$param) and $param['MaterialInfoSet'] !== null) {
             $this->MaterialInfoSet = [];
-            foreach ($param["MaterialInfoSet"] as $key => $value){
+            foreach ($param['MaterialInfoSet'] as $key => $value){
                 $obj = new MaterialInfo();
                 $obj->deserialize($value);
                 array_push($this->MaterialInfoSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

@@ -70,21 +70,21 @@ class ReplaceTopicRuleRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RuleName",$param) and $param["RuleName"] !== null) {
-            $this->RuleName = $param["RuleName"];
+        if (array_key_exists('RuleName',$param) and $param['RuleName'] !== null) {
+            $this->RuleName = $param['RuleName'];
         }
 
-        if (array_key_exists("TopicRulePayload",$param) and $param["TopicRulePayload"] !== null) {
+        if (array_key_exists('TopicRulePayload',$param) and $param['TopicRulePayload'] !== null) {
             $this->TopicRulePayload = new TopicRulePayload();
-            $this->TopicRulePayload->deserialize($param["TopicRulePayload"]);
+            $this->TopicRulePayload->deserialize($param['TopicRulePayload']);
         }
 
-        if (array_key_exists("ModifyType",$param) and $param["ModifyType"] !== null) {
-            $this->ModifyType = $param["ModifyType"];
+        if (array_key_exists('ModifyType',$param) and $param['ModifyType'] !== null) {
+            $this->ModifyType = $param['ModifyType'];
         }
 
-        if (array_key_exists("ActionIndex",$param) and $param["ActionIndex"] !== null) {
-            $this->ActionIndex = $param["ActionIndex"];
+        if (array_key_exists('ActionIndex',$param) and $param['ActionIndex'] !== null) {
+            $this->ActionIndex = $param['ActionIndex'];
         }
     }
 }

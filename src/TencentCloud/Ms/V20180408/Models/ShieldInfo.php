@@ -94,32 +94,32 @@ class ShieldInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ShieldCode",$param) and $param["ShieldCode"] !== null) {
-            $this->ShieldCode = $param["ShieldCode"];
+        if (array_key_exists('ShieldCode',$param) and $param['ShieldCode'] !== null) {
+            $this->ShieldCode = $param['ShieldCode'];
         }
 
-        if (array_key_exists("ShieldSize",$param) and $param["ShieldSize"] !== null) {
-            $this->ShieldSize = $param["ShieldSize"];
+        if (array_key_exists('ShieldSize',$param) and $param['ShieldSize'] !== null) {
+            $this->ShieldSize = $param['ShieldSize'];
         }
 
-        if (array_key_exists("ShieldMd5",$param) and $param["ShieldMd5"] !== null) {
-            $this->ShieldMd5 = $param["ShieldMd5"];
+        if (array_key_exists('ShieldMd5',$param) and $param['ShieldMd5'] !== null) {
+            $this->ShieldMd5 = $param['ShieldMd5'];
         }
 
-        if (array_key_exists("AppUrl",$param) and $param["AppUrl"] !== null) {
-            $this->AppUrl = $param["AppUrl"];
+        if (array_key_exists('AppUrl',$param) and $param['AppUrl'] !== null) {
+            $this->AppUrl = $param['AppUrl'];
         }
 
-        if (array_key_exists("TaskTime",$param) and $param["TaskTime"] !== null) {
-            $this->TaskTime = $param["TaskTime"];
+        if (array_key_exists('TaskTime',$param) and $param['TaskTime'] !== null) {
+            $this->TaskTime = $param['TaskTime'];
         }
 
-        if (array_key_exists("ItemId",$param) and $param["ItemId"] !== null) {
-            $this->ItemId = $param["ItemId"];
+        if (array_key_exists('ItemId',$param) and $param['ItemId'] !== null) {
+            $this->ItemId = $param['ItemId'];
         }
 
-        if (array_key_exists("ServiceEdition",$param) and $param["ServiceEdition"] !== null) {
-            $this->ServiceEdition = $param["ServiceEdition"];
+        if (array_key_exists('ServiceEdition',$param) and $param['ServiceEdition'] !== null) {
+            $this->ServiceEdition = $param['ServiceEdition'];
         }
     }
 }

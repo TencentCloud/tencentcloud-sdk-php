@@ -62,21 +62,21 @@ class DescribeRoomInformationResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Total",$param) and $param["Total"] !== null) {
-            $this->Total = $param["Total"];
+        if (array_key_exists('Total',$param) and $param['Total'] !== null) {
+            $this->Total = $param['Total'];
         }
 
-        if (array_key_exists("RoomList",$param) and $param["RoomList"] !== null) {
+        if (array_key_exists('RoomList',$param) and $param['RoomList'] !== null) {
             $this->RoomList = [];
-            foreach ($param["RoomList"] as $key => $value){
+            foreach ($param['RoomList'] as $key => $value){
                 $obj = new RoomState();
                 $obj->deserialize($value);
                 array_push($this->RoomList, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

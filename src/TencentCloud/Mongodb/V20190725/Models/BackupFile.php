@@ -54,12 +54,12 @@ class BackupFile extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ReplicateSetId",$param) and $param["ReplicateSetId"] !== null) {
-            $this->ReplicateSetId = $param["ReplicateSetId"];
+        if (array_key_exists('ReplicateSetId',$param) and $param['ReplicateSetId'] !== null) {
+            $this->ReplicateSetId = $param['ReplicateSetId'];
         }
 
-        if (array_key_exists("File",$param) and $param["File"] !== null) {
-            $this->File = $param["File"];
+        if (array_key_exists('File',$param) and $param['File'] !== null) {
+            $this->File = $param['File'];
         }
     }
 }

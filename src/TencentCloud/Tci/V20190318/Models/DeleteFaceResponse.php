@@ -54,17 +54,17 @@ class DeleteFaceResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FaceInfoSet",$param) and $param["FaceInfoSet"] !== null) {
+        if (array_key_exists('FaceInfoSet',$param) and $param['FaceInfoSet'] !== null) {
             $this->FaceInfoSet = [];
-            foreach ($param["FaceInfoSet"] as $key => $value){
+            foreach ($param['FaceInfoSet'] as $key => $value){
                 $obj = new FaceInfo();
                 $obj->deserialize($value);
                 array_push($this->FaceInfoSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

@@ -54,12 +54,12 @@ class AccessInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Host",$param) and $param["Host"] !== null) {
-            $this->Host = $param["Host"];
+        if (array_key_exists('Host',$param) and $param['Host'] !== null) {
+            $this->Host = $param['Host'];
         }
 
-        if (array_key_exists("Vip",$param) and $param["Vip"] !== null) {
-            $this->Vip = $param["Vip"];
+        if (array_key_exists('Vip',$param) and $param['Vip'] !== null) {
+            $this->Vip = $param['Vip'];
         }
     }
 }

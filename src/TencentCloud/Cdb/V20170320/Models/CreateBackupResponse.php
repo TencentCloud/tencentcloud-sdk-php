@@ -54,12 +54,12 @@ class CreateBackupResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BackupId",$param) and $param["BackupId"] !== null) {
-            $this->BackupId = $param["BackupId"];
+        if (array_key_exists('BackupId',$param) and $param['BackupId'] !== null) {
+            $this->BackupId = $param['BackupId'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

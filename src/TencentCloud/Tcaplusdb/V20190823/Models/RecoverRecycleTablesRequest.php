@@ -54,13 +54,13 @@ class RecoverRecycleTablesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
-            $this->ClusterId = $param["ClusterId"];
+        if (array_key_exists('ClusterId',$param) and $param['ClusterId'] !== null) {
+            $this->ClusterId = $param['ClusterId'];
         }
 
-        if (array_key_exists("SelectedTables",$param) and $param["SelectedTables"] !== null) {
+        if (array_key_exists('SelectedTables',$param) and $param['SelectedTables'] !== null) {
             $this->SelectedTables = [];
-            foreach ($param["SelectedTables"] as $key => $value){
+            foreach ($param['SelectedTables'] as $key => $value){
                 $obj = new SelectedTableInfoNew();
                 $obj->deserialize($value);
                 array_push($this->SelectedTables, $obj);

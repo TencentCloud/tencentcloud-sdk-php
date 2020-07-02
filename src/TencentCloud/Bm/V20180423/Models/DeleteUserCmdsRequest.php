@@ -46,8 +46,8 @@ class DeleteUserCmdsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CmdIds",$param) and $param["CmdIds"] !== null) {
-            $this->CmdIds = $param["CmdIds"];
+        if (array_key_exists('CmdIds',$param) and $param['CmdIds'] !== null) {
+            $this->CmdIds = $param['CmdIds'];
         }
     }
 }

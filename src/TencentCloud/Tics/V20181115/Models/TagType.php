@@ -54,12 +54,12 @@ class TagType extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Tag",$param) and $param["Tag"] !== null) {
-            $this->Tag = $param["Tag"];
+        if (array_key_exists('Tag',$param) and $param['Tag'] !== null) {
+            $this->Tag = $param['Tag'];
         }
 
-        if (array_key_exists("Desc",$param) and $param["Desc"] !== null) {
-            $this->Desc = $param["Desc"];
+        if (array_key_exists('Desc',$param) and $param['Desc'] !== null) {
+            $this->Desc = $param['Desc'];
         }
     }
 }

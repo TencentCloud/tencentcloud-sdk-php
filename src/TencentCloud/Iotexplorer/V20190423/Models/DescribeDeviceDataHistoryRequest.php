@@ -94,32 +94,32 @@ class DescribeDeviceDataHistoryRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MinTime",$param) and $param["MinTime"] !== null) {
-            $this->MinTime = $param["MinTime"];
+        if (array_key_exists('MinTime',$param) and $param['MinTime'] !== null) {
+            $this->MinTime = $param['MinTime'];
         }
 
-        if (array_key_exists("MaxTime",$param) and $param["MaxTime"] !== null) {
-            $this->MaxTime = $param["MaxTime"];
+        if (array_key_exists('MaxTime',$param) and $param['MaxTime'] !== null) {
+            $this->MaxTime = $param['MaxTime'];
         }
 
-        if (array_key_exists("ProductId",$param) and $param["ProductId"] !== null) {
-            $this->ProductId = $param["ProductId"];
+        if (array_key_exists('ProductId',$param) and $param['ProductId'] !== null) {
+            $this->ProductId = $param['ProductId'];
         }
 
-        if (array_key_exists("DeviceName",$param) and $param["DeviceName"] !== null) {
-            $this->DeviceName = $param["DeviceName"];
+        if (array_key_exists('DeviceName',$param) and $param['DeviceName'] !== null) {
+            $this->DeviceName = $param['DeviceName'];
         }
 
-        if (array_key_exists("FieldName",$param) and $param["FieldName"] !== null) {
-            $this->FieldName = $param["FieldName"];
+        if (array_key_exists('FieldName',$param) and $param['FieldName'] !== null) {
+            $this->FieldName = $param['FieldName'];
         }
 
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
+        if (array_key_exists('Limit',$param) and $param['Limit'] !== null) {
+            $this->Limit = $param['Limit'];
         }
 
-        if (array_key_exists("Context",$param) and $param["Context"] !== null) {
-            $this->Context = $param["Context"];
+        if (array_key_exists('Context',$param) and $param['Context'] !== null) {
+            $this->Context = $param['Context'];
         }
     }
 }

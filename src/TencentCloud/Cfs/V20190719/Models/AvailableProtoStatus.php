@@ -55,12 +55,12 @@ class AvailableProtoStatus extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SaleStatus",$param) and $param["SaleStatus"] !== null) {
-            $this->SaleStatus = $param["SaleStatus"];
+        if (array_key_exists('SaleStatus',$param) and $param['SaleStatus'] !== null) {
+            $this->SaleStatus = $param['SaleStatus'];
         }
 
-        if (array_key_exists("Protocol",$param) and $param["Protocol"] !== null) {
-            $this->Protocol = $param["Protocol"];
+        if (array_key_exists('Protocol',$param) and $param['Protocol'] !== null) {
+            $this->Protocol = $param['Protocol'];
         }
     }
 }

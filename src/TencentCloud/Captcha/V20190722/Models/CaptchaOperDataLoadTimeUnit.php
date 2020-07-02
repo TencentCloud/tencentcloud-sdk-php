@@ -62,16 +62,16 @@ class CaptchaOperDataLoadTimeUnit extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DateKey",$param) and $param["DateKey"] !== null) {
-            $this->DateKey = $param["DateKey"];
+        if (array_key_exists('DateKey',$param) and $param['DateKey'] !== null) {
+            $this->DateKey = $param['DateKey'];
         }
 
-        if (array_key_exists("MarketLoadTime",$param) and $param["MarketLoadTime"] !== null) {
-            $this->MarketLoadTime = $param["MarketLoadTime"];
+        if (array_key_exists('MarketLoadTime',$param) and $param['MarketLoadTime'] !== null) {
+            $this->MarketLoadTime = $param['MarketLoadTime'];
         }
 
-        if (array_key_exists("AppIdLoadTime",$param) and $param["AppIdLoadTime"] !== null) {
-            $this->AppIdLoadTime = $param["AppIdLoadTime"];
+        if (array_key_exists('AppIdLoadTime',$param) and $param['AppIdLoadTime'] !== null) {
+            $this->AppIdLoadTime = $param['AppIdLoadTime'];
         }
     }
 }

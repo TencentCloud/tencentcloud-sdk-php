@@ -46,8 +46,8 @@ class GetResultSummaryRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TaskIds",$param) and $param["TaskIds"] !== null) {
-            $this->TaskIds = $param["TaskIds"];
+        if (array_key_exists('TaskIds',$param) and $param['TaskIds'] !== null) {
+            $this->TaskIds = $param['TaskIds'];
         }
     }
 }

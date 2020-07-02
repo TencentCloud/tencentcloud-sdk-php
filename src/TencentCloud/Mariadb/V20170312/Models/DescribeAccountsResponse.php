@@ -62,21 +62,21 @@ class DescribeAccountsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("Users",$param) and $param["Users"] !== null) {
+        if (array_key_exists('Users',$param) and $param['Users'] !== null) {
             $this->Users = [];
-            foreach ($param["Users"] as $key => $value){
+            foreach ($param['Users'] as $key => $value){
                 $obj = new DBAccount();
                 $obj->deserialize($value);
                 array_push($this->Users, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

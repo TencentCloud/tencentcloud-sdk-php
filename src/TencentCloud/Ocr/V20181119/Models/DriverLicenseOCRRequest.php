@@ -74,16 +74,16 @@ BACK 为驾驶证副页正面（有档案编号的一面）。
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ImageBase64",$param) and $param["ImageBase64"] !== null) {
-            $this->ImageBase64 = $param["ImageBase64"];
+        if (array_key_exists('ImageBase64',$param) and $param['ImageBase64'] !== null) {
+            $this->ImageBase64 = $param['ImageBase64'];
         }
 
-        if (array_key_exists("ImageUrl",$param) and $param["ImageUrl"] !== null) {
-            $this->ImageUrl = $param["ImageUrl"];
+        if (array_key_exists('ImageUrl',$param) and $param['ImageUrl'] !== null) {
+            $this->ImageUrl = $param['ImageUrl'];
         }
 
-        if (array_key_exists("CardSide",$param) and $param["CardSide"] !== null) {
-            $this->CardSide = $param["CardSide"];
+        if (array_key_exists('CardSide',$param) and $param['CardSide'] !== null) {
+            $this->CardSide = $param['CardSide'];
         }
     }
 }

@@ -46,8 +46,8 @@ class DescribeRealServersStatusRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RealServerIds",$param) and $param["RealServerIds"] !== null) {
-            $this->RealServerIds = $param["RealServerIds"];
+        if (array_key_exists('RealServerIds',$param) and $param['RealServerIds'] !== null) {
+            $this->RealServerIds = $param['RealServerIds'];
         }
     }
 }

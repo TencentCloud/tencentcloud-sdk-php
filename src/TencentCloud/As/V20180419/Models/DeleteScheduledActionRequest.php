@@ -46,8 +46,8 @@ class DeleteScheduledActionRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ScheduledActionId",$param) and $param["ScheduledActionId"] !== null) {
-            $this->ScheduledActionId = $param["ScheduledActionId"];
+        if (array_key_exists('ScheduledActionId',$param) and $param['ScheduledActionId'] !== null) {
+            $this->ScheduledActionId = $param['ScheduledActionId'];
         }
     }
 }

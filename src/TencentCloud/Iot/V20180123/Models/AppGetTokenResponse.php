@@ -54,12 +54,12 @@ class AppGetTokenResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AccessToken",$param) and $param["AccessToken"] !== null) {
-            $this->AccessToken = $param["AccessToken"];
+        if (array_key_exists('AccessToken',$param) and $param['AccessToken'] !== null) {
+            $this->AccessToken = $param['AccessToken'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

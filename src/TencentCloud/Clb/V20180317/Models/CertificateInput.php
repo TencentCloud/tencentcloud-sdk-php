@@ -102,36 +102,36 @@ class CertificateInput extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SSLMode",$param) and $param["SSLMode"] !== null) {
-            $this->SSLMode = $param["SSLMode"];
+        if (array_key_exists('SSLMode',$param) and $param['SSLMode'] !== null) {
+            $this->SSLMode = $param['SSLMode'];
         }
 
-        if (array_key_exists("CertId",$param) and $param["CertId"] !== null) {
-            $this->CertId = $param["CertId"];
+        if (array_key_exists('CertId',$param) and $param['CertId'] !== null) {
+            $this->CertId = $param['CertId'];
         }
 
-        if (array_key_exists("CertCaId",$param) and $param["CertCaId"] !== null) {
-            $this->CertCaId = $param["CertCaId"];
+        if (array_key_exists('CertCaId',$param) and $param['CertCaId'] !== null) {
+            $this->CertCaId = $param['CertCaId'];
         }
 
-        if (array_key_exists("CertName",$param) and $param["CertName"] !== null) {
-            $this->CertName = $param["CertName"];
+        if (array_key_exists('CertName',$param) and $param['CertName'] !== null) {
+            $this->CertName = $param['CertName'];
         }
 
-        if (array_key_exists("CertKey",$param) and $param["CertKey"] !== null) {
-            $this->CertKey = $param["CertKey"];
+        if (array_key_exists('CertKey',$param) and $param['CertKey'] !== null) {
+            $this->CertKey = $param['CertKey'];
         }
 
-        if (array_key_exists("CertContent",$param) and $param["CertContent"] !== null) {
-            $this->CertContent = $param["CertContent"];
+        if (array_key_exists('CertContent',$param) and $param['CertContent'] !== null) {
+            $this->CertContent = $param['CertContent'];
         }
 
-        if (array_key_exists("CertCaName",$param) and $param["CertCaName"] !== null) {
-            $this->CertCaName = $param["CertCaName"];
+        if (array_key_exists('CertCaName',$param) and $param['CertCaName'] !== null) {
+            $this->CertCaName = $param['CertCaName'];
         }
 
-        if (array_key_exists("CertCaContent",$param) and $param["CertCaContent"] !== null) {
-            $this->CertCaContent = $param["CertCaContent"];
+        if (array_key_exists('CertCaContent',$param) and $param['CertCaContent'] !== null) {
+            $this->CertCaContent = $param['CertCaContent'];
         }
     }
 }

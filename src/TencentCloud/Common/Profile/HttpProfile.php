@@ -39,12 +39,12 @@ class HttpProfile
     /**
      * @var string  post请求
      */
-    public static $REQ_POST = "POST";
+    public static $REQ_POST = 'POST';
 
     /**
      * @var string  get请求
      */
-    public static $REQ_GET = "GET";
+    public static $REQ_GET = 'GET';
 
     /**
      * @var int 时间一分钟

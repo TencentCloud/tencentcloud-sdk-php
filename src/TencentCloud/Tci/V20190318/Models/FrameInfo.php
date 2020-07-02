@@ -62,16 +62,16 @@ class FrameInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Similarity",$param) and $param["Similarity"] !== null) {
-            $this->Similarity = $param["Similarity"];
+        if (array_key_exists('Similarity',$param) and $param['Similarity'] !== null) {
+            $this->Similarity = $param['Similarity'];
         }
 
-        if (array_key_exists("SnapshotUrl",$param) and $param["SnapshotUrl"] !== null) {
-            $this->SnapshotUrl = $param["SnapshotUrl"];
+        if (array_key_exists('SnapshotUrl',$param) and $param['SnapshotUrl'] !== null) {
+            $this->SnapshotUrl = $param['SnapshotUrl'];
         }
 
-        if (array_key_exists("Ts",$param) and $param["Ts"] !== null) {
-            $this->Ts = $param["Ts"];
+        if (array_key_exists('Ts',$param) and $param['Ts'] !== null) {
+            $this->Ts = $param['Ts'];
         }
     }
 }

@@ -98,25 +98,25 @@ class ResourceTag extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ResourceRegion",$param) and $param["ResourceRegion"] !== null) {
-            $this->ResourceRegion = $param["ResourceRegion"];
+        if (array_key_exists('ResourceRegion',$param) and $param['ResourceRegion'] !== null) {
+            $this->ResourceRegion = $param['ResourceRegion'];
         }
 
-        if (array_key_exists("ServiceType",$param) and $param["ServiceType"] !== null) {
-            $this->ServiceType = $param["ServiceType"];
+        if (array_key_exists('ServiceType',$param) and $param['ServiceType'] !== null) {
+            $this->ServiceType = $param['ServiceType'];
         }
 
-        if (array_key_exists("ResourcePrefix",$param) and $param["ResourcePrefix"] !== null) {
-            $this->ResourcePrefix = $param["ResourcePrefix"];
+        if (array_key_exists('ResourcePrefix',$param) and $param['ResourcePrefix'] !== null) {
+            $this->ResourcePrefix = $param['ResourcePrefix'];
         }
 
-        if (array_key_exists("ResourceId",$param) and $param["ResourceId"] !== null) {
-            $this->ResourceId = $param["ResourceId"];
+        if (array_key_exists('ResourceId',$param) and $param['ResourceId'] !== null) {
+            $this->ResourceId = $param['ResourceId'];
         }
 
-        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+        if (array_key_exists('Tags',$param) and $param['Tags'] !== null) {
             $this->Tags = [];
-            foreach ($param["Tags"] as $key => $value){
+            foreach ($param['Tags'] as $key => $value){
                 $obj = new Tag();
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);

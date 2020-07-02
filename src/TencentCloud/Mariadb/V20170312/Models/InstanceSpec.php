@@ -54,13 +54,13 @@ class InstanceSpec extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Machine",$param) and $param["Machine"] !== null) {
-            $this->Machine = $param["Machine"];
+        if (array_key_exists('Machine',$param) and $param['Machine'] !== null) {
+            $this->Machine = $param['Machine'];
         }
 
-        if (array_key_exists("SpecInfos",$param) and $param["SpecInfos"] !== null) {
+        if (array_key_exists('SpecInfos',$param) and $param['SpecInfos'] !== null) {
             $this->SpecInfos = [];
-            foreach ($param["SpecInfos"] as $key => $value){
+            foreach ($param['SpecInfos'] as $key => $value){
                 $obj = new SpecConfigInfo();
                 $obj->deserialize($value);
                 array_push($this->SpecInfos, $obj);

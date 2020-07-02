@@ -46,8 +46,8 @@ class VoiceMessageStatisticsItem extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Dau",$param) and $param["Dau"] !== null) {
-            $this->Dau = $param["Dau"];
+        if (array_key_exists('Dau',$param) and $param['Dau'] !== null) {
+            $this->Dau = $param['Dau'];
         }
     }
 }

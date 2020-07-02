@@ -54,17 +54,17 @@ class DescribeMigrationTaskResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TaskStatus",$param) and $param["TaskStatus"] !== null) {
+        if (array_key_exists('TaskStatus',$param) and $param['TaskStatus'] !== null) {
             $this->TaskStatus = [];
-            foreach ($param["TaskStatus"] as $key => $value){
+            foreach ($param['TaskStatus'] as $key => $value){
                 $obj = new TaskStatus();
                 $obj->deserialize($value);
                 array_push($this->TaskStatus, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

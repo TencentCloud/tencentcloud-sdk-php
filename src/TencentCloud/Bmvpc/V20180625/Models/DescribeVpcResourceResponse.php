@@ -62,21 +62,21 @@ class DescribeVpcResourceResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("VpcResourceSet",$param) and $param["VpcResourceSet"] !== null) {
+        if (array_key_exists('VpcResourceSet',$param) and $param['VpcResourceSet'] !== null) {
             $this->VpcResourceSet = [];
-            foreach ($param["VpcResourceSet"] as $key => $value){
+            foreach ($param['VpcResourceSet'] as $key => $value){
                 $obj = new VpcResource();
                 $obj->deserialize($value);
                 array_push($this->VpcResourceSet, $obj);
             }
         }
 
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

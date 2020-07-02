@@ -62,21 +62,21 @@ class DescribeDatabasesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Databases",$param) and $param["Databases"] !== null) {
+        if (array_key_exists('Databases',$param) and $param['Databases'] !== null) {
             $this->Databases = [];
-            foreach ($param["Databases"] as $key => $value){
+            foreach ($param['Databases'] as $key => $value){
                 $obj = new Database();
                 $obj->deserialize($value);
                 array_push($this->Databases, $obj);
             }
         }
 
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

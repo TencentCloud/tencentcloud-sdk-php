@@ -70,20 +70,20 @@ class MerchantManagementList extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TaxpayerName",$param) and $param["TaxpayerName"] !== null) {
-            $this->TaxpayerName = $param["TaxpayerName"];
+        if (array_key_exists('TaxpayerName',$param) and $param['TaxpayerName'] !== null) {
+            $this->TaxpayerName = $param['TaxpayerName'];
         }
 
-        if (array_key_exists("TaxpayerNum",$param) and $param["TaxpayerNum"] !== null) {
-            $this->TaxpayerNum = $param["TaxpayerNum"];
+        if (array_key_exists('TaxpayerNum',$param) and $param['TaxpayerNum'] !== null) {
+            $this->TaxpayerNum = $param['TaxpayerNum'];
         }
 
-        if (array_key_exists("SerialNo",$param) and $param["SerialNo"] !== null) {
-            $this->SerialNo = $param["SerialNo"];
+        if (array_key_exists('SerialNo',$param) and $param['SerialNo'] !== null) {
+            $this->SerialNo = $param['SerialNo'];
         }
 
-        if (array_key_exists("InvoicePlatformId",$param) and $param["InvoicePlatformId"] !== null) {
-            $this->InvoicePlatformId = $param["InvoicePlatformId"];
+        if (array_key_exists('InvoicePlatformId',$param) and $param['InvoicePlatformId'] !== null) {
+            $this->InvoicePlatformId = $param['InvoicePlatformId'];
         }
     }
 }

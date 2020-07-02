@@ -54,12 +54,12 @@ class ModifyEipNameRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("EipId",$param) and $param["EipId"] !== null) {
-            $this->EipId = $param["EipId"];
+        if (array_key_exists('EipId',$param) and $param['EipId'] !== null) {
+            $this->EipId = $param['EipId'];
         }
 
-        if (array_key_exists("EipName",$param) and $param["EipName"] !== null) {
-            $this->EipName = $param["EipName"];
+        if (array_key_exists('EipName',$param) and $param['EipName'] !== null) {
+            $this->EipName = $param['EipName'];
         }
     }
 }

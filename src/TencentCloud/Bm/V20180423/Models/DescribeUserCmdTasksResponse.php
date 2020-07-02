@@ -62,21 +62,21 @@ class DescribeUserCmdTasksResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("UserCmdTasks",$param) and $param["UserCmdTasks"] !== null) {
+        if (array_key_exists('UserCmdTasks',$param) and $param['UserCmdTasks'] !== null) {
             $this->UserCmdTasks = [];
-            foreach ($param["UserCmdTasks"] as $key => $value){
+            foreach ($param['UserCmdTasks'] as $key => $value){
                 $obj = new UserCmdTask();
                 $obj->deserialize($value);
                 array_push($this->UserCmdTasks, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

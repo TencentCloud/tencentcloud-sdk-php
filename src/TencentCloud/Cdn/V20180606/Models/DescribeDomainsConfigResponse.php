@@ -66,21 +66,21 @@ class DescribeDomainsConfigResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Domains",$param) and $param["Domains"] !== null) {
+        if (array_key_exists('Domains',$param) and $param['Domains'] !== null) {
             $this->Domains = [];
-            foreach ($param["Domains"] as $key => $value){
+            foreach ($param['Domains'] as $key => $value){
                 $obj = new DetailDomain();
                 $obj->deserialize($value);
                 array_push($this->Domains, $obj);
             }
         }
 
-        if (array_key_exists("TotalNumber",$param) and $param["TotalNumber"] !== null) {
-            $this->TotalNumber = $param["TotalNumber"];
+        if (array_key_exists('TotalNumber',$param) and $param['TotalNumber'] !== null) {
+            $this->TotalNumber = $param['TotalNumber'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

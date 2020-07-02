@@ -94,32 +94,32 @@ class DescribeZoneFlowGenderInfoByZoneIdResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CompanyId",$param) and $param["CompanyId"] !== null) {
-            $this->CompanyId = $param["CompanyId"];
+        if (array_key_exists('CompanyId',$param) and $param['CompanyId'] !== null) {
+            $this->CompanyId = $param['CompanyId'];
         }
 
-        if (array_key_exists("ShopId",$param) and $param["ShopId"] !== null) {
-            $this->ShopId = $param["ShopId"];
+        if (array_key_exists('ShopId',$param) and $param['ShopId'] !== null) {
+            $this->ShopId = $param['ShopId'];
         }
 
-        if (array_key_exists("ZoneId",$param) and $param["ZoneId"] !== null) {
-            $this->ZoneId = $param["ZoneId"];
+        if (array_key_exists('ZoneId',$param) and $param['ZoneId'] !== null) {
+            $this->ZoneId = $param['ZoneId'];
         }
 
-        if (array_key_exists("ZoneName",$param) and $param["ZoneName"] !== null) {
-            $this->ZoneName = $param["ZoneName"];
+        if (array_key_exists('ZoneName',$param) and $param['ZoneName'] !== null) {
+            $this->ZoneName = $param['ZoneName'];
         }
 
-        if (array_key_exists("MalePercent",$param) and $param["MalePercent"] !== null) {
-            $this->MalePercent = $param["MalePercent"];
+        if (array_key_exists('MalePercent',$param) and $param['MalePercent'] !== null) {
+            $this->MalePercent = $param['MalePercent'];
         }
 
-        if (array_key_exists("FemalePercent",$param) and $param["FemalePercent"] !== null) {
-            $this->FemalePercent = $param["FemalePercent"];
+        if (array_key_exists('FemalePercent',$param) and $param['FemalePercent'] !== null) {
+            $this->FemalePercent = $param['FemalePercent'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

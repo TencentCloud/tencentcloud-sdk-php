@@ -134,32 +134,32 @@ class DescribeInstancesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DisplayStrategy",$param) and $param["DisplayStrategy"] !== null) {
-            $this->DisplayStrategy = $param["DisplayStrategy"];
+        if (array_key_exists('DisplayStrategy',$param) and $param['DisplayStrategy'] !== null) {
+            $this->DisplayStrategy = $param['DisplayStrategy'];
         }
 
-        if (array_key_exists("InstanceIds",$param) and $param["InstanceIds"] !== null) {
-            $this->InstanceIds = $param["InstanceIds"];
+        if (array_key_exists('InstanceIds',$param) and $param['InstanceIds'] !== null) {
+            $this->InstanceIds = $param['InstanceIds'];
         }
 
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
+        if (array_key_exists('Offset',$param) and $param['Offset'] !== null) {
+            $this->Offset = $param['Offset'];
         }
 
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
+        if (array_key_exists('Limit',$param) and $param['Limit'] !== null) {
+            $this->Limit = $param['Limit'];
         }
 
-        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
-            $this->ProjectId = $param["ProjectId"];
+        if (array_key_exists('ProjectId',$param) and $param['ProjectId'] !== null) {
+            $this->ProjectId = $param['ProjectId'];
         }
 
-        if (array_key_exists("OrderField",$param) and $param["OrderField"] !== null) {
-            $this->OrderField = $param["OrderField"];
+        if (array_key_exists('OrderField',$param) and $param['OrderField'] !== null) {
+            $this->OrderField = $param['OrderField'];
         }
 
-        if (array_key_exists("Asc",$param) and $param["Asc"] !== null) {
-            $this->Asc = $param["Asc"];
+        if (array_key_exists('Asc',$param) and $param['Asc'] !== null) {
+            $this->Asc = $param['Asc'];
         }
     }
 }

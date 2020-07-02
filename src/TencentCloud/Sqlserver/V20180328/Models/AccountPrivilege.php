@@ -54,12 +54,12 @@ class AccountPrivilege extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("UserName",$param) and $param["UserName"] !== null) {
-            $this->UserName = $param["UserName"];
+        if (array_key_exists('UserName',$param) and $param['UserName'] !== null) {
+            $this->UserName = $param['UserName'];
         }
 
-        if (array_key_exists("Privilege",$param) and $param["Privilege"] !== null) {
-            $this->Privilege = $param["Privilege"];
+        if (array_key_exists('Privilege',$param) and $param['Privilege'] !== null) {
+            $this->Privilege = $param['Privilege'];
         }
     }
 }

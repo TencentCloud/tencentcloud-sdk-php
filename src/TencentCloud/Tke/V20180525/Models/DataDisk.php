@@ -98,24 +98,24 @@ class DataDisk extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DiskType",$param) and $param["DiskType"] !== null) {
-            $this->DiskType = $param["DiskType"];
+        if (array_key_exists('DiskType',$param) and $param['DiskType'] !== null) {
+            $this->DiskType = $param['DiskType'];
         }
 
-        if (array_key_exists("FileSystem",$param) and $param["FileSystem"] !== null) {
-            $this->FileSystem = $param["FileSystem"];
+        if (array_key_exists('FileSystem',$param) and $param['FileSystem'] !== null) {
+            $this->FileSystem = $param['FileSystem'];
         }
 
-        if (array_key_exists("DiskSize",$param) and $param["DiskSize"] !== null) {
-            $this->DiskSize = $param["DiskSize"];
+        if (array_key_exists('DiskSize',$param) and $param['DiskSize'] !== null) {
+            $this->DiskSize = $param['DiskSize'];
         }
 
-        if (array_key_exists("AutoFormatAndMount",$param) and $param["AutoFormatAndMount"] !== null) {
-            $this->AutoFormatAndMount = $param["AutoFormatAndMount"];
+        if (array_key_exists('AutoFormatAndMount',$param) and $param['AutoFormatAndMount'] !== null) {
+            $this->AutoFormatAndMount = $param['AutoFormatAndMount'];
         }
 
-        if (array_key_exists("MountTarget",$param) and $param["MountTarget"] !== null) {
-            $this->MountTarget = $param["MountTarget"];
+        if (array_key_exists('MountTarget',$param) and $param['MountTarget'] !== null) {
+            $this->MountTarget = $param['MountTarget'];
         }
     }
 }

@@ -70,16 +70,16 @@ class AwsPrivateAccess extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Switch",$param) and $param["Switch"] !== null) {
-            $this->Switch = $param["Switch"];
+        if (array_key_exists('Switch',$param) and $param['Switch'] !== null) {
+            $this->Switch = $param['Switch'];
         }
 
-        if (array_key_exists("AccessKey",$param) and $param["AccessKey"] !== null) {
-            $this->AccessKey = $param["AccessKey"];
+        if (array_key_exists('AccessKey',$param) and $param['AccessKey'] !== null) {
+            $this->AccessKey = $param['AccessKey'];
         }
 
-        if (array_key_exists("SecretKey",$param) and $param["SecretKey"] !== null) {
-            $this->SecretKey = $param["SecretKey"];
+        if (array_key_exists('SecretKey',$param) and $param['SecretKey'] !== null) {
+            $this->SecretKey = $param['SecretKey'];
         }
     }
 }

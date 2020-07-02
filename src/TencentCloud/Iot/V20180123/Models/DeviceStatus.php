@@ -86,24 +86,24 @@ class DeviceStatus extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DeviceName",$param) and $param["DeviceName"] !== null) {
-            $this->DeviceName = $param["DeviceName"];
+        if (array_key_exists('DeviceName',$param) and $param['DeviceName'] !== null) {
+            $this->DeviceName = $param['DeviceName'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("FirstOnline",$param) and $param["FirstOnline"] !== null) {
-            $this->FirstOnline = $param["FirstOnline"];
+        if (array_key_exists('FirstOnline',$param) and $param['FirstOnline'] !== null) {
+            $this->FirstOnline = $param['FirstOnline'];
         }
 
-        if (array_key_exists("LastOnline",$param) and $param["LastOnline"] !== null) {
-            $this->LastOnline = $param["LastOnline"];
+        if (array_key_exists('LastOnline',$param) and $param['LastOnline'] !== null) {
+            $this->LastOnline = $param['LastOnline'];
         }
 
-        if (array_key_exists("OnlineTimes",$param) and $param["OnlineTimes"] !== null) {
-            $this->OnlineTimes = $param["OnlineTimes"];
+        if (array_key_exists('OnlineTimes',$param) and $param['OnlineTimes'] !== null) {
+            $this->OnlineTimes = $param['OnlineTimes'];
         }
     }
 }

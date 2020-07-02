@@ -110,46 +110,46 @@ class DescribeTaskResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("JobId",$param) and $param["JobId"] !== null) {
-            $this->JobId = $param["JobId"];
+        if (array_key_exists('JobId',$param) and $param['JobId'] !== null) {
+            $this->JobId = $param['JobId'];
         }
 
-        if (array_key_exists("TaskName",$param) and $param["TaskName"] !== null) {
-            $this->TaskName = $param["TaskName"];
+        if (array_key_exists('TaskName',$param) and $param['TaskName'] !== null) {
+            $this->TaskName = $param['TaskName'];
         }
 
-        if (array_key_exists("TaskState",$param) and $param["TaskState"] !== null) {
-            $this->TaskState = $param["TaskState"];
+        if (array_key_exists('TaskState',$param) and $param['TaskState'] !== null) {
+            $this->TaskState = $param['TaskState'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
-            $this->EndTime = $param["EndTime"];
+        if (array_key_exists('EndTime',$param) and $param['EndTime'] !== null) {
+            $this->EndTime = $param['EndTime'];
         }
 
-        if (array_key_exists("TaskInstanceTotalCount",$param) and $param["TaskInstanceTotalCount"] !== null) {
-            $this->TaskInstanceTotalCount = $param["TaskInstanceTotalCount"];
+        if (array_key_exists('TaskInstanceTotalCount',$param) and $param['TaskInstanceTotalCount'] !== null) {
+            $this->TaskInstanceTotalCount = $param['TaskInstanceTotalCount'];
         }
 
-        if (array_key_exists("TaskInstanceSet",$param) and $param["TaskInstanceSet"] !== null) {
+        if (array_key_exists('TaskInstanceSet',$param) and $param['TaskInstanceSet'] !== null) {
             $this->TaskInstanceSet = [];
-            foreach ($param["TaskInstanceSet"] as $key => $value){
+            foreach ($param['TaskInstanceSet'] as $key => $value){
                 $obj = new TaskInstanceView();
                 $obj->deserialize($value);
                 array_push($this->TaskInstanceSet, $obj);
             }
         }
 
-        if (array_key_exists("TaskInstanceMetrics",$param) and $param["TaskInstanceMetrics"] !== null) {
+        if (array_key_exists('TaskInstanceMetrics',$param) and $param['TaskInstanceMetrics'] !== null) {
             $this->TaskInstanceMetrics = new TaskInstanceMetrics();
-            $this->TaskInstanceMetrics->deserialize($param["TaskInstanceMetrics"]);
+            $this->TaskInstanceMetrics->deserialize($param['TaskInstanceMetrics']);
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

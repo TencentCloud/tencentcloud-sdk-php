@@ -46,8 +46,8 @@ class DescribeFlowStatusRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FlowId",$param) and $param["FlowId"] !== null) {
-            $this->FlowId = $param["FlowId"];
+        if (array_key_exists('FlowId',$param) and $param['FlowId'] !== null) {
+            $this->FlowId = $param['FlowId'];
         }
     }
 }

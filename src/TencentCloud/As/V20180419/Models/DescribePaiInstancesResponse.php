@@ -62,21 +62,21 @@ class DescribePaiInstancesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("PaiInstanceSet",$param) and $param["PaiInstanceSet"] !== null) {
+        if (array_key_exists('PaiInstanceSet',$param) and $param['PaiInstanceSet'] !== null) {
             $this->PaiInstanceSet = [];
-            foreach ($param["PaiInstanceSet"] as $key => $value){
+            foreach ($param['PaiInstanceSet'] as $key => $value){
                 $obj = new PaiInstance();
                 $obj->deserialize($value);
                 array_push($this->PaiInstanceSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

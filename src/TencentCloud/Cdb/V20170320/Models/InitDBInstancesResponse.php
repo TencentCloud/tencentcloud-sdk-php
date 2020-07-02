@@ -54,12 +54,12 @@ class InitDBInstancesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AsyncRequestIds",$param) and $param["AsyncRequestIds"] !== null) {
-            $this->AsyncRequestIds = $param["AsyncRequestIds"];
+        if (array_key_exists('AsyncRequestIds',$param) and $param['AsyncRequestIds'] !== null) {
+            $this->AsyncRequestIds = $param['AsyncRequestIds'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

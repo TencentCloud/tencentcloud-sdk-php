@@ -62,12 +62,12 @@ class InstanceGroup extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceGroupId",$param) and $param["InstanceGroupId"] !== null) {
-            $this->InstanceGroupId = $param["InstanceGroupId"];
+        if (array_key_exists('InstanceGroupId',$param) and $param['InstanceGroupId'] !== null) {
+            $this->InstanceGroupId = $param['InstanceGroupId'];
         }
 
-        if (array_key_exists("InstanceGroupName",$param) and $param["InstanceGroupName"] !== null) {
-            $this->InstanceGroupName = $param["InstanceGroupName"];
+        if (array_key_exists('InstanceGroupName',$param) and $param['InstanceGroupName'] !== null) {
+            $this->InstanceGroupName = $param['InstanceGroupName'];
         }
     }
 }

@@ -54,12 +54,12 @@ class SetOnlineRecordCallbackKeyRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SdkAppId",$param) and $param["SdkAppId"] !== null) {
-            $this->SdkAppId = $param["SdkAppId"];
+        if (array_key_exists('SdkAppId',$param) and $param['SdkAppId'] !== null) {
+            $this->SdkAppId = $param['SdkAppId'];
         }
 
-        if (array_key_exists("CallbackKey",$param) and $param["CallbackKey"] !== null) {
-            $this->CallbackKey = $param["CallbackKey"];
+        if (array_key_exists('CallbackKey',$param) and $param['CallbackKey'] !== null) {
+            $this->CallbackKey = $param['CallbackKey'];
         }
     }
 }

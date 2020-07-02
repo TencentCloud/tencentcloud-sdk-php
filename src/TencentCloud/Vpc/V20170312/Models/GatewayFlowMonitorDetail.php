@@ -78,24 +78,24 @@ class GatewayFlowMonitorDetail extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PrivateIpAddress",$param) and $param["PrivateIpAddress"] !== null) {
-            $this->PrivateIpAddress = $param["PrivateIpAddress"];
+        if (array_key_exists('PrivateIpAddress',$param) and $param['PrivateIpAddress'] !== null) {
+            $this->PrivateIpAddress = $param['PrivateIpAddress'];
         }
 
-        if (array_key_exists("InPkg",$param) and $param["InPkg"] !== null) {
-            $this->InPkg = $param["InPkg"];
+        if (array_key_exists('InPkg',$param) and $param['InPkg'] !== null) {
+            $this->InPkg = $param['InPkg'];
         }
 
-        if (array_key_exists("OutPkg",$param) and $param["OutPkg"] !== null) {
-            $this->OutPkg = $param["OutPkg"];
+        if (array_key_exists('OutPkg',$param) and $param['OutPkg'] !== null) {
+            $this->OutPkg = $param['OutPkg'];
         }
 
-        if (array_key_exists("InTraffic",$param) and $param["InTraffic"] !== null) {
-            $this->InTraffic = $param["InTraffic"];
+        if (array_key_exists('InTraffic',$param) and $param['InTraffic'] !== null) {
+            $this->InTraffic = $param['InTraffic'];
         }
 
-        if (array_key_exists("OutTraffic",$param) and $param["OutTraffic"] !== null) {
-            $this->OutTraffic = $param["OutTraffic"];
+        if (array_key_exists('OutTraffic',$param) and $param['OutTraffic'] !== null) {
+            $this->OutTraffic = $param['OutTraffic'];
         }
     }
 }

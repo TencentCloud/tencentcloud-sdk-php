@@ -58,13 +58,13 @@ class GroupOffsetResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("TopicList",$param) and $param["TopicList"] !== null) {
+        if (array_key_exists('TopicList',$param) and $param['TopicList'] !== null) {
             $this->TopicList = [];
-            foreach ($param["TopicList"] as $key => $value){
+            foreach ($param['TopicList'] as $key => $value){
                 $obj = new GroupOffsetTopic();
                 $obj->deserialize($value);
                 array_push($this->TopicList, $obj);

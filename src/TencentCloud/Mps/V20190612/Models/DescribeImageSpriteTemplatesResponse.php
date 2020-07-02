@@ -62,21 +62,21 @@ class DescribeImageSpriteTemplatesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("ImageSpriteTemplateSet",$param) and $param["ImageSpriteTemplateSet"] !== null) {
+        if (array_key_exists('ImageSpriteTemplateSet',$param) and $param['ImageSpriteTemplateSet'] !== null) {
             $this->ImageSpriteTemplateSet = [];
-            foreach ($param["ImageSpriteTemplateSet"] as $key => $value){
+            foreach ($param['ImageSpriteTemplateSet'] as $key => $value){
                 $obj = new ImageSpriteTemplate();
                 $obj->deserialize($value);
                 array_push($this->ImageSpriteTemplateSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

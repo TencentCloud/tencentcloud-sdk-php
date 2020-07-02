@@ -62,21 +62,21 @@ class GetCheckSimilarPersonJobIdListResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("JobIdInfos",$param) and $param["JobIdInfos"] !== null) {
+        if (array_key_exists('JobIdInfos',$param) and $param['JobIdInfos'] !== null) {
             $this->JobIdInfos = [];
-            foreach ($param["JobIdInfos"] as $key => $value){
+            foreach ($param['JobIdInfos'] as $key => $value){
                 $obj = new JobIdInfo();
                 $obj->deserialize($value);
                 array_push($this->JobIdInfos, $obj);
             }
         }
 
-        if (array_key_exists("JobIdNum",$param) and $param["JobIdNum"] !== null) {
-            $this->JobIdNum = $param["JobIdNum"];
+        if (array_key_exists('JobIdNum',$param) and $param['JobIdNum'] !== null) {
+            $this->JobIdNum = $param['JobIdNum'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

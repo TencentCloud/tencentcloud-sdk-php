@@ -102,36 +102,36 @@ class DescribeConfigReleasesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ConfigName",$param) and $param["ConfigName"] !== null) {
-            $this->ConfigName = $param["ConfigName"];
+        if (array_key_exists('ConfigName',$param) and $param['ConfigName'] !== null) {
+            $this->ConfigName = $param['ConfigName'];
         }
 
-        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
-            $this->GroupId = $param["GroupId"];
+        if (array_key_exists('GroupId',$param) and $param['GroupId'] !== null) {
+            $this->GroupId = $param['GroupId'];
         }
 
-        if (array_key_exists("NamespaceId",$param) and $param["NamespaceId"] !== null) {
-            $this->NamespaceId = $param["NamespaceId"];
+        if (array_key_exists('NamespaceId',$param) and $param['NamespaceId'] !== null) {
+            $this->NamespaceId = $param['NamespaceId'];
         }
 
-        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
-            $this->ClusterId = $param["ClusterId"];
+        if (array_key_exists('ClusterId',$param) and $param['ClusterId'] !== null) {
+            $this->ClusterId = $param['ClusterId'];
         }
 
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
+        if (array_key_exists('Limit',$param) and $param['Limit'] !== null) {
+            $this->Limit = $param['Limit'];
         }
 
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
+        if (array_key_exists('Offset',$param) and $param['Offset'] !== null) {
+            $this->Offset = $param['Offset'];
         }
 
-        if (array_key_exists("ConfigId",$param) and $param["ConfigId"] !== null) {
-            $this->ConfigId = $param["ConfigId"];
+        if (array_key_exists('ConfigId',$param) and $param['ConfigId'] !== null) {
+            $this->ConfigId = $param['ConfigId'];
         }
 
-        if (array_key_exists("ApplicationId",$param) and $param["ApplicationId"] !== null) {
-            $this->ApplicationId = $param["ApplicationId"];
+        if (array_key_exists('ApplicationId',$param) and $param['ApplicationId'] !== null) {
+            $this->ApplicationId = $param['ApplicationId'];
         }
     }
 }

@@ -194,40 +194,40 @@ class ModifySmsSignRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SignId",$param) and $param["SignId"] !== null) {
-            $this->SignId = $param["SignId"];
+        if (array_key_exists('SignId',$param) and $param['SignId'] !== null) {
+            $this->SignId = $param['SignId'];
         }
 
-        if (array_key_exists("SignName",$param) and $param["SignName"] !== null) {
-            $this->SignName = $param["SignName"];
+        if (array_key_exists('SignName',$param) and $param['SignName'] !== null) {
+            $this->SignName = $param['SignName'];
         }
 
-        if (array_key_exists("SignType",$param) and $param["SignType"] !== null) {
-            $this->SignType = $param["SignType"];
+        if (array_key_exists('SignType',$param) and $param['SignType'] !== null) {
+            $this->SignType = $param['SignType'];
         }
 
-        if (array_key_exists("DocumentType",$param) and $param["DocumentType"] !== null) {
-            $this->DocumentType = $param["DocumentType"];
+        if (array_key_exists('DocumentType',$param) and $param['DocumentType'] !== null) {
+            $this->DocumentType = $param['DocumentType'];
         }
 
-        if (array_key_exists("International",$param) and $param["International"] !== null) {
-            $this->International = $param["International"];
+        if (array_key_exists('International',$param) and $param['International'] !== null) {
+            $this->International = $param['International'];
         }
 
-        if (array_key_exists("UsedMethod",$param) and $param["UsedMethod"] !== null) {
-            $this->UsedMethod = $param["UsedMethod"];
+        if (array_key_exists('UsedMethod',$param) and $param['UsedMethod'] !== null) {
+            $this->UsedMethod = $param['UsedMethod'];
         }
 
-        if (array_key_exists("ProofImage",$param) and $param["ProofImage"] !== null) {
-            $this->ProofImage = $param["ProofImage"];
+        if (array_key_exists('ProofImage',$param) and $param['ProofImage'] !== null) {
+            $this->ProofImage = $param['ProofImage'];
         }
 
-        if (array_key_exists("CommissionImage",$param) and $param["CommissionImage"] !== null) {
-            $this->CommissionImage = $param["CommissionImage"];
+        if (array_key_exists('CommissionImage',$param) and $param['CommissionImage'] !== null) {
+            $this->CommissionImage = $param['CommissionImage'];
         }
 
-        if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
-            $this->Remark = $param["Remark"];
+        if (array_key_exists('Remark',$param) and $param['Remark'] !== null) {
+            $this->Remark = $param['Remark'];
         }
     }
 }

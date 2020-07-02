@@ -66,21 +66,21 @@ class DescribeNetworkInterfacesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("NetworkInterfaceSet",$param) and $param["NetworkInterfaceSet"] !== null) {
+        if (array_key_exists('NetworkInterfaceSet',$param) and $param['NetworkInterfaceSet'] !== null) {
             $this->NetworkInterfaceSet = [];
-            foreach ($param["NetworkInterfaceSet"] as $key => $value){
+            foreach ($param['NetworkInterfaceSet'] as $key => $value){
                 $obj = new NetworkInterface();
                 $obj->deserialize($value);
                 array_push($this->NetworkInterfaceSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

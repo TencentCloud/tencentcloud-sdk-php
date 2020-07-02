@@ -62,16 +62,16 @@ class CustomMetaInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MetaDataJdbcUrl",$param) and $param["MetaDataJdbcUrl"] !== null) {
-            $this->MetaDataJdbcUrl = $param["MetaDataJdbcUrl"];
+        if (array_key_exists('MetaDataJdbcUrl',$param) and $param['MetaDataJdbcUrl'] !== null) {
+            $this->MetaDataJdbcUrl = $param['MetaDataJdbcUrl'];
         }
 
-        if (array_key_exists("MetaDataUser",$param) and $param["MetaDataUser"] !== null) {
-            $this->MetaDataUser = $param["MetaDataUser"];
+        if (array_key_exists('MetaDataUser',$param) and $param['MetaDataUser'] !== null) {
+            $this->MetaDataUser = $param['MetaDataUser'];
         }
 
-        if (array_key_exists("MetaDataPass",$param) and $param["MetaDataPass"] !== null) {
-            $this->MetaDataPass = $param["MetaDataPass"];
+        if (array_key_exists('MetaDataPass',$param) and $param['MetaDataPass'] !== null) {
+            $this->MetaDataPass = $param['MetaDataPass'];
         }
     }
 }

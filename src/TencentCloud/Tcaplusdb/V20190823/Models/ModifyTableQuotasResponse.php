@@ -62,21 +62,21 @@ class ModifyTableQuotasResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("TableResults",$param) and $param["TableResults"] !== null) {
+        if (array_key_exists('TableResults',$param) and $param['TableResults'] !== null) {
             $this->TableResults = [];
-            foreach ($param["TableResults"] as $key => $value){
+            foreach ($param['TableResults'] as $key => $value){
                 $obj = new TableResultNew();
                 $obj->deserialize($value);
                 array_push($this->TableResults, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

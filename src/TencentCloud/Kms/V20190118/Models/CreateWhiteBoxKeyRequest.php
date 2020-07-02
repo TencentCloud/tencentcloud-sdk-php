@@ -70,21 +70,21 @@ class CreateWhiteBoxKeyRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Alias",$param) and $param["Alias"] !== null) {
-            $this->Alias = $param["Alias"];
+        if (array_key_exists('Alias',$param) and $param['Alias'] !== null) {
+            $this->Alias = $param['Alias'];
         }
 
-        if (array_key_exists("Algorithm",$param) and $param["Algorithm"] !== null) {
-            $this->Algorithm = $param["Algorithm"];
+        if (array_key_exists('Algorithm',$param) and $param['Algorithm'] !== null) {
+            $this->Algorithm = $param['Algorithm'];
         }
 
-        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
-            $this->Description = $param["Description"];
+        if (array_key_exists('Description',$param) and $param['Description'] !== null) {
+            $this->Description = $param['Description'];
         }
 
-        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+        if (array_key_exists('Tags',$param) and $param['Tags'] !== null) {
             $this->Tags = [];
-            foreach ($param["Tags"] as $key => $value){
+            foreach ($param['Tags'] as $key => $value){
                 $obj = new Tag();
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);

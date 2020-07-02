@@ -62,16 +62,16 @@ class RegionInstanceCount extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Region",$param) and $param["Region"] !== null) {
-            $this->Region = $param["Region"];
+        if (array_key_exists('Region',$param) and $param['Region'] !== null) {
+            $this->Region = $param['Region'];
         }
 
-        if (array_key_exists("RegionV3",$param) and $param["RegionV3"] !== null) {
-            $this->RegionV3 = $param["RegionV3"];
+        if (array_key_exists('RegionV3',$param) and $param['RegionV3'] !== null) {
+            $this->RegionV3 = $param['RegionV3'];
         }
 
-        if (array_key_exists("Count",$param) and $param["Count"] !== null) {
-            $this->Count = $param["Count"];
+        if (array_key_exists('Count',$param) and $param['Count'] !== null) {
+            $this->Count = $param['Count'];
         }
     }
 }

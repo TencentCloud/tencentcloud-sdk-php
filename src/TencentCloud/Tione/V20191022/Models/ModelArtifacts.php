@@ -50,8 +50,8 @@ class ModelArtifacts extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CosModelArtifacts",$param) and $param["CosModelArtifacts"] !== null) {
-            $this->CosModelArtifacts = $param["CosModelArtifacts"];
+        if (array_key_exists('CosModelArtifacts',$param) and $param['CosModelArtifacts'] !== null) {
+            $this->CosModelArtifacts = $param['CosModelArtifacts'];
         }
     }
 }

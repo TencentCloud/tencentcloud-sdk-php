@@ -62,16 +62,16 @@ class AppResetPasswordRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AccessToken",$param) and $param["AccessToken"] !== null) {
-            $this->AccessToken = $param["AccessToken"];
+        if (array_key_exists('AccessToken',$param) and $param['AccessToken'] !== null) {
+            $this->AccessToken = $param['AccessToken'];
         }
 
-        if (array_key_exists("OldPassword",$param) and $param["OldPassword"] !== null) {
-            $this->OldPassword = $param["OldPassword"];
+        if (array_key_exists('OldPassword',$param) and $param['OldPassword'] !== null) {
+            $this->OldPassword = $param['OldPassword'];
         }
 
-        if (array_key_exists("NewPassword",$param) and $param["NewPassword"] !== null) {
-            $this->NewPassword = $param["NewPassword"];
+        if (array_key_exists('NewPassword',$param) and $param['NewPassword'] !== null) {
+            $this->NewPassword = $param['NewPassword'];
         }
     }
 }

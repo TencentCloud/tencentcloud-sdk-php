@@ -102,28 +102,28 @@ development: 开发环境
         if ($param === null) {
             return;
         }
-        if (array_key_exists("UserId",$param) and $param["UserId"] !== null) {
-            $this->UserId = $param["UserId"];
+        if (array_key_exists('UserId',$param) and $param['UserId'] !== null) {
+            $this->UserId = $param['UserId'];
         }
 
-        if (array_key_exists("RefundId",$param) and $param["RefundId"] !== null) {
-            $this->RefundId = $param["RefundId"];
+        if (array_key_exists('RefundId',$param) and $param['RefundId'] !== null) {
+            $this->RefundId = $param['RefundId'];
         }
 
-        if (array_key_exists("MidasAppId",$param) and $param["MidasAppId"] !== null) {
-            $this->MidasAppId = $param["MidasAppId"];
+        if (array_key_exists('MidasAppId',$param) and $param['MidasAppId'] !== null) {
+            $this->MidasAppId = $param['MidasAppId'];
         }
 
-        if (array_key_exists("MidasSecretId",$param) and $param["MidasSecretId"] !== null) {
-            $this->MidasSecretId = $param["MidasSecretId"];
+        if (array_key_exists('MidasSecretId',$param) and $param['MidasSecretId'] !== null) {
+            $this->MidasSecretId = $param['MidasSecretId'];
         }
 
-        if (array_key_exists("MidasSignature",$param) and $param["MidasSignature"] !== null) {
-            $this->MidasSignature = $param["MidasSignature"];
+        if (array_key_exists('MidasSignature',$param) and $param['MidasSignature'] !== null) {
+            $this->MidasSignature = $param['MidasSignature'];
         }
 
-        if (array_key_exists("MidasEnvironment",$param) and $param["MidasEnvironment"] !== null) {
-            $this->MidasEnvironment = $param["MidasEnvironment"];
+        if (array_key_exists('MidasEnvironment',$param) and $param['MidasEnvironment'] !== null) {
+            $this->MidasEnvironment = $param['MidasEnvironment'];
         }
     }
 }

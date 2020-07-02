@@ -46,8 +46,8 @@ class DeleteEipRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("EipIds",$param) and $param["EipIds"] !== null) {
-            $this->EipIds = $param["EipIds"];
+        if (array_key_exists('EipIds',$param) and $param['EipIds'] !== null) {
+            $this->EipIds = $param['EipIds'];
         }
     }
 }

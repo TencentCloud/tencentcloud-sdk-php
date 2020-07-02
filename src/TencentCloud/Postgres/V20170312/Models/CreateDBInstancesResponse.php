@@ -70,20 +70,20 @@ class CreateDBInstancesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DealNames",$param) and $param["DealNames"] !== null) {
-            $this->DealNames = $param["DealNames"];
+        if (array_key_exists('DealNames',$param) and $param['DealNames'] !== null) {
+            $this->DealNames = $param['DealNames'];
         }
 
-        if (array_key_exists("BillId",$param) and $param["BillId"] !== null) {
-            $this->BillId = $param["BillId"];
+        if (array_key_exists('BillId',$param) and $param['BillId'] !== null) {
+            $this->BillId = $param['BillId'];
         }
 
-        if (array_key_exists("DBInstanceIdSet",$param) and $param["DBInstanceIdSet"] !== null) {
-            $this->DBInstanceIdSet = $param["DBInstanceIdSet"];
+        if (array_key_exists('DBInstanceIdSet',$param) and $param['DBInstanceIdSet'] !== null) {
+            $this->DBInstanceIdSet = $param['DBInstanceIdSet'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

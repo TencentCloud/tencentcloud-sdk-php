@@ -78,25 +78,25 @@ class CreateL7CCRuleRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Business",$param) and $param["Business"] !== null) {
-            $this->Business = $param["Business"];
+        if (array_key_exists('Business',$param) and $param['Business'] !== null) {
+            $this->Business = $param['Business'];
         }
 
-        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
-            $this->Id = $param["Id"];
+        if (array_key_exists('Id',$param) and $param['Id'] !== null) {
+            $this->Id = $param['Id'];
         }
 
-        if (array_key_exists("Method",$param) and $param["Method"] !== null) {
-            $this->Method = $param["Method"];
+        if (array_key_exists('Method',$param) and $param['Method'] !== null) {
+            $this->Method = $param['Method'];
         }
 
-        if (array_key_exists("RuleId",$param) and $param["RuleId"] !== null) {
-            $this->RuleId = $param["RuleId"];
+        if (array_key_exists('RuleId',$param) and $param['RuleId'] !== null) {
+            $this->RuleId = $param['RuleId'];
         }
 
-        if (array_key_exists("RuleConfig",$param) and $param["RuleConfig"] !== null) {
+        if (array_key_exists('RuleConfig',$param) and $param['RuleConfig'] !== null) {
             $this->RuleConfig = [];
-            foreach ($param["RuleConfig"] as $key => $value){
+            foreach ($param['RuleConfig'] as $key => $value){
                 $obj = new CCRuleConfig();
                 $obj->deserialize($value);
                 array_push($this->RuleConfig, $obj);

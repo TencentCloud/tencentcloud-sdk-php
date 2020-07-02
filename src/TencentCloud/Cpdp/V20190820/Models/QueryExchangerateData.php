@@ -78,24 +78,24 @@ class QueryExchangerateData extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Rate",$param) and $param["Rate"] !== null) {
-            $this->Rate = $param["Rate"];
+        if (array_key_exists('Rate',$param) and $param['Rate'] !== null) {
+            $this->Rate = $param['Rate'];
         }
 
-        if (array_key_exists("SourceCurrency",$param) and $param["SourceCurrency"] !== null) {
-            $this->SourceCurrency = $param["SourceCurrency"];
+        if (array_key_exists('SourceCurrency',$param) and $param['SourceCurrency'] !== null) {
+            $this->SourceCurrency = $param['SourceCurrency'];
         }
 
-        if (array_key_exists("TargetCurrency",$param) and $param["TargetCurrency"] !== null) {
-            $this->TargetCurrency = $param["TargetCurrency"];
+        if (array_key_exists('TargetCurrency',$param) and $param['TargetCurrency'] !== null) {
+            $this->TargetCurrency = $param['TargetCurrency'];
         }
 
-        if (array_key_exists("RateTime",$param) and $param["RateTime"] !== null) {
-            $this->RateTime = $param["RateTime"];
+        if (array_key_exists('RateTime',$param) and $param['RateTime'] !== null) {
+            $this->RateTime = $param['RateTime'];
         }
 
-        if (array_key_exists("BaseCurrency",$param) and $param["BaseCurrency"] !== null) {
-            $this->BaseCurrency = $param["BaseCurrency"];
+        if (array_key_exists('BaseCurrency',$param) and $param['BaseCurrency'] !== null) {
+            $this->BaseCurrency = $param['BaseCurrency'];
         }
     }
 }

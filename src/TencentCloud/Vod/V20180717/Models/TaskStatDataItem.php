@@ -62,16 +62,16 @@ class TaskStatDataItem extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Time",$param) and $param["Time"] !== null) {
-            $this->Time = $param["Time"];
+        if (array_key_exists('Time',$param) and $param['Time'] !== null) {
+            $this->Time = $param['Time'];
         }
 
-        if (array_key_exists("Count",$param) and $param["Count"] !== null) {
-            $this->Count = $param["Count"];
+        if (array_key_exists('Count',$param) and $param['Count'] !== null) {
+            $this->Count = $param['Count'];
         }
 
-        if (array_key_exists("Usage",$param) and $param["Usage"] !== null) {
-            $this->Usage = $param["Usage"];
+        if (array_key_exists('Usage',$param) and $param['Usage'] !== null) {
+            $this->Usage = $param['Usage'];
         }
     }
 }

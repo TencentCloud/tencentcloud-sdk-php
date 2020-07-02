@@ -122,40 +122,40 @@ class QuotaInvoiceOCRResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InvoiceNum",$param) and $param["InvoiceNum"] !== null) {
-            $this->InvoiceNum = $param["InvoiceNum"];
+        if (array_key_exists('InvoiceNum',$param) and $param['InvoiceNum'] !== null) {
+            $this->InvoiceNum = $param['InvoiceNum'];
         }
 
-        if (array_key_exists("InvoiceCode",$param) and $param["InvoiceCode"] !== null) {
-            $this->InvoiceCode = $param["InvoiceCode"];
+        if (array_key_exists('InvoiceCode',$param) and $param['InvoiceCode'] !== null) {
+            $this->InvoiceCode = $param['InvoiceCode'];
         }
 
-        if (array_key_exists("Rate",$param) and $param["Rate"] !== null) {
-            $this->Rate = $param["Rate"];
+        if (array_key_exists('Rate',$param) and $param['Rate'] !== null) {
+            $this->Rate = $param['Rate'];
         }
 
-        if (array_key_exists("RateNum",$param) and $param["RateNum"] !== null) {
-            $this->RateNum = $param["RateNum"];
+        if (array_key_exists('RateNum',$param) and $param['RateNum'] !== null) {
+            $this->RateNum = $param['RateNum'];
         }
 
-        if (array_key_exists("InvoiceType",$param) and $param["InvoiceType"] !== null) {
-            $this->InvoiceType = $param["InvoiceType"];
+        if (array_key_exists('InvoiceType',$param) and $param['InvoiceType'] !== null) {
+            $this->InvoiceType = $param['InvoiceType'];
         }
 
-        if (array_key_exists("Province",$param) and $param["Province"] !== null) {
-            $this->Province = $param["Province"];
+        if (array_key_exists('Province',$param) and $param['Province'] !== null) {
+            $this->Province = $param['Province'];
         }
 
-        if (array_key_exists("City",$param) and $param["City"] !== null) {
-            $this->City = $param["City"];
+        if (array_key_exists('City',$param) and $param['City'] !== null) {
+            $this->City = $param['City'];
         }
 
-        if (array_key_exists("HasStamp",$param) and $param["HasStamp"] !== null) {
-            $this->HasStamp = $param["HasStamp"];
+        if (array_key_exists('HasStamp',$param) and $param['HasStamp'] !== null) {
+            $this->HasStamp = $param['HasStamp'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

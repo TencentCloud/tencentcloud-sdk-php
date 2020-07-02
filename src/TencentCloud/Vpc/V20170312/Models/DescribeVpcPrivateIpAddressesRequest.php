@@ -54,12 +54,12 @@ class DescribeVpcPrivateIpAddressesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
-            $this->VpcId = $param["VpcId"];
+        if (array_key_exists('VpcId',$param) and $param['VpcId'] !== null) {
+            $this->VpcId = $param['VpcId'];
         }
 
-        if (array_key_exists("PrivateIpAddresses",$param) and $param["PrivateIpAddresses"] !== null) {
-            $this->PrivateIpAddresses = $param["PrivateIpAddresses"];
+        if (array_key_exists('PrivateIpAddresses',$param) and $param['PrivateIpAddresses'] !== null) {
+            $this->PrivateIpAddresses = $param['PrivateIpAddresses'];
         }
     }
 }

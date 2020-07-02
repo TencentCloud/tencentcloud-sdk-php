@@ -70,21 +70,21 @@ class DescribeProductListResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ProductList",$param) and $param["ProductList"] !== null) {
+        if (array_key_exists('ProductList',$param) and $param['ProductList'] !== null) {
             $this->ProductList = [];
-            foreach ($param["ProductList"] as $key => $value){
+            foreach ($param['ProductList'] as $key => $value){
                 $obj = new ProductSimple();
                 $obj->deserialize($value);
                 array_push($this->ProductList, $obj);
             }
         }
 
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

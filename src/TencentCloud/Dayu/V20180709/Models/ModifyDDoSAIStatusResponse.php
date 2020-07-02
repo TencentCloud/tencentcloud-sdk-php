@@ -62,16 +62,16 @@ class ModifyDDoSAIStatusResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DDoSAI",$param) and $param["DDoSAI"] !== null) {
-            $this->DDoSAI = $param["DDoSAI"];
+        if (array_key_exists('DDoSAI',$param) and $param['DDoSAI'] !== null) {
+            $this->DDoSAI = $param['DDoSAI'];
         }
 
-        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
-            $this->Id = $param["Id"];
+        if (array_key_exists('Id',$param) and $param['Id'] !== null) {
+            $this->Id = $param['Id'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

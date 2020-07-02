@@ -54,12 +54,12 @@ class AutoScalingGroupRange extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MinSize",$param) and $param["MinSize"] !== null) {
-            $this->MinSize = $param["MinSize"];
+        if (array_key_exists('MinSize',$param) and $param['MinSize'] !== null) {
+            $this->MinSize = $param['MinSize'];
         }
 
-        if (array_key_exists("MaxSize",$param) and $param["MaxSize"] !== null) {
-            $this->MaxSize = $param["MaxSize"];
+        if (array_key_exists('MaxSize',$param) and $param['MaxSize'] !== null) {
+            $this->MaxSize = $param['MaxSize'];
         }
     }
 }

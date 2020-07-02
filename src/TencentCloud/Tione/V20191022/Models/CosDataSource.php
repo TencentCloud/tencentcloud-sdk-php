@@ -86,20 +86,20 @@ class CosDataSource extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Bucket",$param) and $param["Bucket"] !== null) {
-            $this->Bucket = $param["Bucket"];
+        if (array_key_exists('Bucket',$param) and $param['Bucket'] !== null) {
+            $this->Bucket = $param['Bucket'];
         }
 
-        if (array_key_exists("KeyPrefix",$param) and $param["KeyPrefix"] !== null) {
-            $this->KeyPrefix = $param["KeyPrefix"];
+        if (array_key_exists('KeyPrefix',$param) and $param['KeyPrefix'] !== null) {
+            $this->KeyPrefix = $param['KeyPrefix'];
         }
 
-        if (array_key_exists("DataDistributionType",$param) and $param["DataDistributionType"] !== null) {
-            $this->DataDistributionType = $param["DataDistributionType"];
+        if (array_key_exists('DataDistributionType',$param) and $param['DataDistributionType'] !== null) {
+            $this->DataDistributionType = $param['DataDistributionType'];
         }
 
-        if (array_key_exists("DataType",$param) and $param["DataType"] !== null) {
-            $this->DataType = $param["DataType"];
+        if (array_key_exists('DataType',$param) and $param['DataType'] !== null) {
+            $this->DataType = $param['DataType'];
         }
     }
 }

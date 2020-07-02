@@ -62,21 +62,21 @@ class DescribeSyncJobsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("JobList",$param) and $param["JobList"] !== null) {
+        if (array_key_exists('JobList',$param) and $param['JobList'] !== null) {
             $this->JobList = [];
-            foreach ($param["JobList"] as $key => $value){
+            foreach ($param['JobList'] as $key => $value){
                 $obj = new SyncJobInfo();
                 $obj->deserialize($value);
                 array_push($this->JobList, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

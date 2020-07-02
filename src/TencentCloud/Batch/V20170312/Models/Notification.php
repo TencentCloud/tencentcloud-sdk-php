@@ -54,13 +54,13 @@ class Notification extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TopicName",$param) and $param["TopicName"] !== null) {
-            $this->TopicName = $param["TopicName"];
+        if (array_key_exists('TopicName',$param) and $param['TopicName'] !== null) {
+            $this->TopicName = $param['TopicName'];
         }
 
-        if (array_key_exists("EventConfigs",$param) and $param["EventConfigs"] !== null) {
+        if (array_key_exists('EventConfigs',$param) and $param['EventConfigs'] !== null) {
             $this->EventConfigs = [];
-            foreach ($param["EventConfigs"] as $key => $value){
+            foreach ($param['EventConfigs'] as $key => $value){
                 $obj = new EventConfig();
                 $obj->deserialize($value);
                 array_push($this->EventConfigs, $obj);

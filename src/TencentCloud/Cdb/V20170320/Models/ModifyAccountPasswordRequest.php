@@ -62,17 +62,17 @@ class ModifyAccountPasswordRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("NewPassword",$param) and $param["NewPassword"] !== null) {
-            $this->NewPassword = $param["NewPassword"];
+        if (array_key_exists('NewPassword',$param) and $param['NewPassword'] !== null) {
+            $this->NewPassword = $param['NewPassword'];
         }
 
-        if (array_key_exists("Accounts",$param) and $param["Accounts"] !== null) {
+        if (array_key_exists('Accounts',$param) and $param['Accounts'] !== null) {
             $this->Accounts = [];
-            foreach ($param["Accounts"] as $key => $value){
+            foreach ($param['Accounts'] as $key => $value){
                 $obj = new Account();
                 $obj->deserialize($value);
                 array_push($this->Accounts, $obj);

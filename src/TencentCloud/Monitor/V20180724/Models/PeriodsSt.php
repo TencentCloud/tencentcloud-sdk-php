@@ -54,12 +54,12 @@ class PeriodsSt extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Period",$param) and $param["Period"] !== null) {
-            $this->Period = $param["Period"];
+        if (array_key_exists('Period',$param) and $param['Period'] !== null) {
+            $this->Period = $param['Period'];
         }
 
-        if (array_key_exists("StatType",$param) and $param["StatType"] !== null) {
-            $this->StatType = $param["StatType"];
+        if (array_key_exists('StatType',$param) and $param['StatType'] !== null) {
+            $this->StatType = $param['StatType'];
         }
     }
 }

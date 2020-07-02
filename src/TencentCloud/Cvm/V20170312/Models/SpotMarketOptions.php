@@ -54,12 +54,12 @@ class SpotMarketOptions extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MaxPrice",$param) and $param["MaxPrice"] !== null) {
-            $this->MaxPrice = $param["MaxPrice"];
+        if (array_key_exists('MaxPrice',$param) and $param['MaxPrice'] !== null) {
+            $this->MaxPrice = $param['MaxPrice'];
         }
 
-        if (array_key_exists("SpotInstanceType",$param) and $param["SpotInstanceType"] !== null) {
-            $this->SpotInstanceType = $param["SpotInstanceType"];
+        if (array_key_exists('SpotInstanceType',$param) and $param['SpotInstanceType'] !== null) {
+            $this->SpotInstanceType = $param['SpotInstanceType'];
         }
     }
 }

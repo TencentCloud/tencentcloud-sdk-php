@@ -54,17 +54,17 @@ class DescribeDbauditInstanceTypeResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DbauditTypesSet",$param) and $param["DbauditTypesSet"] !== null) {
+        if (array_key_exists('DbauditTypesSet',$param) and $param['DbauditTypesSet'] !== null) {
             $this->DbauditTypesSet = [];
-            foreach ($param["DbauditTypesSet"] as $key => $value){
+            foreach ($param['DbauditTypesSet'] as $key => $value){
                 $obj = new DbauditTypesInfo();
                 $obj->deserialize($value);
                 array_push($this->DbauditTypesSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

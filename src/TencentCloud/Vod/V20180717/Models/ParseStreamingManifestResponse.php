@@ -54,12 +54,12 @@ class ParseStreamingManifestResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MediaSegmentSet",$param) and $param["MediaSegmentSet"] !== null) {
-            $this->MediaSegmentSet = $param["MediaSegmentSet"];
+        if (array_key_exists('MediaSegmentSet',$param) and $param['MediaSegmentSet'] !== null) {
+            $this->MediaSegmentSet = $param['MediaSegmentSet'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

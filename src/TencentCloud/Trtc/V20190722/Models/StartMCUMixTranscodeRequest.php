@@ -78,27 +78,27 @@ class StartMCUMixTranscodeRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SdkAppId",$param) and $param["SdkAppId"] !== null) {
-            $this->SdkAppId = $param["SdkAppId"];
+        if (array_key_exists('SdkAppId',$param) and $param['SdkAppId'] !== null) {
+            $this->SdkAppId = $param['SdkAppId'];
         }
 
-        if (array_key_exists("RoomId",$param) and $param["RoomId"] !== null) {
-            $this->RoomId = $param["RoomId"];
+        if (array_key_exists('RoomId',$param) and $param['RoomId'] !== null) {
+            $this->RoomId = $param['RoomId'];
         }
 
-        if (array_key_exists("OutputParams",$param) and $param["OutputParams"] !== null) {
+        if (array_key_exists('OutputParams',$param) and $param['OutputParams'] !== null) {
             $this->OutputParams = new OutputParams();
-            $this->OutputParams->deserialize($param["OutputParams"]);
+            $this->OutputParams->deserialize($param['OutputParams']);
         }
 
-        if (array_key_exists("EncodeParams",$param) and $param["EncodeParams"] !== null) {
+        if (array_key_exists('EncodeParams',$param) and $param['EncodeParams'] !== null) {
             $this->EncodeParams = new EncodeParams();
-            $this->EncodeParams->deserialize($param["EncodeParams"]);
+            $this->EncodeParams->deserialize($param['EncodeParams']);
         }
 
-        if (array_key_exists("LayoutParams",$param) and $param["LayoutParams"] !== null) {
+        if (array_key_exists('LayoutParams',$param) and $param['LayoutParams'] !== null) {
             $this->LayoutParams = new LayoutParams();
-            $this->LayoutParams->deserialize($param["LayoutParams"]);
+            $this->LayoutParams->deserialize($param['LayoutParams']);
         }
     }
 }

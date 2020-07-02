@@ -54,13 +54,13 @@ class DeleteSmsSignResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DeleteSignStatus",$param) and $param["DeleteSignStatus"] !== null) {
+        if (array_key_exists('DeleteSignStatus',$param) and $param['DeleteSignStatus'] !== null) {
             $this->DeleteSignStatus = new DeleteSignStatus();
-            $this->DeleteSignStatus->deserialize($param["DeleteSignStatus"]);
+            $this->DeleteSignStatus->deserialize($param['DeleteSignStatus']);
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

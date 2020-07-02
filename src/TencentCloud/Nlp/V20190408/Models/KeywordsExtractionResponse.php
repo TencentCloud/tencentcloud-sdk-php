@@ -54,17 +54,17 @@ class KeywordsExtractionResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Keywords",$param) and $param["Keywords"] !== null) {
+        if (array_key_exists('Keywords',$param) and $param['Keywords'] !== null) {
             $this->Keywords = [];
-            foreach ($param["Keywords"] as $key => $value){
+            foreach ($param['Keywords'] as $key => $value){
                 $obj = new Keyword();
                 $obj->deserialize($value);
                 array_push($this->Keywords, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

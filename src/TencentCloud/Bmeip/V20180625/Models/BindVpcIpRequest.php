@@ -62,16 +62,16 @@ class BindVpcIpRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("EipId",$param) and $param["EipId"] !== null) {
-            $this->EipId = $param["EipId"];
+        if (array_key_exists('EipId',$param) and $param['EipId'] !== null) {
+            $this->EipId = $param['EipId'];
         }
 
-        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
-            $this->VpcId = $param["VpcId"];
+        if (array_key_exists('VpcId',$param) and $param['VpcId'] !== null) {
+            $this->VpcId = $param['VpcId'];
         }
 
-        if (array_key_exists("VpcIp",$param) and $param["VpcIp"] !== null) {
-            $this->VpcIp = $param["VpcIp"];
+        if (array_key_exists('VpcIp',$param) and $param['VpcIp'] !== null) {
+            $this->VpcIp = $param['VpcIp'];
         }
     }
 }

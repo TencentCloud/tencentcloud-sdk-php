@@ -126,32 +126,32 @@ FINISH：已完成。
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
-            $this->TaskId = $param["TaskId"];
+        if (array_key_exists('TaskId',$param) and $param['TaskId'] !== null) {
+            $this->TaskId = $param['TaskId'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("ErrCode",$param) and $param["ErrCode"] !== null) {
-            $this->ErrCode = $param["ErrCode"];
+        if (array_key_exists('ErrCode',$param) and $param['ErrCode'] !== null) {
+            $this->ErrCode = $param['ErrCode'];
         }
 
-        if (array_key_exists("Message",$param) and $param["Message"] !== null) {
-            $this->Message = $param["Message"];
+        if (array_key_exists('Message',$param) and $param['Message'] !== null) {
+            $this->Message = $param['Message'];
         }
 
-        if (array_key_exists("FileId",$param) and $param["FileId"] !== null) {
-            $this->FileId = $param["FileId"];
+        if (array_key_exists('FileId',$param) and $param['FileId'] !== null) {
+            $this->FileId = $param['FileId'];
         }
 
-        if (array_key_exists("SourceDefinition",$param) and $param["SourceDefinition"] !== null) {
-            $this->SourceDefinition = $param["SourceDefinition"];
+        if (array_key_exists('SourceDefinition',$param) and $param['SourceDefinition'] !== null) {
+            $this->SourceDefinition = $param['SourceDefinition'];
         }
 
-        if (array_key_exists("PublishResult",$param) and $param["PublishResult"] !== null) {
-            $this->PublishResult = $param["PublishResult"];
+        if (array_key_exists('PublishResult',$param) and $param['PublishResult'] !== null) {
+            $this->PublishResult = $param['PublishResult'];
         }
     }
 }

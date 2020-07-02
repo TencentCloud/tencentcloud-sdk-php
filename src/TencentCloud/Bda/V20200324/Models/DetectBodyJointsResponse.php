@@ -54,17 +54,17 @@ class DetectBodyJointsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BodyJointsResults",$param) and $param["BodyJointsResults"] !== null) {
+        if (array_key_exists('BodyJointsResults',$param) and $param['BodyJointsResults'] !== null) {
             $this->BodyJointsResults = [];
-            foreach ($param["BodyJointsResults"] as $key => $value){
+            foreach ($param['BodyJointsResults'] as $key => $value){
                 $obj = new BodyJointsResult();
                 $obj->deserialize($value);
                 array_push($this->BodyJointsResults, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

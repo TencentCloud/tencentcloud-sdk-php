@@ -94,28 +94,28 @@ class CreateWhiteBoxKeyResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("EncryptKey",$param) and $param["EncryptKey"] !== null) {
-            $this->EncryptKey = $param["EncryptKey"];
+        if (array_key_exists('EncryptKey',$param) and $param['EncryptKey'] !== null) {
+            $this->EncryptKey = $param['EncryptKey'];
         }
 
-        if (array_key_exists("DecryptKey",$param) and $param["DecryptKey"] !== null) {
-            $this->DecryptKey = $param["DecryptKey"];
+        if (array_key_exists('DecryptKey',$param) and $param['DecryptKey'] !== null) {
+            $this->DecryptKey = $param['DecryptKey'];
         }
 
-        if (array_key_exists("KeyId",$param) and $param["KeyId"] !== null) {
-            $this->KeyId = $param["KeyId"];
+        if (array_key_exists('KeyId',$param) and $param['KeyId'] !== null) {
+            $this->KeyId = $param['KeyId'];
         }
 
-        if (array_key_exists("TagCode",$param) and $param["TagCode"] !== null) {
-            $this->TagCode = $param["TagCode"];
+        if (array_key_exists('TagCode',$param) and $param['TagCode'] !== null) {
+            $this->TagCode = $param['TagCode'];
         }
 
-        if (array_key_exists("TagMsg",$param) and $param["TagMsg"] !== null) {
-            $this->TagMsg = $param["TagMsg"];
+        if (array_key_exists('TagMsg',$param) and $param['TagMsg'] !== null) {
+            $this->TagMsg = $param['TagMsg'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

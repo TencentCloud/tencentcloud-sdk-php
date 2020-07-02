@@ -62,21 +62,21 @@ class DescribeWordSamplesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("WordSet",$param) and $param["WordSet"] !== null) {
+        if (array_key_exists('WordSet',$param) and $param['WordSet'] !== null) {
             $this->WordSet = [];
-            foreach ($param["WordSet"] as $key => $value){
+            foreach ($param['WordSet'] as $key => $value){
                 $obj = new AiSampleWord();
                 $obj->deserialize($value);
                 array_push($this->WordSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

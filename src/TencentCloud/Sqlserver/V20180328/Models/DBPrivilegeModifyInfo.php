@@ -54,12 +54,12 @@ class DBPrivilegeModifyInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DBName",$param) and $param["DBName"] !== null) {
-            $this->DBName = $param["DBName"];
+        if (array_key_exists('DBName',$param) and $param['DBName'] !== null) {
+            $this->DBName = $param['DBName'];
         }
 
-        if (array_key_exists("Privilege",$param) and $param["Privilege"] !== null) {
-            $this->Privilege = $param["Privilege"];
+        if (array_key_exists('Privilege',$param) and $param['Privilege'] !== null) {
+            $this->Privilege = $param['Privilege'];
         }
     }
 }

@@ -130,44 +130,44 @@ class DescribeClusterSecurityResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("UserName",$param) and $param["UserName"] !== null) {
-            $this->UserName = $param["UserName"];
+        if (array_key_exists('UserName',$param) and $param['UserName'] !== null) {
+            $this->UserName = $param['UserName'];
         }
 
-        if (array_key_exists("Password",$param) and $param["Password"] !== null) {
-            $this->Password = $param["Password"];
+        if (array_key_exists('Password',$param) and $param['Password'] !== null) {
+            $this->Password = $param['Password'];
         }
 
-        if (array_key_exists("CertificationAuthority",$param) and $param["CertificationAuthority"] !== null) {
-            $this->CertificationAuthority = $param["CertificationAuthority"];
+        if (array_key_exists('CertificationAuthority',$param) and $param['CertificationAuthority'] !== null) {
+            $this->CertificationAuthority = $param['CertificationAuthority'];
         }
 
-        if (array_key_exists("ClusterExternalEndpoint",$param) and $param["ClusterExternalEndpoint"] !== null) {
-            $this->ClusterExternalEndpoint = $param["ClusterExternalEndpoint"];
+        if (array_key_exists('ClusterExternalEndpoint',$param) and $param['ClusterExternalEndpoint'] !== null) {
+            $this->ClusterExternalEndpoint = $param['ClusterExternalEndpoint'];
         }
 
-        if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
-            $this->Domain = $param["Domain"];
+        if (array_key_exists('Domain',$param) and $param['Domain'] !== null) {
+            $this->Domain = $param['Domain'];
         }
 
-        if (array_key_exists("PgwEndpoint",$param) and $param["PgwEndpoint"] !== null) {
-            $this->PgwEndpoint = $param["PgwEndpoint"];
+        if (array_key_exists('PgwEndpoint',$param) and $param['PgwEndpoint'] !== null) {
+            $this->PgwEndpoint = $param['PgwEndpoint'];
         }
 
-        if (array_key_exists("SecurityPolicy",$param) and $param["SecurityPolicy"] !== null) {
-            $this->SecurityPolicy = $param["SecurityPolicy"];
+        if (array_key_exists('SecurityPolicy',$param) and $param['SecurityPolicy'] !== null) {
+            $this->SecurityPolicy = $param['SecurityPolicy'];
         }
 
-        if (array_key_exists("Kubeconfig",$param) and $param["Kubeconfig"] !== null) {
-            $this->Kubeconfig = $param["Kubeconfig"];
+        if (array_key_exists('Kubeconfig',$param) and $param['Kubeconfig'] !== null) {
+            $this->Kubeconfig = $param['Kubeconfig'];
         }
 
-        if (array_key_exists("JnsGwEndpoint",$param) and $param["JnsGwEndpoint"] !== null) {
-            $this->JnsGwEndpoint = $param["JnsGwEndpoint"];
+        if (array_key_exists('JnsGwEndpoint',$param) and $param['JnsGwEndpoint'] !== null) {
+            $this->JnsGwEndpoint = $param['JnsGwEndpoint'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

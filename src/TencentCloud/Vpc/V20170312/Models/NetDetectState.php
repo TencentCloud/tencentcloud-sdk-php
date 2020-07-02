@@ -54,13 +54,13 @@ class NetDetectState extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("NetDetectId",$param) and $param["NetDetectId"] !== null) {
-            $this->NetDetectId = $param["NetDetectId"];
+        if (array_key_exists('NetDetectId',$param) and $param['NetDetectId'] !== null) {
+            $this->NetDetectId = $param['NetDetectId'];
         }
 
-        if (array_key_exists("NetDetectIpStateSet",$param) and $param["NetDetectIpStateSet"] !== null) {
+        if (array_key_exists('NetDetectIpStateSet',$param) and $param['NetDetectIpStateSet'] !== null) {
             $this->NetDetectIpStateSet = [];
-            foreach ($param["NetDetectIpStateSet"] as $key => $value){
+            foreach ($param['NetDetectIpStateSet'] as $key => $value){
                 $obj = new NetDetectIpState();
                 $obj->deserialize($value);
                 array_push($this->NetDetectIpStateSet, $obj);

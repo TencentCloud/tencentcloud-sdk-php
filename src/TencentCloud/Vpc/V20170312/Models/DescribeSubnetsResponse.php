@@ -62,21 +62,21 @@ class DescribeSubnetsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("SubnetSet",$param) and $param["SubnetSet"] !== null) {
+        if (array_key_exists('SubnetSet',$param) and $param['SubnetSet'] !== null) {
             $this->SubnetSet = [];
-            foreach ($param["SubnetSet"] as $key => $value){
+            foreach ($param['SubnetSet'] as $key => $value){
                 $obj = new Subnet();
                 $obj->deserialize($value);
                 array_push($this->SubnetSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

@@ -46,8 +46,8 @@ class AddTemplateStatus extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TemplateId",$param) and $param["TemplateId"] !== null) {
-            $this->TemplateId = $param["TemplateId"];
+        if (array_key_exists('TemplateId',$param) and $param['TemplateId'] !== null) {
+            $this->TemplateId = $param['TemplateId'];
         }
     }
 }

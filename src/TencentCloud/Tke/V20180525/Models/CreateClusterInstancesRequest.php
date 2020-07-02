@@ -62,17 +62,17 @@ class CreateClusterInstancesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
-            $this->ClusterId = $param["ClusterId"];
+        if (array_key_exists('ClusterId',$param) and $param['ClusterId'] !== null) {
+            $this->ClusterId = $param['ClusterId'];
         }
 
-        if (array_key_exists("RunInstancePara",$param) and $param["RunInstancePara"] !== null) {
-            $this->RunInstancePara = $param["RunInstancePara"];
+        if (array_key_exists('RunInstancePara',$param) and $param['RunInstancePara'] !== null) {
+            $this->RunInstancePara = $param['RunInstancePara'];
         }
 
-        if (array_key_exists("InstanceAdvancedSettings",$param) and $param["InstanceAdvancedSettings"] !== null) {
+        if (array_key_exists('InstanceAdvancedSettings',$param) and $param['InstanceAdvancedSettings'] !== null) {
             $this->InstanceAdvancedSettings = new InstanceAdvancedSettings();
-            $this->InstanceAdvancedSettings->deserialize($param["InstanceAdvancedSettings"]);
+            $this->InstanceAdvancedSettings->deserialize($param['InstanceAdvancedSettings']);
         }
     }
 }

@@ -62,21 +62,21 @@ class DescribeNotebookInstancesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("NotebookInstanceSet",$param) and $param["NotebookInstanceSet"] !== null) {
+        if (array_key_exists('NotebookInstanceSet',$param) and $param['NotebookInstanceSet'] !== null) {
             $this->NotebookInstanceSet = [];
-            foreach ($param["NotebookInstanceSet"] as $key => $value){
+            foreach ($param['NotebookInstanceSet'] as $key => $value){
                 $obj = new NotebookInstanceSummary();
                 $obj->deserialize($value);
                 array_push($this->NotebookInstanceSet, $obj);
             }
         }
 
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

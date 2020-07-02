@@ -50,8 +50,8 @@ UTC 格式，例如：2018-06-29T19:00:00Z。
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PublishTime",$param) and $param["PublishTime"] !== null) {
-            $this->PublishTime = $param["PublishTime"];
+        if (array_key_exists('PublishTime',$param) and $param['PublishTime'] !== null) {
+            $this->PublishTime = $param['PublishTime'];
         }
     }
 }

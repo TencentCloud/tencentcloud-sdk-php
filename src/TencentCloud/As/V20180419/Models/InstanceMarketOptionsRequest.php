@@ -58,13 +58,13 @@ class InstanceMarketOptionsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SpotOptions",$param) and $param["SpotOptions"] !== null) {
+        if (array_key_exists('SpotOptions',$param) and $param['SpotOptions'] !== null) {
             $this->SpotOptions = new SpotMarketOptions();
-            $this->SpotOptions->deserialize($param["SpotOptions"]);
+            $this->SpotOptions->deserialize($param['SpotOptions']);
         }
 
-        if (array_key_exists("MarketType",$param) and $param["MarketType"] !== null) {
-            $this->MarketType = $param["MarketType"];
+        if (array_key_exists('MarketType',$param) and $param['MarketType'] !== null) {
+            $this->MarketType = $param['MarketType'];
         }
     }
 }

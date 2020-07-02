@@ -102,37 +102,37 @@ class DescribeCostSummaryByResourceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PayerUin",$param) and $param["PayerUin"] !== null) {
-            $this->PayerUin = $param["PayerUin"];
+        if (array_key_exists('PayerUin',$param) and $param['PayerUin'] !== null) {
+            $this->PayerUin = $param['PayerUin'];
         }
 
-        if (array_key_exists("BeginTime",$param) and $param["BeginTime"] !== null) {
-            $this->BeginTime = $param["BeginTime"];
+        if (array_key_exists('BeginTime',$param) and $param['BeginTime'] !== null) {
+            $this->BeginTime = $param['BeginTime'];
         }
 
-        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
-            $this->EndTime = $param["EndTime"];
+        if (array_key_exists('EndTime',$param) and $param['EndTime'] !== null) {
+            $this->EndTime = $param['EndTime'];
         }
 
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
+        if (array_key_exists('Limit',$param) and $param['Limit'] !== null) {
+            $this->Limit = $param['Limit'];
         }
 
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
+        if (array_key_exists('Offset',$param) and $param['Offset'] !== null) {
+            $this->Offset = $param['Offset'];
         }
 
-        if (array_key_exists("NeedRecordNum",$param) and $param["NeedRecordNum"] !== null) {
-            $this->NeedRecordNum = $param["NeedRecordNum"];
+        if (array_key_exists('NeedRecordNum',$param) and $param['NeedRecordNum'] !== null) {
+            $this->NeedRecordNum = $param['NeedRecordNum'];
         }
 
-        if (array_key_exists("NeedConditionValue",$param) and $param["NeedConditionValue"] !== null) {
-            $this->NeedConditionValue = $param["NeedConditionValue"];
+        if (array_key_exists('NeedConditionValue',$param) and $param['NeedConditionValue'] !== null) {
+            $this->NeedConditionValue = $param['NeedConditionValue'];
         }
 
-        if (array_key_exists("Conditions",$param) and $param["Conditions"] !== null) {
+        if (array_key_exists('Conditions',$param) and $param['Conditions'] !== null) {
             $this->Conditions = new Conditions();
-            $this->Conditions->deserialize($param["Conditions"]);
+            $this->Conditions->deserialize($param['Conditions']);
         }
     }
 }

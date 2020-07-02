@@ -54,12 +54,12 @@ class MediaAiAnalysisFrameTagItem extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Tag",$param) and $param["Tag"] !== null) {
-            $this->Tag = $param["Tag"];
+        if (array_key_exists('Tag',$param) and $param['Tag'] !== null) {
+            $this->Tag = $param['Tag'];
         }
 
-        if (array_key_exists("Confidence",$param) and $param["Confidence"] !== null) {
-            $this->Confidence = $param["Confidence"];
+        if (array_key_exists('Confidence',$param) and $param['Confidence'] !== null) {
+            $this->Confidence = $param['Confidence'];
         }
     }
 }

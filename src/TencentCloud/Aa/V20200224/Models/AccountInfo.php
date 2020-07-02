@@ -94,23 +94,23 @@ class AccountInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AccountType",$param) and $param["AccountType"] !== null) {
-            $this->AccountType = $param["AccountType"];
+        if (array_key_exists('AccountType',$param) and $param['AccountType'] !== null) {
+            $this->AccountType = $param['AccountType'];
         }
 
-        if (array_key_exists("QQAccount",$param) and $param["QQAccount"] !== null) {
+        if (array_key_exists('QQAccount',$param) and $param['QQAccount'] !== null) {
             $this->QQAccount = new QQAccountInfo();
-            $this->QQAccount->deserialize($param["QQAccount"]);
+            $this->QQAccount->deserialize($param['QQAccount']);
         }
 
-        if (array_key_exists("WeChatAccount",$param) and $param["WeChatAccount"] !== null) {
+        if (array_key_exists('WeChatAccount',$param) and $param['WeChatAccount'] !== null) {
             $this->WeChatAccount = new WeChatAccountInfo();
-            $this->WeChatAccount->deserialize($param["WeChatAccount"]);
+            $this->WeChatAccount->deserialize($param['WeChatAccount']);
         }
 
-        if (array_key_exists("OtherAccount",$param) and $param["OtherAccount"] !== null) {
+        if (array_key_exists('OtherAccount',$param) and $param['OtherAccount'] !== null) {
             $this->OtherAccount = new OtherAccountInfo();
-            $this->OtherAccount->deserialize($param["OtherAccount"]);
+            $this->OtherAccount->deserialize($param['OtherAccount']);
         }
     }
 }

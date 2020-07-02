@@ -66,16 +66,16 @@ class CreatePostpayPackageResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TranId",$param) and $param["TranId"] !== null) {
-            $this->TranId = $param["TranId"];
+        if (array_key_exists('TranId',$param) and $param['TranId'] !== null) {
+            $this->TranId = $param['TranId'];
         }
 
-        if (array_key_exists("EnvId",$param) and $param["EnvId"] !== null) {
-            $this->EnvId = $param["EnvId"];
+        if (array_key_exists('EnvId',$param) and $param['EnvId'] !== null) {
+            $this->EnvId = $param['EnvId'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

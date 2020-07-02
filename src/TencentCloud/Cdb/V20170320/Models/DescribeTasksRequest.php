@@ -182,36 +182,36 @@ class DescribeTasksRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("AsyncRequestId",$param) and $param["AsyncRequestId"] !== null) {
-            $this->AsyncRequestId = $param["AsyncRequestId"];
+        if (array_key_exists('AsyncRequestId',$param) and $param['AsyncRequestId'] !== null) {
+            $this->AsyncRequestId = $param['AsyncRequestId'];
         }
 
-        if (array_key_exists("TaskTypes",$param) and $param["TaskTypes"] !== null) {
-            $this->TaskTypes = $param["TaskTypes"];
+        if (array_key_exists('TaskTypes',$param) and $param['TaskTypes'] !== null) {
+            $this->TaskTypes = $param['TaskTypes'];
         }
 
-        if (array_key_exists("TaskStatus",$param) and $param["TaskStatus"] !== null) {
-            $this->TaskStatus = $param["TaskStatus"];
+        if (array_key_exists('TaskStatus',$param) and $param['TaskStatus'] !== null) {
+            $this->TaskStatus = $param['TaskStatus'];
         }
 
-        if (array_key_exists("StartTimeBegin",$param) and $param["StartTimeBegin"] !== null) {
-            $this->StartTimeBegin = $param["StartTimeBegin"];
+        if (array_key_exists('StartTimeBegin',$param) and $param['StartTimeBegin'] !== null) {
+            $this->StartTimeBegin = $param['StartTimeBegin'];
         }
 
-        if (array_key_exists("StartTimeEnd",$param) and $param["StartTimeEnd"] !== null) {
-            $this->StartTimeEnd = $param["StartTimeEnd"];
+        if (array_key_exists('StartTimeEnd',$param) and $param['StartTimeEnd'] !== null) {
+            $this->StartTimeEnd = $param['StartTimeEnd'];
         }
 
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
+        if (array_key_exists('Offset',$param) and $param['Offset'] !== null) {
+            $this->Offset = $param['Offset'];
         }
 
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
+        if (array_key_exists('Limit',$param) and $param['Limit'] !== null) {
+            $this->Limit = $param['Limit'];
         }
     }
 }

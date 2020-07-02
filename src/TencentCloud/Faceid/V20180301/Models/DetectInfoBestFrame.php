@@ -62,12 +62,12 @@ class DetectInfoBestFrame extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BestFrame",$param) and $param["BestFrame"] !== null) {
-            $this->BestFrame = $param["BestFrame"];
+        if (array_key_exists('BestFrame',$param) and $param['BestFrame'] !== null) {
+            $this->BestFrame = $param['BestFrame'];
         }
 
-        if (array_key_exists("BestFrames",$param) and $param["BestFrames"] !== null) {
-            $this->BestFrames = $param["BestFrames"];
+        if (array_key_exists('BestFrames',$param) and $param['BestFrames'] !== null) {
+            $this->BestFrames = $param['BestFrames'];
         }
     }
 }

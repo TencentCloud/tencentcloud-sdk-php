@@ -86,12 +86,12 @@ class MHMResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TagType",$param) and $param["TagType"] !== null) {
-            $this->TagType = $param["TagType"];
+        if (array_key_exists('TagType',$param) and $param['TagType'] !== null) {
+            $this->TagType = $param['TagType'];
         }
 
-        if (array_key_exists("TagCount",$param) and $param["TagCount"] !== null) {
-            $this->TagCount = $param["TagCount"];
+        if (array_key_exists('TagCount',$param) and $param['TagCount'] !== null) {
+            $this->TagCount = $param['TagCount'];
         }
     }
 }

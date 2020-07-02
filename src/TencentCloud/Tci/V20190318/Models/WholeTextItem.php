@@ -78,25 +78,25 @@ class WholeTextItem extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TextItem",$param) and $param["TextItem"] !== null) {
+        if (array_key_exists('TextItem',$param) and $param['TextItem'] !== null) {
             $this->TextItem = new TextItem();
-            $this->TextItem->deserialize($param["TextItem"]);
+            $this->TextItem->deserialize($param['TextItem']);
         }
 
-        if (array_key_exists("AvgVolume",$param) and $param["AvgVolume"] !== null) {
-            $this->AvgVolume = $param["AvgVolume"];
+        if (array_key_exists('AvgVolume',$param) and $param['AvgVolume'] !== null) {
+            $this->AvgVolume = $param['AvgVolume'];
         }
 
-        if (array_key_exists("MaxVolume",$param) and $param["MaxVolume"] !== null) {
-            $this->MaxVolume = $param["MaxVolume"];
+        if (array_key_exists('MaxVolume',$param) and $param['MaxVolume'] !== null) {
+            $this->MaxVolume = $param['MaxVolume'];
         }
 
-        if (array_key_exists("MinVolume",$param) and $param["MinVolume"] !== null) {
-            $this->MinVolume = $param["MinVolume"];
+        if (array_key_exists('MinVolume',$param) and $param['MinVolume'] !== null) {
+            $this->MinVolume = $param['MinVolume'];
         }
 
-        if (array_key_exists("Speed",$param) and $param["Speed"] !== null) {
-            $this->Speed = $param["Speed"];
+        if (array_key_exists('Speed',$param) and $param['Speed'] !== null) {
+            $this->Speed = $param['Speed'];
         }
     }
 }

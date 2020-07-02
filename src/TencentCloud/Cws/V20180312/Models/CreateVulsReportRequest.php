@@ -54,12 +54,12 @@ class CreateVulsReportRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SiteId",$param) and $param["SiteId"] !== null) {
-            $this->SiteId = $param["SiteId"];
+        if (array_key_exists('SiteId',$param) and $param['SiteId'] !== null) {
+            $this->SiteId = $param['SiteId'];
         }
 
-        if (array_key_exists("MonitorId",$param) and $param["MonitorId"] !== null) {
-            $this->MonitorId = $param["MonitorId"];
+        if (array_key_exists('MonitorId',$param) and $param['MonitorId'] !== null) {
+            $this->MonitorId = $param['MonitorId'];
         }
     }
 }

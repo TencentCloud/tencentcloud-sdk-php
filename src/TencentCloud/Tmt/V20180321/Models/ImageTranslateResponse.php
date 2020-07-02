@@ -78,25 +78,25 @@ class ImageTranslateResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SessionUuid",$param) and $param["SessionUuid"] !== null) {
-            $this->SessionUuid = $param["SessionUuid"];
+        if (array_key_exists('SessionUuid',$param) and $param['SessionUuid'] !== null) {
+            $this->SessionUuid = $param['SessionUuid'];
         }
 
-        if (array_key_exists("Source",$param) and $param["Source"] !== null) {
-            $this->Source = $param["Source"];
+        if (array_key_exists('Source',$param) and $param['Source'] !== null) {
+            $this->Source = $param['Source'];
         }
 
-        if (array_key_exists("Target",$param) and $param["Target"] !== null) {
-            $this->Target = $param["Target"];
+        if (array_key_exists('Target',$param) and $param['Target'] !== null) {
+            $this->Target = $param['Target'];
         }
 
-        if (array_key_exists("ImageRecord",$param) and $param["ImageRecord"] !== null) {
+        if (array_key_exists('ImageRecord',$param) and $param['ImageRecord'] !== null) {
             $this->ImageRecord = new ImageRecord();
-            $this->ImageRecord->deserialize($param["ImageRecord"]);
+            $this->ImageRecord->deserialize($param['ImageRecord']);
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

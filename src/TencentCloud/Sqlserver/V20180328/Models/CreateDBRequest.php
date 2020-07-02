@@ -54,13 +54,13 @@ class CreateDBRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("DBs",$param) and $param["DBs"] !== null) {
+        if (array_key_exists('DBs',$param) and $param['DBs'] !== null) {
             $this->DBs = [];
-            foreach ($param["DBs"] as $key => $value){
+            foreach ($param['DBs'] as $key => $value){
                 $obj = new DBCreateInfo();
                 $obj->deserialize($value);
                 array_push($this->DBs, $obj);

@@ -54,12 +54,12 @@ class CreateDisksResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DiskIdSet",$param) and $param["DiskIdSet"] !== null) {
-            $this->DiskIdSet = $param["DiskIdSet"];
+        if (array_key_exists('DiskIdSet',$param) and $param['DiskIdSet'] !== null) {
+            $this->DiskIdSet = $param['DiskIdSet'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

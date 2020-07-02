@@ -46,8 +46,8 @@ class DescribeAllStreamPlayInfoListRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("QueryTime",$param) and $param["QueryTime"] !== null) {
-            $this->QueryTime = $param["QueryTime"];
+        if (array_key_exists('QueryTime',$param) and $param['QueryTime'] !== null) {
+            $this->QueryTime = $param['QueryTime'];
         }
     }
 }

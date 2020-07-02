@@ -46,8 +46,8 @@ class DeleteTaskTemplatesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TaskTemplateIds",$param) and $param["TaskTemplateIds"] !== null) {
-            $this->TaskTemplateIds = $param["TaskTemplateIds"];
+        if (array_key_exists('TaskTemplateIds',$param) and $param['TaskTemplateIds'] !== null) {
+            $this->TaskTemplateIds = $param['TaskTemplateIds'];
         }
     }
 }

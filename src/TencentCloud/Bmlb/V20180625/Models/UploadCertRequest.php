@@ -70,20 +70,20 @@ class UploadCertRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CertType",$param) and $param["CertType"] !== null) {
-            $this->CertType = $param["CertType"];
+        if (array_key_exists('CertType',$param) and $param['CertType'] !== null) {
+            $this->CertType = $param['CertType'];
         }
 
-        if (array_key_exists("Cert",$param) and $param["Cert"] !== null) {
-            $this->Cert = $param["Cert"];
+        if (array_key_exists('Cert',$param) and $param['Cert'] !== null) {
+            $this->Cert = $param['Cert'];
         }
 
-        if (array_key_exists("Alias",$param) and $param["Alias"] !== null) {
-            $this->Alias = $param["Alias"];
+        if (array_key_exists('Alias',$param) and $param['Alias'] !== null) {
+            $this->Alias = $param['Alias'];
         }
 
-        if (array_key_exists("Key",$param) and $param["Key"] !== null) {
-            $this->Key = $param["Key"];
+        if (array_key_exists('Key',$param) and $param['Key'] !== null) {
+            $this->Key = $param['Key'];
         }
     }
 }

@@ -166,36 +166,36 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MaxFaceNum",$param) and $param["MaxFaceNum"] !== null) {
-            $this->MaxFaceNum = $param["MaxFaceNum"];
+        if (array_key_exists('MaxFaceNum',$param) and $param['MaxFaceNum'] !== null) {
+            $this->MaxFaceNum = $param['MaxFaceNum'];
         }
 
-        if (array_key_exists("MinFaceSize",$param) and $param["MinFaceSize"] !== null) {
-            $this->MinFaceSize = $param["MinFaceSize"];
+        if (array_key_exists('MinFaceSize',$param) and $param['MinFaceSize'] !== null) {
+            $this->MinFaceSize = $param['MinFaceSize'];
         }
 
-        if (array_key_exists("Image",$param) and $param["Image"] !== null) {
-            $this->Image = $param["Image"];
+        if (array_key_exists('Image',$param) and $param['Image'] !== null) {
+            $this->Image = $param['Image'];
         }
 
-        if (array_key_exists("Url",$param) and $param["Url"] !== null) {
-            $this->Url = $param["Url"];
+        if (array_key_exists('Url',$param) and $param['Url'] !== null) {
+            $this->Url = $param['Url'];
         }
 
-        if (array_key_exists("NeedFaceAttributes",$param) and $param["NeedFaceAttributes"] !== null) {
-            $this->NeedFaceAttributes = $param["NeedFaceAttributes"];
+        if (array_key_exists('NeedFaceAttributes',$param) and $param['NeedFaceAttributes'] !== null) {
+            $this->NeedFaceAttributes = $param['NeedFaceAttributes'];
         }
 
-        if (array_key_exists("NeedQualityDetection",$param) and $param["NeedQualityDetection"] !== null) {
-            $this->NeedQualityDetection = $param["NeedQualityDetection"];
+        if (array_key_exists('NeedQualityDetection',$param) and $param['NeedQualityDetection'] !== null) {
+            $this->NeedQualityDetection = $param['NeedQualityDetection'];
         }
 
-        if (array_key_exists("FaceModelVersion",$param) and $param["FaceModelVersion"] !== null) {
-            $this->FaceModelVersion = $param["FaceModelVersion"];
+        if (array_key_exists('FaceModelVersion',$param) and $param['FaceModelVersion'] !== null) {
+            $this->FaceModelVersion = $param['FaceModelVersion'];
         }
 
-        if (array_key_exists("NeedRotateDetection",$param) and $param["NeedRotateDetection"] !== null) {
-            $this->NeedRotateDetection = $param["NeedRotateDetection"];
+        if (array_key_exists('NeedRotateDetection',$param) and $param['NeedRotateDetection'] !== null) {
+            $this->NeedRotateDetection = $param['NeedRotateDetection'];
         }
     }
 }

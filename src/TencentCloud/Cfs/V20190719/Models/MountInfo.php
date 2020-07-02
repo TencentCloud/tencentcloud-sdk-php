@@ -118,44 +118,44 @@ class MountInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FileSystemId",$param) and $param["FileSystemId"] !== null) {
-            $this->FileSystemId = $param["FileSystemId"];
+        if (array_key_exists('FileSystemId',$param) and $param['FileSystemId'] !== null) {
+            $this->FileSystemId = $param['FileSystemId'];
         }
 
-        if (array_key_exists("MountTargetId",$param) and $param["MountTargetId"] !== null) {
-            $this->MountTargetId = $param["MountTargetId"];
+        if (array_key_exists('MountTargetId',$param) and $param['MountTargetId'] !== null) {
+            $this->MountTargetId = $param['MountTargetId'];
         }
 
-        if (array_key_exists("IpAddress",$param) and $param["IpAddress"] !== null) {
-            $this->IpAddress = $param["IpAddress"];
+        if (array_key_exists('IpAddress',$param) and $param['IpAddress'] !== null) {
+            $this->IpAddress = $param['IpAddress'];
         }
 
-        if (array_key_exists("FSID",$param) and $param["FSID"] !== null) {
-            $this->FSID = $param["FSID"];
+        if (array_key_exists('FSID',$param) and $param['FSID'] !== null) {
+            $this->FSID = $param['FSID'];
         }
 
-        if (array_key_exists("LifeCycleState",$param) and $param["LifeCycleState"] !== null) {
-            $this->LifeCycleState = $param["LifeCycleState"];
+        if (array_key_exists('LifeCycleState',$param) and $param['LifeCycleState'] !== null) {
+            $this->LifeCycleState = $param['LifeCycleState'];
         }
 
-        if (array_key_exists("NetworkInterface",$param) and $param["NetworkInterface"] !== null) {
-            $this->NetworkInterface = $param["NetworkInterface"];
+        if (array_key_exists('NetworkInterface',$param) and $param['NetworkInterface'] !== null) {
+            $this->NetworkInterface = $param['NetworkInterface'];
         }
 
-        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
-            $this->VpcId = $param["VpcId"];
+        if (array_key_exists('VpcId',$param) and $param['VpcId'] !== null) {
+            $this->VpcId = $param['VpcId'];
         }
 
-        if (array_key_exists("VpcName",$param) and $param["VpcName"] !== null) {
-            $this->VpcName = $param["VpcName"];
+        if (array_key_exists('VpcName',$param) and $param['VpcName'] !== null) {
+            $this->VpcName = $param['VpcName'];
         }
 
-        if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
-            $this->SubnetId = $param["SubnetId"];
+        if (array_key_exists('SubnetId',$param) and $param['SubnetId'] !== null) {
+            $this->SubnetId = $param['SubnetId'];
         }
 
-        if (array_key_exists("SubnetName",$param) and $param["SubnetName"] !== null) {
-            $this->SubnetName = $param["SubnetName"];
+        if (array_key_exists('SubnetName',$param) and $param['SubnetName'] !== null) {
+            $this->SubnetName = $param['SubnetName'];
         }
     }
 }

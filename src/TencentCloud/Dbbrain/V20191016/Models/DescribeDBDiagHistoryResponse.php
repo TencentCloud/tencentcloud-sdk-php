@@ -54,17 +54,17 @@ class DescribeDBDiagHistoryResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Events",$param) and $param["Events"] !== null) {
+        if (array_key_exists('Events',$param) and $param['Events'] !== null) {
             $this->Events = [];
-            foreach ($param["Events"] as $key => $value){
+            foreach ($param['Events'] as $key => $value){
                 $obj = new DiagHistoryEventItem();
                 $obj->deserialize($value);
                 array_push($this->Events, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

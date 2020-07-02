@@ -54,13 +54,13 @@ class CreateServiceConfigResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ServiceConfig",$param) and $param["ServiceConfig"] !== null) {
+        if (array_key_exists('ServiceConfig',$param) and $param['ServiceConfig'] !== null) {
             $this->ServiceConfig = new Config();
-            $this->ServiceConfig->deserialize($param["ServiceConfig"]);
+            $this->ServiceConfig->deserialize($param['ServiceConfig']);
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

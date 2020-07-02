@@ -94,32 +94,32 @@ class CreateServerlessDBInstanceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
-            $this->Zone = $param["Zone"];
+        if (array_key_exists('Zone',$param) and $param['Zone'] !== null) {
+            $this->Zone = $param['Zone'];
         }
 
-        if (array_key_exists("DBInstanceName",$param) and $param["DBInstanceName"] !== null) {
-            $this->DBInstanceName = $param["DBInstanceName"];
+        if (array_key_exists('DBInstanceName',$param) and $param['DBInstanceName'] !== null) {
+            $this->DBInstanceName = $param['DBInstanceName'];
         }
 
-        if (array_key_exists("DBVersion",$param) and $param["DBVersion"] !== null) {
-            $this->DBVersion = $param["DBVersion"];
+        if (array_key_exists('DBVersion',$param) and $param['DBVersion'] !== null) {
+            $this->DBVersion = $param['DBVersion'];
         }
 
-        if (array_key_exists("DBCharset",$param) and $param["DBCharset"] !== null) {
-            $this->DBCharset = $param["DBCharset"];
+        if (array_key_exists('DBCharset',$param) and $param['DBCharset'] !== null) {
+            $this->DBCharset = $param['DBCharset'];
         }
 
-        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
-            $this->ProjectId = $param["ProjectId"];
+        if (array_key_exists('ProjectId',$param) and $param['ProjectId'] !== null) {
+            $this->ProjectId = $param['ProjectId'];
         }
 
-        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
-            $this->VpcId = $param["VpcId"];
+        if (array_key_exists('VpcId',$param) and $param['VpcId'] !== null) {
+            $this->VpcId = $param['VpcId'];
         }
 
-        if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
-            $this->SubnetId = $param["SubnetId"];
+        if (array_key_exists('SubnetId',$param) and $param['SubnetId'] !== null) {
+            $this->SubnetId = $param['SubnetId'];
         }
     }
 }

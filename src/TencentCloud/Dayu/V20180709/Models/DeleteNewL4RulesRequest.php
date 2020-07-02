@@ -54,13 +54,13 @@ class DeleteNewL4RulesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Business",$param) and $param["Business"] !== null) {
-            $this->Business = $param["Business"];
+        if (array_key_exists('Business',$param) and $param['Business'] !== null) {
+            $this->Business = $param['Business'];
         }
 
-        if (array_key_exists("Rule",$param) and $param["Rule"] !== null) {
+        if (array_key_exists('Rule',$param) and $param['Rule'] !== null) {
             $this->Rule = [];
-            foreach ($param["Rule"] as $key => $value){
+            foreach ($param['Rule'] as $key => $value){
                 $obj = new L4DelRule();
                 $obj->deserialize($value);
                 array_push($this->Rule, $obj);

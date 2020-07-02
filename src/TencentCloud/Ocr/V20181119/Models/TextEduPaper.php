@@ -62,17 +62,17 @@ class TextEduPaper extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Item",$param) and $param["Item"] !== null) {
-            $this->Item = $param["Item"];
+        if (array_key_exists('Item',$param) and $param['Item'] !== null) {
+            $this->Item = $param['Item'];
         }
 
-        if (array_key_exists("DetectedText",$param) and $param["DetectedText"] !== null) {
-            $this->DetectedText = $param["DetectedText"];
+        if (array_key_exists('DetectedText',$param) and $param['DetectedText'] !== null) {
+            $this->DetectedText = $param['DetectedText'];
         }
 
-        if (array_key_exists("Itemcoord",$param) and $param["Itemcoord"] !== null) {
+        if (array_key_exists('Itemcoord',$param) and $param['Itemcoord'] !== null) {
             $this->Itemcoord = new ItemCoord();
-            $this->Itemcoord->deserialize($param["Itemcoord"]);
+            $this->Itemcoord->deserialize($param['Itemcoord']);
         }
     }
 }

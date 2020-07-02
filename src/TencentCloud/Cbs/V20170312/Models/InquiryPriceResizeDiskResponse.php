@@ -54,13 +54,13 @@ class InquiryPriceResizeDiskResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DiskPrice",$param) and $param["DiskPrice"] !== null) {
+        if (array_key_exists('DiskPrice',$param) and $param['DiskPrice'] !== null) {
             $this->DiskPrice = new PrepayPrice();
-            $this->DiskPrice->deserialize($param["DiskPrice"]);
+            $this->DiskPrice->deserialize($param['DiskPrice']);
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

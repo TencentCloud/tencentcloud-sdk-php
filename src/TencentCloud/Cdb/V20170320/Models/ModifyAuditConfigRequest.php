@@ -86,16 +86,16 @@ class ModifyAuditConfigRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("LogExpireDay",$param) and $param["LogExpireDay"] !== null) {
-            $this->LogExpireDay = $param["LogExpireDay"];
+        if (array_key_exists('LogExpireDay',$param) and $param['LogExpireDay'] !== null) {
+            $this->LogExpireDay = $param['LogExpireDay'];
         }
 
-        if (array_key_exists("CloseAudit",$param) and $param["CloseAudit"] !== null) {
-            $this->CloseAudit = $param["CloseAudit"];
+        if (array_key_exists('CloseAudit',$param) and $param['CloseAudit'] !== null) {
+            $this->CloseAudit = $param['CloseAudit'];
         }
     }
 }

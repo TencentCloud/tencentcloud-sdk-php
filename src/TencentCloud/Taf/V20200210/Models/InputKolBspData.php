@@ -46,9 +46,9 @@ class InputKolBspData extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DataList",$param) and $param["DataList"] !== null) {
+        if (array_key_exists('DataList',$param) and $param['DataList'] !== null) {
             $this->DataList = [];
-            foreach ($param["DataList"] as $key => $value){
+            foreach ($param['DataList'] as $key => $value){
                 $obj = new InputKolDataList();
                 $obj->deserialize($value);
                 array_push($this->DataList, $obj);

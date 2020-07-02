@@ -46,9 +46,9 @@ class UnbindRsListRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("EipRsList",$param) and $param["EipRsList"] !== null) {
+        if (array_key_exists('EipRsList',$param) and $param['EipRsList'] !== null) {
             $this->EipRsList = [];
-            foreach ($param["EipRsList"] as $key => $value){
+            foreach ($param['EipRsList'] as $key => $value){
                 $obj = new EipRsMap();
                 $obj->deserialize($value);
                 array_push($this->EipRsList, $obj);

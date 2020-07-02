@@ -110,40 +110,40 @@ class SearchClsLogRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LogsetId",$param) and $param["LogsetId"] !== null) {
-            $this->LogsetId = $param["LogsetId"];
+        if (array_key_exists('LogsetId',$param) and $param['LogsetId'] !== null) {
+            $this->LogsetId = $param['LogsetId'];
         }
 
-        if (array_key_exists("TopicIds",$param) and $param["TopicIds"] !== null) {
-            $this->TopicIds = $param["TopicIds"];
+        if (array_key_exists('TopicIds',$param) and $param['TopicIds'] !== null) {
+            $this->TopicIds = $param['TopicIds'];
         }
 
-        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
-            $this->StartTime = $param["StartTime"];
+        if (array_key_exists('StartTime',$param) and $param['StartTime'] !== null) {
+            $this->StartTime = $param['StartTime'];
         }
 
-        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
-            $this->EndTime = $param["EndTime"];
+        if (array_key_exists('EndTime',$param) and $param['EndTime'] !== null) {
+            $this->EndTime = $param['EndTime'];
         }
 
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
+        if (array_key_exists('Limit',$param) and $param['Limit'] !== null) {
+            $this->Limit = $param['Limit'];
         }
 
-        if (array_key_exists("Channel",$param) and $param["Channel"] !== null) {
-            $this->Channel = $param["Channel"];
+        if (array_key_exists('Channel',$param) and $param['Channel'] !== null) {
+            $this->Channel = $param['Channel'];
         }
 
-        if (array_key_exists("Query",$param) and $param["Query"] !== null) {
-            $this->Query = $param["Query"];
+        if (array_key_exists('Query',$param) and $param['Query'] !== null) {
+            $this->Query = $param['Query'];
         }
 
-        if (array_key_exists("Context",$param) and $param["Context"] !== null) {
-            $this->Context = $param["Context"];
+        if (array_key_exists('Context',$param) and $param['Context'] !== null) {
+            $this->Context = $param['Context'];
         }
 
-        if (array_key_exists("Sort",$param) and $param["Sort"] !== null) {
-            $this->Sort = $param["Sort"];
+        if (array_key_exists('Sort',$param) and $param['Sort'] !== null) {
+            $this->Sort = $param['Sort'];
         }
     }
 }

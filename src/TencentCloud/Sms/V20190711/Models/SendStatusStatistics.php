@@ -62,16 +62,16 @@ class SendStatusStatistics extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FeeCount",$param) and $param["FeeCount"] !== null) {
-            $this->FeeCount = $param["FeeCount"];
+        if (array_key_exists('FeeCount',$param) and $param['FeeCount'] !== null) {
+            $this->FeeCount = $param['FeeCount'];
         }
 
-        if (array_key_exists("RequestCount",$param) and $param["RequestCount"] !== null) {
-            $this->RequestCount = $param["RequestCount"];
+        if (array_key_exists('RequestCount',$param) and $param['RequestCount'] !== null) {
+            $this->RequestCount = $param['RequestCount'];
         }
 
-        if (array_key_exists("RequestSuccessCount",$param) and $param["RequestSuccessCount"] !== null) {
-            $this->RequestSuccessCount = $param["RequestSuccessCount"];
+        if (array_key_exists('RequestSuccessCount',$param) and $param['RequestSuccessCount'] !== null) {
+            $this->RequestSuccessCount = $param['RequestSuccessCount'];
         }
     }
 }

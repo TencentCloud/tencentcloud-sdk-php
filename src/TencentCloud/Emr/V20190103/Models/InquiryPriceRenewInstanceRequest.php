@@ -94,29 +94,29 @@ class InquiryPriceRenewInstanceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TimeSpan",$param) and $param["TimeSpan"] !== null) {
-            $this->TimeSpan = $param["TimeSpan"];
+        if (array_key_exists('TimeSpan',$param) and $param['TimeSpan'] !== null) {
+            $this->TimeSpan = $param['TimeSpan'];
         }
 
-        if (array_key_exists("ResourceIds",$param) and $param["ResourceIds"] !== null) {
-            $this->ResourceIds = $param["ResourceIds"];
+        if (array_key_exists('ResourceIds',$param) and $param['ResourceIds'] !== null) {
+            $this->ResourceIds = $param['ResourceIds'];
         }
 
-        if (array_key_exists("Placement",$param) and $param["Placement"] !== null) {
+        if (array_key_exists('Placement',$param) and $param['Placement'] !== null) {
             $this->Placement = new Placement();
-            $this->Placement->deserialize($param["Placement"]);
+            $this->Placement->deserialize($param['Placement']);
         }
 
-        if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {
-            $this->PayMode = $param["PayMode"];
+        if (array_key_exists('PayMode',$param) and $param['PayMode'] !== null) {
+            $this->PayMode = $param['PayMode'];
         }
 
-        if (array_key_exists("TimeUnit",$param) and $param["TimeUnit"] !== null) {
-            $this->TimeUnit = $param["TimeUnit"];
+        if (array_key_exists('TimeUnit',$param) and $param['TimeUnit'] !== null) {
+            $this->TimeUnit = $param['TimeUnit'];
         }
 
-        if (array_key_exists("Currency",$param) and $param["Currency"] !== null) {
-            $this->Currency = $param["Currency"];
+        if (array_key_exists('Currency',$param) and $param['Currency'] !== null) {
+            $this->Currency = $param['Currency'];
         }
     }
 }

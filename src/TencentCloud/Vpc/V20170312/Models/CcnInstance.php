@@ -78,16 +78,16 @@ class CcnInstance extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("InstanceRegion",$param) and $param["InstanceRegion"] !== null) {
-            $this->InstanceRegion = $param["InstanceRegion"];
+        if (array_key_exists('InstanceRegion',$param) and $param['InstanceRegion'] !== null) {
+            $this->InstanceRegion = $param['InstanceRegion'];
         }
 
-        if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
-            $this->InstanceType = $param["InstanceType"];
+        if (array_key_exists('InstanceType',$param) and $param['InstanceType'] !== null) {
+            $this->InstanceType = $param['InstanceType'];
         }
     }
 }

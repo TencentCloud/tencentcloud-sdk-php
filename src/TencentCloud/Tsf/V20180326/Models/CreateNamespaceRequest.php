@@ -86,28 +86,28 @@ class CreateNamespaceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("NamespaceName",$param) and $param["NamespaceName"] !== null) {
-            $this->NamespaceName = $param["NamespaceName"];
+        if (array_key_exists('NamespaceName',$param) and $param['NamespaceName'] !== null) {
+            $this->NamespaceName = $param['NamespaceName'];
         }
 
-        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
-            $this->ClusterId = $param["ClusterId"];
+        if (array_key_exists('ClusterId',$param) and $param['ClusterId'] !== null) {
+            $this->ClusterId = $param['ClusterId'];
         }
 
-        if (array_key_exists("NamespaceDesc",$param) and $param["NamespaceDesc"] !== null) {
-            $this->NamespaceDesc = $param["NamespaceDesc"];
+        if (array_key_exists('NamespaceDesc',$param) and $param['NamespaceDesc'] !== null) {
+            $this->NamespaceDesc = $param['NamespaceDesc'];
         }
 
-        if (array_key_exists("NamespaceResourceType",$param) and $param["NamespaceResourceType"] !== null) {
-            $this->NamespaceResourceType = $param["NamespaceResourceType"];
+        if (array_key_exists('NamespaceResourceType',$param) and $param['NamespaceResourceType'] !== null) {
+            $this->NamespaceResourceType = $param['NamespaceResourceType'];
         }
 
-        if (array_key_exists("NamespaceType",$param) and $param["NamespaceType"] !== null) {
-            $this->NamespaceType = $param["NamespaceType"];
+        if (array_key_exists('NamespaceType',$param) and $param['NamespaceType'] !== null) {
+            $this->NamespaceType = $param['NamespaceType'];
         }
 
-        if (array_key_exists("NamespaceId",$param) and $param["NamespaceId"] !== null) {
-            $this->NamespaceId = $param["NamespaceId"];
+        if (array_key_exists('NamespaceId',$param) and $param['NamespaceId'] !== null) {
+            $this->NamespaceId = $param['NamespaceId'];
         }
     }
 }

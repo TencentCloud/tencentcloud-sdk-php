@@ -54,12 +54,12 @@ class SetLoadBalancerSecurityGroupsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LoadBalancerId",$param) and $param["LoadBalancerId"] !== null) {
-            $this->LoadBalancerId = $param["LoadBalancerId"];
+        if (array_key_exists('LoadBalancerId',$param) and $param['LoadBalancerId'] !== null) {
+            $this->LoadBalancerId = $param['LoadBalancerId'];
         }
 
-        if (array_key_exists("SecurityGroups",$param) and $param["SecurityGroups"] !== null) {
-            $this->SecurityGroups = $param["SecurityGroups"];
+        if (array_key_exists('SecurityGroups',$param) and $param['SecurityGroups'] !== null) {
+            $this->SecurityGroups = $param['SecurityGroups'];
         }
     }
 }

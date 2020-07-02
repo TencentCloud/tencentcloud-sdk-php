@@ -78,26 +78,26 @@ class CreateClusterAsGroupRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
-            $this->ClusterId = $param["ClusterId"];
+        if (array_key_exists('ClusterId',$param) and $param['ClusterId'] !== null) {
+            $this->ClusterId = $param['ClusterId'];
         }
 
-        if (array_key_exists("AutoScalingGroupPara",$param) and $param["AutoScalingGroupPara"] !== null) {
-            $this->AutoScalingGroupPara = $param["AutoScalingGroupPara"];
+        if (array_key_exists('AutoScalingGroupPara',$param) and $param['AutoScalingGroupPara'] !== null) {
+            $this->AutoScalingGroupPara = $param['AutoScalingGroupPara'];
         }
 
-        if (array_key_exists("LaunchConfigurePara",$param) and $param["LaunchConfigurePara"] !== null) {
-            $this->LaunchConfigurePara = $param["LaunchConfigurePara"];
+        if (array_key_exists('LaunchConfigurePara',$param) and $param['LaunchConfigurePara'] !== null) {
+            $this->LaunchConfigurePara = $param['LaunchConfigurePara'];
         }
 
-        if (array_key_exists("InstanceAdvancedSettings",$param) and $param["InstanceAdvancedSettings"] !== null) {
+        if (array_key_exists('InstanceAdvancedSettings',$param) and $param['InstanceAdvancedSettings'] !== null) {
             $this->InstanceAdvancedSettings = new InstanceAdvancedSettings();
-            $this->InstanceAdvancedSettings->deserialize($param["InstanceAdvancedSettings"]);
+            $this->InstanceAdvancedSettings->deserialize($param['InstanceAdvancedSettings']);
         }
 
-        if (array_key_exists("Labels",$param) and $param["Labels"] !== null) {
+        if (array_key_exists('Labels',$param) and $param['Labels'] !== null) {
             $this->Labels = [];
-            foreach ($param["Labels"] as $key => $value){
+            foreach ($param['Labels'] as $key => $value){
                 $obj = new Label();
                 $obj->deserialize($value);
                 array_push($this->Labels, $obj);

@@ -64,14 +64,14 @@ class Cache extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SimpleCache",$param) and $param["SimpleCache"] !== null) {
+        if (array_key_exists('SimpleCache',$param) and $param['SimpleCache'] !== null) {
             $this->SimpleCache = new SimpleCache();
-            $this->SimpleCache->deserialize($param["SimpleCache"]);
+            $this->SimpleCache->deserialize($param['SimpleCache']);
         }
 
-        if (array_key_exists("AdvancedCache",$param) and $param["AdvancedCache"] !== null) {
+        if (array_key_exists('AdvancedCache',$param) and $param['AdvancedCache'] !== null) {
             $this->AdvancedCache = new AdvancedCache();
-            $this->AdvancedCache->deserialize($param["AdvancedCache"]);
+            $this->AdvancedCache->deserialize($param['AdvancedCache']);
         }
     }
 }

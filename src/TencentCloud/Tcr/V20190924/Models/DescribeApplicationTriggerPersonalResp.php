@@ -54,13 +54,13 @@ class DescribeApplicationTriggerPersonalResp extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("TriggerInfo",$param) and $param["TriggerInfo"] !== null) {
+        if (array_key_exists('TriggerInfo',$param) and $param['TriggerInfo'] !== null) {
             $this->TriggerInfo = [];
-            foreach ($param["TriggerInfo"] as $key => $value){
+            foreach ($param['TriggerInfo'] as $key => $value){
                 $obj = new TriggerResp();
                 $obj->deserialize($value);
                 array_push($this->TriggerInfo, $obj);

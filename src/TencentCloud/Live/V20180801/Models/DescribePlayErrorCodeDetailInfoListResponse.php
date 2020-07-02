@@ -62,21 +62,21 @@ class DescribePlayErrorCodeDetailInfoListResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("HttpCodeList",$param) and $param["HttpCodeList"] !== null) {
+        if (array_key_exists('HttpCodeList',$param) and $param['HttpCodeList'] !== null) {
             $this->HttpCodeList = [];
-            foreach ($param["HttpCodeList"] as $key => $value){
+            foreach ($param['HttpCodeList'] as $key => $value){
                 $obj = new HttpCodeInfo();
                 $obj->deserialize($value);
                 array_push($this->HttpCodeList, $obj);
             }
         }
 
-        if (array_key_exists("StatType",$param) and $param["StatType"] !== null) {
-            $this->StatType = $param["StatType"];
+        if (array_key_exists('StatType',$param) and $param['StatType'] !== null) {
+            $this->StatType = $param['StatType'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

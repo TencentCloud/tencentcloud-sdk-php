@@ -54,12 +54,12 @@ class ResolutionNameInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MinEdgeLength",$param) and $param["MinEdgeLength"] !== null) {
-            $this->MinEdgeLength = $param["MinEdgeLength"];
+        if (array_key_exists('MinEdgeLength',$param) and $param['MinEdgeLength'] !== null) {
+            $this->MinEdgeLength = $param['MinEdgeLength'];
         }
 
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
     }
 }

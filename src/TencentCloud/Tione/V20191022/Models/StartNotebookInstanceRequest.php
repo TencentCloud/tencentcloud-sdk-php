@@ -70,17 +70,17 @@ class StartNotebookInstanceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("NotebookInstanceName",$param) and $param["NotebookInstanceName"] !== null) {
-            $this->NotebookInstanceName = $param["NotebookInstanceName"];
+        if (array_key_exists('NotebookInstanceName',$param) and $param['NotebookInstanceName'] !== null) {
+            $this->NotebookInstanceName = $param['NotebookInstanceName'];
         }
 
-        if (array_key_exists("AutoStopping",$param) and $param["AutoStopping"] !== null) {
-            $this->AutoStopping = $param["AutoStopping"];
+        if (array_key_exists('AutoStopping',$param) and $param['AutoStopping'] !== null) {
+            $this->AutoStopping = $param['AutoStopping'];
         }
 
-        if (array_key_exists("StoppingCondition",$param) and $param["StoppingCondition"] !== null) {
+        if (array_key_exists('StoppingCondition',$param) and $param['StoppingCondition'] !== null) {
             $this->StoppingCondition = new StoppingCondition();
-            $this->StoppingCondition->deserialize($param["StoppingCondition"]);
+            $this->StoppingCondition->deserialize($param['StoppingCondition']);
         }
     }
 }

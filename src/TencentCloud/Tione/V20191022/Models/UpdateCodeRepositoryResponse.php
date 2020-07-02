@@ -54,12 +54,12 @@ class UpdateCodeRepositoryResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CodeRepositoryName",$param) and $param["CodeRepositoryName"] !== null) {
-            $this->CodeRepositoryName = $param["CodeRepositoryName"];
+        if (array_key_exists('CodeRepositoryName',$param) and $param['CodeRepositoryName'] !== null) {
+            $this->CodeRepositoryName = $param['CodeRepositoryName'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

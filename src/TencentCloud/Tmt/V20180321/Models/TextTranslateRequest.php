@@ -230,24 +230,24 @@ hi：印地语
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SourceText",$param) and $param["SourceText"] !== null) {
-            $this->SourceText = $param["SourceText"];
+        if (array_key_exists('SourceText',$param) and $param['SourceText'] !== null) {
+            $this->SourceText = $param['SourceText'];
         }
 
-        if (array_key_exists("Source",$param) and $param["Source"] !== null) {
-            $this->Source = $param["Source"];
+        if (array_key_exists('Source',$param) and $param['Source'] !== null) {
+            $this->Source = $param['Source'];
         }
 
-        if (array_key_exists("Target",$param) and $param["Target"] !== null) {
-            $this->Target = $param["Target"];
+        if (array_key_exists('Target',$param) and $param['Target'] !== null) {
+            $this->Target = $param['Target'];
         }
 
-        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
-            $this->ProjectId = $param["ProjectId"];
+        if (array_key_exists('ProjectId',$param) and $param['ProjectId'] !== null) {
+            $this->ProjectId = $param['ProjectId'];
         }
 
-        if (array_key_exists("UntranslatedText",$param) and $param["UntranslatedText"] !== null) {
-            $this->UntranslatedText = $param["UntranslatedText"];
+        if (array_key_exists('UntranslatedText',$param) and $param['UntranslatedText'] !== null) {
+            $this->UntranslatedText = $param['UntranslatedText'];
         }
     }
 }

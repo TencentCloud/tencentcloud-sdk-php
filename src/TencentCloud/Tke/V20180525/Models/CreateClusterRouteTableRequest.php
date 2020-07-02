@@ -70,20 +70,20 @@ class CreateClusterRouteTableRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RouteTableName",$param) and $param["RouteTableName"] !== null) {
-            $this->RouteTableName = $param["RouteTableName"];
+        if (array_key_exists('RouteTableName',$param) and $param['RouteTableName'] !== null) {
+            $this->RouteTableName = $param['RouteTableName'];
         }
 
-        if (array_key_exists("RouteTableCidrBlock",$param) and $param["RouteTableCidrBlock"] !== null) {
-            $this->RouteTableCidrBlock = $param["RouteTableCidrBlock"];
+        if (array_key_exists('RouteTableCidrBlock',$param) and $param['RouteTableCidrBlock'] !== null) {
+            $this->RouteTableCidrBlock = $param['RouteTableCidrBlock'];
         }
 
-        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
-            $this->VpcId = $param["VpcId"];
+        if (array_key_exists('VpcId',$param) and $param['VpcId'] !== null) {
+            $this->VpcId = $param['VpcId'];
         }
 
-        if (array_key_exists("IgnoreClusterCidrConflict",$param) and $param["IgnoreClusterCidrConflict"] !== null) {
-            $this->IgnoreClusterCidrConflict = $param["IgnoreClusterCidrConflict"];
+        if (array_key_exists('IgnoreClusterCidrConflict',$param) and $param['IgnoreClusterCidrConflict'] !== null) {
+            $this->IgnoreClusterCidrConflict = $param['IgnoreClusterCidrConflict'];
         }
     }
 }

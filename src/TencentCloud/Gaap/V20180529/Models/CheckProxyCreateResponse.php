@@ -54,12 +54,12 @@ class CheckProxyCreateResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CheckFlag",$param) and $param["CheckFlag"] !== null) {
-            $this->CheckFlag = $param["CheckFlag"];
+        if (array_key_exists('CheckFlag',$param) and $param['CheckFlag'] !== null) {
+            $this->CheckFlag = $param['CheckFlag'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

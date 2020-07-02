@@ -62,18 +62,18 @@ class ModifyNatGatewayDestinationIpPortTranslationNatRuleRequest extends Abstrac
         if ($param === null) {
             return;
         }
-        if (array_key_exists("NatGatewayId",$param) and $param["NatGatewayId"] !== null) {
-            $this->NatGatewayId = $param["NatGatewayId"];
+        if (array_key_exists('NatGatewayId',$param) and $param['NatGatewayId'] !== null) {
+            $this->NatGatewayId = $param['NatGatewayId'];
         }
 
-        if (array_key_exists("SourceNatRule",$param) and $param["SourceNatRule"] !== null) {
+        if (array_key_exists('SourceNatRule',$param) and $param['SourceNatRule'] !== null) {
             $this->SourceNatRule = new DestinationIpPortTranslationNatRule();
-            $this->SourceNatRule->deserialize($param["SourceNatRule"]);
+            $this->SourceNatRule->deserialize($param['SourceNatRule']);
         }
 
-        if (array_key_exists("DestinationNatRule",$param) and $param["DestinationNatRule"] !== null) {
+        if (array_key_exists('DestinationNatRule',$param) and $param['DestinationNatRule'] !== null) {
             $this->DestinationNatRule = new DestinationIpPortTranslationNatRule();
-            $this->DestinationNatRule->deserialize($param["DestinationNatRule"]);
+            $this->DestinationNatRule->deserialize($param['DestinationNatRule']);
         }
     }
 }

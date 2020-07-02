@@ -62,16 +62,16 @@ class DeviceCertificate extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Tid",$param) and $param["Tid"] !== null) {
-            $this->Tid = $param["Tid"];
+        if (array_key_exists('Tid',$param) and $param['Tid'] !== null) {
+            $this->Tid = $param['Tid'];
         }
 
-        if (array_key_exists("Certificate",$param) and $param["Certificate"] !== null) {
-            $this->Certificate = $param["Certificate"];
+        if (array_key_exists('Certificate',$param) and $param['Certificate'] !== null) {
+            $this->Certificate = $param['Certificate'];
         }
 
-        if (array_key_exists("WhiteBoxSoUrl",$param) and $param["WhiteBoxSoUrl"] !== null) {
-            $this->WhiteBoxSoUrl = $param["WhiteBoxSoUrl"];
+        if (array_key_exists('WhiteBoxSoUrl',$param) and $param['WhiteBoxSoUrl'] !== null) {
+            $this->WhiteBoxSoUrl = $param['WhiteBoxSoUrl'];
         }
     }
 }

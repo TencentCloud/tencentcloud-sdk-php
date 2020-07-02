@@ -90,28 +90,28 @@ class ApplyDeclareData extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MerchantId",$param) and $param["MerchantId"] !== null) {
-            $this->MerchantId = $param["MerchantId"];
+        if (array_key_exists('MerchantId',$param) and $param['MerchantId'] !== null) {
+            $this->MerchantId = $param['MerchantId'];
         }
 
-        if (array_key_exists("TransactionId",$param) and $param["TransactionId"] !== null) {
-            $this->TransactionId = $param["TransactionId"];
+        if (array_key_exists('TransactionId',$param) and $param['TransactionId'] !== null) {
+            $this->TransactionId = $param['TransactionId'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("DeclareId",$param) and $param["DeclareId"] !== null) {
-            $this->DeclareId = $param["DeclareId"];
+        if (array_key_exists('DeclareId',$param) and $param['DeclareId'] !== null) {
+            $this->DeclareId = $param['DeclareId'];
         }
 
-        if (array_key_exists("OriginalDeclareId",$param) and $param["OriginalDeclareId"] !== null) {
-            $this->OriginalDeclareId = $param["OriginalDeclareId"];
+        if (array_key_exists('OriginalDeclareId',$param) and $param['OriginalDeclareId'] !== null) {
+            $this->OriginalDeclareId = $param['OriginalDeclareId'];
         }
 
-        if (array_key_exists("PayerId",$param) and $param["PayerId"] !== null) {
-            $this->PayerId = $param["PayerId"];
+        if (array_key_exists('PayerId',$param) and $param['PayerId'] !== null) {
+            $this->PayerId = $param['PayerId'];
         }
     }
 }

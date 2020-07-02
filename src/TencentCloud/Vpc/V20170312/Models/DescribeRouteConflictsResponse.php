@@ -54,17 +54,17 @@ class DescribeRouteConflictsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RouteConflictSet",$param) and $param["RouteConflictSet"] !== null) {
+        if (array_key_exists('RouteConflictSet',$param) and $param['RouteConflictSet'] !== null) {
             $this->RouteConflictSet = [];
-            foreach ($param["RouteConflictSet"] as $key => $value){
+            foreach ($param['RouteConflictSet'] as $key => $value){
                 $obj = new RouteConflict();
                 $obj->deserialize($value);
                 array_push($this->RouteConflictSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

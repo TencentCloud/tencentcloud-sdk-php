@@ -90,24 +90,24 @@ PersonType=2时(黑名单)，0普通黑名单，1小偷)
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CompanyId",$param) and $param["CompanyId"] !== null) {
-            $this->CompanyId = $param["CompanyId"];
+        if (array_key_exists('CompanyId',$param) and $param['CompanyId'] !== null) {
+            $this->CompanyId = $param['CompanyId'];
         }
 
-        if (array_key_exists("ShopId",$param) and $param["ShopId"] !== null) {
-            $this->ShopId = $param["ShopId"];
+        if (array_key_exists('ShopId',$param) and $param['ShopId'] !== null) {
+            $this->ShopId = $param['ShopId'];
         }
 
-        if (array_key_exists("PersonId",$param) and $param["PersonId"] !== null) {
-            $this->PersonId = $param["PersonId"];
+        if (array_key_exists('PersonId',$param) and $param['PersonId'] !== null) {
+            $this->PersonId = $param['PersonId'];
         }
 
-        if (array_key_exists("PersonType",$param) and $param["PersonType"] !== null) {
-            $this->PersonType = $param["PersonType"];
+        if (array_key_exists('PersonType',$param) and $param['PersonType'] !== null) {
+            $this->PersonType = $param['PersonType'];
         }
 
-        if (array_key_exists("PersonSubType",$param) and $param["PersonSubType"] !== null) {
-            $this->PersonSubType = $param["PersonSubType"];
+        if (array_key_exists('PersonSubType',$param) and $param['PersonSubType'] !== null) {
+            $this->PersonSubType = $param['PersonSubType'];
         }
     }
 }

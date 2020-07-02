@@ -46,8 +46,8 @@ class DeleteLaneRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LaneId",$param) and $param["LaneId"] !== null) {
-            $this->LaneId = $param["LaneId"];
+        if (array_key_exists('LaneId',$param) and $param['LaneId'] !== null) {
+            $this->LaneId = $param['LaneId'];
         }
     }
 }

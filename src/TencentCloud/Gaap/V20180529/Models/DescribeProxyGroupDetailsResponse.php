@@ -54,13 +54,13 @@ class DescribeProxyGroupDetailsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ProxyGroupDetail",$param) and $param["ProxyGroupDetail"] !== null) {
+        if (array_key_exists('ProxyGroupDetail',$param) and $param['ProxyGroupDetail'] !== null) {
             $this->ProxyGroupDetail = new ProxyGroupDetail();
-            $this->ProxyGroupDetail->deserialize($param["ProxyGroupDetail"]);
+            $this->ProxyGroupDetail->deserialize($param['ProxyGroupDetail']);
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

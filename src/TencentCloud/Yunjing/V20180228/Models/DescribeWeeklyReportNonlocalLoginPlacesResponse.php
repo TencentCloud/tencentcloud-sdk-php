@@ -62,21 +62,21 @@ class DescribeWeeklyReportNonlocalLoginPlacesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("WeeklyReportNonlocalLoginPlaces",$param) and $param["WeeklyReportNonlocalLoginPlaces"] !== null) {
+        if (array_key_exists('WeeklyReportNonlocalLoginPlaces',$param) and $param['WeeklyReportNonlocalLoginPlaces'] !== null) {
             $this->WeeklyReportNonlocalLoginPlaces = [];
-            foreach ($param["WeeklyReportNonlocalLoginPlaces"] as $key => $value){
+            foreach ($param['WeeklyReportNonlocalLoginPlaces'] as $key => $value){
                 $obj = new WeeklyReportNonlocalLoginPlace();
                 $obj->deserialize($value);
                 array_push($this->WeeklyReportNonlocalLoginPlaces, $obj);
             }
         }
 
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

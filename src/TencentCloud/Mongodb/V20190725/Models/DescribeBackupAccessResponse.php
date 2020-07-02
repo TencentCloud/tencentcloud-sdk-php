@@ -70,25 +70,25 @@ class DescribeBackupAccessResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Region",$param) and $param["Region"] !== null) {
-            $this->Region = $param["Region"];
+        if (array_key_exists('Region',$param) and $param['Region'] !== null) {
+            $this->Region = $param['Region'];
         }
 
-        if (array_key_exists("Bucket",$param) and $param["Bucket"] !== null) {
-            $this->Bucket = $param["Bucket"];
+        if (array_key_exists('Bucket',$param) and $param['Bucket'] !== null) {
+            $this->Bucket = $param['Bucket'];
         }
 
-        if (array_key_exists("Files",$param) and $param["Files"] !== null) {
+        if (array_key_exists('Files',$param) and $param['Files'] !== null) {
             $this->Files = [];
-            foreach ($param["Files"] as $key => $value){
+            foreach ($param['Files'] as $key => $value){
                 $obj = new BackupFile();
                 $obj->deserialize($value);
                 array_push($this->Files, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

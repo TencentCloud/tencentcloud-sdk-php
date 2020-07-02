@@ -102,51 +102,51 @@ class CreateClusterRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ClusterCIDRSettings",$param) and $param["ClusterCIDRSettings"] !== null) {
+        if (array_key_exists('ClusterCIDRSettings',$param) and $param['ClusterCIDRSettings'] !== null) {
             $this->ClusterCIDRSettings = new ClusterCIDRSettings();
-            $this->ClusterCIDRSettings->deserialize($param["ClusterCIDRSettings"]);
+            $this->ClusterCIDRSettings->deserialize($param['ClusterCIDRSettings']);
         }
 
-        if (array_key_exists("ClusterType",$param) and $param["ClusterType"] !== null) {
-            $this->ClusterType = $param["ClusterType"];
+        if (array_key_exists('ClusterType',$param) and $param['ClusterType'] !== null) {
+            $this->ClusterType = $param['ClusterType'];
         }
 
-        if (array_key_exists("RunInstancesForNode",$param) and $param["RunInstancesForNode"] !== null) {
+        if (array_key_exists('RunInstancesForNode',$param) and $param['RunInstancesForNode'] !== null) {
             $this->RunInstancesForNode = [];
-            foreach ($param["RunInstancesForNode"] as $key => $value){
+            foreach ($param['RunInstancesForNode'] as $key => $value){
                 $obj = new RunInstancesForNode();
                 $obj->deserialize($value);
                 array_push($this->RunInstancesForNode, $obj);
             }
         }
 
-        if (array_key_exists("ClusterBasicSettings",$param) and $param["ClusterBasicSettings"] !== null) {
+        if (array_key_exists('ClusterBasicSettings',$param) and $param['ClusterBasicSettings'] !== null) {
             $this->ClusterBasicSettings = new ClusterBasicSettings();
-            $this->ClusterBasicSettings->deserialize($param["ClusterBasicSettings"]);
+            $this->ClusterBasicSettings->deserialize($param['ClusterBasicSettings']);
         }
 
-        if (array_key_exists("ClusterAdvancedSettings",$param) and $param["ClusterAdvancedSettings"] !== null) {
+        if (array_key_exists('ClusterAdvancedSettings',$param) and $param['ClusterAdvancedSettings'] !== null) {
             $this->ClusterAdvancedSettings = new ClusterAdvancedSettings();
-            $this->ClusterAdvancedSettings->deserialize($param["ClusterAdvancedSettings"]);
+            $this->ClusterAdvancedSettings->deserialize($param['ClusterAdvancedSettings']);
         }
 
-        if (array_key_exists("InstanceAdvancedSettings",$param) and $param["InstanceAdvancedSettings"] !== null) {
+        if (array_key_exists('InstanceAdvancedSettings',$param) and $param['InstanceAdvancedSettings'] !== null) {
             $this->InstanceAdvancedSettings = new InstanceAdvancedSettings();
-            $this->InstanceAdvancedSettings->deserialize($param["InstanceAdvancedSettings"]);
+            $this->InstanceAdvancedSettings->deserialize($param['InstanceAdvancedSettings']);
         }
 
-        if (array_key_exists("ExistedInstancesForNode",$param) and $param["ExistedInstancesForNode"] !== null) {
+        if (array_key_exists('ExistedInstancesForNode',$param) and $param['ExistedInstancesForNode'] !== null) {
             $this->ExistedInstancesForNode = [];
-            foreach ($param["ExistedInstancesForNode"] as $key => $value){
+            foreach ($param['ExistedInstancesForNode'] as $key => $value){
                 $obj = new ExistedInstancesForNode();
                 $obj->deserialize($value);
                 array_push($this->ExistedInstancesForNode, $obj);
             }
         }
 
-        if (array_key_exists("InstanceDataDiskMountSettings",$param) and $param["InstanceDataDiskMountSettings"] !== null) {
+        if (array_key_exists('InstanceDataDiskMountSettings',$param) and $param['InstanceDataDiskMountSettings'] !== null) {
             $this->InstanceDataDiskMountSettings = [];
-            foreach ($param["InstanceDataDiskMountSettings"] as $key => $value){
+            foreach ($param['InstanceDataDiskMountSettings'] as $key => $value){
                 $obj = new InstanceDataDiskMountSetting();
                 $obj->deserialize($value);
                 array_push($this->InstanceDataDiskMountSettings, $obj);

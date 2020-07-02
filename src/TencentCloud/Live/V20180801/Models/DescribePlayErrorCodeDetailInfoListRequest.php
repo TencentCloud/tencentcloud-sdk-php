@@ -102,28 +102,28 @@ class DescribePlayErrorCodeDetailInfoListRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
-            $this->StartTime = $param["StartTime"];
+        if (array_key_exists('StartTime',$param) and $param['StartTime'] !== null) {
+            $this->StartTime = $param['StartTime'];
         }
 
-        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
-            $this->EndTime = $param["EndTime"];
+        if (array_key_exists('EndTime',$param) and $param['EndTime'] !== null) {
+            $this->EndTime = $param['EndTime'];
         }
 
-        if (array_key_exists("Granularity",$param) and $param["Granularity"] !== null) {
-            $this->Granularity = $param["Granularity"];
+        if (array_key_exists('Granularity',$param) and $param['Granularity'] !== null) {
+            $this->Granularity = $param['Granularity'];
         }
 
-        if (array_key_exists("StatType",$param) and $param["StatType"] !== null) {
-            $this->StatType = $param["StatType"];
+        if (array_key_exists('StatType',$param) and $param['StatType'] !== null) {
+            $this->StatType = $param['StatType'];
         }
 
-        if (array_key_exists("PlayDomains",$param) and $param["PlayDomains"] !== null) {
-            $this->PlayDomains = $param["PlayDomains"];
+        if (array_key_exists('PlayDomains',$param) and $param['PlayDomains'] !== null) {
+            $this->PlayDomains = $param['PlayDomains'];
         }
 
-        if (array_key_exists("MainlandOrOversea",$param) and $param["MainlandOrOversea"] !== null) {
-            $this->MainlandOrOversea = $param["MainlandOrOversea"];
+        if (array_key_exists('MainlandOrOversea',$param) and $param['MainlandOrOversea'] !== null) {
+            $this->MainlandOrOversea = $param['MainlandOrOversea'];
         }
     }
 }

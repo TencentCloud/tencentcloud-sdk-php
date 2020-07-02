@@ -54,12 +54,12 @@ class GenderPortrait extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Gender",$param) and $param["Gender"] !== null) {
-            $this->Gender = $param["Gender"];
+        if (array_key_exists('Gender',$param) and $param['Gender'] !== null) {
+            $this->Gender = $param['Gender'];
         }
 
-        if (array_key_exists("Percent",$param) and $param["Percent"] !== null) {
-            $this->Percent = $param["Percent"];
+        if (array_key_exists('Percent',$param) and $param['Percent'] !== null) {
+            $this->Percent = $param['Percent'];
         }
     }
 }

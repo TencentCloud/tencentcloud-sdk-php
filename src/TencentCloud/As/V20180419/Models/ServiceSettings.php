@@ -66,12 +66,12 @@ WAKE_UP_STOPPED_SCALING：扩容优先开机。扩容时优先对已关机的实
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ReplaceMonitorUnhealthy",$param) and $param["ReplaceMonitorUnhealthy"] !== null) {
-            $this->ReplaceMonitorUnhealthy = $param["ReplaceMonitorUnhealthy"];
+        if (array_key_exists('ReplaceMonitorUnhealthy',$param) and $param['ReplaceMonitorUnhealthy'] !== null) {
+            $this->ReplaceMonitorUnhealthy = $param['ReplaceMonitorUnhealthy'];
         }
 
-        if (array_key_exists("ScalingMode",$param) and $param["ScalingMode"] !== null) {
-            $this->ScalingMode = $param["ScalingMode"];
+        if (array_key_exists('ScalingMode',$param) and $param['ScalingMode'] !== null) {
+            $this->ScalingMode = $param['ScalingMode'];
         }
     }
 }

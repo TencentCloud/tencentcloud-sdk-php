@@ -62,21 +62,21 @@ class DescribeTaskLogsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("TaskInstanceLogSet",$param) and $param["TaskInstanceLogSet"] !== null) {
+        if (array_key_exists('TaskInstanceLogSet',$param) and $param['TaskInstanceLogSet'] !== null) {
             $this->TaskInstanceLogSet = [];
-            foreach ($param["TaskInstanceLogSet"] as $key => $value){
+            foreach ($param['TaskInstanceLogSet'] as $key => $value){
                 $obj = new TaskInstanceLog();
                 $obj->deserialize($value);
                 array_push($this->TaskInstanceLogSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

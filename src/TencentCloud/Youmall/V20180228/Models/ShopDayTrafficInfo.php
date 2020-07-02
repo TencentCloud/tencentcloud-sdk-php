@@ -62,17 +62,17 @@ class ShopDayTrafficInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Date",$param) and $param["Date"] !== null) {
-            $this->Date = $param["Date"];
+        if (array_key_exists('Date',$param) and $param['Date'] !== null) {
+            $this->Date = $param['Date'];
         }
 
-        if (array_key_exists("DayTrafficTotalCount",$param) and $param["DayTrafficTotalCount"] !== null) {
-            $this->DayTrafficTotalCount = $param["DayTrafficTotalCount"];
+        if (array_key_exists('DayTrafficTotalCount',$param) and $param['DayTrafficTotalCount'] !== null) {
+            $this->DayTrafficTotalCount = $param['DayTrafficTotalCount'];
         }
 
-        if (array_key_exists("GenderAgeTrafficDetailSet",$param) and $param["GenderAgeTrafficDetailSet"] !== null) {
+        if (array_key_exists('GenderAgeTrafficDetailSet',$param) and $param['GenderAgeTrafficDetailSet'] !== null) {
             $this->GenderAgeTrafficDetailSet = [];
-            foreach ($param["GenderAgeTrafficDetailSet"] as $key => $value){
+            foreach ($param['GenderAgeTrafficDetailSet'] as $key => $value){
                 $obj = new GenderAgeTrafficDetail();
                 $obj->deserialize($value);
                 array_push($this->GenderAgeTrafficDetailSet, $obj);

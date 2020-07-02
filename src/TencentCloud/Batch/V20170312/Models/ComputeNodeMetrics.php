@@ -94,32 +94,32 @@ class ComputeNodeMetrics extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SubmittedCount",$param) and $param["SubmittedCount"] !== null) {
-            $this->SubmittedCount = $param["SubmittedCount"];
+        if (array_key_exists('SubmittedCount',$param) and $param['SubmittedCount'] !== null) {
+            $this->SubmittedCount = $param['SubmittedCount'];
         }
 
-        if (array_key_exists("CreatingCount",$param) and $param["CreatingCount"] !== null) {
-            $this->CreatingCount = $param["CreatingCount"];
+        if (array_key_exists('CreatingCount',$param) and $param['CreatingCount'] !== null) {
+            $this->CreatingCount = $param['CreatingCount'];
         }
 
-        if (array_key_exists("CreationFailedCount",$param) and $param["CreationFailedCount"] !== null) {
-            $this->CreationFailedCount = $param["CreationFailedCount"];
+        if (array_key_exists('CreationFailedCount',$param) and $param['CreationFailedCount'] !== null) {
+            $this->CreationFailedCount = $param['CreationFailedCount'];
         }
 
-        if (array_key_exists("CreatedCount",$param) and $param["CreatedCount"] !== null) {
-            $this->CreatedCount = $param["CreatedCount"];
+        if (array_key_exists('CreatedCount',$param) and $param['CreatedCount'] !== null) {
+            $this->CreatedCount = $param['CreatedCount'];
         }
 
-        if (array_key_exists("RunningCount",$param) and $param["RunningCount"] !== null) {
-            $this->RunningCount = $param["RunningCount"];
+        if (array_key_exists('RunningCount',$param) and $param['RunningCount'] !== null) {
+            $this->RunningCount = $param['RunningCount'];
         }
 
-        if (array_key_exists("DeletingCount",$param) and $param["DeletingCount"] !== null) {
-            $this->DeletingCount = $param["DeletingCount"];
+        if (array_key_exists('DeletingCount',$param) and $param['DeletingCount'] !== null) {
+            $this->DeletingCount = $param['DeletingCount'];
         }
 
-        if (array_key_exists("AbnormalCount",$param) and $param["AbnormalCount"] !== null) {
-            $this->AbnormalCount = $param["AbnormalCount"];
+        if (array_key_exists('AbnormalCount',$param) and $param['AbnormalCount'] !== null) {
+            $this->AbnormalCount = $param['AbnormalCount'];
         }
     }
 }

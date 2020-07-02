@@ -94,32 +94,32 @@ class Product extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("Parents",$param) and $param["Parents"] !== null) {
-            $this->Parents = $param["Parents"];
+        if (array_key_exists('Parents',$param) and $param['Parents'] !== null) {
+            $this->Parents = $param['Parents'];
         }
 
-        if (array_key_exists("Confidence",$param) and $param["Confidence"] !== null) {
-            $this->Confidence = $param["Confidence"];
+        if (array_key_exists('Confidence',$param) and $param['Confidence'] !== null) {
+            $this->Confidence = $param['Confidence'];
         }
 
-        if (array_key_exists("XMin",$param) and $param["XMin"] !== null) {
-            $this->XMin = $param["XMin"];
+        if (array_key_exists('XMin',$param) and $param['XMin'] !== null) {
+            $this->XMin = $param['XMin'];
         }
 
-        if (array_key_exists("YMin",$param) and $param["YMin"] !== null) {
-            $this->YMin = $param["YMin"];
+        if (array_key_exists('YMin',$param) and $param['YMin'] !== null) {
+            $this->YMin = $param['YMin'];
         }
 
-        if (array_key_exists("XMax",$param) and $param["XMax"] !== null) {
-            $this->XMax = $param["XMax"];
+        if (array_key_exists('XMax',$param) and $param['XMax'] !== null) {
+            $this->XMax = $param['XMax'];
         }
 
-        if (array_key_exists("YMax",$param) and $param["YMax"] !== null) {
-            $this->YMax = $param["YMax"];
+        if (array_key_exists('YMax',$param) and $param['YMax'] !== null) {
+            $this->YMax = $param['YMax'];
         }
     }
 }

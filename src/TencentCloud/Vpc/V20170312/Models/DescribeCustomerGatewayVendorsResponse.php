@@ -54,17 +54,17 @@ class DescribeCustomerGatewayVendorsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CustomerGatewayVendorSet",$param) and $param["CustomerGatewayVendorSet"] !== null) {
+        if (array_key_exists('CustomerGatewayVendorSet',$param) and $param['CustomerGatewayVendorSet'] !== null) {
             $this->CustomerGatewayVendorSet = [];
-            foreach ($param["CustomerGatewayVendorSet"] as $key => $value){
+            foreach ($param['CustomerGatewayVendorSet'] as $key => $value){
                 $obj = new CustomerGatewayVendor();
                 $obj->deserialize($value);
                 array_push($this->CustomerGatewayVendorSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

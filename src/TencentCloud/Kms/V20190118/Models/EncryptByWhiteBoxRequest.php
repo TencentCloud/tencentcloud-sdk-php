@@ -62,16 +62,16 @@ class EncryptByWhiteBoxRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("KeyId",$param) and $param["KeyId"] !== null) {
-            $this->KeyId = $param["KeyId"];
+        if (array_key_exists('KeyId',$param) and $param['KeyId'] !== null) {
+            $this->KeyId = $param['KeyId'];
         }
 
-        if (array_key_exists("PlainText",$param) and $param["PlainText"] !== null) {
-            $this->PlainText = $param["PlainText"];
+        if (array_key_exists('PlainText',$param) and $param['PlainText'] !== null) {
+            $this->PlainText = $param['PlainText'];
         }
 
-        if (array_key_exists("InitializationVector",$param) and $param["InitializationVector"] !== null) {
-            $this->InitializationVector = $param["InitializationVector"];
+        if (array_key_exists('InitializationVector',$param) and $param['InitializationVector'] !== null) {
+            $this->InitializationVector = $param['InitializationVector'];
         }
     }
 }

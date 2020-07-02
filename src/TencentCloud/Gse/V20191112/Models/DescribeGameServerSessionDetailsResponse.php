@@ -70,21 +70,21 @@ class DescribeGameServerSessionDetailsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("GameServerSessionDetails",$param) and $param["GameServerSessionDetails"] !== null) {
+        if (array_key_exists('GameServerSessionDetails',$param) and $param['GameServerSessionDetails'] !== null) {
             $this->GameServerSessionDetails = [];
-            foreach ($param["GameServerSessionDetails"] as $key => $value){
+            foreach ($param['GameServerSessionDetails'] as $key => $value){
                 $obj = new GameServerSessionDetail();
                 $obj->deserialize($value);
                 array_push($this->GameServerSessionDetails, $obj);
             }
         }
 
-        if (array_key_exists("NextToken",$param) and $param["NextToken"] !== null) {
-            $this->NextToken = $param["NextToken"];
+        if (array_key_exists('NextToken',$param) and $param['NextToken'] !== null) {
+            $this->NextToken = $param['NextToken'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

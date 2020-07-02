@@ -58,17 +58,17 @@ class DescribeLivePackageInfoResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LivePackageInfoList",$param) and $param["LivePackageInfoList"] !== null) {
+        if (array_key_exists('LivePackageInfoList',$param) and $param['LivePackageInfoList'] !== null) {
             $this->LivePackageInfoList = [];
-            foreach ($param["LivePackageInfoList"] as $key => $value){
+            foreach ($param['LivePackageInfoList'] as $key => $value){
                 $obj = new LivePackageInfo();
                 $obj->deserialize($value);
                 array_push($this->LivePackageInfoList, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

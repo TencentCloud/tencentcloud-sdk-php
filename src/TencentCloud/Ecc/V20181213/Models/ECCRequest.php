@@ -110,40 +110,40 @@ class ECCRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Content",$param) and $param["Content"] !== null) {
-            $this->Content = $param["Content"];
+        if (array_key_exists('Content',$param) and $param['Content'] !== null) {
+            $this->Content = $param['Content'];
         }
 
-        if (array_key_exists("Title",$param) and $param["Title"] !== null) {
-            $this->Title = $param["Title"];
+        if (array_key_exists('Title',$param) and $param['Title'] !== null) {
+            $this->Title = $param['Title'];
         }
 
-        if (array_key_exists("Grade",$param) and $param["Grade"] !== null) {
-            $this->Grade = $param["Grade"];
+        if (array_key_exists('Grade',$param) and $param['Grade'] !== null) {
+            $this->Grade = $param['Grade'];
         }
 
-        if (array_key_exists("Requirement",$param) and $param["Requirement"] !== null) {
-            $this->Requirement = $param["Requirement"];
+        if (array_key_exists('Requirement',$param) and $param['Requirement'] !== null) {
+            $this->Requirement = $param['Requirement'];
         }
 
-        if (array_key_exists("ModelTitle",$param) and $param["ModelTitle"] !== null) {
-            $this->ModelTitle = $param["ModelTitle"];
+        if (array_key_exists('ModelTitle',$param) and $param['ModelTitle'] !== null) {
+            $this->ModelTitle = $param['ModelTitle'];
         }
 
-        if (array_key_exists("ModelContent",$param) and $param["ModelContent"] !== null) {
-            $this->ModelContent = $param["ModelContent"];
+        if (array_key_exists('ModelContent',$param) and $param['ModelContent'] !== null) {
+            $this->ModelContent = $param['ModelContent'];
         }
 
-        if (array_key_exists("EccAppid",$param) and $param["EccAppid"] !== null) {
-            $this->EccAppid = $param["EccAppid"];
+        if (array_key_exists('EccAppid',$param) and $param['EccAppid'] !== null) {
+            $this->EccAppid = $param['EccAppid'];
         }
 
-        if (array_key_exists("IsAsync",$param) and $param["IsAsync"] !== null) {
-            $this->IsAsync = $param["IsAsync"];
+        if (array_key_exists('IsAsync',$param) and $param['IsAsync'] !== null) {
+            $this->IsAsync = $param['IsAsync'];
         }
 
-        if (array_key_exists("SessionId",$param) and $param["SessionId"] !== null) {
-            $this->SessionId = $param["SessionId"];
+        if (array_key_exists('SessionId',$param) and $param['SessionId'] !== null) {
+            $this->SessionId = $param['SessionId'];
         }
     }
 }

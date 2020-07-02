@@ -66,22 +66,22 @@ class Result extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Candidates",$param) and $param["Candidates"] !== null) {
+        if (array_key_exists('Candidates',$param) and $param['Candidates'] !== null) {
             $this->Candidates = [];
-            foreach ($param["Candidates"] as $key => $value){
+            foreach ($param['Candidates'] as $key => $value){
                 $obj = new Candidate();
                 $obj->deserialize($value);
                 array_push($this->Candidates, $obj);
             }
         }
 
-        if (array_key_exists("FaceRect",$param) and $param["FaceRect"] !== null) {
+        if (array_key_exists('FaceRect',$param) and $param['FaceRect'] !== null) {
             $this->FaceRect = new FaceRect();
-            $this->FaceRect->deserialize($param["FaceRect"]);
+            $this->FaceRect->deserialize($param['FaceRect']);
         }
 
-        if (array_key_exists("RetCode",$param) and $param["RetCode"] !== null) {
-            $this->RetCode = $param["RetCode"];
+        if (array_key_exists('RetCode',$param) and $param['RetCode'] !== null) {
+            $this->RetCode = $param['RetCode'];
         }
     }
 }

@@ -71,20 +71,20 @@ class RedirectInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("StdoutRedirectPath",$param) and $param["StdoutRedirectPath"] !== null) {
-            $this->StdoutRedirectPath = $param["StdoutRedirectPath"];
+        if (array_key_exists('StdoutRedirectPath',$param) and $param['StdoutRedirectPath'] !== null) {
+            $this->StdoutRedirectPath = $param['StdoutRedirectPath'];
         }
 
-        if (array_key_exists("StderrRedirectPath",$param) and $param["StderrRedirectPath"] !== null) {
-            $this->StderrRedirectPath = $param["StderrRedirectPath"];
+        if (array_key_exists('StderrRedirectPath',$param) and $param['StderrRedirectPath'] !== null) {
+            $this->StderrRedirectPath = $param['StderrRedirectPath'];
         }
 
-        if (array_key_exists("StdoutRedirectFileName",$param) and $param["StdoutRedirectFileName"] !== null) {
-            $this->StdoutRedirectFileName = $param["StdoutRedirectFileName"];
+        if (array_key_exists('StdoutRedirectFileName',$param) and $param['StdoutRedirectFileName'] !== null) {
+            $this->StdoutRedirectFileName = $param['StdoutRedirectFileName'];
         }
 
-        if (array_key_exists("StderrRedirectFileName",$param) and $param["StderrRedirectFileName"] !== null) {
-            $this->StderrRedirectFileName = $param["StderrRedirectFileName"];
+        if (array_key_exists('StderrRedirectFileName',$param) and $param['StderrRedirectFileName'] !== null) {
+            $this->StderrRedirectFileName = $param['StderrRedirectFileName'];
         }
     }
 }

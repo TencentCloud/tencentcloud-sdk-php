@@ -54,12 +54,12 @@ class DeleteSealResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SealResId",$param) and $param["SealResId"] !== null) {
-            $this->SealResId = $param["SealResId"];
+        if (array_key_exists('SealResId',$param) and $param['SealResId'] !== null) {
+            $this->SealResId = $param['SealResId'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

@@ -46,8 +46,8 @@ class DeletePsaRegulationRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PsaId",$param) and $param["PsaId"] !== null) {
-            $this->PsaId = $param["PsaId"];
+        if (array_key_exists('PsaId',$param) and $param['PsaId'] !== null) {
+            $this->PsaId = $param['PsaId'];
         }
     }
 }

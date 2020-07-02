@@ -86,48 +86,48 @@ class DescribeInstanceParamsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("InstanceEnumParam",$param) and $param["InstanceEnumParam"] !== null) {
+        if (array_key_exists('InstanceEnumParam',$param) and $param['InstanceEnumParam'] !== null) {
             $this->InstanceEnumParam = [];
-            foreach ($param["InstanceEnumParam"] as $key => $value){
+            foreach ($param['InstanceEnumParam'] as $key => $value){
                 $obj = new InstanceEnumParam();
                 $obj->deserialize($value);
                 array_push($this->InstanceEnumParam, $obj);
             }
         }
 
-        if (array_key_exists("InstanceIntegerParam",$param) and $param["InstanceIntegerParam"] !== null) {
+        if (array_key_exists('InstanceIntegerParam',$param) and $param['InstanceIntegerParam'] !== null) {
             $this->InstanceIntegerParam = [];
-            foreach ($param["InstanceIntegerParam"] as $key => $value){
+            foreach ($param['InstanceIntegerParam'] as $key => $value){
                 $obj = new InstanceIntegerParam();
                 $obj->deserialize($value);
                 array_push($this->InstanceIntegerParam, $obj);
             }
         }
 
-        if (array_key_exists("InstanceTextParam",$param) and $param["InstanceTextParam"] !== null) {
+        if (array_key_exists('InstanceTextParam',$param) and $param['InstanceTextParam'] !== null) {
             $this->InstanceTextParam = [];
-            foreach ($param["InstanceTextParam"] as $key => $value){
+            foreach ($param['InstanceTextParam'] as $key => $value){
                 $obj = new InstanceTextParam();
                 $obj->deserialize($value);
                 array_push($this->InstanceTextParam, $obj);
             }
         }
 
-        if (array_key_exists("InstanceMultiParam",$param) and $param["InstanceMultiParam"] !== null) {
+        if (array_key_exists('InstanceMultiParam',$param) and $param['InstanceMultiParam'] !== null) {
             $this->InstanceMultiParam = [];
-            foreach ($param["InstanceMultiParam"] as $key => $value){
+            foreach ($param['InstanceMultiParam'] as $key => $value){
                 $obj = new InstanceMultiParam();
                 $obj->deserialize($value);
                 array_push($this->InstanceMultiParam, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

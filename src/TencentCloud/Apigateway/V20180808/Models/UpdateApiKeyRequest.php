@@ -54,12 +54,12 @@ class UpdateApiKeyRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AccessKeyId",$param) and $param["AccessKeyId"] !== null) {
-            $this->AccessKeyId = $param["AccessKeyId"];
+        if (array_key_exists('AccessKeyId',$param) and $param['AccessKeyId'] !== null) {
+            $this->AccessKeyId = $param['AccessKeyId'];
         }
 
-        if (array_key_exists("AccessKeySecret",$param) and $param["AccessKeySecret"] !== null) {
-            $this->AccessKeySecret = $param["AccessKeySecret"];
+        if (array_key_exists('AccessKeySecret',$param) and $param['AccessKeySecret'] !== null) {
+            $this->AccessKeySecret = $param['AccessKeySecret'];
         }
     }
 }

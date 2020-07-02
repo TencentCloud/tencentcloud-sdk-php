@@ -58,17 +58,17 @@ class DescribeClassicalLBTargetsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Targets",$param) and $param["Targets"] !== null) {
+        if (array_key_exists('Targets',$param) and $param['Targets'] !== null) {
             $this->Targets = [];
-            foreach ($param["Targets"] as $key => $value){
+            foreach ($param['Targets'] as $key => $value){
                 $obj = new ClassicalTarget();
                 $obj->deserialize($value);
                 array_push($this->Targets, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

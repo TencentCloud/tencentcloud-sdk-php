@@ -58,12 +58,12 @@ class GroupInfoTopics extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Topic",$param) and $param["Topic"] !== null) {
-            $this->Topic = $param["Topic"];
+        if (array_key_exists('Topic',$param) and $param['Topic'] !== null) {
+            $this->Topic = $param['Topic'];
         }
 
-        if (array_key_exists("Partitions",$param) and $param["Partitions"] !== null) {
-            $this->Partitions = $param["Partitions"];
+        if (array_key_exists('Partitions',$param) and $param['Partitions'] !== null) {
+            $this->Partitions = $param['Partitions'];
         }
     }
 }

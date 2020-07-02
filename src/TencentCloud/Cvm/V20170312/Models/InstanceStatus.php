@@ -54,12 +54,12 @@ class InstanceStatus extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("InstanceState",$param) and $param["InstanceState"] !== null) {
-            $this->InstanceState = $param["InstanceState"];
+        if (array_key_exists('InstanceState',$param) and $param['InstanceState'] !== null) {
+            $this->InstanceState = $param['InstanceState'];
         }
     }
 }

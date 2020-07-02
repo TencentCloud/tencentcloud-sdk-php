@@ -86,28 +86,28 @@ class DescribeEipQuotaResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("EipNumQuota",$param) and $param["EipNumQuota"] !== null) {
-            $this->EipNumQuota = $param["EipNumQuota"];
+        if (array_key_exists('EipNumQuota',$param) and $param['EipNumQuota'] !== null) {
+            $this->EipNumQuota = $param['EipNumQuota'];
         }
 
-        if (array_key_exists("CurrentEipNum",$param) and $param["CurrentEipNum"] !== null) {
-            $this->CurrentEipNum = $param["CurrentEipNum"];
+        if (array_key_exists('CurrentEipNum',$param) and $param['CurrentEipNum'] !== null) {
+            $this->CurrentEipNum = $param['CurrentEipNum'];
         }
 
-        if (array_key_exists("DailyApplyCount",$param) and $param["DailyApplyCount"] !== null) {
-            $this->DailyApplyCount = $param["DailyApplyCount"];
+        if (array_key_exists('DailyApplyCount',$param) and $param['DailyApplyCount'] !== null) {
+            $this->DailyApplyCount = $param['DailyApplyCount'];
         }
 
-        if (array_key_exists("DailyApplyQuota",$param) and $param["DailyApplyQuota"] !== null) {
-            $this->DailyApplyQuota = $param["DailyApplyQuota"];
+        if (array_key_exists('DailyApplyQuota',$param) and $param['DailyApplyQuota'] !== null) {
+            $this->DailyApplyQuota = $param['DailyApplyQuota'];
         }
 
-        if (array_key_exists("BatchApplyMax",$param) and $param["BatchApplyMax"] !== null) {
-            $this->BatchApplyMax = $param["BatchApplyMax"];
+        if (array_key_exists('BatchApplyMax',$param) and $param['BatchApplyMax'] !== null) {
+            $this->BatchApplyMax = $param['BatchApplyMax'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

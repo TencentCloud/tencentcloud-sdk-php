@@ -118,54 +118,54 @@ class DescribeVulsNumberResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ImpactSiteNumber",$param) and $param["ImpactSiteNumber"] !== null) {
-            $this->ImpactSiteNumber = $param["ImpactSiteNumber"];
+        if (array_key_exists('ImpactSiteNumber',$param) and $param['ImpactSiteNumber'] !== null) {
+            $this->ImpactSiteNumber = $param['ImpactSiteNumber'];
         }
 
-        if (array_key_exists("SiteNumber",$param) and $param["SiteNumber"] !== null) {
-            $this->SiteNumber = $param["SiteNumber"];
+        if (array_key_exists('SiteNumber',$param) and $param['SiteNumber'] !== null) {
+            $this->SiteNumber = $param['SiteNumber'];
         }
 
-        if (array_key_exists("VulsHighNumber",$param) and $param["VulsHighNumber"] !== null) {
-            $this->VulsHighNumber = $param["VulsHighNumber"];
+        if (array_key_exists('VulsHighNumber',$param) and $param['VulsHighNumber'] !== null) {
+            $this->VulsHighNumber = $param['VulsHighNumber'];
         }
 
-        if (array_key_exists("VulsMiddleNumber",$param) and $param["VulsMiddleNumber"] !== null) {
-            $this->VulsMiddleNumber = $param["VulsMiddleNumber"];
+        if (array_key_exists('VulsMiddleNumber',$param) and $param['VulsMiddleNumber'] !== null) {
+            $this->VulsMiddleNumber = $param['VulsMiddleNumber'];
         }
 
-        if (array_key_exists("VulsLowNumber",$param) and $param["VulsLowNumber"] !== null) {
-            $this->VulsLowNumber = $param["VulsLowNumber"];
+        if (array_key_exists('VulsLowNumber',$param) and $param['VulsLowNumber'] !== null) {
+            $this->VulsLowNumber = $param['VulsLowNumber'];
         }
 
-        if (array_key_exists("VulsNoticeNumber",$param) and $param["VulsNoticeNumber"] !== null) {
-            $this->VulsNoticeNumber = $param["VulsNoticeNumber"];
+        if (array_key_exists('VulsNoticeNumber',$param) and $param['VulsNoticeNumber'] !== null) {
+            $this->VulsNoticeNumber = $param['VulsNoticeNumber'];
         }
 
-        if (array_key_exists("PageCount",$param) and $param["PageCount"] !== null) {
-            $this->PageCount = $param["PageCount"];
+        if (array_key_exists('PageCount',$param) and $param['PageCount'] !== null) {
+            $this->PageCount = $param['PageCount'];
         }
 
-        if (array_key_exists("Sites",$param) and $param["Sites"] !== null) {
+        if (array_key_exists('Sites',$param) and $param['Sites'] !== null) {
             $this->Sites = [];
-            foreach ($param["Sites"] as $key => $value){
+            foreach ($param['Sites'] as $key => $value){
                 $obj = new MonitorMiniSite();
                 $obj->deserialize($value);
                 array_push($this->Sites, $obj);
             }
         }
 
-        if (array_key_exists("ImpactSites",$param) and $param["ImpactSites"] !== null) {
+        if (array_key_exists('ImpactSites',$param) and $param['ImpactSites'] !== null) {
             $this->ImpactSites = [];
-            foreach ($param["ImpactSites"] as $key => $value){
+            foreach ($param['ImpactSites'] as $key => $value){
                 $obj = new MonitorMiniSite();
                 $obj->deserialize($value);
                 array_push($this->ImpactSites, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

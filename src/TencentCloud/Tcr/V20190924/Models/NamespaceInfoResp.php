@@ -54,13 +54,13 @@ class NamespaceInfoResp extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("NamespaceCount",$param) and $param["NamespaceCount"] !== null) {
-            $this->NamespaceCount = $param["NamespaceCount"];
+        if (array_key_exists('NamespaceCount',$param) and $param['NamespaceCount'] !== null) {
+            $this->NamespaceCount = $param['NamespaceCount'];
         }
 
-        if (array_key_exists("NamespaceInfo",$param) and $param["NamespaceInfo"] !== null) {
+        if (array_key_exists('NamespaceInfo',$param) and $param['NamespaceInfo'] !== null) {
             $this->NamespaceInfo = [];
-            foreach ($param["NamespaceInfo"] as $key => $value){
+            foreach ($param['NamespaceInfo'] as $key => $value){
                 $obj = new NamespaceInfo();
                 $obj->deserialize($value);
                 array_push($this->NamespaceInfo, $obj);

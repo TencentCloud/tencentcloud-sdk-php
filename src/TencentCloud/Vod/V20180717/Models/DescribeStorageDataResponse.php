@@ -78,24 +78,24 @@ class DescribeStorageDataResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MediaCount",$param) and $param["MediaCount"] !== null) {
-            $this->MediaCount = $param["MediaCount"];
+        if (array_key_exists('MediaCount',$param) and $param['MediaCount'] !== null) {
+            $this->MediaCount = $param['MediaCount'];
         }
 
-        if (array_key_exists("TotalStorage",$param) and $param["TotalStorage"] !== null) {
-            $this->TotalStorage = $param["TotalStorage"];
+        if (array_key_exists('TotalStorage',$param) and $param['TotalStorage'] !== null) {
+            $this->TotalStorage = $param['TotalStorage'];
         }
 
-        if (array_key_exists("InfrequentStorage",$param) and $param["InfrequentStorage"] !== null) {
-            $this->InfrequentStorage = $param["InfrequentStorage"];
+        if (array_key_exists('InfrequentStorage',$param) and $param['InfrequentStorage'] !== null) {
+            $this->InfrequentStorage = $param['InfrequentStorage'];
         }
 
-        if (array_key_exists("StandardStorage",$param) and $param["StandardStorage"] !== null) {
-            $this->StandardStorage = $param["StandardStorage"];
+        if (array_key_exists('StandardStorage',$param) and $param['StandardStorage'] !== null) {
+            $this->StandardStorage = $param['StandardStorage'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

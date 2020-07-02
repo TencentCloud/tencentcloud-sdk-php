@@ -70,20 +70,20 @@ class CreateDevicesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ProductId",$param) and $param["ProductId"] !== null) {
-            $this->ProductId = $param["ProductId"];
+        if (array_key_exists('ProductId',$param) and $param['ProductId'] !== null) {
+            $this->ProductId = $param['ProductId'];
         }
 
-        if (array_key_exists("Number",$param) and $param["Number"] !== null) {
-            $this->Number = $param["Number"];
+        if (array_key_exists('Number',$param) and $param['Number'] !== null) {
+            $this->Number = $param['Number'];
         }
 
-        if (array_key_exists("NamePrefix",$param) and $param["NamePrefix"] !== null) {
-            $this->NamePrefix = $param["NamePrefix"];
+        if (array_key_exists('NamePrefix',$param) and $param['NamePrefix'] !== null) {
+            $this->NamePrefix = $param['NamePrefix'];
         }
 
-        if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
-            $this->Operator = $param["Operator"];
+        if (array_key_exists('Operator',$param) and $param['Operator'] !== null) {
+            $this->Operator = $param['Operator'];
         }
     }
 }

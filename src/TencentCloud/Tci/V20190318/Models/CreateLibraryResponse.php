@@ -62,16 +62,16 @@ class CreateLibraryResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LibraryId",$param) and $param["LibraryId"] !== null) {
-            $this->LibraryId = $param["LibraryId"];
+        if (array_key_exists('LibraryId',$param) and $param['LibraryId'] !== null) {
+            $this->LibraryId = $param['LibraryId'];
         }
 
-        if (array_key_exists("LibraryName",$param) and $param["LibraryName"] !== null) {
-            $this->LibraryName = $param["LibraryName"];
+        if (array_key_exists('LibraryName',$param) and $param['LibraryName'] !== null) {
+            $this->LibraryName = $param['LibraryName'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

@@ -70,21 +70,21 @@ class MergeInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Image",$param) and $param["Image"] !== null) {
-            $this->Image = $param["Image"];
+        if (array_key_exists('Image',$param) and $param['Image'] !== null) {
+            $this->Image = $param['Image'];
         }
 
-        if (array_key_exists("Url",$param) and $param["Url"] !== null) {
-            $this->Url = $param["Url"];
+        if (array_key_exists('Url',$param) and $param['Url'] !== null) {
+            $this->Url = $param['Url'];
         }
 
-        if (array_key_exists("InputImageFaceRect",$param) and $param["InputImageFaceRect"] !== null) {
+        if (array_key_exists('InputImageFaceRect',$param) and $param['InputImageFaceRect'] !== null) {
             $this->InputImageFaceRect = new FaceRect();
-            $this->InputImageFaceRect->deserialize($param["InputImageFaceRect"]);
+            $this->InputImageFaceRect->deserialize($param['InputImageFaceRect']);
         }
 
-        if (array_key_exists("TemplateFaceID",$param) and $param["TemplateFaceID"] !== null) {
-            $this->TemplateFaceID = $param["TemplateFaceID"];
+        if (array_key_exists('TemplateFaceID',$param) and $param['TemplateFaceID'] !== null) {
+            $this->TemplateFaceID = $param['TemplateFaceID'];
         }
     }
 }

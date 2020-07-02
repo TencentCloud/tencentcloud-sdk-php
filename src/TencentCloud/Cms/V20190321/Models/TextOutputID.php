@@ -54,12 +54,12 @@ class TextOutputID extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MsgID",$param) and $param["MsgID"] !== null) {
-            $this->MsgID = $param["MsgID"];
+        if (array_key_exists('MsgID',$param) and $param['MsgID'] !== null) {
+            $this->MsgID = $param['MsgID'];
         }
 
-        if (array_key_exists("Uin",$param) and $param["Uin"] !== null) {
-            $this->Uin = $param["Uin"];
+        if (array_key_exists('Uin',$param) and $param['Uin'] !== null) {
+            $this->Uin = $param['Uin'];
         }
     }
 }

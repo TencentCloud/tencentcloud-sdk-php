@@ -62,16 +62,16 @@ class ModifyInstanceTokenRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TokenId",$param) and $param["TokenId"] !== null) {
-            $this->TokenId = $param["TokenId"];
+        if (array_key_exists('TokenId',$param) and $param['TokenId'] !== null) {
+            $this->TokenId = $param['TokenId'];
         }
 
-        if (array_key_exists("Enable",$param) and $param["Enable"] !== null) {
-            $this->Enable = $param["Enable"];
+        if (array_key_exists('Enable',$param) and $param['Enable'] !== null) {
+            $this->Enable = $param['Enable'];
         }
 
-        if (array_key_exists("RegistryId",$param) and $param["RegistryId"] !== null) {
-            $this->RegistryId = $param["RegistryId"];
+        if (array_key_exists('RegistryId',$param) and $param['RegistryId'] !== null) {
+            $this->RegistryId = $param['RegistryId'];
         }
     }
 }

@@ -134,53 +134,53 @@ class CreateProxyRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
-            $this->ProjectId = $param["ProjectId"];
+        if (array_key_exists('ProjectId',$param) and $param['ProjectId'] !== null) {
+            $this->ProjectId = $param['ProjectId'];
         }
 
-        if (array_key_exists("ProxyName",$param) and $param["ProxyName"] !== null) {
-            $this->ProxyName = $param["ProxyName"];
+        if (array_key_exists('ProxyName',$param) and $param['ProxyName'] !== null) {
+            $this->ProxyName = $param['ProxyName'];
         }
 
-        if (array_key_exists("AccessRegion",$param) and $param["AccessRegion"] !== null) {
-            $this->AccessRegion = $param["AccessRegion"];
+        if (array_key_exists('AccessRegion',$param) and $param['AccessRegion'] !== null) {
+            $this->AccessRegion = $param['AccessRegion'];
         }
 
-        if (array_key_exists("Bandwidth",$param) and $param["Bandwidth"] !== null) {
-            $this->Bandwidth = $param["Bandwidth"];
+        if (array_key_exists('Bandwidth',$param) and $param['Bandwidth'] !== null) {
+            $this->Bandwidth = $param['Bandwidth'];
         }
 
-        if (array_key_exists("Concurrent",$param) and $param["Concurrent"] !== null) {
-            $this->Concurrent = $param["Concurrent"];
+        if (array_key_exists('Concurrent',$param) and $param['Concurrent'] !== null) {
+            $this->Concurrent = $param['Concurrent'];
         }
 
-        if (array_key_exists("RealServerRegion",$param) and $param["RealServerRegion"] !== null) {
-            $this->RealServerRegion = $param["RealServerRegion"];
+        if (array_key_exists('RealServerRegion',$param) and $param['RealServerRegion'] !== null) {
+            $this->RealServerRegion = $param['RealServerRegion'];
         }
 
-        if (array_key_exists("ClientToken",$param) and $param["ClientToken"] !== null) {
-            $this->ClientToken = $param["ClientToken"];
+        if (array_key_exists('ClientToken',$param) and $param['ClientToken'] !== null) {
+            $this->ClientToken = $param['ClientToken'];
         }
 
-        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
-            $this->GroupId = $param["GroupId"];
+        if (array_key_exists('GroupId',$param) and $param['GroupId'] !== null) {
+            $this->GroupId = $param['GroupId'];
         }
 
-        if (array_key_exists("TagSet",$param) and $param["TagSet"] !== null) {
+        if (array_key_exists('TagSet',$param) and $param['TagSet'] !== null) {
             $this->TagSet = [];
-            foreach ($param["TagSet"] as $key => $value){
+            foreach ($param['TagSet'] as $key => $value){
                 $obj = new TagPair();
                 $obj->deserialize($value);
                 array_push($this->TagSet, $obj);
             }
         }
 
-        if (array_key_exists("ClonedProxyId",$param) and $param["ClonedProxyId"] !== null) {
-            $this->ClonedProxyId = $param["ClonedProxyId"];
+        if (array_key_exists('ClonedProxyId',$param) and $param['ClonedProxyId'] !== null) {
+            $this->ClonedProxyId = $param['ClonedProxyId'];
         }
 
-        if (array_key_exists("BillingType",$param) and $param["BillingType"] !== null) {
-            $this->BillingType = $param["BillingType"];
+        if (array_key_exists('BillingType',$param) and $param['BillingType'] !== null) {
+            $this->BillingType = $param['BillingType'];
         }
     }
 }

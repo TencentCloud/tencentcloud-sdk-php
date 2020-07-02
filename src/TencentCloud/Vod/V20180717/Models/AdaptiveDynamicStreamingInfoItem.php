@@ -70,20 +70,20 @@ class AdaptiveDynamicStreamingInfoItem extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Definition",$param) and $param["Definition"] !== null) {
-            $this->Definition = $param["Definition"];
+        if (array_key_exists('Definition',$param) and $param['Definition'] !== null) {
+            $this->Definition = $param['Definition'];
         }
 
-        if (array_key_exists("Package",$param) and $param["Package"] !== null) {
-            $this->Package = $param["Package"];
+        if (array_key_exists('Package',$param) and $param['Package'] !== null) {
+            $this->Package = $param['Package'];
         }
 
-        if (array_key_exists("DrmType",$param) and $param["DrmType"] !== null) {
-            $this->DrmType = $param["DrmType"];
+        if (array_key_exists('DrmType',$param) and $param['DrmType'] !== null) {
+            $this->DrmType = $param['DrmType'];
         }
 
-        if (array_key_exists("Url",$param) and $param["Url"] !== null) {
-            $this->Url = $param["Url"];
+        if (array_key_exists('Url',$param) and $param['Url'] !== null) {
+            $this->Url = $param['Url'];
         }
     }
 }

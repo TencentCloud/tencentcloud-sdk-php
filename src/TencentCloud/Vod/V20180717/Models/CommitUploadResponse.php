@@ -78,20 +78,20 @@ class CommitUploadResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FileId",$param) and $param["FileId"] !== null) {
-            $this->FileId = $param["FileId"];
+        if (array_key_exists('FileId',$param) and $param['FileId'] !== null) {
+            $this->FileId = $param['FileId'];
         }
 
-        if (array_key_exists("MediaUrl",$param) and $param["MediaUrl"] !== null) {
-            $this->MediaUrl = $param["MediaUrl"];
+        if (array_key_exists('MediaUrl',$param) and $param['MediaUrl'] !== null) {
+            $this->MediaUrl = $param['MediaUrl'];
         }
 
-        if (array_key_exists("CoverUrl",$param) and $param["CoverUrl"] !== null) {
-            $this->CoverUrl = $param["CoverUrl"];
+        if (array_key_exists('CoverUrl',$param) and $param['CoverUrl'] !== null) {
+            $this->CoverUrl = $param['CoverUrl'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

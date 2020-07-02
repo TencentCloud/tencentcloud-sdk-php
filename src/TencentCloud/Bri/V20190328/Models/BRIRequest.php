@@ -110,40 +110,40 @@ class BRIRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Service",$param) and $param["Service"] !== null) {
-            $this->Service = $param["Service"];
+        if (array_key_exists('Service',$param) and $param['Service'] !== null) {
+            $this->Service = $param['Service'];
         }
 
-        if (array_key_exists("CertMd5",$param) and $param["CertMd5"] !== null) {
-            $this->CertMd5 = $param["CertMd5"];
+        if (array_key_exists('CertMd5',$param) and $param['CertMd5'] !== null) {
+            $this->CertMd5 = $param['CertMd5'];
         }
 
-        if (array_key_exists("FileMd5",$param) and $param["FileMd5"] !== null) {
-            $this->FileMd5 = $param["FileMd5"];
+        if (array_key_exists('FileMd5',$param) and $param['FileMd5'] !== null) {
+            $this->FileMd5 = $param['FileMd5'];
         }
 
-        if (array_key_exists("FileSize",$param) and $param["FileSize"] !== null) {
-            $this->FileSize = $param["FileSize"];
+        if (array_key_exists('FileSize',$param) and $param['FileSize'] !== null) {
+            $this->FileSize = $param['FileSize'];
         }
 
-        if (array_key_exists("Imei",$param) and $param["Imei"] !== null) {
-            $this->Imei = $param["Imei"];
+        if (array_key_exists('Imei',$param) and $param['Imei'] !== null) {
+            $this->Imei = $param['Imei'];
         }
 
-        if (array_key_exists("Ip",$param) and $param["Ip"] !== null) {
-            $this->Ip = $param["Ip"];
+        if (array_key_exists('Ip',$param) and $param['Ip'] !== null) {
+            $this->Ip = $param['Ip'];
         }
 
-        if (array_key_exists("PackageName",$param) and $param["PackageName"] !== null) {
-            $this->PackageName = $param["PackageName"];
+        if (array_key_exists('PackageName',$param) and $param['PackageName'] !== null) {
+            $this->PackageName = $param['PackageName'];
         }
 
-        if (array_key_exists("PhoneNumber",$param) and $param["PhoneNumber"] !== null) {
-            $this->PhoneNumber = $param["PhoneNumber"];
+        if (array_key_exists('PhoneNumber',$param) and $param['PhoneNumber'] !== null) {
+            $this->PhoneNumber = $param['PhoneNumber'];
         }
 
-        if (array_key_exists("Url",$param) and $param["Url"] !== null) {
-            $this->Url = $param["Url"];
+        if (array_key_exists('Url',$param) and $param['Url'] !== null) {
+            $this->Url = $param['Url'];
         }
     }
 }

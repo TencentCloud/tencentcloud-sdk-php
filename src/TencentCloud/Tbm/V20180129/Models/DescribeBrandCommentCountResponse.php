@@ -54,17 +54,17 @@ class DescribeBrandCommentCountResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CommentSet",$param) and $param["CommentSet"] !== null) {
+        if (array_key_exists('CommentSet',$param) and $param['CommentSet'] !== null) {
             $this->CommentSet = [];
-            foreach ($param["CommentSet"] as $key => $value){
+            foreach ($param['CommentSet'] as $key => $value){
                 $obj = new Comment();
                 $obj->deserialize($value);
                 array_push($this->CommentSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

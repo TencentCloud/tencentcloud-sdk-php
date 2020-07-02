@@ -62,16 +62,16 @@ class RenewCardsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Sdkappid",$param) and $param["Sdkappid"] !== null) {
-            $this->Sdkappid = $param["Sdkappid"];
+        if (array_key_exists('Sdkappid',$param) and $param['Sdkappid'] !== null) {
+            $this->Sdkappid = $param['Sdkappid'];
         }
 
-        if (array_key_exists("Iccids",$param) and $param["Iccids"] !== null) {
-            $this->Iccids = $param["Iccids"];
+        if (array_key_exists('Iccids',$param) and $param['Iccids'] !== null) {
+            $this->Iccids = $param['Iccids'];
         }
 
-        if (array_key_exists("RenewNum",$param) and $param["RenewNum"] !== null) {
-            $this->RenewNum = $param["RenewNum"];
+        if (array_key_exists('RenewNum',$param) and $param['RenewNum'] !== null) {
+            $this->RenewNum = $param['RenewNum'];
         }
     }
 }

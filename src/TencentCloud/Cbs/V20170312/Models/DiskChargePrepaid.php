@@ -62,16 +62,16 @@ class DiskChargePrepaid extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Period",$param) and $param["Period"] !== null) {
-            $this->Period = $param["Period"];
+        if (array_key_exists('Period',$param) and $param['Period'] !== null) {
+            $this->Period = $param['Period'];
         }
 
-        if (array_key_exists("RenewFlag",$param) and $param["RenewFlag"] !== null) {
-            $this->RenewFlag = $param["RenewFlag"];
+        if (array_key_exists('RenewFlag',$param) and $param['RenewFlag'] !== null) {
+            $this->RenewFlag = $param['RenewFlag'];
         }
 
-        if (array_key_exists("CurInstanceDeadline",$param) and $param["CurInstanceDeadline"] !== null) {
-            $this->CurInstanceDeadline = $param["CurInstanceDeadline"];
+        if (array_key_exists('CurInstanceDeadline',$param) and $param['CurInstanceDeadline'] !== null) {
+            $this->CurInstanceDeadline = $param['CurInstanceDeadline'];
         }
     }
 }

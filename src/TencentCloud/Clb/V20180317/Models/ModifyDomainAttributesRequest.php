@@ -102,37 +102,37 @@ class ModifyDomainAttributesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LoadBalancerId",$param) and $param["LoadBalancerId"] !== null) {
-            $this->LoadBalancerId = $param["LoadBalancerId"];
+        if (array_key_exists('LoadBalancerId',$param) and $param['LoadBalancerId'] !== null) {
+            $this->LoadBalancerId = $param['LoadBalancerId'];
         }
 
-        if (array_key_exists("ListenerId",$param) and $param["ListenerId"] !== null) {
-            $this->ListenerId = $param["ListenerId"];
+        if (array_key_exists('ListenerId',$param) and $param['ListenerId'] !== null) {
+            $this->ListenerId = $param['ListenerId'];
         }
 
-        if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
-            $this->Domain = $param["Domain"];
+        if (array_key_exists('Domain',$param) and $param['Domain'] !== null) {
+            $this->Domain = $param['Domain'];
         }
 
-        if (array_key_exists("NewDomain",$param) and $param["NewDomain"] !== null) {
-            $this->NewDomain = $param["NewDomain"];
+        if (array_key_exists('NewDomain',$param) and $param['NewDomain'] !== null) {
+            $this->NewDomain = $param['NewDomain'];
         }
 
-        if (array_key_exists("Certificate",$param) and $param["Certificate"] !== null) {
+        if (array_key_exists('Certificate',$param) and $param['Certificate'] !== null) {
             $this->Certificate = new CertificateInput();
-            $this->Certificate->deserialize($param["Certificate"]);
+            $this->Certificate->deserialize($param['Certificate']);
         }
 
-        if (array_key_exists("Http2",$param) and $param["Http2"] !== null) {
-            $this->Http2 = $param["Http2"];
+        if (array_key_exists('Http2',$param) and $param['Http2'] !== null) {
+            $this->Http2 = $param['Http2'];
         }
 
-        if (array_key_exists("DefaultServer",$param) and $param["DefaultServer"] !== null) {
-            $this->DefaultServer = $param["DefaultServer"];
+        if (array_key_exists('DefaultServer',$param) and $param['DefaultServer'] !== null) {
+            $this->DefaultServer = $param['DefaultServer'];
         }
 
-        if (array_key_exists("NewDefaultServerDomain",$param) and $param["NewDefaultServerDomain"] !== null) {
-            $this->NewDefaultServerDomain = $param["NewDefaultServerDomain"];
+        if (array_key_exists('NewDefaultServerDomain',$param) and $param['NewDefaultServerDomain'] !== null) {
+            $this->NewDefaultServerDomain = $param['NewDefaultServerDomain'];
         }
     }
 }

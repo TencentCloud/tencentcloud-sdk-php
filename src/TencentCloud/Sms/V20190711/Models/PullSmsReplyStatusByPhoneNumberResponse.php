@@ -54,17 +54,17 @@ class PullSmsReplyStatusByPhoneNumberResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PullSmsReplyStatusSet",$param) and $param["PullSmsReplyStatusSet"] !== null) {
+        if (array_key_exists('PullSmsReplyStatusSet',$param) and $param['PullSmsReplyStatusSet'] !== null) {
             $this->PullSmsReplyStatusSet = [];
-            foreach ($param["PullSmsReplyStatusSet"] as $key => $value){
+            foreach ($param['PullSmsReplyStatusSet'] as $key => $value){
                 $obj = new PullSmsReplyStatus();
                 $obj->deserialize($value);
                 array_push($this->PullSmsReplyStatusSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

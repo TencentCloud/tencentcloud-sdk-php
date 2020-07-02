@@ -86,20 +86,20 @@ class OutputKolValue extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
-            $this->Id = $param["Id"];
+        if (array_key_exists('Id',$param) and $param['Id'] !== null) {
+            $this->Id = $param['Id'];
         }
 
-        if (array_key_exists("IsCheck",$param) and $param["IsCheck"] !== null) {
-            $this->IsCheck = $param["IsCheck"];
+        if (array_key_exists('IsCheck',$param) and $param['IsCheck'] !== null) {
+            $this->IsCheck = $param['IsCheck'];
         }
 
-        if (array_key_exists("FraudPScore",$param) and $param["FraudPScore"] !== null) {
-            $this->FraudPScore = $param["FraudPScore"];
+        if (array_key_exists('FraudPScore',$param) and $param['FraudPScore'] !== null) {
+            $this->FraudPScore = $param['FraudPScore'];
         }
 
-        if (array_key_exists("EvilPScore",$param) and $param["EvilPScore"] !== null) {
-            $this->EvilPScore = $param["EvilPScore"];
+        if (array_key_exists('EvilPScore',$param) and $param['EvilPScore'] !== null) {
+            $this->EvilPScore = $param['EvilPScore'];
         }
     }
 }

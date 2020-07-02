@@ -54,12 +54,12 @@ class VinOCRResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Vin",$param) and $param["Vin"] !== null) {
-            $this->Vin = $param["Vin"];
+        if (array_key_exists('Vin',$param) and $param['Vin'] !== null) {
+            $this->Vin = $param['Vin'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

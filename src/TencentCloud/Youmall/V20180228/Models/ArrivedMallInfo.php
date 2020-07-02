@@ -86,28 +86,28 @@ class ArrivedMallInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ArrivedTime",$param) and $param["ArrivedTime"] !== null) {
-            $this->ArrivedTime = $param["ArrivedTime"];
+        if (array_key_exists('ArrivedTime',$param) and $param['ArrivedTime'] !== null) {
+            $this->ArrivedTime = $param['ArrivedTime'];
         }
 
-        if (array_key_exists("LeaveTime",$param) and $param["LeaveTime"] !== null) {
-            $this->LeaveTime = $param["LeaveTime"];
+        if (array_key_exists('LeaveTime',$param) and $param['LeaveTime'] !== null) {
+            $this->LeaveTime = $param['LeaveTime'];
         }
 
-        if (array_key_exists("StaySecond",$param) and $param["StaySecond"] !== null) {
-            $this->StaySecond = $param["StaySecond"];
+        if (array_key_exists('StaySecond',$param) and $param['StaySecond'] !== null) {
+            $this->StaySecond = $param['StaySecond'];
         }
 
-        if (array_key_exists("InCapPic",$param) and $param["InCapPic"] !== null) {
-            $this->InCapPic = $param["InCapPic"];
+        if (array_key_exists('InCapPic',$param) and $param['InCapPic'] !== null) {
+            $this->InCapPic = $param['InCapPic'];
         }
 
-        if (array_key_exists("OutCapPic",$param) and $param["OutCapPic"] !== null) {
-            $this->OutCapPic = $param["OutCapPic"];
+        if (array_key_exists('OutCapPic',$param) and $param['OutCapPic'] !== null) {
+            $this->OutCapPic = $param['OutCapPic'];
         }
 
-        if (array_key_exists("TraceId",$param) and $param["TraceId"] !== null) {
-            $this->TraceId = $param["TraceId"];
+        if (array_key_exists('TraceId',$param) and $param['TraceId'] !== null) {
+            $this->TraceId = $param['TraceId'];
         }
     }
 }

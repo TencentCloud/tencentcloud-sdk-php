@@ -46,8 +46,8 @@ class DeleteCustomImagesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ImageIds",$param) and $param["ImageIds"] !== null) {
-            $this->ImageIds = $param["ImageIds"];
+        if (array_key_exists('ImageIds',$param) and $param['ImageIds'] !== null) {
+            $this->ImageIds = $param['ImageIds'];
         }
     }
 }

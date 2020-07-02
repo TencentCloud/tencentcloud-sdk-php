@@ -70,20 +70,20 @@ class AgentSalesmanElem extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Uin",$param) and $param["Uin"] !== null) {
-            $this->Uin = $param["Uin"];
+        if (array_key_exists('Uin',$param) and $param['Uin'] !== null) {
+            $this->Uin = $param['Uin'];
         }
 
-        if (array_key_exists("SalesUin",$param) and $param["SalesUin"] !== null) {
-            $this->SalesUin = $param["SalesUin"];
+        if (array_key_exists('SalesUin',$param) and $param['SalesUin'] !== null) {
+            $this->SalesUin = $param['SalesUin'];
         }
 
-        if (array_key_exists("SalesName",$param) and $param["SalesName"] !== null) {
-            $this->SalesName = $param["SalesName"];
+        if (array_key_exists('SalesName',$param) and $param['SalesName'] !== null) {
+            $this->SalesName = $param['SalesName'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
     }
 }

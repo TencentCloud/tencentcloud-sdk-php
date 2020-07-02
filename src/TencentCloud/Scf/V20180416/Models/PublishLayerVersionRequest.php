@@ -78,25 +78,25 @@ class PublishLayerVersionRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LayerName",$param) and $param["LayerName"] !== null) {
-            $this->LayerName = $param["LayerName"];
+        if (array_key_exists('LayerName',$param) and $param['LayerName'] !== null) {
+            $this->LayerName = $param['LayerName'];
         }
 
-        if (array_key_exists("CompatibleRuntimes",$param) and $param["CompatibleRuntimes"] !== null) {
-            $this->CompatibleRuntimes = $param["CompatibleRuntimes"];
+        if (array_key_exists('CompatibleRuntimes',$param) and $param['CompatibleRuntimes'] !== null) {
+            $this->CompatibleRuntimes = $param['CompatibleRuntimes'];
         }
 
-        if (array_key_exists("Content",$param) and $param["Content"] !== null) {
+        if (array_key_exists('Content',$param) and $param['Content'] !== null) {
             $this->Content = new Code();
-            $this->Content->deserialize($param["Content"]);
+            $this->Content->deserialize($param['Content']);
         }
 
-        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
-            $this->Description = $param["Description"];
+        if (array_key_exists('Description',$param) and $param['Description'] !== null) {
+            $this->Description = $param['Description'];
         }
 
-        if (array_key_exists("LicenseInfo",$param) and $param["LicenseInfo"] !== null) {
-            $this->LicenseInfo = $param["LicenseInfo"];
+        if (array_key_exists('LicenseInfo',$param) and $param['LicenseInfo'] !== null) {
+            $this->LicenseInfo = $param['LicenseInfo'];
         }
     }
 }

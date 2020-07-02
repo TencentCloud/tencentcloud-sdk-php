@@ -66,21 +66,21 @@ class DescribeGameServerSessionQueuesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("GameServerSessionQueues",$param) and $param["GameServerSessionQueues"] !== null) {
+        if (array_key_exists('GameServerSessionQueues',$param) and $param['GameServerSessionQueues'] !== null) {
             $this->GameServerSessionQueues = [];
-            foreach ($param["GameServerSessionQueues"] as $key => $value){
+            foreach ($param['GameServerSessionQueues'] as $key => $value){
                 $obj = new GameServerSessionQueue();
                 $obj->deserialize($value);
                 array_push($this->GameServerSessionQueues, $obj);
             }
         }
 
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

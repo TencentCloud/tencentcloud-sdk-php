@@ -118,36 +118,36 @@ class MediaContentReviewSegmentItem extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("StartTimeOffset",$param) and $param["StartTimeOffset"] !== null) {
-            $this->StartTimeOffset = $param["StartTimeOffset"];
+        if (array_key_exists('StartTimeOffset',$param) and $param['StartTimeOffset'] !== null) {
+            $this->StartTimeOffset = $param['StartTimeOffset'];
         }
 
-        if (array_key_exists("EndTimeOffset",$param) and $param["EndTimeOffset"] !== null) {
-            $this->EndTimeOffset = $param["EndTimeOffset"];
+        if (array_key_exists('EndTimeOffset',$param) and $param['EndTimeOffset'] !== null) {
+            $this->EndTimeOffset = $param['EndTimeOffset'];
         }
 
-        if (array_key_exists("Confidence",$param) and $param["Confidence"] !== null) {
-            $this->Confidence = $param["Confidence"];
+        if (array_key_exists('Confidence',$param) and $param['Confidence'] !== null) {
+            $this->Confidence = $param['Confidence'];
         }
 
-        if (array_key_exists("Label",$param) and $param["Label"] !== null) {
-            $this->Label = $param["Label"];
+        if (array_key_exists('Label',$param) and $param['Label'] !== null) {
+            $this->Label = $param['Label'];
         }
 
-        if (array_key_exists("Suggestion",$param) and $param["Suggestion"] !== null) {
-            $this->Suggestion = $param["Suggestion"];
+        if (array_key_exists('Suggestion',$param) and $param['Suggestion'] !== null) {
+            $this->Suggestion = $param['Suggestion'];
         }
 
-        if (array_key_exists("Url",$param) and $param["Url"] !== null) {
-            $this->Url = $param["Url"];
+        if (array_key_exists('Url',$param) and $param['Url'] !== null) {
+            $this->Url = $param['Url'];
         }
 
-        if (array_key_exists("PicUrlExpireTimeStamp",$param) and $param["PicUrlExpireTimeStamp"] !== null) {
-            $this->PicUrlExpireTimeStamp = $param["PicUrlExpireTimeStamp"];
+        if (array_key_exists('PicUrlExpireTimeStamp',$param) and $param['PicUrlExpireTimeStamp'] !== null) {
+            $this->PicUrlExpireTimeStamp = $param['PicUrlExpireTimeStamp'];
         }
 
-        if (array_key_exists("PicUrlExpireTime",$param) and $param["PicUrlExpireTime"] !== null) {
-            $this->PicUrlExpireTime = $param["PicUrlExpireTime"];
+        if (array_key_exists('PicUrlExpireTime',$param) and $param['PicUrlExpireTime'] !== null) {
+            $this->PicUrlExpireTime = $param['PicUrlExpireTime'];
         }
     }
 }

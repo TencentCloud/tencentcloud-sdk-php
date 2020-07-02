@@ -62,16 +62,16 @@ class DescribeRewriteRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LoadBalancerId",$param) and $param["LoadBalancerId"] !== null) {
-            $this->LoadBalancerId = $param["LoadBalancerId"];
+        if (array_key_exists('LoadBalancerId',$param) and $param['LoadBalancerId'] !== null) {
+            $this->LoadBalancerId = $param['LoadBalancerId'];
         }
 
-        if (array_key_exists("SourceListenerIds",$param) and $param["SourceListenerIds"] !== null) {
-            $this->SourceListenerIds = $param["SourceListenerIds"];
+        if (array_key_exists('SourceListenerIds',$param) and $param['SourceListenerIds'] !== null) {
+            $this->SourceListenerIds = $param['SourceListenerIds'];
         }
 
-        if (array_key_exists("SourceLocationIds",$param) and $param["SourceLocationIds"] !== null) {
-            $this->SourceLocationIds = $param["SourceLocationIds"];
+        if (array_key_exists('SourceLocationIds',$param) and $param['SourceLocationIds'] !== null) {
+            $this->SourceLocationIds = $param['SourceLocationIds'];
         }
     }
 }

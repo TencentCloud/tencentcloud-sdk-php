@@ -46,8 +46,8 @@ class DeleteScalingPolicyRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AutoScalingPolicyId",$param) and $param["AutoScalingPolicyId"] !== null) {
-            $this->AutoScalingPolicyId = $param["AutoScalingPolicyId"];
+        if (array_key_exists('AutoScalingPolicyId',$param) and $param['AutoScalingPolicyId'] !== null) {
+            $this->AutoScalingPolicyId = $param['AutoScalingPolicyId'];
         }
     }
 }

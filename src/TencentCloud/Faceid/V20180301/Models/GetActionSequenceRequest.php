@@ -46,8 +46,8 @@ class GetActionSequenceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ActionType",$param) and $param["ActionType"] !== null) {
-            $this->ActionType = $param["ActionType"];
+        if (array_key_exists('ActionType',$param) and $param['ActionType'] !== null) {
+            $this->ActionType = $param['ActionType'];
         }
     }
 }

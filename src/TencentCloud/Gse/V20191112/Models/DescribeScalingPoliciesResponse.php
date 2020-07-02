@@ -70,21 +70,21 @@ class DescribeScalingPoliciesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ScalingPolicies",$param) and $param["ScalingPolicies"] !== null) {
+        if (array_key_exists('ScalingPolicies',$param) and $param['ScalingPolicies'] !== null) {
             $this->ScalingPolicies = [];
-            foreach ($param["ScalingPolicies"] as $key => $value){
+            foreach ($param['ScalingPolicies'] as $key => $value){
                 $obj = new ScalingPolicy();
                 $obj->deserialize($value);
                 array_push($this->ScalingPolicies, $obj);
             }
         }
 
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

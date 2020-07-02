@@ -78,24 +78,24 @@ class DescribeDBInstanceDealResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("OriginalPrice",$param) and $param["OriginalPrice"] !== null) {
-            $this->OriginalPrice = $param["OriginalPrice"];
+        if (array_key_exists('OriginalPrice',$param) and $param['OriginalPrice'] !== null) {
+            $this->OriginalPrice = $param['OriginalPrice'];
         }
 
-        if (array_key_exists("DiscountPrice",$param) and $param["DiscountPrice"] !== null) {
-            $this->DiscountPrice = $param["DiscountPrice"];
+        if (array_key_exists('DiscountPrice',$param) and $param['DiscountPrice'] !== null) {
+            $this->DiscountPrice = $param['DiscountPrice'];
         }
 
-        if (array_key_exists("Action",$param) and $param["Action"] !== null) {
-            $this->Action = $param["Action"];
+        if (array_key_exists('Action',$param) and $param['Action'] !== null) {
+            $this->Action = $param['Action'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

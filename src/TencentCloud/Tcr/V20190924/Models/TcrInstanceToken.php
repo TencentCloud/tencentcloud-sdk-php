@@ -86,28 +86,28 @@ class TcrInstanceToken extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
-            $this->Id = $param["Id"];
+        if (array_key_exists('Id',$param) and $param['Id'] !== null) {
+            $this->Id = $param['Id'];
         }
 
-        if (array_key_exists("Desc",$param) and $param["Desc"] !== null) {
-            $this->Desc = $param["Desc"];
+        if (array_key_exists('Desc',$param) and $param['Desc'] !== null) {
+            $this->Desc = $param['Desc'];
         }
 
-        if (array_key_exists("RegistryId",$param) and $param["RegistryId"] !== null) {
-            $this->RegistryId = $param["RegistryId"];
+        if (array_key_exists('RegistryId',$param) and $param['RegistryId'] !== null) {
+            $this->RegistryId = $param['RegistryId'];
         }
 
-        if (array_key_exists("Enabled",$param) and $param["Enabled"] !== null) {
-            $this->Enabled = $param["Enabled"];
+        if (array_key_exists('Enabled',$param) and $param['Enabled'] !== null) {
+            $this->Enabled = $param['Enabled'];
         }
 
-        if (array_key_exists("CreatedAt",$param) and $param["CreatedAt"] !== null) {
-            $this->CreatedAt = $param["CreatedAt"];
+        if (array_key_exists('CreatedAt',$param) and $param['CreatedAt'] !== null) {
+            $this->CreatedAt = $param['CreatedAt'];
         }
 
-        if (array_key_exists("ExpiredAt",$param) and $param["ExpiredAt"] !== null) {
-            $this->ExpiredAt = $param["ExpiredAt"];
+        if (array_key_exists('ExpiredAt',$param) and $param['ExpiredAt'] !== null) {
+            $this->ExpiredAt = $param['ExpiredAt'];
         }
     }
 }

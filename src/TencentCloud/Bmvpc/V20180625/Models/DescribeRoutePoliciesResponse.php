@@ -62,21 +62,21 @@ class DescribeRoutePoliciesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("RoutePolicySet",$param) and $param["RoutePolicySet"] !== null) {
+        if (array_key_exists('RoutePolicySet',$param) and $param['RoutePolicySet'] !== null) {
             $this->RoutePolicySet = [];
-            foreach ($param["RoutePolicySet"] as $key => $value){
+            foreach ($param['RoutePolicySet'] as $key => $value){
                 $obj = new RoutePolicy();
                 $obj->deserialize($value);
                 array_push($this->RoutePolicySet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

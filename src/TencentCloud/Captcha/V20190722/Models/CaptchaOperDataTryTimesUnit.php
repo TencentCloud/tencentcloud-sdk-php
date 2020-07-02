@@ -62,16 +62,16 @@ class CaptchaOperDataTryTimesUnit extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DateKey",$param) and $param["DateKey"] !== null) {
-            $this->DateKey = $param["DateKey"];
+        if (array_key_exists('DateKey',$param) and $param['DateKey'] !== null) {
+            $this->DateKey = $param['DateKey'];
         }
 
-        if (array_key_exists("CntPerPass",$param) and $param["CntPerPass"] !== null) {
-            $this->CntPerPass = $param["CntPerPass"];
+        if (array_key_exists('CntPerPass',$param) and $param['CntPerPass'] !== null) {
+            $this->CntPerPass = $param['CntPerPass'];
         }
 
-        if (array_key_exists("MarketCntPerPass",$param) and $param["MarketCntPerPass"] !== null) {
-            $this->MarketCntPerPass = $param["MarketCntPerPass"];
+        if (array_key_exists('MarketCntPerPass',$param) and $param['MarketCntPerPass'] !== null) {
+            $this->MarketCntPerPass = $param['MarketCntPerPass'];
         }
     }
 }

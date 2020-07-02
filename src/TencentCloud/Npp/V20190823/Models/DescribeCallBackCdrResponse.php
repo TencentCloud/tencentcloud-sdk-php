@@ -94,29 +94,29 @@ class DescribeCallBackCdrResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Cdr",$param) and $param["Cdr"] !== null) {
+        if (array_key_exists('Cdr',$param) and $param['Cdr'] !== null) {
             $this->Cdr = [];
-            foreach ($param["Cdr"] as $key => $value){
+            foreach ($param['Cdr'] as $key => $value){
                 $obj = new CallBackCdr();
                 $obj->deserialize($value);
                 array_push($this->Cdr, $obj);
             }
         }
 
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
+        if (array_key_exists('Offset',$param) and $param['Offset'] !== null) {
+            $this->Offset = $param['Offset'];
         }
 
-        if (array_key_exists("ErrorCode",$param) and $param["ErrorCode"] !== null) {
-            $this->ErrorCode = $param["ErrorCode"];
+        if (array_key_exists('ErrorCode',$param) and $param['ErrorCode'] !== null) {
+            $this->ErrorCode = $param['ErrorCode'];
         }
 
-        if (array_key_exists("Msg",$param) and $param["Msg"] !== null) {
-            $this->Msg = $param["Msg"];
+        if (array_key_exists('Msg',$param) and $param['Msg'] !== null) {
+            $this->Msg = $param['Msg'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

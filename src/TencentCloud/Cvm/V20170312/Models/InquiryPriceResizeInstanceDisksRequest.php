@@ -62,21 +62,21 @@ class InquiryPriceResizeInstanceDisksRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("DataDisks",$param) and $param["DataDisks"] !== null) {
+        if (array_key_exists('DataDisks',$param) and $param['DataDisks'] !== null) {
             $this->DataDisks = [];
-            foreach ($param["DataDisks"] as $key => $value){
+            foreach ($param['DataDisks'] as $key => $value){
                 $obj = new DataDisk();
                 $obj->deserialize($value);
                 array_push($this->DataDisks, $obj);
             }
         }
 
-        if (array_key_exists("ForceStop",$param) and $param["ForceStop"] !== null) {
-            $this->ForceStop = $param["ForceStop"];
+        if (array_key_exists('ForceStop',$param) and $param['ForceStop'] !== null) {
+            $this->ForceStop = $param['ForceStop'];
         }
     }
 }

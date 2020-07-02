@@ -78,24 +78,24 @@ class DescribeImageTagsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ApplicationId",$param) and $param["ApplicationId"] !== null) {
-            $this->ApplicationId = $param["ApplicationId"];
+        if (array_key_exists('ApplicationId',$param) and $param['ApplicationId'] !== null) {
+            $this->ApplicationId = $param['ApplicationId'];
         }
 
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
+        if (array_key_exists('Offset',$param) and $param['Offset'] !== null) {
+            $this->Offset = $param['Offset'];
         }
 
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
+        if (array_key_exists('Limit',$param) and $param['Limit'] !== null) {
+            $this->Limit = $param['Limit'];
         }
 
-        if (array_key_exists("QueryImageIdFlag",$param) and $param["QueryImageIdFlag"] !== null) {
-            $this->QueryImageIdFlag = $param["QueryImageIdFlag"];
+        if (array_key_exists('QueryImageIdFlag',$param) and $param['QueryImageIdFlag'] !== null) {
+            $this->QueryImageIdFlag = $param['QueryImageIdFlag'];
         }
 
-        if (array_key_exists("SearchWord",$param) and $param["SearchWord"] !== null) {
-            $this->SearchWord = $param["SearchWord"];
+        if (array_key_exists('SearchWord',$param) and $param['SearchWord'] !== null) {
+            $this->SearchWord = $param['SearchWord'];
         }
     }
 }

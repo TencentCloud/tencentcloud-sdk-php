@@ -54,12 +54,12 @@ class AbsenceInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LibraryIds",$param) and $param["LibraryIds"] !== null) {
-            $this->LibraryIds = $param["LibraryIds"];
+        if (array_key_exists('LibraryIds',$param) and $param['LibraryIds'] !== null) {
+            $this->LibraryIds = $param['LibraryIds'];
         }
 
-        if (array_key_exists("PersonId",$param) and $param["PersonId"] !== null) {
-            $this->PersonId = $param["PersonId"];
+        if (array_key_exists('PersonId',$param) and $param['PersonId'] !== null) {
+            $this->PersonId = $param['PersonId'];
         }
     }
 }

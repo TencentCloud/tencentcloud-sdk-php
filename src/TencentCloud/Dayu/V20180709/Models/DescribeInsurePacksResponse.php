@@ -54,17 +54,17 @@ class DescribeInsurePacksResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InsurePacks",$param) and $param["InsurePacks"] !== null) {
+        if (array_key_exists('InsurePacks',$param) and $param['InsurePacks'] !== null) {
             $this->InsurePacks = [];
-            foreach ($param["InsurePacks"] as $key => $value){
+            foreach ($param['InsurePacks'] as $key => $value){
                 $obj = new KeyValueRecord();
                 $obj->deserialize($value);
                 array_push($this->InsurePacks, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

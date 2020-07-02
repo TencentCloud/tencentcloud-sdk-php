@@ -78,24 +78,24 @@ class VirtualPrivateCloud extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
-            $this->VpcId = $param["VpcId"];
+        if (array_key_exists('VpcId',$param) and $param['VpcId'] !== null) {
+            $this->VpcId = $param['VpcId'];
         }
 
-        if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
-            $this->SubnetId = $param["SubnetId"];
+        if (array_key_exists('SubnetId',$param) and $param['SubnetId'] !== null) {
+            $this->SubnetId = $param['SubnetId'];
         }
 
-        if (array_key_exists("AsVpcGateway",$param) and $param["AsVpcGateway"] !== null) {
-            $this->AsVpcGateway = $param["AsVpcGateway"];
+        if (array_key_exists('AsVpcGateway',$param) and $param['AsVpcGateway'] !== null) {
+            $this->AsVpcGateway = $param['AsVpcGateway'];
         }
 
-        if (array_key_exists("PrivateIpAddresses",$param) and $param["PrivateIpAddresses"] !== null) {
-            $this->PrivateIpAddresses = $param["PrivateIpAddresses"];
+        if (array_key_exists('PrivateIpAddresses',$param) and $param['PrivateIpAddresses'] !== null) {
+            $this->PrivateIpAddresses = $param['PrivateIpAddresses'];
         }
 
-        if (array_key_exists("Ipv6AddressCount",$param) and $param["Ipv6AddressCount"] !== null) {
-            $this->Ipv6AddressCount = $param["Ipv6AddressCount"];
+        if (array_key_exists('Ipv6AddressCount',$param) and $param['Ipv6AddressCount'] !== null) {
+            $this->Ipv6AddressCount = $param['Ipv6AddressCount'];
         }
     }
 }

@@ -62,16 +62,16 @@ class CreateFileSystemRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FileSystemName",$param) and $param["FileSystemName"] !== null) {
-            $this->FileSystemName = $param["FileSystemName"];
+        if (array_key_exists('FileSystemName',$param) and $param['FileSystemName'] !== null) {
+            $this->FileSystemName = $param['FileSystemName'];
         }
 
-        if (array_key_exists("CapacityQuota",$param) and $param["CapacityQuota"] !== null) {
-            $this->CapacityQuota = $param["CapacityQuota"];
+        if (array_key_exists('CapacityQuota',$param) and $param['CapacityQuota'] !== null) {
+            $this->CapacityQuota = $param['CapacityQuota'];
         }
 
-        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
-            $this->Description = $param["Description"];
+        if (array_key_exists('Description',$param) and $param['Description'] !== null) {
+            $this->Description = $param['Description'];
         }
     }
 }

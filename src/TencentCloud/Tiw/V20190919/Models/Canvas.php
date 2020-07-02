@@ -54,13 +54,13 @@ class Canvas extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LayoutParams",$param) and $param["LayoutParams"] !== null) {
+        if (array_key_exists('LayoutParams',$param) and $param['LayoutParams'] !== null) {
             $this->LayoutParams = new LayoutParams();
-            $this->LayoutParams->deserialize($param["LayoutParams"]);
+            $this->LayoutParams->deserialize($param['LayoutParams']);
         }
 
-        if (array_key_exists("BackgroundColor",$param) and $param["BackgroundColor"] !== null) {
-            $this->BackgroundColor = $param["BackgroundColor"];
+        if (array_key_exists('BackgroundColor',$param) and $param['BackgroundColor'] !== null) {
+            $this->BackgroundColor = $param['BackgroundColor'];
         }
     }
 }

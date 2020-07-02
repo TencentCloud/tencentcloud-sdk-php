@@ -62,16 +62,16 @@ class ModifyVpcAttributeRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
-            $this->VpcId = $param["VpcId"];
+        if (array_key_exists('VpcId',$param) and $param['VpcId'] !== null) {
+            $this->VpcId = $param['VpcId'];
         }
 
-        if (array_key_exists("EcmRegion",$param) and $param["EcmRegion"] !== null) {
-            $this->EcmRegion = $param["EcmRegion"];
+        if (array_key_exists('EcmRegion',$param) and $param['EcmRegion'] !== null) {
+            $this->EcmRegion = $param['EcmRegion'];
         }
 
-        if (array_key_exists("VpcName",$param) and $param["VpcName"] !== null) {
-            $this->VpcName = $param["VpcName"];
+        if (array_key_exists('VpcName',$param) and $param['VpcName'] !== null) {
+            $this->VpcName = $param['VpcName'];
         }
     }
 }

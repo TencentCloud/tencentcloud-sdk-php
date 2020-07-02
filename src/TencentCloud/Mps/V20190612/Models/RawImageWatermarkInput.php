@@ -86,17 +86,17 @@ class RawImageWatermarkInput extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ImageContent",$param) and $param["ImageContent"] !== null) {
+        if (array_key_exists('ImageContent',$param) and $param['ImageContent'] !== null) {
             $this->ImageContent = new MediaInputInfo();
-            $this->ImageContent->deserialize($param["ImageContent"]);
+            $this->ImageContent->deserialize($param['ImageContent']);
         }
 
-        if (array_key_exists("Width",$param) and $param["Width"] !== null) {
-            $this->Width = $param["Width"];
+        if (array_key_exists('Width',$param) and $param['Width'] !== null) {
+            $this->Width = $param['Width'];
         }
 
-        if (array_key_exists("Height",$param) and $param["Height"] !== null) {
-            $this->Height = $param["Height"];
+        if (array_key_exists('Height',$param) and $param['Height'] !== null) {
+            $this->Height = $param['Height'];
         }
     }
 }

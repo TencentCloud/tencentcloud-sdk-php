@@ -78,34 +78,34 @@ class GetReturnCodeInfoResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Details",$param) and $param["Details"] !== null) {
+        if (array_key_exists('Details',$param) and $param['Details'] !== null) {
             $this->Details = [];
-            foreach ($param["Details"] as $key => $value){
+            foreach ($param['Details'] as $key => $value){
                 $obj = new CatReturnDetail();
                 $obj->deserialize($value);
                 array_push($this->Details, $obj);
             }
         }
 
-        if (array_key_exists("Summary",$param) and $param["Summary"] !== null) {
+        if (array_key_exists('Summary',$param) and $param['Summary'] !== null) {
             $this->Summary = [];
-            foreach ($param["Summary"] as $key => $value){
+            foreach ($param['Summary'] as $key => $value){
                 $obj = new CatReturnSummary();
                 $obj->deserialize($value);
                 array_push($this->Summary, $obj);
             }
         }
 
-        if (array_key_exists("BeginTime",$param) and $param["BeginTime"] !== null) {
-            $this->BeginTime = $param["BeginTime"];
+        if (array_key_exists('BeginTime',$param) and $param['BeginTime'] !== null) {
+            $this->BeginTime = $param['BeginTime'];
         }
 
-        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
-            $this->EndTime = $param["EndTime"];
+        if (array_key_exists('EndTime',$param) and $param['EndTime'] !== null) {
+            $this->EndTime = $param['EndTime'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

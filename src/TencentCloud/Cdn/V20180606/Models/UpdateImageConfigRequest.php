@@ -70,23 +70,23 @@ class UpdateImageConfigRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
-            $this->Domain = $param["Domain"];
+        if (array_key_exists('Domain',$param) and $param['Domain'] !== null) {
+            $this->Domain = $param['Domain'];
         }
 
-        if (array_key_exists("WebpAdapter",$param) and $param["WebpAdapter"] !== null) {
+        if (array_key_exists('WebpAdapter',$param) and $param['WebpAdapter'] !== null) {
             $this->WebpAdapter = new WebpAdapter();
-            $this->WebpAdapter->deserialize($param["WebpAdapter"]);
+            $this->WebpAdapter->deserialize($param['WebpAdapter']);
         }
 
-        if (array_key_exists("TpgAdapter",$param) and $param["TpgAdapter"] !== null) {
+        if (array_key_exists('TpgAdapter',$param) and $param['TpgAdapter'] !== null) {
             $this->TpgAdapter = new TpgAdapter();
-            $this->TpgAdapter->deserialize($param["TpgAdapter"]);
+            $this->TpgAdapter->deserialize($param['TpgAdapter']);
         }
 
-        if (array_key_exists("GuetzliAdapter",$param) and $param["GuetzliAdapter"] !== null) {
+        if (array_key_exists('GuetzliAdapter',$param) and $param['GuetzliAdapter'] !== null) {
             $this->GuetzliAdapter = new GuetzliAdapter();
-            $this->GuetzliAdapter->deserialize($param["GuetzliAdapter"]);
+            $this->GuetzliAdapter->deserialize($param['GuetzliAdapter']);
         }
     }
 }

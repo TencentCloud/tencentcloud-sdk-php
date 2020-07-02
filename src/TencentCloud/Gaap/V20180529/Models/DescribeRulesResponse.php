@@ -62,21 +62,21 @@ class DescribeRulesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DomainRuleSet",$param) and $param["DomainRuleSet"] !== null) {
+        if (array_key_exists('DomainRuleSet',$param) and $param['DomainRuleSet'] !== null) {
             $this->DomainRuleSet = [];
-            foreach ($param["DomainRuleSet"] as $key => $value){
+            foreach ($param['DomainRuleSet'] as $key => $value){
                 $obj = new DomainRuleSet();
                 $obj->deserialize($value);
                 array_push($this->DomainRuleSet, $obj);
             }
         }
 
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

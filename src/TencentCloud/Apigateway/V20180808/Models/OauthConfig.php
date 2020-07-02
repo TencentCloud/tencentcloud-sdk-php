@@ -62,16 +62,16 @@ class OauthConfig extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PublicKey",$param) and $param["PublicKey"] !== null) {
-            $this->PublicKey = $param["PublicKey"];
+        if (array_key_exists('PublicKey',$param) and $param['PublicKey'] !== null) {
+            $this->PublicKey = $param['PublicKey'];
         }
 
-        if (array_key_exists("TokenLocation",$param) and $param["TokenLocation"] !== null) {
-            $this->TokenLocation = $param["TokenLocation"];
+        if (array_key_exists('TokenLocation',$param) and $param['TokenLocation'] !== null) {
+            $this->TokenLocation = $param['TokenLocation'];
         }
 
-        if (array_key_exists("LoginRedirectUrl",$param) and $param["LoginRedirectUrl"] !== null) {
-            $this->LoginRedirectUrl = $param["LoginRedirectUrl"];
+        if (array_key_exists('LoginRedirectUrl',$param) and $param['LoginRedirectUrl'] !== null) {
+            $this->LoginRedirectUrl = $param['LoginRedirectUrl'];
         }
     }
 }

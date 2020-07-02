@@ -134,52 +134,52 @@ class PreExecuteFileSettings extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Path",$param) and $param["Path"] !== null) {
-            $this->Path = $param["Path"];
+        if (array_key_exists('Path',$param) and $param['Path'] !== null) {
+            $this->Path = $param['Path'];
         }
 
-        if (array_key_exists("Args",$param) and $param["Args"] !== null) {
-            $this->Args = $param["Args"];
+        if (array_key_exists('Args',$param) and $param['Args'] !== null) {
+            $this->Args = $param['Args'];
         }
 
-        if (array_key_exists("Bucket",$param) and $param["Bucket"] !== null) {
-            $this->Bucket = $param["Bucket"];
+        if (array_key_exists('Bucket',$param) and $param['Bucket'] !== null) {
+            $this->Bucket = $param['Bucket'];
         }
 
-        if (array_key_exists("Region",$param) and $param["Region"] !== null) {
-            $this->Region = $param["Region"];
+        if (array_key_exists('Region',$param) and $param['Region'] !== null) {
+            $this->Region = $param['Region'];
         }
 
-        if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
-            $this->Domain = $param["Domain"];
+        if (array_key_exists('Domain',$param) and $param['Domain'] !== null) {
+            $this->Domain = $param['Domain'];
         }
 
-        if (array_key_exists("RunOrder",$param) and $param["RunOrder"] !== null) {
-            $this->RunOrder = $param["RunOrder"];
+        if (array_key_exists('RunOrder',$param) and $param['RunOrder'] !== null) {
+            $this->RunOrder = $param['RunOrder'];
         }
 
-        if (array_key_exists("WhenRun",$param) and $param["WhenRun"] !== null) {
-            $this->WhenRun = $param["WhenRun"];
+        if (array_key_exists('WhenRun',$param) and $param['WhenRun'] !== null) {
+            $this->WhenRun = $param['WhenRun'];
         }
 
-        if (array_key_exists("CosFileName",$param) and $param["CosFileName"] !== null) {
-            $this->CosFileName = $param["CosFileName"];
+        if (array_key_exists('CosFileName',$param) and $param['CosFileName'] !== null) {
+            $this->CosFileName = $param['CosFileName'];
         }
 
-        if (array_key_exists("CosFileURI",$param) and $param["CosFileURI"] !== null) {
-            $this->CosFileURI = $param["CosFileURI"];
+        if (array_key_exists('CosFileURI',$param) and $param['CosFileURI'] !== null) {
+            $this->CosFileURI = $param['CosFileURI'];
         }
 
-        if (array_key_exists("CosSecretId",$param) and $param["CosSecretId"] !== null) {
-            $this->CosSecretId = $param["CosSecretId"];
+        if (array_key_exists('CosSecretId',$param) and $param['CosSecretId'] !== null) {
+            $this->CosSecretId = $param['CosSecretId'];
         }
 
-        if (array_key_exists("CosSecretKey",$param) and $param["CosSecretKey"] !== null) {
-            $this->CosSecretKey = $param["CosSecretKey"];
+        if (array_key_exists('CosSecretKey',$param) and $param['CosSecretKey'] !== null) {
+            $this->CosSecretKey = $param['CosSecretKey'];
         }
 
-        if (array_key_exists("AppId",$param) and $param["AppId"] !== null) {
-            $this->AppId = $param["AppId"];
+        if (array_key_exists('AppId',$param) and $param['AppId'] !== null) {
+            $this->AppId = $param['AppId'];
         }
     }
 }

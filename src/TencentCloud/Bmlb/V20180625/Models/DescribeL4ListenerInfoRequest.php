@@ -62,16 +62,16 @@ class DescribeL4ListenerInfoRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LoadBalancerId",$param) and $param["LoadBalancerId"] !== null) {
-            $this->LoadBalancerId = $param["LoadBalancerId"];
+        if (array_key_exists('LoadBalancerId',$param) and $param['LoadBalancerId'] !== null) {
+            $this->LoadBalancerId = $param['LoadBalancerId'];
         }
 
-        if (array_key_exists("SearchKey",$param) and $param["SearchKey"] !== null) {
-            $this->SearchKey = $param["SearchKey"];
+        if (array_key_exists('SearchKey',$param) and $param['SearchKey'] !== null) {
+            $this->SearchKey = $param['SearchKey'];
         }
 
-        if (array_key_exists("InstanceIds",$param) and $param["InstanceIds"] !== null) {
-            $this->InstanceIds = $param["InstanceIds"];
+        if (array_key_exists('InstanceIds',$param) and $param['InstanceIds'] !== null) {
+            $this->InstanceIds = $param['InstanceIds'];
         }
     }
 }

@@ -62,12 +62,12 @@ class RollbackTableName extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TableName",$param) and $param["TableName"] !== null) {
-            $this->TableName = $param["TableName"];
+        if (array_key_exists('TableName',$param) and $param['TableName'] !== null) {
+            $this->TableName = $param['TableName'];
         }
 
-        if (array_key_exists("NewTableName",$param) and $param["NewTableName"] !== null) {
-            $this->NewTableName = $param["NewTableName"];
+        if (array_key_exists('NewTableName',$param) and $param['NewTableName'] !== null) {
+            $this->NewTableName = $param['NewTableName'];
         }
     }
 }

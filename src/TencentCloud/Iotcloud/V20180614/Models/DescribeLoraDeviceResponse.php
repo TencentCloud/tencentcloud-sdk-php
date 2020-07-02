@@ -94,32 +94,32 @@ class DescribeLoraDeviceResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DeviceName",$param) and $param["DeviceName"] !== null) {
-            $this->DeviceName = $param["DeviceName"];
+        if (array_key_exists('DeviceName',$param) and $param['DeviceName'] !== null) {
+            $this->DeviceName = $param['DeviceName'];
         }
 
-        if (array_key_exists("AppEui",$param) and $param["AppEui"] !== null) {
-            $this->AppEui = $param["AppEui"];
+        if (array_key_exists('AppEui',$param) and $param['AppEui'] !== null) {
+            $this->AppEui = $param['AppEui'];
         }
 
-        if (array_key_exists("DeviceEui",$param) and $param["DeviceEui"] !== null) {
-            $this->DeviceEui = $param["DeviceEui"];
+        if (array_key_exists('DeviceEui',$param) and $param['DeviceEui'] !== null) {
+            $this->DeviceEui = $param['DeviceEui'];
         }
 
-        if (array_key_exists("AppKey",$param) and $param["AppKey"] !== null) {
-            $this->AppKey = $param["AppKey"];
+        if (array_key_exists('AppKey',$param) and $param['AppKey'] !== null) {
+            $this->AppKey = $param['AppKey'];
         }
 
-        if (array_key_exists("ClassType",$param) and $param["ClassType"] !== null) {
-            $this->ClassType = $param["ClassType"];
+        if (array_key_exists('ClassType',$param) and $param['ClassType'] !== null) {
+            $this->ClassType = $param['ClassType'];
         }
 
-        if (array_key_exists("ProductId",$param) and $param["ProductId"] !== null) {
-            $this->ProductId = $param["ProductId"];
+        if (array_key_exists('ProductId',$param) and $param['ProductId'] !== null) {
+            $this->ProductId = $param['ProductId'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

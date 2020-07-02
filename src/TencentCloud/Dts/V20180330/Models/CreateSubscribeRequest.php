@@ -78,24 +78,24 @@ class CreateSubscribeRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Product",$param) and $param["Product"] !== null) {
-            $this->Product = $param["Product"];
+        if (array_key_exists('Product',$param) and $param['Product'] !== null) {
+            $this->Product = $param['Product'];
         }
 
-        if (array_key_exists("PayType",$param) and $param["PayType"] !== null) {
-            $this->PayType = $param["PayType"];
+        if (array_key_exists('PayType',$param) and $param['PayType'] !== null) {
+            $this->PayType = $param['PayType'];
         }
 
-        if (array_key_exists("Duration",$param) and $param["Duration"] !== null) {
-            $this->Duration = $param["Duration"];
+        if (array_key_exists('Duration',$param) and $param['Duration'] !== null) {
+            $this->Duration = $param['Duration'];
         }
 
-        if (array_key_exists("Count",$param) and $param["Count"] !== null) {
-            $this->Count = $param["Count"];
+        if (array_key_exists('Count',$param) and $param['Count'] !== null) {
+            $this->Count = $param['Count'];
         }
 
-        if (array_key_exists("AutoRenew",$param) and $param["AutoRenew"] !== null) {
-            $this->AutoRenew = $param["AutoRenew"];
+        if (array_key_exists('AutoRenew',$param) and $param['AutoRenew'] !== null) {
+            $this->AutoRenew = $param['AutoRenew'];
         }
     }
 }

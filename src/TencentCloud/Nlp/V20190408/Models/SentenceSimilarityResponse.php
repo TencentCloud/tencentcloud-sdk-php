@@ -54,12 +54,12 @@ class SentenceSimilarityResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Similarity",$param) and $param["Similarity"] !== null) {
-            $this->Similarity = $param["Similarity"];
+        if (array_key_exists('Similarity',$param) and $param['Similarity'] !== null) {
+            $this->Similarity = $param['Similarity'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

@@ -106,38 +106,38 @@ class InstanceTypeConfig extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceFamilyConfig",$param) and $param["InstanceFamilyConfig"] !== null) {
+        if (array_key_exists('InstanceFamilyConfig',$param) and $param['InstanceFamilyConfig'] !== null) {
             $this->InstanceFamilyConfig = new InstanceFamilyConfig();
-            $this->InstanceFamilyConfig->deserialize($param["InstanceFamilyConfig"]);
+            $this->InstanceFamilyConfig->deserialize($param['InstanceFamilyConfig']);
         }
 
-        if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
-            $this->InstanceType = $param["InstanceType"];
+        if (array_key_exists('InstanceType',$param) and $param['InstanceType'] !== null) {
+            $this->InstanceType = $param['InstanceType'];
         }
 
-        if (array_key_exists("Vcpu",$param) and $param["Vcpu"] !== null) {
-            $this->Vcpu = $param["Vcpu"];
+        if (array_key_exists('Vcpu',$param) and $param['Vcpu'] !== null) {
+            $this->Vcpu = $param['Vcpu'];
         }
 
-        if (array_key_exists("Memory",$param) and $param["Memory"] !== null) {
-            $this->Memory = $param["Memory"];
+        if (array_key_exists('Memory',$param) and $param['Memory'] !== null) {
+            $this->Memory = $param['Memory'];
         }
 
-        if (array_key_exists("Frequency",$param) and $param["Frequency"] !== null) {
-            $this->Frequency = $param["Frequency"];
+        if (array_key_exists('Frequency',$param) and $param['Frequency'] !== null) {
+            $this->Frequency = $param['Frequency'];
         }
 
-        if (array_key_exists("CpuModelName",$param) and $param["CpuModelName"] !== null) {
-            $this->CpuModelName = $param["CpuModelName"];
+        if (array_key_exists('CpuModelName',$param) and $param['CpuModelName'] !== null) {
+            $this->CpuModelName = $param['CpuModelName'];
         }
 
-        if (array_key_exists("InstanceFamilyTypeConfig",$param) and $param["InstanceFamilyTypeConfig"] !== null) {
+        if (array_key_exists('InstanceFamilyTypeConfig',$param) and $param['InstanceFamilyTypeConfig'] !== null) {
             $this->InstanceFamilyTypeConfig = new InstanceFamilyTypeConfig();
-            $this->InstanceFamilyTypeConfig->deserialize($param["InstanceFamilyTypeConfig"]);
+            $this->InstanceFamilyTypeConfig->deserialize($param['InstanceFamilyTypeConfig']);
         }
 
-        if (array_key_exists("ExtInfo",$param) and $param["ExtInfo"] !== null) {
-            $this->ExtInfo = $param["ExtInfo"];
+        if (array_key_exists('ExtInfo',$param) and $param['ExtInfo'] !== null) {
+            $this->ExtInfo = $param['ExtInfo'];
         }
     }
 }

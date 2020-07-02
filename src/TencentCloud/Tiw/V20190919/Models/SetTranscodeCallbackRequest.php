@@ -54,12 +54,12 @@ class SetTranscodeCallbackRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SdkAppId",$param) and $param["SdkAppId"] !== null) {
-            $this->SdkAppId = $param["SdkAppId"];
+        if (array_key_exists('SdkAppId',$param) and $param['SdkAppId'] !== null) {
+            $this->SdkAppId = $param['SdkAppId'];
         }
 
-        if (array_key_exists("Callback",$param) and $param["Callback"] !== null) {
-            $this->Callback = $param["Callback"];
+        if (array_key_exists('Callback',$param) and $param['Callback'] !== null) {
+            $this->Callback = $param['Callback'];
         }
     }
 }

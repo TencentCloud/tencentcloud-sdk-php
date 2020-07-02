@@ -50,8 +50,8 @@ class EstimateCheckSimilarPersonCostTimeRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("GroupIds",$param) and $param["GroupIds"] !== null) {
-            $this->GroupIds = $param["GroupIds"];
+        if (array_key_exists('GroupIds',$param) and $param['GroupIds'] !== null) {
+            $this->GroupIds = $param['GroupIds'];
         }
     }
 }

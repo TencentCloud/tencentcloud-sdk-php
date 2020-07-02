@@ -78,24 +78,24 @@ class Get400CdrRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BizAppId",$param) and $param["BizAppId"] !== null) {
-            $this->BizAppId = $param["BizAppId"];
+        if (array_key_exists('BizAppId',$param) and $param['BizAppId'] !== null) {
+            $this->BizAppId = $param['BizAppId'];
         }
 
-        if (array_key_exists("CallId",$param) and $param["CallId"] !== null) {
-            $this->CallId = $param["CallId"];
+        if (array_key_exists('CallId',$param) and $param['CallId'] !== null) {
+            $this->CallId = $param['CallId'];
         }
 
-        if (array_key_exists("Src",$param) and $param["Src"] !== null) {
-            $this->Src = $param["Src"];
+        if (array_key_exists('Src',$param) and $param['Src'] !== null) {
+            $this->Src = $param['Src'];
         }
 
-        if (array_key_exists("StartTimeStamp",$param) and $param["StartTimeStamp"] !== null) {
-            $this->StartTimeStamp = $param["StartTimeStamp"];
+        if (array_key_exists('StartTimeStamp',$param) and $param['StartTimeStamp'] !== null) {
+            $this->StartTimeStamp = $param['StartTimeStamp'];
         }
 
-        if (array_key_exists("EndTimeStamp",$param) and $param["EndTimeStamp"] !== null) {
-            $this->EndTimeStamp = $param["EndTimeStamp"];
+        if (array_key_exists('EndTimeStamp',$param) and $param['EndTimeStamp'] !== null) {
+            $this->EndTimeStamp = $param['EndTimeStamp'];
         }
     }
 }

@@ -54,12 +54,12 @@ class DeleteCertRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
-            $this->Id = $param["Id"];
+        if (array_key_exists('Id',$param) and $param['Id'] !== null) {
+            $this->Id = $param['Id'];
         }
 
-        if (array_key_exists("ModuleType",$param) and $param["ModuleType"] !== null) {
-            $this->ModuleType = $param["ModuleType"];
+        if (array_key_exists('ModuleType',$param) and $param['ModuleType'] !== null) {
+            $this->ModuleType = $param['ModuleType'];
         }
     }
 }

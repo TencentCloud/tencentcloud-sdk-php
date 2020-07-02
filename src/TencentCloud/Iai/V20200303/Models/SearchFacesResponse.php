@@ -70,25 +70,25 @@ class SearchFacesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Results",$param) and $param["Results"] !== null) {
+        if (array_key_exists('Results',$param) and $param['Results'] !== null) {
             $this->Results = [];
-            foreach ($param["Results"] as $key => $value){
+            foreach ($param['Results'] as $key => $value){
                 $obj = new Result();
                 $obj->deserialize($value);
                 array_push($this->Results, $obj);
             }
         }
 
-        if (array_key_exists("FaceNum",$param) and $param["FaceNum"] !== null) {
-            $this->FaceNum = $param["FaceNum"];
+        if (array_key_exists('FaceNum',$param) and $param['FaceNum'] !== null) {
+            $this->FaceNum = $param['FaceNum'];
         }
 
-        if (array_key_exists("FaceModelVersion",$param) and $param["FaceModelVersion"] !== null) {
-            $this->FaceModelVersion = $param["FaceModelVersion"];
+        if (array_key_exists('FaceModelVersion',$param) and $param['FaceModelVersion'] !== null) {
+            $this->FaceModelVersion = $param['FaceModelVersion'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

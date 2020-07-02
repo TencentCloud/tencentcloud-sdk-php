@@ -78,24 +78,24 @@ class BindDevicesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("GatewayProductId",$param) and $param["GatewayProductId"] !== null) {
-            $this->GatewayProductId = $param["GatewayProductId"];
+        if (array_key_exists('GatewayProductId',$param) and $param['GatewayProductId'] !== null) {
+            $this->GatewayProductId = $param['GatewayProductId'];
         }
 
-        if (array_key_exists("GatewayDeviceName",$param) and $param["GatewayDeviceName"] !== null) {
-            $this->GatewayDeviceName = $param["GatewayDeviceName"];
+        if (array_key_exists('GatewayDeviceName',$param) and $param['GatewayDeviceName'] !== null) {
+            $this->GatewayDeviceName = $param['GatewayDeviceName'];
         }
 
-        if (array_key_exists("ProductId",$param) and $param["ProductId"] !== null) {
-            $this->ProductId = $param["ProductId"];
+        if (array_key_exists('ProductId',$param) and $param['ProductId'] !== null) {
+            $this->ProductId = $param['ProductId'];
         }
 
-        if (array_key_exists("DeviceNames",$param) and $param["DeviceNames"] !== null) {
-            $this->DeviceNames = $param["DeviceNames"];
+        if (array_key_exists('DeviceNames',$param) and $param['DeviceNames'] !== null) {
+            $this->DeviceNames = $param['DeviceNames'];
         }
 
-        if (array_key_exists("Skey",$param) and $param["Skey"] !== null) {
-            $this->Skey = $param["Skey"];
+        if (array_key_exists('Skey',$param) and $param['Skey'] !== null) {
+            $this->Skey = $param['Skey'];
         }
     }
 }

@@ -62,16 +62,16 @@ class ModifyInstanceAttributesConfig extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AutoCreateTopicEnable",$param) and $param["AutoCreateTopicEnable"] !== null) {
-            $this->AutoCreateTopicEnable = $param["AutoCreateTopicEnable"];
+        if (array_key_exists('AutoCreateTopicEnable',$param) and $param['AutoCreateTopicEnable'] !== null) {
+            $this->AutoCreateTopicEnable = $param['AutoCreateTopicEnable'];
         }
 
-        if (array_key_exists("DefaultNumPartitions",$param) and $param["DefaultNumPartitions"] !== null) {
-            $this->DefaultNumPartitions = $param["DefaultNumPartitions"];
+        if (array_key_exists('DefaultNumPartitions',$param) and $param['DefaultNumPartitions'] !== null) {
+            $this->DefaultNumPartitions = $param['DefaultNumPartitions'];
         }
 
-        if (array_key_exists("DefaultReplicationFactor",$param) and $param["DefaultReplicationFactor"] !== null) {
-            $this->DefaultReplicationFactor = $param["DefaultReplicationFactor"];
+        if (array_key_exists('DefaultReplicationFactor',$param) and $param['DefaultReplicationFactor'] !== null) {
+            $this->DefaultReplicationFactor = $param['DefaultReplicationFactor'];
         }
     }
 }

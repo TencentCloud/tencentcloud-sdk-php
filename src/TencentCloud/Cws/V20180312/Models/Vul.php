@@ -182,76 +182,76 @@ class Vul extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
-            $this->Id = $param["Id"];
+        if (array_key_exists('Id',$param) and $param['Id'] !== null) {
+            $this->Id = $param['Id'];
         }
 
-        if (array_key_exists("SiteId",$param) and $param["SiteId"] !== null) {
-            $this->SiteId = $param["SiteId"];
+        if (array_key_exists('SiteId',$param) and $param['SiteId'] !== null) {
+            $this->SiteId = $param['SiteId'];
         }
 
-        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
-            $this->TaskId = $param["TaskId"];
+        if (array_key_exists('TaskId',$param) and $param['TaskId'] !== null) {
+            $this->TaskId = $param['TaskId'];
         }
 
-        if (array_key_exists("Level",$param) and $param["Level"] !== null) {
-            $this->Level = $param["Level"];
+        if (array_key_exists('Level',$param) and $param['Level'] !== null) {
+            $this->Level = $param['Level'];
         }
 
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("Url",$param) and $param["Url"] !== null) {
-            $this->Url = $param["Url"];
+        if (array_key_exists('Url',$param) and $param['Url'] !== null) {
+            $this->Url = $param['Url'];
         }
 
-        if (array_key_exists("Html",$param) and $param["Html"] !== null) {
-            $this->Html = $param["Html"];
+        if (array_key_exists('Html',$param) and $param['Html'] !== null) {
+            $this->Html = $param['Html'];
         }
 
-        if (array_key_exists("Nickname",$param) and $param["Nickname"] !== null) {
-            $this->Nickname = $param["Nickname"];
+        if (array_key_exists('Nickname',$param) and $param['Nickname'] !== null) {
+            $this->Nickname = $param['Nickname'];
         }
 
-        if (array_key_exists("Harm",$param) and $param["Harm"] !== null) {
-            $this->Harm = $param["Harm"];
+        if (array_key_exists('Harm',$param) and $param['Harm'] !== null) {
+            $this->Harm = $param['Harm'];
         }
 
-        if (array_key_exists("Describe",$param) and $param["Describe"] !== null) {
-            $this->Describe = $param["Describe"];
+        if (array_key_exists('Describe',$param) and $param['Describe'] !== null) {
+            $this->Describe = $param['Describe'];
         }
 
-        if (array_key_exists("Solution",$param) and $param["Solution"] !== null) {
-            $this->Solution = $param["Solution"];
+        if (array_key_exists('Solution',$param) and $param['Solution'] !== null) {
+            $this->Solution = $param['Solution'];
         }
 
-        if (array_key_exists("From",$param) and $param["From"] !== null) {
-            $this->From = $param["From"];
+        if (array_key_exists('From',$param) and $param['From'] !== null) {
+            $this->From = $param['From'];
         }
 
-        if (array_key_exists("Parameter",$param) and $param["Parameter"] !== null) {
-            $this->Parameter = $param["Parameter"];
+        if (array_key_exists('Parameter',$param) and $param['Parameter'] !== null) {
+            $this->Parameter = $param['Parameter'];
         }
 
-        if (array_key_exists("CreatedAt",$param) and $param["CreatedAt"] !== null) {
-            $this->CreatedAt = $param["CreatedAt"];
+        if (array_key_exists('CreatedAt',$param) and $param['CreatedAt'] !== null) {
+            $this->CreatedAt = $param['CreatedAt'];
         }
 
-        if (array_key_exists("UpdatedAt",$param) and $param["UpdatedAt"] !== null) {
-            $this->UpdatedAt = $param["UpdatedAt"];
+        if (array_key_exists('UpdatedAt',$param) and $param['UpdatedAt'] !== null) {
+            $this->UpdatedAt = $param['UpdatedAt'];
         }
 
-        if (array_key_exists("IsReported",$param) and $param["IsReported"] !== null) {
-            $this->IsReported = $param["IsReported"];
+        if (array_key_exists('IsReported',$param) and $param['IsReported'] !== null) {
+            $this->IsReported = $param['IsReported'];
         }
 
-        if (array_key_exists("Appid",$param) and $param["Appid"] !== null) {
-            $this->Appid = $param["Appid"];
+        if (array_key_exists('Appid',$param) and $param['Appid'] !== null) {
+            $this->Appid = $param['Appid'];
         }
 
-        if (array_key_exists("Uin",$param) and $param["Uin"] !== null) {
-            $this->Uin = $param["Uin"];
+        if (array_key_exists('Uin',$param) and $param['Uin'] !== null) {
+            $this->Uin = $param['Uin'];
         }
     }
 }

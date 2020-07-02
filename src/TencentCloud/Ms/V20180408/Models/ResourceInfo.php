@@ -94,33 +94,33 @@ class ResourceInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ResourceId",$param) and $param["ResourceId"] !== null) {
-            $this->ResourceId = $param["ResourceId"];
+        if (array_key_exists('ResourceId',$param) and $param['ResourceId'] !== null) {
+            $this->ResourceId = $param['ResourceId'];
         }
 
-        if (array_key_exists("Pid",$param) and $param["Pid"] !== null) {
-            $this->Pid = $param["Pid"];
+        if (array_key_exists('Pid',$param) and $param['Pid'] !== null) {
+            $this->Pid = $param['Pid'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("ExpireTime",$param) and $param["ExpireTime"] !== null) {
-            $this->ExpireTime = $param["ExpireTime"];
+        if (array_key_exists('ExpireTime',$param) and $param['ExpireTime'] !== null) {
+            $this->ExpireTime = $param['ExpireTime'];
         }
 
-        if (array_key_exists("IsBind",$param) and $param["IsBind"] !== null) {
-            $this->IsBind = $param["IsBind"];
+        if (array_key_exists('IsBind',$param) and $param['IsBind'] !== null) {
+            $this->IsBind = $param['IsBind'];
         }
 
-        if (array_key_exists("BindInfo",$param) and $param["BindInfo"] !== null) {
+        if (array_key_exists('BindInfo',$param) and $param['BindInfo'] !== null) {
             $this->BindInfo = new BindInfo();
-            $this->BindInfo->deserialize($param["BindInfo"]);
+            $this->BindInfo->deserialize($param['BindInfo']);
         }
 
-        if (array_key_exists("ResourceName",$param) and $param["ResourceName"] !== null) {
-            $this->ResourceName = $param["ResourceName"];
+        if (array_key_exists('ResourceName',$param) and $param['ResourceName'] !== null) {
+            $this->ResourceName = $param['ResourceName'];
         }
     }
 }

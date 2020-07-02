@@ -102,21 +102,21 @@ class ModifyWordSampleRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Keyword",$param) and $param["Keyword"] !== null) {
-            $this->Keyword = $param["Keyword"];
+        if (array_key_exists('Keyword',$param) and $param['Keyword'] !== null) {
+            $this->Keyword = $param['Keyword'];
         }
 
-        if (array_key_exists("Usages",$param) and $param["Usages"] !== null) {
-            $this->Usages = $param["Usages"];
+        if (array_key_exists('Usages',$param) and $param['Usages'] !== null) {
+            $this->Usages = $param['Usages'];
         }
 
-        if (array_key_exists("TagOperationInfo",$param) and $param["TagOperationInfo"] !== null) {
+        if (array_key_exists('TagOperationInfo',$param) and $param['TagOperationInfo'] !== null) {
             $this->TagOperationInfo = new AiSampleTagOperation();
-            $this->TagOperationInfo->deserialize($param["TagOperationInfo"]);
+            $this->TagOperationInfo->deserialize($param['TagOperationInfo']);
         }
 
-        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
-            $this->SubAppId = $param["SubAppId"];
+        if (array_key_exists('SubAppId',$param) and $param['SubAppId'] !== null) {
+            $this->SubAppId = $param['SubAppId'];
         }
     }
 }

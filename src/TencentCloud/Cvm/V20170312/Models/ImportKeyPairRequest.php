@@ -70,16 +70,16 @@ class ImportKeyPairRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("KeyName",$param) and $param["KeyName"] !== null) {
-            $this->KeyName = $param["KeyName"];
+        if (array_key_exists('KeyName',$param) and $param['KeyName'] !== null) {
+            $this->KeyName = $param['KeyName'];
         }
 
-        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
-            $this->ProjectId = $param["ProjectId"];
+        if (array_key_exists('ProjectId',$param) and $param['ProjectId'] !== null) {
+            $this->ProjectId = $param['ProjectId'];
         }
 
-        if (array_key_exists("PublicKey",$param) and $param["PublicKey"] !== null) {
-            $this->PublicKey = $param["PublicKey"];
+        if (array_key_exists('PublicKey',$param) and $param['PublicKey'] !== null) {
+            $this->PublicKey = $param['PublicKey'];
         }
     }
 }

@@ -54,13 +54,13 @@ class AppSecureAddDeviceResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AppDevice",$param) and $param["AppDevice"] !== null) {
+        if (array_key_exists('AppDevice',$param) and $param['AppDevice'] !== null) {
             $this->AppDevice = new AppDevice();
-            $this->AppDevice->deserialize($param["AppDevice"]);
+            $this->AppDevice->deserialize($param['AppDevice']);
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

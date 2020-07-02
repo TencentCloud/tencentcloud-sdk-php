@@ -94,32 +94,32 @@ class WeeklyReportNonlocalLoginPlace extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MachineIp",$param) and $param["MachineIp"] !== null) {
-            $this->MachineIp = $param["MachineIp"];
+        if (array_key_exists('MachineIp',$param) and $param['MachineIp'] !== null) {
+            $this->MachineIp = $param['MachineIp'];
         }
 
-        if (array_key_exists("Username",$param) and $param["Username"] !== null) {
-            $this->Username = $param["Username"];
+        if (array_key_exists('Username',$param) and $param['Username'] !== null) {
+            $this->Username = $param['Username'];
         }
 
-        if (array_key_exists("SrcIp",$param) and $param["SrcIp"] !== null) {
-            $this->SrcIp = $param["SrcIp"];
+        if (array_key_exists('SrcIp',$param) and $param['SrcIp'] !== null) {
+            $this->SrcIp = $param['SrcIp'];
         }
 
-        if (array_key_exists("Country",$param) and $param["Country"] !== null) {
-            $this->Country = $param["Country"];
+        if (array_key_exists('Country',$param) and $param['Country'] !== null) {
+            $this->Country = $param['Country'];
         }
 
-        if (array_key_exists("Province",$param) and $param["Province"] !== null) {
-            $this->Province = $param["Province"];
+        if (array_key_exists('Province',$param) and $param['Province'] !== null) {
+            $this->Province = $param['Province'];
         }
 
-        if (array_key_exists("City",$param) and $param["City"] !== null) {
-            $this->City = $param["City"];
+        if (array_key_exists('City',$param) and $param['City'] !== null) {
+            $this->City = $param['City'];
         }
 
-        if (array_key_exists("LoginTime",$param) and $param["LoginTime"] !== null) {
-            $this->LoginTime = $param["LoginTime"];
+        if (array_key_exists('LoginTime',$param) and $param['LoginTime'] !== null) {
+            $this->LoginTime = $param['LoginTime'];
         }
     }
 }

@@ -66,12 +66,12 @@ forbid：禁播。
         if ($param === null) {
             return;
         }
-        if (array_key_exists("StreamState",$param) and $param["StreamState"] !== null) {
-            $this->StreamState = $param["StreamState"];
+        if (array_key_exists('StreamState',$param) and $param['StreamState'] !== null) {
+            $this->StreamState = $param['StreamState'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

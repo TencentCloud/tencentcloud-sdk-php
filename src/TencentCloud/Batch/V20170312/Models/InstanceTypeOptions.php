@@ -62,16 +62,16 @@ class InstanceTypeOptions extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CPU",$param) and $param["CPU"] !== null) {
-            $this->CPU = $param["CPU"];
+        if (array_key_exists('CPU',$param) and $param['CPU'] !== null) {
+            $this->CPU = $param['CPU'];
         }
 
-        if (array_key_exists("Memory",$param) and $param["Memory"] !== null) {
-            $this->Memory = $param["Memory"];
+        if (array_key_exists('Memory',$param) and $param['Memory'] !== null) {
+            $this->Memory = $param['Memory'];
         }
 
-        if (array_key_exists("InstanceCategories",$param) and $param["InstanceCategories"] !== null) {
-            $this->InstanceCategories = $param["InstanceCategories"];
+        if (array_key_exists('InstanceCategories',$param) and $param['InstanceCategories'] !== null) {
+            $this->InstanceCategories = $param['InstanceCategories'];
         }
     }
 }

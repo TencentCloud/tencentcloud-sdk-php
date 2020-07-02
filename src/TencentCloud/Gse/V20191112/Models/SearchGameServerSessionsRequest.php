@@ -150,28 +150,28 @@ playerSessionCount 当前玩家会话数 Number
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AliasId",$param) and $param["AliasId"] !== null) {
-            $this->AliasId = $param["AliasId"];
+        if (array_key_exists('AliasId',$param) and $param['AliasId'] !== null) {
+            $this->AliasId = $param['AliasId'];
         }
 
-        if (array_key_exists("FleetId",$param) and $param["FleetId"] !== null) {
-            $this->FleetId = $param["FleetId"];
+        if (array_key_exists('FleetId',$param) and $param['FleetId'] !== null) {
+            $this->FleetId = $param['FleetId'];
         }
 
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
+        if (array_key_exists('Limit',$param) and $param['Limit'] !== null) {
+            $this->Limit = $param['Limit'];
         }
 
-        if (array_key_exists("NextToken",$param) and $param["NextToken"] !== null) {
-            $this->NextToken = $param["NextToken"];
+        if (array_key_exists('NextToken',$param) and $param['NextToken'] !== null) {
+            $this->NextToken = $param['NextToken'];
         }
 
-        if (array_key_exists("FilterExpression",$param) and $param["FilterExpression"] !== null) {
-            $this->FilterExpression = $param["FilterExpression"];
+        if (array_key_exists('FilterExpression',$param) and $param['FilterExpression'] !== null) {
+            $this->FilterExpression = $param['FilterExpression'];
         }
 
-        if (array_key_exists("SortExpression",$param) and $param["SortExpression"] !== null) {
-            $this->SortExpression = $param["SortExpression"];
+        if (array_key_exists('SortExpression',$param) and $param['SortExpression'] !== null) {
+            $this->SortExpression = $param['SortExpression'];
         }
     }
 }

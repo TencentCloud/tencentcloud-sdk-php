@@ -54,12 +54,12 @@ class AssociateSecurityGroupsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SecurityGroupIds",$param) and $param["SecurityGroupIds"] !== null) {
-            $this->SecurityGroupIds = $param["SecurityGroupIds"];
+        if (array_key_exists('SecurityGroupIds',$param) and $param['SecurityGroupIds'] !== null) {
+            $this->SecurityGroupIds = $param['SecurityGroupIds'];
         }
 
-        if (array_key_exists("InstanceIds",$param) and $param["InstanceIds"] !== null) {
-            $this->InstanceIds = $param["InstanceIds"];
+        if (array_key_exists('InstanceIds',$param) and $param['InstanceIds'] !== null) {
+            $this->InstanceIds = $param['InstanceIds'];
         }
     }
 }

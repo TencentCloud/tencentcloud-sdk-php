@@ -58,14 +58,14 @@ class SlaveInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("First",$param) and $param["First"] !== null) {
+        if (array_key_exists('First',$param) and $param['First'] !== null) {
             $this->First = new SlaveInstanceInfo();
-            $this->First->deserialize($param["First"]);
+            $this->First->deserialize($param['First']);
         }
 
-        if (array_key_exists("Second",$param) and $param["Second"] !== null) {
+        if (array_key_exists('Second',$param) and $param['Second'] !== null) {
             $this->Second = new SlaveInstanceInfo();
-            $this->Second->deserialize($param["Second"]);
+            $this->Second->deserialize($param['Second']);
         }
     }
 }

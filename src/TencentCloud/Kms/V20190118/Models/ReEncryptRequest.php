@@ -70,20 +70,20 @@ class ReEncryptRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CiphertextBlob",$param) and $param["CiphertextBlob"] !== null) {
-            $this->CiphertextBlob = $param["CiphertextBlob"];
+        if (array_key_exists('CiphertextBlob',$param) and $param['CiphertextBlob'] !== null) {
+            $this->CiphertextBlob = $param['CiphertextBlob'];
         }
 
-        if (array_key_exists("DestinationKeyId",$param) and $param["DestinationKeyId"] !== null) {
-            $this->DestinationKeyId = $param["DestinationKeyId"];
+        if (array_key_exists('DestinationKeyId',$param) and $param['DestinationKeyId'] !== null) {
+            $this->DestinationKeyId = $param['DestinationKeyId'];
         }
 
-        if (array_key_exists("SourceEncryptionContext",$param) and $param["SourceEncryptionContext"] !== null) {
-            $this->SourceEncryptionContext = $param["SourceEncryptionContext"];
+        if (array_key_exists('SourceEncryptionContext',$param) and $param['SourceEncryptionContext'] !== null) {
+            $this->SourceEncryptionContext = $param['SourceEncryptionContext'];
         }
 
-        if (array_key_exists("DestinationEncryptionContext",$param) and $param["DestinationEncryptionContext"] !== null) {
-            $this->DestinationEncryptionContext = $param["DestinationEncryptionContext"];
+        if (array_key_exists('DestinationEncryptionContext',$param) and $param['DestinationEncryptionContext'] !== null) {
+            $this->DestinationEncryptionContext = $param['DestinationEncryptionContext'];
         }
     }
 }

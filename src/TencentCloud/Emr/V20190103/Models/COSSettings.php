@@ -62,16 +62,16 @@ class COSSettings extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CosSecretId",$param) and $param["CosSecretId"] !== null) {
-            $this->CosSecretId = $param["CosSecretId"];
+        if (array_key_exists('CosSecretId',$param) and $param['CosSecretId'] !== null) {
+            $this->CosSecretId = $param['CosSecretId'];
         }
 
-        if (array_key_exists("CosSecretKey",$param) and $param["CosSecretKey"] !== null) {
-            $this->CosSecretKey = $param["CosSecretKey"];
+        if (array_key_exists('CosSecretKey',$param) and $param['CosSecretKey'] !== null) {
+            $this->CosSecretKey = $param['CosSecretKey'];
         }
 
-        if (array_key_exists("LogOnCosPath",$param) and $param["LogOnCosPath"] !== null) {
-            $this->LogOnCosPath = $param["LogOnCosPath"];
+        if (array_key_exists('LogOnCosPath',$param) and $param['LogOnCosPath'] !== null) {
+            $this->LogOnCosPath = $param['LogOnCosPath'];
         }
     }
 }

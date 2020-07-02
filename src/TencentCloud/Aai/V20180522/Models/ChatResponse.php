@@ -54,12 +54,12 @@ class ChatResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Answer",$param) and $param["Answer"] !== null) {
-            $this->Answer = $param["Answer"];
+        if (array_key_exists('Answer',$param) and $param['Answer'] !== null) {
+            $this->Answer = $param['Answer'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

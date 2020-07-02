@@ -54,12 +54,12 @@ class EnableReplicaReadonlyRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("ReadonlyPolicy",$param) and $param["ReadonlyPolicy"] !== null) {
-            $this->ReadonlyPolicy = $param["ReadonlyPolicy"];
+        if (array_key_exists('ReadonlyPolicy',$param) and $param['ReadonlyPolicy'] !== null) {
+            $this->ReadonlyPolicy = $param['ReadonlyPolicy'];
         }
     }
 }

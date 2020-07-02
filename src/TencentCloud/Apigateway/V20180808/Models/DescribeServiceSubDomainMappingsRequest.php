@@ -54,12 +54,12 @@ class DescribeServiceSubDomainMappingsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ServiceId",$param) and $param["ServiceId"] !== null) {
-            $this->ServiceId = $param["ServiceId"];
+        if (array_key_exists('ServiceId',$param) and $param['ServiceId'] !== null) {
+            $this->ServiceId = $param['ServiceId'];
         }
 
-        if (array_key_exists("SubDomain",$param) and $param["SubDomain"] !== null) {
-            $this->SubDomain = $param["SubDomain"];
+        if (array_key_exists('SubDomain',$param) and $param['SubDomain'] !== null) {
+            $this->SubDomain = $param['SubDomain'];
         }
     }
 }

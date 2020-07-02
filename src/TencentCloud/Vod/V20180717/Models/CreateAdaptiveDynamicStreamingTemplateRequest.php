@@ -142,41 +142,41 @@ class CreateAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Format",$param) and $param["Format"] !== null) {
-            $this->Format = $param["Format"];
+        if (array_key_exists('Format',$param) and $param['Format'] !== null) {
+            $this->Format = $param['Format'];
         }
 
-        if (array_key_exists("StreamInfos",$param) and $param["StreamInfos"] !== null) {
+        if (array_key_exists('StreamInfos',$param) and $param['StreamInfos'] !== null) {
             $this->StreamInfos = [];
-            foreach ($param["StreamInfos"] as $key => $value){
+            foreach ($param['StreamInfos'] as $key => $value){
                 $obj = new AdaptiveStreamTemplate();
                 $obj->deserialize($value);
                 array_push($this->StreamInfos, $obj);
             }
         }
 
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("DrmType",$param) and $param["DrmType"] !== null) {
-            $this->DrmType = $param["DrmType"];
+        if (array_key_exists('DrmType',$param) and $param['DrmType'] !== null) {
+            $this->DrmType = $param['DrmType'];
         }
 
-        if (array_key_exists("DisableHigherVideoBitrate",$param) and $param["DisableHigherVideoBitrate"] !== null) {
-            $this->DisableHigherVideoBitrate = $param["DisableHigherVideoBitrate"];
+        if (array_key_exists('DisableHigherVideoBitrate',$param) and $param['DisableHigherVideoBitrate'] !== null) {
+            $this->DisableHigherVideoBitrate = $param['DisableHigherVideoBitrate'];
         }
 
-        if (array_key_exists("DisableHigherVideoResolution",$param) and $param["DisableHigherVideoResolution"] !== null) {
-            $this->DisableHigherVideoResolution = $param["DisableHigherVideoResolution"];
+        if (array_key_exists('DisableHigherVideoResolution',$param) and $param['DisableHigherVideoResolution'] !== null) {
+            $this->DisableHigherVideoResolution = $param['DisableHigherVideoResolution'];
         }
 
-        if (array_key_exists("Comment",$param) and $param["Comment"] !== null) {
-            $this->Comment = $param["Comment"];
+        if (array_key_exists('Comment',$param) and $param['Comment'] !== null) {
+            $this->Comment = $param['Comment'];
         }
 
-        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
-            $this->SubAppId = $param["SubAppId"];
+        if (array_key_exists('SubAppId',$param) and $param['SubAppId'] !== null) {
+            $this->SubAppId = $param['SubAppId'];
         }
     }
 }

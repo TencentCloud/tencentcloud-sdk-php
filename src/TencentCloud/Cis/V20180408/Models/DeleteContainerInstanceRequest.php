@@ -46,8 +46,8 @@ class DeleteContainerInstanceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceName",$param) and $param["InstanceName"] !== null) {
-            $this->InstanceName = $param["InstanceName"];
+        if (array_key_exists('InstanceName',$param) and $param['InstanceName'] !== null) {
+            $this->InstanceName = $param['InstanceName'];
         }
     }
 }

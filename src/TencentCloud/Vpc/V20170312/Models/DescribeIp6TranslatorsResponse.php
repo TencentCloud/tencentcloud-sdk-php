@@ -62,21 +62,21 @@ class DescribeIp6TranslatorsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("Ip6TranslatorSet",$param) and $param["Ip6TranslatorSet"] !== null) {
+        if (array_key_exists('Ip6TranslatorSet',$param) and $param['Ip6TranslatorSet'] !== null) {
             $this->Ip6TranslatorSet = [];
-            foreach ($param["Ip6TranslatorSet"] as $key => $value){
+            foreach ($param['Ip6TranslatorSet'] as $key => $value){
                 $obj = new Ip6Translator();
                 $obj->deserialize($value);
                 array_push($this->Ip6TranslatorSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

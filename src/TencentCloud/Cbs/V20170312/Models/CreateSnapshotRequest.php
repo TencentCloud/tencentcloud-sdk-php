@@ -54,12 +54,12 @@ class CreateSnapshotRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DiskId",$param) and $param["DiskId"] !== null) {
-            $this->DiskId = $param["DiskId"];
+        if (array_key_exists('DiskId',$param) and $param['DiskId'] !== null) {
+            $this->DiskId = $param['DiskId'];
         }
 
-        if (array_key_exists("SnapshotName",$param) and $param["SnapshotName"] !== null) {
-            $this->SnapshotName = $param["SnapshotName"];
+        if (array_key_exists('SnapshotName',$param) and $param['SnapshotName'] !== null) {
+            $this->SnapshotName = $param['SnapshotName'];
         }
     }
 }

@@ -74,20 +74,20 @@ class TopicInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TopicId",$param) and $param["TopicId"] !== null) {
-            $this->TopicId = $param["TopicId"];
+        if (array_key_exists('TopicId',$param) and $param['TopicId'] !== null) {
+            $this->TopicId = $param['TopicId'];
         }
 
-        if (array_key_exists("TopicName",$param) and $param["TopicName"] !== null) {
-            $this->TopicName = $param["TopicName"];
+        if (array_key_exists('TopicName',$param) and $param['TopicName'] !== null) {
+            $this->TopicName = $param['TopicName'];
         }
 
-        if (array_key_exists("Enabled",$param) and $param["Enabled"] !== null) {
-            $this->Enabled = $param["Enabled"];
+        if (array_key_exists('Enabled',$param) and $param['Enabled'] !== null) {
+            $this->Enabled = $param['Enabled'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
     }
 }

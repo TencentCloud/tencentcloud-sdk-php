@@ -94,24 +94,24 @@ class EventMessage extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists('Type',$param) and $param['Type'] !== null) {
+            $this->Type = $param['Type'];
         }
 
-        if (array_key_exists("Time",$param) and $param["Time"] !== null) {
-            $this->Time = $param["Time"];
+        if (array_key_exists('Time',$param) and $param['Time'] !== null) {
+            $this->Time = $param['Time'];
         }
 
-        if (array_key_exists("EventId",$param) and $param["EventId"] !== null) {
-            $this->EventId = $param["EventId"];
+        if (array_key_exists('EventId',$param) and $param['EventId'] !== null) {
+            $this->EventId = $param['EventId'];
         }
 
-        if (array_key_exists("ParamOne",$param) and $param["ParamOne"] !== null) {
-            $this->ParamOne = $param["ParamOne"];
+        if (array_key_exists('ParamOne',$param) and $param['ParamOne'] !== null) {
+            $this->ParamOne = $param['ParamOne'];
         }
 
-        if (array_key_exists("ParamTwo",$param) and $param["ParamTwo"] !== null) {
-            $this->ParamTwo = $param["ParamTwo"];
+        if (array_key_exists('ParamTwo',$param) and $param['ParamTwo'] !== null) {
+            $this->ParamTwo = $param['ParamTwo'];
         }
     }
 }

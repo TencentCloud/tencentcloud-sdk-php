@@ -54,13 +54,13 @@ class UpdateRuleResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Rule",$param) and $param["Rule"] !== null) {
+        if (array_key_exists('Rule',$param) and $param['Rule'] !== null) {
             $this->Rule = new Rule();
-            $this->Rule->deserialize($param["Rule"]);
+            $this->Rule->deserialize($param['Rule']);
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

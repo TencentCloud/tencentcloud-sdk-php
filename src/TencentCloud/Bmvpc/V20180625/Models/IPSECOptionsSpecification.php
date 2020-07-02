@@ -94,32 +94,32 @@ class IPSECOptionsSpecification extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PfsDhGroup",$param) and $param["PfsDhGroup"] !== null) {
-            $this->PfsDhGroup = $param["PfsDhGroup"];
+        if (array_key_exists('PfsDhGroup',$param) and $param['PfsDhGroup'] !== null) {
+            $this->PfsDhGroup = $param['PfsDhGroup'];
         }
 
-        if (array_key_exists("IPSECSaLifetimeTraffic",$param) and $param["IPSECSaLifetimeTraffic"] !== null) {
-            $this->IPSECSaLifetimeTraffic = $param["IPSECSaLifetimeTraffic"];
+        if (array_key_exists('IPSECSaLifetimeTraffic',$param) and $param['IPSECSaLifetimeTraffic'] !== null) {
+            $this->IPSECSaLifetimeTraffic = $param['IPSECSaLifetimeTraffic'];
         }
 
-        if (array_key_exists("EncryptAlgorithm",$param) and $param["EncryptAlgorithm"] !== null) {
-            $this->EncryptAlgorithm = $param["EncryptAlgorithm"];
+        if (array_key_exists('EncryptAlgorithm',$param) and $param['EncryptAlgorithm'] !== null) {
+            $this->EncryptAlgorithm = $param['EncryptAlgorithm'];
         }
 
-        if (array_key_exists("IntegrityAlgorith",$param) and $param["IntegrityAlgorith"] !== null) {
-            $this->IntegrityAlgorith = $param["IntegrityAlgorith"];
+        if (array_key_exists('IntegrityAlgorith',$param) and $param['IntegrityAlgorith'] !== null) {
+            $this->IntegrityAlgorith = $param['IntegrityAlgorith'];
         }
 
-        if (array_key_exists("IPSECSaLifetimeSeconds",$param) and $param["IPSECSaLifetimeSeconds"] !== null) {
-            $this->IPSECSaLifetimeSeconds = $param["IPSECSaLifetimeSeconds"];
+        if (array_key_exists('IPSECSaLifetimeSeconds',$param) and $param['IPSECSaLifetimeSeconds'] !== null) {
+            $this->IPSECSaLifetimeSeconds = $param['IPSECSaLifetimeSeconds'];
         }
 
-        if (array_key_exists("SecurityProto",$param) and $param["SecurityProto"] !== null) {
-            $this->SecurityProto = $param["SecurityProto"];
+        if (array_key_exists('SecurityProto',$param) and $param['SecurityProto'] !== null) {
+            $this->SecurityProto = $param['SecurityProto'];
         }
 
-        if (array_key_exists("EncapMode",$param) and $param["EncapMode"] !== null) {
-            $this->EncapMode = $param["EncapMode"];
+        if (array_key_exists('EncapMode',$param) and $param['EncapMode'] !== null) {
+            $this->EncapMode = $param['EncapMode'];
         }
     }
 }

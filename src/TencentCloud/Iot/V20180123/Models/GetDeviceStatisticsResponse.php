@@ -54,17 +54,17 @@ class GetDeviceStatisticsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DeviceStatistics",$param) and $param["DeviceStatistics"] !== null) {
+        if (array_key_exists('DeviceStatistics',$param) and $param['DeviceStatistics'] !== null) {
             $this->DeviceStatistics = [];
-            foreach ($param["DeviceStatistics"] as $key => $value){
+            foreach ($param['DeviceStatistics'] as $key => $value){
                 $obj = new DeviceStatData();
                 $obj->deserialize($value);
                 array_push($this->DeviceStatistics, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

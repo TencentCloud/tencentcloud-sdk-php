@@ -54,17 +54,17 @@ class DescribeCcnRegionBandwidthLimitsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CcnRegionBandwidthLimitSet",$param) and $param["CcnRegionBandwidthLimitSet"] !== null) {
+        if (array_key_exists('CcnRegionBandwidthLimitSet',$param) and $param['CcnRegionBandwidthLimitSet'] !== null) {
             $this->CcnRegionBandwidthLimitSet = [];
-            foreach ($param["CcnRegionBandwidthLimitSet"] as $key => $value){
+            foreach ($param['CcnRegionBandwidthLimitSet'] as $key => $value){
                 $obj = new CcnRegionBandwidthLimit();
                 $obj->deserialize($value);
                 array_push($this->CcnRegionBandwidthLimitSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

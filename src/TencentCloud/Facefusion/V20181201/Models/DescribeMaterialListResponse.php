@@ -62,21 +62,21 @@ class DescribeMaterialListResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MaterialInfos",$param) and $param["MaterialInfos"] !== null) {
+        if (array_key_exists('MaterialInfos',$param) and $param['MaterialInfos'] !== null) {
             $this->MaterialInfos = [];
-            foreach ($param["MaterialInfos"] as $key => $value){
+            foreach ($param['MaterialInfos'] as $key => $value){
                 $obj = new PublicMaterialInfos();
                 $obj->deserialize($value);
                 array_push($this->MaterialInfos, $obj);
             }
         }
 
-        if (array_key_exists("Count",$param) and $param["Count"] !== null) {
-            $this->Count = $param["Count"];
+        if (array_key_exists('Count',$param) and $param['Count'] !== null) {
+            $this->Count = $param['Count'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

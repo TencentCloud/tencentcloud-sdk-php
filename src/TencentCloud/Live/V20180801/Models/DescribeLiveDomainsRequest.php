@@ -86,28 +86,28 @@ class DescribeLiveDomainsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DomainStatus",$param) and $param["DomainStatus"] !== null) {
-            $this->DomainStatus = $param["DomainStatus"];
+        if (array_key_exists('DomainStatus',$param) and $param['DomainStatus'] !== null) {
+            $this->DomainStatus = $param['DomainStatus'];
         }
 
-        if (array_key_exists("DomainType",$param) and $param["DomainType"] !== null) {
-            $this->DomainType = $param["DomainType"];
+        if (array_key_exists('DomainType',$param) and $param['DomainType'] !== null) {
+            $this->DomainType = $param['DomainType'];
         }
 
-        if (array_key_exists("PageSize",$param) and $param["PageSize"] !== null) {
-            $this->PageSize = $param["PageSize"];
+        if (array_key_exists('PageSize',$param) and $param['PageSize'] !== null) {
+            $this->PageSize = $param['PageSize'];
         }
 
-        if (array_key_exists("PageNum",$param) and $param["PageNum"] !== null) {
-            $this->PageNum = $param["PageNum"];
+        if (array_key_exists('PageNum',$param) and $param['PageNum'] !== null) {
+            $this->PageNum = $param['PageNum'];
         }
 
-        if (array_key_exists("IsDelayLive",$param) and $param["IsDelayLive"] !== null) {
-            $this->IsDelayLive = $param["IsDelayLive"];
+        if (array_key_exists('IsDelayLive',$param) and $param['IsDelayLive'] !== null) {
+            $this->IsDelayLive = $param['IsDelayLive'];
         }
 
-        if (array_key_exists("DomainPrefix",$param) and $param["DomainPrefix"] !== null) {
-            $this->DomainPrefix = $param["DomainPrefix"];
+        if (array_key_exists('DomainPrefix',$param) and $param['DomainPrefix'] !== null) {
+            $this->DomainPrefix = $param['DomainPrefix'];
         }
     }
 }

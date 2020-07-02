@@ -46,8 +46,8 @@ class ConsumeCustomMFATokenRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MFAToken",$param) and $param["MFAToken"] !== null) {
-            $this->MFAToken = $param["MFAToken"];
+        if (array_key_exists('MFAToken',$param) and $param['MFAToken'] !== null) {
+            $this->MFAToken = $param['MFAToken'];
         }
     }
 }

@@ -86,28 +86,28 @@ class AutoDelStrategyInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Username",$param) and $param["Username"] !== null) {
-            $this->Username = $param["Username"];
+        if (array_key_exists('Username',$param) and $param['Username'] !== null) {
+            $this->Username = $param['Username'];
         }
 
-        if (array_key_exists("RepoName",$param) and $param["RepoName"] !== null) {
-            $this->RepoName = $param["RepoName"];
+        if (array_key_exists('RepoName',$param) and $param['RepoName'] !== null) {
+            $this->RepoName = $param['RepoName'];
         }
 
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists('Type',$param) and $param['Type'] !== null) {
+            $this->Type = $param['Type'];
         }
 
-        if (array_key_exists("Value",$param) and $param["Value"] !== null) {
-            $this->Value = $param["Value"];
+        if (array_key_exists('Value',$param) and $param['Value'] !== null) {
+            $this->Value = $param['Value'];
         }
 
-        if (array_key_exists("Valid",$param) and $param["Valid"] !== null) {
-            $this->Valid = $param["Valid"];
+        if (array_key_exists('Valid',$param) and $param['Valid'] !== null) {
+            $this->Valid = $param['Valid'];
         }
 
-        if (array_key_exists("CreationTime",$param) and $param["CreationTime"] !== null) {
-            $this->CreationTime = $param["CreationTime"];
+        if (array_key_exists('CreationTime',$param) and $param['CreationTime'] !== null) {
+            $this->CreationTime = $param['CreationTime'];
         }
     }
 }

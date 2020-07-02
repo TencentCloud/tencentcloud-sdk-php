@@ -46,8 +46,8 @@ class DeleteAccessGroupRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AccessGroupId",$param) and $param["AccessGroupId"] !== null) {
-            $this->AccessGroupId = $param["AccessGroupId"];
+        if (array_key_exists('AccessGroupId',$param) and $param['AccessGroupId'] !== null) {
+            $this->AccessGroupId = $param['AccessGroupId'];
         }
     }
 }

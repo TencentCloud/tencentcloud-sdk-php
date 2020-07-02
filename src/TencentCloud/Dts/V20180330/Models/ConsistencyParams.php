@@ -62,16 +62,16 @@ class ConsistencyParams extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SelectRowsPerTable",$param) and $param["SelectRowsPerTable"] !== null) {
-            $this->SelectRowsPerTable = $param["SelectRowsPerTable"];
+        if (array_key_exists('SelectRowsPerTable',$param) and $param['SelectRowsPerTable'] !== null) {
+            $this->SelectRowsPerTable = $param['SelectRowsPerTable'];
         }
 
-        if (array_key_exists("TablesSelectAll",$param) and $param["TablesSelectAll"] !== null) {
-            $this->TablesSelectAll = $param["TablesSelectAll"];
+        if (array_key_exists('TablesSelectAll',$param) and $param['TablesSelectAll'] !== null) {
+            $this->TablesSelectAll = $param['TablesSelectAll'];
         }
 
-        if (array_key_exists("TablesSelectCount",$param) and $param["TablesSelectCount"] !== null) {
-            $this->TablesSelectCount = $param["TablesSelectCount"];
+        if (array_key_exists('TablesSelectCount',$param) and $param['TablesSelectCount'] !== null) {
+            $this->TablesSelectCount = $param['TablesSelectCount'];
         }
     }
 }

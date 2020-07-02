@@ -102,36 +102,36 @@ class TaskMetrics extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SubmittedCount",$param) and $param["SubmittedCount"] !== null) {
-            $this->SubmittedCount = $param["SubmittedCount"];
+        if (array_key_exists('SubmittedCount',$param) and $param['SubmittedCount'] !== null) {
+            $this->SubmittedCount = $param['SubmittedCount'];
         }
 
-        if (array_key_exists("PendingCount",$param) and $param["PendingCount"] !== null) {
-            $this->PendingCount = $param["PendingCount"];
+        if (array_key_exists('PendingCount',$param) and $param['PendingCount'] !== null) {
+            $this->PendingCount = $param['PendingCount'];
         }
 
-        if (array_key_exists("RunnableCount",$param) and $param["RunnableCount"] !== null) {
-            $this->RunnableCount = $param["RunnableCount"];
+        if (array_key_exists('RunnableCount',$param) and $param['RunnableCount'] !== null) {
+            $this->RunnableCount = $param['RunnableCount'];
         }
 
-        if (array_key_exists("StartingCount",$param) and $param["StartingCount"] !== null) {
-            $this->StartingCount = $param["StartingCount"];
+        if (array_key_exists('StartingCount',$param) and $param['StartingCount'] !== null) {
+            $this->StartingCount = $param['StartingCount'];
         }
 
-        if (array_key_exists("RunningCount",$param) and $param["RunningCount"] !== null) {
-            $this->RunningCount = $param["RunningCount"];
+        if (array_key_exists('RunningCount',$param) and $param['RunningCount'] !== null) {
+            $this->RunningCount = $param['RunningCount'];
         }
 
-        if (array_key_exists("SucceedCount",$param) and $param["SucceedCount"] !== null) {
-            $this->SucceedCount = $param["SucceedCount"];
+        if (array_key_exists('SucceedCount',$param) and $param['SucceedCount'] !== null) {
+            $this->SucceedCount = $param['SucceedCount'];
         }
 
-        if (array_key_exists("FailedInterruptedCount",$param) and $param["FailedInterruptedCount"] !== null) {
-            $this->FailedInterruptedCount = $param["FailedInterruptedCount"];
+        if (array_key_exists('FailedInterruptedCount',$param) and $param['FailedInterruptedCount'] !== null) {
+            $this->FailedInterruptedCount = $param['FailedInterruptedCount'];
         }
 
-        if (array_key_exists("FailedCount",$param) and $param["FailedCount"] !== null) {
-            $this->FailedCount = $param["FailedCount"];
+        if (array_key_exists('FailedCount',$param) and $param['FailedCount'] !== null) {
+            $this->FailedCount = $param['FailedCount'];
         }
     }
 }

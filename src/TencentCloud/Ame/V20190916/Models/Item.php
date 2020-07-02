@@ -82,23 +82,23 @@ class Item extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ItemID",$param) and $param["ItemID"] !== null) {
-            $this->ItemID = $param["ItemID"];
+        if (array_key_exists('ItemID',$param) and $param['ItemID'] !== null) {
+            $this->ItemID = $param['ItemID'];
         }
 
-        if (array_key_exists("DataInfo",$param) and $param["DataInfo"] !== null) {
+        if (array_key_exists('DataInfo',$param) and $param['DataInfo'] !== null) {
             $this->DataInfo = new DataInfo();
-            $this->DataInfo->deserialize($param["DataInfo"]);
+            $this->DataInfo->deserialize($param['DataInfo']);
         }
 
-        if (array_key_exists("Album",$param) and $param["Album"] !== null) {
+        if (array_key_exists('Album',$param) and $param['Album'] !== null) {
             $this->Album = new Album();
-            $this->Album->deserialize($param["Album"]);
+            $this->Album->deserialize($param['Album']);
         }
 
-        if (array_key_exists("Artists",$param) and $param["Artists"] !== null) {
+        if (array_key_exists('Artists',$param) and $param['Artists'] !== null) {
             $this->Artists = [];
-            foreach ($param["Artists"] as $key => $value){
+            foreach ($param['Artists'] as $key => $value){
                 $obj = new Artist();
                 $obj->deserialize($value);
                 array_push($this->Artists, $obj);

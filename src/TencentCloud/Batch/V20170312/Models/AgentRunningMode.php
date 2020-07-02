@@ -62,16 +62,16 @@ class AgentRunningMode extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Scene",$param) and $param["Scene"] !== null) {
-            $this->Scene = $param["Scene"];
+        if (array_key_exists('Scene',$param) and $param['Scene'] !== null) {
+            $this->Scene = $param['Scene'];
         }
 
-        if (array_key_exists("User",$param) and $param["User"] !== null) {
-            $this->User = $param["User"];
+        if (array_key_exists('User',$param) and $param['User'] !== null) {
+            $this->User = $param['User'];
         }
 
-        if (array_key_exists("Session",$param) and $param["Session"] !== null) {
-            $this->Session = $param["Session"];
+        if (array_key_exists('Session',$param) and $param['Session'] !== null) {
+            $this->Session = $param['Session'];
         }
     }
 }

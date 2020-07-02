@@ -94,32 +94,32 @@ class ApiKey extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AccessKeyId",$param) and $param["AccessKeyId"] !== null) {
-            $this->AccessKeyId = $param["AccessKeyId"];
+        if (array_key_exists('AccessKeyId',$param) and $param['AccessKeyId'] !== null) {
+            $this->AccessKeyId = $param['AccessKeyId'];
         }
 
-        if (array_key_exists("AccessKeySecret",$param) and $param["AccessKeySecret"] !== null) {
-            $this->AccessKeySecret = $param["AccessKeySecret"];
+        if (array_key_exists('AccessKeySecret',$param) and $param['AccessKeySecret'] !== null) {
+            $this->AccessKeySecret = $param['AccessKeySecret'];
         }
 
-        if (array_key_exists("AccessKeyType",$param) and $param["AccessKeyType"] !== null) {
-            $this->AccessKeyType = $param["AccessKeyType"];
+        if (array_key_exists('AccessKeyType',$param) and $param['AccessKeyType'] !== null) {
+            $this->AccessKeyType = $param['AccessKeyType'];
         }
 
-        if (array_key_exists("SecretName",$param) and $param["SecretName"] !== null) {
-            $this->SecretName = $param["SecretName"];
+        if (array_key_exists('SecretName',$param) and $param['SecretName'] !== null) {
+            $this->SecretName = $param['SecretName'];
         }
 
-        if (array_key_exists("ModifiedTime",$param) and $param["ModifiedTime"] !== null) {
-            $this->ModifiedTime = $param["ModifiedTime"];
+        if (array_key_exists('ModifiedTime',$param) and $param['ModifiedTime'] !== null) {
+            $this->ModifiedTime = $param['ModifiedTime'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
-            $this->CreatedTime = $param["CreatedTime"];
+        if (array_key_exists('CreatedTime',$param) and $param['CreatedTime'] !== null) {
+            $this->CreatedTime = $param['CreatedTime'];
         }
     }
 }

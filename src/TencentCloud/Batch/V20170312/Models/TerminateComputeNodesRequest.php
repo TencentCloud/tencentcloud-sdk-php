@@ -54,12 +54,12 @@ class TerminateComputeNodesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("EnvId",$param) and $param["EnvId"] !== null) {
-            $this->EnvId = $param["EnvId"];
+        if (array_key_exists('EnvId',$param) and $param['EnvId'] !== null) {
+            $this->EnvId = $param['EnvId'];
         }
 
-        if (array_key_exists("ComputeNodeIds",$param) and $param["ComputeNodeIds"] !== null) {
-            $this->ComputeNodeIds = $param["ComputeNodeIds"];
+        if (array_key_exists('ComputeNodeIds',$param) and $param['ComputeNodeIds'] !== null) {
+            $this->ComputeNodeIds = $param['ComputeNodeIds'];
         }
     }
 }

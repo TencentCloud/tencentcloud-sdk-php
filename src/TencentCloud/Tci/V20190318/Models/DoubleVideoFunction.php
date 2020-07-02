@@ -46,8 +46,8 @@ class DoubleVideoFunction extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("EnableCoverPictures",$param) and $param["EnableCoverPictures"] !== null) {
-            $this->EnableCoverPictures = $param["EnableCoverPictures"];
+        if (array_key_exists('EnableCoverPictures',$param) and $param['EnableCoverPictures'] !== null) {
+            $this->EnableCoverPictures = $param['EnableCoverPictures'];
         }
     }
 }

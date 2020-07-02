@@ -62,16 +62,16 @@ class PhoneVerificationRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("IdCard",$param) and $param["IdCard"] !== null) {
-            $this->IdCard = $param["IdCard"];
+        if (array_key_exists('IdCard',$param) and $param['IdCard'] !== null) {
+            $this->IdCard = $param['IdCard'];
         }
 
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("Phone",$param) and $param["Phone"] !== null) {
-            $this->Phone = $param["Phone"];
+        if (array_key_exists('Phone',$param) and $param['Phone'] !== null) {
+            $this->Phone = $param['Phone'];
         }
     }
 }

@@ -46,8 +46,8 @@ class DeleteDisasterRecoverGroupsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DisasterRecoverGroupIds",$param) and $param["DisasterRecoverGroupIds"] !== null) {
-            $this->DisasterRecoverGroupIds = $param["DisasterRecoverGroupIds"];
+        if (array_key_exists('DisasterRecoverGroupIds',$param) and $param['DisasterRecoverGroupIds'] !== null) {
+            $this->DisasterRecoverGroupIds = $param['DisasterRecoverGroupIds'];
         }
     }
 }

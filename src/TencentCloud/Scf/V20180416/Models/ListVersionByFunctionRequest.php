@@ -86,28 +86,28 @@ class ListVersionByFunctionRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FunctionName",$param) and $param["FunctionName"] !== null) {
-            $this->FunctionName = $param["FunctionName"];
+        if (array_key_exists('FunctionName',$param) and $param['FunctionName'] !== null) {
+            $this->FunctionName = $param['FunctionName'];
         }
 
-        if (array_key_exists("Namespace",$param) and $param["Namespace"] !== null) {
-            $this->Namespace = $param["Namespace"];
+        if (array_key_exists('Namespace',$param) and $param['Namespace'] !== null) {
+            $this->Namespace = $param['Namespace'];
         }
 
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
+        if (array_key_exists('Offset',$param) and $param['Offset'] !== null) {
+            $this->Offset = $param['Offset'];
         }
 
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
+        if (array_key_exists('Limit',$param) and $param['Limit'] !== null) {
+            $this->Limit = $param['Limit'];
         }
 
-        if (array_key_exists("Order",$param) and $param["Order"] !== null) {
-            $this->Order = $param["Order"];
+        if (array_key_exists('Order',$param) and $param['Order'] !== null) {
+            $this->Order = $param['Order'];
         }
 
-        if (array_key_exists("OrderBy",$param) and $param["OrderBy"] !== null) {
-            $this->OrderBy = $param["OrderBy"];
+        if (array_key_exists('OrderBy',$param) and $param['OrderBy'] !== null) {
+            $this->OrderBy = $param['OrderBy'];
         }
     }
 }

@@ -54,17 +54,17 @@ class DescribeInstanceInternetBandwidthConfigsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InternetBandwidthConfigSet",$param) and $param["InternetBandwidthConfigSet"] !== null) {
+        if (array_key_exists('InternetBandwidthConfigSet',$param) and $param['InternetBandwidthConfigSet'] !== null) {
             $this->InternetBandwidthConfigSet = [];
-            foreach ($param["InternetBandwidthConfigSet"] as $key => $value){
+            foreach ($param['InternetBandwidthConfigSet'] as $key => $value){
                 $obj = new InternetBandwidthConfig();
                 $obj->deserialize($value);
                 array_push($this->InternetBandwidthConfigSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

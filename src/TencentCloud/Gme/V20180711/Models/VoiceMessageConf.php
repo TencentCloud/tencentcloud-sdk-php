@@ -54,12 +54,12 @@ class VoiceMessageConf extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("Language",$param) and $param["Language"] !== null) {
-            $this->Language = $param["Language"];
+        if (array_key_exists('Language',$param) and $param['Language'] !== null) {
+            $this->Language = $param['Language'];
         }
     }
 }

@@ -78,24 +78,24 @@ class ListAttachedRolePoliciesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Page",$param) and $param["Page"] !== null) {
-            $this->Page = $param["Page"];
+        if (array_key_exists('Page',$param) and $param['Page'] !== null) {
+            $this->Page = $param['Page'];
         }
 
-        if (array_key_exists("Rp",$param) and $param["Rp"] !== null) {
-            $this->Rp = $param["Rp"];
+        if (array_key_exists('Rp',$param) and $param['Rp'] !== null) {
+            $this->Rp = $param['Rp'];
         }
 
-        if (array_key_exists("RoleId",$param) and $param["RoleId"] !== null) {
-            $this->RoleId = $param["RoleId"];
+        if (array_key_exists('RoleId',$param) and $param['RoleId'] !== null) {
+            $this->RoleId = $param['RoleId'];
         }
 
-        if (array_key_exists("RoleName",$param) and $param["RoleName"] !== null) {
-            $this->RoleName = $param["RoleName"];
+        if (array_key_exists('RoleName',$param) and $param['RoleName'] !== null) {
+            $this->RoleName = $param['RoleName'];
         }
 
-        if (array_key_exists("PolicyType",$param) and $param["PolicyType"] !== null) {
-            $this->PolicyType = $param["PolicyType"];
+        if (array_key_exists('PolicyType',$param) and $param['PolicyType'] !== null) {
+            $this->PolicyType = $param['PolicyType'];
         }
     }
 }

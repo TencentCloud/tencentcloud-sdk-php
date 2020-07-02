@@ -110,41 +110,41 @@ class PersonVisitInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PersonId",$param) and $param["PersonId"] !== null) {
-            $this->PersonId = $param["PersonId"];
+        if (array_key_exists('PersonId',$param) and $param['PersonId'] !== null) {
+            $this->PersonId = $param['PersonId'];
         }
 
-        if (array_key_exists("VisitId",$param) and $param["VisitId"] !== null) {
-            $this->VisitId = $param["VisitId"];
+        if (array_key_exists('VisitId',$param) and $param['VisitId'] !== null) {
+            $this->VisitId = $param['VisitId'];
         }
 
-        if (array_key_exists("InTime",$param) and $param["InTime"] !== null) {
-            $this->InTime = $param["InTime"];
+        if (array_key_exists('InTime',$param) and $param['InTime'] !== null) {
+            $this->InTime = $param['InTime'];
         }
 
-        if (array_key_exists("CapturedPicture",$param) and $param["CapturedPicture"] !== null) {
-            $this->CapturedPicture = $param["CapturedPicture"];
+        if (array_key_exists('CapturedPicture',$param) and $param['CapturedPicture'] !== null) {
+            $this->CapturedPicture = $param['CapturedPicture'];
         }
 
-        if (array_key_exists("MaskType",$param) and $param["MaskType"] !== null) {
-            $this->MaskType = $param["MaskType"];
+        if (array_key_exists('MaskType',$param) and $param['MaskType'] !== null) {
+            $this->MaskType = $param['MaskType'];
         }
 
-        if (array_key_exists("GlassType",$param) and $param["GlassType"] !== null) {
-            $this->GlassType = $param["GlassType"];
+        if (array_key_exists('GlassType',$param) and $param['GlassType'] !== null) {
+            $this->GlassType = $param['GlassType'];
         }
 
-        if (array_key_exists("HairType",$param) and $param["HairType"] !== null) {
-            $this->HairType = $param["HairType"];
+        if (array_key_exists('HairType',$param) and $param['HairType'] !== null) {
+            $this->HairType = $param['HairType'];
         }
 
-        if (array_key_exists("CapturedPictureUrl",$param) and $param["CapturedPictureUrl"] !== null) {
-            $this->CapturedPictureUrl = $param["CapturedPictureUrl"];
+        if (array_key_exists('CapturedPictureUrl',$param) and $param['CapturedPictureUrl'] !== null) {
+            $this->CapturedPictureUrl = $param['CapturedPictureUrl'];
         }
 
-        if (array_key_exists("SceneInfo",$param) and $param["SceneInfo"] !== null) {
+        if (array_key_exists('SceneInfo',$param) and $param['SceneInfo'] !== null) {
             $this->SceneInfo = new SceneInfo();
-            $this->SceneInfo->deserialize($param["SceneInfo"]);
+            $this->SceneInfo->deserialize($param['SceneInfo']);
         }
     }
 }

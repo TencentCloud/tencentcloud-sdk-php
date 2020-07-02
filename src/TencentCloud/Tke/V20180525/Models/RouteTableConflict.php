@@ -82,20 +82,20 @@ class RouteTableConflict extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RouteTableType",$param) and $param["RouteTableType"] !== null) {
-            $this->RouteTableType = $param["RouteTableType"];
+        if (array_key_exists('RouteTableType',$param) and $param['RouteTableType'] !== null) {
+            $this->RouteTableType = $param['RouteTableType'];
         }
 
-        if (array_key_exists("RouteTableCidrBlock",$param) and $param["RouteTableCidrBlock"] !== null) {
-            $this->RouteTableCidrBlock = $param["RouteTableCidrBlock"];
+        if (array_key_exists('RouteTableCidrBlock',$param) and $param['RouteTableCidrBlock'] !== null) {
+            $this->RouteTableCidrBlock = $param['RouteTableCidrBlock'];
         }
 
-        if (array_key_exists("RouteTableName",$param) and $param["RouteTableName"] !== null) {
-            $this->RouteTableName = $param["RouteTableName"];
+        if (array_key_exists('RouteTableName',$param) and $param['RouteTableName'] !== null) {
+            $this->RouteTableName = $param['RouteTableName'];
         }
 
-        if (array_key_exists("RouteTableId",$param) and $param["RouteTableId"] !== null) {
-            $this->RouteTableId = $param["RouteTableId"];
+        if (array_key_exists('RouteTableId',$param) and $param['RouteTableId'] !== null) {
+            $this->RouteTableId = $param['RouteTableId'];
         }
     }
 }

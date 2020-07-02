@@ -46,8 +46,8 @@ class DescribeAppRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Sdkappid",$param) and $param["Sdkappid"] !== null) {
-            $this->Sdkappid = $param["Sdkappid"];
+        if (array_key_exists('Sdkappid',$param) and $param['Sdkappid'] !== null) {
+            $this->Sdkappid = $param['Sdkappid'];
         }
     }
 }

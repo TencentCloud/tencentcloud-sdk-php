@@ -62,16 +62,16 @@ class CreateCustomerGatewayRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CustomerGatewayName",$param) and $param["CustomerGatewayName"] !== null) {
-            $this->CustomerGatewayName = $param["CustomerGatewayName"];
+        if (array_key_exists('CustomerGatewayName',$param) and $param['CustomerGatewayName'] !== null) {
+            $this->CustomerGatewayName = $param['CustomerGatewayName'];
         }
 
-        if (array_key_exists("IpAddress",$param) and $param["IpAddress"] !== null) {
-            $this->IpAddress = $param["IpAddress"];
+        if (array_key_exists('IpAddress',$param) and $param['IpAddress'] !== null) {
+            $this->IpAddress = $param['IpAddress'];
         }
 
-        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
-            $this->Zone = $param["Zone"];
+        if (array_key_exists('Zone',$param) and $param['Zone'] !== null) {
+            $this->Zone = $param['Zone'];
         }
     }
 }

@@ -54,17 +54,17 @@ class DescribeRegionsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RegionInfoSet",$param) and $param["RegionInfoSet"] !== null) {
+        if (array_key_exists('RegionInfoSet',$param) and $param['RegionInfoSet'] !== null) {
             $this->RegionInfoSet = [];
-            foreach ($param["RegionInfoSet"] as $key => $value){
+            foreach ($param['RegionInfoSet'] as $key => $value){
                 $obj = new RegionInfo();
                 $obj->deserialize($value);
                 array_push($this->RegionInfoSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

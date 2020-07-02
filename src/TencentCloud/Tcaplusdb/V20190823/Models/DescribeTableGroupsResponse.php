@@ -62,21 +62,21 @@ class DescribeTableGroupsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("TableGroups",$param) and $param["TableGroups"] !== null) {
+        if (array_key_exists('TableGroups',$param) and $param['TableGroups'] !== null) {
             $this->TableGroups = [];
-            foreach ($param["TableGroups"] as $key => $value){
+            foreach ($param['TableGroups'] as $key => $value){
                 $obj = new TableGroupInfo();
                 $obj->deserialize($value);
                 array_push($this->TableGroups, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

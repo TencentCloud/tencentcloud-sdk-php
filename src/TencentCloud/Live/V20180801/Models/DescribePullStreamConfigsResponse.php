@@ -54,17 +54,17 @@ class DescribePullStreamConfigsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PullStreamConfigs",$param) and $param["PullStreamConfigs"] !== null) {
+        if (array_key_exists('PullStreamConfigs',$param) and $param['PullStreamConfigs'] !== null) {
             $this->PullStreamConfigs = [];
-            foreach ($param["PullStreamConfigs"] as $key => $value){
+            foreach ($param['PullStreamConfigs'] as $key => $value){
                 $obj = new PullStreamConfig();
                 $obj->deserialize($value);
                 array_push($this->PullStreamConfigs, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

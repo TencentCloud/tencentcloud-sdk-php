@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * EipOutConfig
  *
- * @method string getEipFixed() 获取是否是固定IP，["TRUE","FALSE"]
- * @method void setEipFixed(string $EipFixed) 设置是否是固定IP，["TRUE","FALSE"]
+ * @method string getEipFixed() 获取是否是固定IP，['TRUE','FALSE']
+ * @method void setEipFixed(string $EipFixed) 设置是否是固定IP，['TRUE','FALSE']
  * @method array getEips() 获取IP列表
  * @method void setEips(array $Eips) 设置IP列表
  */
 class EipOutConfig extends AbstractModel
 {
     /**
-     * @var string 是否是固定IP，["TRUE","FALSE"]
+     * @var string 是否是固定IP，['TRUE','FALSE']
      */
     public $EipFixed;
 
@@ -38,7 +38,7 @@ class EipOutConfig extends AbstractModel
     public $Eips;
 
     /**
-     * @param string $EipFixed 是否是固定IP，["TRUE","FALSE"]
+     * @param string $EipFixed 是否是固定IP，['TRUE','FALSE']
      * @param array $Eips IP列表
      */
     function __construct()
@@ -54,12 +54,12 @@ class EipOutConfig extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("EipFixed",$param) and $param["EipFixed"] !== null) {
-            $this->EipFixed = $param["EipFixed"];
+        if (array_key_exists('EipFixed',$param) and $param['EipFixed'] !== null) {
+            $this->EipFixed = $param['EipFixed'];
         }
 
-        if (array_key_exists("Eips",$param) and $param["Eips"] !== null) {
-            $this->Eips = $param["Eips"];
+        if (array_key_exists('Eips',$param) and $param['Eips'] !== null) {
+            $this->Eips = $param['Eips'];
         }
     }
 }

@@ -62,16 +62,16 @@ class InvokeResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Txid",$param) and $param["Txid"] !== null) {
-            $this->Txid = $param["Txid"];
+        if (array_key_exists('Txid',$param) and $param['Txid'] !== null) {
+            $this->Txid = $param['Txid'];
         }
 
-        if (array_key_exists("Events",$param) and $param["Events"] !== null) {
-            $this->Events = $param["Events"];
+        if (array_key_exists('Events',$param) and $param['Events'] !== null) {
+            $this->Events = $param['Events'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

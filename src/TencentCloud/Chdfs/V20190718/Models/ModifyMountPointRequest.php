@@ -70,20 +70,20 @@ class ModifyMountPointRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MountPointId",$param) and $param["MountPointId"] !== null) {
-            $this->MountPointId = $param["MountPointId"];
+        if (array_key_exists('MountPointId',$param) and $param['MountPointId'] !== null) {
+            $this->MountPointId = $param['MountPointId'];
         }
 
-        if (array_key_exists("MountPointName",$param) and $param["MountPointName"] !== null) {
-            $this->MountPointName = $param["MountPointName"];
+        if (array_key_exists('MountPointName',$param) and $param['MountPointName'] !== null) {
+            $this->MountPointName = $param['MountPointName'];
         }
 
-        if (array_key_exists("MountPointStatus",$param) and $param["MountPointStatus"] !== null) {
-            $this->MountPointStatus = $param["MountPointStatus"];
+        if (array_key_exists('MountPointStatus',$param) and $param['MountPointStatus'] !== null) {
+            $this->MountPointStatus = $param['MountPointStatus'];
         }
 
-        if (array_key_exists("AccessGroupId",$param) and $param["AccessGroupId"] !== null) {
-            $this->AccessGroupId = $param["AccessGroupId"];
+        if (array_key_exists('AccessGroupId',$param) and $param['AccessGroupId'] !== null) {
+            $this->AccessGroupId = $param['AccessGroupId'];
         }
     }
 }

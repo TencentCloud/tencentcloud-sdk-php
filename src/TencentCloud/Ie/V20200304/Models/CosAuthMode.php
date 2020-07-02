@@ -94,24 +94,24 @@ class CosAuthMode extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists('Type',$param) and $param['Type'] !== null) {
+            $this->Type = $param['Type'];
         }
 
-        if (array_key_exists("HostedId",$param) and $param["HostedId"] !== null) {
-            $this->HostedId = $param["HostedId"];
+        if (array_key_exists('HostedId',$param) and $param['HostedId'] !== null) {
+            $this->HostedId = $param['HostedId'];
         }
 
-        if (array_key_exists("SecretId",$param) and $param["SecretId"] !== null) {
-            $this->SecretId = $param["SecretId"];
+        if (array_key_exists('SecretId',$param) and $param['SecretId'] !== null) {
+            $this->SecretId = $param['SecretId'];
         }
 
-        if (array_key_exists("SecretKey",$param) and $param["SecretKey"] !== null) {
-            $this->SecretKey = $param["SecretKey"];
+        if (array_key_exists('SecretKey',$param) and $param['SecretKey'] !== null) {
+            $this->SecretKey = $param['SecretKey'];
         }
 
-        if (array_key_exists("Token",$param) and $param["Token"] !== null) {
-            $this->Token = $param["Token"];
+        if (array_key_exists('Token',$param) and $param['Token'] !== null) {
+            $this->Token = $param['Token'];
         }
     }
 }

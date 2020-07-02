@@ -78,24 +78,24 @@ class AssumeRoleWithSAMLRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SAMLAssertion",$param) and $param["SAMLAssertion"] !== null) {
-            $this->SAMLAssertion = $param["SAMLAssertion"];
+        if (array_key_exists('SAMLAssertion',$param) and $param['SAMLAssertion'] !== null) {
+            $this->SAMLAssertion = $param['SAMLAssertion'];
         }
 
-        if (array_key_exists("PrincipalArn",$param) and $param["PrincipalArn"] !== null) {
-            $this->PrincipalArn = $param["PrincipalArn"];
+        if (array_key_exists('PrincipalArn',$param) and $param['PrincipalArn'] !== null) {
+            $this->PrincipalArn = $param['PrincipalArn'];
         }
 
-        if (array_key_exists("RoleArn",$param) and $param["RoleArn"] !== null) {
-            $this->RoleArn = $param["RoleArn"];
+        if (array_key_exists('RoleArn',$param) and $param['RoleArn'] !== null) {
+            $this->RoleArn = $param['RoleArn'];
         }
 
-        if (array_key_exists("RoleSessionName",$param) and $param["RoleSessionName"] !== null) {
-            $this->RoleSessionName = $param["RoleSessionName"];
+        if (array_key_exists('RoleSessionName',$param) and $param['RoleSessionName'] !== null) {
+            $this->RoleSessionName = $param['RoleSessionName'];
         }
 
-        if (array_key_exists("DurationSeconds",$param) and $param["DurationSeconds"] !== null) {
-            $this->DurationSeconds = $param["DurationSeconds"];
+        if (array_key_exists('DurationSeconds',$param) and $param['DurationSeconds'] !== null) {
+            $this->DurationSeconds = $param['DurationSeconds'];
         }
     }
 }

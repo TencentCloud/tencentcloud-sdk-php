@@ -86,28 +86,28 @@ class ItemValue extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SourceText",$param) and $param["SourceText"] !== null) {
-            $this->SourceText = $param["SourceText"];
+        if (array_key_exists('SourceText',$param) and $param['SourceText'] !== null) {
+            $this->SourceText = $param['SourceText'];
         }
 
-        if (array_key_exists("TargetText",$param) and $param["TargetText"] !== null) {
-            $this->TargetText = $param["TargetText"];
+        if (array_key_exists('TargetText',$param) and $param['TargetText'] !== null) {
+            $this->TargetText = $param['TargetText'];
         }
 
-        if (array_key_exists("X",$param) and $param["X"] !== null) {
-            $this->X = $param["X"];
+        if (array_key_exists('X',$param) and $param['X'] !== null) {
+            $this->X = $param['X'];
         }
 
-        if (array_key_exists("Y",$param) and $param["Y"] !== null) {
-            $this->Y = $param["Y"];
+        if (array_key_exists('Y',$param) and $param['Y'] !== null) {
+            $this->Y = $param['Y'];
         }
 
-        if (array_key_exists("W",$param) and $param["W"] !== null) {
-            $this->W = $param["W"];
+        if (array_key_exists('W',$param) and $param['W'] !== null) {
+            $this->W = $param['W'];
         }
 
-        if (array_key_exists("H",$param) and $param["H"] !== null) {
-            $this->H = $param["H"];
+        if (array_key_exists('H',$param) and $param['H'] !== null) {
+            $this->H = $param['H'];
         }
     }
 }

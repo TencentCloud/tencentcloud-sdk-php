@@ -78,16 +78,16 @@ class UrlInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Url",$param) and $param["Url"] !== null) {
-            $this->Url = $param["Url"];
+        if (array_key_exists('Url',$param) and $param['Url'] !== null) {
+            $this->Url = $param['Url'];
         }
 
-        if (array_key_exists("Format",$param) and $param["Format"] !== null) {
-            $this->Format = $param["Format"];
+        if (array_key_exists('Format',$param) and $param['Format'] !== null) {
+            $this->Format = $param['Format'];
         }
 
-        if (array_key_exists("Host",$param) and $param["Host"] !== null) {
-            $this->Host = $param["Host"];
+        if (array_key_exists('Host',$param) and $param['Host'] !== null) {
+            $this->Host = $param['Host'];
         }
     }
 }

@@ -62,16 +62,16 @@ class AccessConfiguration extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AccessRegion",$param) and $param["AccessRegion"] !== null) {
-            $this->AccessRegion = $param["AccessRegion"];
+        if (array_key_exists('AccessRegion',$param) and $param['AccessRegion'] !== null) {
+            $this->AccessRegion = $param['AccessRegion'];
         }
 
-        if (array_key_exists("Bandwidth",$param) and $param["Bandwidth"] !== null) {
-            $this->Bandwidth = $param["Bandwidth"];
+        if (array_key_exists('Bandwidth',$param) and $param['Bandwidth'] !== null) {
+            $this->Bandwidth = $param['Bandwidth'];
         }
 
-        if (array_key_exists("Concurrent",$param) and $param["Concurrent"] !== null) {
-            $this->Concurrent = $param["Concurrent"];
+        if (array_key_exists('Concurrent',$param) and $param['Concurrent'] !== null) {
+            $this->Concurrent = $param['Concurrent'];
         }
     }
 }

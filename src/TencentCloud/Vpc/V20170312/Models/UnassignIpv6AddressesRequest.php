@@ -54,13 +54,13 @@ class UnassignIpv6AddressesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("NetworkInterfaceId",$param) and $param["NetworkInterfaceId"] !== null) {
-            $this->NetworkInterfaceId = $param["NetworkInterfaceId"];
+        if (array_key_exists('NetworkInterfaceId',$param) and $param['NetworkInterfaceId'] !== null) {
+            $this->NetworkInterfaceId = $param['NetworkInterfaceId'];
         }
 
-        if (array_key_exists("Ipv6Addresses",$param) and $param["Ipv6Addresses"] !== null) {
+        if (array_key_exists('Ipv6Addresses',$param) and $param['Ipv6Addresses'] !== null) {
             $this->Ipv6Addresses = [];
-            foreach ($param["Ipv6Addresses"] as $key => $value){
+            foreach ($param['Ipv6Addresses'] as $key => $value){
                 $obj = new Ipv6Address();
                 $obj->deserialize($value);
                 array_push($this->Ipv6Addresses, $obj);

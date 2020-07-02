@@ -54,17 +54,17 @@ class DescribeInternetChargeTypeConfigsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InternetChargeTypeConfigSet",$param) and $param["InternetChargeTypeConfigSet"] !== null) {
+        if (array_key_exists('InternetChargeTypeConfigSet',$param) and $param['InternetChargeTypeConfigSet'] !== null) {
             $this->InternetChargeTypeConfigSet = [];
-            foreach ($param["InternetChargeTypeConfigSet"] as $key => $value){
+            foreach ($param['InternetChargeTypeConfigSet'] as $key => $value){
                 $obj = new InternetChargeTypeConfig();
                 $obj->deserialize($value);
                 array_push($this->InternetChargeTypeConfigSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

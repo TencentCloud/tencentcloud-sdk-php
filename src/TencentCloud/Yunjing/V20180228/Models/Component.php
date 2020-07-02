@@ -110,36 +110,36 @@ class Component extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
-            $this->Id = $param["Id"];
+        if (array_key_exists('Id',$param) and $param['Id'] !== null) {
+            $this->Id = $param['Id'];
         }
 
-        if (array_key_exists("Uuid",$param) and $param["Uuid"] !== null) {
-            $this->Uuid = $param["Uuid"];
+        if (array_key_exists('Uuid',$param) and $param['Uuid'] !== null) {
+            $this->Uuid = $param['Uuid'];
         }
 
-        if (array_key_exists("MachineIp",$param) and $param["MachineIp"] !== null) {
-            $this->MachineIp = $param["MachineIp"];
+        if (array_key_exists('MachineIp',$param) and $param['MachineIp'] !== null) {
+            $this->MachineIp = $param['MachineIp'];
         }
 
-        if (array_key_exists("MachineName",$param) and $param["MachineName"] !== null) {
-            $this->MachineName = $param["MachineName"];
+        if (array_key_exists('MachineName',$param) and $param['MachineName'] !== null) {
+            $this->MachineName = $param['MachineName'];
         }
 
-        if (array_key_exists("ComponentVersion",$param) and $param["ComponentVersion"] !== null) {
-            $this->ComponentVersion = $param["ComponentVersion"];
+        if (array_key_exists('ComponentVersion',$param) and $param['ComponentVersion'] !== null) {
+            $this->ComponentVersion = $param['ComponentVersion'];
         }
 
-        if (array_key_exists("ComponentType",$param) and $param["ComponentType"] !== null) {
-            $this->ComponentType = $param["ComponentType"];
+        if (array_key_exists('ComponentType',$param) and $param['ComponentType'] !== null) {
+            $this->ComponentType = $param['ComponentType'];
         }
 
-        if (array_key_exists("ComponentName",$param) and $param["ComponentName"] !== null) {
-            $this->ComponentName = $param["ComponentName"];
+        if (array_key_exists('ComponentName',$param) and $param['ComponentName'] !== null) {
+            $this->ComponentName = $param['ComponentName'];
         }
 
-        if (array_key_exists("ModifyTime",$param) and $param["ModifyTime"] !== null) {
-            $this->ModifyTime = $param["ModifyTime"];
+        if (array_key_exists('ModifyTime',$param) and $param['ModifyTime'] !== null) {
+            $this->ModifyTime = $param['ModifyTime'];
         }
     }
 }

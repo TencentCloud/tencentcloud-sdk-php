@@ -62,21 +62,21 @@ class DescribeHistoryAccountsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("HistoryAccounts",$param) and $param["HistoryAccounts"] !== null) {
+        if (array_key_exists('HistoryAccounts',$param) and $param['HistoryAccounts'] !== null) {
             $this->HistoryAccounts = [];
-            foreach ($param["HistoryAccounts"] as $key => $value){
+            foreach ($param['HistoryAccounts'] as $key => $value){
                 $obj = new HistoryAccount();
                 $obj->deserialize($value);
                 array_push($this->HistoryAccounts, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

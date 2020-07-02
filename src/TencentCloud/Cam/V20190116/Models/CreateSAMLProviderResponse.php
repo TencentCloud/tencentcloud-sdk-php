@@ -54,12 +54,12 @@ class CreateSAMLProviderResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ProviderArn",$param) and $param["ProviderArn"] !== null) {
-            $this->ProviderArn = $param["ProviderArn"];
+        if (array_key_exists('ProviderArn',$param) and $param['ProviderArn'] !== null) {
+            $this->ProviderArn = $param['ProviderArn'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

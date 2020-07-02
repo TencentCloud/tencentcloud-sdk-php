@@ -70,20 +70,20 @@ class TaskOperationLog extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TaskStep",$param) and $param["TaskStep"] !== null) {
-            $this->TaskStep = $param["TaskStep"];
+        if (array_key_exists('TaskStep',$param) and $param['TaskStep'] !== null) {
+            $this->TaskStep = $param['TaskStep'];
         }
 
-        if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
-            $this->Operator = $param["Operator"];
+        if (array_key_exists('Operator',$param) and $param['Operator'] !== null) {
+            $this->Operator = $param['Operator'];
         }
 
-        if (array_key_exists("OperationDetail",$param) and $param["OperationDetail"] !== null) {
-            $this->OperationDetail = $param["OperationDetail"];
+        if (array_key_exists('OperationDetail',$param) and $param['OperationDetail'] !== null) {
+            $this->OperationDetail = $param['OperationDetail'];
         }
 
-        if (array_key_exists("OperationTime",$param) and $param["OperationTime"] !== null) {
-            $this->OperationTime = $param["OperationTime"];
+        if (array_key_exists('OperationTime',$param) and $param['OperationTime'] !== null) {
+            $this->OperationTime = $param['OperationTime'];
         }
     }
 }

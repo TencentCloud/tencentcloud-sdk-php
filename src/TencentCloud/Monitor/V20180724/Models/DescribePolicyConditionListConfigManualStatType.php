@@ -134,36 +134,36 @@ class DescribePolicyConditionListConfigManualStatType extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("P5",$param) and $param["P5"] !== null) {
-            $this->P5 = $param["P5"];
+        if (array_key_exists('P5',$param) and $param['P5'] !== null) {
+            $this->P5 = $param['P5'];
         }
 
-        if (array_key_exists("P10",$param) and $param["P10"] !== null) {
-            $this->P10 = $param["P10"];
+        if (array_key_exists('P10',$param) and $param['P10'] !== null) {
+            $this->P10 = $param['P10'];
         }
 
-        if (array_key_exists("P60",$param) and $param["P60"] !== null) {
-            $this->P60 = $param["P60"];
+        if (array_key_exists('P60',$param) and $param['P60'] !== null) {
+            $this->P60 = $param['P60'];
         }
 
-        if (array_key_exists("P300",$param) and $param["P300"] !== null) {
-            $this->P300 = $param["P300"];
+        if (array_key_exists('P300',$param) and $param['P300'] !== null) {
+            $this->P300 = $param['P300'];
         }
 
-        if (array_key_exists("P600",$param) and $param["P600"] !== null) {
-            $this->P600 = $param["P600"];
+        if (array_key_exists('P600',$param) and $param['P600'] !== null) {
+            $this->P600 = $param['P600'];
         }
 
-        if (array_key_exists("P1800",$param) and $param["P1800"] !== null) {
-            $this->P1800 = $param["P1800"];
+        if (array_key_exists('P1800',$param) and $param['P1800'] !== null) {
+            $this->P1800 = $param['P1800'];
         }
 
-        if (array_key_exists("P3600",$param) and $param["P3600"] !== null) {
-            $this->P3600 = $param["P3600"];
+        if (array_key_exists('P3600',$param) and $param['P3600'] !== null) {
+            $this->P3600 = $param['P3600'];
         }
 
-        if (array_key_exists("P86400",$param) and $param["P86400"] !== null) {
-            $this->P86400 = $param["P86400"];
+        if (array_key_exists('P86400',$param) and $param['P86400'] !== null) {
+            $this->P86400 = $param['P86400'];
         }
     }
 }

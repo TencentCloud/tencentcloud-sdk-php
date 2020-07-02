@@ -50,8 +50,8 @@ class ResRenew extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("OrderIds",$param) and $param["OrderIds"] !== null) {
-            $this->OrderIds = $param["OrderIds"];
+        if (array_key_exists('OrderIds',$param) and $param['OrderIds'] !== null) {
+            $this->OrderIds = $param['OrderIds'];
         }
     }
 }

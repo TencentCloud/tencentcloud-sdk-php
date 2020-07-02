@@ -142,56 +142,56 @@ class ResidenceBookletOCRResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("HouseholdNumber",$param) and $param["HouseholdNumber"] !== null) {
-            $this->HouseholdNumber = $param["HouseholdNumber"];
+        if (array_key_exists('HouseholdNumber',$param) and $param['HouseholdNumber'] !== null) {
+            $this->HouseholdNumber = $param['HouseholdNumber'];
         }
 
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("Sex",$param) and $param["Sex"] !== null) {
-            $this->Sex = $param["Sex"];
+        if (array_key_exists('Sex',$param) and $param['Sex'] !== null) {
+            $this->Sex = $param['Sex'];
         }
 
-        if (array_key_exists("BirthPlace",$param) and $param["BirthPlace"] !== null) {
-            $this->BirthPlace = $param["BirthPlace"];
+        if (array_key_exists('BirthPlace',$param) and $param['BirthPlace'] !== null) {
+            $this->BirthPlace = $param['BirthPlace'];
         }
 
-        if (array_key_exists("Nation",$param) and $param["Nation"] !== null) {
-            $this->Nation = $param["Nation"];
+        if (array_key_exists('Nation',$param) and $param['Nation'] !== null) {
+            $this->Nation = $param['Nation'];
         }
 
-        if (array_key_exists("NativePlace",$param) and $param["NativePlace"] !== null) {
-            $this->NativePlace = $param["NativePlace"];
+        if (array_key_exists('NativePlace',$param) and $param['NativePlace'] !== null) {
+            $this->NativePlace = $param['NativePlace'];
         }
 
-        if (array_key_exists("BirthDate",$param) and $param["BirthDate"] !== null) {
-            $this->BirthDate = $param["BirthDate"];
+        if (array_key_exists('BirthDate',$param) and $param['BirthDate'] !== null) {
+            $this->BirthDate = $param['BirthDate'];
         }
 
-        if (array_key_exists("IdCardNumber",$param) and $param["IdCardNumber"] !== null) {
-            $this->IdCardNumber = $param["IdCardNumber"];
+        if (array_key_exists('IdCardNumber',$param) and $param['IdCardNumber'] !== null) {
+            $this->IdCardNumber = $param['IdCardNumber'];
         }
 
-        if (array_key_exists("EducationDegree",$param) and $param["EducationDegree"] !== null) {
-            $this->EducationDegree = $param["EducationDegree"];
+        if (array_key_exists('EducationDegree',$param) and $param['EducationDegree'] !== null) {
+            $this->EducationDegree = $param['EducationDegree'];
         }
 
-        if (array_key_exists("ServicePlace",$param) and $param["ServicePlace"] !== null) {
-            $this->ServicePlace = $param["ServicePlace"];
+        if (array_key_exists('ServicePlace',$param) and $param['ServicePlace'] !== null) {
+            $this->ServicePlace = $param['ServicePlace'];
         }
 
-        if (array_key_exists("Household",$param) and $param["Household"] !== null) {
-            $this->Household = $param["Household"];
+        if (array_key_exists('Household',$param) and $param['Household'] !== null) {
+            $this->Household = $param['Household'];
         }
 
-        if (array_key_exists("Address",$param) and $param["Address"] !== null) {
-            $this->Address = $param["Address"];
+        if (array_key_exists('Address',$param) and $param['Address'] !== null) {
+            $this->Address = $param['Address'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

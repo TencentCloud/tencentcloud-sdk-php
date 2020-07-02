@@ -54,12 +54,12 @@ class IntegerRange extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LowerBound",$param) and $param["LowerBound"] !== null) {
-            $this->LowerBound = $param["LowerBound"];
+        if (array_key_exists('LowerBound',$param) and $param['LowerBound'] !== null) {
+            $this->LowerBound = $param['LowerBound'];
         }
 
-        if (array_key_exists("UpperBound",$param) and $param["UpperBound"] !== null) {
-            $this->UpperBound = $param["UpperBound"];
+        if (array_key_exists('UpperBound',$param) and $param['UpperBound'] !== null) {
+            $this->UpperBound = $param['UpperBound'];
         }
     }
 }

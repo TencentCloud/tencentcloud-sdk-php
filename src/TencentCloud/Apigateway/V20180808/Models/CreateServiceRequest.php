@@ -102,36 +102,36 @@ class CreateServiceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ServiceName",$param) and $param["ServiceName"] !== null) {
-            $this->ServiceName = $param["ServiceName"];
+        if (array_key_exists('ServiceName',$param) and $param['ServiceName'] !== null) {
+            $this->ServiceName = $param['ServiceName'];
         }
 
-        if (array_key_exists("Protocol",$param) and $param["Protocol"] !== null) {
-            $this->Protocol = $param["Protocol"];
+        if (array_key_exists('Protocol',$param) and $param['Protocol'] !== null) {
+            $this->Protocol = $param['Protocol'];
         }
 
-        if (array_key_exists("ServiceDesc",$param) and $param["ServiceDesc"] !== null) {
-            $this->ServiceDesc = $param["ServiceDesc"];
+        if (array_key_exists('ServiceDesc',$param) and $param['ServiceDesc'] !== null) {
+            $this->ServiceDesc = $param['ServiceDesc'];
         }
 
-        if (array_key_exists("ExclusiveSetName",$param) and $param["ExclusiveSetName"] !== null) {
-            $this->ExclusiveSetName = $param["ExclusiveSetName"];
+        if (array_key_exists('ExclusiveSetName',$param) and $param['ExclusiveSetName'] !== null) {
+            $this->ExclusiveSetName = $param['ExclusiveSetName'];
         }
 
-        if (array_key_exists("NetTypes",$param) and $param["NetTypes"] !== null) {
-            $this->NetTypes = $param["NetTypes"];
+        if (array_key_exists('NetTypes',$param) and $param['NetTypes'] !== null) {
+            $this->NetTypes = $param['NetTypes'];
         }
 
-        if (array_key_exists("IpVersion",$param) and $param["IpVersion"] !== null) {
-            $this->IpVersion = $param["IpVersion"];
+        if (array_key_exists('IpVersion',$param) and $param['IpVersion'] !== null) {
+            $this->IpVersion = $param['IpVersion'];
         }
 
-        if (array_key_exists("SetServerName",$param) and $param["SetServerName"] !== null) {
-            $this->SetServerName = $param["SetServerName"];
+        if (array_key_exists('SetServerName',$param) and $param['SetServerName'] !== null) {
+            $this->SetServerName = $param['SetServerName'];
         }
 
-        if (array_key_exists("AppIdType",$param) and $param["AppIdType"] !== null) {
-            $this->AppIdType = $param["AppIdType"];
+        if (array_key_exists('AppIdType',$param) and $param['AppIdType'] !== null) {
+            $this->AppIdType = $param['AppIdType'];
         }
     }
 }

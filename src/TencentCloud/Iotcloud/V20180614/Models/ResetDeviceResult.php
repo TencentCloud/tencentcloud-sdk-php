@@ -66,16 +66,16 @@ class ResetDeviceResult extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DeviceName",$param) and $param["DeviceName"] !== null) {
-            $this->DeviceName = $param["DeviceName"];
+        if (array_key_exists('DeviceName',$param) and $param['DeviceName'] !== null) {
+            $this->DeviceName = $param['DeviceName'];
         }
 
-        if (array_key_exists("Success",$param) and $param["Success"] !== null) {
-            $this->Success = $param["Success"];
+        if (array_key_exists('Success',$param) and $param['Success'] !== null) {
+            $this->Success = $param['Success'];
         }
 
-        if (array_key_exists("Reason",$param) and $param["Reason"] !== null) {
-            $this->Reason = $param["Reason"];
+        if (array_key_exists('Reason',$param) and $param['Reason'] !== null) {
+            $this->Reason = $param['Reason'];
         }
     }
 }

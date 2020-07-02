@@ -94,32 +94,32 @@ class CopyAccountPrivilegesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("SrcUserName",$param) and $param["SrcUserName"] !== null) {
-            $this->SrcUserName = $param["SrcUserName"];
+        if (array_key_exists('SrcUserName',$param) and $param['SrcUserName'] !== null) {
+            $this->SrcUserName = $param['SrcUserName'];
         }
 
-        if (array_key_exists("SrcHost",$param) and $param["SrcHost"] !== null) {
-            $this->SrcHost = $param["SrcHost"];
+        if (array_key_exists('SrcHost',$param) and $param['SrcHost'] !== null) {
+            $this->SrcHost = $param['SrcHost'];
         }
 
-        if (array_key_exists("DstUserName",$param) and $param["DstUserName"] !== null) {
-            $this->DstUserName = $param["DstUserName"];
+        if (array_key_exists('DstUserName',$param) and $param['DstUserName'] !== null) {
+            $this->DstUserName = $param['DstUserName'];
         }
 
-        if (array_key_exists("DstHost",$param) and $param["DstHost"] !== null) {
-            $this->DstHost = $param["DstHost"];
+        if (array_key_exists('DstHost',$param) and $param['DstHost'] !== null) {
+            $this->DstHost = $param['DstHost'];
         }
 
-        if (array_key_exists("SrcReadOnly",$param) and $param["SrcReadOnly"] !== null) {
-            $this->SrcReadOnly = $param["SrcReadOnly"];
+        if (array_key_exists('SrcReadOnly',$param) and $param['SrcReadOnly'] !== null) {
+            $this->SrcReadOnly = $param['SrcReadOnly'];
         }
 
-        if (array_key_exists("DstReadOnly",$param) and $param["DstReadOnly"] !== null) {
-            $this->DstReadOnly = $param["DstReadOnly"];
+        if (array_key_exists('DstReadOnly',$param) and $param['DstReadOnly'] !== null) {
+            $this->DstReadOnly = $param['DstReadOnly'];
         }
     }
 }

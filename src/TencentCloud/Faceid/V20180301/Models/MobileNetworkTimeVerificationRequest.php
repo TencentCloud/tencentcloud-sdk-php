@@ -46,8 +46,8 @@ class MobileNetworkTimeVerificationRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Mobile",$param) and $param["Mobile"] !== null) {
-            $this->Mobile = $param["Mobile"];
+        if (array_key_exists('Mobile',$param) and $param['Mobile'] !== null) {
+            $this->Mobile = $param['Mobile'];
         }
     }
 }

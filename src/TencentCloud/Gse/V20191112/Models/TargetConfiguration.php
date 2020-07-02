@@ -50,8 +50,8 @@ class TargetConfiguration extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TargetValue",$param) and $param["TargetValue"] !== null) {
-            $this->TargetValue = $param["TargetValue"];
+        if (array_key_exists('TargetValue',$param) and $param['TargetValue'] !== null) {
+            $this->TargetValue = $param['TargetValue'];
         }
     }
 }

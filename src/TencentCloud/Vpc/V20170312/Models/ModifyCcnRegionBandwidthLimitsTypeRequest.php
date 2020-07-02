@@ -54,12 +54,12 @@ class ModifyCcnRegionBandwidthLimitsTypeRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CcnId",$param) and $param["CcnId"] !== null) {
-            $this->CcnId = $param["CcnId"];
+        if (array_key_exists('CcnId',$param) and $param['CcnId'] !== null) {
+            $this->CcnId = $param['CcnId'];
         }
 
-        if (array_key_exists("BandwidthLimitType",$param) and $param["BandwidthLimitType"] !== null) {
-            $this->BandwidthLimitType = $param["BandwidthLimitType"];
+        if (array_key_exists('BandwidthLimitType',$param) and $param['BandwidthLimitType'] !== null) {
+            $this->BandwidthLimitType = $param['BandwidthLimitType'];
         }
     }
 }

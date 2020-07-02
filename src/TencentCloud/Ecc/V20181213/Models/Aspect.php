@@ -62,16 +62,16 @@ class Aspect extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("Score",$param) and $param["Score"] !== null) {
-            $this->Score = $param["Score"];
+        if (array_key_exists('Score',$param) and $param['Score'] !== null) {
+            $this->Score = $param['Score'];
         }
 
-        if (array_key_exists("Percentage",$param) and $param["Percentage"] !== null) {
-            $this->Percentage = $param["Percentage"];
+        if (array_key_exists('Percentage',$param) and $param['Percentage'] !== null) {
+            $this->Percentage = $param['Percentage'];
         }
     }
 }

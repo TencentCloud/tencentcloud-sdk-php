@@ -90,24 +90,24 @@ class ModifyLivePushAuthKeyRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DomainName",$param) and $param["DomainName"] !== null) {
-            $this->DomainName = $param["DomainName"];
+        if (array_key_exists('DomainName',$param) and $param['DomainName'] !== null) {
+            $this->DomainName = $param['DomainName'];
         }
 
-        if (array_key_exists("Enable",$param) and $param["Enable"] !== null) {
-            $this->Enable = $param["Enable"];
+        if (array_key_exists('Enable',$param) and $param['Enable'] !== null) {
+            $this->Enable = $param['Enable'];
         }
 
-        if (array_key_exists("MasterAuthKey",$param) and $param["MasterAuthKey"] !== null) {
-            $this->MasterAuthKey = $param["MasterAuthKey"];
+        if (array_key_exists('MasterAuthKey',$param) and $param['MasterAuthKey'] !== null) {
+            $this->MasterAuthKey = $param['MasterAuthKey'];
         }
 
-        if (array_key_exists("BackupAuthKey",$param) and $param["BackupAuthKey"] !== null) {
-            $this->BackupAuthKey = $param["BackupAuthKey"];
+        if (array_key_exists('BackupAuthKey',$param) and $param['BackupAuthKey'] !== null) {
+            $this->BackupAuthKey = $param['BackupAuthKey'];
         }
 
-        if (array_key_exists("AuthDelta",$param) and $param["AuthDelta"] !== null) {
-            $this->AuthDelta = $param["AuthDelta"];
+        if (array_key_exists('AuthDelta',$param) and $param['AuthDelta'] !== null) {
+            $this->AuthDelta = $param['AuthDelta'];
         }
     }
 }

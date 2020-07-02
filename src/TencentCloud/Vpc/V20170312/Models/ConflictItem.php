@@ -54,12 +54,12 @@ class ConflictItem extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ConfilctId",$param) and $param["ConfilctId"] !== null) {
-            $this->ConfilctId = $param["ConfilctId"];
+        if (array_key_exists('ConfilctId',$param) and $param['ConfilctId'] !== null) {
+            $this->ConfilctId = $param['ConfilctId'];
         }
 
-        if (array_key_exists("DestinationItem",$param) and $param["DestinationItem"] !== null) {
-            $this->DestinationItem = $param["DestinationItem"];
+        if (array_key_exists('DestinationItem',$param) and $param['DestinationItem'] !== null) {
+            $this->DestinationItem = $param['DestinationItem'];
         }
     }
 }

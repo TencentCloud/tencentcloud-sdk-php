@@ -46,8 +46,8 @@ class DescribeMountPointRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MountPointId",$param) and $param["MountPointId"] !== null) {
-            $this->MountPointId = $param["MountPointId"];
+        if (array_key_exists('MountPointId',$param) and $param['MountPointId'] !== null) {
+            $this->MountPointId = $param['MountPointId'];
         }
     }
 }

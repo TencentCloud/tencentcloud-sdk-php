@@ -54,12 +54,12 @@ class AiSampleTagOperation extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists('Type',$param) and $param['Type'] !== null) {
+            $this->Type = $param['Type'];
         }
 
-        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
-            $this->Tags = $param["Tags"];
+        if (array_key_exists('Tags',$param) and $param['Tags'] !== null) {
+            $this->Tags = $param['Tags'];
         }
     }
 }

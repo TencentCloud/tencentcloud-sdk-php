@@ -122,45 +122,45 @@ class ModifyRuleRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LoadBalancerId",$param) and $param["LoadBalancerId"] !== null) {
-            $this->LoadBalancerId = $param["LoadBalancerId"];
+        if (array_key_exists('LoadBalancerId',$param) and $param['LoadBalancerId'] !== null) {
+            $this->LoadBalancerId = $param['LoadBalancerId'];
         }
 
-        if (array_key_exists("ListenerId",$param) and $param["ListenerId"] !== null) {
-            $this->ListenerId = $param["ListenerId"];
+        if (array_key_exists('ListenerId',$param) and $param['ListenerId'] !== null) {
+            $this->ListenerId = $param['ListenerId'];
         }
 
-        if (array_key_exists("LocationId",$param) and $param["LocationId"] !== null) {
-            $this->LocationId = $param["LocationId"];
+        if (array_key_exists('LocationId',$param) and $param['LocationId'] !== null) {
+            $this->LocationId = $param['LocationId'];
         }
 
-        if (array_key_exists("Url",$param) and $param["Url"] !== null) {
-            $this->Url = $param["Url"];
+        if (array_key_exists('Url',$param) and $param['Url'] !== null) {
+            $this->Url = $param['Url'];
         }
 
-        if (array_key_exists("HealthCheck",$param) and $param["HealthCheck"] !== null) {
+        if (array_key_exists('HealthCheck',$param) and $param['HealthCheck'] !== null) {
             $this->HealthCheck = new HealthCheck();
-            $this->HealthCheck->deserialize($param["HealthCheck"]);
+            $this->HealthCheck->deserialize($param['HealthCheck']);
         }
 
-        if (array_key_exists("Scheduler",$param) and $param["Scheduler"] !== null) {
-            $this->Scheduler = $param["Scheduler"];
+        if (array_key_exists('Scheduler',$param) and $param['Scheduler'] !== null) {
+            $this->Scheduler = $param['Scheduler'];
         }
 
-        if (array_key_exists("SessionExpireTime",$param) and $param["SessionExpireTime"] !== null) {
-            $this->SessionExpireTime = $param["SessionExpireTime"];
+        if (array_key_exists('SessionExpireTime',$param) and $param['SessionExpireTime'] !== null) {
+            $this->SessionExpireTime = $param['SessionExpireTime'];
         }
 
-        if (array_key_exists("ForwardType",$param) and $param["ForwardType"] !== null) {
-            $this->ForwardType = $param["ForwardType"];
+        if (array_key_exists('ForwardType',$param) and $param['ForwardType'] !== null) {
+            $this->ForwardType = $param['ForwardType'];
         }
 
-        if (array_key_exists("TrpcCallee",$param) and $param["TrpcCallee"] !== null) {
-            $this->TrpcCallee = $param["TrpcCallee"];
+        if (array_key_exists('TrpcCallee',$param) and $param['TrpcCallee'] !== null) {
+            $this->TrpcCallee = $param['TrpcCallee'];
         }
 
-        if (array_key_exists("TrpcFunc",$param) and $param["TrpcFunc"] !== null) {
-            $this->TrpcFunc = $param["TrpcFunc"];
+        if (array_key_exists('TrpcFunc',$param) and $param['TrpcFunc'] !== null) {
+            $this->TrpcFunc = $param['TrpcFunc'];
         }
     }
 }

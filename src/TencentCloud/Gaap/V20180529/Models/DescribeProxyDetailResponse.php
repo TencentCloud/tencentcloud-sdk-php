@@ -54,13 +54,13 @@ class DescribeProxyDetailResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ProxyDetail",$param) and $param["ProxyDetail"] !== null) {
+        if (array_key_exists('ProxyDetail',$param) and $param['ProxyDetail'] !== null) {
             $this->ProxyDetail = new ProxyInfo();
-            $this->ProxyDetail->deserialize($param["ProxyDetail"]);
+            $this->ProxyDetail->deserialize($param['ProxyDetail']);
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

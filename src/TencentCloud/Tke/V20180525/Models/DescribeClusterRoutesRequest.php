@@ -46,8 +46,8 @@ class DescribeClusterRoutesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RouteTableName",$param) and $param["RouteTableName"] !== null) {
-            $this->RouteTableName = $param["RouteTableName"];
+        if (array_key_exists('RouteTableName',$param) and $param['RouteTableName'] !== null) {
+            $this->RouteTableName = $param['RouteTableName'];
         }
     }
 }

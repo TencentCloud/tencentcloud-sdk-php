@@ -86,28 +86,28 @@ class DescribePlayerSessionsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("GameServerSessionId",$param) and $param["GameServerSessionId"] !== null) {
-            $this->GameServerSessionId = $param["GameServerSessionId"];
+        if (array_key_exists('GameServerSessionId',$param) and $param['GameServerSessionId'] !== null) {
+            $this->GameServerSessionId = $param['GameServerSessionId'];
         }
 
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
+        if (array_key_exists('Limit',$param) and $param['Limit'] !== null) {
+            $this->Limit = $param['Limit'];
         }
 
-        if (array_key_exists("NextToken",$param) and $param["NextToken"] !== null) {
-            $this->NextToken = $param["NextToken"];
+        if (array_key_exists('NextToken',$param) and $param['NextToken'] !== null) {
+            $this->NextToken = $param['NextToken'];
         }
 
-        if (array_key_exists("PlayerId",$param) and $param["PlayerId"] !== null) {
-            $this->PlayerId = $param["PlayerId"];
+        if (array_key_exists('PlayerId',$param) and $param['PlayerId'] !== null) {
+            $this->PlayerId = $param['PlayerId'];
         }
 
-        if (array_key_exists("PlayerSessionId",$param) and $param["PlayerSessionId"] !== null) {
-            $this->PlayerSessionId = $param["PlayerSessionId"];
+        if (array_key_exists('PlayerSessionId',$param) and $param['PlayerSessionId'] !== null) {
+            $this->PlayerSessionId = $param['PlayerSessionId'];
         }
 
-        if (array_key_exists("PlayerSessionStatusFilter",$param) and $param["PlayerSessionStatusFilter"] !== null) {
-            $this->PlayerSessionStatusFilter = $param["PlayerSessionStatusFilter"];
+        if (array_key_exists('PlayerSessionStatusFilter',$param) and $param['PlayerSessionStatusFilter'] !== null) {
+            $this->PlayerSessionStatusFilter = $param['PlayerSessionStatusFilter'];
         }
     }
 }

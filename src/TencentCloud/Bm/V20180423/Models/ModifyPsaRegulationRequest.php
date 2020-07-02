@@ -78,24 +78,24 @@ class ModifyPsaRegulationRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PsaId",$param) and $param["PsaId"] !== null) {
-            $this->PsaId = $param["PsaId"];
+        if (array_key_exists('PsaId',$param) and $param['PsaId'] !== null) {
+            $this->PsaId = $param['PsaId'];
         }
 
-        if (array_key_exists("PsaName",$param) and $param["PsaName"] !== null) {
-            $this->PsaName = $param["PsaName"];
+        if (array_key_exists('PsaName',$param) and $param['PsaName'] !== null) {
+            $this->PsaName = $param['PsaName'];
         }
 
-        if (array_key_exists("RepairLimit",$param) and $param["RepairLimit"] !== null) {
-            $this->RepairLimit = $param["RepairLimit"];
+        if (array_key_exists('RepairLimit',$param) and $param['RepairLimit'] !== null) {
+            $this->RepairLimit = $param['RepairLimit'];
         }
 
-        if (array_key_exists("PsaDescription",$param) and $param["PsaDescription"] !== null) {
-            $this->PsaDescription = $param["PsaDescription"];
+        if (array_key_exists('PsaDescription',$param) and $param['PsaDescription'] !== null) {
+            $this->PsaDescription = $param['PsaDescription'];
         }
 
-        if (array_key_exists("TaskTypeIds",$param) and $param["TaskTypeIds"] !== null) {
-            $this->TaskTypeIds = $param["TaskTypeIds"];
+        if (array_key_exists('TaskTypeIds',$param) and $param['TaskTypeIds'] !== null) {
+            $this->TaskTypeIds = $param['TaskTypeIds'];
         }
     }
 }

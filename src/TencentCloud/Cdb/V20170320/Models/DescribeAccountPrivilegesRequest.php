@@ -62,16 +62,16 @@ class DescribeAccountPrivilegesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("User",$param) and $param["User"] !== null) {
-            $this->User = $param["User"];
+        if (array_key_exists('User',$param) and $param['User'] !== null) {
+            $this->User = $param['User'];
         }
 
-        if (array_key_exists("Host",$param) and $param["Host"] !== null) {
-            $this->Host = $param["Host"];
+        if (array_key_exists('Host',$param) and $param['Host'] !== null) {
+            $this->Host = $param['Host'];
         }
     }
 }

@@ -46,8 +46,8 @@ class ComputeEnvData extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceTypes",$param) and $param["InstanceTypes"] !== null) {
-            $this->InstanceTypes = $param["InstanceTypes"];
+        if (array_key_exists('InstanceTypes',$param) and $param['InstanceTypes'] !== null) {
+            $this->InstanceTypes = $param['InstanceTypes'];
         }
     }
 }

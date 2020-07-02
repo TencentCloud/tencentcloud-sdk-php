@@ -58,12 +58,12 @@ class TriggerInvokeCondition extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InvokeMethod",$param) and $param["InvokeMethod"] !== null) {
-            $this->InvokeMethod = $param["InvokeMethod"];
+        if (array_key_exists('InvokeMethod',$param) and $param['InvokeMethod'] !== null) {
+            $this->InvokeMethod = $param['InvokeMethod'];
         }
 
-        if (array_key_exists("InvokeExpr",$param) and $param["InvokeExpr"] !== null) {
-            $this->InvokeExpr = $param["InvokeExpr"];
+        if (array_key_exists('InvokeExpr',$param) and $param['InvokeExpr'] !== null) {
+            $this->InvokeExpr = $param['InvokeExpr'];
         }
     }
 }

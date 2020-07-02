@@ -70,30 +70,30 @@ class DescribeProxiesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("InstanceSet",$param) and $param["InstanceSet"] !== null) {
+        if (array_key_exists('InstanceSet',$param) and $param['InstanceSet'] !== null) {
             $this->InstanceSet = [];
-            foreach ($param["InstanceSet"] as $key => $value){
+            foreach ($param['InstanceSet'] as $key => $value){
                 $obj = new ProxyInfo();
                 $obj->deserialize($value);
                 array_push($this->InstanceSet, $obj);
             }
         }
 
-        if (array_key_exists("ProxySet",$param) and $param["ProxySet"] !== null) {
+        if (array_key_exists('ProxySet',$param) and $param['ProxySet'] !== null) {
             $this->ProxySet = [];
-            foreach ($param["ProxySet"] as $key => $value){
+            foreach ($param['ProxySet'] as $key => $value){
                 $obj = new ProxyInfo();
                 $obj->deserialize($value);
                 array_push($this->ProxySet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

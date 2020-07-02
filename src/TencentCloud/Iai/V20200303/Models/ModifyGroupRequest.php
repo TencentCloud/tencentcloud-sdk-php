@@ -70,25 +70,25 @@ class ModifyGroupRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
-            $this->GroupId = $param["GroupId"];
+        if (array_key_exists('GroupId',$param) and $param['GroupId'] !== null) {
+            $this->GroupId = $param['GroupId'];
         }
 
-        if (array_key_exists("GroupName",$param) and $param["GroupName"] !== null) {
-            $this->GroupName = $param["GroupName"];
+        if (array_key_exists('GroupName',$param) and $param['GroupName'] !== null) {
+            $this->GroupName = $param['GroupName'];
         }
 
-        if (array_key_exists("GroupExDescriptionInfos",$param) and $param["GroupExDescriptionInfos"] !== null) {
+        if (array_key_exists('GroupExDescriptionInfos',$param) and $param['GroupExDescriptionInfos'] !== null) {
             $this->GroupExDescriptionInfos = [];
-            foreach ($param["GroupExDescriptionInfos"] as $key => $value){
+            foreach ($param['GroupExDescriptionInfos'] as $key => $value){
                 $obj = new GroupExDescriptionInfo();
                 $obj->deserialize($value);
                 array_push($this->GroupExDescriptionInfos, $obj);
             }
         }
 
-        if (array_key_exists("Tag",$param) and $param["Tag"] !== null) {
-            $this->Tag = $param["Tag"];
+        if (array_key_exists('Tag',$param) and $param['Tag'] !== null) {
+            $this->Tag = $param['Tag'];
         }
     }
 }

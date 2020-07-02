@@ -54,17 +54,17 @@ class DescribeResIpListResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Resource",$param) and $param["Resource"] !== null) {
+        if (array_key_exists('Resource',$param) and $param['Resource'] !== null) {
             $this->Resource = [];
-            foreach ($param["Resource"] as $key => $value){
+            foreach ($param['Resource'] as $key => $value){
                 $obj = new ResourceIp();
                 $obj->deserialize($value);
                 array_push($this->Resource, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

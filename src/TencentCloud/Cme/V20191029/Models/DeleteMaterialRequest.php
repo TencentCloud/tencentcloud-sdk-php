@@ -62,16 +62,16 @@ class DeleteMaterialRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Platform",$param) and $param["Platform"] !== null) {
-            $this->Platform = $param["Platform"];
+        if (array_key_exists('Platform',$param) and $param['Platform'] !== null) {
+            $this->Platform = $param['Platform'];
         }
 
-        if (array_key_exists("MaterialId",$param) and $param["MaterialId"] !== null) {
-            $this->MaterialId = $param["MaterialId"];
+        if (array_key_exists('MaterialId',$param) and $param['MaterialId'] !== null) {
+            $this->MaterialId = $param['MaterialId'];
         }
 
-        if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
-            $this->Operator = $param["Operator"];
+        if (array_key_exists('Operator',$param) and $param['Operator'] !== null) {
+            $this->Operator = $param['Operator'];
         }
     }
 }

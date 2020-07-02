@@ -102,36 +102,36 @@ class InstanceEnumParam extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ParamName",$param) and $param["ParamName"] !== null) {
-            $this->ParamName = $param["ParamName"];
+        if (array_key_exists('ParamName',$param) and $param['ParamName'] !== null) {
+            $this->ParamName = $param['ParamName'];
         }
 
-        if (array_key_exists("ValueType",$param) and $param["ValueType"] !== null) {
-            $this->ValueType = $param["ValueType"];
+        if (array_key_exists('ValueType',$param) and $param['ValueType'] !== null) {
+            $this->ValueType = $param['ValueType'];
         }
 
-        if (array_key_exists("NeedRestart",$param) and $param["NeedRestart"] !== null) {
-            $this->NeedRestart = $param["NeedRestart"];
+        if (array_key_exists('NeedRestart',$param) and $param['NeedRestart'] !== null) {
+            $this->NeedRestart = $param['NeedRestart'];
         }
 
-        if (array_key_exists("DefaultValue",$param) and $param["DefaultValue"] !== null) {
-            $this->DefaultValue = $param["DefaultValue"];
+        if (array_key_exists('DefaultValue',$param) and $param['DefaultValue'] !== null) {
+            $this->DefaultValue = $param['DefaultValue'];
         }
 
-        if (array_key_exists("CurrentValue",$param) and $param["CurrentValue"] !== null) {
-            $this->CurrentValue = $param["CurrentValue"];
+        if (array_key_exists('CurrentValue',$param) and $param['CurrentValue'] !== null) {
+            $this->CurrentValue = $param['CurrentValue'];
         }
 
-        if (array_key_exists("Tips",$param) and $param["Tips"] !== null) {
-            $this->Tips = $param["Tips"];
+        if (array_key_exists('Tips',$param) and $param['Tips'] !== null) {
+            $this->Tips = $param['Tips'];
         }
 
-        if (array_key_exists("EnumValue",$param) and $param["EnumValue"] !== null) {
-            $this->EnumValue = $param["EnumValue"];
+        if (array_key_exists('EnumValue',$param) and $param['EnumValue'] !== null) {
+            $this->EnumValue = $param['EnumValue'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
     }
 }

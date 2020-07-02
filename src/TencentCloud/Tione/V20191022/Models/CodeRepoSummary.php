@@ -78,25 +78,25 @@ class CodeRepoSummary extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CreationTime",$param) and $param["CreationTime"] !== null) {
-            $this->CreationTime = $param["CreationTime"];
+        if (array_key_exists('CreationTime',$param) and $param['CreationTime'] !== null) {
+            $this->CreationTime = $param['CreationTime'];
         }
 
-        if (array_key_exists("LastModifiedTime",$param) and $param["LastModifiedTime"] !== null) {
-            $this->LastModifiedTime = $param["LastModifiedTime"];
+        if (array_key_exists('LastModifiedTime',$param) and $param['LastModifiedTime'] !== null) {
+            $this->LastModifiedTime = $param['LastModifiedTime'];
         }
 
-        if (array_key_exists("CodeRepositoryName",$param) and $param["CodeRepositoryName"] !== null) {
-            $this->CodeRepositoryName = $param["CodeRepositoryName"];
+        if (array_key_exists('CodeRepositoryName',$param) and $param['CodeRepositoryName'] !== null) {
+            $this->CodeRepositoryName = $param['CodeRepositoryName'];
         }
 
-        if (array_key_exists("GitConfig",$param) and $param["GitConfig"] !== null) {
+        if (array_key_exists('GitConfig',$param) and $param['GitConfig'] !== null) {
             $this->GitConfig = new GitConfig();
-            $this->GitConfig->deserialize($param["GitConfig"]);
+            $this->GitConfig->deserialize($param['GitConfig']);
         }
 
-        if (array_key_exists("NoSecret",$param) and $param["NoSecret"] !== null) {
-            $this->NoSecret = $param["NoSecret"];
+        if (array_key_exists('NoSecret',$param) and $param['NoSecret'] !== null) {
+            $this->NoSecret = $param['NoSecret'];
         }
     }
 }

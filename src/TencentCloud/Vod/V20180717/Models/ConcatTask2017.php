@@ -54,13 +54,13 @@ class ConcatTask2017 extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
-            $this->TaskId = $param["TaskId"];
+        if (array_key_exists('TaskId',$param) and $param['TaskId'] !== null) {
+            $this->TaskId = $param['TaskId'];
         }
 
-        if (array_key_exists("FileInfoSet",$param) and $param["FileInfoSet"] !== null) {
+        if (array_key_exists('FileInfoSet',$param) and $param['FileInfoSet'] !== null) {
             $this->FileInfoSet = [];
-            foreach ($param["FileInfoSet"] as $key => $value){
+            foreach ($param['FileInfoSet'] as $key => $value){
                 $obj = new ConcatFileInfo2017();
                 $obj->deserialize($value);
                 array_push($this->FileInfoSet, $obj);

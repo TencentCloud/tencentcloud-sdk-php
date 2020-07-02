@@ -54,13 +54,13 @@ class CreateAddressTemplateGroupResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AddressTemplateGroup",$param) and $param["AddressTemplateGroup"] !== null) {
+        if (array_key_exists('AddressTemplateGroup',$param) and $param['AddressTemplateGroup'] !== null) {
             $this->AddressTemplateGroup = new AddressTemplateGroup();
-            $this->AddressTemplateGroup->deserialize($param["AddressTemplateGroup"]);
+            $this->AddressTemplateGroup->deserialize($param['AddressTemplateGroup']);
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

@@ -78,24 +78,24 @@ class UpgradeInstanceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("EsVersion",$param) and $param["EsVersion"] !== null) {
-            $this->EsVersion = $param["EsVersion"];
+        if (array_key_exists('EsVersion',$param) and $param['EsVersion'] !== null) {
+            $this->EsVersion = $param['EsVersion'];
         }
 
-        if (array_key_exists("CheckOnly",$param) and $param["CheckOnly"] !== null) {
-            $this->CheckOnly = $param["CheckOnly"];
+        if (array_key_exists('CheckOnly',$param) and $param['CheckOnly'] !== null) {
+            $this->CheckOnly = $param['CheckOnly'];
         }
 
-        if (array_key_exists("LicenseType",$param) and $param["LicenseType"] !== null) {
-            $this->LicenseType = $param["LicenseType"];
+        if (array_key_exists('LicenseType',$param) and $param['LicenseType'] !== null) {
+            $this->LicenseType = $param['LicenseType'];
         }
 
-        if (array_key_exists("BasicSecurityType",$param) and $param["BasicSecurityType"] !== null) {
-            $this->BasicSecurityType = $param["BasicSecurityType"];
+        if (array_key_exists('BasicSecurityType',$param) and $param['BasicSecurityType'] !== null) {
+            $this->BasicSecurityType = $param['BasicSecurityType'];
         }
     }
 }

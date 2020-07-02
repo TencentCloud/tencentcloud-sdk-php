@@ -78,25 +78,25 @@ class ModifyEipAclRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AclId",$param) and $param["AclId"] !== null) {
-            $this->AclId = $param["AclId"];
+        if (array_key_exists('AclId',$param) and $param['AclId'] !== null) {
+            $this->AclId = $param['AclId'];
         }
 
-        if (array_key_exists("AclName",$param) and $param["AclName"] !== null) {
-            $this->AclName = $param["AclName"];
+        if (array_key_exists('AclName',$param) and $param['AclName'] !== null) {
+            $this->AclName = $param['AclName'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists('Type',$param) and $param['Type'] !== null) {
+            $this->Type = $param['Type'];
         }
 
-        if (array_key_exists("Rules",$param) and $param["Rules"] !== null) {
+        if (array_key_exists('Rules',$param) and $param['Rules'] !== null) {
             $this->Rules = [];
-            foreach ($param["Rules"] as $key => $value){
+            foreach ($param['Rules'] as $key => $value){
                 $obj = new EipAclRule();
                 $obj->deserialize($value);
                 array_push($this->Rules, $obj);

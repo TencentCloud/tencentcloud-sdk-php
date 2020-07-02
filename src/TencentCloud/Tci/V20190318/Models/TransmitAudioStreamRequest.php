@@ -118,45 +118,45 @@ class TransmitAudioStreamRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Functions",$param) and $param["Functions"] !== null) {
+        if (array_key_exists('Functions',$param) and $param['Functions'] !== null) {
             $this->Functions = new FunctionInfo();
-            $this->Functions->deserialize($param["Functions"]);
+            $this->Functions->deserialize($param['Functions']);
         }
 
-        if (array_key_exists("SeqId",$param) and $param["SeqId"] !== null) {
-            $this->SeqId = $param["SeqId"];
+        if (array_key_exists('SeqId',$param) and $param['SeqId'] !== null) {
+            $this->SeqId = $param['SeqId'];
         }
 
-        if (array_key_exists("SessionId",$param) and $param["SessionId"] !== null) {
-            $this->SessionId = $param["SessionId"];
+        if (array_key_exists('SessionId',$param) and $param['SessionId'] !== null) {
+            $this->SessionId = $param['SessionId'];
         }
 
-        if (array_key_exists("UserVoiceData",$param) and $param["UserVoiceData"] !== null) {
-            $this->UserVoiceData = $param["UserVoiceData"];
+        if (array_key_exists('UserVoiceData',$param) and $param['UserVoiceData'] !== null) {
+            $this->UserVoiceData = $param['UserVoiceData'];
         }
 
-        if (array_key_exists("VoiceEncodeType",$param) and $param["VoiceEncodeType"] !== null) {
-            $this->VoiceEncodeType = $param["VoiceEncodeType"];
+        if (array_key_exists('VoiceEncodeType',$param) and $param['VoiceEncodeType'] !== null) {
+            $this->VoiceEncodeType = $param['VoiceEncodeType'];
         }
 
-        if (array_key_exists("VoiceFileType",$param) and $param["VoiceFileType"] !== null) {
-            $this->VoiceFileType = $param["VoiceFileType"];
+        if (array_key_exists('VoiceFileType',$param) and $param['VoiceFileType'] !== null) {
+            $this->VoiceFileType = $param['VoiceFileType'];
         }
 
-        if (array_key_exists("IsEnd",$param) and $param["IsEnd"] !== null) {
-            $this->IsEnd = $param["IsEnd"];
+        if (array_key_exists('IsEnd',$param) and $param['IsEnd'] !== null) {
+            $this->IsEnd = $param['IsEnd'];
         }
 
-        if (array_key_exists("Lang",$param) and $param["Lang"] !== null) {
-            $this->Lang = $param["Lang"];
+        if (array_key_exists('Lang',$param) and $param['Lang'] !== null) {
+            $this->Lang = $param['Lang'];
         }
 
-        if (array_key_exists("StorageMode",$param) and $param["StorageMode"] !== null) {
-            $this->StorageMode = $param["StorageMode"];
+        if (array_key_exists('StorageMode',$param) and $param['StorageMode'] !== null) {
+            $this->StorageMode = $param['StorageMode'];
         }
 
-        if (array_key_exists("VocabLibNameList",$param) and $param["VocabLibNameList"] !== null) {
-            $this->VocabLibNameList = $param["VocabLibNameList"];
+        if (array_key_exists('VocabLibNameList',$param) and $param['VocabLibNameList'] !== null) {
+            $this->VocabLibNameList = $param['VocabLibNameList'];
         }
     }
 }

@@ -78,24 +78,24 @@ class CreateEipAclResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AclId",$param) and $param["AclId"] !== null) {
-            $this->AclId = $param["AclId"];
+        if (array_key_exists('AclId',$param) and $param['AclId'] !== null) {
+            $this->AclId = $param['AclId'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("AclName",$param) and $param["AclName"] !== null) {
-            $this->AclName = $param["AclName"];
+        if (array_key_exists('AclName',$param) and $param['AclName'] !== null) {
+            $this->AclName = $param['AclName'];
         }
 
-        if (array_key_exists("CreatedAt",$param) and $param["CreatedAt"] !== null) {
-            $this->CreatedAt = $param["CreatedAt"];
+        if (array_key_exists('CreatedAt',$param) and $param['CreatedAt'] !== null) {
+            $this->CreatedAt = $param['CreatedAt'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

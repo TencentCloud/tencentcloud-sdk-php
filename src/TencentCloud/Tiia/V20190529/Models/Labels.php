@@ -62,12 +62,12 @@ class Labels extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FirstLabel",$param) and $param["FirstLabel"] !== null) {
-            $this->FirstLabel = $param["FirstLabel"];
+        if (array_key_exists('FirstLabel',$param) and $param['FirstLabel'] !== null) {
+            $this->FirstLabel = $param['FirstLabel'];
         }
 
-        if (array_key_exists("SecondLabel",$param) and $param["SecondLabel"] !== null) {
-            $this->SecondLabel = $param["SecondLabel"];
+        if (array_key_exists('SecondLabel',$param) and $param['SecondLabel'] !== null) {
+            $this->SecondLabel = $param['SecondLabel'];
         }
     }
 }

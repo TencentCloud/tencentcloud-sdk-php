@@ -78,20 +78,20 @@ class CatAgent extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Province",$param) and $param["Province"] !== null) {
-            $this->Province = $param["Province"];
+        if (array_key_exists('Province',$param) and $param['Province'] !== null) {
+            $this->Province = $param['Province'];
         }
 
-        if (array_key_exists("Isp",$param) and $param["Isp"] !== null) {
-            $this->Isp = $param["Isp"];
+        if (array_key_exists('Isp',$param) and $param['Isp'] !== null) {
+            $this->Isp = $param['Isp'];
         }
 
-        if (array_key_exists("ProvinceName",$param) and $param["ProvinceName"] !== null) {
-            $this->ProvinceName = $param["ProvinceName"];
+        if (array_key_exists('ProvinceName',$param) and $param['ProvinceName'] !== null) {
+            $this->ProvinceName = $param['ProvinceName'];
         }
 
-        if (array_key_exists("IspName",$param) and $param["IspName"] !== null) {
-            $this->IspName = $param["IspName"];
+        if (array_key_exists('IspName',$param) and $param['IspName'] !== null) {
+            $this->IspName = $param['IspName'];
         }
     }
 }

@@ -46,8 +46,8 @@ class DisassociateDhcpIpWithAddressIpRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DhcpIpId",$param) and $param["DhcpIpId"] !== null) {
-            $this->DhcpIpId = $param["DhcpIpId"];
+        if (array_key_exists('DhcpIpId',$param) and $param['DhcpIpId'] !== null) {
+            $this->DhcpIpId = $param['DhcpIpId'];
         }
     }
 }

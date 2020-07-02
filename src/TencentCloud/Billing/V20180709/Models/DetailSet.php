@@ -66,21 +66,21 @@ class DetailSet extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
-            $this->Domain = $param["Domain"];
+        if (array_key_exists('Domain',$param) and $param['Domain'] !== null) {
+            $this->Domain = $param['Domain'];
         }
 
-        if (array_key_exists("DetailPoints",$param) and $param["DetailPoints"] !== null) {
+        if (array_key_exists('DetailPoints',$param) and $param['DetailPoints'] !== null) {
             $this->DetailPoints = [];
-            foreach ($param["DetailPoints"] as $key => $value){
+            foreach ($param['DetailPoints'] as $key => $value){
                 $obj = new DetailPoint();
                 $obj->deserialize($value);
                 array_push($this->DetailPoints, $obj);
             }
         }
 
-        if (array_key_exists("InstanceID",$param) and $param["InstanceID"] !== null) {
-            $this->InstanceID = $param["InstanceID"];
+        if (array_key_exists('InstanceID',$param) and $param['InstanceID'] !== null) {
+            $this->InstanceID = $param['InstanceID'];
         }
     }
 }

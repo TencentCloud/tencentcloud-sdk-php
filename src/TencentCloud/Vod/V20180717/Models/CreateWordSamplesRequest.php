@@ -94,21 +94,21 @@ class CreateWordSamplesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Usages",$param) and $param["Usages"] !== null) {
-            $this->Usages = $param["Usages"];
+        if (array_key_exists('Usages',$param) and $param['Usages'] !== null) {
+            $this->Usages = $param['Usages'];
         }
 
-        if (array_key_exists("Words",$param) and $param["Words"] !== null) {
+        if (array_key_exists('Words',$param) and $param['Words'] !== null) {
             $this->Words = [];
-            foreach ($param["Words"] as $key => $value){
+            foreach ($param['Words'] as $key => $value){
                 $obj = new AiSampleWordInfo();
                 $obj->deserialize($value);
                 array_push($this->Words, $obj);
             }
         }
 
-        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
-            $this->SubAppId = $param["SubAppId"];
+        if (array_key_exists('SubAppId',$param) and $param['SubAppId'] !== null) {
+            $this->SubAppId = $param['SubAppId'];
         }
     }
 }

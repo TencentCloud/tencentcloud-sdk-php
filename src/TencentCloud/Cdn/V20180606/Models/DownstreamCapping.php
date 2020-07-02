@@ -66,13 +66,13 @@ off：关闭
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Switch",$param) and $param["Switch"] !== null) {
-            $this->Switch = $param["Switch"];
+        if (array_key_exists('Switch',$param) and $param['Switch'] !== null) {
+            $this->Switch = $param['Switch'];
         }
 
-        if (array_key_exists("CappingRules",$param) and $param["CappingRules"] !== null) {
+        if (array_key_exists('CappingRules',$param) and $param['CappingRules'] !== null) {
             $this->CappingRules = [];
-            foreach ($param["CappingRules"] as $key => $value){
+            foreach ($param['CappingRules'] as $key => $value){
                 $obj = new CappingRule();
                 $obj->deserialize($value);
                 array_push($this->CappingRules, $obj);

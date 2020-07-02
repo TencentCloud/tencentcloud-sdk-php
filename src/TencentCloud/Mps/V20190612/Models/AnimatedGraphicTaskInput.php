@@ -82,25 +82,25 @@ class AnimatedGraphicTaskInput extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Definition",$param) and $param["Definition"] !== null) {
-            $this->Definition = $param["Definition"];
+        if (array_key_exists('Definition',$param) and $param['Definition'] !== null) {
+            $this->Definition = $param['Definition'];
         }
 
-        if (array_key_exists("StartTimeOffset",$param) and $param["StartTimeOffset"] !== null) {
-            $this->StartTimeOffset = $param["StartTimeOffset"];
+        if (array_key_exists('StartTimeOffset',$param) and $param['StartTimeOffset'] !== null) {
+            $this->StartTimeOffset = $param['StartTimeOffset'];
         }
 
-        if (array_key_exists("EndTimeOffset",$param) and $param["EndTimeOffset"] !== null) {
-            $this->EndTimeOffset = $param["EndTimeOffset"];
+        if (array_key_exists('EndTimeOffset',$param) and $param['EndTimeOffset'] !== null) {
+            $this->EndTimeOffset = $param['EndTimeOffset'];
         }
 
-        if (array_key_exists("OutputStorage",$param) and $param["OutputStorage"] !== null) {
+        if (array_key_exists('OutputStorage',$param) and $param['OutputStorage'] !== null) {
             $this->OutputStorage = new TaskOutputStorage();
-            $this->OutputStorage->deserialize($param["OutputStorage"]);
+            $this->OutputStorage->deserialize($param['OutputStorage']);
         }
 
-        if (array_key_exists("OutputObjectPath",$param) and $param["OutputObjectPath"] !== null) {
-            $this->OutputObjectPath = $param["OutputObjectPath"];
+        if (array_key_exists('OutputObjectPath',$param) and $param['OutputObjectPath'] !== null) {
+            $this->OutputObjectPath = $param['OutputObjectPath'];
         }
     }
 }

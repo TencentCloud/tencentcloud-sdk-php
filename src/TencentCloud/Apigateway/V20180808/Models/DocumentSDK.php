@@ -54,12 +54,12 @@ class DocumentSDK extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DocumentURL",$param) and $param["DocumentURL"] !== null) {
-            $this->DocumentURL = $param["DocumentURL"];
+        if (array_key_exists('DocumentURL',$param) and $param['DocumentURL'] !== null) {
+            $this->DocumentURL = $param['DocumentURL'];
         }
 
-        if (array_key_exists("SdkURL",$param) and $param["SdkURL"] !== null) {
-            $this->SdkURL = $param["SdkURL"];
+        if (array_key_exists('SdkURL',$param) and $param['SdkURL'] !== null) {
+            $this->SdkURL = $param['SdkURL'];
         }
     }
 }

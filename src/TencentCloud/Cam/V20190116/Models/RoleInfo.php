@@ -130,44 +130,44 @@ class RoleInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RoleId",$param) and $param["RoleId"] !== null) {
-            $this->RoleId = $param["RoleId"];
+        if (array_key_exists('RoleId',$param) and $param['RoleId'] !== null) {
+            $this->RoleId = $param['RoleId'];
         }
 
-        if (array_key_exists("RoleName",$param) and $param["RoleName"] !== null) {
-            $this->RoleName = $param["RoleName"];
+        if (array_key_exists('RoleName',$param) and $param['RoleName'] !== null) {
+            $this->RoleName = $param['RoleName'];
         }
 
-        if (array_key_exists("PolicyDocument",$param) and $param["PolicyDocument"] !== null) {
-            $this->PolicyDocument = $param["PolicyDocument"];
+        if (array_key_exists('PolicyDocument',$param) and $param['PolicyDocument'] !== null) {
+            $this->PolicyDocument = $param['PolicyDocument'];
         }
 
-        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
-            $this->Description = $param["Description"];
+        if (array_key_exists('Description',$param) and $param['Description'] !== null) {
+            $this->Description = $param['Description'];
         }
 
-        if (array_key_exists("AddTime",$param) and $param["AddTime"] !== null) {
-            $this->AddTime = $param["AddTime"];
+        if (array_key_exists('AddTime',$param) and $param['AddTime'] !== null) {
+            $this->AddTime = $param['AddTime'];
         }
 
-        if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
-            $this->UpdateTime = $param["UpdateTime"];
+        if (array_key_exists('UpdateTime',$param) and $param['UpdateTime'] !== null) {
+            $this->UpdateTime = $param['UpdateTime'];
         }
 
-        if (array_key_exists("ConsoleLogin",$param) and $param["ConsoleLogin"] !== null) {
-            $this->ConsoleLogin = $param["ConsoleLogin"];
+        if (array_key_exists('ConsoleLogin',$param) and $param['ConsoleLogin'] !== null) {
+            $this->ConsoleLogin = $param['ConsoleLogin'];
         }
 
-        if (array_key_exists("RoleType",$param) and $param["RoleType"] !== null) {
-            $this->RoleType = $param["RoleType"];
+        if (array_key_exists('RoleType',$param) and $param['RoleType'] !== null) {
+            $this->RoleType = $param['RoleType'];
         }
 
-        if (array_key_exists("SessionDuration",$param) and $param["SessionDuration"] !== null) {
-            $this->SessionDuration = $param["SessionDuration"];
+        if (array_key_exists('SessionDuration',$param) and $param['SessionDuration'] !== null) {
+            $this->SessionDuration = $param['SessionDuration'];
         }
 
-        if (array_key_exists("DeletionTaskId",$param) and $param["DeletionTaskId"] !== null) {
-            $this->DeletionTaskId = $param["DeletionTaskId"];
+        if (array_key_exists('DeletionTaskId',$param) and $param['DeletionTaskId'] !== null) {
+            $this->DeletionTaskId = $param['DeletionTaskId'];
         }
     }
 }

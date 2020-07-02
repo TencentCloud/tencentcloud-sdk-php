@@ -182,52 +182,52 @@ class ConfigRelease extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ConfigReleaseId",$param) and $param["ConfigReleaseId"] !== null) {
-            $this->ConfigReleaseId = $param["ConfigReleaseId"];
+        if (array_key_exists('ConfigReleaseId',$param) and $param['ConfigReleaseId'] !== null) {
+            $this->ConfigReleaseId = $param['ConfigReleaseId'];
         }
 
-        if (array_key_exists("ConfigId",$param) and $param["ConfigId"] !== null) {
-            $this->ConfigId = $param["ConfigId"];
+        if (array_key_exists('ConfigId',$param) and $param['ConfigId'] !== null) {
+            $this->ConfigId = $param['ConfigId'];
         }
 
-        if (array_key_exists("ConfigName",$param) and $param["ConfigName"] !== null) {
-            $this->ConfigName = $param["ConfigName"];
+        if (array_key_exists('ConfigName',$param) and $param['ConfigName'] !== null) {
+            $this->ConfigName = $param['ConfigName'];
         }
 
-        if (array_key_exists("ConfigVersion",$param) and $param["ConfigVersion"] !== null) {
-            $this->ConfigVersion = $param["ConfigVersion"];
+        if (array_key_exists('ConfigVersion',$param) and $param['ConfigVersion'] !== null) {
+            $this->ConfigVersion = $param['ConfigVersion'];
         }
 
-        if (array_key_exists("ReleaseTime",$param) and $param["ReleaseTime"] !== null) {
-            $this->ReleaseTime = $param["ReleaseTime"];
+        if (array_key_exists('ReleaseTime',$param) and $param['ReleaseTime'] !== null) {
+            $this->ReleaseTime = $param['ReleaseTime'];
         }
 
-        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
-            $this->GroupId = $param["GroupId"];
+        if (array_key_exists('GroupId',$param) and $param['GroupId'] !== null) {
+            $this->GroupId = $param['GroupId'];
         }
 
-        if (array_key_exists("GroupName",$param) and $param["GroupName"] !== null) {
-            $this->GroupName = $param["GroupName"];
+        if (array_key_exists('GroupName',$param) and $param['GroupName'] !== null) {
+            $this->GroupName = $param['GroupName'];
         }
 
-        if (array_key_exists("NamespaceId",$param) and $param["NamespaceId"] !== null) {
-            $this->NamespaceId = $param["NamespaceId"];
+        if (array_key_exists('NamespaceId',$param) and $param['NamespaceId'] !== null) {
+            $this->NamespaceId = $param['NamespaceId'];
         }
 
-        if (array_key_exists("NamespaceName",$param) and $param["NamespaceName"] !== null) {
-            $this->NamespaceName = $param["NamespaceName"];
+        if (array_key_exists('NamespaceName',$param) and $param['NamespaceName'] !== null) {
+            $this->NamespaceName = $param['NamespaceName'];
         }
 
-        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
-            $this->ClusterId = $param["ClusterId"];
+        if (array_key_exists('ClusterId',$param) and $param['ClusterId'] !== null) {
+            $this->ClusterId = $param['ClusterId'];
         }
 
-        if (array_key_exists("ClusterName",$param) and $param["ClusterName"] !== null) {
-            $this->ClusterName = $param["ClusterName"];
+        if (array_key_exists('ClusterName',$param) and $param['ClusterName'] !== null) {
+            $this->ClusterName = $param['ClusterName'];
         }
 
-        if (array_key_exists("ReleaseDesc",$param) and $param["ReleaseDesc"] !== null) {
-            $this->ReleaseDesc = $param["ReleaseDesc"];
+        if (array_key_exists('ReleaseDesc',$param) and $param['ReleaseDesc'] !== null) {
+            $this->ReleaseDesc = $param['ReleaseDesc'];
         }
     }
 }

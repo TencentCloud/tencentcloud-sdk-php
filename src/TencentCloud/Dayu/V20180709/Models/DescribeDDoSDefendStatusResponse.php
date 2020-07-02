@@ -82,20 +82,20 @@ class DescribeDDoSDefendStatusResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DefendStatus",$param) and $param["DefendStatus"] !== null) {
-            $this->DefendStatus = $param["DefendStatus"];
+        if (array_key_exists('DefendStatus',$param) and $param['DefendStatus'] !== null) {
+            $this->DefendStatus = $param['DefendStatus'];
         }
 
-        if (array_key_exists("UndefendExpire",$param) and $param["UndefendExpire"] !== null) {
-            $this->UndefendExpire = $param["UndefendExpire"];
+        if (array_key_exists('UndefendExpire',$param) and $param['UndefendExpire'] !== null) {
+            $this->UndefendExpire = $param['UndefendExpire'];
         }
 
-        if (array_key_exists("ShowFlag",$param) and $param["ShowFlag"] !== null) {
-            $this->ShowFlag = $param["ShowFlag"];
+        if (array_key_exists('ShowFlag',$param) and $param['ShowFlag'] !== null) {
+            $this->ShowFlag = $param['ShowFlag'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

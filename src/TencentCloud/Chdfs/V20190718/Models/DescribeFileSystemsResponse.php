@@ -54,17 +54,17 @@ class DescribeFileSystemsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FileSystems",$param) and $param["FileSystems"] !== null) {
+        if (array_key_exists('FileSystems',$param) and $param['FileSystems'] !== null) {
             $this->FileSystems = [];
-            foreach ($param["FileSystems"] as $key => $value){
+            foreach ($param['FileSystems'] as $key => $value){
                 $obj = new FileSystem();
                 $obj->deserialize($value);
                 array_push($this->FileSystems, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

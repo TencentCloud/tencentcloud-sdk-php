@@ -62,21 +62,21 @@ class DescribeLogDownloadListResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LogInfoList",$param) and $param["LogInfoList"] !== null) {
+        if (array_key_exists('LogInfoList',$param) and $param['LogInfoList'] !== null) {
             $this->LogInfoList = [];
-            foreach ($param["LogInfoList"] as $key => $value){
+            foreach ($param['LogInfoList'] as $key => $value){
                 $obj = new LogInfo();
                 $obj->deserialize($value);
                 array_push($this->LogInfoList, $obj);
             }
         }
 
-        if (array_key_exists("TotalNum",$param) and $param["TotalNum"] !== null) {
-            $this->TotalNum = $param["TotalNum"];
+        if (array_key_exists('TotalNum',$param) and $param['TotalNum'] !== null) {
+            $this->TotalNum = $param['TotalNum'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

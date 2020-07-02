@@ -94,8 +94,8 @@ https://github.com/ame-demo/doc
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ReportData",$param) and $param["ReportData"] !== null) {
-            $this->ReportData = $param["ReportData"];
+        if (array_key_exists('ReportData',$param) and $param['ReportData'] !== null) {
+            $this->ReportData = $param['ReportData'];
         }
     }
 }

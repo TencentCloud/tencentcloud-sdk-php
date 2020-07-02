@@ -62,26 +62,26 @@ class RunUserCmdResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SuccessTaskInfoSet",$param) and $param["SuccessTaskInfoSet"] !== null) {
+        if (array_key_exists('SuccessTaskInfoSet',$param) and $param['SuccessTaskInfoSet'] !== null) {
             $this->SuccessTaskInfoSet = [];
-            foreach ($param["SuccessTaskInfoSet"] as $key => $value){
+            foreach ($param['SuccessTaskInfoSet'] as $key => $value){
                 $obj = new SuccessTaskInfo();
                 $obj->deserialize($value);
                 array_push($this->SuccessTaskInfoSet, $obj);
             }
         }
 
-        if (array_key_exists("FailedTaskInfoSet",$param) and $param["FailedTaskInfoSet"] !== null) {
+        if (array_key_exists('FailedTaskInfoSet',$param) and $param['FailedTaskInfoSet'] !== null) {
             $this->FailedTaskInfoSet = [];
-            foreach ($param["FailedTaskInfoSet"] as $key => $value){
+            foreach ($param['FailedTaskInfoSet'] as $key => $value){
                 $obj = new FailedTaskInfo();
                 $obj->deserialize($value);
                 array_push($this->FailedTaskInfoSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

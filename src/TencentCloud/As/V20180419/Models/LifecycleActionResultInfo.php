@@ -78,24 +78,24 @@ class LifecycleActionResultInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LifecycleHookId",$param) and $param["LifecycleHookId"] !== null) {
-            $this->LifecycleHookId = $param["LifecycleHookId"];
+        if (array_key_exists('LifecycleHookId',$param) and $param['LifecycleHookId'] !== null) {
+            $this->LifecycleHookId = $param['LifecycleHookId'];
         }
 
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("NotificationResult",$param) and $param["NotificationResult"] !== null) {
-            $this->NotificationResult = $param["NotificationResult"];
+        if (array_key_exists('NotificationResult',$param) and $param['NotificationResult'] !== null) {
+            $this->NotificationResult = $param['NotificationResult'];
         }
 
-        if (array_key_exists("LifecycleActionResult",$param) and $param["LifecycleActionResult"] !== null) {
-            $this->LifecycleActionResult = $param["LifecycleActionResult"];
+        if (array_key_exists('LifecycleActionResult',$param) and $param['LifecycleActionResult'] !== null) {
+            $this->LifecycleActionResult = $param['LifecycleActionResult'];
         }
 
-        if (array_key_exists("ResultReason",$param) and $param["ResultReason"] !== null) {
-            $this->ResultReason = $param["ResultReason"];
+        if (array_key_exists('ResultReason',$param) and $param['ResultReason'] !== null) {
+            $this->ResultReason = $param['ResultReason'];
         }
     }
 }

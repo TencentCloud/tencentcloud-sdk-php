@@ -54,17 +54,17 @@ class CarInvoiceOCRResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CarInvoiceInfos",$param) and $param["CarInvoiceInfos"] !== null) {
+        if (array_key_exists('CarInvoiceInfos',$param) and $param['CarInvoiceInfos'] !== null) {
             $this->CarInvoiceInfos = [];
-            foreach ($param["CarInvoiceInfos"] as $key => $value){
+            foreach ($param['CarInvoiceInfos'] as $key => $value){
                 $obj = new CarInvoiceInfo();
                 $obj->deserialize($value);
                 array_push($this->CarInvoiceInfos, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

@@ -126,33 +126,33 @@ class AiAnalysisResult extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists('Type',$param) and $param['Type'] !== null) {
+            $this->Type = $param['Type'];
         }
 
-        if (array_key_exists("ClassificationTask",$param) and $param["ClassificationTask"] !== null) {
+        if (array_key_exists('ClassificationTask',$param) and $param['ClassificationTask'] !== null) {
             $this->ClassificationTask = new AiAnalysisTaskClassificationResult();
-            $this->ClassificationTask->deserialize($param["ClassificationTask"]);
+            $this->ClassificationTask->deserialize($param['ClassificationTask']);
         }
 
-        if (array_key_exists("CoverTask",$param) and $param["CoverTask"] !== null) {
+        if (array_key_exists('CoverTask',$param) and $param['CoverTask'] !== null) {
             $this->CoverTask = new AiAnalysisTaskCoverResult();
-            $this->CoverTask->deserialize($param["CoverTask"]);
+            $this->CoverTask->deserialize($param['CoverTask']);
         }
 
-        if (array_key_exists("TagTask",$param) and $param["TagTask"] !== null) {
+        if (array_key_exists('TagTask',$param) and $param['TagTask'] !== null) {
             $this->TagTask = new AiAnalysisTaskTagResult();
-            $this->TagTask->deserialize($param["TagTask"]);
+            $this->TagTask->deserialize($param['TagTask']);
         }
 
-        if (array_key_exists("FrameTagTask",$param) and $param["FrameTagTask"] !== null) {
+        if (array_key_exists('FrameTagTask',$param) and $param['FrameTagTask'] !== null) {
             $this->FrameTagTask = new AiAnalysisTaskFrameTagResult();
-            $this->FrameTagTask->deserialize($param["FrameTagTask"]);
+            $this->FrameTagTask->deserialize($param['FrameTagTask']);
         }
 
-        if (array_key_exists("HighlightTask",$param) and $param["HighlightTask"] !== null) {
+        if (array_key_exists('HighlightTask',$param) and $param['HighlightTask'] !== null) {
             $this->HighlightTask = new AiAnalysisTaskHighlightResult();
-            $this->HighlightTask->deserialize($param["HighlightTask"]);
+            $this->HighlightTask->deserialize($param['HighlightTask']);
         }
     }
 }

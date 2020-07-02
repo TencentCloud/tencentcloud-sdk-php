@@ -62,21 +62,21 @@ class DescribeCcnsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("CcnSet",$param) and $param["CcnSet"] !== null) {
+        if (array_key_exists('CcnSet',$param) and $param['CcnSet'] !== null) {
             $this->CcnSet = [];
-            foreach ($param["CcnSet"] as $key => $value){
+            foreach ($param['CcnSet'] as $key => $value){
                 $obj = new CCN();
                 $obj->deserialize($value);
                 array_push($this->CcnSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

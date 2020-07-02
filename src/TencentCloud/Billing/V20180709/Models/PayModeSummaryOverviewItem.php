@@ -102,41 +102,41 @@ class PayModeSummaryOverviewItem extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {
-            $this->PayMode = $param["PayMode"];
+        if (array_key_exists('PayMode',$param) and $param['PayMode'] !== null) {
+            $this->PayMode = $param['PayMode'];
         }
 
-        if (array_key_exists("PayModeName",$param) and $param["PayModeName"] !== null) {
-            $this->PayModeName = $param["PayModeName"];
+        if (array_key_exists('PayModeName',$param) and $param['PayModeName'] !== null) {
+            $this->PayModeName = $param['PayModeName'];
         }
 
-        if (array_key_exists("RealTotalCost",$param) and $param["RealTotalCost"] !== null) {
-            $this->RealTotalCost = $param["RealTotalCost"];
+        if (array_key_exists('RealTotalCost',$param) and $param['RealTotalCost'] !== null) {
+            $this->RealTotalCost = $param['RealTotalCost'];
         }
 
-        if (array_key_exists("RealTotalCostRatio",$param) and $param["RealTotalCostRatio"] !== null) {
-            $this->RealTotalCostRatio = $param["RealTotalCostRatio"];
+        if (array_key_exists('RealTotalCostRatio',$param) and $param['RealTotalCostRatio'] !== null) {
+            $this->RealTotalCostRatio = $param['RealTotalCostRatio'];
         }
 
-        if (array_key_exists("Detail",$param) and $param["Detail"] !== null) {
+        if (array_key_exists('Detail',$param) and $param['Detail'] !== null) {
             $this->Detail = [];
-            foreach ($param["Detail"] as $key => $value){
+            foreach ($param['Detail'] as $key => $value){
                 $obj = new ActionSummaryOverviewItem();
                 $obj->deserialize($value);
                 array_push($this->Detail, $obj);
             }
         }
 
-        if (array_key_exists("CashPayAmount",$param) and $param["CashPayAmount"] !== null) {
-            $this->CashPayAmount = $param["CashPayAmount"];
+        if (array_key_exists('CashPayAmount',$param) and $param['CashPayAmount'] !== null) {
+            $this->CashPayAmount = $param['CashPayAmount'];
         }
 
-        if (array_key_exists("IncentivePayAmount",$param) and $param["IncentivePayAmount"] !== null) {
-            $this->IncentivePayAmount = $param["IncentivePayAmount"];
+        if (array_key_exists('IncentivePayAmount',$param) and $param['IncentivePayAmount'] !== null) {
+            $this->IncentivePayAmount = $param['IncentivePayAmount'];
         }
 
-        if (array_key_exists("VoucherPayAmount",$param) and $param["VoucherPayAmount"] !== null) {
-            $this->VoucherPayAmount = $param["VoucherPayAmount"];
+        if (array_key_exists('VoucherPayAmount',$param) and $param['VoucherPayAmount'] !== null) {
+            $this->VoucherPayAmount = $param['VoucherPayAmount'];
         }
     }
 }

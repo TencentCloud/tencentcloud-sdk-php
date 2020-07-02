@@ -62,22 +62,22 @@ class SecurityGroupPolicySet extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Version",$param) and $param["Version"] !== null) {
-            $this->Version = $param["Version"];
+        if (array_key_exists('Version',$param) and $param['Version'] !== null) {
+            $this->Version = $param['Version'];
         }
 
-        if (array_key_exists("Egress",$param) and $param["Egress"] !== null) {
+        if (array_key_exists('Egress',$param) and $param['Egress'] !== null) {
             $this->Egress = [];
-            foreach ($param["Egress"] as $key => $value){
+            foreach ($param['Egress'] as $key => $value){
                 $obj = new SecurityGroupPolicy();
                 $obj->deserialize($value);
                 array_push($this->Egress, $obj);
             }
         }
 
-        if (array_key_exists("Ingress",$param) and $param["Ingress"] !== null) {
+        if (array_key_exists('Ingress',$param) and $param['Ingress'] !== null) {
             $this->Ingress = [];
-            foreach ($param["Ingress"] as $key => $value){
+            foreach ($param['Ingress'] as $key => $value){
                 $obj = new SecurityGroupPolicy();
                 $obj->deserialize($value);
                 array_push($this->Ingress, $obj);

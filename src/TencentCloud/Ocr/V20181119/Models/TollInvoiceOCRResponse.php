@@ -62,21 +62,21 @@ class TollInvoiceOCRResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TollInvoiceInfos",$param) and $param["TollInvoiceInfos"] !== null) {
+        if (array_key_exists('TollInvoiceInfos',$param) and $param['TollInvoiceInfos'] !== null) {
             $this->TollInvoiceInfos = [];
-            foreach ($param["TollInvoiceInfos"] as $key => $value){
+            foreach ($param['TollInvoiceInfos'] as $key => $value){
                 $obj = new TollInvoiceInfo();
                 $obj->deserialize($value);
                 array_push($this->TollInvoiceInfos, $obj);
             }
         }
 
-        if (array_key_exists("Angle",$param) and $param["Angle"] !== null) {
-            $this->Angle = $param["Angle"];
+        if (array_key_exists('Angle',$param) and $param['Angle'] !== null) {
+            $this->Angle = $param['Angle'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

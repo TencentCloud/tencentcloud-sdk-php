@@ -54,13 +54,13 @@ class ModifyTableMemosRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
-            $this->ClusterId = $param["ClusterId"];
+        if (array_key_exists('ClusterId',$param) and $param['ClusterId'] !== null) {
+            $this->ClusterId = $param['ClusterId'];
         }
 
-        if (array_key_exists("TableMemos",$param) and $param["TableMemos"] !== null) {
+        if (array_key_exists('TableMemos',$param) and $param['TableMemos'] !== null) {
             $this->TableMemos = [];
-            foreach ($param["TableMemos"] as $key => $value){
+            foreach ($param['TableMemos'] as $key => $value){
                 $obj = new SelectedTableInfoNew();
                 $obj->deserialize($value);
                 array_push($this->TableMemos, $obj);

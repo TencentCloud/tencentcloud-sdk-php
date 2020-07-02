@@ -62,16 +62,16 @@ class LayoutParams extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Template",$param) and $param["Template"] !== null) {
-            $this->Template = $param["Template"];
+        if (array_key_exists('Template',$param) and $param['Template'] !== null) {
+            $this->Template = $param['Template'];
         }
 
-        if (array_key_exists("MainVideoUserId",$param) and $param["MainVideoUserId"] !== null) {
-            $this->MainVideoUserId = $param["MainVideoUserId"];
+        if (array_key_exists('MainVideoUserId',$param) and $param['MainVideoUserId'] !== null) {
+            $this->MainVideoUserId = $param['MainVideoUserId'];
         }
 
-        if (array_key_exists("MainVideoStreamType",$param) and $param["MainVideoStreamType"] !== null) {
-            $this->MainVideoStreamType = $param["MainVideoStreamType"];
+        if (array_key_exists('MainVideoStreamType',$param) and $param['MainVideoStreamType'] !== null) {
+            $this->MainVideoStreamType = $param['MainVideoStreamType'];
         }
     }
 }

@@ -154,32 +154,32 @@ class ModifyPullStreamConfigRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ConfigId",$param) and $param["ConfigId"] !== null) {
-            $this->ConfigId = $param["ConfigId"];
+        if (array_key_exists('ConfigId',$param) and $param['ConfigId'] !== null) {
+            $this->ConfigId = $param['ConfigId'];
         }
 
-        if (array_key_exists("FromUrl",$param) and $param["FromUrl"] !== null) {
-            $this->FromUrl = $param["FromUrl"];
+        if (array_key_exists('FromUrl',$param) and $param['FromUrl'] !== null) {
+            $this->FromUrl = $param['FromUrl'];
         }
 
-        if (array_key_exists("ToUrl",$param) and $param["ToUrl"] !== null) {
-            $this->ToUrl = $param["ToUrl"];
+        if (array_key_exists('ToUrl',$param) and $param['ToUrl'] !== null) {
+            $this->ToUrl = $param['ToUrl'];
         }
 
-        if (array_key_exists("AreaId",$param) and $param["AreaId"] !== null) {
-            $this->AreaId = $param["AreaId"];
+        if (array_key_exists('AreaId',$param) and $param['AreaId'] !== null) {
+            $this->AreaId = $param['AreaId'];
         }
 
-        if (array_key_exists("IspId",$param) and $param["IspId"] !== null) {
-            $this->IspId = $param["IspId"];
+        if (array_key_exists('IspId',$param) and $param['IspId'] !== null) {
+            $this->IspId = $param['IspId'];
         }
 
-        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
-            $this->StartTime = $param["StartTime"];
+        if (array_key_exists('StartTime',$param) and $param['StartTime'] !== null) {
+            $this->StartTime = $param['StartTime'];
         }
 
-        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
-            $this->EndTime = $param["EndTime"];
+        if (array_key_exists('EndTime',$param) and $param['EndTime'] !== null) {
+            $this->EndTime = $param['EndTime'];
         }
     }
 }

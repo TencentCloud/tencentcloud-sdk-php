@@ -78,24 +78,24 @@ class RrectF extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Cx",$param) and $param["Cx"] !== null) {
-            $this->Cx = $param["Cx"];
+        if (array_key_exists('Cx',$param) and $param['Cx'] !== null) {
+            $this->Cx = $param['Cx'];
         }
 
-        if (array_key_exists("Cy",$param) and $param["Cy"] !== null) {
-            $this->Cy = $param["Cy"];
+        if (array_key_exists('Cy',$param) and $param['Cy'] !== null) {
+            $this->Cy = $param['Cy'];
         }
 
-        if (array_key_exists("Height",$param) and $param["Height"] !== null) {
-            $this->Height = $param["Height"];
+        if (array_key_exists('Height',$param) and $param['Height'] !== null) {
+            $this->Height = $param['Height'];
         }
 
-        if (array_key_exists("Rotate",$param) and $param["Rotate"] !== null) {
-            $this->Rotate = $param["Rotate"];
+        if (array_key_exists('Rotate',$param) and $param['Rotate'] !== null) {
+            $this->Rotate = $param['Rotate'];
         }
 
-        if (array_key_exists("Width",$param) and $param["Width"] !== null) {
-            $this->Width = $param["Width"];
+        if (array_key_exists('Width',$param) and $param['Width'] !== null) {
+            $this->Width = $param['Width'];
         }
     }
 }

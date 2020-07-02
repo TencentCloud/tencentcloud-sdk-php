@@ -70,25 +70,25 @@ class DescribeMultiDevicesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
-            $this->TaskId = $param["TaskId"];
+        if (array_key_exists('TaskId',$param) and $param['TaskId'] !== null) {
+            $this->TaskId = $param['TaskId'];
         }
 
-        if (array_key_exists("DevicesInfo",$param) and $param["DevicesInfo"] !== null) {
+        if (array_key_exists('DevicesInfo',$param) and $param['DevicesInfo'] !== null) {
             $this->DevicesInfo = [];
-            foreach ($param["DevicesInfo"] as $key => $value){
+            foreach ($param['DevicesInfo'] as $key => $value){
                 $obj = new MultiDevicesInfo();
                 $obj->deserialize($value);
                 array_push($this->DevicesInfo, $obj);
             }
         }
 
-        if (array_key_exists("TotalDevNum",$param) and $param["TotalDevNum"] !== null) {
-            $this->TotalDevNum = $param["TotalDevNum"];
+        if (array_key_exists('TotalDevNum',$param) and $param['TotalDevNum'] !== null) {
+            $this->TotalDevNum = $param['TotalDevNum'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

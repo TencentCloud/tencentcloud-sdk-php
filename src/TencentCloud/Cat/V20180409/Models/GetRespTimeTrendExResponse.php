@@ -54,17 +54,17 @@ class GetRespTimeTrendExResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DataPoints",$param) and $param["DataPoints"] !== null) {
+        if (array_key_exists('DataPoints',$param) and $param['DataPoints'] !== null) {
             $this->DataPoints = [];
-            foreach ($param["DataPoints"] as $key => $value){
+            foreach ($param['DataPoints'] as $key => $value){
                 $obj = new DataPointMetric();
                 $obj->deserialize($value);
                 array_push($this->DataPoints, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

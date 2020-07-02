@@ -70,20 +70,20 @@ class SyncCheckStepInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("StepNo",$param) and $param["StepNo"] !== null) {
-            $this->StepNo = $param["StepNo"];
+        if (array_key_exists('StepNo',$param) and $param['StepNo'] !== null) {
+            $this->StepNo = $param['StepNo'];
         }
 
-        if (array_key_exists("StepName",$param) and $param["StepName"] !== null) {
-            $this->StepName = $param["StepName"];
+        if (array_key_exists('StepName',$param) and $param['StepName'] !== null) {
+            $this->StepName = $param['StepName'];
         }
 
-        if (array_key_exists("StepCode",$param) and $param["StepCode"] !== null) {
-            $this->StepCode = $param["StepCode"];
+        if (array_key_exists('StepCode',$param) and $param['StepCode'] !== null) {
+            $this->StepCode = $param['StepCode'];
         }
 
-        if (array_key_exists("StepMessage",$param) and $param["StepMessage"] !== null) {
-            $this->StepMessage = $param["StepMessage"];
+        if (array_key_exists('StepMessage',$param) and $param['StepMessage'] !== null) {
+            $this->StepMessage = $param['StepMessage'];
         }
     }
 }

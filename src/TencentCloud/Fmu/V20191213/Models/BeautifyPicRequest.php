@@ -114,32 +114,32 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Image",$param) and $param["Image"] !== null) {
-            $this->Image = $param["Image"];
+        if (array_key_exists('Image',$param) and $param['Image'] !== null) {
+            $this->Image = $param['Image'];
         }
 
-        if (array_key_exists("Url",$param) and $param["Url"] !== null) {
-            $this->Url = $param["Url"];
+        if (array_key_exists('Url',$param) and $param['Url'] !== null) {
+            $this->Url = $param['Url'];
         }
 
-        if (array_key_exists("Whitening",$param) and $param["Whitening"] !== null) {
-            $this->Whitening = $param["Whitening"];
+        if (array_key_exists('Whitening',$param) and $param['Whitening'] !== null) {
+            $this->Whitening = $param['Whitening'];
         }
 
-        if (array_key_exists("Smoothing",$param) and $param["Smoothing"] !== null) {
-            $this->Smoothing = $param["Smoothing"];
+        if (array_key_exists('Smoothing',$param) and $param['Smoothing'] !== null) {
+            $this->Smoothing = $param['Smoothing'];
         }
 
-        if (array_key_exists("FaceLifting",$param) and $param["FaceLifting"] !== null) {
-            $this->FaceLifting = $param["FaceLifting"];
+        if (array_key_exists('FaceLifting',$param) and $param['FaceLifting'] !== null) {
+            $this->FaceLifting = $param['FaceLifting'];
         }
 
-        if (array_key_exists("EyeEnlarging",$param) and $param["EyeEnlarging"] !== null) {
-            $this->EyeEnlarging = $param["EyeEnlarging"];
+        if (array_key_exists('EyeEnlarging',$param) and $param['EyeEnlarging'] !== null) {
+            $this->EyeEnlarging = $param['EyeEnlarging'];
         }
 
-        if (array_key_exists("RspImgType",$param) and $param["RspImgType"] !== null) {
-            $this->RspImgType = $param["RspImgType"];
+        if (array_key_exists('RspImgType',$param) and $param['RspImgType'] !== null) {
+            $this->RspImgType = $param['RspImgType'];
         }
     }
 }

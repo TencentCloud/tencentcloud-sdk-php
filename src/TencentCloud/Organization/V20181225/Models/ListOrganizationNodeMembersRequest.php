@@ -62,16 +62,16 @@ class ListOrganizationNodeMembersRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("NodeId",$param) and $param["NodeId"] !== null) {
-            $this->NodeId = $param["NodeId"];
+        if (array_key_exists('NodeId',$param) and $param['NodeId'] !== null) {
+            $this->NodeId = $param['NodeId'];
         }
 
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
+        if (array_key_exists('Offset',$param) and $param['Offset'] !== null) {
+            $this->Offset = $param['Offset'];
         }
 
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
+        if (array_key_exists('Limit',$param) and $param['Limit'] !== null) {
+            $this->Limit = $param['Limit'];
         }
     }
 }

@@ -78,24 +78,24 @@ class Keyword extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RefText",$param) and $param["RefText"] !== null) {
-            $this->RefText = $param["RefText"];
+        if (array_key_exists('RefText',$param) and $param['RefText'] !== null) {
+            $this->RefText = $param['RefText'];
         }
 
-        if (array_key_exists("EvalMode",$param) and $param["EvalMode"] !== null) {
-            $this->EvalMode = $param["EvalMode"];
+        if (array_key_exists('EvalMode',$param) and $param['EvalMode'] !== null) {
+            $this->EvalMode = $param['EvalMode'];
         }
 
-        if (array_key_exists("ScoreCoeff",$param) and $param["ScoreCoeff"] !== null) {
-            $this->ScoreCoeff = $param["ScoreCoeff"];
+        if (array_key_exists('ScoreCoeff',$param) and $param['ScoreCoeff'] !== null) {
+            $this->ScoreCoeff = $param['ScoreCoeff'];
         }
 
-        if (array_key_exists("ServerType",$param) and $param["ServerType"] !== null) {
-            $this->ServerType = $param["ServerType"];
+        if (array_key_exists('ServerType',$param) and $param['ServerType'] !== null) {
+            $this->ServerType = $param['ServerType'];
         }
 
-        if (array_key_exists("TextMode",$param) and $param["TextMode"] !== null) {
-            $this->TextMode = $param["TextMode"];
+        if (array_key_exists('TextMode',$param) and $param['TextMode'] !== null) {
+            $this->TextMode = $param['TextMode'];
         }
     }
 }

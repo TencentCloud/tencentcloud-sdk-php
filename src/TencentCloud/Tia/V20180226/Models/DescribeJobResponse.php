@@ -54,13 +54,13 @@ class DescribeJobResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Job",$param) and $param["Job"] !== null) {
+        if (array_key_exists('Job',$param) and $param['Job'] !== null) {
             $this->Job = new Job();
-            $this->Job->deserialize($param["Job"]);
+            $this->Job->deserialize($param['Job']);
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

@@ -78,24 +78,24 @@ class InstanceSlowlogDetail extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Duration",$param) and $param["Duration"] !== null) {
-            $this->Duration = $param["Duration"];
+        if (array_key_exists('Duration',$param) and $param['Duration'] !== null) {
+            $this->Duration = $param['Duration'];
         }
 
-        if (array_key_exists("Client",$param) and $param["Client"] !== null) {
-            $this->Client = $param["Client"];
+        if (array_key_exists('Client',$param) and $param['Client'] !== null) {
+            $this->Client = $param['Client'];
         }
 
-        if (array_key_exists("Command",$param) and $param["Command"] !== null) {
-            $this->Command = $param["Command"];
+        if (array_key_exists('Command',$param) and $param['Command'] !== null) {
+            $this->Command = $param['Command'];
         }
 
-        if (array_key_exists("CommandLine",$param) and $param["CommandLine"] !== null) {
-            $this->CommandLine = $param["CommandLine"];
+        if (array_key_exists('CommandLine',$param) and $param['CommandLine'] !== null) {
+            $this->CommandLine = $param['CommandLine'];
         }
 
-        if (array_key_exists("ExecuteTime",$param) and $param["ExecuteTime"] !== null) {
-            $this->ExecuteTime = $param["ExecuteTime"];
+        if (array_key_exists('ExecuteTime',$param) and $param['ExecuteTime'] !== null) {
+            $this->ExecuteTime = $param['ExecuteTime'];
         }
     }
 }

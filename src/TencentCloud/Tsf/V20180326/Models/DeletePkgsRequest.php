@@ -70,20 +70,20 @@ class DeletePkgsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ApplicationId",$param) and $param["ApplicationId"] !== null) {
-            $this->ApplicationId = $param["ApplicationId"];
+        if (array_key_exists('ApplicationId',$param) and $param['ApplicationId'] !== null) {
+            $this->ApplicationId = $param['ApplicationId'];
         }
 
-        if (array_key_exists("PkgIds",$param) and $param["PkgIds"] !== null) {
-            $this->PkgIds = $param["PkgIds"];
+        if (array_key_exists('PkgIds',$param) and $param['PkgIds'] !== null) {
+            $this->PkgIds = $param['PkgIds'];
         }
 
-        if (array_key_exists("RepositoryType",$param) and $param["RepositoryType"] !== null) {
-            $this->RepositoryType = $param["RepositoryType"];
+        if (array_key_exists('RepositoryType',$param) and $param['RepositoryType'] !== null) {
+            $this->RepositoryType = $param['RepositoryType'];
         }
 
-        if (array_key_exists("RepositoryId",$param) and $param["RepositoryId"] !== null) {
-            $this->RepositoryId = $param["RepositoryId"];
+        if (array_key_exists('RepositoryId',$param) and $param['RepositoryId'] !== null) {
+            $this->RepositoryId = $param['RepositoryId'];
         }
     }
 }

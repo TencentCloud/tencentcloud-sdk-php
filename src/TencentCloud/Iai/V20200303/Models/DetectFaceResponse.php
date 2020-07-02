@@ -78,29 +78,29 @@ class DetectFaceResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ImageWidth",$param) and $param["ImageWidth"] !== null) {
-            $this->ImageWidth = $param["ImageWidth"];
+        if (array_key_exists('ImageWidth',$param) and $param['ImageWidth'] !== null) {
+            $this->ImageWidth = $param['ImageWidth'];
         }
 
-        if (array_key_exists("ImageHeight",$param) and $param["ImageHeight"] !== null) {
-            $this->ImageHeight = $param["ImageHeight"];
+        if (array_key_exists('ImageHeight',$param) and $param['ImageHeight'] !== null) {
+            $this->ImageHeight = $param['ImageHeight'];
         }
 
-        if (array_key_exists("FaceInfos",$param) and $param["FaceInfos"] !== null) {
+        if (array_key_exists('FaceInfos',$param) and $param['FaceInfos'] !== null) {
             $this->FaceInfos = [];
-            foreach ($param["FaceInfos"] as $key => $value){
+            foreach ($param['FaceInfos'] as $key => $value){
                 $obj = new FaceInfo();
                 $obj->deserialize($value);
                 array_push($this->FaceInfos, $obj);
             }
         }
 
-        if (array_key_exists("FaceModelVersion",$param) and $param["FaceModelVersion"] !== null) {
-            $this->FaceModelVersion = $param["FaceModelVersion"];
+        if (array_key_exists('FaceModelVersion',$param) and $param['FaceModelVersion'] !== null) {
+            $this->FaceModelVersion = $param['FaceModelVersion'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

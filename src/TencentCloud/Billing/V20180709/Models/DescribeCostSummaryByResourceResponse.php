@@ -102,35 +102,35 @@ class DescribeCostSummaryByResourceResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Ready",$param) and $param["Ready"] !== null) {
-            $this->Ready = $param["Ready"];
+        if (array_key_exists('Ready',$param) and $param['Ready'] !== null) {
+            $this->Ready = $param['Ready'];
         }
 
-        if (array_key_exists("Total",$param) and $param["Total"] !== null) {
+        if (array_key_exists('Total',$param) and $param['Total'] !== null) {
             $this->Total = new ConsumptionSummaryTotal();
-            $this->Total->deserialize($param["Total"]);
+            $this->Total->deserialize($param['Total']);
         }
 
-        if (array_key_exists("ConditionValue",$param) and $param["ConditionValue"] !== null) {
+        if (array_key_exists('ConditionValue',$param) and $param['ConditionValue'] !== null) {
             $this->ConditionValue = new ConsumptionResourceSummaryConditionValue();
-            $this->ConditionValue->deserialize($param["ConditionValue"]);
+            $this->ConditionValue->deserialize($param['ConditionValue']);
         }
 
-        if (array_key_exists("RecordNum",$param) and $param["RecordNum"] !== null) {
-            $this->RecordNum = $param["RecordNum"];
+        if (array_key_exists('RecordNum',$param) and $param['RecordNum'] !== null) {
+            $this->RecordNum = $param['RecordNum'];
         }
 
-        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
+        if (array_key_exists('Data',$param) and $param['Data'] !== null) {
             $this->Data = [];
-            foreach ($param["Data"] as $key => $value){
+            foreach ($param['Data'] as $key => $value){
                 $obj = new ConsumptionResourceSummaryDataItem();
                 $obj->deserialize($value);
                 array_push($this->Data, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

@@ -62,21 +62,21 @@ class FormulaOCRResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Angle",$param) and $param["Angle"] !== null) {
-            $this->Angle = $param["Angle"];
+        if (array_key_exists('Angle',$param) and $param['Angle'] !== null) {
+            $this->Angle = $param['Angle'];
         }
 
-        if (array_key_exists("FormulaInfos",$param) and $param["FormulaInfos"] !== null) {
+        if (array_key_exists('FormulaInfos',$param) and $param['FormulaInfos'] !== null) {
             $this->FormulaInfos = [];
-            foreach ($param["FormulaInfos"] as $key => $value){
+            foreach ($param['FormulaInfos'] as $key => $value){
                 $obj = new TextFormula();
                 $obj->deserialize($value);
                 array_push($this->FormulaInfos, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

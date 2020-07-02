@@ -162,20 +162,20 @@ class AudioTemplateInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Codec",$param) and $param["Codec"] !== null) {
-            $this->Codec = $param["Codec"];
+        if (array_key_exists('Codec',$param) and $param['Codec'] !== null) {
+            $this->Codec = $param['Codec'];
         }
 
-        if (array_key_exists("Bitrate",$param) and $param["Bitrate"] !== null) {
-            $this->Bitrate = $param["Bitrate"];
+        if (array_key_exists('Bitrate',$param) and $param['Bitrate'] !== null) {
+            $this->Bitrate = $param['Bitrate'];
         }
 
-        if (array_key_exists("SampleRate",$param) and $param["SampleRate"] !== null) {
-            $this->SampleRate = $param["SampleRate"];
+        if (array_key_exists('SampleRate',$param) and $param['SampleRate'] !== null) {
+            $this->SampleRate = $param['SampleRate'];
         }
 
-        if (array_key_exists("AudioChannel",$param) and $param["AudioChannel"] !== null) {
-            $this->AudioChannel = $param["AudioChannel"];
+        if (array_key_exists('AudioChannel',$param) and $param['AudioChannel'] !== null) {
+            $this->AudioChannel = $param['AudioChannel'];
         }
     }
 }

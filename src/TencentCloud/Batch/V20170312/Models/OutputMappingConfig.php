@@ -62,16 +62,16 @@ class OutputMappingConfig extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Scene",$param) and $param["Scene"] !== null) {
-            $this->Scene = $param["Scene"];
+        if (array_key_exists('Scene',$param) and $param['Scene'] !== null) {
+            $this->Scene = $param['Scene'];
         }
 
-        if (array_key_exists("WorkerNum",$param) and $param["WorkerNum"] !== null) {
-            $this->WorkerNum = $param["WorkerNum"];
+        if (array_key_exists('WorkerNum',$param) and $param['WorkerNum'] !== null) {
+            $this->WorkerNum = $param['WorkerNum'];
         }
 
-        if (array_key_exists("WorkerPartSize",$param) and $param["WorkerPartSize"] !== null) {
-            $this->WorkerPartSize = $param["WorkerPartSize"];
+        if (array_key_exists('WorkerPartSize',$param) and $param['WorkerPartSize'] !== null) {
+            $this->WorkerPartSize = $param['WorkerPartSize'];
         }
     }
 }

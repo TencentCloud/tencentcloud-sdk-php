@@ -90,31 +90,31 @@ class ResetInstanceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("ImageId",$param) and $param["ImageId"] !== null) {
-            $this->ImageId = $param["ImageId"];
+        if (array_key_exists('ImageId',$param) and $param['ImageId'] !== null) {
+            $this->ImageId = $param['ImageId'];
         }
 
-        if (array_key_exists("SystemDisk",$param) and $param["SystemDisk"] !== null) {
+        if (array_key_exists('SystemDisk',$param) and $param['SystemDisk'] !== null) {
             $this->SystemDisk = new SystemDisk();
-            $this->SystemDisk->deserialize($param["SystemDisk"]);
+            $this->SystemDisk->deserialize($param['SystemDisk']);
         }
 
-        if (array_key_exists("LoginSettings",$param) and $param["LoginSettings"] !== null) {
+        if (array_key_exists('LoginSettings',$param) and $param['LoginSettings'] !== null) {
             $this->LoginSettings = new LoginSettings();
-            $this->LoginSettings->deserialize($param["LoginSettings"]);
+            $this->LoginSettings->deserialize($param['LoginSettings']);
         }
 
-        if (array_key_exists("EnhancedService",$param) and $param["EnhancedService"] !== null) {
+        if (array_key_exists('EnhancedService',$param) and $param['EnhancedService'] !== null) {
             $this->EnhancedService = new EnhancedService();
-            $this->EnhancedService->deserialize($param["EnhancedService"]);
+            $this->EnhancedService->deserialize($param['EnhancedService']);
         }
 
-        if (array_key_exists("HostName",$param) and $param["HostName"] !== null) {
-            $this->HostName = $param["HostName"];
+        if (array_key_exists('HostName',$param) and $param['HostName'] !== null) {
+            $this->HostName = $param['HostName'];
         }
     }
 }

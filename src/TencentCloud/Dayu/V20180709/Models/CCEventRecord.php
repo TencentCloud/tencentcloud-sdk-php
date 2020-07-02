@@ -150,52 +150,52 @@ class CCEventRecord extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Business",$param) and $param["Business"] !== null) {
-            $this->Business = $param["Business"];
+        if (array_key_exists('Business',$param) and $param['Business'] !== null) {
+            $this->Business = $param['Business'];
         }
 
-        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
-            $this->Id = $param["Id"];
+        if (array_key_exists('Id',$param) and $param['Id'] !== null) {
+            $this->Id = $param['Id'];
         }
 
-        if (array_key_exists("Vip",$param) and $param["Vip"] !== null) {
-            $this->Vip = $param["Vip"];
+        if (array_key_exists('Vip',$param) and $param['Vip'] !== null) {
+            $this->Vip = $param['Vip'];
         }
 
-        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
-            $this->StartTime = $param["StartTime"];
+        if (array_key_exists('StartTime',$param) and $param['StartTime'] !== null) {
+            $this->StartTime = $param['StartTime'];
         }
 
-        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
-            $this->EndTime = $param["EndTime"];
+        if (array_key_exists('EndTime',$param) and $param['EndTime'] !== null) {
+            $this->EndTime = $param['EndTime'];
         }
 
-        if (array_key_exists("ReqQps",$param) and $param["ReqQps"] !== null) {
-            $this->ReqQps = $param["ReqQps"];
+        if (array_key_exists('ReqQps',$param) and $param['ReqQps'] !== null) {
+            $this->ReqQps = $param['ReqQps'];
         }
 
-        if (array_key_exists("DropQps",$param) and $param["DropQps"] !== null) {
-            $this->DropQps = $param["DropQps"];
+        if (array_key_exists('DropQps',$param) and $param['DropQps'] !== null) {
+            $this->DropQps = $param['DropQps'];
         }
 
-        if (array_key_exists("AttackStatus",$param) and $param["AttackStatus"] !== null) {
-            $this->AttackStatus = $param["AttackStatus"];
+        if (array_key_exists('AttackStatus',$param) and $param['AttackStatus'] !== null) {
+            $this->AttackStatus = $param['AttackStatus'];
         }
 
-        if (array_key_exists("ResourceName",$param) and $param["ResourceName"] !== null) {
-            $this->ResourceName = $param["ResourceName"];
+        if (array_key_exists('ResourceName',$param) and $param['ResourceName'] !== null) {
+            $this->ResourceName = $param['ResourceName'];
         }
 
-        if (array_key_exists("DomainList",$param) and $param["DomainList"] !== null) {
-            $this->DomainList = $param["DomainList"];
+        if (array_key_exists('DomainList',$param) and $param['DomainList'] !== null) {
+            $this->DomainList = $param['DomainList'];
         }
 
-        if (array_key_exists("UriList",$param) and $param["UriList"] !== null) {
-            $this->UriList = $param["UriList"];
+        if (array_key_exists('UriList',$param) and $param['UriList'] !== null) {
+            $this->UriList = $param['UriList'];
         }
 
-        if (array_key_exists("AttackipList",$param) and $param["AttackipList"] !== null) {
-            $this->AttackipList = $param["AttackipList"];
+        if (array_key_exists('AttackipList',$param) and $param['AttackipList'] !== null) {
+            $this->AttackipList = $param['AttackipList'];
         }
     }
 }

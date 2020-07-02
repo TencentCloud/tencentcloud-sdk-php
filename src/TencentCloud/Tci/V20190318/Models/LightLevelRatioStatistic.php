@@ -54,12 +54,12 @@ class LightLevelRatioStatistic extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Level",$param) and $param["Level"] !== null) {
-            $this->Level = $param["Level"];
+        if (array_key_exists('Level',$param) and $param['Level'] !== null) {
+            $this->Level = $param['Level'];
         }
 
-        if (array_key_exists("Ratio",$param) and $param["Ratio"] !== null) {
-            $this->Ratio = $param["Ratio"];
+        if (array_key_exists('Ratio',$param) and $param['Ratio'] !== null) {
+            $this->Ratio = $param['Ratio'];
         }
     }
 }

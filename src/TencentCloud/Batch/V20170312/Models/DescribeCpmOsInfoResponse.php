@@ -54,17 +54,17 @@ class DescribeCpmOsInfoResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("OsInfoSet",$param) and $param["OsInfoSet"] !== null) {
+        if (array_key_exists('OsInfoSet',$param) and $param['OsInfoSet'] !== null) {
             $this->OsInfoSet = [];
-            foreach ($param["OsInfoSet"] as $key => $value){
+            foreach ($param['OsInfoSet'] as $key => $value){
                 $obj = new OsInfo();
                 $obj->deserialize($value);
                 array_push($this->OsInfoSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

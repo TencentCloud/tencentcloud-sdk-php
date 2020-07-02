@@ -62,21 +62,21 @@ class DescribeBashEventsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("List",$param) and $param["List"] !== null) {
+        if (array_key_exists('List',$param) and $param['List'] !== null) {
             $this->List = [];
-            foreach ($param["List"] as $key => $value){
+            foreach ($param['List'] as $key => $value){
                 $obj = new BashEvent();
                 $obj->deserialize($value);
                 array_push($this->List, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

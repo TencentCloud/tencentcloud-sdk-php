@@ -62,16 +62,16 @@ class DisassociateInstancesKeyPairsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceIds",$param) and $param["InstanceIds"] !== null) {
-            $this->InstanceIds = $param["InstanceIds"];
+        if (array_key_exists('InstanceIds',$param) and $param['InstanceIds'] !== null) {
+            $this->InstanceIds = $param['InstanceIds'];
         }
 
-        if (array_key_exists("KeyIds",$param) and $param["KeyIds"] !== null) {
-            $this->KeyIds = $param["KeyIds"];
+        if (array_key_exists('KeyIds',$param) and $param['KeyIds'] !== null) {
+            $this->KeyIds = $param['KeyIds'];
         }
 
-        if (array_key_exists("ForceStop",$param) and $param["ForceStop"] !== null) {
-            $this->ForceStop = $param["ForceStop"];
+        if (array_key_exists('ForceStop',$param) and $param['ForceStop'] !== null) {
+            $this->ForceStop = $param['ForceStop'];
         }
     }
 }

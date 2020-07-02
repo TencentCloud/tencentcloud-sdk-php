@@ -102,28 +102,28 @@ class CreateCallBackResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CallId",$param) and $param["CallId"] !== null) {
-            $this->CallId = $param["CallId"];
+        if (array_key_exists('CallId',$param) and $param['CallId'] !== null) {
+            $this->CallId = $param['CallId'];
         }
 
-        if (array_key_exists("SrcDisplayNum",$param) and $param["SrcDisplayNum"] !== null) {
-            $this->SrcDisplayNum = $param["SrcDisplayNum"];
+        if (array_key_exists('SrcDisplayNum',$param) and $param['SrcDisplayNum'] !== null) {
+            $this->SrcDisplayNum = $param['SrcDisplayNum'];
         }
 
-        if (array_key_exists("DstDisplayNum",$param) and $param["DstDisplayNum"] !== null) {
-            $this->DstDisplayNum = $param["DstDisplayNum"];
+        if (array_key_exists('DstDisplayNum',$param) and $param['DstDisplayNum'] !== null) {
+            $this->DstDisplayNum = $param['DstDisplayNum'];
         }
 
-        if (array_key_exists("ErrorCode",$param) and $param["ErrorCode"] !== null) {
-            $this->ErrorCode = $param["ErrorCode"];
+        if (array_key_exists('ErrorCode',$param) and $param['ErrorCode'] !== null) {
+            $this->ErrorCode = $param['ErrorCode'];
         }
 
-        if (array_key_exists("Msg",$param) and $param["Msg"] !== null) {
-            $this->Msg = $param["Msg"];
+        if (array_key_exists('Msg',$param) and $param['Msg'] !== null) {
+            $this->Msg = $param['Msg'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

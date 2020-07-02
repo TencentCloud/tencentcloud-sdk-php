@@ -78,29 +78,29 @@ class DescribeZoneTrafficInfoResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CompanyId",$param) and $param["CompanyId"] !== null) {
-            $this->CompanyId = $param["CompanyId"];
+        if (array_key_exists('CompanyId',$param) and $param['CompanyId'] !== null) {
+            $this->CompanyId = $param['CompanyId'];
         }
 
-        if (array_key_exists("ShopId",$param) and $param["ShopId"] !== null) {
-            $this->ShopId = $param["ShopId"];
+        if (array_key_exists('ShopId',$param) and $param['ShopId'] !== null) {
+            $this->ShopId = $param['ShopId'];
         }
 
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("ZoneTrafficInfoSet",$param) and $param["ZoneTrafficInfoSet"] !== null) {
+        if (array_key_exists('ZoneTrafficInfoSet',$param) and $param['ZoneTrafficInfoSet'] !== null) {
             $this->ZoneTrafficInfoSet = [];
-            foreach ($param["ZoneTrafficInfoSet"] as $key => $value){
+            foreach ($param['ZoneTrafficInfoSet'] as $key => $value){
                 $obj = new ZoneTrafficInfo();
                 $obj->deserialize($value);
                 array_push($this->ZoneTrafficInfoSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

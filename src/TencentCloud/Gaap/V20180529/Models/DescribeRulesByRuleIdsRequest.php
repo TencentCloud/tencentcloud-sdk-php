@@ -46,8 +46,8 @@ class DescribeRulesByRuleIdsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RuleIds",$param) and $param["RuleIds"] !== null) {
-            $this->RuleIds = $param["RuleIds"];
+        if (array_key_exists('RuleIds',$param) and $param['RuleIds'] !== null) {
+            $this->RuleIds = $param['RuleIds'];
         }
     }
 }

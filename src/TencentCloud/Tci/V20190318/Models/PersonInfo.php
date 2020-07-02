@@ -62,16 +62,16 @@ class PersonInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PersonId",$param) and $param["PersonId"] !== null) {
-            $this->PersonId = $param["PersonId"];
+        if (array_key_exists('PersonId',$param) and $param['PersonId'] !== null) {
+            $this->PersonId = $param['PersonId'];
         }
 
-        if (array_key_exists("CoverBeginUrl",$param) and $param["CoverBeginUrl"] !== null) {
-            $this->CoverBeginUrl = $param["CoverBeginUrl"];
+        if (array_key_exists('CoverBeginUrl',$param) and $param['CoverBeginUrl'] !== null) {
+            $this->CoverBeginUrl = $param['CoverBeginUrl'];
         }
 
-        if (array_key_exists("CoverEndUrl",$param) and $param["CoverEndUrl"] !== null) {
-            $this->CoverEndUrl = $param["CoverEndUrl"];
+        if (array_key_exists('CoverEndUrl',$param) and $param['CoverEndUrl'] !== null) {
+            $this->CoverEndUrl = $param['CoverEndUrl'];
         }
     }
 }

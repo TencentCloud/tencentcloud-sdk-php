@@ -70,20 +70,20 @@ class NetworkInterfaceAttachment extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("DeviceIndex",$param) and $param["DeviceIndex"] !== null) {
-            $this->DeviceIndex = $param["DeviceIndex"];
+        if (array_key_exists('DeviceIndex',$param) and $param['DeviceIndex'] !== null) {
+            $this->DeviceIndex = $param['DeviceIndex'];
         }
 
-        if (array_key_exists("InstanceAccountId",$param) and $param["InstanceAccountId"] !== null) {
-            $this->InstanceAccountId = $param["InstanceAccountId"];
+        if (array_key_exists('InstanceAccountId',$param) and $param['InstanceAccountId'] !== null) {
+            $this->InstanceAccountId = $param['InstanceAccountId'];
         }
 
-        if (array_key_exists("AttachTime",$param) and $param["AttachTime"] !== null) {
-            $this->AttachTime = $param["AttachTime"];
+        if (array_key_exists('AttachTime',$param) and $param['AttachTime'] !== null) {
+            $this->AttachTime = $param['AttachTime'];
         }
     }
 }

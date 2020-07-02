@@ -86,28 +86,28 @@ class CreateInstanceAccountRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("AccountName",$param) and $param["AccountName"] !== null) {
-            $this->AccountName = $param["AccountName"];
+        if (array_key_exists('AccountName',$param) and $param['AccountName'] !== null) {
+            $this->AccountName = $param['AccountName'];
         }
 
-        if (array_key_exists("AccountPassword",$param) and $param["AccountPassword"] !== null) {
-            $this->AccountPassword = $param["AccountPassword"];
+        if (array_key_exists('AccountPassword',$param) and $param['AccountPassword'] !== null) {
+            $this->AccountPassword = $param['AccountPassword'];
         }
 
-        if (array_key_exists("ReadonlyPolicy",$param) and $param["ReadonlyPolicy"] !== null) {
-            $this->ReadonlyPolicy = $param["ReadonlyPolicy"];
+        if (array_key_exists('ReadonlyPolicy',$param) and $param['ReadonlyPolicy'] !== null) {
+            $this->ReadonlyPolicy = $param['ReadonlyPolicy'];
         }
 
-        if (array_key_exists("Privilege",$param) and $param["Privilege"] !== null) {
-            $this->Privilege = $param["Privilege"];
+        if (array_key_exists('Privilege',$param) and $param['Privilege'] !== null) {
+            $this->Privilege = $param['Privilege'];
         }
 
-        if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
-            $this->Remark = $param["Remark"];
+        if (array_key_exists('Remark',$param) and $param['Remark'] !== null) {
+            $this->Remark = $param['Remark'];
         }
     }
 }

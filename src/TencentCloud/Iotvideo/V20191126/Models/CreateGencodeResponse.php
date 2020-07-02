@@ -58,12 +58,12 @@ class CreateGencodeResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ZipCode",$param) and $param["ZipCode"] !== null) {
-            $this->ZipCode = $param["ZipCode"];
+        if (array_key_exists('ZipCode',$param) and $param['ZipCode'] !== null) {
+            $this->ZipCode = $param['ZipCode'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

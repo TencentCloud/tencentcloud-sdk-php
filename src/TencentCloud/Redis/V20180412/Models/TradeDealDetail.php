@@ -134,52 +134,52 @@ class TradeDealDetail extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DealId",$param) and $param["DealId"] !== null) {
-            $this->DealId = $param["DealId"];
+        if (array_key_exists('DealId',$param) and $param['DealId'] !== null) {
+            $this->DealId = $param['DealId'];
         }
 
-        if (array_key_exists("DealName",$param) and $param["DealName"] !== null) {
-            $this->DealName = $param["DealName"];
+        if (array_key_exists('DealName',$param) and $param['DealName'] !== null) {
+            $this->DealName = $param['DealName'];
         }
 
-        if (array_key_exists("ZoneId",$param) and $param["ZoneId"] !== null) {
-            $this->ZoneId = $param["ZoneId"];
+        if (array_key_exists('ZoneId',$param) and $param['ZoneId'] !== null) {
+            $this->ZoneId = $param['ZoneId'];
         }
 
-        if (array_key_exists("GoodsNum",$param) and $param["GoodsNum"] !== null) {
-            $this->GoodsNum = $param["GoodsNum"];
+        if (array_key_exists('GoodsNum',$param) and $param['GoodsNum'] !== null) {
+            $this->GoodsNum = $param['GoodsNum'];
         }
 
-        if (array_key_exists("Creater",$param) and $param["Creater"] !== null) {
-            $this->Creater = $param["Creater"];
+        if (array_key_exists('Creater',$param) and $param['Creater'] !== null) {
+            $this->Creater = $param['Creater'];
         }
 
-        if (array_key_exists("CreatTime",$param) and $param["CreatTime"] !== null) {
-            $this->CreatTime = $param["CreatTime"];
+        if (array_key_exists('CreatTime',$param) and $param['CreatTime'] !== null) {
+            $this->CreatTime = $param['CreatTime'];
         }
 
-        if (array_key_exists("OverdueTime",$param) and $param["OverdueTime"] !== null) {
-            $this->OverdueTime = $param["OverdueTime"];
+        if (array_key_exists('OverdueTime',$param) and $param['OverdueTime'] !== null) {
+            $this->OverdueTime = $param['OverdueTime'];
         }
 
-        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
-            $this->EndTime = $param["EndTime"];
+        if (array_key_exists('EndTime',$param) and $param['EndTime'] !== null) {
+            $this->EndTime = $param['EndTime'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
-            $this->Description = $param["Description"];
+        if (array_key_exists('Description',$param) and $param['Description'] !== null) {
+            $this->Description = $param['Description'];
         }
 
-        if (array_key_exists("Price",$param) and $param["Price"] !== null) {
-            $this->Price = $param["Price"];
+        if (array_key_exists('Price',$param) and $param['Price'] !== null) {
+            $this->Price = $param['Price'];
         }
 
-        if (array_key_exists("InstanceIds",$param) and $param["InstanceIds"] !== null) {
-            $this->InstanceIds = $param["InstanceIds"];
+        if (array_key_exists('InstanceIds',$param) and $param['InstanceIds'] !== null) {
+            $this->InstanceIds = $param['InstanceIds'];
         }
     }
 }

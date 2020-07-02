@@ -78,24 +78,24 @@ class QuantizationInput extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InputPath",$param) and $param["InputPath"] !== null) {
-            $this->InputPath = $param["InputPath"];
+        if (array_key_exists('InputPath',$param) and $param['InputPath'] !== null) {
+            $this->InputPath = $param['InputPath'];
         }
 
-        if (array_key_exists("OutputPath",$param) and $param["OutputPath"] !== null) {
-            $this->OutputPath = $param["OutputPath"];
+        if (array_key_exists('OutputPath',$param) and $param['OutputPath'] !== null) {
+            $this->OutputPath = $param['OutputPath'];
         }
 
-        if (array_key_exists("BatchSize",$param) and $param["BatchSize"] !== null) {
-            $this->BatchSize = $param["BatchSize"];
+        if (array_key_exists('BatchSize',$param) and $param['BatchSize'] !== null) {
+            $this->BatchSize = $param['BatchSize'];
         }
 
-        if (array_key_exists("Precision",$param) and $param["Precision"] !== null) {
-            $this->Precision = $param["Precision"];
+        if (array_key_exists('Precision',$param) and $param['Precision'] !== null) {
+            $this->Precision = $param['Precision'];
         }
 
-        if (array_key_exists("ConvertType",$param) and $param["ConvertType"] !== null) {
-            $this->ConvertType = $param["ConvertType"];
+        if (array_key_exists('ConvertType',$param) and $param['ConvertType'] !== null) {
+            $this->ConvertType = $param['ConvertType'];
         }
     }
 }

@@ -54,17 +54,17 @@ class DescribeVpcLimitsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("VpcLimitSet",$param) and $param["VpcLimitSet"] !== null) {
+        if (array_key_exists('VpcLimitSet',$param) and $param['VpcLimitSet'] !== null) {
             $this->VpcLimitSet = [];
-            foreach ($param["VpcLimitSet"] as $key => $value){
+            foreach ($param['VpcLimitSet'] as $key => $value){
                 $obj = new VpcLimit();
                 $obj->deserialize($value);
                 array_push($this->VpcLimitSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

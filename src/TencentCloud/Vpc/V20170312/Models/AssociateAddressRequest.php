@@ -70,20 +70,20 @@ class AssociateAddressRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AddressId",$param) and $param["AddressId"] !== null) {
-            $this->AddressId = $param["AddressId"];
+        if (array_key_exists('AddressId',$param) and $param['AddressId'] !== null) {
+            $this->AddressId = $param['AddressId'];
         }
 
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("NetworkInterfaceId",$param) and $param["NetworkInterfaceId"] !== null) {
-            $this->NetworkInterfaceId = $param["NetworkInterfaceId"];
+        if (array_key_exists('NetworkInterfaceId',$param) and $param['NetworkInterfaceId'] !== null) {
+            $this->NetworkInterfaceId = $param['NetworkInterfaceId'];
         }
 
-        if (array_key_exists("PrivateIpAddress",$param) and $param["PrivateIpAddress"] !== null) {
-            $this->PrivateIpAddress = $param["PrivateIpAddress"];
+        if (array_key_exists('PrivateIpAddress',$param) and $param['PrivateIpAddress'] !== null) {
+            $this->PrivateIpAddress = $param['PrivateIpAddress'];
         }
     }
 }

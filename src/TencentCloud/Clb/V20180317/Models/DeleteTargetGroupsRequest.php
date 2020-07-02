@@ -46,8 +46,8 @@ class DeleteTargetGroupsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TargetGroupIds",$param) and $param["TargetGroupIds"] !== null) {
-            $this->TargetGroupIds = $param["TargetGroupIds"];
+        if (array_key_exists('TargetGroupIds',$param) and $param['TargetGroupIds'] !== null) {
+            $this->TargetGroupIds = $param['TargetGroupIds'];
         }
     }
 }

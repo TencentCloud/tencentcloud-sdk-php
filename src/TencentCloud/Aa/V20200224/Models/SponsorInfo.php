@@ -78,24 +78,24 @@ class SponsorInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SponsorOpenId",$param) and $param["SponsorOpenId"] !== null) {
-            $this->SponsorOpenId = $param["SponsorOpenId"];
+        if (array_key_exists('SponsorOpenId',$param) and $param['SponsorOpenId'] !== null) {
+            $this->SponsorOpenId = $param['SponsorOpenId'];
         }
 
-        if (array_key_exists("SponsorDeviceId",$param) and $param["SponsorDeviceId"] !== null) {
-            $this->SponsorDeviceId = $param["SponsorDeviceId"];
+        if (array_key_exists('SponsorDeviceId',$param) and $param['SponsorDeviceId'] !== null) {
+            $this->SponsorDeviceId = $param['SponsorDeviceId'];
         }
 
-        if (array_key_exists("SponsorPhone",$param) and $param["SponsorPhone"] !== null) {
-            $this->SponsorPhone = $param["SponsorPhone"];
+        if (array_key_exists('SponsorPhone',$param) and $param['SponsorPhone'] !== null) {
+            $this->SponsorPhone = $param['SponsorPhone'];
         }
 
-        if (array_key_exists("SponsorIp",$param) and $param["SponsorIp"] !== null) {
-            $this->SponsorIp = $param["SponsorIp"];
+        if (array_key_exists('SponsorIp',$param) and $param['SponsorIp'] !== null) {
+            $this->SponsorIp = $param['SponsorIp'];
         }
 
-        if (array_key_exists("CampaignUrl",$param) and $param["CampaignUrl"] !== null) {
-            $this->CampaignUrl = $param["CampaignUrl"];
+        if (array_key_exists('CampaignUrl',$param) and $param['CampaignUrl'] !== null) {
+            $this->CampaignUrl = $param['CampaignUrl'];
         }
     }
 }

@@ -78,24 +78,24 @@ class DescribeIdlFileInfosRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
-            $this->ClusterId = $param["ClusterId"];
+        if (array_key_exists('ClusterId',$param) and $param['ClusterId'] !== null) {
+            $this->ClusterId = $param['ClusterId'];
         }
 
-        if (array_key_exists("TableGroupIds",$param) and $param["TableGroupIds"] !== null) {
-            $this->TableGroupIds = $param["TableGroupIds"];
+        if (array_key_exists('TableGroupIds',$param) and $param['TableGroupIds'] !== null) {
+            $this->TableGroupIds = $param['TableGroupIds'];
         }
 
-        if (array_key_exists("IdlFileIds",$param) and $param["IdlFileIds"] !== null) {
-            $this->IdlFileIds = $param["IdlFileIds"];
+        if (array_key_exists('IdlFileIds',$param) and $param['IdlFileIds'] !== null) {
+            $this->IdlFileIds = $param['IdlFileIds'];
         }
 
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
+        if (array_key_exists('Offset',$param) and $param['Offset'] !== null) {
+            $this->Offset = $param['Offset'];
         }
 
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
+        if (array_key_exists('Limit',$param) and $param['Limit'] !== null) {
+            $this->Limit = $param['Limit'];
         }
     }
 }

@@ -46,8 +46,8 @@ class DeleteNetDetectRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("NetDetectId",$param) and $param["NetDetectId"] !== null) {
-            $this->NetDetectId = $param["NetDetectId"];
+        if (array_key_exists('NetDetectId',$param) and $param['NetDetectId'] !== null) {
+            $this->NetDetectId = $param['NetDetectId'];
         }
     }
 }

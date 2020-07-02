@@ -54,13 +54,13 @@ class BindListenerRealServersRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ListenerId",$param) and $param["ListenerId"] !== null) {
-            $this->ListenerId = $param["ListenerId"];
+        if (array_key_exists('ListenerId',$param) and $param['ListenerId'] !== null) {
+            $this->ListenerId = $param['ListenerId'];
         }
 
-        if (array_key_exists("RealServerBindSet",$param) and $param["RealServerBindSet"] !== null) {
+        if (array_key_exists('RealServerBindSet',$param) and $param['RealServerBindSet'] !== null) {
             $this->RealServerBindSet = [];
-            foreach ($param["RealServerBindSet"] as $key => $value){
+            foreach ($param['RealServerBindSet'] as $key => $value){
                 $obj = new RealServerBindSetReq();
                 $obj->deserialize($value);
                 array_push($this->RealServerBindSet, $obj);

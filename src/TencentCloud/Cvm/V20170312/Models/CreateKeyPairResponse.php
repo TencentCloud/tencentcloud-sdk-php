@@ -54,13 +54,13 @@ class CreateKeyPairResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("KeyPair",$param) and $param["KeyPair"] !== null) {
+        if (array_key_exists('KeyPair',$param) and $param['KeyPair'] !== null) {
             $this->KeyPair = new KeyPair();
-            $this->KeyPair->deserialize($param["KeyPair"]);
+            $this->KeyPair->deserialize($param['KeyPair']);
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

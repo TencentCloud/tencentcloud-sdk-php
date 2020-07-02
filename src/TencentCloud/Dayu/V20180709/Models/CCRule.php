@@ -62,16 +62,16 @@ class CCRule extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Skey",$param) and $param["Skey"] !== null) {
-            $this->Skey = $param["Skey"];
+        if (array_key_exists('Skey',$param) and $param['Skey'] !== null) {
+            $this->Skey = $param['Skey'];
         }
 
-        if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
-            $this->Operator = $param["Operator"];
+        if (array_key_exists('Operator',$param) and $param['Operator'] !== null) {
+            $this->Operator = $param['Operator'];
         }
 
-        if (array_key_exists("Value",$param) and $param["Value"] !== null) {
-            $this->Value = $param["Value"];
+        if (array_key_exists('Value',$param) and $param['Value'] !== null) {
+            $this->Value = $param['Value'];
         }
     }
 }

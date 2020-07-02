@@ -46,8 +46,8 @@ class DeleteLaunchConfigurationRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LaunchConfigurationId",$param) and $param["LaunchConfigurationId"] !== null) {
-            $this->LaunchConfigurationId = $param["LaunchConfigurationId"];
+        if (array_key_exists('LaunchConfigurationId',$param) and $param['LaunchConfigurationId'] !== null) {
+            $this->LaunchConfigurationId = $param['LaunchConfigurationId'];
         }
     }
 }

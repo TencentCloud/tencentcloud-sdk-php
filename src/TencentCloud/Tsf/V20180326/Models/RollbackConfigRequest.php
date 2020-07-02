@@ -54,12 +54,12 @@ class RollbackConfigRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ConfigReleaseLogId",$param) and $param["ConfigReleaseLogId"] !== null) {
-            $this->ConfigReleaseLogId = $param["ConfigReleaseLogId"];
+        if (array_key_exists('ConfigReleaseLogId',$param) and $param['ConfigReleaseLogId'] !== null) {
+            $this->ConfigReleaseLogId = $param['ConfigReleaseLogId'];
         }
 
-        if (array_key_exists("ReleaseDesc",$param) and $param["ReleaseDesc"] !== null) {
-            $this->ReleaseDesc = $param["ReleaseDesc"];
+        if (array_key_exists('ReleaseDesc',$param) and $param['ReleaseDesc'] !== null) {
+            $this->ReleaseDesc = $param['ReleaseDesc'];
         }
     }
 }

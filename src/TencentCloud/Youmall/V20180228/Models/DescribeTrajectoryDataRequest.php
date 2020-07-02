@@ -86,28 +86,28 @@ class DescribeTrajectoryDataRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CompanyId",$param) and $param["CompanyId"] !== null) {
-            $this->CompanyId = $param["CompanyId"];
+        if (array_key_exists('CompanyId',$param) and $param['CompanyId'] !== null) {
+            $this->CompanyId = $param['CompanyId'];
         }
 
-        if (array_key_exists("ShopId",$param) and $param["ShopId"] !== null) {
-            $this->ShopId = $param["ShopId"];
+        if (array_key_exists('ShopId',$param) and $param['ShopId'] !== null) {
+            $this->ShopId = $param['ShopId'];
         }
 
-        if (array_key_exists("StartDate",$param) and $param["StartDate"] !== null) {
-            $this->StartDate = $param["StartDate"];
+        if (array_key_exists('StartDate',$param) and $param['StartDate'] !== null) {
+            $this->StartDate = $param['StartDate'];
         }
 
-        if (array_key_exists("EndDate",$param) and $param["EndDate"] !== null) {
-            $this->EndDate = $param["EndDate"];
+        if (array_key_exists('EndDate',$param) and $param['EndDate'] !== null) {
+            $this->EndDate = $param['EndDate'];
         }
 
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
+        if (array_key_exists('Limit',$param) and $param['Limit'] !== null) {
+            $this->Limit = $param['Limit'];
         }
 
-        if (array_key_exists("Gender",$param) and $param["Gender"] !== null) {
-            $this->Gender = $param["Gender"];
+        if (array_key_exists('Gender',$param) and $param['Gender'] !== null) {
+            $this->Gender = $param['Gender'];
         }
     }
 }

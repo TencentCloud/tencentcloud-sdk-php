@@ -46,8 +46,8 @@ class DeleteNotificationConfigurationRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AutoScalingNotificationId",$param) and $param["AutoScalingNotificationId"] !== null) {
-            $this->AutoScalingNotificationId = $param["AutoScalingNotificationId"];
+        if (array_key_exists('AutoScalingNotificationId',$param) and $param['AutoScalingNotificationId'] !== null) {
+            $this->AutoScalingNotificationId = $param['AutoScalingNotificationId'];
         }
     }
 }

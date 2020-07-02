@@ -70,20 +70,20 @@ class BillDataInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Time",$param) and $param["Time"] !== null) {
-            $this->Time = $param["Time"];
+        if (array_key_exists('Time',$param) and $param['Time'] !== null) {
+            $this->Time = $param['Time'];
         }
 
-        if (array_key_exists("Bandwidth",$param) and $param["Bandwidth"] !== null) {
-            $this->Bandwidth = $param["Bandwidth"];
+        if (array_key_exists('Bandwidth',$param) and $param['Bandwidth'] !== null) {
+            $this->Bandwidth = $param['Bandwidth'];
         }
 
-        if (array_key_exists("Flux",$param) and $param["Flux"] !== null) {
-            $this->Flux = $param["Flux"];
+        if (array_key_exists('Flux',$param) and $param['Flux'] !== null) {
+            $this->Flux = $param['Flux'];
         }
 
-        if (array_key_exists("PeakTime",$param) and $param["PeakTime"] !== null) {
-            $this->PeakTime = $param["PeakTime"];
+        if (array_key_exists('PeakTime',$param) and $param['PeakTime'] !== null) {
+            $this->PeakTime = $param['PeakTime'];
         }
     }
 }

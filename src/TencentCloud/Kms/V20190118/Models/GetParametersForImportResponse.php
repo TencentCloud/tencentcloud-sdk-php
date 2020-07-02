@@ -78,24 +78,24 @@ class GetParametersForImportResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("KeyId",$param) and $param["KeyId"] !== null) {
-            $this->KeyId = $param["KeyId"];
+        if (array_key_exists('KeyId',$param) and $param['KeyId'] !== null) {
+            $this->KeyId = $param['KeyId'];
         }
 
-        if (array_key_exists("ImportToken",$param) and $param["ImportToken"] !== null) {
-            $this->ImportToken = $param["ImportToken"];
+        if (array_key_exists('ImportToken',$param) and $param['ImportToken'] !== null) {
+            $this->ImportToken = $param['ImportToken'];
         }
 
-        if (array_key_exists("PublicKey",$param) and $param["PublicKey"] !== null) {
-            $this->PublicKey = $param["PublicKey"];
+        if (array_key_exists('PublicKey',$param) and $param['PublicKey'] !== null) {
+            $this->PublicKey = $param['PublicKey'];
         }
 
-        if (array_key_exists("ParametersValidTo",$param) and $param["ParametersValidTo"] !== null) {
-            $this->ParametersValidTo = $param["ParametersValidTo"];
+        if (array_key_exists('ParametersValidTo',$param) and $param['ParametersValidTo'] !== null) {
+            $this->ParametersValidTo = $param['ParametersValidTo'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

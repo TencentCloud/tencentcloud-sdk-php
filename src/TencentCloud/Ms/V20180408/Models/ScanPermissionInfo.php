@@ -46,8 +46,8 @@ class ScanPermissionInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Permission",$param) and $param["Permission"] !== null) {
-            $this->Permission = $param["Permission"];
+        if (array_key_exists('Permission',$param) and $param['Permission'] !== null) {
+            $this->Permission = $param['Permission'];
         }
     }
 }

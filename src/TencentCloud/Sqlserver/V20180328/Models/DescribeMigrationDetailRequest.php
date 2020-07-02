@@ -46,8 +46,8 @@ class DescribeMigrationDetailRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MigrateId",$param) and $param["MigrateId"] !== null) {
-            $this->MigrateId = $param["MigrateId"];
+        if (array_key_exists('MigrateId',$param) and $param['MigrateId'] !== null) {
+            $this->MigrateId = $param['MigrateId'];
         }
     }
 }

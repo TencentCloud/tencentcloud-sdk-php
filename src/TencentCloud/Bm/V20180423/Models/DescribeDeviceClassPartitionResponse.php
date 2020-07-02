@@ -54,17 +54,17 @@ class DescribeDeviceClassPartitionResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DeviceClassPartitionInfoSet",$param) and $param["DeviceClassPartitionInfoSet"] !== null) {
+        if (array_key_exists('DeviceClassPartitionInfoSet',$param) and $param['DeviceClassPartitionInfoSet'] !== null) {
             $this->DeviceClassPartitionInfoSet = [];
-            foreach ($param["DeviceClassPartitionInfoSet"] as $key => $value){
+            foreach ($param['DeviceClassPartitionInfoSet'] as $key => $value){
                 $obj = new DeviceClassPartitionInfo();
                 $obj->deserialize($value);
                 array_push($this->DeviceClassPartitionInfoSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

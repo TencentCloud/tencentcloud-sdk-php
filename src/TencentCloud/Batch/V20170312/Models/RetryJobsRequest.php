@@ -46,8 +46,8 @@ class RetryJobsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("JobIds",$param) and $param["JobIds"] !== null) {
-            $this->JobIds = $param["JobIds"];
+        if (array_key_exists('JobIds',$param) and $param['JobIds'] !== null) {
+            $this->JobIds = $param['JobIds'];
         }
     }
 }

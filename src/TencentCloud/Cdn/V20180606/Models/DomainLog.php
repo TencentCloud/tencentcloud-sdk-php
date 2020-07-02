@@ -86,24 +86,24 @@ overseas：境外
         if ($param === null) {
             return;
         }
-        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
-            $this->StartTime = $param["StartTime"];
+        if (array_key_exists('StartTime',$param) and $param['StartTime'] !== null) {
+            $this->StartTime = $param['StartTime'];
         }
 
-        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
-            $this->EndTime = $param["EndTime"];
+        if (array_key_exists('EndTime',$param) and $param['EndTime'] !== null) {
+            $this->EndTime = $param['EndTime'];
         }
 
-        if (array_key_exists("LogPath",$param) and $param["LogPath"] !== null) {
-            $this->LogPath = $param["LogPath"];
+        if (array_key_exists('LogPath',$param) and $param['LogPath'] !== null) {
+            $this->LogPath = $param['LogPath'];
         }
 
-        if (array_key_exists("Area",$param) and $param["Area"] !== null) {
-            $this->Area = $param["Area"];
+        if (array_key_exists('Area',$param) and $param['Area'] !== null) {
+            $this->Area = $param['Area'];
         }
 
-        if (array_key_exists("LogName",$param) and $param["LogName"] !== null) {
-            $this->LogName = $param["LogName"];
+        if (array_key_exists('LogName',$param) and $param['LogName'] !== null) {
+            $this->LogName = $param['LogName'];
         }
     }
 }

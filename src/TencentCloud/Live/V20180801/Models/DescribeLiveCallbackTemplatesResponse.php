@@ -54,17 +54,17 @@ class DescribeLiveCallbackTemplatesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Templates",$param) and $param["Templates"] !== null) {
+        if (array_key_exists('Templates',$param) and $param['Templates'] !== null) {
             $this->Templates = [];
-            foreach ($param["Templates"] as $key => $value){
+            foreach ($param['Templates'] as $key => $value){
                 $obj = new CallBackTemplateInfo();
                 $obj->deserialize($value);
                 array_push($this->Templates, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

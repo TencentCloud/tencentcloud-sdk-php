@@ -58,13 +58,13 @@ class AutoDelStrategyInfoResp extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("StrategyInfo",$param) and $param["StrategyInfo"] !== null) {
+        if (array_key_exists('StrategyInfo',$param) and $param['StrategyInfo'] !== null) {
             $this->StrategyInfo = [];
-            foreach ($param["StrategyInfo"] as $key => $value){
+            foreach ($param['StrategyInfo'] as $key => $value){
                 $obj = new AutoDelStrategyInfo();
                 $obj->deserialize($value);
                 array_push($this->StrategyInfo, $obj);

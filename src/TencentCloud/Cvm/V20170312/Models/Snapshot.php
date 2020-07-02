@@ -70,16 +70,16 @@ DATA_DISK：数据盘。
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SnapshotId",$param) and $param["SnapshotId"] !== null) {
-            $this->SnapshotId = $param["SnapshotId"];
+        if (array_key_exists('SnapshotId',$param) and $param['SnapshotId'] !== null) {
+            $this->SnapshotId = $param['SnapshotId'];
         }
 
-        if (array_key_exists("DiskUsage",$param) and $param["DiskUsage"] !== null) {
-            $this->DiskUsage = $param["DiskUsage"];
+        if (array_key_exists('DiskUsage',$param) and $param['DiskUsage'] !== null) {
+            $this->DiskUsage = $param['DiskUsage'];
         }
 
-        if (array_key_exists("DiskSize",$param) and $param["DiskSize"] !== null) {
-            $this->DiskSize = $param["DiskSize"];
+        if (array_key_exists('DiskSize',$param) and $param['DiskSize'] !== null) {
+            $this->DiskSize = $param['DiskSize'];
         }
     }
 }

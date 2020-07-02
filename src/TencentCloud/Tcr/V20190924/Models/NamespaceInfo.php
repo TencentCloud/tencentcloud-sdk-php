@@ -62,16 +62,16 @@ class NamespaceInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Namespace",$param) and $param["Namespace"] !== null) {
-            $this->Namespace = $param["Namespace"];
+        if (array_key_exists('Namespace',$param) and $param['Namespace'] !== null) {
+            $this->Namespace = $param['Namespace'];
         }
 
-        if (array_key_exists("CreationTime",$param) and $param["CreationTime"] !== null) {
-            $this->CreationTime = $param["CreationTime"];
+        if (array_key_exists('CreationTime',$param) and $param['CreationTime'] !== null) {
+            $this->CreationTime = $param['CreationTime'];
         }
 
-        if (array_key_exists("RepoCount",$param) and $param["RepoCount"] !== null) {
-            $this->RepoCount = $param["RepoCount"];
+        if (array_key_exists('RepoCount',$param) and $param['RepoCount'] !== null) {
+            $this->RepoCount = $param['RepoCount'];
         }
     }
 }

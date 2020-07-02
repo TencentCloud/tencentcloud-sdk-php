@@ -70,20 +70,20 @@ class CompleteLifecycleActionRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LifecycleHookId",$param) and $param["LifecycleHookId"] !== null) {
-            $this->LifecycleHookId = $param["LifecycleHookId"];
+        if (array_key_exists('LifecycleHookId',$param) and $param['LifecycleHookId'] !== null) {
+            $this->LifecycleHookId = $param['LifecycleHookId'];
         }
 
-        if (array_key_exists("LifecycleActionResult",$param) and $param["LifecycleActionResult"] !== null) {
-            $this->LifecycleActionResult = $param["LifecycleActionResult"];
+        if (array_key_exists('LifecycleActionResult',$param) and $param['LifecycleActionResult'] !== null) {
+            $this->LifecycleActionResult = $param['LifecycleActionResult'];
         }
 
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("LifecycleActionToken",$param) and $param["LifecycleActionToken"] !== null) {
-            $this->LifecycleActionToken = $param["LifecycleActionToken"];
+        if (array_key_exists('LifecycleActionToken',$param) and $param['LifecycleActionToken'] !== null) {
+            $this->LifecycleActionToken = $param['LifecycleActionToken'];
         }
     }
 }

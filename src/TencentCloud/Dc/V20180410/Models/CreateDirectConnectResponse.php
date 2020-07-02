@@ -54,12 +54,12 @@ class CreateDirectConnectResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DirectConnectIdSet",$param) and $param["DirectConnectIdSet"] !== null) {
-            $this->DirectConnectIdSet = $param["DirectConnectIdSet"];
+        if (array_key_exists('DirectConnectIdSet',$param) and $param['DirectConnectIdSet'] !== null) {
+            $this->DirectConnectIdSet = $param['DirectConnectIdSet'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

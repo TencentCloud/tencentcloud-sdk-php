@@ -46,8 +46,8 @@ class RepoIsExistResp extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("IsExist",$param) and $param["IsExist"] !== null) {
-            $this->IsExist = $param["IsExist"];
+        if (array_key_exists('IsExist',$param) and $param['IsExist'] !== null) {
+            $this->IsExist = $param['IsExist'];
         }
     }
 }

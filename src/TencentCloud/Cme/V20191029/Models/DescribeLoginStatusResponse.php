@@ -54,17 +54,17 @@ class DescribeLoginStatusResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LoginStatusInfoSet",$param) and $param["LoginStatusInfoSet"] !== null) {
+        if (array_key_exists('LoginStatusInfoSet',$param) and $param['LoginStatusInfoSet'] !== null) {
             $this->LoginStatusInfoSet = [];
-            foreach ($param["LoginStatusInfoSet"] as $key => $value){
+            foreach ($param['LoginStatusInfoSet'] as $key => $value){
                 $obj = new LoginStatusInfo();
                 $obj->deserialize($value);
                 array_push($this->LoginStatusInfoSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

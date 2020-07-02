@@ -54,17 +54,17 @@ class DescribeBandwidthPackageQuotaResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("QuotaSet",$param) and $param["QuotaSet"] !== null) {
+        if (array_key_exists('QuotaSet',$param) and $param['QuotaSet'] !== null) {
             $this->QuotaSet = [];
-            foreach ($param["QuotaSet"] as $key => $value){
+            foreach ($param['QuotaSet'] as $key => $value){
                 $obj = new Quota();
                 $obj->deserialize($value);
                 array_push($this->QuotaSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

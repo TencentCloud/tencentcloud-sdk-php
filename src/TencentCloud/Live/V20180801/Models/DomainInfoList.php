@@ -54,13 +54,13 @@ class DomainInfoList extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
-            $this->Domain = $param["Domain"];
+        if (array_key_exists('Domain',$param) and $param['Domain'] !== null) {
+            $this->Domain = $param['Domain'];
         }
 
-        if (array_key_exists("DetailInfoList",$param) and $param["DetailInfoList"] !== null) {
+        if (array_key_exists('DetailInfoList',$param) and $param['DetailInfoList'] !== null) {
             $this->DetailInfoList = [];
-            foreach ($param["DetailInfoList"] as $key => $value){
+            foreach ($param['DetailInfoList'] as $key => $value){
                 $obj = new DomainDetailInfo();
                 $obj->deserialize($value);
                 array_push($this->DetailInfoList, $obj);

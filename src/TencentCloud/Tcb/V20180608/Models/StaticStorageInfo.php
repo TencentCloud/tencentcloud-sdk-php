@@ -98,24 +98,24 @@ class StaticStorageInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("StaticDomain",$param) and $param["StaticDomain"] !== null) {
-            $this->StaticDomain = $param["StaticDomain"];
+        if (array_key_exists('StaticDomain',$param) and $param['StaticDomain'] !== null) {
+            $this->StaticDomain = $param['StaticDomain'];
         }
 
-        if (array_key_exists("DefaultDirName",$param) and $param["DefaultDirName"] !== null) {
-            $this->DefaultDirName = $param["DefaultDirName"];
+        if (array_key_exists('DefaultDirName',$param) and $param['DefaultDirName'] !== null) {
+            $this->DefaultDirName = $param['DefaultDirName'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("Region",$param) and $param["Region"] !== null) {
-            $this->Region = $param["Region"];
+        if (array_key_exists('Region',$param) and $param['Region'] !== null) {
+            $this->Region = $param['Region'];
         }
 
-        if (array_key_exists("Bucket",$param) and $param["Bucket"] !== null) {
-            $this->Bucket = $param["Bucket"];
+        if (array_key_exists('Bucket',$param) and $param['Bucket'] !== null) {
+            $this->Bucket = $param['Bucket'];
         }
     }
 }

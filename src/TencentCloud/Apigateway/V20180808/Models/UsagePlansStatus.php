@@ -62,13 +62,13 @@ class UsagePlansStatus extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("UsagePlanStatusSet",$param) and $param["UsagePlanStatusSet"] !== null) {
+        if (array_key_exists('UsagePlanStatusSet',$param) and $param['UsagePlanStatusSet'] !== null) {
             $this->UsagePlanStatusSet = [];
-            foreach ($param["UsagePlanStatusSet"] as $key => $value){
+            foreach ($param['UsagePlanStatusSet'] as $key => $value){
                 $obj = new UsagePlanStatusInfo();
                 $obj->deserialize($value);
                 array_push($this->UsagePlanStatusSet, $obj);

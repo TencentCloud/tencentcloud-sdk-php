@@ -54,12 +54,12 @@ class ManageImageLifecycleGlobalPersonalRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists('Type',$param) and $param['Type'] !== null) {
+            $this->Type = $param['Type'];
         }
 
-        if (array_key_exists("Val",$param) and $param["Val"] !== null) {
-            $this->Val = $param["Val"];
+        if (array_key_exists('Val',$param) and $param['Val'] !== null) {
+            $this->Val = $param['Val'];
         }
     }
 }

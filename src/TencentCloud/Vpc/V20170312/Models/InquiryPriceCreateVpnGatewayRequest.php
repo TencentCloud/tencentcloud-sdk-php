@@ -62,17 +62,17 @@ class InquiryPriceCreateVpnGatewayRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InternetMaxBandwidthOut",$param) and $param["InternetMaxBandwidthOut"] !== null) {
-            $this->InternetMaxBandwidthOut = $param["InternetMaxBandwidthOut"];
+        if (array_key_exists('InternetMaxBandwidthOut',$param) and $param['InternetMaxBandwidthOut'] !== null) {
+            $this->InternetMaxBandwidthOut = $param['InternetMaxBandwidthOut'];
         }
 
-        if (array_key_exists("InstanceChargeType",$param) and $param["InstanceChargeType"] !== null) {
-            $this->InstanceChargeType = $param["InstanceChargeType"];
+        if (array_key_exists('InstanceChargeType',$param) and $param['InstanceChargeType'] !== null) {
+            $this->InstanceChargeType = $param['InstanceChargeType'];
         }
 
-        if (array_key_exists("InstanceChargePrepaid",$param) and $param["InstanceChargePrepaid"] !== null) {
+        if (array_key_exists('InstanceChargePrepaid',$param) and $param['InstanceChargePrepaid'] !== null) {
             $this->InstanceChargePrepaid = new InstanceChargePrepaid();
-            $this->InstanceChargePrepaid->deserialize($param["InstanceChargePrepaid"]);
+            $this->InstanceChargePrepaid->deserialize($param['InstanceChargePrepaid']);
         }
     }
 }

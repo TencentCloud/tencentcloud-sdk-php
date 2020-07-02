@@ -118,46 +118,46 @@ class ComputeEnvView extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("EnvId",$param) and $param["EnvId"] !== null) {
-            $this->EnvId = $param["EnvId"];
+        if (array_key_exists('EnvId',$param) and $param['EnvId'] !== null) {
+            $this->EnvId = $param['EnvId'];
         }
 
-        if (array_key_exists("EnvName",$param) and $param["EnvName"] !== null) {
-            $this->EnvName = $param["EnvName"];
+        if (array_key_exists('EnvName',$param) and $param['EnvName'] !== null) {
+            $this->EnvName = $param['EnvName'];
         }
 
-        if (array_key_exists("Placement",$param) and $param["Placement"] !== null) {
+        if (array_key_exists('Placement',$param) and $param['Placement'] !== null) {
             $this->Placement = new Placement();
-            $this->Placement->deserialize($param["Placement"]);
+            $this->Placement->deserialize($param['Placement']);
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("ComputeNodeMetrics",$param) and $param["ComputeNodeMetrics"] !== null) {
+        if (array_key_exists('ComputeNodeMetrics',$param) and $param['ComputeNodeMetrics'] !== null) {
             $this->ComputeNodeMetrics = new ComputeNodeMetrics();
-            $this->ComputeNodeMetrics->deserialize($param["ComputeNodeMetrics"]);
+            $this->ComputeNodeMetrics->deserialize($param['ComputeNodeMetrics']);
         }
 
-        if (array_key_exists("EnvType",$param) and $param["EnvType"] !== null) {
-            $this->EnvType = $param["EnvType"];
+        if (array_key_exists('EnvType',$param) and $param['EnvType'] !== null) {
+            $this->EnvType = $param['EnvType'];
         }
 
-        if (array_key_exists("DesiredComputeNodeCount",$param) and $param["DesiredComputeNodeCount"] !== null) {
-            $this->DesiredComputeNodeCount = $param["DesiredComputeNodeCount"];
+        if (array_key_exists('DesiredComputeNodeCount',$param) and $param['DesiredComputeNodeCount'] !== null) {
+            $this->DesiredComputeNodeCount = $param['DesiredComputeNodeCount'];
         }
 
-        if (array_key_exists("ResourceType",$param) and $param["ResourceType"] !== null) {
-            $this->ResourceType = $param["ResourceType"];
+        if (array_key_exists('ResourceType',$param) and $param['ResourceType'] !== null) {
+            $this->ResourceType = $param['ResourceType'];
         }
 
-        if (array_key_exists("NextAction",$param) and $param["NextAction"] !== null) {
-            $this->NextAction = $param["NextAction"];
+        if (array_key_exists('NextAction',$param) and $param['NextAction'] !== null) {
+            $this->NextAction = $param['NextAction'];
         }
 
-        if (array_key_exists("AttachedComputeNodeCount",$param) and $param["AttachedComputeNodeCount"] !== null) {
-            $this->AttachedComputeNodeCount = $param["AttachedComputeNodeCount"];
+        if (array_key_exists('AttachedComputeNodeCount',$param) and $param['AttachedComputeNodeCount'] !== null) {
+            $this->AttachedComputeNodeCount = $param['AttachedComputeNodeCount'];
         }
     }
 }

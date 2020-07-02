@@ -62,21 +62,21 @@ class DescribeAddressTemplateGroupsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("AddressTemplateGroupSet",$param) and $param["AddressTemplateGroupSet"] !== null) {
+        if (array_key_exists('AddressTemplateGroupSet',$param) and $param['AddressTemplateGroupSet'] !== null) {
             $this->AddressTemplateGroupSet = [];
-            foreach ($param["AddressTemplateGroupSet"] as $key => $value){
+            foreach ($param['AddressTemplateGroupSet'] as $key => $value){
                 $obj = new AddressTemplateGroup();
                 $obj->deserialize($value);
                 array_push($this->AddressTemplateGroupSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

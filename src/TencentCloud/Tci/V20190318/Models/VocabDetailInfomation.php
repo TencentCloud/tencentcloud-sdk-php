@@ -54,17 +54,17 @@ class VocabDetailInfomation extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("VocabDetailInfo",$param) and $param["VocabDetailInfo"] !== null) {
+        if (array_key_exists('VocabDetailInfo',$param) and $param['VocabDetailInfo'] !== null) {
             $this->VocabDetailInfo = [];
-            foreach ($param["VocabDetailInfo"] as $key => $value){
+            foreach ($param['VocabDetailInfo'] as $key => $value){
                 $obj = new DetailInfo();
                 $obj->deserialize($value);
                 array_push($this->VocabDetailInfo, $obj);
             }
         }
 
-        if (array_key_exists("VocabLibName",$param) and $param["VocabLibName"] !== null) {
-            $this->VocabLibName = $param["VocabLibName"];
+        if (array_key_exists('VocabLibName',$param) and $param['VocabLibName'] !== null) {
+            $this->VocabLibName = $param['VocabLibName'];
         }
     }
 }

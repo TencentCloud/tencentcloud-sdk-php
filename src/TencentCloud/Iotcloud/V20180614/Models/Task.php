@@ -54,14 +54,14 @@ class Task extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("UpdateShadowTask",$param) and $param["UpdateShadowTask"] !== null) {
+        if (array_key_exists('UpdateShadowTask',$param) and $param['UpdateShadowTask'] !== null) {
             $this->UpdateShadowTask = new BatchUpdateShadow();
-            $this->UpdateShadowTask->deserialize($param["UpdateShadowTask"]);
+            $this->UpdateShadowTask->deserialize($param['UpdateShadowTask']);
         }
 
-        if (array_key_exists("PublishMessageTask",$param) and $param["PublishMessageTask"] !== null) {
+        if (array_key_exists('PublishMessageTask',$param) and $param['PublishMessageTask'] !== null) {
             $this->PublishMessageTask = new BatchPublishMessage();
-            $this->PublishMessageTask->deserialize($param["PublishMessageTask"]);
+            $this->PublishMessageTask->deserialize($param['PublishMessageTask']);
         }
     }
 }

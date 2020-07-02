@@ -62,12 +62,12 @@ class CacheOptResult extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SuccessUrls",$param) and $param["SuccessUrls"] !== null) {
-            $this->SuccessUrls = $param["SuccessUrls"];
+        if (array_key_exists('SuccessUrls',$param) and $param['SuccessUrls'] !== null) {
+            $this->SuccessUrls = $param['SuccessUrls'];
         }
 
-        if (array_key_exists("FailUrls",$param) and $param["FailUrls"] !== null) {
-            $this->FailUrls = $param["FailUrls"];
+        if (array_key_exists('FailUrls',$param) and $param['FailUrls'] !== null) {
+            $this->FailUrls = $param['FailUrls'];
         }
     }
 }

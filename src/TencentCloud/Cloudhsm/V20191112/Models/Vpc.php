@@ -86,20 +86,20 @@ class Vpc extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("VpcName",$param) and $param["VpcName"] !== null) {
-            $this->VpcName = $param["VpcName"];
+        if (array_key_exists('VpcName',$param) and $param['VpcName'] !== null) {
+            $this->VpcName = $param['VpcName'];
         }
 
-        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
-            $this->VpcId = $param["VpcId"];
+        if (array_key_exists('VpcId',$param) and $param['VpcId'] !== null) {
+            $this->VpcId = $param['VpcId'];
         }
 
-        if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
-            $this->CreatedTime = $param["CreatedTime"];
+        if (array_key_exists('CreatedTime',$param) and $param['CreatedTime'] !== null) {
+            $this->CreatedTime = $param['CreatedTime'];
         }
 
-        if (array_key_exists("IsDefault",$param) and $param["IsDefault"] !== null) {
-            $this->IsDefault = $param["IsDefault"];
+        if (array_key_exists('IsDefault',$param) and $param['IsDefault'] !== null) {
+            $this->IsDefault = $param['IsDefault'];
         }
     }
 }

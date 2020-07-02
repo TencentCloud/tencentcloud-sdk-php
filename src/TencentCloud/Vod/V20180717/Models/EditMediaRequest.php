@@ -126,55 +126,55 @@ class EditMediaRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InputType",$param) and $param["InputType"] !== null) {
-            $this->InputType = $param["InputType"];
+        if (array_key_exists('InputType',$param) and $param['InputType'] !== null) {
+            $this->InputType = $param['InputType'];
         }
 
-        if (array_key_exists("FileInfos",$param) and $param["FileInfos"] !== null) {
+        if (array_key_exists('FileInfos',$param) and $param['FileInfos'] !== null) {
             $this->FileInfos = [];
-            foreach ($param["FileInfos"] as $key => $value){
+            foreach ($param['FileInfos'] as $key => $value){
                 $obj = new EditMediaFileInfo();
                 $obj->deserialize($value);
                 array_push($this->FileInfos, $obj);
             }
         }
 
-        if (array_key_exists("StreamInfos",$param) and $param["StreamInfos"] !== null) {
+        if (array_key_exists('StreamInfos',$param) and $param['StreamInfos'] !== null) {
             $this->StreamInfos = [];
-            foreach ($param["StreamInfos"] as $key => $value){
+            foreach ($param['StreamInfos'] as $key => $value){
                 $obj = new EditMediaStreamInfo();
                 $obj->deserialize($value);
                 array_push($this->StreamInfos, $obj);
             }
         }
 
-        if (array_key_exists("Definition",$param) and $param["Definition"] !== null) {
-            $this->Definition = $param["Definition"];
+        if (array_key_exists('Definition',$param) and $param['Definition'] !== null) {
+            $this->Definition = $param['Definition'];
         }
 
-        if (array_key_exists("ProcedureName",$param) and $param["ProcedureName"] !== null) {
-            $this->ProcedureName = $param["ProcedureName"];
+        if (array_key_exists('ProcedureName',$param) and $param['ProcedureName'] !== null) {
+            $this->ProcedureName = $param['ProcedureName'];
         }
 
-        if (array_key_exists("OutputConfig",$param) and $param["OutputConfig"] !== null) {
+        if (array_key_exists('OutputConfig',$param) and $param['OutputConfig'] !== null) {
             $this->OutputConfig = new EditMediaOutputConfig();
-            $this->OutputConfig->deserialize($param["OutputConfig"]);
+            $this->OutputConfig->deserialize($param['OutputConfig']);
         }
 
-        if (array_key_exists("SessionContext",$param) and $param["SessionContext"] !== null) {
-            $this->SessionContext = $param["SessionContext"];
+        if (array_key_exists('SessionContext',$param) and $param['SessionContext'] !== null) {
+            $this->SessionContext = $param['SessionContext'];
         }
 
-        if (array_key_exists("TasksPriority",$param) and $param["TasksPriority"] !== null) {
-            $this->TasksPriority = $param["TasksPriority"];
+        if (array_key_exists('TasksPriority',$param) and $param['TasksPriority'] !== null) {
+            $this->TasksPriority = $param['TasksPriority'];
         }
 
-        if (array_key_exists("SessionId",$param) and $param["SessionId"] !== null) {
-            $this->SessionId = $param["SessionId"];
+        if (array_key_exists('SessionId',$param) and $param['SessionId'] !== null) {
+            $this->SessionId = $param['SessionId'];
         }
 
-        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
-            $this->SubAppId = $param["SubAppId"];
+        if (array_key_exists('SubAppId',$param) and $param['SubAppId'] !== null) {
+            $this->SubAppId = $param['SubAppId'];
         }
     }
 }

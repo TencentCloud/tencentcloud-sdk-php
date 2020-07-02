@@ -78,30 +78,30 @@ class StandardImageResult extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ResultSet",$param) and $param["ResultSet"] !== null) {
+        if (array_key_exists('ResultSet',$param) and $param['ResultSet'] !== null) {
             $this->ResultSet = [];
-            foreach ($param["ResultSet"] as $key => $value){
+            foreach ($param['ResultSet'] as $key => $value){
                 $obj = new ImageTaskResult();
                 $obj->deserialize($value);
                 array_push($this->ResultSet, $obj);
             }
         }
 
-        if (array_key_exists("Statistic",$param) and $param["Statistic"] !== null) {
+        if (array_key_exists('Statistic',$param) and $param['Statistic'] !== null) {
             $this->Statistic = new ImageTaskStatistic();
-            $this->Statistic->deserialize($param["Statistic"]);
+            $this->Statistic->deserialize($param['Statistic']);
         }
 
-        if (array_key_exists("Message",$param) and $param["Message"] !== null) {
-            $this->Message = $param["Message"];
+        if (array_key_exists('Message',$param) and $param['Message'] !== null) {
+            $this->Message = $param['Message'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
     }
 }

@@ -46,8 +46,8 @@ class DeleteUsagePlanRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("UsagePlanId",$param) and $param["UsagePlanId"] !== null) {
-            $this->UsagePlanId = $param["UsagePlanId"];
+        if (array_key_exists('UsagePlanId',$param) and $param['UsagePlanId'] !== null) {
+            $this->UsagePlanId = $param['UsagePlanId'];
         }
     }
 }

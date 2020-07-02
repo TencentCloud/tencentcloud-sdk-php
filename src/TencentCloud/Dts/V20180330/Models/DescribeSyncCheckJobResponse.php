@@ -86,33 +86,33 @@ class DescribeSyncCheckJobResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("ErrorCode",$param) and $param["ErrorCode"] !== null) {
-            $this->ErrorCode = $param["ErrorCode"];
+        if (array_key_exists('ErrorCode',$param) and $param['ErrorCode'] !== null) {
+            $this->ErrorCode = $param['ErrorCode'];
         }
 
-        if (array_key_exists("ErrorMessage",$param) and $param["ErrorMessage"] !== null) {
-            $this->ErrorMessage = $param["ErrorMessage"];
+        if (array_key_exists('ErrorMessage',$param) and $param['ErrorMessage'] !== null) {
+            $this->ErrorMessage = $param['ErrorMessage'];
         }
 
-        if (array_key_exists("StepInfo",$param) and $param["StepInfo"] !== null) {
+        if (array_key_exists('StepInfo',$param) and $param['StepInfo'] !== null) {
             $this->StepInfo = [];
-            foreach ($param["StepInfo"] as $key => $value){
+            foreach ($param['StepInfo'] as $key => $value){
                 $obj = new SyncCheckStepInfo();
                 $obj->deserialize($value);
                 array_push($this->StepInfo, $obj);
             }
         }
 
-        if (array_key_exists("CheckFlag",$param) and $param["CheckFlag"] !== null) {
-            $this->CheckFlag = $param["CheckFlag"];
+        if (array_key_exists('CheckFlag',$param) and $param['CheckFlag'] !== null) {
+            $this->CheckFlag = $param['CheckFlag'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

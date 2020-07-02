@@ -86,28 +86,28 @@ class RedisBackupSet extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
-            $this->StartTime = $param["StartTime"];
+        if (array_key_exists('StartTime',$param) and $param['StartTime'] !== null) {
+            $this->StartTime = $param['StartTime'];
         }
 
-        if (array_key_exists("BackupId",$param) and $param["BackupId"] !== null) {
-            $this->BackupId = $param["BackupId"];
+        if (array_key_exists('BackupId',$param) and $param['BackupId'] !== null) {
+            $this->BackupId = $param['BackupId'];
         }
 
-        if (array_key_exists("BackupType",$param) and $param["BackupType"] !== null) {
-            $this->BackupType = $param["BackupType"];
+        if (array_key_exists('BackupType',$param) and $param['BackupType'] !== null) {
+            $this->BackupType = $param['BackupType'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
-            $this->Remark = $param["Remark"];
+        if (array_key_exists('Remark',$param) and $param['Remark'] !== null) {
+            $this->Remark = $param['Remark'];
         }
 
-        if (array_key_exists("Locked",$param) and $param["Locked"] !== null) {
-            $this->Locked = $param["Locked"];
+        if (array_key_exists('Locked',$param) and $param['Locked'] !== null) {
+            $this->Locked = $param['Locked'];
         }
     }
 }

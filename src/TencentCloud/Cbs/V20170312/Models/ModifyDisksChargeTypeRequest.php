@@ -54,13 +54,13 @@ class ModifyDisksChargeTypeRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DiskIds",$param) and $param["DiskIds"] !== null) {
-            $this->DiskIds = $param["DiskIds"];
+        if (array_key_exists('DiskIds',$param) and $param['DiskIds'] !== null) {
+            $this->DiskIds = $param['DiskIds'];
         }
 
-        if (array_key_exists("DiskChargePrepaid",$param) and $param["DiskChargePrepaid"] !== null) {
+        if (array_key_exists('DiskChargePrepaid',$param) and $param['DiskChargePrepaid'] !== null) {
             $this->DiskChargePrepaid = new DiskChargePrepaid();
-            $this->DiskChargePrepaid->deserialize($param["DiskChargePrepaid"]);
+            $this->DiskChargePrepaid->deserialize($param['DiskChargePrepaid']);
         }
     }
 }

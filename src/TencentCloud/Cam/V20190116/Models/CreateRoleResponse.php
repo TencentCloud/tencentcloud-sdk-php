@@ -58,12 +58,12 @@ class CreateRoleResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RoleId",$param) and $param["RoleId"] !== null) {
-            $this->RoleId = $param["RoleId"];
+        if (array_key_exists('RoleId',$param) and $param['RoleId'] !== null) {
+            $this->RoleId = $param['RoleId'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

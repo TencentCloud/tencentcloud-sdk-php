@@ -62,21 +62,21 @@ class DescribeShieldInstancesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("AppSet",$param) and $param["AppSet"] !== null) {
+        if (array_key_exists('AppSet',$param) and $param['AppSet'] !== null) {
             $this->AppSet = [];
-            foreach ($param["AppSet"] as $key => $value){
+            foreach ($param['AppSet'] as $key => $value){
                 $obj = new AppSetInfo();
                 $obj->deserialize($value);
                 array_push($this->AppSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

@@ -66,21 +66,21 @@ class DescribePolicyGroupListResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("GroupList",$param) and $param["GroupList"] !== null) {
+        if (array_key_exists('GroupList',$param) and $param['GroupList'] !== null) {
             $this->GroupList = [];
-            foreach ($param["GroupList"] as $key => $value){
+            foreach ($param['GroupList'] as $key => $value){
                 $obj = new DescribePolicyGroupListGroup();
                 $obj->deserialize($value);
                 array_push($this->GroupList, $obj);
             }
         }
 
-        if (array_key_exists("Total",$param) and $param["Total"] !== null) {
-            $this->Total = $param["Total"];
+        if (array_key_exists('Total',$param) and $param['Total'] !== null) {
+            $this->Total = $param['Total'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

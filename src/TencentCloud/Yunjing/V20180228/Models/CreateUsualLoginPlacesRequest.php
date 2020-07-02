@@ -54,13 +54,13 @@ class CreateUsualLoginPlacesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Uuids",$param) and $param["Uuids"] !== null) {
-            $this->Uuids = $param["Uuids"];
+        if (array_key_exists('Uuids',$param) and $param['Uuids'] !== null) {
+            $this->Uuids = $param['Uuids'];
         }
 
-        if (array_key_exists("Places",$param) and $param["Places"] !== null) {
+        if (array_key_exists('Places',$param) and $param['Places'] !== null) {
             $this->Places = [];
-            foreach ($param["Places"] as $key => $value){
+            foreach ($param['Places'] as $key => $value){
                 $obj = new Place();
                 $obj->deserialize($value);
                 array_push($this->Places, $obj);

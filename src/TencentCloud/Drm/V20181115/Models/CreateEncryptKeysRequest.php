@@ -70,25 +70,25 @@ class CreateEncryptKeysRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DrmType",$param) and $param["DrmType"] !== null) {
-            $this->DrmType = $param["DrmType"];
+        if (array_key_exists('DrmType',$param) and $param['DrmType'] !== null) {
+            $this->DrmType = $param['DrmType'];
         }
 
-        if (array_key_exists("Keys",$param) and $param["Keys"] !== null) {
+        if (array_key_exists('Keys',$param) and $param['Keys'] !== null) {
             $this->Keys = [];
-            foreach ($param["Keys"] as $key => $value){
+            foreach ($param['Keys'] as $key => $value){
                 $obj = new KeyParam();
                 $obj->deserialize($value);
                 array_push($this->Keys, $obj);
             }
         }
 
-        if (array_key_exists("ContentId",$param) and $param["ContentId"] !== null) {
-            $this->ContentId = $param["ContentId"];
+        if (array_key_exists('ContentId',$param) and $param['ContentId'] !== null) {
+            $this->ContentId = $param['ContentId'];
         }
 
-        if (array_key_exists("ContentType",$param) and $param["ContentType"] !== null) {
-            $this->ContentType = $param["ContentType"];
+        if (array_key_exists('ContentType',$param) and $param['ContentType'] !== null) {
+            $this->ContentType = $param['ContentType'];
         }
     }
 }

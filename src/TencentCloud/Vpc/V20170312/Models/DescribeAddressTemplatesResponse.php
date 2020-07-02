@@ -62,21 +62,21 @@ class DescribeAddressTemplatesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("AddressTemplateSet",$param) and $param["AddressTemplateSet"] !== null) {
+        if (array_key_exists('AddressTemplateSet',$param) and $param['AddressTemplateSet'] !== null) {
             $this->AddressTemplateSet = [];
-            foreach ($param["AddressTemplateSet"] as $key => $value){
+            foreach ($param['AddressTemplateSet'] as $key => $value){
                 $obj = new AddressTemplate();
                 $obj->deserialize($value);
                 array_push($this->AddressTemplateSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

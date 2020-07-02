@@ -46,8 +46,8 @@ class DescribeInsurePacksRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("IdList",$param) and $param["IdList"] !== null) {
-            $this->IdList = $param["IdList"];
+        if (array_key_exists('IdList',$param) and $param['IdList'] !== null) {
+            $this->IdList = $param['IdList'];
         }
     }
 }

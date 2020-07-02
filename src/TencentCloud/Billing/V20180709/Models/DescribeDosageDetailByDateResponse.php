@@ -94,29 +94,29 @@ class DescribeDosageDetailByDateResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Unit",$param) and $param["Unit"] !== null) {
-            $this->Unit = $param["Unit"];
+        if (array_key_exists('Unit',$param) and $param['Unit'] !== null) {
+            $this->Unit = $param['Unit'];
         }
 
-        if (array_key_exists("DetailSets",$param) and $param["DetailSets"] !== null) {
+        if (array_key_exists('DetailSets',$param) and $param['DetailSets'] !== null) {
             $this->DetailSets = [];
-            foreach ($param["DetailSets"] as $key => $value){
+            foreach ($param['DetailSets'] as $key => $value){
                 $obj = new DetailSet();
                 $obj->deserialize($value);
                 array_push($this->DetailSets, $obj);
             }
         }
 
-        if (array_key_exists("RetCode",$param) and $param["RetCode"] !== null) {
-            $this->RetCode = $param["RetCode"];
+        if (array_key_exists('RetCode',$param) and $param['RetCode'] !== null) {
+            $this->RetCode = $param['RetCode'];
         }
 
-        if (array_key_exists("RetMsg",$param) and $param["RetMsg"] !== null) {
-            $this->RetMsg = $param["RetMsg"];
+        if (array_key_exists('RetMsg',$param) and $param['RetMsg'] !== null) {
+            $this->RetMsg = $param['RetMsg'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

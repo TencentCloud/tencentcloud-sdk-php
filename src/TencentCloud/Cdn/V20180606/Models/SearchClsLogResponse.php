@@ -54,13 +54,13 @@ class SearchClsLogResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Logs",$param) and $param["Logs"] !== null) {
+        if (array_key_exists('Logs',$param) and $param['Logs'] !== null) {
             $this->Logs = new ClsSearchLogs();
-            $this->Logs->deserialize($param["Logs"]);
+            $this->Logs->deserialize($param['Logs']);
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

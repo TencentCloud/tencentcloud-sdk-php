@@ -70,21 +70,21 @@ class SealOCRResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SealBody",$param) and $param["SealBody"] !== null) {
-            $this->SealBody = $param["SealBody"];
+        if (array_key_exists('SealBody',$param) and $param['SealBody'] !== null) {
+            $this->SealBody = $param['SealBody'];
         }
 
-        if (array_key_exists("Location",$param) and $param["Location"] !== null) {
+        if (array_key_exists('Location',$param) and $param['Location'] !== null) {
             $this->Location = new Rect();
-            $this->Location->deserialize($param["Location"]);
+            $this->Location->deserialize($param['Location']);
         }
 
-        if (array_key_exists("OtherTexts",$param) and $param["OtherTexts"] !== null) {
-            $this->OtherTexts = $param["OtherTexts"];
+        if (array_key_exists('OtherTexts',$param) and $param['OtherTexts'] !== null) {
+            $this->OtherTexts = $param['OtherTexts'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

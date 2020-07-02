@@ -62,21 +62,21 @@ class DescribeDirectConnectGatewaysResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("DirectConnectGatewaySet",$param) and $param["DirectConnectGatewaySet"] !== null) {
+        if (array_key_exists('DirectConnectGatewaySet',$param) and $param['DirectConnectGatewaySet'] !== null) {
             $this->DirectConnectGatewaySet = [];
-            foreach ($param["DirectConnectGatewaySet"] as $key => $value){
+            foreach ($param['DirectConnectGatewaySet'] as $key => $value){
                 $obj = new DirectConnectGateway();
                 $obj->deserialize($value);
                 array_push($this->DirectConnectGatewaySet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

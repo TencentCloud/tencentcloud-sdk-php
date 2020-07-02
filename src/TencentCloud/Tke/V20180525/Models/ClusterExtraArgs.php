@@ -74,16 +74,16 @@ class ClusterExtraArgs extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("KubeAPIServer",$param) and $param["KubeAPIServer"] !== null) {
-            $this->KubeAPIServer = $param["KubeAPIServer"];
+        if (array_key_exists('KubeAPIServer',$param) and $param['KubeAPIServer'] !== null) {
+            $this->KubeAPIServer = $param['KubeAPIServer'];
         }
 
-        if (array_key_exists("KubeControllerManager",$param) and $param["KubeControllerManager"] !== null) {
-            $this->KubeControllerManager = $param["KubeControllerManager"];
+        if (array_key_exists('KubeControllerManager',$param) and $param['KubeControllerManager'] !== null) {
+            $this->KubeControllerManager = $param['KubeControllerManager'];
         }
 
-        if (array_key_exists("KubeScheduler",$param) and $param["KubeScheduler"] !== null) {
-            $this->KubeScheduler = $param["KubeScheduler"];
+        if (array_key_exists('KubeScheduler',$param) and $param['KubeScheduler'] !== null) {
+            $this->KubeScheduler = $param['KubeScheduler'];
         }
     }
 }

@@ -62,17 +62,17 @@ class ModifyLoadBalancerChargeModeRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LoadBalancerId",$param) and $param["LoadBalancerId"] !== null) {
-            $this->LoadBalancerId = $param["LoadBalancerId"];
+        if (array_key_exists('LoadBalancerId',$param) and $param['LoadBalancerId'] !== null) {
+            $this->LoadBalancerId = $param['LoadBalancerId'];
         }
 
-        if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {
-            $this->PayMode = $param["PayMode"];
+        if (array_key_exists('PayMode',$param) and $param['PayMode'] !== null) {
+            $this->PayMode = $param['PayMode'];
         }
 
-        if (array_key_exists("ListenerSet",$param) and $param["ListenerSet"] !== null) {
+        if (array_key_exists('ListenerSet',$param) and $param['ListenerSet'] !== null) {
             $this->ListenerSet = [];
-            foreach ($param["ListenerSet"] as $key => $value){
+            foreach ($param['ListenerSet'] as $key => $value){
                 $obj = new ModifyLoadBalancerChargeModeListener();
                 $obj->deserialize($value);
                 array_push($this->ListenerSet, $obj);

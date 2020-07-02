@@ -118,38 +118,38 @@ class CreateLinkRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Platform",$param) and $param["Platform"] !== null) {
-            $this->Platform = $param["Platform"];
+        if (array_key_exists('Platform',$param) and $param['Platform'] !== null) {
+            $this->Platform = $param['Platform'];
         }
 
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists('Type',$param) and $param['Type'] !== null) {
+            $this->Type = $param['Type'];
         }
 
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("Owner",$param) and $param["Owner"] !== null) {
+        if (array_key_exists('Owner',$param) and $param['Owner'] !== null) {
             $this->Owner = new Entity();
-            $this->Owner->deserialize($param["Owner"]);
+            $this->Owner->deserialize($param['Owner']);
         }
 
-        if (array_key_exists("DestinationId",$param) and $param["DestinationId"] !== null) {
-            $this->DestinationId = $param["DestinationId"];
+        if (array_key_exists('DestinationId',$param) and $param['DestinationId'] !== null) {
+            $this->DestinationId = $param['DestinationId'];
         }
 
-        if (array_key_exists("DestinationOwner",$param) and $param["DestinationOwner"] !== null) {
+        if (array_key_exists('DestinationOwner',$param) and $param['DestinationOwner'] !== null) {
             $this->DestinationOwner = new Entity();
-            $this->DestinationOwner->deserialize($param["DestinationOwner"]);
+            $this->DestinationOwner->deserialize($param['DestinationOwner']);
         }
 
-        if (array_key_exists("ClassPath",$param) and $param["ClassPath"] !== null) {
-            $this->ClassPath = $param["ClassPath"];
+        if (array_key_exists('ClassPath',$param) and $param['ClassPath'] !== null) {
+            $this->ClassPath = $param['ClassPath'];
         }
 
-        if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
-            $this->Operator = $param["Operator"];
+        if (array_key_exists('Operator',$param) and $param['Operator'] !== null) {
+            $this->Operator = $param['Operator'];
         }
     }
 }

@@ -86,25 +86,25 @@ class CreatePersonResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FaceId",$param) and $param["FaceId"] !== null) {
-            $this->FaceId = $param["FaceId"];
+        if (array_key_exists('FaceId',$param) and $param['FaceId'] !== null) {
+            $this->FaceId = $param['FaceId'];
         }
 
-        if (array_key_exists("FaceRect",$param) and $param["FaceRect"] !== null) {
+        if (array_key_exists('FaceRect',$param) and $param['FaceRect'] !== null) {
             $this->FaceRect = new FaceRect();
-            $this->FaceRect->deserialize($param["FaceRect"]);
+            $this->FaceRect->deserialize($param['FaceRect']);
         }
 
-        if (array_key_exists("SimilarPersonId",$param) and $param["SimilarPersonId"] !== null) {
-            $this->SimilarPersonId = $param["SimilarPersonId"];
+        if (array_key_exists('SimilarPersonId',$param) and $param['SimilarPersonId'] !== null) {
+            $this->SimilarPersonId = $param['SimilarPersonId'];
         }
 
-        if (array_key_exists("FaceModelVersion",$param) and $param["FaceModelVersion"] !== null) {
-            $this->FaceModelVersion = $param["FaceModelVersion"];
+        if (array_key_exists('FaceModelVersion',$param) and $param['FaceModelVersion'] !== null) {
+            $this->FaceModelVersion = $param['FaceModelVersion'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

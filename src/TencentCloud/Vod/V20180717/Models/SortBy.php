@@ -54,12 +54,12 @@ class SortBy extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Field",$param) and $param["Field"] !== null) {
-            $this->Field = $param["Field"];
+        if (array_key_exists('Field',$param) and $param['Field'] !== null) {
+            $this->Field = $param['Field'];
         }
 
-        if (array_key_exists("Order",$param) and $param["Order"] !== null) {
-            $this->Order = $param["Order"];
+        if (array_key_exists('Order',$param) and $param['Order'] !== null) {
+            $this->Order = $param['Order'];
         }
     }
 }

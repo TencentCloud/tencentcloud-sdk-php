@@ -54,12 +54,12 @@ class CreateTmpInstancesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceIds",$param) and $param["InstanceIds"] !== null) {
-            $this->InstanceIds = $param["InstanceIds"];
+        if (array_key_exists('InstanceIds',$param) and $param['InstanceIds'] !== null) {
+            $this->InstanceIds = $param['InstanceIds'];
         }
 
-        if (array_key_exists("RollbackTime",$param) and $param["RollbackTime"] !== null) {
-            $this->RollbackTime = $param["RollbackTime"];
+        if (array_key_exists('RollbackTime',$param) and $param['RollbackTime'] !== null) {
+            $this->RollbackTime = $param['RollbackTime'];
         }
     }
 }

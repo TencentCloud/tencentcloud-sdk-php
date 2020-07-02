@@ -54,13 +54,13 @@ class DescribeContainerInstanceResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ContainerInstance",$param) and $param["ContainerInstance"] !== null) {
+        if (array_key_exists('ContainerInstance',$param) and $param['ContainerInstance'] !== null) {
             $this->ContainerInstance = new ContainerInstance();
-            $this->ContainerInstance->deserialize($param["ContainerInstance"]);
+            $this->ContainerInstance->deserialize($param['ContainerInstance']);
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

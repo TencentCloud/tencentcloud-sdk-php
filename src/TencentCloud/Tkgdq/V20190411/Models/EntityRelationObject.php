@@ -62,16 +62,16 @@ class EntityRelationObject extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
-            $this->Id = $param["Id"];
+        if (array_key_exists('Id',$param) and $param['Id'] !== null) {
+            $this->Id = $param['Id'];
         }
 
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("Popular",$param) and $param["Popular"] !== null) {
-            $this->Popular = $param["Popular"];
+        if (array_key_exists('Popular',$param) and $param['Popular'] !== null) {
+            $this->Popular = $param['Popular'];
         }
     }
 }

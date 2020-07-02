@@ -54,17 +54,17 @@ class FlightInvoiceOCRResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FlightInvoiceInfos",$param) and $param["FlightInvoiceInfos"] !== null) {
+        if (array_key_exists('FlightInvoiceInfos',$param) and $param['FlightInvoiceInfos'] !== null) {
             $this->FlightInvoiceInfos = [];
-            foreach ($param["FlightInvoiceInfos"] as $key => $value){
+            foreach ($param['FlightInvoiceInfos'] as $key => $value){
                 $obj = new FlightInvoiceInfo();
                 $obj->deserialize($value);
                 array_push($this->FlightInvoiceInfos, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

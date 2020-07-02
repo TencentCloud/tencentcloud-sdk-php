@@ -54,12 +54,12 @@ class DeleteOrganizationMemberFromNodeRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MemberUin",$param) and $param["MemberUin"] !== null) {
-            $this->MemberUin = $param["MemberUin"];
+        if (array_key_exists('MemberUin',$param) and $param['MemberUin'] !== null) {
+            $this->MemberUin = $param['MemberUin'];
         }
 
-        if (array_key_exists("NodeId",$param) and $param["NodeId"] !== null) {
-            $this->NodeId = $param["NodeId"];
+        if (array_key_exists('NodeId',$param) and $param['NodeId'] !== null) {
+            $this->NodeId = $param['NodeId'];
         }
     }
 }

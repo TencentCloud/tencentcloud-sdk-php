@@ -46,8 +46,8 @@ class DescribeOrdersRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DealNames",$param) and $param["DealNames"] !== null) {
-            $this->DealNames = $param["DealNames"];
+        if (array_key_exists('DealNames',$param) and $param['DealNames'] !== null) {
+            $this->DealNames = $param['DealNames'];
         }
     }
 }

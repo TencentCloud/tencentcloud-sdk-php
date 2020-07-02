@@ -62,16 +62,16 @@ class ModifyCcnAttributeRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CcnId",$param) and $param["CcnId"] !== null) {
-            $this->CcnId = $param["CcnId"];
+        if (array_key_exists('CcnId',$param) and $param['CcnId'] !== null) {
+            $this->CcnId = $param['CcnId'];
         }
 
-        if (array_key_exists("CcnName",$param) and $param["CcnName"] !== null) {
-            $this->CcnName = $param["CcnName"];
+        if (array_key_exists('CcnName',$param) and $param['CcnName'] !== null) {
+            $this->CcnName = $param['CcnName'];
         }
 
-        if (array_key_exists("CcnDescription",$param) and $param["CcnDescription"] !== null) {
-            $this->CcnDescription = $param["CcnDescription"];
+        if (array_key_exists('CcnDescription',$param) and $param['CcnDescription'] !== null) {
+            $this->CcnDescription = $param['CcnDescription'];
         }
     }
 }

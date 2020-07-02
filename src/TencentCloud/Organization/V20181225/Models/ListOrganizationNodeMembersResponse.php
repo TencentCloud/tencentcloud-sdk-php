@@ -62,21 +62,21 @@ class ListOrganizationNodeMembersResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("Members",$param) and $param["Members"] !== null) {
+        if (array_key_exists('Members',$param) and $param['Members'] !== null) {
             $this->Members = [];
-            foreach ($param["Members"] as $key => $value){
+            foreach ($param['Members'] as $key => $value){
                 $obj = new OrgMember();
                 $obj->deserialize($value);
                 array_push($this->Members, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

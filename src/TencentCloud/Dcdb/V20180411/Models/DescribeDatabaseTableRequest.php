@@ -62,16 +62,16 @@ class DescribeDatabaseTableRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("DbName",$param) and $param["DbName"] !== null) {
-            $this->DbName = $param["DbName"];
+        if (array_key_exists('DbName',$param) and $param['DbName'] !== null) {
+            $this->DbName = $param['DbName'];
         }
 
-        if (array_key_exists("Table",$param) and $param["Table"] !== null) {
-            $this->Table = $param["Table"];
+        if (array_key_exists('Table',$param) and $param['Table'] !== null) {
+            $this->Table = $param['Table'];
         }
     }
 }

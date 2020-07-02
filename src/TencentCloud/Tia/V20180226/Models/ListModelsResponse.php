@@ -54,17 +54,17 @@ class ListModelsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Models",$param) and $param["Models"] !== null) {
+        if (array_key_exists('Models',$param) and $param['Models'] !== null) {
             $this->Models = [];
-            foreach ($param["Models"] as $key => $value){
+            foreach ($param['Models'] as $key => $value){
                 $obj = new Model();
                 $obj->deserialize($value);
                 array_push($this->Models, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

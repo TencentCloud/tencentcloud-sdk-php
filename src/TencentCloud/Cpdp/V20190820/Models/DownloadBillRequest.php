@@ -70,20 +70,20 @@ class DownloadBillRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("StateDate",$param) and $param["StateDate"] !== null) {
-            $this->StateDate = $param["StateDate"];
+        if (array_key_exists('StateDate',$param) and $param['StateDate'] !== null) {
+            $this->StateDate = $param['StateDate'];
         }
 
-        if (array_key_exists("MidasAppId",$param) and $param["MidasAppId"] !== null) {
-            $this->MidasAppId = $param["MidasAppId"];
+        if (array_key_exists('MidasAppId',$param) and $param['MidasAppId'] !== null) {
+            $this->MidasAppId = $param['MidasAppId'];
         }
 
-        if (array_key_exists("MidasSecretId",$param) and $param["MidasSecretId"] !== null) {
-            $this->MidasSecretId = $param["MidasSecretId"];
+        if (array_key_exists('MidasSecretId',$param) and $param['MidasSecretId'] !== null) {
+            $this->MidasSecretId = $param['MidasSecretId'];
         }
 
-        if (array_key_exists("MidasSignature",$param) and $param["MidasSignature"] !== null) {
-            $this->MidasSignature = $param["MidasSignature"];
+        if (array_key_exists('MidasSignature',$param) and $param['MidasSignature'] !== null) {
+            $this->MidasSignature = $param['MidasSignature'];
         }
     }
 }

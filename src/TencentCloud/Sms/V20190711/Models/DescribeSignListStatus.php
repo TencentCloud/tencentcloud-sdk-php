@@ -106,28 +106,28 @@ class DescribeSignListStatus extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SignId",$param) and $param["SignId"] !== null) {
-            $this->SignId = $param["SignId"];
+        if (array_key_exists('SignId',$param) and $param['SignId'] !== null) {
+            $this->SignId = $param['SignId'];
         }
 
-        if (array_key_exists("International",$param) and $param["International"] !== null) {
-            $this->International = $param["International"];
+        if (array_key_exists('International',$param) and $param['International'] !== null) {
+            $this->International = $param['International'];
         }
 
-        if (array_key_exists("StatusCode",$param) and $param["StatusCode"] !== null) {
-            $this->StatusCode = $param["StatusCode"];
+        if (array_key_exists('StatusCode',$param) and $param['StatusCode'] !== null) {
+            $this->StatusCode = $param['StatusCode'];
         }
 
-        if (array_key_exists("ReviewReply",$param) and $param["ReviewReply"] !== null) {
-            $this->ReviewReply = $param["ReviewReply"];
+        if (array_key_exists('ReviewReply',$param) and $param['ReviewReply'] !== null) {
+            $this->ReviewReply = $param['ReviewReply'];
         }
 
-        if (array_key_exists("SignName",$param) and $param["SignName"] !== null) {
-            $this->SignName = $param["SignName"];
+        if (array_key_exists('SignName',$param) and $param['SignName'] !== null) {
+            $this->SignName = $param['SignName'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
     }
 }

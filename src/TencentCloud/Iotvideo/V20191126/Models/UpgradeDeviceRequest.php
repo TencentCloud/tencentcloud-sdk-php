@@ -62,16 +62,16 @@ class UpgradeDeviceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Tid",$param) and $param["Tid"] !== null) {
-            $this->Tid = $param["Tid"];
+        if (array_key_exists('Tid',$param) and $param['Tid'] !== null) {
+            $this->Tid = $param['Tid'];
         }
 
-        if (array_key_exists("OtaVersion",$param) and $param["OtaVersion"] !== null) {
-            $this->OtaVersion = $param["OtaVersion"];
+        if (array_key_exists('OtaVersion',$param) and $param['OtaVersion'] !== null) {
+            $this->OtaVersion = $param['OtaVersion'];
         }
 
-        if (array_key_exists("UpgradeNow",$param) and $param["UpgradeNow"] !== null) {
-            $this->UpgradeNow = $param["UpgradeNow"];
+        if (array_key_exists('UpgradeNow',$param) and $param['UpgradeNow'] !== null) {
+            $this->UpgradeNow = $param['UpgradeNow'];
         }
     }
 }

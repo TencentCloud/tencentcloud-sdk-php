@@ -70,20 +70,20 @@ class VerifyChipBurnInfoResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Pass",$param) and $param["Pass"] !== null) {
-            $this->Pass = $param["Pass"];
+        if (array_key_exists('Pass',$param) and $param['Pass'] !== null) {
+            $this->Pass = $param['Pass'];
         }
 
-        if (array_key_exists("VerifiedTimes",$param) and $param["VerifiedTimes"] !== null) {
-            $this->VerifiedTimes = $param["VerifiedTimes"];
+        if (array_key_exists('VerifiedTimes',$param) and $param['VerifiedTimes'] !== null) {
+            $this->VerifiedTimes = $param['VerifiedTimes'];
         }
 
-        if (array_key_exists("LeftTimes",$param) and $param["LeftTimes"] !== null) {
-            $this->LeftTimes = $param["LeftTimes"];
+        if (array_key_exists('LeftTimes',$param) and $param['LeftTimes'] !== null) {
+            $this->LeftTimes = $param['LeftTimes'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

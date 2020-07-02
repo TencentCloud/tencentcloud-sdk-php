@@ -82,16 +82,16 @@ class ImageWatermarkTemplate extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ImageUrl",$param) and $param["ImageUrl"] !== null) {
-            $this->ImageUrl = $param["ImageUrl"];
+        if (array_key_exists('ImageUrl',$param) and $param['ImageUrl'] !== null) {
+            $this->ImageUrl = $param['ImageUrl'];
         }
 
-        if (array_key_exists("Width",$param) and $param["Width"] !== null) {
-            $this->Width = $param["Width"];
+        if (array_key_exists('Width',$param) and $param['Width'] !== null) {
+            $this->Width = $param['Width'];
         }
 
-        if (array_key_exists("Height",$param) and $param["Height"] !== null) {
-            $this->Height = $param["Height"];
+        if (array_key_exists('Height',$param) and $param['Height'] !== null) {
+            $this->Height = $param['Height'];
         }
     }
 }

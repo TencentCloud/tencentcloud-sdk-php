@@ -102,36 +102,36 @@ class SetTrafficMirrorHealthSwitchRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TrafficMirrorId",$param) and $param["TrafficMirrorId"] !== null) {
-            $this->TrafficMirrorId = $param["TrafficMirrorId"];
+        if (array_key_exists('TrafficMirrorId',$param) and $param['TrafficMirrorId'] !== null) {
+            $this->TrafficMirrorId = $param['TrafficMirrorId'];
         }
 
-        if (array_key_exists("HealthSwitch",$param) and $param["HealthSwitch"] !== null) {
-            $this->HealthSwitch = $param["HealthSwitch"];
+        if (array_key_exists('HealthSwitch',$param) and $param['HealthSwitch'] !== null) {
+            $this->HealthSwitch = $param['HealthSwitch'];
         }
 
-        if (array_key_exists("HealthNum",$param) and $param["HealthNum"] !== null) {
-            $this->HealthNum = $param["HealthNum"];
+        if (array_key_exists('HealthNum',$param) and $param['HealthNum'] !== null) {
+            $this->HealthNum = $param['HealthNum'];
         }
 
-        if (array_key_exists("UnhealthNum",$param) and $param["UnhealthNum"] !== null) {
-            $this->UnhealthNum = $param["UnhealthNum"];
+        if (array_key_exists('UnhealthNum',$param) and $param['UnhealthNum'] !== null) {
+            $this->UnhealthNum = $param['UnhealthNum'];
         }
 
-        if (array_key_exists("IntervalTime",$param) and $param["IntervalTime"] !== null) {
-            $this->IntervalTime = $param["IntervalTime"];
+        if (array_key_exists('IntervalTime',$param) and $param['IntervalTime'] !== null) {
+            $this->IntervalTime = $param['IntervalTime'];
         }
 
-        if (array_key_exists("HttpCheckDomain",$param) and $param["HttpCheckDomain"] !== null) {
-            $this->HttpCheckDomain = $param["HttpCheckDomain"];
+        if (array_key_exists('HttpCheckDomain',$param) and $param['HttpCheckDomain'] !== null) {
+            $this->HttpCheckDomain = $param['HttpCheckDomain'];
         }
 
-        if (array_key_exists("HttpCheckPath",$param) and $param["HttpCheckPath"] !== null) {
-            $this->HttpCheckPath = $param["HttpCheckPath"];
+        if (array_key_exists('HttpCheckPath',$param) and $param['HttpCheckPath'] !== null) {
+            $this->HttpCheckPath = $param['HttpCheckPath'];
         }
 
-        if (array_key_exists("HttpCodes",$param) and $param["HttpCodes"] !== null) {
-            $this->HttpCodes = $param["HttpCodes"];
+        if (array_key_exists('HttpCodes',$param) and $param['HttpCodes'] !== null) {
+            $this->HttpCodes = $param['HttpCodes'];
         }
     }
 }

@@ -78,24 +78,24 @@ class MRLResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DisturbLevel",$param) and $param["DisturbLevel"] !== null) {
-            $this->DisturbLevel = $param["DisturbLevel"];
+        if (array_key_exists('DisturbLevel',$param) and $param['DisturbLevel'] !== null) {
+            $this->DisturbLevel = $param['DisturbLevel'];
         }
 
-        if (array_key_exists("HouseAgentLevel",$param) and $param["HouseAgentLevel"] !== null) {
-            $this->HouseAgentLevel = $param["HouseAgentLevel"];
+        if (array_key_exists('HouseAgentLevel',$param) and $param['HouseAgentLevel'] !== null) {
+            $this->HouseAgentLevel = $param['HouseAgentLevel'];
         }
 
-        if (array_key_exists("InsuranceLevel",$param) and $param["InsuranceLevel"] !== null) {
-            $this->InsuranceLevel = $param["InsuranceLevel"];
+        if (array_key_exists('InsuranceLevel',$param) and $param['InsuranceLevel'] !== null) {
+            $this->InsuranceLevel = $param['InsuranceLevel'];
         }
 
-        if (array_key_exists("SalesLevel",$param) and $param["SalesLevel"] !== null) {
-            $this->SalesLevel = $param["SalesLevel"];
+        if (array_key_exists('SalesLevel',$param) and $param['SalesLevel'] !== null) {
+            $this->SalesLevel = $param['SalesLevel'];
         }
 
-        if (array_key_exists("CheatLevel",$param) and $param["CheatLevel"] !== null) {
-            $this->CheatLevel = $param["CheatLevel"];
+        if (array_key_exists('CheatLevel',$param) and $param['CheatLevel'] !== null) {
+            $this->CheatLevel = $param['CheatLevel'];
         }
     }
 }

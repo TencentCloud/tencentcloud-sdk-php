@@ -46,8 +46,8 @@ class DeleteAuditRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AuditName",$param) and $param["AuditName"] !== null) {
-            $this->AuditName = $param["AuditName"];
+        if (array_key_exists('AuditName',$param) and $param['AuditName'] !== null) {
+            $this->AuditName = $param['AuditName'];
         }
     }
 }

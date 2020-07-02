@@ -62,16 +62,16 @@ class TerminateTaskInstanceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("JobId",$param) and $param["JobId"] !== null) {
-            $this->JobId = $param["JobId"];
+        if (array_key_exists('JobId',$param) and $param['JobId'] !== null) {
+            $this->JobId = $param['JobId'];
         }
 
-        if (array_key_exists("TaskName",$param) and $param["TaskName"] !== null) {
-            $this->TaskName = $param["TaskName"];
+        if (array_key_exists('TaskName',$param) and $param['TaskName'] !== null) {
+            $this->TaskName = $param['TaskName'];
         }
 
-        if (array_key_exists("TaskInstanceIndex",$param) and $param["TaskInstanceIndex"] !== null) {
-            $this->TaskInstanceIndex = $param["TaskInstanceIndex"];
+        if (array_key_exists('TaskInstanceIndex',$param) and $param['TaskInstanceIndex'] !== null) {
+            $this->TaskInstanceIndex = $param['TaskInstanceIndex'];
         }
     }
 }

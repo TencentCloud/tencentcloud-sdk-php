@@ -70,20 +70,20 @@ class DescribeAppStatisticsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BizId",$param) and $param["BizId"] !== null) {
-            $this->BizId = $param["BizId"];
+        if (array_key_exists('BizId',$param) and $param['BizId'] !== null) {
+            $this->BizId = $param['BizId'];
         }
 
-        if (array_key_exists("StartDate",$param) and $param["StartDate"] !== null) {
-            $this->StartDate = $param["StartDate"];
+        if (array_key_exists('StartDate',$param) and $param['StartDate'] !== null) {
+            $this->StartDate = $param['StartDate'];
         }
 
-        if (array_key_exists("EndDate",$param) and $param["EndDate"] !== null) {
-            $this->EndDate = $param["EndDate"];
+        if (array_key_exists('EndDate',$param) and $param['EndDate'] !== null) {
+            $this->EndDate = $param['EndDate'];
         }
 
-        if (array_key_exists("Services",$param) and $param["Services"] !== null) {
-            $this->Services = $param["Services"];
+        if (array_key_exists('Services',$param) and $param['Services'] !== null) {
+            $this->Services = $param['Services'];
         }
     }
 }

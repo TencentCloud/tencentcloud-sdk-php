@@ -118,36 +118,36 @@ class GrantAccountPrivilegesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("UserName",$param) and $param["UserName"] !== null) {
-            $this->UserName = $param["UserName"];
+        if (array_key_exists('UserName',$param) and $param['UserName'] !== null) {
+            $this->UserName = $param['UserName'];
         }
 
-        if (array_key_exists("Host",$param) and $param["Host"] !== null) {
-            $this->Host = $param["Host"];
+        if (array_key_exists('Host',$param) and $param['Host'] !== null) {
+            $this->Host = $param['Host'];
         }
 
-        if (array_key_exists("DbName",$param) and $param["DbName"] !== null) {
-            $this->DbName = $param["DbName"];
+        if (array_key_exists('DbName',$param) and $param['DbName'] !== null) {
+            $this->DbName = $param['DbName'];
         }
 
-        if (array_key_exists("Privileges",$param) and $param["Privileges"] !== null) {
-            $this->Privileges = $param["Privileges"];
+        if (array_key_exists('Privileges',$param) and $param['Privileges'] !== null) {
+            $this->Privileges = $param['Privileges'];
         }
 
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists('Type',$param) and $param['Type'] !== null) {
+            $this->Type = $param['Type'];
         }
 
-        if (array_key_exists("Object",$param) and $param["Object"] !== null) {
-            $this->Object = $param["Object"];
+        if (array_key_exists('Object',$param) and $param['Object'] !== null) {
+            $this->Object = $param['Object'];
         }
 
-        if (array_key_exists("ColName",$param) and $param["ColName"] !== null) {
-            $this->ColName = $param["ColName"];
+        if (array_key_exists('ColName',$param) and $param['ColName'] !== null) {
+            $this->ColName = $param['ColName'];
         }
     }
 }

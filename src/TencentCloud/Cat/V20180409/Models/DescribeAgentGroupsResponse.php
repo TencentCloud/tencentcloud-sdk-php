@@ -62,22 +62,22 @@ class DescribeAgentGroupsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SysDefaultGroup",$param) and $param["SysDefaultGroup"] !== null) {
+        if (array_key_exists('SysDefaultGroup',$param) and $param['SysDefaultGroup'] !== null) {
             $this->SysDefaultGroup = new AgentGroup();
-            $this->SysDefaultGroup->deserialize($param["SysDefaultGroup"]);
+            $this->SysDefaultGroup->deserialize($param['SysDefaultGroup']);
         }
 
-        if (array_key_exists("CustomGroups",$param) and $param["CustomGroups"] !== null) {
+        if (array_key_exists('CustomGroups',$param) and $param['CustomGroups'] !== null) {
             $this->CustomGroups = [];
-            foreach ($param["CustomGroups"] as $key => $value){
+            foreach ($param['CustomGroups'] as $key => $value){
                 $obj = new AgentGroup();
                 $obj->deserialize($value);
                 array_push($this->CustomGroups, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

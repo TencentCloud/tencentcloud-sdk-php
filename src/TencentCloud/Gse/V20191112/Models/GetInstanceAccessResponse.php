@@ -54,13 +54,13 @@ class GetInstanceAccessResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceAccess",$param) and $param["InstanceAccess"] !== null) {
+        if (array_key_exists('InstanceAccess',$param) and $param['InstanceAccess'] !== null) {
             $this->InstanceAccess = new InstanceAccess();
-            $this->InstanceAccess->deserialize($param["InstanceAccess"]);
+            $this->InstanceAccess->deserialize($param['InstanceAccess']);
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

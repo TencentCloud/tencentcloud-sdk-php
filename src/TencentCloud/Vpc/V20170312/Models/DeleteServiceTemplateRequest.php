@@ -46,8 +46,8 @@ class DeleteServiceTemplateRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ServiceTemplateId",$param) and $param["ServiceTemplateId"] !== null) {
-            $this->ServiceTemplateId = $param["ServiceTemplateId"];
+        if (array_key_exists('ServiceTemplateId',$param) and $param['ServiceTemplateId'] !== null) {
+            $this->ServiceTemplateId = $param['ServiceTemplateId'];
         }
     }
 }

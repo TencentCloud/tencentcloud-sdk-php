@@ -62,16 +62,16 @@ class DescribeBrandCommentCountRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BrandId",$param) and $param["BrandId"] !== null) {
-            $this->BrandId = $param["BrandId"];
+        if (array_key_exists('BrandId',$param) and $param['BrandId'] !== null) {
+            $this->BrandId = $param['BrandId'];
         }
 
-        if (array_key_exists("StartDate",$param) and $param["StartDate"] !== null) {
-            $this->StartDate = $param["StartDate"];
+        if (array_key_exists('StartDate',$param) and $param['StartDate'] !== null) {
+            $this->StartDate = $param['StartDate'];
         }
 
-        if (array_key_exists("EndDate",$param) and $param["EndDate"] !== null) {
-            $this->EndDate = $param["EndDate"];
+        if (array_key_exists('EndDate',$param) and $param['EndDate'] !== null) {
+            $this->EndDate = $param['EndDate'];
         }
     }
 }

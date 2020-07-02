@@ -62,17 +62,17 @@ class RunInstancesForNode extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("NodeRole",$param) and $param["NodeRole"] !== null) {
-            $this->NodeRole = $param["NodeRole"];
+        if (array_key_exists('NodeRole',$param) and $param['NodeRole'] !== null) {
+            $this->NodeRole = $param['NodeRole'];
         }
 
-        if (array_key_exists("RunInstancesPara",$param) and $param["RunInstancesPara"] !== null) {
-            $this->RunInstancesPara = $param["RunInstancesPara"];
+        if (array_key_exists('RunInstancesPara',$param) and $param['RunInstancesPara'] !== null) {
+            $this->RunInstancesPara = $param['RunInstancesPara'];
         }
 
-        if (array_key_exists("InstanceAdvancedSettingsOverrides",$param) and $param["InstanceAdvancedSettingsOverrides"] !== null) {
+        if (array_key_exists('InstanceAdvancedSettingsOverrides',$param) and $param['InstanceAdvancedSettingsOverrides'] !== null) {
             $this->InstanceAdvancedSettingsOverrides = [];
-            foreach ($param["InstanceAdvancedSettingsOverrides"] as $key => $value){
+            foreach ($param['InstanceAdvancedSettingsOverrides'] as $key => $value){
                 $obj = new InstanceAdvancedSettings();
                 $obj->deserialize($value);
                 array_push($this->InstanceAdvancedSettingsOverrides, $obj);

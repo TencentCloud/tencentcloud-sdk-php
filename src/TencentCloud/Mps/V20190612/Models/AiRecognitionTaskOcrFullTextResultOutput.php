@@ -46,9 +46,9 @@ class AiRecognitionTaskOcrFullTextResultOutput extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SegmentSet",$param) and $param["SegmentSet"] !== null) {
+        if (array_key_exists('SegmentSet',$param) and $param['SegmentSet'] !== null) {
             $this->SegmentSet = [];
-            foreach ($param["SegmentSet"] as $key => $value){
+            foreach ($param['SegmentSet'] as $key => $value){
                 $obj = new AiRecognitionTaskOcrFullTextSegmentItem();
                 $obj->deserialize($value);
                 array_push($this->SegmentSet, $obj);

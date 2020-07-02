@@ -54,12 +54,12 @@ class CheckFacePhotoRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FileContent",$param) and $param["FileContent"] !== null) {
-            $this->FileContent = $param["FileContent"];
+        if (array_key_exists('FileContent',$param) and $param['FileContent'] !== null) {
+            $this->FileContent = $param['FileContent'];
         }
 
-        if (array_key_exists("FileType",$param) and $param["FileType"] !== null) {
-            $this->FileType = $param["FileType"];
+        if (array_key_exists('FileType',$param) and $param['FileType'] !== null) {
+            $this->FileType = $param['FileType'];
         }
     }
 }

@@ -54,17 +54,17 @@ class DescribeVpcResourceDashboardResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ResourceDashboardSet",$param) and $param["ResourceDashboardSet"] !== null) {
+        if (array_key_exists('ResourceDashboardSet',$param) and $param['ResourceDashboardSet'] !== null) {
             $this->ResourceDashboardSet = [];
-            foreach ($param["ResourceDashboardSet"] as $key => $value){
+            foreach ($param['ResourceDashboardSet'] as $key => $value){
                 $obj = new ResourceDashboard();
                 $obj->deserialize($value);
                 array_push($this->ResourceDashboardSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

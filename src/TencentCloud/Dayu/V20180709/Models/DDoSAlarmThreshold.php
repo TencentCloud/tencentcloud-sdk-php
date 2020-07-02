@@ -54,12 +54,12 @@ class DDoSAlarmThreshold extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AlarmType",$param) and $param["AlarmType"] !== null) {
-            $this->AlarmType = $param["AlarmType"];
+        if (array_key_exists('AlarmType',$param) and $param['AlarmType'] !== null) {
+            $this->AlarmType = $param['AlarmType'];
         }
 
-        if (array_key_exists("AlarmThreshold",$param) and $param["AlarmThreshold"] !== null) {
-            $this->AlarmThreshold = $param["AlarmThreshold"];
+        if (array_key_exists('AlarmThreshold',$param) and $param['AlarmThreshold'] !== null) {
+            $this->AlarmThreshold = $param['AlarmThreshold'];
         }
     }
 }

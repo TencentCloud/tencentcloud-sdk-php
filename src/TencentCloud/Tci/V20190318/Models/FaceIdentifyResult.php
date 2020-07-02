@@ -70,20 +70,20 @@ class FaceIdentifyResult extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FaceId",$param) and $param["FaceId"] !== null) {
-            $this->FaceId = $param["FaceId"];
+        if (array_key_exists('FaceId',$param) and $param['FaceId'] !== null) {
+            $this->FaceId = $param['FaceId'];
         }
 
-        if (array_key_exists("LibraryId",$param) and $param["LibraryId"] !== null) {
-            $this->LibraryId = $param["LibraryId"];
+        if (array_key_exists('LibraryId',$param) and $param['LibraryId'] !== null) {
+            $this->LibraryId = $param['LibraryId'];
         }
 
-        if (array_key_exists("PersonId",$param) and $param["PersonId"] !== null) {
-            $this->PersonId = $param["PersonId"];
+        if (array_key_exists('PersonId',$param) and $param['PersonId'] !== null) {
+            $this->PersonId = $param['PersonId'];
         }
 
-        if (array_key_exists("Similarity",$param) and $param["Similarity"] !== null) {
-            $this->Similarity = $param["Similarity"];
+        if (array_key_exists('Similarity',$param) and $param['Similarity'] !== null) {
+            $this->Similarity = $param['Similarity'];
         }
     }
 }

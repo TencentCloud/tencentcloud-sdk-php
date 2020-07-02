@@ -54,12 +54,12 @@ class HaVipAssociateAddressIpRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("HaVipId",$param) and $param["HaVipId"] !== null) {
-            $this->HaVipId = $param["HaVipId"];
+        if (array_key_exists('HaVipId',$param) and $param['HaVipId'] !== null) {
+            $this->HaVipId = $param['HaVipId'];
         }
 
-        if (array_key_exists("AddressIp",$param) and $param["AddressIp"] !== null) {
-            $this->AddressIp = $param["AddressIp"];
+        if (array_key_exists('AddressIp',$param) and $param['AddressIp'] !== null) {
+            $this->AddressIp = $param['AddressIp'];
         }
     }
 }

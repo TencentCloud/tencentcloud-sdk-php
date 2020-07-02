@@ -110,40 +110,40 @@ class AgentTaxPaymentBatch extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("StatusMsg",$param) and $param["StatusMsg"] !== null) {
-            $this->StatusMsg = $param["StatusMsg"];
+        if (array_key_exists('StatusMsg',$param) and $param['StatusMsg'] !== null) {
+            $this->StatusMsg = $param['StatusMsg'];
         }
 
-        if (array_key_exists("BatchNum",$param) and $param["BatchNum"] !== null) {
-            $this->BatchNum = $param["BatchNum"];
+        if (array_key_exists('BatchNum',$param) and $param['BatchNum'] !== null) {
+            $this->BatchNum = $param['BatchNum'];
         }
 
-        if (array_key_exists("InfoNum",$param) and $param["InfoNum"] !== null) {
-            $this->InfoNum = $param["InfoNum"];
+        if (array_key_exists('InfoNum',$param) and $param['InfoNum'] !== null) {
+            $this->InfoNum = $param['InfoNum'];
         }
 
-        if (array_key_exists("RawElectronicCertUrl",$param) and $param["RawElectronicCertUrl"] !== null) {
-            $this->RawElectronicCertUrl = $param["RawElectronicCertUrl"];
+        if (array_key_exists('RawElectronicCertUrl',$param) and $param['RawElectronicCertUrl'] !== null) {
+            $this->RawElectronicCertUrl = $param['RawElectronicCertUrl'];
         }
 
-        if (array_key_exists("AgentId",$param) and $param["AgentId"] !== null) {
-            $this->AgentId = $param["AgentId"];
+        if (array_key_exists('AgentId',$param) and $param['AgentId'] !== null) {
+            $this->AgentId = $param['AgentId'];
         }
 
-        if (array_key_exists("FileName",$param) and $param["FileName"] !== null) {
-            $this->FileName = $param["FileName"];
+        if (array_key_exists('FileName',$param) and $param['FileName'] !== null) {
+            $this->FileName = $param['FileName'];
         }
 
-        if (array_key_exists("StatusCode",$param) and $param["StatusCode"] !== null) {
-            $this->StatusCode = $param["StatusCode"];
+        if (array_key_exists('StatusCode',$param) and $param['StatusCode'] !== null) {
+            $this->StatusCode = $param['StatusCode'];
         }
 
-        if (array_key_exists("Channel",$param) and $param["Channel"] !== null) {
-            $this->Channel = $param["Channel"];
+        if (array_key_exists('Channel',$param) and $param['Channel'] !== null) {
+            $this->Channel = $param['Channel'];
         }
 
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists('Type',$param) and $param['Type'] !== null) {
+            $this->Type = $param['Type'];
         }
     }
 }

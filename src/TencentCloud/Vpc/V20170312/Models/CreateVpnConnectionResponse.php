@@ -54,13 +54,13 @@ class CreateVpnConnectionResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("VpnConnection",$param) and $param["VpnConnection"] !== null) {
+        if (array_key_exists('VpnConnection',$param) and $param['VpnConnection'] !== null) {
             $this->VpnConnection = new VpnConnection();
-            $this->VpnConnection->deserialize($param["VpnConnection"]);
+            $this->VpnConnection->deserialize($param['VpnConnection']);
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

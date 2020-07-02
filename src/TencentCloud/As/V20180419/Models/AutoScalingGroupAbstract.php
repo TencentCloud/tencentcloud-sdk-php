@@ -54,12 +54,12 @@ class AutoScalingGroupAbstract extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AutoScalingGroupId",$param) and $param["AutoScalingGroupId"] !== null) {
-            $this->AutoScalingGroupId = $param["AutoScalingGroupId"];
+        if (array_key_exists('AutoScalingGroupId',$param) and $param['AutoScalingGroupId'] !== null) {
+            $this->AutoScalingGroupId = $param['AutoScalingGroupId'];
         }
 
-        if (array_key_exists("AutoScalingGroupName",$param) and $param["AutoScalingGroupName"] !== null) {
-            $this->AutoScalingGroupName = $param["AutoScalingGroupName"];
+        if (array_key_exists('AutoScalingGroupName',$param) and $param['AutoScalingGroupName'] !== null) {
+            $this->AutoScalingGroupName = $param['AutoScalingGroupName'];
         }
     }
 }

@@ -70,13 +70,13 @@ class AuthorizationInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Authorizee",$param) and $param["Authorizee"] !== null) {
+        if (array_key_exists('Authorizee',$param) and $param['Authorizee'] !== null) {
             $this->Authorizee = new Entity();
-            $this->Authorizee->deserialize($param["Authorizee"]);
+            $this->Authorizee->deserialize($param['Authorizee']);
         }
 
-        if (array_key_exists("PermissionSet",$param) and $param["PermissionSet"] !== null) {
-            $this->PermissionSet = $param["PermissionSet"];
+        if (array_key_exists('PermissionSet',$param) and $param['PermissionSet'] !== null) {
+            $this->PermissionSet = $param['PermissionSet'];
         }
     }
 }

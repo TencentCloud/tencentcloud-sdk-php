@@ -62,16 +62,16 @@ class CreateInstanceTokenRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RegistryId",$param) and $param["RegistryId"] !== null) {
-            $this->RegistryId = $param["RegistryId"];
+        if (array_key_exists('RegistryId',$param) and $param['RegistryId'] !== null) {
+            $this->RegistryId = $param['RegistryId'];
         }
 
-        if (array_key_exists("TokenType",$param) and $param["TokenType"] !== null) {
-            $this->TokenType = $param["TokenType"];
+        if (array_key_exists('TokenType',$param) and $param['TokenType'] !== null) {
+            $this->TokenType = $param['TokenType'];
         }
 
-        if (array_key_exists("Desc",$param) and $param["Desc"] !== null) {
-            $this->Desc = $param["Desc"];
+        if (array_key_exists('Desc',$param) and $param['Desc'] !== null) {
+            $this->Desc = $param['Desc'];
         }
     }
 }

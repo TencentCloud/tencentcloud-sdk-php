@@ -54,12 +54,12 @@ class RollbackTimeRange extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Begin",$param) and $param["Begin"] !== null) {
-            $this->Begin = $param["Begin"];
+        if (array_key_exists('Begin',$param) and $param['Begin'] !== null) {
+            $this->Begin = $param['Begin'];
         }
 
-        if (array_key_exists("End",$param) and $param["End"] !== null) {
-            $this->End = $param["End"];
+        if (array_key_exists('End',$param) and $param['End'] !== null) {
+            $this->End = $param['End'];
         }
     }
 }

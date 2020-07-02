@@ -62,16 +62,16 @@ class SrvInvokeRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Service",$param) and $param["Service"] !== null) {
-            $this->Service = $param["Service"];
+        if (array_key_exists('Service',$param) and $param['Service'] !== null) {
+            $this->Service = $param['Service'];
         }
 
-        if (array_key_exists("Method",$param) and $param["Method"] !== null) {
-            $this->Method = $param["Method"];
+        if (array_key_exists('Method',$param) and $param['Method'] !== null) {
+            $this->Method = $param['Method'];
         }
 
-        if (array_key_exists("Param",$param) and $param["Param"] !== null) {
-            $this->Param = $param["Param"];
+        if (array_key_exists('Param',$param) and $param['Param'] !== null) {
+            $this->Param = $param['Param'];
         }
     }
 }

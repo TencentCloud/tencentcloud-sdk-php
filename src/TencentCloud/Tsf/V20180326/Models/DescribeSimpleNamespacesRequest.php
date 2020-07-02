@@ -118,44 +118,44 @@ class DescribeSimpleNamespacesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("NamespaceIdList",$param) and $param["NamespaceIdList"] !== null) {
-            $this->NamespaceIdList = $param["NamespaceIdList"];
+        if (array_key_exists('NamespaceIdList',$param) and $param['NamespaceIdList'] !== null) {
+            $this->NamespaceIdList = $param['NamespaceIdList'];
         }
 
-        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
-            $this->ClusterId = $param["ClusterId"];
+        if (array_key_exists('ClusterId',$param) and $param['ClusterId'] !== null) {
+            $this->ClusterId = $param['ClusterId'];
         }
 
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
+        if (array_key_exists('Limit',$param) and $param['Limit'] !== null) {
+            $this->Limit = $param['Limit'];
         }
 
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
+        if (array_key_exists('Offset',$param) and $param['Offset'] !== null) {
+            $this->Offset = $param['Offset'];
         }
 
-        if (array_key_exists("NamespaceId",$param) and $param["NamespaceId"] !== null) {
-            $this->NamespaceId = $param["NamespaceId"];
+        if (array_key_exists('NamespaceId',$param) and $param['NamespaceId'] !== null) {
+            $this->NamespaceId = $param['NamespaceId'];
         }
 
-        if (array_key_exists("NamespaceResourceTypeList",$param) and $param["NamespaceResourceTypeList"] !== null) {
-            $this->NamespaceResourceTypeList = $param["NamespaceResourceTypeList"];
+        if (array_key_exists('NamespaceResourceTypeList',$param) and $param['NamespaceResourceTypeList'] !== null) {
+            $this->NamespaceResourceTypeList = $param['NamespaceResourceTypeList'];
         }
 
-        if (array_key_exists("SearchWord",$param) and $param["SearchWord"] !== null) {
-            $this->SearchWord = $param["SearchWord"];
+        if (array_key_exists('SearchWord',$param) and $param['SearchWord'] !== null) {
+            $this->SearchWord = $param['SearchWord'];
         }
 
-        if (array_key_exists("NamespaceTypeList",$param) and $param["NamespaceTypeList"] !== null) {
-            $this->NamespaceTypeList = $param["NamespaceTypeList"];
+        if (array_key_exists('NamespaceTypeList',$param) and $param['NamespaceTypeList'] !== null) {
+            $this->NamespaceTypeList = $param['NamespaceTypeList'];
         }
 
-        if (array_key_exists("NamespaceName",$param) and $param["NamespaceName"] !== null) {
-            $this->NamespaceName = $param["NamespaceName"];
+        if (array_key_exists('NamespaceName',$param) and $param['NamespaceName'] !== null) {
+            $this->NamespaceName = $param['NamespaceName'];
         }
 
-        if (array_key_exists("IsDefault",$param) and $param["IsDefault"] !== null) {
-            $this->IsDefault = $param["IsDefault"];
+        if (array_key_exists('IsDefault',$param) and $param['IsDefault'] !== null) {
+            $this->IsDefault = $param['IsDefault'];
         }
     }
 }

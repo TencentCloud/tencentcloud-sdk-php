@@ -62,22 +62,22 @@ class BodyJointsResult extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BoundBox",$param) and $param["BoundBox"] !== null) {
+        if (array_key_exists('BoundBox',$param) and $param['BoundBox'] !== null) {
             $this->BoundBox = new BoundRect();
-            $this->BoundBox->deserialize($param["BoundBox"]);
+            $this->BoundBox->deserialize($param['BoundBox']);
         }
 
-        if (array_key_exists("BodyJoints",$param) and $param["BodyJoints"] !== null) {
+        if (array_key_exists('BodyJoints',$param) and $param['BodyJoints'] !== null) {
             $this->BodyJoints = [];
-            foreach ($param["BodyJoints"] as $key => $value){
+            foreach ($param['BodyJoints'] as $key => $value){
                 $obj = new KeyPointInfo();
                 $obj->deserialize($value);
                 array_push($this->BodyJoints, $obj);
             }
         }
 
-        if (array_key_exists("Confidence",$param) and $param["Confidence"] !== null) {
-            $this->Confidence = $param["Confidence"];
+        if (array_key_exists('Confidence',$param) and $param['Confidence'] !== null) {
+            $this->Confidence = $param['Confidence'];
         }
     }
 }

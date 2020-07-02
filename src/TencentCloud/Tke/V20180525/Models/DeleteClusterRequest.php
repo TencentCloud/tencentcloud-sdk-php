@@ -62,17 +62,17 @@ class DeleteClusterRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
-            $this->ClusterId = $param["ClusterId"];
+        if (array_key_exists('ClusterId',$param) and $param['ClusterId'] !== null) {
+            $this->ClusterId = $param['ClusterId'];
         }
 
-        if (array_key_exists("InstanceDeleteMode",$param) and $param["InstanceDeleteMode"] !== null) {
-            $this->InstanceDeleteMode = $param["InstanceDeleteMode"];
+        if (array_key_exists('InstanceDeleteMode',$param) and $param['InstanceDeleteMode'] !== null) {
+            $this->InstanceDeleteMode = $param['InstanceDeleteMode'];
         }
 
-        if (array_key_exists("ResourceDeleteOptions",$param) and $param["ResourceDeleteOptions"] !== null) {
+        if (array_key_exists('ResourceDeleteOptions',$param) and $param['ResourceDeleteOptions'] !== null) {
             $this->ResourceDeleteOptions = [];
-            foreach ($param["ResourceDeleteOptions"] as $key => $value){
+            foreach ($param['ResourceDeleteOptions'] as $key => $value){
                 $obj = new ResourceDeleteOption();
                 $obj->deserialize($value);
                 array_push($this->ResourceDeleteOptions, $obj);

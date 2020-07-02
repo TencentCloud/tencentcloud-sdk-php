@@ -62,12 +62,12 @@ class OutputDataConfig extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CosOutputBucket",$param) and $param["CosOutputBucket"] !== null) {
-            $this->CosOutputBucket = $param["CosOutputBucket"];
+        if (array_key_exists('CosOutputBucket',$param) and $param['CosOutputBucket'] !== null) {
+            $this->CosOutputBucket = $param['CosOutputBucket'];
         }
 
-        if (array_key_exists("CosOutputKeyPrefix",$param) and $param["CosOutputKeyPrefix"] !== null) {
-            $this->CosOutputKeyPrefix = $param["CosOutputKeyPrefix"];
+        if (array_key_exists('CosOutputKeyPrefix',$param) and $param['CosOutputKeyPrefix'] !== null) {
+            $this->CosOutputKeyPrefix = $param['CosOutputKeyPrefix'];
         }
     }
 }

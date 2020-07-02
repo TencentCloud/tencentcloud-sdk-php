@@ -170,24 +170,24 @@ class RecordParam extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RecordInterval",$param) and $param["RecordInterval"] !== null) {
-            $this->RecordInterval = $param["RecordInterval"];
+        if (array_key_exists('RecordInterval',$param) and $param['RecordInterval'] !== null) {
+            $this->RecordInterval = $param['RecordInterval'];
         }
 
-        if (array_key_exists("StorageTime",$param) and $param["StorageTime"] !== null) {
-            $this->StorageTime = $param["StorageTime"];
+        if (array_key_exists('StorageTime',$param) and $param['StorageTime'] !== null) {
+            $this->StorageTime = $param['StorageTime'];
         }
 
-        if (array_key_exists("Enable",$param) and $param["Enable"] !== null) {
-            $this->Enable = $param["Enable"];
+        if (array_key_exists('Enable',$param) and $param['Enable'] !== null) {
+            $this->Enable = $param['Enable'];
         }
 
-        if (array_key_exists("VodSubAppId",$param) and $param["VodSubAppId"] !== null) {
-            $this->VodSubAppId = $param["VodSubAppId"];
+        if (array_key_exists('VodSubAppId',$param) and $param['VodSubAppId'] !== null) {
+            $this->VodSubAppId = $param['VodSubAppId'];
         }
 
-        if (array_key_exists("VodFileName",$param) and $param["VodFileName"] !== null) {
-            $this->VodFileName = $param["VodFileName"];
+        if (array_key_exists('VodFileName',$param) and $param['VodFileName'] !== null) {
+            $this->VodFileName = $param['VodFileName'];
         }
     }
 }

@@ -54,14 +54,14 @@ class ModuleItem extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("NodeInstanceNum",$param) and $param["NodeInstanceNum"] !== null) {
+        if (array_key_exists('NodeInstanceNum',$param) and $param['NodeInstanceNum'] !== null) {
             $this->NodeInstanceNum = new NodeInstanceNum();
-            $this->NodeInstanceNum->deserialize($param["NodeInstanceNum"]);
+            $this->NodeInstanceNum->deserialize($param['NodeInstanceNum']);
         }
 
-        if (array_key_exists("Module",$param) and $param["Module"] !== null) {
+        if (array_key_exists('Module',$param) and $param['Module'] !== null) {
             $this->Module = new Module();
-            $this->Module->deserialize($param["Module"]);
+            $this->Module->deserialize($param['Module']);
         }
     }
 }

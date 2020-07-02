@@ -54,17 +54,17 @@ class DescribeContainerInstanceEventsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("EventList",$param) and $param["EventList"] !== null) {
+        if (array_key_exists('EventList',$param) and $param['EventList'] !== null) {
             $this->EventList = [];
-            foreach ($param["EventList"] as $key => $value){
+            foreach ($param['EventList'] as $key => $value){
                 $obj = new Event();
                 $obj->deserialize($value);
                 array_push($this->EventList, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

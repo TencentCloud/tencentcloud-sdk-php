@@ -54,12 +54,12 @@ class DeleteSubscribeRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TopicName",$param) and $param["TopicName"] !== null) {
-            $this->TopicName = $param["TopicName"];
+        if (array_key_exists('TopicName',$param) and $param['TopicName'] !== null) {
+            $this->TopicName = $param['TopicName'];
         }
 
-        if (array_key_exists("SubscriptionName",$param) and $param["SubscriptionName"] !== null) {
-            $this->SubscriptionName = $param["SubscriptionName"];
+        if (array_key_exists('SubscriptionName',$param) and $param['SubscriptionName'] !== null) {
+            $this->SubscriptionName = $param['SubscriptionName'];
         }
     }
 }

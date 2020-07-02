@@ -62,16 +62,16 @@ class ModifyImageSharePermissionRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ImageId",$param) and $param["ImageId"] !== null) {
-            $this->ImageId = $param["ImageId"];
+        if (array_key_exists('ImageId',$param) and $param['ImageId'] !== null) {
+            $this->ImageId = $param['ImageId'];
         }
 
-        if (array_key_exists("AccountIds",$param) and $param["AccountIds"] !== null) {
-            $this->AccountIds = $param["AccountIds"];
+        if (array_key_exists('AccountIds',$param) and $param['AccountIds'] !== null) {
+            $this->AccountIds = $param['AccountIds'];
         }
 
-        if (array_key_exists("Permission",$param) and $param["Permission"] !== null) {
-            $this->Permission = $param["Permission"];
+        if (array_key_exists('Permission',$param) and $param['Permission'] !== null) {
+            $this->Permission = $param['Permission'];
         }
     }
 }

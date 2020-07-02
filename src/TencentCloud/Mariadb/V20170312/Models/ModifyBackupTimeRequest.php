@@ -62,16 +62,16 @@ class ModifyBackupTimeRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("StartBackupTime",$param) and $param["StartBackupTime"] !== null) {
-            $this->StartBackupTime = $param["StartBackupTime"];
+        if (array_key_exists('StartBackupTime',$param) and $param['StartBackupTime'] !== null) {
+            $this->StartBackupTime = $param['StartBackupTime'];
         }
 
-        if (array_key_exists("EndBackupTime",$param) and $param["EndBackupTime"] !== null) {
-            $this->EndBackupTime = $param["EndBackupTime"];
+        if (array_key_exists('EndBackupTime',$param) and $param['EndBackupTime'] !== null) {
+            $this->EndBackupTime = $param['EndBackupTime'];
         }
     }
 }

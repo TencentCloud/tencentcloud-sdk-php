@@ -70,20 +70,20 @@ class Task extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DataId",$param) and $param["DataId"] !== null) {
-            $this->DataId = $param["DataId"];
+        if (array_key_exists('DataId',$param) and $param['DataId'] !== null) {
+            $this->DataId = $param['DataId'];
         }
 
-        if (array_key_exists("Url",$param) and $param["Url"] !== null) {
-            $this->Url = $param["Url"];
+        if (array_key_exists('Url',$param) and $param['Url'] !== null) {
+            $this->Url = $param['Url'];
         }
 
-        if (array_key_exists("RoomId",$param) and $param["RoomId"] !== null) {
-            $this->RoomId = $param["RoomId"];
+        if (array_key_exists('RoomId',$param) and $param['RoomId'] !== null) {
+            $this->RoomId = $param['RoomId'];
         }
 
-        if (array_key_exists("OpenId",$param) and $param["OpenId"] !== null) {
-            $this->OpenId = $param["OpenId"];
+        if (array_key_exists('OpenId',$param) and $param['OpenId'] !== null) {
+            $this->OpenId = $param['OpenId'];
         }
     }
 }

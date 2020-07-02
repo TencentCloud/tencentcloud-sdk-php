@@ -54,13 +54,13 @@ class CreateDirectConnectGatewayResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DirectConnectGateway",$param) and $param["DirectConnectGateway"] !== null) {
+        if (array_key_exists('DirectConnectGateway',$param) and $param['DirectConnectGateway'] !== null) {
             $this->DirectConnectGateway = new DirectConnectGateway();
-            $this->DirectConnectGateway->deserialize($param["DirectConnectGateway"]);
+            $this->DirectConnectGateway->deserialize($param['DirectConnectGateway']);
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

@@ -46,8 +46,8 @@ class DeleteShieldInstancesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ItemIds",$param) and $param["ItemIds"] !== null) {
-            $this->ItemIds = $param["ItemIds"];
+        if (array_key_exists('ItemIds',$param) and $param['ItemIds'] !== null) {
+            $this->ItemIds = $param['ItemIds'];
         }
     }
 }

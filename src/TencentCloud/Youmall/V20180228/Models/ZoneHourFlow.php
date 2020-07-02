@@ -54,12 +54,12 @@ class ZoneHourFlow extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Hour",$param) and $param["Hour"] !== null) {
-            $this->Hour = $param["Hour"];
+        if (array_key_exists('Hour',$param) and $param['Hour'] !== null) {
+            $this->Hour = $param['Hour'];
         }
 
-        if (array_key_exists("FlowCount",$param) and $param["FlowCount"] !== null) {
-            $this->FlowCount = $param["FlowCount"];
+        if (array_key_exists('FlowCount',$param) and $param['FlowCount'] !== null) {
+            $this->FlowCount = $param['FlowCount'];
         }
     }
 }

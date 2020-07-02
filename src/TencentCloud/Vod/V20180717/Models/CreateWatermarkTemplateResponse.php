@@ -62,16 +62,16 @@ class CreateWatermarkTemplateResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Definition",$param) and $param["Definition"] !== null) {
-            $this->Definition = $param["Definition"];
+        if (array_key_exists('Definition',$param) and $param['Definition'] !== null) {
+            $this->Definition = $param['Definition'];
         }
 
-        if (array_key_exists("ImageUrl",$param) and $param["ImageUrl"] !== null) {
-            $this->ImageUrl = $param["ImageUrl"];
+        if (array_key_exists('ImageUrl',$param) and $param['ImageUrl'] !== null) {
+            $this->ImageUrl = $param['ImageUrl'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

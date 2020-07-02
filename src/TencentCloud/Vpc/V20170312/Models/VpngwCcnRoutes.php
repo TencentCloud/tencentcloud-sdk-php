@@ -62,12 +62,12 @@ DISABLE：不启用该路由
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RouteId",$param) and $param["RouteId"] !== null) {
-            $this->RouteId = $param["RouteId"];
+        if (array_key_exists('RouteId',$param) and $param['RouteId'] !== null) {
+            $this->RouteId = $param['RouteId'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
     }
 }

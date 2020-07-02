@@ -78,20 +78,20 @@ class CreateGroupRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("GroupName",$param) and $param["GroupName"] !== null) {
-            $this->GroupName = $param["GroupName"];
+        if (array_key_exists('GroupName',$param) and $param['GroupName'] !== null) {
+            $this->GroupName = $param['GroupName'];
         }
 
-        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
-            $this->GroupId = $param["GroupId"];
+        if (array_key_exists('GroupId',$param) and $param['GroupId'] !== null) {
+            $this->GroupId = $param['GroupId'];
         }
 
-        if (array_key_exists("Tag",$param) and $param["Tag"] !== null) {
-            $this->Tag = $param["Tag"];
+        if (array_key_exists('Tag',$param) and $param['Tag'] !== null) {
+            $this->Tag = $param['Tag'];
         }
 
-        if (array_key_exists("BodyModelVersion",$param) and $param["BodyModelVersion"] !== null) {
-            $this->BodyModelVersion = $param["BodyModelVersion"];
+        if (array_key_exists('BodyModelVersion',$param) and $param['BodyModelVersion'] !== null) {
+            $this->BodyModelVersion = $param['BodyModelVersion'];
         }
     }
 }

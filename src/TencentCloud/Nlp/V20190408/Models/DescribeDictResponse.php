@@ -54,17 +54,17 @@ class DescribeDictResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Dicts",$param) and $param["Dicts"] !== null) {
+        if (array_key_exists('Dicts',$param) and $param['Dicts'] !== null) {
             $this->Dicts = [];
-            foreach ($param["Dicts"] as $key => $value){
+            foreach ($param['Dicts'] as $key => $value){
                 $obj = new DictInfo();
                 $obj->deserialize($value);
                 array_push($this->Dicts, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

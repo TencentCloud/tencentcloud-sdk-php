@@ -54,12 +54,12 @@ class CheckTcbServiceResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Initialized",$param) and $param["Initialized"] !== null) {
-            $this->Initialized = $param["Initialized"];
+        if (array_key_exists('Initialized',$param) and $param['Initialized'] !== null) {
+            $this->Initialized = $param['Initialized'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

@@ -62,16 +62,16 @@ class ZoneInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
-            $this->Zone = $param["Zone"];
+        if (array_key_exists('Zone',$param) and $param['Zone'] !== null) {
+            $this->Zone = $param['Zone'];
         }
 
-        if (array_key_exists("ZoneId",$param) and $param["ZoneId"] !== null) {
-            $this->ZoneId = $param["ZoneId"];
+        if (array_key_exists('ZoneId',$param) and $param['ZoneId'] !== null) {
+            $this->ZoneId = $param['ZoneId'];
         }
 
-        if (array_key_exists("ZoneDescription",$param) and $param["ZoneDescription"] !== null) {
-            $this->ZoneDescription = $param["ZoneDescription"];
+        if (array_key_exists('ZoneDescription',$param) and $param['ZoneDescription'] !== null) {
+            $this->ZoneDescription = $param['ZoneDescription'];
         }
     }
 }

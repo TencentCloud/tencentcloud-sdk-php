@@ -66,21 +66,21 @@ class DescribeTranscodeTemplatesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("TranscodeTemplateSet",$param) and $param["TranscodeTemplateSet"] !== null) {
+        if (array_key_exists('TranscodeTemplateSet',$param) and $param['TranscodeTemplateSet'] !== null) {
             $this->TranscodeTemplateSet = [];
-            foreach ($param["TranscodeTemplateSet"] as $key => $value){
+            foreach ($param['TranscodeTemplateSet'] as $key => $value){
                 $obj = new TranscodeTemplate();
                 $obj->deserialize($value);
                 array_push($this->TranscodeTemplateSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

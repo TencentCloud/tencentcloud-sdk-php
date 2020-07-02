@@ -62,16 +62,16 @@ class ResourceServiceInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("ExpireTime",$param) and $param["ExpireTime"] !== null) {
-            $this->ExpireTime = $param["ExpireTime"];
+        if (array_key_exists('ExpireTime',$param) and $param['ExpireTime'] !== null) {
+            $this->ExpireTime = $param['ExpireTime'];
         }
 
-        if (array_key_exists("ResourceName",$param) and $param["ResourceName"] !== null) {
-            $this->ResourceName = $param["ResourceName"];
+        if (array_key_exists('ResourceName',$param) and $param['ResourceName'] !== null) {
+            $this->ResourceName = $param['ResourceName'];
         }
     }
 }

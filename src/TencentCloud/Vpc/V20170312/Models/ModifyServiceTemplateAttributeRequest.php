@@ -62,16 +62,16 @@ class ModifyServiceTemplateAttributeRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ServiceTemplateId",$param) and $param["ServiceTemplateId"] !== null) {
-            $this->ServiceTemplateId = $param["ServiceTemplateId"];
+        if (array_key_exists('ServiceTemplateId',$param) and $param['ServiceTemplateId'] !== null) {
+            $this->ServiceTemplateId = $param['ServiceTemplateId'];
         }
 
-        if (array_key_exists("ServiceTemplateName",$param) and $param["ServiceTemplateName"] !== null) {
-            $this->ServiceTemplateName = $param["ServiceTemplateName"];
+        if (array_key_exists('ServiceTemplateName',$param) and $param['ServiceTemplateName'] !== null) {
+            $this->ServiceTemplateName = $param['ServiceTemplateName'];
         }
 
-        if (array_key_exists("Services",$param) and $param["Services"] !== null) {
-            $this->Services = $param["Services"];
+        if (array_key_exists('Services',$param) and $param['Services'] !== null) {
+            $this->Services = $param['Services'];
         }
     }
 }

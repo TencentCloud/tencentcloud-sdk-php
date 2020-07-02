@@ -86,20 +86,20 @@ class LoginStatistic extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("StatisticalType",$param) and $param["StatisticalType"] !== null) {
-            $this->StatisticalType = $param["StatisticalType"];
+        if (array_key_exists('StatisticalType',$param) and $param['StatisticalType'] !== null) {
+            $this->StatisticalType = $param['StatisticalType'];
         }
 
-        if (array_key_exists("StatisticalCycle",$param) and $param["StatisticalCycle"] !== null) {
-            $this->StatisticalCycle = $param["StatisticalCycle"];
+        if (array_key_exists('StatisticalCycle',$param) and $param['StatisticalCycle'] !== null) {
+            $this->StatisticalCycle = $param['StatisticalCycle'];
         }
 
-        if (array_key_exists("Count",$param) and $param["Count"] !== null) {
-            $this->Count = $param["Count"];
+        if (array_key_exists('Count',$param) and $param['Count'] !== null) {
+            $this->Count = $param['Count'];
         }
 
-        if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
-            $this->UpdateTime = $param["UpdateTime"];
+        if (array_key_exists('UpdateTime',$param) and $param['UpdateTime'] !== null) {
+            $this->UpdateTime = $param['UpdateTime'];
         }
     }
 }

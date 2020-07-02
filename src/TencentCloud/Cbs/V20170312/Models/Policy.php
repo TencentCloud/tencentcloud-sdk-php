@@ -54,12 +54,12 @@ class Policy extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DayOfWeek",$param) and $param["DayOfWeek"] !== null) {
-            $this->DayOfWeek = $param["DayOfWeek"];
+        if (array_key_exists('DayOfWeek',$param) and $param['DayOfWeek'] !== null) {
+            $this->DayOfWeek = $param['DayOfWeek'];
         }
 
-        if (array_key_exists("Hour",$param) and $param["Hour"] !== null) {
-            $this->Hour = $param["Hour"];
+        if (array_key_exists('Hour',$param) and $param['Hour'] !== null) {
+            $this->Hour = $param['Hour'];
         }
     }
 }

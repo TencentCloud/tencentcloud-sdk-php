@@ -54,12 +54,12 @@ class DeliverTidsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("OrderId",$param) and $param["OrderId"] !== null) {
-            $this->OrderId = $param["OrderId"];
+        if (array_key_exists('OrderId',$param) and $param['OrderId'] !== null) {
+            $this->OrderId = $param['OrderId'];
         }
 
-        if (array_key_exists("Quantity",$param) and $param["Quantity"] !== null) {
-            $this->Quantity = $param["Quantity"];
+        if (array_key_exists('Quantity',$param) and $param['Quantity'] !== null) {
+            $this->Quantity = $param['Quantity'];
         }
     }
 }

@@ -54,17 +54,17 @@ class FinanBillOCRResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FinanBillInfos",$param) and $param["FinanBillInfos"] !== null) {
+        if (array_key_exists('FinanBillInfos',$param) and $param['FinanBillInfos'] !== null) {
             $this->FinanBillInfos = [];
-            foreach ($param["FinanBillInfos"] as $key => $value){
+            foreach ($param['FinanBillInfos'] as $key => $value){
                 $obj = new FinanBillInfo();
                 $obj->deserialize($value);
                 array_push($this->FinanBillInfos, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

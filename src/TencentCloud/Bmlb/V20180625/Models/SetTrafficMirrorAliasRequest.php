@@ -54,12 +54,12 @@ class SetTrafficMirrorAliasRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TrafficMirrorId",$param) and $param["TrafficMirrorId"] !== null) {
-            $this->TrafficMirrorId = $param["TrafficMirrorId"];
+        if (array_key_exists('TrafficMirrorId',$param) and $param['TrafficMirrorId'] !== null) {
+            $this->TrafficMirrorId = $param['TrafficMirrorId'];
         }
 
-        if (array_key_exists("Alias",$param) and $param["Alias"] !== null) {
-            $this->Alias = $param["Alias"];
+        if (array_key_exists('Alias',$param) and $param['Alias'] !== null) {
+            $this->Alias = $param['Alias'];
         }
     }
 }

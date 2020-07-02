@@ -58,13 +58,13 @@ class DescribeLyricResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Lyric",$param) and $param["Lyric"] !== null) {
+        if (array_key_exists('Lyric',$param) and $param['Lyric'] !== null) {
             $this->Lyric = new Lyric();
-            $this->Lyric->deserialize($param["Lyric"]);
+            $this->Lyric->deserialize($param['Lyric']);
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

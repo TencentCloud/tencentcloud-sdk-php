@@ -54,17 +54,17 @@ class EventList extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Content",$param) and $param["Content"] !== null) {
+        if (array_key_exists('Content',$param) and $param['Content'] !== null) {
             $this->Content = [];
-            foreach ($param["Content"] as $key => $value){
+            foreach ($param['Content'] as $key => $value){
                 $obj = new EventMessage();
                 $obj->deserialize($value);
                 array_push($this->Content, $obj);
             }
         }
 
-        if (array_key_exists("PeerId",$param) and $param["PeerId"] !== null) {
-            $this->PeerId = $param["PeerId"];
+        if (array_key_exists('PeerId',$param) and $param['PeerId'] !== null) {
+            $this->PeerId = $param['PeerId'];
         }
     }
 }

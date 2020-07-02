@@ -106,28 +106,28 @@ Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00
         if ($param === null) {
             return;
         }
-        if (array_key_exists("GroupName",$param) and $param["GroupName"] !== null) {
-            $this->GroupName = $param["GroupName"];
+        if (array_key_exists('GroupName',$param) and $param['GroupName'] !== null) {
+            $this->GroupName = $param['GroupName'];
         }
 
-        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
-            $this->GroupId = $param["GroupId"];
+        if (array_key_exists('GroupId',$param) and $param['GroupId'] !== null) {
+            $this->GroupId = $param['GroupId'];
         }
 
-        if (array_key_exists("GroupExDescriptions",$param) and $param["GroupExDescriptions"] !== null) {
-            $this->GroupExDescriptions = $param["GroupExDescriptions"];
+        if (array_key_exists('GroupExDescriptions',$param) and $param['GroupExDescriptions'] !== null) {
+            $this->GroupExDescriptions = $param['GroupExDescriptions'];
         }
 
-        if (array_key_exists("Tag",$param) and $param["Tag"] !== null) {
-            $this->Tag = $param["Tag"];
+        if (array_key_exists('Tag',$param) and $param['Tag'] !== null) {
+            $this->Tag = $param['Tag'];
         }
 
-        if (array_key_exists("FaceModelVersion",$param) and $param["FaceModelVersion"] !== null) {
-            $this->FaceModelVersion = $param["FaceModelVersion"];
+        if (array_key_exists('FaceModelVersion',$param) and $param['FaceModelVersion'] !== null) {
+            $this->FaceModelVersion = $param['FaceModelVersion'];
         }
 
-        if (array_key_exists("CreationTimestamp",$param) and $param["CreationTimestamp"] !== null) {
-            $this->CreationTimestamp = $param["CreationTimestamp"];
+        if (array_key_exists('CreationTimestamp',$param) and $param['CreationTimestamp'] !== null) {
+            $this->CreationTimestamp = $param['CreationTimestamp'];
         }
     }
 }

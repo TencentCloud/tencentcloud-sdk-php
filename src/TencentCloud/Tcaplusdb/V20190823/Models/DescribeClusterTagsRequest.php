@@ -46,8 +46,8 @@ class DescribeClusterTagsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ClusterIds",$param) and $param["ClusterIds"] !== null) {
-            $this->ClusterIds = $param["ClusterIds"];
+        if (array_key_exists('ClusterIds',$param) and $param['ClusterIds'] !== null) {
+            $this->ClusterIds = $param['ClusterIds'];
         }
     }
 }

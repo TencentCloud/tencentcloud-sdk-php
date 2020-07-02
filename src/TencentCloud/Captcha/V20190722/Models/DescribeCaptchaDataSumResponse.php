@@ -106,36 +106,36 @@ class DescribeCaptchaDataSumResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("GetSum",$param) and $param["GetSum"] !== null) {
-            $this->GetSum = $param["GetSum"];
+        if (array_key_exists('GetSum',$param) and $param['GetSum'] !== null) {
+            $this->GetSum = $param['GetSum'];
         }
 
-        if (array_key_exists("VfySuccSum",$param) and $param["VfySuccSum"] !== null) {
-            $this->VfySuccSum = $param["VfySuccSum"];
+        if (array_key_exists('VfySuccSum',$param) and $param['VfySuccSum'] !== null) {
+            $this->VfySuccSum = $param['VfySuccSum'];
         }
 
-        if (array_key_exists("VfySum",$param) and $param["VfySum"] !== null) {
-            $this->VfySum = $param["VfySum"];
+        if (array_key_exists('VfySum',$param) and $param['VfySum'] !== null) {
+            $this->VfySum = $param['VfySum'];
         }
 
-        if (array_key_exists("AttackSum",$param) and $param["AttackSum"] !== null) {
-            $this->AttackSum = $param["AttackSum"];
+        if (array_key_exists('AttackSum',$param) and $param['AttackSum'] !== null) {
+            $this->AttackSum = $param['AttackSum'];
         }
 
-        if (array_key_exists("CaptchaMsg",$param) and $param["CaptchaMsg"] !== null) {
-            $this->CaptchaMsg = $param["CaptchaMsg"];
+        if (array_key_exists('CaptchaMsg',$param) and $param['CaptchaMsg'] !== null) {
+            $this->CaptchaMsg = $param['CaptchaMsg'];
         }
 
-        if (array_key_exists("CaptchaCode",$param) and $param["CaptchaCode"] !== null) {
-            $this->CaptchaCode = $param["CaptchaCode"];
+        if (array_key_exists('CaptchaCode',$param) and $param['CaptchaCode'] !== null) {
+            $this->CaptchaCode = $param['CaptchaCode'];
         }
 
-        if (array_key_exists("CheckTicketSum",$param) and $param["CheckTicketSum"] !== null) {
-            $this->CheckTicketSum = $param["CheckTicketSum"];
+        if (array_key_exists('CheckTicketSum',$param) and $param['CheckTicketSum'] !== null) {
+            $this->CheckTicketSum = $param['CheckTicketSum'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

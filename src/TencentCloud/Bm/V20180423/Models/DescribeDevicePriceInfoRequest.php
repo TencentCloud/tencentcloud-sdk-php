@@ -62,16 +62,16 @@ class DescribeDevicePriceInfoRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceIds",$param) and $param["InstanceIds"] !== null) {
-            $this->InstanceIds = $param["InstanceIds"];
+        if (array_key_exists('InstanceIds',$param) and $param['InstanceIds'] !== null) {
+            $this->InstanceIds = $param['InstanceIds'];
         }
 
-        if (array_key_exists("TimeUnit",$param) and $param["TimeUnit"] !== null) {
-            $this->TimeUnit = $param["TimeUnit"];
+        if (array_key_exists('TimeUnit',$param) and $param['TimeUnit'] !== null) {
+            $this->TimeUnit = $param['TimeUnit'];
         }
 
-        if (array_key_exists("TimeSpan",$param) and $param["TimeSpan"] !== null) {
-            $this->TimeSpan = $param["TimeSpan"];
+        if (array_key_exists('TimeSpan',$param) and $param['TimeSpan'] !== null) {
+            $this->TimeSpan = $param['TimeSpan'];
         }
     }
 }

@@ -46,8 +46,8 @@ class GetOrganizationMemberRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MemberUin",$param) and $param["MemberUin"] !== null) {
-            $this->MemberUin = $param["MemberUin"];
+        if (array_key_exists('MemberUin',$param) and $param['MemberUin'] !== null) {
+            $this->MemberUin = $param['MemberUin'];
         }
     }
 }

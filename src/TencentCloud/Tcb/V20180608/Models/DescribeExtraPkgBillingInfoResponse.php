@@ -62,21 +62,21 @@ class DescribeExtraPkgBillingInfoResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("EnvInfoList",$param) and $param["EnvInfoList"] !== null) {
+        if (array_key_exists('EnvInfoList',$param) and $param['EnvInfoList'] !== null) {
             $this->EnvInfoList = [];
-            foreach ($param["EnvInfoList"] as $key => $value){
+            foreach ($param['EnvInfoList'] as $key => $value){
                 $obj = new EnvBillingInfoItem();
                 $obj->deserialize($value);
                 array_push($this->EnvInfoList, $obj);
             }
         }
 
-        if (array_key_exists("Total",$param) and $param["Total"] !== null) {
-            $this->Total = $param["Total"];
+        if (array_key_exists('Total',$param) and $param['Total'] !== null) {
+            $this->Total = $param['Total'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

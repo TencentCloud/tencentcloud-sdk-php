@@ -54,12 +54,12 @@ class TimeValue extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Time",$param) and $param["Time"] !== null) {
-            $this->Time = $param["Time"];
+        if (array_key_exists('Time',$param) and $param['Time'] !== null) {
+            $this->Time = $param['Time'];
         }
 
-        if (array_key_exists("Num",$param) and $param["Num"] !== null) {
-            $this->Num = $param["Num"];
+        if (array_key_exists('Num',$param) and $param['Num'] !== null) {
+            $this->Num = $param['Num'];
         }
     }
 }

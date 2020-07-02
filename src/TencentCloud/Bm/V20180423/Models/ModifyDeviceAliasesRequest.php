@@ -46,9 +46,9 @@ class ModifyDeviceAliasesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DeviceAliases",$param) and $param["DeviceAliases"] !== null) {
+        if (array_key_exists('DeviceAliases',$param) and $param['DeviceAliases'] !== null) {
             $this->DeviceAliases = [];
-            foreach ($param["DeviceAliases"] as $key => $value){
+            foreach ($param['DeviceAliases'] as $key => $value){
                 $obj = new DeviceAlias();
                 $obj->deserialize($value);
                 array_push($this->DeviceAliases, $obj);

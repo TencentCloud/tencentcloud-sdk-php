@@ -62,16 +62,16 @@ class SuccessTaskInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
-            $this->TaskId = $param["TaskId"];
+        if (array_key_exists('TaskId',$param) and $param['TaskId'] !== null) {
+            $this->TaskId = $param['TaskId'];
         }
 
-        if (array_key_exists("CmdTaskId",$param) and $param["CmdTaskId"] !== null) {
-            $this->CmdTaskId = $param["CmdTaskId"];
+        if (array_key_exists('CmdTaskId',$param) and $param['CmdTaskId'] !== null) {
+            $this->CmdTaskId = $param['CmdTaskId'];
         }
     }
 }

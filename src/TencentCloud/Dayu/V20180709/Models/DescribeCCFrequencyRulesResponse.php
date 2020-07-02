@@ -62,21 +62,21 @@ class DescribeCCFrequencyRulesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CCFrequencyRuleList",$param) and $param["CCFrequencyRuleList"] !== null) {
+        if (array_key_exists('CCFrequencyRuleList',$param) and $param['CCFrequencyRuleList'] !== null) {
             $this->CCFrequencyRuleList = [];
-            foreach ($param["CCFrequencyRuleList"] as $key => $value){
+            foreach ($param['CCFrequencyRuleList'] as $key => $value){
                 $obj = new CCFrequencyRule();
                 $obj->deserialize($value);
                 array_push($this->CCFrequencyRuleList, $obj);
             }
         }
 
-        if (array_key_exists("CCFrequencyRuleStatus",$param) and $param["CCFrequencyRuleStatus"] !== null) {
-            $this->CCFrequencyRuleStatus = $param["CCFrequencyRuleStatus"];
+        if (array_key_exists('CCFrequencyRuleStatus',$param) and $param['CCFrequencyRuleStatus'] !== null) {
+            $this->CCFrequencyRuleStatus = $param['CCFrequencyRuleStatus'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

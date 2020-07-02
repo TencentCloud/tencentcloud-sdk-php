@@ -54,17 +54,17 @@ class DescribeDevicePriceInfoResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DevicePriceInfoSet",$param) and $param["DevicePriceInfoSet"] !== null) {
+        if (array_key_exists('DevicePriceInfoSet',$param) and $param['DevicePriceInfoSet'] !== null) {
             $this->DevicePriceInfoSet = [];
-            foreach ($param["DevicePriceInfoSet"] as $key => $value){
+            foreach ($param['DevicePriceInfoSet'] as $key => $value){
                 $obj = new DevicePriceInfo();
                 $obj->deserialize($value);
                 array_push($this->DevicePriceInfoSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

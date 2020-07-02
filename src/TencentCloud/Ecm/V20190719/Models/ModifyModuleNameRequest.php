@@ -54,12 +54,12 @@ class ModifyModuleNameRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ModuleId",$param) and $param["ModuleId"] !== null) {
-            $this->ModuleId = $param["ModuleId"];
+        if (array_key_exists('ModuleId',$param) and $param['ModuleId'] !== null) {
+            $this->ModuleId = $param['ModuleId'];
         }
 
-        if (array_key_exists("ModuleName",$param) and $param["ModuleName"] !== null) {
-            $this->ModuleName = $param["ModuleName"];
+        if (array_key_exists('ModuleName',$param) and $param['ModuleName'] !== null) {
+            $this->ModuleName = $param['ModuleName'];
         }
     }
 }

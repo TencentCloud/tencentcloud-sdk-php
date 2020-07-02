@@ -174,64 +174,64 @@ class MaliciousRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
-            $this->Id = $param["Id"];
+        if (array_key_exists('Id',$param) and $param['Id'] !== null) {
+            $this->Id = $param['Id'];
         }
 
-        if (array_key_exists("Uuid",$param) and $param["Uuid"] !== null) {
-            $this->Uuid = $param["Uuid"];
+        if (array_key_exists('Uuid',$param) and $param['Uuid'] !== null) {
+            $this->Uuid = $param['Uuid'];
         }
 
-        if (array_key_exists("MachineIp",$param) and $param["MachineIp"] !== null) {
-            $this->MachineIp = $param["MachineIp"];
+        if (array_key_exists('MachineIp',$param) and $param['MachineIp'] !== null) {
+            $this->MachineIp = $param['MachineIp'];
         }
 
-        if (array_key_exists("MachineName",$param) and $param["MachineName"] !== null) {
-            $this->MachineName = $param["MachineName"];
+        if (array_key_exists('MachineName',$param) and $param['MachineName'] !== null) {
+            $this->MachineName = $param['MachineName'];
         }
 
-        if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
-            $this->Domain = $param["Domain"];
+        if (array_key_exists('Domain',$param) and $param['Domain'] !== null) {
+            $this->Domain = $param['Domain'];
         }
 
-        if (array_key_exists("Count",$param) and $param["Count"] !== null) {
-            $this->Count = $param["Count"];
+        if (array_key_exists('Count',$param) and $param['Count'] !== null) {
+            $this->Count = $param['Count'];
         }
 
-        if (array_key_exists("ProcessName",$param) and $param["ProcessName"] !== null) {
-            $this->ProcessName = $param["ProcessName"];
+        if (array_key_exists('ProcessName',$param) and $param['ProcessName'] !== null) {
+            $this->ProcessName = $param['ProcessName'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
-            $this->Description = $param["Description"];
+        if (array_key_exists('Description',$param) and $param['Description'] !== null) {
+            $this->Description = $param['Description'];
         }
 
-        if (array_key_exists("Reference",$param) and $param["Reference"] !== null) {
-            $this->Reference = $param["Reference"];
+        if (array_key_exists('Reference',$param) and $param['Reference'] !== null) {
+            $this->Reference = $param['Reference'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("MergeTime",$param) and $param["MergeTime"] !== null) {
-            $this->MergeTime = $param["MergeTime"];
+        if (array_key_exists('MergeTime',$param) and $param['MergeTime'] !== null) {
+            $this->MergeTime = $param['MergeTime'];
         }
 
-        if (array_key_exists("ProcessMd5",$param) and $param["ProcessMd5"] !== null) {
-            $this->ProcessMd5 = $param["ProcessMd5"];
+        if (array_key_exists('ProcessMd5',$param) and $param['ProcessMd5'] !== null) {
+            $this->ProcessMd5 = $param['ProcessMd5'];
         }
 
-        if (array_key_exists("CmdLine",$param) and $param["CmdLine"] !== null) {
-            $this->CmdLine = $param["CmdLine"];
+        if (array_key_exists('CmdLine',$param) and $param['CmdLine'] !== null) {
+            $this->CmdLine = $param['CmdLine'];
         }
 
-        if (array_key_exists("Pid",$param) and $param["Pid"] !== null) {
-            $this->Pid = $param["Pid"];
+        if (array_key_exists('Pid',$param) and $param['Pid'] !== null) {
+            $this->Pid = $param['Pid'];
         }
     }
 }

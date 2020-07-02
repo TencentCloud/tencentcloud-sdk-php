@@ -54,12 +54,12 @@ class ModifyCustomerGatewayAttributeRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CustomerGatewayId",$param) and $param["CustomerGatewayId"] !== null) {
-            $this->CustomerGatewayId = $param["CustomerGatewayId"];
+        if (array_key_exists('CustomerGatewayId',$param) and $param['CustomerGatewayId'] !== null) {
+            $this->CustomerGatewayId = $param['CustomerGatewayId'];
         }
 
-        if (array_key_exists("CustomerGatewayName",$param) and $param["CustomerGatewayName"] !== null) {
-            $this->CustomerGatewayName = $param["CustomerGatewayName"];
+        if (array_key_exists('CustomerGatewayName',$param) and $param['CustomerGatewayName'] !== null) {
+            $this->CustomerGatewayName = $param['CustomerGatewayName'];
         }
     }
 }

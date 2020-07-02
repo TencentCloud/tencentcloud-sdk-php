@@ -94,26 +94,26 @@ class AiReviewTaskPornAsrResult extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("ErrCode",$param) and $param["ErrCode"] !== null) {
-            $this->ErrCode = $param["ErrCode"];
+        if (array_key_exists('ErrCode',$param) and $param['ErrCode'] !== null) {
+            $this->ErrCode = $param['ErrCode'];
         }
 
-        if (array_key_exists("Message",$param) and $param["Message"] !== null) {
-            $this->Message = $param["Message"];
+        if (array_key_exists('Message',$param) and $param['Message'] !== null) {
+            $this->Message = $param['Message'];
         }
 
-        if (array_key_exists("Input",$param) and $param["Input"] !== null) {
+        if (array_key_exists('Input',$param) and $param['Input'] !== null) {
             $this->Input = new AiReviewPornAsrTaskInput();
-            $this->Input->deserialize($param["Input"]);
+            $this->Input->deserialize($param['Input']);
         }
 
-        if (array_key_exists("Output",$param) and $param["Output"] !== null) {
+        if (array_key_exists('Output',$param) and $param['Output'] !== null) {
             $this->Output = new AiReviewPornAsrTaskOutput();
-            $this->Output->deserialize($param["Output"]);
+            $this->Output->deserialize($param['Output']);
         }
     }
 }

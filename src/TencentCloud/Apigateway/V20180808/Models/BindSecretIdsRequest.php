@@ -54,12 +54,12 @@ class BindSecretIdsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("UsagePlanId",$param) and $param["UsagePlanId"] !== null) {
-            $this->UsagePlanId = $param["UsagePlanId"];
+        if (array_key_exists('UsagePlanId',$param) and $param['UsagePlanId'] !== null) {
+            $this->UsagePlanId = $param['UsagePlanId'];
         }
 
-        if (array_key_exists("AccessKeyIds",$param) and $param["AccessKeyIds"] !== null) {
-            $this->AccessKeyIds = $param["AccessKeyIds"];
+        if (array_key_exists('AccessKeyIds',$param) and $param['AccessKeyIds'] !== null) {
+            $this->AccessKeyIds = $param['AccessKeyIds'];
         }
     }
 }

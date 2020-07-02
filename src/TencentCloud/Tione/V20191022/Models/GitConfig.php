@@ -58,12 +58,12 @@ class GitConfig extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RepositoryUrl",$param) and $param["RepositoryUrl"] !== null) {
-            $this->RepositoryUrl = $param["RepositoryUrl"];
+        if (array_key_exists('RepositoryUrl',$param) and $param['RepositoryUrl'] !== null) {
+            $this->RepositoryUrl = $param['RepositoryUrl'];
         }
 
-        if (array_key_exists("Branch",$param) and $param["Branch"] !== null) {
-            $this->Branch = $param["Branch"];
+        if (array_key_exists('Branch',$param) and $param['Branch'] !== null) {
+            $this->Branch = $param['Branch'];
         }
     }
 }

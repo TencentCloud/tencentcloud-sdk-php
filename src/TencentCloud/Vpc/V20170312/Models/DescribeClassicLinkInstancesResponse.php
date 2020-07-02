@@ -62,21 +62,21 @@ class DescribeClassicLinkInstancesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("ClassicLinkInstanceSet",$param) and $param["ClassicLinkInstanceSet"] !== null) {
+        if (array_key_exists('ClassicLinkInstanceSet',$param) and $param['ClassicLinkInstanceSet'] !== null) {
             $this->ClassicLinkInstanceSet = [];
-            foreach ($param["ClassicLinkInstanceSet"] as $key => $value){
+            foreach ($param['ClassicLinkInstanceSet'] as $key => $value){
                 $obj = new ClassicLinkInstance();
                 $obj->deserialize($value);
                 array_push($this->ClassicLinkInstanceSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

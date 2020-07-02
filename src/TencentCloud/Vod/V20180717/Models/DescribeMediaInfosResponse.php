@@ -62,21 +62,21 @@ class DescribeMediaInfosResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MediaInfoSet",$param) and $param["MediaInfoSet"] !== null) {
+        if (array_key_exists('MediaInfoSet',$param) and $param['MediaInfoSet'] !== null) {
             $this->MediaInfoSet = [];
-            foreach ($param["MediaInfoSet"] as $key => $value){
+            foreach ($param['MediaInfoSet'] as $key => $value){
                 $obj = new MediaInfo();
                 $obj->deserialize($value);
                 array_push($this->MediaInfoSet, $obj);
             }
         }
 
-        if (array_key_exists("NotExistFileIdSet",$param) and $param["NotExistFileIdSet"] !== null) {
-            $this->NotExistFileIdSet = $param["NotExistFileIdSet"];
+        if (array_key_exists('NotExistFileIdSet',$param) and $param['NotExistFileIdSet'] !== null) {
+            $this->NotExistFileIdSet = $param['NotExistFileIdSet'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

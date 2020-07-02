@@ -86,28 +86,28 @@ class CreateFacePictureRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CompanyId",$param) and $param["CompanyId"] !== null) {
-            $this->CompanyId = $param["CompanyId"];
+        if (array_key_exists('CompanyId',$param) and $param['CompanyId'] !== null) {
+            $this->CompanyId = $param['CompanyId'];
         }
 
-        if (array_key_exists("PersonType",$param) and $param["PersonType"] !== null) {
-            $this->PersonType = $param["PersonType"];
+        if (array_key_exists('PersonType',$param) and $param['PersonType'] !== null) {
+            $this->PersonType = $param['PersonType'];
         }
 
-        if (array_key_exists("Picture",$param) and $param["Picture"] !== null) {
-            $this->Picture = $param["Picture"];
+        if (array_key_exists('Picture',$param) and $param['Picture'] !== null) {
+            $this->Picture = $param['Picture'];
         }
 
-        if (array_key_exists("PictureName",$param) and $param["PictureName"] !== null) {
-            $this->PictureName = $param["PictureName"];
+        if (array_key_exists('PictureName',$param) and $param['PictureName'] !== null) {
+            $this->PictureName = $param['PictureName'];
         }
 
-        if (array_key_exists("ShopId",$param) and $param["ShopId"] !== null) {
-            $this->ShopId = $param["ShopId"];
+        if (array_key_exists('ShopId',$param) and $param['ShopId'] !== null) {
+            $this->ShopId = $param['ShopId'];
         }
 
-        if (array_key_exists("IsForceUpload",$param) and $param["IsForceUpload"] !== null) {
-            $this->IsForceUpload = $param["IsForceUpload"];
+        if (array_key_exists('IsForceUpload',$param) and $param['IsForceUpload'] !== null) {
+            $this->IsForceUpload = $param['IsForceUpload'];
         }
     }
 }

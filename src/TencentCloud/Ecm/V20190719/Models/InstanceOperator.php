@@ -58,13 +58,13 @@ class InstanceOperator extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("DeniedActions",$param) and $param["DeniedActions"] !== null) {
+        if (array_key_exists('DeniedActions',$param) and $param['DeniedActions'] !== null) {
             $this->DeniedActions = [];
-            foreach ($param["DeniedActions"] as $key => $value){
+            foreach ($param['DeniedActions'] as $key => $value){
                 $obj = new OperatorAction();
                 $obj->deserialize($value);
                 array_push($this->DeniedActions, $obj);

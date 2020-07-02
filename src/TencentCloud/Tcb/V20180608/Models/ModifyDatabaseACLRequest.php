@@ -78,16 +78,16 @@ class ModifyDatabaseACLRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("EnvId",$param) and $param["EnvId"] !== null) {
-            $this->EnvId = $param["EnvId"];
+        if (array_key_exists('EnvId',$param) and $param['EnvId'] !== null) {
+            $this->EnvId = $param['EnvId'];
         }
 
-        if (array_key_exists("CollectionName",$param) and $param["CollectionName"] !== null) {
-            $this->CollectionName = $param["CollectionName"];
+        if (array_key_exists('CollectionName',$param) and $param['CollectionName'] !== null) {
+            $this->CollectionName = $param['CollectionName'];
         }
 
-        if (array_key_exists("AclTag",$param) and $param["AclTag"] !== null) {
-            $this->AclTag = $param["AclTag"];
+        if (array_key_exists('AclTag',$param) and $param['AclTag'] !== null) {
+            $this->AclTag = $param['AclTag'];
         }
     }
 }

@@ -78,21 +78,21 @@ class AssistantCidr extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
-            $this->VpcId = $param["VpcId"];
+        if (array_key_exists('VpcId',$param) and $param['VpcId'] !== null) {
+            $this->VpcId = $param['VpcId'];
         }
 
-        if (array_key_exists("CidrBlock",$param) and $param["CidrBlock"] !== null) {
-            $this->CidrBlock = $param["CidrBlock"];
+        if (array_key_exists('CidrBlock',$param) and $param['CidrBlock'] !== null) {
+            $this->CidrBlock = $param['CidrBlock'];
         }
 
-        if (array_key_exists("AssistantType",$param) and $param["AssistantType"] !== null) {
-            $this->AssistantType = $param["AssistantType"];
+        if (array_key_exists('AssistantType',$param) and $param['AssistantType'] !== null) {
+            $this->AssistantType = $param['AssistantType'];
         }
 
-        if (array_key_exists("SubnetSet",$param) and $param["SubnetSet"] !== null) {
+        if (array_key_exists('SubnetSet',$param) and $param['SubnetSet'] !== null) {
             $this->SubnetSet = [];
-            foreach ($param["SubnetSet"] as $key => $value){
+            foreach ($param['SubnetSet'] as $key => $value){
                 $obj = new Subnet();
                 $obj->deserialize($value);
                 array_push($this->SubnetSet, $obj);

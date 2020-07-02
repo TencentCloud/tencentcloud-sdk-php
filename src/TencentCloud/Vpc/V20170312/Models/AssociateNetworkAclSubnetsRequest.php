@@ -54,12 +54,12 @@ class AssociateNetworkAclSubnetsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("NetworkAclId",$param) and $param["NetworkAclId"] !== null) {
-            $this->NetworkAclId = $param["NetworkAclId"];
+        if (array_key_exists('NetworkAclId',$param) and $param['NetworkAclId'] !== null) {
+            $this->NetworkAclId = $param['NetworkAclId'];
         }
 
-        if (array_key_exists("SubnetIds",$param) and $param["SubnetIds"] !== null) {
-            $this->SubnetIds = $param["SubnetIds"];
+        if (array_key_exists('SubnetIds',$param) and $param['SubnetIds'] !== null) {
+            $this->SubnetIds = $param['SubnetIds'];
         }
     }
 }

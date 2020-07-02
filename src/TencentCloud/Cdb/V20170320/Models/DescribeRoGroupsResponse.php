@@ -54,17 +54,17 @@ class DescribeRoGroupsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RoGroups",$param) and $param["RoGroups"] !== null) {
+        if (array_key_exists('RoGroups',$param) and $param['RoGroups'] !== null) {
             $this->RoGroups = [];
-            foreach ($param["RoGroups"] as $key => $value){
+            foreach ($param['RoGroups'] as $key => $value){
                 $obj = new RoGroup();
                 $obj->deserialize($value);
                 array_push($this->RoGroups, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

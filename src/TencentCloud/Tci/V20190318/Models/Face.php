@@ -62,16 +62,16 @@ class Face extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FaceId",$param) and $param["FaceId"] !== null) {
-            $this->FaceId = $param["FaceId"];
+        if (array_key_exists('FaceId',$param) and $param['FaceId'] !== null) {
+            $this->FaceId = $param['FaceId'];
         }
 
-        if (array_key_exists("FaceUrl",$param) and $param["FaceUrl"] !== null) {
-            $this->FaceUrl = $param["FaceUrl"];
+        if (array_key_exists('FaceUrl',$param) and $param['FaceUrl'] !== null) {
+            $this->FaceUrl = $param['FaceUrl'];
         }
 
-        if (array_key_exists("PersonId",$param) and $param["PersonId"] !== null) {
-            $this->PersonId = $param["PersonId"];
+        if (array_key_exists('PersonId',$param) and $param['PersonId'] !== null) {
+            $this->PersonId = $param['PersonId'];
         }
     }
 }

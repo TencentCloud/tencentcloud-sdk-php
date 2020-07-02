@@ -54,14 +54,14 @@ class EnhancedService extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SecurityService",$param) and $param["SecurityService"] !== null) {
+        if (array_key_exists('SecurityService',$param) and $param['SecurityService'] !== null) {
             $this->SecurityService = new RunSecurityServiceEnabled();
-            $this->SecurityService->deserialize($param["SecurityService"]);
+            $this->SecurityService->deserialize($param['SecurityService']);
         }
 
-        if (array_key_exists("MonitorService",$param) and $param["MonitorService"] !== null) {
+        if (array_key_exists('MonitorService',$param) and $param['MonitorService'] !== null) {
             $this->MonitorService = new RunMonitorServiceEnabled();
-            $this->MonitorService->deserialize($param["MonitorService"]);
+            $this->MonitorService->deserialize($param['MonitorService']);
         }
     }
 }

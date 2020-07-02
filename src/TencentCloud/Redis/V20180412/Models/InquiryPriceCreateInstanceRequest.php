@@ -110,40 +110,40 @@ class InquiryPriceCreateInstanceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ZoneId",$param) and $param["ZoneId"] !== null) {
-            $this->ZoneId = $param["ZoneId"];
+        if (array_key_exists('ZoneId',$param) and $param['ZoneId'] !== null) {
+            $this->ZoneId = $param['ZoneId'];
         }
 
-        if (array_key_exists("TypeId",$param) and $param["TypeId"] !== null) {
-            $this->TypeId = $param["TypeId"];
+        if (array_key_exists('TypeId',$param) and $param['TypeId'] !== null) {
+            $this->TypeId = $param['TypeId'];
         }
 
-        if (array_key_exists("MemSize",$param) and $param["MemSize"] !== null) {
-            $this->MemSize = $param["MemSize"];
+        if (array_key_exists('MemSize',$param) and $param['MemSize'] !== null) {
+            $this->MemSize = $param['MemSize'];
         }
 
-        if (array_key_exists("GoodsNum",$param) and $param["GoodsNum"] !== null) {
-            $this->GoodsNum = $param["GoodsNum"];
+        if (array_key_exists('GoodsNum',$param) and $param['GoodsNum'] !== null) {
+            $this->GoodsNum = $param['GoodsNum'];
         }
 
-        if (array_key_exists("Period",$param) and $param["Period"] !== null) {
-            $this->Period = $param["Period"];
+        if (array_key_exists('Period',$param) and $param['Period'] !== null) {
+            $this->Period = $param['Period'];
         }
 
-        if (array_key_exists("BillingMode",$param) and $param["BillingMode"] !== null) {
-            $this->BillingMode = $param["BillingMode"];
+        if (array_key_exists('BillingMode',$param) and $param['BillingMode'] !== null) {
+            $this->BillingMode = $param['BillingMode'];
         }
 
-        if (array_key_exists("RedisShardNum",$param) and $param["RedisShardNum"] !== null) {
-            $this->RedisShardNum = $param["RedisShardNum"];
+        if (array_key_exists('RedisShardNum',$param) and $param['RedisShardNum'] !== null) {
+            $this->RedisShardNum = $param['RedisShardNum'];
         }
 
-        if (array_key_exists("RedisReplicasNum",$param) and $param["RedisReplicasNum"] !== null) {
-            $this->RedisReplicasNum = $param["RedisReplicasNum"];
+        if (array_key_exists('RedisReplicasNum',$param) and $param['RedisReplicasNum'] !== null) {
+            $this->RedisReplicasNum = $param['RedisReplicasNum'];
         }
 
-        if (array_key_exists("ReplicasReadonly",$param) and $param["ReplicasReadonly"] !== null) {
-            $this->ReplicasReadonly = $param["ReplicasReadonly"];
+        if (array_key_exists('ReplicasReadonly',$param) and $param['ReplicasReadonly'] !== null) {
+            $this->ReplicasReadonly = $param['ReplicasReadonly'];
         }
     }
 }

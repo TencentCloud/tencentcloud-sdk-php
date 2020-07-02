@@ -90,28 +90,28 @@ Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PersonName",$param) and $param["PersonName"] !== null) {
-            $this->PersonName = $param["PersonName"];
+        if (array_key_exists('PersonName',$param) and $param['PersonName'] !== null) {
+            $this->PersonName = $param['PersonName'];
         }
 
-        if (array_key_exists("PersonId",$param) and $param["PersonId"] !== null) {
-            $this->PersonId = $param["PersonId"];
+        if (array_key_exists('PersonId',$param) and $param['PersonId'] !== null) {
+            $this->PersonId = $param['PersonId'];
         }
 
-        if (array_key_exists("Gender",$param) and $param["Gender"] !== null) {
-            $this->Gender = $param["Gender"];
+        if (array_key_exists('Gender',$param) and $param['Gender'] !== null) {
+            $this->Gender = $param['Gender'];
         }
 
-        if (array_key_exists("PersonExDescriptions",$param) and $param["PersonExDescriptions"] !== null) {
-            $this->PersonExDescriptions = $param["PersonExDescriptions"];
+        if (array_key_exists('PersonExDescriptions',$param) and $param['PersonExDescriptions'] !== null) {
+            $this->PersonExDescriptions = $param['PersonExDescriptions'];
         }
 
-        if (array_key_exists("FaceIds",$param) and $param["FaceIds"] !== null) {
-            $this->FaceIds = $param["FaceIds"];
+        if (array_key_exists('FaceIds',$param) and $param['FaceIds'] !== null) {
+            $this->FaceIds = $param['FaceIds'];
         }
 
-        if (array_key_exists("CreationTimestamp",$param) and $param["CreationTimestamp"] !== null) {
-            $this->CreationTimestamp = $param["CreationTimestamp"];
+        if (array_key_exists('CreationTimestamp',$param) and $param['CreationTimestamp'] !== null) {
+            $this->CreationTimestamp = $param['CreationTimestamp'];
         }
     }
 }

@@ -70,30 +70,30 @@ class ListMediaResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MaterialTotalCount",$param) and $param["MaterialTotalCount"] !== null) {
-            $this->MaterialTotalCount = $param["MaterialTotalCount"];
+        if (array_key_exists('MaterialTotalCount',$param) and $param['MaterialTotalCount'] !== null) {
+            $this->MaterialTotalCount = $param['MaterialTotalCount'];
         }
 
-        if (array_key_exists("MaterialInfoSet",$param) and $param["MaterialInfoSet"] !== null) {
+        if (array_key_exists('MaterialInfoSet',$param) and $param['MaterialInfoSet'] !== null) {
             $this->MaterialInfoSet = [];
-            foreach ($param["MaterialInfoSet"] as $key => $value){
+            foreach ($param['MaterialInfoSet'] as $key => $value){
                 $obj = new MaterialInfo();
                 $obj->deserialize($value);
                 array_push($this->MaterialInfoSet, $obj);
             }
         }
 
-        if (array_key_exists("ClassInfoSet",$param) and $param["ClassInfoSet"] !== null) {
+        if (array_key_exists('ClassInfoSet',$param) and $param['ClassInfoSet'] !== null) {
             $this->ClassInfoSet = [];
-            foreach ($param["ClassInfoSet"] as $key => $value){
+            foreach ($param['ClassInfoSet'] as $key => $value){
                 $obj = new ClassInfo();
                 $obj->deserialize($value);
                 array_push($this->ClassInfoSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

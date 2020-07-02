@@ -62,21 +62,21 @@ class DescribeRouteTablesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("RouteTableSet",$param) and $param["RouteTableSet"] !== null) {
+        if (array_key_exists('RouteTableSet',$param) and $param['RouteTableSet'] !== null) {
             $this->RouteTableSet = [];
-            foreach ($param["RouteTableSet"] as $key => $value){
+            foreach ($param['RouteTableSet'] as $key => $value){
                 $obj = new RouteTable();
                 $obj->deserialize($value);
                 array_push($this->RouteTableSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

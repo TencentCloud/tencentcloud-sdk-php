@@ -62,16 +62,16 @@ class ModifyPersonBaseInfoRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PersonId",$param) and $param["PersonId"] !== null) {
-            $this->PersonId = $param["PersonId"];
+        if (array_key_exists('PersonId',$param) and $param['PersonId'] !== null) {
+            $this->PersonId = $param['PersonId'];
         }
 
-        if (array_key_exists("PersonName",$param) and $param["PersonName"] !== null) {
-            $this->PersonName = $param["PersonName"];
+        if (array_key_exists('PersonName',$param) and $param['PersonName'] !== null) {
+            $this->PersonName = $param['PersonName'];
         }
 
-        if (array_key_exists("Gender",$param) and $param["Gender"] !== null) {
-            $this->Gender = $param["Gender"];
+        if (array_key_exists('Gender',$param) and $param['Gender'] !== null) {
+            $this->Gender = $param['Gender'];
         }
     }
 }

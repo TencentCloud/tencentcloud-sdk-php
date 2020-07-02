@@ -66,21 +66,21 @@ class ListKeyDetailResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("KeyMetadatas",$param) and $param["KeyMetadatas"] !== null) {
+        if (array_key_exists('KeyMetadatas',$param) and $param['KeyMetadatas'] !== null) {
             $this->KeyMetadatas = [];
-            foreach ($param["KeyMetadatas"] as $key => $value){
+            foreach ($param['KeyMetadatas'] as $key => $value){
                 $obj = new KeyMetadata();
                 $obj->deserialize($value);
                 array_push($this->KeyMetadatas, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

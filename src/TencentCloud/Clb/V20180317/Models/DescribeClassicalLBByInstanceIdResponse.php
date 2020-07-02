@@ -54,17 +54,17 @@ class DescribeClassicalLBByInstanceIdResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LoadBalancerInfoList",$param) and $param["LoadBalancerInfoList"] !== null) {
+        if (array_key_exists('LoadBalancerInfoList',$param) and $param['LoadBalancerInfoList'] !== null) {
             $this->LoadBalancerInfoList = [];
-            foreach ($param["LoadBalancerInfoList"] as $key => $value){
+            foreach ($param['LoadBalancerInfoList'] as $key => $value){
                 $obj = new ClassicalLoadBalancerInfo();
                 $obj->deserialize($value);
                 array_push($this->LoadBalancerInfoList, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

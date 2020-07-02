@@ -70,20 +70,20 @@ class InquiryPriceUpgradeInstanceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("MemSize",$param) and $param["MemSize"] !== null) {
-            $this->MemSize = $param["MemSize"];
+        if (array_key_exists('MemSize',$param) and $param['MemSize'] !== null) {
+            $this->MemSize = $param['MemSize'];
         }
 
-        if (array_key_exists("RedisShardNum",$param) and $param["RedisShardNum"] !== null) {
-            $this->RedisShardNum = $param["RedisShardNum"];
+        if (array_key_exists('RedisShardNum',$param) and $param['RedisShardNum'] !== null) {
+            $this->RedisShardNum = $param['RedisShardNum'];
         }
 
-        if (array_key_exists("RedisReplicasNum",$param) and $param["RedisReplicasNum"] !== null) {
-            $this->RedisReplicasNum = $param["RedisReplicasNum"];
+        if (array_key_exists('RedisReplicasNum',$param) and $param['RedisReplicasNum'] !== null) {
+            $this->RedisReplicasNum = $param['RedisReplicasNum'];
         }
     }
 }

@@ -62,21 +62,21 @@ class DescribeContentReviewTemplatesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("ContentReviewTemplateSet",$param) and $param["ContentReviewTemplateSet"] !== null) {
+        if (array_key_exists('ContentReviewTemplateSet',$param) and $param['ContentReviewTemplateSet'] !== null) {
             $this->ContentReviewTemplateSet = [];
-            foreach ($param["ContentReviewTemplateSet"] as $key => $value){
+            foreach ($param['ContentReviewTemplateSet'] as $key => $value){
                 $obj = new ContentReviewTemplateItem();
                 $obj->deserialize($value);
                 array_push($this->ContentReviewTemplateSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

@@ -134,36 +134,36 @@ class UsgPolicy extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Ip",$param) and $param["Ip"] !== null) {
-            $this->Ip = $param["Ip"];
+        if (array_key_exists('Ip',$param) and $param['Ip'] !== null) {
+            $this->Ip = $param['Ip'];
         }
 
-        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
-            $this->Id = $param["Id"];
+        if (array_key_exists('Id',$param) and $param['Id'] !== null) {
+            $this->Id = $param['Id'];
         }
 
-        if (array_key_exists("AddressModule",$param) and $param["AddressModule"] !== null) {
-            $this->AddressModule = $param["AddressModule"];
+        if (array_key_exists('AddressModule',$param) and $param['AddressModule'] !== null) {
+            $this->AddressModule = $param['AddressModule'];
         }
 
-        if (array_key_exists("Proto",$param) and $param["Proto"] !== null) {
-            $this->Proto = $param["Proto"];
+        if (array_key_exists('Proto',$param) and $param['Proto'] !== null) {
+            $this->Proto = $param['Proto'];
         }
 
-        if (array_key_exists("Port",$param) and $param["Port"] !== null) {
-            $this->Port = $param["Port"];
+        if (array_key_exists('Port',$param) and $param['Port'] !== null) {
+            $this->Port = $param['Port'];
         }
 
-        if (array_key_exists("ServiceModule",$param) and $param["ServiceModule"] !== null) {
-            $this->ServiceModule = $param["ServiceModule"];
+        if (array_key_exists('ServiceModule',$param) and $param['ServiceModule'] !== null) {
+            $this->ServiceModule = $param['ServiceModule'];
         }
 
-        if (array_key_exists("Desc",$param) and $param["Desc"] !== null) {
-            $this->Desc = $param["Desc"];
+        if (array_key_exists('Desc',$param) and $param['Desc'] !== null) {
+            $this->Desc = $param['Desc'];
         }
 
-        if (array_key_exists("Action",$param) and $param["Action"] !== null) {
-            $this->Action = $param["Action"];
+        if (array_key_exists('Action',$param) and $param['Action'] !== null) {
+            $this->Action = $param['Action'];
         }
     }
 }

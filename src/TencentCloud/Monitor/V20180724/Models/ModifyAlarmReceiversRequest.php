@@ -62,17 +62,17 @@ class ModifyAlarmReceiversRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
-            $this->GroupId = $param["GroupId"];
+        if (array_key_exists('GroupId',$param) and $param['GroupId'] !== null) {
+            $this->GroupId = $param['GroupId'];
         }
 
-        if (array_key_exists("Module",$param) and $param["Module"] !== null) {
-            $this->Module = $param["Module"];
+        if (array_key_exists('Module',$param) and $param['Module'] !== null) {
+            $this->Module = $param['Module'];
         }
 
-        if (array_key_exists("ReceiverInfos",$param) and $param["ReceiverInfos"] !== null) {
+        if (array_key_exists('ReceiverInfos',$param) and $param['ReceiverInfos'] !== null) {
             $this->ReceiverInfos = [];
-            foreach ($param["ReceiverInfos"] as $key => $value){
+            foreach ($param['ReceiverInfos'] as $key => $value){
                 $obj = new ReceiverInfo();
                 $obj->deserialize($value);
                 array_push($this->ReceiverInfos, $obj);

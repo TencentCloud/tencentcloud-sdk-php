@@ -86,28 +86,28 @@ class DestinationIpPortTranslationNatRule extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("IpProtocol",$param) and $param["IpProtocol"] !== null) {
-            $this->IpProtocol = $param["IpProtocol"];
+        if (array_key_exists('IpProtocol',$param) and $param['IpProtocol'] !== null) {
+            $this->IpProtocol = $param['IpProtocol'];
         }
 
-        if (array_key_exists("PublicIpAddress",$param) and $param["PublicIpAddress"] !== null) {
-            $this->PublicIpAddress = $param["PublicIpAddress"];
+        if (array_key_exists('PublicIpAddress',$param) and $param['PublicIpAddress'] !== null) {
+            $this->PublicIpAddress = $param['PublicIpAddress'];
         }
 
-        if (array_key_exists("PublicPort",$param) and $param["PublicPort"] !== null) {
-            $this->PublicPort = $param["PublicPort"];
+        if (array_key_exists('PublicPort',$param) and $param['PublicPort'] !== null) {
+            $this->PublicPort = $param['PublicPort'];
         }
 
-        if (array_key_exists("PrivateIpAddress",$param) and $param["PrivateIpAddress"] !== null) {
-            $this->PrivateIpAddress = $param["PrivateIpAddress"];
+        if (array_key_exists('PrivateIpAddress',$param) and $param['PrivateIpAddress'] !== null) {
+            $this->PrivateIpAddress = $param['PrivateIpAddress'];
         }
 
-        if (array_key_exists("PrivatePort",$param) and $param["PrivatePort"] !== null) {
-            $this->PrivatePort = $param["PrivatePort"];
+        if (array_key_exists('PrivatePort',$param) and $param['PrivatePort'] !== null) {
+            $this->PrivatePort = $param['PrivatePort'];
         }
 
-        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
-            $this->Description = $param["Description"];
+        if (array_key_exists('Description',$param) and $param['Description'] !== null) {
+            $this->Description = $param['Description'];
         }
     }
 }

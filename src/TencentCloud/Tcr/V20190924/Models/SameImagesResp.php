@@ -50,8 +50,8 @@ class SameImagesResp extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SameImages",$param) and $param["SameImages"] !== null) {
-            $this->SameImages = $param["SameImages"];
+        if (array_key_exists('SameImages',$param) and $param['SameImages'] !== null) {
+            $this->SameImages = $param['SameImages'];
         }
     }
 }

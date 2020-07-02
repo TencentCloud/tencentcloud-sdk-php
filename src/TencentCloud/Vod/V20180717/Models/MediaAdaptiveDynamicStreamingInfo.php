@@ -46,9 +46,9 @@ class MediaAdaptiveDynamicStreamingInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AdaptiveDynamicStreamingSet",$param) and $param["AdaptiveDynamicStreamingSet"] !== null) {
+        if (array_key_exists('AdaptiveDynamicStreamingSet',$param) and $param['AdaptiveDynamicStreamingSet'] !== null) {
             $this->AdaptiveDynamicStreamingSet = [];
-            foreach ($param["AdaptiveDynamicStreamingSet"] as $key => $value){
+            foreach ($param['AdaptiveDynamicStreamingSet'] as $key => $value){
                 $obj = new AdaptiveDynamicStreamingInfoItem();
                 $obj->deserialize($value);
                 array_push($this->AdaptiveDynamicStreamingSet, $obj);

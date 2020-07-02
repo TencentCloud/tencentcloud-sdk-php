@@ -62,12 +62,12 @@ class OriginPullTimeout extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ConnectTimeout",$param) and $param["ConnectTimeout"] !== null) {
-            $this->ConnectTimeout = $param["ConnectTimeout"];
+        if (array_key_exists('ConnectTimeout',$param) and $param['ConnectTimeout'] !== null) {
+            $this->ConnectTimeout = $param['ConnectTimeout'];
         }
 
-        if (array_key_exists("ReceiveTimeout",$param) and $param["ReceiveTimeout"] !== null) {
-            $this->ReceiveTimeout = $param["ReceiveTimeout"];
+        if (array_key_exists('ReceiveTimeout',$param) and $param['ReceiveTimeout'] !== null) {
+            $this->ReceiveTimeout = $param['ReceiveTimeout'];
         }
     }
 }

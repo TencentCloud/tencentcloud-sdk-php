@@ -74,20 +74,20 @@ class ModifyProxiesAttributeRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceIds",$param) and $param["InstanceIds"] !== null) {
-            $this->InstanceIds = $param["InstanceIds"];
+        if (array_key_exists('InstanceIds',$param) and $param['InstanceIds'] !== null) {
+            $this->InstanceIds = $param['InstanceIds'];
         }
 
-        if (array_key_exists("ProxyName",$param) and $param["ProxyName"] !== null) {
-            $this->ProxyName = $param["ProxyName"];
+        if (array_key_exists('ProxyName',$param) and $param['ProxyName'] !== null) {
+            $this->ProxyName = $param['ProxyName'];
         }
 
-        if (array_key_exists("ClientToken",$param) and $param["ClientToken"] !== null) {
-            $this->ClientToken = $param["ClientToken"];
+        if (array_key_exists('ClientToken',$param) and $param['ClientToken'] !== null) {
+            $this->ClientToken = $param['ClientToken'];
         }
 
-        if (array_key_exists("ProxyIds",$param) and $param["ProxyIds"] !== null) {
-            $this->ProxyIds = $param["ProxyIds"];
+        if (array_key_exists('ProxyIds',$param) and $param['ProxyIds'] !== null) {
+            $this->ProxyIds = $param['ProxyIds'];
         }
     }
 }

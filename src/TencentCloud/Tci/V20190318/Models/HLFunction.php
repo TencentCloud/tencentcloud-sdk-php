@@ -78,24 +78,24 @@ class HLFunction extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("EnableFaceDetect",$param) and $param["EnableFaceDetect"] !== null) {
-            $this->EnableFaceDetect = $param["EnableFaceDetect"];
+        if (array_key_exists('EnableFaceDetect',$param) and $param['EnableFaceDetect'] !== null) {
+            $this->EnableFaceDetect = $param['EnableFaceDetect'];
         }
 
-        if (array_key_exists("EnableFaceExpression",$param) and $param["EnableFaceExpression"] !== null) {
-            $this->EnableFaceExpression = $param["EnableFaceExpression"];
+        if (array_key_exists('EnableFaceExpression',$param) and $param['EnableFaceExpression'] !== null) {
+            $this->EnableFaceExpression = $param['EnableFaceExpression'];
         }
 
-        if (array_key_exists("EnableFaceIdent",$param) and $param["EnableFaceIdent"] !== null) {
-            $this->EnableFaceIdent = $param["EnableFaceIdent"];
+        if (array_key_exists('EnableFaceIdent',$param) and $param['EnableFaceIdent'] !== null) {
+            $this->EnableFaceIdent = $param['EnableFaceIdent'];
         }
 
-        if (array_key_exists("EnableKeywordWonderfulTime",$param) and $param["EnableKeywordWonderfulTime"] !== null) {
-            $this->EnableKeywordWonderfulTime = $param["EnableKeywordWonderfulTime"];
+        if (array_key_exists('EnableKeywordWonderfulTime',$param) and $param['EnableKeywordWonderfulTime'] !== null) {
+            $this->EnableKeywordWonderfulTime = $param['EnableKeywordWonderfulTime'];
         }
 
-        if (array_key_exists("EnableSmileWonderfulTime",$param) and $param["EnableSmileWonderfulTime"] !== null) {
-            $this->EnableSmileWonderfulTime = $param["EnableSmileWonderfulTime"];
+        if (array_key_exists('EnableSmileWonderfulTime',$param) and $param['EnableSmileWonderfulTime'] !== null) {
+            $this->EnableSmileWonderfulTime = $param['EnableSmileWonderfulTime'];
         }
     }
 }

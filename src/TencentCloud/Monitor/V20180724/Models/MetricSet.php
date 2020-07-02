@@ -102,43 +102,43 @@ class MetricSet extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Namespace",$param) and $param["Namespace"] !== null) {
-            $this->Namespace = $param["Namespace"];
+        if (array_key_exists('Namespace',$param) and $param['Namespace'] !== null) {
+            $this->Namespace = $param['Namespace'];
         }
 
-        if (array_key_exists("MetricName",$param) and $param["MetricName"] !== null) {
-            $this->MetricName = $param["MetricName"];
+        if (array_key_exists('MetricName',$param) and $param['MetricName'] !== null) {
+            $this->MetricName = $param['MetricName'];
         }
 
-        if (array_key_exists("Unit",$param) and $param["Unit"] !== null) {
-            $this->Unit = $param["Unit"];
+        if (array_key_exists('Unit',$param) and $param['Unit'] !== null) {
+            $this->Unit = $param['Unit'];
         }
 
-        if (array_key_exists("UnitCname",$param) and $param["UnitCname"] !== null) {
-            $this->UnitCname = $param["UnitCname"];
+        if (array_key_exists('UnitCname',$param) and $param['UnitCname'] !== null) {
+            $this->UnitCname = $param['UnitCname'];
         }
 
-        if (array_key_exists("Period",$param) and $param["Period"] !== null) {
-            $this->Period = $param["Period"];
+        if (array_key_exists('Period',$param) and $param['Period'] !== null) {
+            $this->Period = $param['Period'];
         }
 
-        if (array_key_exists("Periods",$param) and $param["Periods"] !== null) {
+        if (array_key_exists('Periods',$param) and $param['Periods'] !== null) {
             $this->Periods = [];
-            foreach ($param["Periods"] as $key => $value){
+            foreach ($param['Periods'] as $key => $value){
                 $obj = new PeriodsSt();
                 $obj->deserialize($value);
                 array_push($this->Periods, $obj);
             }
         }
 
-        if (array_key_exists("Meaning",$param) and $param["Meaning"] !== null) {
+        if (array_key_exists('Meaning',$param) and $param['Meaning'] !== null) {
             $this->Meaning = new MetricObjectMeaning();
-            $this->Meaning->deserialize($param["Meaning"]);
+            $this->Meaning->deserialize($param['Meaning']);
         }
 
-        if (array_key_exists("Dimensions",$param) and $param["Dimensions"] !== null) {
+        if (array_key_exists('Dimensions',$param) and $param['Dimensions'] !== null) {
             $this->Dimensions = [];
-            foreach ($param["Dimensions"] as $key => $value){
+            foreach ($param['Dimensions'] as $key => $value){
                 $obj = new DimensionsDesc();
                 $obj->deserialize($value);
                 array_push($this->Dimensions, $obj);

@@ -54,12 +54,12 @@ class NodeInstanceNum extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("NodeNum",$param) and $param["NodeNum"] !== null) {
-            $this->NodeNum = $param["NodeNum"];
+        if (array_key_exists('NodeNum',$param) and $param['NodeNum'] !== null) {
+            $this->NodeNum = $param['NodeNum'];
         }
 
-        if (array_key_exists("InstanceNum",$param) and $param["InstanceNum"] !== null) {
-            $this->InstanceNum = $param["InstanceNum"];
+        if (array_key_exists('InstanceNum',$param) and $param['InstanceNum'] !== null) {
+            $this->InstanceNum = $param['InstanceNum'];
         }
     }
 }

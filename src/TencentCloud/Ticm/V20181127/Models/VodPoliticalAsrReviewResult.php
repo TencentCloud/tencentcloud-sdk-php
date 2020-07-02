@@ -142,29 +142,29 @@ block。
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("Code",$param) and $param["Code"] !== null) {
-            $this->Code = $param["Code"];
+        if (array_key_exists('Code',$param) and $param['Code'] !== null) {
+            $this->Code = $param['Code'];
         }
 
-        if (array_key_exists("Msg",$param) and $param["Msg"] !== null) {
-            $this->Msg = $param["Msg"];
+        if (array_key_exists('Msg',$param) and $param['Msg'] !== null) {
+            $this->Msg = $param['Msg'];
         }
 
-        if (array_key_exists("Confidence",$param) and $param["Confidence"] !== null) {
-            $this->Confidence = $param["Confidence"];
+        if (array_key_exists('Confidence',$param) and $param['Confidence'] !== null) {
+            $this->Confidence = $param['Confidence'];
         }
 
-        if (array_key_exists("Suggestion",$param) and $param["Suggestion"] !== null) {
-            $this->Suggestion = $param["Suggestion"];
+        if (array_key_exists('Suggestion',$param) and $param['Suggestion'] !== null) {
+            $this->Suggestion = $param['Suggestion'];
         }
 
-        if (array_key_exists("SegmentSet",$param) and $param["SegmentSet"] !== null) {
+        if (array_key_exists('SegmentSet',$param) and $param['SegmentSet'] !== null) {
             $this->SegmentSet = [];
-            foreach ($param["SegmentSet"] as $key => $value){
+            foreach ($param['SegmentSet'] as $key => $value){
                 $obj = new VodAsrTextSegmentItem();
                 $obj->deserialize($value);
                 array_push($this->SegmentSet, $obj);

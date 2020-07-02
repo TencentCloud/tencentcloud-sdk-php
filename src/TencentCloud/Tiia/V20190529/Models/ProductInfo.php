@@ -119,37 +119,37 @@ class ProductInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FindSKU",$param) and $param["FindSKU"] !== null) {
-            $this->FindSKU = $param["FindSKU"];
+        if (array_key_exists('FindSKU',$param) and $param['FindSKU'] !== null) {
+            $this->FindSKU = $param['FindSKU'];
         }
 
-        if (array_key_exists("Location",$param) and $param["Location"] !== null) {
+        if (array_key_exists('Location',$param) and $param['Location'] !== null) {
             $this->Location = new Location();
-            $this->Location->deserialize($param["Location"]);
+            $this->Location->deserialize($param['Location']);
         }
 
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("Brand",$param) and $param["Brand"] !== null) {
-            $this->Brand = $param["Brand"];
+        if (array_key_exists('Brand',$param) and $param['Brand'] !== null) {
+            $this->Brand = $param['Brand'];
         }
 
-        if (array_key_exists("Price",$param) and $param["Price"] !== null) {
-            $this->Price = $param["Price"];
+        if (array_key_exists('Price',$param) and $param['Price'] !== null) {
+            $this->Price = $param['Price'];
         }
 
-        if (array_key_exists("ProductCategory",$param) and $param["ProductCategory"] !== null) {
-            $this->ProductCategory = $param["ProductCategory"];
+        if (array_key_exists('ProductCategory',$param) and $param['ProductCategory'] !== null) {
+            $this->ProductCategory = $param['ProductCategory'];
         }
 
-        if (array_key_exists("Score",$param) and $param["Score"] !== null) {
-            $this->Score = $param["Score"];
+        if (array_key_exists('Score',$param) and $param['Score'] !== null) {
+            $this->Score = $param['Score'];
         }
 
-        if (array_key_exists("Image",$param) and $param["Image"] !== null) {
-            $this->Image = $param["Image"];
+        if (array_key_exists('Image',$param) and $param['Image'] !== null) {
+            $this->Image = $param['Image'];
         }
     }
 }

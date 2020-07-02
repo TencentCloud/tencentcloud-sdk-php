@@ -62,16 +62,16 @@ class VpnGatewayQuota extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Bandwidth",$param) and $param["Bandwidth"] !== null) {
-            $this->Bandwidth = $param["Bandwidth"];
+        if (array_key_exists('Bandwidth',$param) and $param['Bandwidth'] !== null) {
+            $this->Bandwidth = $param['Bandwidth'];
         }
 
-        if (array_key_exists("Cname",$param) and $param["Cname"] !== null) {
-            $this->Cname = $param["Cname"];
+        if (array_key_exists('Cname',$param) and $param['Cname'] !== null) {
+            $this->Cname = $param['Cname'];
         }
 
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
     }
 }

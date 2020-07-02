@@ -102,36 +102,36 @@ class ImportImageRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Architecture",$param) and $param["Architecture"] !== null) {
-            $this->Architecture = $param["Architecture"];
+        if (array_key_exists('Architecture',$param) and $param['Architecture'] !== null) {
+            $this->Architecture = $param['Architecture'];
         }
 
-        if (array_key_exists("OsType",$param) and $param["OsType"] !== null) {
-            $this->OsType = $param["OsType"];
+        if (array_key_exists('OsType',$param) and $param['OsType'] !== null) {
+            $this->OsType = $param['OsType'];
         }
 
-        if (array_key_exists("OsVersion",$param) and $param["OsVersion"] !== null) {
-            $this->OsVersion = $param["OsVersion"];
+        if (array_key_exists('OsVersion',$param) and $param['OsVersion'] !== null) {
+            $this->OsVersion = $param['OsVersion'];
         }
 
-        if (array_key_exists("ImageUrl",$param) and $param["ImageUrl"] !== null) {
-            $this->ImageUrl = $param["ImageUrl"];
+        if (array_key_exists('ImageUrl',$param) and $param['ImageUrl'] !== null) {
+            $this->ImageUrl = $param['ImageUrl'];
         }
 
-        if (array_key_exists("ImageName",$param) and $param["ImageName"] !== null) {
-            $this->ImageName = $param["ImageName"];
+        if (array_key_exists('ImageName',$param) and $param['ImageName'] !== null) {
+            $this->ImageName = $param['ImageName'];
         }
 
-        if (array_key_exists("ImageDescription",$param) and $param["ImageDescription"] !== null) {
-            $this->ImageDescription = $param["ImageDescription"];
+        if (array_key_exists('ImageDescription',$param) and $param['ImageDescription'] !== null) {
+            $this->ImageDescription = $param['ImageDescription'];
         }
 
-        if (array_key_exists("DryRun",$param) and $param["DryRun"] !== null) {
-            $this->DryRun = $param["DryRun"];
+        if (array_key_exists('DryRun',$param) and $param['DryRun'] !== null) {
+            $this->DryRun = $param['DryRun'];
         }
 
-        if (array_key_exists("Force",$param) and $param["Force"] !== null) {
-            $this->Force = $param["Force"];
+        if (array_key_exists('Force',$param) and $param['Force'] !== null) {
+            $this->Force = $param['Force'];
         }
     }
 }

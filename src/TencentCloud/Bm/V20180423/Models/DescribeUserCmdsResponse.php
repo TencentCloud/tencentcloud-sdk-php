@@ -62,21 +62,21 @@ class DescribeUserCmdsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("UserCmds",$param) and $param["UserCmds"] !== null) {
+        if (array_key_exists('UserCmds',$param) and $param['UserCmds'] !== null) {
             $this->UserCmds = [];
-            foreach ($param["UserCmds"] as $key => $value){
+            foreach ($param['UserCmds'] as $key => $value){
                 $obj = new UserCmd();
                 $obj->deserialize($value);
                 array_push($this->UserCmds, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

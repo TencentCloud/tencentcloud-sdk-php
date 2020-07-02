@@ -54,12 +54,12 @@ class HttpHeaderParam extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("HeaderName",$param) and $param["HeaderName"] !== null) {
-            $this->HeaderName = $param["HeaderName"];
+        if (array_key_exists('HeaderName',$param) and $param['HeaderName'] !== null) {
+            $this->HeaderName = $param['HeaderName'];
         }
 
-        if (array_key_exists("HeaderValue",$param) and $param["HeaderValue"] !== null) {
-            $this->HeaderValue = $param["HeaderValue"];
+        if (array_key_exists('HeaderValue',$param) and $param['HeaderValue'] !== null) {
+            $this->HeaderValue = $param['HeaderValue'];
         }
     }
 }

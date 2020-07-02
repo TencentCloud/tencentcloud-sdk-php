@@ -70,20 +70,20 @@ class DescribePermissionResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("EnterpriseUser",$param) and $param["EnterpriseUser"] !== null) {
-            $this->EnterpriseUser = $param["EnterpriseUser"];
+        if (array_key_exists('EnterpriseUser',$param) and $param['EnterpriseUser'] !== null) {
+            $this->EnterpriseUser = $param['EnterpriseUser'];
         }
 
-        if (array_key_exists("DownloadPermission",$param) and $param["DownloadPermission"] !== null) {
-            $this->DownloadPermission = $param["DownloadPermission"];
+        if (array_key_exists('DownloadPermission',$param) and $param['DownloadPermission'] !== null) {
+            $this->DownloadPermission = $param['DownloadPermission'];
         }
 
-        if (array_key_exists("UsePermission",$param) and $param["UsePermission"] !== null) {
-            $this->UsePermission = $param["UsePermission"];
+        if (array_key_exists('UsePermission',$param) and $param['UsePermission'] !== null) {
+            $this->UsePermission = $param['UsePermission'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

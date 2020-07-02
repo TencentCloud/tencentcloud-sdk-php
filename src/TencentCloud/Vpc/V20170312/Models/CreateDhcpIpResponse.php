@@ -54,17 +54,17 @@ class CreateDhcpIpResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DhcpIpSet",$param) and $param["DhcpIpSet"] !== null) {
+        if (array_key_exists('DhcpIpSet',$param) and $param['DhcpIpSet'] !== null) {
             $this->DhcpIpSet = [];
-            foreach ($param["DhcpIpSet"] as $key => $value){
+            foreach ($param['DhcpIpSet'] as $key => $value){
                 $obj = new DhcpIp();
                 $obj->deserialize($value);
                 array_push($this->DhcpIpSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

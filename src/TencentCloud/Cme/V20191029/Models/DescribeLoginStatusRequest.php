@@ -54,12 +54,12 @@ class DescribeLoginStatusRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Platform",$param) and $param["Platform"] !== null) {
-            $this->Platform = $param["Platform"];
+        if (array_key_exists('Platform',$param) and $param['Platform'] !== null) {
+            $this->Platform = $param['Platform'];
         }
 
-        if (array_key_exists("UserIds",$param) and $param["UserIds"] !== null) {
-            $this->UserIds = $param["UserIds"];
+        if (array_key_exists('UserIds',$param) and $param['UserIds'] !== null) {
+            $this->UserIds = $param['UserIds'];
         }
     }
 }

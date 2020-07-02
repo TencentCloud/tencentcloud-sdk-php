@@ -70,16 +70,16 @@ class DescribeCertDomainsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Domains",$param) and $param["Domains"] !== null) {
-            $this->Domains = $param["Domains"];
+        if (array_key_exists('Domains',$param) and $param['Domains'] !== null) {
+            $this->Domains = $param['Domains'];
         }
 
-        if (array_key_exists("CertifiedDomains",$param) and $param["CertifiedDomains"] !== null) {
-            $this->CertifiedDomains = $param["CertifiedDomains"];
+        if (array_key_exists('CertifiedDomains',$param) and $param['CertifiedDomains'] !== null) {
+            $this->CertifiedDomains = $param['CertifiedDomains'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

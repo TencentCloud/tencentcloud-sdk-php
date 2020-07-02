@@ -62,16 +62,16 @@ class ModifyDDoSLevelResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
-            $this->Id = $param["Id"];
+        if (array_key_exists('Id',$param) and $param['Id'] !== null) {
+            $this->Id = $param['Id'];
         }
 
-        if (array_key_exists("DDoSLevel",$param) and $param["DDoSLevel"] !== null) {
-            $this->DDoSLevel = $param["DDoSLevel"];
+        if (array_key_exists('DDoSLevel',$param) and $param['DDoSLevel'] !== null) {
+            $this->DDoSLevel = $param['DDoSLevel'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

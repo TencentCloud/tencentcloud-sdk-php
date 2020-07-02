@@ -94,32 +94,32 @@ class DescribeSimpleApplicationsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ApplicationIdList",$param) and $param["ApplicationIdList"] !== null) {
-            $this->ApplicationIdList = $param["ApplicationIdList"];
+        if (array_key_exists('ApplicationIdList',$param) and $param['ApplicationIdList'] !== null) {
+            $this->ApplicationIdList = $param['ApplicationIdList'];
         }
 
-        if (array_key_exists("ApplicationType",$param) and $param["ApplicationType"] !== null) {
-            $this->ApplicationType = $param["ApplicationType"];
+        if (array_key_exists('ApplicationType',$param) and $param['ApplicationType'] !== null) {
+            $this->ApplicationType = $param['ApplicationType'];
         }
 
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
+        if (array_key_exists('Limit',$param) and $param['Limit'] !== null) {
+            $this->Limit = $param['Limit'];
         }
 
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
+        if (array_key_exists('Offset',$param) and $param['Offset'] !== null) {
+            $this->Offset = $param['Offset'];
         }
 
-        if (array_key_exists("MicroserviceType",$param) and $param["MicroserviceType"] !== null) {
-            $this->MicroserviceType = $param["MicroserviceType"];
+        if (array_key_exists('MicroserviceType',$param) and $param['MicroserviceType'] !== null) {
+            $this->MicroserviceType = $param['MicroserviceType'];
         }
 
-        if (array_key_exists("ApplicationResourceTypeList",$param) and $param["ApplicationResourceTypeList"] !== null) {
-            $this->ApplicationResourceTypeList = $param["ApplicationResourceTypeList"];
+        if (array_key_exists('ApplicationResourceTypeList',$param) and $param['ApplicationResourceTypeList'] !== null) {
+            $this->ApplicationResourceTypeList = $param['ApplicationResourceTypeList'];
         }
 
-        if (array_key_exists("SearchWord",$param) and $param["SearchWord"] !== null) {
-            $this->SearchWord = $param["SearchWord"];
+        if (array_key_exists('SearchWord',$param) and $param['SearchWord'] !== null) {
+            $this->SearchWord = $param['SearchWord'];
         }
     }
 }

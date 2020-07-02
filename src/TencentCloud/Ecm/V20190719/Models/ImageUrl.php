@@ -46,8 +46,8 @@ class ImageUrl extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ImageFile",$param) and $param["ImageFile"] !== null) {
-            $this->ImageFile = $param["ImageFile"];
+        if (array_key_exists('ImageFile',$param) and $param['ImageFile'] !== null) {
+            $this->ImageFile = $param['ImageFile'];
         }
     }
 }

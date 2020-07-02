@@ -70,20 +70,20 @@ class RealServer extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RealServerIP",$param) and $param["RealServerIP"] !== null) {
-            $this->RealServerIP = $param["RealServerIP"];
+        if (array_key_exists('RealServerIP',$param) and $param['RealServerIP'] !== null) {
+            $this->RealServerIP = $param['RealServerIP'];
         }
 
-        if (array_key_exists("RealServerId",$param) and $param["RealServerId"] !== null) {
-            $this->RealServerId = $param["RealServerId"];
+        if (array_key_exists('RealServerId',$param) and $param['RealServerId'] !== null) {
+            $this->RealServerId = $param['RealServerId'];
         }
 
-        if (array_key_exists("RealServerName",$param) and $param["RealServerName"] !== null) {
-            $this->RealServerName = $param["RealServerName"];
+        if (array_key_exists('RealServerName',$param) and $param['RealServerName'] !== null) {
+            $this->RealServerName = $param['RealServerName'];
         }
 
-        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
-            $this->ProjectId = $param["ProjectId"];
+        if (array_key_exists('ProjectId',$param) and $param['ProjectId'] !== null) {
+            $this->ProjectId = $param['ProjectId'];
         }
     }
 }

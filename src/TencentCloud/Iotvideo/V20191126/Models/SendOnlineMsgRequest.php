@@ -90,24 +90,24 @@ class SendOnlineMsgRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Tid",$param) and $param["Tid"] !== null) {
-            $this->Tid = $param["Tid"];
+        if (array_key_exists('Tid',$param) and $param['Tid'] !== null) {
+            $this->Tid = $param['Tid'];
         }
 
-        if (array_key_exists("Wakeup",$param) and $param["Wakeup"] !== null) {
-            $this->Wakeup = $param["Wakeup"];
+        if (array_key_exists('Wakeup',$param) and $param['Wakeup'] !== null) {
+            $this->Wakeup = $param['Wakeup'];
         }
 
-        if (array_key_exists("WaitResp",$param) and $param["WaitResp"] !== null) {
-            $this->WaitResp = $param["WaitResp"];
+        if (array_key_exists('WaitResp',$param) and $param['WaitResp'] !== null) {
+            $this->WaitResp = $param['WaitResp'];
         }
 
-        if (array_key_exists("MsgTopic",$param) and $param["MsgTopic"] !== null) {
-            $this->MsgTopic = $param["MsgTopic"];
+        if (array_key_exists('MsgTopic',$param) and $param['MsgTopic'] !== null) {
+            $this->MsgTopic = $param['MsgTopic'];
         }
 
-        if (array_key_exists("MsgContent",$param) and $param["MsgContent"] !== null) {
-            $this->MsgContent = $param["MsgContent"];
+        if (array_key_exists('MsgContent',$param) and $param['MsgContent'] !== null) {
+            $this->MsgContent = $param['MsgContent'];
         }
     }
 }

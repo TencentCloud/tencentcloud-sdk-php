@@ -70,20 +70,20 @@ class ModifyAgentTaxPaymentInfoRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BatchNum",$param) and $param["BatchNum"] !== null) {
-            $this->BatchNum = $param["BatchNum"];
+        if (array_key_exists('BatchNum',$param) and $param['BatchNum'] !== null) {
+            $this->BatchNum = $param['BatchNum'];
         }
 
-        if (array_key_exists("RawElectronicCertUrl",$param) and $param["RawElectronicCertUrl"] !== null) {
-            $this->RawElectronicCertUrl = $param["RawElectronicCertUrl"];
+        if (array_key_exists('RawElectronicCertUrl',$param) and $param['RawElectronicCertUrl'] !== null) {
+            $this->RawElectronicCertUrl = $param['RawElectronicCertUrl'];
         }
 
-        if (array_key_exists("FileName",$param) and $param["FileName"] !== null) {
-            $this->FileName = $param["FileName"];
+        if (array_key_exists('FileName',$param) and $param['FileName'] !== null) {
+            $this->FileName = $param['FileName'];
         }
 
-        if (array_key_exists("Profile",$param) and $param["Profile"] !== null) {
-            $this->Profile = $param["Profile"];
+        if (array_key_exists('Profile',$param) and $param['Profile'] !== null) {
+            $this->Profile = $param['Profile'];
         }
     }
 }

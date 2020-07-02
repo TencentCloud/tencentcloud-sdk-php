@@ -78,29 +78,29 @@ class SubmitImageTaskPlusResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ResultSet",$param) and $param["ResultSet"] !== null) {
+        if (array_key_exists('ResultSet',$param) and $param['ResultSet'] !== null) {
             $this->ResultSet = [];
-            foreach ($param["ResultSet"] as $key => $value){
+            foreach ($param['ResultSet'] as $key => $value){
                 $obj = new ImageTaskResult();
                 $obj->deserialize($value);
                 array_push($this->ResultSet, $obj);
             }
         }
 
-        if (array_key_exists("JobId",$param) and $param["JobId"] !== null) {
-            $this->JobId = $param["JobId"];
+        if (array_key_exists('JobId',$param) and $param['JobId'] !== null) {
+            $this->JobId = $param['JobId'];
         }
 
-        if (array_key_exists("Progress",$param) and $param["Progress"] !== null) {
-            $this->Progress = $param["Progress"];
+        if (array_key_exists('Progress',$param) and $param['Progress'] !== null) {
+            $this->Progress = $param['Progress'];
         }
 
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

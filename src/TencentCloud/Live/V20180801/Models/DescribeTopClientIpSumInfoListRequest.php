@@ -106,36 +106,36 @@ class DescribeTopClientIpSumInfoListRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
-            $this->StartTime = $param["StartTime"];
+        if (array_key_exists('StartTime',$param) and $param['StartTime'] !== null) {
+            $this->StartTime = $param['StartTime'];
         }
 
-        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
-            $this->EndTime = $param["EndTime"];
+        if (array_key_exists('EndTime',$param) and $param['EndTime'] !== null) {
+            $this->EndTime = $param['EndTime'];
         }
 
-        if (array_key_exists("PlayDomains",$param) and $param["PlayDomains"] !== null) {
-            $this->PlayDomains = $param["PlayDomains"];
+        if (array_key_exists('PlayDomains',$param) and $param['PlayDomains'] !== null) {
+            $this->PlayDomains = $param['PlayDomains'];
         }
 
-        if (array_key_exists("PageNum",$param) and $param["PageNum"] !== null) {
-            $this->PageNum = $param["PageNum"];
+        if (array_key_exists('PageNum',$param) and $param['PageNum'] !== null) {
+            $this->PageNum = $param['PageNum'];
         }
 
-        if (array_key_exists("PageSize",$param) and $param["PageSize"] !== null) {
-            $this->PageSize = $param["PageSize"];
+        if (array_key_exists('PageSize',$param) and $param['PageSize'] !== null) {
+            $this->PageSize = $param['PageSize'];
         }
 
-        if (array_key_exists("OrderParam",$param) and $param["OrderParam"] !== null) {
-            $this->OrderParam = $param["OrderParam"];
+        if (array_key_exists('OrderParam',$param) and $param['OrderParam'] !== null) {
+            $this->OrderParam = $param['OrderParam'];
         }
 
-        if (array_key_exists("MainlandOrOversea",$param) and $param["MainlandOrOversea"] !== null) {
-            $this->MainlandOrOversea = $param["MainlandOrOversea"];
+        if (array_key_exists('MainlandOrOversea',$param) and $param['MainlandOrOversea'] !== null) {
+            $this->MainlandOrOversea = $param['MainlandOrOversea'];
         }
 
-        if (array_key_exists("OutLanguage",$param) and $param["OutLanguage"] !== null) {
-            $this->OutLanguage = $param["OutLanguage"];
+        if (array_key_exists('OutLanguage',$param) and $param['OutLanguage'] !== null) {
+            $this->OutLanguage = $param['OutLanguage'];
         }
     }
 }

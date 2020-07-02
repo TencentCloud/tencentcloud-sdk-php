@@ -50,8 +50,8 @@ class InstanceExtraArgs extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Kubelet",$param) and $param["Kubelet"] !== null) {
-            $this->Kubelet = $param["Kubelet"];
+        if (array_key_exists('Kubelet',$param) and $param['Kubelet'] !== null) {
+            $this->Kubelet = $param['Kubelet'];
         }
     }
 }

@@ -298,93 +298,93 @@ class DescribeBasicAlarmListAlarms extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
-            $this->Id = $param["Id"];
+        if (array_key_exists('Id',$param) and $param['Id'] !== null) {
+            $this->Id = $param['Id'];
         }
 
-        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
-            $this->ProjectId = $param["ProjectId"];
+        if (array_key_exists('ProjectId',$param) and $param['ProjectId'] !== null) {
+            $this->ProjectId = $param['ProjectId'];
         }
 
-        if (array_key_exists("ProjectName",$param) and $param["ProjectName"] !== null) {
-            $this->ProjectName = $param["ProjectName"];
+        if (array_key_exists('ProjectName',$param) and $param['ProjectName'] !== null) {
+            $this->ProjectName = $param['ProjectName'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("AlarmStatus",$param) and $param["AlarmStatus"] !== null) {
-            $this->AlarmStatus = $param["AlarmStatus"];
+        if (array_key_exists('AlarmStatus',$param) and $param['AlarmStatus'] !== null) {
+            $this->AlarmStatus = $param['AlarmStatus'];
         }
 
-        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
-            $this->GroupId = $param["GroupId"];
+        if (array_key_exists('GroupId',$param) and $param['GroupId'] !== null) {
+            $this->GroupId = $param['GroupId'];
         }
 
-        if (array_key_exists("GroupName",$param) and $param["GroupName"] !== null) {
-            $this->GroupName = $param["GroupName"];
+        if (array_key_exists('GroupName',$param) and $param['GroupName'] !== null) {
+            $this->GroupName = $param['GroupName'];
         }
 
-        if (array_key_exists("FirstOccurTime",$param) and $param["FirstOccurTime"] !== null) {
-            $this->FirstOccurTime = $param["FirstOccurTime"];
+        if (array_key_exists('FirstOccurTime',$param) and $param['FirstOccurTime'] !== null) {
+            $this->FirstOccurTime = $param['FirstOccurTime'];
         }
 
-        if (array_key_exists("Duration",$param) and $param["Duration"] !== null) {
-            $this->Duration = $param["Duration"];
+        if (array_key_exists('Duration',$param) and $param['Duration'] !== null) {
+            $this->Duration = $param['Duration'];
         }
 
-        if (array_key_exists("LastOccurTime",$param) and $param["LastOccurTime"] !== null) {
-            $this->LastOccurTime = $param["LastOccurTime"];
+        if (array_key_exists('LastOccurTime',$param) and $param['LastOccurTime'] !== null) {
+            $this->LastOccurTime = $param['LastOccurTime'];
         }
 
-        if (array_key_exists("Content",$param) and $param["Content"] !== null) {
-            $this->Content = $param["Content"];
+        if (array_key_exists('Content',$param) and $param['Content'] !== null) {
+            $this->Content = $param['Content'];
         }
 
-        if (array_key_exists("ObjName",$param) and $param["ObjName"] !== null) {
-            $this->ObjName = $param["ObjName"];
+        if (array_key_exists('ObjName',$param) and $param['ObjName'] !== null) {
+            $this->ObjName = $param['ObjName'];
         }
 
-        if (array_key_exists("ObjId",$param) and $param["ObjId"] !== null) {
-            $this->ObjId = $param["ObjId"];
+        if (array_key_exists('ObjId',$param) and $param['ObjId'] !== null) {
+            $this->ObjId = $param['ObjId'];
         }
 
-        if (array_key_exists("ViewName",$param) and $param["ViewName"] !== null) {
-            $this->ViewName = $param["ViewName"];
+        if (array_key_exists('ViewName',$param) and $param['ViewName'] !== null) {
+            $this->ViewName = $param['ViewName'];
         }
 
-        if (array_key_exists("Vpc",$param) and $param["Vpc"] !== null) {
-            $this->Vpc = $param["Vpc"];
+        if (array_key_exists('Vpc',$param) and $param['Vpc'] !== null) {
+            $this->Vpc = $param['Vpc'];
         }
 
-        if (array_key_exists("MetricId",$param) and $param["MetricId"] !== null) {
-            $this->MetricId = $param["MetricId"];
+        if (array_key_exists('MetricId',$param) and $param['MetricId'] !== null) {
+            $this->MetricId = $param['MetricId'];
         }
 
-        if (array_key_exists("MetricName",$param) and $param["MetricName"] !== null) {
-            $this->MetricName = $param["MetricName"];
+        if (array_key_exists('MetricName',$param) and $param['MetricName'] !== null) {
+            $this->MetricName = $param['MetricName'];
         }
 
-        if (array_key_exists("AlarmType",$param) and $param["AlarmType"] !== null) {
-            $this->AlarmType = $param["AlarmType"];
+        if (array_key_exists('AlarmType',$param) and $param['AlarmType'] !== null) {
+            $this->AlarmType = $param['AlarmType'];
         }
 
-        if (array_key_exists("Region",$param) and $param["Region"] !== null) {
-            $this->Region = $param["Region"];
+        if (array_key_exists('Region',$param) and $param['Region'] !== null) {
+            $this->Region = $param['Region'];
         }
 
-        if (array_key_exists("Dimensions",$param) and $param["Dimensions"] !== null) {
-            $this->Dimensions = $param["Dimensions"];
+        if (array_key_exists('Dimensions',$param) and $param['Dimensions'] !== null) {
+            $this->Dimensions = $param['Dimensions'];
         }
 
-        if (array_key_exists("NotifyWay",$param) and $param["NotifyWay"] !== null) {
-            $this->NotifyWay = $param["NotifyWay"];
+        if (array_key_exists('NotifyWay',$param) and $param['NotifyWay'] !== null) {
+            $this->NotifyWay = $param['NotifyWay'];
         }
 
-        if (array_key_exists("InstanceGroup",$param) and $param["InstanceGroup"] !== null) {
+        if (array_key_exists('InstanceGroup',$param) and $param['InstanceGroup'] !== null) {
             $this->InstanceGroup = [];
-            foreach ($param["InstanceGroup"] as $key => $value){
+            foreach ($param['InstanceGroup'] as $key => $value){
                 $obj = new InstanceGroup();
                 $obj->deserialize($value);
                 array_push($this->InstanceGroup, $obj);

@@ -94,25 +94,25 @@ class Station extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CategoryID",$param) and $param["CategoryID"] !== null) {
-            $this->CategoryID = $param["CategoryID"];
+        if (array_key_exists('CategoryID',$param) and $param['CategoryID'] !== null) {
+            $this->CategoryID = $param['CategoryID'];
         }
 
-        if (array_key_exists("CategoryCode",$param) and $param["CategoryCode"] !== null) {
-            $this->CategoryCode = $param["CategoryCode"];
+        if (array_key_exists('CategoryCode',$param) and $param['CategoryCode'] !== null) {
+            $this->CategoryCode = $param['CategoryCode'];
         }
 
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("Rank",$param) and $param["Rank"] !== null) {
-            $this->Rank = $param["Rank"];
+        if (array_key_exists('Rank',$param) and $param['Rank'] !== null) {
+            $this->Rank = $param['Rank'];
         }
 
-        if (array_key_exists("ImagePathMap",$param) and $param["ImagePathMap"] !== null) {
+        if (array_key_exists('ImagePathMap',$param) and $param['ImagePathMap'] !== null) {
             $this->ImagePathMap = [];
-            foreach ($param["ImagePathMap"] as $key => $value){
+            foreach ($param['ImagePathMap'] as $key => $value){
                 $obj = new ImagePath();
                 $obj->deserialize($value);
                 array_push($this->ImagePathMap, $obj);

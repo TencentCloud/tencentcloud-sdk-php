@@ -94,16 +94,16 @@ path 时填充绝对路径，如 /xxx/test.html
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MaxAgeType",$param) and $param["MaxAgeType"] !== null) {
-            $this->MaxAgeType = $param["MaxAgeType"];
+        if (array_key_exists('MaxAgeType',$param) and $param['MaxAgeType'] !== null) {
+            $this->MaxAgeType = $param['MaxAgeType'];
         }
 
-        if (array_key_exists("MaxAgeContents",$param) and $param["MaxAgeContents"] !== null) {
-            $this->MaxAgeContents = $param["MaxAgeContents"];
+        if (array_key_exists('MaxAgeContents',$param) and $param['MaxAgeContents'] !== null) {
+            $this->MaxAgeContents = $param['MaxAgeContents'];
         }
 
-        if (array_key_exists("MaxAgeTime",$param) and $param["MaxAgeTime"] !== null) {
-            $this->MaxAgeTime = $param["MaxAgeTime"];
+        if (array_key_exists('MaxAgeTime',$param) and $param['MaxAgeTime'] !== null) {
+            $this->MaxAgeTime = $param['MaxAgeTime'];
         }
     }
 }

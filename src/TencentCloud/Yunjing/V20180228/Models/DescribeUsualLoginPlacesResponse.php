@@ -54,17 +54,17 @@ class DescribeUsualLoginPlacesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("UsualLoginPlaces",$param) and $param["UsualLoginPlaces"] !== null) {
+        if (array_key_exists('UsualLoginPlaces',$param) and $param['UsualLoginPlaces'] !== null) {
             $this->UsualLoginPlaces = [];
-            foreach ($param["UsualLoginPlaces"] as $key => $value){
+            foreach ($param['UsualLoginPlaces'] as $key => $value){
                 $obj = new UsualPlace();
                 $obj->deserialize($value);
                 array_push($this->UsualLoginPlaces, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

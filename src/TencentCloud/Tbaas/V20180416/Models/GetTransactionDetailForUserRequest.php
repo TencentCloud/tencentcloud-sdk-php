@@ -94,32 +94,32 @@ class GetTransactionDetailForUserRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Module",$param) and $param["Module"] !== null) {
-            $this->Module = $param["Module"];
+        if (array_key_exists('Module',$param) and $param['Module'] !== null) {
+            $this->Module = $param['Module'];
         }
 
-        if (array_key_exists("Operation",$param) and $param["Operation"] !== null) {
-            $this->Operation = $param["Operation"];
+        if (array_key_exists('Operation',$param) and $param['Operation'] !== null) {
+            $this->Operation = $param['Operation'];
         }
 
-        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
-            $this->ClusterId = $param["ClusterId"];
+        if (array_key_exists('ClusterId',$param) and $param['ClusterId'] !== null) {
+            $this->ClusterId = $param['ClusterId'];
         }
 
-        if (array_key_exists("GroupName",$param) and $param["GroupName"] !== null) {
-            $this->GroupName = $param["GroupName"];
+        if (array_key_exists('GroupName',$param) and $param['GroupName'] !== null) {
+            $this->GroupName = $param['GroupName'];
         }
 
-        if (array_key_exists("ChannelName",$param) and $param["ChannelName"] !== null) {
-            $this->ChannelName = $param["ChannelName"];
+        if (array_key_exists('ChannelName',$param) and $param['ChannelName'] !== null) {
+            $this->ChannelName = $param['ChannelName'];
         }
 
-        if (array_key_exists("BlockId",$param) and $param["BlockId"] !== null) {
-            $this->BlockId = $param["BlockId"];
+        if (array_key_exists('BlockId',$param) and $param['BlockId'] !== null) {
+            $this->BlockId = $param['BlockId'];
         }
 
-        if (array_key_exists("TransactionId",$param) and $param["TransactionId"] !== null) {
-            $this->TransactionId = $param["TransactionId"];
+        if (array_key_exists('TransactionId',$param) and $param['TransactionId'] !== null) {
+            $this->TransactionId = $param['TransactionId'];
         }
     }
 }

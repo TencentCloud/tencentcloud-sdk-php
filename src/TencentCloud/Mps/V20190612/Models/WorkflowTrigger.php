@@ -58,13 +58,13 @@ class WorkflowTrigger extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists('Type',$param) and $param['Type'] !== null) {
+            $this->Type = $param['Type'];
         }
 
-        if (array_key_exists("CosFileUploadTrigger",$param) and $param["CosFileUploadTrigger"] !== null) {
+        if (array_key_exists('CosFileUploadTrigger',$param) and $param['CosFileUploadTrigger'] !== null) {
             $this->CosFileUploadTrigger = new CosFileUploadTrigger();
-            $this->CosFileUploadTrigger->deserialize($param["CosFileUploadTrigger"]);
+            $this->CosFileUploadTrigger->deserialize($param['CosFileUploadTrigger']);
         }
     }
 }

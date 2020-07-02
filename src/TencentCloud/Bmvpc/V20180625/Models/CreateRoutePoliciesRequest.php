@@ -54,13 +54,13 @@ class CreateRoutePoliciesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RouteTableId",$param) and $param["RouteTableId"] !== null) {
-            $this->RouteTableId = $param["RouteTableId"];
+        if (array_key_exists('RouteTableId',$param) and $param['RouteTableId'] !== null) {
+            $this->RouteTableId = $param['RouteTableId'];
         }
 
-        if (array_key_exists("RoutePolicySet",$param) and $param["RoutePolicySet"] !== null) {
+        if (array_key_exists('RoutePolicySet',$param) and $param['RoutePolicySet'] !== null) {
             $this->RoutePolicySet = [];
-            foreach ($param["RoutePolicySet"] as $key => $value){
+            foreach ($param['RoutePolicySet'] as $key => $value){
                 $obj = new RoutePolicy();
                 $obj->deserialize($value);
                 array_push($this->RoutePolicySet, $obj);

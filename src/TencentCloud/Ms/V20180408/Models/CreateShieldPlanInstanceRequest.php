@@ -62,17 +62,17 @@ class CreateShieldPlanInstanceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ResourceId",$param) and $param["ResourceId"] !== null) {
-            $this->ResourceId = $param["ResourceId"];
+        if (array_key_exists('ResourceId',$param) and $param['ResourceId'] !== null) {
+            $this->ResourceId = $param['ResourceId'];
         }
 
-        if (array_key_exists("PlanName",$param) and $param["PlanName"] !== null) {
-            $this->PlanName = $param["PlanName"];
+        if (array_key_exists('PlanName',$param) and $param['PlanName'] !== null) {
+            $this->PlanName = $param['PlanName'];
         }
 
-        if (array_key_exists("PlanInfo",$param) and $param["PlanInfo"] !== null) {
+        if (array_key_exists('PlanInfo',$param) and $param['PlanInfo'] !== null) {
             $this->PlanInfo = new PlanInfo();
-            $this->PlanInfo->deserialize($param["PlanInfo"]);
+            $this->PlanInfo->deserialize($param['PlanInfo']);
         }
     }
 }

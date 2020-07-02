@@ -66,21 +66,21 @@ class GetGroupListResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("GroupInfos",$param) and $param["GroupInfos"] !== null) {
+        if (array_key_exists('GroupInfos',$param) and $param['GroupInfos'] !== null) {
             $this->GroupInfos = [];
-            foreach ($param["GroupInfos"] as $key => $value){
+            foreach ($param['GroupInfos'] as $key => $value){
                 $obj = new GroupInfo();
                 $obj->deserialize($value);
                 array_push($this->GroupInfos, $obj);
             }
         }
 
-        if (array_key_exists("GroupNum",$param) and $param["GroupNum"] !== null) {
-            $this->GroupNum = $param["GroupNum"];
+        if (array_key_exists('GroupNum',$param) and $param['GroupNum'] !== null) {
+            $this->GroupNum = $param['GroupNum'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

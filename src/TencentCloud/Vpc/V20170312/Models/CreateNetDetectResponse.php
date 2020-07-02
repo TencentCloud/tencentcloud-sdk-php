@@ -54,13 +54,13 @@ class CreateNetDetectResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("NetDetect",$param) and $param["NetDetect"] !== null) {
+        if (array_key_exists('NetDetect',$param) and $param['NetDetect'] !== null) {
             $this->NetDetect = new NetDetect();
-            $this->NetDetect->deserialize($param["NetDetect"]);
+            $this->NetDetect->deserialize($param['NetDetect']);
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

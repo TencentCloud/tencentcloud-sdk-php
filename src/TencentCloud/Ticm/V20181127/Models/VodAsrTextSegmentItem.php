@@ -114,24 +114,24 @@ block。
         if ($param === null) {
             return;
         }
-        if (array_key_exists("StartTimeOffset",$param) and $param["StartTimeOffset"] !== null) {
-            $this->StartTimeOffset = $param["StartTimeOffset"];
+        if (array_key_exists('StartTimeOffset',$param) and $param['StartTimeOffset'] !== null) {
+            $this->StartTimeOffset = $param['StartTimeOffset'];
         }
 
-        if (array_key_exists("EndTimeOffset",$param) and $param["EndTimeOffset"] !== null) {
-            $this->EndTimeOffset = $param["EndTimeOffset"];
+        if (array_key_exists('EndTimeOffset',$param) and $param['EndTimeOffset'] !== null) {
+            $this->EndTimeOffset = $param['EndTimeOffset'];
         }
 
-        if (array_key_exists("Confidence",$param) and $param["Confidence"] !== null) {
-            $this->Confidence = $param["Confidence"];
+        if (array_key_exists('Confidence',$param) and $param['Confidence'] !== null) {
+            $this->Confidence = $param['Confidence'];
         }
 
-        if (array_key_exists("Suggestion",$param) and $param["Suggestion"] !== null) {
-            $this->Suggestion = $param["Suggestion"];
+        if (array_key_exists('Suggestion',$param) and $param['Suggestion'] !== null) {
+            $this->Suggestion = $param['Suggestion'];
         }
 
-        if (array_key_exists("KeywordSet",$param) and $param["KeywordSet"] !== null) {
-            $this->KeywordSet = $param["KeywordSet"];
+        if (array_key_exists('KeywordSet',$param) and $param['KeywordSet'] !== null) {
+            $this->KeywordSet = $param['KeywordSet'];
         }
     }
 }

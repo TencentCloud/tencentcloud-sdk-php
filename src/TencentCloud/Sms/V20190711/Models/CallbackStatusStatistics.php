@@ -110,40 +110,40 @@ class CallbackStatusStatistics extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CallbackCount",$param) and $param["CallbackCount"] !== null) {
-            $this->CallbackCount = $param["CallbackCount"];
+        if (array_key_exists('CallbackCount',$param) and $param['CallbackCount'] !== null) {
+            $this->CallbackCount = $param['CallbackCount'];
         }
 
-        if (array_key_exists("RequestSuccessCount",$param) and $param["RequestSuccessCount"] !== null) {
-            $this->RequestSuccessCount = $param["RequestSuccessCount"];
+        if (array_key_exists('RequestSuccessCount',$param) and $param['RequestSuccessCount'] !== null) {
+            $this->RequestSuccessCount = $param['RequestSuccessCount'];
         }
 
-        if (array_key_exists("CallbackFailCount",$param) and $param["CallbackFailCount"] !== null) {
-            $this->CallbackFailCount = $param["CallbackFailCount"];
+        if (array_key_exists('CallbackFailCount',$param) and $param['CallbackFailCount'] !== null) {
+            $this->CallbackFailCount = $param['CallbackFailCount'];
         }
 
-        if (array_key_exists("CallbackSuccessCount",$param) and $param["CallbackSuccessCount"] !== null) {
-            $this->CallbackSuccessCount = $param["CallbackSuccessCount"];
+        if (array_key_exists('CallbackSuccessCount',$param) and $param['CallbackSuccessCount'] !== null) {
+            $this->CallbackSuccessCount = $param['CallbackSuccessCount'];
         }
 
-        if (array_key_exists("InternalErrorCount",$param) and $param["InternalErrorCount"] !== null) {
-            $this->InternalErrorCount = $param["InternalErrorCount"];
+        if (array_key_exists('InternalErrorCount',$param) and $param['InternalErrorCount'] !== null) {
+            $this->InternalErrorCount = $param['InternalErrorCount'];
         }
 
-        if (array_key_exists("InvalidNumberCount",$param) and $param["InvalidNumberCount"] !== null) {
-            $this->InvalidNumberCount = $param["InvalidNumberCount"];
+        if (array_key_exists('InvalidNumberCount',$param) and $param['InvalidNumberCount'] !== null) {
+            $this->InvalidNumberCount = $param['InvalidNumberCount'];
         }
 
-        if (array_key_exists("ShutdownErrorCount",$param) and $param["ShutdownErrorCount"] !== null) {
-            $this->ShutdownErrorCount = $param["ShutdownErrorCount"];
+        if (array_key_exists('ShutdownErrorCount',$param) and $param['ShutdownErrorCount'] !== null) {
+            $this->ShutdownErrorCount = $param['ShutdownErrorCount'];
         }
 
-        if (array_key_exists("BlackListCount",$param) and $param["BlackListCount"] !== null) {
-            $this->BlackListCount = $param["BlackListCount"];
+        if (array_key_exists('BlackListCount',$param) and $param['BlackListCount'] !== null) {
+            $this->BlackListCount = $param['BlackListCount'];
         }
 
-        if (array_key_exists("FrequencyLimitCount",$param) and $param["FrequencyLimitCount"] !== null) {
-            $this->FrequencyLimitCount = $param["FrequencyLimitCount"];
+        if (array_key_exists('FrequencyLimitCount',$param) and $param['FrequencyLimitCount'] !== null) {
+            $this->FrequencyLimitCount = $param['FrequencyLimitCount'];
         }
     }
 }

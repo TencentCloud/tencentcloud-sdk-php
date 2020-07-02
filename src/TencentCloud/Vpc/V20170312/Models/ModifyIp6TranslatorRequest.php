@@ -54,12 +54,12 @@ class ModifyIp6TranslatorRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Ip6TranslatorId",$param) and $param["Ip6TranslatorId"] !== null) {
-            $this->Ip6TranslatorId = $param["Ip6TranslatorId"];
+        if (array_key_exists('Ip6TranslatorId',$param) and $param['Ip6TranslatorId'] !== null) {
+            $this->Ip6TranslatorId = $param['Ip6TranslatorId'];
         }
 
-        if (array_key_exists("Ip6TranslatorName",$param) and $param["Ip6TranslatorName"] !== null) {
-            $this->Ip6TranslatorName = $param["Ip6TranslatorName"];
+        if (array_key_exists('Ip6TranslatorName',$param) and $param['Ip6TranslatorName'] !== null) {
+            $this->Ip6TranslatorName = $param['Ip6TranslatorName'];
         }
     }
 }

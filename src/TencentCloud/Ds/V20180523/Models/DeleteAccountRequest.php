@@ -62,16 +62,16 @@ class DeleteAccountRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Module",$param) and $param["Module"] !== null) {
-            $this->Module = $param["Module"];
+        if (array_key_exists('Module',$param) and $param['Module'] !== null) {
+            $this->Module = $param['Module'];
         }
 
-        if (array_key_exists("Operation",$param) and $param["Operation"] !== null) {
-            $this->Operation = $param["Operation"];
+        if (array_key_exists('Operation',$param) and $param['Operation'] !== null) {
+            $this->Operation = $param['Operation'];
         }
 
-        if (array_key_exists("AccountList",$param) and $param["AccountList"] !== null) {
-            $this->AccountList = $param["AccountList"];
+        if (array_key_exists('AccountList',$param) and $param['AccountList'] !== null) {
+            $this->AccountList = $param['AccountList'];
         }
     }
 }

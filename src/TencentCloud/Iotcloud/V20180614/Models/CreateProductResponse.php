@@ -70,21 +70,21 @@ class CreateProductResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ProductName",$param) and $param["ProductName"] !== null) {
-            $this->ProductName = $param["ProductName"];
+        if (array_key_exists('ProductName',$param) and $param['ProductName'] !== null) {
+            $this->ProductName = $param['ProductName'];
         }
 
-        if (array_key_exists("ProductId",$param) and $param["ProductId"] !== null) {
-            $this->ProductId = $param["ProductId"];
+        if (array_key_exists('ProductId',$param) and $param['ProductId'] !== null) {
+            $this->ProductId = $param['ProductId'];
         }
 
-        if (array_key_exists("ProductProperties",$param) and $param["ProductProperties"] !== null) {
+        if (array_key_exists('ProductProperties',$param) and $param['ProductProperties'] !== null) {
             $this->ProductProperties = new ProductProperties();
-            $this->ProductProperties->deserialize($param["ProductProperties"]);
+            $this->ProductProperties->deserialize($param['ProductProperties']);
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

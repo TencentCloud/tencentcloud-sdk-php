@@ -101,6 +101,10 @@ ip：IP 列表作为源站
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBackupServerName(string $BackupServerName) 设置回备源站时 Host 头部，不填充则默认为主源站的 ServerName
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getBasePath() 获取回源路径
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBasePath(string $BasePath) 设置回源路径
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Origin extends AbstractModel
 {
@@ -174,6 +178,12 @@ ip：IP 列表作为源站
     public $BackupServerName;
 
     /**
+     * @var string 回源路径
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BasePath;
+
+    /**
      * @param array $Origins 主源站列表
 修改源站时，需要同时填充对应的 OriginType
 注意：此字段可能返回 null，表示取不到有效值。
@@ -210,6 +220,8 @@ ip：IP 列表作为源站
 修改 BackupOrigins 时需要同时填充对应的 BackupOriginType
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BackupServerName 回备源站时 Host 头部，不填充则默认为主源站的 ServerName
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $BasePath 回源路径
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -255,6 +267,10 @@ ip：IP 列表作为源站
 
         if (array_key_exists("BackupServerName",$param) and $param["BackupServerName"] !== null) {
             $this->BackupServerName = $param["BackupServerName"];
+        }
+
+        if (array_key_exists("BasePath",$param) and $param["BasePath"] !== null) {
+            $this->BasePath = $param["BasePath"];
         }
     }
 }

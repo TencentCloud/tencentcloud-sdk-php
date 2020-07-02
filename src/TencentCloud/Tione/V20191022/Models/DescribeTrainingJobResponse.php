@@ -100,6 +100,12 @@ Completed: 已完成
 Failed: 失败
 Stopping: 停止中
 Stopped：已停止
+ * @method string getLogUrl() 获取训练任务日志链接
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLogUrl(string $LogUrl) 设置训练任务日志链接
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getInstanceId() 获取训练任务实例ID
+ * @method void setInstanceId(string $InstanceId) 设置训练任务实例ID
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -214,6 +220,17 @@ Stopped：已停止
     public $TrainingJobStatus;
 
     /**
+     * @var string 训练任务日志链接
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LogUrl;
+
+    /**
+     * @var string 训练任务实例ID
+     */
+    public $InstanceId;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -259,6 +276,9 @@ Completed: 已完成
 Failed: 失败
 Stopping: 停止中
 Stopped：已停止
+     * @param string $LogUrl 训练任务日志链接
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $InstanceId 训练任务实例ID
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -356,6 +376,14 @@ Stopped：已停止
 
         if (array_key_exists("TrainingJobStatus",$param) and $param["TrainingJobStatus"] !== null) {
             $this->TrainingJobStatus = $param["TrainingJobStatus"];
+        }
+
+        if (array_key_exists("LogUrl",$param) and $param["LogUrl"] !== null) {
+            $this->LogUrl = $param["LogUrl"];
+        }
+
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

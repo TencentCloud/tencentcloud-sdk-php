@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMd5(string $Md5) 设置程序包MD5
  * @method integer getSize() 获取程序包大小（单位字节）
  * @method void setSize(integer $Size) 设置程序包大小（单位字节）
+ * @method string getRepositoryType() 获取程序包仓库类型
+ * @method void setRepositoryType(string $RepositoryType) 设置程序包仓库类型
+ * @method string getRepositoryId() 获取程序包仓库id
+ * @method void setRepositoryId(string $RepositoryId) 设置程序包仓库id
  */
 class ModifyUploadInfoRequest extends AbstractModel
 {
@@ -59,11 +63,23 @@ class ModifyUploadInfoRequest extends AbstractModel
     public $Size;
 
     /**
+     * @var string 程序包仓库类型
+     */
+    public $RepositoryType;
+
+    /**
+     * @var string 程序包仓库id
+     */
+    public $RepositoryId;
+
+    /**
      * @param string $ApplicationId 应用ID
      * @param string $PkgId 调用DescribeUploadInfo接口时返回的软件包ID
      * @param integer $Result COS返回上传结果（默认为0：成功，其他值表示失败）
      * @param string $Md5 程序包MD5
      * @param integer $Size 程序包大小（单位字节）
+     * @param string $RepositoryType 程序包仓库类型
+     * @param string $RepositoryId 程序包仓库id
      */
     function __construct()
     {
@@ -96,6 +112,14 @@ class ModifyUploadInfoRequest extends AbstractModel
 
         if (array_key_exists("Size",$param) and $param["Size"] !== null) {
             $this->Size = $param["Size"];
+        }
+
+        if (array_key_exists("RepositoryType",$param) and $param["RepositoryType"] !== null) {
+            $this->RepositoryType = $param["RepositoryType"];
+        }
+
+        if (array_key_exists("RepositoryId",$param) and $param["RepositoryId"] !== null) {
+            $this->RepositoryId = $param["RepositoryId"];
         }
     }
 }

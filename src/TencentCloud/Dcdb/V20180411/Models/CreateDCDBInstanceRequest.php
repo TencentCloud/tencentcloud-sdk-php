@@ -66,6 +66,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSecurityGroupId(string $SecurityGroupId) 设置安全组id
  * @method string getInstanceName() 获取实例名称， 可以通过该字段自主的设置实例的名字
  * @method void setInstanceName(string $InstanceName) 设置实例名称， 可以通过该字段自主的设置实例的名字
+ * @method integer getIpv6Flag() 获取是否支持IPv6
+ * @method void setIpv6Flag(integer $Ipv6Flag) 设置是否支持IPv6
  */
 class CreateDCDBInstanceRequest extends AbstractModel
 {
@@ -153,6 +155,11 @@ class CreateDCDBInstanceRequest extends AbstractModel
     public $InstanceName;
 
     /**
+     * @var integer 是否支持IPv6
+     */
+    public $Ipv6Flag;
+
+    /**
      * @param array $Zones 分片节点可用区分布，最多可填两个可用区。当分片规格为一主两从时，其中两个节点在第一个可用区。
 注意当前可售卖的可用区需要通过DescribeDCDBSaleInfo接口拉取。
      * @param integer $Period 欲购买的时长，单位：月。
@@ -176,6 +183,7 @@ class CreateDCDBInstanceRequest extends AbstractModel
      * @param array $VoucherIds 代金券ID列表，目前仅支持指定一张代金券。
      * @param string $SecurityGroupId 安全组id
      * @param string $InstanceName 实例名称， 可以通过该字段自主的设置实例的名字
+     * @param integer $Ipv6Flag 是否支持IPv6
      */
     function __construct()
     {
@@ -248,6 +256,10 @@ class CreateDCDBInstanceRequest extends AbstractModel
 
         if (array_key_exists("InstanceName",$param) and $param["InstanceName"] !== null) {
             $this->InstanceName = $param["InstanceName"];
+        }
+
+        if (array_key_exists("Ipv6Flag",$param) and $param["Ipv6Flag"] !== null) {
+            $this->Ipv6Flag = $param["Ipv6Flag"];
         }
     }
 }

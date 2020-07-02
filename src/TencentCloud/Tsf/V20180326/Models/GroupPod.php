@@ -72,6 +72,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceStatus(string $InstanceStatus) 设置机器实例状态
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getNodeInstanceId() 获取节点实例id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNodeInstanceId(string $NodeInstanceId) 设置节点实例id
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class GroupPod extends AbstractModel
 {
@@ -154,6 +158,12 @@ class GroupPod extends AbstractModel
     public $InstanceStatus;
 
     /**
+     * @var string 节点实例id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NodeInstanceId;
+
+    /**
      * @param string $PodName 实例名称(对应到kubernetes的pod名称)
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PodId 实例ID(对应到kubernetes的pod id)
@@ -179,6 +189,8 @@ class GroupPod extends AbstractModel
      * @param string $InstanceAvailableStatus 机器实例可使用状态
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceStatus 机器实例状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $NodeInstanceId 节点实例id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -244,6 +256,10 @@ class GroupPod extends AbstractModel
 
         if (array_key_exists("InstanceStatus",$param) and $param["InstanceStatus"] !== null) {
             $this->InstanceStatus = $param["InstanceStatus"];
+        }
+
+        if (array_key_exists("NodeInstanceId",$param) and $param["NodeInstanceId"] !== null) {
+            $this->NodeInstanceId = $param["NodeInstanceId"];
         }
     }
 }

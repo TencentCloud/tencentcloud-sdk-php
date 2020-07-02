@@ -52,6 +52,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPkgPubStatus(integer $PkgPubStatus) 设置程序包状态
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getPkgBindInfo() 获取程序包关联关系
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPkgBindInfo(array $PkgBindInfo) 设置程序包关联关系
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class PkgInfo extends AbstractModel
 {
@@ -104,6 +108,12 @@ class PkgInfo extends AbstractModel
     public $PkgPubStatus;
 
     /**
+     * @var array 程序包关联关系
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PkgBindInfo;
+
+    /**
      * @param string $PkgId 程序包ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PkgName 程序包名
@@ -119,6 +129,8 @@ class PkgInfo extends AbstractModel
      * @param string $Md5 程序包MD5
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $PkgPubStatus 程序包状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $PkgBindInfo 程序包关联关系
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -164,6 +176,15 @@ class PkgInfo extends AbstractModel
 
         if (array_key_exists("PkgPubStatus",$param) and $param["PkgPubStatus"] !== null) {
             $this->PkgPubStatus = $param["PkgPubStatus"];
+        }
+
+        if (array_key_exists("PkgBindInfo",$param) and $param["PkgBindInfo"] !== null) {
+            $this->PkgBindInfo = [];
+            foreach ($param["PkgBindInfo"] as $key => $value){
+                $obj = new PkgBind();
+                $obj->deserialize($value);
+                array_push($this->PkgBindInfo, $obj);
+            }
         }
     }
 }

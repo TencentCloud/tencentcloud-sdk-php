@@ -64,6 +64,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIstioMemRequest(string $IstioMemRequest) 设置istioproxy 容器分配的内存 MiB 数，对应 K8S 的 request
  * @method string getIstioMemLimit() 获取istioproxy 容器最大的内存 MiB 数，对应 K8S 的 limit
  * @method void setIstioMemLimit(string $IstioMemLimit) 设置istioproxy 容器最大的内存 MiB 数，对应 K8S 的 limit
+ * @method string getMaxSurge() 获取kubernetes滚动更新策略的MaxSurge参数
+ * @method void setMaxSurge(string $MaxSurge) 设置kubernetes滚动更新策略的MaxSurge参数
+ * @method string getMaxUnavailable() 获取kubernetes滚动更新策略的MaxUnavailable参数
+ * @method void setMaxUnavailable(string $MaxUnavailable) 设置kubernetes滚动更新策略的MaxUnavailable参数
  */
 class DeployContainerGroupRequest extends AbstractModel
 {
@@ -178,6 +182,16 @@ class DeployContainerGroupRequest extends AbstractModel
     public $IstioMemLimit;
 
     /**
+     * @var string kubernetes滚动更新策略的MaxSurge参数
+     */
+    public $MaxSurge;
+
+    /**
+     * @var string kubernetes滚动更新策略的MaxUnavailable参数
+     */
+    public $MaxUnavailable;
+
+    /**
      * @param string $GroupId 部署组ID，分组唯一标识
      * @param string $Server 镜像server
      * @param string $TagName 镜像版本名称,如v1
@@ -200,6 +214,8 @@ class DeployContainerGroupRequest extends AbstractModel
      * @param string $IstioCpuLimit istioproxy 容器最大的 CPU 核数，对应 K8S 的 limit
      * @param string $IstioMemRequest istioproxy 容器分配的内存 MiB 数，对应 K8S 的 request
      * @param string $IstioMemLimit istioproxy 容器最大的内存 MiB 数，对应 K8S 的 limit
+     * @param string $MaxSurge kubernetes滚动更新策略的MaxSurge参数
+     * @param string $MaxUnavailable kubernetes滚动更新策略的MaxUnavailable参数
      */
     function __construct()
     {
@@ -300,6 +316,14 @@ class DeployContainerGroupRequest extends AbstractModel
 
         if (array_key_exists("IstioMemLimit",$param) and $param["IstioMemLimit"] !== null) {
             $this->IstioMemLimit = $param["IstioMemLimit"];
+        }
+
+        if (array_key_exists("MaxSurge",$param) and $param["MaxSurge"] !== null) {
+            $this->MaxSurge = $param["MaxSurge"];
+        }
+
+        if (array_key_exists("MaxUnavailable",$param) and $param["MaxUnavailable"] !== null) {
+            $this->MaxUnavailable = $param["MaxUnavailable"];
         }
     }
 }

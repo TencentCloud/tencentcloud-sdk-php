@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
 图片存储于腾讯云的 Url 可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
 非腾讯云存储的Url速度和稳定性可能受一定影响。 
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+ * @method string getRspImgType() 获取返回图像方式（base64 或 url ) ，二选一。url有效期为1天。
+ * @method void setRspImgType(string $RspImgType) 设置返回图像方式（base64 或 url ) ，二选一。url有效期为1天。
  */
 class TryLipstickPicRequest extends AbstractModel
 {
@@ -63,6 +65,11 @@ class TryLipstickPicRequest extends AbstractModel
     public $Url;
 
     /**
+     * @var string 返回图像方式（base64 或 url ) ，二选一。url有效期为1天。
+     */
+    public $RspImgType;
+
+    /**
      * @param array $LipColorInfos 唇色信息。 
 您可以输入最多3个 LipColorInfo 来实现给一张图中的最多3张人脸试唇色。
      * @param string $Image 图片 base64 数据，base64 编码后大小不可超过6M。 
@@ -72,6 +79,7 @@ class TryLipstickPicRequest extends AbstractModel
 图片存储于腾讯云的 Url 可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
 非腾讯云存储的Url速度和稳定性可能受一定影响。 
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+     * @param string $RspImgType 返回图像方式（base64 或 url ) ，二选一。url有效期为1天。
      */
     function __construct()
     {
@@ -101,6 +109,10 @@ class TryLipstickPicRequest extends AbstractModel
 
         if (array_key_exists("Url",$param) and $param["Url"] !== null) {
             $this->Url = $param["Url"];
+        }
+
+        if (array_key_exists("RspImgType",$param) and $param["RspImgType"] !== null) {
+            $this->RspImgType = $param["RspImgType"];
         }
     }
 }

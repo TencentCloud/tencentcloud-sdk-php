@@ -39,6 +39,7 @@ use TencentCloud\Tione\V20191022\Models as Models;
  * @method Models\DescribeNotebookLifecycleScriptsResponse DescribeNotebookLifecycleScripts(Models\DescribeNotebookLifecycleScriptsRequest $req) 查看notebook生命周期脚本列表
  * @method Models\DescribeNotebookSummaryResponse DescribeNotebookSummary(Models\DescribeNotebookSummaryRequest $req) 查询Notebook概览数据
  * @method Models\DescribeTrainingJobResponse DescribeTrainingJob(Models\DescribeTrainingJobRequest $req) 查询训练任务
+ * @method Models\DescribeTrainingJobsResponse DescribeTrainingJobs(Models\DescribeTrainingJobsRequest $req) 查询训练任务列表
  * @method Models\StartNotebookInstanceResponse StartNotebookInstance(Models\StartNotebookInstanceRequest $req) 启动Notebook实例
  * @method Models\StopNotebookInstanceResponse StopNotebookInstance(Models\StopNotebookInstanceRequest $req) 停止Notebook实例
  * @method Models\StopTrainingJobResponse StopTrainingJob(Models\StopTrainingJobRequest $req) 停止训练任务

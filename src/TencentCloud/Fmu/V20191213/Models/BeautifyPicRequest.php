@@ -42,6 +42,8 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
  * @method void setFaceLifting(integer $FaceLifting) 设置瘦脸程度，取值范围[0,100]。0不瘦脸，100代表最高程度。默认值70。
  * @method integer getEyeEnlarging() 获取大眼程度，取值范围[0,100]。0不大眼，100代表最高程度。默认值70。
  * @method void setEyeEnlarging(integer $EyeEnlarging) 设置大眼程度，取值范围[0,100]。0不大眼，100代表最高程度。默认值70。
+ * @method string getRspImgType() 获取返回图像方式（base64 或 url ) ，二选一。url有效期为1天。
+ * @method void setRspImgType(string $RspImgType) 设置返回图像方式（base64 或 url ) ，二选一。url有效期为1天。
  */
 class BeautifyPicRequest extends AbstractModel
 {
@@ -81,6 +83,11 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
     public $EyeEnlarging;
 
     /**
+     * @var string 返回图像方式（base64 或 url ) ，二选一。url有效期为1天。
+     */
+    public $RspImgType;
+
+    /**
      * @param string $Image 图片 base64 数据，base64 编码后大小不可超过5M。 
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
      * @param string $Url 图片的 Url 。对应图片 base64 编码后大小不可超过5M。 
@@ -92,6 +99,7 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
      * @param integer $Smoothing 磨皮程度，取值范围[0,100]。0不磨皮，100代表最高程度。默认值10。
      * @param integer $FaceLifting 瘦脸程度，取值范围[0,100]。0不瘦脸，100代表最高程度。默认值70。
      * @param integer $EyeEnlarging 大眼程度，取值范围[0,100]。0不大眼，100代表最高程度。默认值70。
+     * @param string $RspImgType 返回图像方式（base64 或 url ) ，二选一。url有效期为1天。
      */
     function __construct()
     {
@@ -128,6 +136,10 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
 
         if (array_key_exists("EyeEnlarging",$param) and $param["EyeEnlarging"] !== null) {
             $this->EyeEnlarging = $param["EyeEnlarging"];
+        }
+
+        if (array_key_exists("RspImgType",$param) and $param["RspImgType"] !== null) {
+            $this->RspImgType = $param["RspImgType"];
         }
     }
 }

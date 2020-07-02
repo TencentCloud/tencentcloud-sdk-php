@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置查询起始偏移
  * @method integer getLimit() 获取返回数量限制
  * @method void setLimit(integer $Limit) 设置返回数量限制
+ * @method string getRepositoryType() 获取程序包仓库类型
+ * @method void setRepositoryType(string $RepositoryType) 设置程序包仓库类型
+ * @method string getRepositoryId() 获取程序包仓库id
+ * @method void setRepositoryId(string $RepositoryId) 设置程序包仓库id
  */
 class DescribePkgsRequest extends AbstractModel
 {
@@ -66,12 +70,24 @@ class DescribePkgsRequest extends AbstractModel
     public $Limit;
 
     /**
+     * @var string 程序包仓库类型
+     */
+    public $RepositoryType;
+
+    /**
+     * @var string 程序包仓库id
+     */
+    public $RepositoryId;
+
+    /**
      * @param string $ApplicationId 应用ID（只传入应用ID，返回该应用下所有软件包信息）
      * @param string $SearchWord 查询关键字（支持根据包ID，包名，包版本号搜索）
      * @param string $OrderBy 排序关键字（默认为"UploadTime"：上传时间）
      * @param integer $OrderType 升序：0/降序：1（默认降序）
      * @param integer $Offset 查询起始偏移
      * @param integer $Limit 返回数量限制
+     * @param string $RepositoryType 程序包仓库类型
+     * @param string $RepositoryId 程序包仓库id
      */
     function __construct()
     {
@@ -108,6 +124,14 @@ class DescribePkgsRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("RepositoryType",$param) and $param["RepositoryType"] !== null) {
+            $this->RepositoryType = $param["RepositoryType"];
+        }
+
+        if (array_key_exists("RepositoryId",$param) and $param["RepositoryId"] !== null) {
+            $this->RepositoryId = $param["RepositoryId"];
         }
     }
 }

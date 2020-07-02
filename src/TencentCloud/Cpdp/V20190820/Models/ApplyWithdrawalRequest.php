@@ -68,6 +68,8 @@ release: 现网环境
 sandbox: 沙箱环境
 development: 开发环境
 缺省: release
+ * @method string getCommissionAmount() 获取手续费金额
+ * @method void setCommissionAmount(string $CommissionAmount) 设置手续费金额
  */
 class ApplyWithdrawalRequest extends AbstractModel
 {
@@ -152,6 +154,11 @@ development: 开发环境
     public $MidasEnvironment;
 
     /**
+     * @var string 手续费金额
+     */
+    public $CommissionAmount;
+
+    /**
      * @param string $MidasAppId 聚鑫分配的支付主MidasAppId
      * @param string $SubAppId 聚鑫计费SubAppId，代表子商户
      * @param string $SettleAcctNo 用于提现
@@ -176,6 +183,7 @@ release: 现网环境
 sandbox: 沙箱环境
 development: 开发环境
 缺省: release
+     * @param string $CommissionAmount 手续费金额
      */
     function __construct()
     {
@@ -244,6 +252,10 @@ development: 开发环境
 
         if (array_key_exists("MidasEnvironment",$param) and $param["MidasEnvironment"] !== null) {
             $this->MidasEnvironment = $param["MidasEnvironment"];
+        }
+
+        if (array_key_exists("CommissionAmount",$param) and $param["CommissionAmount"] !== null) {
+            $this->CommissionAmount = $param["CommissionAmount"];
         }
     }
 }

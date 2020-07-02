@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCode(string $Code) 设置短信请求错误码，具体含义请参考错误码。
  * @method string getMessage() 获取短信请求错误码描述。
  * @method void setMessage(string $Message) 设置短信请求错误码描述。
+ * @method string getIsoCode() 获取国家码或地区码，例如CN,US等，对于未识别出国家码或者地区码，默认返回DEF,具体支持列表请参考国际/港澳台计费总览。
+ * @method void setIsoCode(string $IsoCode) 设置国家码或地区码，例如CN,US等，对于未识别出国家码或者地区码，默认返回DEF,具体支持列表请参考国际/港澳台计费总览。
  */
 class SendStatus extends AbstractModel
 {
@@ -66,12 +68,18 @@ class SendStatus extends AbstractModel
     public $Message;
 
     /**
+     * @var string 国家码或地区码，例如CN,US等，对于未识别出国家码或者地区码，默认返回DEF,具体支持列表请参考国际/港澳台计费总览。
+     */
+    public $IsoCode;
+
+    /**
      * @param string $SerialNo 发送流水号。
      * @param string $PhoneNumber 手机号码,e.164标准，+[国家或地区码][手机号] ，示例如：+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号。
      * @param integer $Fee 计费条数，计费规则请查询 [计费策略](https://cloud.tencent.com/document/product/382/36135)。
      * @param string $SessionContext 用户Session内容。
      * @param string $Code 短信请求错误码，具体含义请参考错误码。
      * @param string $Message 短信请求错误码描述。
+     * @param string $IsoCode 国家码或地区码，例如CN,US等，对于未识别出国家码或者地区码，默认返回DEF,具体支持列表请参考国际/港澳台计费总览。
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class SendStatus extends AbstractModel
 
         if (array_key_exists("Message",$param) and $param["Message"] !== null) {
             $this->Message = $param["Message"];
+        }
+
+        if (array_key_exists("IsoCode",$param) and $param["IsoCode"] !== null) {
+            $this->IsoCode = $param["IsoCode"];
         }
     }
 }

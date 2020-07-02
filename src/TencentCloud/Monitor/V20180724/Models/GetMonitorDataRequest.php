@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetMonitorData请求参数结构体
  *
- * @method string getNamespace() 获取命名空间，每个云产品会有一个命名空间
- * @method void setNamespace(string $Namespace) 设置命名空间，每个云产品会有一个命名空间
+ * @method string getNamespace() 获取命名空间，各个云产品的详细命名空间说明请参阅各个产品[监控指标](https://cloud.tencent.com/document/product/248/6140)文档
+ * @method void setNamespace(string $Namespace) 设置命名空间，各个云产品的详细命名空间说明请参阅各个产品[监控指标](https://cloud.tencent.com/document/product/248/6140)文档
  * @method string getMetricName() 获取指标名称，各个云产品的详细指标说明请参阅各个产品[监控指标](https://cloud.tencent.com/document/product/248/6140)文档
  * @method void setMetricName(string $MetricName) 设置指标名称，各个云产品的详细指标说明请参阅各个产品[监控指标](https://cloud.tencent.com/document/product/248/6140)文档
  * @method array getInstances() 获取实例对象的维度组合
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class GetMonitorDataRequest extends AbstractModel
 {
     /**
-     * @var string 命名空间，每个云产品会有一个命名空间
+     * @var string 命名空间，各个云产品的详细命名空间说明请参阅各个产品[监控指标](https://cloud.tencent.com/document/product/248/6140)文档
      */
     public $Namespace;
 
@@ -66,7 +66,7 @@ class GetMonitorDataRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @param string $Namespace 命名空间，每个云产品会有一个命名空间
+     * @param string $Namespace 命名空间，各个云产品的详细命名空间说明请参阅各个产品[监控指标](https://cloud.tencent.com/document/product/248/6140)文档
      * @param string $MetricName 指标名称，各个云产品的详细指标说明请参阅各个产品[监控指标](https://cloud.tencent.com/document/product/248/6140)文档
      * @param array $Instances 实例对象的维度组合
      * @param integer $Period 监控统计周期。默认为取值为300，单位为s

@@ -35,6 +35,7 @@ use TencentCloud\Tsf\V20180326\Models as Models;
  * @method Models\CreateMicroserviceResponse CreateMicroservice(Models\CreateMicroserviceRequest $req) 新增微服务
  * @method Models\CreateNamespaceResponse CreateNamespace(Models\CreateNamespaceRequest $req) 创建命名空间
  * @method Models\CreatePublicConfigResponse CreatePublicConfig(Models\CreatePublicConfigRequest $req) 创建公共配置项
+ * @method Models\CreateRepositoryResponse CreateRepository(Models\CreateRepositoryRequest $req) 创建仓库
  * @method Models\CreateServerlessGroupResponse CreateServerlessGroup(Models\CreateServerlessGroupRequest $req) 创建Serverless部署组
  * @method Models\DeleteApplicationResponse DeleteApplication(Models\DeleteApplicationRequest $req) 删除应用
  * @method Models\DeleteConfigResponse DeleteConfig(Models\DeleteConfigRequest $req) 删除配置项
@@ -47,6 +48,7 @@ use TencentCloud\Tsf\V20180326\Models as Models;
  * @method Models\DeletePkgsResponse DeletePkgs(Models\DeletePkgsRequest $req) 从软件仓库批量删除程序包。
 一次最多支持删除1000个包，数量超过1000，返回UpperDeleteLimit错误。
  * @method Models\DeletePublicConfigResponse DeletePublicConfig(Models\DeletePublicConfigRequest $req) 删除公共配置项
+ * @method Models\DeleteRepositoryResponse DeleteRepository(Models\DeleteRepositoryRequest $req) 删除仓库
  * @method Models\DeleteServerlessGroupResponse DeleteServerlessGroup(Models\DeleteServerlessGroupRequest $req) 删除Serverless部署组
  * @method Models\DeployContainerGroupResponse DeployContainerGroup(Models\DeployContainerGroupRequest $req) 部署容器应用
  * @method Models\DeployGroupResponse DeployGroup(Models\DeployGroupRequest $req) 部署虚拟机部署组应用
@@ -83,6 +85,8 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
  * @method Models\DescribePublicConfigSummaryResponse DescribePublicConfigSummary(Models\DescribePublicConfigSummaryRequest $req) 查询公共配置汇总列表
  * @method Models\DescribePublicConfigsResponse DescribePublicConfigs(Models\DescribePublicConfigsRequest $req) 查询公共配置项列表
  * @method Models\DescribeReleasedConfigResponse DescribeReleasedConfig(Models\DescribeReleasedConfigRequest $req) 查询group发布的配置
+ * @method Models\DescribeRepositoriesResponse DescribeRepositories(Models\DescribeRepositoriesRequest $req) 查询仓库列表
+ * @method Models\DescribeRepositoryResponse DescribeRepository(Models\DescribeRepositoryRequest $req) 查询仓库信息
  * @method Models\DescribeServerlessGroupResponse DescribeServerlessGroup(Models\DescribeServerlessGroupRequest $req) 查询Serverless部署组明细
  * @method Models\DescribeServerlessGroupsResponse DescribeServerlessGroups(Models\DescribeServerlessGroupsRequest $req) 查询Serverless部署组列表
  * @method Models\DescribeSimpleApplicationsResponse DescribeSimpleApplications(Models\DescribeSimpleApplicationsRequest $req) 查询简单应用列表
@@ -111,6 +115,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
  * @method Models\StartGroupResponse StartGroup(Models\StartGroupRequest $req) 启动分组
  * @method Models\StopContainerGroupResponse StopContainerGroup(Models\StopContainerGroupRequest $req) 停止容器部署组
  * @method Models\StopGroupResponse StopGroup(Models\StopGroupRequest $req) 停止虚拟机部署组
+ * @method Models\UpdateRepositoryResponse UpdateRepository(Models\UpdateRepositoryRequest $req) 更新仓库信息
  */
 
 class TsfClient extends AbstractClient

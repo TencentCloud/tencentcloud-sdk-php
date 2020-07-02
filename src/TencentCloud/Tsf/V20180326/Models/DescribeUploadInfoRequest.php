@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPkgType(string $PkgType) 设置程序包类型
  * @method string getPkgDesc() 获取程序包介绍
  * @method void setPkgDesc(string $PkgDesc) 设置程序包介绍
+ * @method string getRepositoryType() 获取程序包仓库类型
+ * @method void setRepositoryType(string $RepositoryType) 设置程序包仓库类型
+ * @method string getRepositoryId() 获取程序包仓库id
+ * @method void setRepositoryId(string $RepositoryId) 设置程序包仓库id
  */
 class DescribeUploadInfoRequest extends AbstractModel
 {
@@ -59,11 +63,23 @@ class DescribeUploadInfoRequest extends AbstractModel
     public $PkgDesc;
 
     /**
+     * @var string 程序包仓库类型
+     */
+    public $RepositoryType;
+
+    /**
+     * @var string 程序包仓库id
+     */
+    public $RepositoryId;
+
+    /**
      * @param string $ApplicationId 应用ID
      * @param string $PkgName 程序包名
      * @param string $PkgVersion 程序包版本
      * @param string $PkgType 程序包类型
      * @param string $PkgDesc 程序包介绍
+     * @param string $RepositoryType 程序包仓库类型
+     * @param string $RepositoryId 程序包仓库id
      */
     function __construct()
     {
@@ -96,6 +112,14 @@ class DescribeUploadInfoRequest extends AbstractModel
 
         if (array_key_exists("PkgDesc",$param) and $param["PkgDesc"] !== null) {
             $this->PkgDesc = $param["PkgDesc"];
+        }
+
+        if (array_key_exists("RepositoryType",$param) and $param["RepositoryType"] !== null) {
+            $this->RepositoryType = $param["RepositoryType"];
+        }
+
+        if (array_key_exists("RepositoryId",$param) and $param["RepositoryId"] !== null) {
+            $this->RepositoryId = $param["RepositoryId"];
         }
     }
 }

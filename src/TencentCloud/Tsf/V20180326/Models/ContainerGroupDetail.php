@@ -156,6 +156,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdatedTime(integer $UpdatedTime) 设置部署组更新时间戳
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getMaxSurge() 获取kubernetes滚动更新策略的MaxSurge参数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMaxSurge(string $MaxSurge) 设置kubernetes滚动更新策略的MaxSurge参数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getMaxUnavailable() 获取kubernetes滚动更新策略的MaxUnavailable参数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMaxUnavailable(string $MaxUnavailable) 设置kubernetes滚动更新策略的MaxUnavailable参数
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ContainerGroupDetail extends AbstractModel
 {
@@ -364,6 +372,18 @@ class ContainerGroupDetail extends AbstractModel
     public $UpdatedTime;
 
     /**
+     * @var string kubernetes滚动更新策略的MaxSurge参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MaxSurge;
+
+    /**
+     * @var string kubernetes滚动更新策略的MaxUnavailable参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MaxUnavailable;
+
+    /**
      * @param string $GroupId 部署组ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GroupName 分组名称
@@ -431,6 +451,10 @@ class ContainerGroupDetail extends AbstractModel
      * @param integer $InstanceCount 部署组实例个数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $UpdatedTime 部署组更新时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $MaxSurge kubernetes滚动更新策略的MaxSurge参数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $MaxUnavailable kubernetes滚动更新策略的MaxUnavailable参数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -590,6 +614,14 @@ class ContainerGroupDetail extends AbstractModel
 
         if (array_key_exists("UpdatedTime",$param) and $param["UpdatedTime"] !== null) {
             $this->UpdatedTime = $param["UpdatedTime"];
+        }
+
+        if (array_key_exists("MaxSurge",$param) and $param["MaxSurge"] !== null) {
+            $this->MaxSurge = $param["MaxSurge"];
+        }
+
+        if (array_key_exists("MaxUnavailable",$param) and $param["MaxUnavailable"] !== null) {
+            $this->MaxUnavailable = $param["MaxUnavailable"];
         }
     }
 }

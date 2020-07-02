@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTsfZoneId(string $TsfZoneId) 设置集群所属TSF可用区
  * @method string getSubnetId() 获取私有网络子网ID
  * @method void setSubnetId(string $SubnetId) 设置私有网络子网ID
+ * @method string getClusterVersion() 获取集群版本
+ * @method void setClusterVersion(string $ClusterVersion) 设置集群版本
  */
 class CreateClusterRequest extends AbstractModel
 {
@@ -80,6 +82,11 @@ class CreateClusterRequest extends AbstractModel
     public $SubnetId;
 
     /**
+     * @var string 集群版本
+     */
+    public $ClusterVersion;
+
+    /**
      * @param string $ClusterName 集群名称
      * @param string $ClusterType 集群类型
      * @param string $VpcId 私有网络ID
@@ -88,6 +95,7 @@ class CreateClusterRequest extends AbstractModel
      * @param string $TsfRegionId 集群所属TSF地域
      * @param string $TsfZoneId 集群所属TSF可用区
      * @param string $SubnetId 私有网络子网ID
+     * @param string $ClusterVersion 集群版本
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ class CreateClusterRequest extends AbstractModel
 
         if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
             $this->SubnetId = $param["SubnetId"];
+        }
+
+        if (array_key_exists("ClusterVersion",$param) and $param["ClusterVersion"] !== null) {
+            $this->ClusterVersion = $param["ClusterVersion"];
         }
     }
 }

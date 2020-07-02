@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getEnvId() 获取开发者的环境ID
  * @method void setEnvId(string $EnvId) 设置开发者的环境ID
+ * @method integer getOffset() 获取可选参数，偏移量，默认 0
+ * @method void setOffset(integer $Offset) 设置可选参数，偏移量，默认 0
+ * @method integer getLimit() 获取可选参数，拉取数量，默认 20
+ * @method void setLimit(integer $Limit) 设置可选参数，拉取数量，默认 20
  * @method array getUUIds() 获取按照 uuid 列表过滤，最大个数为100
  * @method void setUUIds(array $UUIds) 设置按照 uuid 列表过滤，最大个数为100
  */
@@ -33,12 +37,24 @@ class DescribeEndUsersRequest extends AbstractModel
     public $EnvId;
 
     /**
+     * @var integer 可选参数，偏移量，默认 0
+     */
+    public $Offset;
+
+    /**
+     * @var integer 可选参数，拉取数量，默认 20
+     */
+    public $Limit;
+
+    /**
      * @var array 按照 uuid 列表过滤，最大个数为100
      */
     public $UUIds;
 
     /**
      * @param string $EnvId 开发者的环境ID
+     * @param integer $Offset 可选参数，偏移量，默认 0
+     * @param integer $Limit 可选参数，拉取数量，默认 20
      * @param array $UUIds 按照 uuid 列表过滤，最大个数为100
      */
     function __construct()
@@ -56,6 +72,14 @@ class DescribeEndUsersRequest extends AbstractModel
         }
         if (array_key_exists("EnvId",$param) and $param["EnvId"] !== null) {
             $this->EnvId = $param["EnvId"];
+        }
+
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
         }
 
         if (array_key_exists("UUIds",$param) and $param["UUIds"] !== null) {

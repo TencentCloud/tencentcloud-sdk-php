@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setApplicationId(string $ApplicationId) 设置应用ID
  * @method array getPkgIds() 获取需要删除的程序包ID列表
  * @method void setPkgIds(array $PkgIds) 设置需要删除的程序包ID列表
+ * @method string getRepositoryType() 获取程序包仓库类型
+ * @method void setRepositoryType(string $RepositoryType) 设置程序包仓库类型
+ * @method string getRepositoryId() 获取程序包仓库id
+ * @method void setRepositoryId(string $RepositoryId) 设置程序包仓库id
  */
 class DeletePkgsRequest extends AbstractModel
 {
@@ -38,8 +42,20 @@ class DeletePkgsRequest extends AbstractModel
     public $PkgIds;
 
     /**
+     * @var string 程序包仓库类型
+     */
+    public $RepositoryType;
+
+    /**
+     * @var string 程序包仓库id
+     */
+    public $RepositoryId;
+
+    /**
      * @param string $ApplicationId 应用ID
      * @param array $PkgIds 需要删除的程序包ID列表
+     * @param string $RepositoryType 程序包仓库类型
+     * @param string $RepositoryId 程序包仓库id
      */
     function __construct()
     {
@@ -60,6 +76,14 @@ class DeletePkgsRequest extends AbstractModel
 
         if (array_key_exists("PkgIds",$param) and $param["PkgIds"] !== null) {
             $this->PkgIds = $param["PkgIds"];
+        }
+
+        if (array_key_exists("RepositoryType",$param) and $param["RepositoryType"] !== null) {
+            $this->RepositoryType = $param["RepositoryType"];
+        }
+
+        if (array_key_exists("RepositoryId",$param) and $param["RepositoryId"] !== null) {
+            $this->RepositoryId = $param["RepositoryId"];
         }
     }
 }

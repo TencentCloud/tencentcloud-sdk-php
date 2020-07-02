@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInvoices(array $Invoices) 设置红冲明细
  * @method string getProfile() 获取接入环境。沙箱环境填 sandbox。
  * @method void setProfile(string $Profile) 设置接入环境。沙箱环境填 sandbox。
+ * @method integer getInvoiceChannel() 获取开票渠道。0：线上渠道，1：线下渠道。不填默认为线上渠道
+ * @method void setInvoiceChannel(integer $InvoiceChannel) 设置开票渠道。0：线上渠道，1：线下渠道。不填默认为线上渠道
  */
 class CreateRedInvoiceRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class CreateRedInvoiceRequest extends AbstractModel
     public $Profile;
 
     /**
+     * @var integer 开票渠道。0：线上渠道，1：线下渠道。不填默认为线上渠道
+     */
+    public $InvoiceChannel;
+
+    /**
      * @param integer $InvoicePlatformId 开票平台ID
      * @param array $Invoices 红冲明细
      * @param string $Profile 接入环境。沙箱环境填 sandbox。
+     * @param integer $InvoiceChannel 开票渠道。0：线上渠道，1：线下渠道。不填默认为线上渠道
      */
     function __construct()
     {
@@ -77,6 +85,10 @@ class CreateRedInvoiceRequest extends AbstractModel
 
         if (array_key_exists("Profile",$param) and $param["Profile"] !== null) {
             $this->Profile = $param["Profile"];
+        }
+
+        if (array_key_exists("InvoiceChannel",$param) and $param["InvoiceChannel"] !== null) {
+            $this->InvoiceChannel = $param["InvoiceChannel"];
         }
     }
 }

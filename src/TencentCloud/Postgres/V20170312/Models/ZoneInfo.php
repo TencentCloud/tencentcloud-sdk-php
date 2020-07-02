@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZoneId(integer $ZoneId) 设置该可用区对应的数字编号
  * @method string getZoneState() 获取可用状态，UNAVAILABLE表示不可用，AVAILABLE表示可用
  * @method void setZoneState(string $ZoneState) 设置可用状态，UNAVAILABLE表示不可用，AVAILABLE表示可用
+ * @method integer getZoneSupportIpv6() 获取该可用区是否支持Ipv6
+ * @method void setZoneSupportIpv6(integer $ZoneSupportIpv6) 设置该可用区是否支持Ipv6
  */
 class ZoneInfo extends AbstractModel
 {
@@ -52,10 +54,16 @@ class ZoneInfo extends AbstractModel
     public $ZoneState;
 
     /**
+     * @var integer 该可用区是否支持Ipv6
+     */
+    public $ZoneSupportIpv6;
+
+    /**
      * @param string $Zone 该可用区的英文名称
      * @param string $ZoneName 该可用区的中文名称
      * @param integer $ZoneId 该可用区对应的数字编号
      * @param string $ZoneState 可用状态，UNAVAILABLE表示不可用，AVAILABLE表示可用
+     * @param integer $ZoneSupportIpv6 该可用区是否支持Ipv6
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class ZoneInfo extends AbstractModel
 
         if (array_key_exists("ZoneState",$param) and $param["ZoneState"] !== null) {
             $this->ZoneState = $param["ZoneState"];
+        }
+
+        if (array_key_exists("ZoneSupportIpv6",$param) and $param["ZoneSupportIpv6"] !== null) {
+            $this->ZoneSupportIpv6 = $param["ZoneSupportIpv6"];
         }
     }
 }

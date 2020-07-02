@@ -56,6 +56,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置安全组ID列表
  * @method integer getAutoRenewFlag() 获取自动续费标志，1:自动续费，2:不自动续费
  * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置自动续费标志，1:自动续费，2:不自动续费
+ * @method integer getIpv6Flag() 获取是否支持IPv6
+ * @method void setIpv6Flag(integer $Ipv6Flag) 设置是否支持IPv6
  */
 class CreateDBInstanceRequest extends AbstractModel
 {
@@ -138,6 +140,11 @@ class CreateDBInstanceRequest extends AbstractModel
     public $AutoRenewFlag;
 
     /**
+     * @var integer 是否支持IPv6
+     */
+    public $Ipv6Flag;
+
+    /**
      * @param array $Zones 实例节点可用区分布，最多可填两个可用区。当分片规格为一主两从时，其中两个节点在第一个可用区。
      * @param integer $NodeCount 节点个数大小，可以通过 DescribeDBInstanceSpecs
  查询实例规格获得。
@@ -156,6 +163,7 @@ class CreateDBInstanceRequest extends AbstractModel
      * @param string $InstanceName 实例名称， 可以通过该字段自主的设置实例的名字
      * @param array $SecurityGroupIds 安全组ID列表
      * @param integer $AutoRenewFlag 自动续费标志，1:自动续费，2:不自动续费
+     * @param integer $Ipv6Flag 是否支持IPv6
      */
     function __construct()
     {
@@ -228,6 +236,10 @@ class CreateDBInstanceRequest extends AbstractModel
 
         if (array_key_exists("AutoRenewFlag",$param) and $param["AutoRenewFlag"] !== null) {
             $this->AutoRenewFlag = $param["AutoRenewFlag"];
+        }
+
+        if (array_key_exists("Ipv6Flag",$param) and $param["Ipv6Flag"] !== null) {
+            $this->Ipv6Flag = $param["Ipv6Flag"];
         }
     }
 }

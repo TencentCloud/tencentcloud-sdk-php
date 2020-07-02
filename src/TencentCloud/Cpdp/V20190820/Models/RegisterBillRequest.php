@@ -56,6 +56,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReservedMessage(string $ReservedMessage) 设置保留域
  * @method string getRemark() 获取备注
  * @method void setRemark(string $Remark) 设置备注
+ * @method string getMidasEnvironment() 获取Midas环境参数
+ * @method void setMidasEnvironment(string $MidasEnvironment) 设置Midas环境参数
  */
 class RegisterBillRequest extends AbstractModel
 {
@@ -150,6 +152,11 @@ class RegisterBillRequest extends AbstractModel
     public $Remark;
 
     /**
+     * @var string Midas环境参数
+     */
+    public $MidasEnvironment;
+
+    /**
      * @param string $RequestType 请求类型此接口固定填：RegBillSupportWithdrawReq
      * @param string $MerchantCode 商户号
      * @param string $PayChannel 支付渠道
@@ -168,6 +175,7 @@ class RegisterBillRequest extends AbstractModel
      * @param string $TranType 0,登记挂账，1，撤销挂账
      * @param string $ReservedMessage 保留域
      * @param string $Remark 备注
+     * @param string $MidasEnvironment Midas环境参数
      */
     function __construct()
     {
@@ -252,6 +260,10 @@ class RegisterBillRequest extends AbstractModel
 
         if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
             $this->Remark = $param["Remark"];
+        }
+
+        if (array_key_exists("MidasEnvironment",$param) and $param["MidasEnvironment"] !== null) {
+            $this->MidasEnvironment = $param["MidasEnvironment"];
         }
     }
 }

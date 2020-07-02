@@ -26,6 +26,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContent(array $Content) 设置程序包信息列表
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRepositoryId() 获取程序包仓库id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRepositoryId(string $RepositoryId) 设置程序包仓库id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRepositoryType() 获取程序包仓库类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRepositoryType(string $RepositoryType) 设置程序包仓库类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRepositoryName() 获取程序包仓库名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRepositoryName(string $RepositoryName) 设置程序包仓库名称
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class PkgList extends AbstractModel
 {
@@ -41,8 +53,32 @@ class PkgList extends AbstractModel
     public $Content;
 
     /**
+     * @var string 程序包仓库id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RepositoryId;
+
+    /**
+     * @var string 程序包仓库类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RepositoryType;
+
+    /**
+     * @var string 程序包仓库名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RepositoryName;
+
+    /**
      * @param integer $TotalCount 程序包总量
      * @param array $Content 程序包信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RepositoryId 程序包仓库id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RepositoryType 程序包仓库类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RepositoryName 程序包仓库名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -69,6 +105,18 @@ class PkgList extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Content, $obj);
             }
+        }
+
+        if (array_key_exists("RepositoryId",$param) and $param["RepositoryId"] !== null) {
+            $this->RepositoryId = $param["RepositoryId"];
+        }
+
+        if (array_key_exists("RepositoryType",$param) and $param["RepositoryType"] !== null) {
+            $this->RepositoryType = $param["RepositoryType"];
+        }
+
+        if (array_key_exists("RepositoryName",$param) and $param["RepositoryName"] !== null) {
+            $this->RepositoryName = $param["RepositoryName"];
         }
     }
 }

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * MCU混流的输出参数
  *
- * @method string getStreamId() 获取直播流ID，该流ID不能与用户旁路的流ID相同。
- * @method void setStreamId(string $StreamId) 设置直播流ID，该流ID不能与用户旁路的流ID相同。
+ * @method string getStreamId() 获取直播流 ID，由用户自定义设置，该流 ID 不能与用户旁路的流 ID 相同。
+ * @method void setStreamId(string $StreamId) 设置直播流 ID，由用户自定义设置，该流 ID 不能与用户旁路的流 ID 相同。
  * @method integer getPureAudioStream() 获取取值范围[0,1]， 填0：直播流为音视频(默认); 填1：直播流为纯音频
  * @method void setPureAudioStream(integer $PureAudioStream) 设置取值范围[0,1]， 填0：直播流为音视频(默认); 填1：直播流为纯音频
  * @method string getRecordId() 获取自定义录制文件名
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class OutputParams extends AbstractModel
 {
     /**
-     * @var string 直播流ID，该流ID不能与用户旁路的流ID相同。
+     * @var string 直播流 ID，由用户自定义设置，该流 ID 不能与用户旁路的流 ID 相同。
      */
     public $StreamId;
 
@@ -52,7 +52,7 @@ class OutputParams extends AbstractModel
     public $RecordAudioOnly;
 
     /**
-     * @param string $StreamId 直播流ID，该流ID不能与用户旁路的流ID相同。
+     * @param string $StreamId 直播流 ID，由用户自定义设置，该流 ID 不能与用户旁路的流 ID 相同。
      * @param integer $PureAudioStream 取值范围[0,1]， 填0：直播流为音视频(默认); 填1：直播流为纯音频
      * @param string $RecordId 自定义录制文件名
      * @param integer $RecordAudioOnly 取值范围[0,1]，填0无实际含义; 填1：指定录制文件格式为mp3

@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取待开放外网访问的实例ID。形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
  * @method void setInstanceId(string $InstanceId) 设置待开放外网访问的实例ID。形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
+ * @method integer getIpv6Flag() 获取是否IPv6，默认0
+ * @method void setIpv6Flag(integer $Ipv6Flag) 设置是否IPv6，默认0
  */
 class OpenDBExtranetAccessRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class OpenDBExtranetAccessRequest extends AbstractModel
     public $InstanceId;
 
     /**
+     * @var integer 是否IPv6，默认0
+     */
+    public $Ipv6Flag;
+
+    /**
      * @param string $InstanceId 待开放外网访问的实例ID。形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
+     * @param integer $Ipv6Flag 是否IPv6，默认0
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class OpenDBExtranetAccessRequest extends AbstractModel
         }
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("Ipv6Flag",$param) and $param["Ipv6Flag"] !== null) {
+            $this->Ipv6Flag = $param["Ipv6Flag"];
         }
     }
 }

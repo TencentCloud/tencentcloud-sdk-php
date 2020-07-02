@@ -20,17 +20,24 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ChangeAgePic返回参数结构体
  *
- * @method string getResultImage() 获取base64编码图片
- * @method void setResultImage(string $ResultImage) 设置base64编码图片
+ * @method string getResultImage() 获取RspImgType 为 base64 时，返回处理后的图片 base64 数据。默认返回base64
+ * @method void setResultImage(string $ResultImage) 设置RspImgType 为 base64 时，返回处理后的图片 base64 数据。默认返回base64
+ * @method string getResultUrl() 获取RspImgType 为 url 时，返回处理后的图片 url 数据。
+ * @method void setResultUrl(string $ResultUrl) 设置RspImgType 为 url 时，返回处理后的图片 url 数据。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class ChangeAgePicResponse extends AbstractModel
 {
     /**
-     * @var string base64编码图片
+     * @var string RspImgType 为 base64 时，返回处理后的图片 base64 数据。默认返回base64
      */
     public $ResultImage;
+
+    /**
+     * @var string RspImgType 为 url 时，返回处理后的图片 url 数据。
+     */
+    public $ResultUrl;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +45,8 @@ class ChangeAgePicResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $ResultImage base64编码图片
+     * @param string $ResultImage RspImgType 为 base64 时，返回处理后的图片 base64 数据。默认返回base64
+     * @param string $ResultUrl RspImgType 为 url 时，返回处理后的图片 url 数据。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -56,6 +64,10 @@ class ChangeAgePicResponse extends AbstractModel
         }
         if (array_key_exists("ResultImage",$param) and $param["ResultImage"] !== null) {
             $this->ResultImage = $param["ResultImage"];
+        }
+
+        if (array_key_exists("ResultUrl",$param) and $param["ResultUrl"] !== null) {
+            $this->ResultUrl = $param["ResultUrl"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

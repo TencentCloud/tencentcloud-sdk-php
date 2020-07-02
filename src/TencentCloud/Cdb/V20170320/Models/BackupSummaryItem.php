@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -118,44 +118,44 @@ class BackupSummaryItem extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("AutoBackupCount",$param) and $param["AutoBackupCount"] !== null) {
-            $this->AutoBackupCount = $param["AutoBackupCount"];
+        if (array_key_exists('AutoBackupCount',$param) and $param['AutoBackupCount'] !== null) {
+            $this->AutoBackupCount = $param['AutoBackupCount'];
         }
 
-        if (array_key_exists("AutoBackupVolume",$param) and $param["AutoBackupVolume"] !== null) {
-            $this->AutoBackupVolume = $param["AutoBackupVolume"];
+        if (array_key_exists('AutoBackupVolume',$param) and $param['AutoBackupVolume'] !== null) {
+            $this->AutoBackupVolume = $param['AutoBackupVolume'];
         }
 
-        if (array_key_exists("ManualBackupCount",$param) and $param["ManualBackupCount"] !== null) {
-            $this->ManualBackupCount = $param["ManualBackupCount"];
+        if (array_key_exists('ManualBackupCount',$param) and $param['ManualBackupCount'] !== null) {
+            $this->ManualBackupCount = $param['ManualBackupCount'];
         }
 
-        if (array_key_exists("ManualBackupVolume",$param) and $param["ManualBackupVolume"] !== null) {
-            $this->ManualBackupVolume = $param["ManualBackupVolume"];
+        if (array_key_exists('ManualBackupVolume',$param) and $param['ManualBackupVolume'] !== null) {
+            $this->ManualBackupVolume = $param['ManualBackupVolume'];
         }
 
-        if (array_key_exists("DataBackupCount",$param) and $param["DataBackupCount"] !== null) {
-            $this->DataBackupCount = $param["DataBackupCount"];
+        if (array_key_exists('DataBackupCount',$param) and $param['DataBackupCount'] !== null) {
+            $this->DataBackupCount = $param['DataBackupCount'];
         }
 
-        if (array_key_exists("DataBackupVolume",$param) and $param["DataBackupVolume"] !== null) {
-            $this->DataBackupVolume = $param["DataBackupVolume"];
+        if (array_key_exists('DataBackupVolume',$param) and $param['DataBackupVolume'] !== null) {
+            $this->DataBackupVolume = $param['DataBackupVolume'];
         }
 
-        if (array_key_exists("BinlogBackupCount",$param) and $param["BinlogBackupCount"] !== null) {
-            $this->BinlogBackupCount = $param["BinlogBackupCount"];
+        if (array_key_exists('BinlogBackupCount',$param) and $param['BinlogBackupCount'] !== null) {
+            $this->BinlogBackupCount = $param['BinlogBackupCount'];
         }
 
-        if (array_key_exists("BinlogBackupVolume",$param) and $param["BinlogBackupVolume"] !== null) {
-            $this->BinlogBackupVolume = $param["BinlogBackupVolume"];
+        if (array_key_exists('BinlogBackupVolume',$param) and $param['BinlogBackupVolume'] !== null) {
+            $this->BinlogBackupVolume = $param['BinlogBackupVolume'];
         }
 
-        if (array_key_exists("BackupVolume",$param) and $param["BackupVolume"] !== null) {
-            $this->BackupVolume = $param["BackupVolume"];
+        if (array_key_exists('BackupVolume',$param) and $param['BackupVolume'] !== null) {
+            $this->BackupVolume = $param['BackupVolume'];
         }
     }
 }

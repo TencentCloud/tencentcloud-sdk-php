@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -66,17 +66,17 @@ class JgwOperateResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ReturnCode",$param) and $param["ReturnCode"] !== null) {
-            $this->ReturnCode = $param["ReturnCode"];
+        if (array_key_exists('ReturnCode',$param) and $param['ReturnCode'] !== null) {
+            $this->ReturnCode = $param['ReturnCode'];
         }
 
-        if (array_key_exists("ReturnMessage",$param) and $param["ReturnMessage"] !== null) {
-            $this->ReturnMessage = $param["ReturnMessage"];
+        if (array_key_exists('ReturnMessage',$param) and $param['ReturnMessage'] !== null) {
+            $this->ReturnMessage = $param['ReturnMessage'];
         }
 
-        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
+        if (array_key_exists('Data',$param) and $param['Data'] !== null) {
             $this->Data = new OperateResponseData();
-            $this->Data->deserialize($param["Data"]);
+            $this->Data->deserialize($param['Data']);
         }
     }
 }

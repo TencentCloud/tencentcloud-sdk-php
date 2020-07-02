@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -150,60 +150,60 @@ class SellConfig extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Device",$param) and $param["Device"] !== null) {
-            $this->Device = $param["Device"];
+        if (array_key_exists('Device',$param) and $param['Device'] !== null) {
+            $this->Device = $param['Device'];
         }
 
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists('Type',$param) and $param['Type'] !== null) {
+            $this->Type = $param['Type'];
         }
 
-        if (array_key_exists("CdbType",$param) and $param["CdbType"] !== null) {
-            $this->CdbType = $param["CdbType"];
+        if (array_key_exists('CdbType',$param) and $param['CdbType'] !== null) {
+            $this->CdbType = $param['CdbType'];
         }
 
-        if (array_key_exists("Memory",$param) and $param["Memory"] !== null) {
-            $this->Memory = $param["Memory"];
+        if (array_key_exists('Memory',$param) and $param['Memory'] !== null) {
+            $this->Memory = $param['Memory'];
         }
 
-        if (array_key_exists("Cpu",$param) and $param["Cpu"] !== null) {
-            $this->Cpu = $param["Cpu"];
+        if (array_key_exists('Cpu',$param) and $param['Cpu'] !== null) {
+            $this->Cpu = $param['Cpu'];
         }
 
-        if (array_key_exists("VolumeMin",$param) and $param["VolumeMin"] !== null) {
-            $this->VolumeMin = $param["VolumeMin"];
+        if (array_key_exists('VolumeMin',$param) and $param['VolumeMin'] !== null) {
+            $this->VolumeMin = $param['VolumeMin'];
         }
 
-        if (array_key_exists("VolumeMax",$param) and $param["VolumeMax"] !== null) {
-            $this->VolumeMax = $param["VolumeMax"];
+        if (array_key_exists('VolumeMax',$param) and $param['VolumeMax'] !== null) {
+            $this->VolumeMax = $param['VolumeMax'];
         }
 
-        if (array_key_exists("VolumeStep",$param) and $param["VolumeStep"] !== null) {
-            $this->VolumeStep = $param["VolumeStep"];
+        if (array_key_exists('VolumeStep',$param) and $param['VolumeStep'] !== null) {
+            $this->VolumeStep = $param['VolumeStep'];
         }
 
-        if (array_key_exists("Connection",$param) and $param["Connection"] !== null) {
-            $this->Connection = $param["Connection"];
+        if (array_key_exists('Connection',$param) and $param['Connection'] !== null) {
+            $this->Connection = $param['Connection'];
         }
 
-        if (array_key_exists("Qps",$param) and $param["Qps"] !== null) {
-            $this->Qps = $param["Qps"];
+        if (array_key_exists('Qps',$param) and $param['Qps'] !== null) {
+            $this->Qps = $param['Qps'];
         }
 
-        if (array_key_exists("Iops",$param) and $param["Iops"] !== null) {
-            $this->Iops = $param["Iops"];
+        if (array_key_exists('Iops',$param) and $param['Iops'] !== null) {
+            $this->Iops = $param['Iops'];
         }
 
-        if (array_key_exists("Info",$param) and $param["Info"] !== null) {
-            $this->Info = $param["Info"];
+        if (array_key_exists('Info',$param) and $param['Info'] !== null) {
+            $this->Info = $param['Info'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("Tag",$param) and $param["Tag"] !== null) {
-            $this->Tag = $param["Tag"];
+        if (array_key_exists('Tag',$param) and $param['Tag'] !== null) {
+            $this->Tag = $param['Tag'];
         }
     }
 }

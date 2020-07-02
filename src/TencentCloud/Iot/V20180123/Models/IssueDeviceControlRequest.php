@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -70,20 +70,20 @@ class IssueDeviceControlRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ProductId",$param) and $param["ProductId"] !== null) {
-            $this->ProductId = $param["ProductId"];
+        if (array_key_exists('ProductId',$param) and $param['ProductId'] !== null) {
+            $this->ProductId = $param['ProductId'];
         }
 
-        if (array_key_exists("DeviceName",$param) and $param["DeviceName"] !== null) {
-            $this->DeviceName = $param["DeviceName"];
+        if (array_key_exists('DeviceName',$param) and $param['DeviceName'] !== null) {
+            $this->DeviceName = $param['DeviceName'];
         }
 
-        if (array_key_exists("ControlData",$param) and $param["ControlData"] !== null) {
-            $this->ControlData = $param["ControlData"];
+        if (array_key_exists('ControlData',$param) and $param['ControlData'] !== null) {
+            $this->ControlData = $param['ControlData'];
         }
 
-        if (array_key_exists("Metadata",$param) and $param["Metadata"] !== null) {
-            $this->Metadata = $param["Metadata"];
+        if (array_key_exists('Metadata',$param) and $param['Metadata'] !== null) {
+            $this->Metadata = $param['Metadata'];
         }
     }
 }

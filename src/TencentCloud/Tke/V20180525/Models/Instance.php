@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -138,45 +138,45 @@ class Instance extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("InstanceRole",$param) and $param["InstanceRole"] !== null) {
-            $this->InstanceRole = $param["InstanceRole"];
+        if (array_key_exists('InstanceRole',$param) and $param['InstanceRole'] !== null) {
+            $this->InstanceRole = $param['InstanceRole'];
         }
 
-        if (array_key_exists("FailedReason",$param) and $param["FailedReason"] !== null) {
-            $this->FailedReason = $param["FailedReason"];
+        if (array_key_exists('FailedReason',$param) and $param['FailedReason'] !== null) {
+            $this->FailedReason = $param['FailedReason'];
         }
 
-        if (array_key_exists("InstanceState",$param) and $param["InstanceState"] !== null) {
-            $this->InstanceState = $param["InstanceState"];
+        if (array_key_exists('InstanceState',$param) and $param['InstanceState'] !== null) {
+            $this->InstanceState = $param['InstanceState'];
         }
 
-        if (array_key_exists("DrainStatus",$param) and $param["DrainStatus"] !== null) {
-            $this->DrainStatus = $param["DrainStatus"];
+        if (array_key_exists('DrainStatus',$param) and $param['DrainStatus'] !== null) {
+            $this->DrainStatus = $param['DrainStatus'];
         }
 
-        if (array_key_exists("InstanceAdvancedSettings",$param) and $param["InstanceAdvancedSettings"] !== null) {
+        if (array_key_exists('InstanceAdvancedSettings',$param) and $param['InstanceAdvancedSettings'] !== null) {
             $this->InstanceAdvancedSettings = new InstanceAdvancedSettings();
-            $this->InstanceAdvancedSettings->deserialize($param["InstanceAdvancedSettings"]);
+            $this->InstanceAdvancedSettings->deserialize($param['InstanceAdvancedSettings']);
         }
 
-        if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
-            $this->CreatedTime = $param["CreatedTime"];
+        if (array_key_exists('CreatedTime',$param) and $param['CreatedTime'] !== null) {
+            $this->CreatedTime = $param['CreatedTime'];
         }
 
-        if (array_key_exists("LanIP",$param) and $param["LanIP"] !== null) {
-            $this->LanIP = $param["LanIP"];
+        if (array_key_exists('LanIP',$param) and $param['LanIP'] !== null) {
+            $this->LanIP = $param['LanIP'];
         }
 
-        if (array_key_exists("NodePoolId",$param) and $param["NodePoolId"] !== null) {
-            $this->NodePoolId = $param["NodePoolId"];
+        if (array_key_exists('NodePoolId',$param) and $param['NodePoolId'] !== null) {
+            $this->NodePoolId = $param['NodePoolId'];
         }
 
-        if (array_key_exists("AutoscalingGroupId",$param) and $param["AutoscalingGroupId"] !== null) {
-            $this->AutoscalingGroupId = $param["AutoscalingGroupId"];
+        if (array_key_exists('AutoscalingGroupId',$param) and $param['AutoscalingGroupId'] !== null) {
+            $this->AutoscalingGroupId = $param['AutoscalingGroupId'];
         }
     }
 }

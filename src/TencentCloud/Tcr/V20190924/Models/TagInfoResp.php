@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -70,25 +70,25 @@ class TagInfoResp extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TagCount",$param) and $param["TagCount"] !== null) {
-            $this->TagCount = $param["TagCount"];
+        if (array_key_exists('TagCount',$param) and $param['TagCount'] !== null) {
+            $this->TagCount = $param['TagCount'];
         }
 
-        if (array_key_exists("TagInfo",$param) and $param["TagInfo"] !== null) {
+        if (array_key_exists('TagInfo',$param) and $param['TagInfo'] !== null) {
             $this->TagInfo = [];
-            foreach ($param["TagInfo"] as $key => $value){
+            foreach ($param['TagInfo'] as $key => $value){
                 $obj = new TagInfo();
                 $obj->deserialize($value);
                 array_push($this->TagInfo, $obj);
             }
         }
 
-        if (array_key_exists("Server",$param) and $param["Server"] !== null) {
-            $this->Server = $param["Server"];
+        if (array_key_exists('Server',$param) and $param['Server'] !== null) {
+            $this->Server = $param['Server'];
         }
 
-        if (array_key_exists("RepoName",$param) and $param["RepoName"] !== null) {
-            $this->RepoName = $param["RepoName"];
+        if (array_key_exists('RepoName',$param) and $param['RepoName'] !== null) {
+            $this->RepoName = $param['RepoName'];
         }
     }
 }

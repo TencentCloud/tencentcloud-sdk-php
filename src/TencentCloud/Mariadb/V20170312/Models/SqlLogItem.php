@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -118,44 +118,44 @@ class SqlLogItem extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
+        if (array_key_exists('Offset',$param) and $param['Offset'] !== null) {
+            $this->Offset = $param['Offset'];
         }
 
-        if (array_key_exists("User",$param) and $param["User"] !== null) {
-            $this->User = $param["User"];
+        if (array_key_exists('User',$param) and $param['User'] !== null) {
+            $this->User = $param['User'];
         }
 
-        if (array_key_exists("Client",$param) and $param["Client"] !== null) {
-            $this->Client = $param["Client"];
+        if (array_key_exists('Client',$param) and $param['Client'] !== null) {
+            $this->Client = $param['Client'];
         }
 
-        if (array_key_exists("DbName",$param) and $param["DbName"] !== null) {
-            $this->DbName = $param["DbName"];
+        if (array_key_exists('DbName',$param) and $param['DbName'] !== null) {
+            $this->DbName = $param['DbName'];
         }
 
-        if (array_key_exists("Sql",$param) and $param["Sql"] !== null) {
-            $this->Sql = $param["Sql"];
+        if (array_key_exists('Sql',$param) and $param['Sql'] !== null) {
+            $this->Sql = $param['Sql'];
         }
 
-        if (array_key_exists("SelectRowNum",$param) and $param["SelectRowNum"] !== null) {
-            $this->SelectRowNum = $param["SelectRowNum"];
+        if (array_key_exists('SelectRowNum',$param) and $param['SelectRowNum'] !== null) {
+            $this->SelectRowNum = $param['SelectRowNum'];
         }
 
-        if (array_key_exists("AffectRowNum",$param) and $param["AffectRowNum"] !== null) {
-            $this->AffectRowNum = $param["AffectRowNum"];
+        if (array_key_exists('AffectRowNum',$param) and $param['AffectRowNum'] !== null) {
+            $this->AffectRowNum = $param['AffectRowNum'];
         }
 
-        if (array_key_exists("Timestamp",$param) and $param["Timestamp"] !== null) {
-            $this->Timestamp = $param["Timestamp"];
+        if (array_key_exists('Timestamp',$param) and $param['Timestamp'] !== null) {
+            $this->Timestamp = $param['Timestamp'];
         }
 
-        if (array_key_exists("TimeCostMs",$param) and $param["TimeCostMs"] !== null) {
-            $this->TimeCostMs = $param["TimeCostMs"];
+        if (array_key_exists('TimeCostMs',$param) and $param['TimeCostMs'] !== null) {
+            $this->TimeCostMs = $param['TimeCostMs'];
         }
 
-        if (array_key_exists("ResultCode",$param) and $param["ResultCode"] !== null) {
-            $this->ResultCode = $param["ResultCode"];
+        if (array_key_exists('ResultCode',$param) and $param['ResultCode'] !== null) {
+            $this->ResultCode = $param['ResultCode'];
         }
     }
 }

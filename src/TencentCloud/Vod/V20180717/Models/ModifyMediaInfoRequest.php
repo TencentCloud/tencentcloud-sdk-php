@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -150,61 +150,61 @@ class ModifyMediaInfoRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FileId",$param) and $param["FileId"] !== null) {
-            $this->FileId = $param["FileId"];
+        if (array_key_exists('FileId',$param) and $param['FileId'] !== null) {
+            $this->FileId = $param['FileId'];
         }
 
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
-            $this->Description = $param["Description"];
+        if (array_key_exists('Description',$param) and $param['Description'] !== null) {
+            $this->Description = $param['Description'];
         }
 
-        if (array_key_exists("ClassId",$param) and $param["ClassId"] !== null) {
-            $this->ClassId = $param["ClassId"];
+        if (array_key_exists('ClassId',$param) and $param['ClassId'] !== null) {
+            $this->ClassId = $param['ClassId'];
         }
 
-        if (array_key_exists("ExpireTime",$param) and $param["ExpireTime"] !== null) {
-            $this->ExpireTime = $param["ExpireTime"];
+        if (array_key_exists('ExpireTime',$param) and $param['ExpireTime'] !== null) {
+            $this->ExpireTime = $param['ExpireTime'];
         }
 
-        if (array_key_exists("CoverData",$param) and $param["CoverData"] !== null) {
-            $this->CoverData = $param["CoverData"];
+        if (array_key_exists('CoverData',$param) and $param['CoverData'] !== null) {
+            $this->CoverData = $param['CoverData'];
         }
 
-        if (array_key_exists("AddKeyFrameDescs",$param) and $param["AddKeyFrameDescs"] !== null) {
+        if (array_key_exists('AddKeyFrameDescs',$param) and $param['AddKeyFrameDescs'] !== null) {
             $this->AddKeyFrameDescs = [];
-            foreach ($param["AddKeyFrameDescs"] as $key => $value){
+            foreach ($param['AddKeyFrameDescs'] as $key => $value){
                 $obj = new MediaKeyFrameDescItem();
                 $obj->deserialize($value);
                 array_push($this->AddKeyFrameDescs, $obj);
             }
         }
 
-        if (array_key_exists("DeleteKeyFrameDescs",$param) and $param["DeleteKeyFrameDescs"] !== null) {
-            $this->DeleteKeyFrameDescs = $param["DeleteKeyFrameDescs"];
+        if (array_key_exists('DeleteKeyFrameDescs',$param) and $param['DeleteKeyFrameDescs'] !== null) {
+            $this->DeleteKeyFrameDescs = $param['DeleteKeyFrameDescs'];
         }
 
-        if (array_key_exists("ClearKeyFrameDescs",$param) and $param["ClearKeyFrameDescs"] !== null) {
-            $this->ClearKeyFrameDescs = $param["ClearKeyFrameDescs"];
+        if (array_key_exists('ClearKeyFrameDescs',$param) and $param['ClearKeyFrameDescs'] !== null) {
+            $this->ClearKeyFrameDescs = $param['ClearKeyFrameDescs'];
         }
 
-        if (array_key_exists("AddTags",$param) and $param["AddTags"] !== null) {
-            $this->AddTags = $param["AddTags"];
+        if (array_key_exists('AddTags',$param) and $param['AddTags'] !== null) {
+            $this->AddTags = $param['AddTags'];
         }
 
-        if (array_key_exists("DeleteTags",$param) and $param["DeleteTags"] !== null) {
-            $this->DeleteTags = $param["DeleteTags"];
+        if (array_key_exists('DeleteTags',$param) and $param['DeleteTags'] !== null) {
+            $this->DeleteTags = $param['DeleteTags'];
         }
 
-        if (array_key_exists("ClearTags",$param) and $param["ClearTags"] !== null) {
-            $this->ClearTags = $param["ClearTags"];
+        if (array_key_exists('ClearTags',$param) and $param['ClearTags'] !== null) {
+            $this->ClearTags = $param['ClearTags'];
         }
 
-        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
-            $this->SubAppId = $param["SubAppId"];
+        if (array_key_exists('SubAppId',$param) and $param['SubAppId'] !== null) {
+            $this->SubAppId = $param['SubAppId'];
         }
     }
 }

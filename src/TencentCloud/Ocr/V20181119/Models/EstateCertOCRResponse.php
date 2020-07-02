@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -142,56 +142,56 @@ class EstateCertOCRResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Obligee",$param) and $param["Obligee"] !== null) {
-            $this->Obligee = $param["Obligee"];
+        if (array_key_exists('Obligee',$param) and $param['Obligee'] !== null) {
+            $this->Obligee = $param['Obligee'];
         }
 
-        if (array_key_exists("Ownership",$param) and $param["Ownership"] !== null) {
-            $this->Ownership = $param["Ownership"];
+        if (array_key_exists('Ownership',$param) and $param['Ownership'] !== null) {
+            $this->Ownership = $param['Ownership'];
         }
 
-        if (array_key_exists("Location",$param) and $param["Location"] !== null) {
-            $this->Location = $param["Location"];
+        if (array_key_exists('Location',$param) and $param['Location'] !== null) {
+            $this->Location = $param['Location'];
         }
 
-        if (array_key_exists("Unit",$param) and $param["Unit"] !== null) {
-            $this->Unit = $param["Unit"];
+        if (array_key_exists('Unit',$param) and $param['Unit'] !== null) {
+            $this->Unit = $param['Unit'];
         }
 
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists('Type',$param) and $param['Type'] !== null) {
+            $this->Type = $param['Type'];
         }
 
-        if (array_key_exists("Property",$param) and $param["Property"] !== null) {
-            $this->Property = $param["Property"];
+        if (array_key_exists('Property',$param) and $param['Property'] !== null) {
+            $this->Property = $param['Property'];
         }
 
-        if (array_key_exists("Usage",$param) and $param["Usage"] !== null) {
-            $this->Usage = $param["Usage"];
+        if (array_key_exists('Usage',$param) and $param['Usage'] !== null) {
+            $this->Usage = $param['Usage'];
         }
 
-        if (array_key_exists("Area",$param) and $param["Area"] !== null) {
-            $this->Area = $param["Area"];
+        if (array_key_exists('Area',$param) and $param['Area'] !== null) {
+            $this->Area = $param['Area'];
         }
 
-        if (array_key_exists("Term",$param) and $param["Term"] !== null) {
-            $this->Term = $param["Term"];
+        if (array_key_exists('Term',$param) and $param['Term'] !== null) {
+            $this->Term = $param['Term'];
         }
 
-        if (array_key_exists("Other",$param) and $param["Other"] !== null) {
-            $this->Other = $param["Other"];
+        if (array_key_exists('Other',$param) and $param['Other'] !== null) {
+            $this->Other = $param['Other'];
         }
 
-        if (array_key_exists("Angle",$param) and $param["Angle"] !== null) {
-            $this->Angle = $param["Angle"];
+        if (array_key_exists('Angle',$param) and $param['Angle'] !== null) {
+            $this->Angle = $param['Angle'];
         }
 
-        if (array_key_exists("Number",$param) and $param["Number"] !== null) {
-            $this->Number = $param["Number"];
+        if (array_key_exists('Number',$param) and $param['Number'] !== null) {
+            $this->Number = $param['Number'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

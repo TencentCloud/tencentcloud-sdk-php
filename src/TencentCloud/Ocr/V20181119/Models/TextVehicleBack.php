@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -158,44 +158,44 @@ class TextVehicleBack extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PlateNo",$param) and $param["PlateNo"] !== null) {
-            $this->PlateNo = $param["PlateNo"];
+        if (array_key_exists('PlateNo',$param) and $param['PlateNo'] !== null) {
+            $this->PlateNo = $param['PlateNo'];
         }
 
-        if (array_key_exists("FileNo",$param) and $param["FileNo"] !== null) {
-            $this->FileNo = $param["FileNo"];
+        if (array_key_exists('FileNo',$param) and $param['FileNo'] !== null) {
+            $this->FileNo = $param['FileNo'];
         }
 
-        if (array_key_exists("AllowNum",$param) and $param["AllowNum"] !== null) {
-            $this->AllowNum = $param["AllowNum"];
+        if (array_key_exists('AllowNum',$param) and $param['AllowNum'] !== null) {
+            $this->AllowNum = $param['AllowNum'];
         }
 
-        if (array_key_exists("TotalMass",$param) and $param["TotalMass"] !== null) {
-            $this->TotalMass = $param["TotalMass"];
+        if (array_key_exists('TotalMass',$param) and $param['TotalMass'] !== null) {
+            $this->TotalMass = $param['TotalMass'];
         }
 
-        if (array_key_exists("CurbWeight",$param) and $param["CurbWeight"] !== null) {
-            $this->CurbWeight = $param["CurbWeight"];
+        if (array_key_exists('CurbWeight',$param) and $param['CurbWeight'] !== null) {
+            $this->CurbWeight = $param['CurbWeight'];
         }
 
-        if (array_key_exists("LoadQuality",$param) and $param["LoadQuality"] !== null) {
-            $this->LoadQuality = $param["LoadQuality"];
+        if (array_key_exists('LoadQuality',$param) and $param['LoadQuality'] !== null) {
+            $this->LoadQuality = $param['LoadQuality'];
         }
 
-        if (array_key_exists("ExternalSize",$param) and $param["ExternalSize"] !== null) {
-            $this->ExternalSize = $param["ExternalSize"];
+        if (array_key_exists('ExternalSize',$param) and $param['ExternalSize'] !== null) {
+            $this->ExternalSize = $param['ExternalSize'];
         }
 
-        if (array_key_exists("Marks",$param) and $param["Marks"] !== null) {
-            $this->Marks = $param["Marks"];
+        if (array_key_exists('Marks',$param) and $param['Marks'] !== null) {
+            $this->Marks = $param['Marks'];
         }
 
-        if (array_key_exists("Record",$param) and $param["Record"] !== null) {
-            $this->Record = $param["Record"];
+        if (array_key_exists('Record',$param) and $param['Record'] !== null) {
+            $this->Record = $param['Record'];
         }
 
-        if (array_key_exists("TotalQuasiMass",$param) and $param["TotalQuasiMass"] !== null) {
-            $this->TotalQuasiMass = $param["TotalQuasiMass"];
+        if (array_key_exists('TotalQuasiMass',$param) and $param['TotalQuasiMass'] !== null) {
+            $this->TotalQuasiMass = $param['TotalQuasiMass'];
         }
     }
 }

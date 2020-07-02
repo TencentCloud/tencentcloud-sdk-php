@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -110,40 +110,40 @@ class NetworkInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Upload",$param) and $param["Upload"] !== null) {
-            $this->Upload = $param["Upload"];
+        if (array_key_exists('Upload',$param) and $param['Upload'] !== null) {
+            $this->Upload = $param['Upload'];
         }
 
-        if (array_key_exists("Download",$param) and $param["Download"] !== null) {
-            $this->Download = $param["Download"];
+        if (array_key_exists('Download',$param) and $param['Download'] !== null) {
+            $this->Download = $param['Download'];
         }
 
-        if (array_key_exists("MinRtt",$param) and $param["MinRtt"] !== null) {
-            $this->MinRtt = $param["MinRtt"];
+        if (array_key_exists('MinRtt',$param) and $param['MinRtt'] !== null) {
+            $this->MinRtt = $param['MinRtt'];
         }
 
-        if (array_key_exists("AvgRtt",$param) and $param["AvgRtt"] !== null) {
-            $this->AvgRtt = $param["AvgRtt"];
+        if (array_key_exists('AvgRtt',$param) and $param['AvgRtt'] !== null) {
+            $this->AvgRtt = $param['AvgRtt'];
         }
 
-        if (array_key_exists("MaxRtt",$param) and $param["MaxRtt"] !== null) {
-            $this->MaxRtt = $param["MaxRtt"];
+        if (array_key_exists('MaxRtt',$param) and $param['MaxRtt'] !== null) {
+            $this->MaxRtt = $param['MaxRtt'];
         }
 
-        if (array_key_exists("MdevRtt",$param) and $param["MdevRtt"] !== null) {
-            $this->MdevRtt = $param["MdevRtt"];
+        if (array_key_exists('MdevRtt',$param) and $param['MdevRtt'] !== null) {
+            $this->MdevRtt = $param['MdevRtt'];
         }
 
-        if (array_key_exists("Loss",$param) and $param["Loss"] !== null) {
-            $this->Loss = $param["Loss"];
+        if (array_key_exists('Loss',$param) and $param['Loss'] !== null) {
+            $this->Loss = $param['Loss'];
         }
 
-        if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
-            $this->UpdateTime = $param["UpdateTime"];
+        if (array_key_exists('UpdateTime',$param) and $param['UpdateTime'] !== null) {
+            $this->UpdateTime = $param['UpdateTime'];
         }
 
-        if (array_key_exists("Mac",$param) and $param["Mac"] !== null) {
-            $this->Mac = $param["Mac"];
+        if (array_key_exists('Mac',$param) and $param['Mac'] !== null) {
+            $this->Mac = $param['Mac'];
         }
     }
 }

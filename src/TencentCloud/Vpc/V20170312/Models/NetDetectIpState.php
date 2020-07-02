@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -90,20 +90,20 @@ class NetDetectIpState extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DetectDestinationIp",$param) and $param["DetectDestinationIp"] !== null) {
-            $this->DetectDestinationIp = $param["DetectDestinationIp"];
+        if (array_key_exists('DetectDestinationIp',$param) and $param['DetectDestinationIp'] !== null) {
+            $this->DetectDestinationIp = $param['DetectDestinationIp'];
         }
 
-        if (array_key_exists("State",$param) and $param["State"] !== null) {
-            $this->State = $param["State"];
+        if (array_key_exists('State',$param) and $param['State'] !== null) {
+            $this->State = $param['State'];
         }
 
-        if (array_key_exists("Delay",$param) and $param["Delay"] !== null) {
-            $this->Delay = $param["Delay"];
+        if (array_key_exists('Delay',$param) and $param['Delay'] !== null) {
+            $this->Delay = $param['Delay'];
         }
 
-        if (array_key_exists("PacketLossRate",$param) and $param["PacketLossRate"] !== null) {
-            $this->PacketLossRate = $param["PacketLossRate"];
+        if (array_key_exists('PacketLossRate',$param) and $param['PacketLossRate'] !== null) {
+            $this->PacketLossRate = $param['PacketLossRate'];
         }
     }
 }

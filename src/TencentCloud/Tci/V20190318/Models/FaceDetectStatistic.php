@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -102,36 +102,36 @@ class FaceDetectStatistic extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FaceSizeRatio",$param) and $param["FaceSizeRatio"] !== null) {
-            $this->FaceSizeRatio = $param["FaceSizeRatio"];
+        if (array_key_exists('FaceSizeRatio',$param) and $param['FaceSizeRatio'] !== null) {
+            $this->FaceSizeRatio = $param['FaceSizeRatio'];
         }
 
-        if (array_key_exists("FrontalFaceCount",$param) and $param["FrontalFaceCount"] !== null) {
-            $this->FrontalFaceCount = $param["FrontalFaceCount"];
+        if (array_key_exists('FrontalFaceCount',$param) and $param['FrontalFaceCount'] !== null) {
+            $this->FrontalFaceCount = $param['FrontalFaceCount'];
         }
 
-        if (array_key_exists("FrontalFaceRatio",$param) and $param["FrontalFaceRatio"] !== null) {
-            $this->FrontalFaceRatio = $param["FrontalFaceRatio"];
+        if (array_key_exists('FrontalFaceRatio',$param) and $param['FrontalFaceRatio'] !== null) {
+            $this->FrontalFaceRatio = $param['FrontalFaceRatio'];
         }
 
-        if (array_key_exists("FrontalFaceRealRatio",$param) and $param["FrontalFaceRealRatio"] !== null) {
-            $this->FrontalFaceRealRatio = $param["FrontalFaceRealRatio"];
+        if (array_key_exists('FrontalFaceRealRatio',$param) and $param['FrontalFaceRealRatio'] !== null) {
+            $this->FrontalFaceRealRatio = $param['FrontalFaceRealRatio'];
         }
 
-        if (array_key_exists("PersonId",$param) and $param["PersonId"] !== null) {
-            $this->PersonId = $param["PersonId"];
+        if (array_key_exists('PersonId',$param) and $param['PersonId'] !== null) {
+            $this->PersonId = $param['PersonId'];
         }
 
-        if (array_key_exists("SideFaceCount",$param) and $param["SideFaceCount"] !== null) {
-            $this->SideFaceCount = $param["SideFaceCount"];
+        if (array_key_exists('SideFaceCount',$param) and $param['SideFaceCount'] !== null) {
+            $this->SideFaceCount = $param['SideFaceCount'];
         }
 
-        if (array_key_exists("SideFaceRatio",$param) and $param["SideFaceRatio"] !== null) {
-            $this->SideFaceRatio = $param["SideFaceRatio"];
+        if (array_key_exists('SideFaceRatio',$param) and $param['SideFaceRatio'] !== null) {
+            $this->SideFaceRatio = $param['SideFaceRatio'];
         }
 
-        if (array_key_exists("SideFaceRealRatio",$param) and $param["SideFaceRealRatio"] !== null) {
-            $this->SideFaceRealRatio = $param["SideFaceRealRatio"];
+        if (array_key_exists('SideFaceRealRatio',$param) and $param['SideFaceRealRatio'] !== null) {
+            $this->SideFaceRealRatio = $param['SideFaceRealRatio'];
         }
     }
 }

@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -78,24 +78,24 @@ class Block extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BlockNum",$param) and $param["BlockNum"] !== null) {
-            $this->BlockNum = $param["BlockNum"];
+        if (array_key_exists('BlockNum',$param) and $param['BlockNum'] !== null) {
+            $this->BlockNum = $param['BlockNum'];
         }
 
-        if (array_key_exists("DataHash",$param) and $param["DataHash"] !== null) {
-            $this->DataHash = $param["DataHash"];
+        if (array_key_exists('DataHash',$param) and $param['DataHash'] !== null) {
+            $this->DataHash = $param['DataHash'];
         }
 
-        if (array_key_exists("BlockId",$param) and $param["BlockId"] !== null) {
-            $this->BlockId = $param["BlockId"];
+        if (array_key_exists('BlockId',$param) and $param['BlockId'] !== null) {
+            $this->BlockId = $param['BlockId'];
         }
 
-        if (array_key_exists("PreHash",$param) and $param["PreHash"] !== null) {
-            $this->PreHash = $param["PreHash"];
+        if (array_key_exists('PreHash',$param) and $param['PreHash'] !== null) {
+            $this->PreHash = $param['PreHash'];
         }
 
-        if (array_key_exists("TxCount",$param) and $param["TxCount"] !== null) {
-            $this->TxCount = $param["TxCount"];
+        if (array_key_exists('TxCount',$param) and $param['TxCount'] !== null) {
+            $this->TxCount = $param['TxCount'];
         }
     }
 }

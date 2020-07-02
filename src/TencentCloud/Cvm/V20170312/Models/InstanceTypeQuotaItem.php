@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -182,79 +182,79 @@ class InstanceTypeQuotaItem extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
-            $this->Zone = $param["Zone"];
+        if (array_key_exists('Zone',$param) and $param['Zone'] !== null) {
+            $this->Zone = $param['Zone'];
         }
 
-        if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
-            $this->InstanceType = $param["InstanceType"];
+        if (array_key_exists('InstanceType',$param) and $param['InstanceType'] !== null) {
+            $this->InstanceType = $param['InstanceType'];
         }
 
-        if (array_key_exists("InstanceChargeType",$param) and $param["InstanceChargeType"] !== null) {
-            $this->InstanceChargeType = $param["InstanceChargeType"];
+        if (array_key_exists('InstanceChargeType',$param) and $param['InstanceChargeType'] !== null) {
+            $this->InstanceChargeType = $param['InstanceChargeType'];
         }
 
-        if (array_key_exists("NetworkCard",$param) and $param["NetworkCard"] !== null) {
-            $this->NetworkCard = $param["NetworkCard"];
+        if (array_key_exists('NetworkCard',$param) and $param['NetworkCard'] !== null) {
+            $this->NetworkCard = $param['NetworkCard'];
         }
 
-        if (array_key_exists("Externals",$param) and $param["Externals"] !== null) {
+        if (array_key_exists('Externals',$param) and $param['Externals'] !== null) {
             $this->Externals = new Externals();
-            $this->Externals->deserialize($param["Externals"]);
+            $this->Externals->deserialize($param['Externals']);
         }
 
-        if (array_key_exists("Cpu",$param) and $param["Cpu"] !== null) {
-            $this->Cpu = $param["Cpu"];
+        if (array_key_exists('Cpu',$param) and $param['Cpu'] !== null) {
+            $this->Cpu = $param['Cpu'];
         }
 
-        if (array_key_exists("Memory",$param) and $param["Memory"] !== null) {
-            $this->Memory = $param["Memory"];
+        if (array_key_exists('Memory',$param) and $param['Memory'] !== null) {
+            $this->Memory = $param['Memory'];
         }
 
-        if (array_key_exists("InstanceFamily",$param) and $param["InstanceFamily"] !== null) {
-            $this->InstanceFamily = $param["InstanceFamily"];
+        if (array_key_exists('InstanceFamily',$param) and $param['InstanceFamily'] !== null) {
+            $this->InstanceFamily = $param['InstanceFamily'];
         }
 
-        if (array_key_exists("TypeName",$param) and $param["TypeName"] !== null) {
-            $this->TypeName = $param["TypeName"];
+        if (array_key_exists('TypeName',$param) and $param['TypeName'] !== null) {
+            $this->TypeName = $param['TypeName'];
         }
 
-        if (array_key_exists("LocalDiskTypeList",$param) and $param["LocalDiskTypeList"] !== null) {
+        if (array_key_exists('LocalDiskTypeList',$param) and $param['LocalDiskTypeList'] !== null) {
             $this->LocalDiskTypeList = [];
-            foreach ($param["LocalDiskTypeList"] as $key => $value){
+            foreach ($param['LocalDiskTypeList'] as $key => $value){
                 $obj = new LocalDiskType();
                 $obj->deserialize($value);
                 array_push($this->LocalDiskTypeList, $obj);
             }
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("Price",$param) and $param["Price"] !== null) {
+        if (array_key_exists('Price',$param) and $param['Price'] !== null) {
             $this->Price = new ItemPrice();
-            $this->Price->deserialize($param["Price"]);
+            $this->Price->deserialize($param['Price']);
         }
 
-        if (array_key_exists("SoldOutReason",$param) and $param["SoldOutReason"] !== null) {
-            $this->SoldOutReason = $param["SoldOutReason"];
+        if (array_key_exists('SoldOutReason',$param) and $param['SoldOutReason'] !== null) {
+            $this->SoldOutReason = $param['SoldOutReason'];
         }
 
-        if (array_key_exists("InstanceBandwidth",$param) and $param["InstanceBandwidth"] !== null) {
-            $this->InstanceBandwidth = $param["InstanceBandwidth"];
+        if (array_key_exists('InstanceBandwidth',$param) and $param['InstanceBandwidth'] !== null) {
+            $this->InstanceBandwidth = $param['InstanceBandwidth'];
         }
 
-        if (array_key_exists("InstancePps",$param) and $param["InstancePps"] !== null) {
-            $this->InstancePps = $param["InstancePps"];
+        if (array_key_exists('InstancePps',$param) and $param['InstancePps'] !== null) {
+            $this->InstancePps = $param['InstancePps'];
         }
 
-        if (array_key_exists("StorageBlockAmount",$param) and $param["StorageBlockAmount"] !== null) {
-            $this->StorageBlockAmount = $param["StorageBlockAmount"];
+        if (array_key_exists('StorageBlockAmount',$param) and $param['StorageBlockAmount'] !== null) {
+            $this->StorageBlockAmount = $param['StorageBlockAmount'];
         }
 
-        if (array_key_exists("CpuType",$param) and $param["CpuType"] !== null) {
-            $this->CpuType = $param["CpuType"];
+        if (array_key_exists('CpuType',$param) and $param['CpuType'] !== null) {
+            $this->CpuType = $param['CpuType'];
         }
     }
 }

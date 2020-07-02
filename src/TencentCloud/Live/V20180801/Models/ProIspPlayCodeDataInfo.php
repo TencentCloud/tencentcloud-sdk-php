@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -94,32 +94,32 @@ class ProIspPlayCodeDataInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CountryAreaName",$param) and $param["CountryAreaName"] !== null) {
-            $this->CountryAreaName = $param["CountryAreaName"];
+        if (array_key_exists('CountryAreaName',$param) and $param['CountryAreaName'] !== null) {
+            $this->CountryAreaName = $param['CountryAreaName'];
         }
 
-        if (array_key_exists("ProvinceName",$param) and $param["ProvinceName"] !== null) {
-            $this->ProvinceName = $param["ProvinceName"];
+        if (array_key_exists('ProvinceName',$param) and $param['ProvinceName'] !== null) {
+            $this->ProvinceName = $param['ProvinceName'];
         }
 
-        if (array_key_exists("IspName",$param) and $param["IspName"] !== null) {
-            $this->IspName = $param["IspName"];
+        if (array_key_exists('IspName',$param) and $param['IspName'] !== null) {
+            $this->IspName = $param['IspName'];
         }
 
-        if (array_key_exists("Code2xx",$param) and $param["Code2xx"] !== null) {
-            $this->Code2xx = $param["Code2xx"];
+        if (array_key_exists('Code2xx',$param) and $param['Code2xx'] !== null) {
+            $this->Code2xx = $param['Code2xx'];
         }
 
-        if (array_key_exists("Code3xx",$param) and $param["Code3xx"] !== null) {
-            $this->Code3xx = $param["Code3xx"];
+        if (array_key_exists('Code3xx',$param) and $param['Code3xx'] !== null) {
+            $this->Code3xx = $param['Code3xx'];
         }
 
-        if (array_key_exists("Code4xx",$param) and $param["Code4xx"] !== null) {
-            $this->Code4xx = $param["Code4xx"];
+        if (array_key_exists('Code4xx',$param) and $param['Code4xx'] !== null) {
+            $this->Code4xx = $param['Code4xx'];
         }
 
-        if (array_key_exists("Code5xx",$param) and $param["Code5xx"] !== null) {
-            $this->Code5xx = $param["Code5xx"];
+        if (array_key_exists('Code5xx',$param) and $param['Code5xx'] !== null) {
+            $this->Code5xx = $param['Code5xx'];
         }
     }
 }

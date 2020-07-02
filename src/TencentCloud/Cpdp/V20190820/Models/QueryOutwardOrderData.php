@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -182,56 +182,56 @@ class QueryOutwardOrderData extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MerchantId",$param) and $param["MerchantId"] !== null) {
-            $this->MerchantId = $param["MerchantId"];
+        if (array_key_exists('MerchantId',$param) and $param['MerchantId'] !== null) {
+            $this->MerchantId = $param['MerchantId'];
         }
 
-        if (array_key_exists("TransactionId",$param) and $param["TransactionId"] !== null) {
-            $this->TransactionId = $param["TransactionId"];
+        if (array_key_exists('TransactionId',$param) and $param['TransactionId'] !== null) {
+            $this->TransactionId = $param['TransactionId'];
         }
 
-        if (array_key_exists("AcctDate",$param) and $param["AcctDate"] !== null) {
-            $this->AcctDate = $param["AcctDate"];
+        if (array_key_exists('AcctDate',$param) and $param['AcctDate'] !== null) {
+            $this->AcctDate = $param['AcctDate'];
         }
 
-        if (array_key_exists("PricingCurrency",$param) and $param["PricingCurrency"] !== null) {
-            $this->PricingCurrency = $param["PricingCurrency"];
+        if (array_key_exists('PricingCurrency',$param) and $param['PricingCurrency'] !== null) {
+            $this->PricingCurrency = $param['PricingCurrency'];
         }
 
-        if (array_key_exists("SourceCurrency",$param) and $param["SourceCurrency"] !== null) {
-            $this->SourceCurrency = $param["SourceCurrency"];
+        if (array_key_exists('SourceCurrency',$param) and $param['SourceCurrency'] !== null) {
+            $this->SourceCurrency = $param['SourceCurrency'];
         }
 
-        if (array_key_exists("SourceAmount",$param) and $param["SourceAmount"] !== null) {
-            $this->SourceAmount = $param["SourceAmount"];
+        if (array_key_exists('SourceAmount',$param) and $param['SourceAmount'] !== null) {
+            $this->SourceAmount = $param['SourceAmount'];
         }
 
-        if (array_key_exists("TargetCurrency",$param) and $param["TargetCurrency"] !== null) {
-            $this->TargetCurrency = $param["TargetCurrency"];
+        if (array_key_exists('TargetCurrency',$param) and $param['TargetCurrency'] !== null) {
+            $this->TargetCurrency = $param['TargetCurrency'];
         }
 
-        if (array_key_exists("TargetAmount",$param) and $param["TargetAmount"] !== null) {
-            $this->TargetAmount = $param["TargetAmount"];
+        if (array_key_exists('TargetAmount',$param) and $param['TargetAmount'] !== null) {
+            $this->TargetAmount = $param['TargetAmount'];
         }
 
-        if (array_key_exists("FxRate",$param) and $param["FxRate"] !== null) {
-            $this->FxRate = $param["FxRate"];
+        if (array_key_exists('FxRate',$param) and $param['FxRate'] !== null) {
+            $this->FxRate = $param['FxRate'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("FailReason",$param) and $param["FailReason"] !== null) {
-            $this->FailReason = $param["FailReason"];
+        if (array_key_exists('FailReason',$param) and $param['FailReason'] !== null) {
+            $this->FailReason = $param['FailReason'];
         }
 
-        if (array_key_exists("RefundAmount",$param) and $param["RefundAmount"] !== null) {
-            $this->RefundAmount = $param["RefundAmount"];
+        if (array_key_exists('RefundAmount',$param) and $param['RefundAmount'] !== null) {
+            $this->RefundAmount = $param['RefundAmount'];
         }
 
-        if (array_key_exists("RefundCurrency",$param) and $param["RefundCurrency"] !== null) {
-            $this->RefundCurrency = $param["RefundCurrency"];
+        if (array_key_exists('RefundCurrency',$param) and $param['RefundCurrency'] !== null) {
+            $this->RefundCurrency = $param['RefundCurrency'];
         }
     }
 }

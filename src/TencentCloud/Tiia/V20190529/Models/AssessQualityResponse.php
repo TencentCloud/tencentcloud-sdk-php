@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -102,36 +102,36 @@ class AssessQualityResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LongImage",$param) and $param["LongImage"] !== null) {
-            $this->LongImage = $param["LongImage"];
+        if (array_key_exists('LongImage',$param) and $param['LongImage'] !== null) {
+            $this->LongImage = $param['LongImage'];
         }
 
-        if (array_key_exists("BlackAndWhite",$param) and $param["BlackAndWhite"] !== null) {
-            $this->BlackAndWhite = $param["BlackAndWhite"];
+        if (array_key_exists('BlackAndWhite',$param) and $param['BlackAndWhite'] !== null) {
+            $this->BlackAndWhite = $param['BlackAndWhite'];
         }
 
-        if (array_key_exists("SmallImage",$param) and $param["SmallImage"] !== null) {
-            $this->SmallImage = $param["SmallImage"];
+        if (array_key_exists('SmallImage',$param) and $param['SmallImage'] !== null) {
+            $this->SmallImage = $param['SmallImage'];
         }
 
-        if (array_key_exists("BigImage",$param) and $param["BigImage"] !== null) {
-            $this->BigImage = $param["BigImage"];
+        if (array_key_exists('BigImage',$param) and $param['BigImage'] !== null) {
+            $this->BigImage = $param['BigImage'];
         }
 
-        if (array_key_exists("PureImage",$param) and $param["PureImage"] !== null) {
-            $this->PureImage = $param["PureImage"];
+        if (array_key_exists('PureImage',$param) and $param['PureImage'] !== null) {
+            $this->PureImage = $param['PureImage'];
         }
 
-        if (array_key_exists("ClarityScore",$param) and $param["ClarityScore"] !== null) {
-            $this->ClarityScore = $param["ClarityScore"];
+        if (array_key_exists('ClarityScore',$param) and $param['ClarityScore'] !== null) {
+            $this->ClarityScore = $param['ClarityScore'];
         }
 
-        if (array_key_exists("AestheticScore",$param) and $param["AestheticScore"] !== null) {
-            $this->AestheticScore = $param["AestheticScore"];
+        if (array_key_exists('AestheticScore',$param) and $param['AestheticScore'] !== null) {
+            $this->AestheticScore = $param['AestheticScore'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

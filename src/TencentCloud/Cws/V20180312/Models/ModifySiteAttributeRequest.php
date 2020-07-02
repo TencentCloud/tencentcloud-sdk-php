@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -94,32 +94,32 @@ class ModifySiteAttributeRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SiteId",$param) and $param["SiteId"] !== null) {
-            $this->SiteId = $param["SiteId"];
+        if (array_key_exists('SiteId',$param) and $param['SiteId'] !== null) {
+            $this->SiteId = $param['SiteId'];
         }
 
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("NeedLogin",$param) and $param["NeedLogin"] !== null) {
-            $this->NeedLogin = $param["NeedLogin"];
+        if (array_key_exists('NeedLogin',$param) and $param['NeedLogin'] !== null) {
+            $this->NeedLogin = $param['NeedLogin'];
         }
 
-        if (array_key_exists("LoginCookie",$param) and $param["LoginCookie"] !== null) {
-            $this->LoginCookie = $param["LoginCookie"];
+        if (array_key_exists('LoginCookie',$param) and $param['LoginCookie'] !== null) {
+            $this->LoginCookie = $param['LoginCookie'];
         }
 
-        if (array_key_exists("LoginCheckUrl",$param) and $param["LoginCheckUrl"] !== null) {
-            $this->LoginCheckUrl = $param["LoginCheckUrl"];
+        if (array_key_exists('LoginCheckUrl',$param) and $param['LoginCheckUrl'] !== null) {
+            $this->LoginCheckUrl = $param['LoginCheckUrl'];
         }
 
-        if (array_key_exists("LoginCheckKw",$param) and $param["LoginCheckKw"] !== null) {
-            $this->LoginCheckKw = $param["LoginCheckKw"];
+        if (array_key_exists('LoginCheckKw',$param) and $param['LoginCheckKw'] !== null) {
+            $this->LoginCheckKw = $param['LoginCheckKw'];
         }
 
-        if (array_key_exists("ScanDisallow",$param) and $param["ScanDisallow"] !== null) {
-            $this->ScanDisallow = $param["ScanDisallow"];
+        if (array_key_exists('ScanDisallow',$param) and $param['ScanDisallow'] !== null) {
+            $this->ScanDisallow = $param['ScanDisallow'];
         }
     }
 }

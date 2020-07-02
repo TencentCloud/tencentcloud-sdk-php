@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -82,25 +82,25 @@ class Item extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Item",$param) and $param["Item"] !== null) {
-            $this->Item = $param["Item"];
+        if (array_key_exists('Item',$param) and $param['Item'] !== null) {
+            $this->Item = $param['Item'];
         }
 
-        if (array_key_exists("ItemString",$param) and $param["ItemString"] !== null) {
-            $this->ItemString = $param["ItemString"];
+        if (array_key_exists('ItemString',$param) and $param['ItemString'] !== null) {
+            $this->ItemString = $param['ItemString'];
         }
 
-        if (array_key_exists("ItemCoord",$param) and $param["ItemCoord"] !== null) {
+        if (array_key_exists('ItemCoord',$param) and $param['ItemCoord'] !== null) {
             $this->ItemCoord = new ItemCoord();
-            $this->ItemCoord->deserialize($param["ItemCoord"]);
+            $this->ItemCoord->deserialize($param['ItemCoord']);
         }
 
-        if (array_key_exists("Answer",$param) and $param["Answer"] !== null) {
-            $this->Answer = $param["Answer"];
+        if (array_key_exists('Answer',$param) and $param['Answer'] !== null) {
+            $this->Answer = $param['Answer'];
         }
 
-        if (array_key_exists("ExpressionType",$param) and $param["ExpressionType"] !== null) {
-            $this->ExpressionType = $param["ExpressionType"];
+        if (array_key_exists('ExpressionType',$param) and $param['ExpressionType'] !== null) {
+            $this->ExpressionType = $param['ExpressionType'];
         }
     }
 }

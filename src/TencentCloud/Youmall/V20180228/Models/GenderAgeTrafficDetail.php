@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -62,16 +62,16 @@ class GenderAgeTrafficDetail extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Gender",$param) and $param["Gender"] !== null) {
-            $this->Gender = $param["Gender"];
+        if (array_key_exists('Gender',$param) and $param['Gender'] !== null) {
+            $this->Gender = $param['Gender'];
         }
 
-        if (array_key_exists("AgeGap",$param) and $param["AgeGap"] !== null) {
-            $this->AgeGap = $param["AgeGap"];
+        if (array_key_exists('AgeGap',$param) and $param['AgeGap'] !== null) {
+            $this->AgeGap = $param['AgeGap'];
         }
 
-        if (array_key_exists("TrafficCount",$param) and $param["TrafficCount"] !== null) {
-            $this->TrafficCount = $param["TrafficCount"];
+        if (array_key_exists('TrafficCount',$param) and $param['TrafficCount'] !== null) {
+            $this->TrafficCount = $param['TrafficCount'];
         }
     }
 }

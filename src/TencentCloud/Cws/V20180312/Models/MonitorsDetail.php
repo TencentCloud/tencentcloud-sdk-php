@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -134,63 +134,63 @@ class MonitorsDetail extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Basic",$param) and $param["Basic"] !== null) {
+        if (array_key_exists('Basic',$param) and $param['Basic'] !== null) {
             $this->Basic = new Monitor();
-            $this->Basic->deserialize($param["Basic"]);
+            $this->Basic->deserialize($param['Basic']);
         }
 
-        if (array_key_exists("Sites",$param) and $param["Sites"] !== null) {
+        if (array_key_exists('Sites',$param) and $param['Sites'] !== null) {
             $this->Sites = [];
-            foreach ($param["Sites"] as $key => $value){
+            foreach ($param['Sites'] as $key => $value){
                 $obj = new MonitorMiniSite();
                 $obj->deserialize($value);
                 array_push($this->Sites, $obj);
             }
         }
 
-        if (array_key_exists("SiteNumber",$param) and $param["SiteNumber"] !== null) {
-            $this->SiteNumber = $param["SiteNumber"];
+        if (array_key_exists('SiteNumber',$param) and $param['SiteNumber'] !== null) {
+            $this->SiteNumber = $param['SiteNumber'];
         }
 
-        if (array_key_exists("ImpactSites",$param) and $param["ImpactSites"] !== null) {
+        if (array_key_exists('ImpactSites',$param) and $param['ImpactSites'] !== null) {
             $this->ImpactSites = [];
-            foreach ($param["ImpactSites"] as $key => $value){
+            foreach ($param['ImpactSites'] as $key => $value){
                 $obj = new MonitorMiniSite();
                 $obj->deserialize($value);
                 array_push($this->ImpactSites, $obj);
             }
         }
 
-        if (array_key_exists("ImpactSiteNumber",$param) and $param["ImpactSiteNumber"] !== null) {
-            $this->ImpactSiteNumber = $param["ImpactSiteNumber"];
+        if (array_key_exists('ImpactSiteNumber',$param) and $param['ImpactSiteNumber'] !== null) {
+            $this->ImpactSiteNumber = $param['ImpactSiteNumber'];
         }
 
-        if (array_key_exists("VulsHighNumber",$param) and $param["VulsHighNumber"] !== null) {
-            $this->VulsHighNumber = $param["VulsHighNumber"];
+        if (array_key_exists('VulsHighNumber',$param) and $param['VulsHighNumber'] !== null) {
+            $this->VulsHighNumber = $param['VulsHighNumber'];
         }
 
-        if (array_key_exists("VulsMiddleNumber",$param) and $param["VulsMiddleNumber"] !== null) {
-            $this->VulsMiddleNumber = $param["VulsMiddleNumber"];
+        if (array_key_exists('VulsMiddleNumber',$param) and $param['VulsMiddleNumber'] !== null) {
+            $this->VulsMiddleNumber = $param['VulsMiddleNumber'];
         }
 
-        if (array_key_exists("VulsLowNumber",$param) and $param["VulsLowNumber"] !== null) {
-            $this->VulsLowNumber = $param["VulsLowNumber"];
+        if (array_key_exists('VulsLowNumber',$param) and $param['VulsLowNumber'] !== null) {
+            $this->VulsLowNumber = $param['VulsLowNumber'];
         }
 
-        if (array_key_exists("VulsNoticeNumber",$param) and $param["VulsNoticeNumber"] !== null) {
-            $this->VulsNoticeNumber = $param["VulsNoticeNumber"];
+        if (array_key_exists('VulsNoticeNumber',$param) and $param['VulsNoticeNumber'] !== null) {
+            $this->VulsNoticeNumber = $param['VulsNoticeNumber'];
         }
 
-        if (array_key_exists("Progress",$param) and $param["Progress"] !== null) {
-            $this->Progress = $param["Progress"];
+        if (array_key_exists('Progress',$param) and $param['Progress'] !== null) {
+            $this->Progress = $param['Progress'];
         }
 
-        if (array_key_exists("PageCount",$param) and $param["PageCount"] !== null) {
-            $this->PageCount = $param["PageCount"];
+        if (array_key_exists('PageCount',$param) and $param['PageCount'] !== null) {
+            $this->PageCount = $param['PageCount'];
         }
 
-        if (array_key_exists("ContentNumber",$param) and $param["ContentNumber"] !== null) {
-            $this->ContentNumber = $param["ContentNumber"];
+        if (array_key_exists('ContentNumber',$param) and $param['ContentNumber'] !== null) {
+            $this->ContentNumber = $param['ContentNumber'];
         }
     }
 }

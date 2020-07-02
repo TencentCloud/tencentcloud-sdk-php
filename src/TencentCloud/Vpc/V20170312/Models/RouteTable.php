@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -102,47 +102,47 @@ class RouteTable extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
-            $this->VpcId = $param["VpcId"];
+        if (array_key_exists('VpcId',$param) and $param['VpcId'] !== null) {
+            $this->VpcId = $param['VpcId'];
         }
 
-        if (array_key_exists("RouteTableId",$param) and $param["RouteTableId"] !== null) {
-            $this->RouteTableId = $param["RouteTableId"];
+        if (array_key_exists('RouteTableId',$param) and $param['RouteTableId'] !== null) {
+            $this->RouteTableId = $param['RouteTableId'];
         }
 
-        if (array_key_exists("RouteTableName",$param) and $param["RouteTableName"] !== null) {
-            $this->RouteTableName = $param["RouteTableName"];
+        if (array_key_exists('RouteTableName',$param) and $param['RouteTableName'] !== null) {
+            $this->RouteTableName = $param['RouteTableName'];
         }
 
-        if (array_key_exists("AssociationSet",$param) and $param["AssociationSet"] !== null) {
+        if (array_key_exists('AssociationSet',$param) and $param['AssociationSet'] !== null) {
             $this->AssociationSet = [];
-            foreach ($param["AssociationSet"] as $key => $value){
+            foreach ($param['AssociationSet'] as $key => $value){
                 $obj = new RouteTableAssociation();
                 $obj->deserialize($value);
                 array_push($this->AssociationSet, $obj);
             }
         }
 
-        if (array_key_exists("RouteSet",$param) and $param["RouteSet"] !== null) {
+        if (array_key_exists('RouteSet',$param) and $param['RouteSet'] !== null) {
             $this->RouteSet = [];
-            foreach ($param["RouteSet"] as $key => $value){
+            foreach ($param['RouteSet'] as $key => $value){
                 $obj = new Route();
                 $obj->deserialize($value);
                 array_push($this->RouteSet, $obj);
             }
         }
 
-        if (array_key_exists("Main",$param) and $param["Main"] !== null) {
-            $this->Main = $param["Main"];
+        if (array_key_exists('Main',$param) and $param['Main'] !== null) {
+            $this->Main = $param['Main'];
         }
 
-        if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
-            $this->CreatedTime = $param["CreatedTime"];
+        if (array_key_exists('CreatedTime',$param) and $param['CreatedTime'] !== null) {
+            $this->CreatedTime = $param['CreatedTime'];
         }
 
-        if (array_key_exists("TagSet",$param) and $param["TagSet"] !== null) {
+        if (array_key_exists('TagSet',$param) and $param['TagSet'] !== null) {
             $this->TagSet = [];
-            foreach ($param["TagSet"] as $key => $value){
+            foreach ($param['TagSet'] as $key => $value){
                 $obj = new Tag();
                 $obj->deserialize($value);
                 array_push($this->TagSet, $obj);

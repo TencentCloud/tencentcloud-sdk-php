@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -102,56 +102,56 @@ class ImageTaskStatistic extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FaceDetect",$param) and $param["FaceDetect"] !== null) {
+        if (array_key_exists('FaceDetect',$param) and $param['FaceDetect'] !== null) {
             $this->FaceDetect = [];
-            foreach ($param["FaceDetect"] as $key => $value){
+            foreach ($param['FaceDetect'] as $key => $value){
                 $obj = new FaceDetectStatistic();
                 $obj->deserialize($value);
                 array_push($this->FaceDetect, $obj);
             }
         }
 
-        if (array_key_exists("FaceExpression",$param) and $param["FaceExpression"] !== null) {
+        if (array_key_exists('FaceExpression',$param) and $param['FaceExpression'] !== null) {
             $this->FaceExpression = [];
-            foreach ($param["FaceExpression"] as $key => $value){
+            foreach ($param['FaceExpression'] as $key => $value){
                 $obj = new FaceExpressStatistic();
                 $obj->deserialize($value);
                 array_push($this->FaceExpression, $obj);
             }
         }
 
-        if (array_key_exists("FaceIdentify",$param) and $param["FaceIdentify"] !== null) {
+        if (array_key_exists('FaceIdentify',$param) and $param['FaceIdentify'] !== null) {
             $this->FaceIdentify = [];
-            foreach ($param["FaceIdentify"] as $key => $value){
+            foreach ($param['FaceIdentify'] as $key => $value){
                 $obj = new FaceIdentifyStatistic();
                 $obj->deserialize($value);
                 array_push($this->FaceIdentify, $obj);
             }
         }
 
-        if (array_key_exists("Gesture",$param) and $param["Gesture"] !== null) {
+        if (array_key_exists('Gesture',$param) and $param['Gesture'] !== null) {
             $this->Gesture = new ActionStatistic();
-            $this->Gesture->deserialize($param["Gesture"]);
+            $this->Gesture->deserialize($param['Gesture']);
         }
 
-        if (array_key_exists("Handtracking",$param) and $param["Handtracking"] !== null) {
+        if (array_key_exists('Handtracking',$param) and $param['Handtracking'] !== null) {
             $this->Handtracking = new ActionStatistic();
-            $this->Handtracking->deserialize($param["Handtracking"]);
+            $this->Handtracking->deserialize($param['Handtracking']);
         }
 
-        if (array_key_exists("Light",$param) and $param["Light"] !== null) {
+        if (array_key_exists('Light',$param) and $param['Light'] !== null) {
             $this->Light = new LightStatistic();
-            $this->Light->deserialize($param["Light"]);
+            $this->Light->deserialize($param['Light']);
         }
 
-        if (array_key_exists("StudentMovement",$param) and $param["StudentMovement"] !== null) {
+        if (array_key_exists('StudentMovement',$param) and $param['StudentMovement'] !== null) {
             $this->StudentMovement = new ActionStatistic();
-            $this->StudentMovement->deserialize($param["StudentMovement"]);
+            $this->StudentMovement->deserialize($param['StudentMovement']);
         }
 
-        if (array_key_exists("TeacherMovement",$param) and $param["TeacherMovement"] !== null) {
+        if (array_key_exists('TeacherMovement',$param) and $param['TeacherMovement'] !== null) {
             $this->TeacherMovement = new ActionStatistic();
-            $this->TeacherMovement->deserialize($param["TeacherMovement"]);
+            $this->TeacherMovement->deserialize($param['TeacherMovement']);
         }
     }
 }

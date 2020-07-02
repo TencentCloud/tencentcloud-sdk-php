@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -86,33 +86,33 @@ class AgentGroup extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
-            $this->GroupId = $param["GroupId"];
+        if (array_key_exists('GroupId',$param) and $param['GroupId'] !== null) {
+            $this->GroupId = $param['GroupId'];
         }
 
-        if (array_key_exists("GroupName",$param) and $param["GroupName"] !== null) {
-            $this->GroupName = $param["GroupName"];
+        if (array_key_exists('GroupName',$param) and $param['GroupName'] !== null) {
+            $this->GroupName = $param['GroupName'];
         }
 
-        if (array_key_exists("IsDefault",$param) and $param["IsDefault"] !== null) {
-            $this->IsDefault = $param["IsDefault"];
+        if (array_key_exists('IsDefault',$param) and $param['IsDefault'] !== null) {
+            $this->IsDefault = $param['IsDefault'];
         }
 
-        if (array_key_exists("TaskNum",$param) and $param["TaskNum"] !== null) {
-            $this->TaskNum = $param["TaskNum"];
+        if (array_key_exists('TaskNum',$param) and $param['TaskNum'] !== null) {
+            $this->TaskNum = $param['TaskNum'];
         }
 
-        if (array_key_exists("GroupDetail",$param) and $param["GroupDetail"] !== null) {
+        if (array_key_exists('GroupDetail',$param) and $param['GroupDetail'] !== null) {
             $this->GroupDetail = [];
-            foreach ($param["GroupDetail"] as $key => $value){
+            foreach ($param['GroupDetail'] as $key => $value){
                 $obj = new CatAgent();
                 $obj->deserialize($value);
                 array_push($this->GroupDetail, $obj);
             }
         }
 
-        if (array_key_exists("MaxGroupNum",$param) and $param["MaxGroupNum"] !== null) {
-            $this->MaxGroupNum = $param["MaxGroupNum"];
+        if (array_key_exists('MaxGroupNum',$param) and $param['MaxGroupNum'] !== null) {
+            $this->MaxGroupNum = $param['MaxGroupNum'];
         }
     }
 }

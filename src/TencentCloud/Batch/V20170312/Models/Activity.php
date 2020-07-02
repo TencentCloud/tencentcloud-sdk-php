@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -126,44 +126,44 @@ class Activity extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ActivityId",$param) and $param["ActivityId"] !== null) {
-            $this->ActivityId = $param["ActivityId"];
+        if (array_key_exists('ActivityId',$param) and $param['ActivityId'] !== null) {
+            $this->ActivityId = $param['ActivityId'];
         }
 
-        if (array_key_exists("ComputeNodeId",$param) and $param["ComputeNodeId"] !== null) {
-            $this->ComputeNodeId = $param["ComputeNodeId"];
+        if (array_key_exists('ComputeNodeId',$param) and $param['ComputeNodeId'] !== null) {
+            $this->ComputeNodeId = $param['ComputeNodeId'];
         }
 
-        if (array_key_exists("ComputeNodeActivityType",$param) and $param["ComputeNodeActivityType"] !== null) {
-            $this->ComputeNodeActivityType = $param["ComputeNodeActivityType"];
+        if (array_key_exists('ComputeNodeActivityType',$param) and $param['ComputeNodeActivityType'] !== null) {
+            $this->ComputeNodeActivityType = $param['ComputeNodeActivityType'];
         }
 
-        if (array_key_exists("EnvId",$param) and $param["EnvId"] !== null) {
-            $this->EnvId = $param["EnvId"];
+        if (array_key_exists('EnvId',$param) and $param['EnvId'] !== null) {
+            $this->EnvId = $param['EnvId'];
         }
 
-        if (array_key_exists("Cause",$param) and $param["Cause"] !== null) {
-            $this->Cause = $param["Cause"];
+        if (array_key_exists('Cause',$param) and $param['Cause'] !== null) {
+            $this->Cause = $param['Cause'];
         }
 
-        if (array_key_exists("ActivityState",$param) and $param["ActivityState"] !== null) {
-            $this->ActivityState = $param["ActivityState"];
+        if (array_key_exists('ActivityState',$param) and $param['ActivityState'] !== null) {
+            $this->ActivityState = $param['ActivityState'];
         }
 
-        if (array_key_exists("StateReason",$param) and $param["StateReason"] !== null) {
-            $this->StateReason = $param["StateReason"];
+        if (array_key_exists('StateReason',$param) and $param['StateReason'] !== null) {
+            $this->StateReason = $param['StateReason'];
         }
 
-        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
-            $this->StartTime = $param["StartTime"];
+        if (array_key_exists('StartTime',$param) and $param['StartTime'] !== null) {
+            $this->StartTime = $param['StartTime'];
         }
 
-        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
-            $this->EndTime = $param["EndTime"];
+        if (array_key_exists('EndTime',$param) and $param['EndTime'] !== null) {
+            $this->EndTime = $param['EndTime'];
         }
 
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
     }
 }

@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -86,28 +86,28 @@ class ClientIpPlaySumInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ClientIp",$param) and $param["ClientIp"] !== null) {
-            $this->ClientIp = $param["ClientIp"];
+        if (array_key_exists('ClientIp',$param) and $param['ClientIp'] !== null) {
+            $this->ClientIp = $param['ClientIp'];
         }
 
-        if (array_key_exists("Province",$param) and $param["Province"] !== null) {
-            $this->Province = $param["Province"];
+        if (array_key_exists('Province',$param) and $param['Province'] !== null) {
+            $this->Province = $param['Province'];
         }
 
-        if (array_key_exists("TotalFlux",$param) and $param["TotalFlux"] !== null) {
-            $this->TotalFlux = $param["TotalFlux"];
+        if (array_key_exists('TotalFlux',$param) and $param['TotalFlux'] !== null) {
+            $this->TotalFlux = $param['TotalFlux'];
         }
 
-        if (array_key_exists("TotalRequest",$param) and $param["TotalRequest"] !== null) {
-            $this->TotalRequest = $param["TotalRequest"];
+        if (array_key_exists('TotalRequest',$param) and $param['TotalRequest'] !== null) {
+            $this->TotalRequest = $param['TotalRequest'];
         }
 
-        if (array_key_exists("TotalFailedRequest",$param) and $param["TotalFailedRequest"] !== null) {
-            $this->TotalFailedRequest = $param["TotalFailedRequest"];
+        if (array_key_exists('TotalFailedRequest',$param) and $param['TotalFailedRequest'] !== null) {
+            $this->TotalFailedRequest = $param['TotalFailedRequest'];
         }
 
-        if (array_key_exists("CountryArea",$param) and $param["CountryArea"] !== null) {
-            $this->CountryArea = $param["CountryArea"];
+        if (array_key_exists('CountryArea',$param) and $param['CountryArea'] !== null) {
+            $this->CountryArea = $param['CountryArea'];
         }
     }
 }

@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -54,13 +54,13 @@ class SetCcnRegionBandwidthLimitsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CcnId",$param) and $param["CcnId"] !== null) {
-            $this->CcnId = $param["CcnId"];
+        if (array_key_exists('CcnId',$param) and $param['CcnId'] !== null) {
+            $this->CcnId = $param['CcnId'];
         }
 
-        if (array_key_exists("CcnRegionBandwidthLimits",$param) and $param["CcnRegionBandwidthLimits"] !== null) {
+        if (array_key_exists('CcnRegionBandwidthLimits',$param) and $param['CcnRegionBandwidthLimits'] !== null) {
             $this->CcnRegionBandwidthLimits = [];
-            foreach ($param["CcnRegionBandwidthLimits"] as $key => $value){
+            foreach ($param['CcnRegionBandwidthLimits'] as $key => $value){
                 $obj = new CcnRegionBandwidthLimit();
                 $obj->deserialize($value);
                 array_push($this->CcnRegionBandwidthLimits, $obj);

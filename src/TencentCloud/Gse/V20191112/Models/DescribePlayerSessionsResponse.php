@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -70,21 +70,21 @@ class DescribePlayerSessionsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PlayerSessions",$param) and $param["PlayerSessions"] !== null) {
+        if (array_key_exists('PlayerSessions',$param) and $param['PlayerSessions'] !== null) {
             $this->PlayerSessions = [];
-            foreach ($param["PlayerSessions"] as $key => $value){
+            foreach ($param['PlayerSessions'] as $key => $value){
                 $obj = new PlayerSession();
                 $obj->deserialize($value);
                 array_push($this->PlayerSessions, $obj);
             }
         }
 
-        if (array_key_exists("NextToken",$param) and $param["NextToken"] !== null) {
-            $this->NextToken = $param["NextToken"];
+        if (array_key_exists('NextToken',$param) and $param['NextToken'] !== null) {
+            $this->NextToken = $param['NextToken'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

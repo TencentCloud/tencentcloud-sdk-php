@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -190,80 +190,80 @@ class DDoSPolicyDropOption extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DropTcp",$param) and $param["DropTcp"] !== null) {
-            $this->DropTcp = $param["DropTcp"];
+        if (array_key_exists('DropTcp',$param) and $param['DropTcp'] !== null) {
+            $this->DropTcp = $param['DropTcp'];
         }
 
-        if (array_key_exists("DropUdp",$param) and $param["DropUdp"] !== null) {
-            $this->DropUdp = $param["DropUdp"];
+        if (array_key_exists('DropUdp',$param) and $param['DropUdp'] !== null) {
+            $this->DropUdp = $param['DropUdp'];
         }
 
-        if (array_key_exists("DropIcmp",$param) and $param["DropIcmp"] !== null) {
-            $this->DropIcmp = $param["DropIcmp"];
+        if (array_key_exists('DropIcmp',$param) and $param['DropIcmp'] !== null) {
+            $this->DropIcmp = $param['DropIcmp'];
         }
 
-        if (array_key_exists("DropOther",$param) and $param["DropOther"] !== null) {
-            $this->DropOther = $param["DropOther"];
+        if (array_key_exists('DropOther',$param) and $param['DropOther'] !== null) {
+            $this->DropOther = $param['DropOther'];
         }
 
-        if (array_key_exists("DropAbroad",$param) and $param["DropAbroad"] !== null) {
-            $this->DropAbroad = $param["DropAbroad"];
+        if (array_key_exists('DropAbroad',$param) and $param['DropAbroad'] !== null) {
+            $this->DropAbroad = $param['DropAbroad'];
         }
 
-        if (array_key_exists("CheckSyncConn",$param) and $param["CheckSyncConn"] !== null) {
-            $this->CheckSyncConn = $param["CheckSyncConn"];
+        if (array_key_exists('CheckSyncConn',$param) and $param['CheckSyncConn'] !== null) {
+            $this->CheckSyncConn = $param['CheckSyncConn'];
         }
 
-        if (array_key_exists("SdNewLimit",$param) and $param["SdNewLimit"] !== null) {
-            $this->SdNewLimit = $param["SdNewLimit"];
+        if (array_key_exists('SdNewLimit',$param) and $param['SdNewLimit'] !== null) {
+            $this->SdNewLimit = $param['SdNewLimit'];
         }
 
-        if (array_key_exists("DstNewLimit",$param) and $param["DstNewLimit"] !== null) {
-            $this->DstNewLimit = $param["DstNewLimit"];
+        if (array_key_exists('DstNewLimit',$param) and $param['DstNewLimit'] !== null) {
+            $this->DstNewLimit = $param['DstNewLimit'];
         }
 
-        if (array_key_exists("SdConnLimit",$param) and $param["SdConnLimit"] !== null) {
-            $this->SdConnLimit = $param["SdConnLimit"];
+        if (array_key_exists('SdConnLimit',$param) and $param['SdConnLimit'] !== null) {
+            $this->SdConnLimit = $param['SdConnLimit'];
         }
 
-        if (array_key_exists("DstConnLimit",$param) and $param["DstConnLimit"] !== null) {
-            $this->DstConnLimit = $param["DstConnLimit"];
+        if (array_key_exists('DstConnLimit',$param) and $param['DstConnLimit'] !== null) {
+            $this->DstConnLimit = $param['DstConnLimit'];
         }
 
-        if (array_key_exists("BadConnThreshold",$param) and $param["BadConnThreshold"] !== null) {
-            $this->BadConnThreshold = $param["BadConnThreshold"];
+        if (array_key_exists('BadConnThreshold',$param) and $param['BadConnThreshold'] !== null) {
+            $this->BadConnThreshold = $param['BadConnThreshold'];
         }
 
-        if (array_key_exists("NullConnEnable",$param) and $param["NullConnEnable"] !== null) {
-            $this->NullConnEnable = $param["NullConnEnable"];
+        if (array_key_exists('NullConnEnable',$param) and $param['NullConnEnable'] !== null) {
+            $this->NullConnEnable = $param['NullConnEnable'];
         }
 
-        if (array_key_exists("ConnTimeout",$param) and $param["ConnTimeout"] !== null) {
-            $this->ConnTimeout = $param["ConnTimeout"];
+        if (array_key_exists('ConnTimeout',$param) and $param['ConnTimeout'] !== null) {
+            $this->ConnTimeout = $param['ConnTimeout'];
         }
 
-        if (array_key_exists("SynRate",$param) and $param["SynRate"] !== null) {
-            $this->SynRate = $param["SynRate"];
+        if (array_key_exists('SynRate',$param) and $param['SynRate'] !== null) {
+            $this->SynRate = $param['SynRate'];
         }
 
-        if (array_key_exists("SynLimit",$param) and $param["SynLimit"] !== null) {
-            $this->SynLimit = $param["SynLimit"];
+        if (array_key_exists('SynLimit',$param) and $param['SynLimit'] !== null) {
+            $this->SynLimit = $param['SynLimit'];
         }
 
-        if (array_key_exists("DTcpMbpsLimit",$param) and $param["DTcpMbpsLimit"] !== null) {
-            $this->DTcpMbpsLimit = $param["DTcpMbpsLimit"];
+        if (array_key_exists('DTcpMbpsLimit',$param) and $param['DTcpMbpsLimit'] !== null) {
+            $this->DTcpMbpsLimit = $param['DTcpMbpsLimit'];
         }
 
-        if (array_key_exists("DUdpMbpsLimit",$param) and $param["DUdpMbpsLimit"] !== null) {
-            $this->DUdpMbpsLimit = $param["DUdpMbpsLimit"];
+        if (array_key_exists('DUdpMbpsLimit',$param) and $param['DUdpMbpsLimit'] !== null) {
+            $this->DUdpMbpsLimit = $param['DUdpMbpsLimit'];
         }
 
-        if (array_key_exists("DIcmpMbpsLimit",$param) and $param["DIcmpMbpsLimit"] !== null) {
-            $this->DIcmpMbpsLimit = $param["DIcmpMbpsLimit"];
+        if (array_key_exists('DIcmpMbpsLimit',$param) and $param['DIcmpMbpsLimit'] !== null) {
+            $this->DIcmpMbpsLimit = $param['DIcmpMbpsLimit'];
         }
 
-        if (array_key_exists("DOtherMbpsLimit",$param) and $param["DOtherMbpsLimit"] !== null) {
-            $this->DOtherMbpsLimit = $param["DOtherMbpsLimit"];
+        if (array_key_exists('DOtherMbpsLimit',$param) and $param['DOtherMbpsLimit'] !== null) {
+            $this->DOtherMbpsLimit = $param['DOtherMbpsLimit'];
         }
     }
 }

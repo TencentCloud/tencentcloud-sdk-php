@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -70,13 +70,13 @@ all：账号维度数据明细
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Resource",$param) and $param["Resource"] !== null) {
-            $this->Resource = $param["Resource"];
+        if (array_key_exists('Resource',$param) and $param['Resource'] !== null) {
+            $this->Resource = $param['Resource'];
         }
 
-        if (array_key_exists("BillingData",$param) and $param["BillingData"] !== null) {
+        if (array_key_exists('BillingData',$param) and $param['BillingData'] !== null) {
             $this->BillingData = [];
-            foreach ($param["BillingData"] as $key => $value){
+            foreach ($param['BillingData'] as $key => $value){
                 $obj = new CdnData();
                 $obj->deserialize($value);
                 array_push($this->BillingData, $obj);

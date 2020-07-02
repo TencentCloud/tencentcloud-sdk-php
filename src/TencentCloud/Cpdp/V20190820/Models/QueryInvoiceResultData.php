@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -142,56 +142,56 @@ class QueryInvoiceResultData extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("OrderId",$param) and $param["OrderId"] !== null) {
-            $this->OrderId = $param["OrderId"];
+        if (array_key_exists('OrderId',$param) and $param['OrderId'] !== null) {
+            $this->OrderId = $param['OrderId'];
         }
 
-        if (array_key_exists("OrderSn",$param) and $param["OrderSn"] !== null) {
-            $this->OrderSn = $param["OrderSn"];
+        if (array_key_exists('OrderSn',$param) and $param['OrderSn'] !== null) {
+            $this->OrderSn = $param['OrderSn'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("Message",$param) and $param["Message"] !== null) {
-            $this->Message = $param["Message"];
+        if (array_key_exists('Message',$param) and $param['Message'] !== null) {
+            $this->Message = $param['Message'];
         }
 
-        if (array_key_exists("TicketDate",$param) and $param["TicketDate"] !== null) {
-            $this->TicketDate = $param["TicketDate"];
+        if (array_key_exists('TicketDate',$param) and $param['TicketDate'] !== null) {
+            $this->TicketDate = $param['TicketDate'];
         }
 
-        if (array_key_exists("TicketSn",$param) and $param["TicketSn"] !== null) {
-            $this->TicketSn = $param["TicketSn"];
+        if (array_key_exists('TicketSn',$param) and $param['TicketSn'] !== null) {
+            $this->TicketSn = $param['TicketSn'];
         }
 
-        if (array_key_exists("TicketCode",$param) and $param["TicketCode"] !== null) {
-            $this->TicketCode = $param["TicketCode"];
+        if (array_key_exists('TicketCode',$param) and $param['TicketCode'] !== null) {
+            $this->TicketCode = $param['TicketCode'];
         }
 
-        if (array_key_exists("CheckCode",$param) and $param["CheckCode"] !== null) {
-            $this->CheckCode = $param["CheckCode"];
+        if (array_key_exists('CheckCode',$param) and $param['CheckCode'] !== null) {
+            $this->CheckCode = $param['CheckCode'];
         }
 
-        if (array_key_exists("AmountWithTax",$param) and $param["AmountWithTax"] !== null) {
-            $this->AmountWithTax = $param["AmountWithTax"];
+        if (array_key_exists('AmountWithTax',$param) and $param['AmountWithTax'] !== null) {
+            $this->AmountWithTax = $param['AmountWithTax'];
         }
 
-        if (array_key_exists("AmountWithoutTax",$param) and $param["AmountWithoutTax"] !== null) {
-            $this->AmountWithoutTax = $param["AmountWithoutTax"];
+        if (array_key_exists('AmountWithoutTax',$param) and $param['AmountWithoutTax'] !== null) {
+            $this->AmountWithoutTax = $param['AmountWithoutTax'];
         }
 
-        if (array_key_exists("TaxAmount",$param) and $param["TaxAmount"] !== null) {
-            $this->TaxAmount = $param["TaxAmount"];
+        if (array_key_exists('TaxAmount',$param) and $param['TaxAmount'] !== null) {
+            $this->TaxAmount = $param['TaxAmount'];
         }
 
-        if (array_key_exists("IsRedWashed",$param) and $param["IsRedWashed"] !== null) {
-            $this->IsRedWashed = $param["IsRedWashed"];
+        if (array_key_exists('IsRedWashed',$param) and $param['IsRedWashed'] !== null) {
+            $this->IsRedWashed = $param['IsRedWashed'];
         }
 
-        if (array_key_exists("PdfUrl",$param) and $param["PdfUrl"] !== null) {
-            $this->PdfUrl = $param["PdfUrl"];
+        if (array_key_exists('PdfUrl',$param) and $param['PdfUrl'] !== null) {
+            $this->PdfUrl = $param['PdfUrl'];
         }
     }
 }

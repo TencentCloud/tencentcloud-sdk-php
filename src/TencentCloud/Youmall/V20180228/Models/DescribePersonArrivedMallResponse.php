@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -78,29 +78,29 @@ class DescribePersonArrivedMallResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MallId",$param) and $param["MallId"] !== null) {
-            $this->MallId = $param["MallId"];
+        if (array_key_exists('MallId',$param) and $param['MallId'] !== null) {
+            $this->MallId = $param['MallId'];
         }
 
-        if (array_key_exists("MallCode",$param) and $param["MallCode"] !== null) {
-            $this->MallCode = $param["MallCode"];
+        if (array_key_exists('MallCode',$param) and $param['MallCode'] !== null) {
+            $this->MallCode = $param['MallCode'];
         }
 
-        if (array_key_exists("PersonId",$param) and $param["PersonId"] !== null) {
-            $this->PersonId = $param["PersonId"];
+        if (array_key_exists('PersonId',$param) and $param['PersonId'] !== null) {
+            $this->PersonId = $param['PersonId'];
         }
 
-        if (array_key_exists("ArrivedMallSet",$param) and $param["ArrivedMallSet"] !== null) {
+        if (array_key_exists('ArrivedMallSet',$param) and $param['ArrivedMallSet'] !== null) {
             $this->ArrivedMallSet = [];
-            foreach ($param["ArrivedMallSet"] as $key => $value){
+            foreach ($param['ArrivedMallSet'] as $key => $value){
                 $obj = new ArrivedMallInfo();
                 $obj->deserialize($value);
                 array_push($this->ArrivedMallSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

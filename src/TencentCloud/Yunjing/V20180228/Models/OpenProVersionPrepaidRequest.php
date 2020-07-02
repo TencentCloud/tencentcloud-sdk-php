@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -54,14 +54,14 @@ class OpenProVersionPrepaidRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ChargePrepaid",$param) and $param["ChargePrepaid"] !== null) {
+        if (array_key_exists('ChargePrepaid',$param) and $param['ChargePrepaid'] !== null) {
             $this->ChargePrepaid = new ChargePrepaid();
-            $this->ChargePrepaid->deserialize($param["ChargePrepaid"]);
+            $this->ChargePrepaid->deserialize($param['ChargePrepaid']);
         }
 
-        if (array_key_exists("Machines",$param) and $param["Machines"] !== null) {
+        if (array_key_exists('Machines',$param) and $param['Machines'] !== null) {
             $this->Machines = [];
-            foreach ($param["Machines"] as $key => $value){
+            foreach ($param['Machines'] as $key => $value){
                 $obj = new ProVersionMachine();
                 $obj->deserialize($value);
                 array_push($this->Machines, $obj);

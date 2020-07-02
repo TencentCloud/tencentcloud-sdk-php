@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -86,30 +86,30 @@ class ModifyLoadBalancerAttributesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LoadBalancerId",$param) and $param["LoadBalancerId"] !== null) {
-            $this->LoadBalancerId = $param["LoadBalancerId"];
+        if (array_key_exists('LoadBalancerId',$param) and $param['LoadBalancerId'] !== null) {
+            $this->LoadBalancerId = $param['LoadBalancerId'];
         }
 
-        if (array_key_exists("LoadBalancerName",$param) and $param["LoadBalancerName"] !== null) {
-            $this->LoadBalancerName = $param["LoadBalancerName"];
+        if (array_key_exists('LoadBalancerName',$param) and $param['LoadBalancerName'] !== null) {
+            $this->LoadBalancerName = $param['LoadBalancerName'];
         }
 
-        if (array_key_exists("TargetRegionInfo",$param) and $param["TargetRegionInfo"] !== null) {
+        if (array_key_exists('TargetRegionInfo',$param) and $param['TargetRegionInfo'] !== null) {
             $this->TargetRegionInfo = new TargetRegionInfo();
-            $this->TargetRegionInfo->deserialize($param["TargetRegionInfo"]);
+            $this->TargetRegionInfo->deserialize($param['TargetRegionInfo']);
         }
 
-        if (array_key_exists("InternetChargeInfo",$param) and $param["InternetChargeInfo"] !== null) {
+        if (array_key_exists('InternetChargeInfo',$param) and $param['InternetChargeInfo'] !== null) {
             $this->InternetChargeInfo = new InternetAccessible();
-            $this->InternetChargeInfo->deserialize($param["InternetChargeInfo"]);
+            $this->InternetChargeInfo->deserialize($param['InternetChargeInfo']);
         }
 
-        if (array_key_exists("LoadBalancerPassToTarget",$param) and $param["LoadBalancerPassToTarget"] !== null) {
-            $this->LoadBalancerPassToTarget = $param["LoadBalancerPassToTarget"];
+        if (array_key_exists('LoadBalancerPassToTarget',$param) and $param['LoadBalancerPassToTarget'] !== null) {
+            $this->LoadBalancerPassToTarget = $param['LoadBalancerPassToTarget'];
         }
 
-        if (array_key_exists("SnatPro",$param) and $param["SnatPro"] !== null) {
-            $this->SnatPro = $param["SnatPro"];
+        if (array_key_exists('SnatPro',$param) and $param['SnatPro'] !== null) {
+            $this->SnatPro = $param['SnatPro'];
         }
     }
 }

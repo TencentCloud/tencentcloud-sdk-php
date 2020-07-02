@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -62,16 +62,16 @@ class SourceInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Ip",$param) and $param["Ip"] !== null) {
-            $this->Ip = $param["Ip"];
+        if (array_key_exists('Ip',$param) and $param['Ip'] !== null) {
+            $this->Ip = $param['Ip'];
         }
 
-        if (array_key_exists("Conn",$param) and $param["Conn"] !== null) {
-            $this->Conn = $param["Conn"];
+        if (array_key_exists('Conn',$param) and $param['Conn'] !== null) {
+            $this->Conn = $param['Conn'];
         }
 
-        if (array_key_exists("Cmd",$param) and $param["Cmd"] !== null) {
-            $this->Cmd = $param["Cmd"];
+        if (array_key_exists('Cmd',$param) and $param['Cmd'] !== null) {
+            $this->Cmd = $param['Cmd'];
         }
     }
 }

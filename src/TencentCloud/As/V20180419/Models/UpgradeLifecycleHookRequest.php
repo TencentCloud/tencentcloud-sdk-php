@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -102,37 +102,37 @@ class UpgradeLifecycleHookRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LifecycleHookId",$param) and $param["LifecycleHookId"] !== null) {
-            $this->LifecycleHookId = $param["LifecycleHookId"];
+        if (array_key_exists('LifecycleHookId',$param) and $param['LifecycleHookId'] !== null) {
+            $this->LifecycleHookId = $param['LifecycleHookId'];
         }
 
-        if (array_key_exists("LifecycleHookName",$param) and $param["LifecycleHookName"] !== null) {
-            $this->LifecycleHookName = $param["LifecycleHookName"];
+        if (array_key_exists('LifecycleHookName',$param) and $param['LifecycleHookName'] !== null) {
+            $this->LifecycleHookName = $param['LifecycleHookName'];
         }
 
-        if (array_key_exists("LifecycleTransition",$param) and $param["LifecycleTransition"] !== null) {
-            $this->LifecycleTransition = $param["LifecycleTransition"];
+        if (array_key_exists('LifecycleTransition',$param) and $param['LifecycleTransition'] !== null) {
+            $this->LifecycleTransition = $param['LifecycleTransition'];
         }
 
-        if (array_key_exists("DefaultResult",$param) and $param["DefaultResult"] !== null) {
-            $this->DefaultResult = $param["DefaultResult"];
+        if (array_key_exists('DefaultResult',$param) and $param['DefaultResult'] !== null) {
+            $this->DefaultResult = $param['DefaultResult'];
         }
 
-        if (array_key_exists("HeartbeatTimeout",$param) and $param["HeartbeatTimeout"] !== null) {
-            $this->HeartbeatTimeout = $param["HeartbeatTimeout"];
+        if (array_key_exists('HeartbeatTimeout',$param) and $param['HeartbeatTimeout'] !== null) {
+            $this->HeartbeatTimeout = $param['HeartbeatTimeout'];
         }
 
-        if (array_key_exists("NotificationMetadata",$param) and $param["NotificationMetadata"] !== null) {
-            $this->NotificationMetadata = $param["NotificationMetadata"];
+        if (array_key_exists('NotificationMetadata',$param) and $param['NotificationMetadata'] !== null) {
+            $this->NotificationMetadata = $param['NotificationMetadata'];
         }
 
-        if (array_key_exists("NotificationTarget",$param) and $param["NotificationTarget"] !== null) {
+        if (array_key_exists('NotificationTarget',$param) and $param['NotificationTarget'] !== null) {
             $this->NotificationTarget = new NotificationTarget();
-            $this->NotificationTarget->deserialize($param["NotificationTarget"]);
+            $this->NotificationTarget->deserialize($param['NotificationTarget']);
         }
 
-        if (array_key_exists("LifecycleTransitionType",$param) and $param["LifecycleTransitionType"] !== null) {
-            $this->LifecycleTransitionType = $param["LifecycleTransitionType"];
+        if (array_key_exists('LifecycleTransitionType',$param) and $param['LifecycleTransitionType'] !== null) {
+            $this->LifecycleTransitionType = $param['LifecycleTransitionType'];
         }
     }
 }

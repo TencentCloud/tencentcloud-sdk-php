@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -218,64 +218,64 @@ class VersionData extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ProductId",$param) and $param["ProductId"] !== null) {
-            $this->ProductId = $param["ProductId"];
+        if (array_key_exists('ProductId',$param) and $param['ProductId'] !== null) {
+            $this->ProductId = $param['ProductId'];
         }
 
-        if (array_key_exists("OtaVersion",$param) and $param["OtaVersion"] !== null) {
-            $this->OtaVersion = $param["OtaVersion"];
+        if (array_key_exists('OtaVersion',$param) and $param['OtaVersion'] !== null) {
+            $this->OtaVersion = $param['OtaVersion'];
         }
 
-        if (array_key_exists("PubStatus",$param) and $param["PubStatus"] !== null) {
-            $this->PubStatus = $param["PubStatus"];
+        if (array_key_exists('PubStatus',$param) and $param['PubStatus'] !== null) {
+            $this->PubStatus = $param['PubStatus'];
         }
 
-        if (array_key_exists("VersionUrl",$param) and $param["VersionUrl"] !== null) {
-            $this->VersionUrl = $param["VersionUrl"];
+        if (array_key_exists('VersionUrl',$param) and $param['VersionUrl'] !== null) {
+            $this->VersionUrl = $param['VersionUrl'];
         }
 
-        if (array_key_exists("FileSize",$param) and $param["FileSize"] !== null) {
-            $this->FileSize = $param["FileSize"];
+        if (array_key_exists('FileSize',$param) and $param['FileSize'] !== null) {
+            $this->FileSize = $param['FileSize'];
         }
 
-        if (array_key_exists("Md5",$param) and $param["Md5"] !== null) {
-            $this->Md5 = $param["Md5"];
+        if (array_key_exists('Md5',$param) and $param['Md5'] !== null) {
+            $this->Md5 = $param['Md5'];
         }
 
-        if (array_key_exists("OldVersions",$param) and $param["OldVersions"] !== null) {
-            $this->OldVersions = $param["OldVersions"];
+        if (array_key_exists('OldVersions',$param) and $param['OldVersions'] !== null) {
+            $this->OldVersions = $param['OldVersions'];
         }
 
-        if (array_key_exists("Tids",$param) and $param["Tids"] !== null) {
-            $this->Tids = $param["Tids"];
+        if (array_key_exists('Tids',$param) and $param['Tids'] !== null) {
+            $this->Tids = $param['Tids'];
         }
 
-        if (array_key_exists("GrayValue",$param) and $param["GrayValue"] !== null) {
-            $this->GrayValue = $param["GrayValue"];
+        if (array_key_exists('GrayValue',$param) and $param['GrayValue'] !== null) {
+            $this->GrayValue = $param['GrayValue'];
         }
 
-        if (array_key_exists("PublishTime",$param) and $param["PublishTime"] !== null) {
-            $this->PublishTime = $param["PublishTime"];
+        if (array_key_exists('PublishTime',$param) and $param['PublishTime'] !== null) {
+            $this->PublishTime = $param['PublishTime'];
         }
 
-        if (array_key_exists("ActiveCount",$param) and $param["ActiveCount"] !== null) {
-            $this->ActiveCount = $param["ActiveCount"];
+        if (array_key_exists('ActiveCount',$param) and $param['ActiveCount'] !== null) {
+            $this->ActiveCount = $param['ActiveCount'];
         }
 
-        if (array_key_exists("OnlineCount",$param) and $param["OnlineCount"] !== null) {
-            $this->OnlineCount = $param["OnlineCount"];
+        if (array_key_exists('OnlineCount',$param) and $param['OnlineCount'] !== null) {
+            $this->OnlineCount = $param['OnlineCount'];
         }
 
-        if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
-            $this->UpdateTime = $param["UpdateTime"];
+        if (array_key_exists('UpdateTime',$param) and $param['UpdateTime'] !== null) {
+            $this->UpdateTime = $param['UpdateTime'];
         }
 
-        if (array_key_exists("UploadTime",$param) and $param["UploadTime"] !== null) {
-            $this->UploadTime = $param["UploadTime"];
+        if (array_key_exists('UploadTime',$param) and $param['UploadTime'] !== null) {
+            $this->UploadTime = $param['UploadTime'];
         }
 
-        if (array_key_exists("ModifyTimes",$param) and $param["ModifyTimes"] !== null) {
-            $this->ModifyTimes = $param["ModifyTimes"];
+        if (array_key_exists('ModifyTimes',$param) and $param['ModifyTimes'] !== null) {
+            $this->ModifyTimes = $param['ModifyTimes'];
         }
     }
 }

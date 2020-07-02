@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -62,16 +62,16 @@ class AgentPayDealsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("OwnerUin",$param) and $param["OwnerUin"] !== null) {
-            $this->OwnerUin = $param["OwnerUin"];
+        if (array_key_exists('OwnerUin',$param) and $param['OwnerUin'] !== null) {
+            $this->OwnerUin = $param['OwnerUin'];
         }
 
-        if (array_key_exists("AgentPay",$param) and $param["AgentPay"] !== null) {
-            $this->AgentPay = $param["AgentPay"];
+        if (array_key_exists('AgentPay',$param) and $param['AgentPay'] !== null) {
+            $this->AgentPay = $param['AgentPay'];
         }
 
-        if (array_key_exists("DealNames",$param) and $param["DealNames"] !== null) {
-            $this->DealNames = $param["DealNames"];
+        if (array_key_exists('DealNames',$param) and $param['DealNames'] !== null) {
+            $this->DealNames = $param['DealNames'];
         }
     }
 }

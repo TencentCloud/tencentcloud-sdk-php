@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -98,24 +98,24 @@ class DeadLetterPolicy extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DeadLetterQueueName",$param) and $param["DeadLetterQueueName"] !== null) {
-            $this->DeadLetterQueueName = $param["DeadLetterQueueName"];
+        if (array_key_exists('DeadLetterQueueName',$param) and $param['DeadLetterQueueName'] !== null) {
+            $this->DeadLetterQueueName = $param['DeadLetterQueueName'];
         }
 
-        if (array_key_exists("DeadLetterQueue",$param) and $param["DeadLetterQueue"] !== null) {
-            $this->DeadLetterQueue = $param["DeadLetterQueue"];
+        if (array_key_exists('DeadLetterQueue',$param) and $param['DeadLetterQueue'] !== null) {
+            $this->DeadLetterQueue = $param['DeadLetterQueue'];
         }
 
-        if (array_key_exists("Policy",$param) and $param["Policy"] !== null) {
-            $this->Policy = $param["Policy"];
+        if (array_key_exists('Policy',$param) and $param['Policy'] !== null) {
+            $this->Policy = $param['Policy'];
         }
 
-        if (array_key_exists("MaxTimeToLive",$param) and $param["MaxTimeToLive"] !== null) {
-            $this->MaxTimeToLive = $param["MaxTimeToLive"];
+        if (array_key_exists('MaxTimeToLive',$param) and $param['MaxTimeToLive'] !== null) {
+            $this->MaxTimeToLive = $param['MaxTimeToLive'];
         }
 
-        if (array_key_exists("MaxReceiveCount",$param) and $param["MaxReceiveCount"] !== null) {
-            $this->MaxReceiveCount = $param["MaxReceiveCount"];
+        if (array_key_exists('MaxReceiveCount',$param) and $param['MaxReceiveCount'] !== null) {
+            $this->MaxReceiveCount = $param['MaxReceiveCount'];
         }
     }
 }

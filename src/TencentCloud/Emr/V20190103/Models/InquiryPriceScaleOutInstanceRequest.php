@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -138,40 +138,40 @@ class InquiryPriceScaleOutInstanceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TimeUnit",$param) and $param["TimeUnit"] !== null) {
-            $this->TimeUnit = $param["TimeUnit"];
+        if (array_key_exists('TimeUnit',$param) and $param['TimeUnit'] !== null) {
+            $this->TimeUnit = $param['TimeUnit'];
         }
 
-        if (array_key_exists("TimeSpan",$param) and $param["TimeSpan"] !== null) {
-            $this->TimeSpan = $param["TimeSpan"];
+        if (array_key_exists('TimeSpan',$param) and $param['TimeSpan'] !== null) {
+            $this->TimeSpan = $param['TimeSpan'];
         }
 
-        if (array_key_exists("ZoneId",$param) and $param["ZoneId"] !== null) {
-            $this->ZoneId = $param["ZoneId"];
+        if (array_key_exists('ZoneId',$param) and $param['ZoneId'] !== null) {
+            $this->ZoneId = $param['ZoneId'];
         }
 
-        if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {
-            $this->PayMode = $param["PayMode"];
+        if (array_key_exists('PayMode',$param) and $param['PayMode'] !== null) {
+            $this->PayMode = $param['PayMode'];
         }
 
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("CoreCount",$param) and $param["CoreCount"] !== null) {
-            $this->CoreCount = $param["CoreCount"];
+        if (array_key_exists('CoreCount',$param) and $param['CoreCount'] !== null) {
+            $this->CoreCount = $param['CoreCount'];
         }
 
-        if (array_key_exists("TaskCount",$param) and $param["TaskCount"] !== null) {
-            $this->TaskCount = $param["TaskCount"];
+        if (array_key_exists('TaskCount',$param) and $param['TaskCount'] !== null) {
+            $this->TaskCount = $param['TaskCount'];
         }
 
-        if (array_key_exists("Currency",$param) and $param["Currency"] !== null) {
-            $this->Currency = $param["Currency"];
+        if (array_key_exists('Currency',$param) and $param['Currency'] !== null) {
+            $this->Currency = $param['Currency'];
         }
 
-        if (array_key_exists("RouterCount",$param) and $param["RouterCount"] !== null) {
-            $this->RouterCount = $param["RouterCount"];
+        if (array_key_exists('RouterCount',$param) and $param['RouterCount'] !== null) {
+            $this->RouterCount = $param['RouterCount'];
         }
     }
 }

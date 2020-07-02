@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -86,20 +86,20 @@ accountType不同对应不同的用户ID。如果是QQ或微信用户则填入�
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PostTime",$param) and $param["PostTime"] !== null) {
-            $this->PostTime = $param["PostTime"];
+        if (array_key_exists('PostTime',$param) and $param['PostTime'] !== null) {
+            $this->PostTime = $param['PostTime'];
         }
 
-        if (array_key_exists("Uid",$param) and $param["Uid"] !== null) {
-            $this->Uid = $param["Uid"];
+        if (array_key_exists('Uid',$param) and $param['Uid'] !== null) {
+            $this->Uid = $param['Uid'];
         }
 
-        if (array_key_exists("UserIp",$param) and $param["UserIp"] !== null) {
-            $this->UserIp = $param["UserIp"];
+        if (array_key_exists('UserIp',$param) and $param['UserIp'] !== null) {
+            $this->UserIp = $param['UserIp'];
         }
 
-        if (array_key_exists("ValueScore",$param) and $param["ValueScore"] !== null) {
-            $this->ValueScore = $param["ValueScore"];
+        if (array_key_exists('ValueScore',$param) and $param['ValueScore'] !== null) {
+            $this->ValueScore = $param['ValueScore'];
         }
     }
 }

@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -78,24 +78,24 @@ class RunUserCmdRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CmdId",$param) and $param["CmdId"] !== null) {
-            $this->CmdId = $param["CmdId"];
+        if (array_key_exists('CmdId',$param) and $param['CmdId'] !== null) {
+            $this->CmdId = $param['CmdId'];
         }
 
-        if (array_key_exists("UserName",$param) and $param["UserName"] !== null) {
-            $this->UserName = $param["UserName"];
+        if (array_key_exists('UserName',$param) and $param['UserName'] !== null) {
+            $this->UserName = $param['UserName'];
         }
 
-        if (array_key_exists("Password",$param) and $param["Password"] !== null) {
-            $this->Password = $param["Password"];
+        if (array_key_exists('Password',$param) and $param['Password'] !== null) {
+            $this->Password = $param['Password'];
         }
 
-        if (array_key_exists("InstanceIds",$param) and $param["InstanceIds"] !== null) {
-            $this->InstanceIds = $param["InstanceIds"];
+        if (array_key_exists('InstanceIds',$param) and $param['InstanceIds'] !== null) {
+            $this->InstanceIds = $param['InstanceIds'];
         }
 
-        if (array_key_exists("CmdParam",$param) and $param["CmdParam"] !== null) {
-            $this->CmdParam = $param["CmdParam"];
+        if (array_key_exists('CmdParam',$param) and $param['CmdParam'] !== null) {
+            $this->CmdParam = $param['CmdParam'];
         }
     }
 }

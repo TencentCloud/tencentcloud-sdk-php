@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -46,8 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReservedMsg(string $ReservedMsg) 设置STRING(1027)，保留域
  * @method string getWebSign() 获取STRING(300)，网银签名
  * @method void setWebSign(string $WebSign) 设置STRING(300)，网银签名
- * @method string getProfile() 获取STRING(12)，接入环境，默认接入沙箱环境。接入正式环境填"prod"
- * @method void setProfile(string $Profile) 设置STRING(12)，接入环境，默认接入沙箱环境。接入正式环境填"prod"
+ * @method string getProfile() 获取STRING(12)，接入环境，默认接入沙箱环境。接入正式环境填'prod'
+ * @method void setProfile(string $Profile) 设置STRING(12)，接入环境，默认接入沙箱环境。接入正式环境填'prod'
  */
 class WithdrawCashMembershipRequest extends AbstractModel
 {
@@ -117,7 +117,7 @@ class WithdrawCashMembershipRequest extends AbstractModel
     public $WebSign;
 
     /**
-     * @var string STRING(12)，接入环境，默认接入沙箱环境。接入正式环境填"prod"
+     * @var string STRING(12)，接入环境，默认接入沙箱环境。接入正式环境填'prod'
      */
     public $Profile;
 
@@ -135,7 +135,7 @@ class WithdrawCashMembershipRequest extends AbstractModel
      * @param string $Remark STRING(300)，备注（建议可送订单号，可在对账文件的备注字段获取到）
      * @param string $ReservedMsg STRING(1027)，保留域
      * @param string $WebSign STRING(300)，网银签名
-     * @param string $Profile STRING(12)，接入环境，默认接入沙箱环境。接入正式环境填"prod"
+     * @param string $Profile STRING(12)，接入环境，默认接入沙箱环境。接入正式环境填'prod'
      */
     function __construct()
     {
@@ -150,60 +150,60 @@ class WithdrawCashMembershipRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MrchCode",$param) and $param["MrchCode"] !== null) {
-            $this->MrchCode = $param["MrchCode"];
+        if (array_key_exists('MrchCode',$param) and $param['MrchCode'] !== null) {
+            $this->MrchCode = $param['MrchCode'];
         }
 
-        if (array_key_exists("TranWebName",$param) and $param["TranWebName"] !== null) {
-            $this->TranWebName = $param["TranWebName"];
+        if (array_key_exists('TranWebName',$param) and $param['TranWebName'] !== null) {
+            $this->TranWebName = $param['TranWebName'];
         }
 
-        if (array_key_exists("MemberGlobalType",$param) and $param["MemberGlobalType"] !== null) {
-            $this->MemberGlobalType = $param["MemberGlobalType"];
+        if (array_key_exists('MemberGlobalType',$param) and $param['MemberGlobalType'] !== null) {
+            $this->MemberGlobalType = $param['MemberGlobalType'];
         }
 
-        if (array_key_exists("MemberGlobalId",$param) and $param["MemberGlobalId"] !== null) {
-            $this->MemberGlobalId = $param["MemberGlobalId"];
+        if (array_key_exists('MemberGlobalId',$param) and $param['MemberGlobalId'] !== null) {
+            $this->MemberGlobalId = $param['MemberGlobalId'];
         }
 
-        if (array_key_exists("TranNetMemberCode",$param) and $param["TranNetMemberCode"] !== null) {
-            $this->TranNetMemberCode = $param["TranNetMemberCode"];
+        if (array_key_exists('TranNetMemberCode',$param) and $param['TranNetMemberCode'] !== null) {
+            $this->TranNetMemberCode = $param['TranNetMemberCode'];
         }
 
-        if (array_key_exists("MemberName",$param) and $param["MemberName"] !== null) {
-            $this->MemberName = $param["MemberName"];
+        if (array_key_exists('MemberName',$param) and $param['MemberName'] !== null) {
+            $this->MemberName = $param['MemberName'];
         }
 
-        if (array_key_exists("TakeCashAcctNo",$param) and $param["TakeCashAcctNo"] !== null) {
-            $this->TakeCashAcctNo = $param["TakeCashAcctNo"];
+        if (array_key_exists('TakeCashAcctNo',$param) and $param['TakeCashAcctNo'] !== null) {
+            $this->TakeCashAcctNo = $param['TakeCashAcctNo'];
         }
 
-        if (array_key_exists("OutAmtAcctName",$param) and $param["OutAmtAcctName"] !== null) {
-            $this->OutAmtAcctName = $param["OutAmtAcctName"];
+        if (array_key_exists('OutAmtAcctName',$param) and $param['OutAmtAcctName'] !== null) {
+            $this->OutAmtAcctName = $param['OutAmtAcctName'];
         }
 
-        if (array_key_exists("Ccy",$param) and $param["Ccy"] !== null) {
-            $this->Ccy = $param["Ccy"];
+        if (array_key_exists('Ccy',$param) and $param['Ccy'] !== null) {
+            $this->Ccy = $param['Ccy'];
         }
 
-        if (array_key_exists("CashAmt",$param) and $param["CashAmt"] !== null) {
-            $this->CashAmt = $param["CashAmt"];
+        if (array_key_exists('CashAmt',$param) and $param['CashAmt'] !== null) {
+            $this->CashAmt = $param['CashAmt'];
         }
 
-        if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
-            $this->Remark = $param["Remark"];
+        if (array_key_exists('Remark',$param) and $param['Remark'] !== null) {
+            $this->Remark = $param['Remark'];
         }
 
-        if (array_key_exists("ReservedMsg",$param) and $param["ReservedMsg"] !== null) {
-            $this->ReservedMsg = $param["ReservedMsg"];
+        if (array_key_exists('ReservedMsg',$param) and $param['ReservedMsg'] !== null) {
+            $this->ReservedMsg = $param['ReservedMsg'];
         }
 
-        if (array_key_exists("WebSign",$param) and $param["WebSign"] !== null) {
-            $this->WebSign = $param["WebSign"];
+        if (array_key_exists('WebSign',$param) and $param['WebSign'] !== null) {
+            $this->WebSign = $param['WebSign'];
         }
 
-        if (array_key_exists("Profile",$param) and $param["Profile"] !== null) {
-            $this->Profile = $param["Profile"];
+        if (array_key_exists('Profile',$param) and $param['Profile'] !== null) {
+            $this->Profile = $param['Profile'];
         }
     }
 }

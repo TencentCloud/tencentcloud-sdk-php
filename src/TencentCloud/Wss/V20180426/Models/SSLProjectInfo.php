@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -110,28 +110,28 @@ class SSLProjectInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
-            $this->ProjectId = $param["ProjectId"];
+        if (array_key_exists('ProjectId',$param) and $param['ProjectId'] !== null) {
+            $this->ProjectId = $param['ProjectId'];
         }
 
-        if (array_key_exists("OwnerUin",$param) and $param["OwnerUin"] !== null) {
-            $this->OwnerUin = $param["OwnerUin"];
+        if (array_key_exists('OwnerUin',$param) and $param['OwnerUin'] !== null) {
+            $this->OwnerUin = $param['OwnerUin'];
         }
 
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("CreatorUin",$param) and $param["CreatorUin"] !== null) {
-            $this->CreatorUin = $param["CreatorUin"];
+        if (array_key_exists('CreatorUin',$param) and $param['CreatorUin'] !== null) {
+            $this->CreatorUin = $param['CreatorUin'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("Info",$param) and $param["Info"] !== null) {
-            $this->Info = $param["Info"];
+        if (array_key_exists('Info',$param) and $param['Info'] !== null) {
+            $this->Info = $param['Info'];
         }
     }
 }

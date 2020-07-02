@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -242,72 +242,72 @@ class ConfigReleaseLog extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ConfigReleaseLogId",$param) and $param["ConfigReleaseLogId"] !== null) {
-            $this->ConfigReleaseLogId = $param["ConfigReleaseLogId"];
+        if (array_key_exists('ConfigReleaseLogId',$param) and $param['ConfigReleaseLogId'] !== null) {
+            $this->ConfigReleaseLogId = $param['ConfigReleaseLogId'];
         }
 
-        if (array_key_exists("ConfigId",$param) and $param["ConfigId"] !== null) {
-            $this->ConfigId = $param["ConfigId"];
+        if (array_key_exists('ConfigId',$param) and $param['ConfigId'] !== null) {
+            $this->ConfigId = $param['ConfigId'];
         }
 
-        if (array_key_exists("ConfigName",$param) and $param["ConfigName"] !== null) {
-            $this->ConfigName = $param["ConfigName"];
+        if (array_key_exists('ConfigName',$param) and $param['ConfigName'] !== null) {
+            $this->ConfigName = $param['ConfigName'];
         }
 
-        if (array_key_exists("ConfigVersion",$param) and $param["ConfigVersion"] !== null) {
-            $this->ConfigVersion = $param["ConfigVersion"];
+        if (array_key_exists('ConfigVersion',$param) and $param['ConfigVersion'] !== null) {
+            $this->ConfigVersion = $param['ConfigVersion'];
         }
 
-        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
-            $this->GroupId = $param["GroupId"];
+        if (array_key_exists('GroupId',$param) and $param['GroupId'] !== null) {
+            $this->GroupId = $param['GroupId'];
         }
 
-        if (array_key_exists("GroupName",$param) and $param["GroupName"] !== null) {
-            $this->GroupName = $param["GroupName"];
+        if (array_key_exists('GroupName',$param) and $param['GroupName'] !== null) {
+            $this->GroupName = $param['GroupName'];
         }
 
-        if (array_key_exists("NamespaceId",$param) and $param["NamespaceId"] !== null) {
-            $this->NamespaceId = $param["NamespaceId"];
+        if (array_key_exists('NamespaceId',$param) and $param['NamespaceId'] !== null) {
+            $this->NamespaceId = $param['NamespaceId'];
         }
 
-        if (array_key_exists("NamespaceName",$param) and $param["NamespaceName"] !== null) {
-            $this->NamespaceName = $param["NamespaceName"];
+        if (array_key_exists('NamespaceName',$param) and $param['NamespaceName'] !== null) {
+            $this->NamespaceName = $param['NamespaceName'];
         }
 
-        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
-            $this->ClusterId = $param["ClusterId"];
+        if (array_key_exists('ClusterId',$param) and $param['ClusterId'] !== null) {
+            $this->ClusterId = $param['ClusterId'];
         }
 
-        if (array_key_exists("ClusterName",$param) and $param["ClusterName"] !== null) {
-            $this->ClusterName = $param["ClusterName"];
+        if (array_key_exists('ClusterName',$param) and $param['ClusterName'] !== null) {
+            $this->ClusterName = $param['ClusterName'];
         }
 
-        if (array_key_exists("ReleaseTime",$param) and $param["ReleaseTime"] !== null) {
-            $this->ReleaseTime = $param["ReleaseTime"];
+        if (array_key_exists('ReleaseTime',$param) and $param['ReleaseTime'] !== null) {
+            $this->ReleaseTime = $param['ReleaseTime'];
         }
 
-        if (array_key_exists("ReleaseDesc",$param) and $param["ReleaseDesc"] !== null) {
-            $this->ReleaseDesc = $param["ReleaseDesc"];
+        if (array_key_exists('ReleaseDesc',$param) and $param['ReleaseDesc'] !== null) {
+            $this->ReleaseDesc = $param['ReleaseDesc'];
         }
 
-        if (array_key_exists("ReleaseStatus",$param) and $param["ReleaseStatus"] !== null) {
-            $this->ReleaseStatus = $param["ReleaseStatus"];
+        if (array_key_exists('ReleaseStatus',$param) and $param['ReleaseStatus'] !== null) {
+            $this->ReleaseStatus = $param['ReleaseStatus'];
         }
 
-        if (array_key_exists("LastConfigId",$param) and $param["LastConfigId"] !== null) {
-            $this->LastConfigId = $param["LastConfigId"];
+        if (array_key_exists('LastConfigId',$param) and $param['LastConfigId'] !== null) {
+            $this->LastConfigId = $param['LastConfigId'];
         }
 
-        if (array_key_exists("LastConfigName",$param) and $param["LastConfigName"] !== null) {
-            $this->LastConfigName = $param["LastConfigName"];
+        if (array_key_exists('LastConfigName',$param) and $param['LastConfigName'] !== null) {
+            $this->LastConfigName = $param['LastConfigName'];
         }
 
-        if (array_key_exists("LastConfigVersion",$param) and $param["LastConfigVersion"] !== null) {
-            $this->LastConfigVersion = $param["LastConfigVersion"];
+        if (array_key_exists('LastConfigVersion',$param) and $param['LastConfigVersion'] !== null) {
+            $this->LastConfigVersion = $param['LastConfigVersion'];
         }
 
-        if (array_key_exists("RollbackFlag",$param) and $param["RollbackFlag"] !== null) {
-            $this->RollbackFlag = $param["RollbackFlag"];
+        if (array_key_exists('RollbackFlag',$param) and $param['RollbackFlag'] !== null) {
+            $this->RollbackFlag = $param['RollbackFlag'];
         }
     }
 }

@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -134,28 +134,28 @@ class FaceQualityCompleteness extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Eyebrow",$param) and $param["Eyebrow"] !== null) {
-            $this->Eyebrow = $param["Eyebrow"];
+        if (array_key_exists('Eyebrow',$param) and $param['Eyebrow'] !== null) {
+            $this->Eyebrow = $param['Eyebrow'];
         }
 
-        if (array_key_exists("Eye",$param) and $param["Eye"] !== null) {
-            $this->Eye = $param["Eye"];
+        if (array_key_exists('Eye',$param) and $param['Eye'] !== null) {
+            $this->Eye = $param['Eye'];
         }
 
-        if (array_key_exists("Nose",$param) and $param["Nose"] !== null) {
-            $this->Nose = $param["Nose"];
+        if (array_key_exists('Nose',$param) and $param['Nose'] !== null) {
+            $this->Nose = $param['Nose'];
         }
 
-        if (array_key_exists("Cheek",$param) and $param["Cheek"] !== null) {
-            $this->Cheek = $param["Cheek"];
+        if (array_key_exists('Cheek',$param) and $param['Cheek'] !== null) {
+            $this->Cheek = $param['Cheek'];
         }
 
-        if (array_key_exists("Mouth",$param) and $param["Mouth"] !== null) {
-            $this->Mouth = $param["Mouth"];
+        if (array_key_exists('Mouth',$param) and $param['Mouth'] !== null) {
+            $this->Mouth = $param['Mouth'];
         }
 
-        if (array_key_exists("Chin",$param) and $param["Chin"] !== null) {
-            $this->Chin = $param["Chin"];
+        if (array_key_exists('Chin',$param) and $param['Chin'] !== null) {
+            $this->Chin = $param['Chin'];
         }
     }
 }

@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -32,9 +32,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLinkStatus(string $LinkStatus) 设置链接状态取值：
 <li> Normal：正常 ；</li>
 <li>NotFound：链接目标不存在；</li> <li>Forbidden：无权限。</li>
- * @method LinkMaterialInfo getLinkMaterialInfo() 获取素材链接详细信息，当LinkType="MATERIAL"时有值。
+ * @method LinkMaterialInfo getLinkMaterialInfo() 获取素材链接详细信息，当LinkType='MATERIAL'时有值。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLinkMaterialInfo(LinkMaterialInfo $LinkMaterialInfo) 设置素材链接详细信息，当LinkType="MATERIAL"时有值。
+ * @method void setLinkMaterialInfo(LinkMaterialInfo $LinkMaterialInfo) 设置素材链接详细信息，当LinkType='MATERIAL'时有值。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method ClassInfo getLinkClassInfo() 获取分类链接目标信息，当LinkType=“CLASS”时有值。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -58,7 +58,7 @@ class LinkMaterial extends AbstractModel
     public $LinkStatus;
 
     /**
-     * @var LinkMaterialInfo 素材链接详细信息，当LinkType="MATERIAL"时有值。
+     * @var LinkMaterialInfo 素材链接详细信息，当LinkType='MATERIAL'时有值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LinkMaterialInfo;
@@ -76,7 +76,7 @@ class LinkMaterial extends AbstractModel
      * @param string $LinkStatus 链接状态取值：
 <li> Normal：正常 ；</li>
 <li>NotFound：链接目标不存在；</li> <li>Forbidden：无权限。</li>
-     * @param LinkMaterialInfo $LinkMaterialInfo 素材链接详细信息，当LinkType="MATERIAL"时有值。
+     * @param LinkMaterialInfo $LinkMaterialInfo 素材链接详细信息，当LinkType='MATERIAL'时有值。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ClassInfo $LinkClassInfo 分类链接目标信息，当LinkType=“CLASS”时有值。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -94,22 +94,22 @@ class LinkMaterial extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LinkType",$param) and $param["LinkType"] !== null) {
-            $this->LinkType = $param["LinkType"];
+        if (array_key_exists('LinkType',$param) and $param['LinkType'] !== null) {
+            $this->LinkType = $param['LinkType'];
         }
 
-        if (array_key_exists("LinkStatus",$param) and $param["LinkStatus"] !== null) {
-            $this->LinkStatus = $param["LinkStatus"];
+        if (array_key_exists('LinkStatus',$param) and $param['LinkStatus'] !== null) {
+            $this->LinkStatus = $param['LinkStatus'];
         }
 
-        if (array_key_exists("LinkMaterialInfo",$param) and $param["LinkMaterialInfo"] !== null) {
+        if (array_key_exists('LinkMaterialInfo',$param) and $param['LinkMaterialInfo'] !== null) {
             $this->LinkMaterialInfo = new LinkMaterialInfo();
-            $this->LinkMaterialInfo->deserialize($param["LinkMaterialInfo"]);
+            $this->LinkMaterialInfo->deserialize($param['LinkMaterialInfo']);
         }
 
-        if (array_key_exists("LinkClassInfo",$param) and $param["LinkClassInfo"] !== null) {
+        if (array_key_exists('LinkClassInfo',$param) and $param['LinkClassInfo'] !== null) {
             $this->LinkClassInfo = new ClassInfo();
-            $this->LinkClassInfo->deserialize($param["LinkClassInfo"]);
+            $this->LinkClassInfo->deserialize($param['LinkClassInfo']);
         }
     }
 }

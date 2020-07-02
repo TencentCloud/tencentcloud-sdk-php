@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePolicyGroupList请求参数结构体
  *
- * @method string getModule() 获取固定值，为"monitor"
- * @method void setModule(string $Module) 设置固定值，为"monitor"
+ * @method string getModule() 获取固定值，为'monitor'
+ * @method void setModule(string $Module) 设置固定值，为'monitor'
  * @method integer getLimit() 获取分页参数，每页返回的数量，取值1~100
  * @method void setLimit(integer $Limit) 设置分页参数，每页返回的数量，取值1~100
  * @method integer getOffset() 获取分页参数，页偏移量，从0开始计数
@@ -42,8 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReceivers(array $Receivers) 设置过滤条件, 接收组列表
  * @method array getReceiverUserList() 获取过滤条件, 接收人列表
  * @method void setReceiverUserList(array $ReceiverUserList) 设置过滤条件, 接收人列表
- * @method string getDimensions() 获取维度组合字段(json字符串), 例如[[{"name":"unInstanceId","value":"ins-6e4b2aaa"}]]
- * @method void setDimensions(string $Dimensions) 设置维度组合字段(json字符串), 例如[[{"name":"unInstanceId","value":"ins-6e4b2aaa"}]]
+ * @method string getDimensions() 获取维度组合字段(json字符串), 例如[[{'name':'unInstanceId','value':"ins-6e4b2aaa"}]]
+ * @method void setDimensions(string $Dimensions) 设置维度组合字段(json字符串), 例如[[{'name':'unInstanceId','value':"ins-6e4b2aaa"}]]
  * @method string getConditionTempGroupId() 获取模板策略组id, 多个id用逗号分隔
  * @method void setConditionTempGroupId(string $ConditionTempGroupId) 设置模板策略组id, 多个id用逗号分隔
  * @method string getReceiverType() 获取过滤条件, 接收人或者接收组, user表示接收人, group表示接收组
@@ -52,7 +52,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribePolicyGroupListRequest extends AbstractModel
 {
     /**
-     * @var string 固定值，为"monitor"
+     * @var string 固定值，为'monitor'
      */
     public $Module;
 
@@ -107,7 +107,7 @@ class DescribePolicyGroupListRequest extends AbstractModel
     public $ReceiverUserList;
 
     /**
-     * @var string 维度组合字段(json字符串), 例如[[{"name":"unInstanceId","value":"ins-6e4b2aaa"}]]
+     * @var string 维度组合字段(json字符串), 例如[[{'name':'unInstanceId','value':"ins-6e4b2aaa"}]]
      */
     public $Dimensions;
 
@@ -122,7 +122,7 @@ class DescribePolicyGroupListRequest extends AbstractModel
     public $ReceiverType;
 
     /**
-     * @param string $Module 固定值，为"monitor"
+     * @param string $Module 固定值，为'monitor'
      * @param integer $Limit 分页参数，每页返回的数量，取值1~100
      * @param integer $Offset 分页参数，页偏移量，从0开始计数
      * @param string $Like 按策略名搜索
@@ -133,7 +133,7 @@ class DescribePolicyGroupListRequest extends AbstractModel
      * @param integer $FilterUnuseReceiver 是否过滤无接收人策略组, 1表示过滤, 0表示不过滤
      * @param array $Receivers 过滤条件, 接收组列表
      * @param array $ReceiverUserList 过滤条件, 接收人列表
-     * @param string $Dimensions 维度组合字段(json字符串), 例如[[{"name":"unInstanceId","value":"ins-6e4b2aaa"}]]
+     * @param string $Dimensions 维度组合字段(json字符串), 例如[[{'name':'unInstanceId','value':"ins-6e4b2aaa"}]]
      * @param string $ConditionTempGroupId 模板策略组id, 多个id用逗号分隔
      * @param string $ReceiverType 过滤条件, 接收人或者接收组, user表示接收人, group表示接收组
      */
@@ -150,60 +150,60 @@ class DescribePolicyGroupListRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Module",$param) and $param["Module"] !== null) {
-            $this->Module = $param["Module"];
+        if (array_key_exists('Module',$param) and $param['Module'] !== null) {
+            $this->Module = $param['Module'];
         }
 
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
+        if (array_key_exists('Limit',$param) and $param['Limit'] !== null) {
+            $this->Limit = $param['Limit'];
         }
 
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
+        if (array_key_exists('Offset',$param) and $param['Offset'] !== null) {
+            $this->Offset = $param['Offset'];
         }
 
-        if (array_key_exists("Like",$param) and $param["Like"] !== null) {
-            $this->Like = $param["Like"];
+        if (array_key_exists('Like',$param) and $param['Like'] !== null) {
+            $this->Like = $param['Like'];
         }
 
-        if (array_key_exists("InstanceGroupId",$param) and $param["InstanceGroupId"] !== null) {
-            $this->InstanceGroupId = $param["InstanceGroupId"];
+        if (array_key_exists('InstanceGroupId',$param) and $param['InstanceGroupId'] !== null) {
+            $this->InstanceGroupId = $param['InstanceGroupId'];
         }
 
-        if (array_key_exists("UpdateTimeOrder",$param) and $param["UpdateTimeOrder"] !== null) {
-            $this->UpdateTimeOrder = $param["UpdateTimeOrder"];
+        if (array_key_exists('UpdateTimeOrder',$param) and $param['UpdateTimeOrder'] !== null) {
+            $this->UpdateTimeOrder = $param['UpdateTimeOrder'];
         }
 
-        if (array_key_exists("ProjectIds",$param) and $param["ProjectIds"] !== null) {
-            $this->ProjectIds = $param["ProjectIds"];
+        if (array_key_exists('ProjectIds',$param) and $param['ProjectIds'] !== null) {
+            $this->ProjectIds = $param['ProjectIds'];
         }
 
-        if (array_key_exists("ViewNames",$param) and $param["ViewNames"] !== null) {
-            $this->ViewNames = $param["ViewNames"];
+        if (array_key_exists('ViewNames',$param) and $param['ViewNames'] !== null) {
+            $this->ViewNames = $param['ViewNames'];
         }
 
-        if (array_key_exists("FilterUnuseReceiver",$param) and $param["FilterUnuseReceiver"] !== null) {
-            $this->FilterUnuseReceiver = $param["FilterUnuseReceiver"];
+        if (array_key_exists('FilterUnuseReceiver',$param) and $param['FilterUnuseReceiver'] !== null) {
+            $this->FilterUnuseReceiver = $param['FilterUnuseReceiver'];
         }
 
-        if (array_key_exists("Receivers",$param) and $param["Receivers"] !== null) {
-            $this->Receivers = $param["Receivers"];
+        if (array_key_exists('Receivers',$param) and $param['Receivers'] !== null) {
+            $this->Receivers = $param['Receivers'];
         }
 
-        if (array_key_exists("ReceiverUserList",$param) and $param["ReceiverUserList"] !== null) {
-            $this->ReceiverUserList = $param["ReceiverUserList"];
+        if (array_key_exists('ReceiverUserList',$param) and $param['ReceiverUserList'] !== null) {
+            $this->ReceiverUserList = $param['ReceiverUserList'];
         }
 
-        if (array_key_exists("Dimensions",$param) and $param["Dimensions"] !== null) {
-            $this->Dimensions = $param["Dimensions"];
+        if (array_key_exists('Dimensions',$param) and $param['Dimensions'] !== null) {
+            $this->Dimensions = $param['Dimensions'];
         }
 
-        if (array_key_exists("ConditionTempGroupId",$param) and $param["ConditionTempGroupId"] !== null) {
-            $this->ConditionTempGroupId = $param["ConditionTempGroupId"];
+        if (array_key_exists('ConditionTempGroupId',$param) and $param['ConditionTempGroupId'] !== null) {
+            $this->ConditionTempGroupId = $param['ConditionTempGroupId'];
         }
 
-        if (array_key_exists("ReceiverType",$param) and $param["ReceiverType"] !== null) {
-            $this->ReceiverType = $param["ReceiverType"];
+        if (array_key_exists('ReceiverType',$param) and $param['ReceiverType'] !== null) {
+            $this->ReceiverType = $param['ReceiverType'];
         }
     }
 }

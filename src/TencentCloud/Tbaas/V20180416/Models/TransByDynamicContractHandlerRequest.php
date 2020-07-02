@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -102,36 +102,36 @@ class TransByDynamicContractHandlerRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Module",$param) and $param["Module"] !== null) {
-            $this->Module = $param["Module"];
+        if (array_key_exists('Module',$param) and $param['Module'] !== null) {
+            $this->Module = $param['Module'];
         }
 
-        if (array_key_exists("Operation",$param) and $param["Operation"] !== null) {
-            $this->Operation = $param["Operation"];
+        if (array_key_exists('Operation',$param) and $param['Operation'] !== null) {
+            $this->Operation = $param['Operation'];
         }
 
-        if (array_key_exists("GroupPk",$param) and $param["GroupPk"] !== null) {
-            $this->GroupPk = $param["GroupPk"];
+        if (array_key_exists('GroupPk',$param) and $param['GroupPk'] !== null) {
+            $this->GroupPk = $param['GroupPk'];
         }
 
-        if (array_key_exists("ContractAddress",$param) and $param["ContractAddress"] !== null) {
-            $this->ContractAddress = $param["ContractAddress"];
+        if (array_key_exists('ContractAddress',$param) and $param['ContractAddress'] !== null) {
+            $this->ContractAddress = $param['ContractAddress'];
         }
 
-        if (array_key_exists("ContractName",$param) and $param["ContractName"] !== null) {
-            $this->ContractName = $param["ContractName"];
+        if (array_key_exists('ContractName',$param) and $param['ContractName'] !== null) {
+            $this->ContractName = $param['ContractName'];
         }
 
-        if (array_key_exists("AbiInfo",$param) and $param["AbiInfo"] !== null) {
-            $this->AbiInfo = $param["AbiInfo"];
+        if (array_key_exists('AbiInfo',$param) and $param['AbiInfo'] !== null) {
+            $this->AbiInfo = $param['AbiInfo'];
         }
 
-        if (array_key_exists("FuncName",$param) and $param["FuncName"] !== null) {
-            $this->FuncName = $param["FuncName"];
+        if (array_key_exists('FuncName',$param) and $param['FuncName'] !== null) {
+            $this->FuncName = $param['FuncName'];
         }
 
-        if (array_key_exists("FuncParam",$param) and $param["FuncParam"] !== null) {
-            $this->FuncParam = $param["FuncParam"];
+        if (array_key_exists('FuncParam',$param) and $param['FuncParam'] !== null) {
+            $this->FuncParam = $param['FuncParam'];
         }
     }
 }

@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -70,23 +70,23 @@ class DescribeShieldPlanInstanceResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BindInfo",$param) and $param["BindInfo"] !== null) {
+        if (array_key_exists('BindInfo',$param) and $param['BindInfo'] !== null) {
             $this->BindInfo = new BindInfo();
-            $this->BindInfo->deserialize($param["BindInfo"]);
+            $this->BindInfo->deserialize($param['BindInfo']);
         }
 
-        if (array_key_exists("ShieldPlanInfo",$param) and $param["ShieldPlanInfo"] !== null) {
+        if (array_key_exists('ShieldPlanInfo',$param) and $param['ShieldPlanInfo'] !== null) {
             $this->ShieldPlanInfo = new ShieldPlanInfo();
-            $this->ShieldPlanInfo->deserialize($param["ShieldPlanInfo"]);
+            $this->ShieldPlanInfo->deserialize($param['ShieldPlanInfo']);
         }
 
-        if (array_key_exists("ResourceServiceInfo",$param) and $param["ResourceServiceInfo"] !== null) {
+        if (array_key_exists('ResourceServiceInfo',$param) and $param['ResourceServiceInfo'] !== null) {
             $this->ResourceServiceInfo = new ResourceServiceInfo();
-            $this->ResourceServiceInfo->deserialize($param["ResourceServiceInfo"]);
+            $this->ResourceServiceInfo->deserialize($param['ResourceServiceInfo']);
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

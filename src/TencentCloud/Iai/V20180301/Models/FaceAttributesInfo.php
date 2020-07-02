@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -163,53 +163,53 @@ class FaceAttributesInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Gender",$param) and $param["Gender"] !== null) {
-            $this->Gender = $param["Gender"];
+        if (array_key_exists('Gender',$param) and $param['Gender'] !== null) {
+            $this->Gender = $param['Gender'];
         }
 
-        if (array_key_exists("Age",$param) and $param["Age"] !== null) {
-            $this->Age = $param["Age"];
+        if (array_key_exists('Age',$param) and $param['Age'] !== null) {
+            $this->Age = $param['Age'];
         }
 
-        if (array_key_exists("Expression",$param) and $param["Expression"] !== null) {
-            $this->Expression = $param["Expression"];
+        if (array_key_exists('Expression',$param) and $param['Expression'] !== null) {
+            $this->Expression = $param['Expression'];
         }
 
-        if (array_key_exists("Glass",$param) and $param["Glass"] !== null) {
-            $this->Glass = $param["Glass"];
+        if (array_key_exists('Glass',$param) and $param['Glass'] !== null) {
+            $this->Glass = $param['Glass'];
         }
 
-        if (array_key_exists("Pitch",$param) and $param["Pitch"] !== null) {
-            $this->Pitch = $param["Pitch"];
+        if (array_key_exists('Pitch',$param) and $param['Pitch'] !== null) {
+            $this->Pitch = $param['Pitch'];
         }
 
-        if (array_key_exists("Yaw",$param) and $param["Yaw"] !== null) {
-            $this->Yaw = $param["Yaw"];
+        if (array_key_exists('Yaw',$param) and $param['Yaw'] !== null) {
+            $this->Yaw = $param['Yaw'];
         }
 
-        if (array_key_exists("Roll",$param) and $param["Roll"] !== null) {
-            $this->Roll = $param["Roll"];
+        if (array_key_exists('Roll',$param) and $param['Roll'] !== null) {
+            $this->Roll = $param['Roll'];
         }
 
-        if (array_key_exists("Beauty",$param) and $param["Beauty"] !== null) {
-            $this->Beauty = $param["Beauty"];
+        if (array_key_exists('Beauty',$param) and $param['Beauty'] !== null) {
+            $this->Beauty = $param['Beauty'];
         }
 
-        if (array_key_exists("Hat",$param) and $param["Hat"] !== null) {
-            $this->Hat = $param["Hat"];
+        if (array_key_exists('Hat',$param) and $param['Hat'] !== null) {
+            $this->Hat = $param['Hat'];
         }
 
-        if (array_key_exists("Mask",$param) and $param["Mask"] !== null) {
-            $this->Mask = $param["Mask"];
+        if (array_key_exists('Mask',$param) and $param['Mask'] !== null) {
+            $this->Mask = $param['Mask'];
         }
 
-        if (array_key_exists("Hair",$param) and $param["Hair"] !== null) {
+        if (array_key_exists('Hair',$param) and $param['Hair'] !== null) {
             $this->Hair = new FaceHairAttributesInfo();
-            $this->Hair->deserialize($param["Hair"]);
+            $this->Hair->deserialize($param['Hair']);
         }
 
-        if (array_key_exists("EyeOpen",$param) and $param["EyeOpen"] !== null) {
-            $this->EyeOpen = $param["EyeOpen"];
+        if (array_key_exists('EyeOpen',$param) and $param['EyeOpen'] !== null) {
+            $this->EyeOpen = $param['EyeOpen'];
         }
     }
 }

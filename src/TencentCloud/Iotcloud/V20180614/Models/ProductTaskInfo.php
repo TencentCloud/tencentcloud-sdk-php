@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -154,52 +154,52 @@ class ProductTaskInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
-            $this->Id = $param["Id"];
+        if (array_key_exists('Id',$param) and $param['Id'] !== null) {
+            $this->Id = $param['Id'];
         }
 
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists('Type',$param) and $param['Type'] !== null) {
+            $this->Type = $param['Type'];
         }
 
-        if (array_key_exists("State",$param) and $param["State"] !== null) {
-            $this->State = $param["State"];
+        if (array_key_exists('State',$param) and $param['State'] !== null) {
+            $this->State = $param['State'];
         }
 
-        if (array_key_exists("ParametersType",$param) and $param["ParametersType"] !== null) {
-            $this->ParametersType = $param["ParametersType"];
+        if (array_key_exists('ParametersType',$param) and $param['ParametersType'] !== null) {
+            $this->ParametersType = $param['ParametersType'];
         }
 
-        if (array_key_exists("Parameters",$param) and $param["Parameters"] !== null) {
-            $this->Parameters = $param["Parameters"];
+        if (array_key_exists('Parameters',$param) and $param['Parameters'] !== null) {
+            $this->Parameters = $param['Parameters'];
         }
 
-        if (array_key_exists("ResultType",$param) and $param["ResultType"] !== null) {
-            $this->ResultType = $param["ResultType"];
+        if (array_key_exists('ResultType',$param) and $param['ResultType'] !== null) {
+            $this->ResultType = $param['ResultType'];
         }
 
-        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
-            $this->Result = $param["Result"];
+        if (array_key_exists('Result',$param) and $param['Result'] !== null) {
+            $this->Result = $param['Result'];
         }
 
-        if (array_key_exists("BatchCount",$param) and $param["BatchCount"] !== null) {
-            $this->BatchCount = $param["BatchCount"];
+        if (array_key_exists('BatchCount',$param) and $param['BatchCount'] !== null) {
+            $this->BatchCount = $param['BatchCount'];
         }
 
-        if (array_key_exists("BatchOffset",$param) and $param["BatchOffset"] !== null) {
-            $this->BatchOffset = $param["BatchOffset"];
+        if (array_key_exists('BatchOffset',$param) and $param['BatchOffset'] !== null) {
+            $this->BatchOffset = $param['BatchOffset'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
-            $this->UpdateTime = $param["UpdateTime"];
+        if (array_key_exists('UpdateTime',$param) and $param['UpdateTime'] !== null) {
+            $this->UpdateTime = $param['UpdateTime'];
         }
 
-        if (array_key_exists("CompleteTime",$param) and $param["CompleteTime"] !== null) {
-            $this->CompleteTime = $param["CompleteTime"];
+        if (array_key_exists('CompleteTime',$param) and $param['CompleteTime'] !== null) {
+            $this->CompleteTime = $param['CompleteTime'];
         }
     }
 }

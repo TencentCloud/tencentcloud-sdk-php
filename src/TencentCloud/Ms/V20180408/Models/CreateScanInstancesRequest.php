@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -54,18 +54,18 @@ class CreateScanInstancesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AppInfos",$param) and $param["AppInfos"] !== null) {
+        if (array_key_exists('AppInfos',$param) and $param['AppInfos'] !== null) {
             $this->AppInfos = [];
-            foreach ($param["AppInfos"] as $key => $value){
+            foreach ($param['AppInfos'] as $key => $value){
                 $obj = new AppInfo();
                 $obj->deserialize($value);
                 array_push($this->AppInfos, $obj);
             }
         }
 
-        if (array_key_exists("ScanInfo",$param) and $param["ScanInfo"] !== null) {
+        if (array_key_exists('ScanInfo',$param) and $param['ScanInfo'] !== null) {
             $this->ScanInfo = new ScanInfo();
-            $this->ScanInfo->deserialize($param["ScanInfo"]);
+            $this->ScanInfo->deserialize($param['ScanInfo']);
         }
     }
 }

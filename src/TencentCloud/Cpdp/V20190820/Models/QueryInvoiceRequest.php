@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -102,32 +102,32 @@ class QueryInvoiceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InvoicePlatformId",$param) and $param["InvoicePlatformId"] !== null) {
-            $this->InvoicePlatformId = $param["InvoicePlatformId"];
+        if (array_key_exists('InvoicePlatformId',$param) and $param['InvoicePlatformId'] !== null) {
+            $this->InvoicePlatformId = $param['InvoicePlatformId'];
         }
 
-        if (array_key_exists("OrderId",$param) and $param["OrderId"] !== null) {
-            $this->OrderId = $param["OrderId"];
+        if (array_key_exists('OrderId',$param) and $param['OrderId'] !== null) {
+            $this->OrderId = $param['OrderId'];
         }
 
-        if (array_key_exists("OrderSn",$param) and $param["OrderSn"] !== null) {
-            $this->OrderSn = $param["OrderSn"];
+        if (array_key_exists('OrderSn',$param) and $param['OrderSn'] !== null) {
+            $this->OrderSn = $param['OrderSn'];
         }
 
-        if (array_key_exists("IsRed",$param) and $param["IsRed"] !== null) {
-            $this->IsRed = $param["IsRed"];
+        if (array_key_exists('IsRed',$param) and $param['IsRed'] !== null) {
+            $this->IsRed = $param['IsRed'];
         }
 
-        if (array_key_exists("Profile",$param) and $param["Profile"] !== null) {
-            $this->Profile = $param["Profile"];
+        if (array_key_exists('Profile',$param) and $param['Profile'] !== null) {
+            $this->Profile = $param['Profile'];
         }
 
-        if (array_key_exists("InvoiceChannel",$param) and $param["InvoiceChannel"] !== null) {
-            $this->InvoiceChannel = $param["InvoiceChannel"];
+        if (array_key_exists('InvoiceChannel',$param) and $param['InvoiceChannel'] !== null) {
+            $this->InvoiceChannel = $param['InvoiceChannel'];
         }
 
-        if (array_key_exists("SellerTaxpayerNum",$param) and $param["SellerTaxpayerNum"] !== null) {
-            $this->SellerTaxpayerNum = $param["SellerTaxpayerNum"];
+        if (array_key_exists('SellerTaxpayerNum',$param) and $param['SellerTaxpayerNum'] !== null) {
+            $this->SellerTaxpayerNum = $param['SellerTaxpayerNum'];
         }
     }
 }

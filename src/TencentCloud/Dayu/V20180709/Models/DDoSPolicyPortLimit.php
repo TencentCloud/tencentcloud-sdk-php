@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -110,32 +110,32 @@ class DDoSPolicyPortLimit extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Protocol",$param) and $param["Protocol"] !== null) {
-            $this->Protocol = $param["Protocol"];
+        if (array_key_exists('Protocol',$param) and $param['Protocol'] !== null) {
+            $this->Protocol = $param['Protocol'];
         }
 
-        if (array_key_exists("DPortStart",$param) and $param["DPortStart"] !== null) {
-            $this->DPortStart = $param["DPortStart"];
+        if (array_key_exists('DPortStart',$param) and $param['DPortStart'] !== null) {
+            $this->DPortStart = $param['DPortStart'];
         }
 
-        if (array_key_exists("DPortEnd",$param) and $param["DPortEnd"] !== null) {
-            $this->DPortEnd = $param["DPortEnd"];
+        if (array_key_exists('DPortEnd',$param) and $param['DPortEnd'] !== null) {
+            $this->DPortEnd = $param['DPortEnd'];
         }
 
-        if (array_key_exists("SPortStart",$param) and $param["SPortStart"] !== null) {
-            $this->SPortStart = $param["SPortStart"];
+        if (array_key_exists('SPortStart',$param) and $param['SPortStart'] !== null) {
+            $this->SPortStart = $param['SPortStart'];
         }
 
-        if (array_key_exists("SPortEnd",$param) and $param["SPortEnd"] !== null) {
-            $this->SPortEnd = $param["SPortEnd"];
+        if (array_key_exists('SPortEnd',$param) and $param['SPortEnd'] !== null) {
+            $this->SPortEnd = $param['SPortEnd'];
         }
 
-        if (array_key_exists("Action",$param) and $param["Action"] !== null) {
-            $this->Action = $param["Action"];
+        if (array_key_exists('Action',$param) and $param['Action'] !== null) {
+            $this->Action = $param['Action'];
         }
 
-        if (array_key_exists("Kind",$param) and $param["Kind"] !== null) {
-            $this->Kind = $param["Kind"];
+        if (array_key_exists('Kind',$param) and $param['Kind'] !== null) {
+            $this->Kind = $param['Kind'];
         }
     }
 }

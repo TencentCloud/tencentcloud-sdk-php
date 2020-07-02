@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -74,16 +74,16 @@ class ServerlessDBAccount extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DBUser",$param) and $param["DBUser"] !== null) {
-            $this->DBUser = $param["DBUser"];
+        if (array_key_exists('DBUser',$param) and $param['DBUser'] !== null) {
+            $this->DBUser = $param['DBUser'];
         }
 
-        if (array_key_exists("DBPassword",$param) and $param["DBPassword"] !== null) {
-            $this->DBPassword = $param["DBPassword"];
+        if (array_key_exists('DBPassword',$param) and $param['DBPassword'] !== null) {
+            $this->DBPassword = $param['DBPassword'];
         }
 
-        if (array_key_exists("DBConnLimit",$param) and $param["DBConnLimit"] !== null) {
-            $this->DBConnLimit = $param["DBConnLimit"];
+        if (array_key_exists('DBConnLimit',$param) and $param['DBConnLimit'] !== null) {
+            $this->DBConnLimit = $param['DBConnLimit'];
         }
     }
 }

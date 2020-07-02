@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -102,36 +102,36 @@ class VulList extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("VulId",$param) and $param["VulId"] !== null) {
-            $this->VulId = $param["VulId"];
+        if (array_key_exists('VulId',$param) and $param['VulId'] !== null) {
+            $this->VulId = $param['VulId'];
         }
 
-        if (array_key_exists("VulName",$param) and $param["VulName"] !== null) {
-            $this->VulName = $param["VulName"];
+        if (array_key_exists('VulName',$param) and $param['VulName'] !== null) {
+            $this->VulName = $param['VulName'];
         }
 
-        if (array_key_exists("VulCode",$param) and $param["VulCode"] !== null) {
-            $this->VulCode = $param["VulCode"];
+        if (array_key_exists('VulCode',$param) and $param['VulCode'] !== null) {
+            $this->VulCode = $param['VulCode'];
         }
 
-        if (array_key_exists("VulDesc",$param) and $param["VulDesc"] !== null) {
-            $this->VulDesc = $param["VulDesc"];
+        if (array_key_exists('VulDesc',$param) and $param['VulDesc'] !== null) {
+            $this->VulDesc = $param['VulDesc'];
         }
 
-        if (array_key_exists("VulSolution",$param) and $param["VulSolution"] !== null) {
-            $this->VulSolution = $param["VulSolution"];
+        if (array_key_exists('VulSolution',$param) and $param['VulSolution'] !== null) {
+            $this->VulSolution = $param['VulSolution'];
         }
 
-        if (array_key_exists("VulSrcType",$param) and $param["VulSrcType"] !== null) {
-            $this->VulSrcType = $param["VulSrcType"];
+        if (array_key_exists('VulSrcType',$param) and $param['VulSrcType'] !== null) {
+            $this->VulSrcType = $param['VulSrcType'];
         }
 
-        if (array_key_exists("VulFilepath",$param) and $param["VulFilepath"] !== null) {
-            $this->VulFilepath = $param["VulFilepath"];
+        if (array_key_exists('VulFilepath',$param) and $param['VulFilepath'] !== null) {
+            $this->VulFilepath = $param['VulFilepath'];
         }
 
-        if (array_key_exists("RiskLevel",$param) and $param["RiskLevel"] !== null) {
-            $this->RiskLevel = $param["RiskLevel"];
+        if (array_key_exists('RiskLevel',$param) and $param['RiskLevel'] !== null) {
+            $this->RiskLevel = $param['RiskLevel'];
         }
     }
 }

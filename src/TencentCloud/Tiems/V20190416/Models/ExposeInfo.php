@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -114,32 +114,32 @@ class ExposeInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ExposeType",$param) and $param["ExposeType"] !== null) {
-            $this->ExposeType = $param["ExposeType"];
+        if (array_key_exists('ExposeType',$param) and $param['ExposeType'] !== null) {
+            $this->ExposeType = $param['ExposeType'];
         }
 
-        if (array_key_exists("Ip",$param) and $param["Ip"] !== null) {
-            $this->Ip = $param["Ip"];
+        if (array_key_exists('Ip',$param) and $param['Ip'] !== null) {
+            $this->Ip = $param['Ip'];
         }
 
-        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
-            $this->VpcId = $param["VpcId"];
+        if (array_key_exists('VpcId',$param) and $param['VpcId'] !== null) {
+            $this->VpcId = $param['VpcId'];
         }
 
-        if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
-            $this->SubnetId = $param["SubnetId"];
+        if (array_key_exists('SubnetId',$param) and $param['SubnetId'] !== null) {
+            $this->SubnetId = $param['SubnetId'];
         }
 
-        if (array_key_exists("GateWayServiceId",$param) and $param["GateWayServiceId"] !== null) {
-            $this->GateWayServiceId = $param["GateWayServiceId"];
+        if (array_key_exists('GateWayServiceId',$param) and $param['GateWayServiceId'] !== null) {
+            $this->GateWayServiceId = $param['GateWayServiceId'];
         }
 
-        if (array_key_exists("GateWayAPIId",$param) and $param["GateWayAPIId"] !== null) {
-            $this->GateWayAPIId = $param["GateWayAPIId"];
+        if (array_key_exists('GateWayAPIId',$param) and $param['GateWayAPIId'] !== null) {
+            $this->GateWayAPIId = $param['GateWayAPIId'];
         }
 
-        if (array_key_exists("GateWayDomain",$param) and $param["GateWayDomain"] !== null) {
-            $this->GateWayDomain = $param["GateWayDomain"];
+        if (array_key_exists('GateWayDomain',$param) and $param['GateWayDomain'] !== null) {
+            $this->GateWayDomain = $param['GateWayDomain'];
         }
     }
 }

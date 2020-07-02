@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -222,96 +222,96 @@ class RechargeByThirdPayRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RequestType",$param) and $param["RequestType"] !== null) {
-            $this->RequestType = $param["RequestType"];
+        if (array_key_exists('RequestType',$param) and $param['RequestType'] !== null) {
+            $this->RequestType = $param['RequestType'];
         }
 
-        if (array_key_exists("MerchantCode",$param) and $param["MerchantCode"] !== null) {
-            $this->MerchantCode = $param["MerchantCode"];
+        if (array_key_exists('MerchantCode',$param) and $param['MerchantCode'] !== null) {
+            $this->MerchantCode = $param['MerchantCode'];
         }
 
-        if (array_key_exists("PayChannel",$param) and $param["PayChannel"] !== null) {
-            $this->PayChannel = $param["PayChannel"];
+        if (array_key_exists('PayChannel',$param) and $param['PayChannel'] !== null) {
+            $this->PayChannel = $param['PayChannel'];
         }
 
-        if (array_key_exists("PayChannelSubId",$param) and $param["PayChannelSubId"] !== null) {
-            $this->PayChannelSubId = $param["PayChannelSubId"];
+        if (array_key_exists('PayChannelSubId',$param) and $param['PayChannelSubId'] !== null) {
+            $this->PayChannelSubId = $param['PayChannelSubId'];
         }
 
-        if (array_key_exists("OrderId",$param) and $param["OrderId"] !== null) {
-            $this->OrderId = $param["OrderId"];
+        if (array_key_exists('OrderId',$param) and $param['OrderId'] !== null) {
+            $this->OrderId = $param['OrderId'];
         }
 
-        if (array_key_exists("BankAccountNumber",$param) and $param["BankAccountNumber"] !== null) {
-            $this->BankAccountNumber = $param["BankAccountNumber"];
+        if (array_key_exists('BankAccountNumber',$param) and $param['BankAccountNumber'] !== null) {
+            $this->BankAccountNumber = $param['BankAccountNumber'];
         }
 
-        if (array_key_exists("PlatformShortNumber",$param) and $param["PlatformShortNumber"] !== null) {
-            $this->PlatformShortNumber = $param["PlatformShortNumber"];
+        if (array_key_exists('PlatformShortNumber',$param) and $param['PlatformShortNumber'] !== null) {
+            $this->PlatformShortNumber = $param['PlatformShortNumber'];
         }
 
-        if (array_key_exists("MidasSecretId",$param) and $param["MidasSecretId"] !== null) {
-            $this->MidasSecretId = $param["MidasSecretId"];
+        if (array_key_exists('MidasSecretId',$param) and $param['MidasSecretId'] !== null) {
+            $this->MidasSecretId = $param['MidasSecretId'];
         }
 
-        if (array_key_exists("MidasAppId",$param) and $param["MidasAppId"] !== null) {
-            $this->MidasAppId = $param["MidasAppId"];
+        if (array_key_exists('MidasAppId',$param) and $param['MidasAppId'] !== null) {
+            $this->MidasAppId = $param['MidasAppId'];
         }
 
-        if (array_key_exists("MidasSignature",$param) and $param["MidasSignature"] !== null) {
-            $this->MidasSignature = $param["MidasSignature"];
+        if (array_key_exists('MidasSignature',$param) and $param['MidasSignature'] !== null) {
+            $this->MidasSignature = $param['MidasSignature'];
         }
 
-        if (array_key_exists("TransSequenceNumber",$param) and $param["TransSequenceNumber"] !== null) {
-            $this->TransSequenceNumber = $param["TransSequenceNumber"];
+        if (array_key_exists('TransSequenceNumber',$param) and $param['TransSequenceNumber'] !== null) {
+            $this->TransSequenceNumber = $param['TransSequenceNumber'];
         }
 
-        if (array_key_exists("BankSubAccountNumber",$param) and $param["BankSubAccountNumber"] !== null) {
-            $this->BankSubAccountNumber = $param["BankSubAccountNumber"];
+        if (array_key_exists('BankSubAccountNumber',$param) and $param['BankSubAccountNumber'] !== null) {
+            $this->BankSubAccountNumber = $param['BankSubAccountNumber'];
         }
 
-        if (array_key_exists("TransFee",$param) and $param["TransFee"] !== null) {
-            $this->TransFee = $param["TransFee"];
+        if (array_key_exists('TransFee',$param) and $param['TransFee'] !== null) {
+            $this->TransFee = $param['TransFee'];
         }
 
-        if (array_key_exists("ThirdPayChannel",$param) and $param["ThirdPayChannel"] !== null) {
-            $this->ThirdPayChannel = $param["ThirdPayChannel"];
+        if (array_key_exists('ThirdPayChannel',$param) and $param['ThirdPayChannel'] !== null) {
+            $this->ThirdPayChannel = $param['ThirdPayChannel'];
         }
 
-        if (array_key_exists("ThirdPayChannelMerchantCode",$param) and $param["ThirdPayChannelMerchantCode"] !== null) {
-            $this->ThirdPayChannelMerchantCode = $param["ThirdPayChannelMerchantCode"];
+        if (array_key_exists('ThirdPayChannelMerchantCode',$param) and $param['ThirdPayChannelMerchantCode'] !== null) {
+            $this->ThirdPayChannelMerchantCode = $param['ThirdPayChannelMerchantCode'];
         }
 
-        if (array_key_exists("ThirdPayChannelOrderId",$param) and $param["ThirdPayChannelOrderId"] !== null) {
-            $this->ThirdPayChannelOrderId = $param["ThirdPayChannelOrderId"];
+        if (array_key_exists('ThirdPayChannelOrderId',$param) and $param['ThirdPayChannelOrderId'] !== null) {
+            $this->ThirdPayChannelOrderId = $param['ThirdPayChannelOrderId'];
         }
 
-        if (array_key_exists("CurrencyAmount",$param) and $param["CurrencyAmount"] !== null) {
-            $this->CurrencyAmount = $param["CurrencyAmount"];
+        if (array_key_exists('CurrencyAmount',$param) and $param['CurrencyAmount'] !== null) {
+            $this->CurrencyAmount = $param['CurrencyAmount'];
         }
 
-        if (array_key_exists("CurrencyUnit",$param) and $param["CurrencyUnit"] !== null) {
-            $this->CurrencyUnit = $param["CurrencyUnit"];
+        if (array_key_exists('CurrencyUnit',$param) and $param['CurrencyUnit'] !== null) {
+            $this->CurrencyUnit = $param['CurrencyUnit'];
         }
 
-        if (array_key_exists("CurrencyType",$param) and $param["CurrencyType"] !== null) {
-            $this->CurrencyType = $param["CurrencyType"];
+        if (array_key_exists('CurrencyType',$param) and $param['CurrencyType'] !== null) {
+            $this->CurrencyType = $param['CurrencyType'];
         }
 
-        if (array_key_exists("TransNetMemberCode",$param) and $param["TransNetMemberCode"] !== null) {
-            $this->TransNetMemberCode = $param["TransNetMemberCode"];
+        if (array_key_exists('TransNetMemberCode',$param) and $param['TransNetMemberCode'] !== null) {
+            $this->TransNetMemberCode = $param['TransNetMemberCode'];
         }
 
-        if (array_key_exists("MidasEnvironment",$param) and $param["MidasEnvironment"] !== null) {
-            $this->MidasEnvironment = $param["MidasEnvironment"];
+        if (array_key_exists('MidasEnvironment',$param) and $param['MidasEnvironment'] !== null) {
+            $this->MidasEnvironment = $param['MidasEnvironment'];
         }
 
-        if (array_key_exists("ReservedMessage",$param) and $param["ReservedMessage"] !== null) {
-            $this->ReservedMessage = $param["ReservedMessage"];
+        if (array_key_exists('ReservedMessage',$param) and $param['ReservedMessage'] !== null) {
+            $this->ReservedMessage = $param['ReservedMessage'];
         }
 
-        if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
-            $this->Remark = $param["Remark"];
+        if (array_key_exists('Remark',$param) and $param['Remark'] !== null) {
+            $this->Remark = $param['Remark'];
         }
     }
 }

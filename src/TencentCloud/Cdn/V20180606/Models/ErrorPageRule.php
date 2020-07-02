@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -74,16 +74,16 @@ class ErrorPageRule extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("StatusCode",$param) and $param["StatusCode"] !== null) {
-            $this->StatusCode = $param["StatusCode"];
+        if (array_key_exists('StatusCode',$param) and $param['StatusCode'] !== null) {
+            $this->StatusCode = $param['StatusCode'];
         }
 
-        if (array_key_exists("RedirectCode",$param) and $param["RedirectCode"] !== null) {
-            $this->RedirectCode = $param["RedirectCode"];
+        if (array_key_exists('RedirectCode',$param) and $param['RedirectCode'] !== null) {
+            $this->RedirectCode = $param['RedirectCode'];
         }
 
-        if (array_key_exists("RedirectUrl",$param) and $param["RedirectUrl"] !== null) {
-            $this->RedirectUrl = $param["RedirectUrl"];
+        if (array_key_exists('RedirectUrl',$param) and $param['RedirectUrl'] !== null) {
+            $this->RedirectUrl = $param['RedirectUrl'];
         }
     }
 }

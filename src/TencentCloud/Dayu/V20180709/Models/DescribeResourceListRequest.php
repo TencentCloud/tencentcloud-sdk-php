@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getBusiness() 获取大禹子产品代号（bgp表示独享包；bgp-multip表示共享包；bgpip表示高防IP；net表示高防IP专业版）
  * @method void setBusiness(string $Business) 设置大禹子产品代号（bgp表示独享包；bgp-multip表示共享包；bgpip表示高防IP；net表示高防IP专业版）
- * @method array getRegionList() 获取地域码搜索，可选，当不指定地域时空数组，当指定地域时，填地域码。例如：["gz", "sh"]
- * @method void setRegionList(array $RegionList) 设置地域码搜索，可选，当不指定地域时空数组，当指定地域时，填地域码。例如：["gz", "sh"]
+ * @method array getRegionList() 获取地域码搜索，可选，当不指定地域时空数组，当指定地域时，填地域码。例如：['gz', 'sh']
+ * @method void setRegionList(array $RegionList) 设置地域码搜索，可选，当不指定地域时空数组，当指定地域时，填地域码。例如：['gz', 'sh']
  * @method array getLine() 获取线路搜索，可选，只有当获取高防IP资源列表是可以选填，取值为[1（BGP线路），2（南京电信），3（南京联通），99（第三方合作线路）]，当获取其他产品时请填空数组；
  * @method void setLine(array $Line) 设置线路搜索，可选，只有当获取高防IP资源列表是可以选填，取值为[1（BGP线路），2（南京电信），3（南京联通），99（第三方合作线路）]，当获取其他产品时请填空数组；
  * @method array getIdList() 获取资源ID搜索，可选，当不为空数组时表示获取指定资源的资源列表；
@@ -55,7 +55,7 @@ class DescribeResourceListRequest extends AbstractModel
     public $Business;
 
     /**
-     * @var array 地域码搜索，可选，当不指定地域时空数组，当指定地域时，填地域码。例如：["gz", "sh"]
+     * @var array 地域码搜索，可选，当不指定地域时空数组，当指定地域时，填地域码。例如：['gz', 'sh']
      */
     public $RegionList;
 
@@ -116,7 +116,7 @@ class DescribeResourceListRequest extends AbstractModel
 
     /**
      * @param string $Business 大禹子产品代号（bgp表示独享包；bgp-multip表示共享包；bgpip表示高防IP；net表示高防IP专业版）
-     * @param array $RegionList 地域码搜索，可选，当不指定地域时空数组，当指定地域时，填地域码。例如：["gz", "sh"]
+     * @param array $RegionList 地域码搜索，可选，当不指定地域时空数组，当指定地域时，填地域码。例如：['gz', 'sh']
      * @param array $Line 线路搜索，可选，只有当获取高防IP资源列表是可以选填，取值为[1（BGP线路），2（南京电信），3（南京联通），99（第三方合作线路）]，当获取其他产品时请填空数组；
      * @param array $IdList 资源ID搜索，可选，当不为空数组时表示获取指定资源的资源列表；
      * @param string $Name 资源名称搜索，可选，当不为空字符串时表示按名称搜索资源；
@@ -142,61 +142,61 @@ class DescribeResourceListRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Business",$param) and $param["Business"] !== null) {
-            $this->Business = $param["Business"];
+        if (array_key_exists('Business',$param) and $param['Business'] !== null) {
+            $this->Business = $param['Business'];
         }
 
-        if (array_key_exists("RegionList",$param) and $param["RegionList"] !== null) {
-            $this->RegionList = $param["RegionList"];
+        if (array_key_exists('RegionList',$param) and $param['RegionList'] !== null) {
+            $this->RegionList = $param['RegionList'];
         }
 
-        if (array_key_exists("Line",$param) and $param["Line"] !== null) {
-            $this->Line = $param["Line"];
+        if (array_key_exists('Line',$param) and $param['Line'] !== null) {
+            $this->Line = $param['Line'];
         }
 
-        if (array_key_exists("IdList",$param) and $param["IdList"] !== null) {
-            $this->IdList = $param["IdList"];
+        if (array_key_exists('IdList',$param) and $param['IdList'] !== null) {
+            $this->IdList = $param['IdList'];
         }
 
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("IpList",$param) and $param["IpList"] !== null) {
-            $this->IpList = $param["IpList"];
+        if (array_key_exists('IpList',$param) and $param['IpList'] !== null) {
+            $this->IpList = $param['IpList'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("Expire",$param) and $param["Expire"] !== null) {
-            $this->Expire = $param["Expire"];
+        if (array_key_exists('Expire',$param) and $param['Expire'] !== null) {
+            $this->Expire = $param['Expire'];
         }
 
-        if (array_key_exists("OderBy",$param) and $param["OderBy"] !== null) {
+        if (array_key_exists('OderBy',$param) and $param['OderBy'] !== null) {
             $this->OderBy = [];
-            foreach ($param["OderBy"] as $key => $value){
+            foreach ($param['OderBy'] as $key => $value){
                 $obj = new OrderBy();
                 $obj->deserialize($value);
                 array_push($this->OderBy, $obj);
             }
         }
 
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
+        if (array_key_exists('Limit',$param) and $param['Limit'] !== null) {
+            $this->Limit = $param['Limit'];
         }
 
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
+        if (array_key_exists('Offset',$param) and $param['Offset'] !== null) {
+            $this->Offset = $param['Offset'];
         }
 
-        if (array_key_exists("CName",$param) and $param["CName"] !== null) {
-            $this->CName = $param["CName"];
+        if (array_key_exists('CName',$param) and $param['CName'] !== null) {
+            $this->CName = $param['CName'];
         }
 
-        if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
-            $this->Domain = $param["Domain"];
+        if (array_key_exists('Domain',$param) and $param['Domain'] !== null) {
+            $this->Domain = $param['Domain'];
         }
     }
 }

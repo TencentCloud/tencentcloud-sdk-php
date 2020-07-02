@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -62,16 +62,16 @@ class SetLoadBalancerClsLogRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LoadBalancerId",$param) and $param["LoadBalancerId"] !== null) {
-            $this->LoadBalancerId = $param["LoadBalancerId"];
+        if (array_key_exists('LoadBalancerId',$param) and $param['LoadBalancerId'] !== null) {
+            $this->LoadBalancerId = $param['LoadBalancerId'];
         }
 
-        if (array_key_exists("LogSetId",$param) and $param["LogSetId"] !== null) {
-            $this->LogSetId = $param["LogSetId"];
+        if (array_key_exists('LogSetId',$param) and $param['LogSetId'] !== null) {
+            $this->LogSetId = $param['LogSetId'];
         }
 
-        if (array_key_exists("LogTopicId",$param) and $param["LogTopicId"] !== null) {
-            $this->LogTopicId = $param["LogTopicId"];
+        if (array_key_exists('LogTopicId',$param) and $param['LogTopicId'] !== null) {
+            $this->LogTopicId = $param['LogTopicId'];
         }
     }
 }

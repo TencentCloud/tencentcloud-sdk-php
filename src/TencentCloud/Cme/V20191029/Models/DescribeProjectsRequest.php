@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -110,38 +110,38 @@ class DescribeProjectsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Platform",$param) and $param["Platform"] !== null) {
-            $this->Platform = $param["Platform"];
+        if (array_key_exists('Platform',$param) and $param['Platform'] !== null) {
+            $this->Platform = $param['Platform'];
         }
 
-        if (array_key_exists("ProjectIds",$param) and $param["ProjectIds"] !== null) {
-            $this->ProjectIds = $param["ProjectIds"];
+        if (array_key_exists('ProjectIds',$param) and $param['ProjectIds'] !== null) {
+            $this->ProjectIds = $param['ProjectIds'];
         }
 
-        if (array_key_exists("AspectRatioSet",$param) and $param["AspectRatioSet"] !== null) {
-            $this->AspectRatioSet = $param["AspectRatioSet"];
+        if (array_key_exists('AspectRatioSet',$param) and $param['AspectRatioSet'] !== null) {
+            $this->AspectRatioSet = $param['AspectRatioSet'];
         }
 
-        if (array_key_exists("CategorySet",$param) and $param["CategorySet"] !== null) {
-            $this->CategorySet = $param["CategorySet"];
+        if (array_key_exists('CategorySet',$param) and $param['CategorySet'] !== null) {
+            $this->CategorySet = $param['CategorySet'];
         }
 
-        if (array_key_exists("Sort",$param) and $param["Sort"] !== null) {
+        if (array_key_exists('Sort',$param) and $param['Sort'] !== null) {
             $this->Sort = new SortBy();
-            $this->Sort->deserialize($param["Sort"]);
+            $this->Sort->deserialize($param['Sort']);
         }
 
-        if (array_key_exists("Owner",$param) and $param["Owner"] !== null) {
+        if (array_key_exists('Owner',$param) and $param['Owner'] !== null) {
             $this->Owner = new Entity();
-            $this->Owner->deserialize($param["Owner"]);
+            $this->Owner->deserialize($param['Owner']);
         }
 
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
+        if (array_key_exists('Offset',$param) and $param['Offset'] !== null) {
+            $this->Offset = $param['Offset'];
         }
 
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
+        if (array_key_exists('Limit',$param) and $param['Limit'] !== null) {
+            $this->Limit = $param['Limit'];
         }
     }
 }

@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -134,34 +134,34 @@ AttributesType 不含 LowerBodyCloth 或检测超过 5 个人体时，此参数�
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Age",$param) and $param["Age"] !== null) {
+        if (array_key_exists('Age',$param) and $param['Age'] !== null) {
             $this->Age = new Age();
-            $this->Age->deserialize($param["Age"]);
+            $this->Age->deserialize($param['Age']);
         }
 
-        if (array_key_exists("Bag",$param) and $param["Bag"] !== null) {
+        if (array_key_exists('Bag',$param) and $param['Bag'] !== null) {
             $this->Bag = new Bag();
-            $this->Bag->deserialize($param["Bag"]);
+            $this->Bag->deserialize($param['Bag']);
         }
 
-        if (array_key_exists("Gender",$param) and $param["Gender"] !== null) {
+        if (array_key_exists('Gender',$param) and $param['Gender'] !== null) {
             $this->Gender = new Gender();
-            $this->Gender->deserialize($param["Gender"]);
+            $this->Gender->deserialize($param['Gender']);
         }
 
-        if (array_key_exists("Orientation",$param) and $param["Orientation"] !== null) {
+        if (array_key_exists('Orientation',$param) and $param['Orientation'] !== null) {
             $this->Orientation = new Orientation();
-            $this->Orientation->deserialize($param["Orientation"]);
+            $this->Orientation->deserialize($param['Orientation']);
         }
 
-        if (array_key_exists("UpperBodyCloth",$param) and $param["UpperBodyCloth"] !== null) {
+        if (array_key_exists('UpperBodyCloth',$param) and $param['UpperBodyCloth'] !== null) {
             $this->UpperBodyCloth = new UpperBodyCloth();
-            $this->UpperBodyCloth->deserialize($param["UpperBodyCloth"]);
+            $this->UpperBodyCloth->deserialize($param['UpperBodyCloth']);
         }
 
-        if (array_key_exists("LowerBodyCloth",$param) and $param["LowerBodyCloth"] !== null) {
+        if (array_key_exists('LowerBodyCloth',$param) and $param['LowerBodyCloth'] !== null) {
             $this->LowerBodyCloth = new LowerBodyCloth();
-            $this->LowerBodyCloth->deserialize($param["LowerBodyCloth"]);
+            $this->LowerBodyCloth->deserialize($param['LowerBodyCloth']);
         }
     }
 }

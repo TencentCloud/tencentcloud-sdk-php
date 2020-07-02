@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -190,64 +190,64 @@ WARN_DRIVER_LICENSE_PS_CARD ps告警
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("Sex",$param) and $param["Sex"] !== null) {
-            $this->Sex = $param["Sex"];
+        if (array_key_exists('Sex',$param) and $param['Sex'] !== null) {
+            $this->Sex = $param['Sex'];
         }
 
-        if (array_key_exists("Nationality",$param) and $param["Nationality"] !== null) {
-            $this->Nationality = $param["Nationality"];
+        if (array_key_exists('Nationality',$param) and $param['Nationality'] !== null) {
+            $this->Nationality = $param['Nationality'];
         }
 
-        if (array_key_exists("Address",$param) and $param["Address"] !== null) {
-            $this->Address = $param["Address"];
+        if (array_key_exists('Address',$param) and $param['Address'] !== null) {
+            $this->Address = $param['Address'];
         }
 
-        if (array_key_exists("DateOfBirth",$param) and $param["DateOfBirth"] !== null) {
-            $this->DateOfBirth = $param["DateOfBirth"];
+        if (array_key_exists('DateOfBirth',$param) and $param['DateOfBirth'] !== null) {
+            $this->DateOfBirth = $param['DateOfBirth'];
         }
 
-        if (array_key_exists("DateOfFirstIssue",$param) and $param["DateOfFirstIssue"] !== null) {
-            $this->DateOfFirstIssue = $param["DateOfFirstIssue"];
+        if (array_key_exists('DateOfFirstIssue',$param) and $param['DateOfFirstIssue'] !== null) {
+            $this->DateOfFirstIssue = $param['DateOfFirstIssue'];
         }
 
-        if (array_key_exists("Class",$param) and $param["Class"] !== null) {
-            $this->Class = $param["Class"];
+        if (array_key_exists('Class',$param) and $param['Class'] !== null) {
+            $this->Class = $param['Class'];
         }
 
-        if (array_key_exists("StartDate",$param) and $param["StartDate"] !== null) {
-            $this->StartDate = $param["StartDate"];
+        if (array_key_exists('StartDate',$param) and $param['StartDate'] !== null) {
+            $this->StartDate = $param['StartDate'];
         }
 
-        if (array_key_exists("EndDate",$param) and $param["EndDate"] !== null) {
-            $this->EndDate = $param["EndDate"];
+        if (array_key_exists('EndDate',$param) and $param['EndDate'] !== null) {
+            $this->EndDate = $param['EndDate'];
         }
 
-        if (array_key_exists("CardCode",$param) and $param["CardCode"] !== null) {
-            $this->CardCode = $param["CardCode"];
+        if (array_key_exists('CardCode',$param) and $param['CardCode'] !== null) {
+            $this->CardCode = $param['CardCode'];
         }
 
-        if (array_key_exists("ArchivesCode",$param) and $param["ArchivesCode"] !== null) {
-            $this->ArchivesCode = $param["ArchivesCode"];
+        if (array_key_exists('ArchivesCode',$param) and $param['ArchivesCode'] !== null) {
+            $this->ArchivesCode = $param['ArchivesCode'];
         }
 
-        if (array_key_exists("Record",$param) and $param["Record"] !== null) {
-            $this->Record = $param["Record"];
+        if (array_key_exists('Record',$param) and $param['Record'] !== null) {
+            $this->Record = $param['Record'];
         }
 
-        if (array_key_exists("RecognizeWarnCode",$param) and $param["RecognizeWarnCode"] !== null) {
-            $this->RecognizeWarnCode = $param["RecognizeWarnCode"];
+        if (array_key_exists('RecognizeWarnCode',$param) and $param['RecognizeWarnCode'] !== null) {
+            $this->RecognizeWarnCode = $param['RecognizeWarnCode'];
         }
 
-        if (array_key_exists("RecognizeWarnMsg",$param) and $param["RecognizeWarnMsg"] !== null) {
-            $this->RecognizeWarnMsg = $param["RecognizeWarnMsg"];
+        if (array_key_exists('RecognizeWarnMsg',$param) and $param['RecognizeWarnMsg'] !== null) {
+            $this->RecognizeWarnMsg = $param['RecognizeWarnMsg'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

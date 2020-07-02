@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -78,16 +78,16 @@ BANDWIDTH_PACKAGE 按带宽包计费（当前，只有指定运营商时才支�
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InternetChargeType",$param) and $param["InternetChargeType"] !== null) {
-            $this->InternetChargeType = $param["InternetChargeType"];
+        if (array_key_exists('InternetChargeType',$param) and $param['InternetChargeType'] !== null) {
+            $this->InternetChargeType = $param['InternetChargeType'];
         }
 
-        if (array_key_exists("InternetMaxBandwidthOut",$param) and $param["InternetMaxBandwidthOut"] !== null) {
-            $this->InternetMaxBandwidthOut = $param["InternetMaxBandwidthOut"];
+        if (array_key_exists('InternetMaxBandwidthOut',$param) and $param['InternetMaxBandwidthOut'] !== null) {
+            $this->InternetMaxBandwidthOut = $param['InternetMaxBandwidthOut'];
         }
 
-        if (array_key_exists("BandwidthpkgSubType",$param) and $param["BandwidthpkgSubType"] !== null) {
-            $this->BandwidthpkgSubType = $param["BandwidthpkgSubType"];
+        if (array_key_exists('BandwidthpkgSubType',$param) and $param['BandwidthpkgSubType'] !== null) {
+            $this->BandwidthpkgSubType = $param['BandwidthpkgSubType'];
         }
     }
 }

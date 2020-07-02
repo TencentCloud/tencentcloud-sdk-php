@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -62,21 +62,21 @@ class AttachCcnInstancesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CcnId",$param) and $param["CcnId"] !== null) {
-            $this->CcnId = $param["CcnId"];
+        if (array_key_exists('CcnId',$param) and $param['CcnId'] !== null) {
+            $this->CcnId = $param['CcnId'];
         }
 
-        if (array_key_exists("Instances",$param) and $param["Instances"] !== null) {
+        if (array_key_exists('Instances',$param) and $param['Instances'] !== null) {
             $this->Instances = [];
-            foreach ($param["Instances"] as $key => $value){
+            foreach ($param['Instances'] as $key => $value){
                 $obj = new CcnInstance();
                 $obj->deserialize($value);
                 array_push($this->Instances, $obj);
             }
         }
 
-        if (array_key_exists("CcnUin",$param) and $param["CcnUin"] !== null) {
-            $this->CcnUin = $param["CcnUin"];
+        if (array_key_exists('CcnUin',$param) and $param['CcnUin'] !== null) {
+            $this->CcnUin = $param['CcnUin'];
         }
     }
 }

@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -198,60 +198,60 @@ class DeviceInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DeviceName",$param) and $param["DeviceName"] !== null) {
-            $this->DeviceName = $param["DeviceName"];
+        if (array_key_exists('DeviceName',$param) and $param['DeviceName'] !== null) {
+            $this->DeviceName = $param['DeviceName'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("DevicePsk",$param) and $param["DevicePsk"] !== null) {
-            $this->DevicePsk = $param["DevicePsk"];
+        if (array_key_exists('DevicePsk',$param) and $param['DevicePsk'] !== null) {
+            $this->DevicePsk = $param['DevicePsk'];
         }
 
-        if (array_key_exists("FirstOnlineTime",$param) and $param["FirstOnlineTime"] !== null) {
-            $this->FirstOnlineTime = $param["FirstOnlineTime"];
+        if (array_key_exists('FirstOnlineTime',$param) and $param['FirstOnlineTime'] !== null) {
+            $this->FirstOnlineTime = $param['FirstOnlineTime'];
         }
 
-        if (array_key_exists("LoginTime",$param) and $param["LoginTime"] !== null) {
-            $this->LoginTime = $param["LoginTime"];
+        if (array_key_exists('LoginTime',$param) and $param['LoginTime'] !== null) {
+            $this->LoginTime = $param['LoginTime'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("Version",$param) and $param["Version"] !== null) {
-            $this->Version = $param["Version"];
+        if (array_key_exists('Version',$param) and $param['Version'] !== null) {
+            $this->Version = $param['Version'];
         }
 
-        if (array_key_exists("DeviceCert",$param) and $param["DeviceCert"] !== null) {
-            $this->DeviceCert = $param["DeviceCert"];
+        if (array_key_exists('DeviceCert',$param) and $param['DeviceCert'] !== null) {
+            $this->DeviceCert = $param['DeviceCert'];
         }
 
-        if (array_key_exists("LogLevel",$param) and $param["LogLevel"] !== null) {
-            $this->LogLevel = $param["LogLevel"];
+        if (array_key_exists('LogLevel',$param) and $param['LogLevel'] !== null) {
+            $this->LogLevel = $param['LogLevel'];
         }
 
-        if (array_key_exists("DevAddr",$param) and $param["DevAddr"] !== null) {
-            $this->DevAddr = $param["DevAddr"];
+        if (array_key_exists('DevAddr',$param) and $param['DevAddr'] !== null) {
+            $this->DevAddr = $param['DevAddr'];
         }
 
-        if (array_key_exists("AppKey",$param) and $param["AppKey"] !== null) {
-            $this->AppKey = $param["AppKey"];
+        if (array_key_exists('AppKey',$param) and $param['AppKey'] !== null) {
+            $this->AppKey = $param['AppKey'];
         }
 
-        if (array_key_exists("DevEUI",$param) and $param["DevEUI"] !== null) {
-            $this->DevEUI = $param["DevEUI"];
+        if (array_key_exists('DevEUI',$param) and $param['DevEUI'] !== null) {
+            $this->DevEUI = $param['DevEUI'];
         }
 
-        if (array_key_exists("AppSKey",$param) and $param["AppSKey"] !== null) {
-            $this->AppSKey = $param["AppSKey"];
+        if (array_key_exists('AppSKey',$param) and $param['AppSKey'] !== null) {
+            $this->AppSKey = $param['AppSKey'];
         }
 
-        if (array_key_exists("NwkSKey",$param) and $param["NwkSKey"] !== null) {
-            $this->NwkSKey = $param["NwkSKey"];
+        if (array_key_exists('NwkSKey',$param) and $param['NwkSKey'] !== null) {
+            $this->NwkSKey = $param['NwkSKey'];
         }
     }
 }

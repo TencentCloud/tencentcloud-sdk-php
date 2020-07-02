@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -70,20 +70,20 @@ class HostedDeviceOutBandInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("OutBandIp",$param) and $param["OutBandIp"] !== null) {
-            $this->OutBandIp = $param["OutBandIp"];
+        if (array_key_exists('OutBandIp',$param) and $param['OutBandIp'] !== null) {
+            $this->OutBandIp = $param['OutBandIp'];
         }
 
-        if (array_key_exists("VpnIp",$param) and $param["VpnIp"] !== null) {
-            $this->VpnIp = $param["VpnIp"];
+        if (array_key_exists('VpnIp',$param) and $param['VpnIp'] !== null) {
+            $this->VpnIp = $param['VpnIp'];
         }
 
-        if (array_key_exists("VpnPort",$param) and $param["VpnPort"] !== null) {
-            $this->VpnPort = $param["VpnPort"];
+        if (array_key_exists('VpnPort',$param) and $param['VpnPort'] !== null) {
+            $this->VpnPort = $param['VpnPort'];
         }
     }
 }

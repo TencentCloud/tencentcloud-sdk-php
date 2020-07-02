@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -142,56 +142,56 @@ class UpdateAuditRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AuditName",$param) and $param["AuditName"] !== null) {
-            $this->AuditName = $param["AuditName"];
+        if (array_key_exists('AuditName',$param) and $param['AuditName'] !== null) {
+            $this->AuditName = $param['AuditName'];
         }
 
-        if (array_key_exists("CmqQueueName",$param) and $param["CmqQueueName"] !== null) {
-            $this->CmqQueueName = $param["CmqQueueName"];
+        if (array_key_exists('CmqQueueName',$param) and $param['CmqQueueName'] !== null) {
+            $this->CmqQueueName = $param['CmqQueueName'];
         }
 
-        if (array_key_exists("CmqRegion",$param) and $param["CmqRegion"] !== null) {
-            $this->CmqRegion = $param["CmqRegion"];
+        if (array_key_exists('CmqRegion',$param) and $param['CmqRegion'] !== null) {
+            $this->CmqRegion = $param['CmqRegion'];
         }
 
-        if (array_key_exists("CosBucketName",$param) and $param["CosBucketName"] !== null) {
-            $this->CosBucketName = $param["CosBucketName"];
+        if (array_key_exists('CosBucketName',$param) and $param['CosBucketName'] !== null) {
+            $this->CosBucketName = $param['CosBucketName'];
         }
 
-        if (array_key_exists("CosRegion",$param) and $param["CosRegion"] !== null) {
-            $this->CosRegion = $param["CosRegion"];
+        if (array_key_exists('CosRegion',$param) and $param['CosRegion'] !== null) {
+            $this->CosRegion = $param['CosRegion'];
         }
 
-        if (array_key_exists("IsCreateNewBucket",$param) and $param["IsCreateNewBucket"] !== null) {
-            $this->IsCreateNewBucket = $param["IsCreateNewBucket"];
+        if (array_key_exists('IsCreateNewBucket',$param) and $param['IsCreateNewBucket'] !== null) {
+            $this->IsCreateNewBucket = $param['IsCreateNewBucket'];
         }
 
-        if (array_key_exists("IsCreateNewQueue",$param) and $param["IsCreateNewQueue"] !== null) {
-            $this->IsCreateNewQueue = $param["IsCreateNewQueue"];
+        if (array_key_exists('IsCreateNewQueue',$param) and $param['IsCreateNewQueue'] !== null) {
+            $this->IsCreateNewQueue = $param['IsCreateNewQueue'];
         }
 
-        if (array_key_exists("IsEnableCmqNotify",$param) and $param["IsEnableCmqNotify"] !== null) {
-            $this->IsEnableCmqNotify = $param["IsEnableCmqNotify"];
+        if (array_key_exists('IsEnableCmqNotify',$param) and $param['IsEnableCmqNotify'] !== null) {
+            $this->IsEnableCmqNotify = $param['IsEnableCmqNotify'];
         }
 
-        if (array_key_exists("IsEnableKmsEncry",$param) and $param["IsEnableKmsEncry"] !== null) {
-            $this->IsEnableKmsEncry = $param["IsEnableKmsEncry"];
+        if (array_key_exists('IsEnableKmsEncry',$param) and $param['IsEnableKmsEncry'] !== null) {
+            $this->IsEnableKmsEncry = $param['IsEnableKmsEncry'];
         }
 
-        if (array_key_exists("KeyId",$param) and $param["KeyId"] !== null) {
-            $this->KeyId = $param["KeyId"];
+        if (array_key_exists('KeyId',$param) and $param['KeyId'] !== null) {
+            $this->KeyId = $param['KeyId'];
         }
 
-        if (array_key_exists("KmsRegion",$param) and $param["KmsRegion"] !== null) {
-            $this->KmsRegion = $param["KmsRegion"];
+        if (array_key_exists('KmsRegion',$param) and $param['KmsRegion'] !== null) {
+            $this->KmsRegion = $param['KmsRegion'];
         }
 
-        if (array_key_exists("LogFilePrefix",$param) and $param["LogFilePrefix"] !== null) {
-            $this->LogFilePrefix = $param["LogFilePrefix"];
+        if (array_key_exists('LogFilePrefix',$param) and $param['LogFilePrefix'] !== null) {
+            $this->LogFilePrefix = $param['LogFilePrefix'];
         }
 
-        if (array_key_exists("ReadWriteAttribute",$param) and $param["ReadWriteAttribute"] !== null) {
-            $this->ReadWriteAttribute = $param["ReadWriteAttribute"];
+        if (array_key_exists('ReadWriteAttribute',$param) and $param['ReadWriteAttribute'] !== null) {
+            $this->ReadWriteAttribute = $param['ReadWriteAttribute'];
         }
     }
 }

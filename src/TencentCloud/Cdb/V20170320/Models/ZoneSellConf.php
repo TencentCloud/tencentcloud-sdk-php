@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -170,74 +170,74 @@ class ZoneSellConf extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("ZoneName",$param) and $param["ZoneName"] !== null) {
-            $this->ZoneName = $param["ZoneName"];
+        if (array_key_exists('ZoneName',$param) and $param['ZoneName'] !== null) {
+            $this->ZoneName = $param['ZoneName'];
         }
 
-        if (array_key_exists("IsCustom",$param) and $param["IsCustom"] !== null) {
-            $this->IsCustom = $param["IsCustom"];
+        if (array_key_exists('IsCustom',$param) and $param['IsCustom'] !== null) {
+            $this->IsCustom = $param['IsCustom'];
         }
 
-        if (array_key_exists("IsSupportDr",$param) and $param["IsSupportDr"] !== null) {
-            $this->IsSupportDr = $param["IsSupportDr"];
+        if (array_key_exists('IsSupportDr',$param) and $param['IsSupportDr'] !== null) {
+            $this->IsSupportDr = $param['IsSupportDr'];
         }
 
-        if (array_key_exists("IsSupportVpc",$param) and $param["IsSupportVpc"] !== null) {
-            $this->IsSupportVpc = $param["IsSupportVpc"];
+        if (array_key_exists('IsSupportVpc',$param) and $param['IsSupportVpc'] !== null) {
+            $this->IsSupportVpc = $param['IsSupportVpc'];
         }
 
-        if (array_key_exists("HourInstanceSaleMaxNum",$param) and $param["HourInstanceSaleMaxNum"] !== null) {
-            $this->HourInstanceSaleMaxNum = $param["HourInstanceSaleMaxNum"];
+        if (array_key_exists('HourInstanceSaleMaxNum',$param) and $param['HourInstanceSaleMaxNum'] !== null) {
+            $this->HourInstanceSaleMaxNum = $param['HourInstanceSaleMaxNum'];
         }
 
-        if (array_key_exists("IsDefaultZone",$param) and $param["IsDefaultZone"] !== null) {
-            $this->IsDefaultZone = $param["IsDefaultZone"];
+        if (array_key_exists('IsDefaultZone',$param) and $param['IsDefaultZone'] !== null) {
+            $this->IsDefaultZone = $param['IsDefaultZone'];
         }
 
-        if (array_key_exists("IsBm",$param) and $param["IsBm"] !== null) {
-            $this->IsBm = $param["IsBm"];
+        if (array_key_exists('IsBm',$param) and $param['IsBm'] !== null) {
+            $this->IsBm = $param['IsBm'];
         }
 
-        if (array_key_exists("PayType",$param) and $param["PayType"] !== null) {
-            $this->PayType = $param["PayType"];
+        if (array_key_exists('PayType',$param) and $param['PayType'] !== null) {
+            $this->PayType = $param['PayType'];
         }
 
-        if (array_key_exists("ProtectMode",$param) and $param["ProtectMode"] !== null) {
-            $this->ProtectMode = $param["ProtectMode"];
+        if (array_key_exists('ProtectMode',$param) and $param['ProtectMode'] !== null) {
+            $this->ProtectMode = $param['ProtectMode'];
         }
 
-        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
-            $this->Zone = $param["Zone"];
+        if (array_key_exists('Zone',$param) and $param['Zone'] !== null) {
+            $this->Zone = $param['Zone'];
         }
 
-        if (array_key_exists("SellType",$param) and $param["SellType"] !== null) {
+        if (array_key_exists('SellType',$param) and $param['SellType'] !== null) {
             $this->SellType = [];
-            foreach ($param["SellType"] as $key => $value){
+            foreach ($param['SellType'] as $key => $value){
                 $obj = new SellType();
                 $obj->deserialize($value);
                 array_push($this->SellType, $obj);
             }
         }
 
-        if (array_key_exists("ZoneConf",$param) and $param["ZoneConf"] !== null) {
+        if (array_key_exists('ZoneConf',$param) and $param['ZoneConf'] !== null) {
             $this->ZoneConf = new ZoneConf();
-            $this->ZoneConf->deserialize($param["ZoneConf"]);
+            $this->ZoneConf->deserialize($param['ZoneConf']);
         }
 
-        if (array_key_exists("DrZone",$param) and $param["DrZone"] !== null) {
-            $this->DrZone = $param["DrZone"];
+        if (array_key_exists('DrZone',$param) and $param['DrZone'] !== null) {
+            $this->DrZone = $param['DrZone'];
         }
 
-        if (array_key_exists("IsSupportRemoteRo",$param) and $param["IsSupportRemoteRo"] !== null) {
-            $this->IsSupportRemoteRo = $param["IsSupportRemoteRo"];
+        if (array_key_exists('IsSupportRemoteRo',$param) and $param['IsSupportRemoteRo'] !== null) {
+            $this->IsSupportRemoteRo = $param['IsSupportRemoteRo'];
         }
 
-        if (array_key_exists("RemoteRoZone",$param) and $param["RemoteRoZone"] !== null) {
-            $this->RemoteRoZone = $param["RemoteRoZone"];
+        if (array_key_exists('RemoteRoZone',$param) and $param['RemoteRoZone'] !== null) {
+            $this->RemoteRoZone = $param['RemoteRoZone'];
         }
     }
 }

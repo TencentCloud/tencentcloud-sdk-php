@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -88,28 +88,28 @@ class AttributesOptions extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Age",$param) and $param["Age"] !== null) {
-            $this->Age = $param["Age"];
+        if (array_key_exists('Age',$param) and $param['Age'] !== null) {
+            $this->Age = $param['Age'];
         }
 
-        if (array_key_exists("Bag",$param) and $param["Bag"] !== null) {
-            $this->Bag = $param["Bag"];
+        if (array_key_exists('Bag',$param) and $param['Bag'] !== null) {
+            $this->Bag = $param['Bag'];
         }
 
-        if (array_key_exists("Gender",$param) and $param["Gender"] !== null) {
-            $this->Gender = $param["Gender"];
+        if (array_key_exists('Gender',$param) and $param['Gender'] !== null) {
+            $this->Gender = $param['Gender'];
         }
 
-        if (array_key_exists("Orientation",$param) and $param["Orientation"] !== null) {
-            $this->Orientation = $param["Orientation"];
+        if (array_key_exists('Orientation',$param) and $param['Orientation'] !== null) {
+            $this->Orientation = $param['Orientation'];
         }
 
-        if (array_key_exists("UpperBodyCloth",$param) and $param["UpperBodyCloth"] !== null) {
-            $this->UpperBodyCloth = $param["UpperBodyCloth"];
+        if (array_key_exists('UpperBodyCloth',$param) and $param['UpperBodyCloth'] !== null) {
+            $this->UpperBodyCloth = $param['UpperBodyCloth'];
         }
 
-        if (array_key_exists("LowerBodyCloth",$param) and $param["LowerBodyCloth"] !== null) {
-            $this->LowerBodyCloth = $param["LowerBodyCloth"];
+        if (array_key_exists('LowerBodyCloth',$param) and $param['LowerBodyCloth'] !== null) {
+            $this->LowerBodyCloth = $param['LowerBodyCloth'];
         }
     }
 }

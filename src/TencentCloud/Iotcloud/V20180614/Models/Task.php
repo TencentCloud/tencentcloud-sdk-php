@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -54,14 +54,14 @@ class Task extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("UpdateShadowTask",$param) and $param["UpdateShadowTask"] !== null) {
+        if (array_key_exists('UpdateShadowTask',$param) and $param['UpdateShadowTask'] !== null) {
             $this->UpdateShadowTask = new BatchUpdateShadow();
-            $this->UpdateShadowTask->deserialize($param["UpdateShadowTask"]);
+            $this->UpdateShadowTask->deserialize($param['UpdateShadowTask']);
         }
 
-        if (array_key_exists("PublishMessageTask",$param) and $param["PublishMessageTask"] !== null) {
+        if (array_key_exists('PublishMessageTask',$param) and $param['PublishMessageTask'] !== null) {
             $this->PublishMessageTask = new BatchPublishMessage();
-            $this->PublishMessageTask->deserialize($param["PublishMessageTask"]);
+            $this->PublishMessageTask->deserialize($param['PublishMessageTask']);
         }
     }
 }

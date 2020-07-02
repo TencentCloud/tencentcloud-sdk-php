@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -62,16 +62,16 @@ class QueryMerchantBalanceData extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Currency",$param) and $param["Currency"] !== null) {
-            $this->Currency = $param["Currency"];
+        if (array_key_exists('Currency',$param) and $param['Currency'] !== null) {
+            $this->Currency = $param['Currency'];
         }
 
-        if (array_key_exists("Balance",$param) and $param["Balance"] !== null) {
-            $this->Balance = $param["Balance"];
+        if (array_key_exists('Balance',$param) and $param['Balance'] !== null) {
+            $this->Balance = $param['Balance'];
         }
 
-        if (array_key_exists("MerchantId",$param) and $param["MerchantId"] !== null) {
-            $this->MerchantId = $param["MerchantId"];
+        if (array_key_exists('MerchantId',$param) and $param['MerchantId'] !== null) {
+            $this->MerchantId = $param['MerchantId'];
         }
     }
 }

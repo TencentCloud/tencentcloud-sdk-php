@@ -74,7 +74,7 @@ class QcloudApi_Common_Request
             $paramArray['Timestamp'] = time();
         
         $signMethod = 'HmacSHA1';
-        if (isset($paramArray['SignatureMethod']) && $paramArray['SignatureMethod'] == "HmacSHA256")
+        if (isset($paramArray['SignatureMethod']) && $paramArray['SignatureMethod'] == 'HmacSHA256')
             $signMethod= 'HmacSHA256';
 
         $paramArray['RequestClient'] = self::$_version;
@@ -115,7 +115,7 @@ class QcloudApi_Common_Request
             $paramArray['Timestamp'] = time();
         
         $signMethod = 'HmacSHA1';
-        if (isset($paramArray['SignatureMethod']) && $paramArray['SignatureMethod'] == "HmacSHA256")
+        if (isset($paramArray['SignatureMethod']) && $paramArray['SignatureMethod'] == 'HmacSHA256')
             $signMethod= 'HmacSHA256';
         
         $paramArray['RequestClient'] = self::$_version;
@@ -161,7 +161,7 @@ class QcloudApi_Common_Request
 
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
-        if (false !== strpos($url, "https")) {
+        if (false !== strpos($url, 'https')) {
             // 证书
             // curl_setopt($ch,CURLOPT_CAINFO,"ca.crt");
             curl_setopt($ch, CURLOPT_SSL_VERIFYPEER,  false);

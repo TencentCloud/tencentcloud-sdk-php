@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReservedMsgTwo(string $ReservedMsgTwo) 设置STRING(300)，保留域2
  * @method string getReservedMsgThree() 获取STRING(300)，保留域3
  * @method void setReservedMsgThree(string $ReservedMsgThree) 设置STRING(300)，保留域3
- * @method string getProfile() 获取STRING(12)，接入环境，默认接入沙箱环境。接入正式环境填"prod"
- * @method void setProfile(string $Profile) 设置STRING(12)，接入环境，默认接入沙箱环境。接入正式环境填"prod"
+ * @method string getProfile() 获取STRING(12)，接入环境，默认接入沙箱环境。接入正式环境填'prod'
+ * @method void setProfile(string $Profile) 设置STRING(12)，接入环境，默认接入沙箱环境。接入正式环境填'prod'
  */
 class RevResigterBillSupportWithdrawRequest extends AbstractModel
 {
@@ -89,7 +89,7 @@ class RevResigterBillSupportWithdrawRequest extends AbstractModel
     public $ReservedMsgThree;
 
     /**
-     * @var string STRING(12)，接入环境，默认接入沙箱环境。接入正式环境填"prod"
+     * @var string STRING(12)，接入环境，默认接入沙箱环境。接入正式环境填'prod'
      */
     public $Profile;
 
@@ -103,7 +103,7 @@ class RevResigterBillSupportWithdrawRequest extends AbstractModel
      * @param string $ReservedMsgOne STRING(300)，保留域1
      * @param string $ReservedMsgTwo STRING(300)，保留域2
      * @param string $ReservedMsgThree STRING(300)，保留域3
-     * @param string $Profile STRING(12)，接入环境，默认接入沙箱环境。接入正式环境填"prod"
+     * @param string $Profile STRING(12)，接入环境，默认接入沙箱环境。接入正式环境填'prod'
      */
     function __construct()
     {
@@ -118,44 +118,44 @@ class RevResigterBillSupportWithdrawRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MrchCode",$param) and $param["MrchCode"] !== null) {
-            $this->MrchCode = $param["MrchCode"];
+        if (array_key_exists('MrchCode',$param) and $param['MrchCode'] !== null) {
+            $this->MrchCode = $param['MrchCode'];
         }
 
-        if (array_key_exists("TranNetMemberCode",$param) and $param["TranNetMemberCode"] !== null) {
-            $this->TranNetMemberCode = $param["TranNetMemberCode"];
+        if (array_key_exists('TranNetMemberCode',$param) and $param['TranNetMemberCode'] !== null) {
+            $this->TranNetMemberCode = $param['TranNetMemberCode'];
         }
 
-        if (array_key_exists("OldOrderNo",$param) and $param["OldOrderNo"] !== null) {
-            $this->OldOrderNo = $param["OldOrderNo"];
+        if (array_key_exists('OldOrderNo',$param) and $param['OldOrderNo'] !== null) {
+            $this->OldOrderNo = $param['OldOrderNo'];
         }
 
-        if (array_key_exists("CancelAmt",$param) and $param["CancelAmt"] !== null) {
-            $this->CancelAmt = $param["CancelAmt"];
+        if (array_key_exists('CancelAmt',$param) and $param['CancelAmt'] !== null) {
+            $this->CancelAmt = $param['CancelAmt'];
         }
 
-        if (array_key_exists("TranFee",$param) and $param["TranFee"] !== null) {
-            $this->TranFee = $param["TranFee"];
+        if (array_key_exists('TranFee',$param) and $param['TranFee'] !== null) {
+            $this->TranFee = $param['TranFee'];
         }
 
-        if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
-            $this->Remark = $param["Remark"];
+        if (array_key_exists('Remark',$param) and $param['Remark'] !== null) {
+            $this->Remark = $param['Remark'];
         }
 
-        if (array_key_exists("ReservedMsgOne",$param) and $param["ReservedMsgOne"] !== null) {
-            $this->ReservedMsgOne = $param["ReservedMsgOne"];
+        if (array_key_exists('ReservedMsgOne',$param) and $param['ReservedMsgOne'] !== null) {
+            $this->ReservedMsgOne = $param['ReservedMsgOne'];
         }
 
-        if (array_key_exists("ReservedMsgTwo",$param) and $param["ReservedMsgTwo"] !== null) {
-            $this->ReservedMsgTwo = $param["ReservedMsgTwo"];
+        if (array_key_exists('ReservedMsgTwo',$param) and $param['ReservedMsgTwo'] !== null) {
+            $this->ReservedMsgTwo = $param['ReservedMsgTwo'];
         }
 
-        if (array_key_exists("ReservedMsgThree",$param) and $param["ReservedMsgThree"] !== null) {
-            $this->ReservedMsgThree = $param["ReservedMsgThree"];
+        if (array_key_exists('ReservedMsgThree',$param) and $param['ReservedMsgThree'] !== null) {
+            $this->ReservedMsgThree = $param['ReservedMsgThree'];
         }
 
-        if (array_key_exists("Profile",$param) and $param["Profile"] !== null) {
-            $this->Profile = $param["Profile"];
+        if (array_key_exists('Profile',$param) and $param['Profile'] !== null) {
+            $this->Profile = $param['Profile'];
         }
     }
 }

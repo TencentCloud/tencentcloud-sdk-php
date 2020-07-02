@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -174,32 +174,32 @@ class MosaicInput extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CoordinateOrigin",$param) and $param["CoordinateOrigin"] !== null) {
-            $this->CoordinateOrigin = $param["CoordinateOrigin"];
+        if (array_key_exists('CoordinateOrigin',$param) and $param['CoordinateOrigin'] !== null) {
+            $this->CoordinateOrigin = $param['CoordinateOrigin'];
         }
 
-        if (array_key_exists("XPos",$param) and $param["XPos"] !== null) {
-            $this->XPos = $param["XPos"];
+        if (array_key_exists('XPos',$param) and $param['XPos'] !== null) {
+            $this->XPos = $param['XPos'];
         }
 
-        if (array_key_exists("YPos",$param) and $param["YPos"] !== null) {
-            $this->YPos = $param["YPos"];
+        if (array_key_exists('YPos',$param) and $param['YPos'] !== null) {
+            $this->YPos = $param['YPos'];
         }
 
-        if (array_key_exists("Width",$param) and $param["Width"] !== null) {
-            $this->Width = $param["Width"];
+        if (array_key_exists('Width',$param) and $param['Width'] !== null) {
+            $this->Width = $param['Width'];
         }
 
-        if (array_key_exists("Height",$param) and $param["Height"] !== null) {
-            $this->Height = $param["Height"];
+        if (array_key_exists('Height',$param) and $param['Height'] !== null) {
+            $this->Height = $param['Height'];
         }
 
-        if (array_key_exists("StartTimeOffset",$param) and $param["StartTimeOffset"] !== null) {
-            $this->StartTimeOffset = $param["StartTimeOffset"];
+        if (array_key_exists('StartTimeOffset',$param) and $param['StartTimeOffset'] !== null) {
+            $this->StartTimeOffset = $param['StartTimeOffset'];
         }
 
-        if (array_key_exists("EndTimeOffset",$param) and $param["EndTimeOffset"] !== null) {
-            $this->EndTimeOffset = $param["EndTimeOffset"];
+        if (array_key_exists('EndTimeOffset',$param) and $param['EndTimeOffset'] !== null) {
+            $this->EndTimeOffset = $param['EndTimeOffset'];
         }
     }
 }

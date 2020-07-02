@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -198,89 +198,89 @@ class EnvInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("EnvId",$param) and $param["EnvId"] !== null) {
-            $this->EnvId = $param["EnvId"];
+        if (array_key_exists('EnvId',$param) and $param['EnvId'] !== null) {
+            $this->EnvId = $param['EnvId'];
         }
 
-        if (array_key_exists("Source",$param) and $param["Source"] !== null) {
-            $this->Source = $param["Source"];
+        if (array_key_exists('Source',$param) and $param['Source'] !== null) {
+            $this->Source = $param['Source'];
         }
 
-        if (array_key_exists("Alias",$param) and $param["Alias"] !== null) {
-            $this->Alias = $param["Alias"];
+        if (array_key_exists('Alias',$param) and $param['Alias'] !== null) {
+            $this->Alias = $param['Alias'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
-            $this->UpdateTime = $param["UpdateTime"];
+        if (array_key_exists('UpdateTime',$param) and $param['UpdateTime'] !== null) {
+            $this->UpdateTime = $param['UpdateTime'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("Databases",$param) and $param["Databases"] !== null) {
+        if (array_key_exists('Databases',$param) and $param['Databases'] !== null) {
             $this->Databases = [];
-            foreach ($param["Databases"] as $key => $value){
+            foreach ($param['Databases'] as $key => $value){
                 $obj = new DatabasesInfo();
                 $obj->deserialize($value);
                 array_push($this->Databases, $obj);
             }
         }
 
-        if (array_key_exists("Storages",$param) and $param["Storages"] !== null) {
+        if (array_key_exists('Storages',$param) and $param['Storages'] !== null) {
             $this->Storages = [];
-            foreach ($param["Storages"] as $key => $value){
+            foreach ($param['Storages'] as $key => $value){
                 $obj = new StorageInfo();
                 $obj->deserialize($value);
                 array_push($this->Storages, $obj);
             }
         }
 
-        if (array_key_exists("Functions",$param) and $param["Functions"] !== null) {
+        if (array_key_exists('Functions',$param) and $param['Functions'] !== null) {
             $this->Functions = [];
-            foreach ($param["Functions"] as $key => $value){
+            foreach ($param['Functions'] as $key => $value){
                 $obj = new FunctionInfo();
                 $obj->deserialize($value);
                 array_push($this->Functions, $obj);
             }
         }
 
-        if (array_key_exists("PackageId",$param) and $param["PackageId"] !== null) {
-            $this->PackageId = $param["PackageId"];
+        if (array_key_exists('PackageId',$param) and $param['PackageId'] !== null) {
+            $this->PackageId = $param['PackageId'];
         }
 
-        if (array_key_exists("PackageName",$param) and $param["PackageName"] !== null) {
-            $this->PackageName = $param["PackageName"];
+        if (array_key_exists('PackageName',$param) and $param['PackageName'] !== null) {
+            $this->PackageName = $param['PackageName'];
         }
 
-        if (array_key_exists("LogServices",$param) and $param["LogServices"] !== null) {
+        if (array_key_exists('LogServices',$param) and $param['LogServices'] !== null) {
             $this->LogServices = [];
-            foreach ($param["LogServices"] as $key => $value){
+            foreach ($param['LogServices'] as $key => $value){
                 $obj = new LogServiceInfo();
                 $obj->deserialize($value);
                 array_push($this->LogServices, $obj);
             }
         }
 
-        if (array_key_exists("StaticStorages",$param) and $param["StaticStorages"] !== null) {
+        if (array_key_exists('StaticStorages',$param) and $param['StaticStorages'] !== null) {
             $this->StaticStorages = [];
-            foreach ($param["StaticStorages"] as $key => $value){
+            foreach ($param['StaticStorages'] as $key => $value){
                 $obj = new StaticStorageInfo();
                 $obj->deserialize($value);
                 array_push($this->StaticStorages, $obj);
             }
         }
 
-        if (array_key_exists("IsAutoDegrade",$param) and $param["IsAutoDegrade"] !== null) {
-            $this->IsAutoDegrade = $param["IsAutoDegrade"];
+        if (array_key_exists('IsAutoDegrade',$param) and $param['IsAutoDegrade'] !== null) {
+            $this->IsAutoDegrade = $param['IsAutoDegrade'];
         }
 
-        if (array_key_exists("EnvChannel",$param) and $param["EnvChannel"] !== null) {
-            $this->EnvChannel = $param["EnvChannel"];
+        if (array_key_exists('EnvChannel',$param) and $param['EnvChannel'] !== null) {
+            $this->EnvChannel = $param['EnvChannel'];
         }
     }
 }

@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -198,65 +198,65 @@ IMPORTFAILED-导入失败
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ImageId",$param) and $param["ImageId"] !== null) {
-            $this->ImageId = $param["ImageId"];
+        if (array_key_exists('ImageId',$param) and $param['ImageId'] !== null) {
+            $this->ImageId = $param['ImageId'];
         }
 
-        if (array_key_exists("OsName",$param) and $param["OsName"] !== null) {
-            $this->OsName = $param["OsName"];
+        if (array_key_exists('OsName',$param) and $param['OsName'] !== null) {
+            $this->OsName = $param['OsName'];
         }
 
-        if (array_key_exists("ImageType",$param) and $param["ImageType"] !== null) {
-            $this->ImageType = $param["ImageType"];
+        if (array_key_exists('ImageType',$param) and $param['ImageType'] !== null) {
+            $this->ImageType = $param['ImageType'];
         }
 
-        if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
-            $this->CreatedTime = $param["CreatedTime"];
+        if (array_key_exists('CreatedTime',$param) and $param['CreatedTime'] !== null) {
+            $this->CreatedTime = $param['CreatedTime'];
         }
 
-        if (array_key_exists("ImageName",$param) and $param["ImageName"] !== null) {
-            $this->ImageName = $param["ImageName"];
+        if (array_key_exists('ImageName',$param) and $param['ImageName'] !== null) {
+            $this->ImageName = $param['ImageName'];
         }
 
-        if (array_key_exists("ImageDescription",$param) and $param["ImageDescription"] !== null) {
-            $this->ImageDescription = $param["ImageDescription"];
+        if (array_key_exists('ImageDescription',$param) and $param['ImageDescription'] !== null) {
+            $this->ImageDescription = $param['ImageDescription'];
         }
 
-        if (array_key_exists("ImageSize",$param) and $param["ImageSize"] !== null) {
-            $this->ImageSize = $param["ImageSize"];
+        if (array_key_exists('ImageSize',$param) and $param['ImageSize'] !== null) {
+            $this->ImageSize = $param['ImageSize'];
         }
 
-        if (array_key_exists("Architecture",$param) and $param["Architecture"] !== null) {
-            $this->Architecture = $param["Architecture"];
+        if (array_key_exists('Architecture',$param) and $param['Architecture'] !== null) {
+            $this->Architecture = $param['Architecture'];
         }
 
-        if (array_key_exists("ImageState",$param) and $param["ImageState"] !== null) {
-            $this->ImageState = $param["ImageState"];
+        if (array_key_exists('ImageState',$param) and $param['ImageState'] !== null) {
+            $this->ImageState = $param['ImageState'];
         }
 
-        if (array_key_exists("Platform",$param) and $param["Platform"] !== null) {
-            $this->Platform = $param["Platform"];
+        if (array_key_exists('Platform',$param) and $param['Platform'] !== null) {
+            $this->Platform = $param['Platform'];
         }
 
-        if (array_key_exists("ImageCreator",$param) and $param["ImageCreator"] !== null) {
-            $this->ImageCreator = $param["ImageCreator"];
+        if (array_key_exists('ImageCreator',$param) and $param['ImageCreator'] !== null) {
+            $this->ImageCreator = $param['ImageCreator'];
         }
 
-        if (array_key_exists("ImageSource",$param) and $param["ImageSource"] !== null) {
-            $this->ImageSource = $param["ImageSource"];
+        if (array_key_exists('ImageSource',$param) and $param['ImageSource'] !== null) {
+            $this->ImageSource = $param['ImageSource'];
         }
 
-        if (array_key_exists("SyncPercent",$param) and $param["SyncPercent"] !== null) {
-            $this->SyncPercent = $param["SyncPercent"];
+        if (array_key_exists('SyncPercent',$param) and $param['SyncPercent'] !== null) {
+            $this->SyncPercent = $param['SyncPercent'];
         }
 
-        if (array_key_exists("IsSupportCloudinit",$param) and $param["IsSupportCloudinit"] !== null) {
-            $this->IsSupportCloudinit = $param["IsSupportCloudinit"];
+        if (array_key_exists('IsSupportCloudinit',$param) and $param['IsSupportCloudinit'] !== null) {
+            $this->IsSupportCloudinit = $param['IsSupportCloudinit'];
         }
 
-        if (array_key_exists("SnapshotSet",$param) and $param["SnapshotSet"] !== null) {
+        if (array_key_exists('SnapshotSet',$param) and $param['SnapshotSet'] !== null) {
             $this->SnapshotSet = [];
-            foreach ($param["SnapshotSet"] as $key => $value){
+            foreach ($param['SnapshotSet'] as $key => $value){
                 $obj = new Snapshot();
                 $obj->deserialize($value);
                 array_push($this->SnapshotSet, $obj);

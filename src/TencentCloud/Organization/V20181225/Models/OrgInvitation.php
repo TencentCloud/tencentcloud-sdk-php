@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -126,48 +126,48 @@ class OrgInvitation extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
-            $this->Id = $param["Id"];
+        if (array_key_exists('Id',$param) and $param['Id'] !== null) {
+            $this->Id = $param['Id'];
         }
 
-        if (array_key_exists("Uin",$param) and $param["Uin"] !== null) {
-            $this->Uin = $param["Uin"];
+        if (array_key_exists('Uin',$param) and $param['Uin'] !== null) {
+            $this->Uin = $param['Uin'];
         }
 
-        if (array_key_exists("HostUin",$param) and $param["HostUin"] !== null) {
-            $this->HostUin = $param["HostUin"];
+        if (array_key_exists('HostUin',$param) and $param['HostUin'] !== null) {
+            $this->HostUin = $param['HostUin'];
         }
 
-        if (array_key_exists("HostName",$param) and $param["HostName"] !== null) {
-            $this->HostName = $param["HostName"];
+        if (array_key_exists('HostName',$param) and $param['HostName'] !== null) {
+            $this->HostName = $param['HostName'];
         }
 
-        if (array_key_exists("HostMail",$param) and $param["HostMail"] !== null) {
-            $this->HostMail = $param["HostMail"];
+        if (array_key_exists('HostMail',$param) and $param['HostMail'] !== null) {
+            $this->HostMail = $param['HostMail'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
-            $this->Remark = $param["Remark"];
+        if (array_key_exists('Remark',$param) and $param['Remark'] !== null) {
+            $this->Remark = $param['Remark'];
         }
 
-        if (array_key_exists("OrgType",$param) and $param["OrgType"] !== null) {
-            $this->OrgType = $param["OrgType"];
+        if (array_key_exists('OrgType',$param) and $param['OrgType'] !== null) {
+            $this->OrgType = $param['OrgType'];
         }
 
-        if (array_key_exists("InviteTime",$param) and $param["InviteTime"] !== null) {
-            $this->InviteTime = $param["InviteTime"];
+        if (array_key_exists('InviteTime',$param) and $param['InviteTime'] !== null) {
+            $this->InviteTime = $param['InviteTime'];
         }
 
-        if (array_key_exists("ExpireTime",$param) and $param["ExpireTime"] !== null) {
-            $this->ExpireTime = $param["ExpireTime"];
+        if (array_key_exists('ExpireTime',$param) and $param['ExpireTime'] !== null) {
+            $this->ExpireTime = $param['ExpireTime'];
         }
     }
 }

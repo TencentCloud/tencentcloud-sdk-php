@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -150,57 +150,57 @@ development: 开发环境
         if ($param === null) {
             return;
         }
-        if (array_key_exists("UserId",$param) and $param["UserId"] !== null) {
-            $this->UserId = $param["UserId"];
+        if (array_key_exists('UserId',$param) and $param['UserId'] !== null) {
+            $this->UserId = $param['UserId'];
         }
 
-        if (array_key_exists("RefundId",$param) and $param["RefundId"] !== null) {
-            $this->RefundId = $param["RefundId"];
+        if (array_key_exists('RefundId',$param) and $param['RefundId'] !== null) {
+            $this->RefundId = $param['RefundId'];
         }
 
-        if (array_key_exists("MidasAppId",$param) and $param["MidasAppId"] !== null) {
-            $this->MidasAppId = $param["MidasAppId"];
+        if (array_key_exists('MidasAppId',$param) and $param['MidasAppId'] !== null) {
+            $this->MidasAppId = $param['MidasAppId'];
         }
 
-        if (array_key_exists("TotalRefundAmt",$param) and $param["TotalRefundAmt"] !== null) {
-            $this->TotalRefundAmt = $param["TotalRefundAmt"];
+        if (array_key_exists('TotalRefundAmt',$param) and $param['TotalRefundAmt'] !== null) {
+            $this->TotalRefundAmt = $param['TotalRefundAmt'];
         }
 
-        if (array_key_exists("MidasSecretId",$param) and $param["MidasSecretId"] !== null) {
-            $this->MidasSecretId = $param["MidasSecretId"];
+        if (array_key_exists('MidasSecretId',$param) and $param['MidasSecretId'] !== null) {
+            $this->MidasSecretId = $param['MidasSecretId'];
         }
 
-        if (array_key_exists("MidasSignature",$param) and $param["MidasSignature"] !== null) {
-            $this->MidasSignature = $param["MidasSignature"];
+        if (array_key_exists('MidasSignature',$param) and $param['MidasSignature'] !== null) {
+            $this->MidasSignature = $param['MidasSignature'];
         }
 
-        if (array_key_exists("OutTradeNo",$param) and $param["OutTradeNo"] !== null) {
-            $this->OutTradeNo = $param["OutTradeNo"];
+        if (array_key_exists('OutTradeNo',$param) and $param['OutTradeNo'] !== null) {
+            $this->OutTradeNo = $param['OutTradeNo'];
         }
 
-        if (array_key_exists("MchRefundAmt",$param) and $param["MchRefundAmt"] !== null) {
-            $this->MchRefundAmt = $param["MchRefundAmt"];
+        if (array_key_exists('MchRefundAmt',$param) and $param['MchRefundAmt'] !== null) {
+            $this->MchRefundAmt = $param['MchRefundAmt'];
         }
 
-        if (array_key_exists("TransactionId",$param) and $param["TransactionId"] !== null) {
-            $this->TransactionId = $param["TransactionId"];
+        if (array_key_exists('TransactionId',$param) and $param['TransactionId'] !== null) {
+            $this->TransactionId = $param['TransactionId'];
         }
 
-        if (array_key_exists("PlatformRefundAmt",$param) and $param["PlatformRefundAmt"] !== null) {
-            $this->PlatformRefundAmt = $param["PlatformRefundAmt"];
+        if (array_key_exists('PlatformRefundAmt',$param) and $param['PlatformRefundAmt'] !== null) {
+            $this->PlatformRefundAmt = $param['PlatformRefundAmt'];
         }
 
-        if (array_key_exists("SubOrderRefundList",$param) and $param["SubOrderRefundList"] !== null) {
+        if (array_key_exists('SubOrderRefundList',$param) and $param['SubOrderRefundList'] !== null) {
             $this->SubOrderRefundList = [];
-            foreach ($param["SubOrderRefundList"] as $key => $value){
+            foreach ($param['SubOrderRefundList'] as $key => $value){
                 $obj = new RefundOutSubOrderRefundList();
                 $obj->deserialize($value);
                 array_push($this->SubOrderRefundList, $obj);
             }
         }
 
-        if (array_key_exists("MidasEnvironment",$param) and $param["MidasEnvironment"] !== null) {
-            $this->MidasEnvironment = $param["MidasEnvironment"];
+        if (array_key_exists('MidasEnvironment',$param) and $param['MidasEnvironment'] !== null) {
+            $this->MidasEnvironment = $param['MidasEnvironment'];
         }
     }
 }

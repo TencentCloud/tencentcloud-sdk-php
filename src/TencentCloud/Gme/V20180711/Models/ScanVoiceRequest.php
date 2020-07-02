@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -86,29 +86,29 @@ class ScanVoiceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BizId",$param) and $param["BizId"] !== null) {
-            $this->BizId = $param["BizId"];
+        if (array_key_exists('BizId',$param) and $param['BizId'] !== null) {
+            $this->BizId = $param['BizId'];
         }
 
-        if (array_key_exists("Scenes",$param) and $param["Scenes"] !== null) {
-            $this->Scenes = $param["Scenes"];
+        if (array_key_exists('Scenes',$param) and $param['Scenes'] !== null) {
+            $this->Scenes = $param['Scenes'];
         }
 
-        if (array_key_exists("Live",$param) and $param["Live"] !== null) {
-            $this->Live = $param["Live"];
+        if (array_key_exists('Live',$param) and $param['Live'] !== null) {
+            $this->Live = $param['Live'];
         }
 
-        if (array_key_exists("Tasks",$param) and $param["Tasks"] !== null) {
+        if (array_key_exists('Tasks',$param) and $param['Tasks'] !== null) {
             $this->Tasks = [];
-            foreach ($param["Tasks"] as $key => $value){
+            foreach ($param['Tasks'] as $key => $value){
                 $obj = new Task();
                 $obj->deserialize($value);
                 array_push($this->Tasks, $obj);
             }
         }
 
-        if (array_key_exists("Callback",$param) and $param["Callback"] !== null) {
-            $this->Callback = $param["Callback"];
+        if (array_key_exists('Callback',$param) and $param['Callback'] !== null) {
+            $this->Callback = $param['Callback'];
         }
     }
 }

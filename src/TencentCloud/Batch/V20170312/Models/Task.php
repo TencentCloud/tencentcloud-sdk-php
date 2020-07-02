@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -182,105 +182,105 @@ class Task extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Application",$param) and $param["Application"] !== null) {
+        if (array_key_exists('Application',$param) and $param['Application'] !== null) {
             $this->Application = new Application();
-            $this->Application->deserialize($param["Application"]);
+            $this->Application->deserialize($param['Application']);
         }
 
-        if (array_key_exists("TaskName",$param) and $param["TaskName"] !== null) {
-            $this->TaskName = $param["TaskName"];
+        if (array_key_exists('TaskName',$param) and $param['TaskName'] !== null) {
+            $this->TaskName = $param['TaskName'];
         }
 
-        if (array_key_exists("TaskInstanceNum",$param) and $param["TaskInstanceNum"] !== null) {
-            $this->TaskInstanceNum = $param["TaskInstanceNum"];
+        if (array_key_exists('TaskInstanceNum',$param) and $param['TaskInstanceNum'] !== null) {
+            $this->TaskInstanceNum = $param['TaskInstanceNum'];
         }
 
-        if (array_key_exists("ComputeEnv",$param) and $param["ComputeEnv"] !== null) {
+        if (array_key_exists('ComputeEnv',$param) and $param['ComputeEnv'] !== null) {
             $this->ComputeEnv = new AnonymousComputeEnv();
-            $this->ComputeEnv->deserialize($param["ComputeEnv"]);
+            $this->ComputeEnv->deserialize($param['ComputeEnv']);
         }
 
-        if (array_key_exists("EnvId",$param) and $param["EnvId"] !== null) {
-            $this->EnvId = $param["EnvId"];
+        if (array_key_exists('EnvId',$param) and $param['EnvId'] !== null) {
+            $this->EnvId = $param['EnvId'];
         }
 
-        if (array_key_exists("RedirectInfo",$param) and $param["RedirectInfo"] !== null) {
+        if (array_key_exists('RedirectInfo',$param) and $param['RedirectInfo'] !== null) {
             $this->RedirectInfo = new RedirectInfo();
-            $this->RedirectInfo->deserialize($param["RedirectInfo"]);
+            $this->RedirectInfo->deserialize($param['RedirectInfo']);
         }
 
-        if (array_key_exists("RedirectLocalInfo",$param) and $param["RedirectLocalInfo"] !== null) {
+        if (array_key_exists('RedirectLocalInfo',$param) and $param['RedirectLocalInfo'] !== null) {
             $this->RedirectLocalInfo = new RedirectLocalInfo();
-            $this->RedirectLocalInfo->deserialize($param["RedirectLocalInfo"]);
+            $this->RedirectLocalInfo->deserialize($param['RedirectLocalInfo']);
         }
 
-        if (array_key_exists("InputMappings",$param) and $param["InputMappings"] !== null) {
+        if (array_key_exists('InputMappings',$param) and $param['InputMappings'] !== null) {
             $this->InputMappings = [];
-            foreach ($param["InputMappings"] as $key => $value){
+            foreach ($param['InputMappings'] as $key => $value){
                 $obj = new InputMapping();
                 $obj->deserialize($value);
                 array_push($this->InputMappings, $obj);
             }
         }
 
-        if (array_key_exists("OutputMappings",$param) and $param["OutputMappings"] !== null) {
+        if (array_key_exists('OutputMappings',$param) and $param['OutputMappings'] !== null) {
             $this->OutputMappings = [];
-            foreach ($param["OutputMappings"] as $key => $value){
+            foreach ($param['OutputMappings'] as $key => $value){
                 $obj = new OutputMapping();
                 $obj->deserialize($value);
                 array_push($this->OutputMappings, $obj);
             }
         }
 
-        if (array_key_exists("OutputMappingConfigs",$param) and $param["OutputMappingConfigs"] !== null) {
+        if (array_key_exists('OutputMappingConfigs',$param) and $param['OutputMappingConfigs'] !== null) {
             $this->OutputMappingConfigs = [];
-            foreach ($param["OutputMappingConfigs"] as $key => $value){
+            foreach ($param['OutputMappingConfigs'] as $key => $value){
                 $obj = new OutputMappingConfig();
                 $obj->deserialize($value);
                 array_push($this->OutputMappingConfigs, $obj);
             }
         }
 
-        if (array_key_exists("EnvVars",$param) and $param["EnvVars"] !== null) {
+        if (array_key_exists('EnvVars',$param) and $param['EnvVars'] !== null) {
             $this->EnvVars = [];
-            foreach ($param["EnvVars"] as $key => $value){
+            foreach ($param['EnvVars'] as $key => $value){
                 $obj = new EnvVar();
                 $obj->deserialize($value);
                 array_push($this->EnvVars, $obj);
             }
         }
 
-        if (array_key_exists("Authentications",$param) and $param["Authentications"] !== null) {
+        if (array_key_exists('Authentications',$param) and $param['Authentications'] !== null) {
             $this->Authentications = [];
-            foreach ($param["Authentications"] as $key => $value){
+            foreach ($param['Authentications'] as $key => $value){
                 $obj = new Authentication();
                 $obj->deserialize($value);
                 array_push($this->Authentications, $obj);
             }
         }
 
-        if (array_key_exists("FailedAction",$param) and $param["FailedAction"] !== null) {
-            $this->FailedAction = $param["FailedAction"];
+        if (array_key_exists('FailedAction',$param) and $param['FailedAction'] !== null) {
+            $this->FailedAction = $param['FailedAction'];
         }
 
-        if (array_key_exists("MaxRetryCount",$param) and $param["MaxRetryCount"] !== null) {
-            $this->MaxRetryCount = $param["MaxRetryCount"];
+        if (array_key_exists('MaxRetryCount',$param) and $param['MaxRetryCount'] !== null) {
+            $this->MaxRetryCount = $param['MaxRetryCount'];
         }
 
-        if (array_key_exists("Timeout",$param) and $param["Timeout"] !== null) {
-            $this->Timeout = $param["Timeout"];
+        if (array_key_exists('Timeout',$param) and $param['Timeout'] !== null) {
+            $this->Timeout = $param['Timeout'];
         }
 
-        if (array_key_exists("MaxConcurrentNum",$param) and $param["MaxConcurrentNum"] !== null) {
-            $this->MaxConcurrentNum = $param["MaxConcurrentNum"];
+        if (array_key_exists('MaxConcurrentNum',$param) and $param['MaxConcurrentNum'] !== null) {
+            $this->MaxConcurrentNum = $param['MaxConcurrentNum'];
         }
 
-        if (array_key_exists("RestartComputeNode",$param) and $param["RestartComputeNode"] !== null) {
-            $this->RestartComputeNode = $param["RestartComputeNode"];
+        if (array_key_exists('RestartComputeNode',$param) and $param['RestartComputeNode'] !== null) {
+            $this->RestartComputeNode = $param['RestartComputeNode'];
         }
 
-        if (array_key_exists("ResourceMaxRetryCount",$param) and $param["ResourceMaxRetryCount"] !== null) {
-            $this->ResourceMaxRetryCount = $param["ResourceMaxRetryCount"];
+        if (array_key_exists('ResourceMaxRetryCount',$param) and $param['ResourceMaxRetryCount'] !== null) {
+            $this->ResourceMaxRetryCount = $param['ResourceMaxRetryCount'];
         }
     }
 }

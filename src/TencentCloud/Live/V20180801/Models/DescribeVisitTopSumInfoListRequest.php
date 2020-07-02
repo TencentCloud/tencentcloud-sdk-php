@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -110,32 +110,32 @@ class DescribeVisitTopSumInfoListRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
-            $this->StartTime = $param["StartTime"];
+        if (array_key_exists('StartTime',$param) and $param['StartTime'] !== null) {
+            $this->StartTime = $param['StartTime'];
         }
 
-        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
-            $this->EndTime = $param["EndTime"];
+        if (array_key_exists('EndTime',$param) and $param['EndTime'] !== null) {
+            $this->EndTime = $param['EndTime'];
         }
 
-        if (array_key_exists("TopIndex",$param) and $param["TopIndex"] !== null) {
-            $this->TopIndex = $param["TopIndex"];
+        if (array_key_exists('TopIndex',$param) and $param['TopIndex'] !== null) {
+            $this->TopIndex = $param['TopIndex'];
         }
 
-        if (array_key_exists("PlayDomains",$param) and $param["PlayDomains"] !== null) {
-            $this->PlayDomains = $param["PlayDomains"];
+        if (array_key_exists('PlayDomains',$param) and $param['PlayDomains'] !== null) {
+            $this->PlayDomains = $param['PlayDomains'];
         }
 
-        if (array_key_exists("PageNum",$param) and $param["PageNum"] !== null) {
-            $this->PageNum = $param["PageNum"];
+        if (array_key_exists('PageNum',$param) and $param['PageNum'] !== null) {
+            $this->PageNum = $param['PageNum'];
         }
 
-        if (array_key_exists("PageSize",$param) and $param["PageSize"] !== null) {
-            $this->PageSize = $param["PageSize"];
+        if (array_key_exists('PageSize',$param) and $param['PageSize'] !== null) {
+            $this->PageSize = $param['PageSize'];
         }
 
-        if (array_key_exists("OrderParam",$param) and $param["OrderParam"] !== null) {
-            $this->OrderParam = $param["OrderParam"];
+        if (array_key_exists('OrderParam',$param) and $param['OrderParam'] !== null) {
+            $this->OrderParam = $param['OrderParam'];
         }
     }
 }

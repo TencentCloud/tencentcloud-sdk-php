@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -78,24 +78,24 @@ class InquiryPriceDbauditInstanceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceVersion",$param) and $param["InstanceVersion"] !== null) {
-            $this->InstanceVersion = $param["InstanceVersion"];
+        if (array_key_exists('InstanceVersion',$param) and $param['InstanceVersion'] !== null) {
+            $this->InstanceVersion = $param['InstanceVersion'];
         }
 
-        if (array_key_exists("InquiryType",$param) and $param["InquiryType"] !== null) {
-            $this->InquiryType = $param["InquiryType"];
+        if (array_key_exists('InquiryType',$param) and $param['InquiryType'] !== null) {
+            $this->InquiryType = $param['InquiryType'];
         }
 
-        if (array_key_exists("TimeSpan",$param) and $param["TimeSpan"] !== null) {
-            $this->TimeSpan = $param["TimeSpan"];
+        if (array_key_exists('TimeSpan',$param) and $param['TimeSpan'] !== null) {
+            $this->TimeSpan = $param['TimeSpan'];
         }
 
-        if (array_key_exists("TimeUnit",$param) and $param["TimeUnit"] !== null) {
-            $this->TimeUnit = $param["TimeUnit"];
+        if (array_key_exists('TimeUnit',$param) and $param['TimeUnit'] !== null) {
+            $this->TimeUnit = $param['TimeUnit'];
         }
 
-        if (array_key_exists("ServiceRegion",$param) and $param["ServiceRegion"] !== null) {
-            $this->ServiceRegion = $param["ServiceRegion"];
+        if (array_key_exists('ServiceRegion',$param) and $param['ServiceRegion'] !== null) {
+            $this->ServiceRegion = $param['ServiceRegion'];
         }
     }
 }

@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -150,60 +150,60 @@ class SelectedTableInfoNew extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TableGroupId",$param) and $param["TableGroupId"] !== null) {
-            $this->TableGroupId = $param["TableGroupId"];
+        if (array_key_exists('TableGroupId',$param) and $param['TableGroupId'] !== null) {
+            $this->TableGroupId = $param['TableGroupId'];
         }
 
-        if (array_key_exists("TableName",$param) and $param["TableName"] !== null) {
-            $this->TableName = $param["TableName"];
+        if (array_key_exists('TableName',$param) and $param['TableName'] !== null) {
+            $this->TableName = $param['TableName'];
         }
 
-        if (array_key_exists("TableInstanceId",$param) and $param["TableInstanceId"] !== null) {
-            $this->TableInstanceId = $param["TableInstanceId"];
+        if (array_key_exists('TableInstanceId',$param) and $param['TableInstanceId'] !== null) {
+            $this->TableInstanceId = $param['TableInstanceId'];
         }
 
-        if (array_key_exists("TableIdlType",$param) and $param["TableIdlType"] !== null) {
-            $this->TableIdlType = $param["TableIdlType"];
+        if (array_key_exists('TableIdlType',$param) and $param['TableIdlType'] !== null) {
+            $this->TableIdlType = $param['TableIdlType'];
         }
 
-        if (array_key_exists("TableType",$param) and $param["TableType"] !== null) {
-            $this->TableType = $param["TableType"];
+        if (array_key_exists('TableType',$param) and $param['TableType'] !== null) {
+            $this->TableType = $param['TableType'];
         }
 
-        if (array_key_exists("ListElementNum",$param) and $param["ListElementNum"] !== null) {
-            $this->ListElementNum = $param["ListElementNum"];
+        if (array_key_exists('ListElementNum',$param) and $param['ListElementNum'] !== null) {
+            $this->ListElementNum = $param['ListElementNum'];
         }
 
-        if (array_key_exists("ReservedVolume",$param) and $param["ReservedVolume"] !== null) {
-            $this->ReservedVolume = $param["ReservedVolume"];
+        if (array_key_exists('ReservedVolume',$param) and $param['ReservedVolume'] !== null) {
+            $this->ReservedVolume = $param['ReservedVolume'];
         }
 
-        if (array_key_exists("ReservedReadQps",$param) and $param["ReservedReadQps"] !== null) {
-            $this->ReservedReadQps = $param["ReservedReadQps"];
+        if (array_key_exists('ReservedReadQps',$param) and $param['ReservedReadQps'] !== null) {
+            $this->ReservedReadQps = $param['ReservedReadQps'];
         }
 
-        if (array_key_exists("ReservedWriteQps",$param) and $param["ReservedWriteQps"] !== null) {
-            $this->ReservedWriteQps = $param["ReservedWriteQps"];
+        if (array_key_exists('ReservedWriteQps',$param) and $param['ReservedWriteQps'] !== null) {
+            $this->ReservedWriteQps = $param['ReservedWriteQps'];
         }
 
-        if (array_key_exists("Memo",$param) and $param["Memo"] !== null) {
-            $this->Memo = $param["Memo"];
+        if (array_key_exists('Memo',$param) and $param['Memo'] !== null) {
+            $this->Memo = $param['Memo'];
         }
 
-        if (array_key_exists("FileName",$param) and $param["FileName"] !== null) {
-            $this->FileName = $param["FileName"];
+        if (array_key_exists('FileName',$param) and $param['FileName'] !== null) {
+            $this->FileName = $param['FileName'];
         }
 
-        if (array_key_exists("FileExtType",$param) and $param["FileExtType"] !== null) {
-            $this->FileExtType = $param["FileExtType"];
+        if (array_key_exists('FileExtType',$param) and $param['FileExtType'] !== null) {
+            $this->FileExtType = $param['FileExtType'];
         }
 
-        if (array_key_exists("FileSize",$param) and $param["FileSize"] !== null) {
-            $this->FileSize = $param["FileSize"];
+        if (array_key_exists('FileSize',$param) and $param['FileSize'] !== null) {
+            $this->FileSize = $param['FileSize'];
         }
 
-        if (array_key_exists("FileContent",$param) and $param["FileContent"] !== null) {
-            $this->FileContent = $param["FileContent"];
+        if (array_key_exists('FileContent',$param) and $param['FileContent'] !== null) {
+            $this->FileContent = $param['FileContent'];
         }
     }
 }

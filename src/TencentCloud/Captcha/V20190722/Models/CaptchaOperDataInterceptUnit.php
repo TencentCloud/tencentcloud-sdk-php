@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -70,20 +70,20 @@ class CaptchaOperDataInterceptUnit extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DateKey",$param) and $param["DateKey"] !== null) {
-            $this->DateKey = $param["DateKey"];
+        if (array_key_exists('DateKey',$param) and $param['DateKey'] !== null) {
+            $this->DateKey = $param['DateKey'];
         }
 
-        if (array_key_exists("AllStopCnt",$param) and $param["AllStopCnt"] !== null) {
-            $this->AllStopCnt = $param["AllStopCnt"];
+        if (array_key_exists('AllStopCnt',$param) and $param['AllStopCnt'] !== null) {
+            $this->AllStopCnt = $param['AllStopCnt'];
         }
 
-        if (array_key_exists("PicStopCnt",$param) and $param["PicStopCnt"] !== null) {
-            $this->PicStopCnt = $param["PicStopCnt"];
+        if (array_key_exists('PicStopCnt',$param) and $param['PicStopCnt'] !== null) {
+            $this->PicStopCnt = $param['PicStopCnt'];
         }
 
-        if (array_key_exists("StrategyStopCnt",$param) and $param["StrategyStopCnt"] !== null) {
-            $this->StrategyStopCnt = $param["StrategyStopCnt"];
+        if (array_key_exists('StrategyStopCnt',$param) and $param['StrategyStopCnt'] !== null) {
+            $this->StrategyStopCnt = $param['StrategyStopCnt'];
         }
     }
 }

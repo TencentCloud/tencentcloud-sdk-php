@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -166,68 +166,68 @@ class PassportOCRResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Country",$param) and $param["Country"] !== null) {
-            $this->Country = $param["Country"];
+        if (array_key_exists('Country',$param) and $param['Country'] !== null) {
+            $this->Country = $param['Country'];
         }
 
-        if (array_key_exists("PassportNo",$param) and $param["PassportNo"] !== null) {
-            $this->PassportNo = $param["PassportNo"];
+        if (array_key_exists('PassportNo',$param) and $param['PassportNo'] !== null) {
+            $this->PassportNo = $param['PassportNo'];
         }
 
-        if (array_key_exists("Sex",$param) and $param["Sex"] !== null) {
-            $this->Sex = $param["Sex"];
+        if (array_key_exists('Sex',$param) and $param['Sex'] !== null) {
+            $this->Sex = $param['Sex'];
         }
 
-        if (array_key_exists("Nationality",$param) and $param["Nationality"] !== null) {
-            $this->Nationality = $param["Nationality"];
+        if (array_key_exists('Nationality',$param) and $param['Nationality'] !== null) {
+            $this->Nationality = $param['Nationality'];
         }
 
-        if (array_key_exists("BirthDate",$param) and $param["BirthDate"] !== null) {
-            $this->BirthDate = $param["BirthDate"];
+        if (array_key_exists('BirthDate',$param) and $param['BirthDate'] !== null) {
+            $this->BirthDate = $param['BirthDate'];
         }
 
-        if (array_key_exists("BirthPlace",$param) and $param["BirthPlace"] !== null) {
-            $this->BirthPlace = $param["BirthPlace"];
+        if (array_key_exists('BirthPlace',$param) and $param['BirthPlace'] !== null) {
+            $this->BirthPlace = $param['BirthPlace'];
         }
 
-        if (array_key_exists("IssueDate",$param) and $param["IssueDate"] !== null) {
-            $this->IssueDate = $param["IssueDate"];
+        if (array_key_exists('IssueDate',$param) and $param['IssueDate'] !== null) {
+            $this->IssueDate = $param['IssueDate'];
         }
 
-        if (array_key_exists("IssuePlace",$param) and $param["IssuePlace"] !== null) {
-            $this->IssuePlace = $param["IssuePlace"];
+        if (array_key_exists('IssuePlace',$param) and $param['IssuePlace'] !== null) {
+            $this->IssuePlace = $param['IssuePlace'];
         }
 
-        if (array_key_exists("ExpiryDate",$param) and $param["ExpiryDate"] !== null) {
-            $this->ExpiryDate = $param["ExpiryDate"];
+        if (array_key_exists('ExpiryDate',$param) and $param['ExpiryDate'] !== null) {
+            $this->ExpiryDate = $param['ExpiryDate'];
         }
 
-        if (array_key_exists("Signature",$param) and $param["Signature"] !== null) {
-            $this->Signature = $param["Signature"];
+        if (array_key_exists('Signature',$param) and $param['Signature'] !== null) {
+            $this->Signature = $param['Signature'];
         }
 
-        if (array_key_exists("CodeSet",$param) and $param["CodeSet"] !== null) {
-            $this->CodeSet = $param["CodeSet"];
+        if (array_key_exists('CodeSet',$param) and $param['CodeSet'] !== null) {
+            $this->CodeSet = $param['CodeSet'];
         }
 
-        if (array_key_exists("CodeCrc",$param) and $param["CodeCrc"] !== null) {
-            $this->CodeCrc = $param["CodeCrc"];
+        if (array_key_exists('CodeCrc',$param) and $param['CodeCrc'] !== null) {
+            $this->CodeCrc = $param['CodeCrc'];
         }
 
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("FamilyName",$param) and $param["FamilyName"] !== null) {
-            $this->FamilyName = $param["FamilyName"];
+        if (array_key_exists('FamilyName',$param) and $param['FamilyName'] !== null) {
+            $this->FamilyName = $param['FamilyName'];
         }
 
-        if (array_key_exists("FirstName",$param) and $param["FirstName"] !== null) {
-            $this->FirstName = $param["FirstName"];
+        if (array_key_exists('FirstName',$param) and $param['FirstName'] !== null) {
+            $this->FirstName = $param['FirstName'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

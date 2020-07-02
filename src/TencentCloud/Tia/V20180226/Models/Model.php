@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -19,18 +19,18 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * 用于描述模型的详细情况
-        "Model": {
-            "Name": "test-model",
-            "Description": "test-model",
-            "Cluster": "ap-beijing",
-            "Model": "cos://test-1255502019.cos.ap-shanghai.myqcloud.com/example:/data/mnist",
-            "RuntimeVersion": "tiaserv-1.6.0-cpu",
-            "CreateTime": "2018-04-26 15:59:25 +0800 CST",
-            "State": "Running",
-            "ServingUrl": "140.143.51.230",
-            "Message": "Deployment does not have minimum availability.",
-            "AppId": 1255502019,
-            "ServType": "1U2G0P"
+        'Model': {
+            'Name': "test-model",
+            'Description': "test-model",
+            'Cluster': "ap-beijing",
+            'Model': "cos://test-1255502019.cos.ap-shanghai.myqcloud.com/example:/data/mnist",
+            'RuntimeVersion': "tiaserv-1.6.0-cpu",
+            'CreateTime': "2018-04-26 15:59:25 +0800 CST",
+            'State': 'Running',
+            'ServingUrl': "140.143.51.230",
+            'Message': "Deployment does not have minimum availability.",
+            'AppId': 1255502019,
+            'ServType': '1U2G0P'
         },
  *
  * @method string getName() 获取模型名称
@@ -179,68 +179,68 @@ class Model extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
-            $this->Description = $param["Description"];
+        if (array_key_exists('Description',$param) and $param['Description'] !== null) {
+            $this->Description = $param['Description'];
         }
 
-        if (array_key_exists("Cluster",$param) and $param["Cluster"] !== null) {
-            $this->Cluster = $param["Cluster"];
+        if (array_key_exists('Cluster',$param) and $param['Cluster'] !== null) {
+            $this->Cluster = $param['Cluster'];
         }
 
-        if (array_key_exists("Model",$param) and $param["Model"] !== null) {
-            $this->Model = $param["Model"];
+        if (array_key_exists('Model',$param) and $param['Model'] !== null) {
+            $this->Model = $param['Model'];
         }
 
-        if (array_key_exists("RuntimeVersion",$param) and $param["RuntimeVersion"] !== null) {
-            $this->RuntimeVersion = $param["RuntimeVersion"];
+        if (array_key_exists('RuntimeVersion',$param) and $param['RuntimeVersion'] !== null) {
+            $this->RuntimeVersion = $param['RuntimeVersion'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("State",$param) and $param["State"] !== null) {
-            $this->State = $param["State"];
+        if (array_key_exists('State',$param) and $param['State'] !== null) {
+            $this->State = $param['State'];
         }
 
-        if (array_key_exists("ServingUrl",$param) and $param["ServingUrl"] !== null) {
-            $this->ServingUrl = $param["ServingUrl"];
+        if (array_key_exists('ServingUrl',$param) and $param['ServingUrl'] !== null) {
+            $this->ServingUrl = $param['ServingUrl'];
         }
 
-        if (array_key_exists("Message",$param) and $param["Message"] !== null) {
-            $this->Message = $param["Message"];
+        if (array_key_exists('Message',$param) and $param['Message'] !== null) {
+            $this->Message = $param['Message'];
         }
 
-        if (array_key_exists("AppId",$param) and $param["AppId"] !== null) {
-            $this->AppId = $param["AppId"];
+        if (array_key_exists('AppId',$param) and $param['AppId'] !== null) {
+            $this->AppId = $param['AppId'];
         }
 
-        if (array_key_exists("ServType",$param) and $param["ServType"] !== null) {
-            $this->ServType = $param["ServType"];
+        if (array_key_exists('ServType',$param) and $param['ServType'] !== null) {
+            $this->ServType = $param['ServType'];
         }
 
-        if (array_key_exists("Expose",$param) and $param["Expose"] !== null) {
-            $this->Expose = $param["Expose"];
+        if (array_key_exists('Expose',$param) and $param['Expose'] !== null) {
+            $this->Expose = $param['Expose'];
         }
 
-        if (array_key_exists("Replicas",$param) and $param["Replicas"] !== null) {
-            $this->Replicas = $param["Replicas"];
+        if (array_key_exists('Replicas',$param) and $param['Replicas'] !== null) {
+            $this->Replicas = $param['Replicas'];
         }
 
-        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
-            $this->Id = $param["Id"];
+        if (array_key_exists('Id',$param) and $param['Id'] !== null) {
+            $this->Id = $param['Id'];
         }
 
-        if (array_key_exists("Uin",$param) and $param["Uin"] !== null) {
-            $this->Uin = $param["Uin"];
+        if (array_key_exists('Uin',$param) and $param['Uin'] !== null) {
+            $this->Uin = $param['Uin'];
         }
 
-        if (array_key_exists("DelTime",$param) and $param["DelTime"] !== null) {
-            $this->DelTime = $param["DelTime"];
+        if (array_key_exists('DelTime',$param) and $param['DelTime'] !== null) {
+            $this->DelTime = $param['DelTime'];
         }
     }
 }

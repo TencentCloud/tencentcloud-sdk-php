@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -62,22 +62,22 @@ class EditMediaTaskInput extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InputType",$param) and $param["InputType"] !== null) {
-            $this->InputType = $param["InputType"];
+        if (array_key_exists('InputType',$param) and $param['InputType'] !== null) {
+            $this->InputType = $param['InputType'];
         }
 
-        if (array_key_exists("FileInfoSet",$param) and $param["FileInfoSet"] !== null) {
+        if (array_key_exists('FileInfoSet',$param) and $param['FileInfoSet'] !== null) {
             $this->FileInfoSet = [];
-            foreach ($param["FileInfoSet"] as $key => $value){
+            foreach ($param['FileInfoSet'] as $key => $value){
                 $obj = new EditMediaFileInfo();
                 $obj->deserialize($value);
                 array_push($this->FileInfoSet, $obj);
             }
         }
 
-        if (array_key_exists("StreamInfoSet",$param) and $param["StreamInfoSet"] !== null) {
+        if (array_key_exists('StreamInfoSet',$param) and $param['StreamInfoSet'] !== null) {
             $this->StreamInfoSet = [];
-            foreach ($param["StreamInfoSet"] as $key => $value){
+            foreach ($param['StreamInfoSet'] as $key => $value){
                 $obj = new EditMediaStreamInfo();
                 $obj->deserialize($value);
                 array_push($this->StreamInfoSet, $obj);

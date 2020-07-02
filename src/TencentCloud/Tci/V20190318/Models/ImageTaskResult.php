@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -142,69 +142,69 @@ class ImageTaskResult extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ActionInfo",$param) and $param["ActionInfo"] !== null) {
+        if (array_key_exists('ActionInfo',$param) and $param['ActionInfo'] !== null) {
             $this->ActionInfo = new ActionInfo();
-            $this->ActionInfo->deserialize($param["ActionInfo"]);
+            $this->ActionInfo->deserialize($param['ActionInfo']);
         }
 
-        if (array_key_exists("FaceAttr",$param) and $param["FaceAttr"] !== null) {
+        if (array_key_exists('FaceAttr',$param) and $param['FaceAttr'] !== null) {
             $this->FaceAttr = new FaceAttrResult();
-            $this->FaceAttr->deserialize($param["FaceAttr"]);
+            $this->FaceAttr->deserialize($param['FaceAttr']);
         }
 
-        if (array_key_exists("FaceExpression",$param) and $param["FaceExpression"] !== null) {
+        if (array_key_exists('FaceExpression',$param) and $param['FaceExpression'] !== null) {
             $this->FaceExpression = new FaceExpressionResult();
-            $this->FaceExpression->deserialize($param["FaceExpression"]);
+            $this->FaceExpression->deserialize($param['FaceExpression']);
         }
 
-        if (array_key_exists("FaceIdentify",$param) and $param["FaceIdentify"] !== null) {
+        if (array_key_exists('FaceIdentify',$param) and $param['FaceIdentify'] !== null) {
             $this->FaceIdentify = new FaceIdentifyResult();
-            $this->FaceIdentify->deserialize($param["FaceIdentify"]);
+            $this->FaceIdentify->deserialize($param['FaceIdentify']);
         }
 
-        if (array_key_exists("FaceInfo",$param) and $param["FaceInfo"] !== null) {
+        if (array_key_exists('FaceInfo',$param) and $param['FaceInfo'] !== null) {
             $this->FaceInfo = new FaceInfoResult();
-            $this->FaceInfo->deserialize($param["FaceInfo"]);
+            $this->FaceInfo->deserialize($param['FaceInfo']);
         }
 
-        if (array_key_exists("FacePose",$param) and $param["FacePose"] !== null) {
+        if (array_key_exists('FacePose',$param) and $param['FacePose'] !== null) {
             $this->FacePose = new FacePoseResult();
-            $this->FacePose->deserialize($param["FacePose"]);
+            $this->FacePose->deserialize($param['FacePose']);
         }
 
-        if (array_key_exists("Gesture",$param) and $param["Gesture"] !== null) {
+        if (array_key_exists('Gesture',$param) and $param['Gesture'] !== null) {
             $this->Gesture = new GestureResult();
-            $this->Gesture->deserialize($param["Gesture"]);
+            $this->Gesture->deserialize($param['Gesture']);
         }
 
-        if (array_key_exists("HandTracking",$param) and $param["HandTracking"] !== null) {
+        if (array_key_exists('HandTracking',$param) and $param['HandTracking'] !== null) {
             $this->HandTracking = new HandTrackingResult();
-            $this->HandTracking->deserialize($param["HandTracking"]);
+            $this->HandTracking->deserialize($param['HandTracking']);
         }
 
-        if (array_key_exists("Light",$param) and $param["Light"] !== null) {
+        if (array_key_exists('Light',$param) and $param['Light'] !== null) {
             $this->Light = new LightResult();
-            $this->Light->deserialize($param["Light"]);
+            $this->Light->deserialize($param['Light']);
         }
 
-        if (array_key_exists("StudentBodyMovement",$param) and $param["StudentBodyMovement"] !== null) {
+        if (array_key_exists('StudentBodyMovement',$param) and $param['StudentBodyMovement'] !== null) {
             $this->StudentBodyMovement = new StudentBodyMovementResult();
-            $this->StudentBodyMovement->deserialize($param["StudentBodyMovement"]);
+            $this->StudentBodyMovement->deserialize($param['StudentBodyMovement']);
         }
 
-        if (array_key_exists("TeacherBodyMovement",$param) and $param["TeacherBodyMovement"] !== null) {
+        if (array_key_exists('TeacherBodyMovement',$param) and $param['TeacherBodyMovement'] !== null) {
             $this->TeacherBodyMovement = new BodyMovementResult();
-            $this->TeacherBodyMovement->deserialize($param["TeacherBodyMovement"]);
+            $this->TeacherBodyMovement->deserialize($param['TeacherBodyMovement']);
         }
 
-        if (array_key_exists("TeacherOutScreen",$param) and $param["TeacherOutScreen"] !== null) {
+        if (array_key_exists('TeacherOutScreen',$param) and $param['TeacherOutScreen'] !== null) {
             $this->TeacherOutScreen = new TeacherOutScreenResult();
-            $this->TeacherOutScreen->deserialize($param["TeacherOutScreen"]);
+            $this->TeacherOutScreen->deserialize($param['TeacherOutScreen']);
         }
 
-        if (array_key_exists("TimeInfo",$param) and $param["TimeInfo"] !== null) {
+        if (array_key_exists('TimeInfo',$param) and $param['TimeInfo'] !== null) {
             $this->TimeInfo = new TimeInfoResult();
-            $this->TimeInfo->deserialize($param["TimeInfo"]);
+            $this->TimeInfo->deserialize($param['TimeInfo']);
         }
     }
 }

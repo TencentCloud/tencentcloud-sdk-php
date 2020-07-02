@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -102,40 +102,40 @@ class NewResourceSpec extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MasterResourceSpec",$param) and $param["MasterResourceSpec"] !== null) {
+        if (array_key_exists('MasterResourceSpec',$param) and $param['MasterResourceSpec'] !== null) {
             $this->MasterResourceSpec = new Resource();
-            $this->MasterResourceSpec->deserialize($param["MasterResourceSpec"]);
+            $this->MasterResourceSpec->deserialize($param['MasterResourceSpec']);
         }
 
-        if (array_key_exists("CoreResourceSpec",$param) and $param["CoreResourceSpec"] !== null) {
+        if (array_key_exists('CoreResourceSpec',$param) and $param['CoreResourceSpec'] !== null) {
             $this->CoreResourceSpec = new Resource();
-            $this->CoreResourceSpec->deserialize($param["CoreResourceSpec"]);
+            $this->CoreResourceSpec->deserialize($param['CoreResourceSpec']);
         }
 
-        if (array_key_exists("TaskResourceSpec",$param) and $param["TaskResourceSpec"] !== null) {
+        if (array_key_exists('TaskResourceSpec',$param) and $param['TaskResourceSpec'] !== null) {
             $this->TaskResourceSpec = new Resource();
-            $this->TaskResourceSpec->deserialize($param["TaskResourceSpec"]);
+            $this->TaskResourceSpec->deserialize($param['TaskResourceSpec']);
         }
 
-        if (array_key_exists("MasterCount",$param) and $param["MasterCount"] !== null) {
-            $this->MasterCount = $param["MasterCount"];
+        if (array_key_exists('MasterCount',$param) and $param['MasterCount'] !== null) {
+            $this->MasterCount = $param['MasterCount'];
         }
 
-        if (array_key_exists("CoreCount",$param) and $param["CoreCount"] !== null) {
-            $this->CoreCount = $param["CoreCount"];
+        if (array_key_exists('CoreCount',$param) and $param['CoreCount'] !== null) {
+            $this->CoreCount = $param['CoreCount'];
         }
 
-        if (array_key_exists("TaskCount",$param) and $param["TaskCount"] !== null) {
-            $this->TaskCount = $param["TaskCount"];
+        if (array_key_exists('TaskCount',$param) and $param['TaskCount'] !== null) {
+            $this->TaskCount = $param['TaskCount'];
         }
 
-        if (array_key_exists("CommonResourceSpec",$param) and $param["CommonResourceSpec"] !== null) {
+        if (array_key_exists('CommonResourceSpec',$param) and $param['CommonResourceSpec'] !== null) {
             $this->CommonResourceSpec = new Resource();
-            $this->CommonResourceSpec->deserialize($param["CommonResourceSpec"]);
+            $this->CommonResourceSpec->deserialize($param['CommonResourceSpec']);
         }
 
-        if (array_key_exists("CommonCount",$param) and $param["CommonCount"] !== null) {
-            $this->CommonCount = $param["CommonCount"];
+        if (array_key_exists('CommonCount',$param) and $param['CommonCount'] !== null) {
+            $this->CommonCount = $param['CommonCount'];
         }
     }
 }

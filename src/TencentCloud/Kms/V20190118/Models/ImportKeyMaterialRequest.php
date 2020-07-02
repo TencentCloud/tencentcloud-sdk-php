@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -70,20 +70,20 @@ class ImportKeyMaterialRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("EncryptedKeyMaterial",$param) and $param["EncryptedKeyMaterial"] !== null) {
-            $this->EncryptedKeyMaterial = $param["EncryptedKeyMaterial"];
+        if (array_key_exists('EncryptedKeyMaterial',$param) and $param['EncryptedKeyMaterial'] !== null) {
+            $this->EncryptedKeyMaterial = $param['EncryptedKeyMaterial'];
         }
 
-        if (array_key_exists("ImportToken",$param) and $param["ImportToken"] !== null) {
-            $this->ImportToken = $param["ImportToken"];
+        if (array_key_exists('ImportToken',$param) and $param['ImportToken'] !== null) {
+            $this->ImportToken = $param['ImportToken'];
         }
 
-        if (array_key_exists("KeyId",$param) and $param["KeyId"] !== null) {
-            $this->KeyId = $param["KeyId"];
+        if (array_key_exists('KeyId',$param) and $param['KeyId'] !== null) {
+            $this->KeyId = $param['KeyId'];
         }
 
-        if (array_key_exists("ValidTo",$param) and $param["ValidTo"] !== null) {
-            $this->ValidTo = $param["ValidTo"];
+        if (array_key_exists('ValidTo',$param) and $param['ValidTo'] !== null) {
+            $this->ValidTo = $param['ValidTo'];
         }
     }
 }

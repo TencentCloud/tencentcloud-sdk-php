@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -102,36 +102,36 @@ class CatReturnDetail extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("IspName",$param) and $param["IspName"] !== null) {
-            $this->IspName = $param["IspName"];
+        if (array_key_exists('IspName',$param) and $param['IspName'] !== null) {
+            $this->IspName = $param['IspName'];
         }
 
-        if (array_key_exists("Province",$param) and $param["Province"] !== null) {
-            $this->Province = $param["Province"];
+        if (array_key_exists('Province',$param) and $param['Province'] !== null) {
+            $this->Province = $param['Province'];
         }
 
-        if (array_key_exists("ProvinceName",$param) and $param["ProvinceName"] !== null) {
-            $this->ProvinceName = $param["ProvinceName"];
+        if (array_key_exists('ProvinceName',$param) and $param['ProvinceName'] !== null) {
+            $this->ProvinceName = $param['ProvinceName'];
         }
 
-        if (array_key_exists("MapKey",$param) and $param["MapKey"] !== null) {
-            $this->MapKey = $param["MapKey"];
+        if (array_key_exists('MapKey',$param) and $param['MapKey'] !== null) {
+            $this->MapKey = $param['MapKey'];
         }
 
-        if (array_key_exists("ServerIp",$param) and $param["ServerIp"] !== null) {
-            $this->ServerIp = $param["ServerIp"];
+        if (array_key_exists('ServerIp',$param) and $param['ServerIp'] !== null) {
+            $this->ServerIp = $param['ServerIp'];
         }
 
-        if (array_key_exists("ResultCount",$param) and $param["ResultCount"] !== null) {
-            $this->ResultCount = $param["ResultCount"];
+        if (array_key_exists('ResultCount',$param) and $param['ResultCount'] !== null) {
+            $this->ResultCount = $param['ResultCount'];
         }
 
-        if (array_key_exists("ResultCode",$param) and $param["ResultCode"] !== null) {
-            $this->ResultCode = $param["ResultCode"];
+        if (array_key_exists('ResultCode',$param) and $param['ResultCode'] !== null) {
+            $this->ResultCode = $param['ResultCode'];
         }
 
-        if (array_key_exists("ErrorReason",$param) and $param["ErrorReason"] !== null) {
-            $this->ErrorReason = $param["ErrorReason"];
+        if (array_key_exists('ErrorReason',$param) and $param['ErrorReason'] !== null) {
+            $this->ErrorReason = $param['ErrorReason'];
         }
     }
 }

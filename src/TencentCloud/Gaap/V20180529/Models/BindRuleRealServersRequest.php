@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -66,13 +66,13 @@ class BindRuleRealServersRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RuleId",$param) and $param["RuleId"] !== null) {
-            $this->RuleId = $param["RuleId"];
+        if (array_key_exists('RuleId',$param) and $param['RuleId'] !== null) {
+            $this->RuleId = $param['RuleId'];
         }
 
-        if (array_key_exists("RealServerBindSet",$param) and $param["RealServerBindSet"] !== null) {
+        if (array_key_exists('RealServerBindSet',$param) and $param['RealServerBindSet'] !== null) {
             $this->RealServerBindSet = [];
-            foreach ($param["RealServerBindSet"] as $key => $value){
+            foreach ($param['RealServerBindSet'] as $key => $value){
                 $obj = new RealServerBindSetReq();
                 $obj->deserialize($value);
                 array_push($this->RealServerBindSet, $obj);

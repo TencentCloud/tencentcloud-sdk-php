@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -78,24 +78,24 @@ class GatewayFlowMonitorDetail extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PrivateIpAddress",$param) and $param["PrivateIpAddress"] !== null) {
-            $this->PrivateIpAddress = $param["PrivateIpAddress"];
+        if (array_key_exists('PrivateIpAddress',$param) and $param['PrivateIpAddress'] !== null) {
+            $this->PrivateIpAddress = $param['PrivateIpAddress'];
         }
 
-        if (array_key_exists("InPkg",$param) and $param["InPkg"] !== null) {
-            $this->InPkg = $param["InPkg"];
+        if (array_key_exists('InPkg',$param) and $param['InPkg'] !== null) {
+            $this->InPkg = $param['InPkg'];
         }
 
-        if (array_key_exists("OutPkg",$param) and $param["OutPkg"] !== null) {
-            $this->OutPkg = $param["OutPkg"];
+        if (array_key_exists('OutPkg',$param) and $param['OutPkg'] !== null) {
+            $this->OutPkg = $param['OutPkg'];
         }
 
-        if (array_key_exists("InTraffic",$param) and $param["InTraffic"] !== null) {
-            $this->InTraffic = $param["InTraffic"];
+        if (array_key_exists('InTraffic',$param) and $param['InTraffic'] !== null) {
+            $this->InTraffic = $param['InTraffic'];
         }
 
-        if (array_key_exists("OutTraffic",$param) and $param["OutTraffic"] !== null) {
-            $this->OutTraffic = $param["OutTraffic"];
+        if (array_key_exists('OutTraffic',$param) and $param['OutTraffic'] !== null) {
+            $this->OutTraffic = $param['OutTraffic'];
         }
     }
 }

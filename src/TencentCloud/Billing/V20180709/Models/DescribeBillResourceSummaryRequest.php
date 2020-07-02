@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -90,28 +90,28 @@ class DescribeBillResourceSummaryRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
+        if (array_key_exists('Offset',$param) and $param['Offset'] !== null) {
+            $this->Offset = $param['Offset'];
         }
 
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
+        if (array_key_exists('Limit',$param) and $param['Limit'] !== null) {
+            $this->Limit = $param['Limit'];
         }
 
-        if (array_key_exists("PeriodType",$param) and $param["PeriodType"] !== null) {
-            $this->PeriodType = $param["PeriodType"];
+        if (array_key_exists('PeriodType',$param) and $param['PeriodType'] !== null) {
+            $this->PeriodType = $param['PeriodType'];
         }
 
-        if (array_key_exists("Month",$param) and $param["Month"] !== null) {
-            $this->Month = $param["Month"];
+        if (array_key_exists('Month',$param) and $param['Month'] !== null) {
+            $this->Month = $param['Month'];
         }
 
-        if (array_key_exists("NeedRecordNum",$param) and $param["NeedRecordNum"] !== null) {
-            $this->NeedRecordNum = $param["NeedRecordNum"];
+        if (array_key_exists('NeedRecordNum',$param) and $param['NeedRecordNum'] !== null) {
+            $this->NeedRecordNum = $param['NeedRecordNum'];
         }
 
-        if (array_key_exists("ActionType",$param) and $param["ActionType"] !== null) {
-            $this->ActionType = $param["ActionType"];
+        if (array_key_exists('ActionType',$param) and $param['ActionType'] !== null) {
+            $this->ActionType = $param['ActionType'];
         }
     }
 }

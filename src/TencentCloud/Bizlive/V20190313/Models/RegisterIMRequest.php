@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -70,20 +70,20 @@ class RegisterIMRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Nickname",$param) and $param["Nickname"] !== null) {
-            $this->Nickname = $param["Nickname"];
+        if (array_key_exists('Nickname',$param) and $param['Nickname'] !== null) {
+            $this->Nickname = $param['Nickname'];
         }
 
-        if (array_key_exists("UserId",$param) and $param["UserId"] !== null) {
-            $this->UserId = $param["UserId"];
+        if (array_key_exists('UserId',$param) and $param['UserId'] !== null) {
+            $this->UserId = $param['UserId'];
         }
 
-        if (array_key_exists("HeadImgUrl",$param) and $param["HeadImgUrl"] !== null) {
-            $this->HeadImgUrl = $param["HeadImgUrl"];
+        if (array_key_exists('HeadImgUrl',$param) and $param['HeadImgUrl'] !== null) {
+            $this->HeadImgUrl = $param['HeadImgUrl'];
         }
 
-        if (array_key_exists("Level",$param) and $param["Level"] !== null) {
-            $this->Level = $param["Level"];
+        if (array_key_exists('Level',$param) and $param['Level'] !== null) {
+            $this->Level = $param['Level'];
         }
     }
 }

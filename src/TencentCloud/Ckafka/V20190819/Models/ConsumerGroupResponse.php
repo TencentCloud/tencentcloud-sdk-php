@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -130,57 +130,57 @@ class ConsumerGroupResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("TopicList",$param) and $param["TopicList"] !== null) {
+        if (array_key_exists('TopicList',$param) and $param['TopicList'] !== null) {
             $this->TopicList = [];
-            foreach ($param["TopicList"] as $key => $value){
+            foreach ($param['TopicList'] as $key => $value){
                 $obj = new ConsumerGroupTopic();
                 $obj->deserialize($value);
                 array_push($this->TopicList, $obj);
             }
         }
 
-        if (array_key_exists("GroupList",$param) and $param["GroupList"] !== null) {
+        if (array_key_exists('GroupList',$param) and $param['GroupList'] !== null) {
             $this->GroupList = [];
-            foreach ($param["GroupList"] as $key => $value){
+            foreach ($param['GroupList'] as $key => $value){
                 $obj = new ConsumerGroup();
                 $obj->deserialize($value);
                 array_push($this->GroupList, $obj);
             }
         }
 
-        if (array_key_exists("TotalPartition",$param) and $param["TotalPartition"] !== null) {
-            $this->TotalPartition = $param["TotalPartition"];
+        if (array_key_exists('TotalPartition',$param) and $param['TotalPartition'] !== null) {
+            $this->TotalPartition = $param['TotalPartition'];
         }
 
-        if (array_key_exists("PartitionListForMonitor",$param) and $param["PartitionListForMonitor"] !== null) {
+        if (array_key_exists('PartitionListForMonitor',$param) and $param['PartitionListForMonitor'] !== null) {
             $this->PartitionListForMonitor = [];
-            foreach ($param["PartitionListForMonitor"] as $key => $value){
+            foreach ($param['PartitionListForMonitor'] as $key => $value){
                 $obj = new Partition();
                 $obj->deserialize($value);
                 array_push($this->PartitionListForMonitor, $obj);
             }
         }
 
-        if (array_key_exists("TotalTopic",$param) and $param["TotalTopic"] !== null) {
-            $this->TotalTopic = $param["TotalTopic"];
+        if (array_key_exists('TotalTopic',$param) and $param['TotalTopic'] !== null) {
+            $this->TotalTopic = $param['TotalTopic'];
         }
 
-        if (array_key_exists("TopicListForMonitor",$param) and $param["TopicListForMonitor"] !== null) {
+        if (array_key_exists('TopicListForMonitor',$param) and $param['TopicListForMonitor'] !== null) {
             $this->TopicListForMonitor = [];
-            foreach ($param["TopicListForMonitor"] as $key => $value){
+            foreach ($param['TopicListForMonitor'] as $key => $value){
                 $obj = new ConsumerGroupTopic();
                 $obj->deserialize($value);
                 array_push($this->TopicListForMonitor, $obj);
             }
         }
 
-        if (array_key_exists("GroupListForMonitor",$param) and $param["GroupListForMonitor"] !== null) {
+        if (array_key_exists('GroupListForMonitor',$param) and $param['GroupListForMonitor'] !== null) {
             $this->GroupListForMonitor = [];
-            foreach ($param["GroupListForMonitor"] as $key => $value){
+            foreach ($param['GroupListForMonitor'] as $key => $value){
                 $obj = new Group();
                 $obj->deserialize($value);
                 array_push($this->GroupListForMonitor, $obj);

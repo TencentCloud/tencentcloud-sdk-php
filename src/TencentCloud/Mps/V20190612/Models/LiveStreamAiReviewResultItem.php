@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -94,40 +94,40 @@ class LiveStreamAiReviewResultItem extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists('Type',$param) and $param['Type'] !== null) {
+            $this->Type = $param['Type'];
         }
 
-        if (array_key_exists("ImagePornResultSet",$param) and $param["ImagePornResultSet"] !== null) {
+        if (array_key_exists('ImagePornResultSet',$param) and $param['ImagePornResultSet'] !== null) {
             $this->ImagePornResultSet = [];
-            foreach ($param["ImagePornResultSet"] as $key => $value){
+            foreach ($param['ImagePornResultSet'] as $key => $value){
                 $obj = new LiveStreamAiReviewImagePornResult();
                 $obj->deserialize($value);
                 array_push($this->ImagePornResultSet, $obj);
             }
         }
 
-        if (array_key_exists("ImageTerrorismResultSet",$param) and $param["ImageTerrorismResultSet"] !== null) {
+        if (array_key_exists('ImageTerrorismResultSet',$param) and $param['ImageTerrorismResultSet'] !== null) {
             $this->ImageTerrorismResultSet = [];
-            foreach ($param["ImageTerrorismResultSet"] as $key => $value){
+            foreach ($param['ImageTerrorismResultSet'] as $key => $value){
                 $obj = new LiveStreamAiReviewImageTerrorismResult();
                 $obj->deserialize($value);
                 array_push($this->ImageTerrorismResultSet, $obj);
             }
         }
 
-        if (array_key_exists("ImagePoliticalResultSet",$param) and $param["ImagePoliticalResultSet"] !== null) {
+        if (array_key_exists('ImagePoliticalResultSet',$param) and $param['ImagePoliticalResultSet'] !== null) {
             $this->ImagePoliticalResultSet = [];
-            foreach ($param["ImagePoliticalResultSet"] as $key => $value){
+            foreach ($param['ImagePoliticalResultSet'] as $key => $value){
                 $obj = new LiveStreamAiReviewImagePoliticalResult();
                 $obj->deserialize($value);
                 array_push($this->ImagePoliticalResultSet, $obj);
             }
         }
 
-        if (array_key_exists("VoicePornResultSet",$param) and $param["VoicePornResultSet"] !== null) {
+        if (array_key_exists('VoicePornResultSet',$param) and $param['VoicePornResultSet'] !== null) {
             $this->VoicePornResultSet = [];
-            foreach ($param["VoicePornResultSet"] as $key => $value){
+            foreach ($param['VoicePornResultSet'] as $key => $value){
                 $obj = new LiveStreamAiReviewVoicePornResult();
                 $obj->deserialize($value);
                 array_push($this->VoicePornResultSet, $obj);

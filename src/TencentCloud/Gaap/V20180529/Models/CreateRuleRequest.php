@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -114,41 +114,41 @@ class CreateRuleRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ListenerId",$param) and $param["ListenerId"] !== null) {
-            $this->ListenerId = $param["ListenerId"];
+        if (array_key_exists('ListenerId',$param) and $param['ListenerId'] !== null) {
+            $this->ListenerId = $param['ListenerId'];
         }
 
-        if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
-            $this->Domain = $param["Domain"];
+        if (array_key_exists('Domain',$param) and $param['Domain'] !== null) {
+            $this->Domain = $param['Domain'];
         }
 
-        if (array_key_exists("Path",$param) and $param["Path"] !== null) {
-            $this->Path = $param["Path"];
+        if (array_key_exists('Path',$param) and $param['Path'] !== null) {
+            $this->Path = $param['Path'];
         }
 
-        if (array_key_exists("RealServerType",$param) and $param["RealServerType"] !== null) {
-            $this->RealServerType = $param["RealServerType"];
+        if (array_key_exists('RealServerType',$param) and $param['RealServerType'] !== null) {
+            $this->RealServerType = $param['RealServerType'];
         }
 
-        if (array_key_exists("Scheduler",$param) and $param["Scheduler"] !== null) {
-            $this->Scheduler = $param["Scheduler"];
+        if (array_key_exists('Scheduler',$param) and $param['Scheduler'] !== null) {
+            $this->Scheduler = $param['Scheduler'];
         }
 
-        if (array_key_exists("HealthCheck",$param) and $param["HealthCheck"] !== null) {
-            $this->HealthCheck = $param["HealthCheck"];
+        if (array_key_exists('HealthCheck',$param) and $param['HealthCheck'] !== null) {
+            $this->HealthCheck = $param['HealthCheck'];
         }
 
-        if (array_key_exists("CheckParams",$param) and $param["CheckParams"] !== null) {
+        if (array_key_exists('CheckParams',$param) and $param['CheckParams'] !== null) {
             $this->CheckParams = new RuleCheckParams();
-            $this->CheckParams->deserialize($param["CheckParams"]);
+            $this->CheckParams->deserialize($param['CheckParams']);
         }
 
-        if (array_key_exists("ForwardProtocol",$param) and $param["ForwardProtocol"] !== null) {
-            $this->ForwardProtocol = $param["ForwardProtocol"];
+        if (array_key_exists('ForwardProtocol',$param) and $param['ForwardProtocol'] !== null) {
+            $this->ForwardProtocol = $param['ForwardProtocol'];
         }
 
-        if (array_key_exists("ForwardHost",$param) and $param["ForwardHost"] !== null) {
-            $this->ForwardHost = $param["ForwardHost"];
+        if (array_key_exists('ForwardHost',$param) and $param['ForwardHost'] !== null) {
+            $this->ForwardHost = $param['ForwardHost'];
         }
     }
 }

@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -78,24 +78,24 @@ class Get400CdrRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BizAppId",$param) and $param["BizAppId"] !== null) {
-            $this->BizAppId = $param["BizAppId"];
+        if (array_key_exists('BizAppId',$param) and $param['BizAppId'] !== null) {
+            $this->BizAppId = $param['BizAppId'];
         }
 
-        if (array_key_exists("CallId",$param) and $param["CallId"] !== null) {
-            $this->CallId = $param["CallId"];
+        if (array_key_exists('CallId',$param) and $param['CallId'] !== null) {
+            $this->CallId = $param['CallId'];
         }
 
-        if (array_key_exists("Src",$param) and $param["Src"] !== null) {
-            $this->Src = $param["Src"];
+        if (array_key_exists('Src',$param) and $param['Src'] !== null) {
+            $this->Src = $param['Src'];
         }
 
-        if (array_key_exists("StartTimeStamp",$param) and $param["StartTimeStamp"] !== null) {
-            $this->StartTimeStamp = $param["StartTimeStamp"];
+        if (array_key_exists('StartTimeStamp',$param) and $param['StartTimeStamp'] !== null) {
+            $this->StartTimeStamp = $param['StartTimeStamp'];
         }
 
-        if (array_key_exists("EndTimeStamp",$param) and $param["EndTimeStamp"] !== null) {
-            $this->EndTimeStamp = $param["EndTimeStamp"];
+        if (array_key_exists('EndTimeStamp',$param) and $param['EndTimeStamp'] !== null) {
+            $this->EndTimeStamp = $param['EndTimeStamp'];
         }
     }
 }

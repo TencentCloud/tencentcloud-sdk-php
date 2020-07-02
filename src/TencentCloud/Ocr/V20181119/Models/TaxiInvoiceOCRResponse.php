@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -150,56 +150,56 @@ class TaxiInvoiceOCRResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InvoiceNum",$param) and $param["InvoiceNum"] !== null) {
-            $this->InvoiceNum = $param["InvoiceNum"];
+        if (array_key_exists('InvoiceNum',$param) and $param['InvoiceNum'] !== null) {
+            $this->InvoiceNum = $param['InvoiceNum'];
         }
 
-        if (array_key_exists("InvoiceCode",$param) and $param["InvoiceCode"] !== null) {
-            $this->InvoiceCode = $param["InvoiceCode"];
+        if (array_key_exists('InvoiceCode',$param) and $param['InvoiceCode'] !== null) {
+            $this->InvoiceCode = $param['InvoiceCode'];
         }
 
-        if (array_key_exists("Date",$param) and $param["Date"] !== null) {
-            $this->Date = $param["Date"];
+        if (array_key_exists('Date',$param) and $param['Date'] !== null) {
+            $this->Date = $param['Date'];
         }
 
-        if (array_key_exists("Fare",$param) and $param["Fare"] !== null) {
-            $this->Fare = $param["Fare"];
+        if (array_key_exists('Fare',$param) and $param['Fare'] !== null) {
+            $this->Fare = $param['Fare'];
         }
 
-        if (array_key_exists("GetOnTime",$param) and $param["GetOnTime"] !== null) {
-            $this->GetOnTime = $param["GetOnTime"];
+        if (array_key_exists('GetOnTime',$param) and $param['GetOnTime'] !== null) {
+            $this->GetOnTime = $param['GetOnTime'];
         }
 
-        if (array_key_exists("GetOffTime",$param) and $param["GetOffTime"] !== null) {
-            $this->GetOffTime = $param["GetOffTime"];
+        if (array_key_exists('GetOffTime',$param) and $param['GetOffTime'] !== null) {
+            $this->GetOffTime = $param['GetOffTime'];
         }
 
-        if (array_key_exists("Distance",$param) and $param["Distance"] !== null) {
-            $this->Distance = $param["Distance"];
+        if (array_key_exists('Distance',$param) and $param['Distance'] !== null) {
+            $this->Distance = $param['Distance'];
         }
 
-        if (array_key_exists("Location",$param) and $param["Location"] !== null) {
-            $this->Location = $param["Location"];
+        if (array_key_exists('Location',$param) and $param['Location'] !== null) {
+            $this->Location = $param['Location'];
         }
 
-        if (array_key_exists("PlateNumber",$param) and $param["PlateNumber"] !== null) {
-            $this->PlateNumber = $param["PlateNumber"];
+        if (array_key_exists('PlateNumber',$param) and $param['PlateNumber'] !== null) {
+            $this->PlateNumber = $param['PlateNumber'];
         }
 
-        if (array_key_exists("InvoiceType",$param) and $param["InvoiceType"] !== null) {
-            $this->InvoiceType = $param["InvoiceType"];
+        if (array_key_exists('InvoiceType',$param) and $param['InvoiceType'] !== null) {
+            $this->InvoiceType = $param['InvoiceType'];
         }
 
-        if (array_key_exists("Province",$param) and $param["Province"] !== null) {
-            $this->Province = $param["Province"];
+        if (array_key_exists('Province',$param) and $param['Province'] !== null) {
+            $this->Province = $param['Province'];
         }
 
-        if (array_key_exists("City",$param) and $param["City"] !== null) {
-            $this->City = $param["City"];
+        if (array_key_exists('City',$param) and $param['City'] !== null) {
+            $this->City = $param['City'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

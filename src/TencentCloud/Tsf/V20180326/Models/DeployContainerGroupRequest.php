@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -230,100 +230,100 @@ class DeployContainerGroupRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
-            $this->GroupId = $param["GroupId"];
+        if (array_key_exists('GroupId',$param) and $param['GroupId'] !== null) {
+            $this->GroupId = $param['GroupId'];
         }
 
-        if (array_key_exists("Server",$param) and $param["Server"] !== null) {
-            $this->Server = $param["Server"];
+        if (array_key_exists('Server',$param) and $param['Server'] !== null) {
+            $this->Server = $param['Server'];
         }
 
-        if (array_key_exists("TagName",$param) and $param["TagName"] !== null) {
-            $this->TagName = $param["TagName"];
+        if (array_key_exists('TagName',$param) and $param['TagName'] !== null) {
+            $this->TagName = $param['TagName'];
         }
 
-        if (array_key_exists("InstanceNum",$param) and $param["InstanceNum"] !== null) {
-            $this->InstanceNum = $param["InstanceNum"];
+        if (array_key_exists('InstanceNum',$param) and $param['InstanceNum'] !== null) {
+            $this->InstanceNum = $param['InstanceNum'];
         }
 
-        if (array_key_exists("Reponame",$param) and $param["Reponame"] !== null) {
-            $this->Reponame = $param["Reponame"];
+        if (array_key_exists('Reponame',$param) and $param['Reponame'] !== null) {
+            $this->Reponame = $param['Reponame'];
         }
 
-        if (array_key_exists("CpuLimit",$param) and $param["CpuLimit"] !== null) {
-            $this->CpuLimit = $param["CpuLimit"];
+        if (array_key_exists('CpuLimit',$param) and $param['CpuLimit'] !== null) {
+            $this->CpuLimit = $param['CpuLimit'];
         }
 
-        if (array_key_exists("MemLimit",$param) and $param["MemLimit"] !== null) {
-            $this->MemLimit = $param["MemLimit"];
+        if (array_key_exists('MemLimit',$param) and $param['MemLimit'] !== null) {
+            $this->MemLimit = $param['MemLimit'];
         }
 
-        if (array_key_exists("JvmOpts",$param) and $param["JvmOpts"] !== null) {
-            $this->JvmOpts = $param["JvmOpts"];
+        if (array_key_exists('JvmOpts',$param) and $param['JvmOpts'] !== null) {
+            $this->JvmOpts = $param['JvmOpts'];
         }
 
-        if (array_key_exists("CpuRequest",$param) and $param["CpuRequest"] !== null) {
-            $this->CpuRequest = $param["CpuRequest"];
+        if (array_key_exists('CpuRequest',$param) and $param['CpuRequest'] !== null) {
+            $this->CpuRequest = $param['CpuRequest'];
         }
 
-        if (array_key_exists("MemRequest",$param) and $param["MemRequest"] !== null) {
-            $this->MemRequest = $param["MemRequest"];
+        if (array_key_exists('MemRequest',$param) and $param['MemRequest'] !== null) {
+            $this->MemRequest = $param['MemRequest'];
         }
 
-        if (array_key_exists("DoNotStart",$param) and $param["DoNotStart"] !== null) {
-            $this->DoNotStart = $param["DoNotStart"];
+        if (array_key_exists('DoNotStart',$param) and $param['DoNotStart'] !== null) {
+            $this->DoNotStart = $param['DoNotStart'];
         }
 
-        if (array_key_exists("RepoName",$param) and $param["RepoName"] !== null) {
-            $this->RepoName = $param["RepoName"];
+        if (array_key_exists('RepoName',$param) and $param['RepoName'] !== null) {
+            $this->RepoName = $param['RepoName'];
         }
 
-        if (array_key_exists("UpdateType",$param) and $param["UpdateType"] !== null) {
-            $this->UpdateType = $param["UpdateType"];
+        if (array_key_exists('UpdateType',$param) and $param['UpdateType'] !== null) {
+            $this->UpdateType = $param['UpdateType'];
         }
 
-        if (array_key_exists("UpdateIvl",$param) and $param["UpdateIvl"] !== null) {
-            $this->UpdateIvl = $param["UpdateIvl"];
+        if (array_key_exists('UpdateIvl',$param) and $param['UpdateIvl'] !== null) {
+            $this->UpdateIvl = $param['UpdateIvl'];
         }
 
-        if (array_key_exists("AgentCpuRequest",$param) and $param["AgentCpuRequest"] !== null) {
-            $this->AgentCpuRequest = $param["AgentCpuRequest"];
+        if (array_key_exists('AgentCpuRequest',$param) and $param['AgentCpuRequest'] !== null) {
+            $this->AgentCpuRequest = $param['AgentCpuRequest'];
         }
 
-        if (array_key_exists("AgentCpuLimit",$param) and $param["AgentCpuLimit"] !== null) {
-            $this->AgentCpuLimit = $param["AgentCpuLimit"];
+        if (array_key_exists('AgentCpuLimit',$param) and $param['AgentCpuLimit'] !== null) {
+            $this->AgentCpuLimit = $param['AgentCpuLimit'];
         }
 
-        if (array_key_exists("AgentMemRequest",$param) and $param["AgentMemRequest"] !== null) {
-            $this->AgentMemRequest = $param["AgentMemRequest"];
+        if (array_key_exists('AgentMemRequest',$param) and $param['AgentMemRequest'] !== null) {
+            $this->AgentMemRequest = $param['AgentMemRequest'];
         }
 
-        if (array_key_exists("AgentMemLimit",$param) and $param["AgentMemLimit"] !== null) {
-            $this->AgentMemLimit = $param["AgentMemLimit"];
+        if (array_key_exists('AgentMemLimit',$param) and $param['AgentMemLimit'] !== null) {
+            $this->AgentMemLimit = $param['AgentMemLimit'];
         }
 
-        if (array_key_exists("IstioCpuRequest",$param) and $param["IstioCpuRequest"] !== null) {
-            $this->IstioCpuRequest = $param["IstioCpuRequest"];
+        if (array_key_exists('IstioCpuRequest',$param) and $param['IstioCpuRequest'] !== null) {
+            $this->IstioCpuRequest = $param['IstioCpuRequest'];
         }
 
-        if (array_key_exists("IstioCpuLimit",$param) and $param["IstioCpuLimit"] !== null) {
-            $this->IstioCpuLimit = $param["IstioCpuLimit"];
+        if (array_key_exists('IstioCpuLimit',$param) and $param['IstioCpuLimit'] !== null) {
+            $this->IstioCpuLimit = $param['IstioCpuLimit'];
         }
 
-        if (array_key_exists("IstioMemRequest",$param) and $param["IstioMemRequest"] !== null) {
-            $this->IstioMemRequest = $param["IstioMemRequest"];
+        if (array_key_exists('IstioMemRequest',$param) and $param['IstioMemRequest'] !== null) {
+            $this->IstioMemRequest = $param['IstioMemRequest'];
         }
 
-        if (array_key_exists("IstioMemLimit",$param) and $param["IstioMemLimit"] !== null) {
-            $this->IstioMemLimit = $param["IstioMemLimit"];
+        if (array_key_exists('IstioMemLimit',$param) and $param['IstioMemLimit'] !== null) {
+            $this->IstioMemLimit = $param['IstioMemLimit'];
         }
 
-        if (array_key_exists("MaxSurge",$param) and $param["MaxSurge"] !== null) {
-            $this->MaxSurge = $param["MaxSurge"];
+        if (array_key_exists('MaxSurge',$param) and $param['MaxSurge'] !== null) {
+            $this->MaxSurge = $param['MaxSurge'];
         }
 
-        if (array_key_exists("MaxUnavailable",$param) and $param["MaxUnavailable"] !== null) {
-            $this->MaxUnavailable = $param["MaxUnavailable"];
+        if (array_key_exists('MaxUnavailable',$param) and $param['MaxUnavailable'] !== null) {
+            $this->MaxUnavailable = $param['MaxUnavailable'];
         }
     }
 }

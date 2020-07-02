@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -58,15 +58,15 @@ OPEN：公网属性， INTERNAL：内网属性。
 基础网络可传入'0'。
  * @method string getSecurityGroup() 获取安全组ID，如 sg-m1cc9123
  * @method void setSecurityGroup(string $SecurityGroup) 设置安全组ID，如 sg-m1cc9123
- * @method string getMasterZone() 获取主可用区ID，如 ："100001" （对应的是广州一区）
- * @method void setMasterZone(string $MasterZone) 设置主可用区ID，如 ："100001" （对应的是广州一区）
+ * @method string getMasterZone() 获取主可用区ID，如 ：'100001' （对应的是广州一区）
+ * @method void setMasterZone(string $MasterZone) 设置主可用区ID，如 ：'100001' （对应的是广州一区）
  * @method array getFilters() 获取每次请求的`Filters`的上限为10，`Filter.Values`的上限为100。详细的过滤条件如下：
 <li> internet-charge-type - String - 是否必填：否 - （过滤条件）按照 CLB 的网络计费模式过滤，包括"BANDWIDTH_PREPAID","TRAFFIC_POSTPAID_BY_HOUR","BANDWIDTH_POSTPAID_BY_HOUR","BANDWIDTH_PACKAGE"。</li>
-<li> master-zone-id - String - 是否必填：否 - （过滤条件）按照 CLB 的主可用区ID过滤，如 ："100001" （对应的是广州一区）。</li>
+<li> master-zone-id - String - 是否必填：否 - （过滤条件）按照 CLB 的主可用区ID过滤，如 ：'100001' （对应的是广州一区）。</li>
 <li> tag-key - String - 是否必填：否 - （过滤条件）按照 CLB 标签的键过滤。</li>
  * @method void setFilters(array $Filters) 设置每次请求的`Filters`的上限为10，`Filter.Values`的上限为100。详细的过滤条件如下：
 <li> internet-charge-type - String - 是否必填：否 - （过滤条件）按照 CLB 的网络计费模式过滤，包括"BANDWIDTH_PREPAID","TRAFFIC_POSTPAID_BY_HOUR","BANDWIDTH_POSTPAID_BY_HOUR","BANDWIDTH_PACKAGE"。</li>
-<li> master-zone-id - String - 是否必填：否 - （过滤条件）按照 CLB 的主可用区ID过滤，如 ："100001" （对应的是广州一区）。</li>
+<li> master-zone-id - String - 是否必填：否 - （过滤条件）按照 CLB 的主可用区ID过滤，如 ：'100001' （对应的是广州一区）。</li>
 <li> tag-key - String - 是否必填：否 - （过滤条件）按照 CLB 标签的键过滤。</li>
  */
 class DescribeLoadBalancersRequest extends AbstractModel
@@ -159,14 +159,14 @@ OPEN：公网属性， INTERNAL：内网属性。
     public $SecurityGroup;
 
     /**
-     * @var string 主可用区ID，如 ："100001" （对应的是广州一区）
+     * @var string 主可用区ID，如 ：'100001' （对应的是广州一区）
      */
     public $MasterZone;
 
     /**
      * @var array 每次请求的`Filters`的上限为10，`Filter.Values`的上限为100。详细的过滤条件如下：
 <li> internet-charge-type - String - 是否必填：否 - （过滤条件）按照 CLB 的网络计费模式过滤，包括"BANDWIDTH_PREPAID","TRAFFIC_POSTPAID_BY_HOUR","BANDWIDTH_POSTPAID_BY_HOUR","BANDWIDTH_PACKAGE"。</li>
-<li> master-zone-id - String - 是否必填：否 - （过滤条件）按照 CLB 的主可用区ID过滤，如 ："100001" （对应的是广州一区）。</li>
+<li> master-zone-id - String - 是否必填：否 - （过滤条件）按照 CLB 的主可用区ID过滤，如 ：'100001' （对应的是广州一区）。</li>
 <li> tag-key - String - 是否必填：否 - （过滤条件）按照 CLB 标签的键过滤。</li>
      */
     public $Filters;
@@ -191,10 +191,10 @@ OPEN：公网属性， INTERNAL：内网属性。
      * @param string $VpcId 负载均衡实例所属私有网络唯一ID，如 vpc-bhqkbhdx，
 基础网络可传入'0'。
      * @param string $SecurityGroup 安全组ID，如 sg-m1cc9123
-     * @param string $MasterZone 主可用区ID，如 ："100001" （对应的是广州一区）
+     * @param string $MasterZone 主可用区ID，如 ：'100001' （对应的是广州一区）
      * @param array $Filters 每次请求的`Filters`的上限为10，`Filter.Values`的上限为100。详细的过滤条件如下：
 <li> internet-charge-type - String - 是否必填：否 - （过滤条件）按照 CLB 的网络计费模式过滤，包括"BANDWIDTH_PREPAID","TRAFFIC_POSTPAID_BY_HOUR","BANDWIDTH_POSTPAID_BY_HOUR","BANDWIDTH_PACKAGE"。</li>
-<li> master-zone-id - String - 是否必填：否 - （过滤条件）按照 CLB 的主可用区ID过滤，如 ："100001" （对应的是广州一区）。</li>
+<li> master-zone-id - String - 是否必填：否 - （过滤条件）按照 CLB 的主可用区ID过滤，如 ：'100001' （对应的是广州一区）。</li>
 <li> tag-key - String - 是否必填：否 - （过滤条件）按照 CLB 标签的键过滤。</li>
      */
     function __construct()
@@ -210,81 +210,81 @@ OPEN：公网属性， INTERNAL：内网属性。
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LoadBalancerIds",$param) and $param["LoadBalancerIds"] !== null) {
-            $this->LoadBalancerIds = $param["LoadBalancerIds"];
+        if (array_key_exists('LoadBalancerIds',$param) and $param['LoadBalancerIds'] !== null) {
+            $this->LoadBalancerIds = $param['LoadBalancerIds'];
         }
 
-        if (array_key_exists("LoadBalancerType",$param) and $param["LoadBalancerType"] !== null) {
-            $this->LoadBalancerType = $param["LoadBalancerType"];
+        if (array_key_exists('LoadBalancerType',$param) and $param['LoadBalancerType'] !== null) {
+            $this->LoadBalancerType = $param['LoadBalancerType'];
         }
 
-        if (array_key_exists("Forward",$param) and $param["Forward"] !== null) {
-            $this->Forward = $param["Forward"];
+        if (array_key_exists('Forward',$param) and $param['Forward'] !== null) {
+            $this->Forward = $param['Forward'];
         }
 
-        if (array_key_exists("LoadBalancerName",$param) and $param["LoadBalancerName"] !== null) {
-            $this->LoadBalancerName = $param["LoadBalancerName"];
+        if (array_key_exists('LoadBalancerName',$param) and $param['LoadBalancerName'] !== null) {
+            $this->LoadBalancerName = $param['LoadBalancerName'];
         }
 
-        if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
-            $this->Domain = $param["Domain"];
+        if (array_key_exists('Domain',$param) and $param['Domain'] !== null) {
+            $this->Domain = $param['Domain'];
         }
 
-        if (array_key_exists("LoadBalancerVips",$param) and $param["LoadBalancerVips"] !== null) {
-            $this->LoadBalancerVips = $param["LoadBalancerVips"];
+        if (array_key_exists('LoadBalancerVips',$param) and $param['LoadBalancerVips'] !== null) {
+            $this->LoadBalancerVips = $param['LoadBalancerVips'];
         }
 
-        if (array_key_exists("BackendPublicIps",$param) and $param["BackendPublicIps"] !== null) {
-            $this->BackendPublicIps = $param["BackendPublicIps"];
+        if (array_key_exists('BackendPublicIps',$param) and $param['BackendPublicIps'] !== null) {
+            $this->BackendPublicIps = $param['BackendPublicIps'];
         }
 
-        if (array_key_exists("BackendPrivateIps",$param) and $param["BackendPrivateIps"] !== null) {
-            $this->BackendPrivateIps = $param["BackendPrivateIps"];
+        if (array_key_exists('BackendPrivateIps',$param) and $param['BackendPrivateIps'] !== null) {
+            $this->BackendPrivateIps = $param['BackendPrivateIps'];
         }
 
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
+        if (array_key_exists('Offset',$param) and $param['Offset'] !== null) {
+            $this->Offset = $param['Offset'];
         }
 
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
+        if (array_key_exists('Limit',$param) and $param['Limit'] !== null) {
+            $this->Limit = $param['Limit'];
         }
 
-        if (array_key_exists("OrderBy",$param) and $param["OrderBy"] !== null) {
-            $this->OrderBy = $param["OrderBy"];
+        if (array_key_exists('OrderBy',$param) and $param['OrderBy'] !== null) {
+            $this->OrderBy = $param['OrderBy'];
         }
 
-        if (array_key_exists("OrderType",$param) and $param["OrderType"] !== null) {
-            $this->OrderType = $param["OrderType"];
+        if (array_key_exists('OrderType',$param) and $param['OrderType'] !== null) {
+            $this->OrderType = $param['OrderType'];
         }
 
-        if (array_key_exists("SearchKey",$param) and $param["SearchKey"] !== null) {
-            $this->SearchKey = $param["SearchKey"];
+        if (array_key_exists('SearchKey',$param) and $param['SearchKey'] !== null) {
+            $this->SearchKey = $param['SearchKey'];
         }
 
-        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
-            $this->ProjectId = $param["ProjectId"];
+        if (array_key_exists('ProjectId',$param) and $param['ProjectId'] !== null) {
+            $this->ProjectId = $param['ProjectId'];
         }
 
-        if (array_key_exists("WithRs",$param) and $param["WithRs"] !== null) {
-            $this->WithRs = $param["WithRs"];
+        if (array_key_exists('WithRs',$param) and $param['WithRs'] !== null) {
+            $this->WithRs = $param['WithRs'];
         }
 
-        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
-            $this->VpcId = $param["VpcId"];
+        if (array_key_exists('VpcId',$param) and $param['VpcId'] !== null) {
+            $this->VpcId = $param['VpcId'];
         }
 
-        if (array_key_exists("SecurityGroup",$param) and $param["SecurityGroup"] !== null) {
-            $this->SecurityGroup = $param["SecurityGroup"];
+        if (array_key_exists('SecurityGroup',$param) and $param['SecurityGroup'] !== null) {
+            $this->SecurityGroup = $param['SecurityGroup'];
         }
 
-        if (array_key_exists("MasterZone",$param) and $param["MasterZone"] !== null) {
-            $this->MasterZone = $param["MasterZone"];
+        if (array_key_exists('MasterZone',$param) and $param['MasterZone'] !== null) {
+            $this->MasterZone = $param['MasterZone'];
         }
 
-        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+        if (array_key_exists('Filters',$param) and $param['Filters'] !== null) {
             $this->Filters = [];
-            foreach ($param["Filters"] as $key => $value){
+            foreach ($param['Filters'] as $key => $value){
                 $obj = new Filter();
                 $obj->deserialize($value);
                 array_push($this->Filters, $obj);

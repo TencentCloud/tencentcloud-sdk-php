@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -138,52 +138,52 @@ USER_ATTACHED：用户添加到计算环境中的实例资源。
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ComputeNodeId",$param) and $param["ComputeNodeId"] !== null) {
-            $this->ComputeNodeId = $param["ComputeNodeId"];
+        if (array_key_exists('ComputeNodeId',$param) and $param['ComputeNodeId'] !== null) {
+            $this->ComputeNodeId = $param['ComputeNodeId'];
         }
 
-        if (array_key_exists("ComputeNodeInstanceId",$param) and $param["ComputeNodeInstanceId"] !== null) {
-            $this->ComputeNodeInstanceId = $param["ComputeNodeInstanceId"];
+        if (array_key_exists('ComputeNodeInstanceId',$param) and $param['ComputeNodeInstanceId'] !== null) {
+            $this->ComputeNodeInstanceId = $param['ComputeNodeInstanceId'];
         }
 
-        if (array_key_exists("ComputeNodeState",$param) and $param["ComputeNodeState"] !== null) {
-            $this->ComputeNodeState = $param["ComputeNodeState"];
+        if (array_key_exists('ComputeNodeState',$param) and $param['ComputeNodeState'] !== null) {
+            $this->ComputeNodeState = $param['ComputeNodeState'];
         }
 
-        if (array_key_exists("Cpu",$param) and $param["Cpu"] !== null) {
-            $this->Cpu = $param["Cpu"];
+        if (array_key_exists('Cpu',$param) and $param['Cpu'] !== null) {
+            $this->Cpu = $param['Cpu'];
         }
 
-        if (array_key_exists("Mem",$param) and $param["Mem"] !== null) {
-            $this->Mem = $param["Mem"];
+        if (array_key_exists('Mem',$param) and $param['Mem'] !== null) {
+            $this->Mem = $param['Mem'];
         }
 
-        if (array_key_exists("ResourceCreatedTime",$param) and $param["ResourceCreatedTime"] !== null) {
-            $this->ResourceCreatedTime = $param["ResourceCreatedTime"];
+        if (array_key_exists('ResourceCreatedTime',$param) and $param['ResourceCreatedTime'] !== null) {
+            $this->ResourceCreatedTime = $param['ResourceCreatedTime'];
         }
 
-        if (array_key_exists("TaskInstanceNumAvailable",$param) and $param["TaskInstanceNumAvailable"] !== null) {
-            $this->TaskInstanceNumAvailable = $param["TaskInstanceNumAvailable"];
+        if (array_key_exists('TaskInstanceNumAvailable',$param) and $param['TaskInstanceNumAvailable'] !== null) {
+            $this->TaskInstanceNumAvailable = $param['TaskInstanceNumAvailable'];
         }
 
-        if (array_key_exists("AgentVersion",$param) and $param["AgentVersion"] !== null) {
-            $this->AgentVersion = $param["AgentVersion"];
+        if (array_key_exists('AgentVersion',$param) and $param['AgentVersion'] !== null) {
+            $this->AgentVersion = $param['AgentVersion'];
         }
 
-        if (array_key_exists("PrivateIpAddresses",$param) and $param["PrivateIpAddresses"] !== null) {
-            $this->PrivateIpAddresses = $param["PrivateIpAddresses"];
+        if (array_key_exists('PrivateIpAddresses',$param) and $param['PrivateIpAddresses'] !== null) {
+            $this->PrivateIpAddresses = $param['PrivateIpAddresses'];
         }
 
-        if (array_key_exists("PublicIpAddresses",$param) and $param["PublicIpAddresses"] !== null) {
-            $this->PublicIpAddresses = $param["PublicIpAddresses"];
+        if (array_key_exists('PublicIpAddresses',$param) and $param['PublicIpAddresses'] !== null) {
+            $this->PublicIpAddresses = $param['PublicIpAddresses'];
         }
 
-        if (array_key_exists("ResourceType",$param) and $param["ResourceType"] !== null) {
-            $this->ResourceType = $param["ResourceType"];
+        if (array_key_exists('ResourceType',$param) and $param['ResourceType'] !== null) {
+            $this->ResourceType = $param['ResourceType'];
         }
 
-        if (array_key_exists("ResourceOrigin",$param) and $param["ResourceOrigin"] !== null) {
-            $this->ResourceOrigin = $param["ResourceOrigin"];
+        if (array_key_exists('ResourceOrigin',$param) and $param['ResourceOrigin'] !== null) {
+            $this->ResourceOrigin = $param['ResourceOrigin'];
         }
     }
 }

@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -106,37 +106,37 @@ class InquiryPriceCreateProxyResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ProxyDailyPrice",$param) and $param["ProxyDailyPrice"] !== null) {
-            $this->ProxyDailyPrice = $param["ProxyDailyPrice"];
+        if (array_key_exists('ProxyDailyPrice',$param) and $param['ProxyDailyPrice'] !== null) {
+            $this->ProxyDailyPrice = $param['ProxyDailyPrice'];
         }
 
-        if (array_key_exists("BandwidthUnitPrice",$param) and $param["BandwidthUnitPrice"] !== null) {
+        if (array_key_exists('BandwidthUnitPrice',$param) and $param['BandwidthUnitPrice'] !== null) {
             $this->BandwidthUnitPrice = [];
-            foreach ($param["BandwidthUnitPrice"] as $key => $value){
+            foreach ($param['BandwidthUnitPrice'] as $key => $value){
                 $obj = new BandwidthPriceGradient();
                 $obj->deserialize($value);
                 array_push($this->BandwidthUnitPrice, $obj);
             }
         }
 
-        if (array_key_exists("DiscountProxyDailyPrice",$param) and $param["DiscountProxyDailyPrice"] !== null) {
-            $this->DiscountProxyDailyPrice = $param["DiscountProxyDailyPrice"];
+        if (array_key_exists('DiscountProxyDailyPrice',$param) and $param['DiscountProxyDailyPrice'] !== null) {
+            $this->DiscountProxyDailyPrice = $param['DiscountProxyDailyPrice'];
         }
 
-        if (array_key_exists("Currency",$param) and $param["Currency"] !== null) {
-            $this->Currency = $param["Currency"];
+        if (array_key_exists('Currency',$param) and $param['Currency'] !== null) {
+            $this->Currency = $param['Currency'];
         }
 
-        if (array_key_exists("FlowUnitPrice",$param) and $param["FlowUnitPrice"] !== null) {
-            $this->FlowUnitPrice = $param["FlowUnitPrice"];
+        if (array_key_exists('FlowUnitPrice',$param) and $param['FlowUnitPrice'] !== null) {
+            $this->FlowUnitPrice = $param['FlowUnitPrice'];
         }
 
-        if (array_key_exists("DiscountFlowUnitPrice",$param) and $param["DiscountFlowUnitPrice"] !== null) {
-            $this->DiscountFlowUnitPrice = $param["DiscountFlowUnitPrice"];
+        if (array_key_exists('DiscountFlowUnitPrice',$param) and $param['DiscountFlowUnitPrice'] !== null) {
+            $this->DiscountFlowUnitPrice = $param['DiscountFlowUnitPrice'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

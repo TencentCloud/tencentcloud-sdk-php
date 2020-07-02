@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -94,32 +94,32 @@ class PullSmsReplyStatus extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ExtendCode",$param) and $param["ExtendCode"] !== null) {
-            $this->ExtendCode = $param["ExtendCode"];
+        if (array_key_exists('ExtendCode',$param) and $param['ExtendCode'] !== null) {
+            $this->ExtendCode = $param['ExtendCode'];
         }
 
-        if (array_key_exists("NationCode",$param) and $param["NationCode"] !== null) {
-            $this->NationCode = $param["NationCode"];
+        if (array_key_exists('NationCode',$param) and $param['NationCode'] !== null) {
+            $this->NationCode = $param['NationCode'];
         }
 
-        if (array_key_exists("PhoneNumber",$param) and $param["PhoneNumber"] !== null) {
-            $this->PhoneNumber = $param["PhoneNumber"];
+        if (array_key_exists('PhoneNumber',$param) and $param['PhoneNumber'] !== null) {
+            $this->PhoneNumber = $param['PhoneNumber'];
         }
 
-        if (array_key_exists("Sign",$param) and $param["Sign"] !== null) {
-            $this->Sign = $param["Sign"];
+        if (array_key_exists('Sign',$param) and $param['Sign'] !== null) {
+            $this->Sign = $param['Sign'];
         }
 
-        if (array_key_exists("ReplyContent",$param) and $param["ReplyContent"] !== null) {
-            $this->ReplyContent = $param["ReplyContent"];
+        if (array_key_exists('ReplyContent',$param) and $param['ReplyContent'] !== null) {
+            $this->ReplyContent = $param['ReplyContent'];
         }
 
-        if (array_key_exists("ReplyTime",$param) and $param["ReplyTime"] !== null) {
-            $this->ReplyTime = $param["ReplyTime"];
+        if (array_key_exists('ReplyTime',$param) and $param['ReplyTime'] !== null) {
+            $this->ReplyTime = $param['ReplyTime'];
         }
 
-        if (array_key_exists("ReplyUnixTime",$param) and $param["ReplyUnixTime"] !== null) {
-            $this->ReplyUnixTime = $param["ReplyUnixTime"];
+        if (array_key_exists('ReplyUnixTime',$param) and $param['ReplyUnixTime'] !== null) {
+            $this->ReplyUnixTime = $param['ReplyUnixTime'];
         }
     }
 }

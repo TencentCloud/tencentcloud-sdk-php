@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -194,56 +194,56 @@ class Instance extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("AutoScalingGroupId",$param) and $param["AutoScalingGroupId"] !== null) {
-            $this->AutoScalingGroupId = $param["AutoScalingGroupId"];
+        if (array_key_exists('AutoScalingGroupId',$param) and $param['AutoScalingGroupId'] !== null) {
+            $this->AutoScalingGroupId = $param['AutoScalingGroupId'];
         }
 
-        if (array_key_exists("LaunchConfigurationId",$param) and $param["LaunchConfigurationId"] !== null) {
-            $this->LaunchConfigurationId = $param["LaunchConfigurationId"];
+        if (array_key_exists('LaunchConfigurationId',$param) and $param['LaunchConfigurationId'] !== null) {
+            $this->LaunchConfigurationId = $param['LaunchConfigurationId'];
         }
 
-        if (array_key_exists("LaunchConfigurationName",$param) and $param["LaunchConfigurationName"] !== null) {
-            $this->LaunchConfigurationName = $param["LaunchConfigurationName"];
+        if (array_key_exists('LaunchConfigurationName',$param) and $param['LaunchConfigurationName'] !== null) {
+            $this->LaunchConfigurationName = $param['LaunchConfigurationName'];
         }
 
-        if (array_key_exists("LifeCycleState",$param) and $param["LifeCycleState"] !== null) {
-            $this->LifeCycleState = $param["LifeCycleState"];
+        if (array_key_exists('LifeCycleState',$param) and $param['LifeCycleState'] !== null) {
+            $this->LifeCycleState = $param['LifeCycleState'];
         }
 
-        if (array_key_exists("HealthStatus",$param) and $param["HealthStatus"] !== null) {
-            $this->HealthStatus = $param["HealthStatus"];
+        if (array_key_exists('HealthStatus',$param) and $param['HealthStatus'] !== null) {
+            $this->HealthStatus = $param['HealthStatus'];
         }
 
-        if (array_key_exists("ProtectedFromScaleIn",$param) and $param["ProtectedFromScaleIn"] !== null) {
-            $this->ProtectedFromScaleIn = $param["ProtectedFromScaleIn"];
+        if (array_key_exists('ProtectedFromScaleIn',$param) and $param['ProtectedFromScaleIn'] !== null) {
+            $this->ProtectedFromScaleIn = $param['ProtectedFromScaleIn'];
         }
 
-        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
-            $this->Zone = $param["Zone"];
+        if (array_key_exists('Zone',$param) and $param['Zone'] !== null) {
+            $this->Zone = $param['Zone'];
         }
 
-        if (array_key_exists("CreationType",$param) and $param["CreationType"] !== null) {
-            $this->CreationType = $param["CreationType"];
+        if (array_key_exists('CreationType',$param) and $param['CreationType'] !== null) {
+            $this->CreationType = $param['CreationType'];
         }
 
-        if (array_key_exists("AddTime",$param) and $param["AddTime"] !== null) {
-            $this->AddTime = $param["AddTime"];
+        if (array_key_exists('AddTime',$param) and $param['AddTime'] !== null) {
+            $this->AddTime = $param['AddTime'];
         }
 
-        if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
-            $this->InstanceType = $param["InstanceType"];
+        if (array_key_exists('InstanceType',$param) and $param['InstanceType'] !== null) {
+            $this->InstanceType = $param['InstanceType'];
         }
 
-        if (array_key_exists("VersionNumber",$param) and $param["VersionNumber"] !== null) {
-            $this->VersionNumber = $param["VersionNumber"];
+        if (array_key_exists('VersionNumber',$param) and $param['VersionNumber'] !== null) {
+            $this->VersionNumber = $param['VersionNumber'];
         }
 
-        if (array_key_exists("AutoScalingGroupName",$param) and $param["AutoScalingGroupName"] !== null) {
-            $this->AutoScalingGroupName = $param["AutoScalingGroupName"];
+        if (array_key_exists('AutoScalingGroupName',$param) and $param['AutoScalingGroupName'] !== null) {
+            $this->AutoScalingGroupName = $param['AutoScalingGroupName'];
         }
     }
 }

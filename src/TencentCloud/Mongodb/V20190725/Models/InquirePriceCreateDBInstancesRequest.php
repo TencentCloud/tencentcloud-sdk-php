@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -118,44 +118,44 @@ class InquirePriceCreateDBInstancesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
-            $this->Zone = $param["Zone"];
+        if (array_key_exists('Zone',$param) and $param['Zone'] !== null) {
+            $this->Zone = $param['Zone'];
         }
 
-        if (array_key_exists("NodeNum",$param) and $param["NodeNum"] !== null) {
-            $this->NodeNum = $param["NodeNum"];
+        if (array_key_exists('NodeNum',$param) and $param['NodeNum'] !== null) {
+            $this->NodeNum = $param['NodeNum'];
         }
 
-        if (array_key_exists("Memory",$param) and $param["Memory"] !== null) {
-            $this->Memory = $param["Memory"];
+        if (array_key_exists('Memory',$param) and $param['Memory'] !== null) {
+            $this->Memory = $param['Memory'];
         }
 
-        if (array_key_exists("Volume",$param) and $param["Volume"] !== null) {
-            $this->Volume = $param["Volume"];
+        if (array_key_exists('Volume',$param) and $param['Volume'] !== null) {
+            $this->Volume = $param['Volume'];
         }
 
-        if (array_key_exists("MongoVersion",$param) and $param["MongoVersion"] !== null) {
-            $this->MongoVersion = $param["MongoVersion"];
+        if (array_key_exists('MongoVersion',$param) and $param['MongoVersion'] !== null) {
+            $this->MongoVersion = $param['MongoVersion'];
         }
 
-        if (array_key_exists("MachineCode",$param) and $param["MachineCode"] !== null) {
-            $this->MachineCode = $param["MachineCode"];
+        if (array_key_exists('MachineCode',$param) and $param['MachineCode'] !== null) {
+            $this->MachineCode = $param['MachineCode'];
         }
 
-        if (array_key_exists("GoodsNum",$param) and $param["GoodsNum"] !== null) {
-            $this->GoodsNum = $param["GoodsNum"];
+        if (array_key_exists('GoodsNum',$param) and $param['GoodsNum'] !== null) {
+            $this->GoodsNum = $param['GoodsNum'];
         }
 
-        if (array_key_exists("Period",$param) and $param["Period"] !== null) {
-            $this->Period = $param["Period"];
+        if (array_key_exists('Period',$param) and $param['Period'] !== null) {
+            $this->Period = $param['Period'];
         }
 
-        if (array_key_exists("ClusterType",$param) and $param["ClusterType"] !== null) {
-            $this->ClusterType = $param["ClusterType"];
+        if (array_key_exists('ClusterType',$param) and $param['ClusterType'] !== null) {
+            $this->ClusterType = $param['ClusterType'];
         }
 
-        if (array_key_exists("ReplicateSetNum",$param) and $param["ReplicateSetNum"] !== null) {
-            $this->ReplicateSetNum = $param["ReplicateSetNum"];
+        if (array_key_exists('ReplicateSetNum',$param) and $param['ReplicateSetNum'] !== null) {
+            $this->ReplicateSetNum = $param['ReplicateSetNum'];
         }
     }
 }

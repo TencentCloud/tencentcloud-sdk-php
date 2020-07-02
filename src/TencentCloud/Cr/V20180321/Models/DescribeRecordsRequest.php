@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -118,44 +118,44 @@ class DescribeRecordsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Module",$param) and $param["Module"] !== null) {
-            $this->Module = $param["Module"];
+        if (array_key_exists('Module',$param) and $param['Module'] !== null) {
+            $this->Module = $param['Module'];
         }
 
-        if (array_key_exists("Operation",$param) and $param["Operation"] !== null) {
-            $this->Operation = $param["Operation"];
+        if (array_key_exists('Operation',$param) and $param['Operation'] !== null) {
+            $this->Operation = $param['Operation'];
         }
 
-        if (array_key_exists("ProductId",$param) and $param["ProductId"] !== null) {
-            $this->ProductId = $param["ProductId"];
+        if (array_key_exists('ProductId',$param) and $param['ProductId'] !== null) {
+            $this->ProductId = $param['ProductId'];
         }
 
-        if (array_key_exists("AccountNum",$param) and $param["AccountNum"] !== null) {
-            $this->AccountNum = $param["AccountNum"];
+        if (array_key_exists('AccountNum',$param) and $param['AccountNum'] !== null) {
+            $this->AccountNum = $param['AccountNum'];
         }
 
-        if (array_key_exists("CalledPhone",$param) and $param["CalledPhone"] !== null) {
-            $this->CalledPhone = $param["CalledPhone"];
+        if (array_key_exists('CalledPhone',$param) and $param['CalledPhone'] !== null) {
+            $this->CalledPhone = $param['CalledPhone'];
         }
 
-        if (array_key_exists("StartBizDate",$param) and $param["StartBizDate"] !== null) {
-            $this->StartBizDate = $param["StartBizDate"];
+        if (array_key_exists('StartBizDate',$param) and $param['StartBizDate'] !== null) {
+            $this->StartBizDate = $param['StartBizDate'];
         }
 
-        if (array_key_exists("EndBizDate",$param) and $param["EndBizDate"] !== null) {
-            $this->EndBizDate = $param["EndBizDate"];
+        if (array_key_exists('EndBizDate',$param) and $param['EndBizDate'] !== null) {
+            $this->EndBizDate = $param['EndBizDate'];
         }
 
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
+        if (array_key_exists('Offset',$param) and $param['Offset'] !== null) {
+            $this->Offset = $param['Offset'];
         }
 
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
+        if (array_key_exists('Limit',$param) and $param['Limit'] !== null) {
+            $this->Limit = $param['Limit'];
         }
 
-        if (array_key_exists("InstId",$param) and $param["InstId"] !== null) {
-            $this->InstId = $param["InstId"];
+        if (array_key_exists('InstId',$param) and $param['InstId'] !== null) {
+            $this->InstId = $param['InstId'];
         }
     }
 }

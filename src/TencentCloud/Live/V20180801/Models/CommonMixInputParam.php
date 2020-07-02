@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -62,18 +62,18 @@ class CommonMixInputParam extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InputStreamName",$param) and $param["InputStreamName"] !== null) {
-            $this->InputStreamName = $param["InputStreamName"];
+        if (array_key_exists('InputStreamName',$param) and $param['InputStreamName'] !== null) {
+            $this->InputStreamName = $param['InputStreamName'];
         }
 
-        if (array_key_exists("LayoutParams",$param) and $param["LayoutParams"] !== null) {
+        if (array_key_exists('LayoutParams',$param) and $param['LayoutParams'] !== null) {
             $this->LayoutParams = new CommonMixLayoutParams();
-            $this->LayoutParams->deserialize($param["LayoutParams"]);
+            $this->LayoutParams->deserialize($param['LayoutParams']);
         }
 
-        if (array_key_exists("CropParams",$param) and $param["CropParams"] !== null) {
+        if (array_key_exists('CropParams',$param) and $param['CropParams'] !== null) {
             $this->CropParams = new CommonMixCropParams();
-            $this->CropParams->deserialize($param["CropParams"]);
+            $this->CropParams->deserialize($param['CropParams']);
         }
     }
 }

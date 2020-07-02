@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -318,107 +318,107 @@ class Job extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
-            $this->Id = $param["Id"];
+        if (array_key_exists('Id',$param) and $param['Id'] !== null) {
+            $this->Id = $param['Id'];
         }
 
-        if (array_key_exists("Cluster",$param) and $param["Cluster"] !== null) {
-            $this->Cluster = $param["Cluster"];
+        if (array_key_exists('Cluster',$param) and $param['Cluster'] !== null) {
+            $this->Cluster = $param['Cluster'];
         }
 
-        if (array_key_exists("Region",$param) and $param["Region"] !== null) {
-            $this->Region = $param["Region"];
+        if (array_key_exists('Region',$param) and $param['Region'] !== null) {
+            $this->Region = $param['Region'];
         }
 
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("Runtime",$param) and $param["Runtime"] !== null) {
-            $this->Runtime = $param["Runtime"];
+        if (array_key_exists('Runtime',$param) and $param['Runtime'] !== null) {
+            $this->Runtime = $param['Runtime'];
         }
 
-        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
-            $this->Description = $param["Description"];
+        if (array_key_exists('Description',$param) and $param['Description'] !== null) {
+            $this->Description = $param['Description'];
         }
 
-        if (array_key_exists("ConfigId",$param) and $param["ConfigId"] !== null) {
-            $this->ConfigId = $param["ConfigId"];
+        if (array_key_exists('ConfigId',$param) and $param['ConfigId'] !== null) {
+            $this->ConfigId = $param['ConfigId'];
         }
 
-        if (array_key_exists("PredictInput",$param) and $param["PredictInput"] !== null) {
+        if (array_key_exists('PredictInput',$param) and $param['PredictInput'] !== null) {
             $this->PredictInput = new PredictInput();
-            $this->PredictInput->deserialize($param["PredictInput"]);
+            $this->PredictInput->deserialize($param['PredictInput']);
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
             $this->Status = new JobStatus();
-            $this->Status->deserialize($param["Status"]);
+            $this->Status->deserialize($param['Status']);
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
-            $this->StartTime = $param["StartTime"];
+        if (array_key_exists('StartTime',$param) and $param['StartTime'] !== null) {
+            $this->StartTime = $param['StartTime'];
         }
 
-        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
-            $this->EndTime = $param["EndTime"];
+        if (array_key_exists('EndTime',$param) and $param['EndTime'] !== null) {
+            $this->EndTime = $param['EndTime'];
         }
 
-        if (array_key_exists("CancelTime",$param) and $param["CancelTime"] !== null) {
-            $this->CancelTime = $param["CancelTime"];
+        if (array_key_exists('CancelTime',$param) and $param['CancelTime'] !== null) {
+            $this->CancelTime = $param['CancelTime'];
         }
 
-        if (array_key_exists("ResourceGroupId",$param) and $param["ResourceGroupId"] !== null) {
-            $this->ResourceGroupId = $param["ResourceGroupId"];
+        if (array_key_exists('ResourceGroupId',$param) and $param['ResourceGroupId'] !== null) {
+            $this->ResourceGroupId = $param['ResourceGroupId'];
         }
 
-        if (array_key_exists("Cpu",$param) and $param["Cpu"] !== null) {
-            $this->Cpu = $param["Cpu"];
+        if (array_key_exists('Cpu',$param) and $param['Cpu'] !== null) {
+            $this->Cpu = $param['Cpu'];
         }
 
-        if (array_key_exists("Memory",$param) and $param["Memory"] !== null) {
-            $this->Memory = $param["Memory"];
+        if (array_key_exists('Memory',$param) and $param['Memory'] !== null) {
+            $this->Memory = $param['Memory'];
         }
 
-        if (array_key_exists("Gpu",$param) and $param["Gpu"] !== null) {
-            $this->Gpu = $param["Gpu"];
+        if (array_key_exists('Gpu',$param) and $param['Gpu'] !== null) {
+            $this->Gpu = $param['Gpu'];
         }
 
-        if (array_key_exists("GpuMemory",$param) and $param["GpuMemory"] !== null) {
-            $this->GpuMemory = $param["GpuMemory"];
+        if (array_key_exists('GpuMemory',$param) and $param['GpuMemory'] !== null) {
+            $this->GpuMemory = $param['GpuMemory'];
         }
 
-        if (array_key_exists("ResourceGroupName",$param) and $param["ResourceGroupName"] !== null) {
-            $this->ResourceGroupName = $param["ResourceGroupName"];
+        if (array_key_exists('ResourceGroupName',$param) and $param['ResourceGroupName'] !== null) {
+            $this->ResourceGroupName = $param['ResourceGroupName'];
         }
 
-        if (array_key_exists("GpuType",$param) and $param["GpuType"] !== null) {
-            $this->GpuType = $param["GpuType"];
+        if (array_key_exists('GpuType',$param) and $param['GpuType'] !== null) {
+            $this->GpuType = $param['GpuType'];
         }
 
-        if (array_key_exists("ConfigName",$param) and $param["ConfigName"] !== null) {
-            $this->ConfigName = $param["ConfigName"];
+        if (array_key_exists('ConfigName',$param) and $param['ConfigName'] !== null) {
+            $this->ConfigName = $param['ConfigName'];
         }
 
-        if (array_key_exists("ConfigVersion",$param) and $param["ConfigVersion"] !== null) {
-            $this->ConfigVersion = $param["ConfigVersion"];
+        if (array_key_exists('ConfigVersion',$param) and $param['ConfigVersion'] !== null) {
+            $this->ConfigVersion = $param['ConfigVersion'];
         }
 
-        if (array_key_exists("JobType",$param) and $param["JobType"] !== null) {
-            $this->JobType = $param["JobType"];
+        if (array_key_exists('JobType',$param) and $param['JobType'] !== null) {
+            $this->JobType = $param['JobType'];
         }
 
-        if (array_key_exists("QuantizationInput",$param) and $param["QuantizationInput"] !== null) {
+        if (array_key_exists('QuantizationInput',$param) and $param['QuantizationInput'] !== null) {
             $this->QuantizationInput = new QuantizationInput();
-            $this->QuantizationInput->deserialize($param["QuantizationInput"]);
+            $this->QuantizationInput->deserialize($param['QuantizationInput']);
         }
 
-        if (array_key_exists("LogTopicId",$param) and $param["LogTopicId"] !== null) {
-            $this->LogTopicId = $param["LogTopicId"];
+        if (array_key_exists('LogTopicId',$param) and $param['LogTopicId'] !== null) {
+            $this->LogTopicId = $param['LogTopicId'];
         }
     }
 }

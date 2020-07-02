@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -246,73 +246,73 @@ class ModifyAutoScalingGroupRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AutoScalingGroupId",$param) and $param["AutoScalingGroupId"] !== null) {
-            $this->AutoScalingGroupId = $param["AutoScalingGroupId"];
+        if (array_key_exists('AutoScalingGroupId',$param) and $param['AutoScalingGroupId'] !== null) {
+            $this->AutoScalingGroupId = $param['AutoScalingGroupId'];
         }
 
-        if (array_key_exists("AutoScalingGroupName",$param) and $param["AutoScalingGroupName"] !== null) {
-            $this->AutoScalingGroupName = $param["AutoScalingGroupName"];
+        if (array_key_exists('AutoScalingGroupName',$param) and $param['AutoScalingGroupName'] !== null) {
+            $this->AutoScalingGroupName = $param['AutoScalingGroupName'];
         }
 
-        if (array_key_exists("DefaultCooldown",$param) and $param["DefaultCooldown"] !== null) {
-            $this->DefaultCooldown = $param["DefaultCooldown"];
+        if (array_key_exists('DefaultCooldown',$param) and $param['DefaultCooldown'] !== null) {
+            $this->DefaultCooldown = $param['DefaultCooldown'];
         }
 
-        if (array_key_exists("DesiredCapacity",$param) and $param["DesiredCapacity"] !== null) {
-            $this->DesiredCapacity = $param["DesiredCapacity"];
+        if (array_key_exists('DesiredCapacity',$param) and $param['DesiredCapacity'] !== null) {
+            $this->DesiredCapacity = $param['DesiredCapacity'];
         }
 
-        if (array_key_exists("LaunchConfigurationId",$param) and $param["LaunchConfigurationId"] !== null) {
-            $this->LaunchConfigurationId = $param["LaunchConfigurationId"];
+        if (array_key_exists('LaunchConfigurationId',$param) and $param['LaunchConfigurationId'] !== null) {
+            $this->LaunchConfigurationId = $param['LaunchConfigurationId'];
         }
 
-        if (array_key_exists("MaxSize",$param) and $param["MaxSize"] !== null) {
-            $this->MaxSize = $param["MaxSize"];
+        if (array_key_exists('MaxSize',$param) and $param['MaxSize'] !== null) {
+            $this->MaxSize = $param['MaxSize'];
         }
 
-        if (array_key_exists("MinSize",$param) and $param["MinSize"] !== null) {
-            $this->MinSize = $param["MinSize"];
+        if (array_key_exists('MinSize',$param) and $param['MinSize'] !== null) {
+            $this->MinSize = $param['MinSize'];
         }
 
-        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
-            $this->ProjectId = $param["ProjectId"];
+        if (array_key_exists('ProjectId',$param) and $param['ProjectId'] !== null) {
+            $this->ProjectId = $param['ProjectId'];
         }
 
-        if (array_key_exists("SubnetIds",$param) and $param["SubnetIds"] !== null) {
-            $this->SubnetIds = $param["SubnetIds"];
+        if (array_key_exists('SubnetIds',$param) and $param['SubnetIds'] !== null) {
+            $this->SubnetIds = $param['SubnetIds'];
         }
 
-        if (array_key_exists("TerminationPolicies",$param) and $param["TerminationPolicies"] !== null) {
-            $this->TerminationPolicies = $param["TerminationPolicies"];
+        if (array_key_exists('TerminationPolicies',$param) and $param['TerminationPolicies'] !== null) {
+            $this->TerminationPolicies = $param['TerminationPolicies'];
         }
 
-        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
-            $this->VpcId = $param["VpcId"];
+        if (array_key_exists('VpcId',$param) and $param['VpcId'] !== null) {
+            $this->VpcId = $param['VpcId'];
         }
 
-        if (array_key_exists("Zones",$param) and $param["Zones"] !== null) {
-            $this->Zones = $param["Zones"];
+        if (array_key_exists('Zones',$param) and $param['Zones'] !== null) {
+            $this->Zones = $param['Zones'];
         }
 
-        if (array_key_exists("RetryPolicy",$param) and $param["RetryPolicy"] !== null) {
-            $this->RetryPolicy = $param["RetryPolicy"];
+        if (array_key_exists('RetryPolicy',$param) and $param['RetryPolicy'] !== null) {
+            $this->RetryPolicy = $param['RetryPolicy'];
         }
 
-        if (array_key_exists("ZonesCheckPolicy",$param) and $param["ZonesCheckPolicy"] !== null) {
-            $this->ZonesCheckPolicy = $param["ZonesCheckPolicy"];
+        if (array_key_exists('ZonesCheckPolicy',$param) and $param['ZonesCheckPolicy'] !== null) {
+            $this->ZonesCheckPolicy = $param['ZonesCheckPolicy'];
         }
 
-        if (array_key_exists("ServiceSettings",$param) and $param["ServiceSettings"] !== null) {
+        if (array_key_exists('ServiceSettings',$param) and $param['ServiceSettings'] !== null) {
             $this->ServiceSettings = new ServiceSettings();
-            $this->ServiceSettings->deserialize($param["ServiceSettings"]);
+            $this->ServiceSettings->deserialize($param['ServiceSettings']);
         }
 
-        if (array_key_exists("Ipv6AddressCount",$param) and $param["Ipv6AddressCount"] !== null) {
-            $this->Ipv6AddressCount = $param["Ipv6AddressCount"];
+        if (array_key_exists('Ipv6AddressCount',$param) and $param['Ipv6AddressCount'] !== null) {
+            $this->Ipv6AddressCount = $param['Ipv6AddressCount'];
         }
 
-        if (array_key_exists("MultiZoneSubnetPolicy",$param) and $param["MultiZoneSubnetPolicy"] !== null) {
-            $this->MultiZoneSubnetPolicy = $param["MultiZoneSubnetPolicy"];
+        if (array_key_exists('MultiZoneSubnetPolicy',$param) and $param['MultiZoneSubnetPolicy'] !== null) {
+            $this->MultiZoneSubnetPolicy = $param['MultiZoneSubnetPolicy'];
         }
     }
 }

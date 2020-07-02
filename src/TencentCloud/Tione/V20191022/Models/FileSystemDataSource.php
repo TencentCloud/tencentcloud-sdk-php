@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -86,20 +86,20 @@ class FileSystemDataSource extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DirectoryPath",$param) and $param["DirectoryPath"] !== null) {
-            $this->DirectoryPath = $param["DirectoryPath"];
+        if (array_key_exists('DirectoryPath',$param) and $param['DirectoryPath'] !== null) {
+            $this->DirectoryPath = $param['DirectoryPath'];
         }
 
-        if (array_key_exists("FileSystemType",$param) and $param["FileSystemType"] !== null) {
-            $this->FileSystemType = $param["FileSystemType"];
+        if (array_key_exists('FileSystemType',$param) and $param['FileSystemType'] !== null) {
+            $this->FileSystemType = $param['FileSystemType'];
         }
 
-        if (array_key_exists("FileSystemAccessMode",$param) and $param["FileSystemAccessMode"] !== null) {
-            $this->FileSystemAccessMode = $param["FileSystemAccessMode"];
+        if (array_key_exists('FileSystemAccessMode',$param) and $param['FileSystemAccessMode'] !== null) {
+            $this->FileSystemAccessMode = $param['FileSystemAccessMode'];
         }
 
-        if (array_key_exists("FileSystemId",$param) and $param["FileSystemId"] !== null) {
-            $this->FileSystemId = $param["FileSystemId"];
+        if (array_key_exists('FileSystemId',$param) and $param['FileSystemId'] !== null) {
+            $this->FileSystemId = $param['FileSystemId'];
         }
     }
 }

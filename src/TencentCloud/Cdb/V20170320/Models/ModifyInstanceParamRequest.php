@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -54,13 +54,13 @@ class ModifyInstanceParamRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceIds",$param) and $param["InstanceIds"] !== null) {
-            $this->InstanceIds = $param["InstanceIds"];
+        if (array_key_exists('InstanceIds',$param) and $param['InstanceIds'] !== null) {
+            $this->InstanceIds = $param['InstanceIds'];
         }
 
-        if (array_key_exists("ParamList",$param) and $param["ParamList"] !== null) {
+        if (array_key_exists('ParamList',$param) and $param['ParamList'] !== null) {
             $this->ParamList = [];
-            foreach ($param["ParamList"] as $key => $value){
+            foreach ($param['ParamList'] as $key => $value){
                 $obj = new Parameter();
                 $obj->deserialize($value);
                 array_push($this->ParamList, $obj);

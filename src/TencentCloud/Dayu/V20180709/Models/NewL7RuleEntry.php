@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -234,105 +234,105 @@ class NewL7RuleEntry extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Protocol",$param) and $param["Protocol"] !== null) {
-            $this->Protocol = $param["Protocol"];
+        if (array_key_exists('Protocol',$param) and $param['Protocol'] !== null) {
+            $this->Protocol = $param['Protocol'];
         }
 
-        if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
-            $this->Domain = $param["Domain"];
+        if (array_key_exists('Domain',$param) and $param['Domain'] !== null) {
+            $this->Domain = $param['Domain'];
         }
 
-        if (array_key_exists("SourceType",$param) and $param["SourceType"] !== null) {
-            $this->SourceType = $param["SourceType"];
+        if (array_key_exists('SourceType',$param) and $param['SourceType'] !== null) {
+            $this->SourceType = $param['SourceType'];
         }
 
-        if (array_key_exists("KeepTime",$param) and $param["KeepTime"] !== null) {
-            $this->KeepTime = $param["KeepTime"];
+        if (array_key_exists('KeepTime',$param) and $param['KeepTime'] !== null) {
+            $this->KeepTime = $param['KeepTime'];
         }
 
-        if (array_key_exists("SourceList",$param) and $param["SourceList"] !== null) {
+        if (array_key_exists('SourceList',$param) and $param['SourceList'] !== null) {
             $this->SourceList = [];
-            foreach ($param["SourceList"] as $key => $value){
+            foreach ($param['SourceList'] as $key => $value){
                 $obj = new L4RuleSource();
                 $obj->deserialize($value);
                 array_push($this->SourceList, $obj);
             }
         }
 
-        if (array_key_exists("LbType",$param) and $param["LbType"] !== null) {
-            $this->LbType = $param["LbType"];
+        if (array_key_exists('LbType',$param) and $param['LbType'] !== null) {
+            $this->LbType = $param['LbType'];
         }
 
-        if (array_key_exists("KeepEnable",$param) and $param["KeepEnable"] !== null) {
-            $this->KeepEnable = $param["KeepEnable"];
+        if (array_key_exists('KeepEnable',$param) and $param['KeepEnable'] !== null) {
+            $this->KeepEnable = $param['KeepEnable'];
         }
 
-        if (array_key_exists("RuleId",$param) and $param["RuleId"] !== null) {
-            $this->RuleId = $param["RuleId"];
+        if (array_key_exists('RuleId',$param) and $param['RuleId'] !== null) {
+            $this->RuleId = $param['RuleId'];
         }
 
-        if (array_key_exists("CertType",$param) and $param["CertType"] !== null) {
-            $this->CertType = $param["CertType"];
+        if (array_key_exists('CertType',$param) and $param['CertType'] !== null) {
+            $this->CertType = $param['CertType'];
         }
 
-        if (array_key_exists("SSLId",$param) and $param["SSLId"] !== null) {
-            $this->SSLId = $param["SSLId"];
+        if (array_key_exists('SSLId',$param) and $param['SSLId'] !== null) {
+            $this->SSLId = $param['SSLId'];
         }
 
-        if (array_key_exists("Cert",$param) and $param["Cert"] !== null) {
-            $this->Cert = $param["Cert"];
+        if (array_key_exists('Cert',$param) and $param['Cert'] !== null) {
+            $this->Cert = $param['Cert'];
         }
 
-        if (array_key_exists("PrivateKey",$param) and $param["PrivateKey"] !== null) {
-            $this->PrivateKey = $param["PrivateKey"];
+        if (array_key_exists('PrivateKey',$param) and $param['PrivateKey'] !== null) {
+            $this->PrivateKey = $param['PrivateKey'];
         }
 
-        if (array_key_exists("RuleName",$param) and $param["RuleName"] !== null) {
-            $this->RuleName = $param["RuleName"];
+        if (array_key_exists('RuleName',$param) and $param['RuleName'] !== null) {
+            $this->RuleName = $param['RuleName'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("CCStatus",$param) and $param["CCStatus"] !== null) {
-            $this->CCStatus = $param["CCStatus"];
+        if (array_key_exists('CCStatus',$param) and $param['CCStatus'] !== null) {
+            $this->CCStatus = $param['CCStatus'];
         }
 
-        if (array_key_exists("CCEnable",$param) and $param["CCEnable"] !== null) {
-            $this->CCEnable = $param["CCEnable"];
+        if (array_key_exists('CCEnable',$param) and $param['CCEnable'] !== null) {
+            $this->CCEnable = $param['CCEnable'];
         }
 
-        if (array_key_exists("CCThreshold",$param) and $param["CCThreshold"] !== null) {
-            $this->CCThreshold = $param["CCThreshold"];
+        if (array_key_exists('CCThreshold',$param) and $param['CCThreshold'] !== null) {
+            $this->CCThreshold = $param['CCThreshold'];
         }
 
-        if (array_key_exists("CCLevel",$param) and $param["CCLevel"] !== null) {
-            $this->CCLevel = $param["CCLevel"];
+        if (array_key_exists('CCLevel',$param) and $param['CCLevel'] !== null) {
+            $this->CCLevel = $param['CCLevel'];
         }
 
-        if (array_key_exists("Region",$param) and $param["Region"] !== null) {
-            $this->Region = $param["Region"];
+        if (array_key_exists('Region',$param) and $param['Region'] !== null) {
+            $this->Region = $param['Region'];
         }
 
-        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
-            $this->Id = $param["Id"];
+        if (array_key_exists('Id',$param) and $param['Id'] !== null) {
+            $this->Id = $param['Id'];
         }
 
-        if (array_key_exists("Ip",$param) and $param["Ip"] !== null) {
-            $this->Ip = $param["Ip"];
+        if (array_key_exists('Ip',$param) and $param['Ip'] !== null) {
+            $this->Ip = $param['Ip'];
         }
 
-        if (array_key_exists("ModifyTime",$param) and $param["ModifyTime"] !== null) {
-            $this->ModifyTime = $param["ModifyTime"];
+        if (array_key_exists('ModifyTime',$param) and $param['ModifyTime'] !== null) {
+            $this->ModifyTime = $param['ModifyTime'];
         }
 
-        if (array_key_exists("HttpsToHttpEnable",$param) and $param["HttpsToHttpEnable"] !== null) {
-            $this->HttpsToHttpEnable = $param["HttpsToHttpEnable"];
+        if (array_key_exists('HttpsToHttpEnable',$param) and $param['HttpsToHttpEnable'] !== null) {
+            $this->HttpsToHttpEnable = $param['HttpsToHttpEnable'];
         }
 
-        if (array_key_exists("VirtualPort",$param) and $param["VirtualPort"] !== null) {
-            $this->VirtualPort = $param["VirtualPort"];
+        if (array_key_exists('VirtualPort',$param) and $param['VirtualPort'] !== null) {
+            $this->VirtualPort = $param['VirtualPort'];
         }
     }
 }

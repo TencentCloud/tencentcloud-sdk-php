@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -118,44 +118,44 @@ class ApplyPayerInfoRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PayerId",$param) and $param["PayerId"] !== null) {
-            $this->PayerId = $param["PayerId"];
+        if (array_key_exists('PayerId',$param) and $param['PayerId'] !== null) {
+            $this->PayerId = $param['PayerId'];
         }
 
-        if (array_key_exists("PayerType",$param) and $param["PayerType"] !== null) {
-            $this->PayerType = $param["PayerType"];
+        if (array_key_exists('PayerType',$param) and $param['PayerType'] !== null) {
+            $this->PayerType = $param['PayerType'];
         }
 
-        if (array_key_exists("PayerName",$param) and $param["PayerName"] !== null) {
-            $this->PayerName = $param["PayerName"];
+        if (array_key_exists('PayerName',$param) and $param['PayerName'] !== null) {
+            $this->PayerName = $param['PayerName'];
         }
 
-        if (array_key_exists("PayerIdType",$param) and $param["PayerIdType"] !== null) {
-            $this->PayerIdType = $param["PayerIdType"];
+        if (array_key_exists('PayerIdType',$param) and $param['PayerIdType'] !== null) {
+            $this->PayerIdType = $param['PayerIdType'];
         }
 
-        if (array_key_exists("PayerIdNo",$param) and $param["PayerIdNo"] !== null) {
-            $this->PayerIdNo = $param["PayerIdNo"];
+        if (array_key_exists('PayerIdNo',$param) and $param['PayerIdNo'] !== null) {
+            $this->PayerIdNo = $param['PayerIdNo'];
         }
 
-        if (array_key_exists("PayerCountryCode",$param) and $param["PayerCountryCode"] !== null) {
-            $this->PayerCountryCode = $param["PayerCountryCode"];
+        if (array_key_exists('PayerCountryCode',$param) and $param['PayerCountryCode'] !== null) {
+            $this->PayerCountryCode = $param['PayerCountryCode'];
         }
 
-        if (array_key_exists("PayerContactName",$param) and $param["PayerContactName"] !== null) {
-            $this->PayerContactName = $param["PayerContactName"];
+        if (array_key_exists('PayerContactName',$param) and $param['PayerContactName'] !== null) {
+            $this->PayerContactName = $param['PayerContactName'];
         }
 
-        if (array_key_exists("PayerContactNumber",$param) and $param["PayerContactNumber"] !== null) {
-            $this->PayerContactNumber = $param["PayerContactNumber"];
+        if (array_key_exists('PayerContactNumber',$param) and $param['PayerContactNumber'] !== null) {
+            $this->PayerContactNumber = $param['PayerContactNumber'];
         }
 
-        if (array_key_exists("PayerEmailAddress",$param) and $param["PayerEmailAddress"] !== null) {
-            $this->PayerEmailAddress = $param["PayerEmailAddress"];
+        if (array_key_exists('PayerEmailAddress',$param) and $param['PayerEmailAddress'] !== null) {
+            $this->PayerEmailAddress = $param['PayerEmailAddress'];
         }
 
-        if (array_key_exists("Profile",$param) and $param["Profile"] !== null) {
-            $this->Profile = $param["Profile"];
+        if (array_key_exists('Profile',$param) and $param['Profile'] !== null) {
+            $this->Profile = $param['Profile'];
         }
     }
 }

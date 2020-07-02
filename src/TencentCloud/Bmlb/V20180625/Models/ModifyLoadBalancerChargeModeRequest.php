@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -62,17 +62,17 @@ class ModifyLoadBalancerChargeModeRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LoadBalancerId",$param) and $param["LoadBalancerId"] !== null) {
-            $this->LoadBalancerId = $param["LoadBalancerId"];
+        if (array_key_exists('LoadBalancerId',$param) and $param['LoadBalancerId'] !== null) {
+            $this->LoadBalancerId = $param['LoadBalancerId'];
         }
 
-        if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {
-            $this->PayMode = $param["PayMode"];
+        if (array_key_exists('PayMode',$param) and $param['PayMode'] !== null) {
+            $this->PayMode = $param['PayMode'];
         }
 
-        if (array_key_exists("ListenerSet",$param) and $param["ListenerSet"] !== null) {
+        if (array_key_exists('ListenerSet',$param) and $param['ListenerSet'] !== null) {
             $this->ListenerSet = [];
-            foreach ($param["ListenerSet"] as $key => $value){
+            foreach ($param['ListenerSet'] as $key => $value){
                 $obj = new ModifyLoadBalancerChargeModeListener();
                 $obj->deserialize($value);
                 array_push($this->ListenerSet, $obj);

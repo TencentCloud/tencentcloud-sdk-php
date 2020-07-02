@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -182,81 +182,81 @@ class VpnGateway extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("VpnGatewayId",$param) and $param["VpnGatewayId"] !== null) {
-            $this->VpnGatewayId = $param["VpnGatewayId"];
+        if (array_key_exists('VpnGatewayId',$param) and $param['VpnGatewayId'] !== null) {
+            $this->VpnGatewayId = $param['VpnGatewayId'];
         }
 
-        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
-            $this->VpcId = $param["VpcId"];
+        if (array_key_exists('VpcId',$param) and $param['VpcId'] !== null) {
+            $this->VpcId = $param['VpcId'];
         }
 
-        if (array_key_exists("VpnGatewayName",$param) and $param["VpnGatewayName"] !== null) {
-            $this->VpnGatewayName = $param["VpnGatewayName"];
+        if (array_key_exists('VpnGatewayName',$param) and $param['VpnGatewayName'] !== null) {
+            $this->VpnGatewayName = $param['VpnGatewayName'];
         }
 
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists('Type',$param) and $param['Type'] !== null) {
+            $this->Type = $param['Type'];
         }
 
-        if (array_key_exists("State",$param) and $param["State"] !== null) {
-            $this->State = $param["State"];
+        if (array_key_exists('State',$param) and $param['State'] !== null) {
+            $this->State = $param['State'];
         }
 
-        if (array_key_exists("PublicIpAddress",$param) and $param["PublicIpAddress"] !== null) {
-            $this->PublicIpAddress = $param["PublicIpAddress"];
+        if (array_key_exists('PublicIpAddress',$param) and $param['PublicIpAddress'] !== null) {
+            $this->PublicIpAddress = $param['PublicIpAddress'];
         }
 
-        if (array_key_exists("RenewFlag",$param) and $param["RenewFlag"] !== null) {
-            $this->RenewFlag = $param["RenewFlag"];
+        if (array_key_exists('RenewFlag',$param) and $param['RenewFlag'] !== null) {
+            $this->RenewFlag = $param['RenewFlag'];
         }
 
-        if (array_key_exists("InstanceChargeType",$param) and $param["InstanceChargeType"] !== null) {
-            $this->InstanceChargeType = $param["InstanceChargeType"];
+        if (array_key_exists('InstanceChargeType',$param) and $param['InstanceChargeType'] !== null) {
+            $this->InstanceChargeType = $param['InstanceChargeType'];
         }
 
-        if (array_key_exists("InternetMaxBandwidthOut",$param) and $param["InternetMaxBandwidthOut"] !== null) {
-            $this->InternetMaxBandwidthOut = $param["InternetMaxBandwidthOut"];
+        if (array_key_exists('InternetMaxBandwidthOut',$param) and $param['InternetMaxBandwidthOut'] !== null) {
+            $this->InternetMaxBandwidthOut = $param['InternetMaxBandwidthOut'];
         }
 
-        if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
-            $this->CreatedTime = $param["CreatedTime"];
+        if (array_key_exists('CreatedTime',$param) and $param['CreatedTime'] !== null) {
+            $this->CreatedTime = $param['CreatedTime'];
         }
 
-        if (array_key_exists("ExpiredTime",$param) and $param["ExpiredTime"] !== null) {
-            $this->ExpiredTime = $param["ExpiredTime"];
+        if (array_key_exists('ExpiredTime',$param) and $param['ExpiredTime'] !== null) {
+            $this->ExpiredTime = $param['ExpiredTime'];
         }
 
-        if (array_key_exists("IsAddressBlocked",$param) and $param["IsAddressBlocked"] !== null) {
-            $this->IsAddressBlocked = $param["IsAddressBlocked"];
+        if (array_key_exists('IsAddressBlocked',$param) and $param['IsAddressBlocked'] !== null) {
+            $this->IsAddressBlocked = $param['IsAddressBlocked'];
         }
 
-        if (array_key_exists("NewPurchasePlan",$param) and $param["NewPurchasePlan"] !== null) {
-            $this->NewPurchasePlan = $param["NewPurchasePlan"];
+        if (array_key_exists('NewPurchasePlan',$param) and $param['NewPurchasePlan'] !== null) {
+            $this->NewPurchasePlan = $param['NewPurchasePlan'];
         }
 
-        if (array_key_exists("RestrictState",$param) and $param["RestrictState"] !== null) {
-            $this->RestrictState = $param["RestrictState"];
+        if (array_key_exists('RestrictState',$param) and $param['RestrictState'] !== null) {
+            $this->RestrictState = $param['RestrictState'];
         }
 
-        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
-            $this->Zone = $param["Zone"];
+        if (array_key_exists('Zone',$param) and $param['Zone'] !== null) {
+            $this->Zone = $param['Zone'];
         }
 
-        if (array_key_exists("VpnGatewayQuotaSet",$param) and $param["VpnGatewayQuotaSet"] !== null) {
+        if (array_key_exists('VpnGatewayQuotaSet',$param) and $param['VpnGatewayQuotaSet'] !== null) {
             $this->VpnGatewayQuotaSet = [];
-            foreach ($param["VpnGatewayQuotaSet"] as $key => $value){
+            foreach ($param['VpnGatewayQuotaSet'] as $key => $value){
                 $obj = new VpnGatewayQuota();
                 $obj->deserialize($value);
                 array_push($this->VpnGatewayQuotaSet, $obj);
             }
         }
 
-        if (array_key_exists("Version",$param) and $param["Version"] !== null) {
-            $this->Version = $param["Version"];
+        if (array_key_exists('Version',$param) and $param['Version'] !== null) {
+            $this->Version = $param['Version'];
         }
 
-        if (array_key_exists("NetworkInstanceId",$param) and $param["NetworkInstanceId"] !== null) {
-            $this->NetworkInstanceId = $param["NetworkInstanceId"];
+        if (array_key_exists('NetworkInstanceId',$param) and $param['NetworkInstanceId'] !== null) {
+            $this->NetworkInstanceId = $param['NetworkInstanceId'];
         }
     }
 }

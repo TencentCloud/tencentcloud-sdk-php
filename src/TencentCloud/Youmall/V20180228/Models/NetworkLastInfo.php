@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -54,13 +54,13 @@ class NetworkLastInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Count",$param) and $param["Count"] !== null) {
-            $this->Count = $param["Count"];
+        if (array_key_exists('Count',$param) and $param['Count'] !== null) {
+            $this->Count = $param['Count'];
         }
 
-        if (array_key_exists("Infos",$param) and $param["Infos"] !== null) {
+        if (array_key_exists('Infos',$param) and $param['Infos'] !== null) {
             $this->Infos = [];
-            foreach ($param["Infos"] as $key => $value){
+            foreach ($param['Infos'] as $key => $value){
                 $obj = new NetworkAndShopInfo();
                 $obj->deserialize($value);
                 array_push($this->Infos, $obj);

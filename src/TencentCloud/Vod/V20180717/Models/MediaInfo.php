@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -166,58 +166,58 @@ class MediaInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BasicInfo",$param) and $param["BasicInfo"] !== null) {
+        if (array_key_exists('BasicInfo',$param) and $param['BasicInfo'] !== null) {
             $this->BasicInfo = new MediaBasicInfo();
-            $this->BasicInfo->deserialize($param["BasicInfo"]);
+            $this->BasicInfo->deserialize($param['BasicInfo']);
         }
 
-        if (array_key_exists("MetaData",$param) and $param["MetaData"] !== null) {
+        if (array_key_exists('MetaData',$param) and $param['MetaData'] !== null) {
             $this->MetaData = new MediaMetaData();
-            $this->MetaData->deserialize($param["MetaData"]);
+            $this->MetaData->deserialize($param['MetaData']);
         }
 
-        if (array_key_exists("TranscodeInfo",$param) and $param["TranscodeInfo"] !== null) {
+        if (array_key_exists('TranscodeInfo',$param) and $param['TranscodeInfo'] !== null) {
             $this->TranscodeInfo = new MediaTranscodeInfo();
-            $this->TranscodeInfo->deserialize($param["TranscodeInfo"]);
+            $this->TranscodeInfo->deserialize($param['TranscodeInfo']);
         }
 
-        if (array_key_exists("AnimatedGraphicsInfo",$param) and $param["AnimatedGraphicsInfo"] !== null) {
+        if (array_key_exists('AnimatedGraphicsInfo',$param) and $param['AnimatedGraphicsInfo'] !== null) {
             $this->AnimatedGraphicsInfo = new MediaAnimatedGraphicsInfo();
-            $this->AnimatedGraphicsInfo->deserialize($param["AnimatedGraphicsInfo"]);
+            $this->AnimatedGraphicsInfo->deserialize($param['AnimatedGraphicsInfo']);
         }
 
-        if (array_key_exists("SampleSnapshotInfo",$param) and $param["SampleSnapshotInfo"] !== null) {
+        if (array_key_exists('SampleSnapshotInfo',$param) and $param['SampleSnapshotInfo'] !== null) {
             $this->SampleSnapshotInfo = new MediaSampleSnapshotInfo();
-            $this->SampleSnapshotInfo->deserialize($param["SampleSnapshotInfo"]);
+            $this->SampleSnapshotInfo->deserialize($param['SampleSnapshotInfo']);
         }
 
-        if (array_key_exists("ImageSpriteInfo",$param) and $param["ImageSpriteInfo"] !== null) {
+        if (array_key_exists('ImageSpriteInfo',$param) and $param['ImageSpriteInfo'] !== null) {
             $this->ImageSpriteInfo = new MediaImageSpriteInfo();
-            $this->ImageSpriteInfo->deserialize($param["ImageSpriteInfo"]);
+            $this->ImageSpriteInfo->deserialize($param['ImageSpriteInfo']);
         }
 
-        if (array_key_exists("SnapshotByTimeOffsetInfo",$param) and $param["SnapshotByTimeOffsetInfo"] !== null) {
+        if (array_key_exists('SnapshotByTimeOffsetInfo',$param) and $param['SnapshotByTimeOffsetInfo'] !== null) {
             $this->SnapshotByTimeOffsetInfo = new MediaSnapshotByTimeOffsetInfo();
-            $this->SnapshotByTimeOffsetInfo->deserialize($param["SnapshotByTimeOffsetInfo"]);
+            $this->SnapshotByTimeOffsetInfo->deserialize($param['SnapshotByTimeOffsetInfo']);
         }
 
-        if (array_key_exists("KeyFrameDescInfo",$param) and $param["KeyFrameDescInfo"] !== null) {
+        if (array_key_exists('KeyFrameDescInfo',$param) and $param['KeyFrameDescInfo'] !== null) {
             $this->KeyFrameDescInfo = new MediaKeyFrameDescInfo();
-            $this->KeyFrameDescInfo->deserialize($param["KeyFrameDescInfo"]);
+            $this->KeyFrameDescInfo->deserialize($param['KeyFrameDescInfo']);
         }
 
-        if (array_key_exists("AdaptiveDynamicStreamingInfo",$param) and $param["AdaptiveDynamicStreamingInfo"] !== null) {
+        if (array_key_exists('AdaptiveDynamicStreamingInfo',$param) and $param['AdaptiveDynamicStreamingInfo'] !== null) {
             $this->AdaptiveDynamicStreamingInfo = new MediaAdaptiveDynamicStreamingInfo();
-            $this->AdaptiveDynamicStreamingInfo->deserialize($param["AdaptiveDynamicStreamingInfo"]);
+            $this->AdaptiveDynamicStreamingInfo->deserialize($param['AdaptiveDynamicStreamingInfo']);
         }
 
-        if (array_key_exists("MiniProgramReviewInfo",$param) and $param["MiniProgramReviewInfo"] !== null) {
+        if (array_key_exists('MiniProgramReviewInfo',$param) and $param['MiniProgramReviewInfo'] !== null) {
             $this->MiniProgramReviewInfo = new MediaMiniProgramReviewInfo();
-            $this->MiniProgramReviewInfo->deserialize($param["MiniProgramReviewInfo"]);
+            $this->MiniProgramReviewInfo->deserialize($param['MiniProgramReviewInfo']);
         }
 
-        if (array_key_exists("FileId",$param) and $param["FileId"] !== null) {
-            $this->FileId = $param["FileId"];
+        if (array_key_exists('FileId',$param) and $param['FileId'] !== null) {
+            $this->FileId = $param['FileId'];
         }
     }
 }

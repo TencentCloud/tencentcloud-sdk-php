@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -78,24 +78,24 @@ class DescribeSalesmansRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
+        if (array_key_exists('Offset',$param) and $param['Offset'] !== null) {
+            $this->Offset = $param['Offset'];
         }
 
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
+        if (array_key_exists('Limit',$param) and $param['Limit'] !== null) {
+            $this->Limit = $param['Limit'];
         }
 
-        if (array_key_exists("SalesName",$param) and $param["SalesName"] !== null) {
-            $this->SalesName = $param["SalesName"];
+        if (array_key_exists('SalesName',$param) and $param['SalesName'] !== null) {
+            $this->SalesName = $param['SalesName'];
         }
 
-        if (array_key_exists("SalesUin",$param) and $param["SalesUin"] !== null) {
-            $this->SalesUin = $param["SalesUin"];
+        if (array_key_exists('SalesUin',$param) and $param['SalesUin'] !== null) {
+            $this->SalesUin = $param['SalesUin'];
         }
 
-        if (array_key_exists("OrderDirection",$param) and $param["OrderDirection"] !== null) {
-            $this->OrderDirection = $param["OrderDirection"];
+        if (array_key_exists('OrderDirection',$param) and $param['OrderDirection'] !== null) {
+            $this->OrderDirection = $param['OrderDirection'];
         }
     }
 }

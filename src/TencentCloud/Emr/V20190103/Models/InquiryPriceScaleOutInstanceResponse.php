@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -102,25 +102,25 @@ class InquiryPriceScaleOutInstanceResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("OriginalCost",$param) and $param["OriginalCost"] !== null) {
-            $this->OriginalCost = $param["OriginalCost"];
+        if (array_key_exists('OriginalCost',$param) and $param['OriginalCost'] !== null) {
+            $this->OriginalCost = $param['OriginalCost'];
         }
 
-        if (array_key_exists("DiscountCost",$param) and $param["DiscountCost"] !== null) {
-            $this->DiscountCost = $param["DiscountCost"];
+        if (array_key_exists('DiscountCost',$param) and $param['DiscountCost'] !== null) {
+            $this->DiscountCost = $param['DiscountCost'];
         }
 
-        if (array_key_exists("Unit",$param) and $param["Unit"] !== null) {
-            $this->Unit = $param["Unit"];
+        if (array_key_exists('Unit',$param) and $param['Unit'] !== null) {
+            $this->Unit = $param['Unit'];
         }
 
-        if (array_key_exists("PriceSpec",$param) and $param["PriceSpec"] !== null) {
+        if (array_key_exists('PriceSpec',$param) and $param['PriceSpec'] !== null) {
             $this->PriceSpec = new PriceResource();
-            $this->PriceSpec->deserialize($param["PriceSpec"]);
+            $this->PriceSpec->deserialize($param['PriceSpec']);
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

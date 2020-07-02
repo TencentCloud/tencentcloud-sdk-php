@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -218,43 +218,43 @@ failed：部署失败
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Switch",$param) and $param["Switch"] !== null) {
-            $this->Switch = $param["Switch"];
+        if (array_key_exists('Switch',$param) and $param['Switch'] !== null) {
+            $this->Switch = $param['Switch'];
         }
 
-        if (array_key_exists("Http2",$param) and $param["Http2"] !== null) {
-            $this->Http2 = $param["Http2"];
+        if (array_key_exists('Http2',$param) and $param['Http2'] !== null) {
+            $this->Http2 = $param['Http2'];
         }
 
-        if (array_key_exists("OcspStapling",$param) and $param["OcspStapling"] !== null) {
-            $this->OcspStapling = $param["OcspStapling"];
+        if (array_key_exists('OcspStapling',$param) and $param['OcspStapling'] !== null) {
+            $this->OcspStapling = $param['OcspStapling'];
         }
 
-        if (array_key_exists("VerifyClient",$param) and $param["VerifyClient"] !== null) {
-            $this->VerifyClient = $param["VerifyClient"];
+        if (array_key_exists('VerifyClient',$param) and $param['VerifyClient'] !== null) {
+            $this->VerifyClient = $param['VerifyClient'];
         }
 
-        if (array_key_exists("CertInfo",$param) and $param["CertInfo"] !== null) {
+        if (array_key_exists('CertInfo',$param) and $param['CertInfo'] !== null) {
             $this->CertInfo = new ServerCert();
-            $this->CertInfo->deserialize($param["CertInfo"]);
+            $this->CertInfo->deserialize($param['CertInfo']);
         }
 
-        if (array_key_exists("ClientCertInfo",$param) and $param["ClientCertInfo"] !== null) {
+        if (array_key_exists('ClientCertInfo',$param) and $param['ClientCertInfo'] !== null) {
             $this->ClientCertInfo = new ClientCert();
-            $this->ClientCertInfo->deserialize($param["ClientCertInfo"]);
+            $this->ClientCertInfo->deserialize($param['ClientCertInfo']);
         }
 
-        if (array_key_exists("Spdy",$param) and $param["Spdy"] !== null) {
-            $this->Spdy = $param["Spdy"];
+        if (array_key_exists('Spdy',$param) and $param['Spdy'] !== null) {
+            $this->Spdy = $param['Spdy'];
         }
 
-        if (array_key_exists("SslStatus",$param) and $param["SslStatus"] !== null) {
-            $this->SslStatus = $param["SslStatus"];
+        if (array_key_exists('SslStatus',$param) and $param['SslStatus'] !== null) {
+            $this->SslStatus = $param['SslStatus'];
         }
 
-        if (array_key_exists("Hsts",$param) and $param["Hsts"] !== null) {
+        if (array_key_exists('Hsts',$param) and $param['Hsts'] !== null) {
             $this->Hsts = new Hsts();
-            $this->Hsts->deserialize($param["Hsts"]);
+            $this->Hsts->deserialize($param['Hsts']);
         }
     }
 }

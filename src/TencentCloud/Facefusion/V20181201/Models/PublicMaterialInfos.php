@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -118,45 +118,45 @@ class PublicMaterialInfos extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MaterialId",$param) and $param["MaterialId"] !== null) {
-            $this->MaterialId = $param["MaterialId"];
+        if (array_key_exists('MaterialId',$param) and $param['MaterialId'] !== null) {
+            $this->MaterialId = $param['MaterialId'];
         }
 
-        if (array_key_exists("MaterialStatus",$param) and $param["MaterialStatus"] !== null) {
-            $this->MaterialStatus = $param["MaterialStatus"];
+        if (array_key_exists('MaterialStatus',$param) and $param['MaterialStatus'] !== null) {
+            $this->MaterialStatus = $param['MaterialStatus'];
         }
 
-        if (array_key_exists("BlendParamPtu",$param) and $param["BlendParamPtu"] !== null) {
-            $this->BlendParamPtu = $param["BlendParamPtu"];
+        if (array_key_exists('BlendParamPtu',$param) and $param['BlendParamPtu'] !== null) {
+            $this->BlendParamPtu = $param['BlendParamPtu'];
         }
 
-        if (array_key_exists("PositionParamPtu",$param) and $param["PositionParamPtu"] !== null) {
-            $this->PositionParamPtu = $param["PositionParamPtu"];
+        if (array_key_exists('PositionParamPtu',$param) and $param['PositionParamPtu'] !== null) {
+            $this->PositionParamPtu = $param['PositionParamPtu'];
         }
 
-        if (array_key_exists("BlendParamYoutu",$param) and $param["BlendParamYoutu"] !== null) {
-            $this->BlendParamYoutu = $param["BlendParamYoutu"];
+        if (array_key_exists('BlendParamYoutu',$param) and $param['BlendParamYoutu'] !== null) {
+            $this->BlendParamYoutu = $param['BlendParamYoutu'];
         }
 
-        if (array_key_exists("PositionParamYoutu",$param) and $param["PositionParamYoutu"] !== null) {
-            $this->PositionParamYoutu = $param["PositionParamYoutu"];
+        if (array_key_exists('PositionParamYoutu',$param) and $param['PositionParamYoutu'] !== null) {
+            $this->PositionParamYoutu = $param['PositionParamYoutu'];
         }
 
-        if (array_key_exists("Url",$param) and $param["Url"] !== null) {
-            $this->Url = $param["Url"];
+        if (array_key_exists('Url',$param) and $param['Url'] !== null) {
+            $this->Url = $param['Url'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
-            $this->UpdateTime = $param["UpdateTime"];
+        if (array_key_exists('UpdateTime',$param) and $param['UpdateTime'] !== null) {
+            $this->UpdateTime = $param['UpdateTime'];
         }
 
-        if (array_key_exists("MaterialFaceList",$param) and $param["MaterialFaceList"] !== null) {
+        if (array_key_exists('MaterialFaceList',$param) and $param['MaterialFaceList'] !== null) {
             $this->MaterialFaceList = [];
-            foreach ($param["MaterialFaceList"] as $key => $value){
+            foreach ($param['MaterialFaceList'] as $key => $value){
                 $obj = new MaterialFaceList();
                 $obj->deserialize($value);
                 array_push($this->MaterialFaceList, $obj);

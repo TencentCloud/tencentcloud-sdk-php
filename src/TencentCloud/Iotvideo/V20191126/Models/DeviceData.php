@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -182,52 +182,52 @@ class DeviceData extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Tid",$param) and $param["Tid"] !== null) {
-            $this->Tid = $param["Tid"];
+        if (array_key_exists('Tid',$param) and $param['Tid'] !== null) {
+            $this->Tid = $param['Tid'];
         }
 
-        if (array_key_exists("ActiveTime",$param) and $param["ActiveTime"] !== null) {
-            $this->ActiveTime = $param["ActiveTime"];
+        if (array_key_exists('ActiveTime',$param) and $param['ActiveTime'] !== null) {
+            $this->ActiveTime = $param['ActiveTime'];
         }
 
-        if (array_key_exists("Disabled",$param) and $param["Disabled"] !== null) {
-            $this->Disabled = $param["Disabled"];
+        if (array_key_exists('Disabled',$param) and $param['Disabled'] !== null) {
+            $this->Disabled = $param['Disabled'];
         }
 
-        if (array_key_exists("OtaVersion",$param) and $param["OtaVersion"] !== null) {
-            $this->OtaVersion = $param["OtaVersion"];
+        if (array_key_exists('OtaVersion',$param) and $param['OtaVersion'] !== null) {
+            $this->OtaVersion = $param['OtaVersion'];
         }
 
-        if (array_key_exists("Online",$param) and $param["Online"] !== null) {
-            $this->Online = $param["Online"];
+        if (array_key_exists('Online',$param) and $param['Online'] !== null) {
+            $this->Online = $param['Online'];
         }
 
-        if (array_key_exists("LastOnlineTime",$param) and $param["LastOnlineTime"] !== null) {
-            $this->LastOnlineTime = $param["LastOnlineTime"];
+        if (array_key_exists('LastOnlineTime',$param) and $param['LastOnlineTime'] !== null) {
+            $this->LastOnlineTime = $param['LastOnlineTime'];
         }
 
-        if (array_key_exists("IotModel",$param) and $param["IotModel"] !== null) {
-            $this->IotModel = $param["IotModel"];
+        if (array_key_exists('IotModel',$param) and $param['IotModel'] !== null) {
+            $this->IotModel = $param['IotModel'];
         }
 
-        if (array_key_exists("DeviceName",$param) and $param["DeviceName"] !== null) {
-            $this->DeviceName = $param["DeviceName"];
+        if (array_key_exists('DeviceName',$param) and $param['DeviceName'] !== null) {
+            $this->DeviceName = $param['DeviceName'];
         }
 
-        if (array_key_exists("ProductId",$param) and $param["ProductId"] !== null) {
-            $this->ProductId = $param["ProductId"];
+        if (array_key_exists('ProductId',$param) and $param['ProductId'] !== null) {
+            $this->ProductId = $param['ProductId'];
         }
 
-        if (array_key_exists("Certificate",$param) and $param["Certificate"] !== null) {
-            $this->Certificate = $param["Certificate"];
+        if (array_key_exists('Certificate',$param) and $param['Certificate'] !== null) {
+            $this->Certificate = $param['Certificate'];
         }
 
-        if (array_key_exists("WhiteBoxSoUrl",$param) and $param["WhiteBoxSoUrl"] !== null) {
-            $this->WhiteBoxSoUrl = $param["WhiteBoxSoUrl"];
+        if (array_key_exists('WhiteBoxSoUrl',$param) and $param['WhiteBoxSoUrl'] !== null) {
+            $this->WhiteBoxSoUrl = $param['WhiteBoxSoUrl'];
         }
 
-        if (array_key_exists("StreamStatus",$param) and $param["StreamStatus"] !== null) {
-            $this->StreamStatus = $param["StreamStatus"];
+        if (array_key_exists('StreamStatus',$param) and $param['StreamStatus'] !== null) {
+            $this->StreamStatus = $param['StreamStatus'];
         }
     }
 }

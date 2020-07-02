@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置返回记录的起始偏移量
  * @method integer getLimit() 获取单次返回的记录数量
  * @method void setLimit(integer $Limit) 设置单次返回的记录数量
- * @method string getOrderDirection() 获取排序方向，可选的值为"DESC"和"ASC"，默认为"DESC"，按创建时间逆序排序
- * @method void setOrderDirection(string $OrderDirection) 设置排序方向，可选的值为"DESC"和"ASC"，默认为"DESC"，按创建时间逆序排序
+ * @method string getOrderDirection() 获取排序方向，可选的值为'DESC'和'ASC'，默认为'DESC'，按创建时间逆序排序
+ * @method void setOrderDirection(string $OrderDirection) 设置排序方向，可选的值为'DESC'和'ASC'，默认为'DESC'，按创建时间逆序排序
  */
 class DescribeSubscribesRequest extends AbstractModel
 {
@@ -96,7 +96,7 @@ class DescribeSubscribesRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string 排序方向，可选的值为"DESC"和"ASC"，默认为"DESC"，按创建时间逆序排序
+     * @var string 排序方向，可选的值为'DESC'和'ASC'，默认为'DESC'，按创建时间逆序排序
      */
     public $OrderDirection;
 
@@ -111,7 +111,7 @@ class DescribeSubscribesRequest extends AbstractModel
      * @param array $SubsStatus 数据订阅实例的配置状态，unconfigure - 未配置， configuring - 配置中，configured - 已配置
      * @param integer $Offset 返回记录的起始偏移量
      * @param integer $Limit 单次返回的记录数量
-     * @param string $OrderDirection 排序方向，可选的值为"DESC"和"ASC"，默认为"DESC"，按创建时间逆序排序
+     * @param string $OrderDirection 排序方向，可选的值为'DESC'和'ASC'，默认为'DESC'，按创建时间逆序排序
      */
     function __construct()
     {
@@ -126,48 +126,48 @@ class DescribeSubscribesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SubscribeId",$param) and $param["SubscribeId"] !== null) {
-            $this->SubscribeId = $param["SubscribeId"];
+        if (array_key_exists('SubscribeId',$param) and $param['SubscribeId'] !== null) {
+            $this->SubscribeId = $param['SubscribeId'];
         }
 
-        if (array_key_exists("SubscribeName",$param) and $param["SubscribeName"] !== null) {
-            $this->SubscribeName = $param["SubscribeName"];
+        if (array_key_exists('SubscribeName',$param) and $param['SubscribeName'] !== null) {
+            $this->SubscribeName = $param['SubscribeName'];
         }
 
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("ChannelId",$param) and $param["ChannelId"] !== null) {
-            $this->ChannelId = $param["ChannelId"];
+        if (array_key_exists('ChannelId',$param) and $param['ChannelId'] !== null) {
+            $this->ChannelId = $param['ChannelId'];
         }
 
-        if (array_key_exists("PayType",$param) and $param["PayType"] !== null) {
-            $this->PayType = $param["PayType"];
+        if (array_key_exists('PayType',$param) and $param['PayType'] !== null) {
+            $this->PayType = $param['PayType'];
         }
 
-        if (array_key_exists("Product",$param) and $param["Product"] !== null) {
-            $this->Product = $param["Product"];
+        if (array_key_exists('Product',$param) and $param['Product'] !== null) {
+            $this->Product = $param['Product'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("SubsStatus",$param) and $param["SubsStatus"] !== null) {
-            $this->SubsStatus = $param["SubsStatus"];
+        if (array_key_exists('SubsStatus',$param) and $param['SubsStatus'] !== null) {
+            $this->SubsStatus = $param['SubsStatus'];
         }
 
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
+        if (array_key_exists('Offset',$param) and $param['Offset'] !== null) {
+            $this->Offset = $param['Offset'];
         }
 
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
+        if (array_key_exists('Limit',$param) and $param['Limit'] !== null) {
+            $this->Limit = $param['Limit'];
         }
 
-        if (array_key_exists("OrderDirection",$param) and $param["OrderDirection"] !== null) {
-            $this->OrderDirection = $param["OrderDirection"];
+        if (array_key_exists('OrderDirection',$param) and $param['OrderDirection'] !== null) {
+            $this->OrderDirection = $param['OrderDirection'];
         }
     }
 }

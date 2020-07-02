@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -74,21 +74,21 @@ class ParamConstraint extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists('Type',$param) and $param['Type'] !== null) {
+            $this->Type = $param['Type'];
         }
 
-        if (array_key_exists("Enum",$param) and $param["Enum"] !== null) {
-            $this->Enum = $param["Enum"];
+        if (array_key_exists('Enum',$param) and $param['Enum'] !== null) {
+            $this->Enum = $param['Enum'];
         }
 
-        if (array_key_exists("Range",$param) and $param["Range"] !== null) {
+        if (array_key_exists('Range',$param) and $param['Range'] !== null) {
             $this->Range = new ConstraintRange();
-            $this->Range->deserialize($param["Range"]);
+            $this->Range->deserialize($param['Range']);
         }
 
-        if (array_key_exists("String",$param) and $param["String"] !== null) {
-            $this->String = $param["String"];
+        if (array_key_exists('String',$param) and $param['String'] !== null) {
+            $this->String = $param['String'];
         }
     }
 }

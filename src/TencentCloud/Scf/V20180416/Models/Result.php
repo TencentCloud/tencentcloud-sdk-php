@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -102,36 +102,36 @@ class Result extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Log",$param) and $param["Log"] !== null) {
-            $this->Log = $param["Log"];
+        if (array_key_exists('Log',$param) and $param['Log'] !== null) {
+            $this->Log = $param['Log'];
         }
 
-        if (array_key_exists("RetMsg",$param) and $param["RetMsg"] !== null) {
-            $this->RetMsg = $param["RetMsg"];
+        if (array_key_exists('RetMsg',$param) and $param['RetMsg'] !== null) {
+            $this->RetMsg = $param['RetMsg'];
         }
 
-        if (array_key_exists("ErrMsg",$param) and $param["ErrMsg"] !== null) {
-            $this->ErrMsg = $param["ErrMsg"];
+        if (array_key_exists('ErrMsg',$param) and $param['ErrMsg'] !== null) {
+            $this->ErrMsg = $param['ErrMsg'];
         }
 
-        if (array_key_exists("MemUsage",$param) and $param["MemUsage"] !== null) {
-            $this->MemUsage = $param["MemUsage"];
+        if (array_key_exists('MemUsage',$param) and $param['MemUsage'] !== null) {
+            $this->MemUsage = $param['MemUsage'];
         }
 
-        if (array_key_exists("Duration",$param) and $param["Duration"] !== null) {
-            $this->Duration = $param["Duration"];
+        if (array_key_exists('Duration',$param) and $param['Duration'] !== null) {
+            $this->Duration = $param['Duration'];
         }
 
-        if (array_key_exists("BillDuration",$param) and $param["BillDuration"] !== null) {
-            $this->BillDuration = $param["BillDuration"];
+        if (array_key_exists('BillDuration',$param) and $param['BillDuration'] !== null) {
+            $this->BillDuration = $param['BillDuration'];
         }
 
-        if (array_key_exists("FunctionRequestId",$param) and $param["FunctionRequestId"] !== null) {
-            $this->FunctionRequestId = $param["FunctionRequestId"];
+        if (array_key_exists('FunctionRequestId',$param) and $param['FunctionRequestId'] !== null) {
+            $this->FunctionRequestId = $param['FunctionRequestId'];
         }
 
-        if (array_key_exists("InvokeResult",$param) and $param["InvokeResult"] !== null) {
-            $this->InvokeResult = $param["InvokeResult"];
+        if (array_key_exists('InvokeResult',$param) and $param['InvokeResult'] !== null) {
+            $this->InvokeResult = $param['InvokeResult'];
         }
     }
 }

@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -108,24 +108,24 @@ blacklist：黑名单，表示仅对 FileExtensions 中的类型进行鉴权
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SecretKey",$param) and $param["SecretKey"] !== null) {
-            $this->SecretKey = $param["SecretKey"];
+        if (array_key_exists('SecretKey',$param) and $param['SecretKey'] !== null) {
+            $this->SecretKey = $param['SecretKey'];
         }
 
-        if (array_key_exists("SignParam",$param) and $param["SignParam"] !== null) {
-            $this->SignParam = $param["SignParam"];
+        if (array_key_exists('SignParam',$param) and $param['SignParam'] !== null) {
+            $this->SignParam = $param['SignParam'];
         }
 
-        if (array_key_exists("ExpireTime",$param) and $param["ExpireTime"] !== null) {
-            $this->ExpireTime = $param["ExpireTime"];
+        if (array_key_exists('ExpireTime',$param) and $param['ExpireTime'] !== null) {
+            $this->ExpireTime = $param['ExpireTime'];
         }
 
-        if (array_key_exists("FileExtensions",$param) and $param["FileExtensions"] !== null) {
-            $this->FileExtensions = $param["FileExtensions"];
+        if (array_key_exists('FileExtensions',$param) and $param['FileExtensions'] !== null) {
+            $this->FileExtensions = $param['FileExtensions'];
         }
 
-        if (array_key_exists("FilterType",$param) and $param["FilterType"] !== null) {
-            $this->FilterType = $param["FilterType"];
+        if (array_key_exists('FilterType',$param) and $param['FilterType'] !== null) {
+            $this->FilterType = $param['FilterType'];
         }
     }
 }

@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -54,13 +54,13 @@ class DeregisterTargetGroupInstancesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TargetGroupId",$param) and $param["TargetGroupId"] !== null) {
-            $this->TargetGroupId = $param["TargetGroupId"];
+        if (array_key_exists('TargetGroupId',$param) and $param['TargetGroupId'] !== null) {
+            $this->TargetGroupId = $param['TargetGroupId'];
         }
 
-        if (array_key_exists("TargetGroupInstances",$param) and $param["TargetGroupInstances"] !== null) {
+        if (array_key_exists('TargetGroupInstances',$param) and $param['TargetGroupInstances'] !== null) {
             $this->TargetGroupInstances = [];
-            foreach ($param["TargetGroupInstances"] as $key => $value){
+            foreach ($param['TargetGroupInstances'] as $key => $value){
                 $obj = new TargetGroupInstance();
                 $obj->deserialize($value);
                 array_push($this->TargetGroupInstances, $obj);

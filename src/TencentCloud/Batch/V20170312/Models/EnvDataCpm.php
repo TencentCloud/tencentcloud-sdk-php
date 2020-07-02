@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -206,93 +206,93 @@ class EnvDataCpm extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Zones",$param) and $param["Zones"] !== null) {
-            $this->Zones = $param["Zones"];
+        if (array_key_exists('Zones',$param) and $param['Zones'] !== null) {
+            $this->Zones = $param['Zones'];
         }
 
-        if (array_key_exists("InstanceTypes",$param) and $param["InstanceTypes"] !== null) {
-            $this->InstanceTypes = $param["InstanceTypes"];
+        if (array_key_exists('InstanceTypes',$param) and $param['InstanceTypes'] !== null) {
+            $this->InstanceTypes = $param['InstanceTypes'];
         }
 
-        if (array_key_exists("TimeUnit",$param) and $param["TimeUnit"] !== null) {
-            $this->TimeUnit = $param["TimeUnit"];
+        if (array_key_exists('TimeUnit',$param) and $param['TimeUnit'] !== null) {
+            $this->TimeUnit = $param['TimeUnit'];
         }
 
-        if (array_key_exists("TimeSpan",$param) and $param["TimeSpan"] !== null) {
-            $this->TimeSpan = $param["TimeSpan"];
+        if (array_key_exists('TimeSpan',$param) and $param['TimeSpan'] !== null) {
+            $this->TimeSpan = $param['TimeSpan'];
         }
 
-        if (array_key_exists("RaidId",$param) and $param["RaidId"] !== null) {
-            $this->RaidId = $param["RaidId"];
+        if (array_key_exists('RaidId',$param) and $param['RaidId'] !== null) {
+            $this->RaidId = $param['RaidId'];
         }
 
-        if (array_key_exists("OsTypeId",$param) and $param["OsTypeId"] !== null) {
-            $this->OsTypeId = $param["OsTypeId"];
+        if (array_key_exists('OsTypeId',$param) and $param['OsTypeId'] !== null) {
+            $this->OsTypeId = $param['OsTypeId'];
         }
 
-        if (array_key_exists("VirtualPrivateClouds",$param) and $param["VirtualPrivateClouds"] !== null) {
+        if (array_key_exists('VirtualPrivateClouds',$param) and $param['VirtualPrivateClouds'] !== null) {
             $this->VirtualPrivateClouds = [];
-            foreach ($param["VirtualPrivateClouds"] as $key => $value){
+            foreach ($param['VirtualPrivateClouds'] as $key => $value){
                 $obj = new CpmVirtualPrivateCloud();
                 $obj->deserialize($value);
                 array_push($this->VirtualPrivateClouds, $obj);
             }
         }
 
-        if (array_key_exists("NeedSecurityAgent",$param) and $param["NeedSecurityAgent"] !== null) {
-            $this->NeedSecurityAgent = $param["NeedSecurityAgent"];
+        if (array_key_exists('NeedSecurityAgent',$param) and $param['NeedSecurityAgent'] !== null) {
+            $this->NeedSecurityAgent = $param['NeedSecurityAgent'];
         }
 
-        if (array_key_exists("NeedMonitorAgent",$param) and $param["NeedMonitorAgent"] !== null) {
-            $this->NeedMonitorAgent = $param["NeedMonitorAgent"];
+        if (array_key_exists('NeedMonitorAgent',$param) and $param['NeedMonitorAgent'] !== null) {
+            $this->NeedMonitorAgent = $param['NeedMonitorAgent'];
         }
 
-        if (array_key_exists("AutoRenewFlag",$param) and $param["AutoRenewFlag"] !== null) {
-            $this->AutoRenewFlag = $param["AutoRenewFlag"];
+        if (array_key_exists('AutoRenewFlag',$param) and $param['AutoRenewFlag'] !== null) {
+            $this->AutoRenewFlag = $param['AutoRenewFlag'];
         }
 
-        if (array_key_exists("IsZoning",$param) and $param["IsZoning"] !== null) {
-            $this->IsZoning = $param["IsZoning"];
+        if (array_key_exists('IsZoning',$param) and $param['IsZoning'] !== null) {
+            $this->IsZoning = $param['IsZoning'];
         }
 
-        if (array_key_exists("FileSystem",$param) and $param["FileSystem"] !== null) {
-            $this->FileSystem = $param["FileSystem"];
+        if (array_key_exists('FileSystem',$param) and $param['FileSystem'] !== null) {
+            $this->FileSystem = $param['FileSystem'];
         }
 
-        if (array_key_exists("Password",$param) and $param["Password"] !== null) {
-            $this->Password = $param["Password"];
+        if (array_key_exists('Password',$param) and $param['Password'] !== null) {
+            $this->Password = $param['Password'];
         }
 
-        if (array_key_exists("ApplyEip",$param) and $param["ApplyEip"] !== null) {
-            $this->ApplyEip = $param["ApplyEip"];
+        if (array_key_exists('ApplyEip',$param) and $param['ApplyEip'] !== null) {
+            $this->ApplyEip = $param['ApplyEip'];
         }
 
-        if (array_key_exists("EipPayMode",$param) and $param["EipPayMode"] !== null) {
-            $this->EipPayMode = $param["EipPayMode"];
+        if (array_key_exists('EipPayMode',$param) and $param['EipPayMode'] !== null) {
+            $this->EipPayMode = $param['EipPayMode'];
         }
 
-        if (array_key_exists("EipBandwidth",$param) and $param["EipBandwidth"] !== null) {
-            $this->EipBandwidth = $param["EipBandwidth"];
+        if (array_key_exists('EipBandwidth',$param) and $param['EipBandwidth'] !== null) {
+            $this->EipBandwidth = $param['EipBandwidth'];
         }
 
-        if (array_key_exists("ImageId",$param) and $param["ImageId"] !== null) {
-            $this->ImageId = $param["ImageId"];
+        if (array_key_exists('ImageId',$param) and $param['ImageId'] !== null) {
+            $this->ImageId = $param['ImageId'];
         }
 
-        if (array_key_exists("SysRootSpace",$param) and $param["SysRootSpace"] !== null) {
-            $this->SysRootSpace = $param["SysRootSpace"];
+        if (array_key_exists('SysRootSpace',$param) and $param['SysRootSpace'] !== null) {
+            $this->SysRootSpace = $param['SysRootSpace'];
         }
 
-        if (array_key_exists("SysDataSpace",$param) and $param["SysDataSpace"] !== null) {
-            $this->SysDataSpace = $param["SysDataSpace"];
+        if (array_key_exists('SysDataSpace',$param) and $param['SysDataSpace'] !== null) {
+            $this->SysDataSpace = $param['SysDataSpace'];
         }
 
-        if (array_key_exists("HyperThreading",$param) and $param["HyperThreading"] !== null) {
-            $this->HyperThreading = $param["HyperThreading"];
+        if (array_key_exists('HyperThreading',$param) and $param['HyperThreading'] !== null) {
+            $this->HyperThreading = $param['HyperThreading'];
         }
 
-        if (array_key_exists("LanIps",$param) and $param["LanIps"] !== null) {
-            $this->LanIps = $param["LanIps"];
+        if (array_key_exists('LanIps',$param) and $param['LanIps'] !== null) {
+            $this->LanIps = $param['LanIps'];
         }
     }
 }

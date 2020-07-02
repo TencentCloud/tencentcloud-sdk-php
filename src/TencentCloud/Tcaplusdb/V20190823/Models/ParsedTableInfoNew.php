@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -254,77 +254,77 @@ class ParsedTableInfoNew extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TableIdlType",$param) and $param["TableIdlType"] !== null) {
-            $this->TableIdlType = $param["TableIdlType"];
+        if (array_key_exists('TableIdlType',$param) and $param['TableIdlType'] !== null) {
+            $this->TableIdlType = $param['TableIdlType'];
         }
 
-        if (array_key_exists("TableInstanceId",$param) and $param["TableInstanceId"] !== null) {
-            $this->TableInstanceId = $param["TableInstanceId"];
+        if (array_key_exists('TableInstanceId',$param) and $param['TableInstanceId'] !== null) {
+            $this->TableInstanceId = $param['TableInstanceId'];
         }
 
-        if (array_key_exists("TableName",$param) and $param["TableName"] !== null) {
-            $this->TableName = $param["TableName"];
+        if (array_key_exists('TableName',$param) and $param['TableName'] !== null) {
+            $this->TableName = $param['TableName'];
         }
 
-        if (array_key_exists("TableType",$param) and $param["TableType"] !== null) {
-            $this->TableType = $param["TableType"];
+        if (array_key_exists('TableType',$param) and $param['TableType'] !== null) {
+            $this->TableType = $param['TableType'];
         }
 
-        if (array_key_exists("KeyFields",$param) and $param["KeyFields"] !== null) {
-            $this->KeyFields = $param["KeyFields"];
+        if (array_key_exists('KeyFields',$param) and $param['KeyFields'] !== null) {
+            $this->KeyFields = $param['KeyFields'];
         }
 
-        if (array_key_exists("OldKeyFields",$param) and $param["OldKeyFields"] !== null) {
-            $this->OldKeyFields = $param["OldKeyFields"];
+        if (array_key_exists('OldKeyFields',$param) and $param['OldKeyFields'] !== null) {
+            $this->OldKeyFields = $param['OldKeyFields'];
         }
 
-        if (array_key_exists("ValueFields",$param) and $param["ValueFields"] !== null) {
-            $this->ValueFields = $param["ValueFields"];
+        if (array_key_exists('ValueFields',$param) and $param['ValueFields'] !== null) {
+            $this->ValueFields = $param['ValueFields'];
         }
 
-        if (array_key_exists("OldValueFields",$param) and $param["OldValueFields"] !== null) {
-            $this->OldValueFields = $param["OldValueFields"];
+        if (array_key_exists('OldValueFields',$param) and $param['OldValueFields'] !== null) {
+            $this->OldValueFields = $param['OldValueFields'];
         }
 
-        if (array_key_exists("TableGroupId",$param) and $param["TableGroupId"] !== null) {
-            $this->TableGroupId = $param["TableGroupId"];
+        if (array_key_exists('TableGroupId',$param) and $param['TableGroupId'] !== null) {
+            $this->TableGroupId = $param['TableGroupId'];
         }
 
-        if (array_key_exists("SumKeyFieldSize",$param) and $param["SumKeyFieldSize"] !== null) {
-            $this->SumKeyFieldSize = $param["SumKeyFieldSize"];
+        if (array_key_exists('SumKeyFieldSize',$param) and $param['SumKeyFieldSize'] !== null) {
+            $this->SumKeyFieldSize = $param['SumKeyFieldSize'];
         }
 
-        if (array_key_exists("SumValueFieldSize",$param) and $param["SumValueFieldSize"] !== null) {
-            $this->SumValueFieldSize = $param["SumValueFieldSize"];
+        if (array_key_exists('SumValueFieldSize',$param) and $param['SumValueFieldSize'] !== null) {
+            $this->SumValueFieldSize = $param['SumValueFieldSize'];
         }
 
-        if (array_key_exists("IndexKeySet",$param) and $param["IndexKeySet"] !== null) {
-            $this->IndexKeySet = $param["IndexKeySet"];
+        if (array_key_exists('IndexKeySet',$param) and $param['IndexKeySet'] !== null) {
+            $this->IndexKeySet = $param['IndexKeySet'];
         }
 
-        if (array_key_exists("ShardingKeySet",$param) and $param["ShardingKeySet"] !== null) {
-            $this->ShardingKeySet = $param["ShardingKeySet"];
+        if (array_key_exists('ShardingKeySet',$param) and $param['ShardingKeySet'] !== null) {
+            $this->ShardingKeySet = $param['ShardingKeySet'];
         }
 
-        if (array_key_exists("TdrVersion",$param) and $param["TdrVersion"] !== null) {
-            $this->TdrVersion = $param["TdrVersion"];
+        if (array_key_exists('TdrVersion',$param) and $param['TdrVersion'] !== null) {
+            $this->TdrVersion = $param['TdrVersion'];
         }
 
-        if (array_key_exists("Error",$param) and $param["Error"] !== null) {
+        if (array_key_exists('Error',$param) and $param['Error'] !== null) {
             $this->Error = new ErrorInfo();
-            $this->Error->deserialize($param["Error"]);
+            $this->Error->deserialize($param['Error']);
         }
 
-        if (array_key_exists("ListElementNum",$param) and $param["ListElementNum"] !== null) {
-            $this->ListElementNum = $param["ListElementNum"];
+        if (array_key_exists('ListElementNum',$param) and $param['ListElementNum'] !== null) {
+            $this->ListElementNum = $param['ListElementNum'];
         }
 
-        if (array_key_exists("SortFieldNum",$param) and $param["SortFieldNum"] !== null) {
-            $this->SortFieldNum = $param["SortFieldNum"];
+        if (array_key_exists('SortFieldNum',$param) and $param['SortFieldNum'] !== null) {
+            $this->SortFieldNum = $param['SortFieldNum'];
         }
 
-        if (array_key_exists("SortRule",$param) and $param["SortRule"] !== null) {
-            $this->SortRule = $param["SortRule"];
+        if (array_key_exists('SortRule',$param) and $param['SortRule'] !== null) {
+            $this->SortRule = $param['SortRule'];
         }
     }
 }

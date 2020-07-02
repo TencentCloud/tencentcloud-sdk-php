@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -54,17 +54,17 @@ class DescribeWhiteBoxKeyDetailsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("KeyInfos",$param) and $param["KeyInfos"] !== null) {
+        if (array_key_exists('KeyInfos',$param) and $param['KeyInfos'] !== null) {
             $this->KeyInfos = [];
-            foreach ($param["KeyInfos"] as $key => $value){
+            foreach ($param['KeyInfos'] as $key => $value){
                 $obj = new WhiteboxKeyInfo();
                 $obj->deserialize($value);
                 array_push($this->KeyInfos, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

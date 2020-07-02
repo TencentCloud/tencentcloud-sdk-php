@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -246,44 +246,44 @@ client：指定查询客户端地区（用户请求终端所在地区）数据�
         if ($param === null) {
             return;
         }
-        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
-            $this->StartTime = $param["StartTime"];
+        if (array_key_exists('StartTime',$param) and $param['StartTime'] !== null) {
+            $this->StartTime = $param['StartTime'];
         }
 
-        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
-            $this->EndTime = $param["EndTime"];
+        if (array_key_exists('EndTime',$param) and $param['EndTime'] !== null) {
+            $this->EndTime = $param['EndTime'];
         }
 
-        if (array_key_exists("Metric",$param) and $param["Metric"] !== null) {
-            $this->Metric = $param["Metric"];
+        if (array_key_exists('Metric',$param) and $param['Metric'] !== null) {
+            $this->Metric = $param['Metric'];
         }
 
-        if (array_key_exists("Filter",$param) and $param["Filter"] !== null) {
-            $this->Filter = $param["Filter"];
+        if (array_key_exists('Filter',$param) and $param['Filter'] !== null) {
+            $this->Filter = $param['Filter'];
         }
 
-        if (array_key_exists("Domains",$param) and $param["Domains"] !== null) {
-            $this->Domains = $param["Domains"];
+        if (array_key_exists('Domains',$param) and $param['Domains'] !== null) {
+            $this->Domains = $param['Domains'];
         }
 
-        if (array_key_exists("Project",$param) and $param["Project"] !== null) {
-            $this->Project = $param["Project"];
+        if (array_key_exists('Project',$param) and $param['Project'] !== null) {
+            $this->Project = $param['Project'];
         }
 
-        if (array_key_exists("Detail",$param) and $param["Detail"] !== null) {
-            $this->Detail = $param["Detail"];
+        if (array_key_exists('Detail',$param) and $param['Detail'] !== null) {
+            $this->Detail = $param['Detail'];
         }
 
-        if (array_key_exists("Code",$param) and $param["Code"] !== null) {
-            $this->Code = $param["Code"];
+        if (array_key_exists('Code',$param) and $param['Code'] !== null) {
+            $this->Code = $param['Code'];
         }
 
-        if (array_key_exists("Area",$param) and $param["Area"] !== null) {
-            $this->Area = $param["Area"];
+        if (array_key_exists('Area',$param) and $param['Area'] !== null) {
+            $this->Area = $param['Area'];
         }
 
-        if (array_key_exists("AreaType",$param) and $param["AreaType"] !== null) {
-            $this->AreaType = $param["AreaType"];
+        if (array_key_exists('AreaType',$param) and $param['AreaType'] !== null) {
+            $this->AreaType = $param['AreaType'];
         }
     }
 }

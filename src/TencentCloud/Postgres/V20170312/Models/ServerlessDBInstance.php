@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -206,70 +206,70 @@ class ServerlessDBInstance extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DBInstanceId",$param) and $param["DBInstanceId"] !== null) {
-            $this->DBInstanceId = $param["DBInstanceId"];
+        if (array_key_exists('DBInstanceId',$param) and $param['DBInstanceId'] !== null) {
+            $this->DBInstanceId = $param['DBInstanceId'];
         }
 
-        if (array_key_exists("DBInstanceName",$param) and $param["DBInstanceName"] !== null) {
-            $this->DBInstanceName = $param["DBInstanceName"];
+        if (array_key_exists('DBInstanceName',$param) and $param['DBInstanceName'] !== null) {
+            $this->DBInstanceName = $param['DBInstanceName'];
         }
 
-        if (array_key_exists("DBInstanceStatus",$param) and $param["DBInstanceStatus"] !== null) {
-            $this->DBInstanceStatus = $param["DBInstanceStatus"];
+        if (array_key_exists('DBInstanceStatus',$param) and $param['DBInstanceStatus'] !== null) {
+            $this->DBInstanceStatus = $param['DBInstanceStatus'];
         }
 
-        if (array_key_exists("Region",$param) and $param["Region"] !== null) {
-            $this->Region = $param["Region"];
+        if (array_key_exists('Region',$param) and $param['Region'] !== null) {
+            $this->Region = $param['Region'];
         }
 
-        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
-            $this->Zone = $param["Zone"];
+        if (array_key_exists('Zone',$param) and $param['Zone'] !== null) {
+            $this->Zone = $param['Zone'];
         }
 
-        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
-            $this->ProjectId = $param["ProjectId"];
+        if (array_key_exists('ProjectId',$param) and $param['ProjectId'] !== null) {
+            $this->ProjectId = $param['ProjectId'];
         }
 
-        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
-            $this->VpcId = $param["VpcId"];
+        if (array_key_exists('VpcId',$param) and $param['VpcId'] !== null) {
+            $this->VpcId = $param['VpcId'];
         }
 
-        if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
-            $this->SubnetId = $param["SubnetId"];
+        if (array_key_exists('SubnetId',$param) and $param['SubnetId'] !== null) {
+            $this->SubnetId = $param['SubnetId'];
         }
 
-        if (array_key_exists("DBCharset",$param) and $param["DBCharset"] !== null) {
-            $this->DBCharset = $param["DBCharset"];
+        if (array_key_exists('DBCharset',$param) and $param['DBCharset'] !== null) {
+            $this->DBCharset = $param['DBCharset'];
         }
 
-        if (array_key_exists("DBVersion",$param) and $param["DBVersion"] !== null) {
-            $this->DBVersion = $param["DBVersion"];
+        if (array_key_exists('DBVersion',$param) and $param['DBVersion'] !== null) {
+            $this->DBVersion = $param['DBVersion'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("DBInstanceNetInfo",$param) and $param["DBInstanceNetInfo"] !== null) {
+        if (array_key_exists('DBInstanceNetInfo',$param) and $param['DBInstanceNetInfo'] !== null) {
             $this->DBInstanceNetInfo = [];
-            foreach ($param["DBInstanceNetInfo"] as $key => $value){
+            foreach ($param['DBInstanceNetInfo'] as $key => $value){
                 $obj = new ServerlessDBInstanceNetInfo();
                 $obj->deserialize($value);
                 array_push($this->DBInstanceNetInfo, $obj);
             }
         }
 
-        if (array_key_exists("DBAccountSet",$param) and $param["DBAccountSet"] !== null) {
+        if (array_key_exists('DBAccountSet',$param) and $param['DBAccountSet'] !== null) {
             $this->DBAccountSet = [];
-            foreach ($param["DBAccountSet"] as $key => $value){
+            foreach ($param['DBAccountSet'] as $key => $value){
                 $obj = new ServerlessDBAccount();
                 $obj->deserialize($value);
                 array_push($this->DBAccountSet, $obj);
             }
         }
 
-        if (array_key_exists("DBDatabaseList",$param) and $param["DBDatabaseList"] !== null) {
-            $this->DBDatabaseList = $param["DBDatabaseList"];
+        if (array_key_exists('DBDatabaseList',$param) and $param['DBDatabaseList'] !== null) {
+            $this->DBDatabaseList = $param['DBDatabaseList'];
         }
     }
 }

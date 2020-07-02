@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -78,24 +78,24 @@ class AttributeKeyDetail extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Label",$param) and $param["Label"] !== null) {
-            $this->Label = $param["Label"];
+        if (array_key_exists('Label',$param) and $param['Label'] !== null) {
+            $this->Label = $param['Label'];
         }
 
-        if (array_key_exists("LabelType",$param) and $param["LabelType"] !== null) {
-            $this->LabelType = $param["LabelType"];
+        if (array_key_exists('LabelType',$param) and $param['LabelType'] !== null) {
+            $this->LabelType = $param['LabelType'];
         }
 
-        if (array_key_exists("Order",$param) and $param["Order"] !== null) {
-            $this->Order = $param["Order"];
+        if (array_key_exists('Order',$param) and $param['Order'] !== null) {
+            $this->Order = $param['Order'];
         }
 
-        if (array_key_exists("Starter",$param) and $param["Starter"] !== null) {
-            $this->Starter = $param["Starter"];
+        if (array_key_exists('Starter',$param) and $param['Starter'] !== null) {
+            $this->Starter = $param['Starter'];
         }
 
-        if (array_key_exists("Value",$param) and $param["Value"] !== null) {
-            $this->Value = $param["Value"];
+        if (array_key_exists('Value',$param) and $param['Value'] !== null) {
+            $this->Value = $param['Value'];
         }
     }
 }

@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -142,66 +142,66 @@ class GetRealAvailRatioResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AvgAvailRatio",$param) and $param["AvgAvailRatio"] !== null) {
-            $this->AvgAvailRatio = $param["AvgAvailRatio"];
+        if (array_key_exists('AvgAvailRatio',$param) and $param['AvgAvailRatio'] !== null) {
+            $this->AvgAvailRatio = $param['AvgAvailRatio'];
         }
 
-        if (array_key_exists("LowestAvailRatio",$param) and $param["LowestAvailRatio"] !== null) {
-            $this->LowestAvailRatio = $param["LowestAvailRatio"];
+        if (array_key_exists('LowestAvailRatio',$param) and $param['LowestAvailRatio'] !== null) {
+            $this->LowestAvailRatio = $param['LowestAvailRatio'];
         }
 
-        if (array_key_exists("LowestProvince",$param) and $param["LowestProvince"] !== null) {
-            $this->LowestProvince = $param["LowestProvince"];
+        if (array_key_exists('LowestProvince',$param) and $param['LowestProvince'] !== null) {
+            $this->LowestProvince = $param['LowestProvince'];
         }
 
-        if (array_key_exists("LowestIsp",$param) and $param["LowestIsp"] !== null) {
-            $this->LowestIsp = $param["LowestIsp"];
+        if (array_key_exists('LowestIsp',$param) and $param['LowestIsp'] !== null) {
+            $this->LowestIsp = $param['LowestIsp'];
         }
 
-        if (array_key_exists("ProvinceData",$param) and $param["ProvinceData"] !== null) {
+        if (array_key_exists('ProvinceData',$param) and $param['ProvinceData'] !== null) {
             $this->ProvinceData = [];
-            foreach ($param["ProvinceData"] as $key => $value){
+            foreach ($param['ProvinceData'] as $key => $value){
                 $obj = new ProvinceDetail();
                 $obj->deserialize($value);
                 array_push($this->ProvinceData, $obj);
             }
         }
 
-        if (array_key_exists("AvgTime",$param) and $param["AvgTime"] !== null) {
-            $this->AvgTime = $param["AvgTime"];
+        if (array_key_exists('AvgTime',$param) and $param['AvgTime'] !== null) {
+            $this->AvgTime = $param['AvgTime'];
         }
 
-        if (array_key_exists("AvgAvailRatio2",$param) and $param["AvgAvailRatio2"] !== null) {
-            $this->AvgAvailRatio2 = $param["AvgAvailRatio2"];
+        if (array_key_exists('AvgAvailRatio2',$param) and $param['AvgAvailRatio2'] !== null) {
+            $this->AvgAvailRatio2 = $param['AvgAvailRatio2'];
         }
 
-        if (array_key_exists("AvgTime2",$param) and $param["AvgTime2"] !== null) {
-            $this->AvgTime2 = $param["AvgTime2"];
+        if (array_key_exists('AvgTime2',$param) and $param['AvgTime2'] !== null) {
+            $this->AvgTime2 = $param['AvgTime2'];
         }
 
-        if (array_key_exists("LowestAvailRatio2",$param) and $param["LowestAvailRatio2"] !== null) {
-            $this->LowestAvailRatio2 = $param["LowestAvailRatio2"];
+        if (array_key_exists('LowestAvailRatio2',$param) and $param['LowestAvailRatio2'] !== null) {
+            $this->LowestAvailRatio2 = $param['LowestAvailRatio2'];
         }
 
-        if (array_key_exists("LowestProvince2",$param) and $param["LowestProvince2"] !== null) {
-            $this->LowestProvince2 = $param["LowestProvince2"];
+        if (array_key_exists('LowestProvince2',$param) and $param['LowestProvince2'] !== null) {
+            $this->LowestProvince2 = $param['LowestProvince2'];
         }
 
-        if (array_key_exists("LowestIsp2",$param) and $param["LowestIsp2"] !== null) {
-            $this->LowestIsp2 = $param["LowestIsp2"];
+        if (array_key_exists('LowestIsp2',$param) and $param['LowestIsp2'] !== null) {
+            $this->LowestIsp2 = $param['LowestIsp2'];
         }
 
-        if (array_key_exists("ProvinceData2",$param) and $param["ProvinceData2"] !== null) {
+        if (array_key_exists('ProvinceData2',$param) and $param['ProvinceData2'] !== null) {
             $this->ProvinceData2 = [];
-            foreach ($param["ProvinceData2"] as $key => $value){
+            foreach ($param['ProvinceData2'] as $key => $value){
                 $obj = new ProvinceDetail();
                 $obj->deserialize($value);
                 array_push($this->ProvinceData2, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

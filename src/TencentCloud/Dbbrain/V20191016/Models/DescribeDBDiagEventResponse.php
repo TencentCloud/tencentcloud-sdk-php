@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -138,52 +138,52 @@ class DescribeDBDiagEventResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DiagItem",$param) and $param["DiagItem"] !== null) {
-            $this->DiagItem = $param["DiagItem"];
+        if (array_key_exists('DiagItem',$param) and $param['DiagItem'] !== null) {
+            $this->DiagItem = $param['DiagItem'];
         }
 
-        if (array_key_exists("DiagType",$param) and $param["DiagType"] !== null) {
-            $this->DiagType = $param["DiagType"];
+        if (array_key_exists('DiagType',$param) and $param['DiagType'] !== null) {
+            $this->DiagType = $param['DiagType'];
         }
 
-        if (array_key_exists("EventId",$param) and $param["EventId"] !== null) {
-            $this->EventId = $param["EventId"];
+        if (array_key_exists('EventId',$param) and $param['EventId'] !== null) {
+            $this->EventId = $param['EventId'];
         }
 
-        if (array_key_exists("Explanation",$param) and $param["Explanation"] !== null) {
-            $this->Explanation = $param["Explanation"];
+        if (array_key_exists('Explanation',$param) and $param['Explanation'] !== null) {
+            $this->Explanation = $param['Explanation'];
         }
 
-        if (array_key_exists("Outline",$param) and $param["Outline"] !== null) {
-            $this->Outline = $param["Outline"];
+        if (array_key_exists('Outline',$param) and $param['Outline'] !== null) {
+            $this->Outline = $param['Outline'];
         }
 
-        if (array_key_exists("Problem",$param) and $param["Problem"] !== null) {
-            $this->Problem = $param["Problem"];
+        if (array_key_exists('Problem',$param) and $param['Problem'] !== null) {
+            $this->Problem = $param['Problem'];
         }
 
-        if (array_key_exists("Severity",$param) and $param["Severity"] !== null) {
-            $this->Severity = $param["Severity"];
+        if (array_key_exists('Severity',$param) and $param['Severity'] !== null) {
+            $this->Severity = $param['Severity'];
         }
 
-        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
-            $this->StartTime = $param["StartTime"];
+        if (array_key_exists('StartTime',$param) and $param['StartTime'] !== null) {
+            $this->StartTime = $param['StartTime'];
         }
 
-        if (array_key_exists("Suggestions",$param) and $param["Suggestions"] !== null) {
-            $this->Suggestions = $param["Suggestions"];
+        if (array_key_exists('Suggestions',$param) and $param['Suggestions'] !== null) {
+            $this->Suggestions = $param['Suggestions'];
         }
 
-        if (array_key_exists("Metric",$param) and $param["Metric"] !== null) {
-            $this->Metric = $param["Metric"];
+        if (array_key_exists('Metric',$param) and $param['Metric'] !== null) {
+            $this->Metric = $param['Metric'];
         }
 
-        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
-            $this->EndTime = $param["EndTime"];
+        if (array_key_exists('EndTime',$param) and $param['EndTime'] !== null) {
+            $this->EndTime = $param['EndTime'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

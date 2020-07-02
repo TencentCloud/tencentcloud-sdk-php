@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -122,40 +122,40 @@ class NatGatewayDestinationIpPortTranslationNatRule extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("IpProtocol",$param) and $param["IpProtocol"] !== null) {
-            $this->IpProtocol = $param["IpProtocol"];
+        if (array_key_exists('IpProtocol',$param) and $param['IpProtocol'] !== null) {
+            $this->IpProtocol = $param['IpProtocol'];
         }
 
-        if (array_key_exists("PublicIpAddress",$param) and $param["PublicIpAddress"] !== null) {
-            $this->PublicIpAddress = $param["PublicIpAddress"];
+        if (array_key_exists('PublicIpAddress',$param) and $param['PublicIpAddress'] !== null) {
+            $this->PublicIpAddress = $param['PublicIpAddress'];
         }
 
-        if (array_key_exists("PublicPort",$param) and $param["PublicPort"] !== null) {
-            $this->PublicPort = $param["PublicPort"];
+        if (array_key_exists('PublicPort',$param) and $param['PublicPort'] !== null) {
+            $this->PublicPort = $param['PublicPort'];
         }
 
-        if (array_key_exists("PrivateIpAddress",$param) and $param["PrivateIpAddress"] !== null) {
-            $this->PrivateIpAddress = $param["PrivateIpAddress"];
+        if (array_key_exists('PrivateIpAddress',$param) and $param['PrivateIpAddress'] !== null) {
+            $this->PrivateIpAddress = $param['PrivateIpAddress'];
         }
 
-        if (array_key_exists("PrivatePort",$param) and $param["PrivatePort"] !== null) {
-            $this->PrivatePort = $param["PrivatePort"];
+        if (array_key_exists('PrivatePort',$param) and $param['PrivatePort'] !== null) {
+            $this->PrivatePort = $param['PrivatePort'];
         }
 
-        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
-            $this->Description = $param["Description"];
+        if (array_key_exists('Description',$param) and $param['Description'] !== null) {
+            $this->Description = $param['Description'];
         }
 
-        if (array_key_exists("NatGatewayId",$param) and $param["NatGatewayId"] !== null) {
-            $this->NatGatewayId = $param["NatGatewayId"];
+        if (array_key_exists('NatGatewayId',$param) and $param['NatGatewayId'] !== null) {
+            $this->NatGatewayId = $param['NatGatewayId'];
         }
 
-        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
-            $this->VpcId = $param["VpcId"];
+        if (array_key_exists('VpcId',$param) and $param['VpcId'] !== null) {
+            $this->VpcId = $param['VpcId'];
         }
 
-        if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
-            $this->CreatedTime = $param["CreatedTime"];
+        if (array_key_exists('CreatedTime',$param) and $param['CreatedTime'] !== null) {
+            $this->CreatedTime = $param['CreatedTime'];
         }
     }
 }

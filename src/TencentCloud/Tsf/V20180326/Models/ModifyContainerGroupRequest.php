@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -86,33 +86,33 @@ class ModifyContainerGroupRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
-            $this->GroupId = $param["GroupId"];
+        if (array_key_exists('GroupId',$param) and $param['GroupId'] !== null) {
+            $this->GroupId = $param['GroupId'];
         }
 
-        if (array_key_exists("AccessType",$param) and $param["AccessType"] !== null) {
-            $this->AccessType = $param["AccessType"];
+        if (array_key_exists('AccessType',$param) and $param['AccessType'] !== null) {
+            $this->AccessType = $param['AccessType'];
         }
 
-        if (array_key_exists("ProtocolPorts",$param) and $param["ProtocolPorts"] !== null) {
+        if (array_key_exists('ProtocolPorts',$param) and $param['ProtocolPorts'] !== null) {
             $this->ProtocolPorts = [];
-            foreach ($param["ProtocolPorts"] as $key => $value){
+            foreach ($param['ProtocolPorts'] as $key => $value){
                 $obj = new ProtocolPort();
                 $obj->deserialize($value);
                 array_push($this->ProtocolPorts, $obj);
             }
         }
 
-        if (array_key_exists("UpdateType",$param) and $param["UpdateType"] !== null) {
-            $this->UpdateType = $param["UpdateType"];
+        if (array_key_exists('UpdateType',$param) and $param['UpdateType'] !== null) {
+            $this->UpdateType = $param['UpdateType'];
         }
 
-        if (array_key_exists("UpdateIvl",$param) and $param["UpdateIvl"] !== null) {
-            $this->UpdateIvl = $param["UpdateIvl"];
+        if (array_key_exists('UpdateIvl',$param) and $param['UpdateIvl'] !== null) {
+            $this->UpdateIvl = $param['UpdateIvl'];
         }
 
-        if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
-            $this->SubnetId = $param["SubnetId"];
+        if (array_key_exists('SubnetId',$param) and $param['SubnetId'] !== null) {
+            $this->SubnetId = $param['SubnetId'];
         }
     }
 }

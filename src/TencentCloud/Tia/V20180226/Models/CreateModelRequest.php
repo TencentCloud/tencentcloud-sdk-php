@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -110,40 +110,40 @@ class CreateModelRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("Model",$param) and $param["Model"] !== null) {
-            $this->Model = $param["Model"];
+        if (array_key_exists('Model',$param) and $param['Model'] !== null) {
+            $this->Model = $param['Model'];
         }
 
-        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
-            $this->Description = $param["Description"];
+        if (array_key_exists('Description',$param) and $param['Description'] !== null) {
+            $this->Description = $param['Description'];
         }
 
-        if (array_key_exists("Cluster",$param) and $param["Cluster"] !== null) {
-            $this->Cluster = $param["Cluster"];
+        if (array_key_exists('Cluster',$param) and $param['Cluster'] !== null) {
+            $this->Cluster = $param['Cluster'];
         }
 
-        if (array_key_exists("RuntimeVersion",$param) and $param["RuntimeVersion"] !== null) {
-            $this->RuntimeVersion = $param["RuntimeVersion"];
+        if (array_key_exists('RuntimeVersion',$param) and $param['RuntimeVersion'] !== null) {
+            $this->RuntimeVersion = $param['RuntimeVersion'];
         }
 
-        if (array_key_exists("Replicas",$param) and $param["Replicas"] !== null) {
-            $this->Replicas = $param["Replicas"];
+        if (array_key_exists('Replicas',$param) and $param['Replicas'] !== null) {
+            $this->Replicas = $param['Replicas'];
         }
 
-        if (array_key_exists("Expose",$param) and $param["Expose"] !== null) {
-            $this->Expose = $param["Expose"];
+        if (array_key_exists('Expose',$param) and $param['Expose'] !== null) {
+            $this->Expose = $param['Expose'];
         }
 
-        if (array_key_exists("ServType",$param) and $param["ServType"] !== null) {
-            $this->ServType = $param["ServType"];
+        if (array_key_exists('ServType',$param) and $param['ServType'] !== null) {
+            $this->ServType = $param['ServType'];
         }
 
-        if (array_key_exists("RuntimeConf",$param) and $param["RuntimeConf"] !== null) {
-            $this->RuntimeConf = $param["RuntimeConf"];
+        if (array_key_exists('RuntimeConf',$param) and $param['RuntimeConf'] !== null) {
+            $this->RuntimeConf = $param['RuntimeConf'];
         }
     }
 }

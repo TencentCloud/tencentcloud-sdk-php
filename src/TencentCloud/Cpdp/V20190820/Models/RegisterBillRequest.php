@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -190,80 +190,80 @@ class RegisterBillRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RequestType",$param) and $param["RequestType"] !== null) {
-            $this->RequestType = $param["RequestType"];
+        if (array_key_exists('RequestType',$param) and $param['RequestType'] !== null) {
+            $this->RequestType = $param['RequestType'];
         }
 
-        if (array_key_exists("MerchantCode",$param) and $param["MerchantCode"] !== null) {
-            $this->MerchantCode = $param["MerchantCode"];
+        if (array_key_exists('MerchantCode',$param) and $param['MerchantCode'] !== null) {
+            $this->MerchantCode = $param['MerchantCode'];
         }
 
-        if (array_key_exists("PayChannel",$param) and $param["PayChannel"] !== null) {
-            $this->PayChannel = $param["PayChannel"];
+        if (array_key_exists('PayChannel',$param) and $param['PayChannel'] !== null) {
+            $this->PayChannel = $param['PayChannel'];
         }
 
-        if (array_key_exists("PayChannelSubId",$param) and $param["PayChannelSubId"] !== null) {
-            $this->PayChannelSubId = $param["PayChannelSubId"];
+        if (array_key_exists('PayChannelSubId',$param) and $param['PayChannelSubId'] !== null) {
+            $this->PayChannelSubId = $param['PayChannelSubId'];
         }
 
-        if (array_key_exists("OrderId",$param) and $param["OrderId"] !== null) {
-            $this->OrderId = $param["OrderId"];
+        if (array_key_exists('OrderId',$param) and $param['OrderId'] !== null) {
+            $this->OrderId = $param['OrderId'];
         }
 
-        if (array_key_exists("BankAccountNo",$param) and $param["BankAccountNo"] !== null) {
-            $this->BankAccountNo = $param["BankAccountNo"];
+        if (array_key_exists('BankAccountNo',$param) and $param['BankAccountNo'] !== null) {
+            $this->BankAccountNo = $param['BankAccountNo'];
         }
 
-        if (array_key_exists("PlatformShortNo",$param) and $param["PlatformShortNo"] !== null) {
-            $this->PlatformShortNo = $param["PlatformShortNo"];
+        if (array_key_exists('PlatformShortNo',$param) and $param['PlatformShortNo'] !== null) {
+            $this->PlatformShortNo = $param['PlatformShortNo'];
         }
 
-        if (array_key_exists("MidasSecretId",$param) and $param["MidasSecretId"] !== null) {
-            $this->MidasSecretId = $param["MidasSecretId"];
+        if (array_key_exists('MidasSecretId',$param) and $param['MidasSecretId'] !== null) {
+            $this->MidasSecretId = $param['MidasSecretId'];
         }
 
-        if (array_key_exists("MidasAppId",$param) and $param["MidasAppId"] !== null) {
-            $this->MidasAppId = $param["MidasAppId"];
+        if (array_key_exists('MidasAppId',$param) and $param['MidasAppId'] !== null) {
+            $this->MidasAppId = $param['MidasAppId'];
         }
 
-        if (array_key_exists("MidasSignature",$param) and $param["MidasSignature"] !== null) {
-            $this->MidasSignature = $param["MidasSignature"];
+        if (array_key_exists('MidasSignature',$param) and $param['MidasSignature'] !== null) {
+            $this->MidasSignature = $param['MidasSignature'];
         }
 
-        if (array_key_exists("TransSeqNo",$param) and $param["TransSeqNo"] !== null) {
-            $this->TransSeqNo = $param["TransSeqNo"];
+        if (array_key_exists('TransSeqNo',$param) and $param['TransSeqNo'] !== null) {
+            $this->TransSeqNo = $param['TransSeqNo'];
         }
 
-        if (array_key_exists("TranFee",$param) and $param["TranFee"] !== null) {
-            $this->TranFee = $param["TranFee"];
+        if (array_key_exists('TranFee',$param) and $param['TranFee'] !== null) {
+            $this->TranFee = $param['TranFee'];
         }
 
-        if (array_key_exists("OrderAmt",$param) and $param["OrderAmt"] !== null) {
-            $this->OrderAmt = $param["OrderAmt"];
+        if (array_key_exists('OrderAmt',$param) and $param['OrderAmt'] !== null) {
+            $this->OrderAmt = $param['OrderAmt'];
         }
 
-        if (array_key_exists("BankSubAccountNo",$param) and $param["BankSubAccountNo"] !== null) {
-            $this->BankSubAccountNo = $param["BankSubAccountNo"];
+        if (array_key_exists('BankSubAccountNo',$param) and $param['BankSubAccountNo'] !== null) {
+            $this->BankSubAccountNo = $param['BankSubAccountNo'];
         }
 
-        if (array_key_exists("TranNetMemberCode",$param) and $param["TranNetMemberCode"] !== null) {
-            $this->TranNetMemberCode = $param["TranNetMemberCode"];
+        if (array_key_exists('TranNetMemberCode',$param) and $param['TranNetMemberCode'] !== null) {
+            $this->TranNetMemberCode = $param['TranNetMemberCode'];
         }
 
-        if (array_key_exists("TranType",$param) and $param["TranType"] !== null) {
-            $this->TranType = $param["TranType"];
+        if (array_key_exists('TranType',$param) and $param['TranType'] !== null) {
+            $this->TranType = $param['TranType'];
         }
 
-        if (array_key_exists("ReservedMessage",$param) and $param["ReservedMessage"] !== null) {
-            $this->ReservedMessage = $param["ReservedMessage"];
+        if (array_key_exists('ReservedMessage',$param) and $param['ReservedMessage'] !== null) {
+            $this->ReservedMessage = $param['ReservedMessage'];
         }
 
-        if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
-            $this->Remark = $param["Remark"];
+        if (array_key_exists('Remark',$param) and $param['Remark'] !== null) {
+            $this->Remark = $param['Remark'];
         }
 
-        if (array_key_exists("MidasEnvironment",$param) and $param["MidasEnvironment"] !== null) {
-            $this->MidasEnvironment = $param["MidasEnvironment"];
+        if (array_key_exists('MidasEnvironment',$param) and $param['MidasEnvironment'] !== null) {
+            $this->MidasEnvironment = $param['MidasEnvironment'];
         }
     }
 }

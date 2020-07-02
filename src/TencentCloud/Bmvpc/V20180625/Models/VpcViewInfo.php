@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -102,37 +102,37 @@ class VpcViewInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
-            $this->VpcId = $param["VpcId"];
+        if (array_key_exists('VpcId',$param) and $param['VpcId'] !== null) {
+            $this->VpcId = $param['VpcId'];
         }
 
-        if (array_key_exists("VpcName",$param) and $param["VpcName"] !== null) {
-            $this->VpcName = $param["VpcName"];
+        if (array_key_exists('VpcName',$param) and $param['VpcName'] !== null) {
+            $this->VpcName = $param['VpcName'];
         }
 
-        if (array_key_exists("CidrBlock",$param) and $param["CidrBlock"] !== null) {
-            $this->CidrBlock = $param["CidrBlock"];
+        if (array_key_exists('CidrBlock',$param) and $param['CidrBlock'] !== null) {
+            $this->CidrBlock = $param['CidrBlock'];
         }
 
-        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
-            $this->Zone = $param["Zone"];
+        if (array_key_exists('Zone',$param) and $param['Zone'] !== null) {
+            $this->Zone = $param['Zone'];
         }
 
-        if (array_key_exists("LbNum",$param) and $param["LbNum"] !== null) {
-            $this->LbNum = $param["LbNum"];
+        if (array_key_exists('LbNum',$param) and $param['LbNum'] !== null) {
+            $this->LbNum = $param['LbNum'];
         }
 
-        if (array_key_exists("EipNum",$param) and $param["EipNum"] !== null) {
-            $this->EipNum = $param["EipNum"];
+        if (array_key_exists('EipNum',$param) and $param['EipNum'] !== null) {
+            $this->EipNum = $param['EipNum'];
         }
 
-        if (array_key_exists("NatNum",$param) and $param["NatNum"] !== null) {
-            $this->NatNum = $param["NatNum"];
+        if (array_key_exists('NatNum',$param) and $param['NatNum'] !== null) {
+            $this->NatNum = $param['NatNum'];
         }
 
-        if (array_key_exists("SubnetSet",$param) and $param["SubnetSet"] !== null) {
+        if (array_key_exists('SubnetSet',$param) and $param['SubnetSet'] !== null) {
             $this->SubnetSet = [];
-            foreach ($param["SubnetSet"] as $key => $value){
+            foreach ($param['SubnetSet'] as $key => $value){
                 $obj = new VpcSubnetViewInfo();
                 $obj->deserialize($value);
                 array_push($this->SubnetSet, $obj);

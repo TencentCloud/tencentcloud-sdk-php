@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -110,40 +110,40 @@ class CreateSpotDeviceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
-            $this->Zone = $param["Zone"];
+        if (array_key_exists('Zone',$param) and $param['Zone'] !== null) {
+            $this->Zone = $param['Zone'];
         }
 
-        if (array_key_exists("ComputeType",$param) and $param["ComputeType"] !== null) {
-            $this->ComputeType = $param["ComputeType"];
+        if (array_key_exists('ComputeType',$param) and $param['ComputeType'] !== null) {
+            $this->ComputeType = $param['ComputeType'];
         }
 
-        if (array_key_exists("OsTypeId",$param) and $param["OsTypeId"] !== null) {
-            $this->OsTypeId = $param["OsTypeId"];
+        if (array_key_exists('OsTypeId',$param) and $param['OsTypeId'] !== null) {
+            $this->OsTypeId = $param['OsTypeId'];
         }
 
-        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
-            $this->VpcId = $param["VpcId"];
+        if (array_key_exists('VpcId',$param) and $param['VpcId'] !== null) {
+            $this->VpcId = $param['VpcId'];
         }
 
-        if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
-            $this->SubnetId = $param["SubnetId"];
+        if (array_key_exists('SubnetId',$param) and $param['SubnetId'] !== null) {
+            $this->SubnetId = $param['SubnetId'];
         }
 
-        if (array_key_exists("GoodsNum",$param) and $param["GoodsNum"] !== null) {
-            $this->GoodsNum = $param["GoodsNum"];
+        if (array_key_exists('GoodsNum',$param) and $param['GoodsNum'] !== null) {
+            $this->GoodsNum = $param['GoodsNum'];
         }
 
-        if (array_key_exists("SpotStrategy",$param) and $param["SpotStrategy"] !== null) {
-            $this->SpotStrategy = $param["SpotStrategy"];
+        if (array_key_exists('SpotStrategy',$param) and $param['SpotStrategy'] !== null) {
+            $this->SpotStrategy = $param['SpotStrategy'];
         }
 
-        if (array_key_exists("SpotPriceLimit",$param) and $param["SpotPriceLimit"] !== null) {
-            $this->SpotPriceLimit = $param["SpotPriceLimit"];
+        if (array_key_exists('SpotPriceLimit',$param) and $param['SpotPriceLimit'] !== null) {
+            $this->SpotPriceLimit = $param['SpotPriceLimit'];
         }
 
-        if (array_key_exists("Passwd",$param) and $param["Passwd"] !== null) {
-            $this->Passwd = $param["Passwd"];
+        if (array_key_exists('Passwd',$param) and $param['Passwd'] !== null) {
+            $this->Passwd = $param['Passwd'];
         }
     }
 }

@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -170,60 +170,60 @@ no_match(不检测)
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Protocol",$param) and $param["Protocol"] !== null) {
-            $this->Protocol = $param["Protocol"];
+        if (array_key_exists('Protocol',$param) and $param['Protocol'] !== null) {
+            $this->Protocol = $param['Protocol'];
         }
 
-        if (array_key_exists("SportStart",$param) and $param["SportStart"] !== null) {
-            $this->SportStart = $param["SportStart"];
+        if (array_key_exists('SportStart',$param) and $param['SportStart'] !== null) {
+            $this->SportStart = $param['SportStart'];
         }
 
-        if (array_key_exists("SportEnd",$param) and $param["SportEnd"] !== null) {
-            $this->SportEnd = $param["SportEnd"];
+        if (array_key_exists('SportEnd',$param) and $param['SportEnd'] !== null) {
+            $this->SportEnd = $param['SportEnd'];
         }
 
-        if (array_key_exists("DportStart",$param) and $param["DportStart"] !== null) {
-            $this->DportStart = $param["DportStart"];
+        if (array_key_exists('DportStart',$param) and $param['DportStart'] !== null) {
+            $this->DportStart = $param['DportStart'];
         }
 
-        if (array_key_exists("DportEnd",$param) and $param["DportEnd"] !== null) {
-            $this->DportEnd = $param["DportEnd"];
+        if (array_key_exists('DportEnd',$param) and $param['DportEnd'] !== null) {
+            $this->DportEnd = $param['DportEnd'];
         }
 
-        if (array_key_exists("PktlenMin",$param) and $param["PktlenMin"] !== null) {
-            $this->PktlenMin = $param["PktlenMin"];
+        if (array_key_exists('PktlenMin',$param) and $param['PktlenMin'] !== null) {
+            $this->PktlenMin = $param['PktlenMin'];
         }
 
-        if (array_key_exists("PktlenMax",$param) and $param["PktlenMax"] !== null) {
-            $this->PktlenMax = $param["PktlenMax"];
+        if (array_key_exists('PktlenMax',$param) and $param['PktlenMax'] !== null) {
+            $this->PktlenMax = $param['PktlenMax'];
         }
 
-        if (array_key_exists("MatchBegin",$param) and $param["MatchBegin"] !== null) {
-            $this->MatchBegin = $param["MatchBegin"];
+        if (array_key_exists('MatchBegin',$param) and $param['MatchBegin'] !== null) {
+            $this->MatchBegin = $param['MatchBegin'];
         }
 
-        if (array_key_exists("MatchType",$param) and $param["MatchType"] !== null) {
-            $this->MatchType = $param["MatchType"];
+        if (array_key_exists('MatchType',$param) and $param['MatchType'] !== null) {
+            $this->MatchType = $param['MatchType'];
         }
 
-        if (array_key_exists("Str",$param) and $param["Str"] !== null) {
-            $this->Str = $param["Str"];
+        if (array_key_exists('Str',$param) and $param['Str'] !== null) {
+            $this->Str = $param['Str'];
         }
 
-        if (array_key_exists("Depth",$param) and $param["Depth"] !== null) {
-            $this->Depth = $param["Depth"];
+        if (array_key_exists('Depth',$param) and $param['Depth'] !== null) {
+            $this->Depth = $param['Depth'];
         }
 
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
+        if (array_key_exists('Offset',$param) and $param['Offset'] !== null) {
+            $this->Offset = $param['Offset'];
         }
 
-        if (array_key_exists("IsNot",$param) and $param["IsNot"] !== null) {
-            $this->IsNot = $param["IsNot"];
+        if (array_key_exists('IsNot',$param) and $param['IsNot'] !== null) {
+            $this->IsNot = $param['IsNot'];
         }
 
-        if (array_key_exists("Action",$param) and $param["Action"] !== null) {
-            $this->Action = $param["Action"];
+        if (array_key_exists('Action',$param) and $param['Action'] !== null) {
+            $this->Action = $param['Action'];
         }
     }
 }

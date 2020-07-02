@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -146,58 +146,58 @@ class HostItem extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Placement",$param) and $param["Placement"] !== null) {
+        if (array_key_exists('Placement',$param) and $param['Placement'] !== null) {
             $this->Placement = new Placement();
-            $this->Placement->deserialize($param["Placement"]);
+            $this->Placement->deserialize($param['Placement']);
         }
 
-        if (array_key_exists("HostId",$param) and $param["HostId"] !== null) {
-            $this->HostId = $param["HostId"];
+        if (array_key_exists('HostId',$param) and $param['HostId'] !== null) {
+            $this->HostId = $param['HostId'];
         }
 
-        if (array_key_exists("HostType",$param) and $param["HostType"] !== null) {
-            $this->HostType = $param["HostType"];
+        if (array_key_exists('HostType',$param) and $param['HostType'] !== null) {
+            $this->HostType = $param['HostType'];
         }
 
-        if (array_key_exists("HostName",$param) and $param["HostName"] !== null) {
-            $this->HostName = $param["HostName"];
+        if (array_key_exists('HostName',$param) and $param['HostName'] !== null) {
+            $this->HostName = $param['HostName'];
         }
 
-        if (array_key_exists("HostChargeType",$param) and $param["HostChargeType"] !== null) {
-            $this->HostChargeType = $param["HostChargeType"];
+        if (array_key_exists('HostChargeType',$param) and $param['HostChargeType'] !== null) {
+            $this->HostChargeType = $param['HostChargeType'];
         }
 
-        if (array_key_exists("RenewFlag",$param) and $param["RenewFlag"] !== null) {
-            $this->RenewFlag = $param["RenewFlag"];
+        if (array_key_exists('RenewFlag',$param) and $param['RenewFlag'] !== null) {
+            $this->RenewFlag = $param['RenewFlag'];
         }
 
-        if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
-            $this->CreatedTime = $param["CreatedTime"];
+        if (array_key_exists('CreatedTime',$param) and $param['CreatedTime'] !== null) {
+            $this->CreatedTime = $param['CreatedTime'];
         }
 
-        if (array_key_exists("ExpiredTime",$param) and $param["ExpiredTime"] !== null) {
-            $this->ExpiredTime = $param["ExpiredTime"];
+        if (array_key_exists('ExpiredTime',$param) and $param['ExpiredTime'] !== null) {
+            $this->ExpiredTime = $param['ExpiredTime'];
         }
 
-        if (array_key_exists("InstanceIds",$param) and $param["InstanceIds"] !== null) {
-            $this->InstanceIds = $param["InstanceIds"];
+        if (array_key_exists('InstanceIds',$param) and $param['InstanceIds'] !== null) {
+            $this->InstanceIds = $param['InstanceIds'];
         }
 
-        if (array_key_exists("HostState",$param) and $param["HostState"] !== null) {
-            $this->HostState = $param["HostState"];
+        if (array_key_exists('HostState',$param) and $param['HostState'] !== null) {
+            $this->HostState = $param['HostState'];
         }
 
-        if (array_key_exists("HostIp",$param) and $param["HostIp"] !== null) {
-            $this->HostIp = $param["HostIp"];
+        if (array_key_exists('HostIp',$param) and $param['HostIp'] !== null) {
+            $this->HostIp = $param['HostIp'];
         }
 
-        if (array_key_exists("HostResource",$param) and $param["HostResource"] !== null) {
+        if (array_key_exists('HostResource',$param) and $param['HostResource'] !== null) {
             $this->HostResource = new HostResource();
-            $this->HostResource->deserialize($param["HostResource"]);
+            $this->HostResource->deserialize($param['HostResource']);
         }
 
-        if (array_key_exists("CageId",$param) and $param["CageId"] !== null) {
-            $this->CageId = $param["CageId"];
+        if (array_key_exists('CageId',$param) and $param['CageId'] !== null) {
+            $this->CageId = $param['CageId'];
         }
     }
 }

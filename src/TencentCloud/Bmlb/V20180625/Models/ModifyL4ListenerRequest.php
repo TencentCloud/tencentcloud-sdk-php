@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSessionExpire(integer $SessionExpire) 设置会话保持时间，单位：秒。可选值：900~3600。
  * @method integer getHealthSwitch() 获取是否开启健康检查：1（开启）、0（关闭）。默认值0，表示关闭。
  * @method void setHealthSwitch(integer $HealthSwitch) 设置是否开启健康检查：1（开启）、0（关闭）。默认值0，表示关闭。
- * @method integer getTimeOut() 获取健康检查的响应超时时间，可选值：2-60，默认值：2，单位:秒。<br><font color="red">响应超时时间要小于检查间隔时间。</font>
- * @method void setTimeOut(integer $TimeOut) 设置健康检查的响应超时时间，可选值：2-60，默认值：2，单位:秒。<br><font color="red">响应超时时间要小于检查间隔时间。</font>
+ * @method integer getTimeOut() 获取健康检查的响应超时时间，可选值：2-60，默认值：2，单位:秒。<br><font color='red'>响应超时时间要小于检查间隔时间。</font>
+ * @method void setTimeOut(integer $TimeOut) 设置健康检查的响应超时时间，可选值：2-60，默认值：2，单位:秒。<br><font color='red'>响应超时时间要小于检查间隔时间。</font>
  * @method integer getIntervalTime() 获取健康检查间隔，默认值：5，可选值：5-300，单位：秒。
  * @method void setIntervalTime(integer $IntervalTime) 设置健康检查间隔，默认值：5，可选值：5-300，单位：秒。
  * @method integer getHealthNum() 获取健康阈值，默认值：3，表示当连续探测三次健康则表示该转发正常，可选值：2-10，单位：次。
@@ -83,7 +83,7 @@ class ModifyL4ListenerRequest extends AbstractModel
     public $HealthSwitch;
 
     /**
-     * @var integer 健康检查的响应超时时间，可选值：2-60，默认值：2，单位:秒。<br><font color="red">响应超时时间要小于检查间隔时间。</font>
+     * @var integer 健康检查的响应超时时间，可选值：2-60，默认值：2，单位:秒。<br><font color='red'>响应超时时间要小于检查间隔时间。</font>
      */
     public $TimeOut;
 
@@ -148,7 +148,7 @@ class ModifyL4ListenerRequest extends AbstractModel
      * @param string $ListenerName 四层监听器名称。
      * @param integer $SessionExpire 会话保持时间，单位：秒。可选值：900~3600。
      * @param integer $HealthSwitch 是否开启健康检查：1（开启）、0（关闭）。默认值0，表示关闭。
-     * @param integer $TimeOut 健康检查的响应超时时间，可选值：2-60，默认值：2，单位:秒。<br><font color="red">响应超时时间要小于检查间隔时间。</font>
+     * @param integer $TimeOut 健康检查的响应超时时间，可选值：2-60，默认值：2，单位:秒。<br><font color='red'>响应超时时间要小于检查间隔时间。</font>
      * @param integer $IntervalTime 健康检查间隔，默认值：5，可选值：5-300，单位：秒。
      * @param integer $HealthNum 健康阈值，默认值：3，表示当连续探测三次健康则表示该转发正常，可选值：2-10，单位：次。
      * @param integer $UnhealthNum 不健康阈值，默认值：3，表示当连续探测三次不健康则表示该转发不正常，可选值：2-10，单位：次。
@@ -174,72 +174,72 @@ class ModifyL4ListenerRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LoadBalancerId",$param) and $param["LoadBalancerId"] !== null) {
-            $this->LoadBalancerId = $param["LoadBalancerId"];
+        if (array_key_exists('LoadBalancerId',$param) and $param['LoadBalancerId'] !== null) {
+            $this->LoadBalancerId = $param['LoadBalancerId'];
         }
 
-        if (array_key_exists("ListenerId",$param) and $param["ListenerId"] !== null) {
-            $this->ListenerId = $param["ListenerId"];
+        if (array_key_exists('ListenerId',$param) and $param['ListenerId'] !== null) {
+            $this->ListenerId = $param['ListenerId'];
         }
 
-        if (array_key_exists("ListenerName",$param) and $param["ListenerName"] !== null) {
-            $this->ListenerName = $param["ListenerName"];
+        if (array_key_exists('ListenerName',$param) and $param['ListenerName'] !== null) {
+            $this->ListenerName = $param['ListenerName'];
         }
 
-        if (array_key_exists("SessionExpire",$param) and $param["SessionExpire"] !== null) {
-            $this->SessionExpire = $param["SessionExpire"];
+        if (array_key_exists('SessionExpire',$param) and $param['SessionExpire'] !== null) {
+            $this->SessionExpire = $param['SessionExpire'];
         }
 
-        if (array_key_exists("HealthSwitch",$param) and $param["HealthSwitch"] !== null) {
-            $this->HealthSwitch = $param["HealthSwitch"];
+        if (array_key_exists('HealthSwitch',$param) and $param['HealthSwitch'] !== null) {
+            $this->HealthSwitch = $param['HealthSwitch'];
         }
 
-        if (array_key_exists("TimeOut",$param) and $param["TimeOut"] !== null) {
-            $this->TimeOut = $param["TimeOut"];
+        if (array_key_exists('TimeOut',$param) and $param['TimeOut'] !== null) {
+            $this->TimeOut = $param['TimeOut'];
         }
 
-        if (array_key_exists("IntervalTime",$param) and $param["IntervalTime"] !== null) {
-            $this->IntervalTime = $param["IntervalTime"];
+        if (array_key_exists('IntervalTime',$param) and $param['IntervalTime'] !== null) {
+            $this->IntervalTime = $param['IntervalTime'];
         }
 
-        if (array_key_exists("HealthNum",$param) and $param["HealthNum"] !== null) {
-            $this->HealthNum = $param["HealthNum"];
+        if (array_key_exists('HealthNum',$param) and $param['HealthNum'] !== null) {
+            $this->HealthNum = $param['HealthNum'];
         }
 
-        if (array_key_exists("UnhealthNum",$param) and $param["UnhealthNum"] !== null) {
-            $this->UnhealthNum = $param["UnhealthNum"];
+        if (array_key_exists('UnhealthNum',$param) and $param['UnhealthNum'] !== null) {
+            $this->UnhealthNum = $param['UnhealthNum'];
         }
 
-        if (array_key_exists("Bandwidth",$param) and $param["Bandwidth"] !== null) {
-            $this->Bandwidth = $param["Bandwidth"];
+        if (array_key_exists('Bandwidth',$param) and $param['Bandwidth'] !== null) {
+            $this->Bandwidth = $param['Bandwidth'];
         }
 
-        if (array_key_exists("CustomHealthSwitch",$param) and $param["CustomHealthSwitch"] !== null) {
-            $this->CustomHealthSwitch = $param["CustomHealthSwitch"];
+        if (array_key_exists('CustomHealthSwitch',$param) and $param['CustomHealthSwitch'] !== null) {
+            $this->CustomHealthSwitch = $param['CustomHealthSwitch'];
         }
 
-        if (array_key_exists("InputType",$param) and $param["InputType"] !== null) {
-            $this->InputType = $param["InputType"];
+        if (array_key_exists('InputType',$param) and $param['InputType'] !== null) {
+            $this->InputType = $param['InputType'];
         }
 
-        if (array_key_exists("LineSeparatorType",$param) and $param["LineSeparatorType"] !== null) {
-            $this->LineSeparatorType = $param["LineSeparatorType"];
+        if (array_key_exists('LineSeparatorType',$param) and $param['LineSeparatorType'] !== null) {
+            $this->LineSeparatorType = $param['LineSeparatorType'];
         }
 
-        if (array_key_exists("HealthRequest",$param) and $param["HealthRequest"] !== null) {
-            $this->HealthRequest = $param["HealthRequest"];
+        if (array_key_exists('HealthRequest',$param) and $param['HealthRequest'] !== null) {
+            $this->HealthRequest = $param['HealthRequest'];
         }
 
-        if (array_key_exists("HealthResponse",$param) and $param["HealthResponse"] !== null) {
-            $this->HealthResponse = $param["HealthResponse"];
+        if (array_key_exists('HealthResponse',$param) and $param['HealthResponse'] !== null) {
+            $this->HealthResponse = $param['HealthResponse'];
         }
 
-        if (array_key_exists("ToaFlag",$param) and $param["ToaFlag"] !== null) {
-            $this->ToaFlag = $param["ToaFlag"];
+        if (array_key_exists('ToaFlag',$param) and $param['ToaFlag'] !== null) {
+            $this->ToaFlag = $param['ToaFlag'];
         }
 
-        if (array_key_exists("BalanceMode",$param) and $param["BalanceMode"] !== null) {
-            $this->BalanceMode = $param["BalanceMode"];
+        if (array_key_exists('BalanceMode',$param) and $param['BalanceMode'] !== null) {
+            $this->BalanceMode = $param['BalanceMode'];
         }
     }
 }

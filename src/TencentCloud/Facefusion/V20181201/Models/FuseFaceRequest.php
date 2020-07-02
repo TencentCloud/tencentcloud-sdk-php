@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -106,37 +106,37 @@ class FuseFaceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
-            $this->ProjectId = $param["ProjectId"];
+        if (array_key_exists('ProjectId',$param) and $param['ProjectId'] !== null) {
+            $this->ProjectId = $param['ProjectId'];
         }
 
-        if (array_key_exists("ModelId",$param) and $param["ModelId"] !== null) {
-            $this->ModelId = $param["ModelId"];
+        if (array_key_exists('ModelId',$param) and $param['ModelId'] !== null) {
+            $this->ModelId = $param['ModelId'];
         }
 
-        if (array_key_exists("RspImgType",$param) and $param["RspImgType"] !== null) {
-            $this->RspImgType = $param["RspImgType"];
+        if (array_key_exists('RspImgType',$param) and $param['RspImgType'] !== null) {
+            $this->RspImgType = $param['RspImgType'];
         }
 
-        if (array_key_exists("MergeInfos",$param) and $param["MergeInfos"] !== null) {
+        if (array_key_exists('MergeInfos',$param) and $param['MergeInfos'] !== null) {
             $this->MergeInfos = [];
-            foreach ($param["MergeInfos"] as $key => $value){
+            foreach ($param['MergeInfos'] as $key => $value){
                 $obj = new MergeInfo();
                 $obj->deserialize($value);
                 array_push($this->MergeInfos, $obj);
             }
         }
 
-        if (array_key_exists("FuseProfileDegree",$param) and $param["FuseProfileDegree"] !== null) {
-            $this->FuseProfileDegree = $param["FuseProfileDegree"];
+        if (array_key_exists('FuseProfileDegree',$param) and $param['FuseProfileDegree'] !== null) {
+            $this->FuseProfileDegree = $param['FuseProfileDegree'];
         }
 
-        if (array_key_exists("FuseFaceDegree",$param) and $param["FuseFaceDegree"] !== null) {
-            $this->FuseFaceDegree = $param["FuseFaceDegree"];
+        if (array_key_exists('FuseFaceDegree',$param) and $param['FuseFaceDegree'] !== null) {
+            $this->FuseFaceDegree = $param['FuseFaceDegree'];
         }
 
-        if (array_key_exists("CelebrityIdentify",$param) and $param["CelebrityIdentify"] !== null) {
-            $this->CelebrityIdentify = $param["CelebrityIdentify"];
+        if (array_key_exists('CelebrityIdentify',$param) and $param['CelebrityIdentify'] !== null) {
+            $this->CelebrityIdentify = $param['CelebrityIdentify'];
         }
     }
 }

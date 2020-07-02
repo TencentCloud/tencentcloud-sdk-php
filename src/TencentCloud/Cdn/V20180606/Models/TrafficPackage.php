@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -138,48 +138,48 @@ disabled：未启用
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
-            $this->Id = $param["Id"];
+        if (array_key_exists('Id',$param) and $param['Id'] !== null) {
+            $this->Id = $param['Id'];
         }
 
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists('Type',$param) and $param['Type'] !== null) {
+            $this->Type = $param['Type'];
         }
 
-        if (array_key_exists("Bytes",$param) and $param["Bytes"] !== null) {
-            $this->Bytes = $param["Bytes"];
+        if (array_key_exists('Bytes',$param) and $param['Bytes'] !== null) {
+            $this->Bytes = $param['Bytes'];
         }
 
-        if (array_key_exists("BytesUsed",$param) and $param["BytesUsed"] !== null) {
-            $this->BytesUsed = $param["BytesUsed"];
+        if (array_key_exists('BytesUsed',$param) and $param['BytesUsed'] !== null) {
+            $this->BytesUsed = $param['BytesUsed'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("EnableTime",$param) and $param["EnableTime"] !== null) {
-            $this->EnableTime = $param["EnableTime"];
+        if (array_key_exists('EnableTime',$param) and $param['EnableTime'] !== null) {
+            $this->EnableTime = $param['EnableTime'];
         }
 
-        if (array_key_exists("ExpireTime",$param) and $param["ExpireTime"] !== null) {
-            $this->ExpireTime = $param["ExpireTime"];
+        if (array_key_exists('ExpireTime',$param) and $param['ExpireTime'] !== null) {
+            $this->ExpireTime = $param['ExpireTime'];
         }
 
-        if (array_key_exists("ContractExtension",$param) and $param["ContractExtension"] !== null) {
-            $this->ContractExtension = $param["ContractExtension"];
+        if (array_key_exists('ContractExtension',$param) and $param['ContractExtension'] !== null) {
+            $this->ContractExtension = $param['ContractExtension'];
         }
 
-        if (array_key_exists("AutoExtension",$param) and $param["AutoExtension"] !== null) {
-            $this->AutoExtension = $param["AutoExtension"];
+        if (array_key_exists('AutoExtension',$param) and $param['AutoExtension'] !== null) {
+            $this->AutoExtension = $param['AutoExtension'];
         }
 
-        if (array_key_exists("Channel",$param) and $param["Channel"] !== null) {
-            $this->Channel = $param["Channel"];
+        if (array_key_exists('Channel',$param) and $param['Channel'] !== null) {
+            $this->Channel = $param['Channel'];
         }
     }
 }

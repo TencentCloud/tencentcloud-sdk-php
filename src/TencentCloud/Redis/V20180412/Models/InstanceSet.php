@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -422,186 +422,186 @@ class InstanceSet extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceName",$param) and $param["InstanceName"] !== null) {
-            $this->InstanceName = $param["InstanceName"];
+        if (array_key_exists('InstanceName',$param) and $param['InstanceName'] !== null) {
+            $this->InstanceName = $param['InstanceName'];
         }
 
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("Appid",$param) and $param["Appid"] !== null) {
-            $this->Appid = $param["Appid"];
+        if (array_key_exists('Appid',$param) and $param['Appid'] !== null) {
+            $this->Appid = $param['Appid'];
         }
 
-        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
-            $this->ProjectId = $param["ProjectId"];
+        if (array_key_exists('ProjectId',$param) and $param['ProjectId'] !== null) {
+            $this->ProjectId = $param['ProjectId'];
         }
 
-        if (array_key_exists("RegionId",$param) and $param["RegionId"] !== null) {
-            $this->RegionId = $param["RegionId"];
+        if (array_key_exists('RegionId',$param) and $param['RegionId'] !== null) {
+            $this->RegionId = $param['RegionId'];
         }
 
-        if (array_key_exists("ZoneId",$param) and $param["ZoneId"] !== null) {
-            $this->ZoneId = $param["ZoneId"];
+        if (array_key_exists('ZoneId',$param) and $param['ZoneId'] !== null) {
+            $this->ZoneId = $param['ZoneId'];
         }
 
-        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
-            $this->VpcId = $param["VpcId"];
+        if (array_key_exists('VpcId',$param) and $param['VpcId'] !== null) {
+            $this->VpcId = $param['VpcId'];
         }
 
-        if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
-            $this->SubnetId = $param["SubnetId"];
+        if (array_key_exists('SubnetId',$param) and $param['SubnetId'] !== null) {
+            $this->SubnetId = $param['SubnetId'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("WanIp",$param) and $param["WanIp"] !== null) {
-            $this->WanIp = $param["WanIp"];
+        if (array_key_exists('WanIp',$param) and $param['WanIp'] !== null) {
+            $this->WanIp = $param['WanIp'];
         }
 
-        if (array_key_exists("Port",$param) and $param["Port"] !== null) {
-            $this->Port = $param["Port"];
+        if (array_key_exists('Port',$param) and $param['Port'] !== null) {
+            $this->Port = $param['Port'];
         }
 
-        if (array_key_exists("Createtime",$param) and $param["Createtime"] !== null) {
-            $this->Createtime = $param["Createtime"];
+        if (array_key_exists('Createtime',$param) and $param['Createtime'] !== null) {
+            $this->Createtime = $param['Createtime'];
         }
 
-        if (array_key_exists("Size",$param) and $param["Size"] !== null) {
-            $this->Size = $param["Size"];
+        if (array_key_exists('Size',$param) and $param['Size'] !== null) {
+            $this->Size = $param['Size'];
         }
 
-        if (array_key_exists("SizeUsed",$param) and $param["SizeUsed"] !== null) {
-            $this->SizeUsed = $param["SizeUsed"];
+        if (array_key_exists('SizeUsed',$param) and $param['SizeUsed'] !== null) {
+            $this->SizeUsed = $param['SizeUsed'];
         }
 
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists('Type',$param) and $param['Type'] !== null) {
+            $this->Type = $param['Type'];
         }
 
-        if (array_key_exists("AutoRenewFlag",$param) and $param["AutoRenewFlag"] !== null) {
-            $this->AutoRenewFlag = $param["AutoRenewFlag"];
+        if (array_key_exists('AutoRenewFlag',$param) and $param['AutoRenewFlag'] !== null) {
+            $this->AutoRenewFlag = $param['AutoRenewFlag'];
         }
 
-        if (array_key_exists("DeadlineTime",$param) and $param["DeadlineTime"] !== null) {
-            $this->DeadlineTime = $param["DeadlineTime"];
+        if (array_key_exists('DeadlineTime',$param) and $param['DeadlineTime'] !== null) {
+            $this->DeadlineTime = $param['DeadlineTime'];
         }
 
-        if (array_key_exists("Engine",$param) and $param["Engine"] !== null) {
-            $this->Engine = $param["Engine"];
+        if (array_key_exists('Engine',$param) and $param['Engine'] !== null) {
+            $this->Engine = $param['Engine'];
         }
 
-        if (array_key_exists("ProductType",$param) and $param["ProductType"] !== null) {
-            $this->ProductType = $param["ProductType"];
+        if (array_key_exists('ProductType',$param) and $param['ProductType'] !== null) {
+            $this->ProductType = $param['ProductType'];
         }
 
-        if (array_key_exists("UniqVpcId",$param) and $param["UniqVpcId"] !== null) {
-            $this->UniqVpcId = $param["UniqVpcId"];
+        if (array_key_exists('UniqVpcId',$param) and $param['UniqVpcId'] !== null) {
+            $this->UniqVpcId = $param['UniqVpcId'];
         }
 
-        if (array_key_exists("UniqSubnetId",$param) and $param["UniqSubnetId"] !== null) {
-            $this->UniqSubnetId = $param["UniqSubnetId"];
+        if (array_key_exists('UniqSubnetId',$param) and $param['UniqSubnetId'] !== null) {
+            $this->UniqSubnetId = $param['UniqSubnetId'];
         }
 
-        if (array_key_exists("BillingMode",$param) and $param["BillingMode"] !== null) {
-            $this->BillingMode = $param["BillingMode"];
+        if (array_key_exists('BillingMode',$param) and $param['BillingMode'] !== null) {
+            $this->BillingMode = $param['BillingMode'];
         }
 
-        if (array_key_exists("InstanceTitle",$param) and $param["InstanceTitle"] !== null) {
-            $this->InstanceTitle = $param["InstanceTitle"];
+        if (array_key_exists('InstanceTitle',$param) and $param['InstanceTitle'] !== null) {
+            $this->InstanceTitle = $param['InstanceTitle'];
         }
 
-        if (array_key_exists("OfflineTime",$param) and $param["OfflineTime"] !== null) {
-            $this->OfflineTime = $param["OfflineTime"];
+        if (array_key_exists('OfflineTime',$param) and $param['OfflineTime'] !== null) {
+            $this->OfflineTime = $param['OfflineTime'];
         }
 
-        if (array_key_exists("SubStatus",$param) and $param["SubStatus"] !== null) {
-            $this->SubStatus = $param["SubStatus"];
+        if (array_key_exists('SubStatus',$param) and $param['SubStatus'] !== null) {
+            $this->SubStatus = $param['SubStatus'];
         }
 
-        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
-            $this->Tags = $param["Tags"];
+        if (array_key_exists('Tags',$param) and $param['Tags'] !== null) {
+            $this->Tags = $param['Tags'];
         }
 
-        if (array_key_exists("InstanceNode",$param) and $param["InstanceNode"] !== null) {
+        if (array_key_exists('InstanceNode',$param) and $param['InstanceNode'] !== null) {
             $this->InstanceNode = [];
-            foreach ($param["InstanceNode"] as $key => $value){
+            foreach ($param['InstanceNode'] as $key => $value){
                 $obj = new InstanceNode();
                 $obj->deserialize($value);
                 array_push($this->InstanceNode, $obj);
             }
         }
 
-        if (array_key_exists("RedisShardSize",$param) and $param["RedisShardSize"] !== null) {
-            $this->RedisShardSize = $param["RedisShardSize"];
+        if (array_key_exists('RedisShardSize',$param) and $param['RedisShardSize'] !== null) {
+            $this->RedisShardSize = $param['RedisShardSize'];
         }
 
-        if (array_key_exists("RedisShardNum",$param) and $param["RedisShardNum"] !== null) {
-            $this->RedisShardNum = $param["RedisShardNum"];
+        if (array_key_exists('RedisShardNum',$param) and $param['RedisShardNum'] !== null) {
+            $this->RedisShardNum = $param['RedisShardNum'];
         }
 
-        if (array_key_exists("RedisReplicasNum",$param) and $param["RedisReplicasNum"] !== null) {
-            $this->RedisReplicasNum = $param["RedisReplicasNum"];
+        if (array_key_exists('RedisReplicasNum',$param) and $param['RedisReplicasNum'] !== null) {
+            $this->RedisReplicasNum = $param['RedisReplicasNum'];
         }
 
-        if (array_key_exists("PriceId",$param) and $param["PriceId"] !== null) {
-            $this->PriceId = $param["PriceId"];
+        if (array_key_exists('PriceId',$param) and $param['PriceId'] !== null) {
+            $this->PriceId = $param['PriceId'];
         }
 
-        if (array_key_exists("CloseTime",$param) and $param["CloseTime"] !== null) {
-            $this->CloseTime = $param["CloseTime"];
+        if (array_key_exists('CloseTime',$param) and $param['CloseTime'] !== null) {
+            $this->CloseTime = $param['CloseTime'];
         }
 
-        if (array_key_exists("SlaveReadWeight",$param) and $param["SlaveReadWeight"] !== null) {
-            $this->SlaveReadWeight = $param["SlaveReadWeight"];
+        if (array_key_exists('SlaveReadWeight',$param) and $param['SlaveReadWeight'] !== null) {
+            $this->SlaveReadWeight = $param['SlaveReadWeight'];
         }
 
-        if (array_key_exists("InstanceTags",$param) and $param["InstanceTags"] !== null) {
+        if (array_key_exists('InstanceTags',$param) and $param['InstanceTags'] !== null) {
             $this->InstanceTags = [];
-            foreach ($param["InstanceTags"] as $key => $value){
+            foreach ($param['InstanceTags'] as $key => $value){
                 $obj = new InstanceTagInfo();
                 $obj->deserialize($value);
                 array_push($this->InstanceTags, $obj);
             }
         }
 
-        if (array_key_exists("ProjectName",$param) and $param["ProjectName"] !== null) {
-            $this->ProjectName = $param["ProjectName"];
+        if (array_key_exists('ProjectName',$param) and $param['ProjectName'] !== null) {
+            $this->ProjectName = $param['ProjectName'];
         }
 
-        if (array_key_exists("NoAuth",$param) and $param["NoAuth"] !== null) {
-            $this->NoAuth = $param["NoAuth"];
+        if (array_key_exists('NoAuth',$param) and $param['NoAuth'] !== null) {
+            $this->NoAuth = $param['NoAuth'];
         }
 
-        if (array_key_exists("ClientLimit",$param) and $param["ClientLimit"] !== null) {
-            $this->ClientLimit = $param["ClientLimit"];
+        if (array_key_exists('ClientLimit',$param) and $param['ClientLimit'] !== null) {
+            $this->ClientLimit = $param['ClientLimit'];
         }
 
-        if (array_key_exists("DtsStatus",$param) and $param["DtsStatus"] !== null) {
-            $this->DtsStatus = $param["DtsStatus"];
+        if (array_key_exists('DtsStatus',$param) and $param['DtsStatus'] !== null) {
+            $this->DtsStatus = $param['DtsStatus'];
         }
 
-        if (array_key_exists("NetLimit",$param) and $param["NetLimit"] !== null) {
-            $this->NetLimit = $param["NetLimit"];
+        if (array_key_exists('NetLimit',$param) and $param['NetLimit'] !== null) {
+            $this->NetLimit = $param['NetLimit'];
         }
 
-        if (array_key_exists("PasswordFree",$param) and $param["PasswordFree"] !== null) {
-            $this->PasswordFree = $param["PasswordFree"];
+        if (array_key_exists('PasswordFree',$param) and $param['PasswordFree'] !== null) {
+            $this->PasswordFree = $param['PasswordFree'];
         }
 
-        if (array_key_exists("ReadOnly",$param) and $param["ReadOnly"] !== null) {
-            $this->ReadOnly = $param["ReadOnly"];
+        if (array_key_exists('ReadOnly',$param) and $param['ReadOnly'] !== null) {
+            $this->ReadOnly = $param['ReadOnly'];
         }
 
-        if (array_key_exists("Vip6",$param) and $param["Vip6"] !== null) {
-            $this->Vip6 = $param["Vip6"];
+        if (array_key_exists('Vip6',$param) and $param['Vip6'] !== null) {
+            $this->Vip6 = $param['Vip6'];
         }
 
-        if (array_key_exists("RemainBandwidthDuration",$param) and $param["RemainBandwidthDuration"] !== null) {
-            $this->RemainBandwidthDuration = $param["RemainBandwidthDuration"];
+        if (array_key_exists('RemainBandwidthDuration',$param) and $param['RemainBandwidthDuration'] !== null) {
+            $this->RemainBandwidthDuration = $param['RemainBandwidthDuration'];
         }
     }
 }

@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -110,40 +110,40 @@ class L7Backend extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BindType",$param) and $param["BindType"] !== null) {
-            $this->BindType = $param["BindType"];
+        if (array_key_exists('BindType',$param) and $param['BindType'] !== null) {
+            $this->BindType = $param['BindType'];
         }
 
-        if (array_key_exists("Port",$param) and $param["Port"] !== null) {
-            $this->Port = $param["Port"];
+        if (array_key_exists('Port',$param) and $param['Port'] !== null) {
+            $this->Port = $param['Port'];
         }
 
-        if (array_key_exists("Weight",$param) and $param["Weight"] !== null) {
-            $this->Weight = $param["Weight"];
+        if (array_key_exists('Weight',$param) and $param['Weight'] !== null) {
+            $this->Weight = $param['Weight'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("Alias",$param) and $param["Alias"] !== null) {
-            $this->Alias = $param["Alias"];
+        if (array_key_exists('Alias',$param) and $param['Alias'] !== null) {
+            $this->Alias = $param['Alias'];
         }
 
-        if (array_key_exists("LanIp",$param) and $param["LanIp"] !== null) {
-            $this->LanIp = $param["LanIp"];
+        if (array_key_exists('LanIp',$param) and $param['LanIp'] !== null) {
+            $this->LanIp = $param['LanIp'];
         }
 
-        if (array_key_exists("MgtIp",$param) and $param["MgtIp"] !== null) {
-            $this->MgtIp = $param["MgtIp"];
+        if (array_key_exists('MgtIp',$param) and $param['MgtIp'] !== null) {
+            $this->MgtIp = $param['MgtIp'];
         }
 
-        if (array_key_exists("Operates",$param) and $param["Operates"] !== null) {
-            $this->Operates = $param["Operates"];
+        if (array_key_exists('Operates',$param) and $param['Operates'] !== null) {
+            $this->Operates = $param['Operates'];
         }
     }
 }

@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -70,20 +70,20 @@ class ListGroupsForUserRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Uid",$param) and $param["Uid"] !== null) {
-            $this->Uid = $param["Uid"];
+        if (array_key_exists('Uid',$param) and $param['Uid'] !== null) {
+            $this->Uid = $param['Uid'];
         }
 
-        if (array_key_exists("Rp",$param) and $param["Rp"] !== null) {
-            $this->Rp = $param["Rp"];
+        if (array_key_exists('Rp',$param) and $param['Rp'] !== null) {
+            $this->Rp = $param['Rp'];
         }
 
-        if (array_key_exists("Page",$param) and $param["Page"] !== null) {
-            $this->Page = $param["Page"];
+        if (array_key_exists('Page',$param) and $param['Page'] !== null) {
+            $this->Page = $param['Page'];
         }
 
-        if (array_key_exists("SubUin",$param) and $param["SubUin"] !== null) {
-            $this->SubUin = $param["SubUin"];
+        if (array_key_exists('SubUin',$param) and $param['SubUin'] !== null) {
+            $this->SubUin = $param['SubUin'];
         }
     }
 }

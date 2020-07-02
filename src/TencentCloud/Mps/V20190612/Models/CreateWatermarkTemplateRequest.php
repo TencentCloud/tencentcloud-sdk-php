@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -166,43 +166,43 @@ class CreateWatermarkTemplateRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists('Type',$param) and $param['Type'] !== null) {
+            $this->Type = $param['Type'];
         }
 
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("Comment",$param) and $param["Comment"] !== null) {
-            $this->Comment = $param["Comment"];
+        if (array_key_exists('Comment',$param) and $param['Comment'] !== null) {
+            $this->Comment = $param['Comment'];
         }
 
-        if (array_key_exists("CoordinateOrigin",$param) and $param["CoordinateOrigin"] !== null) {
-            $this->CoordinateOrigin = $param["CoordinateOrigin"];
+        if (array_key_exists('CoordinateOrigin',$param) and $param['CoordinateOrigin'] !== null) {
+            $this->CoordinateOrigin = $param['CoordinateOrigin'];
         }
 
-        if (array_key_exists("XPos",$param) and $param["XPos"] !== null) {
-            $this->XPos = $param["XPos"];
+        if (array_key_exists('XPos',$param) and $param['XPos'] !== null) {
+            $this->XPos = $param['XPos'];
         }
 
-        if (array_key_exists("YPos",$param) and $param["YPos"] !== null) {
-            $this->YPos = $param["YPos"];
+        if (array_key_exists('YPos',$param) and $param['YPos'] !== null) {
+            $this->YPos = $param['YPos'];
         }
 
-        if (array_key_exists("ImageTemplate",$param) and $param["ImageTemplate"] !== null) {
+        if (array_key_exists('ImageTemplate',$param) and $param['ImageTemplate'] !== null) {
             $this->ImageTemplate = new ImageWatermarkInput();
-            $this->ImageTemplate->deserialize($param["ImageTemplate"]);
+            $this->ImageTemplate->deserialize($param['ImageTemplate']);
         }
 
-        if (array_key_exists("TextTemplate",$param) and $param["TextTemplate"] !== null) {
+        if (array_key_exists('TextTemplate',$param) and $param['TextTemplate'] !== null) {
             $this->TextTemplate = new TextWatermarkTemplateInput();
-            $this->TextTemplate->deserialize($param["TextTemplate"]);
+            $this->TextTemplate->deserialize($param['TextTemplate']);
         }
 
-        if (array_key_exists("SvgTemplate",$param) and $param["SvgTemplate"] !== null) {
+        if (array_key_exists('SvgTemplate',$param) and $param['SvgTemplate'] !== null) {
             $this->SvgTemplate = new SvgWatermarkInput();
-            $this->SvgTemplate->deserialize($param["SvgTemplate"]);
+            $this->SvgTemplate->deserialize($param['SvgTemplate']);
         }
     }
 }

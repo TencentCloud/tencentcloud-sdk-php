@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -70,25 +70,25 @@ class PutMonitorDataRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Metrics",$param) and $param["Metrics"] !== null) {
+        if (array_key_exists('Metrics',$param) and $param['Metrics'] !== null) {
             $this->Metrics = [];
-            foreach ($param["Metrics"] as $key => $value){
+            foreach ($param['Metrics'] as $key => $value){
                 $obj = new MetricDatum();
                 $obj->deserialize($value);
                 array_push($this->Metrics, $obj);
             }
         }
 
-        if (array_key_exists("AnnounceIp",$param) and $param["AnnounceIp"] !== null) {
-            $this->AnnounceIp = $param["AnnounceIp"];
+        if (array_key_exists('AnnounceIp',$param) and $param['AnnounceIp'] !== null) {
+            $this->AnnounceIp = $param['AnnounceIp'];
         }
 
-        if (array_key_exists("AnnounceTimestamp",$param) and $param["AnnounceTimestamp"] !== null) {
-            $this->AnnounceTimestamp = $param["AnnounceTimestamp"];
+        if (array_key_exists('AnnounceTimestamp',$param) and $param['AnnounceTimestamp'] !== null) {
+            $this->AnnounceTimestamp = $param['AnnounceTimestamp'];
         }
 
-        if (array_key_exists("AnnounceInstance",$param) and $param["AnnounceInstance"] !== null) {
-            $this->AnnounceInstance = $param["AnnounceInstance"];
+        if (array_key_exists('AnnounceInstance',$param) and $param['AnnounceInstance'] !== null) {
+            $this->AnnounceInstance = $param['AnnounceInstance'];
         }
     }
 }

@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -362,113 +362,113 @@ class Cluster extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
-            $this->ClusterId = $param["ClusterId"];
+        if (array_key_exists('ClusterId',$param) and $param['ClusterId'] !== null) {
+            $this->ClusterId = $param['ClusterId'];
         }
 
-        if (array_key_exists("ClusterName",$param) and $param["ClusterName"] !== null) {
-            $this->ClusterName = $param["ClusterName"];
+        if (array_key_exists('ClusterName',$param) and $param['ClusterName'] !== null) {
+            $this->ClusterName = $param['ClusterName'];
         }
 
-        if (array_key_exists("ClusterDesc",$param) and $param["ClusterDesc"] !== null) {
-            $this->ClusterDesc = $param["ClusterDesc"];
+        if (array_key_exists('ClusterDesc',$param) and $param['ClusterDesc'] !== null) {
+            $this->ClusterDesc = $param['ClusterDesc'];
         }
 
-        if (array_key_exists("ClusterType",$param) and $param["ClusterType"] !== null) {
-            $this->ClusterType = $param["ClusterType"];
+        if (array_key_exists('ClusterType',$param) and $param['ClusterType'] !== null) {
+            $this->ClusterType = $param['ClusterType'];
         }
 
-        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
-            $this->VpcId = $param["VpcId"];
+        if (array_key_exists('VpcId',$param) and $param['VpcId'] !== null) {
+            $this->VpcId = $param['VpcId'];
         }
 
-        if (array_key_exists("ClusterStatus",$param) and $param["ClusterStatus"] !== null) {
-            $this->ClusterStatus = $param["ClusterStatus"];
+        if (array_key_exists('ClusterStatus',$param) and $param['ClusterStatus'] !== null) {
+            $this->ClusterStatus = $param['ClusterStatus'];
         }
 
-        if (array_key_exists("ClusterCIDR",$param) and $param["ClusterCIDR"] !== null) {
-            $this->ClusterCIDR = $param["ClusterCIDR"];
+        if (array_key_exists('ClusterCIDR',$param) and $param['ClusterCIDR'] !== null) {
+            $this->ClusterCIDR = $param['ClusterCIDR'];
         }
 
-        if (array_key_exists("ClusterTotalCpu",$param) and $param["ClusterTotalCpu"] !== null) {
-            $this->ClusterTotalCpu = $param["ClusterTotalCpu"];
+        if (array_key_exists('ClusterTotalCpu',$param) and $param['ClusterTotalCpu'] !== null) {
+            $this->ClusterTotalCpu = $param['ClusterTotalCpu'];
         }
 
-        if (array_key_exists("ClusterTotalMem",$param) and $param["ClusterTotalMem"] !== null) {
-            $this->ClusterTotalMem = $param["ClusterTotalMem"];
+        if (array_key_exists('ClusterTotalMem',$param) and $param['ClusterTotalMem'] !== null) {
+            $this->ClusterTotalMem = $param['ClusterTotalMem'];
         }
 
-        if (array_key_exists("ClusterUsedCpu",$param) and $param["ClusterUsedCpu"] !== null) {
-            $this->ClusterUsedCpu = $param["ClusterUsedCpu"];
+        if (array_key_exists('ClusterUsedCpu',$param) and $param['ClusterUsedCpu'] !== null) {
+            $this->ClusterUsedCpu = $param['ClusterUsedCpu'];
         }
 
-        if (array_key_exists("ClusterUsedMem",$param) and $param["ClusterUsedMem"] !== null) {
-            $this->ClusterUsedMem = $param["ClusterUsedMem"];
+        if (array_key_exists('ClusterUsedMem',$param) and $param['ClusterUsedMem'] !== null) {
+            $this->ClusterUsedMem = $param['ClusterUsedMem'];
         }
 
-        if (array_key_exists("InstanceCount",$param) and $param["InstanceCount"] !== null) {
-            $this->InstanceCount = $param["InstanceCount"];
+        if (array_key_exists('InstanceCount',$param) and $param['InstanceCount'] !== null) {
+            $this->InstanceCount = $param['InstanceCount'];
         }
 
-        if (array_key_exists("RunInstanceCount",$param) and $param["RunInstanceCount"] !== null) {
-            $this->RunInstanceCount = $param["RunInstanceCount"];
+        if (array_key_exists('RunInstanceCount',$param) and $param['RunInstanceCount'] !== null) {
+            $this->RunInstanceCount = $param['RunInstanceCount'];
         }
 
-        if (array_key_exists("NormalInstanceCount",$param) and $param["NormalInstanceCount"] !== null) {
-            $this->NormalInstanceCount = $param["NormalInstanceCount"];
+        if (array_key_exists('NormalInstanceCount',$param) and $param['NormalInstanceCount'] !== null) {
+            $this->NormalInstanceCount = $param['NormalInstanceCount'];
         }
 
-        if (array_key_exists("DeleteFlag",$param) and $param["DeleteFlag"] !== null) {
-            $this->DeleteFlag = $param["DeleteFlag"];
+        if (array_key_exists('DeleteFlag',$param) and $param['DeleteFlag'] !== null) {
+            $this->DeleteFlag = $param['DeleteFlag'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
-            $this->UpdateTime = $param["UpdateTime"];
+        if (array_key_exists('UpdateTime',$param) and $param['UpdateTime'] !== null) {
+            $this->UpdateTime = $param['UpdateTime'];
         }
 
-        if (array_key_exists("TsfRegionId",$param) and $param["TsfRegionId"] !== null) {
-            $this->TsfRegionId = $param["TsfRegionId"];
+        if (array_key_exists('TsfRegionId',$param) and $param['TsfRegionId'] !== null) {
+            $this->TsfRegionId = $param['TsfRegionId'];
         }
 
-        if (array_key_exists("TsfRegionName",$param) and $param["TsfRegionName"] !== null) {
-            $this->TsfRegionName = $param["TsfRegionName"];
+        if (array_key_exists('TsfRegionName',$param) and $param['TsfRegionName'] !== null) {
+            $this->TsfRegionName = $param['TsfRegionName'];
         }
 
-        if (array_key_exists("TsfZoneId",$param) and $param["TsfZoneId"] !== null) {
-            $this->TsfZoneId = $param["TsfZoneId"];
+        if (array_key_exists('TsfZoneId',$param) and $param['TsfZoneId'] !== null) {
+            $this->TsfZoneId = $param['TsfZoneId'];
         }
 
-        if (array_key_exists("TsfZoneName",$param) and $param["TsfZoneName"] !== null) {
-            $this->TsfZoneName = $param["TsfZoneName"];
+        if (array_key_exists('TsfZoneName',$param) and $param['TsfZoneName'] !== null) {
+            $this->TsfZoneName = $param['TsfZoneName'];
         }
 
-        if (array_key_exists("DeleteFlagReason",$param) and $param["DeleteFlagReason"] !== null) {
-            $this->DeleteFlagReason = $param["DeleteFlagReason"];
+        if (array_key_exists('DeleteFlagReason',$param) and $param['DeleteFlagReason'] !== null) {
+            $this->DeleteFlagReason = $param['DeleteFlagReason'];
         }
 
-        if (array_key_exists("ClusterLimitCpu",$param) and $param["ClusterLimitCpu"] !== null) {
-            $this->ClusterLimitCpu = $param["ClusterLimitCpu"];
+        if (array_key_exists('ClusterLimitCpu',$param) and $param['ClusterLimitCpu'] !== null) {
+            $this->ClusterLimitCpu = $param['ClusterLimitCpu'];
         }
 
-        if (array_key_exists("ClusterLimitMem",$param) and $param["ClusterLimitMem"] !== null) {
-            $this->ClusterLimitMem = $param["ClusterLimitMem"];
+        if (array_key_exists('ClusterLimitMem',$param) and $param['ClusterLimitMem'] !== null) {
+            $this->ClusterLimitMem = $param['ClusterLimitMem'];
         }
 
-        if (array_key_exists("RunServiceInstanceCount",$param) and $param["RunServiceInstanceCount"] !== null) {
-            $this->RunServiceInstanceCount = $param["RunServiceInstanceCount"];
+        if (array_key_exists('RunServiceInstanceCount',$param) and $param['RunServiceInstanceCount'] !== null) {
+            $this->RunServiceInstanceCount = $param['RunServiceInstanceCount'];
         }
 
-        if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
-            $this->SubnetId = $param["SubnetId"];
+        if (array_key_exists('SubnetId',$param) and $param['SubnetId'] !== null) {
+            $this->SubnetId = $param['SubnetId'];
         }
 
-        if (array_key_exists("OperationInfo",$param) and $param["OperationInfo"] !== null) {
+        if (array_key_exists('OperationInfo',$param) and $param['OperationInfo'] !== null) {
             $this->OperationInfo = new OperationInfo();
-            $this->OperationInfo->deserialize($param["OperationInfo"]);
+            $this->OperationInfo->deserialize($param['OperationInfo']);
         }
     }
 }

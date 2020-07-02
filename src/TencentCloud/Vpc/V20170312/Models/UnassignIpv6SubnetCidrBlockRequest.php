@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -54,13 +54,13 @@ class UnassignIpv6SubnetCidrBlockRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
-            $this->VpcId = $param["VpcId"];
+        if (array_key_exists('VpcId',$param) and $param['VpcId'] !== null) {
+            $this->VpcId = $param['VpcId'];
         }
 
-        if (array_key_exists("Ipv6SubnetCidrBlocks",$param) and $param["Ipv6SubnetCidrBlocks"] !== null) {
+        if (array_key_exists('Ipv6SubnetCidrBlocks',$param) and $param['Ipv6SubnetCidrBlocks'] !== null) {
             $this->Ipv6SubnetCidrBlocks = [];
-            foreach ($param["Ipv6SubnetCidrBlocks"] as $key => $value){
+            foreach ($param['Ipv6SubnetCidrBlocks'] as $key => $value){
                 $obj = new Ipv6SubnetCidrBlock();
                 $obj->deserialize($value);
                 array_push($this->Ipv6SubnetCidrBlocks, $obj);

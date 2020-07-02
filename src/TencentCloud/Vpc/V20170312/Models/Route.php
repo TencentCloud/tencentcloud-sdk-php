@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -158,36 +158,36 @@ CCN：云联网路由，系统默认下发，不可编辑与删除。
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DestinationCidrBlock",$param) and $param["DestinationCidrBlock"] !== null) {
-            $this->DestinationCidrBlock = $param["DestinationCidrBlock"];
+        if (array_key_exists('DestinationCidrBlock',$param) and $param['DestinationCidrBlock'] !== null) {
+            $this->DestinationCidrBlock = $param['DestinationCidrBlock'];
         }
 
-        if (array_key_exists("GatewayType",$param) and $param["GatewayType"] !== null) {
-            $this->GatewayType = $param["GatewayType"];
+        if (array_key_exists('GatewayType',$param) and $param['GatewayType'] !== null) {
+            $this->GatewayType = $param['GatewayType'];
         }
 
-        if (array_key_exists("GatewayId",$param) and $param["GatewayId"] !== null) {
-            $this->GatewayId = $param["GatewayId"];
+        if (array_key_exists('GatewayId',$param) and $param['GatewayId'] !== null) {
+            $this->GatewayId = $param['GatewayId'];
         }
 
-        if (array_key_exists("RouteId",$param) and $param["RouteId"] !== null) {
-            $this->RouteId = $param["RouteId"];
+        if (array_key_exists('RouteId',$param) and $param['RouteId'] !== null) {
+            $this->RouteId = $param['RouteId'];
         }
 
-        if (array_key_exists("RouteDescription",$param) and $param["RouteDescription"] !== null) {
-            $this->RouteDescription = $param["RouteDescription"];
+        if (array_key_exists('RouteDescription',$param) and $param['RouteDescription'] !== null) {
+            $this->RouteDescription = $param['RouteDescription'];
         }
 
-        if (array_key_exists("Enabled",$param) and $param["Enabled"] !== null) {
-            $this->Enabled = $param["Enabled"];
+        if (array_key_exists('Enabled',$param) and $param['Enabled'] !== null) {
+            $this->Enabled = $param['Enabled'];
         }
 
-        if (array_key_exists("RouteType",$param) and $param["RouteType"] !== null) {
-            $this->RouteType = $param["RouteType"];
+        if (array_key_exists('RouteType',$param) and $param['RouteType'] !== null) {
+            $this->RouteType = $param['RouteType'];
         }
 
-        if (array_key_exists("RouteTableId",$param) and $param["RouteTableId"] !== null) {
-            $this->RouteTableId = $param["RouteTableId"];
+        if (array_key_exists('RouteTableId',$param) and $param['RouteTableId'] !== null) {
+            $this->RouteTableId = $param['RouteTableId'];
         }
     }
 }

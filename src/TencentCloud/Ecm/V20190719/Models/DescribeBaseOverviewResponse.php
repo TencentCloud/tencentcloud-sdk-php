@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -134,52 +134,52 @@ class DescribeBaseOverviewResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ModuleNum",$param) and $param["ModuleNum"] !== null) {
-            $this->ModuleNum = $param["ModuleNum"];
+        if (array_key_exists('ModuleNum',$param) and $param['ModuleNum'] !== null) {
+            $this->ModuleNum = $param['ModuleNum'];
         }
 
-        if (array_key_exists("NodeNum",$param) and $param["NodeNum"] !== null) {
-            $this->NodeNum = $param["NodeNum"];
+        if (array_key_exists('NodeNum',$param) and $param['NodeNum'] !== null) {
+            $this->NodeNum = $param['NodeNum'];
         }
 
-        if (array_key_exists("VcpuNum",$param) and $param["VcpuNum"] !== null) {
-            $this->VcpuNum = $param["VcpuNum"];
+        if (array_key_exists('VcpuNum',$param) and $param['VcpuNum'] !== null) {
+            $this->VcpuNum = $param['VcpuNum'];
         }
 
-        if (array_key_exists("MemoryNum",$param) and $param["MemoryNum"] !== null) {
-            $this->MemoryNum = $param["MemoryNum"];
+        if (array_key_exists('MemoryNum',$param) and $param['MemoryNum'] !== null) {
+            $this->MemoryNum = $param['MemoryNum'];
         }
 
-        if (array_key_exists("StorageNum",$param) and $param["StorageNum"] !== null) {
-            $this->StorageNum = $param["StorageNum"];
+        if (array_key_exists('StorageNum',$param) and $param['StorageNum'] !== null) {
+            $this->StorageNum = $param['StorageNum'];
         }
 
-        if (array_key_exists("NetworkNum",$param) and $param["NetworkNum"] !== null) {
-            $this->NetworkNum = $param["NetworkNum"];
+        if (array_key_exists('NetworkNum',$param) and $param['NetworkNum'] !== null) {
+            $this->NetworkNum = $param['NetworkNum'];
         }
 
-        if (array_key_exists("InstanceNum",$param) and $param["InstanceNum"] !== null) {
-            $this->InstanceNum = $param["InstanceNum"];
+        if (array_key_exists('InstanceNum',$param) and $param['InstanceNum'] !== null) {
+            $this->InstanceNum = $param['InstanceNum'];
         }
 
-        if (array_key_exists("RunningNum",$param) and $param["RunningNum"] !== null) {
-            $this->RunningNum = $param["RunningNum"];
+        if (array_key_exists('RunningNum',$param) and $param['RunningNum'] !== null) {
+            $this->RunningNum = $param['RunningNum'];
         }
 
-        if (array_key_exists("IsolationNum",$param) and $param["IsolationNum"] !== null) {
-            $this->IsolationNum = $param["IsolationNum"];
+        if (array_key_exists('IsolationNum',$param) and $param['IsolationNum'] !== null) {
+            $this->IsolationNum = $param['IsolationNum'];
         }
 
-        if (array_key_exists("ExpiredNum",$param) and $param["ExpiredNum"] !== null) {
-            $this->ExpiredNum = $param["ExpiredNum"];
+        if (array_key_exists('ExpiredNum',$param) and $param['ExpiredNum'] !== null) {
+            $this->ExpiredNum = $param['ExpiredNum'];
         }
 
-        if (array_key_exists("WillExpireNum",$param) and $param["WillExpireNum"] !== null) {
-            $this->WillExpireNum = $param["WillExpireNum"];
+        if (array_key_exists('WillExpireNum',$param) and $param['WillExpireNum'] !== null) {
+            $this->WillExpireNum = $param['WillExpireNum'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

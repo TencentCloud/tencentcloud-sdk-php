@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -218,92 +218,92 @@ class SubnetInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
-            $this->VpcId = $param["VpcId"];
+        if (array_key_exists('VpcId',$param) and $param['VpcId'] !== null) {
+            $this->VpcId = $param['VpcId'];
         }
 
-        if (array_key_exists("VpcName",$param) and $param["VpcName"] !== null) {
-            $this->VpcName = $param["VpcName"];
+        if (array_key_exists('VpcName',$param) and $param['VpcName'] !== null) {
+            $this->VpcName = $param['VpcName'];
         }
 
-        if (array_key_exists("VpcCidrBlock",$param) and $param["VpcCidrBlock"] !== null) {
-            $this->VpcCidrBlock = $param["VpcCidrBlock"];
+        if (array_key_exists('VpcCidrBlock',$param) and $param['VpcCidrBlock'] !== null) {
+            $this->VpcCidrBlock = $param['VpcCidrBlock'];
         }
 
-        if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
-            $this->SubnetId = $param["SubnetId"];
+        if (array_key_exists('SubnetId',$param) and $param['SubnetId'] !== null) {
+            $this->SubnetId = $param['SubnetId'];
         }
 
-        if (array_key_exists("SubnetName",$param) and $param["SubnetName"] !== null) {
-            $this->SubnetName = $param["SubnetName"];
+        if (array_key_exists('SubnetName',$param) and $param['SubnetName'] !== null) {
+            $this->SubnetName = $param['SubnetName'];
         }
 
-        if (array_key_exists("CidrBlock",$param) and $param["CidrBlock"] !== null) {
-            $this->CidrBlock = $param["CidrBlock"];
+        if (array_key_exists('CidrBlock',$param) and $param['CidrBlock'] !== null) {
+            $this->CidrBlock = $param['CidrBlock'];
         }
 
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists('Type',$param) and $param['Type'] !== null) {
+            $this->Type = $param['Type'];
         }
 
-        if (array_key_exists("ZoneId",$param) and $param["ZoneId"] !== null) {
-            $this->ZoneId = $param["ZoneId"];
+        if (array_key_exists('ZoneId',$param) and $param['ZoneId'] !== null) {
+            $this->ZoneId = $param['ZoneId'];
         }
 
-        if (array_key_exists("CpmNum",$param) and $param["CpmNum"] !== null) {
-            $this->CpmNum = $param["CpmNum"];
+        if (array_key_exists('CpmNum',$param) and $param['CpmNum'] !== null) {
+            $this->CpmNum = $param['CpmNum'];
         }
 
-        if (array_key_exists("VlanId",$param) and $param["VlanId"] !== null) {
-            $this->VlanId = $param["VlanId"];
+        if (array_key_exists('VlanId',$param) and $param['VlanId'] !== null) {
+            $this->VlanId = $param['VlanId'];
         }
 
-        if (array_key_exists("DistributedFlag",$param) and $param["DistributedFlag"] !== null) {
-            $this->DistributedFlag = $param["DistributedFlag"];
+        if (array_key_exists('DistributedFlag',$param) and $param['DistributedFlag'] !== null) {
+            $this->DistributedFlag = $param['DistributedFlag'];
         }
 
-        if (array_key_exists("DhcpEnable",$param) and $param["DhcpEnable"] !== null) {
-            $this->DhcpEnable = $param["DhcpEnable"];
+        if (array_key_exists('DhcpEnable',$param) and $param['DhcpEnable'] !== null) {
+            $this->DhcpEnable = $param['DhcpEnable'];
         }
 
-        if (array_key_exists("DhcpServerIp",$param) and $param["DhcpServerIp"] !== null) {
-            $this->DhcpServerIp = $param["DhcpServerIp"];
+        if (array_key_exists('DhcpServerIp',$param) and $param['DhcpServerIp'] !== null) {
+            $this->DhcpServerIp = $param['DhcpServerIp'];
         }
 
-        if (array_key_exists("IpReserve",$param) and $param["IpReserve"] !== null) {
-            $this->IpReserve = $param["IpReserve"];
+        if (array_key_exists('IpReserve',$param) and $param['IpReserve'] !== null) {
+            $this->IpReserve = $param['IpReserve'];
         }
 
-        if (array_key_exists("AvailableIpNum",$param) and $param["AvailableIpNum"] !== null) {
-            $this->AvailableIpNum = $param["AvailableIpNum"];
+        if (array_key_exists('AvailableIpNum',$param) and $param['AvailableIpNum'] !== null) {
+            $this->AvailableIpNum = $param['AvailableIpNum'];
         }
 
-        if (array_key_exists("TotalIpNum",$param) and $param["TotalIpNum"] !== null) {
-            $this->TotalIpNum = $param["TotalIpNum"];
+        if (array_key_exists('TotalIpNum',$param) and $param['TotalIpNum'] !== null) {
+            $this->TotalIpNum = $param['TotalIpNum'];
         }
 
-        if (array_key_exists("SubnetCreateTime",$param) and $param["SubnetCreateTime"] !== null) {
-            $this->SubnetCreateTime = $param["SubnetCreateTime"];
+        if (array_key_exists('SubnetCreateTime',$param) and $param['SubnetCreateTime'] !== null) {
+            $this->SubnetCreateTime = $param['SubnetCreateTime'];
         }
 
-        if (array_key_exists("IsSmartNic",$param) and $param["IsSmartNic"] !== null) {
-            $this->IsSmartNic = $param["IsSmartNic"];
+        if (array_key_exists('IsSmartNic',$param) and $param['IsSmartNic'] !== null) {
+            $this->IsSmartNic = $param['IsSmartNic'];
         }
 
-        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
-            $this->Zone = $param["Zone"];
+        if (array_key_exists('Zone',$param) and $param['Zone'] !== null) {
+            $this->Zone = $param['Zone'];
         }
 
-        if (array_key_exists("VpcZoneId",$param) and $param["VpcZoneId"] !== null) {
-            $this->VpcZoneId = $param["VpcZoneId"];
+        if (array_key_exists('VpcZoneId',$param) and $param['VpcZoneId'] !== null) {
+            $this->VpcZoneId = $param['VpcZoneId'];
         }
 
-        if (array_key_exists("VpcZone",$param) and $param["VpcZone"] !== null) {
-            $this->VpcZone = $param["VpcZone"];
+        if (array_key_exists('VpcZone',$param) and $param['VpcZone'] !== null) {
+            $this->VpcZone = $param['VpcZone'];
         }
 
-        if (array_key_exists("BroadcastFlag",$param) and $param["BroadcastFlag"] !== null) {
-            $this->BroadcastFlag = $param["BroadcastFlag"];
+        if (array_key_exists('BroadcastFlag',$param) and $param['BroadcastFlag'] !== null) {
+            $this->BroadcastFlag = $param['BroadcastFlag'];
         }
     }
 }

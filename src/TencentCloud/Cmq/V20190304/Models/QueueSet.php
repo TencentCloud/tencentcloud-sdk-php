@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -330,116 +330,116 @@ class QueueSet extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("QueueId",$param) and $param["QueueId"] !== null) {
-            $this->QueueId = $param["QueueId"];
+        if (array_key_exists('QueueId',$param) and $param['QueueId'] !== null) {
+            $this->QueueId = $param['QueueId'];
         }
 
-        if (array_key_exists("QueueName",$param) and $param["QueueName"] !== null) {
-            $this->QueueName = $param["QueueName"];
+        if (array_key_exists('QueueName',$param) and $param['QueueName'] !== null) {
+            $this->QueueName = $param['QueueName'];
         }
 
-        if (array_key_exists("Qps",$param) and $param["Qps"] !== null) {
-            $this->Qps = $param["Qps"];
+        if (array_key_exists('Qps',$param) and $param['Qps'] !== null) {
+            $this->Qps = $param['Qps'];
         }
 
-        if (array_key_exists("Bps",$param) and $param["Bps"] !== null) {
-            $this->Bps = $param["Bps"];
+        if (array_key_exists('Bps',$param) and $param['Bps'] !== null) {
+            $this->Bps = $param['Bps'];
         }
 
-        if (array_key_exists("MaxDelaySeconds",$param) and $param["MaxDelaySeconds"] !== null) {
-            $this->MaxDelaySeconds = $param["MaxDelaySeconds"];
+        if (array_key_exists('MaxDelaySeconds',$param) and $param['MaxDelaySeconds'] !== null) {
+            $this->MaxDelaySeconds = $param['MaxDelaySeconds'];
         }
 
-        if (array_key_exists("MaxMsgHeapNum",$param) and $param["MaxMsgHeapNum"] !== null) {
-            $this->MaxMsgHeapNum = $param["MaxMsgHeapNum"];
+        if (array_key_exists('MaxMsgHeapNum',$param) and $param['MaxMsgHeapNum'] !== null) {
+            $this->MaxMsgHeapNum = $param['MaxMsgHeapNum'];
         }
 
-        if (array_key_exists("PollingWaitSeconds",$param) and $param["PollingWaitSeconds"] !== null) {
-            $this->PollingWaitSeconds = $param["PollingWaitSeconds"];
+        if (array_key_exists('PollingWaitSeconds',$param) and $param['PollingWaitSeconds'] !== null) {
+            $this->PollingWaitSeconds = $param['PollingWaitSeconds'];
         }
 
-        if (array_key_exists("MsgRetentionSeconds",$param) and $param["MsgRetentionSeconds"] !== null) {
-            $this->MsgRetentionSeconds = $param["MsgRetentionSeconds"];
+        if (array_key_exists('MsgRetentionSeconds',$param) and $param['MsgRetentionSeconds'] !== null) {
+            $this->MsgRetentionSeconds = $param['MsgRetentionSeconds'];
         }
 
-        if (array_key_exists("VisibilityTimeout",$param) and $param["VisibilityTimeout"] !== null) {
-            $this->VisibilityTimeout = $param["VisibilityTimeout"];
+        if (array_key_exists('VisibilityTimeout',$param) and $param['VisibilityTimeout'] !== null) {
+            $this->VisibilityTimeout = $param['VisibilityTimeout'];
         }
 
-        if (array_key_exists("MaxMsgSize",$param) and $param["MaxMsgSize"] !== null) {
-            $this->MaxMsgSize = $param["MaxMsgSize"];
+        if (array_key_exists('MaxMsgSize',$param) and $param['MaxMsgSize'] !== null) {
+            $this->MaxMsgSize = $param['MaxMsgSize'];
         }
 
-        if (array_key_exists("RewindSeconds",$param) and $param["RewindSeconds"] !== null) {
-            $this->RewindSeconds = $param["RewindSeconds"];
+        if (array_key_exists('RewindSeconds',$param) and $param['RewindSeconds'] !== null) {
+            $this->RewindSeconds = $param['RewindSeconds'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("LastModifyTime",$param) and $param["LastModifyTime"] !== null) {
-            $this->LastModifyTime = $param["LastModifyTime"];
+        if (array_key_exists('LastModifyTime',$param) and $param['LastModifyTime'] !== null) {
+            $this->LastModifyTime = $param['LastModifyTime'];
         }
 
-        if (array_key_exists("ActiveMsgNum",$param) and $param["ActiveMsgNum"] !== null) {
-            $this->ActiveMsgNum = $param["ActiveMsgNum"];
+        if (array_key_exists('ActiveMsgNum',$param) and $param['ActiveMsgNum'] !== null) {
+            $this->ActiveMsgNum = $param['ActiveMsgNum'];
         }
 
-        if (array_key_exists("InactiveMsgNum",$param) and $param["InactiveMsgNum"] !== null) {
-            $this->InactiveMsgNum = $param["InactiveMsgNum"];
+        if (array_key_exists('InactiveMsgNum',$param) and $param['InactiveMsgNum'] !== null) {
+            $this->InactiveMsgNum = $param['InactiveMsgNum'];
         }
 
-        if (array_key_exists("DelayMsgNum",$param) and $param["DelayMsgNum"] !== null) {
-            $this->DelayMsgNum = $param["DelayMsgNum"];
+        if (array_key_exists('DelayMsgNum',$param) and $param['DelayMsgNum'] !== null) {
+            $this->DelayMsgNum = $param['DelayMsgNum'];
         }
 
-        if (array_key_exists("RewindMsgNum",$param) and $param["RewindMsgNum"] !== null) {
-            $this->RewindMsgNum = $param["RewindMsgNum"];
+        if (array_key_exists('RewindMsgNum',$param) and $param['RewindMsgNum'] !== null) {
+            $this->RewindMsgNum = $param['RewindMsgNum'];
         }
 
-        if (array_key_exists("MinMsgTime",$param) and $param["MinMsgTime"] !== null) {
-            $this->MinMsgTime = $param["MinMsgTime"];
+        if (array_key_exists('MinMsgTime',$param) and $param['MinMsgTime'] !== null) {
+            $this->MinMsgTime = $param['MinMsgTime'];
         }
 
-        if (array_key_exists("Transaction",$param) and $param["Transaction"] !== null) {
-            $this->Transaction = $param["Transaction"];
+        if (array_key_exists('Transaction',$param) and $param['Transaction'] !== null) {
+            $this->Transaction = $param['Transaction'];
         }
 
-        if (array_key_exists("DeadLetterSource",$param) and $param["DeadLetterSource"] !== null) {
+        if (array_key_exists('DeadLetterSource',$param) and $param['DeadLetterSource'] !== null) {
             $this->DeadLetterSource = [];
-            foreach ($param["DeadLetterSource"] as $key => $value){
+            foreach ($param['DeadLetterSource'] as $key => $value){
                 $obj = new DeadLetterSource();
                 $obj->deserialize($value);
                 array_push($this->DeadLetterSource, $obj);
             }
         }
 
-        if (array_key_exists("DeadLetterPolicy",$param) and $param["DeadLetterPolicy"] !== null) {
+        if (array_key_exists('DeadLetterPolicy',$param) and $param['DeadLetterPolicy'] !== null) {
             $this->DeadLetterPolicy = new DeadLetterPolicy();
-            $this->DeadLetterPolicy->deserialize($param["DeadLetterPolicy"]);
+            $this->DeadLetterPolicy->deserialize($param['DeadLetterPolicy']);
         }
 
-        if (array_key_exists("TransactionPolicy",$param) and $param["TransactionPolicy"] !== null) {
+        if (array_key_exists('TransactionPolicy',$param) and $param['TransactionPolicy'] !== null) {
             $this->TransactionPolicy = new TransactionPolicy();
-            $this->TransactionPolicy->deserialize($param["TransactionPolicy"]);
+            $this->TransactionPolicy->deserialize($param['TransactionPolicy']);
         }
 
-        if (array_key_exists("CreateUin",$param) and $param["CreateUin"] !== null) {
-            $this->CreateUin = $param["CreateUin"];
+        if (array_key_exists('CreateUin',$param) and $param['CreateUin'] !== null) {
+            $this->CreateUin = $param['CreateUin'];
         }
 
-        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+        if (array_key_exists('Tags',$param) and $param['Tags'] !== null) {
             $this->Tags = [];
-            foreach ($param["Tags"] as $key => $value){
+            foreach ($param['Tags'] as $key => $value){
                 $obj = new Tag();
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
         }
 
-        if (array_key_exists("Trace",$param) and $param["Trace"] !== null) {
-            $this->Trace = $param["Trace"];
+        if (array_key_exists('Trace',$param) and $param['Trace'] !== null) {
+            $this->Trace = $param['Trace'];
         }
     }
 }

@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -62,16 +62,16 @@ class MigrateNetworkInterfaceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("NetworkInterfaceId",$param) and $param["NetworkInterfaceId"] !== null) {
-            $this->NetworkInterfaceId = $param["NetworkInterfaceId"];
+        if (array_key_exists('NetworkInterfaceId',$param) and $param['NetworkInterfaceId'] !== null) {
+            $this->NetworkInterfaceId = $param['NetworkInterfaceId'];
         }
 
-        if (array_key_exists("SourceInstanceId",$param) and $param["SourceInstanceId"] !== null) {
-            $this->SourceInstanceId = $param["SourceInstanceId"];
+        if (array_key_exists('SourceInstanceId',$param) and $param['SourceInstanceId'] !== null) {
+            $this->SourceInstanceId = $param['SourceInstanceId'];
         }
 
-        if (array_key_exists("DestinationInstanceId",$param) and $param["DestinationInstanceId"] !== null) {
-            $this->DestinationInstanceId = $param["DestinationInstanceId"];
+        if (array_key_exists('DestinationInstanceId',$param) and $param['DestinationInstanceId'] !== null) {
+            $this->DestinationInstanceId = $param['DestinationInstanceId'];
         }
     }
 }

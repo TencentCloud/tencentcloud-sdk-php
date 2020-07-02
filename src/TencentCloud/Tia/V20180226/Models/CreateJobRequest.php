@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -150,60 +150,60 @@ class CreateJobRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("Cluster",$param) and $param["Cluster"] !== null) {
-            $this->Cluster = $param["Cluster"];
+        if (array_key_exists('Cluster',$param) and $param['Cluster'] !== null) {
+            $this->Cluster = $param['Cluster'];
         }
 
-        if (array_key_exists("RuntimeVersion",$param) and $param["RuntimeVersion"] !== null) {
-            $this->RuntimeVersion = $param["RuntimeVersion"];
+        if (array_key_exists('RuntimeVersion',$param) and $param['RuntimeVersion'] !== null) {
+            $this->RuntimeVersion = $param['RuntimeVersion'];
         }
 
-        if (array_key_exists("PackageDir",$param) and $param["PackageDir"] !== null) {
-            $this->PackageDir = $param["PackageDir"];
+        if (array_key_exists('PackageDir',$param) and $param['PackageDir'] !== null) {
+            $this->PackageDir = $param['PackageDir'];
         }
 
-        if (array_key_exists("Command",$param) and $param["Command"] !== null) {
-            $this->Command = $param["Command"];
+        if (array_key_exists('Command',$param) and $param['Command'] !== null) {
+            $this->Command = $param['Command'];
         }
 
-        if (array_key_exists("Args",$param) and $param["Args"] !== null) {
-            $this->Args = $param["Args"];
+        if (array_key_exists('Args',$param) and $param['Args'] !== null) {
+            $this->Args = $param['Args'];
         }
 
-        if (array_key_exists("ScaleTier",$param) and $param["ScaleTier"] !== null) {
-            $this->ScaleTier = $param["ScaleTier"];
+        if (array_key_exists('ScaleTier',$param) and $param['ScaleTier'] !== null) {
+            $this->ScaleTier = $param['ScaleTier'];
         }
 
-        if (array_key_exists("MasterType",$param) and $param["MasterType"] !== null) {
-            $this->MasterType = $param["MasterType"];
+        if (array_key_exists('MasterType',$param) and $param['MasterType'] !== null) {
+            $this->MasterType = $param['MasterType'];
         }
 
-        if (array_key_exists("WorkerType",$param) and $param["WorkerType"] !== null) {
-            $this->WorkerType = $param["WorkerType"];
+        if (array_key_exists('WorkerType',$param) and $param['WorkerType'] !== null) {
+            $this->WorkerType = $param['WorkerType'];
         }
 
-        if (array_key_exists("ParameterServerType",$param) and $param["ParameterServerType"] !== null) {
-            $this->ParameterServerType = $param["ParameterServerType"];
+        if (array_key_exists('ParameterServerType',$param) and $param['ParameterServerType'] !== null) {
+            $this->ParameterServerType = $param['ParameterServerType'];
         }
 
-        if (array_key_exists("WorkerCount",$param) and $param["WorkerCount"] !== null) {
-            $this->WorkerCount = $param["WorkerCount"];
+        if (array_key_exists('WorkerCount',$param) and $param['WorkerCount'] !== null) {
+            $this->WorkerCount = $param['WorkerCount'];
         }
 
-        if (array_key_exists("ParameterServerCount",$param) and $param["ParameterServerCount"] !== null) {
-            $this->ParameterServerCount = $param["ParameterServerCount"];
+        if (array_key_exists('ParameterServerCount',$param) and $param['ParameterServerCount'] !== null) {
+            $this->ParameterServerCount = $param['ParameterServerCount'];
         }
 
-        if (array_key_exists("Debug",$param) and $param["Debug"] !== null) {
-            $this->Debug = $param["Debug"];
+        if (array_key_exists('Debug',$param) and $param['Debug'] !== null) {
+            $this->Debug = $param['Debug'];
         }
 
-        if (array_key_exists("RuntimeConf",$param) and $param["RuntimeConf"] !== null) {
-            $this->RuntimeConf = $param["RuntimeConf"];
+        if (array_key_exists('RuntimeConf',$param) and $param['RuntimeConf'] !== null) {
+            $this->RuntimeConf = $param['RuntimeConf'];
         }
     }
 }

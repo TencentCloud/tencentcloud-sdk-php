@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -332,123 +332,123 @@ class OverseaConfig extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Authentication",$param) and $param["Authentication"] !== null) {
+        if (array_key_exists('Authentication',$param) and $param['Authentication'] !== null) {
             $this->Authentication = new Authentication();
-            $this->Authentication->deserialize($param["Authentication"]);
+            $this->Authentication->deserialize($param['Authentication']);
         }
 
-        if (array_key_exists("BandwidthAlert",$param) and $param["BandwidthAlert"] !== null) {
+        if (array_key_exists('BandwidthAlert',$param) and $param['BandwidthAlert'] !== null) {
             $this->BandwidthAlert = new BandwidthAlert();
-            $this->BandwidthAlert->deserialize($param["BandwidthAlert"]);
+            $this->BandwidthAlert->deserialize($param['BandwidthAlert']);
         }
 
-        if (array_key_exists("Cache",$param) and $param["Cache"] !== null) {
+        if (array_key_exists('Cache',$param) and $param['Cache'] !== null) {
             $this->Cache = new Cache();
-            $this->Cache->deserialize($param["Cache"]);
+            $this->Cache->deserialize($param['Cache']);
         }
 
-        if (array_key_exists("CacheKey",$param) and $param["CacheKey"] !== null) {
+        if (array_key_exists('CacheKey',$param) and $param['CacheKey'] !== null) {
             $this->CacheKey = new CacheKey();
-            $this->CacheKey->deserialize($param["CacheKey"]);
+            $this->CacheKey->deserialize($param['CacheKey']);
         }
 
-        if (array_key_exists("Compression",$param) and $param["Compression"] !== null) {
+        if (array_key_exists('Compression',$param) and $param['Compression'] !== null) {
             $this->Compression = new Compression();
-            $this->Compression->deserialize($param["Compression"]);
+            $this->Compression->deserialize($param['Compression']);
         }
 
-        if (array_key_exists("DownstreamCapping",$param) and $param["DownstreamCapping"] !== null) {
+        if (array_key_exists('DownstreamCapping',$param) and $param['DownstreamCapping'] !== null) {
             $this->DownstreamCapping = new DownstreamCapping();
-            $this->DownstreamCapping->deserialize($param["DownstreamCapping"]);
+            $this->DownstreamCapping->deserialize($param['DownstreamCapping']);
         }
 
-        if (array_key_exists("ErrorPage",$param) and $param["ErrorPage"] !== null) {
+        if (array_key_exists('ErrorPage',$param) and $param['ErrorPage'] !== null) {
             $this->ErrorPage = new ErrorPage();
-            $this->ErrorPage->deserialize($param["ErrorPage"]);
+            $this->ErrorPage->deserialize($param['ErrorPage']);
         }
 
-        if (array_key_exists("FollowRedirect",$param) and $param["FollowRedirect"] !== null) {
+        if (array_key_exists('FollowRedirect',$param) and $param['FollowRedirect'] !== null) {
             $this->FollowRedirect = new FollowRedirect();
-            $this->FollowRedirect->deserialize($param["FollowRedirect"]);
+            $this->FollowRedirect->deserialize($param['FollowRedirect']);
         }
 
-        if (array_key_exists("ForceRedirect",$param) and $param["ForceRedirect"] !== null) {
+        if (array_key_exists('ForceRedirect',$param) and $param['ForceRedirect'] !== null) {
             $this->ForceRedirect = new ForceRedirect();
-            $this->ForceRedirect->deserialize($param["ForceRedirect"]);
+            $this->ForceRedirect->deserialize($param['ForceRedirect']);
         }
 
-        if (array_key_exists("Https",$param) and $param["Https"] !== null) {
+        if (array_key_exists('Https',$param) and $param['Https'] !== null) {
             $this->Https = new Https();
-            $this->Https->deserialize($param["Https"]);
+            $this->Https->deserialize($param['Https']);
         }
 
-        if (array_key_exists("IpFilter",$param) and $param["IpFilter"] !== null) {
+        if (array_key_exists('IpFilter',$param) and $param['IpFilter'] !== null) {
             $this->IpFilter = new IpFilter();
-            $this->IpFilter->deserialize($param["IpFilter"]);
+            $this->IpFilter->deserialize($param['IpFilter']);
         }
 
-        if (array_key_exists("IpFreqLimit",$param) and $param["IpFreqLimit"] !== null) {
+        if (array_key_exists('IpFreqLimit',$param) and $param['IpFreqLimit'] !== null) {
             $this->IpFreqLimit = new IpFreqLimit();
-            $this->IpFreqLimit->deserialize($param["IpFreqLimit"]);
+            $this->IpFreqLimit->deserialize($param['IpFreqLimit']);
         }
 
-        if (array_key_exists("MaxAge",$param) and $param["MaxAge"] !== null) {
+        if (array_key_exists('MaxAge',$param) and $param['MaxAge'] !== null) {
             $this->MaxAge = new MaxAge();
-            $this->MaxAge->deserialize($param["MaxAge"]);
+            $this->MaxAge->deserialize($param['MaxAge']);
         }
 
-        if (array_key_exists("Origin",$param) and $param["Origin"] !== null) {
+        if (array_key_exists('Origin',$param) and $param['Origin'] !== null) {
             $this->Origin = new Origin();
-            $this->Origin->deserialize($param["Origin"]);
+            $this->Origin->deserialize($param['Origin']);
         }
 
-        if (array_key_exists("OriginPullOptimization",$param) and $param["OriginPullOptimization"] !== null) {
+        if (array_key_exists('OriginPullOptimization',$param) and $param['OriginPullOptimization'] !== null) {
             $this->OriginPullOptimization = new OriginPullOptimization();
-            $this->OriginPullOptimization->deserialize($param["OriginPullOptimization"]);
+            $this->OriginPullOptimization->deserialize($param['OriginPullOptimization']);
         }
 
-        if (array_key_exists("RangeOriginPull",$param) and $param["RangeOriginPull"] !== null) {
+        if (array_key_exists('RangeOriginPull',$param) and $param['RangeOriginPull'] !== null) {
             $this->RangeOriginPull = new RangeOriginPull();
-            $this->RangeOriginPull->deserialize($param["RangeOriginPull"]);
+            $this->RangeOriginPull->deserialize($param['RangeOriginPull']);
         }
 
-        if (array_key_exists("Referer",$param) and $param["Referer"] !== null) {
+        if (array_key_exists('Referer',$param) and $param['Referer'] !== null) {
             $this->Referer = new Referer();
-            $this->Referer->deserialize($param["Referer"]);
+            $this->Referer->deserialize($param['Referer']);
         }
 
-        if (array_key_exists("RequestHeader",$param) and $param["RequestHeader"] !== null) {
+        if (array_key_exists('RequestHeader',$param) and $param['RequestHeader'] !== null) {
             $this->RequestHeader = new RequestHeader();
-            $this->RequestHeader->deserialize($param["RequestHeader"]);
+            $this->RequestHeader->deserialize($param['RequestHeader']);
         }
 
-        if (array_key_exists("ResponseHeader",$param) and $param["ResponseHeader"] !== null) {
+        if (array_key_exists('ResponseHeader',$param) and $param['ResponseHeader'] !== null) {
             $this->ResponseHeader = new ResponseHeader();
-            $this->ResponseHeader->deserialize($param["ResponseHeader"]);
+            $this->ResponseHeader->deserialize($param['ResponseHeader']);
         }
 
-        if (array_key_exists("ResponseHeaderCache",$param) and $param["ResponseHeaderCache"] !== null) {
+        if (array_key_exists('ResponseHeaderCache',$param) and $param['ResponseHeaderCache'] !== null) {
             $this->ResponseHeaderCache = new ResponseHeaderCache();
-            $this->ResponseHeaderCache->deserialize($param["ResponseHeaderCache"]);
+            $this->ResponseHeaderCache->deserialize($param['ResponseHeaderCache']);
         }
 
-        if (array_key_exists("Seo",$param) and $param["Seo"] !== null) {
+        if (array_key_exists('Seo',$param) and $param['Seo'] !== null) {
             $this->Seo = new Seo();
-            $this->Seo->deserialize($param["Seo"]);
+            $this->Seo->deserialize($param['Seo']);
         }
 
-        if (array_key_exists("ServiceType",$param) and $param["ServiceType"] !== null) {
-            $this->ServiceType = $param["ServiceType"];
+        if (array_key_exists('ServiceType',$param) and $param['ServiceType'] !== null) {
+            $this->ServiceType = $param['ServiceType'];
         }
 
-        if (array_key_exists("StatusCodeCache",$param) and $param["StatusCodeCache"] !== null) {
+        if (array_key_exists('StatusCodeCache',$param) and $param['StatusCodeCache'] !== null) {
             $this->StatusCodeCache = new StatusCodeCache();
-            $this->StatusCodeCache->deserialize($param["StatusCodeCache"]);
+            $this->StatusCodeCache->deserialize($param['StatusCodeCache']);
         }
 
-        if (array_key_exists("VideoSeek",$param) and $param["VideoSeek"] !== null) {
+        if (array_key_exists('VideoSeek',$param) and $param['VideoSeek'] !== null) {
             $this->VideoSeek = new VideoSeek();
-            $this->VideoSeek->deserialize($param["VideoSeek"]);
+            $this->VideoSeek->deserialize($param['VideoSeek']);
         }
     }
 }

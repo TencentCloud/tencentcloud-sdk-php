@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -86,24 +86,24 @@ class ComponentStatistics extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
-            $this->Id = $param["Id"];
+        if (array_key_exists('Id',$param) and $param['Id'] !== null) {
+            $this->Id = $param['Id'];
         }
 
-        if (array_key_exists("MachineNum",$param) and $param["MachineNum"] !== null) {
-            $this->MachineNum = $param["MachineNum"];
+        if (array_key_exists('MachineNum',$param) and $param['MachineNum'] !== null) {
+            $this->MachineNum = $param['MachineNum'];
         }
 
-        if (array_key_exists("ComponentName",$param) and $param["ComponentName"] !== null) {
-            $this->ComponentName = $param["ComponentName"];
+        if (array_key_exists('ComponentName',$param) and $param['ComponentName'] !== null) {
+            $this->ComponentName = $param['ComponentName'];
         }
 
-        if (array_key_exists("ComponentType",$param) and $param["ComponentType"] !== null) {
-            $this->ComponentType = $param["ComponentType"];
+        if (array_key_exists('ComponentType',$param) and $param['ComponentType'] !== null) {
+            $this->ComponentType = $param['ComponentType'];
         }
 
-        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
-            $this->Description = $param["Description"];
+        if (array_key_exists('Description',$param) and $param['Description'] !== null) {
+            $this->Description = $param['Description'];
         }
     }
 }

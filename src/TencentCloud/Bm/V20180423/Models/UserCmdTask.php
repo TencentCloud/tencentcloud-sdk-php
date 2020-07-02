@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -110,40 +110,40 @@ class UserCmdTask extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
-            $this->TaskId = $param["TaskId"];
+        if (array_key_exists('TaskId',$param) and $param['TaskId'] !== null) {
+            $this->TaskId = $param['TaskId'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("Alias",$param) and $param["Alias"] !== null) {
-            $this->Alias = $param["Alias"];
+        if (array_key_exists('Alias',$param) and $param['Alias'] !== null) {
+            $this->Alias = $param['Alias'];
         }
 
-        if (array_key_exists("CmdId",$param) and $param["CmdId"] !== null) {
-            $this->CmdId = $param["CmdId"];
+        if (array_key_exists('CmdId',$param) and $param['CmdId'] !== null) {
+            $this->CmdId = $param['CmdId'];
         }
 
-        if (array_key_exists("InstanceCount",$param) and $param["InstanceCount"] !== null) {
-            $this->InstanceCount = $param["InstanceCount"];
+        if (array_key_exists('InstanceCount',$param) and $param['InstanceCount'] !== null) {
+            $this->InstanceCount = $param['InstanceCount'];
         }
 
-        if (array_key_exists("SuccessCount",$param) and $param["SuccessCount"] !== null) {
-            $this->SuccessCount = $param["SuccessCount"];
+        if (array_key_exists('SuccessCount',$param) and $param['SuccessCount'] !== null) {
+            $this->SuccessCount = $param['SuccessCount'];
         }
 
-        if (array_key_exists("FailureCount",$param) and $param["FailureCount"] !== null) {
-            $this->FailureCount = $param["FailureCount"];
+        if (array_key_exists('FailureCount',$param) and $param['FailureCount'] !== null) {
+            $this->FailureCount = $param['FailureCount'];
         }
 
-        if (array_key_exists("RunBeginTime",$param) and $param["RunBeginTime"] !== null) {
-            $this->RunBeginTime = $param["RunBeginTime"];
+        if (array_key_exists('RunBeginTime',$param) and $param['RunBeginTime'] !== null) {
+            $this->RunBeginTime = $param['RunBeginTime'];
         }
 
-        if (array_key_exists("RunEndTime",$param) and $param["RunEndTime"] !== null) {
-            $this->RunEndTime = $param["RunEndTime"];
+        if (array_key_exists('RunEndTime',$param) and $param['RunEndTime'] !== null) {
+            $this->RunEndTime = $param['RunEndTime'];
         }
     }
 }

@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -37,17 +37,17 @@ use TencentCloud\Common\AbstractModel;
  * @method string getDatabaseInfo() 获取当选择'指定库表'迁移的时候, 需要设置待迁移的源数据库表信息,用符合json数组格式的字符串描述, 如下所例。
 
 对于database-table两级结构的数据库：
-[{"Database":"db1","Table":["table1","table2"]},{"Database":"db2"}]
+[{'Database':'db1','Table':['table1','table2']},{'Database':'db2'}]
 对于database-schema-table三级结构：
-[{"Database":"db1","Schema":"s1","Table":["table1","table2"]},{"Database":"db1","Schema":"s2","Table":["table1","table2"]},{"Database":"db2","Schema":"s1","Table":["table1","table2"]},{"Database":"db3"},{"Database":"db4","Schema":"s1"}]
+[{'Database':'db1','Schema':'s1','Table':['table1','table2']},{'Database':'db1','Schema':'s2','Table':['table1','table2']},{'Database':'db2','Schema':'s1','Table':['table1','table2']},{'Database':'db3'},{'Database':'db4','Schema':'s1'}]
 
 如果是'整个实例'的迁移模式,不需设置该字段
  * @method void setDatabaseInfo(string $DatabaseInfo) 设置当选择'指定库表'迁移的时候, 需要设置待迁移的源数据库表信息,用符合json数组格式的字符串描述, 如下所例。
 
 对于database-table两级结构的数据库：
-[{"Database":"db1","Table":["table1","table2"]},{"Database":"db2"}]
+[{'Database':'db1','Table':['table1','table2']},{'Database':'db2'}]
 对于database-schema-table三级结构：
-[{"Database":"db1","Schema":"s1","Table":["table1","table2"]},{"Database":"db1","Schema":"s2","Table":["table1","table2"]},{"Database":"db2","Schema":"s1","Table":["table1","table2"]},{"Database":"db3"},{"Database":"db4","Schema":"s1"}]
+[{'Database':'db1','Schema':'s1','Table':['table1','table2']},{'Database':'db1','Schema':'s2','Table':['table1','table2']},{'Database':'db2','Schema':'s1','Table':['table1','table2']},{'Database':'db3'},{'Database':'db4','Schema':'s1'}]
 
 如果是'整个实例'的迁移模式,不需设置该字段
  */
@@ -92,9 +92,9 @@ class ModifyMigrateJobRequest extends AbstractModel
      * @var string 当选择'指定库表'迁移的时候, 需要设置待迁移的源数据库表信息,用符合json数组格式的字符串描述, 如下所例。
 
 对于database-table两级结构的数据库：
-[{"Database":"db1","Table":["table1","table2"]},{"Database":"db2"}]
+[{'Database':'db1','Table':['table1','table2']},{'Database':'db2'}]
 对于database-schema-table三级结构：
-[{"Database":"db1","Schema":"s1","Table":["table1","table2"]},{"Database":"db1","Schema":"s2","Table":["table1","table2"]},{"Database":"db2","Schema":"s1","Table":["table1","table2"]},{"Database":"db3"},{"Database":"db4","Schema":"s1"}]
+[{'Database':'db1','Schema':'s1','Table':['table1','table2']},{'Database':'db1','Schema':'s2','Table':['table1','table2']},{'Database':'db2','Schema':'s1','Table':['table1','table2']},{'Database':'db3'},{'Database':'db4','Schema':'s1'}]
 
 如果是'整个实例'的迁移模式,不需设置该字段
      */
@@ -111,9 +111,9 @@ class ModifyMigrateJobRequest extends AbstractModel
      * @param string $DatabaseInfo 当选择'指定库表'迁移的时候, 需要设置待迁移的源数据库表信息,用符合json数组格式的字符串描述, 如下所例。
 
 对于database-table两级结构的数据库：
-[{"Database":"db1","Table":["table1","table2"]},{"Database":"db2"}]
+[{'Database':'db1','Table':['table1','table2']},{'Database':'db2'}]
 对于database-schema-table三级结构：
-[{"Database":"db1","Schema":"s1","Table":["table1","table2"]},{"Database":"db1","Schema":"s2","Table":["table1","table2"]},{"Database":"db2","Schema":"s1","Table":["table1","table2"]},{"Database":"db3"},{"Database":"db4","Schema":"s1"}]
+[{'Database':'db1','Schema':'s1','Table':['table1','table2']},{'Database':'db1','Schema':'s2','Table':['table1','table2']},{'Database':'db2','Schema':'s1','Table':['table1','table2']},{'Database':'db3'},{'Database':'db4','Schema':'s1'}]
 
 如果是'整个实例'的迁移模式,不需设置该字段
      */
@@ -130,39 +130,39 @@ class ModifyMigrateJobRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("JobId",$param) and $param["JobId"] !== null) {
-            $this->JobId = $param["JobId"];
+        if (array_key_exists('JobId',$param) and $param['JobId'] !== null) {
+            $this->JobId = $param['JobId'];
         }
 
-        if (array_key_exists("JobName",$param) and $param["JobName"] !== null) {
-            $this->JobName = $param["JobName"];
+        if (array_key_exists('JobName',$param) and $param['JobName'] !== null) {
+            $this->JobName = $param['JobName'];
         }
 
-        if (array_key_exists("MigrateOption",$param) and $param["MigrateOption"] !== null) {
+        if (array_key_exists('MigrateOption',$param) and $param['MigrateOption'] !== null) {
             $this->MigrateOption = new MigrateOption();
-            $this->MigrateOption->deserialize($param["MigrateOption"]);
+            $this->MigrateOption->deserialize($param['MigrateOption']);
         }
 
-        if (array_key_exists("SrcAccessType",$param) and $param["SrcAccessType"] !== null) {
-            $this->SrcAccessType = $param["SrcAccessType"];
+        if (array_key_exists('SrcAccessType',$param) and $param['SrcAccessType'] !== null) {
+            $this->SrcAccessType = $param['SrcAccessType'];
         }
 
-        if (array_key_exists("SrcInfo",$param) and $param["SrcInfo"] !== null) {
+        if (array_key_exists('SrcInfo',$param) and $param['SrcInfo'] !== null) {
             $this->SrcInfo = new SrcInfo();
-            $this->SrcInfo->deserialize($param["SrcInfo"]);
+            $this->SrcInfo->deserialize($param['SrcInfo']);
         }
 
-        if (array_key_exists("DstAccessType",$param) and $param["DstAccessType"] !== null) {
-            $this->DstAccessType = $param["DstAccessType"];
+        if (array_key_exists('DstAccessType',$param) and $param['DstAccessType'] !== null) {
+            $this->DstAccessType = $param['DstAccessType'];
         }
 
-        if (array_key_exists("DstInfo",$param) and $param["DstInfo"] !== null) {
+        if (array_key_exists('DstInfo',$param) and $param['DstInfo'] !== null) {
             $this->DstInfo = new DstInfo();
-            $this->DstInfo->deserialize($param["DstInfo"]);
+            $this->DstInfo->deserialize($param['DstInfo']);
         }
 
-        if (array_key_exists("DatabaseInfo",$param) and $param["DatabaseInfo"] !== null) {
-            $this->DatabaseInfo = $param["DatabaseInfo"];
+        if (array_key_exists('DatabaseInfo',$param) and $param['DatabaseInfo'] !== null) {
+            $this->DatabaseInfo = $param['DatabaseInfo'];
         }
     }
 }

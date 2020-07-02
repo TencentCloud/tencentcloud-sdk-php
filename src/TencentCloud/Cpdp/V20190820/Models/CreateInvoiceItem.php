@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -170,60 +170,60 @@ class CreateInvoiceItem extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("TaxCode",$param) and $param["TaxCode"] !== null) {
-            $this->TaxCode = $param["TaxCode"];
+        if (array_key_exists('TaxCode',$param) and $param['TaxCode'] !== null) {
+            $this->TaxCode = $param['TaxCode'];
         }
 
-        if (array_key_exists("TotalPrice",$param) and $param["TotalPrice"] !== null) {
-            $this->TotalPrice = $param["TotalPrice"];
+        if (array_key_exists('TotalPrice',$param) and $param['TotalPrice'] !== null) {
+            $this->TotalPrice = $param['TotalPrice'];
         }
 
-        if (array_key_exists("TaxRate",$param) and $param["TaxRate"] !== null) {
-            $this->TaxRate = $param["TaxRate"];
+        if (array_key_exists('TaxRate',$param) and $param['TaxRate'] !== null) {
+            $this->TaxRate = $param['TaxRate'];
         }
 
-        if (array_key_exists("TaxAmount",$param) and $param["TaxAmount"] !== null) {
-            $this->TaxAmount = $param["TaxAmount"];
+        if (array_key_exists('TaxAmount',$param) and $param['TaxAmount'] !== null) {
+            $this->TaxAmount = $param['TaxAmount'];
         }
 
-        if (array_key_exists("TaxType",$param) and $param["TaxType"] !== null) {
-            $this->TaxType = $param["TaxType"];
+        if (array_key_exists('TaxType',$param) and $param['TaxType'] !== null) {
+            $this->TaxType = $param['TaxType'];
         }
 
-        if (array_key_exists("Models",$param) and $param["Models"] !== null) {
-            $this->Models = $param["Models"];
+        if (array_key_exists('Models',$param) and $param['Models'] !== null) {
+            $this->Models = $param['Models'];
         }
 
-        if (array_key_exists("Unit",$param) and $param["Unit"] !== null) {
-            $this->Unit = $param["Unit"];
+        if (array_key_exists('Unit',$param) and $param['Unit'] !== null) {
+            $this->Unit = $param['Unit'];
         }
 
-        if (array_key_exists("Total",$param) and $param["Total"] !== null) {
-            $this->Total = $param["Total"];
+        if (array_key_exists('Total',$param) and $param['Total'] !== null) {
+            $this->Total = $param['Total'];
         }
 
-        if (array_key_exists("Price",$param) and $param["Price"] !== null) {
-            $this->Price = $param["Price"];
+        if (array_key_exists('Price',$param) and $param['Price'] !== null) {
+            $this->Price = $param['Price'];
         }
 
-        if (array_key_exists("Discount",$param) and $param["Discount"] !== null) {
-            $this->Discount = $param["Discount"];
+        if (array_key_exists('Discount',$param) and $param['Discount'] !== null) {
+            $this->Discount = $param['Discount'];
         }
 
-        if (array_key_exists("PreferentialPolicyFlag",$param) and $param["PreferentialPolicyFlag"] !== null) {
-            $this->PreferentialPolicyFlag = $param["PreferentialPolicyFlag"];
+        if (array_key_exists('PreferentialPolicyFlag',$param) and $param['PreferentialPolicyFlag'] !== null) {
+            $this->PreferentialPolicyFlag = $param['PreferentialPolicyFlag'];
         }
 
-        if (array_key_exists("ZeroTaxFlag",$param) and $param["ZeroTaxFlag"] !== null) {
-            $this->ZeroTaxFlag = $param["ZeroTaxFlag"];
+        if (array_key_exists('ZeroTaxFlag',$param) and $param['ZeroTaxFlag'] !== null) {
+            $this->ZeroTaxFlag = $param['ZeroTaxFlag'];
         }
 
-        if (array_key_exists("VatSpecialManagement",$param) and $param["VatSpecialManagement"] !== null) {
-            $this->VatSpecialManagement = $param["VatSpecialManagement"];
+        if (array_key_exists('VatSpecialManagement',$param) and $param['VatSpecialManagement'] !== null) {
+            $this->VatSpecialManagement = $param['VatSpecialManagement'];
         }
     }
 }

@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -62,16 +62,16 @@ class ScanSensitiveInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("WordList",$param) and $param["WordList"] !== null) {
-            $this->WordList = $param["WordList"];
+        if (array_key_exists('WordList',$param) and $param['WordList'] !== null) {
+            $this->WordList = $param['WordList'];
         }
 
-        if (array_key_exists("FilePath",$param) and $param["FilePath"] !== null) {
-            $this->FilePath = $param["FilePath"];
+        if (array_key_exists('FilePath',$param) and $param['FilePath'] !== null) {
+            $this->FilePath = $param['FilePath'];
         }
 
-        if (array_key_exists("FileSha",$param) and $param["FileSha"] !== null) {
-            $this->FileSha = $param["FileSha"];
+        if (array_key_exists('FileSha',$param) and $param['FileSha'] !== null) {
+            $this->FileSha = $param['FileSha'];
         }
     }
 }

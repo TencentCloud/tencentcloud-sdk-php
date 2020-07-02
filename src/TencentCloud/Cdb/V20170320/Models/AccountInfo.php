@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -86,28 +86,28 @@ class AccountInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Notes",$param) and $param["Notes"] !== null) {
-            $this->Notes = $param["Notes"];
+        if (array_key_exists('Notes',$param) and $param['Notes'] !== null) {
+            $this->Notes = $param['Notes'];
         }
 
-        if (array_key_exists("Host",$param) and $param["Host"] !== null) {
-            $this->Host = $param["Host"];
+        if (array_key_exists('Host',$param) and $param['Host'] !== null) {
+            $this->Host = $param['Host'];
         }
 
-        if (array_key_exists("User",$param) and $param["User"] !== null) {
-            $this->User = $param["User"];
+        if (array_key_exists('User',$param) and $param['User'] !== null) {
+            $this->User = $param['User'];
         }
 
-        if (array_key_exists("ModifyTime",$param) and $param["ModifyTime"] !== null) {
-            $this->ModifyTime = $param["ModifyTime"];
+        if (array_key_exists('ModifyTime',$param) and $param['ModifyTime'] !== null) {
+            $this->ModifyTime = $param['ModifyTime'];
         }
 
-        if (array_key_exists("ModifyPasswordTime",$param) and $param["ModifyPasswordTime"] !== null) {
-            $this->ModifyPasswordTime = $param["ModifyPasswordTime"];
+        if (array_key_exists('ModifyPasswordTime',$param) and $param['ModifyPasswordTime'] !== null) {
+            $this->ModifyPasswordTime = $param['ModifyPasswordTime'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
     }
 }

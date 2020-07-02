@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -154,28 +154,28 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PersonId",$param) and $param["PersonId"] !== null) {
-            $this->PersonId = $param["PersonId"];
+        if (array_key_exists('PersonId',$param) and $param['PersonId'] !== null) {
+            $this->PersonId = $param['PersonId'];
         }
 
-        if (array_key_exists("Images",$param) and $param["Images"] !== null) {
-            $this->Images = $param["Images"];
+        if (array_key_exists('Images',$param) and $param['Images'] !== null) {
+            $this->Images = $param['Images'];
         }
 
-        if (array_key_exists("Urls",$param) and $param["Urls"] !== null) {
-            $this->Urls = $param["Urls"];
+        if (array_key_exists('Urls',$param) and $param['Urls'] !== null) {
+            $this->Urls = $param['Urls'];
         }
 
-        if (array_key_exists("FaceMatchThreshold",$param) and $param["FaceMatchThreshold"] !== null) {
-            $this->FaceMatchThreshold = $param["FaceMatchThreshold"];
+        if (array_key_exists('FaceMatchThreshold',$param) and $param['FaceMatchThreshold'] !== null) {
+            $this->FaceMatchThreshold = $param['FaceMatchThreshold'];
         }
 
-        if (array_key_exists("QualityControl",$param) and $param["QualityControl"] !== null) {
-            $this->QualityControl = $param["QualityControl"];
+        if (array_key_exists('QualityControl',$param) and $param['QualityControl'] !== null) {
+            $this->QualityControl = $param['QualityControl'];
         }
 
-        if (array_key_exists("NeedRotateDetection",$param) and $param["NeedRotateDetection"] !== null) {
-            $this->NeedRotateDetection = $param["NeedRotateDetection"];
+        if (array_key_exists('NeedRotateDetection',$param) and $param['NeedRotateDetection'] !== null) {
+            $this->NeedRotateDetection = $param['NeedRotateDetection'];
         }
     }
 }

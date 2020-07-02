@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -70,20 +70,20 @@ class AiRecognitionTaskHeadTailResultOutput extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("HeadConfidence",$param) and $param["HeadConfidence"] !== null) {
-            $this->HeadConfidence = $param["HeadConfidence"];
+        if (array_key_exists('HeadConfidence',$param) and $param['HeadConfidence'] !== null) {
+            $this->HeadConfidence = $param['HeadConfidence'];
         }
 
-        if (array_key_exists("HeadTimeOffset",$param) and $param["HeadTimeOffset"] !== null) {
-            $this->HeadTimeOffset = $param["HeadTimeOffset"];
+        if (array_key_exists('HeadTimeOffset',$param) and $param['HeadTimeOffset'] !== null) {
+            $this->HeadTimeOffset = $param['HeadTimeOffset'];
         }
 
-        if (array_key_exists("TailConfidence",$param) and $param["TailConfidence"] !== null) {
-            $this->TailConfidence = $param["TailConfidence"];
+        if (array_key_exists('TailConfidence',$param) and $param['TailConfidence'] !== null) {
+            $this->TailConfidence = $param['TailConfidence'];
         }
 
-        if (array_key_exists("TailTimeOffset",$param) and $param["TailTimeOffset"] !== null) {
-            $this->TailTimeOffset = $param["TailTimeOffset"];
+        if (array_key_exists('TailTimeOffset',$param) and $param['TailTimeOffset'] !== null) {
+            $this->TailTimeOffset = $param['TailTimeOffset'];
         }
     }
 }

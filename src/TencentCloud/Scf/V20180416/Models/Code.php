@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -150,60 +150,60 @@ class Code extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CosBucketName",$param) and $param["CosBucketName"] !== null) {
-            $this->CosBucketName = $param["CosBucketName"];
+        if (array_key_exists('CosBucketName',$param) and $param['CosBucketName'] !== null) {
+            $this->CosBucketName = $param['CosBucketName'];
         }
 
-        if (array_key_exists("CosObjectName",$param) and $param["CosObjectName"] !== null) {
-            $this->CosObjectName = $param["CosObjectName"];
+        if (array_key_exists('CosObjectName',$param) and $param['CosObjectName'] !== null) {
+            $this->CosObjectName = $param['CosObjectName'];
         }
 
-        if (array_key_exists("ZipFile",$param) and $param["ZipFile"] !== null) {
-            $this->ZipFile = $param["ZipFile"];
+        if (array_key_exists('ZipFile',$param) and $param['ZipFile'] !== null) {
+            $this->ZipFile = $param['ZipFile'];
         }
 
-        if (array_key_exists("CosBucketRegion",$param) and $param["CosBucketRegion"] !== null) {
-            $this->CosBucketRegion = $param["CosBucketRegion"];
+        if (array_key_exists('CosBucketRegion',$param) and $param['CosBucketRegion'] !== null) {
+            $this->CosBucketRegion = $param['CosBucketRegion'];
         }
 
-        if (array_key_exists("DemoId",$param) and $param["DemoId"] !== null) {
-            $this->DemoId = $param["DemoId"];
+        if (array_key_exists('DemoId',$param) and $param['DemoId'] !== null) {
+            $this->DemoId = $param['DemoId'];
         }
 
-        if (array_key_exists("TempCosObjectName",$param) and $param["TempCosObjectName"] !== null) {
-            $this->TempCosObjectName = $param["TempCosObjectName"];
+        if (array_key_exists('TempCosObjectName',$param) and $param['TempCosObjectName'] !== null) {
+            $this->TempCosObjectName = $param['TempCosObjectName'];
         }
 
-        if (array_key_exists("GitUrl",$param) and $param["GitUrl"] !== null) {
-            $this->GitUrl = $param["GitUrl"];
+        if (array_key_exists('GitUrl',$param) and $param['GitUrl'] !== null) {
+            $this->GitUrl = $param['GitUrl'];
         }
 
-        if (array_key_exists("GitUserName",$param) and $param["GitUserName"] !== null) {
-            $this->GitUserName = $param["GitUserName"];
+        if (array_key_exists('GitUserName',$param) and $param['GitUserName'] !== null) {
+            $this->GitUserName = $param['GitUserName'];
         }
 
-        if (array_key_exists("GitPassword",$param) and $param["GitPassword"] !== null) {
-            $this->GitPassword = $param["GitPassword"];
+        if (array_key_exists('GitPassword',$param) and $param['GitPassword'] !== null) {
+            $this->GitPassword = $param['GitPassword'];
         }
 
-        if (array_key_exists("GitPasswordSecret",$param) and $param["GitPasswordSecret"] !== null) {
-            $this->GitPasswordSecret = $param["GitPasswordSecret"];
+        if (array_key_exists('GitPasswordSecret',$param) and $param['GitPasswordSecret'] !== null) {
+            $this->GitPasswordSecret = $param['GitPasswordSecret'];
         }
 
-        if (array_key_exists("GitBranch",$param) and $param["GitBranch"] !== null) {
-            $this->GitBranch = $param["GitBranch"];
+        if (array_key_exists('GitBranch',$param) and $param['GitBranch'] !== null) {
+            $this->GitBranch = $param['GitBranch'];
         }
 
-        if (array_key_exists("GitDirectory",$param) and $param["GitDirectory"] !== null) {
-            $this->GitDirectory = $param["GitDirectory"];
+        if (array_key_exists('GitDirectory',$param) and $param['GitDirectory'] !== null) {
+            $this->GitDirectory = $param['GitDirectory'];
         }
 
-        if (array_key_exists("GitCommitId",$param) and $param["GitCommitId"] !== null) {
-            $this->GitCommitId = $param["GitCommitId"];
+        if (array_key_exists('GitCommitId',$param) and $param['GitCommitId'] !== null) {
+            $this->GitCommitId = $param['GitCommitId'];
         }
 
-        if (array_key_exists("GitUserNameSecret",$param) and $param["GitUserNameSecret"] !== null) {
-            $this->GitUserNameSecret = $param["GitUserNameSecret"];
+        if (array_key_exists('GitUserNameSecret',$param) and $param['GitUserNameSecret'] !== null) {
+            $this->GitUserNameSecret = $param['GitUserNameSecret'];
         }
     }
 }

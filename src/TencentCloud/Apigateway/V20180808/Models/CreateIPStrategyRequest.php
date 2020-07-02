@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -70,20 +70,20 @@ class CreateIPStrategyRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ServiceId",$param) and $param["ServiceId"] !== null) {
-            $this->ServiceId = $param["ServiceId"];
+        if (array_key_exists('ServiceId',$param) and $param['ServiceId'] !== null) {
+            $this->ServiceId = $param['ServiceId'];
         }
 
-        if (array_key_exists("StrategyName",$param) and $param["StrategyName"] !== null) {
-            $this->StrategyName = $param["StrategyName"];
+        if (array_key_exists('StrategyName',$param) and $param['StrategyName'] !== null) {
+            $this->StrategyName = $param['StrategyName'];
         }
 
-        if (array_key_exists("StrategyType",$param) and $param["StrategyType"] !== null) {
-            $this->StrategyType = $param["StrategyType"];
+        if (array_key_exists('StrategyType',$param) and $param['StrategyType'] !== null) {
+            $this->StrategyType = $param['StrategyType'];
         }
 
-        if (array_key_exists("StrategyData",$param) and $param["StrategyData"] !== null) {
-            $this->StrategyData = $param["StrategyData"];
+        if (array_key_exists('StrategyData',$param) and $param['StrategyData'] !== null) {
+            $this->StrategyData = $param['StrategyData'];
         }
     }
 }

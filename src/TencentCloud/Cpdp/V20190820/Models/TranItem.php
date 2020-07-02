@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -182,52 +182,52 @@ class TranItem extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FundSummaryAcctNo",$param) and $param["FundSummaryAcctNo"] !== null) {
-            $this->FundSummaryAcctNo = $param["FundSummaryAcctNo"];
+        if (array_key_exists('FundSummaryAcctNo',$param) and $param['FundSummaryAcctNo'] !== null) {
+            $this->FundSummaryAcctNo = $param['FundSummaryAcctNo'];
         }
 
-        if (array_key_exists("SubAcctNo",$param) and $param["SubAcctNo"] !== null) {
-            $this->SubAcctNo = $param["SubAcctNo"];
+        if (array_key_exists('SubAcctNo',$param) and $param['SubAcctNo'] !== null) {
+            $this->SubAcctNo = $param['SubAcctNo'];
         }
 
-        if (array_key_exists("TranNetMemberCode",$param) and $param["TranNetMemberCode"] !== null) {
-            $this->TranNetMemberCode = $param["TranNetMemberCode"];
+        if (array_key_exists('TranNetMemberCode',$param) and $param['TranNetMemberCode'] !== null) {
+            $this->TranNetMemberCode = $param['TranNetMemberCode'];
         }
 
-        if (array_key_exists("MemberName",$param) and $param["MemberName"] !== null) {
-            $this->MemberName = $param["MemberName"];
+        if (array_key_exists('MemberName',$param) and $param['MemberName'] !== null) {
+            $this->MemberName = $param['MemberName'];
         }
 
-        if (array_key_exists("MemberGlobalType",$param) and $param["MemberGlobalType"] !== null) {
-            $this->MemberGlobalType = $param["MemberGlobalType"];
+        if (array_key_exists('MemberGlobalType',$param) and $param['MemberGlobalType'] !== null) {
+            $this->MemberGlobalType = $param['MemberGlobalType'];
         }
 
-        if (array_key_exists("MemberGlobalId",$param) and $param["MemberGlobalId"] !== null) {
-            $this->MemberGlobalId = $param["MemberGlobalId"];
+        if (array_key_exists('MemberGlobalId',$param) and $param['MemberGlobalId'] !== null) {
+            $this->MemberGlobalId = $param['MemberGlobalId'];
         }
 
-        if (array_key_exists("MemberAcctNo",$param) and $param["MemberAcctNo"] !== null) {
-            $this->MemberAcctNo = $param["MemberAcctNo"];
+        if (array_key_exists('MemberAcctNo',$param) and $param['MemberAcctNo'] !== null) {
+            $this->MemberAcctNo = $param['MemberAcctNo'];
         }
 
-        if (array_key_exists("BankType",$param) and $param["BankType"] !== null) {
-            $this->BankType = $param["BankType"];
+        if (array_key_exists('BankType',$param) and $param['BankType'] !== null) {
+            $this->BankType = $param['BankType'];
         }
 
-        if (array_key_exists("AcctOpenBranchName",$param) and $param["AcctOpenBranchName"] !== null) {
-            $this->AcctOpenBranchName = $param["AcctOpenBranchName"];
+        if (array_key_exists('AcctOpenBranchName',$param) and $param['AcctOpenBranchName'] !== null) {
+            $this->AcctOpenBranchName = $param['AcctOpenBranchName'];
         }
 
-        if (array_key_exists("CnapsBranchId",$param) and $param["CnapsBranchId"] !== null) {
-            $this->CnapsBranchId = $param["CnapsBranchId"];
+        if (array_key_exists('CnapsBranchId',$param) and $param['CnapsBranchId'] !== null) {
+            $this->CnapsBranchId = $param['CnapsBranchId'];
         }
 
-        if (array_key_exists("EiconBankBranchId",$param) and $param["EiconBankBranchId"] !== null) {
-            $this->EiconBankBranchId = $param["EiconBankBranchId"];
+        if (array_key_exists('EiconBankBranchId',$param) and $param['EiconBankBranchId'] !== null) {
+            $this->EiconBankBranchId = $param['EiconBankBranchId'];
         }
 
-        if (array_key_exists("Mobile",$param) and $param["Mobile"] !== null) {
-            $this->Mobile = $param["Mobile"];
+        if (array_key_exists('Mobile',$param) and $param['Mobile'] !== null) {
+            $this->Mobile = $param['Mobile'];
         }
     }
 }

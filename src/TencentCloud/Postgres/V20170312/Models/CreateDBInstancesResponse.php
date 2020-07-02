@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -70,20 +70,20 @@ class CreateDBInstancesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DealNames",$param) and $param["DealNames"] !== null) {
-            $this->DealNames = $param["DealNames"];
+        if (array_key_exists('DealNames',$param) and $param['DealNames'] !== null) {
+            $this->DealNames = $param['DealNames'];
         }
 
-        if (array_key_exists("BillId",$param) and $param["BillId"] !== null) {
-            $this->BillId = $param["BillId"];
+        if (array_key_exists('BillId',$param) and $param['BillId'] !== null) {
+            $this->BillId = $param['BillId'];
         }
 
-        if (array_key_exists("DBInstanceIdSet",$param) and $param["DBInstanceIdSet"] !== null) {
-            $this->DBInstanceIdSet = $param["DBInstanceIdSet"];
+        if (array_key_exists('DBInstanceIdSet',$param) and $param['DBInstanceIdSet'] !== null) {
+            $this->DBInstanceIdSet = $param['DBInstanceIdSet'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

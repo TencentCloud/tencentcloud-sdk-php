@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -162,62 +162,62 @@ class ImageData extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("EvilFlag",$param) and $param["EvilFlag"] !== null) {
-            $this->EvilFlag = $param["EvilFlag"];
+        if (array_key_exists('EvilFlag',$param) and $param['EvilFlag'] !== null) {
+            $this->EvilFlag = $param['EvilFlag'];
         }
 
-        if (array_key_exists("EvilType",$param) and $param["EvilType"] !== null) {
-            $this->EvilType = $param["EvilType"];
+        if (array_key_exists('EvilType',$param) and $param['EvilType'] !== null) {
+            $this->EvilType = $param['EvilType'];
         }
 
-        if (array_key_exists("CodeDetect",$param) and $param["CodeDetect"] !== null) {
+        if (array_key_exists('CodeDetect',$param) and $param['CodeDetect'] !== null) {
             $this->CodeDetect = new CodeDetect();
-            $this->CodeDetect->deserialize($param["CodeDetect"]);
+            $this->CodeDetect->deserialize($param['CodeDetect']);
         }
 
-        if (array_key_exists("HotDetect",$param) and $param["HotDetect"] !== null) {
+        if (array_key_exists('HotDetect',$param) and $param['HotDetect'] !== null) {
             $this->HotDetect = new ImageHotDetect();
-            $this->HotDetect->deserialize($param["HotDetect"]);
+            $this->HotDetect->deserialize($param['HotDetect']);
         }
 
-        if (array_key_exists("IllegalDetect",$param) and $param["IllegalDetect"] !== null) {
+        if (array_key_exists('IllegalDetect',$param) and $param['IllegalDetect'] !== null) {
             $this->IllegalDetect = new ImageIllegalDetect();
-            $this->IllegalDetect->deserialize($param["IllegalDetect"]);
+            $this->IllegalDetect->deserialize($param['IllegalDetect']);
         }
 
-        if (array_key_exists("LogoDetect",$param) and $param["LogoDetect"] !== null) {
+        if (array_key_exists('LogoDetect',$param) and $param['LogoDetect'] !== null) {
             $this->LogoDetect = new LogoDetail();
-            $this->LogoDetect->deserialize($param["LogoDetect"]);
+            $this->LogoDetect->deserialize($param['LogoDetect']);
         }
 
-        if (array_key_exists("OCRDetect",$param) and $param["OCRDetect"] !== null) {
+        if (array_key_exists('OCRDetect',$param) and $param['OCRDetect'] !== null) {
             $this->OCRDetect = new OCRDetect();
-            $this->OCRDetect->deserialize($param["OCRDetect"]);
+            $this->OCRDetect->deserialize($param['OCRDetect']);
         }
 
-        if (array_key_exists("PhoneDetect",$param) and $param["PhoneDetect"] !== null) {
+        if (array_key_exists('PhoneDetect',$param) and $param['PhoneDetect'] !== null) {
             $this->PhoneDetect = new PhoneDetect();
-            $this->PhoneDetect->deserialize($param["PhoneDetect"]);
+            $this->PhoneDetect->deserialize($param['PhoneDetect']);
         }
 
-        if (array_key_exists("PolityDetect",$param) and $param["PolityDetect"] !== null) {
+        if (array_key_exists('PolityDetect',$param) and $param['PolityDetect'] !== null) {
             $this->PolityDetect = new ImagePolityDetect();
-            $this->PolityDetect->deserialize($param["PolityDetect"]);
+            $this->PolityDetect->deserialize($param['PolityDetect']);
         }
 
-        if (array_key_exists("PornDetect",$param) and $param["PornDetect"] !== null) {
+        if (array_key_exists('PornDetect',$param) and $param['PornDetect'] !== null) {
             $this->PornDetect = new ImagePornDetect();
-            $this->PornDetect->deserialize($param["PornDetect"]);
+            $this->PornDetect->deserialize($param['PornDetect']);
         }
 
-        if (array_key_exists("Similar",$param) and $param["Similar"] !== null) {
+        if (array_key_exists('Similar',$param) and $param['Similar'] !== null) {
             $this->Similar = new Similar();
-            $this->Similar->deserialize($param["Similar"]);
+            $this->Similar->deserialize($param['Similar']);
         }
 
-        if (array_key_exists("TerrorDetect",$param) and $param["TerrorDetect"] !== null) {
+        if (array_key_exists('TerrorDetect',$param) and $param['TerrorDetect'] !== null) {
             $this->TerrorDetect = new ImageTerrorDetect();
-            $this->TerrorDetect->deserialize($param["TerrorDetect"]);
+            $this->TerrorDetect->deserialize($param['TerrorDetect']);
         }
     }
 }

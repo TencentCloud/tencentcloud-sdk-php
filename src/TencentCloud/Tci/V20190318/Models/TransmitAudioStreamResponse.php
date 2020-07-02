@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -94,48 +94,48 @@ class TransmitAudioStreamResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AsrStat",$param) and $param["AsrStat"] !== null) {
+        if (array_key_exists('AsrStat',$param) and $param['AsrStat'] !== null) {
             $this->AsrStat = new ASRStat();
-            $this->AsrStat->deserialize($param["AsrStat"]);
+            $this->AsrStat->deserialize($param['AsrStat']);
         }
 
-        if (array_key_exists("Texts",$param) and $param["Texts"] !== null) {
+        if (array_key_exists('Texts',$param) and $param['Texts'] !== null) {
             $this->Texts = [];
-            foreach ($param["Texts"] as $key => $value){
+            foreach ($param['Texts'] as $key => $value){
                 $obj = new WholeTextItem();
                 $obj->deserialize($value);
                 array_push($this->Texts, $obj);
             }
         }
 
-        if (array_key_exists("VocabAnalysisDetailInfo",$param) and $param["VocabAnalysisDetailInfo"] !== null) {
+        if (array_key_exists('VocabAnalysisDetailInfo',$param) and $param['VocabAnalysisDetailInfo'] !== null) {
             $this->VocabAnalysisDetailInfo = [];
-            foreach ($param["VocabAnalysisDetailInfo"] as $key => $value){
+            foreach ($param['VocabAnalysisDetailInfo'] as $key => $value){
                 $obj = new VocabDetailInfomation();
                 $obj->deserialize($value);
                 array_push($this->VocabAnalysisDetailInfo, $obj);
             }
         }
 
-        if (array_key_exists("VocabAnalysisStatInfo",$param) and $param["VocabAnalysisStatInfo"] !== null) {
+        if (array_key_exists('VocabAnalysisStatInfo',$param) and $param['VocabAnalysisStatInfo'] !== null) {
             $this->VocabAnalysisStatInfo = [];
-            foreach ($param["VocabAnalysisStatInfo"] as $key => $value){
+            foreach ($param['VocabAnalysisStatInfo'] as $key => $value){
                 $obj = new VocabStatInfomation();
                 $obj->deserialize($value);
                 array_push($this->VocabAnalysisStatInfo, $obj);
             }
         }
 
-        if (array_key_exists("AllTexts",$param) and $param["AllTexts"] !== null) {
-            $this->AllTexts = $param["AllTexts"];
+        if (array_key_exists('AllTexts',$param) and $param['AllTexts'] !== null) {
+            $this->AllTexts = $param['AllTexts'];
         }
 
-        if (array_key_exists("AudioUrl",$param) and $param["AudioUrl"] !== null) {
-            $this->AudioUrl = $param["AudioUrl"];
+        if (array_key_exists('AudioUrl',$param) and $param['AudioUrl'] !== null) {
+            $this->AudioUrl = $param['AudioUrl'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

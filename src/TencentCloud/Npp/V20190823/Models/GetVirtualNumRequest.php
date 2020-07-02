@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -206,56 +206,56 @@ class GetVirtualNumRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BizAppId",$param) and $param["BizAppId"] !== null) {
-            $this->BizAppId = $param["BizAppId"];
+        if (array_key_exists('BizAppId',$param) and $param['BizAppId'] !== null) {
+            $this->BizAppId = $param['BizAppId'];
         }
 
-        if (array_key_exists("Dst",$param) and $param["Dst"] !== null) {
-            $this->Dst = $param["Dst"];
+        if (array_key_exists('Dst',$param) and $param['Dst'] !== null) {
+            $this->Dst = $param['Dst'];
         }
 
-        if (array_key_exists("Src",$param) and $param["Src"] !== null) {
-            $this->Src = $param["Src"];
+        if (array_key_exists('Src',$param) and $param['Src'] !== null) {
+            $this->Src = $param['Src'];
         }
 
-        if (array_key_exists("AccreditList",$param) and $param["AccreditList"] !== null) {
-            $this->AccreditList = $param["AccreditList"];
+        if (array_key_exists('AccreditList',$param) and $param['AccreditList'] !== null) {
+            $this->AccreditList = $param['AccreditList'];
         }
 
-        if (array_key_exists("AssignVirtualNum",$param) and $param["AssignVirtualNum"] !== null) {
-            $this->AssignVirtualNum = $param["AssignVirtualNum"];
+        if (array_key_exists('AssignVirtualNum',$param) and $param['AssignVirtualNum'] !== null) {
+            $this->AssignVirtualNum = $param['AssignVirtualNum'];
         }
 
-        if (array_key_exists("Record",$param) and $param["Record"] !== null) {
-            $this->Record = $param["Record"];
+        if (array_key_exists('Record',$param) and $param['Record'] !== null) {
+            $this->Record = $param['Record'];
         }
 
-        if (array_key_exists("CityId",$param) and $param["CityId"] !== null) {
-            $this->CityId = $param["CityId"];
+        if (array_key_exists('CityId',$param) and $param['CityId'] !== null) {
+            $this->CityId = $param['CityId'];
         }
 
-        if (array_key_exists("BizId",$param) and $param["BizId"] !== null) {
-            $this->BizId = $param["BizId"];
+        if (array_key_exists('BizId',$param) and $param['BizId'] !== null) {
+            $this->BizId = $param['BizId'];
         }
 
-        if (array_key_exists("MaxAssignTime",$param) and $param["MaxAssignTime"] !== null) {
-            $this->MaxAssignTime = $param["MaxAssignTime"];
+        if (array_key_exists('MaxAssignTime',$param) and $param['MaxAssignTime'] !== null) {
+            $this->MaxAssignTime = $param['MaxAssignTime'];
         }
 
-        if (array_key_exists("StatusFlag",$param) and $param["StatusFlag"] !== null) {
-            $this->StatusFlag = $param["StatusFlag"];
+        if (array_key_exists('StatusFlag',$param) and $param['StatusFlag'] !== null) {
+            $this->StatusFlag = $param['StatusFlag'];
         }
 
-        if (array_key_exists("StatusUrl",$param) and $param["StatusUrl"] !== null) {
-            $this->StatusUrl = $param["StatusUrl"];
+        if (array_key_exists('StatusUrl',$param) and $param['StatusUrl'] !== null) {
+            $this->StatusUrl = $param['StatusUrl'];
         }
 
-        if (array_key_exists("HangupUrl",$param) and $param["HangupUrl"] !== null) {
-            $this->HangupUrl = $param["HangupUrl"];
+        if (array_key_exists('HangupUrl',$param) and $param['HangupUrl'] !== null) {
+            $this->HangupUrl = $param['HangupUrl'];
         }
 
-        if (array_key_exists("RecordUrl",$param) and $param["RecordUrl"] !== null) {
-            $this->RecordUrl = $param["RecordUrl"];
+        if (array_key_exists('RecordUrl',$param) and $param['RecordUrl'] !== null) {
+            $this->RecordUrl = $param['RecordUrl'];
         }
     }
 }

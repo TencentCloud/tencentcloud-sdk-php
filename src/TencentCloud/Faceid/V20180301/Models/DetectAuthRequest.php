@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -102,32 +102,32 @@ BASE64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RuleId",$param) and $param["RuleId"] !== null) {
-            $this->RuleId = $param["RuleId"];
+        if (array_key_exists('RuleId',$param) and $param['RuleId'] !== null) {
+            $this->RuleId = $param['RuleId'];
         }
 
-        if (array_key_exists("TerminalType",$param) and $param["TerminalType"] !== null) {
-            $this->TerminalType = $param["TerminalType"];
+        if (array_key_exists('TerminalType',$param) and $param['TerminalType'] !== null) {
+            $this->TerminalType = $param['TerminalType'];
         }
 
-        if (array_key_exists("IdCard",$param) and $param["IdCard"] !== null) {
-            $this->IdCard = $param["IdCard"];
+        if (array_key_exists('IdCard',$param) and $param['IdCard'] !== null) {
+            $this->IdCard = $param['IdCard'];
         }
 
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("RedirectUrl",$param) and $param["RedirectUrl"] !== null) {
-            $this->RedirectUrl = $param["RedirectUrl"];
+        if (array_key_exists('RedirectUrl',$param) and $param['RedirectUrl'] !== null) {
+            $this->RedirectUrl = $param['RedirectUrl'];
         }
 
-        if (array_key_exists("Extra",$param) and $param["Extra"] !== null) {
-            $this->Extra = $param["Extra"];
+        if (array_key_exists('Extra',$param) and $param['Extra'] !== null) {
+            $this->Extra = $param['Extra'];
         }
 
-        if (array_key_exists("ImageBase64",$param) and $param["ImageBase64"] !== null) {
-            $this->ImageBase64 = $param["ImageBase64"];
+        if (array_key_exists('ImageBase64',$param) and $param['ImageBase64'] !== null) {
+            $this->ImageBase64 = $param['ImageBase64'];
         }
     }
 }

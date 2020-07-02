@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -33,9 +33,9 @@ use TencentCloud\Common\AbstractModel;
  * @method MetricAlarm getMetricAlarm() 获取告警监控指标。
  * @method void setMetricAlarm(MetricAlarm $MetricAlarm) 设置告警监控指标。
  * @method array getNotificationUserGroupIds() 获取通知组ID，即为用户组ID集合，用户组ID可以通过[ListGroups](https://cloud.tencent.com/document/product/598/34589)查询。
-如果需要清空通知用户组，需要在列表中传入特定字符串 "NULL"。
+如果需要清空通知用户组，需要在列表中传入特定字符串 'NULL'。
  * @method void setNotificationUserGroupIds(array $NotificationUserGroupIds) 设置通知组ID，即为用户组ID集合，用户组ID可以通过[ListGroups](https://cloud.tencent.com/document/product/598/34589)查询。
-如果需要清空通知用户组，需要在列表中传入特定字符串 "NULL"。
+如果需要清空通知用户组，需要在列表中传入特定字符串 'NULL'。
  */
 class ModifyScalingPolicyRequest extends AbstractModel
 {
@@ -71,7 +71,7 @@ class ModifyScalingPolicyRequest extends AbstractModel
 
     /**
      * @var array 通知组ID，即为用户组ID集合，用户组ID可以通过[ListGroups](https://cloud.tencent.com/document/product/598/34589)查询。
-如果需要清空通知用户组，需要在列表中传入特定字符串 "NULL"。
+如果需要清空通知用户组，需要在列表中传入特定字符串 'NULL'。
      */
     public $NotificationUserGroupIds;
 
@@ -83,7 +83,7 @@ class ModifyScalingPolicyRequest extends AbstractModel
      * @param integer $Cooldown 冷却时间，单位为秒。
      * @param MetricAlarm $MetricAlarm 告警监控指标。
      * @param array $NotificationUserGroupIds 通知组ID，即为用户组ID集合，用户组ID可以通过[ListGroups](https://cloud.tencent.com/document/product/598/34589)查询。
-如果需要清空通知用户组，需要在列表中传入特定字符串 "NULL"。
+如果需要清空通知用户组，需要在列表中传入特定字符串 'NULL'。
      */
     function __construct()
     {
@@ -98,33 +98,33 @@ class ModifyScalingPolicyRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AutoScalingPolicyId",$param) and $param["AutoScalingPolicyId"] !== null) {
-            $this->AutoScalingPolicyId = $param["AutoScalingPolicyId"];
+        if (array_key_exists('AutoScalingPolicyId',$param) and $param['AutoScalingPolicyId'] !== null) {
+            $this->AutoScalingPolicyId = $param['AutoScalingPolicyId'];
         }
 
-        if (array_key_exists("ScalingPolicyName",$param) and $param["ScalingPolicyName"] !== null) {
-            $this->ScalingPolicyName = $param["ScalingPolicyName"];
+        if (array_key_exists('ScalingPolicyName',$param) and $param['ScalingPolicyName'] !== null) {
+            $this->ScalingPolicyName = $param['ScalingPolicyName'];
         }
 
-        if (array_key_exists("AdjustmentType",$param) and $param["AdjustmentType"] !== null) {
-            $this->AdjustmentType = $param["AdjustmentType"];
+        if (array_key_exists('AdjustmentType',$param) and $param['AdjustmentType'] !== null) {
+            $this->AdjustmentType = $param['AdjustmentType'];
         }
 
-        if (array_key_exists("AdjustmentValue",$param) and $param["AdjustmentValue"] !== null) {
-            $this->AdjustmentValue = $param["AdjustmentValue"];
+        if (array_key_exists('AdjustmentValue',$param) and $param['AdjustmentValue'] !== null) {
+            $this->AdjustmentValue = $param['AdjustmentValue'];
         }
 
-        if (array_key_exists("Cooldown",$param) and $param["Cooldown"] !== null) {
-            $this->Cooldown = $param["Cooldown"];
+        if (array_key_exists('Cooldown',$param) and $param['Cooldown'] !== null) {
+            $this->Cooldown = $param['Cooldown'];
         }
 
-        if (array_key_exists("MetricAlarm",$param) and $param["MetricAlarm"] !== null) {
+        if (array_key_exists('MetricAlarm',$param) and $param['MetricAlarm'] !== null) {
             $this->MetricAlarm = new MetricAlarm();
-            $this->MetricAlarm->deserialize($param["MetricAlarm"]);
+            $this->MetricAlarm->deserialize($param['MetricAlarm']);
         }
 
-        if (array_key_exists("NotificationUserGroupIds",$param) and $param["NotificationUserGroupIds"] !== null) {
-            $this->NotificationUserGroupIds = $param["NotificationUserGroupIds"];
+        if (array_key_exists('NotificationUserGroupIds',$param) and $param['NotificationUserGroupIds'] !== null) {
+            $this->NotificationUserGroupIds = $param['NotificationUserGroupIds'];
         }
     }
 }

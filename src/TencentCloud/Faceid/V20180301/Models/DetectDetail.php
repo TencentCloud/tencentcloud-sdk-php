@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -182,52 +182,52 @@ class DetectDetail extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ReqTime",$param) and $param["ReqTime"] !== null) {
-            $this->ReqTime = $param["ReqTime"];
+        if (array_key_exists('ReqTime',$param) and $param['ReqTime'] !== null) {
+            $this->ReqTime = $param['ReqTime'];
         }
 
-        if (array_key_exists("Seq",$param) and $param["Seq"] !== null) {
-            $this->Seq = $param["Seq"];
+        if (array_key_exists('Seq',$param) and $param['Seq'] !== null) {
+            $this->Seq = $param['Seq'];
         }
 
-        if (array_key_exists("Idcard",$param) and $param["Idcard"] !== null) {
-            $this->Idcard = $param["Idcard"];
+        if (array_key_exists('Idcard',$param) and $param['Idcard'] !== null) {
+            $this->Idcard = $param['Idcard'];
         }
 
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("Sim",$param) and $param["Sim"] !== null) {
-            $this->Sim = $param["Sim"];
+        if (array_key_exists('Sim',$param) and $param['Sim'] !== null) {
+            $this->Sim = $param['Sim'];
         }
 
-        if (array_key_exists("IsNeedCharge",$param) and $param["IsNeedCharge"] !== null) {
-            $this->IsNeedCharge = $param["IsNeedCharge"];
+        if (array_key_exists('IsNeedCharge',$param) and $param['IsNeedCharge'] !== null) {
+            $this->IsNeedCharge = $param['IsNeedCharge'];
         }
 
-        if (array_key_exists("Errcode",$param) and $param["Errcode"] !== null) {
-            $this->Errcode = $param["Errcode"];
+        if (array_key_exists('Errcode',$param) and $param['Errcode'] !== null) {
+            $this->Errcode = $param['Errcode'];
         }
 
-        if (array_key_exists("Errmsg",$param) and $param["Errmsg"] !== null) {
-            $this->Errmsg = $param["Errmsg"];
+        if (array_key_exists('Errmsg',$param) and $param['Errmsg'] !== null) {
+            $this->Errmsg = $param['Errmsg'];
         }
 
-        if (array_key_exists("Livestatus",$param) and $param["Livestatus"] !== null) {
-            $this->Livestatus = $param["Livestatus"];
+        if (array_key_exists('Livestatus',$param) and $param['Livestatus'] !== null) {
+            $this->Livestatus = $param['Livestatus'];
         }
 
-        if (array_key_exists("Livemsg",$param) and $param["Livemsg"] !== null) {
-            $this->Livemsg = $param["Livemsg"];
+        if (array_key_exists('Livemsg',$param) and $param['Livemsg'] !== null) {
+            $this->Livemsg = $param['Livemsg'];
         }
 
-        if (array_key_exists("Comparestatus",$param) and $param["Comparestatus"] !== null) {
-            $this->Comparestatus = $param["Comparestatus"];
+        if (array_key_exists('Comparestatus',$param) and $param['Comparestatus'] !== null) {
+            $this->Comparestatus = $param['Comparestatus'];
         }
 
-        if (array_key_exists("Comparemsg",$param) and $param["Comparemsg"] !== null) {
-            $this->Comparemsg = $param["Comparemsg"];
+        if (array_key_exists('Comparemsg',$param) and $param['Comparemsg'] !== null) {
+            $this->Comparemsg = $param['Comparemsg'];
         }
     }
 }

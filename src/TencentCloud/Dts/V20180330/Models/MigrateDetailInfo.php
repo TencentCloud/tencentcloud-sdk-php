@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStepAll(integer $StepAll) 设置总步骤数
  * @method integer getStepNow() 获取当前步骤
  * @method void setStepNow(integer $StepNow) 设置当前步骤
- * @method string getProgress() 获取总进度,如："10"
- * @method void setProgress(string $Progress) 设置总进度,如："10"
- * @method string getCurrentStepProgress() 获取当前步骤进度,如:"1"
- * @method void setCurrentStepProgress(string $CurrentStepProgress) 设置当前步骤进度,如:"1"
+ * @method string getProgress() 获取总进度,如：'10'
+ * @method void setProgress(string $Progress) 设置总进度,如：'10'
+ * @method string getCurrentStepProgress() 获取当前步骤进度,如:'1'
+ * @method void setCurrentStepProgress(string $CurrentStepProgress) 设置当前步骤进度,如:'1'
  * @method integer getMasterSlaveDistance() 获取主从差距，MB；在增量同步阶段有效，目前支持产品为：redis和mysql
  * @method void setMasterSlaveDistance(integer $MasterSlaveDistance) 设置主从差距，MB；在增量同步阶段有效，目前支持产品为：redis和mysql
  * @method integer getSecondsBehindMaster() 获取主从差距，秒；在增量同步阶段有效，目前支持产品为：mysql
@@ -48,12 +48,12 @@ class MigrateDetailInfo extends AbstractModel
     public $StepNow;
 
     /**
-     * @var string 总进度,如："10"
+     * @var string 总进度,如：'10'
      */
     public $Progress;
 
     /**
-     * @var string 当前步骤进度,如:"1"
+     * @var string 当前步骤进度,如:'1'
      */
     public $CurrentStepProgress;
 
@@ -75,8 +75,8 @@ class MigrateDetailInfo extends AbstractModel
     /**
      * @param integer $StepAll 总步骤数
      * @param integer $StepNow 当前步骤
-     * @param string $Progress 总进度,如："10"
-     * @param string $CurrentStepProgress 当前步骤进度,如:"1"
+     * @param string $Progress 总进度,如：'10'
+     * @param string $CurrentStepProgress 当前步骤进度,如:'1'
      * @param integer $MasterSlaveDistance 主从差距，MB；在增量同步阶段有效，目前支持产品为：redis和mysql
      * @param integer $SecondsBehindMaster 主从差距，秒；在增量同步阶段有效，目前支持产品为：mysql
      * @param array $StepInfo 步骤信息
@@ -94,33 +94,33 @@ class MigrateDetailInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("StepAll",$param) and $param["StepAll"] !== null) {
-            $this->StepAll = $param["StepAll"];
+        if (array_key_exists('StepAll',$param) and $param['StepAll'] !== null) {
+            $this->StepAll = $param['StepAll'];
         }
 
-        if (array_key_exists("StepNow",$param) and $param["StepNow"] !== null) {
-            $this->StepNow = $param["StepNow"];
+        if (array_key_exists('StepNow',$param) and $param['StepNow'] !== null) {
+            $this->StepNow = $param['StepNow'];
         }
 
-        if (array_key_exists("Progress",$param) and $param["Progress"] !== null) {
-            $this->Progress = $param["Progress"];
+        if (array_key_exists('Progress',$param) and $param['Progress'] !== null) {
+            $this->Progress = $param['Progress'];
         }
 
-        if (array_key_exists("CurrentStepProgress",$param) and $param["CurrentStepProgress"] !== null) {
-            $this->CurrentStepProgress = $param["CurrentStepProgress"];
+        if (array_key_exists('CurrentStepProgress',$param) and $param['CurrentStepProgress'] !== null) {
+            $this->CurrentStepProgress = $param['CurrentStepProgress'];
         }
 
-        if (array_key_exists("MasterSlaveDistance",$param) and $param["MasterSlaveDistance"] !== null) {
-            $this->MasterSlaveDistance = $param["MasterSlaveDistance"];
+        if (array_key_exists('MasterSlaveDistance',$param) and $param['MasterSlaveDistance'] !== null) {
+            $this->MasterSlaveDistance = $param['MasterSlaveDistance'];
         }
 
-        if (array_key_exists("SecondsBehindMaster",$param) and $param["SecondsBehindMaster"] !== null) {
-            $this->SecondsBehindMaster = $param["SecondsBehindMaster"];
+        if (array_key_exists('SecondsBehindMaster',$param) and $param['SecondsBehindMaster'] !== null) {
+            $this->SecondsBehindMaster = $param['SecondsBehindMaster'];
         }
 
-        if (array_key_exists("StepInfo",$param) and $param["StepInfo"] !== null) {
+        if (array_key_exists('StepInfo',$param) and $param['StepInfo'] !== null) {
             $this->StepInfo = [];
-            foreach ($param["StepInfo"] as $key => $value){
+            foreach ($param['StepInfo'] as $key => $value){
                 $obj = new MigrateStepDetailInfo();
                 $obj->deserialize($value);
                 array_push($this->StepInfo, $obj);

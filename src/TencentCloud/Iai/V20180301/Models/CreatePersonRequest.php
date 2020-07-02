@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -202,49 +202,49 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
         if ($param === null) {
             return;
         }
-        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
-            $this->GroupId = $param["GroupId"];
+        if (array_key_exists('GroupId',$param) and $param['GroupId'] !== null) {
+            $this->GroupId = $param['GroupId'];
         }
 
-        if (array_key_exists("PersonName",$param) and $param["PersonName"] !== null) {
-            $this->PersonName = $param["PersonName"];
+        if (array_key_exists('PersonName',$param) and $param['PersonName'] !== null) {
+            $this->PersonName = $param['PersonName'];
         }
 
-        if (array_key_exists("PersonId",$param) and $param["PersonId"] !== null) {
-            $this->PersonId = $param["PersonId"];
+        if (array_key_exists('PersonId',$param) and $param['PersonId'] !== null) {
+            $this->PersonId = $param['PersonId'];
         }
 
-        if (array_key_exists("Gender",$param) and $param["Gender"] !== null) {
-            $this->Gender = $param["Gender"];
+        if (array_key_exists('Gender',$param) and $param['Gender'] !== null) {
+            $this->Gender = $param['Gender'];
         }
 
-        if (array_key_exists("PersonExDescriptionInfos",$param) and $param["PersonExDescriptionInfos"] !== null) {
+        if (array_key_exists('PersonExDescriptionInfos',$param) and $param['PersonExDescriptionInfos'] !== null) {
             $this->PersonExDescriptionInfos = [];
-            foreach ($param["PersonExDescriptionInfos"] as $key => $value){
+            foreach ($param['PersonExDescriptionInfos'] as $key => $value){
                 $obj = new PersonExDescriptionInfo();
                 $obj->deserialize($value);
                 array_push($this->PersonExDescriptionInfos, $obj);
             }
         }
 
-        if (array_key_exists("Image",$param) and $param["Image"] !== null) {
-            $this->Image = $param["Image"];
+        if (array_key_exists('Image',$param) and $param['Image'] !== null) {
+            $this->Image = $param['Image'];
         }
 
-        if (array_key_exists("Url",$param) and $param["Url"] !== null) {
-            $this->Url = $param["Url"];
+        if (array_key_exists('Url',$param) and $param['Url'] !== null) {
+            $this->Url = $param['Url'];
         }
 
-        if (array_key_exists("UniquePersonControl",$param) and $param["UniquePersonControl"] !== null) {
-            $this->UniquePersonControl = $param["UniquePersonControl"];
+        if (array_key_exists('UniquePersonControl',$param) and $param['UniquePersonControl'] !== null) {
+            $this->UniquePersonControl = $param['UniquePersonControl'];
         }
 
-        if (array_key_exists("QualityControl",$param) and $param["QualityControl"] !== null) {
-            $this->QualityControl = $param["QualityControl"];
+        if (array_key_exists('QualityControl',$param) and $param['QualityControl'] !== null) {
+            $this->QualityControl = $param['QualityControl'];
         }
 
-        if (array_key_exists("NeedRotateDetection",$param) and $param["NeedRotateDetection"] !== null) {
-            $this->NeedRotateDetection = $param["NeedRotateDetection"];
+        if (array_key_exists('NeedRotateDetection',$param) and $param['NeedRotateDetection'] !== null) {
+            $this->NeedRotateDetection = $param['NeedRotateDetection'];
         }
     }
 }

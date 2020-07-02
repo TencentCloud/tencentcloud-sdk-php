@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -219,64 +219,64 @@ class HealthCheck extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("HealthSwitch",$param) and $param["HealthSwitch"] !== null) {
-            $this->HealthSwitch = $param["HealthSwitch"];
+        if (array_key_exists('HealthSwitch',$param) and $param['HealthSwitch'] !== null) {
+            $this->HealthSwitch = $param['HealthSwitch'];
         }
 
-        if (array_key_exists("TimeOut",$param) and $param["TimeOut"] !== null) {
-            $this->TimeOut = $param["TimeOut"];
+        if (array_key_exists('TimeOut',$param) and $param['TimeOut'] !== null) {
+            $this->TimeOut = $param['TimeOut'];
         }
 
-        if (array_key_exists("IntervalTime",$param) and $param["IntervalTime"] !== null) {
-            $this->IntervalTime = $param["IntervalTime"];
+        if (array_key_exists('IntervalTime',$param) and $param['IntervalTime'] !== null) {
+            $this->IntervalTime = $param['IntervalTime'];
         }
 
-        if (array_key_exists("HealthNum",$param) and $param["HealthNum"] !== null) {
-            $this->HealthNum = $param["HealthNum"];
+        if (array_key_exists('HealthNum',$param) and $param['HealthNum'] !== null) {
+            $this->HealthNum = $param['HealthNum'];
         }
 
-        if (array_key_exists("UnHealthNum",$param) and $param["UnHealthNum"] !== null) {
-            $this->UnHealthNum = $param["UnHealthNum"];
+        if (array_key_exists('UnHealthNum',$param) and $param['UnHealthNum'] !== null) {
+            $this->UnHealthNum = $param['UnHealthNum'];
         }
 
-        if (array_key_exists("HttpCode",$param) and $param["HttpCode"] !== null) {
-            $this->HttpCode = $param["HttpCode"];
+        if (array_key_exists('HttpCode',$param) and $param['HttpCode'] !== null) {
+            $this->HttpCode = $param['HttpCode'];
         }
 
-        if (array_key_exists("HttpCheckPath",$param) and $param["HttpCheckPath"] !== null) {
-            $this->HttpCheckPath = $param["HttpCheckPath"];
+        if (array_key_exists('HttpCheckPath',$param) and $param['HttpCheckPath'] !== null) {
+            $this->HttpCheckPath = $param['HttpCheckPath'];
         }
 
-        if (array_key_exists("HttpCheckDomain",$param) and $param["HttpCheckDomain"] !== null) {
-            $this->HttpCheckDomain = $param["HttpCheckDomain"];
+        if (array_key_exists('HttpCheckDomain',$param) and $param['HttpCheckDomain'] !== null) {
+            $this->HttpCheckDomain = $param['HttpCheckDomain'];
         }
 
-        if (array_key_exists("HttpCheckMethod",$param) and $param["HttpCheckMethod"] !== null) {
-            $this->HttpCheckMethod = $param["HttpCheckMethod"];
+        if (array_key_exists('HttpCheckMethod',$param) and $param['HttpCheckMethod'] !== null) {
+            $this->HttpCheckMethod = $param['HttpCheckMethod'];
         }
 
-        if (array_key_exists("CheckPort",$param) and $param["CheckPort"] !== null) {
-            $this->CheckPort = $param["CheckPort"];
+        if (array_key_exists('CheckPort',$param) and $param['CheckPort'] !== null) {
+            $this->CheckPort = $param['CheckPort'];
         }
 
-        if (array_key_exists("ContextType",$param) and $param["ContextType"] !== null) {
-            $this->ContextType = $param["ContextType"];
+        if (array_key_exists('ContextType',$param) and $param['ContextType'] !== null) {
+            $this->ContextType = $param['ContextType'];
         }
 
-        if (array_key_exists("SendContext",$param) and $param["SendContext"] !== null) {
-            $this->SendContext = $param["SendContext"];
+        if (array_key_exists('SendContext',$param) and $param['SendContext'] !== null) {
+            $this->SendContext = $param['SendContext'];
         }
 
-        if (array_key_exists("RecvContext",$param) and $param["RecvContext"] !== null) {
-            $this->RecvContext = $param["RecvContext"];
+        if (array_key_exists('RecvContext',$param) and $param['RecvContext'] !== null) {
+            $this->RecvContext = $param['RecvContext'];
         }
 
-        if (array_key_exists("CheckType",$param) and $param["CheckType"] !== null) {
-            $this->CheckType = $param["CheckType"];
+        if (array_key_exists('CheckType',$param) and $param['CheckType'] !== null) {
+            $this->CheckType = $param['CheckType'];
         }
 
-        if (array_key_exists("HttpVersion",$param) and $param["HttpVersion"] !== null) {
-            $this->HttpVersion = $param["HttpVersion"];
+        if (array_key_exists('HttpVersion',$param) and $param['HttpVersion'] !== null) {
+            $this->HttpVersion = $param['HttpVersion'];
         }
     }
 }

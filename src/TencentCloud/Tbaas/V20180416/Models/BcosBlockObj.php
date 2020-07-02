@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -102,36 +102,36 @@ class BcosBlockObj extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BlockHash",$param) and $param["BlockHash"] !== null) {
-            $this->BlockHash = $param["BlockHash"];
+        if (array_key_exists('BlockHash',$param) and $param['BlockHash'] !== null) {
+            $this->BlockHash = $param['BlockHash'];
         }
 
-        if (array_key_exists("BlockNumber",$param) and $param["BlockNumber"] !== null) {
-            $this->BlockNumber = $param["BlockNumber"];
+        if (array_key_exists('BlockNumber',$param) and $param['BlockNumber'] !== null) {
+            $this->BlockNumber = $param['BlockNumber'];
         }
 
-        if (array_key_exists("BlockTimestamp",$param) and $param["BlockTimestamp"] !== null) {
-            $this->BlockTimestamp = $param["BlockTimestamp"];
+        if (array_key_exists('BlockTimestamp',$param) and $param['BlockTimestamp'] !== null) {
+            $this->BlockTimestamp = $param['BlockTimestamp'];
         }
 
-        if (array_key_exists("Sealer",$param) and $param["Sealer"] !== null) {
-            $this->Sealer = $param["Sealer"];
+        if (array_key_exists('Sealer',$param) and $param['Sealer'] !== null) {
+            $this->Sealer = $param['Sealer'];
         }
 
-        if (array_key_exists("SealerIndex",$param) and $param["SealerIndex"] !== null) {
-            $this->SealerIndex = $param["SealerIndex"];
+        if (array_key_exists('SealerIndex',$param) and $param['SealerIndex'] !== null) {
+            $this->SealerIndex = $param['SealerIndex'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("TransCount",$param) and $param["TransCount"] !== null) {
-            $this->TransCount = $param["TransCount"];
+        if (array_key_exists('TransCount',$param) and $param['TransCount'] !== null) {
+            $this->TransCount = $param['TransCount'];
         }
 
-        if (array_key_exists("ModifyTime",$param) and $param["ModifyTime"] !== null) {
-            $this->ModifyTime = $param["ModifyTime"];
+        if (array_key_exists('ModifyTime',$param) and $param['ModifyTime'] !== null) {
+            $this->ModifyTime = $param['ModifyTime'];
         }
     }
 }

@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -78,24 +78,24 @@ class DescribeSupportedPrivilegesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("GlobalSupportedPrivileges",$param) and $param["GlobalSupportedPrivileges"] !== null) {
-            $this->GlobalSupportedPrivileges = $param["GlobalSupportedPrivileges"];
+        if (array_key_exists('GlobalSupportedPrivileges',$param) and $param['GlobalSupportedPrivileges'] !== null) {
+            $this->GlobalSupportedPrivileges = $param['GlobalSupportedPrivileges'];
         }
 
-        if (array_key_exists("DatabaseSupportedPrivileges",$param) and $param["DatabaseSupportedPrivileges"] !== null) {
-            $this->DatabaseSupportedPrivileges = $param["DatabaseSupportedPrivileges"];
+        if (array_key_exists('DatabaseSupportedPrivileges',$param) and $param['DatabaseSupportedPrivileges'] !== null) {
+            $this->DatabaseSupportedPrivileges = $param['DatabaseSupportedPrivileges'];
         }
 
-        if (array_key_exists("TableSupportedPrivileges",$param) and $param["TableSupportedPrivileges"] !== null) {
-            $this->TableSupportedPrivileges = $param["TableSupportedPrivileges"];
+        if (array_key_exists('TableSupportedPrivileges',$param) and $param['TableSupportedPrivileges'] !== null) {
+            $this->TableSupportedPrivileges = $param['TableSupportedPrivileges'];
         }
 
-        if (array_key_exists("ColumnSupportedPrivileges",$param) and $param["ColumnSupportedPrivileges"] !== null) {
-            $this->ColumnSupportedPrivileges = $param["ColumnSupportedPrivileges"];
+        if (array_key_exists('ColumnSupportedPrivileges',$param) and $param['ColumnSupportedPrivileges'] !== null) {
+            $this->ColumnSupportedPrivileges = $param['ColumnSupportedPrivileges'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -90,24 +90,24 @@ class LogData extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Occurtime",$param) and $param["Occurtime"] !== null) {
-            $this->Occurtime = $param["Occurtime"];
+        if (array_key_exists('Occurtime',$param) and $param['Occurtime'] !== null) {
+            $this->Occurtime = $param['Occurtime'];
         }
 
-        if (array_key_exists("LogType",$param) and $param["LogType"] !== null) {
-            $this->LogType = $param["LogType"];
+        if (array_key_exists('LogType',$param) and $param['LogType'] !== null) {
+            $this->LogType = $param['LogType'];
         }
 
-        if (array_key_exists("DataObject",$param) and $param["DataObject"] !== null) {
-            $this->DataObject = $param["DataObject"];
+        if (array_key_exists('DataObject',$param) and $param['DataObject'] !== null) {
+            $this->DataObject = $param['DataObject'];
         }
 
-        if (array_key_exists("OldValue",$param) and $param["OldValue"] !== null) {
-            $this->OldValue = $param["OldValue"];
+        if (array_key_exists('OldValue',$param) and $param['OldValue'] !== null) {
+            $this->OldValue = $param['OldValue'];
         }
 
-        if (array_key_exists("NewValue",$param) and $param["NewValue"] !== null) {
-            $this->NewValue = $param["NewValue"];
+        if (array_key_exists('NewValue',$param) and $param['NewValue'] !== null) {
+            $this->NewValue = $param['NewValue'];
         }
     }
 }

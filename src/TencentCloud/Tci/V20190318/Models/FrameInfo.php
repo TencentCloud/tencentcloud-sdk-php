@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -62,16 +62,16 @@ class FrameInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Similarity",$param) and $param["Similarity"] !== null) {
-            $this->Similarity = $param["Similarity"];
+        if (array_key_exists('Similarity',$param) and $param['Similarity'] !== null) {
+            $this->Similarity = $param['Similarity'];
         }
 
-        if (array_key_exists("SnapshotUrl",$param) and $param["SnapshotUrl"] !== null) {
-            $this->SnapshotUrl = $param["SnapshotUrl"];
+        if (array_key_exists('SnapshotUrl',$param) and $param['SnapshotUrl'] !== null) {
+            $this->SnapshotUrl = $param['SnapshotUrl'];
         }
 
-        if (array_key_exists("Ts",$param) and $param["Ts"] !== null) {
-            $this->Ts = $param["Ts"];
+        if (array_key_exists('Ts',$param) and $param['Ts'] !== null) {
+            $this->Ts = $param['Ts'];
         }
     }
 }

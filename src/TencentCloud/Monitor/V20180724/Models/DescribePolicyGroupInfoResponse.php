@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -206,93 +206,93 @@ class DescribePolicyGroupInfoResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("GroupName",$param) and $param["GroupName"] !== null) {
-            $this->GroupName = $param["GroupName"];
+        if (array_key_exists('GroupName',$param) and $param['GroupName'] !== null) {
+            $this->GroupName = $param['GroupName'];
         }
 
-        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
-            $this->ProjectId = $param["ProjectId"];
+        if (array_key_exists('ProjectId',$param) and $param['ProjectId'] !== null) {
+            $this->ProjectId = $param['ProjectId'];
         }
 
-        if (array_key_exists("IsDefault",$param) and $param["IsDefault"] !== null) {
-            $this->IsDefault = $param["IsDefault"];
+        if (array_key_exists('IsDefault',$param) and $param['IsDefault'] !== null) {
+            $this->IsDefault = $param['IsDefault'];
         }
 
-        if (array_key_exists("ViewName",$param) and $param["ViewName"] !== null) {
-            $this->ViewName = $param["ViewName"];
+        if (array_key_exists('ViewName',$param) and $param['ViewName'] !== null) {
+            $this->ViewName = $param['ViewName'];
         }
 
-        if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
-            $this->Remark = $param["Remark"];
+        if (array_key_exists('Remark',$param) and $param['Remark'] !== null) {
+            $this->Remark = $param['Remark'];
         }
 
-        if (array_key_exists("ShowName",$param) and $param["ShowName"] !== null) {
-            $this->ShowName = $param["ShowName"];
+        if (array_key_exists('ShowName',$param) and $param['ShowName'] !== null) {
+            $this->ShowName = $param['ShowName'];
         }
 
-        if (array_key_exists("LastEditUin",$param) and $param["LastEditUin"] !== null) {
-            $this->LastEditUin = $param["LastEditUin"];
+        if (array_key_exists('LastEditUin',$param) and $param['LastEditUin'] !== null) {
+            $this->LastEditUin = $param['LastEditUin'];
         }
 
-        if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
-            $this->UpdateTime = $param["UpdateTime"];
+        if (array_key_exists('UpdateTime',$param) and $param['UpdateTime'] !== null) {
+            $this->UpdateTime = $param['UpdateTime'];
         }
 
-        if (array_key_exists("Region",$param) and $param["Region"] !== null) {
-            $this->Region = $param["Region"];
+        if (array_key_exists('Region',$param) and $param['Region'] !== null) {
+            $this->Region = $param['Region'];
         }
 
-        if (array_key_exists("DimensionGroup",$param) and $param["DimensionGroup"] !== null) {
-            $this->DimensionGroup = $param["DimensionGroup"];
+        if (array_key_exists('DimensionGroup',$param) and $param['DimensionGroup'] !== null) {
+            $this->DimensionGroup = $param['DimensionGroup'];
         }
 
-        if (array_key_exists("ConditionsConfig",$param) and $param["ConditionsConfig"] !== null) {
+        if (array_key_exists('ConditionsConfig',$param) and $param['ConditionsConfig'] !== null) {
             $this->ConditionsConfig = [];
-            foreach ($param["ConditionsConfig"] as $key => $value){
+            foreach ($param['ConditionsConfig'] as $key => $value){
                 $obj = new DescribePolicyGroupInfoCondition();
                 $obj->deserialize($value);
                 array_push($this->ConditionsConfig, $obj);
             }
         }
 
-        if (array_key_exists("EventConfig",$param) and $param["EventConfig"] !== null) {
+        if (array_key_exists('EventConfig',$param) and $param['EventConfig'] !== null) {
             $this->EventConfig = [];
-            foreach ($param["EventConfig"] as $key => $value){
+            foreach ($param['EventConfig'] as $key => $value){
                 $obj = new DescribePolicyGroupInfoEventCondition();
                 $obj->deserialize($value);
                 array_push($this->EventConfig, $obj);
             }
         }
 
-        if (array_key_exists("ReceiverInfos",$param) and $param["ReceiverInfos"] !== null) {
+        if (array_key_exists('ReceiverInfos',$param) and $param['ReceiverInfos'] !== null) {
             $this->ReceiverInfos = [];
-            foreach ($param["ReceiverInfos"] as $key => $value){
+            foreach ($param['ReceiverInfos'] as $key => $value){
                 $obj = new DescribePolicyGroupInfoReceiverInfo();
                 $obj->deserialize($value);
                 array_push($this->ReceiverInfos, $obj);
             }
         }
 
-        if (array_key_exists("Callback",$param) and $param["Callback"] !== null) {
+        if (array_key_exists('Callback',$param) and $param['Callback'] !== null) {
             $this->Callback = new DescribePolicyGroupInfoCallback();
-            $this->Callback->deserialize($param["Callback"]);
+            $this->Callback->deserialize($param['Callback']);
         }
 
-        if (array_key_exists("ConditionsTemp",$param) and $param["ConditionsTemp"] !== null) {
+        if (array_key_exists('ConditionsTemp',$param) and $param['ConditionsTemp'] !== null) {
             $this->ConditionsTemp = new DescribePolicyGroupInfoConditionTpl();
-            $this->ConditionsTemp->deserialize($param["ConditionsTemp"]);
+            $this->ConditionsTemp->deserialize($param['ConditionsTemp']);
         }
 
-        if (array_key_exists("CanSetDefault",$param) and $param["CanSetDefault"] !== null) {
-            $this->CanSetDefault = $param["CanSetDefault"];
+        if (array_key_exists('CanSetDefault',$param) and $param['CanSetDefault'] !== null) {
+            $this->CanSetDefault = $param['CanSetDefault'];
         }
 
-        if (array_key_exists("IsUnionRule",$param) and $param["IsUnionRule"] !== null) {
-            $this->IsUnionRule = $param["IsUnionRule"];
+        if (array_key_exists('IsUnionRule',$param) and $param['IsUnionRule'] !== null) {
+            $this->IsUnionRule = $param['IsUnionRule'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

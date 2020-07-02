@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -94,35 +94,35 @@ class ModifyMigrationRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MigrateId",$param) and $param["MigrateId"] !== null) {
-            $this->MigrateId = $param["MigrateId"];
+        if (array_key_exists('MigrateId',$param) and $param['MigrateId'] !== null) {
+            $this->MigrateId = $param['MigrateId'];
         }
 
-        if (array_key_exists("MigrateName",$param) and $param["MigrateName"] !== null) {
-            $this->MigrateName = $param["MigrateName"];
+        if (array_key_exists('MigrateName',$param) and $param['MigrateName'] !== null) {
+            $this->MigrateName = $param['MigrateName'];
         }
 
-        if (array_key_exists("MigrateType",$param) and $param["MigrateType"] !== null) {
-            $this->MigrateType = $param["MigrateType"];
+        if (array_key_exists('MigrateType',$param) and $param['MigrateType'] !== null) {
+            $this->MigrateType = $param['MigrateType'];
         }
 
-        if (array_key_exists("SourceType",$param) and $param["SourceType"] !== null) {
-            $this->SourceType = $param["SourceType"];
+        if (array_key_exists('SourceType',$param) and $param['SourceType'] !== null) {
+            $this->SourceType = $param['SourceType'];
         }
 
-        if (array_key_exists("Source",$param) and $param["Source"] !== null) {
+        if (array_key_exists('Source',$param) and $param['Source'] !== null) {
             $this->Source = new MigrateSource();
-            $this->Source->deserialize($param["Source"]);
+            $this->Source->deserialize($param['Source']);
         }
 
-        if (array_key_exists("Target",$param) and $param["Target"] !== null) {
+        if (array_key_exists('Target',$param) and $param['Target'] !== null) {
             $this->Target = new MigrateTarget();
-            $this->Target->deserialize($param["Target"]);
+            $this->Target->deserialize($param['Target']);
         }
 
-        if (array_key_exists("MigrateDBSet",$param) and $param["MigrateDBSet"] !== null) {
+        if (array_key_exists('MigrateDBSet',$param) and $param['MigrateDBSet'] !== null) {
             $this->MigrateDBSet = [];
-            foreach ($param["MigrateDBSet"] as $key => $value){
+            foreach ($param['MigrateDBSet'] as $key => $value){
                 $obj = new MigrateDB();
                 $obj->deserialize($value);
                 array_push($this->MigrateDBSet, $obj);

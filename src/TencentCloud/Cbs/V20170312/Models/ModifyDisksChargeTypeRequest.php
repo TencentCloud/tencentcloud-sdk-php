@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -54,13 +54,13 @@ class ModifyDisksChargeTypeRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DiskIds",$param) and $param["DiskIds"] !== null) {
-            $this->DiskIds = $param["DiskIds"];
+        if (array_key_exists('DiskIds',$param) and $param['DiskIds'] !== null) {
+            $this->DiskIds = $param['DiskIds'];
         }
 
-        if (array_key_exists("DiskChargePrepaid",$param) and $param["DiskChargePrepaid"] !== null) {
+        if (array_key_exists('DiskChargePrepaid',$param) and $param['DiskChargePrepaid'] !== null) {
             $this->DiskChargePrepaid = new DiskChargePrepaid();
-            $this->DiskChargePrepaid->deserialize($param["DiskChargePrepaid"]);
+            $this->DiskChargePrepaid->deserialize($param['DiskChargePrepaid']);
         }
     }
 }

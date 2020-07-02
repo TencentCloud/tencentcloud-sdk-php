@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -62,26 +62,26 @@ class ListAlgorithmsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SymmetricAlgorithms",$param) and $param["SymmetricAlgorithms"] !== null) {
+        if (array_key_exists('SymmetricAlgorithms',$param) and $param['SymmetricAlgorithms'] !== null) {
             $this->SymmetricAlgorithms = [];
-            foreach ($param["SymmetricAlgorithms"] as $key => $value){
+            foreach ($param['SymmetricAlgorithms'] as $key => $value){
                 $obj = new AlgorithmInfo();
                 $obj->deserialize($value);
                 array_push($this->SymmetricAlgorithms, $obj);
             }
         }
 
-        if (array_key_exists("AsymmetricAlgorithms",$param) and $param["AsymmetricAlgorithms"] !== null) {
+        if (array_key_exists('AsymmetricAlgorithms',$param) and $param['AsymmetricAlgorithms'] !== null) {
             $this->AsymmetricAlgorithms = [];
-            foreach ($param["AsymmetricAlgorithms"] as $key => $value){
+            foreach ($param['AsymmetricAlgorithms'] as $key => $value){
                 $obj = new AlgorithmInfo();
                 $obj->deserialize($value);
                 array_push($this->AsymmetricAlgorithms, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -94,24 +94,24 @@ class MediaSampleSnapshotItem extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Definition",$param) and $param["Definition"] !== null) {
-            $this->Definition = $param["Definition"];
+        if (array_key_exists('Definition',$param) and $param['Definition'] !== null) {
+            $this->Definition = $param['Definition'];
         }
 
-        if (array_key_exists("SampleType",$param) and $param["SampleType"] !== null) {
-            $this->SampleType = $param["SampleType"];
+        if (array_key_exists('SampleType',$param) and $param['SampleType'] !== null) {
+            $this->SampleType = $param['SampleType'];
         }
 
-        if (array_key_exists("Interval",$param) and $param["Interval"] !== null) {
-            $this->Interval = $param["Interval"];
+        if (array_key_exists('Interval',$param) and $param['Interval'] !== null) {
+            $this->Interval = $param['Interval'];
         }
 
-        if (array_key_exists("ImageUrlSet",$param) and $param["ImageUrlSet"] !== null) {
-            $this->ImageUrlSet = $param["ImageUrlSet"];
+        if (array_key_exists('ImageUrlSet',$param) and $param['ImageUrlSet'] !== null) {
+            $this->ImageUrlSet = $param['ImageUrlSet'];
         }
 
-        if (array_key_exists("WaterMarkDefinition",$param) and $param["WaterMarkDefinition"] !== null) {
-            $this->WaterMarkDefinition = $param["WaterMarkDefinition"];
+        if (array_key_exists('WaterMarkDefinition',$param) and $param['WaterMarkDefinition'] !== null) {
+            $this->WaterMarkDefinition = $param['WaterMarkDefinition'];
         }
     }
 }

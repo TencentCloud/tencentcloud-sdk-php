@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -86,29 +86,29 @@ class InquiryPriceCreateDisksRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DiskType",$param) and $param["DiskType"] !== null) {
-            $this->DiskType = $param["DiskType"];
+        if (array_key_exists('DiskType',$param) and $param['DiskType'] !== null) {
+            $this->DiskType = $param['DiskType'];
         }
 
-        if (array_key_exists("DiskSize",$param) and $param["DiskSize"] !== null) {
-            $this->DiskSize = $param["DiskSize"];
+        if (array_key_exists('DiskSize',$param) and $param['DiskSize'] !== null) {
+            $this->DiskSize = $param['DiskSize'];
         }
 
-        if (array_key_exists("DiskChargeType",$param) and $param["DiskChargeType"] !== null) {
-            $this->DiskChargeType = $param["DiskChargeType"];
+        if (array_key_exists('DiskChargeType',$param) and $param['DiskChargeType'] !== null) {
+            $this->DiskChargeType = $param['DiskChargeType'];
         }
 
-        if (array_key_exists("DiskChargePrepaid",$param) and $param["DiskChargePrepaid"] !== null) {
+        if (array_key_exists('DiskChargePrepaid',$param) and $param['DiskChargePrepaid'] !== null) {
             $this->DiskChargePrepaid = new DiskChargePrepaid();
-            $this->DiskChargePrepaid->deserialize($param["DiskChargePrepaid"]);
+            $this->DiskChargePrepaid->deserialize($param['DiskChargePrepaid']);
         }
 
-        if (array_key_exists("DiskCount",$param) and $param["DiskCount"] !== null) {
-            $this->DiskCount = $param["DiskCount"];
+        if (array_key_exists('DiskCount',$param) and $param['DiskCount'] !== null) {
+            $this->DiskCount = $param['DiskCount'];
         }
 
-        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
-            $this->ProjectId = $param["ProjectId"];
+        if (array_key_exists('ProjectId',$param) and $param['ProjectId'] !== null) {
+            $this->ProjectId = $param['ProjectId'];
         }
     }
 }

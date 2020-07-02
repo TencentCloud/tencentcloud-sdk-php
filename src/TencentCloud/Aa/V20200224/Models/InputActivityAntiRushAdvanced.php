@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -166,67 +166,67 @@ class InputActivityAntiRushAdvanced extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Account",$param) and $param["Account"] !== null) {
+        if (array_key_exists('Account',$param) and $param['Account'] !== null) {
             $this->Account = new AccountInfo();
-            $this->Account->deserialize($param["Account"]);
+            $this->Account->deserialize($param['Account']);
         }
 
-        if (array_key_exists("UserIp",$param) and $param["UserIp"] !== null) {
-            $this->UserIp = $param["UserIp"];
+        if (array_key_exists('UserIp',$param) and $param['UserIp'] !== null) {
+            $this->UserIp = $param['UserIp'];
         }
 
-        if (array_key_exists("PostTime",$param) and $param["PostTime"] !== null) {
-            $this->PostTime = $param["PostTime"];
+        if (array_key_exists('PostTime',$param) and $param['PostTime'] !== null) {
+            $this->PostTime = $param['PostTime'];
         }
 
-        if (array_key_exists("Sponsor",$param) and $param["Sponsor"] !== null) {
+        if (array_key_exists('Sponsor',$param) and $param['Sponsor'] !== null) {
             $this->Sponsor = new SponsorInfo();
-            $this->Sponsor->deserialize($param["Sponsor"]);
+            $this->Sponsor->deserialize($param['Sponsor']);
         }
 
-        if (array_key_exists("OnlineScam",$param) and $param["OnlineScam"] !== null) {
+        if (array_key_exists('OnlineScam',$param) and $param['OnlineScam'] !== null) {
             $this->OnlineScam = new OnlineScamInfo();
-            $this->OnlineScam->deserialize($param["OnlineScam"]);
+            $this->OnlineScam->deserialize($param['OnlineScam']);
         }
 
-        if (array_key_exists("BusinessId",$param) and $param["BusinessId"] !== null) {
-            $this->BusinessId = $param["BusinessId"];
+        if (array_key_exists('BusinessId',$param) and $param['BusinessId'] !== null) {
+            $this->BusinessId = $param['BusinessId'];
         }
 
-        if (array_key_exists("Nickname",$param) and $param["Nickname"] !== null) {
-            $this->Nickname = $param["Nickname"];
+        if (array_key_exists('Nickname',$param) and $param['Nickname'] !== null) {
+            $this->Nickname = $param['Nickname'];
         }
 
-        if (array_key_exists("EmailAddress",$param) and $param["EmailAddress"] !== null) {
-            $this->EmailAddress = $param["EmailAddress"];
+        if (array_key_exists('EmailAddress',$param) and $param['EmailAddress'] !== null) {
+            $this->EmailAddress = $param['EmailAddress'];
         }
 
-        if (array_key_exists("CheckDevice",$param) and $param["CheckDevice"] !== null) {
-            $this->CheckDevice = $param["CheckDevice"];
+        if (array_key_exists('CheckDevice',$param) and $param['CheckDevice'] !== null) {
+            $this->CheckDevice = $param['CheckDevice'];
         }
 
-        if (array_key_exists("CookieHash",$param) and $param["CookieHash"] !== null) {
-            $this->CookieHash = $param["CookieHash"];
+        if (array_key_exists('CookieHash',$param) and $param['CookieHash'] !== null) {
+            $this->CookieHash = $param['CookieHash'];
         }
 
-        if (array_key_exists("Referer",$param) and $param["Referer"] !== null) {
-            $this->Referer = $param["Referer"];
+        if (array_key_exists('Referer',$param) and $param['Referer'] !== null) {
+            $this->Referer = $param['Referer'];
         }
 
-        if (array_key_exists("UserAgent",$param) and $param["UserAgent"] !== null) {
-            $this->UserAgent = $param["UserAgent"];
+        if (array_key_exists('UserAgent',$param) and $param['UserAgent'] !== null) {
+            $this->UserAgent = $param['UserAgent'];
         }
 
-        if (array_key_exists("XForwardedFor",$param) and $param["XForwardedFor"] !== null) {
-            $this->XForwardedFor = $param["XForwardedFor"];
+        if (array_key_exists('XForwardedFor',$param) and $param['XForwardedFor'] !== null) {
+            $this->XForwardedFor = $param['XForwardedFor'];
         }
 
-        if (array_key_exists("MacAddress",$param) and $param["MacAddress"] !== null) {
-            $this->MacAddress = $param["MacAddress"];
+        if (array_key_exists('MacAddress',$param) and $param['MacAddress'] !== null) {
+            $this->MacAddress = $param['MacAddress'];
         }
 
-        if (array_key_exists("VendorId",$param) and $param["VendorId"] !== null) {
-            $this->VendorId = $param["VendorId"];
+        if (array_key_exists('VendorId',$param) and $param['VendorId'] !== null) {
+            $this->VendorId = $param['VendorId'];
         }
     }
 }

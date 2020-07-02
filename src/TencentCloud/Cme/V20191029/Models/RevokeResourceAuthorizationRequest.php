@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -102,39 +102,39 @@ class RevokeResourceAuthorizationRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Platform",$param) and $param["Platform"] !== null) {
-            $this->Platform = $param["Platform"];
+        if (array_key_exists('Platform',$param) and $param['Platform'] !== null) {
+            $this->Platform = $param['Platform'];
         }
 
-        if (array_key_exists("Owner",$param) and $param["Owner"] !== null) {
+        if (array_key_exists('Owner',$param) and $param['Owner'] !== null) {
             $this->Owner = new Entity();
-            $this->Owner->deserialize($param["Owner"]);
+            $this->Owner->deserialize($param['Owner']);
         }
 
-        if (array_key_exists("Resources",$param) and $param["Resources"] !== null) {
+        if (array_key_exists('Resources',$param) and $param['Resources'] !== null) {
             $this->Resources = [];
-            foreach ($param["Resources"] as $key => $value){
+            foreach ($param['Resources'] as $key => $value){
                 $obj = new Resource();
                 $obj->deserialize($value);
                 array_push($this->Resources, $obj);
             }
         }
 
-        if (array_key_exists("Authorizees",$param) and $param["Authorizees"] !== null) {
+        if (array_key_exists('Authorizees',$param) and $param['Authorizees'] !== null) {
             $this->Authorizees = [];
-            foreach ($param["Authorizees"] as $key => $value){
+            foreach ($param['Authorizees'] as $key => $value){
                 $obj = new Entity();
                 $obj->deserialize($value);
                 array_push($this->Authorizees, $obj);
             }
         }
 
-        if (array_key_exists("Permissions",$param) and $param["Permissions"] !== null) {
-            $this->Permissions = $param["Permissions"];
+        if (array_key_exists('Permissions',$param) and $param['Permissions'] !== null) {
+            $this->Permissions = $param['Permissions'];
         }
 
-        if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
-            $this->Operator = $param["Operator"];
+        if (array_key_exists('Operator',$param) and $param['Operator'] !== null) {
+            $this->Operator = $param['Operator'];
         }
     }
 }

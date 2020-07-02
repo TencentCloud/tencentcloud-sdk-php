@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -154,56 +154,56 @@ class AgentBillElem extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Uin",$param) and $param["Uin"] !== null) {
-            $this->Uin = $param["Uin"];
+        if (array_key_exists('Uin',$param) and $param['Uin'] !== null) {
+            $this->Uin = $param['Uin'];
         }
 
-        if (array_key_exists("OrderId",$param) and $param["OrderId"] !== null) {
-            $this->OrderId = $param["OrderId"];
+        if (array_key_exists('OrderId',$param) and $param['OrderId'] !== null) {
+            $this->OrderId = $param['OrderId'];
         }
 
-        if (array_key_exists("ClientUin",$param) and $param["ClientUin"] !== null) {
-            $this->ClientUin = $param["ClientUin"];
+        if (array_key_exists('ClientUin',$param) and $param['ClientUin'] !== null) {
+            $this->ClientUin = $param['ClientUin'];
         }
 
-        if (array_key_exists("ClientRemark",$param) and $param["ClientRemark"] !== null) {
-            $this->ClientRemark = $param["ClientRemark"];
+        if (array_key_exists('ClientRemark',$param) and $param['ClientRemark'] !== null) {
+            $this->ClientRemark = $param['ClientRemark'];
         }
 
-        if (array_key_exists("PayTime",$param) and $param["PayTime"] !== null) {
-            $this->PayTime = $param["PayTime"];
+        if (array_key_exists('PayTime',$param) and $param['PayTime'] !== null) {
+            $this->PayTime = $param['PayTime'];
         }
 
-        if (array_key_exists("GoodsType",$param) and $param["GoodsType"] !== null) {
-            $this->GoodsType = $param["GoodsType"];
+        if (array_key_exists('GoodsType',$param) and $param['GoodsType'] !== null) {
+            $this->GoodsType = $param['GoodsType'];
         }
 
-        if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {
-            $this->PayMode = $param["PayMode"];
+        if (array_key_exists('PayMode',$param) and $param['PayMode'] !== null) {
+            $this->PayMode = $param['PayMode'];
         }
 
-        if (array_key_exists("SettleMonth",$param) and $param["SettleMonth"] !== null) {
-            $this->SettleMonth = $param["SettleMonth"];
+        if (array_key_exists('SettleMonth',$param) and $param['SettleMonth'] !== null) {
+            $this->SettleMonth = $param['SettleMonth'];
         }
 
-        if (array_key_exists("Amt",$param) and $param["Amt"] !== null) {
-            $this->Amt = $param["Amt"];
+        if (array_key_exists('Amt',$param) and $param['Amt'] !== null) {
+            $this->Amt = $param['Amt'];
         }
 
-        if (array_key_exists("PayerMode",$param) and $param["PayerMode"] !== null) {
-            $this->PayerMode = $param["PayerMode"];
+        if (array_key_exists('PayerMode',$param) and $param['PayerMode'] !== null) {
+            $this->PayerMode = $param['PayerMode'];
         }
 
-        if (array_key_exists("ClientType",$param) and $param["ClientType"] !== null) {
-            $this->ClientType = $param["ClientType"];
+        if (array_key_exists('ClientType',$param) and $param['ClientType'] !== null) {
+            $this->ClientType = $param['ClientType'];
         }
 
-        if (array_key_exists("ProjectType",$param) and $param["ProjectType"] !== null) {
-            $this->ProjectType = $param["ProjectType"];
+        if (array_key_exists('ProjectType',$param) and $param['ProjectType'] !== null) {
+            $this->ProjectType = $param['ProjectType'];
         }
 
-        if (array_key_exists("ActivityId",$param) and $param["ActivityId"] !== null) {
-            $this->ActivityId = $param["ActivityId"];
+        if (array_key_exists('ActivityId',$param) and $param['ActivityId'] !== null) {
+            $this->ActivityId = $param['ActivityId'];
         }
     }
 }

@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -62,17 +62,17 @@ class DevicesBindInfoLocation extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Url",$param) and $param["Url"] !== null) {
-            $this->Url = $param["Url"];
+        if (array_key_exists('Url',$param) and $param['Url'] !== null) {
+            $this->Url = $param['Url'];
         }
 
-        if (array_key_exists("LocationId",$param) and $param["LocationId"] !== null) {
-            $this->LocationId = $param["LocationId"];
+        if (array_key_exists('LocationId',$param) and $param['LocationId'] !== null) {
+            $this->LocationId = $param['LocationId'];
         }
 
-        if (array_key_exists("BackendSet",$param) and $param["BackendSet"] !== null) {
+        if (array_key_exists('BackendSet',$param) and $param['BackendSet'] !== null) {
             $this->BackendSet = [];
-            foreach ($param["BackendSet"] as $key => $value){
+            foreach ($param['BackendSet'] as $key => $value){
                 $obj = new DevicesBindInfoBackend();
                 $obj->deserialize($value);
                 array_push($this->BackendSet, $obj);

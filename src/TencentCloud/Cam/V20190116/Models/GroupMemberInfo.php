@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -126,48 +126,48 @@ class GroupMemberInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Uid",$param) and $param["Uid"] !== null) {
-            $this->Uid = $param["Uid"];
+        if (array_key_exists('Uid',$param) and $param['Uid'] !== null) {
+            $this->Uid = $param['Uid'];
         }
 
-        if (array_key_exists("Uin",$param) and $param["Uin"] !== null) {
-            $this->Uin = $param["Uin"];
+        if (array_key_exists('Uin',$param) and $param['Uin'] !== null) {
+            $this->Uin = $param['Uin'];
         }
 
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("PhoneNum",$param) and $param["PhoneNum"] !== null) {
-            $this->PhoneNum = $param["PhoneNum"];
+        if (array_key_exists('PhoneNum',$param) and $param['PhoneNum'] !== null) {
+            $this->PhoneNum = $param['PhoneNum'];
         }
 
-        if (array_key_exists("CountryCode",$param) and $param["CountryCode"] !== null) {
-            $this->CountryCode = $param["CountryCode"];
+        if (array_key_exists('CountryCode',$param) and $param['CountryCode'] !== null) {
+            $this->CountryCode = $param['CountryCode'];
         }
 
-        if (array_key_exists("PhoneFlag",$param) and $param["PhoneFlag"] !== null) {
-            $this->PhoneFlag = $param["PhoneFlag"];
+        if (array_key_exists('PhoneFlag',$param) and $param['PhoneFlag'] !== null) {
+            $this->PhoneFlag = $param['PhoneFlag'];
         }
 
-        if (array_key_exists("Email",$param) and $param["Email"] !== null) {
-            $this->Email = $param["Email"];
+        if (array_key_exists('Email',$param) and $param['Email'] !== null) {
+            $this->Email = $param['Email'];
         }
 
-        if (array_key_exists("EmailFlag",$param) and $param["EmailFlag"] !== null) {
-            $this->EmailFlag = $param["EmailFlag"];
+        if (array_key_exists('EmailFlag',$param) and $param['EmailFlag'] !== null) {
+            $this->EmailFlag = $param['EmailFlag'];
         }
 
-        if (array_key_exists("UserType",$param) and $param["UserType"] !== null) {
-            $this->UserType = $param["UserType"];
+        if (array_key_exists('UserType',$param) and $param['UserType'] !== null) {
+            $this->UserType = $param['UserType'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("IsReceiverOwner",$param) and $param["IsReceiverOwner"] !== null) {
-            $this->IsReceiverOwner = $param["IsReceiverOwner"];
+        if (array_key_exists('IsReceiverOwner',$param) and $param['IsReceiverOwner'] !== null) {
+            $this->IsReceiverOwner = $param['IsReceiverOwner'];
         }
     }
 }

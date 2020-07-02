@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -86,20 +86,20 @@ class DescribeProductEventListOverView extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("StatusChangeAmount",$param) and $param["StatusChangeAmount"] !== null) {
-            $this->StatusChangeAmount = $param["StatusChangeAmount"];
+        if (array_key_exists('StatusChangeAmount',$param) and $param['StatusChangeAmount'] !== null) {
+            $this->StatusChangeAmount = $param['StatusChangeAmount'];
         }
 
-        if (array_key_exists("UnConfigAlarmAmount",$param) and $param["UnConfigAlarmAmount"] !== null) {
-            $this->UnConfigAlarmAmount = $param["UnConfigAlarmAmount"];
+        if (array_key_exists('UnConfigAlarmAmount',$param) and $param['UnConfigAlarmAmount'] !== null) {
+            $this->UnConfigAlarmAmount = $param['UnConfigAlarmAmount'];
         }
 
-        if (array_key_exists("UnNormalEventAmount",$param) and $param["UnNormalEventAmount"] !== null) {
-            $this->UnNormalEventAmount = $param["UnNormalEventAmount"];
+        if (array_key_exists('UnNormalEventAmount',$param) and $param['UnNormalEventAmount'] !== null) {
+            $this->UnNormalEventAmount = $param['UnNormalEventAmount'];
         }
 
-        if (array_key_exists("UnRecoverAmount",$param) and $param["UnRecoverAmount"] !== null) {
-            $this->UnRecoverAmount = $param["UnRecoverAmount"];
+        if (array_key_exists('UnRecoverAmount',$param) and $param['UnRecoverAmount'] !== null) {
+            $this->UnRecoverAmount = $param['UnRecoverAmount'];
         }
     }
 }

@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -94,35 +94,35 @@ class AddExistedInstancesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
-            $this->ClusterId = $param["ClusterId"];
+        if (array_key_exists('ClusterId',$param) and $param['ClusterId'] !== null) {
+            $this->ClusterId = $param['ClusterId'];
         }
 
-        if (array_key_exists("InstanceIds",$param) and $param["InstanceIds"] !== null) {
-            $this->InstanceIds = $param["InstanceIds"];
+        if (array_key_exists('InstanceIds',$param) and $param['InstanceIds'] !== null) {
+            $this->InstanceIds = $param['InstanceIds'];
         }
 
-        if (array_key_exists("InstanceAdvancedSettings",$param) and $param["InstanceAdvancedSettings"] !== null) {
+        if (array_key_exists('InstanceAdvancedSettings',$param) and $param['InstanceAdvancedSettings'] !== null) {
             $this->InstanceAdvancedSettings = new InstanceAdvancedSettings();
-            $this->InstanceAdvancedSettings->deserialize($param["InstanceAdvancedSettings"]);
+            $this->InstanceAdvancedSettings->deserialize($param['InstanceAdvancedSettings']);
         }
 
-        if (array_key_exists("EnhancedService",$param) and $param["EnhancedService"] !== null) {
+        if (array_key_exists('EnhancedService',$param) and $param['EnhancedService'] !== null) {
             $this->EnhancedService = new EnhancedService();
-            $this->EnhancedService->deserialize($param["EnhancedService"]);
+            $this->EnhancedService->deserialize($param['EnhancedService']);
         }
 
-        if (array_key_exists("LoginSettings",$param) and $param["LoginSettings"] !== null) {
+        if (array_key_exists('LoginSettings',$param) and $param['LoginSettings'] !== null) {
             $this->LoginSettings = new LoginSettings();
-            $this->LoginSettings->deserialize($param["LoginSettings"]);
+            $this->LoginSettings->deserialize($param['LoginSettings']);
         }
 
-        if (array_key_exists("SecurityGroupIds",$param) and $param["SecurityGroupIds"] !== null) {
-            $this->SecurityGroupIds = $param["SecurityGroupIds"];
+        if (array_key_exists('SecurityGroupIds',$param) and $param['SecurityGroupIds'] !== null) {
+            $this->SecurityGroupIds = $param['SecurityGroupIds'];
         }
 
-        if (array_key_exists("HostName",$param) and $param["HostName"] !== null) {
-            $this->HostName = $param["HostName"];
+        if (array_key_exists('HostName',$param) and $param['HostName'] !== null) {
+            $this->HostName = $param['HostName'];
         }
     }
 }

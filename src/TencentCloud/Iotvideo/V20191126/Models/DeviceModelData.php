@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -70,16 +70,16 @@ class DeviceModelData extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Tid",$param) and $param["Tid"] !== null) {
-            $this->Tid = $param["Tid"];
+        if (array_key_exists('Tid',$param) and $param['Tid'] !== null) {
+            $this->Tid = $param['Tid'];
         }
 
-        if (array_key_exists("Branch",$param) and $param["Branch"] !== null) {
-            $this->Branch = $param["Branch"];
+        if (array_key_exists('Branch',$param) and $param['Branch'] !== null) {
+            $this->Branch = $param['Branch'];
         }
 
-        if (array_key_exists("IotModel",$param) and $param["IotModel"] !== null) {
-            $this->IotModel = $param["IotModel"];
+        if (array_key_exists('IotModel',$param) and $param['IotModel'] !== null) {
+            $this->IotModel = $param['IotModel'];
         }
     }
 }

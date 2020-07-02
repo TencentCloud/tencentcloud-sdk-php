@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -162,64 +162,64 @@ class ProductEntry extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ProductId",$param) and $param["ProductId"] !== null) {
-            $this->ProductId = $param["ProductId"];
+        if (array_key_exists('ProductId',$param) and $param['ProductId'] !== null) {
+            $this->ProductId = $param['ProductId'];
         }
 
-        if (array_key_exists("ProductName",$param) and $param["ProductName"] !== null) {
-            $this->ProductName = $param["ProductName"];
+        if (array_key_exists('ProductName',$param) and $param['ProductName'] !== null) {
+            $this->ProductName = $param['ProductName'];
         }
 
-        if (array_key_exists("CategoryId",$param) and $param["CategoryId"] !== null) {
-            $this->CategoryId = $param["CategoryId"];
+        if (array_key_exists('CategoryId',$param) and $param['CategoryId'] !== null) {
+            $this->CategoryId = $param['CategoryId'];
         }
 
-        if (array_key_exists("EncryptionType",$param) and $param["EncryptionType"] !== null) {
-            $this->EncryptionType = $param["EncryptionType"];
+        if (array_key_exists('EncryptionType',$param) and $param['EncryptionType'] !== null) {
+            $this->EncryptionType = $param['EncryptionType'];
         }
 
-        if (array_key_exists("NetType",$param) and $param["NetType"] !== null) {
-            $this->NetType = $param["NetType"];
+        if (array_key_exists('NetType',$param) and $param['NetType'] !== null) {
+            $this->NetType = $param['NetType'];
         }
 
-        if (array_key_exists("DataProtocol",$param) and $param["DataProtocol"] !== null) {
-            $this->DataProtocol = $param["DataProtocol"];
+        if (array_key_exists('DataProtocol',$param) and $param['DataProtocol'] !== null) {
+            $this->DataProtocol = $param['DataProtocol'];
         }
 
-        if (array_key_exists("ProductDesc",$param) and $param["ProductDesc"] !== null) {
-            $this->ProductDesc = $param["ProductDesc"];
+        if (array_key_exists('ProductDesc',$param) and $param['ProductDesc'] !== null) {
+            $this->ProductDesc = $param['ProductDesc'];
         }
 
-        if (array_key_exists("DevStatus",$param) and $param["DevStatus"] !== null) {
-            $this->DevStatus = $param["DevStatus"];
+        if (array_key_exists('DevStatus',$param) and $param['DevStatus'] !== null) {
+            $this->DevStatus = $param['DevStatus'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
-            $this->UpdateTime = $param["UpdateTime"];
+        if (array_key_exists('UpdateTime',$param) and $param['UpdateTime'] !== null) {
+            $this->UpdateTime = $param['UpdateTime'];
         }
 
-        if (array_key_exists("Region",$param) and $param["Region"] !== null) {
-            $this->Region = $param["Region"];
+        if (array_key_exists('Region',$param) and $param['Region'] !== null) {
+            $this->Region = $param['Region'];
         }
 
-        if (array_key_exists("ProductType",$param) and $param["ProductType"] !== null) {
-            $this->ProductType = $param["ProductType"];
+        if (array_key_exists('ProductType',$param) and $param['ProductType'] !== null) {
+            $this->ProductType = $param['ProductType'];
         }
 
-        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
-            $this->ProjectId = $param["ProjectId"];
+        if (array_key_exists('ProjectId',$param) and $param['ProjectId'] !== null) {
+            $this->ProjectId = $param['ProjectId'];
         }
 
-        if (array_key_exists("ModuleId",$param) and $param["ModuleId"] !== null) {
-            $this->ModuleId = $param["ModuleId"];
+        if (array_key_exists('ModuleId',$param) and $param['ModuleId'] !== null) {
+            $this->ModuleId = $param['ModuleId'];
         }
 
-        if (array_key_exists("EnableProductScript",$param) and $param["EnableProductScript"] !== null) {
-            $this->EnableProductScript = $param["EnableProductScript"];
+        if (array_key_exists('EnableProductScript',$param) and $param['EnableProductScript'] !== null) {
+            $this->EnableProductScript = $param['EnableProductScript'];
         }
     }
 }

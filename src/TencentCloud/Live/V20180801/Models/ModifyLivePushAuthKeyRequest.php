@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -90,24 +90,24 @@ class ModifyLivePushAuthKeyRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DomainName",$param) and $param["DomainName"] !== null) {
-            $this->DomainName = $param["DomainName"];
+        if (array_key_exists('DomainName',$param) and $param['DomainName'] !== null) {
+            $this->DomainName = $param['DomainName'];
         }
 
-        if (array_key_exists("Enable",$param) and $param["Enable"] !== null) {
-            $this->Enable = $param["Enable"];
+        if (array_key_exists('Enable',$param) and $param['Enable'] !== null) {
+            $this->Enable = $param['Enable'];
         }
 
-        if (array_key_exists("MasterAuthKey",$param) and $param["MasterAuthKey"] !== null) {
-            $this->MasterAuthKey = $param["MasterAuthKey"];
+        if (array_key_exists('MasterAuthKey',$param) and $param['MasterAuthKey'] !== null) {
+            $this->MasterAuthKey = $param['MasterAuthKey'];
         }
 
-        if (array_key_exists("BackupAuthKey",$param) and $param["BackupAuthKey"] !== null) {
-            $this->BackupAuthKey = $param["BackupAuthKey"];
+        if (array_key_exists('BackupAuthKey',$param) and $param['BackupAuthKey'] !== null) {
+            $this->BackupAuthKey = $param['BackupAuthKey'];
         }
 
-        if (array_key_exists("AuthDelta",$param) and $param["AuthDelta"] !== null) {
-            $this->AuthDelta = $param["AuthDelta"];
+        if (array_key_exists('AuthDelta',$param) and $param['AuthDelta'] !== null) {
+            $this->AuthDelta = $param['AuthDelta'];
         }
     }
 }

@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -94,38 +94,38 @@ class EipAcl extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AclId",$param) and $param["AclId"] !== null) {
-            $this->AclId = $param["AclId"];
+        if (array_key_exists('AclId',$param) and $param['AclId'] !== null) {
+            $this->AclId = $param['AclId'];
         }
 
-        if (array_key_exists("AclName",$param) and $param["AclName"] !== null) {
-            $this->AclName = $param["AclName"];
+        if (array_key_exists('AclName',$param) and $param['AclName'] !== null) {
+            $this->AclName = $param['AclName'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("CreatedAt",$param) and $param["CreatedAt"] !== null) {
-            $this->CreatedAt = $param["CreatedAt"];
+        if (array_key_exists('CreatedAt',$param) and $param['CreatedAt'] !== null) {
+            $this->CreatedAt = $param['CreatedAt'];
         }
 
-        if (array_key_exists("EipNum",$param) and $param["EipNum"] !== null) {
-            $this->EipNum = $param["EipNum"];
+        if (array_key_exists('EipNum',$param) and $param['EipNum'] !== null) {
+            $this->EipNum = $param['EipNum'];
         }
 
-        if (array_key_exists("OutRules",$param) and $param["OutRules"] !== null) {
+        if (array_key_exists('OutRules',$param) and $param['OutRules'] !== null) {
             $this->OutRules = [];
-            foreach ($param["OutRules"] as $key => $value){
+            foreach ($param['OutRules'] as $key => $value){
                 $obj = new EipAclRule();
                 $obj->deserialize($value);
                 array_push($this->OutRules, $obj);
             }
         }
 
-        if (array_key_exists("InRules",$param) and $param["InRules"] !== null) {
+        if (array_key_exists('InRules',$param) and $param['InRules'] !== null) {
             $this->InRules = [];
-            foreach ($param["InRules"] as $key => $value){
+            foreach ($param['InRules'] as $key => $value){
                 $obj = new EipAclRule();
                 $obj->deserialize($value);
                 array_push($this->InRules, $obj);

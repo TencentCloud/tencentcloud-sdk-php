@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -126,48 +126,48 @@ class WhiteboxKeyInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("KeyId",$param) and $param["KeyId"] !== null) {
-            $this->KeyId = $param["KeyId"];
+        if (array_key_exists('KeyId',$param) and $param['KeyId'] !== null) {
+            $this->KeyId = $param['KeyId'];
         }
 
-        if (array_key_exists("Alias",$param) and $param["Alias"] !== null) {
-            $this->Alias = $param["Alias"];
+        if (array_key_exists('Alias',$param) and $param['Alias'] !== null) {
+            $this->Alias = $param['Alias'];
         }
 
-        if (array_key_exists("CreatorUin",$param) and $param["CreatorUin"] !== null) {
-            $this->CreatorUin = $param["CreatorUin"];
+        if (array_key_exists('CreatorUin',$param) and $param['CreatorUin'] !== null) {
+            $this->CreatorUin = $param['CreatorUin'];
         }
 
-        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
-            $this->Description = $param["Description"];
+        if (array_key_exists('Description',$param) and $param['Description'] !== null) {
+            $this->Description = $param['Description'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("OwnerUin",$param) and $param["OwnerUin"] !== null) {
-            $this->OwnerUin = $param["OwnerUin"];
+        if (array_key_exists('OwnerUin',$param) and $param['OwnerUin'] !== null) {
+            $this->OwnerUin = $param['OwnerUin'];
         }
 
-        if (array_key_exists("Algorithm",$param) and $param["Algorithm"] !== null) {
-            $this->Algorithm = $param["Algorithm"];
+        if (array_key_exists('Algorithm',$param) and $param['Algorithm'] !== null) {
+            $this->Algorithm = $param['Algorithm'];
         }
 
-        if (array_key_exists("EncryptKey",$param) and $param["EncryptKey"] !== null) {
-            $this->EncryptKey = $param["EncryptKey"];
+        if (array_key_exists('EncryptKey',$param) and $param['EncryptKey'] !== null) {
+            $this->EncryptKey = $param['EncryptKey'];
         }
 
-        if (array_key_exists("DecryptKey",$param) and $param["DecryptKey"] !== null) {
-            $this->DecryptKey = $param["DecryptKey"];
+        if (array_key_exists('DecryptKey',$param) and $param['DecryptKey'] !== null) {
+            $this->DecryptKey = $param['DecryptKey'];
         }
 
-        if (array_key_exists("ResourceId",$param) and $param["ResourceId"] !== null) {
-            $this->ResourceId = $param["ResourceId"];
+        if (array_key_exists('ResourceId',$param) and $param['ResourceId'] !== null) {
+            $this->ResourceId = $param['ResourceId'];
         }
     }
 }

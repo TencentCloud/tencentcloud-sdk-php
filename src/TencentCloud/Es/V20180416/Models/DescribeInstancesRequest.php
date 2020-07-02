@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -110,45 +110,45 @@ class DescribeInstancesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
-            $this->Zone = $param["Zone"];
+        if (array_key_exists('Zone',$param) and $param['Zone'] !== null) {
+            $this->Zone = $param['Zone'];
         }
 
-        if (array_key_exists("InstanceIds",$param) and $param["InstanceIds"] !== null) {
-            $this->InstanceIds = $param["InstanceIds"];
+        if (array_key_exists('InstanceIds',$param) and $param['InstanceIds'] !== null) {
+            $this->InstanceIds = $param['InstanceIds'];
         }
 
-        if (array_key_exists("InstanceNames",$param) and $param["InstanceNames"] !== null) {
-            $this->InstanceNames = $param["InstanceNames"];
+        if (array_key_exists('InstanceNames',$param) and $param['InstanceNames'] !== null) {
+            $this->InstanceNames = $param['InstanceNames'];
         }
 
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
+        if (array_key_exists('Offset',$param) and $param['Offset'] !== null) {
+            $this->Offset = $param['Offset'];
         }
 
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
+        if (array_key_exists('Limit',$param) and $param['Limit'] !== null) {
+            $this->Limit = $param['Limit'];
         }
 
-        if (array_key_exists("OrderByKey",$param) and $param["OrderByKey"] !== null) {
-            $this->OrderByKey = $param["OrderByKey"];
+        if (array_key_exists('OrderByKey',$param) and $param['OrderByKey'] !== null) {
+            $this->OrderByKey = $param['OrderByKey'];
         }
 
-        if (array_key_exists("OrderByType",$param) and $param["OrderByType"] !== null) {
-            $this->OrderByType = $param["OrderByType"];
+        if (array_key_exists('OrderByType',$param) and $param['OrderByType'] !== null) {
+            $this->OrderByType = $param['OrderByType'];
         }
 
-        if (array_key_exists("TagList",$param) and $param["TagList"] !== null) {
+        if (array_key_exists('TagList',$param) and $param['TagList'] !== null) {
             $this->TagList = [];
-            foreach ($param["TagList"] as $key => $value){
+            foreach ($param['TagList'] as $key => $value){
                 $obj = new TagInfo();
                 $obj->deserialize($value);
                 array_push($this->TagList, $obj);
             }
         }
 
-        if (array_key_exists("IpList",$param) and $param["IpList"] !== null) {
-            $this->IpList = $param["IpList"];
+        if (array_key_exists('IpList',$param) and $param['IpList'] !== null) {
+            $this->IpList = $param['IpList'];
         }
     }
 }

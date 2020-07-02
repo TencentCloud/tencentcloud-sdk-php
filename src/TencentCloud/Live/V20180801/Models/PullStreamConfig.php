@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -142,36 +142,36 @@ UTC格式时间，例如：2019-01-08T10:00:00Z。
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ConfigId",$param) and $param["ConfigId"] !== null) {
-            $this->ConfigId = $param["ConfigId"];
+        if (array_key_exists('ConfigId',$param) and $param['ConfigId'] !== null) {
+            $this->ConfigId = $param['ConfigId'];
         }
 
-        if (array_key_exists("FromUrl",$param) and $param["FromUrl"] !== null) {
-            $this->FromUrl = $param["FromUrl"];
+        if (array_key_exists('FromUrl',$param) and $param['FromUrl'] !== null) {
+            $this->FromUrl = $param['FromUrl'];
         }
 
-        if (array_key_exists("ToUrl",$param) and $param["ToUrl"] !== null) {
-            $this->ToUrl = $param["ToUrl"];
+        if (array_key_exists('ToUrl',$param) and $param['ToUrl'] !== null) {
+            $this->ToUrl = $param['ToUrl'];
         }
 
-        if (array_key_exists("AreaName",$param) and $param["AreaName"] !== null) {
-            $this->AreaName = $param["AreaName"];
+        if (array_key_exists('AreaName',$param) and $param['AreaName'] !== null) {
+            $this->AreaName = $param['AreaName'];
         }
 
-        if (array_key_exists("IspName",$param) and $param["IspName"] !== null) {
-            $this->IspName = $param["IspName"];
+        if (array_key_exists('IspName',$param) and $param['IspName'] !== null) {
+            $this->IspName = $param['IspName'];
         }
 
-        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
-            $this->StartTime = $param["StartTime"];
+        if (array_key_exists('StartTime',$param) and $param['StartTime'] !== null) {
+            $this->StartTime = $param['StartTime'];
         }
 
-        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
-            $this->EndTime = $param["EndTime"];
+        if (array_key_exists('EndTime',$param) and $param['EndTime'] !== null) {
+            $this->EndTime = $param['EndTime'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
     }
 }

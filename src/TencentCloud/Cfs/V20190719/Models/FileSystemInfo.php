@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -174,73 +174,73 @@ class FileSystemInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CreationTime",$param) and $param["CreationTime"] !== null) {
-            $this->CreationTime = $param["CreationTime"];
+        if (array_key_exists('CreationTime',$param) and $param['CreationTime'] !== null) {
+            $this->CreationTime = $param['CreationTime'];
         }
 
-        if (array_key_exists("CreationToken",$param) and $param["CreationToken"] !== null) {
-            $this->CreationToken = $param["CreationToken"];
+        if (array_key_exists('CreationToken',$param) and $param['CreationToken'] !== null) {
+            $this->CreationToken = $param['CreationToken'];
         }
 
-        if (array_key_exists("FileSystemId",$param) and $param["FileSystemId"] !== null) {
-            $this->FileSystemId = $param["FileSystemId"];
+        if (array_key_exists('FileSystemId',$param) and $param['FileSystemId'] !== null) {
+            $this->FileSystemId = $param['FileSystemId'];
         }
 
-        if (array_key_exists("LifeCycleState",$param) and $param["LifeCycleState"] !== null) {
-            $this->LifeCycleState = $param["LifeCycleState"];
+        if (array_key_exists('LifeCycleState',$param) and $param['LifeCycleState'] !== null) {
+            $this->LifeCycleState = $param['LifeCycleState'];
         }
 
-        if (array_key_exists("SizeByte",$param) and $param["SizeByte"] !== null) {
-            $this->SizeByte = $param["SizeByte"];
+        if (array_key_exists('SizeByte',$param) and $param['SizeByte'] !== null) {
+            $this->SizeByte = $param['SizeByte'];
         }
 
-        if (array_key_exists("SizeLimit",$param) and $param["SizeLimit"] !== null) {
-            $this->SizeLimit = $param["SizeLimit"];
+        if (array_key_exists('SizeLimit',$param) and $param['SizeLimit'] !== null) {
+            $this->SizeLimit = $param['SizeLimit'];
         }
 
-        if (array_key_exists("ZoneId",$param) and $param["ZoneId"] !== null) {
-            $this->ZoneId = $param["ZoneId"];
+        if (array_key_exists('ZoneId',$param) and $param['ZoneId'] !== null) {
+            $this->ZoneId = $param['ZoneId'];
         }
 
-        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
-            $this->Zone = $param["Zone"];
+        if (array_key_exists('Zone',$param) and $param['Zone'] !== null) {
+            $this->Zone = $param['Zone'];
         }
 
-        if (array_key_exists("Protocol",$param) and $param["Protocol"] !== null) {
-            $this->Protocol = $param["Protocol"];
+        if (array_key_exists('Protocol',$param) and $param['Protocol'] !== null) {
+            $this->Protocol = $param['Protocol'];
         }
 
-        if (array_key_exists("StorageType",$param) and $param["StorageType"] !== null) {
-            $this->StorageType = $param["StorageType"];
+        if (array_key_exists('StorageType',$param) and $param['StorageType'] !== null) {
+            $this->StorageType = $param['StorageType'];
         }
 
-        if (array_key_exists("StorageResourcePkg",$param) and $param["StorageResourcePkg"] !== null) {
-            $this->StorageResourcePkg = $param["StorageResourcePkg"];
+        if (array_key_exists('StorageResourcePkg',$param) and $param['StorageResourcePkg'] !== null) {
+            $this->StorageResourcePkg = $param['StorageResourcePkg'];
         }
 
-        if (array_key_exists("BandwidthResourcePkg",$param) and $param["BandwidthResourcePkg"] !== null) {
-            $this->BandwidthResourcePkg = $param["BandwidthResourcePkg"];
+        if (array_key_exists('BandwidthResourcePkg',$param) and $param['BandwidthResourcePkg'] !== null) {
+            $this->BandwidthResourcePkg = $param['BandwidthResourcePkg'];
         }
 
-        if (array_key_exists("PGroup",$param) and $param["PGroup"] !== null) {
+        if (array_key_exists('PGroup',$param) and $param['PGroup'] !== null) {
             $this->PGroup = new PGroup();
-            $this->PGroup->deserialize($param["PGroup"]);
+            $this->PGroup->deserialize($param['PGroup']);
         }
 
-        if (array_key_exists("FsName",$param) and $param["FsName"] !== null) {
-            $this->FsName = $param["FsName"];
+        if (array_key_exists('FsName',$param) and $param['FsName'] !== null) {
+            $this->FsName = $param['FsName'];
         }
 
-        if (array_key_exists("Encrypted",$param) and $param["Encrypted"] !== null) {
-            $this->Encrypted = $param["Encrypted"];
+        if (array_key_exists('Encrypted',$param) and $param['Encrypted'] !== null) {
+            $this->Encrypted = $param['Encrypted'];
         }
 
-        if (array_key_exists("KmsKeyId",$param) and $param["KmsKeyId"] !== null) {
-            $this->KmsKeyId = $param["KmsKeyId"];
+        if (array_key_exists('KmsKeyId',$param) and $param['KmsKeyId'] !== null) {
+            $this->KmsKeyId = $param['KmsKeyId'];
         }
 
-        if (array_key_exists("AppId",$param) and $param["AppId"] !== null) {
-            $this->AppId = $param["AppId"];
+        if (array_key_exists('AppId',$param) and $param['AppId'] !== null) {
+            $this->AppId = $param['AppId'];
         }
     }
 }

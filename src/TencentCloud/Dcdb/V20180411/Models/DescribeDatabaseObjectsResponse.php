@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -94,52 +94,52 @@ class DescribeDatabaseObjectsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("DbName",$param) and $param["DbName"] !== null) {
-            $this->DbName = $param["DbName"];
+        if (array_key_exists('DbName',$param) and $param['DbName'] !== null) {
+            $this->DbName = $param['DbName'];
         }
 
-        if (array_key_exists("Tables",$param) and $param["Tables"] !== null) {
+        if (array_key_exists('Tables',$param) and $param['Tables'] !== null) {
             $this->Tables = [];
-            foreach ($param["Tables"] as $key => $value){
+            foreach ($param['Tables'] as $key => $value){
                 $obj = new DatabaseTable();
                 $obj->deserialize($value);
                 array_push($this->Tables, $obj);
             }
         }
 
-        if (array_key_exists("Views",$param) and $param["Views"] !== null) {
+        if (array_key_exists('Views',$param) and $param['Views'] !== null) {
             $this->Views = [];
-            foreach ($param["Views"] as $key => $value){
+            foreach ($param['Views'] as $key => $value){
                 $obj = new DatabaseView();
                 $obj->deserialize($value);
                 array_push($this->Views, $obj);
             }
         }
 
-        if (array_key_exists("Procs",$param) and $param["Procs"] !== null) {
+        if (array_key_exists('Procs',$param) and $param['Procs'] !== null) {
             $this->Procs = [];
-            foreach ($param["Procs"] as $key => $value){
+            foreach ($param['Procs'] as $key => $value){
                 $obj = new DatabaseProcedure();
                 $obj->deserialize($value);
                 array_push($this->Procs, $obj);
             }
         }
 
-        if (array_key_exists("Funcs",$param) and $param["Funcs"] !== null) {
+        if (array_key_exists('Funcs',$param) and $param['Funcs'] !== null) {
             $this->Funcs = [];
-            foreach ($param["Funcs"] as $key => $value){
+            foreach ($param['Funcs'] as $key => $value){
                 $obj = new DatabaseFunction();
                 $obj->deserialize($value);
                 array_push($this->Funcs, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

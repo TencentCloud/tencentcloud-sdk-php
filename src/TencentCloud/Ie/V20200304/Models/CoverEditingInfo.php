@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getSwitch() 获取是否开启智能封面。0为关闭，1为开启。其他非0非1值默认为0。
  * @method void setSwitch(integer $Switch) 设置是否开启智能封面。0为关闭，1为开启。其他非0非1值默认为0。
- * @method string getCustomInfo() 获取额外定制化服务参数。参数为序列化的Json字符串，例如：{"k1":"v1"}。
- * @method void setCustomInfo(string $CustomInfo) 设置额外定制化服务参数。参数为序列化的Json字符串，例如：{"k1":"v1"}。
+ * @method string getCustomInfo() 获取额外定制化服务参数。参数为序列化的Json字符串，例如：{'k1':'v1'}。
+ * @method void setCustomInfo(string $CustomInfo) 设置额外定制化服务参数。参数为序列化的Json字符串，例如：{'k1':'v1'}。
  */
 class CoverEditingInfo extends AbstractModel
 {
@@ -33,13 +33,13 @@ class CoverEditingInfo extends AbstractModel
     public $Switch;
 
     /**
-     * @var string 额外定制化服务参数。参数为序列化的Json字符串，例如：{"k1":"v1"}。
+     * @var string 额外定制化服务参数。参数为序列化的Json字符串，例如：{'k1':'v1'}。
      */
     public $CustomInfo;
 
     /**
      * @param integer $Switch 是否开启智能封面。0为关闭，1为开启。其他非0非1值默认为0。
-     * @param string $CustomInfo 额外定制化服务参数。参数为序列化的Json字符串，例如：{"k1":"v1"}。
+     * @param string $CustomInfo 额外定制化服务参数。参数为序列化的Json字符串，例如：{'k1':'v1'}。
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class CoverEditingInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Switch",$param) and $param["Switch"] !== null) {
-            $this->Switch = $param["Switch"];
+        if (array_key_exists('Switch',$param) and $param['Switch'] !== null) {
+            $this->Switch = $param['Switch'];
         }
 
-        if (array_key_exists("CustomInfo",$param) and $param["CustomInfo"] !== null) {
-            $this->CustomInfo = $param["CustomInfo"];
+        if (array_key_exists('CustomInfo',$param) and $param['CustomInfo'] !== null) {
+            $this->CustomInfo = $param['CustomInfo'];
         }
     }
 }

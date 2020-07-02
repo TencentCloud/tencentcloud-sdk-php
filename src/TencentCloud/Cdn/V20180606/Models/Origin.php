@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -237,40 +237,40 @@ ip：IP 列表作为源站
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Origins",$param) and $param["Origins"] !== null) {
-            $this->Origins = $param["Origins"];
+        if (array_key_exists('Origins',$param) and $param['Origins'] !== null) {
+            $this->Origins = $param['Origins'];
         }
 
-        if (array_key_exists("OriginType",$param) and $param["OriginType"] !== null) {
-            $this->OriginType = $param["OriginType"];
+        if (array_key_exists('OriginType',$param) and $param['OriginType'] !== null) {
+            $this->OriginType = $param['OriginType'];
         }
 
-        if (array_key_exists("ServerName",$param) and $param["ServerName"] !== null) {
-            $this->ServerName = $param["ServerName"];
+        if (array_key_exists('ServerName',$param) and $param['ServerName'] !== null) {
+            $this->ServerName = $param['ServerName'];
         }
 
-        if (array_key_exists("CosPrivateAccess",$param) and $param["CosPrivateAccess"] !== null) {
-            $this->CosPrivateAccess = $param["CosPrivateAccess"];
+        if (array_key_exists('CosPrivateAccess',$param) and $param['CosPrivateAccess'] !== null) {
+            $this->CosPrivateAccess = $param['CosPrivateAccess'];
         }
 
-        if (array_key_exists("OriginPullProtocol",$param) and $param["OriginPullProtocol"] !== null) {
-            $this->OriginPullProtocol = $param["OriginPullProtocol"];
+        if (array_key_exists('OriginPullProtocol',$param) and $param['OriginPullProtocol'] !== null) {
+            $this->OriginPullProtocol = $param['OriginPullProtocol'];
         }
 
-        if (array_key_exists("BackupOrigins",$param) and $param["BackupOrigins"] !== null) {
-            $this->BackupOrigins = $param["BackupOrigins"];
+        if (array_key_exists('BackupOrigins',$param) and $param['BackupOrigins'] !== null) {
+            $this->BackupOrigins = $param['BackupOrigins'];
         }
 
-        if (array_key_exists("BackupOriginType",$param) and $param["BackupOriginType"] !== null) {
-            $this->BackupOriginType = $param["BackupOriginType"];
+        if (array_key_exists('BackupOriginType',$param) and $param['BackupOriginType'] !== null) {
+            $this->BackupOriginType = $param['BackupOriginType'];
         }
 
-        if (array_key_exists("BackupServerName",$param) and $param["BackupServerName"] !== null) {
-            $this->BackupServerName = $param["BackupServerName"];
+        if (array_key_exists('BackupServerName',$param) and $param['BackupServerName'] !== null) {
+            $this->BackupServerName = $param['BackupServerName'];
         }
 
-        if (array_key_exists("BasePath",$param) and $param["BasePath"] !== null) {
-            $this->BasePath = $param["BasePath"];
+        if (array_key_exists('BasePath',$param) and $param['BasePath'] !== null) {
+            $this->BasePath = $param['BasePath'];
         }
     }
 }

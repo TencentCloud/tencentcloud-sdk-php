@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -134,57 +134,57 @@ class CCPolicy extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("Smode",$param) and $param["Smode"] !== null) {
-            $this->Smode = $param["Smode"];
+        if (array_key_exists('Smode',$param) and $param['Smode'] !== null) {
+            $this->Smode = $param['Smode'];
         }
 
-        if (array_key_exists("SetId",$param) and $param["SetId"] !== null) {
-            $this->SetId = $param["SetId"];
+        if (array_key_exists('SetId',$param) and $param['SetId'] !== null) {
+            $this->SetId = $param['SetId'];
         }
 
-        if (array_key_exists("Frequency",$param) and $param["Frequency"] !== null) {
-            $this->Frequency = $param["Frequency"];
+        if (array_key_exists('Frequency',$param) and $param['Frequency'] !== null) {
+            $this->Frequency = $param['Frequency'];
         }
 
-        if (array_key_exists("ExeMode",$param) and $param["ExeMode"] !== null) {
-            $this->ExeMode = $param["ExeMode"];
+        if (array_key_exists('ExeMode',$param) and $param['ExeMode'] !== null) {
+            $this->ExeMode = $param['ExeMode'];
         }
 
-        if (array_key_exists("Switch",$param) and $param["Switch"] !== null) {
-            $this->Switch = $param["Switch"];
+        if (array_key_exists('Switch',$param) and $param['Switch'] !== null) {
+            $this->Switch = $param['Switch'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("RuleList",$param) and $param["RuleList"] !== null) {
+        if (array_key_exists('RuleList',$param) and $param['RuleList'] !== null) {
             $this->RuleList = [];
-            foreach ($param["RuleList"] as $key => $value){
+            foreach ($param['RuleList'] as $key => $value){
                 $obj = new CCRule();
                 $obj->deserialize($value);
                 array_push($this->RuleList, $obj);
             }
         }
 
-        if (array_key_exists("IpList",$param) and $param["IpList"] !== null) {
-            $this->IpList = $param["IpList"];
+        if (array_key_exists('IpList',$param) and $param['IpList'] !== null) {
+            $this->IpList = $param['IpList'];
         }
 
-        if (array_key_exists("Protocol",$param) and $param["Protocol"] !== null) {
-            $this->Protocol = $param["Protocol"];
+        if (array_key_exists('Protocol',$param) and $param['Protocol'] !== null) {
+            $this->Protocol = $param['Protocol'];
         }
 
-        if (array_key_exists("RuleId",$param) and $param["RuleId"] !== null) {
-            $this->RuleId = $param["RuleId"];
+        if (array_key_exists('RuleId',$param) and $param['RuleId'] !== null) {
+            $this->RuleId = $param['RuleId'];
         }
 
-        if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
-            $this->Domain = $param["Domain"];
+        if (array_key_exists('Domain',$param) and $param['Domain'] !== null) {
+            $this->Domain = $param['Domain'];
         }
     }
 }

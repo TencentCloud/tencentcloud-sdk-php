@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -190,50 +190,50 @@ class VideoTrackItem extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SourceMedia",$param) and $param["SourceMedia"] !== null) {
-            $this->SourceMedia = $param["SourceMedia"];
+        if (array_key_exists('SourceMedia',$param) and $param['SourceMedia'] !== null) {
+            $this->SourceMedia = $param['SourceMedia'];
         }
 
-        if (array_key_exists("SourceMediaStartTime",$param) and $param["SourceMediaStartTime"] !== null) {
-            $this->SourceMediaStartTime = $param["SourceMediaStartTime"];
+        if (array_key_exists('SourceMediaStartTime',$param) and $param['SourceMediaStartTime'] !== null) {
+            $this->SourceMediaStartTime = $param['SourceMediaStartTime'];
         }
 
-        if (array_key_exists("Duration",$param) and $param["Duration"] !== null) {
-            $this->Duration = $param["Duration"];
+        if (array_key_exists('Duration',$param) and $param['Duration'] !== null) {
+            $this->Duration = $param['Duration'];
         }
 
-        if (array_key_exists("CoordinateOrigin",$param) and $param["CoordinateOrigin"] !== null) {
-            $this->CoordinateOrigin = $param["CoordinateOrigin"];
+        if (array_key_exists('CoordinateOrigin',$param) and $param['CoordinateOrigin'] !== null) {
+            $this->CoordinateOrigin = $param['CoordinateOrigin'];
         }
 
-        if (array_key_exists("XPos",$param) and $param["XPos"] !== null) {
-            $this->XPos = $param["XPos"];
+        if (array_key_exists('XPos',$param) and $param['XPos'] !== null) {
+            $this->XPos = $param['XPos'];
         }
 
-        if (array_key_exists("YPos",$param) and $param["YPos"] !== null) {
-            $this->YPos = $param["YPos"];
+        if (array_key_exists('YPos',$param) and $param['YPos'] !== null) {
+            $this->YPos = $param['YPos'];
         }
 
-        if (array_key_exists("Width",$param) and $param["Width"] !== null) {
-            $this->Width = $param["Width"];
+        if (array_key_exists('Width',$param) and $param['Width'] !== null) {
+            $this->Width = $param['Width'];
         }
 
-        if (array_key_exists("Height",$param) and $param["Height"] !== null) {
-            $this->Height = $param["Height"];
+        if (array_key_exists('Height',$param) and $param['Height'] !== null) {
+            $this->Height = $param['Height'];
         }
 
-        if (array_key_exists("ImageOperations",$param) and $param["ImageOperations"] !== null) {
+        if (array_key_exists('ImageOperations',$param) and $param['ImageOperations'] !== null) {
             $this->ImageOperations = [];
-            foreach ($param["ImageOperations"] as $key => $value){
+            foreach ($param['ImageOperations'] as $key => $value){
                 $obj = new ImageTransform();
                 $obj->deserialize($value);
                 array_push($this->ImageOperations, $obj);
             }
         }
 
-        if (array_key_exists("AudioOperations",$param) and $param["AudioOperations"] !== null) {
+        if (array_key_exists('AudioOperations',$param) and $param['AudioOperations'] !== null) {
             $this->AudioOperations = [];
-            foreach ($param["AudioOperations"] as $key => $value){
+            foreach ($param['AudioOperations'] as $key => $value){
                 $obj = new AudioTransform();
                 $obj->deserialize($value);
                 array_push($this->AudioOperations, $obj);

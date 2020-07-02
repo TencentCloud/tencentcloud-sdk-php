@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -394,124 +394,124 @@ class DescribeCustomerResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AddressList",$param) and $param["AddressList"] !== null) {
-            $this->AddressList = $param["AddressList"];
+        if (array_key_exists('AddressList',$param) and $param['AddressList'] !== null) {
+            $this->AddressList = $param['AddressList'];
         }
 
-        if (array_key_exists("UserId",$param) and $param["UserId"] !== null) {
-            $this->UserId = $param["UserId"];
+        if (array_key_exists('UserId',$param) and $param['UserId'] !== null) {
+            $this->UserId = $param['UserId'];
         }
 
-        if (array_key_exists("Avatar",$param) and $param["Avatar"] !== null) {
-            $this->Avatar = $param["Avatar"];
+        if (array_key_exists('Avatar',$param) and $param['Avatar'] !== null) {
+            $this->Avatar = $param['Avatar'];
         }
 
-        if (array_key_exists("Birthday",$param) and $param["Birthday"] !== null) {
-            $this->Birthday = $param["Birthday"];
+        if (array_key_exists('Birthday',$param) and $param['Birthday'] !== null) {
+            $this->Birthday = $param['Birthday'];
         }
 
-        if (array_key_exists("City",$param) and $param["City"] !== null) {
-            $this->City = $param["City"];
+        if (array_key_exists('City',$param) and $param['City'] !== null) {
+            $this->City = $param['City'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("Device",$param) and $param["Device"] !== null) {
-            $this->Device = $param["Device"];
+        if (array_key_exists('Device',$param) and $param['Device'] !== null) {
+            $this->Device = $param['Device'];
         }
 
-        if (array_key_exists("Industrys",$param) and $param["Industrys"] !== null) {
-            $this->Industrys = $param["Industrys"];
+        if (array_key_exists('Industrys',$param) and $param['Industrys'] !== null) {
+            $this->Industrys = $param['Industrys'];
         }
 
-        if (array_key_exists("LastActiveTime",$param) and $param["LastActiveTime"] !== null) {
-            $this->LastActiveTime = $param["LastActiveTime"];
+        if (array_key_exists('LastActiveTime',$param) and $param['LastActiveTime'] !== null) {
+            $this->LastActiveTime = $param['LastActiveTime'];
         }
 
-        if (array_key_exists("MarkFlag",$param) and $param["MarkFlag"] !== null) {
-            $this->MarkFlag = $param["MarkFlag"];
+        if (array_key_exists('MarkFlag',$param) and $param['MarkFlag'] !== null) {
+            $this->MarkFlag = $param['MarkFlag'];
         }
 
-        if (array_key_exists("Model",$param) and $param["Model"] !== null) {
-            $this->Model = $param["Model"];
+        if (array_key_exists('Model',$param) and $param['Model'] !== null) {
+            $this->Model = $param['Model'];
         }
 
-        if (array_key_exists("OpenId",$param) and $param["OpenId"] !== null) {
-            $this->OpenId = $param["OpenId"];
+        if (array_key_exists('OpenId',$param) and $param['OpenId'] !== null) {
+            $this->OpenId = $param['OpenId'];
         }
 
-        if (array_key_exists("PayFeature",$param) and $param["PayFeature"] !== null) {
-            $this->PayFeature = $param["PayFeature"];
+        if (array_key_exists('PayFeature',$param) and $param['PayFeature'] !== null) {
+            $this->PayFeature = $param['PayFeature'];
         }
 
-        if (array_key_exists("Phone",$param) and $param["Phone"] !== null) {
-            $this->Phone = $param["Phone"];
+        if (array_key_exists('Phone',$param) and $param['Phone'] !== null) {
+            $this->Phone = $param['Phone'];
         }
 
-        if (array_key_exists("PhoneList",$param) and $param["PhoneList"] !== null) {
-            $this->PhoneList = $param["PhoneList"];
+        if (array_key_exists('PhoneList',$param) and $param['PhoneList'] !== null) {
+            $this->PhoneList = $param['PhoneList'];
         }
 
-        if (array_key_exists("Province",$param) and $param["Province"] !== null) {
-            $this->Province = $param["Province"];
+        if (array_key_exists('Province',$param) and $param['Province'] !== null) {
+            $this->Province = $param['Province'];
         }
 
-        if (array_key_exists("RealName",$param) and $param["RealName"] !== null) {
-            $this->RealName = $param["RealName"];
+        if (array_key_exists('RealName',$param) and $param['RealName'] !== null) {
+            $this->RealName = $param['RealName'];
         }
 
-        if (array_key_exists("RelChannelFlag",$param) and $param["RelChannelFlag"] !== null) {
-            $this->RelChannelFlag = $param["RelChannelFlag"];
+        if (array_key_exists('RelChannelFlag',$param) and $param['RelChannelFlag'] !== null) {
+            $this->RelChannelFlag = $param['RelChannelFlag'];
         }
 
-        if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
-            $this->Remark = $param["Remark"];
+        if (array_key_exists('Remark',$param) and $param['Remark'] !== null) {
+            $this->Remark = $param['Remark'];
         }
 
-        if (array_key_exists("Sex",$param) and $param["Sex"] !== null) {
-            $this->Sex = $param["Sex"];
+        if (array_key_exists('Sex',$param) and $param['Sex'] !== null) {
+            $this->Sex = $param['Sex'];
         }
 
-        if (array_key_exists("SourceAudienceVo",$param) and $param["SourceAudienceVo"] !== null) {
-            $this->SourceAudienceVo = $param["SourceAudienceVo"];
+        if (array_key_exists('SourceAudienceVo',$param) and $param['SourceAudienceVo'] !== null) {
+            $this->SourceAudienceVo = $param['SourceAudienceVo'];
         }
 
-        if (array_key_exists("SubWechats",$param) and $param["SubWechats"] !== null) {
-            $this->SubWechats = $param["SubWechats"];
+        if (array_key_exists('SubWechats',$param) and $param['SubWechats'] !== null) {
+            $this->SubWechats = $param['SubWechats'];
         }
 
-        if (array_key_exists("UnionId",$param) and $param["UnionId"] !== null) {
-            $this->UnionId = $param["UnionId"];
+        if (array_key_exists('UnionId',$param) and $param['UnionId'] !== null) {
+            $this->UnionId = $param['UnionId'];
         }
 
-        if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
-            $this->UpdateTime = $param["UpdateTime"];
+        if (array_key_exists('UpdateTime',$param) and $param['UpdateTime'] !== null) {
+            $this->UpdateTime = $param['UpdateTime'];
         }
 
-        if (array_key_exists("UserTypes",$param) and $param["UserTypes"] !== null) {
-            $this->UserTypes = $param["UserTypes"];
+        if (array_key_exists('UserTypes',$param) and $param['UserTypes'] !== null) {
+            $this->UserTypes = $param['UserTypes'];
         }
 
-        if (array_key_exists("WxCity",$param) and $param["WxCity"] !== null) {
-            $this->WxCity = $param["WxCity"];
+        if (array_key_exists('WxCity',$param) and $param['WxCity'] !== null) {
+            $this->WxCity = $param['WxCity'];
         }
 
-        if (array_key_exists("WxCountry",$param) and $param["WxCountry"] !== null) {
-            $this->WxCountry = $param["WxCountry"];
+        if (array_key_exists('WxCountry',$param) and $param['WxCountry'] !== null) {
+            $this->WxCountry = $param['WxCountry'];
         }
 
-        if (array_key_exists("WxNickname",$param) and $param["WxNickname"] !== null) {
-            $this->WxNickname = $param["WxNickname"];
+        if (array_key_exists('WxNickname',$param) and $param['WxNickname'] !== null) {
+            $this->WxNickname = $param['WxNickname'];
         }
 
-        if (array_key_exists("WxProvince",$param) and $param["WxProvince"] !== null) {
-            $this->WxProvince = $param["WxProvince"];
+        if (array_key_exists('WxProvince',$param) and $param['WxProvince'] !== null) {
+            $this->WxProvince = $param['WxProvince'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

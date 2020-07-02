@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -110,34 +110,34 @@ class DescribePolicyConditionListConfigManual extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CalcType",$param) and $param["CalcType"] !== null) {
+        if (array_key_exists('CalcType',$param) and $param['CalcType'] !== null) {
             $this->CalcType = new DescribePolicyConditionListConfigManualCalcType();
-            $this->CalcType->deserialize($param["CalcType"]);
+            $this->CalcType->deserialize($param['CalcType']);
         }
 
-        if (array_key_exists("CalcValue",$param) and $param["CalcValue"] !== null) {
+        if (array_key_exists('CalcValue',$param) and $param['CalcValue'] !== null) {
             $this->CalcValue = new DescribePolicyConditionListConfigManualCalcValue();
-            $this->CalcValue->deserialize($param["CalcValue"]);
+            $this->CalcValue->deserialize($param['CalcValue']);
         }
 
-        if (array_key_exists("ContinueTime",$param) and $param["ContinueTime"] !== null) {
+        if (array_key_exists('ContinueTime',$param) and $param['ContinueTime'] !== null) {
             $this->ContinueTime = new DescribePolicyConditionListConfigManualContinueTime();
-            $this->ContinueTime->deserialize($param["ContinueTime"]);
+            $this->ContinueTime->deserialize($param['ContinueTime']);
         }
 
-        if (array_key_exists("Period",$param) and $param["Period"] !== null) {
+        if (array_key_exists('Period',$param) and $param['Period'] !== null) {
             $this->Period = new DescribePolicyConditionListConfigManualPeriod();
-            $this->Period->deserialize($param["Period"]);
+            $this->Period->deserialize($param['Period']);
         }
 
-        if (array_key_exists("PeriodNum",$param) and $param["PeriodNum"] !== null) {
+        if (array_key_exists('PeriodNum',$param) and $param['PeriodNum'] !== null) {
             $this->PeriodNum = new DescribePolicyConditionListConfigManualPeriodNum();
-            $this->PeriodNum->deserialize($param["PeriodNum"]);
+            $this->PeriodNum->deserialize($param['PeriodNum']);
         }
 
-        if (array_key_exists("StatType",$param) and $param["StatType"] !== null) {
+        if (array_key_exists('StatType',$param) and $param['StatType'] !== null) {
             $this->StatType = new DescribePolicyConditionListConfigManualStatType();
-            $this->StatType->deserialize($param["StatType"]);
+            $this->StatType->deserialize($param['StatType']);
         }
     }
 }

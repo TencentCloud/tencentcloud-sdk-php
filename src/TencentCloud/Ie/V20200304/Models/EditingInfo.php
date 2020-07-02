@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -86,34 +86,34 @@ class EditingInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TagEditingInfo",$param) and $param["TagEditingInfo"] !== null) {
+        if (array_key_exists('TagEditingInfo',$param) and $param['TagEditingInfo'] !== null) {
             $this->TagEditingInfo = new TagEditingInfo();
-            $this->TagEditingInfo->deserialize($param["TagEditingInfo"]);
+            $this->TagEditingInfo->deserialize($param['TagEditingInfo']);
         }
 
-        if (array_key_exists("ClassificationEditingInfo",$param) and $param["ClassificationEditingInfo"] !== null) {
+        if (array_key_exists('ClassificationEditingInfo',$param) and $param['ClassificationEditingInfo'] !== null) {
             $this->ClassificationEditingInfo = new ClassificationEditingInfo();
-            $this->ClassificationEditingInfo->deserialize($param["ClassificationEditingInfo"]);
+            $this->ClassificationEditingInfo->deserialize($param['ClassificationEditingInfo']);
         }
 
-        if (array_key_exists("StripEditingInfo",$param) and $param["StripEditingInfo"] !== null) {
+        if (array_key_exists('StripEditingInfo',$param) and $param['StripEditingInfo'] !== null) {
             $this->StripEditingInfo = new StripEditingInfo();
-            $this->StripEditingInfo->deserialize($param["StripEditingInfo"]);
+            $this->StripEditingInfo->deserialize($param['StripEditingInfo']);
         }
 
-        if (array_key_exists("HighlightsEditingInfo",$param) and $param["HighlightsEditingInfo"] !== null) {
+        if (array_key_exists('HighlightsEditingInfo',$param) and $param['HighlightsEditingInfo'] !== null) {
             $this->HighlightsEditingInfo = new HighlightsEditingInfo();
-            $this->HighlightsEditingInfo->deserialize($param["HighlightsEditingInfo"]);
+            $this->HighlightsEditingInfo->deserialize($param['HighlightsEditingInfo']);
         }
 
-        if (array_key_exists("CoverEditingInfo",$param) and $param["CoverEditingInfo"] !== null) {
+        if (array_key_exists('CoverEditingInfo',$param) and $param['CoverEditingInfo'] !== null) {
             $this->CoverEditingInfo = new CoverEditingInfo();
-            $this->CoverEditingInfo->deserialize($param["CoverEditingInfo"]);
+            $this->CoverEditingInfo->deserialize($param['CoverEditingInfo']);
         }
 
-        if (array_key_exists("OpeningEndingEditingInfo",$param) and $param["OpeningEndingEditingInfo"] !== null) {
+        if (array_key_exists('OpeningEndingEditingInfo',$param) and $param['OpeningEndingEditingInfo'] !== null) {
             $this->OpeningEndingEditingInfo = new OpeningEndingEditingInfo();
-            $this->OpeningEndingEditingInfo->deserialize($param["OpeningEndingEditingInfo"]);
+            $this->OpeningEndingEditingInfo->deserialize($param['OpeningEndingEditingInfo']);
         }
     }
 }

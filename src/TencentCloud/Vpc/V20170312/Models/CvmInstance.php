@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -134,52 +134,52 @@ class CvmInstance extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
-            $this->VpcId = $param["VpcId"];
+        if (array_key_exists('VpcId',$param) and $param['VpcId'] !== null) {
+            $this->VpcId = $param['VpcId'];
         }
 
-        if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
-            $this->SubnetId = $param["SubnetId"];
+        if (array_key_exists('SubnetId',$param) and $param['SubnetId'] !== null) {
+            $this->SubnetId = $param['SubnetId'];
         }
 
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("InstanceName",$param) and $param["InstanceName"] !== null) {
-            $this->InstanceName = $param["InstanceName"];
+        if (array_key_exists('InstanceName',$param) and $param['InstanceName'] !== null) {
+            $this->InstanceName = $param['InstanceName'];
         }
 
-        if (array_key_exists("InstanceState",$param) and $param["InstanceState"] !== null) {
-            $this->InstanceState = $param["InstanceState"];
+        if (array_key_exists('InstanceState',$param) and $param['InstanceState'] !== null) {
+            $this->InstanceState = $param['InstanceState'];
         }
 
-        if (array_key_exists("CPU",$param) and $param["CPU"] !== null) {
-            $this->CPU = $param["CPU"];
+        if (array_key_exists('CPU',$param) and $param['CPU'] !== null) {
+            $this->CPU = $param['CPU'];
         }
 
-        if (array_key_exists("Memory",$param) and $param["Memory"] !== null) {
-            $this->Memory = $param["Memory"];
+        if (array_key_exists('Memory',$param) and $param['Memory'] !== null) {
+            $this->Memory = $param['Memory'];
         }
 
-        if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
-            $this->CreatedTime = $param["CreatedTime"];
+        if (array_key_exists('CreatedTime',$param) and $param['CreatedTime'] !== null) {
+            $this->CreatedTime = $param['CreatedTime'];
         }
 
-        if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
-            $this->InstanceType = $param["InstanceType"];
+        if (array_key_exists('InstanceType',$param) and $param['InstanceType'] !== null) {
+            $this->InstanceType = $param['InstanceType'];
         }
 
-        if (array_key_exists("EniLimit",$param) and $param["EniLimit"] !== null) {
-            $this->EniLimit = $param["EniLimit"];
+        if (array_key_exists('EniLimit',$param) and $param['EniLimit'] !== null) {
+            $this->EniLimit = $param['EniLimit'];
         }
 
-        if (array_key_exists("EniIpLimit",$param) and $param["EniIpLimit"] !== null) {
-            $this->EniIpLimit = $param["EniIpLimit"];
+        if (array_key_exists('EniIpLimit',$param) and $param['EniIpLimit'] !== null) {
+            $this->EniIpLimit = $param['EniIpLimit'];
         }
 
-        if (array_key_exists("InstanceEniCount",$param) and $param["InstanceEniCount"] !== null) {
-            $this->InstanceEniCount = $param["InstanceEniCount"];
+        if (array_key_exists('InstanceEniCount',$param) and $param['InstanceEniCount'] !== null) {
+            $this->InstanceEniCount = $param['InstanceEniCount'];
         }
     }
 }

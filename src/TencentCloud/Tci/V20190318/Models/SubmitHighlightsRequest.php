@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -110,41 +110,41 @@ class SubmitHighlightsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Functions",$param) and $param["Functions"] !== null) {
+        if (array_key_exists('Functions',$param) and $param['Functions'] !== null) {
             $this->Functions = new HLFunction();
-            $this->Functions->deserialize($param["Functions"]);
+            $this->Functions->deserialize($param['Functions']);
         }
 
-        if (array_key_exists("FileContent",$param) and $param["FileContent"] !== null) {
-            $this->FileContent = $param["FileContent"];
+        if (array_key_exists('FileContent',$param) and $param['FileContent'] !== null) {
+            $this->FileContent = $param['FileContent'];
         }
 
-        if (array_key_exists("FileType",$param) and $param["FileType"] !== null) {
-            $this->FileType = $param["FileType"];
+        if (array_key_exists('FileType',$param) and $param['FileType'] !== null) {
+            $this->FileType = $param['FileType'];
         }
 
-        if (array_key_exists("LibIds",$param) and $param["LibIds"] !== null) {
-            $this->LibIds = $param["LibIds"];
+        if (array_key_exists('LibIds',$param) and $param['LibIds'] !== null) {
+            $this->LibIds = $param['LibIds'];
         }
 
-        if (array_key_exists("FrameInterval",$param) and $param["FrameInterval"] !== null) {
-            $this->FrameInterval = $param["FrameInterval"];
+        if (array_key_exists('FrameInterval',$param) and $param['FrameInterval'] !== null) {
+            $this->FrameInterval = $param['FrameInterval'];
         }
 
-        if (array_key_exists("KeywordsLanguage",$param) and $param["KeywordsLanguage"] !== null) {
-            $this->KeywordsLanguage = $param["KeywordsLanguage"];
+        if (array_key_exists('KeywordsLanguage',$param) and $param['KeywordsLanguage'] !== null) {
+            $this->KeywordsLanguage = $param['KeywordsLanguage'];
         }
 
-        if (array_key_exists("KeywordsStrings",$param) and $param["KeywordsStrings"] !== null) {
-            $this->KeywordsStrings = $param["KeywordsStrings"];
+        if (array_key_exists('KeywordsStrings',$param) and $param['KeywordsStrings'] !== null) {
+            $this->KeywordsStrings = $param['KeywordsStrings'];
         }
 
-        if (array_key_exists("MaxVideoDuration",$param) and $param["MaxVideoDuration"] !== null) {
-            $this->MaxVideoDuration = $param["MaxVideoDuration"];
+        if (array_key_exists('MaxVideoDuration',$param) and $param['MaxVideoDuration'] !== null) {
+            $this->MaxVideoDuration = $param['MaxVideoDuration'];
         }
 
-        if (array_key_exists("SimThreshold",$param) and $param["SimThreshold"] !== null) {
-            $this->SimThreshold = $param["SimThreshold"];
+        if (array_key_exists('SimThreshold',$param) and $param['SimThreshold'] !== null) {
+            $this->SimThreshold = $param['SimThreshold'];
         }
     }
 }

@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -70,20 +70,20 @@ class CommonMixCropParams extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CropWidth",$param) and $param["CropWidth"] !== null) {
-            $this->CropWidth = $param["CropWidth"];
+        if (array_key_exists('CropWidth',$param) and $param['CropWidth'] !== null) {
+            $this->CropWidth = $param['CropWidth'];
         }
 
-        if (array_key_exists("CropHeight",$param) and $param["CropHeight"] !== null) {
-            $this->CropHeight = $param["CropHeight"];
+        if (array_key_exists('CropHeight',$param) and $param['CropHeight'] !== null) {
+            $this->CropHeight = $param['CropHeight'];
         }
 
-        if (array_key_exists("CropStartLocationX",$param) and $param["CropStartLocationX"] !== null) {
-            $this->CropStartLocationX = $param["CropStartLocationX"];
+        if (array_key_exists('CropStartLocationX',$param) and $param['CropStartLocationX'] !== null) {
+            $this->CropStartLocationX = $param['CropStartLocationX'];
         }
 
-        if (array_key_exists("CropStartLocationY",$param) and $param["CropStartLocationY"] !== null) {
-            $this->CropStartLocationY = $param["CropStartLocationY"];
+        if (array_key_exists('CropStartLocationY',$param) and $param['CropStartLocationY'] !== null) {
+            $this->CropStartLocationY = $param['CropStartLocationY'];
         }
     }
 }

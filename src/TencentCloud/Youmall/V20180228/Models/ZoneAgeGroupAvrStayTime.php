@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -54,12 +54,12 @@ class ZoneAgeGroupAvrStayTime extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MaleAvrStayTime",$param) and $param["MaleAvrStayTime"] !== null) {
-            $this->MaleAvrStayTime = $param["MaleAvrStayTime"];
+        if (array_key_exists('MaleAvrStayTime',$param) and $param['MaleAvrStayTime'] !== null) {
+            $this->MaleAvrStayTime = $param['MaleAvrStayTime'];
         }
 
-        if (array_key_exists("FemaleAvrStayTime",$param) and $param["FemaleAvrStayTime"] !== null) {
-            $this->FemaleAvrStayTime = $param["FemaleAvrStayTime"];
+        if (array_key_exists('FemaleAvrStayTime',$param) and $param['FemaleAvrStayTime'] !== null) {
+            $this->FemaleAvrStayTime = $param['FemaleAvrStayTime'];
         }
     }
 }

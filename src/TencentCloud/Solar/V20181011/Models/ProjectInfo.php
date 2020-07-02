@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -106,36 +106,36 @@ class ProjectInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
-            $this->ProjectId = $param["ProjectId"];
+        if (array_key_exists('ProjectId',$param) and $param['ProjectId'] !== null) {
+            $this->ProjectId = $param['ProjectId'];
         }
 
-        if (array_key_exists("ProjectName",$param) and $param["ProjectName"] !== null) {
-            $this->ProjectName = $param["ProjectName"];
+        if (array_key_exists('ProjectName',$param) and $param['ProjectName'] !== null) {
+            $this->ProjectName = $param['ProjectName'];
         }
 
-        if (array_key_exists("ProjectOrg",$param) and $param["ProjectOrg"] !== null) {
-            $this->ProjectOrg = $param["ProjectOrg"];
+        if (array_key_exists('ProjectOrg',$param) and $param['ProjectOrg'] !== null) {
+            $this->ProjectOrg = $param['ProjectOrg'];
         }
 
-        if (array_key_exists("ProjectBudget",$param) and $param["ProjectBudget"] !== null) {
-            $this->ProjectBudget = $param["ProjectBudget"];
+        if (array_key_exists('ProjectBudget',$param) and $param['ProjectBudget'] !== null) {
+            $this->ProjectBudget = $param['ProjectBudget'];
         }
 
-        if (array_key_exists("ProjectStatus",$param) and $param["ProjectStatus"] !== null) {
-            $this->ProjectStatus = $param["ProjectStatus"];
+        if (array_key_exists('ProjectStatus',$param) and $param['ProjectStatus'] !== null) {
+            $this->ProjectStatus = $param['ProjectStatus'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("ProjectIntroduction",$param) and $param["ProjectIntroduction"] !== null) {
-            $this->ProjectIntroduction = $param["ProjectIntroduction"];
+        if (array_key_exists('ProjectIntroduction',$param) and $param['ProjectIntroduction'] !== null) {
+            $this->ProjectIntroduction = $param['ProjectIntroduction'];
         }
 
-        if (array_key_exists("ProjectOrgId",$param) and $param["ProjectOrgId"] !== null) {
-            $this->ProjectOrgId = $param["ProjectOrgId"];
+        if (array_key_exists('ProjectOrgId',$param) and $param['ProjectOrgId'] !== null) {
+            $this->ProjectOrgId = $param['ProjectOrgId'];
         }
     }
 }

@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -78,24 +78,24 @@ class DeviceNetInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Conn",$param) and $param["Conn"] !== null) {
-            $this->Conn = $param["Conn"];
+        if (array_key_exists('Conn',$param) and $param['Conn'] !== null) {
+            $this->Conn = $param['Conn'];
         }
 
-        if (array_key_exists("PackageIn",$param) and $param["PackageIn"] !== null) {
-            $this->PackageIn = $param["PackageIn"];
+        if (array_key_exists('PackageIn',$param) and $param['PackageIn'] !== null) {
+            $this->PackageIn = $param['PackageIn'];
         }
 
-        if (array_key_exists("PackageOut",$param) and $param["PackageOut"] !== null) {
-            $this->PackageOut = $param["PackageOut"];
+        if (array_key_exists('PackageOut',$param) and $param['PackageOut'] !== null) {
+            $this->PackageOut = $param['PackageOut'];
         }
 
-        if (array_key_exists("FlowIn",$param) and $param["FlowIn"] !== null) {
-            $this->FlowIn = $param["FlowIn"];
+        if (array_key_exists('FlowIn',$param) and $param['FlowIn'] !== null) {
+            $this->FlowIn = $param['FlowIn'];
         }
 
-        if (array_key_exists("FlowOut",$param) and $param["FlowOut"] !== null) {
-            $this->FlowOut = $param["FlowOut"];
+        if (array_key_exists('FlowOut',$param) and $param['FlowOut'] !== null) {
+            $this->FlowOut = $param['FlowOut'];
         }
     }
 }

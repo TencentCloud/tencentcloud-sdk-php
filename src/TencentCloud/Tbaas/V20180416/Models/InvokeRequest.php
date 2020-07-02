@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -118,49 +118,49 @@ class InvokeRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Module",$param) and $param["Module"] !== null) {
-            $this->Module = $param["Module"];
+        if (array_key_exists('Module',$param) and $param['Module'] !== null) {
+            $this->Module = $param['Module'];
         }
 
-        if (array_key_exists("Operation",$param) and $param["Operation"] !== null) {
-            $this->Operation = $param["Operation"];
+        if (array_key_exists('Operation',$param) and $param['Operation'] !== null) {
+            $this->Operation = $param['Operation'];
         }
 
-        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
-            $this->ClusterId = $param["ClusterId"];
+        if (array_key_exists('ClusterId',$param) and $param['ClusterId'] !== null) {
+            $this->ClusterId = $param['ClusterId'];
         }
 
-        if (array_key_exists("ChaincodeName",$param) and $param["ChaincodeName"] !== null) {
-            $this->ChaincodeName = $param["ChaincodeName"];
+        if (array_key_exists('ChaincodeName',$param) and $param['ChaincodeName'] !== null) {
+            $this->ChaincodeName = $param['ChaincodeName'];
         }
 
-        if (array_key_exists("ChannelName",$param) and $param["ChannelName"] !== null) {
-            $this->ChannelName = $param["ChannelName"];
+        if (array_key_exists('ChannelName',$param) and $param['ChannelName'] !== null) {
+            $this->ChannelName = $param['ChannelName'];
         }
 
-        if (array_key_exists("Peers",$param) and $param["Peers"] !== null) {
+        if (array_key_exists('Peers',$param) and $param['Peers'] !== null) {
             $this->Peers = [];
-            foreach ($param["Peers"] as $key => $value){
+            foreach ($param['Peers'] as $key => $value){
                 $obj = new PeerSet();
                 $obj->deserialize($value);
                 array_push($this->Peers, $obj);
             }
         }
 
-        if (array_key_exists("FuncName",$param) and $param["FuncName"] !== null) {
-            $this->FuncName = $param["FuncName"];
+        if (array_key_exists('FuncName',$param) and $param['FuncName'] !== null) {
+            $this->FuncName = $param['FuncName'];
         }
 
-        if (array_key_exists("GroupName",$param) and $param["GroupName"] !== null) {
-            $this->GroupName = $param["GroupName"];
+        if (array_key_exists('GroupName',$param) and $param['GroupName'] !== null) {
+            $this->GroupName = $param['GroupName'];
         }
 
-        if (array_key_exists("Args",$param) and $param["Args"] !== null) {
-            $this->Args = $param["Args"];
+        if (array_key_exists('Args',$param) and $param['Args'] !== null) {
+            $this->Args = $param['Args'];
         }
 
-        if (array_key_exists("AsyncFlag",$param) and $param["AsyncFlag"] !== null) {
-            $this->AsyncFlag = $param["AsyncFlag"];
+        if (array_key_exists('AsyncFlag',$param) and $param['AsyncFlag'] !== null) {
+            $this->AsyncFlag = $param['AsyncFlag'];
         }
     }
 }

@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHost(string $Host) 设置指定域名(如需要)
  * @method integer getIsHeader() 获取是否为Header请求（非0 发起Header 请求。为0，且PostData 非空，发起POST请求。为0，PostData 为空，发起GET请求）
  * @method void setIsHeader(integer $IsHeader) 设置是否为Header请求（非0 发起Header 请求。为0，且PostData 非空，发起POST请求。为0，PostData 为空，发起GET请求）
- * @method string getSslVer() 获取URL中含有"https"时有用。缺省为SSLv23。需要为 TLSv1_2, TLSv1_1, TLSv1, SSLv2, SSLv23, SSLv3 之一
- * @method void setSslVer(string $SslVer) 设置URL中含有"https"时有用。缺省为SSLv23。需要为 TLSv1_2, TLSv1_1, TLSv1, SSLv2, SSLv23, SSLv3 之一
+ * @method string getSslVer() 获取URL中含有'https'时有用。缺省为SSLv23。需要为 TLSv1_2, TLSv1_1, TLSv1, SSLv2, SSLv23, SSLv3 之一
+ * @method void setSslVer(string $SslVer) 设置URL中含有'https'时有用。缺省为SSLv23。需要为 TLSv1_2, TLSv1_1, TLSv1, SSLv2, SSLv23, SSLv3 之一
  * @method string getPostData() 获取POST请求数据。空字符串表示非POST请求
  * @method void setPostData(string $PostData) 设置POST请求数据。空字符串表示非POST请求
  * @method string getUserAgent() 获取用户Agent信息
@@ -117,7 +117,7 @@ class CreateTaskExRequest extends AbstractModel
     public $IsHeader;
 
     /**
-     * @var string URL中含有"https"时有用。缺省为SSLv23。需要为 TLSv1_2, TLSv1_1, TLSv1, SSLv2, SSLv23, SSLv3 之一
+     * @var string URL中含有'https'时有用。缺省为SSLv23。需要为 TLSv1_2, TLSv1_1, TLSv1, SSLv2, SSLv23, SSLv3 之一
      */
     public $SslVer;
 
@@ -234,7 +234,7 @@ class CreateTaskExRequest extends AbstractModel
      * @param integer $AgentGroupId 拨测分组ID，体现本拨测任务要采用哪些运营商作为拨测源。一般可直接填写本用户的默认拨测分组。参见：DescribeAgentGroups 接口，本参数使用返回结果里的GroupId的值。注意： Type为0时，AgentGroupId为必填
      * @param string $Host 指定域名(如需要)
      * @param integer $IsHeader 是否为Header请求（非0 发起Header 请求。为0，且PostData 非空，发起POST请求。为0，PostData 为空，发起GET请求）
-     * @param string $SslVer URL中含有"https"时有用。缺省为SSLv23。需要为 TLSv1_2, TLSv1_1, TLSv1, SSLv2, SSLv23, SSLv3 之一
+     * @param string $SslVer URL中含有'https'时有用。缺省为SSLv23。需要为 TLSv1_2, TLSv1_1, TLSv1, SSLv2, SSLv23, SSLv3 之一
      * @param string $PostData POST请求数据。空字符串表示非POST请求
      * @param string $UserAgent 用户Agent信息
      * @param string $CheckStr 要在结果中进行匹配的字符串
@@ -270,120 +270,120 @@ class CreateTaskExRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CatTypeName",$param) and $param["CatTypeName"] !== null) {
-            $this->CatTypeName = $param["CatTypeName"];
+        if (array_key_exists('CatTypeName',$param) and $param['CatTypeName'] !== null) {
+            $this->CatTypeName = $param['CatTypeName'];
         }
 
-        if (array_key_exists("Url",$param) and $param["Url"] !== null) {
-            $this->Url = $param["Url"];
+        if (array_key_exists('Url',$param) and $param['Url'] !== null) {
+            $this->Url = $param['Url'];
         }
 
-        if (array_key_exists("Period",$param) and $param["Period"] !== null) {
-            $this->Period = $param["Period"];
+        if (array_key_exists('Period',$param) and $param['Period'] !== null) {
+            $this->Period = $param['Period'];
         }
 
-        if (array_key_exists("TaskName",$param) and $param["TaskName"] !== null) {
-            $this->TaskName = $param["TaskName"];
+        if (array_key_exists('TaskName',$param) and $param['TaskName'] !== null) {
+            $this->TaskName = $param['TaskName'];
         }
 
-        if (array_key_exists("AgentGroupId",$param) and $param["AgentGroupId"] !== null) {
-            $this->AgentGroupId = $param["AgentGroupId"];
+        if (array_key_exists('AgentGroupId',$param) and $param['AgentGroupId'] !== null) {
+            $this->AgentGroupId = $param['AgentGroupId'];
         }
 
-        if (array_key_exists("Host",$param) and $param["Host"] !== null) {
-            $this->Host = $param["Host"];
+        if (array_key_exists('Host',$param) and $param['Host'] !== null) {
+            $this->Host = $param['Host'];
         }
 
-        if (array_key_exists("IsHeader",$param) and $param["IsHeader"] !== null) {
-            $this->IsHeader = $param["IsHeader"];
+        if (array_key_exists('IsHeader',$param) and $param['IsHeader'] !== null) {
+            $this->IsHeader = $param['IsHeader'];
         }
 
-        if (array_key_exists("SslVer",$param) and $param["SslVer"] !== null) {
-            $this->SslVer = $param["SslVer"];
+        if (array_key_exists('SslVer',$param) and $param['SslVer'] !== null) {
+            $this->SslVer = $param['SslVer'];
         }
 
-        if (array_key_exists("PostData",$param) and $param["PostData"] !== null) {
-            $this->PostData = $param["PostData"];
+        if (array_key_exists('PostData',$param) and $param['PostData'] !== null) {
+            $this->PostData = $param['PostData'];
         }
 
-        if (array_key_exists("UserAgent",$param) and $param["UserAgent"] !== null) {
-            $this->UserAgent = $param["UserAgent"];
+        if (array_key_exists('UserAgent',$param) and $param['UserAgent'] !== null) {
+            $this->UserAgent = $param['UserAgent'];
         }
 
-        if (array_key_exists("CheckStr",$param) and $param["CheckStr"] !== null) {
-            $this->CheckStr = $param["CheckStr"];
+        if (array_key_exists('CheckStr',$param) and $param['CheckStr'] !== null) {
+            $this->CheckStr = $param['CheckStr'];
         }
 
-        if (array_key_exists("CheckType",$param) and $param["CheckType"] !== null) {
-            $this->CheckType = $param["CheckType"];
+        if (array_key_exists('CheckType',$param) and $param['CheckType'] !== null) {
+            $this->CheckType = $param['CheckType'];
         }
 
-        if (array_key_exists("Cookie",$param) and $param["Cookie"] !== null) {
-            $this->Cookie = $param["Cookie"];
+        if (array_key_exists('Cookie',$param) and $param['Cookie'] !== null) {
+            $this->Cookie = $param['Cookie'];
         }
 
-        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
-            $this->TaskId = $param["TaskId"];
+        if (array_key_exists('TaskId',$param) and $param['TaskId'] !== null) {
+            $this->TaskId = $param['TaskId'];
         }
 
-        if (array_key_exists("UserName",$param) and $param["UserName"] !== null) {
-            $this->UserName = $param["UserName"];
+        if (array_key_exists('UserName',$param) and $param['UserName'] !== null) {
+            $this->UserName = $param['UserName'];
         }
 
-        if (array_key_exists("PassWord",$param) and $param["PassWord"] !== null) {
-            $this->PassWord = $param["PassWord"];
+        if (array_key_exists('PassWord',$param) and $param['PassWord'] !== null) {
+            $this->PassWord = $param['PassWord'];
         }
 
-        if (array_key_exists("ReqDataType",$param) and $param["ReqDataType"] !== null) {
-            $this->ReqDataType = $param["ReqDataType"];
+        if (array_key_exists('ReqDataType',$param) and $param['ReqDataType'] !== null) {
+            $this->ReqDataType = $param['ReqDataType'];
         }
 
-        if (array_key_exists("ReqData",$param) and $param["ReqData"] !== null) {
-            $this->ReqData = $param["ReqData"];
+        if (array_key_exists('ReqData',$param) and $param['ReqData'] !== null) {
+            $this->ReqData = $param['ReqData'];
         }
 
-        if (array_key_exists("RespDataType",$param) and $param["RespDataType"] !== null) {
-            $this->RespDataType = $param["RespDataType"];
+        if (array_key_exists('RespDataType',$param) and $param['RespDataType'] !== null) {
+            $this->RespDataType = $param['RespDataType'];
         }
 
-        if (array_key_exists("RespData",$param) and $param["RespData"] !== null) {
-            $this->RespData = $param["RespData"];
+        if (array_key_exists('RespData',$param) and $param['RespData'] !== null) {
+            $this->RespData = $param['RespData'];
         }
 
-        if (array_key_exists("DnsSvr",$param) and $param["DnsSvr"] !== null) {
-            $this->DnsSvr = $param["DnsSvr"];
+        if (array_key_exists('DnsSvr',$param) and $param['DnsSvr'] !== null) {
+            $this->DnsSvr = $param['DnsSvr'];
         }
 
-        if (array_key_exists("DnsCheckIp",$param) and $param["DnsCheckIp"] !== null) {
-            $this->DnsCheckIp = $param["DnsCheckIp"];
+        if (array_key_exists('DnsCheckIp',$param) and $param['DnsCheckIp'] !== null) {
+            $this->DnsCheckIp = $param['DnsCheckIp'];
         }
 
-        if (array_key_exists("DnsQueryType",$param) and $param["DnsQueryType"] !== null) {
-            $this->DnsQueryType = $param["DnsQueryType"];
+        if (array_key_exists('DnsQueryType',$param) and $param['DnsQueryType'] !== null) {
+            $this->DnsQueryType = $param['DnsQueryType'];
         }
 
-        if (array_key_exists("UseSecConn",$param) and $param["UseSecConn"] !== null) {
-            $this->UseSecConn = $param["UseSecConn"];
+        if (array_key_exists('UseSecConn',$param) and $param['UseSecConn'] !== null) {
+            $this->UseSecConn = $param['UseSecConn'];
         }
 
-        if (array_key_exists("NeedAuth",$param) and $param["NeedAuth"] !== null) {
-            $this->NeedAuth = $param["NeedAuth"];
+        if (array_key_exists('NeedAuth',$param) and $param['NeedAuth'] !== null) {
+            $this->NeedAuth = $param['NeedAuth'];
         }
 
-        if (array_key_exists("Port",$param) and $param["Port"] !== null) {
-            $this->Port = $param["Port"];
+        if (array_key_exists('Port',$param) and $param['Port'] !== null) {
+            $this->Port = $param['Port'];
         }
 
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists('Type',$param) and $param['Type'] !== null) {
+            $this->Type = $param['Type'];
         }
 
-        if (array_key_exists("IsVerify",$param) and $param["IsVerify"] !== null) {
-            $this->IsVerify = $param["IsVerify"];
+        if (array_key_exists('IsVerify',$param) and $param['IsVerify'] !== null) {
+            $this->IsVerify = $param['IsVerify'];
         }
 
-        if (array_key_exists("RedirectFollowNum",$param) and $param["RedirectFollowNum"] !== null) {
-            $this->RedirectFollowNum = $param["RedirectFollowNum"];
+        if (array_key_exists('RedirectFollowNum',$param) and $param['RedirectFollowNum'] !== null) {
+            $this->RedirectFollowNum = $param['RedirectFollowNum'];
         }
     }
 }

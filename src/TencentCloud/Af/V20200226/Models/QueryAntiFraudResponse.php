@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -90,33 +90,33 @@ class QueryAntiFraudResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Found",$param) and $param["Found"] !== null) {
-            $this->Found = $param["Found"];
+        if (array_key_exists('Found',$param) and $param['Found'] !== null) {
+            $this->Found = $param['Found'];
         }
 
-        if (array_key_exists("IdFound",$param) and $param["IdFound"] !== null) {
-            $this->IdFound = $param["IdFound"];
+        if (array_key_exists('IdFound',$param) and $param['IdFound'] !== null) {
+            $this->IdFound = $param['IdFound'];
         }
 
-        if (array_key_exists("RiskScore",$param) and $param["RiskScore"] !== null) {
-            $this->RiskScore = $param["RiskScore"];
+        if (array_key_exists('RiskScore',$param) and $param['RiskScore'] !== null) {
+            $this->RiskScore = $param['RiskScore'];
         }
 
-        if (array_key_exists("RiskInfo",$param) and $param["RiskInfo"] !== null) {
+        if (array_key_exists('RiskInfo',$param) and $param['RiskInfo'] !== null) {
             $this->RiskInfo = [];
-            foreach ($param["RiskInfo"] as $key => $value){
+            foreach ($param['RiskInfo'] as $key => $value){
                 $obj = new RiskDetail();
                 $obj->deserialize($value);
                 array_push($this->RiskInfo, $obj);
             }
         }
 
-        if (array_key_exists("CodeDesc",$param) and $param["CodeDesc"] !== null) {
-            $this->CodeDesc = $param["CodeDesc"];
+        if (array_key_exists('CodeDesc',$param) and $param['CodeDesc'] !== null) {
+            $this->CodeDesc = $param['CodeDesc'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

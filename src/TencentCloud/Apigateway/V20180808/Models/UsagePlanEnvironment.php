@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -182,52 +182,52 @@ class UsagePlanEnvironment extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ServiceId",$param) and $param["ServiceId"] !== null) {
-            $this->ServiceId = $param["ServiceId"];
+        if (array_key_exists('ServiceId',$param) and $param['ServiceId'] !== null) {
+            $this->ServiceId = $param['ServiceId'];
         }
 
-        if (array_key_exists("ApiId",$param) and $param["ApiId"] !== null) {
-            $this->ApiId = $param["ApiId"];
+        if (array_key_exists('ApiId',$param) and $param['ApiId'] !== null) {
+            $this->ApiId = $param['ApiId'];
         }
 
-        if (array_key_exists("ApiName",$param) and $param["ApiName"] !== null) {
-            $this->ApiName = $param["ApiName"];
+        if (array_key_exists('ApiName',$param) and $param['ApiName'] !== null) {
+            $this->ApiName = $param['ApiName'];
         }
 
-        if (array_key_exists("Path",$param) and $param["Path"] !== null) {
-            $this->Path = $param["Path"];
+        if (array_key_exists('Path',$param) and $param['Path'] !== null) {
+            $this->Path = $param['Path'];
         }
 
-        if (array_key_exists("Method",$param) and $param["Method"] !== null) {
-            $this->Method = $param["Method"];
+        if (array_key_exists('Method',$param) and $param['Method'] !== null) {
+            $this->Method = $param['Method'];
         }
 
-        if (array_key_exists("Environment",$param) and $param["Environment"] !== null) {
-            $this->Environment = $param["Environment"];
+        if (array_key_exists('Environment',$param) and $param['Environment'] !== null) {
+            $this->Environment = $param['Environment'];
         }
 
-        if (array_key_exists("InUseRequestNum",$param) and $param["InUseRequestNum"] !== null) {
-            $this->InUseRequestNum = $param["InUseRequestNum"];
+        if (array_key_exists('InUseRequestNum',$param) and $param['InUseRequestNum'] !== null) {
+            $this->InUseRequestNum = $param['InUseRequestNum'];
         }
 
-        if (array_key_exists("MaxRequestNum",$param) and $param["MaxRequestNum"] !== null) {
-            $this->MaxRequestNum = $param["MaxRequestNum"];
+        if (array_key_exists('MaxRequestNum',$param) and $param['MaxRequestNum'] !== null) {
+            $this->MaxRequestNum = $param['MaxRequestNum'];
         }
 
-        if (array_key_exists("MaxRequestNumPreSec",$param) and $param["MaxRequestNumPreSec"] !== null) {
-            $this->MaxRequestNumPreSec = $param["MaxRequestNumPreSec"];
+        if (array_key_exists('MaxRequestNumPreSec',$param) and $param['MaxRequestNumPreSec'] !== null) {
+            $this->MaxRequestNumPreSec = $param['MaxRequestNumPreSec'];
         }
 
-        if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
-            $this->CreatedTime = $param["CreatedTime"];
+        if (array_key_exists('CreatedTime',$param) and $param['CreatedTime'] !== null) {
+            $this->CreatedTime = $param['CreatedTime'];
         }
 
-        if (array_key_exists("ModifiedTime",$param) and $param["ModifiedTime"] !== null) {
-            $this->ModifiedTime = $param["ModifiedTime"];
+        if (array_key_exists('ModifiedTime',$param) and $param['ModifiedTime'] !== null) {
+            $this->ModifiedTime = $param['ModifiedTime'];
         }
 
-        if (array_key_exists("ServiceName",$param) and $param["ServiceName"] !== null) {
-            $this->ServiceName = $param["ServiceName"];
+        if (array_key_exists('ServiceName',$param) and $param['ServiceName'] !== null) {
+            $this->ServiceName = $param['ServiceName'];
         }
     }
 }

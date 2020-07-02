@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -94,33 +94,33 @@ class SubmitConversationTaskRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Lang",$param) and $param["Lang"] !== null) {
-            $this->Lang = $param["Lang"];
+        if (array_key_exists('Lang',$param) and $param['Lang'] !== null) {
+            $this->Lang = $param['Lang'];
         }
 
-        if (array_key_exists("StudentUrl",$param) and $param["StudentUrl"] !== null) {
-            $this->StudentUrl = $param["StudentUrl"];
+        if (array_key_exists('StudentUrl',$param) and $param['StudentUrl'] !== null) {
+            $this->StudentUrl = $param['StudentUrl'];
         }
 
-        if (array_key_exists("TeacherUrl",$param) and $param["TeacherUrl"] !== null) {
-            $this->TeacherUrl = $param["TeacherUrl"];
+        if (array_key_exists('TeacherUrl',$param) and $param['TeacherUrl'] !== null) {
+            $this->TeacherUrl = $param['TeacherUrl'];
         }
 
-        if (array_key_exists("VoiceEncodeType",$param) and $param["VoiceEncodeType"] !== null) {
-            $this->VoiceEncodeType = $param["VoiceEncodeType"];
+        if (array_key_exists('VoiceEncodeType',$param) and $param['VoiceEncodeType'] !== null) {
+            $this->VoiceEncodeType = $param['VoiceEncodeType'];
         }
 
-        if (array_key_exists("VoiceFileType",$param) and $param["VoiceFileType"] !== null) {
-            $this->VoiceFileType = $param["VoiceFileType"];
+        if (array_key_exists('VoiceFileType',$param) and $param['VoiceFileType'] !== null) {
+            $this->VoiceFileType = $param['VoiceFileType'];
         }
 
-        if (array_key_exists("Functions",$param) and $param["Functions"] !== null) {
+        if (array_key_exists('Functions',$param) and $param['Functions'] !== null) {
             $this->Functions = new FunctionInfo();
-            $this->Functions->deserialize($param["Functions"]);
+            $this->Functions->deserialize($param['Functions']);
         }
 
-        if (array_key_exists("VocabLibNameList",$param) and $param["VocabLibNameList"] !== null) {
-            $this->VocabLibNameList = $param["VocabLibNameList"];
+        if (array_key_exists('VocabLibNameList',$param) and $param['VocabLibNameList'] !== null) {
+            $this->VocabLibNameList = $param['VocabLibNameList'];
         }
     }
 }

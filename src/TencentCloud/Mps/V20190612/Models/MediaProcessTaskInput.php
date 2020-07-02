@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -86,54 +86,54 @@ class MediaProcessTaskInput extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TranscodeTaskSet",$param) and $param["TranscodeTaskSet"] !== null) {
+        if (array_key_exists('TranscodeTaskSet',$param) and $param['TranscodeTaskSet'] !== null) {
             $this->TranscodeTaskSet = [];
-            foreach ($param["TranscodeTaskSet"] as $key => $value){
+            foreach ($param['TranscodeTaskSet'] as $key => $value){
                 $obj = new TranscodeTaskInput();
                 $obj->deserialize($value);
                 array_push($this->TranscodeTaskSet, $obj);
             }
         }
 
-        if (array_key_exists("AnimatedGraphicTaskSet",$param) and $param["AnimatedGraphicTaskSet"] !== null) {
+        if (array_key_exists('AnimatedGraphicTaskSet',$param) and $param['AnimatedGraphicTaskSet'] !== null) {
             $this->AnimatedGraphicTaskSet = [];
-            foreach ($param["AnimatedGraphicTaskSet"] as $key => $value){
+            foreach ($param['AnimatedGraphicTaskSet'] as $key => $value){
                 $obj = new AnimatedGraphicTaskInput();
                 $obj->deserialize($value);
                 array_push($this->AnimatedGraphicTaskSet, $obj);
             }
         }
 
-        if (array_key_exists("SnapshotByTimeOffsetTaskSet",$param) and $param["SnapshotByTimeOffsetTaskSet"] !== null) {
+        if (array_key_exists('SnapshotByTimeOffsetTaskSet',$param) and $param['SnapshotByTimeOffsetTaskSet'] !== null) {
             $this->SnapshotByTimeOffsetTaskSet = [];
-            foreach ($param["SnapshotByTimeOffsetTaskSet"] as $key => $value){
+            foreach ($param['SnapshotByTimeOffsetTaskSet'] as $key => $value){
                 $obj = new SnapshotByTimeOffsetTaskInput();
                 $obj->deserialize($value);
                 array_push($this->SnapshotByTimeOffsetTaskSet, $obj);
             }
         }
 
-        if (array_key_exists("SampleSnapshotTaskSet",$param) and $param["SampleSnapshotTaskSet"] !== null) {
+        if (array_key_exists('SampleSnapshotTaskSet',$param) and $param['SampleSnapshotTaskSet'] !== null) {
             $this->SampleSnapshotTaskSet = [];
-            foreach ($param["SampleSnapshotTaskSet"] as $key => $value){
+            foreach ($param['SampleSnapshotTaskSet'] as $key => $value){
                 $obj = new SampleSnapshotTaskInput();
                 $obj->deserialize($value);
                 array_push($this->SampleSnapshotTaskSet, $obj);
             }
         }
 
-        if (array_key_exists("ImageSpriteTaskSet",$param) and $param["ImageSpriteTaskSet"] !== null) {
+        if (array_key_exists('ImageSpriteTaskSet',$param) and $param['ImageSpriteTaskSet'] !== null) {
             $this->ImageSpriteTaskSet = [];
-            foreach ($param["ImageSpriteTaskSet"] as $key => $value){
+            foreach ($param['ImageSpriteTaskSet'] as $key => $value){
                 $obj = new ImageSpriteTaskInput();
                 $obj->deserialize($value);
                 array_push($this->ImageSpriteTaskSet, $obj);
             }
         }
 
-        if (array_key_exists("AdaptiveDynamicStreamingTaskSet",$param) and $param["AdaptiveDynamicStreamingTaskSet"] !== null) {
+        if (array_key_exists('AdaptiveDynamicStreamingTaskSet',$param) and $param['AdaptiveDynamicStreamingTaskSet'] !== null) {
             $this->AdaptiveDynamicStreamingTaskSet = [];
-            foreach ($param["AdaptiveDynamicStreamingTaskSet"] as $key => $value){
+            foreach ($param['AdaptiveDynamicStreamingTaskSet'] as $key => $value){
                 $obj = new AdaptiveDynamicStreamingTaskInput();
                 $obj->deserialize($value);
                 array_push($this->AdaptiveDynamicStreamingTaskSet, $obj);

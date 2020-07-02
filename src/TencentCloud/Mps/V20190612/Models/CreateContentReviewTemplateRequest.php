@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -106,37 +106,37 @@ class CreateContentReviewTemplateRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("Comment",$param) and $param["Comment"] !== null) {
-            $this->Comment = $param["Comment"];
+        if (array_key_exists('Comment',$param) and $param['Comment'] !== null) {
+            $this->Comment = $param['Comment'];
         }
 
-        if (array_key_exists("PornConfigure",$param) and $param["PornConfigure"] !== null) {
+        if (array_key_exists('PornConfigure',$param) and $param['PornConfigure'] !== null) {
             $this->PornConfigure = new PornConfigureInfo();
-            $this->PornConfigure->deserialize($param["PornConfigure"]);
+            $this->PornConfigure->deserialize($param['PornConfigure']);
         }
 
-        if (array_key_exists("TerrorismConfigure",$param) and $param["TerrorismConfigure"] !== null) {
+        if (array_key_exists('TerrorismConfigure',$param) and $param['TerrorismConfigure'] !== null) {
             $this->TerrorismConfigure = new TerrorismConfigureInfo();
-            $this->TerrorismConfigure->deserialize($param["TerrorismConfigure"]);
+            $this->TerrorismConfigure->deserialize($param['TerrorismConfigure']);
         }
 
-        if (array_key_exists("PoliticalConfigure",$param) and $param["PoliticalConfigure"] !== null) {
+        if (array_key_exists('PoliticalConfigure',$param) and $param['PoliticalConfigure'] !== null) {
             $this->PoliticalConfigure = new PoliticalConfigureInfo();
-            $this->PoliticalConfigure->deserialize($param["PoliticalConfigure"]);
+            $this->PoliticalConfigure->deserialize($param['PoliticalConfigure']);
         }
 
-        if (array_key_exists("ProhibitedConfigure",$param) and $param["ProhibitedConfigure"] !== null) {
+        if (array_key_exists('ProhibitedConfigure',$param) and $param['ProhibitedConfigure'] !== null) {
             $this->ProhibitedConfigure = new ProhibitedConfigureInfo();
-            $this->ProhibitedConfigure->deserialize($param["ProhibitedConfigure"]);
+            $this->ProhibitedConfigure->deserialize($param['ProhibitedConfigure']);
         }
 
-        if (array_key_exists("UserDefineConfigure",$param) and $param["UserDefineConfigure"] !== null) {
+        if (array_key_exists('UserDefineConfigure',$param) and $param['UserDefineConfigure'] !== null) {
             $this->UserDefineConfigure = new UserDefineConfigureInfo();
-            $this->UserDefineConfigure->deserialize($param["UserDefineConfigure"]);
+            $this->UserDefineConfigure->deserialize($param['UserDefineConfigure']);
         }
     }
 }

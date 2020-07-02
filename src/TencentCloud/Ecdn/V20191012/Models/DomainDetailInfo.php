@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -234,88 +234,88 @@ class DomainDetailInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ResourceId",$param) and $param["ResourceId"] !== null) {
-            $this->ResourceId = $param["ResourceId"];
+        if (array_key_exists('ResourceId',$param) and $param['ResourceId'] !== null) {
+            $this->ResourceId = $param['ResourceId'];
         }
 
-        if (array_key_exists("AppId",$param) and $param["AppId"] !== null) {
-            $this->AppId = $param["AppId"];
+        if (array_key_exists('AppId',$param) and $param['AppId'] !== null) {
+            $this->AppId = $param['AppId'];
         }
 
-        if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
-            $this->Domain = $param["Domain"];
+        if (array_key_exists('Domain',$param) and $param['Domain'] !== null) {
+            $this->Domain = $param['Domain'];
         }
 
-        if (array_key_exists("Cname",$param) and $param["Cname"] !== null) {
-            $this->Cname = $param["Cname"];
+        if (array_key_exists('Cname',$param) and $param['Cname'] !== null) {
+            $this->Cname = $param['Cname'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
-            $this->ProjectId = $param["ProjectId"];
+        if (array_key_exists('ProjectId',$param) and $param['ProjectId'] !== null) {
+            $this->ProjectId = $param['ProjectId'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
-            $this->UpdateTime = $param["UpdateTime"];
+        if (array_key_exists('UpdateTime',$param) and $param['UpdateTime'] !== null) {
+            $this->UpdateTime = $param['UpdateTime'];
         }
 
-        if (array_key_exists("Origin",$param) and $param["Origin"] !== null) {
+        if (array_key_exists('Origin',$param) and $param['Origin'] !== null) {
             $this->Origin = new Origin();
-            $this->Origin->deserialize($param["Origin"]);
+            $this->Origin->deserialize($param['Origin']);
         }
 
-        if (array_key_exists("IpFilter",$param) and $param["IpFilter"] !== null) {
+        if (array_key_exists('IpFilter',$param) and $param['IpFilter'] !== null) {
             $this->IpFilter = new IpFilter();
-            $this->IpFilter->deserialize($param["IpFilter"]);
+            $this->IpFilter->deserialize($param['IpFilter']);
         }
 
-        if (array_key_exists("IpFreqLimit",$param) and $param["IpFreqLimit"] !== null) {
+        if (array_key_exists('IpFreqLimit',$param) and $param['IpFreqLimit'] !== null) {
             $this->IpFreqLimit = new IpFreqLimit();
-            $this->IpFreqLimit->deserialize($param["IpFreqLimit"]);
+            $this->IpFreqLimit->deserialize($param['IpFreqLimit']);
         }
 
-        if (array_key_exists("ResponseHeader",$param) and $param["ResponseHeader"] !== null) {
+        if (array_key_exists('ResponseHeader',$param) and $param['ResponseHeader'] !== null) {
             $this->ResponseHeader = new ResponseHeader();
-            $this->ResponseHeader->deserialize($param["ResponseHeader"]);
+            $this->ResponseHeader->deserialize($param['ResponseHeader']);
         }
 
-        if (array_key_exists("CacheKey",$param) and $param["CacheKey"] !== null) {
+        if (array_key_exists('CacheKey',$param) and $param['CacheKey'] !== null) {
             $this->CacheKey = new CacheKey();
-            $this->CacheKey->deserialize($param["CacheKey"]);
+            $this->CacheKey->deserialize($param['CacheKey']);
         }
 
-        if (array_key_exists("Cache",$param) and $param["Cache"] !== null) {
+        if (array_key_exists('Cache',$param) and $param['Cache'] !== null) {
             $this->Cache = new Cache();
-            $this->Cache->deserialize($param["Cache"]);
+            $this->Cache->deserialize($param['Cache']);
         }
 
-        if (array_key_exists("Https",$param) and $param["Https"] !== null) {
+        if (array_key_exists('Https',$param) and $param['Https'] !== null) {
             $this->Https = new Https();
-            $this->Https->deserialize($param["Https"]);
+            $this->Https->deserialize($param['Https']);
         }
 
-        if (array_key_exists("Disable",$param) and $param["Disable"] !== null) {
-            $this->Disable = $param["Disable"];
+        if (array_key_exists('Disable',$param) and $param['Disable'] !== null) {
+            $this->Disable = $param['Disable'];
         }
 
-        if (array_key_exists("ForceRedirect",$param) and $param["ForceRedirect"] !== null) {
+        if (array_key_exists('ForceRedirect',$param) and $param['ForceRedirect'] !== null) {
             $this->ForceRedirect = new ForceRedirect();
-            $this->ForceRedirect->deserialize($param["ForceRedirect"]);
+            $this->ForceRedirect->deserialize($param['ForceRedirect']);
         }
 
-        if (array_key_exists("Area",$param) and $param["Area"] !== null) {
-            $this->Area = $param["Area"];
+        if (array_key_exists('Area',$param) and $param['Area'] !== null) {
+            $this->Area = $param['Area'];
         }
 
-        if (array_key_exists("Readonly",$param) and $param["Readonly"] !== null) {
-            $this->Readonly = $param["Readonly"];
+        if (array_key_exists('Readonly',$param) and $param['Readonly'] !== null) {
+            $this->Readonly = $param['Readonly'];
         }
     }
 }

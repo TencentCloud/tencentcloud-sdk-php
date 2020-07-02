@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -90,28 +90,28 @@ class PredictInput extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InputPath",$param) and $param["InputPath"] !== null) {
-            $this->InputPath = $param["InputPath"];
+        if (array_key_exists('InputPath',$param) and $param['InputPath'] !== null) {
+            $this->InputPath = $param['InputPath'];
         }
 
-        if (array_key_exists("OutputPath",$param) and $param["OutputPath"] !== null) {
-            $this->OutputPath = $param["OutputPath"];
+        if (array_key_exists('OutputPath',$param) and $param['OutputPath'] !== null) {
+            $this->OutputPath = $param['OutputPath'];
         }
 
-        if (array_key_exists("InputDataFormat",$param) and $param["InputDataFormat"] !== null) {
-            $this->InputDataFormat = $param["InputDataFormat"];
+        if (array_key_exists('InputDataFormat',$param) and $param['InputDataFormat'] !== null) {
+            $this->InputDataFormat = $param['InputDataFormat'];
         }
 
-        if (array_key_exists("OutputDataFormat",$param) and $param["OutputDataFormat"] !== null) {
-            $this->OutputDataFormat = $param["OutputDataFormat"];
+        if (array_key_exists('OutputDataFormat',$param) and $param['OutputDataFormat'] !== null) {
+            $this->OutputDataFormat = $param['OutputDataFormat'];
         }
 
-        if (array_key_exists("BatchSize",$param) and $param["BatchSize"] !== null) {
-            $this->BatchSize = $param["BatchSize"];
+        if (array_key_exists('BatchSize',$param) and $param['BatchSize'] !== null) {
+            $this->BatchSize = $param['BatchSize'];
         }
 
-        if (array_key_exists("SignatureName",$param) and $param["SignatureName"] !== null) {
-            $this->SignatureName = $param["SignatureName"];
+        if (array_key_exists('SignatureName',$param) and $param['SignatureName'] !== null) {
+            $this->SignatureName = $param['SignatureName'];
         }
     }
 }

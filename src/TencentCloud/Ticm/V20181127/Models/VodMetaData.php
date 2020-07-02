@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -170,58 +170,58 @@ class VodMetaData extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Size",$param) and $param["Size"] !== null) {
-            $this->Size = $param["Size"];
+        if (array_key_exists('Size',$param) and $param['Size'] !== null) {
+            $this->Size = $param['Size'];
         }
 
-        if (array_key_exists("Container",$param) and $param["Container"] !== null) {
-            $this->Container = $param["Container"];
+        if (array_key_exists('Container',$param) and $param['Container'] !== null) {
+            $this->Container = $param['Container'];
         }
 
-        if (array_key_exists("Bitrate",$param) and $param["Bitrate"] !== null) {
-            $this->Bitrate = $param["Bitrate"];
+        if (array_key_exists('Bitrate',$param) and $param['Bitrate'] !== null) {
+            $this->Bitrate = $param['Bitrate'];
         }
 
-        if (array_key_exists("Height",$param) and $param["Height"] !== null) {
-            $this->Height = $param["Height"];
+        if (array_key_exists('Height',$param) and $param['Height'] !== null) {
+            $this->Height = $param['Height'];
         }
 
-        if (array_key_exists("Width",$param) and $param["Width"] !== null) {
-            $this->Width = $param["Width"];
+        if (array_key_exists('Width',$param) and $param['Width'] !== null) {
+            $this->Width = $param['Width'];
         }
 
-        if (array_key_exists("Duration",$param) and $param["Duration"] !== null) {
-            $this->Duration = $param["Duration"];
+        if (array_key_exists('Duration',$param) and $param['Duration'] !== null) {
+            $this->Duration = $param['Duration'];
         }
 
-        if (array_key_exists("Rotate",$param) and $param["Rotate"] !== null) {
-            $this->Rotate = $param["Rotate"];
+        if (array_key_exists('Rotate',$param) and $param['Rotate'] !== null) {
+            $this->Rotate = $param['Rotate'];
         }
 
-        if (array_key_exists("VideoStreamSet",$param) and $param["VideoStreamSet"] !== null) {
+        if (array_key_exists('VideoStreamSet',$param) and $param['VideoStreamSet'] !== null) {
             $this->VideoStreamSet = [];
-            foreach ($param["VideoStreamSet"] as $key => $value){
+            foreach ($param['VideoStreamSet'] as $key => $value){
                 $obj = new VodVideoStreamItem();
                 $obj->deserialize($value);
                 array_push($this->VideoStreamSet, $obj);
             }
         }
 
-        if (array_key_exists("AudioStreamSet",$param) and $param["AudioStreamSet"] !== null) {
+        if (array_key_exists('AudioStreamSet',$param) and $param['AudioStreamSet'] !== null) {
             $this->AudioStreamSet = [];
-            foreach ($param["AudioStreamSet"] as $key => $value){
+            foreach ($param['AudioStreamSet'] as $key => $value){
                 $obj = new VodAudioStreamItem();
                 $obj->deserialize($value);
                 array_push($this->AudioStreamSet, $obj);
             }
         }
 
-        if (array_key_exists("VideoDuration",$param) and $param["VideoDuration"] !== null) {
-            $this->VideoDuration = $param["VideoDuration"];
+        if (array_key_exists('VideoDuration',$param) and $param['VideoDuration'] !== null) {
+            $this->VideoDuration = $param['VideoDuration'];
         }
 
-        if (array_key_exists("AudioDuration",$param) and $param["AudioDuration"] !== null) {
-            $this->AudioDuration = $param["AudioDuration"];
+        if (array_key_exists('AudioDuration',$param) and $param['AudioDuration'] !== null) {
+            $this->AudioDuration = $param['AudioDuration'];
         }
     }
 }

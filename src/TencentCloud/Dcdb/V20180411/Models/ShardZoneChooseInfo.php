@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -54,14 +54,14 @@ class ShardZoneChooseInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MasterZone",$param) and $param["MasterZone"] !== null) {
+        if (array_key_exists('MasterZone',$param) and $param['MasterZone'] !== null) {
             $this->MasterZone = new ZonesInfo();
-            $this->MasterZone->deserialize($param["MasterZone"]);
+            $this->MasterZone->deserialize($param['MasterZone']);
         }
 
-        if (array_key_exists("SlaveZones",$param) and $param["SlaveZones"] !== null) {
+        if (array_key_exists('SlaveZones',$param) and $param['SlaveZones'] !== null) {
             $this->SlaveZones = [];
-            foreach ($param["SlaveZones"] as $key => $value){
+            foreach ($param['SlaveZones'] as $key => $value){
                 $obj = new ZonesInfo();
                 $obj->deserialize($value);
                 array_push($this->SlaveZones, $obj);

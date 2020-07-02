@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -134,48 +134,48 @@ class SchedulingDomain extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
-            $this->Domain = $param["Domain"];
+        if (array_key_exists('Domain',$param) and $param['Domain'] !== null) {
+            $this->Domain = $param['Domain'];
         }
 
-        if (array_key_exists("BGPIpList",$param) and $param["BGPIpList"] !== null) {
-            $this->BGPIpList = $param["BGPIpList"];
+        if (array_key_exists('BGPIpList',$param) and $param['BGPIpList'] !== null) {
+            $this->BGPIpList = $param['BGPIpList'];
         }
 
-        if (array_key_exists("CTCCIpList",$param) and $param["CTCCIpList"] !== null) {
-            $this->CTCCIpList = $param["CTCCIpList"];
+        if (array_key_exists('CTCCIpList',$param) and $param['CTCCIpList'] !== null) {
+            $this->CTCCIpList = $param['CTCCIpList'];
         }
 
-        if (array_key_exists("CUCCIpList",$param) and $param["CUCCIpList"] !== null) {
-            $this->CUCCIpList = $param["CUCCIpList"];
+        if (array_key_exists('CUCCIpList',$param) and $param['CUCCIpList'] !== null) {
+            $this->CUCCIpList = $param['CUCCIpList'];
         }
 
-        if (array_key_exists("CMCCIpList",$param) and $param["CMCCIpList"] !== null) {
-            $this->CMCCIpList = $param["CMCCIpList"];
+        if (array_key_exists('CMCCIpList',$param) and $param['CMCCIpList'] !== null) {
+            $this->CMCCIpList = $param['CMCCIpList'];
         }
 
-        if (array_key_exists("OverseaIpList",$param) and $param["OverseaIpList"] !== null) {
-            $this->OverseaIpList = $param["OverseaIpList"];
+        if (array_key_exists('OverseaIpList',$param) and $param['OverseaIpList'] !== null) {
+            $this->OverseaIpList = $param['OverseaIpList'];
         }
 
-        if (array_key_exists("Method",$param) and $param["Method"] !== null) {
-            $this->Method = $param["Method"];
+        if (array_key_exists('Method',$param) and $param['Method'] !== null) {
+            $this->Method = $param['Method'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("TTL",$param) and $param["TTL"] !== null) {
-            $this->TTL = $param["TTL"];
+        if (array_key_exists('TTL',$param) and $param['TTL'] !== null) {
+            $this->TTL = $param['TTL'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("ModifyTime",$param) and $param["ModifyTime"] !== null) {
-            $this->ModifyTime = $param["ModifyTime"];
+        if (array_key_exists('ModifyTime',$param) and $param['ModifyTime'] !== null) {
+            $this->ModifyTime = $param['ModifyTime'];
         }
     }
 }

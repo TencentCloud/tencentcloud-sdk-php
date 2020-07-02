@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -150,60 +150,60 @@ class DescribeChargeDetailResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("OrderStatus",$param) and $param["OrderStatus"] !== null) {
-            $this->OrderStatus = $param["OrderStatus"];
+        if (array_key_exists('OrderStatus',$param) and $param['OrderStatus'] !== null) {
+            $this->OrderStatus = $param['OrderStatus'];
         }
 
-        if (array_key_exists("OrderAmount",$param) and $param["OrderAmount"] !== null) {
-            $this->OrderAmount = $param["OrderAmount"];
+        if (array_key_exists('OrderAmount',$param) and $param['OrderAmount'] !== null) {
+            $this->OrderAmount = $param['OrderAmount'];
         }
 
-        if (array_key_exists("CommissionAmount",$param) and $param["CommissionAmount"] !== null) {
-            $this->CommissionAmount = $param["CommissionAmount"];
+        if (array_key_exists('CommissionAmount',$param) and $param['CommissionAmount'] !== null) {
+            $this->CommissionAmount = $param['CommissionAmount'];
         }
 
-        if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {
-            $this->PayMode = $param["PayMode"];
+        if (array_key_exists('PayMode',$param) and $param['PayMode'] !== null) {
+            $this->PayMode = $param['PayMode'];
         }
 
-        if (array_key_exists("OrderDate",$param) and $param["OrderDate"] !== null) {
-            $this->OrderDate = $param["OrderDate"];
+        if (array_key_exists('OrderDate',$param) and $param['OrderDate'] !== null) {
+            $this->OrderDate = $param['OrderDate'];
         }
 
-        if (array_key_exists("OrderTime",$param) and $param["OrderTime"] !== null) {
-            $this->OrderTime = $param["OrderTime"];
+        if (array_key_exists('OrderTime',$param) and $param['OrderTime'] !== null) {
+            $this->OrderTime = $param['OrderTime'];
         }
 
-        if (array_key_exists("OrderActualInSubAccountName",$param) and $param["OrderActualInSubAccountName"] !== null) {
-            $this->OrderActualInSubAccountName = $param["OrderActualInSubAccountName"];
+        if (array_key_exists('OrderActualInSubAccountName',$param) and $param['OrderActualInSubAccountName'] !== null) {
+            $this->OrderActualInSubAccountName = $param['OrderActualInSubAccountName'];
         }
 
-        if (array_key_exists("OrderActualInSubAccountNumber",$param) and $param["OrderActualInSubAccountNumber"] !== null) {
-            $this->OrderActualInSubAccountNumber = $param["OrderActualInSubAccountNumber"];
+        if (array_key_exists('OrderActualInSubAccountNumber',$param) and $param['OrderActualInSubAccountNumber'] !== null) {
+            $this->OrderActualInSubAccountNumber = $param['OrderActualInSubAccountNumber'];
         }
 
-        if (array_key_exists("OrderInSubAccountName",$param) and $param["OrderInSubAccountName"] !== null) {
-            $this->OrderInSubAccountName = $param["OrderInSubAccountName"];
+        if (array_key_exists('OrderInSubAccountName',$param) and $param['OrderInSubAccountName'] !== null) {
+            $this->OrderInSubAccountName = $param['OrderInSubAccountName'];
         }
 
-        if (array_key_exists("OrderInSubAccountNumber",$param) and $param["OrderInSubAccountNumber"] !== null) {
-            $this->OrderInSubAccountNumber = $param["OrderInSubAccountNumber"];
+        if (array_key_exists('OrderInSubAccountNumber',$param) and $param['OrderInSubAccountNumber'] !== null) {
+            $this->OrderInSubAccountNumber = $param['OrderInSubAccountNumber'];
         }
 
-        if (array_key_exists("FrontSequenceNumber",$param) and $param["FrontSequenceNumber"] !== null) {
-            $this->FrontSequenceNumber = $param["FrontSequenceNumber"];
+        if (array_key_exists('FrontSequenceNumber',$param) and $param['FrontSequenceNumber'] !== null) {
+            $this->FrontSequenceNumber = $param['FrontSequenceNumber'];
         }
 
-        if (array_key_exists("FailMessage",$param) and $param["FailMessage"] !== null) {
-            $this->FailMessage = $param["FailMessage"];
+        if (array_key_exists('FailMessage',$param) and $param['FailMessage'] !== null) {
+            $this->FailMessage = $param['FailMessage'];
         }
 
-        if (array_key_exists("RequestType",$param) and $param["RequestType"] !== null) {
-            $this->RequestType = $param["RequestType"];
+        if (array_key_exists('RequestType',$param) and $param['RequestType'] !== null) {
+            $this->RequestType = $param['RequestType'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

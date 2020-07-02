@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -78,21 +78,21 @@ class AiRecognitionTaskFaceResultItem extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
-            $this->Id = $param["Id"];
+        if (array_key_exists('Id',$param) and $param['Id'] !== null) {
+            $this->Id = $param['Id'];
         }
 
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists('Type',$param) and $param['Type'] !== null) {
+            $this->Type = $param['Type'];
         }
 
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("SegmentSet",$param) and $param["SegmentSet"] !== null) {
+        if (array_key_exists('SegmentSet',$param) and $param['SegmentSet'] !== null) {
             $this->SegmentSet = [];
-            foreach ($param["SegmentSet"] as $key => $value){
+            foreach ($param['SegmentSet'] as $key => $value){
                 $obj = new AiRecognitionTaskFaceSegmentItem();
                 $obj->deserialize($value);
                 array_push($this->SegmentSet, $obj);

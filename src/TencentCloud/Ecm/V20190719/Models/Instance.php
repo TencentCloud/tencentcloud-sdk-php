@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -406,120 +406,120 @@ PROTECTIVELY_ISOLATED：表示被安全隔离的实例。
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("InstanceName",$param) and $param["InstanceName"] !== null) {
-            $this->InstanceName = $param["InstanceName"];
+        if (array_key_exists('InstanceName',$param) and $param['InstanceName'] !== null) {
+            $this->InstanceName = $param['InstanceName'];
         }
 
-        if (array_key_exists("InstanceState",$param) and $param["InstanceState"] !== null) {
-            $this->InstanceState = $param["InstanceState"];
+        if (array_key_exists('InstanceState',$param) and $param['InstanceState'] !== null) {
+            $this->InstanceState = $param['InstanceState'];
         }
 
-        if (array_key_exists("Image",$param) and $param["Image"] !== null) {
+        if (array_key_exists('Image',$param) and $param['Image'] !== null) {
             $this->Image = new Image();
-            $this->Image->deserialize($param["Image"]);
+            $this->Image->deserialize($param['Image']);
         }
 
-        if (array_key_exists("SimpleModule",$param) and $param["SimpleModule"] !== null) {
+        if (array_key_exists('SimpleModule',$param) and $param['SimpleModule'] !== null) {
             $this->SimpleModule = new SimpleModule();
-            $this->SimpleModule->deserialize($param["SimpleModule"]);
+            $this->SimpleModule->deserialize($param['SimpleModule']);
         }
 
-        if (array_key_exists("Position",$param) and $param["Position"] !== null) {
+        if (array_key_exists('Position',$param) and $param['Position'] !== null) {
             $this->Position = new Position();
-            $this->Position->deserialize($param["Position"]);
+            $this->Position->deserialize($param['Position']);
         }
 
-        if (array_key_exists("Internet",$param) and $param["Internet"] !== null) {
+        if (array_key_exists('Internet',$param) and $param['Internet'] !== null) {
             $this->Internet = new Internet();
-            $this->Internet->deserialize($param["Internet"]);
+            $this->Internet->deserialize($param['Internet']);
         }
 
-        if (array_key_exists("InstanceTypeConfig",$param) and $param["InstanceTypeConfig"] !== null) {
+        if (array_key_exists('InstanceTypeConfig',$param) and $param['InstanceTypeConfig'] !== null) {
             $this->InstanceTypeConfig = new InstanceTypeConfig();
-            $this->InstanceTypeConfig->deserialize($param["InstanceTypeConfig"]);
+            $this->InstanceTypeConfig->deserialize($param['InstanceTypeConfig']);
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("TagSet",$param) and $param["TagSet"] !== null) {
+        if (array_key_exists('TagSet',$param) and $param['TagSet'] !== null) {
             $this->TagSet = [];
-            foreach ($param["TagSet"] as $key => $value){
+            foreach ($param['TagSet'] as $key => $value){
                 $obj = new Tag();
                 $obj->deserialize($value);
                 array_push($this->TagSet, $obj);
             }
         }
 
-        if (array_key_exists("LatestOperation",$param) and $param["LatestOperation"] !== null) {
-            $this->LatestOperation = $param["LatestOperation"];
+        if (array_key_exists('LatestOperation',$param) and $param['LatestOperation'] !== null) {
+            $this->LatestOperation = $param['LatestOperation'];
         }
 
-        if (array_key_exists("LatestOperationState",$param) and $param["LatestOperationState"] !== null) {
-            $this->LatestOperationState = $param["LatestOperationState"];
+        if (array_key_exists('LatestOperationState',$param) and $param['LatestOperationState'] !== null) {
+            $this->LatestOperationState = $param['LatestOperationState'];
         }
 
-        if (array_key_exists("RestrictState",$param) and $param["RestrictState"] !== null) {
-            $this->RestrictState = $param["RestrictState"];
+        if (array_key_exists('RestrictState',$param) and $param['RestrictState'] !== null) {
+            $this->RestrictState = $param['RestrictState'];
         }
 
-        if (array_key_exists("SystemDiskSize",$param) and $param["SystemDiskSize"] !== null) {
-            $this->SystemDiskSize = $param["SystemDiskSize"];
+        if (array_key_exists('SystemDiskSize',$param) and $param['SystemDiskSize'] !== null) {
+            $this->SystemDiskSize = $param['SystemDiskSize'];
         }
 
-        if (array_key_exists("DataDiskSize",$param) and $param["DataDiskSize"] !== null) {
-            $this->DataDiskSize = $param["DataDiskSize"];
+        if (array_key_exists('DataDiskSize',$param) and $param['DataDiskSize'] !== null) {
+            $this->DataDiskSize = $param['DataDiskSize'];
         }
 
-        if (array_key_exists("UUID",$param) and $param["UUID"] !== null) {
-            $this->UUID = $param["UUID"];
+        if (array_key_exists('UUID',$param) and $param['UUID'] !== null) {
+            $this->UUID = $param['UUID'];
         }
 
-        if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {
-            $this->PayMode = $param["PayMode"];
+        if (array_key_exists('PayMode',$param) and $param['PayMode'] !== null) {
+            $this->PayMode = $param['PayMode'];
         }
 
-        if (array_key_exists("ExpireTime",$param) and $param["ExpireTime"] !== null) {
-            $this->ExpireTime = $param["ExpireTime"];
+        if (array_key_exists('ExpireTime',$param) and $param['ExpireTime'] !== null) {
+            $this->ExpireTime = $param['ExpireTime'];
         }
 
-        if (array_key_exists("IsolatedTime",$param) and $param["IsolatedTime"] !== null) {
-            $this->IsolatedTime = $param["IsolatedTime"];
+        if (array_key_exists('IsolatedTime',$param) and $param['IsolatedTime'] !== null) {
+            $this->IsolatedTime = $param['IsolatedTime'];
         }
 
-        if (array_key_exists("RenewFlag",$param) and $param["RenewFlag"] !== null) {
-            $this->RenewFlag = $param["RenewFlag"];
+        if (array_key_exists('RenewFlag',$param) and $param['RenewFlag'] !== null) {
+            $this->RenewFlag = $param['RenewFlag'];
         }
 
-        if (array_key_exists("ExpireState",$param) and $param["ExpireState"] !== null) {
-            $this->ExpireState = $param["ExpireState"];
+        if (array_key_exists('ExpireState',$param) and $param['ExpireState'] !== null) {
+            $this->ExpireState = $param['ExpireState'];
         }
 
-        if (array_key_exists("SystemDisk",$param) and $param["SystemDisk"] !== null) {
+        if (array_key_exists('SystemDisk',$param) and $param['SystemDisk'] !== null) {
             $this->SystemDisk = new DiskInfo();
-            $this->SystemDisk->deserialize($param["SystemDisk"]);
+            $this->SystemDisk->deserialize($param['SystemDisk']);
         }
 
-        if (array_key_exists("DataDisks",$param) and $param["DataDisks"] !== null) {
+        if (array_key_exists('DataDisks',$param) and $param['DataDisks'] !== null) {
             $this->DataDisks = [];
-            foreach ($param["DataDisks"] as $key => $value){
+            foreach ($param['DataDisks'] as $key => $value){
                 $obj = new DiskInfo();
                 $obj->deserialize($value);
                 array_push($this->DataDisks, $obj);
             }
         }
 
-        if (array_key_exists("NewFlag",$param) and $param["NewFlag"] !== null) {
-            $this->NewFlag = $param["NewFlag"];
+        if (array_key_exists('NewFlag',$param) and $param['NewFlag'] !== null) {
+            $this->NewFlag = $param['NewFlag'];
         }
 
-        if (array_key_exists("SecurityGroupIds",$param) and $param["SecurityGroupIds"] !== null) {
-            $this->SecurityGroupIds = $param["SecurityGroupIds"];
+        if (array_key_exists('SecurityGroupIds',$param) and $param['SecurityGroupIds'] !== null) {
+            $this->SecurityGroupIds = $param['SecurityGroupIds'];
         }
     }
 }

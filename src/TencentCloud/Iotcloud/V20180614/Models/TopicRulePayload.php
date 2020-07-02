@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -25,98 +25,98 @@ use TencentCloud\Common\AbstractModel;
  * @method string getActions() 获取行为的JSON字符串，大部分种类举例如下：
 [
     {
-        "republish": {
-            "topic": "TEST/test"
+        'republish': {
+            'topic': "TEST/test"
         }
     },
     {
-        "forward": {
-            "api": "http://127.0.0.1:8080"
+        'forward': {
+            'api': "http://127.0.0.1:8080"
         }
     },
     {
-        "ckafka": {
-            "instance": {
-                "id": "ckafka-test",
-                "name": ""
+        'ckafka': {
+            'instance': {
+                'id': "ckafka-test",
+                'name': ""
             },
-            "topic": {
-                "id": "topic-test",
-                "name": "test"
+            'topic': {
+                'id': "topic-test",
+                'name': 'test'
             },
-            "region": "gz"
+            'region': 'gz'
         }
     },
     {
-        "cmqqueue": {
-            "queuename": "queue-test-TEST",
-            "region": "gz"
+        'cmqqueue': {
+            'queuename': "queue-test-TEST",
+            'region': 'gz'
         }
     },
     {
-        "mysql": {
-            "instanceid": "cdb-test",
-            "region": "gz",
-            "username": "test",
-            "userpwd": "*****",
-            "dbname": "d_mqtt",
-            "tablename": "t_test",
-            "fieldpairs": [
+        'mysql': {
+            'instanceid': "cdb-test",
+            'region': 'gz',
+            'username': 'test',
+            'userpwd': "*****",
+            'dbname': "d_mqtt",
+            'tablename': "t_test",
+            'fieldpairs': [
                 {
-                    "field": "test",
-                    "value": "test"
+                    'field': 'test',
+                    'value': 'test'
                 }
             ],
-            "devicetype": "CUSTOM"
+            'devicetype': 'CUSTOM'
         }
     }
 ]
  * @method void setActions(string $Actions) 设置行为的JSON字符串，大部分种类举例如下：
 [
     {
-        "republish": {
-            "topic": "TEST/test"
+        'republish': {
+            'topic': "TEST/test"
         }
     },
     {
-        "forward": {
-            "api": "http://127.0.0.1:8080"
+        'forward': {
+            'api': "http://127.0.0.1:8080"
         }
     },
     {
-        "ckafka": {
-            "instance": {
-                "id": "ckafka-test",
-                "name": ""
+        'ckafka': {
+            'instance': {
+                'id': "ckafka-test",
+                'name': ""
             },
-            "topic": {
-                "id": "topic-test",
-                "name": "test"
+            'topic': {
+                'id': "topic-test",
+                'name': 'test'
             },
-            "region": "gz"
+            'region': 'gz'
         }
     },
     {
-        "cmqqueue": {
-            "queuename": "queue-test-TEST",
-            "region": "gz"
+        'cmqqueue': {
+            'queuename': "queue-test-TEST",
+            'region': 'gz'
         }
     },
     {
-        "mysql": {
-            "instanceid": "cdb-test",
-            "region": "gz",
-            "username": "test",
-            "userpwd": "*****",
-            "dbname": "d_mqtt",
-            "tablename": "t_test",
-            "fieldpairs": [
+        'mysql': {
+            'instanceid': "cdb-test",
+            'region': 'gz',
+            'username': 'test',
+            'userpwd': "*****",
+            'dbname': "d_mqtt",
+            'tablename': "t_test",
+            'fieldpairs': [
                 {
-                    "field": "test",
-                    "value": "test"
+                    'field': 'test',
+                    'value': 'test'
                 }
             ],
-            "devicetype": "CUSTOM"
+            'devicetype': 'CUSTOM'
         }
     }
 ]
@@ -136,49 +136,49 @@ class TopicRulePayload extends AbstractModel
      * @var string 行为的JSON字符串，大部分种类举例如下：
 [
     {
-        "republish": {
-            "topic": "TEST/test"
+        'republish': {
+            'topic': "TEST/test"
         }
     },
     {
-        "forward": {
-            "api": "http://127.0.0.1:8080"
+        'forward': {
+            'api': "http://127.0.0.1:8080"
         }
     },
     {
-        "ckafka": {
-            "instance": {
-                "id": "ckafka-test",
-                "name": ""
+        'ckafka': {
+            'instance': {
+                'id': "ckafka-test",
+                'name': ""
             },
-            "topic": {
-                "id": "topic-test",
-                "name": "test"
+            'topic': {
+                'id': "topic-test",
+                'name': 'test'
             },
-            "region": "gz"
+            'region': 'gz'
         }
     },
     {
-        "cmqqueue": {
-            "queuename": "queue-test-TEST",
-            "region": "gz"
+        'cmqqueue': {
+            'queuename': "queue-test-TEST",
+            'region': 'gz'
         }
     },
     {
-        "mysql": {
-            "instanceid": "cdb-test",
-            "region": "gz",
-            "username": "test",
-            "userpwd": "*****",
-            "dbname": "d_mqtt",
-            "tablename": "t_test",
-            "fieldpairs": [
+        'mysql': {
+            'instanceid': "cdb-test",
+            'region': 'gz',
+            'username': 'test',
+            'userpwd': "*****",
+            'dbname': "d_mqtt",
+            'tablename': "t_test",
+            'fieldpairs': [
                 {
-                    "field": "test",
-                    "value": "test"
+                    'field': 'test',
+                    'value': 'test'
                 }
             ],
-            "devicetype": "CUSTOM"
+            'devicetype': 'CUSTOM'
         }
     }
 ]
@@ -200,49 +200,49 @@ class TopicRulePayload extends AbstractModel
      * @param string $Actions 行为的JSON字符串，大部分种类举例如下：
 [
     {
-        "republish": {
-            "topic": "TEST/test"
+        'republish': {
+            'topic': "TEST/test"
         }
     },
     {
-        "forward": {
-            "api": "http://127.0.0.1:8080"
+        'forward': {
+            'api': "http://127.0.0.1:8080"
         }
     },
     {
-        "ckafka": {
-            "instance": {
-                "id": "ckafka-test",
-                "name": ""
+        'ckafka': {
+            'instance': {
+                'id': "ckafka-test",
+                'name': ""
             },
-            "topic": {
-                "id": "topic-test",
-                "name": "test"
+            'topic': {
+                'id': "topic-test",
+                'name': 'test'
             },
-            "region": "gz"
+            'region': 'gz'
         }
     },
     {
-        "cmqqueue": {
-            "queuename": "queue-test-TEST",
-            "region": "gz"
+        'cmqqueue': {
+            'queuename': "queue-test-TEST",
+            'region': 'gz'
         }
     },
     {
-        "mysql": {
-            "instanceid": "cdb-test",
-            "region": "gz",
-            "username": "test",
-            "userpwd": "*****",
-            "dbname": "d_mqtt",
-            "tablename": "t_test",
-            "fieldpairs": [
+        'mysql': {
+            'instanceid': "cdb-test",
+            'region': 'gz',
+            'username': 'test',
+            'userpwd': "*****",
+            'dbname': "d_mqtt",
+            'tablename': "t_test",
+            'fieldpairs': [
                 {
-                    "field": "test",
-                    "value": "test"
+                    'field': 'test',
+                    'value': 'test'
                 }
             ],
-            "devicetype": "CUSTOM"
+            'devicetype': 'CUSTOM'
         }
     }
 ]
@@ -262,20 +262,20 @@ class TopicRulePayload extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Sql",$param) and $param["Sql"] !== null) {
-            $this->Sql = $param["Sql"];
+        if (array_key_exists('Sql',$param) and $param['Sql'] !== null) {
+            $this->Sql = $param['Sql'];
         }
 
-        if (array_key_exists("Actions",$param) and $param["Actions"] !== null) {
-            $this->Actions = $param["Actions"];
+        if (array_key_exists('Actions',$param) and $param['Actions'] !== null) {
+            $this->Actions = $param['Actions'];
         }
 
-        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
-            $this->Description = $param["Description"];
+        if (array_key_exists('Description',$param) and $param['Description'] !== null) {
+            $this->Description = $param['Description'];
         }
 
-        if (array_key_exists("RuleDisabled",$param) and $param["RuleDisabled"] !== null) {
-            $this->RuleDisabled = $param["RuleDisabled"];
+        if (array_key_exists('RuleDisabled',$param) and $param['RuleDisabled'] !== null) {
+            $this->RuleDisabled = $param['RuleDisabled'];
         }
     }
 }

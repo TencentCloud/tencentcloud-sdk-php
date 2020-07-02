@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -114,40 +114,40 @@ class ModifyLiveCallbackTemplateRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TemplateId",$param) and $param["TemplateId"] !== null) {
-            $this->TemplateId = $param["TemplateId"];
+        if (array_key_exists('TemplateId',$param) and $param['TemplateId'] !== null) {
+            $this->TemplateId = $param['TemplateId'];
         }
 
-        if (array_key_exists("TemplateName",$param) and $param["TemplateName"] !== null) {
-            $this->TemplateName = $param["TemplateName"];
+        if (array_key_exists('TemplateName',$param) and $param['TemplateName'] !== null) {
+            $this->TemplateName = $param['TemplateName'];
         }
 
-        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
-            $this->Description = $param["Description"];
+        if (array_key_exists('Description',$param) and $param['Description'] !== null) {
+            $this->Description = $param['Description'];
         }
 
-        if (array_key_exists("StreamBeginNotifyUrl",$param) and $param["StreamBeginNotifyUrl"] !== null) {
-            $this->StreamBeginNotifyUrl = $param["StreamBeginNotifyUrl"];
+        if (array_key_exists('StreamBeginNotifyUrl',$param) and $param['StreamBeginNotifyUrl'] !== null) {
+            $this->StreamBeginNotifyUrl = $param['StreamBeginNotifyUrl'];
         }
 
-        if (array_key_exists("StreamEndNotifyUrl",$param) and $param["StreamEndNotifyUrl"] !== null) {
-            $this->StreamEndNotifyUrl = $param["StreamEndNotifyUrl"];
+        if (array_key_exists('StreamEndNotifyUrl',$param) and $param['StreamEndNotifyUrl'] !== null) {
+            $this->StreamEndNotifyUrl = $param['StreamEndNotifyUrl'];
         }
 
-        if (array_key_exists("RecordNotifyUrl",$param) and $param["RecordNotifyUrl"] !== null) {
-            $this->RecordNotifyUrl = $param["RecordNotifyUrl"];
+        if (array_key_exists('RecordNotifyUrl',$param) and $param['RecordNotifyUrl'] !== null) {
+            $this->RecordNotifyUrl = $param['RecordNotifyUrl'];
         }
 
-        if (array_key_exists("SnapshotNotifyUrl",$param) and $param["SnapshotNotifyUrl"] !== null) {
-            $this->SnapshotNotifyUrl = $param["SnapshotNotifyUrl"];
+        if (array_key_exists('SnapshotNotifyUrl',$param) and $param['SnapshotNotifyUrl'] !== null) {
+            $this->SnapshotNotifyUrl = $param['SnapshotNotifyUrl'];
         }
 
-        if (array_key_exists("PornCensorshipNotifyUrl",$param) and $param["PornCensorshipNotifyUrl"] !== null) {
-            $this->PornCensorshipNotifyUrl = $param["PornCensorshipNotifyUrl"];
+        if (array_key_exists('PornCensorshipNotifyUrl',$param) and $param['PornCensorshipNotifyUrl'] !== null) {
+            $this->PornCensorshipNotifyUrl = $param['PornCensorshipNotifyUrl'];
         }
 
-        if (array_key_exists("CallbackKey",$param) and $param["CallbackKey"] !== null) {
-            $this->CallbackKey = $param["CallbackKey"];
+        if (array_key_exists('CallbackKey',$param) and $param['CallbackKey'] !== null) {
+            $this->CallbackKey = $param['CallbackKey'];
         }
     }
 }

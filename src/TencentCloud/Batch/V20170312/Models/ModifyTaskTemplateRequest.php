@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -70,21 +70,21 @@ class ModifyTaskTemplateRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TaskTemplateId",$param) and $param["TaskTemplateId"] !== null) {
-            $this->TaskTemplateId = $param["TaskTemplateId"];
+        if (array_key_exists('TaskTemplateId',$param) and $param['TaskTemplateId'] !== null) {
+            $this->TaskTemplateId = $param['TaskTemplateId'];
         }
 
-        if (array_key_exists("TaskTemplateName",$param) and $param["TaskTemplateName"] !== null) {
-            $this->TaskTemplateName = $param["TaskTemplateName"];
+        if (array_key_exists('TaskTemplateName',$param) and $param['TaskTemplateName'] !== null) {
+            $this->TaskTemplateName = $param['TaskTemplateName'];
         }
 
-        if (array_key_exists("TaskTemplateDescription",$param) and $param["TaskTemplateDescription"] !== null) {
-            $this->TaskTemplateDescription = $param["TaskTemplateDescription"];
+        if (array_key_exists('TaskTemplateDescription',$param) and $param['TaskTemplateDescription'] !== null) {
+            $this->TaskTemplateDescription = $param['TaskTemplateDescription'];
         }
 
-        if (array_key_exists("TaskTemplateInfo",$param) and $param["TaskTemplateInfo"] !== null) {
+        if (array_key_exists('TaskTemplateInfo',$param) and $param['TaskTemplateInfo'] !== null) {
             $this->TaskTemplateInfo = new Task();
-            $this->TaskTemplateInfo->deserialize($param["TaskTemplateInfo"]);
+            $this->TaskTemplateInfo->deserialize($param['TaskTemplateInfo']);
         }
     }
 }

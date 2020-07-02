@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -74,19 +74,19 @@ class Action extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Topic",$param) and $param["Topic"] !== null) {
+        if (array_key_exists('Topic',$param) and $param['Topic'] !== null) {
             $this->Topic = new TopicAction();
-            $this->Topic->deserialize($param["Topic"]);
+            $this->Topic->deserialize($param['Topic']);
         }
 
-        if (array_key_exists("Service",$param) and $param["Service"] !== null) {
+        if (array_key_exists('Service',$param) and $param['Service'] !== null) {
             $this->Service = new ServiceAction();
-            $this->Service->deserialize($param["Service"]);
+            $this->Service->deserialize($param['Service']);
         }
 
-        if (array_key_exists("Ckafka",$param) and $param["Ckafka"] !== null) {
+        if (array_key_exists('Ckafka',$param) and $param['Ckafka'] !== null) {
             $this->Ckafka = new CkafkaAction();
-            $this->Ckafka->deserialize($param["Ckafka"]);
+            $this->Ckafka->deserialize($param['Ckafka']);
         }
     }
 }

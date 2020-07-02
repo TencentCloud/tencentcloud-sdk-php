@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -90,30 +90,30 @@ class RollbackInstancesInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("Strategy",$param) and $param["Strategy"] !== null) {
-            $this->Strategy = $param["Strategy"];
+        if (array_key_exists('Strategy',$param) and $param['Strategy'] !== null) {
+            $this->Strategy = $param['Strategy'];
         }
 
-        if (array_key_exists("RollbackTime",$param) and $param["RollbackTime"] !== null) {
-            $this->RollbackTime = $param["RollbackTime"];
+        if (array_key_exists('RollbackTime',$param) and $param['RollbackTime'] !== null) {
+            $this->RollbackTime = $param['RollbackTime'];
         }
 
-        if (array_key_exists("Databases",$param) and $param["Databases"] !== null) {
+        if (array_key_exists('Databases',$param) and $param['Databases'] !== null) {
             $this->Databases = [];
-            foreach ($param["Databases"] as $key => $value){
+            foreach ($param['Databases'] as $key => $value){
                 $obj = new RollbackDBName();
                 $obj->deserialize($value);
                 array_push($this->Databases, $obj);
             }
         }
 
-        if (array_key_exists("Tables",$param) and $param["Tables"] !== null) {
+        if (array_key_exists('Tables',$param) and $param['Tables'] !== null) {
             $this->Tables = [];
-            foreach ($param["Tables"] as $key => $value){
+            foreach ($param['Tables'] as $key => $value){
                 $obj = new RollbackTables();
                 $obj->deserialize($value);
                 array_push($this->Tables, $obj);

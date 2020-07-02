@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -102,42 +102,42 @@ class ModifyDirectConnectTunnelAttributeRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DirectConnectTunnelId",$param) and $param["DirectConnectTunnelId"] !== null) {
-            $this->DirectConnectTunnelId = $param["DirectConnectTunnelId"];
+        if (array_key_exists('DirectConnectTunnelId',$param) and $param['DirectConnectTunnelId'] !== null) {
+            $this->DirectConnectTunnelId = $param['DirectConnectTunnelId'];
         }
 
-        if (array_key_exists("DirectConnectTunnelName",$param) and $param["DirectConnectTunnelName"] !== null) {
-            $this->DirectConnectTunnelName = $param["DirectConnectTunnelName"];
+        if (array_key_exists('DirectConnectTunnelName',$param) and $param['DirectConnectTunnelName'] !== null) {
+            $this->DirectConnectTunnelName = $param['DirectConnectTunnelName'];
         }
 
-        if (array_key_exists("BgpPeer",$param) and $param["BgpPeer"] !== null) {
+        if (array_key_exists('BgpPeer',$param) and $param['BgpPeer'] !== null) {
             $this->BgpPeer = new BgpPeer();
-            $this->BgpPeer->deserialize($param["BgpPeer"]);
+            $this->BgpPeer->deserialize($param['BgpPeer']);
         }
 
-        if (array_key_exists("RouteFilterPrefixes",$param) and $param["RouteFilterPrefixes"] !== null) {
+        if (array_key_exists('RouteFilterPrefixes',$param) and $param['RouteFilterPrefixes'] !== null) {
             $this->RouteFilterPrefixes = [];
-            foreach ($param["RouteFilterPrefixes"] as $key => $value){
+            foreach ($param['RouteFilterPrefixes'] as $key => $value){
                 $obj = new RouteFilterPrefix();
                 $obj->deserialize($value);
                 array_push($this->RouteFilterPrefixes, $obj);
             }
         }
 
-        if (array_key_exists("TencentAddress",$param) and $param["TencentAddress"] !== null) {
-            $this->TencentAddress = $param["TencentAddress"];
+        if (array_key_exists('TencentAddress',$param) and $param['TencentAddress'] !== null) {
+            $this->TencentAddress = $param['TencentAddress'];
         }
 
-        if (array_key_exists("CustomerAddress",$param) and $param["CustomerAddress"] !== null) {
-            $this->CustomerAddress = $param["CustomerAddress"];
+        if (array_key_exists('CustomerAddress',$param) and $param['CustomerAddress'] !== null) {
+            $this->CustomerAddress = $param['CustomerAddress'];
         }
 
-        if (array_key_exists("Bandwidth",$param) and $param["Bandwidth"] !== null) {
-            $this->Bandwidth = $param["Bandwidth"];
+        if (array_key_exists('Bandwidth',$param) and $param['Bandwidth'] !== null) {
+            $this->Bandwidth = $param['Bandwidth'];
         }
 
-        if (array_key_exists("TencentBackupAddress",$param) and $param["TencentBackupAddress"] !== null) {
-            $this->TencentBackupAddress = $param["TencentBackupAddress"];
+        if (array_key_exists('TencentBackupAddress',$param) and $param['TencentBackupAddress'] !== null) {
+            $this->TencentBackupAddress = $param['TencentBackupAddress'];
         }
     }
 }

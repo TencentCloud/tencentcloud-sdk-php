@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -70,18 +70,18 @@ class AdaptiveStreamTemplate extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Video",$param) and $param["Video"] !== null) {
+        if (array_key_exists('Video',$param) and $param['Video'] !== null) {
             $this->Video = new VideoTemplateInfo();
-            $this->Video->deserialize($param["Video"]);
+            $this->Video->deserialize($param['Video']);
         }
 
-        if (array_key_exists("Audio",$param) and $param["Audio"] !== null) {
+        if (array_key_exists('Audio',$param) and $param['Audio'] !== null) {
             $this->Audio = new AudioTemplateInfo();
-            $this->Audio->deserialize($param["Audio"]);
+            $this->Audio->deserialize($param['Audio']);
         }
 
-        if (array_key_exists("RemoveAudio",$param) and $param["RemoveAudio"] !== null) {
-            $this->RemoveAudio = $param["RemoveAudio"];
+        if (array_key_exists('RemoveAudio',$param) and $param['RemoveAudio'] !== null) {
+            $this->RemoveAudio = $param['RemoveAudio'];
         }
     }
 }

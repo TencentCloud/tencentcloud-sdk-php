@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -126,36 +126,36 @@ class AgentVul extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
-            $this->Id = $param["Id"];
+        if (array_key_exists('Id',$param) and $param['Id'] !== null) {
+            $this->Id = $param['Id'];
         }
 
-        if (array_key_exists("MachineIp",$param) and $param["MachineIp"] !== null) {
-            $this->MachineIp = $param["MachineIp"];
+        if (array_key_exists('MachineIp',$param) and $param['MachineIp'] !== null) {
+            $this->MachineIp = $param['MachineIp'];
         }
 
-        if (array_key_exists("VulName",$param) and $param["VulName"] !== null) {
-            $this->VulName = $param["VulName"];
+        if (array_key_exists('VulName',$param) and $param['VulName'] !== null) {
+            $this->VulName = $param['VulName'];
         }
 
-        if (array_key_exists("VulLevel",$param) and $param["VulLevel"] !== null) {
-            $this->VulLevel = $param["VulLevel"];
+        if (array_key_exists('VulLevel',$param) and $param['VulLevel'] !== null) {
+            $this->VulLevel = $param['VulLevel'];
         }
 
-        if (array_key_exists("LastScanTime",$param) and $param["LastScanTime"] !== null) {
-            $this->LastScanTime = $param["LastScanTime"];
+        if (array_key_exists('LastScanTime',$param) and $param['LastScanTime'] !== null) {
+            $this->LastScanTime = $param['LastScanTime'];
         }
 
-        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
-            $this->Description = $param["Description"];
+        if (array_key_exists('Description',$param) and $param['Description'] !== null) {
+            $this->Description = $param['Description'];
         }
 
-        if (array_key_exists("VulId",$param) and $param["VulId"] !== null) {
-            $this->VulId = $param["VulId"];
+        if (array_key_exists('VulId',$param) and $param['VulId'] !== null) {
+            $this->VulId = $param['VulId'];
         }
 
-        if (array_key_exists("VulStatus",$param) and $param["VulStatus"] !== null) {
-            $this->VulStatus = $param["VulStatus"];
+        if (array_key_exists('VulStatus',$param) and $param['VulStatus'] !== null) {
+            $this->VulStatus = $param['VulStatus'];
         }
     }
 }

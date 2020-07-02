@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -134,52 +134,52 @@ class CostComponentSet extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ComponentCodeName",$param) and $param["ComponentCodeName"] !== null) {
-            $this->ComponentCodeName = $param["ComponentCodeName"];
+        if (array_key_exists('ComponentCodeName',$param) and $param['ComponentCodeName'] !== null) {
+            $this->ComponentCodeName = $param['ComponentCodeName'];
         }
 
-        if (array_key_exists("ItemCodeName",$param) and $param["ItemCodeName"] !== null) {
-            $this->ItemCodeName = $param["ItemCodeName"];
+        if (array_key_exists('ItemCodeName',$param) and $param['ItemCodeName'] !== null) {
+            $this->ItemCodeName = $param['ItemCodeName'];
         }
 
-        if (array_key_exists("SinglePrice",$param) and $param["SinglePrice"] !== null) {
-            $this->SinglePrice = $param["SinglePrice"];
+        if (array_key_exists('SinglePrice',$param) and $param['SinglePrice'] !== null) {
+            $this->SinglePrice = $param['SinglePrice'];
         }
 
-        if (array_key_exists("PriceUnit",$param) and $param["PriceUnit"] !== null) {
-            $this->PriceUnit = $param["PriceUnit"];
+        if (array_key_exists('PriceUnit',$param) and $param['PriceUnit'] !== null) {
+            $this->PriceUnit = $param['PriceUnit'];
         }
 
-        if (array_key_exists("UsedAmount",$param) and $param["UsedAmount"] !== null) {
-            $this->UsedAmount = $param["UsedAmount"];
+        if (array_key_exists('UsedAmount',$param) and $param['UsedAmount'] !== null) {
+            $this->UsedAmount = $param['UsedAmount'];
         }
 
-        if (array_key_exists("UsedAmountUnit",$param) and $param["UsedAmountUnit"] !== null) {
-            $this->UsedAmountUnit = $param["UsedAmountUnit"];
+        if (array_key_exists('UsedAmountUnit',$param) and $param['UsedAmountUnit'] !== null) {
+            $this->UsedAmountUnit = $param['UsedAmountUnit'];
         }
 
-        if (array_key_exists("Cost",$param) and $param["Cost"] !== null) {
-            $this->Cost = $param["Cost"];
+        if (array_key_exists('Cost',$param) and $param['Cost'] !== null) {
+            $this->Cost = $param['Cost'];
         }
 
-        if (array_key_exists("Discount",$param) and $param["Discount"] !== null) {
-            $this->Discount = $param["Discount"];
+        if (array_key_exists('Discount',$param) and $param['Discount'] !== null) {
+            $this->Discount = $param['Discount'];
         }
 
-        if (array_key_exists("RealCost",$param) and $param["RealCost"] !== null) {
-            $this->RealCost = $param["RealCost"];
+        if (array_key_exists('RealCost',$param) and $param['RealCost'] !== null) {
+            $this->RealCost = $param['RealCost'];
         }
 
-        if (array_key_exists("VoucherPayAmount",$param) and $param["VoucherPayAmount"] !== null) {
-            $this->VoucherPayAmount = $param["VoucherPayAmount"];
+        if (array_key_exists('VoucherPayAmount',$param) and $param['VoucherPayAmount'] !== null) {
+            $this->VoucherPayAmount = $param['VoucherPayAmount'];
         }
 
-        if (array_key_exists("CashPayAmount",$param) and $param["CashPayAmount"] !== null) {
-            $this->CashPayAmount = $param["CashPayAmount"];
+        if (array_key_exists('CashPayAmount',$param) and $param['CashPayAmount'] !== null) {
+            $this->CashPayAmount = $param['CashPayAmount'];
         }
 
-        if (array_key_exists("IncentivePayAmount",$param) and $param["IncentivePayAmount"] !== null) {
-            $this->IncentivePayAmount = $param["IncentivePayAmount"];
+        if (array_key_exists('IncentivePayAmount',$param) and $param['IncentivePayAmount'] !== null) {
+            $this->IncentivePayAmount = $param['IncentivePayAmount'];
         }
     }
 }

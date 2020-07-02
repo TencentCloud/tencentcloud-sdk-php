@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -54,17 +54,17 @@ class VulInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("VulList",$param) and $param["VulList"] !== null) {
+        if (array_key_exists('VulList',$param) and $param['VulList'] !== null) {
             $this->VulList = [];
-            foreach ($param["VulList"] as $key => $value){
+            foreach ($param['VulList'] as $key => $value){
                 $obj = new VulList();
                 $obj->deserialize($value);
                 array_push($this->VulList, $obj);
             }
         }
 
-        if (array_key_exists("VulFileScore",$param) and $param["VulFileScore"] !== null) {
-            $this->VulFileScore = $param["VulFileScore"];
+        if (array_key_exists('VulFileScore',$param) and $param['VulFileScore'] !== null) {
+            $this->VulFileScore = $param['VulFileScore'];
         }
     }
 }

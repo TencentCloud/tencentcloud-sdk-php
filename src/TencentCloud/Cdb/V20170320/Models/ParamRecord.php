@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -86,28 +86,28 @@ class ParamRecord extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("ParamName",$param) and $param["ParamName"] !== null) {
-            $this->ParamName = $param["ParamName"];
+        if (array_key_exists('ParamName',$param) and $param['ParamName'] !== null) {
+            $this->ParamName = $param['ParamName'];
         }
 
-        if (array_key_exists("OldValue",$param) and $param["OldValue"] !== null) {
-            $this->OldValue = $param["OldValue"];
+        if (array_key_exists('OldValue',$param) and $param['OldValue'] !== null) {
+            $this->OldValue = $param['OldValue'];
         }
 
-        if (array_key_exists("NewValue",$param) and $param["NewValue"] !== null) {
-            $this->NewValue = $param["NewValue"];
+        if (array_key_exists('NewValue',$param) and $param['NewValue'] !== null) {
+            $this->NewValue = $param['NewValue'];
         }
 
-        if (array_key_exists("IsSucess",$param) and $param["IsSucess"] !== null) {
-            $this->IsSucess = $param["IsSucess"];
+        if (array_key_exists('IsSucess',$param) and $param['IsSucess'] !== null) {
+            $this->IsSucess = $param['IsSucess'];
         }
 
-        if (array_key_exists("ModifyTime",$param) and $param["ModifyTime"] !== null) {
-            $this->ModifyTime = $param["ModifyTime"];
+        if (array_key_exists('ModifyTime',$param) and $param['ModifyTime'] !== null) {
+            $this->ModifyTime = $param['ModifyTime'];
         }
     }
 }

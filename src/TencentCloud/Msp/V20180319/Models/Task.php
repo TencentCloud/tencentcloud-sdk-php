@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -118,47 +118,47 @@ class Task extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
-            $this->TaskId = $param["TaskId"];
+        if (array_key_exists('TaskId',$param) and $param['TaskId'] !== null) {
+            $this->TaskId = $param['TaskId'];
         }
 
-        if (array_key_exists("TaskName",$param) and $param["TaskName"] !== null) {
-            $this->TaskName = $param["TaskName"];
+        if (array_key_exists('TaskName',$param) and $param['TaskName'] !== null) {
+            $this->TaskName = $param['TaskName'];
         }
 
-        if (array_key_exists("MigrationType",$param) and $param["MigrationType"] !== null) {
-            $this->MigrationType = $param["MigrationType"];
+        if (array_key_exists('MigrationType',$param) and $param['MigrationType'] !== null) {
+            $this->MigrationType = $param['MigrationType'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
-            $this->ProjectId = $param["ProjectId"];
+        if (array_key_exists('ProjectId',$param) and $param['ProjectId'] !== null) {
+            $this->ProjectId = $param['ProjectId'];
         }
 
-        if (array_key_exists("ProjectName",$param) and $param["ProjectName"] !== null) {
-            $this->ProjectName = $param["ProjectName"];
+        if (array_key_exists('ProjectName',$param) and $param['ProjectName'] !== null) {
+            $this->ProjectName = $param['ProjectName'];
         }
 
-        if (array_key_exists("SrcInfo",$param) and $param["SrcInfo"] !== null) {
+        if (array_key_exists('SrcInfo',$param) and $param['SrcInfo'] !== null) {
             $this->SrcInfo = new SrcInfo();
-            $this->SrcInfo->deserialize($param["SrcInfo"]);
+            $this->SrcInfo->deserialize($param['SrcInfo']);
         }
 
-        if (array_key_exists("MigrationTimeLine",$param) and $param["MigrationTimeLine"] !== null) {
+        if (array_key_exists('MigrationTimeLine',$param) and $param['MigrationTimeLine'] !== null) {
             $this->MigrationTimeLine = new TimeObj();
-            $this->MigrationTimeLine->deserialize($param["MigrationTimeLine"]);
+            $this->MigrationTimeLine->deserialize($param['MigrationTimeLine']);
         }
 
-        if (array_key_exists("Updated",$param) and $param["Updated"] !== null) {
-            $this->Updated = $param["Updated"];
+        if (array_key_exists('Updated',$param) and $param['Updated'] !== null) {
+            $this->Updated = $param['Updated'];
         }
 
-        if (array_key_exists("DstInfo",$param) and $param["DstInfo"] !== null) {
+        if (array_key_exists('DstInfo',$param) and $param['DstInfo'] !== null) {
             $this->DstInfo = new DstInfo();
-            $this->DstInfo->deserialize($param["DstInfo"]);
+            $this->DstInfo->deserialize($param['DstInfo']);
         }
     }
 }

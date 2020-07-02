@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPolicyName(array $PolicyName) 设置审计策略名称。
  * @method string getSql() 获取SQL 语句。支持模糊匹配。
  * @method void setSql(string $Sql) 设置SQL 语句。支持模糊匹配。
- * @method string getSqlType() 获取SQL 类型。目前支持："SELECT", "INSERT", "UPDATE", "DELETE", "CREATE", "DROP", "ALTER", "SET", "REPLACE", "EXECUTE"。
- * @method void setSqlType(string $SqlType) 设置SQL 类型。目前支持："SELECT", "INSERT", "UPDATE", "DELETE", "CREATE", "DROP", "ALTER", "SET", "REPLACE", "EXECUTE"。
+ * @method string getSqlType() 获取SQL 类型。目前支持：'SELECT', 'INSERT', 'UPDATE', 'DELETE', 'CREATE', 'DROP', 'ALTER', 'SET', 'REPLACE', 'EXECUTE'。
+ * @method void setSqlType(string $SqlType) 设置SQL 类型。目前支持：'SELECT', 'INSERT', 'UPDATE', 'DELETE', 'CREATE', 'DROP', 'ALTER', 'SET', 'REPLACE', 'EXECUTE'。
  * @method integer getExecTime() 获取执行时间。单位为：ms。表示筛选执行时间大于该值的审计日志。
  * @method void setExecTime(integer $ExecTime) 设置执行时间。单位为：ms。表示筛选执行时间大于该值的审计日志。
  * @method integer getAffectRows() 获取影响行数。表示筛选影响行数大于该值的审计日志。
@@ -72,7 +72,7 @@ class AuditLogFilter extends AbstractModel
     public $Sql;
 
     /**
-     * @var string SQL 类型。目前支持："SELECT", "INSERT", "UPDATE", "DELETE", "CREATE", "DROP", "ALTER", "SET", "REPLACE", "EXECUTE"。
+     * @var string SQL 类型。目前支持：'SELECT', 'INSERT', 'UPDATE', 'DELETE', 'CREATE', 'DROP', 'ALTER', 'SET', 'REPLACE', 'EXECUTE'。
      */
     public $SqlType;
 
@@ -93,7 +93,7 @@ class AuditLogFilter extends AbstractModel
      * @param array $TableName 表名称。
      * @param array $PolicyName 审计策略名称。
      * @param string $Sql SQL 语句。支持模糊匹配。
-     * @param string $SqlType SQL 类型。目前支持："SELECT", "INSERT", "UPDATE", "DELETE", "CREATE", "DROP", "ALTER", "SET", "REPLACE", "EXECUTE"。
+     * @param string $SqlType SQL 类型。目前支持：'SELECT', 'INSERT', 'UPDATE', 'DELETE', 'CREATE', 'DROP', 'ALTER', 'SET', 'REPLACE', 'EXECUTE'。
      * @param integer $ExecTime 执行时间。单位为：ms。表示筛选执行时间大于该值的审计日志。
      * @param integer $AffectRows 影响行数。表示筛选影响行数大于该值的审计日志。
      */
@@ -110,40 +110,40 @@ class AuditLogFilter extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Host",$param) and $param["Host"] !== null) {
-            $this->Host = $param["Host"];
+        if (array_key_exists('Host',$param) and $param['Host'] !== null) {
+            $this->Host = $param['Host'];
         }
 
-        if (array_key_exists("User",$param) and $param["User"] !== null) {
-            $this->User = $param["User"];
+        if (array_key_exists('User',$param) and $param['User'] !== null) {
+            $this->User = $param['User'];
         }
 
-        if (array_key_exists("DBName",$param) and $param["DBName"] !== null) {
-            $this->DBName = $param["DBName"];
+        if (array_key_exists('DBName',$param) and $param['DBName'] !== null) {
+            $this->DBName = $param['DBName'];
         }
 
-        if (array_key_exists("TableName",$param) and $param["TableName"] !== null) {
-            $this->TableName = $param["TableName"];
+        if (array_key_exists('TableName',$param) and $param['TableName'] !== null) {
+            $this->TableName = $param['TableName'];
         }
 
-        if (array_key_exists("PolicyName",$param) and $param["PolicyName"] !== null) {
-            $this->PolicyName = $param["PolicyName"];
+        if (array_key_exists('PolicyName',$param) and $param['PolicyName'] !== null) {
+            $this->PolicyName = $param['PolicyName'];
         }
 
-        if (array_key_exists("Sql",$param) and $param["Sql"] !== null) {
-            $this->Sql = $param["Sql"];
+        if (array_key_exists('Sql',$param) and $param['Sql'] !== null) {
+            $this->Sql = $param['Sql'];
         }
 
-        if (array_key_exists("SqlType",$param) and $param["SqlType"] !== null) {
-            $this->SqlType = $param["SqlType"];
+        if (array_key_exists('SqlType',$param) and $param['SqlType'] !== null) {
+            $this->SqlType = $param['SqlType'];
         }
 
-        if (array_key_exists("ExecTime",$param) and $param["ExecTime"] !== null) {
-            $this->ExecTime = $param["ExecTime"];
+        if (array_key_exists('ExecTime',$param) and $param['ExecTime'] !== null) {
+            $this->ExecTime = $param['ExecTime'];
         }
 
-        if (array_key_exists("AffectRows",$param) and $param["AffectRows"] !== null) {
-            $this->AffectRows = $param["AffectRows"];
+        if (array_key_exists('AffectRows',$param) and $param['AffectRows'] !== null) {
+            $this->AffectRows = $param['AffectRows'];
         }
     }
 }

@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -62,26 +62,26 @@ class EntityRelationContent extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Object",$param) and $param["Object"] !== null) {
+        if (array_key_exists('Object',$param) and $param['Object'] !== null) {
             $this->Object = [];
-            foreach ($param["Object"] as $key => $value){
+            foreach ($param['Object'] as $key => $value){
                 $obj = new EntityRelationObject();
                 $obj->deserialize($value);
                 array_push($this->Object, $obj);
             }
         }
 
-        if (array_key_exists("Subject",$param) and $param["Subject"] !== null) {
+        if (array_key_exists('Subject',$param) and $param['Subject'] !== null) {
             $this->Subject = [];
-            foreach ($param["Subject"] as $key => $value){
+            foreach ($param['Subject'] as $key => $value){
                 $obj = new EntityRelationSubject();
                 $obj->deserialize($value);
                 array_push($this->Subject, $obj);
             }
         }
 
-        if (array_key_exists("Relation",$param) and $param["Relation"] !== null) {
-            $this->Relation = $param["Relation"];
+        if (array_key_exists('Relation',$param) and $param['Relation'] !== null) {
+            $this->Relation = $param['Relation'];
         }
     }
 }

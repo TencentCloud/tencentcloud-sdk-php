@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPublicIpAddresses(array $PublicIpAddresses) 设置绑定NAT网关的弹性IP数组，其中AddressCount和PublicAddresses至少传递一个。
  * @method string getZone() 获取可用区，形如：`ap-guangzhou-1`。
  * @method void setZone(string $Zone) 设置可用区，形如：`ap-guangzhou-1`。
- * @method array getTags() 获取指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
- * @method void setTags(array $Tags) 设置指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
+ * @method array getTags() 获取指定绑定的标签列表，例如：[{'Key': 'city', 'Value': 'shanghai'}]
+ * @method void setTags(array $Tags) 设置指定绑定的标签列表，例如：[{'Key': 'city', 'Value': 'shanghai'}]
  */
 class CreateNatGatewayRequest extends AbstractModel
 {
@@ -75,7 +75,7 @@ class CreateNatGatewayRequest extends AbstractModel
     public $Zone;
 
     /**
-     * @var array 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
+     * @var array 指定绑定的标签列表，例如：[{'Key': 'city', 'Value': 'shanghai'}]
      */
     public $Tags;
 
@@ -87,7 +87,7 @@ class CreateNatGatewayRequest extends AbstractModel
      * @param integer $AddressCount 需要申请的弹性IP个数，系统会按您的要求生产N个弹性IP，其中AddressCount和PublicAddresses至少传递一个。
      * @param array $PublicIpAddresses 绑定NAT网关的弹性IP数组，其中AddressCount和PublicAddresses至少传递一个。
      * @param string $Zone 可用区，形如：`ap-guangzhou-1`。
-     * @param array $Tags 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
+     * @param array $Tags 指定绑定的标签列表，例如：[{'Key': 'city', 'Value': 'shanghai'}]
      */
     function __construct()
     {
@@ -102,37 +102,37 @@ class CreateNatGatewayRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("NatGatewayName",$param) and $param["NatGatewayName"] !== null) {
-            $this->NatGatewayName = $param["NatGatewayName"];
+        if (array_key_exists('NatGatewayName',$param) and $param['NatGatewayName'] !== null) {
+            $this->NatGatewayName = $param['NatGatewayName'];
         }
 
-        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
-            $this->VpcId = $param["VpcId"];
+        if (array_key_exists('VpcId',$param) and $param['VpcId'] !== null) {
+            $this->VpcId = $param['VpcId'];
         }
 
-        if (array_key_exists("InternetMaxBandwidthOut",$param) and $param["InternetMaxBandwidthOut"] !== null) {
-            $this->InternetMaxBandwidthOut = $param["InternetMaxBandwidthOut"];
+        if (array_key_exists('InternetMaxBandwidthOut',$param) and $param['InternetMaxBandwidthOut'] !== null) {
+            $this->InternetMaxBandwidthOut = $param['InternetMaxBandwidthOut'];
         }
 
-        if (array_key_exists("MaxConcurrentConnection",$param) and $param["MaxConcurrentConnection"] !== null) {
-            $this->MaxConcurrentConnection = $param["MaxConcurrentConnection"];
+        if (array_key_exists('MaxConcurrentConnection',$param) and $param['MaxConcurrentConnection'] !== null) {
+            $this->MaxConcurrentConnection = $param['MaxConcurrentConnection'];
         }
 
-        if (array_key_exists("AddressCount",$param) and $param["AddressCount"] !== null) {
-            $this->AddressCount = $param["AddressCount"];
+        if (array_key_exists('AddressCount',$param) and $param['AddressCount'] !== null) {
+            $this->AddressCount = $param['AddressCount'];
         }
 
-        if (array_key_exists("PublicIpAddresses",$param) and $param["PublicIpAddresses"] !== null) {
-            $this->PublicIpAddresses = $param["PublicIpAddresses"];
+        if (array_key_exists('PublicIpAddresses',$param) and $param['PublicIpAddresses'] !== null) {
+            $this->PublicIpAddresses = $param['PublicIpAddresses'];
         }
 
-        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
-            $this->Zone = $param["Zone"];
+        if (array_key_exists('Zone',$param) and $param['Zone'] !== null) {
+            $this->Zone = $param['Zone'];
         }
 
-        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+        if (array_key_exists('Tags',$param) and $param['Tags'] !== null) {
             $this->Tags = [];
-            foreach ($param["Tags"] as $key => $value){
+            foreach ($param['Tags'] as $key => $value){
                 $obj = new Tag();
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);

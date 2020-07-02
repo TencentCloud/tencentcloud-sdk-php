@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -182,60 +182,60 @@ class DescribeTaskDetailResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TaskType",$param) and $param["TaskType"] !== null) {
-            $this->TaskType = $param["TaskType"];
+        if (array_key_exists('TaskType',$param) and $param['TaskType'] !== null) {
+            $this->TaskType = $param['TaskType'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("BeginProcessTime",$param) and $param["BeginProcessTime"] !== null) {
-            $this->BeginProcessTime = $param["BeginProcessTime"];
+        if (array_key_exists('BeginProcessTime',$param) and $param['BeginProcessTime'] !== null) {
+            $this->BeginProcessTime = $param['BeginProcessTime'];
         }
 
-        if (array_key_exists("FinishTime",$param) and $param["FinishTime"] !== null) {
-            $this->FinishTime = $param["FinishTime"];
+        if (array_key_exists('FinishTime',$param) and $param['FinishTime'] !== null) {
+            $this->FinishTime = $param['FinishTime'];
         }
 
-        if (array_key_exists("WorkflowTask",$param) and $param["WorkflowTask"] !== null) {
+        if (array_key_exists('WorkflowTask',$param) and $param['WorkflowTask'] !== null) {
             $this->WorkflowTask = new WorkflowTask();
-            $this->WorkflowTask->deserialize($param["WorkflowTask"]);
+            $this->WorkflowTask->deserialize($param['WorkflowTask']);
         }
 
-        if (array_key_exists("EditMediaTask",$param) and $param["EditMediaTask"] !== null) {
+        if (array_key_exists('EditMediaTask',$param) and $param['EditMediaTask'] !== null) {
             $this->EditMediaTask = new EditMediaTask();
-            $this->EditMediaTask->deserialize($param["EditMediaTask"]);
+            $this->EditMediaTask->deserialize($param['EditMediaTask']);
         }
 
-        if (array_key_exists("LiveStreamProcessTask",$param) and $param["LiveStreamProcessTask"] !== null) {
+        if (array_key_exists('LiveStreamProcessTask',$param) and $param['LiveStreamProcessTask'] !== null) {
             $this->LiveStreamProcessTask = new LiveStreamProcessTask();
-            $this->LiveStreamProcessTask->deserialize($param["LiveStreamProcessTask"]);
+            $this->LiveStreamProcessTask->deserialize($param['LiveStreamProcessTask']);
         }
 
-        if (array_key_exists("TaskNotifyConfig",$param) and $param["TaskNotifyConfig"] !== null) {
+        if (array_key_exists('TaskNotifyConfig',$param) and $param['TaskNotifyConfig'] !== null) {
             $this->TaskNotifyConfig = new TaskNotifyConfig();
-            $this->TaskNotifyConfig->deserialize($param["TaskNotifyConfig"]);
+            $this->TaskNotifyConfig->deserialize($param['TaskNotifyConfig']);
         }
 
-        if (array_key_exists("TasksPriority",$param) and $param["TasksPriority"] !== null) {
-            $this->TasksPriority = $param["TasksPriority"];
+        if (array_key_exists('TasksPriority',$param) and $param['TasksPriority'] !== null) {
+            $this->TasksPriority = $param['TasksPriority'];
         }
 
-        if (array_key_exists("SessionId",$param) and $param["SessionId"] !== null) {
-            $this->SessionId = $param["SessionId"];
+        if (array_key_exists('SessionId',$param) and $param['SessionId'] !== null) {
+            $this->SessionId = $param['SessionId'];
         }
 
-        if (array_key_exists("SessionContext",$param) and $param["SessionContext"] !== null) {
-            $this->SessionContext = $param["SessionContext"];
+        if (array_key_exists('SessionContext',$param) and $param['SessionContext'] !== null) {
+            $this->SessionContext = $param['SessionContext'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

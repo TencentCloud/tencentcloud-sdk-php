@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -134,59 +134,59 @@ class CreateDisksRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DiskType",$param) and $param["DiskType"] !== null) {
-            $this->DiskType = $param["DiskType"];
+        if (array_key_exists('DiskType',$param) and $param['DiskType'] !== null) {
+            $this->DiskType = $param['DiskType'];
         }
 
-        if (array_key_exists("DiskChargeType",$param) and $param["DiskChargeType"] !== null) {
-            $this->DiskChargeType = $param["DiskChargeType"];
+        if (array_key_exists('DiskChargeType',$param) and $param['DiskChargeType'] !== null) {
+            $this->DiskChargeType = $param['DiskChargeType'];
         }
 
-        if (array_key_exists("Placement",$param) and $param["Placement"] !== null) {
+        if (array_key_exists('Placement',$param) and $param['Placement'] !== null) {
             $this->Placement = new Placement();
-            $this->Placement->deserialize($param["Placement"]);
+            $this->Placement->deserialize($param['Placement']);
         }
 
-        if (array_key_exists("DiskName",$param) and $param["DiskName"] !== null) {
-            $this->DiskName = $param["DiskName"];
+        if (array_key_exists('DiskName',$param) and $param['DiskName'] !== null) {
+            $this->DiskName = $param['DiskName'];
         }
 
-        if (array_key_exists("DiskCount",$param) and $param["DiskCount"] !== null) {
-            $this->DiskCount = $param["DiskCount"];
+        if (array_key_exists('DiskCount',$param) and $param['DiskCount'] !== null) {
+            $this->DiskCount = $param['DiskCount'];
         }
 
-        if (array_key_exists("DiskChargePrepaid",$param) and $param["DiskChargePrepaid"] !== null) {
+        if (array_key_exists('DiskChargePrepaid',$param) and $param['DiskChargePrepaid'] !== null) {
             $this->DiskChargePrepaid = new DiskChargePrepaid();
-            $this->DiskChargePrepaid->deserialize($param["DiskChargePrepaid"]);
+            $this->DiskChargePrepaid->deserialize($param['DiskChargePrepaid']);
         }
 
-        if (array_key_exists("DiskSize",$param) and $param["DiskSize"] !== null) {
-            $this->DiskSize = $param["DiskSize"];
+        if (array_key_exists('DiskSize',$param) and $param['DiskSize'] !== null) {
+            $this->DiskSize = $param['DiskSize'];
         }
 
-        if (array_key_exists("SnapshotId",$param) and $param["SnapshotId"] !== null) {
-            $this->SnapshotId = $param["SnapshotId"];
+        if (array_key_exists('SnapshotId',$param) and $param['SnapshotId'] !== null) {
+            $this->SnapshotId = $param['SnapshotId'];
         }
 
-        if (array_key_exists("ClientToken",$param) and $param["ClientToken"] !== null) {
-            $this->ClientToken = $param["ClientToken"];
+        if (array_key_exists('ClientToken',$param) and $param['ClientToken'] !== null) {
+            $this->ClientToken = $param['ClientToken'];
         }
 
-        if (array_key_exists("Encrypt",$param) and $param["Encrypt"] !== null) {
-            $this->Encrypt = $param["Encrypt"];
+        if (array_key_exists('Encrypt',$param) and $param['Encrypt'] !== null) {
+            $this->Encrypt = $param['Encrypt'];
         }
 
-        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+        if (array_key_exists('Tags',$param) and $param['Tags'] !== null) {
             $this->Tags = [];
-            foreach ($param["Tags"] as $key => $value){
+            foreach ($param['Tags'] as $key => $value){
                 $obj = new Tag();
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
         }
 
-        if (array_key_exists("Shareable",$param) and $param["Shareable"] !== null) {
-            $this->Shareable = $param["Shareable"];
+        if (array_key_exists('Shareable',$param) and $param['Shareable'] !== null) {
+            $this->Shareable = $param['Shareable'];
         }
     }
 }

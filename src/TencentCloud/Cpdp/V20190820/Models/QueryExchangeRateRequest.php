@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -62,16 +62,16 @@ class QueryExchangeRateRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SourceCurrency",$param) and $param["SourceCurrency"] !== null) {
-            $this->SourceCurrency = $param["SourceCurrency"];
+        if (array_key_exists('SourceCurrency',$param) and $param['SourceCurrency'] !== null) {
+            $this->SourceCurrency = $param['SourceCurrency'];
         }
 
-        if (array_key_exists("TargetCurrency",$param) and $param["TargetCurrency"] !== null) {
-            $this->TargetCurrency = $param["TargetCurrency"];
+        if (array_key_exists('TargetCurrency',$param) and $param['TargetCurrency'] !== null) {
+            $this->TargetCurrency = $param['TargetCurrency'];
         }
 
-        if (array_key_exists("Profile",$param) and $param["Profile"] !== null) {
-            $this->Profile = $param["Profile"];
+        if (array_key_exists('Profile',$param) and $param['Profile'] !== null) {
+            $this->Profile = $param['Profile'];
         }
     }
 }

@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -86,54 +86,54 @@ class AdInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Spots",$param) and $param["Spots"] !== null) {
+        if (array_key_exists('Spots',$param) and $param['Spots'] !== null) {
             $this->Spots = [];
-            foreach ($param["Spots"] as $key => $value){
+            foreach ($param['Spots'] as $key => $value){
                 $obj = new PluginInfo();
                 $obj->deserialize($value);
                 array_push($this->Spots, $obj);
             }
         }
 
-        if (array_key_exists("BoutiqueRecommands",$param) and $param["BoutiqueRecommands"] !== null) {
+        if (array_key_exists('BoutiqueRecommands',$param) and $param['BoutiqueRecommands'] !== null) {
             $this->BoutiqueRecommands = [];
-            foreach ($param["BoutiqueRecommands"] as $key => $value){
+            foreach ($param['BoutiqueRecommands'] as $key => $value){
                 $obj = new PluginInfo();
                 $obj->deserialize($value);
                 array_push($this->BoutiqueRecommands, $obj);
             }
         }
 
-        if (array_key_exists("FloatWindowses",$param) and $param["FloatWindowses"] !== null) {
+        if (array_key_exists('FloatWindowses',$param) and $param['FloatWindowses'] !== null) {
             $this->FloatWindowses = [];
-            foreach ($param["FloatWindowses"] as $key => $value){
+            foreach ($param['FloatWindowses'] as $key => $value){
                 $obj = new PluginInfo();
                 $obj->deserialize($value);
                 array_push($this->FloatWindowses, $obj);
             }
         }
 
-        if (array_key_exists("Banners",$param) and $param["Banners"] !== null) {
+        if (array_key_exists('Banners',$param) and $param['Banners'] !== null) {
             $this->Banners = [];
-            foreach ($param["Banners"] as $key => $value){
+            foreach ($param['Banners'] as $key => $value){
                 $obj = new PluginInfo();
                 $obj->deserialize($value);
                 array_push($this->Banners, $obj);
             }
         }
 
-        if (array_key_exists("IntegralWalls",$param) and $param["IntegralWalls"] !== null) {
+        if (array_key_exists('IntegralWalls',$param) and $param['IntegralWalls'] !== null) {
             $this->IntegralWalls = [];
-            foreach ($param["IntegralWalls"] as $key => $value){
+            foreach ($param['IntegralWalls'] as $key => $value){
                 $obj = new PluginInfo();
                 $obj->deserialize($value);
                 array_push($this->IntegralWalls, $obj);
             }
         }
 
-        if (array_key_exists("NotifyBars",$param) and $param["NotifyBars"] !== null) {
+        if (array_key_exists('NotifyBars',$param) and $param['NotifyBars'] !== null) {
             $this->NotifyBars = [];
-            foreach ($param["NotifyBars"] as $key => $value){
+            foreach ($param['NotifyBars'] as $key => $value){
                 $obj = new PluginInfo();
                 $obj->deserialize($value);
                 array_push($this->NotifyBars, $obj);

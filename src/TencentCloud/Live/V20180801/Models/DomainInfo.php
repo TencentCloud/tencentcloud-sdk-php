@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -186,52 +186,52 @@ class DomainInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists('Type',$param) and $param['Type'] !== null) {
+            $this->Type = $param['Type'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("BCName",$param) and $param["BCName"] !== null) {
-            $this->BCName = $param["BCName"];
+        if (array_key_exists('BCName',$param) and $param['BCName'] !== null) {
+            $this->BCName = $param['BCName'];
         }
 
-        if (array_key_exists("TargetDomain",$param) and $param["TargetDomain"] !== null) {
-            $this->TargetDomain = $param["TargetDomain"];
+        if (array_key_exists('TargetDomain',$param) and $param['TargetDomain'] !== null) {
+            $this->TargetDomain = $param['TargetDomain'];
         }
 
-        if (array_key_exists("PlayType",$param) and $param["PlayType"] !== null) {
-            $this->PlayType = $param["PlayType"];
+        if (array_key_exists('PlayType',$param) and $param['PlayType'] !== null) {
+            $this->PlayType = $param['PlayType'];
         }
 
-        if (array_key_exists("IsDelayLive",$param) and $param["IsDelayLive"] !== null) {
-            $this->IsDelayLive = $param["IsDelayLive"];
+        if (array_key_exists('IsDelayLive',$param) and $param['IsDelayLive'] !== null) {
+            $this->IsDelayLive = $param['IsDelayLive'];
         }
 
-        if (array_key_exists("CurrentCName",$param) and $param["CurrentCName"] !== null) {
-            $this->CurrentCName = $param["CurrentCName"];
+        if (array_key_exists('CurrentCName',$param) and $param['CurrentCName'] !== null) {
+            $this->CurrentCName = $param['CurrentCName'];
         }
 
-        if (array_key_exists("RentTag",$param) and $param["RentTag"] !== null) {
-            $this->RentTag = $param["RentTag"];
+        if (array_key_exists('RentTag',$param) and $param['RentTag'] !== null) {
+            $this->RentTag = $param['RentTag'];
         }
 
-        if (array_key_exists("RentExpireTime",$param) and $param["RentExpireTime"] !== null) {
-            $this->RentExpireTime = $param["RentExpireTime"];
+        if (array_key_exists('RentExpireTime',$param) and $param['RentExpireTime'] !== null) {
+            $this->RentExpireTime = $param['RentExpireTime'];
         }
 
-        if (array_key_exists("IsMiniProgramLive",$param) and $param["IsMiniProgramLive"] !== null) {
-            $this->IsMiniProgramLive = $param["IsMiniProgramLive"];
+        if (array_key_exists('IsMiniProgramLive',$param) and $param['IsMiniProgramLive'] !== null) {
+            $this->IsMiniProgramLive = $param['IsMiniProgramLive'];
         }
     }
 }

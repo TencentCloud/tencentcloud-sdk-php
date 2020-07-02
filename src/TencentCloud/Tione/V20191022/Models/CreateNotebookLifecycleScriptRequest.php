@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -70,16 +70,16 @@ base64后的脚本长度不能超过16384个字符
         if ($param === null) {
             return;
         }
-        if (array_key_exists("NotebookLifecycleScriptsName",$param) and $param["NotebookLifecycleScriptsName"] !== null) {
-            $this->NotebookLifecycleScriptsName = $param["NotebookLifecycleScriptsName"];
+        if (array_key_exists('NotebookLifecycleScriptsName',$param) and $param['NotebookLifecycleScriptsName'] !== null) {
+            $this->NotebookLifecycleScriptsName = $param['NotebookLifecycleScriptsName'];
         }
 
-        if (array_key_exists("CreateScript",$param) and $param["CreateScript"] !== null) {
-            $this->CreateScript = $param["CreateScript"];
+        if (array_key_exists('CreateScript',$param) and $param['CreateScript'] !== null) {
+            $this->CreateScript = $param['CreateScript'];
         }
 
-        if (array_key_exists("StartScript",$param) and $param["StartScript"] !== null) {
-            $this->StartScript = $param["StartScript"];
+        if (array_key_exists('StartScript',$param) and $param['StartScript'] !== null) {
+            $this->StartScript = $param['StartScript'];
         }
     }
 }

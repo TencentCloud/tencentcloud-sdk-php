@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -54,13 +54,13 @@ class ShopHourTrafficInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Date",$param) and $param["Date"] !== null) {
-            $this->Date = $param["Date"];
+        if (array_key_exists('Date',$param) and $param['Date'] !== null) {
+            $this->Date = $param['Date'];
         }
 
-        if (array_key_exists("HourTrafficInfoDetailSet",$param) and $param["HourTrafficInfoDetailSet"] !== null) {
+        if (array_key_exists('HourTrafficInfoDetailSet',$param) and $param['HourTrafficInfoDetailSet'] !== null) {
             $this->HourTrafficInfoDetailSet = [];
-            foreach ($param["HourTrafficInfoDetailSet"] as $key => $value){
+            foreach ($param['HourTrafficInfoDetailSet'] as $key => $value){
                 $obj = new HourTrafficInfoDetail();
                 $obj->deserialize($value);
                 array_push($this->HourTrafficInfoDetailSet, $obj);

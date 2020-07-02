@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -166,44 +166,44 @@ class CcnAttachedInstance extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CcnId",$param) and $param["CcnId"] !== null) {
-            $this->CcnId = $param["CcnId"];
+        if (array_key_exists('CcnId',$param) and $param['CcnId'] !== null) {
+            $this->CcnId = $param['CcnId'];
         }
 
-        if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
-            $this->InstanceType = $param["InstanceType"];
+        if (array_key_exists('InstanceType',$param) and $param['InstanceType'] !== null) {
+            $this->InstanceType = $param['InstanceType'];
         }
 
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("InstanceName",$param) and $param["InstanceName"] !== null) {
-            $this->InstanceName = $param["InstanceName"];
+        if (array_key_exists('InstanceName',$param) and $param['InstanceName'] !== null) {
+            $this->InstanceName = $param['InstanceName'];
         }
 
-        if (array_key_exists("InstanceRegion",$param) and $param["InstanceRegion"] !== null) {
-            $this->InstanceRegion = $param["InstanceRegion"];
+        if (array_key_exists('InstanceRegion',$param) and $param['InstanceRegion'] !== null) {
+            $this->InstanceRegion = $param['InstanceRegion'];
         }
 
-        if (array_key_exists("InstanceUin",$param) and $param["InstanceUin"] !== null) {
-            $this->InstanceUin = $param["InstanceUin"];
+        if (array_key_exists('InstanceUin',$param) and $param['InstanceUin'] !== null) {
+            $this->InstanceUin = $param['InstanceUin'];
         }
 
-        if (array_key_exists("CidrBlock",$param) and $param["CidrBlock"] !== null) {
-            $this->CidrBlock = $param["CidrBlock"];
+        if (array_key_exists('CidrBlock',$param) and $param['CidrBlock'] !== null) {
+            $this->CidrBlock = $param['CidrBlock'];
         }
 
-        if (array_key_exists("State",$param) and $param["State"] !== null) {
-            $this->State = $param["State"];
+        if (array_key_exists('State',$param) and $param['State'] !== null) {
+            $this->State = $param['State'];
         }
 
-        if (array_key_exists("AttachedTime",$param) and $param["AttachedTime"] !== null) {
-            $this->AttachedTime = $param["AttachedTime"];
+        if (array_key_exists('AttachedTime',$param) and $param['AttachedTime'] !== null) {
+            $this->AttachedTime = $param['AttachedTime'];
         }
 
-        if (array_key_exists("CcnUin",$param) and $param["CcnUin"] !== null) {
-            $this->CcnUin = $param["CcnUin"];
+        if (array_key_exists('CcnUin',$param) and $param['CcnUin'] !== null) {
+            $this->CcnUin = $param['CcnUin'];
         }
     }
 }

@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -106,36 +106,36 @@ class LogSetInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AppId",$param) and $param["AppId"] !== null) {
-            $this->AppId = $param["AppId"];
+        if (array_key_exists('AppId',$param) and $param['AppId'] !== null) {
+            $this->AppId = $param['AppId'];
         }
 
-        if (array_key_exists("Channel",$param) and $param["Channel"] !== null) {
-            $this->Channel = $param["Channel"];
+        if (array_key_exists('Channel',$param) and $param['Channel'] !== null) {
+            $this->Channel = $param['Channel'];
         }
 
-        if (array_key_exists("LogsetId",$param) and $param["LogsetId"] !== null) {
-            $this->LogsetId = $param["LogsetId"];
+        if (array_key_exists('LogsetId',$param) and $param['LogsetId'] !== null) {
+            $this->LogsetId = $param['LogsetId'];
         }
 
-        if (array_key_exists("LogsetName",$param) and $param["LogsetName"] !== null) {
-            $this->LogsetName = $param["LogsetName"];
+        if (array_key_exists('LogsetName',$param) and $param['LogsetName'] !== null) {
+            $this->LogsetName = $param['LogsetName'];
         }
 
-        if (array_key_exists("IsDefault",$param) and $param["IsDefault"] !== null) {
-            $this->IsDefault = $param["IsDefault"];
+        if (array_key_exists('IsDefault',$param) and $param['IsDefault'] !== null) {
+            $this->IsDefault = $param['IsDefault'];
         }
 
-        if (array_key_exists("LogsetSavePeriod",$param) and $param["LogsetSavePeriod"] !== null) {
-            $this->LogsetSavePeriod = $param["LogsetSavePeriod"];
+        if (array_key_exists('LogsetSavePeriod',$param) and $param['LogsetSavePeriod'] !== null) {
+            $this->LogsetSavePeriod = $param['LogsetSavePeriod'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("Region",$param) and $param["Region"] !== null) {
-            $this->Region = $param["Region"];
+        if (array_key_exists('Region',$param) and $param['Region'] !== null) {
+            $this->Region = $param['Region'];
         }
     }
 }

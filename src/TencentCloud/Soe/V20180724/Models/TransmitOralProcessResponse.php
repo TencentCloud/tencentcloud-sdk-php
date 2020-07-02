@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAudioUrl(string $AudioUrl) 设置保存语音音频文件下载地址
  * @method array getSentenceInfoSet() 获取断句中间结果，中间结果是局部最优而非全局最优的结果，所以中间结果有可能和最终整体结果对应部分不一致；中间结果的输出便于客户端UI更新；待用户发音完全结束后，系统会给出一个综合所有句子的整体结果。
  * @method void setSentenceInfoSet(array $SentenceInfoSet) 设置断句中间结果，中间结果是局部最优而非全局最优的结果，所以中间结果有可能和最终整体结果对应部分不一致；中间结果的输出便于客户端UI更新；待用户发音完全结束后，系统会给出一个综合所有句子的整体结果。
- * @method string getStatus() 获取评估 session 状态，“Evaluating"：评估中、"Failed"：评估失败、"Finished"：评估完成
- * @method void setStatus(string $Status) 设置评估 session 状态，“Evaluating"：评估中、"Failed"：评估失败、"Finished"：评估完成
+ * @method string getStatus() 获取评估 session 状态，“Evaluating"：评估中、'Failed'：评估失败、'Finished'：评估完成
+ * @method void setStatus(string $Status) 设置评估 session 状态，“Evaluating"：评估中、'Failed'：评估失败、'Finished'：评估完成
  * @method float getSuggestedScore() 获取建议评分，取值范围[0,100]，评分方式为建议评分 = 准确度（PronAccuracyfloat）× 完整度（PronCompletionfloat）×（2 - 完整度（PronCompletionfloat）），如若评分策略不符合请参考Words数组中的详细分数自定义评分逻辑。
  * @method void setSuggestedScore(float $SuggestedScore) 设置建议评分，取值范围[0,100]，评分方式为建议评分 = 准确度（PronAccuracyfloat）× 完整度（PronCompletionfloat）×（2 - 完整度（PronCompletionfloat）），如若评分策略不符合请参考Words数组中的详细分数自定义评分逻辑。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -79,7 +79,7 @@ class TransmitOralProcessResponse extends AbstractModel
     public $SentenceInfoSet;
 
     /**
-     * @var string 评估 session 状态，“Evaluating"：评估中、"Failed"：评估失败、"Finished"：评估完成
+     * @var string 评估 session 状态，“Evaluating"：评估中、'Failed'：评估失败、'Finished'：评估完成
      */
     public $Status;
 
@@ -101,7 +101,7 @@ class TransmitOralProcessResponse extends AbstractModel
      * @param string $SessionId 语音段唯一标识，一段语音一个SessionId
      * @param string $AudioUrl 保存语音音频文件下载地址
      * @param array $SentenceInfoSet 断句中间结果，中间结果是局部最优而非全局最优的结果，所以中间结果有可能和最终整体结果对应部分不一致；中间结果的输出便于客户端UI更新；待用户发音完全结束后，系统会给出一个综合所有句子的整体结果。
-     * @param string $Status 评估 session 状态，“Evaluating"：评估中、"Failed"：评估失败、"Finished"：评估完成
+     * @param string $Status 评估 session 状态，“Evaluating"：评估中、'Failed'：评估失败、'Finished'：评估完成
      * @param float $SuggestedScore 建议评分，取值范围[0,100]，评分方式为建议评分 = 准确度（PronAccuracyfloat）× 完整度（PronCompletionfloat）×（2 - 完整度（PronCompletionfloat）），如若评分策略不符合请参考Words数组中的详细分数自定义评分逻辑。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -118,54 +118,54 @@ class TransmitOralProcessResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PronAccuracy",$param) and $param["PronAccuracy"] !== null) {
-            $this->PronAccuracy = $param["PronAccuracy"];
+        if (array_key_exists('PronAccuracy',$param) and $param['PronAccuracy'] !== null) {
+            $this->PronAccuracy = $param['PronAccuracy'];
         }
 
-        if (array_key_exists("PronFluency",$param) and $param["PronFluency"] !== null) {
-            $this->PronFluency = $param["PronFluency"];
+        if (array_key_exists('PronFluency',$param) and $param['PronFluency'] !== null) {
+            $this->PronFluency = $param['PronFluency'];
         }
 
-        if (array_key_exists("PronCompletion",$param) and $param["PronCompletion"] !== null) {
-            $this->PronCompletion = $param["PronCompletion"];
+        if (array_key_exists('PronCompletion',$param) and $param['PronCompletion'] !== null) {
+            $this->PronCompletion = $param['PronCompletion'];
         }
 
-        if (array_key_exists("Words",$param) and $param["Words"] !== null) {
+        if (array_key_exists('Words',$param) and $param['Words'] !== null) {
             $this->Words = [];
-            foreach ($param["Words"] as $key => $value){
+            foreach ($param['Words'] as $key => $value){
                 $obj = new WordRsp();
                 $obj->deserialize($value);
                 array_push($this->Words, $obj);
             }
         }
 
-        if (array_key_exists("SessionId",$param) and $param["SessionId"] !== null) {
-            $this->SessionId = $param["SessionId"];
+        if (array_key_exists('SessionId',$param) and $param['SessionId'] !== null) {
+            $this->SessionId = $param['SessionId'];
         }
 
-        if (array_key_exists("AudioUrl",$param) and $param["AudioUrl"] !== null) {
-            $this->AudioUrl = $param["AudioUrl"];
+        if (array_key_exists('AudioUrl',$param) and $param['AudioUrl'] !== null) {
+            $this->AudioUrl = $param['AudioUrl'];
         }
 
-        if (array_key_exists("SentenceInfoSet",$param) and $param["SentenceInfoSet"] !== null) {
+        if (array_key_exists('SentenceInfoSet',$param) and $param['SentenceInfoSet'] !== null) {
             $this->SentenceInfoSet = [];
-            foreach ($param["SentenceInfoSet"] as $key => $value){
+            foreach ($param['SentenceInfoSet'] as $key => $value){
                 $obj = new SentenceInfo();
                 $obj->deserialize($value);
                 array_push($this->SentenceInfoSet, $obj);
             }
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("SuggestedScore",$param) and $param["SuggestedScore"] !== null) {
-            $this->SuggestedScore = $param["SuggestedScore"];
+        if (array_key_exists('SuggestedScore',$param) and $param['SuggestedScore'] !== null) {
+            $this->SuggestedScore = $param['SuggestedScore'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

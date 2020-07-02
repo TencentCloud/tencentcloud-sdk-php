@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -306,141 +306,141 @@ class BillResourceSummary extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BusinessCodeName",$param) and $param["BusinessCodeName"] !== null) {
-            $this->BusinessCodeName = $param["BusinessCodeName"];
+        if (array_key_exists('BusinessCodeName',$param) and $param['BusinessCodeName'] !== null) {
+            $this->BusinessCodeName = $param['BusinessCodeName'];
         }
 
-        if (array_key_exists("ProductCodeName",$param) and $param["ProductCodeName"] !== null) {
-            $this->ProductCodeName = $param["ProductCodeName"];
+        if (array_key_exists('ProductCodeName',$param) and $param['ProductCodeName'] !== null) {
+            $this->ProductCodeName = $param['ProductCodeName'];
         }
 
-        if (array_key_exists("PayModeName",$param) and $param["PayModeName"] !== null) {
-            $this->PayModeName = $param["PayModeName"];
+        if (array_key_exists('PayModeName',$param) and $param['PayModeName'] !== null) {
+            $this->PayModeName = $param['PayModeName'];
         }
 
-        if (array_key_exists("ProjectName",$param) and $param["ProjectName"] !== null) {
-            $this->ProjectName = $param["ProjectName"];
+        if (array_key_exists('ProjectName',$param) and $param['ProjectName'] !== null) {
+            $this->ProjectName = $param['ProjectName'];
         }
 
-        if (array_key_exists("RegionName",$param) and $param["RegionName"] !== null) {
-            $this->RegionName = $param["RegionName"];
+        if (array_key_exists('RegionName',$param) and $param['RegionName'] !== null) {
+            $this->RegionName = $param['RegionName'];
         }
 
-        if (array_key_exists("ZoneName",$param) and $param["ZoneName"] !== null) {
-            $this->ZoneName = $param["ZoneName"];
+        if (array_key_exists('ZoneName',$param) and $param['ZoneName'] !== null) {
+            $this->ZoneName = $param['ZoneName'];
         }
 
-        if (array_key_exists("ResourceId",$param) and $param["ResourceId"] !== null) {
-            $this->ResourceId = $param["ResourceId"];
+        if (array_key_exists('ResourceId',$param) and $param['ResourceId'] !== null) {
+            $this->ResourceId = $param['ResourceId'];
         }
 
-        if (array_key_exists("ResourceName",$param) and $param["ResourceName"] !== null) {
-            $this->ResourceName = $param["ResourceName"];
+        if (array_key_exists('ResourceName',$param) and $param['ResourceName'] !== null) {
+            $this->ResourceName = $param['ResourceName'];
         }
 
-        if (array_key_exists("ActionTypeName",$param) and $param["ActionTypeName"] !== null) {
-            $this->ActionTypeName = $param["ActionTypeName"];
+        if (array_key_exists('ActionTypeName',$param) and $param['ActionTypeName'] !== null) {
+            $this->ActionTypeName = $param['ActionTypeName'];
         }
 
-        if (array_key_exists("OrderId",$param) and $param["OrderId"] !== null) {
-            $this->OrderId = $param["OrderId"];
+        if (array_key_exists('OrderId',$param) and $param['OrderId'] !== null) {
+            $this->OrderId = $param['OrderId'];
         }
 
-        if (array_key_exists("PayTime",$param) and $param["PayTime"] !== null) {
-            $this->PayTime = $param["PayTime"];
+        if (array_key_exists('PayTime',$param) and $param['PayTime'] !== null) {
+            $this->PayTime = $param['PayTime'];
         }
 
-        if (array_key_exists("FeeBeginTime",$param) and $param["FeeBeginTime"] !== null) {
-            $this->FeeBeginTime = $param["FeeBeginTime"];
+        if (array_key_exists('FeeBeginTime',$param) and $param['FeeBeginTime'] !== null) {
+            $this->FeeBeginTime = $param['FeeBeginTime'];
         }
 
-        if (array_key_exists("FeeEndTime",$param) and $param["FeeEndTime"] !== null) {
-            $this->FeeEndTime = $param["FeeEndTime"];
+        if (array_key_exists('FeeEndTime',$param) and $param['FeeEndTime'] !== null) {
+            $this->FeeEndTime = $param['FeeEndTime'];
         }
 
-        if (array_key_exists("ConfigDesc",$param) and $param["ConfigDesc"] !== null) {
-            $this->ConfigDesc = $param["ConfigDesc"];
+        if (array_key_exists('ConfigDesc',$param) and $param['ConfigDesc'] !== null) {
+            $this->ConfigDesc = $param['ConfigDesc'];
         }
 
-        if (array_key_exists("ExtendField1",$param) and $param["ExtendField1"] !== null) {
-            $this->ExtendField1 = $param["ExtendField1"];
+        if (array_key_exists('ExtendField1',$param) and $param['ExtendField1'] !== null) {
+            $this->ExtendField1 = $param['ExtendField1'];
         }
 
-        if (array_key_exists("ExtendField2",$param) and $param["ExtendField2"] !== null) {
-            $this->ExtendField2 = $param["ExtendField2"];
+        if (array_key_exists('ExtendField2',$param) and $param['ExtendField2'] !== null) {
+            $this->ExtendField2 = $param['ExtendField2'];
         }
 
-        if (array_key_exists("TotalCost",$param) and $param["TotalCost"] !== null) {
-            $this->TotalCost = $param["TotalCost"];
+        if (array_key_exists('TotalCost',$param) and $param['TotalCost'] !== null) {
+            $this->TotalCost = $param['TotalCost'];
         }
 
-        if (array_key_exists("Discount",$param) and $param["Discount"] !== null) {
-            $this->Discount = $param["Discount"];
+        if (array_key_exists('Discount',$param) and $param['Discount'] !== null) {
+            $this->Discount = $param['Discount'];
         }
 
-        if (array_key_exists("ReduceType",$param) and $param["ReduceType"] !== null) {
-            $this->ReduceType = $param["ReduceType"];
+        if (array_key_exists('ReduceType',$param) and $param['ReduceType'] !== null) {
+            $this->ReduceType = $param['ReduceType'];
         }
 
-        if (array_key_exists("RealTotalCost",$param) and $param["RealTotalCost"] !== null) {
-            $this->RealTotalCost = $param["RealTotalCost"];
+        if (array_key_exists('RealTotalCost',$param) and $param['RealTotalCost'] !== null) {
+            $this->RealTotalCost = $param['RealTotalCost'];
         }
 
-        if (array_key_exists("VoucherPayAmount",$param) and $param["VoucherPayAmount"] !== null) {
-            $this->VoucherPayAmount = $param["VoucherPayAmount"];
+        if (array_key_exists('VoucherPayAmount',$param) and $param['VoucherPayAmount'] !== null) {
+            $this->VoucherPayAmount = $param['VoucherPayAmount'];
         }
 
-        if (array_key_exists("CashPayAmount",$param) and $param["CashPayAmount"] !== null) {
-            $this->CashPayAmount = $param["CashPayAmount"];
+        if (array_key_exists('CashPayAmount',$param) and $param['CashPayAmount'] !== null) {
+            $this->CashPayAmount = $param['CashPayAmount'];
         }
 
-        if (array_key_exists("IncentivePayAmount",$param) and $param["IncentivePayAmount"] !== null) {
-            $this->IncentivePayAmount = $param["IncentivePayAmount"];
+        if (array_key_exists('IncentivePayAmount',$param) and $param['IncentivePayAmount'] !== null) {
+            $this->IncentivePayAmount = $param['IncentivePayAmount'];
         }
 
-        if (array_key_exists("ExtendField3",$param) and $param["ExtendField3"] !== null) {
-            $this->ExtendField3 = $param["ExtendField3"];
+        if (array_key_exists('ExtendField3',$param) and $param['ExtendField3'] !== null) {
+            $this->ExtendField3 = $param['ExtendField3'];
         }
 
-        if (array_key_exists("ExtendField4",$param) and $param["ExtendField4"] !== null) {
-            $this->ExtendField4 = $param["ExtendField4"];
+        if (array_key_exists('ExtendField4',$param) and $param['ExtendField4'] !== null) {
+            $this->ExtendField4 = $param['ExtendField4'];
         }
 
-        if (array_key_exists("ExtendField5",$param) and $param["ExtendField5"] !== null) {
-            $this->ExtendField5 = $param["ExtendField5"];
+        if (array_key_exists('ExtendField5',$param) and $param['ExtendField5'] !== null) {
+            $this->ExtendField5 = $param['ExtendField5'];
         }
 
-        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+        if (array_key_exists('Tags',$param) and $param['Tags'] !== null) {
             $this->Tags = [];
-            foreach ($param["Tags"] as $key => $value){
+            foreach ($param['Tags'] as $key => $value){
                 $obj = new BillTagInfo();
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
         }
 
-        if (array_key_exists("PayerUin",$param) and $param["PayerUin"] !== null) {
-            $this->PayerUin = $param["PayerUin"];
+        if (array_key_exists('PayerUin',$param) and $param['PayerUin'] !== null) {
+            $this->PayerUin = $param['PayerUin'];
         }
 
-        if (array_key_exists("OwnerUin",$param) and $param["OwnerUin"] !== null) {
-            $this->OwnerUin = $param["OwnerUin"];
+        if (array_key_exists('OwnerUin',$param) and $param['OwnerUin'] !== null) {
+            $this->OwnerUin = $param['OwnerUin'];
         }
 
-        if (array_key_exists("OperateUin",$param) and $param["OperateUin"] !== null) {
-            $this->OperateUin = $param["OperateUin"];
+        if (array_key_exists('OperateUin',$param) and $param['OperateUin'] !== null) {
+            $this->OperateUin = $param['OperateUin'];
         }
 
-        if (array_key_exists("BusinessCode",$param) and $param["BusinessCode"] !== null) {
-            $this->BusinessCode = $param["BusinessCode"];
+        if (array_key_exists('BusinessCode',$param) and $param['BusinessCode'] !== null) {
+            $this->BusinessCode = $param['BusinessCode'];
         }
 
-        if (array_key_exists("ProductCode",$param) and $param["ProductCode"] !== null) {
-            $this->ProductCode = $param["ProductCode"];
+        if (array_key_exists('ProductCode',$param) and $param['ProductCode'] !== null) {
+            $this->ProductCode = $param['ProductCode'];
         }
 
-        if (array_key_exists("RegionId",$param) and $param["RegionId"] !== null) {
-            $this->RegionId = $param["RegionId"];
+        if (array_key_exists('RegionId',$param) and $param['RegionId'] !== null) {
+            $this->RegionId = $param['RegionId'];
         }
     }
 }

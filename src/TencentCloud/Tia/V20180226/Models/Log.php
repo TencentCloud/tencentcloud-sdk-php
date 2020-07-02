@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -86,28 +86,28 @@ class Log extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ContainerName",$param) and $param["ContainerName"] !== null) {
-            $this->ContainerName = $param["ContainerName"];
+        if (array_key_exists('ContainerName',$param) and $param['ContainerName'] !== null) {
+            $this->ContainerName = $param['ContainerName'];
         }
 
-        if (array_key_exists("Log",$param) and $param["Log"] !== null) {
-            $this->Log = $param["Log"];
+        if (array_key_exists('Log',$param) and $param['Log'] !== null) {
+            $this->Log = $param['Log'];
         }
 
-        if (array_key_exists("Namespace",$param) and $param["Namespace"] !== null) {
-            $this->Namespace = $param["Namespace"];
+        if (array_key_exists('Namespace',$param) and $param['Namespace'] !== null) {
+            $this->Namespace = $param['Namespace'];
         }
 
-        if (array_key_exists("PodId",$param) and $param["PodId"] !== null) {
-            $this->PodId = $param["PodId"];
+        if (array_key_exists('PodId',$param) and $param['PodId'] !== null) {
+            $this->PodId = $param['PodId'];
         }
 
-        if (array_key_exists("PodName",$param) and $param["PodName"] !== null) {
-            $this->PodName = $param["PodName"];
+        if (array_key_exists('PodName',$param) and $param['PodName'] !== null) {
+            $this->PodName = $param['PodName'];
         }
 
-        if (array_key_exists("Time",$param) and $param["Time"] !== null) {
-            $this->Time = $param["Time"];
+        if (array_key_exists('Time',$param) and $param['Time'] !== null) {
+            $this->Time = $param['Time'];
         }
     }
 }

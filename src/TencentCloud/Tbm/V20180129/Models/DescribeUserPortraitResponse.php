@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -86,33 +86,33 @@ class DescribeUserPortraitResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Age",$param) and $param["Age"] !== null) {
+        if (array_key_exists('Age',$param) and $param['Age'] !== null) {
             $this->Age = new AgePortraitInfo();
-            $this->Age->deserialize($param["Age"]);
+            $this->Age->deserialize($param['Age']);
         }
 
-        if (array_key_exists("Gender",$param) and $param["Gender"] !== null) {
+        if (array_key_exists('Gender',$param) and $param['Gender'] !== null) {
             $this->Gender = new GenderPortraitInfo();
-            $this->Gender->deserialize($param["Gender"]);
+            $this->Gender->deserialize($param['Gender']);
         }
 
-        if (array_key_exists("Province",$param) and $param["Province"] !== null) {
+        if (array_key_exists('Province',$param) and $param['Province'] !== null) {
             $this->Province = new ProvincePortraitInfo();
-            $this->Province->deserialize($param["Province"]);
+            $this->Province->deserialize($param['Province']);
         }
 
-        if (array_key_exists("Movie",$param) and $param["Movie"] !== null) {
+        if (array_key_exists('Movie',$param) and $param['Movie'] !== null) {
             $this->Movie = new MoviePortraitInfo();
-            $this->Movie->deserialize($param["Movie"]);
+            $this->Movie->deserialize($param['Movie']);
         }
 
-        if (array_key_exists("Star",$param) and $param["Star"] !== null) {
+        if (array_key_exists('Star',$param) and $param['Star'] !== null) {
             $this->Star = new StarPortraitInfo();
-            $this->Star->deserialize($param["Star"]);
+            $this->Star->deserialize($param['Star']);
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

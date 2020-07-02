@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -118,44 +118,44 @@ class SmsPackagesStatistics extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PackageCreateTime",$param) and $param["PackageCreateTime"] !== null) {
-            $this->PackageCreateTime = $param["PackageCreateTime"];
+        if (array_key_exists('PackageCreateTime',$param) and $param['PackageCreateTime'] !== null) {
+            $this->PackageCreateTime = $param['PackageCreateTime'];
         }
 
-        if (array_key_exists("PackageCreateUnixTime",$param) and $param["PackageCreateUnixTime"] !== null) {
-            $this->PackageCreateUnixTime = $param["PackageCreateUnixTime"];
+        if (array_key_exists('PackageCreateUnixTime',$param) and $param['PackageCreateUnixTime'] !== null) {
+            $this->PackageCreateUnixTime = $param['PackageCreateUnixTime'];
         }
 
-        if (array_key_exists("PackageEffectiveTime",$param) and $param["PackageEffectiveTime"] !== null) {
-            $this->PackageEffectiveTime = $param["PackageEffectiveTime"];
+        if (array_key_exists('PackageEffectiveTime',$param) and $param['PackageEffectiveTime'] !== null) {
+            $this->PackageEffectiveTime = $param['PackageEffectiveTime'];
         }
 
-        if (array_key_exists("PackageEffectiveUnixTime",$param) and $param["PackageEffectiveUnixTime"] !== null) {
-            $this->PackageEffectiveUnixTime = $param["PackageEffectiveUnixTime"];
+        if (array_key_exists('PackageEffectiveUnixTime',$param) and $param['PackageEffectiveUnixTime'] !== null) {
+            $this->PackageEffectiveUnixTime = $param['PackageEffectiveUnixTime'];
         }
 
-        if (array_key_exists("PackageExpiredTime",$param) and $param["PackageExpiredTime"] !== null) {
-            $this->PackageExpiredTime = $param["PackageExpiredTime"];
+        if (array_key_exists('PackageExpiredTime',$param) and $param['PackageExpiredTime'] !== null) {
+            $this->PackageExpiredTime = $param['PackageExpiredTime'];
         }
 
-        if (array_key_exists("PackageExpiredUnixTime",$param) and $param["PackageExpiredUnixTime"] !== null) {
-            $this->PackageExpiredUnixTime = $param["PackageExpiredUnixTime"];
+        if (array_key_exists('PackageExpiredUnixTime',$param) and $param['PackageExpiredUnixTime'] !== null) {
+            $this->PackageExpiredUnixTime = $param['PackageExpiredUnixTime'];
         }
 
-        if (array_key_exists("AmountOfPackage",$param) and $param["AmountOfPackage"] !== null) {
-            $this->AmountOfPackage = $param["AmountOfPackage"];
+        if (array_key_exists('AmountOfPackage',$param) and $param['AmountOfPackage'] !== null) {
+            $this->AmountOfPackage = $param['AmountOfPackage'];
         }
 
-        if (array_key_exists("TypeOfPackage",$param) and $param["TypeOfPackage"] !== null) {
-            $this->TypeOfPackage = $param["TypeOfPackage"];
+        if (array_key_exists('TypeOfPackage',$param) and $param['TypeOfPackage'] !== null) {
+            $this->TypeOfPackage = $param['TypeOfPackage'];
         }
 
-        if (array_key_exists("PackageId",$param) and $param["PackageId"] !== null) {
-            $this->PackageId = $param["PackageId"];
+        if (array_key_exists('PackageId',$param) and $param['PackageId'] !== null) {
+            $this->PackageId = $param['PackageId'];
         }
 
-        if (array_key_exists("CurrentUsage",$param) and $param["CurrentUsage"] !== null) {
-            $this->CurrentUsage = $param["CurrentUsage"];
+        if (array_key_exists('CurrentUsage',$param) and $param['CurrentUsage'] !== null) {
+            $this->CurrentUsage = $param['CurrentUsage'];
         }
     }
 }

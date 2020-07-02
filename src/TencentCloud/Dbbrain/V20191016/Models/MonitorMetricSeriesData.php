@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -54,17 +54,17 @@ class MonitorMetricSeriesData extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Series",$param) and $param["Series"] !== null) {
+        if (array_key_exists('Series',$param) and $param['Series'] !== null) {
             $this->Series = [];
-            foreach ($param["Series"] as $key => $value){
+            foreach ($param['Series'] as $key => $value){
                 $obj = new MonitorMetric();
                 $obj->deserialize($value);
                 array_push($this->Series, $obj);
             }
         }
 
-        if (array_key_exists("Timestamp",$param) and $param["Timestamp"] !== null) {
-            $this->Timestamp = $param["Timestamp"];
+        if (array_key_exists('Timestamp',$param) and $param['Timestamp'] !== null) {
+            $this->Timestamp = $param['Timestamp'];
         }
     }
 }

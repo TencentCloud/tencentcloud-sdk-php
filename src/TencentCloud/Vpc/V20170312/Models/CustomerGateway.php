@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -70,20 +70,20 @@ class CustomerGateway extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CustomerGatewayId",$param) and $param["CustomerGatewayId"] !== null) {
-            $this->CustomerGatewayId = $param["CustomerGatewayId"];
+        if (array_key_exists('CustomerGatewayId',$param) and $param['CustomerGatewayId'] !== null) {
+            $this->CustomerGatewayId = $param['CustomerGatewayId'];
         }
 
-        if (array_key_exists("CustomerGatewayName",$param) and $param["CustomerGatewayName"] !== null) {
-            $this->CustomerGatewayName = $param["CustomerGatewayName"];
+        if (array_key_exists('CustomerGatewayName',$param) and $param['CustomerGatewayName'] !== null) {
+            $this->CustomerGatewayName = $param['CustomerGatewayName'];
         }
 
-        if (array_key_exists("IpAddress",$param) and $param["IpAddress"] !== null) {
-            $this->IpAddress = $param["IpAddress"];
+        if (array_key_exists('IpAddress',$param) and $param['IpAddress'] !== null) {
+            $this->IpAddress = $param['IpAddress'];
         }
 
-        if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
-            $this->CreatedTime = $param["CreatedTime"];
+        if (array_key_exists('CreatedTime',$param) and $param['CreatedTime'] !== null) {
+            $this->CreatedTime = $param['CreatedTime'];
         }
     }
 }

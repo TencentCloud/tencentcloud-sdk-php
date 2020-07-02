@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -102,40 +102,40 @@ class ProcessLiveStreamRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Url",$param) and $param["Url"] !== null) {
-            $this->Url = $param["Url"];
+        if (array_key_exists('Url',$param) and $param['Url'] !== null) {
+            $this->Url = $param['Url'];
         }
 
-        if (array_key_exists("TaskNotifyConfig",$param) and $param["TaskNotifyConfig"] !== null) {
+        if (array_key_exists('TaskNotifyConfig',$param) and $param['TaskNotifyConfig'] !== null) {
             $this->TaskNotifyConfig = new LiveStreamTaskNotifyConfig();
-            $this->TaskNotifyConfig->deserialize($param["TaskNotifyConfig"]);
+            $this->TaskNotifyConfig->deserialize($param['TaskNotifyConfig']);
         }
 
-        if (array_key_exists("OutputStorage",$param) and $param["OutputStorage"] !== null) {
+        if (array_key_exists('OutputStorage',$param) and $param['OutputStorage'] !== null) {
             $this->OutputStorage = new TaskOutputStorage();
-            $this->OutputStorage->deserialize($param["OutputStorage"]);
+            $this->OutputStorage->deserialize($param['OutputStorage']);
         }
 
-        if (array_key_exists("OutputDir",$param) and $param["OutputDir"] !== null) {
-            $this->OutputDir = $param["OutputDir"];
+        if (array_key_exists('OutputDir',$param) and $param['OutputDir'] !== null) {
+            $this->OutputDir = $param['OutputDir'];
         }
 
-        if (array_key_exists("AiContentReviewTask",$param) and $param["AiContentReviewTask"] !== null) {
+        if (array_key_exists('AiContentReviewTask',$param) and $param['AiContentReviewTask'] !== null) {
             $this->AiContentReviewTask = new AiContentReviewTaskInput();
-            $this->AiContentReviewTask->deserialize($param["AiContentReviewTask"]);
+            $this->AiContentReviewTask->deserialize($param['AiContentReviewTask']);
         }
 
-        if (array_key_exists("AiRecognitionTask",$param) and $param["AiRecognitionTask"] !== null) {
+        if (array_key_exists('AiRecognitionTask',$param) and $param['AiRecognitionTask'] !== null) {
             $this->AiRecognitionTask = new AiRecognitionTaskInput();
-            $this->AiRecognitionTask->deserialize($param["AiRecognitionTask"]);
+            $this->AiRecognitionTask->deserialize($param['AiRecognitionTask']);
         }
 
-        if (array_key_exists("SessionId",$param) and $param["SessionId"] !== null) {
-            $this->SessionId = $param["SessionId"];
+        if (array_key_exists('SessionId',$param) and $param['SessionId'] !== null) {
+            $this->SessionId = $param['SessionId'];
         }
 
-        if (array_key_exists("SessionContext",$param) and $param["SessionContext"] !== null) {
-            $this->SessionContext = $param["SessionContext"];
+        if (array_key_exists('SessionContext',$param) and $param['SessionContext'] !== null) {
+            $this->SessionContext = $param['SessionContext'];
         }
     }
 }

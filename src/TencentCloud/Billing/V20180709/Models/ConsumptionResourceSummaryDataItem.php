@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -142,56 +142,56 @@ class ConsumptionResourceSummaryDataItem extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ResourceId",$param) and $param["ResourceId"] !== null) {
-            $this->ResourceId = $param["ResourceId"];
+        if (array_key_exists('ResourceId',$param) and $param['ResourceId'] !== null) {
+            $this->ResourceId = $param['ResourceId'];
         }
 
-        if (array_key_exists("ResourceName",$param) and $param["ResourceName"] !== null) {
-            $this->ResourceName = $param["ResourceName"];
+        if (array_key_exists('ResourceName',$param) and $param['ResourceName'] !== null) {
+            $this->ResourceName = $param['ResourceName'];
         }
 
-        if (array_key_exists("RealTotalCost",$param) and $param["RealTotalCost"] !== null) {
-            $this->RealTotalCost = $param["RealTotalCost"];
+        if (array_key_exists('RealTotalCost',$param) and $param['RealTotalCost'] !== null) {
+            $this->RealTotalCost = $param['RealTotalCost'];
         }
 
-        if (array_key_exists("CashPayAmount",$param) and $param["CashPayAmount"] !== null) {
-            $this->CashPayAmount = $param["CashPayAmount"];
+        if (array_key_exists('CashPayAmount',$param) and $param['CashPayAmount'] !== null) {
+            $this->CashPayAmount = $param['CashPayAmount'];
         }
 
-        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
-            $this->ProjectId = $param["ProjectId"];
+        if (array_key_exists('ProjectId',$param) and $param['ProjectId'] !== null) {
+            $this->ProjectId = $param['ProjectId'];
         }
 
-        if (array_key_exists("ProjectName",$param) and $param["ProjectName"] !== null) {
-            $this->ProjectName = $param["ProjectName"];
+        if (array_key_exists('ProjectName',$param) and $param['ProjectName'] !== null) {
+            $this->ProjectName = $param['ProjectName'];
         }
 
-        if (array_key_exists("RegionId",$param) and $param["RegionId"] !== null) {
-            $this->RegionId = $param["RegionId"];
+        if (array_key_exists('RegionId',$param) and $param['RegionId'] !== null) {
+            $this->RegionId = $param['RegionId'];
         }
 
-        if (array_key_exists("RegionName",$param) and $param["RegionName"] !== null) {
-            $this->RegionName = $param["RegionName"];
+        if (array_key_exists('RegionName',$param) and $param['RegionName'] !== null) {
+            $this->RegionName = $param['RegionName'];
         }
 
-        if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {
-            $this->PayMode = $param["PayMode"];
+        if (array_key_exists('PayMode',$param) and $param['PayMode'] !== null) {
+            $this->PayMode = $param['PayMode'];
         }
 
-        if (array_key_exists("PayModeName",$param) and $param["PayModeName"] !== null) {
-            $this->PayModeName = $param["PayModeName"];
+        if (array_key_exists('PayModeName',$param) and $param['PayModeName'] !== null) {
+            $this->PayModeName = $param['PayModeName'];
         }
 
-        if (array_key_exists("BusinessCode",$param) and $param["BusinessCode"] !== null) {
-            $this->BusinessCode = $param["BusinessCode"];
+        if (array_key_exists('BusinessCode',$param) and $param['BusinessCode'] !== null) {
+            $this->BusinessCode = $param['BusinessCode'];
         }
 
-        if (array_key_exists("BusinessCodeName",$param) and $param["BusinessCodeName"] !== null) {
-            $this->BusinessCodeName = $param["BusinessCodeName"];
+        if (array_key_exists('BusinessCodeName',$param) and $param['BusinessCodeName'] !== null) {
+            $this->BusinessCodeName = $param['BusinessCodeName'];
         }
 
-        if (array_key_exists("ConsumptionTypeName",$param) and $param["ConsumptionTypeName"] !== null) {
-            $this->ConsumptionTypeName = $param["ConsumptionTypeName"];
+        if (array_key_exists('ConsumptionTypeName',$param) and $param['ConsumptionTypeName'] !== null) {
+            $this->ConsumptionTypeName = $param['ConsumptionTypeName'];
         }
     }
 }

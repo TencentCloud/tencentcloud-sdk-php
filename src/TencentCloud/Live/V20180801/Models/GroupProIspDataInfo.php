@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -62,17 +62,17 @@ class GroupProIspDataInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ProvinceName",$param) and $param["ProvinceName"] !== null) {
-            $this->ProvinceName = $param["ProvinceName"];
+        if (array_key_exists('ProvinceName',$param) and $param['ProvinceName'] !== null) {
+            $this->ProvinceName = $param['ProvinceName'];
         }
 
-        if (array_key_exists("IspName",$param) and $param["IspName"] !== null) {
-            $this->IspName = $param["IspName"];
+        if (array_key_exists('IspName',$param) and $param['IspName'] !== null) {
+            $this->IspName = $param['IspName'];
         }
 
-        if (array_key_exists("DetailInfoList",$param) and $param["DetailInfoList"] !== null) {
+        if (array_key_exists('DetailInfoList',$param) and $param['DetailInfoList'] !== null) {
             $this->DetailInfoList = [];
-            foreach ($param["DetailInfoList"] as $key => $value){
+            foreach ($param['DetailInfoList'] as $key => $value){
                 $obj = new CdnPlayStatData();
                 $obj->deserialize($value);
                 array_push($this->DetailInfoList, $obj);

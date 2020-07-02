@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -122,46 +122,46 @@ class CreateListenerRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LoadBalancerId",$param) and $param["LoadBalancerId"] !== null) {
-            $this->LoadBalancerId = $param["LoadBalancerId"];
+        if (array_key_exists('LoadBalancerId',$param) and $param['LoadBalancerId'] !== null) {
+            $this->LoadBalancerId = $param['LoadBalancerId'];
         }
 
-        if (array_key_exists("Ports",$param) and $param["Ports"] !== null) {
-            $this->Ports = $param["Ports"];
+        if (array_key_exists('Ports',$param) and $param['Ports'] !== null) {
+            $this->Ports = $param['Ports'];
         }
 
-        if (array_key_exists("Protocol",$param) and $param["Protocol"] !== null) {
-            $this->Protocol = $param["Protocol"];
+        if (array_key_exists('Protocol',$param) and $param['Protocol'] !== null) {
+            $this->Protocol = $param['Protocol'];
         }
 
-        if (array_key_exists("ListenerNames",$param) and $param["ListenerNames"] !== null) {
-            $this->ListenerNames = $param["ListenerNames"];
+        if (array_key_exists('ListenerNames',$param) and $param['ListenerNames'] !== null) {
+            $this->ListenerNames = $param['ListenerNames'];
         }
 
-        if (array_key_exists("HealthCheck",$param) and $param["HealthCheck"] !== null) {
+        if (array_key_exists('HealthCheck',$param) and $param['HealthCheck'] !== null) {
             $this->HealthCheck = new HealthCheck();
-            $this->HealthCheck->deserialize($param["HealthCheck"]);
+            $this->HealthCheck->deserialize($param['HealthCheck']);
         }
 
-        if (array_key_exists("Certificate",$param) and $param["Certificate"] !== null) {
+        if (array_key_exists('Certificate',$param) and $param['Certificate'] !== null) {
             $this->Certificate = new CertificateInput();
-            $this->Certificate->deserialize($param["Certificate"]);
+            $this->Certificate->deserialize($param['Certificate']);
         }
 
-        if (array_key_exists("SessionExpireTime",$param) and $param["SessionExpireTime"] !== null) {
-            $this->SessionExpireTime = $param["SessionExpireTime"];
+        if (array_key_exists('SessionExpireTime',$param) and $param['SessionExpireTime'] !== null) {
+            $this->SessionExpireTime = $param['SessionExpireTime'];
         }
 
-        if (array_key_exists("Scheduler",$param) and $param["Scheduler"] !== null) {
-            $this->Scheduler = $param["Scheduler"];
+        if (array_key_exists('Scheduler',$param) and $param['Scheduler'] !== null) {
+            $this->Scheduler = $param['Scheduler'];
         }
 
-        if (array_key_exists("SniSwitch",$param) and $param["SniSwitch"] !== null) {
-            $this->SniSwitch = $param["SniSwitch"];
+        if (array_key_exists('SniSwitch',$param) and $param['SniSwitch'] !== null) {
+            $this->SniSwitch = $param['SniSwitch'];
         }
 
-        if (array_key_exists("TargetType",$param) and $param["TargetType"] !== null) {
-            $this->TargetType = $param["TargetType"];
+        if (array_key_exists('TargetType',$param) and $param['TargetType'] !== null) {
+            $this->TargetType = $param['TargetType'];
         }
     }
 }

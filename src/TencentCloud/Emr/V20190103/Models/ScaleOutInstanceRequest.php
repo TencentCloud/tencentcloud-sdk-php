@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -182,66 +182,66 @@ class ScaleOutInstanceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TimeUnit",$param) and $param["TimeUnit"] !== null) {
-            $this->TimeUnit = $param["TimeUnit"];
+        if (array_key_exists('TimeUnit',$param) and $param['TimeUnit'] !== null) {
+            $this->TimeUnit = $param['TimeUnit'];
         }
 
-        if (array_key_exists("TimeSpan",$param) and $param["TimeSpan"] !== null) {
-            $this->TimeSpan = $param["TimeSpan"];
+        if (array_key_exists('TimeSpan',$param) and $param['TimeSpan'] !== null) {
+            $this->TimeSpan = $param['TimeSpan'];
         }
 
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {
-            $this->PayMode = $param["PayMode"];
+        if (array_key_exists('PayMode',$param) and $param['PayMode'] !== null) {
+            $this->PayMode = $param['PayMode'];
         }
 
-        if (array_key_exists("ClientToken",$param) and $param["ClientToken"] !== null) {
-            $this->ClientToken = $param["ClientToken"];
+        if (array_key_exists('ClientToken',$param) and $param['ClientToken'] !== null) {
+            $this->ClientToken = $param['ClientToken'];
         }
 
-        if (array_key_exists("PreExecutedFileSettings",$param) and $param["PreExecutedFileSettings"] !== null) {
+        if (array_key_exists('PreExecutedFileSettings',$param) and $param['PreExecutedFileSettings'] !== null) {
             $this->PreExecutedFileSettings = [];
-            foreach ($param["PreExecutedFileSettings"] as $key => $value){
+            foreach ($param['PreExecutedFileSettings'] as $key => $value){
                 $obj = new PreExecuteFileSettings();
                 $obj->deserialize($value);
                 array_push($this->PreExecutedFileSettings, $obj);
             }
         }
 
-        if (array_key_exists("TaskCount",$param) and $param["TaskCount"] !== null) {
-            $this->TaskCount = $param["TaskCount"];
+        if (array_key_exists('TaskCount',$param) and $param['TaskCount'] !== null) {
+            $this->TaskCount = $param['TaskCount'];
         }
 
-        if (array_key_exists("CoreCount",$param) and $param["CoreCount"] !== null) {
-            $this->CoreCount = $param["CoreCount"];
+        if (array_key_exists('CoreCount',$param) and $param['CoreCount'] !== null) {
+            $this->CoreCount = $param['CoreCount'];
         }
 
-        if (array_key_exists("UnNecessaryNodeList",$param) and $param["UnNecessaryNodeList"] !== null) {
-            $this->UnNecessaryNodeList = $param["UnNecessaryNodeList"];
+        if (array_key_exists('UnNecessaryNodeList',$param) and $param['UnNecessaryNodeList'] !== null) {
+            $this->UnNecessaryNodeList = $param['UnNecessaryNodeList'];
         }
 
-        if (array_key_exists("RouterCount",$param) and $param["RouterCount"] !== null) {
-            $this->RouterCount = $param["RouterCount"];
+        if (array_key_exists('RouterCount',$param) and $param['RouterCount'] !== null) {
+            $this->RouterCount = $param['RouterCount'];
         }
 
-        if (array_key_exists("SoftDeployInfo",$param) and $param["SoftDeployInfo"] !== null) {
-            $this->SoftDeployInfo = $param["SoftDeployInfo"];
+        if (array_key_exists('SoftDeployInfo',$param) and $param['SoftDeployInfo'] !== null) {
+            $this->SoftDeployInfo = $param['SoftDeployInfo'];
         }
 
-        if (array_key_exists("ServiceNodeInfo",$param) and $param["ServiceNodeInfo"] !== null) {
-            $this->ServiceNodeInfo = $param["ServiceNodeInfo"];
+        if (array_key_exists('ServiceNodeInfo',$param) and $param['ServiceNodeInfo'] !== null) {
+            $this->ServiceNodeInfo = $param['ServiceNodeInfo'];
         }
 
-        if (array_key_exists("DisasterRecoverGroupIds",$param) and $param["DisasterRecoverGroupIds"] !== null) {
-            $this->DisasterRecoverGroupIds = $param["DisasterRecoverGroupIds"];
+        if (array_key_exists('DisasterRecoverGroupIds',$param) and $param['DisasterRecoverGroupIds'] !== null) {
+            $this->DisasterRecoverGroupIds = $param['DisasterRecoverGroupIds'];
         }
 
-        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+        if (array_key_exists('Tags',$param) and $param['Tags'] !== null) {
             $this->Tags = [];
-            foreach ($param["Tags"] as $key => $value){
+            foreach ($param['Tags'] as $key => $value){
                 $obj = new Tag();
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);

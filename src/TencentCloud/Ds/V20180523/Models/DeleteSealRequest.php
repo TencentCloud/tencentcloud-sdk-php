@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -70,20 +70,20 @@ class DeleteSealRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Module",$param) and $param["Module"] !== null) {
-            $this->Module = $param["Module"];
+        if (array_key_exists('Module',$param) and $param['Module'] !== null) {
+            $this->Module = $param['Module'];
         }
 
-        if (array_key_exists("Operation",$param) and $param["Operation"] !== null) {
-            $this->Operation = $param["Operation"];
+        if (array_key_exists('Operation',$param) and $param['Operation'] !== null) {
+            $this->Operation = $param['Operation'];
         }
 
-        if (array_key_exists("AccountResId",$param) and $param["AccountResId"] !== null) {
-            $this->AccountResId = $param["AccountResId"];
+        if (array_key_exists('AccountResId',$param) and $param['AccountResId'] !== null) {
+            $this->AccountResId = $param['AccountResId'];
         }
 
-        if (array_key_exists("SealResId",$param) and $param["SealResId"] !== null) {
-            $this->SealResId = $param["SealResId"];
+        if (array_key_exists('SealResId',$param) and $param['SealResId'] !== null) {
+            $this->SealResId = $param['SealResId'];
         }
     }
 }

@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -78,24 +78,24 @@ class DescribePolicyGroupInfoEventCondition extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("EventId",$param) and $param["EventId"] !== null) {
-            $this->EventId = $param["EventId"];
+        if (array_key_exists('EventId',$param) and $param['EventId'] !== null) {
+            $this->EventId = $param['EventId'];
         }
 
-        if (array_key_exists("RuleId",$param) and $param["RuleId"] !== null) {
-            $this->RuleId = $param["RuleId"];
+        if (array_key_exists('RuleId',$param) and $param['RuleId'] !== null) {
+            $this->RuleId = $param['RuleId'];
         }
 
-        if (array_key_exists("EventShowName",$param) and $param["EventShowName"] !== null) {
-            $this->EventShowName = $param["EventShowName"];
+        if (array_key_exists('EventShowName',$param) and $param['EventShowName'] !== null) {
+            $this->EventShowName = $param['EventShowName'];
         }
 
-        if (array_key_exists("AlarmNotifyPeriod",$param) and $param["AlarmNotifyPeriod"] !== null) {
-            $this->AlarmNotifyPeriod = $param["AlarmNotifyPeriod"];
+        if (array_key_exists('AlarmNotifyPeriod',$param) and $param['AlarmNotifyPeriod'] !== null) {
+            $this->AlarmNotifyPeriod = $param['AlarmNotifyPeriod'];
         }
 
-        if (array_key_exists("AlarmNotifyType",$param) and $param["AlarmNotifyType"] !== null) {
-            $this->AlarmNotifyType = $param["AlarmNotifyType"];
+        if (array_key_exists('AlarmNotifyType',$param) and $param['AlarmNotifyType'] !== null) {
+            $this->AlarmNotifyType = $param['AlarmNotifyType'];
         }
     }
 }

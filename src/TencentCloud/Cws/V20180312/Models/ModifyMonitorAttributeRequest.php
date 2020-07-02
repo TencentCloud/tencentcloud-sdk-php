@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -102,36 +102,36 @@ class ModifyMonitorAttributeRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MonitorId",$param) and $param["MonitorId"] !== null) {
-            $this->MonitorId = $param["MonitorId"];
+        if (array_key_exists('MonitorId',$param) and $param['MonitorId'] !== null) {
+            $this->MonitorId = $param['MonitorId'];
         }
 
-        if (array_key_exists("Urls",$param) and $param["Urls"] !== null) {
-            $this->Urls = $param["Urls"];
+        if (array_key_exists('Urls',$param) and $param['Urls'] !== null) {
+            $this->Urls = $param['Urls'];
         }
 
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("ScannerType",$param) and $param["ScannerType"] !== null) {
-            $this->ScannerType = $param["ScannerType"];
+        if (array_key_exists('ScannerType',$param) and $param['ScannerType'] !== null) {
+            $this->ScannerType = $param['ScannerType'];
         }
 
-        if (array_key_exists("Crontab",$param) and $param["Crontab"] !== null) {
-            $this->Crontab = $param["Crontab"];
+        if (array_key_exists('Crontab',$param) and $param['Crontab'] !== null) {
+            $this->Crontab = $param['Crontab'];
         }
 
-        if (array_key_exists("RateLimit",$param) and $param["RateLimit"] !== null) {
-            $this->RateLimit = $param["RateLimit"];
+        if (array_key_exists('RateLimit',$param) and $param['RateLimit'] !== null) {
+            $this->RateLimit = $param['RateLimit'];
         }
 
-        if (array_key_exists("FirstScanStartTime",$param) and $param["FirstScanStartTime"] !== null) {
-            $this->FirstScanStartTime = $param["FirstScanStartTime"];
+        if (array_key_exists('FirstScanStartTime',$param) and $param['FirstScanStartTime'] !== null) {
+            $this->FirstScanStartTime = $param['FirstScanStartTime'];
         }
 
-        if (array_key_exists("MonitorStatus",$param) and $param["MonitorStatus"] !== null) {
-            $this->MonitorStatus = $param["MonitorStatus"];
+        if (array_key_exists('MonitorStatus',$param) and $param['MonitorStatus'] !== null) {
+            $this->MonitorStatus = $param['MonitorStatus'];
         }
     }
 }

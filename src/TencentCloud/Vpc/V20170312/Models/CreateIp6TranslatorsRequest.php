@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIp6TranslatorName(string $Ip6TranslatorName) 设置转换实例名称
  * @method integer getIp6TranslatorCount() 获取创建转换实例数量，默认是1个
  * @method void setIp6TranslatorCount(integer $Ip6TranslatorCount) 设置创建转换实例数量，默认是1个
- * @method string getIp6InternetServiceProvider() 获取转换实例运营商属性，可取"CMCC","CTCC","CUCC","BGP"
- * @method void setIp6InternetServiceProvider(string $Ip6InternetServiceProvider) 设置转换实例运营商属性，可取"CMCC","CTCC","CUCC","BGP"
+ * @method string getIp6InternetServiceProvider() 获取转换实例运营商属性，可取'CMCC','CTCC','CUCC','BGP'
+ * @method void setIp6InternetServiceProvider(string $Ip6InternetServiceProvider) 设置转换实例运营商属性，可取'CMCC','CTCC','CUCC','BGP'
  */
 class CreateIp6TranslatorsRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class CreateIp6TranslatorsRequest extends AbstractModel
     public $Ip6TranslatorCount;
 
     /**
-     * @var string 转换实例运营商属性，可取"CMCC","CTCC","CUCC","BGP"
+     * @var string 转换实例运营商属性，可取'CMCC','CTCC','CUCC','BGP'
      */
     public $Ip6InternetServiceProvider;
 
     /**
      * @param string $Ip6TranslatorName 转换实例名称
      * @param integer $Ip6TranslatorCount 创建转换实例数量，默认是1个
-     * @param string $Ip6InternetServiceProvider 转换实例运营商属性，可取"CMCC","CTCC","CUCC","BGP"
+     * @param string $Ip6InternetServiceProvider 转换实例运营商属性，可取'CMCC','CTCC','CUCC','BGP'
      */
     function __construct()
     {
@@ -62,16 +62,16 @@ class CreateIp6TranslatorsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Ip6TranslatorName",$param) and $param["Ip6TranslatorName"] !== null) {
-            $this->Ip6TranslatorName = $param["Ip6TranslatorName"];
+        if (array_key_exists('Ip6TranslatorName',$param) and $param['Ip6TranslatorName'] !== null) {
+            $this->Ip6TranslatorName = $param['Ip6TranslatorName'];
         }
 
-        if (array_key_exists("Ip6TranslatorCount",$param) and $param["Ip6TranslatorCount"] !== null) {
-            $this->Ip6TranslatorCount = $param["Ip6TranslatorCount"];
+        if (array_key_exists('Ip6TranslatorCount',$param) and $param['Ip6TranslatorCount'] !== null) {
+            $this->Ip6TranslatorCount = $param['Ip6TranslatorCount'];
         }
 
-        if (array_key_exists("Ip6InternetServiceProvider",$param) and $param["Ip6InternetServiceProvider"] !== null) {
-            $this->Ip6InternetServiceProvider = $param["Ip6InternetServiceProvider"];
+        if (array_key_exists('Ip6InternetServiceProvider',$param) and $param['Ip6InternetServiceProvider'] !== null) {
+            $this->Ip6InternetServiceProvider = $param['Ip6InternetServiceProvider'];
         }
     }
 }

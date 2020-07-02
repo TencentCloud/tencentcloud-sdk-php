@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -110,40 +110,40 @@ class ApplyUserCertRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Module",$param) and $param["Module"] !== null) {
-            $this->Module = $param["Module"];
+        if (array_key_exists('Module',$param) and $param['Module'] !== null) {
+            $this->Module = $param['Module'];
         }
 
-        if (array_key_exists("Operation",$param) and $param["Operation"] !== null) {
-            $this->Operation = $param["Operation"];
+        if (array_key_exists('Operation',$param) and $param['Operation'] !== null) {
+            $this->Operation = $param['Operation'];
         }
 
-        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
-            $this->ClusterId = $param["ClusterId"];
+        if (array_key_exists('ClusterId',$param) and $param['ClusterId'] !== null) {
+            $this->ClusterId = $param['ClusterId'];
         }
 
-        if (array_key_exists("GroupName",$param) and $param["GroupName"] !== null) {
-            $this->GroupName = $param["GroupName"];
+        if (array_key_exists('GroupName',$param) and $param['GroupName'] !== null) {
+            $this->GroupName = $param['GroupName'];
         }
 
-        if (array_key_exists("UserIdentity",$param) and $param["UserIdentity"] !== null) {
-            $this->UserIdentity = $param["UserIdentity"];
+        if (array_key_exists('UserIdentity',$param) and $param['UserIdentity'] !== null) {
+            $this->UserIdentity = $param['UserIdentity'];
         }
 
-        if (array_key_exists("Applicant",$param) and $param["Applicant"] !== null) {
-            $this->Applicant = $param["Applicant"];
+        if (array_key_exists('Applicant',$param) and $param['Applicant'] !== null) {
+            $this->Applicant = $param['Applicant'];
         }
 
-        if (array_key_exists("IdentityNum",$param) and $param["IdentityNum"] !== null) {
-            $this->IdentityNum = $param["IdentityNum"];
+        if (array_key_exists('IdentityNum',$param) and $param['IdentityNum'] !== null) {
+            $this->IdentityNum = $param['IdentityNum'];
         }
 
-        if (array_key_exists("CsrData",$param) and $param["CsrData"] !== null) {
-            $this->CsrData = $param["CsrData"];
+        if (array_key_exists('CsrData',$param) and $param['CsrData'] !== null) {
+            $this->CsrData = $param['CsrData'];
         }
 
-        if (array_key_exists("Notes",$param) and $param["Notes"] !== null) {
-            $this->Notes = $param["Notes"];
+        if (array_key_exists('Notes',$param) and $param['Notes'] !== null) {
+            $this->Notes = $param['Notes'];
         }
     }
 }

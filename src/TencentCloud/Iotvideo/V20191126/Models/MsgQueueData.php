@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -78,24 +78,24 @@ class MsgQueueData extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MsgQueueType",$param) and $param["MsgQueueType"] !== null) {
-            $this->MsgQueueType = $param["MsgQueueType"];
+        if (array_key_exists('MsgQueueType',$param) and $param['MsgQueueType'] !== null) {
+            $this->MsgQueueType = $param['MsgQueueType'];
         }
 
-        if (array_key_exists("MsgType",$param) and $param["MsgType"] !== null) {
-            $this->MsgType = $param["MsgType"];
+        if (array_key_exists('MsgType',$param) and $param['MsgType'] !== null) {
+            $this->MsgType = $param['MsgType'];
         }
 
-        if (array_key_exists("Topic",$param) and $param["Topic"] !== null) {
-            $this->Topic = $param["Topic"];
+        if (array_key_exists('Topic',$param) and $param['Topic'] !== null) {
+            $this->Topic = $param['Topic'];
         }
 
-        if (array_key_exists("Instance",$param) and $param["Instance"] !== null) {
-            $this->Instance = $param["Instance"];
+        if (array_key_exists('Instance',$param) and $param['Instance'] !== null) {
+            $this->Instance = $param['Instance'];
         }
 
-        if (array_key_exists("MsgRegion",$param) and $param["MsgRegion"] !== null) {
-            $this->MsgRegion = $param["MsgRegion"];
+        if (array_key_exists('MsgRegion',$param) and $param['MsgRegion'] !== null) {
+            $this->MsgRegion = $param['MsgRegion'];
         }
     }
 }

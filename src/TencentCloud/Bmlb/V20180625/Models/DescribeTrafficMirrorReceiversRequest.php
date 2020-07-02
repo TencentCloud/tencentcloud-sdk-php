@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -102,36 +102,36 @@ class DescribeTrafficMirrorReceiversRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TrafficMirrorId",$param) and $param["TrafficMirrorId"] !== null) {
-            $this->TrafficMirrorId = $param["TrafficMirrorId"];
+        if (array_key_exists('TrafficMirrorId',$param) and $param['TrafficMirrorId'] !== null) {
+            $this->TrafficMirrorId = $param['TrafficMirrorId'];
         }
 
-        if (array_key_exists("InstanceIds",$param) and $param["InstanceIds"] !== null) {
-            $this->InstanceIds = $param["InstanceIds"];
+        if (array_key_exists('InstanceIds',$param) and $param['InstanceIds'] !== null) {
+            $this->InstanceIds = $param['InstanceIds'];
         }
 
-        if (array_key_exists("Ports",$param) and $param["Ports"] !== null) {
-            $this->Ports = $param["Ports"];
+        if (array_key_exists('Ports',$param) and $param['Ports'] !== null) {
+            $this->Ports = $param['Ports'];
         }
 
-        if (array_key_exists("Weights",$param) and $param["Weights"] !== null) {
-            $this->Weights = $param["Weights"];
+        if (array_key_exists('Weights',$param) and $param['Weights'] !== null) {
+            $this->Weights = $param['Weights'];
         }
 
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
+        if (array_key_exists('Offset',$param) and $param['Offset'] !== null) {
+            $this->Offset = $param['Offset'];
         }
 
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
+        if (array_key_exists('Limit',$param) and $param['Limit'] !== null) {
+            $this->Limit = $param['Limit'];
         }
 
-        if (array_key_exists("VagueStr",$param) and $param["VagueStr"] !== null) {
-            $this->VagueStr = $param["VagueStr"];
+        if (array_key_exists('VagueStr',$param) and $param['VagueStr'] !== null) {
+            $this->VagueStr = $param['VagueStr'];
         }
 
-        if (array_key_exists("VagueIp",$param) and $param["VagueIp"] !== null) {
-            $this->VagueIp = $param["VagueIp"];
+        if (array_key_exists('VagueIp',$param) and $param['VagueIp'] !== null) {
+            $this->VagueIp = $param['VagueIp'];
         }
     }
 }

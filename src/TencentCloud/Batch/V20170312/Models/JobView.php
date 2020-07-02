@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -110,38 +110,38 @@ class JobView extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("JobId",$param) and $param["JobId"] !== null) {
-            $this->JobId = $param["JobId"];
+        if (array_key_exists('JobId',$param) and $param['JobId'] !== null) {
+            $this->JobId = $param['JobId'];
         }
 
-        if (array_key_exists("JobName",$param) and $param["JobName"] !== null) {
-            $this->JobName = $param["JobName"];
+        if (array_key_exists('JobName',$param) and $param['JobName'] !== null) {
+            $this->JobName = $param['JobName'];
         }
 
-        if (array_key_exists("JobState",$param) and $param["JobState"] !== null) {
-            $this->JobState = $param["JobState"];
+        if (array_key_exists('JobState',$param) and $param['JobState'] !== null) {
+            $this->JobState = $param['JobState'];
         }
 
-        if (array_key_exists("Priority",$param) and $param["Priority"] !== null) {
-            $this->Priority = $param["Priority"];
+        if (array_key_exists('Priority',$param) and $param['Priority'] !== null) {
+            $this->Priority = $param['Priority'];
         }
 
-        if (array_key_exists("Placement",$param) and $param["Placement"] !== null) {
+        if (array_key_exists('Placement',$param) and $param['Placement'] !== null) {
             $this->Placement = new Placement();
-            $this->Placement->deserialize($param["Placement"]);
+            $this->Placement->deserialize($param['Placement']);
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
-            $this->EndTime = $param["EndTime"];
+        if (array_key_exists('EndTime',$param) and $param['EndTime'] !== null) {
+            $this->EndTime = $param['EndTime'];
         }
 
-        if (array_key_exists("TaskMetrics",$param) and $param["TaskMetrics"] !== null) {
+        if (array_key_exists('TaskMetrics',$param) and $param['TaskMetrics'] !== null) {
             $this->TaskMetrics = new TaskMetrics();
-            $this->TaskMetrics->deserialize($param["TaskMetrics"]);
+            $this->TaskMetrics->deserialize($param['TaskMetrics']);
         }
     }
 }

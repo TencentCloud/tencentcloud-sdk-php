@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -78,22 +78,22 @@ FalseRate1Percent, FalseRate5Permil, FalseRate1Permil分别代表误识率在百
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Faces",$param) and $param["Faces"] !== null) {
+        if (array_key_exists('Faces',$param) and $param['Faces'] !== null) {
             $this->Faces = [];
-            foreach ($param["Faces"] as $key => $value){
+            foreach ($param['Faces'] as $key => $value){
                 $obj = new Face();
                 $obj->deserialize($value);
                 array_push($this->Faces, $obj);
             }
         }
 
-        if (array_key_exists("Threshold",$param) and $param["Threshold"] !== null) {
+        if (array_key_exists('Threshold',$param) and $param['Threshold'] !== null) {
             $this->Threshold = new Threshold();
-            $this->Threshold->deserialize($param["Threshold"]);
+            $this->Threshold->deserialize($param['Threshold']);
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

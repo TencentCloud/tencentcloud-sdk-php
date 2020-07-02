@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -62,17 +62,17 @@ class ModifySubscribeObjectsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SubscribeId",$param) and $param["SubscribeId"] !== null) {
-            $this->SubscribeId = $param["SubscribeId"];
+        if (array_key_exists('SubscribeId',$param) and $param['SubscribeId'] !== null) {
+            $this->SubscribeId = $param['SubscribeId'];
         }
 
-        if (array_key_exists("SubscribeObjectType",$param) and $param["SubscribeObjectType"] !== null) {
-            $this->SubscribeObjectType = $param["SubscribeObjectType"];
+        if (array_key_exists('SubscribeObjectType',$param) and $param['SubscribeObjectType'] !== null) {
+            $this->SubscribeObjectType = $param['SubscribeObjectType'];
         }
 
-        if (array_key_exists("Objects",$param) and $param["Objects"] !== null) {
+        if (array_key_exists('Objects',$param) and $param['Objects'] !== null) {
             $this->Objects = [];
-            foreach ($param["Objects"] as $key => $value){
+            foreach ($param['Objects'] as $key => $value){
                 $obj = new SubscribeObject();
                 $obj->deserialize($value);
                 array_push($this->Objects, $obj);

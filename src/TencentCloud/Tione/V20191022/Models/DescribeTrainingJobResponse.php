@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -294,100 +294,100 @@ Stopped：已停止
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AlgorithmSpecification",$param) and $param["AlgorithmSpecification"] !== null) {
+        if (array_key_exists('AlgorithmSpecification',$param) and $param['AlgorithmSpecification'] !== null) {
             $this->AlgorithmSpecification = new AlgorithmSpecification();
-            $this->AlgorithmSpecification->deserialize($param["AlgorithmSpecification"]);
+            $this->AlgorithmSpecification->deserialize($param['AlgorithmSpecification']);
         }
 
-        if (array_key_exists("TrainingJobName",$param) and $param["TrainingJobName"] !== null) {
-            $this->TrainingJobName = $param["TrainingJobName"];
+        if (array_key_exists('TrainingJobName',$param) and $param['TrainingJobName'] !== null) {
+            $this->TrainingJobName = $param['TrainingJobName'];
         }
 
-        if (array_key_exists("HyperParameters",$param) and $param["HyperParameters"] !== null) {
-            $this->HyperParameters = $param["HyperParameters"];
+        if (array_key_exists('HyperParameters',$param) and $param['HyperParameters'] !== null) {
+            $this->HyperParameters = $param['HyperParameters'];
         }
 
-        if (array_key_exists("InputDataConfig",$param) and $param["InputDataConfig"] !== null) {
+        if (array_key_exists('InputDataConfig',$param) and $param['InputDataConfig'] !== null) {
             $this->InputDataConfig = [];
-            foreach ($param["InputDataConfig"] as $key => $value){
+            foreach ($param['InputDataConfig'] as $key => $value){
                 $obj = new InputDataConfig();
                 $obj->deserialize($value);
                 array_push($this->InputDataConfig, $obj);
             }
         }
 
-        if (array_key_exists("OutputDataConfig",$param) and $param["OutputDataConfig"] !== null) {
+        if (array_key_exists('OutputDataConfig',$param) and $param['OutputDataConfig'] !== null) {
             $this->OutputDataConfig = new OutputDataConfig();
-            $this->OutputDataConfig->deserialize($param["OutputDataConfig"]);
+            $this->OutputDataConfig->deserialize($param['OutputDataConfig']);
         }
 
-        if (array_key_exists("StoppingCondition",$param) and $param["StoppingCondition"] !== null) {
+        if (array_key_exists('StoppingCondition',$param) and $param['StoppingCondition'] !== null) {
             $this->StoppingCondition = new StoppingCondition();
-            $this->StoppingCondition->deserialize($param["StoppingCondition"]);
+            $this->StoppingCondition->deserialize($param['StoppingCondition']);
         }
 
-        if (array_key_exists("ResourceConfig",$param) and $param["ResourceConfig"] !== null) {
+        if (array_key_exists('ResourceConfig',$param) and $param['ResourceConfig'] !== null) {
             $this->ResourceConfig = new ResourceConfig();
-            $this->ResourceConfig->deserialize($param["ResourceConfig"]);
+            $this->ResourceConfig->deserialize($param['ResourceConfig']);
         }
 
-        if (array_key_exists("VpcConfig",$param) and $param["VpcConfig"] !== null) {
+        if (array_key_exists('VpcConfig',$param) and $param['VpcConfig'] !== null) {
             $this->VpcConfig = new VpcConfig();
-            $this->VpcConfig->deserialize($param["VpcConfig"]);
+            $this->VpcConfig->deserialize($param['VpcConfig']);
         }
 
-        if (array_key_exists("FailureReason",$param) and $param["FailureReason"] !== null) {
-            $this->FailureReason = $param["FailureReason"];
+        if (array_key_exists('FailureReason',$param) and $param['FailureReason'] !== null) {
+            $this->FailureReason = $param['FailureReason'];
         }
 
-        if (array_key_exists("LastModifiedTime",$param) and $param["LastModifiedTime"] !== null) {
-            $this->LastModifiedTime = $param["LastModifiedTime"];
+        if (array_key_exists('LastModifiedTime',$param) and $param['LastModifiedTime'] !== null) {
+            $this->LastModifiedTime = $param['LastModifiedTime'];
         }
 
-        if (array_key_exists("TrainingStartTime",$param) and $param["TrainingStartTime"] !== null) {
-            $this->TrainingStartTime = $param["TrainingStartTime"];
+        if (array_key_exists('TrainingStartTime',$param) and $param['TrainingStartTime'] !== null) {
+            $this->TrainingStartTime = $param['TrainingStartTime'];
         }
 
-        if (array_key_exists("TrainingEndTime",$param) and $param["TrainingEndTime"] !== null) {
-            $this->TrainingEndTime = $param["TrainingEndTime"];
+        if (array_key_exists('TrainingEndTime',$param) and $param['TrainingEndTime'] !== null) {
+            $this->TrainingEndTime = $param['TrainingEndTime'];
         }
 
-        if (array_key_exists("ModelArtifacts",$param) and $param["ModelArtifacts"] !== null) {
+        if (array_key_exists('ModelArtifacts',$param) and $param['ModelArtifacts'] !== null) {
             $this->ModelArtifacts = new ModelArtifacts();
-            $this->ModelArtifacts->deserialize($param["ModelArtifacts"]);
+            $this->ModelArtifacts->deserialize($param['ModelArtifacts']);
         }
 
-        if (array_key_exists("SecondaryStatus",$param) and $param["SecondaryStatus"] !== null) {
-            $this->SecondaryStatus = $param["SecondaryStatus"];
+        if (array_key_exists('SecondaryStatus',$param) and $param['SecondaryStatus'] !== null) {
+            $this->SecondaryStatus = $param['SecondaryStatus'];
         }
 
-        if (array_key_exists("SecondaryStatusTransitions",$param) and $param["SecondaryStatusTransitions"] !== null) {
+        if (array_key_exists('SecondaryStatusTransitions',$param) and $param['SecondaryStatusTransitions'] !== null) {
             $this->SecondaryStatusTransitions = [];
-            foreach ($param["SecondaryStatusTransitions"] as $key => $value){
+            foreach ($param['SecondaryStatusTransitions'] as $key => $value){
                 $obj = new SecondaryStatusTransition();
                 $obj->deserialize($value);
                 array_push($this->SecondaryStatusTransitions, $obj);
             }
         }
 
-        if (array_key_exists("RoleName",$param) and $param["RoleName"] !== null) {
-            $this->RoleName = $param["RoleName"];
+        if (array_key_exists('RoleName',$param) and $param['RoleName'] !== null) {
+            $this->RoleName = $param['RoleName'];
         }
 
-        if (array_key_exists("TrainingJobStatus",$param) and $param["TrainingJobStatus"] !== null) {
-            $this->TrainingJobStatus = $param["TrainingJobStatus"];
+        if (array_key_exists('TrainingJobStatus',$param) and $param['TrainingJobStatus'] !== null) {
+            $this->TrainingJobStatus = $param['TrainingJobStatus'];
         }
 
-        if (array_key_exists("LogUrl",$param) and $param["LogUrl"] !== null) {
-            $this->LogUrl = $param["LogUrl"];
+        if (array_key_exists('LogUrl',$param) and $param['LogUrl'] !== null) {
+            $this->LogUrl = $param['LogUrl'];
         }
 
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

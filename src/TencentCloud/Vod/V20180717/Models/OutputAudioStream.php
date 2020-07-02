@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -106,16 +106,16 @@ class OutputAudioStream extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Codec",$param) and $param["Codec"] !== null) {
-            $this->Codec = $param["Codec"];
+        if (array_key_exists('Codec',$param) and $param['Codec'] !== null) {
+            $this->Codec = $param['Codec'];
         }
 
-        if (array_key_exists("SampleRate",$param) and $param["SampleRate"] !== null) {
-            $this->SampleRate = $param["SampleRate"];
+        if (array_key_exists('SampleRate',$param) and $param['SampleRate'] !== null) {
+            $this->SampleRate = $param['SampleRate'];
         }
 
-        if (array_key_exists("AudioChannel",$param) and $param["AudioChannel"] !== null) {
-            $this->AudioChannel = $param["AudioChannel"];
+        if (array_key_exists('AudioChannel',$param) and $param['AudioChannel'] !== null) {
+            $this->AudioChannel = $param['AudioChannel'];
         }
     }
 }

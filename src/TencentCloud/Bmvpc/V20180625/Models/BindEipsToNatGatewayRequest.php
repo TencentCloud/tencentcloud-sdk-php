@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -70,20 +70,20 @@ class BindEipsToNatGatewayRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("NatId",$param) and $param["NatId"] !== null) {
-            $this->NatId = $param["NatId"];
+        if (array_key_exists('NatId',$param) and $param['NatId'] !== null) {
+            $this->NatId = $param['NatId'];
         }
 
-        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
-            $this->VpcId = $param["VpcId"];
+        if (array_key_exists('VpcId',$param) and $param['VpcId'] !== null) {
+            $this->VpcId = $param['VpcId'];
         }
 
-        if (array_key_exists("AssignedEips",$param) and $param["AssignedEips"] !== null) {
-            $this->AssignedEips = $param["AssignedEips"];
+        if (array_key_exists('AssignedEips',$param) and $param['AssignedEips'] !== null) {
+            $this->AssignedEips = $param['AssignedEips'];
         }
 
-        if (array_key_exists("AutoAllocEipNum",$param) and $param["AutoAllocEipNum"] !== null) {
-            $this->AutoAllocEipNum = $param["AutoAllocEipNum"];
+        if (array_key_exists('AutoAllocEipNum',$param) and $param['AutoAllocEipNum'] !== null) {
+            $this->AutoAllocEipNum = $param['AutoAllocEipNum'];
         }
     }
 }

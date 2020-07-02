@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -70,25 +70,25 @@ class GetDataHistoryResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DataHistory",$param) and $param["DataHistory"] !== null) {
+        if (array_key_exists('DataHistory',$param) and $param['DataHistory'] !== null) {
             $this->DataHistory = [];
-            foreach ($param["DataHistory"] as $key => $value){
+            foreach ($param['DataHistory'] as $key => $value){
                 $obj = new DataHistoryEntry();
                 $obj->deserialize($value);
                 array_push($this->DataHistory, $obj);
             }
         }
 
-        if (array_key_exists("ScrollId",$param) and $param["ScrollId"] !== null) {
-            $this->ScrollId = $param["ScrollId"];
+        if (array_key_exists('ScrollId',$param) and $param['ScrollId'] !== null) {
+            $this->ScrollId = $param['ScrollId'];
         }
 
-        if (array_key_exists("ScrollTimeout",$param) and $param["ScrollTimeout"] !== null) {
-            $this->ScrollTimeout = $param["ScrollTimeout"];
+        if (array_key_exists('ScrollTimeout',$param) and $param['ScrollTimeout'] !== null) {
+            $this->ScrollTimeout = $param['ScrollTimeout'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

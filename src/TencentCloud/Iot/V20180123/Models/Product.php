@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -206,93 +206,93 @@ class Product extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ProductId",$param) and $param["ProductId"] !== null) {
-            $this->ProductId = $param["ProductId"];
+        if (array_key_exists('ProductId',$param) and $param['ProductId'] !== null) {
+            $this->ProductId = $param['ProductId'];
         }
 
-        if (array_key_exists("ProductKey",$param) and $param["ProductKey"] !== null) {
-            $this->ProductKey = $param["ProductKey"];
+        if (array_key_exists('ProductKey',$param) and $param['ProductKey'] !== null) {
+            $this->ProductKey = $param['ProductKey'];
         }
 
-        if (array_key_exists("AppId",$param) and $param["AppId"] !== null) {
-            $this->AppId = $param["AppId"];
+        if (array_key_exists('AppId',$param) and $param['AppId'] !== null) {
+            $this->AppId = $param['AppId'];
         }
 
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
-            $this->Description = $param["Description"];
+        if (array_key_exists('Description',$param) and $param['Description'] !== null) {
+            $this->Description = $param['Description'];
         }
 
-        if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
-            $this->Domain = $param["Domain"];
+        if (array_key_exists('Domain',$param) and $param['Domain'] !== null) {
+            $this->Domain = $param['Domain'];
         }
 
-        if (array_key_exists("Standard",$param) and $param["Standard"] !== null) {
-            $this->Standard = $param["Standard"];
+        if (array_key_exists('Standard',$param) and $param['Standard'] !== null) {
+            $this->Standard = $param['Standard'];
         }
 
-        if (array_key_exists("AuthType",$param) and $param["AuthType"] !== null) {
-            $this->AuthType = $param["AuthType"];
+        if (array_key_exists('AuthType',$param) and $param['AuthType'] !== null) {
+            $this->AuthType = $param['AuthType'];
         }
 
-        if (array_key_exists("Deleted",$param) and $param["Deleted"] !== null) {
-            $this->Deleted = $param["Deleted"];
+        if (array_key_exists('Deleted',$param) and $param['Deleted'] !== null) {
+            $this->Deleted = $param['Deleted'];
         }
 
-        if (array_key_exists("Message",$param) and $param["Message"] !== null) {
-            $this->Message = $param["Message"];
+        if (array_key_exists('Message',$param) and $param['Message'] !== null) {
+            $this->Message = $param['Message'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
-            $this->UpdateTime = $param["UpdateTime"];
+        if (array_key_exists('UpdateTime',$param) and $param['UpdateTime'] !== null) {
+            $this->UpdateTime = $param['UpdateTime'];
         }
 
-        if (array_key_exists("DataTemplate",$param) and $param["DataTemplate"] !== null) {
+        if (array_key_exists('DataTemplate',$param) and $param['DataTemplate'] !== null) {
             $this->DataTemplate = [];
-            foreach ($param["DataTemplate"] as $key => $value){
+            foreach ($param['DataTemplate'] as $key => $value){
                 $obj = new DataTemplate();
                 $obj->deserialize($value);
                 array_push($this->DataTemplate, $obj);
             }
         }
 
-        if (array_key_exists("DataProtocol",$param) and $param["DataProtocol"] !== null) {
-            $this->DataProtocol = $param["DataProtocol"];
+        if (array_key_exists('DataProtocol',$param) and $param['DataProtocol'] !== null) {
+            $this->DataProtocol = $param['DataProtocol'];
         }
 
-        if (array_key_exists("Username",$param) and $param["Username"] !== null) {
-            $this->Username = $param["Username"];
+        if (array_key_exists('Username',$param) and $param['Username'] !== null) {
+            $this->Username = $param['Username'];
         }
 
-        if (array_key_exists("Password",$param) and $param["Password"] !== null) {
-            $this->Password = $param["Password"];
+        if (array_key_exists('Password',$param) and $param['Password'] !== null) {
+            $this->Password = $param['Password'];
         }
 
-        if (array_key_exists("CommProtocol",$param) and $param["CommProtocol"] !== null) {
-            $this->CommProtocol = $param["CommProtocol"];
+        if (array_key_exists('CommProtocol',$param) and $param['CommProtocol'] !== null) {
+            $this->CommProtocol = $param['CommProtocol'];
         }
 
-        if (array_key_exists("Qps",$param) and $param["Qps"] !== null) {
-            $this->Qps = $param["Qps"];
+        if (array_key_exists('Qps',$param) and $param['Qps'] !== null) {
+            $this->Qps = $param['Qps'];
         }
 
-        if (array_key_exists("Region",$param) and $param["Region"] !== null) {
-            $this->Region = $param["Region"];
+        if (array_key_exists('Region',$param) and $param['Region'] !== null) {
+            $this->Region = $param['Region'];
         }
 
-        if (array_key_exists("DeviceType",$param) and $param["DeviceType"] !== null) {
-            $this->DeviceType = $param["DeviceType"];
+        if (array_key_exists('DeviceType',$param) and $param['DeviceType'] !== null) {
+            $this->DeviceType = $param['DeviceType'];
         }
 
-        if (array_key_exists("AssociatedProducts",$param) and $param["AssociatedProducts"] !== null) {
-            $this->AssociatedProducts = $param["AssociatedProducts"];
+        if (array_key_exists('AssociatedProducts',$param) and $param['AssociatedProducts'] !== null) {
+            $this->AssociatedProducts = $param['AssociatedProducts'];
         }
     }
 }

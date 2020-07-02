@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -130,42 +130,42 @@ class EditingTaskResult extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
-            $this->TaskId = $param["TaskId"];
+        if (array_key_exists('TaskId',$param) and $param['TaskId'] !== null) {
+            $this->TaskId = $param['TaskId'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("TagTaskResult",$param) and $param["TagTaskResult"] !== null) {
+        if (array_key_exists('TagTaskResult',$param) and $param['TagTaskResult'] !== null) {
             $this->TagTaskResult = new TagTaskResult();
-            $this->TagTaskResult->deserialize($param["TagTaskResult"]);
+            $this->TagTaskResult->deserialize($param['TagTaskResult']);
         }
 
-        if (array_key_exists("ClassificationTaskResult",$param) and $param["ClassificationTaskResult"] !== null) {
+        if (array_key_exists('ClassificationTaskResult',$param) and $param['ClassificationTaskResult'] !== null) {
             $this->ClassificationTaskResult = new ClassificationTaskResult();
-            $this->ClassificationTaskResult->deserialize($param["ClassificationTaskResult"]);
+            $this->ClassificationTaskResult->deserialize($param['ClassificationTaskResult']);
         }
 
-        if (array_key_exists("StripTaskResult",$param) and $param["StripTaskResult"] !== null) {
+        if (array_key_exists('StripTaskResult',$param) and $param['StripTaskResult'] !== null) {
             $this->StripTaskResult = new StripTaskResult();
-            $this->StripTaskResult->deserialize($param["StripTaskResult"]);
+            $this->StripTaskResult->deserialize($param['StripTaskResult']);
         }
 
-        if (array_key_exists("HighlightsTaskResult",$param) and $param["HighlightsTaskResult"] !== null) {
+        if (array_key_exists('HighlightsTaskResult',$param) and $param['HighlightsTaskResult'] !== null) {
             $this->HighlightsTaskResult = new HighlightsTaskResult();
-            $this->HighlightsTaskResult->deserialize($param["HighlightsTaskResult"]);
+            $this->HighlightsTaskResult->deserialize($param['HighlightsTaskResult']);
         }
 
-        if (array_key_exists("CoverTaskResult",$param) and $param["CoverTaskResult"] !== null) {
+        if (array_key_exists('CoverTaskResult',$param) and $param['CoverTaskResult'] !== null) {
             $this->CoverTaskResult = new CoverTaskResult();
-            $this->CoverTaskResult->deserialize($param["CoverTaskResult"]);
+            $this->CoverTaskResult->deserialize($param['CoverTaskResult']);
         }
 
-        if (array_key_exists("OpeningEndingTaskResult",$param) and $param["OpeningEndingTaskResult"] !== null) {
+        if (array_key_exists('OpeningEndingTaskResult',$param) and $param['OpeningEndingTaskResult'] !== null) {
             $this->OpeningEndingTaskResult = new OpeningEndingTaskResult();
-            $this->OpeningEndingTaskResult->deserialize($param["OpeningEndingTaskResult"]);
+            $this->OpeningEndingTaskResult->deserialize($param['OpeningEndingTaskResult']);
         }
     }
 }

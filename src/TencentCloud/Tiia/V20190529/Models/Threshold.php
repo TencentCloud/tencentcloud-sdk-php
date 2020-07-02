@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -65,16 +65,16 @@ class Threshold extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FalseRate1Percent",$param) and $param["FalseRate1Percent"] !== null) {
-            $this->FalseRate1Percent = $param["FalseRate1Percent"];
+        if (array_key_exists('FalseRate1Percent',$param) and $param['FalseRate1Percent'] !== null) {
+            $this->FalseRate1Percent = $param['FalseRate1Percent'];
         }
 
-        if (array_key_exists("FalseRate5Permil",$param) and $param["FalseRate5Permil"] !== null) {
-            $this->FalseRate5Permil = $param["FalseRate5Permil"];
+        if (array_key_exists('FalseRate5Permil',$param) and $param['FalseRate5Permil'] !== null) {
+            $this->FalseRate5Permil = $param['FalseRate5Permil'];
         }
 
-        if (array_key_exists("FalseRate1Permil",$param) and $param["FalseRate1Permil"] !== null) {
-            $this->FalseRate1Permil = $param["FalseRate1Permil"];
+        if (array_key_exists('FalseRate1Permil',$param) and $param['FalseRate1Permil'] !== null) {
+            $this->FalseRate1Permil = $param['FalseRate1Permil'];
         }
     }
 }

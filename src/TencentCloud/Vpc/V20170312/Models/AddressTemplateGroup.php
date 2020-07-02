@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -78,25 +78,25 @@ class AddressTemplateGroup extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AddressTemplateGroupName",$param) and $param["AddressTemplateGroupName"] !== null) {
-            $this->AddressTemplateGroupName = $param["AddressTemplateGroupName"];
+        if (array_key_exists('AddressTemplateGroupName',$param) and $param['AddressTemplateGroupName'] !== null) {
+            $this->AddressTemplateGroupName = $param['AddressTemplateGroupName'];
         }
 
-        if (array_key_exists("AddressTemplateGroupId",$param) and $param["AddressTemplateGroupId"] !== null) {
-            $this->AddressTemplateGroupId = $param["AddressTemplateGroupId"];
+        if (array_key_exists('AddressTemplateGroupId',$param) and $param['AddressTemplateGroupId'] !== null) {
+            $this->AddressTemplateGroupId = $param['AddressTemplateGroupId'];
         }
 
-        if (array_key_exists("AddressTemplateIdSet",$param) and $param["AddressTemplateIdSet"] !== null) {
-            $this->AddressTemplateIdSet = $param["AddressTemplateIdSet"];
+        if (array_key_exists('AddressTemplateIdSet',$param) and $param['AddressTemplateIdSet'] !== null) {
+            $this->AddressTemplateIdSet = $param['AddressTemplateIdSet'];
         }
 
-        if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
-            $this->CreatedTime = $param["CreatedTime"];
+        if (array_key_exists('CreatedTime',$param) and $param['CreatedTime'] !== null) {
+            $this->CreatedTime = $param['CreatedTime'];
         }
 
-        if (array_key_exists("AddressTemplateSet",$param) and $param["AddressTemplateSet"] !== null) {
+        if (array_key_exists('AddressTemplateSet',$param) and $param['AddressTemplateSet'] !== null) {
             $this->AddressTemplateSet = [];
-            foreach ($param["AddressTemplateSet"] as $key => $value){
+            foreach ($param['AddressTemplateSet'] as $key => $value){
                 $obj = new AddressTemplateItem();
                 $obj->deserialize($value);
                 array_push($this->AddressTemplateSet, $obj);

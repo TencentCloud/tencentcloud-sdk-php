@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -94,32 +94,32 @@ class ClusterNetworkSettings extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ClusterCIDR",$param) and $param["ClusterCIDR"] !== null) {
-            $this->ClusterCIDR = $param["ClusterCIDR"];
+        if (array_key_exists('ClusterCIDR',$param) and $param['ClusterCIDR'] !== null) {
+            $this->ClusterCIDR = $param['ClusterCIDR'];
         }
 
-        if (array_key_exists("IgnoreClusterCIDRConflict",$param) and $param["IgnoreClusterCIDRConflict"] !== null) {
-            $this->IgnoreClusterCIDRConflict = $param["IgnoreClusterCIDRConflict"];
+        if (array_key_exists('IgnoreClusterCIDRConflict',$param) and $param['IgnoreClusterCIDRConflict'] !== null) {
+            $this->IgnoreClusterCIDRConflict = $param['IgnoreClusterCIDRConflict'];
         }
 
-        if (array_key_exists("MaxNodePodNum",$param) and $param["MaxNodePodNum"] !== null) {
-            $this->MaxNodePodNum = $param["MaxNodePodNum"];
+        if (array_key_exists('MaxNodePodNum',$param) and $param['MaxNodePodNum'] !== null) {
+            $this->MaxNodePodNum = $param['MaxNodePodNum'];
         }
 
-        if (array_key_exists("MaxClusterServiceNum",$param) and $param["MaxClusterServiceNum"] !== null) {
-            $this->MaxClusterServiceNum = $param["MaxClusterServiceNum"];
+        if (array_key_exists('MaxClusterServiceNum',$param) and $param['MaxClusterServiceNum'] !== null) {
+            $this->MaxClusterServiceNum = $param['MaxClusterServiceNum'];
         }
 
-        if (array_key_exists("Ipvs",$param) and $param["Ipvs"] !== null) {
-            $this->Ipvs = $param["Ipvs"];
+        if (array_key_exists('Ipvs',$param) and $param['Ipvs'] !== null) {
+            $this->Ipvs = $param['Ipvs'];
         }
 
-        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
-            $this->VpcId = $param["VpcId"];
+        if (array_key_exists('VpcId',$param) and $param['VpcId'] !== null) {
+            $this->VpcId = $param['VpcId'];
         }
 
-        if (array_key_exists("Cni",$param) and $param["Cni"] !== null) {
-            $this->Cni = $param["Cni"];
+        if (array_key_exists('Cni',$param) and $param['Cni'] !== null) {
+            $this->Cni = $param['Cni'];
         }
     }
 }

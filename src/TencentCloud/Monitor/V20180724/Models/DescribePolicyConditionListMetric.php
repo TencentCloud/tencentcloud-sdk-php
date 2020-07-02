@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -74,21 +74,21 @@ class DescribePolicyConditionListMetric extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ConfigManual",$param) and $param["ConfigManual"] !== null) {
+        if (array_key_exists('ConfigManual',$param) and $param['ConfigManual'] !== null) {
             $this->ConfigManual = new DescribePolicyConditionListConfigManual();
-            $this->ConfigManual->deserialize($param["ConfigManual"]);
+            $this->ConfigManual->deserialize($param['ConfigManual']);
         }
 
-        if (array_key_exists("MetricId",$param) and $param["MetricId"] !== null) {
-            $this->MetricId = $param["MetricId"];
+        if (array_key_exists('MetricId',$param) and $param['MetricId'] !== null) {
+            $this->MetricId = $param['MetricId'];
         }
 
-        if (array_key_exists("MetricShowName",$param) and $param["MetricShowName"] !== null) {
-            $this->MetricShowName = $param["MetricShowName"];
+        if (array_key_exists('MetricShowName',$param) and $param['MetricShowName'] !== null) {
+            $this->MetricShowName = $param['MetricShowName'];
         }
 
-        if (array_key_exists("MetricUnit",$param) and $param["MetricUnit"] !== null) {
-            $this->MetricUnit = $param["MetricUnit"];
+        if (array_key_exists('MetricUnit',$param) and $param['MetricUnit'] !== null) {
+            $this->MetricUnit = $param['MetricUnit'];
         }
     }
 }

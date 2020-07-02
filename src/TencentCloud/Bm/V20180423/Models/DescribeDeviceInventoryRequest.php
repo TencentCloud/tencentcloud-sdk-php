@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -126,48 +126,48 @@ class DescribeDeviceInventoryRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
-            $this->Zone = $param["Zone"];
+        if (array_key_exists('Zone',$param) and $param['Zone'] !== null) {
+            $this->Zone = $param['Zone'];
         }
 
-        if (array_key_exists("DeviceClassCode",$param) and $param["DeviceClassCode"] !== null) {
-            $this->DeviceClassCode = $param["DeviceClassCode"];
+        if (array_key_exists('DeviceClassCode',$param) and $param['DeviceClassCode'] !== null) {
+            $this->DeviceClassCode = $param['DeviceClassCode'];
         }
 
-        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
-            $this->VpcId = $param["VpcId"];
+        if (array_key_exists('VpcId',$param) and $param['VpcId'] !== null) {
+            $this->VpcId = $param['VpcId'];
         }
 
-        if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
-            $this->SubnetId = $param["SubnetId"];
+        if (array_key_exists('SubnetId',$param) and $param['SubnetId'] !== null) {
+            $this->SubnetId = $param['SubnetId'];
         }
 
-        if (array_key_exists("CpuId",$param) and $param["CpuId"] !== null) {
-            $this->CpuId = $param["CpuId"];
+        if (array_key_exists('CpuId',$param) and $param['CpuId'] !== null) {
+            $this->CpuId = $param['CpuId'];
         }
 
-        if (array_key_exists("MemSize",$param) and $param["MemSize"] !== null) {
-            $this->MemSize = $param["MemSize"];
+        if (array_key_exists('MemSize',$param) and $param['MemSize'] !== null) {
+            $this->MemSize = $param['MemSize'];
         }
 
-        if (array_key_exists("ContainRaidCard",$param) and $param["ContainRaidCard"] !== null) {
-            $this->ContainRaidCard = $param["ContainRaidCard"];
+        if (array_key_exists('ContainRaidCard',$param) and $param['ContainRaidCard'] !== null) {
+            $this->ContainRaidCard = $param['ContainRaidCard'];
         }
 
-        if (array_key_exists("SystemDiskTypeId",$param) and $param["SystemDiskTypeId"] !== null) {
-            $this->SystemDiskTypeId = $param["SystemDiskTypeId"];
+        if (array_key_exists('SystemDiskTypeId',$param) and $param['SystemDiskTypeId'] !== null) {
+            $this->SystemDiskTypeId = $param['SystemDiskTypeId'];
         }
 
-        if (array_key_exists("SystemDiskCount",$param) and $param["SystemDiskCount"] !== null) {
-            $this->SystemDiskCount = $param["SystemDiskCount"];
+        if (array_key_exists('SystemDiskCount',$param) and $param['SystemDiskCount'] !== null) {
+            $this->SystemDiskCount = $param['SystemDiskCount'];
         }
 
-        if (array_key_exists("DataDiskTypeId",$param) and $param["DataDiskTypeId"] !== null) {
-            $this->DataDiskTypeId = $param["DataDiskTypeId"];
+        if (array_key_exists('DataDiskTypeId',$param) and $param['DataDiskTypeId'] !== null) {
+            $this->DataDiskTypeId = $param['DataDiskTypeId'];
         }
 
-        if (array_key_exists("DataDiskCount",$param) and $param["DataDiskCount"] !== null) {
-            $this->DataDiskCount = $param["DataDiskCount"];
+        if (array_key_exists('DataDiskCount',$param) and $param['DataDiskCount'] !== null) {
+            $this->DataDiskCount = $param['DataDiskCount'];
         }
     }
 }

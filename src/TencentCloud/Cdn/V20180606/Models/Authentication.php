@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -106,28 +106,28 @@ off：关闭
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Switch",$param) and $param["Switch"] !== null) {
-            $this->Switch = $param["Switch"];
+        if (array_key_exists('Switch',$param) and $param['Switch'] !== null) {
+            $this->Switch = $param['Switch'];
         }
 
-        if (array_key_exists("TypeA",$param) and $param["TypeA"] !== null) {
+        if (array_key_exists('TypeA',$param) and $param['TypeA'] !== null) {
             $this->TypeA = new AuthenticationTypeA();
-            $this->TypeA->deserialize($param["TypeA"]);
+            $this->TypeA->deserialize($param['TypeA']);
         }
 
-        if (array_key_exists("TypeB",$param) and $param["TypeB"] !== null) {
+        if (array_key_exists('TypeB',$param) and $param['TypeB'] !== null) {
             $this->TypeB = new AuthenticationTypeB();
-            $this->TypeB->deserialize($param["TypeB"]);
+            $this->TypeB->deserialize($param['TypeB']);
         }
 
-        if (array_key_exists("TypeC",$param) and $param["TypeC"] !== null) {
+        if (array_key_exists('TypeC',$param) and $param['TypeC'] !== null) {
             $this->TypeC = new AuthenticationTypeC();
-            $this->TypeC->deserialize($param["TypeC"]);
+            $this->TypeC->deserialize($param['TypeC']);
         }
 
-        if (array_key_exists("TypeD",$param) and $param["TypeD"] !== null) {
+        if (array_key_exists('TypeD',$param) and $param['TypeD'] !== null) {
             $this->TypeD = new AuthenticationTypeD();
-            $this->TypeD->deserialize($param["TypeD"]);
+            $this->TypeD->deserialize($param['TypeD']);
         }
     }
 }

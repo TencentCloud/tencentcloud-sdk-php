@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -70,20 +70,20 @@ class ModifyAgentTaxPaymentInfoRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BatchNum",$param) and $param["BatchNum"] !== null) {
-            $this->BatchNum = $param["BatchNum"];
+        if (array_key_exists('BatchNum',$param) and $param['BatchNum'] !== null) {
+            $this->BatchNum = $param['BatchNum'];
         }
 
-        if (array_key_exists("RawElectronicCertUrl",$param) and $param["RawElectronicCertUrl"] !== null) {
-            $this->RawElectronicCertUrl = $param["RawElectronicCertUrl"];
+        if (array_key_exists('RawElectronicCertUrl',$param) and $param['RawElectronicCertUrl'] !== null) {
+            $this->RawElectronicCertUrl = $param['RawElectronicCertUrl'];
         }
 
-        if (array_key_exists("FileName",$param) and $param["FileName"] !== null) {
-            $this->FileName = $param["FileName"];
+        if (array_key_exists('FileName',$param) and $param['FileName'] !== null) {
+            $this->FileName = $param['FileName'];
         }
 
-        if (array_key_exists("Profile",$param) and $param["Profile"] !== null) {
-            $this->Profile = $param["Profile"];
+        if (array_key_exists('Profile',$param) and $param['Profile'] !== null) {
+            $this->Profile = $param['Profile'];
         }
     }
 }

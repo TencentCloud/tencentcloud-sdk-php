@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置偏移值，默认值为 20
  * @method string getZone() 获取NAT所在可用区，形如：ap-guangzhou-2。
  * @method void setZone(string $Zone) 设置NAT所在可用区，形如：ap-guangzhou-2。
- * @method string getOrderField() 获取排序字段, 支持"CreateTime"排序
- * @method void setOrderField(string $OrderField) 设置排序字段, 支持"CreateTime"排序
+ * @method string getOrderField() 获取排序字段, 支持'CreateTime'排序
+ * @method void setOrderField(string $OrderField) 设置排序字段, 支持'CreateTime'排序
  * @method string getOrderDirection() 获取排序方向, “asc”、“desc”
  * @method void setOrderDirection(string $OrderDirection) 设置排序方向, “asc”、“desc”
  */
@@ -77,7 +77,7 @@ class DescribeNatGatewaysRequest extends AbstractModel
     public $Zone;
 
     /**
-     * @var string 排序字段, 支持"CreateTime"排序
+     * @var string 排序字段, 支持'CreateTime'排序
      */
     public $OrderField;
 
@@ -94,7 +94,7 @@ class DescribeNatGatewaysRequest extends AbstractModel
      * @param integer $Offset 起始值
      * @param integer $Limit 偏移值，默认值为 20
      * @param string $Zone NAT所在可用区，形如：ap-guangzhou-2。
-     * @param string $OrderField 排序字段, 支持"CreateTime"排序
+     * @param string $OrderField 排序字段, 支持'CreateTime'排序
      * @param string $OrderDirection 排序方向, “asc”、“desc”
      */
     function __construct()
@@ -110,40 +110,40 @@ class DescribeNatGatewaysRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("NatId",$param) and $param["NatId"] !== null) {
-            $this->NatId = $param["NatId"];
+        if (array_key_exists('NatId',$param) and $param['NatId'] !== null) {
+            $this->NatId = $param['NatId'];
         }
 
-        if (array_key_exists("NatName",$param) and $param["NatName"] !== null) {
-            $this->NatName = $param["NatName"];
+        if (array_key_exists('NatName',$param) and $param['NatName'] !== null) {
+            $this->NatName = $param['NatName'];
         }
 
-        if (array_key_exists("SearchKey",$param) and $param["SearchKey"] !== null) {
-            $this->SearchKey = $param["SearchKey"];
+        if (array_key_exists('SearchKey',$param) and $param['SearchKey'] !== null) {
+            $this->SearchKey = $param['SearchKey'];
         }
 
-        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
-            $this->VpcId = $param["VpcId"];
+        if (array_key_exists('VpcId',$param) and $param['VpcId'] !== null) {
+            $this->VpcId = $param['VpcId'];
         }
 
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
+        if (array_key_exists('Offset',$param) and $param['Offset'] !== null) {
+            $this->Offset = $param['Offset'];
         }
 
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
+        if (array_key_exists('Limit',$param) and $param['Limit'] !== null) {
+            $this->Limit = $param['Limit'];
         }
 
-        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
-            $this->Zone = $param["Zone"];
+        if (array_key_exists('Zone',$param) and $param['Zone'] !== null) {
+            $this->Zone = $param['Zone'];
         }
 
-        if (array_key_exists("OrderField",$param) and $param["OrderField"] !== null) {
-            $this->OrderField = $param["OrderField"];
+        if (array_key_exists('OrderField',$param) and $param['OrderField'] !== null) {
+            $this->OrderField = $param['OrderField'];
         }
 
-        if (array_key_exists("OrderDirection",$param) and $param["OrderDirection"] !== null) {
-            $this->OrderDirection = $param["OrderDirection"];
+        if (array_key_exists('OrderDirection',$param) and $param['OrderDirection'] !== null) {
+            $this->OrderDirection = $param['OrderDirection'];
         }
     }
 }

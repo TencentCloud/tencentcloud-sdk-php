@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -78,24 +78,24 @@ class TableGroupInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TableGroupId",$param) and $param["TableGroupId"] !== null) {
-            $this->TableGroupId = $param["TableGroupId"];
+        if (array_key_exists('TableGroupId',$param) and $param['TableGroupId'] !== null) {
+            $this->TableGroupId = $param['TableGroupId'];
         }
 
-        if (array_key_exists("TableGroupName",$param) and $param["TableGroupName"] !== null) {
-            $this->TableGroupName = $param["TableGroupName"];
+        if (array_key_exists('TableGroupName',$param) and $param['TableGroupName'] !== null) {
+            $this->TableGroupName = $param['TableGroupName'];
         }
 
-        if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
-            $this->CreatedTime = $param["CreatedTime"];
+        if (array_key_exists('CreatedTime',$param) and $param['CreatedTime'] !== null) {
+            $this->CreatedTime = $param['CreatedTime'];
         }
 
-        if (array_key_exists("TableCount",$param) and $param["TableCount"] !== null) {
-            $this->TableCount = $param["TableCount"];
+        if (array_key_exists('TableCount',$param) and $param['TableCount'] !== null) {
+            $this->TableCount = $param['TableCount'];
         }
 
-        if (array_key_exists("TotalSize",$param) and $param["TotalSize"] !== null) {
-            $this->TotalSize = $param["TotalSize"];
+        if (array_key_exists('TotalSize',$param) and $param['TotalSize'] !== null) {
+            $this->TotalSize = $param['TotalSize'];
         }
     }
 }

@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -110,29 +110,29 @@ class CcnBandwidthInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CcnId",$param) and $param["CcnId"] !== null) {
-            $this->CcnId = $param["CcnId"];
+        if (array_key_exists('CcnId',$param) and $param['CcnId'] !== null) {
+            $this->CcnId = $param['CcnId'];
         }
 
-        if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
-            $this->CreatedTime = $param["CreatedTime"];
+        if (array_key_exists('CreatedTime',$param) and $param['CreatedTime'] !== null) {
+            $this->CreatedTime = $param['CreatedTime'];
         }
 
-        if (array_key_exists("ExpiredTime",$param) and $param["ExpiredTime"] !== null) {
-            $this->ExpiredTime = $param["ExpiredTime"];
+        if (array_key_exists('ExpiredTime',$param) and $param['ExpiredTime'] !== null) {
+            $this->ExpiredTime = $param['ExpiredTime'];
         }
 
-        if (array_key_exists("RegionFlowControlId",$param) and $param["RegionFlowControlId"] !== null) {
-            $this->RegionFlowControlId = $param["RegionFlowControlId"];
+        if (array_key_exists('RegionFlowControlId',$param) and $param['RegionFlowControlId'] !== null) {
+            $this->RegionFlowControlId = $param['RegionFlowControlId'];
         }
 
-        if (array_key_exists("RenewFlag",$param) and $param["RenewFlag"] !== null) {
-            $this->RenewFlag = $param["RenewFlag"];
+        if (array_key_exists('RenewFlag',$param) and $param['RenewFlag'] !== null) {
+            $this->RenewFlag = $param['RenewFlag'];
         }
 
-        if (array_key_exists("CcnRegionBandwidthLimit",$param) and $param["CcnRegionBandwidthLimit"] !== null) {
+        if (array_key_exists('CcnRegionBandwidthLimit',$param) and $param['CcnRegionBandwidthLimit'] !== null) {
             $this->CcnRegionBandwidthLimit = new CcnRegionBandwidthLimit();
-            $this->CcnRegionBandwidthLimit->deserialize($param["CcnRegionBandwidthLimit"]);
+            $this->CcnRegionBandwidthLimit->deserialize($param['CcnRegionBandwidthLimit']);
         }
     }
 }

@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -70,20 +70,20 @@ class PeakBase extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PeakCpuNum",$param) and $param["PeakCpuNum"] !== null) {
-            $this->PeakCpuNum = $param["PeakCpuNum"];
+        if (array_key_exists('PeakCpuNum',$param) and $param['PeakCpuNum'] !== null) {
+            $this->PeakCpuNum = $param['PeakCpuNum'];
         }
 
-        if (array_key_exists("PeakMemoryNum",$param) and $param["PeakMemoryNum"] !== null) {
-            $this->PeakMemoryNum = $param["PeakMemoryNum"];
+        if (array_key_exists('PeakMemoryNum',$param) and $param['PeakMemoryNum'] !== null) {
+            $this->PeakMemoryNum = $param['PeakMemoryNum'];
         }
 
-        if (array_key_exists("PeakStorageNum",$param) and $param["PeakStorageNum"] !== null) {
-            $this->PeakStorageNum = $param["PeakStorageNum"];
+        if (array_key_exists('PeakStorageNum',$param) and $param['PeakStorageNum'] !== null) {
+            $this->PeakStorageNum = $param['PeakStorageNum'];
         }
 
-        if (array_key_exists("RecordTime",$param) and $param["RecordTime"] !== null) {
-            $this->RecordTime = $param["RecordTime"];
+        if (array_key_exists('RecordTime',$param) and $param['RecordTime'] !== null) {
+            $this->RecordTime = $param['RecordTime'];
         }
     }
 }

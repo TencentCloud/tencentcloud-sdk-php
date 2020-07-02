@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -278,95 +278,95 @@ class DescribeProductEventListEvents extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("EventId",$param) and $param["EventId"] !== null) {
-            $this->EventId = $param["EventId"];
+        if (array_key_exists('EventId',$param) and $param['EventId'] !== null) {
+            $this->EventId = $param['EventId'];
         }
 
-        if (array_key_exists("EventCName",$param) and $param["EventCName"] !== null) {
-            $this->EventCName = $param["EventCName"];
+        if (array_key_exists('EventCName',$param) and $param['EventCName'] !== null) {
+            $this->EventCName = $param['EventCName'];
         }
 
-        if (array_key_exists("EventEName",$param) and $param["EventEName"] !== null) {
-            $this->EventEName = $param["EventEName"];
+        if (array_key_exists('EventEName',$param) and $param['EventEName'] !== null) {
+            $this->EventEName = $param['EventEName'];
         }
 
-        if (array_key_exists("EventName",$param) and $param["EventName"] !== null) {
-            $this->EventName = $param["EventName"];
+        if (array_key_exists('EventName',$param) and $param['EventName'] !== null) {
+            $this->EventName = $param['EventName'];
         }
 
-        if (array_key_exists("ProductCName",$param) and $param["ProductCName"] !== null) {
-            $this->ProductCName = $param["ProductCName"];
+        if (array_key_exists('ProductCName',$param) and $param['ProductCName'] !== null) {
+            $this->ProductCName = $param['ProductCName'];
         }
 
-        if (array_key_exists("ProductEName",$param) and $param["ProductEName"] !== null) {
-            $this->ProductEName = $param["ProductEName"];
+        if (array_key_exists('ProductEName',$param) and $param['ProductEName'] !== null) {
+            $this->ProductEName = $param['ProductEName'];
         }
 
-        if (array_key_exists("ProductName",$param) and $param["ProductName"] !== null) {
-            $this->ProductName = $param["ProductName"];
+        if (array_key_exists('ProductName',$param) and $param['ProductName'] !== null) {
+            $this->ProductName = $param['ProductName'];
         }
 
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("InstanceName",$param) and $param["InstanceName"] !== null) {
-            $this->InstanceName = $param["InstanceName"];
+        if (array_key_exists('InstanceName',$param) and $param['InstanceName'] !== null) {
+            $this->InstanceName = $param['InstanceName'];
         }
 
-        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
-            $this->ProjectId = $param["ProjectId"];
+        if (array_key_exists('ProjectId',$param) and $param['ProjectId'] !== null) {
+            $this->ProjectId = $param['ProjectId'];
         }
 
-        if (array_key_exists("Region",$param) and $param["Region"] !== null) {
-            $this->Region = $param["Region"];
+        if (array_key_exists('Region',$param) and $param['Region'] !== null) {
+            $this->Region = $param['Region'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("SupportAlarm",$param) and $param["SupportAlarm"] !== null) {
-            $this->SupportAlarm = $param["SupportAlarm"];
+        if (array_key_exists('SupportAlarm',$param) and $param['SupportAlarm'] !== null) {
+            $this->SupportAlarm = $param['SupportAlarm'];
         }
 
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists('Type',$param) and $param['Type'] !== null) {
+            $this->Type = $param['Type'];
         }
 
-        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
-            $this->StartTime = $param["StartTime"];
+        if (array_key_exists('StartTime',$param) and $param['StartTime'] !== null) {
+            $this->StartTime = $param['StartTime'];
         }
 
-        if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
-            $this->UpdateTime = $param["UpdateTime"];
+        if (array_key_exists('UpdateTime',$param) and $param['UpdateTime'] !== null) {
+            $this->UpdateTime = $param['UpdateTime'];
         }
 
-        if (array_key_exists("Dimensions",$param) and $param["Dimensions"] !== null) {
+        if (array_key_exists('Dimensions',$param) and $param['Dimensions'] !== null) {
             $this->Dimensions = [];
-            foreach ($param["Dimensions"] as $key => $value){
+            foreach ($param['Dimensions'] as $key => $value){
                 $obj = new DescribeProductEventListEventsDimensions();
                 $obj->deserialize($value);
                 array_push($this->Dimensions, $obj);
             }
         }
 
-        if (array_key_exists("AdditionMsg",$param) and $param["AdditionMsg"] !== null) {
+        if (array_key_exists('AdditionMsg',$param) and $param['AdditionMsg'] !== null) {
             $this->AdditionMsg = [];
-            foreach ($param["AdditionMsg"] as $key => $value){
+            foreach ($param['AdditionMsg'] as $key => $value){
                 $obj = new DescribeProductEventListEventsDimensions();
                 $obj->deserialize($value);
                 array_push($this->AdditionMsg, $obj);
             }
         }
 
-        if (array_key_exists("IsAlarmConfig",$param) and $param["IsAlarmConfig"] !== null) {
-            $this->IsAlarmConfig = $param["IsAlarmConfig"];
+        if (array_key_exists('IsAlarmConfig',$param) and $param['IsAlarmConfig'] !== null) {
+            $this->IsAlarmConfig = $param['IsAlarmConfig'];
         }
 
-        if (array_key_exists("GroupInfo",$param) and $param["GroupInfo"] !== null) {
+        if (array_key_exists('GroupInfo',$param) and $param['GroupInfo'] !== null) {
             $this->GroupInfo = [];
-            foreach ($param["GroupInfo"] as $key => $value){
+            foreach ($param['GroupInfo'] as $key => $value){
                 $obj = new DescribeProductEventListEventsGroupInfo();
                 $obj->deserialize($value);
                 array_push($this->GroupInfo, $obj);

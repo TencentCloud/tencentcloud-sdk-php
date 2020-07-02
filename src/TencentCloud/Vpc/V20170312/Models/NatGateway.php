@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -134,58 +134,58 @@ class NatGateway extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("NatGatewayId",$param) and $param["NatGatewayId"] !== null) {
-            $this->NatGatewayId = $param["NatGatewayId"];
+        if (array_key_exists('NatGatewayId',$param) and $param['NatGatewayId'] !== null) {
+            $this->NatGatewayId = $param['NatGatewayId'];
         }
 
-        if (array_key_exists("NatGatewayName",$param) and $param["NatGatewayName"] !== null) {
-            $this->NatGatewayName = $param["NatGatewayName"];
+        if (array_key_exists('NatGatewayName',$param) and $param['NatGatewayName'] !== null) {
+            $this->NatGatewayName = $param['NatGatewayName'];
         }
 
-        if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
-            $this->CreatedTime = $param["CreatedTime"];
+        if (array_key_exists('CreatedTime',$param) and $param['CreatedTime'] !== null) {
+            $this->CreatedTime = $param['CreatedTime'];
         }
 
-        if (array_key_exists("State",$param) and $param["State"] !== null) {
-            $this->State = $param["State"];
+        if (array_key_exists('State',$param) and $param['State'] !== null) {
+            $this->State = $param['State'];
         }
 
-        if (array_key_exists("InternetMaxBandwidthOut",$param) and $param["InternetMaxBandwidthOut"] !== null) {
-            $this->InternetMaxBandwidthOut = $param["InternetMaxBandwidthOut"];
+        if (array_key_exists('InternetMaxBandwidthOut',$param) and $param['InternetMaxBandwidthOut'] !== null) {
+            $this->InternetMaxBandwidthOut = $param['InternetMaxBandwidthOut'];
         }
 
-        if (array_key_exists("MaxConcurrentConnection",$param) and $param["MaxConcurrentConnection"] !== null) {
-            $this->MaxConcurrentConnection = $param["MaxConcurrentConnection"];
+        if (array_key_exists('MaxConcurrentConnection',$param) and $param['MaxConcurrentConnection'] !== null) {
+            $this->MaxConcurrentConnection = $param['MaxConcurrentConnection'];
         }
 
-        if (array_key_exists("PublicIpAddressSet",$param) and $param["PublicIpAddressSet"] !== null) {
+        if (array_key_exists('PublicIpAddressSet',$param) and $param['PublicIpAddressSet'] !== null) {
             $this->PublicIpAddressSet = [];
-            foreach ($param["PublicIpAddressSet"] as $key => $value){
+            foreach ($param['PublicIpAddressSet'] as $key => $value){
                 $obj = new NatGatewayAddress();
                 $obj->deserialize($value);
                 array_push($this->PublicIpAddressSet, $obj);
             }
         }
 
-        if (array_key_exists("NetworkState",$param) and $param["NetworkState"] !== null) {
-            $this->NetworkState = $param["NetworkState"];
+        if (array_key_exists('NetworkState',$param) and $param['NetworkState'] !== null) {
+            $this->NetworkState = $param['NetworkState'];
         }
 
-        if (array_key_exists("DestinationIpPortTranslationNatRuleSet",$param) and $param["DestinationIpPortTranslationNatRuleSet"] !== null) {
+        if (array_key_exists('DestinationIpPortTranslationNatRuleSet',$param) and $param['DestinationIpPortTranslationNatRuleSet'] !== null) {
             $this->DestinationIpPortTranslationNatRuleSet = [];
-            foreach ($param["DestinationIpPortTranslationNatRuleSet"] as $key => $value){
+            foreach ($param['DestinationIpPortTranslationNatRuleSet'] as $key => $value){
                 $obj = new DestinationIpPortTranslationNatRule();
                 $obj->deserialize($value);
                 array_push($this->DestinationIpPortTranslationNatRuleSet, $obj);
             }
         }
 
-        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
-            $this->VpcId = $param["VpcId"];
+        if (array_key_exists('VpcId',$param) and $param['VpcId'] !== null) {
+            $this->VpcId = $param['VpcId'];
         }
 
-        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
-            $this->Zone = $param["Zone"];
+        if (array_key_exists('Zone',$param) and $param['Zone'] !== null) {
+            $this->Zone = $param['Zone'];
         }
     }
 }

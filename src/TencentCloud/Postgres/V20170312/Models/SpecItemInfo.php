@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -118,44 +118,44 @@ class SpecItemInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SpecCode",$param) and $param["SpecCode"] !== null) {
-            $this->SpecCode = $param["SpecCode"];
+        if (array_key_exists('SpecCode',$param) and $param['SpecCode'] !== null) {
+            $this->SpecCode = $param['SpecCode'];
         }
 
-        if (array_key_exists("Version",$param) and $param["Version"] !== null) {
-            $this->Version = $param["Version"];
+        if (array_key_exists('Version',$param) and $param['Version'] !== null) {
+            $this->Version = $param['Version'];
         }
 
-        if (array_key_exists("VersionName",$param) and $param["VersionName"] !== null) {
-            $this->VersionName = $param["VersionName"];
+        if (array_key_exists('VersionName',$param) and $param['VersionName'] !== null) {
+            $this->VersionName = $param['VersionName'];
         }
 
-        if (array_key_exists("Cpu",$param) and $param["Cpu"] !== null) {
-            $this->Cpu = $param["Cpu"];
+        if (array_key_exists('Cpu',$param) and $param['Cpu'] !== null) {
+            $this->Cpu = $param['Cpu'];
         }
 
-        if (array_key_exists("Memory",$param) and $param["Memory"] !== null) {
-            $this->Memory = $param["Memory"];
+        if (array_key_exists('Memory',$param) and $param['Memory'] !== null) {
+            $this->Memory = $param['Memory'];
         }
 
-        if (array_key_exists("MaxStorage",$param) and $param["MaxStorage"] !== null) {
-            $this->MaxStorage = $param["MaxStorage"];
+        if (array_key_exists('MaxStorage',$param) and $param['MaxStorage'] !== null) {
+            $this->MaxStorage = $param['MaxStorage'];
         }
 
-        if (array_key_exists("MinStorage",$param) and $param["MinStorage"] !== null) {
-            $this->MinStorage = $param["MinStorage"];
+        if (array_key_exists('MinStorage',$param) and $param['MinStorage'] !== null) {
+            $this->MinStorage = $param['MinStorage'];
         }
 
-        if (array_key_exists("Qps",$param) and $param["Qps"] !== null) {
-            $this->Qps = $param["Qps"];
+        if (array_key_exists('Qps',$param) and $param['Qps'] !== null) {
+            $this->Qps = $param['Qps'];
         }
 
-        if (array_key_exists("Pid",$param) and $param["Pid"] !== null) {
-            $this->Pid = $param["Pid"];
+        if (array_key_exists('Pid',$param) and $param['Pid'] !== null) {
+            $this->Pid = $param['Pid'];
         }
 
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists('Type',$param) and $param['Type'] !== null) {
+            $this->Type = $param['Type'];
         }
     }
 }

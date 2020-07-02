@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -130,48 +130,48 @@ class PullUploadRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MediaUrl",$param) and $param["MediaUrl"] !== null) {
-            $this->MediaUrl = $param["MediaUrl"];
+        if (array_key_exists('MediaUrl',$param) and $param['MediaUrl'] !== null) {
+            $this->MediaUrl = $param['MediaUrl'];
         }
 
-        if (array_key_exists("MediaName",$param) and $param["MediaName"] !== null) {
-            $this->MediaName = $param["MediaName"];
+        if (array_key_exists('MediaName',$param) and $param['MediaName'] !== null) {
+            $this->MediaName = $param['MediaName'];
         }
 
-        if (array_key_exists("CoverUrl",$param) and $param["CoverUrl"] !== null) {
-            $this->CoverUrl = $param["CoverUrl"];
+        if (array_key_exists('CoverUrl',$param) and $param['CoverUrl'] !== null) {
+            $this->CoverUrl = $param['CoverUrl'];
         }
 
-        if (array_key_exists("Procedure",$param) and $param["Procedure"] !== null) {
-            $this->Procedure = $param["Procedure"];
+        if (array_key_exists('Procedure',$param) and $param['Procedure'] !== null) {
+            $this->Procedure = $param['Procedure'];
         }
 
-        if (array_key_exists("ExpireTime",$param) and $param["ExpireTime"] !== null) {
-            $this->ExpireTime = $param["ExpireTime"];
+        if (array_key_exists('ExpireTime',$param) and $param['ExpireTime'] !== null) {
+            $this->ExpireTime = $param['ExpireTime'];
         }
 
-        if (array_key_exists("StorageRegion",$param) and $param["StorageRegion"] !== null) {
-            $this->StorageRegion = $param["StorageRegion"];
+        if (array_key_exists('StorageRegion',$param) and $param['StorageRegion'] !== null) {
+            $this->StorageRegion = $param['StorageRegion'];
         }
 
-        if (array_key_exists("ClassId",$param) and $param["ClassId"] !== null) {
-            $this->ClassId = $param["ClassId"];
+        if (array_key_exists('ClassId',$param) and $param['ClassId'] !== null) {
+            $this->ClassId = $param['ClassId'];
         }
 
-        if (array_key_exists("SessionContext",$param) and $param["SessionContext"] !== null) {
-            $this->SessionContext = $param["SessionContext"];
+        if (array_key_exists('SessionContext',$param) and $param['SessionContext'] !== null) {
+            $this->SessionContext = $param['SessionContext'];
         }
 
-        if (array_key_exists("SessionId",$param) and $param["SessionId"] !== null) {
-            $this->SessionId = $param["SessionId"];
+        if (array_key_exists('SessionId',$param) and $param['SessionId'] !== null) {
+            $this->SessionId = $param['SessionId'];
         }
 
-        if (array_key_exists("ExtInfo",$param) and $param["ExtInfo"] !== null) {
-            $this->ExtInfo = $param["ExtInfo"];
+        if (array_key_exists('ExtInfo',$param) and $param['ExtInfo'] !== null) {
+            $this->ExtInfo = $param['ExtInfo'];
         }
 
-        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
-            $this->SubAppId = $param["SubAppId"];
+        if (array_key_exists('SubAppId',$param) and $param['SubAppId'] !== null) {
+            $this->SubAppId = $param['SubAppId'];
         }
     }
 }

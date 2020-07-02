@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -102,36 +102,36 @@ class PullSmsSendStatus extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("UserReceiveTime",$param) and $param["UserReceiveTime"] !== null) {
-            $this->UserReceiveTime = $param["UserReceiveTime"];
+        if (array_key_exists('UserReceiveTime',$param) and $param['UserReceiveTime'] !== null) {
+            $this->UserReceiveTime = $param['UserReceiveTime'];
         }
 
-        if (array_key_exists("UserReceiveUnixTime",$param) and $param["UserReceiveUnixTime"] !== null) {
-            $this->UserReceiveUnixTime = $param["UserReceiveUnixTime"];
+        if (array_key_exists('UserReceiveUnixTime',$param) and $param['UserReceiveUnixTime'] !== null) {
+            $this->UserReceiveUnixTime = $param['UserReceiveUnixTime'];
         }
 
-        if (array_key_exists("NationCode",$param) and $param["NationCode"] !== null) {
-            $this->NationCode = $param["NationCode"];
+        if (array_key_exists('NationCode',$param) and $param['NationCode'] !== null) {
+            $this->NationCode = $param['NationCode'];
         }
 
-        if (array_key_exists("PurePhoneNumber",$param) and $param["PurePhoneNumber"] !== null) {
-            $this->PurePhoneNumber = $param["PurePhoneNumber"];
+        if (array_key_exists('PurePhoneNumber',$param) and $param['PurePhoneNumber'] !== null) {
+            $this->PurePhoneNumber = $param['PurePhoneNumber'];
         }
 
-        if (array_key_exists("PhoneNumber",$param) and $param["PhoneNumber"] !== null) {
-            $this->PhoneNumber = $param["PhoneNumber"];
+        if (array_key_exists('PhoneNumber',$param) and $param['PhoneNumber'] !== null) {
+            $this->PhoneNumber = $param['PhoneNumber'];
         }
 
-        if (array_key_exists("SerialNo",$param) and $param["SerialNo"] !== null) {
-            $this->SerialNo = $param["SerialNo"];
+        if (array_key_exists('SerialNo',$param) and $param['SerialNo'] !== null) {
+            $this->SerialNo = $param['SerialNo'];
         }
 
-        if (array_key_exists("ReportStatus",$param) and $param["ReportStatus"] !== null) {
-            $this->ReportStatus = $param["ReportStatus"];
+        if (array_key_exists('ReportStatus',$param) and $param['ReportStatus'] !== null) {
+            $this->ReportStatus = $param['ReportStatus'];
         }
 
-        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
-            $this->Description = $param["Description"];
+        if (array_key_exists('Description',$param) and $param['Description'] !== null) {
+            $this->Description = $param['Description'];
         }
     }
 }

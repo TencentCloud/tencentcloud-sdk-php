@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -126,24 +126,24 @@ false：不允许空 referer
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RuleType",$param) and $param["RuleType"] !== null) {
-            $this->RuleType = $param["RuleType"];
+        if (array_key_exists('RuleType',$param) and $param['RuleType'] !== null) {
+            $this->RuleType = $param['RuleType'];
         }
 
-        if (array_key_exists("RulePaths",$param) and $param["RulePaths"] !== null) {
-            $this->RulePaths = $param["RulePaths"];
+        if (array_key_exists('RulePaths',$param) and $param['RulePaths'] !== null) {
+            $this->RulePaths = $param['RulePaths'];
         }
 
-        if (array_key_exists("RefererType",$param) and $param["RefererType"] !== null) {
-            $this->RefererType = $param["RefererType"];
+        if (array_key_exists('RefererType',$param) and $param['RefererType'] !== null) {
+            $this->RefererType = $param['RefererType'];
         }
 
-        if (array_key_exists("Referers",$param) and $param["Referers"] !== null) {
-            $this->Referers = $param["Referers"];
+        if (array_key_exists('Referers',$param) and $param['Referers'] !== null) {
+            $this->Referers = $param['Referers'];
         }
 
-        if (array_key_exists("AllowEmpty",$param) and $param["AllowEmpty"] !== null) {
-            $this->AllowEmpty = $param["AllowEmpty"];
+        if (array_key_exists('AllowEmpty',$param) and $param['AllowEmpty'] !== null) {
+            $this->AllowEmpty = $param['AllowEmpty'];
         }
     }
 }

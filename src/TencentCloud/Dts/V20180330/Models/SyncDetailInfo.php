@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -94,33 +94,33 @@ class SyncDetailInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("StepAll",$param) and $param["StepAll"] !== null) {
-            $this->StepAll = $param["StepAll"];
+        if (array_key_exists('StepAll',$param) and $param['StepAll'] !== null) {
+            $this->StepAll = $param['StepAll'];
         }
 
-        if (array_key_exists("StepNow",$param) and $param["StepNow"] !== null) {
-            $this->StepNow = $param["StepNow"];
+        if (array_key_exists('StepNow',$param) and $param['StepNow'] !== null) {
+            $this->StepNow = $param['StepNow'];
         }
 
-        if (array_key_exists("Progress",$param) and $param["Progress"] !== null) {
-            $this->Progress = $param["Progress"];
+        if (array_key_exists('Progress',$param) and $param['Progress'] !== null) {
+            $this->Progress = $param['Progress'];
         }
 
-        if (array_key_exists("CurrentStepProgress",$param) and $param["CurrentStepProgress"] !== null) {
-            $this->CurrentStepProgress = $param["CurrentStepProgress"];
+        if (array_key_exists('CurrentStepProgress',$param) and $param['CurrentStepProgress'] !== null) {
+            $this->CurrentStepProgress = $param['CurrentStepProgress'];
         }
 
-        if (array_key_exists("MasterSlaveDistance",$param) and $param["MasterSlaveDistance"] !== null) {
-            $this->MasterSlaveDistance = $param["MasterSlaveDistance"];
+        if (array_key_exists('MasterSlaveDistance',$param) and $param['MasterSlaveDistance'] !== null) {
+            $this->MasterSlaveDistance = $param['MasterSlaveDistance'];
         }
 
-        if (array_key_exists("SecondsBehindMaster",$param) and $param["SecondsBehindMaster"] !== null) {
-            $this->SecondsBehindMaster = $param["SecondsBehindMaster"];
+        if (array_key_exists('SecondsBehindMaster',$param) and $param['SecondsBehindMaster'] !== null) {
+            $this->SecondsBehindMaster = $param['SecondsBehindMaster'];
         }
 
-        if (array_key_exists("StepInfo",$param) and $param["StepInfo"] !== null) {
+        if (array_key_exists('StepInfo',$param) and $param['StepInfo'] !== null) {
             $this->StepInfo = [];
-            foreach ($param["StepInfo"] as $key => $value){
+            foreach ($param['StepInfo'] as $key => $value){
                 $obj = new SyncStepDetailInfo();
                 $obj->deserialize($value);
                 array_push($this->StepInfo, $obj);

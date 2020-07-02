@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -146,53 +146,53 @@ class TopicDetail extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TopicName",$param) and $param["TopicName"] !== null) {
-            $this->TopicName = $param["TopicName"];
+        if (array_key_exists('TopicName',$param) and $param['TopicName'] !== null) {
+            $this->TopicName = $param['TopicName'];
         }
 
-        if (array_key_exists("TopicId",$param) and $param["TopicId"] !== null) {
-            $this->TopicId = $param["TopicId"];
+        if (array_key_exists('TopicId',$param) and $param['TopicId'] !== null) {
+            $this->TopicId = $param['TopicId'];
         }
 
-        if (array_key_exists("PartitionNum",$param) and $param["PartitionNum"] !== null) {
-            $this->PartitionNum = $param["PartitionNum"];
+        if (array_key_exists('PartitionNum',$param) and $param['PartitionNum'] !== null) {
+            $this->PartitionNum = $param['PartitionNum'];
         }
 
-        if (array_key_exists("ReplicaNum",$param) and $param["ReplicaNum"] !== null) {
-            $this->ReplicaNum = $param["ReplicaNum"];
+        if (array_key_exists('ReplicaNum',$param) and $param['ReplicaNum'] !== null) {
+            $this->ReplicaNum = $param['ReplicaNum'];
         }
 
-        if (array_key_exists("Note",$param) and $param["Note"] !== null) {
-            $this->Note = $param["Note"];
+        if (array_key_exists('Note',$param) and $param['Note'] !== null) {
+            $this->Note = $param['Note'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("EnableWhiteList",$param) and $param["EnableWhiteList"] !== null) {
-            $this->EnableWhiteList = $param["EnableWhiteList"];
+        if (array_key_exists('EnableWhiteList',$param) and $param['EnableWhiteList'] !== null) {
+            $this->EnableWhiteList = $param['EnableWhiteList'];
         }
 
-        if (array_key_exists("IpWhiteListCount",$param) and $param["IpWhiteListCount"] !== null) {
-            $this->IpWhiteListCount = $param["IpWhiteListCount"];
+        if (array_key_exists('IpWhiteListCount',$param) and $param['IpWhiteListCount'] !== null) {
+            $this->IpWhiteListCount = $param['IpWhiteListCount'];
         }
 
-        if (array_key_exists("ForwardCosBucket",$param) and $param["ForwardCosBucket"] !== null) {
-            $this->ForwardCosBucket = $param["ForwardCosBucket"];
+        if (array_key_exists('ForwardCosBucket',$param) and $param['ForwardCosBucket'] !== null) {
+            $this->ForwardCosBucket = $param['ForwardCosBucket'];
         }
 
-        if (array_key_exists("ForwardStatus",$param) and $param["ForwardStatus"] !== null) {
-            $this->ForwardStatus = $param["ForwardStatus"];
+        if (array_key_exists('ForwardStatus',$param) and $param['ForwardStatus'] !== null) {
+            $this->ForwardStatus = $param['ForwardStatus'];
         }
 
-        if (array_key_exists("ForwardInterval",$param) and $param["ForwardInterval"] !== null) {
-            $this->ForwardInterval = $param["ForwardInterval"];
+        if (array_key_exists('ForwardInterval',$param) and $param['ForwardInterval'] !== null) {
+            $this->ForwardInterval = $param['ForwardInterval'];
         }
 
-        if (array_key_exists("Config",$param) and $param["Config"] !== null) {
+        if (array_key_exists('Config',$param) and $param['Config'] !== null) {
             $this->Config = new Config();
-            $this->Config->deserialize($param["Config"]);
+            $this->Config->deserialize($param['Config']);
         }
     }
 }

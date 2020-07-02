@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -62,16 +62,16 @@ class LayoutParams extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Template",$param) and $param["Template"] !== null) {
-            $this->Template = $param["Template"];
+        if (array_key_exists('Template',$param) and $param['Template'] !== null) {
+            $this->Template = $param['Template'];
         }
 
-        if (array_key_exists("MainVideoUserId",$param) and $param["MainVideoUserId"] !== null) {
-            $this->MainVideoUserId = $param["MainVideoUserId"];
+        if (array_key_exists('MainVideoUserId',$param) and $param['MainVideoUserId'] !== null) {
+            $this->MainVideoUserId = $param['MainVideoUserId'];
         }
 
-        if (array_key_exists("MainVideoStreamType",$param) and $param["MainVideoStreamType"] !== null) {
-            $this->MainVideoStreamType = $param["MainVideoStreamType"];
+        if (array_key_exists('MainVideoStreamType',$param) and $param['MainVideoStreamType'] !== null) {
+            $this->MainVideoStreamType = $param['MainVideoStreamType'];
         }
     }
 }

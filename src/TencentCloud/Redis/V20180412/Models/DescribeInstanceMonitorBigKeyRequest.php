@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置实例Id
  * @method integer getReqType() 获取请求类型：1——string类型，2——所有类型
  * @method void setReqType(integer $ReqType) 设置请求类型：1——string类型，2——所有类型
- * @method string getDate() 获取时间；例如："20190219"
- * @method void setDate(string $Date) 设置时间；例如："20190219"
+ * @method string getDate() 获取时间；例如：'20190219'
+ * @method void setDate(string $Date) 设置时间；例如：'20190219'
  */
 class DescribeInstanceMonitorBigKeyRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class DescribeInstanceMonitorBigKeyRequest extends AbstractModel
     public $ReqType;
 
     /**
-     * @var string 时间；例如："20190219"
+     * @var string 时间；例如：'20190219'
      */
     public $Date;
 
     /**
      * @param string $InstanceId 实例Id
      * @param integer $ReqType 请求类型：1——string类型，2——所有类型
-     * @param string $Date 时间；例如："20190219"
+     * @param string $Date 时间；例如：'20190219'
      */
     function __construct()
     {
@@ -62,16 +62,16 @@ class DescribeInstanceMonitorBigKeyRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("ReqType",$param) and $param["ReqType"] !== null) {
-            $this->ReqType = $param["ReqType"];
+        if (array_key_exists('ReqType',$param) and $param['ReqType'] !== null) {
+            $this->ReqType = $param['ReqType'];
         }
 
-        if (array_key_exists("Date",$param) and $param["Date"] !== null) {
-            $this->Date = $param["Date"];
+        if (array_key_exists('Date',$param) and $param['Date'] !== null) {
+            $this->Date = $param['Date'];
         }
     }
 }

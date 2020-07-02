@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -250,97 +250,97 @@ bank：网银
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MidasAppId",$param) and $param["MidasAppId"] !== null) {
-            $this->MidasAppId = $param["MidasAppId"];
+        if (array_key_exists('MidasAppId',$param) and $param['MidasAppId'] !== null) {
+            $this->MidasAppId = $param['MidasAppId'];
         }
 
-        if (array_key_exists("Amt",$param) and $param["Amt"] !== null) {
-            $this->Amt = $param["Amt"];
+        if (array_key_exists('Amt',$param) and $param['Amt'] !== null) {
+            $this->Amt = $param['Amt'];
         }
 
-        if (array_key_exists("UserId",$param) and $param["UserId"] !== null) {
-            $this->UserId = $param["UserId"];
+        if (array_key_exists('UserId',$param) and $param['UserId'] !== null) {
+            $this->UserId = $param['UserId'];
         }
 
-        if (array_key_exists("CashAmt",$param) and $param["CashAmt"] !== null) {
-            $this->CashAmt = $param["CashAmt"];
+        if (array_key_exists('CashAmt',$param) and $param['CashAmt'] !== null) {
+            $this->CashAmt = $param['CashAmt'];
         }
 
-        if (array_key_exists("Metadata",$param) and $param["Metadata"] !== null) {
-            $this->Metadata = $param["Metadata"];
+        if (array_key_exists('Metadata',$param) and $param['Metadata'] !== null) {
+            $this->Metadata = $param['Metadata'];
         }
 
-        if (array_key_exists("PayTime",$param) and $param["PayTime"] !== null) {
-            $this->PayTime = $param["PayTime"];
+        if (array_key_exists('PayTime',$param) and $param['PayTime'] !== null) {
+            $this->PayTime = $param['PayTime'];
         }
 
-        if (array_key_exists("CouponAmt",$param) and $param["CouponAmt"] !== null) {
-            $this->CouponAmt = $param["CouponAmt"];
+        if (array_key_exists('CouponAmt',$param) and $param['CouponAmt'] !== null) {
+            $this->CouponAmt = $param['CouponAmt'];
         }
 
-        if (array_key_exists("OrderTime",$param) and $param["OrderTime"] !== null) {
-            $this->OrderTime = $param["OrderTime"];
+        if (array_key_exists('OrderTime',$param) and $param['OrderTime'] !== null) {
+            $this->OrderTime = $param['OrderTime'];
         }
 
-        if (array_key_exists("ProductId",$param) and $param["ProductId"] !== null) {
-            $this->ProductId = $param["ProductId"];
+        if (array_key_exists('ProductId',$param) and $param['ProductId'] !== null) {
+            $this->ProductId = $param['ProductId'];
         }
 
-        if (array_key_exists("SceneInfo",$param) and $param["SceneInfo"] !== null) {
-            $this->SceneInfo = $param["SceneInfo"];
+        if (array_key_exists('SceneInfo',$param) and $param['SceneInfo'] !== null) {
+            $this->SceneInfo = $param['SceneInfo'];
         }
 
-        if (array_key_exists("OrderState",$param) and $param["OrderState"] !== null) {
-            $this->OrderState = $param["OrderState"];
+        if (array_key_exists('OrderState',$param) and $param['OrderState'] !== null) {
+            $this->OrderState = $param['OrderState'];
         }
 
-        if (array_key_exists("Channel",$param) and $param["Channel"] !== null) {
-            $this->Channel = $param["Channel"];
+        if (array_key_exists('Channel',$param) and $param['Channel'] !== null) {
+            $this->Channel = $param['Channel'];
         }
 
-        if (array_key_exists("RefundFlag",$param) and $param["RefundFlag"] !== null) {
-            $this->RefundFlag = $param["RefundFlag"];
+        if (array_key_exists('RefundFlag',$param) and $param['RefundFlag'] !== null) {
+            $this->RefundFlag = $param['RefundFlag'];
         }
 
-        if (array_key_exists("OutTradeNo",$param) and $param["OutTradeNo"] !== null) {
-            $this->OutTradeNo = $param["OutTradeNo"];
+        if (array_key_exists('OutTradeNo',$param) and $param['OutTradeNo'] !== null) {
+            $this->OutTradeNo = $param['OutTradeNo'];
         }
 
-        if (array_key_exists("ProductName",$param) and $param["ProductName"] !== null) {
-            $this->ProductName = $param["ProductName"];
+        if (array_key_exists('ProductName',$param) and $param['ProductName'] !== null) {
+            $this->ProductName = $param['ProductName'];
         }
 
-        if (array_key_exists("CallBackTime",$param) and $param["CallBackTime"] !== null) {
-            $this->CallBackTime = $param["CallBackTime"];
+        if (array_key_exists('CallBackTime',$param) and $param['CallBackTime'] !== null) {
+            $this->CallBackTime = $param['CallBackTime'];
         }
 
-        if (array_key_exists("CurrencyType",$param) and $param["CurrencyType"] !== null) {
-            $this->CurrencyType = $param["CurrencyType"];
+        if (array_key_exists('CurrencyType',$param) and $param['CurrencyType'] !== null) {
+            $this->CurrencyType = $param['CurrencyType'];
         }
 
-        if (array_key_exists("AcctSubAppId",$param) and $param["AcctSubAppId"] !== null) {
-            $this->AcctSubAppId = $param["AcctSubAppId"];
+        if (array_key_exists('AcctSubAppId',$param) and $param['AcctSubAppId'] !== null) {
+            $this->AcctSubAppId = $param['AcctSubAppId'];
         }
 
-        if (array_key_exists("TransactionId",$param) and $param["TransactionId"] !== null) {
-            $this->TransactionId = $param["TransactionId"];
+        if (array_key_exists('TransactionId',$param) and $param['TransactionId'] !== null) {
+            $this->TransactionId = $param['TransactionId'];
         }
 
-        if (array_key_exists("ChannelOrderId",$param) and $param["ChannelOrderId"] !== null) {
-            $this->ChannelOrderId = $param["ChannelOrderId"];
+        if (array_key_exists('ChannelOrderId',$param) and $param['ChannelOrderId'] !== null) {
+            $this->ChannelOrderId = $param['ChannelOrderId'];
         }
 
-        if (array_key_exists("SubOrderList",$param) and $param["SubOrderList"] !== null) {
+        if (array_key_exists('SubOrderList',$param) and $param['SubOrderList'] !== null) {
             $this->SubOrderList = [];
-            foreach ($param["SubOrderList"] as $key => $value){
+            foreach ($param['SubOrderList'] as $key => $value){
                 $obj = new QueryOrderOutSubOrderList();
                 $obj->deserialize($value);
                 array_push($this->SubOrderList, $obj);
             }
         }
 
-        if (array_key_exists("ChannelExternalOrderId",$param) and $param["ChannelExternalOrderId"] !== null) {
-            $this->ChannelExternalOrderId = $param["ChannelExternalOrderId"];
+        if (array_key_exists('ChannelExternalOrderId',$param) and $param['ChannelExternalOrderId'] !== null) {
+            $this->ChannelExternalOrderId = $param['ChannelExternalOrderId'];
         }
     }
 }

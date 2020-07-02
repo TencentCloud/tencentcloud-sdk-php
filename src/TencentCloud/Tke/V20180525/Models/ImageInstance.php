@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -32,9 +32,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setImageId(string $ImageId) 设置镜像ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getOsCustomizeType() 获取容器的镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值)
+ * @method string getOsCustomizeType() 获取容器的镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),'GENERAL'(普通版本，默认值)
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOsCustomizeType(string $OsCustomizeType) 设置容器的镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值)
+ * @method void setOsCustomizeType(string $OsCustomizeType) 设置容器的镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),'GENERAL'(普通版本，默认值)
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class ImageInstance extends AbstractModel
@@ -58,7 +58,7 @@ class ImageInstance extends AbstractModel
     public $ImageId;
 
     /**
-     * @var string 容器的镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值)
+     * @var string 容器的镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),'GENERAL'(普通版本，默认值)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OsCustomizeType;
@@ -70,7 +70,7 @@ class ImageInstance extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ImageId 镜像ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $OsCustomizeType 容器的镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值)
+     * @param string $OsCustomizeType 容器的镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),'GENERAL'(普通版本，默认值)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -86,20 +86,20 @@ class ImageInstance extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Alias",$param) and $param["Alias"] !== null) {
-            $this->Alias = $param["Alias"];
+        if (array_key_exists('Alias',$param) and $param['Alias'] !== null) {
+            $this->Alias = $param['Alias'];
         }
 
-        if (array_key_exists("OsName",$param) and $param["OsName"] !== null) {
-            $this->OsName = $param["OsName"];
+        if (array_key_exists('OsName',$param) and $param['OsName'] !== null) {
+            $this->OsName = $param['OsName'];
         }
 
-        if (array_key_exists("ImageId",$param) and $param["ImageId"] !== null) {
-            $this->ImageId = $param["ImageId"];
+        if (array_key_exists('ImageId',$param) and $param['ImageId'] !== null) {
+            $this->ImageId = $param['ImageId'];
         }
 
-        if (array_key_exists("OsCustomizeType",$param) and $param["OsCustomizeType"] !== null) {
-            $this->OsCustomizeType = $param["OsCustomizeType"];
+        if (array_key_exists('OsCustomizeType',$param) and $param['OsCustomizeType'] !== null) {
+            $this->OsCustomizeType = $param['OsCustomizeType'];
         }
     }
 }

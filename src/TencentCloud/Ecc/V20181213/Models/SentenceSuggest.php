@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -94,33 +94,33 @@ class SentenceSuggest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists('Type',$param) and $param['Type'] !== null) {
+            $this->Type = $param['Type'];
         }
 
-        if (array_key_exists("ErrorType",$param) and $param["ErrorType"] !== null) {
-            $this->ErrorType = $param["ErrorType"];
+        if (array_key_exists('ErrorType',$param) and $param['ErrorType'] !== null) {
+            $this->ErrorType = $param['ErrorType'];
         }
 
-        if (array_key_exists("Origin",$param) and $param["Origin"] !== null) {
-            $this->Origin = $param["Origin"];
+        if (array_key_exists('Origin',$param) and $param['Origin'] !== null) {
+            $this->Origin = $param['Origin'];
         }
 
-        if (array_key_exists("Replace",$param) and $param["Replace"] !== null) {
-            $this->Replace = $param["Replace"];
+        if (array_key_exists('Replace',$param) and $param['Replace'] !== null) {
+            $this->Replace = $param['Replace'];
         }
 
-        if (array_key_exists("Message",$param) and $param["Message"] !== null) {
-            $this->Message = $param["Message"];
+        if (array_key_exists('Message',$param) and $param['Message'] !== null) {
+            $this->Message = $param['Message'];
         }
 
-        if (array_key_exists("ErrorPosition",$param) and $param["ErrorPosition"] !== null) {
-            $this->ErrorPosition = $param["ErrorPosition"];
+        if (array_key_exists('ErrorPosition',$param) and $param['ErrorPosition'] !== null) {
+            $this->ErrorPosition = $param['ErrorPosition'];
         }
 
-        if (array_key_exists("ErrorCoordinates",$param) and $param["ErrorCoordinates"] !== null) {
+        if (array_key_exists('ErrorCoordinates',$param) and $param['ErrorCoordinates'] !== null) {
             $this->ErrorCoordinates = [];
-            foreach ($param["ErrorCoordinates"] as $key => $value){
+            foreach ($param['ErrorCoordinates'] as $key => $value){
                 $obj = new ErrorCoordinate();
                 $obj->deserialize($value);
                 array_push($this->ErrorCoordinates, $obj);

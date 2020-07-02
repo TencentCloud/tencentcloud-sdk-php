@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -118,49 +118,49 @@ class SignContractByCoordinateRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Module",$param) and $param["Module"] !== null) {
-            $this->Module = $param["Module"];
+        if (array_key_exists('Module',$param) and $param['Module'] !== null) {
+            $this->Module = $param['Module'];
         }
 
-        if (array_key_exists("Operation",$param) and $param["Operation"] !== null) {
-            $this->Operation = $param["Operation"];
+        if (array_key_exists('Operation',$param) and $param['Operation'] !== null) {
+            $this->Operation = $param['Operation'];
         }
 
-        if (array_key_exists("ContractResId",$param) and $param["ContractResId"] !== null) {
-            $this->ContractResId = $param["ContractResId"];
+        if (array_key_exists('ContractResId',$param) and $param['ContractResId'] !== null) {
+            $this->ContractResId = $param['ContractResId'];
         }
 
-        if (array_key_exists("AccountResId",$param) and $param["AccountResId"] !== null) {
-            $this->AccountResId = $param["AccountResId"];
+        if (array_key_exists('AccountResId',$param) and $param['AccountResId'] !== null) {
+            $this->AccountResId = $param['AccountResId'];
         }
 
-        if (array_key_exists("SignLocations",$param) and $param["SignLocations"] !== null) {
+        if (array_key_exists('SignLocations',$param) and $param['SignLocations'] !== null) {
             $this->SignLocations = [];
-            foreach ($param["SignLocations"] as $key => $value){
+            foreach ($param['SignLocations'] as $key => $value){
                 $obj = new SignLocation();
                 $obj->deserialize($value);
                 array_push($this->SignLocations, $obj);
             }
         }
 
-        if (array_key_exists("AuthorizationTime",$param) and $param["AuthorizationTime"] !== null) {
-            $this->AuthorizationTime = $param["AuthorizationTime"];
+        if (array_key_exists('AuthorizationTime',$param) and $param['AuthorizationTime'] !== null) {
+            $this->AuthorizationTime = $param['AuthorizationTime'];
         }
 
-        if (array_key_exists("Position",$param) and $param["Position"] !== null) {
-            $this->Position = $param["Position"];
+        if (array_key_exists('Position',$param) and $param['Position'] !== null) {
+            $this->Position = $param['Position'];
         }
 
-        if (array_key_exists("SealResId",$param) and $param["SealResId"] !== null) {
-            $this->SealResId = $param["SealResId"];
+        if (array_key_exists('SealResId',$param) and $param['SealResId'] !== null) {
+            $this->SealResId = $param['SealResId'];
         }
 
-        if (array_key_exists("CertType",$param) and $param["CertType"] !== null) {
-            $this->CertType = $param["CertType"];
+        if (array_key_exists('CertType',$param) and $param['CertType'] !== null) {
+            $this->CertType = $param['CertType'];
         }
 
-        if (array_key_exists("ImageData",$param) and $param["ImageData"] !== null) {
-            $this->ImageData = $param["ImageData"];
+        if (array_key_exists('ImageData',$param) and $param['ImageData'] !== null) {
+            $this->ImageData = $param['ImageData'];
         }
     }
 }

@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -86,28 +86,28 @@ class CreateMultiDevicesTaskRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ProductId",$param) and $param["ProductId"] !== null) {
-            $this->ProductId = $param["ProductId"];
+        if (array_key_exists('ProductId',$param) and $param['ProductId'] !== null) {
+            $this->ProductId = $param['ProductId'];
         }
 
-        if (array_key_exists("ParametersType",$param) and $param["ParametersType"] !== null) {
-            $this->ParametersType = $param["ParametersType"];
+        if (array_key_exists('ParametersType',$param) and $param['ParametersType'] !== null) {
+            $this->ParametersType = $param['ParametersType'];
         }
 
-        if (array_key_exists("FileName",$param) and $param["FileName"] !== null) {
-            $this->FileName = $param["FileName"];
+        if (array_key_exists('FileName',$param) and $param['FileName'] !== null) {
+            $this->FileName = $param['FileName'];
         }
 
-        if (array_key_exists("FileSize",$param) and $param["FileSize"] !== null) {
-            $this->FileSize = $param["FileSize"];
+        if (array_key_exists('FileSize',$param) and $param['FileSize'] !== null) {
+            $this->FileSize = $param['FileSize'];
         }
 
-        if (array_key_exists("BatchCount",$param) and $param["BatchCount"] !== null) {
-            $this->BatchCount = $param["BatchCount"];
+        if (array_key_exists('BatchCount',$param) and $param['BatchCount'] !== null) {
+            $this->BatchCount = $param['BatchCount'];
         }
 
-        if (array_key_exists("Hash",$param) and $param["Hash"] !== null) {
-            $this->Hash = $param["Hash"];
+        if (array_key_exists('Hash',$param) and $param['Hash'] !== null) {
+            $this->Hash = $param['Hash'];
         }
     }
 }

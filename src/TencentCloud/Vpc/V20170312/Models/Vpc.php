@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -146,62 +146,62 @@ class Vpc extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("VpcName",$param) and $param["VpcName"] !== null) {
-            $this->VpcName = $param["VpcName"];
+        if (array_key_exists('VpcName',$param) and $param['VpcName'] !== null) {
+            $this->VpcName = $param['VpcName'];
         }
 
-        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
-            $this->VpcId = $param["VpcId"];
+        if (array_key_exists('VpcId',$param) and $param['VpcId'] !== null) {
+            $this->VpcId = $param['VpcId'];
         }
 
-        if (array_key_exists("CidrBlock",$param) and $param["CidrBlock"] !== null) {
-            $this->CidrBlock = $param["CidrBlock"];
+        if (array_key_exists('CidrBlock',$param) and $param['CidrBlock'] !== null) {
+            $this->CidrBlock = $param['CidrBlock'];
         }
 
-        if (array_key_exists("IsDefault",$param) and $param["IsDefault"] !== null) {
-            $this->IsDefault = $param["IsDefault"];
+        if (array_key_exists('IsDefault',$param) and $param['IsDefault'] !== null) {
+            $this->IsDefault = $param['IsDefault'];
         }
 
-        if (array_key_exists("EnableMulticast",$param) and $param["EnableMulticast"] !== null) {
-            $this->EnableMulticast = $param["EnableMulticast"];
+        if (array_key_exists('EnableMulticast',$param) and $param['EnableMulticast'] !== null) {
+            $this->EnableMulticast = $param['EnableMulticast'];
         }
 
-        if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
-            $this->CreatedTime = $param["CreatedTime"];
+        if (array_key_exists('CreatedTime',$param) and $param['CreatedTime'] !== null) {
+            $this->CreatedTime = $param['CreatedTime'];
         }
 
-        if (array_key_exists("DnsServerSet",$param) and $param["DnsServerSet"] !== null) {
-            $this->DnsServerSet = $param["DnsServerSet"];
+        if (array_key_exists('DnsServerSet',$param) and $param['DnsServerSet'] !== null) {
+            $this->DnsServerSet = $param['DnsServerSet'];
         }
 
-        if (array_key_exists("DomainName",$param) and $param["DomainName"] !== null) {
-            $this->DomainName = $param["DomainName"];
+        if (array_key_exists('DomainName',$param) and $param['DomainName'] !== null) {
+            $this->DomainName = $param['DomainName'];
         }
 
-        if (array_key_exists("DhcpOptionsId",$param) and $param["DhcpOptionsId"] !== null) {
-            $this->DhcpOptionsId = $param["DhcpOptionsId"];
+        if (array_key_exists('DhcpOptionsId',$param) and $param['DhcpOptionsId'] !== null) {
+            $this->DhcpOptionsId = $param['DhcpOptionsId'];
         }
 
-        if (array_key_exists("EnableDhcp",$param) and $param["EnableDhcp"] !== null) {
-            $this->EnableDhcp = $param["EnableDhcp"];
+        if (array_key_exists('EnableDhcp',$param) and $param['EnableDhcp'] !== null) {
+            $this->EnableDhcp = $param['EnableDhcp'];
         }
 
-        if (array_key_exists("Ipv6CidrBlock",$param) and $param["Ipv6CidrBlock"] !== null) {
-            $this->Ipv6CidrBlock = $param["Ipv6CidrBlock"];
+        if (array_key_exists('Ipv6CidrBlock',$param) and $param['Ipv6CidrBlock'] !== null) {
+            $this->Ipv6CidrBlock = $param['Ipv6CidrBlock'];
         }
 
-        if (array_key_exists("TagSet",$param) and $param["TagSet"] !== null) {
+        if (array_key_exists('TagSet',$param) and $param['TagSet'] !== null) {
             $this->TagSet = [];
-            foreach ($param["TagSet"] as $key => $value){
+            foreach ($param['TagSet'] as $key => $value){
                 $obj = new Tag();
                 $obj->deserialize($value);
                 array_push($this->TagSet, $obj);
             }
         }
 
-        if (array_key_exists("AssistantCidrSet",$param) and $param["AssistantCidrSet"] !== null) {
+        if (array_key_exists('AssistantCidrSet',$param) and $param['AssistantCidrSet'] !== null) {
             $this->AssistantCidrSet = [];
-            foreach ($param["AssistantCidrSet"] as $key => $value){
+            foreach ($param['AssistantCidrSet'] as $key => $value){
                 $obj = new AssistantCidr();
                 $obj->deserialize($value);
                 array_push($this->AssistantCidrSet, $obj);

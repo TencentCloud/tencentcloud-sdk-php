@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPeriod(integer $Period) 设置统计周期，单位秒，取值[10, 30, 60]
  * @method integer getReqNumber() 获取访问次数，取值[1-10000]
  * @method void setReqNumber(integer $ReqNumber) 设置访问次数，取值[1-10000]
- * @method string getAction() 获取执行动作，取值["alg"（人机识别）, "drop"（拦截）]
- * @method void setAction(string $Action) 设置执行动作，取值["alg"（人机识别）, "drop"（拦截）]
+ * @method string getAction() 获取执行动作，取值['alg'（人机识别）, 'drop'（拦截）]
+ * @method void setAction(string $Action) 设置执行动作，取值['alg'（人机识别）, 'drop'（拦截）]
  * @method integer getExeDuration() 获取执行时间，单位秒，取值[1-900]
  * @method void setExeDuration(integer $ExeDuration) 设置执行时间，单位秒，取值[1-900]
  */
@@ -42,7 +42,7 @@ class CCRuleConfig extends AbstractModel
     public $ReqNumber;
 
     /**
-     * @var string 执行动作，取值["alg"（人机识别）, "drop"（拦截）]
+     * @var string 执行动作，取值['alg'（人机识别）, 'drop'（拦截）]
      */
     public $Action;
 
@@ -54,7 +54,7 @@ class CCRuleConfig extends AbstractModel
     /**
      * @param integer $Period 统计周期，单位秒，取值[10, 30, 60]
      * @param integer $ReqNumber 访问次数，取值[1-10000]
-     * @param string $Action 执行动作，取值["alg"（人机识别）, "drop"（拦截）]
+     * @param string $Action 执行动作，取值['alg'（人机识别）, 'drop'（拦截）]
      * @param integer $ExeDuration 执行时间，单位秒，取值[1-900]
      */
     function __construct()
@@ -70,20 +70,20 @@ class CCRuleConfig extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Period",$param) and $param["Period"] !== null) {
-            $this->Period = $param["Period"];
+        if (array_key_exists('Period',$param) and $param['Period'] !== null) {
+            $this->Period = $param['Period'];
         }
 
-        if (array_key_exists("ReqNumber",$param) and $param["ReqNumber"] !== null) {
-            $this->ReqNumber = $param["ReqNumber"];
+        if (array_key_exists('ReqNumber',$param) and $param['ReqNumber'] !== null) {
+            $this->ReqNumber = $param['ReqNumber'];
         }
 
-        if (array_key_exists("Action",$param) and $param["Action"] !== null) {
-            $this->Action = $param["Action"];
+        if (array_key_exists('Action',$param) and $param['Action'] !== null) {
+            $this->Action = $param['Action'];
         }
 
-        if (array_key_exists("ExeDuration",$param) and $param["ExeDuration"] !== null) {
-            $this->ExeDuration = $param["ExeDuration"];
+        if (array_key_exists('ExeDuration',$param) and $param['ExeDuration'] !== null) {
+            $this->ExeDuration = $param['ExeDuration'];
         }
     }
 }

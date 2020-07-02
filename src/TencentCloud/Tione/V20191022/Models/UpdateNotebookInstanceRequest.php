@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -182,61 +182,61 @@ class UpdateNotebookInstanceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("NotebookInstanceName",$param) and $param["NotebookInstanceName"] !== null) {
-            $this->NotebookInstanceName = $param["NotebookInstanceName"];
+        if (array_key_exists('NotebookInstanceName',$param) and $param['NotebookInstanceName'] !== null) {
+            $this->NotebookInstanceName = $param['NotebookInstanceName'];
         }
 
-        if (array_key_exists("RoleArn",$param) and $param["RoleArn"] !== null) {
-            $this->RoleArn = $param["RoleArn"];
+        if (array_key_exists('RoleArn',$param) and $param['RoleArn'] !== null) {
+            $this->RoleArn = $param['RoleArn'];
         }
 
-        if (array_key_exists("RootAccess",$param) and $param["RootAccess"] !== null) {
-            $this->RootAccess = $param["RootAccess"];
+        if (array_key_exists('RootAccess',$param) and $param['RootAccess'] !== null) {
+            $this->RootAccess = $param['RootAccess'];
         }
 
-        if (array_key_exists("VolumeSizeInGB",$param) and $param["VolumeSizeInGB"] !== null) {
-            $this->VolumeSizeInGB = $param["VolumeSizeInGB"];
+        if (array_key_exists('VolumeSizeInGB',$param) and $param['VolumeSizeInGB'] !== null) {
+            $this->VolumeSizeInGB = $param['VolumeSizeInGB'];
         }
 
-        if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
-            $this->InstanceType = $param["InstanceType"];
+        if (array_key_exists('InstanceType',$param) and $param['InstanceType'] !== null) {
+            $this->InstanceType = $param['InstanceType'];
         }
 
-        if (array_key_exists("LifecycleScriptsName",$param) and $param["LifecycleScriptsName"] !== null) {
-            $this->LifecycleScriptsName = $param["LifecycleScriptsName"];
+        if (array_key_exists('LifecycleScriptsName',$param) and $param['LifecycleScriptsName'] !== null) {
+            $this->LifecycleScriptsName = $param['LifecycleScriptsName'];
         }
 
-        if (array_key_exists("DisassociateLifecycleScript",$param) and $param["DisassociateLifecycleScript"] !== null) {
-            $this->DisassociateLifecycleScript = $param["DisassociateLifecycleScript"];
+        if (array_key_exists('DisassociateLifecycleScript',$param) and $param['DisassociateLifecycleScript'] !== null) {
+            $this->DisassociateLifecycleScript = $param['DisassociateLifecycleScript'];
         }
 
-        if (array_key_exists("DefaultCodeRepository",$param) and $param["DefaultCodeRepository"] !== null) {
-            $this->DefaultCodeRepository = $param["DefaultCodeRepository"];
+        if (array_key_exists('DefaultCodeRepository',$param) and $param['DefaultCodeRepository'] !== null) {
+            $this->DefaultCodeRepository = $param['DefaultCodeRepository'];
         }
 
-        if (array_key_exists("AdditionalCodeRepositories",$param) and $param["AdditionalCodeRepositories"] !== null) {
-            $this->AdditionalCodeRepositories = $param["AdditionalCodeRepositories"];
+        if (array_key_exists('AdditionalCodeRepositories',$param) and $param['AdditionalCodeRepositories'] !== null) {
+            $this->AdditionalCodeRepositories = $param['AdditionalCodeRepositories'];
         }
 
-        if (array_key_exists("DisassociateDefaultCodeRepository",$param) and $param["DisassociateDefaultCodeRepository"] !== null) {
-            $this->DisassociateDefaultCodeRepository = $param["DisassociateDefaultCodeRepository"];
+        if (array_key_exists('DisassociateDefaultCodeRepository',$param) and $param['DisassociateDefaultCodeRepository'] !== null) {
+            $this->DisassociateDefaultCodeRepository = $param['DisassociateDefaultCodeRepository'];
         }
 
-        if (array_key_exists("DisassociateAdditionalCodeRepositories",$param) and $param["DisassociateAdditionalCodeRepositories"] !== null) {
-            $this->DisassociateAdditionalCodeRepositories = $param["DisassociateAdditionalCodeRepositories"];
+        if (array_key_exists('DisassociateAdditionalCodeRepositories',$param) and $param['DisassociateAdditionalCodeRepositories'] !== null) {
+            $this->DisassociateAdditionalCodeRepositories = $param['DisassociateAdditionalCodeRepositories'];
         }
 
-        if (array_key_exists("ClsAccess",$param) and $param["ClsAccess"] !== null) {
-            $this->ClsAccess = $param["ClsAccess"];
+        if (array_key_exists('ClsAccess',$param) and $param['ClsAccess'] !== null) {
+            $this->ClsAccess = $param['ClsAccess'];
         }
 
-        if (array_key_exists("AutoStopping",$param) and $param["AutoStopping"] !== null) {
-            $this->AutoStopping = $param["AutoStopping"];
+        if (array_key_exists('AutoStopping',$param) and $param['AutoStopping'] !== null) {
+            $this->AutoStopping = $param['AutoStopping'];
         }
 
-        if (array_key_exists("StoppingCondition",$param) and $param["StoppingCondition"] !== null) {
+        if (array_key_exists('StoppingCondition',$param) and $param['StoppingCondition'] !== null) {
             $this->StoppingCondition = new StoppingCondition();
-            $this->StoppingCondition->deserialize($param["StoppingCondition"]);
+            $this->StoppingCondition->deserialize($param['StoppingCondition']);
         }
     }
 }

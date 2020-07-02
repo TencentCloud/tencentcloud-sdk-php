@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -174,72 +174,72 @@ class TransmitOralProcessWithInitRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SeqId",$param) and $param["SeqId"] !== null) {
-            $this->SeqId = $param["SeqId"];
+        if (array_key_exists('SeqId',$param) and $param['SeqId'] !== null) {
+            $this->SeqId = $param['SeqId'];
         }
 
-        if (array_key_exists("IsEnd",$param) and $param["IsEnd"] !== null) {
-            $this->IsEnd = $param["IsEnd"];
+        if (array_key_exists('IsEnd',$param) and $param['IsEnd'] !== null) {
+            $this->IsEnd = $param['IsEnd'];
         }
 
-        if (array_key_exists("VoiceFileType",$param) and $param["VoiceFileType"] !== null) {
-            $this->VoiceFileType = $param["VoiceFileType"];
+        if (array_key_exists('VoiceFileType',$param) and $param['VoiceFileType'] !== null) {
+            $this->VoiceFileType = $param['VoiceFileType'];
         }
 
-        if (array_key_exists("VoiceEncodeType",$param) and $param["VoiceEncodeType"] !== null) {
-            $this->VoiceEncodeType = $param["VoiceEncodeType"];
+        if (array_key_exists('VoiceEncodeType',$param) and $param['VoiceEncodeType'] !== null) {
+            $this->VoiceEncodeType = $param['VoiceEncodeType'];
         }
 
-        if (array_key_exists("UserVoiceData",$param) and $param["UserVoiceData"] !== null) {
-            $this->UserVoiceData = $param["UserVoiceData"];
+        if (array_key_exists('UserVoiceData',$param) and $param['UserVoiceData'] !== null) {
+            $this->UserVoiceData = $param['UserVoiceData'];
         }
 
-        if (array_key_exists("SessionId",$param) and $param["SessionId"] !== null) {
-            $this->SessionId = $param["SessionId"];
+        if (array_key_exists('SessionId',$param) and $param['SessionId'] !== null) {
+            $this->SessionId = $param['SessionId'];
         }
 
-        if (array_key_exists("RefText",$param) and $param["RefText"] !== null) {
-            $this->RefText = $param["RefText"];
+        if (array_key_exists('RefText',$param) and $param['RefText'] !== null) {
+            $this->RefText = $param['RefText'];
         }
 
-        if (array_key_exists("WorkMode",$param) and $param["WorkMode"] !== null) {
-            $this->WorkMode = $param["WorkMode"];
+        if (array_key_exists('WorkMode',$param) and $param['WorkMode'] !== null) {
+            $this->WorkMode = $param['WorkMode'];
         }
 
-        if (array_key_exists("EvalMode",$param) and $param["EvalMode"] !== null) {
-            $this->EvalMode = $param["EvalMode"];
+        if (array_key_exists('EvalMode',$param) and $param['EvalMode'] !== null) {
+            $this->EvalMode = $param['EvalMode'];
         }
 
-        if (array_key_exists("ScoreCoeff",$param) and $param["ScoreCoeff"] !== null) {
-            $this->ScoreCoeff = $param["ScoreCoeff"];
+        if (array_key_exists('ScoreCoeff',$param) and $param['ScoreCoeff'] !== null) {
+            $this->ScoreCoeff = $param['ScoreCoeff'];
         }
 
-        if (array_key_exists("SoeAppId",$param) and $param["SoeAppId"] !== null) {
-            $this->SoeAppId = $param["SoeAppId"];
+        if (array_key_exists('SoeAppId',$param) and $param['SoeAppId'] !== null) {
+            $this->SoeAppId = $param['SoeAppId'];
         }
 
-        if (array_key_exists("StorageMode",$param) and $param["StorageMode"] !== null) {
-            $this->StorageMode = $param["StorageMode"];
+        if (array_key_exists('StorageMode',$param) and $param['StorageMode'] !== null) {
+            $this->StorageMode = $param['StorageMode'];
         }
 
-        if (array_key_exists("SentenceInfoEnabled",$param) and $param["SentenceInfoEnabled"] !== null) {
-            $this->SentenceInfoEnabled = $param["SentenceInfoEnabled"];
+        if (array_key_exists('SentenceInfoEnabled',$param) and $param['SentenceInfoEnabled'] !== null) {
+            $this->SentenceInfoEnabled = $param['SentenceInfoEnabled'];
         }
 
-        if (array_key_exists("ServerType",$param) and $param["ServerType"] !== null) {
-            $this->ServerType = $param["ServerType"];
+        if (array_key_exists('ServerType',$param) and $param['ServerType'] !== null) {
+            $this->ServerType = $param['ServerType'];
         }
 
-        if (array_key_exists("IsAsync",$param) and $param["IsAsync"] !== null) {
-            $this->IsAsync = $param["IsAsync"];
+        if (array_key_exists('IsAsync',$param) and $param['IsAsync'] !== null) {
+            $this->IsAsync = $param['IsAsync'];
         }
 
-        if (array_key_exists("IsQuery",$param) and $param["IsQuery"] !== null) {
-            $this->IsQuery = $param["IsQuery"];
+        if (array_key_exists('IsQuery',$param) and $param['IsQuery'] !== null) {
+            $this->IsQuery = $param['IsQuery'];
         }
 
-        if (array_key_exists("TextMode",$param) and $param["TextMode"] !== null) {
-            $this->TextMode = $param["TextMode"];
+        if (array_key_exists('TextMode',$param) and $param['TextMode'] !== null) {
+            $this->TextMode = $param['TextMode'];
         }
     }
 }

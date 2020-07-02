@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -190,72 +190,72 @@ class QueryTradeData extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MerchantId",$param) and $param["MerchantId"] !== null) {
-            $this->MerchantId = $param["MerchantId"];
+        if (array_key_exists('MerchantId',$param) and $param['MerchantId'] !== null) {
+            $this->MerchantId = $param['MerchantId'];
         }
 
-        if (array_key_exists("TradeFileId",$param) and $param["TradeFileId"] !== null) {
-            $this->TradeFileId = $param["TradeFileId"];
+        if (array_key_exists('TradeFileId',$param) and $param['TradeFileId'] !== null) {
+            $this->TradeFileId = $param['TradeFileId'];
         }
 
-        if (array_key_exists("TradeOrderId",$param) and $param["TradeOrderId"] !== null) {
-            $this->TradeOrderId = $param["TradeOrderId"];
+        if (array_key_exists('TradeOrderId',$param) and $param['TradeOrderId'] !== null) {
+            $this->TradeOrderId = $param['TradeOrderId'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("FailReason",$param) and $param["FailReason"] !== null) {
-            $this->FailReason = $param["FailReason"];
+        if (array_key_exists('FailReason',$param) and $param['FailReason'] !== null) {
+            $this->FailReason = $param['FailReason'];
         }
 
-        if (array_key_exists("PayerId",$param) and $param["PayerId"] !== null) {
-            $this->PayerId = $param["PayerId"];
+        if (array_key_exists('PayerId',$param) and $param['PayerId'] !== null) {
+            $this->PayerId = $param['PayerId'];
         }
 
-        if (array_key_exists("PayeeName",$param) and $param["PayeeName"] !== null) {
-            $this->PayeeName = $param["PayeeName"];
+        if (array_key_exists('PayeeName',$param) and $param['PayeeName'] !== null) {
+            $this->PayeeName = $param['PayeeName'];
         }
 
-        if (array_key_exists("PayeeCountryCode",$param) and $param["PayeeCountryCode"] !== null) {
-            $this->PayeeCountryCode = $param["PayeeCountryCode"];
+        if (array_key_exists('PayeeCountryCode',$param) and $param['PayeeCountryCode'] !== null) {
+            $this->PayeeCountryCode = $param['PayeeCountryCode'];
         }
 
-        if (array_key_exists("TradeType",$param) and $param["TradeType"] !== null) {
-            $this->TradeType = $param["TradeType"];
+        if (array_key_exists('TradeType',$param) and $param['TradeType'] !== null) {
+            $this->TradeType = $param['TradeType'];
         }
 
-        if (array_key_exists("TradeTime",$param) and $param["TradeTime"] !== null) {
-            $this->TradeTime = $param["TradeTime"];
+        if (array_key_exists('TradeTime',$param) and $param['TradeTime'] !== null) {
+            $this->TradeTime = $param['TradeTime'];
         }
 
-        if (array_key_exists("TradeCurrency",$param) and $param["TradeCurrency"] !== null) {
-            $this->TradeCurrency = $param["TradeCurrency"];
+        if (array_key_exists('TradeCurrency',$param) and $param['TradeCurrency'] !== null) {
+            $this->TradeCurrency = $param['TradeCurrency'];
         }
 
-        if (array_key_exists("TradeAmount",$param) and $param["TradeAmount"] !== null) {
-            $this->TradeAmount = $param["TradeAmount"];
+        if (array_key_exists('TradeAmount',$param) and $param['TradeAmount'] !== null) {
+            $this->TradeAmount = $param['TradeAmount'];
         }
 
-        if (array_key_exists("TradeName",$param) and $param["TradeName"] !== null) {
-            $this->TradeName = $param["TradeName"];
+        if (array_key_exists('TradeName',$param) and $param['TradeName'] !== null) {
+            $this->TradeName = $param['TradeName'];
         }
 
-        if (array_key_exists("TradeCount",$param) and $param["TradeCount"] !== null) {
-            $this->TradeCount = $param["TradeCount"];
+        if (array_key_exists('TradeCount',$param) and $param['TradeCount'] !== null) {
+            $this->TradeCount = $param['TradeCount'];
         }
 
-        if (array_key_exists("GoodsCarrier",$param) and $param["GoodsCarrier"] !== null) {
-            $this->GoodsCarrier = $param["GoodsCarrier"];
+        if (array_key_exists('GoodsCarrier',$param) and $param['GoodsCarrier'] !== null) {
+            $this->GoodsCarrier = $param['GoodsCarrier'];
         }
 
-        if (array_key_exists("ServiceDetail",$param) and $param["ServiceDetail"] !== null) {
-            $this->ServiceDetail = $param["ServiceDetail"];
+        if (array_key_exists('ServiceDetail',$param) and $param['ServiceDetail'] !== null) {
+            $this->ServiceDetail = $param['ServiceDetail'];
         }
 
-        if (array_key_exists("ServiceTime",$param) and $param["ServiceTime"] !== null) {
-            $this->ServiceTime = $param["ServiceTime"];
+        if (array_key_exists('ServiceTime',$param) and $param['ServiceTime'] !== null) {
+            $this->ServiceTime = $param['ServiceTime'];
         }
     }
 }

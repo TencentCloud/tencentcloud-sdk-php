@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -62,18 +62,18 @@ class Internet extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PrivateIPAddressSet",$param) and $param["PrivateIPAddressSet"] !== null) {
+        if (array_key_exists('PrivateIPAddressSet',$param) and $param['PrivateIPAddressSet'] !== null) {
             $this->PrivateIPAddressSet = [];
-            foreach ($param["PrivateIPAddressSet"] as $key => $value){
+            foreach ($param['PrivateIPAddressSet'] as $key => $value){
                 $obj = new PrivateIPAddressInfo();
                 $obj->deserialize($value);
                 array_push($this->PrivateIPAddressSet, $obj);
             }
         }
 
-        if (array_key_exists("PublicIPAddressSet",$param) and $param["PublicIPAddressSet"] !== null) {
+        if (array_key_exists('PublicIPAddressSet',$param) and $param['PublicIPAddressSet'] !== null) {
             $this->PublicIPAddressSet = [];
-            foreach ($param["PublicIPAddressSet"] as $key => $value){
+            foreach ($param['PublicIPAddressSet'] as $key => $value){
                 $obj = new PublicIPAddressInfo();
                 $obj->deserialize($value);
                 array_push($this->PublicIPAddressSet, $obj);

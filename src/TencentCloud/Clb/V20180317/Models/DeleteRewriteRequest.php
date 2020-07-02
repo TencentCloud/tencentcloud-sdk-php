@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -70,21 +70,21 @@ class DeleteRewriteRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LoadBalancerId",$param) and $param["LoadBalancerId"] !== null) {
-            $this->LoadBalancerId = $param["LoadBalancerId"];
+        if (array_key_exists('LoadBalancerId',$param) and $param['LoadBalancerId'] !== null) {
+            $this->LoadBalancerId = $param['LoadBalancerId'];
         }
 
-        if (array_key_exists("SourceListenerId",$param) and $param["SourceListenerId"] !== null) {
-            $this->SourceListenerId = $param["SourceListenerId"];
+        if (array_key_exists('SourceListenerId',$param) and $param['SourceListenerId'] !== null) {
+            $this->SourceListenerId = $param['SourceListenerId'];
         }
 
-        if (array_key_exists("TargetListenerId",$param) and $param["TargetListenerId"] !== null) {
-            $this->TargetListenerId = $param["TargetListenerId"];
+        if (array_key_exists('TargetListenerId',$param) and $param['TargetListenerId'] !== null) {
+            $this->TargetListenerId = $param['TargetListenerId'];
         }
 
-        if (array_key_exists("RewriteInfos",$param) and $param["RewriteInfos"] !== null) {
+        if (array_key_exists('RewriteInfos',$param) and $param['RewriteInfos'] !== null) {
             $this->RewriteInfos = [];
-            foreach ($param["RewriteInfos"] as $key => $value){
+            foreach ($param['RewriteInfos'] as $key => $value){
                 $obj = new RewriteLocationMap();
                 $obj->deserialize($value);
                 array_push($this->RewriteInfos, $obj);

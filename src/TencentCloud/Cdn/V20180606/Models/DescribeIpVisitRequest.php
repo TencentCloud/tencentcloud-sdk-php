@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -98,24 +98,24 @@ day：天粒度，查询时间区间大于 1 天时，默认返回天粒度活�
         if ($param === null) {
             return;
         }
-        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
-            $this->StartTime = $param["StartTime"];
+        if (array_key_exists('StartTime',$param) and $param['StartTime'] !== null) {
+            $this->StartTime = $param['StartTime'];
         }
 
-        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
-            $this->EndTime = $param["EndTime"];
+        if (array_key_exists('EndTime',$param) and $param['EndTime'] !== null) {
+            $this->EndTime = $param['EndTime'];
         }
 
-        if (array_key_exists("Domains",$param) and $param["Domains"] !== null) {
-            $this->Domains = $param["Domains"];
+        if (array_key_exists('Domains',$param) and $param['Domains'] !== null) {
+            $this->Domains = $param['Domains'];
         }
 
-        if (array_key_exists("Project",$param) and $param["Project"] !== null) {
-            $this->Project = $param["Project"];
+        if (array_key_exists('Project',$param) and $param['Project'] !== null) {
+            $this->Project = $param['Project'];
         }
 
-        if (array_key_exists("Interval",$param) and $param["Interval"] !== null) {
-            $this->Interval = $param["Interval"];
+        if (array_key_exists('Interval',$param) and $param['Interval'] !== null) {
+            $this->Interval = $param['Interval'];
         }
     }
 }

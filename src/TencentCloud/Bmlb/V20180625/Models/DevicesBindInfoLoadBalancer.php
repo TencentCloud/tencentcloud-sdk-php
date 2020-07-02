@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -110,46 +110,46 @@ class DevicesBindInfoLoadBalancer extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LoadBalancerId",$param) and $param["LoadBalancerId"] !== null) {
-            $this->LoadBalancerId = $param["LoadBalancerId"];
+        if (array_key_exists('LoadBalancerId',$param) and $param['LoadBalancerId'] !== null) {
+            $this->LoadBalancerId = $param['LoadBalancerId'];
         }
 
-        if (array_key_exists("AppId",$param) and $param["AppId"] !== null) {
-            $this->AppId = $param["AppId"];
+        if (array_key_exists('AppId',$param) and $param['AppId'] !== null) {
+            $this->AppId = $param['AppId'];
         }
 
-        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
-            $this->ProjectId = $param["ProjectId"];
+        if (array_key_exists('ProjectId',$param) and $param['ProjectId'] !== null) {
+            $this->ProjectId = $param['ProjectId'];
         }
 
-        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
-            $this->VpcId = $param["VpcId"];
+        if (array_key_exists('VpcId',$param) and $param['VpcId'] !== null) {
+            $this->VpcId = $param['VpcId'];
         }
 
-        if (array_key_exists("Vip",$param) and $param["Vip"] !== null) {
-            $this->Vip = $param["Vip"];
+        if (array_key_exists('Vip',$param) and $param['Vip'] !== null) {
+            $this->Vip = $param['Vip'];
         }
 
-        if (array_key_exists("TgwSetType",$param) and $param["TgwSetType"] !== null) {
-            $this->TgwSetType = $param["TgwSetType"];
+        if (array_key_exists('TgwSetType',$param) and $param['TgwSetType'] !== null) {
+            $this->TgwSetType = $param['TgwSetType'];
         }
 
-        if (array_key_exists("Exclusive",$param) and $param["Exclusive"] !== null) {
-            $this->Exclusive = $param["Exclusive"];
+        if (array_key_exists('Exclusive',$param) and $param['Exclusive'] !== null) {
+            $this->Exclusive = $param['Exclusive'];
         }
 
-        if (array_key_exists("L4ListenerSet",$param) and $param["L4ListenerSet"] !== null) {
+        if (array_key_exists('L4ListenerSet',$param) and $param['L4ListenerSet'] !== null) {
             $this->L4ListenerSet = [];
-            foreach ($param["L4ListenerSet"] as $key => $value){
+            foreach ($param['L4ListenerSet'] as $key => $value){
                 $obj = new DevicesBindInfoL4Listener();
                 $obj->deserialize($value);
                 array_push($this->L4ListenerSet, $obj);
             }
         }
 
-        if (array_key_exists("L7ListenerSet",$param) and $param["L7ListenerSet"] !== null) {
+        if (array_key_exists('L7ListenerSet',$param) and $param['L7ListenerSet'] !== null) {
             $this->L7ListenerSet = [];
-            foreach ($param["L7ListenerSet"] as $key => $value){
+            foreach ($param['L7ListenerSet'] as $key => $value){
                 $obj = new DevicesBindInfoL7Listener();
                 $obj->deserialize($value);
                 array_push($this->L7ListenerSet, $obj);

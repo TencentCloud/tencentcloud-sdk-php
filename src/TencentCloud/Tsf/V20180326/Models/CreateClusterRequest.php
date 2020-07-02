@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -110,40 +110,40 @@ class CreateClusterRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ClusterName",$param) and $param["ClusterName"] !== null) {
-            $this->ClusterName = $param["ClusterName"];
+        if (array_key_exists('ClusterName',$param) and $param['ClusterName'] !== null) {
+            $this->ClusterName = $param['ClusterName'];
         }
 
-        if (array_key_exists("ClusterType",$param) and $param["ClusterType"] !== null) {
-            $this->ClusterType = $param["ClusterType"];
+        if (array_key_exists('ClusterType',$param) and $param['ClusterType'] !== null) {
+            $this->ClusterType = $param['ClusterType'];
         }
 
-        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
-            $this->VpcId = $param["VpcId"];
+        if (array_key_exists('VpcId',$param) and $param['VpcId'] !== null) {
+            $this->VpcId = $param['VpcId'];
         }
 
-        if (array_key_exists("ClusterCIDR",$param) and $param["ClusterCIDR"] !== null) {
-            $this->ClusterCIDR = $param["ClusterCIDR"];
+        if (array_key_exists('ClusterCIDR',$param) and $param['ClusterCIDR'] !== null) {
+            $this->ClusterCIDR = $param['ClusterCIDR'];
         }
 
-        if (array_key_exists("ClusterDesc",$param) and $param["ClusterDesc"] !== null) {
-            $this->ClusterDesc = $param["ClusterDesc"];
+        if (array_key_exists('ClusterDesc',$param) and $param['ClusterDesc'] !== null) {
+            $this->ClusterDesc = $param['ClusterDesc'];
         }
 
-        if (array_key_exists("TsfRegionId",$param) and $param["TsfRegionId"] !== null) {
-            $this->TsfRegionId = $param["TsfRegionId"];
+        if (array_key_exists('TsfRegionId',$param) and $param['TsfRegionId'] !== null) {
+            $this->TsfRegionId = $param['TsfRegionId'];
         }
 
-        if (array_key_exists("TsfZoneId",$param) and $param["TsfZoneId"] !== null) {
-            $this->TsfZoneId = $param["TsfZoneId"];
+        if (array_key_exists('TsfZoneId',$param) and $param['TsfZoneId'] !== null) {
+            $this->TsfZoneId = $param['TsfZoneId'];
         }
 
-        if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
-            $this->SubnetId = $param["SubnetId"];
+        if (array_key_exists('SubnetId',$param) and $param['SubnetId'] !== null) {
+            $this->SubnetId = $param['SubnetId'];
         }
 
-        if (array_key_exists("ClusterVersion",$param) and $param["ClusterVersion"] !== null) {
-            $this->ClusterVersion = $param["ClusterVersion"];
+        if (array_key_exists('ClusterVersion',$param) and $param['ClusterVersion'] !== null) {
+            $this->ClusterVersion = $param['ClusterVersion'];
         }
     }
 }

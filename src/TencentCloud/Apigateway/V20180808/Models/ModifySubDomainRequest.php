@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -94,37 +94,37 @@ class ModifySubDomainRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ServiceId",$param) and $param["ServiceId"] !== null) {
-            $this->ServiceId = $param["ServiceId"];
+        if (array_key_exists('ServiceId',$param) and $param['ServiceId'] !== null) {
+            $this->ServiceId = $param['ServiceId'];
         }
 
-        if (array_key_exists("SubDomain",$param) and $param["SubDomain"] !== null) {
-            $this->SubDomain = $param["SubDomain"];
+        if (array_key_exists('SubDomain',$param) and $param['SubDomain'] !== null) {
+            $this->SubDomain = $param['SubDomain'];
         }
 
-        if (array_key_exists("IsDefaultMapping",$param) and $param["IsDefaultMapping"] !== null) {
-            $this->IsDefaultMapping = $param["IsDefaultMapping"];
+        if (array_key_exists('IsDefaultMapping',$param) and $param['IsDefaultMapping'] !== null) {
+            $this->IsDefaultMapping = $param['IsDefaultMapping'];
         }
 
-        if (array_key_exists("CertificateId",$param) and $param["CertificateId"] !== null) {
-            $this->CertificateId = $param["CertificateId"];
+        if (array_key_exists('CertificateId',$param) and $param['CertificateId'] !== null) {
+            $this->CertificateId = $param['CertificateId'];
         }
 
-        if (array_key_exists("Protocol",$param) and $param["Protocol"] !== null) {
-            $this->Protocol = $param["Protocol"];
+        if (array_key_exists('Protocol',$param) and $param['Protocol'] !== null) {
+            $this->Protocol = $param['Protocol'];
         }
 
-        if (array_key_exists("PathMappingSet",$param) and $param["PathMappingSet"] !== null) {
+        if (array_key_exists('PathMappingSet',$param) and $param['PathMappingSet'] !== null) {
             $this->PathMappingSet = [];
-            foreach ($param["PathMappingSet"] as $key => $value){
+            foreach ($param['PathMappingSet'] as $key => $value){
                 $obj = new PathMapping();
                 $obj->deserialize($value);
                 array_push($this->PathMappingSet, $obj);
             }
         }
 
-        if (array_key_exists("NetType",$param) and $param["NetType"] !== null) {
-            $this->NetType = $param["NetType"];
+        if (array_key_exists('NetType',$param) and $param['NetType'] !== null) {
+            $this->NetType = $param['NetType'];
         }
     }
 }

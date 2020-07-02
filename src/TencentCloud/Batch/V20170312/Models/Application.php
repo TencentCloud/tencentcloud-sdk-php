@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -70,21 +70,21 @@ class Application extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Command",$param) and $param["Command"] !== null) {
-            $this->Command = $param["Command"];
+        if (array_key_exists('Command',$param) and $param['Command'] !== null) {
+            $this->Command = $param['Command'];
         }
 
-        if (array_key_exists("DeliveryForm",$param) and $param["DeliveryForm"] !== null) {
-            $this->DeliveryForm = $param["DeliveryForm"];
+        if (array_key_exists('DeliveryForm',$param) and $param['DeliveryForm'] !== null) {
+            $this->DeliveryForm = $param['DeliveryForm'];
         }
 
-        if (array_key_exists("PackagePath",$param) and $param["PackagePath"] !== null) {
-            $this->PackagePath = $param["PackagePath"];
+        if (array_key_exists('PackagePath',$param) and $param['PackagePath'] !== null) {
+            $this->PackagePath = $param['PackagePath'];
         }
 
-        if (array_key_exists("Docker",$param) and $param["Docker"] !== null) {
+        if (array_key_exists('Docker',$param) and $param['Docker'] !== null) {
             $this->Docker = new Docker();
-            $this->Docker->deserialize($param["Docker"]);
+            $this->Docker->deserialize($param['Docker']);
         }
     }
 }

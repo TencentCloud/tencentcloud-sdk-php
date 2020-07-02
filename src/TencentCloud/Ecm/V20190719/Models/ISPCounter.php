@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -70,21 +70,21 @@ class ISPCounter extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ProviderName",$param) and $param["ProviderName"] !== null) {
-            $this->ProviderName = $param["ProviderName"];
+        if (array_key_exists('ProviderName',$param) and $param['ProviderName'] !== null) {
+            $this->ProviderName = $param['ProviderName'];
         }
 
-        if (array_key_exists("ProviderNodeNum",$param) and $param["ProviderNodeNum"] !== null) {
-            $this->ProviderNodeNum = $param["ProviderNodeNum"];
+        if (array_key_exists('ProviderNodeNum',$param) and $param['ProviderNodeNum'] !== null) {
+            $this->ProviderNodeNum = $param['ProviderNodeNum'];
         }
 
-        if (array_key_exists("ProvederInstanceNum",$param) and $param["ProvederInstanceNum"] !== null) {
-            $this->ProvederInstanceNum = $param["ProvederInstanceNum"];
+        if (array_key_exists('ProvederInstanceNum',$param) and $param['ProvederInstanceNum'] !== null) {
+            $this->ProvederInstanceNum = $param['ProvederInstanceNum'];
         }
 
-        if (array_key_exists("ZoneInstanceInfoSet",$param) and $param["ZoneInstanceInfoSet"] !== null) {
+        if (array_key_exists('ZoneInstanceInfoSet',$param) and $param['ZoneInstanceInfoSet'] !== null) {
             $this->ZoneInstanceInfoSet = [];
-            foreach ($param["ZoneInstanceInfoSet"] as $key => $value){
+            foreach ($param['ZoneInstanceInfoSet'] as $key => $value){
                 $obj = new ZoneInstanceInfo();
                 $obj->deserialize($value);
                 array_push($this->ZoneInstanceInfoSet, $obj);

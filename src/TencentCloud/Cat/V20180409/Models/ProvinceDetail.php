@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -94,37 +94,37 @@ class ProvinceDetail extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AvgAvailRatio",$param) and $param["AvgAvailRatio"] !== null) {
-            $this->AvgAvailRatio = $param["AvgAvailRatio"];
+        if (array_key_exists('AvgAvailRatio',$param) and $param['AvgAvailRatio'] !== null) {
+            $this->AvgAvailRatio = $param['AvgAvailRatio'];
         }
 
-        if (array_key_exists("ProvinceName",$param) and $param["ProvinceName"] !== null) {
-            $this->ProvinceName = $param["ProvinceName"];
+        if (array_key_exists('ProvinceName',$param) and $param['ProvinceName'] !== null) {
+            $this->ProvinceName = $param['ProvinceName'];
         }
 
-        if (array_key_exists("Mapkey",$param) and $param["Mapkey"] !== null) {
-            $this->Mapkey = $param["Mapkey"];
+        if (array_key_exists('Mapkey',$param) and $param['Mapkey'] !== null) {
+            $this->Mapkey = $param['Mapkey'];
         }
 
-        if (array_key_exists("TimeStamp",$param) and $param["TimeStamp"] !== null) {
-            $this->TimeStamp = $param["TimeStamp"];
+        if (array_key_exists('TimeStamp',$param) and $param['TimeStamp'] !== null) {
+            $this->TimeStamp = $param['TimeStamp'];
         }
 
-        if (array_key_exists("IspDetail",$param) and $param["IspDetail"] !== null) {
+        if (array_key_exists('IspDetail',$param) and $param['IspDetail'] !== null) {
             $this->IspDetail = [];
-            foreach ($param["IspDetail"] as $key => $value){
+            foreach ($param['IspDetail'] as $key => $value){
                 $obj = new IspDetail();
                 $obj->deserialize($value);
                 array_push($this->IspDetail, $obj);
             }
         }
 
-        if (array_key_exists("AvgTime",$param) and $param["AvgTime"] !== null) {
-            $this->AvgTime = $param["AvgTime"];
+        if (array_key_exists('AvgTime',$param) and $param['AvgTime'] !== null) {
+            $this->AvgTime = $param['AvgTime'];
         }
 
-        if (array_key_exists("Province",$param) and $param["Province"] !== null) {
-            $this->Province = $param["Province"];
+        if (array_key_exists('Province',$param) and $param['Province'] !== null) {
+            $this->Province = $param['Province'];
         }
     }
 }

@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -23,15 +23,15 @@ use TencentCloud\Common\AbstractModel;
  * @method string getPolicyId() 获取审计策略 ID。
  * @method void setPolicyId(string $PolicyId) 设置审计策略 ID。
  * @method string getStatus() 获取审计策略的状态。可能返回的值为：
-"creating" - 创建中;
-"running" - 运行中;
-"paused" - 暂停中;
-"failed" - 创建失败。
+'creating' - 创建中;
+'running' - 运行中;
+'paused' - 暂停中;
+'failed' - 创建失败。
  * @method void setStatus(string $Status) 设置审计策略的状态。可能返回的值为：
-"creating" - 创建中;
-"running" - 运行中;
-"paused" - 暂停中;
-"failed" - 创建失败。
+'creating' - 创建中;
+'running' - 运行中;
+'paused' - 暂停中;
+'failed' - 创建失败。
  * @method string getInstanceId() 获取数据库实例 ID。
  * @method void setInstanceId(string $InstanceId) 设置数据库实例 ID。
  * @method string getCreateTime() 获取审计策略创建时间。格式为 : "2019-03-20 17:09:13"。
@@ -56,10 +56,10 @@ class AuditPolicy extends AbstractModel
 
     /**
      * @var string 审计策略的状态。可能返回的值为：
-"creating" - 创建中;
-"running" - 运行中;
-"paused" - 暂停中;
-"failed" - 创建失败。
+'creating' - 创建中;
+'running' - 运行中;
+'paused' - 暂停中;
+'failed' - 创建失败。
      */
     public $Status;
 
@@ -97,10 +97,10 @@ class AuditPolicy extends AbstractModel
     /**
      * @param string $PolicyId 审计策略 ID。
      * @param string $Status 审计策略的状态。可能返回的值为：
-"creating" - 创建中;
-"running" - 运行中;
-"paused" - 暂停中;
-"failed" - 创建失败。
+'creating' - 创建中;
+'running' - 运行中;
+'paused' - 暂停中;
+'failed' - 创建失败。
      * @param string $InstanceId 数据库实例 ID。
      * @param string $CreateTime 审计策略创建时间。格式为 : "2019-03-20 17:09:13"。
      * @param string $ModifyTime 审计策略最后修改时间。格式为 : "2019-03-20 17:09:13"。
@@ -122,36 +122,36 @@ class AuditPolicy extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PolicyId",$param) and $param["PolicyId"] !== null) {
-            $this->PolicyId = $param["PolicyId"];
+        if (array_key_exists('PolicyId',$param) and $param['PolicyId'] !== null) {
+            $this->PolicyId = $param['PolicyId'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("ModifyTime",$param) and $param["ModifyTime"] !== null) {
-            $this->ModifyTime = $param["ModifyTime"];
+        if (array_key_exists('ModifyTime',$param) and $param['ModifyTime'] !== null) {
+            $this->ModifyTime = $param['ModifyTime'];
         }
 
-        if (array_key_exists("PolicyName",$param) and $param["PolicyName"] !== null) {
-            $this->PolicyName = $param["PolicyName"];
+        if (array_key_exists('PolicyName',$param) and $param['PolicyName'] !== null) {
+            $this->PolicyName = $param['PolicyName'];
         }
 
-        if (array_key_exists("RuleId",$param) and $param["RuleId"] !== null) {
-            $this->RuleId = $param["RuleId"];
+        if (array_key_exists('RuleId',$param) and $param['RuleId'] !== null) {
+            $this->RuleId = $param['RuleId'];
         }
 
-        if (array_key_exists("RuleName",$param) and $param["RuleName"] !== null) {
-            $this->RuleName = $param["RuleName"];
+        if (array_key_exists('RuleName',$param) and $param['RuleName'] !== null) {
+            $this->RuleName = $param['RuleName'];
         }
     }
 }

@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -70,20 +70,20 @@ class PurchaseReservedInstancesOfferingRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceCount",$param) and $param["InstanceCount"] !== null) {
-            $this->InstanceCount = $param["InstanceCount"];
+        if (array_key_exists('InstanceCount',$param) and $param['InstanceCount'] !== null) {
+            $this->InstanceCount = $param['InstanceCount'];
         }
 
-        if (array_key_exists("ReservedInstancesOfferingId",$param) and $param["ReservedInstancesOfferingId"] !== null) {
-            $this->ReservedInstancesOfferingId = $param["ReservedInstancesOfferingId"];
+        if (array_key_exists('ReservedInstancesOfferingId',$param) and $param['ReservedInstancesOfferingId'] !== null) {
+            $this->ReservedInstancesOfferingId = $param['ReservedInstancesOfferingId'];
         }
 
-        if (array_key_exists("DryRun",$param) and $param["DryRun"] !== null) {
-            $this->DryRun = $param["DryRun"];
+        if (array_key_exists('DryRun',$param) and $param['DryRun'] !== null) {
+            $this->DryRun = $param['DryRun'];
         }
 
-        if (array_key_exists("ClientToken",$param) and $param["ClientToken"] !== null) {
-            $this->ClientToken = $param["ClientToken"];
+        if (array_key_exists('ClientToken',$param) and $param['ClientToken'] !== null) {
+            $this->ClientToken = $param['ClientToken'];
         }
     }
 }

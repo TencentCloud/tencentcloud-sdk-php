@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -190,80 +190,80 @@ class Conditions extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TimeRange",$param) and $param["TimeRange"] !== null) {
-            $this->TimeRange = $param["TimeRange"];
+        if (array_key_exists('TimeRange',$param) and $param['TimeRange'] !== null) {
+            $this->TimeRange = $param['TimeRange'];
         }
 
-        if (array_key_exists("BusinessCode",$param) and $param["BusinessCode"] !== null) {
-            $this->BusinessCode = $param["BusinessCode"];
+        if (array_key_exists('BusinessCode',$param) and $param['BusinessCode'] !== null) {
+            $this->BusinessCode = $param['BusinessCode'];
         }
 
-        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
-            $this->ProjectId = $param["ProjectId"];
+        if (array_key_exists('ProjectId',$param) and $param['ProjectId'] !== null) {
+            $this->ProjectId = $param['ProjectId'];
         }
 
-        if (array_key_exists("RegionId",$param) and $param["RegionId"] !== null) {
-            $this->RegionId = $param["RegionId"];
+        if (array_key_exists('RegionId',$param) and $param['RegionId'] !== null) {
+            $this->RegionId = $param['RegionId'];
         }
 
-        if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {
-            $this->PayMode = $param["PayMode"];
+        if (array_key_exists('PayMode',$param) and $param['PayMode'] !== null) {
+            $this->PayMode = $param['PayMode'];
         }
 
-        if (array_key_exists("ResourceKeyword",$param) and $param["ResourceKeyword"] !== null) {
-            $this->ResourceKeyword = $param["ResourceKeyword"];
+        if (array_key_exists('ResourceKeyword',$param) and $param['ResourceKeyword'] !== null) {
+            $this->ResourceKeyword = $param['ResourceKeyword'];
         }
 
-        if (array_key_exists("BusinessCodes",$param) and $param["BusinessCodes"] !== null) {
-            $this->BusinessCodes = $param["BusinessCodes"];
+        if (array_key_exists('BusinessCodes',$param) and $param['BusinessCodes'] !== null) {
+            $this->BusinessCodes = $param['BusinessCodes'];
         }
 
-        if (array_key_exists("ProductCodes",$param) and $param["ProductCodes"] !== null) {
-            $this->ProductCodes = $param["ProductCodes"];
+        if (array_key_exists('ProductCodes',$param) and $param['ProductCodes'] !== null) {
+            $this->ProductCodes = $param['ProductCodes'];
         }
 
-        if (array_key_exists("RegionIds",$param) and $param["RegionIds"] !== null) {
-            $this->RegionIds = $param["RegionIds"];
+        if (array_key_exists('RegionIds',$param) and $param['RegionIds'] !== null) {
+            $this->RegionIds = $param['RegionIds'];
         }
 
-        if (array_key_exists("ProjectIds",$param) and $param["ProjectIds"] !== null) {
-            $this->ProjectIds = $param["ProjectIds"];
+        if (array_key_exists('ProjectIds',$param) and $param['ProjectIds'] !== null) {
+            $this->ProjectIds = $param['ProjectIds'];
         }
 
-        if (array_key_exists("PayModes",$param) and $param["PayModes"] !== null) {
-            $this->PayModes = $param["PayModes"];
+        if (array_key_exists('PayModes',$param) and $param['PayModes'] !== null) {
+            $this->PayModes = $param['PayModes'];
         }
 
-        if (array_key_exists("ActionTypes",$param) and $param["ActionTypes"] !== null) {
-            $this->ActionTypes = $param["ActionTypes"];
+        if (array_key_exists('ActionTypes',$param) and $param['ActionTypes'] !== null) {
+            $this->ActionTypes = $param['ActionTypes'];
         }
 
-        if (array_key_exists("HideFreeCost",$param) and $param["HideFreeCost"] !== null) {
-            $this->HideFreeCost = $param["HideFreeCost"];
+        if (array_key_exists('HideFreeCost',$param) and $param['HideFreeCost'] !== null) {
+            $this->HideFreeCost = $param['HideFreeCost'];
         }
 
-        if (array_key_exists("OrderByCost",$param) and $param["OrderByCost"] !== null) {
-            $this->OrderByCost = $param["OrderByCost"];
+        if (array_key_exists('OrderByCost',$param) and $param['OrderByCost'] !== null) {
+            $this->OrderByCost = $param['OrderByCost'];
         }
 
-        if (array_key_exists("BillIds",$param) and $param["BillIds"] !== null) {
-            $this->BillIds = $param["BillIds"];
+        if (array_key_exists('BillIds',$param) and $param['BillIds'] !== null) {
+            $this->BillIds = $param['BillIds'];
         }
 
-        if (array_key_exists("ComponentCodes",$param) and $param["ComponentCodes"] !== null) {
-            $this->ComponentCodes = $param["ComponentCodes"];
+        if (array_key_exists('ComponentCodes',$param) and $param['ComponentCodes'] !== null) {
+            $this->ComponentCodes = $param['ComponentCodes'];
         }
 
-        if (array_key_exists("FileIds",$param) and $param["FileIds"] !== null) {
-            $this->FileIds = $param["FileIds"];
+        if (array_key_exists('FileIds',$param) and $param['FileIds'] !== null) {
+            $this->FileIds = $param['FileIds'];
         }
 
-        if (array_key_exists("FileTypes",$param) and $param["FileTypes"] !== null) {
-            $this->FileTypes = $param["FileTypes"];
+        if (array_key_exists('FileTypes',$param) and $param['FileTypes'] !== null) {
+            $this->FileTypes = $param['FileTypes'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
     }
 }

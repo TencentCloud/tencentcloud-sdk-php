@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -62,17 +62,17 @@ class SlowlogDetail extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalTime",$param) and $param["TotalTime"] !== null) {
-            $this->TotalTime = $param["TotalTime"];
+        if (array_key_exists('TotalTime',$param) and $param['TotalTime'] !== null) {
+            $this->TotalTime = $param['TotalTime'];
         }
 
-        if (array_key_exists("TotalCalls",$param) and $param["TotalCalls"] !== null) {
-            $this->TotalCalls = $param["TotalCalls"];
+        if (array_key_exists('TotalCalls',$param) and $param['TotalCalls'] !== null) {
+            $this->TotalCalls = $param['TotalCalls'];
         }
 
-        if (array_key_exists("NormalQueries",$param) and $param["NormalQueries"] !== null) {
+        if (array_key_exists('NormalQueries',$param) and $param['NormalQueries'] !== null) {
             $this->NormalQueries = [];
-            foreach ($param["NormalQueries"] as $key => $value){
+            foreach ($param['NormalQueries'] as $key => $value){
                 $obj = new NormalQueryItem();
                 $obj->deserialize($value);
                 array_push($this->NormalQueries, $obj);

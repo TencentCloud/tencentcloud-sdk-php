@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -150,40 +150,40 @@ class CommonMixOutputParams extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("OutputStreamName",$param) and $param["OutputStreamName"] !== null) {
-            $this->OutputStreamName = $param["OutputStreamName"];
+        if (array_key_exists('OutputStreamName',$param) and $param['OutputStreamName'] !== null) {
+            $this->OutputStreamName = $param['OutputStreamName'];
         }
 
-        if (array_key_exists("OutputStreamType",$param) and $param["OutputStreamType"] !== null) {
-            $this->OutputStreamType = $param["OutputStreamType"];
+        if (array_key_exists('OutputStreamType',$param) and $param['OutputStreamType'] !== null) {
+            $this->OutputStreamType = $param['OutputStreamType'];
         }
 
-        if (array_key_exists("OutputStreamBitRate",$param) and $param["OutputStreamBitRate"] !== null) {
-            $this->OutputStreamBitRate = $param["OutputStreamBitRate"];
+        if (array_key_exists('OutputStreamBitRate',$param) and $param['OutputStreamBitRate'] !== null) {
+            $this->OutputStreamBitRate = $param['OutputStreamBitRate'];
         }
 
-        if (array_key_exists("OutputStreamGop",$param) and $param["OutputStreamGop"] !== null) {
-            $this->OutputStreamGop = $param["OutputStreamGop"];
+        if (array_key_exists('OutputStreamGop',$param) and $param['OutputStreamGop'] !== null) {
+            $this->OutputStreamGop = $param['OutputStreamGop'];
         }
 
-        if (array_key_exists("OutputStreamFrameRate",$param) and $param["OutputStreamFrameRate"] !== null) {
-            $this->OutputStreamFrameRate = $param["OutputStreamFrameRate"];
+        if (array_key_exists('OutputStreamFrameRate',$param) and $param['OutputStreamFrameRate'] !== null) {
+            $this->OutputStreamFrameRate = $param['OutputStreamFrameRate'];
         }
 
-        if (array_key_exists("OutputAudioBitRate",$param) and $param["OutputAudioBitRate"] !== null) {
-            $this->OutputAudioBitRate = $param["OutputAudioBitRate"];
+        if (array_key_exists('OutputAudioBitRate',$param) and $param['OutputAudioBitRate'] !== null) {
+            $this->OutputAudioBitRate = $param['OutputAudioBitRate'];
         }
 
-        if (array_key_exists("OutputAudioSampleRate",$param) and $param["OutputAudioSampleRate"] !== null) {
-            $this->OutputAudioSampleRate = $param["OutputAudioSampleRate"];
+        if (array_key_exists('OutputAudioSampleRate',$param) and $param['OutputAudioSampleRate'] !== null) {
+            $this->OutputAudioSampleRate = $param['OutputAudioSampleRate'];
         }
 
-        if (array_key_exists("OutputAudioChannels",$param) and $param["OutputAudioChannels"] !== null) {
-            $this->OutputAudioChannels = $param["OutputAudioChannels"];
+        if (array_key_exists('OutputAudioChannels',$param) and $param['OutputAudioChannels'] !== null) {
+            $this->OutputAudioChannels = $param['OutputAudioChannels'];
         }
 
-        if (array_key_exists("MixSei",$param) and $param["MixSei"] !== null) {
-            $this->MixSei = $param["MixSei"];
+        if (array_key_exists('MixSei',$param) and $param['MixSei'] !== null) {
+            $this->MixSei = $param['MixSei'];
         }
     }
 }

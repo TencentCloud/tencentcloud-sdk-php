@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -78,30 +78,30 @@ class RegionInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Region",$param) and $param["Region"] !== null) {
-            $this->Region = $param["Region"];
+        if (array_key_exists('Region',$param) and $param['Region'] !== null) {
+            $this->Region = $param['Region'];
         }
 
-        if (array_key_exists("RegionId",$param) and $param["RegionId"] !== null) {
-            $this->RegionId = $param["RegionId"];
+        if (array_key_exists('RegionId',$param) and $param['RegionId'] !== null) {
+            $this->RegionId = $param['RegionId'];
         }
 
-        if (array_key_exists("RegionName",$param) and $param["RegionName"] !== null) {
-            $this->RegionName = $param["RegionName"];
+        if (array_key_exists('RegionName',$param) and $param['RegionName'] !== null) {
+            $this->RegionName = $param['RegionName'];
         }
 
-        if (array_key_exists("ZoneList",$param) and $param["ZoneList"] !== null) {
+        if (array_key_exists('ZoneList',$param) and $param['ZoneList'] !== null) {
             $this->ZoneList = [];
-            foreach ($param["ZoneList"] as $key => $value){
+            foreach ($param['ZoneList'] as $key => $value){
                 $obj = new ZonesInfo();
                 $obj->deserialize($value);
                 array_push($this->ZoneList, $obj);
             }
         }
 
-        if (array_key_exists("AvailableChoice",$param) and $param["AvailableChoice"] !== null) {
+        if (array_key_exists('AvailableChoice',$param) and $param['AvailableChoice'] !== null) {
             $this->AvailableChoice = [];
-            foreach ($param["AvailableChoice"] as $key => $value){
+            foreach ($param['AvailableChoice'] as $key => $value){
                 $obj = new ZoneChooseInfo();
                 $obj->deserialize($value);
                 array_push($this->AvailableChoice, $obj);

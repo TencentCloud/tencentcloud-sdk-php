@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -174,64 +174,64 @@ class DeviceClass extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DeviceClassCode",$param) and $param["DeviceClassCode"] !== null) {
-            $this->DeviceClassCode = $param["DeviceClassCode"];
+        if (array_key_exists('DeviceClassCode',$param) and $param['DeviceClassCode'] !== null) {
+            $this->DeviceClassCode = $param['DeviceClassCode'];
         }
 
-        if (array_key_exists("CpuDescription",$param) and $param["CpuDescription"] !== null) {
-            $this->CpuDescription = $param["CpuDescription"];
+        if (array_key_exists('CpuDescription',$param) and $param['CpuDescription'] !== null) {
+            $this->CpuDescription = $param['CpuDescription'];
         }
 
-        if (array_key_exists("MemDescription",$param) and $param["MemDescription"] !== null) {
-            $this->MemDescription = $param["MemDescription"];
+        if (array_key_exists('MemDescription',$param) and $param['MemDescription'] !== null) {
+            $this->MemDescription = $param['MemDescription'];
         }
 
-        if (array_key_exists("DiskDescription",$param) and $param["DiskDescription"] !== null) {
-            $this->DiskDescription = $param["DiskDescription"];
+        if (array_key_exists('DiskDescription',$param) and $param['DiskDescription'] !== null) {
+            $this->DiskDescription = $param['DiskDescription'];
         }
 
-        if (array_key_exists("HaveRaidCard",$param) and $param["HaveRaidCard"] !== null) {
-            $this->HaveRaidCard = $param["HaveRaidCard"];
+        if (array_key_exists('HaveRaidCard',$param) and $param['HaveRaidCard'] !== null) {
+            $this->HaveRaidCard = $param['HaveRaidCard'];
         }
 
-        if (array_key_exists("NicDescription",$param) and $param["NicDescription"] !== null) {
-            $this->NicDescription = $param["NicDescription"];
+        if (array_key_exists('NicDescription',$param) and $param['NicDescription'] !== null) {
+            $this->NicDescription = $param['NicDescription'];
         }
 
-        if (array_key_exists("GpuDescription",$param) and $param["GpuDescription"] !== null) {
-            $this->GpuDescription = $param["GpuDescription"];
+        if (array_key_exists('GpuDescription',$param) and $param['GpuDescription'] !== null) {
+            $this->GpuDescription = $param['GpuDescription'];
         }
 
-        if (array_key_exists("Discount",$param) and $param["Discount"] !== null) {
-            $this->Discount = $param["Discount"];
+        if (array_key_exists('Discount',$param) and $param['Discount'] !== null) {
+            $this->Discount = $param['Discount'];
         }
 
-        if (array_key_exists("UnitPrice",$param) and $param["UnitPrice"] !== null) {
-            $this->UnitPrice = $param["UnitPrice"];
+        if (array_key_exists('UnitPrice',$param) and $param['UnitPrice'] !== null) {
+            $this->UnitPrice = $param['UnitPrice'];
         }
 
-        if (array_key_exists("RealPrice",$param) and $param["RealPrice"] !== null) {
-            $this->RealPrice = $param["RealPrice"];
+        if (array_key_exists('RealPrice',$param) and $param['RealPrice'] !== null) {
+            $this->RealPrice = $param['RealPrice'];
         }
 
-        if (array_key_exists("NormalPrice",$param) and $param["NormalPrice"] !== null) {
-            $this->NormalPrice = $param["NormalPrice"];
+        if (array_key_exists('NormalPrice',$param) and $param['NormalPrice'] !== null) {
+            $this->NormalPrice = $param['NormalPrice'];
         }
 
-        if (array_key_exists("DeviceType",$param) and $param["DeviceType"] !== null) {
-            $this->DeviceType = $param["DeviceType"];
+        if (array_key_exists('DeviceType',$param) and $param['DeviceType'] !== null) {
+            $this->DeviceType = $param['DeviceType'];
         }
 
-        if (array_key_exists("Series",$param) and $param["Series"] !== null) {
-            $this->Series = $param["Series"];
+        if (array_key_exists('Series',$param) and $param['Series'] !== null) {
+            $this->Series = $param['Series'];
         }
 
-        if (array_key_exists("Cpu",$param) and $param["Cpu"] !== null) {
-            $this->Cpu = $param["Cpu"];
+        if (array_key_exists('Cpu',$param) and $param['Cpu'] !== null) {
+            $this->Cpu = $param['Cpu'];
         }
 
-        if (array_key_exists("Mem",$param) and $param["Mem"] !== null) {
-            $this->Mem = $param["Mem"];
+        if (array_key_exists('Mem',$param) and $param['Mem'] !== null) {
+            $this->Mem = $param['Mem'];
         }
     }
 }

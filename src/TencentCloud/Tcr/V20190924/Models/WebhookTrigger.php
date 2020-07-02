@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -102,41 +102,41 @@ class WebhookTrigger extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("Targets",$param) and $param["Targets"] !== null) {
+        if (array_key_exists('Targets',$param) and $param['Targets'] !== null) {
             $this->Targets = [];
-            foreach ($param["Targets"] as $key => $value){
+            foreach ($param['Targets'] as $key => $value){
                 $obj = new WebhookTarget();
                 $obj->deserialize($value);
                 array_push($this->Targets, $obj);
             }
         }
 
-        if (array_key_exists("EventTypes",$param) and $param["EventTypes"] !== null) {
-            $this->EventTypes = $param["EventTypes"];
+        if (array_key_exists('EventTypes',$param) and $param['EventTypes'] !== null) {
+            $this->EventTypes = $param['EventTypes'];
         }
 
-        if (array_key_exists("Condition",$param) and $param["Condition"] !== null) {
-            $this->Condition = $param["Condition"];
+        if (array_key_exists('Condition',$param) and $param['Condition'] !== null) {
+            $this->Condition = $param['Condition'];
         }
 
-        if (array_key_exists("Enabled",$param) and $param["Enabled"] !== null) {
-            $this->Enabled = $param["Enabled"];
+        if (array_key_exists('Enabled',$param) and $param['Enabled'] !== null) {
+            $this->Enabled = $param['Enabled'];
         }
 
-        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
-            $this->Id = $param["Id"];
+        if (array_key_exists('Id',$param) and $param['Id'] !== null) {
+            $this->Id = $param['Id'];
         }
 
-        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
-            $this->Description = $param["Description"];
+        if (array_key_exists('Description',$param) and $param['Description'] !== null) {
+            $this->Description = $param['Description'];
         }
 
-        if (array_key_exists("NamespaceId",$param) and $param["NamespaceId"] !== null) {
-            $this->NamespaceId = $param["NamespaceId"];
+        if (array_key_exists('NamespaceId',$param) and $param['NamespaceId'] !== null) {
+            $this->NamespaceId = $param['NamespaceId'];
         }
     }
 }

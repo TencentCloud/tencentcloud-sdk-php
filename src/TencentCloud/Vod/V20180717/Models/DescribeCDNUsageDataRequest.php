@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -118,28 +118,28 @@ class DescribeCDNUsageDataRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
-            $this->StartTime = $param["StartTime"];
+        if (array_key_exists('StartTime',$param) and $param['StartTime'] !== null) {
+            $this->StartTime = $param['StartTime'];
         }
 
-        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
-            $this->EndTime = $param["EndTime"];
+        if (array_key_exists('EndTime',$param) and $param['EndTime'] !== null) {
+            $this->EndTime = $param['EndTime'];
         }
 
-        if (array_key_exists("DataType",$param) and $param["DataType"] !== null) {
-            $this->DataType = $param["DataType"];
+        if (array_key_exists('DataType',$param) and $param['DataType'] !== null) {
+            $this->DataType = $param['DataType'];
         }
 
-        if (array_key_exists("DataInterval",$param) and $param["DataInterval"] !== null) {
-            $this->DataInterval = $param["DataInterval"];
+        if (array_key_exists('DataInterval',$param) and $param['DataInterval'] !== null) {
+            $this->DataInterval = $param['DataInterval'];
         }
 
-        if (array_key_exists("DomainNames",$param) and $param["DomainNames"] !== null) {
-            $this->DomainNames = $param["DomainNames"];
+        if (array_key_exists('DomainNames',$param) and $param['DomainNames'] !== null) {
+            $this->DomainNames = $param['DomainNames'];
         }
 
-        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
-            $this->SubAppId = $param["SubAppId"];
+        if (array_key_exists('SubAppId',$param) and $param['SubAppId'] !== null) {
+            $this->SubAppId = $param['SubAppId'];
         }
     }
 }

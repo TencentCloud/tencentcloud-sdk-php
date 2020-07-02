@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -110,40 +110,40 @@ class Ip6Rule extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Ip6RuleId",$param) and $param["Ip6RuleId"] !== null) {
-            $this->Ip6RuleId = $param["Ip6RuleId"];
+        if (array_key_exists('Ip6RuleId',$param) and $param['Ip6RuleId'] !== null) {
+            $this->Ip6RuleId = $param['Ip6RuleId'];
         }
 
-        if (array_key_exists("Ip6RuleName",$param) and $param["Ip6RuleName"] !== null) {
-            $this->Ip6RuleName = $param["Ip6RuleName"];
+        if (array_key_exists('Ip6RuleName',$param) and $param['Ip6RuleName'] !== null) {
+            $this->Ip6RuleName = $param['Ip6RuleName'];
         }
 
-        if (array_key_exists("Vip6",$param) and $param["Vip6"] !== null) {
-            $this->Vip6 = $param["Vip6"];
+        if (array_key_exists('Vip6',$param) and $param['Vip6'] !== null) {
+            $this->Vip6 = $param['Vip6'];
         }
 
-        if (array_key_exists("Vport6",$param) and $param["Vport6"] !== null) {
-            $this->Vport6 = $param["Vport6"];
+        if (array_key_exists('Vport6',$param) and $param['Vport6'] !== null) {
+            $this->Vport6 = $param['Vport6'];
         }
 
-        if (array_key_exists("Protocol",$param) and $param["Protocol"] !== null) {
-            $this->Protocol = $param["Protocol"];
+        if (array_key_exists('Protocol',$param) and $param['Protocol'] !== null) {
+            $this->Protocol = $param['Protocol'];
         }
 
-        if (array_key_exists("Vip",$param) and $param["Vip"] !== null) {
-            $this->Vip = $param["Vip"];
+        if (array_key_exists('Vip',$param) and $param['Vip'] !== null) {
+            $this->Vip = $param['Vip'];
         }
 
-        if (array_key_exists("Vport",$param) and $param["Vport"] !== null) {
-            $this->Vport = $param["Vport"];
+        if (array_key_exists('Vport',$param) and $param['Vport'] !== null) {
+            $this->Vport = $param['Vport'];
         }
 
-        if (array_key_exists("RuleStatus",$param) and $param["RuleStatus"] !== null) {
-            $this->RuleStatus = $param["RuleStatus"];
+        if (array_key_exists('RuleStatus',$param) and $param['RuleStatus'] !== null) {
+            $this->RuleStatus = $param['RuleStatus'];
         }
 
-        if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
-            $this->CreatedTime = $param["CreatedTime"];
+        if (array_key_exists('CreatedTime',$param) and $param['CreatedTime'] !== null) {
+            $this->CreatedTime = $param['CreatedTime'];
         }
     }
 }

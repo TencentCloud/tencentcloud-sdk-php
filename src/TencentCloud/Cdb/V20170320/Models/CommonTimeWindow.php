@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -94,32 +94,32 @@ class CommonTimeWindow extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Monday",$param) and $param["Monday"] !== null) {
-            $this->Monday = $param["Monday"];
+        if (array_key_exists('Monday',$param) and $param['Monday'] !== null) {
+            $this->Monday = $param['Monday'];
         }
 
-        if (array_key_exists("Tuesday",$param) and $param["Tuesday"] !== null) {
-            $this->Tuesday = $param["Tuesday"];
+        if (array_key_exists('Tuesday',$param) and $param['Tuesday'] !== null) {
+            $this->Tuesday = $param['Tuesday'];
         }
 
-        if (array_key_exists("Wednesday",$param) and $param["Wednesday"] !== null) {
-            $this->Wednesday = $param["Wednesday"];
+        if (array_key_exists('Wednesday',$param) and $param['Wednesday'] !== null) {
+            $this->Wednesday = $param['Wednesday'];
         }
 
-        if (array_key_exists("Thursday",$param) and $param["Thursday"] !== null) {
-            $this->Thursday = $param["Thursday"];
+        if (array_key_exists('Thursday',$param) and $param['Thursday'] !== null) {
+            $this->Thursday = $param['Thursday'];
         }
 
-        if (array_key_exists("Friday",$param) and $param["Friday"] !== null) {
-            $this->Friday = $param["Friday"];
+        if (array_key_exists('Friday',$param) and $param['Friday'] !== null) {
+            $this->Friday = $param['Friday'];
         }
 
-        if (array_key_exists("Saturday",$param) and $param["Saturday"] !== null) {
-            $this->Saturday = $param["Saturday"];
+        if (array_key_exists('Saturday',$param) and $param['Saturday'] !== null) {
+            $this->Saturday = $param['Saturday'];
         }
 
-        if (array_key_exists("Sunday",$param) and $param["Sunday"] !== null) {
-            $this->Sunday = $param["Sunday"];
+        if (array_key_exists('Sunday',$param) and $param['Sunday'] !== null) {
+            $this->Sunday = $param['Sunday'];
         }
     }
 }

@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -146,58 +146,58 @@ class RuleInput extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
-            $this->Domain = $param["Domain"];
+        if (array_key_exists('Domain',$param) and $param['Domain'] !== null) {
+            $this->Domain = $param['Domain'];
         }
 
-        if (array_key_exists("Url",$param) and $param["Url"] !== null) {
-            $this->Url = $param["Url"];
+        if (array_key_exists('Url',$param) and $param['Url'] !== null) {
+            $this->Url = $param['Url'];
         }
 
-        if (array_key_exists("SessionExpireTime",$param) and $param["SessionExpireTime"] !== null) {
-            $this->SessionExpireTime = $param["SessionExpireTime"];
+        if (array_key_exists('SessionExpireTime',$param) and $param['SessionExpireTime'] !== null) {
+            $this->SessionExpireTime = $param['SessionExpireTime'];
         }
 
-        if (array_key_exists("HealthCheck",$param) and $param["HealthCheck"] !== null) {
+        if (array_key_exists('HealthCheck',$param) and $param['HealthCheck'] !== null) {
             $this->HealthCheck = new HealthCheck();
-            $this->HealthCheck->deserialize($param["HealthCheck"]);
+            $this->HealthCheck->deserialize($param['HealthCheck']);
         }
 
-        if (array_key_exists("Certificate",$param) and $param["Certificate"] !== null) {
+        if (array_key_exists('Certificate',$param) and $param['Certificate'] !== null) {
             $this->Certificate = new CertificateInput();
-            $this->Certificate->deserialize($param["Certificate"]);
+            $this->Certificate->deserialize($param['Certificate']);
         }
 
-        if (array_key_exists("Scheduler",$param) and $param["Scheduler"] !== null) {
-            $this->Scheduler = $param["Scheduler"];
+        if (array_key_exists('Scheduler',$param) and $param['Scheduler'] !== null) {
+            $this->Scheduler = $param['Scheduler'];
         }
 
-        if (array_key_exists("ForwardType",$param) and $param["ForwardType"] !== null) {
-            $this->ForwardType = $param["ForwardType"];
+        if (array_key_exists('ForwardType',$param) and $param['ForwardType'] !== null) {
+            $this->ForwardType = $param['ForwardType'];
         }
 
-        if (array_key_exists("DefaultServer",$param) and $param["DefaultServer"] !== null) {
-            $this->DefaultServer = $param["DefaultServer"];
+        if (array_key_exists('DefaultServer',$param) and $param['DefaultServer'] !== null) {
+            $this->DefaultServer = $param['DefaultServer'];
         }
 
-        if (array_key_exists("Http2",$param) and $param["Http2"] !== null) {
-            $this->Http2 = $param["Http2"];
+        if (array_key_exists('Http2',$param) and $param['Http2'] !== null) {
+            $this->Http2 = $param['Http2'];
         }
 
-        if (array_key_exists("TargetType",$param) and $param["TargetType"] !== null) {
-            $this->TargetType = $param["TargetType"];
+        if (array_key_exists('TargetType',$param) and $param['TargetType'] !== null) {
+            $this->TargetType = $param['TargetType'];
         }
 
-        if (array_key_exists("TrpcCallee",$param) and $param["TrpcCallee"] !== null) {
-            $this->TrpcCallee = $param["TrpcCallee"];
+        if (array_key_exists('TrpcCallee',$param) and $param['TrpcCallee'] !== null) {
+            $this->TrpcCallee = $param['TrpcCallee'];
         }
 
-        if (array_key_exists("TrpcFunc",$param) and $param["TrpcFunc"] !== null) {
-            $this->TrpcFunc = $param["TrpcFunc"];
+        if (array_key_exists('TrpcFunc',$param) and $param['TrpcFunc'] !== null) {
+            $this->TrpcFunc = $param['TrpcFunc'];
         }
 
-        if (array_key_exists("Quic",$param) and $param["Quic"] !== null) {
-            $this->Quic = $param["Quic"];
+        if (array_key_exists('Quic',$param) and $param['Quic'] !== null) {
+            $this->Quic = $param['Quic'];
         }
     }
 }

@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -70,20 +70,20 @@ class FacePoseResult extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Direction",$param) and $param["Direction"] !== null) {
-            $this->Direction = $param["Direction"];
+        if (array_key_exists('Direction',$param) and $param['Direction'] !== null) {
+            $this->Direction = $param['Direction'];
         }
 
-        if (array_key_exists("Pitch",$param) and $param["Pitch"] !== null) {
-            $this->Pitch = $param["Pitch"];
+        if (array_key_exists('Pitch',$param) and $param['Pitch'] !== null) {
+            $this->Pitch = $param['Pitch'];
         }
 
-        if (array_key_exists("Roll",$param) and $param["Roll"] !== null) {
-            $this->Roll = $param["Roll"];
+        if (array_key_exists('Roll',$param) and $param['Roll'] !== null) {
+            $this->Roll = $param['Roll'];
         }
 
-        if (array_key_exists("Yaw",$param) and $param["Yaw"] !== null) {
-            $this->Yaw = $param["Yaw"];
+        if (array_key_exists('Yaw',$param) and $param['Yaw'] !== null) {
+            $this->Yaw = $param['Yaw'];
         }
     }
 }

@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -126,24 +126,24 @@ class AddLiveDomainRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DomainName",$param) and $param["DomainName"] !== null) {
-            $this->DomainName = $param["DomainName"];
+        if (array_key_exists('DomainName',$param) and $param['DomainName'] !== null) {
+            $this->DomainName = $param['DomainName'];
         }
 
-        if (array_key_exists("DomainType",$param) and $param["DomainType"] !== null) {
-            $this->DomainType = $param["DomainType"];
+        if (array_key_exists('DomainType',$param) and $param['DomainType'] !== null) {
+            $this->DomainType = $param['DomainType'];
         }
 
-        if (array_key_exists("PlayType",$param) and $param["PlayType"] !== null) {
-            $this->PlayType = $param["PlayType"];
+        if (array_key_exists('PlayType',$param) and $param['PlayType'] !== null) {
+            $this->PlayType = $param['PlayType'];
         }
 
-        if (array_key_exists("IsDelayLive",$param) and $param["IsDelayLive"] !== null) {
-            $this->IsDelayLive = $param["IsDelayLive"];
+        if (array_key_exists('IsDelayLive',$param) and $param['IsDelayLive'] !== null) {
+            $this->IsDelayLive = $param['IsDelayLive'];
         }
 
-        if (array_key_exists("IsMiniProgramLive",$param) and $param["IsMiniProgramLive"] !== null) {
-            $this->IsMiniProgramLive = $param["IsMiniProgramLive"];
+        if (array_key_exists('IsMiniProgramLive',$param) and $param['IsMiniProgramLive'] !== null) {
+            $this->IsMiniProgramLive = $param['IsMiniProgramLive'];
         }
     }
 }

@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -146,41 +146,41 @@ class PkgInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PkgId",$param) and $param["PkgId"] !== null) {
-            $this->PkgId = $param["PkgId"];
+        if (array_key_exists('PkgId',$param) and $param['PkgId'] !== null) {
+            $this->PkgId = $param['PkgId'];
         }
 
-        if (array_key_exists("PkgName",$param) and $param["PkgName"] !== null) {
-            $this->PkgName = $param["PkgName"];
+        if (array_key_exists('PkgName',$param) and $param['PkgName'] !== null) {
+            $this->PkgName = $param['PkgName'];
         }
 
-        if (array_key_exists("PkgType",$param) and $param["PkgType"] !== null) {
-            $this->PkgType = $param["PkgType"];
+        if (array_key_exists('PkgType',$param) and $param['PkgType'] !== null) {
+            $this->PkgType = $param['PkgType'];
         }
 
-        if (array_key_exists("PkgVersion",$param) and $param["PkgVersion"] !== null) {
-            $this->PkgVersion = $param["PkgVersion"];
+        if (array_key_exists('PkgVersion',$param) and $param['PkgVersion'] !== null) {
+            $this->PkgVersion = $param['PkgVersion'];
         }
 
-        if (array_key_exists("PkgDesc",$param) and $param["PkgDesc"] !== null) {
-            $this->PkgDesc = $param["PkgDesc"];
+        if (array_key_exists('PkgDesc',$param) and $param['PkgDesc'] !== null) {
+            $this->PkgDesc = $param['PkgDesc'];
         }
 
-        if (array_key_exists("UploadTime",$param) and $param["UploadTime"] !== null) {
-            $this->UploadTime = $param["UploadTime"];
+        if (array_key_exists('UploadTime',$param) and $param['UploadTime'] !== null) {
+            $this->UploadTime = $param['UploadTime'];
         }
 
-        if (array_key_exists("Md5",$param) and $param["Md5"] !== null) {
-            $this->Md5 = $param["Md5"];
+        if (array_key_exists('Md5',$param) and $param['Md5'] !== null) {
+            $this->Md5 = $param['Md5'];
         }
 
-        if (array_key_exists("PkgPubStatus",$param) and $param["PkgPubStatus"] !== null) {
-            $this->PkgPubStatus = $param["PkgPubStatus"];
+        if (array_key_exists('PkgPubStatus',$param) and $param['PkgPubStatus'] !== null) {
+            $this->PkgPubStatus = $param['PkgPubStatus'];
         }
 
-        if (array_key_exists("PkgBindInfo",$param) and $param["PkgBindInfo"] !== null) {
+        if (array_key_exists('PkgBindInfo',$param) and $param['PkgBindInfo'] !== null) {
             $this->PkgBindInfo = [];
-            foreach ($param["PkgBindInfo"] as $key => $value){
+            foreach ($param['PkgBindInfo'] as $key => $value){
                 $obj = new PkgBind();
                 $obj->deserialize($value);
                 array_push($this->PkgBindInfo, $obj);

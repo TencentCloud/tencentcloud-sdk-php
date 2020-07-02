@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNoSecret(boolean $NoSecret) 设置无秘钥，默认选项
  * @method string getSecret() 获取Git用户名密码base64编码后的字符串
 编码前的内容应为Json字符串，如
-{"UserName": "用户名", "Password":"密码"}
+{'UserName': "用户名", 'Password':"密码"}
  * @method void setSecret(string $Secret) 设置Git用户名密码base64编码后的字符串
 编码前的内容应为Json字符串，如
-{"UserName": "用户名", "Password":"密码"}
+{'UserName': "用户名", 'Password':"密码"}
  */
 class GitSecret extends AbstractModel
 {
@@ -39,7 +39,7 @@ class GitSecret extends AbstractModel
     /**
      * @var string Git用户名密码base64编码后的字符串
 编码前的内容应为Json字符串，如
-{"UserName": "用户名", "Password":"密码"}
+{'UserName': "用户名", 'Password':"密码"}
      */
     public $Secret;
 
@@ -47,7 +47,7 @@ class GitSecret extends AbstractModel
      * @param boolean $NoSecret 无秘钥，默认选项
      * @param string $Secret Git用户名密码base64编码后的字符串
 编码前的内容应为Json字符串，如
-{"UserName": "用户名", "Password":"密码"}
+{'UserName': "用户名", 'Password':"密码"}
      */
     function __construct()
     {
@@ -62,12 +62,12 @@ class GitSecret extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("NoSecret",$param) and $param["NoSecret"] !== null) {
-            $this->NoSecret = $param["NoSecret"];
+        if (array_key_exists('NoSecret',$param) and $param['NoSecret'] !== null) {
+            $this->NoSecret = $param['NoSecret'];
         }
 
-        if (array_key_exists("Secret",$param) and $param["Secret"] !== null) {
-            $this->Secret = $param["Secret"];
+        if (array_key_exists('Secret',$param) and $param['Secret'] !== null) {
+            $this->Secret = $param['Secret'];
         }
     }
 }

@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -170,28 +170,28 @@ dynamic_bandwidth：动态带宽，单位为 bps
         if ($param === null) {
             return;
         }
-        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
-            $this->StartTime = $param["StartTime"];
+        if (array_key_exists('StartTime',$param) and $param['StartTime'] !== null) {
+            $this->StartTime = $param['StartTime'];
         }
 
-        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
-            $this->EndTime = $param["EndTime"];
+        if (array_key_exists('EndTime',$param) and $param['EndTime'] !== null) {
+            $this->EndTime = $param['EndTime'];
         }
 
-        if (array_key_exists("Metrics",$param) and $param["Metrics"] !== null) {
-            $this->Metrics = $param["Metrics"];
+        if (array_key_exists('Metrics',$param) and $param['Metrics'] !== null) {
+            $this->Metrics = $param['Metrics'];
         }
 
-        if (array_key_exists("Interval",$param) and $param["Interval"] !== null) {
-            $this->Interval = $param["Interval"];
+        if (array_key_exists('Interval',$param) and $param['Interval'] !== null) {
+            $this->Interval = $param['Interval'];
         }
 
-        if (array_key_exists("Domains",$param) and $param["Domains"] !== null) {
-            $this->Domains = $param["Domains"];
+        if (array_key_exists('Domains',$param) and $param['Domains'] !== null) {
+            $this->Domains = $param['Domains'];
         }
 
-        if (array_key_exists("Projects",$param) and $param["Projects"] !== null) {
-            $this->Projects = $param["Projects"];
+        if (array_key_exists('Projects',$param) and $param['Projects'] !== null) {
+            $this->Projects = $param['Projects'];
         }
     }
 }

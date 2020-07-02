@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -130,33 +130,33 @@ class MediaTrackItem extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists('Type',$param) and $param['Type'] !== null) {
+            $this->Type = $param['Type'];
         }
 
-        if (array_key_exists("VideoItem",$param) and $param["VideoItem"] !== null) {
+        if (array_key_exists('VideoItem',$param) and $param['VideoItem'] !== null) {
             $this->VideoItem = new VideoTrackItem();
-            $this->VideoItem->deserialize($param["VideoItem"]);
+            $this->VideoItem->deserialize($param['VideoItem']);
         }
 
-        if (array_key_exists("AudioItem",$param) and $param["AudioItem"] !== null) {
+        if (array_key_exists('AudioItem',$param) and $param['AudioItem'] !== null) {
             $this->AudioItem = new AudioTrackItem();
-            $this->AudioItem->deserialize($param["AudioItem"]);
+            $this->AudioItem->deserialize($param['AudioItem']);
         }
 
-        if (array_key_exists("StickerItem",$param) and $param["StickerItem"] !== null) {
+        if (array_key_exists('StickerItem',$param) and $param['StickerItem'] !== null) {
             $this->StickerItem = new StickerTrackItem();
-            $this->StickerItem->deserialize($param["StickerItem"]);
+            $this->StickerItem->deserialize($param['StickerItem']);
         }
 
-        if (array_key_exists("TransitionItem",$param) and $param["TransitionItem"] !== null) {
+        if (array_key_exists('TransitionItem',$param) and $param['TransitionItem'] !== null) {
             $this->TransitionItem = new MediaTransitionItem();
-            $this->TransitionItem->deserialize($param["TransitionItem"]);
+            $this->TransitionItem->deserialize($param['TransitionItem']);
         }
 
-        if (array_key_exists("EmptyItem",$param) and $param["EmptyItem"] !== null) {
+        if (array_key_exists('EmptyItem',$param) and $param['EmptyItem'] !== null) {
             $this->EmptyItem = new EmptyTrackItem();
-            $this->EmptyItem->deserialize($param["EmptyItem"]);
+            $this->EmptyItem->deserialize($param['EmptyItem']);
         }
     }
 }

@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -166,68 +166,68 @@ class DescribeLoadBalancersRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LoadBalancerIds",$param) and $param["LoadBalancerIds"] !== null) {
-            $this->LoadBalancerIds = $param["LoadBalancerIds"];
+        if (array_key_exists('LoadBalancerIds',$param) and $param['LoadBalancerIds'] !== null) {
+            $this->LoadBalancerIds = $param['LoadBalancerIds'];
         }
 
-        if (array_key_exists("LoadBalancerType",$param) and $param["LoadBalancerType"] !== null) {
-            $this->LoadBalancerType = $param["LoadBalancerType"];
+        if (array_key_exists('LoadBalancerType',$param) and $param['LoadBalancerType'] !== null) {
+            $this->LoadBalancerType = $param['LoadBalancerType'];
         }
 
-        if (array_key_exists("LoadBalancerName",$param) and $param["LoadBalancerName"] !== null) {
-            $this->LoadBalancerName = $param["LoadBalancerName"];
+        if (array_key_exists('LoadBalancerName',$param) and $param['LoadBalancerName'] !== null) {
+            $this->LoadBalancerName = $param['LoadBalancerName'];
         }
 
-        if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
-            $this->Domain = $param["Domain"];
+        if (array_key_exists('Domain',$param) and $param['Domain'] !== null) {
+            $this->Domain = $param['Domain'];
         }
 
-        if (array_key_exists("LoadBalancerVips",$param) and $param["LoadBalancerVips"] !== null) {
-            $this->LoadBalancerVips = $param["LoadBalancerVips"];
+        if (array_key_exists('LoadBalancerVips',$param) and $param['LoadBalancerVips'] !== null) {
+            $this->LoadBalancerVips = $param['LoadBalancerVips'];
         }
 
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
+        if (array_key_exists('Offset',$param) and $param['Offset'] !== null) {
+            $this->Offset = $param['Offset'];
         }
 
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
+        if (array_key_exists('Limit',$param) and $param['Limit'] !== null) {
+            $this->Limit = $param['Limit'];
         }
 
-        if (array_key_exists("SearchKey",$param) and $param["SearchKey"] !== null) {
-            $this->SearchKey = $param["SearchKey"];
+        if (array_key_exists('SearchKey',$param) and $param['SearchKey'] !== null) {
+            $this->SearchKey = $param['SearchKey'];
         }
 
-        if (array_key_exists("OrderBy",$param) and $param["OrderBy"] !== null) {
-            $this->OrderBy = $param["OrderBy"];
+        if (array_key_exists('OrderBy',$param) and $param['OrderBy'] !== null) {
+            $this->OrderBy = $param['OrderBy'];
         }
 
-        if (array_key_exists("OrderType",$param) and $param["OrderType"] !== null) {
-            $this->OrderType = $param["OrderType"];
+        if (array_key_exists('OrderType',$param) and $param['OrderType'] !== null) {
+            $this->OrderType = $param['OrderType'];
         }
 
-        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
-            $this->ProjectId = $param["ProjectId"];
+        if (array_key_exists('ProjectId',$param) and $param['ProjectId'] !== null) {
+            $this->ProjectId = $param['ProjectId'];
         }
 
-        if (array_key_exists("Exclusive",$param) and $param["Exclusive"] !== null) {
-            $this->Exclusive = $param["Exclusive"];
+        if (array_key_exists('Exclusive',$param) and $param['Exclusive'] !== null) {
+            $this->Exclusive = $param['Exclusive'];
         }
 
-        if (array_key_exists("TgwSetType",$param) and $param["TgwSetType"] !== null) {
-            $this->TgwSetType = $param["TgwSetType"];
+        if (array_key_exists('TgwSetType',$param) and $param['TgwSetType'] !== null) {
+            $this->TgwSetType = $param['TgwSetType'];
         }
 
-        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
-            $this->VpcId = $param["VpcId"];
+        if (array_key_exists('VpcId',$param) and $param['VpcId'] !== null) {
+            $this->VpcId = $param['VpcId'];
         }
 
-        if (array_key_exists("QueryType",$param) and $param["QueryType"] !== null) {
-            $this->QueryType = $param["QueryType"];
+        if (array_key_exists('QueryType',$param) and $param['QueryType'] !== null) {
+            $this->QueryType = $param['QueryType'];
         }
 
-        if (array_key_exists("ConfId",$param) and $param["ConfId"] !== null) {
-            $this->ConfId = $param["ConfId"];
+        if (array_key_exists('ConfId',$param) and $param['ConfId'] !== null) {
+            $this->ConfId = $param['ConfId'];
         }
     }
 }

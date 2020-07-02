@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -246,92 +246,92 @@ class RuleOutput extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LocationId",$param) and $param["LocationId"] !== null) {
-            $this->LocationId = $param["LocationId"];
+        if (array_key_exists('LocationId',$param) and $param['LocationId'] !== null) {
+            $this->LocationId = $param['LocationId'];
         }
 
-        if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
-            $this->Domain = $param["Domain"];
+        if (array_key_exists('Domain',$param) and $param['Domain'] !== null) {
+            $this->Domain = $param['Domain'];
         }
 
-        if (array_key_exists("Url",$param) and $param["Url"] !== null) {
-            $this->Url = $param["Url"];
+        if (array_key_exists('Url',$param) and $param['Url'] !== null) {
+            $this->Url = $param['Url'];
         }
 
-        if (array_key_exists("SessionExpireTime",$param) and $param["SessionExpireTime"] !== null) {
-            $this->SessionExpireTime = $param["SessionExpireTime"];
+        if (array_key_exists('SessionExpireTime',$param) and $param['SessionExpireTime'] !== null) {
+            $this->SessionExpireTime = $param['SessionExpireTime'];
         }
 
-        if (array_key_exists("HealthCheck",$param) and $param["HealthCheck"] !== null) {
+        if (array_key_exists('HealthCheck',$param) and $param['HealthCheck'] !== null) {
             $this->HealthCheck = new HealthCheck();
-            $this->HealthCheck->deserialize($param["HealthCheck"]);
+            $this->HealthCheck->deserialize($param['HealthCheck']);
         }
 
-        if (array_key_exists("Certificate",$param) and $param["Certificate"] !== null) {
+        if (array_key_exists('Certificate',$param) and $param['Certificate'] !== null) {
             $this->Certificate = new CertificateOutput();
-            $this->Certificate->deserialize($param["Certificate"]);
+            $this->Certificate->deserialize($param['Certificate']);
         }
 
-        if (array_key_exists("Scheduler",$param) and $param["Scheduler"] !== null) {
-            $this->Scheduler = $param["Scheduler"];
+        if (array_key_exists('Scheduler',$param) and $param['Scheduler'] !== null) {
+            $this->Scheduler = $param['Scheduler'];
         }
 
-        if (array_key_exists("ListenerId",$param) and $param["ListenerId"] !== null) {
-            $this->ListenerId = $param["ListenerId"];
+        if (array_key_exists('ListenerId',$param) and $param['ListenerId'] !== null) {
+            $this->ListenerId = $param['ListenerId'];
         }
 
-        if (array_key_exists("RewriteTarget",$param) and $param["RewriteTarget"] !== null) {
+        if (array_key_exists('RewriteTarget',$param) and $param['RewriteTarget'] !== null) {
             $this->RewriteTarget = new RewriteTarget();
-            $this->RewriteTarget->deserialize($param["RewriteTarget"]);
+            $this->RewriteTarget->deserialize($param['RewriteTarget']);
         }
 
-        if (array_key_exists("HttpGzip",$param) and $param["HttpGzip"] !== null) {
-            $this->HttpGzip = $param["HttpGzip"];
+        if (array_key_exists('HttpGzip',$param) and $param['HttpGzip'] !== null) {
+            $this->HttpGzip = $param['HttpGzip'];
         }
 
-        if (array_key_exists("BeAutoCreated",$param) and $param["BeAutoCreated"] !== null) {
-            $this->BeAutoCreated = $param["BeAutoCreated"];
+        if (array_key_exists('BeAutoCreated',$param) and $param['BeAutoCreated'] !== null) {
+            $this->BeAutoCreated = $param['BeAutoCreated'];
         }
 
-        if (array_key_exists("DefaultServer",$param) and $param["DefaultServer"] !== null) {
-            $this->DefaultServer = $param["DefaultServer"];
+        if (array_key_exists('DefaultServer',$param) and $param['DefaultServer'] !== null) {
+            $this->DefaultServer = $param['DefaultServer'];
         }
 
-        if (array_key_exists("Http2",$param) and $param["Http2"] !== null) {
-            $this->Http2 = $param["Http2"];
+        if (array_key_exists('Http2',$param) and $param['Http2'] !== null) {
+            $this->Http2 = $param['Http2'];
         }
 
-        if (array_key_exists("ForwardType",$param) and $param["ForwardType"] !== null) {
-            $this->ForwardType = $param["ForwardType"];
+        if (array_key_exists('ForwardType',$param) and $param['ForwardType'] !== null) {
+            $this->ForwardType = $param['ForwardType'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("TargetType",$param) and $param["TargetType"] !== null) {
-            $this->TargetType = $param["TargetType"];
+        if (array_key_exists('TargetType',$param) and $param['TargetType'] !== null) {
+            $this->TargetType = $param['TargetType'];
         }
 
-        if (array_key_exists("TargetGroup",$param) and $param["TargetGroup"] !== null) {
+        if (array_key_exists('TargetGroup',$param) and $param['TargetGroup'] !== null) {
             $this->TargetGroup = new BasicTargetGroupInfo();
-            $this->TargetGroup->deserialize($param["TargetGroup"]);
+            $this->TargetGroup->deserialize($param['TargetGroup']);
         }
 
-        if (array_key_exists("WafDomainId",$param) and $param["WafDomainId"] !== null) {
-            $this->WafDomainId = $param["WafDomainId"];
+        if (array_key_exists('WafDomainId',$param) and $param['WafDomainId'] !== null) {
+            $this->WafDomainId = $param['WafDomainId'];
         }
 
-        if (array_key_exists("TrpcCallee",$param) and $param["TrpcCallee"] !== null) {
-            $this->TrpcCallee = $param["TrpcCallee"];
+        if (array_key_exists('TrpcCallee',$param) and $param['TrpcCallee'] !== null) {
+            $this->TrpcCallee = $param['TrpcCallee'];
         }
 
-        if (array_key_exists("TrpcFunc",$param) and $param["TrpcFunc"] !== null) {
-            $this->TrpcFunc = $param["TrpcFunc"];
+        if (array_key_exists('TrpcFunc',$param) and $param['TrpcFunc'] !== null) {
+            $this->TrpcFunc = $param['TrpcFunc'];
         }
 
-        if (array_key_exists("QuicStatus",$param) and $param["QuicStatus"] !== null) {
-            $this->QuicStatus = $param["QuicStatus"];
+        if (array_key_exists('QuicStatus',$param) and $param['QuicStatus'] !== null) {
+            $this->QuicStatus = $param['QuicStatus'];
         }
     }
 }

@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -78,24 +78,24 @@ class ModifyClusterPasswordRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
-            $this->ClusterId = $param["ClusterId"];
+        if (array_key_exists('ClusterId',$param) and $param['ClusterId'] !== null) {
+            $this->ClusterId = $param['ClusterId'];
         }
 
-        if (array_key_exists("OldPassword",$param) and $param["OldPassword"] !== null) {
-            $this->OldPassword = $param["OldPassword"];
+        if (array_key_exists('OldPassword',$param) and $param['OldPassword'] !== null) {
+            $this->OldPassword = $param['OldPassword'];
         }
 
-        if (array_key_exists("OldPasswordExpireTime",$param) and $param["OldPasswordExpireTime"] !== null) {
-            $this->OldPasswordExpireTime = $param["OldPasswordExpireTime"];
+        if (array_key_exists('OldPasswordExpireTime',$param) and $param['OldPasswordExpireTime'] !== null) {
+            $this->OldPasswordExpireTime = $param['OldPasswordExpireTime'];
         }
 
-        if (array_key_exists("NewPassword",$param) and $param["NewPassword"] !== null) {
-            $this->NewPassword = $param["NewPassword"];
+        if (array_key_exists('NewPassword',$param) and $param['NewPassword'] !== null) {
+            $this->NewPassword = $param['NewPassword'];
         }
 
-        if (array_key_exists("Mode",$param) and $param["Mode"] !== null) {
-            $this->Mode = $param["Mode"];
+        if (array_key_exists('Mode',$param) and $param['Mode'] !== null) {
+            $this->Mode = $param['Mode'];
         }
     }
 }

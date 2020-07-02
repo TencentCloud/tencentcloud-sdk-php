@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -86,32 +86,32 @@ class ScoreCategory extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Words",$param) and $param["Words"] !== null) {
+        if (array_key_exists('Words',$param) and $param['Words'] !== null) {
             $this->Words = new Aspect();
-            $this->Words->deserialize($param["Words"]);
+            $this->Words->deserialize($param['Words']);
         }
 
-        if (array_key_exists("Sentences",$param) and $param["Sentences"] !== null) {
+        if (array_key_exists('Sentences',$param) and $param['Sentences'] !== null) {
             $this->Sentences = new Aspect();
-            $this->Sentences->deserialize($param["Sentences"]);
+            $this->Sentences->deserialize($param['Sentences']);
         }
 
-        if (array_key_exists("Structure",$param) and $param["Structure"] !== null) {
+        if (array_key_exists('Structure',$param) and $param['Structure'] !== null) {
             $this->Structure = new Aspect();
-            $this->Structure->deserialize($param["Structure"]);
+            $this->Structure->deserialize($param['Structure']);
         }
 
-        if (array_key_exists("Content",$param) and $param["Content"] !== null) {
+        if (array_key_exists('Content',$param) and $param['Content'] !== null) {
             $this->Content = new Aspect();
-            $this->Content->deserialize($param["Content"]);
+            $this->Content->deserialize($param['Content']);
         }
 
-        if (array_key_exists("Score",$param) and $param["Score"] !== null) {
-            $this->Score = $param["Score"];
+        if (array_key_exists('Score',$param) and $param['Score'] !== null) {
+            $this->Score = $param['Score'];
         }
 
-        if (array_key_exists("Percentage",$param) and $param["Percentage"] !== null) {
-            $this->Percentage = $param["Percentage"];
+        if (array_key_exists('Percentage',$param) and $param['Percentage'] !== null) {
+            $this->Percentage = $param['Percentage'];
         }
     }
 }

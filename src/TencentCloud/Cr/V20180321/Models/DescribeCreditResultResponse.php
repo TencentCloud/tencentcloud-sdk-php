@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -106,32 +106,32 @@ class DescribeCreditResultResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ResultCode",$param) and $param["ResultCode"] !== null) {
-            $this->ResultCode = $param["ResultCode"];
+        if (array_key_exists('ResultCode',$param) and $param['ResultCode'] !== null) {
+            $this->ResultCode = $param['ResultCode'];
         }
 
-        if (array_key_exists("ClientCode",$param) and $param["ClientCode"] !== null) {
-            $this->ClientCode = $param["ClientCode"];
+        if (array_key_exists('ClientCode',$param) and $param['ClientCode'] !== null) {
+            $this->ClientCode = $param['ClientCode'];
         }
 
-        if (array_key_exists("RingStartTime",$param) and $param["RingStartTime"] !== null) {
-            $this->RingStartTime = $param["RingStartTime"];
+        if (array_key_exists('RingStartTime',$param) and $param['RingStartTime'] !== null) {
+            $this->RingStartTime = $param['RingStartTime'];
         }
 
-        if (array_key_exists("RingDuration",$param) and $param["RingDuration"] !== null) {
-            $this->RingDuration = $param["RingDuration"];
+        if (array_key_exists('RingDuration',$param) and $param['RingDuration'] !== null) {
+            $this->RingDuration = $param['RingDuration'];
         }
 
-        if (array_key_exists("AnswerDuration",$param) and $param["AnswerDuration"] !== null) {
-            $this->AnswerDuration = $param["AnswerDuration"];
+        if (array_key_exists('AnswerDuration',$param) and $param['AnswerDuration'] !== null) {
+            $this->AnswerDuration = $param['AnswerDuration'];
         }
 
-        if (array_key_exists("ContextValue",$param) and $param["ContextValue"] !== null) {
-            $this->ContextValue = $param["ContextValue"];
+        if (array_key_exists('ContextValue',$param) and $param['ContextValue'] !== null) {
+            $this->ContextValue = $param['ContextValue'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

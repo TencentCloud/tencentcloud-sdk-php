@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -33,51 +33,51 @@ use TencentCloud\Common\AbstractModel;
  * @method string getInstanceId() 获取只有当Business为基础防护时才需要填写此字段，IP所属的资源实例ID，当绑定新IP时必须填写此字段；例如是弹性网卡的IP，则InstanceId填写弹性网卡的ID(eni-*);
  * @method void setInstanceId(string $InstanceId) 设置只有当Business为基础防护时才需要填写此字段，IP所属的资源实例ID，当绑定新IP时必须填写此字段；例如是弹性网卡的IP，则InstanceId填写弹性网卡的ID(eni-*);
  * @method string getIPRegion() 获取只有当Business为基础防护时才需要填写此字段，表示IP所属的地域，取值：
-"bj":     华北地区(北京)
-"cd":     西南地区(成都)
-"cq":     西南地区(重庆)
-"gz":     华南地区(广州)
-"gzopen": 华南地区(广州Open)
-"hk":     中国香港
-"kr":     东南亚地区(首尔)
-"sh":     华东地区(上海)
-"shjr":   华东地区(上海金融)
-"szjr":   华南地区(深圳金融)
-"sg":     东南亚地区(新加坡)
-"th":     东南亚地区(泰国)
-"de":     欧洲地区(德国)
-"usw":    美国西部（硅谷）
-"ca":     北美地区(多伦多)
-"jp":     日本
-"hzec":   杭州
-"in":     印度
-"use":    美东地区（弗吉尼亚）
-"ru":     俄罗斯
-"tpe":    中国台湾
-"nj":     南京
+'bj':     华北地区(北京)
+'cd':     西南地区(成都)
+'cq':     西南地区(重庆)
+'gz':     华南地区(广州)
+'gzopen': 华南地区(广州Open)
+'hk':     中国香港
+'kr':     东南亚地区(首尔)
+'sh':     华东地区(上海)
+'shjr':   华东地区(上海金融)
+'szjr':   华南地区(深圳金融)
+'sg':     东南亚地区(新加坡)
+'th':     东南亚地区(泰国)
+'de':     欧洲地区(德国)
+'usw':    美国西部（硅谷）
+'ca':     北美地区(多伦多)
+'jp':     日本
+'hzec':   杭州
+'in':     印度
+'use':    美东地区（弗吉尼亚）
+'ru':     俄罗斯
+'tpe':    中国台湾
+'nj':     南京
  * @method void setIPRegion(string $IPRegion) 设置只有当Business为基础防护时才需要填写此字段，表示IP所属的地域，取值：
-"bj":     华北地区(北京)
-"cd":     西南地区(成都)
-"cq":     西南地区(重庆)
-"gz":     华南地区(广州)
-"gzopen": 华南地区(广州Open)
-"hk":     中国香港
-"kr":     东南亚地区(首尔)
-"sh":     华东地区(上海)
-"shjr":   华东地区(上海金融)
-"szjr":   华南地区(深圳金融)
-"sg":     东南亚地区(新加坡)
-"th":     东南亚地区(泰国)
-"de":     欧洲地区(德国)
-"usw":    美国西部（硅谷）
-"ca":     北美地区(多伦多)
-"jp":     日本
-"hzec":   杭州
-"in":     印度
-"use":    美东地区（弗吉尼亚）
-"ru":     俄罗斯
-"tpe":    中国台湾
-"nj":     南京
+'bj':     华北地区(北京)
+'cd':     西南地区(成都)
+'cq':     西南地区(重庆)
+'gz':     华南地区(广州)
+'gzopen': 华南地区(广州Open)
+'hk':     中国香港
+'kr':     东南亚地区(首尔)
+'sh':     华东地区(上海)
+'shjr':   华东地区(上海金融)
+'szjr':   华南地区(深圳金融)
+'sg':     东南亚地区(新加坡)
+'th':     东南亚地区(泰国)
+'de':     欧洲地区(德国)
+'usw':    美国西部（硅谷）
+'ca':     北美地区(多伦多)
+'jp':     日本
+'hzec':   杭州
+'in':     印度
+'use':    美东地区（弗吉尼亚）
+'ru':     俄罗斯
+'tpe':    中国台湾
+'nj':     南京
  */
 class DescribeDDoSDefendStatusRequest extends AbstractModel
 {
@@ -113,28 +113,28 @@ class DescribeDDoSDefendStatusRequest extends AbstractModel
 
     /**
      * @var string 只有当Business为基础防护时才需要填写此字段，表示IP所属的地域，取值：
-"bj":     华北地区(北京)
-"cd":     西南地区(成都)
-"cq":     西南地区(重庆)
-"gz":     华南地区(广州)
-"gzopen": 华南地区(广州Open)
-"hk":     中国香港
-"kr":     东南亚地区(首尔)
-"sh":     华东地区(上海)
-"shjr":   华东地区(上海金融)
-"szjr":   华南地区(深圳金融)
-"sg":     东南亚地区(新加坡)
-"th":     东南亚地区(泰国)
-"de":     欧洲地区(德国)
-"usw":    美国西部（硅谷）
-"ca":     北美地区(多伦多)
-"jp":     日本
-"hzec":   杭州
-"in":     印度
-"use":    美东地区（弗吉尼亚）
-"ru":     俄罗斯
-"tpe":    中国台湾
-"nj":     南京
+'bj':     华北地区(北京)
+'cd':     西南地区(成都)
+'cq':     西南地区(重庆)
+'gz':     华南地区(广州)
+'gzopen': 华南地区(广州Open)
+'hk':     中国香港
+'kr':     东南亚地区(首尔)
+'sh':     华东地区(上海)
+'shjr':   华东地区(上海金融)
+'szjr':   华南地区(深圳金融)
+'sg':     东南亚地区(新加坡)
+'th':     东南亚地区(泰国)
+'de':     欧洲地区(德国)
+'usw':    美国西部（硅谷）
+'ca':     北美地区(多伦多)
+'jp':     日本
+'hzec':   杭州
+'in':     印度
+'use':    美东地区（弗吉尼亚）
+'ru':     俄罗斯
+'tpe':    中国台湾
+'nj':     南京
      */
     public $IPRegion;
 
@@ -146,28 +146,28 @@ class DescribeDDoSDefendStatusRequest extends AbstractModel
      * @param string $DeviceType 只有当Business为基础防护时才需要填写此字段，IP所属的产品子类，取值[cvm（CVM），lb（负载均衡器），eni（弹性网卡），vpngw（VPN），natgw（NAT），waf（WAF），fpc（金融），gaap（GAAP），other（托管IP），eip（黑石弹性IP）]
      * @param string $InstanceId 只有当Business为基础防护时才需要填写此字段，IP所属的资源实例ID，当绑定新IP时必须填写此字段；例如是弹性网卡的IP，则InstanceId填写弹性网卡的ID(eni-*);
      * @param string $IPRegion 只有当Business为基础防护时才需要填写此字段，表示IP所属的地域，取值：
-"bj":     华北地区(北京)
-"cd":     西南地区(成都)
-"cq":     西南地区(重庆)
-"gz":     华南地区(广州)
-"gzopen": 华南地区(广州Open)
-"hk":     中国香港
-"kr":     东南亚地区(首尔)
-"sh":     华东地区(上海)
-"shjr":   华东地区(上海金融)
-"szjr":   华南地区(深圳金融)
-"sg":     东南亚地区(新加坡)
-"th":     东南亚地区(泰国)
-"de":     欧洲地区(德国)
-"usw":    美国西部（硅谷）
-"ca":     北美地区(多伦多)
-"jp":     日本
-"hzec":   杭州
-"in":     印度
-"use":    美东地区（弗吉尼亚）
-"ru":     俄罗斯
-"tpe":    中国台湾
-"nj":     南京
+'bj':     华北地区(北京)
+'cd':     西南地区(成都)
+'cq':     西南地区(重庆)
+'gz':     华南地区(广州)
+'gzopen': 华南地区(广州Open)
+'hk':     中国香港
+'kr':     东南亚地区(首尔)
+'sh':     华东地区(上海)
+'shjr':   华东地区(上海金融)
+'szjr':   华南地区(深圳金融)
+'sg':     东南亚地区(新加坡)
+'th':     东南亚地区(泰国)
+'de':     欧洲地区(德国)
+'usw':    美国西部（硅谷）
+'ca':     北美地区(多伦多)
+'jp':     日本
+'hzec':   杭州
+'in':     印度
+'use':    美东地区（弗吉尼亚）
+'ru':     俄罗斯
+'tpe':    中国台湾
+'nj':     南京
      */
     function __construct()
     {
@@ -182,32 +182,32 @@ class DescribeDDoSDefendStatusRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Business",$param) and $param["Business"] !== null) {
-            $this->Business = $param["Business"];
+        if (array_key_exists('Business',$param) and $param['Business'] !== null) {
+            $this->Business = $param['Business'];
         }
 
-        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
-            $this->Id = $param["Id"];
+        if (array_key_exists('Id',$param) and $param['Id'] !== null) {
+            $this->Id = $param['Id'];
         }
 
-        if (array_key_exists("Ip",$param) and $param["Ip"] !== null) {
-            $this->Ip = $param["Ip"];
+        if (array_key_exists('Ip',$param) and $param['Ip'] !== null) {
+            $this->Ip = $param['Ip'];
         }
 
-        if (array_key_exists("BizType",$param) and $param["BizType"] !== null) {
-            $this->BizType = $param["BizType"];
+        if (array_key_exists('BizType',$param) and $param['BizType'] !== null) {
+            $this->BizType = $param['BizType'];
         }
 
-        if (array_key_exists("DeviceType",$param) and $param["DeviceType"] !== null) {
-            $this->DeviceType = $param["DeviceType"];
+        if (array_key_exists('DeviceType',$param) and $param['DeviceType'] !== null) {
+            $this->DeviceType = $param['DeviceType'];
         }
 
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("IPRegion",$param) and $param["IPRegion"] !== null) {
-            $this->IPRegion = $param["IPRegion"];
+        if (array_key_exists('IPRegion',$param) and $param['IPRegion'] !== null) {
+            $this->IPRegion = $param['IPRegion'];
         }
     }
 }

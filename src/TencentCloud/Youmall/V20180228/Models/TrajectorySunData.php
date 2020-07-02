@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -62,16 +62,16 @@ class TrajectorySunData extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Zones",$param) and $param["Zones"] !== null) {
-            $this->Zones = $param["Zones"];
+        if (array_key_exists('Zones',$param) and $param['Zones'] !== null) {
+            $this->Zones = $param['Zones'];
         }
 
-        if (array_key_exists("Count",$param) and $param["Count"] !== null) {
-            $this->Count = $param["Count"];
+        if (array_key_exists('Count',$param) and $param['Count'] !== null) {
+            $this->Count = $param['Count'];
         }
 
-        if (array_key_exists("AvgStayTime",$param) and $param["AvgStayTime"] !== null) {
-            $this->AvgStayTime = $param["AvgStayTime"];
+        if (array_key_exists('AvgStayTime',$param) and $param['AvgStayTime'] !== null) {
+            $this->AvgStayTime = $param['AvgStayTime'];
         }
     }
 }

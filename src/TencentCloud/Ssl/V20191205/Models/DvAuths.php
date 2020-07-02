@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -110,28 +110,28 @@ class DvAuths extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DvAuthKey",$param) and $param["DvAuthKey"] !== null) {
-            $this->DvAuthKey = $param["DvAuthKey"];
+        if (array_key_exists('DvAuthKey',$param) and $param['DvAuthKey'] !== null) {
+            $this->DvAuthKey = $param['DvAuthKey'];
         }
 
-        if (array_key_exists("DvAuthValue",$param) and $param["DvAuthValue"] !== null) {
-            $this->DvAuthValue = $param["DvAuthValue"];
+        if (array_key_exists('DvAuthValue',$param) and $param['DvAuthValue'] !== null) {
+            $this->DvAuthValue = $param['DvAuthValue'];
         }
 
-        if (array_key_exists("DvAuthDomain",$param) and $param["DvAuthDomain"] !== null) {
-            $this->DvAuthDomain = $param["DvAuthDomain"];
+        if (array_key_exists('DvAuthDomain',$param) and $param['DvAuthDomain'] !== null) {
+            $this->DvAuthDomain = $param['DvAuthDomain'];
         }
 
-        if (array_key_exists("DvAuthPath",$param) and $param["DvAuthPath"] !== null) {
-            $this->DvAuthPath = $param["DvAuthPath"];
+        if (array_key_exists('DvAuthPath',$param) and $param['DvAuthPath'] !== null) {
+            $this->DvAuthPath = $param['DvAuthPath'];
         }
 
-        if (array_key_exists("DvAuthSubDomain",$param) and $param["DvAuthSubDomain"] !== null) {
-            $this->DvAuthSubDomain = $param["DvAuthSubDomain"];
+        if (array_key_exists('DvAuthSubDomain',$param) and $param['DvAuthSubDomain'] !== null) {
+            $this->DvAuthSubDomain = $param['DvAuthSubDomain'];
         }
 
-        if (array_key_exists("DvAuthVerifyType",$param) and $param["DvAuthVerifyType"] !== null) {
-            $this->DvAuthVerifyType = $param["DvAuthVerifyType"];
+        if (array_key_exists('DvAuthVerifyType',$param) and $param['DvAuthVerifyType'] !== null) {
+            $this->DvAuthVerifyType = $param['DvAuthVerifyType'];
         }
     }
 }

@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceName(string $InstanceName) 设置实例名称，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
  * @method integer getZoneId() 获取可用区
  * @method void setZoneId(integer $ZoneId) 设置可用区
- * @method string getPeriod() 获取预付费购买时长，例如 "1m",就是一个月
- * @method void setPeriod(string $Period) 设置预付费购买时长，例如 "1m",就是一个月
+ * @method string getPeriod() 获取预付费购买时长，例如 '1m',就是一个月
+ * @method void setPeriod(string $Period) 设置预付费购买时长，例如 '1m',就是一个月
  * @method integer getInstanceType() 获取实例规格，1：入门型 ，2： 标准型，3 ：进阶型，4 ：容量型，5： 高阶型1，6：高阶性2, 7： 高阶型3,8： 高阶型4， 9 ：独占型。
  * @method void setInstanceType(integer $InstanceType) 设置实例规格，1：入门型 ，2： 标准型，3 ：进阶型，4 ：容量型，5： 高阶型1，6：高阶性2, 7： 高阶型3,8： 高阶型4， 9 ：独占型。
  * @method string getVpcId() 获取vpcId，不填默认基础网络
@@ -52,7 +52,7 @@ class CreateInstancePreRequest extends AbstractModel
     public $ZoneId;
 
     /**
-     * @var string 预付费购买时长，例如 "1m",就是一个月
+     * @var string 预付费购买时长，例如 '1m',就是一个月
      */
     public $Period;
 
@@ -89,7 +89,7 @@ class CreateInstancePreRequest extends AbstractModel
     /**
      * @param string $InstanceName 实例名称，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
      * @param integer $ZoneId 可用区
-     * @param string $Period 预付费购买时长，例如 "1m",就是一个月
+     * @param string $Period 预付费购买时长，例如 '1m',就是一个月
      * @param integer $InstanceType 实例规格，1：入门型 ，2： 标准型，3 ：进阶型，4 ：容量型，5： 高阶型1，6：高阶性2, 7： 高阶型3,8： 高阶型4， 9 ：独占型。
      * @param string $VpcId vpcId，不填默认基础网络
      * @param string $SubnetId 子网id，vpc网络需要传该参数，基础网络可以不传
@@ -110,40 +110,40 @@ class CreateInstancePreRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceName",$param) and $param["InstanceName"] !== null) {
-            $this->InstanceName = $param["InstanceName"];
+        if (array_key_exists('InstanceName',$param) and $param['InstanceName'] !== null) {
+            $this->InstanceName = $param['InstanceName'];
         }
 
-        if (array_key_exists("ZoneId",$param) and $param["ZoneId"] !== null) {
-            $this->ZoneId = $param["ZoneId"];
+        if (array_key_exists('ZoneId',$param) and $param['ZoneId'] !== null) {
+            $this->ZoneId = $param['ZoneId'];
         }
 
-        if (array_key_exists("Period",$param) and $param["Period"] !== null) {
-            $this->Period = $param["Period"];
+        if (array_key_exists('Period',$param) and $param['Period'] !== null) {
+            $this->Period = $param['Period'];
         }
 
-        if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
-            $this->InstanceType = $param["InstanceType"];
+        if (array_key_exists('InstanceType',$param) and $param['InstanceType'] !== null) {
+            $this->InstanceType = $param['InstanceType'];
         }
 
-        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
-            $this->VpcId = $param["VpcId"];
+        if (array_key_exists('VpcId',$param) and $param['VpcId'] !== null) {
+            $this->VpcId = $param['VpcId'];
         }
 
-        if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
-            $this->SubnetId = $param["SubnetId"];
+        if (array_key_exists('SubnetId',$param) and $param['SubnetId'] !== null) {
+            $this->SubnetId = $param['SubnetId'];
         }
 
-        if (array_key_exists("MsgRetentionTime",$param) and $param["MsgRetentionTime"] !== null) {
-            $this->MsgRetentionTime = $param["MsgRetentionTime"];
+        if (array_key_exists('MsgRetentionTime',$param) and $param['MsgRetentionTime'] !== null) {
+            $this->MsgRetentionTime = $param['MsgRetentionTime'];
         }
 
-        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
-            $this->ClusterId = $param["ClusterId"];
+        if (array_key_exists('ClusterId',$param) and $param['ClusterId'] !== null) {
+            $this->ClusterId = $param['ClusterId'];
         }
 
-        if (array_key_exists("RenewFlag",$param) and $param["RenewFlag"] !== null) {
-            $this->RenewFlag = $param["RenewFlag"];
+        if (array_key_exists('RenewFlag',$param) and $param['RenewFlag'] !== null) {
+            $this->RenewFlag = $param['RenewFlag'];
         }
     }
 }

@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -122,36 +122,36 @@ FALSE：不复制函数配置
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FunctionName",$param) and $param["FunctionName"] !== null) {
-            $this->FunctionName = $param["FunctionName"];
+        if (array_key_exists('FunctionName',$param) and $param['FunctionName'] !== null) {
+            $this->FunctionName = $param['FunctionName'];
         }
 
-        if (array_key_exists("NewFunctionName",$param) and $param["NewFunctionName"] !== null) {
-            $this->NewFunctionName = $param["NewFunctionName"];
+        if (array_key_exists('NewFunctionName',$param) and $param['NewFunctionName'] !== null) {
+            $this->NewFunctionName = $param['NewFunctionName'];
         }
 
-        if (array_key_exists("Namespace",$param) and $param["Namespace"] !== null) {
-            $this->Namespace = $param["Namespace"];
+        if (array_key_exists('Namespace',$param) and $param['Namespace'] !== null) {
+            $this->Namespace = $param['Namespace'];
         }
 
-        if (array_key_exists("TargetNamespace",$param) and $param["TargetNamespace"] !== null) {
-            $this->TargetNamespace = $param["TargetNamespace"];
+        if (array_key_exists('TargetNamespace',$param) and $param['TargetNamespace'] !== null) {
+            $this->TargetNamespace = $param['TargetNamespace'];
         }
 
-        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
-            $this->Description = $param["Description"];
+        if (array_key_exists('Description',$param) and $param['Description'] !== null) {
+            $this->Description = $param['Description'];
         }
 
-        if (array_key_exists("TargetRegion",$param) and $param["TargetRegion"] !== null) {
-            $this->TargetRegion = $param["TargetRegion"];
+        if (array_key_exists('TargetRegion',$param) and $param['TargetRegion'] !== null) {
+            $this->TargetRegion = $param['TargetRegion'];
         }
 
-        if (array_key_exists("Override",$param) and $param["Override"] !== null) {
-            $this->Override = $param["Override"];
+        if (array_key_exists('Override',$param) and $param['Override'] !== null) {
+            $this->Override = $param['Override'];
         }
 
-        if (array_key_exists("CopyConfiguration",$param) and $param["CopyConfiguration"] !== null) {
-            $this->CopyConfiguration = $param["CopyConfiguration"];
+        if (array_key_exists('CopyConfiguration',$param) and $param['CopyConfiguration'] !== null) {
+            $this->CopyConfiguration = $param['CopyConfiguration'];
         }
     }
 }

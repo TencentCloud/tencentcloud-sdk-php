@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -94,32 +94,32 @@ class DbauditTypesInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceVersionName",$param) and $param["InstanceVersionName"] !== null) {
-            $this->InstanceVersionName = $param["InstanceVersionName"];
+        if (array_key_exists('InstanceVersionName',$param) and $param['InstanceVersionName'] !== null) {
+            $this->InstanceVersionName = $param['InstanceVersionName'];
         }
 
-        if (array_key_exists("InstanceVersionKey",$param) and $param["InstanceVersionKey"] !== null) {
-            $this->InstanceVersionKey = $param["InstanceVersionKey"];
+        if (array_key_exists('InstanceVersionKey',$param) and $param['InstanceVersionKey'] !== null) {
+            $this->InstanceVersionKey = $param['InstanceVersionKey'];
         }
 
-        if (array_key_exists("Qps",$param) and $param["Qps"] !== null) {
-            $this->Qps = $param["Qps"];
+        if (array_key_exists('Qps',$param) and $param['Qps'] !== null) {
+            $this->Qps = $param['Qps'];
         }
 
-        if (array_key_exists("MaxInstances",$param) and $param["MaxInstances"] !== null) {
-            $this->MaxInstances = $param["MaxInstances"];
+        if (array_key_exists('MaxInstances',$param) and $param['MaxInstances'] !== null) {
+            $this->MaxInstances = $param['MaxInstances'];
         }
 
-        if (array_key_exists("InsertSpeed",$param) and $param["InsertSpeed"] !== null) {
-            $this->InsertSpeed = $param["InsertSpeed"];
+        if (array_key_exists('InsertSpeed',$param) and $param['InsertSpeed'] !== null) {
+            $this->InsertSpeed = $param['InsertSpeed'];
         }
 
-        if (array_key_exists("OnlineStorageCapacity",$param) and $param["OnlineStorageCapacity"] !== null) {
-            $this->OnlineStorageCapacity = $param["OnlineStorageCapacity"];
+        if (array_key_exists('OnlineStorageCapacity',$param) and $param['OnlineStorageCapacity'] !== null) {
+            $this->OnlineStorageCapacity = $param['OnlineStorageCapacity'];
         }
 
-        if (array_key_exists("ArchivingStorageCapacity",$param) and $param["ArchivingStorageCapacity"] !== null) {
-            $this->ArchivingStorageCapacity = $param["ArchivingStorageCapacity"];
+        if (array_key_exists('ArchivingStorageCapacity',$param) and $param['ArchivingStorageCapacity'] !== null) {
+            $this->ArchivingStorageCapacity = $param['ArchivingStorageCapacity'];
         }
     }
 }

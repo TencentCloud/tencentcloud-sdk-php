@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -62,14 +62,14 @@ class TerrorismConfigureInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ImgReviewInfo",$param) and $param["ImgReviewInfo"] !== null) {
+        if (array_key_exists('ImgReviewInfo',$param) and $param['ImgReviewInfo'] !== null) {
             $this->ImgReviewInfo = new TerrorismImgReviewTemplateInfo();
-            $this->ImgReviewInfo->deserialize($param["ImgReviewInfo"]);
+            $this->ImgReviewInfo->deserialize($param['ImgReviewInfo']);
         }
 
-        if (array_key_exists("OcrReviewInfo",$param) and $param["OcrReviewInfo"] !== null) {
+        if (array_key_exists('OcrReviewInfo',$param) and $param['OcrReviewInfo'] !== null) {
             $this->OcrReviewInfo = new TerrorismOcrReviewTemplateInfo();
-            $this->OcrReviewInfo->deserialize($param["OcrReviewInfo"]);
+            $this->OcrReviewInfo->deserialize($param['OcrReviewInfo']);
         }
     }
 }

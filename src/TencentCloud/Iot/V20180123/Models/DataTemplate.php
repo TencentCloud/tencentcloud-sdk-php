@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -86,24 +86,24 @@ class DataTemplate extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Number",$param) and $param["Number"] !== null) {
+        if (array_key_exists('Number',$param) and $param['Number'] !== null) {
             $this->Number = new NumberData();
-            $this->Number->deserialize($param["Number"]);
+            $this->Number->deserialize($param['Number']);
         }
 
-        if (array_key_exists("String",$param) and $param["String"] !== null) {
+        if (array_key_exists('String',$param) and $param['String'] !== null) {
             $this->String = new StringData();
-            $this->String->deserialize($param["String"]);
+            $this->String->deserialize($param['String']);
         }
 
-        if (array_key_exists("Enum",$param) and $param["Enum"] !== null) {
+        if (array_key_exists('Enum',$param) and $param['Enum'] !== null) {
             $this->Enum = new EnumData();
-            $this->Enum->deserialize($param["Enum"]);
+            $this->Enum->deserialize($param['Enum']);
         }
 
-        if (array_key_exists("Bool",$param) and $param["Bool"] !== null) {
+        if (array_key_exists('Bool',$param) and $param['Bool'] !== null) {
             $this->Bool = new BoolData();
-            $this->Bool->deserialize($param["Bool"]);
+            $this->Bool->deserialize($param['Bool']);
         }
     }
 }

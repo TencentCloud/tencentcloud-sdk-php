@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -62,14 +62,14 @@ class DataSource extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CosDataSource",$param) and $param["CosDataSource"] !== null) {
+        if (array_key_exists('CosDataSource',$param) and $param['CosDataSource'] !== null) {
             $this->CosDataSource = new CosDataSource();
-            $this->CosDataSource->deserialize($param["CosDataSource"]);
+            $this->CosDataSource->deserialize($param['CosDataSource']);
         }
 
-        if (array_key_exists("FileSystemDataSource",$param) and $param["FileSystemDataSource"] !== null) {
+        if (array_key_exists('FileSystemDataSource',$param) and $param['FileSystemDataSource'] !== null) {
             $this->FileSystemDataSource = new FileSystemDataSource();
-            $this->FileSystemDataSource->deserialize($param["FileSystemDataSource"]);
+            $this->FileSystemDataSource->deserialize($param['FileSystemDataSource']);
         }
     }
 }

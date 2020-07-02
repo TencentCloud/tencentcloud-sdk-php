@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getStatus() 获取接口调用状态，成功返回200，失败返回400
  * @method void setStatus(integer $Status) 设置接口调用状态，成功返回200，失败返回400
- * @method string getInfo() 获取接口调用描述信息，成功返回"success"，失败返回"invalid request"
- * @method void setInfo(string $Info) 设置接口调用描述信息，成功返回"success"，失败返回"invalid request"
+ * @method string getInfo() 获取接口调用描述信息，成功返回'success'，失败返回"invalid request"
+ * @method void setInfo(string $Info) 设置接口调用描述信息，成功返回'success'，失败返回"invalid request"
  * @method string getData() 获取异步扫描任务提交成功返回success
  * @method void setData(string $Data) 设置异步扫描任务提交成功返回success
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,7 +37,7 @@ class ScanFileResponse extends AbstractModel
     public $Status;
 
     /**
-     * @var string 接口调用描述信息，成功返回"success"，失败返回"invalid request"
+     * @var string 接口调用描述信息，成功返回'success'，失败返回"invalid request"
      */
     public $Info;
 
@@ -53,7 +53,7 @@ class ScanFileResponse extends AbstractModel
 
     /**
      * @param integer $Status 接口调用状态，成功返回200，失败返回400
-     * @param string $Info 接口调用描述信息，成功返回"success"，失败返回"invalid request"
+     * @param string $Info 接口调用描述信息，成功返回'success'，失败返回"invalid request"
      * @param string $Data 异步扫描任务提交成功返回success
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -70,20 +70,20 @@ class ScanFileResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("Info",$param) and $param["Info"] !== null) {
-            $this->Info = $param["Info"];
+        if (array_key_exists('Info',$param) and $param['Info'] !== null) {
+            $this->Info = $param['Info'];
         }
 
-        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
-            $this->Data = $param["Data"];
+        if (array_key_exists('Data',$param) and $param['Data'] !== null) {
+            $this->Data = $param['Data'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

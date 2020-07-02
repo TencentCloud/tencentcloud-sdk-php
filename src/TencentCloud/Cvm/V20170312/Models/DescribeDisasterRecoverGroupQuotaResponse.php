@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -86,28 +86,28 @@ class DescribeDisasterRecoverGroupQuotaResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("GroupQuota",$param) and $param["GroupQuota"] !== null) {
-            $this->GroupQuota = $param["GroupQuota"];
+        if (array_key_exists('GroupQuota',$param) and $param['GroupQuota'] !== null) {
+            $this->GroupQuota = $param['GroupQuota'];
         }
 
-        if (array_key_exists("CurrentNum",$param) and $param["CurrentNum"] !== null) {
-            $this->CurrentNum = $param["CurrentNum"];
+        if (array_key_exists('CurrentNum',$param) and $param['CurrentNum'] !== null) {
+            $this->CurrentNum = $param['CurrentNum'];
         }
 
-        if (array_key_exists("CvmInHostGroupQuota",$param) and $param["CvmInHostGroupQuota"] !== null) {
-            $this->CvmInHostGroupQuota = $param["CvmInHostGroupQuota"];
+        if (array_key_exists('CvmInHostGroupQuota',$param) and $param['CvmInHostGroupQuota'] !== null) {
+            $this->CvmInHostGroupQuota = $param['CvmInHostGroupQuota'];
         }
 
-        if (array_key_exists("CvmInSwGroupQuota",$param) and $param["CvmInSwGroupQuota"] !== null) {
-            $this->CvmInSwGroupQuota = $param["CvmInSwGroupQuota"];
+        if (array_key_exists('CvmInSwGroupQuota',$param) and $param['CvmInSwGroupQuota'] !== null) {
+            $this->CvmInSwGroupQuota = $param['CvmInSwGroupQuota'];
         }
 
-        if (array_key_exists("CvmInRackGroupQuota",$param) and $param["CvmInRackGroupQuota"] !== null) {
-            $this->CvmInRackGroupQuota = $param["CvmInRackGroupQuota"];
+        if (array_key_exists('CvmInRackGroupQuota',$param) and $param['CvmInRackGroupQuota'] !== null) {
+            $this->CvmInRackGroupQuota = $param['CvmInRackGroupQuota'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

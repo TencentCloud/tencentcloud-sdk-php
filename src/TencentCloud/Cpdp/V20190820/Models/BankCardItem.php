@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -162,48 +162,48 @@ BindType==2时必填
         if ($param === null) {
             return;
         }
-        if (array_key_exists("EiconBankBranchId",$param) and $param["EiconBankBranchId"] !== null) {
-            $this->EiconBankBranchId = $param["EiconBankBranchId"];
+        if (array_key_exists('EiconBankBranchId',$param) and $param['EiconBankBranchId'] !== null) {
+            $this->EiconBankBranchId = $param['EiconBankBranchId'];
         }
 
-        if (array_key_exists("CnapsBranchId",$param) and $param["CnapsBranchId"] !== null) {
-            $this->CnapsBranchId = $param["CnapsBranchId"];
+        if (array_key_exists('CnapsBranchId',$param) and $param['CnapsBranchId'] !== null) {
+            $this->CnapsBranchId = $param['CnapsBranchId'];
         }
 
-        if (array_key_exists("SettleAcctType",$param) and $param["SettleAcctType"] !== null) {
-            $this->SettleAcctType = $param["SettleAcctType"];
+        if (array_key_exists('SettleAcctType',$param) and $param['SettleAcctType'] !== null) {
+            $this->SettleAcctType = $param['SettleAcctType'];
         }
 
-        if (array_key_exists("SettleAcctName",$param) and $param["SettleAcctName"] !== null) {
-            $this->SettleAcctName = $param["SettleAcctName"];
+        if (array_key_exists('SettleAcctName',$param) and $param['SettleAcctName'] !== null) {
+            $this->SettleAcctName = $param['SettleAcctName'];
         }
 
-        if (array_key_exists("AcctBranchName",$param) and $param["AcctBranchName"] !== null) {
-            $this->AcctBranchName = $param["AcctBranchName"];
+        if (array_key_exists('AcctBranchName',$param) and $param['AcctBranchName'] !== null) {
+            $this->AcctBranchName = $param['AcctBranchName'];
         }
 
-        if (array_key_exists("SettleAcctNo",$param) and $param["SettleAcctNo"] !== null) {
-            $this->SettleAcctNo = $param["SettleAcctNo"];
+        if (array_key_exists('SettleAcctNo',$param) and $param['SettleAcctNo'] !== null) {
+            $this->SettleAcctNo = $param['SettleAcctNo'];
         }
 
-        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
-            $this->SubAppId = $param["SubAppId"];
+        if (array_key_exists('SubAppId',$param) and $param['SubAppId'] !== null) {
+            $this->SubAppId = $param['SubAppId'];
         }
 
-        if (array_key_exists("BindType",$param) and $param["BindType"] !== null) {
-            $this->BindType = $param["BindType"];
+        if (array_key_exists('BindType',$param) and $param['BindType'] !== null) {
+            $this->BindType = $param['BindType'];
         }
 
-        if (array_key_exists("Mobile",$param) and $param["Mobile"] !== null) {
-            $this->Mobile = $param["Mobile"];
+        if (array_key_exists('Mobile',$param) and $param['Mobile'] !== null) {
+            $this->Mobile = $param['Mobile'];
         }
 
-        if (array_key_exists("IdType",$param) and $param["IdType"] !== null) {
-            $this->IdType = $param["IdType"];
+        if (array_key_exists('IdType',$param) and $param['IdType'] !== null) {
+            $this->IdType = $param['IdType'];
         }
 
-        if (array_key_exists("IdCode",$param) and $param["IdCode"] !== null) {
-            $this->IdCode = $param["IdCode"];
+        if (array_key_exists('IdCode',$param) and $param['IdCode'] !== null) {
+            $this->IdCode = $param['IdCode'];
         }
     }
 }

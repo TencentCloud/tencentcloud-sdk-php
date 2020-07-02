@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -86,29 +86,29 @@ class CreateClusterRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("IdlType",$param) and $param["IdlType"] !== null) {
-            $this->IdlType = $param["IdlType"];
+        if (array_key_exists('IdlType',$param) and $param['IdlType'] !== null) {
+            $this->IdlType = $param['IdlType'];
         }
 
-        if (array_key_exists("ClusterName",$param) and $param["ClusterName"] !== null) {
-            $this->ClusterName = $param["ClusterName"];
+        if (array_key_exists('ClusterName',$param) and $param['ClusterName'] !== null) {
+            $this->ClusterName = $param['ClusterName'];
         }
 
-        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
-            $this->VpcId = $param["VpcId"];
+        if (array_key_exists('VpcId',$param) and $param['VpcId'] !== null) {
+            $this->VpcId = $param['VpcId'];
         }
 
-        if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
-            $this->SubnetId = $param["SubnetId"];
+        if (array_key_exists('SubnetId',$param) and $param['SubnetId'] !== null) {
+            $this->SubnetId = $param['SubnetId'];
         }
 
-        if (array_key_exists("Password",$param) and $param["Password"] !== null) {
-            $this->Password = $param["Password"];
+        if (array_key_exists('Password',$param) and $param['Password'] !== null) {
+            $this->Password = $param['Password'];
         }
 
-        if (array_key_exists("ResourceTags",$param) and $param["ResourceTags"] !== null) {
+        if (array_key_exists('ResourceTags',$param) and $param['ResourceTags'] !== null) {
             $this->ResourceTags = [];
-            foreach ($param["ResourceTags"] as $key => $value){
+            foreach ($param['ResourceTags'] as $key => $value){
                 $obj = new TagInfoUnit();
                 $obj->deserialize($value);
                 array_push($this->ResourceTags, $obj);

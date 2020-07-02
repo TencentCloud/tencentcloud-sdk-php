@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -126,54 +126,54 @@ class ScanSetInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TaskStatus",$param) and $param["TaskStatus"] !== null) {
-            $this->TaskStatus = $param["TaskStatus"];
+        if (array_key_exists('TaskStatus',$param) and $param['TaskStatus'] !== null) {
+            $this->TaskStatus = $param['TaskStatus'];
         }
 
-        if (array_key_exists("AppDetailInfo",$param) and $param["AppDetailInfo"] !== null) {
+        if (array_key_exists('AppDetailInfo',$param) and $param['AppDetailInfo'] !== null) {
             $this->AppDetailInfo = new AppDetailInfo();
-            $this->AppDetailInfo->deserialize($param["AppDetailInfo"]);
+            $this->AppDetailInfo->deserialize($param['AppDetailInfo']);
         }
 
-        if (array_key_exists("VirusInfo",$param) and $param["VirusInfo"] !== null) {
+        if (array_key_exists('VirusInfo',$param) and $param['VirusInfo'] !== null) {
             $this->VirusInfo = new VirusInfo();
-            $this->VirusInfo->deserialize($param["VirusInfo"]);
+            $this->VirusInfo->deserialize($param['VirusInfo']);
         }
 
-        if (array_key_exists("VulInfo",$param) and $param["VulInfo"] !== null) {
+        if (array_key_exists('VulInfo',$param) and $param['VulInfo'] !== null) {
             $this->VulInfo = new VulInfo();
-            $this->VulInfo->deserialize($param["VulInfo"]);
+            $this->VulInfo->deserialize($param['VulInfo']);
         }
 
-        if (array_key_exists("AdInfo",$param) and $param["AdInfo"] !== null) {
+        if (array_key_exists('AdInfo',$param) and $param['AdInfo'] !== null) {
             $this->AdInfo = new AdInfo();
-            $this->AdInfo->deserialize($param["AdInfo"]);
+            $this->AdInfo->deserialize($param['AdInfo']);
         }
 
-        if (array_key_exists("TaskTime",$param) and $param["TaskTime"] !== null) {
-            $this->TaskTime = $param["TaskTime"];
+        if (array_key_exists('TaskTime',$param) and $param['TaskTime'] !== null) {
+            $this->TaskTime = $param['TaskTime'];
         }
 
-        if (array_key_exists("StatusCode",$param) and $param["StatusCode"] !== null) {
-            $this->StatusCode = $param["StatusCode"];
+        if (array_key_exists('StatusCode',$param) and $param['StatusCode'] !== null) {
+            $this->StatusCode = $param['StatusCode'];
         }
 
-        if (array_key_exists("StatusDesc",$param) and $param["StatusDesc"] !== null) {
-            $this->StatusDesc = $param["StatusDesc"];
+        if (array_key_exists('StatusDesc',$param) and $param['StatusDesc'] !== null) {
+            $this->StatusDesc = $param['StatusDesc'];
         }
 
-        if (array_key_exists("StatusRef",$param) and $param["StatusRef"] !== null) {
-            $this->StatusRef = $param["StatusRef"];
+        if (array_key_exists('StatusRef',$param) and $param['StatusRef'] !== null) {
+            $this->StatusRef = $param['StatusRef'];
         }
 
-        if (array_key_exists("PermissionInfo",$param) and $param["PermissionInfo"] !== null) {
+        if (array_key_exists('PermissionInfo',$param) and $param['PermissionInfo'] !== null) {
             $this->PermissionInfo = new ScanPermissionList();
-            $this->PermissionInfo->deserialize($param["PermissionInfo"]);
+            $this->PermissionInfo->deserialize($param['PermissionInfo']);
         }
 
-        if (array_key_exists("SensitiveInfo",$param) and $param["SensitiveInfo"] !== null) {
+        if (array_key_exists('SensitiveInfo',$param) and $param['SensitiveInfo'] !== null) {
             $this->SensitiveInfo = new ScanSensitiveList();
-            $this->SensitiveInfo->deserialize($param["SensitiveInfo"]);
+            $this->SensitiveInfo->deserialize($param['SensitiveInfo']);
         }
     }
 }

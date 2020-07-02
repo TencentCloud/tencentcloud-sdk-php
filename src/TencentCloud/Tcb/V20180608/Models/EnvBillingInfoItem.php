@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -178,57 +178,57 @@ class EnvBillingInfoItem extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("EnvId",$param) and $param["EnvId"] !== null) {
-            $this->EnvId = $param["EnvId"];
+        if (array_key_exists('EnvId',$param) and $param['EnvId'] !== null) {
+            $this->EnvId = $param['EnvId'];
         }
 
-        if (array_key_exists("PackageId",$param) and $param["PackageId"] !== null) {
-            $this->PackageId = $param["PackageId"];
+        if (array_key_exists('PackageId',$param) and $param['PackageId'] !== null) {
+            $this->PackageId = $param['PackageId'];
         }
 
-        if (array_key_exists("IsAutoRenew",$param) and $param["IsAutoRenew"] !== null) {
-            $this->IsAutoRenew = $param["IsAutoRenew"];
+        if (array_key_exists('IsAutoRenew',$param) and $param['IsAutoRenew'] !== null) {
+            $this->IsAutoRenew = $param['IsAutoRenew'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {
-            $this->PayMode = $param["PayMode"];
+        if (array_key_exists('PayMode',$param) and $param['PayMode'] !== null) {
+            $this->PayMode = $param['PayMode'];
         }
 
-        if (array_key_exists("IsolatedTime",$param) and $param["IsolatedTime"] !== null) {
-            $this->IsolatedTime = $param["IsolatedTime"];
+        if (array_key_exists('IsolatedTime',$param) and $param['IsolatedTime'] !== null) {
+            $this->IsolatedTime = $param['IsolatedTime'];
         }
 
-        if (array_key_exists("ExpireTime",$param) and $param["ExpireTime"] !== null) {
-            $this->ExpireTime = $param["ExpireTime"];
+        if (array_key_exists('ExpireTime',$param) and $param['ExpireTime'] !== null) {
+            $this->ExpireTime = $param['ExpireTime'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
-            $this->UpdateTime = $param["UpdateTime"];
+        if (array_key_exists('UpdateTime',$param) and $param['UpdateTime'] !== null) {
+            $this->UpdateTime = $param['UpdateTime'];
         }
 
-        if (array_key_exists("IsAlwaysFree",$param) and $param["IsAlwaysFree"] !== null) {
-            $this->IsAlwaysFree = $param["IsAlwaysFree"];
+        if (array_key_exists('IsAlwaysFree',$param) and $param['IsAlwaysFree'] !== null) {
+            $this->IsAlwaysFree = $param['IsAlwaysFree'];
         }
 
-        if (array_key_exists("PaymentChannel",$param) and $param["PaymentChannel"] !== null) {
-            $this->PaymentChannel = $param["PaymentChannel"];
+        if (array_key_exists('PaymentChannel',$param) and $param['PaymentChannel'] !== null) {
+            $this->PaymentChannel = $param['PaymentChannel'];
         }
 
-        if (array_key_exists("OrderInfo",$param) and $param["OrderInfo"] !== null) {
+        if (array_key_exists('OrderInfo',$param) and $param['OrderInfo'] !== null) {
             $this->OrderInfo = new OrderInfo();
-            $this->OrderInfo->deserialize($param["OrderInfo"]);
+            $this->OrderInfo->deserialize($param['OrderInfo']);
         }
 
-        if (array_key_exists("FreeQuota",$param) and $param["FreeQuota"] !== null) {
-            $this->FreeQuota = $param["FreeQuota"];
+        if (array_key_exists('FreeQuota',$param) and $param['FreeQuota'] !== null) {
+            $this->FreeQuota = $param['FreeQuota'];
         }
     }
 }

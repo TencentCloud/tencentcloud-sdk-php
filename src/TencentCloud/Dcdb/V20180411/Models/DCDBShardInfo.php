@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -242,100 +242,100 @@ class DCDBShardInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("ShardSerialId",$param) and $param["ShardSerialId"] !== null) {
-            $this->ShardSerialId = $param["ShardSerialId"];
+        if (array_key_exists('ShardSerialId',$param) and $param['ShardSerialId'] !== null) {
+            $this->ShardSerialId = $param['ShardSerialId'];
         }
 
-        if (array_key_exists("ShardInstanceId",$param) and $param["ShardInstanceId"] !== null) {
-            $this->ShardInstanceId = $param["ShardInstanceId"];
+        if (array_key_exists('ShardInstanceId',$param) and $param['ShardInstanceId'] !== null) {
+            $this->ShardInstanceId = $param['ShardInstanceId'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("StatusDesc",$param) and $param["StatusDesc"] !== null) {
-            $this->StatusDesc = $param["StatusDesc"];
+        if (array_key_exists('StatusDesc',$param) and $param['StatusDesc'] !== null) {
+            $this->StatusDesc = $param['StatusDesc'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
-            $this->VpcId = $param["VpcId"];
+        if (array_key_exists('VpcId',$param) and $param['VpcId'] !== null) {
+            $this->VpcId = $param['VpcId'];
         }
 
-        if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
-            $this->SubnetId = $param["SubnetId"];
+        if (array_key_exists('SubnetId',$param) and $param['SubnetId'] !== null) {
+            $this->SubnetId = $param['SubnetId'];
         }
 
-        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
-            $this->ProjectId = $param["ProjectId"];
+        if (array_key_exists('ProjectId',$param) and $param['ProjectId'] !== null) {
+            $this->ProjectId = $param['ProjectId'];
         }
 
-        if (array_key_exists("Region",$param) and $param["Region"] !== null) {
-            $this->Region = $param["Region"];
+        if (array_key_exists('Region',$param) and $param['Region'] !== null) {
+            $this->Region = $param['Region'];
         }
 
-        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
-            $this->Zone = $param["Zone"];
+        if (array_key_exists('Zone',$param) and $param['Zone'] !== null) {
+            $this->Zone = $param['Zone'];
         }
 
-        if (array_key_exists("Memory",$param) and $param["Memory"] !== null) {
-            $this->Memory = $param["Memory"];
+        if (array_key_exists('Memory',$param) and $param['Memory'] !== null) {
+            $this->Memory = $param['Memory'];
         }
 
-        if (array_key_exists("Storage",$param) and $param["Storage"] !== null) {
-            $this->Storage = $param["Storage"];
+        if (array_key_exists('Storage',$param) and $param['Storage'] !== null) {
+            $this->Storage = $param['Storage'];
         }
 
-        if (array_key_exists("PeriodEndTime",$param) and $param["PeriodEndTime"] !== null) {
-            $this->PeriodEndTime = $param["PeriodEndTime"];
+        if (array_key_exists('PeriodEndTime',$param) and $param['PeriodEndTime'] !== null) {
+            $this->PeriodEndTime = $param['PeriodEndTime'];
         }
 
-        if (array_key_exists("NodeCount",$param) and $param["NodeCount"] !== null) {
-            $this->NodeCount = $param["NodeCount"];
+        if (array_key_exists('NodeCount',$param) and $param['NodeCount'] !== null) {
+            $this->NodeCount = $param['NodeCount'];
         }
 
-        if (array_key_exists("StorageUsage",$param) and $param["StorageUsage"] !== null) {
-            $this->StorageUsage = $param["StorageUsage"];
+        if (array_key_exists('StorageUsage',$param) and $param['StorageUsage'] !== null) {
+            $this->StorageUsage = $param['StorageUsage'];
         }
 
-        if (array_key_exists("MemoryUsage",$param) and $param["MemoryUsage"] !== null) {
-            $this->MemoryUsage = $param["MemoryUsage"];
+        if (array_key_exists('MemoryUsage',$param) and $param['MemoryUsage'] !== null) {
+            $this->MemoryUsage = $param['MemoryUsage'];
         }
 
-        if (array_key_exists("ShardId",$param) and $param["ShardId"] !== null) {
-            $this->ShardId = $param["ShardId"];
+        if (array_key_exists('ShardId',$param) and $param['ShardId'] !== null) {
+            $this->ShardId = $param['ShardId'];
         }
 
-        if (array_key_exists("Pid",$param) and $param["Pid"] !== null) {
-            $this->Pid = $param["Pid"];
+        if (array_key_exists('Pid',$param) and $param['Pid'] !== null) {
+            $this->Pid = $param['Pid'];
         }
 
-        if (array_key_exists("ProxyVersion",$param) and $param["ProxyVersion"] !== null) {
-            $this->ProxyVersion = $param["ProxyVersion"];
+        if (array_key_exists('ProxyVersion',$param) and $param['ProxyVersion'] !== null) {
+            $this->ProxyVersion = $param['ProxyVersion'];
         }
 
-        if (array_key_exists("Paymode",$param) and $param["Paymode"] !== null) {
-            $this->Paymode = $param["Paymode"];
+        if (array_key_exists('Paymode',$param) and $param['Paymode'] !== null) {
+            $this->Paymode = $param['Paymode'];
         }
 
-        if (array_key_exists("ShardMasterZone",$param) and $param["ShardMasterZone"] !== null) {
-            $this->ShardMasterZone = $param["ShardMasterZone"];
+        if (array_key_exists('ShardMasterZone',$param) and $param['ShardMasterZone'] !== null) {
+            $this->ShardMasterZone = $param['ShardMasterZone'];
         }
 
-        if (array_key_exists("ShardSlaveZones",$param) and $param["ShardSlaveZones"] !== null) {
-            $this->ShardSlaveZones = $param["ShardSlaveZones"];
+        if (array_key_exists('ShardSlaveZones',$param) and $param['ShardSlaveZones'] !== null) {
+            $this->ShardSlaveZones = $param['ShardSlaveZones'];
         }
 
-        if (array_key_exists("Cpu",$param) and $param["Cpu"] !== null) {
-            $this->Cpu = $param["Cpu"];
+        if (array_key_exists('Cpu',$param) and $param['Cpu'] !== null) {
+            $this->Cpu = $param['Cpu'];
         }
     }
 }

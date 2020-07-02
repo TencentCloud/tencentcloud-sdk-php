@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -102,36 +102,36 @@ class DescribeTrafficMirrorsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TrafficMirrorIds",$param) and $param["TrafficMirrorIds"] !== null) {
-            $this->TrafficMirrorIds = $param["TrafficMirrorIds"];
+        if (array_key_exists('TrafficMirrorIds',$param) and $param['TrafficMirrorIds'] !== null) {
+            $this->TrafficMirrorIds = $param['TrafficMirrorIds'];
         }
 
-        if (array_key_exists("Aliases",$param) and $param["Aliases"] !== null) {
-            $this->Aliases = $param["Aliases"];
+        if (array_key_exists('Aliases',$param) and $param['Aliases'] !== null) {
+            $this->Aliases = $param['Aliases'];
         }
 
-        if (array_key_exists("VpcIds",$param) and $param["VpcIds"] !== null) {
-            $this->VpcIds = $param["VpcIds"];
+        if (array_key_exists('VpcIds',$param) and $param['VpcIds'] !== null) {
+            $this->VpcIds = $param['VpcIds'];
         }
 
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
+        if (array_key_exists('Offset',$param) and $param['Offset'] !== null) {
+            $this->Offset = $param['Offset'];
         }
 
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
+        if (array_key_exists('Limit',$param) and $param['Limit'] !== null) {
+            $this->Limit = $param['Limit'];
         }
 
-        if (array_key_exists("OrderField",$param) and $param["OrderField"] !== null) {
-            $this->OrderField = $param["OrderField"];
+        if (array_key_exists('OrderField',$param) and $param['OrderField'] !== null) {
+            $this->OrderField = $param['OrderField'];
         }
 
-        if (array_key_exists("Order",$param) and $param["Order"] !== null) {
-            $this->Order = $param["Order"];
+        if (array_key_exists('Order',$param) and $param['Order'] !== null) {
+            $this->Order = $param['Order'];
         }
 
-        if (array_key_exists("SearchKey",$param) and $param["SearchKey"] !== null) {
-            $this->SearchKey = $param["SearchKey"];
+        if (array_key_exists('SearchKey',$param) and $param['SearchKey'] !== null) {
+            $this->SearchKey = $param['SearchKey'];
         }
     }
 }

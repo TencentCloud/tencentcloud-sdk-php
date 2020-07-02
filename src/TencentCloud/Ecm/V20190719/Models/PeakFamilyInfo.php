@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -54,14 +54,14 @@ class PeakFamilyInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceFamily",$param) and $param["InstanceFamily"] !== null) {
+        if (array_key_exists('InstanceFamily',$param) and $param['InstanceFamily'] !== null) {
             $this->InstanceFamily = new InstanceFamilyTypeConfig();
-            $this->InstanceFamily->deserialize($param["InstanceFamily"]);
+            $this->InstanceFamily->deserialize($param['InstanceFamily']);
         }
 
-        if (array_key_exists("PeakBaseSet",$param) and $param["PeakBaseSet"] !== null) {
+        if (array_key_exists('PeakBaseSet',$param) and $param['PeakBaseSet'] !== null) {
             $this->PeakBaseSet = [];
-            foreach ($param["PeakBaseSet"] as $key => $value){
+            foreach ($param['PeakBaseSet'] as $key => $value){
                 $obj = new PeakBase();
                 $obj->deserialize($value);
                 array_push($this->PeakBaseSet, $obj);

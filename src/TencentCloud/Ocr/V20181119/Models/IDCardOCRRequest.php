@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -47,9 +47,9 @@ Quality，图片质量分数（评价图片的模糊程度）
 MultiCardDetect，是否开启多卡证检测
 
 SDK 设置方式参考：
-Config = Json.stringify({"CropIdCard":true,"CropPortrait":true})
+Config = Json.stringify({'CropIdCard':true,'CropPortrait':true})
 API 3.0 Explorer 设置方式参考：
-Config = {"CropIdCard":true,"CropPortrait":true}
+Config = {'CropIdCard':true,'CropPortrait':true}
  * @method void setConfig(string $Config) 设置以下可选字段均为bool 类型，默认false：
 CropIdCard，身份证照片裁剪（去掉证件外多余的边缘、自动矫正拍摄角度）
 CropPortrait，人像照片裁剪（自动抠取身份证头像区域）
@@ -63,9 +63,9 @@ Quality，图片质量分数（评价图片的模糊程度）
 MultiCardDetect，是否开启多卡证检测
 
 SDK 设置方式参考：
-Config = Json.stringify({"CropIdCard":true,"CropPortrait":true})
+Config = Json.stringify({'CropIdCard':true,'CropPortrait':true})
 API 3.0 Explorer 设置方式参考：
-Config = {"CropIdCard":true,"CropPortrait":true}
+Config = {'CropIdCard':true,'CropPortrait':true}
  */
 class IDCardOCRRequest extends AbstractModel
 {
@@ -102,9 +102,9 @@ Quality，图片质量分数（评价图片的模糊程度）
 MultiCardDetect，是否开启多卡证检测
 
 SDK 设置方式参考：
-Config = Json.stringify({"CropIdCard":true,"CropPortrait":true})
+Config = Json.stringify({'CropIdCard':true,'CropPortrait':true})
 API 3.0 Explorer 设置方式参考：
-Config = {"CropIdCard":true,"CropPortrait":true}
+Config = {'CropIdCard':true,'CropPortrait':true}
      */
     public $Config;
 
@@ -129,9 +129,9 @@ Quality，图片质量分数（评价图片的模糊程度）
 MultiCardDetect，是否开启多卡证检测
 
 SDK 设置方式参考：
-Config = Json.stringify({"CropIdCard":true,"CropPortrait":true})
+Config = Json.stringify({'CropIdCard':true,'CropPortrait':true})
 API 3.0 Explorer 设置方式参考：
-Config = {"CropIdCard":true,"CropPortrait":true}
+Config = {'CropIdCard':true,'CropPortrait':true}
      */
     function __construct()
     {
@@ -146,20 +146,20 @@ Config = {"CropIdCard":true,"CropPortrait":true}
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ImageBase64",$param) and $param["ImageBase64"] !== null) {
-            $this->ImageBase64 = $param["ImageBase64"];
+        if (array_key_exists('ImageBase64',$param) and $param['ImageBase64'] !== null) {
+            $this->ImageBase64 = $param['ImageBase64'];
         }
 
-        if (array_key_exists("ImageUrl",$param) and $param["ImageUrl"] !== null) {
-            $this->ImageUrl = $param["ImageUrl"];
+        if (array_key_exists('ImageUrl',$param) and $param['ImageUrl'] !== null) {
+            $this->ImageUrl = $param['ImageUrl'];
         }
 
-        if (array_key_exists("CardSide",$param) and $param["CardSide"] !== null) {
-            $this->CardSide = $param["CardSide"];
+        if (array_key_exists('CardSide',$param) and $param['CardSide'] !== null) {
+            $this->CardSide = $param['CardSide'];
         }
 
-        if (array_key_exists("Config",$param) and $param["Config"] !== null) {
-            $this->Config = $param["Config"];
+        if (array_key_exists('Config',$param) and $param['Config'] !== null) {
+            $this->Config = $param['Config'];
         }
     }
 }

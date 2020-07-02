@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -94,32 +94,32 @@ class DescribeBasicDeviceThresholdRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BasicIp",$param) and $param["BasicIp"] !== null) {
-            $this->BasicIp = $param["BasicIp"];
+        if (array_key_exists('BasicIp',$param) and $param['BasicIp'] !== null) {
+            $this->BasicIp = $param['BasicIp'];
         }
 
-        if (array_key_exists("BasicRegion",$param) and $param["BasicRegion"] !== null) {
-            $this->BasicRegion = $param["BasicRegion"];
+        if (array_key_exists('BasicRegion',$param) and $param['BasicRegion'] !== null) {
+            $this->BasicRegion = $param['BasicRegion'];
         }
 
-        if (array_key_exists("BasicBizType",$param) and $param["BasicBizType"] !== null) {
-            $this->BasicBizType = $param["BasicBizType"];
+        if (array_key_exists('BasicBizType',$param) and $param['BasicBizType'] !== null) {
+            $this->BasicBizType = $param['BasicBizType'];
         }
 
-        if (array_key_exists("BasicDeviceType",$param) and $param["BasicDeviceType"] !== null) {
-            $this->BasicDeviceType = $param["BasicDeviceType"];
+        if (array_key_exists('BasicDeviceType',$param) and $param['BasicDeviceType'] !== null) {
+            $this->BasicDeviceType = $param['BasicDeviceType'];
         }
 
-        if (array_key_exists("BasicCheckFlag",$param) and $param["BasicCheckFlag"] !== null) {
-            $this->BasicCheckFlag = $param["BasicCheckFlag"];
+        if (array_key_exists('BasicCheckFlag',$param) and $param['BasicCheckFlag'] !== null) {
+            $this->BasicCheckFlag = $param['BasicCheckFlag'];
         }
 
-        if (array_key_exists("BasicIpInstance",$param) and $param["BasicIpInstance"] !== null) {
-            $this->BasicIpInstance = $param["BasicIpInstance"];
+        if (array_key_exists('BasicIpInstance',$param) and $param['BasicIpInstance'] !== null) {
+            $this->BasicIpInstance = $param['BasicIpInstance'];
         }
 
-        if (array_key_exists("BasicIspCode",$param) and $param["BasicIspCode"] !== null) {
-            $this->BasicIspCode = $param["BasicIspCode"];
+        if (array_key_exists('BasicIspCode',$param) and $param['BasicIspCode'] !== null) {
+            $this->BasicIspCode = $param['BasicIspCode'];
         }
     }
 }

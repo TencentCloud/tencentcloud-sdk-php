@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -114,28 +114,28 @@ class Origin extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Origins",$param) and $param["Origins"] !== null) {
-            $this->Origins = $param["Origins"];
+        if (array_key_exists('Origins',$param) and $param['Origins'] !== null) {
+            $this->Origins = $param['Origins'];
         }
 
-        if (array_key_exists("OriginType",$param) and $param["OriginType"] !== null) {
-            $this->OriginType = $param["OriginType"];
+        if (array_key_exists('OriginType',$param) and $param['OriginType'] !== null) {
+            $this->OriginType = $param['OriginType'];
         }
 
-        if (array_key_exists("ServerName",$param) and $param["ServerName"] !== null) {
-            $this->ServerName = $param["ServerName"];
+        if (array_key_exists('ServerName',$param) and $param['ServerName'] !== null) {
+            $this->ServerName = $param['ServerName'];
         }
 
-        if (array_key_exists("OriginPullProtocol",$param) and $param["OriginPullProtocol"] !== null) {
-            $this->OriginPullProtocol = $param["OriginPullProtocol"];
+        if (array_key_exists('OriginPullProtocol',$param) and $param['OriginPullProtocol'] !== null) {
+            $this->OriginPullProtocol = $param['OriginPullProtocol'];
         }
 
-        if (array_key_exists("BackupOrigins",$param) and $param["BackupOrigins"] !== null) {
-            $this->BackupOrigins = $param["BackupOrigins"];
+        if (array_key_exists('BackupOrigins',$param) and $param['BackupOrigins'] !== null) {
+            $this->BackupOrigins = $param['BackupOrigins'];
         }
 
-        if (array_key_exists("BackupOriginType",$param) and $param["BackupOriginType"] !== null) {
-            $this->BackupOriginType = $param["BackupOriginType"];
+        if (array_key_exists('BackupOriginType',$param) and $param['BackupOriginType'] !== null) {
+            $this->BackupOriginType = $param['BackupOriginType'];
         }
     }
 }

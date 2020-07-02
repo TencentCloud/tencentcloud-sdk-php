@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -134,54 +134,54 @@ class RegisterMigrationTaskRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TaskType",$param) and $param["TaskType"] !== null) {
-            $this->TaskType = $param["TaskType"];
+        if (array_key_exists('TaskType',$param) and $param['TaskType'] !== null) {
+            $this->TaskType = $param['TaskType'];
         }
 
-        if (array_key_exists("TaskName",$param) and $param["TaskName"] !== null) {
-            $this->TaskName = $param["TaskName"];
+        if (array_key_exists('TaskName',$param) and $param['TaskName'] !== null) {
+            $this->TaskName = $param['TaskName'];
         }
 
-        if (array_key_exists("ServiceSupplier",$param) and $param["ServiceSupplier"] !== null) {
-            $this->ServiceSupplier = $param["ServiceSupplier"];
+        if (array_key_exists('ServiceSupplier',$param) and $param['ServiceSupplier'] !== null) {
+            $this->ServiceSupplier = $param['ServiceSupplier'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
-            $this->UpdateTime = $param["UpdateTime"];
+        if (array_key_exists('UpdateTime',$param) and $param['UpdateTime'] !== null) {
+            $this->UpdateTime = $param['UpdateTime'];
         }
 
-        if (array_key_exists("MigrateClass",$param) and $param["MigrateClass"] !== null) {
-            $this->MigrateClass = $param["MigrateClass"];
+        if (array_key_exists('MigrateClass',$param) and $param['MigrateClass'] !== null) {
+            $this->MigrateClass = $param['MigrateClass'];
         }
 
-        if (array_key_exists("SrcInfo",$param) and $param["SrcInfo"] !== null) {
+        if (array_key_exists('SrcInfo',$param) and $param['SrcInfo'] !== null) {
             $this->SrcInfo = new SrcInfo();
-            $this->SrcInfo->deserialize($param["SrcInfo"]);
+            $this->SrcInfo->deserialize($param['SrcInfo']);
         }
 
-        if (array_key_exists("DstInfo",$param) and $param["DstInfo"] !== null) {
+        if (array_key_exists('DstInfo',$param) and $param['DstInfo'] !== null) {
             $this->DstInfo = new DstInfo();
-            $this->DstInfo->deserialize($param["DstInfo"]);
+            $this->DstInfo->deserialize($param['DstInfo']);
         }
 
-        if (array_key_exists("SrcAccessType",$param) and $param["SrcAccessType"] !== null) {
-            $this->SrcAccessType = $param["SrcAccessType"];
+        if (array_key_exists('SrcAccessType',$param) and $param['SrcAccessType'] !== null) {
+            $this->SrcAccessType = $param['SrcAccessType'];
         }
 
-        if (array_key_exists("SrcDatabaseType",$param) and $param["SrcDatabaseType"] !== null) {
-            $this->SrcDatabaseType = $param["SrcDatabaseType"];
+        if (array_key_exists('SrcDatabaseType',$param) and $param['SrcDatabaseType'] !== null) {
+            $this->SrcDatabaseType = $param['SrcDatabaseType'];
         }
 
-        if (array_key_exists("DstAccessType",$param) and $param["DstAccessType"] !== null) {
-            $this->DstAccessType = $param["DstAccessType"];
+        if (array_key_exists('DstAccessType',$param) and $param['DstAccessType'] !== null) {
+            $this->DstAccessType = $param['DstAccessType'];
         }
 
-        if (array_key_exists("DstDatabaseType",$param) and $param["DstDatabaseType"] !== null) {
-            $this->DstDatabaseType = $param["DstDatabaseType"];
+        if (array_key_exists('DstDatabaseType',$param) and $param['DstDatabaseType'] !== null) {
+            $this->DstDatabaseType = $param['DstDatabaseType'];
         }
     }
 }

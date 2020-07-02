@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -70,21 +70,21 @@ class SnapshotByTimeOffsetTask2017 extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
-            $this->TaskId = $param["TaskId"];
+        if (array_key_exists('TaskId',$param) and $param['TaskId'] !== null) {
+            $this->TaskId = $param['TaskId'];
         }
 
-        if (array_key_exists("FileId",$param) and $param["FileId"] !== null) {
-            $this->FileId = $param["FileId"];
+        if (array_key_exists('FileId',$param) and $param['FileId'] !== null) {
+            $this->FileId = $param['FileId'];
         }
 
-        if (array_key_exists("Definition",$param) and $param["Definition"] !== null) {
-            $this->Definition = $param["Definition"];
+        if (array_key_exists('Definition',$param) and $param['Definition'] !== null) {
+            $this->Definition = $param['Definition'];
         }
 
-        if (array_key_exists("SnapshotInfoSet",$param) and $param["SnapshotInfoSet"] !== null) {
+        if (array_key_exists('SnapshotInfoSet',$param) and $param['SnapshotInfoSet'] !== null) {
             $this->SnapshotInfoSet = [];
-            foreach ($param["SnapshotInfoSet"] as $key => $value){
+            foreach ($param['SnapshotInfoSet'] as $key => $value){
                 $obj = new SnapshotByTimeOffset2017();
                 $obj->deserialize($value);
                 array_push($this->SnapshotInfoSet, $obj);

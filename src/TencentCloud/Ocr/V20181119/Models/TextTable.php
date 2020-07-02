@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -110,45 +110,45 @@ class TextTable extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ColTl",$param) and $param["ColTl"] !== null) {
-            $this->ColTl = $param["ColTl"];
+        if (array_key_exists('ColTl',$param) and $param['ColTl'] !== null) {
+            $this->ColTl = $param['ColTl'];
         }
 
-        if (array_key_exists("RowTl",$param) and $param["RowTl"] !== null) {
-            $this->RowTl = $param["RowTl"];
+        if (array_key_exists('RowTl',$param) and $param['RowTl'] !== null) {
+            $this->RowTl = $param['RowTl'];
         }
 
-        if (array_key_exists("ColBr",$param) and $param["ColBr"] !== null) {
-            $this->ColBr = $param["ColBr"];
+        if (array_key_exists('ColBr',$param) and $param['ColBr'] !== null) {
+            $this->ColBr = $param['ColBr'];
         }
 
-        if (array_key_exists("RowBr",$param) and $param["RowBr"] !== null) {
-            $this->RowBr = $param["RowBr"];
+        if (array_key_exists('RowBr',$param) and $param['RowBr'] !== null) {
+            $this->RowBr = $param['RowBr'];
         }
 
-        if (array_key_exists("Text",$param) and $param["Text"] !== null) {
-            $this->Text = $param["Text"];
+        if (array_key_exists('Text',$param) and $param['Text'] !== null) {
+            $this->Text = $param['Text'];
         }
 
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists('Type',$param) and $param['Type'] !== null) {
+            $this->Type = $param['Type'];
         }
 
-        if (array_key_exists("Confidence",$param) and $param["Confidence"] !== null) {
-            $this->Confidence = $param["Confidence"];
+        if (array_key_exists('Confidence',$param) and $param['Confidence'] !== null) {
+            $this->Confidence = $param['Confidence'];
         }
 
-        if (array_key_exists("Polygon",$param) and $param["Polygon"] !== null) {
+        if (array_key_exists('Polygon',$param) and $param['Polygon'] !== null) {
             $this->Polygon = [];
-            foreach ($param["Polygon"] as $key => $value){
+            foreach ($param['Polygon'] as $key => $value){
                 $obj = new Coord();
                 $obj->deserialize($value);
                 array_push($this->Polygon, $obj);
             }
         }
 
-        if (array_key_exists("AdvancedInfo",$param) and $param["AdvancedInfo"] !== null) {
-            $this->AdvancedInfo = $param["AdvancedInfo"];
+        if (array_key_exists('AdvancedInfo',$param) and $param['AdvancedInfo'] !== null) {
+            $this->AdvancedInfo = $param['AdvancedInfo'];
         }
     }
 }

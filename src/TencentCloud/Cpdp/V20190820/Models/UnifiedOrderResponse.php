@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -78,24 +78,24 @@ class UnifiedOrderResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalAmt",$param) and $param["TotalAmt"] !== null) {
-            $this->TotalAmt = $param["TotalAmt"];
+        if (array_key_exists('TotalAmt',$param) and $param['TotalAmt'] !== null) {
+            $this->TotalAmt = $param['TotalAmt'];
         }
 
-        if (array_key_exists("OutTradeNo",$param) and $param["OutTradeNo"] !== null) {
-            $this->OutTradeNo = $param["OutTradeNo"];
+        if (array_key_exists('OutTradeNo',$param) and $param['OutTradeNo'] !== null) {
+            $this->OutTradeNo = $param['OutTradeNo'];
         }
 
-        if (array_key_exists("PayInfo",$param) and $param["PayInfo"] !== null) {
-            $this->PayInfo = $param["PayInfo"];
+        if (array_key_exists('PayInfo',$param) and $param['PayInfo'] !== null) {
+            $this->PayInfo = $param['PayInfo'];
         }
 
-        if (array_key_exists("TransactionId",$param) and $param["TransactionId"] !== null) {
-            $this->TransactionId = $param["TransactionId"];
+        if (array_key_exists('TransactionId',$param) and $param['TransactionId'] !== null) {
+            $this->TransactionId = $param['TransactionId'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

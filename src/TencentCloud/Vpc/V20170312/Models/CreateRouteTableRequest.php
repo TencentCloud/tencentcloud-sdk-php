@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) 设置待操作的VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
  * @method string getRouteTableName() 获取路由表名称，最大长度不能超过60个字节。
  * @method void setRouteTableName(string $RouteTableName) 设置路由表名称，最大长度不能超过60个字节。
- * @method array getTags() 获取指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
- * @method void setTags(array $Tags) 设置指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
+ * @method array getTags() 获取指定绑定的标签列表，例如：[{'Key': 'city', 'Value': 'shanghai'}]
+ * @method void setTags(array $Tags) 设置指定绑定的标签列表，例如：[{'Key': 'city', 'Value': 'shanghai'}]
  */
 class CreateRouteTableRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class CreateRouteTableRequest extends AbstractModel
     public $RouteTableName;
 
     /**
-     * @var array 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
+     * @var array 指定绑定的标签列表，例如：[{'Key': 'city', 'Value': 'shanghai'}]
      */
     public $Tags;
 
     /**
      * @param string $VpcId 待操作的VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
      * @param string $RouteTableName 路由表名称，最大长度不能超过60个字节。
-     * @param array $Tags 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
+     * @param array $Tags 指定绑定的标签列表，例如：[{'Key': 'city', 'Value': 'shanghai'}]
      */
     function __construct()
     {
@@ -62,17 +62,17 @@ class CreateRouteTableRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
-            $this->VpcId = $param["VpcId"];
+        if (array_key_exists('VpcId',$param) and $param['VpcId'] !== null) {
+            $this->VpcId = $param['VpcId'];
         }
 
-        if (array_key_exists("RouteTableName",$param) and $param["RouteTableName"] !== null) {
-            $this->RouteTableName = $param["RouteTableName"];
+        if (array_key_exists('RouteTableName',$param) and $param['RouteTableName'] !== null) {
+            $this->RouteTableName = $param['RouteTableName'];
         }
 
-        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+        if (array_key_exists('Tags',$param) and $param['Tags'] !== null) {
             $this->Tags = [];
-            foreach ($param["Tags"] as $key => $value){
+            foreach ($param['Tags'] as $key => $value){
                 $obj = new Tag();
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);

@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -126,49 +126,49 @@ class UpdateFunctionCodeRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Handler",$param) and $param["Handler"] !== null) {
-            $this->Handler = $param["Handler"];
+        if (array_key_exists('Handler',$param) and $param['Handler'] !== null) {
+            $this->Handler = $param['Handler'];
         }
 
-        if (array_key_exists("FunctionName",$param) and $param["FunctionName"] !== null) {
-            $this->FunctionName = $param["FunctionName"];
+        if (array_key_exists('FunctionName',$param) and $param['FunctionName'] !== null) {
+            $this->FunctionName = $param['FunctionName'];
         }
 
-        if (array_key_exists("CosBucketName",$param) and $param["CosBucketName"] !== null) {
-            $this->CosBucketName = $param["CosBucketName"];
+        if (array_key_exists('CosBucketName',$param) and $param['CosBucketName'] !== null) {
+            $this->CosBucketName = $param['CosBucketName'];
         }
 
-        if (array_key_exists("CosObjectName",$param) and $param["CosObjectName"] !== null) {
-            $this->CosObjectName = $param["CosObjectName"];
+        if (array_key_exists('CosObjectName',$param) and $param['CosObjectName'] !== null) {
+            $this->CosObjectName = $param['CosObjectName'];
         }
 
-        if (array_key_exists("ZipFile",$param) and $param["ZipFile"] !== null) {
-            $this->ZipFile = $param["ZipFile"];
+        if (array_key_exists('ZipFile',$param) and $param['ZipFile'] !== null) {
+            $this->ZipFile = $param['ZipFile'];
         }
 
-        if (array_key_exists("Namespace",$param) and $param["Namespace"] !== null) {
-            $this->Namespace = $param["Namespace"];
+        if (array_key_exists('Namespace',$param) and $param['Namespace'] !== null) {
+            $this->Namespace = $param['Namespace'];
         }
 
-        if (array_key_exists("CosBucketRegion",$param) and $param["CosBucketRegion"] !== null) {
-            $this->CosBucketRegion = $param["CosBucketRegion"];
+        if (array_key_exists('CosBucketRegion',$param) and $param['CosBucketRegion'] !== null) {
+            $this->CosBucketRegion = $param['CosBucketRegion'];
         }
 
-        if (array_key_exists("EnvId",$param) and $param["EnvId"] !== null) {
-            $this->EnvId = $param["EnvId"];
+        if (array_key_exists('EnvId',$param) and $param['EnvId'] !== null) {
+            $this->EnvId = $param['EnvId'];
         }
 
-        if (array_key_exists("Publish",$param) and $param["Publish"] !== null) {
-            $this->Publish = $param["Publish"];
+        if (array_key_exists('Publish',$param) and $param['Publish'] !== null) {
+            $this->Publish = $param['Publish'];
         }
 
-        if (array_key_exists("Code",$param) and $param["Code"] !== null) {
+        if (array_key_exists('Code',$param) and $param['Code'] !== null) {
             $this->Code = new Code();
-            $this->Code->deserialize($param["Code"]);
+            $this->Code->deserialize($param['Code']);
         }
 
-        if (array_key_exists("CodeSource",$param) and $param["CodeSource"] !== null) {
-            $this->CodeSource = $param["CodeSource"];
+        if (array_key_exists('CodeSource',$param) and $param['CodeSource'] !== null) {
+            $this->CodeSource = $param['CodeSource'];
         }
     }
 }

@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -206,88 +206,88 @@ class SpecItem extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SpecCode",$param) and $param["SpecCode"] !== null) {
-            $this->SpecCode = $param["SpecCode"];
+        if (array_key_exists('SpecCode',$param) and $param['SpecCode'] !== null) {
+            $this->SpecCode = $param['SpecCode'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("MachineType",$param) and $param["MachineType"] !== null) {
-            $this->MachineType = $param["MachineType"];
+        if (array_key_exists('MachineType',$param) and $param['MachineType'] !== null) {
+            $this->MachineType = $param['MachineType'];
         }
 
-        if (array_key_exists("Cpu",$param) and $param["Cpu"] !== null) {
-            $this->Cpu = $param["Cpu"];
+        if (array_key_exists('Cpu',$param) and $param['Cpu'] !== null) {
+            $this->Cpu = $param['Cpu'];
         }
 
-        if (array_key_exists("Memory",$param) and $param["Memory"] !== null) {
-            $this->Memory = $param["Memory"];
+        if (array_key_exists('Memory',$param) and $param['Memory'] !== null) {
+            $this->Memory = $param['Memory'];
         }
 
-        if (array_key_exists("DefaultStorage",$param) and $param["DefaultStorage"] !== null) {
-            $this->DefaultStorage = $param["DefaultStorage"];
+        if (array_key_exists('DefaultStorage',$param) and $param['DefaultStorage'] !== null) {
+            $this->DefaultStorage = $param['DefaultStorage'];
         }
 
-        if (array_key_exists("MaxStorage",$param) and $param["MaxStorage"] !== null) {
-            $this->MaxStorage = $param["MaxStorage"];
+        if (array_key_exists('MaxStorage',$param) and $param['MaxStorage'] !== null) {
+            $this->MaxStorage = $param['MaxStorage'];
         }
 
-        if (array_key_exists("MinStorage",$param) and $param["MinStorage"] !== null) {
-            $this->MinStorage = $param["MinStorage"];
+        if (array_key_exists('MinStorage',$param) and $param['MinStorage'] !== null) {
+            $this->MinStorage = $param['MinStorage'];
         }
 
-        if (array_key_exists("Qps",$param) and $param["Qps"] !== null) {
-            $this->Qps = $param["Qps"];
+        if (array_key_exists('Qps',$param) and $param['Qps'] !== null) {
+            $this->Qps = $param['Qps'];
         }
 
-        if (array_key_exists("Conns",$param) and $param["Conns"] !== null) {
-            $this->Conns = $param["Conns"];
+        if (array_key_exists('Conns',$param) and $param['Conns'] !== null) {
+            $this->Conns = $param['Conns'];
         }
 
-        if (array_key_exists("MongoVersionCode",$param) and $param["MongoVersionCode"] !== null) {
-            $this->MongoVersionCode = $param["MongoVersionCode"];
+        if (array_key_exists('MongoVersionCode',$param) and $param['MongoVersionCode'] !== null) {
+            $this->MongoVersionCode = $param['MongoVersionCode'];
         }
 
-        if (array_key_exists("MongoVersionValue",$param) and $param["MongoVersionValue"] !== null) {
-            $this->MongoVersionValue = $param["MongoVersionValue"];
+        if (array_key_exists('MongoVersionValue',$param) and $param['MongoVersionValue'] !== null) {
+            $this->MongoVersionValue = $param['MongoVersionValue'];
         }
 
-        if (array_key_exists("Version",$param) and $param["Version"] !== null) {
-            $this->Version = $param["Version"];
+        if (array_key_exists('Version',$param) and $param['Version'] !== null) {
+            $this->Version = $param['Version'];
         }
 
-        if (array_key_exists("EngineName",$param) and $param["EngineName"] !== null) {
-            $this->EngineName = $param["EngineName"];
+        if (array_key_exists('EngineName',$param) and $param['EngineName'] !== null) {
+            $this->EngineName = $param['EngineName'];
         }
 
-        if (array_key_exists("ClusterType",$param) and $param["ClusterType"] !== null) {
-            $this->ClusterType = $param["ClusterType"];
+        if (array_key_exists('ClusterType',$param) and $param['ClusterType'] !== null) {
+            $this->ClusterType = $param['ClusterType'];
         }
 
-        if (array_key_exists("MinNodeNum",$param) and $param["MinNodeNum"] !== null) {
-            $this->MinNodeNum = $param["MinNodeNum"];
+        if (array_key_exists('MinNodeNum',$param) and $param['MinNodeNum'] !== null) {
+            $this->MinNodeNum = $param['MinNodeNum'];
         }
 
-        if (array_key_exists("MaxNodeNum",$param) and $param["MaxNodeNum"] !== null) {
-            $this->MaxNodeNum = $param["MaxNodeNum"];
+        if (array_key_exists('MaxNodeNum',$param) and $param['MaxNodeNum'] !== null) {
+            $this->MaxNodeNum = $param['MaxNodeNum'];
         }
 
-        if (array_key_exists("MinReplicateSetNum",$param) and $param["MinReplicateSetNum"] !== null) {
-            $this->MinReplicateSetNum = $param["MinReplicateSetNum"];
+        if (array_key_exists('MinReplicateSetNum',$param) and $param['MinReplicateSetNum'] !== null) {
+            $this->MinReplicateSetNum = $param['MinReplicateSetNum'];
         }
 
-        if (array_key_exists("MaxReplicateSetNum",$param) and $param["MaxReplicateSetNum"] !== null) {
-            $this->MaxReplicateSetNum = $param["MaxReplicateSetNum"];
+        if (array_key_exists('MaxReplicateSetNum',$param) and $param['MaxReplicateSetNum'] !== null) {
+            $this->MaxReplicateSetNum = $param['MaxReplicateSetNum'];
         }
 
-        if (array_key_exists("MinReplicateSetNodeNum",$param) and $param["MinReplicateSetNodeNum"] !== null) {
-            $this->MinReplicateSetNodeNum = $param["MinReplicateSetNodeNum"];
+        if (array_key_exists('MinReplicateSetNodeNum',$param) and $param['MinReplicateSetNodeNum'] !== null) {
+            $this->MinReplicateSetNodeNum = $param['MinReplicateSetNodeNum'];
         }
 
-        if (array_key_exists("MaxReplicateSetNodeNum",$param) and $param["MaxReplicateSetNodeNum"] !== null) {
-            $this->MaxReplicateSetNodeNum = $param["MaxReplicateSetNodeNum"];
+        if (array_key_exists('MaxReplicateSetNodeNum',$param) and $param['MaxReplicateSetNodeNum'] !== null) {
+            $this->MaxReplicateSetNodeNum = $param['MaxReplicateSetNodeNum'];
         }
     }
 }

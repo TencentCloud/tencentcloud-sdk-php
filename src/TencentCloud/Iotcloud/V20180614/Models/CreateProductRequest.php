@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -62,17 +62,17 @@ class CreateProductRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ProductName",$param) and $param["ProductName"] !== null) {
-            $this->ProductName = $param["ProductName"];
+        if (array_key_exists('ProductName',$param) and $param['ProductName'] !== null) {
+            $this->ProductName = $param['ProductName'];
         }
 
-        if (array_key_exists("ProductProperties",$param) and $param["ProductProperties"] !== null) {
+        if (array_key_exists('ProductProperties',$param) and $param['ProductProperties'] !== null) {
             $this->ProductProperties = new ProductProperties();
-            $this->ProductProperties->deserialize($param["ProductProperties"]);
+            $this->ProductProperties->deserialize($param['ProductProperties']);
         }
 
-        if (array_key_exists("Skey",$param) and $param["Skey"] !== null) {
-            $this->Skey = $param["Skey"];
+        if (array_key_exists('Skey',$param) and $param['Skey'] !== null) {
+            $this->Skey = $param['Skey'];
         }
     }
 }

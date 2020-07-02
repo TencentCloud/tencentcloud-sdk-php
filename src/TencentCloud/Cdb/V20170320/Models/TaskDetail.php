@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -29,30 +29,30 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getProgress() 获取实例任务进度。
  * @method void setProgress(integer $Progress) 设置实例任务进度。
  * @method string getTaskStatus() 获取实例任务状态，可能的值包括：
-"UNDEFINED" - 未定义；
-"INITIAL" - 初始化；
-"RUNNING" - 运行中；
-"SUCCEED" - 执行成功；
-"FAILED" - 执行失败；
-"KILLED" - 已终止；
-"REMOVED" - 已删除；
-"PAUSED" - 已暂停。
+'UNDEFINED' - 未定义；
+'INITIAL' - 初始化；
+'RUNNING' - 运行中；
+'SUCCEED' - 执行成功；
+'FAILED' - 执行失败；
+'KILLED' - 已终止；
+'REMOVED' - 已删除；
+'PAUSED' - 已暂停。
  * @method void setTaskStatus(string $TaskStatus) 设置实例任务状态，可能的值包括：
-"UNDEFINED" - 未定义；
-"INITIAL" - 初始化；
-"RUNNING" - 运行中；
-"SUCCEED" - 执行成功；
-"FAILED" - 执行失败；
-"KILLED" - 已终止；
-"REMOVED" - 已删除；
-"PAUSED" - 已暂停。
+'UNDEFINED' - 未定义；
+'INITIAL' - 初始化；
+'RUNNING' - 运行中；
+'SUCCEED' - 执行成功；
+'FAILED' - 执行失败；
+'KILLED' - 已终止；
+'REMOVED' - 已删除；
+'PAUSED' - 已暂停。
  * @method string getTaskType() 获取实例任务类型，可能的值包括：
-"ROLLBACK" - 数据库回档；
+'ROLLBACK' - 数据库回档；
 "SQL OPERATION" - SQL操作；
 "IMPORT DATA" - 数据导入；
 "MODIFY PARAM" - 参数设置；
-"INITIAL" - 初始化云数据库实例；
-"REBOOT" - 重启云数据库实例；
+'INITIAL' - 初始化云数据库实例；
+'REBOOT' - 重启云数据库实例；
 "OPEN GTID" - 开启云数据库实例GTID；
 "UPGRADE RO" - 只读实例升级；
 "BATCH ROLLBACK" - 数据库批量回档；
@@ -60,12 +60,12 @@ use TencentCloud\Common\AbstractModel;
 "DROP TABLES" - 删除云数据库库表；
 "SWITCH DR TO MASTER" - 灾备实例提升为主。
  * @method void setTaskType(string $TaskType) 设置实例任务类型，可能的值包括：
-"ROLLBACK" - 数据库回档；
+'ROLLBACK' - 数据库回档；
 "SQL OPERATION" - SQL操作；
 "IMPORT DATA" - 数据导入；
 "MODIFY PARAM" - 参数设置；
-"INITIAL" - 初始化云数据库实例；
-"REBOOT" - 重启云数据库实例；
+'INITIAL' - 初始化云数据库实例；
+'REBOOT' - 重启云数据库实例；
 "OPEN GTID" - 开启云数据库实例GTID；
 "UPGRADE RO" - 只读实例升级；
 "BATCH ROLLBACK" - 数据库批量回档；
@@ -107,25 +107,25 @@ class TaskDetail extends AbstractModel
 
     /**
      * @var string 实例任务状态，可能的值包括：
-"UNDEFINED" - 未定义；
-"INITIAL" - 初始化；
-"RUNNING" - 运行中；
-"SUCCEED" - 执行成功；
-"FAILED" - 执行失败；
-"KILLED" - 已终止；
-"REMOVED" - 已删除；
-"PAUSED" - 已暂停。
+'UNDEFINED' - 未定义；
+'INITIAL' - 初始化；
+'RUNNING' - 运行中；
+'SUCCEED' - 执行成功；
+'FAILED' - 执行失败；
+'KILLED' - 已终止；
+'REMOVED' - 已删除；
+'PAUSED' - 已暂停。
      */
     public $TaskStatus;
 
     /**
      * @var string 实例任务类型，可能的值包括：
-"ROLLBACK" - 数据库回档；
+'ROLLBACK' - 数据库回档；
 "SQL OPERATION" - SQL操作；
 "IMPORT DATA" - 数据导入；
 "MODIFY PARAM" - 参数设置；
-"INITIAL" - 初始化云数据库实例；
-"REBOOT" - 重启云数据库实例；
+'INITIAL' - 初始化云数据库实例；
+'REBOOT' - 重启云数据库实例；
 "OPEN GTID" - 开启云数据库实例GTID；
 "UPGRADE RO" - 只读实例升级；
 "BATCH ROLLBACK" - 数据库批量回档；
@@ -162,21 +162,21 @@ class TaskDetail extends AbstractModel
      * @param integer $JobId 实例任务 ID。
      * @param integer $Progress 实例任务进度。
      * @param string $TaskStatus 实例任务状态，可能的值包括：
-"UNDEFINED" - 未定义；
-"INITIAL" - 初始化；
-"RUNNING" - 运行中；
-"SUCCEED" - 执行成功；
-"FAILED" - 执行失败；
-"KILLED" - 已终止；
-"REMOVED" - 已删除；
-"PAUSED" - 已暂停。
+'UNDEFINED' - 未定义；
+'INITIAL' - 初始化；
+'RUNNING' - 运行中；
+'SUCCEED' - 执行成功；
+'FAILED' - 执行失败；
+'KILLED' - 已终止；
+'REMOVED' - 已删除；
+'PAUSED' - 已暂停。
      * @param string $TaskType 实例任务类型，可能的值包括：
-"ROLLBACK" - 数据库回档；
+'ROLLBACK' - 数据库回档；
 "SQL OPERATION" - SQL操作；
 "IMPORT DATA" - 数据导入；
 "MODIFY PARAM" - 参数设置；
-"INITIAL" - 初始化云数据库实例；
-"REBOOT" - 重启云数据库实例；
+'INITIAL' - 初始化云数据库实例；
+'REBOOT' - 重启云数据库实例；
 "OPEN GTID" - 开启云数据库实例GTID；
 "UPGRADE RO" - 只读实例升级；
 "BATCH ROLLBACK" - 数据库批量回档；
@@ -202,44 +202,44 @@ class TaskDetail extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Code",$param) and $param["Code"] !== null) {
-            $this->Code = $param["Code"];
+        if (array_key_exists('Code',$param) and $param['Code'] !== null) {
+            $this->Code = $param['Code'];
         }
 
-        if (array_key_exists("Message",$param) and $param["Message"] !== null) {
-            $this->Message = $param["Message"];
+        if (array_key_exists('Message',$param) and $param['Message'] !== null) {
+            $this->Message = $param['Message'];
         }
 
-        if (array_key_exists("JobId",$param) and $param["JobId"] !== null) {
-            $this->JobId = $param["JobId"];
+        if (array_key_exists('JobId',$param) and $param['JobId'] !== null) {
+            $this->JobId = $param['JobId'];
         }
 
-        if (array_key_exists("Progress",$param) and $param["Progress"] !== null) {
-            $this->Progress = $param["Progress"];
+        if (array_key_exists('Progress',$param) and $param['Progress'] !== null) {
+            $this->Progress = $param['Progress'];
         }
 
-        if (array_key_exists("TaskStatus",$param) and $param["TaskStatus"] !== null) {
-            $this->TaskStatus = $param["TaskStatus"];
+        if (array_key_exists('TaskStatus',$param) and $param['TaskStatus'] !== null) {
+            $this->TaskStatus = $param['TaskStatus'];
         }
 
-        if (array_key_exists("TaskType",$param) and $param["TaskType"] !== null) {
-            $this->TaskType = $param["TaskType"];
+        if (array_key_exists('TaskType',$param) and $param['TaskType'] !== null) {
+            $this->TaskType = $param['TaskType'];
         }
 
-        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
-            $this->StartTime = $param["StartTime"];
+        if (array_key_exists('StartTime',$param) and $param['StartTime'] !== null) {
+            $this->StartTime = $param['StartTime'];
         }
 
-        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
-            $this->EndTime = $param["EndTime"];
+        if (array_key_exists('EndTime',$param) and $param['EndTime'] !== null) {
+            $this->EndTime = $param['EndTime'];
         }
 
-        if (array_key_exists("InstanceIds",$param) and $param["InstanceIds"] !== null) {
-            $this->InstanceIds = $param["InstanceIds"];
+        if (array_key_exists('InstanceIds',$param) and $param['InstanceIds'] !== null) {
+            $this->InstanceIds = $param['InstanceIds'];
         }
 
-        if (array_key_exists("AsyncRequestId",$param) and $param["AsyncRequestId"] !== null) {
-            $this->AsyncRequestId = $param["AsyncRequestId"];
+        if (array_key_exists('AsyncRequestId',$param) and $param['AsyncRequestId'] !== null) {
+            $this->AsyncRequestId = $param['AsyncRequestId'];
         }
     }
 }

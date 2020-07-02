@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -134,54 +134,54 @@ class GetFunctionLogsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FunctionName",$param) and $param["FunctionName"] !== null) {
-            $this->FunctionName = $param["FunctionName"];
+        if (array_key_exists('FunctionName',$param) and $param['FunctionName'] !== null) {
+            $this->FunctionName = $param['FunctionName'];
         }
 
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
+        if (array_key_exists('Offset',$param) and $param['Offset'] !== null) {
+            $this->Offset = $param['Offset'];
         }
 
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
+        if (array_key_exists('Limit',$param) and $param['Limit'] !== null) {
+            $this->Limit = $param['Limit'];
         }
 
-        if (array_key_exists("Order",$param) and $param["Order"] !== null) {
-            $this->Order = $param["Order"];
+        if (array_key_exists('Order',$param) and $param['Order'] !== null) {
+            $this->Order = $param['Order'];
         }
 
-        if (array_key_exists("OrderBy",$param) and $param["OrderBy"] !== null) {
-            $this->OrderBy = $param["OrderBy"];
+        if (array_key_exists('OrderBy',$param) and $param['OrderBy'] !== null) {
+            $this->OrderBy = $param['OrderBy'];
         }
 
-        if (array_key_exists("Filter",$param) and $param["Filter"] !== null) {
+        if (array_key_exists('Filter',$param) and $param['Filter'] !== null) {
             $this->Filter = new LogFilter();
-            $this->Filter->deserialize($param["Filter"]);
+            $this->Filter->deserialize($param['Filter']);
         }
 
-        if (array_key_exists("Namespace",$param) and $param["Namespace"] !== null) {
-            $this->Namespace = $param["Namespace"];
+        if (array_key_exists('Namespace',$param) and $param['Namespace'] !== null) {
+            $this->Namespace = $param['Namespace'];
         }
 
-        if (array_key_exists("Qualifier",$param) and $param["Qualifier"] !== null) {
-            $this->Qualifier = $param["Qualifier"];
+        if (array_key_exists('Qualifier',$param) and $param['Qualifier'] !== null) {
+            $this->Qualifier = $param['Qualifier'];
         }
 
-        if (array_key_exists("FunctionRequestId",$param) and $param["FunctionRequestId"] !== null) {
-            $this->FunctionRequestId = $param["FunctionRequestId"];
+        if (array_key_exists('FunctionRequestId',$param) and $param['FunctionRequestId'] !== null) {
+            $this->FunctionRequestId = $param['FunctionRequestId'];
         }
 
-        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
-            $this->StartTime = $param["StartTime"];
+        if (array_key_exists('StartTime',$param) and $param['StartTime'] !== null) {
+            $this->StartTime = $param['StartTime'];
         }
 
-        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
-            $this->EndTime = $param["EndTime"];
+        if (array_key_exists('EndTime',$param) and $param['EndTime'] !== null) {
+            $this->EndTime = $param['EndTime'];
         }
 
-        if (array_key_exists("SearchContext",$param) and $param["SearchContext"] !== null) {
+        if (array_key_exists('SearchContext',$param) and $param['SearchContext'] !== null) {
             $this->SearchContext = new LogSearchContext();
-            $this->SearchContext->deserialize($param["SearchContext"]);
+            $this->SearchContext->deserialize($param['SearchContext']);
         }
     }
 }

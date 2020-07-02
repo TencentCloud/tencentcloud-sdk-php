@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -190,57 +190,57 @@ FilterType = 2表示用户使用 BindingKey 过滤。
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TopicId",$param) and $param["TopicId"] !== null) {
-            $this->TopicId = $param["TopicId"];
+        if (array_key_exists('TopicId',$param) and $param['TopicId'] !== null) {
+            $this->TopicId = $param['TopicId'];
         }
 
-        if (array_key_exists("TopicName",$param) and $param["TopicName"] !== null) {
-            $this->TopicName = $param["TopicName"];
+        if (array_key_exists('TopicName',$param) and $param['TopicName'] !== null) {
+            $this->TopicName = $param['TopicName'];
         }
 
-        if (array_key_exists("MsgRetentionSeconds",$param) and $param["MsgRetentionSeconds"] !== null) {
-            $this->MsgRetentionSeconds = $param["MsgRetentionSeconds"];
+        if (array_key_exists('MsgRetentionSeconds',$param) and $param['MsgRetentionSeconds'] !== null) {
+            $this->MsgRetentionSeconds = $param['MsgRetentionSeconds'];
         }
 
-        if (array_key_exists("MaxMsgSize",$param) and $param["MaxMsgSize"] !== null) {
-            $this->MaxMsgSize = $param["MaxMsgSize"];
+        if (array_key_exists('MaxMsgSize',$param) and $param['MaxMsgSize'] !== null) {
+            $this->MaxMsgSize = $param['MaxMsgSize'];
         }
 
-        if (array_key_exists("Qps",$param) and $param["Qps"] !== null) {
-            $this->Qps = $param["Qps"];
+        if (array_key_exists('Qps',$param) and $param['Qps'] !== null) {
+            $this->Qps = $param['Qps'];
         }
 
-        if (array_key_exists("FilterType",$param) and $param["FilterType"] !== null) {
-            $this->FilterType = $param["FilterType"];
+        if (array_key_exists('FilterType',$param) and $param['FilterType'] !== null) {
+            $this->FilterType = $param['FilterType'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("LastModifyTime",$param) and $param["LastModifyTime"] !== null) {
-            $this->LastModifyTime = $param["LastModifyTime"];
+        if (array_key_exists('LastModifyTime',$param) and $param['LastModifyTime'] !== null) {
+            $this->LastModifyTime = $param['LastModifyTime'];
         }
 
-        if (array_key_exists("MsgCount",$param) and $param["MsgCount"] !== null) {
-            $this->MsgCount = $param["MsgCount"];
+        if (array_key_exists('MsgCount',$param) and $param['MsgCount'] !== null) {
+            $this->MsgCount = $param['MsgCount'];
         }
 
-        if (array_key_exists("CreateUin",$param) and $param["CreateUin"] !== null) {
-            $this->CreateUin = $param["CreateUin"];
+        if (array_key_exists('CreateUin',$param) and $param['CreateUin'] !== null) {
+            $this->CreateUin = $param['CreateUin'];
         }
 
-        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+        if (array_key_exists('Tags',$param) and $param['Tags'] !== null) {
             $this->Tags = [];
-            foreach ($param["Tags"] as $key => $value){
+            foreach ($param['Tags'] as $key => $value){
                 $obj = new Tag();
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
         }
 
-        if (array_key_exists("Trace",$param) and $param["Trace"] !== null) {
-            $this->Trace = $param["Trace"];
+        if (array_key_exists('Trace',$param) and $param['Trace'] !== null) {
+            $this->Trace = $param['Trace'];
         }
     }
 }

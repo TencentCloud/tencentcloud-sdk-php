@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -194,56 +194,56 @@ class SimpleGroup extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
-            $this->GroupId = $param["GroupId"];
+        if (array_key_exists('GroupId',$param) and $param['GroupId'] !== null) {
+            $this->GroupId = $param['GroupId'];
         }
 
-        if (array_key_exists("GroupName",$param) and $param["GroupName"] !== null) {
-            $this->GroupName = $param["GroupName"];
+        if (array_key_exists('GroupName',$param) and $param['GroupName'] !== null) {
+            $this->GroupName = $param['GroupName'];
         }
 
-        if (array_key_exists("ApplicationId",$param) and $param["ApplicationId"] !== null) {
-            $this->ApplicationId = $param["ApplicationId"];
+        if (array_key_exists('ApplicationId',$param) and $param['ApplicationId'] !== null) {
+            $this->ApplicationId = $param['ApplicationId'];
         }
 
-        if (array_key_exists("ApplicationName",$param) and $param["ApplicationName"] !== null) {
-            $this->ApplicationName = $param["ApplicationName"];
+        if (array_key_exists('ApplicationName',$param) and $param['ApplicationName'] !== null) {
+            $this->ApplicationName = $param['ApplicationName'];
         }
 
-        if (array_key_exists("ApplicationType",$param) and $param["ApplicationType"] !== null) {
-            $this->ApplicationType = $param["ApplicationType"];
+        if (array_key_exists('ApplicationType',$param) and $param['ApplicationType'] !== null) {
+            $this->ApplicationType = $param['ApplicationType'];
         }
 
-        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
-            $this->ClusterId = $param["ClusterId"];
+        if (array_key_exists('ClusterId',$param) and $param['ClusterId'] !== null) {
+            $this->ClusterId = $param['ClusterId'];
         }
 
-        if (array_key_exists("ClusterName",$param) and $param["ClusterName"] !== null) {
-            $this->ClusterName = $param["ClusterName"];
+        if (array_key_exists('ClusterName',$param) and $param['ClusterName'] !== null) {
+            $this->ClusterName = $param['ClusterName'];
         }
 
-        if (array_key_exists("ClusterType",$param) and $param["ClusterType"] !== null) {
-            $this->ClusterType = $param["ClusterType"];
+        if (array_key_exists('ClusterType',$param) and $param['ClusterType'] !== null) {
+            $this->ClusterType = $param['ClusterType'];
         }
 
-        if (array_key_exists("NamespaceId",$param) and $param["NamespaceId"] !== null) {
-            $this->NamespaceId = $param["NamespaceId"];
+        if (array_key_exists('NamespaceId',$param) and $param['NamespaceId'] !== null) {
+            $this->NamespaceId = $param['NamespaceId'];
         }
 
-        if (array_key_exists("NamespaceName",$param) and $param["NamespaceName"] !== null) {
-            $this->NamespaceName = $param["NamespaceName"];
+        if (array_key_exists('NamespaceName',$param) and $param['NamespaceName'] !== null) {
+            $this->NamespaceName = $param['NamespaceName'];
         }
 
-        if (array_key_exists("StartupParameters",$param) and $param["StartupParameters"] !== null) {
-            $this->StartupParameters = $param["StartupParameters"];
+        if (array_key_exists('StartupParameters',$param) and $param['StartupParameters'] !== null) {
+            $this->StartupParameters = $param['StartupParameters'];
         }
 
-        if (array_key_exists("GroupResourceType",$param) and $param["GroupResourceType"] !== null) {
-            $this->GroupResourceType = $param["GroupResourceType"];
+        if (array_key_exists('GroupResourceType',$param) and $param['GroupResourceType'] !== null) {
+            $this->GroupResourceType = $param['GroupResourceType'];
         }
 
-        if (array_key_exists("AppMicroServiceType",$param) and $param["AppMicroServiceType"] !== null) {
-            $this->AppMicroServiceType = $param["AppMicroServiceType"];
+        if (array_key_exists('AppMicroServiceType',$param) and $param['AppMicroServiceType'] !== null) {
+            $this->AppMicroServiceType = $param['AppMicroServiceType'];
         }
     }
 }

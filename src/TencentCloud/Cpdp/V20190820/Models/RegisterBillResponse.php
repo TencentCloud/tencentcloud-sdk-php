@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -70,20 +70,20 @@ class RegisterBillResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FrontSeqNo",$param) and $param["FrontSeqNo"] !== null) {
-            $this->FrontSeqNo = $param["FrontSeqNo"];
+        if (array_key_exists('FrontSeqNo',$param) and $param['FrontSeqNo'] !== null) {
+            $this->FrontSeqNo = $param['FrontSeqNo'];
         }
 
-        if (array_key_exists("ReservedMessage",$param) and $param["ReservedMessage"] !== null) {
-            $this->ReservedMessage = $param["ReservedMessage"];
+        if (array_key_exists('ReservedMessage',$param) and $param['ReservedMessage'] !== null) {
+            $this->ReservedMessage = $param['ReservedMessage'];
         }
 
-        if (array_key_exists("RequestType",$param) and $param["RequestType"] !== null) {
-            $this->RequestType = $param["RequestType"];
+        if (array_key_exists('RequestType',$param) and $param['RequestType'] !== null) {
+            $this->RequestType = $param['RequestType'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

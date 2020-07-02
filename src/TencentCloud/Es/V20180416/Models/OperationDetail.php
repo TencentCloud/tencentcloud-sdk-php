@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -54,18 +54,18 @@ class OperationDetail extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("OldInfo",$param) and $param["OldInfo"] !== null) {
+        if (array_key_exists('OldInfo',$param) and $param['OldInfo'] !== null) {
             $this->OldInfo = [];
-            foreach ($param["OldInfo"] as $key => $value){
+            foreach ($param['OldInfo'] as $key => $value){
                 $obj = new KeyValue();
                 $obj->deserialize($value);
                 array_push($this->OldInfo, $obj);
             }
         }
 
-        if (array_key_exists("NewInfo",$param) and $param["NewInfo"] !== null) {
+        if (array_key_exists('NewInfo',$param) and $param['NewInfo'] !== null) {
             $this->NewInfo = [];
-            foreach ($param["NewInfo"] as $key => $value){
+            foreach ($param['NewInfo'] as $key => $value){
                 $obj = new KeyValue();
                 $obj->deserialize($value);
                 array_push($this->NewInfo, $obj);

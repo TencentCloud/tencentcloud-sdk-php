@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -94,37 +94,37 @@ class CreateAgentTaxPaymentInfosRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AgentId",$param) and $param["AgentId"] !== null) {
-            $this->AgentId = $param["AgentId"];
+        if (array_key_exists('AgentId',$param) and $param['AgentId'] !== null) {
+            $this->AgentId = $param['AgentId'];
         }
 
-        if (array_key_exists("Channel",$param) and $param["Channel"] !== null) {
-            $this->Channel = $param["Channel"];
+        if (array_key_exists('Channel',$param) and $param['Channel'] !== null) {
+            $this->Channel = $param['Channel'];
         }
 
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists('Type',$param) and $param['Type'] !== null) {
+            $this->Type = $param['Type'];
         }
 
-        if (array_key_exists("RawElectronicCertUrl",$param) and $param["RawElectronicCertUrl"] !== null) {
-            $this->RawElectronicCertUrl = $param["RawElectronicCertUrl"];
+        if (array_key_exists('RawElectronicCertUrl',$param) and $param['RawElectronicCertUrl'] !== null) {
+            $this->RawElectronicCertUrl = $param['RawElectronicCertUrl'];
         }
 
-        if (array_key_exists("FileName",$param) and $param["FileName"] !== null) {
-            $this->FileName = $param["FileName"];
+        if (array_key_exists('FileName',$param) and $param['FileName'] !== null) {
+            $this->FileName = $param['FileName'];
         }
 
-        if (array_key_exists("AgentTaxPaymentInfos",$param) and $param["AgentTaxPaymentInfos"] !== null) {
+        if (array_key_exists('AgentTaxPaymentInfos',$param) and $param['AgentTaxPaymentInfos'] !== null) {
             $this->AgentTaxPaymentInfos = [];
-            foreach ($param["AgentTaxPaymentInfos"] as $key => $value){
+            foreach ($param['AgentTaxPaymentInfos'] as $key => $value){
                 $obj = new AgentTaxPayment();
                 $obj->deserialize($value);
                 array_push($this->AgentTaxPaymentInfos, $obj);
             }
         }
 
-        if (array_key_exists("Profile",$param) and $param["Profile"] !== null) {
-            $this->Profile = $param["Profile"];
+        if (array_key_exists('Profile',$param) and $param['Profile'] !== null) {
+            $this->Profile = $param['Profile'];
         }
     }
 }

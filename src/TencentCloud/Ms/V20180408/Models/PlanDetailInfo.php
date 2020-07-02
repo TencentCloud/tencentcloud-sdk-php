@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -70,21 +70,21 @@ class PlanDetailInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("IsDefault",$param) and $param["IsDefault"] !== null) {
-            $this->IsDefault = $param["IsDefault"];
+        if (array_key_exists('IsDefault',$param) and $param['IsDefault'] !== null) {
+            $this->IsDefault = $param['IsDefault'];
         }
 
-        if (array_key_exists("PlanId",$param) and $param["PlanId"] !== null) {
-            $this->PlanId = $param["PlanId"];
+        if (array_key_exists('PlanId',$param) and $param['PlanId'] !== null) {
+            $this->PlanId = $param['PlanId'];
         }
 
-        if (array_key_exists("PlanName",$param) and $param["PlanName"] !== null) {
-            $this->PlanName = $param["PlanName"];
+        if (array_key_exists('PlanName',$param) and $param['PlanName'] !== null) {
+            $this->PlanName = $param['PlanName'];
         }
 
-        if (array_key_exists("PlanInfo",$param) and $param["PlanInfo"] !== null) {
+        if (array_key_exists('PlanInfo',$param) and $param['PlanInfo'] !== null) {
             $this->PlanInfo = new PlanInfo();
-            $this->PlanInfo->deserialize($param["PlanInfo"]);
+            $this->PlanInfo->deserialize($param['PlanInfo']);
         }
     }
 }

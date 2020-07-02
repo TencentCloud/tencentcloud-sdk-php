@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -102,41 +102,41 @@ class SecurityGroupAssociationStatistics extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SecurityGroupId",$param) and $param["SecurityGroupId"] !== null) {
-            $this->SecurityGroupId = $param["SecurityGroupId"];
+        if (array_key_exists('SecurityGroupId',$param) and $param['SecurityGroupId'] !== null) {
+            $this->SecurityGroupId = $param['SecurityGroupId'];
         }
 
-        if (array_key_exists("CVM",$param) and $param["CVM"] !== null) {
-            $this->CVM = $param["CVM"];
+        if (array_key_exists('CVM',$param) and $param['CVM'] !== null) {
+            $this->CVM = $param['CVM'];
         }
 
-        if (array_key_exists("CDB",$param) and $param["CDB"] !== null) {
-            $this->CDB = $param["CDB"];
+        if (array_key_exists('CDB',$param) and $param['CDB'] !== null) {
+            $this->CDB = $param['CDB'];
         }
 
-        if (array_key_exists("ENI",$param) and $param["ENI"] !== null) {
-            $this->ENI = $param["ENI"];
+        if (array_key_exists('ENI',$param) and $param['ENI'] !== null) {
+            $this->ENI = $param['ENI'];
         }
 
-        if (array_key_exists("SG",$param) and $param["SG"] !== null) {
-            $this->SG = $param["SG"];
+        if (array_key_exists('SG',$param) and $param['SG'] !== null) {
+            $this->SG = $param['SG'];
         }
 
-        if (array_key_exists("CLB",$param) and $param["CLB"] !== null) {
-            $this->CLB = $param["CLB"];
+        if (array_key_exists('CLB',$param) and $param['CLB'] !== null) {
+            $this->CLB = $param['CLB'];
         }
 
-        if (array_key_exists("InstanceStatistics",$param) and $param["InstanceStatistics"] !== null) {
+        if (array_key_exists('InstanceStatistics',$param) and $param['InstanceStatistics'] !== null) {
             $this->InstanceStatistics = [];
-            foreach ($param["InstanceStatistics"] as $key => $value){
+            foreach ($param['InstanceStatistics'] as $key => $value){
                 $obj = new InstanceStatistic();
                 $obj->deserialize($value);
                 array_push($this->InstanceStatistics, $obj);
             }
         }
 
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
     }
 }

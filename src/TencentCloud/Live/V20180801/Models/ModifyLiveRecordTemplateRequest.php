@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -110,46 +110,46 @@ class ModifyLiveRecordTemplateRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TemplateId",$param) and $param["TemplateId"] !== null) {
-            $this->TemplateId = $param["TemplateId"];
+        if (array_key_exists('TemplateId',$param) and $param['TemplateId'] !== null) {
+            $this->TemplateId = $param['TemplateId'];
         }
 
-        if (array_key_exists("TemplateName",$param) and $param["TemplateName"] !== null) {
-            $this->TemplateName = $param["TemplateName"];
+        if (array_key_exists('TemplateName',$param) and $param['TemplateName'] !== null) {
+            $this->TemplateName = $param['TemplateName'];
         }
 
-        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
-            $this->Description = $param["Description"];
+        if (array_key_exists('Description',$param) and $param['Description'] !== null) {
+            $this->Description = $param['Description'];
         }
 
-        if (array_key_exists("FlvParam",$param) and $param["FlvParam"] !== null) {
+        if (array_key_exists('FlvParam',$param) and $param['FlvParam'] !== null) {
             $this->FlvParam = new RecordParam();
-            $this->FlvParam->deserialize($param["FlvParam"]);
+            $this->FlvParam->deserialize($param['FlvParam']);
         }
 
-        if (array_key_exists("HlsParam",$param) and $param["HlsParam"] !== null) {
+        if (array_key_exists('HlsParam',$param) and $param['HlsParam'] !== null) {
             $this->HlsParam = new RecordParam();
-            $this->HlsParam->deserialize($param["HlsParam"]);
+            $this->HlsParam->deserialize($param['HlsParam']);
         }
 
-        if (array_key_exists("Mp4Param",$param) and $param["Mp4Param"] !== null) {
+        if (array_key_exists('Mp4Param',$param) and $param['Mp4Param'] !== null) {
             $this->Mp4Param = new RecordParam();
-            $this->Mp4Param->deserialize($param["Mp4Param"]);
+            $this->Mp4Param->deserialize($param['Mp4Param']);
         }
 
-        if (array_key_exists("AacParam",$param) and $param["AacParam"] !== null) {
+        if (array_key_exists('AacParam',$param) and $param['AacParam'] !== null) {
             $this->AacParam = new RecordParam();
-            $this->AacParam->deserialize($param["AacParam"]);
+            $this->AacParam->deserialize($param['AacParam']);
         }
 
-        if (array_key_exists("HlsSpecialParam",$param) and $param["HlsSpecialParam"] !== null) {
+        if (array_key_exists('HlsSpecialParam',$param) and $param['HlsSpecialParam'] !== null) {
             $this->HlsSpecialParam = new HlsSpecialParam();
-            $this->HlsSpecialParam->deserialize($param["HlsSpecialParam"]);
+            $this->HlsSpecialParam->deserialize($param['HlsSpecialParam']);
         }
 
-        if (array_key_exists("Mp3Param",$param) and $param["Mp3Param"] !== null) {
+        if (array_key_exists('Mp3Param',$param) and $param['Mp3Param'] !== null) {
             $this->Mp3Param = new RecordParam();
-            $this->Mp3Param->deserialize($param["Mp3Param"]);
+            $this->Mp3Param->deserialize($param['Mp3Param']);
         }
     }
 }

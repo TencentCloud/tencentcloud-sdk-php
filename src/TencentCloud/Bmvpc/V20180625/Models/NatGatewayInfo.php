@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -166,68 +166,68 @@ class NatGatewayInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("NatId",$param) and $param["NatId"] !== null) {
-            $this->NatId = $param["NatId"];
+        if (array_key_exists('NatId',$param) and $param['NatId'] !== null) {
+            $this->NatId = $param['NatId'];
         }
 
-        if (array_key_exists("NatName",$param) and $param["NatName"] !== null) {
-            $this->NatName = $param["NatName"];
+        if (array_key_exists('NatName',$param) and $param['NatName'] !== null) {
+            $this->NatName = $param['NatName'];
         }
 
-        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
-            $this->VpcId = $param["VpcId"];
+        if (array_key_exists('VpcId',$param) and $param['VpcId'] !== null) {
+            $this->VpcId = $param['VpcId'];
         }
 
-        if (array_key_exists("VpcName",$param) and $param["VpcName"] !== null) {
-            $this->VpcName = $param["VpcName"];
+        if (array_key_exists('VpcName',$param) and $param['VpcName'] !== null) {
+            $this->VpcName = $param['VpcName'];
         }
 
-        if (array_key_exists("ProductionStatus",$param) and $param["ProductionStatus"] !== null) {
-            $this->ProductionStatus = $param["ProductionStatus"];
+        if (array_key_exists('ProductionStatus',$param) and $param['ProductionStatus'] !== null) {
+            $this->ProductionStatus = $param['ProductionStatus'];
         }
 
-        if (array_key_exists("Eips",$param) and $param["Eips"] !== null) {
-            $this->Eips = $param["Eips"];
+        if (array_key_exists('Eips',$param) and $param['Eips'] !== null) {
+            $this->Eips = $param['Eips'];
         }
 
-        if (array_key_exists("MaxConcurrent",$param) and $param["MaxConcurrent"] !== null) {
-            $this->MaxConcurrent = $param["MaxConcurrent"];
+        if (array_key_exists('MaxConcurrent',$param) and $param['MaxConcurrent'] !== null) {
+            $this->MaxConcurrent = $param['MaxConcurrent'];
         }
 
-        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
-            $this->Zone = $param["Zone"];
+        if (array_key_exists('Zone',$param) and $param['Zone'] !== null) {
+            $this->Zone = $param['Zone'];
         }
 
-        if (array_key_exists("Exclusive",$param) and $param["Exclusive"] !== null) {
-            $this->Exclusive = $param["Exclusive"];
+        if (array_key_exists('Exclusive',$param) and $param['Exclusive'] !== null) {
+            $this->Exclusive = $param['Exclusive'];
         }
 
-        if (array_key_exists("ForwardMode",$param) and $param["ForwardMode"] !== null) {
-            $this->ForwardMode = $param["ForwardMode"];
+        if (array_key_exists('ForwardMode',$param) and $param['ForwardMode'] !== null) {
+            $this->ForwardMode = $param['ForwardMode'];
         }
 
-        if (array_key_exists("VpcCidrBlock",$param) and $param["VpcCidrBlock"] !== null) {
-            $this->VpcCidrBlock = $param["VpcCidrBlock"];
+        if (array_key_exists('VpcCidrBlock',$param) and $param['VpcCidrBlock'] !== null) {
+            $this->VpcCidrBlock = $param['VpcCidrBlock'];
         }
 
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists('Type',$param) and $param['Type'] !== null) {
+            $this->Type = $param['Type'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("State",$param) and $param["State"] !== null) {
-            $this->State = $param["State"];
+        if (array_key_exists('State',$param) and $param['State'] !== null) {
+            $this->State = $param['State'];
         }
 
-        if (array_key_exists("IntVpcId",$param) and $param["IntVpcId"] !== null) {
-            $this->IntVpcId = $param["IntVpcId"];
+        if (array_key_exists('IntVpcId',$param) and $param['IntVpcId'] !== null) {
+            $this->IntVpcId = $param['IntVpcId'];
         }
 
-        if (array_key_exists("NatResourceId",$param) and $param["NatResourceId"] !== null) {
-            $this->NatResourceId = $param["NatResourceId"];
+        if (array_key_exists('NatResourceId',$param) and $param['NatResourceId'] !== null) {
+            $this->NatResourceId = $param['NatResourceId'];
         }
     }
 }

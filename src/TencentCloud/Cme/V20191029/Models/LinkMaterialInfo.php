@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -82,24 +82,24 @@ class LinkMaterialInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BasicInfo",$param) and $param["BasicInfo"] !== null) {
+        if (array_key_exists('BasicInfo',$param) and $param['BasicInfo'] !== null) {
             $this->BasicInfo = new MaterialBasicInfo();
-            $this->BasicInfo->deserialize($param["BasicInfo"]);
+            $this->BasicInfo->deserialize($param['BasicInfo']);
         }
 
-        if (array_key_exists("VideoMaterial",$param) and $param["VideoMaterial"] !== null) {
+        if (array_key_exists('VideoMaterial',$param) and $param['VideoMaterial'] !== null) {
             $this->VideoMaterial = new VideoMaterial();
-            $this->VideoMaterial->deserialize($param["VideoMaterial"]);
+            $this->VideoMaterial->deserialize($param['VideoMaterial']);
         }
 
-        if (array_key_exists("AudioMaterial",$param) and $param["AudioMaterial"] !== null) {
+        if (array_key_exists('AudioMaterial',$param) and $param['AudioMaterial'] !== null) {
             $this->AudioMaterial = new AudioMaterial();
-            $this->AudioMaterial->deserialize($param["AudioMaterial"]);
+            $this->AudioMaterial->deserialize($param['AudioMaterial']);
         }
 
-        if (array_key_exists("ImageMaterial",$param) and $param["ImageMaterial"] !== null) {
+        if (array_key_exists('ImageMaterial',$param) and $param['ImageMaterial'] !== null) {
             $this->ImageMaterial = new ImageMaterial();
-            $this->ImageMaterial->deserialize($param["ImageMaterial"]);
+            $this->ImageMaterial->deserialize($param['ImageMaterial']);
         }
     }
 }

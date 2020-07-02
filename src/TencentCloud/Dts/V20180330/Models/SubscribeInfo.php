@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -206,88 +206,88 @@ class SubscribeInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SubscribeId",$param) and $param["SubscribeId"] !== null) {
-            $this->SubscribeId = $param["SubscribeId"];
+        if (array_key_exists('SubscribeId',$param) and $param['SubscribeId'] !== null) {
+            $this->SubscribeId = $param['SubscribeId'];
         }
 
-        if (array_key_exists("SubscribeName",$param) and $param["SubscribeName"] !== null) {
-            $this->SubscribeName = $param["SubscribeName"];
+        if (array_key_exists('SubscribeName',$param) and $param['SubscribeName'] !== null) {
+            $this->SubscribeName = $param['SubscribeName'];
         }
 
-        if (array_key_exists("ChannelId",$param) and $param["ChannelId"] !== null) {
-            $this->ChannelId = $param["ChannelId"];
+        if (array_key_exists('ChannelId',$param) and $param['ChannelId'] !== null) {
+            $this->ChannelId = $param['ChannelId'];
         }
 
-        if (array_key_exists("Product",$param) and $param["Product"] !== null) {
-            $this->Product = $param["Product"];
+        if (array_key_exists('Product',$param) and $param['Product'] !== null) {
+            $this->Product = $param['Product'];
         }
 
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("InstanceStatus",$param) and $param["InstanceStatus"] !== null) {
-            $this->InstanceStatus = $param["InstanceStatus"];
+        if (array_key_exists('InstanceStatus',$param) and $param['InstanceStatus'] !== null) {
+            $this->InstanceStatus = $param['InstanceStatus'];
         }
 
-        if (array_key_exists("SubsStatus",$param) and $param["SubsStatus"] !== null) {
-            $this->SubsStatus = $param["SubsStatus"];
+        if (array_key_exists('SubsStatus',$param) and $param['SubsStatus'] !== null) {
+            $this->SubsStatus = $param['SubsStatus'];
         }
 
-        if (array_key_exists("ModifyTime",$param) and $param["ModifyTime"] !== null) {
-            $this->ModifyTime = $param["ModifyTime"];
+        if (array_key_exists('ModifyTime',$param) and $param['ModifyTime'] !== null) {
+            $this->ModifyTime = $param['ModifyTime'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("IsolateTime",$param) and $param["IsolateTime"] !== null) {
-            $this->IsolateTime = $param["IsolateTime"];
+        if (array_key_exists('IsolateTime',$param) and $param['IsolateTime'] !== null) {
+            $this->IsolateTime = $param['IsolateTime'];
         }
 
-        if (array_key_exists("ExpireTime",$param) and $param["ExpireTime"] !== null) {
-            $this->ExpireTime = $param["ExpireTime"];
+        if (array_key_exists('ExpireTime',$param) and $param['ExpireTime'] !== null) {
+            $this->ExpireTime = $param['ExpireTime'];
         }
 
-        if (array_key_exists("OfflineTime",$param) and $param["OfflineTime"] !== null) {
-            $this->OfflineTime = $param["OfflineTime"];
+        if (array_key_exists('OfflineTime',$param) and $param['OfflineTime'] !== null) {
+            $this->OfflineTime = $param['OfflineTime'];
         }
 
-        if (array_key_exists("ConsumeStartTime",$param) and $param["ConsumeStartTime"] !== null) {
-            $this->ConsumeStartTime = $param["ConsumeStartTime"];
+        if (array_key_exists('ConsumeStartTime',$param) and $param['ConsumeStartTime'] !== null) {
+            $this->ConsumeStartTime = $param['ConsumeStartTime'];
         }
 
-        if (array_key_exists("Region",$param) and $param["Region"] !== null) {
-            $this->Region = $param["Region"];
+        if (array_key_exists('Region',$param) and $param['Region'] !== null) {
+            $this->Region = $param['Region'];
         }
 
-        if (array_key_exists("PayType",$param) and $param["PayType"] !== null) {
-            $this->PayType = $param["PayType"];
+        if (array_key_exists('PayType',$param) and $param['PayType'] !== null) {
+            $this->PayType = $param['PayType'];
         }
 
-        if (array_key_exists("Vip",$param) and $param["Vip"] !== null) {
-            $this->Vip = $param["Vip"];
+        if (array_key_exists('Vip',$param) and $param['Vip'] !== null) {
+            $this->Vip = $param['Vip'];
         }
 
-        if (array_key_exists("Vport",$param) and $param["Vport"] !== null) {
-            $this->Vport = $param["Vport"];
+        if (array_key_exists('Vport',$param) and $param['Vport'] !== null) {
+            $this->Vport = $param['Vport'];
         }
 
-        if (array_key_exists("UniqVpcId",$param) and $param["UniqVpcId"] !== null) {
-            $this->UniqVpcId = $param["UniqVpcId"];
+        if (array_key_exists('UniqVpcId',$param) and $param['UniqVpcId'] !== null) {
+            $this->UniqVpcId = $param['UniqVpcId'];
         }
 
-        if (array_key_exists("UniqSubnetId",$param) and $param["UniqSubnetId"] !== null) {
-            $this->UniqSubnetId = $param["UniqSubnetId"];
+        if (array_key_exists('UniqSubnetId',$param) and $param['UniqSubnetId'] !== null) {
+            $this->UniqSubnetId = $param['UniqSubnetId'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("SdkConsumedTime",$param) and $param["SdkConsumedTime"] !== null) {
-            $this->SdkConsumedTime = $param["SdkConsumedTime"];
+        if (array_key_exists('SdkConsumedTime',$param) and $param['SdkConsumedTime'] !== null) {
+            $this->SdkConsumedTime = $param['SdkConsumedTime'];
         }
     }
 }

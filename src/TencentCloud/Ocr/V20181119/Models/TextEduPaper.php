@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -62,17 +62,17 @@ class TextEduPaper extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Item",$param) and $param["Item"] !== null) {
-            $this->Item = $param["Item"];
+        if (array_key_exists('Item',$param) and $param['Item'] !== null) {
+            $this->Item = $param['Item'];
         }
 
-        if (array_key_exists("DetectedText",$param) and $param["DetectedText"] !== null) {
-            $this->DetectedText = $param["DetectedText"];
+        if (array_key_exists('DetectedText',$param) and $param['DetectedText'] !== null) {
+            $this->DetectedText = $param['DetectedText'];
         }
 
-        if (array_key_exists("Itemcoord",$param) and $param["Itemcoord"] !== null) {
+        if (array_key_exists('Itemcoord',$param) and $param['Itemcoord'] !== null) {
             $this->Itemcoord = new ItemCoord();
-            $this->Itemcoord->deserialize($param["Itemcoord"]);
+            $this->Itemcoord->deserialize($param['Itemcoord']);
         }
     }
 }

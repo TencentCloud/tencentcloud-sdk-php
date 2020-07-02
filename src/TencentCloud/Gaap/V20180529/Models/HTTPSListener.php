@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -190,57 +190,57 @@ class HTTPSListener extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ListenerId",$param) and $param["ListenerId"] !== null) {
-            $this->ListenerId = $param["ListenerId"];
+        if (array_key_exists('ListenerId',$param) and $param['ListenerId'] !== null) {
+            $this->ListenerId = $param['ListenerId'];
         }
 
-        if (array_key_exists("ListenerName",$param) and $param["ListenerName"] !== null) {
-            $this->ListenerName = $param["ListenerName"];
+        if (array_key_exists('ListenerName',$param) and $param['ListenerName'] !== null) {
+            $this->ListenerName = $param['ListenerName'];
         }
 
-        if (array_key_exists("Port",$param) and $param["Port"] !== null) {
-            $this->Port = $param["Port"];
+        if (array_key_exists('Port',$param) and $param['Port'] !== null) {
+            $this->Port = $param['Port'];
         }
 
-        if (array_key_exists("Protocol",$param) and $param["Protocol"] !== null) {
-            $this->Protocol = $param["Protocol"];
+        if (array_key_exists('Protocol',$param) and $param['Protocol'] !== null) {
+            $this->Protocol = $param['Protocol'];
         }
 
-        if (array_key_exists("ListenerStatus",$param) and $param["ListenerStatus"] !== null) {
-            $this->ListenerStatus = $param["ListenerStatus"];
+        if (array_key_exists('ListenerStatus',$param) and $param['ListenerStatus'] !== null) {
+            $this->ListenerStatus = $param['ListenerStatus'];
         }
 
-        if (array_key_exists("CertificateId",$param) and $param["CertificateId"] !== null) {
-            $this->CertificateId = $param["CertificateId"];
+        if (array_key_exists('CertificateId',$param) and $param['CertificateId'] !== null) {
+            $this->CertificateId = $param['CertificateId'];
         }
 
-        if (array_key_exists("ForwardProtocol",$param) and $param["ForwardProtocol"] !== null) {
-            $this->ForwardProtocol = $param["ForwardProtocol"];
+        if (array_key_exists('ForwardProtocol',$param) and $param['ForwardProtocol'] !== null) {
+            $this->ForwardProtocol = $param['ForwardProtocol'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("CertificateAlias",$param) and $param["CertificateAlias"] !== null) {
-            $this->CertificateAlias = $param["CertificateAlias"];
+        if (array_key_exists('CertificateAlias',$param) and $param['CertificateAlias'] !== null) {
+            $this->CertificateAlias = $param['CertificateAlias'];
         }
 
-        if (array_key_exists("ClientCertificateId",$param) and $param["ClientCertificateId"] !== null) {
-            $this->ClientCertificateId = $param["ClientCertificateId"];
+        if (array_key_exists('ClientCertificateId',$param) and $param['ClientCertificateId'] !== null) {
+            $this->ClientCertificateId = $param['ClientCertificateId'];
         }
 
-        if (array_key_exists("AuthType",$param) and $param["AuthType"] !== null) {
-            $this->AuthType = $param["AuthType"];
+        if (array_key_exists('AuthType',$param) and $param['AuthType'] !== null) {
+            $this->AuthType = $param['AuthType'];
         }
 
-        if (array_key_exists("ClientCertificateAlias",$param) and $param["ClientCertificateAlias"] !== null) {
-            $this->ClientCertificateAlias = $param["ClientCertificateAlias"];
+        if (array_key_exists('ClientCertificateAlias',$param) and $param['ClientCertificateAlias'] !== null) {
+            $this->ClientCertificateAlias = $param['ClientCertificateAlias'];
         }
 
-        if (array_key_exists("PolyClientCertificateAliasInfo",$param) and $param["PolyClientCertificateAliasInfo"] !== null) {
+        if (array_key_exists('PolyClientCertificateAliasInfo',$param) and $param['PolyClientCertificateAliasInfo'] !== null) {
             $this->PolyClientCertificateAliasInfo = [];
-            foreach ($param["PolyClientCertificateAliasInfo"] as $key => $value){
+            foreach ($param['PolyClientCertificateAliasInfo'] as $key => $value){
                 $obj = new CertificateAliasInfo();
                 $obj->deserialize($value);
                 array_push($this->PolyClientCertificateAliasInfo, $obj);

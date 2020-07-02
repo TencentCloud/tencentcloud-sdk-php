@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -222,60 +222,60 @@ class InquiryPriceCreateInstanceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TimeUnit",$param) and $param["TimeUnit"] !== null) {
-            $this->TimeUnit = $param["TimeUnit"];
+        if (array_key_exists('TimeUnit',$param) and $param['TimeUnit'] !== null) {
+            $this->TimeUnit = $param['TimeUnit'];
         }
 
-        if (array_key_exists("TimeSpan",$param) and $param["TimeSpan"] !== null) {
-            $this->TimeSpan = $param["TimeSpan"];
+        if (array_key_exists('TimeSpan',$param) and $param['TimeSpan'] !== null) {
+            $this->TimeSpan = $param['TimeSpan'];
         }
 
-        if (array_key_exists("ResourceSpec",$param) and $param["ResourceSpec"] !== null) {
+        if (array_key_exists('ResourceSpec',$param) and $param['ResourceSpec'] !== null) {
             $this->ResourceSpec = new NewResourceSpec();
-            $this->ResourceSpec->deserialize($param["ResourceSpec"]);
+            $this->ResourceSpec->deserialize($param['ResourceSpec']);
         }
 
-        if (array_key_exists("Currency",$param) and $param["Currency"] !== null) {
-            $this->Currency = $param["Currency"];
+        if (array_key_exists('Currency',$param) and $param['Currency'] !== null) {
+            $this->Currency = $param['Currency'];
         }
 
-        if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {
-            $this->PayMode = $param["PayMode"];
+        if (array_key_exists('PayMode',$param) and $param['PayMode'] !== null) {
+            $this->PayMode = $param['PayMode'];
         }
 
-        if (array_key_exists("SupportHA",$param) and $param["SupportHA"] !== null) {
-            $this->SupportHA = $param["SupportHA"];
+        if (array_key_exists('SupportHA',$param) and $param['SupportHA'] !== null) {
+            $this->SupportHA = $param['SupportHA'];
         }
 
-        if (array_key_exists("Software",$param) and $param["Software"] !== null) {
-            $this->Software = $param["Software"];
+        if (array_key_exists('Software',$param) and $param['Software'] !== null) {
+            $this->Software = $param['Software'];
         }
 
-        if (array_key_exists("Placement",$param) and $param["Placement"] !== null) {
+        if (array_key_exists('Placement',$param) and $param['Placement'] !== null) {
             $this->Placement = new Placement();
-            $this->Placement->deserialize($param["Placement"]);
+            $this->Placement->deserialize($param['Placement']);
         }
 
-        if (array_key_exists("VPCSettings",$param) and $param["VPCSettings"] !== null) {
+        if (array_key_exists('VPCSettings',$param) and $param['VPCSettings'] !== null) {
             $this->VPCSettings = new VPCSettings();
-            $this->VPCSettings->deserialize($param["VPCSettings"]);
+            $this->VPCSettings->deserialize($param['VPCSettings']);
         }
 
-        if (array_key_exists("MetaType",$param) and $param["MetaType"] !== null) {
-            $this->MetaType = $param["MetaType"];
+        if (array_key_exists('MetaType',$param) and $param['MetaType'] !== null) {
+            $this->MetaType = $param['MetaType'];
         }
 
-        if (array_key_exists("UnifyMetaInstanceId",$param) and $param["UnifyMetaInstanceId"] !== null) {
-            $this->UnifyMetaInstanceId = $param["UnifyMetaInstanceId"];
+        if (array_key_exists('UnifyMetaInstanceId',$param) and $param['UnifyMetaInstanceId'] !== null) {
+            $this->UnifyMetaInstanceId = $param['UnifyMetaInstanceId'];
         }
 
-        if (array_key_exists("MetaDBInfo",$param) and $param["MetaDBInfo"] !== null) {
+        if (array_key_exists('MetaDBInfo',$param) and $param['MetaDBInfo'] !== null) {
             $this->MetaDBInfo = new CustomMetaInfo();
-            $this->MetaDBInfo->deserialize($param["MetaDBInfo"]);
+            $this->MetaDBInfo->deserialize($param['MetaDBInfo']);
         }
 
-        if (array_key_exists("ProductId",$param) and $param["ProductId"] !== null) {
-            $this->ProductId = $param["ProductId"];
+        if (array_key_exists('ProductId',$param) and $param['ProductId'] !== null) {
+            $this->ProductId = $param['ProductId'];
         }
     }
 }

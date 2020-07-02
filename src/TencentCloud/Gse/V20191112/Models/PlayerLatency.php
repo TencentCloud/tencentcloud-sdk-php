@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -70,16 +70,16 @@ class PlayerLatency extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PlayerId",$param) and $param["PlayerId"] !== null) {
-            $this->PlayerId = $param["PlayerId"];
+        if (array_key_exists('PlayerId',$param) and $param['PlayerId'] !== null) {
+            $this->PlayerId = $param['PlayerId'];
         }
 
-        if (array_key_exists("RegionIdentifier",$param) and $param["RegionIdentifier"] !== null) {
-            $this->RegionIdentifier = $param["RegionIdentifier"];
+        if (array_key_exists('RegionIdentifier',$param) and $param['RegionIdentifier'] !== null) {
+            $this->RegionIdentifier = $param['RegionIdentifier'];
         }
 
-        if (array_key_exists("LatencyInMilliseconds",$param) and $param["LatencyInMilliseconds"] !== null) {
-            $this->LatencyInMilliseconds = $param["LatencyInMilliseconds"];
+        if (array_key_exists('LatencyInMilliseconds',$param) and $param['LatencyInMilliseconds'] !== null) {
+            $this->LatencyInMilliseconds = $param['LatencyInMilliseconds'];
         }
     }
 }

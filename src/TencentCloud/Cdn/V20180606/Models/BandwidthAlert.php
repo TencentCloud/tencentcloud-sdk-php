@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -98,20 +98,20 @@ RETURN_404：全部请求返回 404
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Switch",$param) and $param["Switch"] !== null) {
-            $this->Switch = $param["Switch"];
+        if (array_key_exists('Switch',$param) and $param['Switch'] !== null) {
+            $this->Switch = $param['Switch'];
         }
 
-        if (array_key_exists("BpsThreshold",$param) and $param["BpsThreshold"] !== null) {
-            $this->BpsThreshold = $param["BpsThreshold"];
+        if (array_key_exists('BpsThreshold',$param) and $param['BpsThreshold'] !== null) {
+            $this->BpsThreshold = $param['BpsThreshold'];
         }
 
-        if (array_key_exists("CounterMeasure",$param) and $param["CounterMeasure"] !== null) {
-            $this->CounterMeasure = $param["CounterMeasure"];
+        if (array_key_exists('CounterMeasure',$param) and $param['CounterMeasure'] !== null) {
+            $this->CounterMeasure = $param['CounterMeasure'];
         }
 
-        if (array_key_exists("LastTriggerTime",$param) and $param["LastTriggerTime"] !== null) {
-            $this->LastTriggerTime = $param["LastTriggerTime"];
+        if (array_key_exists('LastTriggerTime',$param) and $param['LastTriggerTime'] !== null) {
+            $this->LastTriggerTime = $param['LastTriggerTime'];
         }
     }
 }

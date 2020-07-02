@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -40,8 +40,8 @@ zone - String - （过滤条件）可用区。
  * @method void setOffset(integer $Offset) 设置初始行的偏移量，默认为0。
  * @method integer getLimit() 获取每页行数，默认为20。
  * @method void setLimit(integer $Limit) 设置每页行数，默认为20。
- * @method string getOrderField() 获取排序字段, 支持按“RouteTableId”，“VpcId”, "RouteTableName", "CreateTime"
- * @method void setOrderField(string $OrderField) 设置排序字段, 支持按“RouteTableId”，“VpcId”, "RouteTableName", "CreateTime"
+ * @method string getOrderField() 获取排序字段, 支持按“RouteTableId”，“VpcId”, 'RouteTableName', 'CreateTime'
+ * @method void setOrderField(string $OrderField) 设置排序字段, 支持按“RouteTableId”，“VpcId”, 'RouteTableName', 'CreateTime'
  * @method string getOrderDirection() 获取排序方向, “asc”、“desc”
  * @method void setOrderDirection(string $OrderDirection) 设置排序方向, “asc”、“desc”
  */
@@ -74,7 +74,7 @@ zone - String - （过滤条件）可用区。
     public $Limit;
 
     /**
-     * @var string 排序字段, 支持按“RouteTableId”，“VpcId”, "RouteTableName", "CreateTime"
+     * @var string 排序字段, 支持按“RouteTableId”，“VpcId”, 'RouteTableName', 'CreateTime'
      */
     public $OrderField;
 
@@ -94,7 +94,7 @@ vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。
 zone - String - （过滤条件）可用区。
      * @param integer $Offset 初始行的偏移量，默认为0。
      * @param integer $Limit 每页行数，默认为20。
-     * @param string $OrderField 排序字段, 支持按“RouteTableId”，“VpcId”, "RouteTableName", "CreateTime"
+     * @param string $OrderField 排序字段, 支持按“RouteTableId”，“VpcId”, 'RouteTableName', 'CreateTime'
      * @param string $OrderDirection 排序方向, “asc”、“desc”
      */
     function __construct()
@@ -110,33 +110,33 @@ zone - String - （过滤条件）可用区。
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RouteTableIds",$param) and $param["RouteTableIds"] !== null) {
-            $this->RouteTableIds = $param["RouteTableIds"];
+        if (array_key_exists('RouteTableIds',$param) and $param['RouteTableIds'] !== null) {
+            $this->RouteTableIds = $param['RouteTableIds'];
         }
 
-        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+        if (array_key_exists('Filters',$param) and $param['Filters'] !== null) {
             $this->Filters = [];
-            foreach ($param["Filters"] as $key => $value){
+            foreach ($param['Filters'] as $key => $value){
                 $obj = new Filter();
                 $obj->deserialize($value);
                 array_push($this->Filters, $obj);
             }
         }
 
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
+        if (array_key_exists('Offset',$param) and $param['Offset'] !== null) {
+            $this->Offset = $param['Offset'];
         }
 
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
+        if (array_key_exists('Limit',$param) and $param['Limit'] !== null) {
+            $this->Limit = $param['Limit'];
         }
 
-        if (array_key_exists("OrderField",$param) and $param["OrderField"] !== null) {
-            $this->OrderField = $param["OrderField"];
+        if (array_key_exists('OrderField',$param) and $param['OrderField'] !== null) {
+            $this->OrderField = $param['OrderField'];
         }
 
-        if (array_key_exists("OrderDirection",$param) and $param["OrderDirection"] !== null) {
-            $this->OrderDirection = $param["OrderDirection"];
+        if (array_key_exists('OrderDirection',$param) and $param['OrderDirection'] !== null) {
+            $this->OrderDirection = $param['OrderDirection'];
         }
     }
 }

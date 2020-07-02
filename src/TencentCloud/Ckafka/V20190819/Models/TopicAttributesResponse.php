@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -106,38 +106,38 @@ class TopicAttributesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TopicId",$param) and $param["TopicId"] !== null) {
-            $this->TopicId = $param["TopicId"];
+        if (array_key_exists('TopicId',$param) and $param['TopicId'] !== null) {
+            $this->TopicId = $param['TopicId'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("Note",$param) and $param["Note"] !== null) {
-            $this->Note = $param["Note"];
+        if (array_key_exists('Note',$param) and $param['Note'] !== null) {
+            $this->Note = $param['Note'];
         }
 
-        if (array_key_exists("PartitionNum",$param) and $param["PartitionNum"] !== null) {
-            $this->PartitionNum = $param["PartitionNum"];
+        if (array_key_exists('PartitionNum',$param) and $param['PartitionNum'] !== null) {
+            $this->PartitionNum = $param['PartitionNum'];
         }
 
-        if (array_key_exists("EnableWhiteList",$param) and $param["EnableWhiteList"] !== null) {
-            $this->EnableWhiteList = $param["EnableWhiteList"];
+        if (array_key_exists('EnableWhiteList',$param) and $param['EnableWhiteList'] !== null) {
+            $this->EnableWhiteList = $param['EnableWhiteList'];
         }
 
-        if (array_key_exists("IpWhiteList",$param) and $param["IpWhiteList"] !== null) {
-            $this->IpWhiteList = $param["IpWhiteList"];
+        if (array_key_exists('IpWhiteList',$param) and $param['IpWhiteList'] !== null) {
+            $this->IpWhiteList = $param['IpWhiteList'];
         }
 
-        if (array_key_exists("Config",$param) and $param["Config"] !== null) {
+        if (array_key_exists('Config',$param) and $param['Config'] !== null) {
             $this->Config = new Config();
-            $this->Config->deserialize($param["Config"]);
+            $this->Config->deserialize($param['Config']);
         }
 
-        if (array_key_exists("Partitions",$param) and $param["Partitions"] !== null) {
+        if (array_key_exists('Partitions',$param) and $param['Partitions'] !== null) {
             $this->Partitions = [];
-            foreach ($param["Partitions"] as $key => $value){
+            foreach ($param['Partitions'] as $key => $value){
                 $obj = new TopicPartitionDO();
                 $obj->deserialize($value);
                 array_push($this->Partitions, $obj);

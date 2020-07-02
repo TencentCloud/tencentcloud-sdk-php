@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -146,33 +146,33 @@ class AiRecognitionResult extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists('Type',$param) and $param['Type'] !== null) {
+            $this->Type = $param['Type'];
         }
 
-        if (array_key_exists("FaceTask",$param) and $param["FaceTask"] !== null) {
+        if (array_key_exists('FaceTask',$param) and $param['FaceTask'] !== null) {
             $this->FaceTask = new AiRecognitionTaskFaceResult();
-            $this->FaceTask->deserialize($param["FaceTask"]);
+            $this->FaceTask->deserialize($param['FaceTask']);
         }
 
-        if (array_key_exists("AsrWordsTask",$param) and $param["AsrWordsTask"] !== null) {
+        if (array_key_exists('AsrWordsTask',$param) and $param['AsrWordsTask'] !== null) {
             $this->AsrWordsTask = new AiRecognitionTaskAsrWordsResult();
-            $this->AsrWordsTask->deserialize($param["AsrWordsTask"]);
+            $this->AsrWordsTask->deserialize($param['AsrWordsTask']);
         }
 
-        if (array_key_exists("AsrFullTextTask",$param) and $param["AsrFullTextTask"] !== null) {
+        if (array_key_exists('AsrFullTextTask',$param) and $param['AsrFullTextTask'] !== null) {
             $this->AsrFullTextTask = new AiRecognitionTaskAsrFullTextResult();
-            $this->AsrFullTextTask->deserialize($param["AsrFullTextTask"]);
+            $this->AsrFullTextTask->deserialize($param['AsrFullTextTask']);
         }
 
-        if (array_key_exists("OcrWordsTask",$param) and $param["OcrWordsTask"] !== null) {
+        if (array_key_exists('OcrWordsTask',$param) and $param['OcrWordsTask'] !== null) {
             $this->OcrWordsTask = new AiRecognitionTaskOcrWordsResult();
-            $this->OcrWordsTask->deserialize($param["OcrWordsTask"]);
+            $this->OcrWordsTask->deserialize($param['OcrWordsTask']);
         }
 
-        if (array_key_exists("OcrFullTextTask",$param) and $param["OcrFullTextTask"] !== null) {
+        if (array_key_exists('OcrFullTextTask',$param) and $param['OcrFullTextTask'] !== null) {
             $this->OcrFullTextTask = new AiRecognitionTaskOcrFullTextResult();
-            $this->OcrFullTextTask->deserialize($param["OcrFullTextTask"]);
+            $this->OcrFullTextTask->deserialize($param['OcrFullTextTask']);
         }
     }
 }

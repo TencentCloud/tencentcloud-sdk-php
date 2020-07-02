@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置指定绑定的安全组，例如：['sg-1dd51d']。
  * @method array getPrivateIpAddresses() 获取指定的内网IP信息，单次最多指定10个。
  * @method void setPrivateIpAddresses(array $PrivateIpAddresses) 设置指定的内网IP信息，单次最多指定10个。
- * @method array getTags() 获取指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
- * @method void setTags(array $Tags) 设置指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
+ * @method array getTags() 获取指定绑定的标签列表，例如：[{'Key': 'city', 'Value': 'shanghai'}]
+ * @method void setTags(array $Tags) 设置指定绑定的标签列表，例如：[{'Key': 'city', 'Value': 'shanghai'}]
  */
 class CreateNetworkInterfaceRequest extends AbstractModel
 {
@@ -75,7 +75,7 @@ class CreateNetworkInterfaceRequest extends AbstractModel
     public $PrivateIpAddresses;
 
     /**
-     * @var array 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
+     * @var array 指定绑定的标签列表，例如：[{'Key': 'city', 'Value': 'shanghai'}]
      */
     public $Tags;
 
@@ -87,7 +87,7 @@ class CreateNetworkInterfaceRequest extends AbstractModel
      * @param integer $SecondaryPrivateIpAddressCount 新申请的内网IP地址个数，内网IP地址个数总和不能超过配数。
      * @param array $SecurityGroupIds 指定绑定的安全组，例如：['sg-1dd51d']。
      * @param array $PrivateIpAddresses 指定的内网IP信息，单次最多指定10个。
-     * @param array $Tags 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
+     * @param array $Tags 指定绑定的标签列表，例如：[{'Key': 'city', 'Value': 'shanghai'}]
      */
     function __construct()
     {
@@ -102,42 +102,42 @@ class CreateNetworkInterfaceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
-            $this->VpcId = $param["VpcId"];
+        if (array_key_exists('VpcId',$param) and $param['VpcId'] !== null) {
+            $this->VpcId = $param['VpcId'];
         }
 
-        if (array_key_exists("NetworkInterfaceName",$param) and $param["NetworkInterfaceName"] !== null) {
-            $this->NetworkInterfaceName = $param["NetworkInterfaceName"];
+        if (array_key_exists('NetworkInterfaceName',$param) and $param['NetworkInterfaceName'] !== null) {
+            $this->NetworkInterfaceName = $param['NetworkInterfaceName'];
         }
 
-        if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
-            $this->SubnetId = $param["SubnetId"];
+        if (array_key_exists('SubnetId',$param) and $param['SubnetId'] !== null) {
+            $this->SubnetId = $param['SubnetId'];
         }
 
-        if (array_key_exists("NetworkInterfaceDescription",$param) and $param["NetworkInterfaceDescription"] !== null) {
-            $this->NetworkInterfaceDescription = $param["NetworkInterfaceDescription"];
+        if (array_key_exists('NetworkInterfaceDescription',$param) and $param['NetworkInterfaceDescription'] !== null) {
+            $this->NetworkInterfaceDescription = $param['NetworkInterfaceDescription'];
         }
 
-        if (array_key_exists("SecondaryPrivateIpAddressCount",$param) and $param["SecondaryPrivateIpAddressCount"] !== null) {
-            $this->SecondaryPrivateIpAddressCount = $param["SecondaryPrivateIpAddressCount"];
+        if (array_key_exists('SecondaryPrivateIpAddressCount',$param) and $param['SecondaryPrivateIpAddressCount'] !== null) {
+            $this->SecondaryPrivateIpAddressCount = $param['SecondaryPrivateIpAddressCount'];
         }
 
-        if (array_key_exists("SecurityGroupIds",$param) and $param["SecurityGroupIds"] !== null) {
-            $this->SecurityGroupIds = $param["SecurityGroupIds"];
+        if (array_key_exists('SecurityGroupIds',$param) and $param['SecurityGroupIds'] !== null) {
+            $this->SecurityGroupIds = $param['SecurityGroupIds'];
         }
 
-        if (array_key_exists("PrivateIpAddresses",$param) and $param["PrivateIpAddresses"] !== null) {
+        if (array_key_exists('PrivateIpAddresses',$param) and $param['PrivateIpAddresses'] !== null) {
             $this->PrivateIpAddresses = [];
-            foreach ($param["PrivateIpAddresses"] as $key => $value){
+            foreach ($param['PrivateIpAddresses'] as $key => $value){
                 $obj = new PrivateIpAddressSpecification();
                 $obj->deserialize($value);
                 array_push($this->PrivateIpAddresses, $obj);
             }
         }
 
-        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+        if (array_key_exists('Tags',$param) and $param['Tags'] !== null) {
             $this->Tags = [];
-            foreach ($param["Tags"] as $key => $value){
+            foreach ($param['Tags'] as $key => $value){
                 $obj = new Tag();
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);

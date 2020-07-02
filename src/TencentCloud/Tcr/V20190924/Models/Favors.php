@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -142,44 +142,44 @@ class Favors extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RepoName",$param) and $param["RepoName"] !== null) {
-            $this->RepoName = $param["RepoName"];
+        if (array_key_exists('RepoName',$param) and $param['RepoName'] !== null) {
+            $this->RepoName = $param['RepoName'];
         }
 
-        if (array_key_exists("RepoType",$param) and $param["RepoType"] !== null) {
-            $this->RepoType = $param["RepoType"];
+        if (array_key_exists('RepoType',$param) and $param['RepoType'] !== null) {
+            $this->RepoType = $param['RepoType'];
         }
 
-        if (array_key_exists("PullCount",$param) and $param["PullCount"] !== null) {
-            $this->PullCount = $param["PullCount"];
+        if (array_key_exists('PullCount',$param) and $param['PullCount'] !== null) {
+            $this->PullCount = $param['PullCount'];
         }
 
-        if (array_key_exists("FavorCount",$param) and $param["FavorCount"] !== null) {
-            $this->FavorCount = $param["FavorCount"];
+        if (array_key_exists('FavorCount',$param) and $param['FavorCount'] !== null) {
+            $this->FavorCount = $param['FavorCount'];
         }
 
-        if (array_key_exists("Public",$param) and $param["Public"] !== null) {
-            $this->Public = $param["Public"];
+        if (array_key_exists('Public',$param) and $param['Public'] !== null) {
+            $this->Public = $param['Public'];
         }
 
-        if (array_key_exists("IsQcloudOfficial",$param) and $param["IsQcloudOfficial"] !== null) {
-            $this->IsQcloudOfficial = $param["IsQcloudOfficial"];
+        if (array_key_exists('IsQcloudOfficial',$param) and $param['IsQcloudOfficial'] !== null) {
+            $this->IsQcloudOfficial = $param['IsQcloudOfficial'];
         }
 
-        if (array_key_exists("TagCount",$param) and $param["TagCount"] !== null) {
-            $this->TagCount = $param["TagCount"];
+        if (array_key_exists('TagCount',$param) and $param['TagCount'] !== null) {
+            $this->TagCount = $param['TagCount'];
         }
 
-        if (array_key_exists("Logo",$param) and $param["Logo"] !== null) {
-            $this->Logo = $param["Logo"];
+        if (array_key_exists('Logo',$param) and $param['Logo'] !== null) {
+            $this->Logo = $param['Logo'];
         }
 
-        if (array_key_exists("Region",$param) and $param["Region"] !== null) {
-            $this->Region = $param["Region"];
+        if (array_key_exists('Region',$param) and $param['Region'] !== null) {
+            $this->Region = $param['Region'];
         }
 
-        if (array_key_exists("RegionId",$param) and $param["RegionId"] !== null) {
-            $this->RegionId = $param["RegionId"];
+        if (array_key_exists('RegionId',$param) and $param['RegionId'] !== null) {
+            $this->RegionId = $param['RegionId'];
         }
     }
 }

@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -194,85 +194,85 @@ class Deal extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("OrderId",$param) and $param["OrderId"] !== null) {
-            $this->OrderId = $param["OrderId"];
+        if (array_key_exists('OrderId',$param) and $param['OrderId'] !== null) {
+            $this->OrderId = $param['OrderId'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("Payer",$param) and $param["Payer"] !== null) {
-            $this->Payer = $param["Payer"];
+        if (array_key_exists('Payer',$param) and $param['Payer'] !== null) {
+            $this->Payer = $param['Payer'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("Creator",$param) and $param["Creator"] !== null) {
-            $this->Creator = $param["Creator"];
+        if (array_key_exists('Creator',$param) and $param['Creator'] !== null) {
+            $this->Creator = $param['Creator'];
         }
 
-        if (array_key_exists("RealTotalCost",$param) and $param["RealTotalCost"] !== null) {
-            $this->RealTotalCost = $param["RealTotalCost"];
+        if (array_key_exists('RealTotalCost',$param) and $param['RealTotalCost'] !== null) {
+            $this->RealTotalCost = $param['RealTotalCost'];
         }
 
-        if (array_key_exists("VoucherDecline",$param) and $param["VoucherDecline"] !== null) {
-            $this->VoucherDecline = $param["VoucherDecline"];
+        if (array_key_exists('VoucherDecline',$param) and $param['VoucherDecline'] !== null) {
+            $this->VoucherDecline = $param['VoucherDecline'];
         }
 
-        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
-            $this->ProjectId = $param["ProjectId"];
+        if (array_key_exists('ProjectId',$param) and $param['ProjectId'] !== null) {
+            $this->ProjectId = $param['ProjectId'];
         }
 
-        if (array_key_exists("GoodsCategoryId",$param) and $param["GoodsCategoryId"] !== null) {
-            $this->GoodsCategoryId = $param["GoodsCategoryId"];
+        if (array_key_exists('GoodsCategoryId',$param) and $param['GoodsCategoryId'] !== null) {
+            $this->GoodsCategoryId = $param['GoodsCategoryId'];
         }
 
-        if (array_key_exists("ProductInfo",$param) and $param["ProductInfo"] !== null) {
+        if (array_key_exists('ProductInfo',$param) and $param['ProductInfo'] !== null) {
             $this->ProductInfo = [];
-            foreach ($param["ProductInfo"] as $key => $value){
+            foreach ($param['ProductInfo'] as $key => $value){
                 $obj = new ProductInfo();
                 $obj->deserialize($value);
                 array_push($this->ProductInfo, $obj);
             }
         }
 
-        if (array_key_exists("TimeSpan",$param) and $param["TimeSpan"] !== null) {
-            $this->TimeSpan = $param["TimeSpan"];
+        if (array_key_exists('TimeSpan',$param) and $param['TimeSpan'] !== null) {
+            $this->TimeSpan = $param['TimeSpan'];
         }
 
-        if (array_key_exists("TimeUnit",$param) and $param["TimeUnit"] !== null) {
-            $this->TimeUnit = $param["TimeUnit"];
+        if (array_key_exists('TimeUnit',$param) and $param['TimeUnit'] !== null) {
+            $this->TimeUnit = $param['TimeUnit'];
         }
 
-        if (array_key_exists("Currency",$param) and $param["Currency"] !== null) {
-            $this->Currency = $param["Currency"];
+        if (array_key_exists('Currency',$param) and $param['Currency'] !== null) {
+            $this->Currency = $param['Currency'];
         }
 
-        if (array_key_exists("Policy",$param) and $param["Policy"] !== null) {
-            $this->Policy = $param["Policy"];
+        if (array_key_exists('Policy',$param) and $param['Policy'] !== null) {
+            $this->Policy = $param['Policy'];
         }
 
-        if (array_key_exists("Price",$param) and $param["Price"] !== null) {
-            $this->Price = $param["Price"];
+        if (array_key_exists('Price',$param) and $param['Price'] !== null) {
+            $this->Price = $param['Price'];
         }
 
-        if (array_key_exists("TotalCost",$param) and $param["TotalCost"] !== null) {
-            $this->TotalCost = $param["TotalCost"];
+        if (array_key_exists('TotalCost',$param) and $param['TotalCost'] !== null) {
+            $this->TotalCost = $param['TotalCost'];
         }
 
-        if (array_key_exists("ProductCode",$param) and $param["ProductCode"] !== null) {
-            $this->ProductCode = $param["ProductCode"];
+        if (array_key_exists('ProductCode',$param) and $param['ProductCode'] !== null) {
+            $this->ProductCode = $param['ProductCode'];
         }
 
-        if (array_key_exists("SubProductCode",$param) and $param["SubProductCode"] !== null) {
-            $this->SubProductCode = $param["SubProductCode"];
+        if (array_key_exists('SubProductCode',$param) and $param['SubProductCode'] !== null) {
+            $this->SubProductCode = $param['SubProductCode'];
         }
 
-        if (array_key_exists("BigDealId",$param) and $param["BigDealId"] !== null) {
-            $this->BigDealId = $param["BigDealId"];
+        if (array_key_exists('BigDealId',$param) and $param['BigDealId'] !== null) {
+            $this->BigDealId = $param['BigDealId'];
         }
     }
 }

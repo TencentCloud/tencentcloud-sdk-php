@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -94,28 +94,28 @@ class LivenessRecognitionResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BestFrameBase64",$param) and $param["BestFrameBase64"] !== null) {
-            $this->BestFrameBase64 = $param["BestFrameBase64"];
+        if (array_key_exists('BestFrameBase64',$param) and $param['BestFrameBase64'] !== null) {
+            $this->BestFrameBase64 = $param['BestFrameBase64'];
         }
 
-        if (array_key_exists("Sim",$param) and $param["Sim"] !== null) {
-            $this->Sim = $param["Sim"];
+        if (array_key_exists('Sim',$param) and $param['Sim'] !== null) {
+            $this->Sim = $param['Sim'];
         }
 
-        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
-            $this->Result = $param["Result"];
+        if (array_key_exists('Result',$param) and $param['Result'] !== null) {
+            $this->Result = $param['Result'];
         }
 
-        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
-            $this->Description = $param["Description"];
+        if (array_key_exists('Description',$param) and $param['Description'] !== null) {
+            $this->Description = $param['Description'];
         }
 
-        if (array_key_exists("BestFrameList",$param) and $param["BestFrameList"] !== null) {
-            $this->BestFrameList = $param["BestFrameList"];
+        if (array_key_exists('BestFrameList',$param) and $param['BestFrameList'] !== null) {
+            $this->BestFrameList = $param['BestFrameList'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

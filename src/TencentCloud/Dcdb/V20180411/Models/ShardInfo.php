@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -118,44 +118,44 @@ class ShardInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ShardInstanceId",$param) and $param["ShardInstanceId"] !== null) {
-            $this->ShardInstanceId = $param["ShardInstanceId"];
+        if (array_key_exists('ShardInstanceId',$param) and $param['ShardInstanceId'] !== null) {
+            $this->ShardInstanceId = $param['ShardInstanceId'];
         }
 
-        if (array_key_exists("ShardSerialId",$param) and $param["ShardSerialId"] !== null) {
-            $this->ShardSerialId = $param["ShardSerialId"];
+        if (array_key_exists('ShardSerialId',$param) and $param['ShardSerialId'] !== null) {
+            $this->ShardSerialId = $param['ShardSerialId'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("Createtime",$param) and $param["Createtime"] !== null) {
-            $this->Createtime = $param["Createtime"];
+        if (array_key_exists('Createtime',$param) and $param['Createtime'] !== null) {
+            $this->Createtime = $param['Createtime'];
         }
 
-        if (array_key_exists("Memory",$param) and $param["Memory"] !== null) {
-            $this->Memory = $param["Memory"];
+        if (array_key_exists('Memory',$param) and $param['Memory'] !== null) {
+            $this->Memory = $param['Memory'];
         }
 
-        if (array_key_exists("Storage",$param) and $param["Storage"] !== null) {
-            $this->Storage = $param["Storage"];
+        if (array_key_exists('Storage',$param) and $param['Storage'] !== null) {
+            $this->Storage = $param['Storage'];
         }
 
-        if (array_key_exists("ShardId",$param) and $param["ShardId"] !== null) {
-            $this->ShardId = $param["ShardId"];
+        if (array_key_exists('ShardId',$param) and $param['ShardId'] !== null) {
+            $this->ShardId = $param['ShardId'];
         }
 
-        if (array_key_exists("NodeCount",$param) and $param["NodeCount"] !== null) {
-            $this->NodeCount = $param["NodeCount"];
+        if (array_key_exists('NodeCount',$param) and $param['NodeCount'] !== null) {
+            $this->NodeCount = $param['NodeCount'];
         }
 
-        if (array_key_exists("Pid",$param) and $param["Pid"] !== null) {
-            $this->Pid = $param["Pid"];
+        if (array_key_exists('Pid',$param) and $param['Pid'] !== null) {
+            $this->Pid = $param['Pid'];
         }
 
-        if (array_key_exists("Cpu",$param) and $param["Cpu"] !== null) {
-            $this->Cpu = $param["Cpu"];
+        if (array_key_exists('Cpu',$param) and $param['Cpu'] !== null) {
+            $this->Cpu = $param['Cpu'];
         }
     }
 }

@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -62,16 +62,16 @@ class PeakNetwork extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RecordTime",$param) and $param["RecordTime"] !== null) {
-            $this->RecordTime = $param["RecordTime"];
+        if (array_key_exists('RecordTime',$param) and $param['RecordTime'] !== null) {
+            $this->RecordTime = $param['RecordTime'];
         }
 
-        if (array_key_exists("PeakInNetwork",$param) and $param["PeakInNetwork"] !== null) {
-            $this->PeakInNetwork = $param["PeakInNetwork"];
+        if (array_key_exists('PeakInNetwork',$param) and $param['PeakInNetwork'] !== null) {
+            $this->PeakInNetwork = $param['PeakInNetwork'];
         }
 
-        if (array_key_exists("PeakOutNetwork",$param) and $param["PeakOutNetwork"] !== null) {
-            $this->PeakOutNetwork = $param["PeakOutNetwork"];
+        if (array_key_exists('PeakOutNetwork',$param) and $param['PeakOutNetwork'] !== null) {
+            $this->PeakOutNetwork = $param['PeakOutNetwork'];
         }
     }
 }

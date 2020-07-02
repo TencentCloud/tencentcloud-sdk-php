@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -82,29 +82,29 @@ class UpdateAsrVocabRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("VocabId",$param) and $param["VocabId"] !== null) {
-            $this->VocabId = $param["VocabId"];
+        if (array_key_exists('VocabId',$param) and $param['VocabId'] !== null) {
+            $this->VocabId = $param['VocabId'];
         }
 
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("WordWeights",$param) and $param["WordWeights"] !== null) {
+        if (array_key_exists('WordWeights',$param) and $param['WordWeights'] !== null) {
             $this->WordWeights = [];
-            foreach ($param["WordWeights"] as $key => $value){
+            foreach ($param['WordWeights'] as $key => $value){
                 $obj = new HotWord();
                 $obj->deserialize($value);
                 array_push($this->WordWeights, $obj);
             }
         }
 
-        if (array_key_exists("WordWeightStr",$param) and $param["WordWeightStr"] !== null) {
-            $this->WordWeightStr = $param["WordWeightStr"];
+        if (array_key_exists('WordWeightStr',$param) and $param['WordWeightStr'] !== null) {
+            $this->WordWeightStr = $param['WordWeightStr'];
         }
 
-        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
-            $this->Description = $param["Description"];
+        if (array_key_exists('Description',$param) and $param['Description'] !== null) {
+            $this->Description = $param['Description'];
         }
     }
 }

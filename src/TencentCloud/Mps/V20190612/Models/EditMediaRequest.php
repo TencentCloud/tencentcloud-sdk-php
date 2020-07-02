@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -94,39 +94,39 @@ class EditMediaRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FileInfos",$param) and $param["FileInfos"] !== null) {
+        if (array_key_exists('FileInfos',$param) and $param['FileInfos'] !== null) {
             $this->FileInfos = [];
-            foreach ($param["FileInfos"] as $key => $value){
+            foreach ($param['FileInfos'] as $key => $value){
                 $obj = new EditMediaFileInfo();
                 $obj->deserialize($value);
                 array_push($this->FileInfos, $obj);
             }
         }
 
-        if (array_key_exists("OutputStorage",$param) and $param["OutputStorage"] !== null) {
+        if (array_key_exists('OutputStorage',$param) and $param['OutputStorage'] !== null) {
             $this->OutputStorage = new TaskOutputStorage();
-            $this->OutputStorage->deserialize($param["OutputStorage"]);
+            $this->OutputStorage->deserialize($param['OutputStorage']);
         }
 
-        if (array_key_exists("OutputObjectPath",$param) and $param["OutputObjectPath"] !== null) {
-            $this->OutputObjectPath = $param["OutputObjectPath"];
+        if (array_key_exists('OutputObjectPath',$param) and $param['OutputObjectPath'] !== null) {
+            $this->OutputObjectPath = $param['OutputObjectPath'];
         }
 
-        if (array_key_exists("TaskNotifyConfig",$param) and $param["TaskNotifyConfig"] !== null) {
+        if (array_key_exists('TaskNotifyConfig',$param) and $param['TaskNotifyConfig'] !== null) {
             $this->TaskNotifyConfig = new TaskNotifyConfig();
-            $this->TaskNotifyConfig->deserialize($param["TaskNotifyConfig"]);
+            $this->TaskNotifyConfig->deserialize($param['TaskNotifyConfig']);
         }
 
-        if (array_key_exists("TasksPriority",$param) and $param["TasksPriority"] !== null) {
-            $this->TasksPriority = $param["TasksPriority"];
+        if (array_key_exists('TasksPriority',$param) and $param['TasksPriority'] !== null) {
+            $this->TasksPriority = $param['TasksPriority'];
         }
 
-        if (array_key_exists("SessionId",$param) and $param["SessionId"] !== null) {
-            $this->SessionId = $param["SessionId"];
+        if (array_key_exists('SessionId',$param) and $param['SessionId'] !== null) {
+            $this->SessionId = $param['SessionId'];
         }
 
-        if (array_key_exists("SessionContext",$param) and $param["SessionContext"] !== null) {
-            $this->SessionContext = $param["SessionContext"];
+        if (array_key_exists('SessionContext',$param) and $param['SessionContext'] !== null) {
+            $this->SessionContext = $param['SessionContext'];
         }
     }
 }

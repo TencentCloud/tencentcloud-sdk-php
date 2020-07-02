@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -62,19 +62,19 @@ class LowerBodyCloth extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Color",$param) and $param["Color"] !== null) {
+        if (array_key_exists('Color',$param) and $param['Color'] !== null) {
             $this->Color = new LowerBodyClothColor();
-            $this->Color->deserialize($param["Color"]);
+            $this->Color->deserialize($param['Color']);
         }
 
-        if (array_key_exists("Length",$param) and $param["Length"] !== null) {
+        if (array_key_exists('Length',$param) and $param['Length'] !== null) {
             $this->Length = new LowerBodyClothLength();
-            $this->Length->deserialize($param["Length"]);
+            $this->Length->deserialize($param['Length']);
         }
 
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+        if (array_key_exists('Type',$param) and $param['Type'] !== null) {
             $this->Type = new LowerBodyClothType();
-            $this->Type->deserialize($param["Type"]);
+            $this->Type->deserialize($param['Type']);
         }
     }
 }

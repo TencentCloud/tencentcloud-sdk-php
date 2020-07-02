@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -78,24 +78,24 @@ class SecurityGroupLimitSet extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SecurityGroupLimit",$param) and $param["SecurityGroupLimit"] !== null) {
-            $this->SecurityGroupLimit = $param["SecurityGroupLimit"];
+        if (array_key_exists('SecurityGroupLimit',$param) and $param['SecurityGroupLimit'] !== null) {
+            $this->SecurityGroupLimit = $param['SecurityGroupLimit'];
         }
 
-        if (array_key_exists("SecurityGroupPolicyLimit",$param) and $param["SecurityGroupPolicyLimit"] !== null) {
-            $this->SecurityGroupPolicyLimit = $param["SecurityGroupPolicyLimit"];
+        if (array_key_exists('SecurityGroupPolicyLimit',$param) and $param['SecurityGroupPolicyLimit'] !== null) {
+            $this->SecurityGroupPolicyLimit = $param['SecurityGroupPolicyLimit'];
         }
 
-        if (array_key_exists("ReferedSecurityGroupLimit",$param) and $param["ReferedSecurityGroupLimit"] !== null) {
-            $this->ReferedSecurityGroupLimit = $param["ReferedSecurityGroupLimit"];
+        if (array_key_exists('ReferedSecurityGroupLimit',$param) and $param['ReferedSecurityGroupLimit'] !== null) {
+            $this->ReferedSecurityGroupLimit = $param['ReferedSecurityGroupLimit'];
         }
 
-        if (array_key_exists("SecurityGroupInstanceLimit",$param) and $param["SecurityGroupInstanceLimit"] !== null) {
-            $this->SecurityGroupInstanceLimit = $param["SecurityGroupInstanceLimit"];
+        if (array_key_exists('SecurityGroupInstanceLimit',$param) and $param['SecurityGroupInstanceLimit'] !== null) {
+            $this->SecurityGroupInstanceLimit = $param['SecurityGroupInstanceLimit'];
         }
 
-        if (array_key_exists("InstanceSecurityGroupLimit",$param) and $param["InstanceSecurityGroupLimit"] !== null) {
-            $this->InstanceSecurityGroupLimit = $param["InstanceSecurityGroupLimit"];
+        if (array_key_exists('InstanceSecurityGroupLimit',$param) and $param['InstanceSecurityGroupLimit'] !== null) {
+            $this->InstanceSecurityGroupLimit = $param['InstanceSecurityGroupLimit'];
         }
     }
 }

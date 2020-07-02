@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -118,44 +118,44 @@ class FlowLog extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
-            $this->VpcId = $param["VpcId"];
+        if (array_key_exists('VpcId',$param) and $param['VpcId'] !== null) {
+            $this->VpcId = $param['VpcId'];
         }
 
-        if (array_key_exists("FlowLogId",$param) and $param["FlowLogId"] !== null) {
-            $this->FlowLogId = $param["FlowLogId"];
+        if (array_key_exists('FlowLogId',$param) and $param['FlowLogId'] !== null) {
+            $this->FlowLogId = $param['FlowLogId'];
         }
 
-        if (array_key_exists("FlowLogName",$param) and $param["FlowLogName"] !== null) {
-            $this->FlowLogName = $param["FlowLogName"];
+        if (array_key_exists('FlowLogName',$param) and $param['FlowLogName'] !== null) {
+            $this->FlowLogName = $param['FlowLogName'];
         }
 
-        if (array_key_exists("ResourceType",$param) and $param["ResourceType"] !== null) {
-            $this->ResourceType = $param["ResourceType"];
+        if (array_key_exists('ResourceType',$param) and $param['ResourceType'] !== null) {
+            $this->ResourceType = $param['ResourceType'];
         }
 
-        if (array_key_exists("ResourceId",$param) and $param["ResourceId"] !== null) {
-            $this->ResourceId = $param["ResourceId"];
+        if (array_key_exists('ResourceId',$param) and $param['ResourceId'] !== null) {
+            $this->ResourceId = $param['ResourceId'];
         }
 
-        if (array_key_exists("TrafficType",$param) and $param["TrafficType"] !== null) {
-            $this->TrafficType = $param["TrafficType"];
+        if (array_key_exists('TrafficType',$param) and $param['TrafficType'] !== null) {
+            $this->TrafficType = $param['TrafficType'];
         }
 
-        if (array_key_exists("CloudLogId",$param) and $param["CloudLogId"] !== null) {
-            $this->CloudLogId = $param["CloudLogId"];
+        if (array_key_exists('CloudLogId',$param) and $param['CloudLogId'] !== null) {
+            $this->CloudLogId = $param['CloudLogId'];
         }
 
-        if (array_key_exists("CloudLogState",$param) and $param["CloudLogState"] !== null) {
-            $this->CloudLogState = $param["CloudLogState"];
+        if (array_key_exists('CloudLogState',$param) and $param['CloudLogState'] !== null) {
+            $this->CloudLogState = $param['CloudLogState'];
         }
 
-        if (array_key_exists("FlowLogDescription",$param) and $param["FlowLogDescription"] !== null) {
-            $this->FlowLogDescription = $param["FlowLogDescription"];
+        if (array_key_exists('FlowLogDescription',$param) and $param['FlowLogDescription'] !== null) {
+            $this->FlowLogDescription = $param['FlowLogDescription'];
         }
 
-        if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
-            $this->CreatedTime = $param["CreatedTime"];
+        if (array_key_exists('CreatedTime',$param) and $param['CreatedTime'] !== null) {
+            $this->CreatedTime = $param['CreatedTime'];
         }
     }
 }

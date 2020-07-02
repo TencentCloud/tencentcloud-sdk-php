@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -94,32 +94,32 @@ class EvaluationRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SessionId",$param) and $param["SessionId"] !== null) {
-            $this->SessionId = $param["SessionId"];
+        if (array_key_exists('SessionId',$param) and $param['SessionId'] !== null) {
+            $this->SessionId = $param['SessionId'];
         }
 
-        if (array_key_exists("Image",$param) and $param["Image"] !== null) {
-            $this->Image = $param["Image"];
+        if (array_key_exists('Image',$param) and $param['Image'] !== null) {
+            $this->Image = $param['Image'];
         }
 
-        if (array_key_exists("HcmAppid",$param) and $param["HcmAppid"] !== null) {
-            $this->HcmAppid = $param["HcmAppid"];
+        if (array_key_exists('HcmAppid',$param) and $param['HcmAppid'] !== null) {
+            $this->HcmAppid = $param['HcmAppid'];
         }
 
-        if (array_key_exists("Url",$param) and $param["Url"] !== null) {
-            $this->Url = $param["Url"];
+        if (array_key_exists('Url',$param) and $param['Url'] !== null) {
+            $this->Url = $param['Url'];
         }
 
-        if (array_key_exists("SupportHorizontalImage",$param) and $param["SupportHorizontalImage"] !== null) {
-            $this->SupportHorizontalImage = $param["SupportHorizontalImage"];
+        if (array_key_exists('SupportHorizontalImage',$param) and $param['SupportHorizontalImage'] !== null) {
+            $this->SupportHorizontalImage = $param['SupportHorizontalImage'];
         }
 
-        if (array_key_exists("RejectNonArithmeticImage",$param) and $param["RejectNonArithmeticImage"] !== null) {
-            $this->RejectNonArithmeticImage = $param["RejectNonArithmeticImage"];
+        if (array_key_exists('RejectNonArithmeticImage',$param) and $param['RejectNonArithmeticImage'] !== null) {
+            $this->RejectNonArithmeticImage = $param['RejectNonArithmeticImage'];
         }
 
-        if (array_key_exists("IsAsync",$param) and $param["IsAsync"] !== null) {
-            $this->IsAsync = $param["IsAsync"];
+        if (array_key_exists('IsAsync',$param) and $param['IsAsync'] !== null) {
+            $this->IsAsync = $param['IsAsync'];
         }
     }
 }

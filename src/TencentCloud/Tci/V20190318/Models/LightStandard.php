@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 光照标准，结构的相关示例为：
 {
-    "Name":"dark"，
-    "Range":[0,30]
+    'Name':'dark'，
+    'Range':[0,30]
 }
 当光照的区间落入在0到30的范围时，就会命中dark的光照标准
  *
@@ -59,12 +59,12 @@ class LightStandard extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("Range",$param) and $param["Range"] !== null) {
-            $this->Range = $param["Range"];
+        if (array_key_exists('Range',$param) and $param['Range'] !== null) {
+            $this->Range = $param['Range'];
         }
     }
 }

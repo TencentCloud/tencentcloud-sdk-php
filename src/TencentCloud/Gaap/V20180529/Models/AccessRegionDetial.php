@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -70,20 +70,20 @@ class AccessRegionDetial extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RegionId",$param) and $param["RegionId"] !== null) {
-            $this->RegionId = $param["RegionId"];
+        if (array_key_exists('RegionId',$param) and $param['RegionId'] !== null) {
+            $this->RegionId = $param['RegionId'];
         }
 
-        if (array_key_exists("RegionName",$param) and $param["RegionName"] !== null) {
-            $this->RegionName = $param["RegionName"];
+        if (array_key_exists('RegionName',$param) and $param['RegionName'] !== null) {
+            $this->RegionName = $param['RegionName'];
         }
 
-        if (array_key_exists("ConcurrentList",$param) and $param["ConcurrentList"] !== null) {
-            $this->ConcurrentList = $param["ConcurrentList"];
+        if (array_key_exists('ConcurrentList',$param) and $param['ConcurrentList'] !== null) {
+            $this->ConcurrentList = $param['ConcurrentList'];
         }
 
-        if (array_key_exists("BandwidthList",$param) and $param["BandwidthList"] !== null) {
-            $this->BandwidthList = $param["BandwidthList"];
+        if (array_key_exists('BandwidthList',$param) and $param['BandwidthList'] !== null) {
+            $this->BandwidthList = $param['BandwidthList'];
         }
     }
 }

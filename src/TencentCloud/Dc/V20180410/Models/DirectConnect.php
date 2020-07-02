@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -346,117 +346,117 @@ class DirectConnect extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DirectConnectId",$param) and $param["DirectConnectId"] !== null) {
-            $this->DirectConnectId = $param["DirectConnectId"];
+        if (array_key_exists('DirectConnectId',$param) and $param['DirectConnectId'] !== null) {
+            $this->DirectConnectId = $param['DirectConnectId'];
         }
 
-        if (array_key_exists("DirectConnectName",$param) and $param["DirectConnectName"] !== null) {
-            $this->DirectConnectName = $param["DirectConnectName"];
+        if (array_key_exists('DirectConnectName',$param) and $param['DirectConnectName'] !== null) {
+            $this->DirectConnectName = $param['DirectConnectName'];
         }
 
-        if (array_key_exists("AccessPointId",$param) and $param["AccessPointId"] !== null) {
-            $this->AccessPointId = $param["AccessPointId"];
+        if (array_key_exists('AccessPointId',$param) and $param['AccessPointId'] !== null) {
+            $this->AccessPointId = $param['AccessPointId'];
         }
 
-        if (array_key_exists("State",$param) and $param["State"] !== null) {
-            $this->State = $param["State"];
+        if (array_key_exists('State',$param) and $param['State'] !== null) {
+            $this->State = $param['State'];
         }
 
-        if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
-            $this->CreatedTime = $param["CreatedTime"];
+        if (array_key_exists('CreatedTime',$param) and $param['CreatedTime'] !== null) {
+            $this->CreatedTime = $param['CreatedTime'];
         }
 
-        if (array_key_exists("EnabledTime",$param) and $param["EnabledTime"] !== null) {
-            $this->EnabledTime = $param["EnabledTime"];
+        if (array_key_exists('EnabledTime',$param) and $param['EnabledTime'] !== null) {
+            $this->EnabledTime = $param['EnabledTime'];
         }
 
-        if (array_key_exists("LineOperator",$param) and $param["LineOperator"] !== null) {
-            $this->LineOperator = $param["LineOperator"];
+        if (array_key_exists('LineOperator',$param) and $param['LineOperator'] !== null) {
+            $this->LineOperator = $param['LineOperator'];
         }
 
-        if (array_key_exists("Location",$param) and $param["Location"] !== null) {
-            $this->Location = $param["Location"];
+        if (array_key_exists('Location',$param) and $param['Location'] !== null) {
+            $this->Location = $param['Location'];
         }
 
-        if (array_key_exists("Bandwidth",$param) and $param["Bandwidth"] !== null) {
-            $this->Bandwidth = $param["Bandwidth"];
+        if (array_key_exists('Bandwidth',$param) and $param['Bandwidth'] !== null) {
+            $this->Bandwidth = $param['Bandwidth'];
         }
 
-        if (array_key_exists("PortType",$param) and $param["PortType"] !== null) {
-            $this->PortType = $param["PortType"];
+        if (array_key_exists('PortType',$param) and $param['PortType'] !== null) {
+            $this->PortType = $param['PortType'];
         }
 
-        if (array_key_exists("CircuitCode",$param) and $param["CircuitCode"] !== null) {
-            $this->CircuitCode = $param["CircuitCode"];
+        if (array_key_exists('CircuitCode',$param) and $param['CircuitCode'] !== null) {
+            $this->CircuitCode = $param['CircuitCode'];
         }
 
-        if (array_key_exists("RedundantDirectConnectId",$param) and $param["RedundantDirectConnectId"] !== null) {
-            $this->RedundantDirectConnectId = $param["RedundantDirectConnectId"];
+        if (array_key_exists('RedundantDirectConnectId',$param) and $param['RedundantDirectConnectId'] !== null) {
+            $this->RedundantDirectConnectId = $param['RedundantDirectConnectId'];
         }
 
-        if (array_key_exists("Vlan",$param) and $param["Vlan"] !== null) {
-            $this->Vlan = $param["Vlan"];
+        if (array_key_exists('Vlan',$param) and $param['Vlan'] !== null) {
+            $this->Vlan = $param['Vlan'];
         }
 
-        if (array_key_exists("TencentAddress",$param) and $param["TencentAddress"] !== null) {
-            $this->TencentAddress = $param["TencentAddress"];
+        if (array_key_exists('TencentAddress',$param) and $param['TencentAddress'] !== null) {
+            $this->TencentAddress = $param['TencentAddress'];
         }
 
-        if (array_key_exists("CustomerAddress",$param) and $param["CustomerAddress"] !== null) {
-            $this->CustomerAddress = $param["CustomerAddress"];
+        if (array_key_exists('CustomerAddress',$param) and $param['CustomerAddress'] !== null) {
+            $this->CustomerAddress = $param['CustomerAddress'];
         }
 
-        if (array_key_exists("CustomerName",$param) and $param["CustomerName"] !== null) {
-            $this->CustomerName = $param["CustomerName"];
+        if (array_key_exists('CustomerName',$param) and $param['CustomerName'] !== null) {
+            $this->CustomerName = $param['CustomerName'];
         }
 
-        if (array_key_exists("CustomerContactMail",$param) and $param["CustomerContactMail"] !== null) {
-            $this->CustomerContactMail = $param["CustomerContactMail"];
+        if (array_key_exists('CustomerContactMail',$param) and $param['CustomerContactMail'] !== null) {
+            $this->CustomerContactMail = $param['CustomerContactMail'];
         }
 
-        if (array_key_exists("CustomerContactNumber",$param) and $param["CustomerContactNumber"] !== null) {
-            $this->CustomerContactNumber = $param["CustomerContactNumber"];
+        if (array_key_exists('CustomerContactNumber',$param) and $param['CustomerContactNumber'] !== null) {
+            $this->CustomerContactNumber = $param['CustomerContactNumber'];
         }
 
-        if (array_key_exists("ExpiredTime",$param) and $param["ExpiredTime"] !== null) {
-            $this->ExpiredTime = $param["ExpiredTime"];
+        if (array_key_exists('ExpiredTime',$param) and $param['ExpiredTime'] !== null) {
+            $this->ExpiredTime = $param['ExpiredTime'];
         }
 
-        if (array_key_exists("ChargeType",$param) and $param["ChargeType"] !== null) {
-            $this->ChargeType = $param["ChargeType"];
+        if (array_key_exists('ChargeType',$param) and $param['ChargeType'] !== null) {
+            $this->ChargeType = $param['ChargeType'];
         }
 
-        if (array_key_exists("FaultReportContactPerson",$param) and $param["FaultReportContactPerson"] !== null) {
-            $this->FaultReportContactPerson = $param["FaultReportContactPerson"];
+        if (array_key_exists('FaultReportContactPerson',$param) and $param['FaultReportContactPerson'] !== null) {
+            $this->FaultReportContactPerson = $param['FaultReportContactPerson'];
         }
 
-        if (array_key_exists("FaultReportContactNumber",$param) and $param["FaultReportContactNumber"] !== null) {
-            $this->FaultReportContactNumber = $param["FaultReportContactNumber"];
+        if (array_key_exists('FaultReportContactNumber',$param) and $param['FaultReportContactNumber'] !== null) {
+            $this->FaultReportContactNumber = $param['FaultReportContactNumber'];
         }
 
-        if (array_key_exists("TagSet",$param) and $param["TagSet"] !== null) {
+        if (array_key_exists('TagSet',$param) and $param['TagSet'] !== null) {
             $this->TagSet = [];
-            foreach ($param["TagSet"] as $key => $value){
+            foreach ($param['TagSet'] as $key => $value){
                 $obj = new Tag();
                 $obj->deserialize($value);
                 array_push($this->TagSet, $obj);
             }
         }
 
-        if (array_key_exists("AccessPointType",$param) and $param["AccessPointType"] !== null) {
-            $this->AccessPointType = $param["AccessPointType"];
+        if (array_key_exists('AccessPointType',$param) and $param['AccessPointType'] !== null) {
+            $this->AccessPointType = $param['AccessPointType'];
         }
 
-        if (array_key_exists("IdcCity",$param) and $param["IdcCity"] !== null) {
-            $this->IdcCity = $param["IdcCity"];
+        if (array_key_exists('IdcCity',$param) and $param['IdcCity'] !== null) {
+            $this->IdcCity = $param['IdcCity'];
         }
 
-        if (array_key_exists("ChargeState",$param) and $param["ChargeState"] !== null) {
-            $this->ChargeState = $param["ChargeState"];
+        if (array_key_exists('ChargeState',$param) and $param['ChargeState'] !== null) {
+            $this->ChargeState = $param['ChargeState'];
         }
 
-        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
-            $this->StartTime = $param["StartTime"];
+        if (array_key_exists('StartTime',$param) and $param['StartTime'] !== null) {
+            $this->StartTime = $param['StartTime'];
         }
     }
 }

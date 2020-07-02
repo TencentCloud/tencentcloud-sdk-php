@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -62,16 +62,16 @@ class ExpandShardConfig extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ShardInstanceIds",$param) and $param["ShardInstanceIds"] !== null) {
-            $this->ShardInstanceIds = $param["ShardInstanceIds"];
+        if (array_key_exists('ShardInstanceIds',$param) and $param['ShardInstanceIds'] !== null) {
+            $this->ShardInstanceIds = $param['ShardInstanceIds'];
         }
 
-        if (array_key_exists("ShardMemory",$param) and $param["ShardMemory"] !== null) {
-            $this->ShardMemory = $param["ShardMemory"];
+        if (array_key_exists('ShardMemory',$param) and $param['ShardMemory'] !== null) {
+            $this->ShardMemory = $param['ShardMemory'];
         }
 
-        if (array_key_exists("ShardStorage",$param) and $param["ShardStorage"] !== null) {
-            $this->ShardStorage = $param["ShardStorage"];
+        if (array_key_exists('ShardStorage',$param) and $param['ShardStorage'] !== null) {
+            $this->ShardStorage = $param['ShardStorage'];
         }
     }
 }

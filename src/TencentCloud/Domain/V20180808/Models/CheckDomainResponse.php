@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -158,56 +158,56 @@ class CheckDomainResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DomainName",$param) and $param["DomainName"] !== null) {
-            $this->DomainName = $param["DomainName"];
+        if (array_key_exists('DomainName',$param) and $param['DomainName'] !== null) {
+            $this->DomainName = $param['DomainName'];
         }
 
-        if (array_key_exists("Available",$param) and $param["Available"] !== null) {
-            $this->Available = $param["Available"];
+        if (array_key_exists('Available',$param) and $param['Available'] !== null) {
+            $this->Available = $param['Available'];
         }
 
-        if (array_key_exists("Reason",$param) and $param["Reason"] !== null) {
-            $this->Reason = $param["Reason"];
+        if (array_key_exists('Reason',$param) and $param['Reason'] !== null) {
+            $this->Reason = $param['Reason'];
         }
 
-        if (array_key_exists("Premium",$param) and $param["Premium"] !== null) {
-            $this->Premium = $param["Premium"];
+        if (array_key_exists('Premium',$param) and $param['Premium'] !== null) {
+            $this->Premium = $param['Premium'];
         }
 
-        if (array_key_exists("Price",$param) and $param["Price"] !== null) {
-            $this->Price = $param["Price"];
+        if (array_key_exists('Price',$param) and $param['Price'] !== null) {
+            $this->Price = $param['Price'];
         }
 
-        if (array_key_exists("BlackWord",$param) and $param["BlackWord"] !== null) {
-            $this->BlackWord = $param["BlackWord"];
+        if (array_key_exists('BlackWord',$param) and $param['BlackWord'] !== null) {
+            $this->BlackWord = $param['BlackWord'];
         }
 
-        if (array_key_exists("Describe",$param) and $param["Describe"] !== null) {
-            $this->Describe = $param["Describe"];
+        if (array_key_exists('Describe',$param) and $param['Describe'] !== null) {
+            $this->Describe = $param['Describe'];
         }
 
-        if (array_key_exists("FeeRenew",$param) and $param["FeeRenew"] !== null) {
-            $this->FeeRenew = $param["FeeRenew"];
+        if (array_key_exists('FeeRenew',$param) and $param['FeeRenew'] !== null) {
+            $this->FeeRenew = $param['FeeRenew'];
         }
 
-        if (array_key_exists("RealPrice",$param) and $param["RealPrice"] !== null) {
-            $this->RealPrice = $param["RealPrice"];
+        if (array_key_exists('RealPrice',$param) and $param['RealPrice'] !== null) {
+            $this->RealPrice = $param['RealPrice'];
         }
 
-        if (array_key_exists("FeeTransfer",$param) and $param["FeeTransfer"] !== null) {
-            $this->FeeTransfer = $param["FeeTransfer"];
+        if (array_key_exists('FeeTransfer',$param) and $param['FeeTransfer'] !== null) {
+            $this->FeeTransfer = $param['FeeTransfer'];
         }
 
-        if (array_key_exists("FeeRestore",$param) and $param["FeeRestore"] !== null) {
-            $this->FeeRestore = $param["FeeRestore"];
+        if (array_key_exists('FeeRestore',$param) and $param['FeeRestore'] !== null) {
+            $this->FeeRestore = $param['FeeRestore'];
         }
 
-        if (array_key_exists("Period",$param) and $param["Period"] !== null) {
-            $this->Period = $param["Period"];
+        if (array_key_exists('Period',$param) and $param['Period'] !== null) {
+            $this->Period = $param['Period'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

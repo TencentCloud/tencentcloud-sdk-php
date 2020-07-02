@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -154,57 +154,57 @@ class DescribeScanResult extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Code",$param) and $param["Code"] !== null) {
-            $this->Code = $param["Code"];
+        if (array_key_exists('Code',$param) and $param['Code'] !== null) {
+            $this->Code = $param['Code'];
         }
 
-        if (array_key_exists("DataId",$param) and $param["DataId"] !== null) {
-            $this->DataId = $param["DataId"];
+        if (array_key_exists('DataId',$param) and $param['DataId'] !== null) {
+            $this->DataId = $param['DataId'];
         }
 
-        if (array_key_exists("ScanFinishTime",$param) and $param["ScanFinishTime"] !== null) {
-            $this->ScanFinishTime = $param["ScanFinishTime"];
+        if (array_key_exists('ScanFinishTime',$param) and $param['ScanFinishTime'] !== null) {
+            $this->ScanFinishTime = $param['ScanFinishTime'];
         }
 
-        if (array_key_exists("HitFlag",$param) and $param["HitFlag"] !== null) {
-            $this->HitFlag = $param["HitFlag"];
+        if (array_key_exists('HitFlag',$param) and $param['HitFlag'] !== null) {
+            $this->HitFlag = $param['HitFlag'];
         }
 
-        if (array_key_exists("Live",$param) and $param["Live"] !== null) {
-            $this->Live = $param["Live"];
+        if (array_key_exists('Live',$param) and $param['Live'] !== null) {
+            $this->Live = $param['Live'];
         }
 
-        if (array_key_exists("Msg",$param) and $param["Msg"] !== null) {
-            $this->Msg = $param["Msg"];
+        if (array_key_exists('Msg',$param) and $param['Msg'] !== null) {
+            $this->Msg = $param['Msg'];
         }
 
-        if (array_key_exists("ScanPiece",$param) and $param["ScanPiece"] !== null) {
+        if (array_key_exists('ScanPiece',$param) and $param['ScanPiece'] !== null) {
             $this->ScanPiece = [];
-            foreach ($param["ScanPiece"] as $key => $value){
+            foreach ($param['ScanPiece'] as $key => $value){
                 $obj = new ScanPiece();
                 $obj->deserialize($value);
                 array_push($this->ScanPiece, $obj);
             }
         }
 
-        if (array_key_exists("ScanStartTime",$param) and $param["ScanStartTime"] !== null) {
-            $this->ScanStartTime = $param["ScanStartTime"];
+        if (array_key_exists('ScanStartTime',$param) and $param['ScanStartTime'] !== null) {
+            $this->ScanStartTime = $param['ScanStartTime'];
         }
 
-        if (array_key_exists("Scenes",$param) and $param["Scenes"] !== null) {
-            $this->Scenes = $param["Scenes"];
+        if (array_key_exists('Scenes',$param) and $param['Scenes'] !== null) {
+            $this->Scenes = $param['Scenes'];
         }
 
-        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
-            $this->TaskId = $param["TaskId"];
+        if (array_key_exists('TaskId',$param) and $param['TaskId'] !== null) {
+            $this->TaskId = $param['TaskId'];
         }
 
-        if (array_key_exists("Url",$param) and $param["Url"] !== null) {
-            $this->Url = $param["Url"];
+        if (array_key_exists('Url',$param) and $param['Url'] !== null) {
+            $this->Url = $param['Url'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
     }
 }

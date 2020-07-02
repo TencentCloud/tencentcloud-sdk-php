@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -50,10 +50,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubnetIds(array $SubnetIds) 设置子网 ID。
  * @method array getCdbErrors() 获取是否锁定标记。
  * @method void setCdbErrors(array $CdbErrors) 设置是否锁定标记。
- * @method string getOrderBy() 获取返回结果集排序的字段，目前支持："InstanceId"，"InstanceName"，"CreateTime"，"DeadlineTime"。
- * @method void setOrderBy(string $OrderBy) 设置返回结果集排序的字段，目前支持："InstanceId"，"InstanceName"，"CreateTime"，"DeadlineTime"。
- * @method string getOrderDirection() 获取返回结果集排序方式，目前支持："ASC" 或者 "DESC"。
- * @method void setOrderDirection(string $OrderDirection) 设置返回结果集排序方式，目前支持："ASC" 或者 "DESC"。
+ * @method string getOrderBy() 获取返回结果集排序的字段，目前支持：'InstanceId'，'InstanceName'，'CreateTime'，'DeadlineTime'。
+ * @method void setOrderBy(string $OrderBy) 设置返回结果集排序的字段，目前支持：'InstanceId'，'InstanceName'，'CreateTime'，'DeadlineTime'。
+ * @method string getOrderDirection() 获取返回结果集排序方式，目前支持：'ASC' 或者 'DESC'。
+ * @method void setOrderDirection(string $OrderDirection) 设置返回结果集排序方式，目前支持：'ASC' 或者 'DESC'。
  * @method integer getWithSecurityGroup() 获取是否以安全组 ID 为过滤条件。
  * @method void setWithSecurityGroup(integer $WithSecurityGroup) 设置是否以安全组 ID 为过滤条件。
  * @method integer getWithExCluster() 获取是否包含独享集群详细信息，可取值：0 - 不包含，1 - 包含。
@@ -151,12 +151,12 @@ class DescribeDBInstancesRequest extends AbstractModel
     public $CdbErrors;
 
     /**
-     * @var string 返回结果集排序的字段，目前支持："InstanceId"，"InstanceName"，"CreateTime"，"DeadlineTime"。
+     * @var string 返回结果集排序的字段，目前支持：'InstanceId'，'InstanceName'，'CreateTime'，'DeadlineTime'。
      */
     public $OrderBy;
 
     /**
-     * @var string 返回结果集排序方式，目前支持："ASC" 或者 "DESC"。
+     * @var string 返回结果集排序方式，目前支持：'ASC' 或者 'DESC'。
      */
     public $OrderDirection;
 
@@ -221,8 +221,8 @@ class DescribeDBInstancesRequest extends AbstractModel
      * @param array $ZoneIds 可用区的 ID。
      * @param array $SubnetIds 子网 ID。
      * @param array $CdbErrors 是否锁定标记。
-     * @param string $OrderBy 返回结果集排序的字段，目前支持："InstanceId"，"InstanceName"，"CreateTime"，"DeadlineTime"。
-     * @param string $OrderDirection 返回结果集排序方式，目前支持："ASC" 或者 "DESC"。
+     * @param string $OrderBy 返回结果集排序的字段，目前支持：'InstanceId'，'InstanceName'，'CreateTime'，'DeadlineTime'。
+     * @param string $OrderDirection 返回结果集排序方式，目前支持：'ASC' 或者 'DESC'。
      * @param integer $WithSecurityGroup 是否以安全组 ID 为过滤条件。
      * @param integer $WithExCluster 是否包含独享集群详细信息，可取值：0 - 不包含，1 - 包含。
      * @param string $ExClusterId 独享集群 ID。
@@ -246,108 +246,108 @@ class DescribeDBInstancesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
-            $this->ProjectId = $param["ProjectId"];
+        if (array_key_exists('ProjectId',$param) and $param['ProjectId'] !== null) {
+            $this->ProjectId = $param['ProjectId'];
         }
 
-        if (array_key_exists("InstanceTypes",$param) and $param["InstanceTypes"] !== null) {
-            $this->InstanceTypes = $param["InstanceTypes"];
+        if (array_key_exists('InstanceTypes',$param) and $param['InstanceTypes'] !== null) {
+            $this->InstanceTypes = $param['InstanceTypes'];
         }
 
-        if (array_key_exists("Vips",$param) and $param["Vips"] !== null) {
-            $this->Vips = $param["Vips"];
+        if (array_key_exists('Vips',$param) and $param['Vips'] !== null) {
+            $this->Vips = $param['Vips'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
+        if (array_key_exists('Offset',$param) and $param['Offset'] !== null) {
+            $this->Offset = $param['Offset'];
         }
 
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
+        if (array_key_exists('Limit',$param) and $param['Limit'] !== null) {
+            $this->Limit = $param['Limit'];
         }
 
-        if (array_key_exists("SecurityGroupId",$param) and $param["SecurityGroupId"] !== null) {
-            $this->SecurityGroupId = $param["SecurityGroupId"];
+        if (array_key_exists('SecurityGroupId',$param) and $param['SecurityGroupId'] !== null) {
+            $this->SecurityGroupId = $param['SecurityGroupId'];
         }
 
-        if (array_key_exists("PayTypes",$param) and $param["PayTypes"] !== null) {
-            $this->PayTypes = $param["PayTypes"];
+        if (array_key_exists('PayTypes',$param) and $param['PayTypes'] !== null) {
+            $this->PayTypes = $param['PayTypes'];
         }
 
-        if (array_key_exists("InstanceNames",$param) and $param["InstanceNames"] !== null) {
-            $this->InstanceNames = $param["InstanceNames"];
+        if (array_key_exists('InstanceNames',$param) and $param['InstanceNames'] !== null) {
+            $this->InstanceNames = $param['InstanceNames'];
         }
 
-        if (array_key_exists("TaskStatus",$param) and $param["TaskStatus"] !== null) {
-            $this->TaskStatus = $param["TaskStatus"];
+        if (array_key_exists('TaskStatus',$param) and $param['TaskStatus'] !== null) {
+            $this->TaskStatus = $param['TaskStatus'];
         }
 
-        if (array_key_exists("EngineVersions",$param) and $param["EngineVersions"] !== null) {
-            $this->EngineVersions = $param["EngineVersions"];
+        if (array_key_exists('EngineVersions',$param) and $param['EngineVersions'] !== null) {
+            $this->EngineVersions = $param['EngineVersions'];
         }
 
-        if (array_key_exists("VpcIds",$param) and $param["VpcIds"] !== null) {
-            $this->VpcIds = $param["VpcIds"];
+        if (array_key_exists('VpcIds',$param) and $param['VpcIds'] !== null) {
+            $this->VpcIds = $param['VpcIds'];
         }
 
-        if (array_key_exists("ZoneIds",$param) and $param["ZoneIds"] !== null) {
-            $this->ZoneIds = $param["ZoneIds"];
+        if (array_key_exists('ZoneIds',$param) and $param['ZoneIds'] !== null) {
+            $this->ZoneIds = $param['ZoneIds'];
         }
 
-        if (array_key_exists("SubnetIds",$param) and $param["SubnetIds"] !== null) {
-            $this->SubnetIds = $param["SubnetIds"];
+        if (array_key_exists('SubnetIds',$param) and $param['SubnetIds'] !== null) {
+            $this->SubnetIds = $param['SubnetIds'];
         }
 
-        if (array_key_exists("CdbErrors",$param) and $param["CdbErrors"] !== null) {
-            $this->CdbErrors = $param["CdbErrors"];
+        if (array_key_exists('CdbErrors',$param) and $param['CdbErrors'] !== null) {
+            $this->CdbErrors = $param['CdbErrors'];
         }
 
-        if (array_key_exists("OrderBy",$param) and $param["OrderBy"] !== null) {
-            $this->OrderBy = $param["OrderBy"];
+        if (array_key_exists('OrderBy',$param) and $param['OrderBy'] !== null) {
+            $this->OrderBy = $param['OrderBy'];
         }
 
-        if (array_key_exists("OrderDirection",$param) and $param["OrderDirection"] !== null) {
-            $this->OrderDirection = $param["OrderDirection"];
+        if (array_key_exists('OrderDirection',$param) and $param['OrderDirection'] !== null) {
+            $this->OrderDirection = $param['OrderDirection'];
         }
 
-        if (array_key_exists("WithSecurityGroup",$param) and $param["WithSecurityGroup"] !== null) {
-            $this->WithSecurityGroup = $param["WithSecurityGroup"];
+        if (array_key_exists('WithSecurityGroup',$param) and $param['WithSecurityGroup'] !== null) {
+            $this->WithSecurityGroup = $param['WithSecurityGroup'];
         }
 
-        if (array_key_exists("WithExCluster",$param) and $param["WithExCluster"] !== null) {
-            $this->WithExCluster = $param["WithExCluster"];
+        if (array_key_exists('WithExCluster',$param) and $param['WithExCluster'] !== null) {
+            $this->WithExCluster = $param['WithExCluster'];
         }
 
-        if (array_key_exists("ExClusterId",$param) and $param["ExClusterId"] !== null) {
-            $this->ExClusterId = $param["ExClusterId"];
+        if (array_key_exists('ExClusterId',$param) and $param['ExClusterId'] !== null) {
+            $this->ExClusterId = $param['ExClusterId'];
         }
 
-        if (array_key_exists("InstanceIds",$param) and $param["InstanceIds"] !== null) {
-            $this->InstanceIds = $param["InstanceIds"];
+        if (array_key_exists('InstanceIds',$param) and $param['InstanceIds'] !== null) {
+            $this->InstanceIds = $param['InstanceIds'];
         }
 
-        if (array_key_exists("InitFlag",$param) and $param["InitFlag"] !== null) {
-            $this->InitFlag = $param["InitFlag"];
+        if (array_key_exists('InitFlag',$param) and $param['InitFlag'] !== null) {
+            $this->InitFlag = $param['InitFlag'];
         }
 
-        if (array_key_exists("WithDr",$param) and $param["WithDr"] !== null) {
-            $this->WithDr = $param["WithDr"];
+        if (array_key_exists('WithDr',$param) and $param['WithDr'] !== null) {
+            $this->WithDr = $param['WithDr'];
         }
 
-        if (array_key_exists("WithRo",$param) and $param["WithRo"] !== null) {
-            $this->WithRo = $param["WithRo"];
+        if (array_key_exists('WithRo',$param) and $param['WithRo'] !== null) {
+            $this->WithRo = $param['WithRo'];
         }
 
-        if (array_key_exists("WithMaster",$param) and $param["WithMaster"] !== null) {
-            $this->WithMaster = $param["WithMaster"];
+        if (array_key_exists('WithMaster',$param) and $param['WithMaster'] !== null) {
+            $this->WithMaster = $param['WithMaster'];
         }
 
-        if (array_key_exists("DeployGroupIds",$param) and $param["DeployGroupIds"] !== null) {
-            $this->DeployGroupIds = $param["DeployGroupIds"];
+        if (array_key_exists('DeployGroupIds',$param) and $param['DeployGroupIds'] !== null) {
+            $this->DeployGroupIds = $param['DeployGroupIds'];
         }
     }
 }

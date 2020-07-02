@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -86,20 +86,20 @@ class DeviceData extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DeviceCert",$param) and $param["DeviceCert"] !== null) {
-            $this->DeviceCert = $param["DeviceCert"];
+        if (array_key_exists('DeviceCert',$param) and $param['DeviceCert'] !== null) {
+            $this->DeviceCert = $param['DeviceCert'];
         }
 
-        if (array_key_exists("DeviceName",$param) and $param["DeviceName"] !== null) {
-            $this->DeviceName = $param["DeviceName"];
+        if (array_key_exists('DeviceName',$param) and $param['DeviceName'] !== null) {
+            $this->DeviceName = $param['DeviceName'];
         }
 
-        if (array_key_exists("DevicePrivateKey",$param) and $param["DevicePrivateKey"] !== null) {
-            $this->DevicePrivateKey = $param["DevicePrivateKey"];
+        if (array_key_exists('DevicePrivateKey',$param) and $param['DevicePrivateKey'] !== null) {
+            $this->DevicePrivateKey = $param['DevicePrivateKey'];
         }
 
-        if (array_key_exists("DevicePsk",$param) and $param["DevicePsk"] !== null) {
-            $this->DevicePsk = $param["DevicePsk"];
+        if (array_key_exists('DevicePsk',$param) and $param['DevicePsk'] !== null) {
+            $this->DevicePsk = $param['DevicePsk'];
         }
     }
 }

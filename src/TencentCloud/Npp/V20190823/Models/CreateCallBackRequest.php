@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -162,65 +162,65 @@ class CreateCallBackRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BizAppId",$param) and $param["BizAppId"] !== null) {
-            $this->BizAppId = $param["BizAppId"];
+        if (array_key_exists('BizAppId',$param) and $param['BizAppId'] !== null) {
+            $this->BizAppId = $param['BizAppId'];
         }
 
-        if (array_key_exists("Src",$param) and $param["Src"] !== null) {
-            $this->Src = $param["Src"];
+        if (array_key_exists('Src',$param) and $param['Src'] !== null) {
+            $this->Src = $param['Src'];
         }
 
-        if (array_key_exists("Dst",$param) and $param["Dst"] !== null) {
-            $this->Dst = $param["Dst"];
+        if (array_key_exists('Dst',$param) and $param['Dst'] !== null) {
+            $this->Dst = $param['Dst'];
         }
 
-        if (array_key_exists("SrcDisplayNum",$param) and $param["SrcDisplayNum"] !== null) {
-            $this->SrcDisplayNum = $param["SrcDisplayNum"];
+        if (array_key_exists('SrcDisplayNum',$param) and $param['SrcDisplayNum'] !== null) {
+            $this->SrcDisplayNum = $param['SrcDisplayNum'];
         }
 
-        if (array_key_exists("DstDisplayNum",$param) and $param["DstDisplayNum"] !== null) {
-            $this->DstDisplayNum = $param["DstDisplayNum"];
+        if (array_key_exists('DstDisplayNum',$param) and $param['DstDisplayNum'] !== null) {
+            $this->DstDisplayNum = $param['DstDisplayNum'];
         }
 
-        if (array_key_exists("Record",$param) and $param["Record"] !== null) {
-            $this->Record = $param["Record"];
+        if (array_key_exists('Record',$param) and $param['Record'] !== null) {
+            $this->Record = $param['Record'];
         }
 
-        if (array_key_exists("MaxAllowTime",$param) and $param["MaxAllowTime"] !== null) {
-            $this->MaxAllowTime = $param["MaxAllowTime"];
+        if (array_key_exists('MaxAllowTime',$param) and $param['MaxAllowTime'] !== null) {
+            $this->MaxAllowTime = $param['MaxAllowTime'];
         }
 
-        if (array_key_exists("StatusFlag",$param) and $param["StatusFlag"] !== null) {
-            $this->StatusFlag = $param["StatusFlag"];
+        if (array_key_exists('StatusFlag',$param) and $param['StatusFlag'] !== null) {
+            $this->StatusFlag = $param['StatusFlag'];
         }
 
-        if (array_key_exists("StatusUrl",$param) and $param["StatusUrl"] !== null) {
-            $this->StatusUrl = $param["StatusUrl"];
+        if (array_key_exists('StatusUrl',$param) and $param['StatusUrl'] !== null) {
+            $this->StatusUrl = $param['StatusUrl'];
         }
 
-        if (array_key_exists("HangupUrl",$param) and $param["HangupUrl"] !== null) {
-            $this->HangupUrl = $param["HangupUrl"];
+        if (array_key_exists('HangupUrl',$param) and $param['HangupUrl'] !== null) {
+            $this->HangupUrl = $param['HangupUrl'];
         }
 
-        if (array_key_exists("RecordUrl",$param) and $param["RecordUrl"] !== null) {
-            $this->RecordUrl = $param["RecordUrl"];
+        if (array_key_exists('RecordUrl',$param) and $param['RecordUrl'] !== null) {
+            $this->RecordUrl = $param['RecordUrl'];
         }
 
-        if (array_key_exists("BizId",$param) and $param["BizId"] !== null) {
-            $this->BizId = $param["BizId"];
+        if (array_key_exists('BizId',$param) and $param['BizId'] !== null) {
+            $this->BizId = $param['BizId'];
         }
 
-        if (array_key_exists("LastCallId",$param) and $param["LastCallId"] !== null) {
-            $this->LastCallId = $param["LastCallId"];
+        if (array_key_exists('LastCallId',$param) and $param['LastCallId'] !== null) {
+            $this->LastCallId = $param['LastCallId'];
         }
 
-        if (array_key_exists("PreCallerHandle",$param) and $param["PreCallerHandle"] !== null) {
+        if (array_key_exists('PreCallerHandle',$param) and $param['PreCallerHandle'] !== null) {
             $this->PreCallerHandle = new RreCallerHandle();
-            $this->PreCallerHandle->deserialize($param["PreCallerHandle"]);
+            $this->PreCallerHandle->deserialize($param['PreCallerHandle']);
         }
 
-        if (array_key_exists("OrderId",$param) and $param["OrderId"] !== null) {
-            $this->OrderId = $param["OrderId"];
+        if (array_key_exists('OrderId',$param) and $param['OrderId'] !== null) {
+            $this->OrderId = $param['OrderId'];
         }
     }
 }

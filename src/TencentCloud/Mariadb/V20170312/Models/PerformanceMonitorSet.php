@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -118,54 +118,54 @@ class PerformanceMonitorSet extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("UpdateTotal",$param) and $param["UpdateTotal"] !== null) {
+        if (array_key_exists('UpdateTotal',$param) and $param['UpdateTotal'] !== null) {
             $this->UpdateTotal = new MonitorData();
-            $this->UpdateTotal->deserialize($param["UpdateTotal"]);
+            $this->UpdateTotal->deserialize($param['UpdateTotal']);
         }
 
-        if (array_key_exists("DiskIops",$param) and $param["DiskIops"] !== null) {
+        if (array_key_exists('DiskIops',$param) and $param['DiskIops'] !== null) {
             $this->DiskIops = new MonitorData();
-            $this->DiskIops->deserialize($param["DiskIops"]);
+            $this->DiskIops->deserialize($param['DiskIops']);
         }
 
-        if (array_key_exists("ConnActive",$param) and $param["ConnActive"] !== null) {
+        if (array_key_exists('ConnActive',$param) and $param['ConnActive'] !== null) {
             $this->ConnActive = new MonitorData();
-            $this->ConnActive->deserialize($param["ConnActive"]);
+            $this->ConnActive->deserialize($param['ConnActive']);
         }
 
-        if (array_key_exists("MemHitRate",$param) and $param["MemHitRate"] !== null) {
+        if (array_key_exists('MemHitRate',$param) and $param['MemHitRate'] !== null) {
             $this->MemHitRate = new MonitorData();
-            $this->MemHitRate->deserialize($param["MemHitRate"]);
+            $this->MemHitRate->deserialize($param['MemHitRate']);
         }
 
-        if (array_key_exists("SlaveDelay",$param) and $param["SlaveDelay"] !== null) {
+        if (array_key_exists('SlaveDelay',$param) and $param['SlaveDelay'] !== null) {
             $this->SlaveDelay = new MonitorData();
-            $this->SlaveDelay->deserialize($param["SlaveDelay"]);
+            $this->SlaveDelay->deserialize($param['SlaveDelay']);
         }
 
-        if (array_key_exists("SelectTotal",$param) and $param["SelectTotal"] !== null) {
+        if (array_key_exists('SelectTotal',$param) and $param['SelectTotal'] !== null) {
             $this->SelectTotal = new MonitorData();
-            $this->SelectTotal->deserialize($param["SelectTotal"]);
+            $this->SelectTotal->deserialize($param['SelectTotal']);
         }
 
-        if (array_key_exists("LongQuery",$param) and $param["LongQuery"] !== null) {
+        if (array_key_exists('LongQuery',$param) and $param['LongQuery'] !== null) {
             $this->LongQuery = new MonitorData();
-            $this->LongQuery->deserialize($param["LongQuery"]);
+            $this->LongQuery->deserialize($param['LongQuery']);
         }
 
-        if (array_key_exists("DeleteTotal",$param) and $param["DeleteTotal"] !== null) {
+        if (array_key_exists('DeleteTotal',$param) and $param['DeleteTotal'] !== null) {
             $this->DeleteTotal = new MonitorData();
-            $this->DeleteTotal->deserialize($param["DeleteTotal"]);
+            $this->DeleteTotal->deserialize($param['DeleteTotal']);
         }
 
-        if (array_key_exists("InsertTotal",$param) and $param["InsertTotal"] !== null) {
+        if (array_key_exists('InsertTotal',$param) and $param['InsertTotal'] !== null) {
             $this->InsertTotal = new MonitorData();
-            $this->InsertTotal->deserialize($param["InsertTotal"]);
+            $this->InsertTotal->deserialize($param['InsertTotal']);
         }
 
-        if (array_key_exists("IsMasterSwitched",$param) and $param["IsMasterSwitched"] !== null) {
+        if (array_key_exists('IsMasterSwitched',$param) and $param['IsMasterSwitched'] !== null) {
             $this->IsMasterSwitched = new MonitorData();
-            $this->IsMasterSwitched->deserialize($param["IsMasterSwitched"]);
+            $this->IsMasterSwitched->deserialize($param['IsMasterSwitched']);
         }
     }
 }

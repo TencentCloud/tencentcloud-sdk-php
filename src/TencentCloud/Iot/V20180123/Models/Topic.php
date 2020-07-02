@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -118,44 +118,44 @@ class Topic extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TopicId",$param) and $param["TopicId"] !== null) {
-            $this->TopicId = $param["TopicId"];
+        if (array_key_exists('TopicId',$param) and $param['TopicId'] !== null) {
+            $this->TopicId = $param['TopicId'];
         }
 
-        if (array_key_exists("TopicName",$param) and $param["TopicName"] !== null) {
-            $this->TopicName = $param["TopicName"];
+        if (array_key_exists('TopicName',$param) and $param['TopicName'] !== null) {
+            $this->TopicName = $param['TopicName'];
         }
 
-        if (array_key_exists("ProductId",$param) and $param["ProductId"] !== null) {
-            $this->ProductId = $param["ProductId"];
+        if (array_key_exists('ProductId',$param) and $param['ProductId'] !== null) {
+            $this->ProductId = $param['ProductId'];
         }
 
-        if (array_key_exists("MsgLife",$param) and $param["MsgLife"] !== null) {
-            $this->MsgLife = $param["MsgLife"];
+        if (array_key_exists('MsgLife',$param) and $param['MsgLife'] !== null) {
+            $this->MsgLife = $param['MsgLife'];
         }
 
-        if (array_key_exists("MsgSize",$param) and $param["MsgSize"] !== null) {
-            $this->MsgSize = $param["MsgSize"];
+        if (array_key_exists('MsgSize',$param) and $param['MsgSize'] !== null) {
+            $this->MsgSize = $param['MsgSize'];
         }
 
-        if (array_key_exists("MsgCount",$param) and $param["MsgCount"] !== null) {
-            $this->MsgCount = $param["MsgCount"];
+        if (array_key_exists('MsgCount',$param) and $param['MsgCount'] !== null) {
+            $this->MsgCount = $param['MsgCount'];
         }
 
-        if (array_key_exists("Deleted",$param) and $param["Deleted"] !== null) {
-            $this->Deleted = $param["Deleted"];
+        if (array_key_exists('Deleted',$param) and $param['Deleted'] !== null) {
+            $this->Deleted = $param['Deleted'];
         }
 
-        if (array_key_exists("Path",$param) and $param["Path"] !== null) {
-            $this->Path = $param["Path"];
+        if (array_key_exists('Path',$param) and $param['Path'] !== null) {
+            $this->Path = $param['Path'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
-            $this->UpdateTime = $param["UpdateTime"];
+        if (array_key_exists('UpdateTime',$param) and $param['UpdateTime'] !== null) {
+            $this->UpdateTime = $param['UpdateTime'];
         }
     }
 }

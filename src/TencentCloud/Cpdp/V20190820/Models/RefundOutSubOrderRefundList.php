@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -78,24 +78,24 @@ class RefundOutSubOrderRefundList extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PlatformRefundAmt",$param) and $param["PlatformRefundAmt"] !== null) {
-            $this->PlatformRefundAmt = $param["PlatformRefundAmt"];
+        if (array_key_exists('PlatformRefundAmt',$param) and $param['PlatformRefundAmt'] !== null) {
+            $this->PlatformRefundAmt = $param['PlatformRefundAmt'];
         }
 
-        if (array_key_exists("RefundAmt",$param) and $param["RefundAmt"] !== null) {
-            $this->RefundAmt = $param["RefundAmt"];
+        if (array_key_exists('RefundAmt',$param) and $param['RefundAmt'] !== null) {
+            $this->RefundAmt = $param['RefundAmt'];
         }
 
-        if (array_key_exists("SubMchRefundAmt",$param) and $param["SubMchRefundAmt"] !== null) {
-            $this->SubMchRefundAmt = $param["SubMchRefundAmt"];
+        if (array_key_exists('SubMchRefundAmt',$param) and $param['SubMchRefundAmt'] !== null) {
+            $this->SubMchRefundAmt = $param['SubMchRefundAmt'];
         }
 
-        if (array_key_exists("SubOutTradeNo",$param) and $param["SubOutTradeNo"] !== null) {
-            $this->SubOutTradeNo = $param["SubOutTradeNo"];
+        if (array_key_exists('SubOutTradeNo',$param) and $param['SubOutTradeNo'] !== null) {
+            $this->SubOutTradeNo = $param['SubOutTradeNo'];
         }
 
-        if (array_key_exists("SubRefundId",$param) and $param["SubRefundId"] !== null) {
-            $this->SubRefundId = $param["SubRefundId"];
+        if (array_key_exists('SubRefundId',$param) and $param['SubRefundId'] !== null) {
+            $this->SubRefundId = $param['SubRefundId'];
         }
     }
 }

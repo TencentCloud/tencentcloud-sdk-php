@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -86,36 +86,36 @@ class CaptchaOperDataRes extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("OperDataLoadTimeUnitArray",$param) and $param["OperDataLoadTimeUnitArray"] !== null) {
+        if (array_key_exists('OperDataLoadTimeUnitArray',$param) and $param['OperDataLoadTimeUnitArray'] !== null) {
             $this->OperDataLoadTimeUnitArray = [];
-            foreach ($param["OperDataLoadTimeUnitArray"] as $key => $value){
+            foreach ($param['OperDataLoadTimeUnitArray'] as $key => $value){
                 $obj = new CaptchaOperDataLoadTimeUnit();
                 $obj->deserialize($value);
                 array_push($this->OperDataLoadTimeUnitArray, $obj);
             }
         }
 
-        if (array_key_exists("OperDataInterceptUnitArray",$param) and $param["OperDataInterceptUnitArray"] !== null) {
+        if (array_key_exists('OperDataInterceptUnitArray',$param) and $param['OperDataInterceptUnitArray'] !== null) {
             $this->OperDataInterceptUnitArray = [];
-            foreach ($param["OperDataInterceptUnitArray"] as $key => $value){
+            foreach ($param['OperDataInterceptUnitArray'] as $key => $value){
                 $obj = new CaptchaOperDataInterceptUnit();
                 $obj->deserialize($value);
                 array_push($this->OperDataInterceptUnitArray, $obj);
             }
         }
 
-        if (array_key_exists("OperDataTryTimesUnitArray",$param) and $param["OperDataTryTimesUnitArray"] !== null) {
+        if (array_key_exists('OperDataTryTimesUnitArray',$param) and $param['OperDataTryTimesUnitArray'] !== null) {
             $this->OperDataTryTimesUnitArray = [];
-            foreach ($param["OperDataTryTimesUnitArray"] as $key => $value){
+            foreach ($param['OperDataTryTimesUnitArray'] as $key => $value){
                 $obj = new CaptchaOperDataTryTimesUnit();
                 $obj->deserialize($value);
                 array_push($this->OperDataTryTimesUnitArray, $obj);
             }
         }
 
-        if (array_key_exists("OperDataTryTimesDistributeUnitArray",$param) and $param["OperDataTryTimesDistributeUnitArray"] !== null) {
+        if (array_key_exists('OperDataTryTimesDistributeUnitArray',$param) and $param['OperDataTryTimesDistributeUnitArray'] !== null) {
             $this->OperDataTryTimesDistributeUnitArray = [];
-            foreach ($param["OperDataTryTimesDistributeUnitArray"] as $key => $value){
+            foreach ($param['OperDataTryTimesDistributeUnitArray'] as $key => $value){
                 $obj = new CaptchaOperDataTryTimesDistributeUnit();
                 $obj->deserialize($value);
                 array_push($this->OperDataTryTimesDistributeUnitArray, $obj);

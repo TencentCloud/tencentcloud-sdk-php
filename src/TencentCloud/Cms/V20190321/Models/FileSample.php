@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -70,20 +70,20 @@ class FileSample extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FileMd5",$param) and $param["FileMd5"] !== null) {
-            $this->FileMd5 = $param["FileMd5"];
+        if (array_key_exists('FileMd5',$param) and $param['FileMd5'] !== null) {
+            $this->FileMd5 = $param['FileMd5'];
         }
 
-        if (array_key_exists("FileName",$param) and $param["FileName"] !== null) {
-            $this->FileName = $param["FileName"];
+        if (array_key_exists('FileName',$param) and $param['FileName'] !== null) {
+            $this->FileName = $param['FileName'];
         }
 
-        if (array_key_exists("FileUrl",$param) and $param["FileUrl"] !== null) {
-            $this->FileUrl = $param["FileUrl"];
+        if (array_key_exists('FileUrl',$param) and $param['FileUrl'] !== null) {
+            $this->FileUrl = $param['FileUrl'];
         }
 
-        if (array_key_exists("CompressFileUrl",$param) and $param["CompressFileUrl"] !== null) {
-            $this->CompressFileUrl = $param["CompressFileUrl"];
+        if (array_key_exists('CompressFileUrl',$param) and $param['CompressFileUrl'] !== null) {
+            $this->CompressFileUrl = $param['CompressFileUrl'];
         }
     }
 }

@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -86,33 +86,33 @@ class CreateAutoSnapshotPolicyRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Policy",$param) and $param["Policy"] !== null) {
+        if (array_key_exists('Policy',$param) and $param['Policy'] !== null) {
             $this->Policy = [];
-            foreach ($param["Policy"] as $key => $value){
+            foreach ($param['Policy'] as $key => $value){
                 $obj = new Policy();
                 $obj->deserialize($value);
                 array_push($this->Policy, $obj);
             }
         }
 
-        if (array_key_exists("AutoSnapshotPolicyName",$param) and $param["AutoSnapshotPolicyName"] !== null) {
-            $this->AutoSnapshotPolicyName = $param["AutoSnapshotPolicyName"];
+        if (array_key_exists('AutoSnapshotPolicyName',$param) and $param['AutoSnapshotPolicyName'] !== null) {
+            $this->AutoSnapshotPolicyName = $param['AutoSnapshotPolicyName'];
         }
 
-        if (array_key_exists("IsActivated",$param) and $param["IsActivated"] !== null) {
-            $this->IsActivated = $param["IsActivated"];
+        if (array_key_exists('IsActivated',$param) and $param['IsActivated'] !== null) {
+            $this->IsActivated = $param['IsActivated'];
         }
 
-        if (array_key_exists("IsPermanent",$param) and $param["IsPermanent"] !== null) {
-            $this->IsPermanent = $param["IsPermanent"];
+        if (array_key_exists('IsPermanent',$param) and $param['IsPermanent'] !== null) {
+            $this->IsPermanent = $param['IsPermanent'];
         }
 
-        if (array_key_exists("RetentionDays",$param) and $param["RetentionDays"] !== null) {
-            $this->RetentionDays = $param["RetentionDays"];
+        if (array_key_exists('RetentionDays',$param) and $param['RetentionDays'] !== null) {
+            $this->RetentionDays = $param['RetentionDays'];
         }
 
-        if (array_key_exists("DryRun",$param) and $param["DryRun"] !== null) {
-            $this->DryRun = $param["DryRun"];
+        if (array_key_exists('DryRun',$param) and $param['DryRun'] !== null) {
+            $this->DryRun = $param['DryRun'];
         }
     }
 }

@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -162,53 +162,53 @@ class Machine extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MachineName",$param) and $param["MachineName"] !== null) {
-            $this->MachineName = $param["MachineName"];
+        if (array_key_exists('MachineName',$param) and $param['MachineName'] !== null) {
+            $this->MachineName = $param['MachineName'];
         }
 
-        if (array_key_exists("MachineOs",$param) and $param["MachineOs"] !== null) {
-            $this->MachineOs = $param["MachineOs"];
+        if (array_key_exists('MachineOs',$param) and $param['MachineOs'] !== null) {
+            $this->MachineOs = $param['MachineOs'];
         }
 
-        if (array_key_exists("MachineStatus",$param) and $param["MachineStatus"] !== null) {
-            $this->MachineStatus = $param["MachineStatus"];
+        if (array_key_exists('MachineStatus',$param) and $param['MachineStatus'] !== null) {
+            $this->MachineStatus = $param['MachineStatus'];
         }
 
-        if (array_key_exists("Uuid",$param) and $param["Uuid"] !== null) {
-            $this->Uuid = $param["Uuid"];
+        if (array_key_exists('Uuid',$param) and $param['Uuid'] !== null) {
+            $this->Uuid = $param['Uuid'];
         }
 
-        if (array_key_exists("Quuid",$param) and $param["Quuid"] !== null) {
-            $this->Quuid = $param["Quuid"];
+        if (array_key_exists('Quuid',$param) and $param['Quuid'] !== null) {
+            $this->Quuid = $param['Quuid'];
         }
 
-        if (array_key_exists("VulNum",$param) and $param["VulNum"] !== null) {
-            $this->VulNum = $param["VulNum"];
+        if (array_key_exists('VulNum',$param) and $param['VulNum'] !== null) {
+            $this->VulNum = $param['VulNum'];
         }
 
-        if (array_key_exists("MachineIp",$param) and $param["MachineIp"] !== null) {
-            $this->MachineIp = $param["MachineIp"];
+        if (array_key_exists('MachineIp',$param) and $param['MachineIp'] !== null) {
+            $this->MachineIp = $param['MachineIp'];
         }
 
-        if (array_key_exists("IsProVersion",$param) and $param["IsProVersion"] !== null) {
-            $this->IsProVersion = $param["IsProVersion"];
+        if (array_key_exists('IsProVersion',$param) and $param['IsProVersion'] !== null) {
+            $this->IsProVersion = $param['IsProVersion'];
         }
 
-        if (array_key_exists("MachineWanIp",$param) and $param["MachineWanIp"] !== null) {
-            $this->MachineWanIp = $param["MachineWanIp"];
+        if (array_key_exists('MachineWanIp',$param) and $param['MachineWanIp'] !== null) {
+            $this->MachineWanIp = $param['MachineWanIp'];
         }
 
-        if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {
-            $this->PayMode = $param["PayMode"];
+        if (array_key_exists('PayMode',$param) and $param['PayMode'] !== null) {
+            $this->PayMode = $param['PayMode'];
         }
 
-        if (array_key_exists("MalwareNum",$param) and $param["MalwareNum"] !== null) {
-            $this->MalwareNum = $param["MalwareNum"];
+        if (array_key_exists('MalwareNum',$param) and $param['MalwareNum'] !== null) {
+            $this->MalwareNum = $param['MalwareNum'];
         }
 
-        if (array_key_exists("Tag",$param) and $param["Tag"] !== null) {
+        if (array_key_exists('Tag',$param) and $param['Tag'] !== null) {
             $this->Tag = [];
-            foreach ($param["Tag"] as $key => $value){
+            foreach ($param['Tag'] as $key => $value){
                 $obj = new MachineTag();
                 $obj->deserialize($value);
                 array_push($this->Tag, $obj);

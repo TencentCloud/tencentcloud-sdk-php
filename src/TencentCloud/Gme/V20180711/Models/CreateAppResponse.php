@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -102,39 +102,39 @@ class CreateAppResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BizId",$param) and $param["BizId"] !== null) {
-            $this->BizId = $param["BizId"];
+        if (array_key_exists('BizId',$param) and $param['BizId'] !== null) {
+            $this->BizId = $param['BizId'];
         }
 
-        if (array_key_exists("AppName",$param) and $param["AppName"] !== null) {
-            $this->AppName = $param["AppName"];
+        if (array_key_exists('AppName',$param) and $param['AppName'] !== null) {
+            $this->AppName = $param['AppName'];
         }
 
-        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
-            $this->ProjectId = $param["ProjectId"];
+        if (array_key_exists('ProjectId',$param) and $param['ProjectId'] !== null) {
+            $this->ProjectId = $param['ProjectId'];
         }
 
-        if (array_key_exists("SecretKey",$param) and $param["SecretKey"] !== null) {
-            $this->SecretKey = $param["SecretKey"];
+        if (array_key_exists('SecretKey',$param) and $param['SecretKey'] !== null) {
+            $this->SecretKey = $param['SecretKey'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("RealtimeSpeechConf",$param) and $param["RealtimeSpeechConf"] !== null) {
+        if (array_key_exists('RealtimeSpeechConf',$param) and $param['RealtimeSpeechConf'] !== null) {
             $this->RealtimeSpeechConf = new RealtimeSpeechConf();
-            $this->RealtimeSpeechConf->deserialize($param["RealtimeSpeechConf"]);
+            $this->RealtimeSpeechConf->deserialize($param['RealtimeSpeechConf']);
         }
 
-        if (array_key_exists("VoiceMessageConf",$param) and $param["VoiceMessageConf"] !== null) {
+        if (array_key_exists('VoiceMessageConf',$param) and $param['VoiceMessageConf'] !== null) {
             $this->VoiceMessageConf = new VoiceMessageConf();
-            $this->VoiceMessageConf->deserialize($param["VoiceMessageConf"]);
+            $this->VoiceMessageConf->deserialize($param['VoiceMessageConf']);
         }
 
-        if (array_key_exists("VoiceFilterConf",$param) and $param["VoiceFilterConf"] !== null) {
+        if (array_key_exists('VoiceFilterConf',$param) and $param['VoiceFilterConf'] !== null) {
             $this->VoiceFilterConf = new VoiceFilterConf();
-            $this->VoiceFilterConf->deserialize($param["VoiceFilterConf"]);
+            $this->VoiceFilterConf->deserialize($param['VoiceFilterConf']);
         }
     }
 }

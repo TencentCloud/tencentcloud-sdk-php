@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -122,40 +122,40 @@ class CreateKeyResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("KeyId",$param) and $param["KeyId"] !== null) {
-            $this->KeyId = $param["KeyId"];
+        if (array_key_exists('KeyId',$param) and $param['KeyId'] !== null) {
+            $this->KeyId = $param['KeyId'];
         }
 
-        if (array_key_exists("Alias",$param) and $param["Alias"] !== null) {
-            $this->Alias = $param["Alias"];
+        if (array_key_exists('Alias',$param) and $param['Alias'] !== null) {
+            $this->Alias = $param['Alias'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
-            $this->Description = $param["Description"];
+        if (array_key_exists('Description',$param) and $param['Description'] !== null) {
+            $this->Description = $param['Description'];
         }
 
-        if (array_key_exists("KeyState",$param) and $param["KeyState"] !== null) {
-            $this->KeyState = $param["KeyState"];
+        if (array_key_exists('KeyState',$param) and $param['KeyState'] !== null) {
+            $this->KeyState = $param['KeyState'];
         }
 
-        if (array_key_exists("KeyUsage",$param) and $param["KeyUsage"] !== null) {
-            $this->KeyUsage = $param["KeyUsage"];
+        if (array_key_exists('KeyUsage',$param) and $param['KeyUsage'] !== null) {
+            $this->KeyUsage = $param['KeyUsage'];
         }
 
-        if (array_key_exists("TagCode",$param) and $param["TagCode"] !== null) {
-            $this->TagCode = $param["TagCode"];
+        if (array_key_exists('TagCode',$param) and $param['TagCode'] !== null) {
+            $this->TagCode = $param['TagCode'];
         }
 
-        if (array_key_exists("TagMsg",$param) and $param["TagMsg"] !== null) {
-            $this->TagMsg = $param["TagMsg"];
+        if (array_key_exists('TagMsg',$param) and $param['TagMsg'] !== null) {
+            $this->TagMsg = $param['TagMsg'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

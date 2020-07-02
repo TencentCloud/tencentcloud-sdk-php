@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setType(string $Type) 设置要删除的触发器类型，目前支持 cos 、cmq、 timer、ckafka 类型
  * @method string getNamespace() 获取函数所属命名空间
  * @method void setNamespace(string $Namespace) 设置函数所属命名空间
- * @method string getTriggerDesc() 获取如果删除的触发器类型为 COS 触发器，该字段为必填值，存放 JSON 格式的数据 {"event":"cos:ObjectCreated:*"}，数据内容和 SetTrigger 接口中该字段的格式相同；如果删除的触发器类型为定时触发器或 CMQ 触发器，可以不指定该字段
- * @method void setTriggerDesc(string $TriggerDesc) 设置如果删除的触发器类型为 COS 触发器，该字段为必填值，存放 JSON 格式的数据 {"event":"cos:ObjectCreated:*"}，数据内容和 SetTrigger 接口中该字段的格式相同；如果删除的触发器类型为定时触发器或 CMQ 触发器，可以不指定该字段
+ * @method string getTriggerDesc() 获取如果删除的触发器类型为 COS 触发器，该字段为必填值，存放 JSON 格式的数据 {'event':"cos:ObjectCreated:*"}，数据内容和 SetTrigger 接口中该字段的格式相同；如果删除的触发器类型为定时触发器或 CMQ 触发器，可以不指定该字段
+ * @method void setTriggerDesc(string $TriggerDesc) 设置如果删除的触发器类型为 COS 触发器，该字段为必填值，存放 JSON 格式的数据 {'event':"cos:ObjectCreated:*"}，数据内容和 SetTrigger 接口中该字段的格式相同；如果删除的触发器类型为定时触发器或 CMQ 触发器，可以不指定该字段
  * @method string getQualifier() 获取函数的版本信息
  * @method void setQualifier(string $Qualifier) 设置函数的版本信息
  */
@@ -56,7 +56,7 @@ class DeleteTriggerRequest extends AbstractModel
     public $Namespace;
 
     /**
-     * @var string 如果删除的触发器类型为 COS 触发器，该字段为必填值，存放 JSON 格式的数据 {"event":"cos:ObjectCreated:*"}，数据内容和 SetTrigger 接口中该字段的格式相同；如果删除的触发器类型为定时触发器或 CMQ 触发器，可以不指定该字段
+     * @var string 如果删除的触发器类型为 COS 触发器，该字段为必填值，存放 JSON 格式的数据 {'event':"cos:ObjectCreated:*"}，数据内容和 SetTrigger 接口中该字段的格式相同；如果删除的触发器类型为定时触发器或 CMQ 触发器，可以不指定该字段
      */
     public $TriggerDesc;
 
@@ -70,7 +70,7 @@ class DeleteTriggerRequest extends AbstractModel
      * @param string $TriggerName 要删除的触发器名称
      * @param string $Type 要删除的触发器类型，目前支持 cos 、cmq、 timer、ckafka 类型
      * @param string $Namespace 函数所属命名空间
-     * @param string $TriggerDesc 如果删除的触发器类型为 COS 触发器，该字段为必填值，存放 JSON 格式的数据 {"event":"cos:ObjectCreated:*"}，数据内容和 SetTrigger 接口中该字段的格式相同；如果删除的触发器类型为定时触发器或 CMQ 触发器，可以不指定该字段
+     * @param string $TriggerDesc 如果删除的触发器类型为 COS 触发器，该字段为必填值，存放 JSON 格式的数据 {'event':"cos:ObjectCreated:*"}，数据内容和 SetTrigger 接口中该字段的格式相同；如果删除的触发器类型为定时触发器或 CMQ 触发器，可以不指定该字段
      * @param string $Qualifier 函数的版本信息
      */
     function __construct()
@@ -86,28 +86,28 @@ class DeleteTriggerRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FunctionName",$param) and $param["FunctionName"] !== null) {
-            $this->FunctionName = $param["FunctionName"];
+        if (array_key_exists('FunctionName',$param) and $param['FunctionName'] !== null) {
+            $this->FunctionName = $param['FunctionName'];
         }
 
-        if (array_key_exists("TriggerName",$param) and $param["TriggerName"] !== null) {
-            $this->TriggerName = $param["TriggerName"];
+        if (array_key_exists('TriggerName',$param) and $param['TriggerName'] !== null) {
+            $this->TriggerName = $param['TriggerName'];
         }
 
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists('Type',$param) and $param['Type'] !== null) {
+            $this->Type = $param['Type'];
         }
 
-        if (array_key_exists("Namespace",$param) and $param["Namespace"] !== null) {
-            $this->Namespace = $param["Namespace"];
+        if (array_key_exists('Namespace',$param) and $param['Namespace'] !== null) {
+            $this->Namespace = $param['Namespace'];
         }
 
-        if (array_key_exists("TriggerDesc",$param) and $param["TriggerDesc"] !== null) {
-            $this->TriggerDesc = $param["TriggerDesc"];
+        if (array_key_exists('TriggerDesc',$param) and $param['TriggerDesc'] !== null) {
+            $this->TriggerDesc = $param['TriggerDesc'];
         }
 
-        if (array_key_exists("Qualifier",$param) and $param["Qualifier"] !== null) {
-            $this->Qualifier = $param["Qualifier"];
+        if (array_key_exists('Qualifier',$param) and $param['Qualifier'] !== null) {
+            $this->Qualifier = $param['Qualifier'];
         }
     }
 }

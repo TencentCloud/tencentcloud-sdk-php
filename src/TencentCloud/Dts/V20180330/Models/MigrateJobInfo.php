@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -166,73 +166,73 @@ class MigrateJobInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("JobId",$param) and $param["JobId"] !== null) {
-            $this->JobId = $param["JobId"];
+        if (array_key_exists('JobId',$param) and $param['JobId'] !== null) {
+            $this->JobId = $param['JobId'];
         }
 
-        if (array_key_exists("JobName",$param) and $param["JobName"] !== null) {
-            $this->JobName = $param["JobName"];
+        if (array_key_exists('JobName',$param) and $param['JobName'] !== null) {
+            $this->JobName = $param['JobName'];
         }
 
-        if (array_key_exists("MigrateOption",$param) and $param["MigrateOption"] !== null) {
+        if (array_key_exists('MigrateOption',$param) and $param['MigrateOption'] !== null) {
             $this->MigrateOption = new MigrateOption();
-            $this->MigrateOption->deserialize($param["MigrateOption"]);
+            $this->MigrateOption->deserialize($param['MigrateOption']);
         }
 
-        if (array_key_exists("SrcDatabaseType",$param) and $param["SrcDatabaseType"] !== null) {
-            $this->SrcDatabaseType = $param["SrcDatabaseType"];
+        if (array_key_exists('SrcDatabaseType',$param) and $param['SrcDatabaseType'] !== null) {
+            $this->SrcDatabaseType = $param['SrcDatabaseType'];
         }
 
-        if (array_key_exists("SrcAccessType",$param) and $param["SrcAccessType"] !== null) {
-            $this->SrcAccessType = $param["SrcAccessType"];
+        if (array_key_exists('SrcAccessType',$param) and $param['SrcAccessType'] !== null) {
+            $this->SrcAccessType = $param['SrcAccessType'];
         }
 
-        if (array_key_exists("SrcInfo",$param) and $param["SrcInfo"] !== null) {
+        if (array_key_exists('SrcInfo',$param) and $param['SrcInfo'] !== null) {
             $this->SrcInfo = new SrcInfo();
-            $this->SrcInfo->deserialize($param["SrcInfo"]);
+            $this->SrcInfo->deserialize($param['SrcInfo']);
         }
 
-        if (array_key_exists("DstDatabaseType",$param) and $param["DstDatabaseType"] !== null) {
-            $this->DstDatabaseType = $param["DstDatabaseType"];
+        if (array_key_exists('DstDatabaseType',$param) and $param['DstDatabaseType'] !== null) {
+            $this->DstDatabaseType = $param['DstDatabaseType'];
         }
 
-        if (array_key_exists("DstAccessType",$param) and $param["DstAccessType"] !== null) {
-            $this->DstAccessType = $param["DstAccessType"];
+        if (array_key_exists('DstAccessType',$param) and $param['DstAccessType'] !== null) {
+            $this->DstAccessType = $param['DstAccessType'];
         }
 
-        if (array_key_exists("DstInfo",$param) and $param["DstInfo"] !== null) {
+        if (array_key_exists('DstInfo',$param) and $param['DstInfo'] !== null) {
             $this->DstInfo = new DstInfo();
-            $this->DstInfo->deserialize($param["DstInfo"]);
+            $this->DstInfo->deserialize($param['DstInfo']);
         }
 
-        if (array_key_exists("DatabaseInfo",$param) and $param["DatabaseInfo"] !== null) {
-            $this->DatabaseInfo = $param["DatabaseInfo"];
+        if (array_key_exists('DatabaseInfo',$param) and $param['DatabaseInfo'] !== null) {
+            $this->DatabaseInfo = $param['DatabaseInfo'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
-            $this->StartTime = $param["StartTime"];
+        if (array_key_exists('StartTime',$param) and $param['StartTime'] !== null) {
+            $this->StartTime = $param['StartTime'];
         }
 
-        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
-            $this->EndTime = $param["EndTime"];
+        if (array_key_exists('EndTime',$param) and $param['EndTime'] !== null) {
+            $this->EndTime = $param['EndTime'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("Detail",$param) and $param["Detail"] !== null) {
+        if (array_key_exists('Detail',$param) and $param['Detail'] !== null) {
             $this->Detail = new MigrateDetailInfo();
-            $this->Detail->deserialize($param["Detail"]);
+            $this->Detail->deserialize($param['Detail']);
         }
 
-        if (array_key_exists("ErrorInfo",$param) and $param["ErrorInfo"] !== null) {
+        if (array_key_exists('ErrorInfo',$param) and $param['ErrorInfo'] !== null) {
             $this->ErrorInfo = [];
-            foreach ($param["ErrorInfo"] as $key => $value){
+            foreach ($param['ErrorInfo'] as $key => $value){
                 $obj = new ErrorInfo();
                 $obj->deserialize($value);
                 array_push($this->ErrorInfo, $obj);

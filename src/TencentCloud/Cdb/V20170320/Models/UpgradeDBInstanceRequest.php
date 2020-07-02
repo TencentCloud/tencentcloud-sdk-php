@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -118,44 +118,44 @@ class UpgradeDBInstanceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("Memory",$param) and $param["Memory"] !== null) {
-            $this->Memory = $param["Memory"];
+        if (array_key_exists('Memory',$param) and $param['Memory'] !== null) {
+            $this->Memory = $param['Memory'];
         }
 
-        if (array_key_exists("Volume",$param) and $param["Volume"] !== null) {
-            $this->Volume = $param["Volume"];
+        if (array_key_exists('Volume',$param) and $param['Volume'] !== null) {
+            $this->Volume = $param['Volume'];
         }
 
-        if (array_key_exists("ProtectMode",$param) and $param["ProtectMode"] !== null) {
-            $this->ProtectMode = $param["ProtectMode"];
+        if (array_key_exists('ProtectMode',$param) and $param['ProtectMode'] !== null) {
+            $this->ProtectMode = $param['ProtectMode'];
         }
 
-        if (array_key_exists("DeployMode",$param) and $param["DeployMode"] !== null) {
-            $this->DeployMode = $param["DeployMode"];
+        if (array_key_exists('DeployMode',$param) and $param['DeployMode'] !== null) {
+            $this->DeployMode = $param['DeployMode'];
         }
 
-        if (array_key_exists("SlaveZone",$param) and $param["SlaveZone"] !== null) {
-            $this->SlaveZone = $param["SlaveZone"];
+        if (array_key_exists('SlaveZone',$param) and $param['SlaveZone'] !== null) {
+            $this->SlaveZone = $param['SlaveZone'];
         }
 
-        if (array_key_exists("EngineVersion",$param) and $param["EngineVersion"] !== null) {
-            $this->EngineVersion = $param["EngineVersion"];
+        if (array_key_exists('EngineVersion',$param) and $param['EngineVersion'] !== null) {
+            $this->EngineVersion = $param['EngineVersion'];
         }
 
-        if (array_key_exists("WaitSwitch",$param) and $param["WaitSwitch"] !== null) {
-            $this->WaitSwitch = $param["WaitSwitch"];
+        if (array_key_exists('WaitSwitch',$param) and $param['WaitSwitch'] !== null) {
+            $this->WaitSwitch = $param['WaitSwitch'];
         }
 
-        if (array_key_exists("BackupZone",$param) and $param["BackupZone"] !== null) {
-            $this->BackupZone = $param["BackupZone"];
+        if (array_key_exists('BackupZone',$param) and $param['BackupZone'] !== null) {
+            $this->BackupZone = $param['BackupZone'];
         }
 
-        if (array_key_exists("InstanceRole",$param) and $param["InstanceRole"] !== null) {
-            $this->InstanceRole = $param["InstanceRole"];
+        if (array_key_exists('InstanceRole',$param) and $param['InstanceRole'] !== null) {
+            $this->InstanceRole = $param['InstanceRole'];
         }
     }
 }

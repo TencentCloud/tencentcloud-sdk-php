@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -25,13 +25,13 @@ use TencentCloud\Common\AbstractModel;
 2. TERRORISM，即暴恐识别
 3. POLITICS，即政治敏感识别
 
-支持多场景（Scenes）一起检测。例如，使用 Scenes=["PORN", "TERRORISM"]，即对一张图片同时进行色情识别和暴恐识别。
+支持多场景（Scenes）一起检测。例如，使用 Scenes=['PORN', 'TERRORISM']，即对一张图片同时进行色情识别和暴恐识别。
  * @method void setScenes(array $Scenes) 设置本次调用支持的识别场景，可选值如下：
 1. PORN，即色情识别
 2. TERRORISM，即暴恐识别
 3. POLITICS，即政治敏感识别
 
-支持多场景（Scenes）一起检测。例如，使用 Scenes=["PORN", "TERRORISM"]，即对一张图片同时进行色情识别和暴恐识别。
+支持多场景（Scenes）一起检测。例如，使用 Scenes=['PORN', 'TERRORISM']，即对一张图片同时进行色情识别和暴恐识别。
  * @method string getImageUrl() 获取图片URL地址。 
 图片限制： 
  • 图片格式：PNG、JPG、JPEG。 
@@ -61,7 +61,7 @@ class ImageModerationRequest extends AbstractModel
 2. TERRORISM，即暴恐识别
 3. POLITICS，即政治敏感识别
 
-支持多场景（Scenes）一起检测。例如，使用 Scenes=["PORN", "TERRORISM"]，即对一张图片同时进行色情识别和暴恐识别。
+支持多场景（Scenes）一起检测。例如，使用 Scenes=['PORN', 'TERRORISM']，即对一张图片同时进行色情识别和暴恐识别。
      */
     public $Scenes;
 
@@ -97,7 +97,7 @@ class ImageModerationRequest extends AbstractModel
 2. TERRORISM，即暴恐识别
 3. POLITICS，即政治敏感识别
 
-支持多场景（Scenes）一起检测。例如，使用 Scenes=["PORN", "TERRORISM"]，即对一张图片同时进行色情识别和暴恐识别。
+支持多场景（Scenes）一起检测。例如，使用 Scenes=['PORN', 'TERRORISM']，即对一张图片同时进行色情识别和暴恐识别。
      * @param string $ImageUrl 图片URL地址。 
 图片限制： 
  • 图片格式：PNG、JPG、JPEG。 
@@ -122,24 +122,24 @@ class ImageModerationRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Scenes",$param) and $param["Scenes"] !== null) {
-            $this->Scenes = $param["Scenes"];
+        if (array_key_exists('Scenes',$param) and $param['Scenes'] !== null) {
+            $this->Scenes = $param['Scenes'];
         }
 
-        if (array_key_exists("ImageUrl",$param) and $param["ImageUrl"] !== null) {
-            $this->ImageUrl = $param["ImageUrl"];
+        if (array_key_exists('ImageUrl',$param) and $param['ImageUrl'] !== null) {
+            $this->ImageUrl = $param['ImageUrl'];
         }
 
-        if (array_key_exists("Config",$param) and $param["Config"] !== null) {
-            $this->Config = $param["Config"];
+        if (array_key_exists('Config',$param) and $param['Config'] !== null) {
+            $this->Config = $param['Config'];
         }
 
-        if (array_key_exists("Extra",$param) and $param["Extra"] !== null) {
-            $this->Extra = $param["Extra"];
+        if (array_key_exists('Extra',$param) and $param['Extra'] !== null) {
+            $this->Extra = $param['Extra'];
         }
 
-        if (array_key_exists("ImageBase64",$param) and $param["ImageBase64"] !== null) {
-            $this->ImageBase64 = $param["ImageBase64"];
+        if (array_key_exists('ImageBase64',$param) and $param['ImageBase64'] !== null) {
+            $this->ImageBase64 = $param['ImageBase64'];
         }
     }
 }

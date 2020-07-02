@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -150,60 +150,60 @@ class TrafficMirror extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TrafficMirrorId",$param) and $param["TrafficMirrorId"] !== null) {
-            $this->TrafficMirrorId = $param["TrafficMirrorId"];
+        if (array_key_exists('TrafficMirrorId',$param) and $param['TrafficMirrorId'] !== null) {
+            $this->TrafficMirrorId = $param['TrafficMirrorId'];
         }
 
-        if (array_key_exists("Alias",$param) and $param["Alias"] !== null) {
-            $this->Alias = $param["Alias"];
+        if (array_key_exists('Alias',$param) and $param['Alias'] !== null) {
+            $this->Alias = $param['Alias'];
         }
 
-        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
-            $this->VpcId = $param["VpcId"];
+        if (array_key_exists('VpcId',$param) and $param['VpcId'] !== null) {
+            $this->VpcId = $param['VpcId'];
         }
 
-        if (array_key_exists("LoadBalancerType",$param) and $param["LoadBalancerType"] !== null) {
-            $this->LoadBalancerType = $param["LoadBalancerType"];
+        if (array_key_exists('LoadBalancerType',$param) and $param['LoadBalancerType'] !== null) {
+            $this->LoadBalancerType = $param['LoadBalancerType'];
         }
 
-        if (array_key_exists("HealthSwitch",$param) and $param["HealthSwitch"] !== null) {
-            $this->HealthSwitch = $param["HealthSwitch"];
+        if (array_key_exists('HealthSwitch',$param) and $param['HealthSwitch'] !== null) {
+            $this->HealthSwitch = $param['HealthSwitch'];
         }
 
-        if (array_key_exists("HealthNum",$param) and $param["HealthNum"] !== null) {
-            $this->HealthNum = $param["HealthNum"];
+        if (array_key_exists('HealthNum',$param) and $param['HealthNum'] !== null) {
+            $this->HealthNum = $param['HealthNum'];
         }
 
-        if (array_key_exists("UnhealthNum",$param) and $param["UnhealthNum"] !== null) {
-            $this->UnhealthNum = $param["UnhealthNum"];
+        if (array_key_exists('UnhealthNum',$param) and $param['UnhealthNum'] !== null) {
+            $this->UnhealthNum = $param['UnhealthNum'];
         }
 
-        if (array_key_exists("IntervalTime",$param) and $param["IntervalTime"] !== null) {
-            $this->IntervalTime = $param["IntervalTime"];
+        if (array_key_exists('IntervalTime',$param) and $param['IntervalTime'] !== null) {
+            $this->IntervalTime = $param['IntervalTime'];
         }
 
-        if (array_key_exists("HttpCheckDomain",$param) and $param["HttpCheckDomain"] !== null) {
-            $this->HttpCheckDomain = $param["HttpCheckDomain"];
+        if (array_key_exists('HttpCheckDomain',$param) and $param['HttpCheckDomain'] !== null) {
+            $this->HttpCheckDomain = $param['HttpCheckDomain'];
         }
 
-        if (array_key_exists("HttpCheckPath",$param) and $param["HttpCheckPath"] !== null) {
-            $this->HttpCheckPath = $param["HttpCheckPath"];
+        if (array_key_exists('HttpCheckPath',$param) and $param['HttpCheckPath'] !== null) {
+            $this->HttpCheckPath = $param['HttpCheckPath'];
         }
 
-        if (array_key_exists("HttpCodes",$param) and $param["HttpCodes"] !== null) {
-            $this->HttpCodes = $param["HttpCodes"];
+        if (array_key_exists('HttpCodes',$param) and $param['HttpCodes'] !== null) {
+            $this->HttpCodes = $param['HttpCodes'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("VpcCidrBlock",$param) and $param["VpcCidrBlock"] !== null) {
-            $this->VpcCidrBlock = $param["VpcCidrBlock"];
+        if (array_key_exists('VpcCidrBlock',$param) and $param['VpcCidrBlock'] !== null) {
+            $this->VpcCidrBlock = $param['VpcCidrBlock'];
         }
 
-        if (array_key_exists("VpcName",$param) and $param["VpcName"] !== null) {
-            $this->VpcName = $param["VpcName"];
+        if (array_key_exists('VpcName',$param) and $param['VpcName'] !== null) {
+            $this->VpcName = $param['VpcName'];
         }
     }
 }

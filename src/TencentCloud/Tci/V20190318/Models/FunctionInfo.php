@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -78,24 +78,24 @@ class FunctionInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("EnableAllText",$param) and $param["EnableAllText"] !== null) {
-            $this->EnableAllText = $param["EnableAllText"];
+        if (array_key_exists('EnableAllText',$param) and $param['EnableAllText'] !== null) {
+            $this->EnableAllText = $param['EnableAllText'];
         }
 
-        if (array_key_exists("EnableKeyword",$param) and $param["EnableKeyword"] !== null) {
-            $this->EnableKeyword = $param["EnableKeyword"];
+        if (array_key_exists('EnableKeyword',$param) and $param['EnableKeyword'] !== null) {
+            $this->EnableKeyword = $param['EnableKeyword'];
         }
 
-        if (array_key_exists("EnableMuteDetect",$param) and $param["EnableMuteDetect"] !== null) {
-            $this->EnableMuteDetect = $param["EnableMuteDetect"];
+        if (array_key_exists('EnableMuteDetect',$param) and $param['EnableMuteDetect'] !== null) {
+            $this->EnableMuteDetect = $param['EnableMuteDetect'];
         }
 
-        if (array_key_exists("EnableVadInfo",$param) and $param["EnableVadInfo"] !== null) {
-            $this->EnableVadInfo = $param["EnableVadInfo"];
+        if (array_key_exists('EnableVadInfo',$param) and $param['EnableVadInfo'] !== null) {
+            $this->EnableVadInfo = $param['EnableVadInfo'];
         }
 
-        if (array_key_exists("EnableVolume",$param) and $param["EnableVolume"] !== null) {
-            $this->EnableVolume = $param["EnableVolume"];
+        if (array_key_exists('EnableVolume',$param) and $param['EnableVolume'] !== null) {
+            $this->EnableVolume = $param['EnableVolume'];
         }
     }
 }

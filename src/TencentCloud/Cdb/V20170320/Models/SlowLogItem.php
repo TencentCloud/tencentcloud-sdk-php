@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -170,48 +170,48 @@ class SlowLogItem extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Timestamp",$param) and $param["Timestamp"] !== null) {
-            $this->Timestamp = $param["Timestamp"];
+        if (array_key_exists('Timestamp',$param) and $param['Timestamp'] !== null) {
+            $this->Timestamp = $param['Timestamp'];
         }
 
-        if (array_key_exists("QueryTime",$param) and $param["QueryTime"] !== null) {
-            $this->QueryTime = $param["QueryTime"];
+        if (array_key_exists('QueryTime',$param) and $param['QueryTime'] !== null) {
+            $this->QueryTime = $param['QueryTime'];
         }
 
-        if (array_key_exists("SqlText",$param) and $param["SqlText"] !== null) {
-            $this->SqlText = $param["SqlText"];
+        if (array_key_exists('SqlText',$param) and $param['SqlText'] !== null) {
+            $this->SqlText = $param['SqlText'];
         }
 
-        if (array_key_exists("UserHost",$param) and $param["UserHost"] !== null) {
-            $this->UserHost = $param["UserHost"];
+        if (array_key_exists('UserHost',$param) and $param['UserHost'] !== null) {
+            $this->UserHost = $param['UserHost'];
         }
 
-        if (array_key_exists("UserName",$param) and $param["UserName"] !== null) {
-            $this->UserName = $param["UserName"];
+        if (array_key_exists('UserName',$param) and $param['UserName'] !== null) {
+            $this->UserName = $param['UserName'];
         }
 
-        if (array_key_exists("Database",$param) and $param["Database"] !== null) {
-            $this->Database = $param["Database"];
+        if (array_key_exists('Database',$param) and $param['Database'] !== null) {
+            $this->Database = $param['Database'];
         }
 
-        if (array_key_exists("LockTime",$param) and $param["LockTime"] !== null) {
-            $this->LockTime = $param["LockTime"];
+        if (array_key_exists('LockTime',$param) and $param['LockTime'] !== null) {
+            $this->LockTime = $param['LockTime'];
         }
 
-        if (array_key_exists("RowsExamined",$param) and $param["RowsExamined"] !== null) {
-            $this->RowsExamined = $param["RowsExamined"];
+        if (array_key_exists('RowsExamined',$param) and $param['RowsExamined'] !== null) {
+            $this->RowsExamined = $param['RowsExamined'];
         }
 
-        if (array_key_exists("RowsSent",$param) and $param["RowsSent"] !== null) {
-            $this->RowsSent = $param["RowsSent"];
+        if (array_key_exists('RowsSent',$param) and $param['RowsSent'] !== null) {
+            $this->RowsSent = $param['RowsSent'];
         }
 
-        if (array_key_exists("SqlTemplate",$param) and $param["SqlTemplate"] !== null) {
-            $this->SqlTemplate = $param["SqlTemplate"];
+        if (array_key_exists('SqlTemplate',$param) and $param['SqlTemplate'] !== null) {
+            $this->SqlTemplate = $param['SqlTemplate'];
         }
 
-        if (array_key_exists("Md5",$param) and $param["Md5"] !== null) {
-            $this->Md5 = $param["Md5"];
+        if (array_key_exists('Md5',$param) and $param['Md5'] !== null) {
+            $this->Md5 = $param['Md5'];
         }
     }
 }

@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -62,22 +62,22 @@ class SecurityGroupPolicySet extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Version",$param) and $param["Version"] !== null) {
-            $this->Version = $param["Version"];
+        if (array_key_exists('Version',$param) and $param['Version'] !== null) {
+            $this->Version = $param['Version'];
         }
 
-        if (array_key_exists("Egress",$param) and $param["Egress"] !== null) {
+        if (array_key_exists('Egress',$param) and $param['Egress'] !== null) {
             $this->Egress = [];
-            foreach ($param["Egress"] as $key => $value){
+            foreach ($param['Egress'] as $key => $value){
                 $obj = new SecurityGroupPolicy();
                 $obj->deserialize($value);
                 array_push($this->Egress, $obj);
             }
         }
 
-        if (array_key_exists("Ingress",$param) and $param["Ingress"] !== null) {
+        if (array_key_exists('Ingress',$param) and $param['Ingress'] !== null) {
             $this->Ingress = [];
-            foreach ($param["Ingress"] as $key => $value){
+            foreach ($param['Ingress'] as $key => $value){
                 $obj = new SecurityGroupPolicy();
                 $obj->deserialize($value);
                 array_push($this->Ingress, $obj);

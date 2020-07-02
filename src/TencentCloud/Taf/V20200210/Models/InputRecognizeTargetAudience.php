@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -342,156 +342,156 @@ class InputRecognizeTargetAudience extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Uid",$param) and $param["Uid"] !== null) {
-            $this->Uid = $param["Uid"];
+        if (array_key_exists('Uid',$param) and $param['Uid'] !== null) {
+            $this->Uid = $param['Uid'];
         }
 
-        if (array_key_exists("AccountType",$param) and $param["AccountType"] !== null) {
-            $this->AccountType = $param["AccountType"];
+        if (array_key_exists('AccountType',$param) and $param['AccountType'] !== null) {
+            $this->AccountType = $param['AccountType'];
         }
 
-        if (array_key_exists("ModelIdList",$param) and $param["ModelIdList"] !== null) {
-            $this->ModelIdList = $param["ModelIdList"];
+        if (array_key_exists('ModelIdList',$param) and $param['ModelIdList'] !== null) {
+            $this->ModelIdList = $param['ModelIdList'];
         }
 
-        if (array_key_exists("Ip",$param) and $param["Ip"] !== null) {
-            $this->Ip = $param["Ip"];
+        if (array_key_exists('Ip',$param) and $param['Ip'] !== null) {
+            $this->Ip = $param['Ip'];
         }
 
-        if (array_key_exists("Os",$param) and $param["Os"] !== null) {
-            $this->Os = $param["Os"];
+        if (array_key_exists('Os',$param) and $param['Os'] !== null) {
+            $this->Os = $param['Os'];
         }
 
-        if (array_key_exists("Osv",$param) and $param["Osv"] !== null) {
-            $this->Osv = $param["Osv"];
+        if (array_key_exists('Osv',$param) and $param['Osv'] !== null) {
+            $this->Osv = $param['Osv'];
         }
 
-        if (array_key_exists("Lat",$param) and $param["Lat"] !== null) {
-            $this->Lat = $param["Lat"];
+        if (array_key_exists('Lat',$param) and $param['Lat'] !== null) {
+            $this->Lat = $param['Lat'];
         }
 
-        if (array_key_exists("Lon",$param) and $param["Lon"] !== null) {
-            $this->Lon = $param["Lon"];
+        if (array_key_exists('Lon',$param) and $param['Lon'] !== null) {
+            $this->Lon = $param['Lon'];
         }
 
-        if (array_key_exists("DeviceModel",$param) and $param["DeviceModel"] !== null) {
-            $this->DeviceModel = $param["DeviceModel"];
+        if (array_key_exists('DeviceModel',$param) and $param['DeviceModel'] !== null) {
+            $this->DeviceModel = $param['DeviceModel'];
         }
 
-        if (array_key_exists("BidFloor",$param) and $param["BidFloor"] !== null) {
-            $this->BidFloor = $param["BidFloor"];
+        if (array_key_exists('BidFloor',$param) and $param['BidFloor'] !== null) {
+            $this->BidFloor = $param['BidFloor'];
         }
 
-        if (array_key_exists("Age",$param) and $param["Age"] !== null) {
-            $this->Age = $param["Age"];
+        if (array_key_exists('Age',$param) and $param['Age'] !== null) {
+            $this->Age = $param['Age'];
         }
 
-        if (array_key_exists("Gender",$param) and $param["Gender"] !== null) {
-            $this->Gender = $param["Gender"];
+        if (array_key_exists('Gender',$param) and $param['Gender'] !== null) {
+            $this->Gender = $param['Gender'];
         }
 
-        if (array_key_exists("Location",$param) and $param["Location"] !== null) {
-            $this->Location = $param["Location"];
+        if (array_key_exists('Location',$param) and $param['Location'] !== null) {
+            $this->Location = $param['Location'];
         }
 
-        if (array_key_exists("DeliveryMode",$param) and $param["DeliveryMode"] !== null) {
-            $this->DeliveryMode = $param["DeliveryMode"];
+        if (array_key_exists('DeliveryMode',$param) and $param['DeliveryMode'] !== null) {
+            $this->DeliveryMode = $param['DeliveryMode'];
         }
 
-        if (array_key_exists("AdvertisingType",$param) and $param["AdvertisingType"] !== null) {
-            $this->AdvertisingType = $param["AdvertisingType"];
+        if (array_key_exists('AdvertisingType',$param) and $param['AdvertisingType'] !== null) {
+            $this->AdvertisingType = $param['AdvertisingType'];
         }
 
-        if (array_key_exists("Mac",$param) and $param["Mac"] !== null) {
-            $this->Mac = $param["Mac"];
+        if (array_key_exists('Mac',$param) and $param['Mac'] !== null) {
+            $this->Mac = $param['Mac'];
         }
 
-        if (array_key_exists("Phone",$param) and $param["Phone"] !== null) {
-            $this->Phone = $param["Phone"];
+        if (array_key_exists('Phone',$param) and $param['Phone'] !== null) {
+            $this->Phone = $param['Phone'];
         }
 
-        if (array_key_exists("Ua",$param) and $param["Ua"] !== null) {
-            $this->Ua = $param["Ua"];
+        if (array_key_exists('Ua',$param) and $param['Ua'] !== null) {
+            $this->Ua = $param['Ua'];
         }
 
-        if (array_key_exists("App",$param) and $param["App"] !== null) {
-            $this->App = $param["App"];
+        if (array_key_exists('App',$param) and $param['App'] !== null) {
+            $this->App = $param['App'];
         }
 
-        if (array_key_exists("Package",$param) and $param["Package"] !== null) {
-            $this->Package = $param["Package"];
+        if (array_key_exists('Package',$param) and $param['Package'] !== null) {
+            $this->Package = $param['Package'];
         }
 
-        if (array_key_exists("Maker",$param) and $param["Maker"] !== null) {
-            $this->Maker = $param["Maker"];
+        if (array_key_exists('Maker',$param) and $param['Maker'] !== null) {
+            $this->Maker = $param['Maker'];
         }
 
-        if (array_key_exists("DeviceType",$param) and $param["DeviceType"] !== null) {
-            $this->DeviceType = $param["DeviceType"];
+        if (array_key_exists('DeviceType',$param) and $param['DeviceType'] !== null) {
+            $this->DeviceType = $param['DeviceType'];
         }
 
-        if (array_key_exists("AccessMode",$param) and $param["AccessMode"] !== null) {
-            $this->AccessMode = $param["AccessMode"];
+        if (array_key_exists('AccessMode',$param) and $param['AccessMode'] !== null) {
+            $this->AccessMode = $param['AccessMode'];
         }
 
-        if (array_key_exists("Sp",$param) and $param["Sp"] !== null) {
-            $this->Sp = $param["Sp"];
+        if (array_key_exists('Sp',$param) and $param['Sp'] !== null) {
+            $this->Sp = $param['Sp'];
         }
 
-        if (array_key_exists("DeviceW",$param) and $param["DeviceW"] !== null) {
-            $this->DeviceW = $param["DeviceW"];
+        if (array_key_exists('DeviceW',$param) and $param['DeviceW'] !== null) {
+            $this->DeviceW = $param['DeviceW'];
         }
 
-        if (array_key_exists("DeviceH",$param) and $param["DeviceH"] !== null) {
-            $this->DeviceH = $param["DeviceH"];
+        if (array_key_exists('DeviceH',$param) and $param['DeviceH'] !== null) {
+            $this->DeviceH = $param['DeviceH'];
         }
 
-        if (array_key_exists("FullScreen",$param) and $param["FullScreen"] !== null) {
-            $this->FullScreen = $param["FullScreen"];
+        if (array_key_exists('FullScreen',$param) and $param['FullScreen'] !== null) {
+            $this->FullScreen = $param['FullScreen'];
         }
 
-        if (array_key_exists("ImpBannerW",$param) and $param["ImpBannerW"] !== null) {
-            $this->ImpBannerW = $param["ImpBannerW"];
+        if (array_key_exists('ImpBannerW',$param) and $param['ImpBannerW'] !== null) {
+            $this->ImpBannerW = $param['ImpBannerW'];
         }
 
-        if (array_key_exists("ImpBannerH",$param) and $param["ImpBannerH"] !== null) {
-            $this->ImpBannerH = $param["ImpBannerH"];
+        if (array_key_exists('ImpBannerH',$param) and $param['ImpBannerH'] !== null) {
+            $this->ImpBannerH = $param['ImpBannerH'];
         }
 
-        if (array_key_exists("Url",$param) and $param["Url"] !== null) {
-            $this->Url = $param["Url"];
+        if (array_key_exists('Url',$param) and $param['Url'] !== null) {
+            $this->Url = $param['Url'];
         }
 
-        if (array_key_exists("Context",$param) and $param["Context"] !== null) {
-            $this->Context = $param["Context"];
+        if (array_key_exists('Context',$param) and $param['Context'] !== null) {
+            $this->Context = $param['Context'];
         }
 
-        if (array_key_exists("Channel",$param) and $param["Channel"] !== null) {
-            $this->Channel = $param["Channel"];
+        if (array_key_exists('Channel',$param) and $param['Channel'] !== null) {
+            $this->Channel = $param['Channel'];
         }
 
-        if (array_key_exists("ReqId",$param) and $param["ReqId"] !== null) {
-            $this->ReqId = $param["ReqId"];
+        if (array_key_exists('ReqId',$param) and $param['ReqId'] !== null) {
+            $this->ReqId = $param['ReqId'];
         }
 
-        if (array_key_exists("ReqMd5",$param) and $param["ReqMd5"] !== null) {
-            $this->ReqMd5 = $param["ReqMd5"];
+        if (array_key_exists('ReqMd5',$param) and $param['ReqMd5'] !== null) {
+            $this->ReqMd5 = $param['ReqMd5'];
         }
 
-        if (array_key_exists("AdType",$param) and $param["AdType"] !== null) {
-            $this->AdType = $param["AdType"];
+        if (array_key_exists('AdType',$param) and $param['AdType'] !== null) {
+            $this->AdType = $param['AdType'];
         }
 
-        if (array_key_exists("AppName",$param) and $param["AppName"] !== null) {
-            $this->AppName = $param["AppName"];
+        if (array_key_exists('AppName',$param) and $param['AppName'] !== null) {
+            $this->AppName = $param['AppName'];
         }
 
-        if (array_key_exists("AppVer",$param) and $param["AppVer"] !== null) {
-            $this->AppVer = $param["AppVer"];
+        if (array_key_exists('AppVer',$param) and $param['AppVer'] !== null) {
+            $this->AppVer = $param['AppVer'];
         }
 
-        if (array_key_exists("ReqType",$param) and $param["ReqType"] !== null) {
-            $this->ReqType = $param["ReqType"];
+        if (array_key_exists('ReqType',$param) and $param['ReqType'] !== null) {
+            $this->ReqType = $param['ReqType'];
         }
     }
 }

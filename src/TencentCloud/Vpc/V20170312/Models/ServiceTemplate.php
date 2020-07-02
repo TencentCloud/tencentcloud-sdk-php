@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -70,20 +70,20 @@ class ServiceTemplate extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ServiceTemplateId",$param) and $param["ServiceTemplateId"] !== null) {
-            $this->ServiceTemplateId = $param["ServiceTemplateId"];
+        if (array_key_exists('ServiceTemplateId',$param) and $param['ServiceTemplateId'] !== null) {
+            $this->ServiceTemplateId = $param['ServiceTemplateId'];
         }
 
-        if (array_key_exists("ServiceTemplateName",$param) and $param["ServiceTemplateName"] !== null) {
-            $this->ServiceTemplateName = $param["ServiceTemplateName"];
+        if (array_key_exists('ServiceTemplateName',$param) and $param['ServiceTemplateName'] !== null) {
+            $this->ServiceTemplateName = $param['ServiceTemplateName'];
         }
 
-        if (array_key_exists("ServiceSet",$param) and $param["ServiceSet"] !== null) {
-            $this->ServiceSet = $param["ServiceSet"];
+        if (array_key_exists('ServiceSet',$param) and $param['ServiceSet'] !== null) {
+            $this->ServiceSet = $param['ServiceSet'];
         }
 
-        if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
-            $this->CreatedTime = $param["CreatedTime"];
+        if (array_key_exists('CreatedTime',$param) and $param['CreatedTime'] !== null) {
+            $this->CreatedTime = $param['CreatedTime'];
         }
     }
 }

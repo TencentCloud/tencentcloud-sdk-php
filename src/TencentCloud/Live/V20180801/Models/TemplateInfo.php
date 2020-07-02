@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -206,84 +206,84 @@ baseline，main，high。
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Vcodec",$param) and $param["Vcodec"] !== null) {
-            $this->Vcodec = $param["Vcodec"];
+        if (array_key_exists('Vcodec',$param) and $param['Vcodec'] !== null) {
+            $this->Vcodec = $param['Vcodec'];
         }
 
-        if (array_key_exists("VideoBitrate",$param) and $param["VideoBitrate"] !== null) {
-            $this->VideoBitrate = $param["VideoBitrate"];
+        if (array_key_exists('VideoBitrate',$param) and $param['VideoBitrate'] !== null) {
+            $this->VideoBitrate = $param['VideoBitrate'];
         }
 
-        if (array_key_exists("Acodec",$param) and $param["Acodec"] !== null) {
-            $this->Acodec = $param["Acodec"];
+        if (array_key_exists('Acodec',$param) and $param['Acodec'] !== null) {
+            $this->Acodec = $param['Acodec'];
         }
 
-        if (array_key_exists("AudioBitrate",$param) and $param["AudioBitrate"] !== null) {
-            $this->AudioBitrate = $param["AudioBitrate"];
+        if (array_key_exists('AudioBitrate',$param) and $param['AudioBitrate'] !== null) {
+            $this->AudioBitrate = $param['AudioBitrate'];
         }
 
-        if (array_key_exists("Width",$param) and $param["Width"] !== null) {
-            $this->Width = $param["Width"];
+        if (array_key_exists('Width',$param) and $param['Width'] !== null) {
+            $this->Width = $param['Width'];
         }
 
-        if (array_key_exists("Height",$param) and $param["Height"] !== null) {
-            $this->Height = $param["Height"];
+        if (array_key_exists('Height',$param) and $param['Height'] !== null) {
+            $this->Height = $param['Height'];
         }
 
-        if (array_key_exists("Fps",$param) and $param["Fps"] !== null) {
-            $this->Fps = $param["Fps"];
+        if (array_key_exists('Fps',$param) and $param['Fps'] !== null) {
+            $this->Fps = $param['Fps'];
         }
 
-        if (array_key_exists("Gop",$param) and $param["Gop"] !== null) {
-            $this->Gop = $param["Gop"];
+        if (array_key_exists('Gop',$param) and $param['Gop'] !== null) {
+            $this->Gop = $param['Gop'];
         }
 
-        if (array_key_exists("Rotate",$param) and $param["Rotate"] !== null) {
-            $this->Rotate = $param["Rotate"];
+        if (array_key_exists('Rotate',$param) and $param['Rotate'] !== null) {
+            $this->Rotate = $param['Rotate'];
         }
 
-        if (array_key_exists("Profile",$param) and $param["Profile"] !== null) {
-            $this->Profile = $param["Profile"];
+        if (array_key_exists('Profile',$param) and $param['Profile'] !== null) {
+            $this->Profile = $param['Profile'];
         }
 
-        if (array_key_exists("BitrateToOrig",$param) and $param["BitrateToOrig"] !== null) {
-            $this->BitrateToOrig = $param["BitrateToOrig"];
+        if (array_key_exists('BitrateToOrig',$param) and $param['BitrateToOrig'] !== null) {
+            $this->BitrateToOrig = $param['BitrateToOrig'];
         }
 
-        if (array_key_exists("HeightToOrig",$param) and $param["HeightToOrig"] !== null) {
-            $this->HeightToOrig = $param["HeightToOrig"];
+        if (array_key_exists('HeightToOrig',$param) and $param['HeightToOrig'] !== null) {
+            $this->HeightToOrig = $param['HeightToOrig'];
         }
 
-        if (array_key_exists("FpsToOrig",$param) and $param["FpsToOrig"] !== null) {
-            $this->FpsToOrig = $param["FpsToOrig"];
+        if (array_key_exists('FpsToOrig',$param) and $param['FpsToOrig'] !== null) {
+            $this->FpsToOrig = $param['FpsToOrig'];
         }
 
-        if (array_key_exists("NeedVideo",$param) and $param["NeedVideo"] !== null) {
-            $this->NeedVideo = $param["NeedVideo"];
+        if (array_key_exists('NeedVideo',$param) and $param['NeedVideo'] !== null) {
+            $this->NeedVideo = $param['NeedVideo'];
         }
 
-        if (array_key_exists("NeedAudio",$param) and $param["NeedAudio"] !== null) {
-            $this->NeedAudio = $param["NeedAudio"];
+        if (array_key_exists('NeedAudio',$param) and $param['NeedAudio'] !== null) {
+            $this->NeedAudio = $param['NeedAudio'];
         }
 
-        if (array_key_exists("TemplateId",$param) and $param["TemplateId"] !== null) {
-            $this->TemplateId = $param["TemplateId"];
+        if (array_key_exists('TemplateId',$param) and $param['TemplateId'] !== null) {
+            $this->TemplateId = $param['TemplateId'];
         }
 
-        if (array_key_exists("TemplateName",$param) and $param["TemplateName"] !== null) {
-            $this->TemplateName = $param["TemplateName"];
+        if (array_key_exists('TemplateName',$param) and $param['TemplateName'] !== null) {
+            $this->TemplateName = $param['TemplateName'];
         }
 
-        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
-            $this->Description = $param["Description"];
+        if (array_key_exists('Description',$param) and $param['Description'] !== null) {
+            $this->Description = $param['Description'];
         }
 
-        if (array_key_exists("AiTransCode",$param) and $param["AiTransCode"] !== null) {
-            $this->AiTransCode = $param["AiTransCode"];
+        if (array_key_exists('AiTransCode',$param) and $param['AiTransCode'] !== null) {
+            $this->AiTransCode = $param['AiTransCode'];
         }
 
-        if (array_key_exists("AdaptBitratePercent",$param) and $param["AdaptBitratePercent"] !== null) {
-            $this->AdaptBitratePercent = $param["AdaptBitratePercent"];
+        if (array_key_exists('AdaptBitratePercent',$param) and $param['AdaptBitratePercent'] !== null) {
+            $this->AdaptBitratePercent = $param['AdaptBitratePercent'];
         }
     }
 }

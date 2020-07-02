@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -222,96 +222,96 @@ class DataSearchRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ResourceId",$param) and $param["ResourceId"] !== null) {
-            $this->ResourceId = $param["ResourceId"];
+        if (array_key_exists('ResourceId',$param) and $param['ResourceId'] !== null) {
+            $this->ResourceId = $param['ResourceId'];
         }
 
-        if (array_key_exists("SearchQuery",$param) and $param["SearchQuery"] !== null) {
-            $this->SearchQuery = $param["SearchQuery"];
+        if (array_key_exists('SearchQuery',$param) and $param['SearchQuery'] !== null) {
+            $this->SearchQuery = $param['SearchQuery'];
         }
 
-        if (array_key_exists("PageId",$param) and $param["PageId"] !== null) {
-            $this->PageId = $param["PageId"];
+        if (array_key_exists('PageId',$param) and $param['PageId'] !== null) {
+            $this->PageId = $param['PageId'];
         }
 
-        if (array_key_exists("NumPerPage",$param) and $param["NumPerPage"] !== null) {
-            $this->NumPerPage = $param["NumPerPage"];
+        if (array_key_exists('NumPerPage',$param) and $param['NumPerPage'] !== null) {
+            $this->NumPerPage = $param['NumPerPage'];
         }
 
-        if (array_key_exists("SearchId",$param) and $param["SearchId"] !== null) {
-            $this->SearchId = $param["SearchId"];
+        if (array_key_exists('SearchId',$param) and $param['SearchId'] !== null) {
+            $this->SearchId = $param['SearchId'];
         }
 
-        if (array_key_exists("QueryEncode",$param) and $param["QueryEncode"] !== null) {
-            $this->QueryEncode = $param["QueryEncode"];
+        if (array_key_exists('QueryEncode',$param) and $param['QueryEncode'] !== null) {
+            $this->QueryEncode = $param['QueryEncode'];
         }
 
-        if (array_key_exists("RankType",$param) and $param["RankType"] !== null) {
-            $this->RankType = $param["RankType"];
+        if (array_key_exists('RankType',$param) and $param['RankType'] !== null) {
+            $this->RankType = $param['RankType'];
         }
 
-        if (array_key_exists("NumFilter",$param) and $param["NumFilter"] !== null) {
-            $this->NumFilter = $param["NumFilter"];
+        if (array_key_exists('NumFilter',$param) and $param['NumFilter'] !== null) {
+            $this->NumFilter = $param['NumFilter'];
         }
 
-        if (array_key_exists("ClFilter",$param) and $param["ClFilter"] !== null) {
-            $this->ClFilter = $param["ClFilter"];
+        if (array_key_exists('ClFilter',$param) and $param['ClFilter'] !== null) {
+            $this->ClFilter = $param['ClFilter'];
         }
 
-        if (array_key_exists("Extra",$param) and $param["Extra"] !== null) {
-            $this->Extra = $param["Extra"];
+        if (array_key_exists('Extra',$param) and $param['Extra'] !== null) {
+            $this->Extra = $param['Extra'];
         }
 
-        if (array_key_exists("SourceId",$param) and $param["SourceId"] !== null) {
-            $this->SourceId = $param["SourceId"];
+        if (array_key_exists('SourceId',$param) and $param['SourceId'] !== null) {
+            $this->SourceId = $param['SourceId'];
         }
 
-        if (array_key_exists("SecondSearch",$param) and $param["SecondSearch"] !== null) {
-            $this->SecondSearch = $param["SecondSearch"];
+        if (array_key_exists('SecondSearch',$param) and $param['SecondSearch'] !== null) {
+            $this->SecondSearch = $param['SecondSearch'];
         }
 
-        if (array_key_exists("MaxDocReturn",$param) and $param["MaxDocReturn"] !== null) {
-            $this->MaxDocReturn = $param["MaxDocReturn"];
+        if (array_key_exists('MaxDocReturn',$param) and $param['MaxDocReturn'] !== null) {
+            $this->MaxDocReturn = $param['MaxDocReturn'];
         }
 
-        if (array_key_exists("IsSmartbox",$param) and $param["IsSmartbox"] !== null) {
-            $this->IsSmartbox = $param["IsSmartbox"];
+        if (array_key_exists('IsSmartbox',$param) and $param['IsSmartbox'] !== null) {
+            $this->IsSmartbox = $param['IsSmartbox'];
         }
 
-        if (array_key_exists("EnableAbsHighlight",$param) and $param["EnableAbsHighlight"] !== null) {
-            $this->EnableAbsHighlight = $param["EnableAbsHighlight"];
+        if (array_key_exists('EnableAbsHighlight',$param) and $param['EnableAbsHighlight'] !== null) {
+            $this->EnableAbsHighlight = $param['EnableAbsHighlight'];
         }
 
-        if (array_key_exists("QcBid",$param) and $param["QcBid"] !== null) {
-            $this->QcBid = $param["QcBid"];
+        if (array_key_exists('QcBid',$param) and $param['QcBid'] !== null) {
+            $this->QcBid = $param['QcBid'];
         }
 
-        if (array_key_exists("GroupBy",$param) and $param["GroupBy"] !== null) {
-            $this->GroupBy = $param["GroupBy"];
+        if (array_key_exists('GroupBy',$param) and $param['GroupBy'] !== null) {
+            $this->GroupBy = $param['GroupBy'];
         }
 
-        if (array_key_exists("Distinct",$param) and $param["Distinct"] !== null) {
-            $this->Distinct = $param["Distinct"];
+        if (array_key_exists('Distinct',$param) and $param['Distinct'] !== null) {
+            $this->Distinct = $param['Distinct'];
         }
 
-        if (array_key_exists("L4RankExpression",$param) and $param["L4RankExpression"] !== null) {
-            $this->L4RankExpression = $param["L4RankExpression"];
+        if (array_key_exists('L4RankExpression',$param) and $param['L4RankExpression'] !== null) {
+            $this->L4RankExpression = $param['L4RankExpression'];
         }
 
-        if (array_key_exists("MatchValue",$param) and $param["MatchValue"] !== null) {
-            $this->MatchValue = $param["MatchValue"];
+        if (array_key_exists('MatchValue',$param) and $param['MatchValue'] !== null) {
+            $this->MatchValue = $param['MatchValue'];
         }
 
-        if (array_key_exists("Longitude",$param) and $param["Longitude"] !== null) {
-            $this->Longitude = $param["Longitude"];
+        if (array_key_exists('Longitude',$param) and $param['Longitude'] !== null) {
+            $this->Longitude = $param['Longitude'];
         }
 
-        if (array_key_exists("Latitude",$param) and $param["Latitude"] !== null) {
-            $this->Latitude = $param["Latitude"];
+        if (array_key_exists('Latitude',$param) and $param['Latitude'] !== null) {
+            $this->Latitude = $param['Latitude'];
         }
 
-        if (array_key_exists("MultiFilter",$param) and $param["MultiFilter"] !== null) {
-            $this->MultiFilter = $param["MultiFilter"];
+        if (array_key_exists('MultiFilter',$param) and $param['MultiFilter'] !== null) {
+            $this->MultiFilter = $param['MultiFilter'];
         }
     }
 }

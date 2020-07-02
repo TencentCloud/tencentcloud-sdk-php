@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -21,9 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * HTTP返回码和统计数据
  *
  * @method string getHttpCode() 获取HTTP协议返回码。
-例："2xx", "3xx", "4xx", "5xx"。
+例：'2xx', '3xx', '4xx', '5xx'。
  * @method void setHttpCode(string $HttpCode) 设置HTTP协议返回码。
-例："2xx", "3xx", "4xx", "5xx"。
+例：'2xx', '3xx', '4xx', '5xx'。
  * @method array getValueList() 获取统计信息，对于无数据的时间点，会补0。
  * @method void setValueList(array $ValueList) 设置统计信息，对于无数据的时间点，会补0。
  */
@@ -31,7 +31,7 @@ class HttpCodeInfo extends AbstractModel
 {
     /**
      * @var string HTTP协议返回码。
-例："2xx", "3xx", "4xx", "5xx"。
+例：'2xx', '3xx', '4xx', '5xx'。
      */
     public $HttpCode;
 
@@ -42,7 +42,7 @@ class HttpCodeInfo extends AbstractModel
 
     /**
      * @param string $HttpCode HTTP协议返回码。
-例："2xx", "3xx", "4xx", "5xx"。
+例：'2xx', '3xx', '4xx', '5xx'。
      * @param array $ValueList 统计信息，对于无数据的时间点，会补0。
      */
     function __construct()
@@ -58,13 +58,13 @@ class HttpCodeInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("HttpCode",$param) and $param["HttpCode"] !== null) {
-            $this->HttpCode = $param["HttpCode"];
+        if (array_key_exists('HttpCode',$param) and $param['HttpCode'] !== null) {
+            $this->HttpCode = $param['HttpCode'];
         }
 
-        if (array_key_exists("ValueList",$param) and $param["ValueList"] !== null) {
+        if (array_key_exists('ValueList',$param) and $param['ValueList'] !== null) {
             $this->ValueList = [];
-            foreach ($param["ValueList"] as $key => $value){
+            foreach ($param['ValueList'] as $key => $value){
                 $obj = new HttpCodeValue();
                 $obj->deserialize($value);
                 array_push($this->ValueList, $obj);

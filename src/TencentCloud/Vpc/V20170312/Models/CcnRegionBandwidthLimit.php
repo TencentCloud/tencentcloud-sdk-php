@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -82,24 +82,24 @@ class CcnRegionBandwidthLimit extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Region",$param) and $param["Region"] !== null) {
-            $this->Region = $param["Region"];
+        if (array_key_exists('Region',$param) and $param['Region'] !== null) {
+            $this->Region = $param['Region'];
         }
 
-        if (array_key_exists("BandwidthLimit",$param) and $param["BandwidthLimit"] !== null) {
-            $this->BandwidthLimit = $param["BandwidthLimit"];
+        if (array_key_exists('BandwidthLimit',$param) and $param['BandwidthLimit'] !== null) {
+            $this->BandwidthLimit = $param['BandwidthLimit'];
         }
 
-        if (array_key_exists("IsBm",$param) and $param["IsBm"] !== null) {
-            $this->IsBm = $param["IsBm"];
+        if (array_key_exists('IsBm',$param) and $param['IsBm'] !== null) {
+            $this->IsBm = $param['IsBm'];
         }
 
-        if (array_key_exists("DstRegion",$param) and $param["DstRegion"] !== null) {
-            $this->DstRegion = $param["DstRegion"];
+        if (array_key_exists('DstRegion',$param) and $param['DstRegion'] !== null) {
+            $this->DstRegion = $param['DstRegion'];
         }
 
-        if (array_key_exists("DstIsBm",$param) and $param["DstIsBm"] !== null) {
-            $this->DstIsBm = $param["DstIsBm"];
+        if (array_key_exists('DstIsBm',$param) and $param['DstIsBm'] !== null) {
+            $this->DstIsBm = $param['DstIsBm'];
         }
     }
 }

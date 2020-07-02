@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -86,30 +86,30 @@ class DescribeDBInstanceConfigResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ProtectMode",$param) and $param["ProtectMode"] !== null) {
-            $this->ProtectMode = $param["ProtectMode"];
+        if (array_key_exists('ProtectMode',$param) and $param['ProtectMode'] !== null) {
+            $this->ProtectMode = $param['ProtectMode'];
         }
 
-        if (array_key_exists("DeployMode",$param) and $param["DeployMode"] !== null) {
-            $this->DeployMode = $param["DeployMode"];
+        if (array_key_exists('DeployMode',$param) and $param['DeployMode'] !== null) {
+            $this->DeployMode = $param['DeployMode'];
         }
 
-        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
-            $this->Zone = $param["Zone"];
+        if (array_key_exists('Zone',$param) and $param['Zone'] !== null) {
+            $this->Zone = $param['Zone'];
         }
 
-        if (array_key_exists("SlaveConfig",$param) and $param["SlaveConfig"] !== null) {
+        if (array_key_exists('SlaveConfig',$param) and $param['SlaveConfig'] !== null) {
             $this->SlaveConfig = new SlaveConfig();
-            $this->SlaveConfig->deserialize($param["SlaveConfig"]);
+            $this->SlaveConfig->deserialize($param['SlaveConfig']);
         }
 
-        if (array_key_exists("BackupConfig",$param) and $param["BackupConfig"] !== null) {
+        if (array_key_exists('BackupConfig',$param) and $param['BackupConfig'] !== null) {
             $this->BackupConfig = new BackupConfig();
-            $this->BackupConfig->deserialize($param["BackupConfig"]);
+            $this->BackupConfig->deserialize($param['BackupConfig']);
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

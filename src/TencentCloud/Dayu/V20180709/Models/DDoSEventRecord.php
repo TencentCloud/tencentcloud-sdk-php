@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -150,56 +150,56 @@ class DDoSEventRecord extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Business",$param) and $param["Business"] !== null) {
-            $this->Business = $param["Business"];
+        if (array_key_exists('Business',$param) and $param['Business'] !== null) {
+            $this->Business = $param['Business'];
         }
 
-        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
-            $this->Id = $param["Id"];
+        if (array_key_exists('Id',$param) and $param['Id'] !== null) {
+            $this->Id = $param['Id'];
         }
 
-        if (array_key_exists("Vip",$param) and $param["Vip"] !== null) {
-            $this->Vip = $param["Vip"];
+        if (array_key_exists('Vip',$param) and $param['Vip'] !== null) {
+            $this->Vip = $param['Vip'];
         }
 
-        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
-            $this->StartTime = $param["StartTime"];
+        if (array_key_exists('StartTime',$param) and $param['StartTime'] !== null) {
+            $this->StartTime = $param['StartTime'];
         }
 
-        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
-            $this->EndTime = $param["EndTime"];
+        if (array_key_exists('EndTime',$param) and $param['EndTime'] !== null) {
+            $this->EndTime = $param['EndTime'];
         }
 
-        if (array_key_exists("Mbps",$param) and $param["Mbps"] !== null) {
-            $this->Mbps = $param["Mbps"];
+        if (array_key_exists('Mbps',$param) and $param['Mbps'] !== null) {
+            $this->Mbps = $param['Mbps'];
         }
 
-        if (array_key_exists("Pps",$param) and $param["Pps"] !== null) {
-            $this->Pps = $param["Pps"];
+        if (array_key_exists('Pps',$param) and $param['Pps'] !== null) {
+            $this->Pps = $param['Pps'];
         }
 
-        if (array_key_exists("AttackType",$param) and $param["AttackType"] !== null) {
-            $this->AttackType = $param["AttackType"];
+        if (array_key_exists('AttackType',$param) and $param['AttackType'] !== null) {
+            $this->AttackType = $param['AttackType'];
         }
 
-        if (array_key_exists("BlockFlag",$param) and $param["BlockFlag"] !== null) {
-            $this->BlockFlag = $param["BlockFlag"];
+        if (array_key_exists('BlockFlag',$param) and $param['BlockFlag'] !== null) {
+            $this->BlockFlag = $param['BlockFlag'];
         }
 
-        if (array_key_exists("OverLoad",$param) and $param["OverLoad"] !== null) {
-            $this->OverLoad = $param["OverLoad"];
+        if (array_key_exists('OverLoad',$param) and $param['OverLoad'] !== null) {
+            $this->OverLoad = $param['OverLoad'];
         }
 
-        if (array_key_exists("AttackStatus",$param) and $param["AttackStatus"] !== null) {
-            $this->AttackStatus = $param["AttackStatus"];
+        if (array_key_exists('AttackStatus',$param) and $param['AttackStatus'] !== null) {
+            $this->AttackStatus = $param['AttackStatus'];
         }
 
-        if (array_key_exists("ResourceName",$param) and $param["ResourceName"] !== null) {
-            $this->ResourceName = $param["ResourceName"];
+        if (array_key_exists('ResourceName',$param) and $param['ResourceName'] !== null) {
+            $this->ResourceName = $param['ResourceName'];
         }
 
-        if (array_key_exists("EventId",$param) and $param["EventId"] !== null) {
-            $this->EventId = $param["EventId"];
+        if (array_key_exists('EventId',$param) and $param['EventId'] !== null) {
+            $this->EventId = $param['EventId'];
         }
     }
 }

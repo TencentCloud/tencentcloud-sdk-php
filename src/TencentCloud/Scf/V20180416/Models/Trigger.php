@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -102,36 +102,36 @@ class Trigger extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ModTime",$param) and $param["ModTime"] !== null) {
-            $this->ModTime = $param["ModTime"];
+        if (array_key_exists('ModTime',$param) and $param['ModTime'] !== null) {
+            $this->ModTime = $param['ModTime'];
         }
 
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists('Type',$param) and $param['Type'] !== null) {
+            $this->Type = $param['Type'];
         }
 
-        if (array_key_exists("TriggerDesc",$param) and $param["TriggerDesc"] !== null) {
-            $this->TriggerDesc = $param["TriggerDesc"];
+        if (array_key_exists('TriggerDesc',$param) and $param['TriggerDesc'] !== null) {
+            $this->TriggerDesc = $param['TriggerDesc'];
         }
 
-        if (array_key_exists("TriggerName",$param) and $param["TriggerName"] !== null) {
-            $this->TriggerName = $param["TriggerName"];
+        if (array_key_exists('TriggerName',$param) and $param['TriggerName'] !== null) {
+            $this->TriggerName = $param['TriggerName'];
         }
 
-        if (array_key_exists("AddTime",$param) and $param["AddTime"] !== null) {
-            $this->AddTime = $param["AddTime"];
+        if (array_key_exists('AddTime',$param) and $param['AddTime'] !== null) {
+            $this->AddTime = $param['AddTime'];
         }
 
-        if (array_key_exists("Enable",$param) and $param["Enable"] !== null) {
-            $this->Enable = $param["Enable"];
+        if (array_key_exists('Enable',$param) and $param['Enable'] !== null) {
+            $this->Enable = $param['Enable'];
         }
 
-        if (array_key_exists("CustomArgument",$param) and $param["CustomArgument"] !== null) {
-            $this->CustomArgument = $param["CustomArgument"];
+        if (array_key_exists('CustomArgument',$param) and $param['CustomArgument'] !== null) {
+            $this->CustomArgument = $param['CustomArgument'];
         }
 
-        if (array_key_exists("AvailableStatus",$param) and $param["AvailableStatus"] !== null) {
-            $this->AvailableStatus = $param["AvailableStatus"];
+        if (array_key_exists('AvailableStatus',$param) and $param['AvailableStatus'] !== null) {
+            $this->AvailableStatus = $param['AvailableStatus'];
         }
     }
 }

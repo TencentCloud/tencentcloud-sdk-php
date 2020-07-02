@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -106,32 +106,32 @@ class WeChatAccountInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("WeChatOpenId",$param) and $param["WeChatOpenId"] !== null) {
-            $this->WeChatOpenId = $param["WeChatOpenId"];
+        if (array_key_exists('WeChatOpenId',$param) and $param['WeChatOpenId'] !== null) {
+            $this->WeChatOpenId = $param['WeChatOpenId'];
         }
 
-        if (array_key_exists("WeChatSubType",$param) and $param["WeChatSubType"] !== null) {
-            $this->WeChatSubType = $param["WeChatSubType"];
+        if (array_key_exists('WeChatSubType',$param) and $param['WeChatSubType'] !== null) {
+            $this->WeChatSubType = $param['WeChatSubType'];
         }
 
-        if (array_key_exists("RandStr",$param) and $param["RandStr"] !== null) {
-            $this->RandStr = $param["RandStr"];
+        if (array_key_exists('RandStr',$param) and $param['RandStr'] !== null) {
+            $this->RandStr = $param['RandStr'];
         }
 
-        if (array_key_exists("WeChatAccessToken",$param) and $param["WeChatAccessToken"] !== null) {
-            $this->WeChatAccessToken = $param["WeChatAccessToken"];
+        if (array_key_exists('WeChatAccessToken',$param) and $param['WeChatAccessToken'] !== null) {
+            $this->WeChatAccessToken = $param['WeChatAccessToken'];
         }
 
-        if (array_key_exists("AssociateAccount",$param) and $param["AssociateAccount"] !== null) {
-            $this->AssociateAccount = $param["AssociateAccount"];
+        if (array_key_exists('AssociateAccount',$param) and $param['AssociateAccount'] !== null) {
+            $this->AssociateAccount = $param['AssociateAccount'];
         }
 
-        if (array_key_exists("MobilePhone",$param) and $param["MobilePhone"] !== null) {
-            $this->MobilePhone = $param["MobilePhone"];
+        if (array_key_exists('MobilePhone',$param) and $param['MobilePhone'] !== null) {
+            $this->MobilePhone = $param['MobilePhone'];
         }
 
-        if (array_key_exists("DeviceId",$param) and $param["DeviceId"] !== null) {
-            $this->DeviceId = $param["DeviceId"];
+        if (array_key_exists('DeviceId',$param) and $param['DeviceId'] !== null) {
+            $this->DeviceId = $param['DeviceId'];
         }
     }
 }

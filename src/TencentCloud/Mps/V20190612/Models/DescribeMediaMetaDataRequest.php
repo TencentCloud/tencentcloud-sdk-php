@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -46,9 +46,9 @@ class DescribeMediaMetaDataRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InputInfo",$param) and $param["InputInfo"] !== null) {
+        if (array_key_exists('InputInfo',$param) and $param['InputInfo'] !== null) {
             $this->InputInfo = new MediaInputInfo();
-            $this->InputInfo->deserialize($param["InputInfo"]);
+            $this->InputInfo->deserialize($param['InputInfo']);
         }
     }
 }

@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -122,32 +122,32 @@ class ServiceParameter extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("Position",$param) and $param["Position"] !== null) {
-            $this->Position = $param["Position"];
+        if (array_key_exists('Position',$param) and $param['Position'] !== null) {
+            $this->Position = $param['Position'];
         }
 
-        if (array_key_exists("RelevantRequestParameterPosition",$param) and $param["RelevantRequestParameterPosition"] !== null) {
-            $this->RelevantRequestParameterPosition = $param["RelevantRequestParameterPosition"];
+        if (array_key_exists('RelevantRequestParameterPosition',$param) and $param['RelevantRequestParameterPosition'] !== null) {
+            $this->RelevantRequestParameterPosition = $param['RelevantRequestParameterPosition'];
         }
 
-        if (array_key_exists("RelevantRequestParameterName",$param) and $param["RelevantRequestParameterName"] !== null) {
-            $this->RelevantRequestParameterName = $param["RelevantRequestParameterName"];
+        if (array_key_exists('RelevantRequestParameterName',$param) and $param['RelevantRequestParameterName'] !== null) {
+            $this->RelevantRequestParameterName = $param['RelevantRequestParameterName'];
         }
 
-        if (array_key_exists("DefaultValue",$param) and $param["DefaultValue"] !== null) {
-            $this->DefaultValue = $param["DefaultValue"];
+        if (array_key_exists('DefaultValue',$param) and $param['DefaultValue'] !== null) {
+            $this->DefaultValue = $param['DefaultValue'];
         }
 
-        if (array_key_exists("RelevantRequestParameterDesc",$param) and $param["RelevantRequestParameterDesc"] !== null) {
-            $this->RelevantRequestParameterDesc = $param["RelevantRequestParameterDesc"];
+        if (array_key_exists('RelevantRequestParameterDesc',$param) and $param['RelevantRequestParameterDesc'] !== null) {
+            $this->RelevantRequestParameterDesc = $param['RelevantRequestParameterDesc'];
         }
 
-        if (array_key_exists("RelevantRequestParameterType",$param) and $param["RelevantRequestParameterType"] !== null) {
-            $this->RelevantRequestParameterType = $param["RelevantRequestParameterType"];
+        if (array_key_exists('RelevantRequestParameterType',$param) and $param['RelevantRequestParameterType'] !== null) {
+            $this->RelevantRequestParameterType = $param['RelevantRequestParameterType'];
         }
     }
 }

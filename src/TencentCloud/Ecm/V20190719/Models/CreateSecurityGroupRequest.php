@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGroupName(string $GroupName) 设置安全组名称，可任意命名，但不得超过60个字符。
  * @method string getGroupDescription() 获取安全组备注，最多100个字符。
  * @method void setGroupDescription(string $GroupDescription) 设置安全组备注，最多100个字符。
- * @method array getTags() 获取指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
- * @method void setTags(array $Tags) 设置指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
+ * @method array getTags() 获取指定绑定的标签列表，例如：[{'Key': 'city', 'Value': 'shanghai'}]
+ * @method void setTags(array $Tags) 设置指定绑定的标签列表，例如：[{'Key': 'city', 'Value': 'shanghai'}]
  */
 class CreateSecurityGroupRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class CreateSecurityGroupRequest extends AbstractModel
     public $GroupDescription;
 
     /**
-     * @var array 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
+     * @var array 指定绑定的标签列表，例如：[{'Key': 'city', 'Value': 'shanghai'}]
      */
     public $Tags;
 
     /**
      * @param string $GroupName 安全组名称，可任意命名，但不得超过60个字符。
      * @param string $GroupDescription 安全组备注，最多100个字符。
-     * @param array $Tags 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
+     * @param array $Tags 指定绑定的标签列表，例如：[{'Key': 'city', 'Value': 'shanghai'}]
      */
     function __construct()
     {
@@ -62,17 +62,17 @@ class CreateSecurityGroupRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("GroupName",$param) and $param["GroupName"] !== null) {
-            $this->GroupName = $param["GroupName"];
+        if (array_key_exists('GroupName',$param) and $param['GroupName'] !== null) {
+            $this->GroupName = $param['GroupName'];
         }
 
-        if (array_key_exists("GroupDescription",$param) and $param["GroupDescription"] !== null) {
-            $this->GroupDescription = $param["GroupDescription"];
+        if (array_key_exists('GroupDescription',$param) and $param['GroupDescription'] !== null) {
+            $this->GroupDescription = $param['GroupDescription'];
         }
 
-        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+        if (array_key_exists('Tags',$param) and $param['Tags'] !== null) {
             $this->Tags = [];
-            foreach ($param["Tags"] as $key => $value){
+            foreach ($param['Tags'] as $key => $value){
                 $obj = new Tag();
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);

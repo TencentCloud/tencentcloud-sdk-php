@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -166,68 +166,68 @@ class GetClusterSummaryResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalChannelCount",$param) and $param["TotalChannelCount"] !== null) {
-            $this->TotalChannelCount = $param["TotalChannelCount"];
+        if (array_key_exists('TotalChannelCount',$param) and $param['TotalChannelCount'] !== null) {
+            $this->TotalChannelCount = $param['TotalChannelCount'];
         }
 
-        if (array_key_exists("MyChannelCount",$param) and $param["MyChannelCount"] !== null) {
-            $this->MyChannelCount = $param["MyChannelCount"];
+        if (array_key_exists('MyChannelCount',$param) and $param['MyChannelCount'] !== null) {
+            $this->MyChannelCount = $param['MyChannelCount'];
         }
 
-        if (array_key_exists("JoinChannelCount",$param) and $param["JoinChannelCount"] !== null) {
-            $this->JoinChannelCount = $param["JoinChannelCount"];
+        if (array_key_exists('JoinChannelCount',$param) and $param['JoinChannelCount'] !== null) {
+            $this->JoinChannelCount = $param['JoinChannelCount'];
         }
 
-        if (array_key_exists("TotalPeerCount",$param) and $param["TotalPeerCount"] !== null) {
-            $this->TotalPeerCount = $param["TotalPeerCount"];
+        if (array_key_exists('TotalPeerCount',$param) and $param['TotalPeerCount'] !== null) {
+            $this->TotalPeerCount = $param['TotalPeerCount'];
         }
 
-        if (array_key_exists("MyPeerCount",$param) and $param["MyPeerCount"] !== null) {
-            $this->MyPeerCount = $param["MyPeerCount"];
+        if (array_key_exists('MyPeerCount',$param) and $param['MyPeerCount'] !== null) {
+            $this->MyPeerCount = $param['MyPeerCount'];
         }
 
-        if (array_key_exists("OrderCount",$param) and $param["OrderCount"] !== null) {
-            $this->OrderCount = $param["OrderCount"];
+        if (array_key_exists('OrderCount',$param) and $param['OrderCount'] !== null) {
+            $this->OrderCount = $param['OrderCount'];
         }
 
-        if (array_key_exists("TotalGroupCount",$param) and $param["TotalGroupCount"] !== null) {
-            $this->TotalGroupCount = $param["TotalGroupCount"];
+        if (array_key_exists('TotalGroupCount',$param) and $param['TotalGroupCount'] !== null) {
+            $this->TotalGroupCount = $param['TotalGroupCount'];
         }
 
-        if (array_key_exists("MyGroupCount",$param) and $param["MyGroupCount"] !== null) {
-            $this->MyGroupCount = $param["MyGroupCount"];
+        if (array_key_exists('MyGroupCount',$param) and $param['MyGroupCount'] !== null) {
+            $this->MyGroupCount = $param['MyGroupCount'];
         }
 
-        if (array_key_exists("TotalChaincodeCount",$param) and $param["TotalChaincodeCount"] !== null) {
-            $this->TotalChaincodeCount = $param["TotalChaincodeCount"];
+        if (array_key_exists('TotalChaincodeCount',$param) and $param['TotalChaincodeCount'] !== null) {
+            $this->TotalChaincodeCount = $param['TotalChaincodeCount'];
         }
 
-        if (array_key_exists("RecentChaincodeCount",$param) and $param["RecentChaincodeCount"] !== null) {
-            $this->RecentChaincodeCount = $param["RecentChaincodeCount"];
+        if (array_key_exists('RecentChaincodeCount',$param) and $param['RecentChaincodeCount'] !== null) {
+            $this->RecentChaincodeCount = $param['RecentChaincodeCount'];
         }
 
-        if (array_key_exists("MyChaincodeCount",$param) and $param["MyChaincodeCount"] !== null) {
-            $this->MyChaincodeCount = $param["MyChaincodeCount"];
+        if (array_key_exists('MyChaincodeCount',$param) and $param['MyChaincodeCount'] !== null) {
+            $this->MyChaincodeCount = $param['MyChaincodeCount'];
         }
 
-        if (array_key_exists("TotalCertCount",$param) and $param["TotalCertCount"] !== null) {
-            $this->TotalCertCount = $param["TotalCertCount"];
+        if (array_key_exists('TotalCertCount',$param) and $param['TotalCertCount'] !== null) {
+            $this->TotalCertCount = $param['TotalCertCount'];
         }
 
-        if (array_key_exists("TlsCertCount",$param) and $param["TlsCertCount"] !== null) {
-            $this->TlsCertCount = $param["TlsCertCount"];
+        if (array_key_exists('TlsCertCount',$param) and $param['TlsCertCount'] !== null) {
+            $this->TlsCertCount = $param['TlsCertCount'];
         }
 
-        if (array_key_exists("PeerCertCount",$param) and $param["PeerCertCount"] !== null) {
-            $this->PeerCertCount = $param["PeerCertCount"];
+        if (array_key_exists('PeerCertCount',$param) and $param['PeerCertCount'] !== null) {
+            $this->PeerCertCount = $param['PeerCertCount'];
         }
 
-        if (array_key_exists("ClientCertCount",$param) and $param["ClientCertCount"] !== null) {
-            $this->ClientCertCount = $param["ClientCertCount"];
+        if (array_key_exists('ClientCertCount',$param) and $param['ClientCertCount'] !== null) {
+            $this->ClientCertCount = $param['ClientCertCount'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

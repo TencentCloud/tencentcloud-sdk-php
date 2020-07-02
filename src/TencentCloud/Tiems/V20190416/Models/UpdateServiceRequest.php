@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -126,49 +126,49 @@ class UpdateServiceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ServiceId",$param) and $param["ServiceId"] !== null) {
-            $this->ServiceId = $param["ServiceId"];
+        if (array_key_exists('ServiceId',$param) and $param['ServiceId'] !== null) {
+            $this->ServiceId = $param['ServiceId'];
         }
 
-        if (array_key_exists("Scaler",$param) and $param["Scaler"] !== null) {
+        if (array_key_exists('Scaler',$param) and $param['Scaler'] !== null) {
             $this->Scaler = new Scaler();
-            $this->Scaler->deserialize($param["Scaler"]);
+            $this->Scaler->deserialize($param['Scaler']);
         }
 
-        if (array_key_exists("ServiceConfigId",$param) and $param["ServiceConfigId"] !== null) {
-            $this->ServiceConfigId = $param["ServiceConfigId"];
+        if (array_key_exists('ServiceConfigId',$param) and $param['ServiceConfigId'] !== null) {
+            $this->ServiceConfigId = $param['ServiceConfigId'];
         }
 
-        if (array_key_exists("ScaleMode",$param) and $param["ScaleMode"] !== null) {
-            $this->ScaleMode = $param["ScaleMode"];
+        if (array_key_exists('ScaleMode',$param) and $param['ScaleMode'] !== null) {
+            $this->ScaleMode = $param['ScaleMode'];
         }
 
-        if (array_key_exists("ServiceAction",$param) and $param["ServiceAction"] !== null) {
-            $this->ServiceAction = $param["ServiceAction"];
+        if (array_key_exists('ServiceAction',$param) and $param['ServiceAction'] !== null) {
+            $this->ServiceAction = $param['ServiceAction'];
         }
 
-        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
-            $this->Description = $param["Description"];
+        if (array_key_exists('Description',$param) and $param['Description'] !== null) {
+            $this->Description = $param['Description'];
         }
 
-        if (array_key_exists("GpuType",$param) and $param["GpuType"] !== null) {
-            $this->GpuType = $param["GpuType"];
+        if (array_key_exists('GpuType',$param) and $param['GpuType'] !== null) {
+            $this->GpuType = $param['GpuType'];
         }
 
-        if (array_key_exists("Cpu",$param) and $param["Cpu"] !== null) {
-            $this->Cpu = $param["Cpu"];
+        if (array_key_exists('Cpu',$param) and $param['Cpu'] !== null) {
+            $this->Cpu = $param['Cpu'];
         }
 
-        if (array_key_exists("Memory",$param) and $param["Memory"] !== null) {
-            $this->Memory = $param["Memory"];
+        if (array_key_exists('Memory',$param) and $param['Memory'] !== null) {
+            $this->Memory = $param['Memory'];
         }
 
-        if (array_key_exists("Gpu",$param) and $param["Gpu"] !== null) {
-            $this->Gpu = $param["Gpu"];
+        if (array_key_exists('Gpu',$param) and $param['Gpu'] !== null) {
+            $this->Gpu = $param['Gpu'];
         }
 
-        if (array_key_exists("LogTopicId",$param) and $param["LogTopicId"] !== null) {
-            $this->LogTopicId = $param["LogTopicId"];
+        if (array_key_exists('LogTopicId',$param) and $param['LogTopicId'] !== null) {
+            $this->LogTopicId = $param['LogTopicId'];
         }
     }
 }

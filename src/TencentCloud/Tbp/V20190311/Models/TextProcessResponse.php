@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -130,41 +130,41 @@ class TextProcessResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DialogStatus",$param) and $param["DialogStatus"] !== null) {
-            $this->DialogStatus = $param["DialogStatus"];
+        if (array_key_exists('DialogStatus',$param) and $param['DialogStatus'] !== null) {
+            $this->DialogStatus = $param['DialogStatus'];
         }
 
-        if (array_key_exists("BotName",$param) and $param["BotName"] !== null) {
-            $this->BotName = $param["BotName"];
+        if (array_key_exists('BotName',$param) and $param['BotName'] !== null) {
+            $this->BotName = $param['BotName'];
         }
 
-        if (array_key_exists("IntentName",$param) and $param["IntentName"] !== null) {
-            $this->IntentName = $param["IntentName"];
+        if (array_key_exists('IntentName',$param) and $param['IntentName'] !== null) {
+            $this->IntentName = $param['IntentName'];
         }
 
-        if (array_key_exists("SlotInfoList",$param) and $param["SlotInfoList"] !== null) {
+        if (array_key_exists('SlotInfoList',$param) and $param['SlotInfoList'] !== null) {
             $this->SlotInfoList = [];
-            foreach ($param["SlotInfoList"] as $key => $value){
+            foreach ($param['SlotInfoList'] as $key => $value){
                 $obj = new SlotInfo();
                 $obj->deserialize($value);
                 array_push($this->SlotInfoList, $obj);
             }
         }
 
-        if (array_key_exists("InputText",$param) and $param["InputText"] !== null) {
-            $this->InputText = $param["InputText"];
+        if (array_key_exists('InputText',$param) and $param['InputText'] !== null) {
+            $this->InputText = $param['InputText'];
         }
 
-        if (array_key_exists("SessionAttributes",$param) and $param["SessionAttributes"] !== null) {
-            $this->SessionAttributes = $param["SessionAttributes"];
+        if (array_key_exists('SessionAttributes',$param) and $param['SessionAttributes'] !== null) {
+            $this->SessionAttributes = $param['SessionAttributes'];
         }
 
-        if (array_key_exists("ResponseText",$param) and $param["ResponseText"] !== null) {
-            $this->ResponseText = $param["ResponseText"];
+        if (array_key_exists('ResponseText',$param) and $param['ResponseText'] !== null) {
+            $this->ResponseText = $param['ResponseText'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

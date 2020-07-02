@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -310,101 +310,101 @@ class AgentDealElem extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DealId",$param) and $param["DealId"] !== null) {
-            $this->DealId = $param["DealId"];
+        if (array_key_exists('DealId',$param) and $param['DealId'] !== null) {
+            $this->DealId = $param['DealId'];
         }
 
-        if (array_key_exists("DealName",$param) and $param["DealName"] !== null) {
-            $this->DealName = $param["DealName"];
+        if (array_key_exists('DealName',$param) and $param['DealName'] !== null) {
+            $this->DealName = $param['DealName'];
         }
 
-        if (array_key_exists("GoodsCategoryId",$param) and $param["GoodsCategoryId"] !== null) {
-            $this->GoodsCategoryId = $param["GoodsCategoryId"];
+        if (array_key_exists('GoodsCategoryId',$param) and $param['GoodsCategoryId'] !== null) {
+            $this->GoodsCategoryId = $param['GoodsCategoryId'];
         }
 
-        if (array_key_exists("OwnerUin",$param) and $param["OwnerUin"] !== null) {
-            $this->OwnerUin = $param["OwnerUin"];
+        if (array_key_exists('OwnerUin',$param) and $param['OwnerUin'] !== null) {
+            $this->OwnerUin = $param['OwnerUin'];
         }
 
-        if (array_key_exists("AppId",$param) and $param["AppId"] !== null) {
-            $this->AppId = $param["AppId"];
+        if (array_key_exists('AppId',$param) and $param['AppId'] !== null) {
+            $this->AppId = $param['AppId'];
         }
 
-        if (array_key_exists("GoodsNum",$param) and $param["GoodsNum"] !== null) {
-            $this->GoodsNum = $param["GoodsNum"];
+        if (array_key_exists('GoodsNum',$param) and $param['GoodsNum'] !== null) {
+            $this->GoodsNum = $param['GoodsNum'];
         }
 
-        if (array_key_exists("GoodsPrice",$param) and $param["GoodsPrice"] !== null) {
+        if (array_key_exists('GoodsPrice',$param) and $param['GoodsPrice'] !== null) {
             $this->GoodsPrice = new DealGoodsPriceElem();
-            $this->GoodsPrice->deserialize($param["GoodsPrice"]);
+            $this->GoodsPrice->deserialize($param['GoodsPrice']);
         }
 
-        if (array_key_exists("Creater",$param) and $param["Creater"] !== null) {
-            $this->Creater = $param["Creater"];
+        if (array_key_exists('Creater',$param) and $param['Creater'] !== null) {
+            $this->Creater = $param['Creater'];
         }
 
-        if (array_key_exists("CreatTime",$param) and $param["CreatTime"] !== null) {
-            $this->CreatTime = $param["CreatTime"];
+        if (array_key_exists('CreatTime',$param) and $param['CreatTime'] !== null) {
+            $this->CreatTime = $param['CreatTime'];
         }
 
-        if (array_key_exists("PayEndTime",$param) and $param["PayEndTime"] !== null) {
-            $this->PayEndTime = $param["PayEndTime"];
+        if (array_key_exists('PayEndTime',$param) and $param['PayEndTime'] !== null) {
+            $this->PayEndTime = $param['PayEndTime'];
         }
 
-        if (array_key_exists("BillId",$param) and $param["BillId"] !== null) {
-            $this->BillId = $param["BillId"];
+        if (array_key_exists('BillId',$param) and $param['BillId'] !== null) {
+            $this->BillId = $param['BillId'];
         }
 
-        if (array_key_exists("Payer",$param) and $param["Payer"] !== null) {
-            $this->Payer = $param["Payer"];
+        if (array_key_exists('Payer',$param) and $param['Payer'] !== null) {
+            $this->Payer = $param['Payer'];
         }
 
-        if (array_key_exists("DealStatus",$param) and $param["DealStatus"] !== null) {
-            $this->DealStatus = $param["DealStatus"];
+        if (array_key_exists('DealStatus',$param) and $param['DealStatus'] !== null) {
+            $this->DealStatus = $param['DealStatus'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("GoodsName",$param) and $param["GoodsName"] !== null) {
-            $this->GoodsName = $param["GoodsName"];
+        if (array_key_exists('GoodsName',$param) and $param['GoodsName'] !== null) {
+            $this->GoodsName = $param['GoodsName'];
         }
 
-        if (array_key_exists("ClientRemark",$param) and $param["ClientRemark"] !== null) {
-            $this->ClientRemark = $param["ClientRemark"];
+        if (array_key_exists('ClientRemark',$param) and $param['ClientRemark'] !== null) {
+            $this->ClientRemark = $param['ClientRemark'];
         }
 
-        if (array_key_exists("ActionType",$param) and $param["ActionType"] !== null) {
-            $this->ActionType = $param["ActionType"];
+        if (array_key_exists('ActionType',$param) and $param['ActionType'] !== null) {
+            $this->ActionType = $param['ActionType'];
         }
 
-        if (array_key_exists("VoucherDecline",$param) and $param["VoucherDecline"] !== null) {
-            $this->VoucherDecline = $param["VoucherDecline"];
+        if (array_key_exists('VoucherDecline',$param) and $param['VoucherDecline'] !== null) {
+            $this->VoucherDecline = $param['VoucherDecline'];
         }
 
-        if (array_key_exists("BigDealId",$param) and $param["BigDealId"] !== null) {
-            $this->BigDealId = $param["BigDealId"];
+        if (array_key_exists('BigDealId',$param) and $param['BigDealId'] !== null) {
+            $this->BigDealId = $param['BigDealId'];
         }
 
-        if (array_key_exists("ClientType",$param) and $param["ClientType"] !== null) {
-            $this->ClientType = $param["ClientType"];
+        if (array_key_exists('ClientType',$param) and $param['ClientType'] !== null) {
+            $this->ClientType = $param['ClientType'];
         }
 
-        if (array_key_exists("ProjectType",$param) and $param["ProjectType"] !== null) {
-            $this->ProjectType = $param["ProjectType"];
+        if (array_key_exists('ProjectType',$param) and $param['ProjectType'] !== null) {
+            $this->ProjectType = $param['ProjectType'];
         }
 
-        if (array_key_exists("SalesUin",$param) and $param["SalesUin"] !== null) {
-            $this->SalesUin = $param["SalesUin"];
+        if (array_key_exists('SalesUin',$param) and $param['SalesUin'] !== null) {
+            $this->SalesUin = $param['SalesUin'];
         }
 
-        if (array_key_exists("PayerMode",$param) and $param["PayerMode"] !== null) {
-            $this->PayerMode = $param["PayerMode"];
+        if (array_key_exists('PayerMode',$param) and $param['PayerMode'] !== null) {
+            $this->PayerMode = $param['PayerMode'];
         }
 
-        if (array_key_exists("ActivityId",$param) and $param["ActivityId"] !== null) {
-            $this->ActivityId = $param["ActivityId"];
+        if (array_key_exists('ActivityId',$param) and $param['ActivityId'] !== null) {
+            $this->ActivityId = $param['ActivityId'];
         }
     }
 }

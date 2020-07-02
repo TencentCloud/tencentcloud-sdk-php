@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -70,30 +70,30 @@ class HighlightsInfomation extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Concentration",$param) and $param["Concentration"] !== null) {
+        if (array_key_exists('Concentration',$param) and $param['Concentration'] !== null) {
             $this->Concentration = [];
-            foreach ($param["Concentration"] as $key => $value){
+            foreach ($param['Concentration'] as $key => $value){
                 $obj = new TimeType();
                 $obj->deserialize($value);
                 array_push($this->Concentration, $obj);
             }
         }
 
-        if (array_key_exists("Smile",$param) and $param["Smile"] !== null) {
+        if (array_key_exists('Smile',$param) and $param['Smile'] !== null) {
             $this->Smile = [];
-            foreach ($param["Smile"] as $key => $value){
+            foreach ($param['Smile'] as $key => $value){
                 $obj = new TimeType();
                 $obj->deserialize($value);
                 array_push($this->Smile, $obj);
             }
         }
 
-        if (array_key_exists("HighlightsUrl",$param) and $param["HighlightsUrl"] !== null) {
-            $this->HighlightsUrl = $param["HighlightsUrl"];
+        if (array_key_exists('HighlightsUrl',$param) and $param['HighlightsUrl'] !== null) {
+            $this->HighlightsUrl = $param['HighlightsUrl'];
         }
 
-        if (array_key_exists("PersonId",$param) and $param["PersonId"] !== null) {
-            $this->PersonId = $param["PersonId"];
+        if (array_key_exists('PersonId',$param) and $param['PersonId'] !== null) {
+            $this->PersonId = $param['PersonId'];
         }
     }
 }

@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -322,143 +322,143 @@ class Instance extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Placement",$param) and $param["Placement"] !== null) {
+        if (array_key_exists('Placement',$param) and $param['Placement'] !== null) {
             $this->Placement = new Placement();
-            $this->Placement->deserialize($param["Placement"]);
+            $this->Placement->deserialize($param['Placement']);
         }
 
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
-            $this->InstanceType = $param["InstanceType"];
+        if (array_key_exists('InstanceType',$param) and $param['InstanceType'] !== null) {
+            $this->InstanceType = $param['InstanceType'];
         }
 
-        if (array_key_exists("CPU",$param) and $param["CPU"] !== null) {
-            $this->CPU = $param["CPU"];
+        if (array_key_exists('CPU',$param) and $param['CPU'] !== null) {
+            $this->CPU = $param['CPU'];
         }
 
-        if (array_key_exists("Memory",$param) and $param["Memory"] !== null) {
-            $this->Memory = $param["Memory"];
+        if (array_key_exists('Memory',$param) and $param['Memory'] !== null) {
+            $this->Memory = $param['Memory'];
         }
 
-        if (array_key_exists("RestrictState",$param) and $param["RestrictState"] !== null) {
-            $this->RestrictState = $param["RestrictState"];
+        if (array_key_exists('RestrictState',$param) and $param['RestrictState'] !== null) {
+            $this->RestrictState = $param['RestrictState'];
         }
 
-        if (array_key_exists("InstanceName",$param) and $param["InstanceName"] !== null) {
-            $this->InstanceName = $param["InstanceName"];
+        if (array_key_exists('InstanceName',$param) and $param['InstanceName'] !== null) {
+            $this->InstanceName = $param['InstanceName'];
         }
 
-        if (array_key_exists("InstanceChargeType",$param) and $param["InstanceChargeType"] !== null) {
-            $this->InstanceChargeType = $param["InstanceChargeType"];
+        if (array_key_exists('InstanceChargeType',$param) and $param['InstanceChargeType'] !== null) {
+            $this->InstanceChargeType = $param['InstanceChargeType'];
         }
 
-        if (array_key_exists("SystemDisk",$param) and $param["SystemDisk"] !== null) {
+        if (array_key_exists('SystemDisk',$param) and $param['SystemDisk'] !== null) {
             $this->SystemDisk = new SystemDisk();
-            $this->SystemDisk->deserialize($param["SystemDisk"]);
+            $this->SystemDisk->deserialize($param['SystemDisk']);
         }
 
-        if (array_key_exists("DataDisks",$param) and $param["DataDisks"] !== null) {
+        if (array_key_exists('DataDisks',$param) and $param['DataDisks'] !== null) {
             $this->DataDisks = [];
-            foreach ($param["DataDisks"] as $key => $value){
+            foreach ($param['DataDisks'] as $key => $value){
                 $obj = new DataDisk();
                 $obj->deserialize($value);
                 array_push($this->DataDisks, $obj);
             }
         }
 
-        if (array_key_exists("PrivateIpAddresses",$param) and $param["PrivateIpAddresses"] !== null) {
-            $this->PrivateIpAddresses = $param["PrivateIpAddresses"];
+        if (array_key_exists('PrivateIpAddresses',$param) and $param['PrivateIpAddresses'] !== null) {
+            $this->PrivateIpAddresses = $param['PrivateIpAddresses'];
         }
 
-        if (array_key_exists("PublicIpAddresses",$param) and $param["PublicIpAddresses"] !== null) {
-            $this->PublicIpAddresses = $param["PublicIpAddresses"];
+        if (array_key_exists('PublicIpAddresses',$param) and $param['PublicIpAddresses'] !== null) {
+            $this->PublicIpAddresses = $param['PublicIpAddresses'];
         }
 
-        if (array_key_exists("InternetAccessible",$param) and $param["InternetAccessible"] !== null) {
+        if (array_key_exists('InternetAccessible',$param) and $param['InternetAccessible'] !== null) {
             $this->InternetAccessible = new InternetAccessible();
-            $this->InternetAccessible->deserialize($param["InternetAccessible"]);
+            $this->InternetAccessible->deserialize($param['InternetAccessible']);
         }
 
-        if (array_key_exists("VirtualPrivateCloud",$param) and $param["VirtualPrivateCloud"] !== null) {
+        if (array_key_exists('VirtualPrivateCloud',$param) and $param['VirtualPrivateCloud'] !== null) {
             $this->VirtualPrivateCloud = new VirtualPrivateCloud();
-            $this->VirtualPrivateCloud->deserialize($param["VirtualPrivateCloud"]);
+            $this->VirtualPrivateCloud->deserialize($param['VirtualPrivateCloud']);
         }
 
-        if (array_key_exists("ImageId",$param) and $param["ImageId"] !== null) {
-            $this->ImageId = $param["ImageId"];
+        if (array_key_exists('ImageId',$param) and $param['ImageId'] !== null) {
+            $this->ImageId = $param['ImageId'];
         }
 
-        if (array_key_exists("RenewFlag",$param) and $param["RenewFlag"] !== null) {
-            $this->RenewFlag = $param["RenewFlag"];
+        if (array_key_exists('RenewFlag',$param) and $param['RenewFlag'] !== null) {
+            $this->RenewFlag = $param['RenewFlag'];
         }
 
-        if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
-            $this->CreatedTime = $param["CreatedTime"];
+        if (array_key_exists('CreatedTime',$param) and $param['CreatedTime'] !== null) {
+            $this->CreatedTime = $param['CreatedTime'];
         }
 
-        if (array_key_exists("ExpiredTime",$param) and $param["ExpiredTime"] !== null) {
-            $this->ExpiredTime = $param["ExpiredTime"];
+        if (array_key_exists('ExpiredTime',$param) and $param['ExpiredTime'] !== null) {
+            $this->ExpiredTime = $param['ExpiredTime'];
         }
 
-        if (array_key_exists("OsName",$param) and $param["OsName"] !== null) {
-            $this->OsName = $param["OsName"];
+        if (array_key_exists('OsName',$param) and $param['OsName'] !== null) {
+            $this->OsName = $param['OsName'];
         }
 
-        if (array_key_exists("SecurityGroupIds",$param) and $param["SecurityGroupIds"] !== null) {
-            $this->SecurityGroupIds = $param["SecurityGroupIds"];
+        if (array_key_exists('SecurityGroupIds',$param) and $param['SecurityGroupIds'] !== null) {
+            $this->SecurityGroupIds = $param['SecurityGroupIds'];
         }
 
-        if (array_key_exists("LoginSettings",$param) and $param["LoginSettings"] !== null) {
+        if (array_key_exists('LoginSettings',$param) and $param['LoginSettings'] !== null) {
             $this->LoginSettings = new LoginSettings();
-            $this->LoginSettings->deserialize($param["LoginSettings"]);
+            $this->LoginSettings->deserialize($param['LoginSettings']);
         }
 
-        if (array_key_exists("InstanceState",$param) and $param["InstanceState"] !== null) {
-            $this->InstanceState = $param["InstanceState"];
+        if (array_key_exists('InstanceState',$param) and $param['InstanceState'] !== null) {
+            $this->InstanceState = $param['InstanceState'];
         }
 
-        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+        if (array_key_exists('Tags',$param) and $param['Tags'] !== null) {
             $this->Tags = [];
-            foreach ($param["Tags"] as $key => $value){
+            foreach ($param['Tags'] as $key => $value){
                 $obj = new Tag();
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
         }
 
-        if (array_key_exists("StopChargingMode",$param) and $param["StopChargingMode"] !== null) {
-            $this->StopChargingMode = $param["StopChargingMode"];
+        if (array_key_exists('StopChargingMode',$param) and $param['StopChargingMode'] !== null) {
+            $this->StopChargingMode = $param['StopChargingMode'];
         }
 
-        if (array_key_exists("Uuid",$param) and $param["Uuid"] !== null) {
-            $this->Uuid = $param["Uuid"];
+        if (array_key_exists('Uuid',$param) and $param['Uuid'] !== null) {
+            $this->Uuid = $param['Uuid'];
         }
 
-        if (array_key_exists("LatestOperation",$param) and $param["LatestOperation"] !== null) {
-            $this->LatestOperation = $param["LatestOperation"];
+        if (array_key_exists('LatestOperation',$param) and $param['LatestOperation'] !== null) {
+            $this->LatestOperation = $param['LatestOperation'];
         }
 
-        if (array_key_exists("LatestOperationState",$param) and $param["LatestOperationState"] !== null) {
-            $this->LatestOperationState = $param["LatestOperationState"];
+        if (array_key_exists('LatestOperationState',$param) and $param['LatestOperationState'] !== null) {
+            $this->LatestOperationState = $param['LatestOperationState'];
         }
 
-        if (array_key_exists("LatestOperationRequestId",$param) and $param["LatestOperationRequestId"] !== null) {
-            $this->LatestOperationRequestId = $param["LatestOperationRequestId"];
+        if (array_key_exists('LatestOperationRequestId',$param) and $param['LatestOperationRequestId'] !== null) {
+            $this->LatestOperationRequestId = $param['LatestOperationRequestId'];
         }
 
-        if (array_key_exists("DisasterRecoverGroupId",$param) and $param["DisasterRecoverGroupId"] !== null) {
-            $this->DisasterRecoverGroupId = $param["DisasterRecoverGroupId"];
+        if (array_key_exists('DisasterRecoverGroupId',$param) and $param['DisasterRecoverGroupId'] !== null) {
+            $this->DisasterRecoverGroupId = $param['DisasterRecoverGroupId'];
         }
 
-        if (array_key_exists("IPv6Addresses",$param) and $param["IPv6Addresses"] !== null) {
-            $this->IPv6Addresses = $param["IPv6Addresses"];
+        if (array_key_exists('IPv6Addresses',$param) and $param['IPv6Addresses'] !== null) {
+            $this->IPv6Addresses = $param['IPv6Addresses'];
         }
 
-        if (array_key_exists("CamRoleName",$param) and $param["CamRoleName"] !== null) {
-            $this->CamRoleName = $param["CamRoleName"];
+        if (array_key_exists('CamRoleName',$param) and $param['CamRoleName'] !== null) {
+            $this->CamRoleName = $param['CamRoleName'];
         }
     }
 }

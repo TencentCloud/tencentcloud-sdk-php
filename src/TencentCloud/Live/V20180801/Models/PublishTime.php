@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -50,8 +50,8 @@ UTC 格式，例如：2018-06-29T19:00:00Z。
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PublishTime",$param) and $param["PublishTime"] !== null) {
-            $this->PublishTime = $param["PublishTime"];
+        if (array_key_exists('PublishTime',$param) and $param['PublishTime'] !== null) {
+            $this->PublishTime = $param['PublishTime'];
         }
     }
 }

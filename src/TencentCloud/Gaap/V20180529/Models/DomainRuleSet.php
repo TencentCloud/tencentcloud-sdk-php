@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -270,87 +270,87 @@ class DomainRuleSet extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
-            $this->Domain = $param["Domain"];
+        if (array_key_exists('Domain',$param) and $param['Domain'] !== null) {
+            $this->Domain = $param['Domain'];
         }
 
-        if (array_key_exists("RuleSet",$param) and $param["RuleSet"] !== null) {
+        if (array_key_exists('RuleSet',$param) and $param['RuleSet'] !== null) {
             $this->RuleSet = [];
-            foreach ($param["RuleSet"] as $key => $value){
+            foreach ($param['RuleSet'] as $key => $value){
                 $obj = new RuleInfo();
                 $obj->deserialize($value);
                 array_push($this->RuleSet, $obj);
             }
         }
 
-        if (array_key_exists("CertificateId",$param) and $param["CertificateId"] !== null) {
-            $this->CertificateId = $param["CertificateId"];
+        if (array_key_exists('CertificateId',$param) and $param['CertificateId'] !== null) {
+            $this->CertificateId = $param['CertificateId'];
         }
 
-        if (array_key_exists("CertificateAlias",$param) and $param["CertificateAlias"] !== null) {
-            $this->CertificateAlias = $param["CertificateAlias"];
+        if (array_key_exists('CertificateAlias',$param) and $param['CertificateAlias'] !== null) {
+            $this->CertificateAlias = $param['CertificateAlias'];
         }
 
-        if (array_key_exists("ClientCertificateId",$param) and $param["ClientCertificateId"] !== null) {
-            $this->ClientCertificateId = $param["ClientCertificateId"];
+        if (array_key_exists('ClientCertificateId',$param) and $param['ClientCertificateId'] !== null) {
+            $this->ClientCertificateId = $param['ClientCertificateId'];
         }
 
-        if (array_key_exists("ClientCertificateAlias",$param) and $param["ClientCertificateAlias"] !== null) {
-            $this->ClientCertificateAlias = $param["ClientCertificateAlias"];
+        if (array_key_exists('ClientCertificateAlias',$param) and $param['ClientCertificateAlias'] !== null) {
+            $this->ClientCertificateAlias = $param['ClientCertificateAlias'];
         }
 
-        if (array_key_exists("BasicAuthConfId",$param) and $param["BasicAuthConfId"] !== null) {
-            $this->BasicAuthConfId = $param["BasicAuthConfId"];
+        if (array_key_exists('BasicAuthConfId',$param) and $param['BasicAuthConfId'] !== null) {
+            $this->BasicAuthConfId = $param['BasicAuthConfId'];
         }
 
-        if (array_key_exists("BasicAuth",$param) and $param["BasicAuth"] !== null) {
-            $this->BasicAuth = $param["BasicAuth"];
+        if (array_key_exists('BasicAuth',$param) and $param['BasicAuth'] !== null) {
+            $this->BasicAuth = $param['BasicAuth'];
         }
 
-        if (array_key_exists("BasicAuthConfAlias",$param) and $param["BasicAuthConfAlias"] !== null) {
-            $this->BasicAuthConfAlias = $param["BasicAuthConfAlias"];
+        if (array_key_exists('BasicAuthConfAlias',$param) and $param['BasicAuthConfAlias'] !== null) {
+            $this->BasicAuthConfAlias = $param['BasicAuthConfAlias'];
         }
 
-        if (array_key_exists("RealServerCertificateId",$param) and $param["RealServerCertificateId"] !== null) {
-            $this->RealServerCertificateId = $param["RealServerCertificateId"];
+        if (array_key_exists('RealServerCertificateId',$param) and $param['RealServerCertificateId'] !== null) {
+            $this->RealServerCertificateId = $param['RealServerCertificateId'];
         }
 
-        if (array_key_exists("RealServerAuth",$param) and $param["RealServerAuth"] !== null) {
-            $this->RealServerAuth = $param["RealServerAuth"];
+        if (array_key_exists('RealServerAuth',$param) and $param['RealServerAuth'] !== null) {
+            $this->RealServerAuth = $param['RealServerAuth'];
         }
 
-        if (array_key_exists("RealServerCertificateAlias",$param) and $param["RealServerCertificateAlias"] !== null) {
-            $this->RealServerCertificateAlias = $param["RealServerCertificateAlias"];
+        if (array_key_exists('RealServerCertificateAlias',$param) and $param['RealServerCertificateAlias'] !== null) {
+            $this->RealServerCertificateAlias = $param['RealServerCertificateAlias'];
         }
 
-        if (array_key_exists("GaapCertificateId",$param) and $param["GaapCertificateId"] !== null) {
-            $this->GaapCertificateId = $param["GaapCertificateId"];
+        if (array_key_exists('GaapCertificateId',$param) and $param['GaapCertificateId'] !== null) {
+            $this->GaapCertificateId = $param['GaapCertificateId'];
         }
 
-        if (array_key_exists("GaapAuth",$param) and $param["GaapAuth"] !== null) {
-            $this->GaapAuth = $param["GaapAuth"];
+        if (array_key_exists('GaapAuth',$param) and $param['GaapAuth'] !== null) {
+            $this->GaapAuth = $param['GaapAuth'];
         }
 
-        if (array_key_exists("GaapCertificateAlias",$param) and $param["GaapCertificateAlias"] !== null) {
-            $this->GaapCertificateAlias = $param["GaapCertificateAlias"];
+        if (array_key_exists('GaapCertificateAlias',$param) and $param['GaapCertificateAlias'] !== null) {
+            $this->GaapCertificateAlias = $param['GaapCertificateAlias'];
         }
 
-        if (array_key_exists("RealServerCertificateDomain",$param) and $param["RealServerCertificateDomain"] !== null) {
-            $this->RealServerCertificateDomain = $param["RealServerCertificateDomain"];
+        if (array_key_exists('RealServerCertificateDomain',$param) and $param['RealServerCertificateDomain'] !== null) {
+            $this->RealServerCertificateDomain = $param['RealServerCertificateDomain'];
         }
 
-        if (array_key_exists("PolyClientCertificateAliasInfo",$param) and $param["PolyClientCertificateAliasInfo"] !== null) {
+        if (array_key_exists('PolyClientCertificateAliasInfo',$param) and $param['PolyClientCertificateAliasInfo'] !== null) {
             $this->PolyClientCertificateAliasInfo = [];
-            foreach ($param["PolyClientCertificateAliasInfo"] as $key => $value){
+            foreach ($param['PolyClientCertificateAliasInfo'] as $key => $value){
                 $obj = new CertificateAliasInfo();
                 $obj->deserialize($value);
                 array_push($this->PolyClientCertificateAliasInfo, $obj);
             }
         }
 
-        if (array_key_exists("PolyRealServerCertificateAliasInfo",$param) and $param["PolyRealServerCertificateAliasInfo"] !== null) {
+        if (array_key_exists('PolyRealServerCertificateAliasInfo',$param) and $param['PolyRealServerCertificateAliasInfo'] !== null) {
             $this->PolyRealServerCertificateAliasInfo = [];
-            foreach ($param["PolyRealServerCertificateAliasInfo"] as $key => $value){
+            foreach ($param['PolyRealServerCertificateAliasInfo'] as $key => $value){
                 $obj = new CertificateAliasInfo();
                 $obj->deserialize($value);
                 array_push($this->PolyRealServerCertificateAliasInfo, $obj);

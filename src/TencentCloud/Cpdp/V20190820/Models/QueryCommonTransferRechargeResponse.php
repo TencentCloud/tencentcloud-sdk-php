@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -142,49 +142,49 @@ class QueryCommonTransferRechargeResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TxnReturnCode",$param) and $param["TxnReturnCode"] !== null) {
-            $this->TxnReturnCode = $param["TxnReturnCode"];
+        if (array_key_exists('TxnReturnCode',$param) and $param['TxnReturnCode'] !== null) {
+            $this->TxnReturnCode = $param['TxnReturnCode'];
         }
 
-        if (array_key_exists("TxnReturnMsg",$param) and $param["TxnReturnMsg"] !== null) {
-            $this->TxnReturnMsg = $param["TxnReturnMsg"];
+        if (array_key_exists('TxnReturnMsg',$param) and $param['TxnReturnMsg'] !== null) {
+            $this->TxnReturnMsg = $param['TxnReturnMsg'];
         }
 
-        if (array_key_exists("CnsmrSeqNo",$param) and $param["CnsmrSeqNo"] !== null) {
-            $this->CnsmrSeqNo = $param["CnsmrSeqNo"];
+        if (array_key_exists('CnsmrSeqNo',$param) and $param['CnsmrSeqNo'] !== null) {
+            $this->CnsmrSeqNo = $param['CnsmrSeqNo'];
         }
 
-        if (array_key_exists("ResultNum",$param) and $param["ResultNum"] !== null) {
-            $this->ResultNum = $param["ResultNum"];
+        if (array_key_exists('ResultNum',$param) and $param['ResultNum'] !== null) {
+            $this->ResultNum = $param['ResultNum'];
         }
 
-        if (array_key_exists("StartRecordNo",$param) and $param["StartRecordNo"] !== null) {
-            $this->StartRecordNo = $param["StartRecordNo"];
+        if (array_key_exists('StartRecordNo',$param) and $param['StartRecordNo'] !== null) {
+            $this->StartRecordNo = $param['StartRecordNo'];
         }
 
-        if (array_key_exists("EndFlag",$param) and $param["EndFlag"] !== null) {
-            $this->EndFlag = $param["EndFlag"];
+        if (array_key_exists('EndFlag',$param) and $param['EndFlag'] !== null) {
+            $this->EndFlag = $param['EndFlag'];
         }
 
-        if (array_key_exists("TotalNum",$param) and $param["TotalNum"] !== null) {
-            $this->TotalNum = $param["TotalNum"];
+        if (array_key_exists('TotalNum',$param) and $param['TotalNum'] !== null) {
+            $this->TotalNum = $param['TotalNum'];
         }
 
-        if (array_key_exists("TranItemArray",$param) and $param["TranItemArray"] !== null) {
+        if (array_key_exists('TranItemArray',$param) and $param['TranItemArray'] !== null) {
             $this->TranItemArray = [];
-            foreach ($param["TranItemArray"] as $key => $value){
+            foreach ($param['TranItemArray'] as $key => $value){
                 $obj = new TransferItem();
                 $obj->deserialize($value);
                 array_push($this->TranItemArray, $obj);
             }
         }
 
-        if (array_key_exists("ReservedMsg",$param) and $param["ReservedMsg"] !== null) {
-            $this->ReservedMsg = $param["ReservedMsg"];
+        if (array_key_exists('ReservedMsg',$param) and $param['ReservedMsg'] !== null) {
+            $this->ReservedMsg = $param['ReservedMsg'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

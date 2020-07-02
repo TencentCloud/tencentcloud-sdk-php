@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -62,16 +62,16 @@ class ModifyDirectConnectGatewayAttributeRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DirectConnectGatewayId",$param) and $param["DirectConnectGatewayId"] !== null) {
-            $this->DirectConnectGatewayId = $param["DirectConnectGatewayId"];
+        if (array_key_exists('DirectConnectGatewayId',$param) and $param['DirectConnectGatewayId'] !== null) {
+            $this->DirectConnectGatewayId = $param['DirectConnectGatewayId'];
         }
 
-        if (array_key_exists("DirectConnectGatewayName",$param) and $param["DirectConnectGatewayName"] !== null) {
-            $this->DirectConnectGatewayName = $param["DirectConnectGatewayName"];
+        if (array_key_exists('DirectConnectGatewayName',$param) and $param['DirectConnectGatewayName'] !== null) {
+            $this->DirectConnectGatewayName = $param['DirectConnectGatewayName'];
         }
 
-        if (array_key_exists("CcnRouteType",$param) and $param["CcnRouteType"] !== null) {
-            $this->CcnRouteType = $param["CcnRouteType"];
+        if (array_key_exists('CcnRouteType',$param) and $param['CcnRouteType'] !== null) {
+            $this->CcnRouteType = $param['CcnRouteType'];
         }
     }
 }

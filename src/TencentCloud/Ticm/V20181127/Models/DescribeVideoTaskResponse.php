@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -146,60 +146,60 @@ FINISH：已完成。
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("BeginProcessTime",$param) and $param["BeginProcessTime"] !== null) {
-            $this->BeginProcessTime = $param["BeginProcessTime"];
+        if (array_key_exists('BeginProcessTime',$param) and $param['BeginProcessTime'] !== null) {
+            $this->BeginProcessTime = $param['BeginProcessTime'];
         }
 
-        if (array_key_exists("FinishTime",$param) and $param["FinishTime"] !== null) {
-            $this->FinishTime = $param["FinishTime"];
+        if (array_key_exists('FinishTime',$param) and $param['FinishTime'] !== null) {
+            $this->FinishTime = $param['FinishTime'];
         }
 
-        if (array_key_exists("PornResult",$param) and $param["PornResult"] !== null) {
+        if (array_key_exists('PornResult',$param) and $param['PornResult'] !== null) {
             $this->PornResult = new VodPornReviewResult();
-            $this->PornResult->deserialize($param["PornResult"]);
+            $this->PornResult->deserialize($param['PornResult']);
         }
 
-        if (array_key_exists("TerrorismResult",$param) and $param["TerrorismResult"] !== null) {
+        if (array_key_exists('TerrorismResult',$param) and $param['TerrorismResult'] !== null) {
             $this->TerrorismResult = new VodTerrorismReviewResult();
-            $this->TerrorismResult->deserialize($param["TerrorismResult"]);
+            $this->TerrorismResult->deserialize($param['TerrorismResult']);
         }
 
-        if (array_key_exists("PoliticalResult",$param) and $param["PoliticalResult"] !== null) {
+        if (array_key_exists('PoliticalResult',$param) and $param['PoliticalResult'] !== null) {
             $this->PoliticalResult = new VodPoliticalReviewResult();
-            $this->PoliticalResult->deserialize($param["PoliticalResult"]);
+            $this->PoliticalResult->deserialize($param['PoliticalResult']);
         }
 
-        if (array_key_exists("PoliticalOcrResult",$param) and $param["PoliticalOcrResult"] !== null) {
+        if (array_key_exists('PoliticalOcrResult',$param) and $param['PoliticalOcrResult'] !== null) {
             $this->PoliticalOcrResult = new VodPoliticalOcrReviewResult();
-            $this->PoliticalOcrResult->deserialize($param["PoliticalOcrResult"]);
+            $this->PoliticalOcrResult->deserialize($param['PoliticalOcrResult']);
         }
 
-        if (array_key_exists("PornAsrResult",$param) and $param["PornAsrResult"] !== null) {
+        if (array_key_exists('PornAsrResult',$param) and $param['PornAsrResult'] !== null) {
             $this->PornAsrResult = new VodPornAsrReviewResult();
-            $this->PornAsrResult->deserialize($param["PornAsrResult"]);
+            $this->PornAsrResult->deserialize($param['PornAsrResult']);
         }
 
-        if (array_key_exists("PoliticalAsrResult",$param) and $param["PoliticalAsrResult"] !== null) {
+        if (array_key_exists('PoliticalAsrResult',$param) and $param['PoliticalAsrResult'] !== null) {
             $this->PoliticalAsrResult = new VodPoliticalAsrReviewResult();
-            $this->PoliticalAsrResult->deserialize($param["PoliticalAsrResult"]);
+            $this->PoliticalAsrResult->deserialize($param['PoliticalAsrResult']);
         }
 
-        if (array_key_exists("PornOcrResult",$param) and $param["PornOcrResult"] !== null) {
+        if (array_key_exists('PornOcrResult',$param) and $param['PornOcrResult'] !== null) {
             $this->PornOcrResult = new VodPornOcrResult();
-            $this->PornOcrResult->deserialize($param["PornOcrResult"]);
+            $this->PornOcrResult->deserialize($param['PornOcrResult']);
         }
 
-        if (array_key_exists("MetaData",$param) and $param["MetaData"] !== null) {
+        if (array_key_exists('MetaData',$param) and $param['MetaData'] !== null) {
             $this->MetaData = new VodMetaData();
-            $this->MetaData->deserialize($param["MetaData"]);
+            $this->MetaData->deserialize($param['MetaData']);
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

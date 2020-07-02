@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setKeyState(integer $KeyState) 设置根据CMK状态筛选， 0表示全部CMK， 1 表示仅查询Enabled CMK， 2 表示仅查询Disabled CMK，3 表示查询PendingDelete 状态的CMK(处于计划删除状态的Key)，4 表示查询 PendingImport 状态的CMK
  * @method string getSearchKeyAlias() 获取根据KeyId或者Alias进行模糊匹配查询
  * @method void setSearchKeyAlias(string $SearchKeyAlias) 设置根据KeyId或者Alias进行模糊匹配查询
- * @method string getOrigin() 获取根据CMK类型筛选， "TENCENT_KMS" 表示筛选密钥材料由KMS创建的CMK， "EXTERNAL" 表示筛选密钥材料需要用户导入的 EXTERNAL类型CMK，"ALL" 或者不设置表示两种类型都查询，大小写敏感。
- * @method void setOrigin(string $Origin) 设置根据CMK类型筛选， "TENCENT_KMS" 表示筛选密钥材料由KMS创建的CMK， "EXTERNAL" 表示筛选密钥材料需要用户导入的 EXTERNAL类型CMK，"ALL" 或者不设置表示两种类型都查询，大小写敏感。
+ * @method string getOrigin() 获取根据CMK类型筛选， "TENCENT_KMS" 表示筛选密钥材料由KMS创建的CMK， 'EXTERNAL' 表示筛选密钥材料需要用户导入的 EXTERNAL类型CMK，'ALL' 或者不设置表示两种类型都查询，大小写敏感。
+ * @method void setOrigin(string $Origin) 设置根据CMK类型筛选， "TENCENT_KMS" 表示筛选密钥材料由KMS创建的CMK， 'EXTERNAL' 表示筛选密钥材料需要用户导入的 EXTERNAL类型CMK，'ALL' 或者不设置表示两种类型都查询，大小写敏感。
  * @method string getKeyUsage() 获取根据CMK的KeyUsage筛选，ALL表示筛选全部，可使用的参数为：ALL 或 ENCRYPT_DECRYPT 或 ASYMMETRIC_DECRYPT_RSA_2048 或 ASYMMETRIC_DECRYPT_SM2，为空则默认筛选ENCRYPT_DECRYPT类型
  * @method void setKeyUsage(string $KeyUsage) 设置根据CMK的KeyUsage筛选，ALL表示筛选全部，可使用的参数为：ALL 或 ENCRYPT_DECRYPT 或 ASYMMETRIC_DECRYPT_RSA_2048 或 ASYMMETRIC_DECRYPT_SM2，为空则默认筛选ENCRYPT_DECRYPT类型
  */
@@ -70,7 +70,7 @@ class ListKeyDetailRequest extends AbstractModel
     public $SearchKeyAlias;
 
     /**
-     * @var string 根据CMK类型筛选， "TENCENT_KMS" 表示筛选密钥材料由KMS创建的CMK， "EXTERNAL" 表示筛选密钥材料需要用户导入的 EXTERNAL类型CMK，"ALL" 或者不设置表示两种类型都查询，大小写敏感。
+     * @var string 根据CMK类型筛选， "TENCENT_KMS" 表示筛选密钥材料由KMS创建的CMK， 'EXTERNAL' 表示筛选密钥材料需要用户导入的 EXTERNAL类型CMK，'ALL' 或者不设置表示两种类型都查询，大小写敏感。
      */
     public $Origin;
 
@@ -86,7 +86,7 @@ class ListKeyDetailRequest extends AbstractModel
      * @param integer $OrderType 根据CMK创建时间排序， 0 表示按照降序排序，1表示按照升序排序
      * @param integer $KeyState 根据CMK状态筛选， 0表示全部CMK， 1 表示仅查询Enabled CMK， 2 表示仅查询Disabled CMK，3 表示查询PendingDelete 状态的CMK(处于计划删除状态的Key)，4 表示查询 PendingImport 状态的CMK
      * @param string $SearchKeyAlias 根据KeyId或者Alias进行模糊匹配查询
-     * @param string $Origin 根据CMK类型筛选， "TENCENT_KMS" 表示筛选密钥材料由KMS创建的CMK， "EXTERNAL" 表示筛选密钥材料需要用户导入的 EXTERNAL类型CMK，"ALL" 或者不设置表示两种类型都查询，大小写敏感。
+     * @param string $Origin 根据CMK类型筛选， "TENCENT_KMS" 表示筛选密钥材料由KMS创建的CMK， 'EXTERNAL' 表示筛选密钥材料需要用户导入的 EXTERNAL类型CMK，'ALL' 或者不设置表示两种类型都查询，大小写敏感。
      * @param string $KeyUsage 根据CMK的KeyUsage筛选，ALL表示筛选全部，可使用的参数为：ALL 或 ENCRYPT_DECRYPT 或 ASYMMETRIC_DECRYPT_RSA_2048 或 ASYMMETRIC_DECRYPT_SM2，为空则默认筛选ENCRYPT_DECRYPT类型
      */
     function __construct()
@@ -102,36 +102,36 @@ class ListKeyDetailRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
+        if (array_key_exists('Offset',$param) and $param['Offset'] !== null) {
+            $this->Offset = $param['Offset'];
         }
 
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
+        if (array_key_exists('Limit',$param) and $param['Limit'] !== null) {
+            $this->Limit = $param['Limit'];
         }
 
-        if (array_key_exists("Role",$param) and $param["Role"] !== null) {
-            $this->Role = $param["Role"];
+        if (array_key_exists('Role',$param) and $param['Role'] !== null) {
+            $this->Role = $param['Role'];
         }
 
-        if (array_key_exists("OrderType",$param) and $param["OrderType"] !== null) {
-            $this->OrderType = $param["OrderType"];
+        if (array_key_exists('OrderType',$param) and $param['OrderType'] !== null) {
+            $this->OrderType = $param['OrderType'];
         }
 
-        if (array_key_exists("KeyState",$param) and $param["KeyState"] !== null) {
-            $this->KeyState = $param["KeyState"];
+        if (array_key_exists('KeyState',$param) and $param['KeyState'] !== null) {
+            $this->KeyState = $param['KeyState'];
         }
 
-        if (array_key_exists("SearchKeyAlias",$param) and $param["SearchKeyAlias"] !== null) {
-            $this->SearchKeyAlias = $param["SearchKeyAlias"];
+        if (array_key_exists('SearchKeyAlias',$param) and $param['SearchKeyAlias'] !== null) {
+            $this->SearchKeyAlias = $param['SearchKeyAlias'];
         }
 
-        if (array_key_exists("Origin",$param) and $param["Origin"] !== null) {
-            $this->Origin = $param["Origin"];
+        if (array_key_exists('Origin',$param) and $param['Origin'] !== null) {
+            $this->Origin = $param['Origin'];
         }
 
-        if (array_key_exists("KeyUsage",$param) and $param["KeyUsage"] !== null) {
-            $this->KeyUsage = $param["KeyUsage"];
+        if (array_key_exists('KeyUsage',$param) and $param['KeyUsage'] !== null) {
+            $this->KeyUsage = $param['KeyUsage'];
         }
     }
 }

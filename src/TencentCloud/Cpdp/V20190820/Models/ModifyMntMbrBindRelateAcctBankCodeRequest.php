@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEiconBankBranchId(string $EiconBankBranchId) 设置STRING(20)，超级网银行号
  * @method string getReservedMsg() 获取STRING(1027)，保留域
  * @method void setReservedMsg(string $ReservedMsg) 设置STRING(1027)，保留域
- * @method string getProfile() 获取STRING(12)，接入环境，默认接入沙箱环境。接入正式环境填"prod"
- * @method void setProfile(string $Profile) 设置STRING(12)，接入环境，默认接入沙箱环境。接入正式环境填"prod"
+ * @method string getProfile() 获取STRING(12)，接入环境，默认接入沙箱环境。接入正式环境填'prod'
+ * @method void setProfile(string $Profile) 设置STRING(12)，接入环境，默认接入沙箱环境。接入正式环境填'prod'
  */
 class ModifyMntMbrBindRelateAcctBankCodeRequest extends AbstractModel
 {
@@ -75,7 +75,7 @@ class ModifyMntMbrBindRelateAcctBankCodeRequest extends AbstractModel
     public $ReservedMsg;
 
     /**
-     * @var string STRING(12)，接入环境，默认接入沙箱环境。接入正式环境填"prod"
+     * @var string STRING(12)，接入环境，默认接入沙箱环境。接入正式环境填'prod'
      */
     public $Profile;
 
@@ -87,7 +87,7 @@ class ModifyMntMbrBindRelateAcctBankCodeRequest extends AbstractModel
      * @param string $CnapsBranchId STRING(20)，大小额行号（CnapsBranchId和EiconBankBranchId两者二选一必填）
      * @param string $EiconBankBranchId STRING(20)，超级网银行号
      * @param string $ReservedMsg STRING(1027)，保留域
-     * @param string $Profile STRING(12)，接入环境，默认接入沙箱环境。接入正式环境填"prod"
+     * @param string $Profile STRING(12)，接入环境，默认接入沙箱环境。接入正式环境填'prod'
      */
     function __construct()
     {
@@ -102,36 +102,36 @@ class ModifyMntMbrBindRelateAcctBankCodeRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MrchCode",$param) and $param["MrchCode"] !== null) {
-            $this->MrchCode = $param["MrchCode"];
+        if (array_key_exists('MrchCode',$param) and $param['MrchCode'] !== null) {
+            $this->MrchCode = $param['MrchCode'];
         }
 
-        if (array_key_exists("SubAcctNo",$param) and $param["SubAcctNo"] !== null) {
-            $this->SubAcctNo = $param["SubAcctNo"];
+        if (array_key_exists('SubAcctNo',$param) and $param['SubAcctNo'] !== null) {
+            $this->SubAcctNo = $param['SubAcctNo'];
         }
 
-        if (array_key_exists("MemberBindAcctNo",$param) and $param["MemberBindAcctNo"] !== null) {
-            $this->MemberBindAcctNo = $param["MemberBindAcctNo"];
+        if (array_key_exists('MemberBindAcctNo',$param) and $param['MemberBindAcctNo'] !== null) {
+            $this->MemberBindAcctNo = $param['MemberBindAcctNo'];
         }
 
-        if (array_key_exists("AcctOpenBranchName",$param) and $param["AcctOpenBranchName"] !== null) {
-            $this->AcctOpenBranchName = $param["AcctOpenBranchName"];
+        if (array_key_exists('AcctOpenBranchName',$param) and $param['AcctOpenBranchName'] !== null) {
+            $this->AcctOpenBranchName = $param['AcctOpenBranchName'];
         }
 
-        if (array_key_exists("CnapsBranchId",$param) and $param["CnapsBranchId"] !== null) {
-            $this->CnapsBranchId = $param["CnapsBranchId"];
+        if (array_key_exists('CnapsBranchId',$param) and $param['CnapsBranchId'] !== null) {
+            $this->CnapsBranchId = $param['CnapsBranchId'];
         }
 
-        if (array_key_exists("EiconBankBranchId",$param) and $param["EiconBankBranchId"] !== null) {
-            $this->EiconBankBranchId = $param["EiconBankBranchId"];
+        if (array_key_exists('EiconBankBranchId',$param) and $param['EiconBankBranchId'] !== null) {
+            $this->EiconBankBranchId = $param['EiconBankBranchId'];
         }
 
-        if (array_key_exists("ReservedMsg",$param) and $param["ReservedMsg"] !== null) {
-            $this->ReservedMsg = $param["ReservedMsg"];
+        if (array_key_exists('ReservedMsg',$param) and $param['ReservedMsg'] !== null) {
+            $this->ReservedMsg = $param['ReservedMsg'];
         }
 
-        if (array_key_exists("Profile",$param) and $param["Profile"] !== null) {
-            $this->Profile = $param["Profile"];
+        if (array_key_exists('Profile',$param) and $param['Profile'] !== null) {
+            $this->Profile = $param['Profile'];
         }
     }
 }

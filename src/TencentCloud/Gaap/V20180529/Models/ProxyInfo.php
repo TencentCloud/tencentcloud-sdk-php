@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -326,111 +326,111 @@ UNKNOWN表示未知状态。
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
-            $this->ProjectId = $param["ProjectId"];
+        if (array_key_exists('ProjectId',$param) and $param['ProjectId'] !== null) {
+            $this->ProjectId = $param['ProjectId'];
         }
 
-        if (array_key_exists("ProxyName",$param) and $param["ProxyName"] !== null) {
-            $this->ProxyName = $param["ProxyName"];
+        if (array_key_exists('ProxyName',$param) and $param['ProxyName'] !== null) {
+            $this->ProxyName = $param['ProxyName'];
         }
 
-        if (array_key_exists("AccessRegion",$param) and $param["AccessRegion"] !== null) {
-            $this->AccessRegion = $param["AccessRegion"];
+        if (array_key_exists('AccessRegion',$param) and $param['AccessRegion'] !== null) {
+            $this->AccessRegion = $param['AccessRegion'];
         }
 
-        if (array_key_exists("RealServerRegion",$param) and $param["RealServerRegion"] !== null) {
-            $this->RealServerRegion = $param["RealServerRegion"];
+        if (array_key_exists('RealServerRegion',$param) and $param['RealServerRegion'] !== null) {
+            $this->RealServerRegion = $param['RealServerRegion'];
         }
 
-        if (array_key_exists("Bandwidth",$param) and $param["Bandwidth"] !== null) {
-            $this->Bandwidth = $param["Bandwidth"];
+        if (array_key_exists('Bandwidth',$param) and $param['Bandwidth'] !== null) {
+            $this->Bandwidth = $param['Bandwidth'];
         }
 
-        if (array_key_exists("Concurrent",$param) and $param["Concurrent"] !== null) {
-            $this->Concurrent = $param["Concurrent"];
+        if (array_key_exists('Concurrent',$param) and $param['Concurrent'] !== null) {
+            $this->Concurrent = $param['Concurrent'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
-            $this->Domain = $param["Domain"];
+        if (array_key_exists('Domain',$param) and $param['Domain'] !== null) {
+            $this->Domain = $param['Domain'];
         }
 
-        if (array_key_exists("IP",$param) and $param["IP"] !== null) {
-            $this->IP = $param["IP"];
+        if (array_key_exists('IP',$param) and $param['IP'] !== null) {
+            $this->IP = $param['IP'];
         }
 
-        if (array_key_exists("Version",$param) and $param["Version"] !== null) {
-            $this->Version = $param["Version"];
+        if (array_key_exists('Version',$param) and $param['Version'] !== null) {
+            $this->Version = $param['Version'];
         }
 
-        if (array_key_exists("ProxyId",$param) and $param["ProxyId"] !== null) {
-            $this->ProxyId = $param["ProxyId"];
+        if (array_key_exists('ProxyId',$param) and $param['ProxyId'] !== null) {
+            $this->ProxyId = $param['ProxyId'];
         }
 
-        if (array_key_exists("Scalarable",$param) and $param["Scalarable"] !== null) {
-            $this->Scalarable = $param["Scalarable"];
+        if (array_key_exists('Scalarable',$param) and $param['Scalarable'] !== null) {
+            $this->Scalarable = $param['Scalarable'];
         }
 
-        if (array_key_exists("SupportProtocols",$param) and $param["SupportProtocols"] !== null) {
-            $this->SupportProtocols = $param["SupportProtocols"];
+        if (array_key_exists('SupportProtocols',$param) and $param['SupportProtocols'] !== null) {
+            $this->SupportProtocols = $param['SupportProtocols'];
         }
 
-        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
-            $this->GroupId = $param["GroupId"];
+        if (array_key_exists('GroupId',$param) and $param['GroupId'] !== null) {
+            $this->GroupId = $param['GroupId'];
         }
 
-        if (array_key_exists("PolicyId",$param) and $param["PolicyId"] !== null) {
-            $this->PolicyId = $param["PolicyId"];
+        if (array_key_exists('PolicyId',$param) and $param['PolicyId'] !== null) {
+            $this->PolicyId = $param['PolicyId'];
         }
 
-        if (array_key_exists("AccessRegionInfo",$param) and $param["AccessRegionInfo"] !== null) {
+        if (array_key_exists('AccessRegionInfo',$param) and $param['AccessRegionInfo'] !== null) {
             $this->AccessRegionInfo = new RegionDetail();
-            $this->AccessRegionInfo->deserialize($param["AccessRegionInfo"]);
+            $this->AccessRegionInfo->deserialize($param['AccessRegionInfo']);
         }
 
-        if (array_key_exists("RealServerRegionInfo",$param) and $param["RealServerRegionInfo"] !== null) {
+        if (array_key_exists('RealServerRegionInfo',$param) and $param['RealServerRegionInfo'] !== null) {
             $this->RealServerRegionInfo = new RegionDetail();
-            $this->RealServerRegionInfo->deserialize($param["RealServerRegionInfo"]);
+            $this->RealServerRegionInfo->deserialize($param['RealServerRegionInfo']);
         }
 
-        if (array_key_exists("ForwardIP",$param) and $param["ForwardIP"] !== null) {
-            $this->ForwardIP = $param["ForwardIP"];
+        if (array_key_exists('ForwardIP',$param) and $param['ForwardIP'] !== null) {
+            $this->ForwardIP = $param['ForwardIP'];
         }
 
-        if (array_key_exists("TagSet",$param) and $param["TagSet"] !== null) {
+        if (array_key_exists('TagSet',$param) and $param['TagSet'] !== null) {
             $this->TagSet = [];
-            foreach ($param["TagSet"] as $key => $value){
+            foreach ($param['TagSet'] as $key => $value){
                 $obj = new TagPair();
                 $obj->deserialize($value);
                 array_push($this->TagSet, $obj);
             }
         }
 
-        if (array_key_exists("SupportSecurity",$param) and $param["SupportSecurity"] !== null) {
-            $this->SupportSecurity = $param["SupportSecurity"];
+        if (array_key_exists('SupportSecurity',$param) and $param['SupportSecurity'] !== null) {
+            $this->SupportSecurity = $param['SupportSecurity'];
         }
 
-        if (array_key_exists("BillingType",$param) and $param["BillingType"] !== null) {
-            $this->BillingType = $param["BillingType"];
+        if (array_key_exists('BillingType',$param) and $param['BillingType'] !== null) {
+            $this->BillingType = $param['BillingType'];
         }
 
-        if (array_key_exists("RelatedGlobalDomains",$param) and $param["RelatedGlobalDomains"] !== null) {
-            $this->RelatedGlobalDomains = $param["RelatedGlobalDomains"];
+        if (array_key_exists('RelatedGlobalDomains',$param) and $param['RelatedGlobalDomains'] !== null) {
+            $this->RelatedGlobalDomains = $param['RelatedGlobalDomains'];
         }
 
-        if (array_key_exists("ModifyConfigTime",$param) and $param["ModifyConfigTime"] !== null) {
-            $this->ModifyConfigTime = $param["ModifyConfigTime"];
+        if (array_key_exists('ModifyConfigTime',$param) and $param['ModifyConfigTime'] !== null) {
+            $this->ModifyConfigTime = $param['ModifyConfigTime'];
         }
     }
 }

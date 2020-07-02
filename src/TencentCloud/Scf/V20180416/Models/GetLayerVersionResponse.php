@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -134,44 +134,44 @@ Deleted 已删除
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CompatibleRuntimes",$param) and $param["CompatibleRuntimes"] !== null) {
-            $this->CompatibleRuntimes = $param["CompatibleRuntimes"];
+        if (array_key_exists('CompatibleRuntimes',$param) and $param['CompatibleRuntimes'] !== null) {
+            $this->CompatibleRuntimes = $param['CompatibleRuntimes'];
         }
 
-        if (array_key_exists("CodeSha256",$param) and $param["CodeSha256"] !== null) {
-            $this->CodeSha256 = $param["CodeSha256"];
+        if (array_key_exists('CodeSha256',$param) and $param['CodeSha256'] !== null) {
+            $this->CodeSha256 = $param['CodeSha256'];
         }
 
-        if (array_key_exists("Location",$param) and $param["Location"] !== null) {
-            $this->Location = $param["Location"];
+        if (array_key_exists('Location',$param) and $param['Location'] !== null) {
+            $this->Location = $param['Location'];
         }
 
-        if (array_key_exists("AddTime",$param) and $param["AddTime"] !== null) {
-            $this->AddTime = $param["AddTime"];
+        if (array_key_exists('AddTime',$param) and $param['AddTime'] !== null) {
+            $this->AddTime = $param['AddTime'];
         }
 
-        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
-            $this->Description = $param["Description"];
+        if (array_key_exists('Description',$param) and $param['Description'] !== null) {
+            $this->Description = $param['Description'];
         }
 
-        if (array_key_exists("LicenseInfo",$param) and $param["LicenseInfo"] !== null) {
-            $this->LicenseInfo = $param["LicenseInfo"];
+        if (array_key_exists('LicenseInfo',$param) and $param['LicenseInfo'] !== null) {
+            $this->LicenseInfo = $param['LicenseInfo'];
         }
 
-        if (array_key_exists("LayerVersion",$param) and $param["LayerVersion"] !== null) {
-            $this->LayerVersion = $param["LayerVersion"];
+        if (array_key_exists('LayerVersion',$param) and $param['LayerVersion'] !== null) {
+            $this->LayerVersion = $param['LayerVersion'];
         }
 
-        if (array_key_exists("LayerName",$param) and $param["LayerName"] !== null) {
-            $this->LayerName = $param["LayerName"];
+        if (array_key_exists('LayerName',$param) and $param['LayerName'] !== null) {
+            $this->LayerName = $param['LayerName'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

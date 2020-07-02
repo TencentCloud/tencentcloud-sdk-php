@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -214,58 +214,58 @@ Failed: 失败
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CreationTime",$param) and $param["CreationTime"] !== null) {
-            $this->CreationTime = $param["CreationTime"];
+        if (array_key_exists('CreationTime',$param) and $param['CreationTime'] !== null) {
+            $this->CreationTime = $param['CreationTime'];
         }
 
-        if (array_key_exists("LastModifiedTime",$param) and $param["LastModifiedTime"] !== null) {
-            $this->LastModifiedTime = $param["LastModifiedTime"];
+        if (array_key_exists('LastModifiedTime',$param) and $param['LastModifiedTime'] !== null) {
+            $this->LastModifiedTime = $param['LastModifiedTime'];
         }
 
-        if (array_key_exists("NotebookInstanceName",$param) and $param["NotebookInstanceName"] !== null) {
-            $this->NotebookInstanceName = $param["NotebookInstanceName"];
+        if (array_key_exists('NotebookInstanceName',$param) and $param['NotebookInstanceName'] !== null) {
+            $this->NotebookInstanceName = $param['NotebookInstanceName'];
         }
 
-        if (array_key_exists("NotebookInstanceStatus",$param) and $param["NotebookInstanceStatus"] !== null) {
-            $this->NotebookInstanceStatus = $param["NotebookInstanceStatus"];
+        if (array_key_exists('NotebookInstanceStatus',$param) and $param['NotebookInstanceStatus'] !== null) {
+            $this->NotebookInstanceStatus = $param['NotebookInstanceStatus'];
         }
 
-        if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
-            $this->InstanceType = $param["InstanceType"];
+        if (array_key_exists('InstanceType',$param) and $param['InstanceType'] !== null) {
+            $this->InstanceType = $param['InstanceType'];
         }
 
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("StartupTime",$param) and $param["StartupTime"] !== null) {
-            $this->StartupTime = $param["StartupTime"];
+        if (array_key_exists('StartupTime',$param) and $param['StartupTime'] !== null) {
+            $this->StartupTime = $param['StartupTime'];
         }
 
-        if (array_key_exists("Deadline",$param) and $param["Deadline"] !== null) {
-            $this->Deadline = $param["Deadline"];
+        if (array_key_exists('Deadline',$param) and $param['Deadline'] !== null) {
+            $this->Deadline = $param['Deadline'];
         }
 
-        if (array_key_exists("StoppingCondition",$param) and $param["StoppingCondition"] !== null) {
+        if (array_key_exists('StoppingCondition',$param) and $param['StoppingCondition'] !== null) {
             $this->StoppingCondition = new StoppingCondition();
-            $this->StoppingCondition->deserialize($param["StoppingCondition"]);
+            $this->StoppingCondition->deserialize($param['StoppingCondition']);
         }
 
-        if (array_key_exists("Prepay",$param) and $param["Prepay"] !== null) {
-            $this->Prepay = $param["Prepay"];
+        if (array_key_exists('Prepay',$param) and $param['Prepay'] !== null) {
+            $this->Prepay = $param['Prepay'];
         }
 
-        if (array_key_exists("BillingLabel",$param) and $param["BillingLabel"] !== null) {
+        if (array_key_exists('BillingLabel',$param) and $param['BillingLabel'] !== null) {
             $this->BillingLabel = new BillingLabel();
-            $this->BillingLabel->deserialize($param["BillingLabel"]);
+            $this->BillingLabel->deserialize($param['BillingLabel']);
         }
 
-        if (array_key_exists("RuntimeInSeconds",$param) and $param["RuntimeInSeconds"] !== null) {
-            $this->RuntimeInSeconds = $param["RuntimeInSeconds"];
+        if (array_key_exists('RuntimeInSeconds',$param) and $param['RuntimeInSeconds'] !== null) {
+            $this->RuntimeInSeconds = $param['RuntimeInSeconds'];
         }
 
-        if (array_key_exists("RemainTimeInSeconds",$param) and $param["RemainTimeInSeconds"] !== null) {
-            $this->RemainTimeInSeconds = $param["RemainTimeInSeconds"];
+        if (array_key_exists('RemainTimeInSeconds',$param) and $param['RemainTimeInSeconds'] !== null) {
+            $this->RemainTimeInSeconds = $param['RemainTimeInSeconds'];
         }
     }
 }

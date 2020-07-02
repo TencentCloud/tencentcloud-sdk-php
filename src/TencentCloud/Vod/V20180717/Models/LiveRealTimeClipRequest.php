@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -118,44 +118,44 @@ class LiveRealTimeClipRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("StreamId",$param) and $param["StreamId"] !== null) {
-            $this->StreamId = $param["StreamId"];
+        if (array_key_exists('StreamId',$param) and $param['StreamId'] !== null) {
+            $this->StreamId = $param['StreamId'];
         }
 
-        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
-            $this->StartTime = $param["StartTime"];
+        if (array_key_exists('StartTime',$param) and $param['StartTime'] !== null) {
+            $this->StartTime = $param['StartTime'];
         }
 
-        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
-            $this->EndTime = $param["EndTime"];
+        if (array_key_exists('EndTime',$param) and $param['EndTime'] !== null) {
+            $this->EndTime = $param['EndTime'];
         }
 
-        if (array_key_exists("IsPersistence",$param) and $param["IsPersistence"] !== null) {
-            $this->IsPersistence = $param["IsPersistence"];
+        if (array_key_exists('IsPersistence',$param) and $param['IsPersistence'] !== null) {
+            $this->IsPersistence = $param['IsPersistence'];
         }
 
-        if (array_key_exists("ExpireTime",$param) and $param["ExpireTime"] !== null) {
-            $this->ExpireTime = $param["ExpireTime"];
+        if (array_key_exists('ExpireTime',$param) and $param['ExpireTime'] !== null) {
+            $this->ExpireTime = $param['ExpireTime'];
         }
 
-        if (array_key_exists("Procedure",$param) and $param["Procedure"] !== null) {
-            $this->Procedure = $param["Procedure"];
+        if (array_key_exists('Procedure',$param) and $param['Procedure'] !== null) {
+            $this->Procedure = $param['Procedure'];
         }
 
-        if (array_key_exists("MetaDataRequired",$param) and $param["MetaDataRequired"] !== null) {
-            $this->MetaDataRequired = $param["MetaDataRequired"];
+        if (array_key_exists('MetaDataRequired',$param) and $param['MetaDataRequired'] !== null) {
+            $this->MetaDataRequired = $param['MetaDataRequired'];
         }
 
-        if (array_key_exists("Host",$param) and $param["Host"] !== null) {
-            $this->Host = $param["Host"];
+        if (array_key_exists('Host',$param) and $param['Host'] !== null) {
+            $this->Host = $param['Host'];
         }
 
-        if (array_key_exists("ExtInfo",$param) and $param["ExtInfo"] !== null) {
-            $this->ExtInfo = $param["ExtInfo"];
+        if (array_key_exists('ExtInfo',$param) and $param['ExtInfo'] !== null) {
+            $this->ExtInfo = $param['ExtInfo'];
         }
 
-        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
-            $this->SubAppId = $param["SubAppId"];
+        if (array_key_exists('SubAppId',$param) and $param['SubAppId'] !== null) {
+            $this->SubAppId = $param['SubAppId'];
         }
     }
 }

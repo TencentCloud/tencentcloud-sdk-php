@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -46,8 +46,8 @@ class DescribeIp6TranslatorQuotaRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Ip6TranslatorIds",$param) and $param["Ip6TranslatorIds"] !== null) {
-            $this->Ip6TranslatorIds = $param["Ip6TranslatorIds"];
+        if (array_key_exists('Ip6TranslatorIds',$param) and $param['Ip6TranslatorIds'] !== null) {
+            $this->Ip6TranslatorIds = $param['Ip6TranslatorIds'];
         }
     }
 }

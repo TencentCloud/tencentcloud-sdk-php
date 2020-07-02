@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -94,33 +94,33 @@ class ApplyUploadResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("StorageBucket",$param) and $param["StorageBucket"] !== null) {
-            $this->StorageBucket = $param["StorageBucket"];
+        if (array_key_exists('StorageBucket',$param) and $param['StorageBucket'] !== null) {
+            $this->StorageBucket = $param['StorageBucket'];
         }
 
-        if (array_key_exists("StorageRegion",$param) and $param["StorageRegion"] !== null) {
-            $this->StorageRegion = $param["StorageRegion"];
+        if (array_key_exists('StorageRegion',$param) and $param['StorageRegion'] !== null) {
+            $this->StorageRegion = $param['StorageRegion'];
         }
 
-        if (array_key_exists("VodSessionKey",$param) and $param["VodSessionKey"] !== null) {
-            $this->VodSessionKey = $param["VodSessionKey"];
+        if (array_key_exists('VodSessionKey',$param) and $param['VodSessionKey'] !== null) {
+            $this->VodSessionKey = $param['VodSessionKey'];
         }
 
-        if (array_key_exists("MediaStoragePath",$param) and $param["MediaStoragePath"] !== null) {
-            $this->MediaStoragePath = $param["MediaStoragePath"];
+        if (array_key_exists('MediaStoragePath',$param) and $param['MediaStoragePath'] !== null) {
+            $this->MediaStoragePath = $param['MediaStoragePath'];
         }
 
-        if (array_key_exists("CoverStoragePath",$param) and $param["CoverStoragePath"] !== null) {
-            $this->CoverStoragePath = $param["CoverStoragePath"];
+        if (array_key_exists('CoverStoragePath',$param) and $param['CoverStoragePath'] !== null) {
+            $this->CoverStoragePath = $param['CoverStoragePath'];
         }
 
-        if (array_key_exists("TempCertificate",$param) and $param["TempCertificate"] !== null) {
+        if (array_key_exists('TempCertificate',$param) and $param['TempCertificate'] !== null) {
             $this->TempCertificate = new TempCertificate();
-            $this->TempCertificate->deserialize($param["TempCertificate"]);
+            $this->TempCertificate->deserialize($param['TempCertificate']);
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

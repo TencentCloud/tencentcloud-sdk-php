@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProjectId(integer $ProjectId) 设置集群内新增资源所属项目ID。
  * @method array getTagSpecification() 获取标签描述列表。通过指定该参数可以同时绑定标签到相应的资源实例，当前仅支持绑定标签到集群实例。
  * @method void setTagSpecification(array $TagSpecification) 设置标签描述列表。通过指定该参数可以同时绑定标签到相应的资源实例，当前仅支持绑定标签到集群实例。
- * @method string getOsCustomizeType() 获取容器的镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值)
- * @method void setOsCustomizeType(string $OsCustomizeType) 设置容器的镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值)
+ * @method string getOsCustomizeType() 获取容器的镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),'GENERAL'(普通版本，默认值)
+ * @method void setOsCustomizeType(string $OsCustomizeType) 设置容器的镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),'GENERAL'(普通版本，默认值)
  * @method boolean getNeedWorkSecurityGroup() 获取是否开启节点的默认安全组(默认: 否，Aphla特性)
  * @method void setNeedWorkSecurityGroup(boolean $NeedWorkSecurityGroup) 设置是否开启节点的默认安全组(默认: 否，Aphla特性)
  */
@@ -77,7 +77,7 @@ class ClusterBasicSettings extends AbstractModel
     public $TagSpecification;
 
     /**
-     * @var string 容器的镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值)
+     * @var string 容器的镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),'GENERAL'(普通版本，默认值)
      */
     public $OsCustomizeType;
 
@@ -94,7 +94,7 @@ class ClusterBasicSettings extends AbstractModel
      * @param string $VpcId 私有网络ID，形如vpc-xxx。创建托管空集群时必传。
      * @param integer $ProjectId 集群内新增资源所属项目ID。
      * @param array $TagSpecification 标签描述列表。通过指定该参数可以同时绑定标签到相应的资源实例，当前仅支持绑定标签到集群实例。
-     * @param string $OsCustomizeType 容器的镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值)
+     * @param string $OsCustomizeType 容器的镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),'GENERAL'(普通版本，默认值)
      * @param boolean $NeedWorkSecurityGroup 是否开启节点的默认安全组(默认: 否，Aphla特性)
      */
     function __construct()
@@ -110,45 +110,45 @@ class ClusterBasicSettings extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ClusterOs",$param) and $param["ClusterOs"] !== null) {
-            $this->ClusterOs = $param["ClusterOs"];
+        if (array_key_exists('ClusterOs',$param) and $param['ClusterOs'] !== null) {
+            $this->ClusterOs = $param['ClusterOs'];
         }
 
-        if (array_key_exists("ClusterVersion",$param) and $param["ClusterVersion"] !== null) {
-            $this->ClusterVersion = $param["ClusterVersion"];
+        if (array_key_exists('ClusterVersion',$param) and $param['ClusterVersion'] !== null) {
+            $this->ClusterVersion = $param['ClusterVersion'];
         }
 
-        if (array_key_exists("ClusterName",$param) and $param["ClusterName"] !== null) {
-            $this->ClusterName = $param["ClusterName"];
+        if (array_key_exists('ClusterName',$param) and $param['ClusterName'] !== null) {
+            $this->ClusterName = $param['ClusterName'];
         }
 
-        if (array_key_exists("ClusterDescription",$param) and $param["ClusterDescription"] !== null) {
-            $this->ClusterDescription = $param["ClusterDescription"];
+        if (array_key_exists('ClusterDescription',$param) and $param['ClusterDescription'] !== null) {
+            $this->ClusterDescription = $param['ClusterDescription'];
         }
 
-        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
-            $this->VpcId = $param["VpcId"];
+        if (array_key_exists('VpcId',$param) and $param['VpcId'] !== null) {
+            $this->VpcId = $param['VpcId'];
         }
 
-        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
-            $this->ProjectId = $param["ProjectId"];
+        if (array_key_exists('ProjectId',$param) and $param['ProjectId'] !== null) {
+            $this->ProjectId = $param['ProjectId'];
         }
 
-        if (array_key_exists("TagSpecification",$param) and $param["TagSpecification"] !== null) {
+        if (array_key_exists('TagSpecification',$param) and $param['TagSpecification'] !== null) {
             $this->TagSpecification = [];
-            foreach ($param["TagSpecification"] as $key => $value){
+            foreach ($param['TagSpecification'] as $key => $value){
                 $obj = new TagSpecification();
                 $obj->deserialize($value);
                 array_push($this->TagSpecification, $obj);
             }
         }
 
-        if (array_key_exists("OsCustomizeType",$param) and $param["OsCustomizeType"] !== null) {
-            $this->OsCustomizeType = $param["OsCustomizeType"];
+        if (array_key_exists('OsCustomizeType',$param) and $param['OsCustomizeType'] !== null) {
+            $this->OsCustomizeType = $param['OsCustomizeType'];
         }
 
-        if (array_key_exists("NeedWorkSecurityGroup",$param) and $param["NeedWorkSecurityGroup"] !== null) {
-            $this->NeedWorkSecurityGroup = $param["NeedWorkSecurityGroup"];
+        if (array_key_exists('NeedWorkSecurityGroup',$param) and $param['NeedWorkSecurityGroup'] !== null) {
+            $this->NeedWorkSecurityGroup = $param['NeedWorkSecurityGroup'];
         }
     }
 }

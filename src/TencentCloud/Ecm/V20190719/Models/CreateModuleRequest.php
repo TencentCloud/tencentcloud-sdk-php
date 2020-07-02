@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -86,28 +86,28 @@ class CreateModuleRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ModuleName",$param) and $param["ModuleName"] !== null) {
-            $this->ModuleName = $param["ModuleName"];
+        if (array_key_exists('ModuleName',$param) and $param['ModuleName'] !== null) {
+            $this->ModuleName = $param['ModuleName'];
         }
 
-        if (array_key_exists("DefaultBandWidth",$param) and $param["DefaultBandWidth"] !== null) {
-            $this->DefaultBandWidth = $param["DefaultBandWidth"];
+        if (array_key_exists('DefaultBandWidth',$param) and $param['DefaultBandWidth'] !== null) {
+            $this->DefaultBandWidth = $param['DefaultBandWidth'];
         }
 
-        if (array_key_exists("DefaultImageId",$param) and $param["DefaultImageId"] !== null) {
-            $this->DefaultImageId = $param["DefaultImageId"];
+        if (array_key_exists('DefaultImageId',$param) and $param['DefaultImageId'] !== null) {
+            $this->DefaultImageId = $param['DefaultImageId'];
         }
 
-        if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
-            $this->InstanceType = $param["InstanceType"];
+        if (array_key_exists('InstanceType',$param) and $param['InstanceType'] !== null) {
+            $this->InstanceType = $param['InstanceType'];
         }
 
-        if (array_key_exists("DefaultSystemDiskSize",$param) and $param["DefaultSystemDiskSize"] !== null) {
-            $this->DefaultSystemDiskSize = $param["DefaultSystemDiskSize"];
+        if (array_key_exists('DefaultSystemDiskSize',$param) and $param['DefaultSystemDiskSize'] !== null) {
+            $this->DefaultSystemDiskSize = $param['DefaultSystemDiskSize'];
         }
 
-        if (array_key_exists("DefaultDataDiskSize",$param) and $param["DefaultDataDiskSize"] !== null) {
-            $this->DefaultDataDiskSize = $param["DefaultDataDiskSize"];
+        if (array_key_exists('DefaultDataDiskSize',$param) and $param['DefaultDataDiskSize'] !== null) {
+            $this->DefaultDataDiskSize = $param['DefaultDataDiskSize'];
         }
     }
 }

@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -82,24 +82,24 @@ class MigrateStepDetailInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("StepNo",$param) and $param["StepNo"] !== null) {
-            $this->StepNo = $param["StepNo"];
+        if (array_key_exists('StepNo',$param) and $param['StepNo'] !== null) {
+            $this->StepNo = $param['StepNo'];
         }
 
-        if (array_key_exists("StepName",$param) and $param["StepName"] !== null) {
-            $this->StepName = $param["StepName"];
+        if (array_key_exists('StepName',$param) and $param['StepName'] !== null) {
+            $this->StepName = $param['StepName'];
         }
 
-        if (array_key_exists("StepId",$param) and $param["StepId"] !== null) {
-            $this->StepId = $param["StepId"];
+        if (array_key_exists('StepId',$param) and $param['StepId'] !== null) {
+            $this->StepId = $param['StepId'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
-            $this->StartTime = $param["StartTime"];
+        if (array_key_exists('StartTime',$param) and $param['StartTime'] !== null) {
+            $this->StartTime = $param['StartTime'];
         }
     }
 }

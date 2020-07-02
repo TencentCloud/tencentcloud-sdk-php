@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -62,21 +62,21 @@ class DescribeSecurityRulesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("SecurityRuleSet",$param) and $param["SecurityRuleSet"] !== null) {
+        if (array_key_exists('SecurityRuleSet',$param) and $param['SecurityRuleSet'] !== null) {
             $this->SecurityRuleSet = [];
-            foreach ($param["SecurityRuleSet"] as $key => $value){
+            foreach ($param['SecurityRuleSet'] as $key => $value){
                 $obj = new SecurityPolicyRuleOut();
                 $obj->deserialize($value);
                 array_push($this->SecurityRuleSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

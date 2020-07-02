@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -186,76 +186,76 @@ class SlowLogData extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CheckSum",$param) and $param["CheckSum"] !== null) {
-            $this->CheckSum = $param["CheckSum"];
+        if (array_key_exists('CheckSum',$param) and $param['CheckSum'] !== null) {
+            $this->CheckSum = $param['CheckSum'];
         }
 
-        if (array_key_exists("Db",$param) and $param["Db"] !== null) {
-            $this->Db = $param["Db"];
+        if (array_key_exists('Db',$param) and $param['Db'] !== null) {
+            $this->Db = $param['Db'];
         }
 
-        if (array_key_exists("FingerPrint",$param) and $param["FingerPrint"] !== null) {
-            $this->FingerPrint = $param["FingerPrint"];
+        if (array_key_exists('FingerPrint',$param) and $param['FingerPrint'] !== null) {
+            $this->FingerPrint = $param['FingerPrint'];
         }
 
-        if (array_key_exists("LockTimeAvg",$param) and $param["LockTimeAvg"] !== null) {
-            $this->LockTimeAvg = $param["LockTimeAvg"];
+        if (array_key_exists('LockTimeAvg',$param) and $param['LockTimeAvg'] !== null) {
+            $this->LockTimeAvg = $param['LockTimeAvg'];
         }
 
-        if (array_key_exists("LockTimeMax",$param) and $param["LockTimeMax"] !== null) {
-            $this->LockTimeMax = $param["LockTimeMax"];
+        if (array_key_exists('LockTimeMax',$param) and $param['LockTimeMax'] !== null) {
+            $this->LockTimeMax = $param['LockTimeMax'];
         }
 
-        if (array_key_exists("LockTimeMin",$param) and $param["LockTimeMin"] !== null) {
-            $this->LockTimeMin = $param["LockTimeMin"];
+        if (array_key_exists('LockTimeMin',$param) and $param['LockTimeMin'] !== null) {
+            $this->LockTimeMin = $param['LockTimeMin'];
         }
 
-        if (array_key_exists("LockTimeSum",$param) and $param["LockTimeSum"] !== null) {
-            $this->LockTimeSum = $param["LockTimeSum"];
+        if (array_key_exists('LockTimeSum',$param) and $param['LockTimeSum'] !== null) {
+            $this->LockTimeSum = $param['LockTimeSum'];
         }
 
-        if (array_key_exists("QueryCount",$param) and $param["QueryCount"] !== null) {
-            $this->QueryCount = $param["QueryCount"];
+        if (array_key_exists('QueryCount',$param) and $param['QueryCount'] !== null) {
+            $this->QueryCount = $param['QueryCount'];
         }
 
-        if (array_key_exists("QueryTimeAvg",$param) and $param["QueryTimeAvg"] !== null) {
-            $this->QueryTimeAvg = $param["QueryTimeAvg"];
+        if (array_key_exists('QueryTimeAvg',$param) and $param['QueryTimeAvg'] !== null) {
+            $this->QueryTimeAvg = $param['QueryTimeAvg'];
         }
 
-        if (array_key_exists("QueryTimeMax",$param) and $param["QueryTimeMax"] !== null) {
-            $this->QueryTimeMax = $param["QueryTimeMax"];
+        if (array_key_exists('QueryTimeMax',$param) and $param['QueryTimeMax'] !== null) {
+            $this->QueryTimeMax = $param['QueryTimeMax'];
         }
 
-        if (array_key_exists("QueryTimeMin",$param) and $param["QueryTimeMin"] !== null) {
-            $this->QueryTimeMin = $param["QueryTimeMin"];
+        if (array_key_exists('QueryTimeMin',$param) and $param['QueryTimeMin'] !== null) {
+            $this->QueryTimeMin = $param['QueryTimeMin'];
         }
 
-        if (array_key_exists("QueryTimeSum",$param) and $param["QueryTimeSum"] !== null) {
-            $this->QueryTimeSum = $param["QueryTimeSum"];
+        if (array_key_exists('QueryTimeSum',$param) and $param['QueryTimeSum'] !== null) {
+            $this->QueryTimeSum = $param['QueryTimeSum'];
         }
 
-        if (array_key_exists("RowsExaminedSum",$param) and $param["RowsExaminedSum"] !== null) {
-            $this->RowsExaminedSum = $param["RowsExaminedSum"];
+        if (array_key_exists('RowsExaminedSum',$param) and $param['RowsExaminedSum'] !== null) {
+            $this->RowsExaminedSum = $param['RowsExaminedSum'];
         }
 
-        if (array_key_exists("RowsSentSum",$param) and $param["RowsSentSum"] !== null) {
-            $this->RowsSentSum = $param["RowsSentSum"];
+        if (array_key_exists('RowsSentSum',$param) and $param['RowsSentSum'] !== null) {
+            $this->RowsSentSum = $param['RowsSentSum'];
         }
 
-        if (array_key_exists("TsMax",$param) and $param["TsMax"] !== null) {
-            $this->TsMax = $param["TsMax"];
+        if (array_key_exists('TsMax',$param) and $param['TsMax'] !== null) {
+            $this->TsMax = $param['TsMax'];
         }
 
-        if (array_key_exists("TsMin",$param) and $param["TsMin"] !== null) {
-            $this->TsMin = $param["TsMin"];
+        if (array_key_exists('TsMin',$param) and $param['TsMin'] !== null) {
+            $this->TsMin = $param['TsMin'];
         }
 
-        if (array_key_exists("User",$param) and $param["User"] !== null) {
-            $this->User = $param["User"];
+        if (array_key_exists('User',$param) and $param['User'] !== null) {
+            $this->User = $param['User'];
         }
 
-        if (array_key_exists("ExampleSql",$param) and $param["ExampleSql"] !== null) {
-            $this->ExampleSql = $param["ExampleSql"];
+        if (array_key_exists('ExampleSql',$param) and $param['ExampleSql'] !== null) {
+            $this->ExampleSql = $param['ExampleSql'];
         }
     }
 }

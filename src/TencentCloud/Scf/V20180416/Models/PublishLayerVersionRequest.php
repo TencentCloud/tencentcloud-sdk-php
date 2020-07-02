@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -78,25 +78,25 @@ class PublishLayerVersionRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LayerName",$param) and $param["LayerName"] !== null) {
-            $this->LayerName = $param["LayerName"];
+        if (array_key_exists('LayerName',$param) and $param['LayerName'] !== null) {
+            $this->LayerName = $param['LayerName'];
         }
 
-        if (array_key_exists("CompatibleRuntimes",$param) and $param["CompatibleRuntimes"] !== null) {
-            $this->CompatibleRuntimes = $param["CompatibleRuntimes"];
+        if (array_key_exists('CompatibleRuntimes',$param) and $param['CompatibleRuntimes'] !== null) {
+            $this->CompatibleRuntimes = $param['CompatibleRuntimes'];
         }
 
-        if (array_key_exists("Content",$param) and $param["Content"] !== null) {
+        if (array_key_exists('Content',$param) and $param['Content'] !== null) {
             $this->Content = new Code();
-            $this->Content->deserialize($param["Content"]);
+            $this->Content->deserialize($param['Content']);
         }
 
-        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
-            $this->Description = $param["Description"];
+        if (array_key_exists('Description',$param) and $param['Description'] !== null) {
+            $this->Description = $param['Description'];
         }
 
-        if (array_key_exists("LicenseInfo",$param) and $param["LicenseInfo"] !== null) {
-            $this->LicenseInfo = $param["LicenseInfo"];
+        if (array_key_exists('LicenseInfo',$param) and $param['LicenseInfo'] !== null) {
+            $this->LicenseInfo = $param['LicenseInfo'];
         }
     }
 }

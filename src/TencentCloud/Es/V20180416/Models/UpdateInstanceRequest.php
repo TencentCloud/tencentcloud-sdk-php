@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -222,92 +222,92 @@ class UpdateInstanceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("InstanceName",$param) and $param["InstanceName"] !== null) {
-            $this->InstanceName = $param["InstanceName"];
+        if (array_key_exists('InstanceName',$param) and $param['InstanceName'] !== null) {
+            $this->InstanceName = $param['InstanceName'];
         }
 
-        if (array_key_exists("NodeNum",$param) and $param["NodeNum"] !== null) {
-            $this->NodeNum = $param["NodeNum"];
+        if (array_key_exists('NodeNum',$param) and $param['NodeNum'] !== null) {
+            $this->NodeNum = $param['NodeNum'];
         }
 
-        if (array_key_exists("EsConfig",$param) and $param["EsConfig"] !== null) {
-            $this->EsConfig = $param["EsConfig"];
+        if (array_key_exists('EsConfig',$param) and $param['EsConfig'] !== null) {
+            $this->EsConfig = $param['EsConfig'];
         }
 
-        if (array_key_exists("Password",$param) and $param["Password"] !== null) {
-            $this->Password = $param["Password"];
+        if (array_key_exists('Password',$param) and $param['Password'] !== null) {
+            $this->Password = $param['Password'];
         }
 
-        if (array_key_exists("EsAcl",$param) and $param["EsAcl"] !== null) {
+        if (array_key_exists('EsAcl',$param) and $param['EsAcl'] !== null) {
             $this->EsAcl = new EsAcl();
-            $this->EsAcl->deserialize($param["EsAcl"]);
+            $this->EsAcl->deserialize($param['EsAcl']);
         }
 
-        if (array_key_exists("DiskSize",$param) and $param["DiskSize"] !== null) {
-            $this->DiskSize = $param["DiskSize"];
+        if (array_key_exists('DiskSize',$param) and $param['DiskSize'] !== null) {
+            $this->DiskSize = $param['DiskSize'];
         }
 
-        if (array_key_exists("NodeType",$param) and $param["NodeType"] !== null) {
-            $this->NodeType = $param["NodeType"];
+        if (array_key_exists('NodeType',$param) and $param['NodeType'] !== null) {
+            $this->NodeType = $param['NodeType'];
         }
 
-        if (array_key_exists("MasterNodeNum",$param) and $param["MasterNodeNum"] !== null) {
-            $this->MasterNodeNum = $param["MasterNodeNum"];
+        if (array_key_exists('MasterNodeNum',$param) and $param['MasterNodeNum'] !== null) {
+            $this->MasterNodeNum = $param['MasterNodeNum'];
         }
 
-        if (array_key_exists("MasterNodeType",$param) and $param["MasterNodeType"] !== null) {
-            $this->MasterNodeType = $param["MasterNodeType"];
+        if (array_key_exists('MasterNodeType',$param) and $param['MasterNodeType'] !== null) {
+            $this->MasterNodeType = $param['MasterNodeType'];
         }
 
-        if (array_key_exists("MasterNodeDiskSize",$param) and $param["MasterNodeDiskSize"] !== null) {
-            $this->MasterNodeDiskSize = $param["MasterNodeDiskSize"];
+        if (array_key_exists('MasterNodeDiskSize',$param) and $param['MasterNodeDiskSize'] !== null) {
+            $this->MasterNodeDiskSize = $param['MasterNodeDiskSize'];
         }
 
-        if (array_key_exists("ForceRestart",$param) and $param["ForceRestart"] !== null) {
-            $this->ForceRestart = $param["ForceRestart"];
+        if (array_key_exists('ForceRestart',$param) and $param['ForceRestart'] !== null) {
+            $this->ForceRestart = $param['ForceRestart'];
         }
 
-        if (array_key_exists("CosBackup",$param) and $param["CosBackup"] !== null) {
+        if (array_key_exists('CosBackup',$param) and $param['CosBackup'] !== null) {
             $this->CosBackup = new CosBackup();
-            $this->CosBackup->deserialize($param["CosBackup"]);
+            $this->CosBackup->deserialize($param['CosBackup']);
         }
 
-        if (array_key_exists("NodeInfoList",$param) and $param["NodeInfoList"] !== null) {
+        if (array_key_exists('NodeInfoList',$param) and $param['NodeInfoList'] !== null) {
             $this->NodeInfoList = [];
-            foreach ($param["NodeInfoList"] as $key => $value){
+            foreach ($param['NodeInfoList'] as $key => $value){
                 $obj = new NodeInfo();
                 $obj->deserialize($value);
                 array_push($this->NodeInfoList, $obj);
             }
         }
 
-        if (array_key_exists("PublicAccess",$param) and $param["PublicAccess"] !== null) {
-            $this->PublicAccess = $param["PublicAccess"];
+        if (array_key_exists('PublicAccess',$param) and $param['PublicAccess'] !== null) {
+            $this->PublicAccess = $param['PublicAccess'];
         }
 
-        if (array_key_exists("EsPublicAcl",$param) and $param["EsPublicAcl"] !== null) {
+        if (array_key_exists('EsPublicAcl',$param) and $param['EsPublicAcl'] !== null) {
             $this->EsPublicAcl = new EsPublicAcl();
-            $this->EsPublicAcl->deserialize($param["EsPublicAcl"]);
+            $this->EsPublicAcl->deserialize($param['EsPublicAcl']);
         }
 
-        if (array_key_exists("KibanaPublicAccess",$param) and $param["KibanaPublicAccess"] !== null) {
-            $this->KibanaPublicAccess = $param["KibanaPublicAccess"];
+        if (array_key_exists('KibanaPublicAccess',$param) and $param['KibanaPublicAccess'] !== null) {
+            $this->KibanaPublicAccess = $param['KibanaPublicAccess'];
         }
 
-        if (array_key_exists("KibanaPrivateAccess",$param) and $param["KibanaPrivateAccess"] !== null) {
-            $this->KibanaPrivateAccess = $param["KibanaPrivateAccess"];
+        if (array_key_exists('KibanaPrivateAccess',$param) and $param['KibanaPrivateAccess'] !== null) {
+            $this->KibanaPrivateAccess = $param['KibanaPrivateAccess'];
         }
 
-        if (array_key_exists("BasicSecurityType",$param) and $param["BasicSecurityType"] !== null) {
-            $this->BasicSecurityType = $param["BasicSecurityType"];
+        if (array_key_exists('BasicSecurityType',$param) and $param['BasicSecurityType'] !== null) {
+            $this->BasicSecurityType = $param['BasicSecurityType'];
         }
 
-        if (array_key_exists("KibanaPrivatePort",$param) and $param["KibanaPrivatePort"] !== null) {
-            $this->KibanaPrivatePort = $param["KibanaPrivatePort"];
+        if (array_key_exists('KibanaPrivatePort',$param) and $param['KibanaPrivatePort'] !== null) {
+            $this->KibanaPrivatePort = $param['KibanaPrivatePort'];
         }
     }
 }

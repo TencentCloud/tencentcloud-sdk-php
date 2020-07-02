@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -78,24 +78,24 @@ class PGroupInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PGroupId",$param) and $param["PGroupId"] !== null) {
-            $this->PGroupId = $param["PGroupId"];
+        if (array_key_exists('PGroupId',$param) and $param['PGroupId'] !== null) {
+            $this->PGroupId = $param['PGroupId'];
         }
 
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("DescInfo",$param) and $param["DescInfo"] !== null) {
-            $this->DescInfo = $param["DescInfo"];
+        if (array_key_exists('DescInfo',$param) and $param['DescInfo'] !== null) {
+            $this->DescInfo = $param['DescInfo'];
         }
 
-        if (array_key_exists("CDate",$param) and $param["CDate"] !== null) {
-            $this->CDate = $param["CDate"];
+        if (array_key_exists('CDate',$param) and $param['CDate'] !== null) {
+            $this->CDate = $param['CDate'];
         }
 
-        if (array_key_exists("BindCfsNum",$param) and $param["BindCfsNum"] !== null) {
-            $this->BindCfsNum = $param["BindCfsNum"];
+        if (array_key_exists('BindCfsNum',$param) and $param['BindCfsNum'] !== null) {
+            $this->BindCfsNum = $param['BindCfsNum'];
         }
     }
 }

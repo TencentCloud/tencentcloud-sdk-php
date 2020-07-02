@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -70,20 +70,20 @@ class ExpressRatioStatistic extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Count",$param) and $param["Count"] !== null) {
-            $this->Count = $param["Count"];
+        if (array_key_exists('Count',$param) and $param['Count'] !== null) {
+            $this->Count = $param['Count'];
         }
 
-        if (array_key_exists("Express",$param) and $param["Express"] !== null) {
-            $this->Express = $param["Express"];
+        if (array_key_exists('Express',$param) and $param['Express'] !== null) {
+            $this->Express = $param['Express'];
         }
 
-        if (array_key_exists("Ratio",$param) and $param["Ratio"] !== null) {
-            $this->Ratio = $param["Ratio"];
+        if (array_key_exists('Ratio',$param) and $param['Ratio'] !== null) {
+            $this->Ratio = $param['Ratio'];
         }
 
-        if (array_key_exists("RatioUseDuration",$param) and $param["RatioUseDuration"] !== null) {
-            $this->RatioUseDuration = $param["RatioUseDuration"];
+        if (array_key_exists('RatioUseDuration',$param) and $param['RatioUseDuration'] !== null) {
+            $this->RatioUseDuration = $param['RatioUseDuration'];
         }
     }
 }

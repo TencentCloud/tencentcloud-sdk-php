@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -86,16 +86,16 @@ class Similar extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("EvilType",$param) and $param["EvilType"] !== null) {
-            $this->EvilType = $param["EvilType"];
+        if (array_key_exists('EvilType',$param) and $param['EvilType'] !== null) {
+            $this->EvilType = $param['EvilType'];
         }
 
-        if (array_key_exists("HitFlag",$param) and $param["HitFlag"] !== null) {
-            $this->HitFlag = $param["HitFlag"];
+        if (array_key_exists('HitFlag',$param) and $param['HitFlag'] !== null) {
+            $this->HitFlag = $param['HitFlag'];
         }
 
-        if (array_key_exists("SeedUrl",$param) and $param["SeedUrl"] !== null) {
-            $this->SeedUrl = $param["SeedUrl"];
+        if (array_key_exists('SeedUrl',$param) and $param['SeedUrl'] !== null) {
+            $this->SeedUrl = $param['SeedUrl'];
         }
     }
 }

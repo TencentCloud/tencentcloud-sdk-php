@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -182,76 +182,76 @@ class PrivilegeEscalationProcess extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
-            $this->Id = $param["Id"];
+        if (array_key_exists('Id',$param) and $param['Id'] !== null) {
+            $this->Id = $param['Id'];
         }
 
-        if (array_key_exists("Uuid",$param) and $param["Uuid"] !== null) {
-            $this->Uuid = $param["Uuid"];
+        if (array_key_exists('Uuid',$param) and $param['Uuid'] !== null) {
+            $this->Uuid = $param['Uuid'];
         }
 
-        if (array_key_exists("Quuid",$param) and $param["Quuid"] !== null) {
-            $this->Quuid = $param["Quuid"];
+        if (array_key_exists('Quuid',$param) and $param['Quuid'] !== null) {
+            $this->Quuid = $param['Quuid'];
         }
 
-        if (array_key_exists("Hostip",$param) and $param["Hostip"] !== null) {
-            $this->Hostip = $param["Hostip"];
+        if (array_key_exists('Hostip',$param) and $param['Hostip'] !== null) {
+            $this->Hostip = $param['Hostip'];
         }
 
-        if (array_key_exists("ProcessName",$param) and $param["ProcessName"] !== null) {
-            $this->ProcessName = $param["ProcessName"];
+        if (array_key_exists('ProcessName',$param) and $param['ProcessName'] !== null) {
+            $this->ProcessName = $param['ProcessName'];
         }
 
-        if (array_key_exists("FullPath",$param) and $param["FullPath"] !== null) {
-            $this->FullPath = $param["FullPath"];
+        if (array_key_exists('FullPath',$param) and $param['FullPath'] !== null) {
+            $this->FullPath = $param['FullPath'];
         }
 
-        if (array_key_exists("CmdLine",$param) and $param["CmdLine"] !== null) {
-            $this->CmdLine = $param["CmdLine"];
+        if (array_key_exists('CmdLine',$param) and $param['CmdLine'] !== null) {
+            $this->CmdLine = $param['CmdLine'];
         }
 
-        if (array_key_exists("UserName",$param) and $param["UserName"] !== null) {
-            $this->UserName = $param["UserName"];
+        if (array_key_exists('UserName',$param) and $param['UserName'] !== null) {
+            $this->UserName = $param['UserName'];
         }
 
-        if (array_key_exists("UserGroup",$param) and $param["UserGroup"] !== null) {
-            $this->UserGroup = $param["UserGroup"];
+        if (array_key_exists('UserGroup',$param) and $param['UserGroup'] !== null) {
+            $this->UserGroup = $param['UserGroup'];
         }
 
-        if (array_key_exists("ProcFilePrivilege",$param) and $param["ProcFilePrivilege"] !== null) {
-            $this->ProcFilePrivilege = $param["ProcFilePrivilege"];
+        if (array_key_exists('ProcFilePrivilege',$param) and $param['ProcFilePrivilege'] !== null) {
+            $this->ProcFilePrivilege = $param['ProcFilePrivilege'];
         }
 
-        if (array_key_exists("ParentProcName",$param) and $param["ParentProcName"] !== null) {
-            $this->ParentProcName = $param["ParentProcName"];
+        if (array_key_exists('ParentProcName',$param) and $param['ParentProcName'] !== null) {
+            $this->ParentProcName = $param['ParentProcName'];
         }
 
-        if (array_key_exists("ParentProcUser",$param) and $param["ParentProcUser"] !== null) {
-            $this->ParentProcUser = $param["ParentProcUser"];
+        if (array_key_exists('ParentProcUser',$param) and $param['ParentProcUser'] !== null) {
+            $this->ParentProcUser = $param['ParentProcUser'];
         }
 
-        if (array_key_exists("ParentProcGroup",$param) and $param["ParentProcGroup"] !== null) {
-            $this->ParentProcGroup = $param["ParentProcGroup"];
+        if (array_key_exists('ParentProcGroup',$param) and $param['ParentProcGroup'] !== null) {
+            $this->ParentProcGroup = $param['ParentProcGroup'];
         }
 
-        if (array_key_exists("ParentProcPath",$param) and $param["ParentProcPath"] !== null) {
-            $this->ParentProcPath = $param["ParentProcPath"];
+        if (array_key_exists('ParentProcPath',$param) and $param['ParentProcPath'] !== null) {
+            $this->ParentProcPath = $param['ParentProcPath'];
         }
 
-        if (array_key_exists("ProcTree",$param) and $param["ProcTree"] !== null) {
-            $this->ProcTree = $param["ProcTree"];
+        if (array_key_exists('ProcTree',$param) and $param['ProcTree'] !== null) {
+            $this->ProcTree = $param['ProcTree'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("MachineName",$param) and $param["MachineName"] !== null) {
-            $this->MachineName = $param["MachineName"];
+        if (array_key_exists('MachineName',$param) and $param['MachineName'] !== null) {
+            $this->MachineName = $param['MachineName'];
         }
     }
 }

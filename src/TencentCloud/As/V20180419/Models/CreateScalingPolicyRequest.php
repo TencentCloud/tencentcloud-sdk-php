@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -94,33 +94,33 @@ class CreateScalingPolicyRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AutoScalingGroupId",$param) and $param["AutoScalingGroupId"] !== null) {
-            $this->AutoScalingGroupId = $param["AutoScalingGroupId"];
+        if (array_key_exists('AutoScalingGroupId',$param) and $param['AutoScalingGroupId'] !== null) {
+            $this->AutoScalingGroupId = $param['AutoScalingGroupId'];
         }
 
-        if (array_key_exists("ScalingPolicyName",$param) and $param["ScalingPolicyName"] !== null) {
-            $this->ScalingPolicyName = $param["ScalingPolicyName"];
+        if (array_key_exists('ScalingPolicyName',$param) and $param['ScalingPolicyName'] !== null) {
+            $this->ScalingPolicyName = $param['ScalingPolicyName'];
         }
 
-        if (array_key_exists("AdjustmentType",$param) and $param["AdjustmentType"] !== null) {
-            $this->AdjustmentType = $param["AdjustmentType"];
+        if (array_key_exists('AdjustmentType',$param) and $param['AdjustmentType'] !== null) {
+            $this->AdjustmentType = $param['AdjustmentType'];
         }
 
-        if (array_key_exists("AdjustmentValue",$param) and $param["AdjustmentValue"] !== null) {
-            $this->AdjustmentValue = $param["AdjustmentValue"];
+        if (array_key_exists('AdjustmentValue',$param) and $param['AdjustmentValue'] !== null) {
+            $this->AdjustmentValue = $param['AdjustmentValue'];
         }
 
-        if (array_key_exists("MetricAlarm",$param) and $param["MetricAlarm"] !== null) {
+        if (array_key_exists('MetricAlarm',$param) and $param['MetricAlarm'] !== null) {
             $this->MetricAlarm = new MetricAlarm();
-            $this->MetricAlarm->deserialize($param["MetricAlarm"]);
+            $this->MetricAlarm->deserialize($param['MetricAlarm']);
         }
 
-        if (array_key_exists("Cooldown",$param) and $param["Cooldown"] !== null) {
-            $this->Cooldown = $param["Cooldown"];
+        if (array_key_exists('Cooldown',$param) and $param['Cooldown'] !== null) {
+            $this->Cooldown = $param['Cooldown'];
         }
 
-        if (array_key_exists("NotificationUserGroupIds",$param) and $param["NotificationUserGroupIds"] !== null) {
-            $this->NotificationUserGroupIds = $param["NotificationUserGroupIds"];
+        if (array_key_exists('NotificationUserGroupIds',$param) and $param['NotificationUserGroupIds'] !== null) {
+            $this->NotificationUserGroupIds = $param['NotificationUserGroupIds'];
         }
     }
 }

@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -234,105 +234,105 @@ class DeviceInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
-            $this->VpcId = $param["VpcId"];
+        if (array_key_exists('VpcId',$param) and $param['VpcId'] !== null) {
+            $this->VpcId = $param['VpcId'];
         }
 
-        if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
-            $this->SubnetId = $param["SubnetId"];
+        if (array_key_exists('SubnetId',$param) and $param['SubnetId'] !== null) {
+            $this->SubnetId = $param['SubnetId'];
         }
 
-        if (array_key_exists("DeviceStatus",$param) and $param["DeviceStatus"] !== null) {
-            $this->DeviceStatus = $param["DeviceStatus"];
+        if (array_key_exists('DeviceStatus',$param) and $param['DeviceStatus'] !== null) {
+            $this->DeviceStatus = $param['DeviceStatus'];
         }
 
-        if (array_key_exists("OperateStatus",$param) and $param["OperateStatus"] !== null) {
-            $this->OperateStatus = $param["OperateStatus"];
+        if (array_key_exists('OperateStatus',$param) and $param['OperateStatus'] !== null) {
+            $this->OperateStatus = $param['OperateStatus'];
         }
 
-        if (array_key_exists("OsTypeId",$param) and $param["OsTypeId"] !== null) {
-            $this->OsTypeId = $param["OsTypeId"];
+        if (array_key_exists('OsTypeId',$param) and $param['OsTypeId'] !== null) {
+            $this->OsTypeId = $param['OsTypeId'];
         }
 
-        if (array_key_exists("RaidId",$param) and $param["RaidId"] !== null) {
-            $this->RaidId = $param["RaidId"];
+        if (array_key_exists('RaidId',$param) and $param['RaidId'] !== null) {
+            $this->RaidId = $param['RaidId'];
         }
 
-        if (array_key_exists("Alias",$param) and $param["Alias"] !== null) {
-            $this->Alias = $param["Alias"];
+        if (array_key_exists('Alias',$param) and $param['Alias'] !== null) {
+            $this->Alias = $param['Alias'];
         }
 
-        if (array_key_exists("AppId",$param) and $param["AppId"] !== null) {
-            $this->AppId = $param["AppId"];
+        if (array_key_exists('AppId',$param) and $param['AppId'] !== null) {
+            $this->AppId = $param['AppId'];
         }
 
-        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
-            $this->Zone = $param["Zone"];
+        if (array_key_exists('Zone',$param) and $param['Zone'] !== null) {
+            $this->Zone = $param['Zone'];
         }
 
-        if (array_key_exists("WanIp",$param) and $param["WanIp"] !== null) {
-            $this->WanIp = $param["WanIp"];
+        if (array_key_exists('WanIp',$param) and $param['WanIp'] !== null) {
+            $this->WanIp = $param['WanIp'];
         }
 
-        if (array_key_exists("LanIp",$param) and $param["LanIp"] !== null) {
-            $this->LanIp = $param["LanIp"];
+        if (array_key_exists('LanIp',$param) and $param['LanIp'] !== null) {
+            $this->LanIp = $param['LanIp'];
         }
 
-        if (array_key_exists("DeliverTime",$param) and $param["DeliverTime"] !== null) {
-            $this->DeliverTime = $param["DeliverTime"];
+        if (array_key_exists('DeliverTime',$param) and $param['DeliverTime'] !== null) {
+            $this->DeliverTime = $param['DeliverTime'];
         }
 
-        if (array_key_exists("Deadline",$param) and $param["Deadline"] !== null) {
-            $this->Deadline = $param["Deadline"];
+        if (array_key_exists('Deadline',$param) and $param['Deadline'] !== null) {
+            $this->Deadline = $param['Deadline'];
         }
 
-        if (array_key_exists("AutoRenewFlag",$param) and $param["AutoRenewFlag"] !== null) {
-            $this->AutoRenewFlag = $param["AutoRenewFlag"];
+        if (array_key_exists('AutoRenewFlag',$param) and $param['AutoRenewFlag'] !== null) {
+            $this->AutoRenewFlag = $param['AutoRenewFlag'];
         }
 
-        if (array_key_exists("DeviceClassCode",$param) and $param["DeviceClassCode"] !== null) {
-            $this->DeviceClassCode = $param["DeviceClassCode"];
+        if (array_key_exists('DeviceClassCode',$param) and $param['DeviceClassCode'] !== null) {
+            $this->DeviceClassCode = $param['DeviceClassCode'];
         }
 
-        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+        if (array_key_exists('Tags',$param) and $param['Tags'] !== null) {
             $this->Tags = [];
-            foreach ($param["Tags"] as $key => $value){
+            foreach ($param['Tags'] as $key => $value){
                 $obj = new Tag();
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
         }
 
-        if (array_key_exists("CpmPayMode",$param) and $param["CpmPayMode"] !== null) {
-            $this->CpmPayMode = $param["CpmPayMode"];
+        if (array_key_exists('CpmPayMode',$param) and $param['CpmPayMode'] !== null) {
+            $this->CpmPayMode = $param['CpmPayMode'];
         }
 
-        if (array_key_exists("DhcpIp",$param) and $param["DhcpIp"] !== null) {
-            $this->DhcpIp = $param["DhcpIp"];
+        if (array_key_exists('DhcpIp',$param) and $param['DhcpIp'] !== null) {
+            $this->DhcpIp = $param['DhcpIp'];
         }
 
-        if (array_key_exists("VpcName",$param) and $param["VpcName"] !== null) {
-            $this->VpcName = $param["VpcName"];
+        if (array_key_exists('VpcName',$param) and $param['VpcName'] !== null) {
+            $this->VpcName = $param['VpcName'];
         }
 
-        if (array_key_exists("SubnetName",$param) and $param["SubnetName"] !== null) {
-            $this->SubnetName = $param["SubnetName"];
+        if (array_key_exists('SubnetName',$param) and $param['SubnetName'] !== null) {
+            $this->SubnetName = $param['SubnetName'];
         }
 
-        if (array_key_exists("VpcCidrBlock",$param) and $param["VpcCidrBlock"] !== null) {
-            $this->VpcCidrBlock = $param["VpcCidrBlock"];
+        if (array_key_exists('VpcCidrBlock',$param) and $param['VpcCidrBlock'] !== null) {
+            $this->VpcCidrBlock = $param['VpcCidrBlock'];
         }
 
-        if (array_key_exists("SubnetCidrBlock",$param) and $param["SubnetCidrBlock"] !== null) {
-            $this->SubnetCidrBlock = $param["SubnetCidrBlock"];
+        if (array_key_exists('SubnetCidrBlock',$param) and $param['SubnetCidrBlock'] !== null) {
+            $this->SubnetCidrBlock = $param['SubnetCidrBlock'];
         }
 
-        if (array_key_exists("IsLuckyDevice",$param) and $param["IsLuckyDevice"] !== null) {
-            $this->IsLuckyDevice = $param["IsLuckyDevice"];
+        if (array_key_exists('IsLuckyDevice',$param) and $param['IsLuckyDevice'] !== null) {
+            $this->IsLuckyDevice = $param['IsLuckyDevice'];
         }
     }
 }

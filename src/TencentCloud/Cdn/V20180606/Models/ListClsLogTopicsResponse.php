@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -66,22 +66,22 @@ class ListClsLogTopicsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Logset",$param) and $param["Logset"] !== null) {
+        if (array_key_exists('Logset',$param) and $param['Logset'] !== null) {
             $this->Logset = new LogSetInfo();
-            $this->Logset->deserialize($param["Logset"]);
+            $this->Logset->deserialize($param['Logset']);
         }
 
-        if (array_key_exists("Topics",$param) and $param["Topics"] !== null) {
+        if (array_key_exists('Topics',$param) and $param['Topics'] !== null) {
             $this->Topics = [];
-            foreach ($param["Topics"] as $key => $value){
+            foreach ($param['Topics'] as $key => $value){
                 $obj = new TopicInfo();
                 $obj->deserialize($value);
                 array_push($this->Topics, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

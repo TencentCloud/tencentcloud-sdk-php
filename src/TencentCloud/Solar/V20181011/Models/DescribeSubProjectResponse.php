@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -154,46 +154,46 @@ class DescribeSubProjectResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ProductInfo",$param) and $param["ProductInfo"] !== null) {
+        if (array_key_exists('ProductInfo',$param) and $param['ProductInfo'] !== null) {
             $this->ProductInfo = new ProductInfo();
-            $this->ProductInfo->deserialize($param["ProductInfo"]);
+            $this->ProductInfo->deserialize($param['ProductInfo']);
         }
 
-        if (array_key_exists("ActivityInfo",$param) and $param["ActivityInfo"] !== null) {
+        if (array_key_exists('ActivityInfo',$param) and $param['ActivityInfo'] !== null) {
             $this->ActivityInfo = new ActivityInfo();
-            $this->ActivityInfo->deserialize($param["ActivityInfo"]);
+            $this->ActivityInfo->deserialize($param['ActivityInfo']);
         }
 
-        if (array_key_exists("ShareTitle",$param) and $param["ShareTitle"] !== null) {
-            $this->ShareTitle = $param["ShareTitle"];
+        if (array_key_exists('ShareTitle',$param) and $param['ShareTitle'] !== null) {
+            $this->ShareTitle = $param['ShareTitle'];
         }
 
-        if (array_key_exists("ShareDesc",$param) and $param["ShareDesc"] !== null) {
-            $this->ShareDesc = $param["ShareDesc"];
+        if (array_key_exists('ShareDesc',$param) and $param['ShareDesc'] !== null) {
+            $this->ShareDesc = $param['ShareDesc'];
         }
 
-        if (array_key_exists("ShareImg",$param) and $param["ShareImg"] !== null) {
-            $this->ShareImg = $param["ShareImg"];
+        if (array_key_exists('ShareImg',$param) and $param['ShareImg'] !== null) {
+            $this->ShareImg = $param['ShareImg'];
         }
 
-        if (array_key_exists("HasStrategy",$param) and $param["HasStrategy"] !== null) {
-            $this->HasStrategy = $param["HasStrategy"];
+        if (array_key_exists('HasStrategy',$param) and $param['HasStrategy'] !== null) {
+            $this->HasStrategy = $param['HasStrategy'];
         }
 
-        if (array_key_exists("SubProjectStatus",$param) and $param["SubProjectStatus"] !== null) {
-            $this->SubProjectStatus = $param["SubProjectStatus"];
+        if (array_key_exists('SubProjectStatus',$param) and $param['SubProjectStatus'] !== null) {
+            $this->SubProjectStatus = $param['SubProjectStatus'];
         }
 
-        if (array_key_exists("ShareAppId",$param) and $param["ShareAppId"] !== null) {
-            $this->ShareAppId = $param["ShareAppId"];
+        if (array_key_exists('ShareAppId',$param) and $param['ShareAppId'] !== null) {
+            $this->ShareAppId = $param['ShareAppId'];
         }
 
-        if (array_key_exists("ShareWsId",$param) and $param["ShareWsId"] !== null) {
-            $this->ShareWsId = $param["ShareWsId"];
+        if (array_key_exists('ShareWsId',$param) and $param['ShareWsId'] !== null) {
+            $this->ShareWsId = $param['ShareWsId'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

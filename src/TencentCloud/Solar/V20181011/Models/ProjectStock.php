@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -94,32 +94,32 @@ class ProjectStock extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PrizeId",$param) and $param["PrizeId"] !== null) {
-            $this->PrizeId = $param["PrizeId"];
+        if (array_key_exists('PrizeId',$param) and $param['PrizeId'] !== null) {
+            $this->PrizeId = $param['PrizeId'];
         }
 
-        if (array_key_exists("PrizeBat",$param) and $param["PrizeBat"] !== null) {
-            $this->PrizeBat = $param["PrizeBat"];
+        if (array_key_exists('PrizeBat',$param) and $param['PrizeBat'] !== null) {
+            $this->PrizeBat = $param['PrizeBat'];
         }
 
-        if (array_key_exists("PrizeName",$param) and $param["PrizeName"] !== null) {
-            $this->PrizeName = $param["PrizeName"];
+        if (array_key_exists('PrizeName',$param) and $param['PrizeName'] !== null) {
+            $this->PrizeName = $param['PrizeName'];
         }
 
-        if (array_key_exists("UsedStock",$param) and $param["UsedStock"] !== null) {
-            $this->UsedStock = $param["UsedStock"];
+        if (array_key_exists('UsedStock',$param) and $param['UsedStock'] !== null) {
+            $this->UsedStock = $param['UsedStock'];
         }
 
-        if (array_key_exists("RemainStock",$param) and $param["RemainStock"] !== null) {
-            $this->RemainStock = $param["RemainStock"];
+        if (array_key_exists('RemainStock',$param) and $param['RemainStock'] !== null) {
+            $this->RemainStock = $param['RemainStock'];
         }
 
-        if (array_key_exists("PoolIdx",$param) and $param["PoolIdx"] !== null) {
-            $this->PoolIdx = $param["PoolIdx"];
+        if (array_key_exists('PoolIdx',$param) and $param['PoolIdx'] !== null) {
+            $this->PoolIdx = $param['PoolIdx'];
         }
 
-        if (array_key_exists("PoolName",$param) and $param["PoolName"] !== null) {
-            $this->PoolName = $param["PoolName"];
+        if (array_key_exists('PoolName',$param) and $param['PoolName'] !== null) {
+            $this->PoolName = $param['PoolName'];
         }
     }
 }

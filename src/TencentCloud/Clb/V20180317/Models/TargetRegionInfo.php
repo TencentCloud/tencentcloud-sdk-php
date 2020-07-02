@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getRegion() 获取Target所属地域，如 ap-guangzhou
  * @method void setRegion(string $Region) 设置Target所属地域，如 ap-guangzhou
- * @method string getVpcId() 获取Target所属网络，私有网络格式如 vpc-abcd1234，如果是基础网络，则为"0"
- * @method void setVpcId(string $VpcId) 设置Target所属网络，私有网络格式如 vpc-abcd1234，如果是基础网络，则为"0"
+ * @method string getVpcId() 获取Target所属网络，私有网络格式如 vpc-abcd1234，如果是基础网络，则为'0'
+ * @method void setVpcId(string $VpcId) 设置Target所属网络，私有网络格式如 vpc-abcd1234，如果是基础网络，则为'0'
  */
 class TargetRegionInfo extends AbstractModel
 {
@@ -33,13 +33,13 @@ class TargetRegionInfo extends AbstractModel
     public $Region;
 
     /**
-     * @var string Target所属网络，私有网络格式如 vpc-abcd1234，如果是基础网络，则为"0"
+     * @var string Target所属网络，私有网络格式如 vpc-abcd1234，如果是基础网络，则为'0'
      */
     public $VpcId;
 
     /**
      * @param string $Region Target所属地域，如 ap-guangzhou
-     * @param string $VpcId Target所属网络，私有网络格式如 vpc-abcd1234，如果是基础网络，则为"0"
+     * @param string $VpcId Target所属网络，私有网络格式如 vpc-abcd1234，如果是基础网络，则为'0'
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class TargetRegionInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Region",$param) and $param["Region"] !== null) {
-            $this->Region = $param["Region"];
+        if (array_key_exists('Region',$param) and $param['Region'] !== null) {
+            $this->Region = $param['Region'];
         }
 
-        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
-            $this->VpcId = $param["VpcId"];
+        if (array_key_exists('VpcId',$param) and $param['VpcId'] !== null) {
+            $this->VpcId = $param['VpcId'];
         }
     }
 }

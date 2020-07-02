@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -98,44 +98,44 @@ class DetectLabelResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Labels",$param) and $param["Labels"] !== null) {
+        if (array_key_exists('Labels',$param) and $param['Labels'] !== null) {
             $this->Labels = [];
-            foreach ($param["Labels"] as $key => $value){
+            foreach ($param['Labels'] as $key => $value){
                 $obj = new DetectLabelItem();
                 $obj->deserialize($value);
                 array_push($this->Labels, $obj);
             }
         }
 
-        if (array_key_exists("CameraLabels",$param) and $param["CameraLabels"] !== null) {
+        if (array_key_exists('CameraLabels',$param) and $param['CameraLabels'] !== null) {
             $this->CameraLabels = [];
-            foreach ($param["CameraLabels"] as $key => $value){
+            foreach ($param['CameraLabels'] as $key => $value){
                 $obj = new DetectLabelItem();
                 $obj->deserialize($value);
                 array_push($this->CameraLabels, $obj);
             }
         }
 
-        if (array_key_exists("AlbumLabels",$param) and $param["AlbumLabels"] !== null) {
+        if (array_key_exists('AlbumLabels',$param) and $param['AlbumLabels'] !== null) {
             $this->AlbumLabels = [];
-            foreach ($param["AlbumLabels"] as $key => $value){
+            foreach ($param['AlbumLabels'] as $key => $value){
                 $obj = new DetectLabelItem();
                 $obj->deserialize($value);
                 array_push($this->AlbumLabels, $obj);
             }
         }
 
-        if (array_key_exists("NewsLabels",$param) and $param["NewsLabels"] !== null) {
+        if (array_key_exists('NewsLabels',$param) and $param['NewsLabels'] !== null) {
             $this->NewsLabels = [];
-            foreach ($param["NewsLabels"] as $key => $value){
+            foreach ($param['NewsLabels'] as $key => $value){
                 $obj = new DetectLabelItem();
                 $obj->deserialize($value);
                 array_push($this->NewsLabels, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

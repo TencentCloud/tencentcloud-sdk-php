@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -86,28 +86,28 @@ class CreateAutoScalingGroupFromInstanceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AutoScalingGroupName",$param) and $param["AutoScalingGroupName"] !== null) {
-            $this->AutoScalingGroupName = $param["AutoScalingGroupName"];
+        if (array_key_exists('AutoScalingGroupName',$param) and $param['AutoScalingGroupName'] !== null) {
+            $this->AutoScalingGroupName = $param['AutoScalingGroupName'];
         }
 
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("MinSize",$param) and $param["MinSize"] !== null) {
-            $this->MinSize = $param["MinSize"];
+        if (array_key_exists('MinSize',$param) and $param['MinSize'] !== null) {
+            $this->MinSize = $param['MinSize'];
         }
 
-        if (array_key_exists("MaxSize",$param) and $param["MaxSize"] !== null) {
-            $this->MaxSize = $param["MaxSize"];
+        if (array_key_exists('MaxSize',$param) and $param['MaxSize'] !== null) {
+            $this->MaxSize = $param['MaxSize'];
         }
 
-        if (array_key_exists("DesiredCapacity",$param) and $param["DesiredCapacity"] !== null) {
-            $this->DesiredCapacity = $param["DesiredCapacity"];
+        if (array_key_exists('DesiredCapacity',$param) and $param['DesiredCapacity'] !== null) {
+            $this->DesiredCapacity = $param['DesiredCapacity'];
         }
 
-        if (array_key_exists("InheritInstanceTag",$param) and $param["InheritInstanceTag"] !== null) {
-            $this->InheritInstanceTag = $param["InheritInstanceTag"];
+        if (array_key_exists('InheritInstanceTag',$param) and $param['InheritInstanceTag'] !== null) {
+            $this->InheritInstanceTag = $param['InheritInstanceTag'];
         }
     }
 }

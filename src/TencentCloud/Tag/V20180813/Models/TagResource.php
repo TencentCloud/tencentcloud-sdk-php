@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -90,28 +90,28 @@ class TagResource extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TagKey",$param) and $param["TagKey"] !== null) {
-            $this->TagKey = $param["TagKey"];
+        if (array_key_exists('TagKey',$param) and $param['TagKey'] !== null) {
+            $this->TagKey = $param['TagKey'];
         }
 
-        if (array_key_exists("TagValue",$param) and $param["TagValue"] !== null) {
-            $this->TagValue = $param["TagValue"];
+        if (array_key_exists('TagValue',$param) and $param['TagValue'] !== null) {
+            $this->TagValue = $param['TagValue'];
         }
 
-        if (array_key_exists("ResourceId",$param) and $param["ResourceId"] !== null) {
-            $this->ResourceId = $param["ResourceId"];
+        if (array_key_exists('ResourceId',$param) and $param['ResourceId'] !== null) {
+            $this->ResourceId = $param['ResourceId'];
         }
 
-        if (array_key_exists("TagKeyMd5",$param) and $param["TagKeyMd5"] !== null) {
-            $this->TagKeyMd5 = $param["TagKeyMd5"];
+        if (array_key_exists('TagKeyMd5',$param) and $param['TagKeyMd5'] !== null) {
+            $this->TagKeyMd5 = $param['TagKeyMd5'];
         }
 
-        if (array_key_exists("TagValueMd5",$param) and $param["TagValueMd5"] !== null) {
-            $this->TagValueMd5 = $param["TagValueMd5"];
+        if (array_key_exists('TagValueMd5',$param) and $param['TagValueMd5'] !== null) {
+            $this->TagValueMd5 = $param['TagValueMd5'];
         }
 
-        if (array_key_exists("ServiceType",$param) and $param["ServiceType"] !== null) {
-            $this->ServiceType = $param["ServiceType"];
+        if (array_key_exists('ServiceType',$param) and $param['ServiceType'] !== null) {
+            $this->ServiceType = $param['ServiceType'];
         }
     }
 }

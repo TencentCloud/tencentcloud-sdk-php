@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -118,36 +118,36 @@ class AttachedPolicyOfRole extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PolicyId",$param) and $param["PolicyId"] !== null) {
-            $this->PolicyId = $param["PolicyId"];
+        if (array_key_exists('PolicyId',$param) and $param['PolicyId'] !== null) {
+            $this->PolicyId = $param['PolicyId'];
         }
 
-        if (array_key_exists("PolicyName",$param) and $param["PolicyName"] !== null) {
-            $this->PolicyName = $param["PolicyName"];
+        if (array_key_exists('PolicyName',$param) and $param['PolicyName'] !== null) {
+            $this->PolicyName = $param['PolicyName'];
         }
 
-        if (array_key_exists("AddTime",$param) and $param["AddTime"] !== null) {
-            $this->AddTime = $param["AddTime"];
+        if (array_key_exists('AddTime',$param) and $param['AddTime'] !== null) {
+            $this->AddTime = $param['AddTime'];
         }
 
-        if (array_key_exists("PolicyType",$param) and $param["PolicyType"] !== null) {
-            $this->PolicyType = $param["PolicyType"];
+        if (array_key_exists('PolicyType',$param) and $param['PolicyType'] !== null) {
+            $this->PolicyType = $param['PolicyType'];
         }
 
-        if (array_key_exists("CreateMode",$param) and $param["CreateMode"] !== null) {
-            $this->CreateMode = $param["CreateMode"];
+        if (array_key_exists('CreateMode',$param) and $param['CreateMode'] !== null) {
+            $this->CreateMode = $param['CreateMode'];
         }
 
-        if (array_key_exists("Deactived",$param) and $param["Deactived"] !== null) {
-            $this->Deactived = $param["Deactived"];
+        if (array_key_exists('Deactived',$param) and $param['Deactived'] !== null) {
+            $this->Deactived = $param['Deactived'];
         }
 
-        if (array_key_exists("DeactivedDetail",$param) and $param["DeactivedDetail"] !== null) {
-            $this->DeactivedDetail = $param["DeactivedDetail"];
+        if (array_key_exists('DeactivedDetail',$param) and $param['DeactivedDetail'] !== null) {
+            $this->DeactivedDetail = $param['DeactivedDetail'];
         }
 
-        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
-            $this->Description = $param["Description"];
+        if (array_key_exists('Description',$param) and $param['Description'] !== null) {
+            $this->Description = $param['Description'];
         }
     }
 }

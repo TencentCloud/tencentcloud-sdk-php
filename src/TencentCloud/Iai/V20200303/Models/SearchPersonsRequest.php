@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -186,44 +186,44 @@ MaxFaceNum用于，当输入的待识别图片包含多张人脸时，设定要�
         if ($param === null) {
             return;
         }
-        if (array_key_exists("GroupIds",$param) and $param["GroupIds"] !== null) {
-            $this->GroupIds = $param["GroupIds"];
+        if (array_key_exists('GroupIds',$param) and $param['GroupIds'] !== null) {
+            $this->GroupIds = $param['GroupIds'];
         }
 
-        if (array_key_exists("Image",$param) and $param["Image"] !== null) {
-            $this->Image = $param["Image"];
+        if (array_key_exists('Image',$param) and $param['Image'] !== null) {
+            $this->Image = $param['Image'];
         }
 
-        if (array_key_exists("Url",$param) and $param["Url"] !== null) {
-            $this->Url = $param["Url"];
+        if (array_key_exists('Url',$param) and $param['Url'] !== null) {
+            $this->Url = $param['Url'];
         }
 
-        if (array_key_exists("MaxFaceNum",$param) and $param["MaxFaceNum"] !== null) {
-            $this->MaxFaceNum = $param["MaxFaceNum"];
+        if (array_key_exists('MaxFaceNum',$param) and $param['MaxFaceNum'] !== null) {
+            $this->MaxFaceNum = $param['MaxFaceNum'];
         }
 
-        if (array_key_exists("MinFaceSize",$param) and $param["MinFaceSize"] !== null) {
-            $this->MinFaceSize = $param["MinFaceSize"];
+        if (array_key_exists('MinFaceSize',$param) and $param['MinFaceSize'] !== null) {
+            $this->MinFaceSize = $param['MinFaceSize'];
         }
 
-        if (array_key_exists("MaxPersonNum",$param) and $param["MaxPersonNum"] !== null) {
-            $this->MaxPersonNum = $param["MaxPersonNum"];
+        if (array_key_exists('MaxPersonNum',$param) and $param['MaxPersonNum'] !== null) {
+            $this->MaxPersonNum = $param['MaxPersonNum'];
         }
 
-        if (array_key_exists("QualityControl",$param) and $param["QualityControl"] !== null) {
-            $this->QualityControl = $param["QualityControl"];
+        if (array_key_exists('QualityControl',$param) and $param['QualityControl'] !== null) {
+            $this->QualityControl = $param['QualityControl'];
         }
 
-        if (array_key_exists("FaceMatchThreshold",$param) and $param["FaceMatchThreshold"] !== null) {
-            $this->FaceMatchThreshold = $param["FaceMatchThreshold"];
+        if (array_key_exists('FaceMatchThreshold',$param) and $param['FaceMatchThreshold'] !== null) {
+            $this->FaceMatchThreshold = $param['FaceMatchThreshold'];
         }
 
-        if (array_key_exists("NeedPersonInfo",$param) and $param["NeedPersonInfo"] !== null) {
-            $this->NeedPersonInfo = $param["NeedPersonInfo"];
+        if (array_key_exists('NeedPersonInfo',$param) and $param['NeedPersonInfo'] !== null) {
+            $this->NeedPersonInfo = $param['NeedPersonInfo'];
         }
 
-        if (array_key_exists("NeedRotateDetection",$param) and $param["NeedRotateDetection"] !== null) {
-            $this->NeedRotateDetection = $param["NeedRotateDetection"];
+        if (array_key_exists('NeedRotateDetection',$param) and $param['NeedRotateDetection'] !== null) {
+            $this->NeedRotateDetection = $param['NeedRotateDetection'];
         }
     }
 }

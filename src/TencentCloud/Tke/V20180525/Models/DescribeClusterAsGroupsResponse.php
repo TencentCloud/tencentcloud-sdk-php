@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -62,21 +62,21 @@ class DescribeClusterAsGroupsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("ClusterAsGroupSet",$param) and $param["ClusterAsGroupSet"] !== null) {
+        if (array_key_exists('ClusterAsGroupSet',$param) and $param['ClusterAsGroupSet'] !== null) {
             $this->ClusterAsGroupSet = [];
-            foreach ($param["ClusterAsGroupSet"] as $key => $value){
+            foreach ($param['ClusterAsGroupSet'] as $key => $value){
                 $obj = new ClusterAsGroup();
                 $obj->deserialize($value);
                 array_push($this->ClusterAsGroupSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

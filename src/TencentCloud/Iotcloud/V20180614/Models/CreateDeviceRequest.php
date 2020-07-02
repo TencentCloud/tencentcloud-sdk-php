@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -118,45 +118,45 @@ class CreateDeviceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ProductId",$param) and $param["ProductId"] !== null) {
-            $this->ProductId = $param["ProductId"];
+        if (array_key_exists('ProductId',$param) and $param['ProductId'] !== null) {
+            $this->ProductId = $param['ProductId'];
         }
 
-        if (array_key_exists("DeviceName",$param) and $param["DeviceName"] !== null) {
-            $this->DeviceName = $param["DeviceName"];
+        if (array_key_exists('DeviceName',$param) and $param['DeviceName'] !== null) {
+            $this->DeviceName = $param['DeviceName'];
         }
 
-        if (array_key_exists("Attribute",$param) and $param["Attribute"] !== null) {
+        if (array_key_exists('Attribute',$param) and $param['Attribute'] !== null) {
             $this->Attribute = new Attribute();
-            $this->Attribute->deserialize($param["Attribute"]);
+            $this->Attribute->deserialize($param['Attribute']);
         }
 
-        if (array_key_exists("DefinedPsk",$param) and $param["DefinedPsk"] !== null) {
-            $this->DefinedPsk = $param["DefinedPsk"];
+        if (array_key_exists('DefinedPsk',$param) and $param['DefinedPsk'] !== null) {
+            $this->DefinedPsk = $param['DefinedPsk'];
         }
 
-        if (array_key_exists("Isp",$param) and $param["Isp"] !== null) {
-            $this->Isp = $param["Isp"];
+        if (array_key_exists('Isp',$param) and $param['Isp'] !== null) {
+            $this->Isp = $param['Isp'];
         }
 
-        if (array_key_exists("Imei",$param) and $param["Imei"] !== null) {
-            $this->Imei = $param["Imei"];
+        if (array_key_exists('Imei',$param) and $param['Imei'] !== null) {
+            $this->Imei = $param['Imei'];
         }
 
-        if (array_key_exists("LoraDevEui",$param) and $param["LoraDevEui"] !== null) {
-            $this->LoraDevEui = $param["LoraDevEui"];
+        if (array_key_exists('LoraDevEui',$param) and $param['LoraDevEui'] !== null) {
+            $this->LoraDevEui = $param['LoraDevEui'];
         }
 
-        if (array_key_exists("LoraMoteType",$param) and $param["LoraMoteType"] !== null) {
-            $this->LoraMoteType = $param["LoraMoteType"];
+        if (array_key_exists('LoraMoteType',$param) and $param['LoraMoteType'] !== null) {
+            $this->LoraMoteType = $param['LoraMoteType'];
         }
 
-        if (array_key_exists("Skey",$param) and $param["Skey"] !== null) {
-            $this->Skey = $param["Skey"];
+        if (array_key_exists('Skey',$param) and $param['Skey'] !== null) {
+            $this->Skey = $param['Skey'];
         }
 
-        if (array_key_exists("LoraAppKey",$param) and $param["LoraAppKey"] !== null) {
-            $this->LoraAppKey = $param["LoraAppKey"];
+        if (array_key_exists('LoraAppKey',$param) and $param['LoraAppKey'] !== null) {
+            $this->LoraAppKey = $param['LoraAppKey'];
         }
     }
 }

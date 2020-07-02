@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -41,13 +41,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getBeginPushTime() 获取推流开始时间。
  * @method void setBeginPushTime(string $BeginPushTime) 设置推流开始时间。
  * @method string getAcodec() 获取音频编码格式，
-例："AAC"。
+例：'AAC'。
  * @method void setAcodec(string $Acodec) 设置音频编码格式，
-例："AAC"。
+例：'AAC'。
  * @method string getVcodec() 获取视频编码格式，
-例："H264"。
+例：'H264'。
  * @method void setVcodec(string $Vcodec) 设置视频编码格式，
-例："H264"。
+例：'H264'。
  * @method string getResolution() 获取分辨率。
  * @method void setResolution(string $Resolution) 设置分辨率。
  * @method integer getAsampleRate() 获取采样率。
@@ -113,13 +113,13 @@ class PushDataInfo extends AbstractModel
 
     /**
      * @var string 音频编码格式，
-例："AAC"。
+例：'AAC'。
      */
     public $Acodec;
 
     /**
      * @var string 视频编码格式，
-例："H264"。
+例：'H264'。
      */
     public $Vcodec;
 
@@ -160,9 +160,9 @@ class PushDataInfo extends AbstractModel
      * @param string $PushDomain 推流域名。
      * @param string $BeginPushTime 推流开始时间。
      * @param string $Acodec 音频编码格式，
-例："AAC"。
+例：'AAC'。
      * @param string $Vcodec 视频编码格式，
-例："H264"。
+例：'H264'。
      * @param string $Resolution 分辨率。
      * @param integer $AsampleRate 采样率。
      * @param integer $MetaAudioSpeed metadata 中的音频码率，单位: Kbps。
@@ -182,72 +182,72 @@ class PushDataInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("StreamName",$param) and $param["StreamName"] !== null) {
-            $this->StreamName = $param["StreamName"];
+        if (array_key_exists('StreamName',$param) and $param['StreamName'] !== null) {
+            $this->StreamName = $param['StreamName'];
         }
 
-        if (array_key_exists("AppName",$param) and $param["AppName"] !== null) {
-            $this->AppName = $param["AppName"];
+        if (array_key_exists('AppName',$param) and $param['AppName'] !== null) {
+            $this->AppName = $param['AppName'];
         }
 
-        if (array_key_exists("ClientIp",$param) and $param["ClientIp"] !== null) {
-            $this->ClientIp = $param["ClientIp"];
+        if (array_key_exists('ClientIp',$param) and $param['ClientIp'] !== null) {
+            $this->ClientIp = $param['ClientIp'];
         }
 
-        if (array_key_exists("ServerIp",$param) and $param["ServerIp"] !== null) {
-            $this->ServerIp = $param["ServerIp"];
+        if (array_key_exists('ServerIp',$param) and $param['ServerIp'] !== null) {
+            $this->ServerIp = $param['ServerIp'];
         }
 
-        if (array_key_exists("VideoFps",$param) and $param["VideoFps"] !== null) {
-            $this->VideoFps = $param["VideoFps"];
+        if (array_key_exists('VideoFps',$param) and $param['VideoFps'] !== null) {
+            $this->VideoFps = $param['VideoFps'];
         }
 
-        if (array_key_exists("VideoSpeed",$param) and $param["VideoSpeed"] !== null) {
-            $this->VideoSpeed = $param["VideoSpeed"];
+        if (array_key_exists('VideoSpeed',$param) and $param['VideoSpeed'] !== null) {
+            $this->VideoSpeed = $param['VideoSpeed'];
         }
 
-        if (array_key_exists("AudioFps",$param) and $param["AudioFps"] !== null) {
-            $this->AudioFps = $param["AudioFps"];
+        if (array_key_exists('AudioFps',$param) and $param['AudioFps'] !== null) {
+            $this->AudioFps = $param['AudioFps'];
         }
 
-        if (array_key_exists("AudioSpeed",$param) and $param["AudioSpeed"] !== null) {
-            $this->AudioSpeed = $param["AudioSpeed"];
+        if (array_key_exists('AudioSpeed',$param) and $param['AudioSpeed'] !== null) {
+            $this->AudioSpeed = $param['AudioSpeed'];
         }
 
-        if (array_key_exists("PushDomain",$param) and $param["PushDomain"] !== null) {
-            $this->PushDomain = $param["PushDomain"];
+        if (array_key_exists('PushDomain',$param) and $param['PushDomain'] !== null) {
+            $this->PushDomain = $param['PushDomain'];
         }
 
-        if (array_key_exists("BeginPushTime",$param) and $param["BeginPushTime"] !== null) {
-            $this->BeginPushTime = $param["BeginPushTime"];
+        if (array_key_exists('BeginPushTime',$param) and $param['BeginPushTime'] !== null) {
+            $this->BeginPushTime = $param['BeginPushTime'];
         }
 
-        if (array_key_exists("Acodec",$param) and $param["Acodec"] !== null) {
-            $this->Acodec = $param["Acodec"];
+        if (array_key_exists('Acodec',$param) and $param['Acodec'] !== null) {
+            $this->Acodec = $param['Acodec'];
         }
 
-        if (array_key_exists("Vcodec",$param) and $param["Vcodec"] !== null) {
-            $this->Vcodec = $param["Vcodec"];
+        if (array_key_exists('Vcodec',$param) and $param['Vcodec'] !== null) {
+            $this->Vcodec = $param['Vcodec'];
         }
 
-        if (array_key_exists("Resolution",$param) and $param["Resolution"] !== null) {
-            $this->Resolution = $param["Resolution"];
+        if (array_key_exists('Resolution',$param) and $param['Resolution'] !== null) {
+            $this->Resolution = $param['Resolution'];
         }
 
-        if (array_key_exists("AsampleRate",$param) and $param["AsampleRate"] !== null) {
-            $this->AsampleRate = $param["AsampleRate"];
+        if (array_key_exists('AsampleRate',$param) and $param['AsampleRate'] !== null) {
+            $this->AsampleRate = $param['AsampleRate'];
         }
 
-        if (array_key_exists("MetaAudioSpeed",$param) and $param["MetaAudioSpeed"] !== null) {
-            $this->MetaAudioSpeed = $param["MetaAudioSpeed"];
+        if (array_key_exists('MetaAudioSpeed',$param) and $param['MetaAudioSpeed'] !== null) {
+            $this->MetaAudioSpeed = $param['MetaAudioSpeed'];
         }
 
-        if (array_key_exists("MetaVideoSpeed",$param) and $param["MetaVideoSpeed"] !== null) {
-            $this->MetaVideoSpeed = $param["MetaVideoSpeed"];
+        if (array_key_exists('MetaVideoSpeed',$param) and $param['MetaVideoSpeed'] !== null) {
+            $this->MetaVideoSpeed = $param['MetaVideoSpeed'];
         }
 
-        if (array_key_exists("MetaFps",$param) and $param["MetaFps"] !== null) {
-            $this->MetaFps = $param["MetaFps"];
+        if (array_key_exists('MetaFps',$param) and $param['MetaFps'] !== null) {
+            $this->MetaFps = $param['MetaFps'];
         }
     }
 }

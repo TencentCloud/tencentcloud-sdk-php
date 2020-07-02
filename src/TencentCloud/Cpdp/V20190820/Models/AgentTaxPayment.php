@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -94,32 +94,32 @@ class AgentTaxPayment extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AnchorId",$param) and $param["AnchorId"] !== null) {
-            $this->AnchorId = $param["AnchorId"];
+        if (array_key_exists('AnchorId',$param) and $param['AnchorId'] !== null) {
+            $this->AnchorId = $param['AnchorId'];
         }
 
-        if (array_key_exists("AnchorName",$param) and $param["AnchorName"] !== null) {
-            $this->AnchorName = $param["AnchorName"];
+        if (array_key_exists('AnchorName',$param) and $param['AnchorName'] !== null) {
+            $this->AnchorName = $param['AnchorName'];
         }
 
-        if (array_key_exists("AnchorIDCard",$param) and $param["AnchorIDCard"] !== null) {
-            $this->AnchorIDCard = $param["AnchorIDCard"];
+        if (array_key_exists('AnchorIDCard',$param) and $param['AnchorIDCard'] !== null) {
+            $this->AnchorIDCard = $param['AnchorIDCard'];
         }
 
-        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
-            $this->StartTime = $param["StartTime"];
+        if (array_key_exists('StartTime',$param) and $param['StartTime'] !== null) {
+            $this->StartTime = $param['StartTime'];
         }
 
-        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
-            $this->EndTime = $param["EndTime"];
+        if (array_key_exists('EndTime',$param) and $param['EndTime'] !== null) {
+            $this->EndTime = $param['EndTime'];
         }
 
-        if (array_key_exists("Amount",$param) and $param["Amount"] !== null) {
-            $this->Amount = $param["Amount"];
+        if (array_key_exists('Amount',$param) and $param['Amount'] !== null) {
+            $this->Amount = $param['Amount'];
         }
 
-        if (array_key_exists("Tax",$param) and $param["Tax"] !== null) {
-            $this->Tax = $param["Tax"];
+        if (array_key_exists('Tax',$param) and $param['Tax'] !== null) {
+            $this->Tax = $param['Tax'];
         }
     }
 }

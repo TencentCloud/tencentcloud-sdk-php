@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -154,60 +154,60 @@ class SpecInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SpecId",$param) and $param["SpecId"] !== null) {
-            $this->SpecId = $param["SpecId"];
+        if (array_key_exists('SpecId',$param) and $param['SpecId'] !== null) {
+            $this->SpecId = $param['SpecId'];
         }
 
-        if (array_key_exists("MachineType",$param) and $param["MachineType"] !== null) {
-            $this->MachineType = $param["MachineType"];
+        if (array_key_exists('MachineType',$param) and $param['MachineType'] !== null) {
+            $this->MachineType = $param['MachineType'];
         }
 
-        if (array_key_exists("MachineTypeName",$param) and $param["MachineTypeName"] !== null) {
-            $this->MachineTypeName = $param["MachineTypeName"];
+        if (array_key_exists('MachineTypeName',$param) and $param['MachineTypeName'] !== null) {
+            $this->MachineTypeName = $param['MachineTypeName'];
         }
 
-        if (array_key_exists("Version",$param) and $param["Version"] !== null) {
-            $this->Version = $param["Version"];
+        if (array_key_exists('Version',$param) and $param['Version'] !== null) {
+            $this->Version = $param['Version'];
         }
 
-        if (array_key_exists("VersionName",$param) and $param["VersionName"] !== null) {
-            $this->VersionName = $param["VersionName"];
+        if (array_key_exists('VersionName',$param) and $param['VersionName'] !== null) {
+            $this->VersionName = $param['VersionName'];
         }
 
-        if (array_key_exists("Memory",$param) and $param["Memory"] !== null) {
-            $this->Memory = $param["Memory"];
+        if (array_key_exists('Memory',$param) and $param['Memory'] !== null) {
+            $this->Memory = $param['Memory'];
         }
 
-        if (array_key_exists("CPU",$param) and $param["CPU"] !== null) {
-            $this->CPU = $param["CPU"];
+        if (array_key_exists('CPU',$param) and $param['CPU'] !== null) {
+            $this->CPU = $param['CPU'];
         }
 
-        if (array_key_exists("MinStorage",$param) and $param["MinStorage"] !== null) {
-            $this->MinStorage = $param["MinStorage"];
+        if (array_key_exists('MinStorage',$param) and $param['MinStorage'] !== null) {
+            $this->MinStorage = $param['MinStorage'];
         }
 
-        if (array_key_exists("MaxStorage",$param) and $param["MaxStorage"] !== null) {
-            $this->MaxStorage = $param["MaxStorage"];
+        if (array_key_exists('MaxStorage',$param) and $param['MaxStorage'] !== null) {
+            $this->MaxStorage = $param['MaxStorage'];
         }
 
-        if (array_key_exists("QPS",$param) and $param["QPS"] !== null) {
-            $this->QPS = $param["QPS"];
+        if (array_key_exists('QPS',$param) and $param['QPS'] !== null) {
+            $this->QPS = $param['QPS'];
         }
 
-        if (array_key_exists("SuitInfo",$param) and $param["SuitInfo"] !== null) {
-            $this->SuitInfo = $param["SuitInfo"];
+        if (array_key_exists('SuitInfo',$param) and $param['SuitInfo'] !== null) {
+            $this->SuitInfo = $param['SuitInfo'];
         }
 
-        if (array_key_exists("Pid",$param) and $param["Pid"] !== null) {
-            $this->Pid = $param["Pid"];
+        if (array_key_exists('Pid',$param) and $param['Pid'] !== null) {
+            $this->Pid = $param['Pid'];
         }
 
-        if (array_key_exists("PostPid",$param) and $param["PostPid"] !== null) {
-            $this->PostPid = $param["PostPid"];
+        if (array_key_exists('PostPid',$param) and $param['PostPid'] !== null) {
+            $this->PostPid = $param['PostPid'];
         }
 
-        if (array_key_exists("PayModeStatus",$param) and $param["PayModeStatus"] !== null) {
-            $this->PayModeStatus = $param["PayModeStatus"];
+        if (array_key_exists('PayModeStatus',$param) and $param['PayModeStatus'] !== null) {
+            $this->PayModeStatus = $param['PayModeStatus'];
         }
     }
 }

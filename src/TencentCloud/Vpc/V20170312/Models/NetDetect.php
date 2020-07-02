@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -194,56 +194,56 @@ NORMAL_CVM：普通云服务器；
         if ($param === null) {
             return;
         }
-        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
-            $this->VpcId = $param["VpcId"];
+        if (array_key_exists('VpcId',$param) and $param['VpcId'] !== null) {
+            $this->VpcId = $param['VpcId'];
         }
 
-        if (array_key_exists("VpcName",$param) and $param["VpcName"] !== null) {
-            $this->VpcName = $param["VpcName"];
+        if (array_key_exists('VpcName',$param) and $param['VpcName'] !== null) {
+            $this->VpcName = $param['VpcName'];
         }
 
-        if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
-            $this->SubnetId = $param["SubnetId"];
+        if (array_key_exists('SubnetId',$param) and $param['SubnetId'] !== null) {
+            $this->SubnetId = $param['SubnetId'];
         }
 
-        if (array_key_exists("SubnetName",$param) and $param["SubnetName"] !== null) {
-            $this->SubnetName = $param["SubnetName"];
+        if (array_key_exists('SubnetName',$param) and $param['SubnetName'] !== null) {
+            $this->SubnetName = $param['SubnetName'];
         }
 
-        if (array_key_exists("NetDetectId",$param) and $param["NetDetectId"] !== null) {
-            $this->NetDetectId = $param["NetDetectId"];
+        if (array_key_exists('NetDetectId',$param) and $param['NetDetectId'] !== null) {
+            $this->NetDetectId = $param['NetDetectId'];
         }
 
-        if (array_key_exists("NetDetectName",$param) and $param["NetDetectName"] !== null) {
-            $this->NetDetectName = $param["NetDetectName"];
+        if (array_key_exists('NetDetectName',$param) and $param['NetDetectName'] !== null) {
+            $this->NetDetectName = $param['NetDetectName'];
         }
 
-        if (array_key_exists("DetectDestinationIp",$param) and $param["DetectDestinationIp"] !== null) {
-            $this->DetectDestinationIp = $param["DetectDestinationIp"];
+        if (array_key_exists('DetectDestinationIp',$param) and $param['DetectDestinationIp'] !== null) {
+            $this->DetectDestinationIp = $param['DetectDestinationIp'];
         }
 
-        if (array_key_exists("DetectSourceIp",$param) and $param["DetectSourceIp"] !== null) {
-            $this->DetectSourceIp = $param["DetectSourceIp"];
+        if (array_key_exists('DetectSourceIp',$param) and $param['DetectSourceIp'] !== null) {
+            $this->DetectSourceIp = $param['DetectSourceIp'];
         }
 
-        if (array_key_exists("NextHopType",$param) and $param["NextHopType"] !== null) {
-            $this->NextHopType = $param["NextHopType"];
+        if (array_key_exists('NextHopType',$param) and $param['NextHopType'] !== null) {
+            $this->NextHopType = $param['NextHopType'];
         }
 
-        if (array_key_exists("NextHopDestination",$param) and $param["NextHopDestination"] !== null) {
-            $this->NextHopDestination = $param["NextHopDestination"];
+        if (array_key_exists('NextHopDestination',$param) and $param['NextHopDestination'] !== null) {
+            $this->NextHopDestination = $param['NextHopDestination'];
         }
 
-        if (array_key_exists("NextHopName",$param) and $param["NextHopName"] !== null) {
-            $this->NextHopName = $param["NextHopName"];
+        if (array_key_exists('NextHopName',$param) and $param['NextHopName'] !== null) {
+            $this->NextHopName = $param['NextHopName'];
         }
 
-        if (array_key_exists("NetDetectDescription",$param) and $param["NetDetectDescription"] !== null) {
-            $this->NetDetectDescription = $param["NetDetectDescription"];
+        if (array_key_exists('NetDetectDescription',$param) and $param['NetDetectDescription'] !== null) {
+            $this->NetDetectDescription = $param['NetDetectDescription'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
     }
 }

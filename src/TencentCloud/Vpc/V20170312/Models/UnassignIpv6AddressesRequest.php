@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -54,13 +54,13 @@ class UnassignIpv6AddressesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("NetworkInterfaceId",$param) and $param["NetworkInterfaceId"] !== null) {
-            $this->NetworkInterfaceId = $param["NetworkInterfaceId"];
+        if (array_key_exists('NetworkInterfaceId',$param) and $param['NetworkInterfaceId'] !== null) {
+            $this->NetworkInterfaceId = $param['NetworkInterfaceId'];
         }
 
-        if (array_key_exists("Ipv6Addresses",$param) and $param["Ipv6Addresses"] !== null) {
+        if (array_key_exists('Ipv6Addresses',$param) and $param['Ipv6Addresses'] !== null) {
             $this->Ipv6Addresses = [];
-            foreach ($param["Ipv6Addresses"] as $key => $value){
+            foreach ($param['Ipv6Addresses'] as $key => $value){
                 $obj = new Ipv6Address();
                 $obj->deserialize($value);
                 array_push($this->Ipv6Addresses, $obj);

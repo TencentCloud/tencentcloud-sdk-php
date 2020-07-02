@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -106,33 +106,33 @@ Stable：消费分组中各个消费者已经加入，处于稳定状态
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ErrorCode",$param) and $param["ErrorCode"] !== null) {
-            $this->ErrorCode = $param["ErrorCode"];
+        if (array_key_exists('ErrorCode',$param) and $param['ErrorCode'] !== null) {
+            $this->ErrorCode = $param['ErrorCode'];
         }
 
-        if (array_key_exists("State",$param) and $param["State"] !== null) {
-            $this->State = $param["State"];
+        if (array_key_exists('State',$param) and $param['State'] !== null) {
+            $this->State = $param['State'];
         }
 
-        if (array_key_exists("ProtocolType",$param) and $param["ProtocolType"] !== null) {
-            $this->ProtocolType = $param["ProtocolType"];
+        if (array_key_exists('ProtocolType',$param) and $param['ProtocolType'] !== null) {
+            $this->ProtocolType = $param['ProtocolType'];
         }
 
-        if (array_key_exists("Protocol",$param) and $param["Protocol"] !== null) {
-            $this->Protocol = $param["Protocol"];
+        if (array_key_exists('Protocol',$param) and $param['Protocol'] !== null) {
+            $this->Protocol = $param['Protocol'];
         }
 
-        if (array_key_exists("Members",$param) and $param["Members"] !== null) {
+        if (array_key_exists('Members',$param) and $param['Members'] !== null) {
             $this->Members = [];
-            foreach ($param["Members"] as $key => $value){
+            foreach ($param['Members'] as $key => $value){
                 $obj = new GroupInfoMember();
                 $obj->deserialize($value);
                 array_push($this->Members, $obj);
             }
         }
 
-        if (array_key_exists("Group",$param) and $param["Group"] !== null) {
-            $this->Group = $param["Group"];
+        if (array_key_exists('Group',$param) and $param['Group'] !== null) {
+            $this->Group = $param['Group'];
         }
     }
 }

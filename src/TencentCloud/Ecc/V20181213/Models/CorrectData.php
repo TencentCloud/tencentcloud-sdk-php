@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -70,22 +70,22 @@ class CorrectData extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Score",$param) and $param["Score"] !== null) {
-            $this->Score = $param["Score"];
+        if (array_key_exists('Score',$param) and $param['Score'] !== null) {
+            $this->Score = $param['Score'];
         }
 
-        if (array_key_exists("ScoreCat",$param) and $param["ScoreCat"] !== null) {
+        if (array_key_exists('ScoreCat',$param) and $param['ScoreCat'] !== null) {
             $this->ScoreCat = new ScoreCategory();
-            $this->ScoreCat->deserialize($param["ScoreCat"]);
+            $this->ScoreCat->deserialize($param['ScoreCat']);
         }
 
-        if (array_key_exists("Comment",$param) and $param["Comment"] !== null) {
-            $this->Comment = $param["Comment"];
+        if (array_key_exists('Comment',$param) and $param['Comment'] !== null) {
+            $this->Comment = $param['Comment'];
         }
 
-        if (array_key_exists("SentenceComments",$param) and $param["SentenceComments"] !== null) {
+        if (array_key_exists('SentenceComments',$param) and $param['SentenceComments'] !== null) {
             $this->SentenceComments = [];
-            foreach ($param["SentenceComments"] as $key => $value){
+            foreach ($param['SentenceComments'] as $key => $value){
                 $obj = new SentenceCom();
                 $obj->deserialize($value);
                 array_push($this->SentenceComments, $obj);

@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -78,20 +78,20 @@ class StopInstancesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceIds",$param) and $param["InstanceIds"] !== null) {
-            $this->InstanceIds = $param["InstanceIds"];
+        if (array_key_exists('InstanceIds',$param) and $param['InstanceIds'] !== null) {
+            $this->InstanceIds = $param['InstanceIds'];
         }
 
-        if (array_key_exists("ForceStop",$param) and $param["ForceStop"] !== null) {
-            $this->ForceStop = $param["ForceStop"];
+        if (array_key_exists('ForceStop',$param) and $param['ForceStop'] !== null) {
+            $this->ForceStop = $param['ForceStop'];
         }
 
-        if (array_key_exists("StopType",$param) and $param["StopType"] !== null) {
-            $this->StopType = $param["StopType"];
+        if (array_key_exists('StopType',$param) and $param['StopType'] !== null) {
+            $this->StopType = $param['StopType'];
         }
 
-        if (array_key_exists("StoppedMode",$param) and $param["StoppedMode"] !== null) {
-            $this->StoppedMode = $param["StoppedMode"];
+        if (array_key_exists('StoppedMode',$param) and $param['StoppedMode'] !== null) {
+            $this->StoppedMode = $param['StoppedMode'];
         }
     }
 }

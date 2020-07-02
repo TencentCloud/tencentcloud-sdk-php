@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -134,40 +134,40 @@ topspeed_H265：极速高清-H265。
         if ($param === null) {
             return;
         }
-        if (array_key_exists("StreamName",$param) and $param["StreamName"] !== null) {
-            $this->StreamName = $param["StreamName"];
+        if (array_key_exists('StreamName',$param) and $param['StreamName'] !== null) {
+            $this->StreamName = $param['StreamName'];
         }
 
-        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
-            $this->StartTime = $param["StartTime"];
+        if (array_key_exists('StartTime',$param) and $param['StartTime'] !== null) {
+            $this->StartTime = $param['StartTime'];
         }
 
-        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
-            $this->EndTime = $param["EndTime"];
+        if (array_key_exists('EndTime',$param) and $param['EndTime'] !== null) {
+            $this->EndTime = $param['EndTime'];
         }
 
-        if (array_key_exists("Duration",$param) and $param["Duration"] !== null) {
-            $this->Duration = $param["Duration"];
+        if (array_key_exists('Duration',$param) and $param['Duration'] !== null) {
+            $this->Duration = $param['Duration'];
         }
 
-        if (array_key_exists("ModuleCodec",$param) and $param["ModuleCodec"] !== null) {
-            $this->ModuleCodec = $param["ModuleCodec"];
+        if (array_key_exists('ModuleCodec',$param) and $param['ModuleCodec'] !== null) {
+            $this->ModuleCodec = $param['ModuleCodec'];
         }
 
-        if (array_key_exists("Bitrate",$param) and $param["Bitrate"] !== null) {
-            $this->Bitrate = $param["Bitrate"];
+        if (array_key_exists('Bitrate',$param) and $param['Bitrate'] !== null) {
+            $this->Bitrate = $param['Bitrate'];
         }
 
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists('Type',$param) and $param['Type'] !== null) {
+            $this->Type = $param['Type'];
         }
 
-        if (array_key_exists("PushDomain",$param) and $param["PushDomain"] !== null) {
-            $this->PushDomain = $param["PushDomain"];
+        if (array_key_exists('PushDomain',$param) and $param['PushDomain'] !== null) {
+            $this->PushDomain = $param['PushDomain'];
         }
 
-        if (array_key_exists("Resolution",$param) and $param["Resolution"] !== null) {
-            $this->Resolution = $param["Resolution"];
+        if (array_key_exists('Resolution',$param) and $param['Resolution'] !== null) {
+            $this->Resolution = $param['Resolution'];
         }
     }
 }

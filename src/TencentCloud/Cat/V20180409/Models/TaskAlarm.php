@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -118,44 +118,44 @@ class TaskAlarm extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
-            $this->TaskId = $param["TaskId"];
+        if (array_key_exists('TaskId',$param) and $param['TaskId'] !== null) {
+            $this->TaskId = $param['TaskId'];
         }
 
-        if (array_key_exists("TaskName",$param) and $param["TaskName"] !== null) {
-            $this->TaskName = $param["TaskName"];
+        if (array_key_exists('TaskName',$param) and $param['TaskName'] !== null) {
+            $this->TaskName = $param['TaskName'];
         }
 
-        if (array_key_exists("Period",$param) and $param["Period"] !== null) {
-            $this->Period = $param["Period"];
+        if (array_key_exists('Period',$param) and $param['Period'] !== null) {
+            $this->Period = $param['Period'];
         }
 
-        if (array_key_exists("CatTypeName",$param) and $param["CatTypeName"] !== null) {
-            $this->CatTypeName = $param["CatTypeName"];
+        if (array_key_exists('CatTypeName',$param) and $param['CatTypeName'] !== null) {
+            $this->CatTypeName = $param['CatTypeName'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("CgiUrl",$param) and $param["CgiUrl"] !== null) {
-            $this->CgiUrl = $param["CgiUrl"];
+        if (array_key_exists('CgiUrl',$param) and $param['CgiUrl'] !== null) {
+            $this->CgiUrl = $param['CgiUrl'];
         }
 
-        if (array_key_exists("AddTime",$param) and $param["AddTime"] !== null) {
-            $this->AddTime = $param["AddTime"];
+        if (array_key_exists('AddTime',$param) and $param['AddTime'] !== null) {
+            $this->AddTime = $param['AddTime'];
         }
 
-        if (array_key_exists("AlarmStatus",$param) and $param["AlarmStatus"] !== null) {
-            $this->AlarmStatus = $param["AlarmStatus"];
+        if (array_key_exists('AlarmStatus',$param) and $param['AlarmStatus'] !== null) {
+            $this->AlarmStatus = $param['AlarmStatus'];
         }
 
-        if (array_key_exists("StatusInfo",$param) and $param["StatusInfo"] !== null) {
-            $this->StatusInfo = $param["StatusInfo"];
+        if (array_key_exists('StatusInfo',$param) and $param['StatusInfo'] !== null) {
+            $this->StatusInfo = $param['StatusInfo'];
         }
 
-        if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
-            $this->UpdateTime = $param["UpdateTime"];
+        if (array_key_exists('UpdateTime',$param) and $param['UpdateTime'] !== null) {
+            $this->UpdateTime = $param['UpdateTime'];
         }
     }
 }

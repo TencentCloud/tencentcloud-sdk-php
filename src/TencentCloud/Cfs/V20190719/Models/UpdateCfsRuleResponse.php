@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -94,32 +94,32 @@ class UpdateCfsRuleResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PGroupId",$param) and $param["PGroupId"] !== null) {
-            $this->PGroupId = $param["PGroupId"];
+        if (array_key_exists('PGroupId',$param) and $param['PGroupId'] !== null) {
+            $this->PGroupId = $param['PGroupId'];
         }
 
-        if (array_key_exists("RuleId",$param) and $param["RuleId"] !== null) {
-            $this->RuleId = $param["RuleId"];
+        if (array_key_exists('RuleId',$param) and $param['RuleId'] !== null) {
+            $this->RuleId = $param['RuleId'];
         }
 
-        if (array_key_exists("AuthClientIp",$param) and $param["AuthClientIp"] !== null) {
-            $this->AuthClientIp = $param["AuthClientIp"];
+        if (array_key_exists('AuthClientIp',$param) and $param['AuthClientIp'] !== null) {
+            $this->AuthClientIp = $param['AuthClientIp'];
         }
 
-        if (array_key_exists("RWPermission",$param) and $param["RWPermission"] !== null) {
-            $this->RWPermission = $param["RWPermission"];
+        if (array_key_exists('RWPermission',$param) and $param['RWPermission'] !== null) {
+            $this->RWPermission = $param['RWPermission'];
         }
 
-        if (array_key_exists("UserPermission",$param) and $param["UserPermission"] !== null) {
-            $this->UserPermission = $param["UserPermission"];
+        if (array_key_exists('UserPermission',$param) and $param['UserPermission'] !== null) {
+            $this->UserPermission = $param['UserPermission'];
         }
 
-        if (array_key_exists("Priority",$param) and $param["Priority"] !== null) {
-            $this->Priority = $param["Priority"];
+        if (array_key_exists('Priority',$param) and $param['Priority'] !== null) {
+            $this->Priority = $param['Priority'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

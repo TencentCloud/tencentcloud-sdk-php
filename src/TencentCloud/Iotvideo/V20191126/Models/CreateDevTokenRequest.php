@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -62,16 +62,16 @@ class CreateDevTokenRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AccessId",$param) and $param["AccessId"] !== null) {
-            $this->AccessId = $param["AccessId"];
+        if (array_key_exists('AccessId',$param) and $param['AccessId'] !== null) {
+            $this->AccessId = $param['AccessId'];
         }
 
-        if (array_key_exists("Tids",$param) and $param["Tids"] !== null) {
-            $this->Tids = $param["Tids"];
+        if (array_key_exists('Tids',$param) and $param['Tids'] !== null) {
+            $this->Tids = $param['Tids'];
         }
 
-        if (array_key_exists("TtlMinutes",$param) and $param["TtlMinutes"] !== null) {
-            $this->TtlMinutes = $param["TtlMinutes"];
+        if (array_key_exists('TtlMinutes',$param) and $param['TtlMinutes'] !== null) {
+            $this->TtlMinutes = $param['TtlMinutes'];
         }
     }
 }

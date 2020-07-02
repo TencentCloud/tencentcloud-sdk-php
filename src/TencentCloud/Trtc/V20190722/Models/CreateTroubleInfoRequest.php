@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -134,36 +134,36 @@ class CreateTroubleInfoRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SdkAppId",$param) and $param["SdkAppId"] !== null) {
-            $this->SdkAppId = $param["SdkAppId"];
+        if (array_key_exists('SdkAppId',$param) and $param['SdkAppId'] !== null) {
+            $this->SdkAppId = $param['SdkAppId'];
         }
 
-        if (array_key_exists("RoomId",$param) and $param["RoomId"] !== null) {
-            $this->RoomId = $param["RoomId"];
+        if (array_key_exists('RoomId',$param) and $param['RoomId'] !== null) {
+            $this->RoomId = $param['RoomId'];
         }
 
-        if (array_key_exists("TeacherUserId",$param) and $param["TeacherUserId"] !== null) {
-            $this->TeacherUserId = $param["TeacherUserId"];
+        if (array_key_exists('TeacherUserId',$param) and $param['TeacherUserId'] !== null) {
+            $this->TeacherUserId = $param['TeacherUserId'];
         }
 
-        if (array_key_exists("StudentUserId",$param) and $param["StudentUserId"] !== null) {
-            $this->StudentUserId = $param["StudentUserId"];
+        if (array_key_exists('StudentUserId',$param) and $param['StudentUserId'] !== null) {
+            $this->StudentUserId = $param['StudentUserId'];
         }
 
-        if (array_key_exists("TroubleUserId",$param) and $param["TroubleUserId"] !== null) {
-            $this->TroubleUserId = $param["TroubleUserId"];
+        if (array_key_exists('TroubleUserId',$param) and $param['TroubleUserId'] !== null) {
+            $this->TroubleUserId = $param['TroubleUserId'];
         }
 
-        if (array_key_exists("TroubleType",$param) and $param["TroubleType"] !== null) {
-            $this->TroubleType = $param["TroubleType"];
+        if (array_key_exists('TroubleType',$param) and $param['TroubleType'] !== null) {
+            $this->TroubleType = $param['TroubleType'];
         }
 
-        if (array_key_exists("TroubleTime",$param) and $param["TroubleTime"] !== null) {
-            $this->TroubleTime = $param["TroubleTime"];
+        if (array_key_exists('TroubleTime',$param) and $param['TroubleTime'] !== null) {
+            $this->TroubleTime = $param['TroubleTime'];
         }
 
-        if (array_key_exists("TroubleMsg",$param) and $param["TroubleMsg"] !== null) {
-            $this->TroubleMsg = $param["TroubleMsg"];
+        if (array_key_exists('TroubleMsg',$param) and $param['TroubleMsg'] !== null) {
+            $this->TroubleMsg = $param['TroubleMsg'];
         }
     }
 }

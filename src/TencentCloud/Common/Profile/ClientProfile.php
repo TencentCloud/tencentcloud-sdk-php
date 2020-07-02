@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -29,12 +29,12 @@ class ClientProfile
     /**
      * @var string  hmacsha1算法
      */
-    public static $SIGN_HMAC_SHA1 = "HmacSHA1";
+    public static $SIGN_HMAC_SHA1 = 'HmacSHA1';
 
     /**
      * @var string hmacsha256算法
      */
-    public static $SIGN_HMAC_SHA256 = "HmacSHA256";
+    public static $SIGN_HMAC_SHA256 = 'HmacSHA256';
 
     /**
      * @var string 签名V3

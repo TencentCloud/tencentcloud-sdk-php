@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpnGatewayId(string $VpnGatewayId) 设置VPN网关实例ID
  * @method string getVpnConnectionName() 获取VPN通道名称
  * @method void setVpnConnectionName(string $VpnConnectionName) 设置VPN通道名称
- * @method string getOrderField() 获取排序字段, 支持"CreateTime"排序
- * @method void setOrderField(string $OrderField) 设置排序字段, 支持"CreateTime"排序
+ * @method string getOrderField() 获取排序字段, 支持'CreateTime'排序
+ * @method void setOrderField(string $OrderField) 设置排序字段, 支持'CreateTime'排序
  * @method string getOrderDirection() 获取排序方向, “asc”、“desc”
  * @method void setOrderDirection(string $OrderDirection) 设置排序方向, “asc”、“desc”
  */
@@ -79,7 +79,7 @@ class DescribeVpnConnectionsRequest extends AbstractModel
     public $VpnConnectionName;
 
     /**
-     * @var string 排序字段, 支持"CreateTime"排序
+     * @var string 排序字段, 支持'CreateTime'排序
      */
     public $OrderField;
 
@@ -98,7 +98,7 @@ class DescribeVpnConnectionsRequest extends AbstractModel
      * @param integer $Limit 返回数量，默认为20，最大值为100。
      * @param string $VpnGatewayId VPN网关实例ID
      * @param string $VpnConnectionName VPN通道名称
-     * @param string $OrderField 排序字段, 支持"CreateTime"排序
+     * @param string $OrderField 排序字段, 支持'CreateTime'排序
      * @param string $OrderDirection 排序方向, “asc”、“desc”
      */
     function __construct()
@@ -114,41 +114,41 @@ class DescribeVpnConnectionsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("VpnConnectionIds",$param) and $param["VpnConnectionIds"] !== null) {
-            $this->VpnConnectionIds = $param["VpnConnectionIds"];
+        if (array_key_exists('VpnConnectionIds',$param) and $param['VpnConnectionIds'] !== null) {
+            $this->VpnConnectionIds = $param['VpnConnectionIds'];
         }
 
-        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+        if (array_key_exists('Filters',$param) and $param['Filters'] !== null) {
             $this->Filters = [];
-            foreach ($param["Filters"] as $key => $value){
+            foreach ($param['Filters'] as $key => $value){
                 $obj = new Filter();
                 $obj->deserialize($value);
                 array_push($this->Filters, $obj);
             }
         }
 
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
+        if (array_key_exists('Offset',$param) and $param['Offset'] !== null) {
+            $this->Offset = $param['Offset'];
         }
 
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
+        if (array_key_exists('Limit',$param) and $param['Limit'] !== null) {
+            $this->Limit = $param['Limit'];
         }
 
-        if (array_key_exists("VpnGatewayId",$param) and $param["VpnGatewayId"] !== null) {
-            $this->VpnGatewayId = $param["VpnGatewayId"];
+        if (array_key_exists('VpnGatewayId',$param) and $param['VpnGatewayId'] !== null) {
+            $this->VpnGatewayId = $param['VpnGatewayId'];
         }
 
-        if (array_key_exists("VpnConnectionName",$param) and $param["VpnConnectionName"] !== null) {
-            $this->VpnConnectionName = $param["VpnConnectionName"];
+        if (array_key_exists('VpnConnectionName',$param) and $param['VpnConnectionName'] !== null) {
+            $this->VpnConnectionName = $param['VpnConnectionName'];
         }
 
-        if (array_key_exists("OrderField",$param) and $param["OrderField"] !== null) {
-            $this->OrderField = $param["OrderField"];
+        if (array_key_exists('OrderField',$param) and $param['OrderField'] !== null) {
+            $this->OrderField = $param['OrderField'];
         }
 
-        if (array_key_exists("OrderDirection",$param) and $param["OrderDirection"] !== null) {
-            $this->OrderDirection = $param["OrderDirection"];
+        if (array_key_exists('OrderDirection',$param) and $param['OrderDirection'] !== null) {
+            $this->OrderDirection = $param['OrderDirection'];
         }
     }
 }

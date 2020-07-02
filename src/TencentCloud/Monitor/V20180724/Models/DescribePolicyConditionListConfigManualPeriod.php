@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -70,16 +70,16 @@ class DescribePolicyConditionListConfigManualPeriod extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Default",$param) and $param["Default"] !== null) {
-            $this->Default = $param["Default"];
+        if (array_key_exists('Default',$param) and $param['Default'] !== null) {
+            $this->Default = $param['Default'];
         }
 
-        if (array_key_exists("Keys",$param) and $param["Keys"] !== null) {
-            $this->Keys = $param["Keys"];
+        if (array_key_exists('Keys',$param) and $param['Keys'] !== null) {
+            $this->Keys = $param['Keys'];
         }
 
-        if (array_key_exists("Need",$param) and $param["Need"] !== null) {
-            $this->Need = $param["Need"];
+        if (array_key_exists('Need',$param) and $param['Need'] !== null) {
+            $this->Need = $param['Need'];
         }
     }
 }

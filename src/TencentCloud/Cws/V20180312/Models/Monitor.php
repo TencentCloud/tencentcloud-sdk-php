@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -158,64 +158,64 @@ class Monitor extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
-            $this->Id = $param["Id"];
+        if (array_key_exists('Id',$param) and $param['Id'] !== null) {
+            $this->Id = $param['Id'];
         }
 
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("MonitorStatus",$param) and $param["MonitorStatus"] !== null) {
-            $this->MonitorStatus = $param["MonitorStatus"];
+        if (array_key_exists('MonitorStatus',$param) and $param['MonitorStatus'] !== null) {
+            $this->MonitorStatus = $param['MonitorStatus'];
         }
 
-        if (array_key_exists("ScannerType",$param) and $param["ScannerType"] !== null) {
-            $this->ScannerType = $param["ScannerType"];
+        if (array_key_exists('ScannerType',$param) and $param['ScannerType'] !== null) {
+            $this->ScannerType = $param['ScannerType'];
         }
 
-        if (array_key_exists("Crontab",$param) and $param["Crontab"] !== null) {
-            $this->Crontab = $param["Crontab"];
+        if (array_key_exists('Crontab',$param) and $param['Crontab'] !== null) {
+            $this->Crontab = $param['Crontab'];
         }
 
-        if (array_key_exists("IncludedVulsTypes",$param) and $param["IncludedVulsTypes"] !== null) {
-            $this->IncludedVulsTypes = $param["IncludedVulsTypes"];
+        if (array_key_exists('IncludedVulsTypes',$param) and $param['IncludedVulsTypes'] !== null) {
+            $this->IncludedVulsTypes = $param['IncludedVulsTypes'];
         }
 
-        if (array_key_exists("RateLimit",$param) and $param["RateLimit"] !== null) {
-            $this->RateLimit = $param["RateLimit"];
+        if (array_key_exists('RateLimit',$param) and $param['RateLimit'] !== null) {
+            $this->RateLimit = $param['RateLimit'];
         }
 
-        if (array_key_exists("FirstScanStartTime",$param) and $param["FirstScanStartTime"] !== null) {
-            $this->FirstScanStartTime = $param["FirstScanStartTime"];
+        if (array_key_exists('FirstScanStartTime',$param) and $param['FirstScanStartTime'] !== null) {
+            $this->FirstScanStartTime = $param['FirstScanStartTime'];
         }
 
-        if (array_key_exists("ScanStatus",$param) and $param["ScanStatus"] !== null) {
-            $this->ScanStatus = $param["ScanStatus"];
+        if (array_key_exists('ScanStatus',$param) and $param['ScanStatus'] !== null) {
+            $this->ScanStatus = $param['ScanStatus'];
         }
 
-        if (array_key_exists("LastScanFinishTime",$param) and $param["LastScanFinishTime"] !== null) {
-            $this->LastScanFinishTime = $param["LastScanFinishTime"];
+        if (array_key_exists('LastScanFinishTime',$param) and $param['LastScanFinishTime'] !== null) {
+            $this->LastScanFinishTime = $param['LastScanFinishTime'];
         }
 
-        if (array_key_exists("CurrentScanStartTime",$param) and $param["CurrentScanStartTime"] !== null) {
-            $this->CurrentScanStartTime = $param["CurrentScanStartTime"];
+        if (array_key_exists('CurrentScanStartTime',$param) and $param['CurrentScanStartTime'] !== null) {
+            $this->CurrentScanStartTime = $param['CurrentScanStartTime'];
         }
 
-        if (array_key_exists("CreatedAt",$param) and $param["CreatedAt"] !== null) {
-            $this->CreatedAt = $param["CreatedAt"];
+        if (array_key_exists('CreatedAt',$param) and $param['CreatedAt'] !== null) {
+            $this->CreatedAt = $param['CreatedAt'];
         }
 
-        if (array_key_exists("UpdatedAt",$param) and $param["UpdatedAt"] !== null) {
-            $this->UpdatedAt = $param["UpdatedAt"];
+        if (array_key_exists('UpdatedAt',$param) and $param['UpdatedAt'] !== null) {
+            $this->UpdatedAt = $param['UpdatedAt'];
         }
 
-        if (array_key_exists("Appid",$param) and $param["Appid"] !== null) {
-            $this->Appid = $param["Appid"];
+        if (array_key_exists('Appid',$param) and $param['Appid'] !== null) {
+            $this->Appid = $param['Appid'];
         }
 
-        if (array_key_exists("ContentScanStatus",$param) and $param["ContentScanStatus"] !== null) {
-            $this->ContentScanStatus = $param["ContentScanStatus"];
+        if (array_key_exists('ContentScanStatus',$param) and $param['ContentScanStatus'] !== null) {
+            $this->ContentScanStatus = $param['ContentScanStatus'];
         }
     }
 }

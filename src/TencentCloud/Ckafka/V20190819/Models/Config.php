@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -126,32 +126,32 @@ delete：日志按保存时间删除；compact：日志按 key 压缩；compact,
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Retention",$param) and $param["Retention"] !== null) {
-            $this->Retention = $param["Retention"];
+        if (array_key_exists('Retention',$param) and $param['Retention'] !== null) {
+            $this->Retention = $param['Retention'];
         }
 
-        if (array_key_exists("MinInsyncReplicas",$param) and $param["MinInsyncReplicas"] !== null) {
-            $this->MinInsyncReplicas = $param["MinInsyncReplicas"];
+        if (array_key_exists('MinInsyncReplicas',$param) and $param['MinInsyncReplicas'] !== null) {
+            $this->MinInsyncReplicas = $param['MinInsyncReplicas'];
         }
 
-        if (array_key_exists("CleanUpPolicy",$param) and $param["CleanUpPolicy"] !== null) {
-            $this->CleanUpPolicy = $param["CleanUpPolicy"];
+        if (array_key_exists('CleanUpPolicy',$param) and $param['CleanUpPolicy'] !== null) {
+            $this->CleanUpPolicy = $param['CleanUpPolicy'];
         }
 
-        if (array_key_exists("SegmentMs",$param) and $param["SegmentMs"] !== null) {
-            $this->SegmentMs = $param["SegmentMs"];
+        if (array_key_exists('SegmentMs',$param) and $param['SegmentMs'] !== null) {
+            $this->SegmentMs = $param['SegmentMs'];
         }
 
-        if (array_key_exists("UncleanLeaderElectionEnable",$param) and $param["UncleanLeaderElectionEnable"] !== null) {
-            $this->UncleanLeaderElectionEnable = $param["UncleanLeaderElectionEnable"];
+        if (array_key_exists('UncleanLeaderElectionEnable',$param) and $param['UncleanLeaderElectionEnable'] !== null) {
+            $this->UncleanLeaderElectionEnable = $param['UncleanLeaderElectionEnable'];
         }
 
-        if (array_key_exists("SegmentBytes",$param) and $param["SegmentBytes"] !== null) {
-            $this->SegmentBytes = $param["SegmentBytes"];
+        if (array_key_exists('SegmentBytes',$param) and $param['SegmentBytes'] !== null) {
+            $this->SegmentBytes = $param['SegmentBytes'];
         }
 
-        if (array_key_exists("MaxMessageBytes",$param) and $param["MaxMessageBytes"] !== null) {
-            $this->MaxMessageBytes = $param["MaxMessageBytes"];
+        if (array_key_exists('MaxMessageBytes',$param) and $param['MaxMessageBytes'] !== null) {
+            $this->MaxMessageBytes = $param['MaxMessageBytes'];
         }
     }
 }

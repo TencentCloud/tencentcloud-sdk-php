@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -110,40 +110,40 @@ class InstanceIntegerParam extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ParamName",$param) and $param["ParamName"] !== null) {
-            $this->ParamName = $param["ParamName"];
+        if (array_key_exists('ParamName',$param) and $param['ParamName'] !== null) {
+            $this->ParamName = $param['ParamName'];
         }
 
-        if (array_key_exists("ValueType",$param) and $param["ValueType"] !== null) {
-            $this->ValueType = $param["ValueType"];
+        if (array_key_exists('ValueType',$param) and $param['ValueType'] !== null) {
+            $this->ValueType = $param['ValueType'];
         }
 
-        if (array_key_exists("NeedRestart",$param) and $param["NeedRestart"] !== null) {
-            $this->NeedRestart = $param["NeedRestart"];
+        if (array_key_exists('NeedRestart',$param) and $param['NeedRestart'] !== null) {
+            $this->NeedRestart = $param['NeedRestart'];
         }
 
-        if (array_key_exists("DefaultValue",$param) and $param["DefaultValue"] !== null) {
-            $this->DefaultValue = $param["DefaultValue"];
+        if (array_key_exists('DefaultValue',$param) and $param['DefaultValue'] !== null) {
+            $this->DefaultValue = $param['DefaultValue'];
         }
 
-        if (array_key_exists("CurrentValue",$param) and $param["CurrentValue"] !== null) {
-            $this->CurrentValue = $param["CurrentValue"];
+        if (array_key_exists('CurrentValue',$param) and $param['CurrentValue'] !== null) {
+            $this->CurrentValue = $param['CurrentValue'];
         }
 
-        if (array_key_exists("Tips",$param) and $param["Tips"] !== null) {
-            $this->Tips = $param["Tips"];
+        if (array_key_exists('Tips',$param) and $param['Tips'] !== null) {
+            $this->Tips = $param['Tips'];
         }
 
-        if (array_key_exists("Min",$param) and $param["Min"] !== null) {
-            $this->Min = $param["Min"];
+        if (array_key_exists('Min',$param) and $param['Min'] !== null) {
+            $this->Min = $param['Min'];
         }
 
-        if (array_key_exists("Max",$param) and $param["Max"] !== null) {
-            $this->Max = $param["Max"];
+        if (array_key_exists('Max',$param) and $param['Max'] !== null) {
+            $this->Max = $param['Max'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
     }
 }

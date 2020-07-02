@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -86,21 +86,21 @@ class InputDataConfig extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ChannelName",$param) and $param["ChannelName"] !== null) {
-            $this->ChannelName = $param["ChannelName"];
+        if (array_key_exists('ChannelName',$param) and $param['ChannelName'] !== null) {
+            $this->ChannelName = $param['ChannelName'];
         }
 
-        if (array_key_exists("DataSource",$param) and $param["DataSource"] !== null) {
+        if (array_key_exists('DataSource',$param) and $param['DataSource'] !== null) {
             $this->DataSource = new DataSource();
-            $this->DataSource->deserialize($param["DataSource"]);
+            $this->DataSource->deserialize($param['DataSource']);
         }
 
-        if (array_key_exists("InputMode",$param) and $param["InputMode"] !== null) {
-            $this->InputMode = $param["InputMode"];
+        if (array_key_exists('InputMode',$param) and $param['InputMode'] !== null) {
+            $this->InputMode = $param['InputMode'];
         }
 
-        if (array_key_exists("ContentType",$param) and $param["ContentType"] !== null) {
-            $this->ContentType = $param["ContentType"];
+        if (array_key_exists('ContentType',$param) and $param['ContentType'] !== null) {
+            $this->ContentType = $param['ContentType'];
         }
     }
 }

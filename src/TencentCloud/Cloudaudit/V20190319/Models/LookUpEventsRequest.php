@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -86,33 +86,33 @@ class LookUpEventsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
-            $this->EndTime = $param["EndTime"];
+        if (array_key_exists('EndTime',$param) and $param['EndTime'] !== null) {
+            $this->EndTime = $param['EndTime'];
         }
 
-        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
-            $this->StartTime = $param["StartTime"];
+        if (array_key_exists('StartTime',$param) and $param['StartTime'] !== null) {
+            $this->StartTime = $param['StartTime'];
         }
 
-        if (array_key_exists("LookupAttributes",$param) and $param["LookupAttributes"] !== null) {
+        if (array_key_exists('LookupAttributes',$param) and $param['LookupAttributes'] !== null) {
             $this->LookupAttributes = [];
-            foreach ($param["LookupAttributes"] as $key => $value){
+            foreach ($param['LookupAttributes'] as $key => $value){
                 $obj = new LookupAttribute();
                 $obj->deserialize($value);
                 array_push($this->LookupAttributes, $obj);
             }
         }
 
-        if (array_key_exists("MaxResults",$param) and $param["MaxResults"] !== null) {
-            $this->MaxResults = $param["MaxResults"];
+        if (array_key_exists('MaxResults',$param) and $param['MaxResults'] !== null) {
+            $this->MaxResults = $param['MaxResults'];
         }
 
-        if (array_key_exists("Mode",$param) and $param["Mode"] !== null) {
-            $this->Mode = $param["Mode"];
+        if (array_key_exists('Mode',$param) and $param['Mode'] !== null) {
+            $this->Mode = $param['Mode'];
         }
 
-        if (array_key_exists("NextToken",$param) and $param["NextToken"] !== null) {
-            $this->NextToken = $param["NextToken"];
+        if (array_key_exists('NextToken',$param) and $param['NextToken'] !== null) {
+            $this->NextToken = $param['NextToken'];
         }
     }
 }

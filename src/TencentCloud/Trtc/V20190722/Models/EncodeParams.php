@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -118,44 +118,44 @@ class EncodeParams extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AudioSampleRate",$param) and $param["AudioSampleRate"] !== null) {
-            $this->AudioSampleRate = $param["AudioSampleRate"];
+        if (array_key_exists('AudioSampleRate',$param) and $param['AudioSampleRate'] !== null) {
+            $this->AudioSampleRate = $param['AudioSampleRate'];
         }
 
-        if (array_key_exists("AudioBitrate",$param) and $param["AudioBitrate"] !== null) {
-            $this->AudioBitrate = $param["AudioBitrate"];
+        if (array_key_exists('AudioBitrate',$param) and $param['AudioBitrate'] !== null) {
+            $this->AudioBitrate = $param['AudioBitrate'];
         }
 
-        if (array_key_exists("AudioChannels",$param) and $param["AudioChannels"] !== null) {
-            $this->AudioChannels = $param["AudioChannels"];
+        if (array_key_exists('AudioChannels',$param) and $param['AudioChannels'] !== null) {
+            $this->AudioChannels = $param['AudioChannels'];
         }
 
-        if (array_key_exists("VideoWidth",$param) and $param["VideoWidth"] !== null) {
-            $this->VideoWidth = $param["VideoWidth"];
+        if (array_key_exists('VideoWidth',$param) and $param['VideoWidth'] !== null) {
+            $this->VideoWidth = $param['VideoWidth'];
         }
 
-        if (array_key_exists("VideoHeight",$param) and $param["VideoHeight"] !== null) {
-            $this->VideoHeight = $param["VideoHeight"];
+        if (array_key_exists('VideoHeight',$param) and $param['VideoHeight'] !== null) {
+            $this->VideoHeight = $param['VideoHeight'];
         }
 
-        if (array_key_exists("VideoBitrate",$param) and $param["VideoBitrate"] !== null) {
-            $this->VideoBitrate = $param["VideoBitrate"];
+        if (array_key_exists('VideoBitrate',$param) and $param['VideoBitrate'] !== null) {
+            $this->VideoBitrate = $param['VideoBitrate'];
         }
 
-        if (array_key_exists("VideoFramerate",$param) and $param["VideoFramerate"] !== null) {
-            $this->VideoFramerate = $param["VideoFramerate"];
+        if (array_key_exists('VideoFramerate',$param) and $param['VideoFramerate'] !== null) {
+            $this->VideoFramerate = $param['VideoFramerate'];
         }
 
-        if (array_key_exists("VideoGop",$param) and $param["VideoGop"] !== null) {
-            $this->VideoGop = $param["VideoGop"];
+        if (array_key_exists('VideoGop',$param) and $param['VideoGop'] !== null) {
+            $this->VideoGop = $param['VideoGop'];
         }
 
-        if (array_key_exists("BackgroundColor",$param) and $param["BackgroundColor"] !== null) {
-            $this->BackgroundColor = $param["BackgroundColor"];
+        if (array_key_exists('BackgroundColor',$param) and $param['BackgroundColor'] !== null) {
+            $this->BackgroundColor = $param['BackgroundColor'];
         }
 
-        if (array_key_exists("BackgroundImageId",$param) and $param["BackgroundImageId"] !== null) {
-            $this->BackgroundImageId = $param["BackgroundImageId"];
+        if (array_key_exists('BackgroundImageId',$param) and $param['BackgroundImageId'] !== null) {
+            $this->BackgroundImageId = $param['BackgroundImageId'];
         }
     }
 }

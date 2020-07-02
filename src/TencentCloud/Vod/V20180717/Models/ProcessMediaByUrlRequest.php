@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -118,49 +118,49 @@ class ProcessMediaByUrlRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InputInfo",$param) and $param["InputInfo"] !== null) {
+        if (array_key_exists('InputInfo',$param) and $param['InputInfo'] !== null) {
             $this->InputInfo = new MediaInputInfo();
-            $this->InputInfo->deserialize($param["InputInfo"]);
+            $this->InputInfo->deserialize($param['InputInfo']);
         }
 
-        if (array_key_exists("OutputInfo",$param) and $param["OutputInfo"] !== null) {
+        if (array_key_exists('OutputInfo',$param) and $param['OutputInfo'] !== null) {
             $this->OutputInfo = new MediaOutputInfo();
-            $this->OutputInfo->deserialize($param["OutputInfo"]);
+            $this->OutputInfo->deserialize($param['OutputInfo']);
         }
 
-        if (array_key_exists("AiContentReviewTask",$param) and $param["AiContentReviewTask"] !== null) {
+        if (array_key_exists('AiContentReviewTask',$param) and $param['AiContentReviewTask'] !== null) {
             $this->AiContentReviewTask = new AiContentReviewTaskInput();
-            $this->AiContentReviewTask->deserialize($param["AiContentReviewTask"]);
+            $this->AiContentReviewTask->deserialize($param['AiContentReviewTask']);
         }
 
-        if (array_key_exists("AiAnalysisTask",$param) and $param["AiAnalysisTask"] !== null) {
+        if (array_key_exists('AiAnalysisTask',$param) and $param['AiAnalysisTask'] !== null) {
             $this->AiAnalysisTask = new AiAnalysisTaskInput();
-            $this->AiAnalysisTask->deserialize($param["AiAnalysisTask"]);
+            $this->AiAnalysisTask->deserialize($param['AiAnalysisTask']);
         }
 
-        if (array_key_exists("AiRecognitionTask",$param) and $param["AiRecognitionTask"] !== null) {
+        if (array_key_exists('AiRecognitionTask',$param) and $param['AiRecognitionTask'] !== null) {
             $this->AiRecognitionTask = new AiRecognitionTaskInput();
-            $this->AiRecognitionTask->deserialize($param["AiRecognitionTask"]);
+            $this->AiRecognitionTask->deserialize($param['AiRecognitionTask']);
         }
 
-        if (array_key_exists("TasksPriority",$param) and $param["TasksPriority"] !== null) {
-            $this->TasksPriority = $param["TasksPriority"];
+        if (array_key_exists('TasksPriority',$param) and $param['TasksPriority'] !== null) {
+            $this->TasksPriority = $param['TasksPriority'];
         }
 
-        if (array_key_exists("TasksNotifyMode",$param) and $param["TasksNotifyMode"] !== null) {
-            $this->TasksNotifyMode = $param["TasksNotifyMode"];
+        if (array_key_exists('TasksNotifyMode',$param) and $param['TasksNotifyMode'] !== null) {
+            $this->TasksNotifyMode = $param['TasksNotifyMode'];
         }
 
-        if (array_key_exists("SessionContext",$param) and $param["SessionContext"] !== null) {
-            $this->SessionContext = $param["SessionContext"];
+        if (array_key_exists('SessionContext',$param) and $param['SessionContext'] !== null) {
+            $this->SessionContext = $param['SessionContext'];
         }
 
-        if (array_key_exists("SessionId",$param) and $param["SessionId"] !== null) {
-            $this->SessionId = $param["SessionId"];
+        if (array_key_exists('SessionId',$param) and $param['SessionId'] !== null) {
+            $this->SessionId = $param['SessionId'];
         }
 
-        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
-            $this->SubAppId = $param["SubAppId"];
+        if (array_key_exists('SubAppId',$param) and $param['SubAppId'] !== null) {
+            $this->SubAppId = $param['SubAppId'];
         }
     }
 }

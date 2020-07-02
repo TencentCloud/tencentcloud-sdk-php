@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -44,18 +44,18 @@ RetImageType-“PROPROCESS” 图像预处理，string 类型。
 图像预处理功能为，检测图片倾斜的角度，将原本倾斜的图片围绕中心点转正，最终输出一张正的名片抠图。
 
 SDK 设置方式参考：
-Config = Json.stringify({"RetImageType":"PROPROCESS"})
+Config = Json.stringify({'RetImageType':'PROPROCESS'})
 API 3.0 Explorer 设置方式参考：
-Config = {"RetImageType":"PROPROCESS"}
+Config = {'RetImageType':'PROPROCESS'}
  * @method void setConfig(string $Config) 设置可选字段，根据需要选择是否请求对应字段。
 目前支持的字段为：
 RetImageType-“PROPROCESS” 图像预处理，string 类型。
 图像预处理功能为，检测图片倾斜的角度，将原本倾斜的图片围绕中心点转正，最终输出一张正的名片抠图。
 
 SDK 设置方式参考：
-Config = Json.stringify({"RetImageType":"PROPROCESS"})
+Config = Json.stringify({'RetImageType':'PROPROCESS'})
 API 3.0 Explorer 设置方式参考：
-Config = {"RetImageType":"PROPROCESS"}
+Config = {'RetImageType':'PROPROCESS'}
  */
 class BusinessCardOCRRequest extends AbstractModel
 {
@@ -83,9 +83,9 @@ RetImageType-“PROPROCESS” 图像预处理，string 类型。
 图像预处理功能为，检测图片倾斜的角度，将原本倾斜的图片围绕中心点转正，最终输出一张正的名片抠图。
 
 SDK 设置方式参考：
-Config = Json.stringify({"RetImageType":"PROPROCESS"})
+Config = Json.stringify({'RetImageType':'PROPROCESS'})
 API 3.0 Explorer 设置方式参考：
-Config = {"RetImageType":"PROPROCESS"}
+Config = {'RetImageType':'PROPROCESS'}
      */
     public $Config;
 
@@ -105,9 +105,9 @@ RetImageType-“PROPROCESS” 图像预处理，string 类型。
 图像预处理功能为，检测图片倾斜的角度，将原本倾斜的图片围绕中心点转正，最终输出一张正的名片抠图。
 
 SDK 设置方式参考：
-Config = Json.stringify({"RetImageType":"PROPROCESS"})
+Config = Json.stringify({'RetImageType':'PROPROCESS'})
 API 3.0 Explorer 设置方式参考：
-Config = {"RetImageType":"PROPROCESS"}
+Config = {'RetImageType':'PROPROCESS'}
      */
     function __construct()
     {
@@ -122,16 +122,16 @@ Config = {"RetImageType":"PROPROCESS"}
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ImageBase64",$param) and $param["ImageBase64"] !== null) {
-            $this->ImageBase64 = $param["ImageBase64"];
+        if (array_key_exists('ImageBase64',$param) and $param['ImageBase64'] !== null) {
+            $this->ImageBase64 = $param['ImageBase64'];
         }
 
-        if (array_key_exists("ImageUrl",$param) and $param["ImageUrl"] !== null) {
-            $this->ImageUrl = $param["ImageUrl"];
+        if (array_key_exists('ImageUrl',$param) and $param['ImageUrl'] !== null) {
+            $this->ImageUrl = $param['ImageUrl'];
         }
 
-        if (array_key_exists("Config",$param) and $param["Config"] !== null) {
-            $this->Config = $param["Config"];
+        if (array_key_exists('Config',$param) and $param['Config'] !== null) {
+            $this->Config = $param['Config'];
         }
     }
 }

@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -62,12 +62,12 @@ class ParseStreamingManifestRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MediaManifestContent",$param) and $param["MediaManifestContent"] !== null) {
-            $this->MediaManifestContent = $param["MediaManifestContent"];
+        if (array_key_exists('MediaManifestContent',$param) and $param['MediaManifestContent'] !== null) {
+            $this->MediaManifestContent = $param['MediaManifestContent'];
         }
 
-        if (array_key_exists("ManifestType",$param) and $param["ManifestType"] !== null) {
-            $this->ManifestType = $param["ManifestType"];
+        if (array_key_exists('ManifestType',$param) and $param['ManifestType'] !== null) {
+            $this->ManifestType = $param['ManifestType'];
         }
     }
 }

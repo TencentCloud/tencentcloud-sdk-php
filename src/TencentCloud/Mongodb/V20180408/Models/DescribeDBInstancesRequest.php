@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -38,10 +38,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置单次请求返回的数量，最小值为1，最大值为100，默认值为20
  * @method integer getOffset() 获取偏移量，默认值为0
  * @method void setOffset(integer $Offset) 设置偏移量，默认值为0
- * @method string getOrderBy() 获取返回结果集排序的字段，目前支持："ProjectId", "InstanceName", "CreateTime"，默认为升序排序
- * @method void setOrderBy(string $OrderBy) 设置返回结果集排序的字段，目前支持："ProjectId", "InstanceName", "CreateTime"，默认为升序排序
- * @method string getOrderByType() 获取返回结果集排序方式，目前支持："ASC"或者"DESC"
- * @method void setOrderByType(string $OrderByType) 设置返回结果集排序方式，目前支持："ASC"或者"DESC"
+ * @method string getOrderBy() 获取返回结果集排序的字段，目前支持：'ProjectId', 'InstanceName', 'CreateTime'，默认为升序排序
+ * @method void setOrderBy(string $OrderBy) 设置返回结果集排序的字段，目前支持：'ProjectId', 'InstanceName', 'CreateTime'，默认为升序排序
+ * @method string getOrderByType() 获取返回结果集排序方式，目前支持：'ASC'或者'DESC'
+ * @method void setOrderByType(string $OrderByType) 设置返回结果集排序方式，目前支持：'ASC'或者'DESC'
  */
 class DescribeDBInstancesRequest extends AbstractModel
 {
@@ -91,12 +91,12 @@ class DescribeDBInstancesRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var string 返回结果集排序的字段，目前支持："ProjectId", "InstanceName", "CreateTime"，默认为升序排序
+     * @var string 返回结果集排序的字段，目前支持：'ProjectId', 'InstanceName', 'CreateTime'，默认为升序排序
      */
     public $OrderBy;
 
     /**
-     * @var string 返回结果集排序方式，目前支持："ASC"或者"DESC"
+     * @var string 返回结果集排序方式，目前支持：'ASC'或者'DESC'
      */
     public $OrderByType;
 
@@ -110,8 +110,8 @@ class DescribeDBInstancesRequest extends AbstractModel
      * @param integer $PayMode 付费类型，取值范围：0-按量计费，1-包年包月，-1-按量计费+包年包月
      * @param integer $Limit 单次请求返回的数量，最小值为1，最大值为100，默认值为20
      * @param integer $Offset 偏移量，默认值为0
-     * @param string $OrderBy 返回结果集排序的字段，目前支持："ProjectId", "InstanceName", "CreateTime"，默认为升序排序
-     * @param string $OrderByType 返回结果集排序方式，目前支持："ASC"或者"DESC"
+     * @param string $OrderBy 返回结果集排序的字段，目前支持：'ProjectId', 'InstanceName', 'CreateTime'，默认为升序排序
+     * @param string $OrderByType 返回结果集排序方式，目前支持：'ASC'或者'DESC'
      */
     function __construct()
     {
@@ -126,48 +126,48 @@ class DescribeDBInstancesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceIds",$param) and $param["InstanceIds"] !== null) {
-            $this->InstanceIds = $param["InstanceIds"];
+        if (array_key_exists('InstanceIds',$param) and $param['InstanceIds'] !== null) {
+            $this->InstanceIds = $param['InstanceIds'];
         }
 
-        if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
-            $this->InstanceType = $param["InstanceType"];
+        if (array_key_exists('InstanceType',$param) and $param['InstanceType'] !== null) {
+            $this->InstanceType = $param['InstanceType'];
         }
 
-        if (array_key_exists("ClusterType",$param) and $param["ClusterType"] !== null) {
-            $this->ClusterType = $param["ClusterType"];
+        if (array_key_exists('ClusterType',$param) and $param['ClusterType'] !== null) {
+            $this->ClusterType = $param['ClusterType'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
-            $this->VpcId = $param["VpcId"];
+        if (array_key_exists('VpcId',$param) and $param['VpcId'] !== null) {
+            $this->VpcId = $param['VpcId'];
         }
 
-        if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
-            $this->SubnetId = $param["SubnetId"];
+        if (array_key_exists('SubnetId',$param) and $param['SubnetId'] !== null) {
+            $this->SubnetId = $param['SubnetId'];
         }
 
-        if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {
-            $this->PayMode = $param["PayMode"];
+        if (array_key_exists('PayMode',$param) and $param['PayMode'] !== null) {
+            $this->PayMode = $param['PayMode'];
         }
 
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
+        if (array_key_exists('Limit',$param) and $param['Limit'] !== null) {
+            $this->Limit = $param['Limit'];
         }
 
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
+        if (array_key_exists('Offset',$param) and $param['Offset'] !== null) {
+            $this->Offset = $param['Offset'];
         }
 
-        if (array_key_exists("OrderBy",$param) and $param["OrderBy"] !== null) {
-            $this->OrderBy = $param["OrderBy"];
+        if (array_key_exists('OrderBy',$param) and $param['OrderBy'] !== null) {
+            $this->OrderBy = $param['OrderBy'];
         }
 
-        if (array_key_exists("OrderByType",$param) and $param["OrderByType"] !== null) {
-            $this->OrderByType = $param["OrderByType"];
+        if (array_key_exists('OrderByType',$param) and $param['OrderByType'] !== null) {
+            $this->OrderByType = $param['OrderByType'];
         }
     }
 }

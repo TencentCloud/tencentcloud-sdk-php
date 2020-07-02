@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -94,32 +94,32 @@ class CreateDisasterRecoverGroupResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DisasterRecoverGroupId",$param) and $param["DisasterRecoverGroupId"] !== null) {
-            $this->DisasterRecoverGroupId = $param["DisasterRecoverGroupId"];
+        if (array_key_exists('DisasterRecoverGroupId',$param) and $param['DisasterRecoverGroupId'] !== null) {
+            $this->DisasterRecoverGroupId = $param['DisasterRecoverGroupId'];
         }
 
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists('Type',$param) and $param['Type'] !== null) {
+            $this->Type = $param['Type'];
         }
 
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("CvmQuotaTotal",$param) and $param["CvmQuotaTotal"] !== null) {
-            $this->CvmQuotaTotal = $param["CvmQuotaTotal"];
+        if (array_key_exists('CvmQuotaTotal',$param) and $param['CvmQuotaTotal'] !== null) {
+            $this->CvmQuotaTotal = $param['CvmQuotaTotal'];
         }
 
-        if (array_key_exists("CurrentNum",$param) and $param["CurrentNum"] !== null) {
-            $this->CurrentNum = $param["CurrentNum"];
+        if (array_key_exists('CurrentNum',$param) and $param['CurrentNum'] !== null) {
+            $this->CurrentNum = $param['CurrentNum'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

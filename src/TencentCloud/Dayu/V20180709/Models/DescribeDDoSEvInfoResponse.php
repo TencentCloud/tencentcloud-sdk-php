@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -182,76 +182,76 @@ class DescribeDDoSEvInfoResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Business",$param) and $param["Business"] !== null) {
-            $this->Business = $param["Business"];
+        if (array_key_exists('Business',$param) and $param['Business'] !== null) {
+            $this->Business = $param['Business'];
         }
 
-        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
-            $this->Id = $param["Id"];
+        if (array_key_exists('Id',$param) and $param['Id'] !== null) {
+            $this->Id = $param['Id'];
         }
 
-        if (array_key_exists("Ip",$param) and $param["Ip"] !== null) {
-            $this->Ip = $param["Ip"];
+        if (array_key_exists('Ip',$param) and $param['Ip'] !== null) {
+            $this->Ip = $param['Ip'];
         }
 
-        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
-            $this->StartTime = $param["StartTime"];
+        if (array_key_exists('StartTime',$param) and $param['StartTime'] !== null) {
+            $this->StartTime = $param['StartTime'];
         }
 
-        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
-            $this->EndTime = $param["EndTime"];
+        if (array_key_exists('EndTime',$param) and $param['EndTime'] !== null) {
+            $this->EndTime = $param['EndTime'];
         }
 
-        if (array_key_exists("TcpPacketSum",$param) and $param["TcpPacketSum"] !== null) {
-            $this->TcpPacketSum = $param["TcpPacketSum"];
+        if (array_key_exists('TcpPacketSum',$param) and $param['TcpPacketSum'] !== null) {
+            $this->TcpPacketSum = $param['TcpPacketSum'];
         }
 
-        if (array_key_exists("TcpKBSum",$param) and $param["TcpKBSum"] !== null) {
-            $this->TcpKBSum = $param["TcpKBSum"];
+        if (array_key_exists('TcpKBSum',$param) and $param['TcpKBSum'] !== null) {
+            $this->TcpKBSum = $param['TcpKBSum'];
         }
 
-        if (array_key_exists("UdpPacketSum",$param) and $param["UdpPacketSum"] !== null) {
-            $this->UdpPacketSum = $param["UdpPacketSum"];
+        if (array_key_exists('UdpPacketSum',$param) and $param['UdpPacketSum'] !== null) {
+            $this->UdpPacketSum = $param['UdpPacketSum'];
         }
 
-        if (array_key_exists("UdpKBSum",$param) and $param["UdpKBSum"] !== null) {
-            $this->UdpKBSum = $param["UdpKBSum"];
+        if (array_key_exists('UdpKBSum',$param) and $param['UdpKBSum'] !== null) {
+            $this->UdpKBSum = $param['UdpKBSum'];
         }
 
-        if (array_key_exists("IcmpPacketSum",$param) and $param["IcmpPacketSum"] !== null) {
-            $this->IcmpPacketSum = $param["IcmpPacketSum"];
+        if (array_key_exists('IcmpPacketSum',$param) and $param['IcmpPacketSum'] !== null) {
+            $this->IcmpPacketSum = $param['IcmpPacketSum'];
         }
 
-        if (array_key_exists("IcmpKBSum",$param) and $param["IcmpKBSum"] !== null) {
-            $this->IcmpKBSum = $param["IcmpKBSum"];
+        if (array_key_exists('IcmpKBSum',$param) and $param['IcmpKBSum'] !== null) {
+            $this->IcmpKBSum = $param['IcmpKBSum'];
         }
 
-        if (array_key_exists("OtherPacketSum",$param) and $param["OtherPacketSum"] !== null) {
-            $this->OtherPacketSum = $param["OtherPacketSum"];
+        if (array_key_exists('OtherPacketSum',$param) and $param['OtherPacketSum'] !== null) {
+            $this->OtherPacketSum = $param['OtherPacketSum'];
         }
 
-        if (array_key_exists("OtherKBSum",$param) and $param["OtherKBSum"] !== null) {
-            $this->OtherKBSum = $param["OtherKBSum"];
+        if (array_key_exists('OtherKBSum',$param) and $param['OtherKBSum'] !== null) {
+            $this->OtherKBSum = $param['OtherKBSum'];
         }
 
-        if (array_key_exists("TotalTraffic",$param) and $param["TotalTraffic"] !== null) {
-            $this->TotalTraffic = $param["TotalTraffic"];
+        if (array_key_exists('TotalTraffic',$param) and $param['TotalTraffic'] !== null) {
+            $this->TotalTraffic = $param['TotalTraffic'];
         }
 
-        if (array_key_exists("Mbps",$param) and $param["Mbps"] !== null) {
-            $this->Mbps = $param["Mbps"];
+        if (array_key_exists('Mbps',$param) and $param['Mbps'] !== null) {
+            $this->Mbps = $param['Mbps'];
         }
 
-        if (array_key_exists("Pps",$param) and $param["Pps"] !== null) {
-            $this->Pps = $param["Pps"];
+        if (array_key_exists('Pps',$param) and $param['Pps'] !== null) {
+            $this->Pps = $param['Pps'];
         }
 
-        if (array_key_exists("PcapUrl",$param) and $param["PcapUrl"] !== null) {
-            $this->PcapUrl = $param["PcapUrl"];
+        if (array_key_exists('PcapUrl',$param) and $param['PcapUrl'] !== null) {
+            $this->PcapUrl = $param['PcapUrl'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -78,24 +78,24 @@ class DescribeStorageDataResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MediaCount",$param) and $param["MediaCount"] !== null) {
-            $this->MediaCount = $param["MediaCount"];
+        if (array_key_exists('MediaCount',$param) and $param['MediaCount'] !== null) {
+            $this->MediaCount = $param['MediaCount'];
         }
 
-        if (array_key_exists("TotalStorage",$param) and $param["TotalStorage"] !== null) {
-            $this->TotalStorage = $param["TotalStorage"];
+        if (array_key_exists('TotalStorage',$param) and $param['TotalStorage'] !== null) {
+            $this->TotalStorage = $param['TotalStorage'];
         }
 
-        if (array_key_exists("InfrequentStorage",$param) and $param["InfrequentStorage"] !== null) {
-            $this->InfrequentStorage = $param["InfrequentStorage"];
+        if (array_key_exists('InfrequentStorage',$param) and $param['InfrequentStorage'] !== null) {
+            $this->InfrequentStorage = $param['InfrequentStorage'];
         }
 
-        if (array_key_exists("StandardStorage",$param) and $param["StandardStorage"] !== null) {
-            $this->StandardStorage = $param["StandardStorage"];
+        if (array_key_exists('StandardStorage',$param) and $param['StandardStorage'] !== null) {
+            $this->StandardStorage = $param['StandardStorage'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

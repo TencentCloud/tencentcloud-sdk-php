@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -94,32 +94,32 @@ class InquiryPriceCreateProxyRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AccessRegion",$param) and $param["AccessRegion"] !== null) {
-            $this->AccessRegion = $param["AccessRegion"];
+        if (array_key_exists('AccessRegion',$param) and $param['AccessRegion'] !== null) {
+            $this->AccessRegion = $param['AccessRegion'];
         }
 
-        if (array_key_exists("Bandwidth",$param) and $param["Bandwidth"] !== null) {
-            $this->Bandwidth = $param["Bandwidth"];
+        if (array_key_exists('Bandwidth',$param) and $param['Bandwidth'] !== null) {
+            $this->Bandwidth = $param['Bandwidth'];
         }
 
-        if (array_key_exists("DestRegion",$param) and $param["DestRegion"] !== null) {
-            $this->DestRegion = $param["DestRegion"];
+        if (array_key_exists('DestRegion',$param) and $param['DestRegion'] !== null) {
+            $this->DestRegion = $param['DestRegion'];
         }
 
-        if (array_key_exists("Concurrency",$param) and $param["Concurrency"] !== null) {
-            $this->Concurrency = $param["Concurrency"];
+        if (array_key_exists('Concurrency',$param) and $param['Concurrency'] !== null) {
+            $this->Concurrency = $param['Concurrency'];
         }
 
-        if (array_key_exists("RealServerRegion",$param) and $param["RealServerRegion"] !== null) {
-            $this->RealServerRegion = $param["RealServerRegion"];
+        if (array_key_exists('RealServerRegion',$param) and $param['RealServerRegion'] !== null) {
+            $this->RealServerRegion = $param['RealServerRegion'];
         }
 
-        if (array_key_exists("Concurrent",$param) and $param["Concurrent"] !== null) {
-            $this->Concurrent = $param["Concurrent"];
+        if (array_key_exists('Concurrent',$param) and $param['Concurrent'] !== null) {
+            $this->Concurrent = $param['Concurrent'];
         }
 
-        if (array_key_exists("BillingType",$param) and $param["BillingType"] !== null) {
-            $this->BillingType = $param["BillingType"];
+        if (array_key_exists('BillingType',$param) and $param['BillingType'] !== null) {
+            $this->BillingType = $param['BillingType'];
         }
     }
 }

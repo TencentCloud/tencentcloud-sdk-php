@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -82,23 +82,23 @@ class Item extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ItemID",$param) and $param["ItemID"] !== null) {
-            $this->ItemID = $param["ItemID"];
+        if (array_key_exists('ItemID',$param) and $param['ItemID'] !== null) {
+            $this->ItemID = $param['ItemID'];
         }
 
-        if (array_key_exists("DataInfo",$param) and $param["DataInfo"] !== null) {
+        if (array_key_exists('DataInfo',$param) and $param['DataInfo'] !== null) {
             $this->DataInfo = new DataInfo();
-            $this->DataInfo->deserialize($param["DataInfo"]);
+            $this->DataInfo->deserialize($param['DataInfo']);
         }
 
-        if (array_key_exists("Album",$param) and $param["Album"] !== null) {
+        if (array_key_exists('Album',$param) and $param['Album'] !== null) {
             $this->Album = new Album();
-            $this->Album->deserialize($param["Album"]);
+            $this->Album->deserialize($param['Album']);
         }
 
-        if (array_key_exists("Artists",$param) and $param["Artists"] !== null) {
+        if (array_key_exists('Artists',$param) and $param['Artists'] !== null) {
             $this->Artists = [];
-            foreach ($param["Artists"] as $key => $value){
+            foreach ($param['Artists'] as $key => $value){
                 $obj = new Artist();
                 $obj->deserialize($value);
                 array_push($this->Artists, $obj);

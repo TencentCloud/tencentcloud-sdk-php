@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -150,65 +150,65 @@ class GetTransactionDetailForUserResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TransactionId",$param) and $param["TransactionId"] !== null) {
-            $this->TransactionId = $param["TransactionId"];
+        if (array_key_exists('TransactionId',$param) and $param['TransactionId'] !== null) {
+            $this->TransactionId = $param['TransactionId'];
         }
 
-        if (array_key_exists("TransactionHash",$param) and $param["TransactionHash"] !== null) {
-            $this->TransactionHash = $param["TransactionHash"];
+        if (array_key_exists('TransactionHash',$param) and $param['TransactionHash'] !== null) {
+            $this->TransactionHash = $param['TransactionHash'];
         }
 
-        if (array_key_exists("CreateOrgName",$param) and $param["CreateOrgName"] !== null) {
-            $this->CreateOrgName = $param["CreateOrgName"];
+        if (array_key_exists('CreateOrgName',$param) and $param['CreateOrgName'] !== null) {
+            $this->CreateOrgName = $param['CreateOrgName'];
         }
 
-        if (array_key_exists("TransactionType",$param) and $param["TransactionType"] !== null) {
-            $this->TransactionType = $param["TransactionType"];
+        if (array_key_exists('TransactionType',$param) and $param['TransactionType'] !== null) {
+            $this->TransactionType = $param['TransactionType'];
         }
 
-        if (array_key_exists("TransactionStatus",$param) and $param["TransactionStatus"] !== null) {
-            $this->TransactionStatus = $param["TransactionStatus"];
+        if (array_key_exists('TransactionStatus',$param) and $param['TransactionStatus'] !== null) {
+            $this->TransactionStatus = $param['TransactionStatus'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("TransactionData",$param) and $param["TransactionData"] !== null) {
-            $this->TransactionData = $param["TransactionData"];
+        if (array_key_exists('TransactionData',$param) and $param['TransactionData'] !== null) {
+            $this->TransactionData = $param['TransactionData'];
         }
 
-        if (array_key_exists("BlockId",$param) and $param["BlockId"] !== null) {
-            $this->BlockId = $param["BlockId"];
+        if (array_key_exists('BlockId',$param) and $param['BlockId'] !== null) {
+            $this->BlockId = $param['BlockId'];
         }
 
-        if (array_key_exists("BlockHash",$param) and $param["BlockHash"] !== null) {
-            $this->BlockHash = $param["BlockHash"];
+        if (array_key_exists('BlockHash',$param) and $param['BlockHash'] !== null) {
+            $this->BlockHash = $param['BlockHash'];
         }
 
-        if (array_key_exists("BlockHeight",$param) and $param["BlockHeight"] !== null) {
-            $this->BlockHeight = $param["BlockHeight"];
+        if (array_key_exists('BlockHeight',$param) and $param['BlockHeight'] !== null) {
+            $this->BlockHeight = $param['BlockHeight'];
         }
 
-        if (array_key_exists("ChannelName",$param) and $param["ChannelName"] !== null) {
-            $this->ChannelName = $param["ChannelName"];
+        if (array_key_exists('ChannelName',$param) and $param['ChannelName'] !== null) {
+            $this->ChannelName = $param['ChannelName'];
         }
 
-        if (array_key_exists("ContractName",$param) and $param["ContractName"] !== null) {
-            $this->ContractName = $param["ContractName"];
+        if (array_key_exists('ContractName',$param) and $param['ContractName'] !== null) {
+            $this->ContractName = $param['ContractName'];
         }
 
-        if (array_key_exists("EndorserOrgList",$param) and $param["EndorserOrgList"] !== null) {
+        if (array_key_exists('EndorserOrgList',$param) and $param['EndorserOrgList'] !== null) {
             $this->EndorserOrgList = [];
-            foreach ($param["EndorserOrgList"] as $key => $value){
+            foreach ($param['EndorserOrgList'] as $key => $value){
                 $obj = new EndorserGroup();
                 $obj->deserialize($value);
                 array_push($this->EndorserOrgList, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

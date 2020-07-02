@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -150,61 +150,61 @@ class Image extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ImageId",$param) and $param["ImageId"] !== null) {
-            $this->ImageId = $param["ImageId"];
+        if (array_key_exists('ImageId',$param) and $param['ImageId'] !== null) {
+            $this->ImageId = $param['ImageId'];
         }
 
-        if (array_key_exists("ImageName",$param) and $param["ImageName"] !== null) {
-            $this->ImageName = $param["ImageName"];
+        if (array_key_exists('ImageName',$param) and $param['ImageName'] !== null) {
+            $this->ImageName = $param['ImageName'];
         }
 
-        if (array_key_exists("ImageState",$param) and $param["ImageState"] !== null) {
-            $this->ImageState = $param["ImageState"];
+        if (array_key_exists('ImageState',$param) and $param['ImageState'] !== null) {
+            $this->ImageState = $param['ImageState'];
         }
 
-        if (array_key_exists("ImageType",$param) and $param["ImageType"] !== null) {
-            $this->ImageType = $param["ImageType"];
+        if (array_key_exists('ImageType',$param) and $param['ImageType'] !== null) {
+            $this->ImageType = $param['ImageType'];
         }
 
-        if (array_key_exists("ImageOsName",$param) and $param["ImageOsName"] !== null) {
-            $this->ImageOsName = $param["ImageOsName"];
+        if (array_key_exists('ImageOsName',$param) and $param['ImageOsName'] !== null) {
+            $this->ImageOsName = $param['ImageOsName'];
         }
 
-        if (array_key_exists("ImageDescription",$param) and $param["ImageDescription"] !== null) {
-            $this->ImageDescription = $param["ImageDescription"];
+        if (array_key_exists('ImageDescription',$param) and $param['ImageDescription'] !== null) {
+            $this->ImageDescription = $param['ImageDescription'];
         }
 
-        if (array_key_exists("ImageCreateTime",$param) and $param["ImageCreateTime"] !== null) {
-            $this->ImageCreateTime = $param["ImageCreateTime"];
+        if (array_key_exists('ImageCreateTime',$param) and $param['ImageCreateTime'] !== null) {
+            $this->ImageCreateTime = $param['ImageCreateTime'];
         }
 
-        if (array_key_exists("Architecture",$param) and $param["Architecture"] !== null) {
-            $this->Architecture = $param["Architecture"];
+        if (array_key_exists('Architecture',$param) and $param['Architecture'] !== null) {
+            $this->Architecture = $param['Architecture'];
         }
 
-        if (array_key_exists("OsType",$param) and $param["OsType"] !== null) {
-            $this->OsType = $param["OsType"];
+        if (array_key_exists('OsType',$param) and $param['OsType'] !== null) {
+            $this->OsType = $param['OsType'];
         }
 
-        if (array_key_exists("OsVersion",$param) and $param["OsVersion"] !== null) {
-            $this->OsVersion = $param["OsVersion"];
+        if (array_key_exists('OsVersion',$param) and $param['OsVersion'] !== null) {
+            $this->OsVersion = $param['OsVersion'];
         }
 
-        if (array_key_exists("Platform",$param) and $param["Platform"] !== null) {
-            $this->Platform = $param["Platform"];
+        if (array_key_exists('Platform',$param) and $param['Platform'] !== null) {
+            $this->Platform = $param['Platform'];
         }
 
-        if (array_key_exists("ImageOwner",$param) and $param["ImageOwner"] !== null) {
-            $this->ImageOwner = $param["ImageOwner"];
+        if (array_key_exists('ImageOwner',$param) and $param['ImageOwner'] !== null) {
+            $this->ImageOwner = $param['ImageOwner'];
         }
 
-        if (array_key_exists("ImageSize",$param) and $param["ImageSize"] !== null) {
-            $this->ImageSize = $param["ImageSize"];
+        if (array_key_exists('ImageSize',$param) and $param['ImageSize'] !== null) {
+            $this->ImageSize = $param['ImageSize'];
         }
 
-        if (array_key_exists("SrcImage",$param) and $param["SrcImage"] !== null) {
+        if (array_key_exists('SrcImage',$param) and $param['SrcImage'] !== null) {
             $this->SrcImage = new SrcImage();
-            $this->SrcImage->deserialize($param["SrcImage"]);
+            $this->SrcImage->deserialize($param['SrcImage']);
         }
     }
 }

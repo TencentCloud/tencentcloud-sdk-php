@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -90,24 +90,24 @@ class QuestionObj extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("QuestionTextNo",$param) and $param["QuestionTextNo"] !== null) {
-            $this->QuestionTextNo = $param["QuestionTextNo"];
+        if (array_key_exists('QuestionTextNo',$param) and $param['QuestionTextNo'] !== null) {
+            $this->QuestionTextNo = $param['QuestionTextNo'];
         }
 
-        if (array_key_exists("QuestionTextType",$param) and $param["QuestionTextType"] !== null) {
-            $this->QuestionTextType = $param["QuestionTextType"];
+        if (array_key_exists('QuestionTextType',$param) and $param['QuestionTextType'] !== null) {
+            $this->QuestionTextType = $param['QuestionTextType'];
         }
 
-        if (array_key_exists("QuestionText",$param) and $param["QuestionText"] !== null) {
-            $this->QuestionText = $param["QuestionText"];
+        if (array_key_exists('QuestionText',$param) and $param['QuestionText'] !== null) {
+            $this->QuestionText = $param['QuestionText'];
         }
 
-        if (array_key_exists("QuestionOptions",$param) and $param["QuestionOptions"] !== null) {
-            $this->QuestionOptions = $param["QuestionOptions"];
+        if (array_key_exists('QuestionOptions',$param) and $param['QuestionOptions'] !== null) {
+            $this->QuestionOptions = $param['QuestionOptions'];
         }
 
-        if (array_key_exists("QuestionSubquestion",$param) and $param["QuestionSubquestion"] !== null) {
-            $this->QuestionSubquestion = $param["QuestionSubquestion"];
+        if (array_key_exists('QuestionSubquestion',$param) and $param['QuestionSubquestion'] !== null) {
+            $this->QuestionSubquestion = $param['QuestionSubquestion'];
         }
     }
 }

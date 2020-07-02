@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -94,37 +94,37 @@ class CreateBandwidthPackageRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("NetworkType",$param) and $param["NetworkType"] !== null) {
-            $this->NetworkType = $param["NetworkType"];
+        if (array_key_exists('NetworkType',$param) and $param['NetworkType'] !== null) {
+            $this->NetworkType = $param['NetworkType'];
         }
 
-        if (array_key_exists("ChargeType",$param) and $param["ChargeType"] !== null) {
-            $this->ChargeType = $param["ChargeType"];
+        if (array_key_exists('ChargeType',$param) and $param['ChargeType'] !== null) {
+            $this->ChargeType = $param['ChargeType'];
         }
 
-        if (array_key_exists("BandwidthPackageName",$param) and $param["BandwidthPackageName"] !== null) {
-            $this->BandwidthPackageName = $param["BandwidthPackageName"];
+        if (array_key_exists('BandwidthPackageName',$param) and $param['BandwidthPackageName'] !== null) {
+            $this->BandwidthPackageName = $param['BandwidthPackageName'];
         }
 
-        if (array_key_exists("BandwidthPackageCount",$param) and $param["BandwidthPackageCount"] !== null) {
-            $this->BandwidthPackageCount = $param["BandwidthPackageCount"];
+        if (array_key_exists('BandwidthPackageCount',$param) and $param['BandwidthPackageCount'] !== null) {
+            $this->BandwidthPackageCount = $param['BandwidthPackageCount'];
         }
 
-        if (array_key_exists("InternetMaxBandwidth",$param) and $param["InternetMaxBandwidth"] !== null) {
-            $this->InternetMaxBandwidth = $param["InternetMaxBandwidth"];
+        if (array_key_exists('InternetMaxBandwidth',$param) and $param['InternetMaxBandwidth'] !== null) {
+            $this->InternetMaxBandwidth = $param['InternetMaxBandwidth'];
         }
 
-        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+        if (array_key_exists('Tags',$param) and $param['Tags'] !== null) {
             $this->Tags = [];
-            foreach ($param["Tags"] as $key => $value){
+            foreach ($param['Tags'] as $key => $value){
                 $obj = new Tag();
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
         }
 
-        if (array_key_exists("Protocol",$param) and $param["Protocol"] !== null) {
-            $this->Protocol = $param["Protocol"];
+        if (array_key_exists('Protocol',$param) and $param['Protocol'] !== null) {
+            $this->Protocol = $param['Protocol'];
         }
     }
 }

@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -62,17 +62,17 @@ class RouteConflict extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RouteTableId",$param) and $param["RouteTableId"] !== null) {
-            $this->RouteTableId = $param["RouteTableId"];
+        if (array_key_exists('RouteTableId',$param) and $param['RouteTableId'] !== null) {
+            $this->RouteTableId = $param['RouteTableId'];
         }
 
-        if (array_key_exists("DestinationCidrBlock",$param) and $param["DestinationCidrBlock"] !== null) {
-            $this->DestinationCidrBlock = $param["DestinationCidrBlock"];
+        if (array_key_exists('DestinationCidrBlock',$param) and $param['DestinationCidrBlock'] !== null) {
+            $this->DestinationCidrBlock = $param['DestinationCidrBlock'];
         }
 
-        if (array_key_exists("ConflictSet",$param) and $param["ConflictSet"] !== null) {
+        if (array_key_exists('ConflictSet',$param) and $param['ConflictSet'] !== null) {
             $this->ConflictSet = [];
-            foreach ($param["ConflictSet"] as $key => $value){
+            foreach ($param['ConflictSet'] as $key => $value){
                 $obj = new Route();
                 $obj->deserialize($value);
                 array_push($this->ConflictSet, $obj);

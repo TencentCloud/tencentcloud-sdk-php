@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -118,40 +118,40 @@ class DiskConfig extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Available",$param) and $param["Available"] !== null) {
-            $this->Available = $param["Available"];
+        if (array_key_exists('Available',$param) and $param['Available'] !== null) {
+            $this->Available = $param['Available'];
         }
 
-        if (array_key_exists("DiskType",$param) and $param["DiskType"] !== null) {
-            $this->DiskType = $param["DiskType"];
+        if (array_key_exists('DiskType',$param) and $param['DiskType'] !== null) {
+            $this->DiskType = $param['DiskType'];
         }
 
-        if (array_key_exists("DiskUsage",$param) and $param["DiskUsage"] !== null) {
-            $this->DiskUsage = $param["DiskUsage"];
+        if (array_key_exists('DiskUsage',$param) and $param['DiskUsage'] !== null) {
+            $this->DiskUsage = $param['DiskUsage'];
         }
 
-        if (array_key_exists("DiskChargeType",$param) and $param["DiskChargeType"] !== null) {
-            $this->DiskChargeType = $param["DiskChargeType"];
+        if (array_key_exists('DiskChargeType',$param) and $param['DiskChargeType'] !== null) {
+            $this->DiskChargeType = $param['DiskChargeType'];
         }
 
-        if (array_key_exists("MaxDiskSize",$param) and $param["MaxDiskSize"] !== null) {
-            $this->MaxDiskSize = $param["MaxDiskSize"];
+        if (array_key_exists('MaxDiskSize',$param) and $param['MaxDiskSize'] !== null) {
+            $this->MaxDiskSize = $param['MaxDiskSize'];
         }
 
-        if (array_key_exists("MinDiskSize",$param) and $param["MinDiskSize"] !== null) {
-            $this->MinDiskSize = $param["MinDiskSize"];
+        if (array_key_exists('MinDiskSize',$param) and $param['MinDiskSize'] !== null) {
+            $this->MinDiskSize = $param['MinDiskSize'];
         }
 
-        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
-            $this->Zone = $param["Zone"];
+        if (array_key_exists('Zone',$param) and $param['Zone'] !== null) {
+            $this->Zone = $param['Zone'];
         }
 
-        if (array_key_exists("DeviceClass",$param) and $param["DeviceClass"] !== null) {
-            $this->DeviceClass = $param["DeviceClass"];
+        if (array_key_exists('DeviceClass',$param) and $param['DeviceClass'] !== null) {
+            $this->DeviceClass = $param['DeviceClass'];
         }
 
-        if (array_key_exists("InstanceFamily",$param) and $param["InstanceFamily"] !== null) {
-            $this->InstanceFamily = $param["InstanceFamily"];
+        if (array_key_exists('InstanceFamily',$param) and $param['InstanceFamily'] !== null) {
+            $this->InstanceFamily = $param['InstanceFamily'];
         }
     }
 }

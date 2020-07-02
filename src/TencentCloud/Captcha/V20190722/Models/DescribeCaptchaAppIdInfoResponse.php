@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -174,68 +174,68 @@ class DescribeCaptchaAppIdInfoResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SchemeColor",$param) and $param["SchemeColor"] !== null) {
-            $this->SchemeColor = $param["SchemeColor"];
+        if (array_key_exists('SchemeColor',$param) and $param['SchemeColor'] !== null) {
+            $this->SchemeColor = $param['SchemeColor'];
         }
 
-        if (array_key_exists("Language",$param) and $param["Language"] !== null) {
-            $this->Language = $param["Language"];
+        if (array_key_exists('Language',$param) and $param['Language'] !== null) {
+            $this->Language = $param['Language'];
         }
 
-        if (array_key_exists("SceneType",$param) and $param["SceneType"] !== null) {
-            $this->SceneType = $param["SceneType"];
+        if (array_key_exists('SceneType',$param) and $param['SceneType'] !== null) {
+            $this->SceneType = $param['SceneType'];
         }
 
-        if (array_key_exists("EvilInterceptGrade",$param) and $param["EvilInterceptGrade"] !== null) {
-            $this->EvilInterceptGrade = $param["EvilInterceptGrade"];
+        if (array_key_exists('EvilInterceptGrade',$param) and $param['EvilInterceptGrade'] !== null) {
+            $this->EvilInterceptGrade = $param['EvilInterceptGrade'];
         }
 
-        if (array_key_exists("SmartVerify",$param) and $param["SmartVerify"] !== null) {
-            $this->SmartVerify = $param["SmartVerify"];
+        if (array_key_exists('SmartVerify',$param) and $param['SmartVerify'] !== null) {
+            $this->SmartVerify = $param['SmartVerify'];
         }
 
-        if (array_key_exists("SmartEngine",$param) and $param["SmartEngine"] !== null) {
-            $this->SmartEngine = $param["SmartEngine"];
+        if (array_key_exists('SmartEngine',$param) and $param['SmartEngine'] !== null) {
+            $this->SmartEngine = $param['SmartEngine'];
         }
 
-        if (array_key_exists("CapType",$param) and $param["CapType"] !== null) {
-            $this->CapType = $param["CapType"];
+        if (array_key_exists('CapType',$param) and $param['CapType'] !== null) {
+            $this->CapType = $param['CapType'];
         }
 
-        if (array_key_exists("AppName",$param) and $param["AppName"] !== null) {
-            $this->AppName = $param["AppName"];
+        if (array_key_exists('AppName',$param) and $param['AppName'] !== null) {
+            $this->AppName = $param['AppName'];
         }
 
-        if (array_key_exists("DomainLimit",$param) and $param["DomainLimit"] !== null) {
-            $this->DomainLimit = $param["DomainLimit"];
+        if (array_key_exists('DomainLimit',$param) and $param['DomainLimit'] !== null) {
+            $this->DomainLimit = $param['DomainLimit'];
         }
 
-        if (array_key_exists("MailAlarm",$param) and $param["MailAlarm"] !== null) {
-            $this->MailAlarm = $param["MailAlarm"];
+        if (array_key_exists('MailAlarm',$param) and $param['MailAlarm'] !== null) {
+            $this->MailAlarm = $param['MailAlarm'];
         }
 
-        if (array_key_exists("TrafficThreshold",$param) and $param["TrafficThreshold"] !== null) {
-            $this->TrafficThreshold = $param["TrafficThreshold"];
+        if (array_key_exists('TrafficThreshold',$param) and $param['TrafficThreshold'] !== null) {
+            $this->TrafficThreshold = $param['TrafficThreshold'];
         }
 
-        if (array_key_exists("EncryptKey",$param) and $param["EncryptKey"] !== null) {
-            $this->EncryptKey = $param["EncryptKey"];
+        if (array_key_exists('EncryptKey',$param) and $param['EncryptKey'] !== null) {
+            $this->EncryptKey = $param['EncryptKey'];
         }
 
-        if (array_key_exists("TopFullScreen",$param) and $param["TopFullScreen"] !== null) {
-            $this->TopFullScreen = $param["TopFullScreen"];
+        if (array_key_exists('TopFullScreen',$param) and $param['TopFullScreen'] !== null) {
+            $this->TopFullScreen = $param['TopFullScreen'];
         }
 
-        if (array_key_exists("CaptchaCode",$param) and $param["CaptchaCode"] !== null) {
-            $this->CaptchaCode = $param["CaptchaCode"];
+        if (array_key_exists('CaptchaCode',$param) and $param['CaptchaCode'] !== null) {
+            $this->CaptchaCode = $param['CaptchaCode'];
         }
 
-        if (array_key_exists("CaptchaMsg",$param) and $param["CaptchaMsg"] !== null) {
-            $this->CaptchaMsg = $param["CaptchaMsg"];
+        if (array_key_exists('CaptchaMsg',$param) and $param['CaptchaMsg'] !== null) {
+            $this->CaptchaMsg = $param['CaptchaMsg'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -86,53 +86,53 @@ class DescribeSecurityTrendsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Malwares",$param) and $param["Malwares"] !== null) {
+        if (array_key_exists('Malwares',$param) and $param['Malwares'] !== null) {
             $this->Malwares = [];
-            foreach ($param["Malwares"] as $key => $value){
+            foreach ($param['Malwares'] as $key => $value){
                 $obj = new SecurityTrend();
                 $obj->deserialize($value);
                 array_push($this->Malwares, $obj);
             }
         }
 
-        if (array_key_exists("NonLocalLoginPlaces",$param) and $param["NonLocalLoginPlaces"] !== null) {
+        if (array_key_exists('NonLocalLoginPlaces',$param) and $param['NonLocalLoginPlaces'] !== null) {
             $this->NonLocalLoginPlaces = [];
-            foreach ($param["NonLocalLoginPlaces"] as $key => $value){
+            foreach ($param['NonLocalLoginPlaces'] as $key => $value){
                 $obj = new SecurityTrend();
                 $obj->deserialize($value);
                 array_push($this->NonLocalLoginPlaces, $obj);
             }
         }
 
-        if (array_key_exists("BruteAttacks",$param) and $param["BruteAttacks"] !== null) {
+        if (array_key_exists('BruteAttacks',$param) and $param['BruteAttacks'] !== null) {
             $this->BruteAttacks = [];
-            foreach ($param["BruteAttacks"] as $key => $value){
+            foreach ($param['BruteAttacks'] as $key => $value){
                 $obj = new SecurityTrend();
                 $obj->deserialize($value);
                 array_push($this->BruteAttacks, $obj);
             }
         }
 
-        if (array_key_exists("Vuls",$param) and $param["Vuls"] !== null) {
+        if (array_key_exists('Vuls',$param) and $param['Vuls'] !== null) {
             $this->Vuls = [];
-            foreach ($param["Vuls"] as $key => $value){
+            foreach ($param['Vuls'] as $key => $value){
                 $obj = new SecurityTrend();
                 $obj->deserialize($value);
                 array_push($this->Vuls, $obj);
             }
         }
 
-        if (array_key_exists("BaseLines",$param) and $param["BaseLines"] !== null) {
+        if (array_key_exists('BaseLines',$param) and $param['BaseLines'] !== null) {
             $this->BaseLines = [];
-            foreach ($param["BaseLines"] as $key => $value){
+            foreach ($param['BaseLines'] as $key => $value){
                 $obj = new SecurityTrend();
                 $obj->deserialize($value);
                 array_push($this->BaseLines, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -255,20 +255,20 @@ use TencentCloud\Ocr\V20181119\Models as Models;
 <table style="width:650px">
       <thead>
         <tr>
-       <th width="150">增值能力</th>
-          <th width="500">能力项</th>
+       <th width='150'>增值能力</th>
+          <th width='500'>能力项</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td rowspan="2">裁剪功能</td>
+          <td rowspan='2'>裁剪功能</td>
           <td>身份证照片裁剪（去掉证件外多余的边缘、自动矫正拍摄角度）</td>
         </tr>
         <tr>
           <td>人像照片裁剪（自动抠取身份证头像区域）</td>
         </tr>
         <tr>
-          <td rowspan="9">告警功能</td>
+          <td rowspan='9'>告警功能</td>
           <td>身份证有效日期不合法告警</td>
         </tr>
         <tr>
@@ -365,7 +365,7 @@ class OcrClient extends AbstractClient
 
     public function returnResponse($action, $response)
     {
-        $respClass = "TencentCloud"."\\".ucfirst("ocr")."\\"."V20181119\\Models"."\\".ucfirst($action)."Response";
+        $respClass = 'TencentCloud'."\\".ucfirst('ocr')."\\"."V20181119\\Models"."\\".ucfirst($action).'Response';
         $obj = new $respClass();
         $obj->deserialize($response);
         return $obj;

@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -146,60 +146,60 @@ class SearchMaterialRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Platform",$param) and $param["Platform"] !== null) {
-            $this->Platform = $param["Platform"];
+        if (array_key_exists('Platform',$param) and $param['Platform'] !== null) {
+            $this->Platform = $param['Platform'];
         }
 
-        if (array_key_exists("SearchScopes",$param) and $param["SearchScopes"] !== null) {
+        if (array_key_exists('SearchScopes',$param) and $param['SearchScopes'] !== null) {
             $this->SearchScopes = [];
-            foreach ($param["SearchScopes"] as $key => $value){
+            foreach ($param['SearchScopes'] as $key => $value){
                 $obj = new SearchScope();
                 $obj->deserialize($value);
                 array_push($this->SearchScopes, $obj);
             }
         }
 
-        if (array_key_exists("MaterialTypes",$param) and $param["MaterialTypes"] !== null) {
-            $this->MaterialTypes = $param["MaterialTypes"];
+        if (array_key_exists('MaterialTypes',$param) and $param['MaterialTypes'] !== null) {
+            $this->MaterialTypes = $param['MaterialTypes'];
         }
 
-        if (array_key_exists("Text",$param) and $param["Text"] !== null) {
-            $this->Text = $param["Text"];
+        if (array_key_exists('Text',$param) and $param['Text'] !== null) {
+            $this->Text = $param['Text'];
         }
 
-        if (array_key_exists("Resolution",$param) and $param["Resolution"] !== null) {
-            $this->Resolution = $param["Resolution"];
+        if (array_key_exists('Resolution',$param) and $param['Resolution'] !== null) {
+            $this->Resolution = $param['Resolution'];
         }
 
-        if (array_key_exists("DurationRange",$param) and $param["DurationRange"] !== null) {
+        if (array_key_exists('DurationRange',$param) and $param['DurationRange'] !== null) {
             $this->DurationRange = new IntegerRange();
-            $this->DurationRange->deserialize($param["DurationRange"]);
+            $this->DurationRange->deserialize($param['DurationRange']);
         }
 
-        if (array_key_exists("CreateTimeRange",$param) and $param["CreateTimeRange"] !== null) {
+        if (array_key_exists('CreateTimeRange',$param) and $param['CreateTimeRange'] !== null) {
             $this->CreateTimeRange = new TimeRange();
-            $this->CreateTimeRange->deserialize($param["CreateTimeRange"]);
+            $this->CreateTimeRange->deserialize($param['CreateTimeRange']);
         }
 
-        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
-            $this->Tags = $param["Tags"];
+        if (array_key_exists('Tags',$param) and $param['Tags'] !== null) {
+            $this->Tags = $param['Tags'];
         }
 
-        if (array_key_exists("Sort",$param) and $param["Sort"] !== null) {
+        if (array_key_exists('Sort',$param) and $param['Sort'] !== null) {
             $this->Sort = new SortBy();
-            $this->Sort->deserialize($param["Sort"]);
+            $this->Sort->deserialize($param['Sort']);
         }
 
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
+        if (array_key_exists('Offset',$param) and $param['Offset'] !== null) {
+            $this->Offset = $param['Offset'];
         }
 
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
+        if (array_key_exists('Limit',$param) and $param['Limit'] !== null) {
+            $this->Limit = $param['Limit'];
         }
 
-        if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
-            $this->Operator = $param["Operator"];
+        if (array_key_exists('Operator',$param) and $param['Operator'] !== null) {
+            $this->Operator = $param['Operator'];
         }
     }
 }

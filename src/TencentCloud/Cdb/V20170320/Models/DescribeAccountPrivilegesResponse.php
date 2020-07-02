@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -78,39 +78,39 @@ class DescribeAccountPrivilegesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("GlobalPrivileges",$param) and $param["GlobalPrivileges"] !== null) {
-            $this->GlobalPrivileges = $param["GlobalPrivileges"];
+        if (array_key_exists('GlobalPrivileges',$param) and $param['GlobalPrivileges'] !== null) {
+            $this->GlobalPrivileges = $param['GlobalPrivileges'];
         }
 
-        if (array_key_exists("DatabasePrivileges",$param) and $param["DatabasePrivileges"] !== null) {
+        if (array_key_exists('DatabasePrivileges',$param) and $param['DatabasePrivileges'] !== null) {
             $this->DatabasePrivileges = [];
-            foreach ($param["DatabasePrivileges"] as $key => $value){
+            foreach ($param['DatabasePrivileges'] as $key => $value){
                 $obj = new DatabasePrivilege();
                 $obj->deserialize($value);
                 array_push($this->DatabasePrivileges, $obj);
             }
         }
 
-        if (array_key_exists("TablePrivileges",$param) and $param["TablePrivileges"] !== null) {
+        if (array_key_exists('TablePrivileges',$param) and $param['TablePrivileges'] !== null) {
             $this->TablePrivileges = [];
-            foreach ($param["TablePrivileges"] as $key => $value){
+            foreach ($param['TablePrivileges'] as $key => $value){
                 $obj = new TablePrivilege();
                 $obj->deserialize($value);
                 array_push($this->TablePrivileges, $obj);
             }
         }
 
-        if (array_key_exists("ColumnPrivileges",$param) and $param["ColumnPrivileges"] !== null) {
+        if (array_key_exists('ColumnPrivileges',$param) and $param['ColumnPrivileges'] !== null) {
             $this->ColumnPrivileges = [];
-            foreach ($param["ColumnPrivileges"] as $key => $value){
+            foreach ($param['ColumnPrivileges'] as $key => $value){
                 $obj = new ColumnPrivilege();
                 $obj->deserialize($value);
                 array_push($this->ColumnPrivileges, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

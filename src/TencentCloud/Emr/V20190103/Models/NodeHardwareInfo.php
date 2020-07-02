@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -470,159 +470,159 @@ class NodeHardwareInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AppId",$param) and $param["AppId"] !== null) {
-            $this->AppId = $param["AppId"];
+        if (array_key_exists('AppId',$param) and $param['AppId'] !== null) {
+            $this->AppId = $param['AppId'];
         }
 
-        if (array_key_exists("SerialNo",$param) and $param["SerialNo"] !== null) {
-            $this->SerialNo = $param["SerialNo"];
+        if (array_key_exists('SerialNo',$param) and $param['SerialNo'] !== null) {
+            $this->SerialNo = $param['SerialNo'];
         }
 
-        if (array_key_exists("OrderNo",$param) and $param["OrderNo"] !== null) {
-            $this->OrderNo = $param["OrderNo"];
+        if (array_key_exists('OrderNo',$param) and $param['OrderNo'] !== null) {
+            $this->OrderNo = $param['OrderNo'];
         }
 
-        if (array_key_exists("WanIp",$param) and $param["WanIp"] !== null) {
-            $this->WanIp = $param["WanIp"];
+        if (array_key_exists('WanIp',$param) and $param['WanIp'] !== null) {
+            $this->WanIp = $param['WanIp'];
         }
 
-        if (array_key_exists("Flag",$param) and $param["Flag"] !== null) {
-            $this->Flag = $param["Flag"];
+        if (array_key_exists('Flag',$param) and $param['Flag'] !== null) {
+            $this->Flag = $param['Flag'];
         }
 
-        if (array_key_exists("Spec",$param) and $param["Spec"] !== null) {
-            $this->Spec = $param["Spec"];
+        if (array_key_exists('Spec',$param) and $param['Spec'] !== null) {
+            $this->Spec = $param['Spec'];
         }
 
-        if (array_key_exists("CpuNum",$param) and $param["CpuNum"] !== null) {
-            $this->CpuNum = $param["CpuNum"];
+        if (array_key_exists('CpuNum',$param) and $param['CpuNum'] !== null) {
+            $this->CpuNum = $param['CpuNum'];
         }
 
-        if (array_key_exists("MemSize",$param) and $param["MemSize"] !== null) {
-            $this->MemSize = $param["MemSize"];
+        if (array_key_exists('MemSize',$param) and $param['MemSize'] !== null) {
+            $this->MemSize = $param['MemSize'];
         }
 
-        if (array_key_exists("MemDesc",$param) and $param["MemDesc"] !== null) {
-            $this->MemDesc = $param["MemDesc"];
+        if (array_key_exists('MemDesc',$param) and $param['MemDesc'] !== null) {
+            $this->MemDesc = $param['MemDesc'];
         }
 
-        if (array_key_exists("RegionId",$param) and $param["RegionId"] !== null) {
-            $this->RegionId = $param["RegionId"];
+        if (array_key_exists('RegionId',$param) and $param['RegionId'] !== null) {
+            $this->RegionId = $param['RegionId'];
         }
 
-        if (array_key_exists("ZoneId",$param) and $param["ZoneId"] !== null) {
-            $this->ZoneId = $param["ZoneId"];
+        if (array_key_exists('ZoneId',$param) and $param['ZoneId'] !== null) {
+            $this->ZoneId = $param['ZoneId'];
         }
 
-        if (array_key_exists("ApplyTime",$param) and $param["ApplyTime"] !== null) {
-            $this->ApplyTime = $param["ApplyTime"];
+        if (array_key_exists('ApplyTime',$param) and $param['ApplyTime'] !== null) {
+            $this->ApplyTime = $param['ApplyTime'];
         }
 
-        if (array_key_exists("FreeTime",$param) and $param["FreeTime"] !== null) {
-            $this->FreeTime = $param["FreeTime"];
+        if (array_key_exists('FreeTime',$param) and $param['FreeTime'] !== null) {
+            $this->FreeTime = $param['FreeTime'];
         }
 
-        if (array_key_exists("DiskSize",$param) and $param["DiskSize"] !== null) {
-            $this->DiskSize = $param["DiskSize"];
+        if (array_key_exists('DiskSize',$param) and $param['DiskSize'] !== null) {
+            $this->DiskSize = $param['DiskSize'];
         }
 
-        if (array_key_exists("NameTag",$param) and $param["NameTag"] !== null) {
-            $this->NameTag = $param["NameTag"];
+        if (array_key_exists('NameTag',$param) and $param['NameTag'] !== null) {
+            $this->NameTag = $param['NameTag'];
         }
 
-        if (array_key_exists("Services",$param) and $param["Services"] !== null) {
-            $this->Services = $param["Services"];
+        if (array_key_exists('Services',$param) and $param['Services'] !== null) {
+            $this->Services = $param['Services'];
         }
 
-        if (array_key_exists("StorageType",$param) and $param["StorageType"] !== null) {
-            $this->StorageType = $param["StorageType"];
+        if (array_key_exists('StorageType',$param) and $param['StorageType'] !== null) {
+            $this->StorageType = $param['StorageType'];
         }
 
-        if (array_key_exists("RootSize",$param) and $param["RootSize"] !== null) {
-            $this->RootSize = $param["RootSize"];
+        if (array_key_exists('RootSize',$param) and $param['RootSize'] !== null) {
+            $this->RootSize = $param['RootSize'];
         }
 
-        if (array_key_exists("ChargeType",$param) and $param["ChargeType"] !== null) {
-            $this->ChargeType = $param["ChargeType"];
+        if (array_key_exists('ChargeType',$param) and $param['ChargeType'] !== null) {
+            $this->ChargeType = $param['ChargeType'];
         }
 
-        if (array_key_exists("CdbIp",$param) and $param["CdbIp"] !== null) {
-            $this->CdbIp = $param["CdbIp"];
+        if (array_key_exists('CdbIp',$param) and $param['CdbIp'] !== null) {
+            $this->CdbIp = $param['CdbIp'];
         }
 
-        if (array_key_exists("CdbPort",$param) and $param["CdbPort"] !== null) {
-            $this->CdbPort = $param["CdbPort"];
+        if (array_key_exists('CdbPort',$param) and $param['CdbPort'] !== null) {
+            $this->CdbPort = $param['CdbPort'];
         }
 
-        if (array_key_exists("HwDiskSize",$param) and $param["HwDiskSize"] !== null) {
-            $this->HwDiskSize = $param["HwDiskSize"];
+        if (array_key_exists('HwDiskSize',$param) and $param['HwDiskSize'] !== null) {
+            $this->HwDiskSize = $param['HwDiskSize'];
         }
 
-        if (array_key_exists("HwDiskSizeDesc",$param) and $param["HwDiskSizeDesc"] !== null) {
-            $this->HwDiskSizeDesc = $param["HwDiskSizeDesc"];
+        if (array_key_exists('HwDiskSizeDesc',$param) and $param['HwDiskSizeDesc'] !== null) {
+            $this->HwDiskSizeDesc = $param['HwDiskSizeDesc'];
         }
 
-        if (array_key_exists("HwMemSize",$param) and $param["HwMemSize"] !== null) {
-            $this->HwMemSize = $param["HwMemSize"];
+        if (array_key_exists('HwMemSize',$param) and $param['HwMemSize'] !== null) {
+            $this->HwMemSize = $param['HwMemSize'];
         }
 
-        if (array_key_exists("HwMemSizeDesc",$param) and $param["HwMemSizeDesc"] !== null) {
-            $this->HwMemSizeDesc = $param["HwMemSizeDesc"];
+        if (array_key_exists('HwMemSizeDesc',$param) and $param['HwMemSizeDesc'] !== null) {
+            $this->HwMemSizeDesc = $param['HwMemSizeDesc'];
         }
 
-        if (array_key_exists("ExpireTime",$param) and $param["ExpireTime"] !== null) {
-            $this->ExpireTime = $param["ExpireTime"];
+        if (array_key_exists('ExpireTime',$param) and $param['ExpireTime'] !== null) {
+            $this->ExpireTime = $param['ExpireTime'];
         }
 
-        if (array_key_exists("EmrResourceId",$param) and $param["EmrResourceId"] !== null) {
-            $this->EmrResourceId = $param["EmrResourceId"];
+        if (array_key_exists('EmrResourceId',$param) and $param['EmrResourceId'] !== null) {
+            $this->EmrResourceId = $param['EmrResourceId'];
         }
 
-        if (array_key_exists("IsAutoRenew",$param) and $param["IsAutoRenew"] !== null) {
-            $this->IsAutoRenew = $param["IsAutoRenew"];
+        if (array_key_exists('IsAutoRenew',$param) and $param['IsAutoRenew'] !== null) {
+            $this->IsAutoRenew = $param['IsAutoRenew'];
         }
 
-        if (array_key_exists("DeviceClass",$param) and $param["DeviceClass"] !== null) {
-            $this->DeviceClass = $param["DeviceClass"];
+        if (array_key_exists('DeviceClass',$param) and $param['DeviceClass'] !== null) {
+            $this->DeviceClass = $param['DeviceClass'];
         }
 
-        if (array_key_exists("Mutable",$param) and $param["Mutable"] !== null) {
-            $this->Mutable = $param["Mutable"];
+        if (array_key_exists('Mutable',$param) and $param['Mutable'] !== null) {
+            $this->Mutable = $param['Mutable'];
         }
 
-        if (array_key_exists("MCMultiDisk",$param) and $param["MCMultiDisk"] !== null) {
+        if (array_key_exists('MCMultiDisk',$param) and $param['MCMultiDisk'] !== null) {
             $this->MCMultiDisk = [];
-            foreach ($param["MCMultiDisk"] as $key => $value){
+            foreach ($param['MCMultiDisk'] as $key => $value){
                 $obj = new MultiDiskMC();
                 $obj->deserialize($value);
                 array_push($this->MCMultiDisk, $obj);
             }
         }
 
-        if (array_key_exists("CdbNodeInfo",$param) and $param["CdbNodeInfo"] !== null) {
+        if (array_key_exists('CdbNodeInfo',$param) and $param['CdbNodeInfo'] !== null) {
             $this->CdbNodeInfo = new CdbInfo();
-            $this->CdbNodeInfo->deserialize($param["CdbNodeInfo"]);
+            $this->CdbNodeInfo->deserialize($param['CdbNodeInfo']);
         }
 
-        if (array_key_exists("Ip",$param) and $param["Ip"] !== null) {
-            $this->Ip = $param["Ip"];
+        if (array_key_exists('Ip',$param) and $param['Ip'] !== null) {
+            $this->Ip = $param['Ip'];
         }
 
-        if (array_key_exists("Destroyable",$param) and $param["Destroyable"] !== null) {
-            $this->Destroyable = $param["Destroyable"];
+        if (array_key_exists('Destroyable',$param) and $param['Destroyable'] !== null) {
+            $this->Destroyable = $param['Destroyable'];
         }
 
-        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+        if (array_key_exists('Tags',$param) and $param['Tags'] !== null) {
             $this->Tags = [];
-            foreach ($param["Tags"] as $key => $value){
+            foreach ($param['Tags'] as $key => $value){
                 $obj = new Tag();
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
         }
 
-        if (array_key_exists("AutoFlag",$param) and $param["AutoFlag"] !== null) {
-            $this->AutoFlag = $param["AutoFlag"];
+        if (array_key_exists('AutoFlag',$param) and $param['AutoFlag'] !== null) {
+            $this->AutoFlag = $param['AutoFlag'];
         }
     }
 }

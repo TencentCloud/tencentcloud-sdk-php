@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -178,28 +178,28 @@ class CreatePullStreamConfigRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FromUrl",$param) and $param["FromUrl"] !== null) {
-            $this->FromUrl = $param["FromUrl"];
+        if (array_key_exists('FromUrl',$param) and $param['FromUrl'] !== null) {
+            $this->FromUrl = $param['FromUrl'];
         }
 
-        if (array_key_exists("ToUrl",$param) and $param["ToUrl"] !== null) {
-            $this->ToUrl = $param["ToUrl"];
+        if (array_key_exists('ToUrl',$param) and $param['ToUrl'] !== null) {
+            $this->ToUrl = $param['ToUrl'];
         }
 
-        if (array_key_exists("AreaId",$param) and $param["AreaId"] !== null) {
-            $this->AreaId = $param["AreaId"];
+        if (array_key_exists('AreaId',$param) and $param['AreaId'] !== null) {
+            $this->AreaId = $param['AreaId'];
         }
 
-        if (array_key_exists("IspId",$param) and $param["IspId"] !== null) {
-            $this->IspId = $param["IspId"];
+        if (array_key_exists('IspId',$param) and $param['IspId'] !== null) {
+            $this->IspId = $param['IspId'];
         }
 
-        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
-            $this->StartTime = $param["StartTime"];
+        if (array_key_exists('StartTime',$param) and $param['StartTime'] !== null) {
+            $this->StartTime = $param['StartTime'];
         }
 
-        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
-            $this->EndTime = $param["EndTime"];
+        if (array_key_exists('EndTime',$param) and $param['EndTime'] !== null) {
+            $this->EndTime = $param['EndTime'];
         }
     }
 }

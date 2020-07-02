@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -62,16 +62,16 @@ class TimeInfoResult extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Duration",$param) and $param["Duration"] !== null) {
-            $this->Duration = $param["Duration"];
+        if (array_key_exists('Duration',$param) and $param['Duration'] !== null) {
+            $this->Duration = $param['Duration'];
         }
 
-        if (array_key_exists("EndTs",$param) and $param["EndTs"] !== null) {
-            $this->EndTs = $param["EndTs"];
+        if (array_key_exists('EndTs',$param) and $param['EndTs'] !== null) {
+            $this->EndTs = $param['EndTs'];
         }
 
-        if (array_key_exists("StartTs",$param) and $param["StartTs"] !== null) {
-            $this->StartTs = $param["StartTs"];
+        if (array_key_exists('StartTs',$param) and $param['StartTs'] !== null) {
+            $this->StartTs = $param['StartTs'];
         }
     }
 }

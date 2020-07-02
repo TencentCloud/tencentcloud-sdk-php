@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -190,80 +190,80 @@ class Instance extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
-            $this->Id = $param["Id"];
+        if (array_key_exists('Id',$param) and $param['Id'] !== null) {
+            $this->Id = $param['Id'];
         }
 
-        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
-            $this->Zone = $param["Zone"];
+        if (array_key_exists('Zone',$param) and $param['Zone'] !== null) {
+            $this->Zone = $param['Zone'];
         }
 
-        if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
-            $this->InstanceType = $param["InstanceType"];
+        if (array_key_exists('InstanceType',$param) and $param['InstanceType'] !== null) {
+            $this->InstanceType = $param['InstanceType'];
         }
 
-        if (array_key_exists("InstanceChargeType",$param) and $param["InstanceChargeType"] !== null) {
-            $this->InstanceChargeType = $param["InstanceChargeType"];
+        if (array_key_exists('InstanceChargeType',$param) and $param['InstanceChargeType'] !== null) {
+            $this->InstanceChargeType = $param['InstanceChargeType'];
         }
 
-        if (array_key_exists("Cpu",$param) and $param["Cpu"] !== null) {
-            $this->Cpu = $param["Cpu"];
+        if (array_key_exists('Cpu',$param) and $param['Cpu'] !== null) {
+            $this->Cpu = $param['Cpu'];
         }
 
-        if (array_key_exists("Memory",$param) and $param["Memory"] !== null) {
-            $this->Memory = $param["Memory"];
+        if (array_key_exists('Memory',$param) and $param['Memory'] !== null) {
+            $this->Memory = $param['Memory'];
         }
 
-        if (array_key_exists("Gpu",$param) and $param["Gpu"] !== null) {
-            $this->Gpu = $param["Gpu"];
+        if (array_key_exists('Gpu',$param) and $param['Gpu'] !== null) {
+            $this->Gpu = $param['Gpu'];
         }
 
-        if (array_key_exists("State",$param) and $param["State"] !== null) {
-            $this->State = $param["State"];
+        if (array_key_exists('State',$param) and $param['State'] !== null) {
+            $this->State = $param['State'];
         }
 
-        if (array_key_exists("AbnormalReason",$param) and $param["AbnormalReason"] !== null) {
-            $this->AbnormalReason = $param["AbnormalReason"];
+        if (array_key_exists('AbnormalReason',$param) and $param['AbnormalReason'] !== null) {
+            $this->AbnormalReason = $param['AbnormalReason'];
         }
 
-        if (array_key_exists("Created",$param) and $param["Created"] !== null) {
-            $this->Created = $param["Created"];
+        if (array_key_exists('Created',$param) and $param['Created'] !== null) {
+            $this->Created = $param['Created'];
         }
 
-        if (array_key_exists("Updated",$param) and $param["Updated"] !== null) {
-            $this->Updated = $param["Updated"];
+        if (array_key_exists('Updated',$param) and $param['Updated'] !== null) {
+            $this->Updated = $param['Updated'];
         }
 
-        if (array_key_exists("DeadlineTime",$param) and $param["DeadlineTime"] !== null) {
-            $this->DeadlineTime = $param["DeadlineTime"];
+        if (array_key_exists('DeadlineTime',$param) and $param['DeadlineTime'] !== null) {
+            $this->DeadlineTime = $param['DeadlineTime'];
         }
 
-        if (array_key_exists("ResourceGroupId",$param) and $param["ResourceGroupId"] !== null) {
-            $this->ResourceGroupId = $param["ResourceGroupId"];
+        if (array_key_exists('ResourceGroupId',$param) and $param['ResourceGroupId'] !== null) {
+            $this->ResourceGroupId = $param['ResourceGroupId'];
         }
 
-        if (array_key_exists("RenewFlag",$param) and $param["RenewFlag"] !== null) {
-            $this->RenewFlag = $param["RenewFlag"];
+        if (array_key_exists('RenewFlag',$param) and $param['RenewFlag'] !== null) {
+            $this->RenewFlag = $param['RenewFlag'];
         }
 
-        if (array_key_exists("Region",$param) and $param["Region"] !== null) {
-            $this->Region = $param["Region"];
+        if (array_key_exists('Region',$param) and $param['Region'] !== null) {
+            $this->Region = $param['Region'];
         }
 
-        if (array_key_exists("CpuRequested",$param) and $param["CpuRequested"] !== null) {
-            $this->CpuRequested = $param["CpuRequested"];
+        if (array_key_exists('CpuRequested',$param) and $param['CpuRequested'] !== null) {
+            $this->CpuRequested = $param['CpuRequested'];
         }
 
-        if (array_key_exists("MemoryRequested",$param) and $param["MemoryRequested"] !== null) {
-            $this->MemoryRequested = $param["MemoryRequested"];
+        if (array_key_exists('MemoryRequested',$param) and $param['MemoryRequested'] !== null) {
+            $this->MemoryRequested = $param['MemoryRequested'];
         }
 
-        if (array_key_exists("GpuRequested",$param) and $param["GpuRequested"] !== null) {
-            $this->GpuRequested = $param["GpuRequested"];
+        if (array_key_exists('GpuRequested',$param) and $param['GpuRequested'] !== null) {
+            $this->GpuRequested = $param['GpuRequested'];
         }
 
-        if (array_key_exists("RsgAsGroupId",$param) and $param["RsgAsGroupId"] !== null) {
-            $this->RsgAsGroupId = $param["RsgAsGroupId"];
+        if (array_key_exists('RsgAsGroupId',$param) and $param['RsgAsGroupId'] !== null) {
+            $this->RsgAsGroupId = $param['RsgAsGroupId'];
         }
     }
 }

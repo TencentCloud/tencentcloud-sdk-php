@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -62,21 +62,21 @@ class DescribeScheduledActionsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("ScheduledActionSet",$param) and $param["ScheduledActionSet"] !== null) {
+        if (array_key_exists('ScheduledActionSet',$param) and $param['ScheduledActionSet'] !== null) {
             $this->ScheduledActionSet = [];
-            foreach ($param["ScheduledActionSet"] as $key => $value){
+            foreach ($param['ScheduledActionSet'] as $key => $value){
                 $obj = new ScheduledAction();
                 $obj->deserialize($value);
                 array_push($this->ScheduledActionSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

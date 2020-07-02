@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -126,32 +126,32 @@ class DescribeLiveTranscodeDetailInfoRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PushDomain",$param) and $param["PushDomain"] !== null) {
-            $this->PushDomain = $param["PushDomain"];
+        if (array_key_exists('PushDomain',$param) and $param['PushDomain'] !== null) {
+            $this->PushDomain = $param['PushDomain'];
         }
 
-        if (array_key_exists("StreamName",$param) and $param["StreamName"] !== null) {
-            $this->StreamName = $param["StreamName"];
+        if (array_key_exists('StreamName',$param) and $param['StreamName'] !== null) {
+            $this->StreamName = $param['StreamName'];
         }
 
-        if (array_key_exists("DayTime",$param) and $param["DayTime"] !== null) {
-            $this->DayTime = $param["DayTime"];
+        if (array_key_exists('DayTime',$param) and $param['DayTime'] !== null) {
+            $this->DayTime = $param['DayTime'];
         }
 
-        if (array_key_exists("PageNum",$param) and $param["PageNum"] !== null) {
-            $this->PageNum = $param["PageNum"];
+        if (array_key_exists('PageNum',$param) and $param['PageNum'] !== null) {
+            $this->PageNum = $param['PageNum'];
         }
 
-        if (array_key_exists("PageSize",$param) and $param["PageSize"] !== null) {
-            $this->PageSize = $param["PageSize"];
+        if (array_key_exists('PageSize',$param) and $param['PageSize'] !== null) {
+            $this->PageSize = $param['PageSize'];
         }
 
-        if (array_key_exists("StartDayTime",$param) and $param["StartDayTime"] !== null) {
-            $this->StartDayTime = $param["StartDayTime"];
+        if (array_key_exists('StartDayTime',$param) and $param['StartDayTime'] !== null) {
+            $this->StartDayTime = $param['StartDayTime'];
         }
 
-        if (array_key_exists("EndDayTime",$param) and $param["EndDayTime"] !== null) {
-            $this->EndDayTime = $param["EndDayTime"];
+        if (array_key_exists('EndDayTime',$param) and $param['EndDayTime'] !== null) {
+            $this->EndDayTime = $param['EndDayTime'];
         }
     }
 }

@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -110,40 +110,40 @@ class IndustryNews extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("IndustryId",$param) and $param["IndustryId"] !== null) {
-            $this->IndustryId = $param["IndustryId"];
+        if (array_key_exists('IndustryId',$param) and $param['IndustryId'] !== null) {
+            $this->IndustryId = $param['IndustryId'];
         }
 
-        if (array_key_exists("PubTime",$param) and $param["PubTime"] !== null) {
-            $this->PubTime = $param["PubTime"];
+        if (array_key_exists('PubTime',$param) and $param['PubTime'] !== null) {
+            $this->PubTime = $param['PubTime'];
         }
 
-        if (array_key_exists("FromSite",$param) and $param["FromSite"] !== null) {
-            $this->FromSite = $param["FromSite"];
+        if (array_key_exists('FromSite',$param) and $param['FromSite'] !== null) {
+            $this->FromSite = $param['FromSite'];
         }
 
-        if (array_key_exists("Title",$param) and $param["Title"] !== null) {
-            $this->Title = $param["Title"];
+        if (array_key_exists('Title',$param) and $param['Title'] !== null) {
+            $this->Title = $param['Title'];
         }
 
-        if (array_key_exists("Url",$param) and $param["Url"] !== null) {
-            $this->Url = $param["Url"];
+        if (array_key_exists('Url',$param) and $param['Url'] !== null) {
+            $this->Url = $param['Url'];
         }
 
-        if (array_key_exists("Level",$param) and $param["Level"] !== null) {
-            $this->Level = $param["Level"];
+        if (array_key_exists('Level',$param) and $param['Level'] !== null) {
+            $this->Level = $param['Level'];
         }
 
-        if (array_key_exists("Hot",$param) and $param["Hot"] !== null) {
-            $this->Hot = $param["Hot"];
+        if (array_key_exists('Hot',$param) and $param['Hot'] !== null) {
+            $this->Hot = $param['Hot'];
         }
 
-        if (array_key_exists("Flag",$param) and $param["Flag"] !== null) {
-            $this->Flag = $param["Flag"];
+        if (array_key_exists('Flag',$param) and $param['Flag'] !== null) {
+            $this->Flag = $param['Flag'];
         }
 
-        if (array_key_exists("Abstract",$param) and $param["Abstract"] !== null) {
-            $this->Abstract = $param["Abstract"];
+        if (array_key_exists('Abstract',$param) and $param['Abstract'] !== null) {
+            $this->Abstract = $param['Abstract'];
         }
     }
 }

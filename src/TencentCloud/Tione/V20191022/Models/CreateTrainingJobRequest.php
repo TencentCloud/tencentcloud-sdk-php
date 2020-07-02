@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -118,59 +118,59 @@ class CreateTrainingJobRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AlgorithmSpecification",$param) and $param["AlgorithmSpecification"] !== null) {
+        if (array_key_exists('AlgorithmSpecification',$param) and $param['AlgorithmSpecification'] !== null) {
             $this->AlgorithmSpecification = new AlgorithmSpecification();
-            $this->AlgorithmSpecification->deserialize($param["AlgorithmSpecification"]);
+            $this->AlgorithmSpecification->deserialize($param['AlgorithmSpecification']);
         }
 
-        if (array_key_exists("InputDataConfig",$param) and $param["InputDataConfig"] !== null) {
+        if (array_key_exists('InputDataConfig',$param) and $param['InputDataConfig'] !== null) {
             $this->InputDataConfig = [];
-            foreach ($param["InputDataConfig"] as $key => $value){
+            foreach ($param['InputDataConfig'] as $key => $value){
                 $obj = new InputDataConfig();
                 $obj->deserialize($value);
                 array_push($this->InputDataConfig, $obj);
             }
         }
 
-        if (array_key_exists("OutputDataConfig",$param) and $param["OutputDataConfig"] !== null) {
+        if (array_key_exists('OutputDataConfig',$param) and $param['OutputDataConfig'] !== null) {
             $this->OutputDataConfig = new OutputDataConfig();
-            $this->OutputDataConfig->deserialize($param["OutputDataConfig"]);
+            $this->OutputDataConfig->deserialize($param['OutputDataConfig']);
         }
 
-        if (array_key_exists("ResourceConfig",$param) and $param["ResourceConfig"] !== null) {
+        if (array_key_exists('ResourceConfig',$param) and $param['ResourceConfig'] !== null) {
             $this->ResourceConfig = new ResourceConfig();
-            $this->ResourceConfig->deserialize($param["ResourceConfig"]);
+            $this->ResourceConfig->deserialize($param['ResourceConfig']);
         }
 
-        if (array_key_exists("TrainingJobName",$param) and $param["TrainingJobName"] !== null) {
-            $this->TrainingJobName = $param["TrainingJobName"];
+        if (array_key_exists('TrainingJobName',$param) and $param['TrainingJobName'] !== null) {
+            $this->TrainingJobName = $param['TrainingJobName'];
         }
 
-        if (array_key_exists("StoppingCondition",$param) and $param["StoppingCondition"] !== null) {
+        if (array_key_exists('StoppingCondition',$param) and $param['StoppingCondition'] !== null) {
             $this->StoppingCondition = new StoppingCondition();
-            $this->StoppingCondition->deserialize($param["StoppingCondition"]);
+            $this->StoppingCondition->deserialize($param['StoppingCondition']);
         }
 
-        if (array_key_exists("VpcConfig",$param) and $param["VpcConfig"] !== null) {
+        if (array_key_exists('VpcConfig',$param) and $param['VpcConfig'] !== null) {
             $this->VpcConfig = new VpcConfig();
-            $this->VpcConfig->deserialize($param["VpcConfig"]);
+            $this->VpcConfig->deserialize($param['VpcConfig']);
         }
 
-        if (array_key_exists("HyperParameters",$param) and $param["HyperParameters"] !== null) {
-            $this->HyperParameters = $param["HyperParameters"];
+        if (array_key_exists('HyperParameters',$param) and $param['HyperParameters'] !== null) {
+            $this->HyperParameters = $param['HyperParameters'];
         }
 
-        if (array_key_exists("EnvConfig",$param) and $param["EnvConfig"] !== null) {
+        if (array_key_exists('EnvConfig',$param) and $param['EnvConfig'] !== null) {
             $this->EnvConfig = [];
-            foreach ($param["EnvConfig"] as $key => $value){
+            foreach ($param['EnvConfig'] as $key => $value){
                 $obj = new EnvConfig();
                 $obj->deserialize($value);
                 array_push($this->EnvConfig, $obj);
             }
         }
 
-        if (array_key_exists("RoleName",$param) and $param["RoleName"] !== null) {
-            $this->RoleName = $param["RoleName"];
+        if (array_key_exists('RoleName',$param) and $param['RoleName'] !== null) {
+            $this->RoleName = $param['RoleName'];
         }
     }
 }

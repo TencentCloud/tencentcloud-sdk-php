@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -62,16 +62,16 @@ class ModifyVpcPeerConnectionRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("VpcPeerConnectionId",$param) and $param["VpcPeerConnectionId"] !== null) {
-            $this->VpcPeerConnectionId = $param["VpcPeerConnectionId"];
+        if (array_key_exists('VpcPeerConnectionId',$param) and $param['VpcPeerConnectionId'] !== null) {
+            $this->VpcPeerConnectionId = $param['VpcPeerConnectionId'];
         }
 
-        if (array_key_exists("Bandwidth",$param) and $param["Bandwidth"] !== null) {
-            $this->Bandwidth = $param["Bandwidth"];
+        if (array_key_exists('Bandwidth',$param) and $param['Bandwidth'] !== null) {
+            $this->Bandwidth = $param['Bandwidth'];
         }
 
-        if (array_key_exists("VpcPeerConnectionName",$param) and $param["VpcPeerConnectionName"] !== null) {
-            $this->VpcPeerConnectionName = $param["VpcPeerConnectionName"];
+        if (array_key_exists('VpcPeerConnectionName',$param) and $param['VpcPeerConnectionName'] !== null) {
+            $this->VpcPeerConnectionName = $param['VpcPeerConnectionName'];
         }
     }
 }

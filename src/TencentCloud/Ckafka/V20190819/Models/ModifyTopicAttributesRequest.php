@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -118,44 +118,44 @@ class ModifyTopicAttributesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("TopicName",$param) and $param["TopicName"] !== null) {
-            $this->TopicName = $param["TopicName"];
+        if (array_key_exists('TopicName',$param) and $param['TopicName'] !== null) {
+            $this->TopicName = $param['TopicName'];
         }
 
-        if (array_key_exists("Note",$param) and $param["Note"] !== null) {
-            $this->Note = $param["Note"];
+        if (array_key_exists('Note',$param) and $param['Note'] !== null) {
+            $this->Note = $param['Note'];
         }
 
-        if (array_key_exists("EnableWhiteList",$param) and $param["EnableWhiteList"] !== null) {
-            $this->EnableWhiteList = $param["EnableWhiteList"];
+        if (array_key_exists('EnableWhiteList',$param) and $param['EnableWhiteList'] !== null) {
+            $this->EnableWhiteList = $param['EnableWhiteList'];
         }
 
-        if (array_key_exists("MinInsyncReplicas",$param) and $param["MinInsyncReplicas"] !== null) {
-            $this->MinInsyncReplicas = $param["MinInsyncReplicas"];
+        if (array_key_exists('MinInsyncReplicas',$param) and $param['MinInsyncReplicas'] !== null) {
+            $this->MinInsyncReplicas = $param['MinInsyncReplicas'];
         }
 
-        if (array_key_exists("UncleanLeaderElectionEnable",$param) and $param["UncleanLeaderElectionEnable"] !== null) {
-            $this->UncleanLeaderElectionEnable = $param["UncleanLeaderElectionEnable"];
+        if (array_key_exists('UncleanLeaderElectionEnable',$param) and $param['UncleanLeaderElectionEnable'] !== null) {
+            $this->UncleanLeaderElectionEnable = $param['UncleanLeaderElectionEnable'];
         }
 
-        if (array_key_exists("RetentionMs",$param) and $param["RetentionMs"] !== null) {
-            $this->RetentionMs = $param["RetentionMs"];
+        if (array_key_exists('RetentionMs',$param) and $param['RetentionMs'] !== null) {
+            $this->RetentionMs = $param['RetentionMs'];
         }
 
-        if (array_key_exists("SegmentMs",$param) and $param["SegmentMs"] !== null) {
-            $this->SegmentMs = $param["SegmentMs"];
+        if (array_key_exists('SegmentMs',$param) and $param['SegmentMs'] !== null) {
+            $this->SegmentMs = $param['SegmentMs'];
         }
 
-        if (array_key_exists("MaxMessageBytes",$param) and $param["MaxMessageBytes"] !== null) {
-            $this->MaxMessageBytes = $param["MaxMessageBytes"];
+        if (array_key_exists('MaxMessageBytes',$param) and $param['MaxMessageBytes'] !== null) {
+            $this->MaxMessageBytes = $param['MaxMessageBytes'];
         }
 
-        if (array_key_exists("CleanUpPolicy",$param) and $param["CleanUpPolicy"] !== null) {
-            $this->CleanUpPolicy = $param["CleanUpPolicy"];
+        if (array_key_exists('CleanUpPolicy',$param) and $param['CleanUpPolicy'] !== null) {
+            $this->CleanUpPolicy = $param['CleanUpPolicy'];
         }
     }
 }

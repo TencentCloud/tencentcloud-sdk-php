@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -94,37 +94,37 @@ class ZoneCapacityConf extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ZoneId",$param) and $param["ZoneId"] !== null) {
-            $this->ZoneId = $param["ZoneId"];
+        if (array_key_exists('ZoneId',$param) and $param['ZoneId'] !== null) {
+            $this->ZoneId = $param['ZoneId'];
         }
 
-        if (array_key_exists("ZoneName",$param) and $param["ZoneName"] !== null) {
-            $this->ZoneName = $param["ZoneName"];
+        if (array_key_exists('ZoneName',$param) and $param['ZoneName'] !== null) {
+            $this->ZoneName = $param['ZoneName'];
         }
 
-        if (array_key_exists("IsSaleout",$param) and $param["IsSaleout"] !== null) {
-            $this->IsSaleout = $param["IsSaleout"];
+        if (array_key_exists('IsSaleout',$param) and $param['IsSaleout'] !== null) {
+            $this->IsSaleout = $param['IsSaleout'];
         }
 
-        if (array_key_exists("IsDefault",$param) and $param["IsDefault"] !== null) {
-            $this->IsDefault = $param["IsDefault"];
+        if (array_key_exists('IsDefault',$param) and $param['IsDefault'] !== null) {
+            $this->IsDefault = $param['IsDefault'];
         }
 
-        if (array_key_exists("NetWorkType",$param) and $param["NetWorkType"] !== null) {
-            $this->NetWorkType = $param["NetWorkType"];
+        if (array_key_exists('NetWorkType',$param) and $param['NetWorkType'] !== null) {
+            $this->NetWorkType = $param['NetWorkType'];
         }
 
-        if (array_key_exists("ProductSet",$param) and $param["ProductSet"] !== null) {
+        if (array_key_exists('ProductSet',$param) and $param['ProductSet'] !== null) {
             $this->ProductSet = [];
-            foreach ($param["ProductSet"] as $key => $value){
+            foreach ($param['ProductSet'] as $key => $value){
                 $obj = new ProductConf();
                 $obj->deserialize($value);
                 array_push($this->ProductSet, $obj);
             }
         }
 
-        if (array_key_exists("OldZoneId",$param) and $param["OldZoneId"] !== null) {
-            $this->OldZoneId = $param["OldZoneId"];
+        if (array_key_exists('OldZoneId',$param) and $param['OldZoneId'] !== null) {
+            $this->OldZoneId = $param['OldZoneId'];
         }
     }
 }

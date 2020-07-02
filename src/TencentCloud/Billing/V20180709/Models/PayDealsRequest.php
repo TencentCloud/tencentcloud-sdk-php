@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -70,20 +70,20 @@ class PayDealsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("OrderIds",$param) and $param["OrderIds"] !== null) {
-            $this->OrderIds = $param["OrderIds"];
+        if (array_key_exists('OrderIds',$param) and $param['OrderIds'] !== null) {
+            $this->OrderIds = $param['OrderIds'];
         }
 
-        if (array_key_exists("AutoVoucher",$param) and $param["AutoVoucher"] !== null) {
-            $this->AutoVoucher = $param["AutoVoucher"];
+        if (array_key_exists('AutoVoucher',$param) and $param['AutoVoucher'] !== null) {
+            $this->AutoVoucher = $param['AutoVoucher'];
         }
 
-        if (array_key_exists("VoucherIds",$param) and $param["VoucherIds"] !== null) {
-            $this->VoucherIds = $param["VoucherIds"];
+        if (array_key_exists('VoucherIds',$param) and $param['VoucherIds'] !== null) {
+            $this->VoucherIds = $param['VoucherIds'];
         }
 
-        if (array_key_exists("BigDealIds",$param) and $param["BigDealIds"] !== null) {
-            $this->BigDealIds = $param["BigDealIds"];
+        if (array_key_exists('BigDealIds',$param) and $param['BigDealIds'] !== null) {
+            $this->BigDealIds = $param['BigDealIds'];
         }
     }
 }

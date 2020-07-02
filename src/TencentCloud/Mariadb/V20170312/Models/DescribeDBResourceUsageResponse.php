@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -78,28 +78,28 @@ class DescribeDBResourceUsageResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BinlogDiskAvailable",$param) and $param["BinlogDiskAvailable"] !== null) {
+        if (array_key_exists('BinlogDiskAvailable',$param) and $param['BinlogDiskAvailable'] !== null) {
             $this->BinlogDiskAvailable = new MonitorData();
-            $this->BinlogDiskAvailable->deserialize($param["BinlogDiskAvailable"]);
+            $this->BinlogDiskAvailable->deserialize($param['BinlogDiskAvailable']);
         }
 
-        if (array_key_exists("DataDiskAvailable",$param) and $param["DataDiskAvailable"] !== null) {
+        if (array_key_exists('DataDiskAvailable',$param) and $param['DataDiskAvailable'] !== null) {
             $this->DataDiskAvailable = new MonitorData();
-            $this->DataDiskAvailable->deserialize($param["DataDiskAvailable"]);
+            $this->DataDiskAvailable->deserialize($param['DataDiskAvailable']);
         }
 
-        if (array_key_exists("CpuUsageRate",$param) and $param["CpuUsageRate"] !== null) {
+        if (array_key_exists('CpuUsageRate',$param) and $param['CpuUsageRate'] !== null) {
             $this->CpuUsageRate = new MonitorData();
-            $this->CpuUsageRate->deserialize($param["CpuUsageRate"]);
+            $this->CpuUsageRate->deserialize($param['CpuUsageRate']);
         }
 
-        if (array_key_exists("MemAvailable",$param) and $param["MemAvailable"] !== null) {
+        if (array_key_exists('MemAvailable',$param) and $param['MemAvailable'] !== null) {
             $this->MemAvailable = new MonitorData();
-            $this->MemAvailable->deserialize($param["MemAvailable"]);
+            $this->MemAvailable->deserialize($param['MemAvailable']);
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

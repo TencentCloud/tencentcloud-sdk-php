@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -126,48 +126,48 @@ class BizLicenseOCRResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RegNum",$param) and $param["RegNum"] !== null) {
-            $this->RegNum = $param["RegNum"];
+        if (array_key_exists('RegNum',$param) and $param['RegNum'] !== null) {
+            $this->RegNum = $param['RegNum'];
         }
 
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("Capital",$param) and $param["Capital"] !== null) {
-            $this->Capital = $param["Capital"];
+        if (array_key_exists('Capital',$param) and $param['Capital'] !== null) {
+            $this->Capital = $param['Capital'];
         }
 
-        if (array_key_exists("Person",$param) and $param["Person"] !== null) {
-            $this->Person = $param["Person"];
+        if (array_key_exists('Person',$param) and $param['Person'] !== null) {
+            $this->Person = $param['Person'];
         }
 
-        if (array_key_exists("Address",$param) and $param["Address"] !== null) {
-            $this->Address = $param["Address"];
+        if (array_key_exists('Address',$param) and $param['Address'] !== null) {
+            $this->Address = $param['Address'];
         }
 
-        if (array_key_exists("Business",$param) and $param["Business"] !== null) {
-            $this->Business = $param["Business"];
+        if (array_key_exists('Business',$param) and $param['Business'] !== null) {
+            $this->Business = $param['Business'];
         }
 
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists('Type',$param) and $param['Type'] !== null) {
+            $this->Type = $param['Type'];
         }
 
-        if (array_key_exists("Period",$param) and $param["Period"] !== null) {
-            $this->Period = $param["Period"];
+        if (array_key_exists('Period',$param) and $param['Period'] !== null) {
+            $this->Period = $param['Period'];
         }
 
-        if (array_key_exists("ComposingForm",$param) and $param["ComposingForm"] !== null) {
-            $this->ComposingForm = $param["ComposingForm"];
+        if (array_key_exists('ComposingForm',$param) and $param['ComposingForm'] !== null) {
+            $this->ComposingForm = $param['ComposingForm'];
         }
 
-        if (array_key_exists("SetDate",$param) and $param["SetDate"] !== null) {
-            $this->SetDate = $param["SetDate"];
+        if (array_key_exists('SetDate',$param) and $param['SetDate'] !== null) {
+            $this->SetDate = $param['SetDate'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

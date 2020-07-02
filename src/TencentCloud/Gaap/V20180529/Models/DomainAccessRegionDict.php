@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -86,38 +86,38 @@ class DomainAccessRegionDict extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("NationCountryInnerList",$param) and $param["NationCountryInnerList"] !== null) {
+        if (array_key_exists('NationCountryInnerList',$param) and $param['NationCountryInnerList'] !== null) {
             $this->NationCountryInnerList = [];
-            foreach ($param["NationCountryInnerList"] as $key => $value){
+            foreach ($param['NationCountryInnerList'] as $key => $value){
                 $obj = new NationCountryInnerInfo();
                 $obj->deserialize($value);
                 array_push($this->NationCountryInnerList, $obj);
             }
         }
 
-        if (array_key_exists("ProxyList",$param) and $param["ProxyList"] !== null) {
+        if (array_key_exists('ProxyList',$param) and $param['ProxyList'] !== null) {
             $this->ProxyList = [];
-            foreach ($param["ProxyList"] as $key => $value){
+            foreach ($param['ProxyList'] as $key => $value){
                 $obj = new ProxyIdDict();
                 $obj->deserialize($value);
                 array_push($this->ProxyList, $obj);
             }
         }
 
-        if (array_key_exists("RegionId",$param) and $param["RegionId"] !== null) {
-            $this->RegionId = $param["RegionId"];
+        if (array_key_exists('RegionId',$param) and $param['RegionId'] !== null) {
+            $this->RegionId = $param['RegionId'];
         }
 
-        if (array_key_exists("GeographicalZoneInnerCode",$param) and $param["GeographicalZoneInnerCode"] !== null) {
-            $this->GeographicalZoneInnerCode = $param["GeographicalZoneInnerCode"];
+        if (array_key_exists('GeographicalZoneInnerCode',$param) and $param['GeographicalZoneInnerCode'] !== null) {
+            $this->GeographicalZoneInnerCode = $param['GeographicalZoneInnerCode'];
         }
 
-        if (array_key_exists("ContinentInnerCode",$param) and $param["ContinentInnerCode"] !== null) {
-            $this->ContinentInnerCode = $param["ContinentInnerCode"];
+        if (array_key_exists('ContinentInnerCode',$param) and $param['ContinentInnerCode'] !== null) {
+            $this->ContinentInnerCode = $param['ContinentInnerCode'];
         }
 
-        if (array_key_exists("RegionName",$param) and $param["RegionName"] !== null) {
-            $this->RegionName = $param["RegionName"];
+        if (array_key_exists('RegionName',$param) and $param['RegionName'] !== null) {
+            $this->RegionName = $param['RegionName'];
         }
     }
 }

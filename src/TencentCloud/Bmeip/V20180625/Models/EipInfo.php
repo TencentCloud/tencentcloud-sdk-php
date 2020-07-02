@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -46,12 +46,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFreeSecond(integer $FreeSecond) 设置EIP未绑定服务器时长（单位：秒）
  * @method integer getType() 获取EIP所绑定的资源类型，-1：未绑定资源；0：黑石物理机，字段对应unInstanceId；1：Nat网关，字段对应natUid；2：云服务器字段对应vpcIp; 3: 托管机器，字段对应HInstanceId, HInstanceAlias
  * @method void setType(integer $Type) 设置EIP所绑定的资源类型，-1：未绑定资源；0：黑石物理机，字段对应unInstanceId；1：Nat网关，字段对应natUid；2：云服务器字段对应vpcIp; 3: 托管机器，字段对应HInstanceId, HInstanceAlias
- * @method string getPayMode() 获取EIP计费模式，"flow"：流量计费； "bandwidth"：带宽计费
- * @method void setPayMode(string $PayMode) 设置EIP计费模式，"flow"：流量计费； "bandwidth"：带宽计费
+ * @method string getPayMode() 获取EIP计费模式，'flow'：流量计费； 'bandwidth'：带宽计费
+ * @method void setPayMode(string $PayMode) 设置EIP计费模式，'flow'：流量计费； 'bandwidth'：带宽计费
  * @method integer getBandwidth() 获取EIP带宽计费模式下的带宽上限（单位：MB）
  * @method void setBandwidth(integer $Bandwidth) 设置EIP带宽计费模式下的带宽上限（单位：MB）
- * @method string getLatestPayMode() 获取最近一次操作变更的EIP计费模式，"flow"：流量计费； "bandwidth"：带宽计费
- * @method void setLatestPayMode(string $LatestPayMode) 设置最近一次操作变更的EIP计费模式，"flow"：流量计费； "bandwidth"：带宽计费
+ * @method string getLatestPayMode() 获取最近一次操作变更的EIP计费模式，'flow'：流量计费； 'bandwidth'：带宽计费
+ * @method void setLatestPayMode(string $LatestPayMode) 设置最近一次操作变更的EIP计费模式，'flow'：流量计费； 'bandwidth'：带宽计费
  * @method integer getLatestBandwidth() 获取最近一次操作变更的EIP计费模式对应的带宽上限值，仅在带宽计费模式下有效（单位：MB）
  * @method void setLatestBandwidth(integer $LatestBandwidth) 设置最近一次操作变更的EIP计费模式对应的带宽上限值，仅在带宽计费模式下有效（单位：MB）
  * @method string getVpcName() 获取私有网络名称
@@ -145,7 +145,7 @@ class EipInfo extends AbstractModel
     public $Type;
 
     /**
-     * @var string EIP计费模式，"flow"：流量计费； "bandwidth"：带宽计费
+     * @var string EIP计费模式，'flow'：流量计费； 'bandwidth'：带宽计费
      */
     public $PayMode;
 
@@ -155,7 +155,7 @@ class EipInfo extends AbstractModel
     public $Bandwidth;
 
     /**
-     * @var string 最近一次操作变更的EIP计费模式，"flow"：流量计费； "bandwidth"：带宽计费
+     * @var string 最近一次操作变更的EIP计费模式，'flow'：流量计费； 'bandwidth'：带宽计费
      */
     public $LatestPayMode;
 
@@ -233,9 +233,9 @@ class EipInfo extends AbstractModel
      * @param string $UpdatedAt EIP更新时间
      * @param integer $FreeSecond EIP未绑定服务器时长（单位：秒）
      * @param integer $Type EIP所绑定的资源类型，-1：未绑定资源；0：黑石物理机，字段对应unInstanceId；1：Nat网关，字段对应natUid；2：云服务器字段对应vpcIp; 3: 托管机器，字段对应HInstanceId, HInstanceAlias
-     * @param string $PayMode EIP计费模式，"flow"：流量计费； "bandwidth"：带宽计费
+     * @param string $PayMode EIP计费模式，'flow'：流量计费； 'bandwidth'：带宽计费
      * @param integer $Bandwidth EIP带宽计费模式下的带宽上限（单位：MB）
-     * @param string $LatestPayMode 最近一次操作变更的EIP计费模式，"flow"：流量计费； "bandwidth"：带宽计费
+     * @param string $LatestPayMode 最近一次操作变更的EIP计费模式，'flow'：流量计费； 'bandwidth'：带宽计费
      * @param integer $LatestBandwidth 最近一次操作变更的EIP计费模式对应的带宽上限值，仅在带宽计费模式下有效（单位：MB）
      * @param string $VpcName 私有网络名称
      * @param integer $NatId EIP所绑定的NAT网关的数字ID，形如：1001,，未绑定则为空
@@ -262,116 +262,116 @@ class EipInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("EipId",$param) and $param["EipId"] !== null) {
-            $this->EipId = $param["EipId"];
+        if (array_key_exists('EipId',$param) and $param['EipId'] !== null) {
+            $this->EipId = $param['EipId'];
         }
 
-        if (array_key_exists("EipName",$param) and $param["EipName"] !== null) {
-            $this->EipName = $param["EipName"];
+        if (array_key_exists('EipName',$param) and $param['EipName'] !== null) {
+            $this->EipName = $param['EipName'];
         }
 
-        if (array_key_exists("Eip",$param) and $param["Eip"] !== null) {
-            $this->Eip = $param["Eip"];
+        if (array_key_exists('Eip',$param) and $param['Eip'] !== null) {
+            $this->Eip = $param['Eip'];
         }
 
-        if (array_key_exists("IspId",$param) and $param["IspId"] !== null) {
-            $this->IspId = $param["IspId"];
+        if (array_key_exists('IspId',$param) and $param['IspId'] !== null) {
+            $this->IspId = $param['IspId'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("Arrears",$param) and $param["Arrears"] !== null) {
-            $this->Arrears = $param["Arrears"];
+        if (array_key_exists('Arrears',$param) and $param['Arrears'] !== null) {
+            $this->Arrears = $param['Arrears'];
         }
 
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("InstanceAlias",$param) and $param["InstanceAlias"] !== null) {
-            $this->InstanceAlias = $param["InstanceAlias"];
+        if (array_key_exists('InstanceAlias',$param) and $param['InstanceAlias'] !== null) {
+            $this->InstanceAlias = $param['InstanceAlias'];
         }
 
-        if (array_key_exists("FreeAt",$param) and $param["FreeAt"] !== null) {
-            $this->FreeAt = $param["FreeAt"];
+        if (array_key_exists('FreeAt',$param) and $param['FreeAt'] !== null) {
+            $this->FreeAt = $param['FreeAt'];
         }
 
-        if (array_key_exists("CreatedAt",$param) and $param["CreatedAt"] !== null) {
-            $this->CreatedAt = $param["CreatedAt"];
+        if (array_key_exists('CreatedAt',$param) and $param['CreatedAt'] !== null) {
+            $this->CreatedAt = $param['CreatedAt'];
         }
 
-        if (array_key_exists("UpdatedAt",$param) and $param["UpdatedAt"] !== null) {
-            $this->UpdatedAt = $param["UpdatedAt"];
+        if (array_key_exists('UpdatedAt',$param) and $param['UpdatedAt'] !== null) {
+            $this->UpdatedAt = $param['UpdatedAt'];
         }
 
-        if (array_key_exists("FreeSecond",$param) and $param["FreeSecond"] !== null) {
-            $this->FreeSecond = $param["FreeSecond"];
+        if (array_key_exists('FreeSecond',$param) and $param['FreeSecond'] !== null) {
+            $this->FreeSecond = $param['FreeSecond'];
         }
 
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists('Type',$param) and $param['Type'] !== null) {
+            $this->Type = $param['Type'];
         }
 
-        if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {
-            $this->PayMode = $param["PayMode"];
+        if (array_key_exists('PayMode',$param) and $param['PayMode'] !== null) {
+            $this->PayMode = $param['PayMode'];
         }
 
-        if (array_key_exists("Bandwidth",$param) and $param["Bandwidth"] !== null) {
-            $this->Bandwidth = $param["Bandwidth"];
+        if (array_key_exists('Bandwidth',$param) and $param['Bandwidth'] !== null) {
+            $this->Bandwidth = $param['Bandwidth'];
         }
 
-        if (array_key_exists("LatestPayMode",$param) and $param["LatestPayMode"] !== null) {
-            $this->LatestPayMode = $param["LatestPayMode"];
+        if (array_key_exists('LatestPayMode',$param) and $param['LatestPayMode'] !== null) {
+            $this->LatestPayMode = $param['LatestPayMode'];
         }
 
-        if (array_key_exists("LatestBandwidth",$param) and $param["LatestBandwidth"] !== null) {
-            $this->LatestBandwidth = $param["LatestBandwidth"];
+        if (array_key_exists('LatestBandwidth',$param) and $param['LatestBandwidth'] !== null) {
+            $this->LatestBandwidth = $param['LatestBandwidth'];
         }
 
-        if (array_key_exists("VpcName",$param) and $param["VpcName"] !== null) {
-            $this->VpcName = $param["VpcName"];
+        if (array_key_exists('VpcName',$param) and $param['VpcName'] !== null) {
+            $this->VpcName = $param['VpcName'];
         }
 
-        if (array_key_exists("NatId",$param) and $param["NatId"] !== null) {
-            $this->NatId = $param["NatId"];
+        if (array_key_exists('NatId',$param) and $param['NatId'] !== null) {
+            $this->NatId = $param['NatId'];
         }
 
-        if (array_key_exists("NatUid",$param) and $param["NatUid"] !== null) {
-            $this->NatUid = $param["NatUid"];
+        if (array_key_exists('NatUid',$param) and $param['NatUid'] !== null) {
+            $this->NatUid = $param['NatUid'];
         }
 
-        if (array_key_exists("VpcIp",$param) and $param["VpcIp"] !== null) {
-            $this->VpcIp = $param["VpcIp"];
+        if (array_key_exists('VpcIp',$param) and $param['VpcIp'] !== null) {
+            $this->VpcIp = $param['VpcIp'];
         }
 
-        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
-            $this->VpcId = $param["VpcId"];
+        if (array_key_exists('VpcId',$param) and $param['VpcId'] !== null) {
+            $this->VpcId = $param['VpcId'];
         }
 
-        if (array_key_exists("Exclusive",$param) and $param["Exclusive"] !== null) {
-            $this->Exclusive = $param["Exclusive"];
+        if (array_key_exists('Exclusive',$param) and $param['Exclusive'] !== null) {
+            $this->Exclusive = $param['Exclusive'];
         }
 
-        if (array_key_exists("VpcCidr",$param) and $param["VpcCidr"] !== null) {
-            $this->VpcCidr = $param["VpcCidr"];
+        if (array_key_exists('VpcCidr',$param) and $param['VpcCidr'] !== null) {
+            $this->VpcCidr = $param['VpcCidr'];
         }
 
-        if (array_key_exists("AclId",$param) and $param["AclId"] !== null) {
-            $this->AclId = $param["AclId"];
+        if (array_key_exists('AclId',$param) and $param['AclId'] !== null) {
+            $this->AclId = $param['AclId'];
         }
 
-        if (array_key_exists("AclName",$param) and $param["AclName"] !== null) {
-            $this->AclName = $param["AclName"];
+        if (array_key_exists('AclName',$param) and $param['AclName'] !== null) {
+            $this->AclName = $param['AclName'];
         }
 
-        if (array_key_exists("HInstanceId",$param) and $param["HInstanceId"] !== null) {
-            $this->HInstanceId = $param["HInstanceId"];
+        if (array_key_exists('HInstanceId',$param) and $param['HInstanceId'] !== null) {
+            $this->HInstanceId = $param['HInstanceId'];
         }
 
-        if (array_key_exists("HInstanceAlias",$param) and $param["HInstanceAlias"] !== null) {
-            $this->HInstanceAlias = $param["HInstanceAlias"];
+        if (array_key_exists('HInstanceAlias',$param) and $param['HInstanceAlias'] !== null) {
+            $this->HInstanceAlias = $param['HInstanceAlias'];
         }
     }
 }

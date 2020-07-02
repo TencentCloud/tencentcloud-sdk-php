@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -70,20 +70,20 @@ class CreateApiKeyRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SecretName",$param) and $param["SecretName"] !== null) {
-            $this->SecretName = $param["SecretName"];
+        if (array_key_exists('SecretName',$param) and $param['SecretName'] !== null) {
+            $this->SecretName = $param['SecretName'];
         }
 
-        if (array_key_exists("AccessKeyType",$param) and $param["AccessKeyType"] !== null) {
-            $this->AccessKeyType = $param["AccessKeyType"];
+        if (array_key_exists('AccessKeyType',$param) and $param['AccessKeyType'] !== null) {
+            $this->AccessKeyType = $param['AccessKeyType'];
         }
 
-        if (array_key_exists("AccessKeyId",$param) and $param["AccessKeyId"] !== null) {
-            $this->AccessKeyId = $param["AccessKeyId"];
+        if (array_key_exists('AccessKeyId',$param) and $param['AccessKeyId'] !== null) {
+            $this->AccessKeyId = $param['AccessKeyId'];
         }
 
-        if (array_key_exists("AccessKeySecret",$param) and $param["AccessKeySecret"] !== null) {
-            $this->AccessKeySecret = $param["AccessKeySecret"];
+        if (array_key_exists('AccessKeySecret',$param) and $param['AccessKeySecret'] !== null) {
+            $this->AccessKeySecret = $param['AccessKeySecret'];
         }
     }
 }

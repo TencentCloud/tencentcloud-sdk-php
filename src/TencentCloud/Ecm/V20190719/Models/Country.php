@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -54,12 +54,12 @@ class Country extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CountryId",$param) and $param["CountryId"] !== null) {
-            $this->CountryId = $param["CountryId"];
+        if (array_key_exists('CountryId',$param) and $param['CountryId'] !== null) {
+            $this->CountryId = $param['CountryId'];
         }
 
-        if (array_key_exists("CountryName",$param) and $param["CountryName"] !== null) {
-            $this->CountryName = $param["CountryName"];
+        if (array_key_exists('CountryName',$param) and $param['CountryName'] !== null) {
+            $this->CountryName = $param['CountryName'];
         }
     }
 }

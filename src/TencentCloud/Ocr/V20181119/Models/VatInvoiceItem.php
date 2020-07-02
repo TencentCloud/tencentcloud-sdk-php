@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -110,40 +110,40 @@ class VatInvoiceItem extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LineNo",$param) and $param["LineNo"] !== null) {
-            $this->LineNo = $param["LineNo"];
+        if (array_key_exists('LineNo',$param) and $param['LineNo'] !== null) {
+            $this->LineNo = $param['LineNo'];
         }
 
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("Spec",$param) and $param["Spec"] !== null) {
-            $this->Spec = $param["Spec"];
+        if (array_key_exists('Spec',$param) and $param['Spec'] !== null) {
+            $this->Spec = $param['Spec'];
         }
 
-        if (array_key_exists("Unit",$param) and $param["Unit"] !== null) {
-            $this->Unit = $param["Unit"];
+        if (array_key_exists('Unit',$param) and $param['Unit'] !== null) {
+            $this->Unit = $param['Unit'];
         }
 
-        if (array_key_exists("Quantity",$param) and $param["Quantity"] !== null) {
-            $this->Quantity = $param["Quantity"];
+        if (array_key_exists('Quantity',$param) and $param['Quantity'] !== null) {
+            $this->Quantity = $param['Quantity'];
         }
 
-        if (array_key_exists("UnitPrice",$param) and $param["UnitPrice"] !== null) {
-            $this->UnitPrice = $param["UnitPrice"];
+        if (array_key_exists('UnitPrice',$param) and $param['UnitPrice'] !== null) {
+            $this->UnitPrice = $param['UnitPrice'];
         }
 
-        if (array_key_exists("AmountWithoutTax",$param) and $param["AmountWithoutTax"] !== null) {
-            $this->AmountWithoutTax = $param["AmountWithoutTax"];
+        if (array_key_exists('AmountWithoutTax',$param) and $param['AmountWithoutTax'] !== null) {
+            $this->AmountWithoutTax = $param['AmountWithoutTax'];
         }
 
-        if (array_key_exists("TaxRate",$param) and $param["TaxRate"] !== null) {
-            $this->TaxRate = $param["TaxRate"];
+        if (array_key_exists('TaxRate',$param) and $param['TaxRate'] !== null) {
+            $this->TaxRate = $param['TaxRate'];
         }
 
-        if (array_key_exists("TaxAmount",$param) and $param["TaxAmount"] !== null) {
-            $this->TaxAmount = $param["TaxAmount"];
+        if (array_key_exists('TaxAmount',$param) and $param['TaxAmount'] !== null) {
+            $this->TaxAmount = $param['TaxAmount'];
         }
     }
 }

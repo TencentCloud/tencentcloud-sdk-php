@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -74,19 +74,19 @@ class OperationInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Init",$param) and $param["Init"] !== null) {
+        if (array_key_exists('Init',$param) and $param['Init'] !== null) {
             $this->Init = new OperationInfoDetail();
-            $this->Init->deserialize($param["Init"]);
+            $this->Init->deserialize($param['Init']);
         }
 
-        if (array_key_exists("AddInstance",$param) and $param["AddInstance"] !== null) {
+        if (array_key_exists('AddInstance',$param) and $param['AddInstance'] !== null) {
             $this->AddInstance = new OperationInfoDetail();
-            $this->AddInstance->deserialize($param["AddInstance"]);
+            $this->AddInstance->deserialize($param['AddInstance']);
         }
 
-        if (array_key_exists("Destroy",$param) and $param["Destroy"] !== null) {
+        if (array_key_exists('Destroy',$param) and $param['Destroy'] !== null) {
             $this->Destroy = new OperationInfoDetail();
-            $this->Destroy->deserialize($param["Destroy"]);
+            $this->Destroy->deserialize($param['Destroy']);
         }
     }
 }

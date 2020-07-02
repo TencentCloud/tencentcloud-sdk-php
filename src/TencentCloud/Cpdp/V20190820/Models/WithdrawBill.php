@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -102,36 +102,36 @@ class WithdrawBill extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("WithdrawOrderId",$param) and $param["WithdrawOrderId"] !== null) {
-            $this->WithdrawOrderId = $param["WithdrawOrderId"];
+        if (array_key_exists('WithdrawOrderId',$param) and $param['WithdrawOrderId'] !== null) {
+            $this->WithdrawOrderId = $param['WithdrawOrderId'];
         }
 
-        if (array_key_exists("Date",$param) and $param["Date"] !== null) {
-            $this->Date = $param["Date"];
+        if (array_key_exists('Date',$param) and $param['Date'] !== null) {
+            $this->Date = $param['Date'];
         }
 
-        if (array_key_exists("PayAmt",$param) and $param["PayAmt"] !== null) {
-            $this->PayAmt = $param["PayAmt"];
+        if (array_key_exists('PayAmt',$param) and $param['PayAmt'] !== null) {
+            $this->PayAmt = $param['PayAmt'];
         }
 
-        if (array_key_exists("InSubAppId",$param) and $param["InSubAppId"] !== null) {
-            $this->InSubAppId = $param["InSubAppId"];
+        if (array_key_exists('InSubAppId',$param) and $param['InSubAppId'] !== null) {
+            $this->InSubAppId = $param['InSubAppId'];
         }
 
-        if (array_key_exists("OutSubAppId",$param) and $param["OutSubAppId"] !== null) {
-            $this->OutSubAppId = $param["OutSubAppId"];
+        if (array_key_exists('OutSubAppId',$param) and $param['OutSubAppId'] !== null) {
+            $this->OutSubAppId = $param['OutSubAppId'];
         }
 
-        if (array_key_exists("CurrencyType",$param) and $param["CurrencyType"] !== null) {
-            $this->CurrencyType = $param["CurrencyType"];
+        if (array_key_exists('CurrencyType',$param) and $param['CurrencyType'] !== null) {
+            $this->CurrencyType = $param['CurrencyType'];
         }
 
-        if (array_key_exists("MetaData",$param) and $param["MetaData"] !== null) {
-            $this->MetaData = $param["MetaData"];
+        if (array_key_exists('MetaData',$param) and $param['MetaData'] !== null) {
+            $this->MetaData = $param['MetaData'];
         }
 
-        if (array_key_exists("ExtendFieldData",$param) and $param["ExtendFieldData"] !== null) {
-            $this->ExtendFieldData = $param["ExtendFieldData"];
+        if (array_key_exists('ExtendFieldData',$param) and $param['ExtendFieldData'] !== null) {
+            $this->ExtendFieldData = $param['ExtendFieldData'];
         }
     }
 }

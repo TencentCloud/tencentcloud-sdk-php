@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -70,20 +70,20 @@ class DataManipulationRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("OpType",$param) and $param["OpType"] !== null) {
-            $this->OpType = $param["OpType"];
+        if (array_key_exists('OpType',$param) and $param['OpType'] !== null) {
+            $this->OpType = $param['OpType'];
         }
 
-        if (array_key_exists("Encoding",$param) and $param["Encoding"] !== null) {
-            $this->Encoding = $param["Encoding"];
+        if (array_key_exists('Encoding',$param) and $param['Encoding'] !== null) {
+            $this->Encoding = $param['Encoding'];
         }
 
-        if (array_key_exists("Contents",$param) and $param["Contents"] !== null) {
-            $this->Contents = $param["Contents"];
+        if (array_key_exists('Contents',$param) and $param['Contents'] !== null) {
+            $this->Contents = $param['Contents'];
         }
 
-        if (array_key_exists("ResourceId",$param) and $param["ResourceId"] !== null) {
-            $this->ResourceId = $param["ResourceId"];
+        if (array_key_exists('ResourceId',$param) and $param['ResourceId'] !== null) {
+            $this->ResourceId = $param['ResourceId'];
         }
     }
 }

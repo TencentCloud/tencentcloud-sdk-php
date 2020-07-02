@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -45,17 +45,17 @@ use TencentCloud\As\V20180419\Models as Models;
 
 ```
 {
-	"Service": "Tencent Cloud Auto Scaling",
-	"Time": "2019-03-14T10:15:11Z",
-	"AppId": "1251783334",
-	"ActivityId": "asa-fznnvrja",
-	"AutoScalingGroupId": "asg-rrrrtttt",
-	"LifecycleHookId": "ash-xxxxyyyy",
-	"LifecycleHookName": "my-hook",
-	"LifecycleActionToken": "3080e1c9-0efe-4dd7-ad3b-90cd6618298f",
-	"InstanceId": "ins-aaaabbbb",
-	"LifecycleTransition": "INSTANCE_LAUNCHING",
-	"NotificationMetadata": ""
+	'Service': "Tencent Cloud Auto Scaling",
+	'Time': "2019-03-14T10:15:11Z",
+	'AppId': '1251783334',
+	'ActivityId': "asa-fznnvrja",
+	'AutoScalingGroupId': "asg-rrrrtttt",
+	'LifecycleHookId': "ash-xxxxyyyy",
+	'LifecycleHookName': "my-hook",
+	'LifecycleActionToken': "3080e1c9-0efe-4dd7-ad3b-90cd6618298f",
+	'InstanceId': "ins-aaaabbbb",
+	'LifecycleTransition': "INSTANCE_LAUNCHING",
+	'NotificationMetadata': ""
 }
 ```
  * @method Models\CreateNotificationConfigurationResponse CreateNotificationConfiguration(Models\CreateNotificationConfigurationRequest $req) 本接口（CreateNotificationConfiguration）用于创建通知。
@@ -175,7 +175,7 @@ class AsClient extends AbstractClient
 
     public function returnResponse($action, $response)
     {
-        $respClass = "TencentCloud"."\\".ucfirst("as")."\\"."V20180419\\Models"."\\".ucfirst($action)."Response";
+        $respClass = 'TencentCloud'."\\".ucfirst('as')."\\"."V20180419\\Models"."\\".ucfirst($action).'Response';
         $obj = new $respClass();
         $obj->deserialize($response);
         return $obj;

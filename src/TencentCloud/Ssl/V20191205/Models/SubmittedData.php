@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -338,104 +338,104 @@ class SubmittedData extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CsrType",$param) and $param["CsrType"] !== null) {
-            $this->CsrType = $param["CsrType"];
+        if (array_key_exists('CsrType',$param) and $param['CsrType'] !== null) {
+            $this->CsrType = $param['CsrType'];
         }
 
-        if (array_key_exists("CsrContent",$param) and $param["CsrContent"] !== null) {
-            $this->CsrContent = $param["CsrContent"];
+        if (array_key_exists('CsrContent',$param) and $param['CsrContent'] !== null) {
+            $this->CsrContent = $param['CsrContent'];
         }
 
-        if (array_key_exists("CertificateDomain",$param) and $param["CertificateDomain"] !== null) {
-            $this->CertificateDomain = $param["CertificateDomain"];
+        if (array_key_exists('CertificateDomain',$param) and $param['CertificateDomain'] !== null) {
+            $this->CertificateDomain = $param['CertificateDomain'];
         }
 
-        if (array_key_exists("DomainList",$param) and $param["DomainList"] !== null) {
-            $this->DomainList = $param["DomainList"];
+        if (array_key_exists('DomainList',$param) and $param['DomainList'] !== null) {
+            $this->DomainList = $param['DomainList'];
         }
 
-        if (array_key_exists("KeyPassword",$param) and $param["KeyPassword"] !== null) {
-            $this->KeyPassword = $param["KeyPassword"];
+        if (array_key_exists('KeyPassword',$param) and $param['KeyPassword'] !== null) {
+            $this->KeyPassword = $param['KeyPassword'];
         }
 
-        if (array_key_exists("OrganizationName",$param) and $param["OrganizationName"] !== null) {
-            $this->OrganizationName = $param["OrganizationName"];
+        if (array_key_exists('OrganizationName',$param) and $param['OrganizationName'] !== null) {
+            $this->OrganizationName = $param['OrganizationName'];
         }
 
-        if (array_key_exists("OrganizationDivision",$param) and $param["OrganizationDivision"] !== null) {
-            $this->OrganizationDivision = $param["OrganizationDivision"];
+        if (array_key_exists('OrganizationDivision',$param) and $param['OrganizationDivision'] !== null) {
+            $this->OrganizationDivision = $param['OrganizationDivision'];
         }
 
-        if (array_key_exists("OrganizationAddress",$param) and $param["OrganizationAddress"] !== null) {
-            $this->OrganizationAddress = $param["OrganizationAddress"];
+        if (array_key_exists('OrganizationAddress',$param) and $param['OrganizationAddress'] !== null) {
+            $this->OrganizationAddress = $param['OrganizationAddress'];
         }
 
-        if (array_key_exists("OrganizationCountry",$param) and $param["OrganizationCountry"] !== null) {
-            $this->OrganizationCountry = $param["OrganizationCountry"];
+        if (array_key_exists('OrganizationCountry',$param) and $param['OrganizationCountry'] !== null) {
+            $this->OrganizationCountry = $param['OrganizationCountry'];
         }
 
-        if (array_key_exists("OrganizationCity",$param) and $param["OrganizationCity"] !== null) {
-            $this->OrganizationCity = $param["OrganizationCity"];
+        if (array_key_exists('OrganizationCity',$param) and $param['OrganizationCity'] !== null) {
+            $this->OrganizationCity = $param['OrganizationCity'];
         }
 
-        if (array_key_exists("OrganizationRegion",$param) and $param["OrganizationRegion"] !== null) {
-            $this->OrganizationRegion = $param["OrganizationRegion"];
+        if (array_key_exists('OrganizationRegion',$param) and $param['OrganizationRegion'] !== null) {
+            $this->OrganizationRegion = $param['OrganizationRegion'];
         }
 
-        if (array_key_exists("PostalCode",$param) and $param["PostalCode"] !== null) {
-            $this->PostalCode = $param["PostalCode"];
+        if (array_key_exists('PostalCode',$param) and $param['PostalCode'] !== null) {
+            $this->PostalCode = $param['PostalCode'];
         }
 
-        if (array_key_exists("PhoneAreaCode",$param) and $param["PhoneAreaCode"] !== null) {
-            $this->PhoneAreaCode = $param["PhoneAreaCode"];
+        if (array_key_exists('PhoneAreaCode',$param) and $param['PhoneAreaCode'] !== null) {
+            $this->PhoneAreaCode = $param['PhoneAreaCode'];
         }
 
-        if (array_key_exists("PhoneNumber",$param) and $param["PhoneNumber"] !== null) {
-            $this->PhoneNumber = $param["PhoneNumber"];
+        if (array_key_exists('PhoneNumber',$param) and $param['PhoneNumber'] !== null) {
+            $this->PhoneNumber = $param['PhoneNumber'];
         }
 
-        if (array_key_exists("AdminFirstName",$param) and $param["AdminFirstName"] !== null) {
-            $this->AdminFirstName = $param["AdminFirstName"];
+        if (array_key_exists('AdminFirstName',$param) and $param['AdminFirstName'] !== null) {
+            $this->AdminFirstName = $param['AdminFirstName'];
         }
 
-        if (array_key_exists("AdminLastName",$param) and $param["AdminLastName"] !== null) {
-            $this->AdminLastName = $param["AdminLastName"];
+        if (array_key_exists('AdminLastName',$param) and $param['AdminLastName'] !== null) {
+            $this->AdminLastName = $param['AdminLastName'];
         }
 
-        if (array_key_exists("AdminPhoneNum",$param) and $param["AdminPhoneNum"] !== null) {
-            $this->AdminPhoneNum = $param["AdminPhoneNum"];
+        if (array_key_exists('AdminPhoneNum',$param) and $param['AdminPhoneNum'] !== null) {
+            $this->AdminPhoneNum = $param['AdminPhoneNum'];
         }
 
-        if (array_key_exists("AdminEmail",$param) and $param["AdminEmail"] !== null) {
-            $this->AdminEmail = $param["AdminEmail"];
+        if (array_key_exists('AdminEmail',$param) and $param['AdminEmail'] !== null) {
+            $this->AdminEmail = $param['AdminEmail'];
         }
 
-        if (array_key_exists("AdminPosition",$param) and $param["AdminPosition"] !== null) {
-            $this->AdminPosition = $param["AdminPosition"];
+        if (array_key_exists('AdminPosition',$param) and $param['AdminPosition'] !== null) {
+            $this->AdminPosition = $param['AdminPosition'];
         }
 
-        if (array_key_exists("ContactFirstName",$param) and $param["ContactFirstName"] !== null) {
-            $this->ContactFirstName = $param["ContactFirstName"];
+        if (array_key_exists('ContactFirstName',$param) and $param['ContactFirstName'] !== null) {
+            $this->ContactFirstName = $param['ContactFirstName'];
         }
 
-        if (array_key_exists("ContactLastName",$param) and $param["ContactLastName"] !== null) {
-            $this->ContactLastName = $param["ContactLastName"];
+        if (array_key_exists('ContactLastName',$param) and $param['ContactLastName'] !== null) {
+            $this->ContactLastName = $param['ContactLastName'];
         }
 
-        if (array_key_exists("ContactNumber",$param) and $param["ContactNumber"] !== null) {
-            $this->ContactNumber = $param["ContactNumber"];
+        if (array_key_exists('ContactNumber',$param) and $param['ContactNumber'] !== null) {
+            $this->ContactNumber = $param['ContactNumber'];
         }
 
-        if (array_key_exists("ContactEmail",$param) and $param["ContactEmail"] !== null) {
-            $this->ContactEmail = $param["ContactEmail"];
+        if (array_key_exists('ContactEmail',$param) and $param['ContactEmail'] !== null) {
+            $this->ContactEmail = $param['ContactEmail'];
         }
 
-        if (array_key_exists("ContactPosition",$param) and $param["ContactPosition"] !== null) {
-            $this->ContactPosition = $param["ContactPosition"];
+        if (array_key_exists('ContactPosition',$param) and $param['ContactPosition'] !== null) {
+            $this->ContactPosition = $param['ContactPosition'];
         }
 
-        if (array_key_exists("VerifyType",$param) and $param["VerifyType"] !== null) {
-            $this->VerifyType = $param["VerifyType"];
+        if (array_key_exists('VerifyType',$param) and $param['VerifyType'] !== null) {
+            $this->VerifyType = $param['VerifyType'];
         }
     }
 }

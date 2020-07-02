@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -354,124 +354,124 @@ class CreateInstanceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ProductId",$param) and $param["ProductId"] !== null) {
-            $this->ProductId = $param["ProductId"];
+        if (array_key_exists('ProductId',$param) and $param['ProductId'] !== null) {
+            $this->ProductId = $param['ProductId'];
         }
 
-        if (array_key_exists("VPCSettings",$param) and $param["VPCSettings"] !== null) {
+        if (array_key_exists('VPCSettings',$param) and $param['VPCSettings'] !== null) {
             $this->VPCSettings = new VPCSettings();
-            $this->VPCSettings->deserialize($param["VPCSettings"]);
+            $this->VPCSettings->deserialize($param['VPCSettings']);
         }
 
-        if (array_key_exists("Software",$param) and $param["Software"] !== null) {
-            $this->Software = $param["Software"];
+        if (array_key_exists('Software',$param) and $param['Software'] !== null) {
+            $this->Software = $param['Software'];
         }
 
-        if (array_key_exists("ResourceSpec",$param) and $param["ResourceSpec"] !== null) {
+        if (array_key_exists('ResourceSpec',$param) and $param['ResourceSpec'] !== null) {
             $this->ResourceSpec = new NewResourceSpec();
-            $this->ResourceSpec->deserialize($param["ResourceSpec"]);
+            $this->ResourceSpec->deserialize($param['ResourceSpec']);
         }
 
-        if (array_key_exists("SupportHA",$param) and $param["SupportHA"] !== null) {
-            $this->SupportHA = $param["SupportHA"];
+        if (array_key_exists('SupportHA',$param) and $param['SupportHA'] !== null) {
+            $this->SupportHA = $param['SupportHA'];
         }
 
-        if (array_key_exists("InstanceName",$param) and $param["InstanceName"] !== null) {
-            $this->InstanceName = $param["InstanceName"];
+        if (array_key_exists('InstanceName',$param) and $param['InstanceName'] !== null) {
+            $this->InstanceName = $param['InstanceName'];
         }
 
-        if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {
-            $this->PayMode = $param["PayMode"];
+        if (array_key_exists('PayMode',$param) and $param['PayMode'] !== null) {
+            $this->PayMode = $param['PayMode'];
         }
 
-        if (array_key_exists("Placement",$param) and $param["Placement"] !== null) {
+        if (array_key_exists('Placement',$param) and $param['Placement'] !== null) {
             $this->Placement = new Placement();
-            $this->Placement->deserialize($param["Placement"]);
+            $this->Placement->deserialize($param['Placement']);
         }
 
-        if (array_key_exists("TimeSpan",$param) and $param["TimeSpan"] !== null) {
-            $this->TimeSpan = $param["TimeSpan"];
+        if (array_key_exists('TimeSpan',$param) and $param['TimeSpan'] !== null) {
+            $this->TimeSpan = $param['TimeSpan'];
         }
 
-        if (array_key_exists("TimeUnit",$param) and $param["TimeUnit"] !== null) {
-            $this->TimeUnit = $param["TimeUnit"];
+        if (array_key_exists('TimeUnit',$param) and $param['TimeUnit'] !== null) {
+            $this->TimeUnit = $param['TimeUnit'];
         }
 
-        if (array_key_exists("LoginSettings",$param) and $param["LoginSettings"] !== null) {
+        if (array_key_exists('LoginSettings',$param) and $param['LoginSettings'] !== null) {
             $this->LoginSettings = new LoginSettings();
-            $this->LoginSettings->deserialize($param["LoginSettings"]);
+            $this->LoginSettings->deserialize($param['LoginSettings']);
         }
 
-        if (array_key_exists("COSSettings",$param) and $param["COSSettings"] !== null) {
+        if (array_key_exists('COSSettings',$param) and $param['COSSettings'] !== null) {
             $this->COSSettings = new COSSettings();
-            $this->COSSettings->deserialize($param["COSSettings"]);
+            $this->COSSettings->deserialize($param['COSSettings']);
         }
 
-        if (array_key_exists("SgId",$param) and $param["SgId"] !== null) {
-            $this->SgId = $param["SgId"];
+        if (array_key_exists('SgId',$param) and $param['SgId'] !== null) {
+            $this->SgId = $param['SgId'];
         }
 
-        if (array_key_exists("PreExecutedFileSettings",$param) and $param["PreExecutedFileSettings"] !== null) {
+        if (array_key_exists('PreExecutedFileSettings',$param) and $param['PreExecutedFileSettings'] !== null) {
             $this->PreExecutedFileSettings = [];
-            foreach ($param["PreExecutedFileSettings"] as $key => $value){
+            foreach ($param['PreExecutedFileSettings'] as $key => $value){
                 $obj = new PreExecuteFileSettings();
                 $obj->deserialize($value);
                 array_push($this->PreExecutedFileSettings, $obj);
             }
         }
 
-        if (array_key_exists("AutoRenew",$param) and $param["AutoRenew"] !== null) {
-            $this->AutoRenew = $param["AutoRenew"];
+        if (array_key_exists('AutoRenew',$param) and $param['AutoRenew'] !== null) {
+            $this->AutoRenew = $param['AutoRenew'];
         }
 
-        if (array_key_exists("ClientToken",$param) and $param["ClientToken"] !== null) {
-            $this->ClientToken = $param["ClientToken"];
+        if (array_key_exists('ClientToken',$param) and $param['ClientToken'] !== null) {
+            $this->ClientToken = $param['ClientToken'];
         }
 
-        if (array_key_exists("NeedMasterWan",$param) and $param["NeedMasterWan"] !== null) {
-            $this->NeedMasterWan = $param["NeedMasterWan"];
+        if (array_key_exists('NeedMasterWan',$param) and $param['NeedMasterWan'] !== null) {
+            $this->NeedMasterWan = $param['NeedMasterWan'];
         }
 
-        if (array_key_exists("RemoteLoginAtCreate",$param) and $param["RemoteLoginAtCreate"] !== null) {
-            $this->RemoteLoginAtCreate = $param["RemoteLoginAtCreate"];
+        if (array_key_exists('RemoteLoginAtCreate',$param) and $param['RemoteLoginAtCreate'] !== null) {
+            $this->RemoteLoginAtCreate = $param['RemoteLoginAtCreate'];
         }
 
-        if (array_key_exists("CheckSecurity",$param) and $param["CheckSecurity"] !== null) {
-            $this->CheckSecurity = $param["CheckSecurity"];
+        if (array_key_exists('CheckSecurity',$param) and $param['CheckSecurity'] !== null) {
+            $this->CheckSecurity = $param['CheckSecurity'];
         }
 
-        if (array_key_exists("ExtendFsField",$param) and $param["ExtendFsField"] !== null) {
-            $this->ExtendFsField = $param["ExtendFsField"];
+        if (array_key_exists('ExtendFsField',$param) and $param['ExtendFsField'] !== null) {
+            $this->ExtendFsField = $param['ExtendFsField'];
         }
 
-        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+        if (array_key_exists('Tags',$param) and $param['Tags'] !== null) {
             $this->Tags = [];
-            foreach ($param["Tags"] as $key => $value){
+            foreach ($param['Tags'] as $key => $value){
                 $obj = new Tag();
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
         }
 
-        if (array_key_exists("DisasterRecoverGroupIds",$param) and $param["DisasterRecoverGroupIds"] !== null) {
-            $this->DisasterRecoverGroupIds = $param["DisasterRecoverGroupIds"];
+        if (array_key_exists('DisasterRecoverGroupIds',$param) and $param['DisasterRecoverGroupIds'] !== null) {
+            $this->DisasterRecoverGroupIds = $param['DisasterRecoverGroupIds'];
         }
 
-        if (array_key_exists("CbsEncrypt",$param) and $param["CbsEncrypt"] !== null) {
-            $this->CbsEncrypt = $param["CbsEncrypt"];
+        if (array_key_exists('CbsEncrypt',$param) and $param['CbsEncrypt'] !== null) {
+            $this->CbsEncrypt = $param['CbsEncrypt'];
         }
 
-        if (array_key_exists("MetaType",$param) and $param["MetaType"] !== null) {
-            $this->MetaType = $param["MetaType"];
+        if (array_key_exists('MetaType',$param) and $param['MetaType'] !== null) {
+            $this->MetaType = $param['MetaType'];
         }
 
-        if (array_key_exists("UnifyMetaInstanceId",$param) and $param["UnifyMetaInstanceId"] !== null) {
-            $this->UnifyMetaInstanceId = $param["UnifyMetaInstanceId"];
+        if (array_key_exists('UnifyMetaInstanceId',$param) and $param['UnifyMetaInstanceId'] !== null) {
+            $this->UnifyMetaInstanceId = $param['UnifyMetaInstanceId'];
         }
 
-        if (array_key_exists("MetaDBInfo",$param) and $param["MetaDBInfo"] !== null) {
+        if (array_key_exists('MetaDBInfo',$param) and $param['MetaDBInfo'] !== null) {
             $this->MetaDBInfo = new CustomMetaInfo();
-            $this->MetaDBInfo->deserialize($param["MetaDBInfo"]);
+            $this->MetaDBInfo->deserialize($param['MetaDBInfo']);
         }
     }
 }

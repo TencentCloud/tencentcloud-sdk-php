@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -166,69 +166,69 @@ class Event extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Resources",$param) and $param["Resources"] !== null) {
+        if (array_key_exists('Resources',$param) and $param['Resources'] !== null) {
             $this->Resources = new Resource();
-            $this->Resources->deserialize($param["Resources"]);
+            $this->Resources->deserialize($param['Resources']);
         }
 
-        if (array_key_exists("AccountID",$param) and $param["AccountID"] !== null) {
-            $this->AccountID = $param["AccountID"];
+        if (array_key_exists('AccountID',$param) and $param['AccountID'] !== null) {
+            $this->AccountID = $param['AccountID'];
         }
 
-        if (array_key_exists("CloudAuditEvent",$param) and $param["CloudAuditEvent"] !== null) {
-            $this->CloudAuditEvent = $param["CloudAuditEvent"];
+        if (array_key_exists('CloudAuditEvent',$param) and $param['CloudAuditEvent'] !== null) {
+            $this->CloudAuditEvent = $param['CloudAuditEvent'];
         }
 
-        if (array_key_exists("ErrorCode",$param) and $param["ErrorCode"] !== null) {
-            $this->ErrorCode = $param["ErrorCode"];
+        if (array_key_exists('ErrorCode',$param) and $param['ErrorCode'] !== null) {
+            $this->ErrorCode = $param['ErrorCode'];
         }
 
-        if (array_key_exists("EventId",$param) and $param["EventId"] !== null) {
-            $this->EventId = $param["EventId"];
+        if (array_key_exists('EventId',$param) and $param['EventId'] !== null) {
+            $this->EventId = $param['EventId'];
         }
 
-        if (array_key_exists("EventName",$param) and $param["EventName"] !== null) {
-            $this->EventName = $param["EventName"];
+        if (array_key_exists('EventName',$param) and $param['EventName'] !== null) {
+            $this->EventName = $param['EventName'];
         }
 
-        if (array_key_exists("EventNameCn",$param) and $param["EventNameCn"] !== null) {
-            $this->EventNameCn = $param["EventNameCn"];
+        if (array_key_exists('EventNameCn',$param) and $param['EventNameCn'] !== null) {
+            $this->EventNameCn = $param['EventNameCn'];
         }
 
-        if (array_key_exists("EventRegion",$param) and $param["EventRegion"] !== null) {
-            $this->EventRegion = $param["EventRegion"];
+        if (array_key_exists('EventRegion',$param) and $param['EventRegion'] !== null) {
+            $this->EventRegion = $param['EventRegion'];
         }
 
-        if (array_key_exists("EventSource",$param) and $param["EventSource"] !== null) {
-            $this->EventSource = $param["EventSource"];
+        if (array_key_exists('EventSource',$param) and $param['EventSource'] !== null) {
+            $this->EventSource = $param['EventSource'];
         }
 
-        if (array_key_exists("EventTime",$param) and $param["EventTime"] !== null) {
-            $this->EventTime = $param["EventTime"];
+        if (array_key_exists('EventTime',$param) and $param['EventTime'] !== null) {
+            $this->EventTime = $param['EventTime'];
         }
 
-        if (array_key_exists("RequestID",$param) and $param["RequestID"] !== null) {
-            $this->RequestID = $param["RequestID"];
+        if (array_key_exists('RequestID',$param) and $param['RequestID'] !== null) {
+            $this->RequestID = $param['RequestID'];
         }
 
-        if (array_key_exists("ResourceRegion",$param) and $param["ResourceRegion"] !== null) {
-            $this->ResourceRegion = $param["ResourceRegion"];
+        if (array_key_exists('ResourceRegion',$param) and $param['ResourceRegion'] !== null) {
+            $this->ResourceRegion = $param['ResourceRegion'];
         }
 
-        if (array_key_exists("ResourceTypeCn",$param) and $param["ResourceTypeCn"] !== null) {
-            $this->ResourceTypeCn = $param["ResourceTypeCn"];
+        if (array_key_exists('ResourceTypeCn',$param) and $param['ResourceTypeCn'] !== null) {
+            $this->ResourceTypeCn = $param['ResourceTypeCn'];
         }
 
-        if (array_key_exists("SecretId",$param) and $param["SecretId"] !== null) {
-            $this->SecretId = $param["SecretId"];
+        if (array_key_exists('SecretId',$param) and $param['SecretId'] !== null) {
+            $this->SecretId = $param['SecretId'];
         }
 
-        if (array_key_exists("SourceIPAddress",$param) and $param["SourceIPAddress"] !== null) {
-            $this->SourceIPAddress = $param["SourceIPAddress"];
+        if (array_key_exists('SourceIPAddress',$param) and $param['SourceIPAddress'] !== null) {
+            $this->SourceIPAddress = $param['SourceIPAddress'];
         }
 
-        if (array_key_exists("Username",$param) and $param["Username"] !== null) {
-            $this->Username = $param["Username"];
+        if (array_key_exists('Username',$param) and $param['Username'] !== null) {
+            $this->Username = $param['Username'];
         }
     }
 }

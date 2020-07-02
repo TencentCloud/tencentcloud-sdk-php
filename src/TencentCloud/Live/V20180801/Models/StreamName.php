@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -118,40 +118,40 @@ UTC格式时间，例如：2019-01-07T15:00:00Z。
         if ($param === null) {
             return;
         }
-        if (array_key_exists("StreamName",$param) and $param["StreamName"] !== null) {
-            $this->StreamName = $param["StreamName"];
+        if (array_key_exists('StreamName',$param) and $param['StreamName'] !== null) {
+            $this->StreamName = $param['StreamName'];
         }
 
-        if (array_key_exists("AppName",$param) and $param["AppName"] !== null) {
-            $this->AppName = $param["AppName"];
+        if (array_key_exists('AppName',$param) and $param['AppName'] !== null) {
+            $this->AppName = $param['AppName'];
         }
 
-        if (array_key_exists("DomainName",$param) and $param["DomainName"] !== null) {
-            $this->DomainName = $param["DomainName"];
+        if (array_key_exists('DomainName',$param) and $param['DomainName'] !== null) {
+            $this->DomainName = $param['DomainName'];
         }
 
-        if (array_key_exists("StreamStartTime",$param) and $param["StreamStartTime"] !== null) {
-            $this->StreamStartTime = $param["StreamStartTime"];
+        if (array_key_exists('StreamStartTime',$param) and $param['StreamStartTime'] !== null) {
+            $this->StreamStartTime = $param['StreamStartTime'];
         }
 
-        if (array_key_exists("StreamEndTime",$param) and $param["StreamEndTime"] !== null) {
-            $this->StreamEndTime = $param["StreamEndTime"];
+        if (array_key_exists('StreamEndTime',$param) and $param['StreamEndTime'] !== null) {
+            $this->StreamEndTime = $param['StreamEndTime'];
         }
 
-        if (array_key_exists("StopReason",$param) and $param["StopReason"] !== null) {
-            $this->StopReason = $param["StopReason"];
+        if (array_key_exists('StopReason',$param) and $param['StopReason'] !== null) {
+            $this->StopReason = $param['StopReason'];
         }
 
-        if (array_key_exists("Duration",$param) and $param["Duration"] !== null) {
-            $this->Duration = $param["Duration"];
+        if (array_key_exists('Duration',$param) and $param['Duration'] !== null) {
+            $this->Duration = $param['Duration'];
         }
 
-        if (array_key_exists("ClientIp",$param) and $param["ClientIp"] !== null) {
-            $this->ClientIp = $param["ClientIp"];
+        if (array_key_exists('ClientIp',$param) and $param['ClientIp'] !== null) {
+            $this->ClientIp = $param['ClientIp'];
         }
 
-        if (array_key_exists("Resolution",$param) and $param["Resolution"] !== null) {
-            $this->Resolution = $param["Resolution"];
+        if (array_key_exists('Resolution',$param) and $param['Resolution'] !== null) {
+            $this->Resolution = $param['Resolution'];
         }
     }
 }

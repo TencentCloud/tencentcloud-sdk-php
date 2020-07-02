@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -55,7 +55,7 @@ use TencentCloud\Gme\V20180711\Models as Models;
 <li>支持音视频流分离并对音频流进行分析</li>
 </br>
 <h4 id="Label_Value"><b>Scenes 与 Label 参数说明：</b></h4>
-<p>提交语音检测任务时，需要指定 Scenes 场景参数，<font color="red">目前要求您设置 Scenes 参数值为：["default"]</font>；而在检测结果中，则包含请求时指定的场景，以及对应类型的检测结果。</p>
+<p>提交语音检测任务时，需要指定 Scenes 场景参数，<font color='red'>目前要求您设置 Scenes 参数值为：['default']</font>；而在检测结果中，则包含请求时指定的场景，以及对应类型的检测结果。</p>
 <table>
 <thread>
 <tr>
@@ -113,62 +113,62 @@ use TencentCloud\Gme\V20180711\Models as Models;
 	</ul>
 </ul>
 
-<li>回调示例如下<font color="red">（详细字段说明见结构：
+<li>回调示例如下<font color='red'>（详细字段说明见结构：
 <a href="https://cloud.tencent.com/document/api/607/35375#DescribeScanResult" target="_blank">DescribeScanResult</a>）</font>：</li>
 <pre><code>{
-	"Code": 0,
-	"DataId": "1400000000_test_data_id",
-	"ScanFinishTime": 1566720906,
-	"HitFlag": true,
-	"Live": false,
-	"Msg": "",
-	"ScanPiece": [{
-		"DumpUrl": "",
-		"HitFlag": true,
-		"MainType": "abuse",
-		"RoomId": "123",
-		"OpenId": "xxx",
-		"Info":"",
-		"Offset": 0,
-		"Duration": 3400,
-		"PieceStartTime":1574684231,
-		"ScanDetail": [{
-			"EndTime": 1110,
-			"KeyWord": "xxx",
-			"Label": "abuse",
-			"Rate": "90.00",
-			"StartTime": 1110
+	'Code': 0,
+	'DataId': "1400000000_test_data_id",
+	'ScanFinishTime': 1566720906,
+	'HitFlag': true,
+	'Live': false,
+	'Msg': "",
+	'ScanPiece': [{
+		'DumpUrl': "",
+		'HitFlag': true,
+		'MainType': 'abuse',
+		'RoomId': '123',
+		'OpenId': 'xxx',
+		'Info':"",
+		'Offset': 0,
+		'Duration': 3400,
+		'PieceStartTime':1574684231,
+		'ScanDetail': [{
+			'EndTime': 1110,
+			'KeyWord': 'xxx',
+			'Label': 'abuse',
+			'Rate': "90.00",
+			'StartTime': 1110
 		}, {
-			"EndTime": 1380,
-			"KeyWord": "xxx",
-			"Label": "abuse",
-			"Rate": "90.00",
-			"StartTime": 930
+			'EndTime': 1380,
+			'KeyWord': 'xxx',
+			'Label': 'abuse',
+			'Rate': "90.00",
+			'StartTime': 930
 		}, {
-			"EndTime": 1560,
-			"KeyWord": "xxx",
-			"Label": "abuse",
-			"Rate": "90.00",
-			"StartTime": 930
+			'EndTime': 1560,
+			'KeyWord': 'xxx',
+			'Label': 'abuse',
+			'Rate': "90.00",
+			'StartTime': 930
 		}, {
-			"EndTime": 2820,
-			"KeyWord": "xxx",
-			"Label": "abuse",
-			"Rate": "90.00",
-			"StartTime": 2490
+			'EndTime': 2820,
+			'KeyWord': 'xxx',
+			'Label': 'abuse',
+			'Rate': "90.00",
+			'StartTime': 2490
 		}]
 	}],
-	"ScanStartTime": 1566720905,
-	"Scenes": [
-		"default"
+	'ScanStartTime': 1566720905,
+	'Scenes': [
+		'default'
 	],
-	"Status": "Success",
-	"TaskId": "xxx",
-	"Url": "https://xxx/xxx.m4a"
+	'Status': 'Success',
+	'TaskId': 'xxx',
+	'Url': "https://xxx/xxx.m4a"
 }
 </code></pre>
  * @method Models\VoiceFilterResponse VoiceFilter(Models\VoiceFilterRequest $req) 本接口用于识别涉黄、涉政等违规音频，成功会回调配置在应用的回调地址。回调示例如下：
-{"BizId":0,"FileId":"test_file_id","FileName":"test_file_name","FileUrl":"test_file_url","OpenId":"test_open_id","TimeStamp":"0000-00-00 00:00:00","Data":[{"Type":1,"Word":"xx"}]}
+{'BizId':0,'FileId':"test_file_id",'FileName':"test_file_name",'FileUrl':"test_file_url",'OpenId':"test_open_id",'TimeStamp':"0000-00-00 00:00:00",'Data':[{'Type':1,'Word':'xx'}]}
 Type表示过滤类型，1：政治，2：色情，3：谩骂
  */
 
@@ -197,7 +197,7 @@ class GmeClient extends AbstractClient
 
     public function returnResponse($action, $response)
     {
-        $respClass = "TencentCloud"."\\".ucfirst("gme")."\\"."V20180711\\Models"."\\".ucfirst($action)."Response";
+        $respClass = 'TencentCloud'."\\".ucfirst('gme')."\\"."V20180711\\Models"."\\".ucfirst($action).'Response';
         $obj = new $respClass();
         $obj->deserialize($response);
         return $obj;

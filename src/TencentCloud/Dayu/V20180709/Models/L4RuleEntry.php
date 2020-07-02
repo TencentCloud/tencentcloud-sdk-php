@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -126,53 +126,53 @@ class L4RuleEntry extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Protocol",$param) and $param["Protocol"] !== null) {
-            $this->Protocol = $param["Protocol"];
+        if (array_key_exists('Protocol',$param) and $param['Protocol'] !== null) {
+            $this->Protocol = $param['Protocol'];
         }
 
-        if (array_key_exists("VirtualPort",$param) and $param["VirtualPort"] !== null) {
-            $this->VirtualPort = $param["VirtualPort"];
+        if (array_key_exists('VirtualPort',$param) and $param['VirtualPort'] !== null) {
+            $this->VirtualPort = $param['VirtualPort'];
         }
 
-        if (array_key_exists("SourcePort",$param) and $param["SourcePort"] !== null) {
-            $this->SourcePort = $param["SourcePort"];
+        if (array_key_exists('SourcePort',$param) and $param['SourcePort'] !== null) {
+            $this->SourcePort = $param['SourcePort'];
         }
 
-        if (array_key_exists("SourceType",$param) and $param["SourceType"] !== null) {
-            $this->SourceType = $param["SourceType"];
+        if (array_key_exists('SourceType',$param) and $param['SourceType'] !== null) {
+            $this->SourceType = $param['SourceType'];
         }
 
-        if (array_key_exists("KeepTime",$param) and $param["KeepTime"] !== null) {
-            $this->KeepTime = $param["KeepTime"];
+        if (array_key_exists('KeepTime',$param) and $param['KeepTime'] !== null) {
+            $this->KeepTime = $param['KeepTime'];
         }
 
-        if (array_key_exists("SourceList",$param) and $param["SourceList"] !== null) {
+        if (array_key_exists('SourceList',$param) and $param['SourceList'] !== null) {
             $this->SourceList = [];
-            foreach ($param["SourceList"] as $key => $value){
+            foreach ($param['SourceList'] as $key => $value){
                 $obj = new L4RuleSource();
                 $obj->deserialize($value);
                 array_push($this->SourceList, $obj);
             }
         }
 
-        if (array_key_exists("LbType",$param) and $param["LbType"] !== null) {
-            $this->LbType = $param["LbType"];
+        if (array_key_exists('LbType',$param) and $param['LbType'] !== null) {
+            $this->LbType = $param['LbType'];
         }
 
-        if (array_key_exists("KeepEnable",$param) and $param["KeepEnable"] !== null) {
-            $this->KeepEnable = $param["KeepEnable"];
+        if (array_key_exists('KeepEnable',$param) and $param['KeepEnable'] !== null) {
+            $this->KeepEnable = $param['KeepEnable'];
         }
 
-        if (array_key_exists("RuleId",$param) and $param["RuleId"] !== null) {
-            $this->RuleId = $param["RuleId"];
+        if (array_key_exists('RuleId',$param) and $param['RuleId'] !== null) {
+            $this->RuleId = $param['RuleId'];
         }
 
-        if (array_key_exists("RuleName",$param) and $param["RuleName"] !== null) {
-            $this->RuleName = $param["RuleName"];
+        if (array_key_exists('RuleName',$param) and $param['RuleName'] !== null) {
+            $this->RuleName = $param['RuleName'];
         }
 
-        if (array_key_exists("RemoveSwitch",$param) and $param["RemoveSwitch"] !== null) {
-            $this->RemoveSwitch = $param["RemoveSwitch"];
+        if (array_key_exists('RemoveSwitch',$param) and $param['RemoveSwitch'] !== null) {
+            $this->RemoveSwitch = $param['RemoveSwitch'];
         }
     }
 }

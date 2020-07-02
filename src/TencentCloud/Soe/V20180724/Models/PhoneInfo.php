@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -102,36 +102,36 @@ class PhoneInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MemBeginTime",$param) and $param["MemBeginTime"] !== null) {
-            $this->MemBeginTime = $param["MemBeginTime"];
+        if (array_key_exists('MemBeginTime',$param) and $param['MemBeginTime'] !== null) {
+            $this->MemBeginTime = $param['MemBeginTime'];
         }
 
-        if (array_key_exists("MemEndTime",$param) and $param["MemEndTime"] !== null) {
-            $this->MemEndTime = $param["MemEndTime"];
+        if (array_key_exists('MemEndTime',$param) and $param['MemEndTime'] !== null) {
+            $this->MemEndTime = $param['MemEndTime'];
         }
 
-        if (array_key_exists("PronAccuracy",$param) and $param["PronAccuracy"] !== null) {
-            $this->PronAccuracy = $param["PronAccuracy"];
+        if (array_key_exists('PronAccuracy',$param) and $param['PronAccuracy'] !== null) {
+            $this->PronAccuracy = $param['PronAccuracy'];
         }
 
-        if (array_key_exists("DetectedStress",$param) and $param["DetectedStress"] !== null) {
-            $this->DetectedStress = $param["DetectedStress"];
+        if (array_key_exists('DetectedStress',$param) and $param['DetectedStress'] !== null) {
+            $this->DetectedStress = $param['DetectedStress'];
         }
 
-        if (array_key_exists("Phone",$param) and $param["Phone"] !== null) {
-            $this->Phone = $param["Phone"];
+        if (array_key_exists('Phone',$param) and $param['Phone'] !== null) {
+            $this->Phone = $param['Phone'];
         }
 
-        if (array_key_exists("Stress",$param) and $param["Stress"] !== null) {
-            $this->Stress = $param["Stress"];
+        if (array_key_exists('Stress',$param) and $param['Stress'] !== null) {
+            $this->Stress = $param['Stress'];
         }
 
-        if (array_key_exists("ReferencePhone",$param) and $param["ReferencePhone"] !== null) {
-            $this->ReferencePhone = $param["ReferencePhone"];
+        if (array_key_exists('ReferencePhone',$param) and $param['ReferencePhone'] !== null) {
+            $this->ReferencePhone = $param['ReferencePhone'];
         }
 
-        if (array_key_exists("MatchTag",$param) and $param["MatchTag"] !== null) {
-            $this->MatchTag = $param["MatchTag"];
+        if (array_key_exists('MatchTag',$param) and $param['MatchTag'] !== null) {
+            $this->MatchTag = $param['MatchTag'];
         }
     }
 }

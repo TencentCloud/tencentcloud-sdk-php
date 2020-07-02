@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -214,92 +214,92 @@ class CatLog extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Time",$param) and $param["Time"] !== null) {
-            $this->Time = $param["Time"];
+        if (array_key_exists('Time',$param) and $param['Time'] !== null) {
+            $this->Time = $param['Time'];
         }
 
-        if (array_key_exists("CatTypeName",$param) and $param["CatTypeName"] !== null) {
-            $this->CatTypeName = $param["CatTypeName"];
+        if (array_key_exists('CatTypeName',$param) and $param['CatTypeName'] !== null) {
+            $this->CatTypeName = $param['CatTypeName'];
         }
 
-        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
-            $this->TaskId = $param["TaskId"];
+        if (array_key_exists('TaskId',$param) and $param['TaskId'] !== null) {
+            $this->TaskId = $param['TaskId'];
         }
 
-        if (array_key_exists("City",$param) and $param["City"] !== null) {
-            $this->City = $param["City"];
+        if (array_key_exists('City',$param) and $param['City'] !== null) {
+            $this->City = $param['City'];
         }
 
-        if (array_key_exists("Isp",$param) and $param["Isp"] !== null) {
-            $this->Isp = $param["Isp"];
+        if (array_key_exists('Isp',$param) and $param['Isp'] !== null) {
+            $this->Isp = $param['Isp'];
         }
 
-        if (array_key_exists("ServerIp",$param) and $param["ServerIp"] !== null) {
-            $this->ServerIp = $param["ServerIp"];
+        if (array_key_exists('ServerIp',$param) and $param['ServerIp'] !== null) {
+            $this->ServerIp = $param['ServerIp'];
         }
 
-        if (array_key_exists("DomainName",$param) and $param["DomainName"] !== null) {
-            $this->DomainName = $param["DomainName"];
+        if (array_key_exists('DomainName',$param) and $param['DomainName'] !== null) {
+            $this->DomainName = $param['DomainName'];
         }
 
-        if (array_key_exists("TotalTime",$param) and $param["TotalTime"] !== null) {
-            $this->TotalTime = $param["TotalTime"];
+        if (array_key_exists('TotalTime',$param) and $param['TotalTime'] !== null) {
+            $this->TotalTime = $param['TotalTime'];
         }
 
-        if (array_key_exists("ResultType",$param) and $param["ResultType"] !== null) {
-            $this->ResultType = $param["ResultType"];
+        if (array_key_exists('ResultType',$param) and $param['ResultType'] !== null) {
+            $this->ResultType = $param['ResultType'];
         }
 
-        if (array_key_exists("ResultCode",$param) and $param["ResultCode"] !== null) {
-            $this->ResultCode = $param["ResultCode"];
+        if (array_key_exists('ResultCode',$param) and $param['ResultCode'] !== null) {
+            $this->ResultCode = $param['ResultCode'];
         }
 
-        if (array_key_exists("ReqPkgSize",$param) and $param["ReqPkgSize"] !== null) {
-            $this->ReqPkgSize = $param["ReqPkgSize"];
+        if (array_key_exists('ReqPkgSize',$param) and $param['ReqPkgSize'] !== null) {
+            $this->ReqPkgSize = $param['ReqPkgSize'];
         }
 
-        if (array_key_exists("RspPkgSize",$param) and $param["RspPkgSize"] !== null) {
-            $this->RspPkgSize = $param["RspPkgSize"];
+        if (array_key_exists('RspPkgSize',$param) and $param['RspPkgSize'] !== null) {
+            $this->RspPkgSize = $param['RspPkgSize'];
         }
 
-        if (array_key_exists("ReqMsg",$param) and $param["ReqMsg"] !== null) {
-            $this->ReqMsg = $param["ReqMsg"];
+        if (array_key_exists('ReqMsg',$param) and $param['ReqMsg'] !== null) {
+            $this->ReqMsg = $param['ReqMsg'];
         }
 
-        if (array_key_exists("RespMsg",$param) and $param["RespMsg"] !== null) {
-            $this->RespMsg = $param["RespMsg"];
+        if (array_key_exists('RespMsg',$param) and $param['RespMsg'] !== null) {
+            $this->RespMsg = $param['RespMsg'];
         }
 
-        if (array_key_exists("ClientIp",$param) and $param["ClientIp"] !== null) {
-            $this->ClientIp = $param["ClientIp"];
+        if (array_key_exists('ClientIp',$param) and $param['ClientIp'] !== null) {
+            $this->ClientIp = $param['ClientIp'];
         }
 
-        if (array_key_exists("CityName",$param) and $param["CityName"] !== null) {
-            $this->CityName = $param["CityName"];
+        if (array_key_exists('CityName',$param) and $param['CityName'] !== null) {
+            $this->CityName = $param['CityName'];
         }
 
-        if (array_key_exists("IspName",$param) and $param["IspName"] !== null) {
-            $this->IspName = $param["IspName"];
+        if (array_key_exists('IspName',$param) and $param['IspName'] !== null) {
+            $this->IspName = $param['IspName'];
         }
 
-        if (array_key_exists("ParseTime",$param) and $param["ParseTime"] !== null) {
-            $this->ParseTime = $param["ParseTime"];
+        if (array_key_exists('ParseTime',$param) and $param['ParseTime'] !== null) {
+            $this->ParseTime = $param['ParseTime'];
         }
 
-        if (array_key_exists("ConnectTime",$param) and $param["ConnectTime"] !== null) {
-            $this->ConnectTime = $param["ConnectTime"];
+        if (array_key_exists('ConnectTime',$param) and $param['ConnectTime'] !== null) {
+            $this->ConnectTime = $param['ConnectTime'];
         }
 
-        if (array_key_exists("SendTime",$param) and $param["SendTime"] !== null) {
-            $this->SendTime = $param["SendTime"];
+        if (array_key_exists('SendTime',$param) and $param['SendTime'] !== null) {
+            $this->SendTime = $param['SendTime'];
         }
 
-        if (array_key_exists("WaitTime",$param) and $param["WaitTime"] !== null) {
-            $this->WaitTime = $param["WaitTime"];
+        if (array_key_exists('WaitTime',$param) and $param['WaitTime'] !== null) {
+            $this->WaitTime = $param['WaitTime'];
         }
 
-        if (array_key_exists("ReceiveTime",$param) and $param["ReceiveTime"] !== null) {
-            $this->ReceiveTime = $param["ReceiveTime"];
+        if (array_key_exists('ReceiveTime',$param) and $param['ReceiveTime'] !== null) {
+            $this->ReceiveTime = $param['ReceiveTime'];
         }
     }
 }

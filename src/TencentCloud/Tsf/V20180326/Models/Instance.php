@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -470,148 +470,148 @@ class Instance extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("InstanceName",$param) and $param["InstanceName"] !== null) {
-            $this->InstanceName = $param["InstanceName"];
+        if (array_key_exists('InstanceName',$param) and $param['InstanceName'] !== null) {
+            $this->InstanceName = $param['InstanceName'];
         }
 
-        if (array_key_exists("LanIp",$param) and $param["LanIp"] !== null) {
-            $this->LanIp = $param["LanIp"];
+        if (array_key_exists('LanIp',$param) and $param['LanIp'] !== null) {
+            $this->LanIp = $param['LanIp'];
         }
 
-        if (array_key_exists("WanIp",$param) and $param["WanIp"] !== null) {
-            $this->WanIp = $param["WanIp"];
+        if (array_key_exists('WanIp',$param) and $param['WanIp'] !== null) {
+            $this->WanIp = $param['WanIp'];
         }
 
-        if (array_key_exists("InstanceDesc",$param) and $param["InstanceDesc"] !== null) {
-            $this->InstanceDesc = $param["InstanceDesc"];
+        if (array_key_exists('InstanceDesc',$param) and $param['InstanceDesc'] !== null) {
+            $this->InstanceDesc = $param['InstanceDesc'];
         }
 
-        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
-            $this->ClusterId = $param["ClusterId"];
+        if (array_key_exists('ClusterId',$param) and $param['ClusterId'] !== null) {
+            $this->ClusterId = $param['ClusterId'];
         }
 
-        if (array_key_exists("ClusterName",$param) and $param["ClusterName"] !== null) {
-            $this->ClusterName = $param["ClusterName"];
+        if (array_key_exists('ClusterName',$param) and $param['ClusterName'] !== null) {
+            $this->ClusterName = $param['ClusterName'];
         }
 
-        if (array_key_exists("InstanceStatus",$param) and $param["InstanceStatus"] !== null) {
-            $this->InstanceStatus = $param["InstanceStatus"];
+        if (array_key_exists('InstanceStatus',$param) and $param['InstanceStatus'] !== null) {
+            $this->InstanceStatus = $param['InstanceStatus'];
         }
 
-        if (array_key_exists("InstanceAvailableStatus",$param) and $param["InstanceAvailableStatus"] !== null) {
-            $this->InstanceAvailableStatus = $param["InstanceAvailableStatus"];
+        if (array_key_exists('InstanceAvailableStatus',$param) and $param['InstanceAvailableStatus'] !== null) {
+            $this->InstanceAvailableStatus = $param['InstanceAvailableStatus'];
         }
 
-        if (array_key_exists("ServiceInstanceStatus",$param) and $param["ServiceInstanceStatus"] !== null) {
-            $this->ServiceInstanceStatus = $param["ServiceInstanceStatus"];
+        if (array_key_exists('ServiceInstanceStatus',$param) and $param['ServiceInstanceStatus'] !== null) {
+            $this->ServiceInstanceStatus = $param['ServiceInstanceStatus'];
         }
 
-        if (array_key_exists("CountInTsf",$param) and $param["CountInTsf"] !== null) {
-            $this->CountInTsf = $param["CountInTsf"];
+        if (array_key_exists('CountInTsf',$param) and $param['CountInTsf'] !== null) {
+            $this->CountInTsf = $param['CountInTsf'];
         }
 
-        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
-            $this->GroupId = $param["GroupId"];
+        if (array_key_exists('GroupId',$param) and $param['GroupId'] !== null) {
+            $this->GroupId = $param['GroupId'];
         }
 
-        if (array_key_exists("ApplicationId",$param) and $param["ApplicationId"] !== null) {
-            $this->ApplicationId = $param["ApplicationId"];
+        if (array_key_exists('ApplicationId',$param) and $param['ApplicationId'] !== null) {
+            $this->ApplicationId = $param['ApplicationId'];
         }
 
-        if (array_key_exists("ApplicationName",$param) and $param["ApplicationName"] !== null) {
-            $this->ApplicationName = $param["ApplicationName"];
+        if (array_key_exists('ApplicationName',$param) and $param['ApplicationName'] !== null) {
+            $this->ApplicationName = $param['ApplicationName'];
         }
 
-        if (array_key_exists("InstanceCreatedTime",$param) and $param["InstanceCreatedTime"] !== null) {
-            $this->InstanceCreatedTime = $param["InstanceCreatedTime"];
+        if (array_key_exists('InstanceCreatedTime',$param) and $param['InstanceCreatedTime'] !== null) {
+            $this->InstanceCreatedTime = $param['InstanceCreatedTime'];
         }
 
-        if (array_key_exists("InstanceExpiredTime",$param) and $param["InstanceExpiredTime"] !== null) {
-            $this->InstanceExpiredTime = $param["InstanceExpiredTime"];
+        if (array_key_exists('InstanceExpiredTime',$param) and $param['InstanceExpiredTime'] !== null) {
+            $this->InstanceExpiredTime = $param['InstanceExpiredTime'];
         }
 
-        if (array_key_exists("InstanceChargeType",$param) and $param["InstanceChargeType"] !== null) {
-            $this->InstanceChargeType = $param["InstanceChargeType"];
+        if (array_key_exists('InstanceChargeType',$param) and $param['InstanceChargeType'] !== null) {
+            $this->InstanceChargeType = $param['InstanceChargeType'];
         }
 
-        if (array_key_exists("InstanceTotalCpu",$param) and $param["InstanceTotalCpu"] !== null) {
-            $this->InstanceTotalCpu = $param["InstanceTotalCpu"];
+        if (array_key_exists('InstanceTotalCpu',$param) and $param['InstanceTotalCpu'] !== null) {
+            $this->InstanceTotalCpu = $param['InstanceTotalCpu'];
         }
 
-        if (array_key_exists("InstanceTotalMem",$param) and $param["InstanceTotalMem"] !== null) {
-            $this->InstanceTotalMem = $param["InstanceTotalMem"];
+        if (array_key_exists('InstanceTotalMem',$param) and $param['InstanceTotalMem'] !== null) {
+            $this->InstanceTotalMem = $param['InstanceTotalMem'];
         }
 
-        if (array_key_exists("InstanceUsedCpu",$param) and $param["InstanceUsedCpu"] !== null) {
-            $this->InstanceUsedCpu = $param["InstanceUsedCpu"];
+        if (array_key_exists('InstanceUsedCpu',$param) and $param['InstanceUsedCpu'] !== null) {
+            $this->InstanceUsedCpu = $param['InstanceUsedCpu'];
         }
 
-        if (array_key_exists("InstanceUsedMem",$param) and $param["InstanceUsedMem"] !== null) {
-            $this->InstanceUsedMem = $param["InstanceUsedMem"];
+        if (array_key_exists('InstanceUsedMem',$param) and $param['InstanceUsedMem'] !== null) {
+            $this->InstanceUsedMem = $param['InstanceUsedMem'];
         }
 
-        if (array_key_exists("InstanceLimitCpu",$param) and $param["InstanceLimitCpu"] !== null) {
-            $this->InstanceLimitCpu = $param["InstanceLimitCpu"];
+        if (array_key_exists('InstanceLimitCpu',$param) and $param['InstanceLimitCpu'] !== null) {
+            $this->InstanceLimitCpu = $param['InstanceLimitCpu'];
         }
 
-        if (array_key_exists("InstanceLimitMem",$param) and $param["InstanceLimitMem"] !== null) {
-            $this->InstanceLimitMem = $param["InstanceLimitMem"];
+        if (array_key_exists('InstanceLimitMem',$param) and $param['InstanceLimitMem'] !== null) {
+            $this->InstanceLimitMem = $param['InstanceLimitMem'];
         }
 
-        if (array_key_exists("InstancePkgVersion",$param) and $param["InstancePkgVersion"] !== null) {
-            $this->InstancePkgVersion = $param["InstancePkgVersion"];
+        if (array_key_exists('InstancePkgVersion',$param) and $param['InstancePkgVersion'] !== null) {
+            $this->InstancePkgVersion = $param['InstancePkgVersion'];
         }
 
-        if (array_key_exists("ClusterType",$param) and $param["ClusterType"] !== null) {
-            $this->ClusterType = $param["ClusterType"];
+        if (array_key_exists('ClusterType',$param) and $param['ClusterType'] !== null) {
+            $this->ClusterType = $param['ClusterType'];
         }
 
-        if (array_key_exists("RestrictState",$param) and $param["RestrictState"] !== null) {
-            $this->RestrictState = $param["RestrictState"];
+        if (array_key_exists('RestrictState',$param) and $param['RestrictState'] !== null) {
+            $this->RestrictState = $param['RestrictState'];
         }
 
-        if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
-            $this->UpdateTime = $param["UpdateTime"];
+        if (array_key_exists('UpdateTime',$param) and $param['UpdateTime'] !== null) {
+            $this->UpdateTime = $param['UpdateTime'];
         }
 
-        if (array_key_exists("OperationState",$param) and $param["OperationState"] !== null) {
-            $this->OperationState = $param["OperationState"];
+        if (array_key_exists('OperationState',$param) and $param['OperationState'] !== null) {
+            $this->OperationState = $param['OperationState'];
         }
 
-        if (array_key_exists("NamespaceId",$param) and $param["NamespaceId"] !== null) {
-            $this->NamespaceId = $param["NamespaceId"];
+        if (array_key_exists('NamespaceId',$param) and $param['NamespaceId'] !== null) {
+            $this->NamespaceId = $param['NamespaceId'];
         }
 
-        if (array_key_exists("InstanceZoneId",$param) and $param["InstanceZoneId"] !== null) {
-            $this->InstanceZoneId = $param["InstanceZoneId"];
+        if (array_key_exists('InstanceZoneId',$param) and $param['InstanceZoneId'] !== null) {
+            $this->InstanceZoneId = $param['InstanceZoneId'];
         }
 
-        if (array_key_exists("InstanceImportMode",$param) and $param["InstanceImportMode"] !== null) {
-            $this->InstanceImportMode = $param["InstanceImportMode"];
+        if (array_key_exists('InstanceImportMode',$param) and $param['InstanceImportMode'] !== null) {
+            $this->InstanceImportMode = $param['InstanceImportMode'];
         }
 
-        if (array_key_exists("ApplicationType",$param) and $param["ApplicationType"] !== null) {
-            $this->ApplicationType = $param["ApplicationType"];
+        if (array_key_exists('ApplicationType',$param) and $param['ApplicationType'] !== null) {
+            $this->ApplicationType = $param['ApplicationType'];
         }
 
-        if (array_key_exists("ApplicationResourceType",$param) and $param["ApplicationResourceType"] !== null) {
-            $this->ApplicationResourceType = $param["ApplicationResourceType"];
+        if (array_key_exists('ApplicationResourceType',$param) and $param['ApplicationResourceType'] !== null) {
+            $this->ApplicationResourceType = $param['ApplicationResourceType'];
         }
 
-        if (array_key_exists("ServiceSidecarStatus",$param) and $param["ServiceSidecarStatus"] !== null) {
-            $this->ServiceSidecarStatus = $param["ServiceSidecarStatus"];
+        if (array_key_exists('ServiceSidecarStatus',$param) and $param['ServiceSidecarStatus'] !== null) {
+            $this->ServiceSidecarStatus = $param['ServiceSidecarStatus'];
         }
 
-        if (array_key_exists("GroupName",$param) and $param["GroupName"] !== null) {
-            $this->GroupName = $param["GroupName"];
+        if (array_key_exists('GroupName',$param) and $param['GroupName'] !== null) {
+            $this->GroupName = $param['GroupName'];
         }
 
-        if (array_key_exists("NamespaceName",$param) and $param["NamespaceName"] !== null) {
-            $this->NamespaceName = $param["NamespaceName"];
+        if (array_key_exists('NamespaceName',$param) and $param['NamespaceName'] !== null) {
+            $this->NamespaceName = $param['NamespaceName'];
         }
     }
 }

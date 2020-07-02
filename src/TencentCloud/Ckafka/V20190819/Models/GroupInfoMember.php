@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -70,21 +70,21 @@ class GroupInfoMember extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MemberId",$param) and $param["MemberId"] !== null) {
-            $this->MemberId = $param["MemberId"];
+        if (array_key_exists('MemberId',$param) and $param['MemberId'] !== null) {
+            $this->MemberId = $param['MemberId'];
         }
 
-        if (array_key_exists("ClientId",$param) and $param["ClientId"] !== null) {
-            $this->ClientId = $param["ClientId"];
+        if (array_key_exists('ClientId',$param) and $param['ClientId'] !== null) {
+            $this->ClientId = $param['ClientId'];
         }
 
-        if (array_key_exists("ClientHost",$param) and $param["ClientHost"] !== null) {
-            $this->ClientHost = $param["ClientHost"];
+        if (array_key_exists('ClientHost',$param) and $param['ClientHost'] !== null) {
+            $this->ClientHost = $param['ClientHost'];
         }
 
-        if (array_key_exists("Assignment",$param) and $param["Assignment"] !== null) {
+        if (array_key_exists('Assignment',$param) and $param['Assignment'] !== null) {
             $this->Assignment = new Assignment();
-            $this->Assignment->deserialize($param["Assignment"]);
+            $this->Assignment->deserialize($param['Assignment']);
         }
     }
 }

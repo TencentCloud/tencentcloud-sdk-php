@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -102,41 +102,41 @@ class BandwidthPackage extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BandwidthPackageId",$param) and $param["BandwidthPackageId"] !== null) {
-            $this->BandwidthPackageId = $param["BandwidthPackageId"];
+        if (array_key_exists('BandwidthPackageId',$param) and $param['BandwidthPackageId'] !== null) {
+            $this->BandwidthPackageId = $param['BandwidthPackageId'];
         }
 
-        if (array_key_exists("NetworkType",$param) and $param["NetworkType"] !== null) {
-            $this->NetworkType = $param["NetworkType"];
+        if (array_key_exists('NetworkType',$param) and $param['NetworkType'] !== null) {
+            $this->NetworkType = $param['NetworkType'];
         }
 
-        if (array_key_exists("ChargeType",$param) and $param["ChargeType"] !== null) {
-            $this->ChargeType = $param["ChargeType"];
+        if (array_key_exists('ChargeType',$param) and $param['ChargeType'] !== null) {
+            $this->ChargeType = $param['ChargeType'];
         }
 
-        if (array_key_exists("BandwidthPackageName",$param) and $param["BandwidthPackageName"] !== null) {
-            $this->BandwidthPackageName = $param["BandwidthPackageName"];
+        if (array_key_exists('BandwidthPackageName',$param) and $param['BandwidthPackageName'] !== null) {
+            $this->BandwidthPackageName = $param['BandwidthPackageName'];
         }
 
-        if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
-            $this->CreatedTime = $param["CreatedTime"];
+        if (array_key_exists('CreatedTime',$param) and $param['CreatedTime'] !== null) {
+            $this->CreatedTime = $param['CreatedTime'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("ResourceSet",$param) and $param["ResourceSet"] !== null) {
+        if (array_key_exists('ResourceSet',$param) and $param['ResourceSet'] !== null) {
             $this->ResourceSet = [];
-            foreach ($param["ResourceSet"] as $key => $value){
+            foreach ($param['ResourceSet'] as $key => $value){
                 $obj = new Resource();
                 $obj->deserialize($value);
                 array_push($this->ResourceSet, $obj);
             }
         }
 
-        if (array_key_exists("Bandwidth",$param) and $param["Bandwidth"] !== null) {
-            $this->Bandwidth = $param["Bandwidth"];
+        if (array_key_exists('Bandwidth',$param) and $param['Bandwidth'] !== null) {
+            $this->Bandwidth = $param['Bandwidth'];
         }
     }
 }

@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -126,32 +126,32 @@ PicUrlExpireTime 时间点后图片将被删除）。
         if ($param === null) {
             return;
         }
-        if (array_key_exists("StartPtsTime",$param) and $param["StartPtsTime"] !== null) {
-            $this->StartPtsTime = $param["StartPtsTime"];
+        if (array_key_exists('StartPtsTime',$param) and $param['StartPtsTime'] !== null) {
+            $this->StartPtsTime = $param['StartPtsTime'];
         }
 
-        if (array_key_exists("EndPtsTime",$param) and $param["EndPtsTime"] !== null) {
-            $this->EndPtsTime = $param["EndPtsTime"];
+        if (array_key_exists('EndPtsTime',$param) and $param['EndPtsTime'] !== null) {
+            $this->EndPtsTime = $param['EndPtsTime'];
         }
 
-        if (array_key_exists("Confidence",$param) and $param["Confidence"] !== null) {
-            $this->Confidence = $param["Confidence"];
+        if (array_key_exists('Confidence',$param) and $param['Confidence'] !== null) {
+            $this->Confidence = $param['Confidence'];
         }
 
-        if (array_key_exists("Suggestion",$param) and $param["Suggestion"] !== null) {
-            $this->Suggestion = $param["Suggestion"];
+        if (array_key_exists('Suggestion',$param) and $param['Suggestion'] !== null) {
+            $this->Suggestion = $param['Suggestion'];
         }
 
-        if (array_key_exists("Label",$param) and $param["Label"] !== null) {
-            $this->Label = $param["Label"];
+        if (array_key_exists('Label',$param) and $param['Label'] !== null) {
+            $this->Label = $param['Label'];
         }
 
-        if (array_key_exists("Url",$param) and $param["Url"] !== null) {
-            $this->Url = $param["Url"];
+        if (array_key_exists('Url',$param) and $param['Url'] !== null) {
+            $this->Url = $param['Url'];
         }
 
-        if (array_key_exists("PicUrlExpireTime",$param) and $param["PicUrlExpireTime"] !== null) {
-            $this->PicUrlExpireTime = $param["PicUrlExpireTime"];
+        if (array_key_exists('PicUrlExpireTime',$param) and $param['PicUrlExpireTime'] !== null) {
+            $this->PicUrlExpireTime = $param['PicUrlExpireTime'];
         }
     }
 }

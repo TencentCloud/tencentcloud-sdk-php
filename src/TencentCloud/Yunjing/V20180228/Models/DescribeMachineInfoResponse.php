@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -206,72 +206,72 @@ class DescribeMachineInfoResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MachineIp",$param) and $param["MachineIp"] !== null) {
-            $this->MachineIp = $param["MachineIp"];
+        if (array_key_exists('MachineIp',$param) and $param['MachineIp'] !== null) {
+            $this->MachineIp = $param['MachineIp'];
         }
 
-        if (array_key_exists("ProtectDays",$param) and $param["ProtectDays"] !== null) {
-            $this->ProtectDays = $param["ProtectDays"];
+        if (array_key_exists('ProtectDays',$param) and $param['ProtectDays'] !== null) {
+            $this->ProtectDays = $param['ProtectDays'];
         }
 
-        if (array_key_exists("MachineOs",$param) and $param["MachineOs"] !== null) {
-            $this->MachineOs = $param["MachineOs"];
+        if (array_key_exists('MachineOs',$param) and $param['MachineOs'] !== null) {
+            $this->MachineOs = $param['MachineOs'];
         }
 
-        if (array_key_exists("MachineName",$param) and $param["MachineName"] !== null) {
-            $this->MachineName = $param["MachineName"];
+        if (array_key_exists('MachineName',$param) and $param['MachineName'] !== null) {
+            $this->MachineName = $param['MachineName'];
         }
 
-        if (array_key_exists("MachineStatus",$param) and $param["MachineStatus"] !== null) {
-            $this->MachineStatus = $param["MachineStatus"];
+        if (array_key_exists('MachineStatus',$param) and $param['MachineStatus'] !== null) {
+            $this->MachineStatus = $param['MachineStatus'];
         }
 
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("MachineWanIp",$param) and $param["MachineWanIp"] !== null) {
-            $this->MachineWanIp = $param["MachineWanIp"];
+        if (array_key_exists('MachineWanIp',$param) and $param['MachineWanIp'] !== null) {
+            $this->MachineWanIp = $param['MachineWanIp'];
         }
 
-        if (array_key_exists("Quuid",$param) and $param["Quuid"] !== null) {
-            $this->Quuid = $param["Quuid"];
+        if (array_key_exists('Quuid',$param) and $param['Quuid'] !== null) {
+            $this->Quuid = $param['Quuid'];
         }
 
-        if (array_key_exists("Uuid",$param) and $param["Uuid"] !== null) {
-            $this->Uuid = $param["Uuid"];
+        if (array_key_exists('Uuid',$param) and $param['Uuid'] !== null) {
+            $this->Uuid = $param['Uuid'];
         }
 
-        if (array_key_exists("IsProVersion",$param) and $param["IsProVersion"] !== null) {
-            $this->IsProVersion = $param["IsProVersion"];
+        if (array_key_exists('IsProVersion',$param) and $param['IsProVersion'] !== null) {
+            $this->IsProVersion = $param['IsProVersion'];
         }
 
-        if (array_key_exists("ProVersionOpenDate",$param) and $param["ProVersionOpenDate"] !== null) {
-            $this->ProVersionOpenDate = $param["ProVersionOpenDate"];
+        if (array_key_exists('ProVersionOpenDate',$param) and $param['ProVersionOpenDate'] !== null) {
+            $this->ProVersionOpenDate = $param['ProVersionOpenDate'];
         }
 
-        if (array_key_exists("MachineType",$param) and $param["MachineType"] !== null) {
-            $this->MachineType = $param["MachineType"];
+        if (array_key_exists('MachineType',$param) and $param['MachineType'] !== null) {
+            $this->MachineType = $param['MachineType'];
         }
 
-        if (array_key_exists("MachineRegion",$param) and $param["MachineRegion"] !== null) {
-            $this->MachineRegion = $param["MachineRegion"];
+        if (array_key_exists('MachineRegion',$param) and $param['MachineRegion'] !== null) {
+            $this->MachineRegion = $param['MachineRegion'];
         }
 
-        if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {
-            $this->PayMode = $param["PayMode"];
+        if (array_key_exists('PayMode',$param) and $param['PayMode'] !== null) {
+            $this->PayMode = $param['PayMode'];
         }
 
-        if (array_key_exists("FreeMalwaresLeft",$param) and $param["FreeMalwaresLeft"] !== null) {
-            $this->FreeMalwaresLeft = $param["FreeMalwaresLeft"];
+        if (array_key_exists('FreeMalwaresLeft',$param) and $param['FreeMalwaresLeft'] !== null) {
+            $this->FreeMalwaresLeft = $param['FreeMalwaresLeft'];
         }
 
-        if (array_key_exists("FreeVulsLeft",$param) and $param["FreeVulsLeft"] !== null) {
-            $this->FreeVulsLeft = $param["FreeVulsLeft"];
+        if (array_key_exists('FreeVulsLeft',$param) and $param['FreeVulsLeft'] !== null) {
+            $this->FreeVulsLeft = $param['FreeVulsLeft'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

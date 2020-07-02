@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -78,25 +78,25 @@ class ModifyLoadBalancersRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AutoScalingGroupId",$param) and $param["AutoScalingGroupId"] !== null) {
-            $this->AutoScalingGroupId = $param["AutoScalingGroupId"];
+        if (array_key_exists('AutoScalingGroupId',$param) and $param['AutoScalingGroupId'] !== null) {
+            $this->AutoScalingGroupId = $param['AutoScalingGroupId'];
         }
 
-        if (array_key_exists("LoadBalancerIds",$param) and $param["LoadBalancerIds"] !== null) {
-            $this->LoadBalancerIds = $param["LoadBalancerIds"];
+        if (array_key_exists('LoadBalancerIds',$param) and $param['LoadBalancerIds'] !== null) {
+            $this->LoadBalancerIds = $param['LoadBalancerIds'];
         }
 
-        if (array_key_exists("ForwardLoadBalancers",$param) and $param["ForwardLoadBalancers"] !== null) {
+        if (array_key_exists('ForwardLoadBalancers',$param) and $param['ForwardLoadBalancers'] !== null) {
             $this->ForwardLoadBalancers = [];
-            foreach ($param["ForwardLoadBalancers"] as $key => $value){
+            foreach ($param['ForwardLoadBalancers'] as $key => $value){
                 $obj = new ForwardLoadBalancer();
                 $obj->deserialize($value);
                 array_push($this->ForwardLoadBalancers, $obj);
             }
         }
 
-        if (array_key_exists("LoadBalancersCheckPolicy",$param) and $param["LoadBalancersCheckPolicy"] !== null) {
-            $this->LoadBalancersCheckPolicy = $param["LoadBalancersCheckPolicy"];
+        if (array_key_exists('LoadBalancersCheckPolicy',$param) and $param['LoadBalancersCheckPolicy'] !== null) {
+            $this->LoadBalancersCheckPolicy = $param['LoadBalancersCheckPolicy'];
         }
     }
 }

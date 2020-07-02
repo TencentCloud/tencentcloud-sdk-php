@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -242,100 +242,100 @@ class VpcResource extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
-            $this->VpcId = $param["VpcId"];
+        if (array_key_exists('VpcId',$param) and $param['VpcId'] !== null) {
+            $this->VpcId = $param['VpcId'];
         }
 
-        if (array_key_exists("VpcName",$param) and $param["VpcName"] !== null) {
-            $this->VpcName = $param["VpcName"];
+        if (array_key_exists('VpcName',$param) and $param['VpcName'] !== null) {
+            $this->VpcName = $param['VpcName'];
         }
 
-        if (array_key_exists("CidrBlock",$param) and $param["CidrBlock"] !== null) {
-            $this->CidrBlock = $param["CidrBlock"];
+        if (array_key_exists('CidrBlock',$param) and $param['CidrBlock'] !== null) {
+            $this->CidrBlock = $param['CidrBlock'];
         }
 
-        if (array_key_exists("SubnetNum",$param) and $param["SubnetNum"] !== null) {
-            $this->SubnetNum = $param["SubnetNum"];
+        if (array_key_exists('SubnetNum',$param) and $param['SubnetNum'] !== null) {
+            $this->SubnetNum = $param['SubnetNum'];
         }
 
-        if (array_key_exists("NatNum",$param) and $param["NatNum"] !== null) {
-            $this->NatNum = $param["NatNum"];
+        if (array_key_exists('NatNum',$param) and $param['NatNum'] !== null) {
+            $this->NatNum = $param['NatNum'];
         }
 
-        if (array_key_exists("State",$param) and $param["State"] !== null) {
-            $this->State = $param["State"];
+        if (array_key_exists('State',$param) and $param['State'] !== null) {
+            $this->State = $param['State'];
         }
 
-        if (array_key_exists("MonitorFlag",$param) and $param["MonitorFlag"] !== null) {
-            $this->MonitorFlag = $param["MonitorFlag"];
+        if (array_key_exists('MonitorFlag',$param) and $param['MonitorFlag'] !== null) {
+            $this->MonitorFlag = $param['MonitorFlag'];
         }
 
-        if (array_key_exists("CpmNum",$param) and $param["CpmNum"] !== null) {
-            $this->CpmNum = $param["CpmNum"];
+        if (array_key_exists('CpmNum',$param) and $param['CpmNum'] !== null) {
+            $this->CpmNum = $param['CpmNum'];
         }
 
-        if (array_key_exists("LeaveIpNum",$param) and $param["LeaveIpNum"] !== null) {
-            $this->LeaveIpNum = $param["LeaveIpNum"];
+        if (array_key_exists('LeaveIpNum',$param) and $param['LeaveIpNum'] !== null) {
+            $this->LeaveIpNum = $param['LeaveIpNum'];
         }
 
-        if (array_key_exists("LbNum",$param) and $param["LbNum"] !== null) {
-            $this->LbNum = $param["LbNum"];
+        if (array_key_exists('LbNum',$param) and $param['LbNum'] !== null) {
+            $this->LbNum = $param['LbNum'];
         }
 
-        if (array_key_exists("TrafficMirrorNum",$param) and $param["TrafficMirrorNum"] !== null) {
-            $this->TrafficMirrorNum = $param["TrafficMirrorNum"];
+        if (array_key_exists('TrafficMirrorNum',$param) and $param['TrafficMirrorNum'] !== null) {
+            $this->TrafficMirrorNum = $param['TrafficMirrorNum'];
         }
 
-        if (array_key_exists("EipNum",$param) and $param["EipNum"] !== null) {
-            $this->EipNum = $param["EipNum"];
+        if (array_key_exists('EipNum',$param) and $param['EipNum'] !== null) {
+            $this->EipNum = $param['EipNum'];
         }
 
-        if (array_key_exists("PlgwNum",$param) and $param["PlgwNum"] !== null) {
-            $this->PlgwNum = $param["PlgwNum"];
+        if (array_key_exists('PlgwNum',$param) and $param['PlgwNum'] !== null) {
+            $this->PlgwNum = $param['PlgwNum'];
         }
 
-        if (array_key_exists("PlvpNum",$param) and $param["PlvpNum"] !== null) {
-            $this->PlvpNum = $param["PlvpNum"];
+        if (array_key_exists('PlvpNum',$param) and $param['PlvpNum'] !== null) {
+            $this->PlvpNum = $param['PlvpNum'];
         }
 
-        if (array_key_exists("SslVpnGwNum",$param) and $param["SslVpnGwNum"] !== null) {
-            $this->SslVpnGwNum = $param["SslVpnGwNum"];
+        if (array_key_exists('SslVpnGwNum',$param) and $param['SslVpnGwNum'] !== null) {
+            $this->SslVpnGwNum = $param['SslVpnGwNum'];
         }
 
-        if (array_key_exists("VpcPeerNum",$param) and $param["VpcPeerNum"] !== null) {
-            $this->VpcPeerNum = $param["VpcPeerNum"];
+        if (array_key_exists('VpcPeerNum',$param) and $param['VpcPeerNum'] !== null) {
+            $this->VpcPeerNum = $param['VpcPeerNum'];
         }
 
-        if (array_key_exists("IpsecVpnGwNum",$param) and $param["IpsecVpnGwNum"] !== null) {
-            $this->IpsecVpnGwNum = $param["IpsecVpnGwNum"];
+        if (array_key_exists('IpsecVpnGwNum',$param) and $param['IpsecVpnGwNum'] !== null) {
+            $this->IpsecVpnGwNum = $param['IpsecVpnGwNum'];
         }
 
-        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
-            $this->Zone = $param["Zone"];
+        if (array_key_exists('Zone',$param) and $param['Zone'] !== null) {
+            $this->Zone = $param['Zone'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("IsOld",$param) and $param["IsOld"] !== null) {
-            $this->IsOld = $param["IsOld"];
+        if (array_key_exists('IsOld',$param) and $param['IsOld'] !== null) {
+            $this->IsOld = $param['IsOld'];
         }
 
-        if (array_key_exists("CcnServiceNum",$param) and $param["CcnServiceNum"] !== null) {
-            $this->CcnServiceNum = $param["CcnServiceNum"];
+        if (array_key_exists('CcnServiceNum',$param) and $param['CcnServiceNum'] !== null) {
+            $this->CcnServiceNum = $param['CcnServiceNum'];
         }
 
-        if (array_key_exists("VpcPeerLimitToAllRegion",$param) and $param["VpcPeerLimitToAllRegion"] !== null) {
-            $this->VpcPeerLimitToAllRegion = $param["VpcPeerLimitToAllRegion"];
+        if (array_key_exists('VpcPeerLimitToAllRegion',$param) and $param['VpcPeerLimitToAllRegion'] !== null) {
+            $this->VpcPeerLimitToAllRegion = $param['VpcPeerLimitToAllRegion'];
         }
 
-        if (array_key_exists("VpcPeerLimitToSameRegion",$param) and $param["VpcPeerLimitToSameRegion"] !== null) {
-            $this->VpcPeerLimitToSameRegion = $param["VpcPeerLimitToSameRegion"];
+        if (array_key_exists('VpcPeerLimitToSameRegion',$param) and $param['VpcPeerLimitToSameRegion'] !== null) {
+            $this->VpcPeerLimitToSameRegion = $param['VpcPeerLimitToSameRegion'];
         }
 
-        if (array_key_exists("IntVpcId",$param) and $param["IntVpcId"] !== null) {
-            $this->IntVpcId = $param["IntVpcId"];
+        if (array_key_exists('IntVpcId',$param) and $param['IntVpcId'] !== null) {
+            $this->IntVpcId = $param['IntVpcId'];
         }
     }
 }

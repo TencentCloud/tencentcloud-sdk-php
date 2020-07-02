@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -41,11 +41,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getPayeeAddress() 获取收款人地址（PayeeType为"BANK_COUNT"时必填）
  * @method void setPayeeAddress(string $PayeeAddress) 设置收款人地址（PayeeType为"BANK_COUNT"时必填）
  * @method string getPayeeBankAccountType() 获取收款人银行账号类型（PayeeType为"BANK_COUNT"时必填）
-个人填"INDIVIDUAL"
-企业填"CORPORATE"
+个人填'INDIVIDUAL'
+企业填'CORPORATE'
  * @method void setPayeeBankAccountType(string $PayeeBankAccountType) 设置收款人银行账号类型（PayeeType为"BANK_COUNT"时必填）
-个人填"INDIVIDUAL"
-企业填"CORPORATE"
+个人填'INDIVIDUAL'
+企业填'CORPORATE'
  * @method string getPayeeCountryCode() 获取收款人国家或地区编码（PayeeType为"BANK_COUNT"时必填）
  * @method void setPayeeCountryCode(string $PayeeCountryCode) 设置收款人国家或地区编码（PayeeType为"BANK_COUNT"时必填）
  * @method string getPayeeBankName() 获取收款人开户银行名称（PayeeType为"BANK_COUNT"时必填）
@@ -119,8 +119,8 @@ class ApplyOutwardOrderRequest extends AbstractModel
 
     /**
      * @var string 收款人银行账号类型（PayeeType为"BANK_COUNT"时必填）
-个人填"INDIVIDUAL"
-企业填"CORPORATE"
+个人填'INDIVIDUAL'
+企业填'CORPORATE'
      */
     public $PayeeBankAccountType;
 
@@ -181,8 +181,8 @@ class ApplyOutwardOrderRequest extends AbstractModel
      * @param string $PayeeName 收款人姓名（PayeeType为"BANK_COUNT"时必填）
      * @param string $PayeeAddress 收款人地址（PayeeType为"BANK_COUNT"时必填）
      * @param string $PayeeBankAccountType 收款人银行账号类型（PayeeType为"BANK_COUNT"时必填）
-个人填"INDIVIDUAL"
-企业填"CORPORATE"
+个人填'INDIVIDUAL'
+企业填'CORPORATE'
      * @param string $PayeeCountryCode 收款人国家或地区编码（PayeeType为"BANK_COUNT"时必填）
      * @param string $PayeeBankName 收款人开户银行名称（PayeeType为"BANK_COUNT"时必填）
      * @param string $PayeeBankAddress 收款人开户银行地址（PayeeType为"BANK_COUNT"时必填）
@@ -206,84 +206,84 @@ class ApplyOutwardOrderRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TransactionId",$param) and $param["TransactionId"] !== null) {
-            $this->TransactionId = $param["TransactionId"];
+        if (array_key_exists('TransactionId',$param) and $param['TransactionId'] !== null) {
+            $this->TransactionId = $param['TransactionId'];
         }
 
-        if (array_key_exists("PricingCurrency",$param) and $param["PricingCurrency"] !== null) {
-            $this->PricingCurrency = $param["PricingCurrency"];
+        if (array_key_exists('PricingCurrency',$param) and $param['PricingCurrency'] !== null) {
+            $this->PricingCurrency = $param['PricingCurrency'];
         }
 
-        if (array_key_exists("SourceCurrency",$param) and $param["SourceCurrency"] !== null) {
-            $this->SourceCurrency = $param["SourceCurrency"];
+        if (array_key_exists('SourceCurrency',$param) and $param['SourceCurrency'] !== null) {
+            $this->SourceCurrency = $param['SourceCurrency'];
         }
 
-        if (array_key_exists("TargetCurrency",$param) and $param["TargetCurrency"] !== null) {
-            $this->TargetCurrency = $param["TargetCurrency"];
+        if (array_key_exists('TargetCurrency',$param) and $param['TargetCurrency'] !== null) {
+            $this->TargetCurrency = $param['TargetCurrency'];
         }
 
-        if (array_key_exists("PayeeType",$param) and $param["PayeeType"] !== null) {
-            $this->PayeeType = $param["PayeeType"];
+        if (array_key_exists('PayeeType',$param) and $param['PayeeType'] !== null) {
+            $this->PayeeType = $param['PayeeType'];
         }
 
-        if (array_key_exists("PayeeAccount",$param) and $param["PayeeAccount"] !== null) {
-            $this->PayeeAccount = $param["PayeeAccount"];
+        if (array_key_exists('PayeeAccount',$param) and $param['PayeeAccount'] !== null) {
+            $this->PayeeAccount = $param['PayeeAccount'];
         }
 
-        if (array_key_exists("SourceAmount",$param) and $param["SourceAmount"] !== null) {
-            $this->SourceAmount = $param["SourceAmount"];
+        if (array_key_exists('SourceAmount',$param) and $param['SourceAmount'] !== null) {
+            $this->SourceAmount = $param['SourceAmount'];
         }
 
-        if (array_key_exists("TargetAmount",$param) and $param["TargetAmount"] !== null) {
-            $this->TargetAmount = $param["TargetAmount"];
+        if (array_key_exists('TargetAmount',$param) and $param['TargetAmount'] !== null) {
+            $this->TargetAmount = $param['TargetAmount'];
         }
 
-        if (array_key_exists("PayeeName",$param) and $param["PayeeName"] !== null) {
-            $this->PayeeName = $param["PayeeName"];
+        if (array_key_exists('PayeeName',$param) and $param['PayeeName'] !== null) {
+            $this->PayeeName = $param['PayeeName'];
         }
 
-        if (array_key_exists("PayeeAddress",$param) and $param["PayeeAddress"] !== null) {
-            $this->PayeeAddress = $param["PayeeAddress"];
+        if (array_key_exists('PayeeAddress',$param) and $param['PayeeAddress'] !== null) {
+            $this->PayeeAddress = $param['PayeeAddress'];
         }
 
-        if (array_key_exists("PayeeBankAccountType",$param) and $param["PayeeBankAccountType"] !== null) {
-            $this->PayeeBankAccountType = $param["PayeeBankAccountType"];
+        if (array_key_exists('PayeeBankAccountType',$param) and $param['PayeeBankAccountType'] !== null) {
+            $this->PayeeBankAccountType = $param['PayeeBankAccountType'];
         }
 
-        if (array_key_exists("PayeeCountryCode",$param) and $param["PayeeCountryCode"] !== null) {
-            $this->PayeeCountryCode = $param["PayeeCountryCode"];
+        if (array_key_exists('PayeeCountryCode',$param) and $param['PayeeCountryCode'] !== null) {
+            $this->PayeeCountryCode = $param['PayeeCountryCode'];
         }
 
-        if (array_key_exists("PayeeBankName",$param) and $param["PayeeBankName"] !== null) {
-            $this->PayeeBankName = $param["PayeeBankName"];
+        if (array_key_exists('PayeeBankName',$param) and $param['PayeeBankName'] !== null) {
+            $this->PayeeBankName = $param['PayeeBankName'];
         }
 
-        if (array_key_exists("PayeeBankAddress",$param) and $param["PayeeBankAddress"] !== null) {
-            $this->PayeeBankAddress = $param["PayeeBankAddress"];
+        if (array_key_exists('PayeeBankAddress',$param) and $param['PayeeBankAddress'] !== null) {
+            $this->PayeeBankAddress = $param['PayeeBankAddress'];
         }
 
-        if (array_key_exists("PayeeBankDistrict",$param) and $param["PayeeBankDistrict"] !== null) {
-            $this->PayeeBankDistrict = $param["PayeeBankDistrict"];
+        if (array_key_exists('PayeeBankDistrict',$param) and $param['PayeeBankDistrict'] !== null) {
+            $this->PayeeBankDistrict = $param['PayeeBankDistrict'];
         }
 
-        if (array_key_exists("PayeeBankSwiftCode",$param) and $param["PayeeBankSwiftCode"] !== null) {
-            $this->PayeeBankSwiftCode = $param["PayeeBankSwiftCode"];
+        if (array_key_exists('PayeeBankSwiftCode',$param) and $param['PayeeBankSwiftCode'] !== null) {
+            $this->PayeeBankSwiftCode = $param['PayeeBankSwiftCode'];
         }
 
-        if (array_key_exists("PayeeBankType",$param) and $param["PayeeBankType"] !== null) {
-            $this->PayeeBankType = $param["PayeeBankType"];
+        if (array_key_exists('PayeeBankType',$param) and $param['PayeeBankType'] !== null) {
+            $this->PayeeBankType = $param['PayeeBankType'];
         }
 
-        if (array_key_exists("PayeeBankCode",$param) and $param["PayeeBankCode"] !== null) {
-            $this->PayeeBankCode = $param["PayeeBankCode"];
+        if (array_key_exists('PayeeBankCode',$param) and $param['PayeeBankCode'] !== null) {
+            $this->PayeeBankCode = $param['PayeeBankCode'];
         }
 
-        if (array_key_exists("ReferenceForBeneficiary",$param) and $param["ReferenceForBeneficiary"] !== null) {
-            $this->ReferenceForBeneficiary = $param["ReferenceForBeneficiary"];
+        if (array_key_exists('ReferenceForBeneficiary',$param) and $param['ReferenceForBeneficiary'] !== null) {
+            $this->ReferenceForBeneficiary = $param['ReferenceForBeneficiary'];
         }
 
-        if (array_key_exists("Profile",$param) and $param["Profile"] !== null) {
-            $this->Profile = $param["Profile"];
+        if (array_key_exists('Profile',$param) and $param['Profile'] !== null) {
+            $this->Profile = $param['Profile'];
         }
     }
 }

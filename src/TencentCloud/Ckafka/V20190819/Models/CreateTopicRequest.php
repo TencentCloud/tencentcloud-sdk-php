@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnableWhiteList(integer $EnableWhiteList) 设置ip白名单开关, 1:打开  0:关闭，默认不打开
  * @method array getIpWhiteList() 获取Ip白名单列表，配额限制，enableWhileList=1时必选
  * @method void setIpWhiteList(array $IpWhiteList) 设置Ip白名单列表，配额限制，enableWhileList=1时必选
- * @method string getCleanUpPolicy() 获取清理日志策略，日志清理模式，默认为"delete"。"delete"：日志按保存时间删除，"compact"：日志按 key 压缩，"compact, delete"：日志按 key 压缩且会按保存时间删除。
- * @method void setCleanUpPolicy(string $CleanUpPolicy) 设置清理日志策略，日志清理模式，默认为"delete"。"delete"：日志按保存时间删除，"compact"：日志按 key 压缩，"compact, delete"：日志按 key 压缩且会按保存时间删除。
+ * @method string getCleanUpPolicy() 获取清理日志策略，日志清理模式，默认为'delete'。'delete'：日志按保存时间删除，'compact'：日志按 key 压缩，"compact, delete"：日志按 key 压缩且会按保存时间删除。
+ * @method void setCleanUpPolicy(string $CleanUpPolicy) 设置清理日志策略，日志清理模式，默认为'delete'。'delete'：日志按保存时间删除，'compact'：日志按 key 压缩，"compact, delete"：日志按 key 压缩且会按保存时间删除。
  * @method string getNote() 获取主题备注，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
  * @method void setNote(string $Note) 设置主题备注，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
  * @method integer getMinInsyncReplicas() 获取默认为1
@@ -78,7 +78,7 @@ class CreateTopicRequest extends AbstractModel
     public $IpWhiteList;
 
     /**
-     * @var string 清理日志策略，日志清理模式，默认为"delete"。"delete"：日志按保存时间删除，"compact"：日志按 key 压缩，"compact, delete"：日志按 key 压缩且会按保存时间删除。
+     * @var string 清理日志策略，日志清理模式，默认为'delete'。'delete'：日志按保存时间删除，'compact'：日志按 key 压缩，"compact, delete"：日志按 key 压缩且会按保存时间删除。
      */
     public $CleanUpPolicy;
 
@@ -114,7 +114,7 @@ class CreateTopicRequest extends AbstractModel
      * @param integer $ReplicaNum 副本个数，不能多于 broker 数，最大为3
      * @param integer $EnableWhiteList ip白名单开关, 1:打开  0:关闭，默认不打开
      * @param array $IpWhiteList Ip白名单列表，配额限制，enableWhileList=1时必选
-     * @param string $CleanUpPolicy 清理日志策略，日志清理模式，默认为"delete"。"delete"：日志按保存时间删除，"compact"：日志按 key 压缩，"compact, delete"：日志按 key 压缩且会按保存时间删除。
+     * @param string $CleanUpPolicy 清理日志策略，日志清理模式，默认为'delete'。'delete'：日志按保存时间删除，'compact'：日志按 key 压缩，"compact, delete"：日志按 key 压缩且会按保存时间删除。
      * @param string $Note 主题备注，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
      * @param integer $MinInsyncReplicas 默认为1
      * @param integer $UncleanLeaderElectionEnable 是否允许未同步的副本选为leader，false:不允许，true:允许，默认不允许
@@ -134,52 +134,52 @@ class CreateTopicRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("TopicName",$param) and $param["TopicName"] !== null) {
-            $this->TopicName = $param["TopicName"];
+        if (array_key_exists('TopicName',$param) and $param['TopicName'] !== null) {
+            $this->TopicName = $param['TopicName'];
         }
 
-        if (array_key_exists("PartitionNum",$param) and $param["PartitionNum"] !== null) {
-            $this->PartitionNum = $param["PartitionNum"];
+        if (array_key_exists('PartitionNum',$param) and $param['PartitionNum'] !== null) {
+            $this->PartitionNum = $param['PartitionNum'];
         }
 
-        if (array_key_exists("ReplicaNum",$param) and $param["ReplicaNum"] !== null) {
-            $this->ReplicaNum = $param["ReplicaNum"];
+        if (array_key_exists('ReplicaNum',$param) and $param['ReplicaNum'] !== null) {
+            $this->ReplicaNum = $param['ReplicaNum'];
         }
 
-        if (array_key_exists("EnableWhiteList",$param) and $param["EnableWhiteList"] !== null) {
-            $this->EnableWhiteList = $param["EnableWhiteList"];
+        if (array_key_exists('EnableWhiteList',$param) and $param['EnableWhiteList'] !== null) {
+            $this->EnableWhiteList = $param['EnableWhiteList'];
         }
 
-        if (array_key_exists("IpWhiteList",$param) and $param["IpWhiteList"] !== null) {
-            $this->IpWhiteList = $param["IpWhiteList"];
+        if (array_key_exists('IpWhiteList',$param) and $param['IpWhiteList'] !== null) {
+            $this->IpWhiteList = $param['IpWhiteList'];
         }
 
-        if (array_key_exists("CleanUpPolicy",$param) and $param["CleanUpPolicy"] !== null) {
-            $this->CleanUpPolicy = $param["CleanUpPolicy"];
+        if (array_key_exists('CleanUpPolicy',$param) and $param['CleanUpPolicy'] !== null) {
+            $this->CleanUpPolicy = $param['CleanUpPolicy'];
         }
 
-        if (array_key_exists("Note",$param) and $param["Note"] !== null) {
-            $this->Note = $param["Note"];
+        if (array_key_exists('Note',$param) and $param['Note'] !== null) {
+            $this->Note = $param['Note'];
         }
 
-        if (array_key_exists("MinInsyncReplicas",$param) and $param["MinInsyncReplicas"] !== null) {
-            $this->MinInsyncReplicas = $param["MinInsyncReplicas"];
+        if (array_key_exists('MinInsyncReplicas',$param) and $param['MinInsyncReplicas'] !== null) {
+            $this->MinInsyncReplicas = $param['MinInsyncReplicas'];
         }
 
-        if (array_key_exists("UncleanLeaderElectionEnable",$param) and $param["UncleanLeaderElectionEnable"] !== null) {
-            $this->UncleanLeaderElectionEnable = $param["UncleanLeaderElectionEnable"];
+        if (array_key_exists('UncleanLeaderElectionEnable',$param) and $param['UncleanLeaderElectionEnable'] !== null) {
+            $this->UncleanLeaderElectionEnable = $param['UncleanLeaderElectionEnable'];
         }
 
-        if (array_key_exists("RetentionMs",$param) and $param["RetentionMs"] !== null) {
-            $this->RetentionMs = $param["RetentionMs"];
+        if (array_key_exists('RetentionMs',$param) and $param['RetentionMs'] !== null) {
+            $this->RetentionMs = $param['RetentionMs'];
         }
 
-        if (array_key_exists("SegmentMs",$param) and $param["SegmentMs"] !== null) {
-            $this->SegmentMs = $param["SegmentMs"];
+        if (array_key_exists('SegmentMs',$param) and $param['SegmentMs'] !== null) {
+            $this->SegmentMs = $param['SegmentMs'];
         }
     }
 }

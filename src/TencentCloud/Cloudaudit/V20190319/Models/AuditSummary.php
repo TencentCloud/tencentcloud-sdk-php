@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -70,20 +70,20 @@ class AuditSummary extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AuditName",$param) and $param["AuditName"] !== null) {
-            $this->AuditName = $param["AuditName"];
+        if (array_key_exists('AuditName',$param) and $param['AuditName'] !== null) {
+            $this->AuditName = $param['AuditName'];
         }
 
-        if (array_key_exists("AuditStatus",$param) and $param["AuditStatus"] !== null) {
-            $this->AuditStatus = $param["AuditStatus"];
+        if (array_key_exists('AuditStatus',$param) and $param['AuditStatus'] !== null) {
+            $this->AuditStatus = $param['AuditStatus'];
         }
 
-        if (array_key_exists("CosBucketName",$param) and $param["CosBucketName"] !== null) {
-            $this->CosBucketName = $param["CosBucketName"];
+        if (array_key_exists('CosBucketName',$param) and $param['CosBucketName'] !== null) {
+            $this->CosBucketName = $param['CosBucketName'];
         }
 
-        if (array_key_exists("LogFilePrefix",$param) and $param["LogFilePrefix"] !== null) {
-            $this->LogFilePrefix = $param["LogFilePrefix"];
+        if (array_key_exists('LogFilePrefix',$param) and $param['LogFilePrefix'] !== null) {
+            $this->LogFilePrefix = $param['LogFilePrefix'];
         }
     }
 }

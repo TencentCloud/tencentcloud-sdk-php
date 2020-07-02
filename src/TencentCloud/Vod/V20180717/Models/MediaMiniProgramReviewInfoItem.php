@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -86,26 +86,26 @@ class MediaMiniProgramReviewInfoItem extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Definition",$param) and $param["Definition"] !== null) {
-            $this->Definition = $param["Definition"];
+        if (array_key_exists('Definition',$param) and $param['Definition'] !== null) {
+            $this->Definition = $param['Definition'];
         }
 
-        if (array_key_exists("MetaData",$param) and $param["MetaData"] !== null) {
+        if (array_key_exists('MetaData',$param) and $param['MetaData'] !== null) {
             $this->MetaData = new MediaMetaData();
-            $this->MetaData->deserialize($param["MetaData"]);
+            $this->MetaData->deserialize($param['MetaData']);
         }
 
-        if (array_key_exists("Url",$param) and $param["Url"] !== null) {
-            $this->Url = $param["Url"];
+        if (array_key_exists('Url',$param) and $param['Url'] !== null) {
+            $this->Url = $param['Url'];
         }
 
-        if (array_key_exists("ReviewResult",$param) and $param["ReviewResult"] !== null) {
-            $this->ReviewResult = $param["ReviewResult"];
+        if (array_key_exists('ReviewResult',$param) and $param['ReviewResult'] !== null) {
+            $this->ReviewResult = $param['ReviewResult'];
         }
 
-        if (array_key_exists("ReviewSummary",$param) and $param["ReviewSummary"] !== null) {
+        if (array_key_exists('ReviewSummary',$param) and $param['ReviewSummary'] !== null) {
             $this->ReviewSummary = [];
-            foreach ($param["ReviewSummary"] as $key => $value){
+            foreach ($param['ReviewSummary'] as $key => $value){
                 $obj = new MediaMiniProgramReviewElem();
                 $obj->deserialize($value);
                 array_push($this->ReviewSummary, $obj);

@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -266,116 +266,116 @@ class LoadBalancer extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LoadBalancerId",$param) and $param["LoadBalancerId"] !== null) {
-            $this->LoadBalancerId = $param["LoadBalancerId"];
+        if (array_key_exists('LoadBalancerId',$param) and $param['LoadBalancerId'] !== null) {
+            $this->LoadBalancerId = $param['LoadBalancerId'];
         }
 
-        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
-            $this->ProjectId = $param["ProjectId"];
+        if (array_key_exists('ProjectId',$param) and $param['ProjectId'] !== null) {
+            $this->ProjectId = $param['ProjectId'];
         }
 
-        if (array_key_exists("LoadBalancerName",$param) and $param["LoadBalancerName"] !== null) {
-            $this->LoadBalancerName = $param["LoadBalancerName"];
+        if (array_key_exists('LoadBalancerName',$param) and $param['LoadBalancerName'] !== null) {
+            $this->LoadBalancerName = $param['LoadBalancerName'];
         }
 
-        if (array_key_exists("LoadBalancerType",$param) and $param["LoadBalancerType"] !== null) {
-            $this->LoadBalancerType = $param["LoadBalancerType"];
+        if (array_key_exists('LoadBalancerType',$param) and $param['LoadBalancerType'] !== null) {
+            $this->LoadBalancerType = $param['LoadBalancerType'];
         }
 
-        if (array_key_exists("Exclusive",$param) and $param["Exclusive"] !== null) {
-            $this->Exclusive = $param["Exclusive"];
+        if (array_key_exists('Exclusive',$param) and $param['Exclusive'] !== null) {
+            $this->Exclusive = $param['Exclusive'];
         }
 
-        if (array_key_exists("TgwSetType",$param) and $param["TgwSetType"] !== null) {
-            $this->TgwSetType = $param["TgwSetType"];
+        if (array_key_exists('TgwSetType',$param) and $param['TgwSetType'] !== null) {
+            $this->TgwSetType = $param['TgwSetType'];
         }
 
-        if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
-            $this->Domain = $param["Domain"];
+        if (array_key_exists('Domain',$param) and $param['Domain'] !== null) {
+            $this->Domain = $param['Domain'];
         }
 
-        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
-            $this->VpcId = $param["VpcId"];
+        if (array_key_exists('VpcId',$param) and $param['VpcId'] !== null) {
+            $this->VpcId = $param['VpcId'];
         }
 
-        if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
-            $this->SubnetId = $param["SubnetId"];
+        if (array_key_exists('SubnetId',$param) and $param['SubnetId'] !== null) {
+            $this->SubnetId = $param['SubnetId'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {
-            $this->PayMode = $param["PayMode"];
+        if (array_key_exists('PayMode',$param) and $param['PayMode'] !== null) {
+            $this->PayMode = $param['PayMode'];
         }
 
-        if (array_key_exists("LatestPayMode",$param) and $param["LatestPayMode"] !== null) {
-            $this->LatestPayMode = $param["LatestPayMode"];
+        if (array_key_exists('LatestPayMode',$param) and $param['LatestPayMode'] !== null) {
+            $this->LatestPayMode = $param['LatestPayMode'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("StatusTime",$param) and $param["StatusTime"] !== null) {
-            $this->StatusTime = $param["StatusTime"];
+        if (array_key_exists('StatusTime',$param) and $param['StatusTime'] !== null) {
+            $this->StatusTime = $param['StatusTime'];
         }
 
-        if (array_key_exists("VpcName",$param) and $param["VpcName"] !== null) {
-            $this->VpcName = $param["VpcName"];
+        if (array_key_exists('VpcName',$param) and $param['VpcName'] !== null) {
+            $this->VpcName = $param['VpcName'];
         }
 
-        if (array_key_exists("VpcCidrBlock",$param) and $param["VpcCidrBlock"] !== null) {
-            $this->VpcCidrBlock = $param["VpcCidrBlock"];
+        if (array_key_exists('VpcCidrBlock',$param) and $param['VpcCidrBlock'] !== null) {
+            $this->VpcCidrBlock = $param['VpcCidrBlock'];
         }
 
-        if (array_key_exists("LoadBalancerVips",$param) and $param["LoadBalancerVips"] !== null) {
-            $this->LoadBalancerVips = $param["LoadBalancerVips"];
+        if (array_key_exists('LoadBalancerVips',$param) and $param['LoadBalancerVips'] !== null) {
+            $this->LoadBalancerVips = $param['LoadBalancerVips'];
         }
 
-        if (array_key_exists("SupportListenerTypes",$param) and $param["SupportListenerTypes"] !== null) {
-            $this->SupportListenerTypes = $param["SupportListenerTypes"];
+        if (array_key_exists('SupportListenerTypes',$param) and $param['SupportListenerTypes'] !== null) {
+            $this->SupportListenerTypes = $param['SupportListenerTypes'];
         }
 
-        if (array_key_exists("Bandwidth",$param) and $param["Bandwidth"] !== null) {
-            $this->Bandwidth = $param["Bandwidth"];
+        if (array_key_exists('Bandwidth',$param) and $param['Bandwidth'] !== null) {
+            $this->Bandwidth = $param['Bandwidth'];
         }
 
-        if (array_key_exists("ConfId",$param) and $param["ConfId"] !== null) {
-            $this->ConfId = $param["ConfId"];
+        if (array_key_exists('ConfId',$param) and $param['ConfId'] !== null) {
+            $this->ConfId = $param['ConfId'];
         }
 
-        if (array_key_exists("ConfName",$param) and $param["ConfName"] !== null) {
-            $this->ConfName = $param["ConfName"];
+        if (array_key_exists('ConfName',$param) and $param['ConfName'] !== null) {
+            $this->ConfName = $param['ConfName'];
         }
 
-        if (array_key_exists("LoadBalancerVipv6s",$param) and $param["LoadBalancerVipv6s"] !== null) {
-            $this->LoadBalancerVipv6s = $param["LoadBalancerVipv6s"];
+        if (array_key_exists('LoadBalancerVipv6s',$param) and $param['LoadBalancerVipv6s'] !== null) {
+            $this->LoadBalancerVipv6s = $param['LoadBalancerVipv6s'];
         }
 
-        if (array_key_exists("IpProtocolType",$param) and $param["IpProtocolType"] !== null) {
-            $this->IpProtocolType = $param["IpProtocolType"];
+        if (array_key_exists('IpProtocolType',$param) and $param['IpProtocolType'] !== null) {
+            $this->IpProtocolType = $param['IpProtocolType'];
         }
 
-        if (array_key_exists("BzPayMode",$param) and $param["BzPayMode"] !== null) {
-            $this->BzPayMode = $param["BzPayMode"];
+        if (array_key_exists('BzPayMode',$param) and $param['BzPayMode'] !== null) {
+            $this->BzPayMode = $param['BzPayMode'];
         }
 
-        if (array_key_exists("BzL4Metrics",$param) and $param["BzL4Metrics"] !== null) {
-            $this->BzL4Metrics = $param["BzL4Metrics"];
+        if (array_key_exists('BzL4Metrics',$param) and $param['BzL4Metrics'] !== null) {
+            $this->BzL4Metrics = $param['BzL4Metrics'];
         }
 
-        if (array_key_exists("BzL7Metrics",$param) and $param["BzL7Metrics"] !== null) {
-            $this->BzL7Metrics = $param["BzL7Metrics"];
+        if (array_key_exists('BzL7Metrics',$param) and $param['BzL7Metrics'] !== null) {
+            $this->BzL7Metrics = $param['BzL7Metrics'];
         }
 
-        if (array_key_exists("IntVpcId",$param) and $param["IntVpcId"] !== null) {
-            $this->IntVpcId = $param["IntVpcId"];
+        if (array_key_exists('IntVpcId',$param) and $param['IntVpcId'] !== null) {
+            $this->IntVpcId = $param['IntVpcId'];
         }
 
-        if (array_key_exists("CurVips",$param) and $param["CurVips"] !== null) {
-            $this->CurVips = $param["CurVips"];
+        if (array_key_exists('CurVips',$param) and $param['CurVips'] !== null) {
+            $this->CurVips = $param['CurVips'];
         }
     }
 }

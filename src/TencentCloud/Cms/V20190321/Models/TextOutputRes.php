@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -74,20 +74,20 @@ class TextOutputRes extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
-            $this->Operator = $param["Operator"];
+        if (array_key_exists('Operator',$param) and $param['Operator'] !== null) {
+            $this->Operator = $param['Operator'];
         }
 
-        if (array_key_exists("ResultCode",$param) and $param["ResultCode"] !== null) {
-            $this->ResultCode = $param["ResultCode"];
+        if (array_key_exists('ResultCode',$param) and $param['ResultCode'] !== null) {
+            $this->ResultCode = $param['ResultCode'];
         }
 
-        if (array_key_exists("ResultMsg",$param) and $param["ResultMsg"] !== null) {
-            $this->ResultMsg = $param["ResultMsg"];
+        if (array_key_exists('ResultMsg',$param) and $param['ResultMsg'] !== null) {
+            $this->ResultMsg = $param['ResultMsg'];
         }
 
-        if (array_key_exists("ResultType",$param) and $param["ResultType"] !== null) {
-            $this->ResultType = $param["ResultType"];
+        if (array_key_exists('ResultType',$param) and $param['ResultType'] !== null) {
+            $this->ResultType = $param['ResultType'];
         }
     }
 }

@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -78,28 +78,28 @@ class DescribeDeviceMonitorInfoResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Cpu",$param) and $param["Cpu"] !== null) {
+        if (array_key_exists('Cpu',$param) and $param['Cpu'] !== null) {
             $this->Cpu = new DeviceCpuInfo();
-            $this->Cpu->deserialize($param["Cpu"]);
+            $this->Cpu->deserialize($param['Cpu']);
         }
 
-        if (array_key_exists("Mem",$param) and $param["Mem"] !== null) {
+        if (array_key_exists('Mem',$param) and $param['Mem'] !== null) {
             $this->Mem = new DeviceMemInfo();
-            $this->Mem->deserialize($param["Mem"]);
+            $this->Mem->deserialize($param['Mem']);
         }
 
-        if (array_key_exists("Net",$param) and $param["Net"] !== null) {
+        if (array_key_exists('Net',$param) and $param['Net'] !== null) {
             $this->Net = new DeviceNetInfo();
-            $this->Net->deserialize($param["Net"]);
+            $this->Net->deserialize($param['Net']);
         }
 
-        if (array_key_exists("Disk",$param) and $param["Disk"] !== null) {
+        if (array_key_exists('Disk',$param) and $param['Disk'] !== null) {
             $this->Disk = new DeviceDiskInfo();
-            $this->Disk->deserialize($param["Disk"]);
+            $this->Disk->deserialize($param['Disk']);
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

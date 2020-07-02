@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -114,46 +114,46 @@ class DescribePolicyConditionListCondition extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PolicyViewName",$param) and $param["PolicyViewName"] !== null) {
-            $this->PolicyViewName = $param["PolicyViewName"];
+        if (array_key_exists('PolicyViewName',$param) and $param['PolicyViewName'] !== null) {
+            $this->PolicyViewName = $param['PolicyViewName'];
         }
 
-        if (array_key_exists("EventMetrics",$param) and $param["EventMetrics"] !== null) {
+        if (array_key_exists('EventMetrics',$param) and $param['EventMetrics'] !== null) {
             $this->EventMetrics = [];
-            foreach ($param["EventMetrics"] as $key => $value){
+            foreach ($param['EventMetrics'] as $key => $value){
                 $obj = new DescribePolicyConditionListEventMetric();
                 $obj->deserialize($value);
                 array_push($this->EventMetrics, $obj);
             }
         }
 
-        if (array_key_exists("IsSupportMultiRegion",$param) and $param["IsSupportMultiRegion"] !== null) {
-            $this->IsSupportMultiRegion = $param["IsSupportMultiRegion"];
+        if (array_key_exists('IsSupportMultiRegion',$param) and $param['IsSupportMultiRegion'] !== null) {
+            $this->IsSupportMultiRegion = $param['IsSupportMultiRegion'];
         }
 
-        if (array_key_exists("Metrics",$param) and $param["Metrics"] !== null) {
+        if (array_key_exists('Metrics',$param) and $param['Metrics'] !== null) {
             $this->Metrics = [];
-            foreach ($param["Metrics"] as $key => $value){
+            foreach ($param['Metrics'] as $key => $value){
                 $obj = new DescribePolicyConditionListMetric();
                 $obj->deserialize($value);
                 array_push($this->Metrics, $obj);
             }
         }
 
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("SortId",$param) and $param["SortId"] !== null) {
-            $this->SortId = $param["SortId"];
+        if (array_key_exists('SortId',$param) and $param['SortId'] !== null) {
+            $this->SortId = $param['SortId'];
         }
 
-        if (array_key_exists("SupportDefault",$param) and $param["SupportDefault"] !== null) {
-            $this->SupportDefault = $param["SupportDefault"];
+        if (array_key_exists('SupportDefault',$param) and $param['SupportDefault'] !== null) {
+            $this->SupportDefault = $param['SupportDefault'];
         }
 
-        if (array_key_exists("SupportRegions",$param) and $param["SupportRegions"] !== null) {
-            $this->SupportRegions = $param["SupportRegions"];
+        if (array_key_exists('SupportRegions',$param) and $param['SupportRegions'] !== null) {
+            $this->SupportRegions = $param['SupportRegions'];
         }
     }
 }

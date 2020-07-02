@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -62,16 +62,16 @@ class ModifyIp6AddressesBandwidthRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InternetMaxBandwidthOut",$param) and $param["InternetMaxBandwidthOut"] !== null) {
-            $this->InternetMaxBandwidthOut = $param["InternetMaxBandwidthOut"];
+        if (array_key_exists('InternetMaxBandwidthOut',$param) and $param['InternetMaxBandwidthOut'] !== null) {
+            $this->InternetMaxBandwidthOut = $param['InternetMaxBandwidthOut'];
         }
 
-        if (array_key_exists("Ip6Addresses",$param) and $param["Ip6Addresses"] !== null) {
-            $this->Ip6Addresses = $param["Ip6Addresses"];
+        if (array_key_exists('Ip6Addresses',$param) and $param['Ip6Addresses'] !== null) {
+            $this->Ip6Addresses = $param['Ip6Addresses'];
         }
 
-        if (array_key_exists("Ip6AddressIds",$param) and $param["Ip6AddressIds"] !== null) {
-            $this->Ip6AddressIds = $param["Ip6AddressIds"];
+        if (array_key_exists('Ip6AddressIds',$param) and $param['Ip6AddressIds'] !== null) {
+            $this->Ip6AddressIds = $param['Ip6AddressIds'];
         }
     }
 }

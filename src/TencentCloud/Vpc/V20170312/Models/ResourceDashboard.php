@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -374,172 +374,172 @@ class ResourceDashboard extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
-            $this->VpcId = $param["VpcId"];
+        if (array_key_exists('VpcId',$param) and $param['VpcId'] !== null) {
+            $this->VpcId = $param['VpcId'];
         }
 
-        if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
-            $this->SubnetId = $param["SubnetId"];
+        if (array_key_exists('SubnetId',$param) and $param['SubnetId'] !== null) {
+            $this->SubnetId = $param['SubnetId'];
         }
 
-        if (array_key_exists("Classiclink",$param) and $param["Classiclink"] !== null) {
-            $this->Classiclink = $param["Classiclink"];
+        if (array_key_exists('Classiclink',$param) and $param['Classiclink'] !== null) {
+            $this->Classiclink = $param['Classiclink'];
         }
 
-        if (array_key_exists("Dcg",$param) and $param["Dcg"] !== null) {
-            $this->Dcg = $param["Dcg"];
+        if (array_key_exists('Dcg',$param) and $param['Dcg'] !== null) {
+            $this->Dcg = $param['Dcg'];
         }
 
-        if (array_key_exists("Pcx",$param) and $param["Pcx"] !== null) {
-            $this->Pcx = $param["Pcx"];
+        if (array_key_exists('Pcx',$param) and $param['Pcx'] !== null) {
+            $this->Pcx = $param['Pcx'];
         }
 
-        if (array_key_exists("Ip",$param) and $param["Ip"] !== null) {
-            $this->Ip = $param["Ip"];
+        if (array_key_exists('Ip',$param) and $param['Ip'] !== null) {
+            $this->Ip = $param['Ip'];
         }
 
-        if (array_key_exists("Nat",$param) and $param["Nat"] !== null) {
-            $this->Nat = $param["Nat"];
+        if (array_key_exists('Nat',$param) and $param['Nat'] !== null) {
+            $this->Nat = $param['Nat'];
         }
 
-        if (array_key_exists("Vpngw",$param) and $param["Vpngw"] !== null) {
-            $this->Vpngw = $param["Vpngw"];
+        if (array_key_exists('Vpngw',$param) and $param['Vpngw'] !== null) {
+            $this->Vpngw = $param['Vpngw'];
         }
 
-        if (array_key_exists("FlowLog",$param) and $param["FlowLog"] !== null) {
-            $this->FlowLog = $param["FlowLog"];
+        if (array_key_exists('FlowLog',$param) and $param['FlowLog'] !== null) {
+            $this->FlowLog = $param['FlowLog'];
         }
 
-        if (array_key_exists("NetworkDetect",$param) and $param["NetworkDetect"] !== null) {
-            $this->NetworkDetect = $param["NetworkDetect"];
+        if (array_key_exists('NetworkDetect',$param) and $param['NetworkDetect'] !== null) {
+            $this->NetworkDetect = $param['NetworkDetect'];
         }
 
-        if (array_key_exists("NetworkACL",$param) and $param["NetworkACL"] !== null) {
-            $this->NetworkACL = $param["NetworkACL"];
+        if (array_key_exists('NetworkACL',$param) and $param['NetworkACL'] !== null) {
+            $this->NetworkACL = $param['NetworkACL'];
         }
 
-        if (array_key_exists("CVM",$param) and $param["CVM"] !== null) {
-            $this->CVM = $param["CVM"];
+        if (array_key_exists('CVM',$param) and $param['CVM'] !== null) {
+            $this->CVM = $param['CVM'];
         }
 
-        if (array_key_exists("LB",$param) and $param["LB"] !== null) {
-            $this->LB = $param["LB"];
+        if (array_key_exists('LB',$param) and $param['LB'] !== null) {
+            $this->LB = $param['LB'];
         }
 
-        if (array_key_exists("CDB",$param) and $param["CDB"] !== null) {
-            $this->CDB = $param["CDB"];
+        if (array_key_exists('CDB',$param) and $param['CDB'] !== null) {
+            $this->CDB = $param['CDB'];
         }
 
-        if (array_key_exists("Cmem",$param) and $param["Cmem"] !== null) {
-            $this->Cmem = $param["Cmem"];
+        if (array_key_exists('Cmem',$param) and $param['Cmem'] !== null) {
+            $this->Cmem = $param['Cmem'];
         }
 
-        if (array_key_exists("CTSDB",$param) and $param["CTSDB"] !== null) {
-            $this->CTSDB = $param["CTSDB"];
+        if (array_key_exists('CTSDB',$param) and $param['CTSDB'] !== null) {
+            $this->CTSDB = $param['CTSDB'];
         }
 
-        if (array_key_exists("MariaDB",$param) and $param["MariaDB"] !== null) {
-            $this->MariaDB = $param["MariaDB"];
+        if (array_key_exists('MariaDB',$param) and $param['MariaDB'] !== null) {
+            $this->MariaDB = $param['MariaDB'];
         }
 
-        if (array_key_exists("SQLServer",$param) and $param["SQLServer"] !== null) {
-            $this->SQLServer = $param["SQLServer"];
+        if (array_key_exists('SQLServer',$param) and $param['SQLServer'] !== null) {
+            $this->SQLServer = $param['SQLServer'];
         }
 
-        if (array_key_exists("Postgres",$param) and $param["Postgres"] !== null) {
-            $this->Postgres = $param["Postgres"];
+        if (array_key_exists('Postgres',$param) and $param['Postgres'] !== null) {
+            $this->Postgres = $param['Postgres'];
         }
 
-        if (array_key_exists("NAS",$param) and $param["NAS"] !== null) {
-            $this->NAS = $param["NAS"];
+        if (array_key_exists('NAS',$param) and $param['NAS'] !== null) {
+            $this->NAS = $param['NAS'];
         }
 
-        if (array_key_exists("Greenplumn",$param) and $param["Greenplumn"] !== null) {
-            $this->Greenplumn = $param["Greenplumn"];
+        if (array_key_exists('Greenplumn',$param) and $param['Greenplumn'] !== null) {
+            $this->Greenplumn = $param['Greenplumn'];
         }
 
-        if (array_key_exists("Ckafka",$param) and $param["Ckafka"] !== null) {
-            $this->Ckafka = $param["Ckafka"];
+        if (array_key_exists('Ckafka',$param) and $param['Ckafka'] !== null) {
+            $this->Ckafka = $param['Ckafka'];
         }
 
-        if (array_key_exists("Grocery",$param) and $param["Grocery"] !== null) {
-            $this->Grocery = $param["Grocery"];
+        if (array_key_exists('Grocery',$param) and $param['Grocery'] !== null) {
+            $this->Grocery = $param['Grocery'];
         }
 
-        if (array_key_exists("HSM",$param) and $param["HSM"] !== null) {
-            $this->HSM = $param["HSM"];
+        if (array_key_exists('HSM',$param) and $param['HSM'] !== null) {
+            $this->HSM = $param['HSM'];
         }
 
-        if (array_key_exists("Tcaplus",$param) and $param["Tcaplus"] !== null) {
-            $this->Tcaplus = $param["Tcaplus"];
+        if (array_key_exists('Tcaplus',$param) and $param['Tcaplus'] !== null) {
+            $this->Tcaplus = $param['Tcaplus'];
         }
 
-        if (array_key_exists("Cnas",$param) and $param["Cnas"] !== null) {
-            $this->Cnas = $param["Cnas"];
+        if (array_key_exists('Cnas',$param) and $param['Cnas'] !== null) {
+            $this->Cnas = $param['Cnas'];
         }
 
-        if (array_key_exists("TiDB",$param) and $param["TiDB"] !== null) {
-            $this->TiDB = $param["TiDB"];
+        if (array_key_exists('TiDB',$param) and $param['TiDB'] !== null) {
+            $this->TiDB = $param['TiDB'];
         }
 
-        if (array_key_exists("Emr",$param) and $param["Emr"] !== null) {
-            $this->Emr = $param["Emr"];
+        if (array_key_exists('Emr',$param) and $param['Emr'] !== null) {
+            $this->Emr = $param['Emr'];
         }
 
-        if (array_key_exists("SEAL",$param) and $param["SEAL"] !== null) {
-            $this->SEAL = $param["SEAL"];
+        if (array_key_exists('SEAL',$param) and $param['SEAL'] !== null) {
+            $this->SEAL = $param['SEAL'];
         }
 
-        if (array_key_exists("CFS",$param) and $param["CFS"] !== null) {
-            $this->CFS = $param["CFS"];
+        if (array_key_exists('CFS',$param) and $param['CFS'] !== null) {
+            $this->CFS = $param['CFS'];
         }
 
-        if (array_key_exists("Oracle",$param) and $param["Oracle"] !== null) {
-            $this->Oracle = $param["Oracle"];
+        if (array_key_exists('Oracle',$param) and $param['Oracle'] !== null) {
+            $this->Oracle = $param['Oracle'];
         }
 
-        if (array_key_exists("ElasticSearch",$param) and $param["ElasticSearch"] !== null) {
-            $this->ElasticSearch = $param["ElasticSearch"];
+        if (array_key_exists('ElasticSearch',$param) and $param['ElasticSearch'] !== null) {
+            $this->ElasticSearch = $param['ElasticSearch'];
         }
 
-        if (array_key_exists("TBaaS",$param) and $param["TBaaS"] !== null) {
-            $this->TBaaS = $param["TBaaS"];
+        if (array_key_exists('TBaaS',$param) and $param['TBaaS'] !== null) {
+            $this->TBaaS = $param['TBaaS'];
         }
 
-        if (array_key_exists("Itop",$param) and $param["Itop"] !== null) {
-            $this->Itop = $param["Itop"];
+        if (array_key_exists('Itop',$param) and $param['Itop'] !== null) {
+            $this->Itop = $param['Itop'];
         }
 
-        if (array_key_exists("DBAudit",$param) and $param["DBAudit"] !== null) {
-            $this->DBAudit = $param["DBAudit"];
+        if (array_key_exists('DBAudit',$param) and $param['DBAudit'] !== null) {
+            $this->DBAudit = $param['DBAudit'];
         }
 
-        if (array_key_exists("CynosDBPostgres",$param) and $param["CynosDBPostgres"] !== null) {
-            $this->CynosDBPostgres = $param["CynosDBPostgres"];
+        if (array_key_exists('CynosDBPostgres',$param) and $param['CynosDBPostgres'] !== null) {
+            $this->CynosDBPostgres = $param['CynosDBPostgres'];
         }
 
-        if (array_key_exists("Redis",$param) and $param["Redis"] !== null) {
-            $this->Redis = $param["Redis"];
+        if (array_key_exists('Redis',$param) and $param['Redis'] !== null) {
+            $this->Redis = $param['Redis'];
         }
 
-        if (array_key_exists("MongoDB",$param) and $param["MongoDB"] !== null) {
-            $this->MongoDB = $param["MongoDB"];
+        if (array_key_exists('MongoDB',$param) and $param['MongoDB'] !== null) {
+            $this->MongoDB = $param['MongoDB'];
         }
 
-        if (array_key_exists("DCDB",$param) and $param["DCDB"] !== null) {
-            $this->DCDB = $param["DCDB"];
+        if (array_key_exists('DCDB',$param) and $param['DCDB'] !== null) {
+            $this->DCDB = $param['DCDB'];
         }
 
-        if (array_key_exists("CynosDBMySQL",$param) and $param["CynosDBMySQL"] !== null) {
-            $this->CynosDBMySQL = $param["CynosDBMySQL"];
+        if (array_key_exists('CynosDBMySQL',$param) and $param['CynosDBMySQL'] !== null) {
+            $this->CynosDBMySQL = $param['CynosDBMySQL'];
         }
 
-        if (array_key_exists("Subnet",$param) and $param["Subnet"] !== null) {
-            $this->Subnet = $param["Subnet"];
+        if (array_key_exists('Subnet',$param) and $param['Subnet'] !== null) {
+            $this->Subnet = $param['Subnet'];
         }
 
-        if (array_key_exists("RouteTable",$param) and $param["RouteTable"] !== null) {
-            $this->RouteTable = $param["RouteTable"];
+        if (array_key_exists('RouteTable',$param) and $param['RouteTable'] !== null) {
+            $this->RouteTable = $param['RouteTable'];
         }
     }
 }

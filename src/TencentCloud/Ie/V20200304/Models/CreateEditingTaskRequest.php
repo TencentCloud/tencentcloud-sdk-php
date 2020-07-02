@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -70,24 +70,24 @@ class CreateEditingTaskRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("EditingInfo",$param) and $param["EditingInfo"] !== null) {
+        if (array_key_exists('EditingInfo',$param) and $param['EditingInfo'] !== null) {
             $this->EditingInfo = new EditingInfo();
-            $this->EditingInfo->deserialize($param["EditingInfo"]);
+            $this->EditingInfo->deserialize($param['EditingInfo']);
         }
 
-        if (array_key_exists("DownInfo",$param) and $param["DownInfo"] !== null) {
+        if (array_key_exists('DownInfo',$param) and $param['DownInfo'] !== null) {
             $this->DownInfo = new DownInfo();
-            $this->DownInfo->deserialize($param["DownInfo"]);
+            $this->DownInfo->deserialize($param['DownInfo']);
         }
 
-        if (array_key_exists("SaveInfo",$param) and $param["SaveInfo"] !== null) {
+        if (array_key_exists('SaveInfo',$param) and $param['SaveInfo'] !== null) {
             $this->SaveInfo = new SaveInfo();
-            $this->SaveInfo->deserialize($param["SaveInfo"]);
+            $this->SaveInfo->deserialize($param['SaveInfo']);
         }
 
-        if (array_key_exists("CallbackInfo",$param) and $param["CallbackInfo"] !== null) {
+        if (array_key_exists('CallbackInfo',$param) and $param['CallbackInfo'] !== null) {
             $this->CallbackInfo = new CallbackInfo();
-            $this->CallbackInfo->deserialize($param["CallbackInfo"]);
+            $this->CallbackInfo->deserialize($param['CallbackInfo']);
         }
     }
 }

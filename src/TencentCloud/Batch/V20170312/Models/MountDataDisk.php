@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getLocalPath() 获取挂载点，Linux系统合法路径，或Windows系统盘符,比如"H:\\"
  * @method void setLocalPath(string $LocalPath) 设置挂载点，Linux系统合法路径，或Windows系统盘符,比如"H:\\"
- * @method string getFileSystemType() 获取文件系统类型，Linux系统下支持"EXT3"和"EXT4"两种，默认"EXT3"；Windows系统下仅支持"NTFS"
- * @method void setFileSystemType(string $FileSystemType) 设置文件系统类型，Linux系统下支持"EXT3"和"EXT4"两种，默认"EXT3"；Windows系统下仅支持"NTFS"
+ * @method string getFileSystemType() 获取文件系统类型，Linux系统下支持'EXT3'和'EXT4'两种，默认'EXT3'；Windows系统下仅支持'NTFS'
+ * @method void setFileSystemType(string $FileSystemType) 设置文件系统类型，Linux系统下支持'EXT3'和'EXT4'两种，默认'EXT3'；Windows系统下仅支持'NTFS'
  */
 class MountDataDisk extends AbstractModel
 {
@@ -33,13 +33,13 @@ class MountDataDisk extends AbstractModel
     public $LocalPath;
 
     /**
-     * @var string 文件系统类型，Linux系统下支持"EXT3"和"EXT4"两种，默认"EXT3"；Windows系统下仅支持"NTFS"
+     * @var string 文件系统类型，Linux系统下支持'EXT3'和'EXT4'两种，默认'EXT3'；Windows系统下仅支持'NTFS'
      */
     public $FileSystemType;
 
     /**
      * @param string $LocalPath 挂载点，Linux系统合法路径，或Windows系统盘符,比如"H:\\"
-     * @param string $FileSystemType 文件系统类型，Linux系统下支持"EXT3"和"EXT4"两种，默认"EXT3"；Windows系统下仅支持"NTFS"
+     * @param string $FileSystemType 文件系统类型，Linux系统下支持'EXT3'和'EXT4'两种，默认'EXT3'；Windows系统下仅支持'NTFS'
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class MountDataDisk extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LocalPath",$param) and $param["LocalPath"] !== null) {
-            $this->LocalPath = $param["LocalPath"];
+        if (array_key_exists('LocalPath',$param) and $param['LocalPath'] !== null) {
+            $this->LocalPath = $param['LocalPath'];
         }
 
-        if (array_key_exists("FileSystemType",$param) and $param["FileSystemType"] !== null) {
-            $this->FileSystemType = $param["FileSystemType"];
+        if (array_key_exists('FileSystemType',$param) and $param['FileSystemType'] !== null) {
+            $this->FileSystemType = $param['FileSystemType'];
         }
     }
 }

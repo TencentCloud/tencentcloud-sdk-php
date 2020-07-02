@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -70,21 +70,21 @@ class ReplaceTopicRuleRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RuleName",$param) and $param["RuleName"] !== null) {
-            $this->RuleName = $param["RuleName"];
+        if (array_key_exists('RuleName',$param) and $param['RuleName'] !== null) {
+            $this->RuleName = $param['RuleName'];
         }
 
-        if (array_key_exists("TopicRulePayload",$param) and $param["TopicRulePayload"] !== null) {
+        if (array_key_exists('TopicRulePayload',$param) and $param['TopicRulePayload'] !== null) {
             $this->TopicRulePayload = new TopicRulePayload();
-            $this->TopicRulePayload->deserialize($param["TopicRulePayload"]);
+            $this->TopicRulePayload->deserialize($param['TopicRulePayload']);
         }
 
-        if (array_key_exists("ModifyType",$param) and $param["ModifyType"] !== null) {
-            $this->ModifyType = $param["ModifyType"];
+        if (array_key_exists('ModifyType',$param) and $param['ModifyType'] !== null) {
+            $this->ModifyType = $param['ModifyType'];
         }
 
-        if (array_key_exists("ActionIndex",$param) and $param["ActionIndex"] !== null) {
-            $this->ActionIndex = $param["ActionIndex"];
+        if (array_key_exists('ActionIndex',$param) and $param['ActionIndex'] !== null) {
+            $this->ActionIndex = $param['ActionIndex'];
         }
     }
 }

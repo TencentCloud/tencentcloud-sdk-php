@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -78,24 +78,24 @@ class CreateRedInvoiceItem extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("OrderId",$param) and $param["OrderId"] !== null) {
-            $this->OrderId = $param["OrderId"];
+        if (array_key_exists('OrderId',$param) and $param['OrderId'] !== null) {
+            $this->OrderId = $param['OrderId'];
         }
 
-        if (array_key_exists("CallbackUrl",$param) and $param["CallbackUrl"] !== null) {
-            $this->CallbackUrl = $param["CallbackUrl"];
+        if (array_key_exists('CallbackUrl',$param) and $param['CallbackUrl'] !== null) {
+            $this->CallbackUrl = $param['CallbackUrl'];
         }
 
-        if (array_key_exists("OrderSn",$param) and $param["OrderSn"] !== null) {
-            $this->OrderSn = $param["OrderSn"];
+        if (array_key_exists('OrderSn',$param) and $param['OrderSn'] !== null) {
+            $this->OrderSn = $param['OrderSn'];
         }
 
-        if (array_key_exists("RedSerialNo",$param) and $param["RedSerialNo"] !== null) {
-            $this->RedSerialNo = $param["RedSerialNo"];
+        if (array_key_exists('RedSerialNo',$param) and $param['RedSerialNo'] !== null) {
+            $this->RedSerialNo = $param['RedSerialNo'];
         }
 
-        if (array_key_exists("StoreNo",$param) and $param["StoreNo"] !== null) {
-            $this->StoreNo = $param["StoreNo"];
+        if (array_key_exists('StoreNo',$param) and $param['StoreNo'] !== null) {
+            $this->StoreNo = $param['StoreNo'];
         }
     }
 }

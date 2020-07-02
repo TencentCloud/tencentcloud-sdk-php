@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -134,52 +134,52 @@ class ApplyCertificateRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DvAuthMethod",$param) and $param["DvAuthMethod"] !== null) {
-            $this->DvAuthMethod = $param["DvAuthMethod"];
+        if (array_key_exists('DvAuthMethod',$param) and $param['DvAuthMethod'] !== null) {
+            $this->DvAuthMethod = $param['DvAuthMethod'];
         }
 
-        if (array_key_exists("DomainName",$param) and $param["DomainName"] !== null) {
-            $this->DomainName = $param["DomainName"];
+        if (array_key_exists('DomainName',$param) and $param['DomainName'] !== null) {
+            $this->DomainName = $param['DomainName'];
         }
 
-        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
-            $this->ProjectId = $param["ProjectId"];
+        if (array_key_exists('ProjectId',$param) and $param['ProjectId'] !== null) {
+            $this->ProjectId = $param['ProjectId'];
         }
 
-        if (array_key_exists("PackageType",$param) and $param["PackageType"] !== null) {
-            $this->PackageType = $param["PackageType"];
+        if (array_key_exists('PackageType',$param) and $param['PackageType'] !== null) {
+            $this->PackageType = $param['PackageType'];
         }
 
-        if (array_key_exists("ContactEmail",$param) and $param["ContactEmail"] !== null) {
-            $this->ContactEmail = $param["ContactEmail"];
+        if (array_key_exists('ContactEmail',$param) and $param['ContactEmail'] !== null) {
+            $this->ContactEmail = $param['ContactEmail'];
         }
 
-        if (array_key_exists("ContactPhone",$param) and $param["ContactPhone"] !== null) {
-            $this->ContactPhone = $param["ContactPhone"];
+        if (array_key_exists('ContactPhone',$param) and $param['ContactPhone'] !== null) {
+            $this->ContactPhone = $param['ContactPhone'];
         }
 
-        if (array_key_exists("ValidityPeriod",$param) and $param["ValidityPeriod"] !== null) {
-            $this->ValidityPeriod = $param["ValidityPeriod"];
+        if (array_key_exists('ValidityPeriod',$param) and $param['ValidityPeriod'] !== null) {
+            $this->ValidityPeriod = $param['ValidityPeriod'];
         }
 
-        if (array_key_exists("CsrEncryptAlgo",$param) and $param["CsrEncryptAlgo"] !== null) {
-            $this->CsrEncryptAlgo = $param["CsrEncryptAlgo"];
+        if (array_key_exists('CsrEncryptAlgo',$param) and $param['CsrEncryptAlgo'] !== null) {
+            $this->CsrEncryptAlgo = $param['CsrEncryptAlgo'];
         }
 
-        if (array_key_exists("CsrKeyParameter",$param) and $param["CsrKeyParameter"] !== null) {
-            $this->CsrKeyParameter = $param["CsrKeyParameter"];
+        if (array_key_exists('CsrKeyParameter',$param) and $param['CsrKeyParameter'] !== null) {
+            $this->CsrKeyParameter = $param['CsrKeyParameter'];
         }
 
-        if (array_key_exists("CsrKeyPassword",$param) and $param["CsrKeyPassword"] !== null) {
-            $this->CsrKeyPassword = $param["CsrKeyPassword"];
+        if (array_key_exists('CsrKeyPassword',$param) and $param['CsrKeyPassword'] !== null) {
+            $this->CsrKeyPassword = $param['CsrKeyPassword'];
         }
 
-        if (array_key_exists("Alias",$param) and $param["Alias"] !== null) {
-            $this->Alias = $param["Alias"];
+        if (array_key_exists('Alias',$param) and $param['Alias'] !== null) {
+            $this->Alias = $param['Alias'];
         }
 
-        if (array_key_exists("OldCertificateId",$param) and $param["OldCertificateId"] !== null) {
-            $this->OldCertificateId = $param["OldCertificateId"];
+        if (array_key_exists('OldCertificateId',$param) and $param['OldCertificateId'] !== null) {
+            $this->OldCertificateId = $param['OldCertificateId'];
         }
     }
 }

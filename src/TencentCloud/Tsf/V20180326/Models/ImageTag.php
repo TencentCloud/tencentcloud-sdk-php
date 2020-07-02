@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -146,56 +146,56 @@ class ImageTag extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RepoName",$param) and $param["RepoName"] !== null) {
-            $this->RepoName = $param["RepoName"];
+        if (array_key_exists('RepoName',$param) and $param['RepoName'] !== null) {
+            $this->RepoName = $param['RepoName'];
         }
 
-        if (array_key_exists("TagName",$param) and $param["TagName"] !== null) {
-            $this->TagName = $param["TagName"];
+        if (array_key_exists('TagName',$param) and $param['TagName'] !== null) {
+            $this->TagName = $param['TagName'];
         }
 
-        if (array_key_exists("TagId",$param) and $param["TagId"] !== null) {
-            $this->TagId = $param["TagId"];
+        if (array_key_exists('TagId',$param) and $param['TagId'] !== null) {
+            $this->TagId = $param['TagId'];
         }
 
-        if (array_key_exists("ImageId",$param) and $param["ImageId"] !== null) {
-            $this->ImageId = $param["ImageId"];
+        if (array_key_exists('ImageId',$param) and $param['ImageId'] !== null) {
+            $this->ImageId = $param['ImageId'];
         }
 
-        if (array_key_exists("Size",$param) and $param["Size"] !== null) {
-            $this->Size = $param["Size"];
+        if (array_key_exists('Size',$param) and $param['Size'] !== null) {
+            $this->Size = $param['Size'];
         }
 
-        if (array_key_exists("CreationTime",$param) and $param["CreationTime"] !== null) {
-            $this->CreationTime = $param["CreationTime"];
+        if (array_key_exists('CreationTime',$param) and $param['CreationTime'] !== null) {
+            $this->CreationTime = $param['CreationTime'];
         }
 
-        if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
-            $this->UpdateTime = $param["UpdateTime"];
+        if (array_key_exists('UpdateTime',$param) and $param['UpdateTime'] !== null) {
+            $this->UpdateTime = $param['UpdateTime'];
         }
 
-        if (array_key_exists("Author",$param) and $param["Author"] !== null) {
-            $this->Author = $param["Author"];
+        if (array_key_exists('Author',$param) and $param['Author'] !== null) {
+            $this->Author = $param['Author'];
         }
 
-        if (array_key_exists("Architecture",$param) and $param["Architecture"] !== null) {
-            $this->Architecture = $param["Architecture"];
+        if (array_key_exists('Architecture',$param) and $param['Architecture'] !== null) {
+            $this->Architecture = $param['Architecture'];
         }
 
-        if (array_key_exists("DockerVersion",$param) and $param["DockerVersion"] !== null) {
-            $this->DockerVersion = $param["DockerVersion"];
+        if (array_key_exists('DockerVersion',$param) and $param['DockerVersion'] !== null) {
+            $this->DockerVersion = $param['DockerVersion'];
         }
 
-        if (array_key_exists("Os",$param) and $param["Os"] !== null) {
-            $this->Os = $param["Os"];
+        if (array_key_exists('Os',$param) and $param['Os'] !== null) {
+            $this->Os = $param['Os'];
         }
 
-        if (array_key_exists("PushTime",$param) and $param["PushTime"] !== null) {
-            $this->PushTime = $param["PushTime"];
+        if (array_key_exists('PushTime',$param) and $param['PushTime'] !== null) {
+            $this->PushTime = $param['PushTime'];
         }
 
-        if (array_key_exists("SizeByte",$param) and $param["SizeByte"] !== null) {
-            $this->SizeByte = $param["SizeByte"];
+        if (array_key_exists('SizeByte',$param) and $param['SizeByte'] !== null) {
+            $this->SizeByte = $param['SizeByte'];
         }
     }
 }

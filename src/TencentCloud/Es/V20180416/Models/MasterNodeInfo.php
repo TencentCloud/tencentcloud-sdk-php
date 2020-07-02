@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -94,32 +94,32 @@ class MasterNodeInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("EnableDedicatedMaster",$param) and $param["EnableDedicatedMaster"] !== null) {
-            $this->EnableDedicatedMaster = $param["EnableDedicatedMaster"];
+        if (array_key_exists('EnableDedicatedMaster',$param) and $param['EnableDedicatedMaster'] !== null) {
+            $this->EnableDedicatedMaster = $param['EnableDedicatedMaster'];
         }
 
-        if (array_key_exists("MasterNodeType",$param) and $param["MasterNodeType"] !== null) {
-            $this->MasterNodeType = $param["MasterNodeType"];
+        if (array_key_exists('MasterNodeType',$param) and $param['MasterNodeType'] !== null) {
+            $this->MasterNodeType = $param['MasterNodeType'];
         }
 
-        if (array_key_exists("MasterNodeNum",$param) and $param["MasterNodeNum"] !== null) {
-            $this->MasterNodeNum = $param["MasterNodeNum"];
+        if (array_key_exists('MasterNodeNum',$param) and $param['MasterNodeNum'] !== null) {
+            $this->MasterNodeNum = $param['MasterNodeNum'];
         }
 
-        if (array_key_exists("MasterNodeCpuNum",$param) and $param["MasterNodeCpuNum"] !== null) {
-            $this->MasterNodeCpuNum = $param["MasterNodeCpuNum"];
+        if (array_key_exists('MasterNodeCpuNum',$param) and $param['MasterNodeCpuNum'] !== null) {
+            $this->MasterNodeCpuNum = $param['MasterNodeCpuNum'];
         }
 
-        if (array_key_exists("MasterNodeMemSize",$param) and $param["MasterNodeMemSize"] !== null) {
-            $this->MasterNodeMemSize = $param["MasterNodeMemSize"];
+        if (array_key_exists('MasterNodeMemSize',$param) and $param['MasterNodeMemSize'] !== null) {
+            $this->MasterNodeMemSize = $param['MasterNodeMemSize'];
         }
 
-        if (array_key_exists("MasterNodeDiskSize",$param) and $param["MasterNodeDiskSize"] !== null) {
-            $this->MasterNodeDiskSize = $param["MasterNodeDiskSize"];
+        if (array_key_exists('MasterNodeDiskSize',$param) and $param['MasterNodeDiskSize'] !== null) {
+            $this->MasterNodeDiskSize = $param['MasterNodeDiskSize'];
         }
 
-        if (array_key_exists("MasterNodeDiskType",$param) and $param["MasterNodeDiskType"] !== null) {
-            $this->MasterNodeDiskType = $param["MasterNodeDiskType"];
+        if (array_key_exists('MasterNodeDiskType',$param) and $param['MasterNodeDiskType'] !== null) {
+            $this->MasterNodeDiskType = $param['MasterNodeDiskType'];
         }
     }
 }

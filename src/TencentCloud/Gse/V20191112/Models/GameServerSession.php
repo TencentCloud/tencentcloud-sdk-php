@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -270,97 +270,97 @@ class GameServerSession extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CreationTime",$param) and $param["CreationTime"] !== null) {
-            $this->CreationTime = $param["CreationTime"];
+        if (array_key_exists('CreationTime',$param) and $param['CreationTime'] !== null) {
+            $this->CreationTime = $param['CreationTime'];
         }
 
-        if (array_key_exists("CreatorId",$param) and $param["CreatorId"] !== null) {
-            $this->CreatorId = $param["CreatorId"];
+        if (array_key_exists('CreatorId',$param) and $param['CreatorId'] !== null) {
+            $this->CreatorId = $param['CreatorId'];
         }
 
-        if (array_key_exists("CurrentPlayerSessionCount",$param) and $param["CurrentPlayerSessionCount"] !== null) {
-            $this->CurrentPlayerSessionCount = $param["CurrentPlayerSessionCount"];
+        if (array_key_exists('CurrentPlayerSessionCount',$param) and $param['CurrentPlayerSessionCount'] !== null) {
+            $this->CurrentPlayerSessionCount = $param['CurrentPlayerSessionCount'];
         }
 
-        if (array_key_exists("DnsName",$param) and $param["DnsName"] !== null) {
-            $this->DnsName = $param["DnsName"];
+        if (array_key_exists('DnsName',$param) and $param['DnsName'] !== null) {
+            $this->DnsName = $param['DnsName'];
         }
 
-        if (array_key_exists("FleetId",$param) and $param["FleetId"] !== null) {
-            $this->FleetId = $param["FleetId"];
+        if (array_key_exists('FleetId',$param) and $param['FleetId'] !== null) {
+            $this->FleetId = $param['FleetId'];
         }
 
-        if (array_key_exists("GameProperties",$param) and $param["GameProperties"] !== null) {
+        if (array_key_exists('GameProperties',$param) and $param['GameProperties'] !== null) {
             $this->GameProperties = [];
-            foreach ($param["GameProperties"] as $key => $value){
+            foreach ($param['GameProperties'] as $key => $value){
                 $obj = new GameProperty();
                 $obj->deserialize($value);
                 array_push($this->GameProperties, $obj);
             }
         }
 
-        if (array_key_exists("GameServerSessionData",$param) and $param["GameServerSessionData"] !== null) {
-            $this->GameServerSessionData = $param["GameServerSessionData"];
+        if (array_key_exists('GameServerSessionData',$param) and $param['GameServerSessionData'] !== null) {
+            $this->GameServerSessionData = $param['GameServerSessionData'];
         }
 
-        if (array_key_exists("GameServerSessionId",$param) and $param["GameServerSessionId"] !== null) {
-            $this->GameServerSessionId = $param["GameServerSessionId"];
+        if (array_key_exists('GameServerSessionId',$param) and $param['GameServerSessionId'] !== null) {
+            $this->GameServerSessionId = $param['GameServerSessionId'];
         }
 
-        if (array_key_exists("IpAddress",$param) and $param["IpAddress"] !== null) {
-            $this->IpAddress = $param["IpAddress"];
+        if (array_key_exists('IpAddress',$param) and $param['IpAddress'] !== null) {
+            $this->IpAddress = $param['IpAddress'];
         }
 
-        if (array_key_exists("MatchmakerData",$param) and $param["MatchmakerData"] !== null) {
-            $this->MatchmakerData = $param["MatchmakerData"];
+        if (array_key_exists('MatchmakerData',$param) and $param['MatchmakerData'] !== null) {
+            $this->MatchmakerData = $param['MatchmakerData'];
         }
 
-        if (array_key_exists("MaximumPlayerSessionCount",$param) and $param["MaximumPlayerSessionCount"] !== null) {
-            $this->MaximumPlayerSessionCount = $param["MaximumPlayerSessionCount"];
+        if (array_key_exists('MaximumPlayerSessionCount',$param) and $param['MaximumPlayerSessionCount'] !== null) {
+            $this->MaximumPlayerSessionCount = $param['MaximumPlayerSessionCount'];
         }
 
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("PlayerSessionCreationPolicy",$param) and $param["PlayerSessionCreationPolicy"] !== null) {
-            $this->PlayerSessionCreationPolicy = $param["PlayerSessionCreationPolicy"];
+        if (array_key_exists('PlayerSessionCreationPolicy',$param) and $param['PlayerSessionCreationPolicy'] !== null) {
+            $this->PlayerSessionCreationPolicy = $param['PlayerSessionCreationPolicy'];
         }
 
-        if (array_key_exists("Port",$param) and $param["Port"] !== null) {
-            $this->Port = $param["Port"];
+        if (array_key_exists('Port',$param) and $param['Port'] !== null) {
+            $this->Port = $param['Port'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("StatusReason",$param) and $param["StatusReason"] !== null) {
-            $this->StatusReason = $param["StatusReason"];
+        if (array_key_exists('StatusReason',$param) and $param['StatusReason'] !== null) {
+            $this->StatusReason = $param['StatusReason'];
         }
 
-        if (array_key_exists("TerminationTime",$param) and $param["TerminationTime"] !== null) {
-            $this->TerminationTime = $param["TerminationTime"];
+        if (array_key_exists('TerminationTime',$param) and $param['TerminationTime'] !== null) {
+            $this->TerminationTime = $param['TerminationTime'];
         }
 
-        if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
-            $this->InstanceType = $param["InstanceType"];
+        if (array_key_exists('InstanceType',$param) and $param['InstanceType'] !== null) {
+            $this->InstanceType = $param['InstanceType'];
         }
 
-        if (array_key_exists("CurrentCustomCount",$param) and $param["CurrentCustomCount"] !== null) {
-            $this->CurrentCustomCount = $param["CurrentCustomCount"];
+        if (array_key_exists('CurrentCustomCount',$param) and $param['CurrentCustomCount'] !== null) {
+            $this->CurrentCustomCount = $param['CurrentCustomCount'];
         }
 
-        if (array_key_exists("MaxCustomCount",$param) and $param["MaxCustomCount"] !== null) {
-            $this->MaxCustomCount = $param["MaxCustomCount"];
+        if (array_key_exists('MaxCustomCount',$param) and $param['MaxCustomCount'] !== null) {
+            $this->MaxCustomCount = $param['MaxCustomCount'];
         }
 
-        if (array_key_exists("Weight",$param) and $param["Weight"] !== null) {
-            $this->Weight = $param["Weight"];
+        if (array_key_exists('Weight',$param) and $param['Weight'] !== null) {
+            $this->Weight = $param['Weight'];
         }
 
-        if (array_key_exists("AvailabilityStatus",$param) and $param["AvailabilityStatus"] !== null) {
-            $this->AvailabilityStatus = $param["AvailabilityStatus"];
+        if (array_key_exists('AvailabilityStatus',$param) and $param['AvailabilityStatus'] !== null) {
+            $this->AvailabilityStatus = $param['AvailabilityStatus'];
         }
     }
 }

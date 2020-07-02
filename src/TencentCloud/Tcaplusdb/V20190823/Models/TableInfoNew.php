@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -362,118 +362,118 @@ class TableInfoNew extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TableName",$param) and $param["TableName"] !== null) {
-            $this->TableName = $param["TableName"];
+        if (array_key_exists('TableName',$param) and $param['TableName'] !== null) {
+            $this->TableName = $param['TableName'];
         }
 
-        if (array_key_exists("TableInstanceId",$param) and $param["TableInstanceId"] !== null) {
-            $this->TableInstanceId = $param["TableInstanceId"];
+        if (array_key_exists('TableInstanceId',$param) and $param['TableInstanceId'] !== null) {
+            $this->TableInstanceId = $param['TableInstanceId'];
         }
 
-        if (array_key_exists("TableType",$param) and $param["TableType"] !== null) {
-            $this->TableType = $param["TableType"];
+        if (array_key_exists('TableType',$param) and $param['TableType'] !== null) {
+            $this->TableType = $param['TableType'];
         }
 
-        if (array_key_exists("TableIdlType",$param) and $param["TableIdlType"] !== null) {
-            $this->TableIdlType = $param["TableIdlType"];
+        if (array_key_exists('TableIdlType',$param) and $param['TableIdlType'] !== null) {
+            $this->TableIdlType = $param['TableIdlType'];
         }
 
-        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
-            $this->ClusterId = $param["ClusterId"];
+        if (array_key_exists('ClusterId',$param) and $param['ClusterId'] !== null) {
+            $this->ClusterId = $param['ClusterId'];
         }
 
-        if (array_key_exists("ClusterName",$param) and $param["ClusterName"] !== null) {
-            $this->ClusterName = $param["ClusterName"];
+        if (array_key_exists('ClusterName',$param) and $param['ClusterName'] !== null) {
+            $this->ClusterName = $param['ClusterName'];
         }
 
-        if (array_key_exists("TableGroupId",$param) and $param["TableGroupId"] !== null) {
-            $this->TableGroupId = $param["TableGroupId"];
+        if (array_key_exists('TableGroupId',$param) and $param['TableGroupId'] !== null) {
+            $this->TableGroupId = $param['TableGroupId'];
         }
 
-        if (array_key_exists("TableGroupName",$param) and $param["TableGroupName"] !== null) {
-            $this->TableGroupName = $param["TableGroupName"];
+        if (array_key_exists('TableGroupName',$param) and $param['TableGroupName'] !== null) {
+            $this->TableGroupName = $param['TableGroupName'];
         }
 
-        if (array_key_exists("KeyStruct",$param) and $param["KeyStruct"] !== null) {
-            $this->KeyStruct = $param["KeyStruct"];
+        if (array_key_exists('KeyStruct',$param) and $param['KeyStruct'] !== null) {
+            $this->KeyStruct = $param['KeyStruct'];
         }
 
-        if (array_key_exists("ValueStruct",$param) and $param["ValueStruct"] !== null) {
-            $this->ValueStruct = $param["ValueStruct"];
+        if (array_key_exists('ValueStruct',$param) and $param['ValueStruct'] !== null) {
+            $this->ValueStruct = $param['ValueStruct'];
         }
 
-        if (array_key_exists("ShardingKeySet",$param) and $param["ShardingKeySet"] !== null) {
-            $this->ShardingKeySet = $param["ShardingKeySet"];
+        if (array_key_exists('ShardingKeySet',$param) and $param['ShardingKeySet'] !== null) {
+            $this->ShardingKeySet = $param['ShardingKeySet'];
         }
 
-        if (array_key_exists("IndexStruct",$param) and $param["IndexStruct"] !== null) {
-            $this->IndexStruct = $param["IndexStruct"];
+        if (array_key_exists('IndexStruct',$param) and $param['IndexStruct'] !== null) {
+            $this->IndexStruct = $param['IndexStruct'];
         }
 
-        if (array_key_exists("ListElementNum",$param) and $param["ListElementNum"] !== null) {
-            $this->ListElementNum = $param["ListElementNum"];
+        if (array_key_exists('ListElementNum',$param) and $param['ListElementNum'] !== null) {
+            $this->ListElementNum = $param['ListElementNum'];
         }
 
-        if (array_key_exists("IdlFiles",$param) and $param["IdlFiles"] !== null) {
+        if (array_key_exists('IdlFiles',$param) and $param['IdlFiles'] !== null) {
             $this->IdlFiles = [];
-            foreach ($param["IdlFiles"] as $key => $value){
+            foreach ($param['IdlFiles'] as $key => $value){
                 $obj = new IdlFileInfo();
                 $obj->deserialize($value);
                 array_push($this->IdlFiles, $obj);
             }
         }
 
-        if (array_key_exists("ReservedVolume",$param) and $param["ReservedVolume"] !== null) {
-            $this->ReservedVolume = $param["ReservedVolume"];
+        if (array_key_exists('ReservedVolume',$param) and $param['ReservedVolume'] !== null) {
+            $this->ReservedVolume = $param['ReservedVolume'];
         }
 
-        if (array_key_exists("ReservedReadQps",$param) and $param["ReservedReadQps"] !== null) {
-            $this->ReservedReadQps = $param["ReservedReadQps"];
+        if (array_key_exists('ReservedReadQps',$param) and $param['ReservedReadQps'] !== null) {
+            $this->ReservedReadQps = $param['ReservedReadQps'];
         }
 
-        if (array_key_exists("ReservedWriteQps",$param) and $param["ReservedWriteQps"] !== null) {
-            $this->ReservedWriteQps = $param["ReservedWriteQps"];
+        if (array_key_exists('ReservedWriteQps',$param) and $param['ReservedWriteQps'] !== null) {
+            $this->ReservedWriteQps = $param['ReservedWriteQps'];
         }
 
-        if (array_key_exists("TableSize",$param) and $param["TableSize"] !== null) {
-            $this->TableSize = $param["TableSize"];
+        if (array_key_exists('TableSize',$param) and $param['TableSize'] !== null) {
+            $this->TableSize = $param['TableSize'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
-            $this->CreatedTime = $param["CreatedTime"];
+        if (array_key_exists('CreatedTime',$param) and $param['CreatedTime'] !== null) {
+            $this->CreatedTime = $param['CreatedTime'];
         }
 
-        if (array_key_exists("UpdatedTime",$param) and $param["UpdatedTime"] !== null) {
-            $this->UpdatedTime = $param["UpdatedTime"];
+        if (array_key_exists('UpdatedTime',$param) and $param['UpdatedTime'] !== null) {
+            $this->UpdatedTime = $param['UpdatedTime'];
         }
 
-        if (array_key_exists("Memo",$param) and $param["Memo"] !== null) {
-            $this->Memo = $param["Memo"];
+        if (array_key_exists('Memo',$param) and $param['Memo'] !== null) {
+            $this->Memo = $param['Memo'];
         }
 
-        if (array_key_exists("Error",$param) and $param["Error"] !== null) {
+        if (array_key_exists('Error',$param) and $param['Error'] !== null) {
             $this->Error = new ErrorInfo();
-            $this->Error->deserialize($param["Error"]);
+            $this->Error->deserialize($param['Error']);
         }
 
-        if (array_key_exists("ApiAccessId",$param) and $param["ApiAccessId"] !== null) {
-            $this->ApiAccessId = $param["ApiAccessId"];
+        if (array_key_exists('ApiAccessId',$param) and $param['ApiAccessId'] !== null) {
+            $this->ApiAccessId = $param['ApiAccessId'];
         }
 
-        if (array_key_exists("SortFieldNum",$param) and $param["SortFieldNum"] !== null) {
-            $this->SortFieldNum = $param["SortFieldNum"];
+        if (array_key_exists('SortFieldNum',$param) and $param['SortFieldNum'] !== null) {
+            $this->SortFieldNum = $param['SortFieldNum'];
         }
 
-        if (array_key_exists("SortRule",$param) and $param["SortRule"] !== null) {
-            $this->SortRule = $param["SortRule"];
+        if (array_key_exists('SortRule',$param) and $param['SortRule'] !== null) {
+            $this->SortRule = $param['SortRule'];
         }
 
-        if (array_key_exists("DbClusterInfoStruct",$param) and $param["DbClusterInfoStruct"] !== null) {
-            $this->DbClusterInfoStruct = $param["DbClusterInfoStruct"];
+        if (array_key_exists('DbClusterInfoStruct',$param) and $param['DbClusterInfoStruct'] !== null) {
+            $this->DbClusterInfoStruct = $param['DbClusterInfoStruct'];
         }
     }
 }

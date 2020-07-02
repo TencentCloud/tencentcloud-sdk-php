@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -162,60 +162,60 @@ class DescribeWeeklyReportInfoResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CompanyName",$param) and $param["CompanyName"] !== null) {
-            $this->CompanyName = $param["CompanyName"];
+        if (array_key_exists('CompanyName',$param) and $param['CompanyName'] !== null) {
+            $this->CompanyName = $param['CompanyName'];
         }
 
-        if (array_key_exists("MachineNum",$param) and $param["MachineNum"] !== null) {
-            $this->MachineNum = $param["MachineNum"];
+        if (array_key_exists('MachineNum',$param) and $param['MachineNum'] !== null) {
+            $this->MachineNum = $param['MachineNum'];
         }
 
-        if (array_key_exists("OnlineMachineNum",$param) and $param["OnlineMachineNum"] !== null) {
-            $this->OnlineMachineNum = $param["OnlineMachineNum"];
+        if (array_key_exists('OnlineMachineNum',$param) and $param['OnlineMachineNum'] !== null) {
+            $this->OnlineMachineNum = $param['OnlineMachineNum'];
         }
 
-        if (array_key_exists("OfflineMachineNum",$param) and $param["OfflineMachineNum"] !== null) {
-            $this->OfflineMachineNum = $param["OfflineMachineNum"];
+        if (array_key_exists('OfflineMachineNum',$param) and $param['OfflineMachineNum'] !== null) {
+            $this->OfflineMachineNum = $param['OfflineMachineNum'];
         }
 
-        if (array_key_exists("ProVersionMachineNum",$param) and $param["ProVersionMachineNum"] !== null) {
-            $this->ProVersionMachineNum = $param["ProVersionMachineNum"];
+        if (array_key_exists('ProVersionMachineNum',$param) and $param['ProVersionMachineNum'] !== null) {
+            $this->ProVersionMachineNum = $param['ProVersionMachineNum'];
         }
 
-        if (array_key_exists("BeginDate",$param) and $param["BeginDate"] !== null) {
-            $this->BeginDate = $param["BeginDate"];
+        if (array_key_exists('BeginDate',$param) and $param['BeginDate'] !== null) {
+            $this->BeginDate = $param['BeginDate'];
         }
 
-        if (array_key_exists("EndDate",$param) and $param["EndDate"] !== null) {
-            $this->EndDate = $param["EndDate"];
+        if (array_key_exists('EndDate',$param) and $param['EndDate'] !== null) {
+            $this->EndDate = $param['EndDate'];
         }
 
-        if (array_key_exists("Level",$param) and $param["Level"] !== null) {
-            $this->Level = $param["Level"];
+        if (array_key_exists('Level',$param) and $param['Level'] !== null) {
+            $this->Level = $param['Level'];
         }
 
-        if (array_key_exists("MalwareNum",$param) and $param["MalwareNum"] !== null) {
-            $this->MalwareNum = $param["MalwareNum"];
+        if (array_key_exists('MalwareNum',$param) and $param['MalwareNum'] !== null) {
+            $this->MalwareNum = $param['MalwareNum'];
         }
 
-        if (array_key_exists("NonlocalLoginNum",$param) and $param["NonlocalLoginNum"] !== null) {
-            $this->NonlocalLoginNum = $param["NonlocalLoginNum"];
+        if (array_key_exists('NonlocalLoginNum',$param) and $param['NonlocalLoginNum'] !== null) {
+            $this->NonlocalLoginNum = $param['NonlocalLoginNum'];
         }
 
-        if (array_key_exists("BruteAttackSuccessNum",$param) and $param["BruteAttackSuccessNum"] !== null) {
-            $this->BruteAttackSuccessNum = $param["BruteAttackSuccessNum"];
+        if (array_key_exists('BruteAttackSuccessNum',$param) and $param['BruteAttackSuccessNum'] !== null) {
+            $this->BruteAttackSuccessNum = $param['BruteAttackSuccessNum'];
         }
 
-        if (array_key_exists("VulNum",$param) and $param["VulNum"] !== null) {
-            $this->VulNum = $param["VulNum"];
+        if (array_key_exists('VulNum',$param) and $param['VulNum'] !== null) {
+            $this->VulNum = $param['VulNum'];
         }
 
-        if (array_key_exists("DownloadUrl",$param) and $param["DownloadUrl"] !== null) {
-            $this->DownloadUrl = $param["DownloadUrl"];
+        if (array_key_exists('DownloadUrl',$param) and $param['DownloadUrl'] !== null) {
+            $this->DownloadUrl = $param['DownloadUrl'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

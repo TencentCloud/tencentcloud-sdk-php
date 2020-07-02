@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -62,17 +62,17 @@ class ClipTask2017 extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
-            $this->TaskId = $param["TaskId"];
+        if (array_key_exists('TaskId',$param) and $param['TaskId'] !== null) {
+            $this->TaskId = $param['TaskId'];
         }
 
-        if (array_key_exists("SrcFileId",$param) and $param["SrcFileId"] !== null) {
-            $this->SrcFileId = $param["SrcFileId"];
+        if (array_key_exists('SrcFileId',$param) and $param['SrcFileId'] !== null) {
+            $this->SrcFileId = $param['SrcFileId'];
         }
 
-        if (array_key_exists("FileInfo",$param) and $param["FileInfo"] !== null) {
+        if (array_key_exists('FileInfo',$param) and $param['FileInfo'] !== null) {
             $this->FileInfo = new ClipFileInfo2017();
-            $this->FileInfo->deserialize($param["FileInfo"]);
+            $this->FileInfo->deserialize($param['FileInfo']);
         }
     }
 }

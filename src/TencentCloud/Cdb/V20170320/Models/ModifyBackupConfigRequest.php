@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBackupMethod(string $BackupMethod) 设置自动备份方式，仅支持：physical - 物理冷备
  * @method integer getBinlogExpireDays() 获取binlog的保留时间，单位为天。最小值为7天，最大值为732天。该值的设置不能大于备份文件的保留时间。
  * @method void setBinlogExpireDays(integer $BinlogExpireDays) 设置binlog的保留时间，单位为天。最小值为7天，最大值为732天。该值的设置不能大于备份文件的保留时间。
- * @method CommonTimeWindow getBackupTimeWindow() 获取备份时间窗，比如要设置每周二和周日 10:00-14:00之间备份，该参数如下：{"Monday": "", "Tuesday": "10:00-14:00", "Wednesday": "", "Thursday": "", "Friday": "", "Saturday": "", "Sunday": "10:00-14:00"}    （注：可以设置一周的某几天备份，但是每天的备份时间需要设置为相同的时间段。 如果设置了该字段，将忽略StartTime字段的设置）
- * @method void setBackupTimeWindow(CommonTimeWindow $BackupTimeWindow) 设置备份时间窗，比如要设置每周二和周日 10:00-14:00之间备份，该参数如下：{"Monday": "", "Tuesday": "10:00-14:00", "Wednesday": "", "Thursday": "", "Friday": "", "Saturday": "", "Sunday": "10:00-14:00"}    （注：可以设置一周的某几天备份，但是每天的备份时间需要设置为相同的时间段。 如果设置了该字段，将忽略StartTime字段的设置）
+ * @method CommonTimeWindow getBackupTimeWindow() 获取备份时间窗，比如要设置每周二和周日 10:00-14:00之间备份，该参数如下：{'Monday': "", 'Tuesday': "10:00-14:00", 'Wednesday': "", 'Thursday': "", 'Friday': "", 'Saturday': "", 'Sunday': "10:00-14:00"}    （注：可以设置一周的某几天备份，但是每天的备份时间需要设置为相同的时间段。 如果设置了该字段，将忽略StartTime字段的设置）
+ * @method void setBackupTimeWindow(CommonTimeWindow $BackupTimeWindow) 设置备份时间窗，比如要设置每周二和周日 10:00-14:00之间备份，该参数如下：{'Monday': "", 'Tuesday': "10:00-14:00", 'Wednesday': "", 'Thursday': "", 'Friday': "", 'Saturday': "", 'Sunday': "10:00-14:00"}    （注：可以设置一周的某几天备份，但是每天的备份时间需要设置为相同的时间段。 如果设置了该字段，将忽略StartTime字段的设置）
  */
 class ModifyBackupConfigRequest extends AbstractModel
 {
@@ -61,7 +61,7 @@ class ModifyBackupConfigRequest extends AbstractModel
     public $BinlogExpireDays;
 
     /**
-     * @var CommonTimeWindow 备份时间窗，比如要设置每周二和周日 10:00-14:00之间备份，该参数如下：{"Monday": "", "Tuesday": "10:00-14:00", "Wednesday": "", "Thursday": "", "Friday": "", "Saturday": "", "Sunday": "10:00-14:00"}    （注：可以设置一周的某几天备份，但是每天的备份时间需要设置为相同的时间段。 如果设置了该字段，将忽略StartTime字段的设置）
+     * @var CommonTimeWindow 备份时间窗，比如要设置每周二和周日 10:00-14:00之间备份，该参数如下：{'Monday': "", 'Tuesday': "10:00-14:00", 'Wednesday': "", 'Thursday': "", 'Friday': "", 'Saturday': "", 'Sunday': "10:00-14:00"}    （注：可以设置一周的某几天备份，但是每天的备份时间需要设置为相同的时间段。 如果设置了该字段，将忽略StartTime字段的设置）
      */
     public $BackupTimeWindow;
 
@@ -71,7 +71,7 @@ class ModifyBackupConfigRequest extends AbstractModel
      * @param string $StartTime (将废弃，建议使用 BackupTimeWindow 参数) 备份时间范围，格式为：02:00-06:00，起点和终点时间目前限制为整点，目前可以选择的范围为： 00:00-12:00，02:00-06:00，06：00-10：00，10:00-14:00，14:00-18:00，18:00-22:00，22:00-02:00。
      * @param string $BackupMethod 自动备份方式，仅支持：physical - 物理冷备
      * @param integer $BinlogExpireDays binlog的保留时间，单位为天。最小值为7天，最大值为732天。该值的设置不能大于备份文件的保留时间。
-     * @param CommonTimeWindow $BackupTimeWindow 备份时间窗，比如要设置每周二和周日 10:00-14:00之间备份，该参数如下：{"Monday": "", "Tuesday": "10:00-14:00", "Wednesday": "", "Thursday": "", "Friday": "", "Saturday": "", "Sunday": "10:00-14:00"}    （注：可以设置一周的某几天备份，但是每天的备份时间需要设置为相同的时间段。 如果设置了该字段，将忽略StartTime字段的设置）
+     * @param CommonTimeWindow $BackupTimeWindow 备份时间窗，比如要设置每周二和周日 10:00-14:00之间备份，该参数如下：{'Monday': "", 'Tuesday': "10:00-14:00", 'Wednesday': "", 'Thursday': "", 'Friday': "", 'Saturday': "", 'Sunday': "10:00-14:00"}    （注：可以设置一周的某几天备份，但是每天的备份时间需要设置为相同的时间段。 如果设置了该字段，将忽略StartTime字段的设置）
      */
     function __construct()
     {
@@ -86,29 +86,29 @@ class ModifyBackupConfigRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("ExpireDays",$param) and $param["ExpireDays"] !== null) {
-            $this->ExpireDays = $param["ExpireDays"];
+        if (array_key_exists('ExpireDays',$param) and $param['ExpireDays'] !== null) {
+            $this->ExpireDays = $param['ExpireDays'];
         }
 
-        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
-            $this->StartTime = $param["StartTime"];
+        if (array_key_exists('StartTime',$param) and $param['StartTime'] !== null) {
+            $this->StartTime = $param['StartTime'];
         }
 
-        if (array_key_exists("BackupMethod",$param) and $param["BackupMethod"] !== null) {
-            $this->BackupMethod = $param["BackupMethod"];
+        if (array_key_exists('BackupMethod',$param) and $param['BackupMethod'] !== null) {
+            $this->BackupMethod = $param['BackupMethod'];
         }
 
-        if (array_key_exists("BinlogExpireDays",$param) and $param["BinlogExpireDays"] !== null) {
-            $this->BinlogExpireDays = $param["BinlogExpireDays"];
+        if (array_key_exists('BinlogExpireDays',$param) and $param['BinlogExpireDays'] !== null) {
+            $this->BinlogExpireDays = $param['BinlogExpireDays'];
         }
 
-        if (array_key_exists("BackupTimeWindow",$param) and $param["BackupTimeWindow"] !== null) {
+        if (array_key_exists('BackupTimeWindow',$param) and $param['BackupTimeWindow'] !== null) {
             $this->BackupTimeWindow = new CommonTimeWindow();
-            $this->BackupTimeWindow->deserialize($param["BackupTimeWindow"]);
+            $this->BackupTimeWindow->deserialize($param['BackupTimeWindow']);
         }
     }
 }

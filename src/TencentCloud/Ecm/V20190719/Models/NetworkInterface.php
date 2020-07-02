@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -210,84 +210,84 @@ DELETING：删除中
         if ($param === null) {
             return;
         }
-        if (array_key_exists("NetworkInterfaceId",$param) and $param["NetworkInterfaceId"] !== null) {
-            $this->NetworkInterfaceId = $param["NetworkInterfaceId"];
+        if (array_key_exists('NetworkInterfaceId',$param) and $param['NetworkInterfaceId'] !== null) {
+            $this->NetworkInterfaceId = $param['NetworkInterfaceId'];
         }
 
-        if (array_key_exists("NetworkInterfaceName",$param) and $param["NetworkInterfaceName"] !== null) {
-            $this->NetworkInterfaceName = $param["NetworkInterfaceName"];
+        if (array_key_exists('NetworkInterfaceName',$param) and $param['NetworkInterfaceName'] !== null) {
+            $this->NetworkInterfaceName = $param['NetworkInterfaceName'];
         }
 
-        if (array_key_exists("NetworkInterfaceDescription",$param) and $param["NetworkInterfaceDescription"] !== null) {
-            $this->NetworkInterfaceDescription = $param["NetworkInterfaceDescription"];
+        if (array_key_exists('NetworkInterfaceDescription',$param) and $param['NetworkInterfaceDescription'] !== null) {
+            $this->NetworkInterfaceDescription = $param['NetworkInterfaceDescription'];
         }
 
-        if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
-            $this->SubnetId = $param["SubnetId"];
+        if (array_key_exists('SubnetId',$param) and $param['SubnetId'] !== null) {
+            $this->SubnetId = $param['SubnetId'];
         }
 
-        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
-            $this->VpcId = $param["VpcId"];
+        if (array_key_exists('VpcId',$param) and $param['VpcId'] !== null) {
+            $this->VpcId = $param['VpcId'];
         }
 
-        if (array_key_exists("GroupSet",$param) and $param["GroupSet"] !== null) {
-            $this->GroupSet = $param["GroupSet"];
+        if (array_key_exists('GroupSet',$param) and $param['GroupSet'] !== null) {
+            $this->GroupSet = $param['GroupSet'];
         }
 
-        if (array_key_exists("Primary",$param) and $param["Primary"] !== null) {
-            $this->Primary = $param["Primary"];
+        if (array_key_exists('Primary',$param) and $param['Primary'] !== null) {
+            $this->Primary = $param['Primary'];
         }
 
-        if (array_key_exists("MacAddress",$param) and $param["MacAddress"] !== null) {
-            $this->MacAddress = $param["MacAddress"];
+        if (array_key_exists('MacAddress',$param) and $param['MacAddress'] !== null) {
+            $this->MacAddress = $param['MacAddress'];
         }
 
-        if (array_key_exists("State",$param) and $param["State"] !== null) {
-            $this->State = $param["State"];
+        if (array_key_exists('State',$param) and $param['State'] !== null) {
+            $this->State = $param['State'];
         }
 
-        if (array_key_exists("PrivateIpAddressSet",$param) and $param["PrivateIpAddressSet"] !== null) {
+        if (array_key_exists('PrivateIpAddressSet',$param) and $param['PrivateIpAddressSet'] !== null) {
             $this->PrivateIpAddressSet = [];
-            foreach ($param["PrivateIpAddressSet"] as $key => $value){
+            foreach ($param['PrivateIpAddressSet'] as $key => $value){
                 $obj = new PrivateIpAddressSpecification();
                 $obj->deserialize($value);
                 array_push($this->PrivateIpAddressSet, $obj);
             }
         }
 
-        if (array_key_exists("Attachment",$param) and $param["Attachment"] !== null) {
+        if (array_key_exists('Attachment',$param) and $param['Attachment'] !== null) {
             $this->Attachment = new NetworkInterfaceAttachment();
-            $this->Attachment->deserialize($param["Attachment"]);
+            $this->Attachment->deserialize($param['Attachment']);
         }
 
-        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
-            $this->Zone = $param["Zone"];
+        if (array_key_exists('Zone',$param) and $param['Zone'] !== null) {
+            $this->Zone = $param['Zone'];
         }
 
-        if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
-            $this->CreatedTime = $param["CreatedTime"];
+        if (array_key_exists('CreatedTime',$param) and $param['CreatedTime'] !== null) {
+            $this->CreatedTime = $param['CreatedTime'];
         }
 
-        if (array_key_exists("Ipv6AddressSet",$param) and $param["Ipv6AddressSet"] !== null) {
+        if (array_key_exists('Ipv6AddressSet',$param) and $param['Ipv6AddressSet'] !== null) {
             $this->Ipv6AddressSet = [];
-            foreach ($param["Ipv6AddressSet"] as $key => $value){
+            foreach ($param['Ipv6AddressSet'] as $key => $value){
                 $obj = new Ipv6Address();
                 $obj->deserialize($value);
                 array_push($this->Ipv6AddressSet, $obj);
             }
         }
 
-        if (array_key_exists("TagSet",$param) and $param["TagSet"] !== null) {
+        if (array_key_exists('TagSet',$param) and $param['TagSet'] !== null) {
             $this->TagSet = [];
-            foreach ($param["TagSet"] as $key => $value){
+            foreach ($param['TagSet'] as $key => $value){
                 $obj = new Tag();
                 $obj->deserialize($value);
                 array_push($this->TagSet, $obj);
             }
         }
 
-        if (array_key_exists("EniType",$param) and $param["EniType"] !== null) {
-            $this->EniType = $param["EniType"];
+        if (array_key_exists('EniType',$param) and $param['EniType'] !== null) {
+            $this->EniType = $param['EniType'];
         }
     }
 }

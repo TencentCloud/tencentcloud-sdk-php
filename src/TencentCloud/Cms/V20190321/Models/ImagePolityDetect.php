@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -102,37 +102,37 @@ class ImagePolityDetect extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("EvilType",$param) and $param["EvilType"] !== null) {
-            $this->EvilType = $param["EvilType"];
+        if (array_key_exists('EvilType',$param) and $param['EvilType'] !== null) {
+            $this->EvilType = $param['EvilType'];
         }
 
-        if (array_key_exists("HitFlag",$param) and $param["HitFlag"] !== null) {
-            $this->HitFlag = $param["HitFlag"];
+        if (array_key_exists('HitFlag',$param) and $param['HitFlag'] !== null) {
+            $this->HitFlag = $param['HitFlag'];
         }
 
-        if (array_key_exists("PolityLogoDetail",$param) and $param["PolityLogoDetail"] !== null) {
+        if (array_key_exists('PolityLogoDetail',$param) and $param['PolityLogoDetail'] !== null) {
             $this->PolityLogoDetail = [];
-            foreach ($param["PolityLogoDetail"] as $key => $value){
+            foreach ($param['PolityLogoDetail'] as $key => $value){
                 $obj = new Logo();
                 $obj->deserialize($value);
                 array_push($this->PolityLogoDetail, $obj);
             }
         }
 
-        if (array_key_exists("FaceNames",$param) and $param["FaceNames"] !== null) {
-            $this->FaceNames = $param["FaceNames"];
+        if (array_key_exists('FaceNames',$param) and $param['FaceNames'] !== null) {
+            $this->FaceNames = $param['FaceNames'];
         }
 
-        if (array_key_exists("Keywords",$param) and $param["Keywords"] !== null) {
-            $this->Keywords = $param["Keywords"];
+        if (array_key_exists('Keywords',$param) and $param['Keywords'] !== null) {
+            $this->Keywords = $param['Keywords'];
         }
 
-        if (array_key_exists("PolityItems",$param) and $param["PolityItems"] !== null) {
-            $this->PolityItems = $param["PolityItems"];
+        if (array_key_exists('PolityItems',$param) and $param['PolityItems'] !== null) {
+            $this->PolityItems = $param['PolityItems'];
         }
 
-        if (array_key_exists("Score",$param) and $param["Score"] !== null) {
-            $this->Score = $param["Score"];
+        if (array_key_exists('Score',$param) and $param['Score'] !== null) {
+            $this->Score = $param['Score'];
         }
     }
 }

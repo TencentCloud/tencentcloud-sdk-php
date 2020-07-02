@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -94,32 +94,32 @@ class ModifyGroupOffsetsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("Group",$param) and $param["Group"] !== null) {
-            $this->Group = $param["Group"];
+        if (array_key_exists('Group',$param) and $param['Group'] !== null) {
+            $this->Group = $param['Group'];
         }
 
-        if (array_key_exists("Strategy",$param) and $param["Strategy"] !== null) {
-            $this->Strategy = $param["Strategy"];
+        if (array_key_exists('Strategy',$param) and $param['Strategy'] !== null) {
+            $this->Strategy = $param['Strategy'];
         }
 
-        if (array_key_exists("Topics",$param) and $param["Topics"] !== null) {
-            $this->Topics = $param["Topics"];
+        if (array_key_exists('Topics',$param) and $param['Topics'] !== null) {
+            $this->Topics = $param['Topics'];
         }
 
-        if (array_key_exists("Shift",$param) and $param["Shift"] !== null) {
-            $this->Shift = $param["Shift"];
+        if (array_key_exists('Shift',$param) and $param['Shift'] !== null) {
+            $this->Shift = $param['Shift'];
         }
 
-        if (array_key_exists("ShiftTimestamp",$param) and $param["ShiftTimestamp"] !== null) {
-            $this->ShiftTimestamp = $param["ShiftTimestamp"];
+        if (array_key_exists('ShiftTimestamp',$param) and $param['ShiftTimestamp'] !== null) {
+            $this->ShiftTimestamp = $param['ShiftTimestamp'];
         }
 
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
+        if (array_key_exists('Offset',$param) and $param['Offset'] !== null) {
+            $this->Offset = $param['Offset'];
         }
     }
 }

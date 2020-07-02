@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -186,72 +186,72 @@ class VpcPeerConnection extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
-            $this->VpcId = $param["VpcId"];
+        if (array_key_exists('VpcId',$param) and $param['VpcId'] !== null) {
+            $this->VpcId = $param['VpcId'];
         }
 
-        if (array_key_exists("PeerVpcId",$param) and $param["PeerVpcId"] !== null) {
-            $this->PeerVpcId = $param["PeerVpcId"];
+        if (array_key_exists('PeerVpcId',$param) and $param['PeerVpcId'] !== null) {
+            $this->PeerVpcId = $param['PeerVpcId'];
         }
 
-        if (array_key_exists("AppId",$param) and $param["AppId"] !== null) {
-            $this->AppId = $param["AppId"];
+        if (array_key_exists('AppId',$param) and $param['AppId'] !== null) {
+            $this->AppId = $param['AppId'];
         }
 
-        if (array_key_exists("PeerAppId",$param) and $param["PeerAppId"] !== null) {
-            $this->PeerAppId = $param["PeerAppId"];
+        if (array_key_exists('PeerAppId',$param) and $param['PeerAppId'] !== null) {
+            $this->PeerAppId = $param['PeerAppId'];
         }
 
-        if (array_key_exists("VpcPeerConnectionId",$param) and $param["VpcPeerConnectionId"] !== null) {
-            $this->VpcPeerConnectionId = $param["VpcPeerConnectionId"];
+        if (array_key_exists('VpcPeerConnectionId',$param) and $param['VpcPeerConnectionId'] !== null) {
+            $this->VpcPeerConnectionId = $param['VpcPeerConnectionId'];
         }
 
-        if (array_key_exists("VpcPeerConnectionName",$param) and $param["VpcPeerConnectionName"] !== null) {
-            $this->VpcPeerConnectionName = $param["VpcPeerConnectionName"];
+        if (array_key_exists('VpcPeerConnectionName',$param) and $param['VpcPeerConnectionName'] !== null) {
+            $this->VpcPeerConnectionName = $param['VpcPeerConnectionName'];
         }
 
-        if (array_key_exists("State",$param) and $param["State"] !== null) {
-            $this->State = $param["State"];
+        if (array_key_exists('State',$param) and $param['State'] !== null) {
+            $this->State = $param['State'];
         }
 
-        if (array_key_exists("VpcZone",$param) and $param["VpcZone"] !== null) {
-            $this->VpcZone = $param["VpcZone"];
+        if (array_key_exists('VpcZone',$param) and $param['VpcZone'] !== null) {
+            $this->VpcZone = $param['VpcZone'];
         }
 
-        if (array_key_exists("PeerVpcZone",$param) and $param["PeerVpcZone"] !== null) {
-            $this->PeerVpcZone = $param["PeerVpcZone"];
+        if (array_key_exists('PeerVpcZone',$param) and $param['PeerVpcZone'] !== null) {
+            $this->PeerVpcZone = $param['PeerVpcZone'];
         }
 
-        if (array_key_exists("Uin",$param) and $param["Uin"] !== null) {
-            $this->Uin = $param["Uin"];
+        if (array_key_exists('Uin',$param) and $param['Uin'] !== null) {
+            $this->Uin = $param['Uin'];
         }
 
-        if (array_key_exists("PeerUin",$param) and $param["PeerUin"] !== null) {
-            $this->PeerUin = $param["PeerUin"];
+        if (array_key_exists('PeerUin',$param) and $param['PeerUin'] !== null) {
+            $this->PeerUin = $param['PeerUin'];
         }
 
-        if (array_key_exists("PeerType",$param) and $param["PeerType"] !== null) {
-            $this->PeerType = $param["PeerType"];
+        if (array_key_exists('PeerType',$param) and $param['PeerType'] !== null) {
+            $this->PeerType = $param['PeerType'];
         }
 
-        if (array_key_exists("Bandwidth",$param) and $param["Bandwidth"] !== null) {
-            $this->Bandwidth = $param["Bandwidth"];
+        if (array_key_exists('Bandwidth',$param) and $param['Bandwidth'] !== null) {
+            $this->Bandwidth = $param['Bandwidth'];
         }
 
-        if (array_key_exists("Region",$param) and $param["Region"] !== null) {
-            $this->Region = $param["Region"];
+        if (array_key_exists('Region',$param) and $param['Region'] !== null) {
+            $this->Region = $param['Region'];
         }
 
-        if (array_key_exists("PeerRegion",$param) and $param["PeerRegion"] !== null) {
-            $this->PeerRegion = $param["PeerRegion"];
+        if (array_key_exists('PeerRegion',$param) and $param['PeerRegion'] !== null) {
+            $this->PeerRegion = $param['PeerRegion'];
         }
 
-        if (array_key_exists("DeleteFlag",$param) and $param["DeleteFlag"] !== null) {
-            $this->DeleteFlag = $param["DeleteFlag"];
+        if (array_key_exists('DeleteFlag',$param) and $param['DeleteFlag'] !== null) {
+            $this->DeleteFlag = $param['DeleteFlag'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
     }
 }

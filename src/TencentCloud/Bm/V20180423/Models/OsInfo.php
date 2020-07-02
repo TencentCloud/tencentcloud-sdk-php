@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -118,40 +118,40 @@ class OsInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("OsTypeId",$param) and $param["OsTypeId"] !== null) {
-            $this->OsTypeId = $param["OsTypeId"];
+        if (array_key_exists('OsTypeId',$param) and $param['OsTypeId'] !== null) {
+            $this->OsTypeId = $param['OsTypeId'];
         }
 
-        if (array_key_exists("OsName",$param) and $param["OsName"] !== null) {
-            $this->OsName = $param["OsName"];
+        if (array_key_exists('OsName',$param) and $param['OsName'] !== null) {
+            $this->OsName = $param['OsName'];
         }
 
-        if (array_key_exists("OsDescription",$param) and $param["OsDescription"] !== null) {
-            $this->OsDescription = $param["OsDescription"];
+        if (array_key_exists('OsDescription',$param) and $param['OsDescription'] !== null) {
+            $this->OsDescription = $param['OsDescription'];
         }
 
-        if (array_key_exists("OsEnglishDescription",$param) and $param["OsEnglishDescription"] !== null) {
-            $this->OsEnglishDescription = $param["OsEnglishDescription"];
+        if (array_key_exists('OsEnglishDescription',$param) and $param['OsEnglishDescription'] !== null) {
+            $this->OsEnglishDescription = $param['OsEnglishDescription'];
         }
 
-        if (array_key_exists("OsClass",$param) and $param["OsClass"] !== null) {
-            $this->OsClass = $param["OsClass"];
+        if (array_key_exists('OsClass',$param) and $param['OsClass'] !== null) {
+            $this->OsClass = $param['OsClass'];
         }
 
-        if (array_key_exists("ImageTag",$param) and $param["ImageTag"] !== null) {
-            $this->ImageTag = $param["ImageTag"];
+        if (array_key_exists('ImageTag',$param) and $param['ImageTag'] !== null) {
+            $this->ImageTag = $param['ImageTag'];
         }
 
-        if (array_key_exists("MaxPartitionSize",$param) and $param["MaxPartitionSize"] !== null) {
-            $this->MaxPartitionSize = $param["MaxPartitionSize"];
+        if (array_key_exists('MaxPartitionSize',$param) and $param['MaxPartitionSize'] !== null) {
+            $this->MaxPartitionSize = $param['MaxPartitionSize'];
         }
 
-        if (array_key_exists("OsMinorVersion",$param) and $param["OsMinorVersion"] !== null) {
-            $this->OsMinorVersion = $param["OsMinorVersion"];
+        if (array_key_exists('OsMinorVersion',$param) and $param['OsMinorVersion'] !== null) {
+            $this->OsMinorVersion = $param['OsMinorVersion'];
         }
 
-        if (array_key_exists("OsMinorClass",$param) and $param["OsMinorClass"] !== null) {
-            $this->OsMinorClass = $param["OsMinorClass"];
+        if (array_key_exists('OsMinorClass',$param) and $param['OsMinorClass'] !== null) {
+            $this->OsMinorClass = $param['OsMinorClass'];
         }
     }
 }

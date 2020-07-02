@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -102,42 +102,42 @@ class SubmitDoubleVideoHighlightsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FileContent",$param) and $param["FileContent"] !== null) {
-            $this->FileContent = $param["FileContent"];
+        if (array_key_exists('FileContent',$param) and $param['FileContent'] !== null) {
+            $this->FileContent = $param['FileContent'];
         }
 
-        if (array_key_exists("LibIds",$param) and $param["LibIds"] !== null) {
-            $this->LibIds = $param["LibIds"];
+        if (array_key_exists('LibIds',$param) and $param['LibIds'] !== null) {
+            $this->LibIds = $param['LibIds'];
         }
 
-        if (array_key_exists("Functions",$param) and $param["Functions"] !== null) {
+        if (array_key_exists('Functions',$param) and $param['Functions'] !== null) {
             $this->Functions = new DoubleVideoFunction();
-            $this->Functions->deserialize($param["Functions"]);
+            $this->Functions->deserialize($param['Functions']);
         }
 
-        if (array_key_exists("PersonInfoList",$param) and $param["PersonInfoList"] !== null) {
+        if (array_key_exists('PersonInfoList',$param) and $param['PersonInfoList'] !== null) {
             $this->PersonInfoList = [];
-            foreach ($param["PersonInfoList"] as $key => $value){
+            foreach ($param['PersonInfoList'] as $key => $value){
                 $obj = new PersonInfo();
                 $obj->deserialize($value);
                 array_push($this->PersonInfoList, $obj);
             }
         }
 
-        if (array_key_exists("FrameInterval",$param) and $param["FrameInterval"] !== null) {
-            $this->FrameInterval = $param["FrameInterval"];
+        if (array_key_exists('FrameInterval',$param) and $param['FrameInterval'] !== null) {
+            $this->FrameInterval = $param['FrameInterval'];
         }
 
-        if (array_key_exists("PersonIds",$param) and $param["PersonIds"] !== null) {
-            $this->PersonIds = $param["PersonIds"];
+        if (array_key_exists('PersonIds',$param) and $param['PersonIds'] !== null) {
+            $this->PersonIds = $param['PersonIds'];
         }
 
-        if (array_key_exists("SimThreshold",$param) and $param["SimThreshold"] !== null) {
-            $this->SimThreshold = $param["SimThreshold"];
+        if (array_key_exists('SimThreshold',$param) and $param['SimThreshold'] !== null) {
+            $this->SimThreshold = $param['SimThreshold'];
         }
 
-        if (array_key_exists("TeacherFileContent",$param) and $param["TeacherFileContent"] !== null) {
-            $this->TeacherFileContent = $param["TeacherFileContent"];
+        if (array_key_exists('TeacherFileContent',$param) and $param['TeacherFileContent'] !== null) {
+            $this->TeacherFileContent = $param['TeacherFileContent'];
         }
     }
 }

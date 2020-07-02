@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -126,48 +126,48 @@ class DescribeCaptchaResultRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CaptchaType",$param) and $param["CaptchaType"] !== null) {
-            $this->CaptchaType = $param["CaptchaType"];
+        if (array_key_exists('CaptchaType',$param) and $param['CaptchaType'] !== null) {
+            $this->CaptchaType = $param['CaptchaType'];
         }
 
-        if (array_key_exists("Ticket",$param) and $param["Ticket"] !== null) {
-            $this->Ticket = $param["Ticket"];
+        if (array_key_exists('Ticket',$param) and $param['Ticket'] !== null) {
+            $this->Ticket = $param['Ticket'];
         }
 
-        if (array_key_exists("UserIp",$param) and $param["UserIp"] !== null) {
-            $this->UserIp = $param["UserIp"];
+        if (array_key_exists('UserIp',$param) and $param['UserIp'] !== null) {
+            $this->UserIp = $param['UserIp'];
         }
 
-        if (array_key_exists("Randstr",$param) and $param["Randstr"] !== null) {
-            $this->Randstr = $param["Randstr"];
+        if (array_key_exists('Randstr',$param) and $param['Randstr'] !== null) {
+            $this->Randstr = $param['Randstr'];
         }
 
-        if (array_key_exists("CaptchaAppId",$param) and $param["CaptchaAppId"] !== null) {
-            $this->CaptchaAppId = $param["CaptchaAppId"];
+        if (array_key_exists('CaptchaAppId',$param) and $param['CaptchaAppId'] !== null) {
+            $this->CaptchaAppId = $param['CaptchaAppId'];
         }
 
-        if (array_key_exists("AppSecretKey",$param) and $param["AppSecretKey"] !== null) {
-            $this->AppSecretKey = $param["AppSecretKey"];
+        if (array_key_exists('AppSecretKey',$param) and $param['AppSecretKey'] !== null) {
+            $this->AppSecretKey = $param['AppSecretKey'];
         }
 
-        if (array_key_exists("BusinessId",$param) and $param["BusinessId"] !== null) {
-            $this->BusinessId = $param["BusinessId"];
+        if (array_key_exists('BusinessId',$param) and $param['BusinessId'] !== null) {
+            $this->BusinessId = $param['BusinessId'];
         }
 
-        if (array_key_exists("SceneId",$param) and $param["SceneId"] !== null) {
-            $this->SceneId = $param["SceneId"];
+        if (array_key_exists('SceneId',$param) and $param['SceneId'] !== null) {
+            $this->SceneId = $param['SceneId'];
         }
 
-        if (array_key_exists("MacAddress",$param) and $param["MacAddress"] !== null) {
-            $this->MacAddress = $param["MacAddress"];
+        if (array_key_exists('MacAddress',$param) and $param['MacAddress'] !== null) {
+            $this->MacAddress = $param['MacAddress'];
         }
 
-        if (array_key_exists("Imei",$param) and $param["Imei"] !== null) {
-            $this->Imei = $param["Imei"];
+        if (array_key_exists('Imei',$param) and $param['Imei'] !== null) {
+            $this->Imei = $param['Imei'];
         }
 
-        if (array_key_exists("NeedGetCaptchaTime",$param) and $param["NeedGetCaptchaTime"] !== null) {
-            $this->NeedGetCaptchaTime = $param["NeedGetCaptchaTime"];
+        if (array_key_exists('NeedGetCaptchaTime',$param) and $param['NeedGetCaptchaTime'] !== null) {
+            $this->NeedGetCaptchaTime = $param['NeedGetCaptchaTime'];
         }
     }
 }

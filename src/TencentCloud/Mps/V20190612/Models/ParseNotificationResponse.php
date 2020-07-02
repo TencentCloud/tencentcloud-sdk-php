@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -102,30 +102,30 @@ class ParseNotificationResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("EventType",$param) and $param["EventType"] !== null) {
-            $this->EventType = $param["EventType"];
+        if (array_key_exists('EventType',$param) and $param['EventType'] !== null) {
+            $this->EventType = $param['EventType'];
         }
 
-        if (array_key_exists("WorkflowTaskEvent",$param) and $param["WorkflowTaskEvent"] !== null) {
+        if (array_key_exists('WorkflowTaskEvent',$param) and $param['WorkflowTaskEvent'] !== null) {
             $this->WorkflowTaskEvent = new WorkflowTask();
-            $this->WorkflowTaskEvent->deserialize($param["WorkflowTaskEvent"]);
+            $this->WorkflowTaskEvent->deserialize($param['WorkflowTaskEvent']);
         }
 
-        if (array_key_exists("EditMediaTaskEvent",$param) and $param["EditMediaTaskEvent"] !== null) {
+        if (array_key_exists('EditMediaTaskEvent',$param) and $param['EditMediaTaskEvent'] !== null) {
             $this->EditMediaTaskEvent = new EditMediaTask();
-            $this->EditMediaTaskEvent->deserialize($param["EditMediaTaskEvent"]);
+            $this->EditMediaTaskEvent->deserialize($param['EditMediaTaskEvent']);
         }
 
-        if (array_key_exists("SessionId",$param) and $param["SessionId"] !== null) {
-            $this->SessionId = $param["SessionId"];
+        if (array_key_exists('SessionId',$param) and $param['SessionId'] !== null) {
+            $this->SessionId = $param['SessionId'];
         }
 
-        if (array_key_exists("SessionContext",$param) and $param["SessionContext"] !== null) {
-            $this->SessionContext = $param["SessionContext"];
+        if (array_key_exists('SessionContext',$param) and $param['SessionContext'] !== null) {
+            $this->SessionContext = $param['SessionContext'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

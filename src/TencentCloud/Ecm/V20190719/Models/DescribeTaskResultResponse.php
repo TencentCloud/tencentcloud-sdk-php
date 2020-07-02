@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTaskId() 获取异步任务ID。
  * @method void setTaskId(string $TaskId) 设置异步任务ID。
- * @method string getResult() 获取执行结果，包括"SUCCESS", "FAILED", "RUNNING"
- * @method void setResult(string $Result) 设置执行结果，包括"SUCCESS", "FAILED", "RUNNING"
+ * @method string getResult() 获取执行结果，包括'SUCCESS', 'FAILED', 'RUNNING'
+ * @method void setResult(string $Result) 设置执行结果，包括'SUCCESS', 'FAILED', 'RUNNING'
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -35,7 +35,7 @@ class DescribeTaskResultResponse extends AbstractModel
     public $TaskId;
 
     /**
-     * @var string 执行结果，包括"SUCCESS", "FAILED", "RUNNING"
+     * @var string 执行结果，包括'SUCCESS', 'FAILED', 'RUNNING'
      */
     public $Result;
 
@@ -46,7 +46,7 @@ class DescribeTaskResultResponse extends AbstractModel
 
     /**
      * @param string $TaskId 异步任务ID。
-     * @param string $Result 执行结果，包括"SUCCESS", "FAILED", "RUNNING"
+     * @param string $Result 执行结果，包括'SUCCESS', 'FAILED', 'RUNNING'
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,16 +62,16 @@ class DescribeTaskResultResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
-            $this->TaskId = $param["TaskId"];
+        if (array_key_exists('TaskId',$param) and $param['TaskId'] !== null) {
+            $this->TaskId = $param['TaskId'];
         }
 
-        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
-            $this->Result = $param["Result"];
+        if (array_key_exists('Result',$param) and $param['Result'] !== null) {
+            $this->Result = $param['Result'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -106,35 +106,35 @@ class UpgradeDCDBInstanceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("UpgradeType",$param) and $param["UpgradeType"] !== null) {
-            $this->UpgradeType = $param["UpgradeType"];
+        if (array_key_exists('UpgradeType',$param) and $param['UpgradeType'] !== null) {
+            $this->UpgradeType = $param['UpgradeType'];
         }
 
-        if (array_key_exists("AddShardConfig",$param) and $param["AddShardConfig"] !== null) {
+        if (array_key_exists('AddShardConfig',$param) and $param['AddShardConfig'] !== null) {
             $this->AddShardConfig = new AddShardConfig();
-            $this->AddShardConfig->deserialize($param["AddShardConfig"]);
+            $this->AddShardConfig->deserialize($param['AddShardConfig']);
         }
 
-        if (array_key_exists("ExpandShardConfig",$param) and $param["ExpandShardConfig"] !== null) {
+        if (array_key_exists('ExpandShardConfig',$param) and $param['ExpandShardConfig'] !== null) {
             $this->ExpandShardConfig = new ExpandShardConfig();
-            $this->ExpandShardConfig->deserialize($param["ExpandShardConfig"]);
+            $this->ExpandShardConfig->deserialize($param['ExpandShardConfig']);
         }
 
-        if (array_key_exists("SplitShardConfig",$param) and $param["SplitShardConfig"] !== null) {
+        if (array_key_exists('SplitShardConfig',$param) and $param['SplitShardConfig'] !== null) {
             $this->SplitShardConfig = new SplitShardConfig();
-            $this->SplitShardConfig->deserialize($param["SplitShardConfig"]);
+            $this->SplitShardConfig->deserialize($param['SplitShardConfig']);
         }
 
-        if (array_key_exists("AutoVoucher",$param) and $param["AutoVoucher"] !== null) {
-            $this->AutoVoucher = $param["AutoVoucher"];
+        if (array_key_exists('AutoVoucher',$param) and $param['AutoVoucher'] !== null) {
+            $this->AutoVoucher = $param['AutoVoucher'];
         }
 
-        if (array_key_exists("VoucherIds",$param) and $param["VoucherIds"] !== null) {
-            $this->VoucherIds = $param["VoucherIds"];
+        if (array_key_exists('VoucherIds',$param) and $param['VoucherIds'] !== null) {
+            $this->VoucherIds = $param['VoucherIds'];
         }
     }
 }

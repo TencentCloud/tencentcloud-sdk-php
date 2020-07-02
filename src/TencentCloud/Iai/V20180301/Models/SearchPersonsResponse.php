@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -74,25 +74,25 @@ class SearchPersonsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Results",$param) and $param["Results"] !== null) {
+        if (array_key_exists('Results',$param) and $param['Results'] !== null) {
             $this->Results = [];
-            foreach ($param["Results"] as $key => $value){
+            foreach ($param['Results'] as $key => $value){
                 $obj = new Result();
                 $obj->deserialize($value);
                 array_push($this->Results, $obj);
             }
         }
 
-        if (array_key_exists("PersonNum",$param) and $param["PersonNum"] !== null) {
-            $this->PersonNum = $param["PersonNum"];
+        if (array_key_exists('PersonNum',$param) and $param['PersonNum'] !== null) {
+            $this->PersonNum = $param['PersonNum'];
         }
 
-        if (array_key_exists("FaceModelVersion",$param) and $param["FaceModelVersion"] !== null) {
-            $this->FaceModelVersion = $param["FaceModelVersion"];
+        if (array_key_exists('FaceModelVersion',$param) and $param['FaceModelVersion'] !== null) {
+            $this->FaceModelVersion = $param['FaceModelVersion'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

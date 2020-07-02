@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -134,62 +134,62 @@ class WorkflowTask extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
-            $this->TaskId = $param["TaskId"];
+        if (array_key_exists('TaskId',$param) and $param['TaskId'] !== null) {
+            $this->TaskId = $param['TaskId'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("ErrCode",$param) and $param["ErrCode"] !== null) {
-            $this->ErrCode = $param["ErrCode"];
+        if (array_key_exists('ErrCode',$param) and $param['ErrCode'] !== null) {
+            $this->ErrCode = $param['ErrCode'];
         }
 
-        if (array_key_exists("Message",$param) and $param["Message"] !== null) {
-            $this->Message = $param["Message"];
+        if (array_key_exists('Message',$param) and $param['Message'] !== null) {
+            $this->Message = $param['Message'];
         }
 
-        if (array_key_exists("InputInfo",$param) and $param["InputInfo"] !== null) {
+        if (array_key_exists('InputInfo',$param) and $param['InputInfo'] !== null) {
             $this->InputInfo = new MediaInputInfo();
-            $this->InputInfo->deserialize($param["InputInfo"]);
+            $this->InputInfo->deserialize($param['InputInfo']);
         }
 
-        if (array_key_exists("MetaData",$param) and $param["MetaData"] !== null) {
+        if (array_key_exists('MetaData',$param) and $param['MetaData'] !== null) {
             $this->MetaData = new MediaMetaData();
-            $this->MetaData->deserialize($param["MetaData"]);
+            $this->MetaData->deserialize($param['MetaData']);
         }
 
-        if (array_key_exists("MediaProcessResultSet",$param) and $param["MediaProcessResultSet"] !== null) {
+        if (array_key_exists('MediaProcessResultSet',$param) and $param['MediaProcessResultSet'] !== null) {
             $this->MediaProcessResultSet = [];
-            foreach ($param["MediaProcessResultSet"] as $key => $value){
+            foreach ($param['MediaProcessResultSet'] as $key => $value){
                 $obj = new MediaProcessTaskResult();
                 $obj->deserialize($value);
                 array_push($this->MediaProcessResultSet, $obj);
             }
         }
 
-        if (array_key_exists("AiContentReviewResultSet",$param) and $param["AiContentReviewResultSet"] !== null) {
+        if (array_key_exists('AiContentReviewResultSet',$param) and $param['AiContentReviewResultSet'] !== null) {
             $this->AiContentReviewResultSet = [];
-            foreach ($param["AiContentReviewResultSet"] as $key => $value){
+            foreach ($param['AiContentReviewResultSet'] as $key => $value){
                 $obj = new AiContentReviewResult();
                 $obj->deserialize($value);
                 array_push($this->AiContentReviewResultSet, $obj);
             }
         }
 
-        if (array_key_exists("AiAnalysisResultSet",$param) and $param["AiAnalysisResultSet"] !== null) {
+        if (array_key_exists('AiAnalysisResultSet',$param) and $param['AiAnalysisResultSet'] !== null) {
             $this->AiAnalysisResultSet = [];
-            foreach ($param["AiAnalysisResultSet"] as $key => $value){
+            foreach ($param['AiAnalysisResultSet'] as $key => $value){
                 $obj = new AiAnalysisResult();
                 $obj->deserialize($value);
                 array_push($this->AiAnalysisResultSet, $obj);
             }
         }
 
-        if (array_key_exists("AiRecognitionResultSet",$param) and $param["AiRecognitionResultSet"] !== null) {
+        if (array_key_exists('AiRecognitionResultSet',$param) and $param['AiRecognitionResultSet'] !== null) {
             $this->AiRecognitionResultSet = [];
-            foreach ($param["AiRecognitionResultSet"] as $key => $value){
+            foreach ($param['AiRecognitionResultSet'] as $key => $value){
                 $obj = new AiRecognitionResult();
                 $obj->deserialize($value);
                 array_push($this->AiRecognitionResultSet, $obj);

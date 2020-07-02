@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -62,16 +62,16 @@ class ModifySnapshotAttributeRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SnapshotId",$param) and $param["SnapshotId"] !== null) {
-            $this->SnapshotId = $param["SnapshotId"];
+        if (array_key_exists('SnapshotId',$param) and $param['SnapshotId'] !== null) {
+            $this->SnapshotId = $param['SnapshotId'];
         }
 
-        if (array_key_exists("SnapshotName",$param) and $param["SnapshotName"] !== null) {
-            $this->SnapshotName = $param["SnapshotName"];
+        if (array_key_exists('SnapshotName',$param) and $param['SnapshotName'] !== null) {
+            $this->SnapshotName = $param['SnapshotName'];
         }
 
-        if (array_key_exists("IsPermanent",$param) and $param["IsPermanent"] !== null) {
-            $this->IsPermanent = $param["IsPermanent"];
+        if (array_key_exists('IsPermanent',$param) and $param['IsPermanent'] !== null) {
+            $this->IsPermanent = $param['IsPermanent'];
         }
     }
 }

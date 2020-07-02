@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -150,60 +150,60 @@ class ModifyQueueAttributeRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("QueueName",$param) and $param["QueueName"] !== null) {
-            $this->QueueName = $param["QueueName"];
+        if (array_key_exists('QueueName',$param) and $param['QueueName'] !== null) {
+            $this->QueueName = $param['QueueName'];
         }
 
-        if (array_key_exists("MaxMsgHeapNum",$param) and $param["MaxMsgHeapNum"] !== null) {
-            $this->MaxMsgHeapNum = $param["MaxMsgHeapNum"];
+        if (array_key_exists('MaxMsgHeapNum',$param) and $param['MaxMsgHeapNum'] !== null) {
+            $this->MaxMsgHeapNum = $param['MaxMsgHeapNum'];
         }
 
-        if (array_key_exists("PollingWaitSeconds",$param) and $param["PollingWaitSeconds"] !== null) {
-            $this->PollingWaitSeconds = $param["PollingWaitSeconds"];
+        if (array_key_exists('PollingWaitSeconds',$param) and $param['PollingWaitSeconds'] !== null) {
+            $this->PollingWaitSeconds = $param['PollingWaitSeconds'];
         }
 
-        if (array_key_exists("VisibilityTimeout",$param) and $param["VisibilityTimeout"] !== null) {
-            $this->VisibilityTimeout = $param["VisibilityTimeout"];
+        if (array_key_exists('VisibilityTimeout',$param) and $param['VisibilityTimeout'] !== null) {
+            $this->VisibilityTimeout = $param['VisibilityTimeout'];
         }
 
-        if (array_key_exists("MaxMsgSize",$param) and $param["MaxMsgSize"] !== null) {
-            $this->MaxMsgSize = $param["MaxMsgSize"];
+        if (array_key_exists('MaxMsgSize',$param) and $param['MaxMsgSize'] !== null) {
+            $this->MaxMsgSize = $param['MaxMsgSize'];
         }
 
-        if (array_key_exists("MsgRetentionSeconds",$param) and $param["MsgRetentionSeconds"] !== null) {
-            $this->MsgRetentionSeconds = $param["MsgRetentionSeconds"];
+        if (array_key_exists('MsgRetentionSeconds',$param) and $param['MsgRetentionSeconds'] !== null) {
+            $this->MsgRetentionSeconds = $param['MsgRetentionSeconds'];
         }
 
-        if (array_key_exists("RewindSeconds",$param) and $param["RewindSeconds"] !== null) {
-            $this->RewindSeconds = $param["RewindSeconds"];
+        if (array_key_exists('RewindSeconds',$param) and $param['RewindSeconds'] !== null) {
+            $this->RewindSeconds = $param['RewindSeconds'];
         }
 
-        if (array_key_exists("FirstQueryInterval",$param) and $param["FirstQueryInterval"] !== null) {
-            $this->FirstQueryInterval = $param["FirstQueryInterval"];
+        if (array_key_exists('FirstQueryInterval',$param) and $param['FirstQueryInterval'] !== null) {
+            $this->FirstQueryInterval = $param['FirstQueryInterval'];
         }
 
-        if (array_key_exists("MaxQueryCount",$param) and $param["MaxQueryCount"] !== null) {
-            $this->MaxQueryCount = $param["MaxQueryCount"];
+        if (array_key_exists('MaxQueryCount',$param) and $param['MaxQueryCount'] !== null) {
+            $this->MaxQueryCount = $param['MaxQueryCount'];
         }
 
-        if (array_key_exists("DeadLetterQueueName",$param) and $param["DeadLetterQueueName"] !== null) {
-            $this->DeadLetterQueueName = $param["DeadLetterQueueName"];
+        if (array_key_exists('DeadLetterQueueName',$param) and $param['DeadLetterQueueName'] !== null) {
+            $this->DeadLetterQueueName = $param['DeadLetterQueueName'];
         }
 
-        if (array_key_exists("MaxTimeToLive",$param) and $param["MaxTimeToLive"] !== null) {
-            $this->MaxTimeToLive = $param["MaxTimeToLive"];
+        if (array_key_exists('MaxTimeToLive',$param) and $param['MaxTimeToLive'] !== null) {
+            $this->MaxTimeToLive = $param['MaxTimeToLive'];
         }
 
-        if (array_key_exists("MaxReceiveCount",$param) and $param["MaxReceiveCount"] !== null) {
-            $this->MaxReceiveCount = $param["MaxReceiveCount"];
+        if (array_key_exists('MaxReceiveCount',$param) and $param['MaxReceiveCount'] !== null) {
+            $this->MaxReceiveCount = $param['MaxReceiveCount'];
         }
 
-        if (array_key_exists("Policy",$param) and $param["Policy"] !== null) {
-            $this->Policy = $param["Policy"];
+        if (array_key_exists('Policy',$param) and $param['Policy'] !== null) {
+            $this->Policy = $param['Policy'];
         }
 
-        if (array_key_exists("Trace",$param) and $param["Trace"] !== null) {
-            $this->Trace = $param["Trace"];
+        if (array_key_exists('Trace',$param) and $param['Trace'] !== null) {
+            $this->Trace = $param['Trace'];
         }
     }
 }

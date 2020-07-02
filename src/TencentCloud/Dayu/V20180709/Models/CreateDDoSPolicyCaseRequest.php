@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -230,100 +230,100 @@ class CreateDDoSPolicyCaseRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Business",$param) and $param["Business"] !== null) {
-            $this->Business = $param["Business"];
+        if (array_key_exists('Business',$param) and $param['Business'] !== null) {
+            $this->Business = $param['Business'];
         }
 
-        if (array_key_exists("CaseName",$param) and $param["CaseName"] !== null) {
-            $this->CaseName = $param["CaseName"];
+        if (array_key_exists('CaseName',$param) and $param['CaseName'] !== null) {
+            $this->CaseName = $param['CaseName'];
         }
 
-        if (array_key_exists("PlatformTypes",$param) and $param["PlatformTypes"] !== null) {
-            $this->PlatformTypes = $param["PlatformTypes"];
+        if (array_key_exists('PlatformTypes',$param) and $param['PlatformTypes'] !== null) {
+            $this->PlatformTypes = $param['PlatformTypes'];
         }
 
-        if (array_key_exists("AppType",$param) and $param["AppType"] !== null) {
-            $this->AppType = $param["AppType"];
+        if (array_key_exists('AppType',$param) and $param['AppType'] !== null) {
+            $this->AppType = $param['AppType'];
         }
 
-        if (array_key_exists("AppProtocols",$param) and $param["AppProtocols"] !== null) {
-            $this->AppProtocols = $param["AppProtocols"];
+        if (array_key_exists('AppProtocols',$param) and $param['AppProtocols'] !== null) {
+            $this->AppProtocols = $param['AppProtocols'];
         }
 
-        if (array_key_exists("TcpSportStart",$param) and $param["TcpSportStart"] !== null) {
-            $this->TcpSportStart = $param["TcpSportStart"];
+        if (array_key_exists('TcpSportStart',$param) and $param['TcpSportStart'] !== null) {
+            $this->TcpSportStart = $param['TcpSportStart'];
         }
 
-        if (array_key_exists("TcpSportEnd",$param) and $param["TcpSportEnd"] !== null) {
-            $this->TcpSportEnd = $param["TcpSportEnd"];
+        if (array_key_exists('TcpSportEnd',$param) and $param['TcpSportEnd'] !== null) {
+            $this->TcpSportEnd = $param['TcpSportEnd'];
         }
 
-        if (array_key_exists("UdpSportStart",$param) and $param["UdpSportStart"] !== null) {
-            $this->UdpSportStart = $param["UdpSportStart"];
+        if (array_key_exists('UdpSportStart',$param) and $param['UdpSportStart'] !== null) {
+            $this->UdpSportStart = $param['UdpSportStart'];
         }
 
-        if (array_key_exists("UdpSportEnd",$param) and $param["UdpSportEnd"] !== null) {
-            $this->UdpSportEnd = $param["UdpSportEnd"];
+        if (array_key_exists('UdpSportEnd',$param) and $param['UdpSportEnd'] !== null) {
+            $this->UdpSportEnd = $param['UdpSportEnd'];
         }
 
-        if (array_key_exists("HasAbroad",$param) and $param["HasAbroad"] !== null) {
-            $this->HasAbroad = $param["HasAbroad"];
+        if (array_key_exists('HasAbroad',$param) and $param['HasAbroad'] !== null) {
+            $this->HasAbroad = $param['HasAbroad'];
         }
 
-        if (array_key_exists("HasInitiateTcp",$param) and $param["HasInitiateTcp"] !== null) {
-            $this->HasInitiateTcp = $param["HasInitiateTcp"];
+        if (array_key_exists('HasInitiateTcp',$param) and $param['HasInitiateTcp'] !== null) {
+            $this->HasInitiateTcp = $param['HasInitiateTcp'];
         }
 
-        if (array_key_exists("HasInitiateUdp",$param) and $param["HasInitiateUdp"] !== null) {
-            $this->HasInitiateUdp = $param["HasInitiateUdp"];
+        if (array_key_exists('HasInitiateUdp',$param) and $param['HasInitiateUdp'] !== null) {
+            $this->HasInitiateUdp = $param['HasInitiateUdp'];
         }
 
-        if (array_key_exists("PeerTcpPort",$param) and $param["PeerTcpPort"] !== null) {
-            $this->PeerTcpPort = $param["PeerTcpPort"];
+        if (array_key_exists('PeerTcpPort',$param) and $param['PeerTcpPort'] !== null) {
+            $this->PeerTcpPort = $param['PeerTcpPort'];
         }
 
-        if (array_key_exists("PeerUdpPort",$param) and $param["PeerUdpPort"] !== null) {
-            $this->PeerUdpPort = $param["PeerUdpPort"];
+        if (array_key_exists('PeerUdpPort',$param) and $param['PeerUdpPort'] !== null) {
+            $this->PeerUdpPort = $param['PeerUdpPort'];
         }
 
-        if (array_key_exists("TcpFootprint",$param) and $param["TcpFootprint"] !== null) {
-            $this->TcpFootprint = $param["TcpFootprint"];
+        if (array_key_exists('TcpFootprint',$param) and $param['TcpFootprint'] !== null) {
+            $this->TcpFootprint = $param['TcpFootprint'];
         }
 
-        if (array_key_exists("UdpFootprint",$param) and $param["UdpFootprint"] !== null) {
-            $this->UdpFootprint = $param["UdpFootprint"];
+        if (array_key_exists('UdpFootprint',$param) and $param['UdpFootprint'] !== null) {
+            $this->UdpFootprint = $param['UdpFootprint'];
         }
 
-        if (array_key_exists("WebApiUrl",$param) and $param["WebApiUrl"] !== null) {
-            $this->WebApiUrl = $param["WebApiUrl"];
+        if (array_key_exists('WebApiUrl',$param) and $param['WebApiUrl'] !== null) {
+            $this->WebApiUrl = $param['WebApiUrl'];
         }
 
-        if (array_key_exists("MinTcpPackageLen",$param) and $param["MinTcpPackageLen"] !== null) {
-            $this->MinTcpPackageLen = $param["MinTcpPackageLen"];
+        if (array_key_exists('MinTcpPackageLen',$param) and $param['MinTcpPackageLen'] !== null) {
+            $this->MinTcpPackageLen = $param['MinTcpPackageLen'];
         }
 
-        if (array_key_exists("MaxTcpPackageLen",$param) and $param["MaxTcpPackageLen"] !== null) {
-            $this->MaxTcpPackageLen = $param["MaxTcpPackageLen"];
+        if (array_key_exists('MaxTcpPackageLen',$param) and $param['MaxTcpPackageLen'] !== null) {
+            $this->MaxTcpPackageLen = $param['MaxTcpPackageLen'];
         }
 
-        if (array_key_exists("MinUdpPackageLen",$param) and $param["MinUdpPackageLen"] !== null) {
-            $this->MinUdpPackageLen = $param["MinUdpPackageLen"];
+        if (array_key_exists('MinUdpPackageLen',$param) and $param['MinUdpPackageLen'] !== null) {
+            $this->MinUdpPackageLen = $param['MinUdpPackageLen'];
         }
 
-        if (array_key_exists("MaxUdpPackageLen",$param) and $param["MaxUdpPackageLen"] !== null) {
-            $this->MaxUdpPackageLen = $param["MaxUdpPackageLen"];
+        if (array_key_exists('MaxUdpPackageLen',$param) and $param['MaxUdpPackageLen'] !== null) {
+            $this->MaxUdpPackageLen = $param['MaxUdpPackageLen'];
         }
 
-        if (array_key_exists("HasVPN",$param) and $param["HasVPN"] !== null) {
-            $this->HasVPN = $param["HasVPN"];
+        if (array_key_exists('HasVPN',$param) and $param['HasVPN'] !== null) {
+            $this->HasVPN = $param['HasVPN'];
         }
 
-        if (array_key_exists("TcpPortList",$param) and $param["TcpPortList"] !== null) {
-            $this->TcpPortList = $param["TcpPortList"];
+        if (array_key_exists('TcpPortList',$param) and $param['TcpPortList'] !== null) {
+            $this->TcpPortList = $param['TcpPortList'];
         }
 
-        if (array_key_exists("UdpPortList",$param) and $param["UdpPortList"] !== null) {
-            $this->UdpPortList = $param["UdpPortList"];
+        if (array_key_exists('UdpPortList',$param) and $param['UdpPortList'] !== null) {
+            $this->UdpPortList = $param['UdpPortList'];
         }
     }
 }

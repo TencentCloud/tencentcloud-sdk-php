@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -134,52 +134,52 @@ class SimultaneousInterpretingRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
-            $this->ProjectId = $param["ProjectId"];
+        if (array_key_exists('ProjectId',$param) and $param['ProjectId'] !== null) {
+            $this->ProjectId = $param['ProjectId'];
         }
 
-        if (array_key_exists("SubServiceType",$param) and $param["SubServiceType"] !== null) {
-            $this->SubServiceType = $param["SubServiceType"];
+        if (array_key_exists('SubServiceType',$param) and $param['SubServiceType'] !== null) {
+            $this->SubServiceType = $param['SubServiceType'];
         }
 
-        if (array_key_exists("RecEngineModelType",$param) and $param["RecEngineModelType"] !== null) {
-            $this->RecEngineModelType = $param["RecEngineModelType"];
+        if (array_key_exists('RecEngineModelType',$param) and $param['RecEngineModelType'] !== null) {
+            $this->RecEngineModelType = $param['RecEngineModelType'];
         }
 
-        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
-            $this->Data = $param["Data"];
+        if (array_key_exists('Data',$param) and $param['Data'] !== null) {
+            $this->Data = $param['Data'];
         }
 
-        if (array_key_exists("DataLen",$param) and $param["DataLen"] !== null) {
-            $this->DataLen = $param["DataLen"];
+        if (array_key_exists('DataLen',$param) and $param['DataLen'] !== null) {
+            $this->DataLen = $param['DataLen'];
         }
 
-        if (array_key_exists("VoiceId",$param) and $param["VoiceId"] !== null) {
-            $this->VoiceId = $param["VoiceId"];
+        if (array_key_exists('VoiceId',$param) and $param['VoiceId'] !== null) {
+            $this->VoiceId = $param['VoiceId'];
         }
 
-        if (array_key_exists("IsEnd",$param) and $param["IsEnd"] !== null) {
-            $this->IsEnd = $param["IsEnd"];
+        if (array_key_exists('IsEnd',$param) and $param['IsEnd'] !== null) {
+            $this->IsEnd = $param['IsEnd'];
         }
 
-        if (array_key_exists("VoiceFormat",$param) and $param["VoiceFormat"] !== null) {
-            $this->VoiceFormat = $param["VoiceFormat"];
+        if (array_key_exists('VoiceFormat',$param) and $param['VoiceFormat'] !== null) {
+            $this->VoiceFormat = $param['VoiceFormat'];
         }
 
-        if (array_key_exists("OpenTranslate",$param) and $param["OpenTranslate"] !== null) {
-            $this->OpenTranslate = $param["OpenTranslate"];
+        if (array_key_exists('OpenTranslate',$param) and $param['OpenTranslate'] !== null) {
+            $this->OpenTranslate = $param['OpenTranslate'];
         }
 
-        if (array_key_exists("SourceLanguage",$param) and $param["SourceLanguage"] !== null) {
-            $this->SourceLanguage = $param["SourceLanguage"];
+        if (array_key_exists('SourceLanguage',$param) and $param['SourceLanguage'] !== null) {
+            $this->SourceLanguage = $param['SourceLanguage'];
         }
 
-        if (array_key_exists("TargetLanguage",$param) and $param["TargetLanguage"] !== null) {
-            $this->TargetLanguage = $param["TargetLanguage"];
+        if (array_key_exists('TargetLanguage',$param) and $param['TargetLanguage'] !== null) {
+            $this->TargetLanguage = $param['TargetLanguage'];
         }
 
-        if (array_key_exists("Seq",$param) and $param["Seq"] !== null) {
-            $this->Seq = $param["Seq"];
+        if (array_key_exists('Seq',$param) and $param['Seq'] !== null) {
+            $this->Seq = $param['Seq'];
         }
     }
 }

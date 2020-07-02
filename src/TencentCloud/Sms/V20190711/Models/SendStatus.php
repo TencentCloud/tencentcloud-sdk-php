@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -94,32 +94,32 @@ class SendStatus extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SerialNo",$param) and $param["SerialNo"] !== null) {
-            $this->SerialNo = $param["SerialNo"];
+        if (array_key_exists('SerialNo',$param) and $param['SerialNo'] !== null) {
+            $this->SerialNo = $param['SerialNo'];
         }
 
-        if (array_key_exists("PhoneNumber",$param) and $param["PhoneNumber"] !== null) {
-            $this->PhoneNumber = $param["PhoneNumber"];
+        if (array_key_exists('PhoneNumber',$param) and $param['PhoneNumber'] !== null) {
+            $this->PhoneNumber = $param['PhoneNumber'];
         }
 
-        if (array_key_exists("Fee",$param) and $param["Fee"] !== null) {
-            $this->Fee = $param["Fee"];
+        if (array_key_exists('Fee',$param) and $param['Fee'] !== null) {
+            $this->Fee = $param['Fee'];
         }
 
-        if (array_key_exists("SessionContext",$param) and $param["SessionContext"] !== null) {
-            $this->SessionContext = $param["SessionContext"];
+        if (array_key_exists('SessionContext',$param) and $param['SessionContext'] !== null) {
+            $this->SessionContext = $param['SessionContext'];
         }
 
-        if (array_key_exists("Code",$param) and $param["Code"] !== null) {
-            $this->Code = $param["Code"];
+        if (array_key_exists('Code',$param) and $param['Code'] !== null) {
+            $this->Code = $param['Code'];
         }
 
-        if (array_key_exists("Message",$param) and $param["Message"] !== null) {
-            $this->Message = $param["Message"];
+        if (array_key_exists('Message',$param) and $param['Message'] !== null) {
+            $this->Message = $param['Message'];
         }
 
-        if (array_key_exists("IsoCode",$param) and $param["IsoCode"] !== null) {
-            $this->IsoCode = $param["IsoCode"];
+        if (array_key_exists('IsoCode',$param) and $param['IsoCode'] !== null) {
+            $this->IsoCode = $param['IsoCode'];
         }
     }
 }

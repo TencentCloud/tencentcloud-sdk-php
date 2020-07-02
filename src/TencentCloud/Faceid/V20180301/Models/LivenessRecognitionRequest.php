@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -40,11 +40,11 @@ LIP为数字模式，ACTION为动作模式，SILENT为静默模式，三种模�
 静默模式传参：空。
  * @method string getOptional() 获取额外配置，传入JSON字符串。
 {
-"BestFrameNum": 2  //需要返回多张最佳截图，取值范围1-10
+'BestFrameNum': 2  //需要返回多张最佳截图，取值范围1-10
 }
  * @method void setOptional(string $Optional) 设置额外配置，传入JSON字符串。
 {
-"BestFrameNum": 2  //需要返回多张最佳截图，取值范围1-10
+'BestFrameNum': 2  //需要返回多张最佳截图，取值范围1-10
 }
  */
 class LivenessRecognitionRequest extends AbstractModel
@@ -81,7 +81,7 @@ LIP为数字模式，ACTION为动作模式，SILENT为静默模式，三种模�
     /**
      * @var string 额外配置，传入JSON字符串。
 {
-"BestFrameNum": 2  //需要返回多张最佳截图，取值范围1-10
+'BestFrameNum': 2  //需要返回多张最佳截图，取值范围1-10
 }
      */
     public $Optional;
@@ -98,7 +98,7 @@ LIP为数字模式，ACTION为动作模式，SILENT为静默模式，三种模�
 静默模式传参：空。
      * @param string $Optional 额外配置，传入JSON字符串。
 {
-"BestFrameNum": 2  //需要返回多张最佳截图，取值范围1-10
+'BestFrameNum': 2  //需要返回多张最佳截图，取值范围1-10
 }
      */
     function __construct()
@@ -114,28 +114,28 @@ LIP为数字模式，ACTION为动作模式，SILENT为静默模式，三种模�
         if ($param === null) {
             return;
         }
-        if (array_key_exists("IdCard",$param) and $param["IdCard"] !== null) {
-            $this->IdCard = $param["IdCard"];
+        if (array_key_exists('IdCard',$param) and $param['IdCard'] !== null) {
+            $this->IdCard = $param['IdCard'];
         }
 
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("VideoBase64",$param) and $param["VideoBase64"] !== null) {
-            $this->VideoBase64 = $param["VideoBase64"];
+        if (array_key_exists('VideoBase64',$param) and $param['VideoBase64'] !== null) {
+            $this->VideoBase64 = $param['VideoBase64'];
         }
 
-        if (array_key_exists("LivenessType",$param) and $param["LivenessType"] !== null) {
-            $this->LivenessType = $param["LivenessType"];
+        if (array_key_exists('LivenessType',$param) and $param['LivenessType'] !== null) {
+            $this->LivenessType = $param['LivenessType'];
         }
 
-        if (array_key_exists("ValidateData",$param) and $param["ValidateData"] !== null) {
-            $this->ValidateData = $param["ValidateData"];
+        if (array_key_exists('ValidateData',$param) and $param['ValidateData'] !== null) {
+            $this->ValidateData = $param['ValidateData'];
         }
 
-        if (array_key_exists("Optional",$param) and $param["Optional"] !== null) {
-            $this->Optional = $param["Optional"];
+        if (array_key_exists('Optional',$param) and $param['Optional'] !== null) {
+            $this->Optional = $param['Optional'];
         }
     }
 }

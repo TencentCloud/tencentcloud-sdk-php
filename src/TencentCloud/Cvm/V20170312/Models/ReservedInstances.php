@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -154,48 +154,48 @@ class ReservedInstances extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ReservedInstancesId",$param) and $param["ReservedInstancesId"] !== null) {
-            $this->ReservedInstancesId = $param["ReservedInstancesId"];
+        if (array_key_exists('ReservedInstancesId',$param) and $param['ReservedInstancesId'] !== null) {
+            $this->ReservedInstancesId = $param['ReservedInstancesId'];
         }
 
-        if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
-            $this->InstanceType = $param["InstanceType"];
+        if (array_key_exists('InstanceType',$param) and $param['InstanceType'] !== null) {
+            $this->InstanceType = $param['InstanceType'];
         }
 
-        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
-            $this->Zone = $param["Zone"];
+        if (array_key_exists('Zone',$param) and $param['Zone'] !== null) {
+            $this->Zone = $param['Zone'];
         }
 
-        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
-            $this->StartTime = $param["StartTime"];
+        if (array_key_exists('StartTime',$param) and $param['StartTime'] !== null) {
+            $this->StartTime = $param['StartTime'];
         }
 
-        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
-            $this->EndTime = $param["EndTime"];
+        if (array_key_exists('EndTime',$param) and $param['EndTime'] !== null) {
+            $this->EndTime = $param['EndTime'];
         }
 
-        if (array_key_exists("Duration",$param) and $param["Duration"] !== null) {
-            $this->Duration = $param["Duration"];
+        if (array_key_exists('Duration',$param) and $param['Duration'] !== null) {
+            $this->Duration = $param['Duration'];
         }
 
-        if (array_key_exists("InstanceCount",$param) and $param["InstanceCount"] !== null) {
-            $this->InstanceCount = $param["InstanceCount"];
+        if (array_key_exists('InstanceCount',$param) and $param['InstanceCount'] !== null) {
+            $this->InstanceCount = $param['InstanceCount'];
         }
 
-        if (array_key_exists("ProductDescription",$param) and $param["ProductDescription"] !== null) {
-            $this->ProductDescription = $param["ProductDescription"];
+        if (array_key_exists('ProductDescription',$param) and $param['ProductDescription'] !== null) {
+            $this->ProductDescription = $param['ProductDescription'];
         }
 
-        if (array_key_exists("State",$param) and $param["State"] !== null) {
-            $this->State = $param["State"];
+        if (array_key_exists('State',$param) and $param['State'] !== null) {
+            $this->State = $param['State'];
         }
 
-        if (array_key_exists("CurrencyCode",$param) and $param["CurrencyCode"] !== null) {
-            $this->CurrencyCode = $param["CurrencyCode"];
+        if (array_key_exists('CurrencyCode',$param) and $param['CurrencyCode'] !== null) {
+            $this->CurrencyCode = $param['CurrencyCode'];
         }
 
-        if (array_key_exists("OfferingType",$param) and $param["OfferingType"] !== null) {
-            $this->OfferingType = $param["OfferingType"];
+        if (array_key_exists('OfferingType',$param) and $param['OfferingType'] !== null) {
+            $this->OfferingType = $param['OfferingType'];
         }
     }
 }

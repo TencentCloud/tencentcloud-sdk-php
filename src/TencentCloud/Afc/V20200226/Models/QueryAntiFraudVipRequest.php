@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -270,92 +270,92 @@ ID 区分统计数据
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PhoneNumber",$param) and $param["PhoneNumber"] !== null) {
-            $this->PhoneNumber = $param["PhoneNumber"];
+        if (array_key_exists('PhoneNumber',$param) and $param['PhoneNumber'] !== null) {
+            $this->PhoneNumber = $param['PhoneNumber'];
         }
 
-        if (array_key_exists("IdNumber",$param) and $param["IdNumber"] !== null) {
-            $this->IdNumber = $param["IdNumber"];
+        if (array_key_exists('IdNumber',$param) and $param['IdNumber'] !== null) {
+            $this->IdNumber = $param['IdNumber'];
         }
 
-        if (array_key_exists("BankCardNumber",$param) and $param["BankCardNumber"] !== null) {
-            $this->BankCardNumber = $param["BankCardNumber"];
+        if (array_key_exists('BankCardNumber',$param) and $param['BankCardNumber'] !== null) {
+            $this->BankCardNumber = $param['BankCardNumber'];
         }
 
-        if (array_key_exists("UserIp",$param) and $param["UserIp"] !== null) {
-            $this->UserIp = $param["UserIp"];
+        if (array_key_exists('UserIp',$param) and $param['UserIp'] !== null) {
+            $this->UserIp = $param['UserIp'];
         }
 
-        if (array_key_exists("Imei",$param) and $param["Imei"] !== null) {
-            $this->Imei = $param["Imei"];
+        if (array_key_exists('Imei',$param) and $param['Imei'] !== null) {
+            $this->Imei = $param['Imei'];
         }
 
-        if (array_key_exists("Idfa",$param) and $param["Idfa"] !== null) {
-            $this->Idfa = $param["Idfa"];
+        if (array_key_exists('Idfa',$param) and $param['Idfa'] !== null) {
+            $this->Idfa = $param['Idfa'];
         }
 
-        if (array_key_exists("Scene",$param) and $param["Scene"] !== null) {
-            $this->Scene = $param["Scene"];
+        if (array_key_exists('Scene',$param) and $param['Scene'] !== null) {
+            $this->Scene = $param['Scene'];
         }
 
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("EmailAddress",$param) and $param["EmailAddress"] !== null) {
-            $this->EmailAddress = $param["EmailAddress"];
+        if (array_key_exists('EmailAddress',$param) and $param['EmailAddress'] !== null) {
+            $this->EmailAddress = $param['EmailAddress'];
         }
 
-        if (array_key_exists("Address",$param) and $param["Address"] !== null) {
-            $this->Address = $param["Address"];
+        if (array_key_exists('Address',$param) and $param['Address'] !== null) {
+            $this->Address = $param['Address'];
         }
 
-        if (array_key_exists("AccountType",$param) and $param["AccountType"] !== null) {
-            $this->AccountType = $param["AccountType"];
+        if (array_key_exists('AccountType',$param) and $param['AccountType'] !== null) {
+            $this->AccountType = $param['AccountType'];
         }
 
-        if (array_key_exists("Uid",$param) and $param["Uid"] !== null) {
-            $this->Uid = $param["Uid"];
+        if (array_key_exists('Uid',$param) and $param['Uid'] !== null) {
+            $this->Uid = $param['Uid'];
         }
 
-        if (array_key_exists("AppIdU",$param) and $param["AppIdU"] !== null) {
-            $this->AppIdU = $param["AppIdU"];
+        if (array_key_exists('AppIdU',$param) and $param['AppIdU'] !== null) {
+            $this->AppIdU = $param['AppIdU'];
         }
 
-        if (array_key_exists("WifiMac",$param) and $param["WifiMac"] !== null) {
-            $this->WifiMac = $param["WifiMac"];
+        if (array_key_exists('WifiMac',$param) and $param['WifiMac'] !== null) {
+            $this->WifiMac = $param['WifiMac'];
         }
 
-        if (array_key_exists("WifiSSID",$param) and $param["WifiSSID"] !== null) {
-            $this->WifiSSID = $param["WifiSSID"];
+        if (array_key_exists('WifiSSID',$param) and $param['WifiSSID'] !== null) {
+            $this->WifiSSID = $param['WifiSSID'];
         }
 
-        if (array_key_exists("WifiBSSID",$param) and $param["WifiBSSID"] !== null) {
-            $this->WifiBSSID = $param["WifiBSSID"];
+        if (array_key_exists('WifiBSSID',$param) and $param['WifiBSSID'] !== null) {
+            $this->WifiBSSID = $param['WifiBSSID'];
         }
 
-        if (array_key_exists("BusinessId",$param) and $param["BusinessId"] !== null) {
-            $this->BusinessId = $param["BusinessId"];
+        if (array_key_exists('BusinessId',$param) and $param['BusinessId'] !== null) {
+            $this->BusinessId = $param['BusinessId'];
         }
 
-        if (array_key_exists("IdCryptoType",$param) and $param["IdCryptoType"] !== null) {
-            $this->IdCryptoType = $param["IdCryptoType"];
+        if (array_key_exists('IdCryptoType',$param) and $param['IdCryptoType'] !== null) {
+            $this->IdCryptoType = $param['IdCryptoType'];
         }
 
-        if (array_key_exists("PhoneCryptoType",$param) and $param["PhoneCryptoType"] !== null) {
-            $this->PhoneCryptoType = $param["PhoneCryptoType"];
+        if (array_key_exists('PhoneCryptoType',$param) and $param['PhoneCryptoType'] !== null) {
+            $this->PhoneCryptoType = $param['PhoneCryptoType'];
         }
 
-        if (array_key_exists("Mac",$param) and $param["Mac"] !== null) {
-            $this->Mac = $param["Mac"];
+        if (array_key_exists('Mac',$param) and $param['Mac'] !== null) {
+            $this->Mac = $param['Mac'];
         }
 
-        if (array_key_exists("Imsi",$param) and $param["Imsi"] !== null) {
-            $this->Imsi = $param["Imsi"];
+        if (array_key_exists('Imsi',$param) and $param['Imsi'] !== null) {
+            $this->Imsi = $param['Imsi'];
         }
 
-        if (array_key_exists("NameCryptoType",$param) and $param["NameCryptoType"] !== null) {
-            $this->NameCryptoType = $param["NameCryptoType"];
+        if (array_key_exists('NameCryptoType',$param) and $param['NameCryptoType'] !== null) {
+            $this->NameCryptoType = $param['NameCryptoType'];
         }
     }
 }

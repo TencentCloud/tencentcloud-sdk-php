@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -106,36 +106,36 @@ class BusinessSummaryOverviewItem extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BusinessCode",$param) and $param["BusinessCode"] !== null) {
-            $this->BusinessCode = $param["BusinessCode"];
+        if (array_key_exists('BusinessCode',$param) and $param['BusinessCode'] !== null) {
+            $this->BusinessCode = $param['BusinessCode'];
         }
 
-        if (array_key_exists("BusinessCodeName",$param) and $param["BusinessCodeName"] !== null) {
-            $this->BusinessCodeName = $param["BusinessCodeName"];
+        if (array_key_exists('BusinessCodeName',$param) and $param['BusinessCodeName'] !== null) {
+            $this->BusinessCodeName = $param['BusinessCodeName'];
         }
 
-        if (array_key_exists("RealTotalCost",$param) and $param["RealTotalCost"] !== null) {
-            $this->RealTotalCost = $param["RealTotalCost"];
+        if (array_key_exists('RealTotalCost',$param) and $param['RealTotalCost'] !== null) {
+            $this->RealTotalCost = $param['RealTotalCost'];
         }
 
-        if (array_key_exists("RealTotalCostRatio",$param) and $param["RealTotalCostRatio"] !== null) {
-            $this->RealTotalCostRatio = $param["RealTotalCostRatio"];
+        if (array_key_exists('RealTotalCostRatio',$param) and $param['RealTotalCostRatio'] !== null) {
+            $this->RealTotalCostRatio = $param['RealTotalCostRatio'];
         }
 
-        if (array_key_exists("CashPayAmount",$param) and $param["CashPayAmount"] !== null) {
-            $this->CashPayAmount = $param["CashPayAmount"];
+        if (array_key_exists('CashPayAmount',$param) and $param['CashPayAmount'] !== null) {
+            $this->CashPayAmount = $param['CashPayAmount'];
         }
 
-        if (array_key_exists("IncentivePayAmount",$param) and $param["IncentivePayAmount"] !== null) {
-            $this->IncentivePayAmount = $param["IncentivePayAmount"];
+        if (array_key_exists('IncentivePayAmount',$param) and $param['IncentivePayAmount'] !== null) {
+            $this->IncentivePayAmount = $param['IncentivePayAmount'];
         }
 
-        if (array_key_exists("VoucherPayAmount",$param) and $param["VoucherPayAmount"] !== null) {
-            $this->VoucherPayAmount = $param["VoucherPayAmount"];
+        if (array_key_exists('VoucherPayAmount',$param) and $param['VoucherPayAmount'] !== null) {
+            $this->VoucherPayAmount = $param['VoucherPayAmount'];
         }
 
-        if (array_key_exists("BillMonth",$param) and $param["BillMonth"] !== null) {
-            $this->BillMonth = $param["BillMonth"];
+        if (array_key_exists('BillMonth',$param) and $param['BillMonth'] !== null) {
+            $this->BillMonth = $param['BillMonth'];
         }
     }
 }

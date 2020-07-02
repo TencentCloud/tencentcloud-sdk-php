@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -194,56 +194,56 @@ class ClusterAsGroupOption extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("IsScaleDownEnabled",$param) and $param["IsScaleDownEnabled"] !== null) {
-            $this->IsScaleDownEnabled = $param["IsScaleDownEnabled"];
+        if (array_key_exists('IsScaleDownEnabled',$param) and $param['IsScaleDownEnabled'] !== null) {
+            $this->IsScaleDownEnabled = $param['IsScaleDownEnabled'];
         }
 
-        if (array_key_exists("Expander",$param) and $param["Expander"] !== null) {
-            $this->Expander = $param["Expander"];
+        if (array_key_exists('Expander',$param) and $param['Expander'] !== null) {
+            $this->Expander = $param['Expander'];
         }
 
-        if (array_key_exists("MaxEmptyBulkDelete",$param) and $param["MaxEmptyBulkDelete"] !== null) {
-            $this->MaxEmptyBulkDelete = $param["MaxEmptyBulkDelete"];
+        if (array_key_exists('MaxEmptyBulkDelete',$param) and $param['MaxEmptyBulkDelete'] !== null) {
+            $this->MaxEmptyBulkDelete = $param['MaxEmptyBulkDelete'];
         }
 
-        if (array_key_exists("ScaleDownDelay",$param) and $param["ScaleDownDelay"] !== null) {
-            $this->ScaleDownDelay = $param["ScaleDownDelay"];
+        if (array_key_exists('ScaleDownDelay',$param) and $param['ScaleDownDelay'] !== null) {
+            $this->ScaleDownDelay = $param['ScaleDownDelay'];
         }
 
-        if (array_key_exists("ScaleDownUnneededTime",$param) and $param["ScaleDownUnneededTime"] !== null) {
-            $this->ScaleDownUnneededTime = $param["ScaleDownUnneededTime"];
+        if (array_key_exists('ScaleDownUnneededTime',$param) and $param['ScaleDownUnneededTime'] !== null) {
+            $this->ScaleDownUnneededTime = $param['ScaleDownUnneededTime'];
         }
 
-        if (array_key_exists("ScaleDownUtilizationThreshold",$param) and $param["ScaleDownUtilizationThreshold"] !== null) {
-            $this->ScaleDownUtilizationThreshold = $param["ScaleDownUtilizationThreshold"];
+        if (array_key_exists('ScaleDownUtilizationThreshold',$param) and $param['ScaleDownUtilizationThreshold'] !== null) {
+            $this->ScaleDownUtilizationThreshold = $param['ScaleDownUtilizationThreshold'];
         }
 
-        if (array_key_exists("SkipNodesWithLocalStorage",$param) and $param["SkipNodesWithLocalStorage"] !== null) {
-            $this->SkipNodesWithLocalStorage = $param["SkipNodesWithLocalStorage"];
+        if (array_key_exists('SkipNodesWithLocalStorage',$param) and $param['SkipNodesWithLocalStorage'] !== null) {
+            $this->SkipNodesWithLocalStorage = $param['SkipNodesWithLocalStorage'];
         }
 
-        if (array_key_exists("SkipNodesWithSystemPods",$param) and $param["SkipNodesWithSystemPods"] !== null) {
-            $this->SkipNodesWithSystemPods = $param["SkipNodesWithSystemPods"];
+        if (array_key_exists('SkipNodesWithSystemPods',$param) and $param['SkipNodesWithSystemPods'] !== null) {
+            $this->SkipNodesWithSystemPods = $param['SkipNodesWithSystemPods'];
         }
 
-        if (array_key_exists("IgnoreDaemonSetsUtilization",$param) and $param["IgnoreDaemonSetsUtilization"] !== null) {
-            $this->IgnoreDaemonSetsUtilization = $param["IgnoreDaemonSetsUtilization"];
+        if (array_key_exists('IgnoreDaemonSetsUtilization',$param) and $param['IgnoreDaemonSetsUtilization'] !== null) {
+            $this->IgnoreDaemonSetsUtilization = $param['IgnoreDaemonSetsUtilization'];
         }
 
-        if (array_key_exists("OkTotalUnreadyCount",$param) and $param["OkTotalUnreadyCount"] !== null) {
-            $this->OkTotalUnreadyCount = $param["OkTotalUnreadyCount"];
+        if (array_key_exists('OkTotalUnreadyCount',$param) and $param['OkTotalUnreadyCount'] !== null) {
+            $this->OkTotalUnreadyCount = $param['OkTotalUnreadyCount'];
         }
 
-        if (array_key_exists("MaxTotalUnreadyPercentage",$param) and $param["MaxTotalUnreadyPercentage"] !== null) {
-            $this->MaxTotalUnreadyPercentage = $param["MaxTotalUnreadyPercentage"];
+        if (array_key_exists('MaxTotalUnreadyPercentage',$param) and $param['MaxTotalUnreadyPercentage'] !== null) {
+            $this->MaxTotalUnreadyPercentage = $param['MaxTotalUnreadyPercentage'];
         }
 
-        if (array_key_exists("ScaleDownUnreadyTime",$param) and $param["ScaleDownUnreadyTime"] !== null) {
-            $this->ScaleDownUnreadyTime = $param["ScaleDownUnreadyTime"];
+        if (array_key_exists('ScaleDownUnreadyTime',$param) and $param['ScaleDownUnreadyTime'] !== null) {
+            $this->ScaleDownUnreadyTime = $param['ScaleDownUnreadyTime'];
         }
 
-        if (array_key_exists("UnregisteredNodeRemovalTime",$param) and $param["UnregisteredNodeRemovalTime"] !== null) {
-            $this->UnregisteredNodeRemovalTime = $param["UnregisteredNodeRemovalTime"];
+        if (array_key_exists('UnregisteredNodeRemovalTime',$param) and $param['UnregisteredNodeRemovalTime'] !== null) {
+            $this->UnregisteredNodeRemovalTime = $param['UnregisteredNodeRemovalTime'];
         }
     }
 }

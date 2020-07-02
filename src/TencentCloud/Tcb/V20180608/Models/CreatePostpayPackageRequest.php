@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -126,32 +126,32 @@ class CreatePostpayPackageRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("EnvId",$param) and $param["EnvId"] !== null) {
-            $this->EnvId = $param["EnvId"];
+        if (array_key_exists('EnvId',$param) and $param['EnvId'] !== null) {
+            $this->EnvId = $param['EnvId'];
         }
 
-        if (array_key_exists("WxAppId",$param) and $param["WxAppId"] !== null) {
-            $this->WxAppId = $param["WxAppId"];
+        if (array_key_exists('WxAppId',$param) and $param['WxAppId'] !== null) {
+            $this->WxAppId = $param['WxAppId'];
         }
 
-        if (array_key_exists("Source",$param) and $param["Source"] !== null) {
-            $this->Source = $param["Source"];
+        if (array_key_exists('Source',$param) and $param['Source'] !== null) {
+            $this->Source = $param['Source'];
         }
 
-        if (array_key_exists("FreeQuota",$param) and $param["FreeQuota"] !== null) {
-            $this->FreeQuota = $param["FreeQuota"];
+        if (array_key_exists('FreeQuota',$param) and $param['FreeQuota'] !== null) {
+            $this->FreeQuota = $param['FreeQuota'];
         }
 
-        if (array_key_exists("Alias",$param) and $param["Alias"] !== null) {
-            $this->Alias = $param["Alias"];
+        if (array_key_exists('Alias',$param) and $param['Alias'] !== null) {
+            $this->Alias = $param['Alias'];
         }
 
-        if (array_key_exists("EnvSource",$param) and $param["EnvSource"] !== null) {
-            $this->EnvSource = $param["EnvSource"];
+        if (array_key_exists('EnvSource',$param) and $param['EnvSource'] !== null) {
+            $this->EnvSource = $param['EnvSource'];
         }
 
-        if (array_key_exists("Channel",$param) and $param["Channel"] !== null) {
-            $this->Channel = $param["Channel"];
+        if (array_key_exists('Channel',$param) and $param['Channel'] !== null) {
+            $this->Channel = $param['Channel'];
         }
     }
 }

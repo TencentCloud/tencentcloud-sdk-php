@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -62,17 +62,17 @@ class DrmOutputObject extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BucketName",$param) and $param["BucketName"] !== null) {
-            $this->BucketName = $param["BucketName"];
+        if (array_key_exists('BucketName',$param) and $param['BucketName'] !== null) {
+            $this->BucketName = $param['BucketName'];
         }
 
-        if (array_key_exists("ObjectName",$param) and $param["ObjectName"] !== null) {
-            $this->ObjectName = $param["ObjectName"];
+        if (array_key_exists('ObjectName',$param) and $param['ObjectName'] !== null) {
+            $this->ObjectName = $param['ObjectName'];
         }
 
-        if (array_key_exists("Para",$param) and $param["Para"] !== null) {
+        if (array_key_exists('Para',$param) and $param['Para'] !== null) {
             $this->Para = new DrmOutputPara();
-            $this->Para->deserialize($param["Para"]);
+            $this->Para->deserialize($param['Para']);
         }
     }
 }

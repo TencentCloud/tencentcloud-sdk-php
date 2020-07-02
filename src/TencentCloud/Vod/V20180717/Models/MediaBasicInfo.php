@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -198,73 +198,73 @@ class MediaBasicInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
-            $this->Description = $param["Description"];
+        if (array_key_exists('Description',$param) and $param['Description'] !== null) {
+            $this->Description = $param['Description'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
-            $this->UpdateTime = $param["UpdateTime"];
+        if (array_key_exists('UpdateTime',$param) and $param['UpdateTime'] !== null) {
+            $this->UpdateTime = $param['UpdateTime'];
         }
 
-        if (array_key_exists("ExpireTime",$param) and $param["ExpireTime"] !== null) {
-            $this->ExpireTime = $param["ExpireTime"];
+        if (array_key_exists('ExpireTime',$param) and $param['ExpireTime'] !== null) {
+            $this->ExpireTime = $param['ExpireTime'];
         }
 
-        if (array_key_exists("ClassId",$param) and $param["ClassId"] !== null) {
-            $this->ClassId = $param["ClassId"];
+        if (array_key_exists('ClassId',$param) and $param['ClassId'] !== null) {
+            $this->ClassId = $param['ClassId'];
         }
 
-        if (array_key_exists("ClassName",$param) and $param["ClassName"] !== null) {
-            $this->ClassName = $param["ClassName"];
+        if (array_key_exists('ClassName',$param) and $param['ClassName'] !== null) {
+            $this->ClassName = $param['ClassName'];
         }
 
-        if (array_key_exists("ClassPath",$param) and $param["ClassPath"] !== null) {
-            $this->ClassPath = $param["ClassPath"];
+        if (array_key_exists('ClassPath',$param) and $param['ClassPath'] !== null) {
+            $this->ClassPath = $param['ClassPath'];
         }
 
-        if (array_key_exists("CoverUrl",$param) and $param["CoverUrl"] !== null) {
-            $this->CoverUrl = $param["CoverUrl"];
+        if (array_key_exists('CoverUrl',$param) and $param['CoverUrl'] !== null) {
+            $this->CoverUrl = $param['CoverUrl'];
         }
 
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists('Type',$param) and $param['Type'] !== null) {
+            $this->Type = $param['Type'];
         }
 
-        if (array_key_exists("MediaUrl",$param) and $param["MediaUrl"] !== null) {
-            $this->MediaUrl = $param["MediaUrl"];
+        if (array_key_exists('MediaUrl',$param) and $param['MediaUrl'] !== null) {
+            $this->MediaUrl = $param['MediaUrl'];
         }
 
-        if (array_key_exists("SourceInfo",$param) and $param["SourceInfo"] !== null) {
+        if (array_key_exists('SourceInfo',$param) and $param['SourceInfo'] !== null) {
             $this->SourceInfo = new MediaSourceData();
-            $this->SourceInfo->deserialize($param["SourceInfo"]);
+            $this->SourceInfo->deserialize($param['SourceInfo']);
         }
 
-        if (array_key_exists("StorageRegion",$param) and $param["StorageRegion"] !== null) {
-            $this->StorageRegion = $param["StorageRegion"];
+        if (array_key_exists('StorageRegion',$param) and $param['StorageRegion'] !== null) {
+            $this->StorageRegion = $param['StorageRegion'];
         }
 
-        if (array_key_exists("TagSet",$param) and $param["TagSet"] !== null) {
-            $this->TagSet = $param["TagSet"];
+        if (array_key_exists('TagSet',$param) and $param['TagSet'] !== null) {
+            $this->TagSet = $param['TagSet'];
         }
 
-        if (array_key_exists("Vid",$param) and $param["Vid"] !== null) {
-            $this->Vid = $param["Vid"];
+        if (array_key_exists('Vid',$param) and $param['Vid'] !== null) {
+            $this->Vid = $param['Vid'];
         }
 
-        if (array_key_exists("Category",$param) and $param["Category"] !== null) {
-            $this->Category = $param["Category"];
+        if (array_key_exists('Category',$param) and $param['Category'] !== null) {
+            $this->Category = $param['Category'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
     }
 }

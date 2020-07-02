@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -94,37 +94,37 @@ class DescribeBillBandwidthAndFluxListResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PeakBandwidthTime",$param) and $param["PeakBandwidthTime"] !== null) {
-            $this->PeakBandwidthTime = $param["PeakBandwidthTime"];
+        if (array_key_exists('PeakBandwidthTime',$param) and $param['PeakBandwidthTime'] !== null) {
+            $this->PeakBandwidthTime = $param['PeakBandwidthTime'];
         }
 
-        if (array_key_exists("PeakBandwidth",$param) and $param["PeakBandwidth"] !== null) {
-            $this->PeakBandwidth = $param["PeakBandwidth"];
+        if (array_key_exists('PeakBandwidth',$param) and $param['PeakBandwidth'] !== null) {
+            $this->PeakBandwidth = $param['PeakBandwidth'];
         }
 
-        if (array_key_exists("P95PeakBandwidthTime",$param) and $param["P95PeakBandwidthTime"] !== null) {
-            $this->P95PeakBandwidthTime = $param["P95PeakBandwidthTime"];
+        if (array_key_exists('P95PeakBandwidthTime',$param) and $param['P95PeakBandwidthTime'] !== null) {
+            $this->P95PeakBandwidthTime = $param['P95PeakBandwidthTime'];
         }
 
-        if (array_key_exists("P95PeakBandwidth",$param) and $param["P95PeakBandwidth"] !== null) {
-            $this->P95PeakBandwidth = $param["P95PeakBandwidth"];
+        if (array_key_exists('P95PeakBandwidth',$param) and $param['P95PeakBandwidth'] !== null) {
+            $this->P95PeakBandwidth = $param['P95PeakBandwidth'];
         }
 
-        if (array_key_exists("SumFlux",$param) and $param["SumFlux"] !== null) {
-            $this->SumFlux = $param["SumFlux"];
+        if (array_key_exists('SumFlux',$param) and $param['SumFlux'] !== null) {
+            $this->SumFlux = $param['SumFlux'];
         }
 
-        if (array_key_exists("DataInfoList",$param) and $param["DataInfoList"] !== null) {
+        if (array_key_exists('DataInfoList',$param) and $param['DataInfoList'] !== null) {
             $this->DataInfoList = [];
-            foreach ($param["DataInfoList"] as $key => $value){
+            foreach ($param['DataInfoList'] as $key => $value){
                 $obj = new BillDataInfo();
                 $obj->deserialize($value);
                 array_push($this->DataInfoList, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

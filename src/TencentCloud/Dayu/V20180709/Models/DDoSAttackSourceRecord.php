@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -78,24 +78,24 @@ class DDoSAttackSourceRecord extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SrcIp",$param) and $param["SrcIp"] !== null) {
-            $this->SrcIp = $param["SrcIp"];
+        if (array_key_exists('SrcIp',$param) and $param['SrcIp'] !== null) {
+            $this->SrcIp = $param['SrcIp'];
         }
 
-        if (array_key_exists("Province",$param) and $param["Province"] !== null) {
-            $this->Province = $param["Province"];
+        if (array_key_exists('Province',$param) and $param['Province'] !== null) {
+            $this->Province = $param['Province'];
         }
 
-        if (array_key_exists("Nation",$param) and $param["Nation"] !== null) {
-            $this->Nation = $param["Nation"];
+        if (array_key_exists('Nation',$param) and $param['Nation'] !== null) {
+            $this->Nation = $param['Nation'];
         }
 
-        if (array_key_exists("PacketSum",$param) and $param["PacketSum"] !== null) {
-            $this->PacketSum = $param["PacketSum"];
+        if (array_key_exists('PacketSum',$param) and $param['PacketSum'] !== null) {
+            $this->PacketSum = $param['PacketSum'];
         }
 
-        if (array_key_exists("PacketLen",$param) and $param["PacketLen"] !== null) {
-            $this->PacketLen = $param["PacketLen"];
+        if (array_key_exists('PacketLen',$param) and $param['PacketLen'] !== null) {
+            $this->PacketLen = $param['PacketLen'];
         }
     }
 }

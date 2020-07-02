@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -110,40 +110,40 @@ class ParameterDetail extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("ParamType",$param) and $param["ParamType"] !== null) {
-            $this->ParamType = $param["ParamType"];
+        if (array_key_exists('ParamType',$param) and $param['ParamType'] !== null) {
+            $this->ParamType = $param['ParamType'];
         }
 
-        if (array_key_exists("Default",$param) and $param["Default"] !== null) {
-            $this->Default = $param["Default"];
+        if (array_key_exists('Default',$param) and $param['Default'] !== null) {
+            $this->Default = $param['Default'];
         }
 
-        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
-            $this->Description = $param["Description"];
+        if (array_key_exists('Description',$param) and $param['Description'] !== null) {
+            $this->Description = $param['Description'];
         }
 
-        if (array_key_exists("CurrentValue",$param) and $param["CurrentValue"] !== null) {
-            $this->CurrentValue = $param["CurrentValue"];
+        if (array_key_exists('CurrentValue',$param) and $param['CurrentValue'] !== null) {
+            $this->CurrentValue = $param['CurrentValue'];
         }
 
-        if (array_key_exists("NeedReboot",$param) and $param["NeedReboot"] !== null) {
-            $this->NeedReboot = $param["NeedReboot"];
+        if (array_key_exists('NeedReboot',$param) and $param['NeedReboot'] !== null) {
+            $this->NeedReboot = $param['NeedReboot'];
         }
 
-        if (array_key_exists("Max",$param) and $param["Max"] !== null) {
-            $this->Max = $param["Max"];
+        if (array_key_exists('Max',$param) and $param['Max'] !== null) {
+            $this->Max = $param['Max'];
         }
 
-        if (array_key_exists("Min",$param) and $param["Min"] !== null) {
-            $this->Min = $param["Min"];
+        if (array_key_exists('Min',$param) and $param['Min'] !== null) {
+            $this->Min = $param['Min'];
         }
 
-        if (array_key_exists("EnumValue",$param) and $param["EnumValue"] !== null) {
-            $this->EnumValue = $param["EnumValue"];
+        if (array_key_exists('EnumValue',$param) and $param['EnumValue'] !== null) {
+            $this->EnumValue = $param['EnumValue'];
         }
     }
 }

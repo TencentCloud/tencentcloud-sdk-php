@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -126,49 +126,49 @@ class CreateLoadBalancersRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
-            $this->VpcId = $param["VpcId"];
+        if (array_key_exists('VpcId',$param) and $param['VpcId'] !== null) {
+            $this->VpcId = $param['VpcId'];
         }
 
-        if (array_key_exists("LoadBalancerType",$param) and $param["LoadBalancerType"] !== null) {
-            $this->LoadBalancerType = $param["LoadBalancerType"];
+        if (array_key_exists('LoadBalancerType',$param) and $param['LoadBalancerType'] !== null) {
+            $this->LoadBalancerType = $param['LoadBalancerType'];
         }
 
-        if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
-            $this->SubnetId = $param["SubnetId"];
+        if (array_key_exists('SubnetId',$param) and $param['SubnetId'] !== null) {
+            $this->SubnetId = $param['SubnetId'];
         }
 
-        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
-            $this->ProjectId = $param["ProjectId"];
+        if (array_key_exists('ProjectId',$param) and $param['ProjectId'] !== null) {
+            $this->ProjectId = $param['ProjectId'];
         }
 
-        if (array_key_exists("GoodsNum",$param) and $param["GoodsNum"] !== null) {
-            $this->GoodsNum = $param["GoodsNum"];
+        if (array_key_exists('GoodsNum',$param) and $param['GoodsNum'] !== null) {
+            $this->GoodsNum = $param['GoodsNum'];
         }
 
-        if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {
-            $this->PayMode = $param["PayMode"];
+        if (array_key_exists('PayMode',$param) and $param['PayMode'] !== null) {
+            $this->PayMode = $param['PayMode'];
         }
 
-        if (array_key_exists("TgwSetType",$param) and $param["TgwSetType"] !== null) {
-            $this->TgwSetType = $param["TgwSetType"];
+        if (array_key_exists('TgwSetType',$param) and $param['TgwSetType'] !== null) {
+            $this->TgwSetType = $param['TgwSetType'];
         }
 
-        if (array_key_exists("Exclusive",$param) and $param["Exclusive"] !== null) {
-            $this->Exclusive = $param["Exclusive"];
+        if (array_key_exists('Exclusive',$param) and $param['Exclusive'] !== null) {
+            $this->Exclusive = $param['Exclusive'];
         }
 
-        if (array_key_exists("SpecifiedVips",$param) and $param["SpecifiedVips"] !== null) {
-            $this->SpecifiedVips = $param["SpecifiedVips"];
+        if (array_key_exists('SpecifiedVips',$param) and $param['SpecifiedVips'] !== null) {
+            $this->SpecifiedVips = $param['SpecifiedVips'];
         }
 
-        if (array_key_exists("BzConf",$param) and $param["BzConf"] !== null) {
+        if (array_key_exists('BzConf',$param) and $param['BzConf'] !== null) {
             $this->BzConf = new CreateLoadBalancerBzConf();
-            $this->BzConf->deserialize($param["BzConf"]);
+            $this->BzConf->deserialize($param['BzConf']);
         }
 
-        if (array_key_exists("IpProtocolType",$param) and $param["IpProtocolType"] !== null) {
-            $this->IpProtocolType = $param["IpProtocolType"];
+        if (array_key_exists('IpProtocolType',$param) and $param['IpProtocolType'] !== null) {
+            $this->IpProtocolType = $param['IpProtocolType'];
         }
     }
 }

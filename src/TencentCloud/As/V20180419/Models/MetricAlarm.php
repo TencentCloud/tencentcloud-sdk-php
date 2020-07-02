@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -86,28 +86,28 @@ class MetricAlarm extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ComparisonOperator",$param) and $param["ComparisonOperator"] !== null) {
-            $this->ComparisonOperator = $param["ComparisonOperator"];
+        if (array_key_exists('ComparisonOperator',$param) and $param['ComparisonOperator'] !== null) {
+            $this->ComparisonOperator = $param['ComparisonOperator'];
         }
 
-        if (array_key_exists("MetricName",$param) and $param["MetricName"] !== null) {
-            $this->MetricName = $param["MetricName"];
+        if (array_key_exists('MetricName',$param) and $param['MetricName'] !== null) {
+            $this->MetricName = $param['MetricName'];
         }
 
-        if (array_key_exists("Threshold",$param) and $param["Threshold"] !== null) {
-            $this->Threshold = $param["Threshold"];
+        if (array_key_exists('Threshold',$param) and $param['Threshold'] !== null) {
+            $this->Threshold = $param['Threshold'];
         }
 
-        if (array_key_exists("Period",$param) and $param["Period"] !== null) {
-            $this->Period = $param["Period"];
+        if (array_key_exists('Period',$param) and $param['Period'] !== null) {
+            $this->Period = $param['Period'];
         }
 
-        if (array_key_exists("ContinuousTime",$param) and $param["ContinuousTime"] !== null) {
-            $this->ContinuousTime = $param["ContinuousTime"];
+        if (array_key_exists('ContinuousTime',$param) and $param['ContinuousTime'] !== null) {
+            $this->ContinuousTime = $param['ContinuousTime'];
         }
 
-        if (array_key_exists("Statistic",$param) and $param["Statistic"] !== null) {
-            $this->Statistic = $param["Statistic"];
+        if (array_key_exists('Statistic',$param) and $param['Statistic'] !== null) {
+            $this->Statistic = $param['Statistic'];
         }
     }
 }

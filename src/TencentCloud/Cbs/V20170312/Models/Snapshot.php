@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -182,82 +182,82 @@ class Snapshot extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SnapshotId",$param) and $param["SnapshotId"] !== null) {
-            $this->SnapshotId = $param["SnapshotId"];
+        if (array_key_exists('SnapshotId',$param) and $param['SnapshotId'] !== null) {
+            $this->SnapshotId = $param['SnapshotId'];
         }
 
-        if (array_key_exists("Placement",$param) and $param["Placement"] !== null) {
+        if (array_key_exists('Placement',$param) and $param['Placement'] !== null) {
             $this->Placement = new Placement();
-            $this->Placement->deserialize($param["Placement"]);
+            $this->Placement->deserialize($param['Placement']);
         }
 
-        if (array_key_exists("DiskUsage",$param) and $param["DiskUsage"] !== null) {
-            $this->DiskUsage = $param["DiskUsage"];
+        if (array_key_exists('DiskUsage',$param) and $param['DiskUsage'] !== null) {
+            $this->DiskUsage = $param['DiskUsage'];
         }
 
-        if (array_key_exists("DiskId",$param) and $param["DiskId"] !== null) {
-            $this->DiskId = $param["DiskId"];
+        if (array_key_exists('DiskId',$param) and $param['DiskId'] !== null) {
+            $this->DiskId = $param['DiskId'];
         }
 
-        if (array_key_exists("DiskSize",$param) and $param["DiskSize"] !== null) {
-            $this->DiskSize = $param["DiskSize"];
+        if (array_key_exists('DiskSize',$param) and $param['DiskSize'] !== null) {
+            $this->DiskSize = $param['DiskSize'];
         }
 
-        if (array_key_exists("SnapshotState",$param) and $param["SnapshotState"] !== null) {
-            $this->SnapshotState = $param["SnapshotState"];
+        if (array_key_exists('SnapshotState',$param) and $param['SnapshotState'] !== null) {
+            $this->SnapshotState = $param['SnapshotState'];
         }
 
-        if (array_key_exists("SnapshotName",$param) and $param["SnapshotName"] !== null) {
-            $this->SnapshotName = $param["SnapshotName"];
+        if (array_key_exists('SnapshotName',$param) and $param['SnapshotName'] !== null) {
+            $this->SnapshotName = $param['SnapshotName'];
         }
 
-        if (array_key_exists("Percent",$param) and $param["Percent"] !== null) {
-            $this->Percent = $param["Percent"];
+        if (array_key_exists('Percent',$param) and $param['Percent'] !== null) {
+            $this->Percent = $param['Percent'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("DeadlineTime",$param) and $param["DeadlineTime"] !== null) {
-            $this->DeadlineTime = $param["DeadlineTime"];
+        if (array_key_exists('DeadlineTime',$param) and $param['DeadlineTime'] !== null) {
+            $this->DeadlineTime = $param['DeadlineTime'];
         }
 
-        if (array_key_exists("Encrypt",$param) and $param["Encrypt"] !== null) {
-            $this->Encrypt = $param["Encrypt"];
+        if (array_key_exists('Encrypt',$param) and $param['Encrypt'] !== null) {
+            $this->Encrypt = $param['Encrypt'];
         }
 
-        if (array_key_exists("IsPermanent",$param) and $param["IsPermanent"] !== null) {
-            $this->IsPermanent = $param["IsPermanent"];
+        if (array_key_exists('IsPermanent',$param) and $param['IsPermanent'] !== null) {
+            $this->IsPermanent = $param['IsPermanent'];
         }
 
-        if (array_key_exists("CopyingToRegions",$param) and $param["CopyingToRegions"] !== null) {
-            $this->CopyingToRegions = $param["CopyingToRegions"];
+        if (array_key_exists('CopyingToRegions',$param) and $param['CopyingToRegions'] !== null) {
+            $this->CopyingToRegions = $param['CopyingToRegions'];
         }
 
-        if (array_key_exists("CopyFromRemote",$param) and $param["CopyFromRemote"] !== null) {
-            $this->CopyFromRemote = $param["CopyFromRemote"];
+        if (array_key_exists('CopyFromRemote',$param) and $param['CopyFromRemote'] !== null) {
+            $this->CopyFromRemote = $param['CopyFromRemote'];
         }
 
-        if (array_key_exists("Images",$param) and $param["Images"] !== null) {
+        if (array_key_exists('Images',$param) and $param['Images'] !== null) {
             $this->Images = [];
-            foreach ($param["Images"] as $key => $value){
+            foreach ($param['Images'] as $key => $value){
                 $obj = new Image();
                 $obj->deserialize($value);
                 array_push($this->Images, $obj);
             }
         }
 
-        if (array_key_exists("ImageCount",$param) and $param["ImageCount"] !== null) {
-            $this->ImageCount = $param["ImageCount"];
+        if (array_key_exists('ImageCount',$param) and $param['ImageCount'] !== null) {
+            $this->ImageCount = $param['ImageCount'];
         }
 
-        if (array_key_exists("SnapshotType",$param) and $param["SnapshotType"] !== null) {
-            $this->SnapshotType = $param["SnapshotType"];
+        if (array_key_exists('SnapshotType',$param) and $param['SnapshotType'] !== null) {
+            $this->SnapshotType = $param['SnapshotType'];
         }
 
-        if (array_key_exists("ShareReference",$param) and $param["ShareReference"] !== null) {
-            $this->ShareReference = $param["ShareReference"];
+        if (array_key_exists('ShareReference',$param) and $param['ShareReference'] !== null) {
+            $this->ShareReference = $param['ShareReference'];
         }
     }
 }

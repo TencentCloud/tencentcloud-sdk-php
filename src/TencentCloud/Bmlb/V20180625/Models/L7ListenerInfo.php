@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -142,61 +142,61 @@ class L7ListenerInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ListenerId",$param) and $param["ListenerId"] !== null) {
-            $this->ListenerId = $param["ListenerId"];
+        if (array_key_exists('ListenerId',$param) and $param['ListenerId'] !== null) {
+            $this->ListenerId = $param['ListenerId'];
         }
 
-        if (array_key_exists("ListenerName",$param) and $param["ListenerName"] !== null) {
-            $this->ListenerName = $param["ListenerName"];
+        if (array_key_exists('ListenerName',$param) and $param['ListenerName'] !== null) {
+            $this->ListenerName = $param['ListenerName'];
         }
 
-        if (array_key_exists("Protocol",$param) and $param["Protocol"] !== null) {
-            $this->Protocol = $param["Protocol"];
+        if (array_key_exists('Protocol',$param) and $param['Protocol'] !== null) {
+            $this->Protocol = $param['Protocol'];
         }
 
-        if (array_key_exists("LoadBalancerPort",$param) and $param["LoadBalancerPort"] !== null) {
-            $this->LoadBalancerPort = $param["LoadBalancerPort"];
+        if (array_key_exists('LoadBalancerPort',$param) and $param['LoadBalancerPort'] !== null) {
+            $this->LoadBalancerPort = $param['LoadBalancerPort'];
         }
 
-        if (array_key_exists("Bandwidth",$param) and $param["Bandwidth"] !== null) {
-            $this->Bandwidth = $param["Bandwidth"];
+        if (array_key_exists('Bandwidth',$param) and $param['Bandwidth'] !== null) {
+            $this->Bandwidth = $param['Bandwidth'];
         }
 
-        if (array_key_exists("ListenerType",$param) and $param["ListenerType"] !== null) {
-            $this->ListenerType = $param["ListenerType"];
+        if (array_key_exists('ListenerType',$param) and $param['ListenerType'] !== null) {
+            $this->ListenerType = $param['ListenerType'];
         }
 
-        if (array_key_exists("SslMode",$param) and $param["SslMode"] !== null) {
-            $this->SslMode = $param["SslMode"];
+        if (array_key_exists('SslMode',$param) and $param['SslMode'] !== null) {
+            $this->SslMode = $param['SslMode'];
         }
 
-        if (array_key_exists("CertId",$param) and $param["CertId"] !== null) {
-            $this->CertId = $param["CertId"];
+        if (array_key_exists('CertId',$param) and $param['CertId'] !== null) {
+            $this->CertId = $param['CertId'];
         }
 
-        if (array_key_exists("CertCaId",$param) and $param["CertCaId"] !== null) {
-            $this->CertCaId = $param["CertCaId"];
+        if (array_key_exists('CertCaId',$param) and $param['CertCaId'] !== null) {
+            $this->CertCaId = $param['CertCaId'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("AddTimestamp",$param) and $param["AddTimestamp"] !== null) {
-            $this->AddTimestamp = $param["AddTimestamp"];
+        if (array_key_exists('AddTimestamp',$param) and $param['AddTimestamp'] !== null) {
+            $this->AddTimestamp = $param['AddTimestamp'];
         }
 
-        if (array_key_exists("RuleSet",$param) and $param["RuleSet"] !== null) {
+        if (array_key_exists('RuleSet',$param) and $param['RuleSet'] !== null) {
             $this->RuleSet = [];
-            foreach ($param["RuleSet"] as $key => $value){
+            foreach ($param['RuleSet'] as $key => $value){
                 $obj = new L7ListenerInfoRule();
                 $obj->deserialize($value);
                 array_push($this->RuleSet, $obj);
             }
         }
 
-        if (array_key_exists("ForwardProtocol",$param) and $param["ForwardProtocol"] !== null) {
-            $this->ForwardProtocol = $param["ForwardProtocol"];
+        if (array_key_exists('ForwardProtocol',$param) and $param['ForwardProtocol'] !== null) {
+            $this->ForwardProtocol = $param['ForwardProtocol'];
         }
     }
 }

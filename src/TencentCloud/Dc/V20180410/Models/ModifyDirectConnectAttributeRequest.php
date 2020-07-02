@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -126,48 +126,48 @@ class ModifyDirectConnectAttributeRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DirectConnectId",$param) and $param["DirectConnectId"] !== null) {
-            $this->DirectConnectId = $param["DirectConnectId"];
+        if (array_key_exists('DirectConnectId',$param) and $param['DirectConnectId'] !== null) {
+            $this->DirectConnectId = $param['DirectConnectId'];
         }
 
-        if (array_key_exists("DirectConnectName",$param) and $param["DirectConnectName"] !== null) {
-            $this->DirectConnectName = $param["DirectConnectName"];
+        if (array_key_exists('DirectConnectName',$param) and $param['DirectConnectName'] !== null) {
+            $this->DirectConnectName = $param['DirectConnectName'];
         }
 
-        if (array_key_exists("CircuitCode",$param) and $param["CircuitCode"] !== null) {
-            $this->CircuitCode = $param["CircuitCode"];
+        if (array_key_exists('CircuitCode',$param) and $param['CircuitCode'] !== null) {
+            $this->CircuitCode = $param['CircuitCode'];
         }
 
-        if (array_key_exists("Vlan",$param) and $param["Vlan"] !== null) {
-            $this->Vlan = $param["Vlan"];
+        if (array_key_exists('Vlan',$param) and $param['Vlan'] !== null) {
+            $this->Vlan = $param['Vlan'];
         }
 
-        if (array_key_exists("TencentAddress",$param) and $param["TencentAddress"] !== null) {
-            $this->TencentAddress = $param["TencentAddress"];
+        if (array_key_exists('TencentAddress',$param) and $param['TencentAddress'] !== null) {
+            $this->TencentAddress = $param['TencentAddress'];
         }
 
-        if (array_key_exists("CustomerAddress",$param) and $param["CustomerAddress"] !== null) {
-            $this->CustomerAddress = $param["CustomerAddress"];
+        if (array_key_exists('CustomerAddress',$param) and $param['CustomerAddress'] !== null) {
+            $this->CustomerAddress = $param['CustomerAddress'];
         }
 
-        if (array_key_exists("CustomerName",$param) and $param["CustomerName"] !== null) {
-            $this->CustomerName = $param["CustomerName"];
+        if (array_key_exists('CustomerName',$param) and $param['CustomerName'] !== null) {
+            $this->CustomerName = $param['CustomerName'];
         }
 
-        if (array_key_exists("CustomerContactMail",$param) and $param["CustomerContactMail"] !== null) {
-            $this->CustomerContactMail = $param["CustomerContactMail"];
+        if (array_key_exists('CustomerContactMail',$param) and $param['CustomerContactMail'] !== null) {
+            $this->CustomerContactMail = $param['CustomerContactMail'];
         }
 
-        if (array_key_exists("CustomerContactNumber",$param) and $param["CustomerContactNumber"] !== null) {
-            $this->CustomerContactNumber = $param["CustomerContactNumber"];
+        if (array_key_exists('CustomerContactNumber',$param) and $param['CustomerContactNumber'] !== null) {
+            $this->CustomerContactNumber = $param['CustomerContactNumber'];
         }
 
-        if (array_key_exists("FaultReportContactPerson",$param) and $param["FaultReportContactPerson"] !== null) {
-            $this->FaultReportContactPerson = $param["FaultReportContactPerson"];
+        if (array_key_exists('FaultReportContactPerson',$param) and $param['FaultReportContactPerson'] !== null) {
+            $this->FaultReportContactPerson = $param['FaultReportContactPerson'];
         }
 
-        if (array_key_exists("FaultReportContactNumber",$param) and $param["FaultReportContactNumber"] !== null) {
-            $this->FaultReportContactNumber = $param["FaultReportContactNumber"];
+        if (array_key_exists('FaultReportContactNumber',$param) and $param['FaultReportContactNumber'] !== null) {
+            $this->FaultReportContactNumber = $param['FaultReportContactNumber'];
         }
     }
 }

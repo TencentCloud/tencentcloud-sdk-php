@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -94,32 +94,32 @@ class CreateL7RuleCertRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Business",$param) and $param["Business"] !== null) {
-            $this->Business = $param["Business"];
+        if (array_key_exists('Business',$param) and $param['Business'] !== null) {
+            $this->Business = $param['Business'];
         }
 
-        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
-            $this->Id = $param["Id"];
+        if (array_key_exists('Id',$param) and $param['Id'] !== null) {
+            $this->Id = $param['Id'];
         }
 
-        if (array_key_exists("RuleId",$param) and $param["RuleId"] !== null) {
-            $this->RuleId = $param["RuleId"];
+        if (array_key_exists('RuleId',$param) and $param['RuleId'] !== null) {
+            $this->RuleId = $param['RuleId'];
         }
 
-        if (array_key_exists("CertType",$param) and $param["CertType"] !== null) {
-            $this->CertType = $param["CertType"];
+        if (array_key_exists('CertType',$param) and $param['CertType'] !== null) {
+            $this->CertType = $param['CertType'];
         }
 
-        if (array_key_exists("SSLId",$param) and $param["SSLId"] !== null) {
-            $this->SSLId = $param["SSLId"];
+        if (array_key_exists('SSLId',$param) and $param['SSLId'] !== null) {
+            $this->SSLId = $param['SSLId'];
         }
 
-        if (array_key_exists("Cert",$param) and $param["Cert"] !== null) {
-            $this->Cert = $param["Cert"];
+        if (array_key_exists('Cert',$param) and $param['Cert'] !== null) {
+            $this->Cert = $param['Cert'];
         }
 
-        if (array_key_exists("PrivateKey",$param) and $param["PrivateKey"] !== null) {
-            $this->PrivateKey = $param["PrivateKey"];
+        if (array_key_exists('PrivateKey',$param) and $param['PrivateKey'] !== null) {
+            $this->PrivateKey = $param['PrivateKey'];
         }
     }
 }

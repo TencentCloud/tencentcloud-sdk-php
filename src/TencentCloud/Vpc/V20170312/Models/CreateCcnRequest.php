@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceChargeType(string $InstanceChargeType) 设置计费模式，PREPAID：表示预付费，即包年包月，POSTPAID：表示后付费，即按量计费。默认：POSTPAID。
  * @method string getBandwidthLimitType() 获取限速类型，OUTER_REGION_LIMIT表示地域出口限速，INTER_REGION_LIMIT为地域间限速，默认为OUTER_REGION_LIMIT
  * @method void setBandwidthLimitType(string $BandwidthLimitType) 设置限速类型，OUTER_REGION_LIMIT表示地域出口限速，INTER_REGION_LIMIT为地域间限速，默认为OUTER_REGION_LIMIT
- * @method array getTags() 获取指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
- * @method void setTags(array $Tags) 设置指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
+ * @method array getTags() 获取指定绑定的标签列表，例如：[{'Key': 'city', 'Value': 'shanghai'}]
+ * @method void setTags(array $Tags) 设置指定绑定的标签列表，例如：[{'Key': 'city', 'Value': 'shanghai'}]
  */
 class CreateCcnRequest extends AbstractModel
 {
@@ -61,7 +61,7 @@ class CreateCcnRequest extends AbstractModel
     public $BandwidthLimitType;
 
     /**
-     * @var array 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
+     * @var array 指定绑定的标签列表，例如：[{'Key': 'city', 'Value': 'shanghai'}]
      */
     public $Tags;
 
@@ -71,7 +71,7 @@ class CreateCcnRequest extends AbstractModel
      * @param string $QosLevel CCN服务质量，'PT'：白金，'AU'：金，'AG'：银，默认为‘AU’。
      * @param string $InstanceChargeType 计费模式，PREPAID：表示预付费，即包年包月，POSTPAID：表示后付费，即按量计费。默认：POSTPAID。
      * @param string $BandwidthLimitType 限速类型，OUTER_REGION_LIMIT表示地域出口限速，INTER_REGION_LIMIT为地域间限速，默认为OUTER_REGION_LIMIT
-     * @param array $Tags 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
+     * @param array $Tags 指定绑定的标签列表，例如：[{'Key': 'city', 'Value': 'shanghai'}]
      */
     function __construct()
     {
@@ -86,29 +86,29 @@ class CreateCcnRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CcnName",$param) and $param["CcnName"] !== null) {
-            $this->CcnName = $param["CcnName"];
+        if (array_key_exists('CcnName',$param) and $param['CcnName'] !== null) {
+            $this->CcnName = $param['CcnName'];
         }
 
-        if (array_key_exists("CcnDescription",$param) and $param["CcnDescription"] !== null) {
-            $this->CcnDescription = $param["CcnDescription"];
+        if (array_key_exists('CcnDescription',$param) and $param['CcnDescription'] !== null) {
+            $this->CcnDescription = $param['CcnDescription'];
         }
 
-        if (array_key_exists("QosLevel",$param) and $param["QosLevel"] !== null) {
-            $this->QosLevel = $param["QosLevel"];
+        if (array_key_exists('QosLevel',$param) and $param['QosLevel'] !== null) {
+            $this->QosLevel = $param['QosLevel'];
         }
 
-        if (array_key_exists("InstanceChargeType",$param) and $param["InstanceChargeType"] !== null) {
-            $this->InstanceChargeType = $param["InstanceChargeType"];
+        if (array_key_exists('InstanceChargeType',$param) and $param['InstanceChargeType'] !== null) {
+            $this->InstanceChargeType = $param['InstanceChargeType'];
         }
 
-        if (array_key_exists("BandwidthLimitType",$param) and $param["BandwidthLimitType"] !== null) {
-            $this->BandwidthLimitType = $param["BandwidthLimitType"];
+        if (array_key_exists('BandwidthLimitType',$param) and $param['BandwidthLimitType'] !== null) {
+            $this->BandwidthLimitType = $param['BandwidthLimitType'];
         }
 
-        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+        if (array_key_exists('Tags',$param) and $param['Tags'] !== null) {
             $this->Tags = [];
-            foreach ($param["Tags"] as $key => $value){
+            foreach ($param['Tags'] as $key => $value){
                 $obj = new Tag();
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);

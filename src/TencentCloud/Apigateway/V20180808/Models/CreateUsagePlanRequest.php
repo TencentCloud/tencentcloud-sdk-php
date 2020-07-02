@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -70,20 +70,20 @@ class CreateUsagePlanRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("UsagePlanName",$param) and $param["UsagePlanName"] !== null) {
-            $this->UsagePlanName = $param["UsagePlanName"];
+        if (array_key_exists('UsagePlanName',$param) and $param['UsagePlanName'] !== null) {
+            $this->UsagePlanName = $param['UsagePlanName'];
         }
 
-        if (array_key_exists("UsagePlanDesc",$param) and $param["UsagePlanDesc"] !== null) {
-            $this->UsagePlanDesc = $param["UsagePlanDesc"];
+        if (array_key_exists('UsagePlanDesc',$param) and $param['UsagePlanDesc'] !== null) {
+            $this->UsagePlanDesc = $param['UsagePlanDesc'];
         }
 
-        if (array_key_exists("MaxRequestNum",$param) and $param["MaxRequestNum"] !== null) {
-            $this->MaxRequestNum = $param["MaxRequestNum"];
+        if (array_key_exists('MaxRequestNum',$param) and $param['MaxRequestNum'] !== null) {
+            $this->MaxRequestNum = $param['MaxRequestNum'];
         }
 
-        if (array_key_exists("MaxRequestNumPreSec",$param) and $param["MaxRequestNumPreSec"] !== null) {
-            $this->MaxRequestNumPreSec = $param["MaxRequestNumPreSec"];
+        if (array_key_exists('MaxRequestNumPreSec',$param) and $param['MaxRequestNumPreSec'] !== null) {
+            $this->MaxRequestNumPreSec = $param['MaxRequestNumPreSec'];
         }
     }
 }

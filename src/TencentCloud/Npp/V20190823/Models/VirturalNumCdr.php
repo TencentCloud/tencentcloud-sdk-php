@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -150,60 +150,60 @@ class VirturalNumCdr extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CallId",$param) and $param["CallId"] !== null) {
-            $this->CallId = $param["CallId"];
+        if (array_key_exists('CallId',$param) and $param['CallId'] !== null) {
+            $this->CallId = $param['CallId'];
         }
 
-        if (array_key_exists("BindId",$param) and $param["BindId"] !== null) {
-            $this->BindId = $param["BindId"];
+        if (array_key_exists('BindId',$param) and $param['BindId'] !== null) {
+            $this->BindId = $param['BindId'];
         }
 
-        if (array_key_exists("Src",$param) and $param["Src"] !== null) {
-            $this->Src = $param["Src"];
+        if (array_key_exists('Src',$param) and $param['Src'] !== null) {
+            $this->Src = $param['Src'];
         }
 
-        if (array_key_exists("Dst",$param) and $param["Dst"] !== null) {
-            $this->Dst = $param["Dst"];
+        if (array_key_exists('Dst',$param) and $param['Dst'] !== null) {
+            $this->Dst = $param['Dst'];
         }
 
-        if (array_key_exists("DstVirtualNum",$param) and $param["DstVirtualNum"] !== null) {
-            $this->DstVirtualNum = $param["DstVirtualNum"];
+        if (array_key_exists('DstVirtualNum',$param) and $param['DstVirtualNum'] !== null) {
+            $this->DstVirtualNum = $param['DstVirtualNum'];
         }
 
-        if (array_key_exists("CallCenterAcceptTime",$param) and $param["CallCenterAcceptTime"] !== null) {
-            $this->CallCenterAcceptTime = $param["CallCenterAcceptTime"];
+        if (array_key_exists('CallCenterAcceptTime',$param) and $param['CallCenterAcceptTime'] !== null) {
+            $this->CallCenterAcceptTime = $param['CallCenterAcceptTime'];
         }
 
-        if (array_key_exists("StartDstCallTime",$param) and $param["StartDstCallTime"] !== null) {
-            $this->StartDstCallTime = $param["StartDstCallTime"];
+        if (array_key_exists('StartDstCallTime',$param) and $param['StartDstCallTime'] !== null) {
+            $this->StartDstCallTime = $param['StartDstCallTime'];
         }
 
-        if (array_key_exists("StartDstRingTime",$param) and $param["StartDstRingTime"] !== null) {
-            $this->StartDstRingTime = $param["StartDstRingTime"];
+        if (array_key_exists('StartDstRingTime',$param) and $param['StartDstRingTime'] !== null) {
+            $this->StartDstRingTime = $param['StartDstRingTime'];
         }
 
-        if (array_key_exists("DstAcceptTime",$param) and $param["DstAcceptTime"] !== null) {
-            $this->DstAcceptTime = $param["DstAcceptTime"];
+        if (array_key_exists('DstAcceptTime',$param) and $param['DstAcceptTime'] !== null) {
+            $this->DstAcceptTime = $param['DstAcceptTime'];
         }
 
-        if (array_key_exists("EndCallTime",$param) and $param["EndCallTime"] !== null) {
-            $this->EndCallTime = $param["EndCallTime"];
+        if (array_key_exists('EndCallTime',$param) and $param['EndCallTime'] !== null) {
+            $this->EndCallTime = $param['EndCallTime'];
         }
 
-        if (array_key_exists("CallEndStatus",$param) and $param["CallEndStatus"] !== null) {
-            $this->CallEndStatus = $param["CallEndStatus"];
+        if (array_key_exists('CallEndStatus',$param) and $param['CallEndStatus'] !== null) {
+            $this->CallEndStatus = $param['CallEndStatus'];
         }
 
-        if (array_key_exists("SrcDuration",$param) and $param["SrcDuration"] !== null) {
-            $this->SrcDuration = $param["SrcDuration"];
+        if (array_key_exists('SrcDuration',$param) and $param['SrcDuration'] !== null) {
+            $this->SrcDuration = $param['SrcDuration'];
         }
 
-        if (array_key_exists("DstDuration",$param) and $param["DstDuration"] !== null) {
-            $this->DstDuration = $param["DstDuration"];
+        if (array_key_exists('DstDuration',$param) and $param['DstDuration'] !== null) {
+            $this->DstDuration = $param['DstDuration'];
         }
 
-        if (array_key_exists("RecordUrl",$param) and $param["RecordUrl"] !== null) {
-            $this->RecordUrl = $param["RecordUrl"];
+        if (array_key_exists('RecordUrl',$param) and $param['RecordUrl'] !== null) {
+            $this->RecordUrl = $param['RecordUrl'];
         }
     }
 }

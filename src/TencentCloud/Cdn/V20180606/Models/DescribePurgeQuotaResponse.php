@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -62,26 +62,26 @@ class DescribePurgeQuotaResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("UrlPurge",$param) and $param["UrlPurge"] !== null) {
+        if (array_key_exists('UrlPurge',$param) and $param['UrlPurge'] !== null) {
             $this->UrlPurge = [];
-            foreach ($param["UrlPurge"] as $key => $value){
+            foreach ($param['UrlPurge'] as $key => $value){
                 $obj = new Quota();
                 $obj->deserialize($value);
                 array_push($this->UrlPurge, $obj);
             }
         }
 
-        if (array_key_exists("PathPurge",$param) and $param["PathPurge"] !== null) {
+        if (array_key_exists('PathPurge',$param) and $param['PathPurge'] !== null) {
             $this->PathPurge = [];
-            foreach ($param["PathPurge"] as $key => $value){
+            foreach ($param['PathPurge'] as $key => $value){
                 $obj = new Quota();
                 $obj->deserialize($value);
                 array_push($this->PathPurge, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

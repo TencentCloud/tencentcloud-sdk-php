@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -94,43 +94,43 @@ class NetworkAcl extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
-            $this->VpcId = $param["VpcId"];
+        if (array_key_exists('VpcId',$param) and $param['VpcId'] !== null) {
+            $this->VpcId = $param['VpcId'];
         }
 
-        if (array_key_exists("NetworkAclId",$param) and $param["NetworkAclId"] !== null) {
-            $this->NetworkAclId = $param["NetworkAclId"];
+        if (array_key_exists('NetworkAclId',$param) and $param['NetworkAclId'] !== null) {
+            $this->NetworkAclId = $param['NetworkAclId'];
         }
 
-        if (array_key_exists("NetworkAclName",$param) and $param["NetworkAclName"] !== null) {
-            $this->NetworkAclName = $param["NetworkAclName"];
+        if (array_key_exists('NetworkAclName',$param) and $param['NetworkAclName'] !== null) {
+            $this->NetworkAclName = $param['NetworkAclName'];
         }
 
-        if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
-            $this->CreatedTime = $param["CreatedTime"];
+        if (array_key_exists('CreatedTime',$param) and $param['CreatedTime'] !== null) {
+            $this->CreatedTime = $param['CreatedTime'];
         }
 
-        if (array_key_exists("SubnetSet",$param) and $param["SubnetSet"] !== null) {
+        if (array_key_exists('SubnetSet',$param) and $param['SubnetSet'] !== null) {
             $this->SubnetSet = [];
-            foreach ($param["SubnetSet"] as $key => $value){
+            foreach ($param['SubnetSet'] as $key => $value){
                 $obj = new Subnet();
                 $obj->deserialize($value);
                 array_push($this->SubnetSet, $obj);
             }
         }
 
-        if (array_key_exists("IngressEntries",$param) and $param["IngressEntries"] !== null) {
+        if (array_key_exists('IngressEntries',$param) and $param['IngressEntries'] !== null) {
             $this->IngressEntries = [];
-            foreach ($param["IngressEntries"] as $key => $value){
+            foreach ($param['IngressEntries'] as $key => $value){
                 $obj = new NetworkAclEntry();
                 $obj->deserialize($value);
                 array_push($this->IngressEntries, $obj);
             }
         }
 
-        if (array_key_exists("EgressEntries",$param) and $param["EgressEntries"] !== null) {
+        if (array_key_exists('EgressEntries',$param) and $param['EgressEntries'] !== null) {
             $this->EgressEntries = [];
-            foreach ($param["EgressEntries"] as $key => $value){
+            foreach ($param['EgressEntries'] as $key => $value){
                 $obj = new NetworkAclEntry();
                 $obj->deserialize($value);
                 array_push($this->EgressEntries, $obj);

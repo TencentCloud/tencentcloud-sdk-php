@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -142,56 +142,56 @@ class FunctionLog extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FunctionName",$param) and $param["FunctionName"] !== null) {
-            $this->FunctionName = $param["FunctionName"];
+        if (array_key_exists('FunctionName',$param) and $param['FunctionName'] !== null) {
+            $this->FunctionName = $param['FunctionName'];
         }
 
-        if (array_key_exists("RetMsg",$param) and $param["RetMsg"] !== null) {
-            $this->RetMsg = $param["RetMsg"];
+        if (array_key_exists('RetMsg',$param) and $param['RetMsg'] !== null) {
+            $this->RetMsg = $param['RetMsg'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
 
-        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
-            $this->StartTime = $param["StartTime"];
+        if (array_key_exists('StartTime',$param) and $param['StartTime'] !== null) {
+            $this->StartTime = $param['StartTime'];
         }
 
-        if (array_key_exists("RetCode",$param) and $param["RetCode"] !== null) {
-            $this->RetCode = $param["RetCode"];
+        if (array_key_exists('RetCode',$param) and $param['RetCode'] !== null) {
+            $this->RetCode = $param['RetCode'];
         }
 
-        if (array_key_exists("InvokeFinished",$param) and $param["InvokeFinished"] !== null) {
-            $this->InvokeFinished = $param["InvokeFinished"];
+        if (array_key_exists('InvokeFinished',$param) and $param['InvokeFinished'] !== null) {
+            $this->InvokeFinished = $param['InvokeFinished'];
         }
 
-        if (array_key_exists("Duration",$param) and $param["Duration"] !== null) {
-            $this->Duration = $param["Duration"];
+        if (array_key_exists('Duration',$param) and $param['Duration'] !== null) {
+            $this->Duration = $param['Duration'];
         }
 
-        if (array_key_exists("BillDuration",$param) and $param["BillDuration"] !== null) {
-            $this->BillDuration = $param["BillDuration"];
+        if (array_key_exists('BillDuration',$param) and $param['BillDuration'] !== null) {
+            $this->BillDuration = $param['BillDuration'];
         }
 
-        if (array_key_exists("MemUsage",$param) and $param["MemUsage"] !== null) {
-            $this->MemUsage = $param["MemUsage"];
+        if (array_key_exists('MemUsage',$param) and $param['MemUsage'] !== null) {
+            $this->MemUsage = $param['MemUsage'];
         }
 
-        if (array_key_exists("Log",$param) and $param["Log"] !== null) {
-            $this->Log = $param["Log"];
+        if (array_key_exists('Log',$param) and $param['Log'] !== null) {
+            $this->Log = $param['Log'];
         }
 
-        if (array_key_exists("Level",$param) and $param["Level"] !== null) {
-            $this->Level = $param["Level"];
+        if (array_key_exists('Level',$param) and $param['Level'] !== null) {
+            $this->Level = $param['Level'];
         }
 
-        if (array_key_exists("Source",$param) and $param["Source"] !== null) {
-            $this->Source = $param["Source"];
+        if (array_key_exists('Source',$param) and $param['Source'] !== null) {
+            $this->Source = $param['Source'];
         }
 
-        if (array_key_exists("RetryNum",$param) and $param["RetryNum"] !== null) {
-            $this->RetryNum = $param["RetryNum"];
+        if (array_key_exists('RetryNum',$param) and $param['RetryNum'] !== null) {
+            $this->RetryNum = $param['RetryNum'];
         }
     }
 }

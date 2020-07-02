@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -290,93 +290,93 @@ class DetectInfoText extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ErrCode",$param) and $param["ErrCode"] !== null) {
-            $this->ErrCode = $param["ErrCode"];
+        if (array_key_exists('ErrCode',$param) and $param['ErrCode'] !== null) {
+            $this->ErrCode = $param['ErrCode'];
         }
 
-        if (array_key_exists("ErrMsg",$param) and $param["ErrMsg"] !== null) {
-            $this->ErrMsg = $param["ErrMsg"];
+        if (array_key_exists('ErrMsg',$param) and $param['ErrMsg'] !== null) {
+            $this->ErrMsg = $param['ErrMsg'];
         }
 
-        if (array_key_exists("IdCard",$param) and $param["IdCard"] !== null) {
-            $this->IdCard = $param["IdCard"];
+        if (array_key_exists('IdCard',$param) and $param['IdCard'] !== null) {
+            $this->IdCard = $param['IdCard'];
         }
 
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("OcrNation",$param) and $param["OcrNation"] !== null) {
-            $this->OcrNation = $param["OcrNation"];
+        if (array_key_exists('OcrNation',$param) and $param['OcrNation'] !== null) {
+            $this->OcrNation = $param['OcrNation'];
         }
 
-        if (array_key_exists("OcrAddress",$param) and $param["OcrAddress"] !== null) {
-            $this->OcrAddress = $param["OcrAddress"];
+        if (array_key_exists('OcrAddress',$param) and $param['OcrAddress'] !== null) {
+            $this->OcrAddress = $param['OcrAddress'];
         }
 
-        if (array_key_exists("OcrBirth",$param) and $param["OcrBirth"] !== null) {
-            $this->OcrBirth = $param["OcrBirth"];
+        if (array_key_exists('OcrBirth',$param) and $param['OcrBirth'] !== null) {
+            $this->OcrBirth = $param['OcrBirth'];
         }
 
-        if (array_key_exists("OcrAuthority",$param) and $param["OcrAuthority"] !== null) {
-            $this->OcrAuthority = $param["OcrAuthority"];
+        if (array_key_exists('OcrAuthority',$param) and $param['OcrAuthority'] !== null) {
+            $this->OcrAuthority = $param['OcrAuthority'];
         }
 
-        if (array_key_exists("OcrValidDate",$param) and $param["OcrValidDate"] !== null) {
-            $this->OcrValidDate = $param["OcrValidDate"];
+        if (array_key_exists('OcrValidDate',$param) and $param['OcrValidDate'] !== null) {
+            $this->OcrValidDate = $param['OcrValidDate'];
         }
 
-        if (array_key_exists("OcrName",$param) and $param["OcrName"] !== null) {
-            $this->OcrName = $param["OcrName"];
+        if (array_key_exists('OcrName',$param) and $param['OcrName'] !== null) {
+            $this->OcrName = $param['OcrName'];
         }
 
-        if (array_key_exists("OcrIdCard",$param) and $param["OcrIdCard"] !== null) {
-            $this->OcrIdCard = $param["OcrIdCard"];
+        if (array_key_exists('OcrIdCard',$param) and $param['OcrIdCard'] !== null) {
+            $this->OcrIdCard = $param['OcrIdCard'];
         }
 
-        if (array_key_exists("OcrGender",$param) and $param["OcrGender"] !== null) {
-            $this->OcrGender = $param["OcrGender"];
+        if (array_key_exists('OcrGender',$param) and $param['OcrGender'] !== null) {
+            $this->OcrGender = $param['OcrGender'];
         }
 
-        if (array_key_exists("LiveStatus",$param) and $param["LiveStatus"] !== null) {
-            $this->LiveStatus = $param["LiveStatus"];
+        if (array_key_exists('LiveStatus',$param) and $param['LiveStatus'] !== null) {
+            $this->LiveStatus = $param['LiveStatus'];
         }
 
-        if (array_key_exists("LiveMsg",$param) and $param["LiveMsg"] !== null) {
-            $this->LiveMsg = $param["LiveMsg"];
+        if (array_key_exists('LiveMsg',$param) and $param['LiveMsg'] !== null) {
+            $this->LiveMsg = $param['LiveMsg'];
         }
 
-        if (array_key_exists("Comparestatus",$param) and $param["Comparestatus"] !== null) {
-            $this->Comparestatus = $param["Comparestatus"];
+        if (array_key_exists('Comparestatus',$param) and $param['Comparestatus'] !== null) {
+            $this->Comparestatus = $param['Comparestatus'];
         }
 
-        if (array_key_exists("Comparemsg",$param) and $param["Comparemsg"] !== null) {
-            $this->Comparemsg = $param["Comparemsg"];
+        if (array_key_exists('Comparemsg',$param) and $param['Comparemsg'] !== null) {
+            $this->Comparemsg = $param['Comparemsg'];
         }
 
-        if (array_key_exists("Sim",$param) and $param["Sim"] !== null) {
-            $this->Sim = $param["Sim"];
+        if (array_key_exists('Sim',$param) and $param['Sim'] !== null) {
+            $this->Sim = $param['Sim'];
         }
 
-        if (array_key_exists("Location",$param) and $param["Location"] !== null) {
-            $this->Location = $param["Location"];
+        if (array_key_exists('Location',$param) and $param['Location'] !== null) {
+            $this->Location = $param['Location'];
         }
 
-        if (array_key_exists("Extra",$param) and $param["Extra"] !== null) {
-            $this->Extra = $param["Extra"];
+        if (array_key_exists('Extra',$param) and $param['Extra'] !== null) {
+            $this->Extra = $param['Extra'];
         }
 
-        if (array_key_exists("LivenessDetail",$param) and $param["LivenessDetail"] !== null) {
+        if (array_key_exists('LivenessDetail',$param) and $param['LivenessDetail'] !== null) {
             $this->LivenessDetail = [];
-            foreach ($param["LivenessDetail"] as $key => $value){
+            foreach ($param['LivenessDetail'] as $key => $value){
                 $obj = new DetectDetail();
                 $obj->deserialize($value);
                 array_push($this->LivenessDetail, $obj);
             }
         }
 
-        if (array_key_exists("Mobile",$param) and $param["Mobile"] !== null) {
-            $this->Mobile = $param["Mobile"];
+        if (array_key_exists('Mobile',$param) and $param['Mobile'] !== null) {
+            $this->Mobile = $param['Mobile'];
         }
     }
 }

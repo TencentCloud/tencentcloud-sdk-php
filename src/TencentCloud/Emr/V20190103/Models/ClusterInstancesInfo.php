@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -494,126 +494,126 @@ class ClusterInstancesInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
-            $this->Id = $param["Id"];
+        if (array_key_exists('Id',$param) and $param['Id'] !== null) {
+            $this->Id = $param['Id'];
         }
 
-        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
-            $this->ClusterId = $param["ClusterId"];
+        if (array_key_exists('ClusterId',$param) and $param['ClusterId'] !== null) {
+            $this->ClusterId = $param['ClusterId'];
         }
 
-        if (array_key_exists("Ftitle",$param) and $param["Ftitle"] !== null) {
-            $this->Ftitle = $param["Ftitle"];
+        if (array_key_exists('Ftitle',$param) and $param['Ftitle'] !== null) {
+            $this->Ftitle = $param['Ftitle'];
         }
 
-        if (array_key_exists("ClusterName",$param) and $param["ClusterName"] !== null) {
-            $this->ClusterName = $param["ClusterName"];
+        if (array_key_exists('ClusterName',$param) and $param['ClusterName'] !== null) {
+            $this->ClusterName = $param['ClusterName'];
         }
 
-        if (array_key_exists("RegionId",$param) and $param["RegionId"] !== null) {
-            $this->RegionId = $param["RegionId"];
+        if (array_key_exists('RegionId',$param) and $param['RegionId'] !== null) {
+            $this->RegionId = $param['RegionId'];
         }
 
-        if (array_key_exists("ZoneId",$param) and $param["ZoneId"] !== null) {
-            $this->ZoneId = $param["ZoneId"];
+        if (array_key_exists('ZoneId',$param) and $param['ZoneId'] !== null) {
+            $this->ZoneId = $param['ZoneId'];
         }
 
-        if (array_key_exists("AppId",$param) and $param["AppId"] !== null) {
-            $this->AppId = $param["AppId"];
+        if (array_key_exists('AppId',$param) and $param['AppId'] !== null) {
+            $this->AppId = $param['AppId'];
         }
 
-        if (array_key_exists("Uin",$param) and $param["Uin"] !== null) {
-            $this->Uin = $param["Uin"];
+        if (array_key_exists('Uin',$param) and $param['Uin'] !== null) {
+            $this->Uin = $param['Uin'];
         }
 
-        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
-            $this->ProjectId = $param["ProjectId"];
+        if (array_key_exists('ProjectId',$param) and $param['ProjectId'] !== null) {
+            $this->ProjectId = $param['ProjectId'];
         }
 
-        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
-            $this->VpcId = $param["VpcId"];
+        if (array_key_exists('VpcId',$param) and $param['VpcId'] !== null) {
+            $this->VpcId = $param['VpcId'];
         }
 
-        if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
-            $this->SubnetId = $param["SubnetId"];
+        if (array_key_exists('SubnetId',$param) and $param['SubnetId'] !== null) {
+            $this->SubnetId = $param['SubnetId'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("AddTime",$param) and $param["AddTime"] !== null) {
-            $this->AddTime = $param["AddTime"];
+        if (array_key_exists('AddTime',$param) and $param['AddTime'] !== null) {
+            $this->AddTime = $param['AddTime'];
         }
 
-        if (array_key_exists("RunTime",$param) and $param["RunTime"] !== null) {
-            $this->RunTime = $param["RunTime"];
+        if (array_key_exists('RunTime',$param) and $param['RunTime'] !== null) {
+            $this->RunTime = $param['RunTime'];
         }
 
-        if (array_key_exists("Config",$param) and $param["Config"] !== null) {
+        if (array_key_exists('Config',$param) and $param['Config'] !== null) {
             $this->Config = new EmrProductConfigOutter();
-            $this->Config->deserialize($param["Config"]);
+            $this->Config->deserialize($param['Config']);
         }
 
-        if (array_key_exists("MasterIp",$param) and $param["MasterIp"] !== null) {
-            $this->MasterIp = $param["MasterIp"];
+        if (array_key_exists('MasterIp',$param) and $param['MasterIp'] !== null) {
+            $this->MasterIp = $param['MasterIp'];
         }
 
-        if (array_key_exists("EmrVersion",$param) and $param["EmrVersion"] !== null) {
-            $this->EmrVersion = $param["EmrVersion"];
+        if (array_key_exists('EmrVersion',$param) and $param['EmrVersion'] !== null) {
+            $this->EmrVersion = $param['EmrVersion'];
         }
 
-        if (array_key_exists("ChargeType",$param) and $param["ChargeType"] !== null) {
-            $this->ChargeType = $param["ChargeType"];
+        if (array_key_exists('ChargeType',$param) and $param['ChargeType'] !== null) {
+            $this->ChargeType = $param['ChargeType'];
         }
 
-        if (array_key_exists("TradeVersion",$param) and $param["TradeVersion"] !== null) {
-            $this->TradeVersion = $param["TradeVersion"];
+        if (array_key_exists('TradeVersion',$param) and $param['TradeVersion'] !== null) {
+            $this->TradeVersion = $param['TradeVersion'];
         }
 
-        if (array_key_exists("ResourceOrderId",$param) and $param["ResourceOrderId"] !== null) {
-            $this->ResourceOrderId = $param["ResourceOrderId"];
+        if (array_key_exists('ResourceOrderId',$param) and $param['ResourceOrderId'] !== null) {
+            $this->ResourceOrderId = $param['ResourceOrderId'];
         }
 
-        if (array_key_exists("IsTradeCluster",$param) and $param["IsTradeCluster"] !== null) {
-            $this->IsTradeCluster = $param["IsTradeCluster"];
+        if (array_key_exists('IsTradeCluster',$param) and $param['IsTradeCluster'] !== null) {
+            $this->IsTradeCluster = $param['IsTradeCluster'];
         }
 
-        if (array_key_exists("AlarmInfo",$param) and $param["AlarmInfo"] !== null) {
-            $this->AlarmInfo = $param["AlarmInfo"];
+        if (array_key_exists('AlarmInfo',$param) and $param['AlarmInfo'] !== null) {
+            $this->AlarmInfo = $param['AlarmInfo'];
         }
 
-        if (array_key_exists("IsWoodpeckerCluster",$param) and $param["IsWoodpeckerCluster"] !== null) {
-            $this->IsWoodpeckerCluster = $param["IsWoodpeckerCluster"];
+        if (array_key_exists('IsWoodpeckerCluster',$param) and $param['IsWoodpeckerCluster'] !== null) {
+            $this->IsWoodpeckerCluster = $param['IsWoodpeckerCluster'];
         }
 
-        if (array_key_exists("MetaDb",$param) and $param["MetaDb"] !== null) {
-            $this->MetaDb = $param["MetaDb"];
+        if (array_key_exists('MetaDb',$param) and $param['MetaDb'] !== null) {
+            $this->MetaDb = $param['MetaDb'];
         }
 
-        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+        if (array_key_exists('Tags',$param) and $param['Tags'] !== null) {
             $this->Tags = [];
-            foreach ($param["Tags"] as $key => $value){
+            foreach ($param['Tags'] as $key => $value){
                 $obj = new Tag();
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
         }
 
-        if (array_key_exists("HiveMetaDb",$param) and $param["HiveMetaDb"] !== null) {
-            $this->HiveMetaDb = $param["HiveMetaDb"];
+        if (array_key_exists('HiveMetaDb',$param) and $param['HiveMetaDb'] !== null) {
+            $this->HiveMetaDb = $param['HiveMetaDb'];
         }
 
-        if (array_key_exists("ServiceClass",$param) and $param["ServiceClass"] !== null) {
-            $this->ServiceClass = $param["ServiceClass"];
+        if (array_key_exists('ServiceClass',$param) and $param['ServiceClass'] !== null) {
+            $this->ServiceClass = $param['ServiceClass'];
         }
 
-        if (array_key_exists("AliasInfo",$param) and $param["AliasInfo"] !== null) {
-            $this->AliasInfo = $param["AliasInfo"];
+        if (array_key_exists('AliasInfo',$param) and $param['AliasInfo'] !== null) {
+            $this->AliasInfo = $param['AliasInfo'];
         }
 
-        if (array_key_exists("ProductId",$param) and $param["ProductId"] !== null) {
-            $this->ProductId = $param["ProductId"];
+        if (array_key_exists('ProductId',$param) and $param['ProductId'] !== null) {
+            $this->ProductId = $param['ProductId'];
         }
     }
 }

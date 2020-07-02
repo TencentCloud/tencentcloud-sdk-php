@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -110,37 +110,37 @@ RetCode的顺序和入参中 Images 或 Urls 的顺序一致。
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SucFaceNum",$param) and $param["SucFaceNum"] !== null) {
-            $this->SucFaceNum = $param["SucFaceNum"];
+        if (array_key_exists('SucFaceNum',$param) and $param['SucFaceNum'] !== null) {
+            $this->SucFaceNum = $param['SucFaceNum'];
         }
 
-        if (array_key_exists("SucFaceIds",$param) and $param["SucFaceIds"] !== null) {
-            $this->SucFaceIds = $param["SucFaceIds"];
+        if (array_key_exists('SucFaceIds',$param) and $param['SucFaceIds'] !== null) {
+            $this->SucFaceIds = $param['SucFaceIds'];
         }
 
-        if (array_key_exists("RetCode",$param) and $param["RetCode"] !== null) {
-            $this->RetCode = $param["RetCode"];
+        if (array_key_exists('RetCode',$param) and $param['RetCode'] !== null) {
+            $this->RetCode = $param['RetCode'];
         }
 
-        if (array_key_exists("SucIndexes",$param) and $param["SucIndexes"] !== null) {
-            $this->SucIndexes = $param["SucIndexes"];
+        if (array_key_exists('SucIndexes',$param) and $param['SucIndexes'] !== null) {
+            $this->SucIndexes = $param['SucIndexes'];
         }
 
-        if (array_key_exists("SucFaceRects",$param) and $param["SucFaceRects"] !== null) {
+        if (array_key_exists('SucFaceRects',$param) and $param['SucFaceRects'] !== null) {
             $this->SucFaceRects = [];
-            foreach ($param["SucFaceRects"] as $key => $value){
+            foreach ($param['SucFaceRects'] as $key => $value){
                 $obj = new FaceRect();
                 $obj->deserialize($value);
                 array_push($this->SucFaceRects, $obj);
             }
         }
 
-        if (array_key_exists("FaceModelVersion",$param) and $param["FaceModelVersion"] !== null) {
-            $this->FaceModelVersion = $param["FaceModelVersion"];
+        if (array_key_exists('FaceModelVersion',$param) and $param['FaceModelVersion'] !== null) {
+            $this->FaceModelVersion = $param['FaceModelVersion'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

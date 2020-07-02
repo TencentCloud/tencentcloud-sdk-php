@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -86,21 +86,21 @@ class CoverBySnapshotTaskInput extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Definition",$param) and $param["Definition"] !== null) {
-            $this->Definition = $param["Definition"];
+        if (array_key_exists('Definition',$param) and $param['Definition'] !== null) {
+            $this->Definition = $param['Definition'];
         }
 
-        if (array_key_exists("PositionType",$param) and $param["PositionType"] !== null) {
-            $this->PositionType = $param["PositionType"];
+        if (array_key_exists('PositionType',$param) and $param['PositionType'] !== null) {
+            $this->PositionType = $param['PositionType'];
         }
 
-        if (array_key_exists("PositionValue",$param) and $param["PositionValue"] !== null) {
-            $this->PositionValue = $param["PositionValue"];
+        if (array_key_exists('PositionValue',$param) and $param['PositionValue'] !== null) {
+            $this->PositionValue = $param['PositionValue'];
         }
 
-        if (array_key_exists("WatermarkSet",$param) and $param["WatermarkSet"] !== null) {
+        if (array_key_exists('WatermarkSet',$param) and $param['WatermarkSet'] !== null) {
             $this->WatermarkSet = [];
-            foreach ($param["WatermarkSet"] as $key => $value){
+            foreach ($param['WatermarkSet'] as $key => $value){
                 $obj = new WatermarkInput();
                 $obj->deserialize($value);
                 array_push($this->WatermarkSet, $obj);

@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -102,36 +102,36 @@ class UserInformation extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RoomStr",$param) and $param["RoomStr"] !== null) {
-            $this->RoomStr = $param["RoomStr"];
+        if (array_key_exists('RoomStr',$param) and $param['RoomStr'] !== null) {
+            $this->RoomStr = $param['RoomStr'];
         }
 
-        if (array_key_exists("UserId",$param) and $param["UserId"] !== null) {
-            $this->UserId = $param["UserId"];
+        if (array_key_exists('UserId',$param) and $param['UserId'] !== null) {
+            $this->UserId = $param['UserId'];
         }
 
-        if (array_key_exists("JoinTs",$param) and $param["JoinTs"] !== null) {
-            $this->JoinTs = $param["JoinTs"];
+        if (array_key_exists('JoinTs',$param) and $param['JoinTs'] !== null) {
+            $this->JoinTs = $param['JoinTs'];
         }
 
-        if (array_key_exists("LeaveTs",$param) and $param["LeaveTs"] !== null) {
-            $this->LeaveTs = $param["LeaveTs"];
+        if (array_key_exists('LeaveTs',$param) and $param['LeaveTs'] !== null) {
+            $this->LeaveTs = $param['LeaveTs'];
         }
 
-        if (array_key_exists("DeviceType",$param) and $param["DeviceType"] !== null) {
-            $this->DeviceType = $param["DeviceType"];
+        if (array_key_exists('DeviceType',$param) and $param['DeviceType'] !== null) {
+            $this->DeviceType = $param['DeviceType'];
         }
 
-        if (array_key_exists("SdkVersion",$param) and $param["SdkVersion"] !== null) {
-            $this->SdkVersion = $param["SdkVersion"];
+        if (array_key_exists('SdkVersion',$param) and $param['SdkVersion'] !== null) {
+            $this->SdkVersion = $param['SdkVersion'];
         }
 
-        if (array_key_exists("ClientIp",$param) and $param["ClientIp"] !== null) {
-            $this->ClientIp = $param["ClientIp"];
+        if (array_key_exists('ClientIp',$param) and $param['ClientIp'] !== null) {
+            $this->ClientIp = $param['ClientIp'];
         }
 
-        if (array_key_exists("Finished",$param) and $param["Finished"] !== null) {
-            $this->Finished = $param["Finished"];
+        if (array_key_exists('Finished',$param) and $param['Finished'] !== null) {
+            $this->Finished = $param['Finished'];
         }
     }
 }

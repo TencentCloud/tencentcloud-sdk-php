@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -62,16 +62,16 @@ class CreateLoadBalancerBzConf extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BzPayMode",$param) and $param["BzPayMode"] !== null) {
-            $this->BzPayMode = $param["BzPayMode"];
+        if (array_key_exists('BzPayMode',$param) and $param['BzPayMode'] !== null) {
+            $this->BzPayMode = $param['BzPayMode'];
         }
 
-        if (array_key_exists("BzL4Metrics",$param) and $param["BzL4Metrics"] !== null) {
-            $this->BzL4Metrics = $param["BzL4Metrics"];
+        if (array_key_exists('BzL4Metrics',$param) and $param['BzL4Metrics'] !== null) {
+            $this->BzL4Metrics = $param['BzL4Metrics'];
         }
 
-        if (array_key_exists("BzL7Metrics",$param) and $param["BzL7Metrics"] !== null) {
-            $this->BzL7Metrics = $param["BzL7Metrics"];
+        if (array_key_exists('BzL7Metrics',$param) and $param['BzL7Metrics'] !== null) {
+            $this->BzL7Metrics = $param['BzL7Metrics'];
         }
     }
 }

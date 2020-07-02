@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -346,142 +346,142 @@ class Disk extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DiskId",$param) and $param["DiskId"] !== null) {
-            $this->DiskId = $param["DiskId"];
+        if (array_key_exists('DiskId',$param) and $param['DiskId'] !== null) {
+            $this->DiskId = $param['DiskId'];
         }
 
-        if (array_key_exists("DiskUsage",$param) and $param["DiskUsage"] !== null) {
-            $this->DiskUsage = $param["DiskUsage"];
+        if (array_key_exists('DiskUsage',$param) and $param['DiskUsage'] !== null) {
+            $this->DiskUsage = $param['DiskUsage'];
         }
 
-        if (array_key_exists("DiskChargeType",$param) and $param["DiskChargeType"] !== null) {
-            $this->DiskChargeType = $param["DiskChargeType"];
+        if (array_key_exists('DiskChargeType',$param) and $param['DiskChargeType'] !== null) {
+            $this->DiskChargeType = $param['DiskChargeType'];
         }
 
-        if (array_key_exists("Portable",$param) and $param["Portable"] !== null) {
-            $this->Portable = $param["Portable"];
+        if (array_key_exists('Portable',$param) and $param['Portable'] !== null) {
+            $this->Portable = $param['Portable'];
         }
 
-        if (array_key_exists("Placement",$param) and $param["Placement"] !== null) {
+        if (array_key_exists('Placement',$param) and $param['Placement'] !== null) {
             $this->Placement = new Placement();
-            $this->Placement->deserialize($param["Placement"]);
+            $this->Placement->deserialize($param['Placement']);
         }
 
-        if (array_key_exists("SnapshotAbility",$param) and $param["SnapshotAbility"] !== null) {
-            $this->SnapshotAbility = $param["SnapshotAbility"];
+        if (array_key_exists('SnapshotAbility',$param) and $param['SnapshotAbility'] !== null) {
+            $this->SnapshotAbility = $param['SnapshotAbility'];
         }
 
-        if (array_key_exists("DiskName",$param) and $param["DiskName"] !== null) {
-            $this->DiskName = $param["DiskName"];
+        if (array_key_exists('DiskName',$param) and $param['DiskName'] !== null) {
+            $this->DiskName = $param['DiskName'];
         }
 
-        if (array_key_exists("DiskSize",$param) and $param["DiskSize"] !== null) {
-            $this->DiskSize = $param["DiskSize"];
+        if (array_key_exists('DiskSize',$param) and $param['DiskSize'] !== null) {
+            $this->DiskSize = $param['DiskSize'];
         }
 
-        if (array_key_exists("DiskState",$param) and $param["DiskState"] !== null) {
-            $this->DiskState = $param["DiskState"];
+        if (array_key_exists('DiskState',$param) and $param['DiskState'] !== null) {
+            $this->DiskState = $param['DiskState'];
         }
 
-        if (array_key_exists("DiskType",$param) and $param["DiskType"] !== null) {
-            $this->DiskType = $param["DiskType"];
+        if (array_key_exists('DiskType',$param) and $param['DiskType'] !== null) {
+            $this->DiskType = $param['DiskType'];
         }
 
-        if (array_key_exists("Attached",$param) and $param["Attached"] !== null) {
-            $this->Attached = $param["Attached"];
+        if (array_key_exists('Attached',$param) and $param['Attached'] !== null) {
+            $this->Attached = $param['Attached'];
         }
 
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("DeadlineTime",$param) and $param["DeadlineTime"] !== null) {
-            $this->DeadlineTime = $param["DeadlineTime"];
+        if (array_key_exists('DeadlineTime',$param) and $param['DeadlineTime'] !== null) {
+            $this->DeadlineTime = $param['DeadlineTime'];
         }
 
-        if (array_key_exists("Rollbacking",$param) and $param["Rollbacking"] !== null) {
-            $this->Rollbacking = $param["Rollbacking"];
+        if (array_key_exists('Rollbacking',$param) and $param['Rollbacking'] !== null) {
+            $this->Rollbacking = $param['Rollbacking'];
         }
 
-        if (array_key_exists("RollbackPercent",$param) and $param["RollbackPercent"] !== null) {
-            $this->RollbackPercent = $param["RollbackPercent"];
+        if (array_key_exists('RollbackPercent',$param) and $param['RollbackPercent'] !== null) {
+            $this->RollbackPercent = $param['RollbackPercent'];
         }
 
-        if (array_key_exists("Encrypt",$param) and $param["Encrypt"] !== null) {
-            $this->Encrypt = $param["Encrypt"];
+        if (array_key_exists('Encrypt',$param) and $param['Encrypt'] !== null) {
+            $this->Encrypt = $param['Encrypt'];
         }
 
-        if (array_key_exists("AutoRenewFlagError",$param) and $param["AutoRenewFlagError"] !== null) {
-            $this->AutoRenewFlagError = $param["AutoRenewFlagError"];
+        if (array_key_exists('AutoRenewFlagError',$param) and $param['AutoRenewFlagError'] !== null) {
+            $this->AutoRenewFlagError = $param['AutoRenewFlagError'];
         }
 
-        if (array_key_exists("RenewFlag",$param) and $param["RenewFlag"] !== null) {
-            $this->RenewFlag = $param["RenewFlag"];
+        if (array_key_exists('RenewFlag',$param) and $param['RenewFlag'] !== null) {
+            $this->RenewFlag = $param['RenewFlag'];
         }
 
-        if (array_key_exists("DeadlineError",$param) and $param["DeadlineError"] !== null) {
-            $this->DeadlineError = $param["DeadlineError"];
+        if (array_key_exists('DeadlineError',$param) and $param['DeadlineError'] !== null) {
+            $this->DeadlineError = $param['DeadlineError'];
         }
 
-        if (array_key_exists("IsReturnable",$param) and $param["IsReturnable"] !== null) {
-            $this->IsReturnable = $param["IsReturnable"];
+        if (array_key_exists('IsReturnable',$param) and $param['IsReturnable'] !== null) {
+            $this->IsReturnable = $param['IsReturnable'];
         }
 
-        if (array_key_exists("ReturnFailCode",$param) and $param["ReturnFailCode"] !== null) {
-            $this->ReturnFailCode = $param["ReturnFailCode"];
+        if (array_key_exists('ReturnFailCode',$param) and $param['ReturnFailCode'] !== null) {
+            $this->ReturnFailCode = $param['ReturnFailCode'];
         }
 
-        if (array_key_exists("AutoSnapshotPolicyIds",$param) and $param["AutoSnapshotPolicyIds"] !== null) {
-            $this->AutoSnapshotPolicyIds = $param["AutoSnapshotPolicyIds"];
+        if (array_key_exists('AutoSnapshotPolicyIds',$param) and $param['AutoSnapshotPolicyIds'] !== null) {
+            $this->AutoSnapshotPolicyIds = $param['AutoSnapshotPolicyIds'];
         }
 
-        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+        if (array_key_exists('Tags',$param) and $param['Tags'] !== null) {
             $this->Tags = [];
-            foreach ($param["Tags"] as $key => $value){
+            foreach ($param['Tags'] as $key => $value){
                 $obj = new Tag();
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
         }
 
-        if (array_key_exists("DeleteWithInstance",$param) and $param["DeleteWithInstance"] !== null) {
-            $this->DeleteWithInstance = $param["DeleteWithInstance"];
+        if (array_key_exists('DeleteWithInstance',$param) and $param['DeleteWithInstance'] !== null) {
+            $this->DeleteWithInstance = $param['DeleteWithInstance'];
         }
 
-        if (array_key_exists("DifferDaysOfDeadline",$param) and $param["DifferDaysOfDeadline"] !== null) {
-            $this->DifferDaysOfDeadline = $param["DifferDaysOfDeadline"];
+        if (array_key_exists('DifferDaysOfDeadline',$param) and $param['DifferDaysOfDeadline'] !== null) {
+            $this->DifferDaysOfDeadline = $param['DifferDaysOfDeadline'];
         }
 
-        if (array_key_exists("Migrating",$param) and $param["Migrating"] !== null) {
-            $this->Migrating = $param["Migrating"];
+        if (array_key_exists('Migrating',$param) and $param['Migrating'] !== null) {
+            $this->Migrating = $param['Migrating'];
         }
 
-        if (array_key_exists("MigratePercent",$param) and $param["MigratePercent"] !== null) {
-            $this->MigratePercent = $param["MigratePercent"];
+        if (array_key_exists('MigratePercent',$param) and $param['MigratePercent'] !== null) {
+            $this->MigratePercent = $param['MigratePercent'];
         }
 
-        if (array_key_exists("Shareable",$param) and $param["Shareable"] !== null) {
-            $this->Shareable = $param["Shareable"];
+        if (array_key_exists('Shareable',$param) and $param['Shareable'] !== null) {
+            $this->Shareable = $param['Shareable'];
         }
 
-        if (array_key_exists("InstanceIdList",$param) and $param["InstanceIdList"] !== null) {
-            $this->InstanceIdList = $param["InstanceIdList"];
+        if (array_key_exists('InstanceIdList',$param) and $param['InstanceIdList'] !== null) {
+            $this->InstanceIdList = $param['InstanceIdList'];
         }
 
-        if (array_key_exists("SnapshotCount",$param) and $param["SnapshotCount"] !== null) {
-            $this->SnapshotCount = $param["SnapshotCount"];
+        if (array_key_exists('SnapshotCount',$param) and $param['SnapshotCount'] !== null) {
+            $this->SnapshotCount = $param['SnapshotCount'];
         }
 
-        if (array_key_exists("SnapshotSize",$param) and $param["SnapshotSize"] !== null) {
-            $this->SnapshotSize = $param["SnapshotSize"];
+        if (array_key_exists('SnapshotSize',$param) and $param['SnapshotSize'] !== null) {
+            $this->SnapshotSize = $param['SnapshotSize'];
         }
 
-        if (array_key_exists("BackupDisk",$param) and $param["BackupDisk"] !== null) {
-            $this->BackupDisk = $param["BackupDisk"];
+        if (array_key_exists('BackupDisk',$param) and $param['BackupDisk'] !== null) {
+            $this->BackupDisk = $param['BackupDisk'];
         }
     }
 }

@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -282,83 +282,83 @@ class DescribeTaskDetailResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TaskType",$param) and $param["TaskType"] !== null) {
-            $this->TaskType = $param["TaskType"];
+        if (array_key_exists('TaskType',$param) and $param['TaskType'] !== null) {
+            $this->TaskType = $param['TaskType'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("BeginProcessTime",$param) and $param["BeginProcessTime"] !== null) {
-            $this->BeginProcessTime = $param["BeginProcessTime"];
+        if (array_key_exists('BeginProcessTime',$param) and $param['BeginProcessTime'] !== null) {
+            $this->BeginProcessTime = $param['BeginProcessTime'];
         }
 
-        if (array_key_exists("FinishTime",$param) and $param["FinishTime"] !== null) {
-            $this->FinishTime = $param["FinishTime"];
+        if (array_key_exists('FinishTime',$param) and $param['FinishTime'] !== null) {
+            $this->FinishTime = $param['FinishTime'];
         }
 
-        if (array_key_exists("ProcedureTask",$param) and $param["ProcedureTask"] !== null) {
+        if (array_key_exists('ProcedureTask',$param) and $param['ProcedureTask'] !== null) {
             $this->ProcedureTask = new ProcedureTask();
-            $this->ProcedureTask->deserialize($param["ProcedureTask"]);
+            $this->ProcedureTask->deserialize($param['ProcedureTask']);
         }
 
-        if (array_key_exists("EditMediaTask",$param) and $param["EditMediaTask"] !== null) {
+        if (array_key_exists('EditMediaTask',$param) and $param['EditMediaTask'] !== null) {
             $this->EditMediaTask = new EditMediaTask();
-            $this->EditMediaTask->deserialize($param["EditMediaTask"]);
+            $this->EditMediaTask->deserialize($param['EditMediaTask']);
         }
 
-        if (array_key_exists("WechatPublishTask",$param) and $param["WechatPublishTask"] !== null) {
+        if (array_key_exists('WechatPublishTask',$param) and $param['WechatPublishTask'] !== null) {
             $this->WechatPublishTask = new WechatPublishTask();
-            $this->WechatPublishTask->deserialize($param["WechatPublishTask"]);
+            $this->WechatPublishTask->deserialize($param['WechatPublishTask']);
         }
 
-        if (array_key_exists("ComposeMediaTask",$param) and $param["ComposeMediaTask"] !== null) {
+        if (array_key_exists('ComposeMediaTask',$param) and $param['ComposeMediaTask'] !== null) {
             $this->ComposeMediaTask = new ComposeMediaTask();
-            $this->ComposeMediaTask->deserialize($param["ComposeMediaTask"]);
+            $this->ComposeMediaTask->deserialize($param['ComposeMediaTask']);
         }
 
-        if (array_key_exists("PullUploadTask",$param) and $param["PullUploadTask"] !== null) {
+        if (array_key_exists('PullUploadTask',$param) and $param['PullUploadTask'] !== null) {
             $this->PullUploadTask = new PullUploadTask();
-            $this->PullUploadTask->deserialize($param["PullUploadTask"]);
+            $this->PullUploadTask->deserialize($param['PullUploadTask']);
         }
 
-        if (array_key_exists("TranscodeTask",$param) and $param["TranscodeTask"] !== null) {
+        if (array_key_exists('TranscodeTask',$param) and $param['TranscodeTask'] !== null) {
             $this->TranscodeTask = new TranscodeTask2017();
-            $this->TranscodeTask->deserialize($param["TranscodeTask"]);
+            $this->TranscodeTask->deserialize($param['TranscodeTask']);
         }
 
-        if (array_key_exists("SnapshotByTimeOffsetTask",$param) and $param["SnapshotByTimeOffsetTask"] !== null) {
+        if (array_key_exists('SnapshotByTimeOffsetTask',$param) and $param['SnapshotByTimeOffsetTask'] !== null) {
             $this->SnapshotByTimeOffsetTask = new SnapshotByTimeOffsetTask2017();
-            $this->SnapshotByTimeOffsetTask->deserialize($param["SnapshotByTimeOffsetTask"]);
+            $this->SnapshotByTimeOffsetTask->deserialize($param['SnapshotByTimeOffsetTask']);
         }
 
-        if (array_key_exists("ConcatTask",$param) and $param["ConcatTask"] !== null) {
+        if (array_key_exists('ConcatTask',$param) and $param['ConcatTask'] !== null) {
             $this->ConcatTask = new ConcatTask2017();
-            $this->ConcatTask->deserialize($param["ConcatTask"]);
+            $this->ConcatTask->deserialize($param['ConcatTask']);
         }
 
-        if (array_key_exists("ClipTask",$param) and $param["ClipTask"] !== null) {
+        if (array_key_exists('ClipTask',$param) and $param['ClipTask'] !== null) {
             $this->ClipTask = new ClipTask2017();
-            $this->ClipTask->deserialize($param["ClipTask"]);
+            $this->ClipTask->deserialize($param['ClipTask']);
         }
 
-        if (array_key_exists("CreateImageSpriteTask",$param) and $param["CreateImageSpriteTask"] !== null) {
+        if (array_key_exists('CreateImageSpriteTask',$param) and $param['CreateImageSpriteTask'] !== null) {
             $this->CreateImageSpriteTask = new CreateImageSpriteTask2017();
-            $this->CreateImageSpriteTask->deserialize($param["CreateImageSpriteTask"]);
+            $this->CreateImageSpriteTask->deserialize($param['CreateImageSpriteTask']);
         }
 
-        if (array_key_exists("WechatMiniProgramPublishTask",$param) and $param["WechatMiniProgramPublishTask"] !== null) {
+        if (array_key_exists('WechatMiniProgramPublishTask',$param) and $param['WechatMiniProgramPublishTask'] !== null) {
             $this->WechatMiniProgramPublishTask = new WechatMiniProgramPublishTask();
-            $this->WechatMiniProgramPublishTask->deserialize($param["WechatMiniProgramPublishTask"]);
+            $this->WechatMiniProgramPublishTask->deserialize($param['WechatMiniProgramPublishTask']);
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

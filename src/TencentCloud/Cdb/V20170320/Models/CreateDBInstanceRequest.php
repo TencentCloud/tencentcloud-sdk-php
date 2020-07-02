@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -72,8 +72,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeployGroupId(string $DeployGroupId) 设置置放群组 ID。
  * @method string getClientToken() 获取用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间在当天内唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
  * @method void setClientToken(string $ClientToken) 设置用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间在当天内唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
- * @method string getDeviceType() 获取实例类型。支持值包括： "HA" - 高可用版实例， "BASIC" - 基础版实例。 不指定则默认为高可用版。
- * @method void setDeviceType(string $DeviceType) 设置实例类型。支持值包括： "HA" - 高可用版实例， "BASIC" - 基础版实例。 不指定则默认为高可用版。
+ * @method string getDeviceType() 获取实例类型。支持值包括： 'HA' - 高可用版实例， 'BASIC' - 基础版实例。 不指定则默认为高可用版。
+ * @method void setDeviceType(string $DeviceType) 设置实例类型。支持值包括： 'HA' - 高可用版实例， 'BASIC' - 基础版实例。 不指定则默认为高可用版。
  */
 class CreateDBInstanceRequest extends AbstractModel
 {
@@ -208,7 +208,7 @@ class CreateDBInstanceRequest extends AbstractModel
     public $ClientToken;
 
     /**
-     * @var string 实例类型。支持值包括： "HA" - 高可用版实例， "BASIC" - 基础版实例。 不指定则默认为高可用版。
+     * @var string 实例类型。支持值包括： 'HA' - 高可用版实例， 'BASIC' - 基础版实例。 不指定则默认为高可用版。
      */
     public $DeviceType;
 
@@ -239,7 +239,7 @@ class CreateDBInstanceRequest extends AbstractModel
      * @param array $ResourceTags 实例标签信息。
      * @param string $DeployGroupId 置放群组 ID。
      * @param string $ClientToken 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间在当天内唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
-     * @param string $DeviceType 实例类型。支持值包括： "HA" - 高可用版实例， "BASIC" - 基础版实例。 不指定则默认为高可用版。
+     * @param string $DeviceType 实例类型。支持值包括： 'HA' - 高可用版实例， 'BASIC' - 基础版实例。 不指定则默认为高可用版。
      */
     function __construct()
     {
@@ -254,123 +254,123 @@ class CreateDBInstanceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Memory",$param) and $param["Memory"] !== null) {
-            $this->Memory = $param["Memory"];
+        if (array_key_exists('Memory',$param) and $param['Memory'] !== null) {
+            $this->Memory = $param['Memory'];
         }
 
-        if (array_key_exists("Volume",$param) and $param["Volume"] !== null) {
-            $this->Volume = $param["Volume"];
+        if (array_key_exists('Volume',$param) and $param['Volume'] !== null) {
+            $this->Volume = $param['Volume'];
         }
 
-        if (array_key_exists("Period",$param) and $param["Period"] !== null) {
-            $this->Period = $param["Period"];
+        if (array_key_exists('Period',$param) and $param['Period'] !== null) {
+            $this->Period = $param['Period'];
         }
 
-        if (array_key_exists("GoodsNum",$param) and $param["GoodsNum"] !== null) {
-            $this->GoodsNum = $param["GoodsNum"];
+        if (array_key_exists('GoodsNum',$param) and $param['GoodsNum'] !== null) {
+            $this->GoodsNum = $param['GoodsNum'];
         }
 
-        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
-            $this->Zone = $param["Zone"];
+        if (array_key_exists('Zone',$param) and $param['Zone'] !== null) {
+            $this->Zone = $param['Zone'];
         }
 
-        if (array_key_exists("UniqVpcId",$param) and $param["UniqVpcId"] !== null) {
-            $this->UniqVpcId = $param["UniqVpcId"];
+        if (array_key_exists('UniqVpcId',$param) and $param['UniqVpcId'] !== null) {
+            $this->UniqVpcId = $param['UniqVpcId'];
         }
 
-        if (array_key_exists("UniqSubnetId",$param) and $param["UniqSubnetId"] !== null) {
-            $this->UniqSubnetId = $param["UniqSubnetId"];
+        if (array_key_exists('UniqSubnetId',$param) and $param['UniqSubnetId'] !== null) {
+            $this->UniqSubnetId = $param['UniqSubnetId'];
         }
 
-        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
-            $this->ProjectId = $param["ProjectId"];
+        if (array_key_exists('ProjectId',$param) and $param['ProjectId'] !== null) {
+            $this->ProjectId = $param['ProjectId'];
         }
 
-        if (array_key_exists("Port",$param) and $param["Port"] !== null) {
-            $this->Port = $param["Port"];
+        if (array_key_exists('Port',$param) and $param['Port'] !== null) {
+            $this->Port = $param['Port'];
         }
 
-        if (array_key_exists("InstanceRole",$param) and $param["InstanceRole"] !== null) {
-            $this->InstanceRole = $param["InstanceRole"];
+        if (array_key_exists('InstanceRole',$param) and $param['InstanceRole'] !== null) {
+            $this->InstanceRole = $param['InstanceRole'];
         }
 
-        if (array_key_exists("MasterInstanceId",$param) and $param["MasterInstanceId"] !== null) {
-            $this->MasterInstanceId = $param["MasterInstanceId"];
+        if (array_key_exists('MasterInstanceId',$param) and $param['MasterInstanceId'] !== null) {
+            $this->MasterInstanceId = $param['MasterInstanceId'];
         }
 
-        if (array_key_exists("EngineVersion",$param) and $param["EngineVersion"] !== null) {
-            $this->EngineVersion = $param["EngineVersion"];
+        if (array_key_exists('EngineVersion',$param) and $param['EngineVersion'] !== null) {
+            $this->EngineVersion = $param['EngineVersion'];
         }
 
-        if (array_key_exists("Password",$param) and $param["Password"] !== null) {
-            $this->Password = $param["Password"];
+        if (array_key_exists('Password',$param) and $param['Password'] !== null) {
+            $this->Password = $param['Password'];
         }
 
-        if (array_key_exists("ProtectMode",$param) and $param["ProtectMode"] !== null) {
-            $this->ProtectMode = $param["ProtectMode"];
+        if (array_key_exists('ProtectMode',$param) and $param['ProtectMode'] !== null) {
+            $this->ProtectMode = $param['ProtectMode'];
         }
 
-        if (array_key_exists("DeployMode",$param) and $param["DeployMode"] !== null) {
-            $this->DeployMode = $param["DeployMode"];
+        if (array_key_exists('DeployMode',$param) and $param['DeployMode'] !== null) {
+            $this->DeployMode = $param['DeployMode'];
         }
 
-        if (array_key_exists("SlaveZone",$param) and $param["SlaveZone"] !== null) {
-            $this->SlaveZone = $param["SlaveZone"];
+        if (array_key_exists('SlaveZone',$param) and $param['SlaveZone'] !== null) {
+            $this->SlaveZone = $param['SlaveZone'];
         }
 
-        if (array_key_exists("ParamList",$param) and $param["ParamList"] !== null) {
+        if (array_key_exists('ParamList',$param) and $param['ParamList'] !== null) {
             $this->ParamList = [];
-            foreach ($param["ParamList"] as $key => $value){
+            foreach ($param['ParamList'] as $key => $value){
                 $obj = new ParamInfo();
                 $obj->deserialize($value);
                 array_push($this->ParamList, $obj);
             }
         }
 
-        if (array_key_exists("BackupZone",$param) and $param["BackupZone"] !== null) {
-            $this->BackupZone = $param["BackupZone"];
+        if (array_key_exists('BackupZone',$param) and $param['BackupZone'] !== null) {
+            $this->BackupZone = $param['BackupZone'];
         }
 
-        if (array_key_exists("AutoRenewFlag",$param) and $param["AutoRenewFlag"] !== null) {
-            $this->AutoRenewFlag = $param["AutoRenewFlag"];
+        if (array_key_exists('AutoRenewFlag',$param) and $param['AutoRenewFlag'] !== null) {
+            $this->AutoRenewFlag = $param['AutoRenewFlag'];
         }
 
-        if (array_key_exists("MasterRegion",$param) and $param["MasterRegion"] !== null) {
-            $this->MasterRegion = $param["MasterRegion"];
+        if (array_key_exists('MasterRegion',$param) and $param['MasterRegion'] !== null) {
+            $this->MasterRegion = $param['MasterRegion'];
         }
 
-        if (array_key_exists("SecurityGroup",$param) and $param["SecurityGroup"] !== null) {
-            $this->SecurityGroup = $param["SecurityGroup"];
+        if (array_key_exists('SecurityGroup',$param) and $param['SecurityGroup'] !== null) {
+            $this->SecurityGroup = $param['SecurityGroup'];
         }
 
-        if (array_key_exists("RoGroup",$param) and $param["RoGroup"] !== null) {
+        if (array_key_exists('RoGroup',$param) and $param['RoGroup'] !== null) {
             $this->RoGroup = new RoGroup();
-            $this->RoGroup->deserialize($param["RoGroup"]);
+            $this->RoGroup->deserialize($param['RoGroup']);
         }
 
-        if (array_key_exists("InstanceName",$param) and $param["InstanceName"] !== null) {
-            $this->InstanceName = $param["InstanceName"];
+        if (array_key_exists('InstanceName',$param) and $param['InstanceName'] !== null) {
+            $this->InstanceName = $param['InstanceName'];
         }
 
-        if (array_key_exists("ResourceTags",$param) and $param["ResourceTags"] !== null) {
+        if (array_key_exists('ResourceTags',$param) and $param['ResourceTags'] !== null) {
             $this->ResourceTags = [];
-            foreach ($param["ResourceTags"] as $key => $value){
+            foreach ($param['ResourceTags'] as $key => $value){
                 $obj = new TagInfo();
                 $obj->deserialize($value);
                 array_push($this->ResourceTags, $obj);
             }
         }
 
-        if (array_key_exists("DeployGroupId",$param) and $param["DeployGroupId"] !== null) {
-            $this->DeployGroupId = $param["DeployGroupId"];
+        if (array_key_exists('DeployGroupId',$param) and $param['DeployGroupId'] !== null) {
+            $this->DeployGroupId = $param['DeployGroupId'];
         }
 
-        if (array_key_exists("ClientToken",$param) and $param["ClientToken"] !== null) {
-            $this->ClientToken = $param["ClientToken"];
+        if (array_key_exists('ClientToken',$param) and $param['ClientToken'] !== null) {
+            $this->ClientToken = $param['ClientToken'];
         }
 
-        if (array_key_exists("DeviceType",$param) and $param["DeviceType"] !== null) {
-            $this->DeviceType = $param["DeviceType"];
+        if (array_key_exists('DeviceType',$param) and $param['DeviceType'] !== null) {
+            $this->DeviceType = $param['DeviceType'];
         }
     }
 }

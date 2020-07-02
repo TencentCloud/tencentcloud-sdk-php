@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -78,24 +78,24 @@ class Inbound extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Action",$param) and $param["Action"] !== null) {
-            $this->Action = $param["Action"];
+        if (array_key_exists('Action',$param) and $param['Action'] !== null) {
+            $this->Action = $param['Action'];
         }
 
-        if (array_key_exists("CidrIp",$param) and $param["CidrIp"] !== null) {
-            $this->CidrIp = $param["CidrIp"];
+        if (array_key_exists('CidrIp',$param) and $param['CidrIp'] !== null) {
+            $this->CidrIp = $param['CidrIp'];
         }
 
-        if (array_key_exists("PortRange",$param) and $param["PortRange"] !== null) {
-            $this->PortRange = $param["PortRange"];
+        if (array_key_exists('PortRange',$param) and $param['PortRange'] !== null) {
+            $this->PortRange = $param['PortRange'];
         }
 
-        if (array_key_exists("IpProtocol",$param) and $param["IpProtocol"] !== null) {
-            $this->IpProtocol = $param["IpProtocol"];
+        if (array_key_exists('IpProtocol',$param) and $param['IpProtocol'] !== null) {
+            $this->IpProtocol = $param['IpProtocol'];
         }
 
-        if (array_key_exists("Dir",$param) and $param["Dir"] !== null) {
-            $this->Dir = $param["Dir"];
+        if (array_key_exists('Dir',$param) and $param['Dir'] !== null) {
+            $this->Dir = $param['Dir'];
         }
     }
 }

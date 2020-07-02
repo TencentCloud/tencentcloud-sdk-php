@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -118,44 +118,44 @@ class ImageTaskFunction extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("EnableActionClass",$param) and $param["EnableActionClass"] !== null) {
-            $this->EnableActionClass = $param["EnableActionClass"];
+        if (array_key_exists('EnableActionClass',$param) and $param['EnableActionClass'] !== null) {
+            $this->EnableActionClass = $param['EnableActionClass'];
         }
 
-        if (array_key_exists("EnableFaceDetect",$param) and $param["EnableFaceDetect"] !== null) {
-            $this->EnableFaceDetect = $param["EnableFaceDetect"];
+        if (array_key_exists('EnableFaceDetect',$param) and $param['EnableFaceDetect'] !== null) {
+            $this->EnableFaceDetect = $param['EnableFaceDetect'];
         }
 
-        if (array_key_exists("EnableFaceExpression",$param) and $param["EnableFaceExpression"] !== null) {
-            $this->EnableFaceExpression = $param["EnableFaceExpression"];
+        if (array_key_exists('EnableFaceExpression',$param) and $param['EnableFaceExpression'] !== null) {
+            $this->EnableFaceExpression = $param['EnableFaceExpression'];
         }
 
-        if (array_key_exists("EnableFaceIdentify",$param) and $param["EnableFaceIdentify"] !== null) {
-            $this->EnableFaceIdentify = $param["EnableFaceIdentify"];
+        if (array_key_exists('EnableFaceIdentify',$param) and $param['EnableFaceIdentify'] !== null) {
+            $this->EnableFaceIdentify = $param['EnableFaceIdentify'];
         }
 
-        if (array_key_exists("EnableGesture",$param) and $param["EnableGesture"] !== null) {
-            $this->EnableGesture = $param["EnableGesture"];
+        if (array_key_exists('EnableGesture',$param) and $param['EnableGesture'] !== null) {
+            $this->EnableGesture = $param['EnableGesture'];
         }
 
-        if (array_key_exists("EnableHandTracking",$param) and $param["EnableHandTracking"] !== null) {
-            $this->EnableHandTracking = $param["EnableHandTracking"];
+        if (array_key_exists('EnableHandTracking',$param) and $param['EnableHandTracking'] !== null) {
+            $this->EnableHandTracking = $param['EnableHandTracking'];
         }
 
-        if (array_key_exists("EnableLightJudge",$param) and $param["EnableLightJudge"] !== null) {
-            $this->EnableLightJudge = $param["EnableLightJudge"];
+        if (array_key_exists('EnableLightJudge',$param) and $param['EnableLightJudge'] !== null) {
+            $this->EnableLightJudge = $param['EnableLightJudge'];
         }
 
-        if (array_key_exists("EnableStudentBodyMovements",$param) and $param["EnableStudentBodyMovements"] !== null) {
-            $this->EnableStudentBodyMovements = $param["EnableStudentBodyMovements"];
+        if (array_key_exists('EnableStudentBodyMovements',$param) and $param['EnableStudentBodyMovements'] !== null) {
+            $this->EnableStudentBodyMovements = $param['EnableStudentBodyMovements'];
         }
 
-        if (array_key_exists("EnableTeacherBodyMovements",$param) and $param["EnableTeacherBodyMovements"] !== null) {
-            $this->EnableTeacherBodyMovements = $param["EnableTeacherBodyMovements"];
+        if (array_key_exists('EnableTeacherBodyMovements',$param) and $param['EnableTeacherBodyMovements'] !== null) {
+            $this->EnableTeacherBodyMovements = $param['EnableTeacherBodyMovements'];
         }
 
-        if (array_key_exists("EnableTeacherOutScreen",$param) and $param["EnableTeacherOutScreen"] !== null) {
-            $this->EnableTeacherOutScreen = $param["EnableTeacherOutScreen"];
+        if (array_key_exists('EnableTeacherOutScreen',$param) and $param['EnableTeacherOutScreen'] !== null) {
+            $this->EnableTeacherOutScreen = $param['EnableTeacherOutScreen'];
         }
     }
 }

@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -254,117 +254,117 @@ class DBInstance extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Region",$param) and $param["Region"] !== null) {
-            $this->Region = $param["Region"];
+        if (array_key_exists('Region',$param) and $param['Region'] !== null) {
+            $this->Region = $param['Region'];
         }
 
-        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
-            $this->Zone = $param["Zone"];
+        if (array_key_exists('Zone',$param) and $param['Zone'] !== null) {
+            $this->Zone = $param['Zone'];
         }
 
-        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
-            $this->ProjectId = $param["ProjectId"];
+        if (array_key_exists('ProjectId',$param) and $param['ProjectId'] !== null) {
+            $this->ProjectId = $param['ProjectId'];
         }
 
-        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
-            $this->VpcId = $param["VpcId"];
+        if (array_key_exists('VpcId',$param) and $param['VpcId'] !== null) {
+            $this->VpcId = $param['VpcId'];
         }
 
-        if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
-            $this->SubnetId = $param["SubnetId"];
+        if (array_key_exists('SubnetId',$param) and $param['SubnetId'] !== null) {
+            $this->SubnetId = $param['SubnetId'];
         }
 
-        if (array_key_exists("DBInstanceId",$param) and $param["DBInstanceId"] !== null) {
-            $this->DBInstanceId = $param["DBInstanceId"];
+        if (array_key_exists('DBInstanceId',$param) and $param['DBInstanceId'] !== null) {
+            $this->DBInstanceId = $param['DBInstanceId'];
         }
 
-        if (array_key_exists("DBInstanceName",$param) and $param["DBInstanceName"] !== null) {
-            $this->DBInstanceName = $param["DBInstanceName"];
+        if (array_key_exists('DBInstanceName',$param) and $param['DBInstanceName'] !== null) {
+            $this->DBInstanceName = $param['DBInstanceName'];
         }
 
-        if (array_key_exists("DBInstanceStatus",$param) and $param["DBInstanceStatus"] !== null) {
-            $this->DBInstanceStatus = $param["DBInstanceStatus"];
+        if (array_key_exists('DBInstanceStatus',$param) and $param['DBInstanceStatus'] !== null) {
+            $this->DBInstanceStatus = $param['DBInstanceStatus'];
         }
 
-        if (array_key_exists("DBInstanceMemory",$param) and $param["DBInstanceMemory"] !== null) {
-            $this->DBInstanceMemory = $param["DBInstanceMemory"];
+        if (array_key_exists('DBInstanceMemory',$param) and $param['DBInstanceMemory'] !== null) {
+            $this->DBInstanceMemory = $param['DBInstanceMemory'];
         }
 
-        if (array_key_exists("DBInstanceStorage",$param) and $param["DBInstanceStorage"] !== null) {
-            $this->DBInstanceStorage = $param["DBInstanceStorage"];
+        if (array_key_exists('DBInstanceStorage',$param) and $param['DBInstanceStorage'] !== null) {
+            $this->DBInstanceStorage = $param['DBInstanceStorage'];
         }
 
-        if (array_key_exists("DBInstanceCpu",$param) and $param["DBInstanceCpu"] !== null) {
-            $this->DBInstanceCpu = $param["DBInstanceCpu"];
+        if (array_key_exists('DBInstanceCpu',$param) and $param['DBInstanceCpu'] !== null) {
+            $this->DBInstanceCpu = $param['DBInstanceCpu'];
         }
 
-        if (array_key_exists("DBInstanceClass",$param) and $param["DBInstanceClass"] !== null) {
-            $this->DBInstanceClass = $param["DBInstanceClass"];
+        if (array_key_exists('DBInstanceClass',$param) and $param['DBInstanceClass'] !== null) {
+            $this->DBInstanceClass = $param['DBInstanceClass'];
         }
 
-        if (array_key_exists("DBInstanceType",$param) and $param["DBInstanceType"] !== null) {
-            $this->DBInstanceType = $param["DBInstanceType"];
+        if (array_key_exists('DBInstanceType',$param) and $param['DBInstanceType'] !== null) {
+            $this->DBInstanceType = $param['DBInstanceType'];
         }
 
-        if (array_key_exists("DBInstanceVersion",$param) and $param["DBInstanceVersion"] !== null) {
-            $this->DBInstanceVersion = $param["DBInstanceVersion"];
+        if (array_key_exists('DBInstanceVersion',$param) and $param['DBInstanceVersion'] !== null) {
+            $this->DBInstanceVersion = $param['DBInstanceVersion'];
         }
 
-        if (array_key_exists("DBCharset",$param) and $param["DBCharset"] !== null) {
-            $this->DBCharset = $param["DBCharset"];
+        if (array_key_exists('DBCharset',$param) and $param['DBCharset'] !== null) {
+            $this->DBCharset = $param['DBCharset'];
         }
 
-        if (array_key_exists("DBVersion",$param) and $param["DBVersion"] !== null) {
-            $this->DBVersion = $param["DBVersion"];
+        if (array_key_exists('DBVersion',$param) and $param['DBVersion'] !== null) {
+            $this->DBVersion = $param['DBVersion'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
-            $this->UpdateTime = $param["UpdateTime"];
+        if (array_key_exists('UpdateTime',$param) and $param['UpdateTime'] !== null) {
+            $this->UpdateTime = $param['UpdateTime'];
         }
 
-        if (array_key_exists("ExpireTime",$param) and $param["ExpireTime"] !== null) {
-            $this->ExpireTime = $param["ExpireTime"];
+        if (array_key_exists('ExpireTime',$param) and $param['ExpireTime'] !== null) {
+            $this->ExpireTime = $param['ExpireTime'];
         }
 
-        if (array_key_exists("IsolatedTime",$param) and $param["IsolatedTime"] !== null) {
-            $this->IsolatedTime = $param["IsolatedTime"];
+        if (array_key_exists('IsolatedTime',$param) and $param['IsolatedTime'] !== null) {
+            $this->IsolatedTime = $param['IsolatedTime'];
         }
 
-        if (array_key_exists("PayType",$param) and $param["PayType"] !== null) {
-            $this->PayType = $param["PayType"];
+        if (array_key_exists('PayType',$param) and $param['PayType'] !== null) {
+            $this->PayType = $param['PayType'];
         }
 
-        if (array_key_exists("AutoRenew",$param) and $param["AutoRenew"] !== null) {
-            $this->AutoRenew = $param["AutoRenew"];
+        if (array_key_exists('AutoRenew',$param) and $param['AutoRenew'] !== null) {
+            $this->AutoRenew = $param['AutoRenew'];
         }
 
-        if (array_key_exists("DBInstanceNetInfo",$param) and $param["DBInstanceNetInfo"] !== null) {
+        if (array_key_exists('DBInstanceNetInfo',$param) and $param['DBInstanceNetInfo'] !== null) {
             $this->DBInstanceNetInfo = [];
-            foreach ($param["DBInstanceNetInfo"] as $key => $value){
+            foreach ($param['DBInstanceNetInfo'] as $key => $value){
                 $obj = new DBInstanceNetInfo();
                 $obj->deserialize($value);
                 array_push($this->DBInstanceNetInfo, $obj);
             }
         }
 
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists('Type',$param) and $param['Type'] !== null) {
+            $this->Type = $param['Type'];
         }
 
-        if (array_key_exists("AppId",$param) and $param["AppId"] !== null) {
-            $this->AppId = $param["AppId"];
+        if (array_key_exists('AppId',$param) and $param['AppId'] !== null) {
+            $this->AppId = $param['AppId'];
         }
 
-        if (array_key_exists("Uid",$param) and $param["Uid"] !== null) {
-            $this->Uid = $param["Uid"];
+        if (array_key_exists('Uid',$param) and $param['Uid'] !== null) {
+            $this->Uid = $param['Uid'];
         }
 
-        if (array_key_exists("SupportIpv6",$param) and $param["SupportIpv6"] !== null) {
-            $this->SupportIpv6 = $param["SupportIpv6"];
+        if (array_key_exists('SupportIpv6',$param) and $param['SupportIpv6'] !== null) {
+            $this->SupportIpv6 = $param['SupportIpv6'];
         }
     }
 }

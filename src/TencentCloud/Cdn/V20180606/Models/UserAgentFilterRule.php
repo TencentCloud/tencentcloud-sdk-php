@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -102,20 +102,20 @@ path: 根据完整访问路径生效
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RuleType",$param) and $param["RuleType"] !== null) {
-            $this->RuleType = $param["RuleType"];
+        if (array_key_exists('RuleType',$param) and $param['RuleType'] !== null) {
+            $this->RuleType = $param['RuleType'];
         }
 
-        if (array_key_exists("RulePaths",$param) and $param["RulePaths"] !== null) {
-            $this->RulePaths = $param["RulePaths"];
+        if (array_key_exists('RulePaths',$param) and $param['RulePaths'] !== null) {
+            $this->RulePaths = $param['RulePaths'];
         }
 
-        if (array_key_exists("UserAgents",$param) and $param["UserAgents"] !== null) {
-            $this->UserAgents = $param["UserAgents"];
+        if (array_key_exists('UserAgents',$param) and $param['UserAgents'] !== null) {
+            $this->UserAgents = $param['UserAgents'];
         }
 
-        if (array_key_exists("FilterType",$param) and $param["FilterType"] !== null) {
-            $this->FilterType = $param["FilterType"];
+        if (array_key_exists('FilterType',$param) and $param['FilterType'] !== null) {
+            $this->FilterType = $param['FilterType'];
         }
     }
 }

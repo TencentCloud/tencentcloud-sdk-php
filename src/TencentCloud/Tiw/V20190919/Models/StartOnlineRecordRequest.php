@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -142,47 +142,47 @@ MIX_STREAM - 混流功能
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SdkAppId",$param) and $param["SdkAppId"] !== null) {
-            $this->SdkAppId = $param["SdkAppId"];
+        if (array_key_exists('SdkAppId',$param) and $param['SdkAppId'] !== null) {
+            $this->SdkAppId = $param['SdkAppId'];
         }
 
-        if (array_key_exists("RoomId",$param) and $param["RoomId"] !== null) {
-            $this->RoomId = $param["RoomId"];
+        if (array_key_exists('RoomId',$param) and $param['RoomId'] !== null) {
+            $this->RoomId = $param['RoomId'];
         }
 
-        if (array_key_exists("RecordUserId",$param) and $param["RecordUserId"] !== null) {
-            $this->RecordUserId = $param["RecordUserId"];
+        if (array_key_exists('RecordUserId',$param) and $param['RecordUserId'] !== null) {
+            $this->RecordUserId = $param['RecordUserId'];
         }
 
-        if (array_key_exists("RecordUserSig",$param) and $param["RecordUserSig"] !== null) {
-            $this->RecordUserSig = $param["RecordUserSig"];
+        if (array_key_exists('RecordUserSig',$param) and $param['RecordUserSig'] !== null) {
+            $this->RecordUserSig = $param['RecordUserSig'];
         }
 
-        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
-            $this->GroupId = $param["GroupId"];
+        if (array_key_exists('GroupId',$param) and $param['GroupId'] !== null) {
+            $this->GroupId = $param['GroupId'];
         }
 
-        if (array_key_exists("Concat",$param) and $param["Concat"] !== null) {
+        if (array_key_exists('Concat',$param) and $param['Concat'] !== null) {
             $this->Concat = new Concat();
-            $this->Concat->deserialize($param["Concat"]);
+            $this->Concat->deserialize($param['Concat']);
         }
 
-        if (array_key_exists("Whiteboard",$param) and $param["Whiteboard"] !== null) {
+        if (array_key_exists('Whiteboard',$param) and $param['Whiteboard'] !== null) {
             $this->Whiteboard = new Whiteboard();
-            $this->Whiteboard->deserialize($param["Whiteboard"]);
+            $this->Whiteboard->deserialize($param['Whiteboard']);
         }
 
-        if (array_key_exists("MixStream",$param) and $param["MixStream"] !== null) {
+        if (array_key_exists('MixStream',$param) and $param['MixStream'] !== null) {
             $this->MixStream = new MixStream();
-            $this->MixStream->deserialize($param["MixStream"]);
+            $this->MixStream->deserialize($param['MixStream']);
         }
 
-        if (array_key_exists("Extras",$param) and $param["Extras"] !== null) {
-            $this->Extras = $param["Extras"];
+        if (array_key_exists('Extras',$param) and $param['Extras'] !== null) {
+            $this->Extras = $param['Extras'];
         }
 
-        if (array_key_exists("AudioFileNeeded",$param) and $param["AudioFileNeeded"] !== null) {
-            $this->AudioFileNeeded = $param["AudioFileNeeded"];
+        if (array_key_exists('AudioFileNeeded',$param) and $param['AudioFileNeeded'] !== null) {
+            $this->AudioFileNeeded = $param['AudioFileNeeded'];
         }
     }
 }

@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -39,7 +39,7 @@ use TencentCloud\Common\AbstractModel;
 图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。
 非腾讯云存储的 Url 速度和稳定性可能受一定影响。
  * @method string getConfig() 获取扩展配置信息。
-配置格式：{"option1":value1,"option2":value2}
+配置格式：{'option1':value1,'option2':value2}
 可配置信息：
       参数名称  是否必选   类型   可选值  默认值  描述
       task_type  否  Int32  [0,1]  1  用于选择任务类型: 0: 关闭版式分析与处理 1: 开启版式分析处理
@@ -48,7 +48,7 @@ use TencentCloud\Common\AbstractModel;
 例子：
 {"task_type": 1,"is_structuralization": true,"if_readable_format": true}
  * @method void setConfig(string $Config) 设置扩展配置信息。
-配置格式：{"option1":value1,"option2":value2}
+配置格式：{'option1':value1,'option2':value2}
 可配置信息：
       参数名称  是否必选   类型   可选值  默认值  描述
       task_type  否  Int32  [0,1]  1  用于选择任务类型: 0: 关闭版式分析与处理 1: 开启版式分析处理
@@ -78,7 +78,7 @@ class EduPaperOCRRequest extends AbstractModel
 
     /**
      * @var string 扩展配置信息。
-配置格式：{"option1":value1,"option2":value2}
+配置格式：{'option1':value1,'option2':value2}
 可配置信息：
       参数名称  是否必选   类型   可选值  默认值  描述
       task_type  否  Int32  [0,1]  1  用于选择任务类型: 0: 关闭版式分析与处理 1: 开启版式分析处理
@@ -100,7 +100,7 @@ class EduPaperOCRRequest extends AbstractModel
 图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。
 非腾讯云存储的 Url 速度和稳定性可能受一定影响。
      * @param string $Config 扩展配置信息。
-配置格式：{"option1":value1,"option2":value2}
+配置格式：{'option1':value1,'option2':value2}
 可配置信息：
       参数名称  是否必选   类型   可选值  默认值  描述
       task_type  否  Int32  [0,1]  1  用于选择任务类型: 0: 关闭版式分析与处理 1: 开启版式分析处理
@@ -122,16 +122,16 @@ class EduPaperOCRRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ImageBase64",$param) and $param["ImageBase64"] !== null) {
-            $this->ImageBase64 = $param["ImageBase64"];
+        if (array_key_exists('ImageBase64',$param) and $param['ImageBase64'] !== null) {
+            $this->ImageBase64 = $param['ImageBase64'];
         }
 
-        if (array_key_exists("ImageUrl",$param) and $param["ImageUrl"] !== null) {
-            $this->ImageUrl = $param["ImageUrl"];
+        if (array_key_exists('ImageUrl',$param) and $param['ImageUrl'] !== null) {
+            $this->ImageUrl = $param['ImageUrl'];
         }
 
-        if (array_key_exists("Config",$param) and $param["Config"] !== null) {
-            $this->Config = $param["Config"];
+        if (array_key_exists('Config',$param) and $param['Config'] !== null) {
+            $this->Config = $param['Config'];
         }
     }
 }

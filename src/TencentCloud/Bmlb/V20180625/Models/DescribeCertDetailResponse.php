@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -126,53 +126,53 @@ class DescribeCertDetailResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CertId",$param) and $param["CertId"] !== null) {
-            $this->CertId = $param["CertId"];
+        if (array_key_exists('CertId',$param) and $param['CertId'] !== null) {
+            $this->CertId = $param['CertId'];
         }
 
-        if (array_key_exists("CertName",$param) and $param["CertName"] !== null) {
-            $this->CertName = $param["CertName"];
+        if (array_key_exists('CertName',$param) and $param['CertName'] !== null) {
+            $this->CertName = $param['CertName'];
         }
 
-        if (array_key_exists("CertType",$param) and $param["CertType"] !== null) {
-            $this->CertType = $param["CertType"];
+        if (array_key_exists('CertType',$param) and $param['CertType'] !== null) {
+            $this->CertType = $param['CertType'];
         }
 
-        if (array_key_exists("CertContent",$param) and $param["CertContent"] !== null) {
-            $this->CertContent = $param["CertContent"];
+        if (array_key_exists('CertContent',$param) and $param['CertContent'] !== null) {
+            $this->CertContent = $param['CertContent'];
         }
 
-        if (array_key_exists("CertDomain",$param) and $param["CertDomain"] !== null) {
-            $this->CertDomain = $param["CertDomain"];
+        if (array_key_exists('CertDomain',$param) and $param['CertDomain'] !== null) {
+            $this->CertDomain = $param['CertDomain'];
         }
 
-        if (array_key_exists("CertSubjectDomain",$param) and $param["CertSubjectDomain"] !== null) {
-            $this->CertSubjectDomain = $param["CertSubjectDomain"];
+        if (array_key_exists('CertSubjectDomain',$param) and $param['CertSubjectDomain'] !== null) {
+            $this->CertSubjectDomain = $param['CertSubjectDomain'];
         }
 
-        if (array_key_exists("CertUploadTime",$param) and $param["CertUploadTime"] !== null) {
-            $this->CertUploadTime = $param["CertUploadTime"];
+        if (array_key_exists('CertUploadTime',$param) and $param['CertUploadTime'] !== null) {
+            $this->CertUploadTime = $param['CertUploadTime'];
         }
 
-        if (array_key_exists("CertBeginTime",$param) and $param["CertBeginTime"] !== null) {
-            $this->CertBeginTime = $param["CertBeginTime"];
+        if (array_key_exists('CertBeginTime',$param) and $param['CertBeginTime'] !== null) {
+            $this->CertBeginTime = $param['CertBeginTime'];
         }
 
-        if (array_key_exists("CertEndTime",$param) and $param["CertEndTime"] !== null) {
-            $this->CertEndTime = $param["CertEndTime"];
+        if (array_key_exists('CertEndTime',$param) and $param['CertEndTime'] !== null) {
+            $this->CertEndTime = $param['CertEndTime'];
         }
 
-        if (array_key_exists("CertLoadBalancerSet",$param) and $param["CertLoadBalancerSet"] !== null) {
+        if (array_key_exists('CertLoadBalancerSet',$param) and $param['CertLoadBalancerSet'] !== null) {
             $this->CertLoadBalancerSet = [];
-            foreach ($param["CertLoadBalancerSet"] as $key => $value){
+            foreach ($param['CertLoadBalancerSet'] as $key => $value){
                 $obj = new CertDetailLoadBalancer();
                 $obj->deserialize($value);
                 array_push($this->CertLoadBalancerSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

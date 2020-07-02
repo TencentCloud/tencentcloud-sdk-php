@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -266,77 +266,77 @@ class EventContent extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("EventHandle",$param) and $param["EventHandle"] !== null) {
-            $this->EventHandle = $param["EventHandle"];
+        if (array_key_exists('EventHandle',$param) and $param['EventHandle'] !== null) {
+            $this->EventHandle = $param['EventHandle'];
         }
 
-        if (array_key_exists("EventType",$param) and $param["EventType"] !== null) {
-            $this->EventType = $param["EventType"];
+        if (array_key_exists('EventType',$param) and $param['EventType'] !== null) {
+            $this->EventType = $param['EventType'];
         }
 
-        if (array_key_exists("FileUploadEvent",$param) and $param["FileUploadEvent"] !== null) {
+        if (array_key_exists('FileUploadEvent',$param) and $param['FileUploadEvent'] !== null) {
             $this->FileUploadEvent = new FileUploadTask();
-            $this->FileUploadEvent->deserialize($param["FileUploadEvent"]);
+            $this->FileUploadEvent->deserialize($param['FileUploadEvent']);
         }
 
-        if (array_key_exists("ProcedureStateChangeEvent",$param) and $param["ProcedureStateChangeEvent"] !== null) {
+        if (array_key_exists('ProcedureStateChangeEvent',$param) and $param['ProcedureStateChangeEvent'] !== null) {
             $this->ProcedureStateChangeEvent = new ProcedureTask();
-            $this->ProcedureStateChangeEvent->deserialize($param["ProcedureStateChangeEvent"]);
+            $this->ProcedureStateChangeEvent->deserialize($param['ProcedureStateChangeEvent']);
         }
 
-        if (array_key_exists("FileDeleteEvent",$param) and $param["FileDeleteEvent"] !== null) {
+        if (array_key_exists('FileDeleteEvent',$param) and $param['FileDeleteEvent'] !== null) {
             $this->FileDeleteEvent = new FileDeleteTask();
-            $this->FileDeleteEvent->deserialize($param["FileDeleteEvent"]);
+            $this->FileDeleteEvent->deserialize($param['FileDeleteEvent']);
         }
 
-        if (array_key_exists("PullCompleteEvent",$param) and $param["PullCompleteEvent"] !== null) {
+        if (array_key_exists('PullCompleteEvent',$param) and $param['PullCompleteEvent'] !== null) {
             $this->PullCompleteEvent = new PullUploadTask();
-            $this->PullCompleteEvent->deserialize($param["PullCompleteEvent"]);
+            $this->PullCompleteEvent->deserialize($param['PullCompleteEvent']);
         }
 
-        if (array_key_exists("EditMediaCompleteEvent",$param) and $param["EditMediaCompleteEvent"] !== null) {
+        if (array_key_exists('EditMediaCompleteEvent',$param) and $param['EditMediaCompleteEvent'] !== null) {
             $this->EditMediaCompleteEvent = new EditMediaTask();
-            $this->EditMediaCompleteEvent->deserialize($param["EditMediaCompleteEvent"]);
+            $this->EditMediaCompleteEvent->deserialize($param['EditMediaCompleteEvent']);
         }
 
-        if (array_key_exists("WechatPublishCompleteEvent",$param) and $param["WechatPublishCompleteEvent"] !== null) {
+        if (array_key_exists('WechatPublishCompleteEvent',$param) and $param['WechatPublishCompleteEvent'] !== null) {
             $this->WechatPublishCompleteEvent = new WechatPublishTask();
-            $this->WechatPublishCompleteEvent->deserialize($param["WechatPublishCompleteEvent"]);
+            $this->WechatPublishCompleteEvent->deserialize($param['WechatPublishCompleteEvent']);
         }
 
-        if (array_key_exists("TranscodeCompleteEvent",$param) and $param["TranscodeCompleteEvent"] !== null) {
+        if (array_key_exists('TranscodeCompleteEvent',$param) and $param['TranscodeCompleteEvent'] !== null) {
             $this->TranscodeCompleteEvent = new TranscodeTask2017();
-            $this->TranscodeCompleteEvent->deserialize($param["TranscodeCompleteEvent"]);
+            $this->TranscodeCompleteEvent->deserialize($param['TranscodeCompleteEvent']);
         }
 
-        if (array_key_exists("ConcatCompleteEvent",$param) and $param["ConcatCompleteEvent"] !== null) {
+        if (array_key_exists('ConcatCompleteEvent',$param) and $param['ConcatCompleteEvent'] !== null) {
             $this->ConcatCompleteEvent = new ConcatTask2017();
-            $this->ConcatCompleteEvent->deserialize($param["ConcatCompleteEvent"]);
+            $this->ConcatCompleteEvent->deserialize($param['ConcatCompleteEvent']);
         }
 
-        if (array_key_exists("ClipCompleteEvent",$param) and $param["ClipCompleteEvent"] !== null) {
+        if (array_key_exists('ClipCompleteEvent',$param) and $param['ClipCompleteEvent'] !== null) {
             $this->ClipCompleteEvent = new ClipTask2017();
-            $this->ClipCompleteEvent->deserialize($param["ClipCompleteEvent"]);
+            $this->ClipCompleteEvent->deserialize($param['ClipCompleteEvent']);
         }
 
-        if (array_key_exists("CreateImageSpriteCompleteEvent",$param) and $param["CreateImageSpriteCompleteEvent"] !== null) {
+        if (array_key_exists('CreateImageSpriteCompleteEvent',$param) and $param['CreateImageSpriteCompleteEvent'] !== null) {
             $this->CreateImageSpriteCompleteEvent = new CreateImageSpriteTask2017();
-            $this->CreateImageSpriteCompleteEvent->deserialize($param["CreateImageSpriteCompleteEvent"]);
+            $this->CreateImageSpriteCompleteEvent->deserialize($param['CreateImageSpriteCompleteEvent']);
         }
 
-        if (array_key_exists("SnapshotByTimeOffsetCompleteEvent",$param) and $param["SnapshotByTimeOffsetCompleteEvent"] !== null) {
+        if (array_key_exists('SnapshotByTimeOffsetCompleteEvent',$param) and $param['SnapshotByTimeOffsetCompleteEvent'] !== null) {
             $this->SnapshotByTimeOffsetCompleteEvent = new SnapshotByTimeOffsetTask2017();
-            $this->SnapshotByTimeOffsetCompleteEvent->deserialize($param["SnapshotByTimeOffsetCompleteEvent"]);
+            $this->SnapshotByTimeOffsetCompleteEvent->deserialize($param['SnapshotByTimeOffsetCompleteEvent']);
         }
 
-        if (array_key_exists("ComposeMediaCompleteEvent",$param) and $param["ComposeMediaCompleteEvent"] !== null) {
+        if (array_key_exists('ComposeMediaCompleteEvent',$param) and $param['ComposeMediaCompleteEvent'] !== null) {
             $this->ComposeMediaCompleteEvent = new ComposeMediaTask();
-            $this->ComposeMediaCompleteEvent->deserialize($param["ComposeMediaCompleteEvent"]);
+            $this->ComposeMediaCompleteEvent->deserialize($param['ComposeMediaCompleteEvent']);
         }
 
-        if (array_key_exists("WechatMiniProgramPublishCompleteEvent",$param) and $param["WechatMiniProgramPublishCompleteEvent"] !== null) {
+        if (array_key_exists('WechatMiniProgramPublishCompleteEvent',$param) and $param['WechatMiniProgramPublishCompleteEvent'] !== null) {
             $this->WechatMiniProgramPublishCompleteEvent = new WechatMiniProgramPublishTask();
-            $this->WechatMiniProgramPublishCompleteEvent->deserialize($param["WechatMiniProgramPublishCompleteEvent"]);
+            $this->WechatMiniProgramPublishCompleteEvent->deserialize($param['WechatMiniProgramPublishCompleteEvent']);
         }
     }
 }

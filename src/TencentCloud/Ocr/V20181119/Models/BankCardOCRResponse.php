@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -70,20 +70,20 @@ class BankCardOCRResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CardNo",$param) and $param["CardNo"] !== null) {
-            $this->CardNo = $param["CardNo"];
+        if (array_key_exists('CardNo',$param) and $param['CardNo'] !== null) {
+            $this->CardNo = $param['CardNo'];
         }
 
-        if (array_key_exists("BankInfo",$param) and $param["BankInfo"] !== null) {
-            $this->BankInfo = $param["BankInfo"];
+        if (array_key_exists('BankInfo',$param) and $param['BankInfo'] !== null) {
+            $this->BankInfo = $param['BankInfo'];
         }
 
-        if (array_key_exists("ValidDate",$param) and $param["ValidDate"] !== null) {
-            $this->ValidDate = $param["ValidDate"];
+        if (array_key_exists('ValidDate',$param) and $param['ValidDate'] !== null) {
+            $this->ValidDate = $param['ValidDate'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -94,33 +94,33 @@ class MediaImageSpriteItem extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Definition",$param) and $param["Definition"] !== null) {
-            $this->Definition = $param["Definition"];
+        if (array_key_exists('Definition',$param) and $param['Definition'] !== null) {
+            $this->Definition = $param['Definition'];
         }
 
-        if (array_key_exists("Height",$param) and $param["Height"] !== null) {
-            $this->Height = $param["Height"];
+        if (array_key_exists('Height',$param) and $param['Height'] !== null) {
+            $this->Height = $param['Height'];
         }
 
-        if (array_key_exists("Width",$param) and $param["Width"] !== null) {
-            $this->Width = $param["Width"];
+        if (array_key_exists('Width',$param) and $param['Width'] !== null) {
+            $this->Width = $param['Width'];
         }
 
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists('TotalCount',$param) and $param['TotalCount'] !== null) {
+            $this->TotalCount = $param['TotalCount'];
         }
 
-        if (array_key_exists("ImagePathSet",$param) and $param["ImagePathSet"] !== null) {
-            $this->ImagePathSet = $param["ImagePathSet"];
+        if (array_key_exists('ImagePathSet',$param) and $param['ImagePathSet'] !== null) {
+            $this->ImagePathSet = $param['ImagePathSet'];
         }
 
-        if (array_key_exists("WebVttPath",$param) and $param["WebVttPath"] !== null) {
-            $this->WebVttPath = $param["WebVttPath"];
+        if (array_key_exists('WebVttPath',$param) and $param['WebVttPath'] !== null) {
+            $this->WebVttPath = $param['WebVttPath'];
         }
 
-        if (array_key_exists("Storage",$param) and $param["Storage"] !== null) {
+        if (array_key_exists('Storage',$param) and $param['Storage'] !== null) {
             $this->Storage = new TaskOutputStorage();
-            $this->Storage->deserialize($param["Storage"]);
+            $this->Storage->deserialize($param['Storage']);
         }
     }
 }

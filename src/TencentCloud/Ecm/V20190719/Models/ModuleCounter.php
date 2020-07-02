@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -78,29 +78,29 @@ class ModuleCounter extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ISPCounterSet",$param) and $param["ISPCounterSet"] !== null) {
+        if (array_key_exists('ISPCounterSet',$param) and $param['ISPCounterSet'] !== null) {
             $this->ISPCounterSet = [];
-            foreach ($param["ISPCounterSet"] as $key => $value){
+            foreach ($param['ISPCounterSet'] as $key => $value){
                 $obj = new ISPCounter();
                 $obj->deserialize($value);
                 array_push($this->ISPCounterSet, $obj);
             }
         }
 
-        if (array_key_exists("ProvinceNum",$param) and $param["ProvinceNum"] !== null) {
-            $this->ProvinceNum = $param["ProvinceNum"];
+        if (array_key_exists('ProvinceNum',$param) and $param['ProvinceNum'] !== null) {
+            $this->ProvinceNum = $param['ProvinceNum'];
         }
 
-        if (array_key_exists("CityNum",$param) and $param["CityNum"] !== null) {
-            $this->CityNum = $param["CityNum"];
+        if (array_key_exists('CityNum',$param) and $param['CityNum'] !== null) {
+            $this->CityNum = $param['CityNum'];
         }
 
-        if (array_key_exists("NodeNum",$param) and $param["NodeNum"] !== null) {
-            $this->NodeNum = $param["NodeNum"];
+        if (array_key_exists('NodeNum',$param) and $param['NodeNum'] !== null) {
+            $this->NodeNum = $param['NodeNum'];
         }
 
-        if (array_key_exists("InstanceNum",$param) and $param["InstanceNum"] !== null) {
-            $this->InstanceNum = $param["InstanceNum"];
+        if (array_key_exists('InstanceNum',$param) and $param['InstanceNum'] !== null) {
+            $this->InstanceNum = $param['InstanceNum'];
         }
     }
 }

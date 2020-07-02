@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -62,17 +62,17 @@ class DevicesBindInfoRule extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
-            $this->Domain = $param["Domain"];
+        if (array_key_exists('Domain',$param) and $param['Domain'] !== null) {
+            $this->Domain = $param['Domain'];
         }
 
-        if (array_key_exists("DomainId",$param) and $param["DomainId"] !== null) {
-            $this->DomainId = $param["DomainId"];
+        if (array_key_exists('DomainId',$param) and $param['DomainId'] !== null) {
+            $this->DomainId = $param['DomainId'];
         }
 
-        if (array_key_exists("LocationSet",$param) and $param["LocationSet"] !== null) {
+        if (array_key_exists('LocationSet',$param) and $param['LocationSet'] !== null) {
             $this->LocationSet = [];
-            foreach ($param["LocationSet"] as $key => $value){
+            foreach ($param['LocationSet'] as $key => $value){
                 $obj = new DevicesBindInfoLocation();
                 $obj->deserialize($value);
                 array_push($this->LocationSet, $obj);

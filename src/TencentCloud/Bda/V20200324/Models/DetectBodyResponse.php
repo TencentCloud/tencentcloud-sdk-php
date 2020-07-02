@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -62,21 +62,21 @@ class DetectBodyResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BodyDetectResults",$param) and $param["BodyDetectResults"] !== null) {
+        if (array_key_exists('BodyDetectResults',$param) and $param['BodyDetectResults'] !== null) {
             $this->BodyDetectResults = [];
-            foreach ($param["BodyDetectResults"] as $key => $value){
+            foreach ($param['BodyDetectResults'] as $key => $value){
                 $obj = new BodyDetectResult();
                 $obj->deserialize($value);
                 array_push($this->BodyDetectResults, $obj);
             }
         }
 
-        if (array_key_exists("BodyModelVersion",$param) and $param["BodyModelVersion"] !== null) {
-            $this->BodyModelVersion = $param["BodyModelVersion"];
+        if (array_key_exists('BodyModelVersion',$param) and $param['BodyModelVersion'] !== null) {
+            $this->BodyModelVersion = $param['BodyModelVersion'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

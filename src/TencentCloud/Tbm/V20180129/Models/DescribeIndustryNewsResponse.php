@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -86,38 +86,38 @@ class DescribeIndustryNewsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("NewsCount",$param) and $param["NewsCount"] !== null) {
-            $this->NewsCount = $param["NewsCount"];
+        if (array_key_exists('NewsCount',$param) and $param['NewsCount'] !== null) {
+            $this->NewsCount = $param['NewsCount'];
         }
 
-        if (array_key_exists("FromCount",$param) and $param["FromCount"] !== null) {
-            $this->FromCount = $param["FromCount"];
+        if (array_key_exists('FromCount',$param) and $param['FromCount'] !== null) {
+            $this->FromCount = $param['FromCount'];
         }
 
-        if (array_key_exists("AdverseCount",$param) and $param["AdverseCount"] !== null) {
-            $this->AdverseCount = $param["AdverseCount"];
+        if (array_key_exists('AdverseCount',$param) and $param['AdverseCount'] !== null) {
+            $this->AdverseCount = $param['AdverseCount'];
         }
 
-        if (array_key_exists("NewsSet",$param) and $param["NewsSet"] !== null) {
+        if (array_key_exists('NewsSet',$param) and $param['NewsSet'] !== null) {
             $this->NewsSet = [];
-            foreach ($param["NewsSet"] as $key => $value){
+            foreach ($param['NewsSet'] as $key => $value){
                 $obj = new IndustryNews();
                 $obj->deserialize($value);
                 array_push($this->NewsSet, $obj);
             }
         }
 
-        if (array_key_exists("DateCountSet",$param) and $param["DateCountSet"] !== null) {
+        if (array_key_exists('DateCountSet',$param) and $param['DateCountSet'] !== null) {
             $this->DateCountSet = [];
-            foreach ($param["DateCountSet"] as $key => $value){
+            foreach ($param['DateCountSet'] as $key => $value){
                 $obj = new DateCount();
                 $obj->deserialize($value);
                 array_push($this->DateCountSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

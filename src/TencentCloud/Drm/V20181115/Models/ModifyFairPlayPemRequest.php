@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -106,28 +106,28 @@ openssl在生成rsa时，可能会需要设置加密密钥，请记住设置的�
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Pem",$param) and $param["Pem"] !== null) {
-            $this->Pem = $param["Pem"];
+        if (array_key_exists('Pem',$param) and $param['Pem'] !== null) {
+            $this->Pem = $param['Pem'];
         }
 
-        if (array_key_exists("Ask",$param) and $param["Ask"] !== null) {
-            $this->Ask = $param["Ask"];
+        if (array_key_exists('Ask',$param) and $param['Ask'] !== null) {
+            $this->Ask = $param['Ask'];
         }
 
-        if (array_key_exists("FairPlayPemId",$param) and $param["FairPlayPemId"] !== null) {
-            $this->FairPlayPemId = $param["FairPlayPemId"];
+        if (array_key_exists('FairPlayPemId',$param) and $param['FairPlayPemId'] !== null) {
+            $this->FairPlayPemId = $param['FairPlayPemId'];
         }
 
-        if (array_key_exists("PemDecryptKey",$param) and $param["PemDecryptKey"] !== null) {
-            $this->PemDecryptKey = $param["PemDecryptKey"];
+        if (array_key_exists('PemDecryptKey',$param) and $param['PemDecryptKey'] !== null) {
+            $this->PemDecryptKey = $param['PemDecryptKey'];
         }
 
-        if (array_key_exists("BailorId",$param) and $param["BailorId"] !== null) {
-            $this->BailorId = $param["BailorId"];
+        if (array_key_exists('BailorId',$param) and $param['BailorId'] !== null) {
+            $this->BailorId = $param['BailorId'];
         }
 
-        if (array_key_exists("Priority",$param) and $param["Priority"] !== null) {
-            $this->Priority = $param["Priority"];
+        if (array_key_exists('Priority',$param) and $param['Priority'] !== null) {
+            $this->Priority = $param['Priority'];
         }
     }
 }

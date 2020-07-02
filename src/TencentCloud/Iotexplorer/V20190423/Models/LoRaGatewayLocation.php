@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -70,20 +70,20 @@ class LoRaGatewayLocation extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Accuracy",$param) and $param["Accuracy"] !== null) {
-            $this->Accuracy = $param["Accuracy"];
+        if (array_key_exists('Accuracy',$param) and $param['Accuracy'] !== null) {
+            $this->Accuracy = $param['Accuracy'];
         }
 
-        if (array_key_exists("Altitude",$param) and $param["Altitude"] !== null) {
-            $this->Altitude = $param["Altitude"];
+        if (array_key_exists('Altitude',$param) and $param['Altitude'] !== null) {
+            $this->Altitude = $param['Altitude'];
         }
 
-        if (array_key_exists("Latitude",$param) and $param["Latitude"] !== null) {
-            $this->Latitude = $param["Latitude"];
+        if (array_key_exists('Latitude',$param) and $param['Latitude'] !== null) {
+            $this->Latitude = $param['Latitude'];
         }
 
-        if (array_key_exists("Longitude",$param) and $param["Longitude"] !== null) {
-            $this->Longitude = $param["Longitude"];
+        if (array_key_exists('Longitude',$param) and $param['Longitude'] !== null) {
+            $this->Longitude = $param['Longitude'];
         }
     }
 }

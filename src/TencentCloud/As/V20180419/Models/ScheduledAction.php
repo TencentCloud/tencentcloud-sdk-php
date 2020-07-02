@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -118,44 +118,44 @@ class ScheduledAction extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ScheduledActionId",$param) and $param["ScheduledActionId"] !== null) {
-            $this->ScheduledActionId = $param["ScheduledActionId"];
+        if (array_key_exists('ScheduledActionId',$param) and $param['ScheduledActionId'] !== null) {
+            $this->ScheduledActionId = $param['ScheduledActionId'];
         }
 
-        if (array_key_exists("ScheduledActionName",$param) and $param["ScheduledActionName"] !== null) {
-            $this->ScheduledActionName = $param["ScheduledActionName"];
+        if (array_key_exists('ScheduledActionName',$param) and $param['ScheduledActionName'] !== null) {
+            $this->ScheduledActionName = $param['ScheduledActionName'];
         }
 
-        if (array_key_exists("AutoScalingGroupId",$param) and $param["AutoScalingGroupId"] !== null) {
-            $this->AutoScalingGroupId = $param["AutoScalingGroupId"];
+        if (array_key_exists('AutoScalingGroupId',$param) and $param['AutoScalingGroupId'] !== null) {
+            $this->AutoScalingGroupId = $param['AutoScalingGroupId'];
         }
 
-        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
-            $this->StartTime = $param["StartTime"];
+        if (array_key_exists('StartTime',$param) and $param['StartTime'] !== null) {
+            $this->StartTime = $param['StartTime'];
         }
 
-        if (array_key_exists("Recurrence",$param) and $param["Recurrence"] !== null) {
-            $this->Recurrence = $param["Recurrence"];
+        if (array_key_exists('Recurrence',$param) and $param['Recurrence'] !== null) {
+            $this->Recurrence = $param['Recurrence'];
         }
 
-        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
-            $this->EndTime = $param["EndTime"];
+        if (array_key_exists('EndTime',$param) and $param['EndTime'] !== null) {
+            $this->EndTime = $param['EndTime'];
         }
 
-        if (array_key_exists("MaxSize",$param) and $param["MaxSize"] !== null) {
-            $this->MaxSize = $param["MaxSize"];
+        if (array_key_exists('MaxSize',$param) and $param['MaxSize'] !== null) {
+            $this->MaxSize = $param['MaxSize'];
         }
 
-        if (array_key_exists("DesiredCapacity",$param) and $param["DesiredCapacity"] !== null) {
-            $this->DesiredCapacity = $param["DesiredCapacity"];
+        if (array_key_exists('DesiredCapacity',$param) and $param['DesiredCapacity'] !== null) {
+            $this->DesiredCapacity = $param['DesiredCapacity'];
         }
 
-        if (array_key_exists("MinSize",$param) and $param["MinSize"] !== null) {
-            $this->MinSize = $param["MinSize"];
+        if (array_key_exists('MinSize',$param) and $param['MinSize'] !== null) {
+            $this->MinSize = $param['MinSize'];
         }
 
-        if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
-            $this->CreatedTime = $param["CreatedTime"];
+        if (array_key_exists('CreatedTime',$param) and $param['CreatedTime'] !== null) {
+            $this->CreatedTime = $param['CreatedTime'];
         }
     }
 }

@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -78,24 +78,24 @@ class AccessRule extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AccessRuleId",$param) and $param["AccessRuleId"] !== null) {
-            $this->AccessRuleId = $param["AccessRuleId"];
+        if (array_key_exists('AccessRuleId',$param) and $param['AccessRuleId'] !== null) {
+            $this->AccessRuleId = $param['AccessRuleId'];
         }
 
-        if (array_key_exists("Address",$param) and $param["Address"] !== null) {
-            $this->Address = $param["Address"];
+        if (array_key_exists('Address',$param) and $param['Address'] !== null) {
+            $this->Address = $param['Address'];
         }
 
-        if (array_key_exists("AccessMode",$param) and $param["AccessMode"] !== null) {
-            $this->AccessMode = $param["AccessMode"];
+        if (array_key_exists('AccessMode',$param) and $param['AccessMode'] !== null) {
+            $this->AccessMode = $param['AccessMode'];
         }
 
-        if (array_key_exists("Priority",$param) and $param["Priority"] !== null) {
-            $this->Priority = $param["Priority"];
+        if (array_key_exists('Priority',$param) and $param['Priority'] !== null) {
+            $this->Priority = $param['Priority'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
     }
 }

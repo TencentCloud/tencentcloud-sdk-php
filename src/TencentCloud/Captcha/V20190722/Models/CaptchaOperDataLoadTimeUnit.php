@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -62,16 +62,16 @@ class CaptchaOperDataLoadTimeUnit extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DateKey",$param) and $param["DateKey"] !== null) {
-            $this->DateKey = $param["DateKey"];
+        if (array_key_exists('DateKey',$param) and $param['DateKey'] !== null) {
+            $this->DateKey = $param['DateKey'];
         }
 
-        if (array_key_exists("MarketLoadTime",$param) and $param["MarketLoadTime"] !== null) {
-            $this->MarketLoadTime = $param["MarketLoadTime"];
+        if (array_key_exists('MarketLoadTime',$param) and $param['MarketLoadTime'] !== null) {
+            $this->MarketLoadTime = $param['MarketLoadTime'];
         }
 
-        if (array_key_exists("AppIdLoadTime",$param) and $param["AppIdLoadTime"] !== null) {
-            $this->AppIdLoadTime = $param["AppIdLoadTime"];
+        if (array_key_exists('AppIdLoadTime',$param) and $param['AppIdLoadTime'] !== null) {
+            $this->AppIdLoadTime = $param['AppIdLoadTime'];
         }
     }
 }

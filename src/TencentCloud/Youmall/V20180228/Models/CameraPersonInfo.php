@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -86,29 +86,29 @@ class CameraPersonInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TempId",$param) and $param["TempId"] !== null) {
-            $this->TempId = $param["TempId"];
+        if (array_key_exists('TempId',$param) and $param['TempId'] !== null) {
+            $this->TempId = $param['TempId'];
         }
 
-        if (array_key_exists("FaceId",$param) and $param["FaceId"] !== null) {
-            $this->FaceId = $param["FaceId"];
+        if (array_key_exists('FaceId',$param) and $param['FaceId'] !== null) {
+            $this->FaceId = $param['FaceId'];
         }
 
-        if (array_key_exists("IdType",$param) and $param["IdType"] !== null) {
-            $this->IdType = $param["IdType"];
+        if (array_key_exists('IdType',$param) and $param['IdType'] !== null) {
+            $this->IdType = $param['IdType'];
         }
 
-        if (array_key_exists("FacePic",$param) and $param["FacePic"] !== null) {
-            $this->FacePic = $param["FacePic"];
+        if (array_key_exists('FacePic',$param) and $param['FacePic'] !== null) {
+            $this->FacePic = $param['FacePic'];
         }
 
-        if (array_key_exists("Time",$param) and $param["Time"] !== null) {
-            $this->Time = $param["Time"];
+        if (array_key_exists('Time',$param) and $param['Time'] !== null) {
+            $this->Time = $param['Time'];
         }
 
-        if (array_key_exists("PersonInfo",$param) and $param["PersonInfo"] !== null) {
+        if (array_key_exists('PersonInfo',$param) and $param['PersonInfo'] !== null) {
             $this->PersonInfo = new PersonInfo();
-            $this->PersonInfo->deserialize($param["PersonInfo"]);
+            $this->PersonInfo->deserialize($param['PersonInfo']);
         }
     }
 }

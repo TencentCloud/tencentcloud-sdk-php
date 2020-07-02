@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -110,51 +110,51 @@ class DescribeFileInfoResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ReturnCode",$param) and $param["ReturnCode"] !== null) {
-            $this->ReturnCode = $param["ReturnCode"];
+        if (array_key_exists('ReturnCode',$param) and $param['ReturnCode'] !== null) {
+            $this->ReturnCode = $param['ReturnCode'];
         }
 
-        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
-            $this->Result = $param["Result"];
+        if (array_key_exists('Result',$param) and $param['Result'] !== null) {
+            $this->Result = $param['Result'];
         }
 
-        if (array_key_exists("Confidence",$param) and $param["Confidence"] !== null) {
-            $this->Confidence = $param["Confidence"];
+        if (array_key_exists('Confidence',$param) and $param['Confidence'] !== null) {
+            $this->Confidence = $param['Confidence'];
         }
 
-        if (array_key_exists("FileInfo",$param) and $param["FileInfo"] !== null) {
+        if (array_key_exists('FileInfo',$param) and $param['FileInfo'] !== null) {
             $this->FileInfo = [];
-            foreach ($param["FileInfo"] as $key => $value){
+            foreach ($param['FileInfo'] as $key => $value){
                 $obj = new FileInfoType();
                 $obj->deserialize($value);
                 array_push($this->FileInfo, $obj);
             }
         }
 
-        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+        if (array_key_exists('Tags',$param) and $param['Tags'] !== null) {
             $this->Tags = [];
-            foreach ($param["Tags"] as $key => $value){
+            foreach ($param['Tags'] as $key => $value){
                 $obj = new TagType();
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
         }
 
-        if (array_key_exists("Intelligences",$param) and $param["Intelligences"] !== null) {
+        if (array_key_exists('Intelligences',$param) and $param['Intelligences'] !== null) {
             $this->Intelligences = [];
-            foreach ($param["Intelligences"] as $key => $value){
+            foreach ($param['Intelligences'] as $key => $value){
                 $obj = new IntelligenceType();
                 $obj->deserialize($value);
                 array_push($this->Intelligences, $obj);
             }
         }
 
-        if (array_key_exists("Context",$param) and $param["Context"] !== null) {
-            $this->Context = $param["Context"];
+        if (array_key_exists('Context',$param) and $param['Context'] !== null) {
+            $this->Context = $param['Context'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

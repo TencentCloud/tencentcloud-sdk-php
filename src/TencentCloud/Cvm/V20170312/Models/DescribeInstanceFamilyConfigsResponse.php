@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -54,17 +54,17 @@ class DescribeInstanceFamilyConfigsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceFamilyConfigSet",$param) and $param["InstanceFamilyConfigSet"] !== null) {
+        if (array_key_exists('InstanceFamilyConfigSet',$param) and $param['InstanceFamilyConfigSet'] !== null) {
             $this->InstanceFamilyConfigSet = [];
-            foreach ($param["InstanceFamilyConfigSet"] as $key => $value){
+            foreach ($param['InstanceFamilyConfigSet'] as $key => $value){
                 $obj = new InstanceFamilyConfig();
                 $obj->deserialize($value);
                 array_push($this->InstanceFamilyConfigSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

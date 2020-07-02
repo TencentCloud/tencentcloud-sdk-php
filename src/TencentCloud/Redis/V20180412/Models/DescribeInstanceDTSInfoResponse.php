@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -142,42 +142,42 @@ class DescribeInstanceDTSInfoResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("JobId",$param) and $param["JobId"] !== null) {
-            $this->JobId = $param["JobId"];
+        if (array_key_exists('JobId',$param) and $param['JobId'] !== null) {
+            $this->JobId = $param['JobId'];
         }
 
-        if (array_key_exists("JobName",$param) and $param["JobName"] !== null) {
-            $this->JobName = $param["JobName"];
+        if (array_key_exists('JobName',$param) and $param['JobName'] !== null) {
+            $this->JobName = $param['JobName'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("StatusDesc",$param) and $param["StatusDesc"] !== null) {
-            $this->StatusDesc = $param["StatusDesc"];
+        if (array_key_exists('StatusDesc',$param) and $param['StatusDesc'] !== null) {
+            $this->StatusDesc = $param['StatusDesc'];
         }
 
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
+        if (array_key_exists('Offset',$param) and $param['Offset'] !== null) {
+            $this->Offset = $param['Offset'];
         }
 
-        if (array_key_exists("CutDownTime",$param) and $param["CutDownTime"] !== null) {
-            $this->CutDownTime = $param["CutDownTime"];
+        if (array_key_exists('CutDownTime',$param) and $param['CutDownTime'] !== null) {
+            $this->CutDownTime = $param['CutDownTime'];
         }
 
-        if (array_key_exists("SrcInfo",$param) and $param["SrcInfo"] !== null) {
+        if (array_key_exists('SrcInfo',$param) and $param['SrcInfo'] !== null) {
             $this->SrcInfo = new DescribeInstanceDTSInstanceInfo();
-            $this->SrcInfo->deserialize($param["SrcInfo"]);
+            $this->SrcInfo->deserialize($param['SrcInfo']);
         }
 
-        if (array_key_exists("DstInfo",$param) and $param["DstInfo"] !== null) {
+        if (array_key_exists('DstInfo',$param) and $param['DstInfo'] !== null) {
             $this->DstInfo = new DescribeInstanceDTSInstanceInfo();
-            $this->DstInfo->deserialize($param["DstInfo"]);
+            $this->DstInfo->deserialize($param['DstInfo']);
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

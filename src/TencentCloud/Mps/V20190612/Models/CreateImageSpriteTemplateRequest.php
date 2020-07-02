@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -198,44 +198,44 @@ class CreateImageSpriteTemplateRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SampleType",$param) and $param["SampleType"] !== null) {
-            $this->SampleType = $param["SampleType"];
+        if (array_key_exists('SampleType',$param) and $param['SampleType'] !== null) {
+            $this->SampleType = $param['SampleType'];
         }
 
-        if (array_key_exists("SampleInterval",$param) and $param["SampleInterval"] !== null) {
-            $this->SampleInterval = $param["SampleInterval"];
+        if (array_key_exists('SampleInterval',$param) and $param['SampleInterval'] !== null) {
+            $this->SampleInterval = $param['SampleInterval'];
         }
 
-        if (array_key_exists("RowCount",$param) and $param["RowCount"] !== null) {
-            $this->RowCount = $param["RowCount"];
+        if (array_key_exists('RowCount',$param) and $param['RowCount'] !== null) {
+            $this->RowCount = $param['RowCount'];
         }
 
-        if (array_key_exists("ColumnCount",$param) and $param["ColumnCount"] !== null) {
-            $this->ColumnCount = $param["ColumnCount"];
+        if (array_key_exists('ColumnCount',$param) and $param['ColumnCount'] !== null) {
+            $this->ColumnCount = $param['ColumnCount'];
         }
 
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("Width",$param) and $param["Width"] !== null) {
-            $this->Width = $param["Width"];
+        if (array_key_exists('Width',$param) and $param['Width'] !== null) {
+            $this->Width = $param['Width'];
         }
 
-        if (array_key_exists("Height",$param) and $param["Height"] !== null) {
-            $this->Height = $param["Height"];
+        if (array_key_exists('Height',$param) and $param['Height'] !== null) {
+            $this->Height = $param['Height'];
         }
 
-        if (array_key_exists("ResolutionAdaptive",$param) and $param["ResolutionAdaptive"] !== null) {
-            $this->ResolutionAdaptive = $param["ResolutionAdaptive"];
+        if (array_key_exists('ResolutionAdaptive',$param) and $param['ResolutionAdaptive'] !== null) {
+            $this->ResolutionAdaptive = $param['ResolutionAdaptive'];
         }
 
-        if (array_key_exists("FillType",$param) and $param["FillType"] !== null) {
-            $this->FillType = $param["FillType"];
+        if (array_key_exists('FillType',$param) and $param['FillType'] !== null) {
+            $this->FillType = $param['FillType'];
         }
 
-        if (array_key_exists("Comment",$param) and $param["Comment"] !== null) {
-            $this->Comment = $param["Comment"];
+        if (array_key_exists('Comment',$param) and $param['Comment'] !== null) {
+            $this->Comment = $param['Comment'];
         }
     }
 }

@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -166,48 +166,48 @@ merchant:商户子账户
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SubMchType",$param) and $param["SubMchType"] !== null) {
-            $this->SubMchType = $param["SubMchType"];
+        if (array_key_exists('SubMchType',$param) and $param['SubMchType'] !== null) {
+            $this->SubMchType = $param['SubMchType'];
         }
 
-        if (array_key_exists("SubMchName",$param) and $param["SubMchName"] !== null) {
-            $this->SubMchName = $param["SubMchName"];
+        if (array_key_exists('SubMchName',$param) and $param['SubMchName'] !== null) {
+            $this->SubMchName = $param['SubMchName'];
         }
 
-        if (array_key_exists("SubAcctNo",$param) and $param["SubAcctNo"] !== null) {
-            $this->SubAcctNo = $param["SubAcctNo"];
+        if (array_key_exists('SubAcctNo',$param) and $param['SubAcctNo'] !== null) {
+            $this->SubAcctNo = $param['SubAcctNo'];
         }
 
-        if (array_key_exists("ShortName",$param) and $param["ShortName"] !== null) {
-            $this->ShortName = $param["ShortName"];
+        if (array_key_exists('ShortName',$param) and $param['ShortName'] !== null) {
+            $this->ShortName = $param['ShortName'];
         }
 
-        if (array_key_exists("SubMchId",$param) and $param["SubMchId"] !== null) {
-            $this->SubMchId = $param["SubMchId"];
+        if (array_key_exists('SubMchId',$param) and $param['SubMchId'] !== null) {
+            $this->SubMchId = $param['SubMchId'];
         }
 
-        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
-            $this->SubAppId = $param["SubAppId"];
+        if (array_key_exists('SubAppId',$param) and $param['SubAppId'] !== null) {
+            $this->SubAppId = $param['SubAppId'];
         }
 
-        if (array_key_exists("Contact",$param) and $param["Contact"] !== null) {
-            $this->Contact = $param["Contact"];
+        if (array_key_exists('Contact',$param) and $param['Contact'] !== null) {
+            $this->Contact = $param['Contact'];
         }
 
-        if (array_key_exists("Address",$param) and $param["Address"] !== null) {
-            $this->Address = $param["Address"];
+        if (array_key_exists('Address',$param) and $param['Address'] !== null) {
+            $this->Address = $param['Address'];
         }
 
-        if (array_key_exists("Mobile",$param) and $param["Mobile"] !== null) {
-            $this->Mobile = $param["Mobile"];
+        if (array_key_exists('Mobile',$param) and $param['Mobile'] !== null) {
+            $this->Mobile = $param['Mobile'];
         }
 
-        if (array_key_exists("Email",$param) and $param["Email"] !== null) {
-            $this->Email = $param["Email"];
+        if (array_key_exists('Email',$param) and $param['Email'] !== null) {
+            $this->Email = $param['Email'];
         }
 
-        if (array_key_exists("SubMerchantMemberType",$param) and $param["SubMerchantMemberType"] !== null) {
-            $this->SubMerchantMemberType = $param["SubMerchantMemberType"];
+        if (array_key_exists('SubMerchantMemberType',$param) and $param['SubMerchantMemberType'] !== null) {
+            $this->SubMerchantMemberType = $param['SubMerchantMemberType'];
         }
     }
 }

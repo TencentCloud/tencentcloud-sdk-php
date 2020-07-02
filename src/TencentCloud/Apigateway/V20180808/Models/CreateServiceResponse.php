@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -114,40 +114,40 @@ class CreateServiceResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ServiceId",$param) and $param["ServiceId"] !== null) {
-            $this->ServiceId = $param["ServiceId"];
+        if (array_key_exists('ServiceId',$param) and $param['ServiceId'] !== null) {
+            $this->ServiceId = $param['ServiceId'];
         }
 
-        if (array_key_exists("ServiceName",$param) and $param["ServiceName"] !== null) {
-            $this->ServiceName = $param["ServiceName"];
+        if (array_key_exists('ServiceName',$param) and $param['ServiceName'] !== null) {
+            $this->ServiceName = $param['ServiceName'];
         }
 
-        if (array_key_exists("ServiceDesc",$param) and $param["ServiceDesc"] !== null) {
-            $this->ServiceDesc = $param["ServiceDesc"];
+        if (array_key_exists('ServiceDesc',$param) and $param['ServiceDesc'] !== null) {
+            $this->ServiceDesc = $param['ServiceDesc'];
         }
 
-        if (array_key_exists("OuterSubDomain",$param) and $param["OuterSubDomain"] !== null) {
-            $this->OuterSubDomain = $param["OuterSubDomain"];
+        if (array_key_exists('OuterSubDomain',$param) and $param['OuterSubDomain'] !== null) {
+            $this->OuterSubDomain = $param['OuterSubDomain'];
         }
 
-        if (array_key_exists("InnerSubDomain",$param) and $param["InnerSubDomain"] !== null) {
-            $this->InnerSubDomain = $param["InnerSubDomain"];
+        if (array_key_exists('InnerSubDomain',$param) and $param['InnerSubDomain'] !== null) {
+            $this->InnerSubDomain = $param['InnerSubDomain'];
         }
 
-        if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
-            $this->CreatedTime = $param["CreatedTime"];
+        if (array_key_exists('CreatedTime',$param) and $param['CreatedTime'] !== null) {
+            $this->CreatedTime = $param['CreatedTime'];
         }
 
-        if (array_key_exists("NetTypes",$param) and $param["NetTypes"] !== null) {
-            $this->NetTypes = $param["NetTypes"];
+        if (array_key_exists('NetTypes',$param) and $param['NetTypes'] !== null) {
+            $this->NetTypes = $param['NetTypes'];
         }
 
-        if (array_key_exists("IpVersion",$param) and $param["IpVersion"] !== null) {
-            $this->IpVersion = $param["IpVersion"];
+        if (array_key_exists('IpVersion',$param) and $param['IpVersion'] !== null) {
+            $this->IpVersion = $param['IpVersion'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

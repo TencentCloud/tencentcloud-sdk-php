@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -122,36 +122,36 @@ BLOCK：违规
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Suggestion",$param) and $param["Suggestion"] !== null) {
-            $this->Suggestion = $param["Suggestion"];
+        if (array_key_exists('Suggestion',$param) and $param['Suggestion'] !== null) {
+            $this->Suggestion = $param['Suggestion'];
         }
 
-        if (array_key_exists("PornResult",$param) and $param["PornResult"] !== null) {
+        if (array_key_exists('PornResult',$param) and $param['PornResult'] !== null) {
             $this->PornResult = new PornResult();
-            $this->PornResult->deserialize($param["PornResult"]);
+            $this->PornResult->deserialize($param['PornResult']);
         }
 
-        if (array_key_exists("TerrorismResult",$param) and $param["TerrorismResult"] !== null) {
+        if (array_key_exists('TerrorismResult',$param) and $param['TerrorismResult'] !== null) {
             $this->TerrorismResult = new TerrorismResult();
-            $this->TerrorismResult->deserialize($param["TerrorismResult"]);
+            $this->TerrorismResult->deserialize($param['TerrorismResult']);
         }
 
-        if (array_key_exists("PoliticsResult",$param) and $param["PoliticsResult"] !== null) {
+        if (array_key_exists('PoliticsResult',$param) and $param['PoliticsResult'] !== null) {
             $this->PoliticsResult = new PoliticsResult();
-            $this->PoliticsResult->deserialize($param["PoliticsResult"]);
+            $this->PoliticsResult->deserialize($param['PoliticsResult']);
         }
 
-        if (array_key_exists("Extra",$param) and $param["Extra"] !== null) {
-            $this->Extra = $param["Extra"];
+        if (array_key_exists('Extra',$param) and $param['Extra'] !== null) {
+            $this->Extra = $param['Extra'];
         }
 
-        if (array_key_exists("DisgustResult",$param) and $param["DisgustResult"] !== null) {
+        if (array_key_exists('DisgustResult',$param) and $param['DisgustResult'] !== null) {
             $this->DisgustResult = new DisgustResult();
-            $this->DisgustResult->deserialize($param["DisgustResult"]);
+            $this->DisgustResult->deserialize($param['DisgustResult']);
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -142,56 +142,56 @@ class DescribeCustomersRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("QueryType",$param) and $param["QueryType"] !== null) {
-            $this->QueryType = $param["QueryType"];
+        if (array_key_exists('QueryType',$param) and $param['QueryType'] !== null) {
+            $this->QueryType = $param['QueryType'];
         }
 
-        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
-            $this->GroupId = $param["GroupId"];
+        if (array_key_exists('GroupId',$param) and $param['GroupId'] !== null) {
+            $this->GroupId = $param['GroupId'];
         }
 
-        if (array_key_exists("MarkFlag",$param) and $param["MarkFlag"] !== null) {
-            $this->MarkFlag = $param["MarkFlag"];
+        if (array_key_exists('MarkFlag',$param) and $param['MarkFlag'] !== null) {
+            $this->MarkFlag = $param['MarkFlag'];
         }
 
-        if (array_key_exists("TagIds",$param) and $param["TagIds"] !== null) {
-            $this->TagIds = $param["TagIds"];
+        if (array_key_exists('TagIds',$param) and $param['TagIds'] !== null) {
+            $this->TagIds = $param['TagIds'];
         }
 
-        if (array_key_exists("RelChannelFlag",$param) and $param["RelChannelFlag"] !== null) {
-            $this->RelChannelFlag = $param["RelChannelFlag"];
+        if (array_key_exists('RelChannelFlag',$param) and $param['RelChannelFlag'] !== null) {
+            $this->RelChannelFlag = $param['RelChannelFlag'];
         }
 
-        if (array_key_exists("NeedPhoneFlag",$param) and $param["NeedPhoneFlag"] !== null) {
-            $this->NeedPhoneFlag = $param["NeedPhoneFlag"];
+        if (array_key_exists('NeedPhoneFlag',$param) and $param['NeedPhoneFlag'] !== null) {
+            $this->NeedPhoneFlag = $param['NeedPhoneFlag'];
         }
 
-        if (array_key_exists("Province",$param) and $param["Province"] !== null) {
-            $this->Province = $param["Province"];
+        if (array_key_exists('Province',$param) and $param['Province'] !== null) {
+            $this->Province = $param['Province'];
         }
 
-        if (array_key_exists("City",$param) and $param["City"] !== null) {
-            $this->City = $param["City"];
+        if (array_key_exists('City',$param) and $param['City'] !== null) {
+            $this->City = $param['City'];
         }
 
-        if (array_key_exists("Sex",$param) and $param["Sex"] !== null) {
-            $this->Sex = $param["Sex"];
+        if (array_key_exists('Sex',$param) and $param['Sex'] !== null) {
+            $this->Sex = $param['Sex'];
         }
 
-        if (array_key_exists("KeyWord",$param) and $param["KeyWord"] !== null) {
-            $this->KeyWord = $param["KeyWord"];
+        if (array_key_exists('KeyWord',$param) and $param['KeyWord'] !== null) {
+            $this->KeyWord = $param['KeyWord'];
         }
 
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
+        if (array_key_exists('Offset',$param) and $param['Offset'] !== null) {
+            $this->Offset = $param['Offset'];
         }
 
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
+        if (array_key_exists('Limit',$param) and $param['Limit'] !== null) {
+            $this->Limit = $param['Limit'];
         }
 
-        if (array_key_exists("SubProjectId",$param) and $param["SubProjectId"] !== null) {
-            $this->SubProjectId = $param["SubProjectId"];
+        if (array_key_exists('SubProjectId',$param) and $param['SubProjectId'] !== null) {
+            $this->SubProjectId = $param['SubProjectId'];
         }
     }
 }

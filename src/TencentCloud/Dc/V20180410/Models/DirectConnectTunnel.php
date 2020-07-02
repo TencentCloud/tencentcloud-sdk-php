@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -338,127 +338,127 @@ REJECTED:拒绝
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DirectConnectTunnelId",$param) and $param["DirectConnectTunnelId"] !== null) {
-            $this->DirectConnectTunnelId = $param["DirectConnectTunnelId"];
+        if (array_key_exists('DirectConnectTunnelId',$param) and $param['DirectConnectTunnelId'] !== null) {
+            $this->DirectConnectTunnelId = $param['DirectConnectTunnelId'];
         }
 
-        if (array_key_exists("DirectConnectId",$param) and $param["DirectConnectId"] !== null) {
-            $this->DirectConnectId = $param["DirectConnectId"];
+        if (array_key_exists('DirectConnectId',$param) and $param['DirectConnectId'] !== null) {
+            $this->DirectConnectId = $param['DirectConnectId'];
         }
 
-        if (array_key_exists("State",$param) and $param["State"] !== null) {
-            $this->State = $param["State"];
+        if (array_key_exists('State',$param) and $param['State'] !== null) {
+            $this->State = $param['State'];
         }
 
-        if (array_key_exists("DirectConnectOwnerAccount",$param) and $param["DirectConnectOwnerAccount"] !== null) {
-            $this->DirectConnectOwnerAccount = $param["DirectConnectOwnerAccount"];
+        if (array_key_exists('DirectConnectOwnerAccount',$param) and $param['DirectConnectOwnerAccount'] !== null) {
+            $this->DirectConnectOwnerAccount = $param['DirectConnectOwnerAccount'];
         }
 
-        if (array_key_exists("OwnerAccount",$param) and $param["OwnerAccount"] !== null) {
-            $this->OwnerAccount = $param["OwnerAccount"];
+        if (array_key_exists('OwnerAccount',$param) and $param['OwnerAccount'] !== null) {
+            $this->OwnerAccount = $param['OwnerAccount'];
         }
 
-        if (array_key_exists("NetworkType",$param) and $param["NetworkType"] !== null) {
-            $this->NetworkType = $param["NetworkType"];
+        if (array_key_exists('NetworkType',$param) and $param['NetworkType'] !== null) {
+            $this->NetworkType = $param['NetworkType'];
         }
 
-        if (array_key_exists("NetworkRegion",$param) and $param["NetworkRegion"] !== null) {
-            $this->NetworkRegion = $param["NetworkRegion"];
+        if (array_key_exists('NetworkRegion',$param) and $param['NetworkRegion'] !== null) {
+            $this->NetworkRegion = $param['NetworkRegion'];
         }
 
-        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
-            $this->VpcId = $param["VpcId"];
+        if (array_key_exists('VpcId',$param) and $param['VpcId'] !== null) {
+            $this->VpcId = $param['VpcId'];
         }
 
-        if (array_key_exists("DirectConnectGatewayId",$param) and $param["DirectConnectGatewayId"] !== null) {
-            $this->DirectConnectGatewayId = $param["DirectConnectGatewayId"];
+        if (array_key_exists('DirectConnectGatewayId',$param) and $param['DirectConnectGatewayId'] !== null) {
+            $this->DirectConnectGatewayId = $param['DirectConnectGatewayId'];
         }
 
-        if (array_key_exists("RouteType",$param) and $param["RouteType"] !== null) {
-            $this->RouteType = $param["RouteType"];
+        if (array_key_exists('RouteType',$param) and $param['RouteType'] !== null) {
+            $this->RouteType = $param['RouteType'];
         }
 
-        if (array_key_exists("BgpPeer",$param) and $param["BgpPeer"] !== null) {
+        if (array_key_exists('BgpPeer',$param) and $param['BgpPeer'] !== null) {
             $this->BgpPeer = new BgpPeer();
-            $this->BgpPeer->deserialize($param["BgpPeer"]);
+            $this->BgpPeer->deserialize($param['BgpPeer']);
         }
 
-        if (array_key_exists("RouteFilterPrefixes",$param) and $param["RouteFilterPrefixes"] !== null) {
+        if (array_key_exists('RouteFilterPrefixes',$param) and $param['RouteFilterPrefixes'] !== null) {
             $this->RouteFilterPrefixes = [];
-            foreach ($param["RouteFilterPrefixes"] as $key => $value){
+            foreach ($param['RouteFilterPrefixes'] as $key => $value){
                 $obj = new RouteFilterPrefix();
                 $obj->deserialize($value);
                 array_push($this->RouteFilterPrefixes, $obj);
             }
         }
 
-        if (array_key_exists("Vlan",$param) and $param["Vlan"] !== null) {
-            $this->Vlan = $param["Vlan"];
+        if (array_key_exists('Vlan',$param) and $param['Vlan'] !== null) {
+            $this->Vlan = $param['Vlan'];
         }
 
-        if (array_key_exists("TencentAddress",$param) and $param["TencentAddress"] !== null) {
-            $this->TencentAddress = $param["TencentAddress"];
+        if (array_key_exists('TencentAddress',$param) and $param['TencentAddress'] !== null) {
+            $this->TencentAddress = $param['TencentAddress'];
         }
 
-        if (array_key_exists("CustomerAddress",$param) and $param["CustomerAddress"] !== null) {
-            $this->CustomerAddress = $param["CustomerAddress"];
+        if (array_key_exists('CustomerAddress',$param) and $param['CustomerAddress'] !== null) {
+            $this->CustomerAddress = $param['CustomerAddress'];
         }
 
-        if (array_key_exists("DirectConnectTunnelName",$param) and $param["DirectConnectTunnelName"] !== null) {
-            $this->DirectConnectTunnelName = $param["DirectConnectTunnelName"];
+        if (array_key_exists('DirectConnectTunnelName',$param) and $param['DirectConnectTunnelName'] !== null) {
+            $this->DirectConnectTunnelName = $param['DirectConnectTunnelName'];
         }
 
-        if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
-            $this->CreatedTime = $param["CreatedTime"];
+        if (array_key_exists('CreatedTime',$param) and $param['CreatedTime'] !== null) {
+            $this->CreatedTime = $param['CreatedTime'];
         }
 
-        if (array_key_exists("Bandwidth",$param) and $param["Bandwidth"] !== null) {
-            $this->Bandwidth = $param["Bandwidth"];
+        if (array_key_exists('Bandwidth',$param) and $param['Bandwidth'] !== null) {
+            $this->Bandwidth = $param['Bandwidth'];
         }
 
-        if (array_key_exists("TagSet",$param) and $param["TagSet"] !== null) {
+        if (array_key_exists('TagSet',$param) and $param['TagSet'] !== null) {
             $this->TagSet = [];
-            foreach ($param["TagSet"] as $key => $value){
+            foreach ($param['TagSet'] as $key => $value){
                 $obj = new Tag();
                 $obj->deserialize($value);
                 array_push($this->TagSet, $obj);
             }
         }
 
-        if (array_key_exists("NetDetectId",$param) and $param["NetDetectId"] !== null) {
-            $this->NetDetectId = $param["NetDetectId"];
+        if (array_key_exists('NetDetectId',$param) and $param['NetDetectId'] !== null) {
+            $this->NetDetectId = $param['NetDetectId'];
         }
 
-        if (array_key_exists("EnableBGPCommunity",$param) and $param["EnableBGPCommunity"] !== null) {
-            $this->EnableBGPCommunity = $param["EnableBGPCommunity"];
+        if (array_key_exists('EnableBGPCommunity',$param) and $param['EnableBGPCommunity'] !== null) {
+            $this->EnableBGPCommunity = $param['EnableBGPCommunity'];
         }
 
-        if (array_key_exists("NatType",$param) and $param["NatType"] !== null) {
-            $this->NatType = $param["NatType"];
+        if (array_key_exists('NatType',$param) and $param['NatType'] !== null) {
+            $this->NatType = $param['NatType'];
         }
 
-        if (array_key_exists("VpcRegion",$param) and $param["VpcRegion"] !== null) {
-            $this->VpcRegion = $param["VpcRegion"];
+        if (array_key_exists('VpcRegion',$param) and $param['VpcRegion'] !== null) {
+            $this->VpcRegion = $param['VpcRegion'];
         }
 
-        if (array_key_exists("BfdEnable",$param) and $param["BfdEnable"] !== null) {
-            $this->BfdEnable = $param["BfdEnable"];
+        if (array_key_exists('BfdEnable',$param) and $param['BfdEnable'] !== null) {
+            $this->BfdEnable = $param['BfdEnable'];
         }
 
-        if (array_key_exists("AccessPointType",$param) and $param["AccessPointType"] !== null) {
-            $this->AccessPointType = $param["AccessPointType"];
+        if (array_key_exists('AccessPointType',$param) and $param['AccessPointType'] !== null) {
+            $this->AccessPointType = $param['AccessPointType'];
         }
 
-        if (array_key_exists("DirectConnectGatewayName",$param) and $param["DirectConnectGatewayName"] !== null) {
-            $this->DirectConnectGatewayName = $param["DirectConnectGatewayName"];
+        if (array_key_exists('DirectConnectGatewayName',$param) and $param['DirectConnectGatewayName'] !== null) {
+            $this->DirectConnectGatewayName = $param['DirectConnectGatewayName'];
         }
 
-        if (array_key_exists("VpcName",$param) and $param["VpcName"] !== null) {
-            $this->VpcName = $param["VpcName"];
+        if (array_key_exists('VpcName',$param) and $param['VpcName'] !== null) {
+            $this->VpcName = $param['VpcName'];
         }
 
-        if (array_key_exists("TencentBackupAddress",$param) and $param["TencentBackupAddress"] !== null) {
-            $this->TencentBackupAddress = $param["TencentBackupAddress"];
+        if (array_key_exists('TencentBackupAddress',$param) and $param['TencentBackupAddress'] !== null) {
+            $this->TencentBackupAddress = $param['TencentBackupAddress'];
         }
     }
 }

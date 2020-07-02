@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -82,24 +82,24 @@ z轴确定了重叠画面的遮盖顺序，z轴值大的画面处于顶层
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Width",$param) and $param["Width"] !== null) {
-            $this->Width = $param["Width"];
+        if (array_key_exists('Width',$param) and $param['Width'] !== null) {
+            $this->Width = $param['Width'];
         }
 
-        if (array_key_exists("Height",$param) and $param["Height"] !== null) {
-            $this->Height = $param["Height"];
+        if (array_key_exists('Height',$param) and $param['Height'] !== null) {
+            $this->Height = $param['Height'];
         }
 
-        if (array_key_exists("X",$param) and $param["X"] !== null) {
-            $this->X = $param["X"];
+        if (array_key_exists('X',$param) and $param['X'] !== null) {
+            $this->X = $param['X'];
         }
 
-        if (array_key_exists("Y",$param) and $param["Y"] !== null) {
-            $this->Y = $param["Y"];
+        if (array_key_exists('Y',$param) and $param['Y'] !== null) {
+            $this->Y = $param['Y'];
         }
 
-        if (array_key_exists("ZOrder",$param) and $param["ZOrder"] !== null) {
-            $this->ZOrder = $param["ZOrder"];
+        if (array_key_exists('ZOrder',$param) and $param['ZOrder'] !== null) {
+            $this->ZOrder = $param['ZOrder'];
         }
     }
 }

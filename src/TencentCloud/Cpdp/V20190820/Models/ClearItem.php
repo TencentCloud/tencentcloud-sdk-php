@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -122,32 +122,32 @@ class ClearItem extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Date",$param) and $param["Date"] !== null) {
-            $this->Date = $param["Date"];
+        if (array_key_exists('Date',$param) and $param['Date'] !== null) {
+            $this->Date = $param['Date'];
         }
 
-        if (array_key_exists("SubAcctType",$param) and $param["SubAcctType"] !== null) {
-            $this->SubAcctType = $param["SubAcctType"];
+        if (array_key_exists('SubAcctType',$param) and $param['SubAcctType'] !== null) {
+            $this->SubAcctType = $param['SubAcctType'];
         }
 
-        if (array_key_exists("ReconcileStatus",$param) and $param["ReconcileStatus"] !== null) {
-            $this->ReconcileStatus = $param["ReconcileStatus"];
+        if (array_key_exists('ReconcileStatus',$param) and $param['ReconcileStatus'] !== null) {
+            $this->ReconcileStatus = $param['ReconcileStatus'];
         }
 
-        if (array_key_exists("ReconcileReturnMsg",$param) and $param["ReconcileReturnMsg"] !== null) {
-            $this->ReconcileReturnMsg = $param["ReconcileReturnMsg"];
+        if (array_key_exists('ReconcileReturnMsg',$param) and $param['ReconcileReturnMsg'] !== null) {
+            $this->ReconcileReturnMsg = $param['ReconcileReturnMsg'];
         }
 
-        if (array_key_exists("ClearingStatus",$param) and $param["ClearingStatus"] !== null) {
-            $this->ClearingStatus = $param["ClearingStatus"];
+        if (array_key_exists('ClearingStatus',$param) and $param['ClearingStatus'] !== null) {
+            $this->ClearingStatus = $param['ClearingStatus'];
         }
 
-        if (array_key_exists("ClearingReturnMsg",$param) and $param["ClearingReturnMsg"] !== null) {
-            $this->ClearingReturnMsg = $param["ClearingReturnMsg"];
+        if (array_key_exists('ClearingReturnMsg',$param) and $param['ClearingReturnMsg'] !== null) {
+            $this->ClearingReturnMsg = $param['ClearingReturnMsg'];
         }
 
-        if (array_key_exists("TotalAmt",$param) and $param["TotalAmt"] !== null) {
-            $this->TotalAmt = $param["TotalAmt"];
+        if (array_key_exists('TotalAmt',$param) and $param['TotalAmt'] !== null) {
+            $this->TotalAmt = $param['TotalAmt'];
         }
     }
 }

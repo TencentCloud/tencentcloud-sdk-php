@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -54,13 +54,13 @@ class CreateUsualLoginPlacesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Uuids",$param) and $param["Uuids"] !== null) {
-            $this->Uuids = $param["Uuids"];
+        if (array_key_exists('Uuids',$param) and $param['Uuids'] !== null) {
+            $this->Uuids = $param['Uuids'];
         }
 
-        if (array_key_exists("Places",$param) and $param["Places"] !== null) {
+        if (array_key_exists('Places',$param) and $param['Places'] !== null) {
             $this->Places = [];
-            foreach ($param["Places"] as $key => $value){
+            foreach ($param['Places'] as $key => $value){
                 $obj = new Place();
                 $obj->deserialize($value);
                 array_push($this->Places, $obj);

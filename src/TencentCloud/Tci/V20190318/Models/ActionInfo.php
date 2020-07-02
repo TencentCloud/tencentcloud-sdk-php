@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -102,40 +102,40 @@ class ActionInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BodyPosture",$param) and $param["BodyPosture"] !== null) {
+        if (array_key_exists('BodyPosture',$param) and $param['BodyPosture'] !== null) {
             $this->BodyPosture = new ActionType();
-            $this->BodyPosture->deserialize($param["BodyPosture"]);
+            $this->BodyPosture->deserialize($param['BodyPosture']);
         }
 
-        if (array_key_exists("Handup",$param) and $param["Handup"] !== null) {
+        if (array_key_exists('Handup',$param) and $param['Handup'] !== null) {
             $this->Handup = new ActionType();
-            $this->Handup->deserialize($param["Handup"]);
+            $this->Handup->deserialize($param['Handup']);
         }
 
-        if (array_key_exists("LookHead",$param) and $param["LookHead"] !== null) {
+        if (array_key_exists('LookHead',$param) and $param['LookHead'] !== null) {
             $this->LookHead = new ActionType();
-            $this->LookHead->deserialize($param["LookHead"]);
+            $this->LookHead->deserialize($param['LookHead']);
         }
 
-        if (array_key_exists("Writing",$param) and $param["Writing"] !== null) {
+        if (array_key_exists('Writing',$param) and $param['Writing'] !== null) {
             $this->Writing = new ActionType();
-            $this->Writing->deserialize($param["Writing"]);
+            $this->Writing->deserialize($param['Writing']);
         }
 
-        if (array_key_exists("Height",$param) and $param["Height"] !== null) {
-            $this->Height = $param["Height"];
+        if (array_key_exists('Height',$param) and $param['Height'] !== null) {
+            $this->Height = $param['Height'];
         }
 
-        if (array_key_exists("Left",$param) and $param["Left"] !== null) {
-            $this->Left = $param["Left"];
+        if (array_key_exists('Left',$param) and $param['Left'] !== null) {
+            $this->Left = $param['Left'];
         }
 
-        if (array_key_exists("Top",$param) and $param["Top"] !== null) {
-            $this->Top = $param["Top"];
+        if (array_key_exists('Top',$param) and $param['Top'] !== null) {
+            $this->Top = $param['Top'];
         }
 
-        if (array_key_exists("Width",$param) and $param["Width"] !== null) {
-            $this->Width = $param["Width"];
+        if (array_key_exists('Width',$param) and $param['Width'] !== null) {
+            $this->Width = $param['Width'];
         }
     }
 }

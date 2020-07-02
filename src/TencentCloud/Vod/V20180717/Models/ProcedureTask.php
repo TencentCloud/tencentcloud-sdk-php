@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -214,89 +214,89 @@ class ProcedureTask extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
-            $this->TaskId = $param["TaskId"];
+        if (array_key_exists('TaskId',$param) and $param['TaskId'] !== null) {
+            $this->TaskId = $param['TaskId'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("ErrCode",$param) and $param["ErrCode"] !== null) {
-            $this->ErrCode = $param["ErrCode"];
+        if (array_key_exists('ErrCode',$param) and $param['ErrCode'] !== null) {
+            $this->ErrCode = $param['ErrCode'];
         }
 
-        if (array_key_exists("Message",$param) and $param["Message"] !== null) {
-            $this->Message = $param["Message"];
+        if (array_key_exists('Message',$param) and $param['Message'] !== null) {
+            $this->Message = $param['Message'];
         }
 
-        if (array_key_exists("FileId",$param) and $param["FileId"] !== null) {
-            $this->FileId = $param["FileId"];
+        if (array_key_exists('FileId',$param) and $param['FileId'] !== null) {
+            $this->FileId = $param['FileId'];
         }
 
-        if (array_key_exists("FileName",$param) and $param["FileName"] !== null) {
-            $this->FileName = $param["FileName"];
+        if (array_key_exists('FileName',$param) and $param['FileName'] !== null) {
+            $this->FileName = $param['FileName'];
         }
 
-        if (array_key_exists("FileUrl",$param) and $param["FileUrl"] !== null) {
-            $this->FileUrl = $param["FileUrl"];
+        if (array_key_exists('FileUrl',$param) and $param['FileUrl'] !== null) {
+            $this->FileUrl = $param['FileUrl'];
         }
 
-        if (array_key_exists("MetaData",$param) and $param["MetaData"] !== null) {
+        if (array_key_exists('MetaData',$param) and $param['MetaData'] !== null) {
             $this->MetaData = new MediaMetaData();
-            $this->MetaData->deserialize($param["MetaData"]);
+            $this->MetaData->deserialize($param['MetaData']);
         }
 
-        if (array_key_exists("MediaProcessResultSet",$param) and $param["MediaProcessResultSet"] !== null) {
+        if (array_key_exists('MediaProcessResultSet',$param) and $param['MediaProcessResultSet'] !== null) {
             $this->MediaProcessResultSet = [];
-            foreach ($param["MediaProcessResultSet"] as $key => $value){
+            foreach ($param['MediaProcessResultSet'] as $key => $value){
                 $obj = new MediaProcessTaskResult();
                 $obj->deserialize($value);
                 array_push($this->MediaProcessResultSet, $obj);
             }
         }
 
-        if (array_key_exists("AiContentReviewResultSet",$param) and $param["AiContentReviewResultSet"] !== null) {
+        if (array_key_exists('AiContentReviewResultSet',$param) and $param['AiContentReviewResultSet'] !== null) {
             $this->AiContentReviewResultSet = [];
-            foreach ($param["AiContentReviewResultSet"] as $key => $value){
+            foreach ($param['AiContentReviewResultSet'] as $key => $value){
                 $obj = new AiContentReviewResult();
                 $obj->deserialize($value);
                 array_push($this->AiContentReviewResultSet, $obj);
             }
         }
 
-        if (array_key_exists("AiAnalysisResultSet",$param) and $param["AiAnalysisResultSet"] !== null) {
+        if (array_key_exists('AiAnalysisResultSet',$param) and $param['AiAnalysisResultSet'] !== null) {
             $this->AiAnalysisResultSet = [];
-            foreach ($param["AiAnalysisResultSet"] as $key => $value){
+            foreach ($param['AiAnalysisResultSet'] as $key => $value){
                 $obj = new AiAnalysisResult();
                 $obj->deserialize($value);
                 array_push($this->AiAnalysisResultSet, $obj);
             }
         }
 
-        if (array_key_exists("AiRecognitionResultSet",$param) and $param["AiRecognitionResultSet"] !== null) {
+        if (array_key_exists('AiRecognitionResultSet',$param) and $param['AiRecognitionResultSet'] !== null) {
             $this->AiRecognitionResultSet = [];
-            foreach ($param["AiRecognitionResultSet"] as $key => $value){
+            foreach ($param['AiRecognitionResultSet'] as $key => $value){
                 $obj = new AiRecognitionResult();
                 $obj->deserialize($value);
                 array_push($this->AiRecognitionResultSet, $obj);
             }
         }
 
-        if (array_key_exists("TasksPriority",$param) and $param["TasksPriority"] !== null) {
-            $this->TasksPriority = $param["TasksPriority"];
+        if (array_key_exists('TasksPriority',$param) and $param['TasksPriority'] !== null) {
+            $this->TasksPriority = $param['TasksPriority'];
         }
 
-        if (array_key_exists("TasksNotifyMode",$param) and $param["TasksNotifyMode"] !== null) {
-            $this->TasksNotifyMode = $param["TasksNotifyMode"];
+        if (array_key_exists('TasksNotifyMode',$param) and $param['TasksNotifyMode'] !== null) {
+            $this->TasksNotifyMode = $param['TasksNotifyMode'];
         }
 
-        if (array_key_exists("SessionContext",$param) and $param["SessionContext"] !== null) {
-            $this->SessionContext = $param["SessionContext"];
+        if (array_key_exists('SessionContext',$param) and $param['SessionContext'] !== null) {
+            $this->SessionContext = $param['SessionContext'];
         }
 
-        if (array_key_exists("SessionId",$param) and $param["SessionId"] !== null) {
-            $this->SessionId = $param["SessionId"];
+        if (array_key_exists('SessionId',$param) and $param['SessionId'] !== null) {
+            $this->SessionId = $param['SessionId'];
         }
     }
 }

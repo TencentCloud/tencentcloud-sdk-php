@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePolicyConditionList请求参数结构体
  *
- * @method string getModule() 获取固定值，为"monitor"
- * @method void setModule(string $Module) 设置固定值，为"monitor"
+ * @method string getModule() 获取固定值，为'monitor'
+ * @method void setModule(string $Module) 设置固定值，为'monitor'
  */
 class DescribePolicyConditionListRequest extends AbstractModel
 {
     /**
-     * @var string 固定值，为"monitor"
+     * @var string 固定值，为'monitor'
      */
     public $Module;
 
     /**
-     * @param string $Module 固定值，为"monitor"
+     * @param string $Module 固定值，为'monitor'
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class DescribePolicyConditionListRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Module",$param) and $param["Module"] !== null) {
-            $this->Module = $param["Module"];
+        if (array_key_exists('Module',$param) and $param['Module'] !== null) {
+            $this->Module = $param['Module'];
         }
     }
 }

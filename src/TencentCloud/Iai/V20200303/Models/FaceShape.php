@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -110,81 +110,81 @@ class FaceShape extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FaceProfile",$param) and $param["FaceProfile"] !== null) {
+        if (array_key_exists('FaceProfile',$param) and $param['FaceProfile'] !== null) {
             $this->FaceProfile = [];
-            foreach ($param["FaceProfile"] as $key => $value){
+            foreach ($param['FaceProfile'] as $key => $value){
                 $obj = new Point();
                 $obj->deserialize($value);
                 array_push($this->FaceProfile, $obj);
             }
         }
 
-        if (array_key_exists("LeftEye",$param) and $param["LeftEye"] !== null) {
+        if (array_key_exists('LeftEye',$param) and $param['LeftEye'] !== null) {
             $this->LeftEye = [];
-            foreach ($param["LeftEye"] as $key => $value){
+            foreach ($param['LeftEye'] as $key => $value){
                 $obj = new Point();
                 $obj->deserialize($value);
                 array_push($this->LeftEye, $obj);
             }
         }
 
-        if (array_key_exists("RightEye",$param) and $param["RightEye"] !== null) {
+        if (array_key_exists('RightEye',$param) and $param['RightEye'] !== null) {
             $this->RightEye = [];
-            foreach ($param["RightEye"] as $key => $value){
+            foreach ($param['RightEye'] as $key => $value){
                 $obj = new Point();
                 $obj->deserialize($value);
                 array_push($this->RightEye, $obj);
             }
         }
 
-        if (array_key_exists("LeftEyeBrow",$param) and $param["LeftEyeBrow"] !== null) {
+        if (array_key_exists('LeftEyeBrow',$param) and $param['LeftEyeBrow'] !== null) {
             $this->LeftEyeBrow = [];
-            foreach ($param["LeftEyeBrow"] as $key => $value){
+            foreach ($param['LeftEyeBrow'] as $key => $value){
                 $obj = new Point();
                 $obj->deserialize($value);
                 array_push($this->LeftEyeBrow, $obj);
             }
         }
 
-        if (array_key_exists("RightEyeBrow",$param) and $param["RightEyeBrow"] !== null) {
+        if (array_key_exists('RightEyeBrow',$param) and $param['RightEyeBrow'] !== null) {
             $this->RightEyeBrow = [];
-            foreach ($param["RightEyeBrow"] as $key => $value){
+            foreach ($param['RightEyeBrow'] as $key => $value){
                 $obj = new Point();
                 $obj->deserialize($value);
                 array_push($this->RightEyeBrow, $obj);
             }
         }
 
-        if (array_key_exists("Mouth",$param) and $param["Mouth"] !== null) {
+        if (array_key_exists('Mouth',$param) and $param['Mouth'] !== null) {
             $this->Mouth = [];
-            foreach ($param["Mouth"] as $key => $value){
+            foreach ($param['Mouth'] as $key => $value){
                 $obj = new Point();
                 $obj->deserialize($value);
                 array_push($this->Mouth, $obj);
             }
         }
 
-        if (array_key_exists("Nose",$param) and $param["Nose"] !== null) {
+        if (array_key_exists('Nose',$param) and $param['Nose'] !== null) {
             $this->Nose = [];
-            foreach ($param["Nose"] as $key => $value){
+            foreach ($param['Nose'] as $key => $value){
                 $obj = new Point();
                 $obj->deserialize($value);
                 array_push($this->Nose, $obj);
             }
         }
 
-        if (array_key_exists("LeftPupil",$param) and $param["LeftPupil"] !== null) {
+        if (array_key_exists('LeftPupil',$param) and $param['LeftPupil'] !== null) {
             $this->LeftPupil = [];
-            foreach ($param["LeftPupil"] as $key => $value){
+            foreach ($param['LeftPupil'] as $key => $value){
                 $obj = new Point();
                 $obj->deserialize($value);
                 array_push($this->LeftPupil, $obj);
             }
         }
 
-        if (array_key_exists("RightPupil",$param) and $param["RightPupil"] !== null) {
+        if (array_key_exists('RightPupil',$param) and $param['RightPupil'] !== null) {
             $this->RightPupil = [];
-            foreach ($param["RightPupil"] as $key => $value){
+            foreach ($param['RightPupil'] as $key => $value){
                 $obj = new Point();
                 $obj->deserialize($value);
                 array_push($this->RightPupil, $obj);

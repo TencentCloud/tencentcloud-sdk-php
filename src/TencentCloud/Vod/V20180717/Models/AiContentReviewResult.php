@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -206,58 +206,58 @@ class AiContentReviewResult extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists('Type',$param) and $param['Type'] !== null) {
+            $this->Type = $param['Type'];
         }
 
-        if (array_key_exists("PornTask",$param) and $param["PornTask"] !== null) {
+        if (array_key_exists('PornTask',$param) and $param['PornTask'] !== null) {
             $this->PornTask = new AiReviewTaskPornResult();
-            $this->PornTask->deserialize($param["PornTask"]);
+            $this->PornTask->deserialize($param['PornTask']);
         }
 
-        if (array_key_exists("TerrorismTask",$param) and $param["TerrorismTask"] !== null) {
+        if (array_key_exists('TerrorismTask',$param) and $param['TerrorismTask'] !== null) {
             $this->TerrorismTask = new AiReviewTaskTerrorismResult();
-            $this->TerrorismTask->deserialize($param["TerrorismTask"]);
+            $this->TerrorismTask->deserialize($param['TerrorismTask']);
         }
 
-        if (array_key_exists("PoliticalTask",$param) and $param["PoliticalTask"] !== null) {
+        if (array_key_exists('PoliticalTask',$param) and $param['PoliticalTask'] !== null) {
             $this->PoliticalTask = new AiReviewTaskPoliticalResult();
-            $this->PoliticalTask->deserialize($param["PoliticalTask"]);
+            $this->PoliticalTask->deserialize($param['PoliticalTask']);
         }
 
-        if (array_key_exists("PornAsrTask",$param) and $param["PornAsrTask"] !== null) {
+        if (array_key_exists('PornAsrTask',$param) and $param['PornAsrTask'] !== null) {
             $this->PornAsrTask = new AiReviewTaskPornAsrResult();
-            $this->PornAsrTask->deserialize($param["PornAsrTask"]);
+            $this->PornAsrTask->deserialize($param['PornAsrTask']);
         }
 
-        if (array_key_exists("PornOcrTask",$param) and $param["PornOcrTask"] !== null) {
+        if (array_key_exists('PornOcrTask',$param) and $param['PornOcrTask'] !== null) {
             $this->PornOcrTask = new AiReviewTaskPornOcrResult();
-            $this->PornOcrTask->deserialize($param["PornOcrTask"]);
+            $this->PornOcrTask->deserialize($param['PornOcrTask']);
         }
 
-        if (array_key_exists("PoliticalAsrTask",$param) and $param["PoliticalAsrTask"] !== null) {
+        if (array_key_exists('PoliticalAsrTask',$param) and $param['PoliticalAsrTask'] !== null) {
             $this->PoliticalAsrTask = new AiReviewTaskPoliticalAsrResult();
-            $this->PoliticalAsrTask->deserialize($param["PoliticalAsrTask"]);
+            $this->PoliticalAsrTask->deserialize($param['PoliticalAsrTask']);
         }
 
-        if (array_key_exists("PoliticalOcrTask",$param) and $param["PoliticalOcrTask"] !== null) {
+        if (array_key_exists('PoliticalOcrTask',$param) and $param['PoliticalOcrTask'] !== null) {
             $this->PoliticalOcrTask = new AiReviewTaskPoliticalOcrResult();
-            $this->PoliticalOcrTask->deserialize($param["PoliticalOcrTask"]);
+            $this->PoliticalOcrTask->deserialize($param['PoliticalOcrTask']);
         }
 
-        if (array_key_exists("TerrorismOcrTask",$param) and $param["TerrorismOcrTask"] !== null) {
+        if (array_key_exists('TerrorismOcrTask',$param) and $param['TerrorismOcrTask'] !== null) {
             $this->TerrorismOcrTask = new AiReviewTaskTerrorismOcrResult();
-            $this->TerrorismOcrTask->deserialize($param["TerrorismOcrTask"]);
+            $this->TerrorismOcrTask->deserialize($param['TerrorismOcrTask']);
         }
 
-        if (array_key_exists("ProhibitedAsrTask",$param) and $param["ProhibitedAsrTask"] !== null) {
+        if (array_key_exists('ProhibitedAsrTask',$param) and $param['ProhibitedAsrTask'] !== null) {
             $this->ProhibitedAsrTask = new AiReviewTaskProhibitedAsrResult();
-            $this->ProhibitedAsrTask->deserialize($param["ProhibitedAsrTask"]);
+            $this->ProhibitedAsrTask->deserialize($param['ProhibitedAsrTask']);
         }
 
-        if (array_key_exists("ProhibitedOcrTask",$param) and $param["ProhibitedOcrTask"] !== null) {
+        if (array_key_exists('ProhibitedOcrTask',$param) and $param['ProhibitedOcrTask'] !== null) {
             $this->ProhibitedOcrTask = new AiReviewTaskProhibitedOcrResult();
-            $this->ProhibitedOcrTask->deserialize($param["ProhibitedOcrTask"]);
+            $this->ProhibitedOcrTask->deserialize($param['ProhibitedOcrTask']);
         }
     }
 }

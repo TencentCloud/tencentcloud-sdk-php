@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -134,57 +134,57 @@ class CustomImage extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ImageId",$param) and $param["ImageId"] !== null) {
-            $this->ImageId = $param["ImageId"];
+        if (array_key_exists('ImageId',$param) and $param['ImageId'] !== null) {
+            $this->ImageId = $param['ImageId'];
         }
 
-        if (array_key_exists("ImageName",$param) and $param["ImageName"] !== null) {
-            $this->ImageName = $param["ImageName"];
+        if (array_key_exists('ImageName',$param) and $param['ImageName'] !== null) {
+            $this->ImageName = $param['ImageName'];
         }
 
-        if (array_key_exists("ImageStatus",$param) and $param["ImageStatus"] !== null) {
-            $this->ImageStatus = $param["ImageStatus"];
+        if (array_key_exists('ImageStatus',$param) and $param['ImageStatus'] !== null) {
+            $this->ImageStatus = $param['ImageStatus'];
         }
 
-        if (array_key_exists("OsClass",$param) and $param["OsClass"] !== null) {
-            $this->OsClass = $param["OsClass"];
+        if (array_key_exists('OsClass',$param) and $param['OsClass'] !== null) {
+            $this->OsClass = $param['OsClass'];
         }
 
-        if (array_key_exists("OsVersion",$param) and $param["OsVersion"] !== null) {
-            $this->OsVersion = $param["OsVersion"];
+        if (array_key_exists('OsVersion',$param) and $param['OsVersion'] !== null) {
+            $this->OsVersion = $param['OsVersion'];
         }
 
-        if (array_key_exists("OsBit",$param) and $param["OsBit"] !== null) {
-            $this->OsBit = $param["OsBit"];
+        if (array_key_exists('OsBit',$param) and $param['OsBit'] !== null) {
+            $this->OsBit = $param['OsBit'];
         }
 
-        if (array_key_exists("ImageSize",$param) and $param["ImageSize"] !== null) {
-            $this->ImageSize = $param["ImageSize"];
+        if (array_key_exists('ImageSize',$param) and $param['ImageSize'] !== null) {
+            $this->ImageSize = $param['ImageSize'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("PartitionInfoSet",$param) and $param["PartitionInfoSet"] !== null) {
+        if (array_key_exists('PartitionInfoSet',$param) and $param['PartitionInfoSet'] !== null) {
             $this->PartitionInfoSet = [];
-            foreach ($param["PartitionInfoSet"] as $key => $value){
+            foreach ($param['PartitionInfoSet'] as $key => $value){
                 $obj = new PartitionInfo();
                 $obj->deserialize($value);
                 array_push($this->PartitionInfoSet, $obj);
             }
         }
 
-        if (array_key_exists("DeviceClassCode",$param) and $param["DeviceClassCode"] !== null) {
-            $this->DeviceClassCode = $param["DeviceClassCode"];
+        if (array_key_exists('DeviceClassCode',$param) and $param['DeviceClassCode'] !== null) {
+            $this->DeviceClassCode = $param['DeviceClassCode'];
         }
 
-        if (array_key_exists("ImageDescription",$param) and $param["ImageDescription"] !== null) {
-            $this->ImageDescription = $param["ImageDescription"];
+        if (array_key_exists('ImageDescription',$param) and $param['ImageDescription'] !== null) {
+            $this->ImageDescription = $param['ImageDescription'];
         }
 
-        if (array_key_exists("OsTypeId",$param) and $param["OsTypeId"] !== null) {
-            $this->OsTypeId = $param["OsTypeId"];
+        if (array_key_exists('OsTypeId',$param) and $param['OsTypeId'] !== null) {
+            $this->OsTypeId = $param['OsTypeId'];
         }
     }
 }

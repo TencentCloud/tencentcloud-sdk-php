@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -102,43 +102,43 @@ class CreateVpnConnectionRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
-            $this->VpcId = $param["VpcId"];
+        if (array_key_exists('VpcId',$param) and $param['VpcId'] !== null) {
+            $this->VpcId = $param['VpcId'];
         }
 
-        if (array_key_exists("VpnGatewayId",$param) and $param["VpnGatewayId"] !== null) {
-            $this->VpnGatewayId = $param["VpnGatewayId"];
+        if (array_key_exists('VpnGatewayId',$param) and $param['VpnGatewayId'] !== null) {
+            $this->VpnGatewayId = $param['VpnGatewayId'];
         }
 
-        if (array_key_exists("CustomerGatewayId",$param) and $param["CustomerGatewayId"] !== null) {
-            $this->CustomerGatewayId = $param["CustomerGatewayId"];
+        if (array_key_exists('CustomerGatewayId',$param) and $param['CustomerGatewayId'] !== null) {
+            $this->CustomerGatewayId = $param['CustomerGatewayId'];
         }
 
-        if (array_key_exists("VpnConnectionName",$param) and $param["VpnConnectionName"] !== null) {
-            $this->VpnConnectionName = $param["VpnConnectionName"];
+        if (array_key_exists('VpnConnectionName',$param) and $param['VpnConnectionName'] !== null) {
+            $this->VpnConnectionName = $param['VpnConnectionName'];
         }
 
-        if (array_key_exists("PreShareKey",$param) and $param["PreShareKey"] !== null) {
-            $this->PreShareKey = $param["PreShareKey"];
+        if (array_key_exists('PreShareKey',$param) and $param['PreShareKey'] !== null) {
+            $this->PreShareKey = $param['PreShareKey'];
         }
 
-        if (array_key_exists("SecurityPolicyDatabases",$param) and $param["SecurityPolicyDatabases"] !== null) {
+        if (array_key_exists('SecurityPolicyDatabases',$param) and $param['SecurityPolicyDatabases'] !== null) {
             $this->SecurityPolicyDatabases = [];
-            foreach ($param["SecurityPolicyDatabases"] as $key => $value){
+            foreach ($param['SecurityPolicyDatabases'] as $key => $value){
                 $obj = new SecurityPolicyDatabase();
                 $obj->deserialize($value);
                 array_push($this->SecurityPolicyDatabases, $obj);
             }
         }
 
-        if (array_key_exists("IKEOptionsSpecification",$param) and $param["IKEOptionsSpecification"] !== null) {
+        if (array_key_exists('IKEOptionsSpecification',$param) and $param['IKEOptionsSpecification'] !== null) {
             $this->IKEOptionsSpecification = new IKEOptionsSpecification();
-            $this->IKEOptionsSpecification->deserialize($param["IKEOptionsSpecification"]);
+            $this->IKEOptionsSpecification->deserialize($param['IKEOptionsSpecification']);
         }
 
-        if (array_key_exists("IPSECOptionsSpecification",$param) and $param["IPSECOptionsSpecification"] !== null) {
+        if (array_key_exists('IPSECOptionsSpecification',$param) and $param['IPSECOptionsSpecification'] !== null) {
             $this->IPSECOptionsSpecification = new IPSECOptionsSpecification();
-            $this->IPSECOptionsSpecification->deserialize($param["IPSECOptionsSpecification"]);
+            $this->IPSECOptionsSpecification->deserialize($param['IPSECOptionsSpecification']);
         }
     }
 }

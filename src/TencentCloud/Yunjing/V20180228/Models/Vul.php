@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -110,28 +110,28 @@ NOTICE：提示
         if ($param === null) {
             return;
         }
-        if (array_key_exists("VulId",$param) and $param["VulId"] !== null) {
-            $this->VulId = $param["VulId"];
+        if (array_key_exists('VulId',$param) and $param['VulId'] !== null) {
+            $this->VulId = $param['VulId'];
         }
 
-        if (array_key_exists("VulName",$param) and $param["VulName"] !== null) {
-            $this->VulName = $param["VulName"];
+        if (array_key_exists('VulName',$param) and $param['VulName'] !== null) {
+            $this->VulName = $param['VulName'];
         }
 
-        if (array_key_exists("VulLevel",$param) and $param["VulLevel"] !== null) {
-            $this->VulLevel = $param["VulLevel"];
+        if (array_key_exists('VulLevel',$param) and $param['VulLevel'] !== null) {
+            $this->VulLevel = $param['VulLevel'];
         }
 
-        if (array_key_exists("LastScanTime",$param) and $param["LastScanTime"] !== null) {
-            $this->LastScanTime = $param["LastScanTime"];
+        if (array_key_exists('LastScanTime',$param) and $param['LastScanTime'] !== null) {
+            $this->LastScanTime = $param['LastScanTime'];
         }
 
-        if (array_key_exists("ImpactedHostNum",$param) and $param["ImpactedHostNum"] !== null) {
-            $this->ImpactedHostNum = $param["ImpactedHostNum"];
+        if (array_key_exists('ImpactedHostNum',$param) and $param['ImpactedHostNum'] !== null) {
+            $this->ImpactedHostNum = $param['ImpactedHostNum'];
         }
 
-        if (array_key_exists("VulStatus",$param) and $param["VulStatus"] !== null) {
-            $this->VulStatus = $param["VulStatus"];
+        if (array_key_exists('VulStatus',$param) and $param['VulStatus'] !== null) {
+            $this->VulStatus = $param['VulStatus'];
         }
     }
 }

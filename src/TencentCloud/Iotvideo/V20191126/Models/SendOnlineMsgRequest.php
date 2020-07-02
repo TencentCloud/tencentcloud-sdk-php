@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -90,24 +90,24 @@ class SendOnlineMsgRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Tid",$param) and $param["Tid"] !== null) {
-            $this->Tid = $param["Tid"];
+        if (array_key_exists('Tid',$param) and $param['Tid'] !== null) {
+            $this->Tid = $param['Tid'];
         }
 
-        if (array_key_exists("Wakeup",$param) and $param["Wakeup"] !== null) {
-            $this->Wakeup = $param["Wakeup"];
+        if (array_key_exists('Wakeup',$param) and $param['Wakeup'] !== null) {
+            $this->Wakeup = $param['Wakeup'];
         }
 
-        if (array_key_exists("WaitResp",$param) and $param["WaitResp"] !== null) {
-            $this->WaitResp = $param["WaitResp"];
+        if (array_key_exists('WaitResp',$param) and $param['WaitResp'] !== null) {
+            $this->WaitResp = $param['WaitResp'];
         }
 
-        if (array_key_exists("MsgTopic",$param) and $param["MsgTopic"] !== null) {
-            $this->MsgTopic = $param["MsgTopic"];
+        if (array_key_exists('MsgTopic',$param) and $param['MsgTopic'] !== null) {
+            $this->MsgTopic = $param['MsgTopic'];
         }
 
-        if (array_key_exists("MsgContent",$param) and $param["MsgContent"] !== null) {
-            $this->MsgContent = $param["MsgContent"];
+        if (array_key_exists('MsgContent',$param) and $param['MsgContent'] !== null) {
+            $this->MsgContent = $param['MsgContent'];
         }
     }
 }

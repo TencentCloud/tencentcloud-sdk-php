@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -64,14 +64,14 @@ class Cache extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SimpleCache",$param) and $param["SimpleCache"] !== null) {
+        if (array_key_exists('SimpleCache',$param) and $param['SimpleCache'] !== null) {
             $this->SimpleCache = new SimpleCache();
-            $this->SimpleCache->deserialize($param["SimpleCache"]);
+            $this->SimpleCache->deserialize($param['SimpleCache']);
         }
 
-        if (array_key_exists("AdvancedCache",$param) and $param["AdvancedCache"] !== null) {
+        if (array_key_exists('AdvancedCache',$param) and $param['AdvancedCache'] !== null) {
             $this->AdvancedCache = new AdvancedCache();
-            $this->AdvancedCache->deserialize($param["AdvancedCache"]);
+            $this->AdvancedCache->deserialize($param['AdvancedCache']);
         }
     }
 }

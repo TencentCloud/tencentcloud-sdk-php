@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -31,7 +31,7 @@ class Sign
      */
     public static function sign($secretKey, $signStr, $signMethod)
     {
-        $signMethodMap = ["HmacSHA1" => "SHA1", "HmacSHA256" => "SHA256"];
+        $signMethodMap = ['HmacSHA1' => 'SHA1', 'HmacSHA256' => 'SHA256'];
         if (!array_key_exists($signMethod, $signMethodMap)) {
             throw new TencentCloudSDKException("signMethod invalid", "signMethod only support (HmacSHA1, HmacSHA256)");
         }
@@ -41,9 +41,9 @@ class Sign
 
     public static function signTC3($skey, $date, $service, $str2sign)
     {
-        $dateKey = hash_hmac("SHA256", $date, "TC3".$skey, true);
-        $serviceKey = hash_hmac("SHA256", $service, $dateKey, true);
-        $reqKey = hash_hmac("SHA256", "tc3_request", $serviceKey, true);
-        return hash_hmac("SHA256", $str2sign, $reqKey);
+        $dateKey = hash_hmac('SHA256', $date, 'TC3'.$skey, true);
+        $serviceKey = hash_hmac('SHA256', $service, $dateKey, true);
+        $reqKey = hash_hmac('SHA256', "tc3_request", $serviceKey, true);
+        return hash_hmac('SHA256', $str2sign, $reqKey);
     }
 }

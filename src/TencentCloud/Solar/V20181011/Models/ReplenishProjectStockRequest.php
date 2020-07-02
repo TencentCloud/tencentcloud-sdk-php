@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -78,24 +78,24 @@ class ReplenishProjectStockRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SubProjectId",$param) and $param["SubProjectId"] !== null) {
-            $this->SubProjectId = $param["SubProjectId"];
+        if (array_key_exists('SubProjectId',$param) and $param['SubProjectId'] !== null) {
+            $this->SubProjectId = $param['SubProjectId'];
         }
 
-        if (array_key_exists("PrizeId",$param) and $param["PrizeId"] !== null) {
-            $this->PrizeId = $param["PrizeId"];
+        if (array_key_exists('PrizeId',$param) and $param['PrizeId'] !== null) {
+            $this->PrizeId = $param['PrizeId'];
         }
 
-        if (array_key_exists("PrizeNum",$param) and $param["PrizeNum"] !== null) {
-            $this->PrizeNum = $param["PrizeNum"];
+        if (array_key_exists('PrizeNum',$param) and $param['PrizeNum'] !== null) {
+            $this->PrizeNum = $param['PrizeNum'];
         }
 
-        if (array_key_exists("PoolIndex",$param) and $param["PoolIndex"] !== null) {
-            $this->PoolIndex = $param["PoolIndex"];
+        if (array_key_exists('PoolIndex',$param) and $param['PoolIndex'] !== null) {
+            $this->PoolIndex = $param['PoolIndex'];
         }
 
-        if (array_key_exists("PoolName",$param) and $param["PoolName"] !== null) {
-            $this->PoolName = $param["PoolName"];
+        if (array_key_exists('PoolName',$param) and $param['PoolName'] !== null) {
+            $this->PoolName = $param['PoolName'];
         }
     }
 }

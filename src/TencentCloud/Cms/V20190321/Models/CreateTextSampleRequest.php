@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -106,20 +106,20 @@ class CreateTextSampleRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Contents",$param) and $param["Contents"] !== null) {
-            $this->Contents = $param["Contents"];
+        if (array_key_exists('Contents',$param) and $param['Contents'] !== null) {
+            $this->Contents = $param['Contents'];
         }
 
-        if (array_key_exists("EvilType",$param) and $param["EvilType"] !== null) {
-            $this->EvilType = $param["EvilType"];
+        if (array_key_exists('EvilType',$param) and $param['EvilType'] !== null) {
+            $this->EvilType = $param['EvilType'];
         }
 
-        if (array_key_exists("Label",$param) and $param["Label"] !== null) {
-            $this->Label = $param["Label"];
+        if (array_key_exists('Label',$param) and $param['Label'] !== null) {
+            $this->Label = $param['Label'];
         }
 
-        if (array_key_exists("Test",$param) and $param["Test"] !== null) {
-            $this->Test = $param["Test"];
+        if (array_key_exists('Test',$param) and $param['Test'] !== null) {
+            $this->Test = $param['Test'];
         }
     }
 }

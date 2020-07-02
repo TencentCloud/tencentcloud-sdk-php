@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -78,29 +78,29 @@ class AvailableZone extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
-            $this->Zone = $param["Zone"];
+        if (array_key_exists('Zone',$param) and $param['Zone'] !== null) {
+            $this->Zone = $param['Zone'];
         }
 
-        if (array_key_exists("ZoneId",$param) and $param["ZoneId"] !== null) {
-            $this->ZoneId = $param["ZoneId"];
+        if (array_key_exists('ZoneId',$param) and $param['ZoneId'] !== null) {
+            $this->ZoneId = $param['ZoneId'];
         }
 
-        if (array_key_exists("ZoneCnName",$param) and $param["ZoneCnName"] !== null) {
-            $this->ZoneCnName = $param["ZoneCnName"];
+        if (array_key_exists('ZoneCnName',$param) and $param['ZoneCnName'] !== null) {
+            $this->ZoneCnName = $param['ZoneCnName'];
         }
 
-        if (array_key_exists("Types",$param) and $param["Types"] !== null) {
+        if (array_key_exists('Types',$param) and $param['Types'] !== null) {
             $this->Types = [];
-            foreach ($param["Types"] as $key => $value){
+            foreach ($param['Types'] as $key => $value){
                 $obj = new AvailableType();
                 $obj->deserialize($value);
                 array_push($this->Types, $obj);
             }
         }
 
-        if (array_key_exists("ZoneName",$param) and $param["ZoneName"] !== null) {
-            $this->ZoneName = $param["ZoneName"];
+        if (array_key_exists('ZoneName',$param) and $param['ZoneName'] !== null) {
+            $this->ZoneName = $param['ZoneName'];
         }
     }
 }

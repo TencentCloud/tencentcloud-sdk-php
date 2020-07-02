@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getGroupName() 获取组策略名称
  * @method void setGroupName(string $GroupName) 设置组策略名称
- * @method string getModule() 获取固定值，为"monitor"
- * @method void setModule(string $Module) 设置固定值，为"monitor"
+ * @method string getModule() 获取固定值，为'monitor'
+ * @method void setModule(string $Module) 设置固定值，为'monitor'
  * @method string getViewName() 获取策略组所属视图的名称，若通过模版创建，可不传入
  * @method void setViewName(string $ViewName) 设置策略组所属视图的名称，若通过模版创建，可不传入
  * @method integer getProjectId() 获取策略组所属项目Id，会进行鉴权操作
@@ -53,7 +53,7 @@ class CreatePolicyGroupRequest extends AbstractModel
     public $GroupName;
 
     /**
-     * @var string 固定值，为"monitor"
+     * @var string 固定值，为'monitor'
      */
     public $Module;
 
@@ -109,7 +109,7 @@ class CreatePolicyGroupRequest extends AbstractModel
 
     /**
      * @param string $GroupName 组策略名称
-     * @param string $Module 固定值，为"monitor"
+     * @param string $Module 固定值，为'monitor'
      * @param string $ViewName 策略组所属视图的名称，若通过模版创建，可不传入
      * @param integer $ProjectId 策略组所属项目Id，会进行鉴权操作
      * @param integer $ConditionTempGroupId 模版策略组Id, 通过模版创建时才需要传
@@ -134,62 +134,62 @@ class CreatePolicyGroupRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("GroupName",$param) and $param["GroupName"] !== null) {
-            $this->GroupName = $param["GroupName"];
+        if (array_key_exists('GroupName',$param) and $param['GroupName'] !== null) {
+            $this->GroupName = $param['GroupName'];
         }
 
-        if (array_key_exists("Module",$param) and $param["Module"] !== null) {
-            $this->Module = $param["Module"];
+        if (array_key_exists('Module',$param) and $param['Module'] !== null) {
+            $this->Module = $param['Module'];
         }
 
-        if (array_key_exists("ViewName",$param) and $param["ViewName"] !== null) {
-            $this->ViewName = $param["ViewName"];
+        if (array_key_exists('ViewName',$param) and $param['ViewName'] !== null) {
+            $this->ViewName = $param['ViewName'];
         }
 
-        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
-            $this->ProjectId = $param["ProjectId"];
+        if (array_key_exists('ProjectId',$param) and $param['ProjectId'] !== null) {
+            $this->ProjectId = $param['ProjectId'];
         }
 
-        if (array_key_exists("ConditionTempGroupId",$param) and $param["ConditionTempGroupId"] !== null) {
-            $this->ConditionTempGroupId = $param["ConditionTempGroupId"];
+        if (array_key_exists('ConditionTempGroupId',$param) and $param['ConditionTempGroupId'] !== null) {
+            $this->ConditionTempGroupId = $param['ConditionTempGroupId'];
         }
 
-        if (array_key_exists("IsShielded",$param) and $param["IsShielded"] !== null) {
-            $this->IsShielded = $param["IsShielded"];
+        if (array_key_exists('IsShielded',$param) and $param['IsShielded'] !== null) {
+            $this->IsShielded = $param['IsShielded'];
         }
 
-        if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
-            $this->Remark = $param["Remark"];
+        if (array_key_exists('Remark',$param) and $param['Remark'] !== null) {
+            $this->Remark = $param['Remark'];
         }
 
-        if (array_key_exists("InsertTime",$param) and $param["InsertTime"] !== null) {
-            $this->InsertTime = $param["InsertTime"];
+        if (array_key_exists('InsertTime',$param) and $param['InsertTime'] !== null) {
+            $this->InsertTime = $param['InsertTime'];
         }
 
-        if (array_key_exists("Conditions",$param) and $param["Conditions"] !== null) {
+        if (array_key_exists('Conditions',$param) and $param['Conditions'] !== null) {
             $this->Conditions = [];
-            foreach ($param["Conditions"] as $key => $value){
+            foreach ($param['Conditions'] as $key => $value){
                 $obj = new CreatePolicyGroupCondition();
                 $obj->deserialize($value);
                 array_push($this->Conditions, $obj);
             }
         }
 
-        if (array_key_exists("EventConditions",$param) and $param["EventConditions"] !== null) {
+        if (array_key_exists('EventConditions',$param) and $param['EventConditions'] !== null) {
             $this->EventConditions = [];
-            foreach ($param["EventConditions"] as $key => $value){
+            foreach ($param['EventConditions'] as $key => $value){
                 $obj = new CreatePolicyGroupEventCondition();
                 $obj->deserialize($value);
                 array_push($this->EventConditions, $obj);
             }
         }
 
-        if (array_key_exists("BackEndCall",$param) and $param["BackEndCall"] !== null) {
-            $this->BackEndCall = $param["BackEndCall"];
+        if (array_key_exists('BackEndCall',$param) and $param['BackEndCall'] !== null) {
+            $this->BackEndCall = $param['BackEndCall'];
         }
 
-        if (array_key_exists("IsUnionRule",$param) and $param["IsUnionRule"] !== null) {
-            $this->IsUnionRule = $param["IsUnionRule"];
+        if (array_key_exists('IsUnionRule',$param) and $param['IsUnionRule'] !== null) {
+            $this->IsUnionRule = $param['IsUnionRule'];
         }
     }
 }

@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -246,101 +246,101 @@ development: 开发环境
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CurrencyType",$param) and $param["CurrencyType"] !== null) {
-            $this->CurrencyType = $param["CurrencyType"];
+        if (array_key_exists('CurrencyType',$param) and $param['CurrencyType'] !== null) {
+            $this->CurrencyType = $param['CurrencyType'];
         }
 
-        if (array_key_exists("MidasAppId",$param) and $param["MidasAppId"] !== null) {
-            $this->MidasAppId = $param["MidasAppId"];
+        if (array_key_exists('MidasAppId',$param) and $param['MidasAppId'] !== null) {
+            $this->MidasAppId = $param['MidasAppId'];
         }
 
-        if (array_key_exists("OutTradeNo",$param) and $param["OutTradeNo"] !== null) {
-            $this->OutTradeNo = $param["OutTradeNo"];
+        if (array_key_exists('OutTradeNo',$param) and $param['OutTradeNo'] !== null) {
+            $this->OutTradeNo = $param['OutTradeNo'];
         }
 
-        if (array_key_exists("ProductDetail",$param) and $param["ProductDetail"] !== null) {
-            $this->ProductDetail = $param["ProductDetail"];
+        if (array_key_exists('ProductDetail',$param) and $param['ProductDetail'] !== null) {
+            $this->ProductDetail = $param['ProductDetail'];
         }
 
-        if (array_key_exists("ProductId",$param) and $param["ProductId"] !== null) {
-            $this->ProductId = $param["ProductId"];
+        if (array_key_exists('ProductId',$param) and $param['ProductId'] !== null) {
+            $this->ProductId = $param['ProductId'];
         }
 
-        if (array_key_exists("ProductName",$param) and $param["ProductName"] !== null) {
-            $this->ProductName = $param["ProductName"];
+        if (array_key_exists('ProductName',$param) and $param['ProductName'] !== null) {
+            $this->ProductName = $param['ProductName'];
         }
 
-        if (array_key_exists("TotalAmt",$param) and $param["TotalAmt"] !== null) {
-            $this->TotalAmt = $param["TotalAmt"];
+        if (array_key_exists('TotalAmt',$param) and $param['TotalAmt'] !== null) {
+            $this->TotalAmt = $param['TotalAmt'];
         }
 
-        if (array_key_exists("UserId",$param) and $param["UserId"] !== null) {
-            $this->UserId = $param["UserId"];
+        if (array_key_exists('UserId',$param) and $param['UserId'] !== null) {
+            $this->UserId = $param['UserId'];
         }
 
-        if (array_key_exists("RealChannel",$param) and $param["RealChannel"] !== null) {
-            $this->RealChannel = $param["RealChannel"];
+        if (array_key_exists('RealChannel',$param) and $param['RealChannel'] !== null) {
+            $this->RealChannel = $param['RealChannel'];
         }
 
-        if (array_key_exists("OriginalAmt",$param) and $param["OriginalAmt"] !== null) {
-            $this->OriginalAmt = $param["OriginalAmt"];
+        if (array_key_exists('OriginalAmt',$param) and $param['OriginalAmt'] !== null) {
+            $this->OriginalAmt = $param['OriginalAmt'];
         }
 
-        if (array_key_exists("MidasSecretId",$param) and $param["MidasSecretId"] !== null) {
-            $this->MidasSecretId = $param["MidasSecretId"];
+        if (array_key_exists('MidasSecretId',$param) and $param['MidasSecretId'] !== null) {
+            $this->MidasSecretId = $param['MidasSecretId'];
         }
 
-        if (array_key_exists("MidasSignature",$param) and $param["MidasSignature"] !== null) {
-            $this->MidasSignature = $param["MidasSignature"];
+        if (array_key_exists('MidasSignature',$param) and $param['MidasSignature'] !== null) {
+            $this->MidasSignature = $param['MidasSignature'];
         }
 
-        if (array_key_exists("CallbackUrl",$param) and $param["CallbackUrl"] !== null) {
-            $this->CallbackUrl = $param["CallbackUrl"];
+        if (array_key_exists('CallbackUrl',$param) and $param['CallbackUrl'] !== null) {
+            $this->CallbackUrl = $param['CallbackUrl'];
         }
 
-        if (array_key_exists("Channel",$param) and $param["Channel"] !== null) {
-            $this->Channel = $param["Channel"];
+        if (array_key_exists('Channel',$param) and $param['Channel'] !== null) {
+            $this->Channel = $param['Channel'];
         }
 
-        if (array_key_exists("Metadata",$param) and $param["Metadata"] !== null) {
-            $this->Metadata = $param["Metadata"];
+        if (array_key_exists('Metadata',$param) and $param['Metadata'] !== null) {
+            $this->Metadata = $param['Metadata'];
         }
 
-        if (array_key_exists("Quantity",$param) and $param["Quantity"] !== null) {
-            $this->Quantity = $param["Quantity"];
+        if (array_key_exists('Quantity',$param) and $param['Quantity'] !== null) {
+            $this->Quantity = $param['Quantity'];
         }
 
-        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
-            $this->SubAppId = $param["SubAppId"];
+        if (array_key_exists('SubAppId',$param) and $param['SubAppId'] !== null) {
+            $this->SubAppId = $param['SubAppId'];
         }
 
-        if (array_key_exists("SubOrderList",$param) and $param["SubOrderList"] !== null) {
+        if (array_key_exists('SubOrderList',$param) and $param['SubOrderList'] !== null) {
             $this->SubOrderList = [];
-            foreach ($param["SubOrderList"] as $key => $value){
+            foreach ($param['SubOrderList'] as $key => $value){
                 $obj = new UnifiedOrderInSubOrderList();
                 $obj->deserialize($value);
                 array_push($this->SubOrderList, $obj);
             }
         }
 
-        if (array_key_exists("TotalMchIncome",$param) and $param["TotalMchIncome"] !== null) {
-            $this->TotalMchIncome = $param["TotalMchIncome"];
+        if (array_key_exists('TotalMchIncome',$param) and $param['TotalMchIncome'] !== null) {
+            $this->TotalMchIncome = $param['TotalMchIncome'];
         }
 
-        if (array_key_exists("TotalPlatformIncome",$param) and $param["TotalPlatformIncome"] !== null) {
-            $this->TotalPlatformIncome = $param["TotalPlatformIncome"];
+        if (array_key_exists('TotalPlatformIncome',$param) and $param['TotalPlatformIncome'] !== null) {
+            $this->TotalPlatformIncome = $param['TotalPlatformIncome'];
         }
 
-        if (array_key_exists("WxOpenId",$param) and $param["WxOpenId"] !== null) {
-            $this->WxOpenId = $param["WxOpenId"];
+        if (array_key_exists('WxOpenId',$param) and $param['WxOpenId'] !== null) {
+            $this->WxOpenId = $param['WxOpenId'];
         }
 
-        if (array_key_exists("WxSubOpenId",$param) and $param["WxSubOpenId"] !== null) {
-            $this->WxSubOpenId = $param["WxSubOpenId"];
+        if (array_key_exists('WxSubOpenId',$param) and $param['WxSubOpenId'] !== null) {
+            $this->WxSubOpenId = $param['WxSubOpenId'];
         }
 
-        if (array_key_exists("MidasEnvironment",$param) and $param["MidasEnvironment"] !== null) {
-            $this->MidasEnvironment = $param["MidasEnvironment"];
+        if (array_key_exists('MidasEnvironment',$param) and $param['MidasEnvironment'] !== null) {
+            $this->MidasEnvironment = $param['MidasEnvironment'];
         }
     }
 }

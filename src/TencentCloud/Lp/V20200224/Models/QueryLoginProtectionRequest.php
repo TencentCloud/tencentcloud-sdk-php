@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -374,128 +374,128 @@ class QueryLoginProtectionRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LoginIp",$param) and $param["LoginIp"] !== null) {
-            $this->LoginIp = $param["LoginIp"];
+        if (array_key_exists('LoginIp',$param) and $param['LoginIp'] !== null) {
+            $this->LoginIp = $param['LoginIp'];
         }
 
-        if (array_key_exists("Uid",$param) and $param["Uid"] !== null) {
-            $this->Uid = $param["Uid"];
+        if (array_key_exists('Uid',$param) and $param['Uid'] !== null) {
+            $this->Uid = $param['Uid'];
         }
 
-        if (array_key_exists("LoginTime",$param) and $param["LoginTime"] !== null) {
-            $this->LoginTime = $param["LoginTime"];
+        if (array_key_exists('LoginTime',$param) and $param['LoginTime'] !== null) {
+            $this->LoginTime = $param['LoginTime'];
         }
 
-        if (array_key_exists("AccountType",$param) and $param["AccountType"] !== null) {
-            $this->AccountType = $param["AccountType"];
+        if (array_key_exists('AccountType',$param) and $param['AccountType'] !== null) {
+            $this->AccountType = $param['AccountType'];
         }
 
-        if (array_key_exists("AppIdU",$param) and $param["AppIdU"] !== null) {
-            $this->AppIdU = $param["AppIdU"];
+        if (array_key_exists('AppIdU',$param) and $param['AppIdU'] !== null) {
+            $this->AppIdU = $param['AppIdU'];
         }
 
-        if (array_key_exists("AssociateAccount",$param) and $param["AssociateAccount"] !== null) {
-            $this->AssociateAccount = $param["AssociateAccount"];
+        if (array_key_exists('AssociateAccount',$param) and $param['AssociateAccount'] !== null) {
+            $this->AssociateAccount = $param['AssociateAccount'];
         }
 
-        if (array_key_exists("NickName",$param) and $param["NickName"] !== null) {
-            $this->NickName = $param["NickName"];
+        if (array_key_exists('NickName',$param) and $param['NickName'] !== null) {
+            $this->NickName = $param['NickName'];
         }
 
-        if (array_key_exists("PhoneNumber",$param) and $param["PhoneNumber"] !== null) {
-            $this->PhoneNumber = $param["PhoneNumber"];
+        if (array_key_exists('PhoneNumber',$param) and $param['PhoneNumber'] !== null) {
+            $this->PhoneNumber = $param['PhoneNumber'];
         }
 
-        if (array_key_exists("EmailAddress",$param) and $param["EmailAddress"] !== null) {
-            $this->EmailAddress = $param["EmailAddress"];
+        if (array_key_exists('EmailAddress',$param) and $param['EmailAddress'] !== null) {
+            $this->EmailAddress = $param['EmailAddress'];
         }
 
-        if (array_key_exists("RegisterTime",$param) and $param["RegisterTime"] !== null) {
-            $this->RegisterTime = $param["RegisterTime"];
+        if (array_key_exists('RegisterTime',$param) and $param['RegisterTime'] !== null) {
+            $this->RegisterTime = $param['RegisterTime'];
         }
 
-        if (array_key_exists("Address",$param) and $param["Address"] !== null) {
-            $this->Address = $param["Address"];
+        if (array_key_exists('Address',$param) and $param['Address'] !== null) {
+            $this->Address = $param['Address'];
         }
 
-        if (array_key_exists("CookieHash",$param) and $param["CookieHash"] !== null) {
-            $this->CookieHash = $param["CookieHash"];
+        if (array_key_exists('CookieHash',$param) and $param['CookieHash'] !== null) {
+            $this->CookieHash = $param['CookieHash'];
         }
 
-        if (array_key_exists("LoginSource",$param) and $param["LoginSource"] !== null) {
-            $this->LoginSource = $param["LoginSource"];
+        if (array_key_exists('LoginSource',$param) and $param['LoginSource'] !== null) {
+            $this->LoginSource = $param['LoginSource'];
         }
 
-        if (array_key_exists("LoginType",$param) and $param["LoginType"] !== null) {
-            $this->LoginType = $param["LoginType"];
+        if (array_key_exists('LoginType',$param) and $param['LoginType'] !== null) {
+            $this->LoginType = $param['LoginType'];
         }
 
-        if (array_key_exists("Referer",$param) and $param["Referer"] !== null) {
-            $this->Referer = $param["Referer"];
+        if (array_key_exists('Referer',$param) and $param['Referer'] !== null) {
+            $this->Referer = $param['Referer'];
         }
 
-        if (array_key_exists("JumpUrl",$param) and $param["JumpUrl"] !== null) {
-            $this->JumpUrl = $param["JumpUrl"];
+        if (array_key_exists('JumpUrl',$param) and $param['JumpUrl'] !== null) {
+            $this->JumpUrl = $param['JumpUrl'];
         }
 
-        if (array_key_exists("UserAgent",$param) and $param["UserAgent"] !== null) {
-            $this->UserAgent = $param["UserAgent"];
+        if (array_key_exists('UserAgent',$param) and $param['UserAgent'] !== null) {
+            $this->UserAgent = $param['UserAgent'];
         }
 
-        if (array_key_exists("XForwardedFor",$param) and $param["XForwardedFor"] !== null) {
-            $this->XForwardedFor = $param["XForwardedFor"];
+        if (array_key_exists('XForwardedFor',$param) and $param['XForwardedFor'] !== null) {
+            $this->XForwardedFor = $param['XForwardedFor'];
         }
 
-        if (array_key_exists("MouseClickCount",$param) and $param["MouseClickCount"] !== null) {
-            $this->MouseClickCount = $param["MouseClickCount"];
+        if (array_key_exists('MouseClickCount',$param) and $param['MouseClickCount'] !== null) {
+            $this->MouseClickCount = $param['MouseClickCount'];
         }
 
-        if (array_key_exists("KeyboardClickCount",$param) and $param["KeyboardClickCount"] !== null) {
-            $this->KeyboardClickCount = $param["KeyboardClickCount"];
+        if (array_key_exists('KeyboardClickCount',$param) and $param['KeyboardClickCount'] !== null) {
+            $this->KeyboardClickCount = $param['KeyboardClickCount'];
         }
 
-        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
-            $this->Result = $param["Result"];
+        if (array_key_exists('Result',$param) and $param['Result'] !== null) {
+            $this->Result = $param['Result'];
         }
 
-        if (array_key_exists("Reason",$param) and $param["Reason"] !== null) {
-            $this->Reason = $param["Reason"];
+        if (array_key_exists('Reason',$param) and $param['Reason'] !== null) {
+            $this->Reason = $param['Reason'];
         }
 
-        if (array_key_exists("LoginSpend",$param) and $param["LoginSpend"] !== null) {
-            $this->LoginSpend = $param["LoginSpend"];
+        if (array_key_exists('LoginSpend',$param) and $param['LoginSpend'] !== null) {
+            $this->LoginSpend = $param['LoginSpend'];
         }
 
-        if (array_key_exists("MacAddress",$param) and $param["MacAddress"] !== null) {
-            $this->MacAddress = $param["MacAddress"];
+        if (array_key_exists('MacAddress',$param) and $param['MacAddress'] !== null) {
+            $this->MacAddress = $param['MacAddress'];
         }
 
-        if (array_key_exists("VendorId",$param) and $param["VendorId"] !== null) {
-            $this->VendorId = $param["VendorId"];
+        if (array_key_exists('VendorId',$param) and $param['VendorId'] !== null) {
+            $this->VendorId = $param['VendorId'];
         }
 
-        if (array_key_exists("AppVersion",$param) and $param["AppVersion"] !== null) {
-            $this->AppVersion = $param["AppVersion"];
+        if (array_key_exists('AppVersion',$param) and $param['AppVersion'] !== null) {
+            $this->AppVersion = $param['AppVersion'];
         }
 
-        if (array_key_exists("Imei",$param) and $param["Imei"] !== null) {
-            $this->Imei = $param["Imei"];
+        if (array_key_exists('Imei',$param) and $param['Imei'] !== null) {
+            $this->Imei = $param['Imei'];
         }
 
-        if (array_key_exists("BusinessId",$param) and $param["BusinessId"] !== null) {
-            $this->BusinessId = $param["BusinessId"];
+        if (array_key_exists('BusinessId',$param) and $param['BusinessId'] !== null) {
+            $this->BusinessId = $param['BusinessId'];
         }
 
-        if (array_key_exists("WxSubType",$param) and $param["WxSubType"] !== null) {
-            $this->WxSubType = $param["WxSubType"];
+        if (array_key_exists('WxSubType',$param) and $param['WxSubType'] !== null) {
+            $this->WxSubType = $param['WxSubType'];
         }
 
-        if (array_key_exists("RandNum",$param) and $param["RandNum"] !== null) {
-            $this->RandNum = $param["RandNum"];
+        if (array_key_exists('RandNum',$param) and $param['RandNum'] !== null) {
+            $this->RandNum = $param['RandNum'];
         }
 
-        if (array_key_exists("WxToken",$param) and $param["WxToken"] !== null) {
-            $this->WxToken = $param["WxToken"];
+        if (array_key_exists('WxToken',$param) and $param['WxToken'] !== null) {
+            $this->WxToken = $param['WxToken'];
         }
     }
 }

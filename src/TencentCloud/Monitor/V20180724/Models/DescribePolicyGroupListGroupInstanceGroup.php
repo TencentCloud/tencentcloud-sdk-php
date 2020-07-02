@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -94,32 +94,32 @@ class DescribePolicyGroupListGroupInstanceGroup extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceGroupId",$param) and $param["InstanceGroupId"] !== null) {
-            $this->InstanceGroupId = $param["InstanceGroupId"];
+        if (array_key_exists('InstanceGroupId',$param) and $param['InstanceGroupId'] !== null) {
+            $this->InstanceGroupId = $param['InstanceGroupId'];
         }
 
-        if (array_key_exists("ViewName",$param) and $param["ViewName"] !== null) {
-            $this->ViewName = $param["ViewName"];
+        if (array_key_exists('ViewName',$param) and $param['ViewName'] !== null) {
+            $this->ViewName = $param['ViewName'];
         }
 
-        if (array_key_exists("LastEditUin",$param) and $param["LastEditUin"] !== null) {
-            $this->LastEditUin = $param["LastEditUin"];
+        if (array_key_exists('LastEditUin',$param) and $param['LastEditUin'] !== null) {
+            $this->LastEditUin = $param['LastEditUin'];
         }
 
-        if (array_key_exists("GroupName",$param) and $param["GroupName"] !== null) {
-            $this->GroupName = $param["GroupName"];
+        if (array_key_exists('GroupName',$param) and $param['GroupName'] !== null) {
+            $this->GroupName = $param['GroupName'];
         }
 
-        if (array_key_exists("InstanceSum",$param) and $param["InstanceSum"] !== null) {
-            $this->InstanceSum = $param["InstanceSum"];
+        if (array_key_exists('InstanceSum',$param) and $param['InstanceSum'] !== null) {
+            $this->InstanceSum = $param['InstanceSum'];
         }
 
-        if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
-            $this->UpdateTime = $param["UpdateTime"];
+        if (array_key_exists('UpdateTime',$param) and $param['UpdateTime'] !== null) {
+            $this->UpdateTime = $param['UpdateTime'];
         }
 
-        if (array_key_exists("InsertTime",$param) and $param["InsertTime"] !== null) {
-            $this->InsertTime = $param["InsertTime"];
+        if (array_key_exists('InsertTime',$param) and $param['InsertTime'] !== null) {
+            $this->InsertTime = $param['InsertTime'];
         }
     }
 }

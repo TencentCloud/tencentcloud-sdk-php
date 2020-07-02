@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -207,88 +207,88 @@ class L4ListenerInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ListenerId",$param) and $param["ListenerId"] !== null) {
-            $this->ListenerId = $param["ListenerId"];
+        if (array_key_exists('ListenerId',$param) and $param['ListenerId'] !== null) {
+            $this->ListenerId = $param['ListenerId'];
         }
 
-        if (array_key_exists("ListenerName",$param) and $param["ListenerName"] !== null) {
-            $this->ListenerName = $param["ListenerName"];
+        if (array_key_exists('ListenerName',$param) and $param['ListenerName'] !== null) {
+            $this->ListenerName = $param['ListenerName'];
         }
 
-        if (array_key_exists("Protocol",$param) and $param["Protocol"] !== null) {
-            $this->Protocol = $param["Protocol"];
+        if (array_key_exists('Protocol',$param) and $param['Protocol'] !== null) {
+            $this->Protocol = $param['Protocol'];
         }
 
-        if (array_key_exists("LoadBalancerPort",$param) and $param["LoadBalancerPort"] !== null) {
-            $this->LoadBalancerPort = $param["LoadBalancerPort"];
+        if (array_key_exists('LoadBalancerPort',$param) and $param['LoadBalancerPort'] !== null) {
+            $this->LoadBalancerPort = $param['LoadBalancerPort'];
         }
 
-        if (array_key_exists("Bandwidth",$param) and $param["Bandwidth"] !== null) {
-            $this->Bandwidth = $param["Bandwidth"];
+        if (array_key_exists('Bandwidth',$param) and $param['Bandwidth'] !== null) {
+            $this->Bandwidth = $param['Bandwidth'];
         }
 
-        if (array_key_exists("ListenerType",$param) and $param["ListenerType"] !== null) {
-            $this->ListenerType = $param["ListenerType"];
+        if (array_key_exists('ListenerType',$param) and $param['ListenerType'] !== null) {
+            $this->ListenerType = $param['ListenerType'];
         }
 
-        if (array_key_exists("SessionExpire",$param) and $param["SessionExpire"] !== null) {
-            $this->SessionExpire = $param["SessionExpire"];
+        if (array_key_exists('SessionExpire',$param) and $param['SessionExpire'] !== null) {
+            $this->SessionExpire = $param['SessionExpire'];
         }
 
-        if (array_key_exists("HealthSwitch",$param) and $param["HealthSwitch"] !== null) {
-            $this->HealthSwitch = $param["HealthSwitch"];
+        if (array_key_exists('HealthSwitch',$param) and $param['HealthSwitch'] !== null) {
+            $this->HealthSwitch = $param['HealthSwitch'];
         }
 
-        if (array_key_exists("TimeOut",$param) and $param["TimeOut"] !== null) {
-            $this->TimeOut = $param["TimeOut"];
+        if (array_key_exists('TimeOut',$param) and $param['TimeOut'] !== null) {
+            $this->TimeOut = $param['TimeOut'];
         }
 
-        if (array_key_exists("IntervalTime",$param) and $param["IntervalTime"] !== null) {
-            $this->IntervalTime = $param["IntervalTime"];
+        if (array_key_exists('IntervalTime',$param) and $param['IntervalTime'] !== null) {
+            $this->IntervalTime = $param['IntervalTime'];
         }
 
-        if (array_key_exists("HealthNum",$param) and $param["HealthNum"] !== null) {
-            $this->HealthNum = $param["HealthNum"];
+        if (array_key_exists('HealthNum',$param) and $param['HealthNum'] !== null) {
+            $this->HealthNum = $param['HealthNum'];
         }
 
-        if (array_key_exists("UnhealthNum",$param) and $param["UnhealthNum"] !== null) {
-            $this->UnhealthNum = $param["UnhealthNum"];
+        if (array_key_exists('UnhealthNum',$param) and $param['UnhealthNum'] !== null) {
+            $this->UnhealthNum = $param['UnhealthNum'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("AddTimestamp",$param) and $param["AddTimestamp"] !== null) {
-            $this->AddTimestamp = $param["AddTimestamp"];
+        if (array_key_exists('AddTimestamp',$param) and $param['AddTimestamp'] !== null) {
+            $this->AddTimestamp = $param['AddTimestamp'];
         }
 
-        if (array_key_exists("CustomHealthSwitch",$param) and $param["CustomHealthSwitch"] !== null) {
-            $this->CustomHealthSwitch = $param["CustomHealthSwitch"];
+        if (array_key_exists('CustomHealthSwitch',$param) and $param['CustomHealthSwitch'] !== null) {
+            $this->CustomHealthSwitch = $param['CustomHealthSwitch'];
         }
 
-        if (array_key_exists("InputType",$param) and $param["InputType"] !== null) {
-            $this->InputType = $param["InputType"];
+        if (array_key_exists('InputType',$param) and $param['InputType'] !== null) {
+            $this->InputType = $param['InputType'];
         }
 
-        if (array_key_exists("LineSeparatorType",$param) and $param["LineSeparatorType"] !== null) {
-            $this->LineSeparatorType = $param["LineSeparatorType"];
+        if (array_key_exists('LineSeparatorType',$param) and $param['LineSeparatorType'] !== null) {
+            $this->LineSeparatorType = $param['LineSeparatorType'];
         }
 
-        if (array_key_exists("HealthRequest",$param) and $param["HealthRequest"] !== null) {
-            $this->HealthRequest = $param["HealthRequest"];
+        if (array_key_exists('HealthRequest',$param) and $param['HealthRequest'] !== null) {
+            $this->HealthRequest = $param['HealthRequest'];
         }
 
-        if (array_key_exists("HealthResponse",$param) and $param["HealthResponse"] !== null) {
-            $this->HealthResponse = $param["HealthResponse"];
+        if (array_key_exists('HealthResponse',$param) and $param['HealthResponse'] !== null) {
+            $this->HealthResponse = $param['HealthResponse'];
         }
 
-        if (array_key_exists("ToaFlag",$param) and $param["ToaFlag"] !== null) {
-            $this->ToaFlag = $param["ToaFlag"];
+        if (array_key_exists('ToaFlag',$param) and $param['ToaFlag'] !== null) {
+            $this->ToaFlag = $param['ToaFlag'];
         }
 
-        if (array_key_exists("BalanceMode",$param) and $param["BalanceMode"] !== null) {
-            $this->BalanceMode = $param["BalanceMode"];
+        if (array_key_exists('BalanceMode',$param) and $param['BalanceMode'] !== null) {
+            $this->BalanceMode = $param['BalanceMode'];
         }
     }
 }

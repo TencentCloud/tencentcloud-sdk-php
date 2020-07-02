@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -146,32 +146,32 @@ class OrderInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TranId",$param) and $param["TranId"] !== null) {
-            $this->TranId = $param["TranId"];
+        if (array_key_exists('TranId',$param) and $param['TranId'] !== null) {
+            $this->TranId = $param['TranId'];
         }
 
-        if (array_key_exists("PackageId",$param) and $param["PackageId"] !== null) {
-            $this->PackageId = $param["PackageId"];
+        if (array_key_exists('PackageId',$param) and $param['PackageId'] !== null) {
+            $this->PackageId = $param['PackageId'];
         }
 
-        if (array_key_exists("TranType",$param) and $param["TranType"] !== null) {
-            $this->TranType = $param["TranType"];
+        if (array_key_exists('TranType',$param) and $param['TranType'] !== null) {
+            $this->TranType = $param['TranType'];
         }
 
-        if (array_key_exists("TranStatus",$param) and $param["TranStatus"] !== null) {
-            $this->TranStatus = $param["TranStatus"];
+        if (array_key_exists('TranStatus',$param) and $param['TranStatus'] !== null) {
+            $this->TranStatus = $param['TranStatus'];
         }
 
-        if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
-            $this->UpdateTime = $param["UpdateTime"];
+        if (array_key_exists('UpdateTime',$param) and $param['UpdateTime'] !== null) {
+            $this->UpdateTime = $param['UpdateTime'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {
-            $this->PayMode = $param["PayMode"];
+        if (array_key_exists('PayMode',$param) and $param['PayMode'] !== null) {
+            $this->PayMode = $param['PayMode'];
         }
     }
 }

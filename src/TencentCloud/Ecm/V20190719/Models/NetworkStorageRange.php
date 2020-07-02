@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -158,64 +158,64 @@ class NetworkStorageRange extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MaxBandwidth",$param) and $param["MaxBandwidth"] !== null) {
-            $this->MaxBandwidth = $param["MaxBandwidth"];
+        if (array_key_exists('MaxBandwidth',$param) and $param['MaxBandwidth'] !== null) {
+            $this->MaxBandwidth = $param['MaxBandwidth'];
         }
 
-        if (array_key_exists("MaxSystemDiskSize",$param) and $param["MaxSystemDiskSize"] !== null) {
-            $this->MaxSystemDiskSize = $param["MaxSystemDiskSize"];
+        if (array_key_exists('MaxSystemDiskSize',$param) and $param['MaxSystemDiskSize'] !== null) {
+            $this->MaxSystemDiskSize = $param['MaxSystemDiskSize'];
         }
 
-        if (array_key_exists("MinBandwidth",$param) and $param["MinBandwidth"] !== null) {
-            $this->MinBandwidth = $param["MinBandwidth"];
+        if (array_key_exists('MinBandwidth',$param) and $param['MinBandwidth'] !== null) {
+            $this->MinBandwidth = $param['MinBandwidth'];
         }
 
-        if (array_key_exists("MinSystemDiskSize",$param) and $param["MinSystemDiskSize"] !== null) {
-            $this->MinSystemDiskSize = $param["MinSystemDiskSize"];
+        if (array_key_exists('MinSystemDiskSize',$param) and $param['MinSystemDiskSize'] !== null) {
+            $this->MinSystemDiskSize = $param['MinSystemDiskSize'];
         }
 
-        if (array_key_exists("MaxDataDiskSize",$param) and $param["MaxDataDiskSize"] !== null) {
-            $this->MaxDataDiskSize = $param["MaxDataDiskSize"];
+        if (array_key_exists('MaxDataDiskSize',$param) and $param['MaxDataDiskSize'] !== null) {
+            $this->MaxDataDiskSize = $param['MaxDataDiskSize'];
         }
 
-        if (array_key_exists("MinDataDiskSize",$param) and $param["MinDataDiskSize"] !== null) {
-            $this->MinDataDiskSize = $param["MinDataDiskSize"];
+        if (array_key_exists('MinDataDiskSize',$param) and $param['MinDataDiskSize'] !== null) {
+            $this->MinDataDiskSize = $param['MinDataDiskSize'];
         }
 
-        if (array_key_exists("SuggestBandwidth",$param) and $param["SuggestBandwidth"] !== null) {
-            $this->SuggestBandwidth = $param["SuggestBandwidth"];
+        if (array_key_exists('SuggestBandwidth',$param) and $param['SuggestBandwidth'] !== null) {
+            $this->SuggestBandwidth = $param['SuggestBandwidth'];
         }
 
-        if (array_key_exists("SuggestDataDiskSize",$param) and $param["SuggestDataDiskSize"] !== null) {
-            $this->SuggestDataDiskSize = $param["SuggestDataDiskSize"];
+        if (array_key_exists('SuggestDataDiskSize',$param) and $param['SuggestDataDiskSize'] !== null) {
+            $this->SuggestDataDiskSize = $param['SuggestDataDiskSize'];
         }
 
-        if (array_key_exists("SuggestSystemDiskSize",$param) and $param["SuggestSystemDiskSize"] !== null) {
-            $this->SuggestSystemDiskSize = $param["SuggestSystemDiskSize"];
+        if (array_key_exists('SuggestSystemDiskSize',$param) and $param['SuggestSystemDiskSize'] !== null) {
+            $this->SuggestSystemDiskSize = $param['SuggestSystemDiskSize'];
         }
 
-        if (array_key_exists("MaxVcpu",$param) and $param["MaxVcpu"] !== null) {
-            $this->MaxVcpu = $param["MaxVcpu"];
+        if (array_key_exists('MaxVcpu',$param) and $param['MaxVcpu'] !== null) {
+            $this->MaxVcpu = $param['MaxVcpu'];
         }
 
-        if (array_key_exists("MinVcpu",$param) and $param["MinVcpu"] !== null) {
-            $this->MinVcpu = $param["MinVcpu"];
+        if (array_key_exists('MinVcpu',$param) and $param['MinVcpu'] !== null) {
+            $this->MinVcpu = $param['MinVcpu'];
         }
 
-        if (array_key_exists("MaxVcpuPerReq",$param) and $param["MaxVcpuPerReq"] !== null) {
-            $this->MaxVcpuPerReq = $param["MaxVcpuPerReq"];
+        if (array_key_exists('MaxVcpuPerReq',$param) and $param['MaxVcpuPerReq'] !== null) {
+            $this->MaxVcpuPerReq = $param['MaxVcpuPerReq'];
         }
 
-        if (array_key_exists("PerBandwidth",$param) and $param["PerBandwidth"] !== null) {
-            $this->PerBandwidth = $param["PerBandwidth"];
+        if (array_key_exists('PerBandwidth',$param) and $param['PerBandwidth'] !== null) {
+            $this->PerBandwidth = $param['PerBandwidth'];
         }
 
-        if (array_key_exists("PerDataDisk",$param) and $param["PerDataDisk"] !== null) {
-            $this->PerDataDisk = $param["PerDataDisk"];
+        if (array_key_exists('PerDataDisk',$param) and $param['PerDataDisk'] !== null) {
+            $this->PerDataDisk = $param['PerDataDisk'];
         }
 
-        if (array_key_exists("MaxModuleNum",$param) and $param["MaxModuleNum"] !== null) {
-            $this->MaxModuleNum = $param["MaxModuleNum"];
+        if (array_key_exists('MaxModuleNum',$param) and $param['MaxModuleNum'] !== null) {
+            $this->MaxModuleNum = $param['MaxModuleNum'];
         }
     }
 }

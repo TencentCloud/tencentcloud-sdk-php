@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -70,24 +70,24 @@ class QrcodePositionObj extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LeftTop",$param) and $param["LeftTop"] !== null) {
+        if (array_key_exists('LeftTop',$param) and $param['LeftTop'] !== null) {
             $this->LeftTop = new Coord();
-            $this->LeftTop->deserialize($param["LeftTop"]);
+            $this->LeftTop->deserialize($param['LeftTop']);
         }
 
-        if (array_key_exists("RightTop",$param) and $param["RightTop"] !== null) {
+        if (array_key_exists('RightTop',$param) and $param['RightTop'] !== null) {
             $this->RightTop = new Coord();
-            $this->RightTop->deserialize($param["RightTop"]);
+            $this->RightTop->deserialize($param['RightTop']);
         }
 
-        if (array_key_exists("RightBottom",$param) and $param["RightBottom"] !== null) {
+        if (array_key_exists('RightBottom',$param) and $param['RightBottom'] !== null) {
             $this->RightBottom = new Coord();
-            $this->RightBottom->deserialize($param["RightBottom"]);
+            $this->RightBottom->deserialize($param['RightBottom']);
         }
 
-        if (array_key_exists("LeftBottom",$param) and $param["LeftBottom"] !== null) {
+        if (array_key_exists('LeftBottom',$param) and $param['LeftBottom'] !== null) {
             $this->LeftBottom = new Coord();
-            $this->LeftBottom->deserialize($param["LeftBottom"]);
+            $this->LeftBottom->deserialize($param['LeftBottom']);
         }
     }
 }

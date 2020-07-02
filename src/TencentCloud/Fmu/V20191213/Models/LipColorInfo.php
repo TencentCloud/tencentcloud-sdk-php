@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -78,22 +78,22 @@ ModelId 和 RGBA 两个参数只需提供一个，若都提供只使用 ModelId�
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RGBA",$param) and $param["RGBA"] !== null) {
+        if (array_key_exists('RGBA',$param) and $param['RGBA'] !== null) {
             $this->RGBA = new RGBAInfo();
-            $this->RGBA->deserialize($param["RGBA"]);
+            $this->RGBA->deserialize($param['RGBA']);
         }
 
-        if (array_key_exists("ModelId",$param) and $param["ModelId"] !== null) {
-            $this->ModelId = $param["ModelId"];
+        if (array_key_exists('ModelId',$param) and $param['ModelId'] !== null) {
+            $this->ModelId = $param['ModelId'];
         }
 
-        if (array_key_exists("FaceRect",$param) and $param["FaceRect"] !== null) {
+        if (array_key_exists('FaceRect',$param) and $param['FaceRect'] !== null) {
             $this->FaceRect = new FaceRect();
-            $this->FaceRect->deserialize($param["FaceRect"]);
+            $this->FaceRect->deserialize($param['FaceRect']);
         }
 
-        if (array_key_exists("ModelAlpha",$param) and $param["ModelAlpha"] !== null) {
-            $this->ModelAlpha = $param["ModelAlpha"];
+        if (array_key_exists('ModelAlpha',$param) and $param['ModelAlpha'] !== null) {
+            $this->ModelAlpha = $param['ModelAlpha'];
         }
     }
 }

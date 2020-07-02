@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -86,28 +86,28 @@ class ApplyTradeData extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MerchantId",$param) and $param["MerchantId"] !== null) {
-            $this->MerchantId = $param["MerchantId"];
+        if (array_key_exists('MerchantId',$param) and $param['MerchantId'] !== null) {
+            $this->MerchantId = $param['MerchantId'];
         }
 
-        if (array_key_exists("TradeFileId",$param) and $param["TradeFileId"] !== null) {
-            $this->TradeFileId = $param["TradeFileId"];
+        if (array_key_exists('TradeFileId',$param) and $param['TradeFileId'] !== null) {
+            $this->TradeFileId = $param['TradeFileId'];
         }
 
-        if (array_key_exists("TradeCurrency",$param) and $param["TradeCurrency"] !== null) {
-            $this->TradeCurrency = $param["TradeCurrency"];
+        if (array_key_exists('TradeCurrency',$param) and $param['TradeCurrency'] !== null) {
+            $this->TradeCurrency = $param['TradeCurrency'];
         }
 
-        if (array_key_exists("TradeAmount",$param) and $param["TradeAmount"] !== null) {
-            $this->TradeAmount = $param["TradeAmount"];
+        if (array_key_exists('TradeAmount',$param) and $param['TradeAmount'] !== null) {
+            $this->TradeAmount = $param['TradeAmount'];
         }
 
-        if (array_key_exists("PayerId",$param) and $param["PayerId"] !== null) {
-            $this->PayerId = $param["PayerId"];
+        if (array_key_exists('PayerId',$param) and $param['PayerId'] !== null) {
+            $this->PayerId = $param['PayerId'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
     }
 }

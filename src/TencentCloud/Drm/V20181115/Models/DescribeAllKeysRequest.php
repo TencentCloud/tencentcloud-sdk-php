@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -74,20 +74,20 @@ class DescribeAllKeysRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DrmType",$param) and $param["DrmType"] !== null) {
-            $this->DrmType = $param["DrmType"];
+        if (array_key_exists('DrmType',$param) and $param['DrmType'] !== null) {
+            $this->DrmType = $param['DrmType'];
         }
 
-        if (array_key_exists("RsaPublicKey",$param) and $param["RsaPublicKey"] !== null) {
-            $this->RsaPublicKey = $param["RsaPublicKey"];
+        if (array_key_exists('RsaPublicKey',$param) and $param['RsaPublicKey'] !== null) {
+            $this->RsaPublicKey = $param['RsaPublicKey'];
         }
 
-        if (array_key_exists("ContentId",$param) and $param["ContentId"] !== null) {
-            $this->ContentId = $param["ContentId"];
+        if (array_key_exists('ContentId',$param) and $param['ContentId'] !== null) {
+            $this->ContentId = $param['ContentId'];
         }
 
-        if (array_key_exists("ContentType",$param) and $param["ContentType"] !== null) {
-            $this->ContentType = $param["ContentType"];
+        if (array_key_exists('ContentType',$param) and $param['ContentType'] !== null) {
+            $this->ContentType = $param['ContentType'];
         }
     }
 }

@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -142,56 +142,56 @@ class ProductConf extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists('Type',$param) and $param['Type'] !== null) {
+            $this->Type = $param['Type'];
         }
 
-        if (array_key_exists("TypeName",$param) and $param["TypeName"] !== null) {
-            $this->TypeName = $param["TypeName"];
+        if (array_key_exists('TypeName',$param) and $param['TypeName'] !== null) {
+            $this->TypeName = $param['TypeName'];
         }
 
-        if (array_key_exists("MinBuyNum",$param) and $param["MinBuyNum"] !== null) {
-            $this->MinBuyNum = $param["MinBuyNum"];
+        if (array_key_exists('MinBuyNum',$param) and $param['MinBuyNum'] !== null) {
+            $this->MinBuyNum = $param['MinBuyNum'];
         }
 
-        if (array_key_exists("MaxBuyNum",$param) and $param["MaxBuyNum"] !== null) {
-            $this->MaxBuyNum = $param["MaxBuyNum"];
+        if (array_key_exists('MaxBuyNum',$param) and $param['MaxBuyNum'] !== null) {
+            $this->MaxBuyNum = $param['MaxBuyNum'];
         }
 
-        if (array_key_exists("Saleout",$param) and $param["Saleout"] !== null) {
-            $this->Saleout = $param["Saleout"];
+        if (array_key_exists('Saleout',$param) and $param['Saleout'] !== null) {
+            $this->Saleout = $param['Saleout'];
         }
 
-        if (array_key_exists("Engine",$param) and $param["Engine"] !== null) {
-            $this->Engine = $param["Engine"];
+        if (array_key_exists('Engine',$param) and $param['Engine'] !== null) {
+            $this->Engine = $param['Engine'];
         }
 
-        if (array_key_exists("Version",$param) and $param["Version"] !== null) {
-            $this->Version = $param["Version"];
+        if (array_key_exists('Version',$param) and $param['Version'] !== null) {
+            $this->Version = $param['Version'];
         }
 
-        if (array_key_exists("TotalSize",$param) and $param["TotalSize"] !== null) {
-            $this->TotalSize = $param["TotalSize"];
+        if (array_key_exists('TotalSize',$param) and $param['TotalSize'] !== null) {
+            $this->TotalSize = $param['TotalSize'];
         }
 
-        if (array_key_exists("ShardSize",$param) and $param["ShardSize"] !== null) {
-            $this->ShardSize = $param["ShardSize"];
+        if (array_key_exists('ShardSize',$param) and $param['ShardSize'] !== null) {
+            $this->ShardSize = $param['ShardSize'];
         }
 
-        if (array_key_exists("ReplicaNum",$param) and $param["ReplicaNum"] !== null) {
-            $this->ReplicaNum = $param["ReplicaNum"];
+        if (array_key_exists('ReplicaNum',$param) and $param['ReplicaNum'] !== null) {
+            $this->ReplicaNum = $param['ReplicaNum'];
         }
 
-        if (array_key_exists("ShardNum",$param) and $param["ShardNum"] !== null) {
-            $this->ShardNum = $param["ShardNum"];
+        if (array_key_exists('ShardNum',$param) and $param['ShardNum'] !== null) {
+            $this->ShardNum = $param['ShardNum'];
         }
 
-        if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {
-            $this->PayMode = $param["PayMode"];
+        if (array_key_exists('PayMode',$param) and $param['PayMode'] !== null) {
+            $this->PayMode = $param['PayMode'];
         }
 
-        if (array_key_exists("EnableRepicaReadOnly",$param) and $param["EnableRepicaReadOnly"] !== null) {
-            $this->EnableRepicaReadOnly = $param["EnableRepicaReadOnly"];
+        if (array_key_exists('EnableRepicaReadOnly',$param) and $param['EnableRepicaReadOnly'] !== null) {
+            $this->EnableRepicaReadOnly = $param['EnableRepicaReadOnly'];
         }
     }
 }

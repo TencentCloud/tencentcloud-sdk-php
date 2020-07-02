@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -94,38 +94,38 @@ class SecurityGroupDetail extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
-            $this->ProjectId = $param["ProjectId"];
+        if (array_key_exists('ProjectId',$param) and $param['ProjectId'] !== null) {
+            $this->ProjectId = $param['ProjectId'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("SecurityGroupId",$param) and $param["SecurityGroupId"] !== null) {
-            $this->SecurityGroupId = $param["SecurityGroupId"];
+        if (array_key_exists('SecurityGroupId',$param) and $param['SecurityGroupId'] !== null) {
+            $this->SecurityGroupId = $param['SecurityGroupId'];
         }
 
-        if (array_key_exists("SecurityGroupName",$param) and $param["SecurityGroupName"] !== null) {
-            $this->SecurityGroupName = $param["SecurityGroupName"];
+        if (array_key_exists('SecurityGroupName',$param) and $param['SecurityGroupName'] !== null) {
+            $this->SecurityGroupName = $param['SecurityGroupName'];
         }
 
-        if (array_key_exists("SecurityGroupRemark",$param) and $param["SecurityGroupRemark"] !== null) {
-            $this->SecurityGroupRemark = $param["SecurityGroupRemark"];
+        if (array_key_exists('SecurityGroupRemark',$param) and $param['SecurityGroupRemark'] !== null) {
+            $this->SecurityGroupRemark = $param['SecurityGroupRemark'];
         }
 
-        if (array_key_exists("InboundRule",$param) and $param["InboundRule"] !== null) {
+        if (array_key_exists('InboundRule',$param) and $param['InboundRule'] !== null) {
             $this->InboundRule = [];
-            foreach ($param["InboundRule"] as $key => $value){
+            foreach ($param['InboundRule'] as $key => $value){
                 $obj = new SecurityGroupsInboundAndOutbound();
                 $obj->deserialize($value);
                 array_push($this->InboundRule, $obj);
             }
         }
 
-        if (array_key_exists("OutboundRule",$param) and $param["OutboundRule"] !== null) {
+        if (array_key_exists('OutboundRule',$param) and $param['OutboundRule'] !== null) {
             $this->OutboundRule = [];
-            foreach ($param["OutboundRule"] as $key => $value){
+            foreach ($param['OutboundRule'] as $key => $value){
                 $obj = new SecurityGroupsInboundAndOutbound();
                 $obj->deserialize($value);
                 array_push($this->OutboundRule, $obj);

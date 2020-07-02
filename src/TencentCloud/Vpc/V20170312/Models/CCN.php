@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -126,45 +126,45 @@ class CCN extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CcnId",$param) and $param["CcnId"] !== null) {
-            $this->CcnId = $param["CcnId"];
+        if (array_key_exists('CcnId',$param) and $param['CcnId'] !== null) {
+            $this->CcnId = $param['CcnId'];
         }
 
-        if (array_key_exists("CcnName",$param) and $param["CcnName"] !== null) {
-            $this->CcnName = $param["CcnName"];
+        if (array_key_exists('CcnName',$param) and $param['CcnName'] !== null) {
+            $this->CcnName = $param['CcnName'];
         }
 
-        if (array_key_exists("CcnDescription",$param) and $param["CcnDescription"] !== null) {
-            $this->CcnDescription = $param["CcnDescription"];
+        if (array_key_exists('CcnDescription',$param) and $param['CcnDescription'] !== null) {
+            $this->CcnDescription = $param['CcnDescription'];
         }
 
-        if (array_key_exists("InstanceCount",$param) and $param["InstanceCount"] !== null) {
-            $this->InstanceCount = $param["InstanceCount"];
+        if (array_key_exists('InstanceCount',$param) and $param['InstanceCount'] !== null) {
+            $this->InstanceCount = $param['InstanceCount'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("State",$param) and $param["State"] !== null) {
-            $this->State = $param["State"];
+        if (array_key_exists('State',$param) and $param['State'] !== null) {
+            $this->State = $param['State'];
         }
 
-        if (array_key_exists("QosLevel",$param) and $param["QosLevel"] !== null) {
-            $this->QosLevel = $param["QosLevel"];
+        if (array_key_exists('QosLevel',$param) and $param['QosLevel'] !== null) {
+            $this->QosLevel = $param['QosLevel'];
         }
 
-        if (array_key_exists("InstanceChargeType",$param) and $param["InstanceChargeType"] !== null) {
-            $this->InstanceChargeType = $param["InstanceChargeType"];
+        if (array_key_exists('InstanceChargeType',$param) and $param['InstanceChargeType'] !== null) {
+            $this->InstanceChargeType = $param['InstanceChargeType'];
         }
 
-        if (array_key_exists("BandwidthLimitType",$param) and $param["BandwidthLimitType"] !== null) {
-            $this->BandwidthLimitType = $param["BandwidthLimitType"];
+        if (array_key_exists('BandwidthLimitType',$param) and $param['BandwidthLimitType'] !== null) {
+            $this->BandwidthLimitType = $param['BandwidthLimitType'];
         }
 
-        if (array_key_exists("TagSet",$param) and $param["TagSet"] !== null) {
+        if (array_key_exists('TagSet',$param) and $param['TagSet'] !== null) {
             $this->TagSet = [];
-            foreach ($param["TagSet"] as $key => $value){
+            foreach ($param['TagSet'] as $key => $value){
                 $obj = new Tag();
                 $obj->deserialize($value);
                 array_push($this->TagSet, $obj);

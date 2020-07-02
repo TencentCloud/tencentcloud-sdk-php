@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setId(string $Id) 设置资源ID
  * @method string getRuleId() 获取7层转发规则ID（通过获取7层转发规则接口可以获取规则ID）
  * @method void setRuleId(string $RuleId) 设置7层转发规则ID（通过获取7层转发规则接口可以获取规则ID）
- * @method string getMethod() 获取开启或关闭，取值["on"(开启)，"off"(关闭)]
- * @method void setMethod(string $Method) 设置开启或关闭，取值["on"(开启)，"off"(关闭)]
+ * @method string getMethod() 获取开启或关闭，取值['on'(开启)，'off'(关闭)]
+ * @method void setMethod(string $Method) 设置开启或关闭，取值['on'(开启)，'off'(关闭)]
  */
 class ModifyCCFrequencyRulesStatusRequest extends AbstractModel
 {
@@ -47,7 +47,7 @@ class ModifyCCFrequencyRulesStatusRequest extends AbstractModel
     public $RuleId;
 
     /**
-     * @var string 开启或关闭，取值["on"(开启)，"off"(关闭)]
+     * @var string 开启或关闭，取值['on'(开启)，'off'(关闭)]
      */
     public $Method;
 
@@ -55,7 +55,7 @@ class ModifyCCFrequencyRulesStatusRequest extends AbstractModel
      * @param string $Business 大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版）
      * @param string $Id 资源ID
      * @param string $RuleId 7层转发规则ID（通过获取7层转发规则接口可以获取规则ID）
-     * @param string $Method 开启或关闭，取值["on"(开启)，"off"(关闭)]
+     * @param string $Method 开启或关闭，取值['on'(开启)，'off'(关闭)]
      */
     function __construct()
     {
@@ -70,20 +70,20 @@ class ModifyCCFrequencyRulesStatusRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Business",$param) and $param["Business"] !== null) {
-            $this->Business = $param["Business"];
+        if (array_key_exists('Business',$param) and $param['Business'] !== null) {
+            $this->Business = $param['Business'];
         }
 
-        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
-            $this->Id = $param["Id"];
+        if (array_key_exists('Id',$param) and $param['Id'] !== null) {
+            $this->Id = $param['Id'];
         }
 
-        if (array_key_exists("RuleId",$param) and $param["RuleId"] !== null) {
-            $this->RuleId = $param["RuleId"];
+        if (array_key_exists('RuleId',$param) and $param['RuleId'] !== null) {
+            $this->RuleId = $param['RuleId'];
         }
 
-        if (array_key_exists("Method",$param) and $param["Method"] !== null) {
-            $this->Method = $param["Method"];
+        if (array_key_exists('Method',$param) and $param['Method'] !== null) {
+            $this->Method = $param['Method'];
         }
     }
 }

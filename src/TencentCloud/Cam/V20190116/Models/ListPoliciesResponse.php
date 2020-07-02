@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -110,25 +110,25 @@ IsAttached: 当需要查询标记实体是否已经关联策略时不为null。0
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalNum",$param) and $param["TotalNum"] !== null) {
-            $this->TotalNum = $param["TotalNum"];
+        if (array_key_exists('TotalNum',$param) and $param['TotalNum'] !== null) {
+            $this->TotalNum = $param['TotalNum'];
         }
 
-        if (array_key_exists("List",$param) and $param["List"] !== null) {
+        if (array_key_exists('List',$param) and $param['List'] !== null) {
             $this->List = [];
-            foreach ($param["List"] as $key => $value){
+            foreach ($param['List'] as $key => $value){
                 $obj = new StrategyInfo();
                 $obj->deserialize($value);
                 array_push($this->List, $obj);
             }
         }
 
-        if (array_key_exists("ServiceTypeList",$param) and $param["ServiceTypeList"] !== null) {
-            $this->ServiceTypeList = $param["ServiceTypeList"];
+        if (array_key_exists('ServiceTypeList',$param) and $param['ServiceTypeList'] !== null) {
+            $this->ServiceTypeList = $param['ServiceTypeList'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

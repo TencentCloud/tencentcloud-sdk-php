@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -122,36 +122,36 @@ class VideoInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("VideoPlayTime",$param) and $param["VideoPlayTime"] !== null) {
-            $this->VideoPlayTime = $param["VideoPlayTime"];
+        if (array_key_exists('VideoPlayTime',$param) and $param['VideoPlayTime'] !== null) {
+            $this->VideoPlayTime = $param['VideoPlayTime'];
         }
 
-        if (array_key_exists("VideoSize",$param) and $param["VideoSize"] !== null) {
-            $this->VideoSize = $param["VideoSize"];
+        if (array_key_exists('VideoSize',$param) and $param['VideoSize'] !== null) {
+            $this->VideoSize = $param['VideoSize'];
         }
 
-        if (array_key_exists("VideoFormat",$param) and $param["VideoFormat"] !== null) {
-            $this->VideoFormat = $param["VideoFormat"];
+        if (array_key_exists('VideoFormat',$param) and $param['VideoFormat'] !== null) {
+            $this->VideoFormat = $param['VideoFormat'];
         }
 
-        if (array_key_exists("VideoDuration",$param) and $param["VideoDuration"] !== null) {
-            $this->VideoDuration = $param["VideoDuration"];
+        if (array_key_exists('VideoDuration',$param) and $param['VideoDuration'] !== null) {
+            $this->VideoDuration = $param['VideoDuration'];
         }
 
-        if (array_key_exists("VideoUrl",$param) and $param["VideoUrl"] !== null) {
-            $this->VideoUrl = $param["VideoUrl"];
+        if (array_key_exists('VideoUrl',$param) and $param['VideoUrl'] !== null) {
+            $this->VideoUrl = $param['VideoUrl'];
         }
 
-        if (array_key_exists("VideoId",$param) and $param["VideoId"] !== null) {
-            $this->VideoId = $param["VideoId"];
+        if (array_key_exists('VideoId',$param) and $param['VideoId'] !== null) {
+            $this->VideoId = $param['VideoId'];
         }
 
-        if (array_key_exists("VideoType",$param) and $param["VideoType"] !== null) {
-            $this->VideoType = $param["VideoType"];
+        if (array_key_exists('VideoType',$param) and $param['VideoType'] !== null) {
+            $this->VideoType = $param['VideoType'];
         }
 
-        if (array_key_exists("UserId",$param) and $param["UserId"] !== null) {
-            $this->UserId = $param["UserId"];
+        if (array_key_exists('UserId',$param) and $param['UserId'] !== null) {
+            $this->UserId = $param['UserId'];
         }
     }
 }

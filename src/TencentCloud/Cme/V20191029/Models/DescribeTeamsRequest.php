@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -54,12 +54,12 @@ class DescribeTeamsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Platform",$param) and $param["Platform"] !== null) {
-            $this->Platform = $param["Platform"];
+        if (array_key_exists('Platform',$param) and $param['Platform'] !== null) {
+            $this->Platform = $param['Platform'];
         }
 
-        if (array_key_exists("TeamIds",$param) and $param["TeamIds"] !== null) {
-            $this->TeamIds = $param["TeamIds"];
+        if (array_key_exists('TeamIds',$param) and $param['TeamIds'] !== null) {
+            $this->TeamIds = $param['TeamIds'];
         }
     }
 }

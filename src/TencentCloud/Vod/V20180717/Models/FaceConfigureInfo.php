@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -118,24 +118,24 @@ class FaceConfigureInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Switch",$param) and $param["Switch"] !== null) {
-            $this->Switch = $param["Switch"];
+        if (array_key_exists('Switch',$param) and $param['Switch'] !== null) {
+            $this->Switch = $param['Switch'];
         }
 
-        if (array_key_exists("Score",$param) and $param["Score"] !== null) {
-            $this->Score = $param["Score"];
+        if (array_key_exists('Score',$param) and $param['Score'] !== null) {
+            $this->Score = $param['Score'];
         }
 
-        if (array_key_exists("DefaultLibraryLabelSet",$param) and $param["DefaultLibraryLabelSet"] !== null) {
-            $this->DefaultLibraryLabelSet = $param["DefaultLibraryLabelSet"];
+        if (array_key_exists('DefaultLibraryLabelSet',$param) and $param['DefaultLibraryLabelSet'] !== null) {
+            $this->DefaultLibraryLabelSet = $param['DefaultLibraryLabelSet'];
         }
 
-        if (array_key_exists("UserDefineLibraryLabelSet",$param) and $param["UserDefineLibraryLabelSet"] !== null) {
-            $this->UserDefineLibraryLabelSet = $param["UserDefineLibraryLabelSet"];
+        if (array_key_exists('UserDefineLibraryLabelSet',$param) and $param['UserDefineLibraryLabelSet'] !== null) {
+            $this->UserDefineLibraryLabelSet = $param['UserDefineLibraryLabelSet'];
         }
 
-        if (array_key_exists("FaceLibrary",$param) and $param["FaceLibrary"] !== null) {
-            $this->FaceLibrary = $param["FaceLibrary"];
+        if (array_key_exists('FaceLibrary',$param) and $param['FaceLibrary'] !== null) {
+            $this->FaceLibrary = $param['FaceLibrary'];
         }
     }
 }

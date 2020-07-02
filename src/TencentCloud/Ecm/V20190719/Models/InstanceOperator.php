@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -58,13 +58,13 @@ class InstanceOperator extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("DeniedActions",$param) and $param["DeniedActions"] !== null) {
+        if (array_key_exists('DeniedActions',$param) and $param['DeniedActions'] !== null) {
             $this->DeniedActions = [];
-            foreach ($param["DeniedActions"] as $key => $value){
+            foreach ($param['DeniedActions'] as $key => $value){
                 $obj = new OperatorAction();
                 $obj->deserialize($value);
                 array_push($this->DeniedActions, $obj);

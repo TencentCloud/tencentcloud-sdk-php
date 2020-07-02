@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -154,37 +154,37 @@ Type为FACE时：
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Code",$param) and $param["Code"] !== null) {
-            $this->Code = $param["Code"];
+        if (array_key_exists('Code',$param) and $param['Code'] !== null) {
+            $this->Code = $param['Code'];
         }
 
-        if (array_key_exists("Msg",$param) and $param["Msg"] !== null) {
-            $this->Msg = $param["Msg"];
+        if (array_key_exists('Msg',$param) and $param['Msg'] !== null) {
+            $this->Msg = $param['Msg'];
         }
 
-        if (array_key_exists("Suggestion",$param) and $param["Suggestion"] !== null) {
-            $this->Suggestion = $param["Suggestion"];
+        if (array_key_exists('Suggestion',$param) and $param['Suggestion'] !== null) {
+            $this->Suggestion = $param['Suggestion'];
         }
 
-        if (array_key_exists("Confidence",$param) and $param["Confidence"] !== null) {
-            $this->Confidence = $param["Confidence"];
+        if (array_key_exists('Confidence',$param) and $param['Confidence'] !== null) {
+            $this->Confidence = $param['Confidence'];
         }
 
-        if (array_key_exists("FaceResults",$param) and $param["FaceResults"] !== null) {
+        if (array_key_exists('FaceResults',$param) and $param['FaceResults'] !== null) {
             $this->FaceResults = [];
-            foreach ($param["FaceResults"] as $key => $value){
+            foreach ($param['FaceResults'] as $key => $value){
                 $obj = new FaceResult();
                 $obj->deserialize($value);
                 array_push($this->FaceResults, $obj);
             }
         }
 
-        if (array_key_exists("AdvancedInfo",$param) and $param["AdvancedInfo"] !== null) {
-            $this->AdvancedInfo = $param["AdvancedInfo"];
+        if (array_key_exists('AdvancedInfo',$param) and $param['AdvancedInfo'] !== null) {
+            $this->AdvancedInfo = $param['AdvancedInfo'];
         }
 
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists('Type',$param) and $param['Type'] !== null) {
+            $this->Type = $param['Type'];
         }
     }
 }

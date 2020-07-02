@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -274,84 +274,84 @@ class CustomerInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Activity",$param) and $param["Activity"] !== null) {
-            $this->Activity = $param["Activity"];
+        if (array_key_exists('Activity',$param) and $param['Activity'] !== null) {
+            $this->Activity = $param['Activity'];
         }
 
-        if (array_key_exists("AudienceUserId",$param) and $param["AudienceUserId"] !== null) {
-            $this->AudienceUserId = $param["AudienceUserId"];
+        if (array_key_exists('AudienceUserId',$param) and $param['AudienceUserId'] !== null) {
+            $this->AudienceUserId = $param['AudienceUserId'];
         }
 
-        if (array_key_exists("Avatar",$param) and $param["Avatar"] !== null) {
-            $this->Avatar = $param["Avatar"];
+        if (array_key_exists('Avatar',$param) and $param['Avatar'] !== null) {
+            $this->Avatar = $param['Avatar'];
         }
 
-        if (array_key_exists("City",$param) and $param["City"] !== null) {
-            $this->City = $param["City"];
+        if (array_key_exists('City',$param) and $param['City'] !== null) {
+            $this->City = $param['City'];
         }
 
-        if (array_key_exists("LastActiveTime",$param) and $param["LastActiveTime"] !== null) {
-            $this->LastActiveTime = $param["LastActiveTime"];
+        if (array_key_exists('LastActiveTime',$param) and $param['LastActiveTime'] !== null) {
+            $this->LastActiveTime = $param['LastActiveTime'];
         }
 
-        if (array_key_exists("MarkFlag",$param) and $param["MarkFlag"] !== null) {
-            $this->MarkFlag = $param["MarkFlag"];
+        if (array_key_exists('MarkFlag',$param) and $param['MarkFlag'] !== null) {
+            $this->MarkFlag = $param['MarkFlag'];
         }
 
-        if (array_key_exists("MonthActive",$param) and $param["MonthActive"] !== null) {
-            $this->MonthActive = $param["MonthActive"];
+        if (array_key_exists('MonthActive',$param) and $param['MonthActive'] !== null) {
+            $this->MonthActive = $param['MonthActive'];
         }
 
-        if (array_key_exists("MonthRecommend",$param) and $param["MonthRecommend"] !== null) {
-            $this->MonthRecommend = $param["MonthRecommend"];
+        if (array_key_exists('MonthRecommend',$param) and $param['MonthRecommend'] !== null) {
+            $this->MonthRecommend = $param['MonthRecommend'];
         }
 
-        if (array_key_exists("Phone",$param) and $param["Phone"] !== null) {
-            $this->Phone = $param["Phone"];
+        if (array_key_exists('Phone',$param) and $param['Phone'] !== null) {
+            $this->Phone = $param['Phone'];
         }
 
-        if (array_key_exists("Province",$param) and $param["Province"] !== null) {
-            $this->Province = $param["Province"];
+        if (array_key_exists('Province',$param) and $param['Province'] !== null) {
+            $this->Province = $param['Province'];
         }
 
-        if (array_key_exists("RealName",$param) and $param["RealName"] !== null) {
-            $this->RealName = $param["RealName"];
+        if (array_key_exists('RealName',$param) and $param['RealName'] !== null) {
+            $this->RealName = $param['RealName'];
         }
 
-        if (array_key_exists("RelChannelFlag",$param) and $param["RelChannelFlag"] !== null) {
-            $this->RelChannelFlag = $param["RelChannelFlag"];
+        if (array_key_exists('RelChannelFlag',$param) and $param['RelChannelFlag'] !== null) {
+            $this->RelChannelFlag = $param['RelChannelFlag'];
         }
 
-        if (array_key_exists("Sex",$param) and $param["Sex"] !== null) {
-            $this->Sex = $param["Sex"];
+        if (array_key_exists('Sex',$param) and $param['Sex'] !== null) {
+            $this->Sex = $param['Sex'];
         }
 
-        if (array_key_exists("Spread",$param) and $param["Spread"] !== null) {
-            $this->Spread = $param["Spread"];
+        if (array_key_exists('Spread',$param) and $param['Spread'] !== null) {
+            $this->Spread = $param['Spread'];
         }
 
-        if (array_key_exists("WeekActive",$param) and $param["WeekActive"] !== null) {
-            $this->WeekActive = $param["WeekActive"];
+        if (array_key_exists('WeekActive',$param) and $param['WeekActive'] !== null) {
+            $this->WeekActive = $param['WeekActive'];
         }
 
-        if (array_key_exists("WeekRecommend",$param) and $param["WeekRecommend"] !== null) {
-            $this->WeekRecommend = $param["WeekRecommend"];
+        if (array_key_exists('WeekRecommend',$param) and $param['WeekRecommend'] !== null) {
+            $this->WeekRecommend = $param['WeekRecommend'];
         }
 
-        if (array_key_exists("WxCity",$param) and $param["WxCity"] !== null) {
-            $this->WxCity = $param["WxCity"];
+        if (array_key_exists('WxCity',$param) and $param['WxCity'] !== null) {
+            $this->WxCity = $param['WxCity'];
         }
 
-        if (array_key_exists("WxCountry",$param) and $param["WxCountry"] !== null) {
-            $this->WxCountry = $param["WxCountry"];
+        if (array_key_exists('WxCountry',$param) and $param['WxCountry'] !== null) {
+            $this->WxCountry = $param['WxCountry'];
         }
 
-        if (array_key_exists("WxNickname",$param) and $param["WxNickname"] !== null) {
-            $this->WxNickname = $param["WxNickname"];
+        if (array_key_exists('WxNickname',$param) and $param['WxNickname'] !== null) {
+            $this->WxNickname = $param['WxNickname'];
         }
 
-        if (array_key_exists("WxProvince",$param) and $param["WxProvince"] !== null) {
-            $this->WxProvince = $param["WxProvince"];
+        if (array_key_exists('WxProvince',$param) and $param['WxProvince'] !== null) {
+            $this->WxProvince = $param['WxProvince'];
         }
     }
 }

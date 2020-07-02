@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -134,62 +134,62 @@ class DescribePlayErrorCodeSumInfoListResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ProIspInfoList",$param) and $param["ProIspInfoList"] !== null) {
+        if (array_key_exists('ProIspInfoList',$param) and $param['ProIspInfoList'] !== null) {
             $this->ProIspInfoList = [];
-            foreach ($param["ProIspInfoList"] as $key => $value){
+            foreach ($param['ProIspInfoList'] as $key => $value){
                 $obj = new ProIspPlayCodeDataInfo();
                 $obj->deserialize($value);
                 array_push($this->ProIspInfoList, $obj);
             }
         }
 
-        if (array_key_exists("TotalCodeAll",$param) and $param["TotalCodeAll"] !== null) {
-            $this->TotalCodeAll = $param["TotalCodeAll"];
+        if (array_key_exists('TotalCodeAll',$param) and $param['TotalCodeAll'] !== null) {
+            $this->TotalCodeAll = $param['TotalCodeAll'];
         }
 
-        if (array_key_exists("TotalCode4xx",$param) and $param["TotalCode4xx"] !== null) {
-            $this->TotalCode4xx = $param["TotalCode4xx"];
+        if (array_key_exists('TotalCode4xx',$param) and $param['TotalCode4xx'] !== null) {
+            $this->TotalCode4xx = $param['TotalCode4xx'];
         }
 
-        if (array_key_exists("TotalCode5xx",$param) and $param["TotalCode5xx"] !== null) {
-            $this->TotalCode5xx = $param["TotalCode5xx"];
+        if (array_key_exists('TotalCode5xx',$param) and $param['TotalCode5xx'] !== null) {
+            $this->TotalCode5xx = $param['TotalCode5xx'];
         }
 
-        if (array_key_exists("TotalCodeList",$param) and $param["TotalCodeList"] !== null) {
+        if (array_key_exists('TotalCodeList',$param) and $param['TotalCodeList'] !== null) {
             $this->TotalCodeList = [];
-            foreach ($param["TotalCodeList"] as $key => $value){
+            foreach ($param['TotalCodeList'] as $key => $value){
                 $obj = new PlayCodeTotalInfo();
                 $obj->deserialize($value);
                 array_push($this->TotalCodeList, $obj);
             }
         }
 
-        if (array_key_exists("PageNum",$param) and $param["PageNum"] !== null) {
-            $this->PageNum = $param["PageNum"];
+        if (array_key_exists('PageNum',$param) and $param['PageNum'] !== null) {
+            $this->PageNum = $param['PageNum'];
         }
 
-        if (array_key_exists("PageSize",$param) and $param["PageSize"] !== null) {
-            $this->PageSize = $param["PageSize"];
+        if (array_key_exists('PageSize',$param) and $param['PageSize'] !== null) {
+            $this->PageSize = $param['PageSize'];
         }
 
-        if (array_key_exists("TotalPage",$param) and $param["TotalPage"] !== null) {
-            $this->TotalPage = $param["TotalPage"];
+        if (array_key_exists('TotalPage',$param) and $param['TotalPage'] !== null) {
+            $this->TotalPage = $param['TotalPage'];
         }
 
-        if (array_key_exists("TotalNum",$param) and $param["TotalNum"] !== null) {
-            $this->TotalNum = $param["TotalNum"];
+        if (array_key_exists('TotalNum',$param) and $param['TotalNum'] !== null) {
+            $this->TotalNum = $param['TotalNum'];
         }
 
-        if (array_key_exists("TotalCode2xx",$param) and $param["TotalCode2xx"] !== null) {
-            $this->TotalCode2xx = $param["TotalCode2xx"];
+        if (array_key_exists('TotalCode2xx',$param) and $param['TotalCode2xx'] !== null) {
+            $this->TotalCode2xx = $param['TotalCode2xx'];
         }
 
-        if (array_key_exists("TotalCode3xx",$param) and $param["TotalCode3xx"] !== null) {
-            $this->TotalCode3xx = $param["TotalCode3xx"];
+        if (array_key_exists('TotalCode3xx',$param) and $param['TotalCode3xx'] !== null) {
+            $this->TotalCode3xx = $param['TotalCode3xx'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

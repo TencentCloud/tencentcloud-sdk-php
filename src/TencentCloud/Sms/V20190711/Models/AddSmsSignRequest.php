@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -186,36 +186,36 @@ class AddSmsSignRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SignName",$param) and $param["SignName"] !== null) {
-            $this->SignName = $param["SignName"];
+        if (array_key_exists('SignName',$param) and $param['SignName'] !== null) {
+            $this->SignName = $param['SignName'];
         }
 
-        if (array_key_exists("SignType",$param) and $param["SignType"] !== null) {
-            $this->SignType = $param["SignType"];
+        if (array_key_exists('SignType',$param) and $param['SignType'] !== null) {
+            $this->SignType = $param['SignType'];
         }
 
-        if (array_key_exists("DocumentType",$param) and $param["DocumentType"] !== null) {
-            $this->DocumentType = $param["DocumentType"];
+        if (array_key_exists('DocumentType',$param) and $param['DocumentType'] !== null) {
+            $this->DocumentType = $param['DocumentType'];
         }
 
-        if (array_key_exists("International",$param) and $param["International"] !== null) {
-            $this->International = $param["International"];
+        if (array_key_exists('International',$param) and $param['International'] !== null) {
+            $this->International = $param['International'];
         }
 
-        if (array_key_exists("UsedMethod",$param) and $param["UsedMethod"] !== null) {
-            $this->UsedMethod = $param["UsedMethod"];
+        if (array_key_exists('UsedMethod',$param) and $param['UsedMethod'] !== null) {
+            $this->UsedMethod = $param['UsedMethod'];
         }
 
-        if (array_key_exists("ProofImage",$param) and $param["ProofImage"] !== null) {
-            $this->ProofImage = $param["ProofImage"];
+        if (array_key_exists('ProofImage',$param) and $param['ProofImage'] !== null) {
+            $this->ProofImage = $param['ProofImage'];
         }
 
-        if (array_key_exists("CommissionImage",$param) and $param["CommissionImage"] !== null) {
-            $this->CommissionImage = $param["CommissionImage"];
+        if (array_key_exists('CommissionImage',$param) and $param['CommissionImage'] !== null) {
+            $this->CommissionImage = $param['CommissionImage'];
         }
 
-        if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
-            $this->Remark = $param["Remark"];
+        if (array_key_exists('Remark',$param) and $param['Remark'] !== null) {
+            $this->Remark = $param['Remark'];
         }
     }
 }

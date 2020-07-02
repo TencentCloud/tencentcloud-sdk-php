@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -54,18 +54,18 @@ class RoutingConfig extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AdditionalVersionWeights",$param) and $param["AdditionalVersionWeights"] !== null) {
+        if (array_key_exists('AdditionalVersionWeights',$param) and $param['AdditionalVersionWeights'] !== null) {
             $this->AdditionalVersionWeights = [];
-            foreach ($param["AdditionalVersionWeights"] as $key => $value){
+            foreach ($param['AdditionalVersionWeights'] as $key => $value){
                 $obj = new VersionWeight();
                 $obj->deserialize($value);
                 array_push($this->AdditionalVersionWeights, $obj);
             }
         }
 
-        if (array_key_exists("AddtionVersionMatchs",$param) and $param["AddtionVersionMatchs"] !== null) {
+        if (array_key_exists('AddtionVersionMatchs',$param) and $param['AddtionVersionMatchs'] !== null) {
             $this->AddtionVersionMatchs = [];
-            foreach ($param["AddtionVersionMatchs"] as $key => $value){
+            foreach ($param['AddtionVersionMatchs'] as $key => $value){
                 $obj = new VersionMatch();
                 $obj->deserialize($value);
                 array_push($this->AddtionVersionMatchs, $obj);

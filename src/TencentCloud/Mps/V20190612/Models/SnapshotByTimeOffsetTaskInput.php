@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -110,39 +110,39 @@ class SnapshotByTimeOffsetTaskInput extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Definition",$param) and $param["Definition"] !== null) {
-            $this->Definition = $param["Definition"];
+        if (array_key_exists('Definition',$param) and $param['Definition'] !== null) {
+            $this->Definition = $param['Definition'];
         }
 
-        if (array_key_exists("ExtTimeOffsetSet",$param) and $param["ExtTimeOffsetSet"] !== null) {
-            $this->ExtTimeOffsetSet = $param["ExtTimeOffsetSet"];
+        if (array_key_exists('ExtTimeOffsetSet',$param) and $param['ExtTimeOffsetSet'] !== null) {
+            $this->ExtTimeOffsetSet = $param['ExtTimeOffsetSet'];
         }
 
-        if (array_key_exists("TimeOffsetSet",$param) and $param["TimeOffsetSet"] !== null) {
-            $this->TimeOffsetSet = $param["TimeOffsetSet"];
+        if (array_key_exists('TimeOffsetSet',$param) and $param['TimeOffsetSet'] !== null) {
+            $this->TimeOffsetSet = $param['TimeOffsetSet'];
         }
 
-        if (array_key_exists("WatermarkSet",$param) and $param["WatermarkSet"] !== null) {
+        if (array_key_exists('WatermarkSet',$param) and $param['WatermarkSet'] !== null) {
             $this->WatermarkSet = [];
-            foreach ($param["WatermarkSet"] as $key => $value){
+            foreach ($param['WatermarkSet'] as $key => $value){
                 $obj = new WatermarkInput();
                 $obj->deserialize($value);
                 array_push($this->WatermarkSet, $obj);
             }
         }
 
-        if (array_key_exists("OutputStorage",$param) and $param["OutputStorage"] !== null) {
+        if (array_key_exists('OutputStorage',$param) and $param['OutputStorage'] !== null) {
             $this->OutputStorage = new TaskOutputStorage();
-            $this->OutputStorage->deserialize($param["OutputStorage"]);
+            $this->OutputStorage->deserialize($param['OutputStorage']);
         }
 
-        if (array_key_exists("OutputObjectPath",$param) and $param["OutputObjectPath"] !== null) {
-            $this->OutputObjectPath = $param["OutputObjectPath"];
+        if (array_key_exists('OutputObjectPath',$param) and $param['OutputObjectPath'] !== null) {
+            $this->OutputObjectPath = $param['OutputObjectPath'];
         }
 
-        if (array_key_exists("ObjectNumberFormat",$param) and $param["ObjectNumberFormat"] !== null) {
+        if (array_key_exists('ObjectNumberFormat',$param) and $param['ObjectNumberFormat'] !== null) {
             $this->ObjectNumberFormat = new NumberFormat();
-            $this->ObjectNumberFormat->deserialize($param["ObjectNumberFormat"]);
+            $this->ObjectNumberFormat->deserialize($param['ObjectNumberFormat']);
         }
     }
 }

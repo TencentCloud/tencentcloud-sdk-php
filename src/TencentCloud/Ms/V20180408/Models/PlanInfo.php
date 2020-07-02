@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -166,69 +166,69 @@ class PlanInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ApkSizeOpt",$param) and $param["ApkSizeOpt"] !== null) {
-            $this->ApkSizeOpt = $param["ApkSizeOpt"];
+        if (array_key_exists('ApkSizeOpt',$param) and $param['ApkSizeOpt'] !== null) {
+            $this->ApkSizeOpt = $param['ApkSizeOpt'];
         }
 
-        if (array_key_exists("Dex",$param) and $param["Dex"] !== null) {
-            $this->Dex = $param["Dex"];
+        if (array_key_exists('Dex',$param) and $param['Dex'] !== null) {
+            $this->Dex = $param['Dex'];
         }
 
-        if (array_key_exists("So",$param) and $param["So"] !== null) {
-            $this->So = $param["So"];
+        if (array_key_exists('So',$param) and $param['So'] !== null) {
+            $this->So = $param['So'];
         }
 
-        if (array_key_exists("Bugly",$param) and $param["Bugly"] !== null) {
-            $this->Bugly = $param["Bugly"];
+        if (array_key_exists('Bugly',$param) and $param['Bugly'] !== null) {
+            $this->Bugly = $param['Bugly'];
         }
 
-        if (array_key_exists("AntiRepack",$param) and $param["AntiRepack"] !== null) {
-            $this->AntiRepack = $param["AntiRepack"];
+        if (array_key_exists('AntiRepack',$param) and $param['AntiRepack'] !== null) {
+            $this->AntiRepack = $param['AntiRepack'];
         }
 
-        if (array_key_exists("SeperateDex",$param) and $param["SeperateDex"] !== null) {
-            $this->SeperateDex = $param["SeperateDex"];
+        if (array_key_exists('SeperateDex',$param) and $param['SeperateDex'] !== null) {
+            $this->SeperateDex = $param['SeperateDex'];
         }
 
-        if (array_key_exists("Db",$param) and $param["Db"] !== null) {
-            $this->Db = $param["Db"];
+        if (array_key_exists('Db',$param) and $param['Db'] !== null) {
+            $this->Db = $param['Db'];
         }
 
-        if (array_key_exists("DexSig",$param) and $param["DexSig"] !== null) {
-            $this->DexSig = $param["DexSig"];
+        if (array_key_exists('DexSig',$param) and $param['DexSig'] !== null) {
+            $this->DexSig = $param['DexSig'];
         }
 
-        if (array_key_exists("SoInfo",$param) and $param["SoInfo"] !== null) {
+        if (array_key_exists('SoInfo',$param) and $param['SoInfo'] !== null) {
             $this->SoInfo = new SoInfo();
-            $this->SoInfo->deserialize($param["SoInfo"]);
+            $this->SoInfo->deserialize($param['SoInfo']);
         }
 
-        if (array_key_exists("AntiVMP",$param) and $param["AntiVMP"] !== null) {
-            $this->AntiVMP = $param["AntiVMP"];
+        if (array_key_exists('AntiVMP',$param) and $param['AntiVMP'] !== null) {
+            $this->AntiVMP = $param['AntiVMP'];
         }
 
-        if (array_key_exists("SoType",$param) and $param["SoType"] !== null) {
-            $this->SoType = $param["SoType"];
+        if (array_key_exists('SoType',$param) and $param['SoType'] !== null) {
+            $this->SoType = $param['SoType'];
         }
 
-        if (array_key_exists("AntiLogLeak",$param) and $param["AntiLogLeak"] !== null) {
-            $this->AntiLogLeak = $param["AntiLogLeak"];
+        if (array_key_exists('AntiLogLeak',$param) and $param['AntiLogLeak'] !== null) {
+            $this->AntiLogLeak = $param['AntiLogLeak'];
         }
 
-        if (array_key_exists("AntiQemuRoot",$param) and $param["AntiQemuRoot"] !== null) {
-            $this->AntiQemuRoot = $param["AntiQemuRoot"];
+        if (array_key_exists('AntiQemuRoot',$param) and $param['AntiQemuRoot'] !== null) {
+            $this->AntiQemuRoot = $param['AntiQemuRoot'];
         }
 
-        if (array_key_exists("AntiAssets",$param) and $param["AntiAssets"] !== null) {
-            $this->AntiAssets = $param["AntiAssets"];
+        if (array_key_exists('AntiAssets',$param) and $param['AntiAssets'] !== null) {
+            $this->AntiAssets = $param['AntiAssets'];
         }
 
-        if (array_key_exists("AntiScreenshot",$param) and $param["AntiScreenshot"] !== null) {
-            $this->AntiScreenshot = $param["AntiScreenshot"];
+        if (array_key_exists('AntiScreenshot',$param) and $param['AntiScreenshot'] !== null) {
+            $this->AntiScreenshot = $param['AntiScreenshot'];
         }
 
-        if (array_key_exists("AntiSSL",$param) and $param["AntiSSL"] !== null) {
-            $this->AntiSSL = $param["AntiSSL"];
+        if (array_key_exists('AntiSSL',$param) and $param['AntiSSL'] !== null) {
+            $this->AntiSSL = $param['AntiSSL'];
         }
     }
 }

@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -48,8 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsBlocked(boolean $IsBlocked) 设置资源封堵状态。true表示eip处于封堵状态，false表示eip处于未封堵状态
  * @method boolean getIsEipDirectConnection() 获取eip是否支持直通模式。true表示eip支持直通模式，false表示资源不支持直通模式
  * @method void setIsEipDirectConnection(boolean $IsEipDirectConnection) 设置eip是否支持直通模式。true表示eip支持直通模式，false表示资源不支持直通模式
- * @method string getAddressType() 获取eip资源类型，包括"CalcIP","WanIP","EIP","AnycastEIP"。其中"CalcIP"表示设备ip，“WanIP”表示普通公网ip，“EIP”表示弹性公网ip，“AnycastEip”表示加速EIP
- * @method void setAddressType(string $AddressType) 设置eip资源类型，包括"CalcIP","WanIP","EIP","AnycastEIP"。其中"CalcIP"表示设备ip，“WanIP”表示普通公网ip，“EIP”表示弹性公网ip，“AnycastEip”表示加速EIP
+ * @method string getAddressType() 获取eip资源类型，包括'CalcIP','WanIP','EIP','AnycastEIP'。其中'CalcIP'表示设备ip，“WanIP”表示普通公网ip，“EIP”表示弹性公网ip，“AnycastEip”表示加速EIP
+ * @method void setAddressType(string $AddressType) 设置eip资源类型，包括'CalcIP','WanIP','EIP','AnycastEIP'。其中'CalcIP'表示设备ip，“WanIP”表示普通公网ip，“EIP”表示弹性公网ip，“AnycastEip”表示加速EIP
  * @method boolean getCascadeRelease() 获取eip是否在解绑后自动释放。true表示eip将会在解绑后自动释放，false表示eip在解绑后不会自动释放
  * @method void setCascadeRelease(boolean $CascadeRelease) 设置eip是否在解绑后自动释放。true表示eip将会在解绑后自动释放，false表示eip在解绑后不会自动释放
  * @method string getInternetServiceProvider() 获取运营商，CTCC电信，CUCC联通，CMCC移动
@@ -118,7 +118,7 @@ class Address extends AbstractModel
     public $IsEipDirectConnection;
 
     /**
-     * @var string eip资源类型，包括"CalcIP","WanIP","EIP","AnycastEIP"。其中"CalcIP"表示设备ip，“WanIP”表示普通公网ip，“EIP”表示弹性公网ip，“AnycastEip”表示加速EIP
+     * @var string eip资源类型，包括'CalcIP','WanIP','EIP','AnycastEIP'。其中'CalcIP'表示设备ip，“WanIP”表示普通公网ip，“EIP”表示弹性公网ip，“AnycastEip”表示加速EIP
      */
     public $AddressType;
 
@@ -148,7 +148,7 @@ class Address extends AbstractModel
      * @param boolean $IsArrears 资源隔离状态。true表示eip处于隔离状态，false表示资源处于未隔离状态
      * @param boolean $IsBlocked 资源封堵状态。true表示eip处于封堵状态，false表示eip处于未封堵状态
      * @param boolean $IsEipDirectConnection eip是否支持直通模式。true表示eip支持直通模式，false表示资源不支持直通模式
-     * @param string $AddressType eip资源类型，包括"CalcIP","WanIP","EIP","AnycastEIP"。其中"CalcIP"表示设备ip，“WanIP”表示普通公网ip，“EIP”表示弹性公网ip，“AnycastEip”表示加速EIP
+     * @param string $AddressType eip资源类型，包括'CalcIP','WanIP','EIP','AnycastEIP'。其中'CalcIP'表示设备ip，“WanIP”表示普通公网ip，“EIP”表示弹性公网ip，“AnycastEip”表示加速EIP
      * @param boolean $CascadeRelease eip是否在解绑后自动释放。true表示eip将会在解绑后自动释放，false表示eip在解绑后不会自动释放
      * @param string $InternetServiceProvider 运营商，CTCC电信，CUCC联通，CMCC移动
 注意：此字段可能返回 null，表示取不到有效值。
@@ -166,60 +166,60 @@ class Address extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AddressId",$param) and $param["AddressId"] !== null) {
-            $this->AddressId = $param["AddressId"];
+        if (array_key_exists('AddressId',$param) and $param['AddressId'] !== null) {
+            $this->AddressId = $param['AddressId'];
         }
 
-        if (array_key_exists("AddressName",$param) and $param["AddressName"] !== null) {
-            $this->AddressName = $param["AddressName"];
+        if (array_key_exists('AddressName',$param) and $param['AddressName'] !== null) {
+            $this->AddressName = $param['AddressName'];
         }
 
-        if (array_key_exists("AddressStatus",$param) and $param["AddressStatus"] !== null) {
-            $this->AddressStatus = $param["AddressStatus"];
+        if (array_key_exists('AddressStatus',$param) and $param['AddressStatus'] !== null) {
+            $this->AddressStatus = $param['AddressStatus'];
         }
 
-        if (array_key_exists("AddressIp",$param) and $param["AddressIp"] !== null) {
-            $this->AddressIp = $param["AddressIp"];
+        if (array_key_exists('AddressIp',$param) and $param['AddressIp'] !== null) {
+            $this->AddressIp = $param['AddressIp'];
         }
 
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
-            $this->CreatedTime = $param["CreatedTime"];
+        if (array_key_exists('CreatedTime',$param) and $param['CreatedTime'] !== null) {
+            $this->CreatedTime = $param['CreatedTime'];
         }
 
-        if (array_key_exists("NetworkInterfaceId",$param) and $param["NetworkInterfaceId"] !== null) {
-            $this->NetworkInterfaceId = $param["NetworkInterfaceId"];
+        if (array_key_exists('NetworkInterfaceId',$param) and $param['NetworkInterfaceId'] !== null) {
+            $this->NetworkInterfaceId = $param['NetworkInterfaceId'];
         }
 
-        if (array_key_exists("PrivateAddressIp",$param) and $param["PrivateAddressIp"] !== null) {
-            $this->PrivateAddressIp = $param["PrivateAddressIp"];
+        if (array_key_exists('PrivateAddressIp',$param) and $param['PrivateAddressIp'] !== null) {
+            $this->PrivateAddressIp = $param['PrivateAddressIp'];
         }
 
-        if (array_key_exists("IsArrears",$param) and $param["IsArrears"] !== null) {
-            $this->IsArrears = $param["IsArrears"];
+        if (array_key_exists('IsArrears',$param) and $param['IsArrears'] !== null) {
+            $this->IsArrears = $param['IsArrears'];
         }
 
-        if (array_key_exists("IsBlocked",$param) and $param["IsBlocked"] !== null) {
-            $this->IsBlocked = $param["IsBlocked"];
+        if (array_key_exists('IsBlocked',$param) and $param['IsBlocked'] !== null) {
+            $this->IsBlocked = $param['IsBlocked'];
         }
 
-        if (array_key_exists("IsEipDirectConnection",$param) and $param["IsEipDirectConnection"] !== null) {
-            $this->IsEipDirectConnection = $param["IsEipDirectConnection"];
+        if (array_key_exists('IsEipDirectConnection',$param) and $param['IsEipDirectConnection'] !== null) {
+            $this->IsEipDirectConnection = $param['IsEipDirectConnection'];
         }
 
-        if (array_key_exists("AddressType",$param) and $param["AddressType"] !== null) {
-            $this->AddressType = $param["AddressType"];
+        if (array_key_exists('AddressType',$param) and $param['AddressType'] !== null) {
+            $this->AddressType = $param['AddressType'];
         }
 
-        if (array_key_exists("CascadeRelease",$param) and $param["CascadeRelease"] !== null) {
-            $this->CascadeRelease = $param["CascadeRelease"];
+        if (array_key_exists('CascadeRelease',$param) and $param['CascadeRelease'] !== null) {
+            $this->CascadeRelease = $param['CascadeRelease'];
         }
 
-        if (array_key_exists("InternetServiceProvider",$param) and $param["InternetServiceProvider"] !== null) {
-            $this->InternetServiceProvider = $param["InternetServiceProvider"];
+        if (array_key_exists('InternetServiceProvider',$param) and $param['InternetServiceProvider'] !== null) {
+            $this->InternetServiceProvider = $param['InternetServiceProvider'];
         }
     }
 }

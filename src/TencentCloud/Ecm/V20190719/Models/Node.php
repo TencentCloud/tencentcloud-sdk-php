@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -102,47 +102,47 @@ class Node extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ZoneInfo",$param) and $param["ZoneInfo"] !== null) {
+        if (array_key_exists('ZoneInfo',$param) and $param['ZoneInfo'] !== null) {
             $this->ZoneInfo = new ZoneInfo();
-            $this->ZoneInfo->deserialize($param["ZoneInfo"]);
+            $this->ZoneInfo->deserialize($param['ZoneInfo']);
         }
 
-        if (array_key_exists("Country",$param) and $param["Country"] !== null) {
+        if (array_key_exists('Country',$param) and $param['Country'] !== null) {
             $this->Country = new Country();
-            $this->Country->deserialize($param["Country"]);
+            $this->Country->deserialize($param['Country']);
         }
 
-        if (array_key_exists("Area",$param) and $param["Area"] !== null) {
+        if (array_key_exists('Area',$param) and $param['Area'] !== null) {
             $this->Area = new Area();
-            $this->Area->deserialize($param["Area"]);
+            $this->Area->deserialize($param['Area']);
         }
 
-        if (array_key_exists("Province",$param) and $param["Province"] !== null) {
+        if (array_key_exists('Province',$param) and $param['Province'] !== null) {
             $this->Province = new Province();
-            $this->Province->deserialize($param["Province"]);
+            $this->Province->deserialize($param['Province']);
         }
 
-        if (array_key_exists("City",$param) and $param["City"] !== null) {
+        if (array_key_exists('City',$param) and $param['City'] !== null) {
             $this->City = new City();
-            $this->City->deserialize($param["City"]);
+            $this->City->deserialize($param['City']);
         }
 
-        if (array_key_exists("RegionInfo",$param) and $param["RegionInfo"] !== null) {
+        if (array_key_exists('RegionInfo',$param) and $param['RegionInfo'] !== null) {
             $this->RegionInfo = new RegionInfo();
-            $this->RegionInfo->deserialize($param["RegionInfo"]);
+            $this->RegionInfo->deserialize($param['RegionInfo']);
         }
 
-        if (array_key_exists("ISPSet",$param) and $param["ISPSet"] !== null) {
+        if (array_key_exists('ISPSet',$param) and $param['ISPSet'] !== null) {
             $this->ISPSet = [];
-            foreach ($param["ISPSet"] as $key => $value){
+            foreach ($param['ISPSet'] as $key => $value){
                 $obj = new ISP();
                 $obj->deserialize($value);
                 array_push($this->ISPSet, $obj);
             }
         }
 
-        if (array_key_exists("ISPNum",$param) and $param["ISPNum"] !== null) {
-            $this->ISPNum = $param["ISPNum"];
+        if (array_key_exists('ISPNum',$param) and $param['ISPNum'] !== null) {
+            $this->ISPNum = $param['ISPNum'];
         }
     }
 }

@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Reset返回参数结构体
  *
- * @method string getDialogStatus() 获取当前会话状态。取值:"start"/"continue"/"complete"
+ * @method string getDialogStatus() 获取当前会话状态。取值:'start'/'continue'/'complete'
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDialogStatus(string $DialogStatus) 设置当前会话状态。取值:"start"/"continue"/"complete"
+ * @method void setDialogStatus(string $DialogStatus) 设置当前会话状态。取值:'start'/'continue'/'complete'
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBotName() 获取匹配到的机器人名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -60,7 +60,7 @@ use TencentCloud\Common\AbstractModel;
 class ResetResponse extends AbstractModel
 {
     /**
-     * @var string 当前会话状态。取值:"start"/"continue"/"complete"
+     * @var string 当前会话状态。取值:'start'/'continue'/'complete'
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DialogStatus;
@@ -118,7 +118,7 @@ class ResetResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $DialogStatus 当前会话状态。取值:"start"/"continue"/"complete"
+     * @param string $DialogStatus 当前会话状态。取值:'start'/'continue'/'complete'
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BotName 匹配到的机器人名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -150,49 +150,49 @@ class ResetResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DialogStatus",$param) and $param["DialogStatus"] !== null) {
-            $this->DialogStatus = $param["DialogStatus"];
+        if (array_key_exists('DialogStatus',$param) and $param['DialogStatus'] !== null) {
+            $this->DialogStatus = $param['DialogStatus'];
         }
 
-        if (array_key_exists("BotName",$param) and $param["BotName"] !== null) {
-            $this->BotName = $param["BotName"];
+        if (array_key_exists('BotName',$param) and $param['BotName'] !== null) {
+            $this->BotName = $param['BotName'];
         }
 
-        if (array_key_exists("IntentName",$param) and $param["IntentName"] !== null) {
-            $this->IntentName = $param["IntentName"];
+        if (array_key_exists('IntentName',$param) and $param['IntentName'] !== null) {
+            $this->IntentName = $param['IntentName'];
         }
 
-        if (array_key_exists("ResponseText",$param) and $param["ResponseText"] !== null) {
-            $this->ResponseText = $param["ResponseText"];
+        if (array_key_exists('ResponseText',$param) and $param['ResponseText'] !== null) {
+            $this->ResponseText = $param['ResponseText'];
         }
 
-        if (array_key_exists("SlotInfoList",$param) and $param["SlotInfoList"] !== null) {
+        if (array_key_exists('SlotInfoList',$param) and $param['SlotInfoList'] !== null) {
             $this->SlotInfoList = [];
-            foreach ($param["SlotInfoList"] as $key => $value){
+            foreach ($param['SlotInfoList'] as $key => $value){
                 $obj = new SlotInfo();
                 $obj->deserialize($value);
                 array_push($this->SlotInfoList, $obj);
             }
         }
 
-        if (array_key_exists("SessionAttributes",$param) and $param["SessionAttributes"] !== null) {
-            $this->SessionAttributes = $param["SessionAttributes"];
+        if (array_key_exists('SessionAttributes',$param) and $param['SessionAttributes'] !== null) {
+            $this->SessionAttributes = $param['SessionAttributes'];
         }
 
-        if (array_key_exists("Question",$param) and $param["Question"] !== null) {
-            $this->Question = $param["Question"];
+        if (array_key_exists('Question',$param) and $param['Question'] !== null) {
+            $this->Question = $param['Question'];
         }
 
-        if (array_key_exists("WaveUrl",$param) and $param["WaveUrl"] !== null) {
-            $this->WaveUrl = $param["WaveUrl"];
+        if (array_key_exists('WaveUrl',$param) and $param['WaveUrl'] !== null) {
+            $this->WaveUrl = $param['WaveUrl'];
         }
 
-        if (array_key_exists("WaveData",$param) and $param["WaveData"] !== null) {
-            $this->WaveData = $param["WaveData"];
+        if (array_key_exists('WaveData',$param) and $param['WaveData'] !== null) {
+            $this->WaveData = $param['WaveData'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

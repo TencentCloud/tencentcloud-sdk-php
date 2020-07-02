@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -110,45 +110,45 @@ class CreateNatGatewayRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ForwardMode",$param) and $param["ForwardMode"] !== null) {
-            $this->ForwardMode = $param["ForwardMode"];
+        if (array_key_exists('ForwardMode',$param) and $param['ForwardMode'] !== null) {
+            $this->ForwardMode = $param['ForwardMode'];
         }
 
-        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
-            $this->VpcId = $param["VpcId"];
+        if (array_key_exists('VpcId',$param) and $param['VpcId'] !== null) {
+            $this->VpcId = $param['VpcId'];
         }
 
-        if (array_key_exists("NatName",$param) and $param["NatName"] !== null) {
-            $this->NatName = $param["NatName"];
+        if (array_key_exists('NatName',$param) and $param['NatName'] !== null) {
+            $this->NatName = $param['NatName'];
         }
 
-        if (array_key_exists("MaxConcurrent",$param) and $param["MaxConcurrent"] !== null) {
-            $this->MaxConcurrent = $param["MaxConcurrent"];
+        if (array_key_exists('MaxConcurrent',$param) and $param['MaxConcurrent'] !== null) {
+            $this->MaxConcurrent = $param['MaxConcurrent'];
         }
 
-        if (array_key_exists("SubnetIds",$param) and $param["SubnetIds"] !== null) {
-            $this->SubnetIds = $param["SubnetIds"];
+        if (array_key_exists('SubnetIds',$param) and $param['SubnetIds'] !== null) {
+            $this->SubnetIds = $param['SubnetIds'];
         }
 
-        if (array_key_exists("IpInfoSet",$param) and $param["IpInfoSet"] !== null) {
+        if (array_key_exists('IpInfoSet',$param) and $param['IpInfoSet'] !== null) {
             $this->IpInfoSet = [];
-            foreach ($param["IpInfoSet"] as $key => $value){
+            foreach ($param['IpInfoSet'] as $key => $value){
                 $obj = new IpInfo();
                 $obj->deserialize($value);
                 array_push($this->IpInfoSet, $obj);
             }
         }
 
-        if (array_key_exists("AssignedEips",$param) and $param["AssignedEips"] !== null) {
-            $this->AssignedEips = $param["AssignedEips"];
+        if (array_key_exists('AssignedEips',$param) and $param['AssignedEips'] !== null) {
+            $this->AssignedEips = $param['AssignedEips'];
         }
 
-        if (array_key_exists("AutoAllocEipNum",$param) and $param["AutoAllocEipNum"] !== null) {
-            $this->AutoAllocEipNum = $param["AutoAllocEipNum"];
+        if (array_key_exists('AutoAllocEipNum',$param) and $param['AutoAllocEipNum'] !== null) {
+            $this->AutoAllocEipNum = $param['AutoAllocEipNum'];
         }
 
-        if (array_key_exists("Exclusive",$param) and $param["Exclusive"] !== null) {
-            $this->Exclusive = $param["Exclusive"];
+        if (array_key_exists('Exclusive',$param) and $param['Exclusive'] !== null) {
+            $this->Exclusive = $param['Exclusive'];
         }
     }
 }

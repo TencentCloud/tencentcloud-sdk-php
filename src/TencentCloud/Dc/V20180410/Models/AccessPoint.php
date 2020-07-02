@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -86,28 +86,28 @@ class AccessPoint extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AccessPointName",$param) and $param["AccessPointName"] !== null) {
-            $this->AccessPointName = $param["AccessPointName"];
+        if (array_key_exists('AccessPointName',$param) and $param['AccessPointName'] !== null) {
+            $this->AccessPointName = $param['AccessPointName'];
         }
 
-        if (array_key_exists("AccessPointId",$param) and $param["AccessPointId"] !== null) {
-            $this->AccessPointId = $param["AccessPointId"];
+        if (array_key_exists('AccessPointId',$param) and $param['AccessPointId'] !== null) {
+            $this->AccessPointId = $param['AccessPointId'];
         }
 
-        if (array_key_exists("State",$param) and $param["State"] !== null) {
-            $this->State = $param["State"];
+        if (array_key_exists('State',$param) and $param['State'] !== null) {
+            $this->State = $param['State'];
         }
 
-        if (array_key_exists("Location",$param) and $param["Location"] !== null) {
-            $this->Location = $param["Location"];
+        if (array_key_exists('Location',$param) and $param['Location'] !== null) {
+            $this->Location = $param['Location'];
         }
 
-        if (array_key_exists("LineOperator",$param) and $param["LineOperator"] !== null) {
-            $this->LineOperator = $param["LineOperator"];
+        if (array_key_exists('LineOperator',$param) and $param['LineOperator'] !== null) {
+            $this->LineOperator = $param['LineOperator'];
         }
 
-        if (array_key_exists("RegionId",$param) and $param["RegionId"] !== null) {
-            $this->RegionId = $param["RegionId"];
+        if (array_key_exists('RegionId',$param) and $param['RegionId'] !== null) {
+            $this->RegionId = $param['RegionId'];
         }
     }
 }

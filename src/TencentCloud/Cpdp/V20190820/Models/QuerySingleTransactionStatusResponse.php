@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -178,56 +178,56 @@ class QuerySingleTransactionStatusResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TxnReturnCode",$param) and $param["TxnReturnCode"] !== null) {
-            $this->TxnReturnCode = $param["TxnReturnCode"];
+        if (array_key_exists('TxnReturnCode',$param) and $param['TxnReturnCode'] !== null) {
+            $this->TxnReturnCode = $param['TxnReturnCode'];
         }
 
-        if (array_key_exists("TxnReturnMsg",$param) and $param["TxnReturnMsg"] !== null) {
-            $this->TxnReturnMsg = $param["TxnReturnMsg"];
+        if (array_key_exists('TxnReturnMsg',$param) and $param['TxnReturnMsg'] !== null) {
+            $this->TxnReturnMsg = $param['TxnReturnMsg'];
         }
 
-        if (array_key_exists("CnsmrSeqNo",$param) and $param["CnsmrSeqNo"] !== null) {
-            $this->CnsmrSeqNo = $param["CnsmrSeqNo"];
+        if (array_key_exists('CnsmrSeqNo',$param) and $param['CnsmrSeqNo'] !== null) {
+            $this->CnsmrSeqNo = $param['CnsmrSeqNo'];
         }
 
-        if (array_key_exists("BookingFlag",$param) and $param["BookingFlag"] !== null) {
-            $this->BookingFlag = $param["BookingFlag"];
+        if (array_key_exists('BookingFlag',$param) and $param['BookingFlag'] !== null) {
+            $this->BookingFlag = $param['BookingFlag'];
         }
 
-        if (array_key_exists("TranStatus",$param) and $param["TranStatus"] !== null) {
-            $this->TranStatus = $param["TranStatus"];
+        if (array_key_exists('TranStatus',$param) and $param['TranStatus'] !== null) {
+            $this->TranStatus = $param['TranStatus'];
         }
 
-        if (array_key_exists("TranAmt",$param) and $param["TranAmt"] !== null) {
-            $this->TranAmt = $param["TranAmt"];
+        if (array_key_exists('TranAmt',$param) and $param['TranAmt'] !== null) {
+            $this->TranAmt = $param['TranAmt'];
         }
 
-        if (array_key_exists("TranDate",$param) and $param["TranDate"] !== null) {
-            $this->TranDate = $param["TranDate"];
+        if (array_key_exists('TranDate',$param) and $param['TranDate'] !== null) {
+            $this->TranDate = $param['TranDate'];
         }
 
-        if (array_key_exists("TranTime",$param) and $param["TranTime"] !== null) {
-            $this->TranTime = $param["TranTime"];
+        if (array_key_exists('TranTime',$param) and $param['TranTime'] !== null) {
+            $this->TranTime = $param['TranTime'];
         }
 
-        if (array_key_exists("InSubAcctNo",$param) and $param["InSubAcctNo"] !== null) {
-            $this->InSubAcctNo = $param["InSubAcctNo"];
+        if (array_key_exists('InSubAcctNo',$param) and $param['InSubAcctNo'] !== null) {
+            $this->InSubAcctNo = $param['InSubAcctNo'];
         }
 
-        if (array_key_exists("OutSubAcctNo",$param) and $param["OutSubAcctNo"] !== null) {
-            $this->OutSubAcctNo = $param["OutSubAcctNo"];
+        if (array_key_exists('OutSubAcctNo',$param) and $param['OutSubAcctNo'] !== null) {
+            $this->OutSubAcctNo = $param['OutSubAcctNo'];
         }
 
-        if (array_key_exists("FailMsg",$param) and $param["FailMsg"] !== null) {
-            $this->FailMsg = $param["FailMsg"];
+        if (array_key_exists('FailMsg',$param) and $param['FailMsg'] !== null) {
+            $this->FailMsg = $param['FailMsg'];
         }
 
-        if (array_key_exists("OldTranFrontSeqNo",$param) and $param["OldTranFrontSeqNo"] !== null) {
-            $this->OldTranFrontSeqNo = $param["OldTranFrontSeqNo"];
+        if (array_key_exists('OldTranFrontSeqNo',$param) and $param['OldTranFrontSeqNo'] !== null) {
+            $this->OldTranFrontSeqNo = $param['OldTranFrontSeqNo'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

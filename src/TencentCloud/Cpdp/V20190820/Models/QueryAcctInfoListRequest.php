@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -130,36 +130,36 @@ development: 开发环境
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MidasAppId",$param) and $param["MidasAppId"] !== null) {
-            $this->MidasAppId = $param["MidasAppId"];
+        if (array_key_exists('MidasAppId',$param) and $param['MidasAppId'] !== null) {
+            $this->MidasAppId = $param['MidasAppId'];
         }
 
-        if (array_key_exists("QueryAcctBeginTime",$param) and $param["QueryAcctBeginTime"] !== null) {
-            $this->QueryAcctBeginTime = $param["QueryAcctBeginTime"];
+        if (array_key_exists('QueryAcctBeginTime',$param) and $param['QueryAcctBeginTime'] !== null) {
+            $this->QueryAcctBeginTime = $param['QueryAcctBeginTime'];
         }
 
-        if (array_key_exists("QueryAcctEndTime",$param) and $param["QueryAcctEndTime"] !== null) {
-            $this->QueryAcctEndTime = $param["QueryAcctEndTime"];
+        if (array_key_exists('QueryAcctEndTime',$param) and $param['QueryAcctEndTime'] !== null) {
+            $this->QueryAcctEndTime = $param['QueryAcctEndTime'];
         }
 
-        if (array_key_exists("PageOffset",$param) and $param["PageOffset"] !== null) {
-            $this->PageOffset = $param["PageOffset"];
+        if (array_key_exists('PageOffset',$param) and $param['PageOffset'] !== null) {
+            $this->PageOffset = $param['PageOffset'];
         }
 
-        if (array_key_exists("MidasSecretId",$param) and $param["MidasSecretId"] !== null) {
-            $this->MidasSecretId = $param["MidasSecretId"];
+        if (array_key_exists('MidasSecretId',$param) and $param['MidasSecretId'] !== null) {
+            $this->MidasSecretId = $param['MidasSecretId'];
         }
 
-        if (array_key_exists("MidasSignature",$param) and $param["MidasSignature"] !== null) {
-            $this->MidasSignature = $param["MidasSignature"];
+        if (array_key_exists('MidasSignature',$param) and $param['MidasSignature'] !== null) {
+            $this->MidasSignature = $param['MidasSignature'];
         }
 
-        if (array_key_exists("EncryptType",$param) and $param["EncryptType"] !== null) {
-            $this->EncryptType = $param["EncryptType"];
+        if (array_key_exists('EncryptType',$param) and $param['EncryptType'] !== null) {
+            $this->EncryptType = $param['EncryptType'];
         }
 
-        if (array_key_exists("MidasEnvironment",$param) and $param["MidasEnvironment"] !== null) {
-            $this->MidasEnvironment = $param["MidasEnvironment"];
+        if (array_key_exists('MidasEnvironment',$param) and $param['MidasEnvironment'] !== null) {
+            $this->MidasEnvironment = $param['MidasEnvironment'];
         }
     }
 }

@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -182,76 +182,76 @@ class FileInfoType extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DetectId",$param) and $param["DetectId"] !== null) {
-            $this->DetectId = $param["DetectId"];
+        if (array_key_exists('DetectId',$param) and $param['DetectId'] !== null) {
+            $this->DetectId = $param['DetectId'];
         }
 
-        if (array_key_exists("DetectPriority",$param) and $param["DetectPriority"] !== null) {
-            $this->DetectPriority = $param["DetectPriority"];
+        if (array_key_exists('DetectPriority',$param) and $param['DetectPriority'] !== null) {
+            $this->DetectPriority = $param['DetectPriority'];
         }
 
-        if (array_key_exists("EnginePriority",$param) and $param["EnginePriority"] !== null) {
-            $this->EnginePriority = $param["EnginePriority"];
+        if (array_key_exists('EnginePriority',$param) and $param['EnginePriority'] !== null) {
+            $this->EnginePriority = $param['EnginePriority'];
         }
 
-        if (array_key_exists("FileExist",$param) and $param["FileExist"] !== null) {
-            $this->FileExist = $param["FileExist"];
+        if (array_key_exists('FileExist',$param) and $param['FileExist'] !== null) {
+            $this->FileExist = $param['FileExist'];
         }
 
-        if (array_key_exists("FileForceUpload",$param) and $param["FileForceUpload"] !== null) {
-            $this->FileForceUpload = $param["FileForceUpload"];
+        if (array_key_exists('FileForceUpload',$param) and $param['FileForceUpload'] !== null) {
+            $this->FileForceUpload = $param['FileForceUpload'];
         }
 
-        if (array_key_exists("FileSize",$param) and $param["FileSize"] !== null) {
-            $this->FileSize = $param["FileSize"];
+        if (array_key_exists('FileSize',$param) and $param['FileSize'] !== null) {
+            $this->FileSize = $param['FileSize'];
         }
 
-        if (array_key_exists("FileupTime",$param) and $param["FileupTime"] !== null) {
-            $this->FileupTime = $param["FileupTime"];
+        if (array_key_exists('FileupTime',$param) and $param['FileupTime'] !== null) {
+            $this->FileupTime = $param['FileupTime'];
         }
 
-        if (array_key_exists("FullVirusName",$param) and $param["FullVirusName"] !== null) {
-            $this->FullVirusName = $param["FullVirusName"];
+        if (array_key_exists('FullVirusName',$param) and $param['FullVirusName'] !== null) {
+            $this->FullVirusName = $param['FullVirusName'];
         }
 
-        if (array_key_exists("IdcPosition",$param) and $param["IdcPosition"] !== null) {
-            $this->IdcPosition = $param["IdcPosition"];
+        if (array_key_exists('IdcPosition',$param) and $param['IdcPosition'] !== null) {
+            $this->IdcPosition = $param['IdcPosition'];
         }
 
-        if (array_key_exists("Md5Type",$param) and $param["Md5Type"] !== null) {
-            $this->Md5Type = $param["Md5Type"];
+        if (array_key_exists('Md5Type',$param) and $param['Md5Type'] !== null) {
+            $this->Md5Type = $param['Md5Type'];
         }
 
-        if (array_key_exists("PeExist",$param) and $param["PeExist"] !== null) {
-            $this->PeExist = $param["PeExist"];
+        if (array_key_exists('PeExist',$param) and $param['PeExist'] !== null) {
+            $this->PeExist = $param['PeExist'];
         }
 
-        if (array_key_exists("PeForceUpload",$param) and $param["PeForceUpload"] !== null) {
-            $this->PeForceUpload = $param["PeForceUpload"];
+        if (array_key_exists('PeForceUpload',$param) and $param['PeForceUpload'] !== null) {
+            $this->PeForceUpload = $param['PeForceUpload'];
         }
 
-        if (array_key_exists("SafeLevel",$param) and $param["SafeLevel"] !== null) {
-            $this->SafeLevel = $param["SafeLevel"];
+        if (array_key_exists('SafeLevel',$param) and $param['SafeLevel'] !== null) {
+            $this->SafeLevel = $param['SafeLevel'];
         }
 
-        if (array_key_exists("ScanModiTime",$param) and $param["ScanModiTime"] !== null) {
-            $this->ScanModiTime = $param["ScanModiTime"];
+        if (array_key_exists('ScanModiTime',$param) and $param['ScanModiTime'] !== null) {
+            $this->ScanModiTime = $param['ScanModiTime'];
         }
 
-        if (array_key_exists("SubdetectId",$param) and $param["SubdetectId"] !== null) {
-            $this->SubdetectId = $param["SubdetectId"];
+        if (array_key_exists('SubdetectId',$param) and $param['SubdetectId'] !== null) {
+            $this->SubdetectId = $param['SubdetectId'];
         }
 
-        if (array_key_exists("UserDefName",$param) and $param["UserDefName"] !== null) {
-            $this->UserDefName = $param["UserDefName"];
+        if (array_key_exists('UserDefName',$param) and $param['UserDefName'] !== null) {
+            $this->UserDefName = $param['UserDefName'];
         }
 
-        if (array_key_exists("VirusType",$param) and $param["VirusType"] !== null) {
-            $this->VirusType = $param["VirusType"];
+        if (array_key_exists('VirusType',$param) and $param['VirusType'] !== null) {
+            $this->VirusType = $param['VirusType'];
         }
 
-        if (array_key_exists("WhiteScore",$param) and $param["WhiteScore"] !== null) {
-            $this->WhiteScore = $param["WhiteScore"];
+        if (array_key_exists('WhiteScore',$param) and $param['WhiteScore'] !== null) {
+            $this->WhiteScore = $param['WhiteScore'];
         }
     }
 }

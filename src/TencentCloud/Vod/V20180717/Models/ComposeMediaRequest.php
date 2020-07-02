@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -86,35 +86,35 @@ class ComposeMediaRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Tracks",$param) and $param["Tracks"] !== null) {
+        if (array_key_exists('Tracks',$param) and $param['Tracks'] !== null) {
             $this->Tracks = [];
-            foreach ($param["Tracks"] as $key => $value){
+            foreach ($param['Tracks'] as $key => $value){
                 $obj = new MediaTrack();
                 $obj->deserialize($value);
                 array_push($this->Tracks, $obj);
             }
         }
 
-        if (array_key_exists("Output",$param) and $param["Output"] !== null) {
+        if (array_key_exists('Output',$param) and $param['Output'] !== null) {
             $this->Output = new ComposeMediaOutput();
-            $this->Output->deserialize($param["Output"]);
+            $this->Output->deserialize($param['Output']);
         }
 
-        if (array_key_exists("Canvas",$param) and $param["Canvas"] !== null) {
+        if (array_key_exists('Canvas',$param) and $param['Canvas'] !== null) {
             $this->Canvas = new Canvas();
-            $this->Canvas->deserialize($param["Canvas"]);
+            $this->Canvas->deserialize($param['Canvas']);
         }
 
-        if (array_key_exists("SessionContext",$param) and $param["SessionContext"] !== null) {
-            $this->SessionContext = $param["SessionContext"];
+        if (array_key_exists('SessionContext',$param) and $param['SessionContext'] !== null) {
+            $this->SessionContext = $param['SessionContext'];
         }
 
-        if (array_key_exists("SessionId",$param) and $param["SessionId"] !== null) {
-            $this->SessionId = $param["SessionId"];
+        if (array_key_exists('SessionId',$param) and $param['SessionId'] !== null) {
+            $this->SessionId = $param['SessionId'];
         }
 
-        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
-            $this->SubAppId = $param["SubAppId"];
+        if (array_key_exists('SubAppId',$param) and $param['SubAppId'] !== null) {
+            $this->SubAppId = $param['SubAppId'];
         }
     }
 }

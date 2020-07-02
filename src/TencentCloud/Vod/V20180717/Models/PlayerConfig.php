@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -138,50 +138,50 @@ class PlayerConfig extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists('Type',$param) and $param['Type'] !== null) {
+            $this->Type = $param['Type'];
         }
 
-        if (array_key_exists("DrmSwitch",$param) and $param["DrmSwitch"] !== null) {
-            $this->DrmSwitch = $param["DrmSwitch"];
+        if (array_key_exists('DrmSwitch',$param) and $param['DrmSwitch'] !== null) {
+            $this->DrmSwitch = $param['DrmSwitch'];
         }
 
-        if (array_key_exists("AdaptiveDynamicStreamingDefinition",$param) and $param["AdaptiveDynamicStreamingDefinition"] !== null) {
-            $this->AdaptiveDynamicStreamingDefinition = $param["AdaptiveDynamicStreamingDefinition"];
+        if (array_key_exists('AdaptiveDynamicStreamingDefinition',$param) and $param['AdaptiveDynamicStreamingDefinition'] !== null) {
+            $this->AdaptiveDynamicStreamingDefinition = $param['AdaptiveDynamicStreamingDefinition'];
         }
 
-        if (array_key_exists("DrmStreamingsInfo",$param) and $param["DrmStreamingsInfo"] !== null) {
+        if (array_key_exists('DrmStreamingsInfo',$param) and $param['DrmStreamingsInfo'] !== null) {
             $this->DrmStreamingsInfo = new DrmStreamingsInfo();
-            $this->DrmStreamingsInfo->deserialize($param["DrmStreamingsInfo"]);
+            $this->DrmStreamingsInfo->deserialize($param['DrmStreamingsInfo']);
         }
 
-        if (array_key_exists("ImageSpriteDefinition",$param) and $param["ImageSpriteDefinition"] !== null) {
-            $this->ImageSpriteDefinition = $param["ImageSpriteDefinition"];
+        if (array_key_exists('ImageSpriteDefinition',$param) and $param['ImageSpriteDefinition'] !== null) {
+            $this->ImageSpriteDefinition = $param['ImageSpriteDefinition'];
         }
 
-        if (array_key_exists("ResolutionNameSet",$param) and $param["ResolutionNameSet"] !== null) {
+        if (array_key_exists('ResolutionNameSet',$param) and $param['ResolutionNameSet'] !== null) {
             $this->ResolutionNameSet = [];
-            foreach ($param["ResolutionNameSet"] as $key => $value){
+            foreach ($param['ResolutionNameSet'] as $key => $value){
                 $obj = new ResolutionNameInfo();
                 $obj->deserialize($value);
                 array_push($this->ResolutionNameSet, $obj);
             }
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
-            $this->UpdateTime = $param["UpdateTime"];
+        if (array_key_exists('UpdateTime',$param) and $param['UpdateTime'] !== null) {
+            $this->UpdateTime = $param['UpdateTime'];
         }
 
-        if (array_key_exists("Comment",$param) and $param["Comment"] !== null) {
-            $this->Comment = $param["Comment"];
+        if (array_key_exists('Comment',$param) and $param['Comment'] !== null) {
+            $this->Comment = $param['Comment'];
         }
     }
 }

@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -146,56 +146,56 @@ class ProductProperties extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ProductDescription",$param) and $param["ProductDescription"] !== null) {
-            $this->ProductDescription = $param["ProductDescription"];
+        if (array_key_exists('ProductDescription',$param) and $param['ProductDescription'] !== null) {
+            $this->ProductDescription = $param['ProductDescription'];
         }
 
-        if (array_key_exists("EncryptionType",$param) and $param["EncryptionType"] !== null) {
-            $this->EncryptionType = $param["EncryptionType"];
+        if (array_key_exists('EncryptionType',$param) and $param['EncryptionType'] !== null) {
+            $this->EncryptionType = $param['EncryptionType'];
         }
 
-        if (array_key_exists("Region",$param) and $param["Region"] !== null) {
-            $this->Region = $param["Region"];
+        if (array_key_exists('Region',$param) and $param['Region'] !== null) {
+            $this->Region = $param['Region'];
         }
 
-        if (array_key_exists("ProductType",$param) and $param["ProductType"] !== null) {
-            $this->ProductType = $param["ProductType"];
+        if (array_key_exists('ProductType',$param) and $param['ProductType'] !== null) {
+            $this->ProductType = $param['ProductType'];
         }
 
-        if (array_key_exists("Format",$param) and $param["Format"] !== null) {
-            $this->Format = $param["Format"];
+        if (array_key_exists('Format',$param) and $param['Format'] !== null) {
+            $this->Format = $param['Format'];
         }
 
-        if (array_key_exists("Platform",$param) and $param["Platform"] !== null) {
-            $this->Platform = $param["Platform"];
+        if (array_key_exists('Platform',$param) and $param['Platform'] !== null) {
+            $this->Platform = $param['Platform'];
         }
 
-        if (array_key_exists("Appeui",$param) and $param["Appeui"] !== null) {
-            $this->Appeui = $param["Appeui"];
+        if (array_key_exists('Appeui',$param) and $param['Appeui'] !== null) {
+            $this->Appeui = $param['Appeui'];
         }
 
-        if (array_key_exists("ModelId",$param) and $param["ModelId"] !== null) {
-            $this->ModelId = $param["ModelId"];
+        if (array_key_exists('ModelId',$param) and $param['ModelId'] !== null) {
+            $this->ModelId = $param['ModelId'];
         }
 
-        if (array_key_exists("ModelName",$param) and $param["ModelName"] !== null) {
-            $this->ModelName = $param["ModelName"];
+        if (array_key_exists('ModelName',$param) and $param['ModelName'] !== null) {
+            $this->ModelName = $param['ModelName'];
         }
 
-        if (array_key_exists("ProductKey",$param) and $param["ProductKey"] !== null) {
-            $this->ProductKey = $param["ProductKey"];
+        if (array_key_exists('ProductKey',$param) and $param['ProductKey'] !== null) {
+            $this->ProductKey = $param['ProductKey'];
         }
 
-        if (array_key_exists("RegisterType",$param) and $param["RegisterType"] !== null) {
-            $this->RegisterType = $param["RegisterType"];
+        if (array_key_exists('RegisterType',$param) and $param['RegisterType'] !== null) {
+            $this->RegisterType = $param['RegisterType'];
         }
 
-        if (array_key_exists("ProductSecret",$param) and $param["ProductSecret"] !== null) {
-            $this->ProductSecret = $param["ProductSecret"];
+        if (array_key_exists('ProductSecret',$param) and $param['ProductSecret'] !== null) {
+            $this->ProductSecret = $param['ProductSecret'];
         }
 
-        if (array_key_exists("RegisterLimit",$param) and $param["RegisterLimit"] !== null) {
-            $this->RegisterLimit = $param["RegisterLimit"];
+        if (array_key_exists('RegisterLimit',$param) and $param['RegisterLimit'] !== null) {
+            $this->RegisterLimit = $param['RegisterLimit'];
         }
     }
 }

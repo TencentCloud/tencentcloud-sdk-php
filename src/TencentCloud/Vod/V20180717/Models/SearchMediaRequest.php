@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -194,57 +194,57 @@ class SearchMediaRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Text",$param) and $param["Text"] !== null) {
-            $this->Text = $param["Text"];
+        if (array_key_exists('Text',$param) and $param['Text'] !== null) {
+            $this->Text = $param['Text'];
         }
 
-        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
-            $this->Tags = $param["Tags"];
+        if (array_key_exists('Tags',$param) and $param['Tags'] !== null) {
+            $this->Tags = $param['Tags'];
         }
 
-        if (array_key_exists("ClassIds",$param) and $param["ClassIds"] !== null) {
-            $this->ClassIds = $param["ClassIds"];
+        if (array_key_exists('ClassIds',$param) and $param['ClassIds'] !== null) {
+            $this->ClassIds = $param['ClassIds'];
         }
 
-        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
-            $this->StartTime = $param["StartTime"];
+        if (array_key_exists('StartTime',$param) and $param['StartTime'] !== null) {
+            $this->StartTime = $param['StartTime'];
         }
 
-        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
-            $this->EndTime = $param["EndTime"];
+        if (array_key_exists('EndTime',$param) and $param['EndTime'] !== null) {
+            $this->EndTime = $param['EndTime'];
         }
 
-        if (array_key_exists("SourceType",$param) and $param["SourceType"] !== null) {
-            $this->SourceType = $param["SourceType"];
+        if (array_key_exists('SourceType',$param) and $param['SourceType'] !== null) {
+            $this->SourceType = $param['SourceType'];
         }
 
-        if (array_key_exists("StreamId",$param) and $param["StreamId"] !== null) {
-            $this->StreamId = $param["StreamId"];
+        if (array_key_exists('StreamId',$param) and $param['StreamId'] !== null) {
+            $this->StreamId = $param['StreamId'];
         }
 
-        if (array_key_exists("Vid",$param) and $param["Vid"] !== null) {
-            $this->Vid = $param["Vid"];
+        if (array_key_exists('Vid',$param) and $param['Vid'] !== null) {
+            $this->Vid = $param['Vid'];
         }
 
-        if (array_key_exists("Sort",$param) and $param["Sort"] !== null) {
+        if (array_key_exists('Sort',$param) and $param['Sort'] !== null) {
             $this->Sort = new SortBy();
-            $this->Sort->deserialize($param["Sort"]);
+            $this->Sort->deserialize($param['Sort']);
         }
 
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
+        if (array_key_exists('Offset',$param) and $param['Offset'] !== null) {
+            $this->Offset = $param['Offset'];
         }
 
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
+        if (array_key_exists('Limit',$param) and $param['Limit'] !== null) {
+            $this->Limit = $param['Limit'];
         }
 
-        if (array_key_exists("Categories",$param) and $param["Categories"] !== null) {
-            $this->Categories = $param["Categories"];
+        if (array_key_exists('Categories',$param) and $param['Categories'] !== null) {
+            $this->Categories = $param['Categories'];
         }
 
-        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
-            $this->SubAppId = $param["SubAppId"];
+        if (array_key_exists('SubAppId',$param) and $param['SubAppId'] !== null) {
+            $this->SubAppId = $param['SubAppId'];
         }
     }
 }

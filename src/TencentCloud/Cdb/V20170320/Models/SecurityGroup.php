@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -94,42 +94,42 @@ class SecurityGroup extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
-            $this->ProjectId = $param["ProjectId"];
+        if (array_key_exists('ProjectId',$param) and $param['ProjectId'] !== null) {
+            $this->ProjectId = $param['ProjectId'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("Inbound",$param) and $param["Inbound"] !== null) {
+        if (array_key_exists('Inbound',$param) and $param['Inbound'] !== null) {
             $this->Inbound = [];
-            foreach ($param["Inbound"] as $key => $value){
+            foreach ($param['Inbound'] as $key => $value){
                 $obj = new Inbound();
                 $obj->deserialize($value);
                 array_push($this->Inbound, $obj);
             }
         }
 
-        if (array_key_exists("Outbound",$param) and $param["Outbound"] !== null) {
+        if (array_key_exists('Outbound',$param) and $param['Outbound'] !== null) {
             $this->Outbound = [];
-            foreach ($param["Outbound"] as $key => $value){
+            foreach ($param['Outbound'] as $key => $value){
                 $obj = new Outbound();
                 $obj->deserialize($value);
                 array_push($this->Outbound, $obj);
             }
         }
 
-        if (array_key_exists("SecurityGroupId",$param) and $param["SecurityGroupId"] !== null) {
-            $this->SecurityGroupId = $param["SecurityGroupId"];
+        if (array_key_exists('SecurityGroupId',$param) and $param['SecurityGroupId'] !== null) {
+            $this->SecurityGroupId = $param['SecurityGroupId'];
         }
 
-        if (array_key_exists("SecurityGroupName",$param) and $param["SecurityGroupName"] !== null) {
-            $this->SecurityGroupName = $param["SecurityGroupName"];
+        if (array_key_exists('SecurityGroupName',$param) and $param['SecurityGroupName'] !== null) {
+            $this->SecurityGroupName = $param['SecurityGroupName'];
         }
 
-        if (array_key_exists("SecurityGroupRemark",$param) and $param["SecurityGroupRemark"] !== null) {
-            $this->SecurityGroupRemark = $param["SecurityGroupRemark"];
+        if (array_key_exists('SecurityGroupRemark',$param) and $param['SecurityGroupRemark'] !== null) {
+            $this->SecurityGroupRemark = $param['SecurityGroupRemark'];
         }
     }
 }

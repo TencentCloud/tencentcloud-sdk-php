@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -110,40 +110,40 @@ class SpeechTranslateRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SessionUuid",$param) and $param["SessionUuid"] !== null) {
-            $this->SessionUuid = $param["SessionUuid"];
+        if (array_key_exists('SessionUuid',$param) and $param['SessionUuid'] !== null) {
+            $this->SessionUuid = $param['SessionUuid'];
         }
 
-        if (array_key_exists("Source",$param) and $param["Source"] !== null) {
-            $this->Source = $param["Source"];
+        if (array_key_exists('Source',$param) and $param['Source'] !== null) {
+            $this->Source = $param['Source'];
         }
 
-        if (array_key_exists("Target",$param) and $param["Target"] !== null) {
-            $this->Target = $param["Target"];
+        if (array_key_exists('Target',$param) and $param['Target'] !== null) {
+            $this->Target = $param['Target'];
         }
 
-        if (array_key_exists("AudioFormat",$param) and $param["AudioFormat"] !== null) {
-            $this->AudioFormat = $param["AudioFormat"];
+        if (array_key_exists('AudioFormat',$param) and $param['AudioFormat'] !== null) {
+            $this->AudioFormat = $param['AudioFormat'];
         }
 
-        if (array_key_exists("Seq",$param) and $param["Seq"] !== null) {
-            $this->Seq = $param["Seq"];
+        if (array_key_exists('Seq',$param) and $param['Seq'] !== null) {
+            $this->Seq = $param['Seq'];
         }
 
-        if (array_key_exists("IsEnd",$param) and $param["IsEnd"] !== null) {
-            $this->IsEnd = $param["IsEnd"];
+        if (array_key_exists('IsEnd',$param) and $param['IsEnd'] !== null) {
+            $this->IsEnd = $param['IsEnd'];
         }
 
-        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
-            $this->Data = $param["Data"];
+        if (array_key_exists('Data',$param) and $param['Data'] !== null) {
+            $this->Data = $param['Data'];
         }
 
-        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
-            $this->ProjectId = $param["ProjectId"];
+        if (array_key_exists('ProjectId',$param) and $param['ProjectId'] !== null) {
+            $this->ProjectId = $param['ProjectId'];
         }
 
-        if (array_key_exists("Mode",$param) and $param["Mode"] !== null) {
-            $this->Mode = $param["Mode"];
+        if (array_key_exists('Mode',$param) and $param['Mode'] !== null) {
+            $this->Mode = $param['Mode'];
         }
     }
 }

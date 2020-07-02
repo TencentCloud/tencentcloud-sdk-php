@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -182,76 +182,76 @@ class ClassicalListener extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ListenerId",$param) and $param["ListenerId"] !== null) {
-            $this->ListenerId = $param["ListenerId"];
+        if (array_key_exists('ListenerId',$param) and $param['ListenerId'] !== null) {
+            $this->ListenerId = $param['ListenerId'];
         }
 
-        if (array_key_exists("ListenerPort",$param) and $param["ListenerPort"] !== null) {
-            $this->ListenerPort = $param["ListenerPort"];
+        if (array_key_exists('ListenerPort',$param) and $param['ListenerPort'] !== null) {
+            $this->ListenerPort = $param['ListenerPort'];
         }
 
-        if (array_key_exists("InstancePort",$param) and $param["InstancePort"] !== null) {
-            $this->InstancePort = $param["InstancePort"];
+        if (array_key_exists('InstancePort',$param) and $param['InstancePort'] !== null) {
+            $this->InstancePort = $param['InstancePort'];
         }
 
-        if (array_key_exists("ListenerName",$param) and $param["ListenerName"] !== null) {
-            $this->ListenerName = $param["ListenerName"];
+        if (array_key_exists('ListenerName',$param) and $param['ListenerName'] !== null) {
+            $this->ListenerName = $param['ListenerName'];
         }
 
-        if (array_key_exists("Protocol",$param) and $param["Protocol"] !== null) {
-            $this->Protocol = $param["Protocol"];
+        if (array_key_exists('Protocol',$param) and $param['Protocol'] !== null) {
+            $this->Protocol = $param['Protocol'];
         }
 
-        if (array_key_exists("SessionExpire",$param) and $param["SessionExpire"] !== null) {
-            $this->SessionExpire = $param["SessionExpire"];
+        if (array_key_exists('SessionExpire',$param) and $param['SessionExpire'] !== null) {
+            $this->SessionExpire = $param['SessionExpire'];
         }
 
-        if (array_key_exists("HealthSwitch",$param) and $param["HealthSwitch"] !== null) {
-            $this->HealthSwitch = $param["HealthSwitch"];
+        if (array_key_exists('HealthSwitch',$param) and $param['HealthSwitch'] !== null) {
+            $this->HealthSwitch = $param['HealthSwitch'];
         }
 
-        if (array_key_exists("TimeOut",$param) and $param["TimeOut"] !== null) {
-            $this->TimeOut = $param["TimeOut"];
+        if (array_key_exists('TimeOut',$param) and $param['TimeOut'] !== null) {
+            $this->TimeOut = $param['TimeOut'];
         }
 
-        if (array_key_exists("IntervalTime",$param) and $param["IntervalTime"] !== null) {
-            $this->IntervalTime = $param["IntervalTime"];
+        if (array_key_exists('IntervalTime',$param) and $param['IntervalTime'] !== null) {
+            $this->IntervalTime = $param['IntervalTime'];
         }
 
-        if (array_key_exists("HealthNum",$param) and $param["HealthNum"] !== null) {
-            $this->HealthNum = $param["HealthNum"];
+        if (array_key_exists('HealthNum',$param) and $param['HealthNum'] !== null) {
+            $this->HealthNum = $param['HealthNum'];
         }
 
-        if (array_key_exists("UnhealthNum",$param) and $param["UnhealthNum"] !== null) {
-            $this->UnhealthNum = $param["UnhealthNum"];
+        if (array_key_exists('UnhealthNum',$param) and $param['UnhealthNum'] !== null) {
+            $this->UnhealthNum = $param['UnhealthNum'];
         }
 
-        if (array_key_exists("HttpHash",$param) and $param["HttpHash"] !== null) {
-            $this->HttpHash = $param["HttpHash"];
+        if (array_key_exists('HttpHash',$param) and $param['HttpHash'] !== null) {
+            $this->HttpHash = $param['HttpHash'];
         }
 
-        if (array_key_exists("HttpCode",$param) and $param["HttpCode"] !== null) {
-            $this->HttpCode = $param["HttpCode"];
+        if (array_key_exists('HttpCode',$param) and $param['HttpCode'] !== null) {
+            $this->HttpCode = $param['HttpCode'];
         }
 
-        if (array_key_exists("HttpCheckPath",$param) and $param["HttpCheckPath"] !== null) {
-            $this->HttpCheckPath = $param["HttpCheckPath"];
+        if (array_key_exists('HttpCheckPath',$param) and $param['HttpCheckPath'] !== null) {
+            $this->HttpCheckPath = $param['HttpCheckPath'];
         }
 
-        if (array_key_exists("SSLMode",$param) and $param["SSLMode"] !== null) {
-            $this->SSLMode = $param["SSLMode"];
+        if (array_key_exists('SSLMode',$param) and $param['SSLMode'] !== null) {
+            $this->SSLMode = $param['SSLMode'];
         }
 
-        if (array_key_exists("CertId",$param) and $param["CertId"] !== null) {
-            $this->CertId = $param["CertId"];
+        if (array_key_exists('CertId',$param) and $param['CertId'] !== null) {
+            $this->CertId = $param['CertId'];
         }
 
-        if (array_key_exists("CertCaId",$param) and $param["CertCaId"] !== null) {
-            $this->CertCaId = $param["CertCaId"];
+        if (array_key_exists('CertCaId',$param) and $param['CertCaId'] !== null) {
+            $this->CertCaId = $param['CertCaId'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
     }
 }

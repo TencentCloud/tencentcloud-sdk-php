@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -86,29 +86,29 @@ class OCRItem extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TextPosition",$param) and $param["TextPosition"] !== null) {
+        if (array_key_exists('TextPosition',$param) and $param['TextPosition'] !== null) {
             $this->TextPosition = new Coordinate();
-            $this->TextPosition->deserialize($param["TextPosition"]);
+            $this->TextPosition->deserialize($param['TextPosition']);
         }
 
-        if (array_key_exists("EvilLabel",$param) and $param["EvilLabel"] !== null) {
-            $this->EvilLabel = $param["EvilLabel"];
+        if (array_key_exists('EvilLabel',$param) and $param['EvilLabel'] !== null) {
+            $this->EvilLabel = $param['EvilLabel'];
         }
 
-        if (array_key_exists("EvilType",$param) and $param["EvilType"] !== null) {
-            $this->EvilType = $param["EvilType"];
+        if (array_key_exists('EvilType',$param) and $param['EvilType'] !== null) {
+            $this->EvilType = $param['EvilType'];
         }
 
-        if (array_key_exists("Keywords",$param) and $param["Keywords"] !== null) {
-            $this->Keywords = $param["Keywords"];
+        if (array_key_exists('Keywords',$param) and $param['Keywords'] !== null) {
+            $this->Keywords = $param['Keywords'];
         }
 
-        if (array_key_exists("Rate",$param) and $param["Rate"] !== null) {
-            $this->Rate = $param["Rate"];
+        if (array_key_exists('Rate',$param) and $param['Rate'] !== null) {
+            $this->Rate = $param['Rate'];
         }
 
-        if (array_key_exists("TextContent",$param) and $param["TextContent"] !== null) {
-            $this->TextContent = $param["TextContent"];
+        if (array_key_exists('TextContent',$param) and $param['TextContent'] !== null) {
+            $this->TextContent = $param['TextContent'];
         }
     }
 }

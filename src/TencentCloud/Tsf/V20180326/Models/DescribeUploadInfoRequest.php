@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -94,32 +94,32 @@ class DescribeUploadInfoRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ApplicationId",$param) and $param["ApplicationId"] !== null) {
-            $this->ApplicationId = $param["ApplicationId"];
+        if (array_key_exists('ApplicationId',$param) and $param['ApplicationId'] !== null) {
+            $this->ApplicationId = $param['ApplicationId'];
         }
 
-        if (array_key_exists("PkgName",$param) and $param["PkgName"] !== null) {
-            $this->PkgName = $param["PkgName"];
+        if (array_key_exists('PkgName',$param) and $param['PkgName'] !== null) {
+            $this->PkgName = $param['PkgName'];
         }
 
-        if (array_key_exists("PkgVersion",$param) and $param["PkgVersion"] !== null) {
-            $this->PkgVersion = $param["PkgVersion"];
+        if (array_key_exists('PkgVersion',$param) and $param['PkgVersion'] !== null) {
+            $this->PkgVersion = $param['PkgVersion'];
         }
 
-        if (array_key_exists("PkgType",$param) and $param["PkgType"] !== null) {
-            $this->PkgType = $param["PkgType"];
+        if (array_key_exists('PkgType',$param) and $param['PkgType'] !== null) {
+            $this->PkgType = $param['PkgType'];
         }
 
-        if (array_key_exists("PkgDesc",$param) and $param["PkgDesc"] !== null) {
-            $this->PkgDesc = $param["PkgDesc"];
+        if (array_key_exists('PkgDesc',$param) and $param['PkgDesc'] !== null) {
+            $this->PkgDesc = $param['PkgDesc'];
         }
 
-        if (array_key_exists("RepositoryType",$param) and $param["RepositoryType"] !== null) {
-            $this->RepositoryType = $param["RepositoryType"];
+        if (array_key_exists('RepositoryType',$param) and $param['RepositoryType'] !== null) {
+            $this->RepositoryType = $param['RepositoryType'];
         }
 
-        if (array_key_exists("RepositoryId",$param) and $param["RepositoryId"] !== null) {
-            $this->RepositoryId = $param["RepositoryId"];
+        if (array_key_exists('RepositoryId',$param) and $param['RepositoryId'] !== null) {
+            $this->RepositoryId = $param['RepositoryId'];
         }
     }
 }

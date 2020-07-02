@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -102,36 +102,36 @@ class DescribeCertListRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ModuleType",$param) and $param["ModuleType"] !== null) {
-            $this->ModuleType = $param["ModuleType"];
+        if (array_key_exists('ModuleType',$param) and $param['ModuleType'] !== null) {
+            $this->ModuleType = $param['ModuleType'];
         }
 
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
+        if (array_key_exists('Offset',$param) and $param['Offset'] !== null) {
+            $this->Offset = $param['Offset'];
         }
 
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
+        if (array_key_exists('Limit',$param) and $param['Limit'] !== null) {
+            $this->Limit = $param['Limit'];
         }
 
-        if (array_key_exists("SearchKey",$param) and $param["SearchKey"] !== null) {
-            $this->SearchKey = $param["SearchKey"];
+        if (array_key_exists('SearchKey',$param) and $param['SearchKey'] !== null) {
+            $this->SearchKey = $param['SearchKey'];
         }
 
-        if (array_key_exists("CertType",$param) and $param["CertType"] !== null) {
-            $this->CertType = $param["CertType"];
+        if (array_key_exists('CertType',$param) and $param['CertType'] !== null) {
+            $this->CertType = $param['CertType'];
         }
 
-        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
-            $this->Id = $param["Id"];
+        if (array_key_exists('Id',$param) and $param['Id'] !== null) {
+            $this->Id = $param['Id'];
         }
 
-        if (array_key_exists("WithCert",$param) and $param["WithCert"] !== null) {
-            $this->WithCert = $param["WithCert"];
+        if (array_key_exists('WithCert',$param) and $param['WithCert'] !== null) {
+            $this->WithCert = $param['WithCert'];
         }
 
-        if (array_key_exists("AltDomain",$param) and $param["AltDomain"] !== null) {
-            $this->AltDomain = $param["AltDomain"];
+        if (array_key_exists('AltDomain',$param) and $param['AltDomain'] !== null) {
+            $this->AltDomain = $param['AltDomain'];
         }
     }
 }

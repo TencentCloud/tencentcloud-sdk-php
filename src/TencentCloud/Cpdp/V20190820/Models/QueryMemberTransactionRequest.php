@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -54,8 +54,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReservedMsg(string $ReservedMsg) 设置STRING(1027)，保留域（若需短信验证码则此项必输短信指令号）
  * @method string getWebSign() 获取STRING(300)，网银签名（若需短信验证码则此项必输）
  * @method void setWebSign(string $WebSign) 设置STRING(300)，网银签名（若需短信验证码则此项必输）
- * @method string getProfile() 获取STRING(12)，接入环境，默认接入沙箱环境。接入正式环境填"prod"
- * @method void setProfile(string $Profile) 设置STRING(12)，接入环境，默认接入沙箱环境。接入正式环境填"prod"
+ * @method string getProfile() 获取STRING(12)，接入环境，默认接入沙箱环境。接入正式环境填'prod'
+ * @method void setProfile(string $Profile) 设置STRING(12)，接入环境，默认接入沙箱环境。接入正式环境填'prod'
  */
 class QueryMemberTransactionRequest extends AbstractModel
 {
@@ -145,7 +145,7 @@ class QueryMemberTransactionRequest extends AbstractModel
     public $WebSign;
 
     /**
-     * @var string STRING(12)，接入环境，默认接入沙箱环境。接入正式环境填"prod"
+     * @var string STRING(12)，接入环境，默认接入沙箱环境。接入正式环境填'prod'
      */
     public $Profile;
 
@@ -167,7 +167,7 @@ class QueryMemberTransactionRequest extends AbstractModel
      * @param string $Remark STRING(300)，备注（建议可送订单号，可在对账文件的备注字段获取到）
      * @param string $ReservedMsg STRING(1027)，保留域（若需短信验证码则此项必输短信指令号）
      * @param string $WebSign STRING(300)，网银签名（若需短信验证码则此项必输）
-     * @param string $Profile STRING(12)，接入环境，默认接入沙箱环境。接入正式环境填"prod"
+     * @param string $Profile STRING(12)，接入环境，默认接入沙箱环境。接入正式环境填'prod'
      */
     function __construct()
     {
@@ -182,76 +182,76 @@ class QueryMemberTransactionRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MrchCode",$param) and $param["MrchCode"] !== null) {
-            $this->MrchCode = $param["MrchCode"];
+        if (array_key_exists('MrchCode',$param) and $param['MrchCode'] !== null) {
+            $this->MrchCode = $param['MrchCode'];
         }
 
-        if (array_key_exists("FunctionFlag",$param) and $param["FunctionFlag"] !== null) {
-            $this->FunctionFlag = $param["FunctionFlag"];
+        if (array_key_exists('FunctionFlag',$param) and $param['FunctionFlag'] !== null) {
+            $this->FunctionFlag = $param['FunctionFlag'];
         }
 
-        if (array_key_exists("OutSubAcctNo",$param) and $param["OutSubAcctNo"] !== null) {
-            $this->OutSubAcctNo = $param["OutSubAcctNo"];
+        if (array_key_exists('OutSubAcctNo',$param) and $param['OutSubAcctNo'] !== null) {
+            $this->OutSubAcctNo = $param['OutSubAcctNo'];
         }
 
-        if (array_key_exists("OutMemberCode",$param) and $param["OutMemberCode"] !== null) {
-            $this->OutMemberCode = $param["OutMemberCode"];
+        if (array_key_exists('OutMemberCode',$param) and $param['OutMemberCode'] !== null) {
+            $this->OutMemberCode = $param['OutMemberCode'];
         }
 
-        if (array_key_exists("OutSubAcctName",$param) and $param["OutSubAcctName"] !== null) {
-            $this->OutSubAcctName = $param["OutSubAcctName"];
+        if (array_key_exists('OutSubAcctName',$param) and $param['OutSubAcctName'] !== null) {
+            $this->OutSubAcctName = $param['OutSubAcctName'];
         }
 
-        if (array_key_exists("InSubAcctNo",$param) and $param["InSubAcctNo"] !== null) {
-            $this->InSubAcctNo = $param["InSubAcctNo"];
+        if (array_key_exists('InSubAcctNo',$param) and $param['InSubAcctNo'] !== null) {
+            $this->InSubAcctNo = $param['InSubAcctNo'];
         }
 
-        if (array_key_exists("InMemberCode",$param) and $param["InMemberCode"] !== null) {
-            $this->InMemberCode = $param["InMemberCode"];
+        if (array_key_exists('InMemberCode',$param) and $param['InMemberCode'] !== null) {
+            $this->InMemberCode = $param['InMemberCode'];
         }
 
-        if (array_key_exists("InSubAcctName",$param) and $param["InSubAcctName"] !== null) {
-            $this->InSubAcctName = $param["InSubAcctName"];
+        if (array_key_exists('InSubAcctName',$param) and $param['InSubAcctName'] !== null) {
+            $this->InSubAcctName = $param['InSubAcctName'];
         }
 
-        if (array_key_exists("TranAmt",$param) and $param["TranAmt"] !== null) {
-            $this->TranAmt = $param["TranAmt"];
+        if (array_key_exists('TranAmt',$param) and $param['TranAmt'] !== null) {
+            $this->TranAmt = $param['TranAmt'];
         }
 
-        if (array_key_exists("TranFee",$param) and $param["TranFee"] !== null) {
-            $this->TranFee = $param["TranFee"];
+        if (array_key_exists('TranFee',$param) and $param['TranFee'] !== null) {
+            $this->TranFee = $param['TranFee'];
         }
 
-        if (array_key_exists("TranType",$param) and $param["TranType"] !== null) {
-            $this->TranType = $param["TranType"];
+        if (array_key_exists('TranType',$param) and $param['TranType'] !== null) {
+            $this->TranType = $param['TranType'];
         }
 
-        if (array_key_exists("Ccy",$param) and $param["Ccy"] !== null) {
-            $this->Ccy = $param["Ccy"];
+        if (array_key_exists('Ccy',$param) and $param['Ccy'] !== null) {
+            $this->Ccy = $param['Ccy'];
         }
 
-        if (array_key_exists("OrderNo",$param) and $param["OrderNo"] !== null) {
-            $this->OrderNo = $param["OrderNo"];
+        if (array_key_exists('OrderNo',$param) and $param['OrderNo'] !== null) {
+            $this->OrderNo = $param['OrderNo'];
         }
 
-        if (array_key_exists("OrderContent",$param) and $param["OrderContent"] !== null) {
-            $this->OrderContent = $param["OrderContent"];
+        if (array_key_exists('OrderContent',$param) and $param['OrderContent'] !== null) {
+            $this->OrderContent = $param['OrderContent'];
         }
 
-        if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
-            $this->Remark = $param["Remark"];
+        if (array_key_exists('Remark',$param) and $param['Remark'] !== null) {
+            $this->Remark = $param['Remark'];
         }
 
-        if (array_key_exists("ReservedMsg",$param) and $param["ReservedMsg"] !== null) {
-            $this->ReservedMsg = $param["ReservedMsg"];
+        if (array_key_exists('ReservedMsg',$param) and $param['ReservedMsg'] !== null) {
+            $this->ReservedMsg = $param['ReservedMsg'];
         }
 
-        if (array_key_exists("WebSign",$param) and $param["WebSign"] !== null) {
-            $this->WebSign = $param["WebSign"];
+        if (array_key_exists('WebSign',$param) and $param['WebSign'] !== null) {
+            $this->WebSign = $param['WebSign'];
         }
 
-        if (array_key_exists("Profile",$param) and $param["Profile"] !== null) {
-            $this->Profile = $param["Profile"];
+        if (array_key_exists('Profile',$param) and $param['Profile'] !== null) {
+            $this->Profile = $param['Profile'];
         }
     }
 }

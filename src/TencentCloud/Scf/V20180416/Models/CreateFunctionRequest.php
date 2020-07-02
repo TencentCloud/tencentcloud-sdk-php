@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -182,86 +182,86 @@ class CreateFunctionRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FunctionName",$param) and $param["FunctionName"] !== null) {
-            $this->FunctionName = $param["FunctionName"];
+        if (array_key_exists('FunctionName',$param) and $param['FunctionName'] !== null) {
+            $this->FunctionName = $param['FunctionName'];
         }
 
-        if (array_key_exists("Code",$param) and $param["Code"] !== null) {
+        if (array_key_exists('Code',$param) and $param['Code'] !== null) {
             $this->Code = new Code();
-            $this->Code->deserialize($param["Code"]);
+            $this->Code->deserialize($param['Code']);
         }
 
-        if (array_key_exists("Handler",$param) and $param["Handler"] !== null) {
-            $this->Handler = $param["Handler"];
+        if (array_key_exists('Handler',$param) and $param['Handler'] !== null) {
+            $this->Handler = $param['Handler'];
         }
 
-        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
-            $this->Description = $param["Description"];
+        if (array_key_exists('Description',$param) and $param['Description'] !== null) {
+            $this->Description = $param['Description'];
         }
 
-        if (array_key_exists("MemorySize",$param) and $param["MemorySize"] !== null) {
-            $this->MemorySize = $param["MemorySize"];
+        if (array_key_exists('MemorySize',$param) and $param['MemorySize'] !== null) {
+            $this->MemorySize = $param['MemorySize'];
         }
 
-        if (array_key_exists("Timeout",$param) and $param["Timeout"] !== null) {
-            $this->Timeout = $param["Timeout"];
+        if (array_key_exists('Timeout',$param) and $param['Timeout'] !== null) {
+            $this->Timeout = $param['Timeout'];
         }
 
-        if (array_key_exists("Environment",$param) and $param["Environment"] !== null) {
+        if (array_key_exists('Environment',$param) and $param['Environment'] !== null) {
             $this->Environment = new Environment();
-            $this->Environment->deserialize($param["Environment"]);
+            $this->Environment->deserialize($param['Environment']);
         }
 
-        if (array_key_exists("Runtime",$param) and $param["Runtime"] !== null) {
-            $this->Runtime = $param["Runtime"];
+        if (array_key_exists('Runtime',$param) and $param['Runtime'] !== null) {
+            $this->Runtime = $param['Runtime'];
         }
 
-        if (array_key_exists("VpcConfig",$param) and $param["VpcConfig"] !== null) {
+        if (array_key_exists('VpcConfig',$param) and $param['VpcConfig'] !== null) {
             $this->VpcConfig = new VpcConfig();
-            $this->VpcConfig->deserialize($param["VpcConfig"]);
+            $this->VpcConfig->deserialize($param['VpcConfig']);
         }
 
-        if (array_key_exists("Namespace",$param) and $param["Namespace"] !== null) {
-            $this->Namespace = $param["Namespace"];
+        if (array_key_exists('Namespace',$param) and $param['Namespace'] !== null) {
+            $this->Namespace = $param['Namespace'];
         }
 
-        if (array_key_exists("Role",$param) and $param["Role"] !== null) {
-            $this->Role = $param["Role"];
+        if (array_key_exists('Role',$param) and $param['Role'] !== null) {
+            $this->Role = $param['Role'];
         }
 
-        if (array_key_exists("ClsLogsetId",$param) and $param["ClsLogsetId"] !== null) {
-            $this->ClsLogsetId = $param["ClsLogsetId"];
+        if (array_key_exists('ClsLogsetId',$param) and $param['ClsLogsetId'] !== null) {
+            $this->ClsLogsetId = $param['ClsLogsetId'];
         }
 
-        if (array_key_exists("ClsTopicId",$param) and $param["ClsTopicId"] !== null) {
-            $this->ClsTopicId = $param["ClsTopicId"];
+        if (array_key_exists('ClsTopicId',$param) and $param['ClsTopicId'] !== null) {
+            $this->ClsTopicId = $param['ClsTopicId'];
         }
 
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists('Type',$param) and $param['Type'] !== null) {
+            $this->Type = $param['Type'];
         }
 
-        if (array_key_exists("CodeSource",$param) and $param["CodeSource"] !== null) {
-            $this->CodeSource = $param["CodeSource"];
+        if (array_key_exists('CodeSource',$param) and $param['CodeSource'] !== null) {
+            $this->CodeSource = $param['CodeSource'];
         }
 
-        if (array_key_exists("Layers",$param) and $param["Layers"] !== null) {
+        if (array_key_exists('Layers',$param) and $param['Layers'] !== null) {
             $this->Layers = [];
-            foreach ($param["Layers"] as $key => $value){
+            foreach ($param['Layers'] as $key => $value){
                 $obj = new LayerVersionSimple();
                 $obj->deserialize($value);
                 array_push($this->Layers, $obj);
             }
         }
 
-        if (array_key_exists("DeadLetterConfig",$param) and $param["DeadLetterConfig"] !== null) {
+        if (array_key_exists('DeadLetterConfig',$param) and $param['DeadLetterConfig'] !== null) {
             $this->DeadLetterConfig = new DeadLetterConfig();
-            $this->DeadLetterConfig->deserialize($param["DeadLetterConfig"]);
+            $this->DeadLetterConfig->deserialize($param['DeadLetterConfig']);
         }
 
-        if (array_key_exists("PublicNetConfig",$param) and $param["PublicNetConfig"] !== null) {
+        if (array_key_exists('PublicNetConfig',$param) and $param['PublicNetConfig'] !== null) {
             $this->PublicNetConfig = new PublicNetConfigIn();
-            $this->PublicNetConfig->deserialize($param["PublicNetConfig"]);
+            $this->PublicNetConfig->deserialize($param['PublicNetConfig']);
         }
     }
 }

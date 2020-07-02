@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVersion(string $Version) 设置函数版本名称
  * @method string getKey() 获取匹配规则的key，调用时通过传key来匹配规则路由到指定版本
 header方式：
-key填写"invoke.headers.User"，并在 invoke 调用函数时传参 RoutingKey：{"User":"value"}规则匹配调用
+key填写"invoke.headers.User"，并在 invoke 调用函数时传参 RoutingKey：{'User':'value'}规则匹配调用
  * @method void setKey(string $Key) 设置匹配规则的key，调用时通过传key来匹配规则路由到指定版本
 header方式：
-key填写"invoke.headers.User"，并在 invoke 调用函数时传参 RoutingKey：{"User":"value"}规则匹配调用
+key填写"invoke.headers.User"，并在 invoke 调用函数时传参 RoutingKey：{'User':'value'}规则匹配调用
  * @method string getMethod() 获取匹配方式。取值范围：
 range：范围匹配
 exact：字符串精确匹配
@@ -53,7 +53,7 @@ class VersionMatch extends AbstractModel
     /**
      * @var string 匹配规则的key，调用时通过传key来匹配规则路由到指定版本
 header方式：
-key填写"invoke.headers.User"，并在 invoke 调用函数时传参 RoutingKey：{"User":"value"}规则匹配调用
+key填写"invoke.headers.User"，并在 invoke 调用函数时传参 RoutingKey：{'User':'value'}规则匹配调用
      */
     public $Key;
 
@@ -76,7 +76,7 @@ exact 匹配规则要求：
      * @param string $Version 函数版本名称
      * @param string $Key 匹配规则的key，调用时通过传key来匹配规则路由到指定版本
 header方式：
-key填写"invoke.headers.User"，并在 invoke 调用函数时传参 RoutingKey：{"User":"value"}规则匹配调用
+key填写"invoke.headers.User"，并在 invoke 调用函数时传参 RoutingKey：{'User':'value'}规则匹配调用
      * @param string $Method 匹配方式。取值范围：
 range：范围匹配
 exact：字符串精确匹配
@@ -98,20 +98,20 @@ exact 匹配规则要求：
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Version",$param) and $param["Version"] !== null) {
-            $this->Version = $param["Version"];
+        if (array_key_exists('Version',$param) and $param['Version'] !== null) {
+            $this->Version = $param['Version'];
         }
 
-        if (array_key_exists("Key",$param) and $param["Key"] !== null) {
-            $this->Key = $param["Key"];
+        if (array_key_exists('Key',$param) and $param['Key'] !== null) {
+            $this->Key = $param['Key'];
         }
 
-        if (array_key_exists("Method",$param) and $param["Method"] !== null) {
-            $this->Method = $param["Method"];
+        if (array_key_exists('Method',$param) and $param['Method'] !== null) {
+            $this->Method = $param['Method'];
         }
 
-        if (array_key_exists("Expression",$param) and $param["Expression"] !== null) {
-            $this->Expression = $param["Expression"];
+        if (array_key_exists('Expression',$param) and $param['Expression'] !== null) {
+            $this->Expression = $param['Expression'];
         }
     }
 }

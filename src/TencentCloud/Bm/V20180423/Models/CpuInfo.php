@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -70,20 +70,20 @@ class CpuInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CpuId",$param) and $param["CpuId"] !== null) {
-            $this->CpuId = $param["CpuId"];
+        if (array_key_exists('CpuId',$param) and $param['CpuId'] !== null) {
+            $this->CpuId = $param['CpuId'];
         }
 
-        if (array_key_exists("CpuDescription",$param) and $param["CpuDescription"] !== null) {
-            $this->CpuDescription = $param["CpuDescription"];
+        if (array_key_exists('CpuDescription',$param) and $param['CpuDescription'] !== null) {
+            $this->CpuDescription = $param['CpuDescription'];
         }
 
-        if (array_key_exists("Series",$param) and $param["Series"] !== null) {
-            $this->Series = $param["Series"];
+        if (array_key_exists('Series',$param) and $param['Series'] !== null) {
+            $this->Series = $param['Series'];
         }
 
-        if (array_key_exists("ContainRaidCard",$param) and $param["ContainRaidCard"] !== null) {
-            $this->ContainRaidCard = $param["ContainRaidCard"];
+        if (array_key_exists('ContainRaidCard',$param) and $param['ContainRaidCard'] !== null) {
+            $this->ContainRaidCard = $param['ContainRaidCard'];
         }
     }
 }

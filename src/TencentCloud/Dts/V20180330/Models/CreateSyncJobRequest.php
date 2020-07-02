@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -118,43 +118,43 @@ class CreateSyncJobRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("JobName",$param) and $param["JobName"] !== null) {
-            $this->JobName = $param["JobName"];
+        if (array_key_exists('JobName',$param) and $param['JobName'] !== null) {
+            $this->JobName = $param['JobName'];
         }
 
-        if (array_key_exists("SyncOption",$param) and $param["SyncOption"] !== null) {
+        if (array_key_exists('SyncOption',$param) and $param['SyncOption'] !== null) {
             $this->SyncOption = new SyncOption();
-            $this->SyncOption->deserialize($param["SyncOption"]);
+            $this->SyncOption->deserialize($param['SyncOption']);
         }
 
-        if (array_key_exists("SrcDatabaseType",$param) and $param["SrcDatabaseType"] !== null) {
-            $this->SrcDatabaseType = $param["SrcDatabaseType"];
+        if (array_key_exists('SrcDatabaseType',$param) and $param['SrcDatabaseType'] !== null) {
+            $this->SrcDatabaseType = $param['SrcDatabaseType'];
         }
 
-        if (array_key_exists("SrcAccessType",$param) and $param["SrcAccessType"] !== null) {
-            $this->SrcAccessType = $param["SrcAccessType"];
+        if (array_key_exists('SrcAccessType',$param) and $param['SrcAccessType'] !== null) {
+            $this->SrcAccessType = $param['SrcAccessType'];
         }
 
-        if (array_key_exists("SrcInfo",$param) and $param["SrcInfo"] !== null) {
+        if (array_key_exists('SrcInfo',$param) and $param['SrcInfo'] !== null) {
             $this->SrcInfo = new SyncInstanceInfo();
-            $this->SrcInfo->deserialize($param["SrcInfo"]);
+            $this->SrcInfo->deserialize($param['SrcInfo']);
         }
 
-        if (array_key_exists("DstDatabaseType",$param) and $param["DstDatabaseType"] !== null) {
-            $this->DstDatabaseType = $param["DstDatabaseType"];
+        if (array_key_exists('DstDatabaseType',$param) and $param['DstDatabaseType'] !== null) {
+            $this->DstDatabaseType = $param['DstDatabaseType'];
         }
 
-        if (array_key_exists("DstAccessType",$param) and $param["DstAccessType"] !== null) {
-            $this->DstAccessType = $param["DstAccessType"];
+        if (array_key_exists('DstAccessType',$param) and $param['DstAccessType'] !== null) {
+            $this->DstAccessType = $param['DstAccessType'];
         }
 
-        if (array_key_exists("DstInfo",$param) and $param["DstInfo"] !== null) {
+        if (array_key_exists('DstInfo',$param) and $param['DstInfo'] !== null) {
             $this->DstInfo = new SyncInstanceInfo();
-            $this->DstInfo->deserialize($param["DstInfo"]);
+            $this->DstInfo->deserialize($param['DstInfo']);
         }
 
-        if (array_key_exists("DatabaseInfo",$param) and $param["DatabaseInfo"] !== null) {
-            $this->DatabaseInfo = $param["DatabaseInfo"];
+        if (array_key_exists('DatabaseInfo',$param) and $param['DatabaseInfo'] !== null) {
+            $this->DatabaseInfo = $param['DatabaseInfo'];
         }
     }
 }

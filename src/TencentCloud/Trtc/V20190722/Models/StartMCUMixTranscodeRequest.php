@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -78,27 +78,27 @@ class StartMCUMixTranscodeRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SdkAppId",$param) and $param["SdkAppId"] !== null) {
-            $this->SdkAppId = $param["SdkAppId"];
+        if (array_key_exists('SdkAppId',$param) and $param['SdkAppId'] !== null) {
+            $this->SdkAppId = $param['SdkAppId'];
         }
 
-        if (array_key_exists("RoomId",$param) and $param["RoomId"] !== null) {
-            $this->RoomId = $param["RoomId"];
+        if (array_key_exists('RoomId',$param) and $param['RoomId'] !== null) {
+            $this->RoomId = $param['RoomId'];
         }
 
-        if (array_key_exists("OutputParams",$param) and $param["OutputParams"] !== null) {
+        if (array_key_exists('OutputParams',$param) and $param['OutputParams'] !== null) {
             $this->OutputParams = new OutputParams();
-            $this->OutputParams->deserialize($param["OutputParams"]);
+            $this->OutputParams->deserialize($param['OutputParams']);
         }
 
-        if (array_key_exists("EncodeParams",$param) and $param["EncodeParams"] !== null) {
+        if (array_key_exists('EncodeParams',$param) and $param['EncodeParams'] !== null) {
             $this->EncodeParams = new EncodeParams();
-            $this->EncodeParams->deserialize($param["EncodeParams"]);
+            $this->EncodeParams->deserialize($param['EncodeParams']);
         }
 
-        if (array_key_exists("LayoutParams",$param) and $param["LayoutParams"] !== null) {
+        if (array_key_exists('LayoutParams',$param) and $param['LayoutParams'] !== null) {
             $this->LayoutParams = new LayoutParams();
-            $this->LayoutParams->deserialize($param["LayoutParams"]);
+            $this->LayoutParams->deserialize($param['LayoutParams']);
         }
     }
 }

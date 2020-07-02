@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -110,40 +110,40 @@ class ASRStat extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AvgSpeed",$param) and $param["AvgSpeed"] !== null) {
-            $this->AvgSpeed = $param["AvgSpeed"];
+        if (array_key_exists('AvgSpeed',$param) and $param['AvgSpeed'] !== null) {
+            $this->AvgSpeed = $param['AvgSpeed'];
         }
 
-        if (array_key_exists("AvgVolume",$param) and $param["AvgVolume"] !== null) {
-            $this->AvgVolume = $param["AvgVolume"];
+        if (array_key_exists('AvgVolume',$param) and $param['AvgVolume'] !== null) {
+            $this->AvgVolume = $param['AvgVolume'];
         }
 
-        if (array_key_exists("MaxVolume",$param) and $param["MaxVolume"] !== null) {
-            $this->MaxVolume = $param["MaxVolume"];
+        if (array_key_exists('MaxVolume',$param) and $param['MaxVolume'] !== null) {
+            $this->MaxVolume = $param['MaxVolume'];
         }
 
-        if (array_key_exists("MinVolume",$param) and $param["MinVolume"] !== null) {
-            $this->MinVolume = $param["MinVolume"];
+        if (array_key_exists('MinVolume',$param) and $param['MinVolume'] !== null) {
+            $this->MinVolume = $param['MinVolume'];
         }
 
-        if (array_key_exists("MuteDuration",$param) and $param["MuteDuration"] !== null) {
-            $this->MuteDuration = $param["MuteDuration"];
+        if (array_key_exists('MuteDuration',$param) and $param['MuteDuration'] !== null) {
+            $this->MuteDuration = $param['MuteDuration'];
         }
 
-        if (array_key_exists("SoundDuration",$param) and $param["SoundDuration"] !== null) {
-            $this->SoundDuration = $param["SoundDuration"];
+        if (array_key_exists('SoundDuration',$param) and $param['SoundDuration'] !== null) {
+            $this->SoundDuration = $param['SoundDuration'];
         }
 
-        if (array_key_exists("TotalDuration",$param) and $param["TotalDuration"] !== null) {
-            $this->TotalDuration = $param["TotalDuration"];
+        if (array_key_exists('TotalDuration',$param) and $param['TotalDuration'] !== null) {
+            $this->TotalDuration = $param['TotalDuration'];
         }
 
-        if (array_key_exists("VadNum",$param) and $param["VadNum"] !== null) {
-            $this->VadNum = $param["VadNum"];
+        if (array_key_exists('VadNum',$param) and $param['VadNum'] !== null) {
+            $this->VadNum = $param['VadNum'];
         }
 
-        if (array_key_exists("WordNum",$param) and $param["WordNum"] !== null) {
-            $this->WordNum = $param["WordNum"];
+        if (array_key_exists('WordNum',$param) and $param['WordNum'] !== null) {
+            $this->WordNum = $param['WordNum'];
         }
     }
 }

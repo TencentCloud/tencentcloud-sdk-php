@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -94,32 +94,32 @@ class PropOwnerCertOCRResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Owner",$param) and $param["Owner"] !== null) {
-            $this->Owner = $param["Owner"];
+        if (array_key_exists('Owner',$param) and $param['Owner'] !== null) {
+            $this->Owner = $param['Owner'];
         }
 
-        if (array_key_exists("Possession",$param) and $param["Possession"] !== null) {
-            $this->Possession = $param["Possession"];
+        if (array_key_exists('Possession',$param) and $param['Possession'] !== null) {
+            $this->Possession = $param['Possession'];
         }
 
-        if (array_key_exists("RegisterTime",$param) and $param["RegisterTime"] !== null) {
-            $this->RegisterTime = $param["RegisterTime"];
+        if (array_key_exists('RegisterTime',$param) and $param['RegisterTime'] !== null) {
+            $this->RegisterTime = $param['RegisterTime'];
         }
 
-        if (array_key_exists("Purpose",$param) and $param["Purpose"] !== null) {
-            $this->Purpose = $param["Purpose"];
+        if (array_key_exists('Purpose',$param) and $param['Purpose'] !== null) {
+            $this->Purpose = $param['Purpose'];
         }
 
-        if (array_key_exists("Nature",$param) and $param["Nature"] !== null) {
-            $this->Nature = $param["Nature"];
+        if (array_key_exists('Nature',$param) and $param['Nature'] !== null) {
+            $this->Nature = $param['Nature'];
         }
 
-        if (array_key_exists("Location",$param) and $param["Location"] !== null) {
-            $this->Location = $param["Location"];
+        if (array_key_exists('Location',$param) and $param['Location'] !== null) {
+            $this->Location = $param['Location'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

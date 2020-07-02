@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -174,66 +174,66 @@ class DescribeOnlineRecordResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FinishReason",$param) and $param["FinishReason"] !== null) {
-            $this->FinishReason = $param["FinishReason"];
+        if (array_key_exists('FinishReason',$param) and $param['FinishReason'] !== null) {
+            $this->FinishReason = $param['FinishReason'];
         }
 
-        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
-            $this->TaskId = $param["TaskId"];
+        if (array_key_exists('TaskId',$param) and $param['TaskId'] !== null) {
+            $this->TaskId = $param['TaskId'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("RoomId",$param) and $param["RoomId"] !== null) {
-            $this->RoomId = $param["RoomId"];
+        if (array_key_exists('RoomId',$param) and $param['RoomId'] !== null) {
+            $this->RoomId = $param['RoomId'];
         }
 
-        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
-            $this->GroupId = $param["GroupId"];
+        if (array_key_exists('GroupId',$param) and $param['GroupId'] !== null) {
+            $this->GroupId = $param['GroupId'];
         }
 
-        if (array_key_exists("RecordUserId",$param) and $param["RecordUserId"] !== null) {
-            $this->RecordUserId = $param["RecordUserId"];
+        if (array_key_exists('RecordUserId',$param) and $param['RecordUserId'] !== null) {
+            $this->RecordUserId = $param['RecordUserId'];
         }
 
-        if (array_key_exists("RecordStartTime",$param) and $param["RecordStartTime"] !== null) {
-            $this->RecordStartTime = $param["RecordStartTime"];
+        if (array_key_exists('RecordStartTime',$param) and $param['RecordStartTime'] !== null) {
+            $this->RecordStartTime = $param['RecordStartTime'];
         }
 
-        if (array_key_exists("RecordStopTime",$param) and $param["RecordStopTime"] !== null) {
-            $this->RecordStopTime = $param["RecordStopTime"];
+        if (array_key_exists('RecordStopTime',$param) and $param['RecordStopTime'] !== null) {
+            $this->RecordStopTime = $param['RecordStopTime'];
         }
 
-        if (array_key_exists("TotalTime",$param) and $param["TotalTime"] !== null) {
-            $this->TotalTime = $param["TotalTime"];
+        if (array_key_exists('TotalTime',$param) and $param['TotalTime'] !== null) {
+            $this->TotalTime = $param['TotalTime'];
         }
 
-        if (array_key_exists("ExceptionCnt",$param) and $param["ExceptionCnt"] !== null) {
-            $this->ExceptionCnt = $param["ExceptionCnt"];
+        if (array_key_exists('ExceptionCnt',$param) and $param['ExceptionCnt'] !== null) {
+            $this->ExceptionCnt = $param['ExceptionCnt'];
         }
 
-        if (array_key_exists("OmittedDurations",$param) and $param["OmittedDurations"] !== null) {
+        if (array_key_exists('OmittedDurations',$param) and $param['OmittedDurations'] !== null) {
             $this->OmittedDurations = [];
-            foreach ($param["OmittedDurations"] as $key => $value){
+            foreach ($param['OmittedDurations'] as $key => $value){
                 $obj = new OmittedDuration();
                 $obj->deserialize($value);
                 array_push($this->OmittedDurations, $obj);
             }
         }
 
-        if (array_key_exists("VideoInfos",$param) and $param["VideoInfos"] !== null) {
+        if (array_key_exists('VideoInfos',$param) and $param['VideoInfos'] !== null) {
             $this->VideoInfos = [];
-            foreach ($param["VideoInfos"] as $key => $value){
+            foreach ($param['VideoInfos'] as $key => $value){
                 $obj = new VideoInfo();
                 $obj->deserialize($value);
                 array_push($this->VideoInfos, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

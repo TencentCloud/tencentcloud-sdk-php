@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -70,20 +70,20 @@ class RedirectLocalInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("StdoutLocalPath",$param) and $param["StdoutLocalPath"] !== null) {
-            $this->StdoutLocalPath = $param["StdoutLocalPath"];
+        if (array_key_exists('StdoutLocalPath',$param) and $param['StdoutLocalPath'] !== null) {
+            $this->StdoutLocalPath = $param['StdoutLocalPath'];
         }
 
-        if (array_key_exists("StderrLocalPath",$param) and $param["StderrLocalPath"] !== null) {
-            $this->StderrLocalPath = $param["StderrLocalPath"];
+        if (array_key_exists('StderrLocalPath',$param) and $param['StderrLocalPath'] !== null) {
+            $this->StderrLocalPath = $param['StderrLocalPath'];
         }
 
-        if (array_key_exists("StdoutLocalFileName",$param) and $param["StdoutLocalFileName"] !== null) {
-            $this->StdoutLocalFileName = $param["StdoutLocalFileName"];
+        if (array_key_exists('StdoutLocalFileName',$param) and $param['StdoutLocalFileName'] !== null) {
+            $this->StdoutLocalFileName = $param['StdoutLocalFileName'];
         }
 
-        if (array_key_exists("StderrLocalFileName",$param) and $param["StderrLocalFileName"] !== null) {
-            $this->StderrLocalFileName = $param["StderrLocalFileName"];
+        if (array_key_exists('StderrLocalFileName',$param) and $param['StderrLocalFileName'] !== null) {
+            $this->StderrLocalFileName = $param['StderrLocalFileName'];
         }
     }
 }

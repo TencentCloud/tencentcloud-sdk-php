@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -70,27 +70,27 @@ class AnonymousComputeEnv extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("EnvType",$param) and $param["EnvType"] !== null) {
-            $this->EnvType = $param["EnvType"];
+        if (array_key_exists('EnvType',$param) and $param['EnvType'] !== null) {
+            $this->EnvType = $param['EnvType'];
         }
 
-        if (array_key_exists("EnvData",$param) and $param["EnvData"] !== null) {
+        if (array_key_exists('EnvData',$param) and $param['EnvData'] !== null) {
             $this->EnvData = new EnvData();
-            $this->EnvData->deserialize($param["EnvData"]);
+            $this->EnvData->deserialize($param['EnvData']);
         }
 
-        if (array_key_exists("MountDataDisks",$param) and $param["MountDataDisks"] !== null) {
+        if (array_key_exists('MountDataDisks',$param) and $param['MountDataDisks'] !== null) {
             $this->MountDataDisks = [];
-            foreach ($param["MountDataDisks"] as $key => $value){
+            foreach ($param['MountDataDisks'] as $key => $value){
                 $obj = new MountDataDisk();
                 $obj->deserialize($value);
                 array_push($this->MountDataDisks, $obj);
             }
         }
 
-        if (array_key_exists("AgentRunningMode",$param) and $param["AgentRunningMode"] !== null) {
+        if (array_key_exists('AgentRunningMode',$param) and $param['AgentRunningMode'] !== null) {
             $this->AgentRunningMode = new AgentRunningMode();
-            $this->AgentRunningMode->deserialize($param["AgentRunningMode"]);
+            $this->AgentRunningMode->deserialize($param['AgentRunningMode']);
         }
     }
 }

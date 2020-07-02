@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -602,223 +602,223 @@ class ApiInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ServiceId",$param) and $param["ServiceId"] !== null) {
-            $this->ServiceId = $param["ServiceId"];
+        if (array_key_exists('ServiceId',$param) and $param['ServiceId'] !== null) {
+            $this->ServiceId = $param['ServiceId'];
         }
 
-        if (array_key_exists("ServiceName",$param) and $param["ServiceName"] !== null) {
-            $this->ServiceName = $param["ServiceName"];
+        if (array_key_exists('ServiceName',$param) and $param['ServiceName'] !== null) {
+            $this->ServiceName = $param['ServiceName'];
         }
 
-        if (array_key_exists("ServiceDesc",$param) and $param["ServiceDesc"] !== null) {
-            $this->ServiceDesc = $param["ServiceDesc"];
+        if (array_key_exists('ServiceDesc',$param) and $param['ServiceDesc'] !== null) {
+            $this->ServiceDesc = $param['ServiceDesc'];
         }
 
-        if (array_key_exists("ApiId",$param) and $param["ApiId"] !== null) {
-            $this->ApiId = $param["ApiId"];
+        if (array_key_exists('ApiId',$param) and $param['ApiId'] !== null) {
+            $this->ApiId = $param['ApiId'];
         }
 
-        if (array_key_exists("ApiDesc",$param) and $param["ApiDesc"] !== null) {
-            $this->ApiDesc = $param["ApiDesc"];
+        if (array_key_exists('ApiDesc',$param) and $param['ApiDesc'] !== null) {
+            $this->ApiDesc = $param['ApiDesc'];
         }
 
-        if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
-            $this->CreatedTime = $param["CreatedTime"];
+        if (array_key_exists('CreatedTime',$param) and $param['CreatedTime'] !== null) {
+            $this->CreatedTime = $param['CreatedTime'];
         }
 
-        if (array_key_exists("ModifiedTime",$param) and $param["ModifiedTime"] !== null) {
-            $this->ModifiedTime = $param["ModifiedTime"];
+        if (array_key_exists('ModifiedTime',$param) and $param['ModifiedTime'] !== null) {
+            $this->ModifiedTime = $param['ModifiedTime'];
         }
 
-        if (array_key_exists("ApiName",$param) and $param["ApiName"] !== null) {
-            $this->ApiName = $param["ApiName"];
+        if (array_key_exists('ApiName',$param) and $param['ApiName'] !== null) {
+            $this->ApiName = $param['ApiName'];
         }
 
-        if (array_key_exists("ApiType",$param) and $param["ApiType"] !== null) {
-            $this->ApiType = $param["ApiType"];
+        if (array_key_exists('ApiType',$param) and $param['ApiType'] !== null) {
+            $this->ApiType = $param['ApiType'];
         }
 
-        if (array_key_exists("Protocol",$param) and $param["Protocol"] !== null) {
-            $this->Protocol = $param["Protocol"];
+        if (array_key_exists('Protocol',$param) and $param['Protocol'] !== null) {
+            $this->Protocol = $param['Protocol'];
         }
 
-        if (array_key_exists("AuthType",$param) and $param["AuthType"] !== null) {
-            $this->AuthType = $param["AuthType"];
+        if (array_key_exists('AuthType',$param) and $param['AuthType'] !== null) {
+            $this->AuthType = $param['AuthType'];
         }
 
-        if (array_key_exists("ApiBusinessType",$param) and $param["ApiBusinessType"] !== null) {
-            $this->ApiBusinessType = $param["ApiBusinessType"];
+        if (array_key_exists('ApiBusinessType',$param) and $param['ApiBusinessType'] !== null) {
+            $this->ApiBusinessType = $param['ApiBusinessType'];
         }
 
-        if (array_key_exists("AuthRelationApiId",$param) and $param["AuthRelationApiId"] !== null) {
-            $this->AuthRelationApiId = $param["AuthRelationApiId"];
+        if (array_key_exists('AuthRelationApiId',$param) and $param['AuthRelationApiId'] !== null) {
+            $this->AuthRelationApiId = $param['AuthRelationApiId'];
         }
 
-        if (array_key_exists("OauthConfig",$param) and $param["OauthConfig"] !== null) {
+        if (array_key_exists('OauthConfig',$param) and $param['OauthConfig'] !== null) {
             $this->OauthConfig = new OauthConfig();
-            $this->OauthConfig->deserialize($param["OauthConfig"]);
+            $this->OauthConfig->deserialize($param['OauthConfig']);
         }
 
-        if (array_key_exists("IsDebugAfterCharge",$param) and $param["IsDebugAfterCharge"] !== null) {
-            $this->IsDebugAfterCharge = $param["IsDebugAfterCharge"];
+        if (array_key_exists('IsDebugAfterCharge',$param) and $param['IsDebugAfterCharge'] !== null) {
+            $this->IsDebugAfterCharge = $param['IsDebugAfterCharge'];
         }
 
-        if (array_key_exists("RequestConfig",$param) and $param["RequestConfig"] !== null) {
+        if (array_key_exists('RequestConfig',$param) and $param['RequestConfig'] !== null) {
             $this->RequestConfig = new RequestConfig();
-            $this->RequestConfig->deserialize($param["RequestConfig"]);
+            $this->RequestConfig->deserialize($param['RequestConfig']);
         }
 
-        if (array_key_exists("ResponseType",$param) and $param["ResponseType"] !== null) {
-            $this->ResponseType = $param["ResponseType"];
+        if (array_key_exists('ResponseType',$param) and $param['ResponseType'] !== null) {
+            $this->ResponseType = $param['ResponseType'];
         }
 
-        if (array_key_exists("ResponseSuccessExample",$param) and $param["ResponseSuccessExample"] !== null) {
-            $this->ResponseSuccessExample = $param["ResponseSuccessExample"];
+        if (array_key_exists('ResponseSuccessExample',$param) and $param['ResponseSuccessExample'] !== null) {
+            $this->ResponseSuccessExample = $param['ResponseSuccessExample'];
         }
 
-        if (array_key_exists("ResponseFailExample",$param) and $param["ResponseFailExample"] !== null) {
-            $this->ResponseFailExample = $param["ResponseFailExample"];
+        if (array_key_exists('ResponseFailExample',$param) and $param['ResponseFailExample'] !== null) {
+            $this->ResponseFailExample = $param['ResponseFailExample'];
         }
 
-        if (array_key_exists("ResponseErrorCodes",$param) and $param["ResponseErrorCodes"] !== null) {
+        if (array_key_exists('ResponseErrorCodes',$param) and $param['ResponseErrorCodes'] !== null) {
             $this->ResponseErrorCodes = [];
-            foreach ($param["ResponseErrorCodes"] as $key => $value){
+            foreach ($param['ResponseErrorCodes'] as $key => $value){
                 $obj = new ErrorCodes();
                 $obj->deserialize($value);
                 array_push($this->ResponseErrorCodes, $obj);
             }
         }
 
-        if (array_key_exists("RequestParameters",$param) and $param["RequestParameters"] !== null) {
+        if (array_key_exists('RequestParameters',$param) and $param['RequestParameters'] !== null) {
             $this->RequestParameters = [];
-            foreach ($param["RequestParameters"] as $key => $value){
+            foreach ($param['RequestParameters'] as $key => $value){
                 $obj = new ReqParameter();
                 $obj->deserialize($value);
                 array_push($this->RequestParameters, $obj);
             }
         }
 
-        if (array_key_exists("ServiceTimeout",$param) and $param["ServiceTimeout"] !== null) {
-            $this->ServiceTimeout = $param["ServiceTimeout"];
+        if (array_key_exists('ServiceTimeout',$param) and $param['ServiceTimeout'] !== null) {
+            $this->ServiceTimeout = $param['ServiceTimeout'];
         }
 
-        if (array_key_exists("ServiceType",$param) and $param["ServiceType"] !== null) {
-            $this->ServiceType = $param["ServiceType"];
+        if (array_key_exists('ServiceType',$param) and $param['ServiceType'] !== null) {
+            $this->ServiceType = $param['ServiceType'];
         }
 
-        if (array_key_exists("ServiceConfig",$param) and $param["ServiceConfig"] !== null) {
+        if (array_key_exists('ServiceConfig',$param) and $param['ServiceConfig'] !== null) {
             $this->ServiceConfig = new ServiceConfig();
-            $this->ServiceConfig->deserialize($param["ServiceConfig"]);
+            $this->ServiceConfig->deserialize($param['ServiceConfig']);
         }
 
-        if (array_key_exists("ServiceParameters",$param) and $param["ServiceParameters"] !== null) {
+        if (array_key_exists('ServiceParameters',$param) and $param['ServiceParameters'] !== null) {
             $this->ServiceParameters = [];
-            foreach ($param["ServiceParameters"] as $key => $value){
+            foreach ($param['ServiceParameters'] as $key => $value){
                 $obj = new ServiceParameter();
                 $obj->deserialize($value);
                 array_push($this->ServiceParameters, $obj);
             }
         }
 
-        if (array_key_exists("ConstantParameters",$param) and $param["ConstantParameters"] !== null) {
+        if (array_key_exists('ConstantParameters',$param) and $param['ConstantParameters'] !== null) {
             $this->ConstantParameters = [];
-            foreach ($param["ConstantParameters"] as $key => $value){
+            foreach ($param['ConstantParameters'] as $key => $value){
                 $obj = new ConstantParameter();
                 $obj->deserialize($value);
                 array_push($this->ConstantParameters, $obj);
             }
         }
 
-        if (array_key_exists("ServiceMockReturnMessage",$param) and $param["ServiceMockReturnMessage"] !== null) {
-            $this->ServiceMockReturnMessage = $param["ServiceMockReturnMessage"];
+        if (array_key_exists('ServiceMockReturnMessage',$param) and $param['ServiceMockReturnMessage'] !== null) {
+            $this->ServiceMockReturnMessage = $param['ServiceMockReturnMessage'];
         }
 
-        if (array_key_exists("ServiceScfFunctionName",$param) and $param["ServiceScfFunctionName"] !== null) {
-            $this->ServiceScfFunctionName = $param["ServiceScfFunctionName"];
+        if (array_key_exists('ServiceScfFunctionName',$param) and $param['ServiceScfFunctionName'] !== null) {
+            $this->ServiceScfFunctionName = $param['ServiceScfFunctionName'];
         }
 
-        if (array_key_exists("ServiceScfFunctionNamespace",$param) and $param["ServiceScfFunctionNamespace"] !== null) {
-            $this->ServiceScfFunctionNamespace = $param["ServiceScfFunctionNamespace"];
+        if (array_key_exists('ServiceScfFunctionNamespace',$param) and $param['ServiceScfFunctionNamespace'] !== null) {
+            $this->ServiceScfFunctionNamespace = $param['ServiceScfFunctionNamespace'];
         }
 
-        if (array_key_exists("ServiceScfFunctionQualifier",$param) and $param["ServiceScfFunctionQualifier"] !== null) {
-            $this->ServiceScfFunctionQualifier = $param["ServiceScfFunctionQualifier"];
+        if (array_key_exists('ServiceScfFunctionQualifier',$param) and $param['ServiceScfFunctionQualifier'] !== null) {
+            $this->ServiceScfFunctionQualifier = $param['ServiceScfFunctionQualifier'];
         }
 
-        if (array_key_exists("ServiceScfIsIntegratedResponse",$param) and $param["ServiceScfIsIntegratedResponse"] !== null) {
-            $this->ServiceScfIsIntegratedResponse = $param["ServiceScfIsIntegratedResponse"];
+        if (array_key_exists('ServiceScfIsIntegratedResponse',$param) and $param['ServiceScfIsIntegratedResponse'] !== null) {
+            $this->ServiceScfIsIntegratedResponse = $param['ServiceScfIsIntegratedResponse'];
         }
 
-        if (array_key_exists("ServiceWebsocketRegisterFunctionName",$param) and $param["ServiceWebsocketRegisterFunctionName"] !== null) {
-            $this->ServiceWebsocketRegisterFunctionName = $param["ServiceWebsocketRegisterFunctionName"];
+        if (array_key_exists('ServiceWebsocketRegisterFunctionName',$param) and $param['ServiceWebsocketRegisterFunctionName'] !== null) {
+            $this->ServiceWebsocketRegisterFunctionName = $param['ServiceWebsocketRegisterFunctionName'];
         }
 
-        if (array_key_exists("ServiceWebsocketRegisterFunctionNamespace",$param) and $param["ServiceWebsocketRegisterFunctionNamespace"] !== null) {
-            $this->ServiceWebsocketRegisterFunctionNamespace = $param["ServiceWebsocketRegisterFunctionNamespace"];
+        if (array_key_exists('ServiceWebsocketRegisterFunctionNamespace',$param) and $param['ServiceWebsocketRegisterFunctionNamespace'] !== null) {
+            $this->ServiceWebsocketRegisterFunctionNamespace = $param['ServiceWebsocketRegisterFunctionNamespace'];
         }
 
-        if (array_key_exists("ServiceWebsocketRegisterFunctionQualifier",$param) and $param["ServiceWebsocketRegisterFunctionQualifier"] !== null) {
-            $this->ServiceWebsocketRegisterFunctionQualifier = $param["ServiceWebsocketRegisterFunctionQualifier"];
+        if (array_key_exists('ServiceWebsocketRegisterFunctionQualifier',$param) and $param['ServiceWebsocketRegisterFunctionQualifier'] !== null) {
+            $this->ServiceWebsocketRegisterFunctionQualifier = $param['ServiceWebsocketRegisterFunctionQualifier'];
         }
 
-        if (array_key_exists("ServiceWebsocketCleanupFunctionName",$param) and $param["ServiceWebsocketCleanupFunctionName"] !== null) {
-            $this->ServiceWebsocketCleanupFunctionName = $param["ServiceWebsocketCleanupFunctionName"];
+        if (array_key_exists('ServiceWebsocketCleanupFunctionName',$param) and $param['ServiceWebsocketCleanupFunctionName'] !== null) {
+            $this->ServiceWebsocketCleanupFunctionName = $param['ServiceWebsocketCleanupFunctionName'];
         }
 
-        if (array_key_exists("ServiceWebsocketCleanupFunctionNamespace",$param) and $param["ServiceWebsocketCleanupFunctionNamespace"] !== null) {
-            $this->ServiceWebsocketCleanupFunctionNamespace = $param["ServiceWebsocketCleanupFunctionNamespace"];
+        if (array_key_exists('ServiceWebsocketCleanupFunctionNamespace',$param) and $param['ServiceWebsocketCleanupFunctionNamespace'] !== null) {
+            $this->ServiceWebsocketCleanupFunctionNamespace = $param['ServiceWebsocketCleanupFunctionNamespace'];
         }
 
-        if (array_key_exists("ServiceWebsocketCleanupFunctionQualifier",$param) and $param["ServiceWebsocketCleanupFunctionQualifier"] !== null) {
-            $this->ServiceWebsocketCleanupFunctionQualifier = $param["ServiceWebsocketCleanupFunctionQualifier"];
+        if (array_key_exists('ServiceWebsocketCleanupFunctionQualifier',$param) and $param['ServiceWebsocketCleanupFunctionQualifier'] !== null) {
+            $this->ServiceWebsocketCleanupFunctionQualifier = $param['ServiceWebsocketCleanupFunctionQualifier'];
         }
 
-        if (array_key_exists("InternalDomain",$param) and $param["InternalDomain"] !== null) {
-            $this->InternalDomain = $param["InternalDomain"];
+        if (array_key_exists('InternalDomain',$param) and $param['InternalDomain'] !== null) {
+            $this->InternalDomain = $param['InternalDomain'];
         }
 
-        if (array_key_exists("ServiceWebsocketTransportFunctionName",$param) and $param["ServiceWebsocketTransportFunctionName"] !== null) {
-            $this->ServiceWebsocketTransportFunctionName = $param["ServiceWebsocketTransportFunctionName"];
+        if (array_key_exists('ServiceWebsocketTransportFunctionName',$param) and $param['ServiceWebsocketTransportFunctionName'] !== null) {
+            $this->ServiceWebsocketTransportFunctionName = $param['ServiceWebsocketTransportFunctionName'];
         }
 
-        if (array_key_exists("ServiceWebsocketTransportFunctionNamespace",$param) and $param["ServiceWebsocketTransportFunctionNamespace"] !== null) {
-            $this->ServiceWebsocketTransportFunctionNamespace = $param["ServiceWebsocketTransportFunctionNamespace"];
+        if (array_key_exists('ServiceWebsocketTransportFunctionNamespace',$param) and $param['ServiceWebsocketTransportFunctionNamespace'] !== null) {
+            $this->ServiceWebsocketTransportFunctionNamespace = $param['ServiceWebsocketTransportFunctionNamespace'];
         }
 
-        if (array_key_exists("ServiceWebsocketTransportFunctionQualifier",$param) and $param["ServiceWebsocketTransportFunctionQualifier"] !== null) {
-            $this->ServiceWebsocketTransportFunctionQualifier = $param["ServiceWebsocketTransportFunctionQualifier"];
+        if (array_key_exists('ServiceWebsocketTransportFunctionQualifier',$param) and $param['ServiceWebsocketTransportFunctionQualifier'] !== null) {
+            $this->ServiceWebsocketTransportFunctionQualifier = $param['ServiceWebsocketTransportFunctionQualifier'];
         }
 
-        if (array_key_exists("MicroServices",$param) and $param["MicroServices"] !== null) {
+        if (array_key_exists('MicroServices',$param) and $param['MicroServices'] !== null) {
             $this->MicroServices = [];
-            foreach ($param["MicroServices"] as $key => $value){
+            foreach ($param['MicroServices'] as $key => $value){
                 $obj = new MicroService();
                 $obj->deserialize($value);
                 array_push($this->MicroServices, $obj);
             }
         }
 
-        if (array_key_exists("MicroServicesInfo",$param) and $param["MicroServicesInfo"] !== null) {
-            $this->MicroServicesInfo = $param["MicroServicesInfo"];
+        if (array_key_exists('MicroServicesInfo',$param) and $param['MicroServicesInfo'] !== null) {
+            $this->MicroServicesInfo = $param['MicroServicesInfo'];
         }
 
-        if (array_key_exists("ServiceTsfLoadBalanceConf",$param) and $param["ServiceTsfLoadBalanceConf"] !== null) {
+        if (array_key_exists('ServiceTsfLoadBalanceConf',$param) and $param['ServiceTsfLoadBalanceConf'] !== null) {
             $this->ServiceTsfLoadBalanceConf = new TsfLoadBalanceConfResp();
-            $this->ServiceTsfLoadBalanceConf->deserialize($param["ServiceTsfLoadBalanceConf"]);
+            $this->ServiceTsfLoadBalanceConf->deserialize($param['ServiceTsfLoadBalanceConf']);
         }
 
-        if (array_key_exists("ServiceTsfHealthCheckConf",$param) and $param["ServiceTsfHealthCheckConf"] !== null) {
+        if (array_key_exists('ServiceTsfHealthCheckConf',$param) and $param['ServiceTsfHealthCheckConf'] !== null) {
             $this->ServiceTsfHealthCheckConf = new HealthCheckConf();
-            $this->ServiceTsfHealthCheckConf->deserialize($param["ServiceTsfHealthCheckConf"]);
+            $this->ServiceTsfHealthCheckConf->deserialize($param['ServiceTsfHealthCheckConf']);
         }
 
-        if (array_key_exists("EnableCORS",$param) and $param["EnableCORS"] !== null) {
-            $this->EnableCORS = $param["EnableCORS"];
+        if (array_key_exists('EnableCORS',$param) and $param['EnableCORS'] !== null) {
+            $this->EnableCORS = $param['EnableCORS'];
         }
 
-        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+        if (array_key_exists('Tags',$param) and $param['Tags'] !== null) {
             $this->Tags = [];
-            foreach ($param["Tags"] as $key => $value){
+            foreach ($param['Tags'] as $key => $value){
                 $obj = new Tag();
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);

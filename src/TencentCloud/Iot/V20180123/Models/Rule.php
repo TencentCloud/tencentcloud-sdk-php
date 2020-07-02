@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -134,58 +134,58 @@ class Rule extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RuleId",$param) and $param["RuleId"] !== null) {
-            $this->RuleId = $param["RuleId"];
+        if (array_key_exists('RuleId',$param) and $param['RuleId'] !== null) {
+            $this->RuleId = $param['RuleId'];
         }
 
-        if (array_key_exists("AppId",$param) and $param["AppId"] !== null) {
-            $this->AppId = $param["AppId"];
+        if (array_key_exists('AppId',$param) and $param['AppId'] !== null) {
+            $this->AppId = $param['AppId'];
         }
 
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
-            $this->Description = $param["Description"];
+        if (array_key_exists('Description',$param) and $param['Description'] !== null) {
+            $this->Description = $param['Description'];
         }
 
-        if (array_key_exists("Query",$param) and $param["Query"] !== null) {
+        if (array_key_exists('Query',$param) and $param['Query'] !== null) {
             $this->Query = new RuleQuery();
-            $this->Query->deserialize($param["Query"]);
+            $this->Query->deserialize($param['Query']);
         }
 
-        if (array_key_exists("Actions",$param) and $param["Actions"] !== null) {
+        if (array_key_exists('Actions',$param) and $param['Actions'] !== null) {
             $this->Actions = [];
-            foreach ($param["Actions"] as $key => $value){
+            foreach ($param['Actions'] as $key => $value){
                 $obj = new Action();
                 $obj->deserialize($value);
                 array_push($this->Actions, $obj);
             }
         }
 
-        if (array_key_exists("Active",$param) and $param["Active"] !== null) {
-            $this->Active = $param["Active"];
+        if (array_key_exists('Active',$param) and $param['Active'] !== null) {
+            $this->Active = $param['Active'];
         }
 
-        if (array_key_exists("Deleted",$param) and $param["Deleted"] !== null) {
-            $this->Deleted = $param["Deleted"];
+        if (array_key_exists('Deleted',$param) and $param['Deleted'] !== null) {
+            $this->Deleted = $param['Deleted'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
-            $this->UpdateTime = $param["UpdateTime"];
+        if (array_key_exists('UpdateTime',$param) and $param['UpdateTime'] !== null) {
+            $this->UpdateTime = $param['UpdateTime'];
         }
 
-        if (array_key_exists("MsgOrder",$param) and $param["MsgOrder"] !== null) {
-            $this->MsgOrder = $param["MsgOrder"];
+        if (array_key_exists('MsgOrder',$param) and $param['MsgOrder'] !== null) {
+            $this->MsgOrder = $param['MsgOrder'];
         }
 
-        if (array_key_exists("DataType",$param) and $param["DataType"] !== null) {
-            $this->DataType = $param["DataType"];
+        if (array_key_exists('DataType',$param) and $param['DataType'] !== null) {
+            $this->DataType = $param['DataType'];
         }
     }
 }

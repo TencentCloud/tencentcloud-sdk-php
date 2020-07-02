@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -94,32 +94,32 @@ class SignInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AccountResId",$param) and $param["AccountResId"] !== null) {
-            $this->AccountResId = $param["AccountResId"];
+        if (array_key_exists('AccountResId',$param) and $param['AccountResId'] !== null) {
+            $this->AccountResId = $param['AccountResId'];
         }
 
-        if (array_key_exists("AuthorizationTime",$param) and $param["AuthorizationTime"] !== null) {
-            $this->AuthorizationTime = $param["AuthorizationTime"];
+        if (array_key_exists('AuthorizationTime',$param) and $param['AuthorizationTime'] !== null) {
+            $this->AuthorizationTime = $param['AuthorizationTime'];
         }
 
-        if (array_key_exists("Location",$param) and $param["Location"] !== null) {
-            $this->Location = $param["Location"];
+        if (array_key_exists('Location',$param) and $param['Location'] !== null) {
+            $this->Location = $param['Location'];
         }
 
-        if (array_key_exists("SealId",$param) and $param["SealId"] !== null) {
-            $this->SealId = $param["SealId"];
+        if (array_key_exists('SealId',$param) and $param['SealId'] !== null) {
+            $this->SealId = $param['SealId'];
         }
 
-        if (array_key_exists("ImageData",$param) and $param["ImageData"] !== null) {
-            $this->ImageData = $param["ImageData"];
+        if (array_key_exists('ImageData',$param) and $param['ImageData'] !== null) {
+            $this->ImageData = $param['ImageData'];
         }
 
-        if (array_key_exists("CertType",$param) and $param["CertType"] !== null) {
-            $this->CertType = $param["CertType"];
+        if (array_key_exists('CertType',$param) and $param['CertType'] !== null) {
+            $this->CertType = $param['CertType'];
         }
 
-        if (array_key_exists("SignLocation",$param) and $param["SignLocation"] !== null) {
-            $this->SignLocation = $param["SignLocation"];
+        if (array_key_exists('SignLocation',$param) and $param['SignLocation'] !== null) {
+            $this->SignLocation = $param['SignLocation'];
         }
     }
 }

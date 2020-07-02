@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -198,52 +198,52 @@ filterType = 2表示用户使用 bindingKey 过滤。
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SubscriptionName",$param) and $param["SubscriptionName"] !== null) {
-            $this->SubscriptionName = $param["SubscriptionName"];
+        if (array_key_exists('SubscriptionName',$param) and $param['SubscriptionName'] !== null) {
+            $this->SubscriptionName = $param['SubscriptionName'];
         }
 
-        if (array_key_exists("SubscriptionId",$param) and $param["SubscriptionId"] !== null) {
-            $this->SubscriptionId = $param["SubscriptionId"];
+        if (array_key_exists('SubscriptionId',$param) and $param['SubscriptionId'] !== null) {
+            $this->SubscriptionId = $param['SubscriptionId'];
         }
 
-        if (array_key_exists("TopicOwner",$param) and $param["TopicOwner"] !== null) {
-            $this->TopicOwner = $param["TopicOwner"];
+        if (array_key_exists('TopicOwner',$param) and $param['TopicOwner'] !== null) {
+            $this->TopicOwner = $param['TopicOwner'];
         }
 
-        if (array_key_exists("MsgCount",$param) and $param["MsgCount"] !== null) {
-            $this->MsgCount = $param["MsgCount"];
+        if (array_key_exists('MsgCount',$param) and $param['MsgCount'] !== null) {
+            $this->MsgCount = $param['MsgCount'];
         }
 
-        if (array_key_exists("LastModifyTime",$param) and $param["LastModifyTime"] !== null) {
-            $this->LastModifyTime = $param["LastModifyTime"];
+        if (array_key_exists('LastModifyTime',$param) and $param['LastModifyTime'] !== null) {
+            $this->LastModifyTime = $param['LastModifyTime'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("BindingKey",$param) and $param["BindingKey"] !== null) {
-            $this->BindingKey = $param["BindingKey"];
+        if (array_key_exists('BindingKey',$param) and $param['BindingKey'] !== null) {
+            $this->BindingKey = $param['BindingKey'];
         }
 
-        if (array_key_exists("Endpoint",$param) and $param["Endpoint"] !== null) {
-            $this->Endpoint = $param["Endpoint"];
+        if (array_key_exists('Endpoint',$param) and $param['Endpoint'] !== null) {
+            $this->Endpoint = $param['Endpoint'];
         }
 
-        if (array_key_exists("FilterTags",$param) and $param["FilterTags"] !== null) {
-            $this->FilterTags = $param["FilterTags"];
+        if (array_key_exists('FilterTags',$param) and $param['FilterTags'] !== null) {
+            $this->FilterTags = $param['FilterTags'];
         }
 
-        if (array_key_exists("Protocol",$param) and $param["Protocol"] !== null) {
-            $this->Protocol = $param["Protocol"];
+        if (array_key_exists('Protocol',$param) and $param['Protocol'] !== null) {
+            $this->Protocol = $param['Protocol'];
         }
 
-        if (array_key_exists("NotifyStrategy",$param) and $param["NotifyStrategy"] !== null) {
-            $this->NotifyStrategy = $param["NotifyStrategy"];
+        if (array_key_exists('NotifyStrategy',$param) and $param['NotifyStrategy'] !== null) {
+            $this->NotifyStrategy = $param['NotifyStrategy'];
         }
 
-        if (array_key_exists("NotifyContentFormat",$param) and $param["NotifyContentFormat"] !== null) {
-            $this->NotifyContentFormat = $param["NotifyContentFormat"];
+        if (array_key_exists('NotifyContentFormat',$param) and $param['NotifyContentFormat'] !== null) {
+            $this->NotifyContentFormat = $param['NotifyContentFormat'];
         }
     }
 }

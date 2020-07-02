@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -110,29 +110,29 @@ class SentenceDetail extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FinalSentence",$param) and $param["FinalSentence"] !== null) {
-            $this->FinalSentence = $param["FinalSentence"];
+        if (array_key_exists('FinalSentence',$param) and $param['FinalSentence'] !== null) {
+            $this->FinalSentence = $param['FinalSentence'];
         }
 
-        if (array_key_exists("SliceSentence",$param) and $param["SliceSentence"] !== null) {
-            $this->SliceSentence = $param["SliceSentence"];
+        if (array_key_exists('SliceSentence',$param) and $param['SliceSentence'] !== null) {
+            $this->SliceSentence = $param['SliceSentence'];
         }
 
-        if (array_key_exists("StartMs",$param) and $param["StartMs"] !== null) {
-            $this->StartMs = $param["StartMs"];
+        if (array_key_exists('StartMs',$param) and $param['StartMs'] !== null) {
+            $this->StartMs = $param['StartMs'];
         }
 
-        if (array_key_exists("EndMs",$param) and $param["EndMs"] !== null) {
-            $this->EndMs = $param["EndMs"];
+        if (array_key_exists('EndMs',$param) and $param['EndMs'] !== null) {
+            $this->EndMs = $param['EndMs'];
         }
 
-        if (array_key_exists("WordsNum",$param) and $param["WordsNum"] !== null) {
-            $this->WordsNum = $param["WordsNum"];
+        if (array_key_exists('WordsNum',$param) and $param['WordsNum'] !== null) {
+            $this->WordsNum = $param['WordsNum'];
         }
 
-        if (array_key_exists("Words",$param) and $param["Words"] !== null) {
+        if (array_key_exists('Words',$param) and $param['Words'] !== null) {
             $this->Words = [];
-            foreach ($param["Words"] as $key => $value){
+            foreach ($param['Words'] as $key => $value){
                 $obj = new SentenceWords();
                 $obj->deserialize($value);
                 array_push($this->Words, $obj);

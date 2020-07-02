@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -102,36 +102,36 @@ class DescribeDiskConfigQuotaRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InquiryType",$param) and $param["InquiryType"] !== null) {
-            $this->InquiryType = $param["InquiryType"];
+        if (array_key_exists('InquiryType',$param) and $param['InquiryType'] !== null) {
+            $this->InquiryType = $param['InquiryType'];
         }
 
-        if (array_key_exists("Zones",$param) and $param["Zones"] !== null) {
-            $this->Zones = $param["Zones"];
+        if (array_key_exists('Zones',$param) and $param['Zones'] !== null) {
+            $this->Zones = $param['Zones'];
         }
 
-        if (array_key_exists("DiskChargeType",$param) and $param["DiskChargeType"] !== null) {
-            $this->DiskChargeType = $param["DiskChargeType"];
+        if (array_key_exists('DiskChargeType',$param) and $param['DiskChargeType'] !== null) {
+            $this->DiskChargeType = $param['DiskChargeType'];
         }
 
-        if (array_key_exists("DiskTypes",$param) and $param["DiskTypes"] !== null) {
-            $this->DiskTypes = $param["DiskTypes"];
+        if (array_key_exists('DiskTypes',$param) and $param['DiskTypes'] !== null) {
+            $this->DiskTypes = $param['DiskTypes'];
         }
 
-        if (array_key_exists("DiskUsage",$param) and $param["DiskUsage"] !== null) {
-            $this->DiskUsage = $param["DiskUsage"];
+        if (array_key_exists('DiskUsage',$param) and $param['DiskUsage'] !== null) {
+            $this->DiskUsage = $param['DiskUsage'];
         }
 
-        if (array_key_exists("InstanceFamilies",$param) and $param["InstanceFamilies"] !== null) {
-            $this->InstanceFamilies = $param["InstanceFamilies"];
+        if (array_key_exists('InstanceFamilies',$param) and $param['InstanceFamilies'] !== null) {
+            $this->InstanceFamilies = $param['InstanceFamilies'];
         }
 
-        if (array_key_exists("CPU",$param) and $param["CPU"] !== null) {
-            $this->CPU = $param["CPU"];
+        if (array_key_exists('CPU',$param) and $param['CPU'] !== null) {
+            $this->CPU = $param['CPU'];
         }
 
-        if (array_key_exists("Memory",$param) and $param["Memory"] !== null) {
-            $this->Memory = $param["Memory"];
+        if (array_key_exists('Memory',$param) and $param['Memory'] !== null) {
+            $this->Memory = $param['Memory'];
         }
     }
 }

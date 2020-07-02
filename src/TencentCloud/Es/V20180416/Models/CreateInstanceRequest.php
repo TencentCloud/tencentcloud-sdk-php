@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -286,127 +286,127 @@ class CreateInstanceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
-            $this->Zone = $param["Zone"];
+        if (array_key_exists('Zone',$param) and $param['Zone'] !== null) {
+            $this->Zone = $param['Zone'];
         }
 
-        if (array_key_exists("EsVersion",$param) and $param["EsVersion"] !== null) {
-            $this->EsVersion = $param["EsVersion"];
+        if (array_key_exists('EsVersion',$param) and $param['EsVersion'] !== null) {
+            $this->EsVersion = $param['EsVersion'];
         }
 
-        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
-            $this->VpcId = $param["VpcId"];
+        if (array_key_exists('VpcId',$param) and $param['VpcId'] !== null) {
+            $this->VpcId = $param['VpcId'];
         }
 
-        if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
-            $this->SubnetId = $param["SubnetId"];
+        if (array_key_exists('SubnetId',$param) and $param['SubnetId'] !== null) {
+            $this->SubnetId = $param['SubnetId'];
         }
 
-        if (array_key_exists("Password",$param) and $param["Password"] !== null) {
-            $this->Password = $param["Password"];
+        if (array_key_exists('Password',$param) and $param['Password'] !== null) {
+            $this->Password = $param['Password'];
         }
 
-        if (array_key_exists("InstanceName",$param) and $param["InstanceName"] !== null) {
-            $this->InstanceName = $param["InstanceName"];
+        if (array_key_exists('InstanceName',$param) and $param['InstanceName'] !== null) {
+            $this->InstanceName = $param['InstanceName'];
         }
 
-        if (array_key_exists("NodeNum",$param) and $param["NodeNum"] !== null) {
-            $this->NodeNum = $param["NodeNum"];
+        if (array_key_exists('NodeNum',$param) and $param['NodeNum'] !== null) {
+            $this->NodeNum = $param['NodeNum'];
         }
 
-        if (array_key_exists("ChargeType",$param) and $param["ChargeType"] !== null) {
-            $this->ChargeType = $param["ChargeType"];
+        if (array_key_exists('ChargeType',$param) and $param['ChargeType'] !== null) {
+            $this->ChargeType = $param['ChargeType'];
         }
 
-        if (array_key_exists("ChargePeriod",$param) and $param["ChargePeriod"] !== null) {
-            $this->ChargePeriod = $param["ChargePeriod"];
+        if (array_key_exists('ChargePeriod',$param) and $param['ChargePeriod'] !== null) {
+            $this->ChargePeriod = $param['ChargePeriod'];
         }
 
-        if (array_key_exists("RenewFlag",$param) and $param["RenewFlag"] !== null) {
-            $this->RenewFlag = $param["RenewFlag"];
+        if (array_key_exists('RenewFlag',$param) and $param['RenewFlag'] !== null) {
+            $this->RenewFlag = $param['RenewFlag'];
         }
 
-        if (array_key_exists("NodeType",$param) and $param["NodeType"] !== null) {
-            $this->NodeType = $param["NodeType"];
+        if (array_key_exists('NodeType',$param) and $param['NodeType'] !== null) {
+            $this->NodeType = $param['NodeType'];
         }
 
-        if (array_key_exists("DiskType",$param) and $param["DiskType"] !== null) {
-            $this->DiskType = $param["DiskType"];
+        if (array_key_exists('DiskType',$param) and $param['DiskType'] !== null) {
+            $this->DiskType = $param['DiskType'];
         }
 
-        if (array_key_exists("DiskSize",$param) and $param["DiskSize"] !== null) {
-            $this->DiskSize = $param["DiskSize"];
+        if (array_key_exists('DiskSize',$param) and $param['DiskSize'] !== null) {
+            $this->DiskSize = $param['DiskSize'];
         }
 
-        if (array_key_exists("TimeUnit",$param) and $param["TimeUnit"] !== null) {
-            $this->TimeUnit = $param["TimeUnit"];
+        if (array_key_exists('TimeUnit',$param) and $param['TimeUnit'] !== null) {
+            $this->TimeUnit = $param['TimeUnit'];
         }
 
-        if (array_key_exists("AutoVoucher",$param) and $param["AutoVoucher"] !== null) {
-            $this->AutoVoucher = $param["AutoVoucher"];
+        if (array_key_exists('AutoVoucher',$param) and $param['AutoVoucher'] !== null) {
+            $this->AutoVoucher = $param['AutoVoucher'];
         }
 
-        if (array_key_exists("VoucherIds",$param) and $param["VoucherIds"] !== null) {
-            $this->VoucherIds = $param["VoucherIds"];
+        if (array_key_exists('VoucherIds',$param) and $param['VoucherIds'] !== null) {
+            $this->VoucherIds = $param['VoucherIds'];
         }
 
-        if (array_key_exists("EnableDedicatedMaster",$param) and $param["EnableDedicatedMaster"] !== null) {
-            $this->EnableDedicatedMaster = $param["EnableDedicatedMaster"];
+        if (array_key_exists('EnableDedicatedMaster',$param) and $param['EnableDedicatedMaster'] !== null) {
+            $this->EnableDedicatedMaster = $param['EnableDedicatedMaster'];
         }
 
-        if (array_key_exists("MasterNodeNum",$param) and $param["MasterNodeNum"] !== null) {
-            $this->MasterNodeNum = $param["MasterNodeNum"];
+        if (array_key_exists('MasterNodeNum',$param) and $param['MasterNodeNum'] !== null) {
+            $this->MasterNodeNum = $param['MasterNodeNum'];
         }
 
-        if (array_key_exists("MasterNodeType",$param) and $param["MasterNodeType"] !== null) {
-            $this->MasterNodeType = $param["MasterNodeType"];
+        if (array_key_exists('MasterNodeType',$param) and $param['MasterNodeType'] !== null) {
+            $this->MasterNodeType = $param['MasterNodeType'];
         }
 
-        if (array_key_exists("MasterNodeDiskSize",$param) and $param["MasterNodeDiskSize"] !== null) {
-            $this->MasterNodeDiskSize = $param["MasterNodeDiskSize"];
+        if (array_key_exists('MasterNodeDiskSize',$param) and $param['MasterNodeDiskSize'] !== null) {
+            $this->MasterNodeDiskSize = $param['MasterNodeDiskSize'];
         }
 
-        if (array_key_exists("ClusterNameInConf",$param) and $param["ClusterNameInConf"] !== null) {
-            $this->ClusterNameInConf = $param["ClusterNameInConf"];
+        if (array_key_exists('ClusterNameInConf',$param) and $param['ClusterNameInConf'] !== null) {
+            $this->ClusterNameInConf = $param['ClusterNameInConf'];
         }
 
-        if (array_key_exists("DeployMode",$param) and $param["DeployMode"] !== null) {
-            $this->DeployMode = $param["DeployMode"];
+        if (array_key_exists('DeployMode',$param) and $param['DeployMode'] !== null) {
+            $this->DeployMode = $param['DeployMode'];
         }
 
-        if (array_key_exists("MultiZoneInfo",$param) and $param["MultiZoneInfo"] !== null) {
+        if (array_key_exists('MultiZoneInfo',$param) and $param['MultiZoneInfo'] !== null) {
             $this->MultiZoneInfo = [];
-            foreach ($param["MultiZoneInfo"] as $key => $value){
+            foreach ($param['MultiZoneInfo'] as $key => $value){
                 $obj = new ZoneDetail();
                 $obj->deserialize($value);
                 array_push($this->MultiZoneInfo, $obj);
             }
         }
 
-        if (array_key_exists("LicenseType",$param) and $param["LicenseType"] !== null) {
-            $this->LicenseType = $param["LicenseType"];
+        if (array_key_exists('LicenseType',$param) and $param['LicenseType'] !== null) {
+            $this->LicenseType = $param['LicenseType'];
         }
 
-        if (array_key_exists("NodeInfoList",$param) and $param["NodeInfoList"] !== null) {
+        if (array_key_exists('NodeInfoList',$param) and $param['NodeInfoList'] !== null) {
             $this->NodeInfoList = [];
-            foreach ($param["NodeInfoList"] as $key => $value){
+            foreach ($param['NodeInfoList'] as $key => $value){
                 $obj = new NodeInfo();
                 $obj->deserialize($value);
                 array_push($this->NodeInfoList, $obj);
             }
         }
 
-        if (array_key_exists("TagList",$param) and $param["TagList"] !== null) {
+        if (array_key_exists('TagList',$param) and $param['TagList'] !== null) {
             $this->TagList = [];
-            foreach ($param["TagList"] as $key => $value){
+            foreach ($param['TagList'] as $key => $value){
                 $obj = new TagInfo();
                 $obj->deserialize($value);
                 array_push($this->TagList, $obj);
             }
         }
 
-        if (array_key_exists("BasicSecurityType",$param) and $param["BasicSecurityType"] !== null) {
-            $this->BasicSecurityType = $param["BasicSecurityType"];
+        if (array_key_exists('BasicSecurityType',$param) and $param['BasicSecurityType'] !== null) {
+            $this->BasicSecurityType = $param['BasicSecurityType'];
         }
     }
 }

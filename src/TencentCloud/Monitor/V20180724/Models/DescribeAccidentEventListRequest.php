@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -134,52 +134,52 @@ class DescribeAccidentEventListRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Module",$param) and $param["Module"] !== null) {
-            $this->Module = $param["Module"];
+        if (array_key_exists('Module',$param) and $param['Module'] !== null) {
+            $this->Module = $param['Module'];
         }
 
-        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
-            $this->StartTime = $param["StartTime"];
+        if (array_key_exists('StartTime',$param) and $param['StartTime'] !== null) {
+            $this->StartTime = $param['StartTime'];
         }
 
-        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
-            $this->EndTime = $param["EndTime"];
+        if (array_key_exists('EndTime',$param) and $param['EndTime'] !== null) {
+            $this->EndTime = $param['EndTime'];
         }
 
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
+        if (array_key_exists('Limit',$param) and $param['Limit'] !== null) {
+            $this->Limit = $param['Limit'];
         }
 
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
+        if (array_key_exists('Offset',$param) and $param['Offset'] !== null) {
+            $this->Offset = $param['Offset'];
         }
 
-        if (array_key_exists("UpdateTimeOrder",$param) and $param["UpdateTimeOrder"] !== null) {
-            $this->UpdateTimeOrder = $param["UpdateTimeOrder"];
+        if (array_key_exists('UpdateTimeOrder',$param) and $param['UpdateTimeOrder'] !== null) {
+            $this->UpdateTimeOrder = $param['UpdateTimeOrder'];
         }
 
-        if (array_key_exists("OccurTimeOrder",$param) and $param["OccurTimeOrder"] !== null) {
-            $this->OccurTimeOrder = $param["OccurTimeOrder"];
+        if (array_key_exists('OccurTimeOrder',$param) and $param['OccurTimeOrder'] !== null) {
+            $this->OccurTimeOrder = $param['OccurTimeOrder'];
         }
 
-        if (array_key_exists("AccidentType",$param) and $param["AccidentType"] !== null) {
-            $this->AccidentType = $param["AccidentType"];
+        if (array_key_exists('AccidentType',$param) and $param['AccidentType'] !== null) {
+            $this->AccidentType = $param['AccidentType'];
         }
 
-        if (array_key_exists("AccidentEvent",$param) and $param["AccidentEvent"] !== null) {
-            $this->AccidentEvent = $param["AccidentEvent"];
+        if (array_key_exists('AccidentEvent',$param) and $param['AccidentEvent'] !== null) {
+            $this->AccidentEvent = $param['AccidentEvent'];
         }
 
-        if (array_key_exists("AccidentStatus",$param) and $param["AccidentStatus"] !== null) {
-            $this->AccidentStatus = $param["AccidentStatus"];
+        if (array_key_exists('AccidentStatus',$param) and $param['AccidentStatus'] !== null) {
+            $this->AccidentStatus = $param['AccidentStatus'];
         }
 
-        if (array_key_exists("AccidentRegion",$param) and $param["AccidentRegion"] !== null) {
-            $this->AccidentRegion = $param["AccidentRegion"];
+        if (array_key_exists('AccidentRegion',$param) and $param['AccidentRegion'] !== null) {
+            $this->AccidentRegion = $param['AccidentRegion'];
         }
 
-        if (array_key_exists("AffectResource",$param) and $param["AffectResource"] !== null) {
-            $this->AffectResource = $param["AffectResource"];
+        if (array_key_exists('AffectResource',$param) and $param['AffectResource'] !== null) {
+            $this->AffectResource = $param['AffectResource'];
         }
     }
 }

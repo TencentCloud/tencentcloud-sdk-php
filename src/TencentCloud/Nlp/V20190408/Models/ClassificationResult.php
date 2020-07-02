@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -70,20 +70,20 @@ class ClassificationResult extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FirstClassName",$param) and $param["FirstClassName"] !== null) {
-            $this->FirstClassName = $param["FirstClassName"];
+        if (array_key_exists('FirstClassName',$param) and $param['FirstClassName'] !== null) {
+            $this->FirstClassName = $param['FirstClassName'];
         }
 
-        if (array_key_exists("FirstClassProbability",$param) and $param["FirstClassProbability"] !== null) {
-            $this->FirstClassProbability = $param["FirstClassProbability"];
+        if (array_key_exists('FirstClassProbability',$param) and $param['FirstClassProbability'] !== null) {
+            $this->FirstClassProbability = $param['FirstClassProbability'];
         }
 
-        if (array_key_exists("SecondClassName",$param) and $param["SecondClassName"] !== null) {
-            $this->SecondClassName = $param["SecondClassName"];
+        if (array_key_exists('SecondClassName',$param) and $param['SecondClassName'] !== null) {
+            $this->SecondClassName = $param['SecondClassName'];
         }
 
-        if (array_key_exists("SecondClassProbability",$param) and $param["SecondClassProbability"] !== null) {
-            $this->SecondClassProbability = $param["SecondClassProbability"];
+        if (array_key_exists('SecondClassProbability',$param) and $param['SecondClassProbability'] !== null) {
+            $this->SecondClassProbability = $param['SecondClassProbability'];
         }
     }
 }

@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBackupOverview请求参数结构体
  *
- * @method string getProduct() 获取需要查询的云数据库产品类型，目前仅支持 "mysql"。
- * @method void setProduct(string $Product) 设置需要查询的云数据库产品类型，目前仅支持 "mysql"。
+ * @method string getProduct() 获取需要查询的云数据库产品类型，目前仅支持 'mysql'。
+ * @method void setProduct(string $Product) 设置需要查询的云数据库产品类型，目前仅支持 'mysql'。
  */
 class DescribeBackupOverviewRequest extends AbstractModel
 {
     /**
-     * @var string 需要查询的云数据库产品类型，目前仅支持 "mysql"。
+     * @var string 需要查询的云数据库产品类型，目前仅支持 'mysql'。
      */
     public $Product;
 
     /**
-     * @param string $Product 需要查询的云数据库产品类型，目前仅支持 "mysql"。
+     * @param string $Product 需要查询的云数据库产品类型，目前仅支持 'mysql'。
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class DescribeBackupOverviewRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Product",$param) and $param["Product"] !== null) {
-            $this->Product = $param["Product"];
+        if (array_key_exists('Product',$param) and $param['Product'] !== null) {
+            $this->Product = $param['Product'];
         }
     }
 }

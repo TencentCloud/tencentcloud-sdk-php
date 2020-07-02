@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -62,12 +62,12 @@ class TransactionPolicy extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FirstQueryInterval",$param) and $param["FirstQueryInterval"] !== null) {
-            $this->FirstQueryInterval = $param["FirstQueryInterval"];
+        if (array_key_exists('FirstQueryInterval',$param) and $param['FirstQueryInterval'] !== null) {
+            $this->FirstQueryInterval = $param['FirstQueryInterval'];
         }
 
-        if (array_key_exists("MaxQueryCount",$param) and $param["MaxQueryCount"] !== null) {
-            $this->MaxQueryCount = $param["MaxQueryCount"];
+        if (array_key_exists('MaxQueryCount',$param) and $param['MaxQueryCount'] !== null) {
+            $this->MaxQueryCount = $param['MaxQueryCount'];
         }
     }
 }

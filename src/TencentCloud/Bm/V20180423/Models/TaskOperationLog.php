@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -70,20 +70,20 @@ class TaskOperationLog extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TaskStep",$param) and $param["TaskStep"] !== null) {
-            $this->TaskStep = $param["TaskStep"];
+        if (array_key_exists('TaskStep',$param) and $param['TaskStep'] !== null) {
+            $this->TaskStep = $param['TaskStep'];
         }
 
-        if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
-            $this->Operator = $param["Operator"];
+        if (array_key_exists('Operator',$param) and $param['Operator'] !== null) {
+            $this->Operator = $param['Operator'];
         }
 
-        if (array_key_exists("OperationDetail",$param) and $param["OperationDetail"] !== null) {
-            $this->OperationDetail = $param["OperationDetail"];
+        if (array_key_exists('OperationDetail',$param) and $param['OperationDetail'] !== null) {
+            $this->OperationDetail = $param['OperationDetail'];
         }
 
-        if (array_key_exists("OperationTime",$param) and $param["OperationTime"] !== null) {
-            $this->OperationTime = $param["OperationTime"];
+        if (array_key_exists('OperationTime',$param) and $param['OperationTime'] !== null) {
+            $this->OperationTime = $param['OperationTime'];
         }
     }
 }

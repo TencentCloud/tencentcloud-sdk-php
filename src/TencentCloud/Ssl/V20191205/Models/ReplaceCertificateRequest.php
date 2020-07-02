@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -78,24 +78,24 @@ class ReplaceCertificateRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CertificateId",$param) and $param["CertificateId"] !== null) {
-            $this->CertificateId = $param["CertificateId"];
+        if (array_key_exists('CertificateId',$param) and $param['CertificateId'] !== null) {
+            $this->CertificateId = $param['CertificateId'];
         }
 
-        if (array_key_exists("ValidType",$param) and $param["ValidType"] !== null) {
-            $this->ValidType = $param["ValidType"];
+        if (array_key_exists('ValidType',$param) and $param['ValidType'] !== null) {
+            $this->ValidType = $param['ValidType'];
         }
 
-        if (array_key_exists("CsrType",$param) and $param["CsrType"] !== null) {
-            $this->CsrType = $param["CsrType"];
+        if (array_key_exists('CsrType',$param) and $param['CsrType'] !== null) {
+            $this->CsrType = $param['CsrType'];
         }
 
-        if (array_key_exists("CsrContent",$param) and $param["CsrContent"] !== null) {
-            $this->CsrContent = $param["CsrContent"];
+        if (array_key_exists('CsrContent',$param) and $param['CsrContent'] !== null) {
+            $this->CsrContent = $param['CsrContent'];
         }
 
-        if (array_key_exists("CsrkeyPassword",$param) and $param["CsrkeyPassword"] !== null) {
-            $this->CsrkeyPassword = $param["CsrkeyPassword"];
+        if (array_key_exists('CsrkeyPassword',$param) and $param['CsrkeyPassword'] !== null) {
+            $this->CsrkeyPassword = $param['CsrkeyPassword'];
         }
     }
 }

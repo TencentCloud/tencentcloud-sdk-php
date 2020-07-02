@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -78,26 +78,26 @@ class LexicalAnalysisResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("NerTokens",$param) and $param["NerTokens"] !== null) {
+        if (array_key_exists('NerTokens',$param) and $param['NerTokens'] !== null) {
             $this->NerTokens = [];
-            foreach ($param["NerTokens"] as $key => $value){
+            foreach ($param['NerTokens'] as $key => $value){
                 $obj = new NerToken();
                 $obj->deserialize($value);
                 array_push($this->NerTokens, $obj);
             }
         }
 
-        if (array_key_exists("PosTokens",$param) and $param["PosTokens"] !== null) {
+        if (array_key_exists('PosTokens',$param) and $param['PosTokens'] !== null) {
             $this->PosTokens = [];
-            foreach ($param["PosTokens"] as $key => $value){
+            foreach ($param['PosTokens'] as $key => $value){
                 $obj = new PosToken();
                 $obj->deserialize($value);
                 array_push($this->PosTokens, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -134,59 +134,59 @@ class Container extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Command",$param) and $param["Command"] !== null) {
-            $this->Command = $param["Command"];
+        if (array_key_exists('Command',$param) and $param['Command'] !== null) {
+            $this->Command = $param['Command'];
         }
 
-        if (array_key_exists("Args",$param) and $param["Args"] !== null) {
-            $this->Args = $param["Args"];
+        if (array_key_exists('Args',$param) and $param['Args'] !== null) {
+            $this->Args = $param['Args'];
         }
 
-        if (array_key_exists("EnvironmentVars",$param) and $param["EnvironmentVars"] !== null) {
+        if (array_key_exists('EnvironmentVars',$param) and $param['EnvironmentVars'] !== null) {
             $this->EnvironmentVars = [];
-            foreach ($param["EnvironmentVars"] as $key => $value){
+            foreach ($param['EnvironmentVars'] as $key => $value){
                 $obj = new EnvironmentVar();
                 $obj->deserialize($value);
                 array_push($this->EnvironmentVars, $obj);
             }
         }
 
-        if (array_key_exists("Image",$param) and $param["Image"] !== null) {
-            $this->Image = $param["Image"];
+        if (array_key_exists('Image',$param) and $param['Image'] !== null) {
+            $this->Image = $param['Image'];
         }
 
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("Cpu",$param) and $param["Cpu"] !== null) {
-            $this->Cpu = $param["Cpu"];
+        if (array_key_exists('Cpu',$param) and $param['Cpu'] !== null) {
+            $this->Cpu = $param['Cpu'];
         }
 
-        if (array_key_exists("Memory",$param) and $param["Memory"] !== null) {
-            $this->Memory = $param["Memory"];
+        if (array_key_exists('Memory',$param) and $param['Memory'] !== null) {
+            $this->Memory = $param['Memory'];
         }
 
-        if (array_key_exists("RestartCount",$param) and $param["RestartCount"] !== null) {
-            $this->RestartCount = $param["RestartCount"];
+        if (array_key_exists('RestartCount',$param) and $param['RestartCount'] !== null) {
+            $this->RestartCount = $param['RestartCount'];
         }
 
-        if (array_key_exists("CurrentState",$param) and $param["CurrentState"] !== null) {
+        if (array_key_exists('CurrentState',$param) and $param['CurrentState'] !== null) {
             $this->CurrentState = new ContainerState();
-            $this->CurrentState->deserialize($param["CurrentState"]);
+            $this->CurrentState->deserialize($param['CurrentState']);
         }
 
-        if (array_key_exists("PreviousState",$param) and $param["PreviousState"] !== null) {
+        if (array_key_exists('PreviousState',$param) and $param['PreviousState'] !== null) {
             $this->PreviousState = new ContainerState();
-            $this->PreviousState->deserialize($param["PreviousState"]);
+            $this->PreviousState->deserialize($param['PreviousState']);
         }
 
-        if (array_key_exists("WorkingDir",$param) and $param["WorkingDir"] !== null) {
-            $this->WorkingDir = $param["WorkingDir"];
+        if (array_key_exists('WorkingDir',$param) and $param['WorkingDir'] !== null) {
+            $this->WorkingDir = $param['WorkingDir'];
         }
 
-        if (array_key_exists("ContainerId",$param) and $param["ContainerId"] !== null) {
-            $this->ContainerId = $param["ContainerId"];
+        if (array_key_exists('ContainerId',$param) and $param['ContainerId'] !== null) {
+            $this->ContainerId = $param['ContainerId'];
         }
     }
 }

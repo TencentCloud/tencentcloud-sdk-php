@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -35,32 +35,32 @@ use TencentCloud\Common\AbstractModel;
  * @method string getExternParams() 获取不同数据库用到的额外参数.以JSON格式描述. 
 Redis可定义如下的参数: 
 { 
-	"ClientOutputBufferHardLimit":512, 	从机缓冲区的硬性容量限制(MB) 
-	"ClientOutputBufferSoftLimit":512, 	从机缓冲区的软性容量限制(MB) 
-	"ClientOutputBufferPersistTime":60, 从机缓冲区的软性限制持续时间(秒) 
-	"ReplBacklogSize":512, 	环形缓冲区容量限制(MB) 
-	"ReplTimeout":120，		复制超时时间(秒) 
+	'ClientOutputBufferHardLimit':512, 	从机缓冲区的硬性容量限制(MB) 
+	'ClientOutputBufferSoftLimit':512, 	从机缓冲区的软性容量限制(MB) 
+	'ClientOutputBufferPersistTime':60, 从机缓冲区的软性限制持续时间(秒) 
+	'ReplBacklogSize':512, 	环形缓冲区容量限制(MB) 
+	'ReplTimeout':120，		复制超时时间(秒) 
 }
 MongoDB可定义如下的参数: 
 {
 	'SrcAuthDatabase':'admin', 
-	'SrcAuthFlag': "1", 
+	'SrcAuthFlag': '1', 
 	'SrcAuthMechanism':"SCRAM-SHA-1"
 }
 MySQL暂不支持额外参数设置。
  * @method void setExternParams(string $ExternParams) 设置不同数据库用到的额外参数.以JSON格式描述. 
 Redis可定义如下的参数: 
 { 
-	"ClientOutputBufferHardLimit":512, 	从机缓冲区的硬性容量限制(MB) 
-	"ClientOutputBufferSoftLimit":512, 	从机缓冲区的软性容量限制(MB) 
-	"ClientOutputBufferPersistTime":60, 从机缓冲区的软性限制持续时间(秒) 
-	"ReplBacklogSize":512, 	环形缓冲区容量限制(MB) 
-	"ReplTimeout":120，		复制超时时间(秒) 
+	'ClientOutputBufferHardLimit':512, 	从机缓冲区的硬性容量限制(MB) 
+	'ClientOutputBufferSoftLimit':512, 	从机缓冲区的软性容量限制(MB) 
+	'ClientOutputBufferPersistTime':60, 从机缓冲区的软性限制持续时间(秒) 
+	'ReplBacklogSize':512, 	环形缓冲区容量限制(MB) 
+	'ReplTimeout':120，		复制超时时间(秒) 
 }
 MongoDB可定义如下的参数: 
 {
 	'SrcAuthDatabase':'admin', 
-	'SrcAuthFlag': "1", 
+	'SrcAuthFlag': '1', 
 	'SrcAuthMechanism':"SCRAM-SHA-1"
 }
 MySQL暂不支持额外参数设置。
@@ -103,16 +103,16 @@ class MigrateOption extends AbstractModel
      * @var string 不同数据库用到的额外参数.以JSON格式描述. 
 Redis可定义如下的参数: 
 { 
-	"ClientOutputBufferHardLimit":512, 	从机缓冲区的硬性容量限制(MB) 
-	"ClientOutputBufferSoftLimit":512, 	从机缓冲区的软性容量限制(MB) 
-	"ClientOutputBufferPersistTime":60, 从机缓冲区的软性限制持续时间(秒) 
-	"ReplBacklogSize":512, 	环形缓冲区容量限制(MB) 
-	"ReplTimeout":120，		复制超时时间(秒) 
+	'ClientOutputBufferHardLimit':512, 	从机缓冲区的硬性容量限制(MB) 
+	'ClientOutputBufferSoftLimit':512, 	从机缓冲区的软性容量限制(MB) 
+	'ClientOutputBufferPersistTime':60, 从机缓冲区的软性限制持续时间(秒) 
+	'ReplBacklogSize':512, 	环形缓冲区容量限制(MB) 
+	'ReplTimeout':120，		复制超时时间(秒) 
 }
 MongoDB可定义如下的参数: 
 {
 	'SrcAuthDatabase':'admin', 
-	'SrcAuthFlag': "1", 
+	'SrcAuthFlag': '1', 
 	'SrcAuthMechanism':"SCRAM-SHA-1"
 }
 MySQL暂不支持额外参数设置。
@@ -134,16 +134,16 @@ MySQL暂不支持额外参数设置。
      * @param string $ExternParams 不同数据库用到的额外参数.以JSON格式描述. 
 Redis可定义如下的参数: 
 { 
-	"ClientOutputBufferHardLimit":512, 	从机缓冲区的硬性容量限制(MB) 
-	"ClientOutputBufferSoftLimit":512, 	从机缓冲区的软性容量限制(MB) 
-	"ClientOutputBufferPersistTime":60, 从机缓冲区的软性限制持续时间(秒) 
-	"ReplBacklogSize":512, 	环形缓冲区容量限制(MB) 
-	"ReplTimeout":120，		复制超时时间(秒) 
+	'ClientOutputBufferHardLimit':512, 	从机缓冲区的硬性容量限制(MB) 
+	'ClientOutputBufferSoftLimit':512, 	从机缓冲区的软性容量限制(MB) 
+	'ClientOutputBufferPersistTime':60, 从机缓冲区的软性限制持续时间(秒) 
+	'ReplBacklogSize':512, 	环形缓冲区容量限制(MB) 
+	'ReplTimeout':120，		复制超时时间(秒) 
 }
 MongoDB可定义如下的参数: 
 {
 	'SrcAuthDatabase':'admin', 
-	'SrcAuthFlag': "1", 
+	'SrcAuthFlag': '1', 
 	'SrcAuthMechanism':"SCRAM-SHA-1"
 }
 MySQL暂不支持额外参数设置。
@@ -162,37 +162,37 @@ MySQL暂不支持额外参数设置。
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RunMode",$param) and $param["RunMode"] !== null) {
-            $this->RunMode = $param["RunMode"];
+        if (array_key_exists('RunMode',$param) and $param['RunMode'] !== null) {
+            $this->RunMode = $param['RunMode'];
         }
 
-        if (array_key_exists("ExpectTime",$param) and $param["ExpectTime"] !== null) {
-            $this->ExpectTime = $param["ExpectTime"];
+        if (array_key_exists('ExpectTime',$param) and $param['ExpectTime'] !== null) {
+            $this->ExpectTime = $param['ExpectTime'];
         }
 
-        if (array_key_exists("MigrateType",$param) and $param["MigrateType"] !== null) {
-            $this->MigrateType = $param["MigrateType"];
+        if (array_key_exists('MigrateType',$param) and $param['MigrateType'] !== null) {
+            $this->MigrateType = $param['MigrateType'];
         }
 
-        if (array_key_exists("MigrateObject",$param) and $param["MigrateObject"] !== null) {
-            $this->MigrateObject = $param["MigrateObject"];
+        if (array_key_exists('MigrateObject',$param) and $param['MigrateObject'] !== null) {
+            $this->MigrateObject = $param['MigrateObject'];
         }
 
-        if (array_key_exists("ConsistencyType",$param) and $param["ConsistencyType"] !== null) {
-            $this->ConsistencyType = $param["ConsistencyType"];
+        if (array_key_exists('ConsistencyType',$param) and $param['ConsistencyType'] !== null) {
+            $this->ConsistencyType = $param['ConsistencyType'];
         }
 
-        if (array_key_exists("IsOverrideRoot",$param) and $param["IsOverrideRoot"] !== null) {
-            $this->IsOverrideRoot = $param["IsOverrideRoot"];
+        if (array_key_exists('IsOverrideRoot',$param) and $param['IsOverrideRoot'] !== null) {
+            $this->IsOverrideRoot = $param['IsOverrideRoot'];
         }
 
-        if (array_key_exists("ExternParams",$param) and $param["ExternParams"] !== null) {
-            $this->ExternParams = $param["ExternParams"];
+        if (array_key_exists('ExternParams',$param) and $param['ExternParams'] !== null) {
+            $this->ExternParams = $param['ExternParams'];
         }
 
-        if (array_key_exists("ConsistencyParams",$param) and $param["ConsistencyParams"] !== null) {
+        if (array_key_exists('ConsistencyParams',$param) and $param['ConsistencyParams'] !== null) {
             $this->ConsistencyParams = new ConsistencyParams();
-            $this->ConsistencyParams->deserialize($param["ConsistencyParams"]);
+            $this->ConsistencyParams->deserialize($param['ConsistencyParams']);
         }
     }
 }

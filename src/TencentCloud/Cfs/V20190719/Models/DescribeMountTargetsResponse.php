@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -62,21 +62,21 @@ class DescribeMountTargetsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MountTargets",$param) and $param["MountTargets"] !== null) {
+        if (array_key_exists('MountTargets',$param) and $param['MountTargets'] !== null) {
             $this->MountTargets = [];
-            foreach ($param["MountTargets"] as $key => $value){
+            foreach ($param['MountTargets'] as $key => $value){
                 $obj = new MountInfo();
                 $obj->deserialize($value);
                 array_push($this->MountTargets, $obj);
             }
         }
 
-        if (array_key_exists("NumberOfMountTargets",$param) and $param["NumberOfMountTargets"] !== null) {
-            $this->NumberOfMountTargets = $param["NumberOfMountTargets"];
+        if (array_key_exists('NumberOfMountTargets',$param) and $param['NumberOfMountTargets'] !== null) {
+            $this->NumberOfMountTargets = $param['NumberOfMountTargets'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

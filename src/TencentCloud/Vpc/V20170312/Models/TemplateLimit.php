@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -70,20 +70,20 @@ class TemplateLimit extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AddressTemplateMemberLimit",$param) and $param["AddressTemplateMemberLimit"] !== null) {
-            $this->AddressTemplateMemberLimit = $param["AddressTemplateMemberLimit"];
+        if (array_key_exists('AddressTemplateMemberLimit',$param) and $param['AddressTemplateMemberLimit'] !== null) {
+            $this->AddressTemplateMemberLimit = $param['AddressTemplateMemberLimit'];
         }
 
-        if (array_key_exists("AddressTemplateGroupMemberLimit",$param) and $param["AddressTemplateGroupMemberLimit"] !== null) {
-            $this->AddressTemplateGroupMemberLimit = $param["AddressTemplateGroupMemberLimit"];
+        if (array_key_exists('AddressTemplateGroupMemberLimit',$param) and $param['AddressTemplateGroupMemberLimit'] !== null) {
+            $this->AddressTemplateGroupMemberLimit = $param['AddressTemplateGroupMemberLimit'];
         }
 
-        if (array_key_exists("ServiceTemplateMemberLimit",$param) and $param["ServiceTemplateMemberLimit"] !== null) {
-            $this->ServiceTemplateMemberLimit = $param["ServiceTemplateMemberLimit"];
+        if (array_key_exists('ServiceTemplateMemberLimit',$param) and $param['ServiceTemplateMemberLimit'] !== null) {
+            $this->ServiceTemplateMemberLimit = $param['ServiceTemplateMemberLimit'];
         }
 
-        if (array_key_exists("ServiceTemplateGroupMemberLimit",$param) and $param["ServiceTemplateGroupMemberLimit"] !== null) {
-            $this->ServiceTemplateGroupMemberLimit = $param["ServiceTemplateGroupMemberLimit"];
+        if (array_key_exists('ServiceTemplateGroupMemberLimit',$param) and $param['ServiceTemplateGroupMemberLimit'] !== null) {
+            $this->ServiceTemplateGroupMemberLimit = $param['ServiceTemplateGroupMemberLimit'];
         }
     }
 }

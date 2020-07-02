@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -134,36 +134,36 @@ class DescribeAccidentEventListAlarms extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BusinessTypeDesc",$param) and $param["BusinessTypeDesc"] !== null) {
-            $this->BusinessTypeDesc = $param["BusinessTypeDesc"];
+        if (array_key_exists('BusinessTypeDesc',$param) and $param['BusinessTypeDesc'] !== null) {
+            $this->BusinessTypeDesc = $param['BusinessTypeDesc'];
         }
 
-        if (array_key_exists("AccidentTypeDesc",$param) and $param["AccidentTypeDesc"] !== null) {
-            $this->AccidentTypeDesc = $param["AccidentTypeDesc"];
+        if (array_key_exists('AccidentTypeDesc',$param) and $param['AccidentTypeDesc'] !== null) {
+            $this->AccidentTypeDesc = $param['AccidentTypeDesc'];
         }
 
-        if (array_key_exists("BusinessID",$param) and $param["BusinessID"] !== null) {
-            $this->BusinessID = $param["BusinessID"];
+        if (array_key_exists('BusinessID',$param) and $param['BusinessID'] !== null) {
+            $this->BusinessID = $param['BusinessID'];
         }
 
-        if (array_key_exists("EventStatus",$param) and $param["EventStatus"] !== null) {
-            $this->EventStatus = $param["EventStatus"];
+        if (array_key_exists('EventStatus',$param) and $param['EventStatus'] !== null) {
+            $this->EventStatus = $param['EventStatus'];
         }
 
-        if (array_key_exists("AffectResource",$param) and $param["AffectResource"] !== null) {
-            $this->AffectResource = $param["AffectResource"];
+        if (array_key_exists('AffectResource',$param) and $param['AffectResource'] !== null) {
+            $this->AffectResource = $param['AffectResource'];
         }
 
-        if (array_key_exists("Region",$param) and $param["Region"] !== null) {
-            $this->Region = $param["Region"];
+        if (array_key_exists('Region',$param) and $param['Region'] !== null) {
+            $this->Region = $param['Region'];
         }
 
-        if (array_key_exists("OccurTime",$param) and $param["OccurTime"] !== null) {
-            $this->OccurTime = $param["OccurTime"];
+        if (array_key_exists('OccurTime',$param) and $param['OccurTime'] !== null) {
+            $this->OccurTime = $param['OccurTime'];
         }
 
-        if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
-            $this->UpdateTime = $param["UpdateTime"];
+        if (array_key_exists('UpdateTime',$param) and $param['UpdateTime'] !== null) {
+            $this->UpdateTime = $param['UpdateTime'];
         }
     }
 }

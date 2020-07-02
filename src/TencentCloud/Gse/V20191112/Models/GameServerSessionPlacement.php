@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -222,87 +222,87 @@ class GameServerSessionPlacement extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PlacementId",$param) and $param["PlacementId"] !== null) {
-            $this->PlacementId = $param["PlacementId"];
+        if (array_key_exists('PlacementId',$param) and $param['PlacementId'] !== null) {
+            $this->PlacementId = $param['PlacementId'];
         }
 
-        if (array_key_exists("GameServerSessionQueueName",$param) and $param["GameServerSessionQueueName"] !== null) {
-            $this->GameServerSessionQueueName = $param["GameServerSessionQueueName"];
+        if (array_key_exists('GameServerSessionQueueName',$param) and $param['GameServerSessionQueueName'] !== null) {
+            $this->GameServerSessionQueueName = $param['GameServerSessionQueueName'];
         }
 
-        if (array_key_exists("PlayerLatencies",$param) and $param["PlayerLatencies"] !== null) {
+        if (array_key_exists('PlayerLatencies',$param) and $param['PlayerLatencies'] !== null) {
             $this->PlayerLatencies = [];
-            foreach ($param["PlayerLatencies"] as $key => $value){
+            foreach ($param['PlayerLatencies'] as $key => $value){
                 $obj = new PlayerLatency();
                 $obj->deserialize($value);
                 array_push($this->PlayerLatencies, $obj);
             }
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("DnsName",$param) and $param["DnsName"] !== null) {
-            $this->DnsName = $param["DnsName"];
+        if (array_key_exists('DnsName',$param) and $param['DnsName'] !== null) {
+            $this->DnsName = $param['DnsName'];
         }
 
-        if (array_key_exists("GameServerSessionId",$param) and $param["GameServerSessionId"] !== null) {
-            $this->GameServerSessionId = $param["GameServerSessionId"];
+        if (array_key_exists('GameServerSessionId',$param) and $param['GameServerSessionId'] !== null) {
+            $this->GameServerSessionId = $param['GameServerSessionId'];
         }
 
-        if (array_key_exists("GameServerSessionName",$param) and $param["GameServerSessionName"] !== null) {
-            $this->GameServerSessionName = $param["GameServerSessionName"];
+        if (array_key_exists('GameServerSessionName',$param) and $param['GameServerSessionName'] !== null) {
+            $this->GameServerSessionName = $param['GameServerSessionName'];
         }
 
-        if (array_key_exists("GameServerSessionRegion",$param) and $param["GameServerSessionRegion"] !== null) {
-            $this->GameServerSessionRegion = $param["GameServerSessionRegion"];
+        if (array_key_exists('GameServerSessionRegion',$param) and $param['GameServerSessionRegion'] !== null) {
+            $this->GameServerSessionRegion = $param['GameServerSessionRegion'];
         }
 
-        if (array_key_exists("GameProperties",$param) and $param["GameProperties"] !== null) {
+        if (array_key_exists('GameProperties',$param) and $param['GameProperties'] !== null) {
             $this->GameProperties = [];
-            foreach ($param["GameProperties"] as $key => $value){
+            foreach ($param['GameProperties'] as $key => $value){
                 $obj = new GameProperty();
                 $obj->deserialize($value);
                 array_push($this->GameProperties, $obj);
             }
         }
 
-        if (array_key_exists("MaximumPlayerSessionCount",$param) and $param["MaximumPlayerSessionCount"] !== null) {
-            $this->MaximumPlayerSessionCount = $param["MaximumPlayerSessionCount"];
+        if (array_key_exists('MaximumPlayerSessionCount',$param) and $param['MaximumPlayerSessionCount'] !== null) {
+            $this->MaximumPlayerSessionCount = $param['MaximumPlayerSessionCount'];
         }
 
-        if (array_key_exists("GameServerSessionData",$param) and $param["GameServerSessionData"] !== null) {
-            $this->GameServerSessionData = $param["GameServerSessionData"];
+        if (array_key_exists('GameServerSessionData',$param) and $param['GameServerSessionData'] !== null) {
+            $this->GameServerSessionData = $param['GameServerSessionData'];
         }
 
-        if (array_key_exists("IpAddress",$param) and $param["IpAddress"] !== null) {
-            $this->IpAddress = $param["IpAddress"];
+        if (array_key_exists('IpAddress',$param) and $param['IpAddress'] !== null) {
+            $this->IpAddress = $param['IpAddress'];
         }
 
-        if (array_key_exists("Port",$param) and $param["Port"] !== null) {
-            $this->Port = $param["Port"];
+        if (array_key_exists('Port',$param) and $param['Port'] !== null) {
+            $this->Port = $param['Port'];
         }
 
-        if (array_key_exists("MatchmakerData",$param) and $param["MatchmakerData"] !== null) {
-            $this->MatchmakerData = $param["MatchmakerData"];
+        if (array_key_exists('MatchmakerData',$param) and $param['MatchmakerData'] !== null) {
+            $this->MatchmakerData = $param['MatchmakerData'];
         }
 
-        if (array_key_exists("PlacedPlayerSessions",$param) and $param["PlacedPlayerSessions"] !== null) {
+        if (array_key_exists('PlacedPlayerSessions',$param) and $param['PlacedPlayerSessions'] !== null) {
             $this->PlacedPlayerSessions = [];
-            foreach ($param["PlacedPlayerSessions"] as $key => $value){
+            foreach ($param['PlacedPlayerSessions'] as $key => $value){
                 $obj = new PlacedPlayerSession();
                 $obj->deserialize($value);
                 array_push($this->PlacedPlayerSessions, $obj);
             }
         }
 
-        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
-            $this->StartTime = $param["StartTime"];
+        if (array_key_exists('StartTime',$param) and $param['StartTime'] !== null) {
+            $this->StartTime = $param['StartTime'];
         }
 
-        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
-            $this->EndTime = $param["EndTime"];
+        if (array_key_exists('EndTime',$param) and $param['EndTime'] !== null) {
+            $this->EndTime = $param['EndTime'];
         }
     }
 }

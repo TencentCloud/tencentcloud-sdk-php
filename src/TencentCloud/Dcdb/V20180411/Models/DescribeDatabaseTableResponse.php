@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -78,29 +78,29 @@ class DescribeDatabaseTableResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("DbName",$param) and $param["DbName"] !== null) {
-            $this->DbName = $param["DbName"];
+        if (array_key_exists('DbName',$param) and $param['DbName'] !== null) {
+            $this->DbName = $param['DbName'];
         }
 
-        if (array_key_exists("Table",$param) and $param["Table"] !== null) {
-            $this->Table = $param["Table"];
+        if (array_key_exists('Table',$param) and $param['Table'] !== null) {
+            $this->Table = $param['Table'];
         }
 
-        if (array_key_exists("Cols",$param) and $param["Cols"] !== null) {
+        if (array_key_exists('Cols',$param) and $param['Cols'] !== null) {
             $this->Cols = [];
-            foreach ($param["Cols"] as $key => $value){
+            foreach ($param['Cols'] as $key => $value){
                 $obj = new TableColumn();
                 $obj->deserialize($value);
                 array_push($this->Cols, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

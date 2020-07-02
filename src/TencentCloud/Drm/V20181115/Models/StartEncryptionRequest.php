@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -86,30 +86,30 @@ class StartEncryptionRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CosEndPoint",$param) and $param["CosEndPoint"] !== null) {
-            $this->CosEndPoint = $param["CosEndPoint"];
+        if (array_key_exists('CosEndPoint',$param) and $param['CosEndPoint'] !== null) {
+            $this->CosEndPoint = $param['CosEndPoint'];
         }
 
-        if (array_key_exists("CosSecretId",$param) and $param["CosSecretId"] !== null) {
-            $this->CosSecretId = $param["CosSecretId"];
+        if (array_key_exists('CosSecretId',$param) and $param['CosSecretId'] !== null) {
+            $this->CosSecretId = $param['CosSecretId'];
         }
 
-        if (array_key_exists("CosSecretKey",$param) and $param["CosSecretKey"] !== null) {
-            $this->CosSecretKey = $param["CosSecretKey"];
+        if (array_key_exists('CosSecretKey',$param) and $param['CosSecretKey'] !== null) {
+            $this->CosSecretKey = $param['CosSecretKey'];
         }
 
-        if (array_key_exists("DrmType",$param) and $param["DrmType"] !== null) {
-            $this->DrmType = $param["DrmType"];
+        if (array_key_exists('DrmType',$param) and $param['DrmType'] !== null) {
+            $this->DrmType = $param['DrmType'];
         }
 
-        if (array_key_exists("SourceObject",$param) and $param["SourceObject"] !== null) {
+        if (array_key_exists('SourceObject',$param) and $param['SourceObject'] !== null) {
             $this->SourceObject = new DrmSourceObject();
-            $this->SourceObject->deserialize($param["SourceObject"]);
+            $this->SourceObject->deserialize($param['SourceObject']);
         }
 
-        if (array_key_exists("OutputObjects",$param) and $param["OutputObjects"] !== null) {
+        if (array_key_exists('OutputObjects',$param) and $param['OutputObjects'] !== null) {
             $this->OutputObjects = [];
-            foreach ($param["OutputObjects"] as $key => $value){
+            foreach ($param['OutputObjects'] as $key => $value){
                 $obj = new DrmOutputObject();
                 $obj->deserialize($value);
                 array_push($this->OutputObjects, $obj);

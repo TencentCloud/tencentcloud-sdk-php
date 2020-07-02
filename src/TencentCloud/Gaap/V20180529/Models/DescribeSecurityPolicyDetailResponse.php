@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -106,33 +106,33 @@ UNBINDING，安全策略关闭中。
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ProxyId",$param) and $param["ProxyId"] !== null) {
-            $this->ProxyId = $param["ProxyId"];
+        if (array_key_exists('ProxyId',$param) and $param['ProxyId'] !== null) {
+            $this->ProxyId = $param['ProxyId'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("DefaultAction",$param) and $param["DefaultAction"] !== null) {
-            $this->DefaultAction = $param["DefaultAction"];
+        if (array_key_exists('DefaultAction',$param) and $param['DefaultAction'] !== null) {
+            $this->DefaultAction = $param['DefaultAction'];
         }
 
-        if (array_key_exists("PolicyId",$param) and $param["PolicyId"] !== null) {
-            $this->PolicyId = $param["PolicyId"];
+        if (array_key_exists('PolicyId',$param) and $param['PolicyId'] !== null) {
+            $this->PolicyId = $param['PolicyId'];
         }
 
-        if (array_key_exists("RuleList",$param) and $param["RuleList"] !== null) {
+        if (array_key_exists('RuleList',$param) and $param['RuleList'] !== null) {
             $this->RuleList = [];
-            foreach ($param["RuleList"] as $key => $value){
+            foreach ($param['RuleList'] as $key => $value){
                 $obj = new SecurityPolicyRuleOut();
                 $obj->deserialize($value);
                 array_push($this->RuleList, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

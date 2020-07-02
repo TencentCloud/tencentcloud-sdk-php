@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -122,42 +122,42 @@ class UsgRuleDetail extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InBound",$param) and $param["InBound"] !== null) {
+        if (array_key_exists('InBound',$param) and $param['InBound'] !== null) {
             $this->InBound = [];
-            foreach ($param["InBound"] as $key => $value){
+            foreach ($param['InBound'] as $key => $value){
                 $obj = new UsgPolicy();
                 $obj->deserialize($value);
                 array_push($this->InBound, $obj);
             }
         }
 
-        if (array_key_exists("OutBound",$param) and $param["OutBound"] !== null) {
+        if (array_key_exists('OutBound',$param) and $param['OutBound'] !== null) {
             $this->OutBound = [];
-            foreach ($param["OutBound"] as $key => $value){
+            foreach ($param['OutBound'] as $key => $value){
                 $obj = new UsgPolicy();
                 $obj->deserialize($value);
                 array_push($this->OutBound, $obj);
             }
         }
 
-        if (array_key_exists("SgId",$param) and $param["SgId"] !== null) {
-            $this->SgId = $param["SgId"];
+        if (array_key_exists('SgId',$param) and $param['SgId'] !== null) {
+            $this->SgId = $param['SgId'];
         }
 
-        if (array_key_exists("SgName",$param) and $param["SgName"] !== null) {
-            $this->SgName = $param["SgName"];
+        if (array_key_exists('SgName',$param) and $param['SgName'] !== null) {
+            $this->SgName = $param['SgName'];
         }
 
-        if (array_key_exists("SgRemark",$param) and $param["SgRemark"] !== null) {
-            $this->SgRemark = $param["SgRemark"];
+        if (array_key_exists('SgRemark',$param) and $param['SgRemark'] !== null) {
+            $this->SgRemark = $param['SgRemark'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("Version",$param) and $param["Version"] !== null) {
-            $this->Version = $param["Version"];
+        if (array_key_exists('Version',$param) and $param['Version'] !== null) {
+            $this->Version = $param['Version'];
         }
     }
 }

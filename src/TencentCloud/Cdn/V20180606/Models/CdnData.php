@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -102,22 +102,22 @@ statusCode：状态码，返回 2XX、3XX、4XX、5XX 汇总数据，单位为 �
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Metric",$param) and $param["Metric"] !== null) {
-            $this->Metric = $param["Metric"];
+        if (array_key_exists('Metric',$param) and $param['Metric'] !== null) {
+            $this->Metric = $param['Metric'];
         }
 
-        if (array_key_exists("DetailData",$param) and $param["DetailData"] !== null) {
+        if (array_key_exists('DetailData',$param) and $param['DetailData'] !== null) {
             $this->DetailData = [];
-            foreach ($param["DetailData"] as $key => $value){
+            foreach ($param['DetailData'] as $key => $value){
                 $obj = new TimestampData();
                 $obj->deserialize($value);
                 array_push($this->DetailData, $obj);
             }
         }
 
-        if (array_key_exists("SummarizedData",$param) and $param["SummarizedData"] !== null) {
+        if (array_key_exists('SummarizedData',$param) and $param['SummarizedData'] !== null) {
             $this->SummarizedData = new SummarizedData();
-            $this->SummarizedData->deserialize($param["SummarizedData"]);
+            $this->SummarizedData->deserialize($param['SummarizedData']);
         }
     }
 }

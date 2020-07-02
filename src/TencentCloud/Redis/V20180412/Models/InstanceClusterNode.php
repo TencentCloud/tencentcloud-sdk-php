@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -142,56 +142,56 @@ class InstanceClusterNode extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("RunId",$param) and $param["RunId"] !== null) {
-            $this->RunId = $param["RunId"];
+        if (array_key_exists('RunId',$param) and $param['RunId'] !== null) {
+            $this->RunId = $param['RunId'];
         }
 
-        if (array_key_exists("Role",$param) and $param["Role"] !== null) {
-            $this->Role = $param["Role"];
+        if (array_key_exists('Role',$param) and $param['Role'] !== null) {
+            $this->Role = $param['Role'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("Connected",$param) and $param["Connected"] !== null) {
-            $this->Connected = $param["Connected"];
+        if (array_key_exists('Connected',$param) and $param['Connected'] !== null) {
+            $this->Connected = $param['Connected'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("DownTime",$param) and $param["DownTime"] !== null) {
-            $this->DownTime = $param["DownTime"];
+        if (array_key_exists('DownTime',$param) and $param['DownTime'] !== null) {
+            $this->DownTime = $param['DownTime'];
         }
 
-        if (array_key_exists("Slots",$param) and $param["Slots"] !== null) {
-            $this->Slots = $param["Slots"];
+        if (array_key_exists('Slots',$param) and $param['Slots'] !== null) {
+            $this->Slots = $param['Slots'];
         }
 
-        if (array_key_exists("Keys",$param) and $param["Keys"] !== null) {
-            $this->Keys = $param["Keys"];
+        if (array_key_exists('Keys',$param) and $param['Keys'] !== null) {
+            $this->Keys = $param['Keys'];
         }
 
-        if (array_key_exists("Qps",$param) and $param["Qps"] !== null) {
-            $this->Qps = $param["Qps"];
+        if (array_key_exists('Qps',$param) and $param['Qps'] !== null) {
+            $this->Qps = $param['Qps'];
         }
 
-        if (array_key_exists("QpsSlope",$param) and $param["QpsSlope"] !== null) {
-            $this->QpsSlope = $param["QpsSlope"];
+        if (array_key_exists('QpsSlope',$param) and $param['QpsSlope'] !== null) {
+            $this->QpsSlope = $param['QpsSlope'];
         }
 
-        if (array_key_exists("Storage",$param) and $param["Storage"] !== null) {
-            $this->Storage = $param["Storage"];
+        if (array_key_exists('Storage',$param) and $param['Storage'] !== null) {
+            $this->Storage = $param['Storage'];
         }
 
-        if (array_key_exists("StorageSlope",$param) and $param["StorageSlope"] !== null) {
-            $this->StorageSlope = $param["StorageSlope"];
+        if (array_key_exists('StorageSlope',$param) and $param['StorageSlope'] !== null) {
+            $this->StorageSlope = $param['StorageSlope'];
         }
     }
 }

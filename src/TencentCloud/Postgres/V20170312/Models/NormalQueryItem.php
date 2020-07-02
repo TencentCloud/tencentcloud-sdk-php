@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -158,64 +158,64 @@ class NormalQueryItem extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("UserName",$param) and $param["UserName"] !== null) {
-            $this->UserName = $param["UserName"];
+        if (array_key_exists('UserName',$param) and $param['UserName'] !== null) {
+            $this->UserName = $param['UserName'];
         }
 
-        if (array_key_exists("Calls",$param) and $param["Calls"] !== null) {
-            $this->Calls = $param["Calls"];
+        if (array_key_exists('Calls',$param) and $param['Calls'] !== null) {
+            $this->Calls = $param['Calls'];
         }
 
-        if (array_key_exists("CallsGrids",$param) and $param["CallsGrids"] !== null) {
-            $this->CallsGrids = $param["CallsGrids"];
+        if (array_key_exists('CallsGrids',$param) and $param['CallsGrids'] !== null) {
+            $this->CallsGrids = $param['CallsGrids'];
         }
 
-        if (array_key_exists("CostTime",$param) and $param["CostTime"] !== null) {
-            $this->CostTime = $param["CostTime"];
+        if (array_key_exists('CostTime',$param) and $param['CostTime'] !== null) {
+            $this->CostTime = $param['CostTime'];
         }
 
-        if (array_key_exists("Rows",$param) and $param["Rows"] !== null) {
-            $this->Rows = $param["Rows"];
+        if (array_key_exists('Rows',$param) and $param['Rows'] !== null) {
+            $this->Rows = $param['Rows'];
         }
 
-        if (array_key_exists("MinCostTime",$param) and $param["MinCostTime"] !== null) {
-            $this->MinCostTime = $param["MinCostTime"];
+        if (array_key_exists('MinCostTime',$param) and $param['MinCostTime'] !== null) {
+            $this->MinCostTime = $param['MinCostTime'];
         }
 
-        if (array_key_exists("MaxCostTime",$param) and $param["MaxCostTime"] !== null) {
-            $this->MaxCostTime = $param["MaxCostTime"];
+        if (array_key_exists('MaxCostTime',$param) and $param['MaxCostTime'] !== null) {
+            $this->MaxCostTime = $param['MaxCostTime'];
         }
 
-        if (array_key_exists("FirstTime",$param) and $param["FirstTime"] !== null) {
-            $this->FirstTime = $param["FirstTime"];
+        if (array_key_exists('FirstTime',$param) and $param['FirstTime'] !== null) {
+            $this->FirstTime = $param['FirstTime'];
         }
 
-        if (array_key_exists("LastTime",$param) and $param["LastTime"] !== null) {
-            $this->LastTime = $param["LastTime"];
+        if (array_key_exists('LastTime',$param) and $param['LastTime'] !== null) {
+            $this->LastTime = $param['LastTime'];
         }
 
-        if (array_key_exists("SharedReadBlks",$param) and $param["SharedReadBlks"] !== null) {
-            $this->SharedReadBlks = $param["SharedReadBlks"];
+        if (array_key_exists('SharedReadBlks',$param) and $param['SharedReadBlks'] !== null) {
+            $this->SharedReadBlks = $param['SharedReadBlks'];
         }
 
-        if (array_key_exists("SharedWriteBlks",$param) and $param["SharedWriteBlks"] !== null) {
-            $this->SharedWriteBlks = $param["SharedWriteBlks"];
+        if (array_key_exists('SharedWriteBlks',$param) and $param['SharedWriteBlks'] !== null) {
+            $this->SharedWriteBlks = $param['SharedWriteBlks'];
         }
 
-        if (array_key_exists("ReadCostTime",$param) and $param["ReadCostTime"] !== null) {
-            $this->ReadCostTime = $param["ReadCostTime"];
+        if (array_key_exists('ReadCostTime',$param) and $param['ReadCostTime'] !== null) {
+            $this->ReadCostTime = $param['ReadCostTime'];
         }
 
-        if (array_key_exists("WriteCostTime",$param) and $param["WriteCostTime"] !== null) {
-            $this->WriteCostTime = $param["WriteCostTime"];
+        if (array_key_exists('WriteCostTime',$param) and $param['WriteCostTime'] !== null) {
+            $this->WriteCostTime = $param['WriteCostTime'];
         }
 
-        if (array_key_exists("DatabaseName",$param) and $param["DatabaseName"] !== null) {
-            $this->DatabaseName = $param["DatabaseName"];
+        if (array_key_exists('DatabaseName',$param) and $param['DatabaseName'] !== null) {
+            $this->DatabaseName = $param['DatabaseName'];
         }
 
-        if (array_key_exists("NormalQuery",$param) and $param["NormalQuery"] !== null) {
-            $this->NormalQuery = $param["NormalQuery"];
+        if (array_key_exists('NormalQuery',$param) and $param['NormalQuery'] !== null) {
+            $this->NormalQuery = $param['NormalQuery'];
         }
     }
 }

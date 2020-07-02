@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -182,68 +182,68 @@ class AIRecognitionTemplateItem extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Definition",$param) and $param["Definition"] !== null) {
-            $this->Definition = $param["Definition"];
+        if (array_key_exists('Definition',$param) and $param['Definition'] !== null) {
+            $this->Definition = $param['Definition'];
         }
 
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("Comment",$param) and $param["Comment"] !== null) {
-            $this->Comment = $param["Comment"];
+        if (array_key_exists('Comment',$param) and $param['Comment'] !== null) {
+            $this->Comment = $param['Comment'];
         }
 
-        if (array_key_exists("HeadTailConfigure",$param) and $param["HeadTailConfigure"] !== null) {
+        if (array_key_exists('HeadTailConfigure',$param) and $param['HeadTailConfigure'] !== null) {
             $this->HeadTailConfigure = new HeadTailConfigureInfo();
-            $this->HeadTailConfigure->deserialize($param["HeadTailConfigure"]);
+            $this->HeadTailConfigure->deserialize($param['HeadTailConfigure']);
         }
 
-        if (array_key_exists("SegmentConfigure",$param) and $param["SegmentConfigure"] !== null) {
+        if (array_key_exists('SegmentConfigure',$param) and $param['SegmentConfigure'] !== null) {
             $this->SegmentConfigure = new SegmentConfigureInfo();
-            $this->SegmentConfigure->deserialize($param["SegmentConfigure"]);
+            $this->SegmentConfigure->deserialize($param['SegmentConfigure']);
         }
 
-        if (array_key_exists("FaceConfigure",$param) and $param["FaceConfigure"] !== null) {
+        if (array_key_exists('FaceConfigure',$param) and $param['FaceConfigure'] !== null) {
             $this->FaceConfigure = new FaceConfigureInfo();
-            $this->FaceConfigure->deserialize($param["FaceConfigure"]);
+            $this->FaceConfigure->deserialize($param['FaceConfigure']);
         }
 
-        if (array_key_exists("OcrFullTextConfigure",$param) and $param["OcrFullTextConfigure"] !== null) {
+        if (array_key_exists('OcrFullTextConfigure',$param) and $param['OcrFullTextConfigure'] !== null) {
             $this->OcrFullTextConfigure = new OcrFullTextConfigureInfo();
-            $this->OcrFullTextConfigure->deserialize($param["OcrFullTextConfigure"]);
+            $this->OcrFullTextConfigure->deserialize($param['OcrFullTextConfigure']);
         }
 
-        if (array_key_exists("OcrWordsConfigure",$param) and $param["OcrWordsConfigure"] !== null) {
+        if (array_key_exists('OcrWordsConfigure',$param) and $param['OcrWordsConfigure'] !== null) {
             $this->OcrWordsConfigure = new OcrWordsConfigureInfo();
-            $this->OcrWordsConfigure->deserialize($param["OcrWordsConfigure"]);
+            $this->OcrWordsConfigure->deserialize($param['OcrWordsConfigure']);
         }
 
-        if (array_key_exists("AsrFullTextConfigure",$param) and $param["AsrFullTextConfigure"] !== null) {
+        if (array_key_exists('AsrFullTextConfigure',$param) and $param['AsrFullTextConfigure'] !== null) {
             $this->AsrFullTextConfigure = new AsrFullTextConfigureInfo();
-            $this->AsrFullTextConfigure->deserialize($param["AsrFullTextConfigure"]);
+            $this->AsrFullTextConfigure->deserialize($param['AsrFullTextConfigure']);
         }
 
-        if (array_key_exists("AsrWordsConfigure",$param) and $param["AsrWordsConfigure"] !== null) {
+        if (array_key_exists('AsrWordsConfigure',$param) and $param['AsrWordsConfigure'] !== null) {
             $this->AsrWordsConfigure = new AsrWordsConfigureInfo();
-            $this->AsrWordsConfigure->deserialize($param["AsrWordsConfigure"]);
+            $this->AsrWordsConfigure->deserialize($param['AsrWordsConfigure']);
         }
 
-        if (array_key_exists("ObjectConfigure",$param) and $param["ObjectConfigure"] !== null) {
+        if (array_key_exists('ObjectConfigure',$param) and $param['ObjectConfigure'] !== null) {
             $this->ObjectConfigure = new ObjectConfigureInfo();
-            $this->ObjectConfigure->deserialize($param["ObjectConfigure"]);
+            $this->ObjectConfigure->deserialize($param['ObjectConfigure']);
         }
 
-        if (array_key_exists("ScreenshotInterval",$param) and $param["ScreenshotInterval"] !== null) {
-            $this->ScreenshotInterval = $param["ScreenshotInterval"];
+        if (array_key_exists('ScreenshotInterval',$param) and $param['ScreenshotInterval'] !== null) {
+            $this->ScreenshotInterval = $param['ScreenshotInterval'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
-            $this->UpdateTime = $param["UpdateTime"];
+        if (array_key_exists('UpdateTime',$param) and $param['UpdateTime'] !== null) {
+            $this->UpdateTime = $param['UpdateTime'];
         }
     }
 }

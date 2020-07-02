@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -74,16 +74,16 @@ class ClusterExtraArgs extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("KubeAPIServer",$param) and $param["KubeAPIServer"] !== null) {
-            $this->KubeAPIServer = $param["KubeAPIServer"];
+        if (array_key_exists('KubeAPIServer',$param) and $param['KubeAPIServer'] !== null) {
+            $this->KubeAPIServer = $param['KubeAPIServer'];
         }
 
-        if (array_key_exists("KubeControllerManager",$param) and $param["KubeControllerManager"] !== null) {
-            $this->KubeControllerManager = $param["KubeControllerManager"];
+        if (array_key_exists('KubeControllerManager',$param) and $param['KubeControllerManager'] !== null) {
+            $this->KubeControllerManager = $param['KubeControllerManager'];
         }
 
-        if (array_key_exists("KubeScheduler",$param) and $param["KubeScheduler"] !== null) {
-            $this->KubeScheduler = $param["KubeScheduler"];
+        if (array_key_exists('KubeScheduler',$param) and $param['KubeScheduler'] !== null) {
+            $this->KubeScheduler = $param['KubeScheduler'];
         }
     }
 }

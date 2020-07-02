@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -442,143 +442,143 @@ class DescribeCertificateDetailResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("OwnerUin",$param) and $param["OwnerUin"] !== null) {
-            $this->OwnerUin = $param["OwnerUin"];
+        if (array_key_exists('OwnerUin',$param) and $param['OwnerUin'] !== null) {
+            $this->OwnerUin = $param['OwnerUin'];
         }
 
-        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
-            $this->ProjectId = $param["ProjectId"];
+        if (array_key_exists('ProjectId',$param) and $param['ProjectId'] !== null) {
+            $this->ProjectId = $param['ProjectId'];
         }
 
-        if (array_key_exists("From",$param) and $param["From"] !== null) {
-            $this->From = $param["From"];
+        if (array_key_exists('From',$param) and $param['From'] !== null) {
+            $this->From = $param['From'];
         }
 
-        if (array_key_exists("CertificateType",$param) and $param["CertificateType"] !== null) {
-            $this->CertificateType = $param["CertificateType"];
+        if (array_key_exists('CertificateType',$param) and $param['CertificateType'] !== null) {
+            $this->CertificateType = $param['CertificateType'];
         }
 
-        if (array_key_exists("PackageType",$param) and $param["PackageType"] !== null) {
-            $this->PackageType = $param["PackageType"];
+        if (array_key_exists('PackageType',$param) and $param['PackageType'] !== null) {
+            $this->PackageType = $param['PackageType'];
         }
 
-        if (array_key_exists("ProductZhName",$param) and $param["ProductZhName"] !== null) {
-            $this->ProductZhName = $param["ProductZhName"];
+        if (array_key_exists('ProductZhName',$param) and $param['ProductZhName'] !== null) {
+            $this->ProductZhName = $param['ProductZhName'];
         }
 
-        if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
-            $this->Domain = $param["Domain"];
+        if (array_key_exists('Domain',$param) and $param['Domain'] !== null) {
+            $this->Domain = $param['Domain'];
         }
 
-        if (array_key_exists("Alias",$param) and $param["Alias"] !== null) {
-            $this->Alias = $param["Alias"];
+        if (array_key_exists('Alias',$param) and $param['Alias'] !== null) {
+            $this->Alias = $param['Alias'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("StatusMsg",$param) and $param["StatusMsg"] !== null) {
-            $this->StatusMsg = $param["StatusMsg"];
+        if (array_key_exists('StatusMsg',$param) and $param['StatusMsg'] !== null) {
+            $this->StatusMsg = $param['StatusMsg'];
         }
 
-        if (array_key_exists("VerifyType",$param) and $param["VerifyType"] !== null) {
-            $this->VerifyType = $param["VerifyType"];
+        if (array_key_exists('VerifyType',$param) and $param['VerifyType'] !== null) {
+            $this->VerifyType = $param['VerifyType'];
         }
 
-        if (array_key_exists("VulnerabilityStatus",$param) and $param["VulnerabilityStatus"] !== null) {
-            $this->VulnerabilityStatus = $param["VulnerabilityStatus"];
+        if (array_key_exists('VulnerabilityStatus',$param) and $param['VulnerabilityStatus'] !== null) {
+            $this->VulnerabilityStatus = $param['VulnerabilityStatus'];
         }
 
-        if (array_key_exists("CertBeginTime",$param) and $param["CertBeginTime"] !== null) {
-            $this->CertBeginTime = $param["CertBeginTime"];
+        if (array_key_exists('CertBeginTime',$param) and $param['CertBeginTime'] !== null) {
+            $this->CertBeginTime = $param['CertBeginTime'];
         }
 
-        if (array_key_exists("CertEndTime",$param) and $param["CertEndTime"] !== null) {
-            $this->CertEndTime = $param["CertEndTime"];
+        if (array_key_exists('CertEndTime',$param) and $param['CertEndTime'] !== null) {
+            $this->CertEndTime = $param['CertEndTime'];
         }
 
-        if (array_key_exists("ValidityPeriod",$param) and $param["ValidityPeriod"] !== null) {
-            $this->ValidityPeriod = $param["ValidityPeriod"];
+        if (array_key_exists('ValidityPeriod',$param) and $param['ValidityPeriod'] !== null) {
+            $this->ValidityPeriod = $param['ValidityPeriod'];
         }
 
-        if (array_key_exists("InsertTime",$param) and $param["InsertTime"] !== null) {
-            $this->InsertTime = $param["InsertTime"];
+        if (array_key_exists('InsertTime',$param) and $param['InsertTime'] !== null) {
+            $this->InsertTime = $param['InsertTime'];
         }
 
-        if (array_key_exists("OrderId",$param) and $param["OrderId"] !== null) {
-            $this->OrderId = $param["OrderId"];
+        if (array_key_exists('OrderId',$param) and $param['OrderId'] !== null) {
+            $this->OrderId = $param['OrderId'];
         }
 
-        if (array_key_exists("CertificateExtra",$param) and $param["CertificateExtra"] !== null) {
+        if (array_key_exists('CertificateExtra',$param) and $param['CertificateExtra'] !== null) {
             $this->CertificateExtra = new CertificateExtra();
-            $this->CertificateExtra->deserialize($param["CertificateExtra"]);
+            $this->CertificateExtra->deserialize($param['CertificateExtra']);
         }
 
-        if (array_key_exists("CertificatePrivateKey",$param) and $param["CertificatePrivateKey"] !== null) {
-            $this->CertificatePrivateKey = $param["CertificatePrivateKey"];
+        if (array_key_exists('CertificatePrivateKey',$param) and $param['CertificatePrivateKey'] !== null) {
+            $this->CertificatePrivateKey = $param['CertificatePrivateKey'];
         }
 
-        if (array_key_exists("CertificatePublicKey",$param) and $param["CertificatePublicKey"] !== null) {
-            $this->CertificatePublicKey = $param["CertificatePublicKey"];
+        if (array_key_exists('CertificatePublicKey',$param) and $param['CertificatePublicKey'] !== null) {
+            $this->CertificatePublicKey = $param['CertificatePublicKey'];
         }
 
-        if (array_key_exists("DvAuthDetail",$param) and $param["DvAuthDetail"] !== null) {
+        if (array_key_exists('DvAuthDetail',$param) and $param['DvAuthDetail'] !== null) {
             $this->DvAuthDetail = new DvAuthDetail();
-            $this->DvAuthDetail->deserialize($param["DvAuthDetail"]);
+            $this->DvAuthDetail->deserialize($param['DvAuthDetail']);
         }
 
-        if (array_key_exists("VulnerabilityReport",$param) and $param["VulnerabilityReport"] !== null) {
-            $this->VulnerabilityReport = $param["VulnerabilityReport"];
+        if (array_key_exists('VulnerabilityReport',$param) and $param['VulnerabilityReport'] !== null) {
+            $this->VulnerabilityReport = $param['VulnerabilityReport'];
         }
 
-        if (array_key_exists("CertificateId",$param) and $param["CertificateId"] !== null) {
-            $this->CertificateId = $param["CertificateId"];
+        if (array_key_exists('CertificateId',$param) and $param['CertificateId'] !== null) {
+            $this->CertificateId = $param['CertificateId'];
         }
 
-        if (array_key_exists("TypeName",$param) and $param["TypeName"] !== null) {
-            $this->TypeName = $param["TypeName"];
+        if (array_key_exists('TypeName',$param) and $param['TypeName'] !== null) {
+            $this->TypeName = $param['TypeName'];
         }
 
-        if (array_key_exists("StatusName",$param) and $param["StatusName"] !== null) {
-            $this->StatusName = $param["StatusName"];
+        if (array_key_exists('StatusName',$param) and $param['StatusName'] !== null) {
+            $this->StatusName = $param['StatusName'];
         }
 
-        if (array_key_exists("SubjectAltName",$param) and $param["SubjectAltName"] !== null) {
-            $this->SubjectAltName = $param["SubjectAltName"];
+        if (array_key_exists('SubjectAltName',$param) and $param['SubjectAltName'] !== null) {
+            $this->SubjectAltName = $param['SubjectAltName'];
         }
 
-        if (array_key_exists("IsVip",$param) and $param["IsVip"] !== null) {
-            $this->IsVip = $param["IsVip"];
+        if (array_key_exists('IsVip',$param) and $param['IsVip'] !== null) {
+            $this->IsVip = $param['IsVip'];
         }
 
-        if (array_key_exists("IsWildcard",$param) and $param["IsWildcard"] !== null) {
-            $this->IsWildcard = $param["IsWildcard"];
+        if (array_key_exists('IsWildcard',$param) and $param['IsWildcard'] !== null) {
+            $this->IsWildcard = $param['IsWildcard'];
         }
 
-        if (array_key_exists("IsDv",$param) and $param["IsDv"] !== null) {
-            $this->IsDv = $param["IsDv"];
+        if (array_key_exists('IsDv',$param) and $param['IsDv'] !== null) {
+            $this->IsDv = $param['IsDv'];
         }
 
-        if (array_key_exists("IsVulnerability",$param) and $param["IsVulnerability"] !== null) {
-            $this->IsVulnerability = $param["IsVulnerability"];
+        if (array_key_exists('IsVulnerability',$param) and $param['IsVulnerability'] !== null) {
+            $this->IsVulnerability = $param['IsVulnerability'];
         }
 
-        if (array_key_exists("SubmittedData",$param) and $param["SubmittedData"] !== null) {
+        if (array_key_exists('SubmittedData',$param) and $param['SubmittedData'] !== null) {
             $this->SubmittedData = new SubmittedData();
-            $this->SubmittedData->deserialize($param["SubmittedData"]);
+            $this->SubmittedData->deserialize($param['SubmittedData']);
         }
 
-        if (array_key_exists("RenewAble",$param) and $param["RenewAble"] !== null) {
-            $this->RenewAble = $param["RenewAble"];
+        if (array_key_exists('RenewAble',$param) and $param['RenewAble'] !== null) {
+            $this->RenewAble = $param['RenewAble'];
         }
 
-        if (array_key_exists("Deployable",$param) and $param["Deployable"] !== null) {
-            $this->Deployable = $param["Deployable"];
+        if (array_key_exists('Deployable',$param) and $param['Deployable'] !== null) {
+            $this->Deployable = $param['Deployable'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

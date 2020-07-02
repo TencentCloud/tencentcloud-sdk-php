@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -130,45 +130,45 @@ class DomainErrorPageInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ErrorPageId",$param) and $param["ErrorPageId"] !== null) {
-            $this->ErrorPageId = $param["ErrorPageId"];
+        if (array_key_exists('ErrorPageId',$param) and $param['ErrorPageId'] !== null) {
+            $this->ErrorPageId = $param['ErrorPageId'];
         }
 
-        if (array_key_exists("ListenerId",$param) and $param["ListenerId"] !== null) {
-            $this->ListenerId = $param["ListenerId"];
+        if (array_key_exists('ListenerId',$param) and $param['ListenerId'] !== null) {
+            $this->ListenerId = $param['ListenerId'];
         }
 
-        if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
-            $this->Domain = $param["Domain"];
+        if (array_key_exists('Domain',$param) and $param['Domain'] !== null) {
+            $this->Domain = $param['Domain'];
         }
 
-        if (array_key_exists("ErrorNos",$param) and $param["ErrorNos"] !== null) {
-            $this->ErrorNos = $param["ErrorNos"];
+        if (array_key_exists('ErrorNos',$param) and $param['ErrorNos'] !== null) {
+            $this->ErrorNos = $param['ErrorNos'];
         }
 
-        if (array_key_exists("NewErrorNo",$param) and $param["NewErrorNo"] !== null) {
-            $this->NewErrorNo = $param["NewErrorNo"];
+        if (array_key_exists('NewErrorNo',$param) and $param['NewErrorNo'] !== null) {
+            $this->NewErrorNo = $param['NewErrorNo'];
         }
 
-        if (array_key_exists("ClearHeaders",$param) and $param["ClearHeaders"] !== null) {
-            $this->ClearHeaders = $param["ClearHeaders"];
+        if (array_key_exists('ClearHeaders',$param) and $param['ClearHeaders'] !== null) {
+            $this->ClearHeaders = $param['ClearHeaders'];
         }
 
-        if (array_key_exists("SetHeaders",$param) and $param["SetHeaders"] !== null) {
+        if (array_key_exists('SetHeaders',$param) and $param['SetHeaders'] !== null) {
             $this->SetHeaders = [];
-            foreach ($param["SetHeaders"] as $key => $value){
+            foreach ($param['SetHeaders'] as $key => $value){
                 $obj = new HttpHeaderParam();
                 $obj->deserialize($value);
                 array_push($this->SetHeaders, $obj);
             }
         }
 
-        if (array_key_exists("Body",$param) and $param["Body"] !== null) {
-            $this->Body = $param["Body"];
+        if (array_key_exists('Body',$param) and $param['Body'] !== null) {
+            $this->Body = $param['Body'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
     }
 }

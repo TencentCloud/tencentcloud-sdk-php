@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -210,82 +210,82 @@ class Cluster extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
-            $this->ClusterId = $param["ClusterId"];
+        if (array_key_exists('ClusterId',$param) and $param['ClusterId'] !== null) {
+            $this->ClusterId = $param['ClusterId'];
         }
 
-        if (array_key_exists("ClusterName",$param) and $param["ClusterName"] !== null) {
-            $this->ClusterName = $param["ClusterName"];
+        if (array_key_exists('ClusterName',$param) and $param['ClusterName'] !== null) {
+            $this->ClusterName = $param['ClusterName'];
         }
 
-        if (array_key_exists("ClusterDescription",$param) and $param["ClusterDescription"] !== null) {
-            $this->ClusterDescription = $param["ClusterDescription"];
+        if (array_key_exists('ClusterDescription',$param) and $param['ClusterDescription'] !== null) {
+            $this->ClusterDescription = $param['ClusterDescription'];
         }
 
-        if (array_key_exists("ClusterVersion",$param) and $param["ClusterVersion"] !== null) {
-            $this->ClusterVersion = $param["ClusterVersion"];
+        if (array_key_exists('ClusterVersion',$param) and $param['ClusterVersion'] !== null) {
+            $this->ClusterVersion = $param['ClusterVersion'];
         }
 
-        if (array_key_exists("ClusterOs",$param) and $param["ClusterOs"] !== null) {
-            $this->ClusterOs = $param["ClusterOs"];
+        if (array_key_exists('ClusterOs',$param) and $param['ClusterOs'] !== null) {
+            $this->ClusterOs = $param['ClusterOs'];
         }
 
-        if (array_key_exists("ClusterType",$param) and $param["ClusterType"] !== null) {
-            $this->ClusterType = $param["ClusterType"];
+        if (array_key_exists('ClusterType',$param) and $param['ClusterType'] !== null) {
+            $this->ClusterType = $param['ClusterType'];
         }
 
-        if (array_key_exists("ClusterNetworkSettings",$param) and $param["ClusterNetworkSettings"] !== null) {
+        if (array_key_exists('ClusterNetworkSettings',$param) and $param['ClusterNetworkSettings'] !== null) {
             $this->ClusterNetworkSettings = new ClusterNetworkSettings();
-            $this->ClusterNetworkSettings->deserialize($param["ClusterNetworkSettings"]);
+            $this->ClusterNetworkSettings->deserialize($param['ClusterNetworkSettings']);
         }
 
-        if (array_key_exists("ClusterNodeNum",$param) and $param["ClusterNodeNum"] !== null) {
-            $this->ClusterNodeNum = $param["ClusterNodeNum"];
+        if (array_key_exists('ClusterNodeNum',$param) and $param['ClusterNodeNum'] !== null) {
+            $this->ClusterNodeNum = $param['ClusterNodeNum'];
         }
 
-        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
-            $this->ProjectId = $param["ProjectId"];
+        if (array_key_exists('ProjectId',$param) and $param['ProjectId'] !== null) {
+            $this->ProjectId = $param['ProjectId'];
         }
 
-        if (array_key_exists("TagSpecification",$param) and $param["TagSpecification"] !== null) {
+        if (array_key_exists('TagSpecification',$param) and $param['TagSpecification'] !== null) {
             $this->TagSpecification = [];
-            foreach ($param["TagSpecification"] as $key => $value){
+            foreach ($param['TagSpecification'] as $key => $value){
                 $obj = new TagSpecification();
                 $obj->deserialize($value);
                 array_push($this->TagSpecification, $obj);
             }
         }
 
-        if (array_key_exists("ClusterStatus",$param) and $param["ClusterStatus"] !== null) {
-            $this->ClusterStatus = $param["ClusterStatus"];
+        if (array_key_exists('ClusterStatus',$param) and $param['ClusterStatus'] !== null) {
+            $this->ClusterStatus = $param['ClusterStatus'];
         }
 
-        if (array_key_exists("Property",$param) and $param["Property"] !== null) {
-            $this->Property = $param["Property"];
+        if (array_key_exists('Property',$param) and $param['Property'] !== null) {
+            $this->Property = $param['Property'];
         }
 
-        if (array_key_exists("ClusterMaterNodeNum",$param) and $param["ClusterMaterNodeNum"] !== null) {
-            $this->ClusterMaterNodeNum = $param["ClusterMaterNodeNum"];
+        if (array_key_exists('ClusterMaterNodeNum',$param) and $param['ClusterMaterNodeNum'] !== null) {
+            $this->ClusterMaterNodeNum = $param['ClusterMaterNodeNum'];
         }
 
-        if (array_key_exists("ImageId",$param) and $param["ImageId"] !== null) {
-            $this->ImageId = $param["ImageId"];
+        if (array_key_exists('ImageId',$param) and $param['ImageId'] !== null) {
+            $this->ImageId = $param['ImageId'];
         }
 
-        if (array_key_exists("OsCustomizeType",$param) and $param["OsCustomizeType"] !== null) {
-            $this->OsCustomizeType = $param["OsCustomizeType"];
+        if (array_key_exists('OsCustomizeType',$param) and $param['OsCustomizeType'] !== null) {
+            $this->OsCustomizeType = $param['OsCustomizeType'];
         }
 
-        if (array_key_exists("ContainerRuntime",$param) and $param["ContainerRuntime"] !== null) {
-            $this->ContainerRuntime = $param["ContainerRuntime"];
+        if (array_key_exists('ContainerRuntime',$param) and $param['ContainerRuntime'] !== null) {
+            $this->ContainerRuntime = $param['ContainerRuntime'];
         }
 
-        if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
-            $this->CreatedTime = $param["CreatedTime"];
+        if (array_key_exists('CreatedTime',$param) and $param['CreatedTime'] !== null) {
+            $this->CreatedTime = $param['CreatedTime'];
         }
 
-        if (array_key_exists("DeletionProtection",$param) and $param["DeletionProtection"] !== null) {
-            $this->DeletionProtection = $param["DeletionProtection"];
+        if (array_key_exists('DeletionProtection',$param) and $param['DeletionProtection'] !== null) {
+            $this->DeletionProtection = $param['DeletionProtection'];
         }
     }
 }

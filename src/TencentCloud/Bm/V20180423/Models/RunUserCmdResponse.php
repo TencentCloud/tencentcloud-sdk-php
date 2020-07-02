@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -62,26 +62,26 @@ class RunUserCmdResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SuccessTaskInfoSet",$param) and $param["SuccessTaskInfoSet"] !== null) {
+        if (array_key_exists('SuccessTaskInfoSet',$param) and $param['SuccessTaskInfoSet'] !== null) {
             $this->SuccessTaskInfoSet = [];
-            foreach ($param["SuccessTaskInfoSet"] as $key => $value){
+            foreach ($param['SuccessTaskInfoSet'] as $key => $value){
                 $obj = new SuccessTaskInfo();
                 $obj->deserialize($value);
                 array_push($this->SuccessTaskInfoSet, $obj);
             }
         }
 
-        if (array_key_exists("FailedTaskInfoSet",$param) and $param["FailedTaskInfoSet"] !== null) {
+        if (array_key_exists('FailedTaskInfoSet',$param) and $param['FailedTaskInfoSet'] !== null) {
             $this->FailedTaskInfoSet = [];
-            foreach ($param["FailedTaskInfoSet"] as $key => $value){
+            foreach ($param['FailedTaskInfoSet'] as $key => $value){
                 $obj = new FailedTaskInfo();
                 $obj->deserialize($value);
                 array_push($this->FailedTaskInfoSet, $obj);
             }
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

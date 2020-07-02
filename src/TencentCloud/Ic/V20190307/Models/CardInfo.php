@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -326,112 +326,112 @@ class CardInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Iccid",$param) and $param["Iccid"] !== null) {
-            $this->Iccid = $param["Iccid"];
+        if (array_key_exists('Iccid',$param) and $param['Iccid'] !== null) {
+            $this->Iccid = $param['Iccid'];
         }
 
-        if (array_key_exists("Msisdn",$param) and $param["Msisdn"] !== null) {
-            $this->Msisdn = $param["Msisdn"];
+        if (array_key_exists('Msisdn',$param) and $param['Msisdn'] !== null) {
+            $this->Msisdn = $param['Msisdn'];
         }
 
-        if (array_key_exists("Imsi",$param) and $param["Imsi"] !== null) {
-            $this->Imsi = $param["Imsi"];
+        if (array_key_exists('Imsi',$param) and $param['Imsi'] !== null) {
+            $this->Imsi = $param['Imsi'];
         }
 
-        if (array_key_exists("Imei",$param) and $param["Imei"] !== null) {
-            $this->Imei = $param["Imei"];
+        if (array_key_exists('Imei',$param) and $param['Imei'] !== null) {
+            $this->Imei = $param['Imei'];
         }
 
-        if (array_key_exists("Sdkappid",$param) and $param["Sdkappid"] !== null) {
-            $this->Sdkappid = $param["Sdkappid"];
+        if (array_key_exists('Sdkappid',$param) and $param['Sdkappid'] !== null) {
+            $this->Sdkappid = $param['Sdkappid'];
         }
 
-        if (array_key_exists("Teleoperator",$param) and $param["Teleoperator"] !== null) {
-            $this->Teleoperator = $param["Teleoperator"];
+        if (array_key_exists('Teleoperator',$param) and $param['Teleoperator'] !== null) {
+            $this->Teleoperator = $param['Teleoperator'];
         }
 
-        if (array_key_exists("CardStatus",$param) and $param["CardStatus"] !== null) {
-            $this->CardStatus = $param["CardStatus"];
+        if (array_key_exists('CardStatus',$param) and $param['CardStatus'] !== null) {
+            $this->CardStatus = $param['CardStatus'];
         }
 
-        if (array_key_exists("NetworkStatus",$param) and $param["NetworkStatus"] !== null) {
-            $this->NetworkStatus = $param["NetworkStatus"];
+        if (array_key_exists('NetworkStatus',$param) and $param['NetworkStatus'] !== null) {
+            $this->NetworkStatus = $param['NetworkStatus'];
         }
 
-        if (array_key_exists("ActivitedTime",$param) and $param["ActivitedTime"] !== null) {
-            $this->ActivitedTime = $param["ActivitedTime"];
+        if (array_key_exists('ActivitedTime',$param) and $param['ActivitedTime'] !== null) {
+            $this->ActivitedTime = $param['ActivitedTime'];
         }
 
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists('Type',$param) and $param['Type'] !== null) {
+            $this->Type = $param['Type'];
         }
 
-        if (array_key_exists("ProductId",$param) and $param["ProductId"] !== null) {
-            $this->ProductId = $param["ProductId"];
+        if (array_key_exists('ProductId',$param) and $param['ProductId'] !== null) {
+            $this->ProductId = $param['ProductId'];
         }
 
-        if (array_key_exists("PoolId",$param) and $param["PoolId"] !== null) {
-            $this->PoolId = $param["PoolId"];
+        if (array_key_exists('PoolId',$param) and $param['PoolId'] !== null) {
+            $this->PoolId = $param['PoolId'];
         }
 
-        if (array_key_exists("DataUsedInPeriod",$param) and $param["DataUsedInPeriod"] !== null) {
-            $this->DataUsedInPeriod = $param["DataUsedInPeriod"];
+        if (array_key_exists('DataUsedInPeriod',$param) and $param['DataUsedInPeriod'] !== null) {
+            $this->DataUsedInPeriod = $param['DataUsedInPeriod'];
         }
 
-        if (array_key_exists("DataTotalInPeriod",$param) and $param["DataTotalInPeriod"] !== null) {
-            $this->DataTotalInPeriod = $param["DataTotalInPeriod"];
+        if (array_key_exists('DataTotalInPeriod',$param) and $param['DataTotalInPeriod'] !== null) {
+            $this->DataTotalInPeriod = $param['DataTotalInPeriod'];
         }
 
-        if (array_key_exists("ProductExpiredTime",$param) and $param["ProductExpiredTime"] !== null) {
-            $this->ProductExpiredTime = $param["ProductExpiredTime"];
+        if (array_key_exists('ProductExpiredTime',$param) and $param['ProductExpiredTime'] !== null) {
+            $this->ProductExpiredTime = $param['ProductExpiredTime'];
         }
 
-        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
-            $this->Description = $param["Description"];
+        if (array_key_exists('Description',$param) and $param['Description'] !== null) {
+            $this->Description = $param['Description'];
         }
 
-        if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
-            $this->CreatedTime = $param["CreatedTime"];
+        if (array_key_exists('CreatedTime',$param) and $param['CreatedTime'] !== null) {
+            $this->CreatedTime = $param['CreatedTime'];
         }
 
-        if (array_key_exists("ModifiedTime",$param) and $param["ModifiedTime"] !== null) {
-            $this->ModifiedTime = $param["ModifiedTime"];
+        if (array_key_exists('ModifiedTime',$param) and $param['ModifiedTime'] !== null) {
+            $this->ModifiedTime = $param['ModifiedTime'];
         }
 
-        if (array_key_exists("PreorderCnt",$param) and $param["PreorderCnt"] !== null) {
-            $this->PreorderCnt = $param["PreorderCnt"];
+        if (array_key_exists('PreorderCnt',$param) and $param['PreorderCnt'] !== null) {
+            $this->PreorderCnt = $param['PreorderCnt'];
         }
 
-        if (array_key_exists("IsActivated",$param) and $param["IsActivated"] !== null) {
-            $this->IsActivated = $param["IsActivated"];
+        if (array_key_exists('IsActivated',$param) and $param['IsActivated'] !== null) {
+            $this->IsActivated = $param['IsActivated'];
         }
 
-        if (array_key_exists("OrderId",$param) and $param["OrderId"] !== null) {
-            $this->OrderId = $param["OrderId"];
+        if (array_key_exists('OrderId',$param) and $param['OrderId'] !== null) {
+            $this->OrderId = $param['OrderId'];
         }
 
-        if (array_key_exists("AutoRenew",$param) and $param["AutoRenew"] !== null) {
-            $this->AutoRenew = $param["AutoRenew"];
+        if (array_key_exists('AutoRenew',$param) and $param['AutoRenew'] !== null) {
+            $this->AutoRenew = $param['AutoRenew'];
         }
 
-        if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
-            $this->Remark = $param["Remark"];
+        if (array_key_exists('Remark',$param) and $param['Remark'] !== null) {
+            $this->Remark = $param['Remark'];
         }
 
-        if (array_key_exists("AllowArrears",$param) and $param["AllowArrears"] !== null) {
-            $this->AllowArrears = $param["AllowArrears"];
+        if (array_key_exists('AllowArrears',$param) and $param['AllowArrears'] !== null) {
+            $this->AllowArrears = $param['AllowArrears'];
         }
 
-        if (array_key_exists("NeedSms",$param) and $param["NeedSms"] !== null) {
-            $this->NeedSms = $param["NeedSms"];
+        if (array_key_exists('NeedSms',$param) and $param['NeedSms'] !== null) {
+            $this->NeedSms = $param['NeedSms'];
         }
 
-        if (array_key_exists("Provider",$param) and $param["Provider"] !== null) {
-            $this->Provider = $param["Provider"];
+        if (array_key_exists('Provider',$param) and $param['Provider'] !== null) {
+            $this->Provider = $param['Provider'];
         }
 
-        if (array_key_exists("CertificationState",$param) and $param["CertificationState"] !== null) {
-            $this->CertificationState = $param["CertificationState"];
+        if (array_key_exists('CertificationState',$param) and $param['CertificationState'] !== null) {
+            $this->CertificationState = $param['CertificationState'];
         }
     }
 }

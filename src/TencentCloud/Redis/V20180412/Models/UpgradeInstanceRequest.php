@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -70,20 +70,20 @@ class UpgradeInstanceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists('InstanceId',$param) and $param['InstanceId'] !== null) {
+            $this->InstanceId = $param['InstanceId'];
         }
 
-        if (array_key_exists("MemSize",$param) and $param["MemSize"] !== null) {
-            $this->MemSize = $param["MemSize"];
+        if (array_key_exists('MemSize',$param) and $param['MemSize'] !== null) {
+            $this->MemSize = $param['MemSize'];
         }
 
-        if (array_key_exists("RedisShardNum",$param) and $param["RedisShardNum"] !== null) {
-            $this->RedisShardNum = $param["RedisShardNum"];
+        if (array_key_exists('RedisShardNum',$param) and $param['RedisShardNum'] !== null) {
+            $this->RedisShardNum = $param['RedisShardNum'];
         }
 
-        if (array_key_exists("RedisReplicasNum",$param) and $param["RedisReplicasNum"] !== null) {
-            $this->RedisReplicasNum = $param["RedisReplicasNum"];
+        if (array_key_exists('RedisReplicasNum',$param) and $param['RedisReplicasNum'] !== null) {
+            $this->RedisReplicasNum = $param['RedisReplicasNum'];
         }
     }
 }

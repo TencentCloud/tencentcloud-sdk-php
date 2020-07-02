@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -178,59 +178,59 @@ class TranscodeTemplate extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Definition",$param) and $param["Definition"] !== null) {
-            $this->Definition = $param["Definition"];
+        if (array_key_exists('Definition',$param) and $param['Definition'] !== null) {
+            $this->Definition = $param['Definition'];
         }
 
-        if (array_key_exists("Container",$param) and $param["Container"] !== null) {
-            $this->Container = $param["Container"];
+        if (array_key_exists('Container',$param) and $param['Container'] !== null) {
+            $this->Container = $param['Container'];
         }
 
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("Comment",$param) and $param["Comment"] !== null) {
-            $this->Comment = $param["Comment"];
+        if (array_key_exists('Comment',$param) and $param['Comment'] !== null) {
+            $this->Comment = $param['Comment'];
         }
 
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists('Type',$param) and $param['Type'] !== null) {
+            $this->Type = $param['Type'];
         }
 
-        if (array_key_exists("RemoveVideo",$param) and $param["RemoveVideo"] !== null) {
-            $this->RemoveVideo = $param["RemoveVideo"];
+        if (array_key_exists('RemoveVideo',$param) and $param['RemoveVideo'] !== null) {
+            $this->RemoveVideo = $param['RemoveVideo'];
         }
 
-        if (array_key_exists("RemoveAudio",$param) and $param["RemoveAudio"] !== null) {
-            $this->RemoveAudio = $param["RemoveAudio"];
+        if (array_key_exists('RemoveAudio',$param) and $param['RemoveAudio'] !== null) {
+            $this->RemoveAudio = $param['RemoveAudio'];
         }
 
-        if (array_key_exists("VideoTemplate",$param) and $param["VideoTemplate"] !== null) {
+        if (array_key_exists('VideoTemplate',$param) and $param['VideoTemplate'] !== null) {
             $this->VideoTemplate = new VideoTemplateInfo();
-            $this->VideoTemplate->deserialize($param["VideoTemplate"]);
+            $this->VideoTemplate->deserialize($param['VideoTemplate']);
         }
 
-        if (array_key_exists("AudioTemplate",$param) and $param["AudioTemplate"] !== null) {
+        if (array_key_exists('AudioTemplate',$param) and $param['AudioTemplate'] !== null) {
             $this->AudioTemplate = new AudioTemplateInfo();
-            $this->AudioTemplate->deserialize($param["AudioTemplate"]);
+            $this->AudioTemplate->deserialize($param['AudioTemplate']);
         }
 
-        if (array_key_exists("TEHDConfig",$param) and $param["TEHDConfig"] !== null) {
+        if (array_key_exists('TEHDConfig',$param) and $param['TEHDConfig'] !== null) {
             $this->TEHDConfig = new TEHDConfig();
-            $this->TEHDConfig->deserialize($param["TEHDConfig"]);
+            $this->TEHDConfig->deserialize($param['TEHDConfig']);
         }
 
-        if (array_key_exists("ContainerType",$param) and $param["ContainerType"] !== null) {
-            $this->ContainerType = $param["ContainerType"];
+        if (array_key_exists('ContainerType',$param) and $param['ContainerType'] !== null) {
+            $this->ContainerType = $param['ContainerType'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
-            $this->UpdateTime = $param["UpdateTime"];
+        if (array_key_exists('UpdateTime',$param) and $param['UpdateTime'] !== null) {
+            $this->UpdateTime = $param['UpdateTime'];
         }
     }
 }

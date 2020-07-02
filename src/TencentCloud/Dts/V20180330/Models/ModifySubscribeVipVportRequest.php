@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -70,20 +70,20 @@ class ModifySubscribeVipVportRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SubscribeId",$param) and $param["SubscribeId"] !== null) {
-            $this->SubscribeId = $param["SubscribeId"];
+        if (array_key_exists('SubscribeId',$param) and $param['SubscribeId'] !== null) {
+            $this->SubscribeId = $param['SubscribeId'];
         }
 
-        if (array_key_exists("DstUniqSubnetId",$param) and $param["DstUniqSubnetId"] !== null) {
-            $this->DstUniqSubnetId = $param["DstUniqSubnetId"];
+        if (array_key_exists('DstUniqSubnetId',$param) and $param['DstUniqSubnetId'] !== null) {
+            $this->DstUniqSubnetId = $param['DstUniqSubnetId'];
         }
 
-        if (array_key_exists("DstIp",$param) and $param["DstIp"] !== null) {
-            $this->DstIp = $param["DstIp"];
+        if (array_key_exists('DstIp',$param) and $param['DstIp'] !== null) {
+            $this->DstIp = $param['DstIp'];
         }
 
-        if (array_key_exists("DstPort",$param) and $param["DstPort"] !== null) {
-            $this->DstPort = $param["DstPort"];
+        if (array_key_exists('DstPort',$param) and $param['DstPort'] !== null) {
+            $this->DstPort = $param['DstPort'];
         }
     }
 }

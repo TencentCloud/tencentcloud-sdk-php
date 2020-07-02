@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -74,16 +74,16 @@ DAILY_PUBLIC_IP_ASSIGN：用户当前地域下，重新分配公网 IP次数。
         if ($param === null) {
             return;
         }
-        if (array_key_exists("QuotaId",$param) and $param["QuotaId"] !== null) {
-            $this->QuotaId = $param["QuotaId"];
+        if (array_key_exists('QuotaId',$param) and $param['QuotaId'] !== null) {
+            $this->QuotaId = $param['QuotaId'];
         }
 
-        if (array_key_exists("QuotaCurrent",$param) and $param["QuotaCurrent"] !== null) {
-            $this->QuotaCurrent = $param["QuotaCurrent"];
+        if (array_key_exists('QuotaCurrent',$param) and $param['QuotaCurrent'] !== null) {
+            $this->QuotaCurrent = $param['QuotaCurrent'];
         }
 
-        if (array_key_exists("QuotaLimit",$param) and $param["QuotaLimit"] !== null) {
-            $this->QuotaLimit = $param["QuotaLimit"];
+        if (array_key_exists('QuotaLimit',$param) and $param['QuotaLimit'] !== null) {
+            $this->QuotaLimit = $param['QuotaLimit'];
         }
     }
 }

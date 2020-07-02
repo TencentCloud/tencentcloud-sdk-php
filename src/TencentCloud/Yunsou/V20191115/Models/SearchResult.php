@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -102,38 +102,38 @@ class SearchResult extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CostTime",$param) and $param["CostTime"] !== null) {
-            $this->CostTime = $param["CostTime"];
+        if (array_key_exists('CostTime',$param) and $param['CostTime'] !== null) {
+            $this->CostTime = $param['CostTime'];
         }
 
-        if (array_key_exists("DisplayNum",$param) and $param["DisplayNum"] !== null) {
-            $this->DisplayNum = $param["DisplayNum"];
+        if (array_key_exists('DisplayNum',$param) and $param['DisplayNum'] !== null) {
+            $this->DisplayNum = $param['DisplayNum'];
         }
 
-        if (array_key_exists("Echo",$param) and $param["Echo"] !== null) {
-            $this->Echo = $param["Echo"];
+        if (array_key_exists('Echo',$param) and $param['Echo'] !== null) {
+            $this->Echo = $param['Echo'];
         }
 
-        if (array_key_exists("EResultNum",$param) and $param["EResultNum"] !== null) {
-            $this->EResultNum = $param["EResultNum"];
+        if (array_key_exists('EResultNum',$param) and $param['EResultNum'] !== null) {
+            $this->EResultNum = $param['EResultNum'];
         }
 
-        if (array_key_exists("ResultNum",$param) and $param["ResultNum"] !== null) {
-            $this->ResultNum = $param["ResultNum"];
+        if (array_key_exists('ResultNum',$param) and $param['ResultNum'] !== null) {
+            $this->ResultNum = $param['ResultNum'];
         }
 
-        if (array_key_exists("ResultList",$param) and $param["ResultList"] !== null) {
+        if (array_key_exists('ResultList',$param) and $param['ResultList'] !== null) {
             $this->ResultList = [];
-            foreach ($param["ResultList"] as $key => $value){
+            foreach ($param['ResultList'] as $key => $value){
                 $obj = new SearchResultItem();
                 $obj->deserialize($value);
                 array_push($this->ResultList, $obj);
             }
         }
 
-        if (array_key_exists("SegList",$param) and $param["SegList"] !== null) {
+        if (array_key_exists('SegList',$param) and $param['SegList'] !== null) {
             $this->SegList = [];
-            foreach ($param["SegList"] as $key => $value){
+            foreach ($param['SegList'] as $key => $value){
                 $obj = new SearchResultSeg();
                 $obj->deserialize($value);
                 array_push($this->SegList, $obj);

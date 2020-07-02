@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -66,12 +66,12 @@ off：关闭全路径缓存（即开启参数过滤）
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FullUrlCache",$param) and $param["FullUrlCache"] !== null) {
-            $this->FullUrlCache = $param["FullUrlCache"];
+        if (array_key_exists('FullUrlCache',$param) and $param['FullUrlCache'] !== null) {
+            $this->FullUrlCache = $param['FullUrlCache'];
         }
 
-        if (array_key_exists("IgnoreCase",$param) and $param["IgnoreCase"] !== null) {
-            $this->IgnoreCase = $param["IgnoreCase"];
+        if (array_key_exists('IgnoreCase',$param) and $param['IgnoreCase'] !== null) {
+            $this->IgnoreCase = $param['IgnoreCase'];
         }
     }
 }

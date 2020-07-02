@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -62,16 +62,16 @@ class LocalDiskInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LocalDiskType",$param) and $param["LocalDiskType"] !== null) {
-            $this->LocalDiskType = $param["LocalDiskType"];
+        if (array_key_exists('LocalDiskType',$param) and $param['LocalDiskType'] !== null) {
+            $this->LocalDiskType = $param['LocalDiskType'];
         }
 
-        if (array_key_exists("LocalDiskSize",$param) and $param["LocalDiskSize"] !== null) {
-            $this->LocalDiskSize = $param["LocalDiskSize"];
+        if (array_key_exists('LocalDiskSize',$param) and $param['LocalDiskSize'] !== null) {
+            $this->LocalDiskSize = $param['LocalDiskSize'];
         }
 
-        if (array_key_exists("LocalDiskCount",$param) and $param["LocalDiskCount"] !== null) {
-            $this->LocalDiskCount = $param["LocalDiskCount"];
+        if (array_key_exists('LocalDiskCount',$param) and $param['LocalDiskCount'] !== null) {
+            $this->LocalDiskCount = $param['LocalDiskCount'];
         }
     }
 }

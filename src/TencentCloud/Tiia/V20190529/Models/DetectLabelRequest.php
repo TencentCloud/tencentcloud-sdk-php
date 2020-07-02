@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -47,7 +47,7 @@ ALBUM，针对手机相册、网盘产品优化;
 NEWS，针对新闻、资讯、广电等行业优化；
 如果不传此参数，则默认为WEB。
 
-支持多场景（Scenes）一起检测。例如，使用 Scenes=["WEB", "CAMERA"]，即对一张图片使用两个模型同时检测，输出两套识别结果。
+支持多场景（Scenes）一起检测。例如，使用 Scenes=['WEB', 'CAMERA']，即对一张图片使用两个模型同时检测，输出两套识别结果。
  * @method void setScenes(array $Scenes) 设置本次调用支持的识别场景，可选值如下：
 WEB，针对网络图片优化;
 CAMERA，针对手机摄像头拍摄图片优化;
@@ -55,7 +55,7 @@ ALBUM，针对手机相册、网盘产品优化;
 NEWS，针对新闻、资讯、广电等行业优化；
 如果不传此参数，则默认为WEB。
 
-支持多场景（Scenes）一起检测。例如，使用 Scenes=["WEB", "CAMERA"]，即对一张图片使用两个模型同时检测，输出两套识别结果。
+支持多场景（Scenes）一起检测。例如，使用 Scenes=['WEB', 'CAMERA']，即对一张图片使用两个模型同时检测，输出两套识别结果。
  */
 class DetectLabelRequest extends AbstractModel
 {
@@ -85,7 +85,7 @@ ALBUM，针对手机相册、网盘产品优化;
 NEWS，针对新闻、资讯、广电等行业优化；
 如果不传此参数，则默认为WEB。
 
-支持多场景（Scenes）一起检测。例如，使用 Scenes=["WEB", "CAMERA"]，即对一张图片使用两个模型同时检测，输出两套识别结果。
+支持多场景（Scenes）一起检测。例如，使用 Scenes=['WEB', 'CAMERA']，即对一张图片使用两个模型同时检测，输出两套识别结果。
      */
     public $Scenes;
 
@@ -107,7 +107,7 @@ ALBUM，针对手机相册、网盘产品优化;
 NEWS，针对新闻、资讯、广电等行业优化；
 如果不传此参数，则默认为WEB。
 
-支持多场景（Scenes）一起检测。例如，使用 Scenes=["WEB", "CAMERA"]，即对一张图片使用两个模型同时检测，输出两套识别结果。
+支持多场景（Scenes）一起检测。例如，使用 Scenes=['WEB', 'CAMERA']，即对一张图片使用两个模型同时检测，输出两套识别结果。
      */
     function __construct()
     {
@@ -122,16 +122,16 @@ NEWS，针对新闻、资讯、广电等行业优化；
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ImageUrl",$param) and $param["ImageUrl"] !== null) {
-            $this->ImageUrl = $param["ImageUrl"];
+        if (array_key_exists('ImageUrl',$param) and $param['ImageUrl'] !== null) {
+            $this->ImageUrl = $param['ImageUrl'];
         }
 
-        if (array_key_exists("ImageBase64",$param) and $param["ImageBase64"] !== null) {
-            $this->ImageBase64 = $param["ImageBase64"];
+        if (array_key_exists('ImageBase64',$param) and $param['ImageBase64'] !== null) {
+            $this->ImageBase64 = $param['ImageBase64'];
         }
 
-        if (array_key_exists("Scenes",$param) and $param["Scenes"] !== null) {
-            $this->Scenes = $param["Scenes"];
+        if (array_key_exists('Scenes',$param) and $param['Scenes'] !== null) {
+            $this->Scenes = $param['Scenes'];
         }
     }
 }

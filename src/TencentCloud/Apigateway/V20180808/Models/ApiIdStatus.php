@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -226,77 +226,77 @@ class ApiIdStatus extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ServiceId",$param) and $param["ServiceId"] !== null) {
-            $this->ServiceId = $param["ServiceId"];
+        if (array_key_exists('ServiceId',$param) and $param['ServiceId'] !== null) {
+            $this->ServiceId = $param['ServiceId'];
         }
 
-        if (array_key_exists("ApiId",$param) and $param["ApiId"] !== null) {
-            $this->ApiId = $param["ApiId"];
+        if (array_key_exists('ApiId',$param) and $param['ApiId'] !== null) {
+            $this->ApiId = $param['ApiId'];
         }
 
-        if (array_key_exists("ApiDesc",$param) and $param["ApiDesc"] !== null) {
-            $this->ApiDesc = $param["ApiDesc"];
+        if (array_key_exists('ApiDesc',$param) and $param['ApiDesc'] !== null) {
+            $this->ApiDesc = $param['ApiDesc'];
         }
 
-        if (array_key_exists("Path",$param) and $param["Path"] !== null) {
-            $this->Path = $param["Path"];
+        if (array_key_exists('Path',$param) and $param['Path'] !== null) {
+            $this->Path = $param['Path'];
         }
 
-        if (array_key_exists("Method",$param) and $param["Method"] !== null) {
-            $this->Method = $param["Method"];
+        if (array_key_exists('Method',$param) and $param['Method'] !== null) {
+            $this->Method = $param['Method'];
         }
 
-        if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
-            $this->CreatedTime = $param["CreatedTime"];
+        if (array_key_exists('CreatedTime',$param) and $param['CreatedTime'] !== null) {
+            $this->CreatedTime = $param['CreatedTime'];
         }
 
-        if (array_key_exists("ModifiedTime",$param) and $param["ModifiedTime"] !== null) {
-            $this->ModifiedTime = $param["ModifiedTime"];
+        if (array_key_exists('ModifiedTime',$param) and $param['ModifiedTime'] !== null) {
+            $this->ModifiedTime = $param['ModifiedTime'];
         }
 
-        if (array_key_exists("ApiName",$param) and $param["ApiName"] !== null) {
-            $this->ApiName = $param["ApiName"];
+        if (array_key_exists('ApiName',$param) and $param['ApiName'] !== null) {
+            $this->ApiName = $param['ApiName'];
         }
 
-        if (array_key_exists("UniqVpcId",$param) and $param["UniqVpcId"] !== null) {
-            $this->UniqVpcId = $param["UniqVpcId"];
+        if (array_key_exists('UniqVpcId',$param) and $param['UniqVpcId'] !== null) {
+            $this->UniqVpcId = $param['UniqVpcId'];
         }
 
-        if (array_key_exists("ApiType",$param) and $param["ApiType"] !== null) {
-            $this->ApiType = $param["ApiType"];
+        if (array_key_exists('ApiType',$param) and $param['ApiType'] !== null) {
+            $this->ApiType = $param['ApiType'];
         }
 
-        if (array_key_exists("Protocol",$param) and $param["Protocol"] !== null) {
-            $this->Protocol = $param["Protocol"];
+        if (array_key_exists('Protocol',$param) and $param['Protocol'] !== null) {
+            $this->Protocol = $param['Protocol'];
         }
 
-        if (array_key_exists("IsDebugAfterCharge",$param) and $param["IsDebugAfterCharge"] !== null) {
-            $this->IsDebugAfterCharge = $param["IsDebugAfterCharge"];
+        if (array_key_exists('IsDebugAfterCharge',$param) and $param['IsDebugAfterCharge'] !== null) {
+            $this->IsDebugAfterCharge = $param['IsDebugAfterCharge'];
         }
 
-        if (array_key_exists("AuthType",$param) and $param["AuthType"] !== null) {
-            $this->AuthType = $param["AuthType"];
+        if (array_key_exists('AuthType',$param) and $param['AuthType'] !== null) {
+            $this->AuthType = $param['AuthType'];
         }
 
-        if (array_key_exists("ApiBusinessType",$param) and $param["ApiBusinessType"] !== null) {
-            $this->ApiBusinessType = $param["ApiBusinessType"];
+        if (array_key_exists('ApiBusinessType',$param) and $param['ApiBusinessType'] !== null) {
+            $this->ApiBusinessType = $param['ApiBusinessType'];
         }
 
-        if (array_key_exists("AuthRelationApiId",$param) and $param["AuthRelationApiId"] !== null) {
-            $this->AuthRelationApiId = $param["AuthRelationApiId"];
+        if (array_key_exists('AuthRelationApiId',$param) and $param['AuthRelationApiId'] !== null) {
+            $this->AuthRelationApiId = $param['AuthRelationApiId'];
         }
 
-        if (array_key_exists("RelationBuniessApiIds",$param) and $param["RelationBuniessApiIds"] !== null) {
-            $this->RelationBuniessApiIds = $param["RelationBuniessApiIds"];
+        if (array_key_exists('RelationBuniessApiIds',$param) and $param['RelationBuniessApiIds'] !== null) {
+            $this->RelationBuniessApiIds = $param['RelationBuniessApiIds'];
         }
 
-        if (array_key_exists("OauthConfig",$param) and $param["OauthConfig"] !== null) {
+        if (array_key_exists('OauthConfig',$param) and $param['OauthConfig'] !== null) {
             $this->OauthConfig = new OauthConfig();
-            $this->OauthConfig->deserialize($param["OauthConfig"]);
+            $this->OauthConfig->deserialize($param['OauthConfig']);
         }
 
-        if (array_key_exists("TokenLocation",$param) and $param["TokenLocation"] !== null) {
-            $this->TokenLocation = $param["TokenLocation"];
+        if (array_key_exists('TokenLocation',$param) and $param['TokenLocation'] !== null) {
+            $this->TokenLocation = $param['TokenLocation'];
         }
     }
 }

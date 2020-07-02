@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -100,7 +100,7 @@ abstract class AbstractClient
         $this->apiVersion = $version;
 
         if (version_compare(phpversion(), $this->PHP_VERSION_MINIMUM, '<') && $profile->getCheckPHPVersion()) {
-            throw new TencentCloudSDKException("ClientError", "PHP version must >= ".$this->PHP_VERSION_MINIMUM.", your current is ".phpversion());
+            throw new TencentCloudSDKException('ClientError', "PHP version must >= ".$this->PHP_VERSION_MINIMUM.", your current is ".phpversion());
         }
     }
 
@@ -174,7 +174,7 @@ abstract class AbstractClient
         try {
             $responseData = null;
             $serializeRequest = $request->serialize();
-            $method = $this->getPrivateMethod($request, "arrayMerge");
+            $method = $this->getPrivateMethod($request, 'arrayMerge');
             $serializeRequest = $method->invoke($request, $serializeRequest);
             switch ($this->profile->getSignMethod()) {
                 case ClientProfile::$SIGN_HMAC_SHA1:
@@ -185,15 +185,15 @@ abstract class AbstractClient
                     $responseData = $this->doRequestWithTC3($action, $request, $options);
                     break;
                 default:
-                    throw new TencentCloudSDKException("ClientError", "Invalid sign method");
+                    throw new TencentCloudSDKException('ClientError', "Invalid sign method");
                     break;
             }
             if ($responseData->getStatusCode() !== AbstractClient::$HTTP_RSP_OK) {
                 throw new TencentCloudSDKException($responseData->getReasonPhrase(), $responseData->getBody());
             }
-            $tmpResp = json_decode($responseData->getBody(), true)["Response"];
-            if (array_key_exists("Error", $tmpResp)) {
-                throw new TencentCloudSDKException($tmpResp["Error"]["Code"], $tmpResp["Error"]["Message"], $tmpResp["RequestId"]);
+            $tmpResp = json_decode($responseData->getBody(), true)['Response'];
+            if (array_key_exists('Error', $tmpResp)) {
+                throw new TencentCloudSDKException($tmpResp['Error']['Code'], $tmpResp['Error']['Message'], $tmpResp['RequestId']);
             }
 
             return $this->returnResponse($action, $tmpResp);
@@ -226,7 +226,7 @@ abstract class AbstractClient
         $headers = array();
 
         $endpoint = $this->profile->getHttpProfile()->getEndpoint();
-        $headers["Host"] = $endpoint;
+        $headers['Host'] = $endpoint;
 
         $headers["X-TC-Action"] = ucfirst($action);
         $headers["X-TC-RequestClient"] = $this->sdkVersion;
@@ -247,11 +247,11 @@ abstract class AbstractClient
         if (HttpProfile::$REQ_GET == $reqmethod) {
             $headers["Content-Type"] = "application/x-www-form-urlencoded";
             $rs = $request->serialize();
-            $am = $this->getPrivateMethod($request, "arrayMerge");
+            $am = $this->getPrivateMethod($request, 'arrayMerge');
             $rsam = $am->invoke($request, $rs);
             $canonicalQueryString = http_build_query($rsam);
             $payload = "";
-        } else if (isset($options["IsMultipart"]) && $options["IsMultipart"] === true) {
+        } else if (isset($options['IsMultipart']) && $options['IsMultipart'] === true) {
             $boundary = uniqid();
             $headers["Content-Type"] = "multipart/form-data; boundary=".$boundary;
             $canonicalQueryString = "";
@@ -264,14 +264,14 @@ abstract class AbstractClient
 
         if ($this->profile->getUnsignedPayload() == true) {
             $headers["X-TC-Content-SHA256"] = "UNSIGNED-PAYLOAD";
-            $payloadHash = hash("SHA256", "UNSIGNED-PAYLOAD");
+            $payloadHash = hash('SHA256', "UNSIGNED-PAYLOAD");
         } else {
-            $payloadHash = hash("SHA256", $payload);
+            $payloadHash = hash('SHA256', $payload);
         }
 
 
         $canonicalHeaders = "content-type:".$headers["Content-Type"]."\n".
-                            "host:".$headers["Host"]."\n";
+                            "host:".$headers['Host']."\n";
         $signedHeaders = "content-type;host";
         $canonicalRequest = $reqmethod."\n".
                             $canonicalUri."\n".
@@ -285,7 +285,7 @@ abstract class AbstractClient
         $date = gmdate("Y-m-d", $headers["X-TC-Timestamp"]);
         $service = explode(".", $endpoint)[0];
         $credentialScope = $date."/".$service."/tc3_request";
-        $hashedCanonicalRequest = hash("SHA256", $canonicalRequest);
+        $hashedCanonicalRequest = hash('SHA256', $canonicalRequest);
         $str2sign = $algo."\n".
                     $headers["X-TC-Timestamp"]."\n".
                     $credentialScope."\n".
@@ -297,7 +297,7 @@ abstract class AbstractClient
         $auth = $algo.
                 " Credential=".$sid."/".$credentialScope.
                 ", SignedHeaders=content-type;host, Signature=".$signature;
-        $headers["Authorization"] = $auth;
+        $headers['Authorization'] = $auth;
 
         if (HttpProfile::$REQ_GET == $reqmethod) {
             $connect = $this->createConnect();
@@ -315,7 +315,7 @@ abstract class AbstractClient
         foreach ($params as $key => $value) {
             $body .= "--".$boundary."\r\n";
             $body .= "Content-Disposition: form-data; name=\"".$key;
-            if (in_array($key, $options["BinaryParams"])) {
+            if (in_array($key, $options['BinaryParams'])) {
                 $body .= "\"; filename=\"".$key;
             }
             $body .= "\"\r\n";
@@ -357,31 +357,31 @@ abstract class AbstractClient
     private function formatRequestData($action, $request, $reqMethod)
     {
         $param = $request;
-        $param["Action"] = ucfirst($action);
-        $param["RequestClient"] = $this->sdkVersion;
-        $param["Nonce"] = rand();
-        $param["Timestamp"] = time();
-        $param["Version"] = $this->apiVersion;
+        $param['Action'] = ucfirst($action);
+        $param['RequestClient'] = $this->sdkVersion;
+        $param['Nonce'] = rand();
+        $param['Timestamp'] = time();
+        $param['Version'] = $this->apiVersion;
 
         if ($this->credential->getSecretId()) {
-            $param["SecretId"] = $this->credential->getSecretId();
+            $param['SecretId'] = $this->credential->getSecretId();
         }
 
         if ($this->region) {
-            $param["Region"] = $this->region;
+            $param['Region'] = $this->region;
         }
 
         if ($this->credential->getToken()) {
-            $param["Token"] = $this->credential->getToken();
+            $param['Token'] = $this->credential->getToken();
         }
 
         if ($this->profile->getSignMethod()) {
-            $param["SignatureMethod"] = $this->profile->getSignMethod();
+            $param['SignatureMethod'] = $this->profile->getSignMethod();
         }
 
         $signStr = $this->formatSignString($this->profile->getHttpProfile()->getEndpoint(),
             $this->path, $param,  $reqMethod);
-        $param["Signature"] = Sign::sign($this->credential->getSecretKey(), $signStr, $this->profile->getSignMethod());
+        $param['Signature'] = Sign::sign($this->credential->getSecretKey(), $signStr, $this->profile->getSignMethod());
         return $param;
     }
 

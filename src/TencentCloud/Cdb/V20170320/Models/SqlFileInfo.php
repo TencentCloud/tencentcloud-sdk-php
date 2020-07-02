@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -86,29 +86,29 @@ class SqlFileInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("UploadTime",$param) and $param["UploadTime"] !== null) {
-            $this->UploadTime = $param["UploadTime"];
+        if (array_key_exists('UploadTime',$param) and $param['UploadTime'] !== null) {
+            $this->UploadTime = $param['UploadTime'];
         }
 
-        if (array_key_exists("UploadInfo",$param) and $param["UploadInfo"] !== null) {
+        if (array_key_exists('UploadInfo',$param) and $param['UploadInfo'] !== null) {
             $this->UploadInfo = new UploadInfo();
-            $this->UploadInfo->deserialize($param["UploadInfo"]);
+            $this->UploadInfo->deserialize($param['UploadInfo']);
         }
 
-        if (array_key_exists("FileName",$param) and $param["FileName"] !== null) {
-            $this->FileName = $param["FileName"];
+        if (array_key_exists('FileName',$param) and $param['FileName'] !== null) {
+            $this->FileName = $param['FileName'];
         }
 
-        if (array_key_exists("FileSize",$param) and $param["FileSize"] !== null) {
-            $this->FileSize = $param["FileSize"];
+        if (array_key_exists('FileSize',$param) and $param['FileSize'] !== null) {
+            $this->FileSize = $param['FileSize'];
         }
 
-        if (array_key_exists("IsUploadFinished",$param) and $param["IsUploadFinished"] !== null) {
-            $this->IsUploadFinished = $param["IsUploadFinished"];
+        if (array_key_exists('IsUploadFinished',$param) and $param['IsUploadFinished'] !== null) {
+            $this->IsUploadFinished = $param['IsUploadFinished'];
         }
 
-        if (array_key_exists("FileId",$param) and $param["FileId"] !== null) {
-            $this->FileId = $param["FileId"];
+        if (array_key_exists('FileId',$param) and $param['FileId'] !== null) {
+            $this->FileId = $param['FileId'];
         }
     }
 }

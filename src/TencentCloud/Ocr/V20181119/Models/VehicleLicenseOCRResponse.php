@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -118,26 +118,26 @@ WARN_DRIVER_LICENSE_PS_CARD ps告警
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FrontInfo",$param) and $param["FrontInfo"] !== null) {
+        if (array_key_exists('FrontInfo',$param) and $param['FrontInfo'] !== null) {
             $this->FrontInfo = new TextVehicleFront();
-            $this->FrontInfo->deserialize($param["FrontInfo"]);
+            $this->FrontInfo->deserialize($param['FrontInfo']);
         }
 
-        if (array_key_exists("BackInfo",$param) and $param["BackInfo"] !== null) {
+        if (array_key_exists('BackInfo',$param) and $param['BackInfo'] !== null) {
             $this->BackInfo = new TextVehicleBack();
-            $this->BackInfo->deserialize($param["BackInfo"]);
+            $this->BackInfo->deserialize($param['BackInfo']);
         }
 
-        if (array_key_exists("RecognizeWarnCode",$param) and $param["RecognizeWarnCode"] !== null) {
-            $this->RecognizeWarnCode = $param["RecognizeWarnCode"];
+        if (array_key_exists('RecognizeWarnCode',$param) and $param['RecognizeWarnCode'] !== null) {
+            $this->RecognizeWarnCode = $param['RecognizeWarnCode'];
         }
 
-        if (array_key_exists("RecognizeWarnMsg",$param) and $param["RecognizeWarnMsg"] !== null) {
-            $this->RecognizeWarnMsg = $param["RecognizeWarnMsg"];
+        if (array_key_exists('RecognizeWarnMsg',$param) and $param['RecognizeWarnMsg'] !== null) {
+            $this->RecognizeWarnMsg = $param['RecognizeWarnMsg'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

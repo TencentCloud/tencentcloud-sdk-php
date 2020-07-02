@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -126,39 +126,39 @@ class ParseLiveStreamProcessNotificationResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("NotificationType",$param) and $param["NotificationType"] !== null) {
-            $this->NotificationType = $param["NotificationType"];
+        if (array_key_exists('NotificationType',$param) and $param['NotificationType'] !== null) {
+            $this->NotificationType = $param['NotificationType'];
         }
 
-        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
-            $this->TaskId = $param["TaskId"];
+        if (array_key_exists('TaskId',$param) and $param['TaskId'] !== null) {
+            $this->TaskId = $param['TaskId'];
         }
 
-        if (array_key_exists("ProcessEofInfo",$param) and $param["ProcessEofInfo"] !== null) {
+        if (array_key_exists('ProcessEofInfo',$param) and $param['ProcessEofInfo'] !== null) {
             $this->ProcessEofInfo = new LiveStreamProcessErrorInfo();
-            $this->ProcessEofInfo->deserialize($param["ProcessEofInfo"]);
+            $this->ProcessEofInfo->deserialize($param['ProcessEofInfo']);
         }
 
-        if (array_key_exists("AiReviewResultInfo",$param) and $param["AiReviewResultInfo"] !== null) {
+        if (array_key_exists('AiReviewResultInfo',$param) and $param['AiReviewResultInfo'] !== null) {
             $this->AiReviewResultInfo = new LiveStreamAiReviewResultInfo();
-            $this->AiReviewResultInfo->deserialize($param["AiReviewResultInfo"]);
+            $this->AiReviewResultInfo->deserialize($param['AiReviewResultInfo']);
         }
 
-        if (array_key_exists("AiRecognitionResultInfo",$param) and $param["AiRecognitionResultInfo"] !== null) {
+        if (array_key_exists('AiRecognitionResultInfo',$param) and $param['AiRecognitionResultInfo'] !== null) {
             $this->AiRecognitionResultInfo = new LiveStreamAiRecognitionResultInfo();
-            $this->AiRecognitionResultInfo->deserialize($param["AiRecognitionResultInfo"]);
+            $this->AiRecognitionResultInfo->deserialize($param['AiRecognitionResultInfo']);
         }
 
-        if (array_key_exists("SessionId",$param) and $param["SessionId"] !== null) {
-            $this->SessionId = $param["SessionId"];
+        if (array_key_exists('SessionId',$param) and $param['SessionId'] !== null) {
+            $this->SessionId = $param['SessionId'];
         }
 
-        if (array_key_exists("SessionContext",$param) and $param["SessionContext"] !== null) {
-            $this->SessionContext = $param["SessionContext"];
+        if (array_key_exists('SessionContext',$param) and $param['SessionContext'] !== null) {
+            $this->SessionContext = $param['SessionContext'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

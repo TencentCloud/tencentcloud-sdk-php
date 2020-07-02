@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -170,52 +170,52 @@ NAT类型支持网络地址转换配置，类型确定后不能修改；一个�
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DirectConnectGatewayId",$param) and $param["DirectConnectGatewayId"] !== null) {
-            $this->DirectConnectGatewayId = $param["DirectConnectGatewayId"];
+        if (array_key_exists('DirectConnectGatewayId',$param) and $param['DirectConnectGatewayId'] !== null) {
+            $this->DirectConnectGatewayId = $param['DirectConnectGatewayId'];
         }
 
-        if (array_key_exists("DirectConnectGatewayName",$param) and $param["DirectConnectGatewayName"] !== null) {
-            $this->DirectConnectGatewayName = $param["DirectConnectGatewayName"];
+        if (array_key_exists('DirectConnectGatewayName',$param) and $param['DirectConnectGatewayName'] !== null) {
+            $this->DirectConnectGatewayName = $param['DirectConnectGatewayName'];
         }
 
-        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
-            $this->VpcId = $param["VpcId"];
+        if (array_key_exists('VpcId',$param) and $param['VpcId'] !== null) {
+            $this->VpcId = $param['VpcId'];
         }
 
-        if (array_key_exists("NetworkType",$param) and $param["NetworkType"] !== null) {
-            $this->NetworkType = $param["NetworkType"];
+        if (array_key_exists('NetworkType',$param) and $param['NetworkType'] !== null) {
+            $this->NetworkType = $param['NetworkType'];
         }
 
-        if (array_key_exists("NetworkInstanceId",$param) and $param["NetworkInstanceId"] !== null) {
-            $this->NetworkInstanceId = $param["NetworkInstanceId"];
+        if (array_key_exists('NetworkInstanceId',$param) and $param['NetworkInstanceId'] !== null) {
+            $this->NetworkInstanceId = $param['NetworkInstanceId'];
         }
 
-        if (array_key_exists("GatewayType",$param) and $param["GatewayType"] !== null) {
-            $this->GatewayType = $param["GatewayType"];
+        if (array_key_exists('GatewayType',$param) and $param['GatewayType'] !== null) {
+            $this->GatewayType = $param['GatewayType'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("DirectConnectGatewayIp",$param) and $param["DirectConnectGatewayIp"] !== null) {
-            $this->DirectConnectGatewayIp = $param["DirectConnectGatewayIp"];
+        if (array_key_exists('DirectConnectGatewayIp',$param) and $param['DirectConnectGatewayIp'] !== null) {
+            $this->DirectConnectGatewayIp = $param['DirectConnectGatewayIp'];
         }
 
-        if (array_key_exists("CcnId",$param) and $param["CcnId"] !== null) {
-            $this->CcnId = $param["CcnId"];
+        if (array_key_exists('CcnId',$param) and $param['CcnId'] !== null) {
+            $this->CcnId = $param['CcnId'];
         }
 
-        if (array_key_exists("CcnRouteType",$param) and $param["CcnRouteType"] !== null) {
-            $this->CcnRouteType = $param["CcnRouteType"];
+        if (array_key_exists('CcnRouteType',$param) and $param['CcnRouteType'] !== null) {
+            $this->CcnRouteType = $param['CcnRouteType'];
         }
 
-        if (array_key_exists("EnableBGP",$param) and $param["EnableBGP"] !== null) {
-            $this->EnableBGP = $param["EnableBGP"];
+        if (array_key_exists('EnableBGP',$param) and $param['EnableBGP'] !== null) {
+            $this->EnableBGP = $param['EnableBGP'];
         }
 
-        if (array_key_exists("EnableBGPCommunity",$param) and $param["EnableBGPCommunity"] !== null) {
-            $this->EnableBGPCommunity = $param["EnableBGPCommunity"];
+        if (array_key_exists('EnableBGPCommunity',$param) and $param['EnableBGPCommunity'] !== null) {
+            $this->EnableBGPCommunity = $param['EnableBGPCommunity'];
         }
     }
 }

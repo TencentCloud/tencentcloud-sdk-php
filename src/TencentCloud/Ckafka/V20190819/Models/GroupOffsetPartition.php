@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -90,28 +90,28 @@ class GroupOffsetPartition extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Partition",$param) and $param["Partition"] !== null) {
-            $this->Partition = $param["Partition"];
+        if (array_key_exists('Partition',$param) and $param['Partition'] !== null) {
+            $this->Partition = $param['Partition'];
         }
 
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
+        if (array_key_exists('Offset',$param) and $param['Offset'] !== null) {
+            $this->Offset = $param['Offset'];
         }
 
-        if (array_key_exists("Metadata",$param) and $param["Metadata"] !== null) {
-            $this->Metadata = $param["Metadata"];
+        if (array_key_exists('Metadata',$param) and $param['Metadata'] !== null) {
+            $this->Metadata = $param['Metadata'];
         }
 
-        if (array_key_exists("ErrorCode",$param) and $param["ErrorCode"] !== null) {
-            $this->ErrorCode = $param["ErrorCode"];
+        if (array_key_exists('ErrorCode',$param) and $param['ErrorCode'] !== null) {
+            $this->ErrorCode = $param['ErrorCode'];
         }
 
-        if (array_key_exists("LogEndOffset",$param) and $param["LogEndOffset"] !== null) {
-            $this->LogEndOffset = $param["LogEndOffset"];
+        if (array_key_exists('LogEndOffset',$param) and $param['LogEndOffset'] !== null) {
+            $this->LogEndOffset = $param['LogEndOffset'];
         }
 
-        if (array_key_exists("Lag",$param) and $param["Lag"] !== null) {
-            $this->Lag = $param["Lag"];
+        if (array_key_exists('Lag',$param) and $param['Lag'] !== null) {
+            $this->Lag = $param['Lag'];
         }
     }
 }

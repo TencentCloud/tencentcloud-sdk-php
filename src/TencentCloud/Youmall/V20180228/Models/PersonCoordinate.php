@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -102,36 +102,36 @@ class PersonCoordinate extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CADX",$param) and $param["CADX"] !== null) {
-            $this->CADX = $param["CADX"];
+        if (array_key_exists('CADX',$param) and $param['CADX'] !== null) {
+            $this->CADX = $param['CADX'];
         }
 
-        if (array_key_exists("CADY",$param) and $param["CADY"] !== null) {
-            $this->CADY = $param["CADY"];
+        if (array_key_exists('CADY',$param) and $param['CADY'] !== null) {
+            $this->CADY = $param['CADY'];
         }
 
-        if (array_key_exists("CapTime",$param) and $param["CapTime"] !== null) {
-            $this->CapTime = $param["CapTime"];
+        if (array_key_exists('CapTime',$param) and $param['CapTime'] !== null) {
+            $this->CapTime = $param['CapTime'];
         }
 
-        if (array_key_exists("CapPic",$param) and $param["CapPic"] !== null) {
-            $this->CapPic = $param["CapPic"];
+        if (array_key_exists('CapPic',$param) and $param['CapPic'] !== null) {
+            $this->CapPic = $param['CapPic'];
         }
 
-        if (array_key_exists("MallAreaType",$param) and $param["MallAreaType"] !== null) {
-            $this->MallAreaType = $param["MallAreaType"];
+        if (array_key_exists('MallAreaType',$param) and $param['MallAreaType'] !== null) {
+            $this->MallAreaType = $param['MallAreaType'];
         }
 
-        if (array_key_exists("PosId",$param) and $param["PosId"] !== null) {
-            $this->PosId = $param["PosId"];
+        if (array_key_exists('PosId',$param) and $param['PosId'] !== null) {
+            $this->PosId = $param['PosId'];
         }
 
-        if (array_key_exists("ShopId",$param) and $param["ShopId"] !== null) {
-            $this->ShopId = $param["ShopId"];
+        if (array_key_exists('ShopId',$param) and $param['ShopId'] !== null) {
+            $this->ShopId = $param['ShopId'];
         }
 
-        if (array_key_exists("Event",$param) and $param["Event"] !== null) {
-            $this->Event = $param["Event"];
+        if (array_key_exists('Event',$param) and $param['Event'] !== null) {
+            $this->Event = $param['Event'];
         }
     }
 }

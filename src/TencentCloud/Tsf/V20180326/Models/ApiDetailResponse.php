@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -102,43 +102,43 @@ class ApiDetailResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Request",$param) and $param["Request"] !== null) {
+        if (array_key_exists('Request',$param) and $param['Request'] !== null) {
             $this->Request = [];
-            foreach ($param["Request"] as $key => $value){
+            foreach ($param['Request'] as $key => $value){
                 $obj = new ApiRequestDescr();
                 $obj->deserialize($value);
                 array_push($this->Request, $obj);
             }
         }
 
-        if (array_key_exists("Response",$param) and $param["Response"] !== null) {
+        if (array_key_exists('Response',$param) and $param['Response'] !== null) {
             $this->Response = [];
-            foreach ($param["Response"] as $key => $value){
+            foreach ($param['Response'] as $key => $value){
                 $obj = new ApiResponseDescr();
                 $obj->deserialize($value);
                 array_push($this->Response, $obj);
             }
         }
 
-        if (array_key_exists("Definitions",$param) and $param["Definitions"] !== null) {
+        if (array_key_exists('Definitions',$param) and $param['Definitions'] !== null) {
             $this->Definitions = [];
-            foreach ($param["Definitions"] as $key => $value){
+            foreach ($param['Definitions'] as $key => $value){
                 $obj = new ApiDefinitionDescr();
                 $obj->deserialize($value);
                 array_push($this->Definitions, $obj);
             }
         }
 
-        if (array_key_exists("RequestContentType",$param) and $param["RequestContentType"] !== null) {
-            $this->RequestContentType = $param["RequestContentType"];
+        if (array_key_exists('RequestContentType',$param) and $param['RequestContentType'] !== null) {
+            $this->RequestContentType = $param['RequestContentType'];
         }
 
-        if (array_key_exists("CanRun",$param) and $param["CanRun"] !== null) {
-            $this->CanRun = $param["CanRun"];
+        if (array_key_exists('CanRun',$param) and $param['CanRun'] !== null) {
+            $this->CanRun = $param['CanRun'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
     }
 }

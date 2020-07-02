@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -162,65 +162,65 @@ class TextData extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("EvilFlag",$param) and $param["EvilFlag"] !== null) {
-            $this->EvilFlag = $param["EvilFlag"];
+        if (array_key_exists('EvilFlag',$param) and $param['EvilFlag'] !== null) {
+            $this->EvilFlag = $param['EvilFlag'];
         }
 
-        if (array_key_exists("EvilType",$param) and $param["EvilType"] !== null) {
-            $this->EvilType = $param["EvilType"];
+        if (array_key_exists('EvilType',$param) and $param['EvilType'] !== null) {
+            $this->EvilType = $param['EvilType'];
         }
 
-        if (array_key_exists("Common",$param) and $param["Common"] !== null) {
+        if (array_key_exists('Common',$param) and $param['Common'] !== null) {
             $this->Common = new TextOutputComm();
-            $this->Common->deserialize($param["Common"]);
+            $this->Common->deserialize($param['Common']);
         }
 
-        if (array_key_exists("CustomResult",$param) and $param["CustomResult"] !== null) {
+        if (array_key_exists('CustomResult',$param) and $param['CustomResult'] !== null) {
             $this->CustomResult = [];
-            foreach ($param["CustomResult"] as $key => $value){
+            foreach ($param['CustomResult'] as $key => $value){
                 $obj = new CustomResult();
                 $obj->deserialize($value);
                 array_push($this->CustomResult, $obj);
             }
         }
 
-        if (array_key_exists("DetailResult",$param) and $param["DetailResult"] !== null) {
+        if (array_key_exists('DetailResult',$param) and $param['DetailResult'] !== null) {
             $this->DetailResult = [];
-            foreach ($param["DetailResult"] as $key => $value){
+            foreach ($param['DetailResult'] as $key => $value){
                 $obj = new DetailResult();
                 $obj->deserialize($value);
                 array_push($this->DetailResult, $obj);
             }
         }
 
-        if (array_key_exists("ID",$param) and $param["ID"] !== null) {
+        if (array_key_exists('ID',$param) and $param['ID'] !== null) {
             $this->ID = new TextOutputID();
-            $this->ID->deserialize($param["ID"]);
+            $this->ID->deserialize($param['ID']);
         }
 
-        if (array_key_exists("Res",$param) and $param["Res"] !== null) {
+        if (array_key_exists('Res',$param) and $param['Res'] !== null) {
             $this->Res = new TextOutputRes();
-            $this->Res->deserialize($param["Res"]);
+            $this->Res->deserialize($param['Res']);
         }
 
-        if (array_key_exists("BizType",$param) and $param["BizType"] !== null) {
-            $this->BizType = $param["BizType"];
+        if (array_key_exists('BizType',$param) and $param['BizType'] !== null) {
+            $this->BizType = $param['BizType'];
         }
 
-        if (array_key_exists("EvilLabel",$param) and $param["EvilLabel"] !== null) {
-            $this->EvilLabel = $param["EvilLabel"];
+        if (array_key_exists('EvilLabel',$param) and $param['EvilLabel'] !== null) {
+            $this->EvilLabel = $param['EvilLabel'];
         }
 
-        if (array_key_exists("Keywords",$param) and $param["Keywords"] !== null) {
-            $this->Keywords = $param["Keywords"];
+        if (array_key_exists('Keywords',$param) and $param['Keywords'] !== null) {
+            $this->Keywords = $param['Keywords'];
         }
 
-        if (array_key_exists("Score",$param) and $param["Score"] !== null) {
-            $this->Score = $param["Score"];
+        if (array_key_exists('Score',$param) and $param['Score'] !== null) {
+            $this->Score = $param['Score'];
         }
 
-        if (array_key_exists("Suggestion",$param) and $param["Suggestion"] !== null) {
-            $this->Suggestion = $param["Suggestion"];
+        if (array_key_exists('Suggestion',$param) and $param['Suggestion'] !== null) {
+            $this->Suggestion = $param['Suggestion'];
         }
     }
 }

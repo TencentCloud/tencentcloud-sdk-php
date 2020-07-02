@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -70,20 +70,20 @@ class DeviceStatData extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Datetime",$param) and $param["Datetime"] !== null) {
-            $this->Datetime = $param["Datetime"];
+        if (array_key_exists('Datetime',$param) and $param['Datetime'] !== null) {
+            $this->Datetime = $param['Datetime'];
         }
 
-        if (array_key_exists("DeviceOnline",$param) and $param["DeviceOnline"] !== null) {
-            $this->DeviceOnline = $param["DeviceOnline"];
+        if (array_key_exists('DeviceOnline',$param) and $param['DeviceOnline'] !== null) {
+            $this->DeviceOnline = $param['DeviceOnline'];
         }
 
-        if (array_key_exists("DeviceActive",$param) and $param["DeviceActive"] !== null) {
-            $this->DeviceActive = $param["DeviceActive"];
+        if (array_key_exists('DeviceActive',$param) and $param['DeviceActive'] !== null) {
+            $this->DeviceActive = $param['DeviceActive'];
         }
 
-        if (array_key_exists("DeviceTotal",$param) and $param["DeviceTotal"] !== null) {
-            $this->DeviceTotal = $param["DeviceTotal"];
+        if (array_key_exists('DeviceTotal',$param) and $param['DeviceTotal'] !== null) {
+            $this->DeviceTotal = $param['DeviceTotal'];
         }
     }
 }

@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -234,64 +234,64 @@ E008	        经查，该企业厂商识别代码以及条码尚未通报
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ProductName",$param) and $param["ProductName"] !== null) {
-            $this->ProductName = $param["ProductName"];
+        if (array_key_exists('ProductName',$param) and $param['ProductName'] !== null) {
+            $this->ProductName = $param['ProductName'];
         }
 
-        if (array_key_exists("EnName",$param) and $param["EnName"] !== null) {
-            $this->EnName = $param["EnName"];
+        if (array_key_exists('EnName',$param) and $param['EnName'] !== null) {
+            $this->EnName = $param['EnName'];
         }
 
-        if (array_key_exists("BrandName",$param) and $param["BrandName"] !== null) {
-            $this->BrandName = $param["BrandName"];
+        if (array_key_exists('BrandName',$param) and $param['BrandName'] !== null) {
+            $this->BrandName = $param['BrandName'];
         }
 
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists('Type',$param) and $param['Type'] !== null) {
+            $this->Type = $param['Type'];
         }
 
-        if (array_key_exists("Width",$param) and $param["Width"] !== null) {
-            $this->Width = $param["Width"];
+        if (array_key_exists('Width',$param) and $param['Width'] !== null) {
+            $this->Width = $param['Width'];
         }
 
-        if (array_key_exists("Height",$param) and $param["Height"] !== null) {
-            $this->Height = $param["Height"];
+        if (array_key_exists('Height',$param) and $param['Height'] !== null) {
+            $this->Height = $param['Height'];
         }
 
-        if (array_key_exists("Depth",$param) and $param["Depth"] !== null) {
-            $this->Depth = $param["Depth"];
+        if (array_key_exists('Depth',$param) and $param['Depth'] !== null) {
+            $this->Depth = $param['Depth'];
         }
 
-        if (array_key_exists("KeyWord",$param) and $param["KeyWord"] !== null) {
-            $this->KeyWord = $param["KeyWord"];
+        if (array_key_exists('KeyWord',$param) and $param['KeyWord'] !== null) {
+            $this->KeyWord = $param['KeyWord'];
         }
 
-        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
-            $this->Description = $param["Description"];
+        if (array_key_exists('Description',$param) and $param['Description'] !== null) {
+            $this->Description = $param['Description'];
         }
 
-        if (array_key_exists("ImageLink",$param) and $param["ImageLink"] !== null) {
-            $this->ImageLink = $param["ImageLink"];
+        if (array_key_exists('ImageLink',$param) and $param['ImageLink'] !== null) {
+            $this->ImageLink = $param['ImageLink'];
         }
 
-        if (array_key_exists("ManufacturerName",$param) and $param["ManufacturerName"] !== null) {
-            $this->ManufacturerName = $param["ManufacturerName"];
+        if (array_key_exists('ManufacturerName',$param) and $param['ManufacturerName'] !== null) {
+            $this->ManufacturerName = $param['ManufacturerName'];
         }
 
-        if (array_key_exists("ManufacturerAddress",$param) and $param["ManufacturerAddress"] !== null) {
-            $this->ManufacturerAddress = $param["ManufacturerAddress"];
+        if (array_key_exists('ManufacturerAddress',$param) and $param['ManufacturerAddress'] !== null) {
+            $this->ManufacturerAddress = $param['ManufacturerAddress'];
         }
 
-        if (array_key_exists("FirmCode",$param) and $param["FirmCode"] !== null) {
-            $this->FirmCode = $param["FirmCode"];
+        if (array_key_exists('FirmCode',$param) and $param['FirmCode'] !== null) {
+            $this->FirmCode = $param['FirmCode'];
         }
 
-        if (array_key_exists("CheckResult",$param) and $param["CheckResult"] !== null) {
-            $this->CheckResult = $param["CheckResult"];
+        if (array_key_exists('CheckResult',$param) and $param['CheckResult'] !== null) {
+            $this->CheckResult = $param['CheckResult'];
         }
 
-        if (array_key_exists("CategoryCode",$param) and $param["CategoryCode"] !== null) {
-            $this->CategoryCode = $param["CategoryCode"];
+        if (array_key_exists('CategoryCode',$param) and $param['CategoryCode'] !== null) {
+            $this->CategoryCode = $param['CategoryCode'];
         }
     }
 }

@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -266,110 +266,110 @@ class DeviceInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DeviceName",$param) and $param["DeviceName"] !== null) {
-            $this->DeviceName = $param["DeviceName"];
+        if (array_key_exists('DeviceName',$param) and $param['DeviceName'] !== null) {
+            $this->DeviceName = $param['DeviceName'];
         }
 
-        if (array_key_exists("Online",$param) and $param["Online"] !== null) {
-            $this->Online = $param["Online"];
+        if (array_key_exists('Online',$param) and $param['Online'] !== null) {
+            $this->Online = $param['Online'];
         }
 
-        if (array_key_exists("LoginTime",$param) and $param["LoginTime"] !== null) {
-            $this->LoginTime = $param["LoginTime"];
+        if (array_key_exists('LoginTime',$param) and $param['LoginTime'] !== null) {
+            $this->LoginTime = $param['LoginTime'];
         }
 
-        if (array_key_exists("Version",$param) and $param["Version"] !== null) {
-            $this->Version = $param["Version"];
+        if (array_key_exists('Version',$param) and $param['Version'] !== null) {
+            $this->Version = $param['Version'];
         }
 
-        if (array_key_exists("DeviceCert",$param) and $param["DeviceCert"] !== null) {
-            $this->DeviceCert = $param["DeviceCert"];
+        if (array_key_exists('DeviceCert',$param) and $param['DeviceCert'] !== null) {
+            $this->DeviceCert = $param['DeviceCert'];
         }
 
-        if (array_key_exists("DevicePsk",$param) and $param["DevicePsk"] !== null) {
-            $this->DevicePsk = $param["DevicePsk"];
+        if (array_key_exists('DevicePsk',$param) and $param['DevicePsk'] !== null) {
+            $this->DevicePsk = $param['DevicePsk'];
         }
 
-        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+        if (array_key_exists('Tags',$param) and $param['Tags'] !== null) {
             $this->Tags = [];
-            foreach ($param["Tags"] as $key => $value){
+            foreach ($param['Tags'] as $key => $value){
                 $obj = new DeviceTag();
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
         }
 
-        if (array_key_exists("DeviceType",$param) and $param["DeviceType"] !== null) {
-            $this->DeviceType = $param["DeviceType"];
+        if (array_key_exists('DeviceType',$param) and $param['DeviceType'] !== null) {
+            $this->DeviceType = $param['DeviceType'];
         }
 
-        if (array_key_exists("Imei",$param) and $param["Imei"] !== null) {
-            $this->Imei = $param["Imei"];
+        if (array_key_exists('Imei',$param) and $param['Imei'] !== null) {
+            $this->Imei = $param['Imei'];
         }
 
-        if (array_key_exists("Isp",$param) and $param["Isp"] !== null) {
-            $this->Isp = $param["Isp"];
+        if (array_key_exists('Isp',$param) and $param['Isp'] !== null) {
+            $this->Isp = $param['Isp'];
         }
 
-        if (array_key_exists("NbiotDeviceID",$param) and $param["NbiotDeviceID"] !== null) {
-            $this->NbiotDeviceID = $param["NbiotDeviceID"];
+        if (array_key_exists('NbiotDeviceID',$param) and $param['NbiotDeviceID'] !== null) {
+            $this->NbiotDeviceID = $param['NbiotDeviceID'];
         }
 
-        if (array_key_exists("ConnIP",$param) and $param["ConnIP"] !== null) {
-            $this->ConnIP = $param["ConnIP"];
+        if (array_key_exists('ConnIP',$param) and $param['ConnIP'] !== null) {
+            $this->ConnIP = $param['ConnIP'];
         }
 
-        if (array_key_exists("LastUpdateTime",$param) and $param["LastUpdateTime"] !== null) {
-            $this->LastUpdateTime = $param["LastUpdateTime"];
+        if (array_key_exists('LastUpdateTime',$param) and $param['LastUpdateTime'] !== null) {
+            $this->LastUpdateTime = $param['LastUpdateTime'];
         }
 
-        if (array_key_exists("LoraDevEui",$param) and $param["LoraDevEui"] !== null) {
-            $this->LoraDevEui = $param["LoraDevEui"];
+        if (array_key_exists('LoraDevEui',$param) and $param['LoraDevEui'] !== null) {
+            $this->LoraDevEui = $param['LoraDevEui'];
         }
 
-        if (array_key_exists("LoraMoteType",$param) and $param["LoraMoteType"] !== null) {
-            $this->LoraMoteType = $param["LoraMoteType"];
+        if (array_key_exists('LoraMoteType',$param) and $param['LoraMoteType'] !== null) {
+            $this->LoraMoteType = $param['LoraMoteType'];
         }
 
-        if (array_key_exists("FirstOnlineTime",$param) and $param["FirstOnlineTime"] !== null) {
-            $this->FirstOnlineTime = $param["FirstOnlineTime"];
+        if (array_key_exists('FirstOnlineTime',$param) and $param['FirstOnlineTime'] !== null) {
+            $this->FirstOnlineTime = $param['FirstOnlineTime'];
         }
 
-        if (array_key_exists("LastOfflineTime",$param) and $param["LastOfflineTime"] !== null) {
-            $this->LastOfflineTime = $param["LastOfflineTime"];
+        if (array_key_exists('LastOfflineTime',$param) and $param['LastOfflineTime'] !== null) {
+            $this->LastOfflineTime = $param['LastOfflineTime'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("LogLevel",$param) and $param["LogLevel"] !== null) {
-            $this->LogLevel = $param["LogLevel"];
+        if (array_key_exists('LogLevel',$param) and $param['LogLevel'] !== null) {
+            $this->LogLevel = $param['LogLevel'];
         }
 
-        if (array_key_exists("CertState",$param) and $param["CertState"] !== null) {
-            $this->CertState = $param["CertState"];
+        if (array_key_exists('CertState',$param) and $param['CertState'] !== null) {
+            $this->CertState = $param['CertState'];
         }
 
-        if (array_key_exists("EnableState",$param) and $param["EnableState"] !== null) {
-            $this->EnableState = $param["EnableState"];
+        if (array_key_exists('EnableState',$param) and $param['EnableState'] !== null) {
+            $this->EnableState = $param['EnableState'];
         }
 
-        if (array_key_exists("Labels",$param) and $param["Labels"] !== null) {
+        if (array_key_exists('Labels',$param) and $param['Labels'] !== null) {
             $this->Labels = [];
-            foreach ($param["Labels"] as $key => $value){
+            foreach ($param['Labels'] as $key => $value){
                 $obj = new DeviceLabel();
                 $obj->deserialize($value);
                 array_push($this->Labels, $obj);
             }
         }
 
-        if (array_key_exists("ClientIP",$param) and $param["ClientIP"] !== null) {
-            $this->ClientIP = $param["ClientIP"];
+        if (array_key_exists('ClientIP',$param) and $param['ClientIP'] !== null) {
+            $this->ClientIP = $param['ClientIP'];
         }
 
-        if (array_key_exists("FirmwareUpdateTime",$param) and $param["FirmwareUpdateTime"] !== null) {
-            $this->FirmwareUpdateTime = $param["FirmwareUpdateTime"];
+        if (array_key_exists('FirmwareUpdateTime',$param) and $param['FirmwareUpdateTime'] !== null) {
+            $this->FirmwareUpdateTime = $param['FirmwareUpdateTime'];
         }
     }
 }

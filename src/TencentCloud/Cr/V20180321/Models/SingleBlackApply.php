@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -78,24 +78,24 @@ class SingleBlackApply extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BlackType",$param) and $param["BlackType"] !== null) {
-            $this->BlackType = $param["BlackType"];
+        if (array_key_exists('BlackType',$param) and $param['BlackType'] !== null) {
+            $this->BlackType = $param['BlackType'];
         }
 
-        if (array_key_exists("OperationType",$param) and $param["OperationType"] !== null) {
-            $this->OperationType = $param["OperationType"];
+        if (array_key_exists('OperationType',$param) and $param['OperationType'] !== null) {
+            $this->OperationType = $param['OperationType'];
         }
 
-        if (array_key_exists("BlackValue",$param) and $param["BlackValue"] !== null) {
-            $this->BlackValue = $param["BlackValue"];
+        if (array_key_exists('BlackValue',$param) and $param['BlackValue'] !== null) {
+            $this->BlackValue = $param['BlackValue'];
         }
 
-        if (array_key_exists("BlackDescription",$param) and $param["BlackDescription"] !== null) {
-            $this->BlackDescription = $param["BlackDescription"];
+        if (array_key_exists('BlackDescription',$param) and $param['BlackDescription'] !== null) {
+            $this->BlackDescription = $param['BlackDescription'];
         }
 
-        if (array_key_exists("BlackValidDate",$param) and $param["BlackValidDate"] !== null) {
-            $this->BlackValidDate = $param["BlackValidDate"];
+        if (array_key_exists('BlackValidDate',$param) and $param['BlackValidDate'] !== null) {
+            $this->BlackValidDate = $param['BlackValidDate'];
         }
     }
 }

@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -86,30 +86,30 @@ GeneralBasicOcr接口返回段落信息Parag，包含ParagNo。
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DetectedText",$param) and $param["DetectedText"] !== null) {
-            $this->DetectedText = $param["DetectedText"];
+        if (array_key_exists('DetectedText',$param) and $param['DetectedText'] !== null) {
+            $this->DetectedText = $param['DetectedText'];
         }
 
-        if (array_key_exists("Confidence",$param) and $param["Confidence"] !== null) {
-            $this->Confidence = $param["Confidence"];
+        if (array_key_exists('Confidence',$param) and $param['Confidence'] !== null) {
+            $this->Confidence = $param['Confidence'];
         }
 
-        if (array_key_exists("Polygon",$param) and $param["Polygon"] !== null) {
+        if (array_key_exists('Polygon',$param) and $param['Polygon'] !== null) {
             $this->Polygon = [];
-            foreach ($param["Polygon"] as $key => $value){
+            foreach ($param['Polygon'] as $key => $value){
                 $obj = new Coord();
                 $obj->deserialize($value);
                 array_push($this->Polygon, $obj);
             }
         }
 
-        if (array_key_exists("AdvancedInfo",$param) and $param["AdvancedInfo"] !== null) {
-            $this->AdvancedInfo = $param["AdvancedInfo"];
+        if (array_key_exists('AdvancedInfo',$param) and $param['AdvancedInfo'] !== null) {
+            $this->AdvancedInfo = $param['AdvancedInfo'];
         }
 
-        if (array_key_exists("ItemPolygon",$param) and $param["ItemPolygon"] !== null) {
+        if (array_key_exists('ItemPolygon',$param) and $param['ItemPolygon'] !== null) {
             $this->ItemPolygon = new ItemCoord();
-            $this->ItemPolygon->deserialize($param["ItemPolygon"]);
+            $this->ItemPolygon->deserialize($param['ItemPolygon']);
         }
     }
 }

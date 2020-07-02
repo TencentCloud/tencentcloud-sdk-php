@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRepoName(string $RepoName) 设置触发器关联的镜像仓库，library/test格式
  * @method string getTriggerName() 获取触发器名称
  * @method void setTriggerName(string $TriggerName) 设置触发器名称
- * @method string getInvokeMethod() 获取触发方式，"all"全部触发，"taglist"指定tag触发，"regex"正则触发
- * @method void setInvokeMethod(string $InvokeMethod) 设置触发方式，"all"全部触发，"taglist"指定tag触发，"regex"正则触发
+ * @method string getInvokeMethod() 获取触发方式，'all'全部触发，'taglist'指定tag触发，'regex'正则触发
+ * @method void setInvokeMethod(string $InvokeMethod) 设置触发方式，'all'全部触发，'taglist'指定tag触发，'regex'正则触发
  * @method string getInvokeExpr() 获取触发方式对应的表达式
  * @method void setInvokeExpr(string $InvokeExpr) 设置触发方式对应的表达式
  * @method string getClusterId() 获取应用所在TKE集群ID
@@ -56,7 +56,7 @@ class ModifyApplicationTriggerPersonalRequest extends AbstractModel
     public $TriggerName;
 
     /**
-     * @var string 触发方式，"all"全部触发，"taglist"指定tag触发，"regex"正则触发
+     * @var string 触发方式，'all'全部触发，'taglist'指定tag触发，'regex'正则触发
      */
     public $InvokeMethod;
 
@@ -103,7 +103,7 @@ class ModifyApplicationTriggerPersonalRequest extends AbstractModel
     /**
      * @param string $RepoName 触发器关联的镜像仓库，library/test格式
      * @param string $TriggerName 触发器名称
-     * @param string $InvokeMethod 触发方式，"all"全部触发，"taglist"指定tag触发，"regex"正则触发
+     * @param string $InvokeMethod 触发方式，'all'全部触发，'taglist'指定tag触发，'regex'正则触发
      * @param string $InvokeExpr 触发方式对应的表达式
      * @param string $ClusterId 应用所在TKE集群ID
      * @param string $Namespace 应用所在TKE集群命名空间
@@ -126,48 +126,48 @@ class ModifyApplicationTriggerPersonalRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RepoName",$param) and $param["RepoName"] !== null) {
-            $this->RepoName = $param["RepoName"];
+        if (array_key_exists('RepoName',$param) and $param['RepoName'] !== null) {
+            $this->RepoName = $param['RepoName'];
         }
 
-        if (array_key_exists("TriggerName",$param) and $param["TriggerName"] !== null) {
-            $this->TriggerName = $param["TriggerName"];
+        if (array_key_exists('TriggerName',$param) and $param['TriggerName'] !== null) {
+            $this->TriggerName = $param['TriggerName'];
         }
 
-        if (array_key_exists("InvokeMethod",$param) and $param["InvokeMethod"] !== null) {
-            $this->InvokeMethod = $param["InvokeMethod"];
+        if (array_key_exists('InvokeMethod',$param) and $param['InvokeMethod'] !== null) {
+            $this->InvokeMethod = $param['InvokeMethod'];
         }
 
-        if (array_key_exists("InvokeExpr",$param) and $param["InvokeExpr"] !== null) {
-            $this->InvokeExpr = $param["InvokeExpr"];
+        if (array_key_exists('InvokeExpr',$param) and $param['InvokeExpr'] !== null) {
+            $this->InvokeExpr = $param['InvokeExpr'];
         }
 
-        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
-            $this->ClusterId = $param["ClusterId"];
+        if (array_key_exists('ClusterId',$param) and $param['ClusterId'] !== null) {
+            $this->ClusterId = $param['ClusterId'];
         }
 
-        if (array_key_exists("Namespace",$param) and $param["Namespace"] !== null) {
-            $this->Namespace = $param["Namespace"];
+        if (array_key_exists('Namespace',$param) and $param['Namespace'] !== null) {
+            $this->Namespace = $param['Namespace'];
         }
 
-        if (array_key_exists("WorkloadType",$param) and $param["WorkloadType"] !== null) {
-            $this->WorkloadType = $param["WorkloadType"];
+        if (array_key_exists('WorkloadType',$param) and $param['WorkloadType'] !== null) {
+            $this->WorkloadType = $param['WorkloadType'];
         }
 
-        if (array_key_exists("WorkloadName",$param) and $param["WorkloadName"] !== null) {
-            $this->WorkloadName = $param["WorkloadName"];
+        if (array_key_exists('WorkloadName',$param) and $param['WorkloadName'] !== null) {
+            $this->WorkloadName = $param['WorkloadName'];
         }
 
-        if (array_key_exists("ContainerName",$param) and $param["ContainerName"] !== null) {
-            $this->ContainerName = $param["ContainerName"];
+        if (array_key_exists('ContainerName',$param) and $param['ContainerName'] !== null) {
+            $this->ContainerName = $param['ContainerName'];
         }
 
-        if (array_key_exists("ClusterRegion",$param) and $param["ClusterRegion"] !== null) {
-            $this->ClusterRegion = $param["ClusterRegion"];
+        if (array_key_exists('ClusterRegion',$param) and $param['ClusterRegion'] !== null) {
+            $this->ClusterRegion = $param['ClusterRegion'];
         }
 
-        if (array_key_exists("NewTriggerName",$param) and $param["NewTriggerName"] !== null) {
-            $this->NewTriggerName = $param["NewTriggerName"];
+        if (array_key_exists('NewTriggerName',$param) and $param['NewTriggerName'] !== null) {
+            $this->NewTriggerName = $param['NewTriggerName'];
         }
     }
 }

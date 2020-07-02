@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -110,40 +110,40 @@ class UnifiedOrderInSubOrderList extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SubMchIncome",$param) and $param["SubMchIncome"] !== null) {
-            $this->SubMchIncome = $param["SubMchIncome"];
+        if (array_key_exists('SubMchIncome',$param) and $param['SubMchIncome'] !== null) {
+            $this->SubMchIncome = $param['SubMchIncome'];
         }
 
-        if (array_key_exists("PlatformIncome",$param) and $param["PlatformIncome"] !== null) {
-            $this->PlatformIncome = $param["PlatformIncome"];
+        if (array_key_exists('PlatformIncome',$param) and $param['PlatformIncome'] !== null) {
+            $this->PlatformIncome = $param['PlatformIncome'];
         }
 
-        if (array_key_exists("ProductDetail",$param) and $param["ProductDetail"] !== null) {
-            $this->ProductDetail = $param["ProductDetail"];
+        if (array_key_exists('ProductDetail',$param) and $param['ProductDetail'] !== null) {
+            $this->ProductDetail = $param['ProductDetail'];
         }
 
-        if (array_key_exists("ProductName",$param) and $param["ProductName"] !== null) {
-            $this->ProductName = $param["ProductName"];
+        if (array_key_exists('ProductName',$param) and $param['ProductName'] !== null) {
+            $this->ProductName = $param['ProductName'];
         }
 
-        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
-            $this->SubAppId = $param["SubAppId"];
+        if (array_key_exists('SubAppId',$param) and $param['SubAppId'] !== null) {
+            $this->SubAppId = $param['SubAppId'];
         }
 
-        if (array_key_exists("SubOutTradeNo",$param) and $param["SubOutTradeNo"] !== null) {
-            $this->SubOutTradeNo = $param["SubOutTradeNo"];
+        if (array_key_exists('SubOutTradeNo',$param) and $param['SubOutTradeNo'] !== null) {
+            $this->SubOutTradeNo = $param['SubOutTradeNo'];
         }
 
-        if (array_key_exists("Amt",$param) and $param["Amt"] !== null) {
-            $this->Amt = $param["Amt"];
+        if (array_key_exists('Amt',$param) and $param['Amt'] !== null) {
+            $this->Amt = $param['Amt'];
         }
 
-        if (array_key_exists("Metadata",$param) and $param["Metadata"] !== null) {
-            $this->Metadata = $param["Metadata"];
+        if (array_key_exists('Metadata',$param) and $param['Metadata'] !== null) {
+            $this->Metadata = $param['Metadata'];
         }
 
-        if (array_key_exists("OriginalAmt",$param) and $param["OriginalAmt"] !== null) {
-            $this->OriginalAmt = $param["OriginalAmt"];
+        if (array_key_exists('OriginalAmt',$param) and $param['OriginalAmt'] !== null) {
+            $this->OriginalAmt = $param['OriginalAmt'];
         }
     }
 }

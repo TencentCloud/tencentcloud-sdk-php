@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -230,72 +230,72 @@ class EmrProductConfigOutter extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SoftInfo",$param) and $param["SoftInfo"] !== null) {
-            $this->SoftInfo = $param["SoftInfo"];
+        if (array_key_exists('SoftInfo',$param) and $param['SoftInfo'] !== null) {
+            $this->SoftInfo = $param['SoftInfo'];
         }
 
-        if (array_key_exists("MasterNodeSize",$param) and $param["MasterNodeSize"] !== null) {
-            $this->MasterNodeSize = $param["MasterNodeSize"];
+        if (array_key_exists('MasterNodeSize',$param) and $param['MasterNodeSize'] !== null) {
+            $this->MasterNodeSize = $param['MasterNodeSize'];
         }
 
-        if (array_key_exists("CoreNodeSize",$param) and $param["CoreNodeSize"] !== null) {
-            $this->CoreNodeSize = $param["CoreNodeSize"];
+        if (array_key_exists('CoreNodeSize',$param) and $param['CoreNodeSize'] !== null) {
+            $this->CoreNodeSize = $param['CoreNodeSize'];
         }
 
-        if (array_key_exists("TaskNodeSize",$param) and $param["TaskNodeSize"] !== null) {
-            $this->TaskNodeSize = $param["TaskNodeSize"];
+        if (array_key_exists('TaskNodeSize',$param) and $param['TaskNodeSize'] !== null) {
+            $this->TaskNodeSize = $param['TaskNodeSize'];
         }
 
-        if (array_key_exists("ComNodeSize",$param) and $param["ComNodeSize"] !== null) {
-            $this->ComNodeSize = $param["ComNodeSize"];
+        if (array_key_exists('ComNodeSize',$param) and $param['ComNodeSize'] !== null) {
+            $this->ComNodeSize = $param['ComNodeSize'];
         }
 
-        if (array_key_exists("MasterResource",$param) and $param["MasterResource"] !== null) {
+        if (array_key_exists('MasterResource',$param) and $param['MasterResource'] !== null) {
             $this->MasterResource = new OutterResource();
-            $this->MasterResource->deserialize($param["MasterResource"]);
+            $this->MasterResource->deserialize($param['MasterResource']);
         }
 
-        if (array_key_exists("CoreResource",$param) and $param["CoreResource"] !== null) {
+        if (array_key_exists('CoreResource',$param) and $param['CoreResource'] !== null) {
             $this->CoreResource = new OutterResource();
-            $this->CoreResource->deserialize($param["CoreResource"]);
+            $this->CoreResource->deserialize($param['CoreResource']);
         }
 
-        if (array_key_exists("TaskResource",$param) and $param["TaskResource"] !== null) {
+        if (array_key_exists('TaskResource',$param) and $param['TaskResource'] !== null) {
             $this->TaskResource = new OutterResource();
-            $this->TaskResource->deserialize($param["TaskResource"]);
+            $this->TaskResource->deserialize($param['TaskResource']);
         }
 
-        if (array_key_exists("ComResource",$param) and $param["ComResource"] !== null) {
+        if (array_key_exists('ComResource',$param) and $param['ComResource'] !== null) {
             $this->ComResource = new OutterResource();
-            $this->ComResource->deserialize($param["ComResource"]);
+            $this->ComResource->deserialize($param['ComResource']);
         }
 
-        if (array_key_exists("OnCos",$param) and $param["OnCos"] !== null) {
-            $this->OnCos = $param["OnCos"];
+        if (array_key_exists('OnCos',$param) and $param['OnCos'] !== null) {
+            $this->OnCos = $param['OnCos'];
         }
 
-        if (array_key_exists("ChargeType",$param) and $param["ChargeType"] !== null) {
-            $this->ChargeType = $param["ChargeType"];
+        if (array_key_exists('ChargeType',$param) and $param['ChargeType'] !== null) {
+            $this->ChargeType = $param['ChargeType'];
         }
 
-        if (array_key_exists("RouterNodeSize",$param) and $param["RouterNodeSize"] !== null) {
-            $this->RouterNodeSize = $param["RouterNodeSize"];
+        if (array_key_exists('RouterNodeSize',$param) and $param['RouterNodeSize'] !== null) {
+            $this->RouterNodeSize = $param['RouterNodeSize'];
         }
 
-        if (array_key_exists("SupportHA",$param) and $param["SupportHA"] !== null) {
-            $this->SupportHA = $param["SupportHA"];
+        if (array_key_exists('SupportHA',$param) and $param['SupportHA'] !== null) {
+            $this->SupportHA = $param['SupportHA'];
         }
 
-        if (array_key_exists("SecurityOn",$param) and $param["SecurityOn"] !== null) {
-            $this->SecurityOn = $param["SecurityOn"];
+        if (array_key_exists('SecurityOn',$param) and $param['SecurityOn'] !== null) {
+            $this->SecurityOn = $param['SecurityOn'];
         }
 
-        if (array_key_exists("SecurityGroup",$param) and $param["SecurityGroup"] !== null) {
-            $this->SecurityGroup = $param["SecurityGroup"];
+        if (array_key_exists('SecurityGroup',$param) and $param['SecurityGroup'] !== null) {
+            $this->SecurityGroup = $param['SecurityGroup'];
         }
 
-        if (array_key_exists("CbsEncrypt",$param) and $param["CbsEncrypt"] !== null) {
-            $this->CbsEncrypt = $param["CbsEncrypt"];
+        if (array_key_exists('CbsEncrypt',$param) and $param['CbsEncrypt'] !== null) {
+            $this->CbsEncrypt = $param['CbsEncrypt'];
         }
     }
 }

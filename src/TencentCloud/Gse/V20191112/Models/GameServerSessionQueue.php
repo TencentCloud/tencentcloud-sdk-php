@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -86,34 +86,34 @@ class GameServerSessionQueue extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("GameServerSessionQueueArn",$param) and $param["GameServerSessionQueueArn"] !== null) {
-            $this->GameServerSessionQueueArn = $param["GameServerSessionQueueArn"];
+        if (array_key_exists('GameServerSessionQueueArn',$param) and $param['GameServerSessionQueueArn'] !== null) {
+            $this->GameServerSessionQueueArn = $param['GameServerSessionQueueArn'];
         }
 
-        if (array_key_exists("Destinations",$param) and $param["Destinations"] !== null) {
+        if (array_key_exists('Destinations',$param) and $param['Destinations'] !== null) {
             $this->Destinations = [];
-            foreach ($param["Destinations"] as $key => $value){
+            foreach ($param['Destinations'] as $key => $value){
                 $obj = new GameServerSessionQueueDestination();
                 $obj->deserialize($value);
                 array_push($this->Destinations, $obj);
             }
         }
 
-        if (array_key_exists("PlayerLatencyPolicies",$param) and $param["PlayerLatencyPolicies"] !== null) {
+        if (array_key_exists('PlayerLatencyPolicies',$param) and $param['PlayerLatencyPolicies'] !== null) {
             $this->PlayerLatencyPolicies = [];
-            foreach ($param["PlayerLatencyPolicies"] as $key => $value){
+            foreach ($param['PlayerLatencyPolicies'] as $key => $value){
                 $obj = new PlayerLatencyPolicy();
                 $obj->deserialize($value);
                 array_push($this->PlayerLatencyPolicies, $obj);
             }
         }
 
-        if (array_key_exists("TimeoutInSeconds",$param) and $param["TimeoutInSeconds"] !== null) {
-            $this->TimeoutInSeconds = $param["TimeoutInSeconds"];
+        if (array_key_exists('TimeoutInSeconds',$param) and $param['TimeoutInSeconds'] !== null) {
+            $this->TimeoutInSeconds = $param['TimeoutInSeconds'];
         }
     }
 }

@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -86,28 +86,28 @@ class InstitutionOCRResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RegId",$param) and $param["RegId"] !== null) {
-            $this->RegId = $param["RegId"];
+        if (array_key_exists('RegId',$param) and $param['RegId'] !== null) {
+            $this->RegId = $param['RegId'];
         }
 
-        if (array_key_exists("ValidDate",$param) and $param["ValidDate"] !== null) {
-            $this->ValidDate = $param["ValidDate"];
+        if (array_key_exists('ValidDate',$param) and $param['ValidDate'] !== null) {
+            $this->ValidDate = $param['ValidDate'];
         }
 
-        if (array_key_exists("Location",$param) and $param["Location"] !== null) {
-            $this->Location = $param["Location"];
+        if (array_key_exists('Location',$param) and $param['Location'] !== null) {
+            $this->Location = $param['Location'];
         }
 
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists('Name',$param) and $param['Name'] !== null) {
+            $this->Name = $param['Name'];
         }
 
-        if (array_key_exists("LegalPerson",$param) and $param["LegalPerson"] !== null) {
-            $this->LegalPerson = $param["LegalPerson"];
+        if (array_key_exists('LegalPerson',$param) and $param['LegalPerson'] !== null) {
+            $this->LegalPerson = $param['LegalPerson'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

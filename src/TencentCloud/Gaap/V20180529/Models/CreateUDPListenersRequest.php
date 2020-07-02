@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -94,32 +94,32 @@ class CreateUDPListenersRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ListenerName",$param) and $param["ListenerName"] !== null) {
-            $this->ListenerName = $param["ListenerName"];
+        if (array_key_exists('ListenerName',$param) and $param['ListenerName'] !== null) {
+            $this->ListenerName = $param['ListenerName'];
         }
 
-        if (array_key_exists("Ports",$param) and $param["Ports"] !== null) {
-            $this->Ports = $param["Ports"];
+        if (array_key_exists('Ports',$param) and $param['Ports'] !== null) {
+            $this->Ports = $param['Ports'];
         }
 
-        if (array_key_exists("Scheduler",$param) and $param["Scheduler"] !== null) {
-            $this->Scheduler = $param["Scheduler"];
+        if (array_key_exists('Scheduler',$param) and $param['Scheduler'] !== null) {
+            $this->Scheduler = $param['Scheduler'];
         }
 
-        if (array_key_exists("RealServerType",$param) and $param["RealServerType"] !== null) {
-            $this->RealServerType = $param["RealServerType"];
+        if (array_key_exists('RealServerType',$param) and $param['RealServerType'] !== null) {
+            $this->RealServerType = $param['RealServerType'];
         }
 
-        if (array_key_exists("ProxyId",$param) and $param["ProxyId"] !== null) {
-            $this->ProxyId = $param["ProxyId"];
+        if (array_key_exists('ProxyId',$param) and $param['ProxyId'] !== null) {
+            $this->ProxyId = $param['ProxyId'];
         }
 
-        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
-            $this->GroupId = $param["GroupId"];
+        if (array_key_exists('GroupId',$param) and $param['GroupId'] !== null) {
+            $this->GroupId = $param['GroupId'];
         }
 
-        if (array_key_exists("RealServerPorts",$param) and $param["RealServerPorts"] !== null) {
-            $this->RealServerPorts = $param["RealServerPorts"];
+        if (array_key_exists('RealServerPorts',$param) and $param['RealServerPorts'] !== null) {
+            $this->RealServerPorts = $param['RealServerPorts'];
         }
     }
 }

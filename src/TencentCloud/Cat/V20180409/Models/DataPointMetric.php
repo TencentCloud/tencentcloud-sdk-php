@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -54,13 +54,13 @@ class DataPointMetric extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MetricName",$param) and $param["MetricName"] !== null) {
-            $this->MetricName = $param["MetricName"];
+        if (array_key_exists('MetricName',$param) and $param['MetricName'] !== null) {
+            $this->MetricName = $param['MetricName'];
         }
 
-        if (array_key_exists("Points",$param) and $param["Points"] !== null) {
+        if (array_key_exists('Points',$param) and $param['Points'] !== null) {
             $this->Points = [];
-            foreach ($param["Points"] as $key => $value){
+            foreach ($param['Points'] as $key => $value){
                 $obj = new DataPoint();
                 $obj->deserialize($value);
                 array_push($this->Points, $obj);

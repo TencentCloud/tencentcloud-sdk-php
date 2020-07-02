@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -230,98 +230,98 @@ class DescribeServiceResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ServiceId",$param) and $param["ServiceId"] !== null) {
-            $this->ServiceId = $param["ServiceId"];
+        if (array_key_exists('ServiceId',$param) and $param['ServiceId'] !== null) {
+            $this->ServiceId = $param['ServiceId'];
         }
 
-        if (array_key_exists("AvailableEnvironments",$param) and $param["AvailableEnvironments"] !== null) {
-            $this->AvailableEnvironments = $param["AvailableEnvironments"];
+        if (array_key_exists('AvailableEnvironments',$param) and $param['AvailableEnvironments'] !== null) {
+            $this->AvailableEnvironments = $param['AvailableEnvironments'];
         }
 
-        if (array_key_exists("ServiceName",$param) and $param["ServiceName"] !== null) {
-            $this->ServiceName = $param["ServiceName"];
+        if (array_key_exists('ServiceName',$param) and $param['ServiceName'] !== null) {
+            $this->ServiceName = $param['ServiceName'];
         }
 
-        if (array_key_exists("ServiceDesc",$param) and $param["ServiceDesc"] !== null) {
-            $this->ServiceDesc = $param["ServiceDesc"];
+        if (array_key_exists('ServiceDesc',$param) and $param['ServiceDesc'] !== null) {
+            $this->ServiceDesc = $param['ServiceDesc'];
         }
 
-        if (array_key_exists("Protocol",$param) and $param["Protocol"] !== null) {
-            $this->Protocol = $param["Protocol"];
+        if (array_key_exists('Protocol',$param) and $param['Protocol'] !== null) {
+            $this->Protocol = $param['Protocol'];
         }
 
-        if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
-            $this->CreatedTime = $param["CreatedTime"];
+        if (array_key_exists('CreatedTime',$param) and $param['CreatedTime'] !== null) {
+            $this->CreatedTime = $param['CreatedTime'];
         }
 
-        if (array_key_exists("ModifiedTime",$param) and $param["ModifiedTime"] !== null) {
-            $this->ModifiedTime = $param["ModifiedTime"];
+        if (array_key_exists('ModifiedTime',$param) and $param['ModifiedTime'] !== null) {
+            $this->ModifiedTime = $param['ModifiedTime'];
         }
 
-        if (array_key_exists("ExclusiveSetName",$param) and $param["ExclusiveSetName"] !== null) {
-            $this->ExclusiveSetName = $param["ExclusiveSetName"];
+        if (array_key_exists('ExclusiveSetName',$param) and $param['ExclusiveSetName'] !== null) {
+            $this->ExclusiveSetName = $param['ExclusiveSetName'];
         }
 
-        if (array_key_exists("NetTypes",$param) and $param["NetTypes"] !== null) {
-            $this->NetTypes = $param["NetTypes"];
+        if (array_key_exists('NetTypes',$param) and $param['NetTypes'] !== null) {
+            $this->NetTypes = $param['NetTypes'];
         }
 
-        if (array_key_exists("InternalSubDomain",$param) and $param["InternalSubDomain"] !== null) {
-            $this->InternalSubDomain = $param["InternalSubDomain"];
+        if (array_key_exists('InternalSubDomain',$param) and $param['InternalSubDomain'] !== null) {
+            $this->InternalSubDomain = $param['InternalSubDomain'];
         }
 
-        if (array_key_exists("OuterSubDomain",$param) and $param["OuterSubDomain"] !== null) {
-            $this->OuterSubDomain = $param["OuterSubDomain"];
+        if (array_key_exists('OuterSubDomain',$param) and $param['OuterSubDomain'] !== null) {
+            $this->OuterSubDomain = $param['OuterSubDomain'];
         }
 
-        if (array_key_exists("InnerHttpPort",$param) and $param["InnerHttpPort"] !== null) {
-            $this->InnerHttpPort = $param["InnerHttpPort"];
+        if (array_key_exists('InnerHttpPort',$param) and $param['InnerHttpPort'] !== null) {
+            $this->InnerHttpPort = $param['InnerHttpPort'];
         }
 
-        if (array_key_exists("InnerHttpsPort",$param) and $param["InnerHttpsPort"] !== null) {
-            $this->InnerHttpsPort = $param["InnerHttpsPort"];
+        if (array_key_exists('InnerHttpsPort',$param) and $param['InnerHttpsPort'] !== null) {
+            $this->InnerHttpsPort = $param['InnerHttpsPort'];
         }
 
-        if (array_key_exists("ApiTotalCount",$param) and $param["ApiTotalCount"] !== null) {
-            $this->ApiTotalCount = $param["ApiTotalCount"];
+        if (array_key_exists('ApiTotalCount',$param) and $param['ApiTotalCount'] !== null) {
+            $this->ApiTotalCount = $param['ApiTotalCount'];
         }
 
-        if (array_key_exists("ApiIdStatusSet",$param) and $param["ApiIdStatusSet"] !== null) {
+        if (array_key_exists('ApiIdStatusSet',$param) and $param['ApiIdStatusSet'] !== null) {
             $this->ApiIdStatusSet = [];
-            foreach ($param["ApiIdStatusSet"] as $key => $value){
+            foreach ($param['ApiIdStatusSet'] as $key => $value){
                 $obj = new ApiIdStatus();
                 $obj->deserialize($value);
                 array_push($this->ApiIdStatusSet, $obj);
             }
         }
 
-        if (array_key_exists("UsagePlanTotalCount",$param) and $param["UsagePlanTotalCount"] !== null) {
-            $this->UsagePlanTotalCount = $param["UsagePlanTotalCount"];
+        if (array_key_exists('UsagePlanTotalCount',$param) and $param['UsagePlanTotalCount'] !== null) {
+            $this->UsagePlanTotalCount = $param['UsagePlanTotalCount'];
         }
 
-        if (array_key_exists("UsagePlanList",$param) and $param["UsagePlanList"] !== null) {
+        if (array_key_exists('UsagePlanList',$param) and $param['UsagePlanList'] !== null) {
             $this->UsagePlanList = [];
-            foreach ($param["UsagePlanList"] as $key => $value){
+            foreach ($param['UsagePlanList'] as $key => $value){
                 $obj = new UsagePlan();
                 $obj->deserialize($value);
                 array_push($this->UsagePlanList, $obj);
             }
         }
 
-        if (array_key_exists("IpVersion",$param) and $param["IpVersion"] !== null) {
-            $this->IpVersion = $param["IpVersion"];
+        if (array_key_exists('IpVersion',$param) and $param['IpVersion'] !== null) {
+            $this->IpVersion = $param['IpVersion'];
         }
 
-        if (array_key_exists("UserType",$param) and $param["UserType"] !== null) {
-            $this->UserType = $param["UserType"];
+        if (array_key_exists('UserType',$param) and $param['UserType'] !== null) {
+            $this->UserType = $param['UserType'];
         }
 
-        if (array_key_exists("SetId",$param) and $param["SetId"] !== null) {
-            $this->SetId = $param["SetId"];
+        if (array_key_exists('SetId',$param) and $param['SetId'] !== null) {
+            $this->SetId = $param['SetId'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

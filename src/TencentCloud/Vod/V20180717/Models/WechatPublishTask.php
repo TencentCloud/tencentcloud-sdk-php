@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -154,44 +154,44 @@ FINISH：已完成。
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
-            $this->TaskId = $param["TaskId"];
+        if (array_key_exists('TaskId',$param) and $param['TaskId'] !== null) {
+            $this->TaskId = $param['TaskId'];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists('Status',$param) and $param['Status'] !== null) {
+            $this->Status = $param['Status'];
         }
 
-        if (array_key_exists("ErrCode",$param) and $param["ErrCode"] !== null) {
-            $this->ErrCode = $param["ErrCode"];
+        if (array_key_exists('ErrCode',$param) and $param['ErrCode'] !== null) {
+            $this->ErrCode = $param['ErrCode'];
         }
 
-        if (array_key_exists("Message",$param) and $param["Message"] !== null) {
-            $this->Message = $param["Message"];
+        if (array_key_exists('Message',$param) and $param['Message'] !== null) {
+            $this->Message = $param['Message'];
         }
 
-        if (array_key_exists("FileId",$param) and $param["FileId"] !== null) {
-            $this->FileId = $param["FileId"];
+        if (array_key_exists('FileId',$param) and $param['FileId'] !== null) {
+            $this->FileId = $param['FileId'];
         }
 
-        if (array_key_exists("Definition",$param) and $param["Definition"] !== null) {
-            $this->Definition = $param["Definition"];
+        if (array_key_exists('Definition',$param) and $param['Definition'] !== null) {
+            $this->Definition = $param['Definition'];
         }
 
-        if (array_key_exists("SourceDefinition",$param) and $param["SourceDefinition"] !== null) {
-            $this->SourceDefinition = $param["SourceDefinition"];
+        if (array_key_exists('SourceDefinition',$param) and $param['SourceDefinition'] !== null) {
+            $this->SourceDefinition = $param['SourceDefinition'];
         }
 
-        if (array_key_exists("WechatStatus",$param) and $param["WechatStatus"] !== null) {
-            $this->WechatStatus = $param["WechatStatus"];
+        if (array_key_exists('WechatStatus',$param) and $param['WechatStatus'] !== null) {
+            $this->WechatStatus = $param['WechatStatus'];
         }
 
-        if (array_key_exists("WechatVid",$param) and $param["WechatVid"] !== null) {
-            $this->WechatVid = $param["WechatVid"];
+        if (array_key_exists('WechatVid',$param) and $param['WechatVid'] !== null) {
+            $this->WechatVid = $param['WechatVid'];
         }
 
-        if (array_key_exists("WechatUrl",$param) and $param["WechatUrl"] !== null) {
-            $this->WechatUrl = $param["WechatUrl"];
+        if (array_key_exists('WechatUrl',$param) and $param['WechatUrl'] !== null) {
+            $this->WechatUrl = $param['WechatUrl'];
         }
     }
 }

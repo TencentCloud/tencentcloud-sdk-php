@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -90,31 +90,31 @@ class VideoMaterial extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MetaData",$param) and $param["MetaData"] !== null) {
+        if (array_key_exists('MetaData',$param) and $param['MetaData'] !== null) {
             $this->MetaData = new MediaMetaData();
-            $this->MetaData->deserialize($param["MetaData"]);
+            $this->MetaData->deserialize($param['MetaData']);
         }
 
-        if (array_key_exists("ImageSpriteInfo",$param) and $param["ImageSpriteInfo"] !== null) {
+        if (array_key_exists('ImageSpriteInfo',$param) and $param['ImageSpriteInfo'] !== null) {
             $this->ImageSpriteInfo = new MediaImageSpriteInfo();
-            $this->ImageSpriteInfo->deserialize($param["ImageSpriteInfo"]);
+            $this->ImageSpriteInfo->deserialize($param['ImageSpriteInfo']);
         }
 
-        if (array_key_exists("MaterialUrl",$param) and $param["MaterialUrl"] !== null) {
-            $this->MaterialUrl = $param["MaterialUrl"];
+        if (array_key_exists('MaterialUrl',$param) and $param['MaterialUrl'] !== null) {
+            $this->MaterialUrl = $param['MaterialUrl'];
         }
 
-        if (array_key_exists("CoverUrl",$param) and $param["CoverUrl"] !== null) {
-            $this->CoverUrl = $param["CoverUrl"];
+        if (array_key_exists('CoverUrl',$param) and $param['CoverUrl'] !== null) {
+            $this->CoverUrl = $param['CoverUrl'];
         }
 
-        if (array_key_exists("Resolution",$param) and $param["Resolution"] !== null) {
-            $this->Resolution = $param["Resolution"];
+        if (array_key_exists('Resolution',$param) and $param['Resolution'] !== null) {
+            $this->Resolution = $param['Resolution'];
         }
 
-        if (array_key_exists("MaterialStatus",$param) and $param["MaterialStatus"] !== null) {
+        if (array_key_exists('MaterialStatus',$param) and $param['MaterialStatus'] !== null) {
             $this->MaterialStatus = new MaterialStatus();
-            $this->MaterialStatus->deserialize($param["MaterialStatus"]);
+            $this->MaterialStatus->deserialize($param['MaterialStatus']);
         }
     }
 }

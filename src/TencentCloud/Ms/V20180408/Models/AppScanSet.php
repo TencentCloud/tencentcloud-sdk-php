@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -142,56 +142,56 @@ class AppScanSet extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ItemId",$param) and $param["ItemId"] !== null) {
-            $this->ItemId = $param["ItemId"];
+        if (array_key_exists('ItemId',$param) and $param['ItemId'] !== null) {
+            $this->ItemId = $param['ItemId'];
         }
 
-        if (array_key_exists("AppName",$param) and $param["AppName"] !== null) {
-            $this->AppName = $param["AppName"];
+        if (array_key_exists('AppName',$param) and $param['AppName'] !== null) {
+            $this->AppName = $param['AppName'];
         }
 
-        if (array_key_exists("AppPkgName",$param) and $param["AppPkgName"] !== null) {
-            $this->AppPkgName = $param["AppPkgName"];
+        if (array_key_exists('AppPkgName',$param) and $param['AppPkgName'] !== null) {
+            $this->AppPkgName = $param['AppPkgName'];
         }
 
-        if (array_key_exists("AppVersion",$param) and $param["AppVersion"] !== null) {
-            $this->AppVersion = $param["AppVersion"];
+        if (array_key_exists('AppVersion',$param) and $param['AppVersion'] !== null) {
+            $this->AppVersion = $param['AppVersion'];
         }
 
-        if (array_key_exists("AppMd5",$param) and $param["AppMd5"] !== null) {
-            $this->AppMd5 = $param["AppMd5"];
+        if (array_key_exists('AppMd5',$param) and $param['AppMd5'] !== null) {
+            $this->AppMd5 = $param['AppMd5'];
         }
 
-        if (array_key_exists("AppSize",$param) and $param["AppSize"] !== null) {
-            $this->AppSize = $param["AppSize"];
+        if (array_key_exists('AppSize',$param) and $param['AppSize'] !== null) {
+            $this->AppSize = $param['AppSize'];
         }
 
-        if (array_key_exists("ScanCode",$param) and $param["ScanCode"] !== null) {
-            $this->ScanCode = $param["ScanCode"];
+        if (array_key_exists('ScanCode',$param) and $param['ScanCode'] !== null) {
+            $this->ScanCode = $param['ScanCode'];
         }
 
-        if (array_key_exists("TaskStatus",$param) and $param["TaskStatus"] !== null) {
-            $this->TaskStatus = $param["TaskStatus"];
+        if (array_key_exists('TaskStatus',$param) and $param['TaskStatus'] !== null) {
+            $this->TaskStatus = $param['TaskStatus'];
         }
 
-        if (array_key_exists("TaskTime",$param) and $param["TaskTime"] !== null) {
-            $this->TaskTime = $param["TaskTime"];
+        if (array_key_exists('TaskTime',$param) and $param['TaskTime'] !== null) {
+            $this->TaskTime = $param['TaskTime'];
         }
 
-        if (array_key_exists("AppIconUrl",$param) and $param["AppIconUrl"] !== null) {
-            $this->AppIconUrl = $param["AppIconUrl"];
+        if (array_key_exists('AppIconUrl',$param) and $param['AppIconUrl'] !== null) {
+            $this->AppIconUrl = $param['AppIconUrl'];
         }
 
-        if (array_key_exists("AppSid",$param) and $param["AppSid"] !== null) {
-            $this->AppSid = $param["AppSid"];
+        if (array_key_exists('AppSid',$param) and $param['AppSid'] !== null) {
+            $this->AppSid = $param['AppSid'];
         }
 
-        if (array_key_exists("SafeType",$param) and $param["SafeType"] !== null) {
-            $this->SafeType = $param["SafeType"];
+        if (array_key_exists('SafeType',$param) and $param['SafeType'] !== null) {
+            $this->SafeType = $param['SafeType'];
         }
 
-        if (array_key_exists("VulCount",$param) and $param["VulCount"] !== null) {
-            $this->VulCount = $param["VulCount"];
+        if (array_key_exists('VulCount',$param) and $param['VulCount'] !== null) {
+            $this->VulCount = $param['VulCount'];
         }
     }
 }

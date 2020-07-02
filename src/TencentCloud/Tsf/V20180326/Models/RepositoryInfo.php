@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -142,40 +142,40 @@ class RepositoryInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RepositoryId",$param) and $param["RepositoryId"] !== null) {
-            $this->RepositoryId = $param["RepositoryId"];
+        if (array_key_exists('RepositoryId',$param) and $param['RepositoryId'] !== null) {
+            $this->RepositoryId = $param['RepositoryId'];
         }
 
-        if (array_key_exists("RepositoryName",$param) and $param["RepositoryName"] !== null) {
-            $this->RepositoryName = $param["RepositoryName"];
+        if (array_key_exists('RepositoryName',$param) and $param['RepositoryName'] !== null) {
+            $this->RepositoryName = $param['RepositoryName'];
         }
 
-        if (array_key_exists("RepositoryType",$param) and $param["RepositoryType"] !== null) {
-            $this->RepositoryType = $param["RepositoryType"];
+        if (array_key_exists('RepositoryType',$param) and $param['RepositoryType'] !== null) {
+            $this->RepositoryType = $param['RepositoryType'];
         }
 
-        if (array_key_exists("RepositoryDesc",$param) and $param["RepositoryDesc"] !== null) {
-            $this->RepositoryDesc = $param["RepositoryDesc"];
+        if (array_key_exists('RepositoryDesc',$param) and $param['RepositoryDesc'] !== null) {
+            $this->RepositoryDesc = $param['RepositoryDesc'];
         }
 
-        if (array_key_exists("IsUsed",$param) and $param["IsUsed"] !== null) {
-            $this->IsUsed = $param["IsUsed"];
+        if (array_key_exists('IsUsed',$param) and $param['IsUsed'] !== null) {
+            $this->IsUsed = $param['IsUsed'];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists('CreateTime',$param) and $param['CreateTime'] !== null) {
+            $this->CreateTime = $param['CreateTime'];
         }
 
-        if (array_key_exists("BucketName",$param) and $param["BucketName"] !== null) {
-            $this->BucketName = $param["BucketName"];
+        if (array_key_exists('BucketName',$param) and $param['BucketName'] !== null) {
+            $this->BucketName = $param['BucketName'];
         }
 
-        if (array_key_exists("BucketRegion",$param) and $param["BucketRegion"] !== null) {
-            $this->BucketRegion = $param["BucketRegion"];
+        if (array_key_exists('BucketRegion',$param) and $param['BucketRegion'] !== null) {
+            $this->BucketRegion = $param['BucketRegion'];
         }
 
-        if (array_key_exists("Directory",$param) and $param["Directory"] !== null) {
-            $this->Directory = $param["Directory"];
+        if (array_key_exists('Directory',$param) and $param['Directory'] !== null) {
+            $this->Directory = $param['Directory'];
         }
     }
 }

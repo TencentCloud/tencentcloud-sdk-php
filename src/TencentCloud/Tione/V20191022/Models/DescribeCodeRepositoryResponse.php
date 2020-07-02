@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -86,29 +86,29 @@ class DescribeCodeRepositoryResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CreationTime",$param) and $param["CreationTime"] !== null) {
-            $this->CreationTime = $param["CreationTime"];
+        if (array_key_exists('CreationTime',$param) and $param['CreationTime'] !== null) {
+            $this->CreationTime = $param['CreationTime'];
         }
 
-        if (array_key_exists("LastModifiedTime",$param) and $param["LastModifiedTime"] !== null) {
-            $this->LastModifiedTime = $param["LastModifiedTime"];
+        if (array_key_exists('LastModifiedTime',$param) and $param['LastModifiedTime'] !== null) {
+            $this->LastModifiedTime = $param['LastModifiedTime'];
         }
 
-        if (array_key_exists("CodeRepositoryName",$param) and $param["CodeRepositoryName"] !== null) {
-            $this->CodeRepositoryName = $param["CodeRepositoryName"];
+        if (array_key_exists('CodeRepositoryName',$param) and $param['CodeRepositoryName'] !== null) {
+            $this->CodeRepositoryName = $param['CodeRepositoryName'];
         }
 
-        if (array_key_exists("GitConfig",$param) and $param["GitConfig"] !== null) {
+        if (array_key_exists('GitConfig',$param) and $param['GitConfig'] !== null) {
             $this->GitConfig = new GitConfig();
-            $this->GitConfig->deserialize($param["GitConfig"]);
+            $this->GitConfig->deserialize($param['GitConfig']);
         }
 
-        if (array_key_exists("NoSecret",$param) and $param["NoSecret"] !== null) {
-            $this->NoSecret = $param["NoSecret"];
+        if (array_key_exists('NoSecret',$param) and $param['NoSecret'] !== null) {
+            $this->NoSecret = $param['NoSecret'];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists('RequestId',$param) and $param['RequestId'] !== null) {
+            $this->RequestId = $param['RequestId'];
         }
     }
 }

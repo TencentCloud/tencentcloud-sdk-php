@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -118,40 +118,40 @@ class Account extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
-            $this->Id = $param["Id"];
+        if (array_key_exists('Id',$param) and $param['Id'] !== null) {
+            $this->Id = $param['Id'];
         }
 
-        if (array_key_exists("Uuid",$param) and $param["Uuid"] !== null) {
-            $this->Uuid = $param["Uuid"];
+        if (array_key_exists('Uuid',$param) and $param['Uuid'] !== null) {
+            $this->Uuid = $param['Uuid'];
         }
 
-        if (array_key_exists("MachineIp",$param) and $param["MachineIp"] !== null) {
-            $this->MachineIp = $param["MachineIp"];
+        if (array_key_exists('MachineIp',$param) and $param['MachineIp'] !== null) {
+            $this->MachineIp = $param['MachineIp'];
         }
 
-        if (array_key_exists("MachineName",$param) and $param["MachineName"] !== null) {
-            $this->MachineName = $param["MachineName"];
+        if (array_key_exists('MachineName',$param) and $param['MachineName'] !== null) {
+            $this->MachineName = $param['MachineName'];
         }
 
-        if (array_key_exists("Username",$param) and $param["Username"] !== null) {
-            $this->Username = $param["Username"];
+        if (array_key_exists('Username',$param) and $param['Username'] !== null) {
+            $this->Username = $param['Username'];
         }
 
-        if (array_key_exists("Groups",$param) and $param["Groups"] !== null) {
-            $this->Groups = $param["Groups"];
+        if (array_key_exists('Groups',$param) and $param['Groups'] !== null) {
+            $this->Groups = $param['Groups'];
         }
 
-        if (array_key_exists("Privilege",$param) and $param["Privilege"] !== null) {
-            $this->Privilege = $param["Privilege"];
+        if (array_key_exists('Privilege',$param) and $param['Privilege'] !== null) {
+            $this->Privilege = $param['Privilege'];
         }
 
-        if (array_key_exists("AccountCreateTime",$param) and $param["AccountCreateTime"] !== null) {
-            $this->AccountCreateTime = $param["AccountCreateTime"];
+        if (array_key_exists('AccountCreateTime',$param) and $param['AccountCreateTime'] !== null) {
+            $this->AccountCreateTime = $param['AccountCreateTime'];
         }
 
-        if (array_key_exists("LastLoginTime",$param) and $param["LastLoginTime"] !== null) {
-            $this->LastLoginTime = $param["LastLoginTime"];
+        if (array_key_exists('LastLoginTime',$param) and $param['LastLoginTime'] !== null) {
+            $this->LastLoginTime = $param['LastLoginTime'];
         }
     }
 }

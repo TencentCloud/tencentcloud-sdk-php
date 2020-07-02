@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -86,29 +86,29 @@ class CreateContainerInstanceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
-            $this->Zone = $param["Zone"];
+        if (array_key_exists('Zone',$param) and $param['Zone'] !== null) {
+            $this->Zone = $param['Zone'];
         }
 
-        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
-            $this->VpcId = $param["VpcId"];
+        if (array_key_exists('VpcId',$param) and $param['VpcId'] !== null) {
+            $this->VpcId = $param['VpcId'];
         }
 
-        if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
-            $this->SubnetId = $param["SubnetId"];
+        if (array_key_exists('SubnetId',$param) and $param['SubnetId'] !== null) {
+            $this->SubnetId = $param['SubnetId'];
         }
 
-        if (array_key_exists("InstanceName",$param) and $param["InstanceName"] !== null) {
-            $this->InstanceName = $param["InstanceName"];
+        if (array_key_exists('InstanceName',$param) and $param['InstanceName'] !== null) {
+            $this->InstanceName = $param['InstanceName'];
         }
 
-        if (array_key_exists("RestartPolicy",$param) and $param["RestartPolicy"] !== null) {
-            $this->RestartPolicy = $param["RestartPolicy"];
+        if (array_key_exists('RestartPolicy',$param) and $param['RestartPolicy'] !== null) {
+            $this->RestartPolicy = $param['RestartPolicy'];
         }
 
-        if (array_key_exists("Containers",$param) and $param["Containers"] !== null) {
+        if (array_key_exists('Containers',$param) and $param['Containers'] !== null) {
             $this->Containers = [];
-            foreach ($param["Containers"] as $key => $value){
+            foreach ($param['Containers'] as $key => $value){
                 $obj = new Container();
                 $obj->deserialize($value);
                 array_push($this->Containers, $obj);

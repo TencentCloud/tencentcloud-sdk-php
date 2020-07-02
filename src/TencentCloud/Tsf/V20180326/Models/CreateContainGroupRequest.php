@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -230,105 +230,105 @@ class CreateContainGroupRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ApplicationId",$param) and $param["ApplicationId"] !== null) {
-            $this->ApplicationId = $param["ApplicationId"];
+        if (array_key_exists('ApplicationId',$param) and $param['ApplicationId'] !== null) {
+            $this->ApplicationId = $param['ApplicationId'];
         }
 
-        if (array_key_exists("NamespaceId",$param) and $param["NamespaceId"] !== null) {
-            $this->NamespaceId = $param["NamespaceId"];
+        if (array_key_exists('NamespaceId',$param) and $param['NamespaceId'] !== null) {
+            $this->NamespaceId = $param['NamespaceId'];
         }
 
-        if (array_key_exists("GroupName",$param) and $param["GroupName"] !== null) {
-            $this->GroupName = $param["GroupName"];
+        if (array_key_exists('GroupName',$param) and $param['GroupName'] !== null) {
+            $this->GroupName = $param['GroupName'];
         }
 
-        if (array_key_exists("InstanceNum",$param) and $param["InstanceNum"] !== null) {
-            $this->InstanceNum = $param["InstanceNum"];
+        if (array_key_exists('InstanceNum',$param) and $param['InstanceNum'] !== null) {
+            $this->InstanceNum = $param['InstanceNum'];
         }
 
-        if (array_key_exists("AccessType",$param) and $param["AccessType"] !== null) {
-            $this->AccessType = $param["AccessType"];
+        if (array_key_exists('AccessType',$param) and $param['AccessType'] !== null) {
+            $this->AccessType = $param['AccessType'];
         }
 
-        if (array_key_exists("ProtocolPorts",$param) and $param["ProtocolPorts"] !== null) {
+        if (array_key_exists('ProtocolPorts',$param) and $param['ProtocolPorts'] !== null) {
             $this->ProtocolPorts = [];
-            foreach ($param["ProtocolPorts"] as $key => $value){
+            foreach ($param['ProtocolPorts'] as $key => $value){
                 $obj = new ProtocolPort();
                 $obj->deserialize($value);
                 array_push($this->ProtocolPorts, $obj);
             }
         }
 
-        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
-            $this->ClusterId = $param["ClusterId"];
+        if (array_key_exists('ClusterId',$param) and $param['ClusterId'] !== null) {
+            $this->ClusterId = $param['ClusterId'];
         }
 
-        if (array_key_exists("CpuLimit",$param) and $param["CpuLimit"] !== null) {
-            $this->CpuLimit = $param["CpuLimit"];
+        if (array_key_exists('CpuLimit',$param) and $param['CpuLimit'] !== null) {
+            $this->CpuLimit = $param['CpuLimit'];
         }
 
-        if (array_key_exists("MemLimit",$param) and $param["MemLimit"] !== null) {
-            $this->MemLimit = $param["MemLimit"];
+        if (array_key_exists('MemLimit',$param) and $param['MemLimit'] !== null) {
+            $this->MemLimit = $param['MemLimit'];
         }
 
-        if (array_key_exists("GroupComment",$param) and $param["GroupComment"] !== null) {
-            $this->GroupComment = $param["GroupComment"];
+        if (array_key_exists('GroupComment',$param) and $param['GroupComment'] !== null) {
+            $this->GroupComment = $param['GroupComment'];
         }
 
-        if (array_key_exists("UpdateType",$param) and $param["UpdateType"] !== null) {
-            $this->UpdateType = $param["UpdateType"];
+        if (array_key_exists('UpdateType',$param) and $param['UpdateType'] !== null) {
+            $this->UpdateType = $param['UpdateType'];
         }
 
-        if (array_key_exists("UpdateIvl",$param) and $param["UpdateIvl"] !== null) {
-            $this->UpdateIvl = $param["UpdateIvl"];
+        if (array_key_exists('UpdateIvl',$param) and $param['UpdateIvl'] !== null) {
+            $this->UpdateIvl = $param['UpdateIvl'];
         }
 
-        if (array_key_exists("CpuRequest",$param) and $param["CpuRequest"] !== null) {
-            $this->CpuRequest = $param["CpuRequest"];
+        if (array_key_exists('CpuRequest',$param) and $param['CpuRequest'] !== null) {
+            $this->CpuRequest = $param['CpuRequest'];
         }
 
-        if (array_key_exists("MemRequest",$param) and $param["MemRequest"] !== null) {
-            $this->MemRequest = $param["MemRequest"];
+        if (array_key_exists('MemRequest',$param) and $param['MemRequest'] !== null) {
+            $this->MemRequest = $param['MemRequest'];
         }
 
-        if (array_key_exists("GroupResourceType",$param) and $param["GroupResourceType"] !== null) {
-            $this->GroupResourceType = $param["GroupResourceType"];
+        if (array_key_exists('GroupResourceType',$param) and $param['GroupResourceType'] !== null) {
+            $this->GroupResourceType = $param['GroupResourceType'];
         }
 
-        if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
-            $this->SubnetId = $param["SubnetId"];
+        if (array_key_exists('SubnetId',$param) and $param['SubnetId'] !== null) {
+            $this->SubnetId = $param['SubnetId'];
         }
 
-        if (array_key_exists("AgentCpuRequest",$param) and $param["AgentCpuRequest"] !== null) {
-            $this->AgentCpuRequest = $param["AgentCpuRequest"];
+        if (array_key_exists('AgentCpuRequest',$param) and $param['AgentCpuRequest'] !== null) {
+            $this->AgentCpuRequest = $param['AgentCpuRequest'];
         }
 
-        if (array_key_exists("AgentCpuLimit",$param) and $param["AgentCpuLimit"] !== null) {
-            $this->AgentCpuLimit = $param["AgentCpuLimit"];
+        if (array_key_exists('AgentCpuLimit',$param) and $param['AgentCpuLimit'] !== null) {
+            $this->AgentCpuLimit = $param['AgentCpuLimit'];
         }
 
-        if (array_key_exists("AgentMemRequest",$param) and $param["AgentMemRequest"] !== null) {
-            $this->AgentMemRequest = $param["AgentMemRequest"];
+        if (array_key_exists('AgentMemRequest',$param) and $param['AgentMemRequest'] !== null) {
+            $this->AgentMemRequest = $param['AgentMemRequest'];
         }
 
-        if (array_key_exists("AgentMemLimit",$param) and $param["AgentMemLimit"] !== null) {
-            $this->AgentMemLimit = $param["AgentMemLimit"];
+        if (array_key_exists('AgentMemLimit',$param) and $param['AgentMemLimit'] !== null) {
+            $this->AgentMemLimit = $param['AgentMemLimit'];
         }
 
-        if (array_key_exists("IstioCpuRequest",$param) and $param["IstioCpuRequest"] !== null) {
-            $this->IstioCpuRequest = $param["IstioCpuRequest"];
+        if (array_key_exists('IstioCpuRequest',$param) and $param['IstioCpuRequest'] !== null) {
+            $this->IstioCpuRequest = $param['IstioCpuRequest'];
         }
 
-        if (array_key_exists("IstioCpuLimit",$param) and $param["IstioCpuLimit"] !== null) {
-            $this->IstioCpuLimit = $param["IstioCpuLimit"];
+        if (array_key_exists('IstioCpuLimit',$param) and $param['IstioCpuLimit'] !== null) {
+            $this->IstioCpuLimit = $param['IstioCpuLimit'];
         }
 
-        if (array_key_exists("IstioMemRequest",$param) and $param["IstioMemRequest"] !== null) {
-            $this->IstioMemRequest = $param["IstioMemRequest"];
+        if (array_key_exists('IstioMemRequest',$param) and $param['IstioMemRequest'] !== null) {
+            $this->IstioMemRequest = $param['IstioMemRequest'];
         }
 
-        if (array_key_exists("IstioMemLimit",$param) and $param["IstioMemLimit"] !== null) {
-            $this->IstioMemLimit = $param["IstioMemLimit"];
+        if (array_key_exists('IstioMemLimit',$param) and $param['IstioMemLimit'] !== null) {
+            $this->IstioMemLimit = $param['IstioMemLimit'];
         }
     }
 }

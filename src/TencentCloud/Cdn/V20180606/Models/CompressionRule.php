@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -114,24 +114,24 @@ brotli：需要同时指定 GZIP 压缩才可启用
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Compress",$param) and $param["Compress"] !== null) {
-            $this->Compress = $param["Compress"];
+        if (array_key_exists('Compress',$param) and $param['Compress'] !== null) {
+            $this->Compress = $param['Compress'];
         }
 
-        if (array_key_exists("FileExtensions",$param) and $param["FileExtensions"] !== null) {
-            $this->FileExtensions = $param["FileExtensions"];
+        if (array_key_exists('FileExtensions',$param) and $param['FileExtensions'] !== null) {
+            $this->FileExtensions = $param['FileExtensions'];
         }
 
-        if (array_key_exists("MinLength",$param) and $param["MinLength"] !== null) {
-            $this->MinLength = $param["MinLength"];
+        if (array_key_exists('MinLength',$param) and $param['MinLength'] !== null) {
+            $this->MinLength = $param['MinLength'];
         }
 
-        if (array_key_exists("MaxLength",$param) and $param["MaxLength"] !== null) {
-            $this->MaxLength = $param["MaxLength"];
+        if (array_key_exists('MaxLength',$param) and $param['MaxLength'] !== null) {
+            $this->MaxLength = $param['MaxLength'];
         }
 
-        if (array_key_exists("Algorithms",$param) and $param["Algorithms"] !== null) {
-            $this->Algorithms = $param["Algorithms"];
+        if (array_key_exists('Algorithms',$param) and $param['Algorithms'] !== null) {
+            $this->Algorithms = $param['Algorithms'];
         }
     }
 }

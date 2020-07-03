@@ -20,33 +20,45 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 输出数据配置
  *
- * @method string getCosOutputBucket() 获取cos桶
+ * @method string getCosOutputBucket() 获取cos输出桶
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCosOutputBucket(string $CosOutputBucket) 设置cos桶
+ * @method void setCosOutputBucket(string $CosOutputBucket) 设置cos输出桶
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCosOutputKeyPrefix() 获取cos文件key
+ * @method string getCosOutputKeyPrefix() 获取cos输出key前缀
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCosOutputKeyPrefix(string $CosOutputKeyPrefix) 设置cos文件key
+ * @method void setCosOutputKeyPrefix(string $CosOutputKeyPrefix) 设置cos输出key前缀
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method FileSystemDataSource getFileSystemDataSource() 获取文件系统输出，如果指定了文件系统，那么Cos输出会被忽略
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFileSystemDataSource(FileSystemDataSource $FileSystemDataSource) 设置文件系统输出，如果指定了文件系统，那么Cos输出会被忽略
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class OutputDataConfig extends AbstractModel
 {
     /**
-     * @var string cos桶
+     * @var string cos输出桶
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CosOutputBucket;
 
     /**
-     * @var string cos文件key
+     * @var string cos输出key前缀
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CosOutputKeyPrefix;
 
     /**
-     * @param string $CosOutputBucket cos桶
+     * @var FileSystemDataSource 文件系统输出，如果指定了文件系统，那么Cos输出会被忽略
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CosOutputKeyPrefix cos文件key
+     */
+    public $FileSystemDataSource;
+
+    /**
+     * @param string $CosOutputBucket cos输出桶
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CosOutputKeyPrefix cos输出key前缀
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FileSystemDataSource $FileSystemDataSource 文件系统输出，如果指定了文件系统，那么Cos输出会被忽略
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -68,6 +80,11 @@ class OutputDataConfig extends AbstractModel
 
         if (array_key_exists("CosOutputKeyPrefix",$param) and $param["CosOutputKeyPrefix"] !== null) {
             $this->CosOutputKeyPrefix = $param["CosOutputKeyPrefix"];
+        }
+
+        if (array_key_exists("FileSystemDataSource",$param) and $param["FileSystemDataSource"] !== null) {
+            $this->FileSystemDataSource = new FileSystemDataSource();
+            $this->FileSystemDataSource->deserialize($param["FileSystemDataSource"]);
         }
     }
 }

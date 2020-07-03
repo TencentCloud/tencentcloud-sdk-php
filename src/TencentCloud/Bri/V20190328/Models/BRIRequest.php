@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * BRI请求
  *
- * @method string getService() 获取业务名, 必须是以下五个业务名之一(bri_num,bri_dev,bri_ip_bri_apk,bri_url)
- * @method void setService(string $Service) 设置业务名, 必须是以下五个业务名之一(bri_num,bri_dev,bri_ip_bri_apk,bri_url)
+ * @method string getService() 获取业务名, 必须是以下六个业务名之一(bri_num,bri_dev,bri_ip_bri_apk,bri_url,bri_social)
+ * @method void setService(string $Service) 设置业务名, 必须是以下六个业务名之一(bri_num,bri_dev,bri_ip_bri_apk,bri_url,bri_social)
  * @method string getCertMd5() 获取Apk证书Md5  (业务名为bri_apk时必填，除非已填FileMd5)
  * @method void setCertMd5(string $CertMd5) 设置Apk证书Md5  (业务名为bri_apk时必填，除非已填FileMd5)
  * @method string getFileMd5() 获取Apk文件Md5 (业务名为bri_apk时必填，除非已填PackageName,CertMd5,FileSize)
@@ -36,13 +36,23 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPackageName(string $PackageName) 设置Apk安装包名 (业务名为bri_apk时必填，除非已填FileMd5)
  * @method string getPhoneNumber() 获取电话号码 (业务名为bri_num时必填)
  * @method void setPhoneNumber(string $PhoneNumber) 设置电话号码 (业务名为bri_num时必填)
+ * @method string getQQ() 获取QQ号 (业务名为bri_social时必填, 除非已填Wechat)
+ * @method void setQQ(string $QQ) 设置QQ号 (业务名为bri_social时必填, 除非已填Wechat)
+ * @method string getQQTag() 获取QQ号的可疑标签
+ * @method void setQQTag(string $QQTag) 设置QQ号的可疑标签
+ * @method string getScene() 获取业务场景 (1-注册, 2-登录, 3-发消息)
+ * @method void setScene(string $Scene) 设置业务场景 (1-注册, 2-登录, 3-发消息)
  * @method string getUrl() 获取网址 (业务名为bri_url时必填)
  * @method void setUrl(string $Url) 设置网址 (业务名为bri_url时必填)
+ * @method string getWechat() 获取微信号 (业务名为bri_social时必填, 除非已填QQ)
+ * @method void setWechat(string $Wechat) 设置微信号 (业务名为bri_social时必填, 除非已填QQ)
+ * @method string getWechatTag() 获取微信号的可疑标签
+ * @method void setWechatTag(string $WechatTag) 设置微信号的可疑标签
  */
 class BRIRequest extends AbstractModel
 {
     /**
-     * @var string 业务名, 必须是以下五个业务名之一(bri_num,bri_dev,bri_ip_bri_apk,bri_url)
+     * @var string 业务名, 必须是以下六个业务名之一(bri_num,bri_dev,bri_ip_bri_apk,bri_url,bri_social)
      */
     public $Service;
 
@@ -82,12 +92,37 @@ class BRIRequest extends AbstractModel
     public $PhoneNumber;
 
     /**
+     * @var string QQ号 (业务名为bri_social时必填, 除非已填Wechat)
+     */
+    public $QQ;
+
+    /**
+     * @var string QQ号的可疑标签
+     */
+    public $QQTag;
+
+    /**
+     * @var string 业务场景 (1-注册, 2-登录, 3-发消息)
+     */
+    public $Scene;
+
+    /**
      * @var string 网址 (业务名为bri_url时必填)
      */
     public $Url;
 
     /**
-     * @param string $Service 业务名, 必须是以下五个业务名之一(bri_num,bri_dev,bri_ip_bri_apk,bri_url)
+     * @var string 微信号 (业务名为bri_social时必填, 除非已填QQ)
+     */
+    public $Wechat;
+
+    /**
+     * @var string 微信号的可疑标签
+     */
+    public $WechatTag;
+
+    /**
+     * @param string $Service 业务名, 必须是以下六个业务名之一(bri_num,bri_dev,bri_ip_bri_apk,bri_url,bri_social)
      * @param string $CertMd5 Apk证书Md5  (业务名为bri_apk时必填，除非已填FileMd5)
      * @param string $FileMd5 Apk文件Md5 (业务名为bri_apk时必填，除非已填PackageName,CertMd5,FileSize)
      * @param integer $FileSize Apk文件大小  (业务名为bri_apk时必填，除非已填FileMd5)
@@ -95,7 +130,12 @@ class BRIRequest extends AbstractModel
      * @param string $Ip 点分格式的IP (业务名为bri_ip时必填)
      * @param string $PackageName Apk安装包名 (业务名为bri_apk时必填，除非已填FileMd5)
      * @param string $PhoneNumber 电话号码 (业务名为bri_num时必填)
+     * @param string $QQ QQ号 (业务名为bri_social时必填, 除非已填Wechat)
+     * @param string $QQTag QQ号的可疑标签
+     * @param string $Scene 业务场景 (1-注册, 2-登录, 3-发消息)
      * @param string $Url 网址 (业务名为bri_url时必填)
+     * @param string $Wechat 微信号 (业务名为bri_social时必填, 除非已填QQ)
+     * @param string $WechatTag 微信号的可疑标签
      */
     function __construct()
     {
@@ -142,8 +182,28 @@ class BRIRequest extends AbstractModel
             $this->PhoneNumber = $param["PhoneNumber"];
         }
 
+        if (array_key_exists("QQ",$param) and $param["QQ"] !== null) {
+            $this->QQ = $param["QQ"];
+        }
+
+        if (array_key_exists("QQTag",$param) and $param["QQTag"] !== null) {
+            $this->QQTag = $param["QQTag"];
+        }
+
+        if (array_key_exists("Scene",$param) and $param["Scene"] !== null) {
+            $this->Scene = $param["Scene"];
+        }
+
         if (array_key_exists("Url",$param) and $param["Url"] !== null) {
             $this->Url = $param["Url"];
+        }
+
+        if (array_key_exists("Wechat",$param) and $param["Wechat"] !== null) {
+            $this->Wechat = $param["Wechat"];
+        }
+
+        if (array_key_exists("WechatTag",$param) and $param["WechatTag"] !== null) {
+            $this->WechatTag = $param["WechatTag"];
         }
     }
 }

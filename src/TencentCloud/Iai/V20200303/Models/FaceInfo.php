@@ -22,16 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getX() 获取人脸框左上角横坐标。
 人脸框包含人脸五官位置并在此基础上进行一定的扩展，若人脸框超出图片范围，会导致坐标负值。 
-若需截取完整人脸，可以在完整分completess满足需求的情况下，将负值坐标取0。
+若需截取完整人脸，可以在完整分completeness满足需求的情况下，将负值坐标取0。
  * @method void setX(integer $X) 设置人脸框左上角横坐标。
 人脸框包含人脸五官位置并在此基础上进行一定的扩展，若人脸框超出图片范围，会导致坐标负值。 
-若需截取完整人脸，可以在完整分completess满足需求的情况下，将负值坐标取0。
+若需截取完整人脸，可以在完整分completeness满足需求的情况下，将负值坐标取0。
  * @method integer getY() 获取人脸框左上角纵坐标。 
 人脸框包含人脸五官位置并在此基础上进行一定的扩展，若人脸框超出图片范围，会导致坐标负值。 
-若需截取完整人脸，可以在完整分completess满足需求的情况下，将负值坐标取0。
+若需截取完整人脸，可以在完整分completeness满足需求的情况下，将负值坐标取0。
  * @method void setY(integer $Y) 设置人脸框左上角纵坐标。 
 人脸框包含人脸五官位置并在此基础上进行一定的扩展，若人脸框超出图片范围，会导致坐标负值。 
-若需截取完整人脸，可以在完整分completess满足需求的情况下，将负值坐标取0。
+若需截取完整人脸，可以在完整分completeness满足需求的情况下，将负值坐标取0。
  * @method integer getWidth() 获取人脸框宽度。
  * @method void setWidth(integer $Width) 设置人脸框宽度。
  * @method integer getHeight() 获取人脸框高度。
@@ -50,14 +50,14 @@ class FaceInfo extends AbstractModel
     /**
      * @var integer 人脸框左上角横坐标。
 人脸框包含人脸五官位置并在此基础上进行一定的扩展，若人脸框超出图片范围，会导致坐标负值。 
-若需截取完整人脸，可以在完整分completess满足需求的情况下，将负值坐标取0。
+若需截取完整人脸，可以在完整分completeness满足需求的情况下，将负值坐标取0。
      */
     public $X;
 
     /**
      * @var integer 人脸框左上角纵坐标。 
 人脸框包含人脸五官位置并在此基础上进行一定的扩展，若人脸框超出图片范围，会导致坐标负值。 
-若需截取完整人脸，可以在完整分completess满足需求的情况下，将负值坐标取0。
+若需截取完整人脸，可以在完整分completeness满足需求的情况下，将负值坐标取0。
      */
     public $Y;
 
@@ -86,10 +86,10 @@ class FaceInfo extends AbstractModel
     /**
      * @param integer $X 人脸框左上角横坐标。
 人脸框包含人脸五官位置并在此基础上进行一定的扩展，若人脸框超出图片范围，会导致坐标负值。 
-若需截取完整人脸，可以在完整分completess满足需求的情况下，将负值坐标取0。
+若需截取完整人脸，可以在完整分completeness满足需求的情况下，将负值坐标取0。
      * @param integer $Y 人脸框左上角纵坐标。 
 人脸框包含人脸五官位置并在此基础上进行一定的扩展，若人脸框超出图片范围，会导致坐标负值。 
-若需截取完整人脸，可以在完整分completess满足需求的情况下，将负值坐标取0。
+若需截取完整人脸，可以在完整分completeness满足需求的情况下，将负值坐标取0。
      * @param integer $Width 人脸框宽度。
      * @param integer $Height 人脸框高度。
      * @param FaceAttributesInfo $FaceAttributesInfo 人脸属性信息，包含性别( gender )、年龄( age )、表情( expression )、 

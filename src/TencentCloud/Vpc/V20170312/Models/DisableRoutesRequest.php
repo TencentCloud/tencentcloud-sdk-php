@@ -22,8 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getRouteTableId() 获取路由表唯一ID。
  * @method void setRouteTableId(string $RouteTableId) 设置路由表唯一ID。
- * @method array getRouteIds() 获取路由策略唯一ID。
- * @method void setRouteIds(array $RouteIds) 设置路由策略唯一ID。
+ * @method array getRouteIds() 获取路由策略ID。不能和RouteItemIds同时使用。
+ * @method void setRouteIds(array $RouteIds) 设置路由策略ID。不能和RouteItemIds同时使用。
+ * @method array getRouteItemIds() 获取路由策略唯一ID。不能和RouteIds同时使用。
+ * @method void setRouteItemIds(array $RouteItemIds) 设置路由策略唯一ID。不能和RouteIds同时使用。
  */
 class DisableRoutesRequest extends AbstractModel
 {
@@ -33,13 +35,19 @@ class DisableRoutesRequest extends AbstractModel
     public $RouteTableId;
 
     /**
-     * @var array 路由策略唯一ID。
+     * @var array 路由策略ID。不能和RouteItemIds同时使用。
      */
     public $RouteIds;
 
     /**
+     * @var array 路由策略唯一ID。不能和RouteIds同时使用。
+     */
+    public $RouteItemIds;
+
+    /**
      * @param string $RouteTableId 路由表唯一ID。
-     * @param array $RouteIds 路由策略唯一ID。
+     * @param array $RouteIds 路由策略ID。不能和RouteItemIds同时使用。
+     * @param array $RouteItemIds 路由策略唯一ID。不能和RouteIds同时使用。
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class DisableRoutesRequest extends AbstractModel
 
         if (array_key_exists("RouteIds",$param) and $param["RouteIds"] !== null) {
             $this->RouteIds = $param["RouteIds"];
+        }
+
+        if (array_key_exists("RouteItemIds",$param) and $param["RouteItemIds"] !== null) {
+            $this->RouteItemIds = $param["RouteItemIds"];
         }
     }
 }

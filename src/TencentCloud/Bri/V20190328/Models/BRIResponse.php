@@ -46,7 +46,7 @@ use TencentCloud\Common\AbstractModel;
 1) 安全   说明: APK为正规应用
 2) 一般   说明: APK为未发现问题的正常应用
 3) 风险   说明: APK为外挂或色情等风险应用
-4) 病毒   说明: APK为包含恶意代码的恶意软件吗,可能破坏系统或者其他app正常使用
+4) 病毒   说明: APK为包含恶意代码的恶意软件,可能破坏系统或者其他app正常使用
  * @method void setTags(array $Tags) 设置当Service为bri_num时,返回的风险标签有:
 1) 疑似垃圾流量     说明: 结合号码的历史数据表现，判断该号码历史用互联网业务作恶行为，其产生的互联网行为对于其他业务来说属于作弊或垃圾流量。 
 2) 疑似新客户       说明: 通过号码互联网行为（社交，浏览等）是否异常判断为小号或接码平台帐号。 
@@ -71,7 +71,7 @@ use TencentCloud\Common\AbstractModel;
 1) 安全   说明: APK为正规应用
 2) 一般   说明: APK为未发现问题的正常应用
 3) 风险   说明: APK为外挂或色情等风险应用
-4) 病毒   说明: APK为包含恶意代码的恶意软件吗,可能破坏系统或者其他app正常使用
+4) 病毒   说明: APK为包含恶意代码的恶意软件,可能破坏系统或者其他app正常使用
  */
 class BRIResponse extends AbstractModel
 {
@@ -105,7 +105,7 @@ class BRIResponse extends AbstractModel
 1) 安全   说明: APK为正规应用
 2) 一般   说明: APK为未发现问题的正常应用
 3) 风险   说明: APK为外挂或色情等风险应用
-4) 病毒   说明: APK为包含恶意代码的恶意软件吗,可能破坏系统或者其他app正常使用
+4) 病毒   说明: APK为包含恶意代码的恶意软件,可能破坏系统或者其他app正常使用
      */
     public $Tags;
 
@@ -135,7 +135,7 @@ class BRIResponse extends AbstractModel
 1) 安全   说明: APK为正规应用
 2) 一般   说明: APK为未发现问题的正常应用
 3) 风险   说明: APK为外挂或色情等风险应用
-4) 病毒   说明: APK为包含恶意代码的恶意软件吗,可能破坏系统或者其他app正常使用
+4) 病毒   说明: APK为包含恶意代码的恶意软件,可能破坏系统或者其他app正常使用
      */
     function __construct()
     {

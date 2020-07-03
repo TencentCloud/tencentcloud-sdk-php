@@ -54,6 +54,14 @@ use TencentCloud\Common\AbstractModel;
 默认取值：FALSE<br>
 该参数目前仅用于 `RunInstances` 接口。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getKmsKeyId() 获取自定义CMK对应的ID，取值为UUID或者类似kms-abcd1234。用于加密云盘。
+
+该参数目前仅用于 `RunInstances` 接口。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setKmsKeyId(string $KmsKeyId) 设置自定义CMK对应的ID，取值为UUID或者类似kms-abcd1234。用于加密云盘。
+
+该参数目前仅用于 `RunInstances` 接口。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DataDisk extends AbstractModel
 {
@@ -99,6 +107,14 @@ class DataDisk extends AbstractModel
     public $Encrypt;
 
     /**
+     * @var string 自定义CMK对应的ID，取值为UUID或者类似kms-abcd1234。用于加密云盘。
+
+该参数目前仅用于 `RunInstances` 接口。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $KmsKeyId;
+
+    /**
      * @param integer $DiskSize 数据盘大小，单位：GB。最小调整步长为10G，不同数据盘类型取值范围不同，具体限制详见：[存储概述](https://cloud.tencent.com/document/product/213/4952)。默认值为0，表示不购买数据盘。更多限制详见产品文档。
      * @param string $DiskType 数据盘类型。数据盘类型限制详见[存储概述](https://cloud.tencent.com/document/product/213/4952)。取值范围：<br><li>LOCAL_BASIC：本地硬盘<br><li>LOCAL_SSD：本地SSD硬盘<br><li>CLOUD_BASIC：普通云硬盘<br><li>CLOUD_PREMIUM：高性能云硬盘<br><li>CLOUD_SSD：SSD云硬盘<br><br>默认取值：LOCAL_BASIC。<br><br>该参数对`ResizeInstanceDisk`接口无效。
      * @param string $DiskId 数据盘ID。LOCAL_BASIC 和 LOCAL_SSD 类型没有ID，暂时不支持该参数。
@@ -114,6 +130,10 @@ class DataDisk extends AbstractModel
 <li>TRUE：加密
 <li>FALSE：不加密<br>
 默认取值：FALSE<br>
+该参数目前仅用于 `RunInstances` 接口。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $KmsKeyId 自定义CMK对应的ID，取值为UUID或者类似kms-abcd1234。用于加密云盘。
+
 该参数目前仅用于 `RunInstances` 接口。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -152,6 +172,10 @@ class DataDisk extends AbstractModel
 
         if (array_key_exists("Encrypt",$param) and $param["Encrypt"] !== null) {
             $this->Encrypt = $param["Encrypt"];
+        }
+
+        if (array_key_exists("KmsKeyId",$param) and $param["KmsKeyId"] !== null) {
+            $this->KmsKeyId = $param["KmsKeyId"];
         }
     }
 }

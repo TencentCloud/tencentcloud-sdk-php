@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RechargeByThirdPay请求参数结构体
  *
- * @method string getRequestType() 获取请求类型
- * @method void setRequestType(string $RequestType) 设置请求类型
+ * @method string getRequestType() 获取请求类型 此接口固定填：MemberRechargeThirdPayReq
+ * @method void setRequestType(string $RequestType) 设置请求类型 此接口固定填：MemberRechargeThirdPayReq
  * @method string getMerchantCode() 获取商户号
  * @method void setMerchantCode(string $MerchantCode) 设置商户号
  * @method string getPayChannel() 获取支付渠道
@@ -70,7 +70,7 @@ use TencentCloud\Common\AbstractModel;
 class RechargeByThirdPayRequest extends AbstractModel
 {
     /**
-     * @var string 请求类型
+     * @var string 请求类型 此接口固定填：MemberRechargeThirdPayReq
      */
     public $RequestType;
 
@@ -185,7 +185,7 @@ class RechargeByThirdPayRequest extends AbstractModel
     public $Remark;
 
     /**
-     * @param string $RequestType 请求类型
+     * @param string $RequestType 请求类型 此接口固定填：MemberRechargeThirdPayReq
      * @param string $MerchantCode 商户号
      * @param string $PayChannel 支付渠道
      * @param integer $PayChannelSubId 子渠道

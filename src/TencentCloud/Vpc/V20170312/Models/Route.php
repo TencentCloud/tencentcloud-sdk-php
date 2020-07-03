@@ -64,6 +64,10 @@ CCN：云联网路由，系统默认下发，不可编辑与删除。
 用户只能添加和操作 USER 类型的路由。
  * @method string getRouteTableId() 获取路由表实例ID，例如：rtb-azd4dt1c。
  * @method void setRouteTableId(string $RouteTableId) 设置路由表实例ID，例如：rtb-azd4dt1c。
+ * @method string getDestinationIpv6CidrBlock() 获取目的IPv6网段，取值不能在私有网络网段内，例如：2402:4e00:1000:810b::/64。
+ * @method void setDestinationIpv6CidrBlock(string $DestinationIpv6CidrBlock) 设置目的IPv6网段，取值不能在私有网络网段内，例如：2402:4e00:1000:810b::/64。
+ * @method string getRouteItemId() 获取路由唯一策略ID。
+ * @method void setRouteItemId(string $RouteItemId) 设置路由唯一策略ID。
  */
 class Route extends AbstractModel
 {
@@ -122,6 +126,16 @@ CCN：云联网路由，系统默认下发，不可编辑与删除。
     public $RouteTableId;
 
     /**
+     * @var string 目的IPv6网段，取值不能在私有网络网段内，例如：2402:4e00:1000:810b::/64。
+     */
+    public $DestinationIpv6CidrBlock;
+
+    /**
+     * @var string 路由唯一策略ID。
+     */
+    public $RouteItemId;
+
+    /**
      * @param string $DestinationCidrBlock 目的网段，取值不能在私有网络网段内，例如：112.20.51.0/24。
      * @param string $GatewayType 下一跳类型，目前我们支持的类型有：
 CVM：公网网关类型的云服务器；
@@ -144,6 +158,8 @@ NETD：网络探测路由，创建网络探测实例时，系统默认下发，�
 CCN：云联网路由，系统默认下发，不可编辑与删除。
 用户只能添加和操作 USER 类型的路由。
      * @param string $RouteTableId 路由表实例ID，例如：rtb-azd4dt1c。
+     * @param string $DestinationIpv6CidrBlock 目的IPv6网段，取值不能在私有网络网段内，例如：2402:4e00:1000:810b::/64。
+     * @param string $RouteItemId 路由唯一策略ID。
      */
     function __construct()
     {
@@ -188,6 +204,14 @@ CCN：云联网路由，系统默认下发，不可编辑与删除。
 
         if (array_key_exists("RouteTableId",$param) and $param["RouteTableId"] !== null) {
             $this->RouteTableId = $param["RouteTableId"];
+        }
+
+        if (array_key_exists("DestinationIpv6CidrBlock",$param) and $param["DestinationIpv6CidrBlock"] !== null) {
+            $this->DestinationIpv6CidrBlock = $param["DestinationIpv6CidrBlock"];
+        }
+
+        if (array_key_exists("RouteItemId",$param) and $param["RouteItemId"] !== null) {
+            $this->RouteItemId = $param["RouteItemId"];
         }
     }
 }

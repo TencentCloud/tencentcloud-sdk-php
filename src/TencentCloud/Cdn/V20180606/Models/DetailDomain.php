@@ -218,6 +218,10 @@ global：全球锁定
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserAgentFilter(UserAgentFilter $UserAgentFilter) 设置UA黑白名单配置
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method AccessControl getAccessControl() 获取访问控制
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAccessControl(AccessControl $AccessControl) 设置访问控制
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DetailDomain extends AbstractModel
 {
@@ -493,6 +497,12 @@ global：全球锁定
     public $UserAgentFilter;
 
     /**
+     * @var AccessControl 访问控制
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AccessControl;
+
+    /**
      * @param string $ResourceId 域名 ID
      * @param integer $AppId 腾讯云账号ID
      * @param string $Domain 加速域名
@@ -591,6 +601,8 @@ global：全球锁定
      * @param ImageOptimization $ImageOptimization ImageOptimization配置
 注意：此字段可能返回 null，表示取不到有效值。
      * @param UserAgentFilter $UserAgentFilter UA黑白名单配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AccessControl $AccessControl 访问控制
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -807,6 +819,11 @@ global：全球锁定
         if (array_key_exists("UserAgentFilter",$param) and $param["UserAgentFilter"] !== null) {
             $this->UserAgentFilter = new UserAgentFilter();
             $this->UserAgentFilter->deserialize($param["UserAgentFilter"]);
+        }
+
+        if (array_key_exists("AccessControl",$param) and $param["AccessControl"] !== null) {
+            $this->AccessControl = new AccessControl();
+            $this->AccessControl->deserialize($param["AccessControl"]);
         }
     }
 }

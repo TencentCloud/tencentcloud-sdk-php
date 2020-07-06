@@ -70,6 +70,8 @@ development: 开发环境
 缺省: release
  * @method string getCommissionAmount() 获取手续费金额
  * @method void setCommissionAmount(string $CommissionAmount) 设置手续费金额
+ * @method string getWithdrawOrderId() 获取提现单号，长度32字节
+ * @method void setWithdrawOrderId(string $WithdrawOrderId) 设置提现单号，长度32字节
  */
 class ApplyWithdrawalRequest extends AbstractModel
 {
@@ -159,6 +161,11 @@ development: 开发环境
     public $CommissionAmount;
 
     /**
+     * @var string 提现单号，长度32字节
+     */
+    public $WithdrawOrderId;
+
+    /**
      * @param string $MidasAppId 聚鑫分配的支付主MidasAppId
      * @param string $SubAppId 聚鑫计费SubAppId，代表子商户
      * @param string $SettleAcctNo 用于提现
@@ -184,6 +191,7 @@ sandbox: 沙箱环境
 development: 开发环境
 缺省: release
      * @param string $CommissionAmount 手续费金额
+     * @param string $WithdrawOrderId 提现单号，长度32字节
      */
     function __construct()
     {
@@ -256,6 +264,10 @@ development: 开发环境
 
         if (array_key_exists("CommissionAmount",$param) and $param["CommissionAmount"] !== null) {
             $this->CommissionAmount = $param["CommissionAmount"];
+        }
+
+        if (array_key_exists("WithdrawOrderId",$param) and $param["WithdrawOrderId"] !== null) {
+            $this->WithdrawOrderId = $param["WithdrawOrderId"];
         }
     }
 }

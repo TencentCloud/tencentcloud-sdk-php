@@ -69,6 +69,10 @@ on：开启
 off：关闭
 默认为关闭状态
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method Revalidate getRevalidate() 获取总是回源站校验
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRevalidate(Revalidate $Revalidate) 设置总是回源站校验
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SimpleCache extends AbstractModel
 {
@@ -116,6 +120,12 @@ off：关闭
     public $CompareMaxAge;
 
     /**
+     * @var Revalidate 总是回源站校验
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Revalidate;
+
+    /**
      * @param array $CacheRules 缓存过期时间规则
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FollowOrigin 遵循源站 Cache-Control: max-age 配置
@@ -138,6 +148,8 @@ off：关闭
 on：开启
 off：关闭
 默认为关闭状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Revalidate $Revalidate 总是回源站校验
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -176,6 +188,11 @@ off：关闭
 
         if (array_key_exists("CompareMaxAge",$param) and $param["CompareMaxAge"] !== null) {
             $this->CompareMaxAge = $param["CompareMaxAge"];
+        }
+
+        if (array_key_exists("Revalidate",$param) and $param["Revalidate"] !== null) {
+            $this->Revalidate = new Revalidate();
+            $this->Revalidate->deserialize($param["Revalidate"]);
         }
     }
 }

@@ -48,7 +48,7 @@ use TencentCloud\Bda\V20200324\Models as Models;
 - 构成人体轨迹单张图片大小限制为2M，分辨率限制为1920*1080。
  * @method Models\DeleteGroupResponse DeleteGroup(Models\DeleteGroupRequest $req) 删除该人体库及包含的所有的人员。
  * @method Models\DeletePersonResponse DeletePerson(Models\DeletePersonRequest $req) 删除人员。
- * @method Models\DetectBodyResponse DetectBody(Models\DetectBodyRequest $req) 检测给定图片中的人体（Body）的位置信息（属性信息将在后续开放）。
+ * @method Models\DetectBodyResponse DetectBody(Models\DetectBodyRequest $req) 检测给定图片中的人体（Body）的位置信息及属性信息。
 
  * @method Models\DetectBodyJointsResponse DetectBodyJoints(Models\DetectBodyJointsRequest $req) 检测图片中人体的14个关键点。建议用于人体图像清晰、无遮挡的场景。支持一张图片中存在多个人体的识别。
 

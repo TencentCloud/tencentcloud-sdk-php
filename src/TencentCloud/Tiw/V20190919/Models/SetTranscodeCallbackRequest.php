@@ -22,8 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getSdkAppId() 获取客户的SdkAppId
  * @method void setSdkAppId(integer $SdkAppId) 设置客户的SdkAppId
- * @method string getCallback() 获取文档转码进度回调地址，如果传空字符串会删除原来的回调地址配置，回调地址仅支持http或https协议，即回调地址以http://或https://开头
- * @method void setCallback(string $Callback) 设置文档转码进度回调地址，如果传空字符串会删除原来的回调地址配置，回调地址仅支持http或https协议，即回调地址以http://或https://开头
+ * @method string getCallback() 获取文档转码进度回调地址，如果传空字符串会删除原来的回调地址配置，回调地址仅支持http或https协议，即回调地址以http://或https://开头。
+回调数据格式请参考文档：https://cloud.tencent.com/document/product/1137/40260
+ * @method void setCallback(string $Callback) 设置文档转码进度回调地址，如果传空字符串会删除原来的回调地址配置，回调地址仅支持http或https协议，即回调地址以http://或https://开头。
+回调数据格式请参考文档：https://cloud.tencent.com/document/product/1137/40260
  */
 class SetTranscodeCallbackRequest extends AbstractModel
 {
@@ -33,13 +35,15 @@ class SetTranscodeCallbackRequest extends AbstractModel
     public $SdkAppId;
 
     /**
-     * @var string 文档转码进度回调地址，如果传空字符串会删除原来的回调地址配置，回调地址仅支持http或https协议，即回调地址以http://或https://开头
+     * @var string 文档转码进度回调地址，如果传空字符串会删除原来的回调地址配置，回调地址仅支持http或https协议，即回调地址以http://或https://开头。
+回调数据格式请参考文档：https://cloud.tencent.com/document/product/1137/40260
      */
     public $Callback;
 
     /**
      * @param integer $SdkAppId 客户的SdkAppId
-     * @param string $Callback 文档转码进度回调地址，如果传空字符串会删除原来的回调地址配置，回调地址仅支持http或https协议，即回调地址以http://或https://开头
+     * @param string $Callback 文档转码进度回调地址，如果传空字符串会删除原来的回调地址配置，回调地址仅支持http或https协议，即回调地址以http://或https://开头。
+回调数据格式请参考文档：https://cloud.tencent.com/document/product/1137/40260
      */
     function __construct()
     {

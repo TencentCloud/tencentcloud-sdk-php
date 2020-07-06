@@ -34,6 +34,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRejectNonArithmeticImage(boolean $RejectNonArithmeticImage) 设置拒绝非速算图（如风景图、人物图）开关，若开启，则遇到非速算图会快速返回拒绝的结果，但极端情况下可能会影响评估结果（比如算式截图贴到风景画里可能被判为非速算图直接返回了）。
  * @method integer getIsAsync() 获取异步模式标识，0：同步模式，1：异步模式。默认为同步模式
  * @method void setIsAsync(integer $IsAsync) 设置异步模式标识，0：同步模式，1：异步模式。默认为同步模式
+ * @method boolean getEnableDispRelatedVertical() 获取是否展开耦合算式中的竖式计算
+ * @method void setEnableDispRelatedVertical(boolean $EnableDispRelatedVertical) 设置是否展开耦合算式中的竖式计算
+ * @method boolean getEnableDispMidresult() 获取是否展示竖式算式的中间结果和格式控制字符
+ * @method void setEnableDispMidresult(boolean $EnableDispMidresult) 设置是否展示竖式算式的中间结果和格式控制字符
+ * @method boolean getEnablePdfRecognize() 获取是否开启pdf识别，默认开启
+ * @method void setEnablePdfRecognize(boolean $EnablePdfRecognize) 设置是否开启pdf识别，默认开启
+ * @method integer getPdfPageIndex() 获取pdf页码，从0开始，默认为0
+ * @method void setPdfPageIndex(integer $PdfPageIndex) 设置pdf页码，从0开始，默认为0
  */
 class EvaluationRequest extends AbstractModel
 {
@@ -73,6 +81,26 @@ class EvaluationRequest extends AbstractModel
     public $IsAsync;
 
     /**
+     * @var boolean 是否展开耦合算式中的竖式计算
+     */
+    public $EnableDispRelatedVertical;
+
+    /**
+     * @var boolean 是否展示竖式算式的中间结果和格式控制字符
+     */
+    public $EnableDispMidresult;
+
+    /**
+     * @var boolean 是否开启pdf识别，默认开启
+     */
+    public $EnablePdfRecognize;
+
+    /**
+     * @var integer pdf页码，从0开始，默认为0
+     */
+    public $PdfPageIndex;
+
+    /**
      * @param string $SessionId 图片唯一标识，一张图片一个SessionId；
      * @param string $Image 图片数据，需要使用base64对图片的二进制数据进行编码，与url参数二者填一即可；
      * @param string $HcmAppid 业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，新的 HcmAppid 可以在[控制台](https://console.cloud.tencent.com/hcm)【应用管理】下新建。
@@ -80,6 +108,10 @@ class EvaluationRequest extends AbstractModel
      * @param boolean $SupportHorizontalImage 横屏拍摄开关，若开启则支持传输横屏拍摄的图片；
      * @param boolean $RejectNonArithmeticImage 拒绝非速算图（如风景图、人物图）开关，若开启，则遇到非速算图会快速返回拒绝的结果，但极端情况下可能会影响评估结果（比如算式截图贴到风景画里可能被判为非速算图直接返回了）。
      * @param integer $IsAsync 异步模式标识，0：同步模式，1：异步模式。默认为同步模式
+     * @param boolean $EnableDispRelatedVertical 是否展开耦合算式中的竖式计算
+     * @param boolean $EnableDispMidresult 是否展示竖式算式的中间结果和格式控制字符
+     * @param boolean $EnablePdfRecognize 是否开启pdf识别，默认开启
+     * @param integer $PdfPageIndex pdf页码，从0开始，默认为0
      */
     function __construct()
     {
@@ -120,6 +152,22 @@ class EvaluationRequest extends AbstractModel
 
         if (array_key_exists("IsAsync",$param) and $param["IsAsync"] !== null) {
             $this->IsAsync = $param["IsAsync"];
+        }
+
+        if (array_key_exists("EnableDispRelatedVertical",$param) and $param["EnableDispRelatedVertical"] !== null) {
+            $this->EnableDispRelatedVertical = $param["EnableDispRelatedVertical"];
+        }
+
+        if (array_key_exists("EnableDispMidresult",$param) and $param["EnableDispMidresult"] !== null) {
+            $this->EnableDispMidresult = $param["EnableDispMidresult"];
+        }
+
+        if (array_key_exists("EnablePdfRecognize",$param) and $param["EnablePdfRecognize"] !== null) {
+            $this->EnablePdfRecognize = $param["EnablePdfRecognize"];
+        }
+
+        if (array_key_exists("PdfPageIndex",$param) and $param["PdfPageIndex"] !== null) {
+            $this->PdfPageIndex = $param["PdfPageIndex"];
         }
     }
 }

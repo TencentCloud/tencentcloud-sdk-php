@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getSdkAppId() 获取应用的SdkAppId
  * @method void setSdkAppId(integer $SdkAppId) 设置应用的SdkAppId
- * @method string getCallbackKey() 获取设置文档转码回调鉴权密钥，最长64字符，如果传入空字符串，那么删除现有的鉴权回调密钥
- * @method void setCallbackKey(string $CallbackKey) 设置设置文档转码回调鉴权密钥，最长64字符，如果传入空字符串，那么删除现有的鉴权回调密钥
+ * @method string getCallbackKey() 获取设置文档转码回调鉴权密钥，最长64字符，如果传入空字符串，那么删除现有的鉴权回调密钥，回调鉴权方式请参考文档：https://cloud.tencent.com/document/product/1137/40257
+ * @method void setCallbackKey(string $CallbackKey) 设置设置文档转码回调鉴权密钥，最长64字符，如果传入空字符串，那么删除现有的鉴权回调密钥，回调鉴权方式请参考文档：https://cloud.tencent.com/document/product/1137/40257
  */
 class SetTranscodeCallbackKeyRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class SetTranscodeCallbackKeyRequest extends AbstractModel
     public $SdkAppId;
 
     /**
-     * @var string 设置文档转码回调鉴权密钥，最长64字符，如果传入空字符串，那么删除现有的鉴权回调密钥
+     * @var string 设置文档转码回调鉴权密钥，最长64字符，如果传入空字符串，那么删除现有的鉴权回调密钥，回调鉴权方式请参考文档：https://cloud.tencent.com/document/product/1137/40257
      */
     public $CallbackKey;
 
     /**
      * @param integer $SdkAppId 应用的SdkAppId
-     * @param string $CallbackKey 设置文档转码回调鉴权密钥，最长64字符，如果传入空字符串，那么删除现有的鉴权回调密钥
+     * @param string $CallbackKey 设置文档转码回调鉴权密钥，最长64字符，如果传入空字符串，那么删除现有的鉴权回调密钥，回调鉴权方式请参考文档：https://cloud.tencent.com/document/product/1137/40257
      */
     function __construct()
     {

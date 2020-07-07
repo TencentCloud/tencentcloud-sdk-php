@@ -50,6 +50,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOldPasswordExpireTime(string $OldPasswordExpireTime) 设置如果PasswordStatus是unmodifiable说明有旧密码还未过期，此字段将显示旧密码过期的时间，否则为空
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getApiAccessIpv6() 获取TcaplusDB SDK连接参数，接入ipv6地址
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setApiAccessIpv6(string $ApiAccessIpv6) 设置TcaplusDB SDK连接参数，接入ipv6地址
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ClusterInfo extends AbstractModel
 {
@@ -125,6 +129,12 @@ class ClusterInfo extends AbstractModel
     public $OldPasswordExpireTime;
 
     /**
+     * @var string TcaplusDB SDK连接参数，接入ipv6地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ApiAccessIpv6;
+
+    /**
      * @param string $ClusterName 集群名称
      * @param string $ClusterId 集群ID
      * @param string $Region 集群所在地域
@@ -139,6 +149,8 @@ class ClusterInfo extends AbstractModel
      * @param string $ApiAccessIp TcaplusDB SDK连接参数，接入地址
      * @param integer $ApiAccessPort TcaplusDB SDK连接参数，接入端口
      * @param string $OldPasswordExpireTime 如果PasswordStatus是unmodifiable说明有旧密码还未过期，此字段将显示旧密码过期的时间，否则为空
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ApiAccessIpv6 TcaplusDB SDK连接参数，接入ipv6地址
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -208,6 +220,10 @@ class ClusterInfo extends AbstractModel
 
         if (array_key_exists("OldPasswordExpireTime",$param) and $param["OldPasswordExpireTime"] !== null) {
             $this->OldPasswordExpireTime = $param["OldPasswordExpireTime"];
+        }
+
+        if (array_key_exists("ApiAccessIpv6",$param) and $param["ApiAccessIpv6"] !== null) {
+            $this->ApiAccessIpv6 = $param["ApiAccessIpv6"];
         }
     }
 }

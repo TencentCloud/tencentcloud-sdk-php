@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置查询列表偏移量
  * @method integer getLimit() 获取查询列表返回记录数，默认值20
  * @method void setLimit(integer $Limit) 设置查询列表返回记录数，默认值20
+ * @method integer getIpv6Enable() 获取是否启用Ipv6
+ * @method void setIpv6Enable(integer $Ipv6Enable) 设置是否启用Ipv6
  */
 class DescribeClustersRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class DescribeClustersRequest extends AbstractModel
     public $Limit;
 
     /**
+     * @var integer 是否启用Ipv6
+     */
+    public $Ipv6Enable;
+
+    /**
      * @param array $ClusterIds 指定查询的集群ID列表
      * @param array $Filters 查询过滤条件
      * @param integer $Offset 查询列表偏移量
      * @param integer $Limit 查询列表返回记录数，默认值20
+     * @param integer $Ipv6Enable 是否启用Ipv6
      */
     function __construct()
     {
@@ -89,6 +97,10 @@ class DescribeClustersRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("Ipv6Enable",$param) and $param["Ipv6Enable"] !== null) {
+            $this->Ipv6Enable = $param["Ipv6Enable"];
         }
     }
 }

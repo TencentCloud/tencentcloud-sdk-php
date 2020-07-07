@@ -42,9 +42,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemark(string $Remark) 设置策略备注
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getOperateOwnerUin() 获取策略关联操作者主张号
+ * @method string getOperateOwnerUin() 获取策略关联操作者主帐号
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOperateOwnerUin(string $OperateOwnerUin) 设置策略关联操作者主张号
+ * @method void setOperateOwnerUin(string $OperateOwnerUin) 设置策略关联操作者主帐号
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOperateUin() 获取策略关联操作者ID，如果UinType为0表示子帐号Uin，如果UinType为1表示角色ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -101,7 +101,7 @@ class AttachPolicyInfo extends AbstractModel
     public $Remark;
 
     /**
-     * @var string 策略关联操作者主张号
+     * @var string 策略关联操作者主帐号
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OperateOwnerUin;
@@ -142,7 +142,7 @@ class AttachPolicyInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Remark 策略备注
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $OperateOwnerUin 策略关联操作者主张号
+     * @param string $OperateOwnerUin 策略关联操作者主帐号
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OperateUin 策略关联操作者ID，如果UinType为0表示子帐号Uin，如果UinType为1表示角色ID
 注意：此字段可能返回 null，表示取不到有效值。

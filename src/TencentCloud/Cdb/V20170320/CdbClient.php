@@ -107,6 +107,7 @@ use TencentCloud\Cdb\V20170320\Models as Models;
  * @method Models\DescribeParamTemplatesResponse DescribeParamTemplates(Models\DescribeParamTemplatesRequest $req) 该接口（DescribeParamTemplates）查询参数模板列表。
  * @method Models\DescribeProjectSecurityGroupsResponse DescribeProjectSecurityGroups(Models\DescribeProjectSecurityGroupsRequest $req) 本接口(DescribeProjectSecurityGroups)用于查询项目的安全组详情。
  * @method Models\DescribeRoGroupsResponse DescribeRoGroups(Models\DescribeRoGroupsRequest $req) 本接口(DescribeRoGroups)用于查询云数据库实例的所有的RO组的信息。
+ * @method Models\DescribeRoMinScaleResponse DescribeRoMinScale(Models\DescribeRoMinScaleRequest $req) 本接口(DescribeRoMinScale)用于获取只读实例购买、升级时的最小规格。
  * @method Models\DescribeRollbackRangeTimeResponse DescribeRollbackRangeTime(Models\DescribeRollbackRangeTimeRequest $req) 本接口(DescribeRollbackRangeTime)用于查询云数据库实例可回档的时间范围。
  * @method Models\DescribeRollbackTaskDetailResponse DescribeRollbackTaskDetail(Models\DescribeRollbackTaskDetailRequest $req) 本接口(DescribeRollbackTaskDetail)用于查询云数据库实例回档任务详情。
  * @method Models\DescribeSlowLogDataResponse DescribeSlowLogData(Models\DescribeSlowLogDataRequest $req) 条件检索实例的慢日志。只允许查看一个月之内的慢日志

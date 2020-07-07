@@ -58,6 +58,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStorageBlockAmount(integer $StorageBlockAmount) 设置本地存储块数量。
  * @method string getCpuType() 获取处理器型号。
  * @method void setCpuType(string $CpuType) 设置处理器型号。
+ * @method integer getGpu() 获取实例的GPU数量。
+ * @method void setGpu(integer $Gpu) 设置实例的GPU数量。
+ * @method integer getFpga() 获取实例的FPGA数量。
+ * @method void setFpga(integer $Fpga) 设置实例的FPGA数量。
+ * @method string getRemark() 获取实例备注信息。
+ * @method void setRemark(string $Remark) 设置实例备注信息。
  */
 class InstanceTypeQuotaItem extends AbstractModel
 {
@@ -149,6 +155,21 @@ class InstanceTypeQuotaItem extends AbstractModel
     public $CpuType;
 
     /**
+     * @var integer 实例的GPU数量。
+     */
+    public $Gpu;
+
+    /**
+     * @var integer 实例的FPGA数量。
+     */
+    public $Fpga;
+
+    /**
+     * @var string 实例备注信息。
+     */
+    public $Remark;
+
+    /**
      * @param string $Zone 可用区。
      * @param string $InstanceType 实例机型。
      * @param string $InstanceChargeType 实例计费模式。取值范围： <br><li>PREPAID：表示预付费，即包年包月<br><li>POSTPAID_BY_HOUR：表示后付费，即按量计费<br><li>CDHPAID：表示[CDH](https://cloud.tencent.com/document/product/416)付费，即只对CDH计费，不对CDH上的实例计费。<br><li>`SPOTPAID`：表示竞价实例付费。
@@ -168,6 +189,9 @@ class InstanceTypeQuotaItem extends AbstractModel
      * @param integer $InstancePps 网络收发包能力，单位万PPS。
      * @param integer $StorageBlockAmount 本地存储块数量。
      * @param string $CpuType 处理器型号。
+     * @param integer $Gpu 实例的GPU数量。
+     * @param integer $Fpga 实例的FPGA数量。
+     * @param string $Remark 实例备注信息。
      */
     function __construct()
     {
@@ -255,6 +279,18 @@ class InstanceTypeQuotaItem extends AbstractModel
 
         if (array_key_exists("CpuType",$param) and $param["CpuType"] !== null) {
             $this->CpuType = $param["CpuType"];
+        }
+
+        if (array_key_exists("Gpu",$param) and $param["Gpu"] !== null) {
+            $this->Gpu = $param["Gpu"];
+        }
+
+        if (array_key_exists("Fpga",$param) and $param["Fpga"] !== null) {
+            $this->Fpga = $param["Fpga"];
+        }
+
+        if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
+            $this->Remark = $param["Remark"];
         }
     }
 }

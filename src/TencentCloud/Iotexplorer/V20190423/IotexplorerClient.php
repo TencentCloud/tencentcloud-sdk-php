@@ -31,6 +31,7 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\CreateProjectResponse CreateProject(Models\CreateProjectRequest $req) 为用户提供新建项目的能力，用于集中管理产品和应用。
  * @method Models\CreateStudioProductResponse CreateStudioProduct(Models\CreateStudioProductRequest $req) 为用户提供新建产品的能力，用于管理用户的设备
  * @method Models\DeleteDeviceResponse DeleteDevice(Models\DeleteDeviceRequest $req) 删除设备
+ * @method Models\DeleteLoRaGatewayResponse DeleteLoRaGateway(Models\DeleteLoRaGatewayRequest $req) 删除  LoRa 网关的接口
  * @method Models\DeleteProjectResponse DeleteProject(Models\DeleteProjectRequest $req) 提供删除某个项目的能力
  * @method Models\DeleteStudioProductResponse DeleteStudioProduct(Models\DeleteStudioProductRequest $req) 提供删除某个项目下产品的能力
  * @method Models\DescribeDeviceResponse DescribeDevice(Models\DescribeDeviceRequest $req) 用于查看某个设备的详细信息
@@ -44,6 +45,7 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\GetProjectListResponse GetProjectList(Models\GetProjectListRequest $req) 提供查询用户所创建的项目列表查询功能。
  * @method Models\GetStudioProductListResponse GetStudioProductList(Models\GetStudioProductListRequest $req) 提供查询某个项目下所有产品信息的能力。
  * @method Models\ListEventHistoryResponse ListEventHistory(Models\ListEventHistoryRequest $req) 获取设备的历史事件
+ * @method Models\ModifyLoRaGatewayResponse ModifyLoRaGateway(Models\ModifyLoRaGatewayRequest $req) 修改 LoRa 网关信息
  * @method Models\ModifyModelDefinitionResponse ModifyModelDefinition(Models\ModifyModelDefinitionRequest $req) 提供修改产品的数据模板的能力
  * @method Models\ModifyProjectResponse ModifyProject(Models\ModifyProjectRequest $req) 修改项目
  * @method Models\ModifyStudioProductResponse ModifyStudioProduct(Models\ModifyStudioProductRequest $req) 提供修改产品的名称和描述等信息的能力，对于已发布产品不允许进行修改。

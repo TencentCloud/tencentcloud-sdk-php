@@ -72,6 +72,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBasicSecurityType(integer $BasicSecurityType) 设置ES 6.8及以上版本基础版开启或关闭用户认证
  * @method integer getKibanaPrivatePort() 获取Kibana内网端口
  * @method void setKibanaPrivatePort(integer $KibanaPrivatePort) 设置Kibana内网端口
+ * @method integer getScaleType() 获取0: 蓝绿变更方式扩容，集群不重启 （默认） 1: 磁盘解挂载扩容，集群滚动重启
+ * @method void setScaleType(integer $ScaleType) 设置0: 蓝绿变更方式扩容，集群不重启 （默认） 1: 磁盘解挂载扩容，集群滚动重启
  */
 class UpdateInstanceRequest extends AbstractModel
 {
@@ -182,6 +184,11 @@ class UpdateInstanceRequest extends AbstractModel
     public $KibanaPrivatePort;
 
     /**
+     * @var integer 0: 蓝绿变更方式扩容，集群不重启 （默认） 1: 磁盘解挂载扩容，集群滚动重启
+     */
+    public $ScaleType;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $InstanceName 实例名称（1-50 个英文、汉字、数字、连接线-或下划线_）
      * @param integer $NodeNum 已废弃请使用NodeInfoList
@@ -208,6 +215,7 @@ class UpdateInstanceRequest extends AbstractModel
      * @param string $KibanaPrivateAccess Kibana内网访问状态
      * @param integer $BasicSecurityType ES 6.8及以上版本基础版开启或关闭用户认证
      * @param integer $KibanaPrivatePort Kibana内网端口
+     * @param integer $ScaleType 0: 蓝绿变更方式扩容，集群不重启 （默认） 1: 磁盘解挂载扩容，集群滚动重启
      */
     function __construct()
     {
@@ -308,6 +316,10 @@ class UpdateInstanceRequest extends AbstractModel
 
         if (array_key_exists("KibanaPrivatePort",$param) and $param["KibanaPrivatePort"] !== null) {
             $this->KibanaPrivatePort = $param["KibanaPrivatePort"];
+        }
+
+        if (array_key_exists("ScaleType",$param) and $param["ScaleType"] !== null) {
+            $this->ScaleType = $param["ScaleType"];
         }
     }
 }

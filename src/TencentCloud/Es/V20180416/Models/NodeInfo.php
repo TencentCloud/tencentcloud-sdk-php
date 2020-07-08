@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDiskCount() 获取节点磁盘块数
  * @method void setDiskCount(integer $DiskCount) 设置节点磁盘块数
+ * @method integer getDiskEncrypt() 获取节点磁盘是否加密 0: 不加密，1: 加密；默认不加密
+ * @method void setDiskEncrypt(integer $DiskEncrypt) 设置节点磁盘是否加密 0: 不加密，1: 加密；默认不加密
  */
 class NodeInfo extends AbstractModel
 {
@@ -85,6 +87,11 @@ class NodeInfo extends AbstractModel
     public $DiskCount;
 
     /**
+     * @var integer 节点磁盘是否加密 0: 不加密，1: 加密；默认不加密
+     */
+    public $DiskEncrypt;
+
+    /**
      * @param integer $NodeNum 节点数量
      * @param string $NodeType 节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
      * @param string $Type 节点类型<li>hotData: 热数据节点</li>
@@ -96,6 +103,7 @@ class NodeInfo extends AbstractModel
      * @param LocalDiskInfo $LocalDiskInfo 节点本地盘信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DiskCount 节点磁盘块数
+     * @param integer $DiskEncrypt 节点磁盘是否加密 0: 不加密，1: 加密；默认不加密
      */
     function __construct()
     {
@@ -137,6 +145,10 @@ class NodeInfo extends AbstractModel
 
         if (array_key_exists("DiskCount",$param) and $param["DiskCount"] !== null) {
             $this->DiskCount = $param["DiskCount"];
+        }
+
+        if (array_key_exists("DiskEncrypt",$param) and $param["DiskEncrypt"] !== null) {
+            $this->DiskEncrypt = $param["DiskEncrypt"];
         }
     }
 }

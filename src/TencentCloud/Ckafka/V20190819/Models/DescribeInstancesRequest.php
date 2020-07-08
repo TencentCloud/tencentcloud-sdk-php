@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(array $Status) 设置（过滤条件）实例的状态。0：创建中，1：运行中，2：删除中，不填默认返回全部
  * @method integer getOffset() 获取偏移量，不填默认为0
  * @method void setOffset(integer $Offset) 设置偏移量，不填默认为0
- * @method integer getLimit() 获取返回数量，不填则默认10，最大值20
- * @method void setLimit(integer $Limit) 设置返回数量，不填则默认10，最大值20
+ * @method integer getLimit() 获取返回数量，不填则默认10，最大值100
+ * @method void setLimit(integer $Limit) 设置返回数量，不填则默认10，最大值100
  * @method string getTagKey() 获取匹配标签key值。
  * @method void setTagKey(string $TagKey) 设置匹配标签key值。
  */
@@ -56,7 +56,7 @@ class DescribeInstancesRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var integer 返回数量，不填则默认10，最大值20
+     * @var integer 返回数量，不填则默认10，最大值100
      */
     public $Limit;
 
@@ -70,7 +70,7 @@ class DescribeInstancesRequest extends AbstractModel
      * @param string $SearchWord （过滤条件）按照实例名称过滤，支持模糊查询
      * @param array $Status （过滤条件）实例的状态。0：创建中，1：运行中，2：删除中，不填默认返回全部
      * @param integer $Offset 偏移量，不填默认为0
-     * @param integer $Limit 返回数量，不填则默认10，最大值20
+     * @param integer $Limit 返回数量，不填则默认10，最大值100
      * @param string $TagKey 匹配标签key值。
      */
     function __construct()

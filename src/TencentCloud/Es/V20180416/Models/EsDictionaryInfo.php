@@ -18,12 +18,18 @@ namespace TencentCloud\Es\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ES IK词库信息
+ * ES 词库信息
  *
  * @method array getMainDict() 获取启用词词典列表
  * @method void setMainDict(array $MainDict) 设置启用词词典列表
  * @method array getStopwords() 获取停用词词典列表
  * @method void setStopwords(array $Stopwords) 设置停用词词典列表
+ * @method array getQQDict() 获取QQ分词词典列表
+ * @method void setQQDict(array $QQDict) 设置QQ分词词典列表
+ * @method array getSynonym() 获取同义词词典列表
+ * @method void setSynonym(array $Synonym) 设置同义词词典列表
+ * @method string getUpdateType() 获取更新词典类型
+ * @method void setUpdateType(string $UpdateType) 设置更新词典类型
  */
 class EsDictionaryInfo extends AbstractModel
 {
@@ -38,8 +44,26 @@ class EsDictionaryInfo extends AbstractModel
     public $Stopwords;
 
     /**
+     * @var array QQ分词词典列表
+     */
+    public $QQDict;
+
+    /**
+     * @var array 同义词词典列表
+     */
+    public $Synonym;
+
+    /**
+     * @var string 更新词典类型
+     */
+    public $UpdateType;
+
+    /**
      * @param array $MainDict 启用词词典列表
      * @param array $Stopwords 停用词词典列表
+     * @param array $QQDict QQ分词词典列表
+     * @param array $Synonym 同义词词典列表
+     * @param string $UpdateType 更新词典类型
      */
     function __construct()
     {
@@ -70,6 +94,28 @@ class EsDictionaryInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Stopwords, $obj);
             }
+        }
+
+        if (array_key_exists("QQDict",$param) and $param["QQDict"] !== null) {
+            $this->QQDict = [];
+            foreach ($param["QQDict"] as $key => $value){
+                $obj = new DictInfo();
+                $obj->deserialize($value);
+                array_push($this->QQDict, $obj);
+            }
+        }
+
+        if (array_key_exists("Synonym",$param) and $param["Synonym"] !== null) {
+            $this->Synonym = [];
+            foreach ($param["Synonym"] as $key => $value){
+                $obj = new DictInfo();
+                $obj->deserialize($value);
+                array_push($this->Synonym, $obj);
+            }
+        }
+
+        if (array_key_exists("UpdateType",$param) and $param["UpdateType"] !== null) {
+            $this->UpdateType = $param["UpdateType"];
         }
     }
 }

@@ -27,9 +27,11 @@ use TencentCloud\Common\AbstractModel;
  * @method boolean getIsAutoRenew() 获取自动续费标记
  * @method void setIsAutoRenew(boolean $IsAutoRenew) 设置自动续费标记
  * @method string getStatus() 获取状态。包含以下取值：
+<li> 空字符串：初始化中</li>
 <li> NORMAL：正常</li>
 <li> ISOLATE：隔离</li>
  * @method void setStatus(string $Status) 设置状态。包含以下取值：
+<li> 空字符串：初始化中</li>
 <li> NORMAL：正常</li>
 <li> ISOLATE：隔离</li>
  * @method string getPayMode() 获取支付方式。包含以下取值：
@@ -84,6 +86,7 @@ class EnvBillingInfoItem extends AbstractModel
 
     /**
      * @var string 状态。包含以下取值：
+<li> 空字符串：初始化中</li>
 <li> NORMAL：正常</li>
 <li> ISOLATE：隔离</li>
      */
@@ -146,6 +149,7 @@ class EnvBillingInfoItem extends AbstractModel
      * @param string $PackageId tcb产品套餐ID，参考DescribePackages接口的返回值。
      * @param boolean $IsAutoRenew 自动续费标记
      * @param string $Status 状态。包含以下取值：
+<li> 空字符串：初始化中</li>
 <li> NORMAL：正常</li>
 <li> ISOLATE：隔离</li>
      * @param string $PayMode 支付方式。包含以下取值：

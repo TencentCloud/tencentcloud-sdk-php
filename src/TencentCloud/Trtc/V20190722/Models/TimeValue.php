@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 返回的质量数据，时间:值
  *
- * @method integer getTime() 获取时间
- * @method void setTime(integer $Time) 设置时间
- * @method float getValue() 获取当前时间取值，unix时间戳
- * @method void setValue(float $Value) 设置当前时间取值，unix时间戳
+ * @method integer getTime() 获取时间，unix时间戳（1590065877s)
+ * @method void setTime(integer $Time) 设置时间，unix时间戳（1590065877s)
+ * @method float getValue() 获取当前时间返回参数取值，如（bigvCapFps在1590065877取值为0，则Value：0 ）
+ * @method void setValue(float $Value) 设置当前时间返回参数取值，如（bigvCapFps在1590065877取值为0，则Value：0 ）
  */
 class TimeValue extends AbstractModel
 {
     /**
-     * @var integer 时间
+     * @var integer 时间，unix时间戳（1590065877s)
      */
     public $Time;
 
     /**
-     * @var float 当前时间取值，unix时间戳
+     * @var float 当前时间返回参数取值，如（bigvCapFps在1590065877取值为0，则Value：0 ）
      */
     public $Value;
 
     /**
-     * @param integer $Time 时间
-     * @param float $Value 当前时间取值，unix时间戳
+     * @param integer $Time 时间，unix时间戳（1590065877s)
+     * @param float $Value 当前时间返回参数取值，如（bigvCapFps在1590065877取值为0，则Value：0 ）
      */
     function __construct()
     {

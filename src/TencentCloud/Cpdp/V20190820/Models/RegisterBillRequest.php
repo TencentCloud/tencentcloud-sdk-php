@@ -44,8 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTransSeqNo(string $TransSeqNo) 设置交易流水号
  * @method string getTranFee() 获取暂未使用，默认传0.0
  * @method void setTranFee(string $TranFee) 设置暂未使用，默认传0.0
- * @method string getOrderAmt() 获取挂账金额
- * @method void setOrderAmt(string $OrderAmt) 设置挂账金额
+ * @method string getOrderAmt() 获取挂账金额，以元为单位
+ * @method void setOrderAmt(string $OrderAmt) 设置挂账金额，以元为单位
  * @method string getBankSubAccountNo() 获取子账户账号
  * @method void setBankSubAccountNo(string $BankSubAccountNo) 设置子账户账号
  * @method string getTranNetMemberCode() 获取交易网会员代码
@@ -122,7 +122,7 @@ class RegisterBillRequest extends AbstractModel
     public $TranFee;
 
     /**
-     * @var string 挂账金额
+     * @var string 挂账金额，以元为单位
      */
     public $OrderAmt;
 
@@ -169,7 +169,7 @@ class RegisterBillRequest extends AbstractModel
      * @param string $MidasSignature 计费签名
      * @param string $TransSeqNo 交易流水号
      * @param string $TranFee 暂未使用，默认传0.0
-     * @param string $OrderAmt 挂账金额
+     * @param string $OrderAmt 挂账金额，以元为单位
      * @param string $BankSubAccountNo 子账户账号
      * @param string $TranNetMemberCode 交易网会员代码
      * @param string $TranType 0,登记挂账，1，撤销挂账

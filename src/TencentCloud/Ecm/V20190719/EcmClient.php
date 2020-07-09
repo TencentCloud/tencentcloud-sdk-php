@@ -68,7 +68,7 @@ EIP 如果欠费或被封堵，则不能被绑定。
  * @method Models\DisassociateAddressResponse DisassociateAddress(Models\DisassociateAddressRequest $req) 解绑弹性公网IP（简称 EIP）
 只有状态为 BIND 和 BIND_ENI 的 EIP 才能进行解绑定操作。
 EIP 如果被封堵，则不能进行解绑定操作。
- * @method Models\ImportCustomImageResponse ImportCustomImage(Models\ImportCustomImageRequest $req) 从腾讯云COS导入自定义镜像
+ * @method Models\ImportCustomImageResponse ImportCustomImage(Models\ImportCustomImageRequest $req) 导入自定义镜像，支持 RAW、VHD、QCOW2、VMDK 镜像格式
  * @method Models\ImportImageResponse ImportImage(Models\ImportImageRequest $req) 从CVM产品导入镜像到ECM
  * @method Models\MigrateNetworkInterfaceResponse MigrateNetworkInterface(Models\MigrateNetworkInterfaceRequest $req) 弹性网卡迁移
  * @method Models\MigratePrivateIpAddressResponse MigratePrivateIpAddress(Models\MigratePrivateIpAddressRequest $req) 弹性网卡内网IP迁移。

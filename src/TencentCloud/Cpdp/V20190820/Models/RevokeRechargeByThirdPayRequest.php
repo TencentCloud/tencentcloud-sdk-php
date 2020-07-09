@@ -42,8 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMidasSignature(string $MidasSignature) 设置计费签名
  * @method string getTransSequenceNumber() 获取交易流水号
  * @method void setTransSequenceNumber(string $TransSequenceNumber) 设置交易流水号
- * @method string getTransFee() 获取申请撤销的手续费金额
- * @method void setTransFee(string $TransFee) 设置申请撤销的手续费金额
+ * @method string getTransFee() 获取申请撤销的手续费金额,以元为单位
+ * @method void setTransFee(string $TransFee) 设置申请撤销的手续费金额,以元为单位
  * @method string getThirdPayChannel() 获取第三方支付渠道类型 0001-微信 0002-支付宝 0003-京东支付
  * @method void setThirdPayChannel(string $ThirdPayChannel) 设置第三方支付渠道类型 0001-微信 0002-支付宝 0003-京东支付
  * @method string getThirdPayChannelOrderId() 获取第三方渠道订单号或流水号
@@ -121,7 +121,7 @@ class RevokeRechargeByThirdPayRequest extends AbstractModel
     public $TransSequenceNumber;
 
     /**
-     * @var string 申请撤销的手续费金额
+     * @var string 申请撤销的手续费金额,以元为单位
      */
     public $TransFee;
 
@@ -182,7 +182,7 @@ class RevokeRechargeByThirdPayRequest extends AbstractModel
      * @param string $MidasAppId 聚鑫分配的支付主MidasAppId
      * @param string $MidasSignature 计费签名
      * @param string $TransSequenceNumber 交易流水号
-     * @param string $TransFee 申请撤销的手续费金额
+     * @param string $TransFee 申请撤销的手续费金额,以元为单位
      * @param string $ThirdPayChannel 第三方支付渠道类型 0001-微信 0002-支付宝 0003-京东支付
      * @param string $ThirdPayChannelOrderId 第三方渠道订单号或流水号
      * @param string $OldFrontSequenceNumber 充值接口银行返回的流水号(FrontSeqNo)

@@ -54,8 +54,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMidasSecretId(string $MidasSecretId) 设置聚鑫分配的安全ID
  * @method string getMidasSignature() 获取计费签名
  * @method void setMidasSignature(string $MidasSignature) 设置计费签名
- * @method string getTransSequenceNumber() 获取交易流水号
- * @method void setTransSequenceNumber(string $TransSequenceNumber) 设置交易流水号
+ * @method string getTransSequenceNumber() 获取交易流水号 
+生成方式：用户短号+日期（6位）+ 随机编号（10位）例如：F088722005120904930798
+短号：F08872  日期： 200512   随机编号：0904930798
+ * @method void setTransSequenceNumber(string $TransSequenceNumber) 设置交易流水号 
+生成方式：用户短号+日期（6位）+ 随机编号（10位）例如：F088722005120904930798
+短号：F08872  日期： 200512   随机编号：0904930798
  * @method string getInTransNetMemberCode() 获取转入交易网会员代码
  * @method void setInTransNetMemberCode(string $InTransNetMemberCode) 设置转入交易网会员代码
  * @method string getMidasEnvironment() 获取Midas环境标识 release 现网环境 sandbox 沙箱环境
@@ -64,8 +68,16 @@ development 开发环境
 development 开发环境
  * @method string getPlatformShortNumber() 获取平台短号(银行分配)
  * @method void setPlatformShortNumber(string $PlatformShortNumber) 设置平台短号(银行分配)
- * @method string getTransType() 获取0,登记挂账，1，撤销挂账
- * @method void setTransType(string $TransType) 设置0,登记挂账，1，撤销挂账
+ * @method string getTransType() 获取1：下单预支付 
+2：确认并付款
+3：退款
+6：直接支付T+1
+9：直接支付T+0
+ * @method void setTransType(string $TransType) 设置1：下单预支付 
+2：确认并付款
+3：退款
+6：直接支付T+1
+9：直接支付T+0
  * @method string getTransFee() 获取交易手续费
  * @method void setTransFee(string $TransFee) 设置交易手续费
  * @method string getReservedMessage() 获取保留域
@@ -159,7 +171,9 @@ class ExecuteMemberTransactionRequest extends AbstractModel
     public $MidasSignature;
 
     /**
-     * @var string 交易流水号
+     * @var string 交易流水号 
+生成方式：用户短号+日期（6位）+ 随机编号（10位）例如：F088722005120904930798
+短号：F08872  日期： 200512   随机编号：0904930798
      */
     public $TransSequenceNumber;
 
@@ -180,7 +194,11 @@ development 开发环境
     public $PlatformShortNumber;
 
     /**
-     * @var string 0,登记挂账，1，撤销挂账
+     * @var string 1：下单预支付 
+2：确认并付款
+3：退款
+6：直接支付T+1
+9：直接支付T+0
      */
     public $TransType;
 
@@ -212,12 +230,18 @@ development 开发环境
      * @param string $MidasAppId 聚鑫分配的支付主MidasAppId
      * @param string $MidasSecretId 聚鑫分配的安全ID
      * @param string $MidasSignature 计费签名
-     * @param string $TransSequenceNumber 交易流水号
+     * @param string $TransSequenceNumber 交易流水号 
+生成方式：用户短号+日期（6位）+ 随机编号（10位）例如：F088722005120904930798
+短号：F08872  日期： 200512   随机编号：0904930798
      * @param string $InTransNetMemberCode 转入交易网会员代码
      * @param string $MidasEnvironment Midas环境标识 release 现网环境 sandbox 沙箱环境
 development 开发环境
      * @param string $PlatformShortNumber 平台短号(银行分配)
-     * @param string $TransType 0,登记挂账，1，撤销挂账
+     * @param string $TransType 1：下单预支付 
+2：确认并付款
+3：退款
+6：直接支付T+1
+9：直接支付T+0
      * @param string $TransFee 交易手续费
      * @param string $ReservedMessage 保留域
      */

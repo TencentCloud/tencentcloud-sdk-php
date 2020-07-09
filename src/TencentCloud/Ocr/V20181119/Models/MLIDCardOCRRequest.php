@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
 支持的图片大小：所下载图片经 Base64 编码后不超过 3M。图片下载时间不超过 3 秒。
 图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。
 非腾讯云存储的 Url 速度和稳定性可能受一定影响。
- * @method boolean getRetImage() 获取是否返回图片
- * @method void setRetImage(boolean $RetImage) 设置是否返回图片
+ * @method boolean getRetImage() 获取是否返回图片，默认false
+ * @method void setRetImage(boolean $RetImage) 设置是否返回图片，默认false
  */
 class MLIDCardOCRRequest extends AbstractModel
 {
@@ -58,7 +58,7 @@ class MLIDCardOCRRequest extends AbstractModel
     public $ImageUrl;
 
     /**
-     * @var boolean 是否返回图片
+     * @var boolean 是否返回图片，默认false
      */
     public $RetImage;
 
@@ -71,7 +71,7 @@ class MLIDCardOCRRequest extends AbstractModel
 支持的图片大小：所下载图片经 Base64 编码后不超过 3M。图片下载时间不超过 3 秒。
 图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。
 非腾讯云存储的 Url 速度和稳定性可能受一定影响。
-     * @param boolean $RetImage 是否返回图片
+     * @param boolean $RetImage 是否返回图片，默认false
      */
     function __construct()
     {

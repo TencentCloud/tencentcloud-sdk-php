@@ -14,23 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Nlp\V20190408\Models;
+namespace TencentCloud\Tdmq\V20200217\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * SentenceSimilarity返回参数结构体
+ * DeleteSubscriptions返回参数结构体
  *
- * @method float getSimilarity() 获取两个文本的相似度
- * @method void setSimilarity(float $Similarity) 设置两个文本的相似度
+ * @method array getSubscriptionTopicSets() 获取成功删除的订阅关系数组。
+ * @method void setSubscriptionTopicSets(array $SubscriptionTopicSets) 设置成功删除的订阅关系数组。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class SentenceSimilarityResponse extends AbstractModel
+class DeleteSubscriptionsResponse extends AbstractModel
 {
     /**
-     * @var float 两个文本的相似度
+     * @var array 成功删除的订阅关系数组。
      */
-    public $Similarity;
+    public $SubscriptionTopicSets;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +38,7 @@ class SentenceSimilarityResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param float $Similarity 两个文本的相似度
+     * @param array $SubscriptionTopicSets 成功删除的订阅关系数组。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,8 +54,13 @@ class SentenceSimilarityResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Similarity",$param) and $param["Similarity"] !== null) {
-            $this->Similarity = $param["Similarity"];
+        if (array_key_exists("SubscriptionTopicSets",$param) and $param["SubscriptionTopicSets"] !== null) {
+            $this->SubscriptionTopicSets = [];
+            foreach ($param["SubscriptionTopicSets"] as $key => $value){
+                $obj = new SubscriptionTopic();
+                $obj->deserialize($value);
+                array_push($this->SubscriptionTopicSets, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

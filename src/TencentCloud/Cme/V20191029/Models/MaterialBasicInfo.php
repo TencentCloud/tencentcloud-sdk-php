@@ -34,12 +34,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUpdateTime(string $UpdateTime) 设置素材文件的最近更新时间（如修改视频属性、发起视频处理等会触发更新媒体文件信息的操作），使用 ISO 日期格式。
  * @method string getClassPath() 获取素材的分类目录路径。
  * @method void setClassPath(string $ClassPath) 设置素材的分类目录路径。
- * @method array getTagInfoSet() 获取素材绑定的标签信息列表。
- * @method void setTagInfoSet(array $TagInfoSet) 设置素材绑定的标签信息列表。
+ * @method array getTagInfoSet() 获取素材绑定的标签信息列表 。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTagInfoSet(array $TagInfoSet) 设置素材绑定的标签信息列表 。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPreviewUrl() 获取素材媒体文件的预览图。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPreviewUrl(string $PreviewUrl) 设置素材媒体文件的预览图。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class MaterialBasicInfo extends AbstractModel
 {
@@ -79,13 +79,13 @@ class MaterialBasicInfo extends AbstractModel
     public $ClassPath;
 
     /**
-     * @var array 素材绑定的标签信息列表。
+     * @var array 素材绑定的标签信息列表 。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TagInfoSet;
 
     /**
      * @var string 素材媒体文件的预览图。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PreviewUrl;
 
@@ -97,9 +97,9 @@ class MaterialBasicInfo extends AbstractModel
      * @param string $CreateTime 素材文件的创建时间，使用 ISO 日期格式。
      * @param string $UpdateTime 素材文件的最近更新时间（如修改视频属性、发起视频处理等会触发更新媒体文件信息的操作），使用 ISO 日期格式。
      * @param string $ClassPath 素材的分类目录路径。
-     * @param array $TagInfoSet 素材绑定的标签信息列表。
-     * @param string $PreviewUrl 素材媒体文件的预览图。
+     * @param array $TagInfoSet 素材绑定的标签信息列表 。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $PreviewUrl 素材媒体文件的预览图。
      */
     function __construct()
     {

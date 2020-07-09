@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMidasSignature(string $MidasSignature) 设置计费签名
  * @method string getInSubAccountNumber() 获取转入见证子账户账号
  * @method void setInSubAccountNumber(string $InSubAccountNumber) 设置转入见证子账户账号
- * @method string getMidasSecretId() 获取计费秘钥
- * @method void setMidasSecretId(string $MidasSecretId) 设置计费秘钥
+ * @method string getMidasSecretId() 获取聚鑫分配的安全ID
+ * @method void setMidasSecretId(string $MidasSecretId) 设置聚鑫分配的安全ID
  * @method string getBankAccountNumber() 获取父账户账号，资金汇总账号
  * @method void setBankAccountNumber(string $BankAccountNumber) 设置父账户账号，资金汇总账号
  * @method string getOldTransSequenceNumber() 获取原老订单流水号
@@ -104,7 +104,7 @@ class RefundMemberTransactionRequest extends AbstractModel
     public $InSubAccountNumber;
 
     /**
-     * @var string 计费秘钥
+     * @var string 聚鑫分配的安全ID
      */
     public $MidasSecretId;
 
@@ -201,7 +201,7 @@ development 开发环境
      * @param string $OutSubAccountNumber 转出见证子账户账号
      * @param string $MidasSignature 计费签名
      * @param string $InSubAccountNumber 转入见证子账户账号
-     * @param string $MidasSecretId 计费秘钥
+     * @param string $MidasSecretId 聚鑫分配的安全ID
      * @param string $BankAccountNumber 父账户账号，资金汇总账号
      * @param string $OldTransSequenceNumber 原老订单流水号
      * @param string $MerchantCode 银行注册商户号

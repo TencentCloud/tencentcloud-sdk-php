@@ -44,8 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTransSequenceNumber(string $TransSequenceNumber) 设置交易流水号
  * @method string getBankSubAccountNumber() 获取子账户账号
  * @method void setBankSubAccountNumber(string $BankSubAccountNumber) 设置子账户账号
- * @method string getTransFee() 获取交易手续费
- * @method void setTransFee(string $TransFee) 设置交易手续费
+ * @method string getTransFee() 获取交易手续费，以元为单位
+ * @method void setTransFee(string $TransFee) 设置交易手续费，以元为单位
  * @method string getThirdPayChannel() 获取第三方支付渠道类型 0001-微信 0002-支付宝 0003-京东支付
  * @method void setThirdPayChannel(string $ThirdPayChannel) 设置第三方支付渠道类型 0001-微信 0002-支付宝 0003-京东支付
  * @method string getThirdPayChannelMerchantCode() 获取第三方渠道商户号
@@ -130,7 +130,7 @@ class RechargeByThirdPayRequest extends AbstractModel
     public $BankSubAccountNumber;
 
     /**
-     * @var string 交易手续费
+     * @var string 交易手续费，以元为单位
      */
     public $TransFee;
 
@@ -197,7 +197,7 @@ class RechargeByThirdPayRequest extends AbstractModel
      * @param string $MidasSignature 计费签名
      * @param string $TransSequenceNumber 交易流水号
      * @param string $BankSubAccountNumber 子账户账号
-     * @param string $TransFee 交易手续费
+     * @param string $TransFee 交易手续费，以元为单位
      * @param string $ThirdPayChannel 第三方支付渠道类型 0001-微信 0002-支付宝 0003-京东支付
      * @param string $ThirdPayChannelMerchantCode 第三方渠道商户号
      * @param string $ThirdPayChannelOrderId 第三方渠道订单号或流水号

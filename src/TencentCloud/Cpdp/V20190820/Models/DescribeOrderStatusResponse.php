@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeOrderStatus返回参数结构体
  *
- * @method string getOrderStatus() 获取交易状态 （（0：成功，1：失败，2：待确认, 5：待处理，6：处理中）
- * @method void setOrderStatus(string $OrderStatus) 设置交易状态 （（0：成功，1：失败，2：待确认, 5：待处理，6：处理中）
+ * @method string getOrderStatus() 获取交易状态 （0：成功，1：失败，2：待确认, 5：待处理，6：处理中）
+ * @method void setOrderStatus(string $OrderStatus) 设置交易状态 （0：成功，1：失败，2：待确认, 5：待处理，6：处理中）
  * @method string getOrderAmount() 获取交易金额
  * @method void setOrderAmount(string $OrderAmount) 设置交易金额
  * @method string getOrderDate() 获取交易日期
@@ -44,7 +44,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeOrderStatusResponse extends AbstractModel
 {
     /**
-     * @var string 交易状态 （（0：成功，1：失败，2：待确认, 5：待处理，6：处理中）
+     * @var string 交易状态 （0：成功，1：失败，2：待确认, 5：待处理，6：处理中）
      */
     public $OrderStatus;
 
@@ -94,7 +94,7 @@ class DescribeOrderStatusResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $OrderStatus 交易状态 （（0：成功，1：失败，2：待确认, 5：待处理，6：处理中）
+     * @param string $OrderStatus 交易状态 （0：成功，1：失败，2：待确认, 5：待处理，6：处理中）
      * @param string $OrderAmount 交易金额
      * @param string $OrderDate 交易日期
      * @param string $OrderTime 交易时间

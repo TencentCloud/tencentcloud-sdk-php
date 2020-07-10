@@ -24,10 +24,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHeight(integer $Height) 设置图片高度，单位：px。
  * @method integer getWidth() 获取图片宽度，单位：px。
  * @method void setWidth(integer $Width) 设置图片宽度，单位：px。
- * @method string getMaterialUrl() 获取素材媒体文件的 URL 地址。
- * @method void setMaterialUrl(string $MaterialUrl) 设置素材媒体文件的 URL 地址。
+ * @method string getMaterialUrl() 获取素材媒体文件的展示 URL 地址。
+ * @method void setMaterialUrl(string $MaterialUrl) 设置素材媒体文件的展示 URL 地址。
  * @method integer getSize() 获取图片大小，单位：字节。
  * @method void setSize(integer $Size) 设置图片大小，单位：字节。
+ * @method string getOriginalUrl() 获取素材媒体文件的原始 URL 地址。
+ * @method void setOriginalUrl(string $OriginalUrl) 设置素材媒体文件的原始 URL 地址。
+ * @method string getVodFileId() 获取云点播媒资 FileId。
+ * @method void setVodFileId(string $VodFileId) 设置云点播媒资 FileId。
  */
 class ImageMaterial extends AbstractModel
 {
@@ -42,7 +46,7 @@ class ImageMaterial extends AbstractModel
     public $Width;
 
     /**
-     * @var string 素材媒体文件的 URL 地址。
+     * @var string 素材媒体文件的展示 URL 地址。
      */
     public $MaterialUrl;
 
@@ -52,10 +56,22 @@ class ImageMaterial extends AbstractModel
     public $Size;
 
     /**
+     * @var string 素材媒体文件的原始 URL 地址。
+     */
+    public $OriginalUrl;
+
+    /**
+     * @var string 云点播媒资 FileId。
+     */
+    public $VodFileId;
+
+    /**
      * @param integer $Height 图片高度，单位：px。
      * @param integer $Width 图片宽度，单位：px。
-     * @param string $MaterialUrl 素材媒体文件的 URL 地址。
+     * @param string $MaterialUrl 素材媒体文件的展示 URL 地址。
      * @param integer $Size 图片大小，单位：字节。
+     * @param string $OriginalUrl 素材媒体文件的原始 URL 地址。
+     * @param string $VodFileId 云点播媒资 FileId。
      */
     function __construct()
     {
@@ -84,6 +100,14 @@ class ImageMaterial extends AbstractModel
 
         if (array_key_exists("Size",$param) and $param["Size"] !== null) {
             $this->Size = $param["Size"];
+        }
+
+        if (array_key_exists("OriginalUrl",$param) and $param["OriginalUrl"] !== null) {
+            $this->OriginalUrl = $param["OriginalUrl"];
+        }
+
+        if (array_key_exists("VodFileId",$param) and $param["VodFileId"] !== null) {
+            $this->VodFileId = $param["VodFileId"];
         }
     }
 }

@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMetaData(MediaMetaData $MetaData) 设置素材元信息。
  * @method MediaImageSpriteInfo getImageSpriteInfo() 获取雪碧图信息。
  * @method void setImageSpriteInfo(MediaImageSpriteInfo $ImageSpriteInfo) 设置雪碧图信息。
- * @method string getMaterialUrl() 获取素材媒体文件的 URL 地址
- * @method void setMaterialUrl(string $MaterialUrl) 设置素材媒体文件的 URL 地址
+ * @method string getMaterialUrl() 获取素材媒体文件的播放 URL 地址。
+ * @method void setMaterialUrl(string $MaterialUrl) 设置素材媒体文件的播放 URL 地址。
  * @method string getCoverUrl() 获取素材媒体文件的封面图片地址。
  * @method void setCoverUrl(string $CoverUrl) 设置素材媒体文件的封面图片地址。
  * @method string getResolution() 获取媒体文件分辨率。取值为：LD/SD/HD/FHD/2K/4K。
@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaterialStatus(MaterialStatus $MaterialStatus) 设置素材状态。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getOriginalUrl() 获取素材媒体文件的原始 URL 地址。
+ * @method void setOriginalUrl(string $OriginalUrl) 设置素材媒体文件的原始 URL 地址。
+ * @method string getVodFileId() 获取云点播媒资 FileId。
+ * @method void setVodFileId(string $VodFileId) 设置云点播媒资 FileId。
  */
 class VideoMaterial extends AbstractModel
 {
@@ -48,7 +52,7 @@ class VideoMaterial extends AbstractModel
     public $ImageSpriteInfo;
 
     /**
-     * @var string 素材媒体文件的 URL 地址
+     * @var string 素材媒体文件的播放 URL 地址。
      */
     public $MaterialUrl;
 
@@ -69,13 +73,25 @@ class VideoMaterial extends AbstractModel
     public $MaterialStatus;
 
     /**
+     * @var string 素材媒体文件的原始 URL 地址。
+     */
+    public $OriginalUrl;
+
+    /**
+     * @var string 云点播媒资 FileId。
+     */
+    public $VodFileId;
+
+    /**
      * @param MediaMetaData $MetaData 素材元信息。
      * @param MediaImageSpriteInfo $ImageSpriteInfo 雪碧图信息。
-     * @param string $MaterialUrl 素材媒体文件的 URL 地址
+     * @param string $MaterialUrl 素材媒体文件的播放 URL 地址。
      * @param string $CoverUrl 素材媒体文件的封面图片地址。
      * @param string $Resolution 媒体文件分辨率。取值为：LD/SD/HD/FHD/2K/4K。
      * @param MaterialStatus $MaterialStatus 素材状态。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $OriginalUrl 素材媒体文件的原始 URL 地址。
+     * @param string $VodFileId 云点播媒资 FileId。
      */
     function __construct()
     {
@@ -115,6 +131,14 @@ class VideoMaterial extends AbstractModel
         if (array_key_exists("MaterialStatus",$param) and $param["MaterialStatus"] !== null) {
             $this->MaterialStatus = new MaterialStatus();
             $this->MaterialStatus->deserialize($param["MaterialStatus"]);
+        }
+
+        if (array_key_exists("OriginalUrl",$param) and $param["OriginalUrl"] !== null) {
+            $this->OriginalUrl = $param["OriginalUrl"];
+        }
+
+        if (array_key_exists("VodFileId",$param) and $param["VodFileId"] !== null) {
+            $this->VodFileId = $param["VodFileId"];
         }
     }
 }

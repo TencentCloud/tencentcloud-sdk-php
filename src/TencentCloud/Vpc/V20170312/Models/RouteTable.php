@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRouteTableName(string $RouteTableName) 设置路由表名称。
  * @method array getAssociationSet() 获取路由表关联关系。
  * @method void setAssociationSet(array $AssociationSet) 设置路由表关联关系。
- * @method array getRouteSet() 获取路由表策略集合。
- * @method void setRouteSet(array $RouteSet) 设置路由表策略集合。
+ * @method array getRouteSet() 获取IPv4路由策略集合。
+ * @method void setRouteSet(array $RouteSet) 设置IPv4路由策略集合。
  * @method boolean getMain() 获取是否默认路由表。
  * @method void setMain(boolean $Main) 设置是否默认路由表。
  * @method string getCreatedTime() 获取创建时间。
@@ -60,7 +60,7 @@ class RouteTable extends AbstractModel
     public $AssociationSet;
 
     /**
-     * @var array 路由表策略集合。
+     * @var array IPv4路由策略集合。
      */
     public $RouteSet;
 
@@ -84,7 +84,7 @@ class RouteTable extends AbstractModel
      * @param string $RouteTableId 路由表实例ID，例如：rtb-azd4dt1c。
      * @param string $RouteTableName 路由表名称。
      * @param array $AssociationSet 路由表关联关系。
-     * @param array $RouteSet 路由表策略集合。
+     * @param array $RouteSet IPv4路由策略集合。
      * @param boolean $Main 是否默认路由表。
      * @param string $CreatedTime 创建时间。
      * @param array $TagSet 标签键值对。

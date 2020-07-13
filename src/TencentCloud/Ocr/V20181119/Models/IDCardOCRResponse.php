@@ -37,9 +37,12 @@ use TencentCloud\Common\AbstractModel;
  * @method string getValidDate() 获取证件有效期（国徽面）
  * @method void setValidDate(string $ValidDate) 设置证件有效期（国徽面）
  * @method string getAdvancedInfo() 获取扩展信息，不请求则不返回，具体输入参考示例3和示例4。
-IdCard，裁剪后身份证照片的base64编码，请求 CropIdCard 时返回；
-Portrait，身份证头像照片的base64编码，请求 CropPortrait 时返回；
-QualityValue，图片质量分，请求 Quality 时返回（取值范围：0~100，分数越低越模糊，建议阈值≥50）;
+IdCard，裁剪后身份证照片的base64编码，请求 Config.CropIdCard 时返回；
+Portrait，身份证头像照片的base64编码，请求 Config.CropPortrait 时返回；
+
+Quality，图片质量分数，请求 Config.Quality 时返回（取值范围：0~100，分数越低越模糊，建议阈值≥50）;
+BorderCodeValue，身份证边框不完整告警阈值分数，请求 Config.BorderCheckWarn时返回（取值范围：0~100，分数越低边框遮挡可能性越低，建议阈值≥50）;
+
 WarnInfos，告警信息，Code 告警码列表和释义：
 -9100	身份证有效日期不合法告警，
 -9101	身份证边框不完整告警，
@@ -49,9 +52,12 @@ WarnInfos，告警信息，Code 告警码列表和释义：
 -9104	临时身份证告警，
 -9106	身份证 PS 告警。
  * @method void setAdvancedInfo(string $AdvancedInfo) 设置扩展信息，不请求则不返回，具体输入参考示例3和示例4。
-IdCard，裁剪后身份证照片的base64编码，请求 CropIdCard 时返回；
-Portrait，身份证头像照片的base64编码，请求 CropPortrait 时返回；
-QualityValue，图片质量分，请求 Quality 时返回（取值范围：0~100，分数越低越模糊，建议阈值≥50）;
+IdCard，裁剪后身份证照片的base64编码，请求 Config.CropIdCard 时返回；
+Portrait，身份证头像照片的base64编码，请求 Config.CropPortrait 时返回；
+
+Quality，图片质量分数，请求 Config.Quality 时返回（取值范围：0~100，分数越低越模糊，建议阈值≥50）;
+BorderCodeValue，身份证边框不完整告警阈值分数，请求 Config.BorderCheckWarn时返回（取值范围：0~100，分数越低边框遮挡可能性越低，建议阈值≥50）;
+
 WarnInfos，告警信息，Code 告警码列表和释义：
 -9100	身份证有效日期不合法告警，
 -9101	身份证边框不完整告警，
@@ -107,9 +113,12 @@ class IDCardOCRResponse extends AbstractModel
 
     /**
      * @var string 扩展信息，不请求则不返回，具体输入参考示例3和示例4。
-IdCard，裁剪后身份证照片的base64编码，请求 CropIdCard 时返回；
-Portrait，身份证头像照片的base64编码，请求 CropPortrait 时返回；
-QualityValue，图片质量分，请求 Quality 时返回（取值范围：0~100，分数越低越模糊，建议阈值≥50）;
+IdCard，裁剪后身份证照片的base64编码，请求 Config.CropIdCard 时返回；
+Portrait，身份证头像照片的base64编码，请求 Config.CropPortrait 时返回；
+
+Quality，图片质量分数，请求 Config.Quality 时返回（取值范围：0~100，分数越低越模糊，建议阈值≥50）;
+BorderCodeValue，身份证边框不完整告警阈值分数，请求 Config.BorderCheckWarn时返回（取值范围：0~100，分数越低边框遮挡可能性越低，建议阈值≥50）;
+
 WarnInfos，告警信息，Code 告警码列表和释义：
 -9100	身份证有效日期不合法告警，
 -9101	身份证边框不完整告警，
@@ -136,9 +145,12 @@ WarnInfos，告警信息，Code 告警码列表和释义：
      * @param string $Authority 发证机关（国徽面）
      * @param string $ValidDate 证件有效期（国徽面）
      * @param string $AdvancedInfo 扩展信息，不请求则不返回，具体输入参考示例3和示例4。
-IdCard，裁剪后身份证照片的base64编码，请求 CropIdCard 时返回；
-Portrait，身份证头像照片的base64编码，请求 CropPortrait 时返回；
-QualityValue，图片质量分，请求 Quality 时返回（取值范围：0~100，分数越低越模糊，建议阈值≥50）;
+IdCard，裁剪后身份证照片的base64编码，请求 Config.CropIdCard 时返回；
+Portrait，身份证头像照片的base64编码，请求 Config.CropPortrait 时返回；
+
+Quality，图片质量分数，请求 Config.Quality 时返回（取值范围：0~100，分数越低越模糊，建议阈值≥50）;
+BorderCodeValue，身份证边框不完整告警阈值分数，请求 Config.BorderCheckWarn时返回（取值范围：0~100，分数越低边框遮挡可能性越低，建议阈值≥50）;
+
 WarnInfos，告警信息，Code 告警码列表和释义：
 -9100	身份证有效日期不合法告警，
 -9101	身份证边框不完整告警，

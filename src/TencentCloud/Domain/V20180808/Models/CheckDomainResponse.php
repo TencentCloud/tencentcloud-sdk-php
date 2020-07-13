@@ -52,6 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFeeRestore(integer $FeeRestore) 设置溢价词的赎回价格
  * @method integer getPeriod() 获取检测年限
  * @method void setPeriod(integer $Period) 设置检测年限
+ * @method boolean getRecordSupport() 获取是否支持北京备案  true 支持  false 不支持
+ * @method void setRecordSupport(boolean $RecordSupport) 设置是否支持北京备案  true 支持  false 不支持
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -122,6 +124,11 @@ class CheckDomainResponse extends AbstractModel
     public $Period;
 
     /**
+     * @var boolean 是否支持北京备案  true 支持  false 不支持
+     */
+    public $RecordSupport;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -143,6 +150,7 @@ class CheckDomainResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FeeRestore 溢价词的赎回价格
      * @param integer $Period 检测年限
+     * @param boolean $RecordSupport 是否支持北京备案  true 支持  false 不支持
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -204,6 +212,10 @@ class CheckDomainResponse extends AbstractModel
 
         if (array_key_exists("Period",$param) and $param["Period"] !== null) {
             $this->Period = $param["Period"];
+        }
+
+        if (array_key_exists("RecordSupport",$param) and $param["RecordSupport"] !== null) {
+            $this->RecordSupport = $param["RecordSupport"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

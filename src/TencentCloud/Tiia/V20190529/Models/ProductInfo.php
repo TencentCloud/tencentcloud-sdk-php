@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
 当图像中检测到多个物品时，会对显著性最高的物品进行识别。
  *
  * @method integer getFindSKU() 获取1表示找到同款商品，以下字段为同款商品信息； 
-0表示未找到同款商品， 具体商品信息为空（参考价格、名称、品牌等），仅提供商品类目。  
+0表示未找到同款商品， 具体商品信息为空（参考价格、名称、品牌等），仅提供商品类目和参考图片（商品库中找到的最相似图片，供参考）。  
 是否找到同款的判断依据为Score分值，分值越大则同款的可能性越大。
  * @method void setFindSKU(integer $FindSKU) 设置1表示找到同款商品，以下字段为同款商品信息； 
-0表示未找到同款商品， 具体商品信息为空（参考价格、名称、品牌等），仅提供商品类目。  
+0表示未找到同款商品， 具体商品信息为空（参考价格、名称、品牌等），仅提供商品类目和参考图片（商品库中找到的最相似图片，供参考）。  
 是否找到同款的判断依据为Score分值，分值越大则同款的可能性越大。
  * @method Location getLocation() 获取本商品在图片中的坐标，表示为矩形框的四个顶点坐标。
  * @method void setLocation(Location $Location) 设置本商品在图片中的坐标，表示为矩形框的四个顶点坐标。
@@ -43,14 +43,14 @@ use TencentCloud\Common\AbstractModel;
 当类别为“非商品”时，除Location、Score和本字段之外的商品信息为空。
  * @method float getScore() 获取输入图片中的主体物品和输出结果的相似度。分值越大，输出结果与输入图片是同款的可能性越高。
  * @method void setScore(float $Score) 设置输入图片中的主体物品和输出结果的相似度。分值越大，输出结果与输入图片是同款的可能性越高。
- * @method string getImage() 获取搜索到的商品配图URL
- * @method void setImage(string $Image) 设置搜索到的商品配图URL
+ * @method string getImage() 获取搜索到的商品配图URL。
+ * @method void setImage(string $Image) 设置搜索到的商品配图URL。
  */
 class ProductInfo extends AbstractModel
 {
     /**
      * @var integer 1表示找到同款商品，以下字段为同款商品信息； 
-0表示未找到同款商品， 具体商品信息为空（参考价格、名称、品牌等），仅提供商品类目。  
+0表示未找到同款商品， 具体商品信息为空（参考价格、名称、品牌等），仅提供商品类目和参考图片（商品库中找到的最相似图片，供参考）。  
 是否找到同款的判断依据为Score分值，分值越大则同款的可能性越大。
      */
     public $FindSKU;
@@ -88,13 +88,13 @@ class ProductInfo extends AbstractModel
     public $Score;
 
     /**
-     * @var string 搜索到的商品配图URL
+     * @var string 搜索到的商品配图URL。
      */
     public $Image;
 
     /**
      * @param integer $FindSKU 1表示找到同款商品，以下字段为同款商品信息； 
-0表示未找到同款商品， 具体商品信息为空（参考价格、名称、品牌等），仅提供商品类目。  
+0表示未找到同款商品， 具体商品信息为空（参考价格、名称、品牌等），仅提供商品类目和参考图片（商品库中找到的最相似图片，供参考）。  
 是否找到同款的判断依据为Score分值，分值越大则同款的可能性越大。
      * @param Location $Location 本商品在图片中的坐标，表示为矩形框的四个顶点坐标。
      * @param string $Name 商品名称
@@ -104,7 +104,7 @@ class ProductInfo extends AbstractModel
 包含：鞋、图书音像、箱包、美妆个护、服饰、家电数码、玩具乐器、食品饮料、珠宝、家居家装、药品、酒水、绿植园艺、其他商品、非商品等。 
 当类别为“非商品”时，除Location、Score和本字段之外的商品信息为空。
      * @param float $Score 输入图片中的主体物品和输出结果的相似度。分值越大，输出结果与输入图片是同款的可能性越高。
-     * @param string $Image 搜索到的商品配图URL
+     * @param string $Image 搜索到的商品配图URL。
      */
     function __construct()
     {

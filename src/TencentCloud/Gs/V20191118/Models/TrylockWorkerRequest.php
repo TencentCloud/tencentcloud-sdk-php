@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSetNo(integer $SetNo) 设置资源池编号，1表示共用，2表示测试
  * @method string getUserIp() 获取游戏用户IP，用于就近调度，例如125.127.178.228
  * @method void setUserIp(string $UserIp) 设置游戏用户IP，用于就近调度，例如125.127.178.228
+ * @method string getGroupId() 获取分组ID
+ * @method void setGroupId(string $GroupId) 设置分组ID
  */
 class TrylockWorkerRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class TrylockWorkerRequest extends AbstractModel
     public $UserIp;
 
     /**
+     * @var string 分组ID
+     */
+    public $GroupId;
+
+    /**
      * @param string $UserId 游戏用户ID
      * @param string $GameId 游戏ID
      * @param string $GameRegion 游戏区域，ap-guangzhou、ap-shanghai、ap-beijing等
      * @param integer $SetNo 资源池编号，1表示共用，2表示测试
      * @param string $UserIp 游戏用户IP，用于就近调度，例如125.127.178.228
+     * @param string $GroupId 分组ID
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class TrylockWorkerRequest extends AbstractModel
 
         if (array_key_exists("UserIp",$param) and $param["UserIp"] !== null) {
             $this->UserIp = $param["UserIp"];
+        }
+
+        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
+            $this->GroupId = $param["GroupId"];
         }
     }
 }

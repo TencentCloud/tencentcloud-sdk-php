@@ -46,8 +46,8 @@ CCN：云联网。
 特别注意：当 GatewayType 为 EIP 时，GatewayId 固定值 '0'
  * @method void setGatewayId(string $GatewayId) 设置下一跳地址，这里只需要指定不同下一跳类型的网关ID，系统会自动匹配到下一跳地址。
 特别注意：当 GatewayType 为 EIP 时，GatewayId 固定值 '0'
- * @method integer getRouteId() 获取路由策略ID。
- * @method void setRouteId(integer $RouteId) 设置路由策略ID。
+ * @method integer getRouteId() 获取路由策略ID。IPv4路由策略ID是有意义的值，IPv6路由策略是无意义的值0。后续建议完全使用字符串唯一ID `RouteItemId`操作路由策略。
+ * @method void setRouteId(integer $RouteId) 设置路由策略ID。IPv4路由策略ID是有意义的值，IPv6路由策略是无意义的值0。后续建议完全使用字符串唯一ID `RouteItemId`操作路由策略。
  * @method string getRouteDescription() 获取路由策略描述。
  * @method void setRouteDescription(string $RouteDescription) 设置路由策略描述。
  * @method boolean getEnabled() 获取是否启用
@@ -97,7 +97,7 @@ CCN：云联网。
     public $GatewayId;
 
     /**
-     * @var integer 路由策略ID。
+     * @var integer 路由策略ID。IPv4路由策略ID是有意义的值，IPv6路由策略是无意义的值0。后续建议完全使用字符串唯一ID `RouteItemId`操作路由策略。
      */
     public $RouteId;
 
@@ -149,7 +149,7 @@ EIP：云服务器的公网IP；
 CCN：云联网。
      * @param string $GatewayId 下一跳地址，这里只需要指定不同下一跳类型的网关ID，系统会自动匹配到下一跳地址。
 特别注意：当 GatewayType 为 EIP 时，GatewayId 固定值 '0'
-     * @param integer $RouteId 路由策略ID。
+     * @param integer $RouteId 路由策略ID。IPv4路由策略ID是有意义的值，IPv6路由策略是无意义的值0。后续建议完全使用字符串唯一ID `RouteItemId`操作路由策略。
      * @param string $RouteDescription 路由策略描述。
      * @param boolean $Enabled 是否启用
      * @param string $RouteType 路由类型，目前我们支持的类型有：

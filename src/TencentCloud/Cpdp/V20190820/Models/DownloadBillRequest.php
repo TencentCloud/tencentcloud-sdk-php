@@ -28,6 +28,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMidasSecretId(string $MidasSecretId) 设置聚鑫分配的SecretId
  * @method string getMidasSignature() 获取使用聚鑫安全密钥计算的签名
  * @method void setMidasSignature(string $MidasSignature) 设置使用聚鑫安全密钥计算的签名
+ * @method string getMidasEnvironment() 获取环境名:
+release: 现网环境
+sandbox: 沙箱环境
+development: 开发环境
+缺省: release
+ * @method void setMidasEnvironment(string $MidasEnvironment) 设置环境名:
+release: 现网环境
+sandbox: 沙箱环境
+development: 开发环境
+缺省: release
  */
 class DownloadBillRequest extends AbstractModel
 {
@@ -52,10 +62,24 @@ class DownloadBillRequest extends AbstractModel
     public $MidasSignature;
 
     /**
+     * @var string 环境名:
+release: 现网环境
+sandbox: 沙箱环境
+development: 开发环境
+缺省: release
+     */
+    public $MidasEnvironment;
+
+    /**
      * @param string $StateDate 请求下载对账单日期
      * @param string $MidasAppId 聚鑫分配的MidasAppId
      * @param string $MidasSecretId 聚鑫分配的SecretId
      * @param string $MidasSignature 使用聚鑫安全密钥计算的签名
+     * @param string $MidasEnvironment 环境名:
+release: 现网环境
+sandbox: 沙箱环境
+development: 开发环境
+缺省: release
      */
     function __construct()
     {
@@ -84,6 +108,10 @@ class DownloadBillRequest extends AbstractModel
 
         if (array_key_exists("MidasSignature",$param) and $param["MidasSignature"] !== null) {
             $this->MidasSignature = $param["MidasSignature"];
+        }
+
+        if (array_key_exists("MidasEnvironment",$param) and $param["MidasEnvironment"] !== null) {
+            $this->MidasEnvironment = $param["MidasEnvironment"];
         }
     }
 }

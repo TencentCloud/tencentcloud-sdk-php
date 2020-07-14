@@ -23,23 +23,28 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Sqlserver\V20180328\Models as Models;
 
 /**
+ * @method Models\CompleteExpansionResponse CompleteExpansion(Models\CompleteExpansionRequest $req) 本接口（CompleteExpansion）在实例发起扩容后，实例状态处于“升级待切换”时，可立即完成实例升级切换操作，无需等待可维护时间窗。本接口需要在实例低峰时调用，在完全切换成功前，存在部分库不可访问的风险。
  * @method Models\CreateAccountResponse CreateAccount(Models\CreateAccountRequest $req) 本接口（CreateAccount）用于创建实例账号
  * @method Models\CreateBackupResponse CreateBackup(Models\CreateBackupRequest $req) 本接口(CreateBackup)用于创建备份。
  * @method Models\CreateDBResponse CreateDB(Models\CreateDBRequest $req) 本接口（CreateDB）用于创建数据库。
  * @method Models\CreateDBInstancesResponse CreateDBInstances(Models\CreateDBInstancesRequest $req) 本接口（CreateDBInstances）用于创建实例。
  * @method Models\CreateMigrationResponse CreateMigration(Models\CreateMigrationRequest $req) 本接口（CreateMigration）作用是创建一个迁移任务
+ * @method Models\CreatePublishSubscribeResponse CreatePublishSubscribe(Models\CreatePublishSubscribeRequest $req) 本接口（CreatePublishSubscribe）用于创建两个数据库之间的发布订阅关系。作为订阅者，不能再充当发布者，作为发布者可以有多个订阅者实例。
  * @method Models\DeleteAccountResponse DeleteAccount(Models\DeleteAccountRequest $req) 本接口（DeleteAccount）用于删除实例账号。
  * @method Models\DeleteDBResponse DeleteDB(Models\DeleteDBRequest $req) 本接口(DeleteDB)用于删除数据库。
  * @method Models\DeleteMigrationResponse DeleteMigration(Models\DeleteMigrationRequest $req) 本接口（DeleteMigration）用于删除迁移任务
+ * @method Models\DeletePublishSubscribeResponse DeletePublishSubscribe(Models\DeletePublishSubscribeRequest $req) 本接口（DeletePublishSubscribe）用于删除两个数据库间的发布订阅关系。
  * @method Models\DescribeAccountsResponse DescribeAccounts(Models\DescribeAccountsRequest $req) 本接口（DescribeAccounts）用于拉取实例账户列表。
  * @method Models\DescribeBackupsResponse DescribeBackups(Models\DescribeBackupsRequest $req) 本接口(DescribeBackups)用于查询备份列表。
  * @method Models\DescribeDBInstancesResponse DescribeDBInstances(Models\DescribeDBInstancesRequest $req) 本接口(DescribeDBInstances)用于查询实例列表。
  * @method Models\DescribeDBsResponse DescribeDBs(Models\DescribeDBsRequest $req) 本接口（DescribeDBs）用于查询数据库列表。
  * @method Models\DescribeFlowStatusResponse DescribeFlowStatus(Models\DescribeFlowStatusRequest $req) 本接口(DescribeFlowStatus)用于查询流程状态。
+ * @method Models\DescribeMaintenanceSpanResponse DescribeMaintenanceSpan(Models\DescribeMaintenanceSpanRequest $req) 本接口（DescribeMaintenanceSpan）根据实例ID查询该实例的可维护时间窗。
  * @method Models\DescribeMigrationDetailResponse DescribeMigrationDetail(Models\DescribeMigrationDetailRequest $req) 本接口（DescribeMigrationDetail）用于查询迁移任务的详细情况
  * @method Models\DescribeMigrationsResponse DescribeMigrations(Models\DescribeMigrationsRequest $req) 本接口（DescribeMigrations）根据输入的限定条件，查询符合条件的迁移任务列表
  * @method Models\DescribeOrdersResponse DescribeOrders(Models\DescribeOrdersRequest $req) 本接口（DescribeOrders）用于查询订单信息
  * @method Models\DescribeProductConfigResponse DescribeProductConfig(Models\DescribeProductConfigRequest $req) 本接口 (DescribeProductConfig) 用于查询售卖规格配置。
+ * @method Models\DescribePublishSubscribeResponse DescribePublishSubscribe(Models\DescribePublishSubscribeRequest $req) 本接口（DescribePublishSubscribe）用于查询发布订阅关系列表。
  * @method Models\DescribeRegionsResponse DescribeRegions(Models\DescribeRegionsRequest $req) 本接口 (DescribeRegions) 用于查询售卖地域信息。
  * @method Models\DescribeRollbackTimeResponse DescribeRollbackTime(Models\DescribeRollbackTimeRequest $req) 本接口（DescribeRollbackTime）用于查询实例可回档时间范围
  * @method Models\DescribeSlowlogsResponse DescribeSlowlogs(Models\DescribeSlowlogsRequest $req) 本接口（DescribeSlowlogs）用于获取慢查询日志文件信息
@@ -49,12 +54,16 @@ use TencentCloud\Sqlserver\V20180328\Models as Models;
  * @method Models\InquiryPriceUpgradeDBInstanceResponse InquiryPriceUpgradeDBInstance(Models\InquiryPriceUpgradeDBInstanceRequest $req) 本接口（InquiryPriceUpgradeDBInstance）用于查询升级实例的价格。
  * @method Models\ModifyAccountPrivilegeResponse ModifyAccountPrivilege(Models\ModifyAccountPrivilegeRequest $req) 本接口（ModifyAccountPrivilege）用于修改实例账户权限。
  * @method Models\ModifyAccountRemarkResponse ModifyAccountRemark(Models\ModifyAccountRemarkRequest $req) 本接口（ModifyAccountRemark）用于修改账户备注。
+ * @method Models\ModifyBackupStrategyResponse ModifyBackupStrategy(Models\ModifyBackupStrategyRequest $req) 本接口（ModifyBackupStrategy）用于修改备份策略
  * @method Models\ModifyDBInstanceNameResponse ModifyDBInstanceName(Models\ModifyDBInstanceNameRequest $req) 本接口（ModifyDBInstanceName）用于修改实例名字。
  * @method Models\ModifyDBInstanceProjectResponse ModifyDBInstanceProject(Models\ModifyDBInstanceProjectRequest $req) 本接口（ModifyDBInstanceProject）用于修改数据库实例所属项目。
  * @method Models\ModifyDBInstanceRenewFlagResponse ModifyDBInstanceRenewFlag(Models\ModifyDBInstanceRenewFlagRequest $req) 本接口（ModifyDBInstanceRenewFlag）用于修改实例续费标记
  * @method Models\ModifyDBNameResponse ModifyDBName(Models\ModifyDBNameRequest $req) 本接口（ModifyDBName）用于更新数据库名。
  * @method Models\ModifyDBRemarkResponse ModifyDBRemark(Models\ModifyDBRemarkRequest $req) 本接口（ModifyDBRemark）用于修改数据库备注。
+ * @method Models\ModifyMaintenanceSpanResponse ModifyMaintenanceSpan(Models\ModifyMaintenanceSpanRequest $req) 本接口（ModifyMaintenanceSpan）用于修改实例的可维护时间窗
  * @method Models\ModifyMigrationResponse ModifyMigration(Models\ModifyMigrationRequest $req) 本接口（ModifyMigration）可以修改已有的迁移任务信息
+ * @method Models\ModifyPublishSubscribeNameResponse ModifyPublishSubscribeName(Models\ModifyPublishSubscribeNameRequest $req) 本接口（ModifyPublishSubscribeName）修改发布订阅的名称。
+ * @method Models\RemoveBackupsResponse RemoveBackups(Models\RemoveBackupsRequest $req) 本接口（RemoveBackups）可以删除用户手动创建的备份文件。待删除的备份策略可以是实例备份，也可以是多库备份。
  * @method Models\RenewDBInstanceResponse RenewDBInstance(Models\RenewDBInstanceRequest $req) 本接口（RenewDBInstance）用于续费实例。
  * @method Models\ResetAccountPasswordResponse ResetAccountPassword(Models\ResetAccountPasswordRequest $req) 本接口（ResetAccountPassword）用于重置实例的账户密码。
  * @method Models\RestartDBInstanceResponse RestartDBInstance(Models\RestartDBInstanceRequest $req) 本接口（RestartDBInstance）用于重启数据库实例。

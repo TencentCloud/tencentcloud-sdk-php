@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMemory(integer $Memory) 设置实例升级后的内存大小，单位GB，其值不能比当前实例内存小
  * @method integer getStorage() 获取实例升级后的磁盘大小，单位GB，其值不能比当前实例磁盘小
  * @method void setStorage(integer $Storage) 设置实例升级后的磁盘大小，单位GB，其值不能比当前实例磁盘小
+ * @method integer getCpu() 获取实例升级后的CPU核心数，其值不能比当前实例CPU小
+ * @method void setCpu(integer $Cpu) 设置实例升级后的CPU核心数，其值不能比当前实例CPU小
  */
 class InquiryPriceUpgradeDBInstanceRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class InquiryPriceUpgradeDBInstanceRequest extends AbstractModel
     public $Storage;
 
     /**
+     * @var integer 实例升级后的CPU核心数，其值不能比当前实例CPU小
+     */
+    public $Cpu;
+
+    /**
      * @param string $InstanceId 实例ID，形如mssql-njj2mtpl
      * @param integer $Memory 实例升级后的内存大小，单位GB，其值不能比当前实例内存小
      * @param integer $Storage 实例升级后的磁盘大小，单位GB，其值不能比当前实例磁盘小
+     * @param integer $Cpu 实例升级后的CPU核心数，其值不能比当前实例CPU小
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class InquiryPriceUpgradeDBInstanceRequest extends AbstractModel
 
         if (array_key_exists("Storage",$param) and $param["Storage"] !== null) {
             $this->Storage = $param["Storage"];
+        }
+
+        if (array_key_exists("Cpu",$param) and $param["Cpu"] !== null) {
+            $this->Cpu = $param["Cpu"];
         }
     }
 }

@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoVoucher(integer $AutoVoucher) 设置是否自动使用代金券，0 - 不使用；1 - 默认使用。取值默认为0
  * @method array getVoucherIds() 获取代金券ID，目前单个订单只能使用一张代金券
  * @method void setVoucherIds(array $VoucherIds) 设置代金券ID，目前单个订单只能使用一张代金券
+ * @method integer getCpu() 获取实例升级后的CPU核心数
+ * @method void setCpu(integer $Cpu) 设置实例升级后的CPU核心数
  */
 class UpgradeDBInstanceRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class UpgradeDBInstanceRequest extends AbstractModel
     public $VoucherIds;
 
     /**
+     * @var integer 实例升级后的CPU核心数
+     */
+    public $Cpu;
+
+    /**
      * @param string $InstanceId 实例ID，形如mssql-j8kv137v
      * @param integer $Memory 实例升级后内存大小，单位GB，其值不能小于当前实例内存大小
      * @param integer $Storage 实例升级后磁盘大小，单位GB，其值不能小于当前实例磁盘大小
      * @param integer $AutoVoucher 是否自动使用代金券，0 - 不使用；1 - 默认使用。取值默认为0
      * @param array $VoucherIds 代金券ID，目前单个订单只能使用一张代金券
+     * @param integer $Cpu 实例升级后的CPU核心数
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class UpgradeDBInstanceRequest extends AbstractModel
 
         if (array_key_exists("VoucherIds",$param) and $param["VoucherIds"] !== null) {
             $this->VoucherIds = $param["VoucherIds"];
+        }
+
+        if (array_key_exists("Cpu",$param) and $param["Cpu"] !== null) {
+            $this->Cpu = $param["Cpu"];
         }
     }
 }

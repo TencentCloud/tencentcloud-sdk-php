@@ -46,6 +46,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDBVersion(string $DBVersion) 设置sqlserver版本，目前只支持：2008R2（SQL Server 2008 Enterprise），2012SP3（SQL Server 2012 Enterprise），2016SP1（SQL Server 2016 Enterprise），201602（SQL Server 2016 Standard）2017（SQL Server 2017 Enterprise）版本。每个地域支持售卖的版本不同，可通过DescribeProductConfig接口来拉取每个地域可售卖的版本信息。不填，默认为版本2008R2。
  * @method integer getAutoRenewFlag() 获取自动续费标志：0-正常续费  1-自动续费，默认为1自动续费。只在购买预付费实例时有效。
  * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置自动续费标志：0-正常续费  1-自动续费，默认为1自动续费。只在购买预付费实例时有效。
+ * @method array getSecurityGroupList() 获取安全组列表，填写形如sg-xxx的安全组ID
+ * @method void setSecurityGroupList(array $SecurityGroupList) 设置安全组列表，填写形如sg-xxx的安全组ID
+ * @method array getWeekly() 获取可维护时间窗配置，以周为单位，表示周几允许维护，1-7分别代表周一到周末
+ * @method void setWeekly(array $Weekly) 设置可维护时间窗配置，以周为单位，表示周几允许维护，1-7分别代表周一到周末
+ * @method string getStartTime() 获取可维护时间窗配置，每天可维护的开始时间
+ * @method void setStartTime(string $StartTime) 设置可维护时间窗配置，每天可维护的开始时间
+ * @method integer getSpan() 获取可维护时间窗配置，持续时间，单位：小时
+ * @method void setSpan(integer $Span) 设置可维护时间窗配置，持续时间，单位：小时
+ * @method string getHAType() 获取购买高可用实例的类型：DUAL-双机高可用  CLUSTER-集群，默认值为DUAL
+ * @method void setHAType(string $HAType) 设置购买高可用实例的类型：DUAL-双机高可用  CLUSTER-集群，默认值为DUAL
+ * @method boolean getMultiZones() 获取是否跨可用区部署，默认值为false
+ * @method void setMultiZones(boolean $MultiZones) 设置是否跨可用区部署，默认值为false
  */
 class CreateDBInstancesRequest extends AbstractModel
 {
@@ -115,6 +127,36 @@ class CreateDBInstancesRequest extends AbstractModel
     public $AutoRenewFlag;
 
     /**
+     * @var array 安全组列表，填写形如sg-xxx的安全组ID
+     */
+    public $SecurityGroupList;
+
+    /**
+     * @var array 可维护时间窗配置，以周为单位，表示周几允许维护，1-7分别代表周一到周末
+     */
+    public $Weekly;
+
+    /**
+     * @var string 可维护时间窗配置，每天可维护的开始时间
+     */
+    public $StartTime;
+
+    /**
+     * @var integer 可维护时间窗配置，持续时间，单位：小时
+     */
+    public $Span;
+
+    /**
+     * @var string 购买高可用实例的类型：DUAL-双机高可用  CLUSTER-集群，默认值为DUAL
+     */
+    public $HAType;
+
+    /**
+     * @var boolean 是否跨可用区部署，默认值为false
+     */
+    public $MultiZones;
+
+    /**
      * @param string $Zone 实例可用区，类似ap-guangzhou-1（广州一区）；实例可售卖区域可以通过接口DescribeZones获取
      * @param integer $Memory 实例内存大小，单位GB
      * @param integer $Storage 实例磁盘大小，单位GB
@@ -128,6 +170,12 @@ class CreateDBInstancesRequest extends AbstractModel
      * @param array $VoucherIds 代金券ID数组，目前单个订单只能使用一张
      * @param string $DBVersion sqlserver版本，目前只支持：2008R2（SQL Server 2008 Enterprise），2012SP3（SQL Server 2012 Enterprise），2016SP1（SQL Server 2016 Enterprise），201602（SQL Server 2016 Standard）2017（SQL Server 2017 Enterprise）版本。每个地域支持售卖的版本不同，可通过DescribeProductConfig接口来拉取每个地域可售卖的版本信息。不填，默认为版本2008R2。
      * @param integer $AutoRenewFlag 自动续费标志：0-正常续费  1-自动续费，默认为1自动续费。只在购买预付费实例时有效。
+     * @param array $SecurityGroupList 安全组列表，填写形如sg-xxx的安全组ID
+     * @param array $Weekly 可维护时间窗配置，以周为单位，表示周几允许维护，1-7分别代表周一到周末
+     * @param string $StartTime 可维护时间窗配置，每天可维护的开始时间
+     * @param integer $Span 可维护时间窗配置，持续时间，单位：小时
+     * @param string $HAType 购买高可用实例的类型：DUAL-双机高可用  CLUSTER-集群，默认值为DUAL
+     * @param boolean $MultiZones 是否跨可用区部署，默认值为false
      */
     function __construct()
     {
@@ -192,6 +240,30 @@ class CreateDBInstancesRequest extends AbstractModel
 
         if (array_key_exists("AutoRenewFlag",$param) and $param["AutoRenewFlag"] !== null) {
             $this->AutoRenewFlag = $param["AutoRenewFlag"];
+        }
+
+        if (array_key_exists("SecurityGroupList",$param) and $param["SecurityGroupList"] !== null) {
+            $this->SecurityGroupList = $param["SecurityGroupList"];
+        }
+
+        if (array_key_exists("Weekly",$param) and $param["Weekly"] !== null) {
+            $this->Weekly = $param["Weekly"];
+        }
+
+        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
+            $this->StartTime = $param["StartTime"];
+        }
+
+        if (array_key_exists("Span",$param) and $param["Span"] !== null) {
+            $this->Span = $param["Span"];
+        }
+
+        if (array_key_exists("HAType",$param) and $param["HAType"] !== null) {
+            $this->HAType = $param["HAType"];
+        }
+
+        if (array_key_exists("MultiZones",$param) and $param["MultiZones"] !== null) {
+            $this->MultiZones = $param["MultiZones"];
         }
     }
 }

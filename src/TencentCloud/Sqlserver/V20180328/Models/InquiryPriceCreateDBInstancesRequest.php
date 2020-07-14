@@ -34,6 +34,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGoodsNum(integer $GoodsNum) 设置一次性购买的实例数量。取值1-100，默认取值为1
  * @method string getDBVersion() 获取sqlserver版本，目前只支持：2008R2（SQL Server 2008 Enterprise），2012SP3（SQL Server 2012 Enterprise），2016SP1（SQL Server 2016 Enterprise），201602（SQL Server 2016 Standard）2017（SQL Server 2017 Enterprise）版本。默认为2008R2版本
  * @method void setDBVersion(string $DBVersion) 设置sqlserver版本，目前只支持：2008R2（SQL Server 2008 Enterprise），2012SP3（SQL Server 2012 Enterprise），2016SP1（SQL Server 2016 Enterprise），201602（SQL Server 2016 Standard）2017（SQL Server 2017 Enterprise）版本。默认为2008R2版本
+ * @method integer getCpu() 获取预购买实例的CPU核心数
+ * @method void setCpu(integer $Cpu) 设置预购买实例的CPU核心数
+ * @method string getInstanceType() 获取购买实例的类型 HA-高可用型(包括双机高可用，alwaysOn集群)，RO-只读副本，SI-基础版，默认取值HA
+ * @method void setInstanceType(string $InstanceType) 设置购买实例的类型 HA-高可用型(包括双机高可用，alwaysOn集群)，RO-只读副本，SI-基础版，默认取值HA
+ * @method string getMachineType() 获取购买实例的宿主机类型，PM-物理机, CLOUD_PREMIUM-虚拟机高性能云盘，CLOUD_SSD-虚拟机SSD云盘，默认取值PM
+ * @method void setMachineType(string $MachineType) 设置购买实例的宿主机类型，PM-物理机, CLOUD_PREMIUM-虚拟机高性能云盘，CLOUD_SSD-虚拟机SSD云盘，默认取值PM
  */
 class InquiryPriceCreateDBInstancesRequest extends AbstractModel
 {
@@ -73,6 +79,21 @@ class InquiryPriceCreateDBInstancesRequest extends AbstractModel
     public $DBVersion;
 
     /**
+     * @var integer 预购买实例的CPU核心数
+     */
+    public $Cpu;
+
+    /**
+     * @var string 购买实例的类型 HA-高可用型(包括双机高可用，alwaysOn集群)，RO-只读副本，SI-基础版，默认取值HA
+     */
+    public $InstanceType;
+
+    /**
+     * @var string 购买实例的宿主机类型，PM-物理机, CLOUD_PREMIUM-虚拟机高性能云盘，CLOUD_SSD-虚拟机SSD云盘，默认取值PM
+     */
+    public $MachineType;
+
+    /**
      * @param string $Zone 可用区ID。该参数可以通过调用 DescribeZones 接口的返回值中的Zone字段来获取。
      * @param integer $Memory 内存大小，单位：GB
      * @param integer $Storage 实例容量大小，单位：GB。
@@ -80,6 +101,9 @@ class InquiryPriceCreateDBInstancesRequest extends AbstractModel
      * @param integer $Period 购买时长，单位：月。取值为1到48，默认为1
      * @param integer $GoodsNum 一次性购买的实例数量。取值1-100，默认取值为1
      * @param string $DBVersion sqlserver版本，目前只支持：2008R2（SQL Server 2008 Enterprise），2012SP3（SQL Server 2012 Enterprise），2016SP1（SQL Server 2016 Enterprise），201602（SQL Server 2016 Standard）2017（SQL Server 2017 Enterprise）版本。默认为2008R2版本
+     * @param integer $Cpu 预购买实例的CPU核心数
+     * @param string $InstanceType 购买实例的类型 HA-高可用型(包括双机高可用，alwaysOn集群)，RO-只读副本，SI-基础版，默认取值HA
+     * @param string $MachineType 购买实例的宿主机类型，PM-物理机, CLOUD_PREMIUM-虚拟机高性能云盘，CLOUD_SSD-虚拟机SSD云盘，默认取值PM
      */
     function __construct()
     {
@@ -120,6 +144,18 @@ class InquiryPriceCreateDBInstancesRequest extends AbstractModel
 
         if (array_key_exists("DBVersion",$param) and $param["DBVersion"] !== null) {
             $this->DBVersion = $param["DBVersion"];
+        }
+
+        if (array_key_exists("Cpu",$param) and $param["Cpu"] !== null) {
+            $this->Cpu = $param["Cpu"];
+        }
+
+        if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
+            $this->InstanceType = $param["InstanceType"];
+        }
+
+        if (array_key_exists("MachineType",$param) and $param["MachineType"] !== null) {
+            $this->MachineType = $param["MachineType"];
         }
     }
 }

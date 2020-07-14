@@ -84,6 +84,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUniqVpcId(string $UniqVpcId) 设置实例所属VPC的唯一字符串ID，格式如：vpc-xxx，基础网络时为空字符串
  * @method string getUniqSubnetId() 获取实例所属子网的唯一字符串ID，格式如： subnet-xxx，基础网络时为空字符串
  * @method void setUniqSubnetId(string $UniqSubnetId) 设置实例所属子网的唯一字符串ID，格式如： subnet-xxx，基础网络时为空字符串
+ * @method string getIsolateOperator() 获取实例隔离操作
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsolateOperator(string $IsolateOperator) 设置实例隔离操作
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSubFlag() 获取发布订阅标识，SUB-订阅实例，PUB-发布实例，空值-没有发布订阅的普通实例
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSubFlag(string $SubFlag) 设置发布订阅标识，SUB-订阅实例，PUB-发布实例，空值-没有发布订阅的普通实例
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getROFlag() 获取只读标识，RO-只读实例，MASTER-有RO实例的主实例，空值-没有只读组的非RO实例
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setROFlag(string $ROFlag) 设置只读标识，RO-只读实例，MASTER-有RO实例的主实例，空值-没有只读组的非RO实例
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getHAFlag() 获取容灾类型，MIRROR-镜像，ALWAYSON-AlwaysOn, SINGLE-单例
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHAFlag(string $HAFlag) 设置容灾类型，MIRROR-镜像，ALWAYSON-AlwaysOn, SINGLE-单例
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DBInstance extends AbstractModel
 {
@@ -248,6 +264,30 @@ class DBInstance extends AbstractModel
     public $UniqSubnetId;
 
     /**
+     * @var string 实例隔离操作
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsolateOperator;
+
+    /**
+     * @var string 发布订阅标识，SUB-订阅实例，PUB-发布实例，空值-没有发布订阅的普通实例
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SubFlag;
+
+    /**
+     * @var string 只读标识，RO-只读实例，MASTER-有RO实例的主实例，空值-没有只读组的非RO实例
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ROFlag;
+
+    /**
+     * @var string 容灾类型，MIRROR-镜像，ALWAYSON-AlwaysOn, SINGLE-单例
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $HAFlag;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $Name 实例名称
      * @param integer $ProjectId 实例所在项目ID
@@ -280,6 +320,14 @@ class DBInstance extends AbstractModel
      * @param integer $Pid 计费ID
      * @param string $UniqVpcId 实例所属VPC的唯一字符串ID，格式如：vpc-xxx，基础网络时为空字符串
      * @param string $UniqSubnetId 实例所属子网的唯一字符串ID，格式如： subnet-xxx，基础网络时为空字符串
+     * @param string $IsolateOperator 实例隔离操作
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SubFlag 发布订阅标识，SUB-订阅实例，PUB-发布实例，空值-没有发布订阅的普通实例
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ROFlag 只读标识，RO-只读实例，MASTER-有RO实例的主实例，空值-没有只读组的非RO实例
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $HAFlag 容灾类型，MIRROR-镜像，ALWAYSON-AlwaysOn, SINGLE-单例
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -420,6 +468,22 @@ class DBInstance extends AbstractModel
 
         if (array_key_exists("UniqSubnetId",$param) and $param["UniqSubnetId"] !== null) {
             $this->UniqSubnetId = $param["UniqSubnetId"];
+        }
+
+        if (array_key_exists("IsolateOperator",$param) and $param["IsolateOperator"] !== null) {
+            $this->IsolateOperator = $param["IsolateOperator"];
+        }
+
+        if (array_key_exists("SubFlag",$param) and $param["SubFlag"] !== null) {
+            $this->SubFlag = $param["SubFlag"];
+        }
+
+        if (array_key_exists("ROFlag",$param) and $param["ROFlag"] !== null) {
+            $this->ROFlag = $param["ROFlag"];
+        }
+
+        if (array_key_exists("HAFlag",$param) and $param["HAFlag"] !== null) {
+            $this->HAFlag = $param["HAFlag"];
         }
     }
 }

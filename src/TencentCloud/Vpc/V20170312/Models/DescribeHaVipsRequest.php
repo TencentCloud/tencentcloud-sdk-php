@@ -27,12 +27,14 @@ use TencentCloud\Common\AbstractModel;
 <li>havip-name - String - `HAVIP`名称。</li>
 <li>vpc-id - String - `HAVIP`所在私有网络`ID`。</li>
 <li>subnet-id - String - `HAVIP`所在子网`ID`。</li>
+<li>vip - String - `HAVIP`的地址`VIP`。</li>
 <li>address-ip - String - `HAVIP`绑定的弹性公网`IP`。</li>
  * @method void setFilters(array $Filters) 设置过滤条件，参数不支持同时指定`HaVipIds`和`Filters`。
 <li>havip-id - String - `HAVIP`唯一`ID`，形如：`havip-9o233uri`。</li>
 <li>havip-name - String - `HAVIP`名称。</li>
 <li>vpc-id - String - `HAVIP`所在私有网络`ID`。</li>
 <li>subnet-id - String - `HAVIP`所在子网`ID`。</li>
+<li>vip - String - `HAVIP`的地址`VIP`。</li>
 <li>address-ip - String - `HAVIP`绑定的弹性公网`IP`。</li>
  * @method integer getOffset() 获取偏移量
  * @method void setOffset(integer $Offset) 设置偏移量
@@ -52,6 +54,7 @@ class DescribeHaVipsRequest extends AbstractModel
 <li>havip-name - String - `HAVIP`名称。</li>
 <li>vpc-id - String - `HAVIP`所在私有网络`ID`。</li>
 <li>subnet-id - String - `HAVIP`所在子网`ID`。</li>
+<li>vip - String - `HAVIP`的地址`VIP`。</li>
 <li>address-ip - String - `HAVIP`绑定的弹性公网`IP`。</li>
      */
     public $Filters;
@@ -73,6 +76,7 @@ class DescribeHaVipsRequest extends AbstractModel
 <li>havip-name - String - `HAVIP`名称。</li>
 <li>vpc-id - String - `HAVIP`所在私有网络`ID`。</li>
 <li>subnet-id - String - `HAVIP`所在子网`ID`。</li>
+<li>vip - String - `HAVIP`的地址`VIP`。</li>
 <li>address-ip - String - `HAVIP`绑定的弹性公网`IP`。</li>
      * @param integer $Offset 偏移量
      * @param integer $Limit 返回数量

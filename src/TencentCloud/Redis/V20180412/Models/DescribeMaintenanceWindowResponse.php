@@ -14,30 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Gs\V20191118\Models;
+namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * EnterQueue返回参数结构体
+ * DescribeMaintenanceWindow返回参数结构体
  *
- * @method integer getRank() 获取排名
- * @method void setRank(integer $Rank) 设置排名
- * @method boolean getLockSuccess() 获取机器锁定成功
- * @method void setLockSuccess(boolean $LockSuccess) 设置机器锁定成功
+ * @method string getStartTime() 获取维护时间窗起始时间，如：17:00
+ * @method void setStartTime(string $StartTime) 设置维护时间窗起始时间，如：17:00
+ * @method string getEndTime() 获取维护时间窗结束时间，如：19:00
+ * @method void setEndTime(string $EndTime) 设置维护时间窗结束时间，如：19:00
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class EnterQueueResponse extends AbstractModel
+class DescribeMaintenanceWindowResponse extends AbstractModel
 {
     /**
-     * @var integer 排名
+     * @var string 维护时间窗起始时间，如：17:00
      */
-    public $Rank;
+    public $StartTime;
 
     /**
-     * @var boolean 机器锁定成功
+     * @var string 维护时间窗结束时间，如：19:00
      */
-    public $LockSuccess;
+    public $EndTime;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +45,8 @@ class EnterQueueResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Rank 排名
-     * @param boolean $LockSuccess 机器锁定成功
+     * @param string $StartTime 维护时间窗起始时间，如：17:00
+     * @param string $EndTime 维护时间窗结束时间，如：19:00
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,12 +62,12 @@ class EnterQueueResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Rank",$param) and $param["Rank"] !== null) {
-            $this->Rank = $param["Rank"];
+        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
+            $this->StartTime = $param["StartTime"];
         }
 
-        if (array_key_exists("LockSuccess",$param) and $param["LockSuccess"] !== null) {
-            $this->LockSuccess = $param["LockSuccess"];
+        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
+            $this->EndTime = $param["EndTime"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

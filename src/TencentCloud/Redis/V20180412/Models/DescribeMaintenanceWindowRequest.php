@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Gs\V20191118\Models;
+namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeWorkers请求参数结构体
+ * DescribeMaintenanceWindow请求参数结构体
  *
- * @method integer getSetNo() 获取资源池编号，1表示正式，2表示测试
- * @method void setSetNo(integer $SetNo) 设置资源池编号，1表示正式，2表示测试
+ * @method string getInstanceId() 获取实例ID
+ * @method void setInstanceId(string $InstanceId) 设置实例ID
  */
-class DescribeWorkersRequest extends AbstractModel
+class DescribeMaintenanceWindowRequest extends AbstractModel
 {
     /**
-     * @var integer 资源池编号，1表示正式，2表示测试
+     * @var string 实例ID
      */
-    public $SetNo;
+    public $InstanceId;
 
     /**
-     * @param integer $SetNo 资源池编号，1表示正式，2表示测试
+     * @param string $InstanceId 实例ID
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class DescribeWorkersRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SetNo",$param) and $param["SetNo"] !== null) {
-            $this->SetNo = $param["SetNo"];
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
         }
     }
 }

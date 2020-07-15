@@ -48,6 +48,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) 设置播放器配置创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
  * @method string getUpdateTime() 获取播放器配置最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
  * @method void setUpdateTime(string $UpdateTime) 设置播放器配置最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+ * @method string getDomain() 获取播放时使用的域名。值为 Default，表示使用[默认分发配置](https://cloud.tencent.com/document/product/266/33373)中的域名。
+ * @method void setDomain(string $Domain) 设置播放时使用的域名。值为 Default，表示使用[默认分发配置](https://cloud.tencent.com/document/product/266/33373)中的域名。
+ * @method string getScheme() 获取播放时使用的 Scheme。取值范围：
+<li>Default：使用[默认分发配置](https://cloud.tencent.com/document/product/266/33373)中的 Scheme；</li>
+<li>HTTP；</li>
+<li>HTTPS。</li>
+ * @method void setScheme(string $Scheme) 设置播放时使用的 Scheme。取值范围：
+<li>Default：使用[默认分发配置](https://cloud.tencent.com/document/product/266/33373)中的 Scheme；</li>
+<li>HTTP；</li>
+<li>HTTPS。</li>
  * @method string getComment() 获取模板描述信息。
  * @method void setComment(string $Comment) 设置模板描述信息。
  */
@@ -104,6 +114,19 @@ class PlayerConfig extends AbstractModel
     public $UpdateTime;
 
     /**
+     * @var string 播放时使用的域名。值为 Default，表示使用[默认分发配置](https://cloud.tencent.com/document/product/266/33373)中的域名。
+     */
+    public $Domain;
+
+    /**
+     * @var string 播放时使用的 Scheme。取值范围：
+<li>Default：使用[默认分发配置](https://cloud.tencent.com/document/product/266/33373)中的 Scheme；</li>
+<li>HTTP；</li>
+<li>HTTPS。</li>
+     */
+    public $Scheme;
+
+    /**
      * @var string 模板描述信息。
      */
     public $Comment;
@@ -123,6 +146,11 @@ class PlayerConfig extends AbstractModel
      * @param array $ResolutionNameSet 播放器对不于不同分辨率的子流展示名字。
      * @param string $CreateTime 播放器配置创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      * @param string $UpdateTime 播放器配置最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * @param string $Domain 播放时使用的域名。值为 Default，表示使用[默认分发配置](https://cloud.tencent.com/document/product/266/33373)中的域名。
+     * @param string $Scheme 播放时使用的 Scheme。取值范围：
+<li>Default：使用[默认分发配置](https://cloud.tencent.com/document/product/266/33373)中的 Scheme；</li>
+<li>HTTP；</li>
+<li>HTTPS。</li>
      * @param string $Comment 模板描述信息。
      */
     function __construct()
@@ -178,6 +206,14 @@ class PlayerConfig extends AbstractModel
 
         if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
             $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
+            $this->Domain = $param["Domain"];
+        }
+
+        if (array_key_exists("Scheme",$param) and $param["Scheme"] !== null) {
+            $this->Scheme = $param["Scheme"];
         }
 
         if (array_key_exists("Comment",$param) and $param["Comment"] !== null) {

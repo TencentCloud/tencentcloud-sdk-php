@@ -14,23 +14,31 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Gs\V20191118\Models;
+namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ModifyWorkers返回参数结构体
+ * ModifyMaintenanceWindow返回参数结构体
  *
+ * @method string getStatus() 获取修改状态：success 或者 failed
+ * @method void setStatus(string $Status) 设置修改状态：success 或者 failed
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class ModifyWorkersResponse extends AbstractModel
+class ModifyMaintenanceWindowResponse extends AbstractModel
 {
+    /**
+     * @var string 修改状态：success 或者 failed
+     */
+    public $Status;
+
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
+     * @param string $Status 修改状态：success 或者 failed
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -46,6 +54,10 @@ class ModifyWorkersResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

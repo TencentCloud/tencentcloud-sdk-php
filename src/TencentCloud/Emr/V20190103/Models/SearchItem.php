@@ -14,24 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Iai\V20200303\Models;
+namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * GetGroupInfo请求参数结构体
+ * 搜索字段
  *
- * @method string getGroupId() 获取人员库 ID，取值为创建人员库接口中的GroupId
- * @method void setGroupId(string $GroupId) 设置人员库 ID，取值为创建人员库接口中的GroupId
+ * @method string getSearchType() 获取支持搜索的类型
+ * @method void setSearchType(string $SearchType) 设置支持搜索的类型
+ * @method string getSearchValue() 获取支持搜索的值
+ * @method void setSearchValue(string $SearchValue) 设置支持搜索的值
  */
-class GetGroupInfoRequest extends AbstractModel
+class SearchItem extends AbstractModel
 {
     /**
-     * @var string 人员库 ID，取值为创建人员库接口中的GroupId
+     * @var string 支持搜索的类型
      */
-    public $GroupId;
+    public $SearchType;
 
     /**
-     * @param string $GroupId 人员库 ID，取值为创建人员库接口中的GroupId
+     * @var string 支持搜索的值
+     */
+    public $SearchValue;
+
+    /**
+     * @param string $SearchType 支持搜索的类型
+     * @param string $SearchValue 支持搜索的值
      */
     function __construct()
     {
@@ -46,8 +54,12 @@ class GetGroupInfoRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
-            $this->GroupId = $param["GroupId"];
+        if (array_key_exists("SearchType",$param) and $param["SearchType"] !== null) {
+            $this->SearchType = $param["SearchType"];
+        }
+
+        if (array_key_exists("SearchValue",$param) and $param["SearchValue"] !== null) {
+            $this->SearchValue = $param["SearchValue"];
         }
     }
 }

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyLiveCallbackTemplate请求参数结构体
  *
- * @method integer getTemplateId() 获取模板 ID。
- * @method void setTemplateId(integer $TemplateId) 设置模板 ID。
+ * @method integer getTemplateId() 获取DescribeLiveCallbackTemplates接口返回的模板 ID。
+ * @method void setTemplateId(integer $TemplateId) 设置DescribeLiveCallbackTemplates接口返回的模板 ID。
  * @method string getTemplateName() 获取模板名称。
  * @method void setTemplateName(string $TemplateName) 设置模板名称。
  * @method string getDescription() 获取描述信息。
@@ -44,7 +44,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyLiveCallbackTemplateRequest extends AbstractModel
 {
     /**
-     * @var integer 模板 ID。
+     * @var integer DescribeLiveCallbackTemplates接口返回的模板 ID。
      */
     public $TemplateId;
 
@@ -90,7 +90,7 @@ class ModifyLiveCallbackTemplateRequest extends AbstractModel
     public $CallbackKey;
 
     /**
-     * @param integer $TemplateId 模板 ID。
+     * @param integer $TemplateId DescribeLiveCallbackTemplates接口返回的模板 ID。
      * @param string $TemplateName 模板名称。
      * @param string $Description 描述信息。
      * @param string $StreamBeginNotifyUrl 开播回调 URL。

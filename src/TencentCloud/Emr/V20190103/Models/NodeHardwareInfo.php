@@ -164,6 +164,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAutoFlag(integer $AutoFlag) 设置是否是自动扩缩容节点，0为普通节点，1为自动扩缩容节点。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getHardwareResourceType() 获取资源类型, host/pod
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHardwareResourceType(string $HardwareResourceType) 设置资源类型, host/pod
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class NodeHardwareInfo extends AbstractModel
 {
@@ -384,6 +388,12 @@ class NodeHardwareInfo extends AbstractModel
     public $AutoFlag;
 
     /**
+     * @var string 资源类型, host/pod
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $HardwareResourceType;
+
+    /**
      * @param integer $AppId 用户APPID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SerialNo 序列号
@@ -455,6 +465,8 @@ class NodeHardwareInfo extends AbstractModel
      * @param array $Tags 节点绑定的标签
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AutoFlag 是否是自动扩缩容节点，0为普通节点，1为自动扩缩容节点。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $HardwareResourceType 资源类型, host/pod
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -623,6 +635,10 @@ class NodeHardwareInfo extends AbstractModel
 
         if (array_key_exists("AutoFlag",$param) and $param["AutoFlag"] !== null) {
             $this->AutoFlag = $param["AutoFlag"];
+        }
+
+        if (array_key_exists("HardwareResourceType",$param) and $param["HardwareResourceType"] !== null) {
+            $this->HardwareResourceType = $param["HardwareResourceType"];
         }
     }
 }

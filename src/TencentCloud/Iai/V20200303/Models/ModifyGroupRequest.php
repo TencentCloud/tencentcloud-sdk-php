@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyGroup请求参数结构体
  *
- * @method string getGroupId() 获取人员库ID
- * @method void setGroupId(string $GroupId) 设置人员库ID
+ * @method string getGroupId() 获取人员库ID，取值为创建人员库接口中的GroupId
+ * @method void setGroupId(string $GroupId) 设置人员库ID，取值为创建人员库接口中的GroupId
  * @method string getGroupName() 获取人员库名称
  * @method void setGroupName(string $GroupName) 设置人员库名称
  * @method array getGroupExDescriptionInfos() 获取需要修改的人员库自定义描述字段，key-value
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyGroupRequest extends AbstractModel
 {
     /**
-     * @var string 人员库ID
+     * @var string 人员库ID，取值为创建人员库接口中的GroupId
      */
     public $GroupId;
 
@@ -52,7 +52,7 @@ class ModifyGroupRequest extends AbstractModel
     public $Tag;
 
     /**
-     * @param string $GroupId 人员库ID
+     * @param string $GroupId 人员库ID，取值为创建人员库接口中的GroupId
      * @param string $GroupName 人员库名称
      * @param array $GroupExDescriptionInfos 需要修改的人员库自定义描述字段，key-value
      * @param string $Tag 人员库信息备注

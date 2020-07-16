@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreatePerson请求参数结构体
  *
- * @method string getGroupId() 获取待加入的人员库ID。
- * @method void setGroupId(string $GroupId) 设置待加入的人员库ID。
+ * @method string getGroupId() 获取待加入的人员库ID，取值为创建人员库接口中的GroupId
+ * @method void setGroupId(string $GroupId) 设置待加入的人员库ID，取值为创建人员库接口中的GroupId
  * @method string getPersonName() 获取人员名称。[1，60]个字符，可修改，可重复。
  * @method void setPersonName(string $PersonName) 设置人员名称。[1，60]个字符，可修改，可重复。
  * @method string getPersonId() 获取人员ID，单个腾讯云账号下不可修改，不可重复。支持英文、数字、-%@#&_，长度限制64B。
@@ -86,7 +86,7 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
 class CreatePersonRequest extends AbstractModel
 {
     /**
-     * @var string 待加入的人员库ID。
+     * @var string 待加入的人员库ID，取值为创建人员库接口中的GroupId
      */
     public $GroupId;
 
@@ -157,7 +157,7 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
     public $NeedRotateDetection;
 
     /**
-     * @param string $GroupId 待加入的人员库ID。
+     * @param string $GroupId 待加入的人员库ID，取值为创建人员库接口中的GroupId
      * @param string $PersonName 人员名称。[1，60]个字符，可修改，可重复。
      * @param string $PersonId 人员ID，单个腾讯云账号下不可修改，不可重复。支持英文、数字、-%@#&_，长度限制64B。
      * @param integer $Gender 0代表未填写，1代表男性，2代表女性。

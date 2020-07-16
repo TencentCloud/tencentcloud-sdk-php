@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getPersonName() 获取人员名称
  * @method void setPersonName(string $PersonName) 设置人员名称
- * @method integer getGender() 获取人员性别
- * @method void setGender(integer $Gender) 设置人员性别
+ * @method integer getGender() 获取人员性别，0代表未填写，1代表男性，2代表女性
+ * @method void setGender(integer $Gender) 设置人员性别，0代表未填写，1代表男性，2代表女性
  * @method array getFaceIds() 获取包含的人脸 ID 列表
  * @method void setFaceIds(array $FaceIds) 设置包含的人脸 ID 列表
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,7 +37,7 @@ class GetPersonBaseInfoResponse extends AbstractModel
     public $PersonName;
 
     /**
-     * @var integer 人员性别
+     * @var integer 人员性别，0代表未填写，1代表男性，2代表女性
      */
     public $Gender;
 
@@ -53,7 +53,7 @@ class GetPersonBaseInfoResponse extends AbstractModel
 
     /**
      * @param string $PersonName 人员名称
-     * @param integer $Gender 人员性别
+     * @param integer $Gender 人员性别，0代表未填写，1代表男性，2代表女性
      * @param array $FaceIds 包含的人脸 ID 列表
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

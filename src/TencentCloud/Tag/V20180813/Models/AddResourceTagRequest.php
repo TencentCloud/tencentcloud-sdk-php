@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTagKey(string $TagKey) 设置标签键
  * @method string getTagValue() 获取标签值
  * @method void setTagValue(string $TagValue) 设置标签值
- * @method string getResource() 获取资源六段式描述
- * @method void setResource(string $Resource) 设置资源六段式描述
+ * @method string getResource() 获取[ 资源六段式描述 ](https://cloud.tencent.com/document/product/598/10606)
+ * @method void setResource(string $Resource) 设置[ 资源六段式描述 ](https://cloud.tencent.com/document/product/598/10606)
  */
 class AddResourceTagRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class AddResourceTagRequest extends AbstractModel
     public $TagValue;
 
     /**
-     * @var string 资源六段式描述
+     * @var string [ 资源六段式描述 ](https://cloud.tencent.com/document/product/598/10606)
      */
     public $Resource;
 
     /**
      * @param string $TagKey 标签键
      * @param string $TagValue 标签值
-     * @param string $Resource 资源六段式描述
+     * @param string $Resource [ 资源六段式描述 ](https://cloud.tencent.com/document/product/598/10606)
      */
     function __construct()
     {

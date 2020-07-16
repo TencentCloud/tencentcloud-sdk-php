@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteFace请求参数结构体
  *
- * @method string getPersonId() 获取人员ID
- * @method void setPersonId(string $PersonId) 设置人员ID
- * @method array getFaceIds() 获取待删除的人脸ID列表
- * @method void setFaceIds(array $FaceIds) 设置待删除的人脸ID列表
+ * @method string getPersonId() 获取人员ID，取值为创建人员接口中的PersonId
+ * @method void setPersonId(string $PersonId) 设置人员ID，取值为创建人员接口中的PersonId
+ * @method array getFaceIds() 获取待删除的人脸ID列表，数组元素取值为增加人脸接口返回的FaceId
+ * @method void setFaceIds(array $FaceIds) 设置待删除的人脸ID列表，数组元素取值为增加人脸接口返回的FaceId
  */
 class DeleteFaceRequest extends AbstractModel
 {
     /**
-     * @var string 人员ID
+     * @var string 人员ID，取值为创建人员接口中的PersonId
      */
     public $PersonId;
 
     /**
-     * @var array 待删除的人脸ID列表
+     * @var array 待删除的人脸ID列表，数组元素取值为增加人脸接口返回的FaceId
      */
     public $FaceIds;
 
     /**
-     * @param string $PersonId 人员ID
-     * @param array $FaceIds 待删除的人脸ID列表
+     * @param string $PersonId 人员ID，取值为创建人员接口中的PersonId
+     * @param array $FaceIds 待删除的人脸ID列表，数组元素取值为增加人脸接口返回的FaceId
      */
     function __construct()
     {

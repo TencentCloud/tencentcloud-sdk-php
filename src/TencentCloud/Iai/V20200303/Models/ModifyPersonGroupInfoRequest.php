@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyPersonGroupInfo请求参数结构体
  *
- * @method string getGroupId() 获取人员库ID
- * @method void setGroupId(string $GroupId) 设置人员库ID
- * @method string getPersonId() 获取人员ID
- * @method void setPersonId(string $PersonId) 设置人员ID
+ * @method string getGroupId() 获取人员库ID，取值为创建人员库接口中的GroupId
+ * @method void setGroupId(string $GroupId) 设置人员库ID，取值为创建人员库接口中的GroupId
+ * @method string getPersonId() 获取人员ID，取值为创建人员接口中的PersonId
+ * @method void setPersonId(string $PersonId) 设置人员ID，取值为创建人员接口中的PersonId
  * @method array getPersonExDescriptionInfos() 获取需要修改的人员描述字段内容，key-value
  * @method void setPersonExDescriptionInfos(array $PersonExDescriptionInfos) 设置需要修改的人员描述字段内容，key-value
  */
 class ModifyPersonGroupInfoRequest extends AbstractModel
 {
     /**
-     * @var string 人员库ID
+     * @var string 人员库ID，取值为创建人员库接口中的GroupId
      */
     public $GroupId;
 
     /**
-     * @var string 人员ID
+     * @var string 人员ID，取值为创建人员接口中的PersonId
      */
     public $PersonId;
 
@@ -45,8 +45,8 @@ class ModifyPersonGroupInfoRequest extends AbstractModel
     public $PersonExDescriptionInfos;
 
     /**
-     * @param string $GroupId 人员库ID
-     * @param string $PersonId 人员ID
+     * @param string $GroupId 人员库ID，取值为创建人员库接口中的GroupId
+     * @param string $PersonId 人员ID，取值为创建人员接口中的PersonId
      * @param array $PersonExDescriptionInfos 需要修改的人员描述字段内容，key-value
      */
     function __construct()

@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Iai\V20200303\Models;
+namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * GetGroupInfo请求参数结构体
+ * 文件系统(cfs)配置描述
  *
- * @method string getGroupId() 获取人员库 ID，取值为创建人员库接口中的GroupId
- * @method void setGroupId(string $GroupId) 设置人员库 ID，取值为创建人员库接口中的GroupId
+ * @method array getCfsInsList() 获取文件系统信息列表
+ * @method void setCfsInsList(array $CfsInsList) 设置文件系统信息列表
  */
-class GetGroupInfoRequest extends AbstractModel
+class CfsConfig extends AbstractModel
 {
     /**
-     * @var string 人员库 ID，取值为创建人员库接口中的GroupId
+     * @var array 文件系统信息列表
      */
-    public $GroupId;
+    public $CfsInsList;
 
     /**
-     * @param string $GroupId 人员库 ID，取值为创建人员库接口中的GroupId
+     * @param array $CfsInsList 文件系统信息列表
      */
     function __construct()
     {
@@ -46,8 +46,13 @@ class GetGroupInfoRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
-            $this->GroupId = $param["GroupId"];
+        if (array_key_exists("CfsInsList",$param) and $param["CfsInsList"] !== null) {
+            $this->CfsInsList = [];
+            foreach ($param["CfsInsList"] as $key => $value){
+                $obj = new CfsInsInfo();
+                $obj->deserialize($value);
+                array_push($this->CfsInsList, $obj);
+            }
         }
     }
 }

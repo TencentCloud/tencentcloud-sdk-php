@@ -20,17 +20,17 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyPersonBaseInfo请求参数结构体
  *
- * @method string getPersonId() 获取人员ID
- * @method void setPersonId(string $PersonId) 设置人员ID
+ * @method string getPersonId() 获取人员ID，取值为创建人员接口中的PersonId
+ * @method void setPersonId(string $PersonId) 设置人员ID，取值为创建人员接口中的PersonId
  * @method string getPersonName() 获取需要修改的人员名称
  * @method void setPersonName(string $PersonName) 设置需要修改的人员名称
- * @method integer getGender() 获取需要修改的人员性别
- * @method void setGender(integer $Gender) 设置需要修改的人员性别
+ * @method integer getGender() 获取需要修改的人员性别，1代表男性，2代表女性
+ * @method void setGender(integer $Gender) 设置需要修改的人员性别，1代表男性，2代表女性
  */
 class ModifyPersonBaseInfoRequest extends AbstractModel
 {
     /**
-     * @var string 人员ID
+     * @var string 人员ID，取值为创建人员接口中的PersonId
      */
     public $PersonId;
 
@@ -40,14 +40,14 @@ class ModifyPersonBaseInfoRequest extends AbstractModel
     public $PersonName;
 
     /**
-     * @var integer 需要修改的人员性别
+     * @var integer 需要修改的人员性别，1代表男性，2代表女性
      */
     public $Gender;
 
     /**
-     * @param string $PersonId 人员ID
+     * @param string $PersonId 人员ID，取值为创建人员接口中的PersonId
      * @param string $PersonName 需要修改的人员名称
-     * @param integer $Gender 需要修改的人员性别
+     * @param integer $Gender 需要修改的人员性别，1代表男性，2代表女性
      */
     function __construct()
     {

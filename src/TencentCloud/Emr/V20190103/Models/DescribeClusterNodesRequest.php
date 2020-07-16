@@ -48,6 +48,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置页编号，默认值为0，表示第一页。
  * @method integer getLimit() 获取每页返回数量，默认值为100，最大值为100。
  * @method void setLimit(integer $Limit) 设置每页返回数量，默认值为100，最大值为100。
+ * @method string getHardwareResourceType() 获取资源类型:支持all/host/pod，默认为all
+ * @method void setHardwareResourceType(string $HardwareResourceType) 设置资源类型:支持all/host/pod，默认为all
+ * @method array getSearchFields() 获取支持搜索的字段
+ * @method void setSearchFields(array $SearchFields) 设置支持搜索的字段
  */
 class DescribeClusterNodesRequest extends AbstractModel
 {
@@ -82,6 +86,16 @@ class DescribeClusterNodesRequest extends AbstractModel
     public $Limit;
 
     /**
+     * @var string 资源类型:支持all/host/pod，默认为all
+     */
+    public $HardwareResourceType;
+
+    /**
+     * @var array 支持搜索的字段
+     */
+    public $SearchFields;
+
+    /**
      * @param string $InstanceId 集群实例ID,实例ID形如: emr-xxxxxxxx
      * @param string $NodeFlag 节点标识，取值为：
 <li>all：表示获取全部类型节点，cdb信息除外。</li>
@@ -96,6 +110,8 @@ class DescribeClusterNodesRequest extends AbstractModel
 注意：现在只支持以上取值，输入其他值会导致错误。
      * @param integer $Offset 页编号，默认值为0，表示第一页。
      * @param integer $Limit 每页返回数量，默认值为100，最大值为100。
+     * @param string $HardwareResourceType 资源类型:支持all/host/pod，默认为all
+     * @param array $SearchFields 支持搜索的字段
      */
     function __construct()
     {
@@ -124,6 +140,19 @@ class DescribeClusterNodesRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("HardwareResourceType",$param) and $param["HardwareResourceType"] !== null) {
+            $this->HardwareResourceType = $param["HardwareResourceType"];
+        }
+
+        if (array_key_exists("SearchFields",$param) and $param["SearchFields"] !== null) {
+            $this->SearchFields = [];
+            foreach ($param["SearchFields"] as $key => $value){
+                $obj = new SearchItem();
+                $obj->deserialize($value);
+                array_push($this->SearchFields, $obj);
+            }
         }
     }
 }

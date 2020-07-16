@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteGroup请求参数结构体
  *
- * @method string getGroupId() 获取人员库ID。
- * @method void setGroupId(string $GroupId) 设置人员库ID。
+ * @method string getGroupId() 获取人员库ID，取值为创建人员库接口中的GroupId
+ * @method void setGroupId(string $GroupId) 设置人员库ID，取值为创建人员库接口中的GroupId
  */
 class DeleteGroupRequest extends AbstractModel
 {
     /**
-     * @var string 人员库ID。
+     * @var string 人员库ID，取值为创建人员库接口中的GroupId
      */
     public $GroupId;
 
     /**
-     * @param string $GroupId 人员库ID。
+     * @param string $GroupId 人员库ID，取值为创建人员库接口中的GroupId
      */
     function __construct()
     {

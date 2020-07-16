@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateFace请求参数结构体
  *
- * @method string getPersonId() 获取人员ID。
- * @method void setPersonId(string $PersonId) 设置人员ID。
+ * @method string getPersonId() 获取人员ID，取值为创建人员接口中的PersonId
+ * @method void setPersonId(string $PersonId) 设置人员ID，取值为创建人员接口中的PersonId
  * @method array getImages() 获取图片 base64 数据，base64 编码后大小不可超过5M。
 人员人脸总数量不可超过5张。
 若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
@@ -70,7 +70,7 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
 class CreateFaceRequest extends AbstractModel
 {
     /**
-     * @var string 人员ID。
+     * @var string 人员ID，取值为创建人员接口中的PersonId
      */
     public $PersonId;
 
@@ -117,7 +117,7 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
     public $NeedRotateDetection;
 
     /**
-     * @param string $PersonId 人员ID。
+     * @param string $PersonId 人员ID，取值为创建人员接口中的PersonId
      * @param array $Images 图片 base64 数据，base64 编码后大小不可超过5M。
 人员人脸总数量不可超过5张。
 若图片中包含多张人脸，只选取其中人脸面积最大的人脸。

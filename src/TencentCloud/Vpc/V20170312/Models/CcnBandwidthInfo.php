@@ -18,7 +18,7 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 用于描述云联网地域间限速带宽实例的信息
+ * 用于描述云联网地域间限速带宽实例的信息。
  *
  * @method string getCcnId() 获取带宽所属的云联网ID。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -40,9 +40,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRenewFlag(string $RenewFlag) 设置带宽是否自动续费的标记。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method CcnRegionBandwidthLimit getCcnRegionBandwidthLimit() 获取描述带宽的地域和限速上限信息。
+ * @method CcnRegionBandwidthLimit getCcnRegionBandwidthLimit() 获取描述带宽的地域和限速上限信息。在地域间限速的情况下才会返回参数，出口限速模式不返回。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCcnRegionBandwidthLimit(CcnRegionBandwidthLimit $CcnRegionBandwidthLimit) 设置描述带宽的地域和限速上限信息。
+ * @method void setCcnRegionBandwidthLimit(CcnRegionBandwidthLimit $CcnRegionBandwidthLimit) 设置描述带宽的地域和限速上限信息。在地域间限速的情况下才会返回参数，出口限速模式不返回。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class CcnBandwidthInfo extends AbstractModel
@@ -78,7 +78,7 @@ class CcnBandwidthInfo extends AbstractModel
     public $RenewFlag;
 
     /**
-     * @var CcnRegionBandwidthLimit 描述带宽的地域和限速上限信息。
+     * @var CcnRegionBandwidthLimit 描述带宽的地域和限速上限信息。在地域间限速的情况下才会返回参数，出口限速模式不返回。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CcnRegionBandwidthLimit;
@@ -94,7 +94,7 @@ class CcnBandwidthInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RenewFlag 带宽是否自动续费的标记。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CcnRegionBandwidthLimit $CcnRegionBandwidthLimit 描述带宽的地域和限速上限信息。
+     * @param CcnRegionBandwidthLimit $CcnRegionBandwidthLimit 描述带宽的地域和限速上限信息。在地域间限速的情况下才会返回参数，出口限速模式不返回。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

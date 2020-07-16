@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTagKeys(array $TagKeys) 设置用户所有的标签键列表
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getHardwareResourceTypeList() 获取资源类型列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHardwareResourceTypeList(array $HardwareResourceTypeList) 设置资源类型列表
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -53,6 +57,12 @@ class DescribeClusterNodesResponse extends AbstractModel
     public $TagKeys;
 
     /**
+     * @var array 资源类型列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $HardwareResourceTypeList;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -62,6 +72,8 @@ class DescribeClusterNodesResponse extends AbstractModel
      * @param array $NodeList 节点详细信息列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $TagKeys 用户所有的标签键列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $HardwareResourceTypeList 资源类型列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -93,6 +105,10 @@ class DescribeClusterNodesResponse extends AbstractModel
 
         if (array_key_exists("TagKeys",$param) and $param["TagKeys"] !== null) {
             $this->TagKeys = $param["TagKeys"];
+        }
+
+        if (array_key_exists("HardwareResourceTypeList",$param) and $param["HardwareResourceTypeList"] !== null) {
+            $this->HardwareResourceTypeList = $param["HardwareResourceTypeList"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

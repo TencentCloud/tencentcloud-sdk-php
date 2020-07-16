@@ -94,6 +94,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOnsEnable(string $OnsEnable) 设置是否启用Ons
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method CfsConfig getCfsConfig() 获取文件系统配置参数，用于云函数挂载文件系统
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCfsConfig(CfsConfig $CfsConfig) 设置文件系统配置参数，用于云函数挂载文件系统
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAvailableStatus() 获取函数的计费状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAvailableStatus(string $AvailableStatus) 设置函数的计费状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getQualifier() 获取函数版本
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setQualifier(string $Qualifier) 设置函数版本
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -277,6 +289,24 @@ class GetFunctionResponse extends AbstractModel
     public $OnsEnable;
 
     /**
+     * @var CfsConfig 文件系统配置参数，用于云函数挂载文件系统
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CfsConfig;
+
+    /**
+     * @var string 函数的计费状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AvailableStatus;
+
+    /**
+     * @var string 函数版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Qualifier;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -318,6 +348,12 @@ class GetFunctionResponse extends AbstractModel
      * @param PublicNetConfigOut $PublicNetConfig 公网访问配置
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OnsEnable 是否启用Ons
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CfsConfig $CfsConfig 文件系统配置参数，用于云函数挂载文件系统
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AvailableStatus 函数的计费状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Qualifier 函数版本
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -493,6 +529,19 @@ class GetFunctionResponse extends AbstractModel
 
         if (array_key_exists("OnsEnable",$param) and $param["OnsEnable"] !== null) {
             $this->OnsEnable = $param["OnsEnable"];
+        }
+
+        if (array_key_exists("CfsConfig",$param) and $param["CfsConfig"] !== null) {
+            $this->CfsConfig = new CfsConfig();
+            $this->CfsConfig->deserialize($param["CfsConfig"]);
+        }
+
+        if (array_key_exists("AvailableStatus",$param) and $param["AvailableStatus"] !== null) {
+            $this->AvailableStatus = $param["AvailableStatus"];
+        }
+
+        if (array_key_exists("Qualifier",$param) and $param["Qualifier"] !== null) {
+            $this->Qualifier = $param["Qualifier"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -26,6 +26,7 @@ use TencentCloud\Yunjing\V20180228\Models as Models;
  * @method Models\AddLoginWhiteListResponse AddLoginWhiteList(Models\AddLoginWhiteListRequest $req) 本接口（AddLoginWhiteList）用于添加白名单规则
  * @method Models\AddMachineTagResponse AddMachineTag(Models\AddMachineTagRequest $req) 增加机器关联标签
  * @method Models\CloseProVersionResponse CloseProVersion(Models\CloseProVersionRequest $req) 本接口 (CloseProVersion) 用于关闭专业版。
+ * @method Models\CreateBaselineStrategyResponse CreateBaselineStrategy(Models\CreateBaselineStrategyRequest $req) 根据策略信息创建基线策略
  * @method Models\CreateOpenPortTaskResponse CreateOpenPortTask(Models\CreateOpenPortTaskRequest $req) 本接口 (CreateOpenPortTask) 用于创建实时获取端口任务。
  * @method Models\CreateProcessTaskResponse CreateProcessTask(Models\CreateProcessTaskRequest $req) 本接口 (CreateProcessTask) 用于创建实时拉取进程任务。
  * @method Models\CreateUsualLoginPlacesResponse CreateUsualLoginPlaces(Models\CreateUsualLoginPlacesRequest $req) 此接口（CreateUsualLoginPlaces）用于添加常用登录地。

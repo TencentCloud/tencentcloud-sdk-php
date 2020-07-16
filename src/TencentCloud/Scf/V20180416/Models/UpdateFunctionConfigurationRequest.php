@@ -52,6 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeadLetterConfig(DeadLetterConfig $DeadLetterConfig) 设置函数关联的死信队列信息
  * @method PublicNetConfigIn getPublicNetConfig() 获取公网访问配置
  * @method void setPublicNetConfig(PublicNetConfigIn $PublicNetConfig) 设置公网访问配置
+ * @method CfsConfig getCfsConfig() 获取文件系统配置入参，用于云函数绑定文件系统
+ * @method void setCfsConfig(CfsConfig $CfsConfig) 设置文件系统配置入参，用于云函数绑定文件系统
  */
 class UpdateFunctionConfigurationRequest extends AbstractModel
 {
@@ -136,6 +138,11 @@ class UpdateFunctionConfigurationRequest extends AbstractModel
     public $PublicNetConfig;
 
     /**
+     * @var CfsConfig 文件系统配置入参，用于云函数绑定文件系统
+     */
+    public $CfsConfig;
+
+    /**
      * @param string $FunctionName 要修改的函数名称
      * @param string $Description 函数描述。最大支持 1000 个英文字母、数字、空格、逗号和英文句号，支持中文
      * @param integer $MemorySize 函数运行时内存大小，默认为 128 M，可选范64M、128 M-3072 M，以 128MB 为阶梯。
@@ -152,6 +159,7 @@ class UpdateFunctionConfigurationRequest extends AbstractModel
      * @param array $Layers 函数要关联的层版本列表，层的版本会按照在列表中顺序依次覆盖。
      * @param DeadLetterConfig $DeadLetterConfig 函数关联的死信队列信息
      * @param PublicNetConfigIn $PublicNetConfig 公网访问配置
+     * @param CfsConfig $CfsConfig 文件系统配置入参，用于云函数绑定文件系统
      */
     function __construct()
     {
@@ -237,6 +245,11 @@ class UpdateFunctionConfigurationRequest extends AbstractModel
         if (array_key_exists("PublicNetConfig",$param) and $param["PublicNetConfig"] !== null) {
             $this->PublicNetConfig = new PublicNetConfigIn();
             $this->PublicNetConfig->deserialize($param["PublicNetConfig"]);
+        }
+
+        if (array_key_exists("CfsConfig",$param) and $param["CfsConfig"] !== null) {
+            $this->CfsConfig = new CfsConfig();
+            $this->CfsConfig->deserialize($param["CfsConfig"]);
         }
     }
 }

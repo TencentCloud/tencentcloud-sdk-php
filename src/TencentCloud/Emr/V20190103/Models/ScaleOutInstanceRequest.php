@@ -64,6 +64,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDisasterRecoverGroupIds(array $DisasterRecoverGroupIds) 设置分散置放群组ID列表，当前仅支持指定一个。
  * @method array getTags() 获取扩容节点绑定标签列表。
  * @method void setTags(array $Tags) 设置扩容节点绑定标签列表。
+ * @method string getHardwareResourceType() 获取扩容所选资源类型，可选范围为"host","pod"，host为普通的CVM资源，Pod为TKE集群提供的资源
+ * @method void setHardwareResourceType(string $HardwareResourceType) 设置扩容所选资源类型，可选范围为"host","pod"，host为普通的CVM资源，Pod为TKE集群提供的资源
+ * @method PodSpec getPodSpec() 获取使用Pod资源扩容时，指定的Pod规格以及来源等信息
+ * @method void setPodSpec(PodSpec $PodSpec) 设置使用Pod资源扩容时，指定的Pod规格以及来源等信息
  */
 class ScaleOutInstanceRequest extends AbstractModel
 {
@@ -146,6 +150,16 @@ class ScaleOutInstanceRequest extends AbstractModel
     public $Tags;
 
     /**
+     * @var string 扩容所选资源类型，可选范围为"host","pod"，host为普通的CVM资源，Pod为TKE集群提供的资源
+     */
+    public $HardwareResourceType;
+
+    /**
+     * @var PodSpec 使用Pod资源扩容时，指定的Pod规格以及来源等信息
+     */
+    public $PodSpec;
+
+    /**
      * @param string $TimeUnit 扩容的时间单位。取值范围：
 <li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
 <li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
@@ -168,6 +182,8 @@ class ScaleOutInstanceRequest extends AbstractModel
      * @param array $ServiceNodeInfo 启动的进程。
      * @param array $DisasterRecoverGroupIds 分散置放群组ID列表，当前仅支持指定一个。
      * @param array $Tags 扩容节点绑定标签列表。
+     * @param string $HardwareResourceType 扩容所选资源类型，可选范围为"host","pod"，host为普通的CVM资源，Pod为TKE集群提供的资源
+     * @param PodSpec $PodSpec 使用Pod资源扩容时，指定的Pod规格以及来源等信息
      */
     function __construct()
     {
@@ -246,6 +262,15 @@ class ScaleOutInstanceRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("HardwareResourceType",$param) and $param["HardwareResourceType"] !== null) {
+            $this->HardwareResourceType = $param["HardwareResourceType"];
+        }
+
+        if (array_key_exists("PodSpec",$param) and $param["PodSpec"] !== null) {
+            $this->PodSpec = new PodSpec();
+            $this->PodSpec->deserialize($param["PodSpec"]);
         }
     }
 }

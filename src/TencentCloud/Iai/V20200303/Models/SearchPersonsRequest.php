@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SearchPersons请求参数结构体
  *
- * @method array getGroupIds() 获取希望搜索的人员库列表，上限100个。
- * @method void setGroupIds(array $GroupIds) 设置希望搜索的人员库列表，上限100个。
+ * @method array getGroupIds() 获取希望搜索的人员库列表，上限100个。数组元素取值为创建人员库接口中的GroupId
+ * @method void setGroupIds(array $GroupIds) 设置希望搜索的人员库列表，上限100个。数组元素取值为创建人员库接口中的GroupId
  * @method string getImage() 获取图片 base64 数据，base64 编码后大小不可超过5M。
 若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
@@ -78,7 +78,7 @@ MaxFaceNum用于，当输入的待识别图片包含多张人脸时，设定要�
 class SearchPersonsRequest extends AbstractModel
 {
     /**
-     * @var array 希望搜索的人员库列表，上限100个。
+     * @var array 希望搜索的人员库列表，上限100个。数组元素取值为创建人员库接口中的GroupId
      */
     public $GroupIds;
 
@@ -145,7 +145,7 @@ MaxFaceNum用于，当输入的待识别图片包含多张人脸时，设定要�
     public $NeedRotateDetection;
 
     /**
-     * @param array $GroupIds 希望搜索的人员库列表，上限100个。
+     * @param array $GroupIds 希望搜索的人员库列表，上限100个。数组元素取值为创建人员库接口中的GroupId
      * @param string $Image 图片 base64 数据，base64 编码后大小不可超过5M。
 若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。

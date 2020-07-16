@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetPersonBaseInfo请求参数结构体
  *
- * @method string getPersonId() 获取人员ID
- * @method void setPersonId(string $PersonId) 设置人员ID
+ * @method string getPersonId() 获取人员ID，创建人员接口中的PersonId
+ * @method void setPersonId(string $PersonId) 设置人员ID，创建人员接口中的PersonId
  */
 class GetPersonBaseInfoRequest extends AbstractModel
 {
     /**
-     * @var string 人员ID
+     * @var string 人员ID，创建人员接口中的PersonId
      */
     public $PersonId;
 
     /**
-     * @param string $PersonId 人员ID
+     * @param string $PersonId 人员ID，创建人员接口中的PersonId
      */
     function __construct()
     {

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetPersonList请求参数结构体
  *
- * @method string getGroupId() 获取人员库ID
- * @method void setGroupId(string $GroupId) 设置人员库ID
+ * @method string getGroupId() 获取人员库ID，取值为创建人员库接口中的GroupId
+ * @method void setGroupId(string $GroupId) 设置人员库ID，取值为创建人员库接口中的GroupId
  * @method integer getOffset() 获取起始序号，默认值为0
  * @method void setOffset(integer $Offset) 设置起始序号，默认值为0
  * @method integer getLimit() 获取返回数量，默认值为10，最大值为1000
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class GetPersonListRequest extends AbstractModel
 {
     /**
-     * @var string 人员库ID
+     * @var string 人员库ID，取值为创建人员库接口中的GroupId
      */
     public $GroupId;
 
@@ -45,7 +45,7 @@ class GetPersonListRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @param string $GroupId 人员库ID
+     * @param string $GroupId 人员库ID，取值为创建人员库接口中的GroupId
      * @param integer $Offset 起始序号，默认值为0
      * @param integer $Limit 返回数量，默认值为10，最大值为1000
      */

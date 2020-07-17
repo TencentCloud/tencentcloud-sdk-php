@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHostIp(string $HostIp) 设置白名单生效的机器
  * @method integer getId() 获取规则ID，用于更新规则
  * @method void setId(integer $Id) 设置规则ID，用于更新规则
+ * @method string getStartTime() 获取起始时间
+ * @method void setStartTime(string $StartTime) 设置起始时间
+ * @method string getEndTime() 获取结束时间
+ * @method void setEndTime(string $EndTime) 设置结束时间
  */
 class LoginWhiteListsRule extends AbstractModel
 {
@@ -66,12 +70,24 @@ class LoginWhiteListsRule extends AbstractModel
     public $Id;
 
     /**
+     * @var string 起始时间
+     */
+    public $StartTime;
+
+    /**
+     * @var string 结束时间
+     */
+    public $EndTime;
+
+    /**
      * @param array $Places 加白地域
      * @param string $SrcIp 加白源IP，支持网段，多个IP以逗号隔开
      * @param string $UserName 加白用户名，多个用户名以逗号隔开
      * @param boolean $IsGlobal 是否对全局生效
      * @param string $HostIp 白名单生效的机器
      * @param integer $Id 规则ID，用于更新规则
+     * @param string $StartTime 起始时间
+     * @param string $EndTime 结束时间
      */
     function __construct()
     {
@@ -113,6 +129,14 @@ class LoginWhiteListsRule extends AbstractModel
 
         if (array_key_exists("Id",$param) and $param["Id"] !== null) {
             $this->Id = $param["Id"];
+        }
+
+        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
+            $this->StartTime = $param["StartTime"];
+        }
+
+        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
+            $this->EndTime = $param["EndTime"];
         }
     }
 }

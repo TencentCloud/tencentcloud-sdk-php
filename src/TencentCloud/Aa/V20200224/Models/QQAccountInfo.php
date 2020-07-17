@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAssociateAccount(string $AssociateAccount) 设置用于标识QQ用户登录后所关联业务自身的账号ID。
  * @method string getMobilePhone() 获取账号绑定的手机号。
  * @method void setMobilePhone(string $MobilePhone) 设置账号绑定的手机号。
- * @method boolean getDeviceId() 获取用户设备号。
- * @method void setDeviceId(boolean $DeviceId) 设置用户设备号。
+ * @method string getDeviceId() 获取用户设备号。
+ * @method void setDeviceId(string $DeviceId) 设置用户设备号。
  */
 class QQAccountInfo extends AbstractModel
 {
@@ -54,7 +54,7 @@ class QQAccountInfo extends AbstractModel
     public $MobilePhone;
 
     /**
-     * @var boolean 用户设备号。
+     * @var string 用户设备号。
      */
     public $DeviceId;
 
@@ -63,7 +63,7 @@ class QQAccountInfo extends AbstractModel
      * @param string $AppIdUser QQ分配给网站或应用的AppId，用来唯一标识网站或应用。
      * @param string $AssociateAccount 用于标识QQ用户登录后所关联业务自身的账号ID。
      * @param string $MobilePhone 账号绑定的手机号。
-     * @param boolean $DeviceId 用户设备号。
+     * @param string $DeviceId 用户设备号。
      */
     function __construct()
     {

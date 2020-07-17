@@ -40,6 +40,7 @@ use TencentCloud\Dayu\V20180709\Models as Models;
  * @method Models\CreateNetReturnResponse CreateNetReturn(Models\CreateNetReturnRequest $req) 高防IP专业版一键切回源站
  * @method Models\CreateNewL4RulesResponse CreateNewL4Rules(Models\CreateNewL4RulesRequest $req) 添加L4转发规则
  * @method Models\CreateNewL7RulesResponse CreateNewL7Rules(Models\CreateNewL7RulesRequest $req) 添加7层转发规则
+ * @method Models\CreateNewL7RulesUploadResponse CreateNewL7RulesUpload(Models\CreateNewL7RulesUploadRequest $req) 批量上传7层转发规则
  * @method Models\CreateUnblockIpResponse CreateUnblockIp(Models\CreateUnblockIpRequest $req) IP解封操作
  * @method Models\DeleteCCFrequencyRulesResponse DeleteCCFrequencyRules(Models\DeleteCCFrequencyRulesRequest $req) 删除CC防护的访问频率控制规则
  * @method Models\DeleteCCSelfDefinePolicyResponse DeleteCCSelfDefinePolicy(Models\DeleteCCSelfDefinePolicyRequest $req) 删除CC自定义策略

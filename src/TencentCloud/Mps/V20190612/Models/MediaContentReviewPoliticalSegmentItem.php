@@ -45,7 +45,8 @@ politician：
 <li>bureau_politician：厅局级领导人；</li>
 <li>county_politician：县处级领导人；</li>
 <li>rural_politician：乡科级领导人；</li>
-<li>sensitive_politician：敏感政治人物。</li>
+<li>sensitive_politician：敏感政治人物；</li>
+<li>foreign_politician：国外领导人。</li>
 entertainment：
 <li>sensitive_entertainment：敏感娱乐人物。</li>
 sport：
@@ -55,7 +56,8 @@ entrepreneur：
 scholar：
 <li>sensitive_scholar：敏感教育学者。</li>
 celebrity：
-<li>sensitive_celebrity：敏感知名人物。</li>
+<li>sensitive_celebrity：敏感知名人物；</li>
+<li>historical_celebrity：历史知名人物。</li>
 military：
 <li>sensitive_military：敏感军事人物。</li>
  * @method void setLabel(string $Label) 设置嫌疑片段鉴政结果标签。内容审核模板[画面鉴政任务控制参数](https://cloud.tencent.com/document/api/862/37615#PoliticalImgReviewTemplateInfo)里 LabelSet 参数与此参数取值范围的对应关系：
@@ -67,7 +69,8 @@ politician：
 <li>bureau_politician：厅局级领导人；</li>
 <li>county_politician：县处级领导人；</li>
 <li>rural_politician：乡科级领导人；</li>
-<li>sensitive_politician：敏感政治人物。</li>
+<li>sensitive_politician：敏感政治人物；</li>
+<li>foreign_politician：国外领导人。</li>
 entertainment：
 <li>sensitive_entertainment：敏感娱乐人物。</li>
 sport：
@@ -77,7 +80,8 @@ entrepreneur：
 scholar：
 <li>sensitive_scholar：敏感教育学者。</li>
 celebrity：
-<li>sensitive_celebrity：敏感知名人物。</li>
+<li>sensitive_celebrity：敏感知名人物；</li>
+<li>historical_celebrity：历史知名人物。</li>
 military：
 <li>sensitive_military：敏感军事人物。</li>
  * @method string getUrl() 获取嫌疑图片 URL （图片不会永久存储，到达
@@ -129,7 +133,8 @@ politician：
 <li>bureau_politician：厅局级领导人；</li>
 <li>county_politician：县处级领导人；</li>
 <li>rural_politician：乡科级领导人；</li>
-<li>sensitive_politician：敏感政治人物。</li>
+<li>sensitive_politician：敏感政治人物；</li>
+<li>foreign_politician：国外领导人。</li>
 entertainment：
 <li>sensitive_entertainment：敏感娱乐人物。</li>
 sport：
@@ -139,7 +144,8 @@ entrepreneur：
 scholar：
 <li>sensitive_scholar：敏感教育学者。</li>
 celebrity：
-<li>sensitive_celebrity：敏感知名人物。</li>
+<li>sensitive_celebrity：敏感知名人物；</li>
+<li>historical_celebrity：历史知名人物。</li>
 military：
 <li>sensitive_military：敏感军事人物。</li>
      */
@@ -179,7 +185,8 @@ politician：
 <li>bureau_politician：厅局级领导人；</li>
 <li>county_politician：县处级领导人；</li>
 <li>rural_politician：乡科级领导人；</li>
-<li>sensitive_politician：敏感政治人物。</li>
+<li>sensitive_politician：敏感政治人物；</li>
+<li>foreign_politician：国外领导人。</li>
 entertainment：
 <li>sensitive_entertainment：敏感娱乐人物。</li>
 sport：
@@ -189,7 +196,8 @@ entrepreneur：
 scholar：
 <li>sensitive_scholar：敏感教育学者。</li>
 celebrity：
-<li>sensitive_celebrity：敏感知名人物。</li>
+<li>sensitive_celebrity：敏感知名人物；</li>
+<li>historical_celebrity：历史知名人物。</li>
 military：
 <li>sensitive_military：敏感军事人物。</li>
      * @param string $Url 嫌疑图片 URL （图片不会永久存储，到达

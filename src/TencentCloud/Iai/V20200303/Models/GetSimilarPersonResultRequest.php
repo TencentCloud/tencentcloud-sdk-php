@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetSimilarPersonResult请求参数结构体
  *
- * @method string getJobId() 获取查重任务ID，用于查询、获取查重的进度和结果。
- * @method void setJobId(string $JobId) 设置查重任务ID，用于查询、获取查重的进度和结果。
+ * @method string getJobId() 获取查重任务ID，用于查询、获取查重的进度和结果。取值为人员查重接口返回的JobId
+ * @method void setJobId(string $JobId) 设置查重任务ID，用于查询、获取查重的进度和结果。取值为人员查重接口返回的JobId
  */
 class GetSimilarPersonResultRequest extends AbstractModel
 {
     /**
-     * @var string 查重任务ID，用于查询、获取查重的进度和结果。
+     * @var string 查重任务ID，用于查询、获取查重的进度和结果。取值为人员查重接口返回的JobId
      */
     public $JobId;
 
     /**
-     * @param string $JobId 查重任务ID，用于查询、获取查重的进度和结果。
+     * @param string $JobId 查重任务ID，用于查询、获取查重的进度和结果。取值为人员查重接口返回的JobId
      */
     function __construct()
     {

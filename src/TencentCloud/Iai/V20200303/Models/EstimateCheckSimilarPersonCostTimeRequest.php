@@ -22,20 +22,24 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getGroupIds() 获取待整理的人员库列表。 
 人员库总人数不可超过200万，人员库个数不可超过10个。
+数组元素取值为创建人员库接口中的GroupId
  * @method void setGroupIds(array $GroupIds) 设置待整理的人员库列表。 
 人员库总人数不可超过200万，人员库个数不可超过10个。
+数组元素取值为创建人员库接口中的GroupId
  */
 class EstimateCheckSimilarPersonCostTimeRequest extends AbstractModel
 {
     /**
      * @var array 待整理的人员库列表。 
 人员库总人数不可超过200万，人员库个数不可超过10个。
+数组元素取值为创建人员库接口中的GroupId
      */
     public $GroupIds;
 
     /**
      * @param array $GroupIds 待整理的人员库列表。 
 人员库总人数不可超过200万，人员库个数不可超过10个。
+数组元素取值为创建人员库接口中的GroupId
      */
     function __construct()
     {

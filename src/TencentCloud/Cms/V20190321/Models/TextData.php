@@ -48,6 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setID(TextOutputID $ID) 设置消息类ID信息
  * @method TextOutputRes getRes() 获取消息类输出结果
  * @method void setRes(TextOutputRes $Res) 设置消息类输出结果
+ * @method array getRiskDetails() 获取账号风险检测结果
+ * @method void setRiskDetails(array $RiskDetails) 设置账号风险检测结果
  * @method integer getBizType() 获取最终使用的BizType
  * @method void setBizType(integer $BizType) 设置最终使用的BizType
  * @method string getEvilLabel() 获取恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义关键词
@@ -104,6 +106,11 @@ class TextData extends AbstractModel
     public $Res;
 
     /**
+     * @var array 账号风险检测结果
+     */
+    public $RiskDetails;
+
+    /**
      * @var integer 最终使用的BizType
      */
     public $BizType;
@@ -143,6 +150,7 @@ class TextData extends AbstractModel
      * @param array $DetailResult 返回的详细结果
      * @param TextOutputID $ID 消息类ID信息
      * @param TextOutputRes $Res 消息类输出结果
+     * @param array $RiskDetails 账号风险检测结果
      * @param integer $BizType 最终使用的BizType
      * @param string $EvilLabel 恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义关键词
      * @param array $Keywords 命中的关键词
@@ -201,6 +209,15 @@ class TextData extends AbstractModel
         if (array_key_exists("Res",$param) and $param["Res"] !== null) {
             $this->Res = new TextOutputRes();
             $this->Res->deserialize($param["Res"]);
+        }
+
+        if (array_key_exists("RiskDetails",$param) and $param["RiskDetails"] !== null) {
+            $this->RiskDetails = [];
+            foreach ($param["RiskDetails"] as $key => $value){
+                $obj = new RiskDetails();
+                $obj->deserialize($value);
+                array_push($this->RiskDetails, $obj);
+            }
         }
 
         if (array_key_exists("BizType",$param) and $param["BizType"] !== null) {

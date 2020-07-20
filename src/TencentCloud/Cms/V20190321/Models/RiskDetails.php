@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 账号风险检测结果
  *
- * @method array getKeywords() 获取风险关键词
- * @method void setKeywords(array $Keywords) 设置风险关键词
+ * @method array getKeywords() 获取预留字段，暂时不使用
+ * @method void setKeywords(array $Keywords) 设置预留字段，暂时不使用
  * @method string getLable() 获取风险类别，RiskAccount，RiskIP, RiskIMEI
  * @method void setLable(string $Lable) 设置风险类别，RiskAccount，RiskIP, RiskIMEI
  * @method integer getLevel() 获取风险等级，1:疑似，2：恶意
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class RiskDetails extends AbstractModel
 {
     /**
-     * @var array 风险关键词
+     * @var array 预留字段，暂时不使用
      */
     public $Keywords;
 
@@ -45,7 +45,7 @@ class RiskDetails extends AbstractModel
     public $Level;
 
     /**
-     * @param array $Keywords 风险关键词
+     * @param array $Keywords 预留字段，暂时不使用
      * @param string $Lable 风险类别，RiskAccount，RiskIP, RiskIMEI
      * @param integer $Level 风险等级，1:疑似，2：恶意
      */

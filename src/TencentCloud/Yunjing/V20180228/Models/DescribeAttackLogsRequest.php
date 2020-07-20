@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
 <li>HttpMethod - String - 是否必填：否 - 攻击方法(POST|GET)</li>
 <li>MachineIp - String - 是否必填：否 - 主机内网IP</li>
 <li>DateRange - String - 是否必填：否 - 时间范围(存储最近3个月的数据)，如最近一个月["2019-11-17", "2019-12-17"]</li>
+ * @method string getUuid() 获取主机安全客户端ID
+ * @method void setUuid(string $Uuid) 设置主机安全客户端ID
+ * @method string getQuuid() 获取云主机机器ID
+ * @method void setQuuid(string $Quuid) 设置云主机机器ID
  */
 class DescribeAttackLogsRequest extends AbstractModel
 {
@@ -54,12 +58,24 @@ class DescribeAttackLogsRequest extends AbstractModel
     public $Filters;
 
     /**
+     * @var string 主机安全客户端ID
+     */
+    public $Uuid;
+
+    /**
+     * @var string 云主机机器ID
+     */
+    public $Quuid;
+
+    /**
      * @param integer $Limit 返回数量，默认为10，最大值为100。
      * @param integer $Offset 偏移量，默认为0。
      * @param array $Filters 过滤条件。
 <li>HttpMethod - String - 是否必填：否 - 攻击方法(POST|GET)</li>
 <li>MachineIp - String - 是否必填：否 - 主机内网IP</li>
 <li>DateRange - String - 是否必填：否 - 时间范围(存储最近3个月的数据)，如最近一个月["2019-11-17", "2019-12-17"]</li>
+     * @param string $Uuid 主机安全客户端ID
+     * @param string $Quuid 云主机机器ID
      */
     function __construct()
     {
@@ -89,6 +105,14 @@ class DescribeAttackLogsRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Filters, $obj);
             }
+        }
+
+        if (array_key_exists("Uuid",$param) and $param["Uuid"] !== null) {
+            $this->Uuid = $param["Uuid"];
+        }
+
+        if (array_key_exists("Quuid",$param) and $param["Quuid"] !== null) {
+            $this->Quuid = $param["Quuid"];
         }
     }
 }

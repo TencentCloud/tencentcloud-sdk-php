@@ -30,6 +30,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVuls(array $Vuls) 设置漏洞统计数据数组。
  * @method array getBaseLines() 获取基线统计数据数组。
  * @method void setBaseLines(array $BaseLines) 设置基线统计数据数组。
+ * @method array getMaliciousRequests() 获取恶意请求统计数据数组。
+ * @method void setMaliciousRequests(array $MaliciousRequests) 设置恶意请求统计数据数组。
+ * @method array getHighRiskBashs() 获取高危命令统计数据数组。
+ * @method void setHighRiskBashs(array $HighRiskBashs) 设置高危命令统计数据数组。
+ * @method array getReverseShells() 获取反弹shell统计数据数组。
+ * @method void setReverseShells(array $ReverseShells) 设置反弹shell统计数据数组。
+ * @method array getPrivilegeEscalations() 获取本地提权统计数据数组。
+ * @method void setPrivilegeEscalations(array $PrivilegeEscalations) 设置本地提权统计数据数组。
+ * @method array getCyberAttacks() 获取网络攻击统计数据数组。
+ * @method void setCyberAttacks(array $CyberAttacks) 设置网络攻击统计数据数组。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -61,6 +71,31 @@ class DescribeSecurityTrendsResponse extends AbstractModel
     public $BaseLines;
 
     /**
+     * @var array 恶意请求统计数据数组。
+     */
+    public $MaliciousRequests;
+
+    /**
+     * @var array 高危命令统计数据数组。
+     */
+    public $HighRiskBashs;
+
+    /**
+     * @var array 反弹shell统计数据数组。
+     */
+    public $ReverseShells;
+
+    /**
+     * @var array 本地提权统计数据数组。
+     */
+    public $PrivilegeEscalations;
+
+    /**
+     * @var array 网络攻击统计数据数组。
+     */
+    public $CyberAttacks;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -71,6 +106,11 @@ class DescribeSecurityTrendsResponse extends AbstractModel
      * @param array $BruteAttacks 密码破解事件统计数据数组。
      * @param array $Vuls 漏洞统计数据数组。
      * @param array $BaseLines 基线统计数据数组。
+     * @param array $MaliciousRequests 恶意请求统计数据数组。
+     * @param array $HighRiskBashs 高危命令统计数据数组。
+     * @param array $ReverseShells 反弹shell统计数据数组。
+     * @param array $PrivilegeEscalations 本地提权统计数据数组。
+     * @param array $CyberAttacks 网络攻击统计数据数组。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -128,6 +168,51 @@ class DescribeSecurityTrendsResponse extends AbstractModel
                 $obj = new SecurityTrend();
                 $obj->deserialize($value);
                 array_push($this->BaseLines, $obj);
+            }
+        }
+
+        if (array_key_exists("MaliciousRequests",$param) and $param["MaliciousRequests"] !== null) {
+            $this->MaliciousRequests = [];
+            foreach ($param["MaliciousRequests"] as $key => $value){
+                $obj = new SecurityTrend();
+                $obj->deserialize($value);
+                array_push($this->MaliciousRequests, $obj);
+            }
+        }
+
+        if (array_key_exists("HighRiskBashs",$param) and $param["HighRiskBashs"] !== null) {
+            $this->HighRiskBashs = [];
+            foreach ($param["HighRiskBashs"] as $key => $value){
+                $obj = new SecurityTrend();
+                $obj->deserialize($value);
+                array_push($this->HighRiskBashs, $obj);
+            }
+        }
+
+        if (array_key_exists("ReverseShells",$param) and $param["ReverseShells"] !== null) {
+            $this->ReverseShells = [];
+            foreach ($param["ReverseShells"] as $key => $value){
+                $obj = new SecurityTrend();
+                $obj->deserialize($value);
+                array_push($this->ReverseShells, $obj);
+            }
+        }
+
+        if (array_key_exists("PrivilegeEscalations",$param) and $param["PrivilegeEscalations"] !== null) {
+            $this->PrivilegeEscalations = [];
+            foreach ($param["PrivilegeEscalations"] as $key => $value){
+                $obj = new SecurityTrend();
+                $obj->deserialize($value);
+                array_push($this->PrivilegeEscalations, $obj);
+            }
+        }
+
+        if (array_key_exists("CyberAttacks",$param) and $param["CyberAttacks"] !== null) {
+            $this->CyberAttacks = [];
+            foreach ($param["CyberAttacks"] as $key => $value){
+                $obj = new SecurityTrend();
+                $obj->deserialize($value);
+                array_push($this->CyberAttacks, $obj);
             }
         }
 

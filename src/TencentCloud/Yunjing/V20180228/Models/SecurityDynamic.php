@@ -38,6 +38,16 @@ use TencentCloud\Common\AbstractModel;
 <li>BASELINE：安全基线</li>
  * @method string getMessage() 获取安全事件消息。
  * @method void setMessage(string $Message) 设置安全事件消息。
+ * @method string getSecurityLevel() 获取安全事件等级。
+<li>RISK: 严重</li>
+<li>HIGH: 高危</li>
+<li>NORMAL: 中危</li>
+<li>LOW: 低危</li>
+ * @method void setSecurityLevel(string $SecurityLevel) 设置安全事件等级。
+<li>RISK: 严重</li>
+<li>HIGH: 高危</li>
+<li>NORMAL: 中危</li>
+<li>LOW: 低危</li>
  */
 class SecurityDynamic extends AbstractModel
 {
@@ -67,6 +77,15 @@ class SecurityDynamic extends AbstractModel
     public $Message;
 
     /**
+     * @var string 安全事件等级。
+<li>RISK: 严重</li>
+<li>HIGH: 高危</li>
+<li>NORMAL: 中危</li>
+<li>LOW: 低危</li>
+     */
+    public $SecurityLevel;
+
+    /**
      * @param string $Uuid 云镜客户端UUID。
      * @param string $EventTime 安全事件发生事件。
      * @param string $EventType 安全事件类型。
@@ -76,6 +95,11 @@ class SecurityDynamic extends AbstractModel
 <li>VUL：漏洞</li>
 <li>BASELINE：安全基线</li>
      * @param string $Message 安全事件消息。
+     * @param string $SecurityLevel 安全事件等级。
+<li>RISK: 严重</li>
+<li>HIGH: 高危</li>
+<li>NORMAL: 中危</li>
+<li>LOW: 低危</li>
      */
     function __construct()
     {
@@ -104,6 +128,10 @@ class SecurityDynamic extends AbstractModel
 
         if (array_key_exists("Message",$param) and $param["Message"] !== null) {
             $this->Message = $param["Message"];
+        }
+
+        if (array_key_exists("SecurityLevel",$param) and $param["SecurityLevel"] !== null) {
+            $this->SecurityLevel = $param["SecurityLevel"];
         }
     }
 }

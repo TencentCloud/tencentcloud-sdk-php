@@ -108,6 +108,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setActivityId(string $ActivityId) 设置活动ID
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getOverdueTime() 获取订单过期时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOverdueTime(string $OverdueTime) 设置订单过期时间
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AgentDealElem extends AbstractModel
 {
@@ -252,6 +256,12 @@ class AgentDealElem extends AbstractModel
     public $ActivityId;
 
     /**
+     * @var string 订单过期时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OverdueTime;
+
+    /**
      * @param string $DealId 订单自增 ID
      * @param string $DealName 订单号
      * @param string $GoodsCategoryId 商品类型 ID
@@ -295,6 +305,8 @@ class AgentDealElem extends AbstractModel
      * @param string $PayerMode 支付方式，0：自付；1：代付
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ActivityId 活动ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $OverdueTime 订单过期时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -405,6 +417,10 @@ class AgentDealElem extends AbstractModel
 
         if (array_key_exists("ActivityId",$param) and $param["ActivityId"] !== null) {
             $this->ActivityId = $param["ActivityId"];
+        }
+
+        if (array_key_exists("OverdueTime",$param) and $param["OverdueTime"] !== null) {
+            $this->OverdueTime = $param["OverdueTime"];
         }
     }
 }

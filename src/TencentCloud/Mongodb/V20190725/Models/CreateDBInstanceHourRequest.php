@@ -48,6 +48,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProjectId(integer $ProjectId) 设置项目ID，不设置为默认项目
  * @method array getTags() 获取实例标签信息
  * @method void setTags(array $Tags) 设置实例标签信息
+ * @method integer getClone() 获取1:正式实例,2:临时实例,3:只读实例，4：灾备实例
+ * @method void setClone(integer $Clone) 设置1:正式实例,2:临时实例,3:只读实例，4：灾备实例
+ * @method string getFather() 获取父实例Id，当Clone为3或者4时，这个必须填
+ * @method void setFather(string $Father) 设置父实例Id，当Clone为3或者4时，这个必须填
+ * @method array getSecurityGroup() 获取安全组
+ * @method void setSecurityGroup(array $SecurityGroup) 设置安全组
  */
 class CreateDBInstanceHourRequest extends AbstractModel
 {
@@ -122,6 +128,21 @@ class CreateDBInstanceHourRequest extends AbstractModel
     public $Tags;
 
     /**
+     * @var integer 1:正式实例,2:临时实例,3:只读实例，4：灾备实例
+     */
+    public $Clone;
+
+    /**
+     * @var string 父实例Id，当Clone为3或者4时，这个必须填
+     */
+    public $Father;
+
+    /**
+     * @var array 安全组
+     */
+    public $SecurityGroup;
+
+    /**
      * @param integer $Memory 实例内存大小，单位：GB
      * @param integer $Volume 实例硬盘大小，单位：GB
      * @param integer $ReplicateSetNum 副本集个数，创建副本集实例时，该参数必须设置为1；创建分片实例时，具体参照查询云数据库的售卖规格返回参数
@@ -136,6 +157,9 @@ class CreateDBInstanceHourRequest extends AbstractModel
      * @param string $Password 实例密码，不设置该参数则需要在创建完成后通过设置密码接口初始化实例密码。密码必须是8-16位字符，且至少包含字母、数字和字符 !@#%^*() 中的两种
      * @param integer $ProjectId 项目ID，不设置为默认项目
      * @param array $Tags 实例标签信息
+     * @param integer $Clone 1:正式实例,2:临时实例,3:只读实例，4：灾备实例
+     * @param string $Father 父实例Id，当Clone为3或者4时，这个必须填
+     * @param array $SecurityGroup 安全组
      */
     function __construct()
     {
@@ -209,6 +233,18 @@ class CreateDBInstanceHourRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("Clone",$param) and $param["Clone"] !== null) {
+            $this->Clone = $param["Clone"];
+        }
+
+        if (array_key_exists("Father",$param) and $param["Father"] !== null) {
+            $this->Father = $param["Father"];
+        }
+
+        if (array_key_exists("SecurityGroup",$param) and $param["SecurityGroup"] !== null) {
+            $this->SecurityGroup = $param["SecurityGroup"];
         }
     }
 }

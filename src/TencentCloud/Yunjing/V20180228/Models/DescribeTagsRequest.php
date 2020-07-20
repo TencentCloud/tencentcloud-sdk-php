@@ -20,14 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTags请求参数结构体
  *
-
+ * @method string getMachineType() 获取云主机类型。
+<li>CVM：表示虚拟主机</li>
+<li>BM:  表示黑石物理机</li>
+ * @method void setMachineType(string $MachineType) 设置云主机类型。
+<li>CVM：表示虚拟主机</li>
+<li>BM:  表示黑石物理机</li>
+ * @method string getMachineRegion() 获取机器所属地域。如：ap-guangzhou，ap-shanghai
+ * @method void setMachineRegion(string $MachineRegion) 设置机器所属地域。如：ap-guangzhou，ap-shanghai
  */
 class DescribeTagsRequest extends AbstractModel
 {
-
+    /**
+     * @var string 云主机类型。
+<li>CVM：表示虚拟主机</li>
+<li>BM:  表示黑石物理机</li>
+     */
+    public $MachineType;
 
     /**
+     * @var string 机器所属地域。如：ap-guangzhou，ap-shanghai
+     */
+    public $MachineRegion;
 
+    /**
+     * @param string $MachineType 云主机类型。
+<li>CVM：表示虚拟主机</li>
+<li>BM:  表示黑石物理机</li>
+     * @param string $MachineRegion 机器所属地域。如：ap-guangzhou，ap-shanghai
      */
     function __construct()
     {
@@ -42,6 +62,12 @@ class DescribeTagsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("MachineType",$param) and $param["MachineType"] !== null) {
+            $this->MachineType = $param["MachineType"];
+        }
 
+        if (array_key_exists("MachineRegion",$param) and $param["MachineRegion"] !== null) {
+            $this->MachineRegion = $param["MachineRegion"];
+        }
     }
 }

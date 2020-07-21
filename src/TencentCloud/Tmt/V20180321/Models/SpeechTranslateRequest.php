@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProjectId(integer $ProjectId) 设置项目ID，可以根据控制台-账号中心-项目管理中的配置填写，如无配置请填写默认项目ID:0
  * @method string getMode() 获取识别模式，该参数已废弃
  * @method void setMode(string $Mode) 设置识别模式，该参数已废弃
+ * @method integer getTransType() 获取该参数已废弃
+ * @method void setTransType(integer $TransType) 设置该参数已废弃
  */
 class SpeechTranslateRequest extends AbstractModel
 {
@@ -87,6 +89,11 @@ class SpeechTranslateRequest extends AbstractModel
     public $Mode;
 
     /**
+     * @var integer 该参数已废弃
+     */
+    public $TransType;
+
+    /**
      * @param string $SessionUuid 一段完整的语音对应一个SessionUuid
      * @param string $Source 音频中的语言类型，支持语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
      * @param string $Target 翻译目标语言类型，支持的语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
@@ -96,6 +103,7 @@ class SpeechTranslateRequest extends AbstractModel
      * @param string $Data 语音分片内容进行 Base64 编码后的字符串。音频内容需包含有效并可识别的文本信息。
      * @param integer $ProjectId 项目ID，可以根据控制台-账号中心-项目管理中的配置填写，如无配置请填写默认项目ID:0
      * @param string $Mode 识别模式，该参数已废弃
+     * @param integer $TransType 该参数已废弃
      */
     function __construct()
     {
@@ -144,6 +152,10 @@ class SpeechTranslateRequest extends AbstractModel
 
         if (array_key_exists("Mode",$param) and $param["Mode"] !== null) {
             $this->Mode = $param["Mode"];
+        }
+
+        if (array_key_exists("TransType",$param) and $param["TransType"] !== null) {
+            $this->TransType = $param["TransType"];
         }
     }
 }

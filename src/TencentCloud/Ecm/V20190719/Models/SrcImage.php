@@ -34,6 +34,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegionID(integer $RegionID) 设置区域ID
  * @method string getRegionName() 获取区域名称
  * @method void setRegionName(string $RegionName) 设置区域名称
+ * @method string getInstanceName() 获取来源实例名称
+ * @method void setInstanceName(string $InstanceName) 设置来源实例名称
+ * @method string getInstanceId() 获取来源实例ID
+ * @method void setInstanceId(string $InstanceId) 设置来源实例ID
+ * @method string getImageType() 获取来源镜像类型
+ * @method void setImageType(string $ImageType) 设置来源镜像类型
  */
 class SrcImage extends AbstractModel
 {
@@ -73,6 +79,21 @@ class SrcImage extends AbstractModel
     public $RegionName;
 
     /**
+     * @var string 来源实例名称
+     */
+    public $InstanceName;
+
+    /**
+     * @var string 来源实例ID
+     */
+    public $InstanceId;
+
+    /**
+     * @var string 来源镜像类型
+     */
+    public $ImageType;
+
+    /**
      * @param string $ImageId 镜像id
      * @param string $ImageName 镜像名称
      * @param string $ImageOsName 系统名称
@@ -80,6 +101,9 @@ class SrcImage extends AbstractModel
      * @param string $Region 区域
      * @param integer $RegionID 区域ID
      * @param string $RegionName 区域名称
+     * @param string $InstanceName 来源实例名称
+     * @param string $InstanceId 来源实例ID
+     * @param string $ImageType 来源镜像类型
      */
     function __construct()
     {
@@ -120,6 +144,18 @@ class SrcImage extends AbstractModel
 
         if (array_key_exists("RegionName",$param) and $param["RegionName"] !== null) {
             $this->RegionName = $param["RegionName"];
+        }
+
+        if (array_key_exists("InstanceName",$param) and $param["InstanceName"] !== null) {
+            $this->InstanceName = $param["InstanceName"];
+        }
+
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("ImageType",$param) and $param["ImageType"] !== null) {
+            $this->ImageType = $param["ImageType"];
         }
     }
 }

@@ -56,6 +56,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInternetServiceProvider(string $InternetServiceProvider) 设置运营商，CTCC电信，CUCC联通，CMCC移动
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getBandwidth() 获取带宽上限
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBandwidth(integer $Bandwidth) 设置带宽上限
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPayMode() 获取计费模式
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPayMode(string $PayMode) 设置计费模式
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Address extends AbstractModel
 {
@@ -134,6 +142,18 @@ class Address extends AbstractModel
     public $InternetServiceProvider;
 
     /**
+     * @var integer 带宽上限
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Bandwidth;
+
+    /**
+     * @var string 计费模式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PayMode;
+
+    /**
      * @param string $AddressId EIP的ID，是EIP的唯一标识。
      * @param string $AddressName EIP名称。
      * @param string $AddressStatus EIP状态，包含'CREATING'(创建中),'BINDING'(绑定中),'BIND'(已绑定),'UNBINDING'(解绑中),'UNBIND'(已解绑),'OFFLINING'(释放中),'BIND_ENI'(绑定悬空弹性网卡)
@@ -151,6 +171,10 @@ class Address extends AbstractModel
      * @param string $AddressType eip资源类型，包括"CalcIP","WanIP","EIP","AnycastEIP"。其中"CalcIP"表示设备ip，“WanIP”表示普通公网ip，“EIP”表示弹性公网ip，“AnycastEip”表示加速EIP
      * @param boolean $CascadeRelease eip是否在解绑后自动释放。true表示eip将会在解绑后自动释放，false表示eip在解绑后不会自动释放
      * @param string $InternetServiceProvider 运营商，CTCC电信，CUCC联通，CMCC移动
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Bandwidth 带宽上限
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $PayMode 计费模式
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -220,6 +244,14 @@ class Address extends AbstractModel
 
         if (array_key_exists("InternetServiceProvider",$param) and $param["InternetServiceProvider"] !== null) {
             $this->InternetServiceProvider = $param["InternetServiceProvider"];
+        }
+
+        if (array_key_exists("Bandwidth",$param) and $param["Bandwidth"] !== null) {
+            $this->Bandwidth = $param["Bandwidth"];
+        }
+
+        if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {
+            $this->PayMode = $param["PayMode"];
         }
     }
 }

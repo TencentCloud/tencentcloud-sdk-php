@@ -18,28 +18,20 @@ namespace TencentCloud\Ecm\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 资源类型的Tag
+ * DescribeTaskStatus请求参数结构体
  *
- * @method string getResourceType() 获取资源类型，目前仅支持"instance"
- * @method void setResourceType(string $ResourceType) 设置资源类型，目前仅支持"instance"
- * @method array getTags() 获取标签列表
- * @method void setTags(array $Tags) 设置标签列表
+ * @method array getTaskSet() 获取任务描述
+ * @method void setTaskSet(array $TaskSet) 设置任务描述
  */
-class TagSpecification extends AbstractModel
+class DescribeTaskStatusRequest extends AbstractModel
 {
     /**
-     * @var string 资源类型，目前仅支持"instance"
+     * @var array 任务描述
      */
-    public $ResourceType;
+    public $TaskSet;
 
     /**
-     * @var array 标签列表
-     */
-    public $Tags;
-
-    /**
-     * @param string $ResourceType 资源类型，目前仅支持"instance"
-     * @param array $Tags 标签列表
+     * @param array $TaskSet 任务描述
      */
     function __construct()
     {
@@ -54,16 +46,12 @@ class TagSpecification extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ResourceType",$param) and $param["ResourceType"] !== null) {
-            $this->ResourceType = $param["ResourceType"];
-        }
-
-        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
-            $this->Tags = [];
-            foreach ($param["Tags"] as $key => $value){
-                $obj = new Tag();
+        if (array_key_exists("TaskSet",$param) and $param["TaskSet"] !== null) {
+            $this->TaskSet = [];
+            foreach ($param["TaskSet"] as $key => $value){
+                $obj = new TaskInput();
                 $obj->deserialize($value);
-                array_push($this->Tags, $obj);
+                array_push($this->TaskSet, $obj);
             }
         }
     }

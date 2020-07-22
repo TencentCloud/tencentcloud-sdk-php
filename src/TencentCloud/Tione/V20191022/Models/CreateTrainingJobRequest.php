@@ -22,14 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method AlgorithmSpecification getAlgorithmSpecification() 获取算法镜像配置
  * @method void setAlgorithmSpecification(AlgorithmSpecification $AlgorithmSpecification) 设置算法镜像配置
- * @method array getInputDataConfig() 获取输入数据配置
- * @method void setInputDataConfig(array $InputDataConfig) 设置输入数据配置
  * @method OutputDataConfig getOutputDataConfig() 获取输出数据配置
  * @method void setOutputDataConfig(OutputDataConfig $OutputDataConfig) 设置输出数据配置
  * @method ResourceConfig getResourceConfig() 获取资源实例配置
  * @method void setResourceConfig(ResourceConfig $ResourceConfig) 设置资源实例配置
  * @method string getTrainingJobName() 获取训练任务名称
  * @method void setTrainingJobName(string $TrainingJobName) 设置训练任务名称
+ * @method array getInputDataConfig() 获取输入数据配置
+ * @method void setInputDataConfig(array $InputDataConfig) 设置输入数据配置
  * @method StoppingCondition getStoppingCondition() 获取中止条件
  * @method void setStoppingCondition(StoppingCondition $StoppingCondition) 设置中止条件
  * @method VpcConfig getVpcConfig() 获取私有网络配置
@@ -49,11 +49,6 @@ class CreateTrainingJobRequest extends AbstractModel
     public $AlgorithmSpecification;
 
     /**
-     * @var array 输入数据配置
-     */
-    public $InputDataConfig;
-
-    /**
      * @var OutputDataConfig 输出数据配置
      */
     public $OutputDataConfig;
@@ -67,6 +62,11 @@ class CreateTrainingJobRequest extends AbstractModel
      * @var string 训练任务名称
      */
     public $TrainingJobName;
+
+    /**
+     * @var array 输入数据配置
+     */
+    public $InputDataConfig;
 
     /**
      * @var StoppingCondition 中止条件
@@ -95,10 +95,10 @@ class CreateTrainingJobRequest extends AbstractModel
 
     /**
      * @param AlgorithmSpecification $AlgorithmSpecification 算法镜像配置
-     * @param array $InputDataConfig 输入数据配置
      * @param OutputDataConfig $OutputDataConfig 输出数据配置
      * @param ResourceConfig $ResourceConfig 资源实例配置
      * @param string $TrainingJobName 训练任务名称
+     * @param array $InputDataConfig 输入数据配置
      * @param StoppingCondition $StoppingCondition 中止条件
      * @param VpcConfig $VpcConfig 私有网络配置
      * @param string $HyperParameters 算法超级参数
@@ -123,15 +123,6 @@ class CreateTrainingJobRequest extends AbstractModel
             $this->AlgorithmSpecification->deserialize($param["AlgorithmSpecification"]);
         }
 
-        if (array_key_exists("InputDataConfig",$param) and $param["InputDataConfig"] !== null) {
-            $this->InputDataConfig = [];
-            foreach ($param["InputDataConfig"] as $key => $value){
-                $obj = new InputDataConfig();
-                $obj->deserialize($value);
-                array_push($this->InputDataConfig, $obj);
-            }
-        }
-
         if (array_key_exists("OutputDataConfig",$param) and $param["OutputDataConfig"] !== null) {
             $this->OutputDataConfig = new OutputDataConfig();
             $this->OutputDataConfig->deserialize($param["OutputDataConfig"]);
@@ -144,6 +135,15 @@ class CreateTrainingJobRequest extends AbstractModel
 
         if (array_key_exists("TrainingJobName",$param) and $param["TrainingJobName"] !== null) {
             $this->TrainingJobName = $param["TrainingJobName"];
+        }
+
+        if (array_key_exists("InputDataConfig",$param) and $param["InputDataConfig"] !== null) {
+            $this->InputDataConfig = [];
+            foreach ($param["InputDataConfig"] as $key => $value){
+                $obj = new InputDataConfig();
+                $obj->deserialize($value);
+                array_push($this->InputDataConfig, $obj);
+            }
         }
 
         if (array_key_exists("StoppingCondition",$param) and $param["StoppingCondition"] !== null) {

@@ -20,34 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * MCU混流布局参数
  *
- * @method integer getTemplate() 获取混流布局模板ID，0为悬浮模板(默认);1为九宫格模板;2为屏幕分享模板
- * @method void setTemplate(integer $Template) 设置混流布局模板ID，0为悬浮模板(默认);1为九宫格模板;2为屏幕分享模板
- * @method string getMainVideoUserId() 获取屏幕分享模板中有效，代表左侧大画面对应的用户ID
- * @method void setMainVideoUserId(string $MainVideoUserId) 设置屏幕分享模板中有效，代表左侧大画面对应的用户ID
- * @method integer getMainVideoStreamType() 获取屏幕分享模板中有效，代表左侧大画面对应的流类型，0为摄像头，1为屏幕分享。左侧大画面为web用户时此值填0
- * @method void setMainVideoStreamType(integer $MainVideoStreamType) 设置屏幕分享模板中有效，代表左侧大画面对应的流类型，0为摄像头，1为屏幕分享。左侧大画面为web用户时此值填0
+ * @method integer getTemplate() 获取混流布局模板ID，0为悬浮模板(默认);1为九宫格模板;2为屏幕分享模板;3为画中画模板。
+ * @method void setTemplate(integer $Template) 设置混流布局模板ID，0为悬浮模板(默认);1为九宫格模板;2为屏幕分享模板;3为画中画模板。
+ * @method string getMainVideoUserId() 获取屏幕分享模板、悬浮模板、画中画模板中有效，代表大画面对应的用户ID。
+ * @method void setMainVideoUserId(string $MainVideoUserId) 设置屏幕分享模板、悬浮模板、画中画模板中有效，代表大画面对应的用户ID。
+ * @method integer getMainVideoStreamType() 获取屏幕分享模板、悬浮模板、画中画模板中有效，代表大画面对应的流类型，0为摄像头，1为屏幕分享。左侧大画面为web用户时此值填0。
+ * @method void setMainVideoStreamType(integer $MainVideoStreamType) 设置屏幕分享模板、悬浮模板、画中画模板中有效，代表大画面对应的流类型，0为摄像头，1为屏幕分享。左侧大画面为web用户时此值填0。
+ * @method SmallVideoLayoutParams getSmallVideoLayoutParams() 获取画中画模板中有效，代表小画面的布局参数。
+ * @method void setSmallVideoLayoutParams(SmallVideoLayoutParams $SmallVideoLayoutParams) 设置画中画模板中有效，代表小画面的布局参数。
  */
 class LayoutParams extends AbstractModel
 {
     /**
-     * @var integer 混流布局模板ID，0为悬浮模板(默认);1为九宫格模板;2为屏幕分享模板
+     * @var integer 混流布局模板ID，0为悬浮模板(默认);1为九宫格模板;2为屏幕分享模板;3为画中画模板。
      */
     public $Template;
 
     /**
-     * @var string 屏幕分享模板中有效，代表左侧大画面对应的用户ID
+     * @var string 屏幕分享模板、悬浮模板、画中画模板中有效，代表大画面对应的用户ID。
      */
     public $MainVideoUserId;
 
     /**
-     * @var integer 屏幕分享模板中有效，代表左侧大画面对应的流类型，0为摄像头，1为屏幕分享。左侧大画面为web用户时此值填0
+     * @var integer 屏幕分享模板、悬浮模板、画中画模板中有效，代表大画面对应的流类型，0为摄像头，1为屏幕分享。左侧大画面为web用户时此值填0。
      */
     public $MainVideoStreamType;
 
     /**
-     * @param integer $Template 混流布局模板ID，0为悬浮模板(默认);1为九宫格模板;2为屏幕分享模板
-     * @param string $MainVideoUserId 屏幕分享模板中有效，代表左侧大画面对应的用户ID
-     * @param integer $MainVideoStreamType 屏幕分享模板中有效，代表左侧大画面对应的流类型，0为摄像头，1为屏幕分享。左侧大画面为web用户时此值填0
+     * @var SmallVideoLayoutParams 画中画模板中有效，代表小画面的布局参数。
+     */
+    public $SmallVideoLayoutParams;
+
+    /**
+     * @param integer $Template 混流布局模板ID，0为悬浮模板(默认);1为九宫格模板;2为屏幕分享模板;3为画中画模板。
+     * @param string $MainVideoUserId 屏幕分享模板、悬浮模板、画中画模板中有效，代表大画面对应的用户ID。
+     * @param integer $MainVideoStreamType 屏幕分享模板、悬浮模板、画中画模板中有效，代表大画面对应的流类型，0为摄像头，1为屏幕分享。左侧大画面为web用户时此值填0。
+     * @param SmallVideoLayoutParams $SmallVideoLayoutParams 画中画模板中有效，代表小画面的布局参数。
      */
     function __construct()
     {
@@ -72,6 +80,11 @@ class LayoutParams extends AbstractModel
 
         if (array_key_exists("MainVideoStreamType",$param) and $param["MainVideoStreamType"] !== null) {
             $this->MainVideoStreamType = $param["MainVideoStreamType"];
+        }
+
+        if (array_key_exists("SmallVideoLayoutParams",$param) and $param["SmallVideoLayoutParams"] !== null) {
+            $this->SmallVideoLayoutParams = new SmallVideoLayoutParams();
+            $this->SmallVideoLayoutParams->deserialize($param["SmallVideoLayoutParams"]);
         }
     }
 }

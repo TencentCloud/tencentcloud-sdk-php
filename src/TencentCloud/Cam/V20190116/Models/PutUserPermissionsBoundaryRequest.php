@@ -14,32 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cdb\V20170320\Models;
+namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DeleteAuditPolicy请求参数结构体
+ * PutUserPermissionsBoundary请求参数结构体
  *
- * @method string getPolicyId() 获取审计策略 ID。
- * @method void setPolicyId(string $PolicyId) 设置审计策略 ID。
- * @method string getInstanceId() 获取实例 ID。
- * @method void setInstanceId(string $InstanceId) 设置实例 ID。
+ * @method integer getTargetUin() 获取子账号Uin
+ * @method void setTargetUin(integer $TargetUin) 设置子账号Uin
+ * @method integer getPolicyId() 获取策略ID
+ * @method void setPolicyId(integer $PolicyId) 设置策略ID
  */
-class DeleteAuditPolicyRequest extends AbstractModel
+class PutUserPermissionsBoundaryRequest extends AbstractModel
 {
     /**
-     * @var string 审计策略 ID。
+     * @var integer 子账号Uin
+     */
+    public $TargetUin;
+
+    /**
+     * @var integer 策略ID
      */
     public $PolicyId;
 
     /**
-     * @var string 实例 ID。
-     */
-    public $InstanceId;
-
-    /**
-     * @param string $PolicyId 审计策略 ID。
-     * @param string $InstanceId 实例 ID。
+     * @param integer $TargetUin 子账号Uin
+     * @param integer $PolicyId 策略ID
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class DeleteAuditPolicyRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PolicyId",$param) and $param["PolicyId"] !== null) {
-            $this->PolicyId = $param["PolicyId"];
+        if (array_key_exists("TargetUin",$param) and $param["TargetUin"] !== null) {
+            $this->TargetUin = $param["TargetUin"];
         }
 
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists("PolicyId",$param) and $param["PolicyId"] !== null) {
+            $this->PolicyId = $param["PolicyId"];
         }
     }
 }

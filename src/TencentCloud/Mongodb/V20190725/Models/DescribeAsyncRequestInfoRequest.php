@@ -14,32 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cdb\V20170320\Models;
+namespace TencentCloud\Mongodb\V20190725\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DeleteAuditPolicy请求参数结构体
+ * DescribeAsyncRequestInfo请求参数结构体
  *
- * @method string getPolicyId() 获取审计策略 ID。
- * @method void setPolicyId(string $PolicyId) 设置审计策略 ID。
- * @method string getInstanceId() 获取实例 ID。
- * @method void setInstanceId(string $InstanceId) 设置实例 ID。
+ * @method string getAsyncRequestId() 获取异步请求Id
+ * @method void setAsyncRequestId(string $AsyncRequestId) 设置异步请求Id
  */
-class DeleteAuditPolicyRequest extends AbstractModel
+class DescribeAsyncRequestInfoRequest extends AbstractModel
 {
     /**
-     * @var string 审计策略 ID。
+     * @var string 异步请求Id
      */
-    public $PolicyId;
+    public $AsyncRequestId;
 
     /**
-     * @var string 实例 ID。
-     */
-    public $InstanceId;
-
-    /**
-     * @param string $PolicyId 审计策略 ID。
-     * @param string $InstanceId 实例 ID。
+     * @param string $AsyncRequestId 异步请求Id
      */
     function __construct()
     {
@@ -54,12 +46,8 @@ class DeleteAuditPolicyRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PolicyId",$param) and $param["PolicyId"] !== null) {
-            $this->PolicyId = $param["PolicyId"];
-        }
-
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists("AsyncRequestId",$param) and $param["AsyncRequestId"] !== null) {
+            $this->AsyncRequestId = $param["AsyncRequestId"];
         }
     }
 }

@@ -39,9 +39,11 @@ use TencentCloud\Cam\V20190116\Models as Models;
  * @method Models\DeletePolicyResponse DeletePolicy(Models\DeletePolicyRequest $req) 本接口（DeletePolicy）可用于删除策略。
  * @method Models\DeletePolicyVersionResponse DeletePolicyVersion(Models\DeletePolicyVersionRequest $req) 本接口（DeletePolicyVersion）可用于删除一个策略的策略版本。
  * @method Models\DeleteRoleResponse DeleteRole(Models\DeleteRoleRequest $req) 本接口（DeleteRole）用于删除指定角色。
+ * @method Models\DeleteRolePermissionsBoundaryResponse DeleteRolePermissionsBoundary(Models\DeleteRolePermissionsBoundaryRequest $req) 删除角色权限边界
  * @method Models\DeleteSAMLProviderResponse DeleteSAMLProvider(Models\DeleteSAMLProviderRequest $req) 删除SAML身份提供商
  * @method Models\DeleteServiceLinkedRoleResponse DeleteServiceLinkedRole(Models\DeleteServiceLinkedRoleRequest $req) 删除服务相关角色
  * @method Models\DeleteUserResponse DeleteUser(Models\DeleteUserRequest $req) 删除子用户
+ * @method Models\DeleteUserPermissionsBoundaryResponse DeleteUserPermissionsBoundary(Models\DeleteUserPermissionsBoundaryRequest $req) 删除用户权限边界
  * @method Models\DescribeRoleListResponse DescribeRoleList(Models\DescribeRoleListRequest $req) 本接口（DescribeRoleList）用于获取账号下的角色列表。
  * @method Models\DetachGroupPolicyResponse DetachGroupPolicy(Models\DetachGroupPolicyRequest $req) 本接口（DetachGroupPolicy）可用于解除绑定到用户组的策略。
  * @method Models\DetachRolePolicyResponse DetachRolePolicy(Models\DetachRolePolicyRequest $req) 本接口（DetachRolePolicy）用于解除绑定角色的策略。
@@ -67,6 +69,8 @@ use TencentCloud\Cam\V20190116\Models as Models;
  * @method Models\ListSAMLProvidersResponse ListSAMLProviders(Models\ListSAMLProvidersRequest $req) 查询SAML身份提供商列表
  * @method Models\ListUsersResponse ListUsers(Models\ListUsersRequest $req) 拉取子用户
  * @method Models\ListUsersForGroupResponse ListUsersForGroup(Models\ListUsersForGroupRequest $req) 查询用户组关联的用户列表
+ * @method Models\PutRolePermissionsBoundaryResponse PutRolePermissionsBoundary(Models\PutRolePermissionsBoundaryRequest $req) 设置角色权限边界
+ * @method Models\PutUserPermissionsBoundaryResponse PutUserPermissionsBoundary(Models\PutUserPermissionsBoundaryRequest $req) 设置用户权限边界
  * @method Models\RemoveUserFromGroupResponse RemoveUserFromGroup(Models\RemoveUserFromGroupRequest $req) 从用户组删除用户
  * @method Models\SetDefaultPolicyVersionResponse SetDefaultPolicyVersion(Models\SetDefaultPolicyVersionRequest $req) 本接口（SetDefaultPolicyVersion）可用于设置生效的策略版本。
  * @method Models\SetMfaFlagResponse SetMfaFlag(Models\SetMfaFlagRequest $req) 设置子用户的登录保护和敏感操作校验方式

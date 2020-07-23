@@ -45,6 +45,9 @@ use TencentCloud\Sqlserver\V20180328\Models as Models;
  * @method Models\DescribeOrdersResponse DescribeOrders(Models\DescribeOrdersRequest $req) 本接口（DescribeOrders）用于查询订单信息
  * @method Models\DescribeProductConfigResponse DescribeProductConfig(Models\DescribeProductConfigRequest $req) 本接口 (DescribeProductConfig) 用于查询售卖规格配置。
  * @method Models\DescribePublishSubscribeResponse DescribePublishSubscribe(Models\DescribePublishSubscribeRequest $req) 本接口（DescribePublishSubscribe）用于查询发布订阅关系列表。
+ * @method Models\DescribeReadOnlyGroupByReadOnlyInstanceResponse DescribeReadOnlyGroupByReadOnlyInstance(Models\DescribeReadOnlyGroupByReadOnlyInstanceRequest $req) 本接口（DescribeReadOnlyGroupByReadOnlyInstance）用于通过只读副本实例ID查询其所在的只读组。
+ * @method Models\DescribeReadOnlyGroupDetailsResponse DescribeReadOnlyGroupDetails(Models\DescribeReadOnlyGroupDetailsRequest $req) 本接口（DescribeReadOnlyGroupDetails）用于查询只读组详情。
+ * @method Models\DescribeReadOnlyGroupListResponse DescribeReadOnlyGroupList(Models\DescribeReadOnlyGroupListRequest $req) 本接口（DescribeReadOnlyGroupList）用于查询只读组列表。
  * @method Models\DescribeRegionsResponse DescribeRegions(Models\DescribeRegionsRequest $req) 本接口 (DescribeRegions) 用于查询售卖地域信息。
  * @method Models\DescribeRollbackTimeResponse DescribeRollbackTime(Models\DescribeRollbackTimeRequest $req) 本接口（DescribeRollbackTime）用于查询实例可回档时间范围
  * @method Models\DescribeSlowlogsResponse DescribeSlowlogs(Models\DescribeSlowlogsRequest $req) 本接口（DescribeSlowlogs）用于获取慢查询日志文件信息
@@ -63,6 +66,7 @@ use TencentCloud\Sqlserver\V20180328\Models as Models;
  * @method Models\ModifyMaintenanceSpanResponse ModifyMaintenanceSpan(Models\ModifyMaintenanceSpanRequest $req) 本接口（ModifyMaintenanceSpan）用于修改实例的可维护时间窗
  * @method Models\ModifyMigrationResponse ModifyMigration(Models\ModifyMigrationRequest $req) 本接口（ModifyMigration）可以修改已有的迁移任务信息
  * @method Models\ModifyPublishSubscribeNameResponse ModifyPublishSubscribeName(Models\ModifyPublishSubscribeNameRequest $req) 本接口（ModifyPublishSubscribeName）修改发布订阅的名称。
+ * @method Models\ModifyReadOnlyGroupDetailsResponse ModifyReadOnlyGroupDetails(Models\ModifyReadOnlyGroupDetailsRequest $req) 本接口（ModifyReadOnlyGroupDetails）用于修改只读组详情。
  * @method Models\RemoveBackupsResponse RemoveBackups(Models\RemoveBackupsRequest $req) 本接口（RemoveBackups）可以删除用户手动创建的备份文件。待删除的备份策略可以是实例备份，也可以是多库备份。
  * @method Models\RenewDBInstanceResponse RenewDBInstance(Models\RenewDBInstanceRequest $req) 本接口（RenewDBInstance）用于续费实例。
  * @method Models\ResetAccountPasswordResponse ResetAccountPassword(Models\ResetAccountPasswordRequest $req) 本接口（ResetAccountPassword）用于重置实例的账户密码。

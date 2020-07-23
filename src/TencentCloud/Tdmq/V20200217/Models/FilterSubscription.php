@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 过滤订阅列表
  *
- * @method boolean getConsumerHasCount() 获取是否仅展示包含真实消费者的订。
- * @method void setConsumerHasCount(boolean $ConsumerHasCount) 设置是否仅展示包含真实消费者的订。
+ * @method boolean getConsumerHasCount() 获取是否仅展示包含真实消费者的订阅。
+ * @method void setConsumerHasCount(boolean $ConsumerHasCount) 设置是否仅展示包含真实消费者的订阅。
  * @method boolean getConsumerHasBacklog() 获取是否仅展示消息堆积的订阅。
  * @method void setConsumerHasBacklog(boolean $ConsumerHasBacklog) 设置是否仅展示消息堆积的订阅。
  * @method boolean getConsumerHasExpired() 获取是否仅展示存在消息超期丢弃的订阅。
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class FilterSubscription extends AbstractModel
 {
     /**
-     * @var boolean 是否仅展示包含真实消费者的订。
+     * @var boolean 是否仅展示包含真实消费者的订阅。
      */
     public $ConsumerHasCount;
 
@@ -45,7 +45,7 @@ class FilterSubscription extends AbstractModel
     public $ConsumerHasExpired;
 
     /**
-     * @param boolean $ConsumerHasCount 是否仅展示包含真实消费者的订。
+     * @param boolean $ConsumerHasCount 是否仅展示包含真实消费者的订阅。
      * @param boolean $ConsumerHasBacklog 是否仅展示消息堆积的订阅。
      * @param boolean $ConsumerHasExpired 是否仅展示存在消息超期丢弃的订阅。
      */

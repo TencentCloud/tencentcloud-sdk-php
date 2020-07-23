@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateInvoice请求参数结构体
  *
- * @method integer getInvoicePlatformId() 获取开票平台ID。0：高灯
- * @method void setInvoicePlatformId(integer $InvoicePlatformId) 设置开票平台ID。0：高灯
+ * @method integer getInvoicePlatformId() 获取开票平台ID。0：高灯，1：票易通
+ * @method void setInvoicePlatformId(integer $InvoicePlatformId) 设置开票平台ID。0：高灯，1：票易通
  * @method integer getTitleType() 获取抬头类型：1：个人/政府事业单位；2：企业
  * @method void setTitleType(integer $TitleType) 设置抬头类型：1：个人/政府事业单位；2：企业
  * @method string getBuyerTitle() 获取购方名称
@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAmountHasTax(integer $AmountHasTax) 设置含税总金额（单位为分）
  * @method integer getTaxAmount() 获取总税额（单位为分）
  * @method void setTaxAmount(integer $TaxAmount) 设置总税额（单位为分）
- * @method integer getAmountWithoutTax() 获取不含税总金额（单位为分）
- * @method void setAmountWithoutTax(integer $AmountWithoutTax) 设置不含税总金额（单位为分）
+ * @method integer getAmountWithoutTax() 获取不含税总金额（单位为分）。InvoicePlatformId 为1时，传默认值-1
+ * @method void setAmountWithoutTax(integer $AmountWithoutTax) 设置不含税总金额（单位为分）。InvoicePlatformId 为1时，传默认值-1
  * @method string getSellerTaxpayerNum() 获取销方纳税人识别号
  * @method void setSellerTaxpayerNum(string $SellerTaxpayerNum) 设置销方纳税人识别号
  * @method string getSellerName() 获取销方名称。（不填默认读取商户注册时输入的信息）
@@ -108,7 +108,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateInvoiceRequest extends AbstractModel
 {
     /**
-     * @var integer 开票平台ID。0：高灯
+     * @var integer 开票平台ID。0：高灯，1：票易通
      */
     public $InvoicePlatformId;
 
@@ -138,7 +138,7 @@ class CreateInvoiceRequest extends AbstractModel
     public $TaxAmount;
 
     /**
-     * @var integer 不含税总金额（单位为分）
+     * @var integer 不含税总金额（单位为分）。InvoicePlatformId 为1时，传默认值-1
      */
     public $AmountWithoutTax;
 
@@ -294,13 +294,13 @@ class CreateInvoiceRequest extends AbstractModel
     public $InvoiceChannel;
 
     /**
-     * @param integer $InvoicePlatformId 开票平台ID。0：高灯
+     * @param integer $InvoicePlatformId 开票平台ID。0：高灯，1：票易通
      * @param integer $TitleType 抬头类型：1：个人/政府事业单位；2：企业
      * @param string $BuyerTitle 购方名称
      * @param string $OrderId 业务开票号
      * @param integer $AmountHasTax 含税总金额（单位为分）
      * @param integer $TaxAmount 总税额（单位为分）
-     * @param integer $AmountWithoutTax 不含税总金额（单位为分）
+     * @param integer $AmountWithoutTax 不含税总金额（单位为分）。InvoicePlatformId 为1时，传默认值-1
      * @param string $SellerTaxpayerNum 销方纳税人识别号
      * @param string $SellerName 销方名称。（不填默认读取商户注册时输入的信息）
      * @param string $SellerAddress 销方地址。（不填默认读取商户注册时输入的信息）

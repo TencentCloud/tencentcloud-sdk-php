@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置商品名称
  * @method string getTaxCode() 获取税收商品编码
  * @method void setTaxCode(string $TaxCode) 设置税收商品编码
- * @method integer getTotalPrice() 获取不含税商品总价（商品含税价总额/（1+税率））。单位为分
- * @method void setTotalPrice(integer $TotalPrice) 设置不含税商品总价（商品含税价总额/（1+税率））。单位为分
+ * @method integer getTotalPrice() 获取不含税商品总价（商品含税价总额/（1+税率））。InvoicePlatformId 为1时，该金额为含税总金额。单位为分。
+ * @method void setTotalPrice(integer $TotalPrice) 设置不含税商品总价（商品含税价总额/（1+税率））。InvoicePlatformId 为1时，该金额为含税总金额。单位为分。
  * @method integer getTaxRate() 获取商品税率
  * @method void setTaxRate(integer $TaxRate) 设置商品税率
  * @method integer getTaxAmount() 获取商品税额（不含税商品总价*税率）。单位为分
@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUnit(string $Unit) 设置商品单位
  * @method string getTotal() 获取商品数量
  * @method void setTotal(string $Total) 设置商品数量
- * @method string getPrice() 获取不含税商品单价
- * @method void setPrice(string $Price) 设置不含税商品单价
+ * @method string getPrice() 获取不含税商品单价。InvoicePlatformId 为1时，该金额为含税单价。
+ * @method void setPrice(string $Price) 设置不含税商品单价。InvoicePlatformId 为1时，该金额为含税单价。
  * @method integer getDiscount() 获取含税折扣总额。单位为分
  * @method void setDiscount(integer $Discount) 设置含税折扣总额。单位为分
  * @method string getPreferentialPolicyFlag() 获取优惠政策标志。0：不使用优惠政策；1：使用优惠政策。
@@ -72,7 +72,7 @@ class CreateInvoiceItem extends AbstractModel
     public $TaxCode;
 
     /**
-     * @var integer 不含税商品总价（商品含税价总额/（1+税率））。单位为分
+     * @var integer 不含税商品总价（商品含税价总额/（1+税率））。InvoicePlatformId 为1时，该金额为含税总金额。单位为分。
      */
     public $TotalPrice;
 
@@ -107,7 +107,7 @@ class CreateInvoiceItem extends AbstractModel
     public $Total;
 
     /**
-     * @var string 不含税商品单价
+     * @var string 不含税商品单价。InvoicePlatformId 为1时，该金额为含税单价。
      */
     public $Price;
 
@@ -139,14 +139,14 @@ class CreateInvoiceItem extends AbstractModel
     /**
      * @param string $Name 商品名称
      * @param string $TaxCode 税收商品编码
-     * @param integer $TotalPrice 不含税商品总价（商品含税价总额/（1+税率））。单位为分
+     * @param integer $TotalPrice 不含税商品总价（商品含税价总额/（1+税率））。InvoicePlatformId 为1时，该金额为含税总金额。单位为分。
      * @param integer $TaxRate 商品税率
      * @param integer $TaxAmount 商品税额（不含税商品总价*税率）。单位为分
      * @param string $TaxType 税收商品类别
      * @param string $Models 商品规格
      * @param string $Unit 商品单位
      * @param string $Total 商品数量
-     * @param string $Price 不含税商品单价
+     * @param string $Price 不含税商品单价。InvoicePlatformId 为1时，该金额为含税单价。
      * @param integer $Discount 含税折扣总额。单位为分
      * @param string $PreferentialPolicyFlag 优惠政策标志。0：不使用优惠政策；1：使用优惠政策。
      * @param string $ZeroTaxFlag 零税率标识：

@@ -14,30 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tdmq\V20200217\Models;
+namespace TencentCloud\Ocr\V20181119\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ModifyTopic返回参数结构体
+ * ClassifyDetectOCR返回参数结构体
  *
- * @method integer getPartitions() 获取分区数
- * @method void setPartitions(integer $Partitions) 设置分区数
- * @method string getRemark() 获取备注，128字符以内。
- * @method void setRemark(string $Remark) 设置备注，128字符以内。
+ * @method array getClassifyDetectInfos() 获取智能卡证分类结果。当图片类型不支持分类识别或者识别出的类型不在请求参数DiscernType指定的范围内时，返回结果中的Type字段将为空字符串，Name字段将返回"其它"
+ * @method void setClassifyDetectInfos(array $ClassifyDetectInfos) 设置智能卡证分类结果。当图片类型不支持分类识别或者识别出的类型不在请求参数DiscernType指定的范围内时，返回结果中的Type字段将为空字符串，Name字段将返回"其它"
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class ModifyTopicResponse extends AbstractModel
+class ClassifyDetectOCRResponse extends AbstractModel
 {
     /**
-     * @var integer 分区数
+     * @var array 智能卡证分类结果。当图片类型不支持分类识别或者识别出的类型不在请求参数DiscernType指定的范围内时，返回结果中的Type字段将为空字符串，Name字段将返回"其它"
      */
-    public $Partitions;
-
-    /**
-     * @var string 备注，128字符以内。
-     */
-    public $Remark;
+    public $ClassifyDetectInfos;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +38,7 @@ class ModifyTopicResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Partitions 分区数
-     * @param string $Remark 备注，128字符以内。
+     * @param array $ClassifyDetectInfos 智能卡证分类结果。当图片类型不支持分类识别或者识别出的类型不在请求参数DiscernType指定的范围内时，返回结果中的Type字段将为空字符串，Name字段将返回"其它"
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,12 +54,13 @@ class ModifyTopicResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Partitions",$param) and $param["Partitions"] !== null) {
-            $this->Partitions = $param["Partitions"];
-        }
-
-        if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
-            $this->Remark = $param["Remark"];
+        if (array_key_exists("ClassifyDetectInfos",$param) and $param["ClassifyDetectInfos"] !== null) {
+            $this->ClassifyDetectInfos = [];
+            foreach ($param["ClassifyDetectInfos"] as $key => $value){
+                $obj = new ClassifyDetectInfo();
+                $obj->deserialize($value);
+                array_push($this->ClassifyDetectInfos, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

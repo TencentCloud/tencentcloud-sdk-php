@@ -50,6 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setChannel(string $Channel) 设置如果envsource为miniapp, channel可以为ide或api;
 如果envsource为qcloud, channel可以为qc_console,cocos, qq, cloudgame,dcloud
 和 EnvSource 参数同时传，或者同时不传；EnvId 为空时必传。
+ * @method string getExtensionId() 获取扩展ID
+ * @method void setExtensionId(string $ExtensionId) 设置扩展ID
  */
 class CreatePostpayPackageRequest extends AbstractModel
 {
@@ -97,6 +99,11 @@ class CreatePostpayPackageRequest extends AbstractModel
     public $Channel;
 
     /**
+     * @var string 扩展ID
+     */
+    public $ExtensionId;
+
+    /**
      * @param string $EnvId 环境ID
      * @param string $WxAppId 微信 AppId，微信必传
      * @param string $Source 付费来源
@@ -112,6 +119,7 @@ class CreatePostpayPackageRequest extends AbstractModel
      * @param string $Channel 如果envsource为miniapp, channel可以为ide或api;
 如果envsource为qcloud, channel可以为qc_console,cocos, qq, cloudgame,dcloud
 和 EnvSource 参数同时传，或者同时不传；EnvId 为空时必传。
+     * @param string $ExtensionId 扩展ID
      */
     function __construct()
     {
@@ -152,6 +160,10 @@ class CreatePostpayPackageRequest extends AbstractModel
 
         if (array_key_exists("Channel",$param) and $param["Channel"] !== null) {
             $this->Channel = $param["Channel"];
+        }
+
+        if (array_key_exists("ExtensionId",$param) and $param["ExtensionId"] !== null) {
+            $this->ExtensionId = $param["ExtensionId"];
         }
     }
 }

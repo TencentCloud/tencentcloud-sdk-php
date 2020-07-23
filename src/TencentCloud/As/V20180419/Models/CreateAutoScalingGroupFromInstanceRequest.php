@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoScalingGroupName(string $AutoScalingGroupName) 设置伸缩组名称，在您账号中必须唯一。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超55个字节。
  * @method string getInstanceId() 获取实例ID
  * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method integer getMinSize() 获取最大实例数，取值范围为0-2000。
- * @method void setMinSize(integer $MinSize) 设置最大实例数，取值范围为0-2000。
- * @method integer getMaxSize() 获取最小实例数，取值范围为0-2000。
- * @method void setMaxSize(integer $MaxSize) 设置最小实例数，取值范围为0-2000。
+ * @method integer getMinSize() 获取最小实例数，取值范围为0-2000。
+ * @method void setMinSize(integer $MinSize) 设置最小实例数，取值范围为0-2000。
+ * @method integer getMaxSize() 获取最大实例数，取值范围为0-2000。
+ * @method void setMaxSize(integer $MaxSize) 设置最大实例数，取值范围为0-2000。
  * @method integer getDesiredCapacity() 获取期望实例数，大小介于最小实例数和最大实例数之间。
  * @method void setDesiredCapacity(integer $DesiredCapacity) 设置期望实例数，大小介于最小实例数和最大实例数之间。
  * @method boolean getInheritInstanceTag() 获取是否继承实例标签，默认值为False
@@ -46,12 +46,12 @@ class CreateAutoScalingGroupFromInstanceRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var integer 最大实例数，取值范围为0-2000。
+     * @var integer 最小实例数，取值范围为0-2000。
      */
     public $MinSize;
 
     /**
-     * @var integer 最小实例数，取值范围为0-2000。
+     * @var integer 最大实例数，取值范围为0-2000。
      */
     public $MaxSize;
 
@@ -68,8 +68,8 @@ class CreateAutoScalingGroupFromInstanceRequest extends AbstractModel
     /**
      * @param string $AutoScalingGroupName 伸缩组名称，在您账号中必须唯一。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超55个字节。
      * @param string $InstanceId 实例ID
-     * @param integer $MinSize 最大实例数，取值范围为0-2000。
-     * @param integer $MaxSize 最小实例数，取值范围为0-2000。
+     * @param integer $MinSize 最小实例数，取值范围为0-2000。
+     * @param integer $MaxSize 最大实例数，取值范围为0-2000。
      * @param integer $DesiredCapacity 期望实例数，大小介于最小实例数和最大实例数之间。
      * @param boolean $InheritInstanceTag 是否继承实例标签，默认值为False
      */

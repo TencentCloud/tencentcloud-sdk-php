@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setData(QueryInvoiceResultData $Data) 设置查询发票数据
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method Order getOrder() 获取订单数据
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOrder(Order $Order) 设置订单数据
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class QueryInvoiceResult extends AbstractModel
 {
@@ -48,9 +52,17 @@ class QueryInvoiceResult extends AbstractModel
     public $Data;
 
     /**
+     * @var Order 订单数据
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Order;
+
+    /**
      * @param string $Message 错误消息
      * @param integer $Code 错误码
      * @param QueryInvoiceResultData $Data 查询发票数据
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Order $Order 订单数据
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -77,6 +89,11 @@ class QueryInvoiceResult extends AbstractModel
         if (array_key_exists("Data",$param) and $param["Data"] !== null) {
             $this->Data = new QueryInvoiceResultData();
             $this->Data->deserialize($param["Data"]);
+        }
+
+        if (array_key_exists("Order",$param) and $param["Order"] !== null) {
+            $this->Order = new Order();
+            $this->Order->deserialize($param["Order"]);
         }
     }
 }

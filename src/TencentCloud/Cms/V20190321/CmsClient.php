@@ -42,6 +42,7 @@ use TencentCloud\Cms\V20190321\Models as Models;
 <br>
 支持批量查询文本样本库。
  * @method Models\ImageModerationResponse ImageModeration(Models\ImageModerationRequest $req) 图片内容检测服务（Image Moderation, IM）能自动扫描图片，识别涉黄、涉恐、涉政、涉毒等有害内容，同时支持用户配置图片黑名单，打击自定义的违规图片。
+ * @method Models\ManualReviewResponse ManualReview(Models\ManualReviewRequest $req) 人工审核对外接口
  * @method Models\TextModerationResponse TextModeration(Models\TextModerationRequest $req) 文本内容检测（Text Moderation）服务使用了深度学习技术，识别涉黄、涉政、涉恐等有害内容，同时支持用户配置词库，打击自定义的违规文本。
  */
 

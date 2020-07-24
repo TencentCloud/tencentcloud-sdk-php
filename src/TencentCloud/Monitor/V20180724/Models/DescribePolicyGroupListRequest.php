@@ -48,6 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConditionTempGroupId(string $ConditionTempGroupId) 设置模板策略组id, 多个id用逗号分隔
  * @method string getReceiverType() 获取过滤条件, 接收人或者接收组, user表示接收人, group表示接收组
  * @method void setReceiverType(string $ReceiverType) 设置过滤条件, 接收人或者接收组, user表示接收人, group表示接收组
+ * @method boolean getIsOpen() 获取过滤条件，告警策略是否已启动或停止
+ * @method void setIsOpen(boolean $IsOpen) 设置过滤条件，告警策略是否已启动或停止
  */
 class DescribePolicyGroupListRequest extends AbstractModel
 {
@@ -122,6 +124,11 @@ class DescribePolicyGroupListRequest extends AbstractModel
     public $ReceiverType;
 
     /**
+     * @var boolean 过滤条件，告警策略是否已启动或停止
+     */
+    public $IsOpen;
+
+    /**
      * @param string $Module 固定值，为"monitor"
      * @param integer $Limit 分页参数，每页返回的数量，取值1~100
      * @param integer $Offset 分页参数，页偏移量，从0开始计数
@@ -136,6 +143,7 @@ class DescribePolicyGroupListRequest extends AbstractModel
      * @param string $Dimensions 维度组合字段(json字符串), 例如[[{"name":"unInstanceId","value":"ins-6e4b2aaa"}]]
      * @param string $ConditionTempGroupId 模板策略组id, 多个id用逗号分隔
      * @param string $ReceiverType 过滤条件, 接收人或者接收组, user表示接收人, group表示接收组
+     * @param boolean $IsOpen 过滤条件，告警策略是否已启动或停止
      */
     function __construct()
     {
@@ -204,6 +212,10 @@ class DescribePolicyGroupListRequest extends AbstractModel
 
         if (array_key_exists("ReceiverType",$param) and $param["ReceiverType"] !== null) {
             $this->ReceiverType = $param["ReceiverType"];
+        }
+
+        if (array_key_exists("IsOpen",$param) and $param["IsOpen"] !== null) {
+            $this->IsOpen = $param["IsOpen"];
         }
     }
 }

@@ -28,10 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(integer $EndTime) 设置查询结束时间，本地unix时间戳（1588031999s）
  * @method string getRoomId() 获取数字房间号
  * @method void setRoomId(string $RoomId) 设置数字房间号
- * @method string getPageNumber() 获取分页index（不填默认只返回10个）
- * @method void setPageNumber(string $PageNumber) 设置分页index（不填默认只返回10个）
- * @method string getPageSize() 获取分页大小（不填默认返回10个,最多不超过100条）
- * @method void setPageSize(string $PageSize) 设置分页大小（不填默认返回10个,最多不超过100条）
+ * @method string getPageNumber() 获取分页index，从0开始（PageNumber和PageSize 其中一个不填均默认返回10条数据）
+ * @method void setPageNumber(string $PageNumber) 设置分页index，从0开始（PageNumber和PageSize 其中一个不填均默认返回10条数据）
+ * @method string getPageSize() 获取分页大小（PageNumber和PageSize 其中一个不填均默认返回10条数据,最大不超过100）
+ * @method void setPageSize(string $PageSize) 设置分页大小（PageNumber和PageSize 其中一个不填均默认返回10条数据,最大不超过100）
  */
 class DescribeRoomInformationRequest extends AbstractModel
 {
@@ -56,12 +56,12 @@ class DescribeRoomInformationRequest extends AbstractModel
     public $RoomId;
 
     /**
-     * @var string 分页index（不填默认只返回10个）
+     * @var string 分页index，从0开始（PageNumber和PageSize 其中一个不填均默认返回10条数据）
      */
     public $PageNumber;
 
     /**
-     * @var string 分页大小（不填默认返回10个,最多不超过100条）
+     * @var string 分页大小（PageNumber和PageSize 其中一个不填均默认返回10条数据,最大不超过100）
      */
     public $PageSize;
 
@@ -70,8 +70,8 @@ class DescribeRoomInformationRequest extends AbstractModel
      * @param integer $StartTime 查询开始时间，5天内。本地unix时间戳（1588031999s）
      * @param integer $EndTime 查询结束时间，本地unix时间戳（1588031999s）
      * @param string $RoomId 数字房间号
-     * @param string $PageNumber 分页index（不填默认只返回10个）
-     * @param string $PageSize 分页大小（不填默认返回10个,最多不超过100条）
+     * @param string $PageNumber 分页index，从0开始（PageNumber和PageSize 其中一个不填均默认返回10条数据）
+     * @param string $PageSize 分页大小（PageNumber和PageSize 其中一个不填均默认返回10条数据,最大不超过100）
      */
     function __construct()
     {

@@ -35,7 +35,7 @@ use TencentCloud\Asr\V20190614\Models as Models;
 <br>• 支持wav、mp3、m4a的音频格式
 <br>• 支持语音 URL 和本地语音文件两种请求方式
 <br>• 语音 URL 的音频时长不能长于5小时，文件大小不超过512MB
-<br>• 本地语音文件上传的文件不能大于5MB
+<br>• 本地语音文件不能大于5MB
 <br>• 支持回调或轮询的方式获取结果，结果获取请参考[ 录音文件识别结果查询](https://cloud.tencent.com/document/product/1093/37822)。
  * @method Models\DeleteAsrVocabResponse DeleteAsrVocab(Models\DeleteAsrVocabRequest $req) 用户通过本接口进行热词表的删除。
  * @method Models\DescribeTaskStatusResponse DescribeTaskStatus(Models\DescribeTaskStatusRequest $req) 在调用录音文件识别请求接口后，有回调和轮询两种方式获取识别结果。

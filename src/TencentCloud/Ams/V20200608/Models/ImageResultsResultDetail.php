@@ -54,6 +54,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScore(integer $Score) 设置得分
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSubLabelCode() 获取子标签码
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSubLabelCode(string $SubLabelCode) 设置子标签码
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ImageResultsResultDetail extends AbstractModel
 {
@@ -111,6 +115,12 @@ class ImageResultsResultDetail extends AbstractModel
     public $Score;
 
     /**
+     * @var string 子标签码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SubLabelCode;
+
+    /**
      * @param array $Location 位置信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 任务名称
@@ -127,6 +137,8 @@ class ImageResultsResultDetail extends AbstractModel
      * @param string $Suggestion 建议
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Score 得分
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SubLabelCode 子标签码
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -181,6 +193,10 @@ class ImageResultsResultDetail extends AbstractModel
 
         if (array_key_exists("Score",$param) and $param["Score"] !== null) {
             $this->Score = $param["Score"];
+        }
+
+        if (array_key_exists("SubLabelCode",$param) and $param["SubLabelCode"] !== null) {
+            $this->SubLabelCode = $param["SubLabelCode"];
         }
     }
 }

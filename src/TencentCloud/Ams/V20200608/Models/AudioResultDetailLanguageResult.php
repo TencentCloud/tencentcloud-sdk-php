@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndTime(float $EndTime) 设置结束时间
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSubLabelCode() 获取子标签码
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSubLabelCode(string $SubLabelCode) 设置子标签码
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AudioResultDetailLanguageResult extends AbstractModel
 {
@@ -64,6 +68,12 @@ class AudioResultDetailLanguageResult extends AbstractModel
     public $EndTime;
 
     /**
+     * @var string 子标签码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SubLabelCode;
+
+    /**
      * @param string $Label 语种
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Score 得分
@@ -71,6 +81,8 @@ class AudioResultDetailLanguageResult extends AbstractModel
      * @param float $StartTime 开始时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param float $EndTime 结束时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SubLabelCode 子标签码
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -100,6 +112,10 @@ class AudioResultDetailLanguageResult extends AbstractModel
 
         if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
             $this->EndTime = $param["EndTime"];
+        }
+
+        if (array_key_exists("SubLabelCode",$param) and $param["SubLabelCode"] !== null) {
+            $this->SubLabelCode = $param["SubLabelCode"];
         }
     }
 }

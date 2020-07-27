@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getResult() 获取识别结果。
  * @method void setResult(string $Result) 设置识别结果。
+ * @method integer getAudioDuration() 获取请求的音频时长，单位为ms
+ * @method void setAudioDuration(integer $AudioDuration) 设置请求的音频时长，单位为ms
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -33,12 +35,18 @@ class SentenceRecognitionResponse extends AbstractModel
     public $Result;
 
     /**
+     * @var integer 请求的音频时长，单位为ms
+     */
+    public $AudioDuration;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param string $Result 识别结果。
+     * @param integer $AudioDuration 请求的音频时长，单位为ms
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -56,6 +64,10 @@ class SentenceRecognitionResponse extends AbstractModel
         }
         if (array_key_exists("Result",$param) and $param["Result"] !== null) {
             $this->Result = $param["Result"];
+        }
+
+        if (array_key_exists("AudioDuration",$param) and $param["AudioDuration"] !== null) {
+            $this->AudioDuration = $param["AudioDuration"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

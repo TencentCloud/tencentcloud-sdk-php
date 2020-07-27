@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(float $StartTime) 设置开始时间
  * @method float getEndTime() 获取结束时间
  * @method void setEndTime(float $EndTime) 设置结束时间
+ * @method string getSubLabelCode() 获取子标签码
+ * @method void setSubLabelCode(string $SubLabelCode) 设置子标签码
  */
 class AudioResultDetailMoanResult extends AbstractModel
 {
@@ -55,11 +57,17 @@ class AudioResultDetailMoanResult extends AbstractModel
     public $EndTime;
 
     /**
+     * @var string 子标签码
+     */
+    public $SubLabelCode;
+
+    /**
      * @param string $Label 固定为Moan
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Score 分数
      * @param float $StartTime 开始时间
      * @param float $EndTime 结束时间
+     * @param string $SubLabelCode 子标签码
      */
     function __construct()
     {
@@ -88,6 +96,10 @@ class AudioResultDetailMoanResult extends AbstractModel
 
         if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
             $this->EndTime = $param["EndTime"];
+        }
+
+        if (array_key_exists("SubLabelCode",$param) and $param["SubLabelCode"] !== null) {
+            $this->SubLabelCode = $param["SubLabelCode"];
         }
     }
 }

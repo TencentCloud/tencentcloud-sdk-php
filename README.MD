@@ -20,6 +20,7 @@
 2. 建议中国大陆地区的用户设置腾讯云镜像源：`composer config -g repos.packagist composer https://mirrors.tencent.com/composer/`
 3. 执行命令 `composer require tencentcloud/tencentcloud-sdk-php` 添加依赖。
 4. 在代码中添加以下引用代码。注意：如下仅为示例，composer 会在项目根目录下生成 vendor 目录，`/path/to/`为项目根目录的实际绝对路径，如果是在当前目录执行，可以省略绝对路径。
+    
     > require '/path/to/vendor/autoload.php';
 
 # 示例
@@ -28,36 +29,93 @@
 
 还可以参考 SDK 仓库中 [examples](https://github.com/TencentCloud/tencentcloud-sdk-php/tree/master/examples) 目录中的示例，展示了更多的用法。
 
-下面以查询可用区接口为例:
+下面以查询实例接口DescribeInstances为例:
+
+### 简略版
 
 ```php
 <?php
-require 'vendor/autoload.php';
-// 导入对应产品模块的client
-use TencentCloud\Cvm\V20170312\CvmClient;
-// 导入要请求接口对应的Request类
-use TencentCloud\Cvm\V20170312\Models\DescribeZonesRequest;
+require_once '/path/to/vendor/autoload.php';
+
+use TencentCloud\Cvm\V20170312\Models\DescribeInstancesRequest;
 use TencentCloud\Common\Exception\TencentCloudSDKException;
 use TencentCloud\Common\Credential;
+
 try {
-    // 实例化一个证书对象，入参需要传入腾讯云账户secretId，secretKey
     $cred = new Credential("secretId", "secretKey");
-
-    // # 实例化要请求产品(以cvm为例)的client对象
     $client = new CvmClient($cred, "ap-guangzhou");
-
-    // 实例化一个请求对象
-    $req = new DescribeZonesRequest();
-
-    // 通过client对象调用想要访问的接口，需要传入请求对象
-    $resp = $client->DescribeZones($req);
-
+    $req = new DescribeInstancesRequest();
+    $resp = $client->DescribeInstances($req);
     print_r($resp->toJsonString());
 }
 catch(TencentCloudSDKException $e) {
     echo $e;
 }
 ```
+
+### 详细版
+
+```php
+<?php
+require_once '/path/to/vendor/autoload.php';
+// 导入对应产品模块的client
+use TencentCloud\Cvm\V20170312\CvmClient;
+// 导入要请求接口对应的Request类
+use TencentCloud\Cvm\V20170312\Models\DescribeInstancesRequest;
+use TencentCloud\Cvm\V20170312\Models\Filter;
+use TencentCloud\Common\Exception\TencentCloudSDKException;
+use TencentCloud\Common\Credential;
+// 导入可选配置类
+use TencentCloud\Common\Profile\ClientProfile;
+use TencentCloud\Common\Profile\HttpProfile;
+
+try {
+    // 实例化一个证书对象，入参需要传入腾讯云账户secretId，secretKey
+    $cred = new Credential("secretId", "secretKey");
+
+    // 实例化一个http选项，可选的，没有特殊需求可以跳过
+    $httpProfile = new HttpProfile();
+    // 配置代理
+    // $httpProfile->setProxy("https://ip:port");
+    $httpProfile->setReqMethod("GET");  // post请求(默认为post请求)
+    $httpProfile->setReqTimeout(30);    // 请求超时时间，单位为秒(默认60秒)
+    $httpProfile->setEndpoint("cvm.ap-shanghai.tencentcloudapi.com");  // 指定接入地域域名(默认就近接入)
+
+    // 实例化一个client选项，可选的，没有特殊需求可以跳过
+    $clientProfile = new ClientProfile();
+    $clientProfile->setSignMethod("TC3-HMAC-SHA256");  // 指定签名算法(默认为HmacSHA256)
+    $clientProfile->setHttpProfile($httpProfile);
+
+    // 实例化要请求产品(以cvm为例)的client对象,clientProfile是可选的
+    $client = new CvmClient($cred, "ap-shanghai", $clientProfile);
+
+    // 实例化一个cvm实例信息查询请求对象,每个接口都会对应一个request对象。
+    $req = new DescribeInstancesRequest();
+
+    // 填充请求参数,这里request对象的成员变量即对应接口的入参
+    // 你可以通过官网接口文档或跳转到request对象的定义处查看请求参数的定义
+    $respFilter = new Filter();  // 创建Filter对象, 以zone的维度来查询cvm实例
+    $respFilter->Name = "zone";
+    $respFilter->Values = ["ap-shanghai-1", "ap-shanghai-2"];
+    $req->Filters = [$respFilter];  // Filters 是成员为Filter对象的列表
+
+    // 通过client对象调用DescribeInstances方法发起请求。注意请求方法名与请求对象是对应的
+    // 返回的resp是一个DescribeInstancesResponse类的实例，与请求对象对应
+    $resp = $client->DescribeInstances($req);
+
+    // 输出json格式的字符串回包
+    print_r($resp->toJsonString());
+
+    // 也可以取出单个值。
+    // 你可以通过官网接口文档或跳转到response对象的定义处查看返回字段的定义
+    print_r($resp->TotalCount);
+}
+catch(TencentCloudSDKException $e) {
+    echo $e;
+}
+```
+
+
 
 # 常见问题
 

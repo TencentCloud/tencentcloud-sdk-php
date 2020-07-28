@@ -28,75 +28,77 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDataId(string $DataId) 设置审核时传入的数据Id
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getBizType() 获取业务类型
+ * @method string getBizType() 获取业务类型，用于调用识别策略模板；
+（暂未发布功能，敬请期待）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBizType(string $BizType) 设置业务类型
+ * @method void setBizType(string $BizType) 设置业务类型，用于调用识别策略模板；
+（暂未发布功能，敬请期待）
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取任务名称
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置任务名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getStatus() 获取状态，可选值：
+ * @method string getStatus() 获取查询内容审核任务的状态，可选值：
 FINISH 已完成
 PENDING 等待中
 RUNNING 进行中
 ERROR 出错
 CANCELLED 已取消
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatus(string $Status) 设置状态，可选值：
+ * @method void setStatus(string $Status) 设置查询内容审核任务的状态，可选值：
 FINISH 已完成
 PENDING 等待中
 RUNNING 进行中
 ERROR 出错
 CANCELLED 已取消
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getType() 获取类型
+ * @method string getType() 获取任务类型：可选AUDIO（点播音频），LIVE_AUDIO（直播音频）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setType(string $Type) 设置类型
+ * @method void setType(string $Type) 设置任务类型：可选AUDIO（点播音频），LIVE_AUDIO（直播音频）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSuggestion() 获取审核建议
-可选：
-Pass 通过
-Reveiw 建议复审
-Block 确认违规
+ * @method string getSuggestion() 获取智能审核服务对于内容违规类型的等级，可选值：
+Pass 建议通过；
+Reveiw 建议复审；
+Block 建议屏蔽；
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSuggestion(string $Suggestion) 设置审核建议
-可选：
-Pass 通过
-Reveiw 建议复审
-Block 确认违规
+ * @method void setSuggestion(string $Suggestion) 设置智能审核服务对于内容违规类型的等级，可选值：
+Pass 建议通过；
+Reveiw 建议复审；
+Block 建议屏蔽；
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getLabels() 获取审核结果
+ * @method array getLabels() 获取智能审核服务对于内容违规类型的判断，详见返回值列表
+如：Label：Porn（色情）；
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLabels(array $Labels) 设置审核结果
+ * @method void setLabels(array $Labels) 设置智能审核服务对于内容违规类型的判断，详见返回值列表
+如：Label：Porn（色情）；
 注意：此字段可能返回 null，表示取不到有效值。
- * @method MediaInfo getMediaInfo() 获取媒体解码信息
+ * @method MediaInfo getMediaInfo() 获取传入媒体的解码信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMediaInfo(MediaInfo $MediaInfo) 设置媒体解码信息
+ * @method void setMediaInfo(MediaInfo $MediaInfo) 设置传入媒体的解码信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method InputInfo getInputInfo() 获取任务信息
+ * @method InputInfo getInputInfo() 获取审核任务的信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInputInfo(InputInfo $InputInfo) 设置任务信息
+ * @method void setInputInfo(InputInfo $InputInfo) 设置审核任务的信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCreatedAt() 获取创建时间
+ * @method string getCreatedAt() 获取审核任务的创建时间
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCreatedAt(string $CreatedAt) 设置创建时间
+ * @method void setCreatedAt(string $CreatedAt) 设置审核任务的创建时间
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUpdatedAt() 获取更新时间
+ * @method string getUpdatedAt() 获取审核任务的更新时间
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUpdatedAt(string $UpdatedAt) 设置更新时间
+ * @method void setUpdatedAt(string $UpdatedAt) 设置审核任务的更新时间
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTryInSeconds() 获取在秒后重试
+ * @method integer getTryInSeconds() 获取在N秒后重试
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTryInSeconds(integer $TryInSeconds) 设置在秒后重试
+ * @method void setTryInSeconds(integer $TryInSeconds) 设置在N秒后重试
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getAudioSegments() 获取音频结果
+ * @method array getAudioSegments() 获取视频/音频审核中的音频结果
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAudioSegments(array $AudioSegments) 设置音频结果
+ * @method void setAudioSegments(array $AudioSegments) 设置视频/音频审核中的音频结果
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getImageSegments() 获取图片结果
+ * @method array getImageSegments() 获取视频审核中的图片结果
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setImageSegments(array $ImageSegments) 设置图片结果
+ * @method void setImageSegments(array $ImageSegments) 设置视频审核中的图片结果
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -116,7 +118,8 @@ class DescribeTaskDetailResponse extends AbstractModel
     public $DataId;
 
     /**
-     * @var string 业务类型
+     * @var string 业务类型，用于调用识别策略模板；
+（暂未发布功能，敬请期待）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BizType;
@@ -128,7 +131,7 @@ class DescribeTaskDetailResponse extends AbstractModel
     public $Name;
 
     /**
-     * @var string 状态，可选值：
+     * @var string 查询内容审核任务的状态，可选值：
 FINISH 已完成
 PENDING 等待中
 RUNNING 进行中
@@ -139,65 +142,65 @@ CANCELLED 已取消
     public $Status;
 
     /**
-     * @var string 类型
+     * @var string 任务类型：可选AUDIO（点播音频），LIVE_AUDIO（直播音频）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
-     * @var string 审核建议
-可选：
-Pass 通过
-Reveiw 建议复审
-Block 确认违规
+     * @var string 智能审核服务对于内容违规类型的等级，可选值：
+Pass 建议通过；
+Reveiw 建议复审；
+Block 建议屏蔽；
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Suggestion;
 
     /**
-     * @var array 审核结果
+     * @var array 智能审核服务对于内容违规类型的判断，详见返回值列表
+如：Label：Porn（色情）；
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Labels;
 
     /**
-     * @var MediaInfo 媒体解码信息
+     * @var MediaInfo 传入媒体的解码信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MediaInfo;
 
     /**
-     * @var InputInfo 任务信息
+     * @var InputInfo 审核任务的信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InputInfo;
 
     /**
-     * @var string 创建时间
+     * @var string 审核任务的创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreatedAt;
 
     /**
-     * @var string 更新时间
+     * @var string 审核任务的更新时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdatedAt;
 
     /**
-     * @var integer 在秒后重试
+     * @var integer 在N秒后重试
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TryInSeconds;
 
     /**
-     * @var array 音频结果
+     * @var array 视频/音频审核中的音频结果
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AudioSegments;
 
     /**
-     * @var array 图片结果
+     * @var array 视频审核中的图片结果
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ImageSegments;
@@ -212,40 +215,41 @@ Block 确认违规
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DataId 审核时传入的数据Id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $BizType 业务类型
+     * @param string $BizType 业务类型，用于调用识别策略模板；
+（暂未发布功能，敬请期待）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 任务名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Status 状态，可选值：
+     * @param string $Status 查询内容审核任务的状态，可选值：
 FINISH 已完成
 PENDING 等待中
 RUNNING 进行中
 ERROR 出错
 CANCELLED 已取消
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Type 类型
+     * @param string $Type 任务类型：可选AUDIO（点播音频），LIVE_AUDIO（直播音频）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Suggestion 审核建议
-可选：
-Pass 通过
-Reveiw 建议复审
-Block 确认违规
+     * @param string $Suggestion 智能审核服务对于内容违规类型的等级，可选值：
+Pass 建议通过；
+Reveiw 建议复审；
+Block 建议屏蔽；
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Labels 审核结果
+     * @param array $Labels 智能审核服务对于内容违规类型的判断，详见返回值列表
+如：Label：Porn（色情）；
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MediaInfo $MediaInfo 媒体解码信息
+     * @param MediaInfo $MediaInfo 传入媒体的解码信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InputInfo $InputInfo 任务信息
+     * @param InputInfo $InputInfo 审核任务的信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CreatedAt 创建时间
+     * @param string $CreatedAt 审核任务的创建时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $UpdatedAt 更新时间
+     * @param string $UpdatedAt 审核任务的更新时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $TryInSeconds 在秒后重试
+     * @param integer $TryInSeconds 在N秒后重试
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $AudioSegments 音频结果
+     * @param array $AudioSegments 视频/音频审核中的音频结果
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $ImageSegments 图片结果
+     * @param array $ImageSegments 视频审核中的图片结果
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

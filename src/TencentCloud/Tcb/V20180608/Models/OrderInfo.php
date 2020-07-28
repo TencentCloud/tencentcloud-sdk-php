@@ -60,6 +60,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPayMode(string $PayMode) 设置付费模式.
 <li>prepayment 预付费</li>
 <li>postpaid 后付费</li>
+ * @method string getExtensionId() 获取订单绑定的扩展ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setExtensionId(string $ExtensionId) 设置订单绑定的扩展ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getResourceReady() 获取资源初始化结果(仅当ExtensionId不为空时有效): successful(初始化成功), failed(初始化失败), doing(初始化进行中), init(准备初始化)
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setResourceReady(string $ResourceReady) 设置资源初始化结果(仅当ExtensionId不为空时有效): successful(初始化成功), failed(初始化失败), doing(初始化进行中), init(准备初始化)
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class OrderInfo extends AbstractModel
 {
@@ -112,6 +120,18 @@ class OrderInfo extends AbstractModel
     public $PayMode;
 
     /**
+     * @var string 订单绑定的扩展ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ExtensionId;
+
+    /**
+     * @var string 资源初始化结果(仅当ExtensionId不为空时有效): successful(初始化成功), failed(初始化失败), doing(初始化进行中), init(准备初始化)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ResourceReady;
+
+    /**
      * @param string $TranId 订单号
      * @param string $PackageId 订单要切换的套餐ID
      * @param string $TranType 订单类型
@@ -132,6 +152,10 @@ class OrderInfo extends AbstractModel
      * @param string $PayMode 付费模式.
 <li>prepayment 预付费</li>
 <li>postpaid 后付费</li>
+     * @param string $ExtensionId 订单绑定的扩展ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ResourceReady 资源初始化结果(仅当ExtensionId不为空时有效): successful(初始化成功), failed(初始化失败), doing(初始化进行中), init(准备初始化)
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -172,6 +196,14 @@ class OrderInfo extends AbstractModel
 
         if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {
             $this->PayMode = $param["PayMode"];
+        }
+
+        if (array_key_exists("ExtensionId",$param) and $param["ExtensionId"] !== null) {
+            $this->ExtensionId = $param["ExtensionId"];
+        }
+
+        if (array_key_exists("ResourceReady",$param) and $param["ResourceReady"] !== null) {
+            $this->ResourceReady = $param["ResourceReady"];
         }
     }
 }

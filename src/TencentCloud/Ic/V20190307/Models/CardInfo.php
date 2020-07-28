@@ -104,11 +104,11 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getNeedSms() 获取是否开通短信0:未开短信 1:开通短信
  * @method void setNeedSms(integer $NeedSms) 设置是否开通短信0:未开短信 1:开通短信
- * @method integer getProvider() 获取服务
- * @method void setProvider(integer $Provider) 设置服务
- * @method integer getCertificationState() 获取实名验证(浙江联通)
+ * @method integer getProvider() 获取供应商
+ * @method void setProvider(integer $Provider) 设置供应商
+ * @method integer getCertificationState() 获取实名认证 0:无 1:未实名 2:已实名
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCertificationState(integer $CertificationState) 设置实名验证(浙江联通)
+ * @method void setCertificationState(integer $CertificationState) 设置实名认证 0:无 1:未实名 2:已实名
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class CardInfo extends AbstractModel
@@ -256,12 +256,12 @@ class CardInfo extends AbstractModel
     public $NeedSms;
 
     /**
-     * @var integer 服务
+     * @var integer 供应商
      */
     public $Provider;
 
     /**
-     * @var integer 实名验证(浙江联通)
+     * @var integer 实名认证 0:无 1:未实名 2:已实名
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CertificationState;
@@ -309,8 +309,8 @@ class CardInfo extends AbstractModel
      * @param integer $AllowArrears 0 不需要开通达量不停卡 1 需要开通达量不停卡
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $NeedSms 是否开通短信0:未开短信 1:开通短信
-     * @param integer $Provider 服务
-     * @param integer $CertificationState 实名验证(浙江联通)
+     * @param integer $Provider 供应商
+     * @param integer $CertificationState 实名认证 0:无 1:未实名 2:已实名
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

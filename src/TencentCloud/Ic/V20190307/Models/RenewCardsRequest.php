@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSdkappid(integer $Sdkappid) 设置应用ID
  * @method array getIccids() 获取续费的iccid
  * @method void setIccids(array $Iccids) 设置续费的iccid
- * @method integer getRenewNum() 获取续费的周期
- * @method void setRenewNum(integer $RenewNum) 设置续费的周期
+ * @method integer getRenewNum() 获取续费的周期（单位：月）
+ * @method void setRenewNum(integer $RenewNum) 设置续费的周期（单位：月）
  */
 class RenewCardsRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class RenewCardsRequest extends AbstractModel
     public $Iccids;
 
     /**
-     * @var integer 续费的周期
+     * @var integer 续费的周期（单位：月）
      */
     public $RenewNum;
 
     /**
      * @param integer $Sdkappid 应用ID
      * @param array $Iccids 续费的iccid
-     * @param integer $RenewNum 续费的周期
+     * @param integer $RenewNum 续费的周期（单位：月）
      */
     function __construct()
     {

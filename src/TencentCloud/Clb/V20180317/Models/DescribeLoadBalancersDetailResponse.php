@@ -14,29 +14,33 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tsf\V20180326\Models;
+namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * StopContainerGroup返回参数结构体
+ * DescribeLoadBalancersDetail返回参数结构体
  *
- * @method boolean getResult() 获取停止操作是否成功。
-true：停止成功
-false：停止失败
- * @method void setResult(boolean $Result) 设置停止操作是否成功。
-true：停止成功
-false：停止失败
+ * @method integer getTotalCount() 获取负载均衡详情列表总数。
+ * @method void setTotalCount(integer $TotalCount) 设置负载均衡详情列表总数。
+ * @method array getLoadBalancerDetailSet() 获取负载均衡详情列表。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLoadBalancerDetailSet(array $LoadBalancerDetailSet) 设置负载均衡详情列表。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class StopContainerGroupResponse extends AbstractModel
+class DescribeLoadBalancersDetailResponse extends AbstractModel
 {
     /**
-     * @var boolean 停止操作是否成功。
-true：停止成功
-false：停止失败
+     * @var integer 负载均衡详情列表总数。
      */
-    public $Result;
+    public $TotalCount;
+
+    /**
+     * @var array 负载均衡详情列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LoadBalancerDetailSet;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,9 +48,9 @@ false：停止失败
     public $RequestId;
 
     /**
-     * @param boolean $Result 停止操作是否成功。
-true：停止成功
-false：停止失败
+     * @param integer $TotalCount 负载均衡详情列表总数。
+     * @param array $LoadBalancerDetailSet 负载均衡详情列表。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,8 +66,17 @@ false：停止失败
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
-            $this->Result = $param["Result"];
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("LoadBalancerDetailSet",$param) and $param["LoadBalancerDetailSet"] !== null) {
+            $this->LoadBalancerDetailSet = [];
+            foreach ($param["LoadBalancerDetailSet"] as $key => $value){
+                $obj = new LoadBalancerDetail();
+                $obj->deserialize($value);
+                array_push($this->LoadBalancerDetailSet, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

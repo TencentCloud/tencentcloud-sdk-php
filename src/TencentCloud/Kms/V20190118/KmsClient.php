@@ -25,6 +25,7 @@ use TencentCloud\Kms\V20190118\Models as Models;
 /**
  * @method Models\AsymmetricRsaDecryptResponse AsymmetricRsaDecrypt(Models\AsymmetricRsaDecryptRequest $req) 使用指定的RSA非对称密钥的私钥进行数据解密，密文必须是使用对应公钥加密的。处于Enabled 状态的非对称密钥才能进行解密操作。
  * @method Models\AsymmetricSm2DecryptResponse AsymmetricSm2Decrypt(Models\AsymmetricSm2DecryptRequest $req) 使用指定的SM2非对称密钥的私钥进行数据解密，密文必须是使用对应公钥加密的。处于Enabled 状态的非对称密钥才能进行解密操作。传入的密文的长度不能超过256字节。
+ * @method Models\BindCloudResourceResponse BindCloudResource(Models\BindCloudResourceRequest $req) 记录当前key被哪个云产品的那个资源所使用。如果当前key设置了自动过期，则取消该设置，确保当前key不会自动失效。如果当前关联关系已经创建，也返回成功。
  * @method Models\CancelKeyDeletionResponse CancelKeyDeletion(Models\CancelKeyDeletionRequest $req) 取消CMK的计划删除操作
  * @method Models\CreateKeyResponse CreateKey(Models\CreateKeyRequest $req) 创建用户管理数据密钥的主密钥CMK（Custom Master Key）。
  * @method Models\CreateWhiteBoxKeyResponse CreateWhiteBoxKey(Models\CreateWhiteBoxKeyRequest $req) 创建白盒密钥。 密钥个数的上限为 50。
@@ -64,6 +65,7 @@ use TencentCloud\Kms\V20190118\Models as Models;
  * @method Models\OverwriteWhiteBoxDeviceFingerprintsResponse OverwriteWhiteBoxDeviceFingerprints(Models\OverwriteWhiteBoxDeviceFingerprintsRequest $req) 覆盖指定密钥的设备指纹信息
  * @method Models\ReEncryptResponse ReEncrypt(Models\ReEncryptRequest $req) 使用指定CMK对密文重新加密。
  * @method Models\ScheduleKeyDeletionResponse ScheduleKeyDeletion(Models\ScheduleKeyDeletionRequest $req) CMK计划删除接口，用于指定CMK删除的时间，可选时间区间为[7,30]天
+ * @method Models\UnbindCloudResourceResponse UnbindCloudResource(Models\UnbindCloudResourceRequest $req) 删除指定（key, 资源，云产品）的记录，以表明：指定的云产品的资源已不再使用当前的key。
  * @method Models\UpdateAliasResponse UpdateAlias(Models\UpdateAliasRequest $req) 用于修改CMK的别名。对于处于PendingDelete状态的CMK禁止修改。
  * @method Models\UpdateKeyDescriptionResponse UpdateKeyDescription(Models\UpdateKeyDescriptionRequest $req) 该接口用于对指定的cmk修改描述信息。对于处于PendingDelete状态的CMK禁止修改。
  */

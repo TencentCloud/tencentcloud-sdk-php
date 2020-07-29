@@ -31,9 +31,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDescription(string $Description) 设置描述信息。
 长度上限：1024字节。
  * @method integer getSnapshotInterval() 获取截图间隔，单位s，默认10s。
-范围： 5s ~ 600s。
+范围： 5s ~ 300s。
  * @method void setSnapshotInterval(integer $SnapshotInterval) 设置截图间隔，单位s，默认10s。
-范围： 5s ~ 600s。
+范围： 5s ~ 300s。
  * @method integer getWidth() 获取截图宽度。默认：0（原始宽）。
  * @method void setWidth(integer $Width) 设置截图宽度。默认：0（原始宽）。
  * @method integer getHeight() 获取截图高度。默认：0（原始高）。
@@ -76,7 +76,7 @@ class ModifyLiveSnapshotTemplateRequest extends AbstractModel
 
     /**
      * @var integer 截图间隔，单位s，默认10s。
-范围： 5s ~ 600s。
+范围： 5s ~ 300s。
      */
     public $SnapshotInterval;
 
@@ -129,7 +129,7 @@ class ModifyLiveSnapshotTemplateRequest extends AbstractModel
      * @param string $Description 描述信息。
 长度上限：1024字节。
      * @param integer $SnapshotInterval 截图间隔，单位s，默认10s。
-范围： 5s ~ 600s。
+范围： 5s ~ 300s。
      * @param integer $Width 截图宽度。默认：0（原始宽）。
      * @param integer $Height 截图高度。默认：0（原始高）。
      * @param integer $PornFlag 是否开启鉴黄，默认 0 。

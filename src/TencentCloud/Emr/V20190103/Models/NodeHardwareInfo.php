@@ -36,9 +36,11 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWanIp(string $WanIp) 设置master节点绑定外网IP
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getFlag() 获取节点类型
+ * @method integer getFlag() 获取节点类型。0:common节点；1:master节点
+；2:core节点；3:task节点
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFlag(integer $Flag) 设置节点类型
+ * @method void setFlag(integer $Flag) 设置节点类型。0:common节点；1:master节点
+；2:core节点；3:task节点
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSpec() 获取节点规格
 注意：此字段可能返回 null，表示取不到有效值。
@@ -196,7 +198,8 @@ class NodeHardwareInfo extends AbstractModel
     public $WanIp;
 
     /**
-     * @var integer 节点类型
+     * @var integer 节点类型。0:common节点；1:master节点
+；2:core节点；3:task节点
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Flag;
@@ -402,7 +405,8 @@ class NodeHardwareInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $WanIp master节点绑定外网IP
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Flag 节点类型
+     * @param integer $Flag 节点类型。0:common节点；1:master节点
+；2:core节点；3:task节点
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Spec 节点规格
 注意：此字段可能返回 null，表示取不到有效值。

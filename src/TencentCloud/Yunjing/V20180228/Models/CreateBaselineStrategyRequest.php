@@ -22,20 +22,20 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getStrategyName() 获取策略名称
  * @method void setStrategyName(string $StrategyName) 设置策略名称
- * @method integer getScanCycle() 获取检测周期
- * @method void setScanCycle(integer $ScanCycle) 设置检测周期
- * @method string getScanAt() 获取定期检测时间，该时间下发扫描
- * @method void setScanAt(string $ScanAt) 设置定期检测时间，该时间下发扫描
- * @method array getCategoryIds() 获取该策略下选择的基线id数组
- * @method void setCategoryIds(array $CategoryIds) 设置该策略下选择的基线id数组
+ * @method integer getScanCycle() 获取检测周期, 表示每隔多少天进行检测.示例: 2, 表示每2天进行检测一次.
+ * @method void setScanCycle(integer $ScanCycle) 设置检测周期, 表示每隔多少天进行检测.示例: 2, 表示每2天进行检测一次.
+ * @method string getScanAt() 获取定期检测时间，该时间下发扫描. 示例:“22:00”, 表示在22:00下发检测
+ * @method void setScanAt(string $ScanAt) 设置定期检测时间，该时间下发扫描. 示例:“22:00”, 表示在22:00下发检测
+ * @method array getCategoryIds() 获取该策略下选择的基线id数组. 示例: [1,3,5,7]
+ * @method void setCategoryIds(array $CategoryIds) 设置该策略下选择的基线id数组. 示例: [1,3,5,7]
  * @method integer getIsGlobal() 获取扫描范围是否全部服务器, 1:是  0:否, 为1则为全部专业版主机
  * @method void setIsGlobal(integer $IsGlobal) 设置扫描范围是否全部服务器, 1:是  0:否, 为1则为全部专业版主机
- * @method string getMachineType() 获取云主机类型：cvm：虚拟主机，bms：裸金属，ecm：边缘计算主机
- * @method void setMachineType(string $MachineType) 设置云主机类型：cvm：虚拟主机，bms：裸金属，ecm：边缘计算主机
- * @method string getRegionCode() 获取主机地域
- * @method void setRegionCode(string $RegionCode) 设置主机地域
- * @method array getQuuids() 获取主机id数组
- * @method void setQuuids(array $Quuids) 设置主机id数组
+ * @method string getMachineType() 获取云主机类型：“CVM”：虚拟主机，"BMS"：裸金属，"ECM"：边缘计算主机
+ * @method void setMachineType(string $MachineType) 设置云主机类型：“CVM”：虚拟主机，"BMS"：裸金属，"ECM"：边缘计算主机
+ * @method string getRegionCode() 获取主机地域. 示例: "ap-bj"
+ * @method void setRegionCode(string $RegionCode) 设置主机地域. 示例: "ap-bj"
+ * @method array getQuuids() 获取主机id数组. 示例: ["quuid1","quuid2"]
+ * @method void setQuuids(array $Quuids) 设置主机id数组. 示例: ["quuid1","quuid2"]
  */
 class CreateBaselineStrategyRequest extends AbstractModel
 {
@@ -45,17 +45,17 @@ class CreateBaselineStrategyRequest extends AbstractModel
     public $StrategyName;
 
     /**
-     * @var integer 检测周期
+     * @var integer 检测周期, 表示每隔多少天进行检测.示例: 2, 表示每2天进行检测一次.
      */
     public $ScanCycle;
 
     /**
-     * @var string 定期检测时间，该时间下发扫描
+     * @var string 定期检测时间，该时间下发扫描. 示例:“22:00”, 表示在22:00下发检测
      */
     public $ScanAt;
 
     /**
-     * @var array 该策略下选择的基线id数组
+     * @var array 该策略下选择的基线id数组. 示例: [1,3,5,7]
      */
     public $CategoryIds;
 
@@ -65,29 +65,29 @@ class CreateBaselineStrategyRequest extends AbstractModel
     public $IsGlobal;
 
     /**
-     * @var string 云主机类型：cvm：虚拟主机，bms：裸金属，ecm：边缘计算主机
+     * @var string 云主机类型：“CVM”：虚拟主机，"BMS"：裸金属，"ECM"：边缘计算主机
      */
     public $MachineType;
 
     /**
-     * @var string 主机地域
+     * @var string 主机地域. 示例: "ap-bj"
      */
     public $RegionCode;
 
     /**
-     * @var array 主机id数组
+     * @var array 主机id数组. 示例: ["quuid1","quuid2"]
      */
     public $Quuids;
 
     /**
      * @param string $StrategyName 策略名称
-     * @param integer $ScanCycle 检测周期
-     * @param string $ScanAt 定期检测时间，该时间下发扫描
-     * @param array $CategoryIds 该策略下选择的基线id数组
+     * @param integer $ScanCycle 检测周期, 表示每隔多少天进行检测.示例: 2, 表示每2天进行检测一次.
+     * @param string $ScanAt 定期检测时间，该时间下发扫描. 示例:“22:00”, 表示在22:00下发检测
+     * @param array $CategoryIds 该策略下选择的基线id数组. 示例: [1,3,5,7]
      * @param integer $IsGlobal 扫描范围是否全部服务器, 1:是  0:否, 为1则为全部专业版主机
-     * @param string $MachineType 云主机类型：cvm：虚拟主机，bms：裸金属，ecm：边缘计算主机
-     * @param string $RegionCode 主机地域
-     * @param array $Quuids 主机id数组
+     * @param string $MachineType 云主机类型：“CVM”：虚拟主机，"BMS"：裸金属，"ECM"：边缘计算主机
+     * @param string $RegionCode 主机地域. 示例: "ap-bj"
+     * @param array $Quuids 主机id数组. 示例: ["quuid1","quuid2"]
      */
     function __construct()
     {

@@ -42,6 +42,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTokenValidTime(integer $TokenValidTime) 设置Token有效时间
  * @method string getInternalEndpoint() 获取实例内部访问地址
  * @method void setInternalEndpoint(string $InternalEndpoint) 设置实例内部访问地址
+ * @method TagSpecification getTagSpecification() 获取实例云标签
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTagSpecification(TagSpecification $TagSpecification) 设置实例云标签
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Registry extends AbstractModel
 {
@@ -101,6 +105,12 @@ class Registry extends AbstractModel
     public $InternalEndpoint;
 
     /**
+     * @var TagSpecification 实例云标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TagSpecification;
+
+    /**
      * @param string $RegistryId 实例ID
      * @param string $RegistryName 实例名称
      * @param string $RegistryType 实例规格
@@ -112,6 +122,8 @@ class Registry extends AbstractModel
      * @param boolean $EnableAnonymous 是否支持匿名
      * @param integer $TokenValidTime Token有效时间
      * @param string $InternalEndpoint 实例内部访问地址
+     * @param TagSpecification $TagSpecification 实例云标签
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -168,6 +180,11 @@ class Registry extends AbstractModel
 
         if (array_key_exists("InternalEndpoint",$param) and $param["InternalEndpoint"] !== null) {
             $this->InternalEndpoint = $param["InternalEndpoint"];
+        }
+
+        if (array_key_exists("TagSpecification",$param) and $param["TagSpecification"] !== null) {
+            $this->TagSpecification = new TagSpecification();
+            $this->TagSpecification->deserialize($param["TagSpecification"]);
         }
     }
 }

@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegistryName(string $RegistryName) 设置企业版实例名称
  * @method string getRegistryType() 获取企业版实例类型
  * @method void setRegistryType(string $RegistryType) 设置企业版实例类型
+ * @method TagSpecification getTagSpecification() 获取云标签描述
+ * @method void setTagSpecification(TagSpecification $TagSpecification) 设置云标签描述
  */
 class CreateInstanceRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class CreateInstanceRequest extends AbstractModel
     public $RegistryType;
 
     /**
+     * @var TagSpecification 云标签描述
+     */
+    public $TagSpecification;
+
+    /**
      * @param string $RegistryName 企业版实例名称
      * @param string $RegistryType 企业版实例类型
+     * @param TagSpecification $TagSpecification 云标签描述
      */
     function __construct()
     {
@@ -60,6 +68,11 @@ class CreateInstanceRequest extends AbstractModel
 
         if (array_key_exists("RegistryType",$param) and $param["RegistryType"] !== null) {
             $this->RegistryType = $param["RegistryType"];
+        }
+
+        if (array_key_exists("TagSpecification",$param) and $param["TagSpecification"] !== null) {
+            $this->TagSpecification = new TagSpecification();
+            $this->TagSpecification->deserialize($param["TagSpecification"]);
         }
     }
 }

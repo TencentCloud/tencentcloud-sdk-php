@@ -52,8 +52,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRiskDetails(array $RiskDetails) 设置账号风险检测结果
  * @method integer getBizType() 获取最终使用的BizType
  * @method void setBizType(integer $BizType) 设置最终使用的BizType
+ * @method string getDataId() 获取和请求中的DataId一致，原样返回
+ * @method void setDataId(string $DataId) 设置和请求中的DataId一致，原样返回
  * @method string getEvilLabel() 获取恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义关键词
  * @method void setEvilLabel(string $EvilLabel) 设置恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义关键词
+ * @method string getExtra() 获取输出的其他信息，不同客户内容不同
+ * @method void setExtra(string $Extra) 设置输出的其他信息，不同客户内容不同
  * @method array getKeywords() 获取命中的关键词
  * @method void setKeywords(array $Keywords) 设置命中的关键词
  * @method integer getScore() 获取命中的模型分值
@@ -116,9 +120,19 @@ class TextData extends AbstractModel
     public $BizType;
 
     /**
+     * @var string 和请求中的DataId一致，原样返回
+     */
+    public $DataId;
+
+    /**
      * @var string 恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义关键词
      */
     public $EvilLabel;
+
+    /**
+     * @var string 输出的其他信息，不同客户内容不同
+     */
+    public $Extra;
 
     /**
      * @var array 命中的关键词
@@ -152,7 +166,9 @@ class TextData extends AbstractModel
      * @param TextOutputRes $Res 消息类输出结果
      * @param array $RiskDetails 账号风险检测结果
      * @param integer $BizType 最终使用的BizType
+     * @param string $DataId 和请求中的DataId一致，原样返回
      * @param string $EvilLabel 恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义关键词
+     * @param string $Extra 输出的其他信息，不同客户内容不同
      * @param array $Keywords 命中的关键词
      * @param integer $Score 命中的模型分值
      * @param string $Suggestion 建议值,Block：打击,Review：待复审,Normal：正常
@@ -224,8 +240,16 @@ class TextData extends AbstractModel
             $this->BizType = $param["BizType"];
         }
 
+        if (array_key_exists("DataId",$param) and $param["DataId"] !== null) {
+            $this->DataId = $param["DataId"];
+        }
+
         if (array_key_exists("EvilLabel",$param) and $param["EvilLabel"] !== null) {
             $this->EvilLabel = $param["EvilLabel"];
+        }
+
+        if (array_key_exists("Extra",$param) and $param["Extra"] !== null) {
+            $this->Extra = $param["Extra"];
         }
 
         if (array_key_exists("Keywords",$param) and $param["Keywords"] !== null) {

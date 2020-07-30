@@ -20,26 +20,56 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyPullStreamConfig请求参数结构体
  *
- * @method string getConfigId() 获取配置id。
- * @method void setConfigId(string $ConfigId) 设置配置id。
- * @method string getFromUrl() 获取源Url。
- * @method void setFromUrl(string $FromUrl) 设置源Url。
- * @method string getToUrl() 获取目的Url。
- * @method void setToUrl(string $ToUrl) 设置目的Url。
- * @method integer getAreaId() 获取区域id：
-1-深圳，
-2-上海，
-3-天津，
+ * @method string getConfigId() 获取配置 ID。
+获取来源：
+1. 创建拉流配置接口CreatePullStreamConfig返回的配置 ID。
+2. 通过查询接口DescribePullStreamConfigs获取配置 ID。
+ * @method void setConfigId(string $ConfigId) 设置配置 ID。
+获取来源：
+1. 创建拉流配置接口CreatePullStreamConfig返回的配置 ID。
+2. 通过查询接口DescribePullStreamConfigs获取配置 ID。
+ * @method string getFromUrl() 获取源 URL，用于拉流的地址。目前可支持直播流及点播文件。
+注意：
+1. 多个点播 URL 之间使用空格拼接。
+2. 目前上限支持10个 URL。
+3. 支持拉流文件格式：FLV，RTMP，HLS，MP4。
+4. 使用标准三层样式，如：http://test.com/live/stream.flv。
+ * @method void setFromUrl(string $FromUrl) 设置源 URL，用于拉流的地址。目前可支持直播流及点播文件。
+注意：
+1. 多个点播 URL 之间使用空格拼接。
+2. 目前上限支持10个 URL。
+3. 支持拉流文件格式：FLV，RTMP，HLS，MP4。
+4. 使用标准三层样式，如：http://test.com/live/stream.flv。
+ * @method string getToUrl() 获取目的 URL，用于推流的地址，目前限制该目标地址为腾讯域名。
+1. 仅支持 RTMP 协议。
+2. 使用标准三层样式，如：http://test.com/live/stream.flv。
+ * @method void setToUrl(string $ToUrl) 设置目的 URL，用于推流的地址，目前限制该目标地址为腾讯域名。
+1. 仅支持 RTMP 协议。
+2. 使用标准三层样式，如：http://test.com/live/stream.flv。
+ * @method integer getAreaId() 获取区域 ID：
+1-深圳。
+2-上海。
+3-天津。
 4-中国香港。
 如有改动，需同时传入IspId。
- * @method void setAreaId(integer $AreaId) 设置区域id：
-1-深圳，
-2-上海，
-3-天津，
+ * @method void setAreaId(integer $AreaId) 设置区域 ID：
+1-深圳。
+2-上海。
+3-天津。
 4-中国香港。
 如有改动，需同时传入IspId。
- * @method integer getIspId() 获取运营商id,1-电信,2-移动,3-联通,4-其他,AreaId为4的时候,IspId只能为其他。如有改动，需同时传入AreaId。
- * @method void setIspId(integer $IspId) 设置运营商id,1-电信,2-移动,3-联通,4-其他,AreaId为4的时候,IspId只能为其他。如有改动，需同时传入AreaId。
+ * @method integer getIspId() 获取运营商 ID，
+1：电信。
+2：移动。
+3：联通。
+4：其他。
+AreaId为4的时候，IspId只能为其他。如有改动，需同时传入AreaId。
+ * @method void setIspId(integer $IspId) 设置运营商 ID，
+1：电信。
+2：移动。
+3：联通。
+4：其他。
+AreaId为4的时候，IspId只能为其他。如有改动，需同时传入AreaId。
  * @method string getStartTime() 获取开始时间。
 使用UTC格式时间，
 例如：2019-01-08T10:00:00Z。
@@ -68,32 +98,47 @@ use TencentCloud\Common\AbstractModel;
 class ModifyPullStreamConfigRequest extends AbstractModel
 {
     /**
-     * @var string 配置id。
+     * @var string 配置 ID。
+获取来源：
+1. 创建拉流配置接口CreatePullStreamConfig返回的配置 ID。
+2. 通过查询接口DescribePullStreamConfigs获取配置 ID。
      */
     public $ConfigId;
 
     /**
-     * @var string 源Url。
+     * @var string 源 URL，用于拉流的地址。目前可支持直播流及点播文件。
+注意：
+1. 多个点播 URL 之间使用空格拼接。
+2. 目前上限支持10个 URL。
+3. 支持拉流文件格式：FLV，RTMP，HLS，MP4。
+4. 使用标准三层样式，如：http://test.com/live/stream.flv。
      */
     public $FromUrl;
 
     /**
-     * @var string 目的Url。
+     * @var string 目的 URL，用于推流的地址，目前限制该目标地址为腾讯域名。
+1. 仅支持 RTMP 协议。
+2. 使用标准三层样式，如：http://test.com/live/stream.flv。
      */
     public $ToUrl;
 
     /**
-     * @var integer 区域id：
-1-深圳，
-2-上海，
-3-天津，
+     * @var integer 区域 ID：
+1-深圳。
+2-上海。
+3-天津。
 4-中国香港。
 如有改动，需同时传入IspId。
      */
     public $AreaId;
 
     /**
-     * @var integer 运营商id,1-电信,2-移动,3-联通,4-其他,AreaId为4的时候,IspId只能为其他。如有改动，需同时传入AreaId。
+     * @var integer 运营商 ID，
+1：电信。
+2：移动。
+3：联通。
+4：其他。
+AreaId为4的时候，IspId只能为其他。如有改动，需同时传入AreaId。
      */
     public $IspId;
 
@@ -118,16 +163,31 @@ class ModifyPullStreamConfigRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @param string $ConfigId 配置id。
-     * @param string $FromUrl 源Url。
-     * @param string $ToUrl 目的Url。
-     * @param integer $AreaId 区域id：
-1-深圳，
-2-上海，
-3-天津，
+     * @param string $ConfigId 配置 ID。
+获取来源：
+1. 创建拉流配置接口CreatePullStreamConfig返回的配置 ID。
+2. 通过查询接口DescribePullStreamConfigs获取配置 ID。
+     * @param string $FromUrl 源 URL，用于拉流的地址。目前可支持直播流及点播文件。
+注意：
+1. 多个点播 URL 之间使用空格拼接。
+2. 目前上限支持10个 URL。
+3. 支持拉流文件格式：FLV，RTMP，HLS，MP4。
+4. 使用标准三层样式，如：http://test.com/live/stream.flv。
+     * @param string $ToUrl 目的 URL，用于推流的地址，目前限制该目标地址为腾讯域名。
+1. 仅支持 RTMP 协议。
+2. 使用标准三层样式，如：http://test.com/live/stream.flv。
+     * @param integer $AreaId 区域 ID：
+1-深圳。
+2-上海。
+3-天津。
 4-中国香港。
 如有改动，需同时传入IspId。
-     * @param integer $IspId 运营商id,1-电信,2-移动,3-联通,4-其他,AreaId为4的时候,IspId只能为其他。如有改动，需同时传入AreaId。
+     * @param integer $IspId 运营商 ID，
+1：电信。
+2：移动。
+3：联通。
+4：其他。
+AreaId为4的时候，IspId只能为其他。如有改动，需同时传入AreaId。
      * @param string $StartTime 开始时间。
 使用UTC格式时间，
 例如：2019-01-08T10:00:00Z。

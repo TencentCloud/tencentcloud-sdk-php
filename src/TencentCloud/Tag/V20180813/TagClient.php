@@ -33,6 +33,7 @@ use TencentCloud\Tag\V20180813\Models as Models;
  * @method Models\DescribeResourceTagsByResourceIdsSeqResponse DescribeResourceTagsByResourceIdsSeq(Models\DescribeResourceTagsByResourceIdsSeqRequest $req) 按顺序查看资源关联的标签
  * @method Models\DescribeResourceTagsByTagKeysResponse DescribeResourceTagsByTagKeys(Models\DescribeResourceTagsByTagKeysRequest $req) 根据标签键获取资源标签
  * @method Models\DescribeResourcesByTagsResponse DescribeResourcesByTags(Models\DescribeResourcesByTagsRequest $req) 通过标签查询资源列表
+ * @method Models\DescribeResourcesByTagsUnionResponse DescribeResourcesByTagsUnion(Models\DescribeResourcesByTagsUnionRequest $req) 通过标签查询资源列表并集
  * @method Models\DescribeTagKeysResponse DescribeTagKeys(Models\DescribeTagKeysRequest $req) 用于查询已建立的标签列表中的标签键。
 
  * @method Models\DescribeTagValuesResponse DescribeTagValues(Models\DescribeTagValuesRequest $req) 用于查询已建立的标签列表中的标签值。

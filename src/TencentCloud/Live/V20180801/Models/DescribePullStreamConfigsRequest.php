@@ -21,17 +21,21 @@ use TencentCloud\Common\AbstractModel;
  * DescribePullStreamConfigs请求参数结构体
  *
  * @method string getConfigId() 获取配置 ID。
+获取途径：从 CreatePullStreamConfig 接口返回值获取。
  * @method void setConfigId(string $ConfigId) 设置配置 ID。
+获取途径：从 CreatePullStreamConfig 接口返回值获取。
  */
 class DescribePullStreamConfigsRequest extends AbstractModel
 {
     /**
      * @var string 配置 ID。
+获取途径：从 CreatePullStreamConfig 接口返回值获取。
      */
     public $ConfigId;
 
     /**
      * @param string $ConfigId 配置 ID。
+获取途径：从 CreatePullStreamConfig 接口返回值获取。
      */
     function __construct()
     {

@@ -38,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIncentive(integer $Incentive) 设置赠送金余额，单位（分）
  * @method integer getFreezing() 获取冻结余额，单位（分）
  * @method void setFreezing(integer $Freezing) 设置冻结余额，单位（分）
+ * @method string getPayChannel() 获取交易渠道
+ * @method void setPayChannel(string $PayChannel) 设置交易渠道
+ * @method string getDeductMode() 获取扣费模式：trade 包年包月(预付费)，hourh  按量-小时结，hourd 按量-日结，hourm 按量-月结，month 按量-月结
+ * @method void setDeductMode(string $DeductMode) 设置扣费模式：trade 包年包月(预付费)，hourh  按量-小时结，hourd 按量-日结，hourm 按量-月结，month 按量-月结
  */
 class BillTransactionInfo extends AbstractModel
 {
@@ -87,6 +91,16 @@ class BillTransactionInfo extends AbstractModel
     public $Freezing;
 
     /**
+     * @var string 交易渠道
+     */
+    public $PayChannel;
+
+    /**
+     * @var string 扣费模式：trade 包年包月(预付费)，hourh  按量-小时结，hourd 按量-日结，hourm 按量-月结，month 按量-月结
+     */
+    public $DeductMode;
+
+    /**
      * @param string $ActionType 收支类型：deduct 扣费, recharge 充值, return 退费， block 冻结, unblock 解冻
      * @param integer $Amount 流水金额，单位（分）；正数表示入账，负数表示出账
      * @param integer $Balance 可用余额，单位（分）；正数表示入账，负数表示出账
@@ -96,6 +110,8 @@ class BillTransactionInfo extends AbstractModel
      * @param integer $Cash 现金账户余额，单位（分）
      * @param integer $Incentive 赠送金余额，单位（分）
      * @param integer $Freezing 冻结余额，单位（分）
+     * @param string $PayChannel 交易渠道
+     * @param string $DeductMode 扣费模式：trade 包年包月(预付费)，hourh  按量-小时结，hourd 按量-日结，hourm 按量-月结，month 按量-月结
      */
     function __construct()
     {
@@ -144,6 +160,14 @@ class BillTransactionInfo extends AbstractModel
 
         if (array_key_exists("Freezing",$param) and $param["Freezing"] !== null) {
             $this->Freezing = $param["Freezing"];
+        }
+
+        if (array_key_exists("PayChannel",$param) and $param["PayChannel"] !== null) {
+            $this->PayChannel = $param["PayChannel"];
+        }
+
+        if (array_key_exists("DeductMode",$param) and $param["DeductMode"] !== null) {
+            $this->DeductMode = $param["DeductMode"];
         }
     }
 }

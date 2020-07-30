@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getRepositoryName() 获取仓库名称
  * @method void setRepositoryName(string $RepositoryName) 设置仓库名称
- * @method string getRepositoryType() 获取仓库类型
- * @method void setRepositoryType(string $RepositoryType) 设置仓库类型
+ * @method string getRepositoryType() 获取仓库类型（默认仓库：default，私有仓库：private）
+ * @method void setRepositoryType(string $RepositoryType) 设置仓库类型（默认仓库：default，私有仓库：private）
  * @method string getBucketName() 获取仓库所在桶名称
  * @method void setBucketName(string $BucketName) 设置仓库所在桶名称
  * @method string getBucketRegion() 获取仓库所在桶地域
@@ -41,7 +41,7 @@ class CreateRepositoryRequest extends AbstractModel
     public $RepositoryName;
 
     /**
-     * @var string 仓库类型
+     * @var string 仓库类型（默认仓库：default，私有仓库：private）
      */
     public $RepositoryType;
 
@@ -67,7 +67,7 @@ class CreateRepositoryRequest extends AbstractModel
 
     /**
      * @param string $RepositoryName 仓库名称
-     * @param string $RepositoryType 仓库类型
+     * @param string $RepositoryType 仓库类型（默认仓库：default，私有仓库：private）
      * @param string $BucketName 仓库所在桶名称
      * @param string $BucketRegion 仓库所在桶地域
      * @param string $Directory 目录

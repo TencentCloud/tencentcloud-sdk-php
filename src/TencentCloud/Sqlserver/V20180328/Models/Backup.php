@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStrategy(integer $Strategy) 设置备份策略（0-实例备份；1-多库备份）
  * @method integer getBackupWay() 获取备份方式，0-定时备份；1-手动临时备份
  * @method void setBackupWay(integer $BackupWay) 设置备份方式，0-定时备份；1-手动临时备份
+ * @method string getBackupName() 获取备份名称，可自定义
+ * @method void setBackupName(string $BackupName) 设置备份名称，可自定义
  */
 class Backup extends AbstractModel
 {
@@ -101,6 +103,11 @@ class Backup extends AbstractModel
     public $BackupWay;
 
     /**
+     * @var string 备份名称，可自定义
+     */
+    public $BackupName;
+
+    /**
      * @param string $FileName 文件名
      * @param integer $Size 文件大小，单位 KB
      * @param string $StartTime 备份开始时间
@@ -112,6 +119,7 @@ class Backup extends AbstractModel
      * @param array $DBs 多库备份时的DB列表
      * @param integer $Strategy 备份策略（0-实例备份；1-多库备份）
      * @param integer $BackupWay 备份方式，0-定时备份；1-手动临时备份
+     * @param string $BackupName 备份名称，可自定义
      */
     function __construct()
     {
@@ -168,6 +176,10 @@ class Backup extends AbstractModel
 
         if (array_key_exists("BackupWay",$param) and $param["BackupWay"] !== null) {
             $this->BackupWay = $param["BackupWay"];
+        }
+
+        if (array_key_exists("BackupName",$param) and $param["BackupName"] !== null) {
+            $this->BackupName = $param["BackupName"];
         }
     }
 }

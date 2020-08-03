@@ -66,8 +66,14 @@ baseline/main/high。默认baseline
  * @method void setFpsToOrig(integer $FpsToOrig) 设置是否不超过原始帧率，0：否，1：是。默认0。
  * @method integer getAiTransCode() 获取是否是极速高清模板，0：否，1：是。默认0。
  * @method void setAiTransCode(integer $AiTransCode) 设置是否是极速高清模板，0：否，1：是。默认0。
- * @method float getAdaptBitratePercent() 获取极速高清相比VideoBitrate少多少码率，0.1到0.5
- * @method void setAdaptBitratePercent(float $AdaptBitratePercent) 设置极速高清相比VideoBitrate少多少码率，0.1到0.5
+ * @method float getAdaptBitratePercent() 获取极速高清视频码率压缩比。
+极速高清目标码率=VideoBitrate * (1-AdaptBitratePercent)
+
+取值范围：0.0到0.5
+ * @method void setAdaptBitratePercent(float $AdaptBitratePercent) 设置极速高清视频码率压缩比。
+极速高清目标码率=VideoBitrate * (1-AdaptBitratePercent)
+
+取值范围：0.0到0.5
  */
 class CreateLiveTranscodeTemplateRequest extends AbstractModel
 {
@@ -167,7 +173,10 @@ baseline/main/high。默认baseline
     public $AiTransCode;
 
     /**
-     * @var float 极速高清相比VideoBitrate少多少码率，0.1到0.5
+     * @var float 极速高清视频码率压缩比。
+极速高清目标码率=VideoBitrate * (1-AdaptBitratePercent)
+
+取值范围：0.0到0.5
      */
     public $AdaptBitratePercent;
 
@@ -195,7 +204,10 @@ baseline/main/high。默认baseline
      * @param integer $HeightToOrig 是否不超过原始高，0：否，1：是。默认0。
      * @param integer $FpsToOrig 是否不超过原始帧率，0：否，1：是。默认0。
      * @param integer $AiTransCode 是否是极速高清模板，0：否，1：是。默认0。
-     * @param float $AdaptBitratePercent 极速高清相比VideoBitrate少多少码率，0.1到0.5
+     * @param float $AdaptBitratePercent 极速高清视频码率压缩比。
+极速高清目标码率=VideoBitrate * (1-AdaptBitratePercent)
+
+取值范围：0.0到0.5
      */
     function __construct()
     {

@@ -100,6 +100,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCamRoleName(string $CamRoleName) 设置CAM角色名。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getHpcClusterId() 获取高性能计算集群`ID`。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHpcClusterId(string $HpcClusterId) 设置高性能计算集群`ID`。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getRdmaIpAddresses() 获取高性能计算集群`IP`列表。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRdmaIpAddresses(array $RdmaIpAddresses) 设置高性能计算集群`IP`列表。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Instance extends AbstractModel
 {
@@ -268,6 +276,18 @@ class Instance extends AbstractModel
     public $CamRoleName;
 
     /**
+     * @var string 高性能计算集群`ID`。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $HpcClusterId;
+
+    /**
+     * @var array 高性能计算集群`IP`列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RdmaIpAddresses;
+
+    /**
      * @param Placement $Placement 实例所在的位置。
      * @param string $InstanceId 实例`ID`。
      * @param string $InstanceType 实例机型。
@@ -307,6 +327,10 @@ class Instance extends AbstractModel
      * @param array $IPv6Addresses 实例的IPv6地址。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CamRoleName CAM角色名。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $HpcClusterId 高性能计算集群`ID`。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $RdmaIpAddresses 高性能计算集群`IP`列表。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -459,6 +483,14 @@ class Instance extends AbstractModel
 
         if (array_key_exists("CamRoleName",$param) and $param["CamRoleName"] !== null) {
             $this->CamRoleName = $param["CamRoleName"];
+        }
+
+        if (array_key_exists("HpcClusterId",$param) and $param["HpcClusterId"] !== null) {
+            $this->HpcClusterId = $param["HpcClusterId"];
+        }
+
+        if (array_key_exists("RdmaIpAddresses",$param) and $param["RdmaIpAddresses"] !== null) {
+            $this->RdmaIpAddresses = $param["RdmaIpAddresses"];
         }
     }
 }

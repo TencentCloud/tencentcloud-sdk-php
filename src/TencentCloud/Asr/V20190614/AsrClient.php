@@ -47,9 +47,9 @@ use TencentCloud\Asr\V20190614\Models as Models;
  * @method Models\GetAsrVocabListResponse GetAsrVocabList(Models\GetAsrVocabListRequest $req) 用户通过该接口，可获得所有的热词表及其信息。
  * @method Models\SentenceRecognitionResponse SentenceRecognition(Models\SentenceRecognitionRequest $req) 本接口用于对60秒之内的短音频文件进行识别。
 <br>•   支持中文普通话、英语、粤语。
-<br>•   支持本地语音文件上传和语音URL上传两种请求方式。
+<br>•   支持本地语音文件上传和语音URL上传两种请求方式，音频时长不能超过60s。
 <br>•   音频格式支持wav、mp3；采样率支持8000Hz或者16000Hz；采样精度支持16bits；声道支持单声道。
-<br>•   当音频文件通过请求中body内容上传时，请求大小不能超过600KB；当音频以URL方式传输时，音频时长不可超过60s。
+<br>•   当音频文件通过请求中body内容上传时，请求大小不能超过3MB。
 <br>•   所有请求参数放在POST请求的body中，编码类型采用x-www-form-urlencoded，参数进行urlencode编码后传输。
  * @method Models\SetVocabStateResponse SetVocabState(Models\SetVocabStateRequest $req) 用户通过该接口可以设置热词表的默认状态。初始状态为0，用户可设置状态为1，即为默认状态。默认状态表示用户在请求识别时，如不设置热词表ID，则默认使用状态为1的热词表。
  * @method Models\UpdateAsrVocabResponse UpdateAsrVocab(Models\UpdateAsrVocabRequest $req) 用户通过本接口进行对应的词表信息更新。

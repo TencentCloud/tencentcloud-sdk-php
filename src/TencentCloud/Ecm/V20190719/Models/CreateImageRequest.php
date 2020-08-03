@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateImage请求参数结构体
  *
- * @method string getImageName() 获取镜像名称
- * @method void setImageName(string $ImageName) 设置镜像名称
+ * @method string getImageName() 获取镜像名称。
+ * @method void setImageName(string $ImageName) 设置镜像名称。
  * @method string getInstanceId() 获取需要制作镜像的实例ID。
  * @method void setInstanceId(string $InstanceId) 设置需要制作镜像的实例ID。
- * @method string getImageDescription() 获取镜像描述
- * @method void setImageDescription(string $ImageDescription) 设置镜像描述
+ * @method string getImageDescription() 获取镜像描述。
+ * @method void setImageDescription(string $ImageDescription) 设置镜像描述。
  * @method string getForcePoweroff() 获取是否执行强制关机以制作镜像。取值范围：
 TRUE：表示自动关机后制作镜像
 FALSE：表示开机状态制作，目前不支持，需要先手动关机
@@ -38,7 +38,7 @@ FALSE：表示开机状态制作，目前不支持，需要先手动关机
 class CreateImageRequest extends AbstractModel
 {
     /**
-     * @var string 镜像名称
+     * @var string 镜像名称。
      */
     public $ImageName;
 
@@ -48,7 +48,7 @@ class CreateImageRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string 镜像描述
+     * @var string 镜像描述。
      */
     public $ImageDescription;
 
@@ -61,9 +61,9 @@ FALSE：表示开机状态制作，目前不支持，需要先手动关机
     public $ForcePoweroff;
 
     /**
-     * @param string $ImageName 镜像名称
+     * @param string $ImageName 镜像名称。
      * @param string $InstanceId 需要制作镜像的实例ID。
-     * @param string $ImageDescription 镜像描述
+     * @param string $ImageDescription 镜像描述。
      * @param string $ForcePoweroff 是否执行强制关机以制作镜像。取值范围：
 TRUE：表示自动关机后制作镜像
 FALSE：表示开机状态制作，目前不支持，需要先手动关机

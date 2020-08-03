@@ -56,6 +56,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTagSpecification(array $TagSpecification) 设置标签描述列表。通过指定该参数可以同时绑定标签到相应的资源实例，当前仅支持绑定标签到云服务器实例。
  * @method InstanceMarketOptionsRequest getInstanceMarketOptions() 获取实例的市场相关选项，如竞价实例相关参数
  * @method void setInstanceMarketOptions(InstanceMarketOptionsRequest $InstanceMarketOptions) 设置实例的市场相关选项，如竞价实例相关参数
+ * @method string getHpcClusterId() 获取高性能计算集群ID。
+ * @method void setHpcClusterId(string $HpcClusterId) 设置高性能计算集群ID。
  */
 class InquiryPriceRunInstancesRequest extends AbstractModel
 {
@@ -150,6 +152,11 @@ class InquiryPriceRunInstancesRequest extends AbstractModel
     public $InstanceMarketOptions;
 
     /**
+     * @var string 高性能计算集群ID。
+     */
+    public $HpcClusterId;
+
+    /**
      * @param Placement $Placement 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
      * @param string $ImageId 指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-xxx`。镜像类型分为四种：<br/><li>公共镜像</li><li>自定义镜像</li><li>共享镜像</li><li>服务市场镜像</li><br/>可通过以下方式获取可用的镜像ID：<br/><li>`公共镜像`、`自定义镜像`、`共享镜像`的镜像ID可通过登录[控制台](https://console.cloud.tencent.com/cvm/image?rid=1&imageType=PUBLIC_IMAGE)查询；`服务镜像市场`的镜像ID可通过[云市场](https://market.cloud.tencent.com/list)查询。</li><li>通过调用接口 [DescribeImages](https://cloud.tencent.com/document/api/213/15715) ，取返回信息中的`ImageId`字段。</li>
      * @param string $InstanceChargeType 实例[计费类型](https://cloud.tencent.com/document/product/213/2180)。<br><li>PREPAID：预付费，即包年包月<br><li>POSTPAID_BY_HOUR：按小时后付费<br><li>SPOTPAID：竞价付费<br>默认值：POSTPAID_BY_HOUR。
@@ -168,6 +175,7 @@ class InquiryPriceRunInstancesRequest extends AbstractModel
      * @param string $HostName 云服务器的主机名。<br><li>点号（.）和短横线（-）不能作为 HostName 的首尾字符，不能连续使用。<br><li>Windows 实例：名字符长度为[2, 15]，允许字母（不限制大小写）、数字和短横线（-）组成，不支持点号（.），不能全是数字。<br><li>其他类型（Linux 等）实例：字符长度为[2, 30]，允许支持多个点号，点之间为一段，每段允许字母（不限制大小写）、数字和短横线（-）组成。
      * @param array $TagSpecification 标签描述列表。通过指定该参数可以同时绑定标签到相应的资源实例，当前仅支持绑定标签到云服务器实例。
      * @param InstanceMarketOptionsRequest $InstanceMarketOptions 实例的市场相关选项，如竞价实例相关参数
+     * @param string $HpcClusterId 高性能计算集群ID。
      */
     function __construct()
     {
@@ -270,6 +278,10 @@ class InquiryPriceRunInstancesRequest extends AbstractModel
         if (array_key_exists("InstanceMarketOptions",$param) and $param["InstanceMarketOptions"] !== null) {
             $this->InstanceMarketOptions = new InstanceMarketOptionsRequest();
             $this->InstanceMarketOptions->deserialize($param["InstanceMarketOptions"]);
+        }
+
+        if (array_key_exists("HpcClusterId",$param) and $param["HpcClusterId"] !== null) {
+            $this->HpcClusterId = $param["HpcClusterId"];
         }
     }
 }

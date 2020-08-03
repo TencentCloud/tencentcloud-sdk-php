@@ -114,6 +114,10 @@ REJECTED:拒绝
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTencentBackupAddress(string $TencentBackupAddress) 设置TencentBackupAddress，腾讯侧备用互联 IP
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getSignLaw() 获取专用通道关联的物理专线是否签署了用户协议
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSignLaw(boolean $SignLaw) 设置专用通道关联的物理专线是否签署了用户协议
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DirectConnectTunnel extends AbstractModel
 {
@@ -277,6 +281,12 @@ REJECTED:拒绝
     public $TencentBackupAddress;
 
     /**
+     * @var boolean 专用通道关联的物理专线是否签署了用户协议
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SignLaw;
+
+    /**
      * @param string $DirectConnectTunnelId 专用通道ID
      * @param string $DirectConnectId 物理专线ID
      * @param string $State 专用通道状态
@@ -323,6 +333,8 @@ REJECTED:拒绝
      * @param string $VpcName VPC名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TencentBackupAddress TencentBackupAddress，腾讯侧备用互联 IP
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $SignLaw 专用通道关联的物理专线是否签署了用户协议
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -459,6 +471,10 @@ REJECTED:拒绝
 
         if (array_key_exists("TencentBackupAddress",$param) and $param["TencentBackupAddress"] !== null) {
             $this->TencentBackupAddress = $param["TencentBackupAddress"];
+        }
+
+        if (array_key_exists("SignLaw",$param) and $param["SignLaw"] !== null) {
+            $this->SignLaw = $param["SignLaw"];
         }
     }
 }

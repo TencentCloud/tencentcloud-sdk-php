@@ -120,6 +120,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStartTime(string $StartTime) 设置物理专线开通时间
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getSignLaw() 获取物理专线是否已签署用户协议
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSignLaw(boolean $SignLaw) 设置物理专线是否已签署用户协议
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DirectConnect extends AbstractModel
 {
@@ -282,6 +286,12 @@ class DirectConnect extends AbstractModel
     public $StartTime;
 
     /**
+     * @var boolean 物理专线是否已签署用户协议
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SignLaw;
+
+    /**
      * @param string $DirectConnectId 物理专线ID。
      * @param string $DirectConnectName 物理专线的名称。
      * @param string $AccessPointId 物理专线的接入点ID。
@@ -331,6 +341,8 @@ class DirectConnect extends AbstractModel
      * @param string $ChargeState 计费状态
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StartTime 物理专线开通时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $SignLaw 物理专线是否已签署用户协议
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -457,6 +469,10 @@ class DirectConnect extends AbstractModel
 
         if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
             $this->StartTime = $param["StartTime"];
+        }
+
+        if (array_key_exists("SignLaw",$param) and $param["SignLaw"] !== null) {
+            $this->SignLaw = $param["SignLaw"];
         }
     }
 }

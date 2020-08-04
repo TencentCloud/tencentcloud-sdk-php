@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZone(string $Zone) 设置可用区，形如：`ap-guangzhou-1`。
  * @method array getTags() 获取指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
  * @method void setTags(array $Tags) 设置指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
+ * @method string getSubnetId() 获取NAT网关所属子网
+ * @method void setSubnetId(string $SubnetId) 设置NAT网关所属子网
  */
 class CreateNatGatewayRequest extends AbstractModel
 {
@@ -80,6 +82,11 @@ class CreateNatGatewayRequest extends AbstractModel
     public $Tags;
 
     /**
+     * @var string NAT网关所属子网
+     */
+    public $SubnetId;
+
+    /**
      * @param string $NatGatewayName NAT网关名称
      * @param string $VpcId VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
      * @param integer $InternetMaxBandwidthOut NAT网关最大外网出带宽(单位:Mbps)，支持的参数值：`20, 50, 100, 200, 500, 1000, 2000, 5000`，默认: `100Mbps`。
@@ -88,6 +95,7 @@ class CreateNatGatewayRequest extends AbstractModel
      * @param array $PublicIpAddresses 绑定NAT网关的弹性IP数组，其中AddressCount和PublicAddresses至少传递一个。
      * @param string $Zone 可用区，形如：`ap-guangzhou-1`。
      * @param array $Tags 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
+     * @param string $SubnetId NAT网关所属子网
      */
     function __construct()
     {
@@ -137,6 +145,10 @@ class CreateNatGatewayRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
+            $this->SubnetId = $param["SubnetId"];
         }
     }
 }

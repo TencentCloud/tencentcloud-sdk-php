@@ -30,10 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(string $EndTime) 设置结束时间，北京时间，
 格式：yyyy-mm-dd HH:MM:SS。
 注：EndTime 和 StartTime 只支持最近1天的数据查询。
- * @method string getStatType() 获取统计的类型，可选值：”Province”，”Isp”，“CountryOrArea”。
- * @method void setStatType(string $StatType) 设置统计的类型，可选值：”Province”，”Isp”，“CountryOrArea”。
- * @method array getPlayDomains() 获取不填则为总体数据。
- * @method void setPlayDomains(array $PlayDomains) 设置不填则为总体数据。
+ * @method string getStatType() 获取统计的类型，可选值：”Province”(省份)，”Isp”(运营商)，“CountryOrArea”(国家或地区)。
+ * @method void setStatType(string $StatType) 设置统计的类型，可选值：”Province”(省份)，”Isp”(运营商)，“CountryOrArea”(国家或地区)。
+ * @method array getPlayDomains() 获取播放域名列表，不填则为全部。
+ * @method void setPlayDomains(array $PlayDomains) 设置播放域名列表，不填则为全部。
  * @method integer getPageNum() 获取页号，范围是[1,1000]，默认值是1。
  * @method void setPageNum(integer $PageNum) 设置页号，范围是[1,1000]，默认值是1。
  * @method integer getPageSize() 获取每页个数，范围是[1,1000]，默认值是20。
@@ -59,12 +59,12 @@ class DescribeProIspPlaySumInfoListRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var string 统计的类型，可选值：”Province”，”Isp”，“CountryOrArea”。
+     * @var string 统计的类型，可选值：”Province”(省份)，”Isp”(运营商)，“CountryOrArea”(国家或地区)。
      */
     public $StatType;
 
     /**
-     * @var array 不填则为总体数据。
+     * @var array 播放域名列表，不填则为全部。
      */
     public $PlayDomains;
 
@@ -94,8 +94,8 @@ class DescribeProIspPlaySumInfoListRequest extends AbstractModel
      * @param string $EndTime 结束时间，北京时间，
 格式：yyyy-mm-dd HH:MM:SS。
 注：EndTime 和 StartTime 只支持最近1天的数据查询。
-     * @param string $StatType 统计的类型，可选值：”Province”，”Isp”，“CountryOrArea”。
-     * @param array $PlayDomains 不填则为总体数据。
+     * @param string $StatType 统计的类型，可选值：”Province”(省份)，”Isp”(运营商)，“CountryOrArea”(国家或地区)。
+     * @param array $PlayDomains 播放域名列表，不填则为全部。
      * @param integer $PageNum 页号，范围是[1,1000]，默认值是1。
      * @param integer $PageSize 每页个数，范围是[1,1000]，默认值是20。
      * @param string $MainlandOrOversea 地域，可选值：Mainland，Oversea，China，Foreign，Global（默认值）；如果为空，查询总的数据；如果为“Mainland”，查询中国大陆的数据；如果为“Oversea”，则查询中国大陆以外的数据；如果为China，查询中国的数据（包括港澳台）；如果为Foreign，查询国外的数据（不包括港澳台）。

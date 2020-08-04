@@ -38,10 +38,10 @@ use TencentCloud\Common\AbstractModel;
 若不填，则为查询总体播放数据。
  * @method string getAppName() 获取推流路径，与播放地址中的AppName保持一致，会精确匹配，在同时传递了StreamName时生效。
 若不填，则为查询总体播放数据。
-注意：按AppName查询，需要联系客服同学提单支持。
+注意：按AppName查询请先联系工单申请，开通后配置生效预计需要5个工作日左右，具体时间以最终回复为准。
  * @method void setAppName(string $AppName) 设置推流路径，与播放地址中的AppName保持一致，会精确匹配，在同时传递了StreamName时生效。
 若不填，则为查询总体播放数据。
-注意：按AppName查询，需要联系客服同学提单支持。
+注意：按AppName查询请先联系工单申请，开通后配置生效预计需要5个工作日左右，具体时间以最终回复为准。
  */
 class DescribeStreamPlayInfoListRequest extends AbstractModel
 {
@@ -72,7 +72,7 @@ class DescribeStreamPlayInfoListRequest extends AbstractModel
     /**
      * @var string 推流路径，与播放地址中的AppName保持一致，会精确匹配，在同时传递了StreamName时生效。
 若不填，则为查询总体播放数据。
-注意：按AppName查询，需要联系客服同学提单支持。
+注意：按AppName查询请先联系工单申请，开通后配置生效预计需要5个工作日左右，具体时间以最终回复为准。
      */
     public $AppName;
 
@@ -87,7 +87,7 @@ class DescribeStreamPlayInfoListRequest extends AbstractModel
 若不填，则为查询总体播放数据。
      * @param string $AppName 推流路径，与播放地址中的AppName保持一致，会精确匹配，在同时传递了StreamName时生效。
 若不填，则为查询总体播放数据。
-注意：按AppName查询，需要联系客服同学提单支持。
+注意：按AppName查询请先联系工单申请，开通后配置生效预计需要5个工作日左右，具体时间以最终回复为准。
      */
     function __construct()
     {

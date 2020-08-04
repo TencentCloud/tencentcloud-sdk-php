@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getMaximumPlayerSessionCount() 获取最大玩家数量
  * @method void setMaximumPlayerSessionCount(integer $MaximumPlayerSessionCount) 设置最大玩家数量
- * @method string getAliasId() 获取别名ID
- * @method void setAliasId(string $AliasId) 设置别名ID
+ * @method string getAliasId() 获取别名ID。每个请求需要指定别名ID 或者舰队 ID，如果两个同时指定时，优先选择舰队 ID
+ * @method void setAliasId(string $AliasId) 设置别名ID。每个请求需要指定别名ID 或者舰队 ID，如果两个同时指定时，优先选择舰队 ID
  * @method string getCreatorId() 获取创建者ID
  * @method void setCreatorId(string $CreatorId) 设置创建者ID
- * @method string getFleetId() 获取舰队ID
- * @method void setFleetId(string $FleetId) 设置舰队ID
+ * @method string getFleetId() 获取舰队ID。每个请求需要指定别名ID 或者舰队 ID，如果两个同时指定时，优先选择舰队 ID
+ * @method void setFleetId(string $FleetId) 设置舰队ID。每个请求需要指定别名ID 或者舰队 ID，如果两个同时指定时，优先选择舰队 ID
  * @method array getGameProperties() 获取游戏属性
  * @method void setGameProperties(array $GameProperties) 设置游戏属性
  * @method string getGameServerSessionData() 获取游戏服务器会话属性详情
@@ -47,7 +47,7 @@ class CreateGameServerSessionRequest extends AbstractModel
     public $MaximumPlayerSessionCount;
 
     /**
-     * @var string 别名ID
+     * @var string 别名ID。每个请求需要指定别名ID 或者舰队 ID，如果两个同时指定时，优先选择舰队 ID
      */
     public $AliasId;
 
@@ -57,7 +57,7 @@ class CreateGameServerSessionRequest extends AbstractModel
     public $CreatorId;
 
     /**
-     * @var string 舰队ID
+     * @var string 舰队ID。每个请求需要指定别名ID 或者舰队 ID，如果两个同时指定时，优先选择舰队 ID
      */
     public $FleetId;
 
@@ -88,9 +88,9 @@ class CreateGameServerSessionRequest extends AbstractModel
 
     /**
      * @param integer $MaximumPlayerSessionCount 最大玩家数量
-     * @param string $AliasId 别名ID
+     * @param string $AliasId 别名ID。每个请求需要指定别名ID 或者舰队 ID，如果两个同时指定时，优先选择舰队 ID
      * @param string $CreatorId 创建者ID
-     * @param string $FleetId 舰队ID
+     * @param string $FleetId 舰队ID。每个请求需要指定别名ID 或者舰队 ID，如果两个同时指定时，优先选择舰队 ID
      * @param array $GameProperties 游戏属性
      * @param string $GameServerSessionData 游戏服务器会话属性详情
      * @param string $GameServerSessionId 游戏服务器会话自定义ID

@@ -62,6 +62,10 @@ NAT类型支持网络地址转换配置，类型确定后不能修改；一个�
  * @method void setEnableBGP(boolean $EnableBGP) 设置是否启用BGP。
  * @method boolean getEnableBGPCommunity() 获取开启和关闭BGP的community属性。
  * @method void setEnableBGPCommunity(boolean $EnableBGPCommunity) 设置开启和关闭BGP的community属性。
+ * @method string getNatGatewayId() 获取绑定的NAT网关ID。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNatGatewayId(string $NatGatewayId) 设置绑定的NAT网关ID。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DirectConnectGateway extends AbstractModel
 {
@@ -135,6 +139,12 @@ NAT类型支持网络地址转换配置，类型确定后不能修改；一个�
     public $EnableBGPCommunity;
 
     /**
+     * @var string 绑定的NAT网关ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NatGatewayId;
+
+    /**
      * @param string $DirectConnectGatewayId 专线网关`ID`。
      * @param string $DirectConnectGatewayName 专线网关名称。
      * @param string $VpcId 专线网关关联`VPC`实例`ID`。
@@ -156,6 +166,8 @@ NAT类型支持网络地址转换配置，类型确定后不能修改；一个�
 <li>`STATIC` - 静态，即用户配置。</li>
      * @param boolean $EnableBGP 是否启用BGP。
      * @param boolean $EnableBGPCommunity 开启和关闭BGP的community属性。
+     * @param string $NatGatewayId 绑定的NAT网关ID。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -216,6 +228,10 @@ NAT类型支持网络地址转换配置，类型确定后不能修改；一个�
 
         if (array_key_exists("EnableBGPCommunity",$param) and $param["EnableBGPCommunity"] !== null) {
             $this->EnableBGPCommunity = $param["EnableBGPCommunity"];
+        }
+
+        if (array_key_exists("NatGatewayId",$param) and $param["NatGatewayId"] !== null) {
+            $this->NatGatewayId = $param["NatGatewayId"];
         }
     }
 }

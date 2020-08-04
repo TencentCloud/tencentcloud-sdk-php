@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
 默认值是20。
  * @method string getTopIndex() 获取峰值指标，可选值包括”Domain”，”StreamId”。
  * @method void setTopIndex(string $TopIndex) 设置峰值指标，可选值包括”Domain”，”StreamId”。
- * @method string getOrderParam() 获取排序指标，可选值包括” AvgFluxPerSecond”，”TotalRequest”（默认）,“TotalFlux”。
- * @method void setOrderParam(string $OrderParam) 设置排序指标，可选值包括” AvgFluxPerSecond”，”TotalRequest”（默认）,“TotalFlux”。
+ * @method string getOrderParam() 获取排序指标，可选值包括” AvgFluxPerSecond”(按每秒平均流量排序)，”TotalRequest”（默认，按总请求数排序）,“TotalFlux”（按总流量排序）。
+ * @method void setOrderParam(string $OrderParam) 设置排序指标，可选值包括” AvgFluxPerSecond”(按每秒平均流量排序)，”TotalRequest”（默认，按总请求数排序）,“TotalFlux”（按总流量排序）。
  * @method integer getTotalNum() 获取记录总数。
  * @method void setTotalNum(integer $TotalNum) 设置记录总数。
  * @method integer getTotalPage() 获取记录总页数。
@@ -64,7 +64,7 @@ class DescribeVisitTopSumInfoListResponse extends AbstractModel
     public $TopIndex;
 
     /**
-     * @var string 排序指标，可选值包括” AvgFluxPerSecond”，”TotalRequest”（默认）,“TotalFlux”。
+     * @var string 排序指标，可选值包括” AvgFluxPerSecond”(按每秒平均流量排序)，”TotalRequest”（默认，按总请求数排序）,“TotalFlux”（按总流量排序）。
      */
     public $OrderParam;
 
@@ -95,7 +95,7 @@ class DescribeVisitTopSumInfoListResponse extends AbstractModel
      * @param integer $PageSize 每页个数，范围是[1,1000]，
 默认值是20。
      * @param string $TopIndex 峰值指标，可选值包括”Domain”，”StreamId”。
-     * @param string $OrderParam 排序指标，可选值包括” AvgFluxPerSecond”，”TotalRequest”（默认）,“TotalFlux”。
+     * @param string $OrderParam 排序指标，可选值包括” AvgFluxPerSecond”(按每秒平均流量排序)，”TotalRequest”（默认，按总请求数排序）,“TotalFlux”（按总流量排序）。
      * @param integer $TotalNum 记录总数。
      * @param integer $TotalPage 记录总页数。
      * @param array $DataInfoList 数据内容。

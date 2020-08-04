@@ -80,6 +80,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTradeIsolateStatus(integer $TradeIsolateStatus) 设置服务的计费状态。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTags() 获取服务绑定的标签
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTags(array $Tags) 设置服务绑定的标签
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Service extends AbstractModel
 {
@@ -174,6 +178,12 @@ class Service extends AbstractModel
     public $TradeIsolateStatus;
 
     /**
+     * @var array 服务绑定的标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Tags;
+
+    /**
      * @param integer $InnerHttpsPort 内网访问https端口。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ServiceDesc 用户自定义的服务描述。
@@ -203,6 +213,8 @@ class Service extends AbstractModel
      * @param string $InnerSubDomain 系统为该服务自动分配的内网域名。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TradeIsolateStatus 服务的计费状态。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Tags 服务绑定的标签
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -276,6 +288,15 @@ class Service extends AbstractModel
 
         if (array_key_exists("TradeIsolateStatus",$param) and $param["TradeIsolateStatus"] !== null) {
             $this->TradeIsolateStatus = $param["TradeIsolateStatus"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

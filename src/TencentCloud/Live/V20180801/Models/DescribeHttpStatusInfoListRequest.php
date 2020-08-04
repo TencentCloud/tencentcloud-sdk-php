@@ -22,16 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getStartTime() 获取起始时间，北京时间，
 格式：yyyy-mm-dd HH:MM:SS。
-StartTime不能为3个月前。
  * @method void setStartTime(string $StartTime) 设置起始时间，北京时间，
 格式：yyyy-mm-dd HH:MM:SS。
-StartTime不能为3个月前。
  * @method string getEndTime() 获取结束时间，北京时间，
 格式：yyyy-mm-dd HH:MM:SS。
-注：EndTime 和 StartTime 只支持最近1天的数据查询。
+注：最大时间跨度支持1天，支持最近3个月的数据查询。
  * @method void setEndTime(string $EndTime) 设置结束时间，北京时间，
 格式：yyyy-mm-dd HH:MM:SS。
-注：EndTime 和 StartTime 只支持最近1天的数据查询。
+注：最大时间跨度支持1天，支持最近3个月的数据查询。
  * @method array getPlayDomains() 获取播放域名列表。
  * @method void setPlayDomains(array $PlayDomains) 设置播放域名列表。
  */
@@ -40,14 +38,13 @@ class DescribeHttpStatusInfoListRequest extends AbstractModel
     /**
      * @var string 起始时间，北京时间，
 格式：yyyy-mm-dd HH:MM:SS。
-StartTime不能为3个月前。
      */
     public $StartTime;
 
     /**
      * @var string 结束时间，北京时间，
 格式：yyyy-mm-dd HH:MM:SS。
-注：EndTime 和 StartTime 只支持最近1天的数据查询。
+注：最大时间跨度支持1天，支持最近3个月的数据查询。
      */
     public $EndTime;
 
@@ -59,10 +56,9 @@ StartTime不能为3个月前。
     /**
      * @param string $StartTime 起始时间，北京时间，
 格式：yyyy-mm-dd HH:MM:SS。
-StartTime不能为3个月前。
      * @param string $EndTime 结束时间，北京时间，
 格式：yyyy-mm-dd HH:MM:SS。
-注：EndTime 和 StartTime 只支持最近1天的数据查询。
+注：最大时间跨度支持1天，支持最近3个月的数据查询。
      * @param array $PlayDomains 播放域名列表。
      */
     function __construct()

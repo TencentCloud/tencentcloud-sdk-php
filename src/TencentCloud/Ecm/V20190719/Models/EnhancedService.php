@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSecurityService(RunSecurityServiceEnabled $SecurityService) 设置是否开启云镜服务。
  * @method RunMonitorServiceEnabled getMonitorService() 获取是否开启云监控服务。
  * @method void setMonitorService(RunMonitorServiceEnabled $MonitorService) 设置是否开启云监控服务。
+ * @method RunEIPDirectServiceEnabled getEIPDirectService() 获取是否开通IP直通。若不指定该参数，则Linux镜像默认开通，windows镜像暂不支持IP直通。
+ * @method void setEIPDirectService(RunEIPDirectServiceEnabled $EIPDirectService) 设置是否开通IP直通。若不指定该参数，则Linux镜像默认开通，windows镜像暂不支持IP直通。
  */
 class EnhancedService extends AbstractModel
 {
@@ -38,8 +40,14 @@ class EnhancedService extends AbstractModel
     public $MonitorService;
 
     /**
+     * @var RunEIPDirectServiceEnabled 是否开通IP直通。若不指定该参数，则Linux镜像默认开通，windows镜像暂不支持IP直通。
+     */
+    public $EIPDirectService;
+
+    /**
      * @param RunSecurityServiceEnabled $SecurityService 是否开启云镜服务。
      * @param RunMonitorServiceEnabled $MonitorService 是否开启云监控服务。
+     * @param RunEIPDirectServiceEnabled $EIPDirectService 是否开通IP直通。若不指定该参数，则Linux镜像默认开通，windows镜像暂不支持IP直通。
      */
     function __construct()
     {
@@ -62,6 +70,11 @@ class EnhancedService extends AbstractModel
         if (array_key_exists("MonitorService",$param) and $param["MonitorService"] !== null) {
             $this->MonitorService = new RunMonitorServiceEnabled();
             $this->MonitorService->deserialize($param["MonitorService"]);
+        }
+
+        if (array_key_exists("EIPDirectService",$param) and $param["EIPDirectService"] !== null) {
+            $this->EIPDirectService = new RunEIPDirectServiceEnabled();
+            $this->EIPDirectService->deserialize($param["EIPDirectService"]);
         }
     }
 }

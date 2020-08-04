@@ -28,12 +28,12 @@ use TencentCloud\Common\AbstractModel;
 您可以通过调用 DescribeAccessPoints接口获取地域ID。所选择的接入点必须存在且处于可接入的状态。
  * @method string getLineOperator() 获取提供接入物理专线的运营商。ChinaTelecom：中国电信， ChinaMobile：中国移动，ChinaUnicom：中国联通， In-houseWiring：楼内线，ChinaOther：中国其他， InternationalOperator：境外其他。
  * @method void setLineOperator(string $LineOperator) 设置提供接入物理专线的运营商。ChinaTelecom：中国电信， ChinaMobile：中国移动，ChinaUnicom：中国联通， In-houseWiring：楼内线，ChinaOther：中国其他， InternationalOperator：境外其他。
- * @method string getLocation() 获取本地数据中心的地理位置。
- * @method void setLocation(string $Location) 设置本地数据中心的地理位置。
  * @method string getPortType() 获取物理专线接入端口类型,取值：100Base-T：百兆电口,1000Base-T（默认值）：千兆电口,1000Base-LX：千兆单模光口（10千米）,10GBase-T：万兆电口10GBase-LR：万兆单模光口（10千米），默认值，千兆单模光口（10千米）。
  * @method void setPortType(string $PortType) 设置物理专线接入端口类型,取值：100Base-T：百兆电口,1000Base-T（默认值）：千兆电口,1000Base-LX：千兆单模光口（10千米）,10GBase-T：万兆电口10GBase-LR：万兆单模光口（10千米），默认值，千兆单模光口（10千米）。
  * @method string getCircuitCode() 获取运营商或者服务商为物理专线提供的电路编码。
  * @method void setCircuitCode(string $CircuitCode) 设置运营商或者服务商为物理专线提供的电路编码。
+ * @method string getLocation() 获取本地数据中心的地理位置。
+ * @method void setLocation(string $Location) 设置本地数据中心的地理位置。
  * @method integer getBandwidth() 获取物理专线接入接口带宽，单位为Mbps，默认值为1000，取值范围为 [2, 10240]。
  * @method void setBandwidth(integer $Bandwidth) 设置物理专线接入接口带宽，单位为Mbps，默认值为1000，取值范围为 [2, 10240]。
  * @method string getRedundantDirectConnectId() 获取冗余物理专线的ID。
@@ -54,6 +54,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFaultReportContactPerson(string $FaultReportContactPerson) 设置报障联系人。
  * @method string getFaultReportContactNumber() 获取报障联系电话。
  * @method void setFaultReportContactNumber(string $FaultReportContactNumber) 设置报障联系电话。
+ * @method boolean getSignLaw() 获取物理专线申请者是否签署了用户使用协议。默认已签署
+ * @method void setSignLaw(boolean $SignLaw) 设置物理专线申请者是否签署了用户使用协议。默认已签署
  */
 class CreateDirectConnectRequest extends AbstractModel
 {
@@ -74,11 +76,6 @@ class CreateDirectConnectRequest extends AbstractModel
     public $LineOperator;
 
     /**
-     * @var string 本地数据中心的地理位置。
-     */
-    public $Location;
-
-    /**
      * @var string 物理专线接入端口类型,取值：100Base-T：百兆电口,1000Base-T（默认值）：千兆电口,1000Base-LX：千兆单模光口（10千米）,10GBase-T：万兆电口10GBase-LR：万兆单模光口（10千米），默认值，千兆单模光口（10千米）。
      */
     public $PortType;
@@ -87,6 +84,11 @@ class CreateDirectConnectRequest extends AbstractModel
      * @var string 运营商或者服务商为物理专线提供的电路编码。
      */
     public $CircuitCode;
+
+    /**
+     * @var string 本地数据中心的地理位置。
+     */
+    public $Location;
 
     /**
      * @var integer 物理专线接入接口带宽，单位为Mbps，默认值为1000，取值范围为 [2, 10240]。
@@ -139,13 +141,18 @@ class CreateDirectConnectRequest extends AbstractModel
     public $FaultReportContactNumber;
 
     /**
+     * @var boolean 物理专线申请者是否签署了用户使用协议。默认已签署
+     */
+    public $SignLaw;
+
+    /**
      * @param string $DirectConnectName 物理专线的名称。
      * @param string $AccessPointId 物理专线所在的接入点。
 您可以通过调用 DescribeAccessPoints接口获取地域ID。所选择的接入点必须存在且处于可接入的状态。
      * @param string $LineOperator 提供接入物理专线的运营商。ChinaTelecom：中国电信， ChinaMobile：中国移动，ChinaUnicom：中国联通， In-houseWiring：楼内线，ChinaOther：中国其他， InternationalOperator：境外其他。
-     * @param string $Location 本地数据中心的地理位置。
      * @param string $PortType 物理专线接入端口类型,取值：100Base-T：百兆电口,1000Base-T（默认值）：千兆电口,1000Base-LX：千兆单模光口（10千米）,10GBase-T：万兆电口10GBase-LR：万兆单模光口（10千米），默认值，千兆单模光口（10千米）。
      * @param string $CircuitCode 运营商或者服务商为物理专线提供的电路编码。
+     * @param string $Location 本地数据中心的地理位置。
      * @param integer $Bandwidth 物理专线接入接口带宽，单位为Mbps，默认值为1000，取值范围为 [2, 10240]。
      * @param string $RedundantDirectConnectId 冗余物理专线的ID。
      * @param integer $Vlan 物理专线调试VLAN。默认开启VLAN，自动分配VLAN。
@@ -156,6 +163,7 @@ class CreateDirectConnectRequest extends AbstractModel
      * @param string $CustomerContactNumber 物理专线申请者联系号码。默认从账户体系获取。
      * @param string $FaultReportContactPerson 报障联系人。
      * @param string $FaultReportContactNumber 报障联系电话。
+     * @param boolean $SignLaw 物理专线申请者是否签署了用户使用协议。默认已签署
      */
     function __construct()
     {
@@ -182,16 +190,16 @@ class CreateDirectConnectRequest extends AbstractModel
             $this->LineOperator = $param["LineOperator"];
         }
 
-        if (array_key_exists("Location",$param) and $param["Location"] !== null) {
-            $this->Location = $param["Location"];
-        }
-
         if (array_key_exists("PortType",$param) and $param["PortType"] !== null) {
             $this->PortType = $param["PortType"];
         }
 
         if (array_key_exists("CircuitCode",$param) and $param["CircuitCode"] !== null) {
             $this->CircuitCode = $param["CircuitCode"];
+        }
+
+        if (array_key_exists("Location",$param) and $param["Location"] !== null) {
+            $this->Location = $param["Location"];
         }
 
         if (array_key_exists("Bandwidth",$param) and $param["Bandwidth"] !== null) {
@@ -232,6 +240,10 @@ class CreateDirectConnectRequest extends AbstractModel
 
         if (array_key_exists("FaultReportContactNumber",$param) and $param["FaultReportContactNumber"] !== null) {
             $this->FaultReportContactNumber = $param["FaultReportContactNumber"];
+        }
+
+        if (array_key_exists("SignLaw",$param) and $param["SignLaw"] !== null) {
+            $this->SignLaw = $param["SignLaw"];
         }
     }
 }

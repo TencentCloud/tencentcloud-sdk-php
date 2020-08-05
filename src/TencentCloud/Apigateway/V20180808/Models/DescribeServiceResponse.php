@@ -72,6 +72,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSetId(integer $SetId) 设置预留字段。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTags() 获取服务绑定的标签。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTags(array $Tags) 设置服务绑定的标签。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -184,6 +188,12 @@ class DescribeServiceResponse extends AbstractModel
     public $SetId;
 
     /**
+     * @var array 服务绑定的标签。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Tags;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -214,6 +224,8 @@ class DescribeServiceResponse extends AbstractModel
      * @param string $UserType 此服务的用户类型。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SetId 预留字段。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Tags 服务绑定的标签。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -318,6 +330,15 @@ class DescribeServiceResponse extends AbstractModel
 
         if (array_key_exists("SetId",$param) and $param["SetId"] !== null) {
             $this->SetId = $param["SetId"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

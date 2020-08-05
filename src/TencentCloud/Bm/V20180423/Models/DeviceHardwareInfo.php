@@ -52,6 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRaidDescription(string $RaidDescription) 设置是否支持 RAID 的描述
  * @method integer getCpu() 获取cpu的核心数。仅是物理服务器未开启超线程的核心数， 超线程的核心数为Cpu*2
  * @method void setCpu(integer $Cpu) 设置cpu的核心数。仅是物理服务器未开启超线程的核心数， 超线程的核心数为Cpu*2
+ * @method string getDeviceClassCode() 获取机型外部代号
+ * @method void setDeviceClassCode(string $DeviceClassCode) 设置机型外部代号
  */
 class DeviceHardwareInfo extends AbstractModel
 {
@@ -136,6 +138,11 @@ class DeviceHardwareInfo extends AbstractModel
     public $Cpu;
 
     /**
+     * @var string 机型外部代号
+     */
+    public $DeviceClassCode;
+
+    /**
      * @param string $InstanceId 设备实例 ID
      * @param integer $IsElastic 是否自定义机型
      * @param integer $CpmPayMode 机型计费模式，1 为预付费，2 为后付费
@@ -152,6 +159,7 @@ class DeviceHardwareInfo extends AbstractModel
      * @param string $NicDescription 网卡描述
      * @param string $RaidDescription 是否支持 RAID 的描述
      * @param integer $Cpu cpu的核心数。仅是物理服务器未开启超线程的核心数， 超线程的核心数为Cpu*2
+     * @param string $DeviceClassCode 机型外部代号
      */
     function __construct()
     {
@@ -228,6 +236,10 @@ class DeviceHardwareInfo extends AbstractModel
 
         if (array_key_exists("Cpu",$param) and $param["Cpu"] !== null) {
             $this->Cpu = $param["Cpu"];
+        }
+
+        if (array_key_exists("DeviceClassCode",$param) and $param["DeviceClassCode"] !== null) {
+            $this->DeviceClassCode = $param["DeviceClassCode"];
         }
     }
 }

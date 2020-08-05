@@ -14,30 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Iotcloud\V20180614\Models;
+namespace TencentCloud\Iai\V20200303\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * PublishRRPCMessage返回参数结构体
+ * GetUpgradeGroupFaceModelVersionJobList返回参数结构体
  *
- * @method integer getMessageId() 获取RRPC消息ID
- * @method void setMessageId(integer $MessageId) 设置RRPC消息ID
- * @method string getPayloadBase64() 获取设备回复的消息内容，采用base64编码
- * @method void setPayloadBase64(string $PayloadBase64) 设置设备回复的消息内容，采用base64编码
+ * @method array getJobInfos() 获取人员库升级任务信息列表。
+ * @method void setJobInfos(array $JobInfos) 设置人员库升级任务信息列表。
+ * @method integer getJobNum() 获取升级任务总数量。
+ * @method void setJobNum(integer $JobNum) 设置升级任务总数量。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class PublishRRPCMessageResponse extends AbstractModel
+class GetUpgradeGroupFaceModelVersionJobListResponse extends AbstractModel
 {
     /**
-     * @var integer RRPC消息ID
+     * @var array 人员库升级任务信息列表。
      */
-    public $MessageId;
+    public $JobInfos;
 
     /**
-     * @var string 设备回复的消息内容，采用base64编码
+     * @var integer 升级任务总数量。
      */
-    public $PayloadBase64;
+    public $JobNum;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +45,8 @@ class PublishRRPCMessageResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $MessageId RRPC消息ID
-     * @param string $PayloadBase64 设备回复的消息内容，采用base64编码
+     * @param array $JobInfos 人员库升级任务信息列表。
+     * @param integer $JobNum 升级任务总数量。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,12 +62,17 @@ class PublishRRPCMessageResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MessageId",$param) and $param["MessageId"] !== null) {
-            $this->MessageId = $param["MessageId"];
+        if (array_key_exists("JobInfos",$param) and $param["JobInfos"] !== null) {
+            $this->JobInfos = [];
+            foreach ($param["JobInfos"] as $key => $value){
+                $obj = new UpgradeJobInfo();
+                $obj->deserialize($value);
+                array_push($this->JobInfos, $obj);
+            }
         }
 
-        if (array_key_exists("PayloadBase64",$param) and $param["PayloadBase64"] !== null) {
-            $this->PayloadBase64 = $param["PayloadBase64"];
+        if (array_key_exists("JobNum",$param) and $param["JobNum"] !== null) {
+            $this->JobNum = $param["JobNum"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -26,10 +26,12 @@ use TencentCloud\Common\AbstractModel;
 <li>nat-gateway-id - String - （过滤条件）协议端口模板实例ID，形如：`nat-123xx454`。</li>
 <li>vpc-id - String - （过滤条件）私有网络 唯一ID，形如：`vpc-123xx454`。</li>
 <li>nat-gateway-name - String - （过滤条件）协议端口模板实例ID，形如：`test_nat`。</li>
+<li>tag-key - String - （过滤条件）标签键，形如：`test-key`。</li>
  * @method void setFilters(array $Filters) 设置过滤条件，参数不支持同时指定NatGatewayIds和Filters。
 <li>nat-gateway-id - String - （过滤条件）协议端口模板实例ID，形如：`nat-123xx454`。</li>
 <li>vpc-id - String - （过滤条件）私有网络 唯一ID，形如：`vpc-123xx454`。</li>
 <li>nat-gateway-name - String - （过滤条件）协议端口模板实例ID，形如：`test_nat`。</li>
+<li>tag-key - String - （过滤条件）标签键，形如：`test-key`。</li>
  * @method integer getOffset() 获取偏移量，默认为0。
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
  * @method integer getLimit() 获取返回数量，默认为20，最大值为100。
@@ -47,6 +49,7 @@ class DescribeNatGatewaysRequest extends AbstractModel
 <li>nat-gateway-id - String - （过滤条件）协议端口模板实例ID，形如：`nat-123xx454`。</li>
 <li>vpc-id - String - （过滤条件）私有网络 唯一ID，形如：`vpc-123xx454`。</li>
 <li>nat-gateway-name - String - （过滤条件）协议端口模板实例ID，形如：`test_nat`。</li>
+<li>tag-key - String - （过滤条件）标签键，形如：`test-key`。</li>
      */
     public $Filters;
 
@@ -66,6 +69,7 @@ class DescribeNatGatewaysRequest extends AbstractModel
 <li>nat-gateway-id - String - （过滤条件）协议端口模板实例ID，形如：`nat-123xx454`。</li>
 <li>vpc-id - String - （过滤条件）私有网络 唯一ID，形如：`vpc-123xx454`。</li>
 <li>nat-gateway-name - String - （过滤条件）协议端口模板实例ID，形如：`test_nat`。</li>
+<li>tag-key - String - （过滤条件）标签键，形如：`test-key`。</li>
      * @param integer $Offset 偏移量，默认为0。
      * @param integer $Limit 返回数量，默认为20，最大值为100。
      */

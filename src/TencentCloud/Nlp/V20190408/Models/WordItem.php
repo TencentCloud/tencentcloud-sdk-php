@@ -20,24 +20,24 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 词条信息。
  *
- * @method string getCreateTime() 获取词条创建时间。
- * @method void setCreateTime(string $CreateTime) 设置词条创建时间。
  * @method string getText() 获取词条文本内容。
  * @method void setText(string $Text) 设置词条文本内容。
+ * @method string getCreateTime() 获取词条创建时间。
+ * @method void setCreateTime(string $CreateTime) 设置词条创建时间。
  * @method string getPos() 获取词条的词性。
  * @method void setPos(string $Pos) 设置词条的词性。
  */
 class WordItem extends AbstractModel
 {
     /**
-     * @var string 词条创建时间。
-     */
-    public $CreateTime;
-
-    /**
      * @var string 词条文本内容。
      */
     public $Text;
+
+    /**
+     * @var string 词条创建时间。
+     */
+    public $CreateTime;
 
     /**
      * @var string 词条的词性。
@@ -45,8 +45,8 @@ class WordItem extends AbstractModel
     public $Pos;
 
     /**
-     * @param string $CreateTime 词条创建时间。
      * @param string $Text 词条文本内容。
+     * @param string $CreateTime 词条创建时间。
      * @param string $Pos 词条的词性。
      */
     function __construct()
@@ -62,12 +62,12 @@ class WordItem extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
-        }
-
         if (array_key_exists("Text",$param) and $param["Text"] !== null) {
             $this->Text = $param["Text"];
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
         }
 
         if (array_key_exists("Pos",$param) and $param["Pos"] !== null) {

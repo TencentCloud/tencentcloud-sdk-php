@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeLoadBalancersDetail请求参数结构体
  *
- * @method integer getLimit() 获取返回负载均衡列表数目，默认20，最大值1000。
- * @method void setLimit(integer $Limit) 设置返回负载均衡列表数目，默认20，最大值1000。
+ * @method integer getLimit() 获取返回负载均衡列表数目，默认20，最大值100。
+ * @method void setLimit(integer $Limit) 设置返回负载均衡列表数目，默认20，最大值100。
  * @method integer getOffset() 获取返回负载均衡列表起始偏移量，默认0
  * @method void setOffset(integer $Offset) 设置返回负载均衡列表起始偏移量，默认0
  * @method array getFields() 获取选择返回的Fields列表，默认添加LoadBalancerId和LoadBalancerName。
@@ -54,7 +54,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeLoadBalancersDetailRequest extends AbstractModel
 {
     /**
-     * @var integer 返回负载均衡列表数目，默认20，最大值1000。
+     * @var integer 返回负载均衡列表数目，默认20，最大值100。
      */
     public $Limit;
 
@@ -89,7 +89,7 @@ class DescribeLoadBalancersDetailRequest extends AbstractModel
     public $Filters;
 
     /**
-     * @param integer $Limit 返回负载均衡列表数目，默认20，最大值1000。
+     * @param integer $Limit 返回负载均衡列表数目，默认20，最大值100。
      * @param integer $Offset 返回负载均衡列表起始偏移量，默认0
      * @param array $Fields 选择返回的Fields列表，默认添加LoadBalancerId和LoadBalancerName。
      * @param string $TargetType 当Fields包含TargetId、TargetAddress、TargetPort、TargetWeight等Fields时，必选选择导出目标组的Target或者非目标组Target，值范围NODE、GROUP。

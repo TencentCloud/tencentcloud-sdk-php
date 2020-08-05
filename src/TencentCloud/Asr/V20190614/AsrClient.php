@@ -30,7 +30,7 @@ use TencentCloud\Asr\V20190614\Models as Models;
 <br>•   本地文件必须为UTF-8编码格式，每行仅添加一个热词且不能包含标点和特殊字符。
 <br>•   热词权重取值范围为[1,10]之间的整数，权重越大代表该词被识别出来的概率越大。
  * @method Models\CreateRecTaskResponse CreateRecTask(Models\CreateRecTaskRequest $req) 本接口服务对时长5小时以内的录音文件进行识别，异步返回识别全部结果， HTTP RESTful 形式。
-<br>• 支持中文普通话、英语和粤语
+<br>• 支持中文普通话、英语、粤语和日语
 <br>• 支持通用、音视频领域
 <br>• 支持wav、mp3、m4a的音频格式
 <br>• 支持语音 URL 和本地语音文件两种请求方式
@@ -46,7 +46,7 @@ use TencentCloud\Asr\V20190614\Models as Models;
  * @method Models\GetAsrVocabResponse GetAsrVocab(Models\GetAsrVocabRequest $req) 用户根据词表的ID可以获取对应的热词表信息
  * @method Models\GetAsrVocabListResponse GetAsrVocabList(Models\GetAsrVocabListRequest $req) 用户通过该接口，可获得所有的热词表及其信息。
  * @method Models\SentenceRecognitionResponse SentenceRecognition(Models\SentenceRecognitionRequest $req) 本接口用于对60秒之内的短音频文件进行识别。
-<br>•   支持中文普通话、英语、粤语。
+<br>•   支持中文普通话、英语、粤语、日语。
 <br>•   支持本地语音文件上传和语音URL上传两种请求方式，音频时长不能超过60s。
 <br>•   音频格式支持wav、mp3；采样率支持8000Hz或者16000Hz；采样精度支持16bits；声道支持单声道。
 <br>•   当音频文件通过请求中body内容上传时，请求大小不能超过3MB。

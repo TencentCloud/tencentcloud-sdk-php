@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getRouteTableName() 获取路由表名称。
  * @method void setRouteTableName(string $RouteTableName) 设置路由表名称。
+ * @method array getFilters() 获取过滤条件,当前只支持按照单个条件GatewayIP进行过滤（可选）
+ * @method void setFilters(array $Filters) 设置过滤条件,当前只支持按照单个条件GatewayIP进行过滤（可选）
  */
 class DescribeClusterRoutesRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class DescribeClusterRoutesRequest extends AbstractModel
     public $RouteTableName;
 
     /**
+     * @var array 过滤条件,当前只支持按照单个条件GatewayIP进行过滤（可选）
+     */
+    public $Filters;
+
+    /**
      * @param string $RouteTableName 路由表名称。
+     * @param array $Filters 过滤条件,当前只支持按照单个条件GatewayIP进行过滤（可选）
      */
     function __construct()
     {
@@ -48,6 +56,15 @@ class DescribeClusterRoutesRequest extends AbstractModel
         }
         if (array_key_exists("RouteTableName",$param) and $param["RouteTableName"] !== null) {
             $this->RouteTableName = $param["RouteTableName"];
+        }
+
+        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+            $this->Filters = [];
+            foreach ($param["Filters"] as $key => $value){
+                $obj = new Filter();
+                $obj->deserialize($value);
+                array_push($this->Filters, $obj);
+            }
         }
     }
 }

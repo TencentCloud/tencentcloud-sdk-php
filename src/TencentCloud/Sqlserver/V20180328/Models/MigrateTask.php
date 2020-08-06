@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) 设置迁移任务的开始时间
  * @method string getEndTime() 获取迁移任务的结束时间
  * @method void setEndTime(string $EndTime) 设置迁移任务的结束时间
- * @method integer getStatus() 获取迁移任务的状态（1:初始化,4:迁移中,5.迁移失败,6.迁移成功）
- * @method void setStatus(integer $Status) 设置迁移任务的状态（1:初始化,4:迁移中,5.迁移失败,6.迁移成功）
+ * @method integer getStatus() 获取迁移任务的状态（1:初始化,4:迁移中,5.迁移失败,6.迁移成功,7已中止,8已删除,9中止中,10完成中,11中止失败,12完成失败）
+ * @method void setStatus(integer $Status) 设置迁移任务的状态（1:初始化,4:迁移中,5.迁移失败,6.迁移成功,7已中止,8已删除,9中止中,10完成中,11中止失败,12完成失败）
  * @method string getMessage() 获取信息
  * @method void setMessage(string $Message) 设置信息
  * @method integer getCheckFlag() 获取是否迁移任务经过检查（0:未校验,1:校验成功,2:校验失败,3:校验中）
@@ -90,7 +90,7 @@ class MigrateTask extends AbstractModel
     public $EndTime;
 
     /**
-     * @var integer 迁移任务的状态（1:初始化,4:迁移中,5.迁移失败,6.迁移成功）
+     * @var integer 迁移任务的状态（1:初始化,4:迁移中,5.迁移失败,6.迁移成功,7已中止,8已删除,9中止中,10完成中,11中止失败,12完成失败）
      */
     public $Status;
 
@@ -123,7 +123,7 @@ class MigrateTask extends AbstractModel
      * @param string $CreateTime 迁移任务的创建时间
      * @param string $StartTime 迁移任务的开始时间
      * @param string $EndTime 迁移任务的结束时间
-     * @param integer $Status 迁移任务的状态（1:初始化,4:迁移中,5.迁移失败,6.迁移成功）
+     * @param integer $Status 迁移任务的状态（1:初始化,4:迁移中,5.迁移失败,6.迁移成功,7已中止,8已删除,9中止中,10完成中,11中止失败,12完成失败）
      * @param string $Message 信息
      * @param integer $CheckFlag 是否迁移任务经过检查（0:未校验,1:校验成功,2:校验失败,3:校验中）
      * @param integer $Progress 迁移任务当前进度（单位%）

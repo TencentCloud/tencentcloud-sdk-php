@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTagSet() 获取标签键值对。
  * @method void setTagSet(array $TagSet) 设置标签键值对。
+ * @method boolean getRoutePriorityFlag() 获取是否支持云联网路由优先级的功能。False：不支持，True：支持。
+ * @method void setRoutePriorityFlag(boolean $RoutePriorityFlag) 设置是否支持云联网路由优先级的功能。False：不支持，True：支持。
  */
 class CCN extends AbstractModel
 {
@@ -100,6 +102,11 @@ class CCN extends AbstractModel
     public $TagSet;
 
     /**
+     * @var boolean 是否支持云联网路由优先级的功能。False：不支持，True：支持。
+     */
+    public $RoutePriorityFlag;
+
+    /**
      * @param string $CcnId 云联网唯一ID
      * @param string $CcnName 云联网名称
      * @param string $CcnDescription 云联网描述信息
@@ -112,6 +119,7 @@ class CCN extends AbstractModel
      * @param string $BandwidthLimitType 限速类型，INTER_REGION_LIMIT为地域间限速；OUTER_REGION_LIMIT为地域出口限速。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $TagSet 标签键值对。
+     * @param boolean $RoutePriorityFlag 是否支持云联网路由优先级的功能。False：不支持，True：支持。
      */
     function __construct()
     {
@@ -169,6 +177,10 @@ class CCN extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->TagSet, $obj);
             }
+        }
+
+        if (array_key_exists("RoutePriorityFlag",$param) and $param["RoutePriorityFlag"] !== null) {
+            $this->RoutePriorityFlag = $param["RoutePriorityFlag"];
         }
     }
 }

@@ -38,6 +38,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnabled(boolean $Enabled) 设置路由是否启用
  * @method string getInstanceUin() 获取关联实例所属UIN（根账号）
  * @method void setInstanceUin(string $InstanceUin) 设置关联实例所属UIN（根账号）
+ * @method string getExtraState() 获取路由的扩展状态
+ * @method void setExtraState(string $ExtraState) 设置路由的扩展状态
+ * @method boolean getIsBgp() 获取是否动态路由
+ * @method void setIsBgp(boolean $IsBgp) 设置是否动态路由
+ * @method integer getRoutePriority() 获取路由优先级
+ * @method void setRoutePriority(integer $RoutePriority) 设置路由优先级
+ * @method string getInstanceExtraName() 获取下一跳扩展名称（关联实例的扩展名称）
+ * @method void setInstanceExtraName(string $InstanceExtraName) 设置下一跳扩展名称（关联实例的扩展名称）
  */
 class CcnRoute extends AbstractModel
 {
@@ -87,6 +95,26 @@ class CcnRoute extends AbstractModel
     public $InstanceUin;
 
     /**
+     * @var string 路由的扩展状态
+     */
+    public $ExtraState;
+
+    /**
+     * @var boolean 是否动态路由
+     */
+    public $IsBgp;
+
+    /**
+     * @var integer 路由优先级
+     */
+    public $RoutePriority;
+
+    /**
+     * @var string 下一跳扩展名称（关联实例的扩展名称）
+     */
+    public $InstanceExtraName;
+
+    /**
      * @param string $RouteId 路由策略ID
      * @param string $DestinationCidrBlock 目的端
      * @param string $InstanceType 下一跳类型（关联实例类型），所有类型：VPC、DIRECTCONNECT
@@ -96,6 +124,10 @@ class CcnRoute extends AbstractModel
      * @param string $UpdateTime 更新时间
      * @param boolean $Enabled 路由是否启用
      * @param string $InstanceUin 关联实例所属UIN（根账号）
+     * @param string $ExtraState 路由的扩展状态
+     * @param boolean $IsBgp 是否动态路由
+     * @param integer $RoutePriority 路由优先级
+     * @param string $InstanceExtraName 下一跳扩展名称（关联实例的扩展名称）
      */
     function __construct()
     {
@@ -144,6 +176,22 @@ class CcnRoute extends AbstractModel
 
         if (array_key_exists("InstanceUin",$param) and $param["InstanceUin"] !== null) {
             $this->InstanceUin = $param["InstanceUin"];
+        }
+
+        if (array_key_exists("ExtraState",$param) and $param["ExtraState"] !== null) {
+            $this->ExtraState = $param["ExtraState"];
+        }
+
+        if (array_key_exists("IsBgp",$param) and $param["IsBgp"] !== null) {
+            $this->IsBgp = $param["IsBgp"];
+        }
+
+        if (array_key_exists("RoutePriority",$param) and $param["RoutePriority"] !== null) {
+            $this->RoutePriority = $param["RoutePriority"];
+        }
+
+        if (array_key_exists("InstanceExtraName",$param) and $param["InstanceExtraName"] !== null) {
+            $this->InstanceExtraName = $param["InstanceExtraName"];
         }
     }
 }

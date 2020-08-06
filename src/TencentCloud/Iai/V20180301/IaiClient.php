@@ -107,9 +107,18 @@ use TencentCloud\Iai\V20180301\Models as Models;
  * @method Models\GetPersonListResponse GetPersonList(Models\GetPersonListRequest $req) 获取指定人员库中的人员列表。
  * @method Models\GetPersonListNumResponse GetPersonListNum(Models\GetPersonListNumRequest $req) 获取指定人员库中人员数量。
  * @method Models\GetSimilarPersonResultResponse GetSimilarPersonResult(Models\GetSimilarPersonResultRequest $req) 获取人员查重接口（CheckSimilarPerson）结果。
+ * @method Models\GetUpgradeGroupFaceModelVersionJobListResponse GetUpgradeGroupFaceModelVersionJobList(Models\GetUpgradeGroupFaceModelVersionJobListRequest $req) 获取人员库升级任务列表
+
+ * @method Models\GetUpgradeGroupFaceModelVersionResultResponse GetUpgradeGroupFaceModelVersionResult(Models\GetUpgradeGroupFaceModelVersionResultRequest $req) 人员库升级结果查询
+
  * @method Models\ModifyGroupResponse ModifyGroup(Models\ModifyGroupRequest $req) 修改人员库名称、备注、自定义描述字段名称。
  * @method Models\ModifyPersonBaseInfoResponse ModifyPersonBaseInfo(Models\ModifyPersonBaseInfoRequest $req) 修改人员信息，包括名称、性别等。人员名称和性别修改会同步到包含该人员的所有人员库。
  * @method Models\ModifyPersonGroupInfoResponse ModifyPersonGroupInfo(Models\ModifyPersonGroupInfoRequest $req) 修改指定人员库人员描述内容。
+ * @method Models\RevertGroupFaceModelVersionResponse RevertGroupFaceModelVersion(Models\RevertGroupFaceModelVersionRequest $req) 本接口用于回滚人员库的人脸识别算法模型版本。单个人员库有且仅有一次回滚机会。
+
+回滚操作会在10s内生效，回滚操作中，您对人员库的操作可能会失效。
+
+注：给客户我会写10s内生效，我们实际上越快越好。待讨论。
  * @method Models\SearchFacesResponse SearchFaces(Models\SearchFacesRequest $req) 用于对一张待识别的人脸图片，在一个或多个人员库中识别出最相似的 TopK 人员，识别结果按照相似度从大到小排序。
 
 支持一次性识别图片中的最多 10 张人脸，支持一次性跨 100 个人员库（Group）搜索。
@@ -158,6 +167,9 @@ use TencentCloud\Iai\V20180301\Models as Models;
 >     
 - 公共参数中的签名方式请使用V3版本，即配置SignatureMethod参数为TC3-HMAC-SHA256。
 - 仅支持算法模型版本（FaceModelVersion）为3.0的人员库。
+ * @method Models\UpgradeGroupFaceModelVersionResponse UpgradeGroupFaceModelVersion(Models\UpgradeGroupFaceModelVersionRequest $req) 升级人员库。升级过程中，人员库仍然为原算法版本，人员库相关操作仍然支持。升级完成后，人员库为新算法版本。
+单个人员库有且仅支持一次回滚操作。
+注：此处QPS限制为10。
  * @method Models\VerifyFaceResponse VerifyFace(Models\VerifyFaceRequest $req) 给定一张人脸图片和一个 PersonId，判断图片中的人和 PersonId 对应的人是否为同一人。PersonId 请参考[人员库管理相关接口](https://cloud.tencent.com/document/product/867/32794)。 
 
 与[人脸比对](https://cloud.tencent.com/document/product/867/32802)接口不同的是，人脸验证用于判断 “此人是否是此人”，“此人”的信息已存于人员库中，“此人”可能存在多张人脸图片；而[人脸比对](https://cloud.tencent.com/document/product/867/32802)用于判断两张人脸的相似度。

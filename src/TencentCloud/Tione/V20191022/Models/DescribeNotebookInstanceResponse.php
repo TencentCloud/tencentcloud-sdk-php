@@ -114,6 +114,10 @@ Failed: 失败
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStoppingCondition(StoppingCondition $StoppingCondition) 设置自动停止配置
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method ClsConfig getClsConfig() 获取Cls配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setClsConfig(ClsConfig $ClsConfig) 设置Cls配置
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -247,6 +251,12 @@ Failed: 失败
     public $StoppingCondition;
 
     /**
+     * @var ClsConfig Cls配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ClsConfig;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -298,6 +308,8 @@ Failed: 失败
      * @param string $Deadline 实例运行截止时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param StoppingCondition $StoppingCondition 自动停止配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClsConfig $ClsConfig Cls配置
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -393,6 +405,11 @@ Failed: 失败
         if (array_key_exists("StoppingCondition",$param) and $param["StoppingCondition"] !== null) {
             $this->StoppingCondition = new StoppingCondition();
             $this->StoppingCondition->deserialize($param["StoppingCondition"]);
+        }
+
+        if (array_key_exists("ClsConfig",$param) and $param["ClsConfig"] !== null) {
+            $this->ClsConfig = new ClsConfig();
+            $this->ClsConfig->deserialize($param["ClsConfig"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

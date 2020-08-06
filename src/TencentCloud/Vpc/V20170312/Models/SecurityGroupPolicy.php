@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 安全组规则对象
  *
- * @method integer getPolicyIndex() 获取安全组规则索引号。
- * @method void setPolicyIndex(integer $PolicyIndex) 设置安全组规则索引号。
- * @method string getProtocol() 获取协议, 取值: TCP,UDP, ICMP。
- * @method void setProtocol(string $Protocol) 设置协议, 取值: TCP,UDP, ICMP。
+ * @method integer getPolicyIndex() 获取安全组规则索引号，值会随着安全组规则的变更动态变化。使用PolicyIndex时，请先调用`DescribeSecurityGroupPolicies`获取到规则的PolicyIndex，并且结合返回值中的Version一起使用处理规则。
+ * @method void setPolicyIndex(integer $PolicyIndex) 设置安全组规则索引号，值会随着安全组规则的变更动态变化。使用PolicyIndex时，请先调用`DescribeSecurityGroupPolicies`获取到规则的PolicyIndex，并且结合返回值中的Version一起使用处理规则。
+ * @method string getProtocol() 获取协议, 取值: TCP,UDP,ICMP,ICMPv6,ALL。
+ * @method void setProtocol(string $Protocol) 设置协议, 取值: TCP,UDP,ICMP,ICMPv6,ALL。
  * @method string getPort() 获取端口(all, 离散port,  range)。
  * @method void setPort(string $Port) 设置端口(all, 离散port,  range)。
  * @method ServiceTemplateSpecification getServiceTemplate() 获取协议端口ID或者协议端口组ID。ServiceTemplate和Protocol+Port互斥。
@@ -46,12 +46,12 @@ use TencentCloud\Common\AbstractModel;
 class SecurityGroupPolicy extends AbstractModel
 {
     /**
-     * @var integer 安全组规则索引号。
+     * @var integer 安全组规则索引号，值会随着安全组规则的变更动态变化。使用PolicyIndex时，请先调用`DescribeSecurityGroupPolicies`获取到规则的PolicyIndex，并且结合返回值中的Version一起使用处理规则。
      */
     public $PolicyIndex;
 
     /**
-     * @var string 协议, 取值: TCP,UDP, ICMP。
+     * @var string 协议, 取值: TCP,UDP,ICMP,ICMPv6,ALL。
      */
     public $Protocol;
 
@@ -101,8 +101,8 @@ class SecurityGroupPolicy extends AbstractModel
     public $ModifyTime;
 
     /**
-     * @param integer $PolicyIndex 安全组规则索引号。
-     * @param string $Protocol 协议, 取值: TCP,UDP, ICMP。
+     * @param integer $PolicyIndex 安全组规则索引号，值会随着安全组规则的变更动态变化。使用PolicyIndex时，请先调用`DescribeSecurityGroupPolicies`获取到规则的PolicyIndex，并且结合返回值中的Version一起使用处理规则。
+     * @param string $Protocol 协议, 取值: TCP,UDP,ICMP,ICMPv6,ALL。
      * @param string $Port 端口(all, 离散port,  range)。
      * @param ServiceTemplateSpecification $ServiceTemplate 协议端口ID或者协议端口组ID。ServiceTemplate和Protocol+Port互斥。
      * @param string $CidrBlock 网段或IP(互斥)。

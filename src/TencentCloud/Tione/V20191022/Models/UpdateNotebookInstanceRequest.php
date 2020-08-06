@@ -64,6 +64,8 @@ use TencentCloud\Common\AbstractModel;
 取值为Enabled的时候读取StoppingCondition作为自动停止的配置
  * @method StoppingCondition getStoppingCondition() 获取自动停止配置，只在AutoStopping为Enabled的时候生效
  * @method void setStoppingCondition(StoppingCondition $StoppingCondition) 设置自动停止配置，只在AutoStopping为Enabled的时候生效
+ * @method ClsConfig getClsConfig() 获取接入日志的配置
+ * @method void setClsConfig(ClsConfig $ClsConfig) 设置接入日志的配置
  */
 class UpdateNotebookInstanceRequest extends AbstractModel
 {
@@ -146,6 +148,11 @@ class UpdateNotebookInstanceRequest extends AbstractModel
     public $StoppingCondition;
 
     /**
+     * @var ClsConfig 接入日志的配置
+     */
+    public $ClsConfig;
+
+    /**
      * @param string $NotebookInstanceName Notebook实例名称
 规则：“^\[a-zA-Z0-9\](-\*\[a-zA-Z0-9\])\*$”
      * @param string $RoleArn 角色的资源描述
@@ -168,6 +175,7 @@ class UpdateNotebookInstanceRequest extends AbstractModel
 取值为Disabled的时候StoppingCondition将被忽略
 取值为Enabled的时候读取StoppingCondition作为自动停止的配置
      * @param StoppingCondition $StoppingCondition 自动停止配置，只在AutoStopping为Enabled的时候生效
+     * @param ClsConfig $ClsConfig 接入日志的配置
      */
     function __construct()
     {
@@ -237,6 +245,11 @@ class UpdateNotebookInstanceRequest extends AbstractModel
         if (array_key_exists("StoppingCondition",$param) and $param["StoppingCondition"] !== null) {
             $this->StoppingCondition = new StoppingCondition();
             $this->StoppingCondition->deserialize($param["StoppingCondition"]);
+        }
+
+        if (array_key_exists("ClsConfig",$param) and $param["ClsConfig"] !== null) {
+            $this->ClsConfig = new ClsConfig();
+            $this->ClsConfig->deserialize($param["ClsConfig"]);
         }
     }
 }

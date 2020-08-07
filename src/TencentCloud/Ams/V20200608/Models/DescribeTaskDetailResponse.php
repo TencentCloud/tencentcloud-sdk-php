@@ -100,6 +100,10 @@ Block 建议屏蔽；
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setImageSegments(array $ImageSegments) 设置视频审核中的图片结果
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAudioText() 获取音频识别总文本
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAudioText(string $AudioText) 设置音频识别总文本
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -206,6 +210,12 @@ Block 建议屏蔽；
     public $ImageSegments;
 
     /**
+     * @var string 音频识别总文本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AudioText;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -250,6 +260,8 @@ Block 建议屏蔽；
      * @param array $AudioSegments 视频/音频审核中的音频结果
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ImageSegments 视频审核中的图片结果
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AudioText 音频识别总文本
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -341,6 +353,10 @@ Block 建议屏蔽；
                 $obj->deserialize($value);
                 array_push($this->ImageSegments, $obj);
             }
+        }
+
+        if (array_key_exists("AudioText",$param) and $param["AudioText"] !== null) {
+            $this->AudioText = $param["AudioText"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

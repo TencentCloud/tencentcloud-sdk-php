@@ -29,7 +29,7 @@ use TencentCloud\Common\AbstractModel;
 • 16k_zh_video：16k 音视频领域；
 • 16k_en：16k 英语；
 • 16k_ca：16k 粤语；
-• 16k_jp：16k 日语；
+• 16k_ja：16k 日语；
  * @method void setEngineModelType(string $EngineModelType) 设置引擎模型类型。
 电话场景：
 • 8k_zh：电话 8k 中文普通话通用（可用于双声道音频）；
@@ -39,7 +39,7 @@ use TencentCloud\Common\AbstractModel;
 • 16k_zh_video：16k 音视频领域；
 • 16k_en：16k 英语；
 • 16k_ca：16k 粤语；
-• 16k_jp：16k 日语；
+• 16k_ja：16k 日语；
  * @method integer getChannelNum() 获取语音声道数。1：单声道；2：双声道（仅支持 8k_zh 引擎模型）。
  * @method void setChannelNum(integer $ChannelNum) 设置语音声道数。1：单声道；2：双声道（仅支持 8k_zh 引擎模型）。
  * @method integer getResTextFormat() 获取识别结果返回形式。0： 识别结果文本(含分段时间戳)； 1：仅支持16k中文引擎，含识别结果详情(词时间戳列表，一般用于生成字幕场景)。
@@ -83,7 +83,7 @@ class CreateRecTaskRequest extends AbstractModel
 • 16k_zh_video：16k 音视频领域；
 • 16k_en：16k 英语；
 • 16k_ca：16k 粤语；
-• 16k_jp：16k 日语；
+• 16k_ja：16k 日语；
      */
     public $EngineModelType;
 
@@ -168,7 +168,7 @@ class CreateRecTaskRequest extends AbstractModel
 • 16k_zh_video：16k 音视频领域；
 • 16k_en：16k 英语；
 • 16k_ca：16k 粤语；
-• 16k_jp：16k 日语；
+• 16k_ja：16k 日语；
      * @param integer $ChannelNum 语音声道数。1：单声道；2：双声道（仅支持 8k_zh 引擎模型）。
      * @param integer $ResTextFormat 识别结果返回形式。0： 识别结果文本(含分段时间戳)； 1：仅支持16k中文引擎，含识别结果详情(词时间戳列表，一般用于生成字幕场景)。
      * @param integer $SourceType 语音数据来源。0：语音 URL；1：语音数据（post body）。

@@ -31,7 +31,7 @@ use TencentCloud\Common\AbstractModel;
 • 16k_zh：16k 中文普通话通用；
 • 16k_en：16k 英语；
 • 16k_ca：16k 粤语；
-• 16k_jp：16k 日语；
+• 16k_ja：16k 日语；
  * @method void setEngSerViceType(string $EngSerViceType) 设置引擎模型类型。
 电话场景：
 • 8k_zh：电话 8k 中文普通话通用；
@@ -39,7 +39,7 @@ use TencentCloud\Common\AbstractModel;
 • 16k_zh：16k 中文普通话通用；
 • 16k_en：16k 英语；
 • 16k_ca：16k 粤语；
-• 16k_jp：16k 日语；
+• 16k_ja：16k 日语；
  * @method integer getSourceType() 获取语音数据来源。0：语音 URL；1：语音数据（post body）。
  * @method void setSourceType(integer $SourceType) 设置语音数据来源。0：语音 URL；1：语音数据（post body）。
  * @method string getVoiceFormat() 获取识别音频的音频格式。mp3、wav。
@@ -83,7 +83,7 @@ class SentenceRecognitionRequest extends AbstractModel
 • 16k_zh：16k 中文普通话通用；
 • 16k_en：16k 英语；
 • 16k_ca：16k 粤语；
-• 16k_jp：16k 日语；
+• 16k_ja：16k 日语；
      */
     public $EngSerViceType;
 
@@ -152,7 +152,7 @@ class SentenceRecognitionRequest extends AbstractModel
 • 16k_zh：16k 中文普通话通用；
 • 16k_en：16k 英语；
 • 16k_ca：16k 粤语；
-• 16k_jp：16k 日语；
+• 16k_ja：16k 日语；
      * @param integer $SourceType 语音数据来源。0：语音 URL；1：语音数据（post body）。
      * @param string $VoiceFormat 识别音频的音频格式。mp3、wav。
      * @param string $UsrAudioKey 用户端对此任务的唯一标识，用户自助生成，用于用户查找识别结果。

@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置姓名
  * @method string getPhone() 获取手机号
  * @method void setPhone(string $Phone) 设置手机号
+ * @method string getCiphertextBlob() 获取有加密需求的用户，接入传入kms的CiphertextBlob
+ * @method void setCiphertextBlob(string $CiphertextBlob) 设置有加密需求的用户，接入传入kms的CiphertextBlob
+ * @method array getEncryptList() 获取在使用加密服务时，填入要被加密的字段。本接口中可填入加密后的IdCard，Name，Phone中的一个或多个
+ * @method void setEncryptList(array $EncryptList) 设置在使用加密服务时，填入要被加密的字段。本接口中可填入加密后的IdCard，Name，Phone中的一个或多个
  */
 class PhoneVerificationRequest extends AbstractModel
 {
@@ -45,9 +49,21 @@ class PhoneVerificationRequest extends AbstractModel
     public $Phone;
 
     /**
+     * @var string 有加密需求的用户，接入传入kms的CiphertextBlob
+     */
+    public $CiphertextBlob;
+
+    /**
+     * @var array 在使用加密服务时，填入要被加密的字段。本接口中可填入加密后的IdCard，Name，Phone中的一个或多个
+     */
+    public $EncryptList;
+
+    /**
      * @param string $IdCard 身份证号
      * @param string $Name 姓名
      * @param string $Phone 手机号
+     * @param string $CiphertextBlob 有加密需求的用户，接入传入kms的CiphertextBlob
+     * @param array $EncryptList 在使用加密服务时，填入要被加密的字段。本接口中可填入加密后的IdCard，Name，Phone中的一个或多个
      */
     function __construct()
     {
@@ -72,6 +88,14 @@ class PhoneVerificationRequest extends AbstractModel
 
         if (array_key_exists("Phone",$param) and $param["Phone"] !== null) {
             $this->Phone = $param["Phone"];
+        }
+
+        if (array_key_exists("CiphertextBlob",$param) and $param["CiphertextBlob"] !== null) {
+            $this->CiphertextBlob = $param["CiphertextBlob"];
+        }
+
+        if (array_key_exists("EncryptList",$param) and $param["EncryptList"] !== null) {
+            $this->EncryptList = $param["EncryptList"];
         }
     }
 }

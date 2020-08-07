@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDBNames(array $DBNames) 设置需要备份库名的列表(多库备份才填写)
  * @method string getInstanceId() 获取实例ID，形如mssql-i1z41iwd
  * @method void setInstanceId(string $InstanceId) 设置实例ID，形如mssql-i1z41iwd
+ * @method string getBackupName() 获取备份名称，若不填则自动生成“实例ID_备份开始时间戳”
+ * @method void setBackupName(string $BackupName) 设置备份名称，若不填则自动生成“实例ID_备份开始时间戳”
  */
 class CreateBackupRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class CreateBackupRequest extends AbstractModel
     public $InstanceId;
 
     /**
+     * @var string 备份名称，若不填则自动生成“实例ID_备份开始时间戳”
+     */
+    public $BackupName;
+
+    /**
      * @param integer $Strategy 备份策略(0-实例备份 1-多库备份)
      * @param array $DBNames 需要备份库名的列表(多库备份才填写)
      * @param string $InstanceId 实例ID，形如mssql-i1z41iwd
+     * @param string $BackupName 备份名称，若不填则自动生成“实例ID_备份开始时间戳”
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class CreateBackupRequest extends AbstractModel
 
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("BackupName",$param) and $param["BackupName"] !== null) {
+            $this->BackupName = $param["BackupName"];
         }
     }
 }

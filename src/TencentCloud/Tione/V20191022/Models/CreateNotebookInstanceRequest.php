@@ -60,9 +60,11 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAdditionalCodeRepositories(array $AdditionalCodeRepositories) 设置其他存储库列表
 每个元素可以是已创建的存储库名称或者已https://开头的公共git库
 参考https://cloud.tencent.com/document/product/851/43139
- * @method string getClsAccess() 获取是否开启CLS日志服务，可取值Enabled/Disabled，默认为Disabled
+ * @method string getClsAccess() 获取已弃用，请使用ClsConfig配置。
+是否开启CLS日志服务，可取值Enabled/Disabled，默认为Disabled
 开启后，Notebook运行的日志会收集到CLS中，CLS会产生费用，请根据需要选择
- * @method void setClsAccess(string $ClsAccess) 设置是否开启CLS日志服务，可取值Enabled/Disabled，默认为Disabled
+ * @method void setClsAccess(string $ClsAccess) 设置已弃用，请使用ClsConfig配置。
+是否开启CLS日志服务，可取值Enabled/Disabled，默认为Disabled
 开启后，Notebook运行的日志会收集到CLS中，CLS会产生费用，请根据需要选择
  * @method StoppingCondition getStoppingCondition() 获取自动停止配置
 选择定时停止Notebook实例
@@ -74,8 +76,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoStopping(string $AutoStopping) 设置自动停止，可取值Enabled/Disabled
 取值为Disabled的时候StoppingCondition将被忽略
 取值为Enabled的时候读取StoppingCondition作为自动停止的配置
- * @method ClsConfig getClsConfig() 获取接入日志的配置
- * @method void setClsConfig(ClsConfig $ClsConfig) 设置接入日志的配置
+ * @method ClsConfig getClsConfig() 获取接入日志的配置，默认接入免费日志
+ * @method void setClsConfig(ClsConfig $ClsConfig) 设置接入日志的配置，默认接入免费日志
  */
 class CreateNotebookInstanceRequest extends AbstractModel
 {
@@ -136,7 +138,8 @@ class CreateNotebookInstanceRequest extends AbstractModel
     public $AdditionalCodeRepositories;
 
     /**
-     * @var string 是否开启CLS日志服务，可取值Enabled/Disabled，默认为Disabled
+     * @var string 已弃用，请使用ClsConfig配置。
+是否开启CLS日志服务，可取值Enabled/Disabled，默认为Disabled
 开启后，Notebook运行的日志会收集到CLS中，CLS会产生费用，请根据需要选择
      */
     public $ClsAccess;
@@ -155,7 +158,7 @@ class CreateNotebookInstanceRequest extends AbstractModel
     public $AutoStopping;
 
     /**
-     * @var ClsConfig 接入日志的配置
+     * @var ClsConfig 接入日志的配置，默认接入免费日志
      */
     public $ClsConfig;
 
@@ -180,14 +183,15 @@ class CreateNotebookInstanceRequest extends AbstractModel
      * @param array $AdditionalCodeRepositories 其他存储库列表
 每个元素可以是已创建的存储库名称或者已https://开头的公共git库
 参考https://cloud.tencent.com/document/product/851/43139
-     * @param string $ClsAccess 是否开启CLS日志服务，可取值Enabled/Disabled，默认为Disabled
+     * @param string $ClsAccess 已弃用，请使用ClsConfig配置。
+是否开启CLS日志服务，可取值Enabled/Disabled，默认为Disabled
 开启后，Notebook运行的日志会收集到CLS中，CLS会产生费用，请根据需要选择
      * @param StoppingCondition $StoppingCondition 自动停止配置
 选择定时停止Notebook实例
      * @param string $AutoStopping 自动停止，可取值Enabled/Disabled
 取值为Disabled的时候StoppingCondition将被忽略
 取值为Enabled的时候读取StoppingCondition作为自动停止的配置
-     * @param ClsConfig $ClsConfig 接入日志的配置
+     * @param ClsConfig $ClsConfig 接入日志的配置，默认接入免费日志
      */
     function __construct()
     {

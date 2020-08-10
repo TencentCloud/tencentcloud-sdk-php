@@ -54,8 +54,8 @@ use TencentCloud\Common\AbstractModel;
 该值为true时，AdditionalCodeRepositories将被忽略
  * @method void setDisassociateAdditionalCodeRepositories(boolean $DisassociateAdditionalCodeRepositories) 设置是否取消关联其他存储库，默认false
 该值为true时，AdditionalCodeRepositories将被忽略
- * @method string getClsAccess() 获取是否开启CLS日志服务，可取值Enabled/Disabled
- * @method void setClsAccess(string $ClsAccess) 设置是否开启CLS日志服务，可取值Enabled/Disabled
+ * @method string getClsAccess() 获取已弃用，请使用ClsConfig配置。是否开启CLS日志服务，可取值Enabled/Disabled
+ * @method void setClsAccess(string $ClsAccess) 设置已弃用，请使用ClsConfig配置。是否开启CLS日志服务，可取值Enabled/Disabled
  * @method string getAutoStopping() 获取自动停止，可取值Enabled/Disabled
 取值为Disabled的时候StoppingCondition将被忽略
 取值为Enabled的时候读取StoppingCondition作为自动停止的配置
@@ -64,8 +64,8 @@ use TencentCloud\Common\AbstractModel;
 取值为Enabled的时候读取StoppingCondition作为自动停止的配置
  * @method StoppingCondition getStoppingCondition() 获取自动停止配置，只在AutoStopping为Enabled的时候生效
  * @method void setStoppingCondition(StoppingCondition $StoppingCondition) 设置自动停止配置，只在AutoStopping为Enabled的时候生效
- * @method ClsConfig getClsConfig() 获取接入日志的配置
- * @method void setClsConfig(ClsConfig $ClsConfig) 设置接入日志的配置
+ * @method ClsConfig getClsConfig() 获取接入日志的配置，默认使用免费日志服务。
+ * @method void setClsConfig(ClsConfig $ClsConfig) 设置接入日志的配置，默认使用免费日志服务。
  */
 class UpdateNotebookInstanceRequest extends AbstractModel
 {
@@ -131,7 +131,7 @@ class UpdateNotebookInstanceRequest extends AbstractModel
     public $DisassociateAdditionalCodeRepositories;
 
     /**
-     * @var string 是否开启CLS日志服务，可取值Enabled/Disabled
+     * @var string 已弃用，请使用ClsConfig配置。是否开启CLS日志服务，可取值Enabled/Disabled
      */
     public $ClsAccess;
 
@@ -148,7 +148,7 @@ class UpdateNotebookInstanceRequest extends AbstractModel
     public $StoppingCondition;
 
     /**
-     * @var ClsConfig 接入日志的配置
+     * @var ClsConfig 接入日志的配置，默认使用免费日志服务。
      */
     public $ClsConfig;
 
@@ -170,12 +170,12 @@ class UpdateNotebookInstanceRequest extends AbstractModel
 该值为true时，DefaultCodeRepository将被忽略
      * @param boolean $DisassociateAdditionalCodeRepositories 是否取消关联其他存储库，默认false
 该值为true时，AdditionalCodeRepositories将被忽略
-     * @param string $ClsAccess 是否开启CLS日志服务，可取值Enabled/Disabled
+     * @param string $ClsAccess 已弃用，请使用ClsConfig配置。是否开启CLS日志服务，可取值Enabled/Disabled
      * @param string $AutoStopping 自动停止，可取值Enabled/Disabled
 取值为Disabled的时候StoppingCondition将被忽略
 取值为Enabled的时候读取StoppingCondition作为自动停止的配置
      * @param StoppingCondition $StoppingCondition 自动停止配置，只在AutoStopping为Enabled的时候生效
-     * @param ClsConfig $ClsConfig 接入日志的配置
+     * @param ClsConfig $ClsConfig 接入日志的配置，默认使用免费日志服务。
      */
     function __construct()
     {

@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 资源类型的Tag
  *
- * @method string getResourceType() 获取资源类型，目前仅支持"instance"
- * @method void setResourceType(string $ResourceType) 设置资源类型，目前仅支持"instance"
+ * @method string getResourceType() 获取资源类型，目前仅支持"instance"、"module"
+ * @method void setResourceType(string $ResourceType) 设置资源类型，目前仅支持"instance"、"module"
  * @method array getTags() 获取标签列表
  * @method void setTags(array $Tags) 设置标签列表
  */
 class TagSpecification extends AbstractModel
 {
     /**
-     * @var string 资源类型，目前仅支持"instance"
+     * @var string 资源类型，目前仅支持"instance"、"module"
      */
     public $ResourceType;
 
@@ -38,7 +38,7 @@ class TagSpecification extends AbstractModel
     public $Tags;
 
     /**
-     * @param string $ResourceType 资源类型，目前仅支持"instance"
+     * @param string $ResourceType 资源类型，目前仅支持"instance"、"module"
      * @param array $Tags 标签列表
      */
     function __construct()

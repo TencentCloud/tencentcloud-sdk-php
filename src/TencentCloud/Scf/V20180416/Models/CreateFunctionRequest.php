@@ -58,6 +58,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPublicNetConfig(PublicNetConfigIn $PublicNetConfig) 设置公网访问配置
  * @method CfsConfig getCfsConfig() 获取文件系统配置参数，用于云函数挂载文件系统
  * @method void setCfsConfig(CfsConfig $CfsConfig) 设置文件系统配置参数，用于云函数挂载文件系统
+ * @method integer getInitTimeout() 获取函数初始化超时时间
+ * @method void setInitTimeout(integer $InitTimeout) 设置函数初始化超时时间
  */
 class CreateFunctionRequest extends AbstractModel
 {
@@ -157,6 +159,11 @@ class CreateFunctionRequest extends AbstractModel
     public $CfsConfig;
 
     /**
+     * @var integer 函数初始化超时时间
+     */
+    public $InitTimeout;
+
+    /**
      * @param string $FunctionName 创建的函数名称，函数名称支持26个英文字母大小写、数字、连接符和下划线，第一个字符只能以字母开头，最后一个字符不能为连接符或者下划线，名称长度2-60
      * @param Code $Code 函数的代码. 注意：不能同时指定Cos与ZipFile
      * @param string $Handler 函数处理方法名称，名称格式支持 "文件名称.方法名称" 形式，文件名称和函数名称之间以"."隔开，文件名称和函数名称要求以字母开始和结尾，中间允许插入字母、数字、下划线和连接符，文件名称和函数名字的长度要求是 2-60 个字符
@@ -176,6 +183,7 @@ class CreateFunctionRequest extends AbstractModel
      * @param DeadLetterConfig $DeadLetterConfig 死信队列参数
      * @param PublicNetConfigIn $PublicNetConfig 公网访问配置
      * @param CfsConfig $CfsConfig 文件系统配置参数，用于云函数挂载文件系统
+     * @param integer $InitTimeout 函数初始化超时时间
      */
     function __construct()
     {
@@ -275,6 +283,10 @@ class CreateFunctionRequest extends AbstractModel
         if (array_key_exists("CfsConfig",$param) and $param["CfsConfig"] !== null) {
             $this->CfsConfig = new CfsConfig();
             $this->CfsConfig->deserialize($param["CfsConfig"]);
+        }
+
+        if (array_key_exists("InitTimeout",$param) and $param["InitTimeout"] !== null) {
+            $this->InitTimeout = $param["InitTimeout"];
         }
     }
 }

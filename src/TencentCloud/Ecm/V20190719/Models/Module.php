@@ -44,6 +44,12 @@ DELETEFAILED：删除失败
  * @method void setCreateTime(string $CreateTime) 设置创建时间
  * @method integer getDefaultBandwidth() 获取默认带宽
  * @method void setDefaultBandwidth(integer $DefaultBandwidth) 设置默认带宽
+ * @method array getTagSet() 获取标签集合
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTagSet(array $TagSet) 设置标签集合
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getCloseIpDirect() 获取是否关闭IP直通
+ * @method void setCloseIpDirect(integer $CloseIpDirect) 设置是否关闭IP直通
  */
 class Module extends AbstractModel
 {
@@ -96,6 +102,17 @@ DELETEFAILED：删除失败
     public $DefaultBandwidth;
 
     /**
+     * @var array 标签集合
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TagSet;
+
+    /**
+     * @var integer 是否关闭IP直通
+     */
+    public $CloseIpDirect;
+
+    /**
      * @param string $ModuleId 模块Id
      * @param string $ModuleName 模块名称
      * @param string $ModuleState 模块状态：
@@ -108,6 +125,9 @@ DELETEFAILED：删除失败
      * @param Image $DefaultImage 默认镜像
      * @param string $CreateTime 创建时间
      * @param integer $DefaultBandwidth 默认带宽
+     * @param array $TagSet 标签集合
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $CloseIpDirect 是否关闭IP直通
      */
     function __construct()
     {
@@ -158,6 +178,19 @@ DELETEFAILED：删除失败
 
         if (array_key_exists("DefaultBandwidth",$param) and $param["DefaultBandwidth"] !== null) {
             $this->DefaultBandwidth = $param["DefaultBandwidth"];
+        }
+
+        if (array_key_exists("TagSet",$param) and $param["TagSet"] !== null) {
+            $this->TagSet = [];
+            foreach ($param["TagSet"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->TagSet, $obj);
+            }
+        }
+
+        if (array_key_exists("CloseIpDirect",$param) and $param["CloseIpDirect"] !== null) {
+            $this->CloseIpDirect = $param["CloseIpDirect"];
         }
     }
 }

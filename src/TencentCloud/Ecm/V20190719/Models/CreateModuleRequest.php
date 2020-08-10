@@ -32,6 +32,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDefaultSystemDiskSize(integer $DefaultSystemDiskSize) 设置默认系统盘大小，单位：G，默认大小为50G。范围不得超过系统盘上下限制，详看DescribeConfig。
  * @method integer getDefaultDataDiskSize() 获取默认数据盘大小，单位：G。范围不得超过数据盘范围大小，详看DescribeConfig。
  * @method void setDefaultDataDiskSize(integer $DefaultDataDiskSize) 设置默认数据盘大小，单位：G。范围不得超过数据盘范围大小，详看DescribeConfig。
+ * @method boolean getCloseIpDirect() 获取是否关闭IP直通。取值范围：
+1：表示关闭IP直通
+0：表示开通IP直通
+ * @method void setCloseIpDirect(boolean $CloseIpDirect) 设置是否关闭IP直通。取值范围：
+1：表示关闭IP直通
+0：表示开通IP直通
+ * @method array getTagSpecification() 获取标签列表。
+ * @method void setTagSpecification(array $TagSpecification) 设置标签列表。
  */
 class CreateModuleRequest extends AbstractModel
 {
@@ -66,12 +74,28 @@ class CreateModuleRequest extends AbstractModel
     public $DefaultDataDiskSize;
 
     /**
+     * @var boolean 是否关闭IP直通。取值范围：
+1：表示关闭IP直通
+0：表示开通IP直通
+     */
+    public $CloseIpDirect;
+
+    /**
+     * @var array 标签列表。
+     */
+    public $TagSpecification;
+
+    /**
      * @param string $ModuleName 模块名称，如视频直播模块。限制：模块名称不得以空格开头，长度不得超过60个字符。
      * @param integer $DefaultBandWidth 默认带宽，单位：M。范围不得超过带宽上下限，详看DescribeConfig。
      * @param string $DefaultImageId 默认镜像，如img-qsdf3ff2。
      * @param string $InstanceType 机型ID。
      * @param integer $DefaultSystemDiskSize 默认系统盘大小，单位：G，默认大小为50G。范围不得超过系统盘上下限制，详看DescribeConfig。
      * @param integer $DefaultDataDiskSize 默认数据盘大小，单位：G。范围不得超过数据盘范围大小，详看DescribeConfig。
+     * @param boolean $CloseIpDirect 是否关闭IP直通。取值范围：
+1：表示关闭IP直通
+0：表示开通IP直通
+     * @param array $TagSpecification 标签列表。
      */
     function __construct()
     {
@@ -108,6 +132,19 @@ class CreateModuleRequest extends AbstractModel
 
         if (array_key_exists("DefaultDataDiskSize",$param) and $param["DefaultDataDiskSize"] !== null) {
             $this->DefaultDataDiskSize = $param["DefaultDataDiskSize"];
+        }
+
+        if (array_key_exists("CloseIpDirect",$param) and $param["CloseIpDirect"] !== null) {
+            $this->CloseIpDirect = $param["CloseIpDirect"];
+        }
+
+        if (array_key_exists("TagSpecification",$param) and $param["TagSpecification"] !== null) {
+            $this->TagSpecification = [];
+            foreach ($param["TagSpecification"] as $key => $value){
+                $obj = new TagSpecification();
+                $obj->deserialize($value);
+                array_push($this->TagSpecification, $obj);
+            }
         }
     }
 }

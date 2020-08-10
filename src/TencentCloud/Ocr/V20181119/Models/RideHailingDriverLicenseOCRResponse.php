@@ -22,14 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getName() 获取姓名
  * @method void setName(string $Name) 设置姓名
- * @method string getLicenseNumber() 获取证号，对应网约车驾驶证字段：证号、从业资格证号、驾驶员证号、身份证号
- * @method void setLicenseNumber(string $LicenseNumber) 设置证号，对应网约车驾驶证字段：证号、从业资格证号、驾驶员证号、身份证号
+ * @method string getLicenseNumber() 获取证号，对应网约车驾驶证字段：证号/从业资格证号/驾驶员证号/身份证号
+ * @method void setLicenseNumber(string $LicenseNumber) 设置证号，对应网约车驾驶证字段：证号/从业资格证号/驾驶员证号/身份证号
  * @method string getStartDate() 获取有效起始日期
  * @method void setStartDate(string $StartDate) 设置有效起始日期
- * @method string getEndDate() 获取有效期截止时间，对应网约车驾驶证字段：有效期至、营运期限止
- * @method void setEndDate(string $EndDate) 设置有效期截止时间，对应网约车驾驶证字段：有效期至、营运期限止
- * @method string getReleaseDate() 获取初始发证日期，对应网约车驾驶证字段：初始领证日期、发证日期
- * @method void setReleaseDate(string $ReleaseDate) 设置初始发证日期，对应网约车驾驶证字段：初始领证日期、发证日期
+ * @method string getEndDate() 获取有效期截止时间，对应网约车驾驶证字段：有效期至/营运期限止
+ * @method void setEndDate(string $EndDate) 设置有效期截止时间，对应网约车驾驶证字段：有效期至/营运期限止
+ * @method string getReleaseDate() 获取初始发证日期，对应网约车驾驶证字段：初始领证日期/发证日期
+ * @method void setReleaseDate(string $ReleaseDate) 设置初始发证日期，对应网约车驾驶证字段：初始领证日期/发证日期
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -41,7 +41,7 @@ class RideHailingDriverLicenseOCRResponse extends AbstractModel
     public $Name;
 
     /**
-     * @var string 证号，对应网约车驾驶证字段：证号、从业资格证号、驾驶员证号、身份证号
+     * @var string 证号，对应网约车驾驶证字段：证号/从业资格证号/驾驶员证号/身份证号
      */
     public $LicenseNumber;
 
@@ -51,12 +51,12 @@ class RideHailingDriverLicenseOCRResponse extends AbstractModel
     public $StartDate;
 
     /**
-     * @var string 有效期截止时间，对应网约车驾驶证字段：有效期至、营运期限止
+     * @var string 有效期截止时间，对应网约车驾驶证字段：有效期至/营运期限止
      */
     public $EndDate;
 
     /**
-     * @var string 初始发证日期，对应网约车驾驶证字段：初始领证日期、发证日期
+     * @var string 初始发证日期，对应网约车驾驶证字段：初始领证日期/发证日期
      */
     public $ReleaseDate;
 
@@ -67,10 +67,10 @@ class RideHailingDriverLicenseOCRResponse extends AbstractModel
 
     /**
      * @param string $Name 姓名
-     * @param string $LicenseNumber 证号，对应网约车驾驶证字段：证号、从业资格证号、驾驶员证号、身份证号
+     * @param string $LicenseNumber 证号，对应网约车驾驶证字段：证号/从业资格证号/驾驶员证号/身份证号
      * @param string $StartDate 有效起始日期
-     * @param string $EndDate 有效期截止时间，对应网约车驾驶证字段：有效期至、营运期限止
-     * @param string $ReleaseDate 初始发证日期，对应网约车驾驶证字段：初始领证日期、发证日期
+     * @param string $EndDate 有效期截止时间，对应网约车驾驶证字段：有效期至/营运期限止
+     * @param string $ReleaseDate 初始发证日期，对应网约车驾驶证字段：初始领证日期/发证日期
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

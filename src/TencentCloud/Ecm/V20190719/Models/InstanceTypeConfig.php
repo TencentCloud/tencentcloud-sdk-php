@@ -34,9 +34,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCpuModelName(string $CpuModelName) 设置处理器型号
  * @method InstanceFamilyTypeConfig getInstanceFamilyTypeConfig() 获取机型族类别配置信息
  * @method void setInstanceFamilyTypeConfig(InstanceFamilyTypeConfig $InstanceFamilyTypeConfig) 设置机型族类别配置信息
- * @method string getExtInfo() 获取机型额外信息
+ * @method string getExtInfo() 获取机型额外信息 是一个json字符串，如果存在则表示特殊机型，格式如下：{"dataDiskSize":3200,"systemDiskSize":60, "systemDiskSizeShow":"系统盘默认60G","dataDiskSizeShow":"本地NVMe SSD 硬盘3200 GB"}
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setExtInfo(string $ExtInfo) 设置机型额外信息
+ * @method void setExtInfo(string $ExtInfo) 设置机型额外信息 是一个json字符串，如果存在则表示特殊机型，格式如下：{"dataDiskSize":3200,"systemDiskSize":60, "systemDiskSizeShow":"系统盘默认60G","dataDiskSizeShow":"本地NVMe SSD 硬盘3200 GB"}
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceTypeConfig extends AbstractModel
@@ -77,7 +77,7 @@ class InstanceTypeConfig extends AbstractModel
     public $InstanceFamilyTypeConfig;
 
     /**
-     * @var string 机型额外信息
+     * @var string 机型额外信息 是一个json字符串，如果存在则表示特殊机型，格式如下：{"dataDiskSize":3200,"systemDiskSize":60, "systemDiskSizeShow":"系统盘默认60G","dataDiskSizeShow":"本地NVMe SSD 硬盘3200 GB"}
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExtInfo;
@@ -90,7 +90,7 @@ class InstanceTypeConfig extends AbstractModel
      * @param string $Frequency 主频
      * @param string $CpuModelName 处理器型号
      * @param InstanceFamilyTypeConfig $InstanceFamilyTypeConfig 机型族类别配置信息
-     * @param string $ExtInfo 机型额外信息
+     * @param string $ExtInfo 机型额外信息 是一个json字符串，如果存在则表示特殊机型，格式如下：{"dataDiskSize":3200,"systemDiskSize":60, "systemDiskSizeShow":"系统盘默认60G","dataDiskSizeShow":"本地NVMe SSD 硬盘3200 GB"}
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

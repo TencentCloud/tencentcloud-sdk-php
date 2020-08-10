@@ -25,14 +25,14 @@ module-name - string - 是否必填：否 - （过滤条件）按照模块名称
 module-id - string - 是否必填：否 - （过滤条件）按照模块ID过滤。
 image-id      String      是否必填：否      （过滤条件）按照镜像ID过滤。
 instance-family      String      是否必填：否      （过滤条件）按照机型family过滤。
-
+security-group-id - string 是否必填：否 - （过滤条件）按照模块绑定的安全组id过滤。
 每次请求的Filters的上限为10，Filter.Values的上限为5。
  * @method void setFilters(array $Filters) 设置过滤条件。
 module-name - string - 是否必填：否 - （过滤条件）按照模块名称过滤。
 module-id - string - 是否必填：否 - （过滤条件）按照模块ID过滤。
 image-id      String      是否必填：否      （过滤条件）按照镜像ID过滤。
 instance-family      String      是否必填：否      （过滤条件）按照机型family过滤。
-
+security-group-id - string 是否必填：否 - （过滤条件）按照模块绑定的安全组id过滤。
 每次请求的Filters的上限为10，Filter.Values的上限为5。
  * @method integer getOffset() 获取偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节。
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节。
@@ -59,7 +59,7 @@ module-name - string - 是否必填：否 - （过滤条件）按照模块名称
 module-id - string - 是否必填：否 - （过滤条件）按照模块ID过滤。
 image-id      String      是否必填：否      （过滤条件）按照镜像ID过滤。
 instance-family      String      是否必填：否      （过滤条件）按照机型family过滤。
-
+security-group-id - string 是否必填：否 - （过滤条件）按照模块绑定的安全组id过滤。
 每次请求的Filters的上限为10，Filter.Values的上限为5。
      */
     public $Filters;
@@ -94,7 +94,7 @@ module-name - string - 是否必填：否 - （过滤条件）按照模块名称
 module-id - string - 是否必填：否 - （过滤条件）按照模块ID过滤。
 image-id      String      是否必填：否      （过滤条件）按照镜像ID过滤。
 instance-family      String      是否必填：否      （过滤条件）按照机型family过滤。
-
+security-group-id - string 是否必填：否 - （过滤条件）按照模块绑定的安全组id过滤。
 每次请求的Filters的上限为10，Filter.Values的上限为5。
      * @param integer $Offset 偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节。
      * @param integer $Limit 返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API 简介中的相关小节。

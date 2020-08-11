@@ -18,7 +18,7 @@ namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 描述一种规格的信息信息
+ * 描述一种规格的信息
  *
  * @method string getSpecCode() 获取规格ID
  * @method void setSpecCode(string $SpecCode) 设置规格ID

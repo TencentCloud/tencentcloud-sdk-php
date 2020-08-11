@@ -36,6 +36,7 @@ use TencentCloud\Tcr\V20190924\Models as Models;
  * @method Models\CreateUserPersonalResponse CreateUserPersonal(Models\CreateUserPersonalRequest $req) 创建个人用户
  * @method Models\CreateWebhookTriggerResponse CreateWebhookTrigger(Models\CreateWebhookTriggerRequest $req) 创建触发器
  * @method Models\DeleteApplicationTriggerPersonalResponse DeleteApplicationTriggerPersonal(Models\DeleteApplicationTriggerPersonalRequest $req) 用于删除应用更新触发器
+ * @method Models\DeleteImageResponse DeleteImage(Models\DeleteImageRequest $req) 删除指定镜像
  * @method Models\DeleteImageLifecycleGlobalPersonalResponse DeleteImageLifecycleGlobalPersonal(Models\DeleteImageLifecycleGlobalPersonalRequest $req) 用于删除个人版全局镜像版本自动清理策略
  * @method Models\DeleteImageLifecyclePersonalResponse DeleteImageLifecyclePersonal(Models\DeleteImageLifecyclePersonalRequest $req) 用于在个人版镜像仓库中删除仓库Tag自动清理策略
  * @method Models\DeleteImagePersonalResponse DeleteImagePersonal(Models\DeleteImagePersonalRequest $req) 用于在个人版中删除tag

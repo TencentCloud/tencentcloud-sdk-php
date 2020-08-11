@@ -52,8 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUrl(string $Url) 设置语音的URL地址，需要公网可下载。长度小于2048字节，当 SourceType 值为 0 时须填写该字段，为 1 时不需要填写。注意：请确保录音文件时长在5个小时之内，否则可能识别失败。请保证文件的下载速度，否则可能下载失败。
  * @method string getData() 获取语音数据，当SourceType 值为1时必须填写，为0可不写。要base64编码(采用python语言时注意读取文件应该为string而不是byte，以byte格式读取后要decode()。编码后的数据不可带有回车换行符)。音频数据要小于5MB。
  * @method void setData(string $Data) 设置语音数据，当SourceType 值为1时必须填写，为0可不写。要base64编码(采用python语言时注意读取文件应该为string而不是byte，以byte格式读取后要decode()。编码后的数据不可带有回车换行符)。音频数据要小于5MB。
- * @method integer getDataLen() 获取数据长度，当 SourceType 值为1时必须填写，为0可不写（此数据长度为数据未进行base64编码时的数据长度）。
- * @method void setDataLen(integer $DataLen) 设置数据长度，当 SourceType 值为1时必须填写，为0可不写（此数据长度为数据未进行base64编码时的数据长度）。
+ * @method integer getDataLen() 获取数据长度，非必填（此数据长度为数据未进行base64编码时的数据长度）。
+ * @method void setDataLen(integer $DataLen) 设置数据长度，非必填（此数据长度为数据未进行base64编码时的数据长度）。
  * @method string getHotwordId() 获取热词id。用于调用对应的热词表，如果在调用语音识别服务时，不进行单独的热词id设置，自动生效默认热词；如果进行了单独的热词id设置，那么将生效单独设置的热词id。
  * @method void setHotwordId(string $HotwordId) 设置热词id。用于调用对应的热词表，如果在调用语音识别服务时，不进行单独的热词id设置，自动生效默认热词；如果进行了单独的热词id设置，那么将生效单独设置的热词id。
  * @method integer getFilterDirty() 获取是否过滤脏词（目前支持中文普通话引擎）。0：不过滤脏词；1：过滤脏词；2：将脏词替换为 * 。默认值为 0。
@@ -70,6 +70,8 @@ use TencentCloud\Common\AbstractModel;
 注：话者分离目前是beta版本，请根据您的需要谨慎使用
  * @method void setSpeakerNumber(integer $SpeakerNumber) 设置话者分离人数（需配合开启话者分离使用），支持2-10（8k_zh仅支持2， 16k_zh支持2-10）
 注：话者分离目前是beta版本，请根据您的需要谨慎使用
+ * @method integer getFilterPunc() 获取是否过滤标点符号（目前支持中文普通话引擎）。 0：不过滤，1：过滤句末标点，2：过滤所有标点。默认为0。
+ * @method void setFilterPunc(integer $FilterPunc) 设置是否过滤标点符号（目前支持中文普通话引擎）。 0：不过滤，1：过滤句末标点，2：过滤所有标点。默认为0。
  */
 class CreateRecTaskRequest extends AbstractModel
 {
@@ -118,7 +120,7 @@ class CreateRecTaskRequest extends AbstractModel
     public $Data;
 
     /**
-     * @var integer 数据长度，当 SourceType 值为1时必须填写，为0可不写（此数据长度为数据未进行base64编码时的数据长度）。
+     * @var integer 数据长度，非必填（此数据长度为数据未进行base64编码时的数据长度）。
      */
     public $DataLen;
 
@@ -159,6 +161,11 @@ class CreateRecTaskRequest extends AbstractModel
     public $SpeakerNumber;
 
     /**
+     * @var integer 是否过滤标点符号（目前支持中文普通话引擎）。 0：不过滤，1：过滤句末标点，2：过滤所有标点。默认为0。
+     */
+    public $FilterPunc;
+
+    /**
      * @param string $EngineModelType 引擎模型类型。
 电话场景：
 • 8k_zh：电话 8k 中文普通话通用（可用于双声道音频）；
@@ -175,7 +182,7 @@ class CreateRecTaskRequest extends AbstractModel
      * @param string $CallbackUrl 回调 URL，用户自行搭建的用于接收识别结果的服务器地址， 长度小于2048字节。如果用户使用回调方式获取识别结果，需提交该参数；如果用户使用轮询方式获取识别结果，则无需提交该参数。
      * @param string $Url 语音的URL地址，需要公网可下载。长度小于2048字节，当 SourceType 值为 0 时须填写该字段，为 1 时不需要填写。注意：请确保录音文件时长在5个小时之内，否则可能识别失败。请保证文件的下载速度，否则可能下载失败。
      * @param string $Data 语音数据，当SourceType 值为1时必须填写，为0可不写。要base64编码(采用python语言时注意读取文件应该为string而不是byte，以byte格式读取后要decode()。编码后的数据不可带有回车换行符)。音频数据要小于5MB。
-     * @param integer $DataLen 数据长度，当 SourceType 值为1时必须填写，为0可不写（此数据长度为数据未进行base64编码时的数据长度）。
+     * @param integer $DataLen 数据长度，非必填（此数据长度为数据未进行base64编码时的数据长度）。
      * @param string $HotwordId 热词id。用于调用对应的热词表，如果在调用语音识别服务时，不进行单独的热词id设置，自动生效默认热词；如果进行了单独的热词id设置，那么将生效单独设置的热词id。
      * @param integer $FilterDirty 是否过滤脏词（目前支持中文普通话引擎）。0：不过滤脏词；1：过滤脏词；2：将脏词替换为 * 。默认值为 0。
      * @param integer $FilterModal 是否过语气词（目前支持中文普通话引擎）。0：不过滤语气词；1：部分过滤；2：严格过滤 。默认值为 0。
@@ -184,6 +191,7 @@ class CreateRecTaskRequest extends AbstractModel
      * @param integer $SpeakerDiarization 是否开启话者分离，0：不开启，1：开启(仅支持8k_zh/16k_zh引擎模型，单声道音频)
      * @param integer $SpeakerNumber 话者分离人数（需配合开启话者分离使用），支持2-10（8k_zh仅支持2， 16k_zh支持2-10）
 注：话者分离目前是beta版本，请根据您的需要谨慎使用
+     * @param integer $FilterPunc 是否过滤标点符号（目前支持中文普通话引擎）。 0：不过滤，1：过滤句末标点，2：过滤所有标点。默认为0。
      */
     function __construct()
     {
@@ -256,6 +264,10 @@ class CreateRecTaskRequest extends AbstractModel
 
         if (array_key_exists("SpeakerNumber",$param) and $param["SpeakerNumber"] !== null) {
             $this->SpeakerNumber = $param["SpeakerNumber"];
+        }
+
+        if (array_key_exists("FilterPunc",$param) and $param["FilterPunc"] !== null) {
+            $this->FilterPunc = $param["FilterPunc"];
         }
     }
 }

@@ -84,6 +84,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdatedTime(integer $UpdatedTime) 设置部署组更新时间戳
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDeployDesc() 获取部署应用描述信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDeployDesc(string $DeployDesc) 设置部署应用描述信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class VmGroupSimple extends AbstractModel
 {
@@ -184,6 +188,12 @@ class VmGroupSimple extends AbstractModel
     public $UpdatedTime;
 
     /**
+     * @var string 部署应用描述信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DeployDesc;
+
+    /**
      * @param string $GroupId 部署组ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GroupName 部署组名称
@@ -215,6 +225,8 @@ class VmGroupSimple extends AbstractModel
      * @param string $GroupResourceType 部署组资源类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $UpdatedTime 部署组更新时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DeployDesc 部署应用描述信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -292,6 +304,10 @@ class VmGroupSimple extends AbstractModel
 
         if (array_key_exists("UpdatedTime",$param) and $param["UpdatedTime"] !== null) {
             $this->UpdatedTime = $param["UpdatedTime"];
+        }
+
+        if (array_key_exists("DeployDesc",$param) and $param["DeployDesc"] !== null) {
+            $this->DeployDesc = $param["DeployDesc"];
         }
     }
 }

@@ -47,7 +47,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getCosAppId() 获取Cos 应用 ID。
  * @method void setCosAppId(integer $CosAppId) 设置Cos 应用 ID。
  * @method string getCosBucket() 获取Cos Bucket名称。
+注：CosBucket参数值不能包含-[appid] 部分。
  * @method void setCosBucket(string $CosBucket) 设置Cos Bucket名称。
+注：CosBucket参数值不能包含-[appid] 部分。
  * @method string getCosRegion() 获取Cos 地域。
  * @method void setCosRegion(string $CosRegion) 设置Cos 地域。
  * @method string getCosPrefix() 获取Cos Bucket文件夹前缀。
@@ -104,6 +106,7 @@ class ModifyLiveSnapshotTemplateRequest extends AbstractModel
 
     /**
      * @var string Cos Bucket名称。
+注：CosBucket参数值不能包含-[appid] 部分。
      */
     public $CosBucket;
 
@@ -137,6 +140,7 @@ class ModifyLiveSnapshotTemplateRequest extends AbstractModel
 1：开启。
      * @param integer $CosAppId Cos 应用 ID。
      * @param string $CosBucket Cos Bucket名称。
+注：CosBucket参数值不能包含-[appid] 部分。
      * @param string $CosRegion Cos 地域。
      * @param string $CosPrefix Cos Bucket文件夹前缀。
      * @param string $CosFileName Cos 文件名称。

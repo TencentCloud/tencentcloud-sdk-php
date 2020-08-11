@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置识别出的字段名称（关键字）。
  * @method string getValue() 获取识别出的字段名称对应的值，也就是字段name对应的字符串结果。
  * @method void setValue(string $Value) 设置识别出的字段名称对应的值，也就是字段name对应的字符串结果。
+ * @method Rect getRect() 获取文本行在旋转纠正之后的图像中的像素坐标。
+ * @method void setRect(Rect $Rect) 设置文本行在旋转纠正之后的图像中的像素坐标。
  */
 class CarInvoiceInfo extends AbstractModel
 {
@@ -38,8 +40,14 @@ class CarInvoiceInfo extends AbstractModel
     public $Value;
 
     /**
+     * @var Rect 文本行在旋转纠正之后的图像中的像素坐标。
+     */
+    public $Rect;
+
+    /**
      * @param string $Name 识别出的字段名称（关键字）。
      * @param string $Value 识别出的字段名称对应的值，也就是字段name对应的字符串结果。
+     * @param Rect $Rect 文本行在旋转纠正之后的图像中的像素坐标。
      */
     function __construct()
     {
@@ -60,6 +68,11 @@ class CarInvoiceInfo extends AbstractModel
 
         if (array_key_exists("Value",$param) and $param["Value"] !== null) {
             $this->Value = $param["Value"];
+        }
+
+        if (array_key_exists("Rect",$param) and $param["Rect"] !== null) {
+            $this->Rect = new Rect();
+            $this->Rect->deserialize($param["Rect"]);
         }
     }
 }

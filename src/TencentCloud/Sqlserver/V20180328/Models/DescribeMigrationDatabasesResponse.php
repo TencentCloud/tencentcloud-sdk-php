@@ -14,36 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Iotexplorer\V20190423\Models;
+namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DeleteDevice返回参数结构体
+ * DescribeMigrationDatabases返回参数结构体
  *
- * @method string getResultCode() 获取删除的结果代码
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResultCode(string $ResultCode) 设置删除的结果代码
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getResultMessage() 获取删除的结果信息
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResultMessage(string $ResultMessage) 设置删除的结果信息
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getAmount() 获取数据库数量
+ * @method void setAmount(integer $Amount) 设置数据库数量
+ * @method array getMigrateDBSet() 获取数据库名称数组
+ * @method void setMigrateDBSet(array $MigrateDBSet) 设置数据库名称数组
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DeleteDeviceResponse extends AbstractModel
+class DescribeMigrationDatabasesResponse extends AbstractModel
 {
     /**
-     * @var string 删除的结果代码
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer 数据库数量
      */
-    public $ResultCode;
+    public $Amount;
 
     /**
-     * @var string 删除的结果信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var array 数据库名称数组
      */
-    public $ResultMessage;
+    public $MigrateDBSet;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -51,10 +45,8 @@ class DeleteDeviceResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $ResultCode 删除的结果代码
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ResultMessage 删除的结果信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Amount 数据库数量
+     * @param array $MigrateDBSet 数据库名称数组
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -70,12 +62,12 @@ class DeleteDeviceResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ResultCode",$param) and $param["ResultCode"] !== null) {
-            $this->ResultCode = $param["ResultCode"];
+        if (array_key_exists("Amount",$param) and $param["Amount"] !== null) {
+            $this->Amount = $param["Amount"];
         }
 
-        if (array_key_exists("ResultMessage",$param) and $param["ResultMessage"] !== null) {
-            $this->ResultMessage = $param["ResultMessage"];
+        if (array_key_exists("MigrateDBSet",$param) and $param["MigrateDBSet"] !== null) {
+            $this->MigrateDBSet = $param["MigrateDBSet"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPkgId(string $PkgId) 设置程序包ID
  * @method string getStartupParameters() 获取部署组启动参数
  * @method void setStartupParameters(string $StartupParameters) 设置部署组启动参数
+ * @method string getDeployDesc() 获取部署应用描述信息
+ * @method void setDeployDesc(string $DeployDesc) 设置部署应用描述信息
  */
 class DeployGroupRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class DeployGroupRequest extends AbstractModel
     public $StartupParameters;
 
     /**
+     * @var string 部署应用描述信息
+     */
+    public $DeployDesc;
+
+    /**
      * @param string $GroupId 部署组ID
      * @param string $PkgId 程序包ID
      * @param string $StartupParameters 部署组启动参数
+     * @param string $DeployDesc 部署应用描述信息
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class DeployGroupRequest extends AbstractModel
 
         if (array_key_exists("StartupParameters",$param) and $param["StartupParameters"] !== null) {
             $this->StartupParameters = $param["StartupParameters"];
+        }
+
+        if (array_key_exists("DeployDesc",$param) and $param["DeployDesc"] !== null) {
+            $this->DeployDesc = $param["DeployDesc"];
         }
     }
 }

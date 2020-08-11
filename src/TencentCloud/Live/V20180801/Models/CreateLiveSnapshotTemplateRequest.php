@@ -29,7 +29,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getCosAppId() 获取Cos 应用 ID。
  * @method void setCosAppId(integer $CosAppId) 设置Cos 应用 ID。
  * @method string getCosBucket() 获取Cos Bucket名称。
+注：CosBucket参数值不能包含-[appid] 部分。
  * @method void setCosBucket(string $CosBucket) 设置Cos Bucket名称。
+注：CosBucket参数值不能包含-[appid] 部分。
  * @method string getCosRegion() 获取Cos地区。
  * @method void setCosRegion(string $CosRegion) 设置Cos地区。
  * @method string getDescription() 获取描述信息。
@@ -69,6 +71,7 @@ class CreateLiveSnapshotTemplateRequest extends AbstractModel
 
     /**
      * @var string Cos Bucket名称。
+注：CosBucket参数值不能包含-[appid] 部分。
      */
     public $CosBucket;
 
@@ -121,6 +124,7 @@ class CreateLiveSnapshotTemplateRequest extends AbstractModel
 仅支持中文、英文、数字、_、-。
      * @param integer $CosAppId Cos 应用 ID。
      * @param string $CosBucket Cos Bucket名称。
+注：CosBucket参数值不能包含-[appid] 部分。
      * @param string $CosRegion Cos地区。
      * @param string $Description 描述信息。
 长度上限：1024字节。

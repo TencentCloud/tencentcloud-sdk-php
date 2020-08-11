@@ -36,6 +36,8 @@ mainland：预热至境内节点
 overseas：预热至境外节点
 global：预热全球节点
 不填充情况下，默认为 mainland， URL 中域名必须在对应区域启用了加速服务才能提交对应区域的预热任务
+ * @method string getLayer() 获取填写"middle"或不填充时预热至中间层节点
+ * @method void setLayer(string $Layer) 设置填写"middle"或不填充时预热至中间层节点
  */
 class PushUrlsCacheRequest extends AbstractModel
 {
@@ -60,6 +62,11 @@ global：预热全球节点
     public $Area;
 
     /**
+     * @var string 填写"middle"或不填充时预热至中间层节点
+     */
+    public $Layer;
+
+    /**
      * @param array $Urls URL 列表，需要包含协议头部 http:// 或 https://
      * @param string $UserAgent 指定预热请求回源时 HTTP 请求的 User-Agent 头部
 默认为 TencentCdn
@@ -68,6 +75,7 @@ mainland：预热至境内节点
 overseas：预热至境外节点
 global：预热全球节点
 不填充情况下，默认为 mainland， URL 中域名必须在对应区域启用了加速服务才能提交对应区域的预热任务
+     * @param string $Layer 填写"middle"或不填充时预热至中间层节点
      */
     function __construct()
     {
@@ -92,6 +100,10 @@ global：预热全球节点
 
         if (array_key_exists("Area",$param) and $param["Area"] !== null) {
             $this->Area = $param["Area"];
+        }
+
+        if (array_key_exists("Layer",$param) and $param["Layer"] !== null) {
+            $this->Layer = $param["Layer"];
         }
     }
 }

@@ -324,6 +324,8 @@ use TencentCloud\Ocr\V20181119\Models as Models;
  * @method Models\QuotaInvoiceOCRResponse QuotaInvoiceOCR(Models\QuotaInvoiceOCRRequest $req) 本接口支持定额发票的发票号码、发票代码、金额(大小写)、发票消费类型、地区及是否有公司印章等关键字段的识别。
  * @method Models\ResidenceBookletOCRResponse ResidenceBookletOCR(Models\ResidenceBookletOCRRequest $req) 本接口支持居民户口簿户主页及成员页关键字段的识别，包括姓名、户别、地址、籍贯、身份证号码等。
  * @method Models\RideHailingDriverLicenseOCRResponse RideHailingDriverLicenseOCR(Models\RideHailingDriverLicenseOCRRequest $req) 本接口支持网约车驾驶证关键字段的识别，包括姓名、证号、起始日期、截止日期、发证日期。
+ * @method Models\RideHailingTransportLicenseOCRResponse RideHailingTransportLicenseOCR(Models\RideHailingTransportLicenseOCRRequest $req) 本接口支持网约车运输证关键字段的识别，包括交运管许可字号、车辆所有人、车辆号牌、起始日期、截止日期、发证日期。
+           
  * @method Models\SealOCRResponse SealOCR(Models\SealOCRRequest $req) 印章识别已支持各类印章，包括发票章，财务章等，适用于公文，票据等场景。
  * @method Models\ShipInvoiceOCRResponse ShipInvoiceOCR(Models\ShipInvoiceOCRRequest $req) 本接口支持识别轮船票的发票代码、发票号码、日期、姓名、票价等字段。
  * @method Models\TableOCRResponse TableOCR(Models\TableOCRRequest $req) 本接口支持图片内表格文档的检测和识别，返回每个单元格的文字内容，支持将识别结果保存为 Excel 格式。
@@ -333,6 +335,7 @@ use TencentCloud\Ocr\V20181119\Models as Models;
  * @method Models\TrainTicketOCRResponse TrainTicketOCR(Models\TrainTicketOCRRequest $req) 本接口支持火车票全字段的识别，包括编号、票价、姓名、座位号、出发时间、出发站、到达站、车次、席别、发票类型及序列号等。
 
  * @method Models\VatInvoiceOCRResponse VatInvoiceOCR(Models\VatInvoiceOCRRequest $req) 本接口支持增值税专用发票、增值税普通发票、增值税电子发票全字段的内容检测和识别，包括发票代码、发票号码、打印发票代码、打印发票号码、开票日期、合计金额、校验码、税率、合计税额、价税合计、购买方识别号、复核、销售方识别号、开票人、密码区1、密码区2、密码区3、密码区4、发票名称、购买方名称、销售方名称、服务名称、备注、规格型号、数量、单价、金额、税额、收款人等字段。
+ * @method Models\VatInvoiceVerifyResponse VatInvoiceVerify(Models\VatInvoiceVerifyRequest $req) 本接口支持增值税发票的准确性核验，您可以通过输入增值税发票的关键字段提供所需的验证信息，接口返回真实的票面相关信息，包括发票代码、发票号码、开票日期、金额、消费类型、购方名称、购方税号、销方名称、销方税号等多个常用字段。支持多种发票类型核验，包括增值税专用发票、增值税普通发票（含电子普通发票、卷式发票、通行费发票）、机动车销售统一发票、货物运输业增值税专用发票、二手车销售统一发票。
  * @method Models\VatRollInvoiceOCRResponse VatRollInvoiceOCR(Models\VatRollInvoiceOCRRequest $req) 本接口支持对增值税发票（卷票）的发票代码、发票号码、日期、校验码、合计金额（小写）等关键字段的识别。
  * @method Models\VehicleLicenseOCRResponse VehicleLicenseOCR(Models\VehicleLicenseOCRRequest $req) 本接口支持行驶证主页和副页所有字段的自动定位与识别。
 

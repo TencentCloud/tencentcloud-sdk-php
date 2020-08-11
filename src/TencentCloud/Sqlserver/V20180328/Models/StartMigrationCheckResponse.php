@@ -14,36 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Iotexplorer\V20190423\Models;
+namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DeleteDevice返回参数结构体
+ * StartMigrationCheck返回参数结构体
  *
- * @method string getResultCode() 获取删除的结果代码
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResultCode(string $ResultCode) 设置删除的结果代码
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getResultMessage() 获取删除的结果信息
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResultMessage(string $ResultMessage) 设置删除的结果信息
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getFlowId() 获取迁移检查流程发起后，返回的流程id
+ * @method void setFlowId(integer $FlowId) 设置迁移检查流程发起后，返回的流程id
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DeleteDeviceResponse extends AbstractModel
+class StartMigrationCheckResponse extends AbstractModel
 {
     /**
-     * @var string 删除的结果代码
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer 迁移检查流程发起后，返回的流程id
      */
-    public $ResultCode;
-
-    /**
-     * @var string 删除的结果信息
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $ResultMessage;
+    public $FlowId;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -51,10 +38,7 @@ class DeleteDeviceResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $ResultCode 删除的结果代码
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ResultMessage 删除的结果信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $FlowId 迁移检查流程发起后，返回的流程id
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -70,12 +54,8 @@ class DeleteDeviceResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ResultCode",$param) and $param["ResultCode"] !== null) {
-            $this->ResultCode = $param["ResultCode"];
-        }
-
-        if (array_key_exists("ResultMessage",$param) and $param["ResultMessage"] !== null) {
-            $this->ResultMessage = $param["ResultMessage"];
+        if (array_key_exists("FlowId",$param) and $param["FlowId"] !== null) {
+            $this->FlowId = $param["FlowId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

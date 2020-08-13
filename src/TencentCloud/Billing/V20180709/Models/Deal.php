@@ -68,6 +68,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRefReturnDeals(string $RefReturnDeals) 设置退费涉及订单信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPayMode() 获取付费模式：prePay 预付费 postPay后付费 riPay预留实例
+ * @method void setPayMode(string $PayMode) 设置付费模式：prePay 预付费 postPay后付费 riPay预留实例
  */
 class Deal extends AbstractModel
 {
@@ -180,6 +182,11 @@ class Deal extends AbstractModel
     public $RefReturnDeals;
 
     /**
+     * @var string 付费模式：prePay 预付费 postPay后付费 riPay预留实例
+     */
+    public $PayMode;
+
+    /**
      * @param string $OrderId 订单号
      * @param integer $Status 订单状态
      * @param string $Payer 支付者
@@ -204,6 +211,7 @@ class Deal extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RefReturnDeals 退费涉及订单信息
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $PayMode 付费模式：prePay 预付费 postPay后付费 riPay预留实例
      */
     function __construct()
     {
@@ -305,6 +313,10 @@ class Deal extends AbstractModel
 
         if (array_key_exists("RefReturnDeals",$param) and $param["RefReturnDeals"] !== null) {
             $this->RefReturnDeals = $param["RefReturnDeals"];
+        }
+
+        if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {
+            $this->PayMode = $param["PayMode"];
         }
     }
 }

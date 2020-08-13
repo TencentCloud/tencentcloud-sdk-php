@@ -70,6 +70,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTargetGroup(BasicTargetGroupInfo $TargetGroup) 设置绑定的目标组基本信息；当监听器绑定目标组时，会返回该字段
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSessionType() 获取会话保持类型。NORMAL表示默认会话保持类型。QUIC_CID 表示根据Quic Connection ID做会话保持。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSessionType(string $SessionType) 设置会话保持类型。NORMAL表示默认会话保持类型。QUIC_CID 表示根据Quic Connection ID做会话保持。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getKeepaliveEnable() 获取是否开启长连接（本参数仅对于HTTP/HTTPS监听器有意义）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setKeepaliveEnable(integer $KeepaliveEnable) 设置是否开启长连接（本参数仅对于HTTP/HTTPS监听器有意义）
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Listener extends AbstractModel
 {
@@ -155,6 +163,18 @@ class Listener extends AbstractModel
     public $TargetGroup;
 
     /**
+     * @var string 会话保持类型。NORMAL表示默认会话保持类型。QUIC_CID 表示根据Quic Connection ID做会话保持。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SessionType;
+
+    /**
+     * @var integer 是否开启长连接（本参数仅对于HTTP/HTTPS监听器有意义）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $KeepaliveEnable;
+
+    /**
      * @param string $ListenerId 负载均衡监听器 ID
      * @param string $Protocol 监听器协议
      * @param integer $Port 监听器端口
@@ -179,6 +199,10 @@ class Listener extends AbstractModel
      * @param string $TargetType 后端服务器类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param BasicTargetGroupInfo $TargetGroup 绑定的目标组基本信息；当监听器绑定目标组时，会返回该字段
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SessionType 会话保持类型。NORMAL表示默认会话保持类型。QUIC_CID 表示根据Quic Connection ID做会话保持。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $KeepaliveEnable 是否开启长连接（本参数仅对于HTTP/HTTPS监听器有意义）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -256,6 +280,14 @@ class Listener extends AbstractModel
         if (array_key_exists("TargetGroup",$param) and $param["TargetGroup"] !== null) {
             $this->TargetGroup = new BasicTargetGroupInfo();
             $this->TargetGroup->deserialize($param["TargetGroup"]);
+        }
+
+        if (array_key_exists("SessionType",$param) and $param["SessionType"] !== null) {
+            $this->SessionType = $param["SessionType"];
+        }
+
+        if (array_key_exists("KeepaliveEnable",$param) and $param["KeepaliveEnable"] !== null) {
+            $this->KeepaliveEnable = $param["KeepaliveEnable"];
         }
     }
 }

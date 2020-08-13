@@ -26,14 +26,14 @@ use TencentCloud\Common\AbstractModel;
 4：手机号（暂仅支持国内手机号）。
 8：设备号（imei/imeiMD5/idfa/idfaMd5）。
 0：其他。
-10004：手机号MD5。
+10004：手机号MD5（标准中国大陆手机号11位，MD5后取32位小写值）
  * @method void setAccountType(integer $AccountType) 设置用户账号类型（默认开通 QQ 开放账号、手机号，手机 MD5 账号类型查询。如需使用微信开放账号，则需要 提交工单 由腾讯云进行资格审核，审核通过后方可正常使用微信开放账号）：
 1：QQ开放账号。
 2：微信开放账号。
 4：手机号（暂仅支持国内手机号）。
 8：设备号（imei/imeiMD5/idfa/idfaMd5）。
 0：其他。
-10004：手机号MD5。
+10004：手机号MD5（标准中国大陆手机号11位，MD5后取32位小写值）
  * @method QQAccountInfo getQQAccount() 获取QQ账号信息，AccountType是1时，该字段必填。
  * @method void setQQAccount(QQAccountInfo $QQAccount) 设置QQ账号信息，AccountType是1时，该字段必填。
  * @method WeChatAccountInfo getWeChatAccount() 获取微信账号信息，AccountType是2时，该字段必填。
@@ -50,7 +50,7 @@ class AccountInfo extends AbstractModel
 4：手机号（暂仅支持国内手机号）。
 8：设备号（imei/imeiMD5/idfa/idfaMd5）。
 0：其他。
-10004：手机号MD5。
+10004：手机号MD5（标准中国大陆手机号11位，MD5后取32位小写值）
      */
     public $AccountType;
 
@@ -76,7 +76,7 @@ class AccountInfo extends AbstractModel
 4：手机号（暂仅支持国内手机号）。
 8：设备号（imei/imeiMD5/idfa/idfaMd5）。
 0：其他。
-10004：手机号MD5。
+10004：手机号MD5（标准中国大陆手机号11位，MD5后取32位小写值）
      * @param QQAccountInfo $QQAccount QQ账号信息，AccountType是1时，该字段必填。
      * @param WeChatAccountInfo $WeChatAccount 微信账号信息，AccountType是2时，该字段必填。
      * @param OtherAccountInfo $OtherAccount 其它账号信息，AccountType是0、4、8或10004时，该字段必填。

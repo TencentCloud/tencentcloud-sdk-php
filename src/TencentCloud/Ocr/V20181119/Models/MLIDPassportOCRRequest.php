@@ -21,29 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * MLIDPassportOCR请求参数结构体
  *
  * @method string getImageBase64() 获取图片的 Base64 值。要求图片经Base64编码后不超过 7M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。
-图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
  * @method void setImageBase64(string $ImageBase64) 设置图片的 Base64 值。要求图片经Base64编码后不超过 7M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。
-图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
- * @method boolean getRetImage() 获取是否返回图片
- * @method void setRetImage(boolean $RetImage) 设置是否返回图片
+ * @method boolean getRetImage() 获取是否返回图片，默认false
+ * @method void setRetImage(boolean $RetImage) 设置是否返回图片，默认false
  */
 class MLIDPassportOCRRequest extends AbstractModel
 {
     /**
      * @var string 图片的 Base64 值。要求图片经Base64编码后不超过 7M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。
-图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
      */
     public $ImageBase64;
 
     /**
-     * @var boolean 是否返回图片
+     * @var boolean 是否返回图片，默认false
      */
     public $RetImage;
 
     /**
      * @param string $ImageBase64 图片的 Base64 值。要求图片经Base64编码后不超过 7M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。
-图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
-     * @param boolean $RetImage 是否返回图片
+     * @param boolean $RetImage 是否返回图片，默认false
      */
     function __construct()
     {

@@ -42,6 +42,8 @@ use TencentCloud\Cdn\V20180606\Models as Models;
  * @method Models\DescribeCdnIpResponse DescribeCdnIp(Models\DescribeCdnIpRequest $req) DescribeCdnIp 用于查询 CDN IP 归属。
 （注意：此接口请求频率限制以 CDN 侧限制为准：200次/10分钟）
  * @method Models\DescribeCertDomainsResponse DescribeCertDomains(Models\DescribeCertDomainsRequest $req) DescribeCertDomains 用于校验SSL证书并提取证书中包含的域名。
+ * @method Models\DescribeDistrictIspDataResponse DescribeDistrictIspData(Models\DescribeDistrictIspDataRequest $req) 查询指定域名的区域、运营商明细数据
+注意事项：接口尚未全量开放，未在内测名单中的账号不支持调用
  * @method Models\DescribeDomainsResponse DescribeDomains(Models\DescribeDomainsRequest $req) DescribeDomains 用于查询内容分发网络加速域名（含境内、境外）基本配置信息，包括项目ID、服务状态，业务类型、创建时间、更新时间等信息。
  * @method Models\DescribeDomainsConfigResponse DescribeDomainsConfig(Models\DescribeDomainsConfigRequest $req) DescribeDomainsConfig 用于查询内容分发网络加速域名（含境内、境外）的所有配置信息。
  * @method Models\DescribeImageConfigResponse DescribeImageConfig(Models\DescribeImageConfigRequest $req) DescribeImageConfig 用于获取域名图片优化的当前配置，支持Webp、TPG 和 Guetzli。 

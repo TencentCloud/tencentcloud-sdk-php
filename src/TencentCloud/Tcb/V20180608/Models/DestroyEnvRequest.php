@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnvId(string $EnvId) 设置环境Id
  * @method boolean getIsForce() 获取针对预付费 删除隔离中的环境时要传true 正常环境直接跳过隔离期删除
  * @method void setIsForce(boolean $IsForce) 设置针对预付费 删除隔离中的环境时要传true 正常环境直接跳过隔离期删除
+ * @method boolean getBypassCheck() 获取是否绕过资源检查，资源包等额外资源，默认为false，如果为true，则不检查资源是否有数据，直接删除。
+ * @method void setBypassCheck(boolean $BypassCheck) 设置是否绕过资源检查，资源包等额外资源，默认为false，如果为true，则不检查资源是否有数据，直接删除。
  */
 class DestroyEnvRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class DestroyEnvRequest extends AbstractModel
     public $IsForce;
 
     /**
+     * @var boolean 是否绕过资源检查，资源包等额外资源，默认为false，如果为true，则不检查资源是否有数据，直接删除。
+     */
+    public $BypassCheck;
+
+    /**
      * @param string $EnvId 环境Id
      * @param boolean $IsForce 针对预付费 删除隔离中的环境时要传true 正常环境直接跳过隔离期删除
+     * @param boolean $BypassCheck 是否绕过资源检查，资源包等额外资源，默认为false，如果为true，则不检查资源是否有数据，直接删除。
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class DestroyEnvRequest extends AbstractModel
 
         if (array_key_exists("IsForce",$param) and $param["IsForce"] !== null) {
             $this->IsForce = $param["IsForce"];
+        }
+
+        if (array_key_exists("BypassCheck",$param) and $param["BypassCheck"] !== null) {
+            $this->BypassCheck = $param["BypassCheck"];
         }
     }
 }

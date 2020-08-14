@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnvConfig(array $EnvConfig) 设置环境变量配置
  * @method string getRoleName() 获取角色名称
  * @method void setRoleName(string $RoleName) 设置角色名称
+ * @method string getRetryWhenResourceInsufficient() 获取在资源不足（ResourceInsufficient）时后台不定时尝试重新创建训练任务。可取值Enabled/Disabled
+默认值为Disabled即不重新尝试。设为Enabled时重新尝试有一定的时间期限，定义在 StoppingCondition 中 MaxWaitTimeInSecond中 ，默认值为1天，超过该期限创建失败。
+ * @method void setRetryWhenResourceInsufficient(string $RetryWhenResourceInsufficient) 设置在资源不足（ResourceInsufficient）时后台不定时尝试重新创建训练任务。可取值Enabled/Disabled
+默认值为Disabled即不重新尝试。设为Enabled时重新尝试有一定的时间期限，定义在 StoppingCondition 中 MaxWaitTimeInSecond中 ，默认值为1天，超过该期限创建失败。
  */
 class CreateTrainingJobRequest extends AbstractModel
 {
@@ -94,6 +98,12 @@ class CreateTrainingJobRequest extends AbstractModel
     public $RoleName;
 
     /**
+     * @var string 在资源不足（ResourceInsufficient）时后台不定时尝试重新创建训练任务。可取值Enabled/Disabled
+默认值为Disabled即不重新尝试。设为Enabled时重新尝试有一定的时间期限，定义在 StoppingCondition 中 MaxWaitTimeInSecond中 ，默认值为1天，超过该期限创建失败。
+     */
+    public $RetryWhenResourceInsufficient;
+
+    /**
      * @param AlgorithmSpecification $AlgorithmSpecification 算法镜像配置
      * @param OutputDataConfig $OutputDataConfig 输出数据配置
      * @param ResourceConfig $ResourceConfig 资源实例配置
@@ -104,6 +114,8 @@ class CreateTrainingJobRequest extends AbstractModel
      * @param string $HyperParameters 算法超级参数
      * @param array $EnvConfig 环境变量配置
      * @param string $RoleName 角色名称
+     * @param string $RetryWhenResourceInsufficient 在资源不足（ResourceInsufficient）时后台不定时尝试重新创建训练任务。可取值Enabled/Disabled
+默认值为Disabled即不重新尝试。设为Enabled时重新尝试有一定的时间期限，定义在 StoppingCondition 中 MaxWaitTimeInSecond中 ，默认值为1天，超过该期限创建失败。
      */
     function __construct()
     {
@@ -171,6 +183,10 @@ class CreateTrainingJobRequest extends AbstractModel
 
         if (array_key_exists("RoleName",$param) and $param["RoleName"] !== null) {
             $this->RoleName = $param["RoleName"];
+        }
+
+        if (array_key_exists("RetryWhenResourceInsufficient",$param) and $param["RetryWhenResourceInsufficient"] !== null) {
+            $this->RetryWhenResourceInsufficient = $param["RetryWhenResourceInsufficient"];
         }
     }
 }

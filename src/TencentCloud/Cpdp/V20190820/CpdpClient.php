@@ -51,6 +51,7 @@ use TencentCloud\Cpdp\V20190820\Models as Models;
  * @method Models\CreateMerchantResponse CreateMerchant(Models\CreateMerchantRequest $req) 智慧零售-商户注册
  * @method Models\CreateRedInvoiceResponse CreateRedInvoice(Models\CreateRedInvoiceRequest $req) 智慧零售-发票红冲
  * @method Models\CreateSinglePayResponse CreateSinglePay(Models\CreateSinglePayRequest $req) 银企直连-单笔支付接口
+ * @method Models\CreateTransferBatchResponse CreateTransferBatch(Models\CreateTransferBatchRequest $req) 微信商户发起批量转账
  * @method Models\DeleteAgentTaxPaymentInfoResponse DeleteAgentTaxPaymentInfo(Models\DeleteAgentTaxPaymentInfoRequest $req) 直播平台-删除代理商完税信息
  * @method Models\DeleteAgentTaxPaymentInfosResponse DeleteAgentTaxPaymentInfos(Models\DeleteAgentTaxPaymentInfosRequest $req) 直播平台-删除代理商完税信息
  * @method Models\DescribeChargeDetailResponse DescribeChargeDetail(Models\DescribeChargeDetailRequest $req) 查询充值明细接口
@@ -90,6 +91,8 @@ use TencentCloud\Cpdp\V20190820\Models as Models;
  * @method Models\QuerySingleTransactionStatusResponse QuerySingleTransactionStatus(Models\QuerySingleTransactionStatusRequest $req) 查询银行单笔交易状态。查询单笔交易的状态。
  * @method Models\QuerySmallAmountTransferResponse QuerySmallAmountTransfer(Models\QuerySmallAmountTransferRequest $req) 查询小额鉴权转账结果。查询小额往账鉴权的转账状态。
  * @method Models\QueryTradeResponse QueryTrade(Models\QueryTradeRequest $req) 跨境-贸易材料明细查询。
+ * @method Models\QueryTransferBatchResponse QueryTransferBatch(Models\QueryTransferBatchRequest $req) 通过商家批次单号或者微信批次号查询批次单
+ * @method Models\QueryTransferDetailResponse QueryTransferDetail(Models\QueryTransferDetailRequest $req) 通过商家或者微信批次明细单号查询明细单
  * @method Models\RechargeByThirdPayResponse RechargeByThirdPay(Models\RechargeByThirdPayRequest $req) 会员在途充值(经第三方支付渠道)接口
  * @method Models\RechargeMemberThirdPayResponse RechargeMemberThirdPay(Models\RechargeMemberThirdPayRequest $req) 见证宝-会员在途充值(经第三方支付渠道)
  * @method Models\RefundResponse Refund(Models\RefundRequest $req) 如交易订单需退款，可以通过本接口将支付款全部或部分退还给付款方，聚鑫将在收到退款请求并且验证成功之后，按照退款规则将支付款按原路退回到支付帐号。最长支持1年的订单退款。在订单包含多个子订单的情况下，如果使用本接口传入OutTradeNo或TransactionId退款，则只支持全单退款；如果需要部分退款，请通过传入子订单的方式来指定部分金额退款。 

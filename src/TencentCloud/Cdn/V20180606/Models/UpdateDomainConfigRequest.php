@@ -96,6 +96,12 @@ global：全球加速
  * @method void setAwsPrivateAccess(AwsPrivateAccess $AwsPrivateAccess) 设置回源S3私有鉴权
  * @method UserAgentFilter getUserAgentFilter() 获取UA黑白名单配置
  * @method void setUserAgentFilter(UserAgentFilter $UserAgentFilter) 设置UA黑白名单配置
+ * @method AccessControl getAccessControl() 获取访问控制
+ * @method void setAccessControl(AccessControl $AccessControl) 设置访问控制
+ * @method UrlRedirect getUrlRedirect() 获取URL重定向配置
+ * @method void setUrlRedirect(UrlRedirect $UrlRedirect) 设置URL重定向配置
+ * @method array getAccessPort() 获取访问端口配置
+ * @method void setAccessPort(array $AccessPort) 设置访问端口配置
  */
 class UpdateDomainConfigRequest extends AbstractModel
 {
@@ -262,6 +268,21 @@ global：全球加速
     public $UserAgentFilter;
 
     /**
+     * @var AccessControl 访问控制
+     */
+    public $AccessControl;
+
+    /**
+     * @var UrlRedirect URL重定向配置
+     */
+    public $UrlRedirect;
+
+    /**
+     * @var array 访问端口配置
+     */
+    public $AccessPort;
+
+    /**
      * @param string $Domain 域名
      * @param integer $ProjectId 项目 ID
      * @param Origin $Origin 源站配置
@@ -300,6 +321,9 @@ global：全球加速
      * @param OriginPullTimeout $OriginPullTimeout 回源超时配置
      * @param AwsPrivateAccess $AwsPrivateAccess 回源S3私有鉴权
      * @param UserAgentFilter $UserAgentFilter UA黑白名单配置
+     * @param AccessControl $AccessControl 访问控制
+     * @param UrlRedirect $UrlRedirect URL重定向配置
+     * @param array $AccessPort 访问端口配置
      */
     function __construct()
     {
@@ -463,6 +487,20 @@ global：全球加速
         if (array_key_exists("UserAgentFilter",$param) and $param["UserAgentFilter"] !== null) {
             $this->UserAgentFilter = new UserAgentFilter();
             $this->UserAgentFilter->deserialize($param["UserAgentFilter"]);
+        }
+
+        if (array_key_exists("AccessControl",$param) and $param["AccessControl"] !== null) {
+            $this->AccessControl = new AccessControl();
+            $this->AccessControl->deserialize($param["AccessControl"]);
+        }
+
+        if (array_key_exists("UrlRedirect",$param) and $param["UrlRedirect"] !== null) {
+            $this->UrlRedirect = new UrlRedirect();
+            $this->UrlRedirect->deserialize($param["UrlRedirect"]);
+        }
+
+        if (array_key_exists("AccessPort",$param) and $param["AccessPort"] !== null) {
+            $this->AccessPort = $param["AccessPort"];
         }
     }
 }

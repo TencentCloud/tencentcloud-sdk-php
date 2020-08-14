@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * MobileNetworkTimeVerification请求参数结构体
  *
- * @method string getMobile() 获取手机号码。不支持电信手机号。
- * @method void setMobile(string $Mobile) 设置手机号码。不支持电信手机号。
+ * @method string getMobile() 获取手机号码
+ * @method void setMobile(string $Mobile) 设置手机号码
  */
 class MobileNetworkTimeVerificationRequest extends AbstractModel
 {
     /**
-     * @var string 手机号码。不支持电信手机号。
+     * @var string 手机号码
      */
     public $Mobile;
 
     /**
-     * @param string $Mobile 手机号码。不支持电信手机号。
+     * @param string $Mobile 手机号码
      */
     function __construct()
     {

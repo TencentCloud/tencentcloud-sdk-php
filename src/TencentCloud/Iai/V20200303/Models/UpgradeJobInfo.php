@@ -36,8 +36,8 @@ Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00
 StartTime的值是自 Unix 纪元时间到Group创建时间的毫秒数。 
 Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00:00。 
 有关更多信息，请参阅 Unix 时间。
- * @method integer getStatus() 获取0表示升级中，1表示升级完毕，2表示回滚完毕。
- * @method void setStatus(integer $Status) 设置0表示升级中，1表示升级完毕，2表示回滚完毕。
+ * @method integer getStatus() 获取0表示升级中，1表示升级完毕，2表示回滚完毕，3表示升级失败。
+ * @method void setStatus(integer $Status) 设置0表示升级中，1表示升级完毕，2表示回滚完毕，3表示升级失败。
  */
 class UpgradeJobInfo extends AbstractModel
 {
@@ -70,7 +70,7 @@ Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00
     public $StartTime;
 
     /**
-     * @var integer 0表示升级中，1表示升级完毕，2表示回滚完毕。
+     * @var integer 0表示升级中，1表示升级完毕，2表示回滚完毕，3表示升级失败。
      */
     public $Status;
 
@@ -83,7 +83,7 @@ Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00
 StartTime的值是自 Unix 纪元时间到Group创建时间的毫秒数。 
 Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00:00。 
 有关更多信息，请参阅 Unix 时间。
-     * @param integer $Status 0表示升级中，1表示升级完毕，2表示回滚完毕。
+     * @param integer $Status 0表示升级中，1表示升级完毕，2表示回滚完毕，3表示升级失败。
      */
     function __construct()
     {

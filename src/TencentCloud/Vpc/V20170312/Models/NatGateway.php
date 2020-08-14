@@ -54,6 +54,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubnetId(string $SubnetId) 设置所属子网ID。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTagSet() 获取标签键值对。
+ * @method void setTagSet(array $TagSet) 设置标签键值对。
  */
 class NatGateway extends AbstractModel
 {
@@ -127,6 +129,11 @@ class NatGateway extends AbstractModel
     public $SubnetId;
 
     /**
+     * @var array 标签键值对。
+     */
+    public $TagSet;
+
+    /**
      * @param string $NatGatewayId NAT网关的ID。
      * @param string $NatGatewayName NAT网关的名称。
      * @param string $CreatedTime NAT网关创建的时间。
@@ -144,6 +151,7 @@ class NatGateway extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubnetId 所属子网ID。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $TagSet 标签键值对。
      */
     function __construct()
     {
@@ -218,6 +226,15 @@ class NatGateway extends AbstractModel
 
         if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
             $this->SubnetId = $param["SubnetId"];
+        }
+
+        if (array_key_exists("TagSet",$param) and $param["TagSet"] !== null) {
+            $this->TagSet = [];
+            foreach ($param["TagSet"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->TagSet, $obj);
+            }
         }
     }
 }

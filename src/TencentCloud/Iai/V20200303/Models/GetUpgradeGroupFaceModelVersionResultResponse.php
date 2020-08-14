@@ -28,8 +28,8 @@ Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00
 如果为0表示这个任务已经执行完毕。
  * @method float getProgress() 获取升级任务完成进度。取值[0.0，100.0]。
  * @method void setProgress(float $Progress) 设置升级任务完成进度。取值[0.0，100.0]。
- * @method integer getStatus() 获取0表示升级中，1表示升级完毕，2表示回滚完毕。
- * @method void setStatus(integer $Status) 设置0表示升级中，1表示升级完毕，2表示回滚完毕。
+ * @method integer getStatus() 获取0表示升级中，1表示升级完毕，2表示回滚完毕，3表示升级失败。
+ * @method void setStatus(integer $Status) 设置0表示升级中，1表示升级完毕，2表示回滚完毕，3表示升级失败。
  * @method integer getStartTime() 获取升级起始时间。 
 StartTime的值是自 Unix 纪元时间到Group创建时间的毫秒数。 
 Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00:00。 
@@ -64,7 +64,7 @@ Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00
     public $Progress;
 
     /**
-     * @var integer 0表示升级中，1表示升级完毕，2表示回滚完毕。
+     * @var integer 0表示升级中，1表示升级完毕，2表示回滚完毕，3表示升级失败。
      */
     public $Status;
 
@@ -106,7 +106,7 @@ Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00
 Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00:00。 
 如果为0表示这个任务已经执行完毕。
      * @param float $Progress 升级任务完成进度。取值[0.0，100.0]。
-     * @param integer $Status 0表示升级中，1表示升级完毕，2表示回滚完毕。
+     * @param integer $Status 0表示升级中，1表示升级完毕，2表示回滚完毕，3表示升级失败。
      * @param integer $StartTime 升级起始时间。 
 StartTime的值是自 Unix 纪元时间到Group创建时间的毫秒数。 
 Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00:00。 

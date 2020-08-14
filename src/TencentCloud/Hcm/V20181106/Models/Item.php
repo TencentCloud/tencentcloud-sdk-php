@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExpressionType(string $ExpressionType) 设置算式题型编号，如加减乘除四则题型，具体题型及编号如下：1 加减乘除四则 2 加减乘除已知结果求运算因子3 判断大小 4 约等于估算 5 带余数除法 6 分数四则运算 7 单位换算 8 竖式加减法 9 竖式乘除法 10 脱式计算 11 解方程
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method float getItemConf() 获取文本行置信度
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setItemConf(float $ItemConf) 设置文本行置信度
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Item extends AbstractModel
 {
@@ -62,11 +66,19 @@ class Item extends AbstractModel
     public $ExpressionType;
 
     /**
+     * @var float 文本行置信度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ItemConf;
+
+    /**
      * @param string $Item 识别的算式是否正确
      * @param string $ItemString 识别的算式
      * @param ItemCoord $ItemCoord 识别的算式在图片上的位置信息
      * @param string $Answer 推荐的答案，暂不支持多个关系运算符、无关系运算符、单位换算错题的推荐答案返回。
      * @param string $ExpressionType 算式题型编号，如加减乘除四则题型，具体题型及编号如下：1 加减乘除四则 2 加减乘除已知结果求运算因子3 判断大小 4 约等于估算 5 带余数除法 6 分数四则运算 7 单位换算 8 竖式加减法 9 竖式乘除法 10 脱式计算 11 解方程
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param float $ItemConf 文本行置信度
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -101,6 +113,10 @@ class Item extends AbstractModel
 
         if (array_key_exists("ExpressionType",$param) and $param["ExpressionType"] !== null) {
             $this->ExpressionType = $param["ExpressionType"];
+        }
+
+        if (array_key_exists("ItemConf",$param) and $param["ItemConf"] !== null) {
+            $this->ItemConf = $param["ItemConf"];
         }
     }
 }

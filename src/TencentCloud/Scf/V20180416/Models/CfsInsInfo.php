@@ -32,17 +32,23 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLocalMountDir(string $LocalMountDir) 设置本地挂载点
  * @method string getRemoteMountDir() 获取远程挂载点
  * @method void setRemoteMountDir(string $RemoteMountDir) 设置远程挂载点
- * @method string getIpAddress() 获取文件系统ip
+ * @method string getIpAddress() 获取文件系统ip，配置 cfs 时无需填写。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIpAddress(string $IpAddress) 设置文件系统ip
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getMountVpcId() 获取文件系统所在的私有网络id
+ * @method void setIpAddress(string $IpAddress) 设置文件系统ip，配置 cfs 时无需填写。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMountVpcId(string $MountVpcId) 设置文件系统所在的私有网络id
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getMountSubnetId() 获取文件系统所在私有网络的子网id
+ * @method string getMountVpcId() 获取文件系统所在的私有网络id，配置 cfs 时无需填写。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMountSubnetId(string $MountSubnetId) 设置文件系统所在私有网络的子网id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMountVpcId(string $MountVpcId) 设置文件系统所在的私有网络id，配置 cfs 时无需填写。
+注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getMountSubnetId() 获取文件系统所在私有网络的子网id，配置 cfs 时无需填写。
+注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMountSubnetId(string $MountSubnetId) 设置文件系统所在私有网络的子网id，配置 cfs 时无需填写。
+注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class CfsInsInfo extends AbstractModel
@@ -78,19 +84,22 @@ class CfsInsInfo extends AbstractModel
     public $RemoteMountDir;
 
     /**
-     * @var string 文件系统ip
+     * @var string 文件系统ip，配置 cfs 时无需填写。
+注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IpAddress;
 
     /**
-     * @var string 文件系统所在的私有网络id
+     * @var string 文件系统所在的私有网络id，配置 cfs 时无需填写。
+注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MountVpcId;
 
     /**
-     * @var string 文件系统所在私有网络的子网id
+     * @var string 文件系统所在私有网络的子网id，配置 cfs 时无需填写。
+注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MountSubnetId;
@@ -102,11 +111,14 @@ class CfsInsInfo extends AbstractModel
      * @param string $MountInsId 文件系统挂载点id
      * @param string $LocalMountDir 本地挂载点
      * @param string $RemoteMountDir 远程挂载点
-     * @param string $IpAddress 文件系统ip
+     * @param string $IpAddress 文件系统ip，配置 cfs 时无需填写。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $MountVpcId 文件系统所在的私有网络id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $MountSubnetId 文件系统所在私有网络的子网id
+     * @param string $MountVpcId 文件系统所在的私有网络id，配置 cfs 时无需填写。
+注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $MountSubnetId 文件系统所在私有网络的子网id，配置 cfs 时无需填写。
+注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxRuntimeInSeconds(integer $MaxRuntimeInSeconds) 设置最长运行运行时间（秒）
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getMaxWaitTimeInSeconds() 获取最长等待运行时间（秒）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMaxWaitTimeInSeconds(integer $MaxWaitTimeInSeconds) 设置最长等待运行时间（秒）
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class StoppingCondition extends AbstractModel
 {
@@ -34,7 +38,15 @@ class StoppingCondition extends AbstractModel
     public $MaxRuntimeInSeconds;
 
     /**
+     * @var integer 最长等待运行时间（秒）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MaxWaitTimeInSeconds;
+
+    /**
      * @param integer $MaxRuntimeInSeconds 最长运行运行时间（秒）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $MaxWaitTimeInSeconds 最长等待运行时间（秒）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -52,6 +64,10 @@ class StoppingCondition extends AbstractModel
         }
         if (array_key_exists("MaxRuntimeInSeconds",$param) and $param["MaxRuntimeInSeconds"] !== null) {
             $this->MaxRuntimeInSeconds = $param["MaxRuntimeInSeconds"];
+        }
+
+        if (array_key_exists("MaxWaitTimeInSeconds",$param) and $param["MaxWaitTimeInSeconds"] !== null) {
+            $this->MaxWaitTimeInSeconds = $param["MaxWaitTimeInSeconds"];
         }
     }
 }

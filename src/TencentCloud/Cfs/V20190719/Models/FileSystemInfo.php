@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProtocol(string $Protocol) 设置文件系统协议类型
  * @method string getStorageType() 获取文件系统存储类型
  * @method void setStorageType(string $StorageType) 设置文件系统存储类型
- * @method string getStorageResourcePkg() 获取文件系统绑定的预付费存储包（暂未支持）
- * @method void setStorageResourcePkg(string $StorageResourcePkg) 设置文件系统绑定的预付费存储包（暂未支持）
+ * @method string getStorageResourcePkg() 获取文件系统绑定的预付费存储包
+ * @method void setStorageResourcePkg(string $StorageResourcePkg) 设置文件系统绑定的预付费存储包
  * @method string getBandwidthResourcePkg() 获取文件系统绑定的预付费带宽包（暂未支持）
  * @method void setBandwidthResourcePkg(string $BandwidthResourcePkg) 设置文件系统绑定的预付费带宽包（暂未支持）
  * @method PGroup getPGroup() 获取文件系统绑定权限组信息
@@ -54,6 +54,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setKmsKeyId(string $KmsKeyId) 设置加密所使用的密钥，可以为密钥的 ID 或者 ARN
  * @method integer getAppId() 获取应用ID
  * @method void setAppId(integer $AppId) 设置应用ID
+ * @method float getBandwidthLimit() 获取文件系统吞吐上限，吞吐上限是根据文件系统当前已使用存储量、绑定的存储资源包以及吞吐资源包一同确定
+ * @method void setBandwidthLimit(float $BandwidthLimit) 设置文件系统吞吐上限，吞吐上限是根据文件系统当前已使用存储量、绑定的存储资源包以及吞吐资源包一同确定
  */
 class FileSystemInfo extends AbstractModel
 {
@@ -108,7 +110,7 @@ class FileSystemInfo extends AbstractModel
     public $StorageType;
 
     /**
-     * @var string 文件系统绑定的预付费存储包（暂未支持）
+     * @var string 文件系统绑定的预付费存储包
      */
     public $StorageResourcePkg;
 
@@ -143,6 +145,11 @@ class FileSystemInfo extends AbstractModel
     public $AppId;
 
     /**
+     * @var float 文件系统吞吐上限，吞吐上限是根据文件系统当前已使用存储量、绑定的存储资源包以及吞吐资源包一同确定
+     */
+    public $BandwidthLimit;
+
+    /**
      * @param string $CreationTime 创建时间
      * @param string $CreationToken 用户自定义名称
      * @param string $FileSystemId 文件系统 ID
@@ -153,13 +160,14 @@ class FileSystemInfo extends AbstractModel
      * @param string $Zone 区域名称
      * @param string $Protocol 文件系统协议类型
      * @param string $StorageType 文件系统存储类型
-     * @param string $StorageResourcePkg 文件系统绑定的预付费存储包（暂未支持）
+     * @param string $StorageResourcePkg 文件系统绑定的预付费存储包
      * @param string $BandwidthResourcePkg 文件系统绑定的预付费带宽包（暂未支持）
      * @param PGroup $PGroup 文件系统绑定权限组信息
      * @param string $FsName 用户自定义名称
      * @param boolean $Encrypted 文件系统是否加密
      * @param string $KmsKeyId 加密所使用的密钥，可以为密钥的 ID 或者 ARN
      * @param integer $AppId 应用ID
+     * @param float $BandwidthLimit 文件系统吞吐上限，吞吐上限是根据文件系统当前已使用存储量、绑定的存储资源包以及吞吐资源包一同确定
      */
     function __construct()
     {
@@ -241,6 +249,10 @@ class FileSystemInfo extends AbstractModel
 
         if (array_key_exists("AppId",$param) and $param["AppId"] !== null) {
             $this->AppId = $param["AppId"];
+        }
+
+        if (array_key_exists("BandwidthLimit",$param) and $param["BandwidthLimit"] !== null) {
+            $this->BandwidthLimit = $param["BandwidthLimit"];
         }
     }
 }

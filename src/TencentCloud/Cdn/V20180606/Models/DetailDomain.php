@@ -222,6 +222,22 @@ global：全球锁定
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAccessControl(AccessControl $AccessControl) 设置访问控制
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAdvance() 获取是否支持高级配置项
+on：支持
+off：不支持
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAdvance(string $Advance) 设置是否支持高级配置项
+on：支持
+off：不支持
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method UrlRedirect getUrlRedirect() 获取URL重定向配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUrlRedirect(UrlRedirect $UrlRedirect) 设置URL重定向配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getAccessPort() 获取访问端口配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAccessPort(array $AccessPort) 设置访问端口配置
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DetailDomain extends AbstractModel
 {
@@ -503,6 +519,26 @@ global：全球锁定
     public $AccessControl;
 
     /**
+     * @var string 是否支持高级配置项
+on：支持
+off：不支持
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Advance;
+
+    /**
+     * @var UrlRedirect URL重定向配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UrlRedirect;
+
+    /**
+     * @var array 访问端口配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AccessPort;
+
+    /**
      * @param string $ResourceId 域名 ID
      * @param integer $AppId 腾讯云账号ID
      * @param string $Domain 加速域名
@@ -603,6 +639,14 @@ global：全球锁定
      * @param UserAgentFilter $UserAgentFilter UA黑白名单配置
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AccessControl $AccessControl 访问控制
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Advance 是否支持高级配置项
+on：支持
+off：不支持
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UrlRedirect $UrlRedirect URL重定向配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $AccessPort 访问端口配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -824,6 +868,19 @@ global：全球锁定
         if (array_key_exists("AccessControl",$param) and $param["AccessControl"] !== null) {
             $this->AccessControl = new AccessControl();
             $this->AccessControl->deserialize($param["AccessControl"]);
+        }
+
+        if (array_key_exists("Advance",$param) and $param["Advance"] !== null) {
+            $this->Advance = $param["Advance"];
+        }
+
+        if (array_key_exists("UrlRedirect",$param) and $param["UrlRedirect"] !== null) {
+            $this->UrlRedirect = new UrlRedirect();
+            $this->UrlRedirect->deserialize($param["UrlRedirect"]);
+        }
+
+        if (array_key_exists("AccessPort",$param) and $param["AccessPort"] !== null) {
+            $this->AccessPort = $param["AccessPort"];
         }
     }
 }

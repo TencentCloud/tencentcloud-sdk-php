@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnablePdfRecognize(boolean $EnablePdfRecognize) 设置是否开启pdf识别，默认开启
  * @method integer getPdfPageIndex() 获取pdf页码，从0开始，默认为0
  * @method void setPdfPageIndex(integer $PdfPageIndex) 设置pdf页码，从0开始，默认为0
+ * @method integer getLaTex() 获取是否返回LaTex，默认为0返回普通格式，设置成1返回LaTex格式
+ * @method void setLaTex(integer $LaTex) 设置是否返回LaTex，默认为0返回普通格式，设置成1返回LaTex格式
  */
 class EvaluationRequest extends AbstractModel
 {
@@ -101,6 +103,11 @@ class EvaluationRequest extends AbstractModel
     public $PdfPageIndex;
 
     /**
+     * @var integer 是否返回LaTex，默认为0返回普通格式，设置成1返回LaTex格式
+     */
+    public $LaTex;
+
+    /**
      * @param string $SessionId 图片唯一标识，一张图片一个SessionId；
      * @param string $Image 图片数据，需要使用base64对图片的二进制数据进行编码，与url参数二者填一即可；
      * @param string $HcmAppid 业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，新的 HcmAppid 可以在[控制台](https://console.cloud.tencent.com/hcm)【应用管理】下新建。
@@ -112,6 +119,7 @@ class EvaluationRequest extends AbstractModel
      * @param boolean $EnableDispMidresult 是否展示竖式算式的中间结果和格式控制字符
      * @param boolean $EnablePdfRecognize 是否开启pdf识别，默认开启
      * @param integer $PdfPageIndex pdf页码，从0开始，默认为0
+     * @param integer $LaTex 是否返回LaTex，默认为0返回普通格式，设置成1返回LaTex格式
      */
     function __construct()
     {
@@ -168,6 +176,10 @@ class EvaluationRequest extends AbstractModel
 
         if (array_key_exists("PdfPageIndex",$param) and $param["PdfPageIndex"] !== null) {
             $this->PdfPageIndex = $param["PdfPageIndex"];
+        }
+
+        if (array_key_exists("LaTex",$param) and $param["LaTex"] !== null) {
+            $this->LaTex = $param["LaTex"];
         }
     }
 }

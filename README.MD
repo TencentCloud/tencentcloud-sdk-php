@@ -146,7 +146,7 @@ $client = new OcrClient($cred, 'ap-beijing', $this->clientProfile);
 
 ## php_curl 扩展
 
-此 SDK 依赖的 GuzzleHttp 需要开启 php_curl 扩展，查看环境上的 php.ini 环境确认是否已启用，例如在 Linux 环境下，PHP 7.1 版本，托管在 apache 下的服务，可以打开 /etc/php/7.1/apache2/php.ini 中查看 extension=php_curl.dll 配置项是否已被注释，请删除此项配置前的注释符并重启 apache。
+此 SDK 依赖的 GuzzleHttp 需要开启 php_curl 扩展，查看环境上的 php.ini 环境确认是否已启用，例如在 Linux 环境下，PHP 7.1 版本，托管在 apache 下的服务，可以打开 /etc/php/7.1/apache2/php.ini 中查看 extension=curl.so 配置项是否已被注释，请删除此项配置前的注释符，如果没有这一行配置，手动添加一下，然后重启 apache。
 
 ## Web 访问异常
 

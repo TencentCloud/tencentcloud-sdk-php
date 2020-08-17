@@ -50,6 +50,26 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getZone() 获取所在区域
  * @method void setZone(string $Zone) 设置所在区域
+ * @method string getZoneName() 获取可用区名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setZoneName(string $ZoneName) 设置可用区名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getInstanceCount() 获取实例数量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInstanceCount(integer $InstanceCount) 设置实例数量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getVpcCidrBlock() 获取VPC的 IPv4 CIDR。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVpcCidrBlock(string $VpcCidrBlock) 设置VPC的 IPv4 CIDR。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getVpcIpv6CidrBlock() 获取VPC的 IPv6 CIDR。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVpcIpv6CidrBlock(string $VpcIpv6CidrBlock) 设置VPC的 IPv6 CIDR。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRegion() 获取地域
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRegion(string $Region) 设置地域
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Subnet extends AbstractModel
 {
@@ -125,6 +145,36 @@ class Subnet extends AbstractModel
     public $Zone;
 
     /**
+     * @var string 可用区名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ZoneName;
+
+    /**
+     * @var integer 实例数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InstanceCount;
+
+    /**
+     * @var string VPC的 IPv4 CIDR。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $VpcCidrBlock;
+
+    /**
+     * @var string VPC的 IPv6 CIDR。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $VpcIpv6CidrBlock;
+
+    /**
+     * @var string 地域
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Region;
+
+    /**
      * @param string $VpcId VPC实例ID。
      * @param string $SubnetId 子网实例ID，例如：subnet-bthucmmy。
      * @param string $SubnetName 子网名称。
@@ -140,6 +190,16 @@ class Subnet extends AbstractModel
      * @param array $TagSet 标签键值对。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Zone 所在区域
+     * @param string $ZoneName 可用区名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $InstanceCount 实例数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $VpcCidrBlock VPC的 IPv4 CIDR。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $VpcIpv6CidrBlock VPC的 IPv6 CIDR。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Region 地域
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -213,6 +273,26 @@ class Subnet extends AbstractModel
 
         if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
             $this->Zone = $param["Zone"];
+        }
+
+        if (array_key_exists("ZoneName",$param) and $param["ZoneName"] !== null) {
+            $this->ZoneName = $param["ZoneName"];
+        }
+
+        if (array_key_exists("InstanceCount",$param) and $param["InstanceCount"] !== null) {
+            $this->InstanceCount = $param["InstanceCount"];
+        }
+
+        if (array_key_exists("VpcCidrBlock",$param) and $param["VpcCidrBlock"] !== null) {
+            $this->VpcCidrBlock = $param["VpcCidrBlock"];
+        }
+
+        if (array_key_exists("VpcIpv6CidrBlock",$param) and $param["VpcIpv6CidrBlock"] !== null) {
+            $this->VpcIpv6CidrBlock = $param["VpcIpv6CidrBlock"];
+        }
+
+        if (array_key_exists("Region",$param) and $param["Region"] !== null) {
+            $this->Region = $param["Region"];
         }
     }
 }

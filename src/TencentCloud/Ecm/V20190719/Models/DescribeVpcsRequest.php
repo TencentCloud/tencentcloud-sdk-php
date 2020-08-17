@@ -20,36 +20,33 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeVpcs请求参数结构体
  *
- * @method string getEcmRegion() 获取地域
- * @method void setEcmRegion(string $EcmRegion) 设置地域
  * @method array getVpcIds() 获取VPC实例ID。形如：vpc-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpcIds和Filters。
  * @method void setVpcIds(array $VpcIds) 设置VPC实例ID。形如：vpc-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpcIds和Filters。
  * @method array getFilters() 获取过滤条件，参数不支持同时指定VpcIds和Filters。
-vpc-name - String - （过滤条件）VPC实例名称。
-is-default - String - （过滤条件）是否默认VPC。
-vpc-id - String - （过滤条件）VPC实例ID形如：vpc-f49l6u0z。
-cidr-block - String - （过滤条件）vpc的cidr。
-tag-key - String -是否必填：否- （过滤条件）按照标签键进行过滤。
-tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。使用请参考示例
+vpc-name - String - VPC实例名称，只支持单值的模糊查询。
+vpc-id - String - VPC实例ID形如：vpc-f49l6u0z。
+cidr-block - String - vpc的cidr，只支持单值的模糊查询。
+region - String - vpc的region。
+tag-key - String -是否必填：否- 按照标签键进行过滤。
+tag:tag-key - String - 是否必填：否 - 按照标签键值对进行过滤。
  * @method void setFilters(array $Filters) 设置过滤条件，参数不支持同时指定VpcIds和Filters。
-vpc-name - String - （过滤条件）VPC实例名称。
-is-default - String - （过滤条件）是否默认VPC。
-vpc-id - String - （过滤条件）VPC实例ID形如：vpc-f49l6u0z。
-cidr-block - String - （过滤条件）vpc的cidr。
-tag-key - String -是否必填：否- （过滤条件）按照标签键进行过滤。
-tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。使用请参考示例
+vpc-name - String - VPC实例名称，只支持单值的模糊查询。
+vpc-id - String - VPC实例ID形如：vpc-f49l6u0z。
+cidr-block - String - vpc的cidr，只支持单值的模糊查询。
+region - String - vpc的region。
+tag-key - String -是否必填：否- 按照标签键进行过滤。
+tag:tag-key - String - 是否必填：否 - 按照标签键值对进行过滤。
  * @method integer getOffset() 获取偏移量
  * @method void setOffset(integer $Offset) 设置偏移量
  * @method integer getLimit() 获取返回数量
  * @method void setLimit(integer $Limit) 设置返回数量
+ * @method string getEcmRegion() 获取地域
+ * @method void setEcmRegion(string $EcmRegion) 设置地域
+ * @method string getSort() 获取排序方式：time时间倒序, default按照网络规划排序
+ * @method void setSort(string $Sort) 设置排序方式：time时间倒序, default按照网络规划排序
  */
 class DescribeVpcsRequest extends AbstractModel
 {
-    /**
-     * @var string 地域
-     */
-    public $EcmRegion;
-
     /**
      * @var array VPC实例ID。形如：vpc-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpcIds和Filters。
      */
@@ -57,12 +54,12 @@ class DescribeVpcsRequest extends AbstractModel
 
     /**
      * @var array 过滤条件，参数不支持同时指定VpcIds和Filters。
-vpc-name - String - （过滤条件）VPC实例名称。
-is-default - String - （过滤条件）是否默认VPC。
-vpc-id - String - （过滤条件）VPC实例ID形如：vpc-f49l6u0z。
-cidr-block - String - （过滤条件）vpc的cidr。
-tag-key - String -是否必填：否- （过滤条件）按照标签键进行过滤。
-tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。使用请参考示例
+vpc-name - String - VPC实例名称，只支持单值的模糊查询。
+vpc-id - String - VPC实例ID形如：vpc-f49l6u0z。
+cidr-block - String - vpc的cidr，只支持单值的模糊查询。
+region - String - vpc的region。
+tag-key - String -是否必填：否- 按照标签键进行过滤。
+tag:tag-key - String - 是否必填：否 - 按照标签键值对进行过滤。
      */
     public $Filters;
 
@@ -77,17 +74,28 @@ tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值
     public $Limit;
 
     /**
-     * @param string $EcmRegion 地域
+     * @var string 地域
+     */
+    public $EcmRegion;
+
+    /**
+     * @var string 排序方式：time时间倒序, default按照网络规划排序
+     */
+    public $Sort;
+
+    /**
      * @param array $VpcIds VPC实例ID。形如：vpc-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpcIds和Filters。
      * @param array $Filters 过滤条件，参数不支持同时指定VpcIds和Filters。
-vpc-name - String - （过滤条件）VPC实例名称。
-is-default - String - （过滤条件）是否默认VPC。
-vpc-id - String - （过滤条件）VPC实例ID形如：vpc-f49l6u0z。
-cidr-block - String - （过滤条件）vpc的cidr。
-tag-key - String -是否必填：否- （过滤条件）按照标签键进行过滤。
-tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。使用请参考示例
+vpc-name - String - VPC实例名称，只支持单值的模糊查询。
+vpc-id - String - VPC实例ID形如：vpc-f49l6u0z。
+cidr-block - String - vpc的cidr，只支持单值的模糊查询。
+region - String - vpc的region。
+tag-key - String -是否必填：否- 按照标签键进行过滤。
+tag:tag-key - String - 是否必填：否 - 按照标签键值对进行过滤。
      * @param integer $Offset 偏移量
      * @param integer $Limit 返回数量
+     * @param string $EcmRegion 地域
+     * @param string $Sort 排序方式：time时间倒序, default按照网络规划排序
      */
     function __construct()
     {
@@ -102,10 +110,6 @@ tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值
         if ($param === null) {
             return;
         }
-        if (array_key_exists("EcmRegion",$param) and $param["EcmRegion"] !== null) {
-            $this->EcmRegion = $param["EcmRegion"];
-        }
-
         if (array_key_exists("VpcIds",$param) and $param["VpcIds"] !== null) {
             $this->VpcIds = $param["VpcIds"];
         }
@@ -125,6 +129,14 @@ tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("EcmRegion",$param) and $param["EcmRegion"] !== null) {
+            $this->EcmRegion = $param["EcmRegion"];
+        }
+
+        if (array_key_exists("Sort",$param) and $param["Sort"] !== null) {
+            $this->Sort = $param["Sort"];
         }
     }
 }

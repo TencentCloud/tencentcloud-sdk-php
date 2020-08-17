@@ -22,6 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getKeyStatus() 获取过滤条件：密钥的状态，0：disabled，1：enabled
  * @method void setKeyStatus(integer $KeyStatus) 设置过滤条件：密钥的状态，0：disabled，1：enabled
+ * @method integer getOffset() 获取含义跟 SQL 查询的 Offset 一致，表示本次获取从按一定顺序排列数组的第 Offset 个元素开始，缺省为0
+ * @method void setOffset(integer $Offset) 设置含义跟 SQL 查询的 Offset 一致，表示本次获取从按一定顺序排列数组的第 Offset 个元素开始，缺省为0
+ * @method integer getLimit() 获取含义跟 SQL 查询的 Limit 一致，表示本次最多获取 Limit 个元素。缺省值为0, 表示不分页
+ * @method void setLimit(integer $Limit) 设置含义跟 SQL 查询的 Limit 一致，表示本次最多获取 Limit 个元素。缺省值为0, 表示不分页
+ * @method array getTagFilters() 获取标签过滤条件
+ * @method void setTagFilters(array $TagFilters) 设置标签过滤条件
  */
 class DescribeWhiteBoxKeyDetailsRequest extends AbstractModel
 {
@@ -31,7 +37,25 @@ class DescribeWhiteBoxKeyDetailsRequest extends AbstractModel
     public $KeyStatus;
 
     /**
+     * @var integer 含义跟 SQL 查询的 Offset 一致，表示本次获取从按一定顺序排列数组的第 Offset 个元素开始，缺省为0
+     */
+    public $Offset;
+
+    /**
+     * @var integer 含义跟 SQL 查询的 Limit 一致，表示本次最多获取 Limit 个元素。缺省值为0, 表示不分页
+     */
+    public $Limit;
+
+    /**
+     * @var array 标签过滤条件
+     */
+    public $TagFilters;
+
+    /**
      * @param integer $KeyStatus 过滤条件：密钥的状态，0：disabled，1：enabled
+     * @param integer $Offset 含义跟 SQL 查询的 Offset 一致，表示本次获取从按一定顺序排列数组的第 Offset 个元素开始，缺省为0
+     * @param integer $Limit 含义跟 SQL 查询的 Limit 一致，表示本次最多获取 Limit 个元素。缺省值为0, 表示不分页
+     * @param array $TagFilters 标签过滤条件
      */
     function __construct()
     {
@@ -48,6 +72,23 @@ class DescribeWhiteBoxKeyDetailsRequest extends AbstractModel
         }
         if (array_key_exists("KeyStatus",$param) and $param["KeyStatus"] !== null) {
             $this->KeyStatus = $param["KeyStatus"];
+        }
+
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("TagFilters",$param) and $param["TagFilters"] !== null) {
+            $this->TagFilters = [];
+            foreach ($param["TagFilters"] as $key => $value){
+                $obj = new TagFilter();
+                $obj->deserialize($value);
+                array_push($this->TagFilters, $obj);
+            }
         }
     }
 }

@@ -42,6 +42,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDecryptKey(string $DecryptKey) 设置白盒解密密钥，base64编码
  * @method string getResourceId() 获取资源ID，格式：creatorUin/$creatorUin/$keyId
  * @method void setResourceId(string $ResourceId) 设置资源ID，格式：creatorUin/$creatorUin/$keyId
+ * @method boolean getDeviceFingerprintBind() 获取是否有设备指纹与当前密钥绑定
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDeviceFingerprintBind(boolean $DeviceFingerprintBind) 设置是否有设备指纹与当前密钥绑定
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class WhiteboxKeyInfo extends AbstractModel
 {
@@ -101,6 +105,12 @@ class WhiteboxKeyInfo extends AbstractModel
     public $ResourceId;
 
     /**
+     * @var boolean 是否有设备指纹与当前密钥绑定
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DeviceFingerprintBind;
+
+    /**
      * @param string $KeyId 白盒密钥的全局唯一标识符
      * @param string $Alias 作为密钥更容易辨识，更容易被人看懂的别名， 不可为空，1-60个字母数字 - _ 的组合，首字符必须为字母或者数字. 不可重复
      * @param integer $CreatorUin 创建者
@@ -112,6 +122,8 @@ class WhiteboxKeyInfo extends AbstractModel
      * @param string $EncryptKey 白盒加密密钥，base64编码
      * @param string $DecryptKey 白盒解密密钥，base64编码
      * @param string $ResourceId 资源ID，格式：creatorUin/$creatorUin/$keyId
+     * @param boolean $DeviceFingerprintBind 是否有设备指纹与当前密钥绑定
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -168,6 +180,10 @@ class WhiteboxKeyInfo extends AbstractModel
 
         if (array_key_exists("ResourceId",$param) and $param["ResourceId"] !== null) {
             $this->ResourceId = $param["ResourceId"];
+        }
+
+        if (array_key_exists("DeviceFingerprintBind",$param) and $param["DeviceFingerprintBind"] !== null) {
+            $this->DeviceFingerprintBind = $param["DeviceFingerprintBind"];
         }
     }
 }

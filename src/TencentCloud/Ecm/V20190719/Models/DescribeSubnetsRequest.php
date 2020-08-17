@@ -20,42 +20,39 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSubnets请求参数结构体
  *
- * @method string getEcmRegion() 获取ECM 地域
- * @method void setEcmRegion(string $EcmRegion) 设置ECM 地域
  * @method array getSubnetIds() 获取子网实例ID查询。形如：subnet-pxir56ns。每次请求的实例的上限为100。参数不支持同时指定SubnetIds和Filters。
  * @method void setSubnetIds(array $SubnetIds) 设置子网实例ID查询。形如：subnet-pxir56ns。每次请求的实例的上限为100。参数不支持同时指定SubnetIds和Filters。
  * @method array getFilters() 获取过滤条件，参数不支持同时指定SubnetIds和Filters。
-subnet-id - String - （过滤条件）Subnet实例名称。
-vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。
-cidr-block - String - （过滤条件）子网网段，形如: 192.168.1.0 。
-is-default - Boolean - （过滤条件）是否是默认子网。
-is-remote-vpc-snat - Boolean - （过滤条件）是否为VPC SNAT地址池子网。
-subnet-name - String - （过滤条件）子网名称。
-zone - String - （过滤条件）可用区。
-tag-key - String -是否必填：否- （过滤条件）按照标签键进行过滤。
-tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。使用请参考示例
+subnet-id - String - Subnet实例名称。
+subnet-name - String - 子网名称。只支持单值的模糊查询。
+cidr-block - String - 子网网段，形如: 192.168.1.0 。只支持单值的模糊查询。
+vpc-id - String - VPC实例ID，形如：vpc-f49l6u0z。
+vpc-cidr-block  - String - vpc网段，形如: 192.168.1.0 。只支持单值的模糊查询。
+region - String - ECM地域
+zone - String - 可用区。
+tag-key - String -是否必填：否- 按照标签键进行过滤。
+tag:tag-key - String - 是否必填：否 - 按照标签键值对进行过滤。
  * @method void setFilters(array $Filters) 设置过滤条件，参数不支持同时指定SubnetIds和Filters。
-subnet-id - String - （过滤条件）Subnet实例名称。
-vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。
-cidr-block - String - （过滤条件）子网网段，形如: 192.168.1.0 。
-is-default - Boolean - （过滤条件）是否是默认子网。
-is-remote-vpc-snat - Boolean - （过滤条件）是否为VPC SNAT地址池子网。
-subnet-name - String - （过滤条件）子网名称。
-zone - String - （过滤条件）可用区。
-tag-key - String -是否必填：否- （过滤条件）按照标签键进行过滤。
-tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。使用请参考示例
+subnet-id - String - Subnet实例名称。
+subnet-name - String - 子网名称。只支持单值的模糊查询。
+cidr-block - String - 子网网段，形如: 192.168.1.0 。只支持单值的模糊查询。
+vpc-id - String - VPC实例ID，形如：vpc-f49l6u0z。
+vpc-cidr-block  - String - vpc网段，形如: 192.168.1.0 。只支持单值的模糊查询。
+region - String - ECM地域
+zone - String - 可用区。
+tag-key - String -是否必填：否- 按照标签键进行过滤。
+tag:tag-key - String - 是否必填：否 - 按照标签键值对进行过滤。
  * @method string getOffset() 获取偏移量
  * @method void setOffset(string $Offset) 设置偏移量
  * @method string getLimit() 获取返回数量
  * @method void setLimit(string $Limit) 设置返回数量
+ * @method string getEcmRegion() 获取ECM 地域
+ * @method void setEcmRegion(string $EcmRegion) 设置ECM 地域
+ * @method string getSort() 获取排序方式：time时间倒序, default按照网络规划排序
+ * @method void setSort(string $Sort) 设置排序方式：time时间倒序, default按照网络规划排序
  */
 class DescribeSubnetsRequest extends AbstractModel
 {
-    /**
-     * @var string ECM 地域
-     */
-    public $EcmRegion;
-
     /**
      * @var array 子网实例ID查询。形如：subnet-pxir56ns。每次请求的实例的上限为100。参数不支持同时指定SubnetIds和Filters。
      */
@@ -63,15 +60,15 @@ class DescribeSubnetsRequest extends AbstractModel
 
     /**
      * @var array 过滤条件，参数不支持同时指定SubnetIds和Filters。
-subnet-id - String - （过滤条件）Subnet实例名称。
-vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。
-cidr-block - String - （过滤条件）子网网段，形如: 192.168.1.0 。
-is-default - Boolean - （过滤条件）是否是默认子网。
-is-remote-vpc-snat - Boolean - （过滤条件）是否为VPC SNAT地址池子网。
-subnet-name - String - （过滤条件）子网名称。
-zone - String - （过滤条件）可用区。
-tag-key - String -是否必填：否- （过滤条件）按照标签键进行过滤。
-tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。使用请参考示例
+subnet-id - String - Subnet实例名称。
+subnet-name - String - 子网名称。只支持单值的模糊查询。
+cidr-block - String - 子网网段，形如: 192.168.1.0 。只支持单值的模糊查询。
+vpc-id - String - VPC实例ID，形如：vpc-f49l6u0z。
+vpc-cidr-block  - String - vpc网段，形如: 192.168.1.0 。只支持单值的模糊查询。
+region - String - ECM地域
+zone - String - 可用区。
+tag-key - String -是否必填：否- 按照标签键进行过滤。
+tag:tag-key - String - 是否必填：否 - 按照标签键值对进行过滤。
      */
     public $Filters;
 
@@ -86,20 +83,31 @@ tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值
     public $Limit;
 
     /**
-     * @param string $EcmRegion ECM 地域
+     * @var string ECM 地域
+     */
+    public $EcmRegion;
+
+    /**
+     * @var string 排序方式：time时间倒序, default按照网络规划排序
+     */
+    public $Sort;
+
+    /**
      * @param array $SubnetIds 子网实例ID查询。形如：subnet-pxir56ns。每次请求的实例的上限为100。参数不支持同时指定SubnetIds和Filters。
      * @param array $Filters 过滤条件，参数不支持同时指定SubnetIds和Filters。
-subnet-id - String - （过滤条件）Subnet实例名称。
-vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。
-cidr-block - String - （过滤条件）子网网段，形如: 192.168.1.0 。
-is-default - Boolean - （过滤条件）是否是默认子网。
-is-remote-vpc-snat - Boolean - （过滤条件）是否为VPC SNAT地址池子网。
-subnet-name - String - （过滤条件）子网名称。
-zone - String - （过滤条件）可用区。
-tag-key - String -是否必填：否- （过滤条件）按照标签键进行过滤。
-tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。使用请参考示例
+subnet-id - String - Subnet实例名称。
+subnet-name - String - 子网名称。只支持单值的模糊查询。
+cidr-block - String - 子网网段，形如: 192.168.1.0 。只支持单值的模糊查询。
+vpc-id - String - VPC实例ID，形如：vpc-f49l6u0z。
+vpc-cidr-block  - String - vpc网段，形如: 192.168.1.0 。只支持单值的模糊查询。
+region - String - ECM地域
+zone - String - 可用区。
+tag-key - String -是否必填：否- 按照标签键进行过滤。
+tag:tag-key - String - 是否必填：否 - 按照标签键值对进行过滤。
      * @param string $Offset 偏移量
      * @param string $Limit 返回数量
+     * @param string $EcmRegion ECM 地域
+     * @param string $Sort 排序方式：time时间倒序, default按照网络规划排序
      */
     function __construct()
     {
@@ -114,10 +122,6 @@ tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值
         if ($param === null) {
             return;
         }
-        if (array_key_exists("EcmRegion",$param) and $param["EcmRegion"] !== null) {
-            $this->EcmRegion = $param["EcmRegion"];
-        }
-
         if (array_key_exists("SubnetIds",$param) and $param["SubnetIds"] !== null) {
             $this->SubnetIds = $param["SubnetIds"];
         }
@@ -137,6 +141,14 @@ tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("EcmRegion",$param) and $param["EcmRegion"] !== null) {
+            $this->EcmRegion = $param["EcmRegion"];
+        }
+
+        if (array_key_exists("Sort",$param) and $param["Sort"] !== null) {
+            $this->Sort = $param["Sort"];
         }
     }
 }

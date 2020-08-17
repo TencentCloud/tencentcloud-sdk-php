@@ -22,8 +22,6 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getProductModel() 获取产器型号(APP产品,为APP包名)
  * @method void setProductModel(string $ProductModel) 设置产器型号(APP产品,为APP包名)
- * @method array getFeatures() 获取设备功能码（ypsxth:音频双向通话 ，spdxth:视频单向通话）
- * @method void setFeatures(array $Features) 设置设备功能码（ypsxth:音频双向通话 ，spdxth:视频单向通话）
  * @method string getProductName() 获取产品名称
 仅支持中文、英文、数字、下划线，不超过32个字符
  * @method void setProductName(string $ProductName) 设置产品名称
@@ -32,10 +30,28 @@ use TencentCloud\Common\AbstractModel;
 不支持单引号、双引号、退格符、回车符、换行符、制表符、反斜杠、下划线、“%”、“#”、“$”，不超过128字符
  * @method void setProductDescription(string $ProductDescription) 设置产品描述信息
 不支持单引号、双引号、退格符、回车符、换行符、制表符、反斜杠、下划线、“%”、“#”、“$”，不超过128字符
+ * @method array getFeatures() 获取设备功能码（ypsxth:音频双向通话 ，spdxth:视频单向通话）
+ * @method void setFeatures(array $Features) 设置设备功能码（ypsxth:音频双向通话 ，spdxth:视频单向通话）
  * @method string getChipManufactureId() 获取主芯片产商ID
  * @method void setChipManufactureId(string $ChipManufactureId) 设置主芯片产商ID
  * @method string getChipId() 获取主芯片ID
  * @method void setChipId(string $ChipId) 设置主芯片ID
+ * @method string getProductRegion() 获取地域：
+China-Mainland（中国大陆）
+China-Hong Kong, Macao and Taiwan（港澳台地区）
+America（美国）
+Europe（欧洲）
+India（印度）
+Other-Overseas（其他境外地区）
+ * @method void setProductRegion(string $ProductRegion) 设置地域：
+China-Mainland（中国大陆）
+China-Hong Kong, Macao and Taiwan（港澳台地区）
+America（美国）
+Europe（欧洲）
+India（印度）
+Other-Overseas（其他境外地区）
+ * @method integer getProductCate() 获取设备类型, 0-普通视频设备，1-NVR设备
+ * @method void setProductCate(integer $ProductCate) 设置设备类型, 0-普通视频设备，1-NVR设备
  */
 class CreateProductRequest extends AbstractModel
 {
@@ -43,11 +59,6 @@ class CreateProductRequest extends AbstractModel
      * @var string 产器型号(APP产品,为APP包名)
      */
     public $ProductModel;
-
-    /**
-     * @var array 设备功能码（ypsxth:音频双向通话 ，spdxth:视频单向通话）
-     */
-    public $Features;
 
     /**
      * @var string 产品名称
@@ -62,6 +73,11 @@ class CreateProductRequest extends AbstractModel
     public $ProductDescription;
 
     /**
+     * @var array 设备功能码（ypsxth:音频双向通话 ，spdxth:视频单向通话）
+     */
+    public $Features;
+
+    /**
      * @var string 主芯片产商ID
      */
     public $ChipManufactureId;
@@ -72,14 +88,38 @@ class CreateProductRequest extends AbstractModel
     public $ChipId;
 
     /**
+     * @var string 地域：
+China-Mainland（中国大陆）
+China-Hong Kong, Macao and Taiwan（港澳台地区）
+America（美国）
+Europe（欧洲）
+India（印度）
+Other-Overseas（其他境外地区）
+     */
+    public $ProductRegion;
+
+    /**
+     * @var integer 设备类型, 0-普通视频设备，1-NVR设备
+     */
+    public $ProductCate;
+
+    /**
      * @param string $ProductModel 产器型号(APP产品,为APP包名)
-     * @param array $Features 设备功能码（ypsxth:音频双向通话 ，spdxth:视频单向通话）
      * @param string $ProductName 产品名称
 仅支持中文、英文、数字、下划线，不超过32个字符
      * @param string $ProductDescription 产品描述信息
 不支持单引号、双引号、退格符、回车符、换行符、制表符、反斜杠、下划线、“%”、“#”、“$”，不超过128字符
+     * @param array $Features 设备功能码（ypsxth:音频双向通话 ，spdxth:视频单向通话）
      * @param string $ChipManufactureId 主芯片产商ID
      * @param string $ChipId 主芯片ID
+     * @param string $ProductRegion 地域：
+China-Mainland（中国大陆）
+China-Hong Kong, Macao and Taiwan（港澳台地区）
+America（美国）
+Europe（欧洲）
+India（印度）
+Other-Overseas（其他境外地区）
+     * @param integer $ProductCate 设备类型, 0-普通视频设备，1-NVR设备
      */
     function __construct()
     {
@@ -98,10 +138,6 @@ class CreateProductRequest extends AbstractModel
             $this->ProductModel = $param["ProductModel"];
         }
 
-        if (array_key_exists("Features",$param) and $param["Features"] !== null) {
-            $this->Features = $param["Features"];
-        }
-
         if (array_key_exists("ProductName",$param) and $param["ProductName"] !== null) {
             $this->ProductName = $param["ProductName"];
         }
@@ -110,12 +146,24 @@ class CreateProductRequest extends AbstractModel
             $this->ProductDescription = $param["ProductDescription"];
         }
 
+        if (array_key_exists("Features",$param) and $param["Features"] !== null) {
+            $this->Features = $param["Features"];
+        }
+
         if (array_key_exists("ChipManufactureId",$param) and $param["ChipManufactureId"] !== null) {
             $this->ChipManufactureId = $param["ChipManufactureId"];
         }
 
         if (array_key_exists("ChipId",$param) and $param["ChipId"] !== null) {
             $this->ChipId = $param["ChipId"];
+        }
+
+        if (array_key_exists("ProductRegion",$param) and $param["ProductRegion"] !== null) {
+            $this->ProductRegion = $param["ProductRegion"];
+        }
+
+        if (array_key_exists("ProductCate",$param) and $param["ProductCate"] !== null) {
+            $this->ProductCate = $param["ProductCate"];
         }
     }
 }

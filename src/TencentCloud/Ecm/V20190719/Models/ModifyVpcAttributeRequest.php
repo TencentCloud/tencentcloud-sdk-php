@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEcmRegion(string $EcmRegion) 设置ECM 地域
  * @method string getVpcName() 获取私有网络名称，可任意命名，但不得超过60个字符。
  * @method void setVpcName(string $VpcName) 设置私有网络名称，可任意命名，但不得超过60个字符。
+ * @method array getTags() 获取标签
+ * @method void setTags(array $Tags) 设置标签
+ * @method string getDescription() 获取私有网络描述
+ * @method void setDescription(string $Description) 设置私有网络描述
  */
 class ModifyVpcAttributeRequest extends AbstractModel
 {
@@ -45,9 +49,21 @@ class ModifyVpcAttributeRequest extends AbstractModel
     public $VpcName;
 
     /**
+     * @var array 标签
+     */
+    public $Tags;
+
+    /**
+     * @var string 私有网络描述
+     */
+    public $Description;
+
+    /**
      * @param string $VpcId VPC实例ID。形如：vpc-f49l6u0z。
      * @param string $EcmRegion ECM 地域
      * @param string $VpcName 私有网络名称，可任意命名，但不得超过60个字符。
+     * @param array $Tags 标签
+     * @param string $Description 私有网络描述
      */
     function __construct()
     {
@@ -72,6 +88,19 @@ class ModifyVpcAttributeRequest extends AbstractModel
 
         if (array_key_exists("VpcName",$param) and $param["VpcName"] !== null) {
             $this->VpcName = $param["VpcName"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
+        }
+
+        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
+            $this->Description = $param["Description"];
         }
     }
 }

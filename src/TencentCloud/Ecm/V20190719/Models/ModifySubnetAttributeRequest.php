@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubnetName(string $SubnetName) 设置子网名称，最大长度不能超过60个字节。
  * @method string getEnableBroadcast() 获取子网是否开启广播。
  * @method void setEnableBroadcast(string $EnableBroadcast) 设置子网是否开启广播。
+ * @method array getTags() 获取子网的标签键值
+ * @method void setTags(array $Tags) 设置子网的标签键值
  */
 class ModifySubnetAttributeRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class ModifySubnetAttributeRequest extends AbstractModel
     public $EnableBroadcast;
 
     /**
+     * @var array 子网的标签键值
+     */
+    public $Tags;
+
+    /**
      * @param string $SubnetId 子网实例ID。形如：subnet-pxir56ns。
      * @param string $EcmRegion ECM 地域
      * @param string $SubnetName 子网名称，最大长度不能超过60个字节。
      * @param string $EnableBroadcast 子网是否开启广播。
+     * @param array $Tags 子网的标签键值
      */
     function __construct()
     {
@@ -84,6 +92,15 @@ class ModifySubnetAttributeRequest extends AbstractModel
 
         if (array_key_exists("EnableBroadcast",$param) and $param["EnableBroadcast"] !== null) {
             $this->EnableBroadcast = $param["EnableBroadcast"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

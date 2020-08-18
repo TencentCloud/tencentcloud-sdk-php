@@ -14,32 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Iotcloud\V20180614\Models;
+namespace TencentCloud\Lighthouse\V20200324\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeLoraDevice请求参数结构体
+ * 价格信息
  *
- * @method string getProductId() 获取产品ID
- * @method void setProductId(string $ProductId) 设置产品ID
- * @method string getDeviceName() 获取设备名称
- * @method void setDeviceName(string $DeviceName) 设置设备名称
+ * @method InstancePrice getInstancePrice() 获取实例价格。
+ * @method void setInstancePrice(InstancePrice $InstancePrice) 设置实例价格。
  */
-class DescribeLoraDeviceRequest extends AbstractModel
+class Price extends AbstractModel
 {
     /**
-     * @var string 产品ID
+     * @var InstancePrice 实例价格。
      */
-    public $ProductId;
+    public $InstancePrice;
 
     /**
-     * @var string 设备名称
-     */
-    public $DeviceName;
-
-    /**
-     * @param string $ProductId 产品ID
-     * @param string $DeviceName 设备名称
+     * @param InstancePrice $InstancePrice 实例价格。
      */
     function __construct()
     {
@@ -54,12 +46,9 @@ class DescribeLoraDeviceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ProductId",$param) and $param["ProductId"] !== null) {
-            $this->ProductId = $param["ProductId"];
-        }
-
-        if (array_key_exists("DeviceName",$param) and $param["DeviceName"] !== null) {
-            $this->DeviceName = $param["DeviceName"];
+        if (array_key_exists("InstancePrice",$param) and $param["InstancePrice"] !== null) {
+            $this->InstancePrice = new InstancePrice();
+            $this->InstancePrice->deserialize($param["InstancePrice"]);
         }
     }
 }

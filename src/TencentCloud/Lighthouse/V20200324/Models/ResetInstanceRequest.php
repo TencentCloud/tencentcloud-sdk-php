@@ -14,32 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Gs\V20191118\Models;
+namespace TencentCloud\Lighthouse\V20200324\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * StopGame请求参数结构体
+ * ResetInstance请求参数结构体
  *
- * @method string getUserId() 获取游戏用户ID
- * @method void setUserId(string $UserId) 设置游戏用户ID
- * @method string getHostUserId() 获取用于多人游戏，游戏主机用户ID
- * @method void setHostUserId(string $HostUserId) 设置用于多人游戏，游戏主机用户ID
+ * @method string getInstanceId() 获取实例 ID。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID。
+ * @method string getBlueprintId() 获取镜像 ID。
+ * @method void setBlueprintId(string $BlueprintId) 设置镜像 ID。
  */
-class StopGameRequest extends AbstractModel
+class ResetInstanceRequest extends AbstractModel
 {
     /**
-     * @var string 游戏用户ID
+     * @var string 实例 ID。
      */
-    public $UserId;
+    public $InstanceId;
 
     /**
-     * @var string 用于多人游戏，游戏主机用户ID
+     * @var string 镜像 ID。
      */
-    public $HostUserId;
+    public $BlueprintId;
 
     /**
-     * @param string $UserId 游戏用户ID
-     * @param string $HostUserId 用于多人游戏，游戏主机用户ID
+     * @param string $InstanceId 实例 ID。
+     * @param string $BlueprintId 镜像 ID。
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class StopGameRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("UserId",$param) and $param["UserId"] !== null) {
-            $this->UserId = $param["UserId"];
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
         }
 
-        if (array_key_exists("HostUserId",$param) and $param["HostUserId"] !== null) {
-            $this->HostUserId = $param["HostUserId"];
+        if (array_key_exists("BlueprintId",$param) and $param["BlueprintId"] !== null) {
+            $this->BlueprintId = $param["BlueprintId"];
         }
     }
 }

@@ -14,32 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Gs\V20191118\Models;
+namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * StopGame请求参数结构体
+ * 标签对象，包含tagKey & tagValue
  *
- * @method string getUserId() 获取游戏用户ID
- * @method void setUserId(string $UserId) 设置游戏用户ID
- * @method string getHostUserId() 获取用于多人游戏，游戏主机用户ID
- * @method void setHostUserId(string $HostUserId) 设置用于多人游戏，游戏主机用户ID
+ * @method string getTagKey() 获取标签键key
+ * @method void setTagKey(string $TagKey) 设置标签键key
+ * @method string getTagValue() 获取标签值value
+ * @method void setTagValue(string $TagValue) 设置标签值value
  */
-class StopGameRequest extends AbstractModel
+class ResourceTag extends AbstractModel
 {
     /**
-     * @var string 游戏用户ID
+     * @var string 标签键key
      */
-    public $UserId;
+    public $TagKey;
 
     /**
-     * @var string 用于多人游戏，游戏主机用户ID
+     * @var string 标签值value
      */
-    public $HostUserId;
+    public $TagValue;
 
     /**
-     * @param string $UserId 游戏用户ID
-     * @param string $HostUserId 用于多人游戏，游戏主机用户ID
+     * @param string $TagKey 标签键key
+     * @param string $TagValue 标签值value
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class StopGameRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("UserId",$param) and $param["UserId"] !== null) {
-            $this->UserId = $param["UserId"];
+        if (array_key_exists("TagKey",$param) and $param["TagKey"] !== null) {
+            $this->TagKey = $param["TagKey"];
         }
 
-        if (array_key_exists("HostUserId",$param) and $param["HostUserId"] !== null) {
-            $this->HostUserId = $param["HostUserId"];
+        if (array_key_exists("TagValue",$param) and $param["TagValue"] !== null) {
+            $this->TagValue = $param["TagValue"];
         }
     }
 }

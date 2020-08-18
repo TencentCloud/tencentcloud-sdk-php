@@ -14,32 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Iotcloud\V20180614\Models;
+namespace TencentCloud\Lighthouse\V20200324\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeLoraDevice请求参数结构体
+ * StartInstances请求参数结构体
  *
- * @method string getProductId() 获取产品ID
- * @method void setProductId(string $ProductId) 设置产品ID
- * @method string getDeviceName() 获取设备名称
- * @method void setDeviceName(string $DeviceName) 设置设备名称
+ * @method array getInstanceIds() 获取实例 ID 列表。每次请求批量实例的上限为 100。
+ * @method void setInstanceIds(array $InstanceIds) 设置实例 ID 列表。每次请求批量实例的上限为 100。
  */
-class DescribeLoraDeviceRequest extends AbstractModel
+class StartInstancesRequest extends AbstractModel
 {
     /**
-     * @var string 产品ID
+     * @var array 实例 ID 列表。每次请求批量实例的上限为 100。
      */
-    public $ProductId;
+    public $InstanceIds;
 
     /**
-     * @var string 设备名称
-     */
-    public $DeviceName;
-
-    /**
-     * @param string $ProductId 产品ID
-     * @param string $DeviceName 设备名称
+     * @param array $InstanceIds 实例 ID 列表。每次请求批量实例的上限为 100。
      */
     function __construct()
     {
@@ -54,12 +46,8 @@ class DescribeLoraDeviceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ProductId",$param) and $param["ProductId"] !== null) {
-            $this->ProductId = $param["ProductId"];
-        }
-
-        if (array_key_exists("DeviceName",$param) and $param["DeviceName"] !== null) {
-            $this->DeviceName = $param["DeviceName"];
+        if (array_key_exists("InstanceIds",$param) and $param["InstanceIds"] !== null) {
+            $this->InstanceIds = $param["InstanceIds"];
         }
     }
 }

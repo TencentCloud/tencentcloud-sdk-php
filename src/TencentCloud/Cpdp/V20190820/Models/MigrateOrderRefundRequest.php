@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPayAmt(integer $PayAmt) 设置原始支付金额，单位：分。备注：当该字段为空或者为0 时，系统会默认使用订单当 实付金额作为退款金额
  * @method string getProfile() 获取接入环境。沙箱环境填 sandbox。
  * @method void setProfile(string $Profile) 设置接入环境。沙箱环境填 sandbox。
+ * @method string getRefundReason() 获取退款原因
+ * @method void setRefundReason(string $RefundReason) 设置退款原因
  */
 class MigrateOrderRefundRequest extends AbstractModel
 {
@@ -80,6 +82,11 @@ class MigrateOrderRefundRequest extends AbstractModel
     public $Profile;
 
     /**
+     * @var string 退款原因
+     */
+    public $RefundReason;
+
+    /**
      * @param string $MerchantId 商户代码
      * @param string $PayChannel 支付渠道，ALIPAY对应支付宝渠道；UNIONPAY对应银联渠道
      * @param string $PayOrderId 正向支付商户订单号
@@ -88,6 +95,7 @@ class MigrateOrderRefundRequest extends AbstractModel
      * @param string $ThirdChannelOrderId 第三方支付机构支付交易号
      * @param integer $PayAmt 原始支付金额，单位：分。备注：当该字段为空或者为0 时，系统会默认使用订单当 实付金额作为退款金额
      * @param string $Profile 接入环境。沙箱环境填 sandbox。
+     * @param string $RefundReason 退款原因
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ class MigrateOrderRefundRequest extends AbstractModel
 
         if (array_key_exists("Profile",$param) and $param["Profile"] !== null) {
             $this->Profile = $param["Profile"];
+        }
+
+        if (array_key_exists("RefundReason",$param) and $param["RefundReason"] !== null) {
+            $this->RefundReason = $param["RefundReason"];
         }
     }
 }

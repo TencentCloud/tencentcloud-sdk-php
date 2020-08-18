@@ -46,6 +46,10 @@ use TencentCloud\Common\AbstractModel;
 - 4：纯音频（mp3)
  * @method string getUserId() 获取摄像头/屏幕分享视频所属用户的 Id（白板视频为空、混流视频tic_mixstream_房间号_混流布局类型、辅路视频tic_substream_用户Id）
  * @method void setUserId(string $UserId) 设置摄像头/屏幕分享视频所属用户的 Id（白板视频为空、混流视频tic_mixstream_房间号_混流布局类型、辅路视频tic_substream_用户Id）
+ * @method integer getWidth() 获取视频分辨率的宽
+ * @method void setWidth(integer $Width) 设置视频分辨率的宽
+ * @method integer getHeight() 获取视频分辨率的高
+ * @method void setHeight(integer $Height) 设置视频分辨率的高
  */
 class VideoInfo extends AbstractModel
 {
@@ -95,6 +99,16 @@ class VideoInfo extends AbstractModel
     public $UserId;
 
     /**
+     * @var integer 视频分辨率的宽
+     */
+    public $Width;
+
+    /**
+     * @var integer 视频分辨率的高
+     */
+    public $Height;
+
+    /**
      * @param integer $VideoPlayTime 视频开始播放的时间（单位：毫秒）
      * @param integer $VideoSize 视频大小（字节）
      * @param string $VideoFormat 视频格式
@@ -108,6 +122,8 @@ class VideoInfo extends AbstractModel
 - 3：混流视频
 - 4：纯音频（mp3)
      * @param string $UserId 摄像头/屏幕分享视频所属用户的 Id（白板视频为空、混流视频tic_mixstream_房间号_混流布局类型、辅路视频tic_substream_用户Id）
+     * @param integer $Width 视频分辨率的宽
+     * @param integer $Height 视频分辨率的高
      */
     function __construct()
     {
@@ -152,6 +168,14 @@ class VideoInfo extends AbstractModel
 
         if (array_key_exists("UserId",$param) and $param["UserId"] !== null) {
             $this->UserId = $param["UserId"];
+        }
+
+        if (array_key_exists("Width",$param) and $param["Width"] !== null) {
+            $this->Width = $param["Width"];
+        }
+
+        if (array_key_exists("Height",$param) and $param["Height"] !== null) {
+            $this->Height = $param["Height"];
         }
     }
 }

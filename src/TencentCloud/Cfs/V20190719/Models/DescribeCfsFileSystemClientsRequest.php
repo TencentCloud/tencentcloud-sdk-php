@@ -14,32 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Iotcloud\V20180614\Models;
+namespace TencentCloud\Cfs\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeLoraDevice请求参数结构体
+ * DescribeCfsFileSystemClients请求参数结构体
  *
- * @method string getProductId() 获取产品ID
- * @method void setProductId(string $ProductId) 设置产品ID
- * @method string getDeviceName() 获取设备名称
- * @method void setDeviceName(string $DeviceName) 设置设备名称
+ * @method string getFileSystemId() 获取文件系统 ID。
+ * @method void setFileSystemId(string $FileSystemId) 设置文件系统 ID。
  */
-class DescribeLoraDeviceRequest extends AbstractModel
+class DescribeCfsFileSystemClientsRequest extends AbstractModel
 {
     /**
-     * @var string 产品ID
+     * @var string 文件系统 ID。
      */
-    public $ProductId;
+    public $FileSystemId;
 
     /**
-     * @var string 设备名称
-     */
-    public $DeviceName;
-
-    /**
-     * @param string $ProductId 产品ID
-     * @param string $DeviceName 设备名称
+     * @param string $FileSystemId 文件系统 ID。
      */
     function __construct()
     {
@@ -54,12 +46,8 @@ class DescribeLoraDeviceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ProductId",$param) and $param["ProductId"] !== null) {
-            $this->ProductId = $param["ProductId"];
-        }
-
-        if (array_key_exists("DeviceName",$param) and $param["DeviceName"] !== null) {
-            $this->DeviceName = $param["DeviceName"];
+        if (array_key_exists("FileSystemId",$param) and $param["FileSystemId"] !== null) {
+            $this->FileSystemId = $param["FileSystemId"];
         }
     }
 }

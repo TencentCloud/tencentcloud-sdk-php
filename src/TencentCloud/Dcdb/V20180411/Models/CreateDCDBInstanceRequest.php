@@ -68,6 +68,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceName(string $InstanceName) 设置实例名称， 可以通过该字段自主的设置实例的名字
  * @method integer getIpv6Flag() 获取是否支持IPv6
  * @method void setIpv6Flag(integer $Ipv6Flag) 设置是否支持IPv6
+ * @method array getResourceTags() 获取标签键值对数组
+ * @method void setResourceTags(array $ResourceTags) 设置标签键值对数组
  */
 class CreateDCDBInstanceRequest extends AbstractModel
 {
@@ -160,6 +162,11 @@ class CreateDCDBInstanceRequest extends AbstractModel
     public $Ipv6Flag;
 
     /**
+     * @var array 标签键值对数组
+     */
+    public $ResourceTags;
+
+    /**
      * @param array $Zones 分片节点可用区分布，最多可填两个可用区。当分片规格为一主两从时，其中两个节点在第一个可用区。
 注意当前可售卖的可用区需要通过DescribeDCDBSaleInfo接口拉取。
      * @param integer $Period 欲购买的时长，单位：月。
@@ -184,6 +191,7 @@ class CreateDCDBInstanceRequest extends AbstractModel
      * @param string $SecurityGroupId 安全组id
      * @param string $InstanceName 实例名称， 可以通过该字段自主的设置实例的名字
      * @param integer $Ipv6Flag 是否支持IPv6
+     * @param array $ResourceTags 标签键值对数组
      */
     function __construct()
     {
@@ -260,6 +268,15 @@ class CreateDCDBInstanceRequest extends AbstractModel
 
         if (array_key_exists("Ipv6Flag",$param) and $param["Ipv6Flag"] !== null) {
             $this->Ipv6Flag = $param["Ipv6Flag"];
+        }
+
+        if (array_key_exists("ResourceTags",$param) and $param["ResourceTags"] !== null) {
+            $this->ResourceTags = [];
+            foreach ($param["ResourceTags"] as $key => $value){
+                $obj = new ResourceTag();
+                $obj->deserialize($value);
+                array_push($this->ResourceTags, $obj);
+            }
         }
     }
 }

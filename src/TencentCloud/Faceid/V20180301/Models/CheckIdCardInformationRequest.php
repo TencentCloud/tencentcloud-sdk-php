@@ -44,6 +44,7 @@ BorderCheckWarn，边框和框内遮挡告警
 ReshootWarn，翻拍告警
 DetectPsWarn，PS检测告警
 TempIdWarn，临时身份证告警
+Quality，图片质量告警（评价图片模糊程度）
 
 SDK 设置方式参考：
 Config = Json.stringify({"CopyWarn":true,"ReshootWarn":true})
@@ -55,6 +56,7 @@ BorderCheckWarn，边框和框内遮挡告警
 ReshootWarn，翻拍告警
 DetectPsWarn，PS检测告警
 TempIdWarn，临时身份证告警
+Quality，图片质量告警（评价图片模糊程度）
 
 SDK 设置方式参考：
 Config = Json.stringify({"CopyWarn":true,"ReshootWarn":true})
@@ -87,6 +89,7 @@ BorderCheckWarn，边框和框内遮挡告警
 ReshootWarn，翻拍告警
 DetectPsWarn，PS检测告警
 TempIdWarn，临时身份证告警
+Quality，图片质量告警（评价图片模糊程度）
 
 SDK 设置方式参考：
 Config = Json.stringify({"CopyWarn":true,"ReshootWarn":true})
@@ -111,6 +114,7 @@ BorderCheckWarn，边框和框内遮挡告警
 ReshootWarn，翻拍告警
 DetectPsWarn，PS检测告警
 TempIdWarn，临时身份证告警
+Quality，图片质量告警（评价图片模糊程度）
 
 SDK 设置方式参考：
 Config = Json.stringify({"CopyWarn":true,"ReshootWarn":true})

@@ -42,12 +42,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxBitrate(integer $MaxBitrate) 设置单位Mbps，动态调整最大码率
  * @method integer getMinBitrate() 获取单位Mbps，动态调整最小码率
  * @method void setMinBitrate(integer $MinBitrate) 设置单位Mbps，动态调整最小码率
- * @method integer getFps() 获取帧率，可设置为30、45或60
- * @method void setFps(integer $Fps) 设置帧率，可设置为30、45或60
+ * @method integer getFps() 获取帧率，可设置为30、45、60、90、120、144
+ * @method void setFps(integer $Fps) 设置帧率，可设置为30、45、60、90、120、144
  * @method string getUserIp() 获取游戏用户IP，用于就近调度，例如125.127.178.228
  * @method void setUserIp(string $UserIp) 设置游戏用户IP，用于就近调度，例如125.127.178.228
  * @method integer getOptimization() 获取优化项，便于客户灰度开启新的优化项，默认为0
  * @method void setOptimization(integer $Optimization) 设置优化项，便于客户灰度开启新的优化项，默认为0
+ * @method string getHostUserId() 获取用于多人游戏，游戏主机用户ID
+ * @method void setHostUserId(string $HostUserId) 设置用于多人游戏，游戏主机用户ID
  */
 class CreateSessionRequest extends AbstractModel
 {
@@ -107,7 +109,7 @@ class CreateSessionRequest extends AbstractModel
     public $MinBitrate;
 
     /**
-     * @var integer 帧率，可设置为30、45或60
+     * @var integer 帧率，可设置为30、45、60、90、120、144
      */
     public $Fps;
 
@@ -122,6 +124,11 @@ class CreateSessionRequest extends AbstractModel
     public $Optimization;
 
     /**
+     * @var string 用于多人游戏，游戏主机用户ID
+     */
+    public $HostUserId;
+
+    /**
      * @param string $ClientSession 客户端session信息，从JSSDK请求中获得
      * @param string $UserId 游戏用户ID
      * @param string $GameId 游戏ID
@@ -133,9 +140,10 @@ class CreateSessionRequest extends AbstractModel
      * @param integer $Bitrate 单位Mbps，固定码率，后端不动态调整(MaxBitrate和MinBitrate将无效)
      * @param integer $MaxBitrate 单位Mbps，动态调整最大码率
      * @param integer $MinBitrate 单位Mbps，动态调整最小码率
-     * @param integer $Fps 帧率，可设置为30、45或60
+     * @param integer $Fps 帧率，可设置为30、45、60、90、120、144
      * @param string $UserIp 游戏用户IP，用于就近调度，例如125.127.178.228
      * @param integer $Optimization 优化项，便于客户灰度开启新的优化项，默认为0
+     * @param string $HostUserId 用于多人游戏，游戏主机用户ID
      */
     function __construct()
     {
@@ -204,6 +212,10 @@ class CreateSessionRequest extends AbstractModel
 
         if (array_key_exists("Optimization",$param) and $param["Optimization"] !== null) {
             $this->Optimization = $param["Optimization"];
+        }
+
+        if (array_key_exists("HostUserId",$param) and $param["HostUserId"] !== null) {
+            $this->HostUserId = $param["HostUserId"];
         }
     }
 }

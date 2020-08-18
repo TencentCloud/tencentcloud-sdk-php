@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置实例ID
  * @method string getInstanceName() 获取实例名称
  * @method void setInstanceName(string $InstanceName) 设置实例名称
- * @method integer getAppId() 获取AppID
- * @method void setAppId(integer $AppId) 设置AppID
+ * @method integer getAppId() 获取应用ID
+ * @method void setAppId(integer $AppId) 设置应用ID
  * @method integer getProjectId() 获取项目ID
  * @method void setProjectId(integer $ProjectId) 设置项目ID
  * @method string getRegion() 获取地域
@@ -58,8 +58,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPeriodEndTime(string $PeriodEndTime) 设置到期时间
  * @method string getIsolatedTimestamp() 获取隔离时间
  * @method void setIsolatedTimestamp(string $IsolatedTimestamp) 设置隔离时间
- * @method string getUin() 获取UIN
- * @method void setUin(string $Uin) 设置UIN
+ * @method string getUin() 获取账号ID
+ * @method void setUin(string $Uin) 设置账号ID
  * @method array getShardDetail() 获取分片详情
  * @method void setShardDetail(array $ShardDetail) 设置分片详情
  * @method integer getNodeCount() 获取节点数，2 为一主一从， 3 为一主二从
@@ -100,6 +100,26 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsAuditSupported(integer $IsAuditSupported) 设置该实例是否支持审计。1-支持；0-不支持
  * @method integer getCpu() 获取Cpu核数
  * @method void setCpu(integer $Cpu) 设置Cpu核数
+ * @method integer getIpv6Flag() 获取实例IPv6标志
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIpv6Flag(integer $Ipv6Flag) 设置实例IPv6标志
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getVipv6() 获取内网IPv6
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVipv6(string $Vipv6) 设置内网IPv6
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getWanVipv6() 获取外网IPv6
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWanVipv6(string $WanVipv6) 设置外网IPv6
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getWanPortIpv6() 获取外网IPv6端口
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWanPortIpv6(integer $WanPortIpv6) 设置外网IPv6端口
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getWanStatusIpv6() 获取外网IPv6状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWanStatusIpv6(integer $WanStatusIpv6) 设置外网IPv6状态
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DCDBInstanceInfo extends AbstractModel
 {
@@ -114,7 +134,7 @@ class DCDBInstanceInfo extends AbstractModel
     public $InstanceName;
 
     /**
-     * @var integer AppID
+     * @var integer 应用ID
      */
     public $AppId;
 
@@ -199,7 +219,7 @@ class DCDBInstanceInfo extends AbstractModel
     public $IsolatedTimestamp;
 
     /**
-     * @var string UIN
+     * @var string 账号ID
      */
     public $Uin;
 
@@ -300,9 +320,39 @@ class DCDBInstanceInfo extends AbstractModel
     public $Cpu;
 
     /**
+     * @var integer 实例IPv6标志
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Ipv6Flag;
+
+    /**
+     * @var string 内网IPv6
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Vipv6;
+
+    /**
+     * @var string 外网IPv6
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $WanVipv6;
+
+    /**
+     * @var integer 外网IPv6端口
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $WanPortIpv6;
+
+    /**
+     * @var integer 外网IPv6状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $WanStatusIpv6;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $InstanceName 实例名称
-     * @param integer $AppId AppID
+     * @param integer $AppId 应用ID
      * @param integer $ProjectId 项目ID
      * @param string $Region 地域
      * @param string $Zone 可用区
@@ -319,7 +369,7 @@ class DCDBInstanceInfo extends AbstractModel
      * @param integer $ShardCount 分片个数
      * @param string $PeriodEndTime 到期时间
      * @param string $IsolatedTimestamp 隔离时间
-     * @param string $Uin UIN
+     * @param string $Uin 账号ID
      * @param array $ShardDetail 分片详情
      * @param integer $NodeCount 节点数，2 为一主一从， 3 为一主二从
      * @param integer $IsTmp 临时实例标记，0 为非临时实例
@@ -340,6 +390,16 @@ class DCDBInstanceInfo extends AbstractModel
      * @param integer $WanStatus 外网状态，0-未开通；1-已开通；2-关闭；3-开通中
      * @param integer $IsAuditSupported 该实例是否支持审计。1-支持；0-不支持
      * @param integer $Cpu Cpu核数
+     * @param integer $Ipv6Flag 实例IPv6标志
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Vipv6 内网IPv6
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $WanVipv6 外网IPv6
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $WanPortIpv6 外网IPv6端口
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $WanStatusIpv6 外网IPv6状态
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -513,6 +573,26 @@ class DCDBInstanceInfo extends AbstractModel
 
         if (array_key_exists("Cpu",$param) and $param["Cpu"] !== null) {
             $this->Cpu = $param["Cpu"];
+        }
+
+        if (array_key_exists("Ipv6Flag",$param) and $param["Ipv6Flag"] !== null) {
+            $this->Ipv6Flag = $param["Ipv6Flag"];
+        }
+
+        if (array_key_exists("Vipv6",$param) and $param["Vipv6"] !== null) {
+            $this->Vipv6 = $param["Vipv6"];
+        }
+
+        if (array_key_exists("WanVipv6",$param) and $param["WanVipv6"] !== null) {
+            $this->WanVipv6 = $param["WanVipv6"];
+        }
+
+        if (array_key_exists("WanPortIpv6",$param) and $param["WanPortIpv6"] !== null) {
+            $this->WanPortIpv6 = $param["WanPortIpv6"];
+        }
+
+        if (array_key_exists("WanStatusIpv6",$param) and $param["WanStatusIpv6"] !== null) {
+            $this->WanStatusIpv6 = $param["WanStatusIpv6"];
         }
     }
 }

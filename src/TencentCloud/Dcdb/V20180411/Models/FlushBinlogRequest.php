@@ -14,32 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Iotcloud\V20180614\Models;
+namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeLoraDevice请求参数结构体
+ * FlushBinlog请求参数结构体
  *
- * @method string getProductId() 获取产品ID
- * @method void setProductId(string $ProductId) 设置产品ID
- * @method string getDeviceName() 获取设备名称
- * @method void setDeviceName(string $DeviceName) 设置设备名称
+ * @method string getInstanceId() 获取无
+ * @method void setInstanceId(string $InstanceId) 设置无
  */
-class DescribeLoraDeviceRequest extends AbstractModel
+class FlushBinlogRequest extends AbstractModel
 {
     /**
-     * @var string 产品ID
+     * @var string 无
      */
-    public $ProductId;
+    public $InstanceId;
 
     /**
-     * @var string 设备名称
-     */
-    public $DeviceName;
-
-    /**
-     * @param string $ProductId 产品ID
-     * @param string $DeviceName 设备名称
+     * @param string $InstanceId 无
      */
     function __construct()
     {
@@ -54,12 +46,8 @@ class DescribeLoraDeviceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ProductId",$param) and $param["ProductId"] !== null) {
-            $this->ProductId = $param["ProductId"];
-        }
-
-        if (array_key_exists("DeviceName",$param) and $param["DeviceName"] !== null) {
-            $this->DeviceName = $param["DeviceName"];
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
         }
     }
 }

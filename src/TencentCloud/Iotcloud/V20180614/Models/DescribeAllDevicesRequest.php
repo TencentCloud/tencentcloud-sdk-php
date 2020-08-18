@@ -14,32 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Gs\V20191118\Models;
+namespace TencentCloud\Iotcloud\V20180614\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * StopGame请求参数结构体
+ * DescribeAllDevices请求参数结构体
  *
- * @method string getUserId() 获取游戏用户ID
- * @method void setUserId(string $UserId) 设置游戏用户ID
- * @method string getHostUserId() 获取用于多人游戏，游戏主机用户ID
- * @method void setHostUserId(string $HostUserId) 设置用于多人游戏，游戏主机用户ID
+ * @method integer getOffset() 获取查询偏移量。
+ * @method void setOffset(integer $Offset) 设置查询偏移量。
+ * @method integer getLimit() 获取查询设备数量。最大支持250个
+ * @method void setLimit(integer $Limit) 设置查询设备数量。最大支持250个
  */
-class StopGameRequest extends AbstractModel
+class DescribeAllDevicesRequest extends AbstractModel
 {
     /**
-     * @var string 游戏用户ID
+     * @var integer 查询偏移量。
      */
-    public $UserId;
+    public $Offset;
 
     /**
-     * @var string 用于多人游戏，游戏主机用户ID
+     * @var integer 查询设备数量。最大支持250个
      */
-    public $HostUserId;
+    public $Limit;
 
     /**
-     * @param string $UserId 游戏用户ID
-     * @param string $HostUserId 用于多人游戏，游戏主机用户ID
+     * @param integer $Offset 查询偏移量。
+     * @param integer $Limit 查询设备数量。最大支持250个
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class StopGameRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("UserId",$param) and $param["UserId"] !== null) {
-            $this->UserId = $param["UserId"];
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
         }
 
-        if (array_key_exists("HostUserId",$param) and $param["HostUserId"] !== null) {
-            $this->HostUserId = $param["HostUserId"];
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
         }
     }
 }

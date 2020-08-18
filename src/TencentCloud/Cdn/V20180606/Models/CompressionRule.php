@@ -42,11 +42,11 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getAlgorithms() 获取文件压缩算法
 gzip：指定 GZIP 压缩
-brotli：需要同时指定 GZIP 压缩才可启用
+brotli：指定Brotli压缩
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAlgorithms(array $Algorithms) 设置文件压缩算法
 gzip：指定 GZIP 压缩
-brotli：需要同时指定 GZIP 压缩才可启用
+brotli：指定Brotli压缩
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class CompressionRule extends AbstractModel
@@ -80,7 +80,7 @@ class CompressionRule extends AbstractModel
     /**
      * @var array 文件压缩算法
 gzip：指定 GZIP 压缩
-brotli：需要同时指定 GZIP 压缩才可启用
+brotli：指定Brotli压缩
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Algorithms;
@@ -98,7 +98,7 @@ brotli：需要同时指定 GZIP 压缩才可启用
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Algorithms 文件压缩算法
 gzip：指定 GZIP 压缩
-brotli：需要同时指定 GZIP 压缩才可启用
+brotli：指定Brotli压缩
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

@@ -31,6 +31,7 @@ use TencentCloud\Cfs\V20190719\Models as Models;
  * @method Models\DeleteCfsRuleResponse DeleteCfsRule(Models\DeleteCfsRuleRequest $req) 本接口（DeleteCfsRule）用于删除权限组规则。
  * @method Models\DeleteMountTargetResponse DeleteMountTarget(Models\DeleteMountTargetRequest $req) 本接口（DeleteMountTarget）用于删除挂载点
  * @method Models\DescribeAvailableZoneInfoResponse DescribeAvailableZoneInfo(Models\DescribeAvailableZoneInfoRequest $req) 本接口（DescribeAvailableZoneInfo）用于查询区域的可用情况。
+ * @method Models\DescribeCfsFileSystemClientsResponse DescribeCfsFileSystemClients(Models\DescribeCfsFileSystemClientsRequest $req) 查询挂载该文件系统的客户端。此功能需要客户端安装CFS监控插件。
  * @method Models\DescribeCfsFileSystemsResponse DescribeCfsFileSystems(Models\DescribeCfsFileSystemsRequest $req) 本接口（DescribeCfsFileSystems）用于查询文件系统
  * @method Models\DescribeCfsPGroupsResponse DescribeCfsPGroups(Models\DescribeCfsPGroupsRequest $req) 本接口（DescribeCfsPGroups）用于查询权限组列表。
  * @method Models\DescribeCfsRulesResponse DescribeCfsRules(Models\DescribeCfsRulesRequest $req) 本接口（DescribeCfsRules）用于查询权限组规则列表。

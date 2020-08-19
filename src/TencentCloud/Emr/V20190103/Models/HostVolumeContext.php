@@ -14,27 +14,27 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tke\V20180525\Models;
+namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 节点自定义参数
+ * Pod HostPath挂载方式描述
  *
- * @method array getKubelet() 获取kubelet自定义参数，参数格式为["k1=v1", "k1=v2"]， 例如["root-dir=/var/lib/kubelet","feature-gates=PodShareProcessNamespace=true,DynamicKubeletConfig=true"]
+ * @method string getVolumePath() 获取Pod挂载宿主机的目录。资源对宿主机的挂载点，指定的挂载点对应了宿主机的路径，该挂载点在Pod中作为数据存储目录使用
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setKubelet(array $Kubelet) 设置kubelet自定义参数，参数格式为["k1=v1", "k1=v2"]， 例如["root-dir=/var/lib/kubelet","feature-gates=PodShareProcessNamespace=true,DynamicKubeletConfig=true"]
+ * @method void setVolumePath(string $VolumePath) 设置Pod挂载宿主机的目录。资源对宿主机的挂载点，指定的挂载点对应了宿主机的路径，该挂载点在Pod中作为数据存储目录使用
 注意：此字段可能返回 null，表示取不到有效值。
  */
-class InstanceExtraArgs extends AbstractModel
+class HostVolumeContext extends AbstractModel
 {
     /**
-     * @var array kubelet自定义参数，参数格式为["k1=v1", "k1=v2"]， 例如["root-dir=/var/lib/kubelet","feature-gates=PodShareProcessNamespace=true,DynamicKubeletConfig=true"]
+     * @var string Pod挂载宿主机的目录。资源对宿主机的挂载点，指定的挂载点对应了宿主机的路径，该挂载点在Pod中作为数据存储目录使用
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Kubelet;
+    public $VolumePath;
 
     /**
-     * @param array $Kubelet kubelet自定义参数，参数格式为["k1=v1", "k1=v2"]， 例如["root-dir=/var/lib/kubelet","feature-gates=PodShareProcessNamespace=true,DynamicKubeletConfig=true"]
+     * @param string $VolumePath Pod挂载宿主机的目录。资源对宿主机的挂载点，指定的挂载点对应了宿主机的路径，该挂载点在Pod中作为数据存储目录使用
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -50,8 +50,8 @@ class InstanceExtraArgs extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Kubelet",$param) and $param["Kubelet"] !== null) {
-            $this->Kubelet = $param["Kubelet"];
+        if (array_key_exists("VolumePath",$param) and $param["VolumePath"] !== null) {
+            $this->VolumePath = $param["VolumePath"];
         }
     }
 }

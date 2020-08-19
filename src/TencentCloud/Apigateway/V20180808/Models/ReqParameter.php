@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getName() 获取API 的前端参数名称。
  * @method void setName(string $Name) 设置API 的前端参数名称。
- * @method string getPosition() 获取API 的前端参数位置，如 head。目前支持 head、query、path。
- * @method void setPosition(string $Position) 设置API 的前端参数位置，如 head。目前支持 head、query、path。
+ * @method string getPosition() 获取API 的前端参数位置，如 header。目前支持 header、query、path。
+ * @method void setPosition(string $Position) 设置API 的前端参数位置，如 header。目前支持 header、query、path。
  * @method string getType() 获取API 的前端参数类型，如 String、int。
  * @method void setType(string $Type) 设置API 的前端参数类型，如 String、int。
  * @method string getDefaultValue() 获取API 的前端参数默认值。
@@ -41,7 +41,7 @@ class ReqParameter extends AbstractModel
     public $Name;
 
     /**
-     * @var string API 的前端参数位置，如 head。目前支持 head、query、path。
+     * @var string API 的前端参数位置，如 header。目前支持 header、query、path。
      */
     public $Position;
 
@@ -67,7 +67,7 @@ class ReqParameter extends AbstractModel
 
     /**
      * @param string $Name API 的前端参数名称。
-     * @param string $Position API 的前端参数位置，如 head。目前支持 head、query、path。
+     * @param string $Position API 的前端参数位置，如 header。目前支持 header、query、path。
      * @param string $Type API 的前端参数类型，如 String、int。
      * @param string $DefaultValue API 的前端参数默认值。
      * @param boolean $Required API 的前端参数是否必填，True：表示必填，False：表示可选。

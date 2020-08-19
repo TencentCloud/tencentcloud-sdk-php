@@ -56,6 +56,10 @@ use TencentCloud\Common\AbstractModel;
 [事件消息通知](/document/product/267/32744)。
  * @method void setCallbackKey(string $CallbackKey) 设置回调 Key，回调 URL 公用，回调签名详见事件消息通知文档。
 [事件消息通知](/document/product/267/32744)。
+ * @method string getStreamMixNotifyUrl() 获取混流回调 URL，
+相关协议文档：[事件消息通知](/document/product/267/32744)。
+ * @method void setStreamMixNotifyUrl(string $StreamMixNotifyUrl) 设置混流回调 URL，
+相关协议文档：[事件消息通知](/document/product/267/32744)。
  */
 class CreateLiveCallbackTemplateRequest extends AbstractModel
 {
@@ -110,6 +114,12 @@ class CreateLiveCallbackTemplateRequest extends AbstractModel
     public $CallbackKey;
 
     /**
+     * @var string 混流回调 URL，
+相关协议文档：[事件消息通知](/document/product/267/32744)。
+     */
+    public $StreamMixNotifyUrl;
+
+    /**
      * @param string $TemplateName 模板名称。
 长度上限：255字节。
 仅支持中文、英文、数字、_、-。
@@ -128,6 +138,8 @@ class CreateLiveCallbackTemplateRequest extends AbstractModel
 相关协议文档：[事件消息通知](/document/product/267/32741)。
      * @param string $CallbackKey 回调 Key，回调 URL 公用，回调签名详见事件消息通知文档。
 [事件消息通知](/document/product/267/32744)。
+     * @param string $StreamMixNotifyUrl 混流回调 URL，
+相关协议文档：[事件消息通知](/document/product/267/32744)。
      */
     function __construct()
     {
@@ -172,6 +184,10 @@ class CreateLiveCallbackTemplateRequest extends AbstractModel
 
         if (array_key_exists("CallbackKey",$param) and $param["CallbackKey"] !== null) {
             $this->CallbackKey = $param["CallbackKey"];
+        }
+
+        if (array_key_exists("StreamMixNotifyUrl",$param) and $param["StreamMixNotifyUrl"] !== null) {
+            $this->StreamMixNotifyUrl = $param["StreamMixNotifyUrl"];
         }
     }
 }

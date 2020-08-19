@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCustomerGatewayName(string $CustomerGatewayName) 设置对端网关名称，可任意命名，但不得超过60个字符。
  * @method string getIpAddress() 获取对端网关公网IP。
  * @method void setIpAddress(string $IpAddress) 设置对端网关公网IP。
+ * @method array getTags() 获取指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
+ * @method void setTags(array $Tags) 设置指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
  */
 class CreateCustomerGatewayRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class CreateCustomerGatewayRequest extends AbstractModel
     public $IpAddress;
 
     /**
+     * @var array 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
+     */
+    public $Tags;
+
+    /**
      * @param string $CustomerGatewayName 对端网关名称，可任意命名，但不得超过60个字符。
      * @param string $IpAddress 对端网关公网IP。
+     * @param array $Tags 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
      */
     function __construct()
     {
@@ -60,6 +68,15 @@ class CreateCustomerGatewayRequest extends AbstractModel
 
         if (array_key_exists("IpAddress",$param) and $param["IpAddress"] !== null) {
             $this->IpAddress = $param["IpAddress"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

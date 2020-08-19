@@ -38,6 +38,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeletionProtection(boolean $DeletionProtection) 设置是否启用集群删除保护
  * @method string getKubeProxyMode() 获取集群的网络代理模型
  * @method void setKubeProxyMode(string $KubeProxyMode) 设置集群的网络代理模型
+ * @method boolean getAuditEnabled() 获取是否开启审计开关
+ * @method void setAuditEnabled(boolean $AuditEnabled) 设置是否开启审计开关
+ * @method string getAuditLogsetId() 获取审计日志上传到的logset日志集
+ * @method void setAuditLogsetId(string $AuditLogsetId) 设置审计日志上传到的logset日志集
+ * @method string getAuditLogTopicId() 获取审计日志上传到的topic
+ * @method void setAuditLogTopicId(string $AuditLogTopicId) 设置审计日志上传到的topic
  */
 class ClusterAdvancedSettings extends AbstractModel
 {
@@ -87,6 +93,21 @@ class ClusterAdvancedSettings extends AbstractModel
     public $KubeProxyMode;
 
     /**
+     * @var boolean 是否开启审计开关
+     */
+    public $AuditEnabled;
+
+    /**
+     * @var string 审计日志上传到的logset日志集
+     */
+    public $AuditLogsetId;
+
+    /**
+     * @var string 审计日志上传到的topic
+     */
+    public $AuditLogTopicId;
+
+    /**
      * @param boolean $IPVS 是否启用IPVS
      * @param boolean $AsEnabled 是否启用集群节点自动扩缩容(创建集群流程不支持开启此功能)
      * @param string $ContainerRuntime 集群使用的runtime类型，包括"docker"和"containerd"两种类型，默认为"docker"
@@ -96,6 +117,9 @@ class ClusterAdvancedSettings extends AbstractModel
      * @param boolean $IsNonStaticIpMode 集群VPC-CNI模式是否为非固定IP，默认: FALSE 固定IP。
      * @param boolean $DeletionProtection 是否启用集群删除保护
      * @param string $KubeProxyMode 集群的网络代理模型
+     * @param boolean $AuditEnabled 是否开启审计开关
+     * @param string $AuditLogsetId 审计日志上传到的logset日志集
+     * @param string $AuditLogTopicId 审计日志上传到的topic
      */
     function __construct()
     {
@@ -145,6 +169,18 @@ class ClusterAdvancedSettings extends AbstractModel
 
         if (array_key_exists("KubeProxyMode",$param) and $param["KubeProxyMode"] !== null) {
             $this->KubeProxyMode = $param["KubeProxyMode"];
+        }
+
+        if (array_key_exists("AuditEnabled",$param) and $param["AuditEnabled"] !== null) {
+            $this->AuditEnabled = $param["AuditEnabled"];
+        }
+
+        if (array_key_exists("AuditLogsetId",$param) and $param["AuditLogsetId"] !== null) {
+            $this->AuditLogsetId = $param["AuditLogsetId"];
+        }
+
+        if (array_key_exists("AuditLogTopicId",$param) and $param["AuditLogTopicId"] !== null) {
+            $this->AuditLogTopicId = $param["AuditLogTopicId"];
         }
     }
 }

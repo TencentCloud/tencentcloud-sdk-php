@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 集群master自定义参数
  *
- * @method array getKubeAPIServer() 获取kube-apiserver自定义参数
+ * @method array getKubeAPIServer() 获取kube-apiserver自定义参数，参数格式为["k1=v1", "k1=v2"]， 例如["max-requests-inflight=500","feature-gates=PodShareProcessNamespace=true,DynamicKubeletConfig=true"]
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setKubeAPIServer(array $KubeAPIServer) 设置kube-apiserver自定义参数
+ * @method void setKubeAPIServer(array $KubeAPIServer) 设置kube-apiserver自定义参数，参数格式为["k1=v1", "k1=v2"]， 例如["max-requests-inflight=500","feature-gates=PodShareProcessNamespace=true,DynamicKubeletConfig=true"]
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getKubeControllerManager() 获取kube-controller-manager自定义参数
 注意：此字段可能返回 null，表示取不到有效值。
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class ClusterExtraArgs extends AbstractModel
 {
     /**
-     * @var array kube-apiserver自定义参数
+     * @var array kube-apiserver自定义参数，参数格式为["k1=v1", "k1=v2"]， 例如["max-requests-inflight=500","feature-gates=PodShareProcessNamespace=true,DynamicKubeletConfig=true"]
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $KubeAPIServer;
@@ -54,7 +54,7 @@ class ClusterExtraArgs extends AbstractModel
     public $KubeScheduler;
 
     /**
-     * @param array $KubeAPIServer kube-apiserver自定义参数
+     * @param array $KubeAPIServer kube-apiserver自定义参数，参数格式为["k1=v1", "k1=v2"]， 例如["max-requests-inflight=500","feature-gates=PodShareProcessNamespace=true,DynamicKubeletConfig=true"]
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $KubeControllerManager kube-controller-manager自定义参数
 注意：此字段可能返回 null，表示取不到有效值。

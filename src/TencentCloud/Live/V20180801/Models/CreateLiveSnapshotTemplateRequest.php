@@ -51,9 +51,21 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getPornFlag() 获取是否开启鉴黄，0：不开启，1：开启。默认：0。
  * @method void setPornFlag(integer $PornFlag) 设置是否开启鉴黄，0：不开启，1：开启。默认：0。
  * @method string getCosPrefix() 获取Cos Bucket文件夹前缀。
+如不传，实际按默认值
+/{Year}-{Month}-{Day}
+生效
  * @method void setCosPrefix(string $CosPrefix) 设置Cos Bucket文件夹前缀。
+如不传，实际按默认值
+/{Year}-{Month}-{Day}
+生效
  * @method string getCosFileName() 获取Cos 文件名称。
+如不传，实际按默认值
+{StreamID}-screenshot-{Hour}-{Minute}-{Second}-{Width}x{Height}{Ext}
+生效
  * @method void setCosFileName(string $CosFileName) 设置Cos 文件名称。
+如不传，实际按默认值
+{StreamID}-screenshot-{Hour}-{Minute}-{Second}-{Width}x{Height}{Ext}
+生效
  */
 class CreateLiveSnapshotTemplateRequest extends AbstractModel
 {
@@ -110,11 +122,17 @@ class CreateLiveSnapshotTemplateRequest extends AbstractModel
 
     /**
      * @var string Cos Bucket文件夹前缀。
+如不传，实际按默认值
+/{Year}-{Month}-{Day}
+生效
      */
     public $CosPrefix;
 
     /**
      * @var string Cos 文件名称。
+如不传，实际按默认值
+{StreamID}-screenshot-{Hour}-{Minute}-{Second}-{Width}x{Height}{Ext}
+生效
      */
     public $CosFileName;
 
@@ -135,7 +153,13 @@ class CreateLiveSnapshotTemplateRequest extends AbstractModel
      * @param integer $Height 截图高度。默认：0（原始高）。
      * @param integer $PornFlag 是否开启鉴黄，0：不开启，1：开启。默认：0。
      * @param string $CosPrefix Cos Bucket文件夹前缀。
+如不传，实际按默认值
+/{Year}-{Month}-{Day}
+生效
      * @param string $CosFileName Cos 文件名称。
+如不传，实际按默认值
+{StreamID}-screenshot-{Hour}-{Minute}-{Second}-{Width}x{Height}{Ext}
+生效
      */
     function __construct()
     {

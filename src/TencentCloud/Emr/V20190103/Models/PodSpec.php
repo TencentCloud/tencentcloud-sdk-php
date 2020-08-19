@@ -30,8 +30,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCpu(integer $Cpu) 设置CPU核数。
  * @method integer getMemory() 获取内存大小，单位为GB。
  * @method void setMemory(integer $Memory) 设置内存大小，单位为GB。
- * @method array getDataVolumes() 获取资源对宿主机的挂载点，指定的挂载点对应了宿主机的路径，该挂载点在Pod中作为数据存储目录使用。
- * @method void setDataVolumes(array $DataVolumes) 设置资源对宿主机的挂载点，指定的挂载点对应了宿主机的路径，该挂载点在Pod中作为数据存储目录使用。
+ * @method array getDataVolumes() 获取资源对宿主机的挂载点，指定的挂载点对应了宿主机的路径，该挂载点在Pod中作为数据存储目录使用。弃用
+ * @method void setDataVolumes(array $DataVolumes) 设置资源对宿主机的挂载点，指定的挂载点对应了宿主机的路径，该挂载点在Pod中作为数据存储目录使用。弃用
+ * @method string getCpuType() 获取Eks集群-CPU类型，当前支持"intel"和"amd"
+ * @method void setCpuType(string $CpuType) 设置Eks集群-CPU类型，当前支持"intel"和"amd"
+ * @method array getPodVolumes() 获取Pod节点数据目录挂载信息。
+ * @method void setPodVolumes(array $PodVolumes) 设置Pod节点数据目录挂载信息。
  */
 class PodSpec extends AbstractModel
 {
@@ -61,9 +65,19 @@ class PodSpec extends AbstractModel
     public $Memory;
 
     /**
-     * @var array 资源对宿主机的挂载点，指定的挂载点对应了宿主机的路径，该挂载点在Pod中作为数据存储目录使用。
+     * @var array 资源对宿主机的挂载点，指定的挂载点对应了宿主机的路径，该挂载点在Pod中作为数据存储目录使用。弃用
      */
     public $DataVolumes;
+
+    /**
+     * @var string Eks集群-CPU类型，当前支持"intel"和"amd"
+     */
+    public $CpuType;
+
+    /**
+     * @var array Pod节点数据目录挂载信息。
+     */
+    public $PodVolumes;
 
     /**
      * @param string $ResourceProviderIdentifier 外部资源提供者的标识符，例如"cls-a1cd23fa"。
@@ -71,7 +85,9 @@ class PodSpec extends AbstractModel
      * @param string $NodeType 资源的用途，即节点类型，当前仅支持"TASK"。
      * @param integer $Cpu CPU核数。
      * @param integer $Memory 内存大小，单位为GB。
-     * @param array $DataVolumes 资源对宿主机的挂载点，指定的挂载点对应了宿主机的路径，该挂载点在Pod中作为数据存储目录使用。
+     * @param array $DataVolumes 资源对宿主机的挂载点，指定的挂载点对应了宿主机的路径，该挂载点在Pod中作为数据存储目录使用。弃用
+     * @param string $CpuType Eks集群-CPU类型，当前支持"intel"和"amd"
+     * @param array $PodVolumes Pod节点数据目录挂载信息。
      */
     function __construct()
     {
@@ -108,6 +124,19 @@ class PodSpec extends AbstractModel
 
         if (array_key_exists("DataVolumes",$param) and $param["DataVolumes"] !== null) {
             $this->DataVolumes = $param["DataVolumes"];
+        }
+
+        if (array_key_exists("CpuType",$param) and $param["CpuType"] !== null) {
+            $this->CpuType = $param["CpuType"];
+        }
+
+        if (array_key_exists("PodVolumes",$param) and $param["PodVolumes"] !== null) {
+            $this->PodVolumes = [];
+            foreach ($param["PodVolumes"] as $key => $value){
+                $obj = new PodVolume();
+                $obj->deserialize($value);
+                array_push($this->PodVolumes, $obj);
+            }
         }
     }
 }

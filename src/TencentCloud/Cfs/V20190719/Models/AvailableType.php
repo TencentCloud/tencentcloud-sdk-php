@@ -22,8 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getProtocols() 获取协议与售卖详情
  * @method void setProtocols(array $Protocols) 设置协议与售卖详情
- * @method string getType() 获取存储类型。可选值有 SD 标准型存储、HP性能型存储
- * @method void setType(string $Type) 设置存储类型。可选值有 SD 标准型存储、HP性能型存储
+ * @method string getType() 获取存储类型。返回值中 SD 为标准型存储、HP 为性能型存储
+ * @method void setType(string $Type) 设置存储类型。返回值中 SD 为标准型存储、HP 为性能型存储
+ * @method boolean getPrepayment() 获取是否支持预付费。返回值中 true 为支持、false 为不支持
+ * @method void setPrepayment(boolean $Prepayment) 设置是否支持预付费。返回值中 true 为支持、false 为不支持
  */
 class AvailableType extends AbstractModel
 {
@@ -33,13 +35,19 @@ class AvailableType extends AbstractModel
     public $Protocols;
 
     /**
-     * @var string 存储类型。可选值有 SD 标准型存储、HP性能型存储
+     * @var string 存储类型。返回值中 SD 为标准型存储、HP 为性能型存储
      */
     public $Type;
 
     /**
+     * @var boolean 是否支持预付费。返回值中 true 为支持、false 为不支持
+     */
+    public $Prepayment;
+
+    /**
      * @param array $Protocols 协议与售卖详情
-     * @param string $Type 存储类型。可选值有 SD 标准型存储、HP性能型存储
+     * @param string $Type 存储类型。返回值中 SD 为标准型存储、HP 为性能型存储
+     * @param boolean $Prepayment 是否支持预付费。返回值中 true 为支持、false 为不支持
      */
     function __construct()
     {
@@ -65,6 +73,10 @@ class AvailableType extends AbstractModel
 
         if (array_key_exists("Type",$param) and $param["Type"] !== null) {
             $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("Prepayment",$param) and $param["Prepayment"] !== null) {
+            $this->Prepayment = $param["Prepayment"];
         }
     }
 }

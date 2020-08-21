@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) 设置私有网络ID。
  * @method string getSubnetId() 获取私有网络子网ID。
  * @method void setSubnetId(string $SubnetId) 设置私有网络子网ID。
+ * @method array getTagList() 获取实例需要绑定的标签数组信息
+ * @method void setTagList(array $TagList) 设置实例需要绑定的标签数组信息
  */
 class CreateServerlessDBInstanceRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class CreateServerlessDBInstanceRequest extends AbstractModel
     public $SubnetId;
 
     /**
+     * @var array 实例需要绑定的标签数组信息
+     */
+    public $TagList;
+
+    /**
      * @param string $Zone 可用区ID。公测阶段仅支持ap-shanghai-2、ap-beijing-1,ap-guangzhou-2.
      * @param string $DBInstanceName DB实例名称，同一个账号下该值必须唯一。
      * @param string $DBVersion PostgreSQL内核版本，目前只支持：10.4。
@@ -80,6 +87,7 @@ class CreateServerlessDBInstanceRequest extends AbstractModel
      * @param integer $ProjectId 项目ID。
      * @param string $VpcId 私有网络ID。
      * @param string $SubnetId 私有网络子网ID。
+     * @param array $TagList 实例需要绑定的标签数组信息
      */
     function __construct()
     {
@@ -120,6 +128,15 @@ class CreateServerlessDBInstanceRequest extends AbstractModel
 
         if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
             $this->SubnetId = $param["SubnetId"];
+        }
+
+        if (array_key_exists("TagList",$param) and $param["TagList"] !== null) {
+            $this->TagList = [];
+            foreach ($param["TagList"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->TagList, $obj);
+            }
         }
     }
 }

@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
 0：表示开通IP直通
  * @method array getTagSpecification() 获取标签列表。
  * @method void setTagSpecification(array $TagSpecification) 设置标签列表。
+ * @method array getSecurityGroups() 获取模块默认安全组列表
+ * @method void setSecurityGroups(array $SecurityGroups) 设置模块默认安全组列表
  */
 class CreateModuleRequest extends AbstractModel
 {
@@ -86,6 +88,11 @@ class CreateModuleRequest extends AbstractModel
     public $TagSpecification;
 
     /**
+     * @var array 模块默认安全组列表
+     */
+    public $SecurityGroups;
+
+    /**
      * @param string $ModuleName 模块名称，如视频直播模块。限制：模块名称不得以空格开头，长度不得超过60个字符。
      * @param integer $DefaultBandWidth 默认带宽，单位：M。范围不得超过带宽上下限，详看DescribeConfig。
      * @param string $DefaultImageId 默认镜像，如img-qsdf3ff2。
@@ -96,6 +103,7 @@ class CreateModuleRequest extends AbstractModel
 1：表示关闭IP直通
 0：表示开通IP直通
      * @param array $TagSpecification 标签列表。
+     * @param array $SecurityGroups 模块默认安全组列表
      */
     function __construct()
     {
@@ -145,6 +153,10 @@ class CreateModuleRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->TagSpecification, $obj);
             }
+        }
+
+        if (array_key_exists("SecurityGroups",$param) and $param["SecurityGroups"] !== null) {
+            $this->SecurityGroups = $param["SecurityGroups"];
         }
     }
 }

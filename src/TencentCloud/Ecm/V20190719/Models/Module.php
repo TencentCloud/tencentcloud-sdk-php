@@ -50,6 +50,8 @@ DELETEFAILED：删除失败
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCloseIpDirect() 获取是否关闭IP直通
  * @method void setCloseIpDirect(integer $CloseIpDirect) 设置是否关闭IP直通
+ * @method array getSecurityGroupIds() 获取默认安全组id列表
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置默认安全组id列表
  */
 class Module extends AbstractModel
 {
@@ -113,6 +115,11 @@ DELETEFAILED：删除失败
     public $CloseIpDirect;
 
     /**
+     * @var array 默认安全组id列表
+     */
+    public $SecurityGroupIds;
+
+    /**
      * @param string $ModuleId 模块Id
      * @param string $ModuleName 模块名称
      * @param string $ModuleState 模块状态：
@@ -128,6 +135,7 @@ DELETEFAILED：删除失败
      * @param array $TagSet 标签集合
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CloseIpDirect 是否关闭IP直通
+     * @param array $SecurityGroupIds 默认安全组id列表
      */
     function __construct()
     {
@@ -191,6 +199,10 @@ DELETEFAILED：删除失败
 
         if (array_key_exists("CloseIpDirect",$param) and $param["CloseIpDirect"] !== null) {
             $this->CloseIpDirect = $param["CloseIpDirect"];
+        }
+
+        if (array_key_exists("SecurityGroupIds",$param) and $param["SecurityGroupIds"] !== null) {
+            $this->SecurityGroupIds = $param["SecurityGroupIds"];
         }
     }
 }

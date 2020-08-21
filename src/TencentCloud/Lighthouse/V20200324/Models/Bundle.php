@@ -25,7 +25,11 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getMemory() 获取内存大小，单位 GB。
  * @method void setMemory(integer $Memory) 设置内存大小，单位 GB。
  * @method string getSystemDiskType() 获取系统盘类型。
+取值范围： 
+<li> LOCAL_BASIC：本地硬盘</li><li> LOCAL_SSD：本地 SSD 硬盘</li><li> CLOUD_BASIC：普通云硬盘</li><li> CLOUD_SSD：SSD 云硬盘</li><li> CLOUD_PREMIUM：高性能云硬盘</li>
  * @method void setSystemDiskType(string $SystemDiskType) 设置系统盘类型。
+取值范围： 
+<li> LOCAL_BASIC：本地硬盘</li><li> LOCAL_SSD：本地 SSD 硬盘</li><li> CLOUD_BASIC：普通云硬盘</li><li> CLOUD_SSD：SSD 云硬盘</li><li> CLOUD_PREMIUM：高性能云硬盘</li>
  * @method integer getSystemDiskSize() 获取系统盘大小。
  * @method void setSystemDiskSize(integer $SystemDiskSize) 设置系统盘大小。
  * @method integer getMonthlyTraffic() 获取每月网络流量，单位 Gb。
@@ -59,6 +63,8 @@ class Bundle extends AbstractModel
 
     /**
      * @var string 系统盘类型。
+取值范围： 
+<li> LOCAL_BASIC：本地硬盘</li><li> LOCAL_SSD：本地 SSD 硬盘</li><li> CLOUD_BASIC：普通云硬盘</li><li> CLOUD_SSD：SSD 云硬盘</li><li> CLOUD_PREMIUM：高性能云硬盘</li>
      */
     public $SystemDiskType;
 
@@ -111,6 +117,8 @@ class Bundle extends AbstractModel
      * @param string $BundleId 套餐 ID。
      * @param integer $Memory 内存大小，单位 GB。
      * @param string $SystemDiskType 系统盘类型。
+取值范围： 
+<li> LOCAL_BASIC：本地硬盘</li><li> LOCAL_SSD：本地 SSD 硬盘</li><li> CLOUD_BASIC：普通云硬盘</li><li> CLOUD_SSD：SSD 云硬盘</li><li> CLOUD_PREMIUM：高性能云硬盘</li>
      * @param integer $SystemDiskSize 系统盘大小。
      * @param integer $MonthlyTraffic 每月网络流量，单位 Gb。
      * @param boolean $SupportLinuxUnixPlatform 是否支持 Linux/Unix 平台。

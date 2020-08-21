@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
 姓名、英文姓名、英文地址、公司、英文公司、职位、英文职位、部门、英文部门、手机、电话、传真、社交帐号、QQ、MSN、微信、微博、邮箱、邮编、网址、公司账号、其他。
  * @method string getValue() 获取识别出的字段名称对应的值，也就是字段name对应的字符串结果。
  * @method void setValue(string $Value) 设置识别出的字段名称对应的值，也就是字段name对应的字符串结果。
+ * @method ItemCoord getItemCoord() 获取文本行在旋转纠正之后的图像中的像素坐标，表示为（左上角x, 左上角y，宽width，高height）
+ * @method void setItemCoord(ItemCoord $ItemCoord) 设置文本行在旋转纠正之后的图像中的像素坐标，表示为（左上角x, 左上角y，宽width，高height）
  */
 class BusinessCardInfo extends AbstractModel
 {
@@ -41,9 +43,15 @@ class BusinessCardInfo extends AbstractModel
     public $Value;
 
     /**
+     * @var ItemCoord 文本行在旋转纠正之后的图像中的像素坐标，表示为（左上角x, 左上角y，宽width，高height）
+     */
+    public $ItemCoord;
+
+    /**
      * @param string $Name 识别出的字段名称（关键字，可能重复，比如多个手机），能识别的字段名为：
 姓名、英文姓名、英文地址、公司、英文公司、职位、英文职位、部门、英文部门、手机、电话、传真、社交帐号、QQ、MSN、微信、微博、邮箱、邮编、网址、公司账号、其他。
      * @param string $Value 识别出的字段名称对应的值，也就是字段name对应的字符串结果。
+     * @param ItemCoord $ItemCoord 文本行在旋转纠正之后的图像中的像素坐标，表示为（左上角x, 左上角y，宽width，高height）
      */
     function __construct()
     {
@@ -64,6 +72,11 @@ class BusinessCardInfo extends AbstractModel
 
         if (array_key_exists("Value",$param) and $param["Value"] !== null) {
             $this->Value = $param["Value"];
+        }
+
+        if (array_key_exists("ItemCoord",$param) and $param["ItemCoord"] !== null) {
+            $this->ItemCoord = new ItemCoord();
+            $this->ItemCoord->deserialize($param["ItemCoord"]);
         }
     }
 }

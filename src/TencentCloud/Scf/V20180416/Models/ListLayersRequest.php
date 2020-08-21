@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getCompatibleRuntime() 获取适配的运行时
  * @method void setCompatibleRuntime(string $CompatibleRuntime) 设置适配的运行时
- * @method integer getOffset() 获取Offset
- * @method void setOffset(integer $Offset) 设置Offset
- * @method integer getLimit() 获取Limit
- * @method void setLimit(integer $Limit) 设置Limit
+ * @method integer getOffset() 获取偏移位置
+ * @method void setOffset(integer $Offset) 设置偏移位置
+ * @method integer getLimit() 获取查询数目限制
+ * @method void setLimit(integer $Limit) 设置查询数目限制
  * @method string getSearchKey() 获取查询key，模糊匹配名称
  * @method void setSearchKey(string $SearchKey) 设置查询key，模糊匹配名称
  */
@@ -37,12 +37,12 @@ class ListLayersRequest extends AbstractModel
     public $CompatibleRuntime;
 
     /**
-     * @var integer Offset
+     * @var integer 偏移位置
      */
     public $Offset;
 
     /**
-     * @var integer Limit
+     * @var integer 查询数目限制
      */
     public $Limit;
 
@@ -53,8 +53,8 @@ class ListLayersRequest extends AbstractModel
 
     /**
      * @param string $CompatibleRuntime 适配的运行时
-     * @param integer $Offset Offset
-     * @param integer $Limit Limit
+     * @param integer $Offset 偏移位置
+     * @param integer $Limit 查询数目限制
      * @param string $SearchKey 查询key，模糊匹配名称
      */
     function __construct()

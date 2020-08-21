@@ -36,6 +36,14 @@ use TencentCloud\Common\AbstractModel;
 4. 不填 - 表示当前画面用于备选，当有新的视频流加入时，会从这些备选的空位中选择一个没有被占用的位置来显示新的视频流画面
  * @method string getBackgroundColor() 获取背景颜色，默认为黑色，格式为RGB格式，如红色为"#FF0000"
  * @method void setBackgroundColor(string $BackgroundColor) 设置背景颜色，默认为黑色，格式为RGB格式，如红色为"#FF0000"
+ * @method integer getFillMode() 获取视频画面填充模式。
+
+0 - 自适应模式，对视频画面进行等比例缩放，在指定区域内显示完整的画面。此模式可能存在黑边。
+1 - 全屏模式，对视频画面进行等比例缩放，让画面填充满整个指定区域。此模式不会存在黑边，但会将超出区域的那一部分画面裁剪掉。
+ * @method void setFillMode(integer $FillMode) 设置视频画面填充模式。
+
+0 - 自适应模式，对视频画面进行等比例缩放，在指定区域内显示完整的画面。此模式可能存在黑边。
+1 - 全屏模式，对视频画面进行等比例缩放，让画面填充满整个指定区域。此模式不会存在黑边，但会将超出区域的那一部分画面裁剪掉。
  */
 class StreamLayout extends AbstractModel
 {
@@ -60,6 +68,14 @@ class StreamLayout extends AbstractModel
     public $BackgroundColor;
 
     /**
+     * @var integer 视频画面填充模式。
+
+0 - 自适应模式，对视频画面进行等比例缩放，在指定区域内显示完整的画面。此模式可能存在黑边。
+1 - 全屏模式，对视频画面进行等比例缩放，让画面填充满整个指定区域。此模式不会存在黑边，但会将超出区域的那一部分画面裁剪掉。
+     */
+    public $FillMode;
+
+    /**
      * @param LayoutParams $LayoutParams 流布局配置参数
      * @param string $InputStreamId 视频流ID
 流ID的取值含义如下：
@@ -68,6 +84,10 @@ class StreamLayout extends AbstractModel
 3. 特定用户ID - 表示当前画面用于显示指定用户的视频流
 4. 不填 - 表示当前画面用于备选，当有新的视频流加入时，会从这些备选的空位中选择一个没有被占用的位置来显示新的视频流画面
      * @param string $BackgroundColor 背景颜色，默认为黑色，格式为RGB格式，如红色为"#FF0000"
+     * @param integer $FillMode 视频画面填充模式。
+
+0 - 自适应模式，对视频画面进行等比例缩放，在指定区域内显示完整的画面。此模式可能存在黑边。
+1 - 全屏模式，对视频画面进行等比例缩放，让画面填充满整个指定区域。此模式不会存在黑边，但会将超出区域的那一部分画面裁剪掉。
      */
     function __construct()
     {
@@ -93,6 +113,10 @@ class StreamLayout extends AbstractModel
 
         if (array_key_exists("BackgroundColor",$param) and $param["BackgroundColor"] !== null) {
             $this->BackgroundColor = $param["BackgroundColor"];
+        }
+
+        if (array_key_exists("FillMode",$param) and $param["FillMode"] !== null) {
+            $this->FillMode = $param["FillMode"];
         }
     }
 }

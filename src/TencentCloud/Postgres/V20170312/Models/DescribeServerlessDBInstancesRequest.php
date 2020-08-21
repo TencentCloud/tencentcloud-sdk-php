@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置查询个数
  * @method integer getOffset() 获取偏移量
  * @method void setOffset(integer $Offset) 设置偏移量
+ * @method string getOrderBy() 获取排序指标，目前支持实例创建时间CreateTime
+ * @method void setOrderBy(string $OrderBy) 设置排序指标，目前支持实例创建时间CreateTime
+ * @method string getOrderByType() 获取排序方式，包括升序、降序
+ * @method void setOrderByType(string $OrderByType) 设置排序方式，包括升序、降序
  */
 class DescribeServerlessDBInstancesRequest extends AbstractModel
 {
@@ -45,9 +49,21 @@ class DescribeServerlessDBInstancesRequest extends AbstractModel
     public $Offset;
 
     /**
+     * @var string 排序指标，目前支持实例创建时间CreateTime
+     */
+    public $OrderBy;
+
+    /**
+     * @var string 排序方式，包括升序、降序
+     */
+    public $OrderByType;
+
+    /**
      * @param array $Filter 查询条件
      * @param integer $Limit 查询个数
      * @param integer $Offset 偏移量
+     * @param string $OrderBy 排序指标，目前支持实例创建时间CreateTime
+     * @param string $OrderByType 排序方式，包括升序、降序
      */
     function __construct()
     {
@@ -77,6 +93,14 @@ class DescribeServerlessDBInstancesRequest extends AbstractModel
 
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
             $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("OrderBy",$param) and $param["OrderBy"] !== null) {
+            $this->OrderBy = $param["OrderBy"];
+        }
+
+        if (array_key_exists("OrderByType",$param) and $param["OrderByType"] !== null) {
+            $this->OrderByType = $param["OrderByType"];
         }
     }
 }

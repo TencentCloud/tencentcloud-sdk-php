@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
 该ID必须是一个单独的未在SDK中使用的ID，实时录制服务使用这个用户ID进入房间进行音视频与白板录制，若该ID和SDK中使用的ID重复，会导致SDK和录制服务互踢，影响正常录制。
  * @method string getRecordUserSig() 获取与RecordUserId对应的签名
  * @method void setRecordUserSig(string $RecordUserSig) 设置与RecordUserId对应的签名
- * @method string getGroupId() 获取白板的 IM 群组 Id，默认同房间号
- * @method void setGroupId(string $GroupId) 设置白板的 IM 群组 Id，默认同房间号
+ * @method string getGroupId() 获取（已废弃，设置无效）白板的 IM 群组 Id，默认同房间号
+ * @method void setGroupId(string $GroupId) 设置（已废弃，设置无效）白板的 IM 群组 Id，默认同房间号
  * @method Concat getConcat() 获取实时录制视频拼接参数
  * @method void setConcat(Concat $Concat) 设置实时录制视频拼接参数
  * @method Whiteboard getWhiteboard() 获取实时录制白板参数，例如白板宽高等
@@ -52,6 +52,8 @@ MIX_STREAM - 混流功能
 MIX_STREAM - 混流功能
  * @method boolean getAudioFileNeeded() 获取是否需要在结果回调中返回各路流的纯音频录制文件，文件格式为mp3
  * @method void setAudioFileNeeded(boolean $AudioFileNeeded) 设置是否需要在结果回调中返回各路流的纯音频录制文件，文件格式为mp3
+ * @method RecordControl getRecordControl() 获取实时录制控制参数，用于更精细地指定需要录制哪些流，某一路流是否禁用音频，是否只录制小画面等
+ * @method void setRecordControl(RecordControl $RecordControl) 设置实时录制控制参数，用于更精细地指定需要录制哪些流，某一路流是否禁用音频，是否只录制小画面等
  */
 class StartOnlineRecordRequest extends AbstractModel
 {
@@ -77,7 +79,7 @@ class StartOnlineRecordRequest extends AbstractModel
     public $RecordUserSig;
 
     /**
-     * @var string 白板的 IM 群组 Id，默认同房间号
+     * @var string （已废弃，设置无效）白板的 IM 群组 Id，默认同房间号
      */
     public $GroupId;
 
@@ -112,12 +114,17 @@ MIX_STREAM - 混流功能
     public $AudioFileNeeded;
 
     /**
+     * @var RecordControl 实时录制控制参数，用于更精细地指定需要录制哪些流，某一路流是否禁用音频，是否只录制小画面等
+     */
+    public $RecordControl;
+
+    /**
      * @param integer $SdkAppId 客户的SdkAppId
      * @param integer $RoomId 需要录制的房间号，取值范围: (1, 4294967295)
      * @param string $RecordUserId 用于实时录制服务进房的用户ID，格式为`tic_record_user_${RoomId}_${Random}`，其中 `${RoomId} `与录制房间号对应，`${Random}`为一个随机字符串。
 该ID必须是一个单独的未在SDK中使用的ID，实时录制服务使用这个用户ID进入房间进行音视频与白板录制，若该ID和SDK中使用的ID重复，会导致SDK和录制服务互踢，影响正常录制。
      * @param string $RecordUserSig 与RecordUserId对应的签名
-     * @param string $GroupId 白板的 IM 群组 Id，默认同房间号
+     * @param string $GroupId （已废弃，设置无效）白板的 IM 群组 Id，默认同房间号
      * @param Concat $Concat 实时录制视频拼接参数
      * @param Whiteboard $Whiteboard 实时录制白板参数，例如白板宽高等
      * @param MixStream $MixStream 实时录制混流参数
@@ -128,6 +135,7 @@ MIX_STREAM - 混流功能
 可以选值列表：
 MIX_STREAM - 混流功能
      * @param boolean $AudioFileNeeded 是否需要在结果回调中返回各路流的纯音频录制文件，文件格式为mp3
+     * @param RecordControl $RecordControl 实时录制控制参数，用于更精细地指定需要录制哪些流，某一路流是否禁用音频，是否只录制小画面等
      */
     function __construct()
     {
@@ -183,6 +191,11 @@ MIX_STREAM - 混流功能
 
         if (array_key_exists("AudioFileNeeded",$param) and $param["AudioFileNeeded"] !== null) {
             $this->AudioFileNeeded = $param["AudioFileNeeded"];
+        }
+
+        if (array_key_exists("RecordControl",$param) and $param["RecordControl"] !== null) {
+            $this->RecordControl = new RecordControl();
+            $this->RecordControl->deserialize($param["RecordControl"]);
         }
     }
 }

@@ -40,13 +40,13 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZone(string $Zone) 设置可用区
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getProjectId() 获取projectId
+ * @method integer getProjectId() 获取项目id
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setProjectId(integer $ProjectId) 设置projectId
+ * @method void setProjectId(integer $ProjectId) 设置项目id
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getVpcId() 获取VpcId
+ * @method string getVpcId() 获取私有网络Id
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVpcId(string $VpcId) 设置VpcId
+ * @method void setVpcId(string $VpcId) 设置私有网络Id
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSubnetId() 获取子网id
 注意：此字段可能返回 null，表示取不到有效值。
@@ -75,6 +75,10 @@ use TencentCloud\Common\AbstractModel;
  * @method array getDBDatabaseList() 获取实例下的db信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDBDatabaseList(array $DBDatabaseList) 设置实例下的db信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTagList() 获取实例绑定的标签数组
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTagList(array $TagList) 设置实例绑定的标签数组
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class ServerlessDBInstance extends AbstractModel
@@ -110,13 +114,13 @@ class ServerlessDBInstance extends AbstractModel
     public $Zone;
 
     /**
-     * @var integer projectId
+     * @var integer 项目id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProjectId;
 
     /**
-     * @var string VpcId
+     * @var string 私有网络Id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VpcId;
@@ -164,6 +168,12 @@ class ServerlessDBInstance extends AbstractModel
     public $DBDatabaseList;
 
     /**
+     * @var array 实例绑定的标签数组
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TagList;
+
+    /**
      * @param string $DBInstanceId 实例id，唯一标识符
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DBInstanceName 实例名称
@@ -174,9 +184,9 @@ class ServerlessDBInstance extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Zone 可用区
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ProjectId projectId
+     * @param integer $ProjectId 项目id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $VpcId VpcId
+     * @param string $VpcId 私有网络Id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubnetId 子网id
 注意：此字段可能返回 null，表示取不到有效值。
@@ -191,6 +201,8 @@ class ServerlessDBInstance extends AbstractModel
      * @param array $DBAccountSet 实例账户信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $DBDatabaseList 实例下的db信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $TagList 实例绑定的标签数组
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -270,6 +282,15 @@ class ServerlessDBInstance extends AbstractModel
 
         if (array_key_exists("DBDatabaseList",$param) and $param["DBDatabaseList"] !== null) {
             $this->DBDatabaseList = $param["DBDatabaseList"];
+        }
+
+        if (array_key_exists("TagList",$param) and $param["TagList"] !== null) {
+            $this->TagList = [];
+            foreach ($param["TagList"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->TagList, $obj);
+            }
         }
     }
 }

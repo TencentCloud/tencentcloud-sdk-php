@@ -20,6 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 项目导出信息。
  *
+ * @method string getMaterialId() 获取导出的云剪素材 MaterialId，仅当导出为云剪素材时有效。
+ * @method void setMaterialId(string $MaterialId) 设置导出的云剪素材 MaterialId，仅当导出为云剪素材时有效。
  * @method string getVodFileId() 获取云点播媒资 FileId。
  * @method void setVodFileId(string $VodFileId) 设置云点播媒资 FileId。
  * @method string getURL() 获取导出的媒资 URL。
@@ -31,6 +33,11 @@ use TencentCloud\Common\AbstractModel;
  */
 class VideoEditProjectOutput extends AbstractModel
 {
+    /**
+     * @var string 导出的云剪素材 MaterialId，仅当导出为云剪素材时有效。
+     */
+    public $MaterialId;
+
     /**
      * @var string 云点播媒资 FileId。
      */
@@ -48,6 +55,7 @@ class VideoEditProjectOutput extends AbstractModel
     public $MetaData;
 
     /**
+     * @param string $MaterialId 导出的云剪素材 MaterialId，仅当导出为云剪素材时有效。
      * @param string $VodFileId 云点播媒资 FileId。
      * @param string $URL 导出的媒资 URL。
      * @param MediaMetaData $MetaData 元信息。
@@ -66,6 +74,10 @@ class VideoEditProjectOutput extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("MaterialId",$param) and $param["MaterialId"] !== null) {
+            $this->MaterialId = $param["MaterialId"];
+        }
+
         if (array_key_exists("VodFileId",$param) and $param["VodFileId"] !== null) {
             $this->VodFileId = $param["VodFileId"];
         }

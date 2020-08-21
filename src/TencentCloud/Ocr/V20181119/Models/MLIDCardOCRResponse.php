@@ -38,7 +38,7 @@ use TencentCloud\Common\AbstractModel;
 -9106       证件遮挡告警
  * @method string getImage() 获取证件图片
  * @method void setImage(string $Image) 设置证件图片
- * @method string getAdvancedInfo() 获取扩展字段:
+ * @method string getAdvancedInfo() 获取扩展字段：
 {
     ID:{
         Confidence:0.9999
@@ -47,7 +47,7 @@ use TencentCloud\Common\AbstractModel;
         Confidence:0.9996
     }
 }
- * @method void setAdvancedInfo(string $AdvancedInfo) 设置扩展字段:
+ * @method void setAdvancedInfo(string $AdvancedInfo) 设置扩展字段：
 {
     ID:{
         Confidence:0.9999
@@ -70,6 +70,8 @@ MyTentera   军官证
 MyKAS    临时身份证
 POLIS  警察
 IKAD   劳工证
+ * @method string getBirthday() 获取出生日期（目前该字段仅支持IKAD劳工证）
+ * @method void setBirthday(string $Birthday) 设置出生日期（目前该字段仅支持IKAD劳工证）
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -109,7 +111,7 @@ class MLIDCardOCRResponse extends AbstractModel
     public $Image;
 
     /**
-     * @var string 扩展字段:
+     * @var string 扩展字段：
 {
     ID:{
         Confidence:0.9999
@@ -133,6 +135,11 @@ IKAD   劳工证
     public $Type;
 
     /**
+     * @var string 出生日期（目前该字段仅支持IKAD劳工证）
+     */
+    public $Birthday;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -147,7 +154,7 @@ IKAD   劳工证
 -9102	证照复印件告警
 -9106       证件遮挡告警
      * @param string $Image 证件图片
-     * @param string $AdvancedInfo 扩展字段:
+     * @param string $AdvancedInfo 扩展字段：
 {
     ID:{
         Confidence:0.9999
@@ -163,6 +170,7 @@ MyTentera   军官证
 MyKAS    临时身份证
 POLIS  警察
 IKAD   劳工证
+     * @param string $Birthday 出生日期（目前该字段仅支持IKAD劳工证）
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -208,6 +216,10 @@ IKAD   劳工证
 
         if (array_key_exists("Type",$param) and $param["Type"] !== null) {
             $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("Birthday",$param) and $param["Birthday"] !== null) {
+            $this->Birthday = $param["Birthday"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

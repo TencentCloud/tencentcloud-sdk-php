@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) 设置统计开始时间
  * @method string getEndTime() 获取统计结束时间
  * @method void setEndTime(string $EndTime) 设置统计结束时间
- * @method array getData() 获取值数组
- * @method void setData(array $Data) 设置值数组
+ * @method array getData() 获取值数组，攻击流量带宽单位为Mbps，包速率单位为pps
+ * @method void setData(array $Data) 设置值数组，攻击流量带宽单位为Mbps，包速率单位为pps
  * @method integer getCount() 获取值个数
  * @method void setCount(integer $Count) 设置值个数
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -82,7 +82,7 @@ class DescribeDDoSTrendResponse extends AbstractModel
     public $EndTime;
 
     /**
-     * @var array 值数组
+     * @var array 值数组，攻击流量带宽单位为Mbps，包速率单位为pps
      */
     public $Data;
 
@@ -105,7 +105,7 @@ class DescribeDDoSTrendResponse extends AbstractModel
      * @param integer $Period 统计粒度，取值[300(5分钟)，3600(小时)，86400(天)]
      * @param string $StartTime 统计开始时间
      * @param string $EndTime 统计结束时间
-     * @param array $Data 值数组
+     * @param array $Data 值数组，攻击流量带宽单位为Mbps，包速率单位为pps
      * @param integer $Count 值个数
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

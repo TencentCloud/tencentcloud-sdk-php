@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ResetInstance请求参数结构体
  *
- * @method string getInstanceId() 获取实例 ID。
- * @method void setInstanceId(string $InstanceId) 设置实例 ID。
+ * @method string getInstanceId() 获取实例 ID。可通过[DescribeInstances](https://cloud.tencent.com/document/api/1207/47573)接口返回值中的InstanceId获取。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID。可通过[DescribeInstances](https://cloud.tencent.com/document/api/1207/47573)接口返回值中的InstanceId获取。
  * @method string getBlueprintId() 获取镜像 ID。
  * @method void setBlueprintId(string $BlueprintId) 设置镜像 ID。
  */
 class ResetInstanceRequest extends AbstractModel
 {
     /**
-     * @var string 实例 ID。
+     * @var string 实例 ID。可通过[DescribeInstances](https://cloud.tencent.com/document/api/1207/47573)接口返回值中的InstanceId获取。
      */
     public $InstanceId;
 
@@ -38,7 +38,7 @@ class ResetInstanceRequest extends AbstractModel
     public $BlueprintId;
 
     /**
-     * @param string $InstanceId 实例 ID。
+     * @param string $InstanceId 实例 ID。可通过[DescribeInstances](https://cloud.tencent.com/document/api/1207/47573)接口返回值中的InstanceId获取。
      * @param string $BlueprintId 镜像 ID。
      */
     function __construct()

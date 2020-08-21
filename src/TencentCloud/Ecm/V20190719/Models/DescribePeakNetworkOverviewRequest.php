@@ -25,9 +25,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getEndTime() 获取结束时间（xxxx-xx-xx）如2019-08-14，默认为昨天。
  * @method void setEndTime(string $EndTime) 设置结束时间（xxxx-xx-xx）如2019-08-14，默认为昨天。
  * @method array getFilters() 获取过滤条件。
-region    String      是否必填：否     （过滤条件）按照region过滤,不支持模糊匹配。
+region    String      是否必填：否     （过滤条件）按照region过滤,不支持模糊匹配。注意 region 填上需要查询ecm region才能返回数据。
  * @method void setFilters(array $Filters) 设置过滤条件。
-region    String      是否必填：否     （过滤条件）按照region过滤,不支持模糊匹配。
+region    String      是否必填：否     （过滤条件）按照region过滤,不支持模糊匹配。注意 region 填上需要查询ecm region才能返回数据。
  */
 class DescribePeakNetworkOverviewRequest extends AbstractModel
 {
@@ -43,7 +43,7 @@ class DescribePeakNetworkOverviewRequest extends AbstractModel
 
     /**
      * @var array 过滤条件。
-region    String      是否必填：否     （过滤条件）按照region过滤,不支持模糊匹配。
+region    String      是否必填：否     （过滤条件）按照region过滤,不支持模糊匹配。注意 region 填上需要查询ecm region才能返回数据。
      */
     public $Filters;
 
@@ -51,7 +51,7 @@ region    String      是否必填：否     （过滤条件）按照region过�
      * @param string $StartTime 开始时间（xxxx-xx-xx）如2019-08-14，默认为一周之前的日期。
      * @param string $EndTime 结束时间（xxxx-xx-xx）如2019-08-14，默认为昨天。
      * @param array $Filters 过滤条件。
-region    String      是否必填：否     （过滤条件）按照region过滤,不支持模糊匹配。
+region    String      是否必填：否     （过滤条件）按照region过滤,不支持模糊匹配。注意 region 填上需要查询ecm region才能返回数据。
      */
     function __construct()
     {

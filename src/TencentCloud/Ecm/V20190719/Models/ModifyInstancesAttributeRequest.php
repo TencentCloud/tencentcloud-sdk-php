@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceIdSet(array $InstanceIdSet) 设置待修改的实例ID列表。在单次请求的过程中，请求实例数上限为100。
  * @method string getInstanceName() 获取修改成功后显示的实例名称，不得超过60个字符，不传则名称显示为空。
  * @method void setInstanceName(string $InstanceName) 设置修改成功后显示的实例名称，不得超过60个字符，不传则名称显示为空。
+ * @method array getSecurityGroups() 获取指定实例的安全组Id列表，子机将重新关联指定列表的安全组，原本关联的安全组会被解绑。限制不超过5个。
+ * @method void setSecurityGroups(array $SecurityGroups) 设置指定实例的安全组Id列表，子机将重新关联指定列表的安全组，原本关联的安全组会被解绑。限制不超过5个。
  */
 class ModifyInstancesAttributeRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class ModifyInstancesAttributeRequest extends AbstractModel
     public $InstanceName;
 
     /**
+     * @var array 指定实例的安全组Id列表，子机将重新关联指定列表的安全组，原本关联的安全组会被解绑。限制不超过5个。
+     */
+    public $SecurityGroups;
+
+    /**
      * @param array $InstanceIdSet 待修改的实例ID列表。在单次请求的过程中，请求实例数上限为100。
      * @param string $InstanceName 修改成功后显示的实例名称，不得超过60个字符，不传则名称显示为空。
+     * @param array $SecurityGroups 指定实例的安全组Id列表，子机将重新关联指定列表的安全组，原本关联的安全组会被解绑。限制不超过5个。
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class ModifyInstancesAttributeRequest extends AbstractModel
 
         if (array_key_exists("InstanceName",$param) and $param["InstanceName"] !== null) {
             $this->InstanceName = $param["InstanceName"];
+        }
+
+        if (array_key_exists("SecurityGroups",$param) and $param["SecurityGroups"] !== null) {
+            $this->SecurityGroups = $param["SecurityGroups"];
         }
     }
 }

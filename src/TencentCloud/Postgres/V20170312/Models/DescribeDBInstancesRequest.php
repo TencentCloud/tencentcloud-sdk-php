@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDBInstances请求参数结构体
  *
- * @method array getFilters() 获取过滤条件，目前支持：db-instance-id、db-instance-name、db-project-id、db-pay-mode。
- * @method void setFilters(array $Filters) 设置过滤条件，目前支持：db-instance-id、db-instance-name、db-project-id、db-pay-mode。
+ * @method array getFilters() 获取过滤条件，目前支持：db-instance-id、db-instance-name、db-project-id、db-pay-mode、db-tag-key。
+ * @method void setFilters(array $Filters) 设置过滤条件，目前支持：db-instance-id、db-instance-name、db-project-id、db-pay-mode、db-tag-key。
  * @method integer getLimit() 获取每页显示数量，默认返回10条。
  * @method void setLimit(integer $Limit) 设置每页显示数量，默认返回10条。
  * @method integer getOffset() 获取分页序号，从0开始。
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeDBInstancesRequest extends AbstractModel
 {
     /**
-     * @var array 过滤条件，目前支持：db-instance-id、db-instance-name、db-project-id、db-pay-mode。
+     * @var array 过滤条件，目前支持：db-instance-id、db-instance-name、db-project-id、db-pay-mode、db-tag-key。
      */
     public $Filters;
 
@@ -59,7 +59,7 @@ class DescribeDBInstancesRequest extends AbstractModel
     public $OrderByType;
 
     /**
-     * @param array $Filters 过滤条件，目前支持：db-instance-id、db-instance-name、db-project-id、db-pay-mode。
+     * @param array $Filters 过滤条件，目前支持：db-instance-id、db-instance-name、db-project-id、db-pay-mode、db-tag-key。
      * @param integer $Limit 每页显示数量，默认返回10条。
      * @param integer $Offset 分页序号，从0开始。
      * @param string $OrderBy 排序指标，如实例名、创建时间等，支持DBInstanceId,CreateTime,Name,EndTime

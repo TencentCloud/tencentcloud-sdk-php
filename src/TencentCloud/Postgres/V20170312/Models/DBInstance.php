@@ -74,6 +74,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUid(integer $Uid) 设置实例的Uid
  * @method integer getSupportIpv6() 获取实例是否支持Ipv6，1：支持，0：不支持
  * @method void setSupportIpv6(integer $SupportIpv6) 设置实例是否支持Ipv6，1：支持，0：不支持
+ * @method array getTagList() 获取实例绑定的标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTagList(array $TagList) 设置实例绑定的标签信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DBInstance extends AbstractModel
 {
@@ -213,6 +217,12 @@ class DBInstance extends AbstractModel
     public $SupportIpv6;
 
     /**
+     * @var array 实例绑定的标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TagList;
+
+    /**
      * @param string $Region 实例所属地域，如: ap-guangzhou，对应RegionSet的Region字段
      * @param string $Zone 实例所属可用区， 如：ap-guangzhou-3，对应ZoneSet的Zone字段
      * @param integer $ProjectId 项目ID
@@ -240,6 +250,8 @@ class DBInstance extends AbstractModel
      * @param integer $AppId 用户的AppId
      * @param integer $Uid 实例的Uid
      * @param integer $SupportIpv6 实例是否支持Ipv6，1：支持，0：不支持
+     * @param array $TagList 实例绑定的标签信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -365,6 +377,15 @@ class DBInstance extends AbstractModel
 
         if (array_key_exists("SupportIpv6",$param) and $param["SupportIpv6"] !== null) {
             $this->SupportIpv6 = $param["SupportIpv6"];
+        }
+
+        if (array_key_exists("TagList",$param) and $param["TagList"] !== null) {
+            $this->TagList = [];
+            foreach ($param["TagList"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->TagList, $obj);
+            }
         }
     }
 }

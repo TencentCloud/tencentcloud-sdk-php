@@ -1,94 +1,106 @@
 # 本版本更新包含以下内容：
 
-## 文件存储(cfs) 版本：2019-07-19
+## 负载均衡(clb) 版本：2018-03-17
 
-### 第 6 次发布
+### 第 31 次发布
 
-发布时间：2020-08-19 08:07:50
-
-本次发布包含了以下内容：
-
-改善已有的文档。
-
-修改数据结构：
-
-* [AvailableType](https://cloud.tencent.com/document/api/582/38175#AvailableType)
-
-	* 新增成员：Prepayment
-
-
-
-
-## 弹性 MapReduce(emr) 版本：2019-01-03
-
-### 第 13 次发布
-
-发布时间：2020-08-19 08:11:03
+发布时间：2020-08-21 08:09:33
 
 本次发布包含了以下内容：
 
 改善已有的文档。
+
+新增接口：
+
+* [DescribeQuota](https://cloud.tencent.com/document/api/214/47704)
 
 新增数据结构：
 
-* [HostVolumeContext](https://cloud.tencent.com/document/api/589/33981#HostVolumeContext)
-* [PersistentVolumeContext](https://cloud.tencent.com/document/api/589/33981#PersistentVolumeContext)
-* [PodVolume](https://cloud.tencent.com/document/api/589/33981#PodVolume)
-
-修改数据结构：
-
-* [PodSpec](https://cloud.tencent.com/document/api/589/33981#PodSpec)
-
-	* 新增成员：CpuType, PodVolumes
-
-	* <font color="#dd0000">**修改成员**：</font>DataVolumes
+* [Quota](https://cloud.tencent.com/document/api/214/30694#Quota)
 
 
 
-
-## 云直播(live) 版本：2018-08-01
-
-### 第 47 次发布
-
-发布时间：2020-08-19 08:13:57
-
-本次发布包含了以下内容：
-
-改善已有的文档。
-
-修改接口：
-
-* [CreateLiveCallbackTemplate](https://cloud.tencent.com/document/api/267/32637)
-
-	* 新增入参：StreamMixNotifyUrl
-
-
-
-
-## 容器服务(tke) 版本：2018-05-25
+## 边缘计算机器(ecm) 版本：2019-07-19
 
 ### 第 24 次发布
 
-发布时间：2020-08-19 08:19:45
+发布时间：2020-08-21 08:02:20
 
 本次发布包含了以下内容：
 
 改善已有的文档。
 
+新增接口：
+
+* [AssociateSecurityGroups](https://cloud.tencent.com/document/api/1108/47693)
+* [CreateSecurityGroupPolicies](https://cloud.tencent.com/document/api/1108/47703)
+* [DeleteSecurityGroup](https://cloud.tencent.com/document/api/1108/47702)
+* [DeleteSecurityGroupPolicies](https://cloud.tencent.com/document/api/1108/47701)
+* [DescribeSecurityGroupAssociationStatistics](https://cloud.tencent.com/document/api/1108/47700)
+* [DescribeSecurityGroupLimits](https://cloud.tencent.com/document/api/1108/47699)
+* [DescribeSecurityGroupPolicies](https://cloud.tencent.com/document/api/1108/47698)
+* [DescribeSecurityGroups](https://cloud.tencent.com/document/api/1108/47697)
+* [DisassociateSecurityGroups](https://cloud.tencent.com/document/api/1108/47692)
+* [ModifyModuleSecurityGroups](https://cloud.tencent.com/document/api/1108/47691)
+* [ModifySecurityGroupAttribute](https://cloud.tencent.com/document/api/1108/47696)
+* [ModifySecurityGroupPolicies](https://cloud.tencent.com/document/api/1108/47695)
+* [ReplaceSecurityGroupPolicy](https://cloud.tencent.com/document/api/1108/47694)
+
+修改接口：
+
+* [CreateModule](https://cloud.tencent.com/document/api/1108/42557)
+
+	* 新增入参：SecurityGroups
+
+* [ModifyInstancesAttribute](https://cloud.tencent.com/document/api/1108/42563)
+
+	* 新增入参：SecurityGroups
+
+
+新增数据结构：
+
+* [AddressTemplateSpecification](https://cloud.tencent.com/document/api/1108/42574#AddressTemplateSpecification)
+* [InstanceStatistic](https://cloud.tencent.com/document/api/1108/42574#InstanceStatistic)
+* [SecurityGroupAssociationStatistics](https://cloud.tencent.com/document/api/1108/42574#SecurityGroupAssociationStatistics)
+* [SecurityGroupLimitSet](https://cloud.tencent.com/document/api/1108/42574#SecurityGroupLimitSet)
+* [SecurityGroupPolicy](https://cloud.tencent.com/document/api/1108/42574#SecurityGroupPolicy)
+* [SecurityGroupPolicySet](https://cloud.tencent.com/document/api/1108/42574#SecurityGroupPolicySet)
+* [ServiceTemplateSpecification](https://cloud.tencent.com/document/api/1108/42574#ServiceTemplateSpecification)
+
 修改数据结构：
 
-* [ClusterAdvancedSettings](https://cloud.tencent.com/document/api/457/31866#ClusterAdvancedSettings)
+* [Module](https://cloud.tencent.com/document/api/1108/42574#Module)
 
-	* 新增成员：AuditEnabled, AuditLogsetId, AuditLogTopicId
-
-
+	* 新增成员：SecurityGroupIds
 
 
-## 私有网络(vpc) 版本：2017-03-12
 
-### 第 58 次发布
 
-发布时间：2020-08-19 08:20:41
+## 轻量应用服务器(lighthouse) 版本：2020-03-24
+
+### 第 2 次发布
+
+发布时间：2020-08-21 08:00:08
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+新增接口：
+
+* [DescribeBlueprints](https://cloud.tencent.com/document/api/1207/47689)
+
+新增数据结构：
+
+* [Blueprint](https://cloud.tencent.com/document/api/1207/47576#Blueprint)
+
+
+
+## 互动白板(tiw) 版本：2019-09-19
+
+### 第 6 次发布
+
+发布时间：2020-08-21 08:24:00
 
 本次发布包含了以下内容：
 
@@ -96,18 +108,62 @@
 
 修改接口：
 
-* [CreateCustomerGateway](https://cloud.tencent.com/document/api/215/17523)
+* [StartOnlineRecord](https://cloud.tencent.com/document/api/1137/40063)
 
-	* 新增入参：Tags
+	* 新增入参：RecordControl
 
-* [CreateVpnConnection](https://cloud.tencent.com/document/api/215/17522)
 
-	* 新增入参：Tags
+新增数据结构：
 
-* [CreateVpnGateway](https://cloud.tencent.com/document/api/215/17521)
+* [RecordControl](https://cloud.tencent.com/document/api/1137/40068#RecordControl)
+* [StreamControl](https://cloud.tencent.com/document/api/1137/40068#StreamControl)
 
-	* 新增入参：Tags
+修改数据结构：
 
+* [StreamLayout](https://cloud.tencent.com/document/api/1137/40068#StreamLayout)
+
+	* 新增成员：FillMode
+
+
+
+
+## 文本内容检测(tms) 版本：2020-07-13
+
+### 第 2 次发布
+
+发布时间：2020-08-21 08:00:22
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+新增接口：
+
+* [AccountTipoffAccess](https://cloud.tencent.com/document/api/1124/47690)
+
+新增数据结构：
+
+* [TipoffResponse](https://cloud.tencent.com/document/api/1124/46977#TipoffResponse)
+
+
+
+## 云点播(vod) 版本：2018-07-17
+
+### 第 54 次发布
+
+发布时间：2020-08-21 08:22:40
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+新增接口：
+
+* [DescribeCdnLogs](https://cloud.tencent.com/document/api/266/47706)
+
+新增数据结构：
+
+* [CdnLogInfo](https://cloud.tencent.com/document/api/266/31773#CdnLogInfo)
 
 
 
@@ -7156,6 +7212,37 @@
 
 ## 负载均衡(clb) 版本：2018-03-17
 
+### 第 31 次发布
+
+发布时间：2020-08-21 08:09:33
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+新增接口：
+
+* [[DescribeQuota](https://cloud.tencent.com/document/api/214/47704)](https://cloud.tencent.com/document/api/#/#)
+
+新增数据结构：
+
+* [[Quota](https://cloud.tencent.com/document/api/214/30694#Quota)](https://cloud.tencent.com/document/api/214/30694#[Quota](https://cloud.tencent.com/document/api/214/30694#Quota))
+
+### 第 30 次发布
+
+发布时间：2020-08-20 08:09:11
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改数据结构：
+
+* [LoadBalancer](https://cloud.tencent.com/document/api/214/30694#LoadBalancer)
+
+	* 新增成员：ClusterTag, MixIpTarget
+
+
 ### 第 29 次发布
 
 发布时间：2020-08-13 08:08:05
@@ -8054,6 +8141,21 @@
 
 
 ## 腾讯云剪(cme) 版本：2019-10-29
+
+### 第 13 次发布
+
+发布时间：2020-08-20 08:04:39
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改数据结构：
+
+* [VideoEditProjectOutput](https://cloud.tencent.com/document/api/1156/40360#VideoEditProjectOutput)
+
+	* 新增成员：MaterialId
+
 
 ### 第 12 次发布
 
@@ -12525,6 +12627,58 @@
 
 ## 边缘计算机器(ecm) 版本：2019-07-19
 
+### 第 24 次发布
+
+发布时间：2020-08-21 08:02:20
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+新增接口：
+
+* [[AssociateSecurityGroups](https://cloud.tencent.com/document/api/1108/47693)](https://cloud.tencent.com/document/api/#/#)
+* [[CreateSecurityGroupPolicies](https://cloud.tencent.com/document/api/1108/47703)](https://cloud.tencent.com/document/api/#/#)
+* [[DeleteSecurityGroup](https://cloud.tencent.com/document/api/1108/47702)](https://cloud.tencent.com/document/api/#/#)
+* [[DeleteSecurityGroupPolicies](https://cloud.tencent.com/document/api/1108/47701)](https://cloud.tencent.com/document/api/#/#)
+* [[DescribeSecurityGroupAssociationStatistics](https://cloud.tencent.com/document/api/1108/47700)](https://cloud.tencent.com/document/api/#/#)
+* [[DescribeSecurityGroupLimits](https://cloud.tencent.com/document/api/1108/47699)](https://cloud.tencent.com/document/api/#/#)
+* [[DescribeSecurityGroupPolicies](https://cloud.tencent.com/document/api/1108/47698)](https://cloud.tencent.com/document/api/#/#)
+* [[DescribeSecurityGroups](https://cloud.tencent.com/document/api/1108/47697)](https://cloud.tencent.com/document/api/#/#)
+* [[DisassociateSecurityGroups](https://cloud.tencent.com/document/api/1108/47692)](https://cloud.tencent.com/document/api/#/#)
+* [[ModifyModuleSecurityGroups](https://cloud.tencent.com/document/api/1108/47691)](https://cloud.tencent.com/document/api/#/#)
+* [[ModifySecurityGroupAttribute](https://cloud.tencent.com/document/api/1108/47696)](https://cloud.tencent.com/document/api/#/#)
+* [[ModifySecurityGroupPolicies](https://cloud.tencent.com/document/api/1108/47695)](https://cloud.tencent.com/document/api/#/#)
+* [[ReplaceSecurityGroupPolicy](https://cloud.tencent.com/document/api/1108/47694)](https://cloud.tencent.com/document/api/#/#)
+
+修改接口：
+
+* [CreateModule](https://cloud.tencent.com/document/api/1108/42557)
+
+	* 新增入参：SecurityGroups
+
+* [ModifyInstancesAttribute](https://cloud.tencent.com/document/api/1108/42563)
+
+	* 新增入参：SecurityGroups
+
+
+新增数据结构：
+
+* [[AddressTemplateSpecification](https://cloud.tencent.com/document/api/1108/42574#AddressTemplateSpecification)](https://cloud.tencent.com/document/api/1108/42574#[AddressTemplateSpecification](https://cloud.tencent.com/document/api/1108/42574#AddressTemplateSpecification))
+* [[InstanceStatistic](https://cloud.tencent.com/document/api/1108/42574#InstanceStatistic)](https://cloud.tencent.com/document/api/1108/42574#[InstanceStatistic](https://cloud.tencent.com/document/api/1108/42574#InstanceStatistic))
+* [[SecurityGroupAssociationStatistics](https://cloud.tencent.com/document/api/1108/42574#SecurityGroupAssociationStatistics)](https://cloud.tencent.com/document/api/1108/42574#[SecurityGroupAssociationStatistics](https://cloud.tencent.com/document/api/1108/42574#SecurityGroupAssociationStatistics))
+* [[SecurityGroupLimitSet](https://cloud.tencent.com/document/api/1108/42574#SecurityGroupLimitSet)](https://cloud.tencent.com/document/api/1108/42574#[SecurityGroupLimitSet](https://cloud.tencent.com/document/api/1108/42574#SecurityGroupLimitSet))
+* [[SecurityGroupPolicy](https://cloud.tencent.com/document/api/1108/42574#SecurityGroupPolicy)](https://cloud.tencent.com/document/api/1108/42574#[SecurityGroupPolicy](https://cloud.tencent.com/document/api/1108/42574#SecurityGroupPolicy))
+* [[SecurityGroupPolicySet](https://cloud.tencent.com/document/api/1108/42574#SecurityGroupPolicySet)](https://cloud.tencent.com/document/api/1108/42574#[SecurityGroupPolicySet](https://cloud.tencent.com/document/api/1108/42574#SecurityGroupPolicySet))
+* [[ServiceTemplateSpecification](https://cloud.tencent.com/document/api/1108/42574#ServiceTemplateSpecification)](https://cloud.tencent.com/document/api/1108/42574#[ServiceTemplateSpecification](https://cloud.tencent.com/document/api/1108/42574#ServiceTemplateSpecification))
+
+修改数据结构：
+
+* [Module](https://cloud.tencent.com/document/api/1108/42574#Module)
+
+	* 新增成员：SecurityGroupIds
+
+
 ### 第 23 次发布
 
 发布时间：2020-08-17 08:01:44
@@ -13082,9 +13236,9 @@
 
 新增数据结构：
 
-* [[HostVolumeContext](https://cloud.tencent.com/document/api/589/33981#HostVolumeContext)](https://cloud.tencent.com/document/api/589/33981#[HostVolumeContext](https://cloud.tencent.com/document/api/589/33981#HostVolumeContext))
-* [[PersistentVolumeContext](https://cloud.tencent.com/document/api/589/33981#PersistentVolumeContext)](https://cloud.tencent.com/document/api/589/33981#[PersistentVolumeContext](https://cloud.tencent.com/document/api/589/33981#PersistentVolumeContext))
-* [[PodVolume](https://cloud.tencent.com/document/api/589/33981#PodVolume)](https://cloud.tencent.com/document/api/589/33981#[PodVolume](https://cloud.tencent.com/document/api/589/33981#PodVolume))
+* [HostVolumeContext](https://cloud.tencent.com/document/api/589/33981#HostVolumeContext)
+* [PersistentVolumeContext](https://cloud.tencent.com/document/api/589/33981#PersistentVolumeContext)
+* [PodVolume](https://cloud.tencent.com/document/api/589/33981#PodVolume)
 
 修改数据结构：
 
@@ -17531,6 +17685,22 @@
 
 ## 轻量应用服务器(lighthouse) 版本：2020-03-24
 
+### 第 2 次发布
+
+发布时间：2020-08-21 08:00:08
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+新增接口：
+
+* [[DescribeBlueprints](https://cloud.tencent.com/document/api/1207/47689)](https://cloud.tencent.com/document/api/#/#)
+
+新增数据结构：
+
+* [[Blueprint](https://cloud.tencent.com/document/api/1207/47576#Blueprint)](https://cloud.tencent.com/document/api/1207/47576#[Blueprint](https://cloud.tencent.com/document/api/1207/47576#Blueprint))
+
 ### 第 1 次发布
 
 发布时间：2020-08-18 08:00:08
@@ -21030,6 +21200,38 @@
 
 ## 文字识别(ocr) 版本：2018-11-19
 
+### 第 32 次发布
+
+发布时间：2020-08-20 08:17:32
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改接口：
+
+* [BusinessCardOCR](https://cloud.tencent.com/document/api/866/36214)
+
+	* 新增出参：Angle
+
+* [GeneralBasicOCR](https://cloud.tencent.com/document/api/866/33526)
+
+	* 新增入参：IsPdf, PdfPageNumber
+
+	* 新增出参：PdfPageSize
+
+* [MLIDCardOCR](https://cloud.tencent.com/document/api/866/37656)
+
+	* 新增出参：Birthday
+
+
+修改数据结构：
+
+* [BusinessCardInfo](https://cloud.tencent.com/document/api/866/33527#BusinessCardInfo)
+
+	* 新增成员：ItemCoord
+
+
 ### 第 31 次发布
 
 发布时间：2020-08-11 08:18:56
@@ -21988,6 +22190,44 @@
 
 ## 云数据库 PostgreSQL(postgres) 版本：2017-03-12
 
+### 第 10 次发布
+
+发布时间：2020-08-20 08:18:19
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改接口：
+
+* [CreateDBInstances](https://cloud.tencent.com/document/api/409/16771)
+
+	* 新增入参：TagList
+
+* [CreateServerlessDBInstance](https://cloud.tencent.com/document/api/409/42762)
+
+	* 新增入参：TagList
+
+* [DescribeServerlessDBInstances](https://cloud.tencent.com/document/api/409/42760)
+
+	* 新增入参：OrderBy, OrderByType
+
+
+新增数据结构：
+
+* [Tag](https://cloud.tencent.com/document/api/409/16778#Tag)
+
+修改数据结构：
+
+* [DBInstance](https://cloud.tencent.com/document/api/409/16778#DBInstance)
+
+	* 新增成员：TagList
+
+* [ServerlessDBInstance](https://cloud.tencent.com/document/api/409/16778#ServerlessDBInstance)
+
+	* 新增成员：TagList
+
+
 ### 第 9 次发布
 
 发布时间：2020-07-02 08:15:16
@@ -22713,6 +22953,21 @@
 
 
 ## 云函数(scf) 版本：2018-04-16
+
+### 第 18 次发布
+
+发布时间：2020-08-20 08:18:57
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改接口：
+
+* [DeleteFunction](https://cloud.tencent.com/document/api/583/18585)
+
+	* 新增入参：Qualifier
+
 
 ### 第 17 次发布
 
@@ -27221,6 +27476,33 @@
 
 ## 互动白板(tiw) 版本：2019-09-19
 
+### 第 6 次发布
+
+发布时间：2020-08-21 08:24:00
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改接口：
+
+* [StartOnlineRecord](https://cloud.tencent.com/document/api/1137/40063)
+
+	* 新增入参：RecordControl
+
+
+新增数据结构：
+
+* [[RecordControl](https://cloud.tencent.com/document/api/1137/40068#RecordControl)](https://cloud.tencent.com/document/api/1137/40068#[RecordControl](https://cloud.tencent.com/document/api/1137/40068#RecordControl))
+* [[StreamControl](https://cloud.tencent.com/document/api/1137/40068#StreamControl)](https://cloud.tencent.com/document/api/1137/40068#[StreamControl](https://cloud.tencent.com/document/api/1137/40068#StreamControl))
+
+修改数据结构：
+
+* [StreamLayout](https://cloud.tencent.com/document/api/1137/40068#StreamLayout)
+
+	* 新增成员：FillMode
+
+
 ### 第 5 次发布
 
 发布时间：2020-08-18 08:25:38
@@ -27958,6 +28240,22 @@
 
 
 ## 文本内容检测(tms) 版本：2020-07-13
+
+### 第 2 次发布
+
+发布时间：2020-08-21 08:00:22
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+新增接口：
+
+* [[AccountTipoffAccess](https://cloud.tencent.com/document/api/1124/47690)](https://cloud.tencent.com/document/api/#/#)
+
+新增数据结构：
+
+* [[TipoffResponse](https://cloud.tencent.com/document/api/1124/46977#TipoffResponse)](https://cloud.tencent.com/document/api/1124/46977#[TipoffResponse](https://cloud.tencent.com/document/api/1124/46977#TipoffResponse))
 
 ### 第 1 次发布
 
@@ -29069,6 +29367,41 @@
 
 
 ## 云点播(vod) 版本：2018-07-17
+
+### 第 54 次发布
+
+发布时间：2020-08-21 08:22:40
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+新增接口：
+
+* [[DescribeCdnLogs](https://cloud.tencent.com/document/api/266/47706)](https://cloud.tencent.com/document/api/#/#)
+
+新增数据结构：
+
+* [[CdnLogInfo](https://cloud.tencent.com/document/api/266/31773#CdnLogInfo)](https://cloud.tencent.com/document/api/266/31773#[CdnLogInfo](https://cloud.tencent.com/document/api/266/31773#CdnLogInfo))
+
+### 第 53 次发布
+
+发布时间：2020-08-20 08:23:52
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改接口：
+
+* [SearchMedia](https://cloud.tencent.com/document/api/266/31813)
+
+	* 新增入参：StreamIds, Vids, SourceTypes, CreateTime, FileIds, Names, NamePrefixes, Descriptions, Filters
+
+
+新增数据结构：
+
+* [TimeRange](https://cloud.tencent.com/document/api/266/31773#TimeRange)
 
 ### 第 52 次发布
 

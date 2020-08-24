@@ -81,7 +81,11 @@ class LayoutParams extends AbstractModel
         if (array_key_exists("MainVideoStreamType",$param) and $param["MainVideoStreamType"] !== null) {
             $this->MainVideoStreamType = $param["MainVideoStreamType"];
         }
-
+        
+        if (array_key_exists("MainVideoRightAlign",$param) and $param["MainVideoRightAlign"] !== null) {
+            $this->MainVideoRightAlign = $param["MainVideoRightAlign"];
+        }
+        
         if (array_key_exists("SmallVideoLayoutParams",$param) and $param["SmallVideoLayoutParams"] !== null) {
             $this->SmallVideoLayoutParams = new SmallVideoLayoutParams();
             $this->SmallVideoLayoutParams->deserialize($param["SmallVideoLayoutParams"]);

@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNatGatewayId(string $NatGatewayId) 设置NAT网关的ID，形如：`nat-df45454`。
  * @method integer getAddressCount() 获取需要申请的弹性IP个数，系统会按您的要求生产N个弹性IP, 其中AddressCount和PublicAddresses至少传递一个。
  * @method void setAddressCount(integer $AddressCount) 设置需要申请的弹性IP个数，系统会按您的要求生产N个弹性IP, 其中AddressCount和PublicAddresses至少传递一个。
- * @method array getPublicIpAddresses() 获取绑定NAT网关的弹性IP数组，其中AddressCount和PublicAddresses至少传递一个。。
- * @method void setPublicIpAddresses(array $PublicIpAddresses) 设置绑定NAT网关的弹性IP数组，其中AddressCount和PublicAddresses至少传递一个。。
- * @method string getZone() 获取弹性IP可以区，自动分配弹性IP时传递。
- * @method void setZone(string $Zone) 设置弹性IP可以区，自动分配弹性IP时传递。
+ * @method array getPublicIpAddresses() 获取绑定NAT网关的弹性IP数组，其中AddressCount和PublicAddresses至少传递一个。
+ * @method void setPublicIpAddresses(array $PublicIpAddresses) 设置绑定NAT网关的弹性IP数组，其中AddressCount和PublicAddresses至少传递一个。
+ * @method string getZone() 获取弹性IP可用区，自动分配弹性IP时传递。
+ * @method void setZone(string $Zone) 设置弹性IP可用区，自动分配弹性IP时传递。
  */
 class AssociateNatGatewayAddressRequest extends AbstractModel
 {
@@ -42,20 +42,20 @@ class AssociateNatGatewayAddressRequest extends AbstractModel
     public $AddressCount;
 
     /**
-     * @var array 绑定NAT网关的弹性IP数组，其中AddressCount和PublicAddresses至少传递一个。。
+     * @var array 绑定NAT网关的弹性IP数组，其中AddressCount和PublicAddresses至少传递一个。
      */
     public $PublicIpAddresses;
 
     /**
-     * @var string 弹性IP可以区，自动分配弹性IP时传递。
+     * @var string 弹性IP可用区，自动分配弹性IP时传递。
      */
     public $Zone;
 
     /**
      * @param string $NatGatewayId NAT网关的ID，形如：`nat-df45454`。
      * @param integer $AddressCount 需要申请的弹性IP个数，系统会按您的要求生产N个弹性IP, 其中AddressCount和PublicAddresses至少传递一个。
-     * @param array $PublicIpAddresses 绑定NAT网关的弹性IP数组，其中AddressCount和PublicAddresses至少传递一个。。
-     * @param string $Zone 弹性IP可以区，自动分配弹性IP时传递。
+     * @param array $PublicIpAddresses 绑定NAT网关的弹性IP数组，其中AddressCount和PublicAddresses至少传递一个。
+     * @param string $Zone 弹性IP可用区，自动分配弹性IP时传递。
      */
     function __construct()
     {

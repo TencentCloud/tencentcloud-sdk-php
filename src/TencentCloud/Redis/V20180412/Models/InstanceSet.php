@@ -126,6 +126,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemainBandwidthDuration(string $RemainBandwidthDuration) 设置内部参数，用户可忽略
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getDiskSize() 获取Tendis实例的磁盘大小
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDiskSize(integer $DiskSize) 设置Tendis实例的磁盘大小
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getMonitorVersion() 获取监控版本: 1m-分钟粒度监控，5s-5秒粒度监控
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMonitorVersion(string $MonitorVersion) 设置监控版本: 1m-分钟粒度监控，5s-5秒粒度监控
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceSet extends AbstractModel
 {
@@ -355,6 +363,18 @@ class InstanceSet extends AbstractModel
     public $RemainBandwidthDuration;
 
     /**
+     * @var integer Tendis实例的磁盘大小
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DiskSize;
+
+    /**
+     * @var string 监控版本: 1m-分钟粒度监控，5s-5秒粒度监控
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MonitorVersion;
+
+    /**
      * @param string $InstanceName 实例名称
      * @param string $InstanceId 实例Id
      * @param integer $Appid 用户的Appid
@@ -407,6 +427,10 @@ class InstanceSet extends AbstractModel
      * @param string $Vip6 内部参数，用户可忽略
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RemainBandwidthDuration 内部参数，用户可忽略
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $DiskSize Tendis实例的磁盘大小
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $MonitorVersion 监控版本: 1m-分钟粒度监控，5s-5秒粒度监控
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -602,6 +626,14 @@ class InstanceSet extends AbstractModel
 
         if (array_key_exists("RemainBandwidthDuration",$param) and $param["RemainBandwidthDuration"] !== null) {
             $this->RemainBandwidthDuration = $param["RemainBandwidthDuration"];
+        }
+
+        if (array_key_exists("DiskSize",$param) and $param["DiskSize"] !== null) {
+            $this->DiskSize = $param["DiskSize"];
+        }
+
+        if (array_key_exists("MonitorVersion",$param) and $param["MonitorVersion"] !== null) {
+            $this->MonitorVersion = $param["MonitorVersion"];
         }
     }
 }

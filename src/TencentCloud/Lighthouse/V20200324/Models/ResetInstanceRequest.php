@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取实例 ID。可通过[DescribeInstances](https://cloud.tencent.com/document/api/1207/47573)接口返回值中的InstanceId获取。
  * @method void setInstanceId(string $InstanceId) 设置实例 ID。可通过[DescribeInstances](https://cloud.tencent.com/document/api/1207/47573)接口返回值中的InstanceId获取。
- * @method string getBlueprintId() 获取镜像 ID。
- * @method void setBlueprintId(string $BlueprintId) 设置镜像 ID。
+ * @method string getBlueprintId() 获取镜像 ID。可通过[DescribeBlueprints](https://cloud.tencent.com/document/product/1207/47689)接口返回值中的BlueprintId获取。
+ * @method void setBlueprintId(string $BlueprintId) 设置镜像 ID。可通过[DescribeBlueprints](https://cloud.tencent.com/document/product/1207/47689)接口返回值中的BlueprintId获取。
  */
 class ResetInstanceRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class ResetInstanceRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string 镜像 ID。
+     * @var string 镜像 ID。可通过[DescribeBlueprints](https://cloud.tencent.com/document/product/1207/47689)接口返回值中的BlueprintId获取。
      */
     public $BlueprintId;
 
     /**
      * @param string $InstanceId 实例 ID。可通过[DescribeInstances](https://cloud.tencent.com/document/api/1207/47573)接口返回值中的InstanceId获取。
-     * @param string $BlueprintId 镜像 ID。
+     * @param string $BlueprintId 镜像 ID。可通过[DescribeBlueprints](https://cloud.tencent.com/document/product/1207/47689)接口返回值中的BlueprintId获取。
      */
     function __construct()
     {

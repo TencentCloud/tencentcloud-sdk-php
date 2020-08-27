@@ -24,8 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPlatform(string $Platform) 设置平台名称，指定访问的平台。
  * @method string getCategory() 获取项目类别，取值有：
 <li>VIDEO_EDIT：视频编辑。</li>
+<li>SWITCHER：导播台。</li>
  * @method void setCategory(string $Category) 设置项目类别，取值有：
 <li>VIDEO_EDIT：视频编辑。</li>
+<li>SWITCHER：导播台。</li>
  * @method string getName() 获取项目名称，不可超过30个字符。
  * @method void setName(string $Name) 设置项目名称，不可超过30个字符。
  * @method string getAspectRatio() 获取画布宽高比，取值有：
@@ -36,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
 <li>9:16。</li>
  * @method Entity getOwner() 获取归属者。
  * @method void setOwner(Entity $Owner) 设置归属者。
+ * @method string getDescription() 获取项目描述信息。
+ * @method void setDescription(string $Description) 设置项目描述信息。
+ * @method SwitcherProjectInput getSwitcherProjectInput() 获取导播台信息，仅当项目类型为 SWITCHER 时有效。
+ * @method void setSwitcherProjectInput(SwitcherProjectInput $SwitcherProjectInput) 设置导播台信息，仅当项目类型为 SWITCHER 时有效。
  */
 class CreateProjectRequest extends AbstractModel
 {
@@ -47,6 +53,7 @@ class CreateProjectRequest extends AbstractModel
     /**
      * @var string 项目类别，取值有：
 <li>VIDEO_EDIT：视频编辑。</li>
+<li>SWITCHER：导播台。</li>
      */
     public $Category;
 
@@ -68,14 +75,27 @@ class CreateProjectRequest extends AbstractModel
     public $Owner;
 
     /**
+     * @var string 项目描述信息。
+     */
+    public $Description;
+
+    /**
+     * @var SwitcherProjectInput 导播台信息，仅当项目类型为 SWITCHER 时有效。
+     */
+    public $SwitcherProjectInput;
+
+    /**
      * @param string $Platform 平台名称，指定访问的平台。
      * @param string $Category 项目类别，取值有：
 <li>VIDEO_EDIT：视频编辑。</li>
+<li>SWITCHER：导播台。</li>
      * @param string $Name 项目名称，不可超过30个字符。
      * @param string $AspectRatio 画布宽高比，取值有：
 <li>16:9；</li>
 <li>9:16。</li>
      * @param Entity $Owner 归属者。
+     * @param string $Description 项目描述信息。
+     * @param SwitcherProjectInput $SwitcherProjectInput 导播台信息，仅当项目类型为 SWITCHER 时有效。
      */
     function __construct()
     {
@@ -109,6 +129,15 @@ class CreateProjectRequest extends AbstractModel
         if (array_key_exists("Owner",$param) and $param["Owner"] !== null) {
             $this->Owner = new Entity();
             $this->Owner->deserialize($param["Owner"]);
+        }
+
+        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
+            $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("SwitcherProjectInput",$param) and $param["SwitcherProjectInput"] !== null) {
+            $this->SwitcherProjectInput = new SwitcherProjectInput();
+            $this->SwitcherProjectInput->deserialize($param["SwitcherProjectInput"]);
         }
     }
 }

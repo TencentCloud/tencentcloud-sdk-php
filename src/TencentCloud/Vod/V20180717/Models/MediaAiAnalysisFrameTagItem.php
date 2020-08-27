@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTag() 获取按帧标签名称。
  * @method void setTag(string $Tag) 设置按帧标签名称。
+ * @method array getCategorySet() 获取按帧标签名称的分类列表，CategorySet.N 表示第 N+1级分类。
+比如 Tag 为“塔楼”时，CategorySet 包含两个元素：CategorySet.0 为“场景”，CategorySet.1为 “建筑”，表示按帧标签为“塔楼”，且第1级分类是“场景”，第2级分类是“建筑”。
+ * @method void setCategorySet(array $CategorySet) 设置按帧标签名称的分类列表，CategorySet.N 表示第 N+1级分类。
+比如 Tag 为“塔楼”时，CategorySet 包含两个元素：CategorySet.0 为“场景”，CategorySet.1为 “建筑”，表示按帧标签为“塔楼”，且第1级分类是“场景”，第2级分类是“建筑”。
  * @method float getConfidence() 获取按帧标签的可信度，取值范围是 0 到 100。
  * @method void setConfidence(float $Confidence) 设置按帧标签的可信度，取值范围是 0 到 100。
  */
@@ -33,12 +37,20 @@ class MediaAiAnalysisFrameTagItem extends AbstractModel
     public $Tag;
 
     /**
+     * @var array 按帧标签名称的分类列表，CategorySet.N 表示第 N+1级分类。
+比如 Tag 为“塔楼”时，CategorySet 包含两个元素：CategorySet.0 为“场景”，CategorySet.1为 “建筑”，表示按帧标签为“塔楼”，且第1级分类是“场景”，第2级分类是“建筑”。
+     */
+    public $CategorySet;
+
+    /**
      * @var float 按帧标签的可信度，取值范围是 0 到 100。
      */
     public $Confidence;
 
     /**
      * @param string $Tag 按帧标签名称。
+     * @param array $CategorySet 按帧标签名称的分类列表，CategorySet.N 表示第 N+1级分类。
+比如 Tag 为“塔楼”时，CategorySet 包含两个元素：CategorySet.0 为“场景”，CategorySet.1为 “建筑”，表示按帧标签为“塔楼”，且第1级分类是“场景”，第2级分类是“建筑”。
      * @param float $Confidence 按帧标签的可信度，取值范围是 0 到 100。
      */
     function __construct()
@@ -56,6 +68,10 @@ class MediaAiAnalysisFrameTagItem extends AbstractModel
         }
         if (array_key_exists("Tag",$param) and $param["Tag"] !== null) {
             $this->Tag = $param["Tag"];
+        }
+
+        if (array_key_exists("CategorySet",$param) and $param["CategorySet"] !== null) {
+            $this->CategorySet = $param["CategorySet"];
         }
 
         if (array_key_exists("Confidence",$param) and $param["Confidence"] !== null) {

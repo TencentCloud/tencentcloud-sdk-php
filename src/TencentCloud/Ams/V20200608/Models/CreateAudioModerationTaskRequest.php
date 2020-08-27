@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getBizType() 获取业务类型, 定义 模版策略，输出存储配置。如果没有BizType，可以先参考 【创建业务配置】接口进行创建
  * @method void setBizType(string $BizType) 设置业务类型, 定义 模版策略，输出存储配置。如果没有BizType，可以先参考 【创建业务配置】接口进行创建
- * @method string getType() 获取异步检测结果回调通知接收URL。支持HTTP和HTTPS
- * @method void setType(string $Type) 设置异步检测结果回调通知接收URL。支持HTTP和HTTPS
+ * @method string getType() 获取审核类型，这里可选：AUDIO (点播音频)和 LIVE_AUDIO（直播音频）
+ * @method void setType(string $Type) 设置审核类型，这里可选：AUDIO (点播音频)和 LIVE_AUDIO（直播音频）
  * @method string getSeed() 获取回调签名key，具体可以查看签名文档。
  * @method void setSeed(string $Seed) 设置回调签名key，具体可以查看签名文档。
  * @method string getCallbackUrl() 获取接收审核信息回调地址，如果设置，则审核过程中产生的违规音频片段和画面截帧发送此接口
@@ -39,7 +39,7 @@ class CreateAudioModerationTaskRequest extends AbstractModel
     public $BizType;
 
     /**
-     * @var string 异步检测结果回调通知接收URL。支持HTTP和HTTPS
+     * @var string 审核类型，这里可选：AUDIO (点播音频)和 LIVE_AUDIO（直播音频）
      */
     public $Type;
 
@@ -60,7 +60,7 @@ class CreateAudioModerationTaskRequest extends AbstractModel
 
     /**
      * @param string $BizType 业务类型, 定义 模版策略，输出存储配置。如果没有BizType，可以先参考 【创建业务配置】接口进行创建
-     * @param string $Type 异步检测结果回调通知接收URL。支持HTTP和HTTPS
+     * @param string $Type 审核类型，这里可选：AUDIO (点播音频)和 LIVE_AUDIO（直播音频）
      * @param string $Seed 回调签名key，具体可以查看签名文档。
      * @param string $CallbackUrl 接收审核信息回调地址，如果设置，则审核过程中产生的违规音频片段和画面截帧发送此接口
      * @param array $Tasks 输入的任务信息，最多可以同时创建10个任务

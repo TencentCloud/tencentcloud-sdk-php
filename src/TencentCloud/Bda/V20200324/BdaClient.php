@@ -64,7 +64,7 @@ use TencentCloud\Bda\V20200324\Models as Models;
 - 我们希望您的输入为严格符合轨迹图片要求的图片。如果您输入的图片不符合轨迹图片要求，会对最终效果产生较大负面影响；
 - 人体轨迹，是一个包含1-5张图片的图片序列。您可以输入1张图片作为轨迹，也可以输入多张。单个轨迹中包含越多符合质量的图片，搜索效果越好。
 - 构成人体轨迹单张图片大小不得超过2M，分辨率不得超过1920*1080。
- * @method Models\SegmentCustomizedPortraitPicResponse SegmentCustomizedPortraitPic(Models\SegmentCustomizedPortraitPicRequest $req) 在前后景分割的基础上优化多分类分割，支持对头发、五官等的分割，既作为换发型、挂件等底层技术，也可用于扣人头、扣人脸等玩法
+ * @method Models\SegmentCustomizedPortraitPicResponse SegmentCustomizedPortraitPic(Models\SegmentCustomizedPortraitPicRequest $req) 在前后景分割的基础上优化多分类分割，支持对头发、五官等的分割，既作为换发型、挂件等底层技术，也可用于抠人头、抠人脸等玩法
  * @method Models\SegmentPortraitPicResponse SegmentPortraitPic(Models\SegmentPortraitPicRequest $req) 识别传入图片中人体的完整轮廓，进行抠像。
  */
 

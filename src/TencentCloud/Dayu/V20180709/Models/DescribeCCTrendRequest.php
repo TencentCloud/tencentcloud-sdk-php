@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(string $EndTime) 设置统计结束时间
  * @method string getId() 获取资源实例ID，当Business为basic时，此字段不用填写（因为基础防护没有资源实例）
  * @method void setId(string $Id) 设置资源实例ID，当Business为basic时，此字段不用填写（因为基础防护没有资源实例）
+ * @method string getDomain() 获取域名，可选
+ * @method void setDomain(string $Domain) 设置域名，可选
  */
 class DescribeCCTrendRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class DescribeCCTrendRequest extends AbstractModel
     public $Id;
 
     /**
+     * @var string 域名，可选
+     */
+    public $Domain;
+
+    /**
      * @param string $Business 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版；basic表示DDoS基础防护）
      * @param string $Ip 资源的IP
      * @param string $MetricName 指标，取值[inqps(总请求峰值，dropqps(攻击请求峰值))]
@@ -80,6 +87,7 @@ class DescribeCCTrendRequest extends AbstractModel
      * @param string $StartTime 统计开始时间
      * @param string $EndTime 统计结束时间
      * @param string $Id 资源实例ID，当Business为basic时，此字段不用填写（因为基础防护没有资源实例）
+     * @param string $Domain 域名，可选
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class DescribeCCTrendRequest extends AbstractModel
 
         if (array_key_exists("Id",$param) and $param["Id"] !== null) {
             $this->Id = $param["Id"];
+        }
+
+        if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
+            $this->Domain = $param["Domain"];
         }
     }
 }

@@ -84,6 +84,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCvm(integer $Cvm) 设置售卖类型
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getInstanceType() 获取类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInstanceType(string $InstanceType) 设置类型
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceAttributesResponse extends AbstractModel
 {
@@ -224,6 +228,12 @@ class InstanceAttributesResponse extends AbstractModel
     public $Cvm;
 
     /**
+     * @var string 类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InstanceType;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $InstanceName 实例名称
      * @param array $VipList 接入点 VIP 列表信息
@@ -255,6 +265,8 @@ class InstanceAttributesResponse extends AbstractModel
      * @param integer $MaxGroupNum 最大分组数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Cvm 售卖类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $InstanceType 类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -383,6 +395,10 @@ class InstanceAttributesResponse extends AbstractModel
 
         if (array_key_exists("Cvm",$param) and $param["Cvm"] !== null) {
             $this->Cvm = $param["Cvm"];
+        }
+
+        if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
+            $this->InstanceType = $param["InstanceType"];
         }
     }
 }

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getNatGatewayId() 获取NAT网关的ID，形如：`nat-df45454`。
  * @method void setNatGatewayId(string $NatGatewayId) 设置NAT网关的ID，形如：`nat-df45454`。
- * @method array getPublicIpAddresses() 获取绑定NAT网关的弹性IP数组。
- * @method void setPublicIpAddresses(array $PublicIpAddresses) 设置绑定NAT网关的弹性IP数组。
+ * @method array getPublicIpAddresses() 获取待解绑NAT网关的弹性IP数组。
+ * @method void setPublicIpAddresses(array $PublicIpAddresses) 设置待解绑NAT网关的弹性IP数组。
  */
 class DisassociateNatGatewayAddressRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class DisassociateNatGatewayAddressRequest extends AbstractModel
     public $NatGatewayId;
 
     /**
-     * @var array 绑定NAT网关的弹性IP数组。
+     * @var array 待解绑NAT网关的弹性IP数组。
      */
     public $PublicIpAddresses;
 
     /**
      * @param string $NatGatewayId NAT网关的ID，形如：`nat-df45454`。
-     * @param array $PublicIpAddresses 绑定NAT网关的弹性IP数组。
+     * @param array $PublicIpAddresses 待解绑NAT网关的弹性IP数组。
      */
     function __construct()
     {

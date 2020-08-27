@@ -48,8 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRightPupil(array $RightPupil) 设置右瞳孔轮廓的 XX 个点。
  * @method array getCentralAxis() 获取中轴线轮廓的 XX 个点。
  * @method void setCentralAxis(array $CentralAxis) 设置中轴线轮廓的 XX 个点。
- * @method array getChin() 获取下轮廓的 XX 个点。
- * @method void setChin(array $Chin) 设置下轮廓的 XX 个点。
+ * @method array getChin() 获取下巴轮廓的 XX 个点。
+ * @method void setChin(array $Chin) 设置下巴轮廓的 XX 个点。
  * @method array getLeftEyeBags() 获取左眼袋的 XX 个点。
  * @method void setLeftEyeBags(array $LeftEyeBags) 设置左眼袋的 XX 个点。
  * @method array getRightEyeBags() 获取右眼袋的 XX 个点。
@@ -130,7 +130,7 @@ class DenseFaceShape extends AbstractModel
     public $CentralAxis;
 
     /**
-     * @var array 下轮廓的 XX 个点。
+     * @var array 下巴轮廓的 XX 个点。
      */
     public $Chin;
 
@@ -164,7 +164,7 @@ class DenseFaceShape extends AbstractModel
      * @param array $LeftPupil 左瞳孔轮廓的 XX 个点。
      * @param array $RightPupil 右瞳孔轮廓的 XX 个点。
      * @param array $CentralAxis 中轴线轮廓的 XX 个点。
-     * @param array $Chin 下轮廓的 XX 个点。
+     * @param array $Chin 下巴轮廓的 XX 个点。
      * @param array $LeftEyeBags 左眼袋的 XX 个点。
      * @param array $RightEyeBags 右眼袋的 XX 个点。
      * @param array $Forehead 额头的 XX 个点。

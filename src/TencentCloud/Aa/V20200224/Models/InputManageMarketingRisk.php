@@ -22,20 +22,20 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method AccountInfo getAccount() 获取账号信息。
  * @method void setAccount(AccountInfo $Account) 设置账号信息。
- * @method integer getSceneType() 获取场景类型。
-1：活动防刷
-2：登录保护
-3：注册保护
-4：活动防刷高级版（网赚）
- * @method void setSceneType(integer $SceneType) 设置场景类型。
-1：活动防刷
-2：登录保护
-3：注册保护
-4：活动防刷高级版（网赚）
  * @method string getUserIp() 获取登录来源的外网IP
  * @method void setUserIp(string $UserIp) 设置登录来源的外网IP
  * @method integer getPostTime() 获取用户操作时间戳，单位秒（格林威治时间精确到秒，如1501590972）。
  * @method void setPostTime(integer $PostTime) 设置用户操作时间戳，单位秒（格林威治时间精确到秒，如1501590972）。
+ * @method integer getSceneType() 获取场景类型。(后续不再支持，请使用SceneCode字段)
+1：活动防刷
+2：登录保护
+3：注册保护
+4：活动防刷高级版（网赚）
+ * @method void setSceneType(integer $SceneType) 设置场景类型。(后续不再支持，请使用SceneCode字段)
+1：活动防刷
+2：登录保护
+3：注册保护
+4：活动防刷高级版（网赚）
  * @method string getUserId() 获取用户唯一标识。
  * @method void setUserId(string $UserId) 设置用户唯一标识。
  * @method string getDeviceToken() 获取设备指纹token。
@@ -68,6 +68,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVendorId(string $VendorId) 设置手机制造商ID，如果手机注册，请带上此信息。
  * @method CrowdAntiRushInfo getCrowdAntiRush() 获取网赚防刷相关信息。SceneType为4时填写。
  * @method void setCrowdAntiRush(CrowdAntiRushInfo $CrowdAntiRush) 设置网赚防刷相关信息。SceneType为4时填写。
+ * @method string getSceneCode() 获取场景Code，控制台上获取
+ * @method void setSceneCode(string $SceneCode) 设置场景Code，控制台上获取
+ * @method array getDetails() 获取详细信息
+ * @method void setDetails(array $Details) 设置详细信息
  */
 class InputManageMarketingRisk extends AbstractModel
 {
@@ -75,15 +79,6 @@ class InputManageMarketingRisk extends AbstractModel
      * @var AccountInfo 账号信息。
      */
     public $Account;
-
-    /**
-     * @var integer 场景类型。
-1：活动防刷
-2：登录保护
-3：注册保护
-4：活动防刷高级版（网赚）
-     */
-    public $SceneType;
 
     /**
      * @var string 登录来源的外网IP
@@ -94,6 +89,15 @@ class InputManageMarketingRisk extends AbstractModel
      * @var integer 用户操作时间戳，单位秒（格林威治时间精确到秒，如1501590972）。
      */
     public $PostTime;
+
+    /**
+     * @var integer 场景类型。(后续不再支持，请使用SceneCode字段)
+1：活动防刷
+2：登录保护
+3：注册保护
+4：活动防刷高级版（网赚）
+     */
+    public $SceneType;
 
     /**
      * @var string 用户唯一标识。
@@ -168,14 +172,24 @@ class InputManageMarketingRisk extends AbstractModel
     public $CrowdAntiRush;
 
     /**
+     * @var string 场景Code，控制台上获取
+     */
+    public $SceneCode;
+
+    /**
+     * @var array 详细信息
+     */
+    public $Details;
+
+    /**
      * @param AccountInfo $Account 账号信息。
-     * @param integer $SceneType 场景类型。
+     * @param string $UserIp 登录来源的外网IP
+     * @param integer $PostTime 用户操作时间戳，单位秒（格林威治时间精确到秒，如1501590972）。
+     * @param integer $SceneType 场景类型。(后续不再支持，请使用SceneCode字段)
 1：活动防刷
 2：登录保护
 3：注册保护
 4：活动防刷高级版（网赚）
-     * @param string $UserIp 登录来源的外网IP
-     * @param integer $PostTime 用户操作时间戳，单位秒（格林威治时间精确到秒，如1501590972）。
      * @param string $UserId 用户唯一标识。
      * @param string $DeviceToken 设备指纹token。
      * @param integer $DeviceBusinessId 设备指纹BusinessId
@@ -192,6 +206,8 @@ class InputManageMarketingRisk extends AbstractModel
      * @param string $MacAddress MAC地址或设备唯一标识。
      * @param string $VendorId 手机制造商ID，如果手机注册，请带上此信息。
      * @param CrowdAntiRushInfo $CrowdAntiRush 网赚防刷相关信息。SceneType为4时填写。
+     * @param string $SceneCode 场景Code，控制台上获取
+     * @param array $Details 详细信息
      */
     function __construct()
     {
@@ -211,16 +227,16 @@ class InputManageMarketingRisk extends AbstractModel
             $this->Account->deserialize($param["Account"]);
         }
 
-        if (array_key_exists("SceneType",$param) and $param["SceneType"] !== null) {
-            $this->SceneType = $param["SceneType"];
-        }
-
         if (array_key_exists("UserIp",$param) and $param["UserIp"] !== null) {
             $this->UserIp = $param["UserIp"];
         }
 
         if (array_key_exists("PostTime",$param) and $param["PostTime"] !== null) {
             $this->PostTime = $param["PostTime"];
+        }
+
+        if (array_key_exists("SceneType",$param) and $param["SceneType"] !== null) {
+            $this->SceneType = $param["SceneType"];
         }
 
         if (array_key_exists("UserId",$param) and $param["UserId"] !== null) {
@@ -278,6 +294,19 @@ class InputManageMarketingRisk extends AbstractModel
         if (array_key_exists("CrowdAntiRush",$param) and $param["CrowdAntiRush"] !== null) {
             $this->CrowdAntiRush = new CrowdAntiRushInfo();
             $this->CrowdAntiRush->deserialize($param["CrowdAntiRush"]);
+        }
+
+        if (array_key_exists("SceneCode",$param) and $param["SceneCode"] !== null) {
+            $this->SceneCode = $param["SceneCode"];
+        }
+
+        if (array_key_exists("Details",$param) and $param["Details"] !== null) {
+            $this->Details = [];
+            foreach ($param["Details"] as $key => $value){
+                $obj = new InputDetails();
+                $obj->deserialize($value);
+                array_push($this->Details, $obj);
+            }
         }
     }
 }

@@ -62,6 +62,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSearchKeys(array $SearchKeys) 设置搜索关键词：支持实例Id、实例名称、完整IP
  * @method array getTypeList() 获取内部参数，用户可忽略
  * @method void setTypeList(array $TypeList) 设置内部参数，用户可忽略
+ * @method string getMonitorVersion() 获取内部参数，用户可忽略
+ * @method void setMonitorVersion(string $MonitorVersion) 设置内部参数，用户可忽略
  */
 class DescribeInstancesRequest extends AbstractModel
 {
@@ -171,6 +173,11 @@ class DescribeInstancesRequest extends AbstractModel
     public $TypeList;
 
     /**
+     * @var string 内部参数，用户可忽略
+     */
+    public $MonitorVersion;
+
+    /**
      * @param integer $Limit 实例列表的大小，参数默认值20
      * @param integer $Offset 偏移量，取Limit整数倍
      * @param string $InstanceId 实例Id，如：crs-6ubhgouj
@@ -192,6 +199,7 @@ class DescribeInstancesRequest extends AbstractModel
      * @param integer $Type 实例类型：1-Redis老集群版；2-Redis 2.8主从版；3-CKV主从版；4-CKV集群版；5-Redis 2.8单机版；6-Redis 4.0主从版；7-Redis 4.0集群版；8 – Redis5.0主从版，9 – Redis5.0集群版，
      * @param array $SearchKeys 搜索关键词：支持实例Id、实例名称、完整IP
      * @param array $TypeList 内部参数，用户可忽略
+     * @param string $MonitorVersion 内部参数，用户可忽略
      */
     function __construct()
     {
@@ -288,6 +296,10 @@ class DescribeInstancesRequest extends AbstractModel
 
         if (array_key_exists("TypeList",$param) and $param["TypeList"] !== null) {
             $this->TypeList = $param["TypeList"];
+        }
+
+        if (array_key_exists("MonitorVersion",$param) and $param["MonitorVersion"] !== null) {
+            $this->MonitorVersion = $param["MonitorVersion"];
         }
     }
 }

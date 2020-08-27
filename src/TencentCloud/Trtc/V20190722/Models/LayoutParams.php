@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMainVideoStreamType(integer $MainVideoStreamType) 设置屏幕分享模板、悬浮模板、画中画模板中有效，代表大画面对应的流类型，0为摄像头，1为屏幕分享。左侧大画面为web用户时此值填0。
  * @method SmallVideoLayoutParams getSmallVideoLayoutParams() 获取画中画模板中有效，代表小画面的布局参数。
  * @method void setSmallVideoLayoutParams(SmallVideoLayoutParams $SmallVideoLayoutParams) 设置画中画模板中有效，代表小画面的布局参数。
+ * @method integer getMainVideoRightAlign() 获取屏幕分享模板有效。设置为1时代表大画面居右，小画面居左布局。默认为0。
+ * @method void setMainVideoRightAlign(integer $MainVideoRightAlign) 设置屏幕分享模板有效。设置为1时代表大画面居右，小画面居左布局。默认为0。
  */
 class LayoutParams extends AbstractModel
 {
@@ -52,10 +54,16 @@ class LayoutParams extends AbstractModel
     public $SmallVideoLayoutParams;
 
     /**
+     * @var integer 屏幕分享模板有效。设置为1时代表大画面居右，小画面居左布局。默认为0。
+     */
+    public $MainVideoRightAlign;
+
+    /**
      * @param integer $Template 混流布局模板ID，0为悬浮模板(默认);1为九宫格模板;2为屏幕分享模板;3为画中画模板。
      * @param string $MainVideoUserId 屏幕分享模板、悬浮模板、画中画模板中有效，代表大画面对应的用户ID。
      * @param integer $MainVideoStreamType 屏幕分享模板、悬浮模板、画中画模板中有效，代表大画面对应的流类型，0为摄像头，1为屏幕分享。左侧大画面为web用户时此值填0。
      * @param SmallVideoLayoutParams $SmallVideoLayoutParams 画中画模板中有效，代表小画面的布局参数。
+     * @param integer $MainVideoRightAlign 屏幕分享模板有效。设置为1时代表大画面居右，小画面居左布局。默认为0。
      */
     function __construct()
     {
@@ -85,6 +93,10 @@ class LayoutParams extends AbstractModel
         if (array_key_exists("SmallVideoLayoutParams",$param) and $param["SmallVideoLayoutParams"] !== null) {
             $this->SmallVideoLayoutParams = new SmallVideoLayoutParams();
             $this->SmallVideoLayoutParams->deserialize($param["SmallVideoLayoutParams"]);
+        }
+
+        if (array_key_exists("MainVideoRightAlign",$param) and $param["MainVideoRightAlign"] !== null) {
+            $this->MainVideoRightAlign = $param["MainVideoRightAlign"];
         }
     }
 }

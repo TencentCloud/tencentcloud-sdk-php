@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCount(integer $Count) 设置购买数量,默认为1，最大为10
  * @method integer getAutoRenew() 获取是否自动续费，默认为0，1表示自动续费。小时计费实例设置该标识无效。
  * @method void setAutoRenew(integer $AutoRenew) 设置是否自动续费，默认为0，1表示自动续费。小时计费实例设置该标识无效。
+ * @method array getTags() 获取实例资源标签
+ * @method void setTags(array $Tags) 设置实例资源标签
  */
 class CreateSubscribeRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class CreateSubscribeRequest extends AbstractModel
     public $AutoRenew;
 
     /**
+     * @var array 实例资源标签
+     */
+    public $Tags;
+
+    /**
      * @param string $Product 订阅的数据库类型，目前支持的有 mysql
      * @param integer $PayType 实例付费类型，1小时计费，0包年包月
      * @param integer $Duration 购买时长。PayType为0时必填。单位为月，最大支持120
      * @param integer $Count 购买数量,默认为1，最大为10
      * @param integer $AutoRenew 是否自动续费，默认为0，1表示自动续费。小时计费实例设置该标识无效。
+     * @param array $Tags 实例资源标签
      */
     function __construct()
     {
@@ -96,6 +104,15 @@ class CreateSubscribeRequest extends AbstractModel
 
         if (array_key_exists("AutoRenew",$param) and $param["AutoRenew"] !== null) {
             $this->AutoRenew = $param["AutoRenew"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new TagItem();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

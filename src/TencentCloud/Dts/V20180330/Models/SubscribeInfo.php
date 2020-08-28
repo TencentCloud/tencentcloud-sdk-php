@@ -62,6 +62,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(string $Status) 设置数据订阅实例的状态，creating - 创建中，normal - 正常运行，isolating - 隔离中，isolated - 已隔离，offlining - 下线中，offline - 已下线
  * @method string getSdkConsumedTime() 获取SDK最后一条确认消息的时间戳，如果SDK一直消费，也可以作为SDK当前消费时间点
  * @method void setSdkConsumedTime(string $SdkConsumedTime) 设置SDK最后一条确认消息的时间戳，如果SDK一直消费，也可以作为SDK当前消费时间点
+ * @method array getTags() 获取标签
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTags(array $Tags) 设置标签
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getAutoRenewFlag() 获取自动续费标识。0-不自动续费，1-自动续费
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置自动续费标识。0-不自动续费，1-自动续费
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SubscribeInfo extends AbstractModel
 {
@@ -171,6 +179,18 @@ class SubscribeInfo extends AbstractModel
     public $SdkConsumedTime;
 
     /**
+     * @var array 标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Tags;
+
+    /**
+     * @var integer 自动续费标识。0-不自动续费，1-自动续费
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AutoRenewFlag;
+
+    /**
      * @param string $SubscribeId 数据订阅的实例ID
      * @param string $SubscribeName 数据订阅实例的名称
      * @param string $ChannelId 数据订阅实例绑定的通道ID
@@ -192,6 +212,10 @@ class SubscribeInfo extends AbstractModel
      * @param string $UniqSubnetId 数据订阅实例Vip所在子网的唯一ID
      * @param string $Status 数据订阅实例的状态，creating - 创建中，normal - 正常运行，isolating - 隔离中，isolated - 已隔离，offlining - 下线中，offline - 已下线
      * @param string $SdkConsumedTime SDK最后一条确认消息的时间戳，如果SDK一直消费，也可以作为SDK当前消费时间点
+     * @param array $Tags 标签
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $AutoRenewFlag 自动续费标识。0-不自动续费，1-自动续费
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -288,6 +312,19 @@ class SubscribeInfo extends AbstractModel
 
         if (array_key_exists("SdkConsumedTime",$param) and $param["SdkConsumedTime"] !== null) {
             $this->SdkConsumedTime = $param["SdkConsumedTime"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new TagItem();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
+        }
+
+        if (array_key_exists("AutoRenewFlag",$param) and $param["AutoRenewFlag"] !== null) {
+            $this->AutoRenewFlag = $param["AutoRenewFlag"];
         }
     }
 }

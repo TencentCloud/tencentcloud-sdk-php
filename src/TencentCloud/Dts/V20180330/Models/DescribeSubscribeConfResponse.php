@@ -68,6 +68,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setModifyTime(string $ModifyTime) 设置修改时间
  * @method string getRegion() 获取地域
  * @method void setRegion(string $Region) 设置地域
+ * @method array getTags() 获取订阅实例的标签
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTags(array $Tags) 设置订阅实例的标签
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getAutoRenewFlag() 获取自动续费标识,0-不自动续费，1-自动续费
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置自动续费标识,0-不自动续费，1-自动续费
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -194,6 +202,18 @@ class DescribeSubscribeConfResponse extends AbstractModel
     public $Region;
 
     /**
+     * @var array 订阅实例的标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Tags;
+
+    /**
+     * @var integer 自动续费标识,0-不自动续费，1-自动续费
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AutoRenewFlag;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -223,6 +243,10 @@ class DescribeSubscribeConfResponse extends AbstractModel
      * @param array $SubscribeObjects 订阅对象，当SubscribeObjectType 为0时，此字段为空数组
      * @param string $ModifyTime 修改时间
      * @param string $Region 地域
+     * @param array $Tags 订阅实例的标签
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $AutoRenewFlag 自动续费标识,0-不自动续费，1-自动续费
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -337,6 +361,19 @@ class DescribeSubscribeConfResponse extends AbstractModel
 
         if (array_key_exists("Region",$param) and $param["Region"] !== null) {
             $this->Region = $param["Region"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new TagItem();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
+        }
+
+        if (array_key_exists("AutoRenewFlag",$param) and $param["AutoRenewFlag"] !== null) {
+            $this->AutoRenewFlag = $param["AutoRenewFlag"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

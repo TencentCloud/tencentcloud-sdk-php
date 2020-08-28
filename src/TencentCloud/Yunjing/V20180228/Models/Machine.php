@@ -72,6 +72,8 @@ use TencentCloud\Common\AbstractModel;
 <li>UNKNOWN：未知</li>
  * @method integer getInvasionNum() 获取入侵事件数
  * @method void setInvasionNum(integer $InvasionNum) 设置入侵事件数
+ * @method RegionInfo getRegionInfo() 获取地域信息
+ * @method void setRegionInfo(RegionInfo $RegionInfo) 设置地域信息
  */
 class Machine extends AbstractModel
 {
@@ -166,6 +168,11 @@ class Machine extends AbstractModel
     public $InvasionNum;
 
     /**
+     * @var RegionInfo 地域信息
+     */
+    public $RegionInfo;
+
+    /**
      * @param string $MachineName 主机名称。
      * @param string $MachineOs 主机系统。
      * @param string $MachineStatus 主机状态。
@@ -192,6 +199,7 @@ class Machine extends AbstractModel
 <li>RISK：风险</li>
 <li>UNKNOWN：未知</li>
      * @param integer $InvasionNum 入侵事件数
+     * @param RegionInfo $RegionInfo 地域信息
      */
     function __construct()
     {
@@ -273,6 +281,11 @@ class Machine extends AbstractModel
 
         if (array_key_exists("InvasionNum",$param) and $param["InvasionNum"] !== null) {
             $this->InvasionNum = $param["InvasionNum"];
+        }
+
+        if (array_key_exists("RegionInfo",$param) and $param["RegionInfo"] !== null) {
+            $this->RegionInfo = new RegionInfo();
+            $this->RegionInfo->deserialize($param["RegionInfo"]);
         }
     }
 }

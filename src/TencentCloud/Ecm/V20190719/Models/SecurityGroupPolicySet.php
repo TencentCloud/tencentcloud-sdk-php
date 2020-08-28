@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getVersion() 获取安全组规则当前版本。用户每次更新安全规则版本会自动加1，防止更新的路由规则已过期，不填不考虑冲突。
  * @method void setVersion(string $Version) 设置安全组规则当前版本。用户每次更新安全规则版本会自动加1，防止更新的路由规则已过期，不填不考虑冲突。
- * @method array getEgress() 获取出站规则。
- * @method void setEgress(array $Egress) 设置出站规则。
- * @method array getIngress() 获取入站规则。
- * @method void setIngress(array $Ingress) 设置入站规则。
+ * @method array getEgress() 获取出站规则。其中出站规则和入站规则必须选一个。
+ * @method void setEgress(array $Egress) 设置出站规则。其中出站规则和入站规则必须选一个。
+ * @method array getIngress() 获取入站规则。其中出站规则和入站规则必须选一个。
+ * @method void setIngress(array $Ingress) 设置入站规则。其中出站规则和入站规则必须选一个。
  */
 class SecurityGroupPolicySet extends AbstractModel
 {
@@ -35,19 +35,19 @@ class SecurityGroupPolicySet extends AbstractModel
     public $Version;
 
     /**
-     * @var array 出站规则。
+     * @var array 出站规则。其中出站规则和入站规则必须选一个。
      */
     public $Egress;
 
     /**
-     * @var array 入站规则。
+     * @var array 入站规则。其中出站规则和入站规则必须选一个。
      */
     public $Ingress;
 
     /**
      * @param string $Version 安全组规则当前版本。用户每次更新安全规则版本会自动加1，防止更新的路由规则已过期，不填不考虑冲突。
-     * @param array $Egress 出站规则。
-     * @param array $Ingress 入站规则。
+     * @param array $Egress 出站规则。其中出站规则和入站规则必须选一个。
+     * @param array $Ingress 入站规则。其中出站规则和入站规则必须选一个。
      */
     function __construct()
     {

@@ -62,6 +62,7 @@ use TencentCloud\Dts\V20180330\Models as Models;
 当迁移任务处于下述状态时，允许调用本接口修改迁移任务：迁移创建中（status=1）、 校验成功(status=4)、校验失败(status=5)、迁移失败(status=10)。但源实例、目标实例类型和目标实例地域不允许修改。
 
 如果是金融区链路, 请使用域名: dts.ap-shenzhen-fsi.tencentcloudapi.com
+ * @method Models\ModifySubscribeAutoRenewFlagResponse ModifySubscribeAutoRenewFlag(Models\ModifySubscribeAutoRenewFlagRequest $req) 修改订阅实例自动续费标识
  * @method Models\ModifySubscribeConsumeTimeResponse ModifySubscribeConsumeTime(Models\ModifySubscribeConsumeTimeRequest $req) 本接口(ModifySubscribeConsumeTime)用于修改数据订阅通道的消费时间点
  * @method Models\ModifySubscribeNameResponse ModifySubscribeName(Models\ModifySubscribeNameRequest $req) 本接口(ModifySubscribeName)用于修改数据订阅实例的名称
  * @method Models\ModifySubscribeObjectsResponse ModifySubscribeObjects(Models\ModifySubscribeObjectsRequest $req) 本接口(ModifySubscribeObjects)用于修改数据订阅通道的订阅规则

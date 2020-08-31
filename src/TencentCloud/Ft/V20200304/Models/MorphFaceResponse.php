@@ -18,26 +18,26 @@ namespace TencentCloud\Ft\V20200304\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * FaceCartoonPic返回参数结构体
+ * MorphFace返回参数结构体
  *
- * @method string getResultImage() 获取结果图片Base64信息。
- * @method void setResultImage(string $ResultImage) 设置结果图片Base64信息。
- * @method string getResultUrl() 获取RspImgType 为 url 时，返回处理后的图片 url 数据。(默认为base64)
- * @method void setResultUrl(string $ResultUrl) 设置RspImgType 为 url 时，返回处理后的图片 url 数据。(默认为base64)
+ * @method string getJobId() 获取人像渐变任务的Job id
+ * @method void setJobId(string $JobId) 设置人像渐变任务的Job id
+ * @method integer getEstimatedProcessTime() 获取预估处理时间，粒度为秒
+ * @method void setEstimatedProcessTime(integer $EstimatedProcessTime) 设置预估处理时间，粒度为秒
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class FaceCartoonPicResponse extends AbstractModel
+class MorphFaceResponse extends AbstractModel
 {
     /**
-     * @var string 结果图片Base64信息。
+     * @var string 人像渐变任务的Job id
      */
-    public $ResultImage;
+    public $JobId;
 
     /**
-     * @var string RspImgType 为 url 时，返回处理后的图片 url 数据。(默认为base64)
+     * @var integer 预估处理时间，粒度为秒
      */
-    public $ResultUrl;
+    public $EstimatedProcessTime;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +45,8 @@ class FaceCartoonPicResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $ResultImage 结果图片Base64信息。
-     * @param string $ResultUrl RspImgType 为 url 时，返回处理后的图片 url 数据。(默认为base64)
+     * @param string $JobId 人像渐变任务的Job id
+     * @param integer $EstimatedProcessTime 预估处理时间，粒度为秒
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,12 +62,12 @@ class FaceCartoonPicResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ResultImage",$param) and $param["ResultImage"] !== null) {
-            $this->ResultImage = $param["ResultImage"];
+        if (array_key_exists("JobId",$param) and $param["JobId"] !== null) {
+            $this->JobId = $param["JobId"];
         }
 
-        if (array_key_exists("ResultUrl",$param) and $param["ResultUrl"] !== null) {
-            $this->ResultUrl = $param["ResultUrl"];
+        if (array_key_exists("EstimatedProcessTime",$param) and $param["EstimatedProcessTime"] !== null) {
+            $this->EstimatedProcessTime = $param["EstimatedProcessTime"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

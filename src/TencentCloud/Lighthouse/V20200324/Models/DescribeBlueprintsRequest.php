@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getBlueprintIds() 获取镜像 ID 列表。
  * @method void setBlueprintIds(array $BlueprintIds) 设置镜像 ID 列表。
- * @method integer getOffset() 获取偏移量，默认为 0。
- * @method void setOffset(integer $Offset) 设置偏移量，默认为 0。
- * @method integer getLimit() 获取返回数量，默认为 20，最大值为 100。
- * @method void setLimit(integer $Limit) 设置返回数量，默认为 20，最大值为 100。
+ * @method integer getOffset() 获取偏移量，默认为 0。关于`Offset`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/product/1207/47578)中的相关小节。
+ * @method void setOffset(integer $Offset) 设置偏移量，默认为 0。关于`Offset`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/product/1207/47578)中的相关小节。
+ * @method integer getLimit() 获取返回数量，默认为 20，最大值为 100。关于`Limit`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/product/1207/47578)中的相关小节。
+ * @method void setLimit(integer $Limit) 设置返回数量，默认为 20，最大值为 100。关于`Limit`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/product/1207/47578)中的相关小节。
  * @method array getFilters() 获取过滤器列表。
 <li>blueprint-id</li>按照【镜像 ID】进行过滤。
 类型：String
@@ -61,12 +61,12 @@ class DescribeBlueprintsRequest extends AbstractModel
     public $BlueprintIds;
 
     /**
-     * @var integer 偏移量，默认为 0。
+     * @var integer 偏移量，默认为 0。关于`Offset`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/product/1207/47578)中的相关小节。
      */
     public $Offset;
 
     /**
-     * @var integer 返回数量，默认为 20，最大值为 100。
+     * @var integer 返回数量，默认为 20，最大值为 100。关于`Limit`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/product/1207/47578)中的相关小节。
      */
     public $Limit;
 
@@ -89,8 +89,8 @@ class DescribeBlueprintsRequest extends AbstractModel
 
     /**
      * @param array $BlueprintIds 镜像 ID 列表。
-     * @param integer $Offset 偏移量，默认为 0。
-     * @param integer $Limit 返回数量，默认为 20，最大值为 100。
+     * @param integer $Offset 偏移量，默认为 0。关于`Offset`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/product/1207/47578)中的相关小节。
+     * @param integer $Limit 返回数量，默认为 20，最大值为 100。关于`Limit`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/product/1207/47578)中的相关小节。
      * @param array $Filters 过滤器列表。
 <li>blueprint-id</li>按照【镜像 ID】进行过滤。
 类型：String

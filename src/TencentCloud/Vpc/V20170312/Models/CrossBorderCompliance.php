@@ -18,7 +18,7 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 跨境专线合规化审批单
+ * 合规化审批单
  *
  * @method string getServiceProvider() 获取服务商，可选值：`UNICOM`。
  * @method void setServiceProvider(string $ServiceProvider) 设置服务商，可选值：`UNICOM`。
@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCompany(string $Company) 设置公司全称。
  * @method string getUniformSocialCreditCode() 获取统一社会信用代码。
  * @method void setUniformSocialCreditCode(string $UniformSocialCreditCode) 设置统一社会信用代码。
- * @method string getLegalPerson() 获取法人。
- * @method void setLegalPerson(string $LegalPerson) 设置法人。
+ * @method string getLegalPerson() 获取法定代表人。
+ * @method void setLegalPerson(string $LegalPerson) 设置法定代表人。
  * @method string getIssuingAuthority() 获取发证机关。
  * @method void setIssuingAuthority(string $IssuingAuthority) 设置发证机关。
  * @method string getBusinessLicense() 获取营业执照。
@@ -50,8 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setManagerTelephone(string $ManagerTelephone) 设置经办人联系电话。
  * @method string getEmail() 获取电子邮箱。
  * @method void setEmail(string $Email) 设置电子邮箱。
- * @method string getServiceHandlingForm() 获取跨境专线服务受理单。
- * @method void setServiceHandlingForm(string $ServiceHandlingForm) 设置跨境专线服务受理单。
+ * @method string getServiceHandlingForm() 获取服务受理单。
+ * @method void setServiceHandlingForm(string $ServiceHandlingForm) 设置服务受理单。
  * @method string getAuthorizationLetter() 获取授权函。
  * @method void setAuthorizationLetter(string $AuthorizationLetter) 设置授权函。
  * @method string getSafetyCommitment() 获取信息安全承诺书。
@@ -88,7 +88,7 @@ class CrossBorderCompliance extends AbstractModel
     public $UniformSocialCreditCode;
 
     /**
-     * @var string 法人。
+     * @var string 法定代表人。
      */
     public $LegalPerson;
 
@@ -143,7 +143,7 @@ class CrossBorderCompliance extends AbstractModel
     public $Email;
 
     /**
-     * @var string 跨境专线服务受理单。
+     * @var string 服务受理单。
      */
     public $ServiceHandlingForm;
 
@@ -182,7 +182,7 @@ class CrossBorderCompliance extends AbstractModel
      * @param integer $ComplianceId 合规化审批单`ID`。
      * @param string $Company 公司全称。
      * @param string $UniformSocialCreditCode 统一社会信用代码。
-     * @param string $LegalPerson 法人。
+     * @param string $LegalPerson 法定代表人。
      * @param string $IssuingAuthority 发证机关。
      * @param string $BusinessLicense 营业执照。
      * @param string $BusinessAddress 营业执照住所。
@@ -193,7 +193,7 @@ class CrossBorderCompliance extends AbstractModel
      * @param string $ManagerAddress 经办人身份证地址。
      * @param string $ManagerTelephone 经办人联系电话。
      * @param string $Email 电子邮箱。
-     * @param string $ServiceHandlingForm 跨境专线服务受理单。
+     * @param string $ServiceHandlingForm 服务受理单。
      * @param string $AuthorizationLetter 授权函。
      * @param string $SafetyCommitment 信息安全承诺书。
      * @param string $ServiceStartDate 服务开始时间。

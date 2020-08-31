@@ -295,7 +295,7 @@ use TencentCloud\Ocr\V20181119\Models as Models;
           <td>身份证 PS 告警</td>
         </tr>
           <tr>
-          <td>图片模糊告警</td>
+          <td>图片模糊告警（可根据图片质量分数判断）</td>
         </tr>
       </tbody>
     </table>

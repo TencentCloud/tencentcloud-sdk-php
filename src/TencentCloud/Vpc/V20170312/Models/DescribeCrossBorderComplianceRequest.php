@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCompany(string $Company) 设置（模糊查询）公司名称。
  * @method string getUniformSocialCreditCode() 获取（精确匹配）统一社会信用代码。
  * @method void setUniformSocialCreditCode(string $UniformSocialCreditCode) 设置（精确匹配）统一社会信用代码。
- * @method string getLegalPerson() 获取（模糊查询）法人。
- * @method void setLegalPerson(string $LegalPerson) 设置（模糊查询）法人。
+ * @method string getLegalPerson() 获取（模糊查询）法定代表人。
+ * @method void setLegalPerson(string $LegalPerson) 设置（模糊查询）法定代表人。
  * @method string getIssuingAuthority() 获取（模糊查询）发证机关。
  * @method void setIssuingAuthority(string $IssuingAuthority) 设置（模糊查询）发证机关。
  * @method string getBusinessAddress() 获取（模糊查询）营业执照住所。
@@ -46,10 +46,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setManagerTelephone(string $ManagerTelephone) 设置（精确匹配）经办人联系电话。
  * @method string getEmail() 获取（精确匹配）电子邮箱。
  * @method void setEmail(string $Email) 设置（精确匹配）电子邮箱。
- * @method string getServiceStartDate() 获取（精确匹配）服务开始时间。
- * @method void setServiceStartDate(string $ServiceStartDate) 设置（精确匹配）服务开始时间。
- * @method string getServiceEndDate() 获取（精确匹配）服务开始时间。
- * @method void setServiceEndDate(string $ServiceEndDate) 设置（精确匹配）服务开始时间。
+ * @method string getServiceStartDate() 获取（精确匹配）服务开始日期，如：`2020-07-28`。
+ * @method void setServiceStartDate(string $ServiceStartDate) 设置（精确匹配）服务开始日期，如：`2020-07-28`。
+ * @method string getServiceEndDate() 获取（精确匹配）服务结束日期，如：`2021-07-28`。
+ * @method void setServiceEndDate(string $ServiceEndDate) 设置（精确匹配）服务结束日期，如：`2021-07-28`。
  * @method string getState() 获取（精确匹配）状态。待审批：`PENDING`，通过：`APPROVED `，拒绝：`DENY`。
  * @method void setState(string $State) 设置（精确匹配）状态。待审批：`PENDING`，通过：`APPROVED `，拒绝：`DENY`。
  */
@@ -76,7 +76,7 @@ class DescribeCrossBorderComplianceRequest extends AbstractModel
     public $UniformSocialCreditCode;
 
     /**
-     * @var string （模糊查询）法人。
+     * @var string （模糊查询）法定代表人。
      */
     public $LegalPerson;
 
@@ -121,12 +121,12 @@ class DescribeCrossBorderComplianceRequest extends AbstractModel
     public $Email;
 
     /**
-     * @var string （精确匹配）服务开始时间。
+     * @var string （精确匹配）服务开始日期，如：`2020-07-28`。
      */
     public $ServiceStartDate;
 
     /**
-     * @var string （精确匹配）服务开始时间。
+     * @var string （精确匹配）服务结束日期，如：`2021-07-28`。
      */
     public $ServiceEndDate;
 
@@ -140,7 +140,7 @@ class DescribeCrossBorderComplianceRequest extends AbstractModel
      * @param integer $ComplianceId （精确匹配）合规化审批单`ID`。
      * @param string $Company （模糊查询）公司名称。
      * @param string $UniformSocialCreditCode （精确匹配）统一社会信用代码。
-     * @param string $LegalPerson （模糊查询）法人。
+     * @param string $LegalPerson （模糊查询）法定代表人。
      * @param string $IssuingAuthority （模糊查询）发证机关。
      * @param string $BusinessAddress （模糊查询）营业执照住所。
      * @param integer $PostCode （精确匹配）邮编。
@@ -149,8 +149,8 @@ class DescribeCrossBorderComplianceRequest extends AbstractModel
      * @param string $ManagerAddress （模糊查询）经办人身份证地址。
      * @param string $ManagerTelephone （精确匹配）经办人联系电话。
      * @param string $Email （精确匹配）电子邮箱。
-     * @param string $ServiceStartDate （精确匹配）服务开始时间。
-     * @param string $ServiceEndDate （精确匹配）服务开始时间。
+     * @param string $ServiceStartDate （精确匹配）服务开始日期，如：`2020-07-28`。
+     * @param string $ServiceEndDate （精确匹配）服务结束日期，如：`2021-07-28`。
      * @param string $State （精确匹配）状态。待审批：`PENDING`，通过：`APPROVED `，拒绝：`DENY`。
      */
     function __construct()

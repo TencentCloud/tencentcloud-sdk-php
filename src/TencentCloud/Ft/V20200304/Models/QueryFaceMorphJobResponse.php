@@ -18,26 +18,29 @@ namespace TencentCloud\Ft\V20200304\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * FaceCartoonPic返回参数结构体
+ * QueryFaceMorphJob返回参数结构体
  *
- * @method string getResultImage() 获取结果图片Base64信息。
- * @method void setResultImage(string $ResultImage) 设置结果图片Base64信息。
- * @method string getResultUrl() 获取RspImgType 为 url 时，返回处理后的图片 url 数据。(默认为base64)
- * @method void setResultUrl(string $ResultUrl) 设置RspImgType 为 url 时，返回处理后的图片 url 数据。(默认为base64)
+ * @method string getJobStatus() 获取当前任务状态：排队中、处理中、处理失败或者处理完成
+ * @method void setJobStatus(string $JobStatus) 设置当前任务状态：排队中、处理中、处理失败或者处理完成
+ * @method FaceMorphOutput getFaceMorphOutput() 获取人像渐变输出的结果信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFaceMorphOutput(FaceMorphOutput $FaceMorphOutput) 设置人像渐变输出的结果信息
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class FaceCartoonPicResponse extends AbstractModel
+class QueryFaceMorphJobResponse extends AbstractModel
 {
     /**
-     * @var string 结果图片Base64信息。
+     * @var string 当前任务状态：排队中、处理中、处理失败或者处理完成
      */
-    public $ResultImage;
+    public $JobStatus;
 
     /**
-     * @var string RspImgType 为 url 时，返回处理后的图片 url 数据。(默认为base64)
+     * @var FaceMorphOutput 人像渐变输出的结果信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $ResultUrl;
+    public $FaceMorphOutput;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +48,9 @@ class FaceCartoonPicResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $ResultImage 结果图片Base64信息。
-     * @param string $ResultUrl RspImgType 为 url 时，返回处理后的图片 url 数据。(默认为base64)
+     * @param string $JobStatus 当前任务状态：排队中、处理中、处理失败或者处理完成
+     * @param FaceMorphOutput $FaceMorphOutput 人像渐变输出的结果信息
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,12 +66,13 @@ class FaceCartoonPicResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ResultImage",$param) and $param["ResultImage"] !== null) {
-            $this->ResultImage = $param["ResultImage"];
+        if (array_key_exists("JobStatus",$param) and $param["JobStatus"] !== null) {
+            $this->JobStatus = $param["JobStatus"];
         }
 
-        if (array_key_exists("ResultUrl",$param) and $param["ResultUrl"] !== null) {
-            $this->ResultUrl = $param["ResultUrl"];
+        if (array_key_exists("FaceMorphOutput",$param) and $param["FaceMorphOutput"] !== null) {
+            $this->FaceMorphOutput = new FaceMorphOutput();
+            $this->FaceMorphOutput->deserialize($param["FaceMorphOutput"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

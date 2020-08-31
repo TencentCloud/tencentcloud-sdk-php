@@ -23,8 +23,11 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Ft\V20200304\Models as Models;
 
 /**
+ * @method Models\CancelFaceMorphJobResponse CancelFaceMorphJob(Models\CancelFaceMorphJobRequest $req) 撤销人像渐变任务请求
  * @method Models\ChangeAgePicResponse ChangeAgePic(Models\ChangeAgePicRequest $req) 用户上传一张人脸图片，基于人脸编辑与生成算法，输出一张人脸变老或变年轻的图片，支持实现人脸不同年龄的变化。
  * @method Models\FaceCartoonPicResponse FaceCartoonPic(Models\FaceCartoonPicRequest $req) 人像动漫化
+ * @method Models\MorphFaceResponse MorphFace(Models\MorphFaceRequest $req) 用户上传2-5张人脸照片，输出一段人脸变换特效视频
+ * @method Models\QueryFaceMorphJobResponse QueryFaceMorphJob(Models\QueryFaceMorphJobRequest $req) 查询人像渐变处理进度
  * @method Models\SwapGenderPicResponse SwapGenderPic(Models\SwapGenderPicRequest $req) 用户上传一张人脸图片，基于人脸编辑与生成算法，输出一张人脸性别转换的图片。男变女可实现美颜、淡妆、加刘海和长发的效果；女变男可实现加胡须、变短发的效果。 
  */
 

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSecurityGroups请求参数结构体
  *
- * @method array getSecurityGroupIds() 获取安全组实例ID，例如：esg-33ocnj9n，可通过DescribeSecurityGroups获取。每次请求的实例的上限为100。参数不支持同时指定SecurityGroupIds和Filters。
- * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置安全组实例ID，例如：esg-33ocnj9n，可通过DescribeSecurityGroups获取。每次请求的实例的上限为100。参数不支持同时指定SecurityGroupIds和Filters。
+ * @method array getSecurityGroupIds() 获取安全组实例ID，例如：esg-33ocnj9n，可通过[DescribeSecurityGroups](https://cloud.tencent.com/document/product/1108/47697)获取。每次请求的实例的上限为100。参数不支持同时指定SecurityGroupIds和Filters。
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置安全组实例ID，例如：esg-33ocnj9n，可通过[DescribeSecurityGroups](https://cloud.tencent.com/document/product/1108/47697)获取。每次请求的实例的上限为100。参数不支持同时指定SecurityGroupIds和Filters。
  * @method array getFilters() 获取过滤条件，参数不支持同时指定SecurityGroupIds和Filters。
 security-group-id - String - （过滤条件）安全组ID。
 security-group-name - String - （过滤条件）安全组名称。
@@ -40,7 +40,7 @@ tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值
 class DescribeSecurityGroupsRequest extends AbstractModel
 {
     /**
-     * @var array 安全组实例ID，例如：esg-33ocnj9n，可通过DescribeSecurityGroups获取。每次请求的实例的上限为100。参数不支持同时指定SecurityGroupIds和Filters。
+     * @var array 安全组实例ID，例如：esg-33ocnj9n，可通过[DescribeSecurityGroups](https://cloud.tencent.com/document/product/1108/47697)获取。每次请求的实例的上限为100。参数不支持同时指定SecurityGroupIds和Filters。
      */
     public $SecurityGroupIds;
 
@@ -64,7 +64,7 @@ tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值
     public $Limit;
 
     /**
-     * @param array $SecurityGroupIds 安全组实例ID，例如：esg-33ocnj9n，可通过DescribeSecurityGroups获取。每次请求的实例的上限为100。参数不支持同时指定SecurityGroupIds和Filters。
+     * @param array $SecurityGroupIds 安全组实例ID，例如：esg-33ocnj9n，可通过[DescribeSecurityGroups](https://cloud.tencent.com/document/product/1108/47697)获取。每次请求的实例的上限为100。参数不支持同时指定SecurityGroupIds和Filters。
      * @param array $Filters 过滤条件，参数不支持同时指定SecurityGroupIds和Filters。
 security-group-id - String - （过滤条件）安全组ID。
 security-group-name - String - （过滤条件）安全组名称。

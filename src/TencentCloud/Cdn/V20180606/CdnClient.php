@@ -25,6 +25,7 @@ use TencentCloud\Cdn\V20180606\Models as Models;
 /**
  * @method Models\AddCdnDomainResponse AddCdnDomain(Models\AddCdnDomainRequest $req) AddCdnDomain 用于新增内容分发网络加速域名。
  * @method Models\CreateClsLogTopicResponse CreateClsLogTopic(Models\CreateClsLogTopicRequest $req) CreatClsLogTopic 用于创建日志主题。注意：一个日志集下至多可创建10个日志主题。
+ * @method Models\CreateScdnLogTaskResponse CreateScdnLogTask(Models\CreateScdnLogTaskRequest $req) CreateScdnLogTask 用于创建事件日志任务
  * @method Models\DeleteCdnDomainResponse DeleteCdnDomain(Models\DeleteCdnDomainRequest $req) DeleteCdnDomain 用于删除指定加速域名
  * @method Models\DeleteClsLogTopicResponse DeleteClsLogTopic(Models\DeleteClsLogTopicRequest $req) DeleteClsLogTopic 用于删除日志主题。注意：删除后，所有该日志主题下绑定域名的日志将不再继续投递至该主题，已经投递的日志将会被全部清空。生效时间约为 5~15 分钟。
  * @method Models\DescribeBillingDataResponse DescribeBillingData(Models\DescribeBillingDataRequest $req) DescribeBillingData 用于查询实际计费数据明细。
@@ -71,6 +72,7 @@ use TencentCloud\Cdn\V20180606\Models as Models;
  * @method Models\DescribePushTasksResponse DescribePushTasks(Models\DescribePushTasksRequest $req) DescribePushTasks  用于查询预热任务提交历史记录及执行进度。
 接口灰度中，暂未全量开放，敬请期待。
  * @method Models\DescribeReportDataResponse DescribeReportData(Models\DescribeReportDataRequest $req) DescribeReportData 用于查询域名/项目维度的日/周/月报表数据。
+ * @method Models\DescribeScdnTopDataResponse DescribeScdnTopData(Models\DescribeScdnTopDataRequest $req) 获取SCDN的Top数据
  * @method Models\DescribeTrafficPackagesResponse DescribeTrafficPackages(Models\DescribeTrafficPackagesRequest $req) DescribeTrafficPackages 用于查询中国境内 CDN 流量包详情。
  * @method Models\DescribeUrlViolationsResponse DescribeUrlViolations(Models\DescribeUrlViolationsRequest $req) DescribeUrlViolations 用于查询被 CDN 系统扫描到的域名违规 URL 列表及当前状态。
 对应内容分发网络控制台【图片鉴黄】页面。

@@ -23,11 +23,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getModuleId() 获取模块ID。
  * @method void setModuleId(string $ModuleId) 设置模块ID。
  * @method boolean getCloseIpDirect() 获取是否关闭IP直通。取值范围：
-1：表示关闭IP直通
-0：表示开通IP直通
+true：表示关闭IP直通
+false：表示开通IP直通
  * @method void setCloseIpDirect(boolean $CloseIpDirect) 设置是否关闭IP直通。取值范围：
-1：表示关闭IP直通
-0：表示开通IP直通
+true：表示关闭IP直通
+false：表示开通IP直通
  */
 class ModifyModuleIpDirectRequest extends AbstractModel
 {
@@ -38,16 +38,16 @@ class ModifyModuleIpDirectRequest extends AbstractModel
 
     /**
      * @var boolean 是否关闭IP直通。取值范围：
-1：表示关闭IP直通
-0：表示开通IP直通
+true：表示关闭IP直通
+false：表示开通IP直通
      */
     public $CloseIpDirect;
 
     /**
      * @param string $ModuleId 模块ID。
      * @param boolean $CloseIpDirect 是否关闭IP直通。取值范围：
-1：表示关闭IP直通
-0：表示开通IP直通
+true：表示关闭IP直通
+false：表示开通IP直通
      */
     function __construct()
     {

@@ -64,14 +64,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setXForwardedFor(string $XForwardedFor) 设置用户HTTP请求的X-Forwarded-For值。
  * @method string getMacAddress() 获取MAC地址或设备唯一标识。
  * @method void setMacAddress(string $MacAddress) 设置MAC地址或设备唯一标识。
- * @method string getVendorId() 获取手机制造商ID，如果手机注册，请带上此信息。
- * @method void setVendorId(string $VendorId) 设置手机制造商ID，如果手机注册，请带上此信息。
  * @method CrowdAntiRushInfo getCrowdAntiRush() 获取网赚防刷相关信息。SceneType为4时填写。
  * @method void setCrowdAntiRush(CrowdAntiRushInfo $CrowdAntiRush) 设置网赚防刷相关信息。SceneType为4时填写。
  * @method string getSceneCode() 获取场景Code，控制台上获取
  * @method void setSceneCode(string $SceneCode) 设置场景Code，控制台上获取
  * @method array getDetails() 获取详细信息
  * @method void setDetails(array $Details) 设置详细信息
+ * @method integer getDeviceType() 获取设备类型：
+1：Android
+2：IOS
+ * @method void setDeviceType(integer $DeviceType) 设置设备类型：
+1：Android
+2：IOS
  */
 class InputManageMarketingRisk extends AbstractModel
 {
@@ -162,11 +166,6 @@ class InputManageMarketingRisk extends AbstractModel
     public $MacAddress;
 
     /**
-     * @var string 手机制造商ID，如果手机注册，请带上此信息。
-     */
-    public $VendorId;
-
-    /**
      * @var CrowdAntiRushInfo 网赚防刷相关信息。SceneType为4时填写。
      */
     public $CrowdAntiRush;
@@ -180,6 +179,13 @@ class InputManageMarketingRisk extends AbstractModel
      * @var array 详细信息
      */
     public $Details;
+
+    /**
+     * @var integer 设备类型：
+1：Android
+2：IOS
+     */
+    public $DeviceType;
 
     /**
      * @param AccountInfo $Account 账号信息。
@@ -204,10 +210,12 @@ class InputManageMarketingRisk extends AbstractModel
      * @param string $UserAgent 用户HTTP请求的User-Agent值。
      * @param string $XForwardedFor 用户HTTP请求的X-Forwarded-For值。
      * @param string $MacAddress MAC地址或设备唯一标识。
-     * @param string $VendorId 手机制造商ID，如果手机注册，请带上此信息。
      * @param CrowdAntiRushInfo $CrowdAntiRush 网赚防刷相关信息。SceneType为4时填写。
      * @param string $SceneCode 场景Code，控制台上获取
      * @param array $Details 详细信息
+     * @param integer $DeviceType 设备类型：
+1：Android
+2：IOS
      */
     function __construct()
     {
@@ -287,10 +295,6 @@ class InputManageMarketingRisk extends AbstractModel
             $this->MacAddress = $param["MacAddress"];
         }
 
-        if (array_key_exists("VendorId",$param) and $param["VendorId"] !== null) {
-            $this->VendorId = $param["VendorId"];
-        }
-
         if (array_key_exists("CrowdAntiRush",$param) and $param["CrowdAntiRush"] !== null) {
             $this->CrowdAntiRush = new CrowdAntiRushInfo();
             $this->CrowdAntiRush->deserialize($param["CrowdAntiRush"]);
@@ -307,6 +311,10 @@ class InputManageMarketingRisk extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Details, $obj);
             }
+        }
+
+        if (array_key_exists("DeviceType",$param) and $param["DeviceType"] !== null) {
+            $this->DeviceType = $param["DeviceType"];
         }
     }
 }

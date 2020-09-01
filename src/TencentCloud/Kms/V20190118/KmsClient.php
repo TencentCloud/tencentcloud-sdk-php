@@ -23,9 +23,11 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Kms\V20190118\Models as Models;
 
 /**
+ * @method Models\ArchiveKeyResponse ArchiveKey(Models\ArchiveKeyRequest $req) 对密钥进行归档，被归档的密钥只能用于解密，不能加密
  * @method Models\AsymmetricRsaDecryptResponse AsymmetricRsaDecrypt(Models\AsymmetricRsaDecryptRequest $req) 使用指定的RSA非对称密钥的私钥进行数据解密，密文必须是使用对应公钥加密的。处于Enabled 状态的非对称密钥才能进行解密操作。
  * @method Models\AsymmetricSm2DecryptResponse AsymmetricSm2Decrypt(Models\AsymmetricSm2DecryptRequest $req) 使用指定的SM2非对称密钥的私钥进行数据解密，密文必须是使用对应公钥加密的。处于Enabled 状态的非对称密钥才能进行解密操作。传入的密文的长度不能超过256字节。
  * @method Models\BindCloudResourceResponse BindCloudResource(Models\BindCloudResourceRequest $req) 记录当前key被哪个云产品的那个资源所使用。如果当前key设置了自动过期，则取消该设置，确保当前key不会自动失效。如果当前关联关系已经创建，也返回成功。
+ * @method Models\CancelKeyArchiveResponse CancelKeyArchive(Models\CancelKeyArchiveRequest $req) 取消密钥归档，取消后密钥的状态变为Enabled。
  * @method Models\CancelKeyDeletionResponse CancelKeyDeletion(Models\CancelKeyDeletionRequest $req) 取消CMK的计划删除操作
  * @method Models\CreateKeyResponse CreateKey(Models\CreateKeyRequest $req) 创建用户管理数据密钥的主密钥CMK（Custom Master Key）。
  * @method Models\CreateWhiteBoxKeyResponse CreateWhiteBoxKey(Models\CreateWhiteBoxKeyRequest $req) 创建白盒密钥。 密钥个数的上限为 50。

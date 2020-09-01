@@ -50,6 +50,10 @@ off：关闭全路径缓存（即开启参数过滤）
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScheme(SchemeKey $Scheme) 设置CacheKey中包含请求协议
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getKeyRules() 获取分路径缓存键配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setKeyRules(array $KeyRules) 设置分路径缓存键配置
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CacheKey extends AbstractModel
 {
@@ -97,6 +101,12 @@ off：关闭全路径缓存（即开启参数过滤）
     public $Scheme;
 
     /**
+     * @var array 分路径缓存键配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $KeyRules;
+
+    /**
      * @param string $FullUrlCache 是否开启全路径缓存
 on：开启全路径缓存（即关闭参数过滤）
 off：关闭全路径缓存（即开启参数过滤）
@@ -111,6 +121,8 @@ off：关闭全路径缓存（即开启参数过滤）
      * @param CacheTagKey $CacheTag CacheKey中包含自定义字符串
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SchemeKey $Scheme CacheKey中包含请求协议
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $KeyRules 分路径缓存键配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -157,6 +169,15 @@ off：关闭全路径缓存（即开启参数过滤）
         if (array_key_exists("Scheme",$param) and $param["Scheme"] !== null) {
             $this->Scheme = new SchemeKey();
             $this->Scheme->deserialize($param["Scheme"]);
+        }
+
+        if (array_key_exists("KeyRules",$param) and $param["KeyRules"] !== null) {
+            $this->KeyRules = [];
+            foreach ($param["KeyRules"] as $key => $value){
+                $obj = new KeyRule();
+                $obj->deserialize($value);
+                array_push($this->KeyRules, $obj);
+            }
         }
     }
 }

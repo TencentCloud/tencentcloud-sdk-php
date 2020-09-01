@@ -34,8 +34,8 @@ Default-默认不修改
  * @method void setResourceName(string $ResourceName) 设置资源名称
  * @method array getSgIds() 获取安全组Id
  * @method void setSgIds(array $SgIds) 设置安全组Id
- * @method string getVpcId() 获取VpcId
- * @method void setVpcId(string $VpcId) 设置VpcId
+ * @method string getVpcId() 获取虚拟专网Id
+ * @method void setVpcId(string $VpcId) 设置虚拟专网Id
  * @method string getSubnetId() 获取子网Id
  * @method void setSubnetId(string $SubnetId) 设置子网Id
  */
@@ -65,7 +65,7 @@ Default-默认不修改
     public $SgIds;
 
     /**
-     * @var string VpcId
+     * @var string 虚拟专网Id
      */
     public $VpcId;
 
@@ -82,7 +82,7 @@ UpdateNetWork-修改网络,
 Default-默认不修改
      * @param string $ResourceName 资源名称
      * @param array $SgIds 安全组Id
-     * @param string $VpcId VpcId
+     * @param string $VpcId 虚拟专网Id
      * @param string $SubnetId 子网Id
      */
     function __construct()

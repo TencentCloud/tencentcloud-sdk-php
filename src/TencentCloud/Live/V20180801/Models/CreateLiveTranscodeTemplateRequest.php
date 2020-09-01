@@ -21,39 +21,61 @@ use TencentCloud\Common\AbstractModel;
  * CreateLiveTranscodeTemplate请求参数结构体
  *
  * @method string getTemplateName() 获取模板名称，例：900 900p 仅支持字母和数字的组合。
+长度限制：
+  标准转码：1-10个字符
+  极速高清转码：3-10个字符
  * @method void setTemplateName(string $TemplateName) 设置模板名称，例：900 900p 仅支持字母和数字的组合。
+长度限制：
+  标准转码：1-10个字符
+  极速高清转码：3-10个字符
  * @method integer getVideoBitrate() 获取视频码率。范围：100-8000。
-注意：码率必须是100的倍数。
+注: 转码模板有码率唯一要求，最终保存的码率可能与输入码率有所差别。
  * @method void setVideoBitrate(integer $VideoBitrate) 设置视频码率。范围：100-8000。
-注意：码率必须是100的倍数。
- * @method string getVcodec() 获取视频编码：h264/h265，默认h264。
- * @method void setVcodec(string $Vcodec) 设置视频编码：h264/h265，默认h264。
- * @method string getAcodec() 获取音频编码：aac，默认原始音频格式。
+注: 转码模板有码率唯一要求，最终保存的码率可能与输入码率有所差别。
+ * @method string getAcodec() 获取音频编码：aac，默认aac。
 注意：当前该参数未生效，待后续支持！
- * @method void setAcodec(string $Acodec) 设置音频编码：aac，默认原始音频格式。
+ * @method void setAcodec(string $Acodec) 设置音频编码：aac，默认aac。
 注意：当前该参数未生效，待后续支持！
- * @method integer getAudioBitrate() 获取音频码率：默认0。0-500。
- * @method void setAudioBitrate(integer $AudioBitrate) 设置音频码率：默认0。0-500。
+ * @method integer getAudioBitrate() 获取音频码率，默认0。
+范围：0-500。
+ * @method void setAudioBitrate(integer $AudioBitrate) 设置音频码率，默认0。
+范围：0-500。
+ * @method string getVcodec() 获取视频编码：h264/h265/origin，默认h264。
+
+origin: 保持原始编码格式
+ * @method void setVcodec(string $Vcodec) 设置视频编码：h264/h265/origin，默认h264。
+
+origin: 保持原始编码格式
  * @method string getDescription() 获取模板描述。
  * @method void setDescription(string $Description) 设置模板描述。
  * @method integer getWidth() 获取宽，默认0。
 范围[0-3000]
+数值必须是2的倍数，0是原始宽度
  * @method void setWidth(integer $Width) 设置宽，默认0。
 范围[0-3000]
+数值必须是2的倍数，0是原始宽度
  * @method integer getNeedVideo() 获取是否保留视频，0：否，1：是。默认1。
  * @method void setNeedVideo(integer $NeedVideo) 设置是否保留视频，0：否，1：是。默认1。
  * @method integer getNeedAudio() 获取是否保留音频，0：否，1：是。默认1。
  * @method void setNeedAudio(integer $NeedAudio) 设置是否保留音频，0：否，1：是。默认1。
  * @method integer getHeight() 获取高，默认0。
 范围[0-3000]
+数值必须是2的倍数，0是原始宽度
  * @method void setHeight(integer $Height) 设置高，默认0。
 范围[0-3000]
+数值必须是2的倍数，0是原始宽度
  * @method integer getFps() 获取帧率，默认0。
+范围0-60
  * @method void setFps(integer $Fps) 设置帧率，默认0。
+范围0-60
  * @method integer getGop() 获取关键帧间隔，单位：秒。默认原始的间隔
+范围2-6
  * @method void setGop(integer $Gop) 设置关键帧间隔，单位：秒。默认原始的间隔
- * @method integer getRotate() 获取是否旋转，0：否，1：是。默认0。
- * @method void setRotate(integer $Rotate) 设置是否旋转，0：否，1：是。默认0。
+范围2-6
+ * @method integer getRotate() 获取旋转角度，默认0。
+可取值：0，90，180，270
+ * @method void setRotate(integer $Rotate) 设置旋转角度，默认0。
+可取值：0，90，180，270
  * @method string getProfile() 获取编码质量：
 baseline/main/high。默认baseline
  * @method void setProfile(string $Profile) 设置编码质量：
@@ -74,35 +96,43 @@ baseline/main/high。默认baseline
 极速高清目标码率=VideoBitrate * (1-AdaptBitratePercent)
 
 取值范围：0.0到0.5
+ * @method integer getShortEdgeAsHeight() 获取是否以短边作为高度，0：否，1：是。默认0。
+ * @method void setShortEdgeAsHeight(integer $ShortEdgeAsHeight) 设置是否以短边作为高度，0：否，1：是。默认0。
  */
 class CreateLiveTranscodeTemplateRequest extends AbstractModel
 {
     /**
      * @var string 模板名称，例：900 900p 仅支持字母和数字的组合。
+长度限制：
+  标准转码：1-10个字符
+  极速高清转码：3-10个字符
      */
     public $TemplateName;
 
     /**
      * @var integer 视频码率。范围：100-8000。
-注意：码率必须是100的倍数。
+注: 转码模板有码率唯一要求，最终保存的码率可能与输入码率有所差别。
      */
     public $VideoBitrate;
 
     /**
-     * @var string 视频编码：h264/h265，默认h264。
-     */
-    public $Vcodec;
-
-    /**
-     * @var string 音频编码：aac，默认原始音频格式。
+     * @var string 音频编码：aac，默认aac。
 注意：当前该参数未生效，待后续支持！
      */
     public $Acodec;
 
     /**
-     * @var integer 音频码率：默认0。0-500。
+     * @var integer 音频码率，默认0。
+范围：0-500。
      */
     public $AudioBitrate;
+
+    /**
+     * @var string 视频编码：h264/h265/origin，默认h264。
+
+origin: 保持原始编码格式
+     */
+    public $Vcodec;
 
     /**
      * @var string 模板描述。
@@ -112,6 +142,7 @@ class CreateLiveTranscodeTemplateRequest extends AbstractModel
     /**
      * @var integer 宽，默认0。
 范围[0-3000]
+数值必须是2的倍数，0是原始宽度
      */
     public $Width;
 
@@ -128,21 +159,25 @@ class CreateLiveTranscodeTemplateRequest extends AbstractModel
     /**
      * @var integer 高，默认0。
 范围[0-3000]
+数值必须是2的倍数，0是原始宽度
      */
     public $Height;
 
     /**
      * @var integer 帧率，默认0。
+范围0-60
      */
     public $Fps;
 
     /**
      * @var integer 关键帧间隔，单位：秒。默认原始的间隔
+范围2-6
      */
     public $Gop;
 
     /**
-     * @var integer 是否旋转，0：否，1：是。默认0。
+     * @var integer 旋转角度，默认0。
+可取值：0，90，180，270
      */
     public $Rotate;
 
@@ -181,23 +216,39 @@ baseline/main/high。默认baseline
     public $AdaptBitratePercent;
 
     /**
+     * @var integer 是否以短边作为高度，0：否，1：是。默认0。
+     */
+    public $ShortEdgeAsHeight;
+
+    /**
      * @param string $TemplateName 模板名称，例：900 900p 仅支持字母和数字的组合。
+长度限制：
+  标准转码：1-10个字符
+  极速高清转码：3-10个字符
      * @param integer $VideoBitrate 视频码率。范围：100-8000。
-注意：码率必须是100的倍数。
-     * @param string $Vcodec 视频编码：h264/h265，默认h264。
-     * @param string $Acodec 音频编码：aac，默认原始音频格式。
+注: 转码模板有码率唯一要求，最终保存的码率可能与输入码率有所差别。
+     * @param string $Acodec 音频编码：aac，默认aac。
 注意：当前该参数未生效，待后续支持！
-     * @param integer $AudioBitrate 音频码率：默认0。0-500。
+     * @param integer $AudioBitrate 音频码率，默认0。
+范围：0-500。
+     * @param string $Vcodec 视频编码：h264/h265/origin，默认h264。
+
+origin: 保持原始编码格式
      * @param string $Description 模板描述。
      * @param integer $Width 宽，默认0。
 范围[0-3000]
+数值必须是2的倍数，0是原始宽度
      * @param integer $NeedVideo 是否保留视频，0：否，1：是。默认1。
      * @param integer $NeedAudio 是否保留音频，0：否，1：是。默认1。
      * @param integer $Height 高，默认0。
 范围[0-3000]
+数值必须是2的倍数，0是原始宽度
      * @param integer $Fps 帧率，默认0。
+范围0-60
      * @param integer $Gop 关键帧间隔，单位：秒。默认原始的间隔
-     * @param integer $Rotate 是否旋转，0：否，1：是。默认0。
+范围2-6
+     * @param integer $Rotate 旋转角度，默认0。
+可取值：0，90，180，270
      * @param string $Profile 编码质量：
 baseline/main/high。默认baseline
      * @param integer $BitrateToOrig 是否不超过原始码率，0：否，1：是。默认0。
@@ -208,6 +259,7 @@ baseline/main/high。默认baseline
 极速高清目标码率=VideoBitrate * (1-AdaptBitratePercent)
 
 取值范围：0.0到0.5
+     * @param integer $ShortEdgeAsHeight 是否以短边作为高度，0：否，1：是。默认0。
      */
     function __construct()
     {
@@ -230,16 +282,16 @@ baseline/main/high。默认baseline
             $this->VideoBitrate = $param["VideoBitrate"];
         }
 
-        if (array_key_exists("Vcodec",$param) and $param["Vcodec"] !== null) {
-            $this->Vcodec = $param["Vcodec"];
-        }
-
         if (array_key_exists("Acodec",$param) and $param["Acodec"] !== null) {
             $this->Acodec = $param["Acodec"];
         }
 
         if (array_key_exists("AudioBitrate",$param) and $param["AudioBitrate"] !== null) {
             $this->AudioBitrate = $param["AudioBitrate"];
+        }
+
+        if (array_key_exists("Vcodec",$param) and $param["Vcodec"] !== null) {
+            $this->Vcodec = $param["Vcodec"];
         }
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
@@ -296,6 +348,10 @@ baseline/main/high。默认baseline
 
         if (array_key_exists("AdaptBitratePercent",$param) and $param["AdaptBitratePercent"] !== null) {
             $this->AdaptBitratePercent = $param["AdaptBitratePercent"];
+        }
+
+        if (array_key_exists("ShortEdgeAsHeight",$param) and $param["ShortEdgeAsHeight"] !== null) {
+            $this->ShortEdgeAsHeight = $param["ShortEdgeAsHeight"];
         }
     }
 }

@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAdvancedCache(AdvancedCache $AdvancedCache) 设置高级缓存过期时间配置（功能灰度中，尚未全量）
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getRuleCache() 获取高级路径缓存配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRuleCache(array $RuleCache) 设置高级路径缓存配置
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Cache extends AbstractModel
 {
@@ -46,9 +50,17 @@ class Cache extends AbstractModel
     public $AdvancedCache;
 
     /**
+     * @var array 高级路径缓存配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RuleCache;
+
+    /**
      * @param SimpleCache $SimpleCache 基础缓存过期时间配置
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AdvancedCache $AdvancedCache 高级缓存过期时间配置（功能灰度中，尚未全量）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $RuleCache 高级路径缓存配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -72,6 +84,15 @@ class Cache extends AbstractModel
         if (array_key_exists("AdvancedCache",$param) and $param["AdvancedCache"] !== null) {
             $this->AdvancedCache = new AdvancedCache();
             $this->AdvancedCache->deserialize($param["AdvancedCache"]);
+        }
+
+        if (array_key_exists("RuleCache",$param) and $param["RuleCache"] !== null) {
+            $this->RuleCache = [];
+            foreach ($param["RuleCache"] as $key => $value){
+                $obj = new RuleCache();
+                $obj->deserialize($value);
+                array_push($this->RuleCache, $obj);
+            }
         }
     }
 }

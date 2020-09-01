@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(integer $CreateTime) 设置密钥创建时间
  * @method string getDescription() 获取CMK的描述
  * @method void setDescription(string $Description) 设置CMK的描述
- * @method string getKeyState() 获取CMK的状态， 取值为：Enabled | Disabled | PendingDelete | PendingImport
- * @method void setKeyState(string $KeyState) 设置CMK的状态， 取值为：Enabled | Disabled | PendingDelete | PendingImport
+ * @method string getKeyState() 获取CMK的状态， 取值为：Enabled | Disabled | PendingDelete | PendingImport | Archived
+ * @method void setKeyState(string $KeyState) 设置CMK的状态， 取值为：Enabled | Disabled | PendingDelete | PendingImport | Archived
  * @method string getKeyUsage() 获取CMK用途，取值为: ENCRYPT_DECRYPT | ASYMMETRIC_DECRYPT_RSA_2048 | ASYMMETRIC_DECRYPT_SM2
  * @method void setKeyUsage(string $KeyUsage) 设置CMK用途，取值为: ENCRYPT_DECRYPT | ASYMMETRIC_DECRYPT_RSA_2048 | ASYMMETRIC_DECRYPT_SM2
  * @method integer getType() 获取CMK类型，2 表示符合FIPS标准，4表示符合国密标准
@@ -80,7 +80,7 @@ class KeyMetadata extends AbstractModel
     public $Description;
 
     /**
-     * @var string CMK的状态， 取值为：Enabled | Disabled | PendingDelete | PendingImport
+     * @var string CMK的状态， 取值为：Enabled | Disabled | PendingDelete | PendingImport | Archived
      */
     public $KeyState;
 
@@ -142,7 +142,7 @@ class KeyMetadata extends AbstractModel
      * @param string $Alias 作为密钥更容易辨识，更容易被人看懂的别名
      * @param integer $CreateTime 密钥创建时间
      * @param string $Description CMK的描述
-     * @param string $KeyState CMK的状态， 取值为：Enabled | Disabled | PendingDelete | PendingImport
+     * @param string $KeyState CMK的状态， 取值为：Enabled | Disabled | PendingDelete | PendingImport | Archived
      * @param string $KeyUsage CMK用途，取值为: ENCRYPT_DECRYPT | ASYMMETRIC_DECRYPT_RSA_2048 | ASYMMETRIC_DECRYPT_SM2
      * @param integer $Type CMK类型，2 表示符合FIPS标准，4表示符合国密标准
      * @param integer $CreatorUin 创建者

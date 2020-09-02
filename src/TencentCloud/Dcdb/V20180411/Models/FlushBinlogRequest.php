@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * FlushBinlog请求参数结构体
  *
- * @method string getInstanceId() 获取无
- * @method void setInstanceId(string $InstanceId) 设置无
+ * @method string getInstanceId() 获取实例ID
+ * @method void setInstanceId(string $InstanceId) 设置实例ID
  */
 class FlushBinlogRequest extends AbstractModel
 {
     /**
-     * @var string 无
+     * @var string 实例ID
      */
     public $InstanceId;
 
     /**
-     * @param string $InstanceId 无
+     * @param string $InstanceId 实例ID
      */
     function __construct()
     {

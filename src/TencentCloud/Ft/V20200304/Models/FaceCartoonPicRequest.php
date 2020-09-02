@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
  * @method string getRspImgType() 获取返回图像方式（base64 或 url ) ，二选一。url有效期为1天。
  * @method void setRspImgType(string $RspImgType) 设置返回图像方式（base64 或 url ) ，二选一。url有效期为1天。
- * @method string getDisableGlobalEffect() 获取是否取消全图动漫化效果。
- * @method void setDisableGlobalEffect(string $DisableGlobalEffect) 设置是否取消全图动漫化效果。
+ * @method string getDisableGlobalEffect() 获取关闭全图动漫化，传入true（不分大小写）即关闭全图动漫化。
+ * @method void setDisableGlobalEffect(string $DisableGlobalEffect) 设置关闭全图动漫化，传入true（不分大小写）即关闭全图动漫化。
  */
 class FaceCartoonPicRequest extends AbstractModel
 {
@@ -62,7 +62,7 @@ class FaceCartoonPicRequest extends AbstractModel
     public $RspImgType;
 
     /**
-     * @var string 是否取消全图动漫化效果。
+     * @var string 关闭全图动漫化，传入true（不分大小写）即关闭全图动漫化。
      */
     public $DisableGlobalEffect;
 
@@ -75,7 +75,7 @@ class FaceCartoonPicRequest extends AbstractModel
 非腾讯云存储的Url速度和稳定性可能受一定影响。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
      * @param string $RspImgType 返回图像方式（base64 或 url ) ，二选一。url有效期为1天。
-     * @param string $DisableGlobalEffect 是否取消全图动漫化效果。
+     * @param string $DisableGlobalEffect 关闭全图动漫化，传入true（不分大小写）即关闭全图动漫化。
      */
     function __construct()
     {

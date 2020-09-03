@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpgradeInstanceVersion请求参数结构体
  *
- * @method string getTargetInstanceType() 获取目标实例类型，同CreateInstances接口的Type，即实例要变更的目标类型
- * @method void setTargetInstanceType(string $TargetInstanceType) 设置目标实例类型，同CreateInstances接口的Type，即实例要变更的目标类型
+ * @method string getTargetInstanceType() 获取目标实例类型，同 [CreateInstances](https://cloud.tencent.com/document/api/239/20026) 的Type，即实例要变更的目标类型
+ * @method void setTargetInstanceType(string $TargetInstanceType) 设置目标实例类型，同 [CreateInstances](https://cloud.tencent.com/document/api/239/20026) 的Type，即实例要变更的目标类型
  * @method integer getSwitchOption() 获取切换模式：1-维护时间窗切换，2-立即切换
  * @method void setSwitchOption(integer $SwitchOption) 设置切换模式：1-维护时间窗切换，2-立即切换
  * @method string getInstanceId() 获取实例ID
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class UpgradeInstanceVersionRequest extends AbstractModel
 {
     /**
-     * @var string 目标实例类型，同CreateInstances接口的Type，即实例要变更的目标类型
+     * @var string 目标实例类型，同 [CreateInstances](https://cloud.tencent.com/document/api/239/20026) 的Type，即实例要变更的目标类型
      */
     public $TargetInstanceType;
 
@@ -45,7 +45,7 @@ class UpgradeInstanceVersionRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @param string $TargetInstanceType 目标实例类型，同CreateInstances接口的Type，即实例要变更的目标类型
+     * @param string $TargetInstanceType 目标实例类型，同 [CreateInstances](https://cloud.tencent.com/document/api/239/20026) 的Type，即实例要变更的目标类型
      * @param integer $SwitchOption 切换模式：1-维护时间窗切换，2-立即切换
      * @param string $InstanceId 实例ID
      */

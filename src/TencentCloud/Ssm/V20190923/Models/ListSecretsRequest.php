@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setState(integer $State) 设置根据凭据状态进行过滤，默认为0表示查询全部，1 表示查询Enabed 凭据列表，2表示查询Disabled 凭据列表， 3 表示查询PendingDelete 凭据列表。
  * @method string getSearchSecretName() 获取根据凭据名称进行过滤，为空表示不过滤。
  * @method void setSearchSecretName(string $SearchSecretName) 设置根据凭据名称进行过滤，为空表示不过滤。
+ * @method array getTagFilters() 获取标签过滤条件
+ * @method void setTagFilters(array $TagFilters) 设置标签过滤条件
  */
 class ListSecretsRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class ListSecretsRequest extends AbstractModel
     public $SearchSecretName;
 
     /**
+     * @var array 标签过滤条件
+     */
+    public $TagFilters;
+
+    /**
      * @param integer $Offset 查询列表的起始位置，以0开始，不设置默认为0。
      * @param integer $Limit 单次查询返回的最大数量，0或不设置则使用默认值 20。
      * @param integer $OrderType 根据创建时间的排序方式，0或者不设置则使用降序排序， 1 表示升序排序。
      * @param integer $State 根据凭据状态进行过滤，默认为0表示查询全部，1 表示查询Enabed 凭据列表，2表示查询Disabled 凭据列表， 3 表示查询PendingDelete 凭据列表。
      * @param string $SearchSecretName 根据凭据名称进行过滤，为空表示不过滤。
+     * @param array $TagFilters 标签过滤条件
      */
     function __construct()
     {
@@ -96,6 +104,15 @@ class ListSecretsRequest extends AbstractModel
 
         if (array_key_exists("SearchSecretName",$param) and $param["SearchSecretName"] !== null) {
             $this->SearchSecretName = $param["SearchSecretName"];
+        }
+
+        if (array_key_exists("TagFilters",$param) and $param["TagFilters"] !== null) {
+            $this->TagFilters = [];
+            foreach ($param["TagFilters"] as $key => $value){
+                $obj = new TagFilter();
+                $obj->deserialize($value);
+                array_push($this->TagFilters, $obj);
+            }
         }
     }
 }

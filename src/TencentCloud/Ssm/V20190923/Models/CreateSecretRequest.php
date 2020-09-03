@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSecretBinary(string $SecretBinary) 设置二进制凭据信息base64编码后的明文。SecretBinary 和 SecretString 必须且只能设置一个，最大支持4096字节。
  * @method string getSecretString() 获取文本类型凭据信息明文（不需要进行base64编码）。SecretBinary 和 SecretString 必须且只能设置一个，，最大支持4096字节。
  * @method void setSecretString(string $SecretString) 设置文本类型凭据信息明文（不需要进行base64编码）。SecretBinary 和 SecretString 必须且只能设置一个，，最大支持4096字节。
+ * @method array getTags() 获取标签列表
+ * @method void setTags(array $Tags) 设置标签列表
  */
 class CreateSecretRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class CreateSecretRequest extends AbstractModel
     public $SecretString;
 
     /**
+     * @var array 标签列表
+     */
+    public $Tags;
+
+    /**
      * @param string $SecretName 凭据名称，同一region内不可重复，最长128字节，使用字母、数字或者 - _ 的组合，第一个字符必须为字母或者数字。
      * @param string $VersionId 凭据版本，查询凭据信息时需要根据SecretName 和 VersionId进行查询，最长64 字节，使用字母、数字或者 - _ . 的组合并且以字母或数字开头。
      * @param string $Description 描述信息，用于详细描述用途等，最大支持2048字节。
      * @param string $KmsKeyId 指定对凭据进行加密的KMS CMK。如果为空则表示使用Secrets Manager为您默认创建的CMK进行加密。您也可以指定在同region 下自行创建的KMS CMK进行加密。
      * @param string $SecretBinary 二进制凭据信息base64编码后的明文。SecretBinary 和 SecretString 必须且只能设置一个，最大支持4096字节。
      * @param string $SecretString 文本类型凭据信息明文（不需要进行base64编码）。SecretBinary 和 SecretString 必须且只能设置一个，，最大支持4096字节。
+     * @param array $Tags 标签列表
      */
     function __construct()
     {
@@ -108,6 +116,15 @@ class CreateSecretRequest extends AbstractModel
 
         if (array_key_exists("SecretString",$param) and $param["SecretString"] !== null) {
             $this->SecretString = $param["SecretString"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

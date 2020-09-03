@@ -24,6 +24,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSecretName(string $SecretName) 设置新创建的凭据名称。
  * @method string getVersionId() 获取新创建的凭据版本。
  * @method void setVersionId(string $VersionId) 设置新创建的凭据版本。
+ * @method integer getTagCode() 获取标签操作的返回码. 0: 成功；1: 内部错误；2: 业务处理错误
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTagCode(integer $TagCode) 设置标签操作的返回码. 0: 成功；1: 内部错误；2: 业务处理错误
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTagMsg() 获取标签操作的返回信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTagMsg(string $TagMsg) 设置标签操作的返回信息
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -40,6 +48,18 @@ class CreateSecretResponse extends AbstractModel
     public $VersionId;
 
     /**
+     * @var integer 标签操作的返回码. 0: 成功；1: 内部错误；2: 业务处理错误
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TagCode;
+
+    /**
+     * @var string 标签操作的返回信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TagMsg;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -47,6 +67,10 @@ class CreateSecretResponse extends AbstractModel
     /**
      * @param string $SecretName 新创建的凭据名称。
      * @param string $VersionId 新创建的凭据版本。
+     * @param integer $TagCode 标签操作的返回码. 0: 成功；1: 内部错误；2: 业务处理错误
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TagMsg 标签操作的返回信息
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -68,6 +92,14 @@ class CreateSecretResponse extends AbstractModel
 
         if (array_key_exists("VersionId",$param) and $param["VersionId"] !== null) {
             $this->VersionId = $param["VersionId"];
+        }
+
+        if (array_key_exists("TagCode",$param) and $param["TagCode"] !== null) {
+            $this->TagCode = $param["TagCode"];
+        }
+
+        if (array_key_exists("TagMsg",$param) and $param["TagMsg"] !== null) {
+            $this->TagMsg = $param["TagMsg"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

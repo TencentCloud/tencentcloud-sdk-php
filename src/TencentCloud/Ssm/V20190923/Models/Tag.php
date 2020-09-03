@@ -14,24 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Redis\V20180412\Models;
+namespace TencentCloud\Ssm\V20190923\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeInstanceDealDetail请求参数结构体
+ * 标签键和标签值
  *
- * @method array getDealIds() 获取订单交易ID数组，即 [CreateInstances](https://cloud.tencent.com/document/api/239/20026) 的输出参数DealId。
- * @method void setDealIds(array $DealIds) 设置订单交易ID数组，即 [CreateInstances](https://cloud.tencent.com/document/api/239/20026) 的输出参数DealId。
+ * @method string getTagKey() 获取标签键
+ * @method void setTagKey(string $TagKey) 设置标签键
+ * @method string getTagValue() 获取标签值
+ * @method void setTagValue(string $TagValue) 设置标签值
  */
-class DescribeInstanceDealDetailRequest extends AbstractModel
+class Tag extends AbstractModel
 {
     /**
-     * @var array 订单交易ID数组，即 [CreateInstances](https://cloud.tencent.com/document/api/239/20026) 的输出参数DealId。
+     * @var string 标签键
      */
-    public $DealIds;
+    public $TagKey;
 
     /**
-     * @param array $DealIds 订单交易ID数组，即 [CreateInstances](https://cloud.tencent.com/document/api/239/20026) 的输出参数DealId。
+     * @var string 标签值
+     */
+    public $TagValue;
+
+    /**
+     * @param string $TagKey 标签键
+     * @param string $TagValue 标签值
      */
     function __construct()
     {
@@ -46,8 +54,12 @@ class DescribeInstanceDealDetailRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DealIds",$param) and $param["DealIds"] !== null) {
-            $this->DealIds = $param["DealIds"];
+        if (array_key_exists("TagKey",$param) and $param["TagKey"] !== null) {
+            $this->TagKey = $param["TagKey"];
+        }
+
+        if (array_key_exists("TagValue",$param) and $param["TagValue"] !== null) {
+            $this->TagValue = $param["TagValue"];
         }
     }
 }

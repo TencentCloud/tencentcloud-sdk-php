@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() 获取集群 ID，请填写 查询集群列表 接口中返回的 clusterId 字段
  * @method void setClusterId(string $ClusterId) 设置集群 ID，请填写 查询集群列表 接口中返回的 clusterId 字段
- * @method string getRunInstancePara() 获取CVM创建透传参数，json化字符串格式，详见[CVM创建实例](https://cloud.tencent.com/document/product/213/15730)接口。
- * @method void setRunInstancePara(string $RunInstancePara) 设置CVM创建透传参数，json化字符串格式，详见[CVM创建实例](https://cloud.tencent.com/document/product/213/15730)接口。
+ * @method string getRunInstancePara() 获取CVM创建透传参数，json化字符串格式，如需要保证扩展集群节点请求幂等性需要在此参数添加ClientToken字段，详见[CVM创建实例](https://cloud.tencent.com/document/product/213/15730)接口。
+ * @method void setRunInstancePara(string $RunInstancePara) 设置CVM创建透传参数，json化字符串格式，如需要保证扩展集群节点请求幂等性需要在此参数添加ClientToken字段，详见[CVM创建实例](https://cloud.tencent.com/document/product/213/15730)接口。
  * @method InstanceAdvancedSettings getInstanceAdvancedSettings() 获取实例额外需要设置参数信息
  * @method void setInstanceAdvancedSettings(InstanceAdvancedSettings $InstanceAdvancedSettings) 设置实例额外需要设置参数信息
  */
@@ -35,7 +35,7 @@ class CreateClusterInstancesRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var string CVM创建透传参数，json化字符串格式，详见[CVM创建实例](https://cloud.tencent.com/document/product/213/15730)接口。
+     * @var string CVM创建透传参数，json化字符串格式，如需要保证扩展集群节点请求幂等性需要在此参数添加ClientToken字段，详见[CVM创建实例](https://cloud.tencent.com/document/product/213/15730)接口。
      */
     public $RunInstancePara;
 
@@ -46,7 +46,7 @@ class CreateClusterInstancesRequest extends AbstractModel
 
     /**
      * @param string $ClusterId 集群 ID，请填写 查询集群列表 接口中返回的 clusterId 字段
-     * @param string $RunInstancePara CVM创建透传参数，json化字符串格式，详见[CVM创建实例](https://cloud.tencent.com/document/product/213/15730)接口。
+     * @param string $RunInstancePara CVM创建透传参数，json化字符串格式，如需要保证扩展集群节点请求幂等性需要在此参数添加ClientToken字段，详见[CVM创建实例](https://cloud.tencent.com/document/product/213/15730)接口。
      * @param InstanceAdvancedSettings $InstanceAdvancedSettings 实例额外需要设置参数信息
      */
     function __construct()

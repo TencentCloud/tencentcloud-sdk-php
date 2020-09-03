@@ -44,8 +44,8 @@ Url、Image必须提供一个，如果都提供，只使用 Url。图片存储�
 若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
  * @method array getGradientInfos() 获取人脸渐变参数。可调整每张图片的展示时长、人像渐变的最长时间
  * @method void setGradientInfos(array $GradientInfos) 设置人脸渐变参数。可调整每张图片的展示时长、人像渐变的最长时间
- * @method integer getFps() 获取视频帧率，取值[1,60]。默认10
- * @method void setFps(integer $Fps) 设置视频帧率，取值[1,60]。默认10
+ * @method integer getFps() 获取视频帧率，取值[1,25]。默认10
+ * @method void setFps(integer $Fps) 设置视频帧率，取值[1,25]。默认10
  * @method integer getOutputType() 获取视频类型，取值[0,2]，其中0为MP4，1为GIF，2为MOV。目前仅支持MP4格式，默认为MP4格式
  * @method void setOutputType(integer $OutputType) 设置视频类型，取值[0,2]，其中0为MP4，1为GIF，2为MOV。目前仅支持MP4格式，默认为MP4格式
  * @method integer getOutputWidth() 获取视频宽度，取值[128,1280]。默认值720
@@ -80,7 +80,7 @@ Url、Image必须提供一个，如果都提供，只使用 Url。图片存储�
     public $GradientInfos;
 
     /**
-     * @var integer 视频帧率，取值[1,60]。默认10
+     * @var integer 视频帧率，取值[1,25]。默认10
      */
     public $Fps;
 
@@ -112,7 +112,7 @@ Url、Image必须提供一个，如果都提供，只使用 Url。图片存储�
 人员人脸总数量不可超过5张。 
 若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
      * @param array $GradientInfos 人脸渐变参数。可调整每张图片的展示时长、人像渐变的最长时间
-     * @param integer $Fps 视频帧率，取值[1,60]。默认10
+     * @param integer $Fps 视频帧率，取值[1,25]。默认10
      * @param integer $OutputType 视频类型，取值[0,2]，其中0为MP4，1为GIF，2为MOV。目前仅支持MP4格式，默认为MP4格式
      * @param integer $OutputWidth 视频宽度，取值[128,1280]。默认值720
      * @param integer $OutputHeight 视频高度，取值[128,1280]。默认值1280

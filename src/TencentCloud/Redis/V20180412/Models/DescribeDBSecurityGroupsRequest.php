@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDBSecurityGroups请求参数结构体
  *
- * @method string getProduct() 获取数据库引擎名称：mariadb,cdb,cynosdb,dcdb,redis,mongodb 等。
- * @method void setProduct(string $Product) 设置数据库引擎名称：mariadb,cdb,cynosdb,dcdb,redis,mongodb 等。
+ * @method string getProduct() 获取数据库引擎名称，本接口取值：redis。
+ * @method void setProduct(string $Product) 设置数据库引擎名称，本接口取值：redis。
  * @method string getInstanceId() 获取实例ID，格式如：cdb-c1nl9rpv或者cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
  * @method void setInstanceId(string $InstanceId) 设置实例ID，格式如：cdb-c1nl9rpv或者cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
  */
 class DescribeDBSecurityGroupsRequest extends AbstractModel
 {
     /**
-     * @var string 数据库引擎名称：mariadb,cdb,cynosdb,dcdb,redis,mongodb 等。
+     * @var string 数据库引擎名称，本接口取值：redis。
      */
     public $Product;
 
@@ -38,7 +38,7 @@ class DescribeDBSecurityGroupsRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @param string $Product 数据库引擎名称：mariadb,cdb,cynosdb,dcdb,redis,mongodb 等。
+     * @param string $Product 数据库引擎名称，本接口取值：redis。
      * @param string $InstanceId 实例ID，格式如：cdb-c1nl9rpv或者cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
      */
     function __construct()

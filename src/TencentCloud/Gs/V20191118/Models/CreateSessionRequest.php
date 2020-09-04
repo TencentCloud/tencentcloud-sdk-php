@@ -26,16 +26,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserId(string $UserId) 设置游戏用户ID
  * @method string getGameId() 获取游戏ID
  * @method void setGameId(string $GameId) 设置游戏ID
- * @method string getGameRegion() 获取游戏区域，ap-guangzhou、ap-shanghai、ap-beijing等
- * @method void setGameRegion(string $GameRegion) 设置游戏区域，ap-guangzhou、ap-shanghai、ap-beijing等
+ * @method string getGameRegion() 获取游戏区域，ap-guangzhou、ap-shanghai、ap-beijing、ap-chengdu、ap-chongqing、ap-nanjing等
+ * @method void setGameRegion(string $GameRegion) 设置游戏区域，ap-guangzhou、ap-shanghai、ap-beijing、ap-chengdu、ap-chongqing、ap-nanjing等
  * @method string getGameParas() 获取游戏参数
  * @method void setGameParas(string $GameParas) 设置游戏参数
  * @method string getResolution() 获取分辨率,，可设置为1080p或720p
  * @method void setResolution(string $Resolution) 设置分辨率,，可设置为1080p或720p
  * @method string getImageUrl() 获取背景图url，格式为png或jpeg，宽高1920*1080
  * @method void setImageUrl(string $ImageUrl) 设置背景图url，格式为png或jpeg，宽高1920*1080
- * @method integer getSetNo() 获取资源池编号，1表示正式，2表示测试
- * @method void setSetNo(integer $SetNo) 设置资源池编号，1表示正式，2表示测试
+ * @method integer getSetNo() 获取【将废弃】资源池编号，比如1表示正式，2表示测试
+ * @method void setSetNo(integer $SetNo) 设置【将废弃】资源池编号，比如1表示正式，2表示测试
  * @method integer getBitrate() 获取单位Mbps，固定码率，后端不动态调整(MaxBitrate和MinBitrate将无效)
  * @method void setBitrate(integer $Bitrate) 设置单位Mbps，固定码率，后端不动态调整(MaxBitrate和MinBitrate将无效)
  * @method integer getMaxBitrate() 获取单位Mbps，动态调整最大码率
@@ -48,8 +48,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserIp(string $UserIp) 设置游戏用户IP，用于就近调度，例如125.127.178.228
  * @method integer getOptimization() 获取优化项，便于客户灰度开启新的优化项，默认为0
  * @method void setOptimization(integer $Optimization) 设置优化项，便于客户灰度开启新的优化项，默认为0
- * @method string getHostUserId() 获取用于多人游戏，游戏主机用户ID
- * @method void setHostUserId(string $HostUserId) 设置用于多人游戏，游戏主机用户ID
+ * @method string getHostUserId() 获取【多人云游】游戏主机用户ID
+ * @method void setHostUserId(string $HostUserId) 设置【多人云游】游戏主机用户ID
+ * @method string getRole() 获取【多人云游】角色；Player表示玩家；Viewer表示观察者
+ * @method void setRole(string $Role) 设置【多人云游】角色；Player表示玩家；Viewer表示观察者
  */
 class CreateSessionRequest extends AbstractModel
 {
@@ -69,7 +71,7 @@ class CreateSessionRequest extends AbstractModel
     public $GameId;
 
     /**
-     * @var string 游戏区域，ap-guangzhou、ap-shanghai、ap-beijing等
+     * @var string 游戏区域，ap-guangzhou、ap-shanghai、ap-beijing、ap-chengdu、ap-chongqing、ap-nanjing等
      */
     public $GameRegion;
 
@@ -89,7 +91,7 @@ class CreateSessionRequest extends AbstractModel
     public $ImageUrl;
 
     /**
-     * @var integer 资源池编号，1表示正式，2表示测试
+     * @var integer 【将废弃】资源池编号，比如1表示正式，2表示测试
      */
     public $SetNo;
 
@@ -124,26 +126,32 @@ class CreateSessionRequest extends AbstractModel
     public $Optimization;
 
     /**
-     * @var string 用于多人游戏，游戏主机用户ID
+     * @var string 【多人云游】游戏主机用户ID
      */
     public $HostUserId;
+
+    /**
+     * @var string 【多人云游】角色；Player表示玩家；Viewer表示观察者
+     */
+    public $Role;
 
     /**
      * @param string $ClientSession 客户端session信息，从JSSDK请求中获得
      * @param string $UserId 游戏用户ID
      * @param string $GameId 游戏ID
-     * @param string $GameRegion 游戏区域，ap-guangzhou、ap-shanghai、ap-beijing等
+     * @param string $GameRegion 游戏区域，ap-guangzhou、ap-shanghai、ap-beijing、ap-chengdu、ap-chongqing、ap-nanjing等
      * @param string $GameParas 游戏参数
      * @param string $Resolution 分辨率,，可设置为1080p或720p
      * @param string $ImageUrl 背景图url，格式为png或jpeg，宽高1920*1080
-     * @param integer $SetNo 资源池编号，1表示正式，2表示测试
+     * @param integer $SetNo 【将废弃】资源池编号，比如1表示正式，2表示测试
      * @param integer $Bitrate 单位Mbps，固定码率，后端不动态调整(MaxBitrate和MinBitrate将无效)
      * @param integer $MaxBitrate 单位Mbps，动态调整最大码率
      * @param integer $MinBitrate 单位Mbps，动态调整最小码率
      * @param integer $Fps 帧率，可设置为30、45、60、90、120、144
      * @param string $UserIp 游戏用户IP，用于就近调度，例如125.127.178.228
      * @param integer $Optimization 优化项，便于客户灰度开启新的优化项，默认为0
-     * @param string $HostUserId 用于多人游戏，游戏主机用户ID
+     * @param string $HostUserId 【多人云游】游戏主机用户ID
+     * @param string $Role 【多人云游】角色；Player表示玩家；Viewer表示观察者
      */
     function __construct()
     {
@@ -216,6 +224,10 @@ class CreateSessionRequest extends AbstractModel
 
         if (array_key_exists("HostUserId",$param) and $param["HostUserId"] !== null) {
             $this->HostUserId = $param["HostUserId"];
+        }
+
+        if (array_key_exists("Role",$param) and $param["Role"] !== null) {
+            $this->Role = $param["Role"];
         }
     }
 }

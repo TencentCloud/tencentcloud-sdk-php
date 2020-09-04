@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNumber(string $Number) 设置识别出的车牌号码。
  * @method integer getConfidence() 获取置信度，0 - 100 之间。
  * @method void setConfidence(integer $Confidence) 设置置信度，0 - 100 之间。
+ * @method Rect getRect() 获取文本行在原图片中的像素坐标框。
+ * @method void setRect(Rect $Rect) 设置文本行在原图片中的像素坐标框。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -40,6 +42,11 @@ class LicensePlateOCRResponse extends AbstractModel
     public $Confidence;
 
     /**
+     * @var Rect 文本行在原图片中的像素坐标框。
+     */
+    public $Rect;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -47,6 +54,7 @@ class LicensePlateOCRResponse extends AbstractModel
     /**
      * @param string $Number 识别出的车牌号码。
      * @param integer $Confidence 置信度，0 - 100 之间。
+     * @param Rect $Rect 文本行在原图片中的像素坐标框。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -68,6 +76,11 @@ class LicensePlateOCRResponse extends AbstractModel
 
         if (array_key_exists("Confidence",$param) and $param["Confidence"] !== null) {
             $this->Confidence = $param["Confidence"];
+        }
+
+        if (array_key_exists("Rect",$param) and $param["Rect"] !== null) {
+            $this->Rect = new Rect();
+            $this->Rect->deserialize($param["Rect"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

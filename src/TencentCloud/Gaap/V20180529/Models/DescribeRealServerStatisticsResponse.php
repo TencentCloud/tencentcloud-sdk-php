@@ -20,17 +20,24 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRealServerStatistics返回参数结构体
  *
- * @method array getStatisticsData() 获取源站状态统计数据
- * @method void setStatisticsData(array $StatisticsData) 设置源站状态统计数据
+ * @method array getStatisticsData() 获取指定监听器的源站状态统计数据
+ * @method void setStatisticsData(array $StatisticsData) 设置指定监听器的源站状态统计数据
+ * @method array getRsStatisticsData() 获取多个源站状态统计数据
+ * @method void setRsStatisticsData(array $RsStatisticsData) 设置多个源站状态统计数据
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeRealServerStatisticsResponse extends AbstractModel
 {
     /**
-     * @var array 源站状态统计数据
+     * @var array 指定监听器的源站状态统计数据
      */
     public $StatisticsData;
+
+    /**
+     * @var array 多个源站状态统计数据
+     */
+    public $RsStatisticsData;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +45,8 @@ class DescribeRealServerStatisticsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $StatisticsData 源站状态统计数据
+     * @param array $StatisticsData 指定监听器的源站状态统计数据
+     * @param array $RsStatisticsData 多个源站状态统计数据
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -60,6 +68,15 @@ class DescribeRealServerStatisticsResponse extends AbstractModel
                 $obj = new StatisticsDataInfo();
                 $obj->deserialize($value);
                 array_push($this->StatisticsData, $obj);
+            }
+        }
+
+        if (array_key_exists("RsStatisticsData",$param) and $param["RsStatisticsData"] !== null) {
+            $this->RsStatisticsData = [];
+            foreach ($param["RsStatisticsData"] as $key => $value){
+                $obj = new MetricStatisticsInfo();
+                $obj->deserialize($value);
+                array_push($this->RsStatisticsData, $obj);
             }
         }
 

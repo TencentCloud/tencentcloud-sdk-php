@@ -75,7 +75,7 @@ use TencentCloud\Gaap\V20180529\Models as Models;
  * @method Models\DescribeProxyGroupListResponse DescribeProxyGroupList(Models\DescribeProxyGroupListRequest $req) 本接口（DescribeProxyGroupList）用于拉取通道组列表及各通道组基本信息。
  * @method Models\DescribeProxyGroupStatisticsResponse DescribeProxyGroupStatistics(Models\DescribeProxyGroupStatisticsRequest $req) 该接口用于查询监听器统计数据，包括出入带宽，出入包量，并发数据。支持300, 3600和86400的细粒度，取值为细粒度范围内最大值。
  * @method Models\DescribeProxyStatisticsResponse DescribeProxyStatistics(Models\DescribeProxyStatisticsRequest $req) 该接口用于查询监听器统计数据，包括出入带宽，出入包量，并发，丢包和时延数据。支持300, 3600和86400的细粒度，取值为细粒度范围内最大值。
- * @method Models\DescribeRealServerStatisticsResponse DescribeRealServerStatistics(Models\DescribeRealServerStatisticsRequest $req) 该接口（DescribeRealServerStatistics）用于查询源站健康检查结果的统计数据。源站状态展示位为1：正常或者0：异常。查询的源站需要在监听器或者规则上进行了绑定，查询时需指定绑定的监听器或者规则ID。该接口支持最近1，3，6，12，24小时内1分钟细粒度的源站状态统计数据展示。
+ * @method Models\DescribeRealServerStatisticsResponse DescribeRealServerStatistics(Models\DescribeRealServerStatisticsRequest $req) 该接口（DescribeRealServerStatistics）用于查询源站健康检查结果的统计数据。源站状态展示位为1：正常或者0：异常。查询的源站需要在监听器或者规则上进行了绑定，查询时需指定绑定的监听器或者规则ID。该接口支持1分钟细粒度的源站状态统计数据展示。
  * @method Models\DescribeRealServersResponse DescribeRealServers(Models\DescribeRealServersRequest $req) 本接口（DescribeRealServers）用于查询源站信息，可以根据项目名查询所有的源站信息，此外支持指定IP机或者域名的源站模糊查询。
  * @method Models\DescribeRealServersStatusResponse DescribeRealServersStatus(Models\DescribeRealServersStatusRequest $req) 本接口（DescribeRealServersStatus）用于查询源站是否已被规则或者监听器绑定
  * @method Models\DescribeRegionAndPriceResponse DescribeRegionAndPrice(Models\DescribeRegionAndPriceRequest $req) 该接口（DescribeRegionAndPrice）用于获取源站区域和带宽梯度价格

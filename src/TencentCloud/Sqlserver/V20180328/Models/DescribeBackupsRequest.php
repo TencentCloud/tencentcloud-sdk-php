@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStrategy(integer $Strategy) 设置按照备份策略筛选，0-实例备份，1-多库备份，不填则不筛选此项
  * @method integer getBackupWay() 获取按照备份方式筛选，0-后台自动定时备份，1-用户手动临时备份，不填则不筛选此项
  * @method void setBackupWay(integer $BackupWay) 设置按照备份方式筛选，0-后台自动定时备份，1-用户手动临时备份，不填则不筛选此项
+ * @method integer getBackupId() 获取按照备份ID筛选，不填则不筛选此项
+ * @method void setBackupId(integer $BackupId) 设置按照备份ID筛选，不填则不筛选此项
  */
 class DescribeBackupsRequest extends AbstractModel
 {
@@ -80,6 +82,11 @@ class DescribeBackupsRequest extends AbstractModel
     public $BackupWay;
 
     /**
+     * @var integer 按照备份ID筛选，不填则不筛选此项
+     */
+    public $BackupId;
+
+    /**
      * @param string $StartTime 开始时间(yyyy-MM-dd HH:mm:ss)
      * @param string $EndTime 结束时间(yyyy-MM-dd HH:mm:ss)
      * @param string $InstanceId 实例ID，形如mssql-njj2mtpl
@@ -88,6 +95,7 @@ class DescribeBackupsRequest extends AbstractModel
      * @param string $BackupName 按照备份名称筛选，不填则不筛选此项
      * @param integer $Strategy 按照备份策略筛选，0-实例备份，1-多库备份，不填则不筛选此项
      * @param integer $BackupWay 按照备份方式筛选，0-后台自动定时备份，1-用户手动临时备份，不填则不筛选此项
+     * @param integer $BackupId 按照备份ID筛选，不填则不筛选此项
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ class DescribeBackupsRequest extends AbstractModel
 
         if (array_key_exists("BackupWay",$param) and $param["BackupWay"] !== null) {
             $this->BackupWay = $param["BackupWay"];
+        }
+
+        if (array_key_exists("BackupId",$param) and $param["BackupId"] !== null) {
+            $this->BackupId = $param["BackupId"];
         }
     }
 }

@@ -22,6 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
  * @method void setInstanceId(string $InstanceId) 设置实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
+ * @method integer getBackupMethod() 获取备份方式，当前支持：0-逻辑备份，1-物理备份，2-所有备份。默认为逻辑备份。
+ * @method void setBackupMethod(integer $BackupMethod) 设置备份方式，当前支持：0-逻辑备份，1-物理备份，2-所有备份。默认为逻辑备份。
+ * @method integer getLimit() 获取分页大小，最大值为100，不设置默认查询所有。
+ * @method void setLimit(integer $Limit) 设置分页大小，最大值为100，不设置默认查询所有。
+ * @method integer getOffset() 获取分页偏移量，最小值为0，默认值为0。
+ * @method void setOffset(integer $Offset) 设置分页偏移量，最小值为0，默认值为0。
  */
 class DescribeDBBackupsRequest extends AbstractModel
 {
@@ -31,7 +37,25 @@ class DescribeDBBackupsRequest extends AbstractModel
     public $InstanceId;
 
     /**
+     * @var integer 备份方式，当前支持：0-逻辑备份，1-物理备份，2-所有备份。默认为逻辑备份。
+     */
+    public $BackupMethod;
+
+    /**
+     * @var integer 分页大小，最大值为100，不设置默认查询所有。
+     */
+    public $Limit;
+
+    /**
+     * @var integer 分页偏移量，最小值为0，默认值为0。
+     */
+    public $Offset;
+
+    /**
      * @param string $InstanceId 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
+     * @param integer $BackupMethod 备份方式，当前支持：0-逻辑备份，1-物理备份，2-所有备份。默认为逻辑备份。
+     * @param integer $Limit 分页大小，最大值为100，不设置默认查询所有。
+     * @param integer $Offset 分页偏移量，最小值为0，默认值为0。
      */
     function __construct()
     {
@@ -48,6 +72,18 @@ class DescribeDBBackupsRequest extends AbstractModel
         }
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("BackupMethod",$param) and $param["BackupMethod"] !== null) {
+            $this->BackupMethod = $param["BackupMethod"];
+        }
+
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
         }
     }
 }

@@ -114,6 +114,10 @@ UNKNOWN表示未知状态。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setModifyConfigTime(integer $ModifyConfigTime) 设置配置变更时间
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getProxyType() 获取通道类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProxyType(integer $ProxyType) 设置通道类型
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ProxyInfo extends AbstractModel
 {
@@ -265,6 +269,12 @@ UNKNOWN表示未知状态。
     public $ModifyConfigTime;
 
     /**
+     * @var integer 通道类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ProxyType;
+
+    /**
      * @param string $InstanceId （旧参数，请使用ProxyId）通道实例ID。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CreateTime 创建时间，采用Unix时间戳的方式，表示从1970年1月1日（UTC/GMT的午夜）开始所经过的秒数。
@@ -311,6 +321,8 @@ UNKNOWN表示未知状态。
      * @param array $RelatedGlobalDomains 关联了解析的域名列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ModifyConfigTime 配置变更时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ProxyType 通道类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -431,6 +443,10 @@ UNKNOWN表示未知状态。
 
         if (array_key_exists("ModifyConfigTime",$param) and $param["ModifyConfigTime"] !== null) {
             $this->ModifyConfigTime = $param["ModifyConfigTime"];
+        }
+
+        if (array_key_exists("ProxyType",$param) and $param["ProxyType"] !== null) {
+            $this->ProxyType = $param["ProxyType"];
         }
     }
 }

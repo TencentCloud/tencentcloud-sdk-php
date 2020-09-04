@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTarget(MigrateTarget $Target) 设置迁移目标
  * @method array getMigrateDBSet() 获取迁移DB对象 ，离线迁移不使用（SourceType=4或SourceType=5）。
  * @method void setMigrateDBSet(array $MigrateDBSet) 设置迁移DB对象 ，离线迁移不使用（SourceType=4或SourceType=5）。
+ * @method array getRenameRestore() 获取按照ReNameRestoreDatabase中的库进行恢复，并重命名，不填则按照默认方式命名恢复的库，且恢复所有的库。SourceType=5的情况下有效。
+ * @method void setRenameRestore(array $RenameRestore) 设置按照ReNameRestoreDatabase中的库进行恢复，并重命名，不填则按照默认方式命名恢复的库，且恢复所有的库。SourceType=5的情况下有效。
  */
 class CreateMigrationRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class CreateMigrationRequest extends AbstractModel
     public $MigrateDBSet;
 
     /**
+     * @var array 按照ReNameRestoreDatabase中的库进行恢复，并重命名，不填则按照默认方式命名恢复的库，且恢复所有的库。SourceType=5的情况下有效。
+     */
+    public $RenameRestore;
+
+    /**
      * @param string $MigrateName 迁移任务的名称
      * @param integer $MigrateType 迁移类型（1:结构迁移 2:数据迁移 3:增量同步）
      * @param integer $SourceType 迁移源的类型 1:TencentDB for SQLServer 2:云服务器自建SQLServer数据库 4:SQLServer备份还原 5:SQLServer备份还原（COS方式）
      * @param MigrateSource $Source 迁移源
      * @param MigrateTarget $Target 迁移目标
      * @param array $MigrateDBSet 迁移DB对象 ，离线迁移不使用（SourceType=4或SourceType=5）。
+     * @param array $RenameRestore 按照ReNameRestoreDatabase中的库进行恢复，并重命名，不填则按照默认方式命名恢复的库，且恢复所有的库。SourceType=5的情况下有效。
      */
     function __construct()
     {
@@ -114,6 +122,15 @@ class CreateMigrationRequest extends AbstractModel
                 $obj = new MigrateDB();
                 $obj->deserialize($value);
                 array_push($this->MigrateDBSet, $obj);
+            }
+        }
+
+        if (array_key_exists("RenameRestore",$param) and $param["RenameRestore"] !== null) {
+            $this->RenameRestore = [];
+            foreach ($param["RenameRestore"] as $key => $value){
+                $obj = new RenameRestoreDatabase();
+                $obj->deserialize($value);
+                array_push($this->RenameRestore, $obj);
             }
         }
     }

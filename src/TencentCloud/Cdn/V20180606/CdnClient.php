@@ -26,6 +26,7 @@ use TencentCloud\Cdn\V20180606\Models as Models;
  * @method Models\AddCdnDomainResponse AddCdnDomain(Models\AddCdnDomainRequest $req) AddCdnDomain 用于新增内容分发网络加速域名。
  * @method Models\CreateClsLogTopicResponse CreateClsLogTopic(Models\CreateClsLogTopicRequest $req) CreatClsLogTopic 用于创建日志主题。注意：一个日志集下至多可创建10个日志主题。
  * @method Models\CreateScdnLogTaskResponse CreateScdnLogTask(Models\CreateScdnLogTaskRequest $req) CreateScdnLogTask 用于创建事件日志任务
+ * @method Models\CreateVerifyRecordResponse CreateVerifyRecord(Models\CreateVerifyRecordRequest $req) 生成一条子域名解析，提示客户添加到域名解析上，用于泛域名及域名取回校验归属权
  * @method Models\DeleteCdnDomainResponse DeleteCdnDomain(Models\DeleteCdnDomainRequest $req) DeleteCdnDomain 用于删除指定加速域名
  * @method Models\DeleteClsLogTopicResponse DeleteClsLogTopic(Models\DeleteClsLogTopicRequest $req) DeleteClsLogTopic 用于删除日志主题。注意：删除后，所有该日志主题下绑定域名的日志将不再继续投递至该主题，已经投递的日志将会被全部清空。生效时间约为 5~15 分钟。
  * @method Models\DescribeBillingDataResponse DescribeBillingData(Models\DescribeBillingDataRequest $req) DescribeBillingData 用于查询实际计费数据明细。
@@ -109,6 +110,7 @@ use TencentCloud\Cdn\V20180606\Models as Models;
 注意：如果需要更新复杂类型的配置项，必须传递整个对象的所有属性，未传递的属性将使用默认值，建议通过查询接口获取配置属性后，直接修改后传递给本接口。Https配置由于证书的特殊性，更新时不用传递证书和密钥字段。
  * @method Models\UpdateImageConfigResponse UpdateImageConfig(Models\UpdateImageConfigRequest $req) UpdateImageConfig 用于更新控制台图片优化的相关配置，支持Webp、TPG 和 Guetzli。 
  * @method Models\UpdatePayTypeResponse UpdatePayType(Models\UpdatePayTypeRequest $req) 本接口(UpdatePayType)用于修改账号计费类型，暂不支持月结用户或子账号修改。
+ * @method Models\VerifyDomainRecordResponse VerifyDomainRecord(Models\VerifyDomainRecordRequest $req) 验证域名解析值
  */
 
 class CdnClient extends AbstractClient

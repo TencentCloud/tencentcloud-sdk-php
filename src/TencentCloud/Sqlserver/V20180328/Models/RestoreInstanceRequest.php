@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置实例ID，形如mssql-j8kv137v
  * @method integer getBackupId() 获取备份文件ID，该ID可以通过DescribeBackups接口返回数据中的Id字段获得
  * @method void setBackupId(integer $BackupId) 设置备份文件ID，该ID可以通过DescribeBackups接口返回数据中的Id字段获得
+ * @method string getTargetInstanceId() 获取备份恢复到的同一个APPID下的实例ID，不填则恢复到原实例ID
+ * @method void setTargetInstanceId(string $TargetInstanceId) 设置备份恢复到的同一个APPID下的实例ID，不填则恢复到原实例ID
+ * @method array getRenameRestore() 获取按照ReNameRestoreDatabase中的库进行恢复，并重命名，不填则按照默认方式命名恢复的库，且恢复所有的库。
+ * @method void setRenameRestore(array $RenameRestore) 设置按照ReNameRestoreDatabase中的库进行恢复，并重命名，不填则按照默认方式命名恢复的库，且恢复所有的库。
  */
 class RestoreInstanceRequest extends AbstractModel
 {
@@ -38,8 +42,20 @@ class RestoreInstanceRequest extends AbstractModel
     public $BackupId;
 
     /**
+     * @var string 备份恢复到的同一个APPID下的实例ID，不填则恢复到原实例ID
+     */
+    public $TargetInstanceId;
+
+    /**
+     * @var array 按照ReNameRestoreDatabase中的库进行恢复，并重命名，不填则按照默认方式命名恢复的库，且恢复所有的库。
+     */
+    public $RenameRestore;
+
+    /**
      * @param string $InstanceId 实例ID，形如mssql-j8kv137v
      * @param integer $BackupId 备份文件ID，该ID可以通过DescribeBackups接口返回数据中的Id字段获得
+     * @param string $TargetInstanceId 备份恢复到的同一个APPID下的实例ID，不填则恢复到原实例ID
+     * @param array $RenameRestore 按照ReNameRestoreDatabase中的库进行恢复，并重命名，不填则按照默认方式命名恢复的库，且恢复所有的库。
      */
     function __construct()
     {
@@ -60,6 +76,19 @@ class RestoreInstanceRequest extends AbstractModel
 
         if (array_key_exists("BackupId",$param) and $param["BackupId"] !== null) {
             $this->BackupId = $param["BackupId"];
+        }
+
+        if (array_key_exists("TargetInstanceId",$param) and $param["TargetInstanceId"] !== null) {
+            $this->TargetInstanceId = $param["TargetInstanceId"];
+        }
+
+        if (array_key_exists("RenameRestore",$param) and $param["RenameRestore"] !== null) {
+            $this->RenameRestore = [];
+            foreach ($param["RenameRestore"] as $key => $value){
+                $obj = new RenameRestoreDatabase();
+                $obj->deserialize($value);
+                array_push($this->RenameRestore, $obj);
+            }
         }
     }
 }

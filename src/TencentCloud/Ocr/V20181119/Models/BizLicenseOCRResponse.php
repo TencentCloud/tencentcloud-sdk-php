@@ -40,6 +40,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setComposingForm(string $ComposingForm) 设置组成形式
  * @method string getSetDate() 获取成立日期
  * @method void setSetDate(string $SetDate) 设置成立日期
+ * @method array getRecognizeWarnCode() 获取Code 告警码列表和释义：
+-20001 非营业执照
+注：告警码可以同时存在多个
+ * @method void setRecognizeWarnCode(array $RecognizeWarnCode) 设置Code 告警码列表和释义：
+-20001 非营业执照
+注：告警码可以同时存在多个
+ * @method array getRecognizeWarnMsg() 获取告警码说明：
+OCR_WARNING_TPYE_NOT_MATCH 非营业执照
+注：告警信息可以同时存在多个
+ * @method void setRecognizeWarnMsg(array $RecognizeWarnMsg) 设置告警码说明：
+OCR_WARNING_TPYE_NOT_MATCH 非营业执照
+注：告警信息可以同时存在多个
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -96,6 +108,20 @@ class BizLicenseOCRResponse extends AbstractModel
     public $SetDate;
 
     /**
+     * @var array Code 告警码列表和释义：
+-20001 非营业执照
+注：告警码可以同时存在多个
+     */
+    public $RecognizeWarnCode;
+
+    /**
+     * @var array 告警码说明：
+OCR_WARNING_TPYE_NOT_MATCH 非营业执照
+注：告警信息可以同时存在多个
+     */
+    public $RecognizeWarnMsg;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -111,6 +137,12 @@ class BizLicenseOCRResponse extends AbstractModel
      * @param string $Period 营业期限
      * @param string $ComposingForm 组成形式
      * @param string $SetDate 成立日期
+     * @param array $RecognizeWarnCode Code 告警码列表和释义：
+-20001 非营业执照
+注：告警码可以同时存在多个
+     * @param array $RecognizeWarnMsg 告警码说明：
+OCR_WARNING_TPYE_NOT_MATCH 非营业执照
+注：告警信息可以同时存在多个
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -164,6 +196,14 @@ class BizLicenseOCRResponse extends AbstractModel
 
         if (array_key_exists("SetDate",$param) and $param["SetDate"] !== null) {
             $this->SetDate = $param["SetDate"];
+        }
+
+        if (array_key_exists("RecognizeWarnCode",$param) and $param["RecognizeWarnCode"] !== null) {
+            $this->RecognizeWarnCode = $param["RecognizeWarnCode"];
+        }
+
+        if (array_key_exists("RecognizeWarnMsg",$param) and $param["RecognizeWarnMsg"] !== null) {
+            $this->RecognizeWarnMsg = $param["RecognizeWarnMsg"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

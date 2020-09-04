@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDBs(array $DBs) 设置需要回档的数据库
  * @method string getTime() 获取回档目标时间点
  * @method void setTime(string $Time) 设置回档目标时间点
+ * @method string getTargetInstanceId() 获取备份恢复到的同一个APPID下的实例ID，不填则恢复到原实例ID
+ * @method void setTargetInstanceId(string $TargetInstanceId) 设置备份恢复到的同一个APPID下的实例ID，不填则恢复到原实例ID
+ * @method array getRenameRestore() 获取按照ReNameRestoreDatabase中的库进行重命名，仅在Type = 1重命名回档方式有效；不填则按照默认方式命名库，DBs参数确定要恢复的库
+ * @method void setRenameRestore(array $RenameRestore) 设置按照ReNameRestoreDatabase中的库进行重命名，仅在Type = 1重命名回档方式有效；不填则按照默认方式命名库，DBs参数确定要恢复的库
  */
 class RollbackInstanceRequest extends AbstractModel
 {
@@ -52,10 +56,22 @@ class RollbackInstanceRequest extends AbstractModel
     public $Time;
 
     /**
+     * @var string 备份恢复到的同一个APPID下的实例ID，不填则恢复到原实例ID
+     */
+    public $TargetInstanceId;
+
+    /**
+     * @var array 按照ReNameRestoreDatabase中的库进行重命名，仅在Type = 1重命名回档方式有效；不填则按照默认方式命名库，DBs参数确定要恢复的库
+     */
+    public $RenameRestore;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param integer $Type 回档类型，0-回档的数据库覆盖原库；1-回档的数据库以重命名的形式生成，不覆盖原库
      * @param array $DBs 需要回档的数据库
      * @param string $Time 回档目标时间点
+     * @param string $TargetInstanceId 备份恢复到的同一个APPID下的实例ID，不填则恢复到原实例ID
+     * @param array $RenameRestore 按照ReNameRestoreDatabase中的库进行重命名，仅在Type = 1重命名回档方式有效；不填则按照默认方式命名库，DBs参数确定要恢复的库
      */
     function __construct()
     {
@@ -84,6 +100,19 @@ class RollbackInstanceRequest extends AbstractModel
 
         if (array_key_exists("Time",$param) and $param["Time"] !== null) {
             $this->Time = $param["Time"];
+        }
+
+        if (array_key_exists("TargetInstanceId",$param) and $param["TargetInstanceId"] !== null) {
+            $this->TargetInstanceId = $param["TargetInstanceId"];
+        }
+
+        if (array_key_exists("RenameRestore",$param) and $param["RenameRestore"] !== null) {
+            $this->RenameRestore = [];
+            foreach ($param["RenameRestore"] as $key => $value){
+                $obj = new RenameRestoreDatabase();
+                $obj->deserialize($value);
+                array_push($this->RenameRestore, $obj);
+            }
         }
     }
 }

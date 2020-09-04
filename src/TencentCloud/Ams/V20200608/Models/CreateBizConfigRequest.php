@@ -20,29 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateBizConfig请求参数结构体
  *
- * @method string getBizType() 获取业务ID
- * @method void setBizType(string $BizType) 设置业务ID
- * @method MediaModerationConfig getMediaModeration() 获取审核分类信息
- * @method void setMediaModeration(MediaModerationConfig $MediaModeration) 设置审核分类信息
- * @method string getBizName() 获取页面名称
- * @method void setBizName(string $BizName) 设置页面名称
+ * @method string getBizType() 获取业务类型，仅限英文字母、数字和下划线（_）组成，长度不超过8位
+ * @method void setBizType(string $BizType) 设置业务类型，仅限英文字母、数字和下划线（_）组成，长度不超过8位
+ * @method MediaModerationConfig getMediaModeration() 获取配置信息，
+ * @method void setMediaModeration(MediaModerationConfig $MediaModeration) 设置配置信息，
+ * @method string getBizName() 获取业务名称，用于标识业务场景，长度不超过32位
+ * @method void setBizName(string $BizName) 设置业务名称，用于标识业务场景，长度不超过32位
  * @method array getModerationCategories() 获取审核内容，可选：Polity (政治); Porn (色情); Illegal(违法);Abuse (谩骂); Terror (暴恐); Ad (广告);
  * @method void setModerationCategories(array $ModerationCategories) 设置审核内容，可选：Polity (政治); Porn (色情); Illegal(违法);Abuse (谩骂); Terror (暴恐); Ad (广告);
  */
 class CreateBizConfigRequest extends AbstractModel
 {
     /**
-     * @var string 业务ID
+     * @var string 业务类型，仅限英文字母、数字和下划线（_）组成，长度不超过8位
      */
     public $BizType;
 
     /**
-     * @var MediaModerationConfig 审核分类信息
+     * @var MediaModerationConfig 配置信息，
      */
     public $MediaModeration;
 
     /**
-     * @var string 页面名称
+     * @var string 业务名称，用于标识业务场景，长度不超过32位
      */
     public $BizName;
 
@@ -52,9 +52,9 @@ class CreateBizConfigRequest extends AbstractModel
     public $ModerationCategories;
 
     /**
-     * @param string $BizType 业务ID
-     * @param MediaModerationConfig $MediaModeration 审核分类信息
-     * @param string $BizName 页面名称
+     * @param string $BizType 业务类型，仅限英文字母、数字和下划线（_）组成，长度不超过8位
+     * @param MediaModerationConfig $MediaModeration 配置信息，
+     * @param string $BizName 业务名称，用于标识业务场景，长度不超过32位
      * @param array $ModerationCategories 审核内容，可选：Polity (政治); Porn (色情); Illegal(违法);Abuse (谩骂); Terror (暴恐); Ad (广告);
      */
     function __construct()

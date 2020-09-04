@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBandwidthRange(array $BandwidthRange) 设置带宽范围。
  * @method float getBandwidthUnitPrice() 获取在对应带宽范围内的单宽单价，单位：元/Mbps/天。
  * @method void setBandwidthUnitPrice(float $BandwidthUnitPrice) 设置在对应带宽范围内的单宽单价，单位：元/Mbps/天。
+ * @method float getDiscountBandwidthUnitPrice() 获取带宽折扣价，单位：元/Mbps/天。
+ * @method void setDiscountBandwidthUnitPrice(float $DiscountBandwidthUnitPrice) 设置带宽折扣价，单位：元/Mbps/天。
  */
 class BandwidthPriceGradient extends AbstractModel
 {
@@ -38,8 +40,14 @@ class BandwidthPriceGradient extends AbstractModel
     public $BandwidthUnitPrice;
 
     /**
+     * @var float 带宽折扣价，单位：元/Mbps/天。
+     */
+    public $DiscountBandwidthUnitPrice;
+
+    /**
      * @param array $BandwidthRange 带宽范围。
      * @param float $BandwidthUnitPrice 在对应带宽范围内的单宽单价，单位：元/Mbps/天。
+     * @param float $DiscountBandwidthUnitPrice 带宽折扣价，单位：元/Mbps/天。
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class BandwidthPriceGradient extends AbstractModel
 
         if (array_key_exists("BandwidthUnitPrice",$param) and $param["BandwidthUnitPrice"] !== null) {
             $this->BandwidthUnitPrice = $param["BandwidthUnitPrice"];
+        }
+
+        if (array_key_exists("DiscountBandwidthUnitPrice",$param) and $param["DiscountBandwidthUnitPrice"] !== null) {
+            $this->DiscountBandwidthUnitPrice = $param["DiscountBandwidthUnitPrice"];
         }
     }
 }

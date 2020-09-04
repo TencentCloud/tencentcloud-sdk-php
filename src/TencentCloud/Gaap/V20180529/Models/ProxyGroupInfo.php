@@ -56,6 +56,10 @@ MOVING表示通道迁移中。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(integer $CreateTime) 设置创建时间
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getProxyType() 获取通道组是否包含微软通道
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProxyType(integer $ProxyType) 设置通道组是否包含微软通道
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ProxyGroupInfo extends AbstractModel
 {
@@ -114,6 +118,12 @@ MOVING表示通道迁移中。
     public $CreateTime;
 
     /**
+     * @var integer 通道组是否包含微软通道
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ProxyType;
+
+    /**
      * @param string $GroupId 通道组id
      * @param string $Domain 通道组域名
 注意：此字段可能返回 null，表示取不到有效值。
@@ -131,6 +141,8 @@ MOVING表示通道迁移中。
      * @param string $Version 通道组版本
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CreateTime 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ProxyType 通道组是否包含微软通道
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -186,6 +198,10 @@ MOVING表示通道迁移中。
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
             $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("ProxyType",$param) and $param["ProxyType"] !== null) {
+            $this->ProxyType = $param["ProxyType"];
         }
     }
 }

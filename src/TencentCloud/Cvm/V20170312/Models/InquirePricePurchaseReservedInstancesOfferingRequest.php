@@ -18,7 +18,7 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * PurchaseReservedInstancesOffering请求参数结构体
+ * InquirePricePurchaseReservedInstancesOffering请求参数结构体
  *
  * @method integer getInstanceCount() 获取购买预留实例计费数量
  * @method void setInstanceCount(integer $InstanceCount) 设置购买预留实例计费数量
@@ -31,7 +31,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getReservedInstanceName() 获取预留实例显示名称。<br><li>不指定实例显示名称则默认显示‘未命名’。</li><li>最多支持60个字符（包含模式串）。</li>
  * @method void setReservedInstanceName(string $ReservedInstanceName) 设置预留实例显示名称。<br><li>不指定实例显示名称则默认显示‘未命名’。</li><li>最多支持60个字符（包含模式串）。</li>
  */
-class PurchaseReservedInstancesOfferingRequest extends AbstractModel
+class InquirePricePurchaseReservedInstancesOfferingRequest extends AbstractModel
 {
     /**
      * @var integer 购买预留实例计费数量

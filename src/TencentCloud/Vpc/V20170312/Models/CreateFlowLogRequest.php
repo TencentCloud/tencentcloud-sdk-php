@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCloudLogId(string $CloudLogId) 设置流日志存储ID
  * @method string getFlowLogDescription() 获取流日志实例描述
  * @method void setFlowLogDescription(string $FlowLogDescription) 设置流日志实例描述
+ * @method array getTags() 获取指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
+ * @method void setTags(array $Tags) 设置指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
  */
 class CreateFlowLogRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class CreateFlowLogRequest extends AbstractModel
     public $FlowLogDescription;
 
     /**
+     * @var array 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
+     */
+    public $Tags;
+
+    /**
      * @param string $VpcId 私用网络ID或者统一ID，建议使用统一ID
      * @param string $FlowLogName 流日志实例名字
      * @param string $ResourceType 流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE
@@ -80,6 +87,7 @@ class CreateFlowLogRequest extends AbstractModel
      * @param string $TrafficType 流日志采集类型，ACCEPT|REJECT|ALL
      * @param string $CloudLogId 流日志存储ID
      * @param string $FlowLogDescription 流日志实例描述
+     * @param array $Tags 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
      */
     function __construct()
     {
@@ -120,6 +128,15 @@ class CreateFlowLogRequest extends AbstractModel
 
         if (array_key_exists("FlowLogDescription",$param) and $param["FlowLogDescription"] !== null) {
             $this->FlowLogDescription = $param["FlowLogDescription"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

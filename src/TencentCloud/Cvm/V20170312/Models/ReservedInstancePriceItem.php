@@ -18,7 +18,7 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 基于付费类型的预留实例相关价格信息
+ * 基于付费类型的预留实例相关价格信息。预留实例当前只针对国际站白名单用户开放。
  *
  * @method string getOfferingType() 获取付费类型，如："All Upfront","Partial Upfront","No Upfront"
  * @method void setOfferingType(string $OfferingType) 设置付费类型，如："All Upfront","Partial Upfront","No Upfront"

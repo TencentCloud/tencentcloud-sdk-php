@@ -18,7 +18,7 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 预留实例类型信息。
+ * 预留实例类型信息。预留实例当前只针对国际站白名单用户开放。
  *
  * @method string getInstanceType() 获取实例类型。
  * @method void setInstanceType(string $InstanceType) 设置实例类型。

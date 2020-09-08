@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDomainName(string $DomainName) 设置推流域名。
  * @method string getAppName() 获取推流路径。
  * @method void setAppName(string $AppName) 设置推流路径。
- * @method integer getEndTime() 获取录制任务结束时间，Unix时间戳。设置时间必须大于StartTime，且不能超过从当前时刻开始24小时之内的时间。
- * @method void setEndTime(integer $EndTime) 设置录制任务结束时间，Unix时间戳。设置时间必须大于StartTime，且不能超过从当前时刻开始24小时之内的时间。
- * @method integer getStartTime() 获取录制任务开始时间，Unix时间戳。如果不填表示立即启动录制。不超过从当前时间开始24小时之内的时间。
- * @method void setStartTime(integer $StartTime) 设置录制任务开始时间，Unix时间戳。如果不填表示立即启动录制。不超过从当前时间开始24小时之内的时间。
+ * @method integer getEndTime() 获取录制任务结束时间，Unix时间戳。设置时间必须大于StartTime，且EndTime - StartTime不能超过24小时。
+ * @method void setEndTime(integer $EndTime) 设置录制任务结束时间，Unix时间戳。设置时间必须大于StartTime，且EndTime - StartTime不能超过24小时。
+ * @method integer getStartTime() 获取录制任务开始时间，Unix时间戳。如果不填表示立即启动录制。不超过从当前时间开始6天之内的时间。
+ * @method void setStartTime(integer $StartTime) 设置录制任务开始时间，Unix时间戳。如果不填表示立即启动录制。不超过从当前时间开始6天之内的时间。
  * @method integer getStreamType() 获取推流类型，默认0。取值：
 0-直播推流。
 1-合成流，即 A+B=C 类型混流。
@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
 1-合成流，即 A+B=C 类型混流。
  * @method integer getTemplateId() 获取录制模板ID，CreateLiveRecordTemplate 返回值。如果不填或者传入错误ID，则默认录制HLS格式、永久存储。
  * @method void setTemplateId(integer $TemplateId) 设置录制模板ID，CreateLiveRecordTemplate 返回值。如果不填或者传入错误ID，则默认录制HLS格式、永久存储。
- * @method string getExtension() 获取扩展字段，默认空。
- * @method void setExtension(string $Extension) 设置扩展字段，默认空。
+ * @method string getExtension() 获取扩展字段，暂无定义。默认为空。
+ * @method void setExtension(string $Extension) 设置扩展字段，暂无定义。默认为空。
  */
 class CreateRecordTaskRequest extends AbstractModel
 {
@@ -59,12 +59,12 @@ class CreateRecordTaskRequest extends AbstractModel
     public $AppName;
 
     /**
-     * @var integer 录制任务结束时间，Unix时间戳。设置时间必须大于StartTime，且不能超过从当前时刻开始24小时之内的时间。
+     * @var integer 录制任务结束时间，Unix时间戳。设置时间必须大于StartTime，且EndTime - StartTime不能超过24小时。
      */
     public $EndTime;
 
     /**
-     * @var integer 录制任务开始时间，Unix时间戳。如果不填表示立即启动录制。不超过从当前时间开始24小时之内的时间。
+     * @var integer 录制任务开始时间，Unix时间戳。如果不填表示立即启动录制。不超过从当前时间开始6天之内的时间。
      */
     public $StartTime;
 
@@ -81,7 +81,7 @@ class CreateRecordTaskRequest extends AbstractModel
     public $TemplateId;
 
     /**
-     * @var string 扩展字段，默认空。
+     * @var string 扩展字段，暂无定义。默认为空。
      */
     public $Extension;
 
@@ -89,13 +89,13 @@ class CreateRecordTaskRequest extends AbstractModel
      * @param string $StreamName 流名称。
      * @param string $DomainName 推流域名。
      * @param string $AppName 推流路径。
-     * @param integer $EndTime 录制任务结束时间，Unix时间戳。设置时间必须大于StartTime，且不能超过从当前时刻开始24小时之内的时间。
-     * @param integer $StartTime 录制任务开始时间，Unix时间戳。如果不填表示立即启动录制。不超过从当前时间开始24小时之内的时间。
+     * @param integer $EndTime 录制任务结束时间，Unix时间戳。设置时间必须大于StartTime，且EndTime - StartTime不能超过24小时。
+     * @param integer $StartTime 录制任务开始时间，Unix时间戳。如果不填表示立即启动录制。不超过从当前时间开始6天之内的时间。
      * @param integer $StreamType 推流类型，默认0。取值：
 0-直播推流。
 1-合成流，即 A+B=C 类型混流。
      * @param integer $TemplateId 录制模板ID，CreateLiveRecordTemplate 返回值。如果不填或者传入错误ID，则默认录制HLS格式、永久存储。
-     * @param string $Extension 扩展字段，默认空。
+     * @param string $Extension 扩展字段，暂无定义。默认为空。
      */
     function __construct()
     {

@@ -18,7 +18,7 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 预留实例相关实例族信息。
+ * 预留实例相关实例族信息。预留实例当前只针对国际站白名单用户开放。
  *
  * @method string getInstanceFamily() 获取实例族。
  * @method void setInstanceFamily(string $InstanceFamily) 设置实例族。

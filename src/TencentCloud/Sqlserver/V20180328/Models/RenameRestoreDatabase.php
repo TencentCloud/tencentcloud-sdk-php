@@ -21,25 +21,29 @@ use TencentCloud\Common\AbstractModel;
  * 用于RestoreInstance，RollbackInstance，CreateMigration 等接口；对恢复的库进行重命名，且支持选择要恢复的库。
  *
  * @method string getOldName() 获取库的名字，如果oldName不存在则返回失败。
+在用于离线迁移任务时可不填。
  * @method void setOldName(string $OldName) 设置库的名字，如果oldName不存在则返回失败。
- * @method string getNewName() 获取库的新名字，如果不填则按照系统默认方式命名恢复的库
- * @method void setNewName(string $NewName) 设置库的新名字，如果不填则按照系统默认方式命名恢复的库
+在用于离线迁移任务时可不填。
+ * @method string getNewName() 获取库的新名字，如果不填则按照系统默认方式命名恢复的库。在用于离线迁移任务时，不填则按照OldName命名，OldName和NewName不能同时不填。
+ * @method void setNewName(string $NewName) 设置库的新名字，如果不填则按照系统默认方式命名恢复的库。在用于离线迁移任务时，不填则按照OldName命名，OldName和NewName不能同时不填。
  */
 class RenameRestoreDatabase extends AbstractModel
 {
     /**
      * @var string 库的名字，如果oldName不存在则返回失败。
+在用于离线迁移任务时可不填。
      */
     public $OldName;
 
     /**
-     * @var string 库的新名字，如果不填则按照系统默认方式命名恢复的库
+     * @var string 库的新名字，如果不填则按照系统默认方式命名恢复的库。在用于离线迁移任务时，不填则按照OldName命名，OldName和NewName不能同时不填。
      */
     public $NewName;
 
     /**
      * @param string $OldName 库的名字，如果oldName不存在则返回失败。
-     * @param string $NewName 库的新名字，如果不填则按照系统默认方式命名恢复的库
+在用于离线迁移任务时可不填。
+     * @param string $NewName 库的新名字，如果不填则按照系统默认方式命名恢复的库。在用于离线迁移任务时，不填则按照OldName命名，OldName和NewName不能同时不填。
      */
     function __construct()
     {

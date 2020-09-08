@@ -18,7 +18,7 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 预留实例相关价格信息
+ * 预留实例相关价格信息。预留实例当前只针对国际站白名单用户开放。
  *
  * @method float getOriginalFixedPrice() 获取预支合计费用的原价，单位：元。
  * @method void setOriginalFixedPrice(float $OriginalFixedPrice) 设置预支合计费用的原价，单位：元。

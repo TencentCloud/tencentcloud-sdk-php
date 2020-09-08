@@ -14,23 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Live\V20180801\Models;
+namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateRecordTask返回参数结构体
+ * DescribeClusterKubeconfig返回参数结构体
  *
- * @method string getTaskId() 获取任务ID，全局唯一标识录制任务。返回TaskId字段说明录制任务创建成功。
- * @method void setTaskId(string $TaskId) 设置任务ID，全局唯一标识录制任务。返回TaskId字段说明录制任务创建成功。
+ * @method string getKubeconfig() 获取子账户kubeconfig文件，可用于直接访问集群kube-apiserver
+ * @method void setKubeconfig(string $Kubeconfig) 设置子账户kubeconfig文件，可用于直接访问集群kube-apiserver
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class CreateRecordTaskResponse extends AbstractModel
+class DescribeClusterKubeconfigResponse extends AbstractModel
 {
     /**
-     * @var string 任务ID，全局唯一标识录制任务。返回TaskId字段说明录制任务创建成功。
+     * @var string 子账户kubeconfig文件，可用于直接访问集群kube-apiserver
      */
-    public $TaskId;
+    public $Kubeconfig;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +38,7 @@ class CreateRecordTaskResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $TaskId 任务ID，全局唯一标识录制任务。返回TaskId字段说明录制任务创建成功。
+     * @param string $Kubeconfig 子账户kubeconfig文件，可用于直接访问集群kube-apiserver
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,8 +54,8 @@ class CreateRecordTaskResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
-            $this->TaskId = $param["TaskId"];
+        if (array_key_exists("Kubeconfig",$param) and $param["Kubeconfig"] !== null) {
+            $this->Kubeconfig = $param["Kubeconfig"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

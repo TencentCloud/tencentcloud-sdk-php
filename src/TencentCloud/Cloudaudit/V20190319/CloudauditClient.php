@@ -35,6 +35,7 @@ use TencentCloud\Cloudaudit\V20190319\Models as Models;
  * @method Models\ListAuditsResponse ListAudits(Models\ListAuditsRequest $req) 查询跟踪集概要
  * @method Models\ListCmqEnableRegionResponse ListCmqEnableRegion(Models\ListCmqEnableRegionRequest $req) 查询云审计支持的cmq的可用区
  * @method Models\ListCosEnableRegionResponse ListCosEnableRegion(Models\ListCosEnableRegionRequest $req) 查询云审计支持的cos可用区
+ * @method Models\ListKeyAliasByRegionResponse ListKeyAliasByRegion(Models\ListKeyAliasByRegionRequest $req) 根据地域获取KMS密钥别名
  * @method Models\LookUpEventsResponse LookUpEvents(Models\LookUpEventsRequest $req) 用于对操作日志进行检索，便于用户进行查询相关的操作信息。
  * @method Models\StartLoggingResponse StartLogging(Models\StartLoggingRequest $req) 开启跟踪集
  * @method Models\StopLoggingResponse StopLogging(Models\StopLoggingRequest $req) 关闭跟踪集

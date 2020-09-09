@@ -88,6 +88,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceType(string $InstanceType) 设置类型
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getFeatures() 获取表示该实例支持的特性。FEATURE_SUBNET_ACL:表示acl策略支持设置子网。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFeatures(array $Features) 设置表示该实例支持的特性。FEATURE_SUBNET_ACL:表示acl策略支持设置子网。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceAttributesResponse extends AbstractModel
 {
@@ -234,6 +238,12 @@ class InstanceAttributesResponse extends AbstractModel
     public $InstanceType;
 
     /**
+     * @var array 表示该实例支持的特性。FEATURE_SUBNET_ACL:表示acl策略支持设置子网。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Features;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $InstanceName 实例名称
      * @param array $VipList 接入点 VIP 列表信息
@@ -267,6 +277,8 @@ class InstanceAttributesResponse extends AbstractModel
      * @param integer $Cvm 售卖类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceType 类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Features 表示该实例支持的特性。FEATURE_SUBNET_ACL:表示acl策略支持设置子网。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -399,6 +411,10 @@ class InstanceAttributesResponse extends AbstractModel
 
         if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
             $this->InstanceType = $param["InstanceType"];
+        }
+
+        if (array_key_exists("Features",$param) and $param["Features"] !== null) {
+            $this->Features = $param["Features"];
         }
     }
 }

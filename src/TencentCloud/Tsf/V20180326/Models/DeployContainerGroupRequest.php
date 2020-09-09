@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getGroupId() 获取部署组ID，分组唯一标识
  * @method void setGroupId(string $GroupId) 设置部署组ID，分组唯一标识
- * @method string getServer() 获取镜像server
- * @method void setServer(string $Server) 设置镜像server
  * @method string getTagName() 获取镜像版本名称,如v1
  * @method void setTagName(string $TagName) 设置镜像版本名称,如v1
  * @method integer getInstanceNum() 获取实例数量
  * @method void setInstanceNum(integer $InstanceNum) 设置实例数量
+ * @method string getServer() 获取镜像server
+ * @method void setServer(string $Server) 设置镜像server
  * @method string getReponame() 获取旧版镜像名，如/tsf/nginx
  * @method void setReponame(string $Reponame) 设置旧版镜像名，如/tsf/nginx
  * @method string getCpuLimit() 获取业务容器最大的 CPU 核数，对应 K8S 的 limit；不填时默认为 request 的 2 倍
@@ -83,11 +83,6 @@ class DeployContainerGroupRequest extends AbstractModel
     public $GroupId;
 
     /**
-     * @var string 镜像server
-     */
-    public $Server;
-
-    /**
      * @var string 镜像版本名称,如v1
      */
     public $TagName;
@@ -96,6 +91,11 @@ class DeployContainerGroupRequest extends AbstractModel
      * @var integer 实例数量
      */
     public $InstanceNum;
+
+    /**
+     * @var string 镜像server
+     */
+    public $Server;
 
     /**
      * @var string 旧版镜像名，如/tsf/nginx
@@ -214,9 +214,9 @@ class DeployContainerGroupRequest extends AbstractModel
 
     /**
      * @param string $GroupId 部署组ID，分组唯一标识
-     * @param string $Server 镜像server
      * @param string $TagName 镜像版本名称,如v1
      * @param integer $InstanceNum 实例数量
+     * @param string $Server 镜像server
      * @param string $Reponame 旧版镜像名，如/tsf/nginx
      * @param string $CpuLimit 业务容器最大的 CPU 核数，对应 K8S 的 limit；不填时默认为 request 的 2 倍
      * @param string $MemLimit 业务容器最大的内存 MiB 数，对应 K8S 的 limit；不填时默认为 request 的 2 倍
@@ -258,16 +258,16 @@ class DeployContainerGroupRequest extends AbstractModel
             $this->GroupId = $param["GroupId"];
         }
 
-        if (array_key_exists("Server",$param) and $param["Server"] !== null) {
-            $this->Server = $param["Server"];
-        }
-
         if (array_key_exists("TagName",$param) and $param["TagName"] !== null) {
             $this->TagName = $param["TagName"];
         }
 
         if (array_key_exists("InstanceNum",$param) and $param["InstanceNum"] !== null) {
             $this->InstanceNum = $param["InstanceNum"];
+        }
+
+        if (array_key_exists("Server",$param) and $param["Server"] !== null) {
+            $this->Server = $param["Server"];
         }
 
         if (array_key_exists("Reponame",$param) and $param["Reponame"] !== null) {

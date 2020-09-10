@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
 1、策略语法参照[ CAM 策略语法](https://cloud.tencent.com/document/product/598/10603)。
 2、策略中不能包含 principal 元素。
 3、该参数需要做urlencode。
- * @method integer getDurationSeconds() 获取指定临时证书的有效期，单位：秒，默认1800秒，最长可设定有效期为7200秒。
- * @method void setDurationSeconds(integer $DurationSeconds) 设置指定临时证书的有效期，单位：秒，默认1800秒，最长可设定有效期为7200秒。
+ * @method integer getDurationSeconds() 获取指定临时证书的有效期，单位：秒，默认1800秒，主账号最长可设定有效期为7200秒，子账号最长可设定有效期为129600秒。
+ * @method void setDurationSeconds(integer $DurationSeconds) 设置指定临时证书的有效期，单位：秒，默认1800秒，主账号最长可设定有效期为7200秒，子账号最长可设定有效期为129600秒。
  */
 class GetFederationTokenRequest extends AbstractModel
 {
@@ -52,7 +52,7 @@ class GetFederationTokenRequest extends AbstractModel
     public $Policy;
 
     /**
-     * @var integer 指定临时证书的有效期，单位：秒，默认1800秒，最长可设定有效期为7200秒。
+     * @var integer 指定临时证书的有效期，单位：秒，默认1800秒，主账号最长可设定有效期为7200秒，子账号最长可设定有效期为129600秒。
      */
     public $DurationSeconds;
 
@@ -63,7 +63,7 @@ class GetFederationTokenRequest extends AbstractModel
 1、策略语法参照[ CAM 策略语法](https://cloud.tencent.com/document/product/598/10603)。
 2、策略中不能包含 principal 元素。
 3、该参数需要做urlencode。
-     * @param integer $DurationSeconds 指定临时证书的有效期，单位：秒，默认1800秒，最长可设定有效期为7200秒。
+     * @param integer $DurationSeconds 指定临时证书的有效期，单位：秒，默认1800秒，主账号最长可设定有效期为7200秒，子账号最长可设定有效期为129600秒。
      */
     function __construct()
     {

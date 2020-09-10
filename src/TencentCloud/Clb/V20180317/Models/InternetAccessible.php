@@ -21,10 +21,10 @@ use TencentCloud\Common\AbstractModel;
  * 网络计费模式，最大出带宽
  *
  * @method string getInternetChargeType() 获取TRAFFIC_POSTPAID_BY_HOUR 按流量按小时后计费 ; BANDWIDTH_POSTPAID_BY_HOUR 按带宽按小时后计费;
-BANDWIDTH_PACKAGE 按带宽包计费（当前，只有指定运营商时才支持此种计费模式）
+BANDWIDTH_PACKAGE 按带宽包计费;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInternetChargeType(string $InternetChargeType) 设置TRAFFIC_POSTPAID_BY_HOUR 按流量按小时后计费 ; BANDWIDTH_POSTPAID_BY_HOUR 按带宽按小时后计费;
-BANDWIDTH_PACKAGE 按带宽包计费（当前，只有指定运营商时才支持此种计费模式）
+BANDWIDTH_PACKAGE 按带宽包计费;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getInternetMaxBandwidthOut() 获取最大出带宽，单位Mbps，范围支持0到2048，仅对公网属性的LB生效，默认值 10
 注意：此字段可能返回 null，表示取不到有效值。
@@ -39,7 +39,7 @@ class InternetAccessible extends AbstractModel
 {
     /**
      * @var string TRAFFIC_POSTPAID_BY_HOUR 按流量按小时后计费 ; BANDWIDTH_POSTPAID_BY_HOUR 按带宽按小时后计费;
-BANDWIDTH_PACKAGE 按带宽包计费（当前，只有指定运营商时才支持此种计费模式）
+BANDWIDTH_PACKAGE 按带宽包计费;
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InternetChargeType;
@@ -58,7 +58,7 @@ BANDWIDTH_PACKAGE 按带宽包计费（当前，只有指定运营商时才支�
 
     /**
      * @param string $InternetChargeType TRAFFIC_POSTPAID_BY_HOUR 按流量按小时后计费 ; BANDWIDTH_POSTPAID_BY_HOUR 按带宽按小时后计费;
-BANDWIDTH_PACKAGE 按带宽包计费（当前，只有指定运营商时才支持此种计费模式）
+BANDWIDTH_PACKAGE 按带宽包计费;
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $InternetMaxBandwidthOut 最大出带宽，单位Mbps，范围支持0到2048，仅对公网属性的LB生效，默认值 10
 注意：此字段可能返回 null，表示取不到有效值。

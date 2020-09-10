@@ -80,12 +80,24 @@ origin: 保持原始编码格式
 baseline/main/high。默认baseline
  * @method void setProfile(string $Profile) 设置编码质量：
 baseline/main/high。默认baseline
- * @method integer getBitrateToOrig() 获取是否不超过原始码率，0：否，1：是。默认0。
- * @method void setBitrateToOrig(integer $BitrateToOrig) 设置是否不超过原始码率，0：否，1：是。默认0。
- * @method integer getHeightToOrig() 获取是否不超过原始高，0：否，1：是。默认0。
- * @method void setHeightToOrig(integer $HeightToOrig) 设置是否不超过原始高，0：否，1：是。默认0。
- * @method integer getFpsToOrig() 获取是否不超过原始帧率，0：否，1：是。默认0。
- * @method void setFpsToOrig(integer $FpsToOrig) 设置是否不超过原始帧率，0：否，1：是。默认0。
+ * @method integer getBitrateToOrig() 获取当设置的码率>原始码率时，是否以原始码率为准。
+0：否， 1：是
+默认 0。
+ * @method void setBitrateToOrig(integer $BitrateToOrig) 设置当设置的码率>原始码率时，是否以原始码率为准。
+0：否， 1：是
+默认 0。
+ * @method integer getHeightToOrig() 获取当设置的高度>原始高度时，是否以原始高度为准。
+0：否， 1：是
+默认 0。
+ * @method void setHeightToOrig(integer $HeightToOrig) 设置当设置的高度>原始高度时，是否以原始高度为准。
+0：否， 1：是
+默认 0。
+ * @method integer getFpsToOrig() 获取当设置的帧率>原始帧率时，是否以原始帧率为准。
+0：否， 1：是
+默认 0。
+ * @method void setFpsToOrig(integer $FpsToOrig) 设置当设置的帧率>原始帧率时，是否以原始帧率为准。
+0：否， 1：是
+默认 0。
  * @method integer getAiTransCode() 获取是否是极速高清模板，0：否，1：是。默认0。
  * @method void setAiTransCode(integer $AiTransCode) 设置是否是极速高清模板，0：否，1：是。默认0。
  * @method float getAdaptBitratePercent() 获取极速高清视频码率压缩比。
@@ -188,17 +200,23 @@ baseline/main/high。默认baseline
     public $Profile;
 
     /**
-     * @var integer 是否不超过原始码率，0：否，1：是。默认0。
+     * @var integer 当设置的码率>原始码率时，是否以原始码率为准。
+0：否， 1：是
+默认 0。
      */
     public $BitrateToOrig;
 
     /**
-     * @var integer 是否不超过原始高，0：否，1：是。默认0。
+     * @var integer 当设置的高度>原始高度时，是否以原始高度为准。
+0：否， 1：是
+默认 0。
      */
     public $HeightToOrig;
 
     /**
-     * @var integer 是否不超过原始帧率，0：否，1：是。默认0。
+     * @var integer 当设置的帧率>原始帧率时，是否以原始帧率为准。
+0：否， 1：是
+默认 0。
      */
     public $FpsToOrig;
 
@@ -251,9 +269,15 @@ origin: 保持原始编码格式
 可取值：0，90，180，270
      * @param string $Profile 编码质量：
 baseline/main/high。默认baseline
-     * @param integer $BitrateToOrig 是否不超过原始码率，0：否，1：是。默认0。
-     * @param integer $HeightToOrig 是否不超过原始高，0：否，1：是。默认0。
-     * @param integer $FpsToOrig 是否不超过原始帧率，0：否，1：是。默认0。
+     * @param integer $BitrateToOrig 当设置的码率>原始码率时，是否以原始码率为准。
+0：否， 1：是
+默认 0。
+     * @param integer $HeightToOrig 当设置的高度>原始高度时，是否以原始高度为准。
+0：否， 1：是
+默认 0。
+     * @param integer $FpsToOrig 当设置的帧率>原始帧率时，是否以原始帧率为准。
+0：否， 1：是
+默认 0。
      * @param integer $AiTransCode 是否是极速高清模板，0：否，1：是。默认0。
      * @param float $AdaptBitratePercent 极速高清视频码率压缩比。
 极速高清目标码率=VideoBitrate * (1-AdaptBitratePercent)

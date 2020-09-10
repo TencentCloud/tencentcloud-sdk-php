@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 临时证书
  *
- * @method string getToken() 获取token
- * @method void setToken(string $Token) 设置token
- * @method string getTmpSecretId() 获取临时证书密钥ID
- * @method void setTmpSecretId(string $TmpSecretId) 设置临时证书密钥ID
- * @method string getTmpSecretKey() 获取临时证书密钥Key
- * @method void setTmpSecretKey(string $TmpSecretKey) 设置临时证书密钥Key
+ * @method string getToken() 获取token。token长度和绑定的策略有关，最长不超过4096字节。
+ * @method void setToken(string $Token) 设置token。token长度和绑定的策略有关，最长不超过4096字节。
+ * @method string getTmpSecretId() 获取临时证书密钥ID。最长不超过1024字节。
+ * @method void setTmpSecretId(string $TmpSecretId) 设置临时证书密钥ID。最长不超过1024字节。
+ * @method string getTmpSecretKey() 获取临时证书密钥Key。最长不超过1024字节。
+ * @method void setTmpSecretKey(string $TmpSecretKey) 设置临时证书密钥Key。最长不超过1024字节。
  */
 class Credentials extends AbstractModel
 {
     /**
-     * @var string token
+     * @var string token。token长度和绑定的策略有关，最长不超过4096字节。
      */
     public $Token;
 
     /**
-     * @var string 临时证书密钥ID
+     * @var string 临时证书密钥ID。最长不超过1024字节。
      */
     public $TmpSecretId;
 
     /**
-     * @var string 临时证书密钥Key
+     * @var string 临时证书密钥Key。最长不超过1024字节。
      */
     public $TmpSecretKey;
 
     /**
-     * @param string $Token token
-     * @param string $TmpSecretId 临时证书密钥ID
-     * @param string $TmpSecretKey 临时证书密钥Key
+     * @param string $Token token。token长度和绑定的策略有关，最长不超过4096字节。
+     * @param string $TmpSecretId 临时证书密钥ID。最长不超过1024字节。
+     * @param string $TmpSecretKey 临时证书密钥Key。最长不超过1024字节。
      */
     function __construct()
     {

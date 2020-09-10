@@ -23,8 +23,19 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Lighthouse\V20200324\Models as Models;
 
 /**
+ * @method Models\CreateFirewallRulesResponse CreateFirewallRules(Models\CreateFirewallRulesRequest $req) 本接口（CreateFirewallRules）用于在实例上添加防火墙规则。
+
+* Protocol 字段支持输入 TCP，UDP，或 ALL。
+
+* Port 字段允许输入 ALL，或者一个单独的端口号，或者用逗号分隔的离散端口号，或者用减号分隔的两个端口号代表的端口范围。当 Port 为范围时，减号分隔的第一个端口号小于第二个端口号。当 Protocol 字段不是 TCP 或 UDP 时，Port 字段只能为空或 ALL。Port 字段长度不得超过 64。
+ * @method Models\DeleteFirewallRulesResponse DeleteFirewallRules(Models\DeleteFirewallRulesRequest $req) 本接口（DeleteFirewallRules）用于删除实例的防火墙规则。
+
+* Protocol 字段支持输入 TCP，UDP，或 ALL。
+
+* Port 字段允许输入 ALL，或者一个单独的端口号，或者用逗号分隔的离散端口号，或者用减号分隔的两个端口号代表的端口范围。当 Port 为范围时，减号分隔的第一个端口号小于第二个端口号。当 Protocol 字段不是 TCP 或 UDP 时，Port 字段只能为空或 ALL。Port 字段长度不得超过 64。
  * @method Models\DescribeBlueprintsResponse DescribeBlueprints(Models\DescribeBlueprintsRequest $req) 本接口（DescribeBlueprints）用于查询镜像信息。
  * @method Models\DescribeBundlesResponse DescribeBundles(Models\DescribeBundlesRequest $req) 本接口（DescribeBundles）用于查询套餐信息。
+ * @method Models\DescribeFirewallRulesResponse DescribeFirewallRules(Models\DescribeFirewallRulesRequest $req) 本接口（DescribeFirewallRules）用于查询实例的防火墙规则。
  * @method Models\DescribeInstancesResponse DescribeInstances(Models\DescribeInstancesRequest $req) 本接口（DescribeInstances）用于查询一个或多个实例的详细信息。
 
 * 可以根据实例 ID、实例名称或者实例的内网 IP 查询实例的详细信息。

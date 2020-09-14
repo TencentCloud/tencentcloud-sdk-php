@@ -60,6 +60,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOmittedDurations(array $OmittedDurations) 设置拼接视频中被忽略的时间段，只有开启视频拼接功能的时候，这个参数才是有效的
  * @method array getVideoInfos() 获取录制视频列表
  * @method void setVideoInfos(array $VideoInfos) 设置录制视频列表
+ * @method string getReplayUrl() 获取回放URL，需配合信令播放器使用。此字段仅适用于`视频生成模式`
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setReplayUrl(string $ReplayUrl) 设置回放URL，需配合信令播放器使用。此字段仅适用于`视频生成模式`
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -134,6 +138,12 @@ class DescribeOnlineRecordResponse extends AbstractModel
     public $VideoInfos;
 
     /**
+     * @var string 回放URL，需配合信令播放器使用。此字段仅适用于`视频生成模式`
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ReplayUrl;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -159,6 +169,8 @@ class DescribeOnlineRecordResponse extends AbstractModel
      * @param integer $ExceptionCnt 录制过程中出现异常的次数
      * @param array $OmittedDurations 拼接视频中被忽略的时间段，只有开启视频拼接功能的时候，这个参数才是有效的
      * @param array $VideoInfos 录制视频列表
+     * @param string $ReplayUrl 回放URL，需配合信令播放器使用。此字段仅适用于`视频生成模式`
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -230,6 +242,10 @@ class DescribeOnlineRecordResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->VideoInfos, $obj);
             }
+        }
+
+        if (array_key_exists("ReplayUrl",$param) and $param["ReplayUrl"] !== null) {
+            $this->ReplayUrl = $param["ReplayUrl"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

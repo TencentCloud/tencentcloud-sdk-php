@@ -21,9 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * DescribeStreamDayPlayInfoList请求参数结构体
  *
  * @method string getDayTime() 获取日期，格式：YYYY-mm-dd。
-第二天凌晨3点出昨天的数据，建议在这个时间点之后查询最新数据。
+第二天凌晨3点出昨天的数据，建议在这个时间点之后查询最新数据。支持最近3个月的数据查询。
  * @method void setDayTime(string $DayTime) 设置日期，格式：YYYY-mm-dd。
-第二天凌晨3点出昨天的数据，建议在这个时间点之后查询最新数据。
+第二天凌晨3点出昨天的数据，建议在这个时间点之后查询最新数据。支持最近3个月的数据查询。
  * @method string getPlayDomain() 获取播放域名。
  * @method void setPlayDomain(string $PlayDomain) 设置播放域名。
  * @method integer getPageNum() 获取页号，范围[1,1000]，默认值是1。
@@ -35,7 +35,7 @@ class DescribeStreamDayPlayInfoListRequest extends AbstractModel
 {
     /**
      * @var string 日期，格式：YYYY-mm-dd。
-第二天凌晨3点出昨天的数据，建议在这个时间点之后查询最新数据。
+第二天凌晨3点出昨天的数据，建议在这个时间点之后查询最新数据。支持最近3个月的数据查询。
      */
     public $DayTime;
 
@@ -56,7 +56,7 @@ class DescribeStreamDayPlayInfoListRequest extends AbstractModel
 
     /**
      * @param string $DayTime 日期，格式：YYYY-mm-dd。
-第二天凌晨3点出昨天的数据，建议在这个时间点之后查询最新数据。
+第二天凌晨3点出昨天的数据，建议在这个时间点之后查询最新数据。支持最近3个月的数据查询。
      * @param string $PlayDomain 播放域名。
      * @param integer $PageNum 页号，范围[1,1000]，默认值是1。
      * @param integer $PageSize 每页个数，范围[100,1000]，默认值是1000。

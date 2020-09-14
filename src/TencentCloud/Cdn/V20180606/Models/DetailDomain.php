@@ -238,6 +238,10 @@ off：不支持
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAccessPort(array $AccessPort) 设置访问端口配置
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTag() 获取标签配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTag(array $Tag) 设置标签配置
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DetailDomain extends AbstractModel
 {
@@ -539,6 +543,12 @@ off：不支持
     public $AccessPort;
 
     /**
+     * @var array 标签配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Tag;
+
+    /**
      * @param string $ResourceId 域名 ID
      * @param integer $AppId 腾讯云账号ID
      * @param string $Domain 加速域名
@@ -647,6 +657,8 @@ off：不支持
      * @param UrlRedirect $UrlRedirect URL重定向配置
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $AccessPort 访问端口配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Tag 标签配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -881,6 +893,15 @@ off：不支持
 
         if (array_key_exists("AccessPort",$param) and $param["AccessPort"] !== null) {
             $this->AccessPort = $param["AccessPort"];
+        }
+
+        if (array_key_exists("Tag",$param) and $param["Tag"] !== null) {
+            $this->Tag = [];
+            foreach ($param["Tag"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tag, $obj);
+            }
         }
     }
 }

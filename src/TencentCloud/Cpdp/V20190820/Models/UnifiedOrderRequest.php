@@ -78,6 +78,10 @@ release: 现网环境
 sandbox: 沙箱环境
 development: 开发环境
 缺省: release
+ * @method string getWxAppId() 获取微信商户应用ID
+ * @method void setWxAppId(string $WxAppId) 设置微信商户应用ID
+ * @method string getWxSubAppId() 获取微信商户子应用ID
+ * @method void setWxSubAppId(string $WxSubAppId) 设置微信商户子应用ID
  */
 class UnifiedOrderRequest extends AbstractModel
 {
@@ -203,6 +207,16 @@ development: 开发环境
     public $MidasEnvironment;
 
     /**
+     * @var string 微信商户应用ID
+     */
+    public $WxAppId;
+
+    /**
+     * @var string 微信商户子应用ID
+     */
+    public $WxSubAppId;
+
+    /**
      * @param string $CurrencyType ISO 货币代码，CNY
      * @param string $MidasAppId 聚鑫分配的支付主MidasAppId
      * @param string $OutTradeNo 支付订单号，仅支持数字、字母、下划线（_）、横杠字符（-）、点（.）的组合
@@ -232,6 +246,8 @@ release: 现网环境
 sandbox: 沙箱环境
 development: 开发环境
 缺省: release
+     * @param string $WxAppId 微信商户应用ID
+     * @param string $WxSubAppId 微信商户子应用ID
      */
     function __construct()
     {
@@ -341,6 +357,14 @@ development: 开发环境
 
         if (array_key_exists("MidasEnvironment",$param) and $param["MidasEnvironment"] !== null) {
             $this->MidasEnvironment = $param["MidasEnvironment"];
+        }
+
+        if (array_key_exists("WxAppId",$param) and $param["WxAppId"] !== null) {
+            $this->WxAppId = $param["WxAppId"];
+        }
+
+        if (array_key_exists("WxSubAppId",$param) and $param["WxSubAppId"] !== null) {
+            $this->WxSubAppId = $param["WxSubAppId"];
         }
     }
 }

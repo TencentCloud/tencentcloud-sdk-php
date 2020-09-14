@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getStartTime() 获取起始时间点，格式为yyyy-mm-dd HH:MM:SS。
  * @method void setStartTime(string $StartTime) 设置起始时间点，格式为yyyy-mm-dd HH:MM:SS。
- * @method string getEndTime() 获取结束时间点，格式为yyyy-mm-dd HH:MM:SS，起始和结束时间跨度不支持超过31天。
- * @method void setEndTime(string $EndTime) 设置结束时间点，格式为yyyy-mm-dd HH:MM:SS，起始和结束时间跨度不支持超过31天。
+ * @method string getEndTime() 获取结束时间点，格式为yyyy-mm-dd HH:MM:SS，起始和结束时间跨度不支持超过31天。支持最近3年的数据查询
+ * @method void setEndTime(string $EndTime) 设置结束时间点，格式为yyyy-mm-dd HH:MM:SS，起始和结束时间跨度不支持超过31天。支持最近3年的数据查询
  * @method array getPlayDomains() 获取直播播放域名，若不填，表示总体数据。
  * @method void setPlayDomains(array $PlayDomains) 设置直播播放域名，若不填，表示总体数据。
  * @method string getMainlandOrOversea() 获取可选值：
@@ -57,7 +57,7 @@ class DescribeBillBandwidthAndFluxListRequest extends AbstractModel
     public $StartTime;
 
     /**
-     * @var string 结束时间点，格式为yyyy-mm-dd HH:MM:SS，起始和结束时间跨度不支持超过31天。
+     * @var string 结束时间点，格式为yyyy-mm-dd HH:MM:SS，起始和结束时间跨度不支持超过31天。支持最近3年的数据查询
      */
     public $EndTime;
 
@@ -91,7 +91,7 @@ Oversea：则查询国外数据，
 
     /**
      * @param string $StartTime 起始时间点，格式为yyyy-mm-dd HH:MM:SS。
-     * @param string $EndTime 结束时间点，格式为yyyy-mm-dd HH:MM:SS，起始和结束时间跨度不支持超过31天。
+     * @param string $EndTime 结束时间点，格式为yyyy-mm-dd HH:MM:SS，起始和结束时间跨度不支持超过31天。支持最近3年的数据查询
      * @param array $PlayDomains 直播播放域名，若不填，表示总体数据。
      * @param string $MainlandOrOversea 可选值：
 Mainland：查询国内数据，

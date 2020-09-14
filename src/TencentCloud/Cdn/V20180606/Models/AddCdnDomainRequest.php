@@ -96,6 +96,8 @@ global：全球加速
 使用中国境外加速、全球加速时，需要先开通中国境外加速服务
  * @method OriginPullTimeout getOriginPullTimeout() 获取回源超时配置
  * @method void setOriginPullTimeout(OriginPullTimeout $OriginPullTimeout) 设置回源超时配置
+ * @method array getTag() 获取标签配置
+ * @method void setTag(array $Tag) 设置标签配置
  */
 class AddCdnDomainRequest extends AbstractModel
 {
@@ -258,6 +260,11 @@ global：全球加速
     public $OriginPullTimeout;
 
     /**
+     * @var array 标签配置
+     */
+    public $Tag;
+
+    /**
      * @param string $Domain 域名
      * @param string $ServiceType 加速域名业务类型
 web：静态加速
@@ -296,6 +303,7 @@ overseas：中国境外加速
 global：全球加速
 使用中国境外加速、全球加速时，需要先开通中国境外加速服务
      * @param OriginPullTimeout $OriginPullTimeout 回源超时配置
+     * @param array $Tag 标签配置
      */
     function __construct()
     {
@@ -454,6 +462,15 @@ global：全球加速
         if (array_key_exists("OriginPullTimeout",$param) and $param["OriginPullTimeout"] !== null) {
             $this->OriginPullTimeout = new OriginPullTimeout();
             $this->OriginPullTimeout->deserialize($param["OriginPullTimeout"]);
+        }
+
+        if (array_key_exists("Tag",$param) and $param["Tag"] !== null) {
+            $this->Tag = [];
+            foreach ($param["Tag"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tag, $obj);
+            }
         }
     }
 }

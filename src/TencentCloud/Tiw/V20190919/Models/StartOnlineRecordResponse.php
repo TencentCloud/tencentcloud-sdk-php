@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * StartOnlineRecord返回参数结构体
  *
- * @method string getTaskId() 获取实时录制的任务Id
- * @method void setTaskId(string $TaskId) 设置实时录制的任务Id
+ * @method string getTaskId() 获取录制任务Id
+ * @method void setTaskId(string $TaskId) 设置录制任务Id
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class StartOnlineRecordResponse extends AbstractModel
 {
     /**
-     * @var string 实时录制的任务Id
+     * @var string 录制任务Id
      */
     public $TaskId;
 
@@ -38,7 +38,7 @@ class StartOnlineRecordResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $TaskId 实时录制的任务Id
+     * @param string $TaskId 录制任务Id
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

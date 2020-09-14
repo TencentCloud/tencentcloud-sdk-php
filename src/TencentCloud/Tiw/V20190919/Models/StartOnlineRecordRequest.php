@@ -24,23 +24,23 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSdkAppId(integer $SdkAppId) 设置客户的SdkAppId
  * @method integer getRoomId() 获取需要录制的房间号，取值范围: (1, 4294967295)
  * @method void setRoomId(integer $RoomId) 设置需要录制的房间号，取值范围: (1, 4294967295)
- * @method string getRecordUserId() 获取用于实时录制服务进房的用户ID，格式为`tic_record_user_${RoomId}_${Random}`，其中 `${RoomId} `与录制房间号对应，`${Random}`为一个随机字符串。
-该ID必须是一个单独的未在SDK中使用的ID，实时录制服务使用这个用户ID进入房间进行音视频与白板录制，若该ID和SDK中使用的ID重复，会导致SDK和录制服务互踢，影响正常录制。
- * @method void setRecordUserId(string $RecordUserId) 设置用于实时录制服务进房的用户ID，格式为`tic_record_user_${RoomId}_${Random}`，其中 `${RoomId} `与录制房间号对应，`${Random}`为一个随机字符串。
-该ID必须是一个单独的未在SDK中使用的ID，实时录制服务使用这个用户ID进入房间进行音视频与白板录制，若该ID和SDK中使用的ID重复，会导致SDK和录制服务互踢，影响正常录制。
+ * @method string getRecordUserId() 获取用于录制服务进房的用户ID，格式为`tic_record_user_${RoomId}_${Random}`，其中 `${RoomId} `与录制房间号对应，`${Random}`为一个随机字符串。
+该ID必须是一个单独的未在SDK中使用的ID，录制服务使用这个用户ID进入房间进行音视频与白板录制，若该ID和SDK中使用的ID重复，会导致SDK和录制服务互踢，影响正常录制。
+ * @method void setRecordUserId(string $RecordUserId) 设置用于录制服务进房的用户ID，格式为`tic_record_user_${RoomId}_${Random}`，其中 `${RoomId} `与录制房间号对应，`${Random}`为一个随机字符串。
+该ID必须是一个单独的未在SDK中使用的ID，录制服务使用这个用户ID进入房间进行音视频与白板录制，若该ID和SDK中使用的ID重复，会导致SDK和录制服务互踢，影响正常录制。
  * @method string getRecordUserSig() 获取与RecordUserId对应的签名
  * @method void setRecordUserSig(string $RecordUserSig) 设置与RecordUserId对应的签名
  * @method string getGroupId() 获取（已废弃，设置无效）白板的 IM 群组 Id，默认同房间号
  * @method void setGroupId(string $GroupId) 设置（已废弃，设置无效）白板的 IM 群组 Id，默认同房间号
- * @method Concat getConcat() 获取实时录制视频拼接参数
- * @method void setConcat(Concat $Concat) 设置实时录制视频拼接参数
- * @method Whiteboard getWhiteboard() 获取实时录制白板参数，例如白板宽高等
- * @method void setWhiteboard(Whiteboard $Whiteboard) 设置实时录制白板参数，例如白板宽高等
- * @method MixStream getMixStream() 获取实时录制混流参数
+ * @method Concat getConcat() 获取录制视频拼接参数
+ * @method void setConcat(Concat $Concat) 设置录制视频拼接参数
+ * @method Whiteboard getWhiteboard() 获取录制白板参数，例如白板宽高等
+ * @method void setWhiteboard(Whiteboard $Whiteboard) 设置录制白板参数，例如白板宽高等
+ * @method MixStream getMixStream() 获取录制混流参数
 特别说明：
 1. 混流功能需要根据额外开通， 请联系腾讯云互动白板客服人员
 2. 使用混流功能，必须提供 Extras 参数，且 Extras 参数中必须包含 "MIX_STREAM"
- * @method void setMixStream(MixStream $MixStream) 设置实时录制混流参数
+ * @method void setMixStream(MixStream $MixStream) 设置录制混流参数
 特别说明：
 1. 混流功能需要根据额外开通， 请联系腾讯云互动白板客服人员
 2. 使用混流功能，必须提供 Extras 参数，且 Extras 参数中必须包含 "MIX_STREAM"
@@ -52,8 +52,22 @@ MIX_STREAM - 混流功能
 MIX_STREAM - 混流功能
  * @method boolean getAudioFileNeeded() 获取是否需要在结果回调中返回各路流的纯音频录制文件，文件格式为mp3
  * @method void setAudioFileNeeded(boolean $AudioFileNeeded) 设置是否需要在结果回调中返回各路流的纯音频录制文件，文件格式为mp3
- * @method RecordControl getRecordControl() 获取实时录制控制参数，用于更精细地指定需要录制哪些流，某一路流是否禁用音频，是否只录制小画面等
- * @method void setRecordControl(RecordControl $RecordControl) 设置实时录制控制参数，用于更精细地指定需要录制哪些流，某一路流是否禁用音频，是否只录制小画面等
+ * @method RecordControl getRecordControl() 获取录制控制参数，用于更精细地指定需要录制哪些流，某一路流是否禁用音频，是否只录制小画面等
+ * @method void setRecordControl(RecordControl $RecordControl) 设置录制控制参数，用于更精细地指定需要录制哪些流，某一路流是否禁用音频，是否只录制小画面等
+ * @method string getRecordMode() 获取录制模式
+
+REALTIME_MODE - 实时录制模式（默认）
+VIDEO_GENERATION_MODE - 视频生成模式（内测中，需邮件申请开通）
+ * @method void setRecordMode(string $RecordMode) 设置录制模式
+
+REALTIME_MODE - 实时录制模式（默认）
+VIDEO_GENERATION_MODE - 视频生成模式（内测中，需邮件申请开通）
+ * @method string getChatGroupId() 获取聊天群组ID，此字段仅适用于`视频生成模式`
+
+在`视频生成模式`下，默认会记录白板群组内的非白板信令消息，如果指定了`ChatGroupId`，则会记录指定群ID的聊天消息。
+ * @method void setChatGroupId(string $ChatGroupId) 设置聊天群组ID，此字段仅适用于`视频生成模式`
+
+在`视频生成模式`下，默认会记录白板群组内的非白板信令消息，如果指定了`ChatGroupId`，则会记录指定群ID的聊天消息。
  */
 class StartOnlineRecordRequest extends AbstractModel
 {
@@ -68,8 +82,8 @@ class StartOnlineRecordRequest extends AbstractModel
     public $RoomId;
 
     /**
-     * @var string 用于实时录制服务进房的用户ID，格式为`tic_record_user_${RoomId}_${Random}`，其中 `${RoomId} `与录制房间号对应，`${Random}`为一个随机字符串。
-该ID必须是一个单独的未在SDK中使用的ID，实时录制服务使用这个用户ID进入房间进行音视频与白板录制，若该ID和SDK中使用的ID重复，会导致SDK和录制服务互踢，影响正常录制。
+     * @var string 用于录制服务进房的用户ID，格式为`tic_record_user_${RoomId}_${Random}`，其中 `${RoomId} `与录制房间号对应，`${Random}`为一个随机字符串。
+该ID必须是一个单独的未在SDK中使用的ID，录制服务使用这个用户ID进入房间进行音视频与白板录制，若该ID和SDK中使用的ID重复，会导致SDK和录制服务互踢，影响正常录制。
      */
     public $RecordUserId;
 
@@ -84,17 +98,17 @@ class StartOnlineRecordRequest extends AbstractModel
     public $GroupId;
 
     /**
-     * @var Concat 实时录制视频拼接参数
+     * @var Concat 录制视频拼接参数
      */
     public $Concat;
 
     /**
-     * @var Whiteboard 实时录制白板参数，例如白板宽高等
+     * @var Whiteboard 录制白板参数，例如白板宽高等
      */
     public $Whiteboard;
 
     /**
-     * @var MixStream 实时录制混流参数
+     * @var MixStream 录制混流参数
 特别说明：
 1. 混流功能需要根据额外开通， 请联系腾讯云互动白板客服人员
 2. 使用混流功能，必须提供 Extras 参数，且 Extras 参数中必须包含 "MIX_STREAM"
@@ -114,20 +128,35 @@ MIX_STREAM - 混流功能
     public $AudioFileNeeded;
 
     /**
-     * @var RecordControl 实时录制控制参数，用于更精细地指定需要录制哪些流，某一路流是否禁用音频，是否只录制小画面等
+     * @var RecordControl 录制控制参数，用于更精细地指定需要录制哪些流，某一路流是否禁用音频，是否只录制小画面等
      */
     public $RecordControl;
 
     /**
+     * @var string 录制模式
+
+REALTIME_MODE - 实时录制模式（默认）
+VIDEO_GENERATION_MODE - 视频生成模式（内测中，需邮件申请开通）
+     */
+    public $RecordMode;
+
+    /**
+     * @var string 聊天群组ID，此字段仅适用于`视频生成模式`
+
+在`视频生成模式`下，默认会记录白板群组内的非白板信令消息，如果指定了`ChatGroupId`，则会记录指定群ID的聊天消息。
+     */
+    public $ChatGroupId;
+
+    /**
      * @param integer $SdkAppId 客户的SdkAppId
      * @param integer $RoomId 需要录制的房间号，取值范围: (1, 4294967295)
-     * @param string $RecordUserId 用于实时录制服务进房的用户ID，格式为`tic_record_user_${RoomId}_${Random}`，其中 `${RoomId} `与录制房间号对应，`${Random}`为一个随机字符串。
-该ID必须是一个单独的未在SDK中使用的ID，实时录制服务使用这个用户ID进入房间进行音视频与白板录制，若该ID和SDK中使用的ID重复，会导致SDK和录制服务互踢，影响正常录制。
+     * @param string $RecordUserId 用于录制服务进房的用户ID，格式为`tic_record_user_${RoomId}_${Random}`，其中 `${RoomId} `与录制房间号对应，`${Random}`为一个随机字符串。
+该ID必须是一个单独的未在SDK中使用的ID，录制服务使用这个用户ID进入房间进行音视频与白板录制，若该ID和SDK中使用的ID重复，会导致SDK和录制服务互踢，影响正常录制。
      * @param string $RecordUserSig 与RecordUserId对应的签名
      * @param string $GroupId （已废弃，设置无效）白板的 IM 群组 Id，默认同房间号
-     * @param Concat $Concat 实时录制视频拼接参数
-     * @param Whiteboard $Whiteboard 实时录制白板参数，例如白板宽高等
-     * @param MixStream $MixStream 实时录制混流参数
+     * @param Concat $Concat 录制视频拼接参数
+     * @param Whiteboard $Whiteboard 录制白板参数，例如白板宽高等
+     * @param MixStream $MixStream 录制混流参数
 特别说明：
 1. 混流功能需要根据额外开通， 请联系腾讯云互动白板客服人员
 2. 使用混流功能，必须提供 Extras 参数，且 Extras 参数中必须包含 "MIX_STREAM"
@@ -135,7 +164,14 @@ MIX_STREAM - 混流功能
 可以选值列表：
 MIX_STREAM - 混流功能
      * @param boolean $AudioFileNeeded 是否需要在结果回调中返回各路流的纯音频录制文件，文件格式为mp3
-     * @param RecordControl $RecordControl 实时录制控制参数，用于更精细地指定需要录制哪些流，某一路流是否禁用音频，是否只录制小画面等
+     * @param RecordControl $RecordControl 录制控制参数，用于更精细地指定需要录制哪些流，某一路流是否禁用音频，是否只录制小画面等
+     * @param string $RecordMode 录制模式
+
+REALTIME_MODE - 实时录制模式（默认）
+VIDEO_GENERATION_MODE - 视频生成模式（内测中，需邮件申请开通）
+     * @param string $ChatGroupId 聊天群组ID，此字段仅适用于`视频生成模式`
+
+在`视频生成模式`下，默认会记录白板群组内的非白板信令消息，如果指定了`ChatGroupId`，则会记录指定群ID的聊天消息。
      */
     function __construct()
     {
@@ -196,6 +232,14 @@ MIX_STREAM - 混流功能
         if (array_key_exists("RecordControl",$param) and $param["RecordControl"] !== null) {
             $this->RecordControl = new RecordControl();
             $this->RecordControl->deserialize($param["RecordControl"]);
+        }
+
+        if (array_key_exists("RecordMode",$param) and $param["RecordMode"] !== null) {
+            $this->RecordMode = $param["RecordMode"];
+        }
+
+        if (array_key_exists("ChatGroupId",$param) and $param["ChatGroupId"] !== null) {
+            $this->ChatGroupId = $param["ChatGroupId"];
         }
     }
 }

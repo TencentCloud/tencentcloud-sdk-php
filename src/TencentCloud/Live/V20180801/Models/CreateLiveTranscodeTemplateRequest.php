@@ -28,9 +28,11 @@ use TencentCloud\Common\AbstractModel;
 长度限制：
   标准转码：1-10个字符
   极速高清转码：3-10个字符
- * @method integer getVideoBitrate() 获取视频码率。范围：100-8000。
+ * @method integer getVideoBitrate() 获取视频码率。范围：0kbps - 8000kbps。
+0为保持原始码率。
 注: 转码模板有码率唯一要求，最终保存的码率可能与输入码率有所差别。
- * @method void setVideoBitrate(integer $VideoBitrate) 设置视频码率。范围：100-8000。
+ * @method void setVideoBitrate(integer $VideoBitrate) 设置视频码率。范围：0kbps - 8000kbps。
+0为保持原始码率。
 注: 转码模板有码率唯一要求，最终保存的码率可能与输入码率有所差别。
  * @method string getAcodec() 获取音频编码：aac，默认aac。
 注意：当前该参数未生效，待后续支持！
@@ -65,12 +67,14 @@ origin: 保持原始编码格式
 范围[0-3000]
 数值必须是2的倍数，0是原始宽度
  * @method integer getFps() 获取帧率，默认0。
-范围0-60
+范围0-60fps
  * @method void setFps(integer $Fps) 设置帧率，默认0。
-范围0-60
- * @method integer getGop() 获取关键帧间隔，单位：秒。默认原始的间隔
+范围0-60fps
+ * @method integer getGop() 获取关键帧间隔，单位：秒。
+默认原始的间隔
 范围2-6
- * @method void setGop(integer $Gop) 设置关键帧间隔，单位：秒。默认原始的间隔
+ * @method void setGop(integer $Gop) 设置关键帧间隔，单位：秒。
+默认原始的间隔
 范围2-6
  * @method integer getRotate() 获取旋转角度，默认0。
 可取值：0，90，180，270
@@ -122,7 +126,8 @@ class CreateLiveTranscodeTemplateRequest extends AbstractModel
     public $TemplateName;
 
     /**
-     * @var integer 视频码率。范围：100-8000。
+     * @var integer 视频码率。范围：0kbps - 8000kbps。
+0为保持原始码率。
 注: 转码模板有码率唯一要求，最终保存的码率可能与输入码率有所差别。
      */
     public $VideoBitrate;
@@ -177,12 +182,13 @@ origin: 保持原始编码格式
 
     /**
      * @var integer 帧率，默认0。
-范围0-60
+范围0-60fps
      */
     public $Fps;
 
     /**
-     * @var integer 关键帧间隔，单位：秒。默认原始的间隔
+     * @var integer 关键帧间隔，单位：秒。
+默认原始的间隔
 范围2-6
      */
     public $Gop;
@@ -243,7 +249,8 @@ baseline/main/high。默认baseline
 长度限制：
   标准转码：1-10个字符
   极速高清转码：3-10个字符
-     * @param integer $VideoBitrate 视频码率。范围：100-8000。
+     * @param integer $VideoBitrate 视频码率。范围：0kbps - 8000kbps。
+0为保持原始码率。
 注: 转码模板有码率唯一要求，最终保存的码率可能与输入码率有所差别。
      * @param string $Acodec 音频编码：aac，默认aac。
 注意：当前该参数未生效，待后续支持！
@@ -262,8 +269,9 @@ origin: 保持原始编码格式
 范围[0-3000]
 数值必须是2的倍数，0是原始宽度
      * @param integer $Fps 帧率，默认0。
-范围0-60
-     * @param integer $Gop 关键帧间隔，单位：秒。默认原始的间隔
+范围0-60fps
+     * @param integer $Gop 关键帧间隔，单位：秒。
+默认原始的间隔
 范围2-6
      * @param integer $Rotate 旋转角度，默认0。
 可取值：0，90，180，270

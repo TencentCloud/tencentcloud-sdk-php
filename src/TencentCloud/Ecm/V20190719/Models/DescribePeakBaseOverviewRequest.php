@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePeakBaseOverview请求参数结构体
  *
- * @method string getStartTime() 获取开始时间（xxxx-xx-xx）如2019-08-14，默认为一周之前的日期。
- * @method void setStartTime(string $StartTime) 设置开始时间（xxxx-xx-xx）如2019-08-14，默认为一周之前的日期。
- * @method string getEndTime() 获取结束时间（xxxx-xx-xx）如2019-08-14，默认为昨天。
- * @method void setEndTime(string $EndTime) 设置结束时间（xxxx-xx-xx）如2019-08-14，默认为昨天。
+ * @method string getStartTime() 获取开始时间（xxxx-xx-xx）如2019-08-14，默认为一周之前的日期，不应与当前日期间隔超过90天。
+ * @method void setStartTime(string $StartTime) 设置开始时间（xxxx-xx-xx）如2019-08-14，默认为一周之前的日期，不应与当前日期间隔超过90天。
+ * @method string getEndTime() 获取结束时间（xxxx-xx-xx）如2019-08-14，默认为昨天，不应与当前日期间隔超过90天。当开始与结束间隔不超过30天时返回1小时粒度的数据，否则返回3小时粒度的数据。
+ * @method void setEndTime(string $EndTime) 设置结束时间（xxxx-xx-xx）如2019-08-14，默认为昨天，不应与当前日期间隔超过90天。当开始与结束间隔不超过30天时返回1小时粒度的数据，否则返回3小时粒度的数据。
  */
 class DescribePeakBaseOverviewRequest extends AbstractModel
 {
     /**
-     * @var string 开始时间（xxxx-xx-xx）如2019-08-14，默认为一周之前的日期。
+     * @var string 开始时间（xxxx-xx-xx）如2019-08-14，默认为一周之前的日期，不应与当前日期间隔超过90天。
      */
     public $StartTime;
 
     /**
-     * @var string 结束时间（xxxx-xx-xx）如2019-08-14，默认为昨天。
+     * @var string 结束时间（xxxx-xx-xx）如2019-08-14，默认为昨天，不应与当前日期间隔超过90天。当开始与结束间隔不超过30天时返回1小时粒度的数据，否则返回3小时粒度的数据。
      */
     public $EndTime;
 
     /**
-     * @param string $StartTime 开始时间（xxxx-xx-xx）如2019-08-14，默认为一周之前的日期。
-     * @param string $EndTime 结束时间（xxxx-xx-xx）如2019-08-14，默认为昨天。
+     * @param string $StartTime 开始时间（xxxx-xx-xx）如2019-08-14，默认为一周之前的日期，不应与当前日期间隔超过90天。
+     * @param string $EndTime 结束时间（xxxx-xx-xx）如2019-08-14，默认为昨天，不应与当前日期间隔超过90天。当开始与结束间隔不超过30天时返回1小时粒度的数据，否则返回3小时粒度的数据。
      */
     function __construct()
     {

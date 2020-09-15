@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPartitionOffset(array $PartitionOffset) 设置分区offset信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTopicId() 获取订阅的主题ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTopicId(string $TopicId) 设置订阅的主题ID
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SubscribedInfo extends AbstractModel
 {
@@ -51,10 +55,18 @@ class SubscribedInfo extends AbstractModel
     public $PartitionOffset;
 
     /**
+     * @var string 订阅的主题ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TopicId;
+
+    /**
      * @param string $TopicName 订阅的主题名
      * @param array $Partition 订阅的分区
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $PartitionOffset 分区offset信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TopicId 订阅的主题ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -85,6 +97,10 @@ class SubscribedInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->PartitionOffset, $obj);
             }
+        }
+
+        if (array_key_exists("TopicId",$param) and $param["TopicId"] !== null) {
+            $this->TopicId = $param["TopicId"];
         }
     }
 }

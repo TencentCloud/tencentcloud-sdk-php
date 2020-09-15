@@ -56,8 +56,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeadlineTime(string $DeadlineTime) 设置实例到期时间
  * @method string getEngine() 获取引擎：社区版Redis、腾讯云CKV
  * @method void setEngine(string $Engine) 设置引擎：社区版Redis、腾讯云CKV
- * @method string getProductType() 获取产品类型：Redis2.8集群版、Redis2.8主从版、Redis3.2主从版（CKV主从版）、Redis3.2集群版（CKV集群版）、Redis2.8单机版、Redis4.0集群版
- * @method void setProductType(string $ProductType) 设置产品类型：Redis2.8集群版、Redis2.8主从版、Redis3.2主从版（CKV主从版）、Redis3.2集群版（CKV集群版）、Redis2.8单机版、Redis4.0集群版
+ * @method string getProductType() 获取产品类型：standalone – 标准版，cluster – 集群版
+ * @method void setProductType(string $ProductType) 设置产品类型：standalone – 标准版，cluster – 集群版
  * @method string getUniqVpcId() 获取vpc网络id 如：vpc-fk33jsf43kgv
  * @method void setUniqVpcId(string $UniqVpcId) 设置vpc网络id 如：vpc-fk33jsf43kgv
  * @method string getUniqSubnetId() 获取vpc网络下子网id 如：subnet-fd3j6l35mm0
@@ -228,7 +228,7 @@ class InstanceSet extends AbstractModel
     public $Engine;
 
     /**
-     * @var string 产品类型：Redis2.8集群版、Redis2.8主从版、Redis3.2主从版（CKV主从版）、Redis3.2集群版（CKV集群版）、Redis2.8单机版、Redis4.0集群版
+     * @var string 产品类型：standalone – 标准版，cluster – 集群版
      */
     public $ProductType;
 
@@ -393,7 +393,7 @@ class InstanceSet extends AbstractModel
      * @param integer $AutoRenewFlag 实例是否设置自动续费标识，1：设置自动续费；0：未设置自动续费
      * @param string $DeadlineTime 实例到期时间
      * @param string $Engine 引擎：社区版Redis、腾讯云CKV
-     * @param string $ProductType 产品类型：Redis2.8集群版、Redis2.8主从版、Redis3.2主从版（CKV主从版）、Redis3.2集群版（CKV集群版）、Redis2.8单机版、Redis4.0集群版
+     * @param string $ProductType 产品类型：standalone – 标准版，cluster – 集群版
      * @param string $UniqVpcId vpc网络id 如：vpc-fk33jsf43kgv
      * @param string $UniqSubnetId vpc网络下子网id 如：subnet-fd3j6l35mm0
      * @param integer $BillingMode 计费模式：0-按量计费，1-包年包月

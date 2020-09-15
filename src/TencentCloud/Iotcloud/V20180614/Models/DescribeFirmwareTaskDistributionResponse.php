@@ -14,30 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Yunjing\V20180228\Models;
+namespace TencentCloud\Iotcloud\V20180614\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ExportAttackLogs返回参数结构体
+ * DescribeFirmwareTaskDistribution返回参数结构体
  *
- * @method string getDownloadUrl() 获取导出文件下载链接地址。
- * @method void setDownloadUrl(string $DownloadUrl) 设置导出文件下载链接地址。
- * @method string getTaskId() 获取导出任务ID
- * @method void setTaskId(string $TaskId) 设置导出任务ID
+ * @method array getStatusInfos() 获取固件升级任务状态分布信息
+ * @method void setStatusInfos(array $StatusInfos) 设置固件升级任务状态分布信息
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class ExportAttackLogsResponse extends AbstractModel
+class DescribeFirmwareTaskDistributionResponse extends AbstractModel
 {
     /**
-     * @var string 导出文件下载链接地址。
+     * @var array 固件升级任务状态分布信息
      */
-    public $DownloadUrl;
-
-    /**
-     * @var string 导出任务ID
-     */
-    public $TaskId;
+    public $StatusInfos;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +38,7 @@ class ExportAttackLogsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $DownloadUrl 导出文件下载链接地址。
-     * @param string $TaskId 导出任务ID
+     * @param array $StatusInfos 固件升级任务状态分布信息
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,12 +54,13 @@ class ExportAttackLogsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DownloadUrl",$param) and $param["DownloadUrl"] !== null) {
-            $this->DownloadUrl = $param["DownloadUrl"];
-        }
-
-        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
-            $this->TaskId = $param["TaskId"];
+        if (array_key_exists("StatusInfos",$param) and $param["StatusInfos"] !== null) {
+            $this->StatusInfos = [];
+            foreach ($param["StatusInfos"] as $key => $value){
+                $obj = new StatusStatistic();
+                $obj->deserialize($value);
+                array_push($this->StatusInfos, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

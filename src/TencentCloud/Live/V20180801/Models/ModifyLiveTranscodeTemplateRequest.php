@@ -38,9 +38,11 @@ origin: 保持原始编码格式
 范围：0-500。
  * @method string getDescription() 获取模板描述。
  * @method void setDescription(string $Description) 设置模板描述。
- * @method integer getVideoBitrate() 获取视频码率。范围：100kbps - 8000kbps。
+ * @method integer getVideoBitrate() 获取视频码率。范围：0kbps - 8000kbps。
+0为保持原始码率。
 注: 转码模板有码率唯一要求，最终保存的码率可能与输入码率有所差别。
- * @method void setVideoBitrate(integer $VideoBitrate) 设置视频码率。范围：100kbps - 8000kbps。
+ * @method void setVideoBitrate(integer $VideoBitrate) 设置视频码率。范围：0kbps - 8000kbps。
+0为保持原始码率。
 注: 转码模板有码率唯一要求，最终保存的码率可能与输入码率有所差别。
  * @method integer getWidth() 获取宽。0-3000。
 数值必须是2的倍数，0是原始宽度
@@ -131,7 +133,8 @@ origin: 保持原始编码格式
     public $Description;
 
     /**
-     * @var integer 视频码率。范围：100kbps - 8000kbps。
+     * @var integer 视频码率。范围：0kbps - 8000kbps。
+0为保持原始码率。
 注: 转码模板有码率唯一要求，最终保存的码率可能与输入码率有所差别。
      */
     public $VideoBitrate;
@@ -226,7 +229,8 @@ origin: 保持原始编码格式
      * @param integer $AudioBitrate 音频码率，默认0。
 范围：0-500。
      * @param string $Description 模板描述。
-     * @param integer $VideoBitrate 视频码率。范围：100kbps - 8000kbps。
+     * @param integer $VideoBitrate 视频码率。范围：0kbps - 8000kbps。
+0为保持原始码率。
 注: 转码模板有码率唯一要求，最终保存的码率可能与输入码率有所差别。
      * @param integer $Width 宽。0-3000。
 数值必须是2的倍数，0是原始宽度

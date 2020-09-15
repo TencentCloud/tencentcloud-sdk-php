@@ -14,30 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Yunjing\V20180228\Models;
+namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ExportAttackLogs返回参数结构体
+ * DescribeInstances返回参数结构体
  *
- * @method string getDownloadUrl() 获取导出文件下载链接地址。
- * @method void setDownloadUrl(string $DownloadUrl) 设置导出文件下载链接地址。
- * @method string getTaskId() 获取导出任务ID
- * @method void setTaskId(string $TaskId) 设置导出任务ID
+ * @method integer getTotalCount() 获取实例个数
+ * @method void setTotalCount(integer $TotalCount) 设置实例个数
+ * @method array getInstanceSet() 获取实例列表
+ * @method void setInstanceSet(array $InstanceSet) 设置实例列表
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class ExportAttackLogsResponse extends AbstractModel
+class DescribeInstancesResponse extends AbstractModel
 {
     /**
-     * @var string 导出文件下载链接地址。
+     * @var integer 实例个数
      */
-    public $DownloadUrl;
+    public $TotalCount;
 
     /**
-     * @var string 导出任务ID
+     * @var array 实例列表
      */
-    public $TaskId;
+    public $InstanceSet;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +45,8 @@ class ExportAttackLogsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $DownloadUrl 导出文件下载链接地址。
-     * @param string $TaskId 导出任务ID
+     * @param integer $TotalCount 实例个数
+     * @param array $InstanceSet 实例列表
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,12 +62,17 @@ class ExportAttackLogsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DownloadUrl",$param) and $param["DownloadUrl"] !== null) {
-            $this->DownloadUrl = $param["DownloadUrl"];
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
         }
 
-        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
-            $this->TaskId = $param["TaskId"];
+        if (array_key_exists("InstanceSet",$param) and $param["InstanceSet"] !== null) {
+            $this->InstanceSet = [];
+            foreach ($param["InstanceSet"] as $key => $value){
+                $obj = new CynosdbInstance();
+                $obj->deserialize($value);
+                array_push($this->InstanceSet, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

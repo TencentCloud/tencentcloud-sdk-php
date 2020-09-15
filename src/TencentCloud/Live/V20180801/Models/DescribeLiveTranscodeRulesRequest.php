@@ -20,14 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeLiveTranscodeRules请求参数结构体
  *
-
+ * @method array getTemplateIds() 获取要筛选的模板ID数组。
+ * @method void setTemplateIds(array $TemplateIds) 设置要筛选的模板ID数组。
+ * @method array getDomainNames() 获取要筛选的域名数组。
+ * @method void setDomainNames(array $DomainNames) 设置要筛选的域名数组。
  */
 class DescribeLiveTranscodeRulesRequest extends AbstractModel
 {
-
+    /**
+     * @var array 要筛选的模板ID数组。
+     */
+    public $TemplateIds;
 
     /**
+     * @var array 要筛选的域名数组。
+     */
+    public $DomainNames;
 
+    /**
+     * @param array $TemplateIds 要筛选的模板ID数组。
+     * @param array $DomainNames 要筛选的域名数组。
      */
     function __construct()
     {
@@ -42,6 +54,12 @@ class DescribeLiveTranscodeRulesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("TemplateIds",$param) and $param["TemplateIds"] !== null) {
+            $this->TemplateIds = $param["TemplateIds"];
+        }
 
+        if (array_key_exists("DomainNames",$param) and $param["DomainNames"] !== null) {
+            $this->DomainNames = $param["DomainNames"];
+        }
     }
 }

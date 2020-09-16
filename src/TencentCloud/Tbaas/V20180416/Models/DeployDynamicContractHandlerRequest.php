@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getModule() 获取模块名，固定字段：contract
  * @method void setModule(string $Module) 设置模块名，固定字段：contract
- * @method string getOperation() 获取操作名，固定字段：deploy_by_dynamic_contract
- * @method void setOperation(string $Operation) 设置操作名，固定字段：deploy_by_dynamic_contract
+ * @method string getOperation() 获取操作名，固定字段：deploy_dynamic_contract
+ * @method void setOperation(string $Operation) 设置操作名，固定字段：deploy_dynamic_contract
  * @method string getGroupPk() 获取群组编号
  * @method void setGroupPk(string $GroupPk) 设置群组编号
  * @method string getContractName() 获取合约名称
@@ -43,7 +43,7 @@ class DeployDynamicContractHandlerRequest extends AbstractModel
     public $Module;
 
     /**
-     * @var string 操作名，固定字段：deploy_by_dynamic_contract
+     * @var string 操作名，固定字段：deploy_dynamic_contract
      */
     public $Operation;
 
@@ -74,7 +74,7 @@ class DeployDynamicContractHandlerRequest extends AbstractModel
 
     /**
      * @param string $Module 模块名，固定字段：contract
-     * @param string $Operation 操作名，固定字段：deploy_by_dynamic_contract
+     * @param string $Operation 操作名，固定字段：deploy_dynamic_contract
      * @param string $GroupPk 群组编号
      * @param string $ContractName 合约名称
      * @param string $AbiInfo 合约编译后的abi

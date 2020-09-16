@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceType(integer $InstanceType) 设置实例类型，取值范围：0-所有实例,1-正式实例，2-临时实例, 3-只读实例，-1-正式实例+只读+灾备实例
  * @method integer getClusterType() 获取集群类型，取值范围：0-副本集实例，1-分片实例，-1-所有实例
  * @method void setClusterType(integer $ClusterType) 设置集群类型，取值范围：0-副本集实例，1-分片实例，-1-所有实例
- * @method array getStatus() 获取实例状态，取值范围：0-待初始化，1-流程执行中，2-实例有效，-2-实例已过期
- * @method void setStatus(array $Status) 设置实例状态，取值范围：0-待初始化，1-流程执行中，2-实例有效，-2-实例已过期
+ * @method array getStatus() 获取实例状态，取值范围：0-待初始化，1-流程执行中，2-实例有效，-2-已隔离（包年包月实例），-3-已隔离（按量计费实例）
+ * @method void setStatus(array $Status) 设置实例状态，取值范围：0-待初始化，1-流程执行中，2-实例有效，-2-已隔离（包年包月实例），-3-已隔离（按量计费实例）
  * @method string getVpcId() 获取私有网络的ID，基础网络则不传该参数
  * @method void setVpcId(string $VpcId) 设置私有网络的ID，基础网络则不传该参数
  * @method string getSubnetId() 获取私有网络的子网ID，基础网络则不传该参数。入参设置该参数的同时，必须设置相应的VpcId
@@ -44,8 +44,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrderByType(string $OrderByType) 设置返回结果集排序方式，目前支持："ASC"或者"DESC"
  * @method array getProjectIds() 获取项目 ID
  * @method void setProjectIds(array $ProjectIds) 设置项目 ID
- * @method string getSearchKey() 获取搜索关键词，支持实例Id、实例名称、完整IP
- * @method void setSearchKey(string $SearchKey) 设置搜索关键词，支持实例Id、实例名称、完整IP
+ * @method string getSearchKey() 获取搜索关键词，支持实例ID、实例名称、完整IP
+ * @method void setSearchKey(string $SearchKey) 设置搜索关键词，支持实例ID、实例名称、完整IP
+ * @method TagInfo getTags() 获取Tag信息
+ * @method void setTags(TagInfo $Tags) 设置Tag信息
  */
 class DescribeDBInstancesRequest extends AbstractModel
 {
@@ -65,7 +67,7 @@ class DescribeDBInstancesRequest extends AbstractModel
     public $ClusterType;
 
     /**
-     * @var array 实例状态，取值范围：0-待初始化，1-流程执行中，2-实例有效，-2-实例已过期
+     * @var array 实例状态，取值范围：0-待初始化，1-流程执行中，2-实例有效，-2-已隔离（包年包月实例），-3-已隔离（按量计费实例）
      */
     public $Status;
 
@@ -110,15 +112,20 @@ class DescribeDBInstancesRequest extends AbstractModel
     public $ProjectIds;
 
     /**
-     * @var string 搜索关键词，支持实例Id、实例名称、完整IP
+     * @var string 搜索关键词，支持实例ID、实例名称、完整IP
      */
     public $SearchKey;
+
+    /**
+     * @var TagInfo Tag信息
+     */
+    public $Tags;
 
     /**
      * @param array $InstanceIds 实例ID列表，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
      * @param integer $InstanceType 实例类型，取值范围：0-所有实例,1-正式实例，2-临时实例, 3-只读实例，-1-正式实例+只读+灾备实例
      * @param integer $ClusterType 集群类型，取值范围：0-副本集实例，1-分片实例，-1-所有实例
-     * @param array $Status 实例状态，取值范围：0-待初始化，1-流程执行中，2-实例有效，-2-实例已过期
+     * @param array $Status 实例状态，取值范围：0-待初始化，1-流程执行中，2-实例有效，-2-已隔离（包年包月实例），-3-已隔离（按量计费实例）
      * @param string $VpcId 私有网络的ID，基础网络则不传该参数
      * @param string $SubnetId 私有网络的子网ID，基础网络则不传该参数。入参设置该参数的同时，必须设置相应的VpcId
      * @param integer $PayMode 付费类型，取值范围：0-按量计费，1-包年包月，-1-按量计费+包年包月
@@ -127,7 +134,8 @@ class DescribeDBInstancesRequest extends AbstractModel
      * @param string $OrderBy 返回结果集排序的字段，目前支持："ProjectId", "InstanceName", "CreateTime"，默认为升序排序
      * @param string $OrderByType 返回结果集排序方式，目前支持："ASC"或者"DESC"
      * @param array $ProjectIds 项目 ID
-     * @param string $SearchKey 搜索关键词，支持实例Id、实例名称、完整IP
+     * @param string $SearchKey 搜索关键词，支持实例ID、实例名称、完整IP
+     * @param TagInfo $Tags Tag信息
      */
     function __construct()
     {
@@ -192,6 +200,11 @@ class DescribeDBInstancesRequest extends AbstractModel
 
         if (array_key_exists("SearchKey",$param) and $param["SearchKey"] !== null) {
             $this->SearchKey = $param["SearchKey"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = new TagInfo();
+            $this->Tags->deserialize($param["Tags"]);
         }
     }
 }

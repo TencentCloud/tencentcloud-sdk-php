@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAdvancedInfo(string $AdvancedInfo) 设置此字段为扩展字段。
 能返回文本行的段落信息，例如：{\"Parag\":{\"ParagNo\":2}}，
 其中ParagNo为段落行，从1开始。
+ * @method array getWordPolygon() 获取字的坐标数组，以四个顶点坐标表示
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWordPolygon(array $WordPolygon) 设置字的坐标数组，以四个顶点坐标表示
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TextGeneralHandwriting extends AbstractModel
 {
@@ -58,12 +62,20 @@ class TextGeneralHandwriting extends AbstractModel
     public $AdvancedInfo;
 
     /**
+     * @var array 字的坐标数组，以四个顶点坐标表示
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $WordPolygon;
+
+    /**
      * @param string $DetectedText 识别出的文本行内容
      * @param integer $Confidence 置信度 0 - 100
      * @param array $Polygon 文本行坐标，以四个顶点坐标表示
      * @param string $AdvancedInfo 此字段为扩展字段。
 能返回文本行的段落信息，例如：{\"Parag\":{\"ParagNo\":2}}，
 其中ParagNo为段落行，从1开始。
+     * @param array $WordPolygon 字的坐标数组，以四个顶点坐标表示
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -97,6 +109,15 @@ class TextGeneralHandwriting extends AbstractModel
 
         if (array_key_exists("AdvancedInfo",$param) and $param["AdvancedInfo"] !== null) {
             $this->AdvancedInfo = $param["AdvancedInfo"];
+        }
+
+        if (array_key_exists("WordPolygon",$param) and $param["WordPolygon"] !== null) {
+            $this->WordPolygon = [];
+            foreach ($param["WordPolygon"] as $key => $value){
+                $obj = new Polygon();
+                $obj->deserialize($value);
+                array_push($this->WordPolygon, $obj);
+            }
         }
     }
 }

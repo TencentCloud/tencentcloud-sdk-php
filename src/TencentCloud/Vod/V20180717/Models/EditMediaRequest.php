@@ -40,8 +40,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSessionContext(string $SessionContext) 设置标识来源上下文，用于透传用户请求信息，在EditMediaComplete回调和任务流状态变更回调将返回该字段值，最长 1000个字符。
  * @method integer getTasksPriority() 获取任务的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。
  * @method void setTasksPriority(integer $TasksPriority) 设置任务的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。
- * @method string getSessionId() 获取用于任务去重的识别码，如果一天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
- * @method void setSessionId(string $SessionId) 设置用于任务去重的识别码，如果一天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
+ * @method string getSessionId() 获取用于任务去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
+ * @method void setSessionId(string $SessionId) 设置用于任务去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
+ * @method string getExtInfo() 获取保留字段，特殊用途时使用。
+ * @method void setExtInfo(string $ExtInfo) 设置保留字段，特殊用途时使用。
  * @method integer getSubAppId() 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
  * @method void setSubAppId(integer $SubAppId) 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
  */
@@ -90,9 +92,14 @@ class EditMediaRequest extends AbstractModel
     public $TasksPriority;
 
     /**
-     * @var string 用于任务去重的识别码，如果一天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
+     * @var string 用于任务去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
      */
     public $SessionId;
+
+    /**
+     * @var string 保留字段，特殊用途时使用。
+     */
+    public $ExtInfo;
 
     /**
      * @var integer 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
@@ -110,7 +117,8 @@ class EditMediaRequest extends AbstractModel
      * @param EditMediaOutputConfig $OutputConfig 编辑后生成的文件配置。
      * @param string $SessionContext 标识来源上下文，用于透传用户请求信息，在EditMediaComplete回调和任务流状态变更回调将返回该字段值，最长 1000个字符。
      * @param integer $TasksPriority 任务的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。
-     * @param string $SessionId 用于任务去重的识别码，如果一天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
+     * @param string $SessionId 用于任务去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
+     * @param string $ExtInfo 保留字段，特殊用途时使用。
      * @param integer $SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     function __construct()
@@ -171,6 +179,10 @@ class EditMediaRequest extends AbstractModel
 
         if (array_key_exists("SessionId",$param) and $param["SessionId"] !== null) {
             $this->SessionId = $param["SessionId"];
+        }
+
+        if (array_key_exists("ExtInfo",$param) and $param["ExtInfo"] !== null) {
+            $this->ExtInfo = $param["ExtInfo"];
         }
 
         if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {

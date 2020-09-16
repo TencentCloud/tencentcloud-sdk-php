@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAppName(string $AppName) 设置注册应用名称
  * @method integer getTcAppId() 获取腾讯云APPID
  * @method void setTcAppId(integer $TcAppId) 设置腾讯云APPID
+ * @method string getChannelInfo() 获取渠道信息
+ * @method void setChannelInfo(string $ChannelInfo) 设置渠道信息
  */
 class CaptchaUserAllAppId extends AbstractModel
 {
@@ -45,9 +47,15 @@ class CaptchaUserAllAppId extends AbstractModel
     public $TcAppId;
 
     /**
+     * @var string 渠道信息
+     */
+    public $ChannelInfo;
+
+    /**
      * @param integer $CaptchaAppId 验证码应用ID
      * @param string $AppName 注册应用名称
      * @param integer $TcAppId 腾讯云APPID
+     * @param string $ChannelInfo 渠道信息
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class CaptchaUserAllAppId extends AbstractModel
 
         if (array_key_exists("TcAppId",$param) and $param["TcAppId"] !== null) {
             $this->TcAppId = $param["TcAppId"];
+        }
+
+        if (array_key_exists("ChannelInfo",$param) and $param["ChannelInfo"] !== null) {
+            $this->ChannelInfo = $param["ChannelInfo"];
         }
     }
 }

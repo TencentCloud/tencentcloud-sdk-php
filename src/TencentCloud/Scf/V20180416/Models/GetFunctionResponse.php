@@ -108,6 +108,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getInitTimeout() 获取函数初始化超时时间
  * @method void setInitTimeout(integer $InitTimeout) 设置函数初始化超时时间
+ * @method array getStatusReasons() 获取函数状态失败原因
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStatusReasons(array $StatusReasons) 设置函数状态失败原因
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -314,6 +318,12 @@ class GetFunctionResponse extends AbstractModel
     public $InitTimeout;
 
     /**
+     * @var array 函数状态失败原因
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $StatusReasons;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -363,6 +373,8 @@ class GetFunctionResponse extends AbstractModel
      * @param string $Qualifier 函数版本
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $InitTimeout 函数初始化超时时间
+     * @param array $StatusReasons 函数状态失败原因
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -554,6 +566,15 @@ class GetFunctionResponse extends AbstractModel
 
         if (array_key_exists("InitTimeout",$param) and $param["InitTimeout"] !== null) {
             $this->InitTimeout = $param["InitTimeout"];
+        }
+
+        if (array_key_exists("StatusReasons",$param) and $param["StatusReasons"] !== null) {
+            $this->StatusReasons = [];
+            foreach ($param["StatusReasons"] as $key => $value){
+                $obj = new StatusReason();
+                $obj->deserialize($value);
+                array_push($this->StatusReasons, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

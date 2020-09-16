@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVatInvoiceInfos(array $VatInvoiceInfos) 设置检测到的文本信息，具体内容请点击左侧链接。
  * @method array getItems() 获取明细条目。VatInvoiceInfos中关于明细项的具体条目。
  * @method void setItems(array $Items) 设置明细条目。VatInvoiceInfos中关于明细项的具体条目。
+ * @method integer getPdfPageSize() 获取图片为PDF时，返回PDF的总页数，默认为0
+ * @method void setPdfPageSize(integer $PdfPageSize) 设置图片为PDF时，返回PDF的总页数，默认为0
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -40,6 +42,11 @@ class VatInvoiceOCRResponse extends AbstractModel
     public $Items;
 
     /**
+     * @var integer 图片为PDF时，返回PDF的总页数，默认为0
+     */
+    public $PdfPageSize;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -47,6 +54,7 @@ class VatInvoiceOCRResponse extends AbstractModel
     /**
      * @param array $VatInvoiceInfos 检测到的文本信息，具体内容请点击左侧链接。
      * @param array $Items 明细条目。VatInvoiceInfos中关于明细项的具体条目。
+     * @param integer $PdfPageSize 图片为PDF时，返回PDF的总页数，默认为0
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -78,6 +86,10 @@ class VatInvoiceOCRResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Items, $obj);
             }
+        }
+
+        if (array_key_exists("PdfPageSize",$param) and $param["PdfPageSize"] !== null) {
+            $this->PdfPageSize = $param["PdfPageSize"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

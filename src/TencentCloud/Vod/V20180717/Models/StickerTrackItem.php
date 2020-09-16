@@ -20,8 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 贴图轨上的贴图信息。
  *
- * @method string getSourceMedia() 获取贴图素材的媒体文件来源。可以是点播的文件 ID，也可以是其它文件的 URL。
- * @method void setSourceMedia(string $SourceMedia) 设置贴图素材的媒体文件来源。可以是点播的文件 ID，也可以是其它文件的 URL。
+ * @method string getSourceMedia() 获取贴图片段的媒体素材来源，可以是：
+<li>点播的媒体文件 ID；</li>
+<li>其他媒体文件的下载 URL。</li>
+注意：当使用其他媒体文件的下载 URL 作为素材来源，且开启了访问控制（如防盗链）时，需要在 URL 携带访问控制参数（如防盗链签名）。
+ * @method void setSourceMedia(string $SourceMedia) 设置贴图片段的媒体素材来源，可以是：
+<li>点播的媒体文件 ID；</li>
+<li>其他媒体文件的下载 URL。</li>
+注意：当使用其他媒体文件的下载 URL 作为素材来源，且开启了访问控制（如防盗链）时，需要在 URL 携带访问控制参数（如防盗链签名）。
  * @method float getDuration() 获取贴图的持续时间，单位为秒。
  * @method void setDuration(float $Duration) 设置贴图的持续时间，单位为秒。
  * @method float getStartTime() 获取贴图在轨道上的起始时间，单位为秒。
@@ -76,7 +82,10 @@ use TencentCloud\Common\AbstractModel;
 class StickerTrackItem extends AbstractModel
 {
     /**
-     * @var string 贴图素材的媒体文件来源。可以是点播的文件 ID，也可以是其它文件的 URL。
+     * @var string 贴图片段的媒体素材来源，可以是：
+<li>点播的媒体文件 ID；</li>
+<li>其他媒体文件的下载 URL。</li>
+注意：当使用其他媒体文件的下载 URL 作为素材来源，且开启了访问控制（如防盗链）时，需要在 URL 携带访问控制参数（如防盗链签名）。
      */
     public $SourceMedia;
 
@@ -138,7 +147,10 @@ class StickerTrackItem extends AbstractModel
     public $ImageOperations;
 
     /**
-     * @param string $SourceMedia 贴图素材的媒体文件来源。可以是点播的文件 ID，也可以是其它文件的 URL。
+     * @param string $SourceMedia 贴图片段的媒体素材来源，可以是：
+<li>点播的媒体文件 ID；</li>
+<li>其他媒体文件的下载 URL。</li>
+注意：当使用其他媒体文件的下载 URL 作为素材来源，且开启了访问控制（如防盗链）时，需要在 URL 携带访问控制参数（如防盗链签名）。
      * @param float $Duration 贴图的持续时间，单位为秒。
      * @param float $StartTime 贴图在轨道上的起始时间，单位为秒。
      * @param string $CoordinateOrigin 原点位置，取值有：

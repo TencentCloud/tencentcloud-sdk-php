@@ -87,6 +87,7 @@ use TencentCloud\Mps\V20190612\Models as Models;
 2. 对多个文件进行拼接，生成一个新的视频；
 3. 对多个文件进行剪辑，然后再拼接，生成一个新的视频。
  * @method Models\EnableWorkflowResponse EnableWorkflow(Models\EnableWorkflowRequest $req) 启用工作流。
+ * @method Models\ExecuteFunctionResponse ExecuteFunction(Models\ExecuteFunctionRequest $req) 本接口仅用于定制开发的特殊场景，除非云视频处理客服人员主动告知您需要使用本接口，其它情况请勿调用。
  * @method Models\ManageTaskResponse ManageTask(Models\ManageTaskRequest $req) 对已发起的任务进行管理。
 > 注意：目前仅支持终止执行中的直播流处理任务。
  * @method Models\ModifyAIAnalysisTemplateResponse ModifyAIAnalysisTemplate(Models\ModifyAIAnalysisTemplateRequest $req) 修改用户自定义内容分析模板。

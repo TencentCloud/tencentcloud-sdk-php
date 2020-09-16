@@ -20,8 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 视频轨的视频片段信息。
  *
- * @method string getSourceMedia() 获取视频片段的媒体素材来源，可以是点播的文件 ID，或者是其它文件的 URL。
- * @method void setSourceMedia(string $SourceMedia) 设置视频片段的媒体素材来源，可以是点播的文件 ID，或者是其它文件的 URL。
+ * @method string getSourceMedia() 获取视频片段的媒体素材来源，可以是：
+<li>点播的媒体文件 ID；</li>
+<li>其他媒体文件的下载 URL。</li>
+注意：当使用其他媒体文件的下载 URL 作为素材来源，且开启了访问控制（如防盗链）时，需要在 URL 携带访问控制参数（如防盗链签名）。
+ * @method void setSourceMedia(string $SourceMedia) 设置视频片段的媒体素材来源，可以是：
+<li>点播的媒体文件 ID；</li>
+<li>其他媒体文件的下载 URL。</li>
+注意：当使用其他媒体文件的下载 URL 作为素材来源，且开启了访问控制（如防盗链）时，需要在 URL 携带访问控制参数（如防盗链签名）。
  * @method float getSourceMediaStartTime() 获取视频片段取自素材文件的起始时间，单位为秒。默认为0。
  * @method void setSourceMediaStartTime(float $SourceMediaStartTime) 设置视频片段取自素材文件的起始时间，单位为秒。默认为0。
  * @method float getDuration() 获取视频片段时长，单位为秒。默认取视频素材本身长度，表示截取全部素材。如果源文件是图片，Duration需要大于0。
@@ -80,7 +86,10 @@ use TencentCloud\Common\AbstractModel;
 class VideoTrackItem extends AbstractModel
 {
     /**
-     * @var string 视频片段的媒体素材来源，可以是点播的文件 ID，或者是其它文件的 URL。
+     * @var string 视频片段的媒体素材来源，可以是：
+<li>点播的媒体文件 ID；</li>
+<li>其他媒体文件的下载 URL。</li>
+注意：当使用其他媒体文件的下载 URL 作为素材来源，且开启了访问控制（如防盗链）时，需要在 URL 携带访问控制参数（如防盗链签名）。
      */
     public $SourceMedia;
 
@@ -148,7 +157,10 @@ class VideoTrackItem extends AbstractModel
     public $AudioOperations;
 
     /**
-     * @param string $SourceMedia 视频片段的媒体素材来源，可以是点播的文件 ID，或者是其它文件的 URL。
+     * @param string $SourceMedia 视频片段的媒体素材来源，可以是：
+<li>点播的媒体文件 ID；</li>
+<li>其他媒体文件的下载 URL。</li>
+注意：当使用其他媒体文件的下载 URL 作为素材来源，且开启了访问控制（如防盗链）时，需要在 URL 携带访问控制参数（如防盗链签名）。
      * @param float $SourceMediaStartTime 视频片段取自素材文件的起始时间，单位为秒。默认为0。
      * @param float $Duration 视频片段时长，单位为秒。默认取视频素材本身长度，表示截取全部素材。如果源文件是图片，Duration需要大于0。
      * @param string $CoordinateOrigin 视频原点位置，取值有：

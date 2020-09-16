@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getBlockNum() 获取区块编号
  * @method void setBlockNum(integer $BlockNum) 设置区块编号
- * @method string getDataHash() 获取区块Hash数值
- * @method void setDataHash(string $DataHash) 设置区块Hash数值
+ * @method string getDataHash() 获取区块数据Hash数值
+ * @method void setDataHash(string $DataHash) 设置区块数据Hash数值
  * @method integer getBlockId() 获取区块ID，与区块编号一致
  * @method void setBlockId(integer $BlockId) 设置区块ID，与区块编号一致
- * @method string getPreHash() 获取前一个区块Hash（未使用）,与区块Hash数值一致
- * @method void setPreHash(string $PreHash) 设置前一个区块Hash（未使用）,与区块Hash数值一致
+ * @method string getPreHash() 获取前一个区块Hash
+ * @method void setPreHash(string $PreHash) 设置前一个区块Hash
  * @method integer getTxCount() 获取区块内的交易数量
  * @method void setTxCount(integer $TxCount) 设置区块内的交易数量
  */
@@ -39,7 +39,7 @@ class Block extends AbstractModel
     public $BlockNum;
 
     /**
-     * @var string 区块Hash数值
+     * @var string 区块数据Hash数值
      */
     public $DataHash;
 
@@ -49,7 +49,7 @@ class Block extends AbstractModel
     public $BlockId;
 
     /**
-     * @var string 前一个区块Hash（未使用）,与区块Hash数值一致
+     * @var string 前一个区块Hash
      */
     public $PreHash;
 
@@ -60,9 +60,9 @@ class Block extends AbstractModel
 
     /**
      * @param integer $BlockNum 区块编号
-     * @param string $DataHash 区块Hash数值
+     * @param string $DataHash 区块数据Hash数值
      * @param integer $BlockId 区块ID，与区块编号一致
-     * @param string $PreHash 前一个区块Hash（未使用）,与区块Hash数值一致
+     * @param string $PreHash 前一个区块Hash
      * @param integer $TxCount 区块内的交易数量
      */
     function __construct()

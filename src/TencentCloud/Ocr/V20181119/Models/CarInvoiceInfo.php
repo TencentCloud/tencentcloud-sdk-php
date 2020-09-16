@@ -24,8 +24,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置识别出的字段名称（关键字）。
  * @method string getValue() 获取识别出的字段名称对应的值，也就是字段name对应的字符串结果。
  * @method void setValue(string $Value) 设置识别出的字段名称对应的值，也就是字段name对应的字符串结果。
- * @method Rect getRect() 获取文本行在旋转纠正之后的图像中的像素坐标。
- * @method void setRect(Rect $Rect) 设置文本行在旋转纠正之后的图像中的像素坐标。
+ * @method Rect getRect() 获取字段在旋转纠正之后的图像中的像素坐标。
+ * @method void setRect(Rect $Rect) 设置字段在旋转纠正之后的图像中的像素坐标。
+ * @method Polygon getPolygon() 获取字段在原图中的中的四点坐标。
+注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPolygon(Polygon $Polygon) 设置字段在原图中的中的四点坐标。
+注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CarInvoiceInfo extends AbstractModel
 {
@@ -40,14 +46,24 @@ class CarInvoiceInfo extends AbstractModel
     public $Value;
 
     /**
-     * @var Rect 文本行在旋转纠正之后的图像中的像素坐标。
+     * @var Rect 字段在旋转纠正之后的图像中的像素坐标。
      */
     public $Rect;
 
     /**
+     * @var Polygon 字段在原图中的中的四点坐标。
+注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Polygon;
+
+    /**
      * @param string $Name 识别出的字段名称（关键字）。
      * @param string $Value 识别出的字段名称对应的值，也就是字段name对应的字符串结果。
-     * @param Rect $Rect 文本行在旋转纠正之后的图像中的像素坐标。
+     * @param Rect $Rect 字段在旋转纠正之后的图像中的像素坐标。
+     * @param Polygon $Polygon 字段在原图中的中的四点坐标。
+注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -73,6 +89,11 @@ class CarInvoiceInfo extends AbstractModel
         if (array_key_exists("Rect",$param) and $param["Rect"] !== null) {
             $this->Rect = new Rect();
             $this->Rect->deserialize($param["Rect"]);
+        }
+
+        if (array_key_exists("Polygon",$param) and $param["Polygon"] !== null) {
+            $this->Polygon = new Polygon();
+            $this->Polygon->deserialize($param["Polygon"]);
         }
     }
 }

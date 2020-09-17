@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBlueprintType(string $BlueprintType) 设置镜像类型，如 APP_OS、PURE_OS。
  * @method string getImageUrl() 获取镜像图片 URL。
  * @method void setImageUrl(string $ImageUrl) 设置镜像图片 URL。
+ * @method integer getRequiredSystemDiskSize() 获取镜像所需系统盘大小
+ * @method void setRequiredSystemDiskSize(integer $RequiredSystemDiskSize) 设置镜像所需系统盘大小
  */
 class Blueprint extends AbstractModel
 {
@@ -87,6 +89,11 @@ class Blueprint extends AbstractModel
     public $ImageUrl;
 
     /**
+     * @var integer 镜像所需系统盘大小
+     */
+    public $RequiredSystemDiskSize;
+
+    /**
      * @param string $BlueprintId 镜像 ID  ，是 blueprint 的唯一标识。
      * @param string $DisplayTitle 镜像对外展示标题。
      * @param string $DisplayVersion 镜像对外展示版本。
@@ -96,6 +103,7 @@ class Blueprint extends AbstractModel
      * @param string $PlatformType 操作系统平台类型，如 LINUX_UNIX、WINDOWS。
      * @param string $BlueprintType 镜像类型，如 APP_OS、PURE_OS。
      * @param string $ImageUrl 镜像图片 URL。
+     * @param integer $RequiredSystemDiskSize 镜像所需系统盘大小
      */
     function __construct()
     {
@@ -144,6 +152,10 @@ class Blueprint extends AbstractModel
 
         if (array_key_exists("ImageUrl",$param) and $param["ImageUrl"] !== null) {
             $this->ImageUrl = $param["ImageUrl"];
+        }
+
+        if (array_key_exists("RequiredSystemDiskSize",$param) and $param["RequiredSystemDiskSize"] !== null) {
+            $this->RequiredSystemDiskSize = $param["RequiredSystemDiskSize"];
         }
     }
 }

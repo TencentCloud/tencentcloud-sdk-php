@@ -74,6 +74,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setKibanaPrivatePort(integer $KibanaPrivatePort) 设置Kibana内网端口
  * @method integer getScaleType() 获取0: 蓝绿变更方式扩容，集群不重启 （默认） 1: 磁盘解挂载扩容，集群滚动重启
  * @method void setScaleType(integer $ScaleType) 设置0: 蓝绿变更方式扩容，集群不重启 （默认） 1: 磁盘解挂载扩容，集群滚动重启
+ * @method array getMultiZoneInfo() 获取多可用区部署
+ * @method void setMultiZoneInfo(array $MultiZoneInfo) 设置多可用区部署
+ * @method integer getSceneType() 获取场景化模板类型 -1：不启用 1：通用 2：日志 3：搜索
+ * @method void setSceneType(integer $SceneType) 设置场景化模板类型 -1：不启用 1：通用 2：日志 3：搜索
  */
 class UpdateInstanceRequest extends AbstractModel
 {
@@ -189,6 +193,16 @@ class UpdateInstanceRequest extends AbstractModel
     public $ScaleType;
 
     /**
+     * @var array 多可用区部署
+     */
+    public $MultiZoneInfo;
+
+    /**
+     * @var integer 场景化模板类型 -1：不启用 1：通用 2：日志 3：搜索
+     */
+    public $SceneType;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $InstanceName 实例名称（1-50 个英文、汉字、数字、连接线-或下划线_）
      * @param integer $NodeNum 已废弃请使用NodeInfoList
@@ -216,6 +230,8 @@ class UpdateInstanceRequest extends AbstractModel
      * @param integer $BasicSecurityType ES 6.8及以上版本基础版开启或关闭用户认证
      * @param integer $KibanaPrivatePort Kibana内网端口
      * @param integer $ScaleType 0: 蓝绿变更方式扩容，集群不重启 （默认） 1: 磁盘解挂载扩容，集群滚动重启
+     * @param array $MultiZoneInfo 多可用区部署
+     * @param integer $SceneType 场景化模板类型 -1：不启用 1：通用 2：日志 3：搜索
      */
     function __construct()
     {
@@ -320,6 +336,19 @@ class UpdateInstanceRequest extends AbstractModel
 
         if (array_key_exists("ScaleType",$param) and $param["ScaleType"] !== null) {
             $this->ScaleType = $param["ScaleType"];
+        }
+
+        if (array_key_exists("MultiZoneInfo",$param) and $param["MultiZoneInfo"] !== null) {
+            $this->MultiZoneInfo = [];
+            foreach ($param["MultiZoneInfo"] as $key => $value){
+                $obj = new ZoneDetail();
+                $obj->deserialize($value);
+                array_push($this->MultiZoneInfo, $obj);
+            }
+        }
+
+        if (array_key_exists("SceneType",$param) and $param["SceneType"] !== null) {
+            $this->SceneType = $param["SceneType"];
         }
     }
 }

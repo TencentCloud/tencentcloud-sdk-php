@@ -24,12 +24,12 @@ use TencentCloud\Common\AbstractModel;
 0：bucket授权，需要将对应bucket授权给本服务帐号（3020447271），否则会读写cos失败； 
 1：key托管，把cos的账号id和key托管于本服务，本服务会提供一个托管id； 
 3：临时key授权。
-注意：目前智能编辑还不支持临时key授权。
+注意：目前智能编辑还不支持临时key授权；画质重生目前只支持bucket授权
  * @method void setType(integer $Type) 设置授权类型，可选值： 
 0：bucket授权，需要将对应bucket授权给本服务帐号（3020447271），否则会读写cos失败； 
 1：key托管，把cos的账号id和key托管于本服务，本服务会提供一个托管id； 
 3：临时key授权。
-注意：目前智能编辑还不支持临时key授权。
+注意：目前智能编辑还不支持临时key授权；画质重生目前只支持bucket授权
  * @method string getHostedId() 获取cos账号托管id，Type等于1时必选。
  * @method void setHostedId(string $HostedId) 设置cos账号托管id，Type等于1时必选。
  * @method string getSecretId() 获取cos身份识别id，Type等于3时必选。
@@ -46,7 +46,7 @@ class CosAuthMode extends AbstractModel
 0：bucket授权，需要将对应bucket授权给本服务帐号（3020447271），否则会读写cos失败； 
 1：key托管，把cos的账号id和key托管于本服务，本服务会提供一个托管id； 
 3：临时key授权。
-注意：目前智能编辑还不支持临时key授权。
+注意：目前智能编辑还不支持临时key授权；画质重生目前只支持bucket授权
      */
     public $Type;
 
@@ -75,7 +75,7 @@ class CosAuthMode extends AbstractModel
 0：bucket授权，需要将对应bucket授权给本服务帐号（3020447271），否则会读写cos失败； 
 1：key托管，把cos的账号id和key托管于本服务，本服务会提供一个托管id； 
 3：临时key授权。
-注意：目前智能编辑还不支持临时key授权。
+注意：目前智能编辑还不支持临时key授权；画质重生目前只支持bucket授权
      * @param string $HostedId cos账号托管id，Type等于1时必选。
      * @param string $SecretId cos身份识别id，Type等于3时必选。
      * @param string $SecretKey cos身份秘钥，Type等于3时必选。

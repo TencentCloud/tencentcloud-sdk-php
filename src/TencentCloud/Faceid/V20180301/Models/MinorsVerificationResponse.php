@@ -48,10 +48,16 @@ use TencentCloud\Common\AbstractModel;
 -8: 权威数据源升级中，请稍后再试
  * @method string getDescription() 获取业务结果描述。
  * @method void setDescription(string $Description) 设置业务结果描述。
- * @method string getAgeRange() 获取当结果码为0或者-1时，该字段的值为年龄区间。
-格式为[a,b)，表示年龄在a岁以上（包括a岁），b岁以下（不包括b岁）。若b为+时表示没有上限。
- * @method void setAgeRange(string $AgeRange) 设置当结果码为0或者-1时，该字段的值为年龄区间。
-格式为[a,b)，表示年龄在a岁以上（包括a岁），b岁以下（不包括b岁）。若b为+时表示没有上限。
+ * @method string getAgeRange() 获取该字段的值为年龄区间。格式为[a,b)，
+[0,8)表示年龄小于8周岁区间，不包括8岁；
+[8,16)表示年龄8-16周岁区间，不包括16岁；
+[16,18)表示年龄16-18周岁区间，不包括18岁；
+[18,+)表示年龄大于18周岁。
+ * @method void setAgeRange(string $AgeRange) 设置该字段的值为年龄区间。格式为[a,b)，
+[0,8)表示年龄小于8周岁区间，不包括8岁；
+[8,16)表示年龄8-16周岁区间，不包括16岁；
+[16,18)表示年龄16-18周岁区间，不包括18岁；
+[18,+)表示年龄大于18周岁。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -80,8 +86,11 @@ class MinorsVerificationResponse extends AbstractModel
     public $Description;
 
     /**
-     * @var string 当结果码为0或者-1时，该字段的值为年龄区间。
-格式为[a,b)，表示年龄在a岁以上（包括a岁），b岁以下（不包括b岁）。若b为+时表示没有上限。
+     * @var string 该字段的值为年龄区间。格式为[a,b)，
+[0,8)表示年龄小于8周岁区间，不包括8岁；
+[8,16)表示年龄8-16周岁区间，不包括16岁；
+[16,18)表示年龄16-18周岁区间，不包括18岁；
+[18,+)表示年龄大于18周岁。
      */
     public $AgeRange;
 
@@ -105,8 +114,11 @@ class MinorsVerificationResponse extends AbstractModel
 -7: 未查询到身份信息
 -8: 权威数据源升级中，请稍后再试
      * @param string $Description 业务结果描述。
-     * @param string $AgeRange 当结果码为0或者-1时，该字段的值为年龄区间。
-格式为[a,b)，表示年龄在a岁以上（包括a岁），b岁以下（不包括b岁）。若b为+时表示没有上限。
+     * @param string $AgeRange 该字段的值为年龄区间。格式为[a,b)，
+[0,8)表示年龄小于8周岁区间，不包括8岁；
+[8,16)表示年龄8-16周岁区间，不包括16岁；
+[16,18)表示年龄16-18周岁区间，不包括18岁；
+[18,+)表示年龄大于18周岁。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -24,7 +24,12 @@ use TencentCloud\Ie\V20200304\Models as Models;
 
 /**
  * @method Models\CreateEditingTaskResponse CreateEditingTask(Models\CreateEditingTaskRequest $req) 创建智能编辑任务，可以同时选择视频标签识别、分类识别、智能拆条、智能集锦、智能封面和片头片尾识别中的一项或者多项能力。
+ * @method Models\CreateMediaQualityRestorationTaskResponse CreateMediaQualityRestorationTask(Models\CreateMediaQualityRestorationTaskRequest $req) 创建画质重生任务，对视频进行转码、去噪、去划痕、去毛刺、超分、细节增强和色彩增强。
+ * @method Models\CreateQualityControlTaskResponse CreateQualityControlTask(Models\CreateQualityControlTaskRequest $req) 通过接口可以智能检测视频画面中抖动重影、模糊、低光照、过曝光、黑边、白边、黑屏、白屏、花屏、噪点、马赛克、二维码等在内的多个场景，还可以自动检测视频无音频异常、无声音片段。
  * @method Models\DescribeEditingTaskResultResponse DescribeEditingTaskResult(Models\DescribeEditingTaskResultRequest $req) 获取智能编辑任务结果。
+ * @method Models\DescribeMediaQualityRestorationTaskRusultResponse DescribeMediaQualityRestorationTaskRusult(Models\DescribeMediaQualityRestorationTaskRusultRequest $req) 获取画质重生任务结果，查看结束后的文件信息
+ * @method Models\DescribeQualityControlTaskResultResponse DescribeQualityControlTaskResult(Models\DescribeQualityControlTaskResultRequest $req) 获取质检任务结果
+ * @method Models\StopMediaQualityRestorationTaskResponse StopMediaQualityRestorationTask(Models\StopMediaQualityRestorationTaskRequest $req) 删除正在进行的画质重生任务
  */
 
 class IeClient extends AbstractClient

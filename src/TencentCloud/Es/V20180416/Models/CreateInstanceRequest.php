@@ -90,6 +90,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTagList(array $TagList) 设置节点标签信息列表
  * @method integer getBasicSecurityType() 获取6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li>
  * @method void setBasicSecurityType(integer $BasicSecurityType) 设置6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li>
+ * @method integer getSceneType() 获取场景化模板类型 0：不启用 1：通用 2：日志 3：搜索
+ * @method void setSceneType(integer $SceneType) 设置场景化模板类型 0：不启用 1：通用 2：日志 3：搜索
  */
 class CreateInstanceRequest extends AbstractModel
 {
@@ -237,6 +239,11 @@ class CreateInstanceRequest extends AbstractModel
     public $BasicSecurityType;
 
     /**
+     * @var integer 场景化模板类型 0：不启用 1：通用 2：日志 3：搜索
+     */
+    public $SceneType;
+
+    /**
      * @param string $Zone 可用区
      * @param string $EsVersion 实例版本（支持"5.6.4"、"6.4.3"、"6.8.2"、"7.5.1"）
      * @param string $VpcId 私有网络ID
@@ -272,6 +279,7 @@ class CreateInstanceRequest extends AbstractModel
      * @param array $NodeInfoList 节点信息列表， 用于描述集群各类节点的规格信息如节点类型，节点个数，节点规格，磁盘类型，磁盘大小等
      * @param array $TagList 节点标签信息列表
      * @param integer $BasicSecurityType 6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li>
+     * @param integer $SceneType 场景化模板类型 0：不启用 1：通用 2：日志 3：搜索
      */
     function __construct()
     {
@@ -407,6 +415,10 @@ class CreateInstanceRequest extends AbstractModel
 
         if (array_key_exists("BasicSecurityType",$param) and $param["BasicSecurityType"] !== null) {
             $this->BasicSecurityType = $param["BasicSecurityType"];
+        }
+
+        if (array_key_exists("SceneType",$param) and $param["SceneType"] !== null) {
+            $this->SceneType = $param["SceneType"];
         }
     }
 }

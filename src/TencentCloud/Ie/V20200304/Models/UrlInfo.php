@@ -27,11 +27,11 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getFormat() 获取视频地址格式，可选值： 
 0：音视频 ;
 1：直播流。 
-默认为0。其他非0非1值默认为0。
+默认为0。其他非0非1值默认为0。画质重生任务只支持0。
  * @method void setFormat(integer $Format) 设置视频地址格式，可选值： 
 0：音视频 ;
 1：直播流。 
-默认为0。其他非0非1值默认为0。
+默认为0。其他非0非1值默认为0。画质重生任务只支持0。
  * @method string getHost() 获取指定请求资源时，HTTP头部host的值。
  * @method void setHost(string $Host) 设置指定请求资源时，HTTP头部host的值。
  */
@@ -47,7 +47,7 @@ class UrlInfo extends AbstractModel
      * @var integer 视频地址格式，可选值： 
 0：音视频 ;
 1：直播流。 
-默认为0。其他非0非1值默认为0。
+默认为0。其他非0非1值默认为0。画质重生任务只支持0。
      */
     public $Format;
 
@@ -62,7 +62,7 @@ class UrlInfo extends AbstractModel
      * @param integer $Format 视频地址格式，可选值： 
 0：音视频 ;
 1：直播流。 
-默认为0。其他非0非1值默认为0。
+默认为0。其他非0非1值默认为0。画质重生任务只支持0。
      * @param string $Host 指定请求资源时，HTTP头部host的值。
      */
     function __construct()

@@ -26,9 +26,12 @@ use TencentCloud\Captcha\V20190722\Models as Models;
  * @method Models\DescribeCaptchaAppIdInfoResponse DescribeCaptchaAppIdInfo(Models\DescribeCaptchaAppIdInfoRequest $req) 查询安全验证码应用APPId信息
  * @method Models\DescribeCaptchaDataResponse DescribeCaptchaData(Models\DescribeCaptchaDataRequest $req) 安全验证码分类查询数据接口，请求量type=0、通过量type=1、验证量type=2、拦截量type=3  分钟级查询
  * @method Models\DescribeCaptchaDataSumResponse DescribeCaptchaDataSum(Models\DescribeCaptchaDataSumRequest $req) 安全验证码查询请求数据概况，例如：按照时间段查询数据  昨日请求量、昨日恶意比例、昨日验证量、昨日通过量、昨日恶意拦截量……
+ * @method Models\DescribeCaptchaMiniDataResponse DescribeCaptchaMiniData(Models\DescribeCaptchaMiniDataRequest $req) 安全验证码小程序插件分类查询数据接口（内测中），请求量type=0、通过量type=1、验证量type=2、拦截量type=3 小时级查询（五小时左右延迟）
+ * @method Models\DescribeCaptchaMiniDataSumResponse DescribeCaptchaMiniDataSum(Models\DescribeCaptchaMiniDataSumRequest $req) 安全验证码小程序插件查询请求数据概况（内测中）
+ * @method Models\DescribeCaptchaMiniOperDataResponse DescribeCaptchaMiniOperData(Models\DescribeCaptchaMiniOperDataRequest $req) 安全验证码小程序插件用户操作数据查询（内测中）
  * @method Models\DescribeCaptchaOperDataResponse DescribeCaptchaOperData(Models\DescribeCaptchaOperDataRequest $req) 安全验证码用户操作数据查询，验证码加载耗时type = 1 、拦截情况type = 2、 一周通过平均尝试次数 type = 3、尝试次数分布 type = 4
  * @method Models\DescribeCaptchaResultResponse DescribeCaptchaResult(Models\DescribeCaptchaResultRequest $req) 核查验证码票据结果
- * @method Models\DescribeCaptchaTicketDataResponse DescribeCaptchaTicketData(Models\DescribeCaptchaTicketDataRequest $req) 验证码控制台票据验证信息
+ * @method Models\DescribeCaptchaTicketDataResponse DescribeCaptchaTicketData(Models\DescribeCaptchaTicketDataRequest $req) 安全验证码用户操作票据数据查询
  * @method Models\DescribeCaptchaUserAllAppIdResponse DescribeCaptchaUserAllAppId(Models\DescribeCaptchaUserAllAppIdRequest $req) 安全验证码获取用户注册所有APPId和应用名称
  * @method Models\UpdateCaptchaAppIdInfoResponse UpdateCaptchaAppIdInfo(Models\UpdateCaptchaAppIdInfoRequest $req) 更新验证码应用APPId信息
  */

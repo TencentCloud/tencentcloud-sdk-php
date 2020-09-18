@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(integer $StartTime) 设置查询开始时间，5天内。本地unix时间戳（1588031999s）
  * @method integer getEndTime() 获取查询结束时间，本地unix时间戳（1588031999s）
  * @method void setEndTime(integer $EndTime) 设置查询结束时间，本地unix时间戳（1588031999s）
- * @method string getSdkAppId() 获取用户sdkappid（1400188366）
- * @method void setSdkAppId(string $SdkAppId) 设置用户sdkappid（1400188366）
+ * @method string getSdkAppId() 获取用户SDKAppID（1400188366）
+ * @method void setSdkAppId(string $SdkAppId) 设置用户SDKAppID（1400188366）
  * @method array getUserIds() 获取需查询的用户数组，不填默认返回6个用户,最多可填6个用户
  * @method void setUserIds(array $UserIds) 设置需查询的用户数组，不填默认返回6个用户,最多可填6个用户
  * @method array getDataType() 获取需查询的指标，不填则只返回用户列表，填all则返回所有指标。
@@ -58,10 +58,10 @@ aLoss：上/下行音频丢包；
 bigvLoss：上/下行视频丢包；
 bigvWidth：上/下行分辨率宽；
 bigvHeight：上/下行分辨率高
- * @method string getPageNumber() 获取只查询用户列表时，设置分页index，从0开始（PageNumber和PageSize 其中一个不填均默认返回6条数据）
- * @method void setPageNumber(string $PageNumber) 设置只查询用户列表时，设置分页index，从0开始（PageNumber和PageSize 其中一个不填均默认返回6条数据）
- * @method string getPageSize() 获取只查询用户列表时，设置分页大小（PageNumber和PageSize 其中一个不填均默认返回6条数据,PageSize最大不超过100）
- * @method void setPageSize(string $PageSize) 设置只查询用户列表时，设置分页大小（PageNumber和PageSize 其中一个不填均默认返回6条数据,PageSize最大不超过100）
+ * @method string getPageNumber() 获取设置分页index，从0开始（PageNumber和PageSize 其中一个不填均默认返回6条数据）
+ * @method void setPageNumber(string $PageNumber) 设置设置分页index，从0开始（PageNumber和PageSize 其中一个不填均默认返回6条数据）
+ * @method string getPageSize() 获取设置分页大小（PageNumber和PageSize 其中一个不填均默认返回6条数据,DataType，UserIds不为null，PageSize最大不超过6，DataType，UserIds为null，PageSize最大不超过100）
+ * @method void setPageSize(string $PageSize) 设置设置分页大小（PageNumber和PageSize 其中一个不填均默认返回6条数据,DataType，UserIds不为null，PageSize最大不超过6，DataType，UserIds为null，PageSize最大不超过100）
  */
 class DescribeCallDetailRequest extends AbstractModel
 {
@@ -81,7 +81,7 @@ class DescribeCallDetailRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var string 用户sdkappid（1400188366）
+     * @var string 用户SDKAppID（1400188366）
      */
     public $SdkAppId;
 
@@ -109,12 +109,12 @@ bigvHeight：上/下行分辨率高
     public $DataType;
 
     /**
-     * @var string 只查询用户列表时，设置分页index，从0开始（PageNumber和PageSize 其中一个不填均默认返回6条数据）
+     * @var string 设置分页index，从0开始（PageNumber和PageSize 其中一个不填均默认返回6条数据）
      */
     public $PageNumber;
 
     /**
-     * @var string 只查询用户列表时，设置分页大小（PageNumber和PageSize 其中一个不填均默认返回6条数据,PageSize最大不超过100）
+     * @var string 设置分页大小（PageNumber和PageSize 其中一个不填均默认返回6条数据,DataType，UserIds不为null，PageSize最大不超过6，DataType，UserIds为null，PageSize最大不超过100）
      */
     public $PageSize;
 
@@ -122,7 +122,7 @@ bigvHeight：上/下行分辨率高
      * @param string $CommId 通话 ID（唯一标识一次通话）： sdkappid_roomgString（房间号_createTime（房间创建时间，unix时间戳，单位为s）例：1400353843_218695_1590065777。通过 DescribeRoomInformation（查询房间列表）接口获取（链接：https://cloud.tencent.com/document/product/647/44050）
      * @param integer $StartTime 查询开始时间，5天内。本地unix时间戳（1588031999s）
      * @param integer $EndTime 查询结束时间，本地unix时间戳（1588031999s）
-     * @param string $SdkAppId 用户sdkappid（1400188366）
+     * @param string $SdkAppId 用户SDKAppID（1400188366）
      * @param array $UserIds 需查询的用户数组，不填默认返回6个用户,最多可填6个用户
      * @param array $DataType 需查询的指标，不填则只返回用户列表，填all则返回所有指标。
 appCpu：APP CPU使用率；
@@ -138,8 +138,8 @@ aLoss：上/下行音频丢包；
 bigvLoss：上/下行视频丢包；
 bigvWidth：上/下行分辨率宽；
 bigvHeight：上/下行分辨率高
-     * @param string $PageNumber 只查询用户列表时，设置分页index，从0开始（PageNumber和PageSize 其中一个不填均默认返回6条数据）
-     * @param string $PageSize 只查询用户列表时，设置分页大小（PageNumber和PageSize 其中一个不填均默认返回6条数据,PageSize最大不超过100）
+     * @param string $PageNumber 设置分页index，从0开始（PageNumber和PageSize 其中一个不填均默认返回6条数据）
+     * @param string $PageSize 设置分页大小（PageNumber和PageSize 其中一个不填均默认返回6条数据,DataType，UserIds不为null，PageSize最大不超过6，DataType，UserIds为null，PageSize最大不超过100）
      */
     function __construct()
     {

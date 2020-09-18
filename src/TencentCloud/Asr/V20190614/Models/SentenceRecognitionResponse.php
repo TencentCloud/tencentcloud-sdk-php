@@ -24,6 +24,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResult(string $Result) 设置识别结果。
  * @method integer getAudioDuration() 获取请求的音频时长，单位为ms
  * @method void setAudioDuration(integer $AudioDuration) 设置请求的音频时长，单位为ms
+ * @method integer getWordSize() 获取词时间戳列表的长度
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWordSize(integer $WordSize) 设置词时间戳列表的长度
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getWordList() 获取词时间戳列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWordList(array $WordList) 设置词时间戳列表
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -40,6 +48,18 @@ class SentenceRecognitionResponse extends AbstractModel
     public $AudioDuration;
 
     /**
+     * @var integer 词时间戳列表的长度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $WordSize;
+
+    /**
+     * @var array 词时间戳列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $WordList;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -47,6 +67,10 @@ class SentenceRecognitionResponse extends AbstractModel
     /**
      * @param string $Result 识别结果。
      * @param integer $AudioDuration 请求的音频时长，单位为ms
+     * @param integer $WordSize 词时间戳列表的长度
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $WordList 词时间戳列表
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -68,6 +92,19 @@ class SentenceRecognitionResponse extends AbstractModel
 
         if (array_key_exists("AudioDuration",$param) and $param["AudioDuration"] !== null) {
             $this->AudioDuration = $param["AudioDuration"];
+        }
+
+        if (array_key_exists("WordSize",$param) and $param["WordSize"] !== null) {
+            $this->WordSize = $param["WordSize"];
+        }
+
+        if (array_key_exists("WordList",$param) and $param["WordList"] !== null) {
+            $this->WordList = [];
+            foreach ($param["WordList"] as $key => $value){
+                $obj = new SentenceWord();
+                $obj->deserialize($value);
+                array_push($this->WordList, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

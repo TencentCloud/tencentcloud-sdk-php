@@ -18,24 +18,30 @@ namespace TencentCloud\Asr\V20190614\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * GetAsrVocabList返回参数结构体
+ * GetCustomizationList返回参数结构体
  *
- * @method array getVocabList() 获取热词表列表
- * @method void setVocabList(array $VocabList) 设置热词表列表
- * @method integer getTotalCount() 获取热词列表总数
- * @method void setTotalCount(integer $TotalCount) 设置热词列表总数
+ * @method array getData() 获取自学习模型数组
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setData(array $Data) 设置自学习模型数组
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTotalCount() 获取自学习模型总量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTotalCount(integer $TotalCount) 设置自学习模型总量
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class GetAsrVocabListResponse extends AbstractModel
+class GetCustomizationListResponse extends AbstractModel
 {
     /**
-     * @var array 热词表列表
+     * @var array 自学习模型数组
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $VocabList;
+    public $Data;
 
     /**
-     * @var integer 热词列表总数
+     * @var integer 自学习模型总量
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalCount;
 
@@ -45,8 +51,10 @@ class GetAsrVocabListResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $VocabList 热词表列表
-     * @param integer $TotalCount 热词列表总数
+     * @param array $Data 自学习模型数组
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $TotalCount 自学习模型总量
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,12 +70,12 @@ class GetAsrVocabListResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("VocabList",$param) and $param["VocabList"] !== null) {
-            $this->VocabList = [];
-            foreach ($param["VocabList"] as $key => $value){
-                $obj = new Vocab();
+        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
+            $this->Data = [];
+            foreach ($param["Data"] as $key => $value){
+                $obj = new Model();
                 $obj->deserialize($value);
-                array_push($this->VocabList, $obj);
+                array_push($this->Data, $obj);
             }
         }
 

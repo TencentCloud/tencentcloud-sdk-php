@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUpdateTime(string $UpdateTime) 设置词表更新时间
  * @method integer getState() 获取热词表状态，1为默认状态即在识别时默认加载该热词表进行识别，0为初始状态
  * @method void setState(integer $State) 设置热词表状态，1为默认状态即在识别时默认加载该热词表进行识别，0为初始状态
+ * @method array getTagInfos() 获取标签数组
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTagInfos(array $TagInfos) 设置标签数组
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Vocab extends AbstractModel
 {
@@ -73,6 +77,12 @@ class Vocab extends AbstractModel
     public $State;
 
     /**
+     * @var array 标签数组
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TagInfos;
+
+    /**
      * @param string $Name 热词表名称
      * @param string $Description 热词表描述
      * @param string $VocabId 热词表ID
@@ -80,6 +90,8 @@ class Vocab extends AbstractModel
      * @param string $CreateTime 词表创建时间
      * @param string $UpdateTime 词表更新时间
      * @param integer $State 热词表状态，1为默认状态即在识别时默认加载该热词表进行识别，0为初始状态
+     * @param array $TagInfos 标签数组
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -125,6 +137,10 @@ class Vocab extends AbstractModel
 
         if (array_key_exists("State",$param) and $param["State"] !== null) {
             $this->State = $param["State"];
+        }
+
+        if (array_key_exists("TagInfos",$param) and $param["TagInfos"] !== null) {
+            $this->TagInfos = $param["TagInfos"];
         }
     }
 }

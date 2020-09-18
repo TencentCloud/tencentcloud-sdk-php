@@ -18,16 +18,16 @@ namespace TencentCloud\Asr\V20190614\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * GetAsrVocabList请求参数结构体
+ * GetCustomizationList请求参数结构体
  *
  * @method array getTagInfos() 获取标签信息，格式为“$TagKey : $TagValue ”，中间分隔符为“空格”+“:”+“空格”
  * @method void setTagInfos(array $TagInfos) 设置标签信息，格式为“$TagKey : $TagValue ”，中间分隔符为“空格”+“:”+“空格”
- * @method integer getOffset() 获取分页Offset
- * @method void setOffset(integer $Offset) 设置分页Offset
- * @method integer getLimit() 获取分页Limit
- * @method void setLimit(integer $Limit) 设置分页Limit
+ * @method integer getLimit() 获取分页大小
+ * @method void setLimit(integer $Limit) 设置分页大小
+ * @method integer getOffset() 获取分页offset
+ * @method void setOffset(integer $Offset) 设置分页offset
  */
-class GetAsrVocabListRequest extends AbstractModel
+class GetCustomizationListRequest extends AbstractModel
 {
     /**
      * @var array 标签信息，格式为“$TagKey : $TagValue ”，中间分隔符为“空格”+“:”+“空格”
@@ -35,19 +35,19 @@ class GetAsrVocabListRequest extends AbstractModel
     public $TagInfos;
 
     /**
-     * @var integer 分页Offset
-     */
-    public $Offset;
-
-    /**
-     * @var integer 分页Limit
+     * @var integer 分页大小
      */
     public $Limit;
 
     /**
+     * @var integer 分页offset
+     */
+    public $Offset;
+
+    /**
      * @param array $TagInfos 标签信息，格式为“$TagKey : $TagValue ”，中间分隔符为“空格”+“:”+“空格”
-     * @param integer $Offset 分页Offset
-     * @param integer $Limit 分页Limit
+     * @param integer $Limit 分页大小
+     * @param integer $Offset 分页offset
      */
     function __construct()
     {
@@ -66,12 +66,12 @@ class GetAsrVocabListRequest extends AbstractModel
             $this->TagInfos = $param["TagInfos"];
         }
 
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
-        }
-
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
         }
     }
 }

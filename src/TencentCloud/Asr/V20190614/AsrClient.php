@@ -49,6 +49,7 @@ use TencentCloud\Asr\V20190614\Models as Models;
  * @method Models\DownloadAsrVocabResponse DownloadAsrVocab(Models\DownloadAsrVocabRequest $req) 用户通过本接口进行热词表的下载，获得词表权重文件形式的 base64 值，文件形式为通过 “|” 分割的词和权重，即 word|weight 的形式。
  * @method Models\GetAsrVocabResponse GetAsrVocab(Models\GetAsrVocabRequest $req) 用户根据词表的ID可以获取对应的热词表信息
  * @method Models\GetAsrVocabListResponse GetAsrVocabList(Models\GetAsrVocabListRequest $req) 用户通过该接口，可获得所有的热词表及其信息。
+ * @method Models\GetCustomizationListResponse GetCustomizationList(Models\GetCustomizationListRequest $req) 查询自学习模型列表
  * @method Models\SentenceRecognitionResponse SentenceRecognition(Models\SentenceRecognitionRequest $req) 本接口用于对60秒之内的短音频文件进行识别。
 <br>•   支持中文普通话、英语、粤语、日语、上海话方言。
 <br>•   支持本地语音文件上传和语音URL上传两种请求方式，音频时长不能超过60s。

@@ -14,30 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Asr\V20190614\Models;
+namespace TencentCloud\Iai\V20200303\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * GetAsrVocabList返回参数结构体
+ * DetectLiveFaceAccurate返回参数结构体
  *
- * @method array getVocabList() 获取热词表列表
- * @method void setVocabList(array $VocabList) 设置热词表列表
- * @method integer getTotalCount() 获取热词列表总数
- * @method void setTotalCount(integer $TotalCount) 设置热词列表总数
+ * @method float getScore() 获取活体打分，取值范围 [0,100]，根据活体分数对应的阈值区间来判断是否为翻拍。目前阈值可分为[5,10,40,70,90]，其中推荐阈值为40。
+ * @method void setScore(float $Score) 设置活体打分，取值范围 [0,100]，根据活体分数对应的阈值区间来判断是否为翻拍。目前阈值可分为[5,10,40,70,90]，其中推荐阈值为40。
+ * @method string getFaceModelVersion() 获取人脸识别所用的算法模型版本。
+ * @method void setFaceModelVersion(string $FaceModelVersion) 设置人脸识别所用的算法模型版本。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class GetAsrVocabListResponse extends AbstractModel
+class DetectLiveFaceAccurateResponse extends AbstractModel
 {
     /**
-     * @var array 热词表列表
+     * @var float 活体打分，取值范围 [0,100]，根据活体分数对应的阈值区间来判断是否为翻拍。目前阈值可分为[5,10,40,70,90]，其中推荐阈值为40。
      */
-    public $VocabList;
+    public $Score;
 
     /**
-     * @var integer 热词列表总数
+     * @var string 人脸识别所用的算法模型版本。
      */
-    public $TotalCount;
+    public $FaceModelVersion;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +45,8 @@ class GetAsrVocabListResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $VocabList 热词表列表
-     * @param integer $TotalCount 热词列表总数
+     * @param float $Score 活体打分，取值范围 [0,100]，根据活体分数对应的阈值区间来判断是否为翻拍。目前阈值可分为[5,10,40,70,90]，其中推荐阈值为40。
+     * @param string $FaceModelVersion 人脸识别所用的算法模型版本。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,17 +62,12 @@ class GetAsrVocabListResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("VocabList",$param) and $param["VocabList"] !== null) {
-            $this->VocabList = [];
-            foreach ($param["VocabList"] as $key => $value){
-                $obj = new Vocab();
-                $obj->deserialize($value);
-                array_push($this->VocabList, $obj);
-            }
+        if (array_key_exists("Score",$param) and $param["Score"] !== null) {
+            $this->Score = $param["Score"];
         }
 
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists("FaceModelVersion",$param) and $param["FaceModelVersion"] !== null) {
+            $this->FaceModelVersion = $param["FaceModelVersion"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

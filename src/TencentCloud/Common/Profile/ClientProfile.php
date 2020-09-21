@@ -41,6 +41,15 @@ class ClientProfile
      */
     public static $SIGN_TC3_SHA256 = "TC3-HMAC-SHA256";
 
+    /**
+     * @var string Chinese simplified
+     */
+    public static $ZH_CN = "zh-CN";
+
+    /**
+     * @var string English
+     */
+    public static $EN_US = "en-US";
 
     /**
      * @var HttpProfile http相关参数
@@ -62,6 +71,11 @@ class ClientProfile
      */
     private $checkPHPVersion;
 
+    /**
+     * @var string
+     */
+    private $language;
+
 
     /**
      * ClientProfile constructor.
@@ -73,7 +87,8 @@ class ClientProfile
         $this->signMethod = $signMethod ? $signMethod : ClientProfile::$SIGN_TC3_SHA256;
         $this->httpProfile = $httpProfile ? $httpProfile : new HttpProfile();
         $this->unsignedPayload = false;
-        $this->checkPHPVersion = true;
+	$this->checkPHPVersion = true;
+	//$this->language = ClientProfile::$ZH_CN;
     }
 
     /**
@@ -129,6 +144,19 @@ class ClientProfile
     public function setCheckPHPVersion($flag)
     {
         $this->checkPHPVersion = $flag;
+    }
+
+    public function getLanguage()
+    {
+	return $this->language;
+    }
+
+    /**
+     * @param string $language Valid values: zh-CN, en-US
+     */
+    public function setLanguage($language)
+    {
+	$this->language = $language;
     }
 
     /**

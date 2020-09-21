@@ -241,6 +241,11 @@ abstract class AbstractClient
             $headers["X-TC-Token"] = $this->credential->getToken();
         }
 
+	$language = $this->profile->getLanguage();
+	if ($language) {
+	    $headers["X-TC-Language"] = $language;
+	}
+
         $canonicalUri = $this->path;
 
         $reqmethod = $this->profile->getHttpProfile()->getReqMethod();
@@ -378,6 +383,11 @@ abstract class AbstractClient
         if ($this->profile->getSignMethod()) {
             $param["SignatureMethod"] = $this->profile->getSignMethod();
         }
+
+	$language = $this->profile->getLanguage();
+	if ($language) {
+	    $param["Language"] = $language;
+	}
 
         $signStr = $this->formatSignString($this->profile->getHttpProfile()->getEndpoint(),
             $this->path, $param,  $reqMethod);

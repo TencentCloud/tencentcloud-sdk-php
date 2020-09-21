@@ -6,12 +6,15 @@ use TencentCloud\Cvm\V20170312\CvmClient;
 use TencentCloud\Cvm\V20170312\Models\DescribeZonesRequest;
 use TencentCloud\Common\Exception\TencentCloudSDKException;
 use TencentCloud\Common\Credential;
+use TencentCloud\Common\Profile\ClientProfile;
 try {
     // 实例化一个证书对象，入参需要传入腾讯云账户secretId，secretKey
-    $cred = new Credential("secretId", "secretKey");
-
+    $cred = new Credential(getenv("TENCENTCLOUD_SECRET_ID"), getenv("TENCENTCLOUD_SECRET_KEY"));
+    $clientProfile = new ClientProfile();
+    //$clientProfile->setLanguage(ClientProfile::$ZH_CN);
+    $clientProfile->setSignMethod(ClientProfile::$SIGN_HMAC_SHA256);
     // # 实例化要请求产品(以cvm为例)的client对象
-    $client = new CvmClient($cred, "ap-guangzhou");
+    $client = new CvmClient($cred, "ap-guangzhou", $clientProfile);
 
     // 实例化一个请求对象
     $req = new DescribeZonesRequest();

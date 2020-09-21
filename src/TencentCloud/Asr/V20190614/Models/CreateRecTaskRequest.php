@@ -22,6 +22,7 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getEngineModelType() 获取引擎模型类型。
 电话场景：
+• 8k_en：电话 8k 英语；
 • 8k_zh：电话 8k 中文普通话通用（可用于双声道音频）；
 • 8k_zh_s：电话 8k 中文普通话话者分离（仅适用于单声道音频）；
 非电话场景：
@@ -33,6 +34,7 @@ use TencentCloud\Common\AbstractModel;
 • 16k_wuu-SH：16k 上海话方言；
  * @method void setEngineModelType(string $EngineModelType) 设置引擎模型类型。
 电话场景：
+• 8k_en：电话 8k 英语；
 • 8k_zh：电话 8k 中文普通话通用（可用于双声道音频）；
 • 8k_zh_s：电话 8k 中文普通话话者分离（仅适用于单声道音频）；
 非电话场景：
@@ -80,6 +82,7 @@ class CreateRecTaskRequest extends AbstractModel
     /**
      * @var string 引擎模型类型。
 电话场景：
+• 8k_en：电话 8k 英语；
 • 8k_zh：电话 8k 中文普通话通用（可用于双声道音频）；
 • 8k_zh_s：电话 8k 中文普通话话者分离（仅适用于单声道音频）；
 非电话场景：
@@ -171,6 +174,7 @@ class CreateRecTaskRequest extends AbstractModel
     /**
      * @param string $EngineModelType 引擎模型类型。
 电话场景：
+• 8k_en：电话 8k 英语；
 • 8k_zh：电话 8k 中文普通话通用（可用于双声道音频）；
 • 8k_zh_s：电话 8k 中文普通话话者分离（仅适用于单声道音频）；
 非电话场景：

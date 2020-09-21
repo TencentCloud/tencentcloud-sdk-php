@@ -68,6 +68,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHardwareResourceType(string $HardwareResourceType) 设置扩容所选资源类型，可选范围为"host","pod"，host为普通的CVM资源，Pod为TKE集群提供的资源
  * @method PodSpec getPodSpec() 获取使用Pod资源扩容时，指定的Pod规格以及来源等信息
  * @method void setPodSpec(PodSpec $PodSpec) 设置使用Pod资源扩容时，指定的Pod规格以及来源等信息
+ * @method string getClickHouseClusterName() 获取使用clickhouse集群扩容时，选择的机器分组名称
+ * @method void setClickHouseClusterName(string $ClickHouseClusterName) 设置使用clickhouse集群扩容时，选择的机器分组名称
+ * @method string getClickHouseClusterType() 获取使用clickhouse集群扩容时，选择的机器分组类型。new为新增，old为选择旧分组
+ * @method void setClickHouseClusterType(string $ClickHouseClusterType) 设置使用clickhouse集群扩容时，选择的机器分组类型。new为新增，old为选择旧分组
+ * @method string getYarnNodeLabel() 获取规则扩容指定 yarn node label
+ * @method void setYarnNodeLabel(string $YarnNodeLabel) 设置规则扩容指定 yarn node label
  */
 class ScaleOutInstanceRequest extends AbstractModel
 {
@@ -160,6 +166,21 @@ class ScaleOutInstanceRequest extends AbstractModel
     public $PodSpec;
 
     /**
+     * @var string 使用clickhouse集群扩容时，选择的机器分组名称
+     */
+    public $ClickHouseClusterName;
+
+    /**
+     * @var string 使用clickhouse集群扩容时，选择的机器分组类型。new为新增，old为选择旧分组
+     */
+    public $ClickHouseClusterType;
+
+    /**
+     * @var string 规则扩容指定 yarn node label
+     */
+    public $YarnNodeLabel;
+
+    /**
      * @param string $TimeUnit 扩容的时间单位。取值范围：
 <li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
 <li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
@@ -184,6 +205,9 @@ class ScaleOutInstanceRequest extends AbstractModel
      * @param array $Tags 扩容节点绑定标签列表。
      * @param string $HardwareResourceType 扩容所选资源类型，可选范围为"host","pod"，host为普通的CVM资源，Pod为TKE集群提供的资源
      * @param PodSpec $PodSpec 使用Pod资源扩容时，指定的Pod规格以及来源等信息
+     * @param string $ClickHouseClusterName 使用clickhouse集群扩容时，选择的机器分组名称
+     * @param string $ClickHouseClusterType 使用clickhouse集群扩容时，选择的机器分组类型。new为新增，old为选择旧分组
+     * @param string $YarnNodeLabel 规则扩容指定 yarn node label
      */
     function __construct()
     {
@@ -271,6 +295,18 @@ class ScaleOutInstanceRequest extends AbstractModel
         if (array_key_exists("PodSpec",$param) and $param["PodSpec"] !== null) {
             $this->PodSpec = new PodSpec();
             $this->PodSpec->deserialize($param["PodSpec"]);
+        }
+
+        if (array_key_exists("ClickHouseClusterName",$param) and $param["ClickHouseClusterName"] !== null) {
+            $this->ClickHouseClusterName = $param["ClickHouseClusterName"];
+        }
+
+        if (array_key_exists("ClickHouseClusterType",$param) and $param["ClickHouseClusterType"] !== null) {
+            $this->ClickHouseClusterType = $param["ClickHouseClusterType"];
+        }
+
+        if (array_key_exists("YarnNodeLabel",$param) and $param["YarnNodeLabel"] !== null) {
+            $this->YarnNodeLabel = $param["YarnNodeLabel"];
         }
     }
 }

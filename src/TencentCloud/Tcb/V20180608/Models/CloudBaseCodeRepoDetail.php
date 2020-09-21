@@ -14,24 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Mongodb\V20190725\Models;
+namespace TencentCloud\Tcb\V20180608\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeAsyncRequestInfo请求参数结构体
+ * 代码仓库里 Repo的信息描述
  *
- * @method string getAsyncRequestId() 获取异步请求Id，涉及到异步流程的接口返回，如CreateBackupDBInstance
- * @method void setAsyncRequestId(string $AsyncRequestId) 设置异步请求Id，涉及到异步流程的接口返回，如CreateBackupDBInstance
+ * @method CloudBaseCodeRepoName getName() 获取repo的名字
+ * @method void setName(CloudBaseCodeRepoName $Name) 设置repo的名字
+ * @method string getUrl() 获取repo的url
+ * @method void setUrl(string $Url) 设置repo的url
  */
-class DescribeAsyncRequestInfoRequest extends AbstractModel
+class CloudBaseCodeRepoDetail extends AbstractModel
 {
     /**
-     * @var string 异步请求Id，涉及到异步流程的接口返回，如CreateBackupDBInstance
+     * @var CloudBaseCodeRepoName repo的名字
      */
-    public $AsyncRequestId;
+    public $Name;
 
     /**
-     * @param string $AsyncRequestId 异步请求Id，涉及到异步流程的接口返回，如CreateBackupDBInstance
+     * @var string repo的url
+     */
+    public $Url;
+
+    /**
+     * @param CloudBaseCodeRepoName $Name repo的名字
+     * @param string $Url repo的url
      */
     function __construct()
     {
@@ -46,8 +54,13 @@ class DescribeAsyncRequestInfoRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AsyncRequestId",$param) and $param["AsyncRequestId"] !== null) {
-            $this->AsyncRequestId = $param["AsyncRequestId"];
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = new CloudBaseCodeRepoName();
+            $this->Name->deserialize($param["Name"]);
+        }
+
+        if (array_key_exists("Url",$param) and $param["Url"] !== null) {
+            $this->Url = $param["Url"];
         }
     }
 }

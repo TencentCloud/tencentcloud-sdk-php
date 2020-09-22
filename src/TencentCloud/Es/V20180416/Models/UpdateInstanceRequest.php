@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
 节点个数（2-50个）
  * @method void setNodeNum(integer $NodeNum) 设置已废弃请使用NodeInfoList
 节点个数（2-50个）
- * @method string getEsConfig() 获取配置项（JSON格式字符串）。当前仅支持以下配置项：<li>action.destructive_requires_name</li><li>indices.fielddata.cache.size</li><li>indices.query.bool.max_clause_count</li>
- * @method void setEsConfig(string $EsConfig) 设置配置项（JSON格式字符串）。当前仅支持以下配置项：<li>action.destructive_requires_name</li><li>indices.fielddata.cache.size</li><li>indices.query.bool.max_clause_count</li>
+ * @method string getEsConfig() 获取配置项（JSON格式字符串）
+ * @method void setEsConfig(string $EsConfig) 设置配置项（JSON格式字符串）
  * @method string getPassword() 获取默认用户elastic的密码（8到16位，至少包括两项（[a-z,A-Z],[0-9]和[-!@#$%&^*+=_:;,.?]的特殊符号）
  * @method void setPassword(string $Password) 设置默认用户elastic的密码（8到16位，至少包括两项（[a-z,A-Z],[0-9]和[-!@#$%&^*+=_:;,.?]的特殊符号）
  * @method EsAcl getEsAcl() 获取访问控制列表
@@ -98,7 +98,7 @@ class UpdateInstanceRequest extends AbstractModel
     public $NodeNum;
 
     /**
-     * @var string 配置项（JSON格式字符串）。当前仅支持以下配置项：<li>action.destructive_requires_name</li><li>indices.fielddata.cache.size</li><li>indices.query.bool.max_clause_count</li>
+     * @var string 配置项（JSON格式字符串）
      */
     public $EsConfig;
 
@@ -207,7 +207,7 @@ class UpdateInstanceRequest extends AbstractModel
      * @param string $InstanceName 实例名称（1-50 个英文、汉字、数字、连接线-或下划线_）
      * @param integer $NodeNum 已废弃请使用NodeInfoList
 节点个数（2-50个）
-     * @param string $EsConfig 配置项（JSON格式字符串）。当前仅支持以下配置项：<li>action.destructive_requires_name</li><li>indices.fielddata.cache.size</li><li>indices.query.bool.max_clause_count</li>
+     * @param string $EsConfig 配置项（JSON格式字符串）
      * @param string $Password 默认用户elastic的密码（8到16位，至少包括两项（[a-z,A-Z],[0-9]和[-!@#$%&^*+=_:;,.?]的特殊符号）
      * @param EsAcl $EsAcl 访问控制列表
      * @param integer $DiskSize 已废弃请使用NodeInfoList

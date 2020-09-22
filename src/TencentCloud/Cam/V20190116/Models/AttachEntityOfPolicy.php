@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRelatedType() 获取关联类型。1 用户关联 ； 2 用户组关联
  * @method void setRelatedType(integer $RelatedType) 设置关联类型。1 用户关联 ； 2 用户组关联
+ * @method string getAttachmentTime() 获取策略关联时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAttachmentTime(string $AttachmentTime) 设置策略关联时间
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AttachEntityOfPolicy extends AbstractModel
 {
@@ -58,12 +62,20 @@ class AttachEntityOfPolicy extends AbstractModel
     public $RelatedType;
 
     /**
+     * @var string 策略关联时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AttachmentTime;
+
+    /**
      * @param string $Id 实体ID
      * @param string $Name 实体名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Uin 实体Uin
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RelatedType 关联类型。1 用户关联 ； 2 用户组关联
+     * @param string $AttachmentTime 策略关联时间
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -92,6 +104,10 @@ class AttachEntityOfPolicy extends AbstractModel
 
         if (array_key_exists("RelatedType",$param) and $param["RelatedType"] !== null) {
             $this->RelatedType = $param["RelatedType"];
+        }
+
+        if (array_key_exists("AttachmentTime",$param) and $param["AttachmentTime"] !== null) {
+            $this->AttachmentTime = $param["AttachmentTime"];
         }
     }
 }

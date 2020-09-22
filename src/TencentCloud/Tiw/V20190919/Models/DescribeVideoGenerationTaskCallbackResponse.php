@@ -14,23 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ckafka\V20190819\Models;
+namespace TencentCloud\Tiw\V20190919\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * FetchMessageByOffset返回参数结构体
+ * DescribeVideoGenerationTaskCallback返回参数结构体
  *
- * @method ConsumerRecord getResult() 获取返回结果
- * @method void setResult(ConsumerRecord $Result) 设置返回结果
+ * @method string getCallback() 获取录制视频生成回调地址
+ * @method void setCallback(string $Callback) 设置录制视频生成回调地址
+ * @method string getCallbackKey() 获取录制视频生成回调鉴权密钥
+ * @method void setCallbackKey(string $CallbackKey) 设置录制视频生成回调鉴权密钥
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class FetchMessageByOffsetResponse extends AbstractModel
+class DescribeVideoGenerationTaskCallbackResponse extends AbstractModel
 {
     /**
-     * @var ConsumerRecord 返回结果
+     * @var string 录制视频生成回调地址
      */
-    public $Result;
+    public $Callback;
+
+    /**
+     * @var string 录制视频生成回调鉴权密钥
+     */
+    public $CallbackKey;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +45,8 @@ class FetchMessageByOffsetResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param ConsumerRecord $Result 返回结果
+     * @param string $Callback 录制视频生成回调地址
+     * @param string $CallbackKey 录制视频生成回调鉴权密钥
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,9 +62,12 @@ class FetchMessageByOffsetResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
-            $this->Result = new ConsumerRecord();
-            $this->Result->deserialize($param["Result"]);
+        if (array_key_exists("Callback",$param) and $param["Callback"] !== null) {
+            $this->Callback = $param["Callback"];
+        }
+
+        if (array_key_exists("CallbackKey",$param) and $param["CallbackKey"] !== null) {
+            $this->CallbackKey = $param["CallbackKey"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

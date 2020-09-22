@@ -14,31 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ckafka\V20190819\Models;
+namespace TencentCloud\Tiw\V20190919\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * FetchMessageListByOffset返回参数结构体
+ * SetVideoGenerationTaskCallbackKey返回参数结构体
  *
- * @method array getResult() 获取返回结果
- * @method void setResult(array $Result) 设置返回结果
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class FetchMessageListByOffsetResponse extends AbstractModel
+class SetVideoGenerationTaskCallbackKeyResponse extends AbstractModel
 {
-    /**
-     * @var array 返回结果
-     */
-    public $Result;
-
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
-     * @param array $Result 返回结果
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,15 +46,6 @@ class FetchMessageListByOffsetResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
-            $this->Result = [];
-            foreach ($param["Result"] as $key => $value){
-                $obj = new ConsumerRecord();
-                $obj->deserialize($value);
-                array_push($this->Result, $obj);
-            }
-        }
-
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

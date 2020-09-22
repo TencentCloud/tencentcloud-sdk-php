@@ -22,14 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getReportedAccount() 获取被举报账号，长度低于 128 个字符
  * @method void setReportedAccount(string $ReportedAccount) 设置被举报账号，长度低于 128 个字符
- * @method integer getReportedAccountType() 获取被举报账号类型(1-微信uin 2-QQ号 3-微信群uin 4-qq群号 5-微信openid 6-QQopenid 7-手机号 8-微信号 0-其它string)
- * @method void setReportedAccountType(integer $ReportedAccountType) 设置被举报账号类型(1-微信uin 2-QQ号 3-微信群uin 4-qq群号 5-微信openid 6-QQopenid 7-手机号 8-微信号 0-其它string)
+ * @method integer getReportedAccountType() 获取被举报账号类型(1-手机号 2-QQ号 3-微信号 4-QQ群号 5-微信openid 6-QQopenid 0-其它)
+ * @method void setReportedAccountType(integer $ReportedAccountType) 设置被举报账号类型(1-手机号 2-QQ号 3-微信号 4-QQ群号 5-微信openid 6-QQopenid 0-其它)
  * @method integer getEvilType() 获取被举报账号所属恶意类型(1-诈骗，2-骚扰，3-广告，4-违法违规，5-赌博传销，0-其他)
  * @method void setEvilType(integer $EvilType) 设置被举报账号所属恶意类型(1-诈骗，2-骚扰，3-广告，4-违法违规，5-赌博传销，0-其他)
  * @method string getSenderAccount() 获取举报者账号，长度低于 128 个字符
  * @method void setSenderAccount(string $SenderAccount) 设置举报者账号，长度低于 128 个字符
- * @method integer getSenderAccountType() 获取举报者账号类型(1-微信uin 2-QQ号 3-微信群uin 4-qq群号 5-微信openid 6-QQopenid 7-手机号 8-微信号 0-其它string)
- * @method void setSenderAccountType(integer $SenderAccountType) 设置举报者账号类型(1-微信uin 2-QQ号 3-微信群uin 4-qq群号 5-微信openid 6-QQopenid 7-手机号 8-微信号 0-其它string)
+ * @method integer getSenderAccountType() 获取举报者账号类型(1-手机号 2-QQ号 3-微信号 4-QQ群号 5-微信openid 6-QQopenid 0-其它)
+ * @method void setSenderAccountType(integer $SenderAccountType) 设置举报者账号类型(1-手机号 2-QQ号 3-微信号 4-QQ群号 5-微信openid 6-QQopenid 0-其它)
  * @method string getSenderIP() 获取举报者IP地址
  * @method void setSenderIP(string $SenderIP) 设置举报者IP地址
  * @method string getEvilContent() 获取包含被举报账号的恶意内容（比如文本、图片链接，长度低于1024个字符）
@@ -43,7 +43,7 @@ class AccountTipoffAccessRequest extends AbstractModel
     public $ReportedAccount;
 
     /**
-     * @var integer 被举报账号类型(1-微信uin 2-QQ号 3-微信群uin 4-qq群号 5-微信openid 6-QQopenid 7-手机号 8-微信号 0-其它string)
+     * @var integer 被举报账号类型(1-手机号 2-QQ号 3-微信号 4-QQ群号 5-微信openid 6-QQopenid 0-其它)
      */
     public $ReportedAccountType;
 
@@ -58,7 +58,7 @@ class AccountTipoffAccessRequest extends AbstractModel
     public $SenderAccount;
 
     /**
-     * @var integer 举报者账号类型(1-微信uin 2-QQ号 3-微信群uin 4-qq群号 5-微信openid 6-QQopenid 7-手机号 8-微信号 0-其它string)
+     * @var integer 举报者账号类型(1-手机号 2-QQ号 3-微信号 4-QQ群号 5-微信openid 6-QQopenid 0-其它)
      */
     public $SenderAccountType;
 
@@ -74,10 +74,10 @@ class AccountTipoffAccessRequest extends AbstractModel
 
     /**
      * @param string $ReportedAccount 被举报账号，长度低于 128 个字符
-     * @param integer $ReportedAccountType 被举报账号类型(1-微信uin 2-QQ号 3-微信群uin 4-qq群号 5-微信openid 6-QQopenid 7-手机号 8-微信号 0-其它string)
+     * @param integer $ReportedAccountType 被举报账号类型(1-手机号 2-QQ号 3-微信号 4-QQ群号 5-微信openid 6-QQopenid 0-其它)
      * @param integer $EvilType 被举报账号所属恶意类型(1-诈骗，2-骚扰，3-广告，4-违法违规，5-赌博传销，0-其他)
      * @param string $SenderAccount 举报者账号，长度低于 128 个字符
-     * @param integer $SenderAccountType 举报者账号类型(1-微信uin 2-QQ号 3-微信群uin 4-qq群号 5-微信openid 6-QQopenid 7-手机号 8-微信号 0-其它string)
+     * @param integer $SenderAccountType 举报者账号类型(1-手机号 2-QQ号 3-微信号 4-QQ群号 5-微信openid 6-QQopenid 0-其它)
      * @param string $SenderIP 举报者IP地址
      * @param string $EvilContent 包含被举报账号的恶意内容（比如文本、图片链接，长度低于1024个字符）
      */

@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置策略名称
  * @method array getPortLimits() 获取端口禁用，当没有禁用端口时填空数组
  * @method void setPortLimits(array $PortLimits) 设置端口禁用，当没有禁用端口时填空数组
- * @method array getIpAllowDenys() 获取IP黑白名单，当没有IP黑白名单时填空数组
- * @method void setIpAllowDenys(array $IpAllowDenys) 设置IP黑白名单，当没有IP黑白名单时填空数组
+ * @method array getIpAllowDenys() 获取请求源IP黑白名单，当没有IP黑白名单时填空数组
+ * @method void setIpAllowDenys(array $IpAllowDenys) 设置请求源IP黑白名单，当没有IP黑白名单时填空数组
  * @method array getPacketFilters() 获取报文过滤，当没有报文过滤时填空数组
  * @method void setPacketFilters(array $PacketFilters) 设置报文过滤，当没有报文过滤时填空数组
  * @method array getWaterPrint() 获取水印策略参数，当没有启用水印功能时填空数组，最多只能传一条水印策略（即数组大小不超过1）
@@ -58,7 +58,7 @@ class CreateDDoSPolicyRequest extends AbstractModel
     public $PortLimits;
 
     /**
-     * @var array IP黑白名单，当没有IP黑白名单时填空数组
+     * @var array 请求源IP黑白名单，当没有IP黑白名单时填空数组
      */
     public $IpAllowDenys;
 
@@ -77,7 +77,7 @@ class CreateDDoSPolicyRequest extends AbstractModel
      * @param array $DropOptions 协议禁用，必须填写且数组长度必须为1
      * @param string $Name 策略名称
      * @param array $PortLimits 端口禁用，当没有禁用端口时填空数组
-     * @param array $IpAllowDenys IP黑白名单，当没有IP黑白名单时填空数组
+     * @param array $IpAllowDenys 请求源IP黑白名单，当没有IP黑白名单时填空数组
      * @param array $PacketFilters 报文过滤，当没有报文过滤时填空数组
      * @param array $WaterPrint 水印策略参数，当没有启用水印功能时填空数组，最多只能传一条水印策略（即数组大小不超过1）
      */

@@ -24,9 +24,15 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskTemplateIds(array $TaskTemplateIds) 设置任务模板ID列表，与Filters参数不能同时指定。
  * @method array getFilters() 获取过滤条件
 <li> task-template-name - String - 是否必填：否 -（过滤条件）按照任务模板名称过滤。</li>
+<li> tag-key - String - 是否必填：否 -（过滤条件）按照标签键进行过滤。</li>
+<li> tag-value - String - 是否必填：否 -（过滤条件）按照标签值进行过滤。</li>
+<li> tag:tag-key - String - 是否必填：否 -（过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。</li>
 与TaskTemplateIds参数不能同时指定。
  * @method void setFilters(array $Filters) 设置过滤条件
 <li> task-template-name - String - 是否必填：否 -（过滤条件）按照任务模板名称过滤。</li>
+<li> tag-key - String - 是否必填：否 -（过滤条件）按照标签键进行过滤。</li>
+<li> tag-value - String - 是否必填：否 -（过滤条件）按照标签值进行过滤。</li>
+<li> tag:tag-key - String - 是否必填：否 -（过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。</li>
 与TaskTemplateIds参数不能同时指定。
  * @method integer getOffset() 获取偏移量
  * @method void setOffset(integer $Offset) 设置偏移量
@@ -43,6 +49,9 @@ class DescribeTaskTemplatesRequest extends AbstractModel
     /**
      * @var array 过滤条件
 <li> task-template-name - String - 是否必填：否 -（过滤条件）按照任务模板名称过滤。</li>
+<li> tag-key - String - 是否必填：否 -（过滤条件）按照标签键进行过滤。</li>
+<li> tag-value - String - 是否必填：否 -（过滤条件）按照标签值进行过滤。</li>
+<li> tag:tag-key - String - 是否必填：否 -（过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。</li>
 与TaskTemplateIds参数不能同时指定。
      */
     public $Filters;
@@ -61,6 +70,9 @@ class DescribeTaskTemplatesRequest extends AbstractModel
      * @param array $TaskTemplateIds 任务模板ID列表，与Filters参数不能同时指定。
      * @param array $Filters 过滤条件
 <li> task-template-name - String - 是否必填：否 -（过滤条件）按照任务模板名称过滤。</li>
+<li> tag-key - String - 是否必填：否 -（过滤条件）按照标签键进行过滤。</li>
+<li> tag-value - String - 是否必填：否 -（过滤条件）按照标签值进行过滤。</li>
+<li> tag:tag-key - String - 是否必填：否 -（过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。</li>
 与TaskTemplateIds参数不能同时指定。
      * @param integer $Offset 偏移量
      * @param integer $Limit 返回数量

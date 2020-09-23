@@ -37,6 +37,7 @@ use TencentCloud\Common\AbstractModel;
 "KILLED" - 已终止；
 "REMOVED" - 已删除；
 "PAUSED" - 已暂停。
+"WAITING" - 等待中（可撤销）
  * @method void setTaskStatus(string $TaskStatus) 设置实例任务状态，可能的值包括：
 "UNDEFINED" - 未定义；
 "INITIAL" - 初始化；
@@ -46,6 +47,7 @@ use TencentCloud\Common\AbstractModel;
 "KILLED" - 已终止；
 "REMOVED" - 已删除；
 "PAUSED" - 已暂停。
+"WAITING" - 等待中（可撤销）
  * @method string getTaskType() 获取实例任务类型，可能的值包括：
 "ROLLBACK" - 数据库回档；
 "SQL OPERATION" - SQL操作；
@@ -115,6 +117,7 @@ class TaskDetail extends AbstractModel
 "KILLED" - 已终止；
 "REMOVED" - 已删除；
 "PAUSED" - 已暂停。
+"WAITING" - 等待中（可撤销）
      */
     public $TaskStatus;
 
@@ -170,6 +173,7 @@ class TaskDetail extends AbstractModel
 "KILLED" - 已终止；
 "REMOVED" - 已删除；
 "PAUSED" - 已暂停。
+"WAITING" - 等待中（可撤销）
      * @param string $TaskType 实例任务类型，可能的值包括：
 "ROLLBACK" - 数据库回档；
 "SQL OPERATION" - SQL操作；

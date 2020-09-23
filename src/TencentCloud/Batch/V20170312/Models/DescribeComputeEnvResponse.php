@@ -42,6 +42,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNextAction(string $NextAction) 设置下一步动作
  * @method integer getAttachedComputeNodeCount() 获取用户添加到计算环境中的计算节点个数
  * @method void setAttachedComputeNodeCount(integer $AttachedComputeNodeCount) 设置用户添加到计算环境中的计算节点个数
+ * @method array getTags() 获取计算环境绑定的标签列表。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTags(array $Tags) 设置计算环境绑定的标签列表。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -103,6 +107,12 @@ class DescribeComputeEnvResponse extends AbstractModel
     public $AttachedComputeNodeCount;
 
     /**
+     * @var array 计算环境绑定的标签列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Tags;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -119,6 +129,8 @@ class DescribeComputeEnvResponse extends AbstractModel
      * @param string $ResourceType 计算环境资源类型，当前为CVM和CPM（黑石）
      * @param string $NextAction 下一步动作
      * @param integer $AttachedComputeNodeCount 用户添加到计算环境中的计算节点个数
+     * @param array $Tags 计算环境绑定的标签列表。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -183,6 +195,15 @@ class DescribeComputeEnvResponse extends AbstractModel
 
         if (array_key_exists("AttachedComputeNodeCount",$param) and $param["AttachedComputeNodeCount"] !== null) {
             $this->AttachedComputeNodeCount = $param["AttachedComputeNodeCount"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

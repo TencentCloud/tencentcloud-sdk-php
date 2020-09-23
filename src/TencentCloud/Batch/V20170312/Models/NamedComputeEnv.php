@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setActionIfComputeNodeInactive(string $ActionIfComputeNodeInactive) 设置非活跃节点处理策略，默认“RECREATE”，即对于实例创建失败或异常退还的计算节点，定期重新创建实例资源。
  * @method integer getResourceMaxRetryCount() 获取对于实例创建失败或异常退还的计算节点，定期重新创建实例资源的最大重试次数，最大值11，如果不设置的话，系统会设置一个默认值，当前为7
  * @method void setResourceMaxRetryCount(integer $ResourceMaxRetryCount) 设置对于实例创建失败或异常退还的计算节点，定期重新创建实例资源的最大重试次数，最大值11，如果不设置的话，系统会设置一个默认值，当前为7
+ * @method array getTags() 获取标签列表。通过指定该参数可以支持绑定标签到计算环境。每个计算环境最多绑定10个标签。
+ * @method void setTags(array $Tags) 设置标签列表。通过指定该参数可以支持绑定标签到计算环境。每个计算环境最多绑定10个标签。
  */
 class NamedComputeEnv extends AbstractModel
 {
@@ -108,6 +110,11 @@ class NamedComputeEnv extends AbstractModel
     public $ResourceMaxRetryCount;
 
     /**
+     * @var array 标签列表。通过指定该参数可以支持绑定标签到计算环境。每个计算环境最多绑定10个标签。
+     */
+    public $Tags;
+
+    /**
      * @param string $EnvName 计算环境名称
      * @param integer $DesiredComputeNodeCount 计算节点期望个数
      * @param string $EnvDescription 计算环境描述
@@ -120,6 +127,7 @@ class NamedComputeEnv extends AbstractModel
      * @param Notification $Notifications 通知信息
      * @param string $ActionIfComputeNodeInactive 非活跃节点处理策略，默认“RECREATE”，即对于实例创建失败或异常退还的计算节点，定期重新创建实例资源。
      * @param integer $ResourceMaxRetryCount 对于实例创建失败或异常退还的计算节点，定期重新创建实例资源的最大重试次数，最大值11，如果不设置的话，系统会设置一个默认值，当前为7
+     * @param array $Tags 标签列表。通过指定该参数可以支持绑定标签到计算环境。每个计算环境最多绑定10个标签。
      */
     function __construct()
     {
@@ -198,6 +206,15 @@ class NamedComputeEnv extends AbstractModel
 
         if (array_key_exists("ResourceMaxRetryCount",$param) and $param["ResourceMaxRetryCount"] !== null) {
             $this->ResourceMaxRetryCount = $param["ResourceMaxRetryCount"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

@@ -64,6 +64,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProjectID(integer $ProjectID) 设置项目id
  * @method string getZone() 获取可用区
  * @method void setZone(string $Zone) 设置可用区
+ * @method array getResourceTags() 获取实例绑定的tag数组信息
+ * @method void setResourceTags(array $ResourceTags) 设置实例绑定的tag数组信息
  */
 class CynosdbClusterDetail extends AbstractModel
 {
@@ -178,6 +180,11 @@ class CynosdbClusterDetail extends AbstractModel
     public $Zone;
 
     /**
+     * @var array 实例绑定的tag数组信息
+     */
+    public $ResourceTags;
+
+    /**
      * @param string $ClusterId 集群ID
      * @param string $ClusterName 集群名称
      * @param string $Region 地域
@@ -200,6 +207,7 @@ class CynosdbClusterDetail extends AbstractModel
      * @param integer $Vport vport端口
      * @param integer $ProjectID 项目id
      * @param string $Zone 可用区
+     * @param array $ResourceTags 实例绑定的tag数组信息
      */
     function __construct()
     {
@@ -310,6 +318,15 @@ class CynosdbClusterDetail extends AbstractModel
 
         if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
             $this->Zone = $param["Zone"];
+        }
+
+        if (array_key_exists("ResourceTags",$param) and $param["ResourceTags"] !== null) {
+            $this->ResourceTags = [];
+            foreach ($param["ResourceTags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->ResourceTags, $obj);
+            }
         }
     }
 }

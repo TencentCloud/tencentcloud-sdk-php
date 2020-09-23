@@ -22,9 +22,9 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getLabel() 获取恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义关键词
  * @method void setLabel(string $Label) 设置恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义关键词
- * @method string getSuggestion() 获取建议值,Block：打击,Review：待复审,Normal：正常
+ * @method string getSuggestion() 获取建议值,Block：打击,Review：待复审,Pass：正常
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSuggestion(string $Suggestion) 设置建议值,Block：打击,Review：待复审,Normal：正常
+ * @method void setSuggestion(string $Suggestion) 设置建议值,Block：打击,Review：待复审,Pass：正常
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getKeywords() 获取该标签下命中的关键词
 注意：此字段可能返回 null，表示取不到有效值。
@@ -55,7 +55,7 @@ class DetailResults extends AbstractModel
     public $Label;
 
     /**
-     * @var string 建议值,Block：打击,Review：待复审,Normal：正常
+     * @var string 建议值,Block：打击,Review：待复审,Pass：正常
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Suggestion;
@@ -92,7 +92,7 @@ class DetailResults extends AbstractModel
 
     /**
      * @param string $Label 恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义关键词
-     * @param string $Suggestion 建议值,Block：打击,Review：待复审,Normal：正常
+     * @param string $Suggestion 建议值,Block：打击,Review：待复审,Pass：正常
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Keywords 该标签下命中的关键词
 注意：此字段可能返回 null，表示取不到有效值。

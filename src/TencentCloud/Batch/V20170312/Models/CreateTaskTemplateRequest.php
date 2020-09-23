@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskTemplateInfo(Task $TaskTemplateInfo) 设置任务模板内容，参数要求与任务一致
  * @method string getTaskTemplateDescription() 获取任务模板描述
  * @method void setTaskTemplateDescription(string $TaskTemplateDescription) 设置任务模板描述
+ * @method array getTags() 获取标签列表。通过指定该参数可以支持绑定标签到任务模板。每个任务模板最多绑定10个标签。
+ * @method void setTags(array $Tags) 设置标签列表。通过指定该参数可以支持绑定标签到任务模板。每个任务模板最多绑定10个标签。
  */
 class CreateTaskTemplateRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class CreateTaskTemplateRequest extends AbstractModel
     public $TaskTemplateDescription;
 
     /**
+     * @var array 标签列表。通过指定该参数可以支持绑定标签到任务模板。每个任务模板最多绑定10个标签。
+     */
+    public $Tags;
+
+    /**
      * @param string $TaskTemplateName 任务模板名称
      * @param Task $TaskTemplateInfo 任务模板内容，参数要求与任务一致
      * @param string $TaskTemplateDescription 任务模板描述
+     * @param array $Tags 标签列表。通过指定该参数可以支持绑定标签到任务模板。每个任务模板最多绑定10个标签。
      */
     function __construct()
     {
@@ -73,6 +81,15 @@ class CreateTaskTemplateRequest extends AbstractModel
 
         if (array_key_exists("TaskTemplateDescription",$param) and $param["TaskTemplateDescription"] !== null) {
             $this->TaskTemplateDescription = $param["TaskTemplateDescription"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

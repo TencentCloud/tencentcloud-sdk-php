@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskExecutionDependOn(string $TaskExecutionDependOn) 设置对于存在依赖关系的任务中，后序任务执行对于前序任务的依赖条件。取值范围包括 PRE_TASK_SUCCEED，PRE_TASK_AT_LEAST_PARTLY_SUCCEED，PRE_TASK_FINISHED，默认值为PRE_TASK_SUCCEED。
  * @method string getStateIfCreateCvmFailed() 获取表示创建 CVM 失败按照何种策略处理。取值范围包括 FAILED，RUNNABLE。FAILED 表示创建 CVM 失败按照一次执行失败处理，RUNNABLE 表示创建 CVM 失败按照继续等待处理。默认值为FAILED。StateIfCreateCvmFailed对于提交的指定计算环境的作业无效。
  * @method void setStateIfCreateCvmFailed(string $StateIfCreateCvmFailed) 设置表示创建 CVM 失败按照何种策略处理。取值范围包括 FAILED，RUNNABLE。FAILED 表示创建 CVM 失败按照一次执行失败处理，RUNNABLE 表示创建 CVM 失败按照继续等待处理。默认值为FAILED。StateIfCreateCvmFailed对于提交的指定计算环境的作业无效。
+ * @method array getTags() 获取标签列表。通过指定该参数可以支持绑定标签到作业。每个作业最多绑定10个标签。
+ * @method void setTags(array $Tags) 设置标签列表。通过指定该参数可以支持绑定标签到作业。每个作业最多绑定10个标签。
  */
 class Job extends AbstractModel
 {
@@ -80,6 +82,11 @@ class Job extends AbstractModel
     public $StateIfCreateCvmFailed;
 
     /**
+     * @var array 标签列表。通过指定该参数可以支持绑定标签到作业。每个作业最多绑定10个标签。
+     */
+    public $Tags;
+
+    /**
      * @param array $Tasks 任务信息
      * @param string $JobName 作业名称
      * @param string $JobDescription 作业描述
@@ -88,6 +95,7 @@ class Job extends AbstractModel
      * @param array $Notifications 通知信息
      * @param string $TaskExecutionDependOn 对于存在依赖关系的任务中，后序任务执行对于前序任务的依赖条件。取值范围包括 PRE_TASK_SUCCEED，PRE_TASK_AT_LEAST_PARTLY_SUCCEED，PRE_TASK_FINISHED，默认值为PRE_TASK_SUCCEED。
      * @param string $StateIfCreateCvmFailed 表示创建 CVM 失败按照何种策略处理。取值范围包括 FAILED，RUNNABLE。FAILED 表示创建 CVM 失败按照一次执行失败处理，RUNNABLE 表示创建 CVM 失败按照继续等待处理。默认值为FAILED。StateIfCreateCvmFailed对于提交的指定计算环境的作业无效。
+     * @param array $Tags 标签列表。通过指定该参数可以支持绑定标签到作业。每个作业最多绑定10个标签。
      */
     function __construct()
     {
@@ -147,6 +155,15 @@ class Job extends AbstractModel
 
         if (array_key_exists("StateIfCreateCvmFailed",$param) and $param["StateIfCreateCvmFailed"] !== null) {
             $this->StateIfCreateCvmFailed = $param["StateIfCreateCvmFailed"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

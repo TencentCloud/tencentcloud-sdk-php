@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskTemplateInfo(Task $TaskTemplateInfo) 设置任务模板信息
  * @method string getCreateTime() 获取创建时间
  * @method void setCreateTime(string $CreateTime) 设置创建时间
+ * @method array getTags() 获取任务模板绑定的标签列表。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTags(array $Tags) 设置任务模板绑定的标签列表。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskTemplateView extends AbstractModel
 {
@@ -59,11 +63,19 @@ class TaskTemplateView extends AbstractModel
     public $CreateTime;
 
     /**
+     * @var array 任务模板绑定的标签列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Tags;
+
+    /**
      * @param string $TaskTemplateId 任务模板ID
      * @param string $TaskTemplateName 任务模板名称
      * @param string $TaskTemplateDescription 任务模板描述
      * @param Task $TaskTemplateInfo 任务模板信息
      * @param string $CreateTime 创建时间
+     * @param array $Tags 任务模板绑定的标签列表。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -97,6 +109,15 @@ class TaskTemplateView extends AbstractModel
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
             $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

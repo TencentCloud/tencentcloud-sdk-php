@@ -84,6 +84,8 @@ timeRollback，时间点回档
  * @method void setHaCount(integer $HaCount) 设置实例数量（该参数已不再使用，只做存量兼容处理）
  * @method string getOrderSource() 获取订单来源
  * @method void setOrderSource(string $OrderSource) 设置订单来源
+ * @method array getResourceTags() 获取集群创建需要绑定的tag数组信息
+ * @method void setResourceTags(array $ResourceTags) 设置集群创建需要绑定的tag数组信息
  */
 class CreateClustersRequest extends AbstractModel
 {
@@ -228,6 +230,11 @@ timeRollback，时间点回档
     public $OrderSource;
 
     /**
+     * @var array 集群创建需要绑定的tag数组信息
+     */
+    public $ResourceTags;
+
+    /**
      * @param string $Zone 可用区
      * @param string $VpcId 所属VPC网络ID
      * @param string $SubnetId 所属子网ID
@@ -260,6 +267,7 @@ timeRollback，时间点回档
      * @param integer $AutoVoucher 是否自动选择代金券 1是 0否 默认为0
      * @param integer $HaCount 实例数量（该参数已不再使用，只做存量兼容处理）
      * @param string $OrderSource 订单来源
+     * @param array $ResourceTags 集群创建需要绑定的tag数组信息
      */
     function __construct()
     {
@@ -380,6 +388,15 @@ timeRollback，时间点回档
 
         if (array_key_exists("OrderSource",$param) and $param["OrderSource"] !== null) {
             $this->OrderSource = $param["OrderSource"];
+        }
+
+        if (array_key_exists("ResourceTags",$param) and $param["ResourceTags"] !== null) {
+            $this->ResourceTags = [];
+            foreach ($param["ResourceTags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->ResourceTags, $obj);
+            }
         }
     }
 }

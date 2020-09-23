@@ -42,6 +42,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNotifications(array $Notifications) 设置通知信息
  * @method integer getDesiredComputeNodeCount() 获取计算节点期望个数
  * @method void setDesiredComputeNodeCount(integer $DesiredComputeNodeCount) 设置计算节点期望个数
+ * @method array getTags() 获取计算环境绑定的标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTags(array $Tags) 设置计算环境绑定的标签列表
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -99,6 +103,12 @@ class DescribeComputeEnvCreateInfoResponse extends AbstractModel
     public $DesiredComputeNodeCount;
 
     /**
+     * @var array 计算环境绑定的标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Tags;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -115,6 +125,8 @@ class DescribeComputeEnvCreateInfoResponse extends AbstractModel
      * @param array $Authentications 授权信息
      * @param array $Notifications 通知信息
      * @param integer $DesiredComputeNodeCount 计算节点期望个数
+     * @param array $Tags 计算环境绑定的标签列表
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -189,6 +201,15 @@ class DescribeComputeEnvCreateInfoResponse extends AbstractModel
 
         if (array_key_exists("DesiredComputeNodeCount",$param) and $param["DesiredComputeNodeCount"] !== null) {
             $this->DesiredComputeNodeCount = $param["DesiredComputeNodeCount"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

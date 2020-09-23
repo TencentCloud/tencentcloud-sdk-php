@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method TaskMetrics getTaskMetrics() 获取任务统计指标
  * @method void setTaskMetrics(TaskMetrics $TaskMetrics) 设置任务统计指标
+ * @method array getTags() 获取作业绑定的标签列表。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTags(array $Tags) 设置作业绑定的标签列表。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class JobView extends AbstractModel
 {
@@ -86,6 +90,12 @@ class JobView extends AbstractModel
     public $TaskMetrics;
 
     /**
+     * @var array 作业绑定的标签列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Tags;
+
+    /**
      * @param string $JobId 作业ID
      * @param string $JobName 作业名称
      * @param string $JobState 作业状态
@@ -96,6 +106,8 @@ class JobView extends AbstractModel
      * @param string $EndTime 结束时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskMetrics $TaskMetrics 任务统计指标
+     * @param array $Tags 作业绑定的标签列表。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -142,6 +154,15 @@ class JobView extends AbstractModel
         if (array_key_exists("TaskMetrics",$param) and $param["TaskMetrics"] !== null) {
             $this->TaskMetrics = new TaskMetrics();
             $this->TaskMetrics->deserialize($param["TaskMetrics"]);
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

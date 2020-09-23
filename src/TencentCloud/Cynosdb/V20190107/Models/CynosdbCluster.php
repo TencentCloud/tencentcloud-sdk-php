@@ -70,6 +70,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProcessingTask(string $ProcessingTask) 设置正在处理的任务
  * @method array getTasks() 获取集群的任务数组
  * @method void setTasks(array $Tasks) 设置集群的任务数组
+ * @method array getResourceTags() 获取集群绑定的tag数组
+ * @method void setResourceTags(array $ResourceTags) 设置集群绑定的tag数组
  */
 class CynosdbCluster extends AbstractModel
 {
@@ -199,6 +201,11 @@ class CynosdbCluster extends AbstractModel
     public $Tasks;
 
     /**
+     * @var array 集群绑定的tag数组
+     */
+    public $ResourceTags;
+
+    /**
      * @param string $Status 集群状态
      * @param string $UpdateTime 更新时间
      * @param string $Zone 可用区
@@ -224,6 +231,7 @@ class CynosdbCluster extends AbstractModel
      * @param integer $RenewFlag 续费标志
      * @param string $ProcessingTask 正在处理的任务
      * @param array $Tasks 集群的任务数组
+     * @param array $ResourceTags 集群绑定的tag数组
      */
     function __construct()
     {
@@ -340,6 +348,15 @@ class CynosdbCluster extends AbstractModel
                 $obj = new ObjectTask();
                 $obj->deserialize($value);
                 array_push($this->Tasks, $obj);
+            }
+        }
+
+        if (array_key_exists("ResourceTags",$param) and $param["ResourceTags"] !== null) {
+            $this->ResourceTags = [];
+            foreach ($param["ResourceTags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->ResourceTags, $obj);
             }
         }
     }

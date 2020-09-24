@@ -42,6 +42,7 @@ use TencentCloud\Lighthouse\V20200324\Models as Models;
 * 过滤信息详细请见过滤器 [Filters](https://cloud.tencent.com/document/product/1207/47576#Filter) 。
 * 如果参数为空，返回当前用户一定数量（Limit 所指定的数量，默认为 20）的实例。
 * 支持查询实例的最新操作（LatestOperation）以及最新操作状态（LatestOperationState）。
+ * @method Models\DescribeInstancesTrafficPackagesResponse DescribeInstancesTrafficPackages(Models\DescribeInstancesTrafficPackagesRequest $req) 本接口（DescribeInstancesTrafficPackages）用于查询一个或多个实例的流量包详情。
  * @method Models\RebootInstancesResponse RebootInstances(Models\RebootInstancesRequest $req) 本接口（RebootInstances）用于重启实例。
 
 * 只有状态为 RUNNING 的实例才可以进行此操作。

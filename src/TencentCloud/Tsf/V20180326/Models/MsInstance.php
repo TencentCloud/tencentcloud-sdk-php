@@ -100,6 +100,26 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApplicationType(string $ApplicationType) 设置应用类型
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getServiceStatus() 获取服务状态，passing 在线，critical 离线
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setServiceStatus(string $ServiceStatus) 设置服务状态，passing 在线，critical 离线
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getRegistrationTime() 获取注册时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRegistrationTime(integer $RegistrationTime) 设置注册时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getLastHeartbeatTime() 获取上次心跳时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLastHeartbeatTime(integer $LastHeartbeatTime) 设置上次心跳时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getRegistrationId() 获取实例注册id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRegistrationId(integer $RegistrationId) 设置实例注册id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getHiddenStatus() 获取屏蔽状态，hidden 为屏蔽，unhidden 为未屏蔽
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHiddenStatus(string $HiddenStatus) 设置屏蔽状态，hidden 为屏蔽，unhidden 为未屏蔽
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class MsInstance extends AbstractModel
 {
@@ -224,6 +244,36 @@ class MsInstance extends AbstractModel
     public $ApplicationType;
 
     /**
+     * @var string 服务状态，passing 在线，critical 离线
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ServiceStatus;
+
+    /**
+     * @var integer 注册时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RegistrationTime;
+
+    /**
+     * @var integer 上次心跳时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LastHeartbeatTime;
+
+    /**
+     * @var integer 实例注册id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RegistrationId;
+
+    /**
+     * @var string 屏蔽状态，hidden 为屏蔽，unhidden 为未屏蔽
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $HiddenStatus;
+
+    /**
      * @param string $InstanceId 机器实例ID信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceName 机器实例名称信息
@@ -263,6 +313,16 @@ class MsInstance extends AbstractModel
      * @param string $ApplicationPackageVersion 应用程序包版本
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ApplicationType 应用类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ServiceStatus 服务状态，passing 在线，critical 离线
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $RegistrationTime 注册时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $LastHeartbeatTime 上次心跳时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $RegistrationId 实例注册id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $HiddenStatus 屏蔽状态，hidden 为屏蔽，unhidden 为未屏蔽
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -356,6 +416,26 @@ class MsInstance extends AbstractModel
 
         if (array_key_exists("ApplicationType",$param) and $param["ApplicationType"] !== null) {
             $this->ApplicationType = $param["ApplicationType"];
+        }
+
+        if (array_key_exists("ServiceStatus",$param) and $param["ServiceStatus"] !== null) {
+            $this->ServiceStatus = $param["ServiceStatus"];
+        }
+
+        if (array_key_exists("RegistrationTime",$param) and $param["RegistrationTime"] !== null) {
+            $this->RegistrationTime = $param["RegistrationTime"];
+        }
+
+        if (array_key_exists("LastHeartbeatTime",$param) and $param["LastHeartbeatTime"] !== null) {
+            $this->LastHeartbeatTime = $param["LastHeartbeatTime"];
+        }
+
+        if (array_key_exists("RegistrationId",$param) and $param["RegistrationId"] !== null) {
+            $this->RegistrationId = $param["RegistrationId"];
+        }
+
+        if (array_key_exists("HiddenStatus",$param) and $param["HiddenStatus"] !== null) {
+            $this->HiddenStatus = $param["HiddenStatus"];
         }
     }
 }

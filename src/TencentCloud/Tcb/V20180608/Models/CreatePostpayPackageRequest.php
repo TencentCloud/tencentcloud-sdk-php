@@ -42,8 +42,8 @@ use TencentCloud\Common\AbstractModel;
 <li>qcloud</li>
 用法同CreateEnv接口的Source参数
 和 Channel 参数同时传，或者同时不传；EnvId 为空时必传。
- * @method string getAlias() 获取环境别名，要以a-z开头，不能包含 a-zA-z0-9- 以外的字符
- * @method void setAlias(string $Alias) 设置环境别名，要以a-z开头，不能包含 a-zA-z0-9- 以外的字符
+ * @method string getAlias() 获取环境别名，要以a-z开头，不能包含  a-z,0-9,-  以外的字符
+ * @method void setAlias(string $Alias) 设置环境别名，要以a-z开头，不能包含  a-z,0-9,-  以外的字符
  * @method string getChannel() 获取如果envsource为miniapp, channel可以为ide或api;
 如果envsource为qcloud, channel可以为qc_console,cocos, qq, cloudgame,dcloud,serverless_framework
 和 EnvSource 参数同时传，或者同时不传；EnvId 为空时必传。
@@ -52,6 +52,12 @@ use TencentCloud\Common\AbstractModel;
 和 EnvSource 参数同时传，或者同时不传；EnvId 为空时必传。
  * @method string getExtensionId() 获取扩展ID
  * @method void setExtensionId(string $ExtensionId) 设置扩展ID
+ * @method string getFlag() 获取订单标记。建议使用方统一转大小写之后再判断。
+<li>QuickStart：快速启动来源</li>
+<li>Activity：活动来源</li>
+ * @method void setFlag(string $Flag) 设置订单标记。建议使用方统一转大小写之后再判断。
+<li>QuickStart：快速启动来源</li>
+<li>Activity：活动来源</li>
  */
 class CreatePostpayPackageRequest extends AbstractModel
 {
@@ -87,7 +93,7 @@ class CreatePostpayPackageRequest extends AbstractModel
     public $EnvSource;
 
     /**
-     * @var string 环境别名，要以a-z开头，不能包含 a-zA-z0-9- 以外的字符
+     * @var string 环境别名，要以a-z开头，不能包含  a-z,0-9,-  以外的字符
      */
     public $Alias;
 
@@ -104,6 +110,13 @@ class CreatePostpayPackageRequest extends AbstractModel
     public $ExtensionId;
 
     /**
+     * @var string 订单标记。建议使用方统一转大小写之后再判断。
+<li>QuickStart：快速启动来源</li>
+<li>Activity：活动来源</li>
+     */
+    public $Flag;
+
+    /**
      * @param string $EnvId 环境ID，需要系统自动创建环境时，此字段不传
      * @param string $WxAppId 微信 AppId，微信必传
      * @param string $Source 付费来源
@@ -115,11 +128,14 @@ class CreatePostpayPackageRequest extends AbstractModel
 <li>qcloud</li>
 用法同CreateEnv接口的Source参数
 和 Channel 参数同时传，或者同时不传；EnvId 为空时必传。
-     * @param string $Alias 环境别名，要以a-z开头，不能包含 a-zA-z0-9- 以外的字符
+     * @param string $Alias 环境别名，要以a-z开头，不能包含  a-z,0-9,-  以外的字符
      * @param string $Channel 如果envsource为miniapp, channel可以为ide或api;
 如果envsource为qcloud, channel可以为qc_console,cocos, qq, cloudgame,dcloud,serverless_framework
 和 EnvSource 参数同时传，或者同时不传；EnvId 为空时必传。
      * @param string $ExtensionId 扩展ID
+     * @param string $Flag 订单标记。建议使用方统一转大小写之后再判断。
+<li>QuickStart：快速启动来源</li>
+<li>Activity：活动来源</li>
      */
     function __construct()
     {
@@ -164,6 +180,10 @@ class CreatePostpayPackageRequest extends AbstractModel
 
         if (array_key_exists("ExtensionId",$param) and $param["ExtensionId"] !== null) {
             $this->ExtensionId = $param["ExtensionId"];
+        }
+
+        if (array_key_exists("Flag",$param) and $param["Flag"] !== null) {
+            $this->Flag = $param["Flag"];
         }
     }
 }

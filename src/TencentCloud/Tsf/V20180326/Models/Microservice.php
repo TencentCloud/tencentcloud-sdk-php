@@ -48,6 +48,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRunInstanceCount(integer $RunInstanceCount) 设置微服务的运行实例数目
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getCriticalInstanceCount() 获取微服务的离线实例数目
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCriticalInstanceCount(integer $CriticalInstanceCount) 设置微服务的离线实例数目
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Microservice extends AbstractModel
 {
@@ -94,6 +98,12 @@ class Microservice extends AbstractModel
     public $RunInstanceCount;
 
     /**
+     * @var integer 微服务的离线实例数目
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CriticalInstanceCount;
+
+    /**
      * @param string $MicroserviceId 微服务ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MicroserviceName 微服务名称
@@ -107,6 +117,8 @@ class Microservice extends AbstractModel
      * @param string $NamespaceId 命名空间ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RunInstanceCount 微服务的运行实例数目
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $CriticalInstanceCount 微服务的离线实例数目
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -148,6 +160,10 @@ class Microservice extends AbstractModel
 
         if (array_key_exists("RunInstanceCount",$param) and $param["RunInstanceCount"] !== null) {
             $this->RunInstanceCount = $param["RunInstanceCount"];
+        }
+
+        if (array_key_exists("CriticalInstanceCount",$param) and $param["CriticalInstanceCount"] !== null) {
+            $this->CriticalInstanceCount = $param["CriticalInstanceCount"];
         }
     }
 }

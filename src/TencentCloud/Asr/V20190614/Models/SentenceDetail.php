@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWords(array $Words) 设置单句中词详情
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method float getSpeechSpeed() 获取单句语速
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSpeechSpeed(float $SpeechSpeed) 设置单句语速
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SentenceDetail extends AbstractModel
 {
@@ -84,6 +88,12 @@ class SentenceDetail extends AbstractModel
     public $Words;
 
     /**
+     * @var float 单句语速
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SpeechSpeed;
+
+    /**
      * @param string $FinalSentence 单句最终识别结果
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SliceSentence 单句中间识别结果，使用空格拆分为多个词
@@ -95,6 +105,8 @@ class SentenceDetail extends AbstractModel
      * @param integer $WordsNum 单句中词个数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Words 单句中词详情
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param float $SpeechSpeed 单句语速
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -137,6 +149,10 @@ class SentenceDetail extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Words, $obj);
             }
+        }
+
+        if (array_key_exists("SpeechSpeed",$param) and $param["SpeechSpeed"] !== null) {
+            $this->SpeechSpeed = $param["SpeechSpeed"];
         }
     }
 }

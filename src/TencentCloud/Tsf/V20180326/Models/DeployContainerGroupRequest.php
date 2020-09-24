@@ -74,6 +74,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnvs(array $Envs) 设置部署组应用运行的环境变量。若不指定该参数，则默认不设置额外的环境变量。
  * @method ServiceSetting getServiceSetting() 获取容器部署组的网络设置。
  * @method void setServiceSetting(ServiceSetting $ServiceSetting) 设置容器部署组的网络设置。
+ * @method boolean getDeployAgent() 获取是否部署 agent 容器。若不指定该参数，则默认不部署 agent 容器。
+ * @method void setDeployAgent(boolean $DeployAgent) 设置是否部署 agent 容器。若不指定该参数，则默认不部署 agent 容器。
  */
 class DeployContainerGroupRequest extends AbstractModel
 {
@@ -213,6 +215,11 @@ class DeployContainerGroupRequest extends AbstractModel
     public $ServiceSetting;
 
     /**
+     * @var boolean 是否部署 agent 容器。若不指定该参数，则默认不部署 agent 容器。
+     */
+    public $DeployAgent;
+
+    /**
      * @param string $GroupId 部署组ID，分组唯一标识
      * @param string $TagName 镜像版本名称,如v1
      * @param integer $InstanceNum 实例数量
@@ -240,6 +247,7 @@ class DeployContainerGroupRequest extends AbstractModel
      * @param HealthCheckSettings $HealthCheckSettings 健康检查配置信息，若不指定该参数，则默认不设置健康检查。
      * @param array $Envs 部署组应用运行的环境变量。若不指定该参数，则默认不设置额外的环境变量。
      * @param ServiceSetting $ServiceSetting 容器部署组的网络设置。
+     * @param boolean $DeployAgent 是否部署 agent 容器。若不指定该参数，则默认不部署 agent 容器。
      */
     function __construct()
     {
@@ -367,6 +375,10 @@ class DeployContainerGroupRequest extends AbstractModel
         if (array_key_exists("ServiceSetting",$param) and $param["ServiceSetting"] !== null) {
             $this->ServiceSetting = new ServiceSetting();
             $this->ServiceSetting->deserialize($param["ServiceSetting"]);
+        }
+
+        if (array_key_exists("DeployAgent",$param) and $param["DeployAgent"] !== null) {
+            $this->DeployAgent = $param["DeployAgent"];
         }
     }
 }

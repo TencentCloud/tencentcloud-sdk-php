@@ -60,6 +60,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCfsConfig(CfsConfig $CfsConfig) 设置文件系统配置参数，用于云函数挂载文件系统
  * @method integer getInitTimeout() 获取函数初始化超时时间
  * @method void setInitTimeout(integer $InitTimeout) 设置函数初始化超时时间
+ * @method array getTags() 获取函数 Tag 参数，以键值对数组形式传入
+ * @method void setTags(array $Tags) 设置函数 Tag 参数，以键值对数组形式传入
  */
 class CreateFunctionRequest extends AbstractModel
 {
@@ -164,6 +166,11 @@ class CreateFunctionRequest extends AbstractModel
     public $InitTimeout;
 
     /**
+     * @var array 函数 Tag 参数，以键值对数组形式传入
+     */
+    public $Tags;
+
+    /**
      * @param string $FunctionName 创建的函数名称，函数名称支持26个英文字母大小写、数字、连接符和下划线，第一个字符只能以字母开头，最后一个字符不能为连接符或者下划线，名称长度2-60
      * @param Code $Code 函数的代码. 注意：不能同时指定Cos与ZipFile
      * @param string $Handler 函数处理方法名称，名称格式支持 "文件名称.方法名称" 形式，文件名称和函数名称之间以"."隔开，文件名称和函数名称要求以字母开始和结尾，中间允许插入字母、数字、下划线和连接符，文件名称和函数名字的长度要求是 2-60 个字符
@@ -184,6 +191,7 @@ class CreateFunctionRequest extends AbstractModel
      * @param PublicNetConfigIn $PublicNetConfig 公网访问配置
      * @param CfsConfig $CfsConfig 文件系统配置参数，用于云函数挂载文件系统
      * @param integer $InitTimeout 函数初始化超时时间
+     * @param array $Tags 函数 Tag 参数，以键值对数组形式传入
      */
     function __construct()
     {
@@ -287,6 +295,15 @@ class CreateFunctionRequest extends AbstractModel
 
         if (array_key_exists("InitTimeout",$param) and $param["InitTimeout"] !== null) {
             $this->InitTimeout = $param["InitTimeout"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetGameServerSessionLogUrl请求参数结构体
  *
- * @method string getGameServerSessionId() 获取游戏服务器会话ID
- * @method void setGameServerSessionId(string $GameServerSessionId) 设置游戏服务器会话ID
+ * @method string getGameServerSessionId() 获取游戏服务器会话ID，最小长度不小于1个ASCII字符，最大长度不超过48个ASCII字符
+ * @method void setGameServerSessionId(string $GameServerSessionId) 设置游戏服务器会话ID，最小长度不小于1个ASCII字符，最大长度不超过48个ASCII字符
  */
 class GetGameServerSessionLogUrlRequest extends AbstractModel
 {
     /**
-     * @var string 游戏服务器会话ID
+     * @var string 游戏服务器会话ID，最小长度不小于1个ASCII字符，最大长度不超过48个ASCII字符
      */
     public $GameServerSessionId;
 
     /**
-     * @param string $GameServerSessionId 游戏服务器会话ID
+     * @param string $GameServerSessionId 游戏服务器会话ID，最小长度不小于1个ASCII字符，最大长度不超过48个ASCII字符
      */
     function __construct()
     {

@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getFleetId() 获取服务部署ID
  * @method void setFleetId(string $FleetId) 设置服务部署ID
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method integer getOffset() 获取结果返回最大数量
- * @method void setOffset(integer $Offset) 设置结果返回最大数量
- * @method integer getLimit() 获取返回结果偏移
- * @method void setLimit(integer $Limit) 设置返回结果偏移
+ * @method string getInstanceId() 获取CVM实例ID
+ * @method void setInstanceId(string $InstanceId) 设置CVM实例ID
+ * @method integer getOffset() 获取结果返回最大数量，最小值0，最大值100
+ * @method void setOffset(integer $Offset) 设置结果返回最大数量，最小值0，最大值100
+ * @method integer getLimit() 获取返回结果偏移，最小值0
+ * @method void setLimit(integer $Limit) 设置返回结果偏移，最小值0
  */
 class DescribeInstancesRequest extends AbstractModel
 {
@@ -37,25 +37,25 @@ class DescribeInstancesRequest extends AbstractModel
     public $FleetId;
 
     /**
-     * @var string 实例ID
+     * @var string CVM实例ID
      */
     public $InstanceId;
 
     /**
-     * @var integer 结果返回最大数量
+     * @var integer 结果返回最大数量，最小值0，最大值100
      */
     public $Offset;
 
     /**
-     * @var integer 返回结果偏移
+     * @var integer 返回结果偏移，最小值0
      */
     public $Limit;
 
     /**
      * @param string $FleetId 服务部署ID
-     * @param string $InstanceId 实例ID
-     * @param integer $Offset 结果返回最大数量
-     * @param integer $Limit 返回结果偏移
+     * @param string $InstanceId CVM实例ID
+     * @param integer $Offset 结果返回最大数量，最小值0，最大值100
+     * @param integer $Limit 返回结果偏移，最小值0
      */
     function __construct()
     {

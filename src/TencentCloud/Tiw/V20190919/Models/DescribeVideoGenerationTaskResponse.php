@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRoomId(integer $RoomId) 设置任务对应的房间号
  * @method string getTaskId() 获取任务的Id
  * @method void setTaskId(string $TaskId) 设置任务的Id
- * @method integer getProgress() 获取录制视频生成进度（0-100，100表示视频生成完成 ）
- * @method void setProgress(integer $Progress) 设置录制视频生成进度（0-100，100表示视频生成完成 ）
+ * @method integer getProgress() 获取已废弃
+ * @method void setProgress(integer $Progress) 设置已废弃
  * @method string getStatus() 获取录制视频生成任务状态
 - QUEUED: 正在排队
 - PROCESSING: 正在生成视频
@@ -38,8 +38,10 @@ use TencentCloud\Common\AbstractModel;
 - FINISHED: 生成视频结束（成功完成或失败结束，可以通过错误码和错误信息进一步判断）
  * @method integer getTotalTime() 获取回放视频总时长,单位：毫秒
  * @method void setTotalTime(integer $TotalTime) 设置回放视频总时长,单位：毫秒
- * @method VideoInfo getVideoInfos() 获取录制视频生成列表
- * @method void setVideoInfos(VideoInfo $VideoInfos) 设置录制视频生成列表
+ * @method VideoInfo getVideoInfos() 获取已废弃，请使用`VideoInfoList`参数
+ * @method void setVideoInfos(VideoInfo $VideoInfos) 设置已废弃，请使用`VideoInfoList`参数
+ * @method array getVideoInfoList() 获取录制视频生成视频列表
+ * @method void setVideoInfoList(array $VideoInfoList) 设置录制视频生成视频列表
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -61,7 +63,7 @@ class DescribeVideoGenerationTaskResponse extends AbstractModel
     public $TaskId;
 
     /**
-     * @var integer 录制视频生成进度（0-100，100表示视频生成完成 ）
+     * @var integer 已废弃
      */
     public $Progress;
 
@@ -79,9 +81,14 @@ class DescribeVideoGenerationTaskResponse extends AbstractModel
     public $TotalTime;
 
     /**
-     * @var VideoInfo 录制视频生成列表
+     * @var VideoInfo 已废弃，请使用`VideoInfoList`参数
      */
     public $VideoInfos;
+
+    /**
+     * @var array 录制视频生成视频列表
+     */
+    public $VideoInfoList;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -92,13 +99,14 @@ class DescribeVideoGenerationTaskResponse extends AbstractModel
      * @param string $GroupId 任务对应的群组Id
      * @param integer $RoomId 任务对应的房间号
      * @param string $TaskId 任务的Id
-     * @param integer $Progress 录制视频生成进度（0-100，100表示视频生成完成 ）
+     * @param integer $Progress 已废弃
      * @param string $Status 录制视频生成任务状态
 - QUEUED: 正在排队
 - PROCESSING: 正在生成视频
 - FINISHED: 生成视频结束（成功完成或失败结束，可以通过错误码和错误信息进一步判断）
      * @param integer $TotalTime 回放视频总时长,单位：毫秒
-     * @param VideoInfo $VideoInfos 录制视频生成列表
+     * @param VideoInfo $VideoInfos 已废弃，请使用`VideoInfoList`参数
+     * @param array $VideoInfoList 录制视频生成视频列表
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -141,6 +149,15 @@ class DescribeVideoGenerationTaskResponse extends AbstractModel
         if (array_key_exists("VideoInfos",$param) and $param["VideoInfos"] !== null) {
             $this->VideoInfos = new VideoInfo();
             $this->VideoInfos->deserialize($param["VideoInfos"]);
+        }
+
+        if (array_key_exists("VideoInfoList",$param) and $param["VideoInfoList"] !== null) {
+            $this->VideoInfoList = [];
+            foreach ($param["VideoInfoList"] as $key => $value){
+                $obj = new VideoInfo();
+                $obj->deserialize($value);
+                array_push($this->VideoInfoList, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

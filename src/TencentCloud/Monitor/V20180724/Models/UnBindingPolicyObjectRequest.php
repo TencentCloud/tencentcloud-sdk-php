@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setModule(string $Module) 设置固定值，为"monitor"
  * @method integer getGroupId() 获取策略组id
  * @method void setGroupId(integer $GroupId) 设置策略组id
- * @method array getUniqueId() 获取待删除对象实例的唯一id列表
- * @method void setUniqueId(array $UniqueId) 设置待删除对象实例的唯一id列表
+ * @method array getUniqueId() 获取待删除对象实例的唯一id列表，UniqueId从调用[获取已绑定对象列表接口](https://cloud.tencent.com/document/api/248/40570)的出参的List中得到
+ * @method void setUniqueId(array $UniqueId) 设置待删除对象实例的唯一id列表，UniqueId从调用[获取已绑定对象列表接口](https://cloud.tencent.com/document/api/248/40570)的出参的List中得到
  * @method integer getInstanceGroupId() 获取实例分组id, 如果按实例分组删除的话UniqueId参数是无效的
  * @method void setInstanceGroupId(integer $InstanceGroupId) 设置实例分组id, 如果按实例分组删除的话UniqueId参数是无效的
  */
@@ -42,7 +42,7 @@ class UnBindingPolicyObjectRequest extends AbstractModel
     public $GroupId;
 
     /**
-     * @var array 待删除对象实例的唯一id列表
+     * @var array 待删除对象实例的唯一id列表，UniqueId从调用[获取已绑定对象列表接口](https://cloud.tencent.com/document/api/248/40570)的出参的List中得到
      */
     public $UniqueId;
 
@@ -54,7 +54,7 @@ class UnBindingPolicyObjectRequest extends AbstractModel
     /**
      * @param string $Module 固定值，为"monitor"
      * @param integer $GroupId 策略组id
-     * @param array $UniqueId 待删除对象实例的唯一id列表
+     * @param array $UniqueId 待删除对象实例的唯一id列表，UniqueId从调用[获取已绑定对象列表接口](https://cloud.tencent.com/document/api/248/40570)的出参的List中得到
      * @param integer $InstanceGroupId 实例分组id, 如果按实例分组删除的话UniqueId参数是无效的
      */
     function __construct()

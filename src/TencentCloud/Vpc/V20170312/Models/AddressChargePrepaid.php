@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 用于描述弹性公网IP的费用对象
  *
- * @method integer getPeriod() 获取购买实例的时长
- * @method void setPeriod(integer $Period) 设置购买实例的时长
- * @method string getRenewFlag() 获取自动续费标志
- * @method void setRenewFlag(string $RenewFlag) 设置自动续费标志
+ * @method integer getPeriod() 获取购买实例的时长，单位是月。可支持时长：1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36
+ * @method void setPeriod(integer $Period) 设置购买实例的时长，单位是月。可支持时长：1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36
+ * @method integer getAutoRenewFlag() 获取自动续费标志。0表示手动续费，1表示自动续费，2表示到期不续费。默认缺省为0即手动续费
+ * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置自动续费标志。0表示手动续费，1表示自动续费，2表示到期不续费。默认缺省为0即手动续费
  */
 class AddressChargePrepaid extends AbstractModel
 {
     /**
-     * @var integer 购买实例的时长
+     * @var integer 购买实例的时长，单位是月。可支持时长：1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36
      */
     public $Period;
 
     /**
-     * @var string 自动续费标志
+     * @var integer 自动续费标志。0表示手动续费，1表示自动续费，2表示到期不续费。默认缺省为0即手动续费
      */
-    public $RenewFlag;
+    public $AutoRenewFlag;
 
     /**
-     * @param integer $Period 购买实例的时长
-     * @param string $RenewFlag 自动续费标志
+     * @param integer $Period 购买实例的时长，单位是月。可支持时长：1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36
+     * @param integer $AutoRenewFlag 自动续费标志。0表示手动续费，1表示自动续费，2表示到期不续费。默认缺省为0即手动续费
      */
     function __construct()
     {
@@ -58,8 +58,8 @@ class AddressChargePrepaid extends AbstractModel
             $this->Period = $param["Period"];
         }
 
-        if (array_key_exists("RenewFlag",$param) and $param["RenewFlag"] !== null) {
-            $this->RenewFlag = $param["RenewFlag"];
+        if (array_key_exists("AutoRenewFlag",$param) and $param["AutoRenewFlag"] !== null) {
+            $this->AutoRenewFlag = $param["AutoRenewFlag"];
         }
     }
 }

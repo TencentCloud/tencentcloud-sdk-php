@@ -24,9 +24,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPlayerSessions(array $PlayerSessions) 设置玩家会话列表
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getNextToken() 获取页偏移
+ * @method string getNextToken() 获取页偏移，用于查询下一页，最小长度不小于1个ASCII字符，最大长度不超过1024个ASCII字符
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNextToken(string $NextToken) 设置页偏移
+ * @method void setNextToken(string $NextToken) 设置页偏移，用于查询下一页，最小长度不小于1个ASCII字符，最大长度不超过1024个ASCII字符
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -40,7 +40,7 @@ class DescribePlayerSessionsResponse extends AbstractModel
     public $PlayerSessions;
 
     /**
-     * @var string 页偏移
+     * @var string 页偏移，用于查询下一页，最小长度不小于1个ASCII字符，最大长度不超过1024个ASCII字符
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NextToken;
@@ -53,7 +53,7 @@ class DescribePlayerSessionsResponse extends AbstractModel
     /**
      * @param array $PlayerSessions 玩家会话列表
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $NextToken 页偏移
+     * @param string $NextToken 页偏移，用于查询下一页，最小长度不小于1个ASCII字符，最大长度不超过1024个ASCII字符
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

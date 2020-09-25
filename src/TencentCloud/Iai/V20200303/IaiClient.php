@@ -155,6 +155,9 @@ use TencentCloud\Iai\V20200303\Models as Models;
 
 >     
 - 公共参数中的签名方式请使用V3版本，即配置SignatureMethod参数为TC3-HMAC-SHA256。
+
+>     
+- 不可同时搜索不同算法模型版本（FaceModelVersion）的人员库。
  * @method Models\SearchFacesReturnsByGroupResponse SearchFacesReturnsByGroup(Models\SearchFacesReturnsByGroupRequest $req) 用于对一张待识别的人脸图片，在一个或多个人员库中识别出最相似的 TopK 人员，按照**人员库的维度**以人员相似度从大到小顺序排列。
 
 支持一次性识别图片中的最多 10 张人脸，支持跨人员库（Group）搜索。
@@ -168,6 +171,8 @@ use TencentCloud\Iai\V20200303\Models as Models;
 >     
 - 公共参数中的签名方式请使用V3版本，即配置SignatureMethod参数为TC3-HMAC-SHA256。
 
+>     
+- 不可同时搜索不同算法模型版本（FaceModelVersion）的人员库。
 
  * @method Models\SearchPersonsResponse SearchPersons(Models\SearchPersonsRequest $req) 用于对一张待识别的人脸图片，在一个或多个人员库中识别出最相似的 TopK 人员，按照相似度从大到小排列。
 

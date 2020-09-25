@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 游戏属性详情
  *
- * @method string getKey() 获取属性名称
- * @method void setKey(string $Key) 设置属性名称
- * @method string getValue() 获取属性值
- * @method void setValue(string $Value) 设置属性值
+ * @method string getKey() 获取属性名称，最大长度不超过32个ASCII字符
+ * @method void setKey(string $Key) 设置属性名称，最大长度不超过32个ASCII字符
+ * @method string getValue() 获取属性值，最大长度不超过96个ASCII字符
+ * @method void setValue(string $Value) 设置属性值，最大长度不超过96个ASCII字符
  */
 class GameProperty extends AbstractModel
 {
     /**
-     * @var string 属性名称
+     * @var string 属性名称，最大长度不超过32个ASCII字符
      */
     public $Key;
 
     /**
-     * @var string 属性值
+     * @var string 属性值，最大长度不超过96个ASCII字符
      */
     public $Value;
 
     /**
-     * @param string $Key 属性名称
-     * @param string $Value 属性值
+     * @param string $Key 属性名称，最大长度不超过32个ASCII字符
+     * @param string $Value 属性值，最大长度不超过96个ASCII字符
      */
     function __construct()
     {

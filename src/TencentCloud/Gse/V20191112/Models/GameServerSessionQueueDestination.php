@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDestinationArn(string $DestinationArn) 设置服务部署组目的的资源描述
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getFleetStatus() 获取服务部署组目的的状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFleetStatus(string $FleetStatus) 设置服务部署组目的的状态
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class GameServerSessionQueueDestination extends AbstractModel
 {
@@ -34,7 +38,15 @@ class GameServerSessionQueueDestination extends AbstractModel
     public $DestinationArn;
 
     /**
+     * @var string 服务部署组目的的状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FleetStatus;
+
+    /**
      * @param string $DestinationArn 服务部署组目的的资源描述
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $FleetStatus 服务部署组目的的状态
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -52,6 +64,10 @@ class GameServerSessionQueueDestination extends AbstractModel
         }
         if (array_key_exists("DestinationArn",$param) and $param["DestinationArn"] !== null) {
             $this->DestinationArn = $param["DestinationArn"];
+        }
+
+        if (array_key_exists("FleetStatus",$param) and $param["FleetStatus"] !== null) {
+            $this->FleetStatus = $param["FleetStatus"];
         }
     }
 }

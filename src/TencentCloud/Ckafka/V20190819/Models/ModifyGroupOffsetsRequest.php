@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setShiftTimestamp(integer $ShiftTimestamp) 设置单位ms。当strategy为1时，必须包含该字段，其中-2表示重置offset到最开始的位置，-1表示重置到最新的位置(相当于清空)，其它值则代表指定的时间，会获取topic中指定时间的offset然后进行重置，需要注意的时，如果指定的时间不存在消息，则获取最末尾的offset。
  * @method integer getOffset() 获取需要重新设置的offset位置。当strategy为2，必须包含该字段。
  * @method void setOffset(integer $Offset) 设置需要重新设置的offset位置。当strategy为2，必须包含该字段。
+ * @method array getPartitions() 获取需要重新设置的partition的列表，如果没有指定Topics参数。则重置全部topics的对应的Partition列表里的partition。指定Topics时则重置指定的topic列表的对应的Partitions列表的partition。
+ * @method void setPartitions(array $Partitions) 设置需要重新设置的partition的列表，如果没有指定Topics参数。则重置全部topics的对应的Partition列表里的partition。指定Topics时则重置指定的topic列表的对应的Partitions列表的partition。
  */
 class ModifyGroupOffsetsRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class ModifyGroupOffsetsRequest extends AbstractModel
     public $Offset;
 
     /**
+     * @var array 需要重新设置的partition的列表，如果没有指定Topics参数。则重置全部topics的对应的Partition列表里的partition。指定Topics时则重置指定的topic列表的对应的Partitions列表的partition。
+     */
+    public $Partitions;
+
+    /**
      * @param string $InstanceId kafka实例id
      * @param string $Group kafka 消费分组
      * @param integer $Strategy 重置offset的策略，入参含义 0. 对齐shift-by参数，代表把offset向前或向后移动shift条 1. 对齐参考(by-duration,to-datetime,to-earliest,to-latest),代表把offset移动到指定timestamp的位置 2. 对齐参考(to-offset)，代表把offset移动到指定的offset位置
@@ -80,6 +87,7 @@ class ModifyGroupOffsetsRequest extends AbstractModel
      * @param integer $Shift 当strategy为0时，必须包含该字段，可以大于零代表会把offset向后移动shift条，小于零则将offset向前回溯shift条数。正确重置后新的offset应该是(old_offset + shift)，需要注意的是如果新的offset小于partition的earliest则会设置为earliest，如果大于partition 的latest则会设置为latest
      * @param integer $ShiftTimestamp 单位ms。当strategy为1时，必须包含该字段，其中-2表示重置offset到最开始的位置，-1表示重置到最新的位置(相当于清空)，其它值则代表指定的时间，会获取topic中指定时间的offset然后进行重置，需要注意的时，如果指定的时间不存在消息，则获取最末尾的offset。
      * @param integer $Offset 需要重新设置的offset位置。当strategy为2，必须包含该字段。
+     * @param array $Partitions 需要重新设置的partition的列表，如果没有指定Topics参数。则重置全部topics的对应的Partition列表里的partition。指定Topics时则重置指定的topic列表的对应的Partitions列表的partition。
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class ModifyGroupOffsetsRequest extends AbstractModel
 
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
             $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("Partitions",$param) and $param["Partitions"] !== null) {
+            $this->Partitions = $param["Partitions"];
         }
     }
 }

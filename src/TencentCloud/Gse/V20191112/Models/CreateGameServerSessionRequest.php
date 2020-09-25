@@ -20,29 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateGameServerSession请求参数结构体
  *
- * @method integer getMaximumPlayerSessionCount() 获取最大玩家数量
- * @method void setMaximumPlayerSessionCount(integer $MaximumPlayerSessionCount) 设置最大玩家数量
+ * @method integer getMaximumPlayerSessionCount() 获取最大玩家数量，最小值不小于0
+ * @method void setMaximumPlayerSessionCount(integer $MaximumPlayerSessionCount) 设置最大玩家数量，最小值不小于0
  * @method string getAliasId() 获取别名ID。每个请求需要指定别名ID 或者舰队 ID，如果两个同时指定时，优先选择舰队 ID
  * @method void setAliasId(string $AliasId) 设置别名ID。每个请求需要指定别名ID 或者舰队 ID，如果两个同时指定时，优先选择舰队 ID
- * @method string getCreatorId() 获取创建者ID
- * @method void setCreatorId(string $CreatorId) 设置创建者ID
+ * @method string getCreatorId() 获取创建者ID，最大长度不超过1024个ASCII字符
+ * @method void setCreatorId(string $CreatorId) 设置创建者ID，最大长度不超过1024个ASCII字符
  * @method string getFleetId() 获取舰队ID。每个请求需要指定别名ID 或者舰队 ID，如果两个同时指定时，优先选择舰队 ID
  * @method void setFleetId(string $FleetId) 设置舰队ID。每个请求需要指定别名ID 或者舰队 ID，如果两个同时指定时，优先选择舰队 ID
- * @method array getGameProperties() 获取游戏属性
- * @method void setGameProperties(array $GameProperties) 设置游戏属性
- * @method string getGameServerSessionData() 获取游戏服务器会话属性详情
- * @method void setGameServerSessionData(string $GameServerSessionData) 设置游戏服务器会话属性详情
- * @method string getGameServerSessionId() 获取游戏服务器会话自定义ID
- * @method void setGameServerSessionId(string $GameServerSessionId) 设置游戏服务器会话自定义ID
- * @method string getIdempotencyToken() 获取幂等token
- * @method void setIdempotencyToken(string $IdempotencyToken) 设置幂等token
- * @method string getName() 获取游戏服务器会话名称
- * @method void setName(string $Name) 设置游戏服务器会话名称
+ * @method array getGameProperties() 获取游戏属性，最大长度不超过16组
+ * @method void setGameProperties(array $GameProperties) 设置游戏属性，最大长度不超过16组
+ * @method string getGameServerSessionData() 获取游戏服务器会话属性详情，最大长度不超过4096个ASCII字符
+ * @method void setGameServerSessionData(string $GameServerSessionData) 设置游戏服务器会话属性详情，最大长度不超过4096个ASCII字符
+ * @method string getGameServerSessionId() 获取游戏服务器会话自定义ID，最大长度不超过4096个ASCII字符
+ * @method void setGameServerSessionId(string $GameServerSessionId) 设置游戏服务器会话自定义ID，最大长度不超过4096个ASCII字符
+ * @method string getIdempotencyToken() 获取幂等token，最大长度不超过48个ASCII字符
+ * @method void setIdempotencyToken(string $IdempotencyToken) 设置幂等token，最大长度不超过48个ASCII字符
+ * @method string getName() 获取游戏服务器会话名称，最大长度不超过1024个ASCII字符
+ * @method void setName(string $Name) 设置游戏服务器会话名称，最大长度不超过1024个ASCII字符
  */
 class CreateGameServerSessionRequest extends AbstractModel
 {
     /**
-     * @var integer 最大玩家数量
+     * @var integer 最大玩家数量，最小值不小于0
      */
     public $MaximumPlayerSessionCount;
 
@@ -52,7 +52,7 @@ class CreateGameServerSessionRequest extends AbstractModel
     public $AliasId;
 
     /**
-     * @var string 创建者ID
+     * @var string 创建者ID，最大长度不超过1024个ASCII字符
      */
     public $CreatorId;
 
@@ -62,40 +62,40 @@ class CreateGameServerSessionRequest extends AbstractModel
     public $FleetId;
 
     /**
-     * @var array 游戏属性
+     * @var array 游戏属性，最大长度不超过16组
      */
     public $GameProperties;
 
     /**
-     * @var string 游戏服务器会话属性详情
+     * @var string 游戏服务器会话属性详情，最大长度不超过4096个ASCII字符
      */
     public $GameServerSessionData;
 
     /**
-     * @var string 游戏服务器会话自定义ID
+     * @var string 游戏服务器会话自定义ID，最大长度不超过4096个ASCII字符
      */
     public $GameServerSessionId;
 
     /**
-     * @var string 幂等token
+     * @var string 幂等token，最大长度不超过48个ASCII字符
      */
     public $IdempotencyToken;
 
     /**
-     * @var string 游戏服务器会话名称
+     * @var string 游戏服务器会话名称，最大长度不超过1024个ASCII字符
      */
     public $Name;
 
     /**
-     * @param integer $MaximumPlayerSessionCount 最大玩家数量
+     * @param integer $MaximumPlayerSessionCount 最大玩家数量，最小值不小于0
      * @param string $AliasId 别名ID。每个请求需要指定别名ID 或者舰队 ID，如果两个同时指定时，优先选择舰队 ID
-     * @param string $CreatorId 创建者ID
+     * @param string $CreatorId 创建者ID，最大长度不超过1024个ASCII字符
      * @param string $FleetId 舰队ID。每个请求需要指定别名ID 或者舰队 ID，如果两个同时指定时，优先选择舰队 ID
-     * @param array $GameProperties 游戏属性
-     * @param string $GameServerSessionData 游戏服务器会话属性详情
-     * @param string $GameServerSessionId 游戏服务器会话自定义ID
-     * @param string $IdempotencyToken 幂等token
-     * @param string $Name 游戏服务器会话名称
+     * @param array $GameProperties 游戏属性，最大长度不超过16组
+     * @param string $GameServerSessionData 游戏服务器会话属性详情，最大长度不超过4096个ASCII字符
+     * @param string $GameServerSessionId 游戏服务器会话自定义ID，最大长度不超过4096个ASCII字符
+     * @param string $IdempotencyToken 幂等token，最大长度不超过48个ASCII字符
+     * @param string $Name 游戏服务器会话名称，最大长度不超过1024个ASCII字符
      */
     function __construct()
     {

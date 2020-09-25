@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetGameServerSessionLogUrl返回参数结构体
  *
- * @method string getPreSignedUrl() 获取日志下载URL
+ * @method string getPreSignedUrl() 获取日志下载URL，最小长度不小于1个ASCII字符，最大长度不超过1024个ASCII字符
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPreSignedUrl(string $PreSignedUrl) 设置日志下载URL
+ * @method void setPreSignedUrl(string $PreSignedUrl) 设置日志下载URL，最小长度不小于1个ASCII字符，最大长度不超过1024个ASCII字符
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class GetGameServerSessionLogUrlResponse extends AbstractModel
 {
     /**
-     * @var string 日志下载URL
+     * @var string 日志下载URL，最小长度不小于1个ASCII字符，最大长度不超过1024个ASCII字符
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PreSignedUrl;
@@ -41,7 +41,7 @@ class GetGameServerSessionLogUrlResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $PreSignedUrl 日志下载URL
+     * @param string $PreSignedUrl 日志下载URL，最小长度不小于1个ASCII字符，最大长度不超过1024个ASCII字符
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

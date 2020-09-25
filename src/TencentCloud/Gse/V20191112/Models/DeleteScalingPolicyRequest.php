@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getFleetId() 获取服务部署ID
  * @method void setFleetId(string $FleetId) 设置服务部署ID
- * @method string getName() 获取名称
- * @method void setName(string $Name) 设置名称
+ * @method string getName() 获取策略名称
+ * @method void setName(string $Name) 设置策略名称
  */
 class DeleteScalingPolicyRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class DeleteScalingPolicyRequest extends AbstractModel
     public $FleetId;
 
     /**
-     * @var string 名称
+     * @var string 策略名称
      */
     public $Name;
 
     /**
      * @param string $FleetId 服务部署ID
-     * @param string $Name 名称
+     * @param string $Name 策略名称
      */
     function __construct()
     {

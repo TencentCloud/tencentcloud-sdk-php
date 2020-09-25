@@ -24,12 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAliasId(string $AliasId) 设置别名ID
  * @method string getFleetId() 获取舰队ID
  * @method void setFleetId(string $FleetId) 设置舰队ID
- * @method string getGameServerSessionId() 获取游戏服务器会话ID
- * @method void setGameServerSessionId(string $GameServerSessionId) 设置游戏服务器会话ID
+ * @method string getGameServerSessionId() 获取游戏服务器会话ID，最小长度不小于1个ASCII字符，最大长度不超过48个ASCII字符
+ * @method void setGameServerSessionId(string $GameServerSessionId) 设置游戏服务器会话ID，最小长度不小于1个ASCII字符，最大长度不超过48个ASCII字符
  * @method integer getLimit() 获取单次查询记录数上限
  * @method void setLimit(integer $Limit) 设置单次查询记录数上限
- * @method string getNextToken() 获取页偏移，用于查询下一页
- * @method void setNextToken(string $NextToken) 设置页偏移，用于查询下一页
+ * @method string getNextToken() 获取页偏移，用于查询下一页，最小长度不小于1个ASCII字符，最大长度不超过1024个ASCII字符
+ * @method void setNextToken(string $NextToken) 设置页偏移，用于查询下一页，最小长度不小于1个ASCII字符，最大长度不超过1024个ASCII字符
  * @method string getStatusFilter() 获取游戏服务器会话状态(ACTIVE,ACTIVATING,TERMINATED,TERMINATING,ERROR)
  * @method void setStatusFilter(string $StatusFilter) 设置游戏服务器会话状态(ACTIVE,ACTIVATING,TERMINATED,TERMINATING,ERROR)
  */
@@ -46,7 +46,7 @@ class DescribeGameServerSessionsRequest extends AbstractModel
     public $FleetId;
 
     /**
-     * @var string 游戏服务器会话ID
+     * @var string 游戏服务器会话ID，最小长度不小于1个ASCII字符，最大长度不超过48个ASCII字符
      */
     public $GameServerSessionId;
 
@@ -56,7 +56,7 @@ class DescribeGameServerSessionsRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string 页偏移，用于查询下一页
+     * @var string 页偏移，用于查询下一页，最小长度不小于1个ASCII字符，最大长度不超过1024个ASCII字符
      */
     public $NextToken;
 
@@ -68,9 +68,9 @@ class DescribeGameServerSessionsRequest extends AbstractModel
     /**
      * @param string $AliasId 别名ID
      * @param string $FleetId 舰队ID
-     * @param string $GameServerSessionId 游戏服务器会话ID
+     * @param string $GameServerSessionId 游戏服务器会话ID，最小长度不小于1个ASCII字符，最大长度不超过48个ASCII字符
      * @param integer $Limit 单次查询记录数上限
-     * @param string $NextToken 页偏移，用于查询下一页
+     * @param string $NextToken 页偏移，用于查询下一页，最小长度不小于1个ASCII字符，最大长度不超过1024个ASCII字符
      * @param string $StatusFilter 游戏服务器会话状态(ACTIVE,ACTIVATING,TERMINATED,TERMINATING,ERROR)
      */
     function __construct()

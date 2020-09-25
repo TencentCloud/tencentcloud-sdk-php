@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * JoinGameServerSession请求参数结构体
  *
- * @method string getGameServerSessionId() 获取游戏服务器会话ID
- * @method void setGameServerSessionId(string $GameServerSessionId) 设置游戏服务器会话ID
- * @method string getPlayerId() 获取玩家ID
- * @method void setPlayerId(string $PlayerId) 设置玩家ID
- * @method string getPlayerData() 获取玩家自定义信息
- * @method void setPlayerData(string $PlayerData) 设置玩家自定义信息
+ * @method string getGameServerSessionId() 获取游戏服务器会话ID，最小长度1个ASCII字符，最大长度不超过256个ASCII字符
+ * @method void setGameServerSessionId(string $GameServerSessionId) 设置游戏服务器会话ID，最小长度1个ASCII字符，最大长度不超过256个ASCII字符
+ * @method string getPlayerId() 获取玩家ID，最大长度1024个ASCII字符
+ * @method void setPlayerId(string $PlayerId) 设置玩家ID，最大长度1024个ASCII字符
+ * @method string getPlayerData() 获取玩家自定义数据，最大长度2048个ASCII字符
+ * @method void setPlayerData(string $PlayerData) 设置玩家自定义数据，最大长度2048个ASCII字符
  */
 class JoinGameServerSessionRequest extends AbstractModel
 {
     /**
-     * @var string 游戏服务器会话ID
+     * @var string 游戏服务器会话ID，最小长度1个ASCII字符，最大长度不超过256个ASCII字符
      */
     public $GameServerSessionId;
 
     /**
-     * @var string 玩家ID
+     * @var string 玩家ID，最大长度1024个ASCII字符
      */
     public $PlayerId;
 
     /**
-     * @var string 玩家自定义信息
+     * @var string 玩家自定义数据，最大长度2048个ASCII字符
      */
     public $PlayerData;
 
     /**
-     * @param string $GameServerSessionId 游戏服务器会话ID
-     * @param string $PlayerId 玩家ID
-     * @param string $PlayerData 玩家自定义信息
+     * @param string $GameServerSessionId 游戏服务器会话ID，最小长度1个ASCII字符，最大长度不超过256个ASCII字符
+     * @param string $PlayerId 玩家ID，最大长度1024个ASCII字符
+     * @param string $PlayerData 玩家自定义数据，最大长度2048个ASCII字符
      */
     function __construct()
     {

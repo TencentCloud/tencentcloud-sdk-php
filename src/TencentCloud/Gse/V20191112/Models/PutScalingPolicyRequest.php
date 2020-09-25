@@ -20,61 +20,61 @@ use TencentCloud\Common\AbstractModel;
 /**
  * PutScalingPolicy请求参数结构体
  *
- * @method string getFleetId() 获取基于规则的扩缩容配置
- * @method void setFleetId(string $FleetId) 设置基于规则的扩缩容配置
- * @method string getName() 获取名称
- * @method void setName(string $Name) 设置名称
- * @method integer getScalingAdjustment() 获取调整值
- * @method void setScalingAdjustment(integer $ScalingAdjustment) 设置调整值
- * @method string getScalingAdjustmentType() 获取调整类型
- * @method void setScalingAdjustmentType(string $ScalingAdjustmentType) 设置调整类型
- * @method float getThreshold() 获取指标阈值
- * @method void setThreshold(float $Threshold) 设置指标阈值
- * @method string getComparisonOperator() 获取比较符
- * @method void setComparisonOperator(string $ComparisonOperator) 设置比较符
- * @method integer getEvaluationPeriods() 获取时间长度（分钟）
- * @method void setEvaluationPeriods(integer $EvaluationPeriods) 设置时间长度（分钟）
+ * @method string getFleetId() 获取基于规则的扩缩容配置服务部署ID
+ * @method void setFleetId(string $FleetId) 设置基于规则的扩缩容配置服务部署ID
+ * @method string getName() 获取策略名称
+ * @method void setName(string $Name) 设置策略名称
+ * @method integer getScalingAdjustment() 获取扩缩容调整值
+ * @method void setScalingAdjustment(integer $ScalingAdjustment) 设置扩缩容调整值
+ * @method string getScalingAdjustmentType() 获取扩缩容调整类型
+ * @method void setScalingAdjustmentType(string $ScalingAdjustmentType) 设置扩缩容调整类型
+ * @method float getThreshold() 获取扩缩容指标阈值
+ * @method void setThreshold(float $Threshold) 设置扩缩容指标阈值
+ * @method string getComparisonOperator() 获取策略比较符，取值：>,>=,<,<=
+ * @method void setComparisonOperator(string $ComparisonOperator) 设置策略比较符，取值：>,>=,<,<=
+ * @method integer getEvaluationPeriods() 获取持续时间长度（分钟）
+ * @method void setEvaluationPeriods(integer $EvaluationPeriods) 设置持续时间长度（分钟）
  * @method string getMetricName() 获取指标名称
  * @method void setMetricName(string $MetricName) 设置指标名称
- * @method string getPolicyType() 获取策略类型
- * @method void setPolicyType(string $PolicyType) 设置策略类型
+ * @method string getPolicyType() 获取策略类型，取值：TargetBased表示基于目标的策略；RuleBased表示基于规则的策略
+ * @method void setPolicyType(string $PolicyType) 设置策略类型，取值：TargetBased表示基于目标的策略；RuleBased表示基于规则的策略
  * @method TargetConfiguration getTargetConfiguration() 获取扩缩容配置类型
  * @method void setTargetConfiguration(TargetConfiguration $TargetConfiguration) 设置扩缩容配置类型
  */
 class PutScalingPolicyRequest extends AbstractModel
 {
     /**
-     * @var string 基于规则的扩缩容配置
+     * @var string 基于规则的扩缩容配置服务部署ID
      */
     public $FleetId;
 
     /**
-     * @var string 名称
+     * @var string 策略名称
      */
     public $Name;
 
     /**
-     * @var integer 调整值
+     * @var integer 扩缩容调整值
      */
     public $ScalingAdjustment;
 
     /**
-     * @var string 调整类型
+     * @var string 扩缩容调整类型
      */
     public $ScalingAdjustmentType;
 
     /**
-     * @var float 指标阈值
+     * @var float 扩缩容指标阈值
      */
     public $Threshold;
 
     /**
-     * @var string 比较符
+     * @var string 策略比较符，取值：>,>=,<,<=
      */
     public $ComparisonOperator;
 
     /**
-     * @var integer 时间长度（分钟）
+     * @var integer 持续时间长度（分钟）
      */
     public $EvaluationPeriods;
 
@@ -84,7 +84,7 @@ class PutScalingPolicyRequest extends AbstractModel
     public $MetricName;
 
     /**
-     * @var string 策略类型
+     * @var string 策略类型，取值：TargetBased表示基于目标的策略；RuleBased表示基于规则的策略
      */
     public $PolicyType;
 
@@ -94,15 +94,15 @@ class PutScalingPolicyRequest extends AbstractModel
     public $TargetConfiguration;
 
     /**
-     * @param string $FleetId 基于规则的扩缩容配置
-     * @param string $Name 名称
-     * @param integer $ScalingAdjustment 调整值
-     * @param string $ScalingAdjustmentType 调整类型
-     * @param float $Threshold 指标阈值
-     * @param string $ComparisonOperator 比较符
-     * @param integer $EvaluationPeriods 时间长度（分钟）
+     * @param string $FleetId 基于规则的扩缩容配置服务部署ID
+     * @param string $Name 策略名称
+     * @param integer $ScalingAdjustment 扩缩容调整值
+     * @param string $ScalingAdjustmentType 扩缩容调整类型
+     * @param float $Threshold 扩缩容指标阈值
+     * @param string $ComparisonOperator 策略比较符，取值：>,>=,<,<=
+     * @param integer $EvaluationPeriods 持续时间长度（分钟）
      * @param string $MetricName 指标名称
-     * @param string $PolicyType 策略类型
+     * @param string $PolicyType 策略类型，取值：TargetBased表示基于目标的策略；RuleBased表示基于规则的策略
      * @param TargetConfiguration $TargetConfiguration 扩缩容配置类型
      */
     function __construct()

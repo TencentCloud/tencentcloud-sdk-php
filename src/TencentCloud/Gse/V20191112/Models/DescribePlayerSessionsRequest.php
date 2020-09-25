@@ -20,23 +20,23 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePlayerSessions请求参数结构体
  *
- * @method string getGameServerSessionId() 获取游戏服务器会话ID
- * @method void setGameServerSessionId(string $GameServerSessionId) 设置游戏服务器会话ID
+ * @method string getGameServerSessionId() 获取游戏服务器会话ID，最小长度不小于1个ASCII字符，最大长度不超过48个ASCII字符
+ * @method void setGameServerSessionId(string $GameServerSessionId) 设置游戏服务器会话ID，最小长度不小于1个ASCII字符，最大长度不超过48个ASCII字符
  * @method integer getLimit() 获取单次查询记录数上限
  * @method void setLimit(integer $Limit) 设置单次查询记录数上限
- * @method string getNextToken() 获取页偏移，用于查询下一页
- * @method void setNextToken(string $NextToken) 设置页偏移，用于查询下一页
- * @method string getPlayerId() 获取玩家ID
- * @method void setPlayerId(string $PlayerId) 设置玩家ID
- * @method string getPlayerSessionId() 获取玩家会话ID
- * @method void setPlayerSessionId(string $PlayerSessionId) 设置玩家会话ID
+ * @method string getNextToken() 获取页偏移，用于查询下一页，最小长度不小于1个ASCII字符，最大长度不超过1024个ASCII字符
+ * @method void setNextToken(string $NextToken) 设置页偏移，用于查询下一页，最小长度不小于1个ASCII字符，最大长度不超过1024个ASCII字符
+ * @method string getPlayerId() 获取玩家ID，最小长度不小于1个ASCII字符，最大长度不超过1024个ASCII字符
+ * @method void setPlayerId(string $PlayerId) 设置玩家ID，最小长度不小于1个ASCII字符，最大长度不超过1024个ASCII字符
+ * @method string getPlayerSessionId() 获取玩家会话ID，最小长度不小于1个ASCII字符，最大长度不超过1024个ASCII字符
+ * @method void setPlayerSessionId(string $PlayerSessionId) 设置玩家会话ID，最小长度不小于1个ASCII字符，最大长度不超过1024个ASCII字符
  * @method string getPlayerSessionStatusFilter() 获取玩家会话状态（RESERVED,ACTIVE,COMPLETED,TIMEDOUT）
  * @method void setPlayerSessionStatusFilter(string $PlayerSessionStatusFilter) 设置玩家会话状态（RESERVED,ACTIVE,COMPLETED,TIMEDOUT）
  */
 class DescribePlayerSessionsRequest extends AbstractModel
 {
     /**
-     * @var string 游戏服务器会话ID
+     * @var string 游戏服务器会话ID，最小长度不小于1个ASCII字符，最大长度不超过48个ASCII字符
      */
     public $GameServerSessionId;
 
@@ -46,17 +46,17 @@ class DescribePlayerSessionsRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string 页偏移，用于查询下一页
+     * @var string 页偏移，用于查询下一页，最小长度不小于1个ASCII字符，最大长度不超过1024个ASCII字符
      */
     public $NextToken;
 
     /**
-     * @var string 玩家ID
+     * @var string 玩家ID，最小长度不小于1个ASCII字符，最大长度不超过1024个ASCII字符
      */
     public $PlayerId;
 
     /**
-     * @var string 玩家会话ID
+     * @var string 玩家会话ID，最小长度不小于1个ASCII字符，最大长度不超过1024个ASCII字符
      */
     public $PlayerSessionId;
 
@@ -66,11 +66,11 @@ class DescribePlayerSessionsRequest extends AbstractModel
     public $PlayerSessionStatusFilter;
 
     /**
-     * @param string $GameServerSessionId 游戏服务器会话ID
+     * @param string $GameServerSessionId 游戏服务器会话ID，最小长度不小于1个ASCII字符，最大长度不超过48个ASCII字符
      * @param integer $Limit 单次查询记录数上限
-     * @param string $NextToken 页偏移，用于查询下一页
-     * @param string $PlayerId 玩家ID
-     * @param string $PlayerSessionId 玩家会话ID
+     * @param string $NextToken 页偏移，用于查询下一页，最小长度不小于1个ASCII字符，最大长度不超过1024个ASCII字符
+     * @param string $PlayerId 玩家ID，最小长度不小于1个ASCII字符，最大长度不超过1024个ASCII字符
+     * @param string $PlayerSessionId 玩家会话ID，最小长度不小于1个ASCII字符，最大长度不超过1024个ASCII字符
      * @param string $PlayerSessionStatusFilter 玩家会话状态（RESERVED,ACTIVE,COMPLETED,TIMEDOUT）
      */
     function __construct()

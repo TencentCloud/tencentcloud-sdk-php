@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getFleetId() 获取服务部署ID
  * @method void setFleetId(string $FleetId) 设置服务部署ID
- * @method string getStatusFilter() 获取状态过滤条件
- * @method void setStatusFilter(string $StatusFilter) 设置状态过滤条件
- * @method integer getOffset() 获取结果返回最大数量
- * @method void setOffset(integer $Offset) 设置结果返回最大数量
- * @method integer getLimit() 获取返回结果偏移
- * @method void setLimit(integer $Limit) 设置返回结果偏移
+ * @method string getStatusFilter() 获取状态过滤条件，取值：ACTIVE表示活跃
+ * @method void setStatusFilter(string $StatusFilter) 设置状态过滤条件，取值：ACTIVE表示活跃
+ * @method integer getOffset() 获取返回结果偏移，最小值0
+ * @method void setOffset(integer $Offset) 设置返回结果偏移，最小值0
+ * @method integer getLimit() 获取结果返回最大数量，最小值0，最大值100
+ * @method void setLimit(integer $Limit) 设置结果返回最大数量，最小值0，最大值100
  */
 class DescribeScalingPoliciesRequest extends AbstractModel
 {
@@ -37,25 +37,25 @@ class DescribeScalingPoliciesRequest extends AbstractModel
     public $FleetId;
 
     /**
-     * @var string 状态过滤条件
+     * @var string 状态过滤条件，取值：ACTIVE表示活跃
      */
     public $StatusFilter;
 
     /**
-     * @var integer 结果返回最大数量
+     * @var integer 返回结果偏移，最小值0
      */
     public $Offset;
 
     /**
-     * @var integer 返回结果偏移
+     * @var integer 结果返回最大数量，最小值0，最大值100
      */
     public $Limit;
 
     /**
      * @param string $FleetId 服务部署ID
-     * @param string $StatusFilter 状态过滤条件
-     * @param integer $Offset 结果返回最大数量
-     * @param integer $Limit 返回结果偏移
+     * @param string $StatusFilter 状态过滤条件，取值：ACTIVE表示活跃
+     * @param integer $Offset 返回结果偏移，最小值0
+     * @param integer $Limit 结果返回最大数量，最小值0，最大值100
      */
     function __construct()
     {

@@ -20,13 +20,13 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeScalingPolicies返回参数结构体
  *
- * @method array getScalingPolicies() 获取动态扩缩容配置
+ * @method array getScalingPolicies() 获取动态扩缩容配置策略数组
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setScalingPolicies(array $ScalingPolicies) 设置动态扩缩容配置
+ * @method void setScalingPolicies(array $ScalingPolicies) 设置动态扩缩容配置策略数组
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTotalCount() 获取返回总数
+ * @method integer getTotalCount() 获取动态扩缩容配置策略总数
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTotalCount(integer $TotalCount) 设置返回总数
+ * @method void setTotalCount(integer $TotalCount) 设置动态扩缩容配置策略总数
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -34,13 +34,13 @@ use TencentCloud\Common\AbstractModel;
 class DescribeScalingPoliciesResponse extends AbstractModel
 {
     /**
-     * @var array 动态扩缩容配置
+     * @var array 动态扩缩容配置策略数组
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScalingPolicies;
 
     /**
-     * @var integer 返回总数
+     * @var integer 动态扩缩容配置策略总数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalCount;
@@ -51,9 +51,9 @@ class DescribeScalingPoliciesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $ScalingPolicies 动态扩缩容配置
+     * @param array $ScalingPolicies 动态扩缩容配置策略数组
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $TotalCount 返回总数
+     * @param integer $TotalCount 动态扩缩容配置策略总数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

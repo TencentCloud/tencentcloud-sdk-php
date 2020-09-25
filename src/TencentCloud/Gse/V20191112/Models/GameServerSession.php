@@ -22,48 +22,48 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getCreationTime() 获取游戏服务器会话创建时间
  * @method void setCreationTime(string $CreationTime) 设置游戏服务器会话创建时间
- * @method string getCreatorId() 获取创建者ID
+ * @method string getCreatorId() 获取创建者ID，最大长度不超过1024个ASCII字符
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCreatorId(string $CreatorId) 设置创建者ID
+ * @method void setCreatorId(string $CreatorId) 设置创建者ID，最大长度不超过1024个ASCII字符
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getCurrentPlayerSessionCount() 获取当前玩家数量
- * @method void setCurrentPlayerSessionCount(integer $CurrentPlayerSessionCount) 设置当前玩家数量
+ * @method integer getCurrentPlayerSessionCount() 获取当前玩家数量，最小值不小于0
+ * @method void setCurrentPlayerSessionCount(integer $CurrentPlayerSessionCount) 设置当前玩家数量，最小值不小于0
  * @method string getDnsName() 获取CVM的DNS标识符
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDnsName(string $DnsName) 设置CVM的DNS标识符
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFleetId() 获取舰队ID
  * @method void setFleetId(string $FleetId) 设置舰队ID
- * @method array getGameProperties() 获取游戏属性
+ * @method array getGameProperties() 获取游戏属性，最大长度不超过16组
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setGameProperties(array $GameProperties) 设置游戏属性
+ * @method void setGameProperties(array $GameProperties) 设置游戏属性，最大长度不超过16组
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getGameServerSessionData() 获取游戏服务器会话属性详情
+ * @method string getGameServerSessionData() 获取游戏服务器会话属性详情，最大长度不超过4096个ASCII字符
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setGameServerSessionData(string $GameServerSessionData) 设置游戏服务器会话属性详情
+ * @method void setGameServerSessionData(string $GameServerSessionData) 设置游戏服务器会话属性详情，最大长度不超过4096个ASCII字符
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getGameServerSessionId() 获取游戏服务器会话ID
- * @method void setGameServerSessionId(string $GameServerSessionId) 设置游戏服务器会话ID
+ * @method string getGameServerSessionId() 获取游戏服务器会话ID，最小长度不小于1个ASCII字符，最大长度不超过48个ASCII字符
+ * @method void setGameServerSessionId(string $GameServerSessionId) 设置游戏服务器会话ID，最小长度不小于1个ASCII字符，最大长度不超过48个ASCII字符
  * @method string getIpAddress() 获取CVM IP地址
  * @method void setIpAddress(string $IpAddress) 设置CVM IP地址
- * @method string getMatchmakerData() 获取对战进程详情
+ * @method string getMatchmakerData() 获取对战进程详情，最大长度不超过400000个ASCII字符
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMatchmakerData(string $MatchmakerData) 设置对战进程详情
+ * @method void setMatchmakerData(string $MatchmakerData) 设置对战进程详情，最大长度不超过400000个ASCII字符
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getMaximumPlayerSessionCount() 获取最大玩家数量
- * @method void setMaximumPlayerSessionCount(integer $MaximumPlayerSessionCount) 设置最大玩家数量
- * @method string getName() 获取游戏服务器会话名称
+ * @method integer getMaximumPlayerSessionCount() 获取最大玩家数量，最小值不小于0
+ * @method void setMaximumPlayerSessionCount(integer $MaximumPlayerSessionCount) 设置最大玩家数量，最小值不小于0
+ * @method string getName() 获取游戏服务器会话名称，最大长度不超过1024个ASCII字符
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setName(string $Name) 设置游戏服务器会话名称
+ * @method void setName(string $Name) 设置游戏服务器会话名称，最大长度不超过1024个ASCII字符
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getPlayerSessionCreationPolicy() 获取玩家会话创建策略
+ * @method string getPlayerSessionCreationPolicy() 获取玩家会话创建策略（ACCEPT_ALL,DENY_ALL）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPlayerSessionCreationPolicy(string $PlayerSessionCreationPolicy) 设置玩家会话创建策略
+ * @method void setPlayerSessionCreationPolicy(string $PlayerSessionCreationPolicy) 设置玩家会话创建策略（ACCEPT_ALL,DENY_ALL）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getPort() 获取端口号
- * @method void setPort(integer $Port) 设置端口号
- * @method string getStatus() 获取游戏服务器会话状态
- * @method void setStatus(string $Status) 设置游戏服务器会话状态
+ * @method integer getPort() 获取端口号，最小值不小于1，最大值不超过60000
+ * @method void setPort(integer $Port) 设置端口号，最小值不小于1，最大值不超过60000
+ * @method string getStatus() 获取游戏服务器会话状态（ACTIVE,ACTIVATING,TERMINATED,TERMINATING,ERROR）
+ * @method void setStatus(string $Status) 设置游戏服务器会话状态（ACTIVE,ACTIVATING,TERMINATED,TERMINATING,ERROR）
  * @method string getStatusReason() 获取游戏服务器会话状态附加信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatusReason(string $StatusReason) 设置游戏服务器会话状态附加信息
@@ -72,9 +72,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTerminationTime(string $TerminationTime) 设置终止的时间
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getInstanceType() 获取实例类型
+ * @method string getInstanceType() 获取实例类型，最大长度不超过128个ASCII字符
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInstanceType(string $InstanceType) 设置实例类型
+ * @method void setInstanceType(string $InstanceType) 设置实例类型，最大长度不超过128个ASCII字符
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCurrentCustomCount() 获取当前自定义数
 注意：此字段可能返回 null，表示取不到有效值。
@@ -88,9 +88,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWeight(integer $Weight) 设置权重
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getAvailabilityStatus() 获取会话可用性状态，是否被屏蔽
+ * @method string getAvailabilityStatus() 获取会话可用性状态，是否被屏蔽（Enable,Disable）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAvailabilityStatus(string $AvailabilityStatus) 设置会话可用性状态，是否被屏蔽
+ * @method void setAvailabilityStatus(string $AvailabilityStatus) 设置会话可用性状态，是否被屏蔽（Enable,Disable）
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class GameServerSession extends AbstractModel
@@ -101,13 +101,13 @@ class GameServerSession extends AbstractModel
     public $CreationTime;
 
     /**
-     * @var string 创建者ID
+     * @var string 创建者ID，最大长度不超过1024个ASCII字符
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreatorId;
 
     /**
-     * @var integer 当前玩家数量
+     * @var integer 当前玩家数量，最小值不小于0
      */
     public $CurrentPlayerSessionCount;
 
@@ -123,19 +123,19 @@ class GameServerSession extends AbstractModel
     public $FleetId;
 
     /**
-     * @var array 游戏属性
+     * @var array 游戏属性，最大长度不超过16组
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GameProperties;
 
     /**
-     * @var string 游戏服务器会话属性详情
+     * @var string 游戏服务器会话属性详情，最大长度不超过4096个ASCII字符
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GameServerSessionData;
 
     /**
-     * @var string 游戏服务器会话ID
+     * @var string 游戏服务器会话ID，最小长度不小于1个ASCII字符，最大长度不超过48个ASCII字符
      */
     public $GameServerSessionId;
 
@@ -145,35 +145,35 @@ class GameServerSession extends AbstractModel
     public $IpAddress;
 
     /**
-     * @var string 对战进程详情
+     * @var string 对战进程详情，最大长度不超过400000个ASCII字符
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MatchmakerData;
 
     /**
-     * @var integer 最大玩家数量
+     * @var integer 最大玩家数量，最小值不小于0
      */
     public $MaximumPlayerSessionCount;
 
     /**
-     * @var string 游戏服务器会话名称
+     * @var string 游戏服务器会话名称，最大长度不超过1024个ASCII字符
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
-     * @var string 玩家会话创建策略
+     * @var string 玩家会话创建策略（ACCEPT_ALL,DENY_ALL）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PlayerSessionCreationPolicy;
 
     /**
-     * @var integer 端口号
+     * @var integer 端口号，最小值不小于1，最大值不超过60000
      */
     public $Port;
 
     /**
-     * @var string 游戏服务器会话状态
+     * @var string 游戏服务器会话状态（ACTIVE,ACTIVATING,TERMINATED,TERMINATING,ERROR）
      */
     public $Status;
 
@@ -190,7 +190,7 @@ class GameServerSession extends AbstractModel
     public $TerminationTime;
 
     /**
-     * @var string 实例类型
+     * @var string 实例类型，最大长度不超过128个ASCII字符
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceType;
@@ -214,39 +214,39 @@ class GameServerSession extends AbstractModel
     public $Weight;
 
     /**
-     * @var string 会话可用性状态，是否被屏蔽
+     * @var string 会话可用性状态，是否被屏蔽（Enable,Disable）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AvailabilityStatus;
 
     /**
      * @param string $CreationTime 游戏服务器会话创建时间
-     * @param string $CreatorId 创建者ID
+     * @param string $CreatorId 创建者ID，最大长度不超过1024个ASCII字符
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $CurrentPlayerSessionCount 当前玩家数量
+     * @param integer $CurrentPlayerSessionCount 当前玩家数量，最小值不小于0
      * @param string $DnsName CVM的DNS标识符
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FleetId 舰队ID
-     * @param array $GameProperties 游戏属性
+     * @param array $GameProperties 游戏属性，最大长度不超过16组
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $GameServerSessionData 游戏服务器会话属性详情
+     * @param string $GameServerSessionData 游戏服务器会话属性详情，最大长度不超过4096个ASCII字符
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $GameServerSessionId 游戏服务器会话ID
+     * @param string $GameServerSessionId 游戏服务器会话ID，最小长度不小于1个ASCII字符，最大长度不超过48个ASCII字符
      * @param string $IpAddress CVM IP地址
-     * @param string $MatchmakerData 对战进程详情
+     * @param string $MatchmakerData 对战进程详情，最大长度不超过400000个ASCII字符
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $MaximumPlayerSessionCount 最大玩家数量
-     * @param string $Name 游戏服务器会话名称
+     * @param integer $MaximumPlayerSessionCount 最大玩家数量，最小值不小于0
+     * @param string $Name 游戏服务器会话名称，最大长度不超过1024个ASCII字符
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $PlayerSessionCreationPolicy 玩家会话创建策略
+     * @param string $PlayerSessionCreationPolicy 玩家会话创建策略（ACCEPT_ALL,DENY_ALL）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Port 端口号
-     * @param string $Status 游戏服务器会话状态
+     * @param integer $Port 端口号，最小值不小于1，最大值不超过60000
+     * @param string $Status 游戏服务器会话状态（ACTIVE,ACTIVATING,TERMINATED,TERMINATING,ERROR）
      * @param string $StatusReason 游戏服务器会话状态附加信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TerminationTime 终止的时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $InstanceType 实例类型
+     * @param string $InstanceType 实例类型，最大长度不超过128个ASCII字符
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CurrentCustomCount 当前自定义数
 注意：此字段可能返回 null，表示取不到有效值。
@@ -254,7 +254,7 @@ class GameServerSession extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Weight 权重
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $AvailabilityStatus 会话可用性状态，是否被屏蔽
+     * @param string $AvailabilityStatus 会话可用性状态，是否被屏蔽（Enable,Disable）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

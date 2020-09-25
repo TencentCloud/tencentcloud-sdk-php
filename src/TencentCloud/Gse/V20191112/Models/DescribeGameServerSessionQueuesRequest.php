@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeGameServerSessionQueues请求参数结构体
  *
- * @method array getNames() 获取游戏服务器会话队列数组
- * @method void setNames(array $Names) 设置游戏服务器会话队列数组
- * @method integer getLimit() 获取要返回的最大结果数
- * @method void setLimit(integer $Limit) 设置要返回的最大结果数
- * @method integer getOffset() 获取偏移
- * @method void setOffset(integer $Offset) 设置偏移
+ * @method array getNames() 获取游戏服务器会话队列名称数组，单个名字长度1~128
+ * @method void setNames(array $Names) 设置游戏服务器会话队列名称数组，单个名字长度1~128
+ * @method integer getLimit() 获取结果返回最大数量，最小值0，最大值100
+ * @method void setLimit(integer $Limit) 设置结果返回最大数量，最小值0，最大值100
+ * @method integer getOffset() 获取返回结果偏移，最小值0
+ * @method void setOffset(integer $Offset) 设置返回结果偏移，最小值0
  */
 class DescribeGameServerSessionQueuesRequest extends AbstractModel
 {
     /**
-     * @var array 游戏服务器会话队列数组
+     * @var array 游戏服务器会话队列名称数组，单个名字长度1~128
      */
     public $Names;
 
     /**
-     * @var integer 要返回的最大结果数
+     * @var integer 结果返回最大数量，最小值0，最大值100
      */
     public $Limit;
 
     /**
-     * @var integer 偏移
+     * @var integer 返回结果偏移，最小值0
      */
     public $Offset;
 
     /**
-     * @param array $Names 游戏服务器会话队列数组
-     * @param integer $Limit 要返回的最大结果数
-     * @param integer $Offset 偏移
+     * @param array $Names 游戏服务器会话队列名称数组，单个名字长度1~128
+     * @param integer $Limit 结果返回最大数量，最小值0，最大值100
+     * @param integer $Offset 返回结果偏移，最小值0
      */
     function __construct()
     {

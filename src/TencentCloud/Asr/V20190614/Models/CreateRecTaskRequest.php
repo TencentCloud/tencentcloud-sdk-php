@@ -46,8 +46,8 @@ use TencentCloud\Common\AbstractModel;
 • 16k_wuu-SH：16k 上海话方言；
  * @method integer getChannelNum() 获取语音声道数。1：单声道；2：双声道（仅支持 8k_zh 引擎模型）。
  * @method void setChannelNum(integer $ChannelNum) 设置语音声道数。1：单声道；2：双声道（仅支持 8k_zh 引擎模型）。
- * @method integer getResTextFormat() 获取识别结果返回形式。0： 识别结果文本(含分段时间戳)； 1：仅支持16k中文引擎，含词级别粒度的[详细识别结果](https://cloud.tencent.com/document/api/1093/37824#SentenceDetail)(词时间戳列表，一般用于生成字幕场景)。
- * @method void setResTextFormat(integer $ResTextFormat) 设置识别结果返回形式。0： 识别结果文本(含分段时间戳)； 1：仅支持16k中文引擎，含词级别粒度的[详细识别结果](https://cloud.tencent.com/document/api/1093/37824#SentenceDetail)(词时间戳列表，一般用于生成字幕场景)。
+ * @method integer getResTextFormat() 获取识别结果返回形式。0： 识别结果文本(含分段时间戳)； 1：词级别粒度的[详细识别结果](https://cloud.tencent.com/document/api/1093/37824#SentenceDetail)(不含标点，词时间戳列表，一般用于生成字幕场景)；2：词级别粒度的详细识别结果（包含标点）
+ * @method void setResTextFormat(integer $ResTextFormat) 设置识别结果返回形式。0： 识别结果文本(含分段时间戳)； 1：词级别粒度的[详细识别结果](https://cloud.tencent.com/document/api/1093/37824#SentenceDetail)(不含标点，词时间戳列表，一般用于生成字幕场景)；2：词级别粒度的详细识别结果（包含标点）
  * @method integer getSourceType() 获取语音数据来源。0：语音 URL；1：语音数据（post body）。
  * @method void setSourceType(integer $SourceType) 设置语音数据来源。0：语音 URL；1：语音数据（post body）。
  * @method string getCallbackUrl() 获取回调 URL，用户自行搭建的用于接收识别结果的服务器地址， 长度小于2048字节。如果用户使用回调方式获取识别结果，需提交该参数；如果用户使用轮询方式获取识别结果，则无需提交该参数。
@@ -101,7 +101,7 @@ class CreateRecTaskRequest extends AbstractModel
     public $ChannelNum;
 
     /**
-     * @var integer 识别结果返回形式。0： 识别结果文本(含分段时间戳)； 1：仅支持16k中文引擎，含词级别粒度的[详细识别结果](https://cloud.tencent.com/document/api/1093/37824#SentenceDetail)(词时间戳列表，一般用于生成字幕场景)。
+     * @var integer 识别结果返回形式。0： 识别结果文本(含分段时间戳)； 1：词级别粒度的[详细识别结果](https://cloud.tencent.com/document/api/1093/37824#SentenceDetail)(不含标点，词时间戳列表，一般用于生成字幕场景)；2：词级别粒度的详细识别结果（包含标点）
      */
     public $ResTextFormat;
 
@@ -185,7 +185,7 @@ class CreateRecTaskRequest extends AbstractModel
 • 16k_ja：16k 日语；
 • 16k_wuu-SH：16k 上海话方言；
      * @param integer $ChannelNum 语音声道数。1：单声道；2：双声道（仅支持 8k_zh 引擎模型）。
-     * @param integer $ResTextFormat 识别结果返回形式。0： 识别结果文本(含分段时间戳)； 1：仅支持16k中文引擎，含词级别粒度的[详细识别结果](https://cloud.tencent.com/document/api/1093/37824#SentenceDetail)(词时间戳列表，一般用于生成字幕场景)。
+     * @param integer $ResTextFormat 识别结果返回形式。0： 识别结果文本(含分段时间戳)； 1：词级别粒度的[详细识别结果](https://cloud.tencent.com/document/api/1093/37824#SentenceDetail)(不含标点，词时间戳列表，一般用于生成字幕场景)；2：词级别粒度的详细识别结果（包含标点）
      * @param integer $SourceType 语音数据来源。0：语音 URL；1：语音数据（post body）。
      * @param string $CallbackUrl 回调 URL，用户自行搭建的用于接收识别结果的服务器地址， 长度小于2048字节。如果用户使用回调方式获取识别结果，需提交该参数；如果用户使用轮询方式获取识别结果，则无需提交该参数。
      * @param string $Url 语音的URL地址，需要公网可下载。长度小于2048字节，当 SourceType 值为 0 时须填写该字段，为 1 时不需要填写。注意：请确保录音文件时长在5个小时之内，否则可能识别失败。请保证文件的下载速度，否则可能下载失败。

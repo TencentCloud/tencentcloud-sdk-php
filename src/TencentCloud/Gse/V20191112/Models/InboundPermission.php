@@ -20,19 +20,19 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 允许网络访问范围
  *
- * @method integer getFromPort() 获取起始端口号
- * @method void setFromPort(integer $FromPort) 设置起始端口号
+ * @method integer getFromPort() 获取起始端口号，最小值1025
+ * @method void setFromPort(integer $FromPort) 设置起始端口号，最小值1025
  * @method string getIpRange() 获取IP 段范围，CIDR 方式划分
  * @method void setIpRange(string $IpRange) 设置IP 段范围，CIDR 方式划分
  * @method string getProtocol() 获取协议类型：TCP或者UDP
  * @method void setProtocol(string $Protocol) 设置协议类型：TCP或者UDP
- * @method integer getToPort() 获取终止端口号
- * @method void setToPort(integer $ToPort) 设置终止端口号
+ * @method integer getToPort() 获取终止端口号，最大值60000
+ * @method void setToPort(integer $ToPort) 设置终止端口号，最大值60000
  */
 class InboundPermission extends AbstractModel
 {
     /**
-     * @var integer 起始端口号
+     * @var integer 起始端口号，最小值1025
      */
     public $FromPort;
 
@@ -47,15 +47,15 @@ class InboundPermission extends AbstractModel
     public $Protocol;
 
     /**
-     * @var integer 终止端口号
+     * @var integer 终止端口号，最大值60000
      */
     public $ToPort;
 
     /**
-     * @param integer $FromPort 起始端口号
+     * @param integer $FromPort 起始端口号，最小值1025
      * @param string $IpRange IP 段范围，CIDR 方式划分
      * @param string $Protocol 协议类型：TCP或者UDP
-     * @param integer $ToPort 终止端口号
+     * @param integer $ToPort 终止端口号，最大值60000
      */
     function __construct()
     {

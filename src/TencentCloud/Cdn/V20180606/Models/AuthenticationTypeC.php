@@ -41,6 +41,14 @@ md5hash：MD5（自定义密钥 + 文件路径 + timestamp）
 blacklist：黑名单，表示仅对 FileExtensions 中的类型进行鉴权
  * @method void setFilterType(string $FilterType) 设置whitelist：白名单，表示对除了 FileExtensions 列表之外的所有类型进行鉴权
 blacklist：黑名单，表示仅对 FileExtensions 中的类型进行鉴权
+ * @method string getTimeFormat() 获取时间戳进制设置
+dec：十进制
+hex：十六进制
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTimeFormat(string $TimeFormat) 设置时间戳进制设置
+dec：十进制
+hex：十六进制
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AuthenticationTypeC extends AbstractModel
 {
@@ -70,6 +78,14 @@ blacklist：黑名单，表示仅对 FileExtensions 中的类型进行鉴权
     public $FilterType;
 
     /**
+     * @var string 时间戳进制设置
+dec：十进制
+hex：十六进制
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TimeFormat;
+
+    /**
      * @param string $SecretKey 计算签名的密钥
 仅允许大小写字母与数字，长度 6~32 位
 注意：此字段可能返回 null，表示取不到有效值。
@@ -79,6 +95,10 @@ blacklist：黑名单，表示仅对 FileExtensions 中的类型进行鉴权
 如果包含字符 *  则表示所有文件
      * @param string $FilterType whitelist：白名单，表示对除了 FileExtensions 列表之外的所有类型进行鉴权
 blacklist：黑名单，表示仅对 FileExtensions 中的类型进行鉴权
+     * @param string $TimeFormat 时间戳进制设置
+dec：十进制
+hex：十六进制
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -107,6 +127,10 @@ blacklist：黑名单，表示仅对 FileExtensions 中的类型进行鉴权
 
         if (array_key_exists("FilterType",$param) and $param["FilterType"] !== null) {
             $this->FilterType = $param["FilterType"];
+        }
+
+        if (array_key_exists("TimeFormat",$param) and $param["TimeFormat"] !== null) {
+            $this->TimeFormat = $param["TimeFormat"];
         }
     }
 }

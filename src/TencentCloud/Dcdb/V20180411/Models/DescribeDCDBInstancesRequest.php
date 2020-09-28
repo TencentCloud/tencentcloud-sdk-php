@@ -50,6 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExclusterIds(array $ExclusterIds) 设置独享集群ID
  * @method array getTagKeys() 获取按标签key查询
  * @method void setTagKeys(array $TagKeys) 设置按标签key查询
+ * @method string getFilterInstanceType() 获取实例类型过滤，1-独享实例，2-主实例，3-灾备实例，多个按逗号分隔
+ * @method void setFilterInstanceType(string $FilterInstanceType) 设置实例类型过滤，1-独享实例，2-主实例，3-灾备实例，多个按逗号分隔
  */
 class DescribeDCDBInstancesRequest extends AbstractModel
 {
@@ -129,6 +131,11 @@ class DescribeDCDBInstancesRequest extends AbstractModel
     public $TagKeys;
 
     /**
+     * @var string 实例类型过滤，1-独享实例，2-主实例，3-灾备实例，多个按逗号分隔
+     */
+    public $FilterInstanceType;
+
+    /**
      * @param array $InstanceIds 按照一个或者多个实例 ID 查询。实例 ID 形如：dcdbt-2t4cf98d
      * @param string $SearchName 搜索的字段名，当前支持的值有：instancename、vip、all。传 instancename 表示按实例名进行搜索；传 vip 表示按内网IP进行搜索；传 all 将会按实例ID、实例名和内网IP进行搜索。
      * @param string $SearchKey 搜索的关键字，支持模糊搜索。多个关键字使用换行符（'\n'）分割。
@@ -144,6 +151,7 @@ class DescribeDCDBInstancesRequest extends AbstractModel
      * @param boolean $IsFilterExcluster 标识是否使用ExclusterType字段, false不使用，true使用
      * @param array $ExclusterIds 独享集群ID
      * @param array $TagKeys 按标签key查询
+     * @param string $FilterInstanceType 实例类型过滤，1-独享实例，2-主实例，3-灾备实例，多个按逗号分隔
      */
     function __construct()
     {
@@ -216,6 +224,10 @@ class DescribeDCDBInstancesRequest extends AbstractModel
 
         if (array_key_exists("TagKeys",$param) and $param["TagKeys"] !== null) {
             $this->TagKeys = $param["TagKeys"];
+        }
+
+        if (array_key_exists("FilterInstanceType",$param) and $param["FilterInstanceType"] !== null) {
+            $this->FilterInstanceType = $param["FilterInstanceType"];
         }
     }
 }

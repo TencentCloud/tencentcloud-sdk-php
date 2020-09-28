@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTotalCount(integer $TotalCount) 设置函数日志的总数
  * @method array getData() 获取函数日志信息
  * @method void setData(array $Data) 设置函数日志信息
- * @method LogSearchContext getSearchContext() 获取日志服务分页参数
- * @method void setSearchContext(LogSearchContext $SearchContext) 设置日志服务分页参数
+ * @method LogSearchContext getSearchContext() 获取该字段已下线
+ * @method void setSearchContext(LogSearchContext $SearchContext) 设置该字段已下线
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -42,7 +42,7 @@ class GetFunctionLogsResponse extends AbstractModel
     public $Data;
 
     /**
-     * @var LogSearchContext 日志服务分页参数
+     * @var LogSearchContext 该字段已下线
      */
     public $SearchContext;
 
@@ -54,7 +54,7 @@ class GetFunctionLogsResponse extends AbstractModel
     /**
      * @param integer $TotalCount 函数日志的总数
      * @param array $Data 函数日志信息
-     * @param LogSearchContext $SearchContext 日志服务分页参数
+     * @param LogSearchContext $SearchContext 该字段已下线
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVideoHeight(integer $VideoHeight) 设置混流-输出流高，音视频输出时必填。取值范围[0,1080]，单位为像素值。
  * @method integer getVideoBitrate() 获取混流-输出流码率，音视频输出时必填。取值范围[1,10000]，单位为Kbps。
  * @method void setVideoBitrate(integer $VideoBitrate) 设置混流-输出流码率，音视频输出时必填。取值范围[1,10000]，单位为Kbps。
- * @method integer getVideoFramerate() 获取混流-输出流帧率，音视频输出时必填。取值为[6,12,15,24,30,48,60]，不在上述帧率值内系统会自动调整。
- * @method void setVideoFramerate(integer $VideoFramerate) 设置混流-输出流帧率，音视频输出时必填。取值为[6,12,15,24,30,48,60]，不在上述帧率值内系统会自动调整。
+ * @method integer getVideoFramerate() 获取混流-输出流帧率，音视频输出时必填。取值范围[1,60]。
+ * @method void setVideoFramerate(integer $VideoFramerate) 设置混流-输出流帧率，音视频输出时必填。取值范围[1,60]。
  * @method integer getVideoGop() 获取混流-输出流gop，音视频输出时必填。取值范围[1,5]，单位为秒。
  * @method void setVideoGop(integer $VideoGop) 设置混流-输出流gop，音视频输出时必填。取值范围[1,5]，单位为秒。
  * @method integer getBackgroundColor() 获取混流-输出流背景色。
@@ -74,7 +74,7 @@ class EncodeParams extends AbstractModel
     public $VideoBitrate;
 
     /**
-     * @var integer 混流-输出流帧率，音视频输出时必填。取值为[6,12,15,24,30,48,60]，不在上述帧率值内系统会自动调整。
+     * @var integer 混流-输出流帧率，音视频输出时必填。取值范围[1,60]。
      */
     public $VideoFramerate;
 
@@ -100,7 +100,7 @@ class EncodeParams extends AbstractModel
      * @param integer $VideoWidth 混流-输出流宽，音视频输出时必填。取值范围[0,1920]，单位为像素值。
      * @param integer $VideoHeight 混流-输出流高，音视频输出时必填。取值范围[0,1080]，单位为像素值。
      * @param integer $VideoBitrate 混流-输出流码率，音视频输出时必填。取值范围[1,10000]，单位为Kbps。
-     * @param integer $VideoFramerate 混流-输出流帧率，音视频输出时必填。取值为[6,12,15,24,30,48,60]，不在上述帧率值内系统会自动调整。
+     * @param integer $VideoFramerate 混流-输出流帧率，音视频输出时必填。取值范围[1,60]。
      * @param integer $VideoGop 混流-输出流gop，音视频输出时必填。取值范围[1,5]，单位为秒。
      * @param integer $BackgroundColor 混流-输出流背景色。
      * @param integer $BackgroundImageId 混流-输出流背景图片，取值为实时音视频控制台上传的图片ID。

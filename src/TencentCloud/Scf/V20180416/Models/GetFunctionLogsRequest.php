@@ -42,8 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) 设置查询的具体日期，例如：2017-05-16 20:00:00，只能与endtime相差一天之内
  * @method string getEndTime() 获取查询的具体日期，例如：2017-05-16 20:59:59，只能与startTime相差一天之内
  * @method void setEndTime(string $EndTime) 设置查询的具体日期，例如：2017-05-16 20:59:59，只能与startTime相差一天之内
- * @method LogSearchContext getSearchContext() 获取服务日志相关参数，第一页日志 Offset 为空字符串，后续分页按响应字段里的SearchContext填写
- * @method void setSearchContext(LogSearchContext $SearchContext) 设置服务日志相关参数，第一页日志 Offset 为空字符串，后续分页按响应字段里的SearchContext填写
+ * @method LogSearchContext getSearchContext() 获取该字段已下线
+ * @method void setSearchContext(LogSearchContext $SearchContext) 设置该字段已下线
  */
 class GetFunctionLogsRequest extends AbstractModel
 {
@@ -103,7 +103,7 @@ class GetFunctionLogsRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var LogSearchContext 服务日志相关参数，第一页日志 Offset 为空字符串，后续分页按响应字段里的SearchContext填写
+     * @var LogSearchContext 该字段已下线
      */
     public $SearchContext;
 
@@ -119,7 +119,7 @@ class GetFunctionLogsRequest extends AbstractModel
      * @param string $FunctionRequestId 执行该函数对应的requestId
      * @param string $StartTime 查询的具体日期，例如：2017-05-16 20:00:00，只能与endtime相差一天之内
      * @param string $EndTime 查询的具体日期，例如：2017-05-16 20:59:59，只能与startTime相差一天之内
-     * @param LogSearchContext $SearchContext 服务日志相关参数，第一页日志 Offset 为空字符串，后续分页按响应字段里的SearchContext填写
+     * @param LogSearchContext $SearchContext 该字段已下线
      */
     function __construct()
     {

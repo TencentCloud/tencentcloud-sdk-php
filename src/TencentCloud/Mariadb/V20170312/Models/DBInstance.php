@@ -132,6 +132,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDbVersion(string $DbVersion) 设置数据库版本
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getDcnFlag() 获取DCN标志，0-无，1-主实例，2-灾备实例
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDcnFlag(integer $DcnFlag) 设置DCN标志，0-无，1-主实例，2-灾备实例
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getDcnStatus() 获取DCN状态，0-无，1-创建中，2-同步中，3-已断开
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDcnStatus(integer $DcnStatus) 设置DCN状态，0-无，1-创建中，2-同步中，3-已断开
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getDcnDstNum() 获取DCN灾备实例数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDcnDstNum(integer $DcnDstNum) 设置DCN灾备实例数
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DBInstance extends AbstractModel
 {
@@ -376,6 +388,24 @@ class DBInstance extends AbstractModel
     public $DbVersion;
 
     /**
+     * @var integer DCN标志，0-无，1-主实例，2-灾备实例
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DcnFlag;
+
+    /**
+     * @var integer DCN状态，0-无，1-创建中，2-同步中，3-已断开
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DcnStatus;
+
+    /**
+     * @var integer DCN灾备实例数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DcnDstNum;
+
+    /**
      * @param string $InstanceId 实例 ID，唯一标识一个 TDSQL 实例
      * @param string $InstanceName 实例名称，用户可修改
      * @param integer $AppId 实例所属应用 ID
@@ -431,6 +461,12 @@ class DBInstance extends AbstractModel
      * @param string $DbEngine 数据库引擎
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DbVersion 数据库版本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $DcnFlag DCN标志，0-无，1-主实例，2-灾备实例
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $DcnStatus DCN状态，0-无，1-创建中，2-同步中，3-已断开
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $DcnDstNum DCN灾备实例数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -628,6 +664,18 @@ class DBInstance extends AbstractModel
 
         if (array_key_exists("DbVersion",$param) and $param["DbVersion"] !== null) {
             $this->DbVersion = $param["DbVersion"];
+        }
+
+        if (array_key_exists("DcnFlag",$param) and $param["DcnFlag"] !== null) {
+            $this->DcnFlag = $param["DcnFlag"];
+        }
+
+        if (array_key_exists("DcnStatus",$param) and $param["DcnStatus"] !== null) {
+            $this->DcnStatus = $param["DcnStatus"];
+        }
+
+        if (array_key_exists("DcnDstNum",$param) and $param["DcnDstNum"] !== null) {
+            $this->DcnDstNum = $param["DcnDstNum"];
         }
     }
 }

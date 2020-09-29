@@ -52,13 +52,13 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInternetServiceProvider(string $InternetServiceProvider) 设置弹性公网IP的运营商信息，当前可能返回值包括"CMCC","CTCC","CUCC","BGP"
  * @method boolean getLocalBgp() 获取是否本地带宽EIP
  * @method void setLocalBgp(boolean $LocalBgp) 设置是否本地带宽EIP
- * @method integer getBandwidth() 获取弹性公网IP的带宽值。注意，非带宽上移账户的弹性公网IP没有带宽属性，值为空。
+ * @method integer getBandwidth() 获取弹性公网IP的带宽值。注意，传统账户类型账户的弹性公网IP没有带宽属性，值为空。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBandwidth(integer $Bandwidth) 设置弹性公网IP的带宽值。注意，非带宽上移账户的弹性公网IP没有带宽属性，值为空。
+ * @method void setBandwidth(integer $Bandwidth) 设置弹性公网IP的带宽值。注意，传统账户类型账户的弹性公网IP没有带宽属性，值为空。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getInternetChargeType() 获取弹性公网IP的网络计费模式。注意，非带宽上移账户的弹性公网IP没有网络计费模式属性，值为空。
+ * @method string getInternetChargeType() 获取弹性公网IP的网络计费模式。注意，传统账户类型账户的弹性公网IP没有网络计费模式属性，值为空。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInternetChargeType(string $InternetChargeType) 设置弹性公网IP的网络计费模式。注意，非带宽上移账户的弹性公网IP没有网络计费模式属性，值为空。
+ * @method void setInternetChargeType(string $InternetChargeType) 设置弹性公网IP的网络计费模式。注意，传统账户类型账户的弹性公网IP没有网络计费模式属性，值为空。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class Address extends AbstractModel
@@ -144,13 +144,13 @@ class Address extends AbstractModel
     public $LocalBgp;
 
     /**
-     * @var integer 弹性公网IP的带宽值。注意，非带宽上移账户的弹性公网IP没有带宽属性，值为空。
+     * @var integer 弹性公网IP的带宽值。注意，传统账户类型账户的弹性公网IP没有带宽属性，值为空。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Bandwidth;
 
     /**
-     * @var string 弹性公网IP的网络计费模式。注意，非带宽上移账户的弹性公网IP没有网络计费模式属性，值为空。
+     * @var string 弹性公网IP的网络计费模式。注意，传统账户类型账户的弹性公网IP没有网络计费模式属性，值为空。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InternetChargeType;
@@ -172,9 +172,9 @@ class Address extends AbstractModel
      * @param AlgType $EipAlgType EIP ALG开启的协议类型。
      * @param string $InternetServiceProvider 弹性公网IP的运营商信息，当前可能返回值包括"CMCC","CTCC","CUCC","BGP"
      * @param boolean $LocalBgp 是否本地带宽EIP
-     * @param integer $Bandwidth 弹性公网IP的带宽值。注意，非带宽上移账户的弹性公网IP没有带宽属性，值为空。
+     * @param integer $Bandwidth 弹性公网IP的带宽值。注意，传统账户类型账户的弹性公网IP没有带宽属性，值为空。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $InternetChargeType 弹性公网IP的网络计费模式。注意，非带宽上移账户的弹性公网IP没有网络计费模式属性，值为空。
+     * @param string $InternetChargeType 弹性公网IP的网络计费模式。注意，传统账户类型账户的弹性公网IP没有网络计费模式属性，值为空。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

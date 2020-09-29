@@ -46,6 +46,7 @@ use TencentCloud\Vod\V20180717\Models as Models;
 * 分类层次不可超过 4 层。
 * 每个分类的子类数量不可超过 500 个。
  * @method Models\CreateContentReviewTemplateResponse CreateContentReviewTemplate(Models\CreateContentReviewTemplateRequest $req) 创建用户自定义视频内容审核模板，数量上限：50。
+ * @method Models\CreateImageProcessingTemplateResponse CreateImageProcessingTemplate(Models\CreateImageProcessingTemplateRequest $req) 创建一个用户自定义的图片处理模板，数量上限：16。最多支持三次操作，例如：裁剪-缩略-裁剪。
  * @method Models\CreateImageSpriteTemplateResponse CreateImageSpriteTemplate(Models\CreateImageSpriteTemplateRequest $req) 创建用户自定义雪碧图模板，数量上限：16。
  * @method Models\CreatePersonSampleResponse CreatePersonSample(Models\CreatePersonSampleRequest $req) 该接口用于创建人物样本，用于通过人脸识别等技术，进行内容识别、内容审核等视频处理。
  * @method Models\CreateProcedureTemplateResponse CreateProcedureTemplate(Models\CreateProcedureTemplateRequest $req) 创建用户自定义的任务流模板，模板上限：50。
@@ -65,6 +66,7 @@ use TencentCloud\Vod\V20180717\Models as Models;
  * @method Models\DeleteClassResponse DeleteClass(Models\DeleteClassRequest $req) * 仅当待删分类无子分类且无媒体关联情况下，可删除分类；
 * 否则，请先执行[删除媒体](/document/product/266/31764)及子分类，再删除该分类；
  * @method Models\DeleteContentReviewTemplateResponse DeleteContentReviewTemplate(Models\DeleteContentReviewTemplateRequest $req) 删除用户自定义视频内容审核模板。
+ * @method Models\DeleteImageProcessingTemplateResponse DeleteImageProcessingTemplate(Models\DeleteImageProcessingTemplateRequest $req) 删除用户自定义图片处理模板。
  * @method Models\DeleteImageSpriteTemplateResponse DeleteImageSpriteTemplate(Models\DeleteImageSpriteTemplateRequest $req) 删除雪碧图模板。
  * @method Models\DeleteMediaResponse DeleteMedia(Models\DeleteMediaRequest $req) * 删除媒体及其对应的视频处理文件（如转码视频、雪碧图、截图、微信发布视频等）；
 * 可单独删除指定 ID 的视频文件下的转码，或者微信发布文件；
@@ -94,6 +96,7 @@ use TencentCloud\Vod\V20180717\Models as Models;
  * @method Models\DescribeContentReviewTemplatesResponse DescribeContentReviewTemplates(Models\DescribeContentReviewTemplatesRequest $req) 根据视频内容审核模板唯一标识，获取视频内容审核模板详情列表。返回结果包含符合条件的所有用户自定义模板及[系统预置内容审核模板](https://cloud.tencent.com/document/product/266/33476#.E9.A2.84.E7.BD.AE.E8.A7.86.E9.A2.91.E5.86.85.E5.AE.B9.E5.AE.A1.E6.A0.B8.E6.A8.A1.E6.9D.BF)。
  * @method Models\DescribeEventsStateResponse DescribeEventsState(Models\DescribeEventsStateRequest $req) * 该接口用于业务服务器获取 [可靠回调](https://cloud.tencent.com/document/product/266/33779#.E5.8F.AF.E9.9D.A0.E5.9B.9E.E8.B0.83) 事件通知的状态。
 
+ * @method Models\DescribeImageProcessingTemplatesResponse DescribeImageProcessingTemplates(Models\DescribeImageProcessingTemplatesRequest $req) 获取图片处理模板列表，支持根据条件，分页查询。
  * @method Models\DescribeImageSpriteTemplatesResponse DescribeImageSpriteTemplates(Models\DescribeImageSpriteTemplatesRequest $req) 查询雪碧图模板，支持根据条件，分页查询。
  * @method Models\DescribeMediaInfosResponse DescribeMediaInfos(Models\DescribeMediaInfosRequest $req) 1. 该接口可以获取多个媒体文件的多种信息，包括：
     1. 基础信息（basicInfo）：包括媒体名称、分类、播放地址、封面图片等。

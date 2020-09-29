@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setChargeType(string $ChargeType) 设置带宽包计费类型，包括‘TOP5_POSTPAID_BY_MONTH’，‘PERCENT95_POSTPAID_BY_MONTH’
  * @method string getBandwidthPackageName() 获取带宽包名字
  * @method void setBandwidthPackageName(string $BandwidthPackageName) 设置带宽包名字
- * @method integer getBandwidthPackageCount() 获取带宽包数量(非上移账户只能填1)
- * @method void setBandwidthPackageCount(integer $BandwidthPackageCount) 设置带宽包数量(非上移账户只能填1)
+ * @method integer getBandwidthPackageCount() 获取带宽包数量(传统账户类型只能填1)
+ * @method void setBandwidthPackageCount(integer $BandwidthPackageCount) 设置带宽包数量(传统账户类型只能填1)
  * @method integer getInternetMaxBandwidth() 获取带宽包限速大小。单位：Mbps，-1表示不限速。
  * @method void setInternetMaxBandwidth(integer $InternetMaxBandwidth) 设置带宽包限速大小。单位：Mbps，-1表示不限速。
  * @method array getTags() 获取需要关联的标签列表。
@@ -53,7 +53,7 @@ class CreateBandwidthPackageRequest extends AbstractModel
     public $BandwidthPackageName;
 
     /**
-     * @var integer 带宽包数量(非上移账户只能填1)
+     * @var integer 带宽包数量(传统账户类型只能填1)
      */
     public $BandwidthPackageCount;
 
@@ -76,7 +76,7 @@ class CreateBandwidthPackageRequest extends AbstractModel
      * @param string $NetworkType 带宽包类型，包括'BGP'，'SINGLEISP'，'ANYCAST'
      * @param string $ChargeType 带宽包计费类型，包括‘TOP5_POSTPAID_BY_MONTH’，‘PERCENT95_POSTPAID_BY_MONTH’
      * @param string $BandwidthPackageName 带宽包名字
-     * @param integer $BandwidthPackageCount 带宽包数量(非上移账户只能填1)
+     * @param integer $BandwidthPackageCount 带宽包数量(传统账户类型只能填1)
      * @param integer $InternetMaxBandwidth 带宽包限速大小。单位：Mbps，-1表示不限速。
      * @param array $Tags 需要关联的标签列表。
      * @param string $Protocol 带宽包协议类型。当前支持'ipv4'和'ipv6'协议带宽包，默认值是'ipv4'。

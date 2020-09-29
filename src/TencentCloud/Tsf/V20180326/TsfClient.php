@@ -25,6 +25,7 @@ use TencentCloud\Tsf\V20180326\Models as Models;
 /**
  * @method Models\AddClusterInstancesResponse AddClusterInstances(Models\AddClusterInstancesRequest $req) 添加云主机节点至TSF集群
  * @method Models\AddInstancesResponse AddInstances(Models\AddInstancesRequest $req) 添加云主机节点至TSF集群
+ * @method Models\ContinueRunFailedTaskBatchResponse ContinueRunFailedTaskBatch(Models\ContinueRunFailedTaskBatchRequest $req) 对执行失败的任务批次执行续跑
  * @method Models\CreateApplicationResponse CreateApplication(Models\CreateApplicationRequest $req) 创建应用
  * @method Models\CreateClusterResponse CreateCluster(Models\CreateClusterRequest $req) 创建集群
  * @method Models\CreateConfigResponse CreateConfig(Models\CreateConfigRequest $req) 创建配置项
@@ -37,6 +38,7 @@ use TencentCloud\Tsf\V20180326\Models as Models;
  * @method Models\CreatePublicConfigResponse CreatePublicConfig(Models\CreatePublicConfigRequest $req) 创建公共配置项
  * @method Models\CreateRepositoryResponse CreateRepository(Models\CreateRepositoryRequest $req) 创建仓库
  * @method Models\CreateServerlessGroupResponse CreateServerlessGroup(Models\CreateServerlessGroupRequest $req) 创建Serverless部署组
+ * @method Models\CreateTaskResponse CreateTask(Models\CreateTaskRequest $req) 创建任务
  * @method Models\DeleteApplicationResponse DeleteApplication(Models\DeleteApplicationRequest $req) 删除应用
  * @method Models\DeleteConfigResponse DeleteConfig(Models\DeleteConfigRequest $req) 删除配置项
  * @method Models\DeleteContainerGroupResponse DeleteContainerGroup(Models\DeleteContainerGroupRequest $req) 删除容器部署组
@@ -59,6 +61,7 @@ use TencentCloud\Tsf\V20180326\Models as Models;
  * @method Models\DescribeApplicationResponse DescribeApplication(Models\DescribeApplicationRequest $req) 获取应用详情
  * @method Models\DescribeApplicationAttributeResponse DescribeApplicationAttribute(Models\DescribeApplicationAttributeRequest $req) 获取应用列表其它字段，如实例数量信息等
  * @method Models\DescribeApplicationsResponse DescribeApplications(Models\DescribeApplicationsRequest $req) 获取应用列表
+ * @method Models\DescribeBasicResourceUsageResponse DescribeBasicResourceUsage(Models\DescribeBasicResourceUsageRequest $req) TSF基本资源信息概览接口
  * @method Models\DescribeClusterInstancesResponse DescribeClusterInstances(Models\DescribeClusterInstancesRequest $req) 查询集群实例
  * @method Models\DescribeConfigResponse DescribeConfig(Models\DescribeConfigRequest $req) 查询配置
  * @method Models\DescribeConfigReleaseLogsResponse DescribeConfigReleaseLogs(Models\DescribeConfigReleaseLogsRequest $req) 查询配置发布历史
@@ -69,6 +72,7 @@ use TencentCloud\Tsf\V20180326\Models as Models;
  * @method Models\DescribeContainerGroupsResponse DescribeContainerGroups(Models\DescribeContainerGroupsRequest $req) 容器部署组列表
  * @method Models\DescribeDownloadInfoResponse DescribeDownloadInfo(Models\DescribeDownloadInfoRequest $req) TSF上传的程序包存放在腾讯云对象存储（COS）中，通过该API可以获取从COS下载程序包需要的信息，包括包所在的桶、存储路径、鉴权信息等，之后使用COS API（或SDK）进行下载。
 COS相关文档请查阅：https://cloud.tencent.com/document/product/436
+ * @method Models\DescribeFlowLastBatchStateResponse DescribeFlowLastBatchState(Models\DescribeFlowLastBatchStateRequest $req) 查询工作流最新一个批次的状态信息
  * @method Models\DescribeGroupResponse DescribeGroup(Models\DescribeGroupRequest $req) 查询虚拟机部署组详情
  * @method Models\DescribeGroupInstancesResponse DescribeGroupInstances(Models\DescribeGroupInstancesRequest $req) 查询虚拟机部署组云主机列表
  * @method Models\DescribeGroupsResponse DescribeGroups(Models\DescribeGroupsRequest $req) 获取虚拟机部署组列表
@@ -94,8 +98,15 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
  * @method Models\DescribeSimpleClustersResponse DescribeSimpleClusters(Models\DescribeSimpleClustersRequest $req) 查询简单集群列表
  * @method Models\DescribeSimpleGroupsResponse DescribeSimpleGroups(Models\DescribeSimpleGroupsRequest $req) 查询简单部署组列表
  * @method Models\DescribeSimpleNamespacesResponse DescribeSimpleNamespaces(Models\DescribeSimpleNamespacesRequest $req) 查询简单命名空间列表 
+ * @method Models\DescribeTaskLastStatusResponse DescribeTaskLastStatus(Models\DescribeTaskLastStatusRequest $req) 查询任务最近一次执行状态
  * @method Models\DescribeUploadInfoResponse DescribeUploadInfo(Models\DescribeUploadInfoRequest $req) TSF会将软件包上传到腾讯云对象存储（COS）。调用此接口获取上传信息，如目标地域，桶，包Id，存储路径，鉴权信息等，之后请使用COS API（或SDK）进行上传。
 COS相关文档请查阅：https://cloud.tencent.com/document/product/436
+ * @method Models\DisableTaskResponse DisableTask(Models\DisableTaskRequest $req) 停用任务
+ * @method Models\DisableTaskFlowResponse DisableTaskFlow(Models\DisableTaskFlowRequest $req) 停用工作流
+ * @method Models\EnableTaskResponse EnableTask(Models\EnableTaskRequest $req) 启用任务
+ * @method Models\EnableTaskFlowResponse EnableTaskFlow(Models\EnableTaskFlowRequest $req) 启用工作流
+ * @method Models\ExecuteTaskResponse ExecuteTask(Models\ExecuteTaskRequest $req) 执行一次任务。
+ * @method Models\ExecuteTaskFlowResponse ExecuteTaskFlow(Models\ExecuteTaskFlowRequest $req) 执行一次工作流
  * @method Models\ExpandGroupResponse ExpandGroup(Models\ExpandGroupRequest $req) 虚拟机部署组添加实例
  * @method Models\ModifyContainerGroupResponse ModifyContainerGroup(Models\ModifyContainerGroupRequest $req) 修改容器部署组
  * @method Models\ModifyContainerReplicasResponse ModifyContainerReplicas(Models\ModifyContainerReplicasRequest $req) 修改容器部署组实例数
@@ -104,6 +115,9 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
  * @method Models\ModifyMicroserviceResponse ModifyMicroservice(Models\ModifyMicroserviceRequest $req) 修改微服务详情
  * @method Models\ModifyUploadInfoResponse ModifyUploadInfo(Models\ModifyUploadInfoRequest $req) 调用该接口和COS的上传接口后，需要调用此接口更新TSF中保存的程序包状态。
 调用此接口完成后，才标志上传包流程结束。
+ * @method Models\RedoTaskResponse RedoTask(Models\RedoTaskRequest $req) 重新执行任务
+ * @method Models\RedoTaskBatchResponse RedoTaskBatch(Models\RedoTaskBatchRequest $req) 重新执行任务批次
+ * @method Models\RedoTaskFlowBatchResponse RedoTaskFlowBatch(Models\RedoTaskFlowBatchRequest $req) 重新执行工作流批次
  * @method Models\ReleaseConfigResponse ReleaseConfig(Models\ReleaseConfigRequest $req) 发布配置
  * @method Models\ReleasePublicConfigResponse ReleasePublicConfig(Models\ReleasePublicConfigRequest $req) 发布公共配置
  * @method Models\RemoveInstancesResponse RemoveInstances(Models\RemoveInstancesRequest $req) 从 TSF 集群中批量移除云主机节点
@@ -116,6 +130,9 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
  * @method Models\StartGroupResponse StartGroup(Models\StartGroupRequest $req) 启动分组
  * @method Models\StopContainerGroupResponse StopContainerGroup(Models\StopContainerGroupRequest $req) 停止容器部署组
  * @method Models\StopGroupResponse StopGroup(Models\StopGroupRequest $req) 停止虚拟机部署组
+ * @method Models\StopTaskBatchResponse StopTaskBatch(Models\StopTaskBatchRequest $req) 停止执行中的任务批次， 非运行中的任务不可调用。
+ * @method Models\StopTaskExecuteResponse StopTaskExecute(Models\StopTaskExecuteRequest $req) 停止正在某个节点上执行的任务
+ * @method Models\TerminateTaskFlowBatchResponse TerminateTaskFlowBatch(Models\TerminateTaskFlowBatchRequest $req) 停止一个工作流批次
  * @method Models\UpdateRepositoryResponse UpdateRepository(Models\UpdateRepositoryRequest $req) 更新仓库信息
  */
 

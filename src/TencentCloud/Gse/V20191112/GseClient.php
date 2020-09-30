@@ -37,25 +37,34 @@ use TencentCloud\Gse\V20191112\Models as Models;
     3. 使用 COS API 进行上传
 
 具体使用场景可以参考 [GetUploadCredentials](https://cloud.tencent.com/document/product/1165/48727) ,  [GetUploadFederationToken](https://cloud.tencent.com/document/product/1165/48742)和下面 CreateAsset 示例。  
+ * @method Models\CreateFleetResponse CreateFleet(Models\CreateFleetRequest $req) 本接口（CreateFleet）用于创建服务器舰队
  * @method Models\CreateGameServerSessionResponse CreateGameServerSession(Models\CreateGameServerSessionRequest $req) 本接口（CreateGameServerSession）用于创建游戏服务会话
+ * @method Models\CreateGameServerSessionQueueResponse CreateGameServerSessionQueue(Models\CreateGameServerSessionQueueRequest $req) 本接口（CreateGameServerSessionQueue）用于创建游戏服务器会话队列
  * @method Models\DeleteAliasResponse DeleteAlias(Models\DeleteAliasRequest $req) 本接口（DeleteAlias）用于删除别名
  * @method Models\DeleteAssetResponse DeleteAsset(Models\DeleteAssetRequest $req) 本接口（DeleteAsset）用于删除生成包
  * @method Models\DeleteFleetResponse DeleteFleet(Models\DeleteFleetRequest $req) 本接口（DeleteFleet）用于删除服务器舰队
+ * @method Models\DeleteGameServerSessionQueueResponse DeleteGameServerSessionQueue(Models\DeleteGameServerSessionQueueRequest $req) 本接口（DeleteGameServerSessionQueue）用于删除游戏服务器会话队列
  * @method Models\DeleteScalingPolicyResponse DeleteScalingPolicy(Models\DeleteScalingPolicyRequest $req) 本接口（DeleteScalingPolicy）用于删除扩缩容配置
  * @method Models\DescribeAliasResponse DescribeAlias(Models\DescribeAliasRequest $req) 本接口（DescribeAlias）用于获取别名详情
  * @method Models\DescribeAssetResponse DescribeAsset(Models\DescribeAssetRequest $req) 本接口（DescribeAsset）获取生成包信息
  * @method Models\DescribeAssetsResponse DescribeAssets(Models\DescribeAssetsRequest $req) 本接口（DescribeAssets）用于获取生成包列表
  * @method Models\DescribeCcnInstancesResponse DescribeCcnInstances(Models\DescribeCcnInstancesRequest $req) 本接口（DescribeCcnInstances）用于查询云联网实例
  * @method Models\DescribeFleetAttributesResponse DescribeFleetAttributes(Models\DescribeFleetAttributesRequest $req) 本接口（DescribeFleetAttributes）用于查询服务器舰队属性
+ * @method Models\DescribeFleetCapacityResponse DescribeFleetCapacity(Models\DescribeFleetCapacityRequest $req) 用于查询服务部署容量配置
  * @method Models\DescribeFleetEventsResponse DescribeFleetEvents(Models\DescribeFleetEventsRequest $req) 本接口（DescribeFleetEvents）用于查询部署服务器舰队相关的事件列表
  * @method Models\DescribeFleetPortSettingsResponse DescribeFleetPortSettings(Models\DescribeFleetPortSettingsRequest $req) 本接口（DescribeFleetPortSettings）用于获取服务器舰队安全组信息
+ * @method Models\DescribeFleetStatisticDetailsResponse DescribeFleetStatisticDetails(Models\DescribeFleetStatisticDetailsRequest $req) 本接口（DescribeFleetStatisticDetails）用于查询服务部署统计详情
+ * @method Models\DescribeFleetStatisticFlowsResponse DescribeFleetStatisticFlows(Models\DescribeFleetStatisticFlowsRequest $req) 本接口（DescribeFleetStatisticFlows）用于查询服务部署统计用量
+ * @method Models\DescribeFleetStatisticSummaryResponse DescribeFleetStatisticSummary(Models\DescribeFleetStatisticSummaryRequest $req) 本接口（DescribeFleetStatisticSummary）用于查询服务部署统计汇总信息
  * @method Models\DescribeFleetUtilizationResponse DescribeFleetUtilization(Models\DescribeFleetUtilizationRequest $req) 本接口（DescribeFleetUtilization）用于查询服务器舰队的利用率信息
  * @method Models\DescribeGameServerSessionDetailsResponse DescribeGameServerSessionDetails(Models\DescribeGameServerSessionDetailsRequest $req) 本接口（DescribeGameServerSessionDetails）用于查询游戏服务器会话详情列表
  * @method Models\DescribeGameServerSessionPlacementResponse DescribeGameServerSessionPlacement(Models\DescribeGameServerSessionPlacementRequest $req) 本接口（DescribeGameServerSessionPlacement）用于查询游戏服务器会话的放置
  * @method Models\DescribeGameServerSessionQueuesResponse DescribeGameServerSessionQueues(Models\DescribeGameServerSessionQueuesRequest $req) 本接口（DescribeGameServerSessionQueues）用于查询游戏服务器会话队列
  * @method Models\DescribeGameServerSessionsResponse DescribeGameServerSessions(Models\DescribeGameServerSessionsRequest $req) 本接口（DescribeGameServerSessions）用于查询游戏服务器会话列表
+ * @method Models\DescribeInstanceLimitResponse DescribeInstanceLimit(Models\DescribeInstanceLimitRequest $req) 查询用户实例数限额
  * @method Models\DescribeInstanceTypesResponse DescribeInstanceTypes(Models\DescribeInstanceTypesRequest $req) 本接口（DescribeInstanceTypes）用于获取服务器实例类型列表
  * @method Models\DescribeInstancesResponse DescribeInstances(Models\DescribeInstancesRequest $req) 本接口（DescribeInstances）用于查询服务器实例列表
+ * @method Models\DescribeInstancesExtendResponse DescribeInstancesExtend(Models\DescribeInstancesExtendRequest $req) 本接口（DescribeInstances）用于查询实例扩展信息列表
  * @method Models\DescribePlayerSessionsResponse DescribePlayerSessions(Models\DescribePlayerSessionsRequest $req) 本接口（DescribePlayerSessions）用于获取玩家会话列表
  * @method Models\DescribeRuntimeConfigurationResponse DescribeRuntimeConfiguration(Models\DescribeRuntimeConfigurationRequest $req) 本接口（DescribeRuntimeConfiguration）用于获取服务器舰队运行配置
  * @method Models\DescribeScalingPoliciesResponse DescribeScalingPolicies(Models\DescribeScalingPoliciesRequest $req) 本接口（DescribeScalingPolicies）用于查询服务部署的动态扩缩容配置
@@ -68,6 +77,7 @@ use TencentCloud\Gse\V20191112\Models as Models;
 通过 [GetUploadCredentials](https://cloud.tencent.com/document/product/1165/48727) 接口获取临时授权信息后，调用 COS API将数据上传，根据上传的 BucketKey 信息进行生成包 [CreateAsset](https://cloud.tencent.com/document/product/1165/48731) 的创建。参考下面的示例部分。
  * @method Models\GetUploadFederationTokenResponse GetUploadFederationToken(Models\GetUploadFederationTokenRequest $req) 本接口（GetUploadFederationToken）用于 获取生成包上传所需要的临时密钥
  * @method Models\JoinGameServerSessionResponse JoinGameServerSession(Models\JoinGameServerSessionRequest $req) 本接口（JoinGameServerSession）用于加入游戏服务器会话
+ * @method Models\JoinGameServerSessionBatchResponse JoinGameServerSessionBatch(Models\JoinGameServerSessionBatchRequest $req) 本接口（JoinGameServerSessionBatch）用于加入游戏服务器会话
  * @method Models\ListAliasesResponse ListAliases(Models\ListAliasesRequest $req) 本接口（ListAliases）用于检索帐户下的所有别名
  * @method Models\ListFleetsResponse ListFleets(Models\ListFleetsRequest $req) 本接口（ListFleets）用于获取服务器舰队列表
  * @method Models\PutScalingPolicyResponse PutScalingPolicy(Models\PutScalingPolicyRequest $req) 本接口（PutScalingPolicy）用于设置动态扩缩容配置
@@ -76,14 +86,15 @@ use TencentCloud\Gse\V20191112\Models as Models;
  * @method Models\SetServerWeightResponse SetServerWeight(Models\SetServerWeightRequest $req) 设置服务器权重
  * @method Models\StartFleetActionsResponse StartFleetActions(Models\StartFleetActionsRequest $req) 本接口（StartFleetActions）用于启用服务器舰队自动扩缩容
  * @method Models\StartGameServerSessionPlacementResponse StartGameServerSessionPlacement(Models\StartGameServerSessionPlacementRequest $req) 本接口（StartGameServerSessionPlacement）用于开始放置游戏服务器会话
- * @method Models\StartMatchPlacementResponse StartMatchPlacement(Models\StartMatchPlacementRequest $req) 本接口（StartMatchPlacement）用于开始匹配放置游戏服务器会话
  * @method Models\StopFleetActionsResponse StopFleetActions(Models\StopFleetActionsRequest $req) 本接口（StopFleetActions）用于停止服务器舰队自动扩缩容，改为手动扩缩容
  * @method Models\StopGameServerSessionPlacementResponse StopGameServerSessionPlacement(Models\StopGameServerSessionPlacementRequest $req) 本接口（StopGameServerSessionPlacement）用于停止放置游戏服务器会话
  * @method Models\UpdateAliasResponse UpdateAlias(Models\UpdateAliasRequest $req) 本接口（UpdateAlias）用于更新别名的属性
  * @method Models\UpdateAssetResponse UpdateAsset(Models\UpdateAssetRequest $req) 本接口（UpdateAsset）用于修改生成包信息
  * @method Models\UpdateFleetAttributesResponse UpdateFleetAttributes(Models\UpdateFleetAttributesRequest $req) 本接口（UpdateFleetAttributes）用于更新服务器舰队属性
+ * @method Models\UpdateFleetCapacityResponse UpdateFleetCapacity(Models\UpdateFleetCapacityRequest $req) 用于更新服务部署容量配置
  * @method Models\UpdateFleetPortSettingsResponse UpdateFleetPortSettings(Models\UpdateFleetPortSettingsRequest $req) 本接口（UpdateFleetPortSettings）用于更新服务器舰队安全组
  * @method Models\UpdateGameServerSessionResponse UpdateGameServerSession(Models\UpdateGameServerSessionRequest $req) 本接口（UpdateGameServerSession）用于更新游戏服务器会话
+ * @method Models\UpdateGameServerSessionQueueResponse UpdateGameServerSessionQueue(Models\UpdateGameServerSessionQueueRequest $req) 本接口（UpdateGameServerSessionQueue）用于修改游戏服务器会话队列
  * @method Models\UpdateRuntimeConfigurationResponse UpdateRuntimeConfiguration(Models\UpdateRuntimeConfigurationRequest $req) 本接口（UpdateRuntimeConfiguration）用于更新服务器舰队配置
  */
 

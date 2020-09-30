@@ -30,6 +30,14 @@ last：表示回源层节点
 edge：表示边缘节点
 last：表示回源层节点
 不填充情况下，默认返回边缘节点信息
+ * @method string getArea() 获取查询区域：
+mainland: 国内节点
+overseas: 海外节点
+global: 全球节点
+ * @method void setArea(string $Area) 设置查询区域：
+mainland: 国内节点
+overseas: 海外节点
+global: 全球节点
  */
 class DescribeIpStatusRequest extends AbstractModel
 {
@@ -47,11 +55,23 @@ last：表示回源层节点
     public $Layer;
 
     /**
+     * @var string 查询区域：
+mainland: 国内节点
+overseas: 海外节点
+global: 全球节点
+     */
+    public $Area;
+
+    /**
      * @param string $Domain 加速域名
      * @param string $Layer 节点类型：
 edge：表示边缘节点
 last：表示回源层节点
 不填充情况下，默认返回边缘节点信息
+     * @param string $Area 查询区域：
+mainland: 国内节点
+overseas: 海外节点
+global: 全球节点
      */
     function __construct()
     {
@@ -72,6 +92,10 @@ last：表示回源层节点
 
         if (array_key_exists("Layer",$param) and $param["Layer"] !== null) {
             $this->Layer = $param["Layer"];
+        }
+
+        if (array_key_exists("Area",$param) and $param["Area"] !== null) {
+            $this->Area = $param["Area"];
         }
     }
 }

@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Live\V20180801\Models;
+namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeLiveRecordTemplate请求参数结构体
+ * 后付费共享带宽包的当前计费用量
  *
- * @method integer getTemplateId() 获取[DescribeLiveRecordTemplates](/document/product/267/32609)接口获取到的模板 ID。
- * @method void setTemplateId(integer $TemplateId) 设置[DescribeLiveRecordTemplates](/document/product/267/32609)接口获取到的模板 ID。
+ * @method integer getBandwidthUsage() 获取当前计费用量，单位为 Mbps
+ * @method void setBandwidthUsage(integer $BandwidthUsage) 设置当前计费用量，单位为 Mbps
  */
-class DescribeLiveRecordTemplateRequest extends AbstractModel
+class BandwidthPackageBillBandwidth extends AbstractModel
 {
     /**
-     * @var integer [DescribeLiveRecordTemplates](/document/product/267/32609)接口获取到的模板 ID。
+     * @var integer 当前计费用量，单位为 Mbps
      */
-    public $TemplateId;
+    public $BandwidthUsage;
 
     /**
-     * @param integer $TemplateId [DescribeLiveRecordTemplates](/document/product/267/32609)接口获取到的模板 ID。
+     * @param integer $BandwidthUsage 当前计费用量，单位为 Mbps
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class DescribeLiveRecordTemplateRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TemplateId",$param) and $param["TemplateId"] !== null) {
-            $this->TemplateId = $param["TemplateId"];
+        if (array_key_exists("BandwidthUsage",$param) and $param["BandwidthUsage"] !== null) {
+            $this->BandwidthUsage = $param["BandwidthUsage"];
         }
     }
 }

@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Live\V20180801\Models;
+namespace TencentCloud\Domain\V20180808\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeLiveRecordTemplate请求参数结构体
+ * CheckBatchStatus请求参数结构体
  *
- * @method integer getTemplateId() 获取[DescribeLiveRecordTemplates](/document/product/267/32609)接口获取到的模板 ID。
- * @method void setTemplateId(integer $TemplateId) 设置[DescribeLiveRecordTemplates](/document/product/267/32609)接口获取到的模板 ID。
+ * @method array getLogIds() 获取批量任务id数组，最多 200 个
+ * @method void setLogIds(array $LogIds) 设置批量任务id数组，最多 200 个
  */
-class DescribeLiveRecordTemplateRequest extends AbstractModel
+class CheckBatchStatusRequest extends AbstractModel
 {
     /**
-     * @var integer [DescribeLiveRecordTemplates](/document/product/267/32609)接口获取到的模板 ID。
+     * @var array 批量任务id数组，最多 200 个
      */
-    public $TemplateId;
+    public $LogIds;
 
     /**
-     * @param integer $TemplateId [DescribeLiveRecordTemplates](/document/product/267/32609)接口获取到的模板 ID。
+     * @param array $LogIds 批量任务id数组，最多 200 个
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class DescribeLiveRecordTemplateRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TemplateId",$param) and $param["TemplateId"] !== null) {
-            $this->TemplateId = $param["TemplateId"];
+        if (array_key_exists("LogIds",$param) and $param["LogIds"] !== null) {
+            $this->LogIds = $param["LogIds"];
         }
     }
 }

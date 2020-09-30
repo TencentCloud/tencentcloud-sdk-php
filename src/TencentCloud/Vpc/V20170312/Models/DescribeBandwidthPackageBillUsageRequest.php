@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Live\V20180801\Models;
+namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeLiveRecordTemplate请求参数结构体
+ * DescribeBandwidthPackageBillUsage请求参数结构体
  *
- * @method integer getTemplateId() 获取[DescribeLiveRecordTemplates](/document/product/267/32609)接口获取到的模板 ID。
- * @method void setTemplateId(integer $TemplateId) 设置[DescribeLiveRecordTemplates](/document/product/267/32609)接口获取到的模板 ID。
+ * @method string getBandwidthPackageId() 获取后付费共享带宽包的唯一ID
+ * @method void setBandwidthPackageId(string $BandwidthPackageId) 设置后付费共享带宽包的唯一ID
  */
-class DescribeLiveRecordTemplateRequest extends AbstractModel
+class DescribeBandwidthPackageBillUsageRequest extends AbstractModel
 {
     /**
-     * @var integer [DescribeLiveRecordTemplates](/document/product/267/32609)接口获取到的模板 ID。
+     * @var string 后付费共享带宽包的唯一ID
      */
-    public $TemplateId;
+    public $BandwidthPackageId;
 
     /**
-     * @param integer $TemplateId [DescribeLiveRecordTemplates](/document/product/267/32609)接口获取到的模板 ID。
+     * @param string $BandwidthPackageId 后付费共享带宽包的唯一ID
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class DescribeLiveRecordTemplateRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TemplateId",$param) and $param["TemplateId"] !== null) {
-            $this->TemplateId = $param["TemplateId"];
+        if (array_key_exists("BandwidthPackageId",$param) and $param["BandwidthPackageId"] !== null) {
+            $this->BandwidthPackageId = $param["BandwidthPackageId"];
         }
     }
 }

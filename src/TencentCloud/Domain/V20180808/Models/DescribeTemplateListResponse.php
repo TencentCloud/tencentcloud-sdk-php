@@ -14,23 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Gse\V20191112\Models;
+namespace TencentCloud\Domain\V20180808\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * StartMatchPlacement返回参数结构体
+ * DescribeTemplateList返回参数结构体
  *
- * @method GameServerSessionPlacement getGameServerSessionPlacement() 获取游戏服务器会话放置
- * @method void setGameServerSessionPlacement(GameServerSessionPlacement $GameServerSessionPlacement) 设置游戏服务器会话放置
+ * @method integer getTotalCount() 获取模板数量。
+ * @method void setTotalCount(integer $TotalCount) 设置模板数量。
+ * @method array getTemplateSet() 获取模板详细信息列表。
+ * @method void setTemplateSet(array $TemplateSet) 设置模板详细信息列表。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class StartMatchPlacementResponse extends AbstractModel
+class DescribeTemplateListResponse extends AbstractModel
 {
     /**
-     * @var GameServerSessionPlacement 游戏服务器会话放置
+     * @var integer 模板数量。
      */
-    public $GameServerSessionPlacement;
+    public $TotalCount;
+
+    /**
+     * @var array 模板详细信息列表。
+     */
+    public $TemplateSet;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +45,8 @@ class StartMatchPlacementResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param GameServerSessionPlacement $GameServerSessionPlacement 游戏服务器会话放置
+     * @param integer $TotalCount 模板数量。
+     * @param array $TemplateSet 模板详细信息列表。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,9 +62,17 @@ class StartMatchPlacementResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("GameServerSessionPlacement",$param) and $param["GameServerSessionPlacement"] !== null) {
-            $this->GameServerSessionPlacement = new GameServerSessionPlacement();
-            $this->GameServerSessionPlacement->deserialize($param["GameServerSessionPlacement"]);
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("TemplateSet",$param) and $param["TemplateSet"] !== null) {
+            $this->TemplateSet = [];
+            foreach ($param["TemplateSet"] as $key => $value){
+                $obj = new TemplateInfo();
+                $obj->deserialize($value);
+                array_push($this->TemplateSet, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

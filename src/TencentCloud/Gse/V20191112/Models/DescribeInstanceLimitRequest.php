@@ -14,24 +14,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Live\V20180801\Models;
+namespace TencentCloud\Gse\V20191112\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeLiveRecordTemplate请求参数结构体
+ * DescribeInstanceLimit请求参数结构体
  *
- * @method integer getTemplateId() 获取[DescribeLiveRecordTemplates](/document/product/267/32609)接口获取到的模板 ID。
- * @method void setTemplateId(integer $TemplateId) 设置[DescribeLiveRecordTemplates](/document/product/267/32609)接口获取到的模板 ID。
+
  */
-class DescribeLiveRecordTemplateRequest extends AbstractModel
+class DescribeInstanceLimitRequest extends AbstractModel
 {
-    /**
-     * @var integer [DescribeLiveRecordTemplates](/document/product/267/32609)接口获取到的模板 ID。
-     */
-    public $TemplateId;
+
 
     /**
-     * @param integer $TemplateId [DescribeLiveRecordTemplates](/document/product/267/32609)接口获取到的模板 ID。
+
      */
     function __construct()
     {
@@ -46,8 +42,6 @@ class DescribeLiveRecordTemplateRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TemplateId",$param) and $param["TemplateId"] !== null) {
-            $this->TemplateId = $param["TemplateId"];
-        }
+
     }
 }

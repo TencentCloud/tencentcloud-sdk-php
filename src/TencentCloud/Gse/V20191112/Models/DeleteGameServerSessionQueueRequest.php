@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Live\V20180801\Models;
+namespace TencentCloud\Gse\V20191112\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeLiveRecordTemplate请求参数结构体
+ * DeleteGameServerSessionQueue请求参数结构体
  *
- * @method integer getTemplateId() 获取[DescribeLiveRecordTemplates](/document/product/267/32609)接口获取到的模板 ID。
- * @method void setTemplateId(integer $TemplateId) 设置[DescribeLiveRecordTemplates](/document/product/267/32609)接口获取到的模板 ID。
+ * @method string getName() 获取游戏服务器会话队列名字，长度1~128
+ * @method void setName(string $Name) 设置游戏服务器会话队列名字，长度1~128
  */
-class DescribeLiveRecordTemplateRequest extends AbstractModel
+class DeleteGameServerSessionQueueRequest extends AbstractModel
 {
     /**
-     * @var integer [DescribeLiveRecordTemplates](/document/product/267/32609)接口获取到的模板 ID。
+     * @var string 游戏服务器会话队列名字，长度1~128
      */
-    public $TemplateId;
+    public $Name;
 
     /**
-     * @param integer $TemplateId [DescribeLiveRecordTemplates](/document/product/267/32609)接口获取到的模板 ID。
+     * @param string $Name 游戏服务器会话队列名字，长度1~128
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class DescribeLiveRecordTemplateRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TemplateId",$param) and $param["TemplateId"] !== null) {
-            $this->TemplateId = $param["TemplateId"];
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
         }
     }
 }

@@ -70,13 +70,13 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTerminationTime(string $TerminationTime) 设置服务器舰队终止时间
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getGameServerSessionProtectionTimeLimit() 获取时限保护时间
+ * @method integer getGameServerSessionProtectionTimeLimit() 获取时限保护超时时间，默认60分钟，最小值5，最大值1440
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setGameServerSessionProtectionTimeLimit(integer $GameServerSessionProtectionTimeLimit) 设置时限保护时间
+ * @method void setGameServerSessionProtectionTimeLimit(integer $GameServerSessionProtectionTimeLimit) 设置时限保护超时时间，默认60分钟，最小值5，最大值1440
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getBillingStatus() 获取计费状态
+ * @method string getBillingStatus() 获取计费状态：未开通、已开通、异常、欠费隔离、销毁、解冻
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBillingStatus(string $BillingStatus) 设置计费状态
+ * @method void setBillingStatus(string $BillingStatus) 设置计费状态：未开通、已开通、异常、欠费隔离、销毁、解冻
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class FleetAttributes extends AbstractModel
@@ -163,13 +163,13 @@ class FleetAttributes extends AbstractModel
     public $TerminationTime;
 
     /**
-     * @var integer 时限保护时间
+     * @var integer 时限保护超时时间，默认60分钟，最小值5，最大值1440
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GameServerSessionProtectionTimeLimit;
 
     /**
-     * @var string 计费状态
+     * @var string 计费状态：未开通、已开通、异常、欠费隔离、销毁、解冻
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BillingStatus;
@@ -200,9 +200,9 @@ class FleetAttributes extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TerminationTime 服务器舰队终止时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $GameServerSessionProtectionTimeLimit 时限保护时间
+     * @param integer $GameServerSessionProtectionTimeLimit 时限保护超时时间，默认60分钟，最小值5，最大值1440
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $BillingStatus 计费状态
+     * @param string $BillingStatus 计费状态：未开通、已开通、异常、欠费隔离、销毁、解冻
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

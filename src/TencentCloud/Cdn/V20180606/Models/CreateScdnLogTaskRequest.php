@@ -24,10 +24,12 @@ use TencentCloud\Common\AbstractModel;
 Mode 映射如下：
   waf = "Web攻击"
   cc = "CC攻击"
+  bot = "Bot攻击"
  * @method void setMode(string $Mode) 设置防护类型
 Mode 映射如下：
   waf = "Web攻击"
   cc = "CC攻击"
+  bot = "Bot攻击"
  * @method string getStartTime() 获取查询起始时间，如：2018-09-04 10:40:00，返回结果大于等于指定时间
  * @method void setStartTime(string $StartTime) 设置查询起始时间，如：2018-09-04 10:40:00，返回结果大于等于指定时间
  * @method string getEndTime() 获取查询结束时间，如：2018-09-04 10:40:00，返回结果小于等于指定时间
@@ -51,6 +53,8 @@ AttackType 映射如下:
   trojan_horse = "木马后门攻击"
   csrf = "CSRF攻击"
   malicious_file_upload= '恶意文件上传'
+  js = "JS主动探测"
+  cookie = "Cookie指纹"
  * @method void setAttackType(string $AttackType) 设置指定攻击类型, 不填默认查询全部攻击类型
 AttackType 映射如下:
   other = '未知类型'
@@ -68,14 +72,20 @@ AttackType 映射如下:
   trojan_horse = "木马后门攻击"
   csrf = "CSRF攻击"
   malicious_file_upload= '恶意文件上传'
+  js = "JS主动探测"
+  cookie = "Cookie指纹"
  * @method string getDefenceMode() 获取指定执行动作, 不填默认查询全部执行动作
 DefenceMode 映射如下：
   observe = '观察模式'
   intercept = '拦截模式'
+  captcha = "验证码"
+  redirect = "重定向"
  * @method void setDefenceMode(string $DefenceMode) 设置指定执行动作, 不填默认查询全部执行动作
 DefenceMode 映射如下：
   observe = '观察模式'
   intercept = '拦截模式'
+  captcha = "验证码"
+  redirect = "重定向"
  * @method string getIp() 获取不填为全部ip
  * @method void setIp(string $Ip) 设置不填为全部ip
  * @method array getDomains() 获取指定域名查询, 与 Domain 参数同时有值时使用 Domains 参数，不填默认查询全部域名，指定域名查询时最多支持同时选择 5 个域名查询
@@ -88,6 +98,7 @@ class CreateScdnLogTaskRequest extends AbstractModel
 Mode 映射如下：
   waf = "Web攻击"
   cc = "CC攻击"
+  bot = "Bot攻击"
      */
     public $Mode;
 
@@ -124,6 +135,8 @@ AttackType 映射如下:
   trojan_horse = "木马后门攻击"
   csrf = "CSRF攻击"
   malicious_file_upload= '恶意文件上传'
+  js = "JS主动探测"
+  cookie = "Cookie指纹"
      */
     public $AttackType;
 
@@ -132,6 +145,8 @@ AttackType 映射如下:
 DefenceMode 映射如下：
   observe = '观察模式'
   intercept = '拦截模式'
+  captcha = "验证码"
+  redirect = "重定向"
      */
     public $DefenceMode;
 
@@ -150,6 +165,7 @@ DefenceMode 映射如下：
 Mode 映射如下：
   waf = "Web攻击"
   cc = "CC攻击"
+  bot = "Bot攻击"
      * @param string $StartTime 查询起始时间，如：2018-09-04 10:40:00，返回结果大于等于指定时间
      * @param string $EndTime 查询结束时间，如：2018-09-04 10:40:00，返回结果小于等于指定时间
      * @param string $Domain 指定域名查询, 不填默认查询全部域名
@@ -170,10 +186,14 @@ AttackType 映射如下:
   trojan_horse = "木马后门攻击"
   csrf = "CSRF攻击"
   malicious_file_upload= '恶意文件上传'
+  js = "JS主动探测"
+  cookie = "Cookie指纹"
      * @param string $DefenceMode 指定执行动作, 不填默认查询全部执行动作
 DefenceMode 映射如下：
   observe = '观察模式'
   intercept = '拦截模式'
+  captcha = "验证码"
+  redirect = "重定向"
      * @param string $Ip 不填为全部ip
      * @param array $Domains 指定域名查询, 与 Domain 参数同时有值时使用 Domains 参数，不填默认查询全部域名，指定域名查询时最多支持同时选择 5 个域名查询
      */

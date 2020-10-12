@@ -30,13 +30,13 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProjectName(string $ProjectName) 设置项目名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getStatus() 获取告警状态ID
+ * @method integer getStatus() 获取告警状态ID，0表示未恢复；1表示已恢复；2,3,5表示数据不足；4表示已失效
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatus(integer $Status) 设置告警状态ID
+ * @method void setStatus(integer $Status) 设置告警状态ID，0表示未恢复；1表示已恢复；2,3,5表示数据不足；4表示已失效
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getAlarmStatus() 获取告警状态
+ * @method string getAlarmStatus() 获取告警状态，ALARM表示未恢复；OK表示已恢复；NO_DATA表示数据不足；NO_CONF表示已失效
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAlarmStatus(string $AlarmStatus) 设置告警状态
+ * @method void setAlarmStatus(string $AlarmStatus) 设置告警状态，ALARM表示未恢复；OK表示已恢复；NO_DATA表示数据不足；NO_CONF表示已失效
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getGroupId() 获取策略组ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -127,13 +127,13 @@ class DescribeBasicAlarmListAlarms extends AbstractModel
     public $ProjectName;
 
     /**
-     * @var integer 告警状态ID
+     * @var integer 告警状态ID，0表示未恢复；1表示已恢复；2,3,5表示数据不足；4表示已失效
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
-     * @var string 告警状态
+     * @var string 告警状态，ALARM表示未恢复；OK表示已恢复；NO_DATA表示数据不足；NO_CONF表示已失效
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AlarmStatus;
@@ -246,9 +246,9 @@ class DescribeBasicAlarmListAlarms extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProjectName 项目名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Status 告警状态ID
+     * @param integer $Status 告警状态ID，0表示未恢复；1表示已恢复；2,3,5表示数据不足；4表示已失效
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $AlarmStatus 告警状态
+     * @param string $AlarmStatus 告警状态，ALARM表示未恢复；OK表示已恢复；NO_DATA表示数据不足；NO_CONF表示已失效
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $GroupId 策略组ID
 注意：此字段可能返回 null，表示取不到有效值。

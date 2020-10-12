@@ -26,12 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCpu(integer $Cpu) 设置CPU核数。
  * @method integer getMemory() 获取内存大小。
  * @method void setMemory(integer $Memory) 设置内存大小。
- * @method integer getGpu() 获取GPU核数。
- * @method void setGpu(integer $Gpu) 设置GPU核数。
- * @method integer getFpga() 获取FPGA核数。
- * @method void setFpga(integer $Fpga) 设置FPGA核数。
- * @method integer getStorageBlock() 获取存储块数。
- * @method void setStorageBlock(integer $StorageBlock) 设置存储块数。
+ * @method integer getGpu() 获取GPU数量。
+ * @method void setGpu(integer $Gpu) 设置GPU数量。
+ * @method integer getFpga() 获取FPGA数量。
+ * @method void setFpga(integer $Fpga) 设置FPGA数量。
+ * @method integer getStorageBlock() 获取本地存储块数量。
+ * @method void setStorageBlock(integer $StorageBlock) 设置本地存储块数量。
  * @method integer getNetworkCard() 获取网卡数。
  * @method void setNetworkCard(integer $NetworkCard) 设置网卡数。
  * @method float getMaxBandwidth() 获取最大带宽。
@@ -67,17 +67,17 @@ class ReservedInstanceTypeItem extends AbstractModel
     public $Memory;
 
     /**
-     * @var integer GPU核数。
+     * @var integer GPU数量。
      */
     public $Gpu;
 
     /**
-     * @var integer FPGA核数。
+     * @var integer FPGA数量。
      */
     public $Fpga;
 
     /**
-     * @var integer 存储块数。
+     * @var integer 本地存储块数量。
      */
     public $StorageBlock;
 
@@ -125,9 +125,9 @@ class ReservedInstanceTypeItem extends AbstractModel
      * @param string $InstanceType 实例类型。
      * @param integer $Cpu CPU核数。
      * @param integer $Memory 内存大小。
-     * @param integer $Gpu GPU核数。
-     * @param integer $Fpga FPGA核数。
-     * @param integer $StorageBlock 存储块数。
+     * @param integer $Gpu GPU数量。
+     * @param integer $Fpga FPGA数量。
+     * @param integer $StorageBlock 本地存储块数量。
      * @param integer $NetworkCard 网卡数。
      * @param float $MaxBandwidth 最大带宽。
      * @param string $Frequency 主频。

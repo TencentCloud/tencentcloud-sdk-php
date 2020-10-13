@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQualifier(string $Qualifier) 设置函数的版本
  * @method string getEnable() 获取触发器的初始是能状态 OPEN表示开启 CLOSE表示关闭
  * @method void setEnable(string $Enable) 设置触发器的初始是能状态 OPEN表示开启 CLOSE表示关闭
+ * @method string getCustomArgument() 获取用户自定义参数，仅支持timer触发器
+ * @method void setCustomArgument(string $CustomArgument) 设置用户自定义参数，仅支持timer触发器
  */
 class CreateTriggerRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class CreateTriggerRequest extends AbstractModel
     public $Enable;
 
     /**
+     * @var string 用户自定义参数，仅支持timer触发器
+     */
+    public $CustomArgument;
+
+    /**
      * @param string $FunctionName 新建触发器绑定的函数名称
      * @param string $TriggerName 新建触发器名称。如果是定时触发器，名称支持英文字母、数字、连接符和下划线，最长100个字符；如果是cos触发器，需要是对应cos存储桶适用于XML API的访问域名(例如:5401-5ff414-12345.cos.ap-shanghai.myqcloud.com);如果是其他触发器，见具体触发器绑定参数的说明
      * @param string $Type 触发器类型，目前支持 cos 、cmq、 timer、 ckafka、apigw类型
@@ -80,6 +87,7 @@ class CreateTriggerRequest extends AbstractModel
      * @param string $Namespace 函数的命名空间
      * @param string $Qualifier 函数的版本
      * @param string $Enable 触发器的初始是能状态 OPEN表示开启 CLOSE表示关闭
+     * @param string $CustomArgument 用户自定义参数，仅支持timer触发器
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class CreateTriggerRequest extends AbstractModel
 
         if (array_key_exists("Enable",$param) and $param["Enable"] !== null) {
             $this->Enable = $param["Enable"];
+        }
+
+        if (array_key_exists("CustomArgument",$param) and $param["CustomArgument"] !== null) {
+            $this->CustomArgument = $param["CustomArgument"];
         }
     }
 }

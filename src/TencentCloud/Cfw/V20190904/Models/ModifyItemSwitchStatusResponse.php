@@ -14,30 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Gse\V20191112\Models;
+namespace TencentCloud\Cfw\V20190904\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateAsset返回参数结构体
+ * ModifyItemSwitchStatus返回参数结构体
  *
- * @method string getAssetId() 获取生成包ID
- * @method void setAssetId(string $AssetId) 设置生成包ID
- * @method string getAssetArn() 获取生成包的全局唯一资源标识符
- * @method void setAssetArn(string $AssetArn) 设置生成包的全局唯一资源标识符
+ * @method integer getStatus() 获取修改成功与否状态值
+ * @method void setStatus(integer $Status) 设置修改成功与否状态值
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class CreateAssetResponse extends AbstractModel
+class ModifyItemSwitchStatusResponse extends AbstractModel
 {
     /**
-     * @var string 生成包ID
+     * @var integer 修改成功与否状态值
      */
-    public $AssetId;
-
-    /**
-     * @var string 生成包的全局唯一资源标识符
-     */
-    public $AssetArn;
+    public $Status;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +38,7 @@ class CreateAssetResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $AssetId 生成包ID
-     * @param string $AssetArn 生成包的全局唯一资源标识符
+     * @param integer $Status 修改成功与否状态值
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,12 +54,8 @@ class CreateAssetResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AssetId",$param) and $param["AssetId"] !== null) {
-            $this->AssetId = $param["AssetId"];
-        }
-
-        if (array_key_exists("AssetArn",$param) and $param["AssetArn"] !== null) {
-            $this->AssetArn = $param["AssetArn"];
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

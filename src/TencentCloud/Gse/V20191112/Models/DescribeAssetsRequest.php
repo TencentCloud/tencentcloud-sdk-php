@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移，代表页数，与asset实际数量相关
  * @method integer getLimit() 获取前端界面每页显示的最大条数，不超过100
  * @method void setLimit(integer $Limit) 设置前端界面每页显示的最大条数，不超过100
- * @method string getFilter() 获取搜索条件，支持包ID或包名字过滤
- * @method void setFilter(string $Filter) 设置搜索条件，支持包ID或包名字过滤
+ * @method string getFilter() 获取搜索条件，支持包ID或包名字过滤，该字段会逐步废弃，建议使用 Filters 字段
+ * @method void setFilter(string $Filter) 设置搜索条件，支持包ID或包名字过滤，该字段会逐步废弃，建议使用 Filters 字段
  */
 class DescribeAssetsRequest extends AbstractModel
 {
@@ -47,7 +47,7 @@ class DescribeAssetsRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string 搜索条件，支持包ID或包名字过滤
+     * @var string 搜索条件，支持包ID或包名字过滤，该字段会逐步废弃，建议使用 Filters 字段
      */
     public $Filter;
 
@@ -55,7 +55,7 @@ class DescribeAssetsRequest extends AbstractModel
      * @param string $AssetRegion 生成包可部署地域
      * @param integer $Offset 偏移，代表页数，与asset实际数量相关
      * @param integer $Limit 前端界面每页显示的最大条数，不超过100
-     * @param string $Filter 搜索条件，支持包ID或包名字过滤
+     * @param string $Filter 搜索条件，支持包ID或包名字过滤，该字段会逐步废弃，建议使用 Filters 字段
      */
     function __construct()
     {

@@ -14,30 +14,33 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Gse\V20191112\Models;
+namespace TencentCloud\Cfw\V20190904\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateAsset返回参数结构体
+ * ModifyAcRule返回参数结构体
  *
- * @method string getAssetId() 获取生成包ID
- * @method void setAssetId(string $AssetId) 设置生成包ID
- * @method string getAssetArn() 获取生成包的全局唯一资源标识符
- * @method void setAssetArn(string $AssetArn) 设置生成包的全局唯一资源标识符
+ * @method integer getStatus() 获取装填值
+ * @method void setStatus(integer $Status) 设置装填值
+ * @method string getInfo() 获取返回多余的信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInfo(string $Info) 设置返回多余的信息
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class CreateAssetResponse extends AbstractModel
+class ModifyAcRuleResponse extends AbstractModel
 {
     /**
-     * @var string 生成包ID
+     * @var integer 装填值
      */
-    public $AssetId;
+    public $Status;
 
     /**
-     * @var string 生成包的全局唯一资源标识符
+     * @var string 返回多余的信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $AssetArn;
+    public $Info;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +48,9 @@ class CreateAssetResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $AssetId 生成包ID
-     * @param string $AssetArn 生成包的全局唯一资源标识符
+     * @param integer $Status 装填值
+     * @param string $Info 返回多余的信息
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,12 +66,12 @@ class CreateAssetResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AssetId",$param) and $param["AssetId"] !== null) {
-            $this->AssetId = $param["AssetId"];
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
 
-        if (array_key_exists("AssetArn",$param) and $param["AssetArn"] !== null) {
-            $this->AssetArn = $param["AssetArn"];
+        if (array_key_exists("Info",$param) and $param["Info"] !== null) {
+            $this->Info = $param["Info"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -14,30 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Gse\V20191112\Models;
+namespace TencentCloud\Tdmq\V20200217\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateAsset返回参数结构体
+ * DescribeEnvironmentRoles返回参数结构体
  *
- * @method string getAssetId() 获取生成包ID
- * @method void setAssetId(string $AssetId) 设置生成包ID
- * @method string getAssetArn() 获取生成包的全局唯一资源标识符
- * @method void setAssetArn(string $AssetArn) 设置生成包的全局唯一资源标识符
+ * @method integer getTotalCount() 获取记录数。
+ * @method void setTotalCount(integer $TotalCount) 设置记录数。
+ * @method array getEnvironmentRoleSets() 获取环境角色集合。
+ * @method void setEnvironmentRoleSets(array $EnvironmentRoleSets) 设置环境角色集合。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class CreateAssetResponse extends AbstractModel
+class DescribeEnvironmentRolesResponse extends AbstractModel
 {
     /**
-     * @var string 生成包ID
+     * @var integer 记录数。
      */
-    public $AssetId;
+    public $TotalCount;
 
     /**
-     * @var string 生成包的全局唯一资源标识符
+     * @var array 环境角色集合。
      */
-    public $AssetArn;
+    public $EnvironmentRoleSets;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +45,8 @@ class CreateAssetResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $AssetId 生成包ID
-     * @param string $AssetArn 生成包的全局唯一资源标识符
+     * @param integer $TotalCount 记录数。
+     * @param array $EnvironmentRoleSets 环境角色集合。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,12 +62,17 @@ class CreateAssetResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AssetId",$param) and $param["AssetId"] !== null) {
-            $this->AssetId = $param["AssetId"];
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
         }
 
-        if (array_key_exists("AssetArn",$param) and $param["AssetArn"] !== null) {
-            $this->AssetArn = $param["AssetArn"];
+        if (array_key_exists("EnvironmentRoleSets",$param) and $param["EnvironmentRoleSets"] !== null) {
+            $this->EnvironmentRoleSets = [];
+            foreach ($param["EnvironmentRoleSets"] as $key => $value){
+                $obj = new EnvironmentRole();
+                $obj->deserialize($value);
+                array_push($this->EnvironmentRoleSets, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

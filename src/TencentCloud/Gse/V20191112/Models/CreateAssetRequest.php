@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAssetRegion(string $AssetRegion) 设置生成包所在地域，详见产品支持的 [地域列表](https://cloud.tencent.com/document/api/1165/42053#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8)
  * @method string getOperateSystem() 获取生成包可运行的操作系统，暂时只有CentOS7.16
  * @method void setOperateSystem(string $OperateSystem) 设置生成包可运行的操作系统，暂时只有CentOS7.16
+ * @method string getImageId() 获取生成包支持的操作系统镜像id
+ * @method void setImageId(string $ImageId) 设置生成包支持的操作系统镜像id
  */
 class CreateAssetRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class CreateAssetRequest extends AbstractModel
     public $OperateSystem;
 
     /**
+     * @var string 生成包支持的操作系统镜像id
+     */
+    public $ImageId;
+
+    /**
      * @param string $BucketKey 生成包的ZIP包名，例如：server.zip
      * @param string $AssetName 生成包名字，最小长度为1，最大长度为64
      * @param string $AssetVersion 生成包版本，最小长度为1，最大长度为64
      * @param string $AssetRegion 生成包所在地域，详见产品支持的 [地域列表](https://cloud.tencent.com/document/api/1165/42053#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8)
      * @param string $OperateSystem 生成包可运行的操作系统，暂时只有CentOS7.16
+     * @param string $ImageId 生成包支持的操作系统镜像id
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class CreateAssetRequest extends AbstractModel
 
         if (array_key_exists("OperateSystem",$param) and $param["OperateSystem"] !== null) {
             $this->OperateSystem = $param["OperateSystem"];
+        }
+
+        if (array_key_exists("ImageId",$param) and $param["ImageId"] !== null) {
+            $this->ImageId = $param["ImageId"];
         }
     }
 }

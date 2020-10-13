@@ -21,15 +21,21 @@ use TencentCloud\Common\AbstractModel;
  * 视频处理任务统计数据。
  *
  * @method string getTaskType() 获取任务类型。
-<li>Transcode: 转码</li>
-<li>Snapshot: 截图</li>
+<li> Transcoding: 普通转码</li>
+<li> Transcoding-TESHD: 极速高清转码</li>
+<li> Editing: 视频编辑</li>
+<li> AdaptiveBitrateStreaming: 自适应码流</li>
+<li> ContentAudit: 内容审核</li>
+<li>Transcode: 转码，包含普通转码、极速高清和视频编辑（不推荐使用）</li>
  * @method void setTaskType(string $TaskType) 设置任务类型。
-<li>Transcode: 转码</li>
-<li>Snapshot: 截图</li>
- * @method array getSummary() 获取任务数统计数据概览。
-<li>Transcode: 用量单位为秒</li>
- * @method void setSummary(array $Summary) 设置任务数统计数据概览。
-<li>Transcode: 用量单位为秒</li>
+<li> Transcoding: 普通转码</li>
+<li> Transcoding-TESHD: 极速高清转码</li>
+<li> Editing: 视频编辑</li>
+<li> AdaptiveBitrateStreaming: 自适应码流</li>
+<li> ContentAudit: 内容审核</li>
+<li>Transcode: 转码，包含普通转码、极速高清和视频编辑（不推荐使用）</li>
+ * @method array getSummary() 获取任务数统计数据概览，用量单位为秒。
+ * @method void setSummary(array $Summary) 设置任务数统计数据概览，用量单位为秒。
  * @method array getDetails() 获取不同规格任务统计数据详情。
 转码规格：
 <li>Remuxing: 转封装</li>
@@ -105,14 +111,17 @@ class TaskStatData extends AbstractModel
 {
     /**
      * @var string 任务类型。
-<li>Transcode: 转码</li>
-<li>Snapshot: 截图</li>
+<li> Transcoding: 普通转码</li>
+<li> Transcoding-TESHD: 极速高清转码</li>
+<li> Editing: 视频编辑</li>
+<li> AdaptiveBitrateStreaming: 自适应码流</li>
+<li> ContentAudit: 内容审核</li>
+<li>Transcode: 转码，包含普通转码、极速高清和视频编辑（不推荐使用）</li>
      */
     public $TaskType;
 
     /**
-     * @var array 任务数统计数据概览。
-<li>Transcode: 用量单位为秒</li>
+     * @var array 任务数统计数据概览，用量单位为秒。
      */
     public $Summary;
 
@@ -157,10 +166,13 @@ class TaskStatData extends AbstractModel
 
     /**
      * @param string $TaskType 任务类型。
-<li>Transcode: 转码</li>
-<li>Snapshot: 截图</li>
-     * @param array $Summary 任务数统计数据概览。
-<li>Transcode: 用量单位为秒</li>
+<li> Transcoding: 普通转码</li>
+<li> Transcoding-TESHD: 极速高清转码</li>
+<li> Editing: 视频编辑</li>
+<li> AdaptiveBitrateStreaming: 自适应码流</li>
+<li> ContentAudit: 内容审核</li>
+<li>Transcode: 转码，包含普通转码、极速高清和视频编辑（不推荐使用）</li>
+     * @param array $Summary 任务数统计数据概览，用量单位为秒。
      * @param array $Details 不同规格任务统计数据详情。
 转码规格：
 <li>Remuxing: 转封装</li>

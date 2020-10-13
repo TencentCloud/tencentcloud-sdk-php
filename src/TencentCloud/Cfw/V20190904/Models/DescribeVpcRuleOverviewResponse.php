@@ -14,30 +14,36 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Gse\V20191112\Models;
+namespace TencentCloud\Cfw\V20190904\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateAsset返回参数结构体
+ * DescribeVpcRuleOverview返回参数结构体
  *
- * @method string getAssetId() 获取生成包ID
- * @method void setAssetId(string $AssetId) 设置生成包ID
- * @method string getAssetArn() 获取生成包的全局唯一资源标识符
- * @method void setAssetArn(string $AssetArn) 设置生成包的全局唯一资源标识符
+ * @method integer getStrategyNum() 获取阻断策略规则数量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStrategyNum(integer $StrategyNum) 设置阻断策略规则数量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getStartRuleNum() 获取启用规则数量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStartRuleNum(integer $StartRuleNum) 设置启用规则数量
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class CreateAssetResponse extends AbstractModel
+class DescribeVpcRuleOverviewResponse extends AbstractModel
 {
     /**
-     * @var string 生成包ID
+     * @var integer 阻断策略规则数量
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $AssetId;
+    public $StrategyNum;
 
     /**
-     * @var string 生成包的全局唯一资源标识符
+     * @var integer 启用规则数量
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $AssetArn;
+    public $StartRuleNum;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +51,10 @@ class CreateAssetResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $AssetId 生成包ID
-     * @param string $AssetArn 生成包的全局唯一资源标识符
+     * @param integer $StrategyNum 阻断策略规则数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $StartRuleNum 启用规则数量
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,12 +70,12 @@ class CreateAssetResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AssetId",$param) and $param["AssetId"] !== null) {
-            $this->AssetId = $param["AssetId"];
+        if (array_key_exists("StrategyNum",$param) and $param["StrategyNum"] !== null) {
+            $this->StrategyNum = $param["StrategyNum"];
         }
 
-        if (array_key_exists("AssetArn",$param) and $param["AssetArn"] !== null) {
-            $this->AssetArn = $param["AssetArn"];
+        if (array_key_exists("StartRuleNum",$param) and $param["StartRuleNum"] !== null) {
+            $this->StartRuleNum = $param["StartRuleNum"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

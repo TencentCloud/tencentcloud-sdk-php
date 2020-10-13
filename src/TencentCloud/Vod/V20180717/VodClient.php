@@ -114,7 +114,9 @@ use TencentCloud\Vod\V20180717\Models as Models;
    2. 查询时间跨度不超过90天。
  * @method Models\DescribePersonSamplesResponse DescribePersonSamples(Models\DescribePersonSamplesRequest $req) 该接口用于查询人物样本信息，支持根据人物 ID、名称、标签，分页查询。
  * @method Models\DescribeProcedureTemplatesResponse DescribeProcedureTemplates(Models\DescribeProcedureTemplatesRequest $req) 根据任务流模板名字，获取任务流模板详情列表。
- * @method Models\DescribeReviewDetailsResponse DescribeReviewDetails(Models\DescribeReviewDetailsRequest $req) 该接口返回查询时间范围内每天使用的视频内容审核时长数据，单位： 秒。
+ * @method Models\DescribeReviewDetailsResponse DescribeReviewDetails(Models\DescribeReviewDetailsRequest $req) <b>本接口已不推荐使用，用 [DescribeMediaProcessUsageData](/document/product/266/41464) 替代</b>
+
+该接口返回查询时间范围内每天使用的视频内容审核时长数据，单位： 秒。
 
 1. 可以查询最近365天内的视频内容审核时长统计数据。
 2. 查询时间跨度不超过90天。

@@ -36,6 +36,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) 设置生成包创建时间
  * @method integer getBindFleetNum() 获取生成包绑定的Fleet个数，最小值为0
  * @method void setBindFleetNum(integer $BindFleetNum) 设置生成包绑定的Fleet个数，最小值为0
+ * @method string getAssetArn() 获取生成包的全局唯一资源标识符
+ * @method void setAssetArn(string $AssetArn) 设置生成包的全局唯一资源标识符
+ * @method string getImageId() 获取生成包支持的操作系统镜像id
+ * @method void setImageId(string $ImageId) 设置生成包支持的操作系统镜像id
+ * @method string getOsType() 获取生成包支持的操作系统类型
+ * @method void setOsType(string $OsType) 设置生成包支持的操作系统类型
  */
 class Asset extends AbstractModel
 {
@@ -80,6 +86,21 @@ class Asset extends AbstractModel
     public $BindFleetNum;
 
     /**
+     * @var string 生成包的全局唯一资源标识符
+     */
+    public $AssetArn;
+
+    /**
+     * @var string 生成包支持的操作系统镜像id
+     */
+    public $ImageId;
+
+    /**
+     * @var string 生成包支持的操作系统类型
+     */
+    public $OsType;
+
+    /**
      * @param string $AssetId 生成包ID
      * @param string $AssetName 生成包名字，最小长度为1，最大长度为64
      * @param string $AssetVersion 生成包版本，最小长度为1，最大长度为64
@@ -88,6 +109,9 @@ class Asset extends AbstractModel
      * @param string $Size 生成包大小
      * @param string $CreateTime 生成包创建时间
      * @param integer $BindFleetNum 生成包绑定的Fleet个数，最小值为0
+     * @param string $AssetArn 生成包的全局唯一资源标识符
+     * @param string $ImageId 生成包支持的操作系统镜像id
+     * @param string $OsType 生成包支持的操作系统类型
      */
     function __construct()
     {
@@ -132,6 +156,18 @@ class Asset extends AbstractModel
 
         if (array_key_exists("BindFleetNum",$param) and $param["BindFleetNum"] !== null) {
             $this->BindFleetNum = $param["BindFleetNum"];
+        }
+
+        if (array_key_exists("AssetArn",$param) and $param["AssetArn"] !== null) {
+            $this->AssetArn = $param["AssetArn"];
+        }
+
+        if (array_key_exists("ImageId",$param) and $param["ImageId"] !== null) {
+            $this->ImageId = $param["ImageId"];
+        }
+
+        if (array_key_exists("OsType",$param) and $param["OsType"] !== null) {
+            $this->OsType = $param["OsType"];
         }
     }
 }

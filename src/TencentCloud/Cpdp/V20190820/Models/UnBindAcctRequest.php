@@ -25,9 +25,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getSubAppId() 获取聚鑫计费SubAppId，代表子商户
  * @method void setSubAppId(string $SubAppId) 设置聚鑫计费SubAppId，代表子商户
  * @method string getSettleAcctNo() 获取用于提现
-<敏感信息>加密详见《商户端接口敏感信息加密说明》
+<敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a>
  * @method void setSettleAcctNo(string $SettleAcctNo) 设置用于提现
-<敏感信息>加密详见《商户端接口敏感信息加密说明》
+<敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a>
  * @method string getMidasSecretId() 获取聚鑫分配的安全ID
  * @method void setMidasSecretId(string $MidasSecretId) 设置聚鑫分配的安全ID
  * @method string getMidasSignature() 获取按照聚鑫安全密钥计算的签名
@@ -65,7 +65,7 @@ class UnBindAcctRequest extends AbstractModel
 
     /**
      * @var string 用于提现
-<敏感信息>加密详见《商户端接口敏感信息加密说明》
+<敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a>
      */
     public $SettleAcctNo;
 
@@ -100,7 +100,7 @@ development: 开发环境
      * @param string $MidasAppId 聚鑫分配的支付主MidasAppId
      * @param string $SubAppId 聚鑫计费SubAppId，代表子商户
      * @param string $SettleAcctNo 用于提现
-<敏感信息>加密详见《商户端接口敏感信息加密说明》
+<敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a>
      * @param string $MidasSecretId 聚鑫分配的安全ID
      * @param string $MidasSignature 按照聚鑫安全密钥计算的签名
      * @param string $EncryptType 敏感信息加密类型:

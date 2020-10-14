@@ -34,10 +34,13 @@ use TencentCloud\Dc\V20180410\Models as Models;
  * @method Models\DeleteDirectConnectTunnelResponse DeleteDirectConnectTunnel(Models\DeleteDirectConnectTunnelRequest $req) 删除专用通道
  * @method Models\DescribeAccessPointsResponse DescribeAccessPoints(Models\DescribeAccessPointsRequest $req) 查询物理专线接入点
 
+ * @method Models\DescribeDirectConnectTunnelExtraResponse DescribeDirectConnectTunnelExtra(Models\DescribeDirectConnectTunnelExtraRequest $req) 本接口（DescribeDirectConnectTunnelExtra）用于查询专用通道扩展信息
  * @method Models\DescribeDirectConnectTunnelsResponse DescribeDirectConnectTunnels(Models\DescribeDirectConnectTunnelsRequest $req) 用于查询专用通道列表。
  * @method Models\DescribeDirectConnectsResponse DescribeDirectConnects(Models\DescribeDirectConnectsRequest $req) 查询物理专线列表。
+ * @method Models\DescribePublicDirectConnectTunnelRoutesResponse DescribePublicDirectConnectTunnelRoutes(Models\DescribePublicDirectConnectTunnelRoutesRequest $req) 本接口（DescribePublicDirectConnectTunnelRoutes）用于查询互联网通道路由列表
  * @method Models\ModifyDirectConnectAttributeResponse ModifyDirectConnectAttribute(Models\ModifyDirectConnectAttributeRequest $req) 修改物理专线的属性。
  * @method Models\ModifyDirectConnectTunnelAttributeResponse ModifyDirectConnectTunnelAttribute(Models\ModifyDirectConnectTunnelAttributeRequest $req) 修改专用通道属性
+ * @method Models\ModifyDirectConnectTunnelExtraResponse ModifyDirectConnectTunnelExtra(Models\ModifyDirectConnectTunnelExtraRequest $req) 本接口（ModifyDirectConnectTunnelExtra）用于修改专用通道扩展信息
  * @method Models\RejectDirectConnectTunnelResponse RejectDirectConnectTunnel(Models\RejectDirectConnectTunnelRequest $req) 拒绝专用通道申请
  */
 

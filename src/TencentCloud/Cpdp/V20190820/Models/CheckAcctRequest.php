@@ -31,9 +31,9 @@ use TencentCloud\Common\AbstractModel;
 2 – 短信验证
 每个结算账户每天只能使用一次小额转账验证
  * @method string getSettleAcctNo() 获取结算账户账号
-<敏感信息>加密详见《商户端接口敏感信息加密说明》
+<敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a>
  * @method void setSettleAcctNo(string $SettleAcctNo) 设置结算账户账号
-<敏感信息>加密详见《商户端接口敏感信息加密说明》
+<敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a>
  * @method string getMidasSecretId() 获取聚鑫分配的安全ID
  * @method void setMidasSecretId(string $MidasSecretId) 设置聚鑫分配的安全ID
  * @method string getMidasSignature() 获取按照聚鑫安全密钥计算的签名
@@ -96,7 +96,7 @@ class CheckAcctRequest extends AbstractModel
 
     /**
      * @var string 结算账户账号
-<敏感信息>加密详见《商户端接口敏感信息加密说明》
+<敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a>
      */
     public $SettleAcctNo;
 
@@ -159,7 +159,7 @@ development: 开发环境
 2 – 短信验证
 每个结算账户每天只能使用一次小额转账验证
      * @param string $SettleAcctNo 结算账户账号
-<敏感信息>加密详见《商户端接口敏感信息加密说明》
+<敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a>
      * @param string $MidasSecretId 聚鑫分配的安全ID
      * @param string $MidasSignature 按照聚鑫安全密钥计算的签名
      * @param string $CheckCode 短信验证码

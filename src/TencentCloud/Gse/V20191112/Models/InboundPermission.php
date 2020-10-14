@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getFromPort() 获取起始端口号，最小值1025
  * @method void setFromPort(integer $FromPort) 设置起始端口号，最小值1025
- * @method string getIpRange() 获取IP 段范围，CIDR 方式划分
- * @method void setIpRange(string $IpRange) 设置IP 段范围，CIDR 方式划分
+ * @method string getIpRange() 获取IP 段范围，合法的 CIDR 地址类型，如所有IPv4来源：0.0.0.0/0
+ * @method void setIpRange(string $IpRange) 设置IP 段范围，合法的 CIDR 地址类型，如所有IPv4来源：0.0.0.0/0
  * @method string getProtocol() 获取协议类型：TCP或者UDP
  * @method void setProtocol(string $Protocol) 设置协议类型：TCP或者UDP
  * @method integer getToPort() 获取终止端口号，最大值60000
@@ -37,7 +37,7 @@ class InboundPermission extends AbstractModel
     public $FromPort;
 
     /**
-     * @var string IP 段范围，CIDR 方式划分
+     * @var string IP 段范围，合法的 CIDR 地址类型，如所有IPv4来源：0.0.0.0/0
      */
     public $IpRange;
 
@@ -53,7 +53,7 @@ class InboundPermission extends AbstractModel
 
     /**
      * @param integer $FromPort 起始端口号，最小值1025
-     * @param string $IpRange IP 段范围，CIDR 方式划分
+     * @param string $IpRange IP 段范围，合法的 CIDR 地址类型，如所有IPv4来源：0.0.0.0/0
      * @param string $Protocol 协议类型：TCP或者UDP
      * @param integer $ToPort 终止端口号，最大值60000
      */

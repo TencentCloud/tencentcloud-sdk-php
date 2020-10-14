@@ -44,9 +44,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWords(array $Words) 设置单句中词详情
 注意：此字段可能返回 null，表示取不到有效值。
- * @method float getSpeechSpeed() 获取单句语速
+ * @method float getSpeechSpeed() 获取单句语速，单位：字数/秒
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSpeechSpeed(float $SpeechSpeed) 设置单句语速
+ * @method void setSpeechSpeed(float $SpeechSpeed) 设置单句语速，单位：字数/秒
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class SentenceDetail extends AbstractModel
@@ -88,7 +88,7 @@ class SentenceDetail extends AbstractModel
     public $Words;
 
     /**
-     * @var float 单句语速
+     * @var float 单句语速，单位：字数/秒
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SpeechSpeed;
@@ -106,7 +106,7 @@ class SentenceDetail extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Words 单句中词详情
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param float $SpeechSpeed 单句语速
+     * @param float $SpeechSpeed 单句语速，单位：字数/秒
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

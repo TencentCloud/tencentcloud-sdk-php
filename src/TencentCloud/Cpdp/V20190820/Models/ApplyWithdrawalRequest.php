@@ -25,13 +25,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getSubAppId() 获取聚鑫计费SubAppId，代表子商户
  * @method void setSubAppId(string $SubAppId) 设置聚鑫计费SubAppId，代表子商户
  * @method string getSettleAcctNo() 获取用于提现
-<敏感信息>加密详见《商户端接口敏感信息加密说明》
+<敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a>
  * @method void setSettleAcctNo(string $SettleAcctNo) 设置用于提现
-<敏感信息>加密详见《商户端接口敏感信息加密说明》
+<敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a>
  * @method string getSettleAcctName() 获取结算账户户名
-<敏感信息>加密详见《商户端接口敏感信息加密说明》
+<敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a>
  * @method void setSettleAcctName(string $SettleAcctName) 设置结算账户户名
-<敏感信息>加密详见《商户端接口敏感信息加密说明》
+<敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a>
  * @method string getCurrencyType() 获取币种 RMB
  * @method void setCurrencyType(string $CurrencyType) 设置币种 RMB
  * @method integer getCurrencyUnit() 获取单位，1：元，2：角，3：分
@@ -43,9 +43,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getIdType() 获取会员证件类型
  * @method void setIdType(string $IdType) 设置会员证件类型
  * @method string getIdCode() 获取会员证件号码
-<敏感信息>加密详见《商户端接口敏感信息加密说明》
+<敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a>
  * @method void setIdCode(string $IdCode) 设置会员证件号码
-<敏感信息>加密详见《商户端接口敏感信息加密说明》
+<敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a>
  * @method string getMidasSecretId() 获取聚鑫分配的安全ID
  * @method void setMidasSecretId(string $MidasSecretId) 设置聚鑫分配的安全ID
  * @method string getMidasSignature() 获取按照聚鑫安全密钥计算的签名
@@ -87,13 +87,13 @@ class ApplyWithdrawalRequest extends AbstractModel
 
     /**
      * @var string 用于提现
-<敏感信息>加密详见《商户端接口敏感信息加密说明》
+<敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a>
      */
     public $SettleAcctNo;
 
     /**
      * @var string 结算账户户名
-<敏感信息>加密详见《商户端接口敏感信息加密说明》
+<敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a>
      */
     public $SettleAcctName;
 
@@ -124,7 +124,7 @@ class ApplyWithdrawalRequest extends AbstractModel
 
     /**
      * @var string 会员证件号码
-<敏感信息>加密详见《商户端接口敏感信息加密说明》
+<敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a>
      */
     public $IdCode;
 
@@ -169,16 +169,16 @@ development: 开发环境
      * @param string $MidasAppId 聚鑫分配的支付主MidasAppId
      * @param string $SubAppId 聚鑫计费SubAppId，代表子商户
      * @param string $SettleAcctNo 用于提现
-<敏感信息>加密详见《商户端接口敏感信息加密说明》
+<敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a>
      * @param string $SettleAcctName 结算账户户名
-<敏感信息>加密详见《商户端接口敏感信息加密说明》
+<敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a>
      * @param string $CurrencyType 币种 RMB
      * @param integer $CurrencyUnit 单位，1：元，2：角，3：分
      * @param string $CurrencyAmt 金额
      * @param string $TranWebName 交易网名称
      * @param string $IdType 会员证件类型
      * @param string $IdCode 会员证件号码
-<敏感信息>加密详见《商户端接口敏感信息加密说明》
+<敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a>
      * @param string $MidasSecretId 聚鑫分配的安全ID
      * @param string $MidasSignature 按照聚鑫安全密钥计算的签名
      * @param string $EncryptType 敏感信息加密类型:

@@ -20,8 +20,6 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeNetworkInterfaces请求参数结构体
  *
- * @method string getEcmRegion() 获取ECM 地域
- * @method void setEcmRegion(string $EcmRegion) 设置ECM 地域
  * @method array getNetworkInterfaceIds() 获取弹性网卡实例ID查询。形如：eni-pxir56ns。每次请求的实例的上限为100。参数不支持同时指定NetworkInterfaceIds和Filters。
  * @method void setNetworkInterfaceIds(array $NetworkInterfaceIds) 设置弹性网卡实例ID查询。形如：eni-pxir56ns。每次请求的实例的上限为100。参数不支持同时指定NetworkInterfaceIds和Filters。
  * @method array getFilters() 获取过滤条件，参数不支持同时指定NetworkInterfaceIds和Filters。
@@ -52,14 +50,11 @@ is-primary - Boolean - 是否必填：否 - （过滤条件）按照是否主网
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
  * @method integer getLimit() 获取返回数量，默认为20，最大值为100。
  * @method void setLimit(integer $Limit) 设置返回数量，默认为20，最大值为100。
+ * @method string getEcmRegion() 获取ECM 地域
+ * @method void setEcmRegion(string $EcmRegion) 设置ECM 地域
  */
 class DescribeNetworkInterfacesRequest extends AbstractModel
 {
-    /**
-     * @var string ECM 地域
-     */
-    public $EcmRegion;
-
     /**
      * @var array 弹性网卡实例ID查询。形如：eni-pxir56ns。每次请求的实例的上限为100。参数不支持同时指定NetworkInterfaceIds和Filters。
      */
@@ -92,7 +87,11 @@ is-primary - Boolean - 是否必填：否 - （过滤条件）按照是否主网
     public $Limit;
 
     /**
-     * @param string $EcmRegion ECM 地域
+     * @var string ECM 地域
+     */
+    public $EcmRegion;
+
+    /**
      * @param array $NetworkInterfaceIds 弹性网卡实例ID查询。形如：eni-pxir56ns。每次请求的实例的上限为100。参数不支持同时指定NetworkInterfaceIds和Filters。
      * @param array $Filters 过滤条件，参数不支持同时指定NetworkInterfaceIds和Filters。
 vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。
@@ -108,6 +107,7 @@ tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值
 is-primary - Boolean - 是否必填：否 - （过滤条件）按照是否主网卡进行过滤。值为true时，仅过滤主网卡；值为false时，仅过滤辅助网卡；次过滤参数为提供时，同时过滤主网卡和辅助网卡。
      * @param integer $Offset 偏移量，默认为0。
      * @param integer $Limit 返回数量，默认为20，最大值为100。
+     * @param string $EcmRegion ECM 地域
      */
     function __construct()
     {
@@ -122,10 +122,6 @@ is-primary - Boolean - 是否必填：否 - （过滤条件）按照是否主网
         if ($param === null) {
             return;
         }
-        if (array_key_exists("EcmRegion",$param) and $param["EcmRegion"] !== null) {
-            $this->EcmRegion = $param["EcmRegion"];
-        }
-
         if (array_key_exists("NetworkInterfaceIds",$param) and $param["NetworkInterfaceIds"] !== null) {
             $this->NetworkInterfaceIds = $param["NetworkInterfaceIds"];
         }
@@ -145,6 +141,10 @@ is-primary - Boolean - 是否必填：否 - （过滤条件）按照是否主网
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("EcmRegion",$param) and $param["EcmRegion"] !== null) {
+            $this->EcmRegion = $param["EcmRegion"];
         }
     }
 }

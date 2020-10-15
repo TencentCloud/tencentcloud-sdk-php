@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPublicIPAddress(string $PublicIPAddress) 设置实例的公网ip。
  * @method ISP getISP() 获取实例的公网ip所属的运营商。
  * @method void setISP(ISP $ISP) 设置实例的公网ip所属的运营商。
- * @method integer getMaxBandwidthOut() 获取实例的最大出带宽上限。
- * @method void setMaxBandwidthOut(integer $MaxBandwidthOut) 设置实例的最大出带宽上限。
+ * @method integer getMaxBandwidthOut() 获取实例的最大出带宽上限，单位为Mbps。
+ * @method void setMaxBandwidthOut(integer $MaxBandwidthOut) 设置实例的最大出带宽上限，单位为Mbps。
  */
 class PublicIPAddressInfo extends AbstractModel
 {
@@ -47,7 +47,7 @@ class PublicIPAddressInfo extends AbstractModel
     public $ISP;
 
     /**
-     * @var integer 实例的最大出带宽上限。
+     * @var integer 实例的最大出带宽上限，单位为Mbps。
      */
     public $MaxBandwidthOut;
 
@@ -55,7 +55,7 @@ class PublicIPAddressInfo extends AbstractModel
      * @param string $ChargeMode 计费模式。
      * @param string $PublicIPAddress 实例的公网ip。
      * @param ISP $ISP 实例的公网ip所属的运营商。
-     * @param integer $MaxBandwidthOut 实例的最大出带宽上限。
+     * @param integer $MaxBandwidthOut 实例的最大出带宽上限，单位为Mbps。
      */
     function __construct()
     {

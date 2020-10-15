@@ -74,6 +74,8 @@ DELETING：删除中
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getEniType() 获取网卡类型。0 - 弹性网卡；1 - evm弹性网卡。
  * @method void setEniType(integer $EniType) 设置网卡类型。0 - 弹性网卡；1 - evm弹性网卡。
+ * @method string getEcmRegion() 获取EcmRegion ecm区域
+ * @method void setEcmRegion(string $EcmRegion) 设置EcmRegion ecm区域
  */
 class NetworkInterface extends AbstractModel
 {
@@ -169,6 +171,11 @@ DELETING：删除中
     public $EniType;
 
     /**
+     * @var string EcmRegion ecm区域
+     */
+    public $EcmRegion;
+
+    /**
      * @param string $NetworkInterfaceId 弹性网卡实例ID，例如：eni-f1xjkw1b。
      * @param string $NetworkInterfaceName 弹性网卡名称。
      * @param string $NetworkInterfaceDescription 弹性网卡描述。
@@ -196,6 +203,7 @@ DELETING：删除中
      * @param array $TagSet 标签键值对。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $EniType 网卡类型。0 - 弹性网卡；1 - evm弹性网卡。
+     * @param string $EcmRegion EcmRegion ecm区域
      */
     function __construct()
     {
@@ -288,6 +296,10 @@ DELETING：删除中
 
         if (array_key_exists("EniType",$param) and $param["EniType"] !== null) {
             $this->EniType = $param["EniType"];
+        }
+
+        if (array_key_exists("EcmRegion",$param) and $param["EcmRegion"] !== null) {
+            $this->EcmRegion = $param["EcmRegion"];
         }
     }
 }

@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPublicIPAddressSet(array $PublicIPAddressSet) 设置实例的公网相关信息列表。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getInstanceNetworkInfoSet() 获取实例网络相关信息。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInstanceNetworkInfoSet(array $InstanceNetworkInfoSet) 设置实例网络相关信息。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Internet extends AbstractModel
 {
@@ -44,9 +48,17 @@ class Internet extends AbstractModel
     public $PublicIPAddressSet;
 
     /**
+     * @var array 实例网络相关信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InstanceNetworkInfoSet;
+
+    /**
      * @param array $PrivateIPAddressSet 实例的内网相关信息列表。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $PublicIPAddressSet 实例的公网相关信息列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $InstanceNetworkInfoSet 实例网络相关信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -77,6 +89,15 @@ class Internet extends AbstractModel
                 $obj = new PublicIPAddressInfo();
                 $obj->deserialize($value);
                 array_push($this->PublicIPAddressSet, $obj);
+            }
+        }
+
+        if (array_key_exists("InstanceNetworkInfoSet",$param) and $param["InstanceNetworkInfoSet"] !== null) {
+            $this->InstanceNetworkInfoSet = [];
+            foreach ($param["InstanceNetworkInfoSet"] as $key => $value){
+                $obj = new InstanceNetworkInfo();
+                $obj->deserialize($value);
+                array_push($this->InstanceNetworkInfoSet, $obj);
             }
         }
     }

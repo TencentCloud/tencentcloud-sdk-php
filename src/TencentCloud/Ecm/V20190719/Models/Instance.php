@@ -158,6 +158,10 @@ PROTECTIVELY_ISOLATED：表示被安全隔离的实例。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVirtualPrivateCloud(VirtualPrivateCloud $VirtualPrivateCloud) 设置VPC属性
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getISP() 获取实例运营商字段。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setISP(string $ISP) 设置实例运营商字段。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Instance extends AbstractModel
 {
@@ -335,6 +339,12 @@ PROTECTIVELY_ISOLATED：表示被安全隔离的实例。
     public $VirtualPrivateCloud;
 
     /**
+     * @var string 实例运营商字段。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ISP;
+
+    /**
      * @param string $InstanceId 实例ID。
      * @param string $InstanceName 实例名称，如ens-34241f3s。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -403,6 +413,8 @@ PROTECTIVELY_ISOLATED：表示被安全隔离的实例。
      * @param array $SecurityGroupIds 实例所属安全组。该参数可以通过调用 DescribeSecurityGroups 的返回值中的sgId字段来获取。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param VirtualPrivateCloud $VirtualPrivateCloud VPC属性
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ISP 实例运营商字段。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -537,6 +549,10 @@ PROTECTIVELY_ISOLATED：表示被安全隔离的实例。
         if (array_key_exists("VirtualPrivateCloud",$param) and $param["VirtualPrivateCloud"] !== null) {
             $this->VirtualPrivateCloud = new VirtualPrivateCloud();
             $this->VirtualPrivateCloud->deserialize($param["VirtualPrivateCloud"]);
+        }
+
+        if (array_key_exists("ISP",$param) and $param["ISP"] !== null) {
+            $this->ISP = $param["ISP"];
         }
     }
 }

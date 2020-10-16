@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getProductId() 获取产品ID
  * @method void setProductId(string $ProductId) 设置产品ID
- * @method integer getRevision() 获取物模型发布版本号，-1代表最新编辑（未发布）的版本
- * @method void setRevision(integer $Revision) 设置物模型发布版本号，-1代表最新编辑（未发布）的版本
+ * @method integer getRevision() 获取物模型发布版本号,-1代表未发布的，保存的是草稿箱的版本。1代表已发布的物模型。
+ * @method void setRevision(integer $Revision) 设置物模型发布版本号,-1代表未发布的，保存的是草稿箱的版本。1代表已发布的物模型。
  */
 class CreateGencodeRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class CreateGencodeRequest extends AbstractModel
     public $ProductId;
 
     /**
-     * @var integer 物模型发布版本号，-1代表最新编辑（未发布）的版本
+     * @var integer 物模型发布版本号,-1代表未发布的，保存的是草稿箱的版本。1代表已发布的物模型。
      */
     public $Revision;
 
     /**
      * @param string $ProductId 产品ID
-     * @param integer $Revision 物模型发布版本号，-1代表最新编辑（未发布）的版本
+     * @param integer $Revision 物模型发布版本号,-1代表未发布的，保存的是草稿箱的版本。1代表已发布的物模型。
      */
     function __construct()
     {

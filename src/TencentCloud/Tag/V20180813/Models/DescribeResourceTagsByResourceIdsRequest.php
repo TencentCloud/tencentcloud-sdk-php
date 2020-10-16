@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setServiceType(string $ServiceType) 设置业务类型
  * @method string getResourcePrefix() 获取资源前缀
  * @method void setResourcePrefix(string $ResourcePrefix) 设置资源前缀
- * @method array getResourceIds() 获取资源唯一标记
- * @method void setResourceIds(array $ResourceIds) 设置资源唯一标记
+ * @method array getResourceIds() 获取资源ID数组，大小不超过50
+ * @method void setResourceIds(array $ResourceIds) 设置资源ID数组，大小不超过50
  * @method string getResourceRegion() 获取资源所在地域
  * @method void setResourceRegion(string $ResourceRegion) 设置资源所在地域
  * @method integer getOffset() 获取数据偏移量，默认为 0, 必须为Limit参数的整数倍
@@ -46,7 +46,7 @@ class DescribeResourceTagsByResourceIdsRequest extends AbstractModel
     public $ResourcePrefix;
 
     /**
-     * @var array 资源唯一标记
+     * @var array 资源ID数组，大小不超过50
      */
     public $ResourceIds;
 
@@ -68,7 +68,7 @@ class DescribeResourceTagsByResourceIdsRequest extends AbstractModel
     /**
      * @param string $ServiceType 业务类型
      * @param string $ResourcePrefix 资源前缀
-     * @param array $ResourceIds 资源唯一标记
+     * @param array $ResourceIds 资源ID数组，大小不超过50
      * @param string $ResourceRegion 资源所在地域
      * @param integer $Offset 数据偏移量，默认为 0, 必须为Limit参数的整数倍
      * @param integer $Limit 每页大小，默认为 15

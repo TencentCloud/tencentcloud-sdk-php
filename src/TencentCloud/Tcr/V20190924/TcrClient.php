@@ -60,6 +60,8 @@ use TencentCloud\Tcr\V20190924\Models as Models;
  * @method Models\DescribeInstancesResponse DescribeInstances(Models\DescribeInstancesRequest $req) 查询实例信息
  * @method Models\DescribeNamespacePersonalResponse DescribeNamespacePersonal(Models\DescribeNamespacePersonalRequest $req) 查询个人版命名空间信息
  * @method Models\DescribeNamespacesResponse DescribeNamespaces(Models\DescribeNamespacesRequest $req) 查询命名空间列表或指定命名空间信息
+ * @method Models\DescribeReplicationInstanceCreateTasksResponse DescribeReplicationInstanceCreateTasks(Models\DescribeReplicationInstanceCreateTasksRequest $req) 查询创建从实例任务状态
+ * @method Models\DescribeReplicationInstancesResponse DescribeReplicationInstances(Models\DescribeReplicationInstancesRequest $req) 查询从实例列表
  * @method Models\DescribeRepositoriesResponse DescribeRepositories(Models\DescribeRepositoriesRequest $req) 查询镜像仓库列表或指定镜像仓库信息
  * @method Models\DescribeRepositoryFilterPersonalResponse DescribeRepositoryFilterPersonal(Models\DescribeRepositoryFilterPersonalRequest $req) 用于在个人版镜像仓库中，获取满足输入搜索条件的用户镜像仓库
  * @method Models\DescribeRepositoryOwnerPersonalResponse DescribeRepositoryOwnerPersonal(Models\DescribeRepositoryOwnerPersonalRequest $req) 用于在个人版中获取用户全部的镜像仓库列表

@@ -42,6 +42,10 @@ unknown：服务地域无法获取
 mainland：中国境内加速节点
 overseas：中国境外加速节点
 unknown：服务地域无法获取
+ * @method string getCity() 获取节点的所在城市
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCity(string $City) 设置节点的所在城市
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CdnIp extends AbstractModel
 {
@@ -77,6 +81,12 @@ unknown：服务地域无法获取
     public $Area;
 
     /**
+     * @var string 节点的所在城市
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $City;
+
+    /**
      * @param string $Ip 指定查询的 IP
      * @param string $Platform IP 归属：
 yes：节点归属于腾讯云 CDN
@@ -88,6 +98,8 @@ unknown 表示节点位置未知
 mainland：中国境内加速节点
 overseas：中国境外加速节点
 unknown：服务地域无法获取
+     * @param string $City 节点的所在城市
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -125,6 +137,10 @@ unknown：服务地域无法获取
 
         if (array_key_exists("Area",$param) and $param["Area"] !== null) {
             $this->Area = $param["Area"];
+        }
+
+        if (array_key_exists("City",$param) and $param["City"] !== null) {
+            $this->City = $param["City"];
         }
     }
 }

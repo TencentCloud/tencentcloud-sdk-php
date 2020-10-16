@@ -23,6 +23,9 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Domain\V20180808\Models as Models;
 
 /**
+ * @method Models\BatchModifyDomainInfoResponse BatchModifyDomainInfo(Models\BatchModifyDomainInfoRequest $req) 本接口 ( BatchModifyDomainInfo ) 用于批量域名信息修改 。
+
+默认接口请求频率限制：20次/秒。
  * @method Models\CheckBatchStatusResponse CheckBatchStatus(Models\CheckBatchStatusRequest $req) 本接口 ( CheckBatchStatus ) 用于检查批量任务状态 。
 
 默认接口请求频率限制：20次/秒。
@@ -40,6 +43,19 @@ use TencentCloud\Domain\V20180808\Models as Models;
 
  * @method Models\DescribeDomainPriceListResponse DescribeDomainPriceList(Models\DescribeDomainPriceListRequest $req) 按照域名后缀获取对应的价格列表
  * @method Models\DescribeTemplateListResponse DescribeTemplateList(Models\DescribeTemplateListRequest $req) 本接口 (DescribeTemplateList) 用于获取模板列表。
+
+默认接口请求频率限制：20次/秒。
+
+ * @method Models\ModifyDomainOwnerBatchResponse ModifyDomainOwnerBatch(Models\ModifyDomainOwnerBatchRequest $req) 本接口 ( ModifyDomainOwnerBatch) 用于域名批量账号间转移 。
+
+默认接口请求频率限制：20次/秒。
+ * @method Models\TransferInDomainBatchResponse TransferInDomainBatch(Models\TransferInDomainBatchRequest $req) 本接口 ( TransferInDomainBatch ) 用于批量转入域名 。
+
+默认接口请求频率限制：20次/秒。
+ * @method Models\TransferProhibitionBatchResponse TransferProhibitionBatch(Models\TransferProhibitionBatchRequest $req) 本接口 ( TransferInDomainBatch ) 用于批量禁止域名转移 。
+
+默认接口请求频率限制：20次/秒。
+ * @method Models\UpdateProhibitionBatchResponse UpdateProhibitionBatch(Models\UpdateProhibitionBatchRequest $req) 本接口 ( UpdateProhibitionBatch ) 用于批量设置禁止域名更新 。
 
 默认接口请求频率限制：20次/秒。
  */

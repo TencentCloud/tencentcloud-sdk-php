@@ -23,6 +23,8 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Iotvideo\V20191126\Models as Models;
 
 /**
+ * @method Models\ClearDeviceActiveCodeResponse ClearDeviceActiveCode(Models\ClearDeviceActiveCodeRequest $req) 清除设备激活码
+ * @method Models\CreateAnonymousAccessTokenResponse CreateAnonymousAccessToken(Models\CreateAnonymousAccessTokenRequest $req) 创建匿名访问Token
  * @method Models\CreateAppUsrResponse CreateAppUsr(Models\CreateAppUsrRequest $req) 本接口（CreateAppUsr）用于接收由厂商云发送过来的注册请求,建立厂商云终端用户与IoT Video终端用户的映射关系。
  * @method Models\CreateBindingResponse CreateBinding(Models\CreateBindingRequest $req) 本接口（CreateBinding）用于终端用户和设备进行绑定，具体的应用场景如下：
     终端用户与设备具有“强关联”关系。用户与设备绑定之后，用户终端即具备了该设备的访问权限,访问或操作设备时，无需获取设备访问Token。
@@ -38,6 +40,7 @@ use TencentCloud\Iotvideo\V20191126\Models as Models;
 该接口实现了物模型草稿箱的功能，保存用户最后一次编辑的物模型数据。
  * @method Models\CreateProductResponse CreateProduct(Models\CreateProductRequest $req) 本接口（CreateProduct）用于创建一个新的物联网智能视频产品。
  * @method Models\CreateStorageResponse CreateStorage(Models\CreateStorageRequest $req) 本接口（CreateStorage）用于购买云存套餐。
+ * @method Models\CreateStorageServiceResponse CreateStorageService(Models\CreateStorageServiceRequest $req) 购买云存服务
  * @method Models\CreateTraceIdsResponse CreateTraceIds(Models\CreateTraceIdsRequest $req) 本接口（CreateTraceIds）用于将设备加到日志跟踪白名单。
  * @method Models\CreateUploadPathResponse CreateUploadPath(Models\CreateUploadPathRequest $req) 本接口（CreateUploadPath）用于获取固件上传路径。
  * @method Models\CreateUsrTokenResponse CreateUsrToken(Models\CreateUsrTokenRequest $req) 本接口（CreateUsrToken）用于终端用户获取IoT Video平台的accessToken，初始化SDK,连接到IoT Video接入服务器。
@@ -49,6 +52,7 @@ use TencentCloud\Iotvideo\V20191126\Models as Models;
  * @method Models\DeleteOtaVersionResponse DeleteOtaVersion(Models\DeleteOtaVersionRequest $req) 本接口（DeleteOtaVersion）用于删除固件版本信息。
  * @method Models\DeleteProductResponse DeleteProduct(Models\DeleteProductRequest $req) 本接口（DeleteProduct）用于删除一个物联网智能视频产品。
  * @method Models\DeleteTraceIdsResponse DeleteTraceIds(Models\DeleteTraceIdsRequest $req) 本接口（DeleteTraceIds）用于将设备从日志跟踪白名单中删除，该接口可批量操作，最多支持同时操作100台设备。
+ * @method Models\DeliverStorageServiceResponse DeliverStorageService(Models\DeliverStorageServiceRequest $req) 将已购买的云存服务转移到另一设备
  * @method Models\DescribeBindDevResponse DescribeBindDev(Models\DescribeBindDevRequest $req) 本接口（DescribeBindDev）用于查询终端用户绑定的设备列表。
  * @method Models\DescribeBindUsrResponse DescribeBindUsr(Models\DescribeBindUsrRequest $req) 本接口（DescribeBindUsr）用于查询设备被分享的所有用户列表。
  * @method Models\DescribeDeviceResponse DescribeDevice(Models\DescribeDeviceRequest $req) 本接口（DescribeDevice）获取设备信息。
@@ -67,6 +71,7 @@ use TencentCloud\Iotvideo\V20191126\Models as Models;
  * @method Models\DescribePubVersionsResponse DescribePubVersions(Models\DescribePubVersionsRequest $req) 本接口（DescribePubVersions）用于获取某一产品发布过的全部固件版本。
  * @method Models\DescribeRegistrationStatusResponse DescribeRegistrationStatus(Models\DescribeRegistrationStatusRequest $req) 本接口（DescribeRegistrationStatus）用于查询终端用户的注册状态。
  * @method Models\DescribeRunLogResponse DescribeRunLog(Models\DescribeRunLogRequest $req) 本接口（DescribeRunLog）用于获取设备运行日志。
+ * @method Models\DescribeStorageServiceResponse DescribeStorageService(Models\DescribeStorageServiceRequest $req) 查询云存服务
  * @method Models\DescribeTraceIdsResponse DescribeTraceIds(Models\DescribeTraceIdsRequest $req) 本接口（DescribeTraceIds）用于查询设备日志跟踪白名单。
  * @method Models\DescribeTraceStatusResponse DescribeTraceStatus(Models\DescribeTraceStatusRequest $req) 本接口（DescribeTraceStatus）用于查询指定设备是否在白名单中。
  * @method Models\DisableDeviceResponse DisableDevice(Models\DisableDeviceRequest $req) 本接口（DisableDevice）用于禁用设备，可进行批量操作，每次操作最多100台设备。
@@ -87,6 +92,7 @@ ProWritable.Pos.setVal.x;
 可写属性云端写入成功即返回;云端向设备端发布属性变更参数;若当前设备不在线,在设备下次上线时会自动更新这些属性参数;
 物模型写入数据时,不需要传入时标信息,平台以当前时标作为数据的时标更新物模型中的时标信息。
  * @method Models\ModifyProductResponse ModifyProduct(Models\ModifyProductRequest $req) 本接口（ModifyProduct）用于编辑物联网智能视频产品的相关信息。
+ * @method Models\RefundStorageServiceResponse RefundStorageService(Models\RefundStorageServiceRequest $req) 退订已购买的云存服务
  * @method Models\RunDeviceResponse RunDevice(Models\RunDeviceRequest $req) 本接口（RunDevice）用于启用设备，可进行批量操作，每次操作最多100台设备。
  * @method Models\RunDeviceStreamResponse RunDeviceStream(Models\RunDeviceStreamRequest $req) 本接口（RunDeviceStream）用于开启设备推流，可进行批量操作，每次操作最多100台设备。
  * @method Models\RunIotModelResponse RunIotModel(Models\RunIotModelRequest $req) 本接口（RunIotModel）用于对定义的物模型进行发布。

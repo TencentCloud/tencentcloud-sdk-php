@@ -50,8 +50,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGameProperties(array $GameProperties) 设置游戏属性
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getMaximumPlayerSessionCount() 获取最大玩家数量
- * @method void setMaximumPlayerSessionCount(integer $MaximumPlayerSessionCount) 设置最大玩家数量
+ * @method integer getMaximumPlayerSessionCount() 获取游戏服务器允许同时连接到游戏会话的最大玩家数量，最小值1，最大值为玩家会话最大限额
+ * @method void setMaximumPlayerSessionCount(integer $MaximumPlayerSessionCount) 设置游戏服务器允许同时连接到游戏会话的最大玩家数量，最小值1，最大值为玩家会话最大限额
  * @method string getGameServerSessionData() 获取游戏会话数据
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGameServerSessionData(string $GameServerSessionData) 设置游戏会话数据
@@ -133,7 +133,7 @@ class GameServerSessionPlacement extends AbstractModel
     public $GameProperties;
 
     /**
-     * @var integer 最大玩家数量
+     * @var integer 游戏服务器允许同时连接到游戏会话的最大玩家数量，最小值1，最大值为玩家会话最大限额
      */
     public $MaximumPlayerSessionCount;
 
@@ -194,7 +194,7 @@ class GameServerSessionPlacement extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $GameProperties 游戏属性
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $MaximumPlayerSessionCount 最大玩家数量
+     * @param integer $MaximumPlayerSessionCount 游戏服务器允许同时连接到游戏会话的最大玩家数量，最小值1，最大值为玩家会话最大限额
      * @param string $GameServerSessionData 游戏会话数据
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IpAddress 运行游戏会话的实例的IP地址

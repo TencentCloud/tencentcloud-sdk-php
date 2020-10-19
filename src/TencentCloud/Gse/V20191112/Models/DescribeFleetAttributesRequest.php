@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getFleetIds() 获取服务器舰队 Ids
  * @method void setFleetIds(array $FleetIds) 设置服务器舰队 Ids
- * @method integer getLimit() 获取结果返回最大数量，最小值0，最大值1000
- * @method void setLimit(integer $Limit) 设置结果返回最大数量，最小值0，最大值1000
+ * @method integer getLimit() 获取结果返回最大数量，默认值20，最大值100
+ * @method void setLimit(integer $Limit) 设置结果返回最大数量，默认值20，最大值100
  * @method integer getOffset() 获取返回结果偏移，最小值0
  * @method void setOffset(integer $Offset) 设置返回结果偏移，最小值0
  */
@@ -35,7 +35,7 @@ class DescribeFleetAttributesRequest extends AbstractModel
     public $FleetIds;
 
     /**
-     * @var integer 结果返回最大数量，最小值0，最大值1000
+     * @var integer 结果返回最大数量，默认值20，最大值100
      */
     public $Limit;
 
@@ -46,7 +46,7 @@ class DescribeFleetAttributesRequest extends AbstractModel
 
     /**
      * @param array $FleetIds 服务器舰队 Ids
-     * @param integer $Limit 结果返回最大数量，最小值0，最大值1000
+     * @param integer $Limit 结果返回最大数量，默认值20，最大值100
      * @param integer $Offset 返回结果偏移，最小值0
      */
     function __construct()

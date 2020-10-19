@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRuntimeConfiguration返回参数结构体
  *
- * @method RuntimeConfiguration getRuntimeConfiguration() 获取服务部署运行配置信息
+ * @method RuntimeConfiguration getRuntimeConfiguration() 获取服务器舰队运行配置信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRuntimeConfiguration(RuntimeConfiguration $RuntimeConfiguration) 设置服务部署运行配置信息
+ * @method void setRuntimeConfiguration(RuntimeConfiguration $RuntimeConfiguration) 设置服务器舰队运行配置信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeRuntimeConfigurationResponse extends AbstractModel
 {
     /**
-     * @var RuntimeConfiguration 服务部署运行配置信息
+     * @var RuntimeConfiguration 服务器舰队运行配置信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuntimeConfiguration;
@@ -41,7 +41,7 @@ class DescribeRuntimeConfigurationResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param RuntimeConfiguration $RuntimeConfiguration 服务部署运行配置信息
+     * @param RuntimeConfiguration $RuntimeConfiguration 服务器舰队运行配置信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

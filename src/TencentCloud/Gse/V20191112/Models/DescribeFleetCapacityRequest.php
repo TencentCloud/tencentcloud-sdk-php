@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeFleetCapacity请求参数结构体
  *
- * @method array getFleetIds() 获取服务部署 Id列表
- * @method void setFleetIds(array $FleetIds) 设置服务部署 Id列表
- * @method integer getLimit() 获取结果返回最大数量
- * @method void setLimit(integer $Limit) 设置结果返回最大数量
- * @method integer getOffset() 获取返回结果偏移
- * @method void setOffset(integer $Offset) 设置返回结果偏移
+ * @method array getFleetIds() 获取服务器舰队ID列表
+ * @method void setFleetIds(array $FleetIds) 设置服务器舰队ID列表
+ * @method integer getLimit() 获取结果返回最大数量，最大值 100
+ * @method void setLimit(integer $Limit) 设置结果返回最大数量，最大值 100
+ * @method integer getOffset() 获取返回结果偏移，最小值 0
+ * @method void setOffset(integer $Offset) 设置返回结果偏移，最小值 0
  */
 class DescribeFleetCapacityRequest extends AbstractModel
 {
     /**
-     * @var array 服务部署 Id列表
+     * @var array 服务器舰队ID列表
      */
     public $FleetIds;
 
     /**
-     * @var integer 结果返回最大数量
+     * @var integer 结果返回最大数量，最大值 100
      */
     public $Limit;
 
     /**
-     * @var integer 返回结果偏移
+     * @var integer 返回结果偏移，最小值 0
      */
     public $Offset;
 
     /**
-     * @param array $FleetIds 服务部署 Id列表
-     * @param integer $Limit 结果返回最大数量
-     * @param integer $Offset 返回结果偏移
+     * @param array $FleetIds 服务器舰队ID列表
+     * @param integer $Limit 结果返回最大数量，最大值 100
+     * @param integer $Offset 返回结果偏移，最小值 0
      */
     function __construct()
     {

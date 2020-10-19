@@ -20,46 +20,53 @@ use TencentCloud\Common\AbstractModel;
 /**
  * PutScalingPolicy请求参数结构体
  *
- * @method string getFleetId() 获取基于规则的扩缩容配置服务部署ID
- * @method void setFleetId(string $FleetId) 设置基于规则的扩缩容配置服务部署ID
- * @method string getName() 获取策略名称
- * @method void setName(string $Name) 设置策略名称
- * @method integer getScalingAdjustment() 获取扩缩容调整值
- * @method void setScalingAdjustment(integer $ScalingAdjustment) 设置扩缩容调整值
- * @method string getScalingAdjustmentType() 获取扩缩容调整类型
- * @method void setScalingAdjustmentType(string $ScalingAdjustmentType) 设置扩缩容调整类型
+ * @method string getFleetId() 获取扩缩容配置服务器舰队ID
+ * @method void setFleetId(string $FleetId) 设置扩缩容配置服务器舰队ID
+ * @method string getName() 获取扩缩容策略名称，最小长度为1，最大长度为1024
+ * @method void setName(string $Name) 设置扩缩容策略名称，最小长度为1，最大长度为1024
+ * @method integer getScalingAdjustment() 获取扩缩容调整值，ScalingAdjustmentType取值PercentChangeInCapacity时，取值范围-99~99
+ScalingAdjustmentType取值ChangeInCapacity或ExactCapacity时，最小值要缩容的最多CVM个数，最大值为实际最大的CVM个数限额
+ * @method void setScalingAdjustment(integer $ScalingAdjustment) 设置扩缩容调整值，ScalingAdjustmentType取值PercentChangeInCapacity时，取值范围-99~99
+ScalingAdjustmentType取值ChangeInCapacity或ExactCapacity时，最小值要缩容的最多CVM个数，最大值为实际最大的CVM个数限额
+ * @method string getScalingAdjustmentType() 获取扩缩容调整类型，取值（ChangeInCapacity，ExactCapacity，PercentChangeInCapacity）
+ * @method void setScalingAdjustmentType(string $ScalingAdjustmentType) 设置扩缩容调整类型，取值（ChangeInCapacity，ExactCapacity，PercentChangeInCapacity）
  * @method float getThreshold() 获取扩缩容指标阈值
  * @method void setThreshold(float $Threshold) 设置扩缩容指标阈值
- * @method string getComparisonOperator() 获取策略比较符，取值：>,>=,<,<=
- * @method void setComparisonOperator(string $ComparisonOperator) 设置策略比较符，取值：>,>=,<,<=
- * @method integer getEvaluationPeriods() 获取持续时间长度（分钟）
- * @method void setEvaluationPeriods(integer $EvaluationPeriods) 设置持续时间长度（分钟）
- * @method string getMetricName() 获取指标名称
- * @method void setMetricName(string $MetricName) 设置指标名称
+ * @method string getComparisonOperator() 获取扩缩容策略比较符，取值：>,>=,<,<=
+ * @method void setComparisonOperator(string $ComparisonOperator) 设置扩缩容策略比较符，取值：>,>=,<,<=
+ * @method integer getEvaluationPeriods() 获取单个策略持续时间长度（分钟）
+ * @method void setEvaluationPeriods(integer $EvaluationPeriods) 设置单个策略持续时间长度（分钟）
+ * @method string getMetricName() 获取扩缩容参与计算的指标名称，PolicyType取值RuleBased，
+MetricName取值（AvailableGameServerSessions，AvailableCustomCount，PercentAvailableCustomCount，ActiveInstances，IdleInstances，CurrentPlayerSessions和PercentIdleInstances）；
+PolicyType取值TargetBased时，MetricName取值PercentAvailableGameSessions
+ * @method void setMetricName(string $MetricName) 设置扩缩容参与计算的指标名称，PolicyType取值RuleBased，
+MetricName取值（AvailableGameServerSessions，AvailableCustomCount，PercentAvailableCustomCount，ActiveInstances，IdleInstances，CurrentPlayerSessions和PercentIdleInstances）；
+PolicyType取值TargetBased时，MetricName取值PercentAvailableGameSessions
  * @method string getPolicyType() 获取策略类型，取值：TargetBased表示基于目标的策略；RuleBased表示基于规则的策略
  * @method void setPolicyType(string $PolicyType) 设置策略类型，取值：TargetBased表示基于目标的策略；RuleBased表示基于规则的策略
- * @method TargetConfiguration getTargetConfiguration() 获取扩缩容配置类型
- * @method void setTargetConfiguration(TargetConfiguration $TargetConfiguration) 设置扩缩容配置类型
+ * @method TargetConfiguration getTargetConfiguration() 获取扩缩容目标值配置，只有TargetBased类型的策略生效
+ * @method void setTargetConfiguration(TargetConfiguration $TargetConfiguration) 设置扩缩容目标值配置，只有TargetBased类型的策略生效
  */
 class PutScalingPolicyRequest extends AbstractModel
 {
     /**
-     * @var string 基于规则的扩缩容配置服务部署ID
+     * @var string 扩缩容配置服务器舰队ID
      */
     public $FleetId;
 
     /**
-     * @var string 策略名称
+     * @var string 扩缩容策略名称，最小长度为1，最大长度为1024
      */
     public $Name;
 
     /**
-     * @var integer 扩缩容调整值
+     * @var integer 扩缩容调整值，ScalingAdjustmentType取值PercentChangeInCapacity时，取值范围-99~99
+ScalingAdjustmentType取值ChangeInCapacity或ExactCapacity时，最小值要缩容的最多CVM个数，最大值为实际最大的CVM个数限额
      */
     public $ScalingAdjustment;
 
     /**
-     * @var string 扩缩容调整类型
+     * @var string 扩缩容调整类型，取值（ChangeInCapacity，ExactCapacity，PercentChangeInCapacity）
      */
     public $ScalingAdjustmentType;
 
@@ -69,17 +76,19 @@ class PutScalingPolicyRequest extends AbstractModel
     public $Threshold;
 
     /**
-     * @var string 策略比较符，取值：>,>=,<,<=
+     * @var string 扩缩容策略比较符，取值：>,>=,<,<=
      */
     public $ComparisonOperator;
 
     /**
-     * @var integer 持续时间长度（分钟）
+     * @var integer 单个策略持续时间长度（分钟）
      */
     public $EvaluationPeriods;
 
     /**
-     * @var string 指标名称
+     * @var string 扩缩容参与计算的指标名称，PolicyType取值RuleBased，
+MetricName取值（AvailableGameServerSessions，AvailableCustomCount，PercentAvailableCustomCount，ActiveInstances，IdleInstances，CurrentPlayerSessions和PercentIdleInstances）；
+PolicyType取值TargetBased时，MetricName取值PercentAvailableGameSessions
      */
     public $MetricName;
 
@@ -89,21 +98,24 @@ class PutScalingPolicyRequest extends AbstractModel
     public $PolicyType;
 
     /**
-     * @var TargetConfiguration 扩缩容配置类型
+     * @var TargetConfiguration 扩缩容目标值配置，只有TargetBased类型的策略生效
      */
     public $TargetConfiguration;
 
     /**
-     * @param string $FleetId 基于规则的扩缩容配置服务部署ID
-     * @param string $Name 策略名称
-     * @param integer $ScalingAdjustment 扩缩容调整值
-     * @param string $ScalingAdjustmentType 扩缩容调整类型
+     * @param string $FleetId 扩缩容配置服务器舰队ID
+     * @param string $Name 扩缩容策略名称，最小长度为1，最大长度为1024
+     * @param integer $ScalingAdjustment 扩缩容调整值，ScalingAdjustmentType取值PercentChangeInCapacity时，取值范围-99~99
+ScalingAdjustmentType取值ChangeInCapacity或ExactCapacity时，最小值要缩容的最多CVM个数，最大值为实际最大的CVM个数限额
+     * @param string $ScalingAdjustmentType 扩缩容调整类型，取值（ChangeInCapacity，ExactCapacity，PercentChangeInCapacity）
      * @param float $Threshold 扩缩容指标阈值
-     * @param string $ComparisonOperator 策略比较符，取值：>,>=,<,<=
-     * @param integer $EvaluationPeriods 持续时间长度（分钟）
-     * @param string $MetricName 指标名称
+     * @param string $ComparisonOperator 扩缩容策略比较符，取值：>,>=,<,<=
+     * @param integer $EvaluationPeriods 单个策略持续时间长度（分钟）
+     * @param string $MetricName 扩缩容参与计算的指标名称，PolicyType取值RuleBased，
+MetricName取值（AvailableGameServerSessions，AvailableCustomCount，PercentAvailableCustomCount，ActiveInstances，IdleInstances，CurrentPlayerSessions和PercentIdleInstances）；
+PolicyType取值TargetBased时，MetricName取值PercentAvailableGameSessions
      * @param string $PolicyType 策略类型，取值：TargetBased表示基于目标的策略；RuleBased表示基于规则的策略
-     * @param TargetConfiguration $TargetConfiguration 扩缩容配置类型
+     * @param TargetConfiguration $TargetConfiguration 扩缩容目标值配置，只有TargetBased类型的策略生效
      */
     function __construct()
     {

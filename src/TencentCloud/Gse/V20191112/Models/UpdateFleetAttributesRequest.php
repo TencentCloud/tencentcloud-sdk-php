@@ -22,16 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getFleetId() 获取服务器舰队 Id
  * @method void setFleetId(string $FleetId) 设置服务器舰队 Id
- * @method string getDescription() 获取服务器舰队描述
- * @method void setDescription(string $Description) 设置服务器舰队描述
- * @method string getName() 获取服务器舰队名称
- * @method void setName(string $Name) 设置服务器舰队名称
- * @method string getNewGameSessionProtectionPolicy() 获取新建游戏会话保护策略
- * @method void setNewGameSessionProtectionPolicy(string $NewGameSessionProtectionPolicy) 设置新建游戏会话保护策略
+ * @method string getDescription() 获取服务器舰队描述，最小长度0，最大长度100
+ * @method void setDescription(string $Description) 设置服务器舰队描述，最小长度0，最大长度100
+ * @method string getName() 获取服务器舰队名称，最小长度1，最大长度50
+ * @method void setName(string $Name) 设置服务器舰队名称，最小长度1，最大长度50
+ * @method string getNewGameSessionProtectionPolicy() 获取保护策略：不保护NoProtection、完全保护FullProtection、时限保护TimeLimitProtection
+ * @method void setNewGameSessionProtectionPolicy(string $NewGameSessionProtectionPolicy) 设置保护策略：不保护NoProtection、完全保护FullProtection、时限保护TimeLimitProtection
  * @method ResourceCreationLimitPolicy getResourceCreationLimitPolicy() 获取资源创建限制策略
  * @method void setResourceCreationLimitPolicy(ResourceCreationLimitPolicy $ResourceCreationLimitPolicy) 设置资源创建限制策略
- * @method integer getGameServerSessionProtectionTimeLimit() 获取时限保护超时时间，默认60分钟
- * @method void setGameServerSessionProtectionTimeLimit(integer $GameServerSessionProtectionTimeLimit) 设置时限保护超时时间，默认60分钟
+ * @method integer getGameServerSessionProtectionTimeLimit() 获取时限保护超时时间，默认60分钟，最小值5，最大值1440；当NewGameSessionProtectionPolicy为TimeLimitProtection时参数有效
+ * @method void setGameServerSessionProtectionTimeLimit(integer $GameServerSessionProtectionTimeLimit) 设置时限保护超时时间，默认60分钟，最小值5，最大值1440；当NewGameSessionProtectionPolicy为TimeLimitProtection时参数有效
  */
 class UpdateFleetAttributesRequest extends AbstractModel
 {
@@ -41,17 +41,17 @@ class UpdateFleetAttributesRequest extends AbstractModel
     public $FleetId;
 
     /**
-     * @var string 服务器舰队描述
+     * @var string 服务器舰队描述，最小长度0，最大长度100
      */
     public $Description;
 
     /**
-     * @var string 服务器舰队名称
+     * @var string 服务器舰队名称，最小长度1，最大长度50
      */
     public $Name;
 
     /**
-     * @var string 新建游戏会话保护策略
+     * @var string 保护策略：不保护NoProtection、完全保护FullProtection、时限保护TimeLimitProtection
      */
     public $NewGameSessionProtectionPolicy;
 
@@ -61,17 +61,17 @@ class UpdateFleetAttributesRequest extends AbstractModel
     public $ResourceCreationLimitPolicy;
 
     /**
-     * @var integer 时限保护超时时间，默认60分钟
+     * @var integer 时限保护超时时间，默认60分钟，最小值5，最大值1440；当NewGameSessionProtectionPolicy为TimeLimitProtection时参数有效
      */
     public $GameServerSessionProtectionTimeLimit;
 
     /**
      * @param string $FleetId 服务器舰队 Id
-     * @param string $Description 服务器舰队描述
-     * @param string $Name 服务器舰队名称
-     * @param string $NewGameSessionProtectionPolicy 新建游戏会话保护策略
+     * @param string $Description 服务器舰队描述，最小长度0，最大长度100
+     * @param string $Name 服务器舰队名称，最小长度1，最大长度50
+     * @param string $NewGameSessionProtectionPolicy 保护策略：不保护NoProtection、完全保护FullProtection、时限保护TimeLimitProtection
      * @param ResourceCreationLimitPolicy $ResourceCreationLimitPolicy 资源创建限制策略
-     * @param integer $GameServerSessionProtectionTimeLimit 时限保护超时时间，默认60分钟
+     * @param integer $GameServerSessionProtectionTimeLimit 时限保护超时时间，默认60分钟，最小值5，最大值1440；当NewGameSessionProtectionPolicy为TimeLimitProtection时参数有效
      */
     function __construct()
     {

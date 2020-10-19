@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeFleetCapacity返回参数结构体
  *
- * @method array getFleetCapacity() 获取服务部署容量配置
+ * @method array getFleetCapacity() 获取服务器舰队的容量配置
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFleetCapacity(array $FleetCapacity) 设置服务部署容量配置
+ * @method void setFleetCapacity(array $FleetCapacity) 设置服务器舰队的容量配置
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotalCount() 获取结果返回最大数量
 注意：此字段可能返回 null，表示取不到有效值。
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeFleetCapacityResponse extends AbstractModel
 {
     /**
-     * @var array 服务部署容量配置
+     * @var array 服务器舰队的容量配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FleetCapacity;
@@ -51,7 +51,7 @@ class DescribeFleetCapacityResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $FleetCapacity 服务部署容量配置
+     * @param array $FleetCapacity 服务器舰队的容量配置
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalCount 结果返回最大数量
 注意：此字段可能返回 null，表示取不到有效值。

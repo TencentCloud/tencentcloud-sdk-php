@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeFleetStatisticDetails请求参数结构体
  *
- * @method string getFleetId() 获取服务部署ID
- * @method void setFleetId(string $FleetId) 设置服务部署ID
- * @method string getBeginTime() 获取查询开始时间
- * @method void setBeginTime(string $BeginTime) 设置查询开始时间
- * @method string getEndTime() 获取查询结束时间
- * @method void setEndTime(string $EndTime) 设置查询结束时间
+ * @method string getFleetId() 获取服务器舰队ID
+ * @method void setFleetId(string $FleetId) 设置服务器舰队ID
+ * @method string getBeginTime() 获取查询开始时间，时间格式：YYYY-MM-DD hh:mm:ss
+ * @method void setBeginTime(string $BeginTime) 设置查询开始时间，时间格式：YYYY-MM-DD hh:mm:ss
+ * @method string getEndTime() 获取查询结束时间，时间格式：YYYY-MM-DD hh:mm:ss
+ * @method void setEndTime(string $EndTime) 设置查询结束时间，时间格式：YYYY-MM-DD hh:mm:ss
  * @method integer getLimit() 获取结果返回最大数量，最小值0，最大值100
  * @method void setLimit(integer $Limit) 设置结果返回最大数量，最小值0，最大值100
  * @method integer getOffset() 获取返回结果偏移，最小值0
@@ -34,17 +34,17 @@ use TencentCloud\Common\AbstractModel;
 class DescribeFleetStatisticDetailsRequest extends AbstractModel
 {
     /**
-     * @var string 服务部署ID
+     * @var string 服务器舰队ID
      */
     public $FleetId;
 
     /**
-     * @var string 查询开始时间
+     * @var string 查询开始时间，时间格式：YYYY-MM-DD hh:mm:ss
      */
     public $BeginTime;
 
     /**
-     * @var string 查询结束时间
+     * @var string 查询结束时间，时间格式：YYYY-MM-DD hh:mm:ss
      */
     public $EndTime;
 
@@ -59,9 +59,9 @@ class DescribeFleetStatisticDetailsRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @param string $FleetId 服务部署ID
-     * @param string $BeginTime 查询开始时间
-     * @param string $EndTime 查询结束时间
+     * @param string $FleetId 服务器舰队ID
+     * @param string $BeginTime 查询开始时间，时间格式：YYYY-MM-DD hh:mm:ss
+     * @param string $EndTime 查询结束时间，时间格式：YYYY-MM-DD hh:mm:ss
      * @param integer $Limit 结果返回最大数量，最小值0，最大值100
      * @param integer $Offset 返回结果偏移，最小值0
      */

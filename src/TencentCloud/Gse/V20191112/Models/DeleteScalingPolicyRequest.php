@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteScalingPolicy请求参数结构体
  *
- * @method string getFleetId() 获取服务部署ID
- * @method void setFleetId(string $FleetId) 设置服务部署ID
- * @method string getName() 获取策略名称
- * @method void setName(string $Name) 设置策略名称
+ * @method string getFleetId() 获取服务器舰队ID
+ * @method void setFleetId(string $FleetId) 设置服务器舰队ID
+ * @method string getName() 获取扩缩容策略名称，最小长度为0，最大长度为1024
+ * @method void setName(string $Name) 设置扩缩容策略名称，最小长度为0，最大长度为1024
  */
 class DeleteScalingPolicyRequest extends AbstractModel
 {
     /**
-     * @var string 服务部署ID
+     * @var string 服务器舰队ID
      */
     public $FleetId;
 
     /**
-     * @var string 策略名称
+     * @var string 扩缩容策略名称，最小长度为0，最大长度为1024
      */
     public $Name;
 
     /**
-     * @param string $FleetId 服务部署ID
-     * @param string $Name 策略名称
+     * @param string $FleetId 服务器舰队ID
+     * @param string $Name 扩缩容策略名称，最小长度为0，最大长度为1024
      */
     function __construct()
     {

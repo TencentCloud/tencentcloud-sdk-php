@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 游戏服务进程
  *
- * @method integer getConcurrentExecutions() 获取并发执行数量
- * @method void setConcurrentExecutions(integer $ConcurrentExecutions) 设置并发执行数量
- * @method string getLaunchPath() 获取启动路径：/local/game/ 或 C:\game\
- * @method void setLaunchPath(string $LaunchPath) 设置启动路径：/local/game/ 或 C:\game\
- * @method string getParameters() 获取启动参数
- * @method void setParameters(string $Parameters) 设置启动参数
+ * @method integer getConcurrentExecutions() 获取并发执行数量，所有进程并发执行总数最小值1，最大值50
+ * @method void setConcurrentExecutions(integer $ConcurrentExecutions) 设置并发执行数量，所有进程并发执行总数最小值1，最大值50
+ * @method string getLaunchPath() 获取启动路径：Linux路径/local/game/ 或WIndows路径C:\game\，最小长度1，最大长度1024
+ * @method void setLaunchPath(string $LaunchPath) 设置启动路径：Linux路径/local/game/ 或WIndows路径C:\game\，最小长度1，最大长度1024
+ * @method string getParameters() 获取启动参数，最小长度0，最大长度1024
+ * @method void setParameters(string $Parameters) 设置启动参数，最小长度0，最大长度1024
  */
 class ServerProcesse extends AbstractModel
 {
     /**
-     * @var integer 并发执行数量
+     * @var integer 并发执行数量，所有进程并发执行总数最小值1，最大值50
      */
     public $ConcurrentExecutions;
 
     /**
-     * @var string 启动路径：/local/game/ 或 C:\game\
+     * @var string 启动路径：Linux路径/local/game/ 或WIndows路径C:\game\，最小长度1，最大长度1024
      */
     public $LaunchPath;
 
     /**
-     * @var string 启动参数
+     * @var string 启动参数，最小长度0，最大长度1024
      */
     public $Parameters;
 
     /**
-     * @param integer $ConcurrentExecutions 并发执行数量
-     * @param string $LaunchPath 启动路径：/local/game/ 或 C:\game\
-     * @param string $Parameters 启动参数
+     * @param integer $ConcurrentExecutions 并发执行数量，所有进程并发执行总数最小值1，最大值50
+     * @param string $LaunchPath 启动路径：Linux路径/local/game/ 或WIndows路径C:\game\，最小长度1，最大长度1024
+     * @param string $Parameters 启动参数，最小长度0，最大长度1024
      */
     function __construct()
     {

@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIdCard(string $IdCard) 设置身份证
  * @method string getName() 获取姓名
  * @method void setName(string $Name) 设置姓名
- * @method string getResult() 获取业务核验结果，如下几个结果码会计费
- * @method void setResult(string $Result) 设置业务核验结果，如下几个结果码会计费
+ * @method string getResult() 获取业务核验结果，参考https://cloud.tencent.com/document/product/1007/47912
+ * @method void setResult(string $Result) 设置业务核验结果，参考https://cloud.tencent.com/document/product/1007/47912
  * @method string getDescription() 获取业务核验描述
  * @method void setDescription(string $Description) 设置业务核验描述
  * @method float getSimilarity() 获取相似度，0-100，数值越大相似度越高
@@ -58,7 +58,7 @@ class GetFaceIdResultResponse extends AbstractModel
     public $Name;
 
     /**
-     * @var string 业务核验结果，如下几个结果码会计费
+     * @var string 业务核验结果，参考https://cloud.tencent.com/document/product/1007/47912
      */
     public $Result;
 
@@ -98,7 +98,7 @@ class GetFaceIdResultResponse extends AbstractModel
     /**
      * @param string $IdCard 身份证
      * @param string $Name 姓名
-     * @param string $Result 业务核验结果，如下几个结果码会计费
+     * @param string $Result 业务核验结果，参考https://cloud.tencent.com/document/product/1007/47912
      * @param string $Description 业务核验描述
      * @param float $Similarity 相似度，0-100，数值越大相似度越高
      * @param string $VideoBase64 用户核验的视频

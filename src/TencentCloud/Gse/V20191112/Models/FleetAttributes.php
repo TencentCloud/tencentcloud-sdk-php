@@ -62,9 +62,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(string $Status) 设置状态：新建、下载中、验证中、生成中、激活中、活跃、异常、删除中、结束
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getStoppedActions() 获取服务器舰队停止状态
+ * @method array getStoppedActions() 获取服务器舰队停止状态，为空时表示自动扩缩容
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStoppedActions(array $StoppedActions) 设置服务器舰队停止状态
+ * @method void setStoppedActions(array $StoppedActions) 设置服务器舰队停止状态，为空时表示自动扩缩容
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTerminationTime() 获取服务器舰队终止时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -151,7 +151,7 @@ class FleetAttributes extends AbstractModel
     public $Status;
 
     /**
-     * @var array 服务器舰队停止状态
+     * @var array 服务器舰队停止状态，为空时表示自动扩缩容
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StoppedActions;
@@ -196,7 +196,7 @@ class FleetAttributes extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Status 状态：新建、下载中、验证中、生成中、激活中、活跃、异常、删除中、结束
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $StoppedActions 服务器舰队停止状态
+     * @param array $StoppedActions 服务器舰队停止状态，为空时表示自动扩缩容
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TerminationTime 服务器舰队终止时间
 注意：此字段可能返回 null，表示取不到有效值。

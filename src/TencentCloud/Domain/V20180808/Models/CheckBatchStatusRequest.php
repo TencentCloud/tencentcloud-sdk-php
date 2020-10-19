@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CheckBatchStatus请求参数结构体
  *
- * @method array getLogIds() 获取批量任务id数组，最多 200 个
- * @method void setLogIds(array $LogIds) 设置批量任务id数组，最多 200 个
+ * @method array getLogIds() 获取操作日志 ID数组，最多 200 个
+ * @method void setLogIds(array $LogIds) 设置操作日志 ID数组，最多 200 个
  */
 class CheckBatchStatusRequest extends AbstractModel
 {
     /**
-     * @var array 批量任务id数组，最多 200 个
+     * @var array 操作日志 ID数组，最多 200 个
      */
     public $LogIds;
 
     /**
-     * @param array $LogIds 批量任务id数组，最多 200 个
+     * @param array $LogIds 操作日志 ID数组，最多 200 个
      */
     function __construct()
     {

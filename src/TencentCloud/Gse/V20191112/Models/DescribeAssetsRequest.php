@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAssets请求参数结构体
  *
- * @method string getAssetRegion() 获取生成包可部署地域
- * @method void setAssetRegion(string $AssetRegion) 设置生成包可部署地域
+ * @method string getAssetRegion() 获取生成包支持的可部署 [地域列表](https://cloud.tencent.com/document/api/1165/42053#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8)
+ * @method void setAssetRegion(string $AssetRegion) 设置生成包支持的可部署 [地域列表](https://cloud.tencent.com/document/api/1165/42053#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8)
  * @method integer getOffset() 获取偏移，代表页数，与asset实际数量相关
  * @method void setOffset(integer $Offset) 设置偏移，代表页数，与asset实际数量相关
  * @method integer getLimit() 获取前端界面每页显示的最大条数，不超过100
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeAssetsRequest extends AbstractModel
 {
     /**
-     * @var string 生成包可部署地域
+     * @var string 生成包支持的可部署 [地域列表](https://cloud.tencent.com/document/api/1165/42053#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8)
      */
     public $AssetRegion;
 
@@ -52,7 +52,7 @@ class DescribeAssetsRequest extends AbstractModel
     public $Filter;
 
     /**
-     * @param string $AssetRegion 生成包可部署地域
+     * @param string $AssetRegion 生成包支持的可部署 [地域列表](https://cloud.tencent.com/document/api/1165/42053#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8)
      * @param integer $Offset 偏移，代表页数，与asset实际数量相关
      * @param integer $Limit 前端界面每页显示的最大条数，不超过100
      * @param string $Filter 搜索条件，支持包ID或包名字过滤，该字段会逐步废弃，建议使用 Filters 字段

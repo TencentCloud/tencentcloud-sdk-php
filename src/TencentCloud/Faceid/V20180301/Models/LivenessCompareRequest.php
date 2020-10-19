@@ -20,14 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * LivenessCompare请求参数结构体
  *
- * @method string getImageBase64() 获取用于人脸比对的照片，图片的BASE64值；
-BASE64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
- * @method void setImageBase64(string $ImageBase64) 设置用于人脸比对的照片，图片的BASE64值；
-BASE64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
- * @method string getVideoBase64() 获取用于活体检测的视频，视频的BASE64值；
-BASE64编码后的大小不超过8M，支持mp4、avi、flv格式。
- * @method void setVideoBase64(string $VideoBase64) 设置用于活体检测的视频，视频的BASE64值；
-BASE64编码后的大小不超过8M，支持mp4、avi、flv格式。
+ * @method string getImageBase64() 获取用于人脸比对的照片，图片的Base64值；
+Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
+请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
+ * @method void setImageBase64(string $ImageBase64) 设置用于人脸比对的照片，图片的Base64值；
+Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
+请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
+ * @method string getVideoBase64() 获取用于活体检测的视频，视频的Base64值；
+Base64编码后的大小不超过8M，支持mp4、avi、flv格式。
+请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
+ * @method void setVideoBase64(string $VideoBase64) 设置用于活体检测的视频，视频的Base64值；
+Base64编码后的大小不超过8M，支持mp4、avi、flv格式。
+请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
  * @method string getLivenessType() 获取活体检测类型，取值：LIP/ACTION/SILENT。
 LIP为数字模式，ACTION为动作模式，SILENT为静默模式，三种模式选择一种传入。
  * @method void setLivenessType(string $LivenessType) 设置活体检测类型，取值：LIP/ACTION/SILENT。
@@ -50,14 +54,16 @@ LIP为数字模式，ACTION为动作模式，SILENT为静默模式，三种模�
 class LivenessCompareRequest extends AbstractModel
 {
     /**
-     * @var string 用于人脸比对的照片，图片的BASE64值；
-BASE64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
+     * @var string 用于人脸比对的照片，图片的Base64值；
+Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
+请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
      */
     public $ImageBase64;
 
     /**
-     * @var string 用于活体检测的视频，视频的BASE64值；
-BASE64编码后的大小不超过8M，支持mp4、avi、flv格式。
+     * @var string 用于活体检测的视频，视频的Base64值；
+Base64编码后的大小不超过8M，支持mp4、avi、flv格式。
+请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
      */
     public $VideoBase64;
 
@@ -83,10 +89,12 @@ LIP为数字模式，ACTION为动作模式，SILENT为静默模式，三种模�
     public $Optional;
 
     /**
-     * @param string $ImageBase64 用于人脸比对的照片，图片的BASE64值；
-BASE64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
-     * @param string $VideoBase64 用于活体检测的视频，视频的BASE64值；
-BASE64编码后的大小不超过8M，支持mp4、avi、flv格式。
+     * @param string $ImageBase64 用于人脸比对的照片，图片的Base64值；
+Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
+请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
+     * @param string $VideoBase64 用于活体检测的视频，视频的Base64值；
+Base64编码后的大小不超过8M，支持mp4、avi、flv格式。
+请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
      * @param string $LivenessType 活体检测类型，取值：LIP/ACTION/SILENT。
 LIP为数字模式，ACTION为动作模式，SILENT为静默模式，三种模式选择一种传入。
      * @param string $ValidateData 数字模式传参：数字验证码(1234)，需先调用接口获取数字验证码；

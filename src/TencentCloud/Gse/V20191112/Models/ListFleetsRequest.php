@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getAssetId() 获取生成包 Id
  * @method void setAssetId(string $AssetId) 设置生成包 Id
- * @method integer getLimit() 获取结果返回最大值，最小值0，最大值1000
- * @method void setLimit(integer $Limit) 设置结果返回最大值，最小值0，最大值1000
- * @method integer getOffset() 获取结果返回偏移，最小值0
- * @method void setOffset(integer $Offset) 设置结果返回偏移，最小值0
+ * @method integer getLimit() 获取结果返回最大值，暂未使用
+ * @method void setLimit(integer $Limit) 设置结果返回最大值，暂未使用
+ * @method integer getOffset() 获取结果返回偏移，暂未使用
+ * @method void setOffset(integer $Offset) 设置结果返回偏移，暂未使用
  */
 class ListFleetsRequest extends AbstractModel
 {
@@ -35,19 +35,19 @@ class ListFleetsRequest extends AbstractModel
     public $AssetId;
 
     /**
-     * @var integer 结果返回最大值，最小值0，最大值1000
+     * @var integer 结果返回最大值，暂未使用
      */
     public $Limit;
 
     /**
-     * @var integer 结果返回偏移，最小值0
+     * @var integer 结果返回偏移，暂未使用
      */
     public $Offset;
 
     /**
      * @param string $AssetId 生成包 Id
-     * @param integer $Limit 结果返回最大值，最小值0，最大值1000
-     * @param integer $Offset 结果返回偏移，最小值0
+     * @param integer $Limit 结果返回最大值，暂未使用
+     * @param integer $Offset 结果返回偏移，暂未使用
      */
     function __construct()
     {

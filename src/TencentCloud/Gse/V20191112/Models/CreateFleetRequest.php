@@ -26,24 +26,24 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDescription(string $Description) 设置描述，最小长度0，最大长度100
  * @method array getInboundPermissions() 获取网络配置
  * @method void setInboundPermissions(array $InboundPermissions) 设置网络配置
- * @method string getInstanceType() 获取服务器类型，例如S5.LARGE8
- * @method void setInstanceType(string $InstanceType) 设置服务器类型，例如S5.LARGE8
+ * @method string getInstanceType() 获取服务器类型，参数根据[获取服务器实例类型列表](https://cloud.tencent.com/document/product/1165/48732)接口获取。
+ * @method void setInstanceType(string $InstanceType) 设置服务器类型，参数根据[获取服务器实例类型列表](https://cloud.tencent.com/document/product/1165/48732)接口获取。
  * @method string getFleetType() 获取服务器舰队类型，目前只支持ON_DEMAND类型
  * @method void setFleetType(string $FleetType) 设置服务器舰队类型，目前只支持ON_DEMAND类型
  * @method string getName() 获取服务器舰队名称，最小长度1，最大长度50
  * @method void setName(string $Name) 设置服务器舰队名称，最小长度1，最大长度50
  * @method string getNewGameServerSessionProtectionPolicy() 获取保护策略：不保护NoProtection、完全保护FullProtection、时限保护TimeLimitProtection
  * @method void setNewGameServerSessionProtectionPolicy(string $NewGameServerSessionProtectionPolicy) 设置保护策略：不保护NoProtection、完全保护FullProtection、时限保护TimeLimitProtection
- * @method string getPeerVpcId() 获取VPC 网络 Id，弃用，对等链接已不再使用
- * @method void setPeerVpcId(string $PeerVpcId) 设置VPC 网络 Id，弃用，对等链接已不再使用
+ * @method string getPeerVpcId() 获取VPC 网络 Id，对等连接已不再使用
+ * @method void setPeerVpcId(string $PeerVpcId) 设置VPC 网络 Id，对等连接已不再使用
  * @method ResourceCreationLimitPolicy getResourceCreationLimitPolicy() 获取资源创建限制策略
  * @method void setResourceCreationLimitPolicy(ResourceCreationLimitPolicy $ResourceCreationLimitPolicy) 设置资源创建限制策略
  * @method RuntimeConfiguration getRuntimeConfiguration() 获取进程配置
  * @method void setRuntimeConfiguration(RuntimeConfiguration $RuntimeConfiguration) 设置进程配置
- * @method string getSubNetId() 获取VPC 子网，弃用，对等链接已不再使用
- * @method void setSubNetId(string $SubNetId) 设置VPC 子网，弃用，对等链接已不再使用
- * @method integer getGameServerSessionProtectionTimeLimit() 获取时限保护超时时间，默认60分钟，最小值5，最大值1440
- * @method void setGameServerSessionProtectionTimeLimit(integer $GameServerSessionProtectionTimeLimit) 设置时限保护超时时间，默认60分钟，最小值5，最大值1440
+ * @method string getSubNetId() 获取VPC 子网，对等连接已不再使用
+ * @method void setSubNetId(string $SubNetId) 设置VPC 子网，对等连接已不再使用
+ * @method integer getGameServerSessionProtectionTimeLimit() 获取时限保护超时时间，默认60分钟，最小值5，最大值1440；当NewGameSessionProtectionPolicy为TimeLimitProtection时参数有效
+ * @method void setGameServerSessionProtectionTimeLimit(integer $GameServerSessionProtectionTimeLimit) 设置时限保护超时时间，默认60分钟，最小值5，最大值1440；当NewGameSessionProtectionPolicy为TimeLimitProtection时参数有效
  */
 class CreateFleetRequest extends AbstractModel
 {
@@ -63,7 +63,7 @@ class CreateFleetRequest extends AbstractModel
     public $InboundPermissions;
 
     /**
-     * @var string 服务器类型，例如S5.LARGE8
+     * @var string 服务器类型，参数根据[获取服务器实例类型列表](https://cloud.tencent.com/document/product/1165/48732)接口获取。
      */
     public $InstanceType;
 
@@ -83,7 +83,7 @@ class CreateFleetRequest extends AbstractModel
     public $NewGameServerSessionProtectionPolicy;
 
     /**
-     * @var string VPC 网络 Id，弃用，对等链接已不再使用
+     * @var string VPC 网络 Id，对等连接已不再使用
      */
     public $PeerVpcId;
 
@@ -98,12 +98,12 @@ class CreateFleetRequest extends AbstractModel
     public $RuntimeConfiguration;
 
     /**
-     * @var string VPC 子网，弃用，对等链接已不再使用
+     * @var string VPC 子网，对等连接已不再使用
      */
     public $SubNetId;
 
     /**
-     * @var integer 时限保护超时时间，默认60分钟，最小值5，最大值1440
+     * @var integer 时限保护超时时间，默认60分钟，最小值5，最大值1440；当NewGameSessionProtectionPolicy为TimeLimitProtection时参数有效
      */
     public $GameServerSessionProtectionTimeLimit;
 
@@ -111,15 +111,15 @@ class CreateFleetRequest extends AbstractModel
      * @param string $AssetId 生成包 Id
      * @param string $Description 描述，最小长度0，最大长度100
      * @param array $InboundPermissions 网络配置
-     * @param string $InstanceType 服务器类型，例如S5.LARGE8
+     * @param string $InstanceType 服务器类型，参数根据[获取服务器实例类型列表](https://cloud.tencent.com/document/product/1165/48732)接口获取。
      * @param string $FleetType 服务器舰队类型，目前只支持ON_DEMAND类型
      * @param string $Name 服务器舰队名称，最小长度1，最大长度50
      * @param string $NewGameServerSessionProtectionPolicy 保护策略：不保护NoProtection、完全保护FullProtection、时限保护TimeLimitProtection
-     * @param string $PeerVpcId VPC 网络 Id，弃用，对等链接已不再使用
+     * @param string $PeerVpcId VPC 网络 Id，对等连接已不再使用
      * @param ResourceCreationLimitPolicy $ResourceCreationLimitPolicy 资源创建限制策略
      * @param RuntimeConfiguration $RuntimeConfiguration 进程配置
-     * @param string $SubNetId VPC 子网，弃用，对等链接已不再使用
-     * @param integer $GameServerSessionProtectionTimeLimit 时限保护超时时间，默认60分钟，最小值5，最大值1440
+     * @param string $SubNetId VPC 子网，对等连接已不再使用
+     * @param integer $GameServerSessionProtectionTimeLimit 时限保护超时时间，默认60分钟，最小值5，最大值1440；当NewGameSessionProtectionPolicy为TimeLimitProtection时参数有效
      */
     function __construct()
     {

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getFleetId() 获取服务器舰队 Id
  * @method void setFleetId(string $FleetId) 设置服务器舰队 Id
- * @method array getActions() 获取服务器舰队扩展策略，为空或者AUTO_SCALING
- * @method void setActions(array $Actions) 设置服务器舰队扩展策略，为空或者AUTO_SCALING
+ * @method array getActions() 获取服务器舰队扩展策略，值为["AUTO_SCALING"]
+ * @method void setActions(array $Actions) 设置服务器舰队扩展策略，值为["AUTO_SCALING"]
  */
 class StopFleetActionsRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class StopFleetActionsRequest extends AbstractModel
     public $FleetId;
 
     /**
-     * @var array 服务器舰队扩展策略，为空或者AUTO_SCALING
+     * @var array 服务器舰队扩展策略，值为["AUTO_SCALING"]
      */
     public $Actions;
 
     /**
      * @param string $FleetId 服务器舰队 Id
-     * @param array $Actions 服务器舰队扩展策略，为空或者AUTO_SCALING
+     * @param array $Actions 服务器舰队扩展策略，值为["AUTO_SCALING"]
      */
     function __construct()
     {

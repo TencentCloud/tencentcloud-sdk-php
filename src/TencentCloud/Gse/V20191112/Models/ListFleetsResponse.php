@@ -20,25 +20,25 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ListFleets返回参数结构体
  *
- * @method array getFleetIds() 获取服务部署 Id 列表
+ * @method array getFleetIds() 获取服务器舰队 Id 列表
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFleetIds(array $FleetIds) 设置服务部署 Id 列表
+ * @method void setFleetIds(array $FleetIds) 设置服务器舰队 Id 列表
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTotalCount() 获取服务部署 Id 总数，最小值0
- * @method void setTotalCount(integer $TotalCount) 设置服务部署 Id 总数，最小值0
+ * @method integer getTotalCount() 获取服务器舰队 Id 总数，最小值0
+ * @method void setTotalCount(integer $TotalCount) 设置服务器舰队 Id 总数，最小值0
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class ListFleetsResponse extends AbstractModel
 {
     /**
-     * @var array 服务部署 Id 列表
+     * @var array 服务器舰队 Id 列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FleetIds;
 
     /**
-     * @var integer 服务部署 Id 总数，最小值0
+     * @var integer 服务器舰队 Id 总数，最小值0
      */
     public $TotalCount;
 
@@ -48,9 +48,9 @@ class ListFleetsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $FleetIds 服务部署 Id 列表
+     * @param array $FleetIds 服务器舰队 Id 列表
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $TotalCount 服务部署 Id 总数，最小值0
+     * @param integer $TotalCount 服务器舰队 Id 总数，最小值0
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstances请求参数结构体
  *
- * @method string getFleetId() 获取服务部署ID
- * @method void setFleetId(string $FleetId) 设置服务部署ID
+ * @method string getFleetId() 获取服务器舰队ID
+ * @method void setFleetId(string $FleetId) 设置服务器舰队ID
  * @method string getInstanceId() 获取CVM实例ID
  * @method void setInstanceId(string $InstanceId) 设置CVM实例ID
  * @method integer getOffset() 获取结果返回最大数量，最小值0，最大值100
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeInstancesRequest extends AbstractModel
 {
     /**
-     * @var string 服务部署ID
+     * @var string 服务器舰队ID
      */
     public $FleetId;
 
@@ -52,7 +52,7 @@ class DescribeInstancesRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @param string $FleetId 服务部署ID
+     * @param string $FleetId 服务器舰队ID
      * @param string $InstanceId CVM实例ID
      * @param integer $Offset 结果返回最大数量，最小值0，最大值100
      * @param integer $Limit 返回结果偏移，最小值0

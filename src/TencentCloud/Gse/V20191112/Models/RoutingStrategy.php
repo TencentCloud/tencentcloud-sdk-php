@@ -20,21 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 路由策略
  *
- * @method string getType() 获取别名的路由策略的类型SIMPLE/TERMINAL
- * @method void setType(string $Type) 设置别名的路由策略的类型SIMPLE/TERMINAL
+ * @method string getType() 获取别名的路由策略的类型，有效值常规别名(SIMPLE)、终止别名(TERMINAL)
+ * @method void setType(string $Type) 设置别名的路由策略的类型，有效值常规别名(SIMPLE)、终止别名(TERMINAL)
  * @method string getFleetId() 获取别名指向的队列的唯一标识符
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFleetId(string $FleetId) 设置别名指向的队列的唯一标识符
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getMessage() 获取与终端路由策略一起使用的消息文本
+ * @method string getMessage() 获取与终端路由策略一起使用的消息文本，长度不小于1字符不超过1024字符
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMessage(string $Message) 设置与终端路由策略一起使用的消息文本
+ * @method void setMessage(string $Message) 设置与终端路由策略一起使用的消息文本，长度不小于1字符不超过1024字符
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class RoutingStrategy extends AbstractModel
 {
     /**
-     * @var string 别名的路由策略的类型SIMPLE/TERMINAL
+     * @var string 别名的路由策略的类型，有效值常规别名(SIMPLE)、终止别名(TERMINAL)
      */
     public $Type;
 
@@ -45,16 +45,16 @@ class RoutingStrategy extends AbstractModel
     public $FleetId;
 
     /**
-     * @var string 与终端路由策略一起使用的消息文本
+     * @var string 与终端路由策略一起使用的消息文本，长度不小于1字符不超过1024字符
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Message;
 
     /**
-     * @param string $Type 别名的路由策略的类型SIMPLE/TERMINAL
+     * @param string $Type 别名的路由策略的类型，有效值常规别名(SIMPLE)、终止别名(TERMINAL)
      * @param string $FleetId 别名指向的队列的唯一标识符
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Message 与终端路由策略一起使用的消息文本
+     * @param string $Message 与终端路由策略一起使用的消息文本，长度不小于1字符不超过1024字符
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

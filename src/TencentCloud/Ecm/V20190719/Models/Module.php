@@ -42,8 +42,8 @@ DELETEFAILED：删除失败
  * @method void setDefaultImage(Image $DefaultImage) 设置默认镜像
  * @method string getCreateTime() 获取创建时间
  * @method void setCreateTime(string $CreateTime) 设置创建时间
- * @method integer getDefaultBandwidth() 获取默认带宽
- * @method void setDefaultBandwidth(integer $DefaultBandwidth) 设置默认带宽
+ * @method integer getDefaultBandwidth() 获取默认出带宽
+ * @method void setDefaultBandwidth(integer $DefaultBandwidth) 设置默认出带宽
  * @method array getTagSet() 获取标签集合
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTagSet(array $TagSet) 设置标签集合
@@ -52,6 +52,8 @@ DELETEFAILED：删除失败
  * @method void setCloseIpDirect(integer $CloseIpDirect) 设置是否关闭IP直通
  * @method array getSecurityGroupIds() 获取默认安全组id列表
  * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置默认安全组id列表
+ * @method integer getDefaultBandwidthIn() 获取默认入带宽
+ * @method void setDefaultBandwidthIn(integer $DefaultBandwidthIn) 设置默认入带宽
  */
 class Module extends AbstractModel
 {
@@ -99,7 +101,7 @@ DELETEFAILED：删除失败
     public $CreateTime;
 
     /**
-     * @var integer 默认带宽
+     * @var integer 默认出带宽
      */
     public $DefaultBandwidth;
 
@@ -120,6 +122,11 @@ DELETEFAILED：删除失败
     public $SecurityGroupIds;
 
     /**
+     * @var integer 默认入带宽
+     */
+    public $DefaultBandwidthIn;
+
+    /**
      * @param string $ModuleId 模块Id
      * @param string $ModuleName 模块名称
      * @param string $ModuleState 模块状态：
@@ -131,11 +138,12 @@ DELETEFAILED：删除失败
      * @param InstanceTypeConfig $InstanceTypeConfig 默认机型
      * @param Image $DefaultImage 默认镜像
      * @param string $CreateTime 创建时间
-     * @param integer $DefaultBandwidth 默认带宽
+     * @param integer $DefaultBandwidth 默认出带宽
      * @param array $TagSet 标签集合
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CloseIpDirect 是否关闭IP直通
      * @param array $SecurityGroupIds 默认安全组id列表
+     * @param integer $DefaultBandwidthIn 默认入带宽
      */
     function __construct()
     {
@@ -203,6 +211,10 @@ DELETEFAILED：删除失败
 
         if (array_key_exists("SecurityGroupIds",$param) and $param["SecurityGroupIds"] !== null) {
             $this->SecurityGroupIds = $param["SecurityGroupIds"];
+        }
+
+        if (array_key_exists("DefaultBandwidthIn",$param) and $param["DefaultBandwidthIn"] !== null) {
+            $this->DefaultBandwidthIn = $param["DefaultBandwidthIn"];
         }
     }
 }

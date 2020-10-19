@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateFleetCapacity返回参数结构体
  *
- * @method string getFleetId() 获取服务部署ID
+ * @method string getFleetId() 获取服务器舰队ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFleetId(string $FleetId) 设置服务部署ID
+ * @method void setFleetId(string $FleetId) 设置服务器舰队ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class UpdateFleetCapacityResponse extends AbstractModel
 {
     /**
-     * @var string 服务部署ID
+     * @var string 服务器舰队ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FleetId;
@@ -41,7 +41,7 @@ class UpdateFleetCapacityResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $FleetId 服务部署ID
+     * @param string $FleetId 服务器舰队ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

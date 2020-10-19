@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getName() 获取名字，长度不小于1字符不超过1024字符
  * @method void setName(string $Name) 设置名字，长度不小于1字符不超过1024字符
- * @method string getRoutingStrategyType() 获取路由策略类型，有效值SIMPLE|TERMINAL
- * @method void setRoutingStrategyType(string $RoutingStrategyType) 设置路由策略类型，有效值SIMPLE|TERMINAL
+ * @method string getRoutingStrategyType() 获取路由策略类型，有效值常规别名(SIMPLE)、终止别名(TERMINAL)
+ * @method void setRoutingStrategyType(string $RoutingStrategyType) 设置路由策略类型，有效值常规别名(SIMPLE)、终止别名(TERMINAL)
  * @method integer getLimit() 获取要返回的最大结果数，最小值1
  * @method void setLimit(integer $Limit) 设置要返回的最大结果数，最小值1
  * @method integer getOffset() 获取偏移，默认0
@@ -41,7 +41,7 @@ class ListAliasesRequest extends AbstractModel
     public $Name;
 
     /**
-     * @var string 路由策略类型，有效值SIMPLE|TERMINAL
+     * @var string 路由策略类型，有效值常规别名(SIMPLE)、终止别名(TERMINAL)
      */
     public $RoutingStrategyType;
 
@@ -67,7 +67,7 @@ class ListAliasesRequest extends AbstractModel
 
     /**
      * @param string $Name 名字，长度不小于1字符不超过1024字符
-     * @param string $RoutingStrategyType 路由策略类型，有效值SIMPLE|TERMINAL
+     * @param string $RoutingStrategyType 路由策略类型，有效值常规别名(SIMPLE)、终止别名(TERMINAL)
      * @param integer $Limit 要返回的最大结果数，最小值1
      * @param integer $Offset 偏移，默认0
      * @param string $OrderBy 排序字段，例如CreationTime

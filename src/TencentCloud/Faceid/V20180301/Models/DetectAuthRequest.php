@@ -34,10 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRedirectUrl(string $RedirectUrl) 设置认证结束后重定向的回调链接地址。最长长度1024位。
  * @method string getExtra() 获取透传字段，在获取验证结果时返回。
  * @method void setExtra(string $Extra) 设置透传字段，在获取验证结果时返回。
- * @method string getImageBase64() 获取用于人脸比对的照片，图片的BASE64值；
-BASE64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
- * @method void setImageBase64(string $ImageBase64) 设置用于人脸比对的照片，图片的BASE64值；
-BASE64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
+ * @method string getImageBase64() 获取用于人脸比对的照片，图片的Base64值；
+Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
+ * @method void setImageBase64(string $ImageBase64) 设置用于人脸比对的照片，图片的Base64值；
+Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
  */
 class DetectAuthRequest extends AbstractModel
 {
@@ -73,8 +73,8 @@ class DetectAuthRequest extends AbstractModel
     public $Extra;
 
     /**
-     * @var string 用于人脸比对的照片，图片的BASE64值；
-BASE64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
+     * @var string 用于人脸比对的照片，图片的Base64值；
+Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
      */
     public $ImageBase64;
 
@@ -86,8 +86,8 @@ BASE64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
      * @param string $Name 姓名。（未使用OCR服务时，必须传入）最长长度32位。中文请使用UTF-8编码。
      * @param string $RedirectUrl 认证结束后重定向的回调链接地址。最长长度1024位。
      * @param string $Extra 透传字段，在获取验证结果时返回。
-     * @param string $ImageBase64 用于人脸比对的照片，图片的BASE64值；
-BASE64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
+     * @param string $ImageBase64 用于人脸比对的照片，图片的Base64值；
+Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
      */
     function __construct()
     {

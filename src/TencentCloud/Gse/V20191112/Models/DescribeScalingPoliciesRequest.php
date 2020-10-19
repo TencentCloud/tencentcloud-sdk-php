@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeScalingPolicies请求参数结构体
  *
- * @method string getFleetId() 获取服务部署ID
- * @method void setFleetId(string $FleetId) 设置服务部署ID
+ * @method string getFleetId() 获取服务器舰队ID
+ * @method void setFleetId(string $FleetId) 设置服务器舰队ID
  * @method string getStatusFilter() 获取状态过滤条件，取值：ACTIVE表示活跃
  * @method void setStatusFilter(string $StatusFilter) 设置状态过滤条件，取值：ACTIVE表示活跃
  * @method integer getOffset() 获取返回结果偏移，最小值0
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeScalingPoliciesRequest extends AbstractModel
 {
     /**
-     * @var string 服务部署ID
+     * @var string 服务器舰队ID
      */
     public $FleetId;
 
@@ -52,7 +52,7 @@ class DescribeScalingPoliciesRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @param string $FleetId 服务部署ID
+     * @param string $FleetId 服务器舰队ID
      * @param string $StatusFilter 状态过滤条件，取值：ACTIVE表示活跃
      * @param integer $Offset 返回结果偏移，最小值0
      * @param integer $Limit 结果返回最大数量，最小值0，最大值100

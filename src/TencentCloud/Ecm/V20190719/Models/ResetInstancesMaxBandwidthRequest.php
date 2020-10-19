@@ -22,8 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getInstanceIdSet() 获取待重置带宽上限的实例ID列表。在单次请求的过程中，单个region下的请求实例数上限为100。
  * @method void setInstanceIdSet(array $InstanceIdSet) 设置待重置带宽上限的实例ID列表。在单次请求的过程中，单个region下的请求实例数上限为100。
- * @method integer getMaxBandwidthOut() 获取修改后的最大带宽上限。
- * @method void setMaxBandwidthOut(integer $MaxBandwidthOut) 设置修改后的最大带宽上限。
+ * @method integer getMaxBandwidthOut() 获取修改后的最大出带宽上限。
+ * @method void setMaxBandwidthOut(integer $MaxBandwidthOut) 设置修改后的最大出带宽上限。
+ * @method integer getMaxBandwidthIn() 获取修改后的最大入带宽上限。
+ * @method void setMaxBandwidthIn(integer $MaxBandwidthIn) 设置修改后的最大入带宽上限。
  */
 class ResetInstancesMaxBandwidthRequest extends AbstractModel
 {
@@ -33,13 +35,19 @@ class ResetInstancesMaxBandwidthRequest extends AbstractModel
     public $InstanceIdSet;
 
     /**
-     * @var integer 修改后的最大带宽上限。
+     * @var integer 修改后的最大出带宽上限。
      */
     public $MaxBandwidthOut;
 
     /**
+     * @var integer 修改后的最大入带宽上限。
+     */
+    public $MaxBandwidthIn;
+
+    /**
      * @param array $InstanceIdSet 待重置带宽上限的实例ID列表。在单次请求的过程中，单个region下的请求实例数上限为100。
-     * @param integer $MaxBandwidthOut 修改后的最大带宽上限。
+     * @param integer $MaxBandwidthOut 修改后的最大出带宽上限。
+     * @param integer $MaxBandwidthIn 修改后的最大入带宽上限。
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class ResetInstancesMaxBandwidthRequest extends AbstractModel
 
         if (array_key_exists("MaxBandwidthOut",$param) and $param["MaxBandwidthOut"] !== null) {
             $this->MaxBandwidthOut = $param["MaxBandwidthOut"];
+        }
+
+        if (array_key_exists("MaxBandwidthIn",$param) and $param["MaxBandwidthIn"] !== null) {
+            $this->MaxBandwidthIn = $param["MaxBandwidthIn"];
         }
     }
 }

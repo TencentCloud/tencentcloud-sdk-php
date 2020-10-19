@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getFleetId() 获取服务器舰队 Id
  * @method void setFleetId(string $FleetId) 设置服务器舰队 Id
- * @method integer getLimit() 获取分页时返回服务部署事件的数量，默认为20，最大值为100
- * @method void setLimit(integer $Limit) 设置分页时返回服务部署事件的数量，默认为20，最大值为100
+ * @method integer getLimit() 获取分页时返回服务器舰队事件的数量，默认为20，最大值为100
+ * @method void setLimit(integer $Limit) 设置分页时返回服务器舰队事件的数量，默认为20，最大值为100
  * @method integer getOffset() 获取分页时的数据偏移量，默认为0
  * @method void setOffset(integer $Offset) 设置分页时的数据偏移量，默认为0
  */
@@ -35,7 +35,7 @@ class DescribeFleetEventsRequest extends AbstractModel
     public $FleetId;
 
     /**
-     * @var integer 分页时返回服务部署事件的数量，默认为20，最大值为100
+     * @var integer 分页时返回服务器舰队事件的数量，默认为20，最大值为100
      */
     public $Limit;
 
@@ -46,7 +46,7 @@ class DescribeFleetEventsRequest extends AbstractModel
 
     /**
      * @param string $FleetId 服务器舰队 Id
-     * @param integer $Limit 分页时返回服务部署事件的数量，默认为20，最大值为100
+     * @param integer $Limit 分页时返回服务器舰队事件的数量，默认为20，最大值为100
      * @param integer $Offset 分页时的数据偏移量，默认为0
      */
     function __construct()

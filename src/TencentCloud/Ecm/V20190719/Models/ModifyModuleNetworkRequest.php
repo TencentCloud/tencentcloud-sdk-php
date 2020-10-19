@@ -22,8 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getModuleId() 获取模块Id
  * @method void setModuleId(string $ModuleId) 设置模块Id
- * @method integer getDefaultBandwidth() 获取默认带宽上限
- * @method void setDefaultBandwidth(integer $DefaultBandwidth) 设置默认带宽上限
+ * @method integer getDefaultBandwidth() 获取默认出带宽上限
+ * @method void setDefaultBandwidth(integer $DefaultBandwidth) 设置默认出带宽上限
+ * @method integer getDefaultBandwidthIn() 获取默认入带宽上限
+ * @method void setDefaultBandwidthIn(integer $DefaultBandwidthIn) 设置默认入带宽上限
  */
 class ModifyModuleNetworkRequest extends AbstractModel
 {
@@ -33,13 +35,19 @@ class ModifyModuleNetworkRequest extends AbstractModel
     public $ModuleId;
 
     /**
-     * @var integer 默认带宽上限
+     * @var integer 默认出带宽上限
      */
     public $DefaultBandwidth;
 
     /**
+     * @var integer 默认入带宽上限
+     */
+    public $DefaultBandwidthIn;
+
+    /**
      * @param string $ModuleId 模块Id
-     * @param integer $DefaultBandwidth 默认带宽上限
+     * @param integer $DefaultBandwidth 默认出带宽上限
+     * @param integer $DefaultBandwidthIn 默认入带宽上限
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class ModifyModuleNetworkRequest extends AbstractModel
 
         if (array_key_exists("DefaultBandwidth",$param) and $param["DefaultBandwidth"] !== null) {
             $this->DefaultBandwidth = $param["DefaultBandwidth"];
+        }
+
+        if (array_key_exists("DefaultBandwidthIn",$param) and $param["DefaultBandwidthIn"] !== null) {
+            $this->DefaultBandwidthIn = $param["DefaultBandwidthIn"];
         }
     }
 }

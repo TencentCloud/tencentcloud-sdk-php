@@ -20,17 +20,17 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SetServerWeight请求参数结构体
  *
- * @method string getFleetId() 获取服务舰队ID
- * @method void setFleetId(string $FleetId) 设置服务舰队ID
+ * @method string getFleetId() 获取服务器舰队ID
+ * @method void setFleetId(string $FleetId) 设置服务器舰队ID
  * @method string getInstanceId() 获取实例ID
  * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method integer getWeight() 获取权重
- * @method void setWeight(integer $Weight) 设置权重
+ * @method integer getWeight() 获取权重，最小值0，最大值10，默认值5
+ * @method void setWeight(integer $Weight) 设置权重，最小值0，最大值10，默认值5
  */
 class SetServerWeightRequest extends AbstractModel
 {
     /**
-     * @var string 服务舰队ID
+     * @var string 服务器舰队ID
      */
     public $FleetId;
 
@@ -40,14 +40,14 @@ class SetServerWeightRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var integer 权重
+     * @var integer 权重，最小值0，最大值10，默认值5
      */
     public $Weight;
 
     /**
-     * @param string $FleetId 服务舰队ID
+     * @param string $FleetId 服务器舰队ID
      * @param string $InstanceId 实例ID
-     * @param integer $Weight 权重
+     * @param integer $Weight 权重，最小值0，最大值10，默认值5
      */
     function __construct()
     {

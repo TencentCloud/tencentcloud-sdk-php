@@ -24,10 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIdCard(string $IdCard) 设置身份证号
  * @method string getName() 获取姓名。中文请使用UTF-8编码。
  * @method void setName(string $Name) 设置姓名。中文请使用UTF-8编码。
- * @method string getImageBase64() 获取用于人脸比对的照片，图片的BASE64值；
-BASE64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
- * @method void setImageBase64(string $ImageBase64) 设置用于人脸比对的照片，图片的BASE64值；
-BASE64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
+ * @method string getImageBase64() 获取用于人脸比对的照片，图片的Base64值；
+Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
+请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
+ * @method void setImageBase64(string $ImageBase64) 设置用于人脸比对的照片，图片的Base64值；
+Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
+请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
  * @method string getOptional() 获取本接口不需要传递此参数。
  * @method void setOptional(string $Optional) 设置本接口不需要传递此参数。
  */
@@ -44,8 +46,9 @@ class ImageRecognitionRequest extends AbstractModel
     public $Name;
 
     /**
-     * @var string 用于人脸比对的照片，图片的BASE64值；
-BASE64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
+     * @var string 用于人脸比对的照片，图片的Base64值；
+Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
+请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
      */
     public $ImageBase64;
 
@@ -57,8 +60,9 @@ BASE64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
     /**
      * @param string $IdCard 身份证号
      * @param string $Name 姓名。中文请使用UTF-8编码。
-     * @param string $ImageBase64 用于人脸比对的照片，图片的BASE64值；
-BASE64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
+     * @param string $ImageBase64 用于人脸比对的照片，图片的Base64值；
+Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
+请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
      * @param string $Optional 本接口不需要传递此参数。
      */
     function __construct()

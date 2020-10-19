@@ -20,21 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateFleetCapacity请求参数结构体
  *
- * @method string getFleetId() 获取服务部署ID
- * @method void setFleetId(string $FleetId) 设置服务部署ID
+ * @method string getFleetId() 获取服务器舰队ID
+ * @method void setFleetId(string $FleetId) 设置服务器舰队ID
  * @method integer getDesiredInstances() 获取期望的服务器实例数
  * @method void setDesiredInstances(integer $DesiredInstances) 设置期望的服务器实例数
- * @method integer getMinSize() 获取服务器实例数最小限制
- * @method void setMinSize(integer $MinSize) 设置服务器实例数最小限制
- * @method integer getMaxSize() 获取服务器实例数最大限制
- * @method void setMaxSize(integer $MaxSize) 设置服务器实例数最大限制
- * @method integer getScalingInterval() 获取服务器伸缩容间隔
- * @method void setScalingInterval(integer $ScalingInterval) 设置服务器伸缩容间隔
+ * @method integer getMinSize() 获取服务器实例数最小限制，最小值0，最大值不超过最高配额查看各地区最高配额减1
+ * @method void setMinSize(integer $MinSize) 设置服务器实例数最小限制，最小值0，最大值不超过最高配额查看各地区最高配额减1
+ * @method integer getMaxSize() 获取服务器实例数最大限制，最小值1，最大值不超过最高配额查看各地区最高配额
+ * @method void setMaxSize(integer $MaxSize) 设置服务器实例数最大限制，最小值1，最大值不超过最高配额查看各地区最高配额
+ * @method integer getScalingInterval() 获取服务器伸缩容间隔，单位分钟，最小值3，最大值30，默认值10
+ * @method void setScalingInterval(integer $ScalingInterval) 设置服务器伸缩容间隔，单位分钟，最小值3，最大值30，默认值10
  */
 class UpdateFleetCapacityRequest extends AbstractModel
 {
     /**
-     * @var string 服务部署ID
+     * @var string 服务器舰队ID
      */
     public $FleetId;
 
@@ -44,26 +44,26 @@ class UpdateFleetCapacityRequest extends AbstractModel
     public $DesiredInstances;
 
     /**
-     * @var integer 服务器实例数最小限制
+     * @var integer 服务器实例数最小限制，最小值0，最大值不超过最高配额查看各地区最高配额减1
      */
     public $MinSize;
 
     /**
-     * @var integer 服务器实例数最大限制
+     * @var integer 服务器实例数最大限制，最小值1，最大值不超过最高配额查看各地区最高配额
      */
     public $MaxSize;
 
     /**
-     * @var integer 服务器伸缩容间隔
+     * @var integer 服务器伸缩容间隔，单位分钟，最小值3，最大值30，默认值10
      */
     public $ScalingInterval;
 
     /**
-     * @param string $FleetId 服务部署ID
+     * @param string $FleetId 服务器舰队ID
      * @param integer $DesiredInstances 期望的服务器实例数
-     * @param integer $MinSize 服务器实例数最小限制
-     * @param integer $MaxSize 服务器实例数最大限制
-     * @param integer $ScalingInterval 服务器伸缩容间隔
+     * @param integer $MinSize 服务器实例数最小限制，最小值0，最大值不超过最高配额查看各地区最高配额减1
+     * @param integer $MaxSize 服务器实例数最大限制，最小值1，最大值不超过最高配额查看各地区最高配额
+     * @param integer $ScalingInterval 服务器伸缩容间隔，单位分钟，最小值3，最大值30，默认值10
      */
     function __construct()
     {

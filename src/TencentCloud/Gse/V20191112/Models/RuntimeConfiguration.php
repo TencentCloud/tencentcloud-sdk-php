@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 运行配置
  *
- * @method integer getGameServerSessionActivationTimeoutSeconds() 获取游戏会话进程超时
- * @method void setGameServerSessionActivationTimeoutSeconds(integer $GameServerSessionActivationTimeoutSeconds) 设置游戏会话进程超时
- * @method integer getMaxConcurrentGameServerSessionActivations() 获取最大游戏会话数
- * @method void setMaxConcurrentGameServerSessionActivations(integer $MaxConcurrentGameServerSessionActivations) 设置最大游戏会话数
- * @method array getServerProcesses() 获取服务进程配置
- * @method void setServerProcesses(array $ServerProcesses) 设置服务进程配置
+ * @method integer getGameServerSessionActivationTimeoutSeconds() 获取游戏会话进程超时，最小值1，最大值600，单位秒
+ * @method void setGameServerSessionActivationTimeoutSeconds(integer $GameServerSessionActivationTimeoutSeconds) 设置游戏会话进程超时，最小值1，最大值600，单位秒
+ * @method integer getMaxConcurrentGameServerSessionActivations() 获取最大游戏会话数，最小值1，最大值2147483647
+ * @method void setMaxConcurrentGameServerSessionActivations(integer $MaxConcurrentGameServerSessionActivations) 设置最大游戏会话数，最小值1，最大值2147483647
+ * @method array getServerProcesses() 获取服务进程配置，至少有一个进程配置
+ * @method void setServerProcesses(array $ServerProcesses) 设置服务进程配置，至少有一个进程配置
  */
 class RuntimeConfiguration extends AbstractModel
 {
     /**
-     * @var integer 游戏会话进程超时
+     * @var integer 游戏会话进程超时，最小值1，最大值600，单位秒
      */
     public $GameServerSessionActivationTimeoutSeconds;
 
     /**
-     * @var integer 最大游戏会话数
+     * @var integer 最大游戏会话数，最小值1，最大值2147483647
      */
     public $MaxConcurrentGameServerSessionActivations;
 
     /**
-     * @var array 服务进程配置
+     * @var array 服务进程配置，至少有一个进程配置
      */
     public $ServerProcesses;
 
     /**
-     * @param integer $GameServerSessionActivationTimeoutSeconds 游戏会话进程超时
-     * @param integer $MaxConcurrentGameServerSessionActivations 最大游戏会话数
-     * @param array $ServerProcesses 服务进程配置
+     * @param integer $GameServerSessionActivationTimeoutSeconds 游戏会话进程超时，最小值1，最大值600，单位秒
+     * @param integer $MaxConcurrentGameServerSessionActivations 最大游戏会话数，最小值1，最大值2147483647
+     * @param array $ServerProcesses 服务进程配置，至少有一个进程配置
      */
     function __construct()
     {

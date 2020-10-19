@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetInstanceAccess请求参数结构体
  *
- * @method string getFleetId() 获取服务部署Id
- * @method void setFleetId(string $FleetId) 设置服务部署Id
+ * @method string getFleetId() 获取服务器舰队ID
+ * @method void setFleetId(string $FleetId) 设置服务器舰队ID
  * @method string getInstanceId() 获取实例Id
  * @method void setInstanceId(string $InstanceId) 设置实例Id
  */
 class GetInstanceAccessRequest extends AbstractModel
 {
     /**
-     * @var string 服务部署Id
+     * @var string 服务器舰队ID
      */
     public $FleetId;
 
@@ -38,7 +38,7 @@ class GetInstanceAccessRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @param string $FleetId 服务部署Id
+     * @param string $FleetId 服务器舰队ID
      * @param string $InstanceId 实例Id
      */
     function __construct()

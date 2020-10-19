@@ -24,17 +24,17 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFleetId(string $FleetId) 设置服务部署 Id
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getInstanceType() 获取服务器类型
+ * @method string getInstanceType() 获取服务器类型，如S3.LARGE8,S2.LARGE8,S5.LARGE8等
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInstanceType(string $InstanceType) 设置服务器类型
+ * @method void setInstanceType(string $InstanceType) 设置服务器类型，如S3.LARGE8,S2.LARGE8,S5.LARGE8等
 注意：此字段可能返回 null，表示取不到有效值。
  * @method InstanceCounts getInstanceCounts() 获取服务器实例统计数据
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceCounts(InstanceCounts $InstanceCounts) 设置服务器实例统计数据
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getScalingInterval() 获取服务器伸缩容间隔
+ * @method integer getScalingInterval() 获取服务器伸缩容间隔，单位分钟，最小值3，最大值30，默认值10
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setScalingInterval(integer $ScalingInterval) 设置服务器伸缩容间隔
+ * @method void setScalingInterval(integer $ScalingInterval) 设置服务器伸缩容间隔，单位分钟，最小值3，最大值30，默认值10
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class FleetCapacity extends AbstractModel
@@ -46,7 +46,7 @@ class FleetCapacity extends AbstractModel
     public $FleetId;
 
     /**
-     * @var string 服务器类型
+     * @var string 服务器类型，如S3.LARGE8,S2.LARGE8,S5.LARGE8等
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceType;
@@ -58,7 +58,7 @@ class FleetCapacity extends AbstractModel
     public $InstanceCounts;
 
     /**
-     * @var integer 服务器伸缩容间隔
+     * @var integer 服务器伸缩容间隔，单位分钟，最小值3，最大值30，默认值10
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScalingInterval;
@@ -66,11 +66,11 @@ class FleetCapacity extends AbstractModel
     /**
      * @param string $FleetId 服务部署 Id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $InstanceType 服务器类型
+     * @param string $InstanceType 服务器类型，如S3.LARGE8,S2.LARGE8,S5.LARGE8等
 注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceCounts $InstanceCounts 服务器实例统计数据
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ScalingInterval 服务器伸缩容间隔
+     * @param integer $ScalingInterval 服务器伸缩容间隔，单位分钟，最小值3，最大值30，默认值10
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

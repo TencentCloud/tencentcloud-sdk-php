@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getName() 获取游戏服务器会话队列名字，长度1~128
  * @method void setName(string $Name) 设置游戏服务器会话队列名字，长度1~128
- * @method array getDestinations() 获取目的服务部署（可为别名）列表
- * @method void setDestinations(array $Destinations) 设置目的服务部署（可为别名）列表
+ * @method array getDestinations() 获取目的服务器舰队（可为别名）列表
+ * @method void setDestinations(array $Destinations) 设置目的服务器舰队（可为别名）列表
  * @method array getPlayerLatencyPolicies() 获取延迟策略集合
  * @method void setPlayerLatencyPolicies(array $PlayerLatencyPolicies) 设置延迟策略集合
  * @method integer getTimeoutInSeconds() 获取超时时间
@@ -37,7 +37,7 @@ class UpdateGameServerSessionQueueRequest extends AbstractModel
     public $Name;
 
     /**
-     * @var array 目的服务部署（可为别名）列表
+     * @var array 目的服务器舰队（可为别名）列表
      */
     public $Destinations;
 
@@ -53,7 +53,7 @@ class UpdateGameServerSessionQueueRequest extends AbstractModel
 
     /**
      * @param string $Name 游戏服务器会话队列名字，长度1~128
-     * @param array $Destinations 目的服务部署（可为别名）列表
+     * @param array $Destinations 目的服务器舰队（可为别名）列表
      * @param array $PlayerLatencyPolicies 延迟策略集合
      * @param integer $TimeoutInSeconds 超时时间
      */

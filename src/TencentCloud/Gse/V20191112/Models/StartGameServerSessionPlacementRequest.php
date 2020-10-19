@@ -20,27 +20,27 @@ use TencentCloud\Common\AbstractModel;
 /**
  * StartGameServerSessionPlacement请求参数结构体
  *
- * @method string getPlacementId() 获取开始部署游戏服务器会话的唯一标识符
- * @method void setPlacementId(string $PlacementId) 设置开始部署游戏服务器会话的唯一标识符
+ * @method string getPlacementId() 获取开始部署游戏服务器会话的唯一标识符，最大值48个ASCII字符，模式：[a-zA-Z0-9-]+
+ * @method void setPlacementId(string $PlacementId) 设置开始部署游戏服务器会话的唯一标识符，最大值48个ASCII字符，模式：[a-zA-Z0-9-]+
  * @method string getGameServerSessionQueueName() 获取游戏服务器会话队列名称
  * @method void setGameServerSessionQueueName(string $GameServerSessionQueueName) 设置游戏服务器会话队列名称
- * @method integer getMaximumPlayerSessionCount() 获取游戏服务器允许同时连接到游戏会话的最大玩家数量
- * @method void setMaximumPlayerSessionCount(integer $MaximumPlayerSessionCount) 设置游戏服务器允许同时连接到游戏会话的最大玩家数量
+ * @method integer getMaximumPlayerSessionCount() 获取游戏服务器允许同时连接到游戏会话的最大玩家数量，最小值1，最大值为玩家会话最大限额
+ * @method void setMaximumPlayerSessionCount(integer $MaximumPlayerSessionCount) 设置游戏服务器允许同时连接到游戏会话的最大玩家数量，最小值1，最大值为玩家会话最大限额
  * @method array getDesiredPlayerSessions() 获取玩家游戏会话信息
  * @method void setDesiredPlayerSessions(array $DesiredPlayerSessions) 设置玩家游戏会话信息
  * @method array getGameProperties() 获取玩家游戏会话属性
  * @method void setGameProperties(array $GameProperties) 设置玩家游戏会话属性
- * @method string getGameServerSessionData() 获取游戏服务器会话数据
- * @method void setGameServerSessionData(string $GameServerSessionData) 设置游戏服务器会话数据
- * @method string getGameServerSessionName() 获取游戏服务器会话名称
- * @method void setGameServerSessionName(string $GameServerSessionName) 设置游戏服务器会话名称
+ * @method string getGameServerSessionData() 获取游戏服务器会话数据，最大长度不超过4096个ASCII字符
+ * @method void setGameServerSessionData(string $GameServerSessionData) 设置游戏服务器会话数据，最大长度不超过4096个ASCII字符
+ * @method string getGameServerSessionName() 获取游戏服务器会话名称，最大长度不超过4096个ASCII字符
+ * @method void setGameServerSessionName(string $GameServerSessionName) 设置游戏服务器会话名称，最大长度不超过4096个ASCII字符
  * @method array getPlayerLatencies() 获取玩家延迟
  * @method void setPlayerLatencies(array $PlayerLatencies) 设置玩家延迟
  */
 class StartGameServerSessionPlacementRequest extends AbstractModel
 {
     /**
-     * @var string 开始部署游戏服务器会话的唯一标识符
+     * @var string 开始部署游戏服务器会话的唯一标识符，最大值48个ASCII字符，模式：[a-zA-Z0-9-]+
      */
     public $PlacementId;
 
@@ -50,7 +50,7 @@ class StartGameServerSessionPlacementRequest extends AbstractModel
     public $GameServerSessionQueueName;
 
     /**
-     * @var integer 游戏服务器允许同时连接到游戏会话的最大玩家数量
+     * @var integer 游戏服务器允许同时连接到游戏会话的最大玩家数量，最小值1，最大值为玩家会话最大限额
      */
     public $MaximumPlayerSessionCount;
 
@@ -65,12 +65,12 @@ class StartGameServerSessionPlacementRequest extends AbstractModel
     public $GameProperties;
 
     /**
-     * @var string 游戏服务器会话数据
+     * @var string 游戏服务器会话数据，最大长度不超过4096个ASCII字符
      */
     public $GameServerSessionData;
 
     /**
-     * @var string 游戏服务器会话名称
+     * @var string 游戏服务器会话名称，最大长度不超过4096个ASCII字符
      */
     public $GameServerSessionName;
 
@@ -80,13 +80,13 @@ class StartGameServerSessionPlacementRequest extends AbstractModel
     public $PlayerLatencies;
 
     /**
-     * @param string $PlacementId 开始部署游戏服务器会话的唯一标识符
+     * @param string $PlacementId 开始部署游戏服务器会话的唯一标识符，最大值48个ASCII字符，模式：[a-zA-Z0-9-]+
      * @param string $GameServerSessionQueueName 游戏服务器会话队列名称
-     * @param integer $MaximumPlayerSessionCount 游戏服务器允许同时连接到游戏会话的最大玩家数量
+     * @param integer $MaximumPlayerSessionCount 游戏服务器允许同时连接到游戏会话的最大玩家数量，最小值1，最大值为玩家会话最大限额
      * @param array $DesiredPlayerSessions 玩家游戏会话信息
      * @param array $GameProperties 玩家游戏会话属性
-     * @param string $GameServerSessionData 游戏服务器会话数据
-     * @param string $GameServerSessionName 游戏服务器会话名称
+     * @param string $GameServerSessionData 游戏服务器会话数据，最大长度不超过4096个ASCII字符
+     * @param string $GameServerSessionName 游戏服务器会话名称，最大长度不超过4096个ASCII字符
      * @param array $PlayerLatencies 玩家延迟
      */
     function __construct()

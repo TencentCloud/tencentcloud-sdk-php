@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getNewGameServerSessionsPerCreator() 获取创建数量，最小值1，默认2
  * @method void setNewGameServerSessionsPerCreator(integer $NewGameServerSessionsPerCreator) 设置创建数量，最小值1，默认2
- * @method integer getPolicyPeriodInMinutes() 获取单位时间，最小值1，默认3
- * @method void setPolicyPeriodInMinutes(integer $PolicyPeriodInMinutes) 设置单位时间，最小值1，默认3
+ * @method integer getPolicyPeriodInMinutes() 获取单位时间，最小值1，默认3，单位分钟
+ * @method void setPolicyPeriodInMinutes(integer $PolicyPeriodInMinutes) 设置单位时间，最小值1，默认3，单位分钟
  */
 class ResourceCreationLimitPolicy extends AbstractModel
 {
@@ -33,13 +33,13 @@ class ResourceCreationLimitPolicy extends AbstractModel
     public $NewGameServerSessionsPerCreator;
 
     /**
-     * @var integer 单位时间，最小值1，默认3
+     * @var integer 单位时间，最小值1，默认3，单位分钟
      */
     public $PolicyPeriodInMinutes;
 
     /**
      * @param integer $NewGameServerSessionsPerCreator 创建数量，最小值1，默认2
-     * @param integer $PolicyPeriodInMinutes 单位时间，最小值1，默认3
+     * @param integer $PolicyPeriodInMinutes 单位时间，最小值1，默认3，单位分钟
      */
     function __construct()
     {

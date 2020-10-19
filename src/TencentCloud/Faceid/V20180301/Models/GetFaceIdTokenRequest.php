@@ -26,8 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIdCard(string $IdCard) 设置CompareLib为商业库时必传。
  * @method string getName() 获取CompareLib为商业库库时必传。
  * @method void setName(string $Name) 设置CompareLib为商业库库时必传。
- * @method string getImageBase64() 获取CompareLib为上传照片比对时必传，base64后图片最大8MB。
- * @method void setImageBase64(string $ImageBase64) 设置CompareLib为上传照片比对时必传，base64后图片最大8MB。
+ * @method string getImageBase64() 获取CompareLib为上传照片比对时必传，Base64后图片最大8MB。
+请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
+ * @method void setImageBase64(string $ImageBase64) 设置CompareLib为上传照片比对时必传，Base64后图片最大8MB。
+请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
  * @method string getMeta() 获取SDK中生成的Meta字符串
  * @method void setMeta(string $Meta) 设置SDK中生成的Meta字符串
  * @method string getExtra() 获取透传参数 1000长度字符串
@@ -51,7 +53,8 @@ class GetFaceIdTokenRequest extends AbstractModel
     public $Name;
 
     /**
-     * @var string CompareLib为上传照片比对时必传，base64后图片最大8MB。
+     * @var string CompareLib为上传照片比对时必传，Base64后图片最大8MB。
+请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
      */
     public $ImageBase64;
 
@@ -69,7 +72,8 @@ class GetFaceIdTokenRequest extends AbstractModel
      * @param string $CompareLib 本地上传照片(LOCAL)、商业库(BUSINESS)
      * @param string $IdCard CompareLib为商业库时必传。
      * @param string $Name CompareLib为商业库库时必传。
-     * @param string $ImageBase64 CompareLib为上传照片比对时必传，base64后图片最大8MB。
+     * @param string $ImageBase64 CompareLib为上传照片比对时必传，Base64后图片最大8MB。
+请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
      * @param string $Meta SDK中生成的Meta字符串
      * @param string $Extra 透传参数 1000长度字符串
      */

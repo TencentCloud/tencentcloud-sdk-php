@@ -40,13 +40,17 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDependenceSet(array $DependenceSet) 设置任务间依赖信息
  * @method TaskMetrics getTaskMetrics() 获取任务统计指标
  * @method void setTaskMetrics(TaskMetrics $TaskMetrics) 设置任务统计指标
- * @method TaskInstanceView getTaskInstanceMetrics() 获取任务实例统计指标
- * @method void setTaskInstanceMetrics(TaskInstanceView $TaskInstanceMetrics) 设置任务实例统计指标
+ * @method TaskInstanceMetrics getTaskInstanceMetrics() 获取任务实例统计指标
+ * @method void setTaskInstanceMetrics(TaskInstanceMetrics $TaskInstanceMetrics) 设置任务实例统计指标
  * @method string getStateReason() 获取作业失败原因
  * @method void setStateReason(string $StateReason) 设置作业失败原因
  * @method array getTags() 获取作业绑定的标签列表。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置作业绑定的标签列表。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getNextAction() 获取下一步动作
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNextAction(string $NextAction) 设置下一步动作
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -104,7 +108,7 @@ class DescribeJobResponse extends AbstractModel
     public $TaskMetrics;
 
     /**
-     * @var TaskInstanceView 任务实例统计指标
+     * @var TaskInstanceMetrics 任务实例统计指标
      */
     public $TaskInstanceMetrics;
 
@@ -118,6 +122,12 @@ class DescribeJobResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
+
+    /**
+     * @var string 下一步动作
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NextAction;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -135,9 +145,11 @@ class DescribeJobResponse extends AbstractModel
      * @param array $TaskSet 任务视图信息
      * @param array $DependenceSet 任务间依赖信息
      * @param TaskMetrics $TaskMetrics 任务统计指标
-     * @param TaskInstanceView $TaskInstanceMetrics 任务实例统计指标
+     * @param TaskInstanceMetrics $TaskInstanceMetrics 任务实例统计指标
      * @param string $StateReason 作业失败原因
      * @param array $Tags 作业绑定的标签列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $NextAction 下一步动作
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -206,7 +218,7 @@ class DescribeJobResponse extends AbstractModel
         }
 
         if (array_key_exists("TaskInstanceMetrics",$param) and $param["TaskInstanceMetrics"] !== null) {
-            $this->TaskInstanceMetrics = new TaskInstanceView();
+            $this->TaskInstanceMetrics = new TaskInstanceMetrics();
             $this->TaskInstanceMetrics->deserialize($param["TaskInstanceMetrics"]);
         }
 
@@ -221,6 +233,10 @@ class DescribeJobResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("NextAction",$param) and $param["NextAction"] !== null) {
+            $this->NextAction = $param["NextAction"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

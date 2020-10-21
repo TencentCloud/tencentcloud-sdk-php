@@ -72,6 +72,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNamespaceType(string $NamespaceType) 设置命名空间类型
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getIsHaEnable() 获取是否开启高可用
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsHaEnable(string $IsHaEnable) 设置是否开启高可用
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Namespace extends AbstractModel
 {
@@ -154,6 +158,12 @@ class Namespace extends AbstractModel
     public $NamespaceType;
 
     /**
+     * @var string 是否开启高可用
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsHaEnable;
+
+    /**
      * @param string $NamespaceId 命名空间ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NamespaceCode 命名空间编码
@@ -179,6 +189,8 @@ class Namespace extends AbstractModel
      * @param string $NamespaceResourceType 集群资源类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NamespaceType 命名空间类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $IsHaEnable 是否开启高可用
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -249,6 +261,10 @@ class Namespace extends AbstractModel
 
         if (array_key_exists("NamespaceType",$param) and $param["NamespaceType"] !== null) {
             $this->NamespaceType = $param["NamespaceType"];
+        }
+
+        if (array_key_exists("IsHaEnable",$param) and $param["IsHaEnable"] !== null) {
+            $this->IsHaEnable = $param["IsHaEnable"];
         }
     }
 }

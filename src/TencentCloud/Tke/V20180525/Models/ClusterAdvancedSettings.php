@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAuditLogsetId(string $AuditLogsetId) 设置审计日志上传到的logset日志集
  * @method string getAuditLogTopicId() 获取审计日志上传到的topic
  * @method void setAuditLogTopicId(string $AuditLogTopicId) 设置审计日志上传到的topic
+ * @method string getVpcCniType() 获取区分单网卡多IP模式和独立网卡模式
+ * @method void setVpcCniType(string $VpcCniType) 设置区分单网卡多IP模式和独立网卡模式
  */
 class ClusterAdvancedSettings extends AbstractModel
 {
@@ -108,6 +110,11 @@ class ClusterAdvancedSettings extends AbstractModel
     public $AuditLogTopicId;
 
     /**
+     * @var string 区分单网卡多IP模式和独立网卡模式
+     */
+    public $VpcCniType;
+
+    /**
      * @param boolean $IPVS 是否启用IPVS
      * @param boolean $AsEnabled 是否启用集群节点自动扩缩容(创建集群流程不支持开启此功能)
      * @param string $ContainerRuntime 集群使用的runtime类型，包括"docker"和"containerd"两种类型，默认为"docker"
@@ -120,6 +127,7 @@ class ClusterAdvancedSettings extends AbstractModel
      * @param boolean $AuditEnabled 是否开启审计开关
      * @param string $AuditLogsetId 审计日志上传到的logset日志集
      * @param string $AuditLogTopicId 审计日志上传到的topic
+     * @param string $VpcCniType 区分单网卡多IP模式和独立网卡模式
      */
     function __construct()
     {
@@ -181,6 +189,10 @@ class ClusterAdvancedSettings extends AbstractModel
 
         if (array_key_exists("AuditLogTopicId",$param) and $param["AuditLogTopicId"] !== null) {
             $this->AuditLogTopicId = $param["AuditLogTopicId"];
+        }
+
+        if (array_key_exists("VpcCniType",$param) and $param["VpcCniType"] !== null) {
+            $this->VpcCniType = $param["VpcCniType"];
         }
     }
 }

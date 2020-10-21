@@ -128,6 +128,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOperationInfo(OperationInfo $OperationInfo) 设置返回给前端的控制信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getClusterVersion() 获取集群版本
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setClusterVersion(string $ClusterVersion) 设置集群版本
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Cluster extends AbstractModel
 {
@@ -294,6 +298,12 @@ class Cluster extends AbstractModel
     public $OperationInfo;
 
     /**
+     * @var string 集群版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ClusterVersion;
+
+    /**
      * @param string $ClusterId 集群ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClusterName 集群名称
@@ -347,6 +357,8 @@ class Cluster extends AbstractModel
      * @param string $SubnetId 集群所属子网ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param OperationInfo $OperationInfo 返回给前端的控制信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ClusterVersion 集群版本
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -469,6 +481,10 @@ class Cluster extends AbstractModel
         if (array_key_exists("OperationInfo",$param) and $param["OperationInfo"] !== null) {
             $this->OperationInfo = new OperationInfo();
             $this->OperationInfo->deserialize($param["OperationInfo"]);
+        }
+
+        if (array_key_exists("ClusterVersion",$param) and $param["ClusterVersion"] !== null) {
+            $this->ClusterVersion = $param["ClusterVersion"];
         }
     }
 }

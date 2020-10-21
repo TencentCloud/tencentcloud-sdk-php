@@ -67,6 +67,8 @@ use TencentCloud\Clb\V20180317\Models as Models;
  * @method Models\DescribeClassicalLBListenersResponse DescribeClassicalLBListeners(Models\DescribeClassicalLBListenersRequest $req) DescribeClassicalLBListeners 接口用于获取传统型负载均衡的监听器信息。
  * @method Models\DescribeClassicalLBTargetsResponse DescribeClassicalLBTargets(Models\DescribeClassicalLBTargetsRequest $req) DescribeClassicalLBTargets用于获取传统型负载均衡绑定的后端服务
  * @method Models\DescribeClsLogSetResponse DescribeClsLogSet(Models\DescribeClsLogSetRequest $req) 获取用户的clb专有日志集
+ * @method Models\DescribeClusterResourcesResponse DescribeClusterResources(Models\DescribeClusterResourcesRequest $req) 查询独占集群中资源列表，支持按集群ID、vip、负载均衡ID、是否闲置为过滤条件检索
+ * @method Models\DescribeExclusiveClustersResponse DescribeExclusiveClusters(Models\DescribeExclusiveClustersRequest $req) 查询集群信息列表，支持以集群类型、集群唯一ID、集群名字、集群标签、集群内vip、集群内负载均衡唯一id、集群网络类型、可用区等条件进行检索
  * @method Models\DescribeListenersResponse DescribeListeners(Models\DescribeListenersRequest $req) DescribeListeners 接口可根据负载均衡器 ID，监听器的协议或端口作为过滤条件获取监听器列表。如果不指定任何过滤条件，则返回该负载均衡实例下的所有监听器。
  * @method Models\DescribeLoadBalancerListByCertIdResponse DescribeLoadBalancerListByCertId(Models\DescribeLoadBalancerListByCertIdRequest $req) 根据证书ID查询其在一个地域中所关联到负载均衡实例列表
  * @method Models\DescribeLoadBalancersResponse DescribeLoadBalancers(Models\DescribeLoadBalancersRequest $req) 查询一个地域的负载均衡实例列表

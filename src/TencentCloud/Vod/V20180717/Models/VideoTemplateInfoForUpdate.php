@@ -64,6 +64,10 @@ use TencentCloud\Common\AbstractModel;
 <li> stretch：拉伸，对每一帧进行拉伸，填满整个画面，可能导致转码后的视频被“压扁“或者“拉长“；</li>
 <li>black：留黑，保持视频宽高比不变，边缘剩余部分使用黑色填充。</li>
 默认值：black 。
+ * @method integer getVcrf() 获取视频恒定码率控制因子，取值范围为[0, 51]。
+如果指定该参数，将使用 CRF 的码率控制方式做转码。取0值表示禁用 CRF 模式。
+ * @method void setVcrf(integer $Vcrf) 设置视频恒定码率控制因子，取值范围为[0, 51]。
+如果指定该参数，将使用 CRF 的码率控制方式做转码。取0值表示禁用 CRF 模式。
  */
 class VideoTemplateInfoForUpdate extends AbstractModel
 {
@@ -118,6 +122,12 @@ class VideoTemplateInfoForUpdate extends AbstractModel
     public $FillType;
 
     /**
+     * @var integer 视频恒定码率控制因子，取值范围为[0, 51]。
+如果指定该参数，将使用 CRF 的码率控制方式做转码。取0值表示禁用 CRF 模式。
+     */
+    public $Vcrf;
+
+    /**
      * @param string $Codec 视频流的编码格式，可选值：
 <li>libx264：H.264 编码</li>
 <li>libx265：H.265 编码</li>
@@ -140,6 +150,8 @@ class VideoTemplateInfoForUpdate extends AbstractModel
 <li> stretch：拉伸，对每一帧进行拉伸，填满整个画面，可能导致转码后的视频被“压扁“或者“拉长“；</li>
 <li>black：留黑，保持视频宽高比不变，边缘剩余部分使用黑色填充。</li>
 默认值：black 。
+     * @param integer $Vcrf 视频恒定码率控制因子，取值范围为[0, 51]。
+如果指定该参数，将使用 CRF 的码率控制方式做转码。取0值表示禁用 CRF 模式。
      */
     function __construct()
     {
@@ -180,6 +192,10 @@ class VideoTemplateInfoForUpdate extends AbstractModel
 
         if (array_key_exists("FillType",$param) and $param["FillType"] !== null) {
             $this->FillType = $param["FillType"];
+        }
+
+        if (array_key_exists("Vcrf",$param) and $param["Vcrf"] !== null) {
+            $this->Vcrf = $param["Vcrf"];
         }
     }
 }

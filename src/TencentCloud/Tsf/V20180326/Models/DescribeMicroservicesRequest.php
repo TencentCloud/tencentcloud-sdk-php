@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量
  * @method integer getLimit() 获取分页个数
  * @method void setLimit(integer $Limit) 设置分页个数
+ * @method array getStatus() 获取状态过滤，online、offline、single_online
+ * @method void setStatus(array $Status) 设置状态过滤，online、offline、single_online
  */
 class DescribeMicroservicesRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class DescribeMicroservicesRequest extends AbstractModel
     public $Limit;
 
     /**
+     * @var array 状态过滤，online、offline、single_online
+     */
+    public $Status;
+
+    /**
      * @param string $NamespaceId 命名空间ID
      * @param string $SearchWord 搜索字段
      * @param string $OrderBy 排序字段
      * @param integer $OrderType 排序类型
      * @param integer $Offset 偏移量
      * @param integer $Limit 分页个数
+     * @param array $Status 状态过滤，online、offline、single_online
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class DescribeMicroservicesRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
     }
 }

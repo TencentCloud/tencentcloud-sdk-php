@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAssetRegion(string $AssetRegion) 设置生成包所在地域，详见产品支持的 [地域列表](https://cloud.tencent.com/document/api/1165/42053#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8)
  * @method string getOperateSystem() 获取生成包可运行的操作系统，若传入参数为CentOS7.16则不需要传入ImageId字段，否则，需要传入Imageid字段（该方式是为了兼容之前的版本，后续建议使用ImageId来替代该字段）
  * @method void setOperateSystem(string $OperateSystem) 设置生成包可运行的操作系统，若传入参数为CentOS7.16则不需要传入ImageId字段，否则，需要传入Imageid字段（该方式是为了兼容之前的版本，后续建议使用ImageId来替代该字段）
- * @method string getImageId() 获取生成包支持的操作系统镜像id，若传入OperateSystem字段的值是CentOS7.16，则不需要传入该值；如果不是，则需要通过DescribeAssetSystems接口获取asset支持的操作系统ImageId进行传入
- * @method void setImageId(string $ImageId) 设置生成包支持的操作系统镜像id，若传入OperateSystem字段的值是CentOS7.16，则不需要传入该值；如果不是，则需要通过DescribeAssetSystems接口获取asset支持的操作系统ImageId进行传入
+ * @method string getImageId() 获取生成包支持的操作系统镜像id，若传入OperateSystem字段的值是CentOS7.16，则不需要传入该值；如果不是，则需要通过[DescribeAssetSystems](https://cloud.tencent.com/document/product/1165/49191)接口获取asset支持的操作系统ImageId进行传入
+ * @method void setImageId(string $ImageId) 设置生成包支持的操作系统镜像id，若传入OperateSystem字段的值是CentOS7.16，则不需要传入该值；如果不是，则需要通过[DescribeAssetSystems](https://cloud.tencent.com/document/product/1165/49191)接口获取asset支持的操作系统ImageId进行传入
  */
 class CreateAssetRequest extends AbstractModel
 {
@@ -61,7 +61,7 @@ class CreateAssetRequest extends AbstractModel
     public $OperateSystem;
 
     /**
-     * @var string 生成包支持的操作系统镜像id，若传入OperateSystem字段的值是CentOS7.16，则不需要传入该值；如果不是，则需要通过DescribeAssetSystems接口获取asset支持的操作系统ImageId进行传入
+     * @var string 生成包支持的操作系统镜像id，若传入OperateSystem字段的值是CentOS7.16，则不需要传入该值；如果不是，则需要通过[DescribeAssetSystems](https://cloud.tencent.com/document/product/1165/49191)接口获取asset支持的操作系统ImageId进行传入
      */
     public $ImageId;
 
@@ -71,7 +71,7 @@ class CreateAssetRequest extends AbstractModel
      * @param string $AssetVersion 生成包版本，最小长度为1，最大长度为64
      * @param string $AssetRegion 生成包所在地域，详见产品支持的 [地域列表](https://cloud.tencent.com/document/api/1165/42053#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8)
      * @param string $OperateSystem 生成包可运行的操作系统，若传入参数为CentOS7.16则不需要传入ImageId字段，否则，需要传入Imageid字段（该方式是为了兼容之前的版本，后续建议使用ImageId来替代该字段）
-     * @param string $ImageId 生成包支持的操作系统镜像id，若传入OperateSystem字段的值是CentOS7.16，则不需要传入该值；如果不是，则需要通过DescribeAssetSystems接口获取asset支持的操作系统ImageId进行传入
+     * @param string $ImageId 生成包支持的操作系统镜像id，若传入OperateSystem字段的值是CentOS7.16，则不需要传入该值；如果不是，则需要通过[DescribeAssetSystems](https://cloud.tencent.com/document/product/1165/49191)接口获取asset支持的操作系统ImageId进行传入
      */
     function __construct()
     {

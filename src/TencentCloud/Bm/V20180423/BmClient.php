@@ -37,7 +37,7 @@ use TencentCloud\Bm\V20180423\Models as Models;
  * @method Models\DeleteUserCmdsResponse DeleteUserCmds(Models\DeleteUserCmdsRequest $req) 删除自定义脚本
  * @method Models\DescribeCustomImageProcessResponse DescribeCustomImageProcess(Models\DescribeCustomImageProcessRequest $req) 查询自定义镜像制作进度
  * @method Models\DescribeCustomImagesResponse DescribeCustomImages(Models\DescribeCustomImagesRequest $req) 查看自定义镜像列表
- * @method Models\DescribeDeviceClassResponse DescribeDeviceClass(Models\DescribeDeviceClassRequest $req) 获取获取设备类型
+ * @method Models\DescribeDeviceClassResponse DescribeDeviceClass(Models\DescribeDeviceClassRequest $req) 获取设备类型
  * @method Models\DescribeDeviceClassPartitionResponse DescribeDeviceClassPartition(Models\DescribeDeviceClassPartitionRequest $req) 查询机型支持的RAID方式， 并返回系统盘的分区和逻辑盘的列表
  * @method Models\DescribeDeviceHardwareInfoResponse DescribeDeviceHardwareInfo(Models\DescribeDeviceHardwareInfoRequest $req) 查询设备硬件配置信息，如 CPU 型号，内存大小，磁盘大小和数量
  * @method Models\DescribeDeviceInventoryResponse DescribeDeviceInventory(Models\DescribeDeviceInventoryRequest $req) 查询设备库存

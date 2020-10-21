@@ -76,6 +76,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setServiceSetting(ServiceSetting $ServiceSetting) 设置容器部署组的网络设置。
  * @method boolean getDeployAgent() 获取是否部署 agent 容器。若不指定该参数，则默认不部署 agent 容器。
  * @method void setDeployAgent(boolean $DeployAgent) 设置是否部署 agent 容器。若不指定该参数，则默认不部署 agent 容器。
+ * @method SchedulingStrategy getSchedulingStrategy() 获取节点调度策略。若不指定改参数，则默认不使用节点调度策略。
+ * @method void setSchedulingStrategy(SchedulingStrategy $SchedulingStrategy) 设置节点调度策略。若不指定改参数，则默认不使用节点调度策略。
  */
 class DeployContainerGroupRequest extends AbstractModel
 {
@@ -220,6 +222,11 @@ class DeployContainerGroupRequest extends AbstractModel
     public $DeployAgent;
 
     /**
+     * @var SchedulingStrategy 节点调度策略。若不指定改参数，则默认不使用节点调度策略。
+     */
+    public $SchedulingStrategy;
+
+    /**
      * @param string $GroupId 部署组ID，分组唯一标识
      * @param string $TagName 镜像版本名称,如v1
      * @param integer $InstanceNum 实例数量
@@ -248,6 +255,7 @@ class DeployContainerGroupRequest extends AbstractModel
      * @param array $Envs 部署组应用运行的环境变量。若不指定该参数，则默认不设置额外的环境变量。
      * @param ServiceSetting $ServiceSetting 容器部署组的网络设置。
      * @param boolean $DeployAgent 是否部署 agent 容器。若不指定该参数，则默认不部署 agent 容器。
+     * @param SchedulingStrategy $SchedulingStrategy 节点调度策略。若不指定改参数，则默认不使用节点调度策略。
      */
     function __construct()
     {
@@ -379,6 +387,11 @@ class DeployContainerGroupRequest extends AbstractModel
 
         if (array_key_exists("DeployAgent",$param) and $param["DeployAgent"] !== null) {
             $this->DeployAgent = $param["DeployAgent"];
+        }
+
+        if (array_key_exists("SchedulingStrategy",$param) and $param["SchedulingStrategy"] !== null) {
+            $this->SchedulingStrategy = new SchedulingStrategy();
+            $this->SchedulingStrategy->deserialize($param["SchedulingStrategy"]);
         }
     }
 }

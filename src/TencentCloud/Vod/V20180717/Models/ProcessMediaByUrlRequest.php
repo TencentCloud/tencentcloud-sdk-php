@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ProcessMediaByUrl请求参数结构体
  *
- * @method MediaInputInfo getInputInfo() 获取输入视频信息，包括视频 URL ， 名称、视频自定义 ID。
- * @method void setInputInfo(MediaInputInfo $InputInfo) 设置输入视频信息，包括视频 URL ， 名称、视频自定义 ID。
+ * @method MediaInputInfo getInputInfo() 获取API 已经<font color='red'>不再维护</font>。推荐使用的替代 API 请参考接口描述。
+ * @method void setInputInfo(MediaInputInfo $InputInfo) 设置API 已经<font color='red'>不再维护</font>。推荐使用的替代 API 请参考接口描述。
  * @method MediaOutputInfo getOutputInfo() 获取输出文件 COS 路径信息。
  * @method void setOutputInfo(MediaOutputInfo $OutputInfo) 设置输出文件 COS 路径信息。
  * @method AiContentReviewTaskInput getAiContentReviewTask() 获取视频内容审核类型任务参数。
@@ -44,7 +44,7 @@ use TencentCloud\Common\AbstractModel;
 class ProcessMediaByUrlRequest extends AbstractModel
 {
     /**
-     * @var MediaInputInfo 输入视频信息，包括视频 URL ， 名称、视频自定义 ID。
+     * @var MediaInputInfo API 已经<font color='red'>不再维护</font>。推荐使用的替代 API 请参考接口描述。
      */
     public $InputInfo;
 
@@ -94,7 +94,7 @@ class ProcessMediaByUrlRequest extends AbstractModel
     public $SubAppId;
 
     /**
-     * @param MediaInputInfo $InputInfo 输入视频信息，包括视频 URL ， 名称、视频自定义 ID。
+     * @param MediaInputInfo $InputInfo API 已经<font color='red'>不再维护</font>。推荐使用的替代 API 请参考接口描述。
      * @param MediaOutputInfo $OutputInfo 输出文件 COS 路径信息。
      * @param AiContentReviewTaskInput $AiContentReviewTask 视频内容审核类型任务参数。
      * @param AiAnalysisTaskInput $AiAnalysisTask 视频内容分析类型任务参数。

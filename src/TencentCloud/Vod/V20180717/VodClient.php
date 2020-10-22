@@ -219,13 +219,7 @@ use TencentCloud\Vod\V20180717\Models as Models;
 2. 通过任务流模板接口创建任务流模板。
 
 如使用事件通知，事件通知的类型为 [任务流状态变更](https://cloud.tencent.com/document/product/266/9636)。
- * @method Models\ProcessMediaByUrlResponse ProcessMediaByUrl(Models\ProcessMediaByUrlRequest $req) 对来源为 URL 的音视频媒体发起处理任务，功能包括：
-
-1. 智能内容审核（鉴黄、鉴恐、鉴政）；
-2. 智能内容分析（标签、分类、封面、按帧标签）；
-3. 智能内容识别（视频片头片尾、人脸、文本全文、文本关键词、语音全文、语音关键词、物体）。
-
-如使用事件通知，事件通知的类型为 [任务流状态变更](https://cloud.tencent.com/document/product/266/9636)。
+ * @method Models\ProcessMediaByUrlResponse ProcessMediaByUrl(Models\ProcessMediaByUrlRequest $req) 该 API 已经<font color='red'>不再维护</font>，请使用 MPS 产品的 [ProcessMedia](https://cloud.tencent.com/document/product/862/37578) 接口，在入参 InputInfo.UrlInputInfo.Url 中指定视频 URL。
  * @method Models\PullEventsResponse PullEvents(Models\PullEventsRequest $req) * 该接口用于业务服务器以 [可靠回调](https://cloud.tencent.com/document/product/266/33779#.E5.8F.AF.E9.9D.A0.E5.9B.9E.E8.B0.83) 的方式获取事件通知；
 * 接口为长轮询模式，即：如果服务端存在未消费事件，则立即返回给请求方；如果服务端没有未消费事件，则后台会将请求挂起，直到有新的事件产生为止；
 * 请求最多挂起5秒，建议请求方将超时时间设置为10秒；

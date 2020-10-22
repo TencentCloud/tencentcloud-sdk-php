@@ -68,10 +68,12 @@ use TencentCloud\Common\AbstractModel;
 <li>1：单通道</li>
 <li>2：双通道</li>
 <li>6：立体声</li>
+当媒体的封装格式是音频格式时（flac，ogg，mp3，m4a）时，声道数不允许设为立体声。
  * @method void setAudioChannel(integer $AudioChannel) 设置音频通道方式，可选值：
 <li>1：单通道</li>
 <li>2：双通道</li>
 <li>6：立体声</li>
+当媒体的封装格式是音频格式时（flac，ogg，mp3，m4a）时，声道数不允许设为立体声。
  */
 class AudioTemplateInfoForUpdate extends AbstractModel
 {
@@ -114,6 +116,7 @@ class AudioTemplateInfoForUpdate extends AbstractModel
 <li>1：单通道</li>
 <li>2：双通道</li>
 <li>6：立体声</li>
+当媒体的封装格式是音频格式时（flac，ogg，mp3，m4a）时，声道数不允许设为立体声。
      */
     public $AudioChannel;
 
@@ -144,6 +147,7 @@ class AudioTemplateInfoForUpdate extends AbstractModel
 <li>1：单通道</li>
 <li>2：双通道</li>
 <li>6：立体声</li>
+当媒体的封装格式是音频格式时（flac，ogg，mp3，m4a）时，声道数不允许设为立体声。
      */
     function __construct()
     {

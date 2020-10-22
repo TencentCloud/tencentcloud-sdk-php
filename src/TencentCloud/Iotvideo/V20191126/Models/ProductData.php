@@ -84,6 +84,10 @@ Other-Overseas（其他境外地区）
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAccessMode(integer $AccessMode) 设置接入模型，bit0是0：公版小程序未接入，bit0是1：公版小程序已接入
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getOs() 获取linux,android,liteos
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOs(string $Os) 设置linux,android,liteos
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ProductData extends AbstractModel
 {
@@ -172,6 +176,12 @@ Other-Overseas（其他境外地区）
     public $AccessMode;
 
     /**
+     * @var string linux,android,liteos
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Os;
+
+    /**
      * @param string $ProductId 产品ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProductName 产品名称
@@ -203,6 +213,8 @@ India（印度）
 Other-Overseas（其他境外地区）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AccessMode 接入模型，bit0是0：公版小程序未接入，bit0是1：公版小程序已接入
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Os linux,android,liteos
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -268,6 +280,10 @@ Other-Overseas（其他境外地区）
 
         if (array_key_exists("AccessMode",$param) and $param["AccessMode"] !== null) {
             $this->AccessMode = $param["AccessMode"];
+        }
+
+        if (array_key_exists("Os",$param) and $param["Os"] !== null) {
+            $this->Os = $param["Os"];
         }
     }
 }

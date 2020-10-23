@@ -126,6 +126,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUnifyMetaInstanceId(string $UnifyMetaInstanceId) 设置EMR-MetaDB实例
  * @method CustomMetaInfo getMetaDBInfo() 获取自定义MetaDB信息
  * @method void setMetaDBInfo(CustomMetaInfo $MetaDBInfo) 设置自定义MetaDB信息
+ * @method string getApplicationRole() 获取自定义应用角色。
+ * @method void setApplicationRole(string $ApplicationRole) 设置自定义应用角色。
  */
 class CreateInstanceRequest extends AbstractModel
 {
@@ -287,6 +289,11 @@ class CreateInstanceRequest extends AbstractModel
     public $MetaDBInfo;
 
     /**
+     * @var string 自定义应用角色。
+     */
+    public $ApplicationRole;
+
+    /**
      * @param integer $ProductId 产品ID，不同产品ID表示不同的EMR产品版本。取值范围：
 <li>1：表示EMR-V1.3.1。</li>
 <li>2：表示EMR-V2.0.1。</li>
@@ -340,6 +347,7 @@ class CreateInstanceRequest extends AbstractModel
 <li>USER_CUSTOM_META：表示集群使用自定义MetaDB。</li>
      * @param string $UnifyMetaInstanceId EMR-MetaDB实例
      * @param CustomMetaInfo $MetaDBInfo 自定义MetaDB信息
+     * @param string $ApplicationRole 自定义应用角色。
      */
     function __construct()
     {
@@ -472,6 +480,10 @@ class CreateInstanceRequest extends AbstractModel
         if (array_key_exists("MetaDBInfo",$param) and $param["MetaDBInfo"] !== null) {
             $this->MetaDBInfo = new CustomMetaInfo();
             $this->MetaDBInfo->deserialize($param["MetaDBInfo"]);
+        }
+
+        if (array_key_exists("ApplicationRole",$param) and $param["ApplicationRole"] !== null) {
+            $this->ApplicationRole = $param["ApplicationRole"];
         }
     }
 }

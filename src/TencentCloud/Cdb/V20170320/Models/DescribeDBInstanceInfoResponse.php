@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKeyRegion(string $KeyRegion) 设置密钥所在地域。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDefaultKmsRegion() 获取当前 CDB 后端服务使用的 KMS 服务的默认地域。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDefaultKmsRegion(string $DefaultKmsRegion) 设置当前 CDB 后端服务使用的 KMS 服务的默认地域。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -67,6 +71,12 @@ class DescribeDBInstanceInfoResponse extends AbstractModel
     public $KeyRegion;
 
     /**
+     * @var string 当前 CDB 后端服务使用的 KMS 服务的默认地域。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DefaultKmsRegion;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -78,6 +88,8 @@ class DescribeDBInstanceInfoResponse extends AbstractModel
      * @param string $KeyId 加密使用的密钥 ID 。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $KeyRegion 密钥所在地域。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DefaultKmsRegion 当前 CDB 后端服务使用的 KMS 服务的默认地域。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -112,6 +124,10 @@ class DescribeDBInstanceInfoResponse extends AbstractModel
 
         if (array_key_exists("KeyRegion",$param) and $param["KeyRegion"] !== null) {
             $this->KeyRegion = $param["KeyRegion"];
+        }
+
+        if (array_key_exists("DefaultKmsRegion",$param) and $param["DefaultKmsRegion"] !== null) {
+            $this->DefaultKmsRegion = $param["DefaultKmsRegion"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

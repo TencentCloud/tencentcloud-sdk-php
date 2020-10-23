@@ -14,23 +14,47 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tts\V20190823\Models;
+namespace TencentCloud\Ssl\V20191205\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * TextToVoice返回参数结构体
+ * CheckCertificateChain返回参数结构体
  *
+ * @method boolean getIsValid() 获取1为通过检查，0为未通过检查。
+ * @method void setIsValid(boolean $IsValid) 设置1为通过检查，0为未通过检查。
+ * @method boolean getIsTrustedCA() 获取1为可信CA，0为不可信CA。
+ * @method void setIsTrustedCA(boolean $IsTrustedCA) 设置1为可信CA，0为不可信CA。
+ * @method array getChains() 获取包含证书链中每一段证书的通用名称。
+ * @method void setChains(array $Chains) 设置包含证书链中每一段证书的通用名称。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class TextToVoiceResponse extends AbstractModel
+class CheckCertificateChainResponse extends AbstractModel
 {
+    /**
+     * @var boolean 1为通过检查，0为未通过检查。
+     */
+    public $IsValid;
+
+    /**
+     * @var boolean 1为可信CA，0为不可信CA。
+     */
+    public $IsTrustedCA;
+
+    /**
+     * @var array 包含证书链中每一段证书的通用名称。
+     */
+    public $Chains;
+
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
+     * @param boolean $IsValid 1为通过检查，0为未通过检查。
+     * @param boolean $IsTrustedCA 1为可信CA，0为不可信CA。
+     * @param array $Chains 包含证书链中每一段证书的通用名称。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -46,6 +70,18 @@ class TextToVoiceResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("IsValid",$param) and $param["IsValid"] !== null) {
+            $this->IsValid = $param["IsValid"];
+        }
+
+        if (array_key_exists("IsTrustedCA",$param) and $param["IsTrustedCA"] !== null) {
+            $this->IsTrustedCA = $param["IsTrustedCA"];
+        }
+
+        if (array_key_exists("Chains",$param) and $param["Chains"] !== null) {
+            $this->Chains = $param["Chains"];
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

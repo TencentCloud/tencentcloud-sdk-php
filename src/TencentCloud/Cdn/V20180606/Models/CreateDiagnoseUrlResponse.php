@@ -14,23 +14,31 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tts\V20190823\Models;
+namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * TextToVoice返回参数结构体
+ * CreateDiagnoseUrl返回参数结构体
  *
+ * @method string getDiagnoseLink() 获取系统生成的诊断链接，一个诊断链接最多可访问10次，有效期为24h。
+ * @method void setDiagnoseLink(string $DiagnoseLink) 设置系统生成的诊断链接，一个诊断链接最多可访问10次，有效期为24h。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class TextToVoiceResponse extends AbstractModel
+class CreateDiagnoseUrlResponse extends AbstractModel
 {
+    /**
+     * @var string 系统生成的诊断链接，一个诊断链接最多可访问10次，有效期为24h。
+     */
+    public $DiagnoseLink;
+
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
+     * @param string $DiagnoseLink 系统生成的诊断链接，一个诊断链接最多可访问10次，有效期为24h。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -46,6 +54,10 @@ class TextToVoiceResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("DiagnoseLink",$param) and $param["DiagnoseLink"] !== null) {
+            $this->DiagnoseLink = $param["DiagnoseLink"];
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

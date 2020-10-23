@@ -24,29 +24,29 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegex(boolean $Regex) 设置是否是正则匹配。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getPath() 获取URL路径。
+ * @method string getPath() 获取匹配的URL路径。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPath(string $Path) 设置URL路径。
+ * @method void setPath(string $Path) 设置匹配的URL路径。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getOrigin() 获取路径匹配时的回源源站。
+ * @method string getOrigin() 获取路径匹配时的回源源站。暂不支持开了私有读写的COS源。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOrigin(string $Origin) 设置路径匹配时的回源源站。
+ * @method void setOrigin(string $Origin) 设置路径匹配时的回源源站。暂不支持开了私有读写的COS源。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getServerName() 获取路径匹配时的回源Host头部。
+ * @method string getServerName() 获取路径匹配时回源的Host头部。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setServerName(string $ServerName) 设置路径匹配时的回源Host头部。
+ * @method void setServerName(string $ServerName) 设置路径匹配时回源的Host头部。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOriginArea() 获取源站所属区域，支持CN，OV。分别表示国内或海外。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOriginArea(string $OriginArea) 设置源站所属区域，支持CN，OV。分别表示国内或海外。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getForwardUri() 获取路径匹配时的回源URI路径。
+ * @method string getForwardUri() 获取路径匹配时回源的URI路径。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setForwardUri(string $ForwardUri) 设置路径匹配时的回源URI路径。
+ * @method void setForwardUri(string $ForwardUri) 设置路径匹配时回源的URI路径。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getRequestHeaders() 获取路径匹配时的回源头部设置。
+ * @method array getRequestHeaders() 获取路径匹配时回源的头部设置。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRequestHeaders(array $RequestHeaders) 设置路径匹配时的回源头部设置。
+ * @method void setRequestHeaders(array $RequestHeaders) 设置路径匹配时回源的头部设置。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class PathRule extends AbstractModel
@@ -58,19 +58,19 @@ class PathRule extends AbstractModel
     public $Regex;
 
     /**
-     * @var string URL路径。
+     * @var string 匹配的URL路径。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Path;
 
     /**
-     * @var string 路径匹配时的回源源站。
+     * @var string 路径匹配时的回源源站。暂不支持开了私有读写的COS源。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Origin;
 
     /**
-     * @var string 路径匹配时的回源Host头部。
+     * @var string 路径匹配时回源的Host头部。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ServerName;
@@ -82,13 +82,13 @@ class PathRule extends AbstractModel
     public $OriginArea;
 
     /**
-     * @var string 路径匹配时的回源URI路径。
+     * @var string 路径匹配时回源的URI路径。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ForwardUri;
 
     /**
-     * @var array 路径匹配时的回源头部设置。
+     * @var array 路径匹配时回源的头部设置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RequestHeaders;
@@ -96,17 +96,17 @@ class PathRule extends AbstractModel
     /**
      * @param boolean $Regex 是否是正则匹配。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Path URL路径。
+     * @param string $Path 匹配的URL路径。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Origin 路径匹配时的回源源站。
+     * @param string $Origin 路径匹配时的回源源站。暂不支持开了私有读写的COS源。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ServerName 路径匹配时的回源Host头部。
+     * @param string $ServerName 路径匹配时回源的Host头部。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OriginArea 源站所属区域，支持CN，OV。分别表示国内或海外。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ForwardUri 路径匹配时的回源URI路径。
+     * @param string $ForwardUri 路径匹配时回源的URI路径。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $RequestHeaders 路径匹配时的回源头部设置。
+     * @param array $RequestHeaders 路径匹配时回源的头部设置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

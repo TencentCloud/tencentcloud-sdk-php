@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tts\V20190823\Models;
+namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * TextToVoice返回参数结构体
+ * ListDiagnoseReport请求参数结构体
  *
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getKeyWords() 获取用于搜索诊断URL的关键字，不填时返回用户所有的诊断任务。
+ * @method void setKeyWords(string $KeyWords) 设置用于搜索诊断URL的关键字，不填时返回用户所有的诊断任务。
  */
-class TextToVoiceResponse extends AbstractModel
+class ListDiagnoseReportRequest extends AbstractModel
 {
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 用于搜索诊断URL的关键字，不填时返回用户所有的诊断任务。
      */
-    public $RequestId;
+    public $KeyWords;
 
     /**
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $KeyWords 用于搜索诊断URL的关键字，不填时返回用户所有的诊断任务。
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class TextToVoiceResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists("KeyWords",$param) and $param["KeyWords"] !== null) {
+            $this->KeyWords = $param["KeyWords"];
         }
     }
 }

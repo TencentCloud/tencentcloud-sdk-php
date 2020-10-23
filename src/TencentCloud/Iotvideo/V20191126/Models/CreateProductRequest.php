@@ -52,6 +52,10 @@ India（印度）
 Other-Overseas（其他境外地区）
  * @method integer getProductCate() 获取设备类型, 0-普通视频设备，1-NVR设备
  * @method void setProductCate(integer $ProductCate) 设置设备类型, 0-普通视频设备，1-NVR设备
+ * @method integer getAccessMode() 获取接入模型，bit0是0：公版小程序未接入，bit0是1：公版小程序已接入
+ * @method void setAccessMode(integer $AccessMode) 设置接入模型，bit0是0：公版小程序未接入，bit0是1：公版小程序已接入
+ * @method string getOs() 获取linux,android,liteos
+ * @method void setOs(string $Os) 设置linux,android,liteos
  */
 class CreateProductRequest extends AbstractModel
 {
@@ -104,6 +108,16 @@ Other-Overseas（其他境外地区）
     public $ProductCate;
 
     /**
+     * @var integer 接入模型，bit0是0：公版小程序未接入，bit0是1：公版小程序已接入
+     */
+    public $AccessMode;
+
+    /**
+     * @var string linux,android,liteos
+     */
+    public $Os;
+
+    /**
      * @param string $ProductModel 产器型号(APP产品,为APP包名)
      * @param string $ProductName 产品名称
 仅支持中文、英文、数字、下划线，不超过32个字符
@@ -120,6 +134,8 @@ Europe（欧洲）
 India（印度）
 Other-Overseas（其他境外地区）
      * @param integer $ProductCate 设备类型, 0-普通视频设备，1-NVR设备
+     * @param integer $AccessMode 接入模型，bit0是0：公版小程序未接入，bit0是1：公版小程序已接入
+     * @param string $Os linux,android,liteos
      */
     function __construct()
     {
@@ -164,6 +180,14 @@ Other-Overseas（其他境外地区）
 
         if (array_key_exists("ProductCate",$param) and $param["ProductCate"] !== null) {
             $this->ProductCate = $param["ProductCate"];
+        }
+
+        if (array_key_exists("AccessMode",$param) and $param["AccessMode"] !== null) {
+            $this->AccessMode = $param["AccessMode"];
+        }
+
+        if (array_key_exists("Os",$param) and $param["Os"] !== null) {
+            $this->Os = $param["Os"];
         }
     }
 }

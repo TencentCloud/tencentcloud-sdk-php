@@ -39,6 +39,8 @@ use TencentCloud\Domain\V20180808\Models as Models;
  * @method Models\DeleteTemplateResponse DeleteTemplate(Models\DeleteTemplateRequest $req) 本接口 ( DeleteTemplate ) 用于删除域名信息模板。
 
 默认接口请求频率限制：20次/秒。
+ * @method Models\DescribeBatchOperationLogDetailsResponse DescribeBatchOperationLogDetails(Models\DescribeBatchOperationLogDetailsRequest $req) 本接口 ( DescribeBatchOperationLogDetails ) 用于获取批量操作日志详情。
+ * @method Models\DescribeBatchOperationLogsResponse DescribeBatchOperationLogs(Models\DescribeBatchOperationLogsRequest $req) 本接口 ( DescribeBatchOperationLogs ) 用于获取批量操作日志 。
  * @method Models\DescribeDomainBaseInfoResponse DescribeDomainBaseInfo(Models\DescribeDomainBaseInfoRequest $req) 本接口 (  DescribeDomainBaseInfo) 获取域名基础信息。
 
 默认接口请求频率限制：20次/秒。
@@ -72,8 +74,6 @@ use TencentCloud\Domain\V20180808\Models as Models;
 
 默认接口请求频率限制：20次/秒。
  * @method Models\UpdateProhibitionBatchResponse UpdateProhibitionBatch(Models\UpdateProhibitionBatchRequest $req) 本接口 ( UpdateProhibitionBatch ) 用于批量设置禁止域名更新 。
-
-默认接口请求频率限制：20次/秒。
  * @method Models\UploadImageResponse UploadImage(Models\UploadImageRequest $req) 本接口 ( UploadImage ) 用于上传资质照片 。
 
 默认接口请求频率限制：20次/秒。

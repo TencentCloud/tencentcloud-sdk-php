@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTimeoutInstanceIds(array $TimeoutInstanceIds) 设置超时未返回出来节点的ID(可能失败，也可能成功)
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getFailedReasons() 获取失败的节点的失败原因
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFailedReasons(array $FailedReasons) 设置失败的节点的失败原因
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -56,6 +60,12 @@ class AddExistedInstancesResponse extends AbstractModel
     public $TimeoutInstanceIds;
 
     /**
+     * @var array 失败的节点的失败原因
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FailedReasons;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -66,6 +76,8 @@ class AddExistedInstancesResponse extends AbstractModel
      * @param array $SuccInstanceIds 成功的节点ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $TimeoutInstanceIds 超时未返回出来节点的ID(可能失败，也可能成功)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $FailedReasons 失败的节点的失败原因
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -92,6 +104,10 @@ class AddExistedInstancesResponse extends AbstractModel
 
         if (array_key_exists("TimeoutInstanceIds",$param) and $param["TimeoutInstanceIds"] !== null) {
             $this->TimeoutInstanceIds = $param["TimeoutInstanceIds"];
+        }
+
+        if (array_key_exists("FailedReasons",$param) and $param["FailedReasons"] !== null) {
+            $this->FailedReasons = $param["FailedReasons"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

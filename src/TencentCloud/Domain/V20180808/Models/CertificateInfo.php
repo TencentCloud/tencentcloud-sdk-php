@@ -25,7 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getCertificateType() 获取证件类型。
 SFZ: 身份证。
 HZ: 护照。
-TXZ: 港澳居民来往内地通行证。
+TXZ: 中国港澳居民来往内地通行证。
 TWSFZ: 中国台湾居民来往大陆通行证。
 GWSFZ: 外国人永久居留身份证。
 ORG: 组织机构代码证
@@ -47,14 +47,14 @@ GWJGZJ: 外国机构证件。
 SHFWJGZ: 社会服务机构登记证书。
 MBXXXKZ: 民办学校办学许可证。
 YLJGXKZ: 医疗机构执业许可证。
-GAJZZ: 港澳居住证
+GAJZZ: 中国港澳居住证。
 TWJZZ: 中国台湾居住证。
 QTTYDM: 其他-统一社会信用代码证书。
 GZJGZY: 公证机构执业证。
  * @method void setCertificateType(string $CertificateType) 设置证件类型。
 SFZ: 身份证。
 HZ: 护照。
-TXZ: 港澳居民来往内地通行证。
+TXZ: 中国港澳居民来往内地通行证。
 TWSFZ: 中国台湾居民来往大陆通行证。
 GWSFZ: 外国人永久居留身份证。
 ORG: 组织机构代码证
@@ -76,7 +76,7 @@ GWJGZJ: 外国机构证件。
 SHFWJGZ: 社会服务机构登记证书。
 MBXXXKZ: 民办学校办学许可证。
 YLJGXKZ: 医疗机构执业许可证。
-GAJZZ: 港澳居住证
+GAJZZ: 中国港澳居住证。
 TWJZZ: 中国台湾居住证。
 QTTYDM: 其他-统一社会信用代码证书。
 GZJGZY: 公证机构执业证。
@@ -94,7 +94,7 @@ class CertificateInfo extends AbstractModel
      * @var string 证件类型。
 SFZ: 身份证。
 HZ: 护照。
-TXZ: 港澳居民来往内地通行证。
+TXZ: 中国港澳居民来往内地通行证。
 TWSFZ: 中国台湾居民来往大陆通行证。
 GWSFZ: 外国人永久居留身份证。
 ORG: 组织机构代码证
@@ -116,7 +116,7 @@ GWJGZJ: 外国机构证件。
 SHFWJGZ: 社会服务机构登记证书。
 MBXXXKZ: 民办学校办学许可证。
 YLJGXKZ: 医疗机构执业许可证。
-GAJZZ: 港澳居住证
+GAJZZ: 中国港澳居住证。
 TWJZZ: 中国台湾居住证。
 QTTYDM: 其他-统一社会信用代码证书。
 GZJGZY: 公证机构执业证。
@@ -133,7 +133,7 @@ GZJGZY: 公证机构执业证。
      * @param string $CertificateType 证件类型。
 SFZ: 身份证。
 HZ: 护照。
-TXZ: 港澳居民来往内地通行证。
+TXZ: 中国港澳居民来往内地通行证。
 TWSFZ: 中国台湾居民来往大陆通行证。
 GWSFZ: 外国人永久居留身份证。
 ORG: 组织机构代码证
@@ -155,7 +155,7 @@ GWJGZJ: 外国机构证件。
 SHFWJGZ: 社会服务机构登记证书。
 MBXXXKZ: 民办学校办学许可证。
 YLJGXKZ: 医疗机构执业许可证。
-GAJZZ: 港澳居住证
+GAJZZ: 中国港澳居住证。
 TWJZZ: 中国台湾居住证。
 QTTYDM: 其他-统一社会信用代码证书。
 GZJGZY: 公证机构执业证。

@@ -87,9 +87,11 @@ use TencentCloud\Common\AbstractModel;
 <li>gauss：高斯模糊，保持视频宽高比不变，边缘剩余部分使用高斯模糊填充。</li>
 默认值：black 。
  * @method integer getVcrf() 获取视频恒定码率控制因子，取值范围为[1, 51]。
-如果指定该参数，将使用 CRF 的码率控制方式做转码。0值表示禁用 CRF 模式。
+如果指定该参数，将使用 CRF 的码率控制方式做转码（视频码率将不再生效）。
+如果没有特殊需求，不建议指定该参数。
  * @method void setVcrf(integer $Vcrf) 设置视频恒定码率控制因子，取值范围为[1, 51]。
-如果指定该参数，将使用 CRF 的码率控制方式做转码。0值表示禁用 CRF 模式。
+如果指定该参数，将使用 CRF 的码率控制方式做转码（视频码率将不再生效）。
+如果没有特殊需求，不建议指定该参数。
  */
 class VideoTemplateInfo extends AbstractModel
 {
@@ -160,7 +162,8 @@ class VideoTemplateInfo extends AbstractModel
 
     /**
      * @var integer 视频恒定码率控制因子，取值范围为[1, 51]。
-如果指定该参数，将使用 CRF 的码率控制方式做转码。0值表示禁用 CRF 模式。
+如果指定该参数，将使用 CRF 的码率控制方式做转码（视频码率将不再生效）。
+如果没有特殊需求，不建议指定该参数。
      */
     public $Vcrf;
 
@@ -199,7 +202,8 @@ class VideoTemplateInfo extends AbstractModel
 <li>gauss：高斯模糊，保持视频宽高比不变，边缘剩余部分使用高斯模糊填充。</li>
 默认值：black 。
      * @param integer $Vcrf 视频恒定码率控制因子，取值范围为[1, 51]。
-如果指定该参数，将使用 CRF 的码率控制方式做转码。0值表示禁用 CRF 模式。
+如果指定该参数，将使用 CRF 的码率控制方式做转码（视频码率将不再生效）。
+如果没有特殊需求，不建议指定该参数。
      */
     function __construct()
     {

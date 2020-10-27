@@ -78,6 +78,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubnetCidrBlock(string $SubnetCidrBlock) 设置子网的CIDR
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTags() 获取资源所关联的Tag
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTags(array $Tags) 设置资源所关联的Tag
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getRenewFlag() 获取资源续费标识，0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费(用户设置)
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRenewFlag(integer $RenewFlag) 设置资源续费标识，0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费(用户设置)
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -193,6 +201,18 @@ class DescribeVsmAttributesResponse extends AbstractModel
     public $SubnetCidrBlock;
 
     /**
+     * @var array 资源所关联的Tag
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Tags;
+
+    /**
+     * @var integer 资源续费标识，0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费(用户设置)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RenewFlag;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -226,6 +246,10 @@ class DescribeVsmAttributesResponse extends AbstractModel
      * @param string $VpcCidrBlock VPC的IPv4 CIDR
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubnetCidrBlock 子网的CIDR
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Tags 资源所关联的Tag
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $RenewFlag 资源续费标识，0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费(用户设置)
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -325,6 +349,19 @@ class DescribeVsmAttributesResponse extends AbstractModel
 
         if (array_key_exists("SubnetCidrBlock",$param) and $param["SubnetCidrBlock"] !== null) {
             $this->SubnetCidrBlock = $param["SubnetCidrBlock"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
+        }
+
+        if (array_key_exists("RenewFlag",$param) and $param["RenewFlag"] !== null) {
+            $this->RenewFlag = $param["RenewFlag"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

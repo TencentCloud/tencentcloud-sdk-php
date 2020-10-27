@@ -30,6 +30,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRemoveAudio(integer $RemoveAudio) 设置是否移除音频流，取值范围：
 <li>0：否，</li>
 <li>1：是。</li>
+ * @method integer getRemoveVideo() 获取是否移除视频流，取值范围：
+<li>0：否，</li>
+<li>1：是。</li>
+ * @method void setRemoveVideo(integer $RemoveVideo) 设置是否移除视频流，取值范围：
+<li>0：否，</li>
+<li>1：是。</li>
  */
 class AdaptiveStreamTemplate extends AbstractModel
 {
@@ -51,9 +57,19 @@ class AdaptiveStreamTemplate extends AbstractModel
     public $RemoveAudio;
 
     /**
+     * @var integer 是否移除视频流，取值范围：
+<li>0：否，</li>
+<li>1：是。</li>
+     */
+    public $RemoveVideo;
+
+    /**
      * @param VideoTemplateInfo $Video 视频参数信息。
      * @param AudioTemplateInfo $Audio 音频参数信息。
      * @param integer $RemoveAudio 是否移除音频流，取值范围：
+<li>0：否，</li>
+<li>1：是。</li>
+     * @param integer $RemoveVideo 是否移除视频流，取值范围：
 <li>0：否，</li>
 <li>1：是。</li>
      */
@@ -82,6 +98,10 @@ class AdaptiveStreamTemplate extends AbstractModel
 
         if (array_key_exists("RemoveAudio",$param) and $param["RemoveAudio"] !== null) {
             $this->RemoveAudio = $param["RemoveAudio"];
+        }
+
+        if (array_key_exists("RemoveVideo",$param) and $param["RemoveVideo"] !== null) {
+            $this->RemoveVideo = $param["RemoveVideo"];
         }
     }
 }

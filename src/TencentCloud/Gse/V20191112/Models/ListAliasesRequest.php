@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrderBy(string $OrderBy) 设置排序字段，例如CreationTime
  * @method string getOrderWay() 获取排序方式，有效值asc|desc
  * @method void setOrderWay(string $OrderWay) 设置排序方式，有效值asc|desc
+ * @method array getFilters() 获取资源过滤字段，可以按照资源名称和标签进行过滤- 资源名称过滤    - Key: 固定字符串 "resource:name"    - Values: 资源名称数组（舰队当前仅支持单个名称的过滤）- 标签过滤    - 通过标签键过滤        - Key: 固定字符串 "tag:key"        - Values 不传    - 通过标签键值过滤        - Key: 固定字符串 "tag:key-value"        - Values: 标签键值对数组，例如 ["key1:value1", "key1:value2", "key2:value2"]
+ * @method void setFilters(array $Filters) 设置资源过滤字段，可以按照资源名称和标签进行过滤- 资源名称过滤    - Key: 固定字符串 "resource:name"    - Values: 资源名称数组（舰队当前仅支持单个名称的过滤）- 标签过滤    - 通过标签键过滤        - Key: 固定字符串 "tag:key"        - Values 不传    - 通过标签键值过滤        - Key: 固定字符串 "tag:key-value"        - Values: 标签键值对数组，例如 ["key1:value1", "key1:value2", "key2:value2"]
  */
 class ListAliasesRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class ListAliasesRequest extends AbstractModel
     public $OrderWay;
 
     /**
+     * @var array 资源过滤字段，可以按照资源名称和标签进行过滤- 资源名称过滤    - Key: 固定字符串 "resource:name"    - Values: 资源名称数组（舰队当前仅支持单个名称的过滤）- 标签过滤    - 通过标签键过滤        - Key: 固定字符串 "tag:key"        - Values 不传    - 通过标签键值过滤        - Key: 固定字符串 "tag:key-value"        - Values: 标签键值对数组，例如 ["key1:value1", "key1:value2", "key2:value2"]
+     */
+    public $Filters;
+
+    /**
      * @param string $Name 名字，长度不小于1字符不超过1024字符
      * @param string $RoutingStrategyType 路由策略类型，有效值常规别名(SIMPLE)、终止别名(TERMINAL)
      * @param integer $Limit 要返回的最大结果数，最小值1
      * @param integer $Offset 偏移，默认0
      * @param string $OrderBy 排序字段，例如CreationTime
      * @param string $OrderWay 排序方式，有效值asc|desc
+     * @param array $Filters 资源过滤字段，可以按照资源名称和标签进行过滤- 资源名称过滤    - Key: 固定字符串 "resource:name"    - Values: 资源名称数组（舰队当前仅支持单个名称的过滤）- 标签过滤    - 通过标签键过滤        - Key: 固定字符串 "tag:key"        - Values 不传    - 通过标签键值过滤        - Key: 固定字符串 "tag:key-value"        - Values: 标签键值对数组，例如 ["key1:value1", "key1:value2", "key2:value2"]
      */
     function __construct()
     {
@@ -108,6 +116,15 @@ class ListAliasesRequest extends AbstractModel
 
         if (array_key_exists("OrderWay",$param) and $param["OrderWay"] !== null) {
             $this->OrderWay = $param["OrderWay"];
+        }
+
+        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+            $this->Filters = [];
+            foreach ($param["Filters"] as $key => $value){
+                $obj = new Filter();
+                $obj->deserialize($value);
+                array_push($this->Filters, $obj);
+            }
         }
     }
 }

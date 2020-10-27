@@ -80,6 +80,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setModifyTimes(integer $ModifyTimes) 设置该固件版本发布的变更次数
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRemark() 获取备注信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRemark(string $Remark) 设置备注信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method Contents getContents() 获取版本发布的描述信息，需要国际化，可以为空
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setContents(Contents $Contents) 设置版本发布的描述信息，需要国际化，可以为空
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class VersionData extends AbstractModel
 {
@@ -174,6 +182,18 @@ class VersionData extends AbstractModel
     public $ModifyTimes;
 
     /**
+     * @var string 备注信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Remark;
+
+    /**
+     * @var Contents 版本发布的描述信息，需要国际化，可以为空
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Contents;
+
+    /**
      * @param string $ProductId 产品ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OtaVersion 固件版本号
@@ -203,6 +223,10 @@ class VersionData extends AbstractModel
      * @param integer $UploadTime 发布记录的最后变更时间，UNIX时间戳，单位秒
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ModifyTimes 该固件版本发布的变更次数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Remark 备注信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Contents $Contents 版本发布的描述信息，需要国际化，可以为空
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -276,6 +300,15 @@ class VersionData extends AbstractModel
 
         if (array_key_exists("ModifyTimes",$param) and $param["ModifyTimes"] !== null) {
             $this->ModifyTimes = $param["ModifyTimes"];
+        }
+
+        if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
+            $this->Remark = $param["Remark"];
+        }
+
+        if (array_key_exists("Contents",$param) and $param["Contents"] !== null) {
+            $this->Contents = new Contents();
+            $this->Contents->deserialize($param["Contents"]);
         }
     }
 }

@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCsrContent(string $CsrContent) 设置CSR 内容。
  * @method string getCsrkeyPassword() 获取KEY 密码。
  * @method void setCsrkeyPassword(string $CsrkeyPassword) 设置KEY 密码。
+ * @method string getReason() 获取重颁发原因。
+ * @method void setReason(string $Reason) 设置重颁发原因。
  */
 class ReplaceCertificateRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class ReplaceCertificateRequest extends AbstractModel
     public $CsrkeyPassword;
 
     /**
+     * @var string 重颁发原因。
+     */
+    public $Reason;
+
+    /**
      * @param string $CertificateId 证书 ID。
      * @param string $ValidType 验证类型：DNS_AUTO = 自动DNS验证，DNS = 手动DNS验证，FILE = 文件验证。
      * @param string $CsrType 类型，默认 Original。可选项：Original = 原证书 CSR，Upload = 手动上传，Online = 在线生成。
      * @param string $CsrContent CSR 内容。
      * @param string $CsrkeyPassword KEY 密码。
+     * @param string $Reason 重颁发原因。
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class ReplaceCertificateRequest extends AbstractModel
 
         if (array_key_exists("CsrkeyPassword",$param) and $param["CsrkeyPassword"] !== null) {
             $this->CsrkeyPassword = $param["CsrkeyPassword"];
+        }
+
+        if (array_key_exists("Reason",$param) and $param["Reason"] !== null) {
+            $this->Reason = $param["Reason"];
         }
     }
 }

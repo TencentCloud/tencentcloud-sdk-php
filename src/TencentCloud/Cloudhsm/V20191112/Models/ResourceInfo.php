@@ -92,6 +92,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVpcName(string $VpcName) 设置Vpc名称
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCreateUin() 获取创建者Uin账号
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCreateUin(string $CreateUin) 设置创建者Uin账号
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getRenewFlag() 获取自动续费状态标识， 0-手动续费，1-自动续费，2-到期不续
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRenewFlag(integer $RenewFlag) 设置自动续费状态标识， 0-手动续费，1-自动续费，2-到期不续
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTags() 获取标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTags(array $Tags) 设置标签列表
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ResourceInfo extends AbstractModel
 {
@@ -204,6 +216,24 @@ class ResourceInfo extends AbstractModel
     public $VpcName;
 
     /**
+     * @var string 创建者Uin账号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CreateUin;
+
+    /**
+     * @var integer 自动续费状态标识， 0-手动续费，1-自动续费，2-到期不续
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RenewFlag;
+
+    /**
+     * @var array 标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Tags;
+
+    /**
      * @param string $ResourceId 资源Id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ResourceName 资源名称
@@ -239,6 +269,12 @@ class ResourceInfo extends AbstractModel
      * @param integer $RemainSeconds 为正数表示实例距离过期时间还剩余多少秒，为负数表示已经过期多少秒
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VpcName Vpc名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CreateUin 创建者Uin账号
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $RenewFlag 自动续费状态标识， 0-手动续费，1-自动续费，2-到期不续
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Tags 标签列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -329,6 +365,23 @@ class ResourceInfo extends AbstractModel
 
         if (array_key_exists("VpcName",$param) and $param["VpcName"] !== null) {
             $this->VpcName = $param["VpcName"];
+        }
+
+        if (array_key_exists("CreateUin",$param) and $param["CreateUin"] !== null) {
+            $this->CreateUin = $param["CreateUin"];
+        }
+
+        if (array_key_exists("RenewFlag",$param) and $param["RenewFlag"] !== null) {
+            $this->RenewFlag = $param["RenewFlag"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置最大数量
  * @method string getSearchWord() 获取查询关键字
  * @method void setSearchWord(string $SearchWord) 设置查询关键字
+ * @method array getTagFilters() 获取标签过滤条件
+ * @method void setTagFilters(array $TagFilters) 设置标签过滤条件
  */
 class DescribeVsmsRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class DescribeVsmsRequest extends AbstractModel
     public $SearchWord;
 
     /**
+     * @var array 标签过滤条件
+     */
+    public $TagFilters;
+
+    /**
      * @param integer $Offset 偏移
      * @param integer $Limit 最大数量
      * @param string $SearchWord 查询关键字
+     * @param array $TagFilters 标签过滤条件
      */
     function __construct()
     {
@@ -72,6 +80,15 @@ class DescribeVsmsRequest extends AbstractModel
 
         if (array_key_exists("SearchWord",$param) and $param["SearchWord"] !== null) {
             $this->SearchWord = $param["SearchWord"];
+        }
+
+        if (array_key_exists("TagFilters",$param) and $param["TagFilters"] !== null) {
+            $this->TagFilters = [];
+            foreach ($param["TagFilters"] as $key => $value){
+                $obj = new TagFilter();
+                $obj->deserialize($value);
+                array_push($this->TagFilters, $obj);
+            }
         }
     }
 }

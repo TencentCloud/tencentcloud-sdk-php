@@ -110,7 +110,8 @@ use TencentCloud\Mps\V20190612\Models as Models;
 该接口不用于发起网络调用，而是用来帮助生成各个语言平台的 SDK，您可以参考 SDK 的中解析函数的实现事件通知的解析。
  * @method Models\ProcessLiveStreamResponse ProcessLiveStream(Models\ProcessLiveStreamRequest $req) 对直播流媒体发起处理任务，功能包括：
 
-* 智能内容审核（画面鉴黄、鉴政、鉴暴、声音鉴黄）。
+* 智能内容审核（画面鉴黄、鉴政、鉴暴、声音鉴黄）；
+* 智能内容识别（人脸、文本全文、文本关键词、语音全文、语音关键词）。
 
 直播流处理事件通知实时写入用户指定的消息队列 CMQ 中，用户需要从消息队列 CMQ 中获取事件通知结果，同时处理过程中存在输出文件的，会写入用户指定的输出文件的目标存储中。
  * @method Models\ProcessMediaResponse ProcessMedia(Models\ProcessMediaRequest $req) 对 COS 中的媒体文件发起处理任务，功能包括：

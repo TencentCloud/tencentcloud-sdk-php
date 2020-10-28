@@ -48,6 +48,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInternetChargeType(string $InternetChargeType) 设置网络计费类型。
  * @method string getBundleSalesState() 获取套餐售卖状态,取值:‘AVAILABLE’(可用) , ‘SOLD_OUT’(售罄)
  * @method void setBundleSalesState(string $BundleSalesState) 设置套餐售卖状态,取值:‘AVAILABLE’(可用) , ‘SOLD_OUT’(售罄)
+ * @method string getBundleType() 获取套餐类型。
+取值范围：
+<li> GENERAL_BUNDLE：通用型</li><li> STORAGE_BUNDLE：存储型 </li>
+ * @method void setBundleType(string $BundleType) 设置套餐类型。
+取值范围：
+<li> GENERAL_BUNDLE：通用型</li><li> STORAGE_BUNDLE：存储型 </li>
  */
 class Bundle extends AbstractModel
 {
@@ -114,6 +120,13 @@ class Bundle extends AbstractModel
     public $BundleSalesState;
 
     /**
+     * @var string 套餐类型。
+取值范围：
+<li> GENERAL_BUNDLE：通用型</li><li> STORAGE_BUNDLE：存储型 </li>
+     */
+    public $BundleType;
+
+    /**
      * @param string $BundleId 套餐 ID。
      * @param integer $Memory 内存大小，单位 GB。
      * @param string $SystemDiskType 系统盘类型。
@@ -128,6 +141,9 @@ class Bundle extends AbstractModel
      * @param integer $InternetMaxBandwidthOut 峰值带宽，单位 Mbps。
      * @param string $InternetChargeType 网络计费类型。
      * @param string $BundleSalesState 套餐售卖状态,取值:‘AVAILABLE’(可用) , ‘SOLD_OUT’(售罄)
+     * @param string $BundleType 套餐类型。
+取值范围：
+<li> GENERAL_BUNDLE：通用型</li><li> STORAGE_BUNDLE：存储型 </li>
      */
     function __construct()
     {
@@ -189,6 +205,10 @@ class Bundle extends AbstractModel
 
         if (array_key_exists("BundleSalesState",$param) and $param["BundleSalesState"] !== null) {
             $this->BundleSalesState = $param["BundleSalesState"];
+        }
+
+        if (array_key_exists("BundleType",$param) and $param["BundleType"] !== null) {
+            $this->BundleType = $param["BundleType"];
         }
     }
 }

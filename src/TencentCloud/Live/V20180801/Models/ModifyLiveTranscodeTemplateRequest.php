@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getTemplateId() 获取模板 Id。
  * @method void setTemplateId(integer $TemplateId) 设置模板 Id。
- * @method string getVcodec() 获取视频编码：h264/h265/origin，默认h264。
+ * @method string getVcodec() 获取视频编码：h264/h265/origin，默认origin。
 
 origin: 保持原始编码格式
- * @method void setVcodec(string $Vcodec) 设置视频编码：h264/h265/origin，默认h264。
+ * @method void setVcodec(string $Vcodec) 设置视频编码：h264/h265/origin，默认origin。
 
 origin: 保持原始编码格式
  * @method string getAcodec() 获取音频编码：aac，默认aac。
@@ -109,7 +109,7 @@ class ModifyLiveTranscodeTemplateRequest extends AbstractModel
     public $TemplateId;
 
     /**
-     * @var string 视频编码：h264/h265/origin，默认h264。
+     * @var string 视频编码：h264/h265/origin，默认origin。
 
 origin: 保持原始编码格式
      */
@@ -221,7 +221,7 @@ baseline/main/high。
 
     /**
      * @param integer $TemplateId 模板 Id。
-     * @param string $Vcodec 视频编码：h264/h265/origin，默认h264。
+     * @param string $Vcodec 视频编码：h264/h265/origin，默认origin。
 
 origin: 保持原始编码格式
      * @param string $Acodec 音频编码：aac，默认aac。

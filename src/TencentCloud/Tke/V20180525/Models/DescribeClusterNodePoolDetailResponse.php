@@ -20,17 +20,25 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeClusterNodePoolDetail返回参数结构体
  *
+ * @method NodePool getNodePool() 获取节点池详情
+ * @method void setNodePool(NodePool $NodePool) 设置节点池详情
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeClusterNodePoolDetailResponse extends AbstractModel
 {
     /**
+     * @var NodePool 节点池详情
+     */
+    public $NodePool;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
+     * @param NodePool $NodePool 节点池详情
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -46,6 +54,11 @@ class DescribeClusterNodePoolDetailResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("NodePool",$param) and $param["NodePool"] !== null) {
+            $this->NodePool = new NodePool();
+            $this->NodePool->deserialize($param["NodePool"]);
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

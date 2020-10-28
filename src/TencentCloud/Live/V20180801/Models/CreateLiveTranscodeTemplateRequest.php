@@ -42,10 +42,10 @@ use TencentCloud\Common\AbstractModel;
 范围：0-500。
  * @method void setAudioBitrate(integer $AudioBitrate) 设置音频码率，默认0。
 范围：0-500。
- * @method string getVcodec() 获取视频编码：h264/h265/origin，默认h264。
+ * @method string getVcodec() 获取视频编码：h264/h265/origin，默认origin。
 
 origin: 保持原始编码格式
- * @method void setVcodec(string $Vcodec) 设置视频编码：h264/h265/origin，默认h264。
+ * @method void setVcodec(string $Vcodec) 设置视频编码：h264/h265/origin，默认origin。
 
 origin: 保持原始编码格式
  * @method string getDescription() 获取模板描述。
@@ -145,7 +145,7 @@ class CreateLiveTranscodeTemplateRequest extends AbstractModel
     public $AudioBitrate;
 
     /**
-     * @var string 视频编码：h264/h265/origin，默认h264。
+     * @var string 视频编码：h264/h265/origin，默认origin。
 
 origin: 保持原始编码格式
      */
@@ -256,7 +256,7 @@ baseline/main/high。默认baseline
 注意：当前该参数未生效，待后续支持！
      * @param integer $AudioBitrate 音频码率，默认0。
 范围：0-500。
-     * @param string $Vcodec 视频编码：h264/h265/origin，默认h264。
+     * @param string $Vcodec 视频编码：h264/h265/origin，默认origin。
 
 origin: 保持原始编码格式
      * @param string $Description 模板描述。

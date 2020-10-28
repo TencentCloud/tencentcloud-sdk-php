@@ -20,33 +20,17 @@ use TencentCloud\Common\AbstractModel;
 /**
  * QueryBarCode返回参数结构体
  *
- * @method string getBarCode() 获取条码
- * @method void setBarCode(string $BarCode) 设置条码
- * @method array getProductDataRecords() 获取条码信息数组
- * @method void setProductDataRecords(array $ProductDataRecords) 设置条码信息数组
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class QueryBarCodeResponse extends AbstractModel
 {
     /**
-     * @var string 条码
-     */
-    public $BarCode;
-
-    /**
-     * @var array 条码信息数组
-     */
-    public $ProductDataRecords;
-
-    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
-     * @param string $BarCode 条码
-     * @param array $ProductDataRecords 条码信息数组
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,19 +46,6 @@ class QueryBarCodeResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BarCode",$param) and $param["BarCode"] !== null) {
-            $this->BarCode = $param["BarCode"];
-        }
-
-        if (array_key_exists("ProductDataRecords",$param) and $param["ProductDataRecords"] !== null) {
-            $this->ProductDataRecords = [];
-            foreach ($param["ProductDataRecords"] as $key => $value){
-                $obj = new ProductDataRecord();
-                $obj->deserialize($value);
-                array_push($this->ProductDataRecords, $obj);
-            }
-        }
-
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

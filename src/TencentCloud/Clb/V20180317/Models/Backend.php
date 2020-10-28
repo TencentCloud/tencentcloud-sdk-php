@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 监听器绑定的后端服务的详细信息
  *
- * @method string getType() 获取后端服务的类型，可取：CVM、ENI（即将支持）
- * @method void setType(string $Type) 设置后端服务的类型，可取：CVM、ENI（即将支持）
+ * @method string getType() 获取后端服务的类型，可取：CVM、ENI
+ * @method void setType(string $Type) 设置后端服务的类型，可取：CVM、ENI
  * @method string getInstanceId() 获取后端服务的唯一 ID，如 ins-abcd1234
  * @method void setInstanceId(string $InstanceId) 设置后端服务的唯一 ID，如 ins-abcd1234
  * @method integer getPort() 获取后端服务的监听端口
@@ -52,7 +52,7 @@ use TencentCloud\Common\AbstractModel;
 class Backend extends AbstractModel
 {
     /**
-     * @var string 后端服务的类型，可取：CVM、ENI（即将支持）
+     * @var string 后端服务的类型，可取：CVM、ENI
      */
     public $Type;
 
@@ -102,7 +102,7 @@ class Backend extends AbstractModel
     public $EniId;
 
     /**
-     * @param string $Type 后端服务的类型，可取：CVM、ENI（即将支持）
+     * @param string $Type 后端服务的类型，可取：CVM、ENI
      * @param string $InstanceId 后端服务的唯一 ID，如 ins-abcd1234
      * @param integer $Port 后端服务的监听端口
      * @param integer $Weight 后端服务的转发权重，取值范围：[0, 100]，默认为 10。

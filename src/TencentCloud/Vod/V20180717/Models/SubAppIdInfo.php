@@ -31,9 +31,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getStatus() 获取子应用状态，有效值：
 <li>On：启用；</li>
 <li>Off：停用。</li>
+<li>Destroying：销毁中。</li>
+<li>Destroyed：销毁完成。</li>
  * @method void setStatus(string $Status) 设置子应用状态，有效值：
 <li>On：启用；</li>
 <li>Off：停用。</li>
+<li>Destroying：销毁中。</li>
+<li>Destroyed：销毁完成。</li>
  */
 class SubAppIdInfo extends AbstractModel
 {
@@ -61,6 +65,8 @@ class SubAppIdInfo extends AbstractModel
      * @var string 子应用状态，有效值：
 <li>On：启用；</li>
 <li>Off：停用。</li>
+<li>Destroying：销毁中。</li>
+<li>Destroyed：销毁完成。</li>
      */
     public $Status;
 
@@ -72,6 +78,8 @@ class SubAppIdInfo extends AbstractModel
      * @param string $Status 子应用状态，有效值：
 <li>On：启用；</li>
 <li>Off：停用。</li>
+<li>Destroying：销毁中。</li>
+<li>Destroyed：销毁完成。</li>
      */
     function __construct()
     {

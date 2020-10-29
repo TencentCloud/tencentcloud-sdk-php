@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置返回的Top表数量，最大值为20，默认为最大值。
  * @method string getSortBy() 获取筛选Top表所用的排序字段，可选字段包含DataLength、IndexLength、TotalLength、DataFree、FragRatio、TableRows、PhysicalFileSize，默认为 PhysicalFileSize。
  * @method void setSortBy(string $SortBy) 设置筛选Top表所用的排序字段，可选字段包含DataLength、IndexLength、TotalLength、DataFree、FragRatio、TableRows、PhysicalFileSize，默认为 PhysicalFileSize。
- * @method string getStartDate() 获取开始日期，最早为当日的前第6天，默认为截止日期的前第6天。
- * @method void setStartDate(string $StartDate) 设置开始日期，最早为当日的前第6天，默认为截止日期的前第6天。
- * @method string getEndDate() 获取截止日期，最早为当日的前第6天，默认为当日。
- * @method void setEndDate(string $EndDate) 设置截止日期，最早为当日的前第6天，默认为当日。
+ * @method string getStartDate() 获取开始日期，最早为当日的前第29天，默认为截止日期的前第6天。
+ * @method void setStartDate(string $StartDate) 设置开始日期，最早为当日的前第29天，默认为截止日期的前第6天。
+ * @method string getEndDate() 获取截止日期，最早为当日的前第29天，默认为当日。
+ * @method void setEndDate(string $EndDate) 设置截止日期，最早为当日的前第29天，默认为当日。
  */
 class DescribeTopSpaceTableTimeSeriesRequest extends AbstractModel
 {
@@ -49,12 +49,12 @@ class DescribeTopSpaceTableTimeSeriesRequest extends AbstractModel
     public $SortBy;
 
     /**
-     * @var string 开始日期，最早为当日的前第6天，默认为截止日期的前第6天。
+     * @var string 开始日期，最早为当日的前第29天，默认为截止日期的前第6天。
      */
     public $StartDate;
 
     /**
-     * @var string 截止日期，最早为当日的前第6天，默认为当日。
+     * @var string 截止日期，最早为当日的前第29天，默认为当日。
      */
     public $EndDate;
 
@@ -62,8 +62,8 @@ class DescribeTopSpaceTableTimeSeriesRequest extends AbstractModel
      * @param string $InstanceId 实例 ID 。
      * @param integer $Limit 返回的Top表数量，最大值为20，默认为最大值。
      * @param string $SortBy 筛选Top表所用的排序字段，可选字段包含DataLength、IndexLength、TotalLength、DataFree、FragRatio、TableRows、PhysicalFileSize，默认为 PhysicalFileSize。
-     * @param string $StartDate 开始日期，最早为当日的前第6天，默认为截止日期的前第6天。
-     * @param string $EndDate 截止日期，最早为当日的前第6天，默认为当日。
+     * @param string $StartDate 开始日期，最早为当日的前第29天，默认为截止日期的前第6天。
+     * @param string $EndDate 截止日期，最早为当日的前第29天，默认为当日。
      */
     function __construct()
     {

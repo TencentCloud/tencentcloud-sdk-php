@@ -65,6 +65,7 @@ use TencentCloud\Iotvideo\V20191126\Models as Models;
 设备日志最长保留时长为15天,超期自动清除。
  * @method Models\DescribeMessageQueueResponse DescribeMessageQueue(Models\DescribeMessageQueueRequest $req) 本接口（DescribeMessageQueue）用于查询物联网智能视频产品转发消息配置。
  * @method Models\DescribeModelDataRetResponse DescribeModelDataRet(Models\DescribeModelDataRetRequest $req) 本接口（DescribeModelDataRet）用于根据TaskId获取对设备物模型操作最终响应的结果。
+ * @method Models\DescribeOsListResponse DescribeOsList(Models\DescribeOsListRequest $req) 查看操作系统支持的芯片列表
  * @method Models\DescribeOtaVersionsResponse DescribeOtaVersions(Models\DescribeOtaVersionsRequest $req) 本接口（DescribeOtaVersions）用于查询固件版本信息列表。
  * @method Models\DescribeProductResponse DescribeProduct(Models\DescribeProductRequest $req) 本接口（DescribeProduct）用于获取单个产品的详细信息。
  * @method Models\DescribeProductsResponse DescribeProducts(Models\DescribeProductsRequest $req) 本接口（DescribeProducts）用于列出用户账号下的物联网智能视频产品列表。
@@ -92,6 +93,7 @@ ProWritable.Pos.setVal.x;
 可写属性云端写入成功即返回;云端向设备端发布属性变更参数;若当前设备不在线,在设备下次上线时会自动更新这些属性参数;
 物模型写入数据时,不需要传入时标信息,平台以当前时标作为数据的时标更新物模型中的时标信息。
  * @method Models\ModifyProductResponse ModifyProduct(Models\ModifyProductRequest $req) 本接口（ModifyProduct）用于编辑物联网智能视频产品的相关信息。
+ * @method Models\ModifyVerContentResponse ModifyVerContent(Models\ModifyVerContentRequest $req) 编辑版本描述信息
  * @method Models\RefundStorageServiceResponse RefundStorageService(Models\RefundStorageServiceRequest $req) 退订已购买的云存服务
  * @method Models\RunDeviceResponse RunDevice(Models\RunDeviceRequest $req) 本接口（RunDevice）用于启用设备，可进行批量操作，每次操作最多100台设备。
  * @method Models\RunDeviceStreamResponse RunDeviceStream(Models\RunDeviceStreamRequest $req) 本接口（RunDeviceStream）用于开启设备推流，可进行批量操作，每次操作最多100台设备。

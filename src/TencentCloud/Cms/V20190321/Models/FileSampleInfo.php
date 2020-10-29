@@ -53,11 +53,19 @@ use TencentCloud\Common\AbstractModel;
 1：黑库
 2：白库
  * @method integer getStatus() 获取任务状态
-1：已完成
-2：处理中
+1：添加完成
+2：添加处理中
+3：下载中
+4：下载完成
+5：上传完成
+6：步骤完成
  * @method void setStatus(integer $Status) 设置任务状态
-1：已完成
-2：处理中
+1：添加完成
+2：添加处理中
+3：下载中
+4：下载完成
+5：上传完成
+6：步骤完成
  * @method string getCompressFileUrl() 获取文件压缩后云url
  * @method void setCompressFileUrl(string $CompressFileUrl) 设置文件压缩后云url
  * @method string getFileUrl() 获取文件的url
@@ -115,8 +123,12 @@ class FileSampleInfo extends AbstractModel
 
     /**
      * @var integer 任务状态
-1：已完成
-2：处理中
+1：添加完成
+2：添加处理中
+3：下载中
+4：下载完成
+5：上传完成
+6：步骤完成
      */
     public $Status;
 
@@ -148,8 +160,12 @@ class FileSampleInfo extends AbstractModel
 1：黑库
 2：白库
      * @param integer $Status 任务状态
-1：已完成
-2：处理中
+1：添加完成
+2：添加处理中
+3：下载中
+4：下载完成
+5：上传完成
+6：步骤完成
      * @param string $CompressFileUrl 文件压缩后云url
      * @param string $FileUrl 文件的url
      */

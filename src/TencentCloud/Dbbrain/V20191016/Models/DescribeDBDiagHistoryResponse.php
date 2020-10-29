@@ -20,25 +20,17 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDBDiagHistory返回参数结构体
  *
- * @method array getEvents() 获取事件描述。
- * @method void setEvents(array $Events) 设置事件描述。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeDBDiagHistoryResponse extends AbstractModel
 {
     /**
-     * @var array 事件描述。
-     */
-    public $Events;
-
-    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
-     * @param array $Events 事件描述。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,15 +46,6 @@ class DescribeDBDiagHistoryResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Events",$param) and $param["Events"] !== null) {
-            $this->Events = [];
-            foreach ($param["Events"] as $key => $value){
-                $obj = new DiagHistoryEventItem();
-                $obj->deserialize($value);
-                array_push($this->Events, $obj);
-            }
-        }
-
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

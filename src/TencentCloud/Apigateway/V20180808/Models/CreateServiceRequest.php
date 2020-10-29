@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSetServerName(string $SetServerName) 设置集群名称。保留字段，tsf serverlss类型使用。
  * @method string getAppIdType() 获取用户类型。保留类型，serverless用户使用。
  * @method void setAppIdType(string $AppIdType) 设置用户类型。保留类型，serverless用户使用。
+ * @method array getTags() 获取标签。
+ * @method void setTags(array $Tags) 设置标签。
  */
 class CreateServiceRequest extends AbstractModel
 {
@@ -80,6 +82,11 @@ class CreateServiceRequest extends AbstractModel
     public $AppIdType;
 
     /**
+     * @var array 标签。
+     */
+    public $Tags;
+
+    /**
      * @param string $ServiceName 用户自定义的服务名称。如果没传，则系统自动生成一个唯一名称。
      * @param string $Protocol 服务的前端请求类型。如 http、https、http&https。
      * @param string $ServiceDesc 用户自定义的服务描述。
@@ -88,6 +95,7 @@ class CreateServiceRequest extends AbstractModel
      * @param string $IpVersion IP版本号，支持IPv4和IPv6，默认为IPv4。
      * @param string $SetServerName 集群名称。保留字段，tsf serverlss类型使用。
      * @param string $AppIdType 用户类型。保留类型，serverless用户使用。
+     * @param array $Tags 标签。
      */
     function __construct()
     {
@@ -132,6 +140,15 @@ class CreateServiceRequest extends AbstractModel
 
         if (array_key_exists("AppIdType",$param) and $param["AppIdType"] !== null) {
             $this->AppIdType = $param["AppIdType"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

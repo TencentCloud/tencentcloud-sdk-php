@@ -26,21 +26,29 @@ use TencentCloud\Chdfs\V20190718\Models as Models;
  * @method Models\CreateAccessGroupResponse CreateAccessGroup(Models\CreateAccessGroupRequest $req) 创建权限组。
  * @method Models\CreateAccessRulesResponse CreateAccessRules(Models\CreateAccessRulesRequest $req) 批量创建权限规则，权限规则ID和创建时间无需填写。
  * @method Models\CreateFileSystemResponse CreateFileSystem(Models\CreateFileSystemRequest $req) 创建文件系统（异步）。
+ * @method Models\CreateLifeCycleRulesResponse CreateLifeCycleRules(Models\CreateLifeCycleRulesRequest $req) 批量创建生命周期规则，生命周期规则ID和创建时间无需填写。
  * @method Models\CreateMountPointResponse CreateMountPoint(Models\CreateMountPointRequest $req) 创建文件系统挂载点，仅限于创建成功的文件系统。
+ * @method Models\CreateRestoreTasksResponse CreateRestoreTasks(Models\CreateRestoreTasksRequest $req) 批量创建回热任务，回热任务ID、状态和创建时间无需填写。
  * @method Models\DeleteAccessGroupResponse DeleteAccessGroup(Models\DeleteAccessGroupRequest $req) 删除权限组。
  * @method Models\DeleteAccessRulesResponse DeleteAccessRules(Models\DeleteAccessRulesRequest $req) 批量删除权限规则。
  * @method Models\DeleteFileSystemResponse DeleteFileSystem(Models\DeleteFileSystemRequest $req) 删除文件系统，不允许删除非空文件系统。
+ * @method Models\DeleteLifeCycleRulesResponse DeleteLifeCycleRules(Models\DeleteLifeCycleRulesRequest $req) 批量删除生命周期规则。
  * @method Models\DeleteMountPointResponse DeleteMountPoint(Models\DeleteMountPointRequest $req) 删除挂载点。
  * @method Models\DescribeAccessGroupsResponse DescribeAccessGroups(Models\DescribeAccessGroupsRequest $req) 查看权限组列表。
  * @method Models\DescribeAccessRulesResponse DescribeAccessRules(Models\DescribeAccessRulesRequest $req) 通过权限组ID查看权限规则列表。
  * @method Models\DescribeFileSystemResponse DescribeFileSystem(Models\DescribeFileSystemRequest $req) 查看文件系统详细信息。
  * @method Models\DescribeFileSystemsResponse DescribeFileSystems(Models\DescribeFileSystemsRequest $req) 查看文件系统列表。
+ * @method Models\DescribeLifeCycleRulesResponse DescribeLifeCycleRules(Models\DescribeLifeCycleRulesRequest $req) 通过文件系统ID查看生命周期规则列表。
  * @method Models\DescribeMountPointResponse DescribeMountPoint(Models\DescribeMountPointRequest $req) 查看挂载点详细信息。
  * @method Models\DescribeMountPointsResponse DescribeMountPoints(Models\DescribeMountPointsRequest $req) 通过文件系统ID或者权限组ID查看挂载点列表。
+ * @method Models\DescribeResourceTagsResponse DescribeResourceTags(Models\DescribeResourceTagsRequest $req) 通过文件系统ID查看资源标签列表。
+ * @method Models\DescribeRestoreTasksResponse DescribeRestoreTasks(Models\DescribeRestoreTasksRequest $req) 通过文件系统ID查看回热任务列表。
  * @method Models\ModifyAccessGroupResponse ModifyAccessGroup(Models\ModifyAccessGroupRequest $req) 修改权限组属性。
- * @method Models\ModifyAccessRulesResponse ModifyAccessRules(Models\ModifyAccessRulesRequest $req) 批量修改权限规则属性，需要指定权限规则ID。
+ * @method Models\ModifyAccessRulesResponse ModifyAccessRules(Models\ModifyAccessRulesRequest $req) 批量修改权限规则属性，需要指定权限规则ID，支持修改权限规则地址、访问模式和优先级。
  * @method Models\ModifyFileSystemResponse ModifyFileSystem(Models\ModifyFileSystemRequest $req) 修改文件系统属性，仅限于创建成功的文件系统。
+ * @method Models\ModifyLifeCycleRulesResponse ModifyLifeCycleRules(Models\ModifyLifeCycleRulesRequest $req) 批量修改生命周期规则属性，需要指定生命周期规则ID，支持修改生命周期规则名称、路径、转换列表和状态。
  * @method Models\ModifyMountPointResponse ModifyMountPoint(Models\ModifyMountPointRequest $req) 修改挂载点属性。
+ * @method Models\ModifyResourceTagsResponse ModifyResourceTags(Models\ModifyResourceTagsRequest $req) 修改资源标签列表，全量覆盖。
  */
 
 class ChdfsClient extends AbstractClient

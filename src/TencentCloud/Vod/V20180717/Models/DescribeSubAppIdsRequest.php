@@ -20,14 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSubAppIds请求参数结构体
  *
-
+ * @method array getTags() 获取标签信息，查询指定标签的子应用列表。
+ * @method void setTags(array $Tags) 设置标签信息，查询指定标签的子应用列表。
  */
 class DescribeSubAppIdsRequest extends AbstractModel
 {
-
+    /**
+     * @var array 标签信息，查询指定标签的子应用列表。
+     */
+    public $Tags;
 
     /**
-
+     * @param array $Tags 标签信息，查询指定标签的子应用列表。
      */
     function __construct()
     {
@@ -42,6 +46,13 @@ class DescribeSubAppIdsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new ResourceTag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
+        }
     }
 }

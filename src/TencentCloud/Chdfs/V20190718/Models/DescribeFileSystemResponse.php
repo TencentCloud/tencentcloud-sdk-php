@@ -22,13 +22,17 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method FileSystem getFileSystem() 获取文件系统
  * @method void setFileSystem(FileSystem $FileSystem) 设置文件系统
- * @method integer getFileSystemCapacityUsed() 获取文件系统已使用容量（byte）
+ * @method integer getFileSystemCapacityUsed() 获取文件系统已使用容量（已弃用）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFileSystemCapacityUsed(integer $FileSystemCapacityUsed) 设置文件系统已使用容量（byte）
+ * @method void setFileSystemCapacityUsed(integer $FileSystemCapacityUsed) 设置文件系统已使用容量（已弃用）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getCapacityUsed() 获取已使用容量（byte）
+ * @method integer getCapacityUsed() 获取已使用容量（byte），包括标准和归档存储
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCapacityUsed(integer $CapacityUsed) 设置已使用容量（byte）
+ * @method void setCapacityUsed(integer $CapacityUsed) 设置已使用容量（byte），包括标准和归档存储
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getArchiveCapacityUsed() 获取已使用归档存储容量（byte）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setArchiveCapacityUsed(integer $ArchiveCapacityUsed) 设置已使用归档存储容量（byte）
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -41,16 +45,22 @@ class DescribeFileSystemResponse extends AbstractModel
     public $FileSystem;
 
     /**
-     * @var integer 文件系统已使用容量（byte）
+     * @var integer 文件系统已使用容量（已弃用）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileSystemCapacityUsed;
 
     /**
-     * @var integer 已使用容量（byte）
+     * @var integer 已使用容量（byte），包括标准和归档存储
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CapacityUsed;
+
+    /**
+     * @var integer 已使用归档存储容量（byte）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ArchiveCapacityUsed;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -59,9 +69,11 @@ class DescribeFileSystemResponse extends AbstractModel
 
     /**
      * @param FileSystem $FileSystem 文件系统
-     * @param integer $FileSystemCapacityUsed 文件系统已使用容量（byte）
+     * @param integer $FileSystemCapacityUsed 文件系统已使用容量（已弃用）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $CapacityUsed 已使用容量（byte）
+     * @param integer $CapacityUsed 已使用容量（byte），包括标准和归档存储
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ArchiveCapacityUsed 已使用归档存储容量（byte）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -89,6 +101,10 @@ class DescribeFileSystemResponse extends AbstractModel
 
         if (array_key_exists("CapacityUsed",$param) and $param["CapacityUsed"] !== null) {
             $this->CapacityUsed = $param["CapacityUsed"];
+        }
+
+        if (array_key_exists("ArchiveCapacityUsed",$param) and $param["ArchiveCapacityUsed"] !== null) {
+            $this->ArchiveCapacityUsed = $param["ArchiveCapacityUsed"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

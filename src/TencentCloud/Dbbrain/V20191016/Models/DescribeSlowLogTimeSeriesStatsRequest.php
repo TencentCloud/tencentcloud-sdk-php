@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取实例 ID 。
  * @method void setInstanceId(string $InstanceId) 设置实例 ID 。
- * @method string getStartTime() 获取开始时间。
- * @method void setStartTime(string $StartTime) 设置开始时间。
- * @method string getEndTime() 获取结束时间。
- * @method void setEndTime(string $EndTime) 设置结束时间。
+ * @method string getStartTime() 获取开始时间，如“2019-09-10 12:13:14”。
+ * @method void setStartTime(string $StartTime) 设置开始时间，如“2019-09-10 12:13:14”。
+ * @method string getEndTime() 获取结束时间，如“2019-09-10 12:13:14”，结束时间与开始时间的间隔最大可为7天。
+ * @method void setEndTime(string $EndTime) 设置结束时间，如“2019-09-10 12:13:14”，结束时间与开始时间的间隔最大可为7天。
  */
 class DescribeSlowLogTimeSeriesStatsRequest extends AbstractModel
 {
@@ -35,19 +35,19 @@ class DescribeSlowLogTimeSeriesStatsRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string 开始时间。
+     * @var string 开始时间，如“2019-09-10 12:13:14”。
      */
     public $StartTime;
 
     /**
-     * @var string 结束时间。
+     * @var string 结束时间，如“2019-09-10 12:13:14”，结束时间与开始时间的间隔最大可为7天。
      */
     public $EndTime;
 
     /**
      * @param string $InstanceId 实例 ID 。
-     * @param string $StartTime 开始时间。
-     * @param string $EndTime 结束时间。
+     * @param string $StartTime 开始时间，如“2019-09-10 12:13:14”。
+     * @param string $EndTime 结束时间，如“2019-09-10 12:13:14”，结束时间与开始时间的间隔最大可为7天。
      */
     function __construct()
     {

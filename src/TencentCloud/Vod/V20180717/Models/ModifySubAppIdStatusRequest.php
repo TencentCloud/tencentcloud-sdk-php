@@ -23,11 +23,15 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getSubAppId() 获取子应用 ID。
  * @method void setSubAppId(integer $SubAppId) 设置子应用 ID。
  * @method string getStatus() 获取子应用状态，取值范围：
-<li>On：启用</li>
-<li>Off：停用</li>
+<li>On：启用。</li>
+<li>Off：停用。</li>
+<li>Destroyed：销毁。</li>
+当前状态如果是 Destoying ，不能进行启用操作，需要等待销毁完成后才能重新启用。
  * @method void setStatus(string $Status) 设置子应用状态，取值范围：
-<li>On：启用</li>
-<li>Off：停用</li>
+<li>On：启用。</li>
+<li>Off：停用。</li>
+<li>Destroyed：销毁。</li>
+当前状态如果是 Destoying ，不能进行启用操作，需要等待销毁完成后才能重新启用。
  */
 class ModifySubAppIdStatusRequest extends AbstractModel
 {
@@ -38,16 +42,20 @@ class ModifySubAppIdStatusRequest extends AbstractModel
 
     /**
      * @var string 子应用状态，取值范围：
-<li>On：启用</li>
-<li>Off：停用</li>
+<li>On：启用。</li>
+<li>Off：停用。</li>
+<li>Destroyed：销毁。</li>
+当前状态如果是 Destoying ，不能进行启用操作，需要等待销毁完成后才能重新启用。
      */
     public $Status;
 
     /**
      * @param integer $SubAppId 子应用 ID。
      * @param string $Status 子应用状态，取值范围：
-<li>On：启用</li>
-<li>Off：停用</li>
+<li>On：启用。</li>
+<li>Off：停用。</li>
+<li>Destroyed：销毁。</li>
+当前状态如果是 Destoying ，不能进行启用操作，需要等待销毁完成后才能重新启用。
      */
     function __construct()
     {

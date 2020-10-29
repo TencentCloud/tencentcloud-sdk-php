@@ -20,25 +20,17 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTopSpaceTables返回参数结构体
  *
- * @method array getTopSpaceTables() 获取返回的Top表空间统计信息列表。
- * @method void setTopSpaceTables(array $TopSpaceTables) 设置返回的Top表空间统计信息列表。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeTopSpaceTablesResponse extends AbstractModel
 {
     /**
-     * @var array 返回的Top表空间统计信息列表。
-     */
-    public $TopSpaceTables;
-
-    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
-     * @param array $TopSpaceTables 返回的Top表空间统计信息列表。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,15 +46,6 @@ class DescribeTopSpaceTablesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TopSpaceTables",$param) and $param["TopSpaceTables"] !== null) {
-            $this->TopSpaceTables = [];
-            foreach ($param["TopSpaceTables"] as $key => $value){
-                $obj = new TableSpaceData();
-                $obj->deserialize($value);
-                array_push($this->TopSpaceTables, $obj);
-            }
-        }
-
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

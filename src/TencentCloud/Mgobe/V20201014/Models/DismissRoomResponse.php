@@ -14,31 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tsf\V20180326\Models;
+namespace TencentCloud\Mgobe\V20201014\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeImageRepository返回参数结构体
+ * DismissRoom返回参数结构体
  *
- * @method ImageRepositoryResult getResult() 获取查询的权限数据对象
- * @method void setResult(ImageRepositoryResult $Result) 设置查询的权限数据对象
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeImageRepositoryResponse extends AbstractModel
+class DismissRoomResponse extends AbstractModel
 {
-    /**
-     * @var ImageRepositoryResult 查询的权限数据对象
-     */
-    public $Result;
-
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
-     * @param ImageRepositoryResult $Result 查询的权限数据对象
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,11 +46,6 @@ class DescribeImageRepositoryResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
-            $this->Result = new ImageRepositoryResult();
-            $this->Result->deserialize($param["Result"]);
-        }
-
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

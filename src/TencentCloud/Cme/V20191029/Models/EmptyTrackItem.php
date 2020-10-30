@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ocr\V20181119\Models;
+namespace TencentCloud\Cme\V20191029\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * PassportOCR返回参数结构体
+ * 空的轨道片段，用来进行时间轴的占位。如需要两个音频片段之间有一段时间的静音，可以用 EmptyTrackItem 来进行占位。
  *
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method float getDuration() 获取持续时间，单位为秒。
+ * @method void setDuration(float $Duration) 设置持续时间，单位为秒。
  */
-class PassportOCRResponse extends AbstractModel
+class EmptyTrackItem extends AbstractModel
 {
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var float 持续时间，单位为秒。
      */
-    public $RequestId;
+    public $Duration;
 
     /**
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param float $Duration 持续时间，单位为秒。
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class PassportOCRResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists("Duration",$param) and $param["Duration"] !== null) {
+            $this->Duration = $param["Duration"];
         }
     }
 }

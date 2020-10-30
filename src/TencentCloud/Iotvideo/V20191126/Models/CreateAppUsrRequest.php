@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getCunionId() 获取标识用户的唯一ID，防止同一个用户多次注册
  * @method void setCunionId(string $CunionId) 设置标识用户的唯一ID，防止同一个用户多次注册
+ * @method string getMobile() 获取用于小程序关联手机号
+ * @method void setMobile(string $Mobile) 设置用于小程序关联手机号
  */
 class CreateAppUsrRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class CreateAppUsrRequest extends AbstractModel
     public $CunionId;
 
     /**
+     * @var string 用于小程序关联手机号
+     */
+    public $Mobile;
+
+    /**
      * @param string $CunionId 标识用户的唯一ID，防止同一个用户多次注册
+     * @param string $Mobile 用于小程序关联手机号
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class CreateAppUsrRequest extends AbstractModel
         }
         if (array_key_exists("CunionId",$param) and $param["CunionId"] !== null) {
             $this->CunionId = $param["CunionId"];
+        }
+
+        if (array_key_exists("Mobile",$param) and $param["Mobile"] !== null) {
+            $this->Mobile = $param["Mobile"];
         }
     }
 }

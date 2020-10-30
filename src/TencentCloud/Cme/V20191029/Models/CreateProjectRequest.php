@@ -42,6 +42,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDescription(string $Description) 设置项目描述信息。
  * @method SwitcherProjectInput getSwitcherProjectInput() 获取导播台信息，仅当项目类型为 SWITCHER 时有效。
  * @method void setSwitcherProjectInput(SwitcherProjectInput $SwitcherProjectInput) 设置导播台信息，仅当项目类型为 SWITCHER 时有效。
+ * @method LiveStreamClipProjectInput getLiveStreamClipProjectInput() 获取直播剪辑信息，暂未开放，请勿使用。
+ * @method void setLiveStreamClipProjectInput(LiveStreamClipProjectInput $LiveStreamClipProjectInput) 设置直播剪辑信息，暂未开放，请勿使用。
+ * @method VideoEditProjectInput getVideoEditProjectInput() 获取视频编辑信息。
+ * @method void setVideoEditProjectInput(VideoEditProjectInput $VideoEditProjectInput) 设置视频编辑信息。
  */
 class CreateProjectRequest extends AbstractModel
 {
@@ -85,6 +89,16 @@ class CreateProjectRequest extends AbstractModel
     public $SwitcherProjectInput;
 
     /**
+     * @var LiveStreamClipProjectInput 直播剪辑信息，暂未开放，请勿使用。
+     */
+    public $LiveStreamClipProjectInput;
+
+    /**
+     * @var VideoEditProjectInput 视频编辑信息。
+     */
+    public $VideoEditProjectInput;
+
+    /**
      * @param string $Platform 平台名称，指定访问的平台。
      * @param string $Category 项目类别，取值有：
 <li>VIDEO_EDIT：视频编辑。</li>
@@ -96,6 +110,8 @@ class CreateProjectRequest extends AbstractModel
      * @param Entity $Owner 归属者。
      * @param string $Description 项目描述信息。
      * @param SwitcherProjectInput $SwitcherProjectInput 导播台信息，仅当项目类型为 SWITCHER 时有效。
+     * @param LiveStreamClipProjectInput $LiveStreamClipProjectInput 直播剪辑信息，暂未开放，请勿使用。
+     * @param VideoEditProjectInput $VideoEditProjectInput 视频编辑信息。
      */
     function __construct()
     {
@@ -138,6 +154,16 @@ class CreateProjectRequest extends AbstractModel
         if (array_key_exists("SwitcherProjectInput",$param) and $param["SwitcherProjectInput"] !== null) {
             $this->SwitcherProjectInput = new SwitcherProjectInput();
             $this->SwitcherProjectInput->deserialize($param["SwitcherProjectInput"]);
+        }
+
+        if (array_key_exists("LiveStreamClipProjectInput",$param) and $param["LiveStreamClipProjectInput"] !== null) {
+            $this->LiveStreamClipProjectInput = new LiveStreamClipProjectInput();
+            $this->LiveStreamClipProjectInput->deserialize($param["LiveStreamClipProjectInput"]);
+        }
+
+        if (array_key_exists("VideoEditProjectInput",$param) and $param["VideoEditProjectInput"] !== null) {
+            $this->VideoEditProjectInput = new VideoEditProjectInput();
+            $this->VideoEditProjectInput->deserialize($param["VideoEditProjectInput"]);
         }
     }
 }

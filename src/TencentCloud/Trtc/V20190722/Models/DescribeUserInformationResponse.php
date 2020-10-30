@@ -14,23 +14,33 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tsf\V20180326\Models;
+namespace TencentCloud\Trtc\V20190722\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeImageRepository返回参数结构体
+ * DescribeUserInformation返回参数结构体
  *
- * @method ImageRepositoryResult getResult() 获取查询的权限数据对象
- * @method void setResult(ImageRepositoryResult $Result) 设置查询的权限数据对象
+ * @method integer getTotal() 获取返回的用户总条数
+ * @method void setTotal(integer $Total) 设置返回的用户总条数
+ * @method array getUserList() 获取用户信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUserList(array $UserList) 设置用户信息列表
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeImageRepositoryResponse extends AbstractModel
+class DescribeUserInformationResponse extends AbstractModel
 {
     /**
-     * @var ImageRepositoryResult 查询的权限数据对象
+     * @var integer 返回的用户总条数
      */
-    public $Result;
+    public $Total;
+
+    /**
+     * @var array 用户信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UserList;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +48,9 @@ class DescribeImageRepositoryResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param ImageRepositoryResult $Result 查询的权限数据对象
+     * @param integer $Total 返回的用户总条数
+     * @param array $UserList 用户信息列表
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,9 +66,17 @@ class DescribeImageRepositoryResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
-            $this->Result = new ImageRepositoryResult();
-            $this->Result->deserialize($param["Result"]);
+        if (array_key_exists("Total",$param) and $param["Total"] !== null) {
+            $this->Total = $param["Total"];
+        }
+
+        if (array_key_exists("UserList",$param) and $param["UserList"] !== null) {
+            $this->UserList = [];
+            foreach ($param["UserList"] as $key => $value){
+                $obj = new UserInformation();
+                $obj->deserialize($value);
+                array_push($this->UserList, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

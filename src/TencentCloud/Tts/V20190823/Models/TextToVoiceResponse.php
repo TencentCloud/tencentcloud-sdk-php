@@ -20,17 +20,33 @@ use TencentCloud\Common\AbstractModel;
 /**
  * TextToVoice返回参数结构体
  *
+ * @method string getAudio() 获取base64编码的wav/mp3音频数据
+ * @method void setAudio(string $Audio) 设置base64编码的wav/mp3音频数据
+ * @method string getSessionId() 获取一次请求对应一个SessionId
+ * @method void setSessionId(string $SessionId) 设置一次请求对应一个SessionId
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class TextToVoiceResponse extends AbstractModel
 {
     /**
+     * @var string base64编码的wav/mp3音频数据
+     */
+    public $Audio;
+
+    /**
+     * @var string 一次请求对应一个SessionId
+     */
+    public $SessionId;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
+     * @param string $Audio base64编码的wav/mp3音频数据
+     * @param string $SessionId 一次请求对应一个SessionId
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -46,6 +62,14 @@ class TextToVoiceResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Audio",$param) and $param["Audio"] !== null) {
+            $this->Audio = $param["Audio"];
+        }
+
+        if (array_key_exists("SessionId",$param) and $param["SessionId"] !== null) {
+            $this->SessionId = $param["SessionId"];
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

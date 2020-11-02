@@ -14,24 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Iai\V20200303\Models;
+namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * VerifyPerson返回参数结构体
+ * DuplicateDomainConfig请求参数结构体
  *
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getDomain() 获取新增域名
+ * @method void setDomain(string $Domain) 设置新增域名
+ * @method string getReferenceDomain() 获取被拷贝配置的域名
+ * @method void setReferenceDomain(string $ReferenceDomain) 设置被拷贝配置的域名
  */
-class VerifyPersonResponse extends AbstractModel
+class DuplicateDomainConfigRequest extends AbstractModel
 {
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 新增域名
      */
-    public $RequestId;
+    public $Domain;
 
     /**
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 被拷贝配置的域名
+     */
+    public $ReferenceDomain;
+
+    /**
+     * @param string $Domain 新增域名
+     * @param string $ReferenceDomain 被拷贝配置的域名
      */
     function __construct()
     {
@@ -46,8 +54,12 @@ class VerifyPersonResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
+            $this->Domain = $param["Domain"];
+        }
+
+        if (array_key_exists("ReferenceDomain",$param) and $param["ReferenceDomain"] !== null) {
+            $this->ReferenceDomain = $param["ReferenceDomain"];
         }
     }
 }

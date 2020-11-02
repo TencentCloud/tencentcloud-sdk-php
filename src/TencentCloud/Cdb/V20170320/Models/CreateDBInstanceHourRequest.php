@@ -72,6 +72,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClientToken(string $ClientToken) 设置用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间在当天内唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
  * @method string getDeviceType() 获取实例类型。支持值包括： "HA" - 高可用版实例， "BASIC" - 基础版实例。 不指定则默认为高可用版。
  * @method void setDeviceType(string $DeviceType) 设置实例类型。支持值包括： "HA" - 高可用版实例， "BASIC" - 基础版实例。 不指定则默认为高可用版。
+ * @method integer getParamTemplateId() 获取参数模板id。
+ * @method void setParamTemplateId(integer $ParamTemplateId) 设置参数模板id。
+ * @method array getAlarmPolicyList() 获取告警策略id数组。
+ * @method void setAlarmPolicyList(array $AlarmPolicyList) 设置告警策略id数组。
  */
 class CreateDBInstanceHourRequest extends AbstractModel
 {
@@ -206,6 +210,16 @@ class CreateDBInstanceHourRequest extends AbstractModel
     public $DeviceType;
 
     /**
+     * @var integer 参数模板id。
+     */
+    public $ParamTemplateId;
+
+    /**
+     * @var array 告警策略id数组。
+     */
+    public $AlarmPolicyList;
+
+    /**
      * @param integer $GoodsNum 实例数量，默认值为 1，最小值 1，最大值为 100。
      * @param integer $Memory 实例内存大小，单位：MB，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的内存规格。
      * @param integer $Volume 实例硬盘大小，单位：GB，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的硬盘范围。
@@ -232,6 +246,8 @@ class CreateDBInstanceHourRequest extends AbstractModel
      * @param string $DeployGroupId 置放群组 ID。
      * @param string $ClientToken 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间在当天内唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
      * @param string $DeviceType 实例类型。支持值包括： "HA" - 高可用版实例， "BASIC" - 基础版实例。 不指定则默认为高可用版。
+     * @param integer $ParamTemplateId 参数模板id。
+     * @param array $AlarmPolicyList 告警策略id数组。
      */
     function __construct()
     {
@@ -359,6 +375,14 @@ class CreateDBInstanceHourRequest extends AbstractModel
 
         if (array_key_exists("DeviceType",$param) and $param["DeviceType"] !== null) {
             $this->DeviceType = $param["DeviceType"];
+        }
+
+        if (array_key_exists("ParamTemplateId",$param) and $param["ParamTemplateId"] !== null) {
+            $this->ParamTemplateId = $param["ParamTemplateId"];
+        }
+
+        if (array_key_exists("AlarmPolicyList",$param) and $param["AlarmPolicyList"] !== null) {
+            $this->AlarmPolicyList = $param["AlarmPolicyList"];
         }
     }
 }

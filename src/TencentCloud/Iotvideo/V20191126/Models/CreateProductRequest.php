@@ -54,8 +54,8 @@ Other-Overseas（其他境外地区）
  * @method void setProductCate(integer $ProductCate) 设置设备类型, 0-普通视频设备，1-NVR设备
  * @method integer getAccessMode() 获取接入模型，bit0是0：公版小程序未接入，bit0是1：公版小程序已接入
  * @method void setAccessMode(integer $AccessMode) 设置接入模型，bit0是0：公版小程序未接入，bit0是1：公版小程序已接入
- * @method string getOs() 获取linux,android,liteos
- * @method void setOs(string $Os) 设置linux,android,liteos
+ * @method string getOs() 获取Linux,Android,Liteos等系统
+ * @method void setOs(string $Os) 设置Linux,Android,Liteos等系统
  */
 class CreateProductRequest extends AbstractModel
 {
@@ -113,7 +113,7 @@ Other-Overseas（其他境外地区）
     public $AccessMode;
 
     /**
-     * @var string linux,android,liteos
+     * @var string Linux,Android,Liteos等系统
      */
     public $Os;
 
@@ -135,7 +135,7 @@ India（印度）
 Other-Overseas（其他境外地区）
      * @param integer $ProductCate 设备类型, 0-普通视频设备，1-NVR设备
      * @param integer $AccessMode 接入模型，bit0是0：公版小程序未接入，bit0是1：公版小程序已接入
-     * @param string $Os linux,android,liteos
+     * @param string $Os Linux,Android,Liteos等系统
      */
     function __construct()
     {

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * TableOCR返回参数结构体
  *
- * @method array getTextDetections() 获取检测到的文本信息，具体内容请点击左侧链接。
- * @method void setTextDetections(array $TextDetections) 设置检测到的文本信息，具体内容请点击左侧链接。
+ * @method array getTextDetections() 获取检测到的文本信息，具体内容请点击左侧链接
+ * @method void setTextDetections(array $TextDetections) 设置检测到的文本信息，具体内容请点击左侧链接
  * @method string getData() 获取Base64 编码后的 Excel 数据。
  * @method void setData(string $Data) 设置Base64 编码后的 Excel 数据。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class TableOCRResponse extends AbstractModel
 {
     /**
-     * @var array 检测到的文本信息，具体内容请点击左侧链接。
+     * @var array 检测到的文本信息，具体内容请点击左侧链接
      */
     public $TextDetections;
 
@@ -45,7 +45,7 @@ class TableOCRResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $TextDetections 检测到的文本信息，具体内容请点击左侧链接。
+     * @param array $TextDetections 检测到的文本信息，具体内容请点击左侧链接
      * @param string $Data Base64 编码后的 Excel 数据。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

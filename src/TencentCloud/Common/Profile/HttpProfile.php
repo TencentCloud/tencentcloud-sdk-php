@@ -77,6 +77,11 @@ class HttpProfile
     private $proxy;
 
     /**
+     * @var string|bool 请求时验证SSL证书行为
+     */
+    private $verify;
+
+    /**
      * HttpProfile constructor.
      * @param string $protocol  请求协议
      * @param string $endpoint  请求接入点域名(xx.[region.]tencentcloudapi.com)
@@ -136,6 +141,17 @@ class HttpProfile
     }
 
     /**
+     * 设置成 true 启用SSL证书验证，默认使用操作系统提供的CA包。
+     * 设置成 false 禁用证书验证(这是不安全的！)。
+     * 设置成字符串启用验证，并使用该字符串作为自定义证书CA包的路径
+     * @param string|bool $verify 请求时验证SSL证书行为
+     */
+    public function setVerify($verify)
+    {
+        $this->verify = $verify;
+    }
+
+    /**
      * 获取请求方法
      * @return null|string 请求方法
      */
@@ -178,5 +194,14 @@ class HttpProfile
     public function getProxy()
     {
         return $this->proxy;
+    }
+
+    /**
+     * 请求时验证SSL证书行为
+     * @return bool|string
+     */
+    public function getVerify()
+    {
+        return $this->verify;
     }
 }

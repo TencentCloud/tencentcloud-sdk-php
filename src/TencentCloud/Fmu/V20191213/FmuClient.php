@@ -33,6 +33,8 @@ use TencentCloud\Fmu\V20191213\Models as Models;
  * @method Models\DeleteModelResponse DeleteModel(Models\DeleteModelRequest $req) 删除已注册的唇色素材。
  * @method Models\GetModelListResponse GetModelList(Models\GetModelListRequest $req) 查询已注册的唇色素材。
  * @method Models\QueryBeautifyVideoJobResponse QueryBeautifyVideoJob(Models\QueryBeautifyVideoJobRequest $req) 查询视频美颜处理进度
+ * @method Models\StyleImageResponse StyleImage(Models\StyleImageRequest $req) 上传一张照片，输出滤镜处理后的图片。
+ * @method Models\StyleImageProResponse StyleImagePro(Models\StyleImageProRequest $req) 上传一张照片，输出滤镜处理后的图片。
  * @method Models\TryLipstickPicResponse TryLipstickPic(Models\TryLipstickPicRequest $req) 对图片中的人脸嘴唇进行着色，最多支持同时对一张图中的3张人脸进行试唇色。
 
 您可以通过事先注册在腾讯云的唇色素材（LUT文件）改变图片中的人脸唇色，也可以输入RGBA模型数值。

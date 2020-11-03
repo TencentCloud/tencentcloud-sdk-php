@@ -14,23 +14,36 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Dbbrain\V20191016\Models;
+namespace TencentCloud\Tcb\V20180608\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeDBDiagHistory返回参数结构体
+ * CreateCloudBaseRunServerVersion返回参数结构体
  *
- * @method array getEvents() 获取事件描述。
- * @method void setEvents(array $Events) 设置事件描述。
+ * @method string getResult() 获取状态(creating/succ)
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setResult(string $Result) 设置状态(creating/succ)
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getVersionName() 获取版本名称（只有Result为succ的时候，才会返回VersionName)
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVersionName(string $VersionName) 设置版本名称（只有Result为succ的时候，才会返回VersionName)
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeDBDiagHistoryResponse extends AbstractModel
+class CreateCloudBaseRunServerVersionResponse extends AbstractModel
 {
     /**
-     * @var array 事件描述。
+     * @var string 状态(creating/succ)
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Events;
+    public $Result;
+
+    /**
+     * @var string 版本名称（只有Result为succ的时候，才会返回VersionName)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $VersionName;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +51,10 @@ class DescribeDBDiagHistoryResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Events 事件描述。
+     * @param string $Result 状态(creating/succ)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $VersionName 版本名称（只有Result为succ的时候，才会返回VersionName)
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,13 +70,12 @@ class DescribeDBDiagHistoryResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Events",$param) and $param["Events"] !== null) {
-            $this->Events = [];
-            foreach ($param["Events"] as $key => $value){
-                $obj = new DiagHistoryEventItem();
-                $obj->deserialize($value);
-                array_push($this->Events, $obj);
-            }
+        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
+            $this->Result = $param["Result"];
+        }
+
+        if (array_key_exists("VersionName",$param) and $param["VersionName"] !== null) {
+            $this->VersionName = $param["VersionName"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

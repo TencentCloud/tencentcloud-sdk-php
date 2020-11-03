@@ -20,17 +20,33 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSlowLogTopSqls返回参数结构体
  *
+ * @method integer getTotalCount() 获取符合条件的记录总数。
+ * @method void setTotalCount(integer $TotalCount) 设置符合条件的记录总数。
+ * @method array getRows() 获取慢日志 top sql 列表
+ * @method void setRows(array $Rows) 设置慢日志 top sql 列表
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeSlowLogTopSqlsResponse extends AbstractModel
 {
     /**
+     * @var integer 符合条件的记录总数。
+     */
+    public $TotalCount;
+
+    /**
+     * @var array 慢日志 top sql 列表
+     */
+    public $Rows;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
+     * @param integer $TotalCount 符合条件的记录总数。
+     * @param array $Rows 慢日志 top sql 列表
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -46,6 +62,19 @@ class DescribeSlowLogTopSqlsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("Rows",$param) and $param["Rows"] !== null) {
+            $this->Rows = [];
+            foreach ($param["Rows"] as $key => $value){
+                $obj = new SlowLogTopSqlItem();
+                $obj->deserialize($value);
+                array_push($this->Rows, $obj);
+            }
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

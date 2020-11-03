@@ -35,8 +35,10 @@ use TencentCloud\Gpm\V20200820\Models as Models;
  * @method Models\DescribeMatchingProgressResponse DescribeMatchingProgress(Models\DescribeMatchingProgressRequest $req) 查询匹配进度。
  * @method Models\DescribeRuleResponse DescribeRule(Models\DescribeRuleRequest $req) 查询规则详情
  * @method Models\DescribeRulesResponse DescribeRules(Models\DescribeRulesRequest $req) 分页查询规则集列表
+ * @method Models\DescribeTokenResponse DescribeToken(Models\DescribeTokenRequest $req) 查询匹配Token，Token用于push消息验证。
  * @method Models\ModifyMatchResponse ModifyMatch(Models\ModifyMatchRequest $req) 修改匹配
  * @method Models\ModifyRuleResponse ModifyRule(Models\ModifyRuleRequest $req) 修改规则（描述、标签）
+ * @method Models\ModifyTokenResponse ModifyToken(Models\ModifyTokenRequest $req) 修改匹配Token。
  * @method Models\StartMatchingResponse StartMatching(Models\StartMatchingRequest $req) 支持传入一个玩家或多个玩家发起匹配，在同一个请求内的玩家将被分到同一个对局。
  */
 

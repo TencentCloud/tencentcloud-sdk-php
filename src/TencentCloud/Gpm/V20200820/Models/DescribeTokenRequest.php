@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ecm\V20190719\Models;
+namespace TencentCloud\Gpm\V20200820\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * AssociateAddress返回参数结构体
+ * DescribeToken请求参数结构体
  *
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getMatchCode() 获取匹配code
+ * @method void setMatchCode(string $MatchCode) 设置匹配code
  */
-class AssociateAddressResponse extends AbstractModel
+class DescribeTokenRequest extends AbstractModel
 {
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 匹配code
      */
-    public $RequestId;
+    public $MatchCode;
 
     /**
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $MatchCode 匹配code
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class AssociateAddressResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists("MatchCode",$param) and $param["MatchCode"] !== null) {
+            $this->MatchCode = $param["MatchCode"];
         }
     }
 }

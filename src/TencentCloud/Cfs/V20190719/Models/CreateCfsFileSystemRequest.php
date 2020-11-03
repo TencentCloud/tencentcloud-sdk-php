@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFsName(string $FsName) 设置用户自定义文件系统名称
  * @method array getResourceTags() 获取文件系统标签
  * @method void setResourceTags(array $ResourceTags) 设置文件系统标签
+ * @method string getClientToken() 获取用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。用于保证请求幂等性的字符串失效时间为2小时。
+ * @method void setClientToken(string $ClientToken) 设置用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。用于保证请求幂等性的字符串失效时间为2小时。
  */
 class CreateCfsFileSystemRequest extends AbstractModel
 {
@@ -94,6 +96,11 @@ class CreateCfsFileSystemRequest extends AbstractModel
     public $ResourceTags;
 
     /**
+     * @var string 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。用于保证请求幂等性的字符串失效时间为2小时。
+     */
+    public $ClientToken;
+
+    /**
      * @param string $Zone 可用区名称，例如ap-beijing-1，请参考 [概览](https://cloud.tencent.com/document/product/582/13225) 文档中的地域与可用区列表
      * @param string $NetInterface 网络类型，值为 VPC，BASIC；其中 VPC 为私有网络，BASIC 为基础网络
      * @param string $PGroupId 权限组 ID
@@ -104,6 +111,7 @@ class CreateCfsFileSystemRequest extends AbstractModel
      * @param string $MountIP 指定IP地址，仅VPC网络支持；若不填写、将在该子网下随机分配 IP
      * @param string $FsName 用户自定义文件系统名称
      * @param array $ResourceTags 文件系统标签
+     * @param string $ClientToken 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。用于保证请求幂等性的字符串失效时间为2小时。
      */
     function __construct()
     {
@@ -161,6 +169,10 @@ class CreateCfsFileSystemRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ResourceTags, $obj);
             }
+        }
+
+        if (array_key_exists("ClientToken",$param) and $param["ClientToken"] !== null) {
+            $this->ClientToken = $param["ClientToken"];
         }
     }
 }

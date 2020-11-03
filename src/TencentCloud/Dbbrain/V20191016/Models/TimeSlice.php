@@ -14,24 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ecm\V20190719\Models;
+namespace TencentCloud\Dbbrain\V20191016\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * AssociateAddress返回参数结构体
+ * 单位时间间隔内的慢日志统计
  *
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method integer getCount() 获取总数
+ * @method void setCount(integer $Count) 设置总数
+ * @method integer getTimestamp() 获取统计开始时间
+ * @method void setTimestamp(integer $Timestamp) 设置统计开始时间
  */
-class AssociateAddressResponse extends AbstractModel
+class TimeSlice extends AbstractModel
 {
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var integer 总数
      */
-    public $RequestId;
+    public $Count;
 
     /**
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var integer 统计开始时间
+     */
+    public $Timestamp;
+
+    /**
+     * @param integer $Count 总数
+     * @param integer $Timestamp 统计开始时间
      */
     function __construct()
     {
@@ -46,8 +54,12 @@ class AssociateAddressResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists("Count",$param) and $param["Count"] !== null) {
+            $this->Count = $param["Count"];
+        }
+
+        if (array_key_exists("Timestamp",$param) and $param["Timestamp"] !== null) {
+            $this->Timestamp = $param["Timestamp"];
         }
     }
 }

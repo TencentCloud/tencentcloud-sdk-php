@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getKeyWords() 获取用于搜索诊断URL的关键字，不填时返回用户所有的诊断任务。
  * @method void setKeyWords(string $KeyWords) 设置用于搜索诊断URL的关键字，不填时返回用户所有的诊断任务。
+ * @method string getDiagnoseLink() 获取用于搜索诊断系统返回的诊断链接，形如：http://cdn.cloud.tencent.com/self_diagnose/xxxxx
+ * @method void setDiagnoseLink(string $DiagnoseLink) 设置用于搜索诊断系统返回的诊断链接，形如：http://cdn.cloud.tencent.com/self_diagnose/xxxxx
  */
 class ListDiagnoseReportRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class ListDiagnoseReportRequest extends AbstractModel
     public $KeyWords;
 
     /**
+     * @var string 用于搜索诊断系统返回的诊断链接，形如：http://cdn.cloud.tencent.com/self_diagnose/xxxxx
+     */
+    public $DiagnoseLink;
+
+    /**
      * @param string $KeyWords 用于搜索诊断URL的关键字，不填时返回用户所有的诊断任务。
+     * @param string $DiagnoseLink 用于搜索诊断系统返回的诊断链接，形如：http://cdn.cloud.tencent.com/self_diagnose/xxxxx
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class ListDiagnoseReportRequest extends AbstractModel
         }
         if (array_key_exists("KeyWords",$param) and $param["KeyWords"] !== null) {
             $this->KeyWords = $param["KeyWords"];
+        }
+
+        if (array_key_exists("DiagnoseLink",$param) and $param["DiagnoseLink"] !== null) {
+            $this->DiagnoseLink = $param["DiagnoseLink"];
         }
     }
 }

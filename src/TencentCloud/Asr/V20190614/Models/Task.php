@@ -18,7 +18,7 @@ namespace TencentCloud\Asr\V20190614\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 录音文件识别请求的返回数据
+ * 录音文件识别、实时语音异步识别请求的返回数据
  *
  * @method integer getTaskId() 获取任务ID，可通过此ID在轮询接口获取识别状态与结果
  * @method void setTaskId(integer $TaskId) 设置任务ID，可通过此ID在轮询接口获取识别状态与结果

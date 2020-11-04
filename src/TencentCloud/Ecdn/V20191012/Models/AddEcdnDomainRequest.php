@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHttps(Https $Https) 设置Https配置。
  * @method ForceRedirect getForceRedirect() 获取访问协议强制跳转配置。
  * @method void setForceRedirect(ForceRedirect $ForceRedirect) 设置访问协议强制跳转配置。
+ * @method array getTag() 获取域名绑定的标签
+ * @method void setTag(array $Tag) 设置域名绑定的标签
  */
 class AddEcdnDomainRequest extends AbstractModel
 {
@@ -101,6 +103,11 @@ class AddEcdnDomainRequest extends AbstractModel
     public $ForceRedirect;
 
     /**
+     * @var array 域名绑定的标签
+     */
+    public $Tag;
+
+    /**
      * @param string $Domain 域名。
      * @param Origin $Origin 源站配置。
      * @param string $Area 域名加速区域，mainland，overseas或global，分别表示中国境内加速，海外加速或全球加速。
@@ -112,6 +119,7 @@ class AddEcdnDomainRequest extends AbstractModel
      * @param Cache $Cache 缓存规则配置。
      * @param Https $Https Https配置。
      * @param ForceRedirect $ForceRedirect 访问协议强制跳转配置。
+     * @param array $Tag 域名绑定的标签
      */
     function __construct()
     {
@@ -176,6 +184,15 @@ class AddEcdnDomainRequest extends AbstractModel
         if (array_key_exists("ForceRedirect",$param) and $param["ForceRedirect"] !== null) {
             $this->ForceRedirect = new ForceRedirect();
             $this->ForceRedirect->deserialize($param["ForceRedirect"]);
+        }
+
+        if (array_key_exists("Tag",$param) and $param["Tag"] !== null) {
+            $this->Tag = [];
+            foreach ($param["Tag"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tag, $obj);
+            }
         }
     }
 }

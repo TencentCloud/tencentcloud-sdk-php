@@ -76,7 +76,7 @@ abstract class AbstractClient
 
     /**
      * 基础client类
-     * @param string $endpoint 请求域名
+     * @param string $endpoint Deprecated, we use service+rootdomain instead
      * @param string $version api版本
      * @param Credential $credential 认证信息实例
      * @param string $region 产品地域
@@ -85,7 +85,6 @@ abstract class AbstractClient
     function __construct($endpoint, $version, $credential, $region, $profile=null)
     {
         $this->path = "/";
-
         $this->credential = $credential;
         $this->region = $region;
         if ($profile) {
@@ -93,9 +92,9 @@ abstract class AbstractClient
         } else {
             $this->profile = new ClientProfile();
         }
-        if ($this->profile->getHttpProfile()->getEndpoint() === null) {
-            $this->profile->getHttpProfile()->setEndpoint($endpoint);
-        }
+
+        $this->getRefreshedEndpoint();
+
         $this->sdkVersion = AbstractClient::$SDK_VERSION;
         $this->apiVersion = $version;
 
@@ -225,9 +224,8 @@ abstract class AbstractClient
     {
         $headers = array();
 
-        $endpoint = $this->profile->getHttpProfile()->getEndpoint();
+        $endpoint = $this->getRefreshedEndpoint();
         $headers["Host"] = $endpoint;
-
         $headers["X-TC-Action"] = ucfirst($action);
         $headers["X-TC-RequestClient"] = $this->sdkVersion;
         $headers["X-TC-Timestamp"] = time();
@@ -241,10 +239,10 @@ abstract class AbstractClient
             $headers["X-TC-Token"] = $this->credential->getToken();
         }
 
-	$language = $this->profile->getLanguage();
-	if ($language) {
-	    $headers["X-TC-Language"] = $language;
-	}
+        $language = $this->profile->getLanguage();
+        if ($language) {
+            $headers["X-TC-Language"] = $language;
+        }
 
         $canonicalUri = $this->path;
 
@@ -384,13 +382,12 @@ abstract class AbstractClient
             $param["SignatureMethod"] = $this->profile->getSignMethod();
         }
 
-	$language = $this->profile->getLanguage();
-	if ($language) {
-	    $param["Language"] = $language;
-	}
+        $language = $this->profile->getLanguage();
+        if ($language) {
+            $param["Language"] = $language;
+        }
 
-        $signStr = $this->formatSignString($this->profile->getHttpProfile()->getEndpoint(),
-            $this->path, $param,  $reqMethod);
+        $signStr = $this->formatSignString($this->getRefreshedEndpoint(), $this->path, $param, $reqMethod);
         $param["Signature"] = Sign::sign($this->credential->getSecretKey(), $signStr, $this->profile->getSignMethod());
         return $param;
     }
@@ -398,7 +395,7 @@ abstract class AbstractClient
     private function createConnect()
     {
         return new HttpConnection($this->profile->getHttpProfile()->getProtocol().
-            $this->profile->getHttpProfile()->getEndpoint(), $this->profile);
+            $this->getRefreshedEndpoint(), $this->profile);
     }
 
     private function formatSignString($host, $uri, $param, $requestMethod)
@@ -418,5 +415,18 @@ abstract class AbstractClient
         $method = $objReflectClass->getMethod($methodName);
         $method->setAccessible(true);
         return $method;
+    }
+
+    /**
+     * User might call httpProfile.SetEndpoint after client is initialized,
+     * so everytime we get the enpoint we need to check it.
+     * Or we must find a way to disable such usage.
+     */
+    private function getRefreshedEndpoint() {
+        $this->endpoint = $this->profile->getHttpProfile()->getEndpoint();
+        if ($this->endpoint === null) {
+            $this->endpoint = $this->service.".".$this->profile->getHttpProfile()->getRootDomain();
+        }
+        return $this->endpoint;
     }
 }

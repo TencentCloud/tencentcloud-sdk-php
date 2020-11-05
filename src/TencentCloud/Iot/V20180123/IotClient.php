@@ -80,6 +80,11 @@ class IotClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "iot";
+
+    /**
+     * @var string
+     */
     protected $version = "2018-01-23";
 
     /**

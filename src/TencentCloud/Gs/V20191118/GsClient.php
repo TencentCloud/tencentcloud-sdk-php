@@ -38,6 +38,11 @@ class GsClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "gs";
+
+    /**
+     * @var string
+     */
     protected $version = "2019-11-18";
 
     /**

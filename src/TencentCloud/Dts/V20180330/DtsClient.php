@@ -90,6 +90,11 @@ class DtsClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "dts";
+
+    /**
+     * @var string
+     */
     protected $version = "2018-03-30";
 
     /**

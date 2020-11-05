@@ -39,6 +39,11 @@ class TicsClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "tics";
+
+    /**
+     * @var string
+     */
     protected $version = "2018-11-15";
 
     /**

@@ -50,6 +50,11 @@ class SsmClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "ssm";
+
+    /**
+     * @var string
+     */
     protected $version = "2019-09-23";
 
     /**

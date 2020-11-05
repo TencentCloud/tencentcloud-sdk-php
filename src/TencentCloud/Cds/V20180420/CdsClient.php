@@ -41,6 +41,11 @@ class CdsClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "cds";
+
+    /**
+     * @var string
+     */
     protected $version = "2018-04-20";
 
     /**

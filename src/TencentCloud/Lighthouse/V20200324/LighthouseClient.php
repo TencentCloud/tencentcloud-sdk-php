@@ -78,6 +78,11 @@ class LighthouseClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "lighthouse";
+
+    /**
+     * @var string
+     */
     protected $version = "2020-03-24";
 
     /**

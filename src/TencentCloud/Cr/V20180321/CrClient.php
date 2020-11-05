@@ -48,6 +48,11 @@ class CrClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "cr";
+
+    /**
+     * @var string
+     */
     protected $version = "2018-03-21";
 
     /**

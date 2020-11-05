@@ -44,6 +44,11 @@ class IottidClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "iottid";
+
+    /**
+     * @var string
+     */
     protected $version = "2019-04-11";
 
     /**

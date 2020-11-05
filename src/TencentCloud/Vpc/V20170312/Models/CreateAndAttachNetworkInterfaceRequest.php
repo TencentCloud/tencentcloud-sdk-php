@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNetworkInterfaceName(string $NetworkInterfaceName) 设置弹性网卡名称，最大长度不能超过60个字节。
  * @method string getSubnetId() 获取弹性网卡所在的子网实例ID，例如：subnet-0ap8nwca。
  * @method void setSubnetId(string $SubnetId) 设置弹性网卡所在的子网实例ID，例如：subnet-0ap8nwca。
- * @method string getInstanceId() 获取云主机实例ID。
- * @method void setInstanceId(string $InstanceId) 设置云主机实例ID。
+ * @method string getInstanceId() 获取云服务器实例ID。
+ * @method void setInstanceId(string $InstanceId) 设置云服务器实例ID。
  * @method array getPrivateIpAddresses() 获取指定的内网IP信息，单次最多指定10个。
  * @method void setPrivateIpAddresses(array $PrivateIpAddresses) 设置指定的内网IP信息，单次最多指定10个。
  * @method integer getSecondaryPrivateIpAddressCount() 获取新申请的内网IP地址个数，内网IP地址个数总和不能超过配数。
@@ -57,7 +57,7 @@ class CreateAndAttachNetworkInterfaceRequest extends AbstractModel
     public $SubnetId;
 
     /**
-     * @var string 云主机实例ID。
+     * @var string 云服务器实例ID。
      */
     public $InstanceId;
 
@@ -90,7 +90,7 @@ class CreateAndAttachNetworkInterfaceRequest extends AbstractModel
      * @param string $VpcId VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
      * @param string $NetworkInterfaceName 弹性网卡名称，最大长度不能超过60个字节。
      * @param string $SubnetId 弹性网卡所在的子网实例ID，例如：subnet-0ap8nwca。
-     * @param string $InstanceId 云主机实例ID。
+     * @param string $InstanceId 云服务器实例ID。
      * @param array $PrivateIpAddresses 指定的内网IP信息，单次最多指定10个。
      * @param integer $SecondaryPrivateIpAddressCount 新申请的内网IP地址个数，内网IP地址个数总和不能超过配数。
      * @param array $SecurityGroupIds 指定绑定的安全组，例如：['sg-1dd51d']。

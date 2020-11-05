@@ -41,6 +41,11 @@ class FtClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "ft";
+
+    /**
+     * @var string
+     */
     protected $version = "2020-03-04";
 
     /**

@@ -42,6 +42,11 @@ class CisClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "cis";
+
+    /**
+     * @var string
+     */
     protected $version = "2018-04-08";
 
     /**

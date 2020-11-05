@@ -77,6 +77,11 @@ class AsrClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "asr";
+
+    /**
+     * @var string
+     */
     protected $version = "2019-06-14";
 
     /**

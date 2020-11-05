@@ -41,6 +41,11 @@ class TafClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "taf";
+
+    /**
+     * @var string
+     */
     protected $version = "2020-02-10";
 
     /**

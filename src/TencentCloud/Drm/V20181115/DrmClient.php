@@ -52,6 +52,11 @@ class DrmClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "drm";
+
+    /**
+     * @var string
+     */
     protected $version = "2018-11-15";
 
     /**

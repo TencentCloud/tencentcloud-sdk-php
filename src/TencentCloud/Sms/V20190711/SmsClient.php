@@ -102,6 +102,11 @@ class SmsClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "sms";
+
+    /**
+     * @var string
+     */
     protected $version = "2019-07-11";
 
     /**

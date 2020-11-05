@@ -83,6 +83,11 @@ class MariadbClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "mariadb";
+
+    /**
+     * @var string
+     */
     protected $version = "2017-03-12";
 
     /**

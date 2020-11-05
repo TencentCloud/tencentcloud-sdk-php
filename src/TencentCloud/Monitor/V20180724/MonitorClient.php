@@ -64,6 +64,11 @@ class MonitorClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "monitor";
+
+    /**
+     * @var string
+     */
     protected $version = "2018-07-24";
 
     /**

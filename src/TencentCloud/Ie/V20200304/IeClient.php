@@ -42,6 +42,11 @@ class IeClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "ie";
+
+    /**
+     * @var string
+     */
     protected $version = "2020-03-04";
 
     /**

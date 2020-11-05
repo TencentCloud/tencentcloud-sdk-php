@@ -122,9 +122,9 @@ OPEN：公网属性， INTERNAL：内网属性。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExpireTime(string $ExpireTime) 设置负载均衡实例的过期时间，仅对预付费负载均衡生效
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getChargeType() 获取负载均衡实例的计费类型
+ * @method string getChargeType() 获取负载均衡实例的计费类型，PREPAID：包年包月，POSTPAID_BY_HOUR：按量计费
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setChargeType(string $ChargeType) 设置负载均衡实例的计费类型
+ * @method void setChargeType(string $ChargeType) 设置负载均衡实例的计费类型，PREPAID：包年包月，POSTPAID_BY_HOUR：按量计费
 注意：此字段可能返回 null，表示取不到有效值。
  * @method InternetAccessible getNetworkAttributes() 获取负载均衡实例的网络属性
 注意：此字段可能返回 null，表示取不到有效值。
@@ -365,7 +365,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     public $ExpireTime;
 
     /**
-     * @var string 负载均衡实例的计费类型
+     * @var string 负载均衡实例的计费类型，PREPAID：包年包月，POSTPAID_BY_HOUR：按量计费
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ChargeType;
@@ -536,7 +536,7 @@ OPEN：公网属性， INTERNAL：内网属性。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExpireTime 负载均衡实例的过期时间，仅对预付费负载均衡生效
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ChargeType 负载均衡实例的计费类型
+     * @param string $ChargeType 负载均衡实例的计费类型，PREPAID：包年包月，POSTPAID_BY_HOUR：按量计费
 注意：此字段可能返回 null，表示取不到有效值。
      * @param InternetAccessible $NetworkAttributes 负载均衡实例的网络属性
 注意：此字段可能返回 null，表示取不到有效值。

@@ -45,6 +45,11 @@ class TiaClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "tia";
+
+    /**
+     * @var string
+     */
     protected $version = "2018-02-26";
 
     /**

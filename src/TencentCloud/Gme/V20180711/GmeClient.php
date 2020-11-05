@@ -182,6 +182,11 @@ class GmeClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "gme";
+
+    /**
+     * @var string
+     */
     protected $version = "2018-07-11";
 
     /**

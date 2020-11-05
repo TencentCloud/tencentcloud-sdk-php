@@ -56,6 +56,11 @@ class CmsClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "cms";
+
+    /**
+     * @var string
+     */
     protected $version = "2019-03-21";
 
     /**

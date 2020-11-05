@@ -36,6 +36,11 @@ class LpClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "lp";
+
+    /**
+     * @var string
+     */
     protected $version = "2020-02-24";
 
     /**

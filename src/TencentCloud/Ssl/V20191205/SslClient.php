@@ -55,6 +55,11 @@ class SslClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "ssl";
+
+    /**
+     * @var string
+     */
     protected $version = "2019-12-05";
 
     /**

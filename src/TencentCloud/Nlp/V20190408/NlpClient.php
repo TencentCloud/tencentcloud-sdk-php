@@ -96,6 +96,11 @@ class NlpClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "nlp";
+
+    /**
+     * @var string
+     */
     protected $version = "2019-04-08";
 
     /**

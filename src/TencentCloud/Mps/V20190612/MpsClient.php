@@ -137,6 +137,11 @@ class MpsClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "mps";
+
+    /**
+     * @var string
+     */
     protected $version = "2019-06-12";
 
     /**

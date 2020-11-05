@@ -38,6 +38,11 @@ class WssClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "wss";
+
+    /**
+     * @var string
+     */
     protected $version = "2018-04-26";
 
     /**

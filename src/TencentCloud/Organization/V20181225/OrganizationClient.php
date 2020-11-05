@@ -55,6 +55,11 @@ class OrganizationClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "organization";
+
+    /**
+     * @var string
+     */
     protected $version = "2018-12-25";
 
     /**

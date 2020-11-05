@@ -40,6 +40,11 @@ class SmpnClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "smpn";
+
+    /**
+     * @var string
+     */
     protected $version = "2019-08-22";
 
     /**

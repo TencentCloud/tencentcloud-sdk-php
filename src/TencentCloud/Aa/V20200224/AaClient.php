@@ -38,6 +38,11 @@ class AaClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "aa";
+
+    /**
+     * @var string
+     */
     protected $version = "2020-02-24";
 
     /**

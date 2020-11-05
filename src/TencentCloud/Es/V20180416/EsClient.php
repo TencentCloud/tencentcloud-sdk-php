@@ -53,6 +53,11 @@ class EsClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "es";
+
+    /**
+     * @var string
+     */
     protected $version = "2018-04-16";
 
     /**

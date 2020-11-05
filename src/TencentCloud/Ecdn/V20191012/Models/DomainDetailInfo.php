@@ -80,6 +80,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReadonly(string $Readonly) 设置域名锁定状态，normal、global 分别表示未被锁定，全球锁定。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTag() 获取域名标签
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTag(array $Tag) 设置域名标签
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DomainDetailInfo extends AbstractModel
 {
@@ -190,6 +194,12 @@ class DomainDetailInfo extends AbstractModel
     public $Readonly;
 
     /**
+     * @var array 域名标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Tag;
+
+    /**
      * @param string $ResourceId 域名ID。
      * @param integer $AppId 腾讯云账号ID。
      * @param string $Domain 加速域名。
@@ -219,6 +229,8 @@ class DomainDetailInfo extends AbstractModel
      * @param string $Area 加速区域，mainland，overseas或global。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Readonly 域名锁定状态，normal、global 分别表示未被锁定，全球锁定。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Tag 域名标签
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -316,6 +328,15 @@ class DomainDetailInfo extends AbstractModel
 
         if (array_key_exists("Readonly",$param) and $param["Readonly"] !== null) {
             $this->Readonly = $param["Readonly"];
+        }
+
+        if (array_key_exists("Tag",$param) and $param["Tag"] !== null) {
+            $this->Tag = [];
+            foreach ($param["Tag"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tag, $obj);
+            }
         }
     }
 }

@@ -36,6 +36,11 @@ class MemcachedClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "memcached";
+
+    /**
+     * @var string
+     */
     protected $version = "2019-03-18";
 
     /**

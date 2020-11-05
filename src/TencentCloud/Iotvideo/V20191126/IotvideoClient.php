@@ -121,6 +121,11 @@ class IotvideoClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "iotvideo";
+
+    /**
+     * @var string
+     */
     protected $version = "2019-11-26";
 
     /**

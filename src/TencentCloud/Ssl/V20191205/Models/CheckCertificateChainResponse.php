@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CheckCertificateChain返回参数结构体
  *
- * @method boolean getIsValid() 获取1为通过检查，0为未通过检查。
- * @method void setIsValid(boolean $IsValid) 设置1为通过检查，0为未通过检查。
- * @method boolean getIsTrustedCA() 获取1为可信CA，0为不可信CA。
- * @method void setIsTrustedCA(boolean $IsTrustedCA) 设置1为可信CA，0为不可信CA。
+ * @method boolean getIsValid() 获取true为通过检查，false为未通过检查。
+ * @method void setIsValid(boolean $IsValid) 设置true为通过检查，false为未通过检查。
+ * @method boolean getIsTrustedCA() 获取true为可信CA，false为不可信CA。
+ * @method void setIsTrustedCA(boolean $IsTrustedCA) 设置true为可信CA，false为不可信CA。
  * @method array getChains() 获取包含证书链中每一段证书的通用名称。
  * @method void setChains(array $Chains) 设置包含证书链中每一段证书的通用名称。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -32,12 +32,12 @@ use TencentCloud\Common\AbstractModel;
 class CheckCertificateChainResponse extends AbstractModel
 {
     /**
-     * @var boolean 1为通过检查，0为未通过检查。
+     * @var boolean true为通过检查，false为未通过检查。
      */
     public $IsValid;
 
     /**
-     * @var boolean 1为可信CA，0为不可信CA。
+     * @var boolean true为可信CA，false为不可信CA。
      */
     public $IsTrustedCA;
 
@@ -52,8 +52,8 @@ class CheckCertificateChainResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param boolean $IsValid 1为通过检查，0为未通过检查。
-     * @param boolean $IsTrustedCA 1为可信CA，0为不可信CA。
+     * @param boolean $IsValid true为通过检查，false为未通过检查。
+     * @param boolean $IsTrustedCA true为可信CA，false为不可信CA。
      * @param array $Chains 包含证书链中每一段证书的通用名称。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

@@ -38,6 +38,11 @@ class RkpClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "rkp";
+
+    /**
+     * @var string
+     */
     protected $version = "2019-12-09";
 
     /**

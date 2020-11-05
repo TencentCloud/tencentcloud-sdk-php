@@ -38,6 +38,11 @@ class TtsClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "tts";
+
+    /**
+     * @var string
+     */
     protected $version = "2019-08-23";
 
     /**

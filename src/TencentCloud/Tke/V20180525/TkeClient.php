@@ -78,6 +78,11 @@ class TkeClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "tke";
+
+    /**
+     * @var string
+     */
     protected $version = "2018-05-25";
 
     /**

@@ -65,6 +65,11 @@ class TcbClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "tcb";
+
+    /**
+     * @var string
+     */
     protected $version = "2018-06-08";
 
     /**

@@ -42,6 +42,11 @@ class EccClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "ecc";
+
+    /**
+     * @var string
+     */
     protected $version = "2018-12-13";
 
     /**

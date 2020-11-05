@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInPkg(integer $InPkg) 设置入包量。
  * @method integer getOutPkg() 获取出包量。
  * @method void setOutPkg(integer $OutPkg) 设置出包量。
- * @method integer getInTraffic() 获取入带宽，单位：`Byte`。
- * @method void setInTraffic(integer $InTraffic) 设置入带宽，单位：`Byte`。
- * @method integer getOutTraffic() 获取出带宽，单位：`Byte`。
- * @method void setOutTraffic(integer $OutTraffic) 设置出带宽，单位：`Byte`。
+ * @method integer getInTraffic() 获取入流量，单位：`Byte`。
+ * @method void setInTraffic(integer $InTraffic) 设置入流量，单位：`Byte`。
+ * @method integer getOutTraffic() 获取出流量，单位：`Byte`。
+ * @method void setOutTraffic(integer $OutTraffic) 设置出流量，单位：`Byte`。
  */
 class GatewayFlowMonitorDetail extends AbstractModel
 {
@@ -49,12 +49,12 @@ class GatewayFlowMonitorDetail extends AbstractModel
     public $OutPkg;
 
     /**
-     * @var integer 入带宽，单位：`Byte`。
+     * @var integer 入流量，单位：`Byte`。
      */
     public $InTraffic;
 
     /**
-     * @var integer 出带宽，单位：`Byte`。
+     * @var integer 出流量，单位：`Byte`。
      */
     public $OutTraffic;
 
@@ -62,8 +62,8 @@ class GatewayFlowMonitorDetail extends AbstractModel
      * @param string $PrivateIpAddress 来源`IP`。
      * @param integer $InPkg 入包量。
      * @param integer $OutPkg 出包量。
-     * @param integer $InTraffic 入带宽，单位：`Byte`。
-     * @param integer $OutTraffic 出带宽，单位：`Byte`。
+     * @param integer $InTraffic 入流量，单位：`Byte`。
+     * @param integer $OutTraffic 出流量，单位：`Byte`。
      */
     function __construct()
     {

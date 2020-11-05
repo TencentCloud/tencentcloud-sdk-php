@@ -36,6 +36,11 @@ class MgobeClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "mgobe";
+
+    /**
+     * @var string
+     */
     protected $version = "2020-10-14";
 
     /**

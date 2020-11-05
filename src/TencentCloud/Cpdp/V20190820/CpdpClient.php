@@ -119,6 +119,11 @@ class CpdpClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "cpdp";
+
+    /**
+     * @var string
+     */
     protected $version = "2019-08-20";
 
     /**

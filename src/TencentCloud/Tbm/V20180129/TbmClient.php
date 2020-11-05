@@ -44,6 +44,11 @@ class TbmClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "tbm";
+
+    /**
+     * @var string
+     */
     protected $version = "2018-01-29";
 
     /**

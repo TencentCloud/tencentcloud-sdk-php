@@ -70,6 +70,11 @@ class TcaplusdbClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "tcaplusdb";
+
+    /**
+     * @var string
+     */
     protected $version = "2019-08-23";
 
     /**

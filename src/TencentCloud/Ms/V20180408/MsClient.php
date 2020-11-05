@@ -53,6 +53,11 @@ class MsClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "ms";
+
+    /**
+     * @var string
+     */
     protected $version = "2018-04-08";
 
     /**

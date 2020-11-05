@@ -84,12 +84,21 @@ class HttpProfile
     private $verify;
 
     /**
+     * @var string
+     */
+    private $rootDomain;
+
+    /**
+     * @var boolean
+     */
+    private $keepAlive;
+
+    /**
      * HttpProfile constructor.
      * @param string $protocol 请求协议
      * @param string $endpoint 请求接入点域名(xx.[region.]tencentcloudapi.com)
      * @param string $reqMethod http请求方法，目前支持POST GET
      * @param integer $reqTimeout 请求超时时间，单位:s
-     * @param string|bool $verify 请求时验证SSL证书行为
      */
     public function __construct($protocol = null, $endpoint = null, $reqMethod = null,  $reqTimeout = null)
     {
@@ -98,6 +107,8 @@ class HttpProfile
         $this->reqTimeout = $reqTimeout ? $reqTimeout : HttpProfile::$TM_MINUTE;
         $this->protocol = $protocol ? $protocol : HttpProfile::$REQ_HTTPS;
         $this->verify = RequestOptions::VERIFY;
+        $this->rootDomain = "tencentcloudapi.com";
+        $this->keepAlive = false;
     }
 
     /**
@@ -207,5 +218,26 @@ class HttpProfile
     public function getVerify()
     {
         return $this->verify;
+    }
+
+    public function setRootDomain($domain)
+    {
+        $this->rootDomain = $domain;
+    }
+
+    public function getRootDomain()
+    {
+        return $this->rootDomain;
+    }
+
+    /**
+     * @param boolean $flag
+     */
+    public function setKeepAlive($flag) {
+        $this->keepAlive = $flag;
+    }
+
+    public function getKeepAlive() {
+        return $this->keepAlive;
     }
 }

@@ -122,6 +122,11 @@ class GaapClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "gaap";
+
+    /**
+     * @var string
+     */
     protected $version = "2018-05-29";
 
     /**

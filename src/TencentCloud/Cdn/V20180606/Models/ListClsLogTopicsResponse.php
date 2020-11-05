@@ -20,17 +20,37 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ListClsLogTopics返回参数结构体
  *
+ * @method LogSetInfo getLogset() 获取日志集信息
+ * @method void setLogset(LogSetInfo $Logset) 设置日志集信息
+ * @method array getTopics() 获取日志主题信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTopics(array $Topics) 设置日志主题信息列表
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class ListClsLogTopicsResponse extends AbstractModel
 {
     /**
+     * @var LogSetInfo 日志集信息
+     */
+    public $Logset;
+
+    /**
+     * @var array 日志主题信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Topics;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
+     * @param LogSetInfo $Logset 日志集信息
+     * @param array $Topics 日志主题信息列表
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -46,6 +66,20 @@ class ListClsLogTopicsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Logset",$param) and $param["Logset"] !== null) {
+            $this->Logset = new LogSetInfo();
+            $this->Logset->deserialize($param["Logset"]);
+        }
+
+        if (array_key_exists("Topics",$param) and $param["Topics"] !== null) {
+            $this->Topics = [];
+            foreach ($param["Topics"] as $key => $value){
+                $obj = new TopicInfo();
+                $obj->deserialize($value);
+                array_push($this->Topics, $obj);
+            }
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

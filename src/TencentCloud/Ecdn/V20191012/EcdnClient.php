@@ -60,6 +60,11 @@ class EcdnClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "ecdn";
+
+    /**
+     * @var string
+     */
     protected $version = "2019-10-12";
 
     /**

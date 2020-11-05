@@ -38,6 +38,11 @@ class TicmClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "ticm";
+
+    /**
+     * @var string
+     */
     protected $version = "2018-11-27";
 
     /**

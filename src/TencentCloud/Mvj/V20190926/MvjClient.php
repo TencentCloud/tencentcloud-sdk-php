@@ -38,6 +38,11 @@ class MvjClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "mvj";
+
+    /**
+     * @var string
+     */
     protected $version = "2019-09-26";
 
     /**

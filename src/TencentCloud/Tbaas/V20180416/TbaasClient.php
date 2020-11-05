@@ -53,6 +53,11 @@ class TbaasClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "tbaas";
+
+    /**
+     * @var string
+     */
     protected $version = "2018-04-16";
 
     /**

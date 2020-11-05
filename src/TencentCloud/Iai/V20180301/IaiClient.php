@@ -221,6 +221,11 @@ class IaiClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "iai";
+
+    /**
+     * @var string
+     */
     protected $version = "2018-03-01";
 
     /**

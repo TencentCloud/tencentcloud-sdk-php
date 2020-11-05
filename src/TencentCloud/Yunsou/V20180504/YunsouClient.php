@@ -37,6 +37,11 @@ class YunsouClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "yunsou";
+
+    /**
+     * @var string
+     */
     protected $version = "2018-05-04";
 
     /**

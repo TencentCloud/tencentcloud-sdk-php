@@ -37,6 +37,11 @@ class HaboClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "habo";
+
+    /**
+     * @var string
+     */
     protected $version = "2018-12-03";
 
     /**

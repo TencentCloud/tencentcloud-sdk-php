@@ -48,6 +48,11 @@ class TmtClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "tmt";
+
+    /**
+     * @var string
+     */
     protected $version = "2018-03-21";
 
     /**

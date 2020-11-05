@@ -40,6 +40,11 @@ class IirClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "iir";
+
+    /**
+     * @var string
+     */
     protected $version = "2020-04-17";
 
     /**

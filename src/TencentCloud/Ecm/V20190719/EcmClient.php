@@ -159,6 +159,11 @@ class EcmClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "ecm";
+
+    /**
+     * @var string
+     */
     protected $version = "2019-07-19";
 
     /**

@@ -155,6 +155,11 @@ class CbsClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "cbs";
+
+    /**
+     * @var string
+     */
     protected $version = "2017-03-12";
 
     /**

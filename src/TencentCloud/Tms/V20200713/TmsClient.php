@@ -37,6 +37,11 @@ class TmsClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "tms";
+
+    /**
+     * @var string
+     */
     protected $version = "2020-07-13";
 
     /**

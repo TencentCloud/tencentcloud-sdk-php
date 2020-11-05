@@ -38,6 +38,11 @@ class TkgdqClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "tkgdq";
+
+    /**
+     * @var string
+     */
     protected $version = "2019-04-11";
 
     /**

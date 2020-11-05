@@ -78,6 +78,11 @@ class BdaClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "bda";
+
+    /**
+     * @var string
+     */
     protected $version = "2020-03-24";
 
     /**

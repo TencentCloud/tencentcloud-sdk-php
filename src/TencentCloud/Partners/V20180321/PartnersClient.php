@@ -51,6 +51,11 @@ class PartnersClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "partners";
+
+    /**
+     * @var string
+     */
     protected $version = "2018-03-21";
 
     /**

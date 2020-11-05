@@ -45,6 +45,11 @@ class EmrClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "emr";
+
+    /**
+     * @var string
+     */
     protected $version = "2019-01-03";
 
     /**

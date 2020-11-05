@@ -45,6 +45,11 @@ class SslpodClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "sslpod";
+
+    /**
+     * @var string
+     */
     protected $version = "2019-06-05";
 
     /**

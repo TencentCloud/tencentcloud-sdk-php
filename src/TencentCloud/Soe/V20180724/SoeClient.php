@@ -39,6 +39,11 @@ class SoeClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "soe";
+
+    /**
+     * @var string
+     */
     protected $version = "2018-07-24";
 
     /**

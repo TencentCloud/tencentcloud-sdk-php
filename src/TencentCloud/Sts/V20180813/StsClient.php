@@ -39,6 +39,11 @@ class StsClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "sts";
+
+    /**
+     * @var string
+     */
     protected $version = "2018-08-13";
 
     /**

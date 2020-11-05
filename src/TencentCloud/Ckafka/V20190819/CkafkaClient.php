@@ -65,6 +65,11 @@ class CkafkaClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "ckafka";
+
+    /**
+     * @var string
+     */
     protected $version = "2019-08-19";
 
     /**

@@ -108,6 +108,11 @@ class BmvpcClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "bmvpc";
+
+    /**
+     * @var string
+     */
     protected $version = "2018-06-25";
 
     /**

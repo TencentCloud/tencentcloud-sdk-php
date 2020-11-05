@@ -147,6 +147,11 @@ class TsfClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "tsf";
+
+    /**
+     * @var string
+     */
     protected $version = "2018-03-26";
 
     /**

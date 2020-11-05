@@ -52,6 +52,11 @@ class GpmClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "gpm";
+
+    /**
+     * @var string
+     */
     protected $version = "2020-08-20";
 
     /**

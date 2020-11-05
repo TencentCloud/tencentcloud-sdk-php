@@ -62,6 +62,11 @@ class CatClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "cat";
+
+    /**
+     * @var string
+     */
     protected $version = "2018-04-09";
 
     /**

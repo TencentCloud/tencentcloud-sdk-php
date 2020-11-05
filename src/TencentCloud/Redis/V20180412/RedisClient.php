@@ -96,6 +96,11 @@ class RedisClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "redis";
+
+    /**
+     * @var string
+     */
     protected $version = "2018-04-12";
 
     /**

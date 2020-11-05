@@ -68,6 +68,11 @@ class PostgresClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "postgres";
+
+    /**
+     * @var string
+     */
     protected $version = "2017-03-12";
 
     /**

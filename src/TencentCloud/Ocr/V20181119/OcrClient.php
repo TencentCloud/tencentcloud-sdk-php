@@ -371,6 +371,11 @@ class OcrClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "ocr";
+
+    /**
+     * @var string
+     */
     protected $version = "2018-11-19";
 
     /**

@@ -42,6 +42,11 @@ class DbbrainClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "dbbrain";
+
+    /**
+     * @var string
+     */
     protected $version = "2019-10-16";
 
     /**

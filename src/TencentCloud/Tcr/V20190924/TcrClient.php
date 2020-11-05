@@ -93,6 +93,11 @@ class TcrClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "tcr";
+
+    /**
+     * @var string
+     */
     protected $version = "2019-09-24";
 
     /**

@@ -69,6 +69,11 @@ class YoumallClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "youmall";
+
+    /**
+     * @var string
+     */
     protected $version = "2018-02-28";
 
     /**

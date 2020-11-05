@@ -38,6 +38,11 @@ class AfcClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "afc";
+
+    /**
+     * @var string
+     */
     protected $version = "2020-02-26";
 
     /**

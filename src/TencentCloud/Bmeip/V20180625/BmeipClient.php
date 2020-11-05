@@ -55,6 +55,11 @@ class BmeipClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "bmeip";
+
+    /**
+     * @var string
+     */
     protected $version = "2018-06-25";
 
     /**

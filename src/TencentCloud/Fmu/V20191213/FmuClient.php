@@ -55,6 +55,11 @@ class FmuClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "fmu";
+
+    /**
+     * @var string
+     */
     protected $version = "2019-12-13";
 
     /**

@@ -52,6 +52,11 @@ class SolarClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "solar";
+
+    /**
+     * @var string
+     */
     protected $version = "2018-10-11";
 
     /**

@@ -58,6 +58,11 @@ class TioneClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "tione";
+
+    /**
+     * @var string
+     */
     protected $version = "2019-10-22";
 
     /**

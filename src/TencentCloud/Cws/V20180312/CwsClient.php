@@ -54,6 +54,11 @@ class CwsClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "cws";
+
+    /**
+     * @var string
+     */
     protected $version = "2018-03-12";
 
     /**

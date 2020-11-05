@@ -138,6 +138,11 @@ class YunjingClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "yunjing";
+
+    /**
+     * @var string
+     */
     protected $version = "2018-02-28";
 
     /**

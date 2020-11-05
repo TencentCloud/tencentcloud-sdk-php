@@ -36,6 +36,11 @@ class HcmClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "hcm";
+
+    /**
+     * @var string
+     */
     protected $version = "2018-11-06";
 
     /**

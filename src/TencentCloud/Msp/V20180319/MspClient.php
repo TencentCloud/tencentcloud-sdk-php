@@ -42,6 +42,11 @@ class MspClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "msp";
+
+    /**
+     * @var string
+     */
     protected $version = "2018-03-19";
 
     /**

@@ -60,6 +60,11 @@ class TiemsClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "tiems";
+
+    /**
+     * @var string
+     */
     protected $version = "2019-04-16";
 
     /**

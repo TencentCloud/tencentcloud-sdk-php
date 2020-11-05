@@ -133,6 +133,11 @@ class ClbClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "clb";
+
+    /**
+     * @var string
+     */
     protected $version = "2018-03-17";
 
     /**

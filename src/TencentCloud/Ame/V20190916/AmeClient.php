@@ -43,6 +43,11 @@ class AmeClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "ame";
+
+    /**
+     * @var string
+     */
     protected $version = "2019-09-16";
 
     /**

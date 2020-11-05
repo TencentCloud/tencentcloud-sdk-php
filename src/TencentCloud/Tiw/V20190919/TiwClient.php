@@ -53,6 +53,11 @@ class TiwClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "tiw";
+
+    /**
+     * @var string
+     */
     protected $version = "2019-09-19";
 
     /**

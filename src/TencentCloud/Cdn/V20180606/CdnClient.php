@@ -129,6 +129,11 @@ class CdnClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "cdn";
+
+    /**
+     * @var string
+     */
     protected $version = "2018-06-06";
 
     /**

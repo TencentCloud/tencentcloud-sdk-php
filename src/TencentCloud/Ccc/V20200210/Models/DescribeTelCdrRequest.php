@@ -20,24 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTelCdr请求参数结构体
  *
- * @method integer getInstanceId() 获取实例 ID
- * @method void setInstanceId(integer $InstanceId) 设置实例 ID
  * @method integer getStartTimeStamp() 获取起始时间戳，Unix 时间戳
  * @method void setStartTimeStamp(integer $StartTimeStamp) 设置起始时间戳，Unix 时间戳
  * @method integer getEndTimeStamp() 获取结束时间戳，Unix 时间戳
  * @method void setEndTimeStamp(integer $EndTimeStamp) 设置结束时间戳，Unix 时间戳
- * @method integer getLimit() 获取返回记录条数
- * @method void setLimit(integer $Limit) 设置返回记录条数
+ * @method integer getLimit() 获取返回记录条数，上限 100
+ * @method void setLimit(integer $Limit) 设置返回记录条数，上限 100
  * @method integer getOffset() 获取偏移量
  * @method void setOffset(integer $Offset) 设置偏移量
+ * @method integer getInstanceId() 获取实例 ID
+ * @method void setInstanceId(integer $InstanceId) 设置实例 ID
+ * @method integer getSdkAppId() 获取应用ID。
+ * @method void setSdkAppId(integer $SdkAppId) 设置应用ID。
  */
 class DescribeTelCdrRequest extends AbstractModel
 {
-    /**
-     * @var integer 实例 ID
-     */
-    public $InstanceId;
-
     /**
      * @var integer 起始时间戳，Unix 时间戳
      */
@@ -49,7 +46,7 @@ class DescribeTelCdrRequest extends AbstractModel
     public $EndTimeStamp;
 
     /**
-     * @var integer 返回记录条数
+     * @var integer 返回记录条数，上限 100
      */
     public $Limit;
 
@@ -59,11 +56,22 @@ class DescribeTelCdrRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @param integer $InstanceId 实例 ID
+     * @var integer 实例 ID
+     */
+    public $InstanceId;
+
+    /**
+     * @var integer 应用ID。
+     */
+    public $SdkAppId;
+
+    /**
      * @param integer $StartTimeStamp 起始时间戳，Unix 时间戳
      * @param integer $EndTimeStamp 结束时间戳，Unix 时间戳
-     * @param integer $Limit 返回记录条数
+     * @param integer $Limit 返回记录条数，上限 100
      * @param integer $Offset 偏移量
+     * @param integer $InstanceId 实例 ID
+     * @param integer $SdkAppId 应用ID。
      */
     function __construct()
     {
@@ -78,10 +86,6 @@ class DescribeTelCdrRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
-        }
-
         if (array_key_exists("StartTimeStamp",$param) and $param["StartTimeStamp"] !== null) {
             $this->StartTimeStamp = $param["StartTimeStamp"];
         }
@@ -96,6 +100,14 @@ class DescribeTelCdrRequest extends AbstractModel
 
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
             $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("SdkAppId",$param) and $param["SdkAppId"] !== null) {
+            $this->SdkAppId = $param["SdkAppId"];
         }
     }
 }

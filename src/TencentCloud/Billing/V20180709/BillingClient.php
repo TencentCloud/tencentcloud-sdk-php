@@ -52,6 +52,11 @@ class BillingClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "billing";
+
+    /**
+     * @var string
+     */
     protected $version = "2018-07-09";
 
     /**

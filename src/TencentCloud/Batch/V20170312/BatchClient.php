@@ -82,6 +82,11 @@ class BatchClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "batch";
+
+    /**
+     * @var string
+     */
     protected $version = "2017-03-12";
 
     /**

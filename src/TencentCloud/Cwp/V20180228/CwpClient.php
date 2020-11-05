@@ -138,6 +138,11 @@ class CwpClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "cwp";
+
+    /**
+     * @var string
+     */
     protected $version = "2018-02-28";
 
     /**

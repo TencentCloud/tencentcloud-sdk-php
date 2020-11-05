@@ -463,6 +463,11 @@ class VpcClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "vpc";
+
+    /**
+     * @var string
+     */
     protected $version = "2017-03-12";
 
     /**

@@ -53,6 +53,11 @@ class CmqClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "cmq";
+
+    /**
+     * @var string
+     */
     protected $version = "2019-03-04";
 
     /**

@@ -37,6 +37,11 @@ class TcexClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "tcex";
+
+    /**
+     * @var string
+     */
     protected $version = "2020-07-27";
 
     /**

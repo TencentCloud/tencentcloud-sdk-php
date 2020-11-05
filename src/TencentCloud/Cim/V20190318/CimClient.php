@@ -36,6 +36,11 @@ class CimClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "cim";
+
+    /**
+     * @var string
+     */
     protected $version = "2019-03-18";
 
     /**

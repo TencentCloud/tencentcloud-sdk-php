@@ -96,6 +96,11 @@ class CamClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "cam";
+
+    /**
+     * @var string
+     */
     protected $version = "2019-01-16";
 
     /**

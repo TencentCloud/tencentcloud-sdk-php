@@ -76,6 +76,11 @@ class DcdbClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "dcdb";
+
+    /**
+     * @var string
+     */
     protected $version = "2018-04-11";
 
     /**

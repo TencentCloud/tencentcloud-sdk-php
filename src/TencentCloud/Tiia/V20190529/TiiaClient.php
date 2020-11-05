@@ -98,6 +98,11 @@ class TiiaClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "tiia";
+
+    /**
+     * @var string
+     */
     protected $version = "2019-05-29";
 
     /**

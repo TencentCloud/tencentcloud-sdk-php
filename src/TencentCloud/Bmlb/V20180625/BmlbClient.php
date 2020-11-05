@@ -84,6 +84,11 @@ class BmlbClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "bmlb";
+
+    /**
+     * @var string
+     */
     protected $version = "2018-06-25";
 
     /**

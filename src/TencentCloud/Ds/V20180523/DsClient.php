@@ -49,6 +49,11 @@ class DsClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "ds";
+
+    /**
+     * @var string
+     */
     protected $version = "2018-05-23";
 
     /**

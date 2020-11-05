@@ -45,6 +45,11 @@ class FacefusionClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "facefusion";
+
+    /**
+     * @var string
+     */
     protected $version = "2018-12-01";
 
     /**

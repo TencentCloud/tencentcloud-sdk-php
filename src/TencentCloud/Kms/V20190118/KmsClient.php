@@ -83,6 +83,11 @@ class KmsClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "kms";
+
+    /**
+     * @var string
+     */
     protected $version = "2019-01-18";
 
     /**

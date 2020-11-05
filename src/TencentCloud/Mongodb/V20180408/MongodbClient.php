@@ -52,6 +52,11 @@ class MongodbClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "mongodb";
+
+    /**
+     * @var string
+     */
     protected $version = "2018-04-08";
 
     /**

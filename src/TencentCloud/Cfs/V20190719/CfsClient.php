@@ -55,6 +55,11 @@ class CfsClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "cfs";
+
+    /**
+     * @var string
+     */
     protected $version = "2019-07-19";
 
     /**

@@ -82,6 +82,11 @@ class CmeClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "cme";
+
+    /**
+     * @var string
+     */
     protected $version = "2019-10-29";
 
     /**

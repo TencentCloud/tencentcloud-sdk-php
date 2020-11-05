@@ -43,6 +43,11 @@ class NppClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "npp";
+
+    /**
+     * @var string
+     */
     protected $version = "2019-08-23";
 
     /**

@@ -60,6 +60,11 @@ class CynosdbClient extends AbstractClient
     /**
      * @var string
      */
+    protected $service = "cynosdb";
+
+    /**
+     * @var string
+     */
     protected $version = "2019-01-07";
 
     /**

@@ -20,17 +20,25 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAndAttachNetworkInterface返回参数结构体
  *
+ * @method NetworkInterface getNetworkInterface() 获取弹性网卡实例。
+ * @method void setNetworkInterface(NetworkInterface $NetworkInterface) 设置弹性网卡实例。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateAndAttachNetworkInterfaceResponse extends AbstractModel
 {
     /**
+     * @var NetworkInterface 弹性网卡实例。
+     */
+    public $NetworkInterface;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
+     * @param NetworkInterface $NetworkInterface 弹性网卡实例。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -46,6 +54,11 @@ class CreateAndAttachNetworkInterfaceResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("NetworkInterface",$param) and $param["NetworkInterface"] !== null) {
+            $this->NetworkInterface = new NetworkInterface();
+            $this->NetworkInterface->deserialize($param["NetworkInterface"]);
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

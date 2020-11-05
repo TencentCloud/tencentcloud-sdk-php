@@ -75,6 +75,11 @@ abstract class AbstractClient
     private $apiVersion;
 
     /**
+     * @var HttpConnection
+     */
+    private $httpConn;
+
+    /**
      * 基础client类
      * @param string $endpoint Deprecated, we use service+rootdomain instead
      * @param string $version api版本
@@ -101,6 +106,8 @@ abstract class AbstractClient
         if (version_compare(phpversion(), $this->PHP_VERSION_MINIMUM, '<') && $profile->getCheckPHPVersion()) {
             throw new TencentCloudSDKException("ClientError", "PHP version must >= ".$this->PHP_VERSION_MINIMUM.", your current is ".phpversion());
         }
+
+        $this->httpConn = $this->createConnect();
     }
 
     /**
@@ -303,10 +310,10 @@ abstract class AbstractClient
         $headers["Authorization"] = $auth;
 
         if (HttpProfile::$REQ_GET == $reqmethod) {
-            $connect = $this->createConnect();
+            $connect = $this->getConnect();
             return $connect->getRequest($this->path, $canonicalQueryString, $headers);
         } else {
-            $connect = $this->createConnect();
+            $connect = $this->getConnect();
             return $connect->postRequestRaw($this->path, $headers, $payload);
         }
     }
@@ -340,7 +347,7 @@ abstract class AbstractClient
     private function getRequest($action, $request)
     {
         $query = $this->formatRequestData($action, $request, httpProfile::$REQ_GET);
-        $connect = $this->createConnect();
+        $connect = $this->getConnect();
         return $connect->getRequest($this->path, $query, []);
     }
 
@@ -350,7 +357,7 @@ abstract class AbstractClient
     private function postRequest($action, $request)
     {
         $body = $this->formatRequestData($action, $request, httpProfile::$REQ_POST);
-        $connect = $this->createConnect();
+        $connect = $this->getConnect();
         return $connect->postRequest($this->path, [], $body);
     }
 
@@ -394,8 +401,17 @@ abstract class AbstractClient
 
     private function createConnect()
     {
-        return new HttpConnection($this->profile->getHttpProfile()->getProtocol().
-            $this->getRefreshedEndpoint(), $this->profile);
+        $prot = $this->profile->getHttpProfile()->getProtocol();
+        return new HttpConnection($prot.$this->getRefreshedEndpoint(), $this->profile);
+    }
+
+    private function getConnect() {
+        $keepAlive = $this->profile->getHttpProfile()->getKeepAlive();
+        if (true === $keepAlive) {
+            return $this->httpConn;
+        } else {
+            return $this->createConnect();
+        }
     }
 
     private function formatSignString($host, $uri, $param, $requestMethod)

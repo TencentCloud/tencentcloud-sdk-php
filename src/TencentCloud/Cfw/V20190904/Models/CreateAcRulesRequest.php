@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnable(integer $Enable) 设置访问控制规则状态
  * @method integer getOverwrite() 获取0：添加，1：覆盖
  * @method void setOverwrite(integer $Overwrite) 设置0：添加，1：覆盖
- * @method string getInstanceId() 获取NAT实例ID, Area存在的时候这个必传
- * @method void setInstanceId(string $InstanceId) 设置NAT实例ID, Area存在的时候这个必传
+ * @method string getInstanceId() 获取NAT实例ID, 参数Area存在的时候这个必传
+ * @method void setInstanceId(string $InstanceId) 设置NAT实例ID, 参数Area存在的时候这个必传
  * @method string getFrom() 获取portScan: 来自于端口扫描, patchImport: 来自于批量导入
  * @method void setFrom(string $From) 设置portScan: 来自于端口扫描, patchImport: 来自于批量导入
  * @method string getArea() 获取NAT地域
@@ -65,7 +65,7 @@ class CreateAcRulesRequest extends AbstractModel
     public $Overwrite;
 
     /**
-     * @var string NAT实例ID, Area存在的时候这个必传
+     * @var string NAT实例ID, 参数Area存在的时候这个必传
      */
     public $InstanceId;
 
@@ -85,7 +85,7 @@ class CreateAcRulesRequest extends AbstractModel
      * @param string $EdgeId 边id
      * @param integer $Enable 访问控制规则状态
      * @param integer $Overwrite 0：添加，1：覆盖
-     * @param string $InstanceId NAT实例ID, Area存在的时候这个必传
+     * @param string $InstanceId NAT实例ID, 参数Area存在的时候这个必传
      * @param string $From portScan: 来自于端口扫描, patchImport: 来自于批量导入
      * @param string $Area NAT地域
      */

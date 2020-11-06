@@ -14,31 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cfw\V20190904\Models;
+namespace TencentCloud\Asw\V20200722\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ModifyAllSwitchStatus返回参数结构体
+ * DescribeExecutions返回参数结构体
  *
- * @method integer getStatus() 获取开启或者关闭成功与否状态值
- * @method void setStatus(integer $Status) 设置开启或者关闭成功与否状态值
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class ModifyAllSwitchStatusResponse extends AbstractModel
+class DescribeExecutionsResponse extends AbstractModel
 {
-    /**
-     * @var integer 开启或者关闭成功与否状态值
-     */
-    public $Status;
-
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
-     * @param integer $Status 开启或者关闭成功与否状态值
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,10 +46,6 @@ class ModifyAllSwitchStatusResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
-        }
-
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

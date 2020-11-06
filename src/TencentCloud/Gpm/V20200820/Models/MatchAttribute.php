@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 玩家匹配属性
  *
- * @method string getName() 获取属性名 长度 128
- * @method void setName(string $Name) 设置属性名 长度 128
+ * @method string getName() 获取属性名 长度 128 [a-zA-Z0-9-\.]*
+ * @method void setName(string $Name) 设置属性名 长度 128 [a-zA-Z0-9-\.]*
  * @method integer getType() 获取属性类型: 0 数值; 1 string; 默认 0
  * @method void setType(integer $Type) 设置属性类型: 0 数值; 1 string; 默认 0
  * @method float getNumberValue() 获取数字属性值 默认 0.0
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class MatchAttribute extends AbstractModel
 {
     /**
-     * @var string 属性名 长度 128
+     * @var string 属性名 长度 128 [a-zA-Z0-9-\.]*
      */
     public $Name;
 
@@ -66,7 +66,7 @@ class MatchAttribute extends AbstractModel
     public $MapValue;
 
     /**
-     * @param string $Name 属性名 长度 128
+     * @param string $Name 属性名 长度 128 [a-zA-Z0-9-\.]*
      * @param integer $Type 属性类型: 0 数值; 1 string; 默认 0
      * @param float $NumberValue 数字属性值 默认 0.0
      * @param string $StringValue 字符串属性值 长度 1024 默认 ""

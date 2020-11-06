@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 规则简单信息
  *
- * @method string getRuleName() 获取规则名称
- * @method void setRuleName(string $RuleName) 设置规则名称
+ * @method string getRuleName() 获取规则名称 [a-zA-Z\d-\.]*
+ * @method void setRuleName(string $RuleName) 设置规则名称 [a-zA-Z\d-\.]*
  * @method array getMatchCodeList() 获取关联匹配
  * @method void setMatchCodeList(array $MatchCodeList) 设置关联匹配
  * @method string getCreateTime() 获取创建时间
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class RuleBriefInfo extends AbstractModel
 {
     /**
-     * @var string 规则名称
+     * @var string 规则名称 [a-zA-Z\d-\.]*
      */
     public $RuleName;
 
@@ -52,7 +52,7 @@ class RuleBriefInfo extends AbstractModel
     public $RuleCode;
 
     /**
-     * @param string $RuleName 规则名称
+     * @param string $RuleName 规则名称 [a-zA-Z\d-\.]*
      * @param array $MatchCodeList 关联匹配
      * @param string $CreateTime 创建时间
      * @param string $RuleCode 规则code

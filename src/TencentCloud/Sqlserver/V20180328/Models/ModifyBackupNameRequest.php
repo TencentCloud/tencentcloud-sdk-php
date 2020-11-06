@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取实例ID，格式如：mssql-3l3fgqn7
  * @method void setInstanceId(string $InstanceId) 设置实例ID，格式如：mssql-3l3fgqn7
- * @method integer getBackupId() 获取要修改名称的备份ID，可通过DescribeBackups 接口获取。
- * @method void setBackupId(integer $BackupId) 设置要修改名称的备份ID，可通过DescribeBackups 接口获取。
+ * @method integer getBackupId() 获取要修改名称的备份ID，可通过 [DescribeBackups](https://cloud.tencent.com/document/product/238/19943)  接口获取。
+ * @method void setBackupId(integer $BackupId) 设置要修改名称的备份ID，可通过 [DescribeBackups](https://cloud.tencent.com/document/product/238/19943)  接口获取。
  * @method string getBackupName() 获取修改的备份名称
  * @method void setBackupName(string $BackupName) 设置修改的备份名称
  */
@@ -35,7 +35,7 @@ class ModifyBackupNameRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var integer 要修改名称的备份ID，可通过DescribeBackups 接口获取。
+     * @var integer 要修改名称的备份ID，可通过 [DescribeBackups](https://cloud.tencent.com/document/product/238/19943)  接口获取。
      */
     public $BackupId;
 
@@ -46,7 +46,7 @@ class ModifyBackupNameRequest extends AbstractModel
 
     /**
      * @param string $InstanceId 实例ID，格式如：mssql-3l3fgqn7
-     * @param integer $BackupId 要修改名称的备份ID，可通过DescribeBackups 接口获取。
+     * @param integer $BackupId 要修改名称的备份ID，可通过 [DescribeBackups](https://cloud.tencent.com/document/product/238/19943)  接口获取。
      * @param string $BackupName 修改的备份名称
      */
     function __construct()

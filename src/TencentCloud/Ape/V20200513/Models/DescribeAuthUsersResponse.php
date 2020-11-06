@@ -14,33 +14,40 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cfw\V20190904\Models;
+namespace TencentCloud\Ape\V20200513\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateAcRules返回参数结构体
+ * DescribeAuthUsers返回参数结构体
  *
- * @method integer getStatus() 获取状态值，0:操作成功
- * @method void setStatus(integer $Status) 设置状态值，0:操作成功
- * @method string getInfo() 获取返回多余的信息
+ * @method array getUsers() 获取授权人信息数组
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInfo(string $Info) 设置返回多余的信息
+ * @method void setUsers(array $Users) 设置授权人信息数组
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTotalCount() 获取总记录数
+ * @method void setTotalCount(integer $TotalCount) 设置总记录数
+ * @method boolean getOldUser() 获取是否是老策略用户
+ * @method void setOldUser(boolean $OldUser) 设置是否是老策略用户
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class CreateAcRulesResponse extends AbstractModel
+class DescribeAuthUsersResponse extends AbstractModel
 {
     /**
-     * @var integer 状态值，0:操作成功
-     */
-    public $Status;
-
-    /**
-     * @var string 返回多余的信息
+     * @var array 授权人信息数组
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Info;
+    public $Users;
+
+    /**
+     * @var integer 总记录数
+     */
+    public $TotalCount;
+
+    /**
+     * @var boolean 是否是老策略用户
+     */
+    public $OldUser;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -48,9 +55,10 @@ class CreateAcRulesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Status 状态值，0:操作成功
-     * @param string $Info 返回多余的信息
+     * @param array $Users 授权人信息数组
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $TotalCount 总记录数
+     * @param boolean $OldUser 是否是老策略用户
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -66,12 +74,21 @@ class CreateAcRulesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists("Users",$param) and $param["Users"] !== null) {
+            $this->Users = [];
+            foreach ($param["Users"] as $key => $value){
+                $obj = new AuthInfo();
+                $obj->deserialize($value);
+                array_push($this->Users, $obj);
+            }
         }
 
-        if (array_key_exists("Info",$param) and $param["Info"] !== null) {
-            $this->Info = $param["Info"];
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("OldUser",$param) and $param["OldUser"] !== null) {
+            $this->OldUser = $param["OldUser"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

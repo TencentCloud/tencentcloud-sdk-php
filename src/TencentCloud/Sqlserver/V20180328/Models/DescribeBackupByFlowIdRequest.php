@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取实例ID，格式如：mssql-3l3fgqn7
  * @method void setInstanceId(string $InstanceId) 设置实例ID，格式如：mssql-3l3fgqn7
- * @method string getFlowId() 获取创建备份流程ID
- * @method void setFlowId(string $FlowId) 设置创建备份流程ID
+ * @method string getFlowId() 获取创建备份流程ID，可通过 [CreateBackup](https://cloud.tencent.com/document/product/238/19946) 接口获取
+ * @method void setFlowId(string $FlowId) 设置创建备份流程ID，可通过 [CreateBackup](https://cloud.tencent.com/document/product/238/19946) 接口获取
  */
 class DescribeBackupByFlowIdRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class DescribeBackupByFlowIdRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string 创建备份流程ID
+     * @var string 创建备份流程ID，可通过 [CreateBackup](https://cloud.tencent.com/document/product/238/19946) 接口获取
      */
     public $FlowId;
 
     /**
      * @param string $InstanceId 实例ID，格式如：mssql-3l3fgqn7
-     * @param string $FlowId 创建备份流程ID
+     * @param string $FlowId 创建备份流程ID，可通过 [CreateBackup](https://cloud.tencent.com/document/product/238/19946) 接口获取
      */
     function __construct()
     {

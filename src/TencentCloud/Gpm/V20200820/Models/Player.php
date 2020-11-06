@@ -20,14 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 玩家信息。
  *
- * @method string getId() 获取玩家 PlayerId 长度 128
- * @method void setId(string $Id) 设置玩家 PlayerId 长度 128
+ * @method string getId() 获取玩家 PlayerId 长度 128 [a-zA-Z\d-\._]*
+ * @method void setId(string $Id) 设置玩家 PlayerId 长度 128 [a-zA-Z\d-\._]*
  * @method string getName() 获取玩家昵称，长度 128
  * @method void setName(string $Name) 设置玩家昵称，长度 128
  * @method array getMatchAttributes() 获取玩家匹配属性，最多 10 条
  * @method void setMatchAttributes(array $MatchAttributes) 设置玩家匹配属性，最多 10 条
- * @method string getTeam() 获取队伍名，可以传递不同队伍名，长度 128
- * @method void setTeam(string $Team) 设置队伍名，可以传递不同队伍名，长度 128
+ * @method string getTeam() 获取队伍名，可以传递不同队伍名，长度 128 [a-zA-Z0-9-\.]*
+ * @method void setTeam(string $Team) 设置队伍名，可以传递不同队伍名，长度 128 [a-zA-Z0-9-\.]*
  * @method integer getCustomPlayerStatus() 获取自定义玩家状态 透传参数 [0, 99999]
  * @method void setCustomPlayerStatus(integer $CustomPlayerStatus) 设置自定义玩家状态 透传参数 [0, 99999]
  * @method string getCustomProfile() 获取自定义玩家信息 透传参数 长度 1024
@@ -38,7 +38,7 @@ use TencentCloud\Common\AbstractModel;
 class Player extends AbstractModel
 {
     /**
-     * @var string 玩家 PlayerId 长度 128
+     * @var string 玩家 PlayerId 长度 128 [a-zA-Z\d-\._]*
      */
     public $Id;
 
@@ -53,7 +53,7 @@ class Player extends AbstractModel
     public $MatchAttributes;
 
     /**
-     * @var string 队伍名，可以传递不同队伍名，长度 128
+     * @var string 队伍名，可以传递不同队伍名，长度 128 [a-zA-Z0-9-\.]*
      */
     public $Team;
 
@@ -73,10 +73,10 @@ class Player extends AbstractModel
     public $RegionLatencies;
 
     /**
-     * @param string $Id 玩家 PlayerId 长度 128
+     * @param string $Id 玩家 PlayerId 长度 128 [a-zA-Z\d-\._]*
      * @param string $Name 玩家昵称，长度 128
      * @param array $MatchAttributes 玩家匹配属性，最多 10 条
-     * @param string $Team 队伍名，可以传递不同队伍名，长度 128
+     * @param string $Team 队伍名，可以传递不同队伍名，长度 128 [a-zA-Z0-9-\.]*
      * @param integer $CustomPlayerStatus 自定义玩家状态 透传参数 [0, 99999]
      * @param string $CustomProfile 自定义玩家信息 透传参数 长度 1024
      * @param array $RegionLatencies 各区域延迟，最多 20 条

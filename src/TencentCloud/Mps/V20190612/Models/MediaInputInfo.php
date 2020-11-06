@@ -20,23 +20,19 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 视频处理的输入对象信息。
  *
- * @method string getType() 获取输入来源对象的类型，目前仅支持 COS。
- * @method void setType(string $Type) 设置输入来源对象的类型，目前仅支持 COS。
+ * @method string getType() 获取输入来源对象的类型，支持 COS 和 URL 两种。
+ * @method void setType(string $Type) 设置输入来源对象的类型，支持 COS 和 URL 两种。
  * @method CosInputInfo getCosInputInfo() 获取当 Type 为 COS 时有效，则该项为必填，表示视频处理 COS 对象信息。
  * @method void setCosInputInfo(CosInputInfo $CosInputInfo) 设置当 Type 为 COS 时有效，则该项为必填，表示视频处理 COS 对象信息。
  * @method UrlInputInfo getUrlInputInfo() 获取当 Type 为 URL 时有效，则该项为必填，表示视频处理 URL 对象信息。
-
-目前尚不支持 URL 输入，该能力将于近期支持。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUrlInputInfo(UrlInputInfo $UrlInputInfo) 设置当 Type 为 URL 时有效，则该项为必填，表示视频处理 URL 对象信息。
-
-目前尚不支持 URL 输入，该能力将于近期支持。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class MediaInputInfo extends AbstractModel
 {
     /**
-     * @var string 输入来源对象的类型，目前仅支持 COS。
+     * @var string 输入来源对象的类型，支持 COS 和 URL 两种。
      */
     public $Type;
 
@@ -47,18 +43,14 @@ class MediaInputInfo extends AbstractModel
 
     /**
      * @var UrlInputInfo 当 Type 为 URL 时有效，则该项为必填，表示视频处理 URL 对象信息。
-
-目前尚不支持 URL 输入，该能力将于近期支持。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UrlInputInfo;
 
     /**
-     * @param string $Type 输入来源对象的类型，目前仅支持 COS。
+     * @param string $Type 输入来源对象的类型，支持 COS 和 URL 两种。
      * @param CosInputInfo $CosInputInfo 当 Type 为 COS 时有效，则该项为必填，表示视频处理 COS 对象信息。
      * @param UrlInputInfo $UrlInputInfo 当 Type 为 URL 时有效，则该项为必填，表示视频处理 URL 对象信息。
-
-目前尚不支持 URL 输入，该能力将于近期支持。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

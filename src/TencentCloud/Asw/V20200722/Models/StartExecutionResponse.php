@@ -14,23 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cfw\V20190904\Models;
+namespace TencentCloud\Asw\V20200722\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ModifyAllSwitchStatus返回参数结构体
+ * StartExecution返回参数结构体
  *
- * @method integer getStatus() 获取开启或者关闭成功与否状态值
- * @method void setStatus(integer $Status) 设置开启或者关闭成功与否状态值
+ * @method string getExecutionResourceName() 获取执行资源名
+ * @method void setExecutionResourceName(string $ExecutionResourceName) 设置执行资源名
+ * @method string getStartDate() 获取执行开始时间
+ * @method void setStartDate(string $StartDate) 设置执行开始时间
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class ModifyAllSwitchStatusResponse extends AbstractModel
+class StartExecutionResponse extends AbstractModel
 {
     /**
-     * @var integer 开启或者关闭成功与否状态值
+     * @var string 执行资源名
      */
-    public $Status;
+    public $ExecutionResourceName;
+
+    /**
+     * @var string 执行开始时间
+     */
+    public $StartDate;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +45,8 @@ class ModifyAllSwitchStatusResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Status 开启或者关闭成功与否状态值
+     * @param string $ExecutionResourceName 执行资源名
+     * @param string $StartDate 执行开始时间
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,8 +62,12 @@ class ModifyAllSwitchStatusResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists("ExecutionResourceName",$param) and $param["ExecutionResourceName"] !== null) {
+            $this->ExecutionResourceName = $param["ExecutionResourceName"];
+        }
+
+        if (array_key_exists("StartDate",$param) and $param["StartDate"] !== null) {
+            $this->StartDate = $param["StartDate"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

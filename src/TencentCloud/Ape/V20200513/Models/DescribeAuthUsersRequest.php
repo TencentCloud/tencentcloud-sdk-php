@@ -14,32 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Gpm\V20200820\Models;
+namespace TencentCloud\Ape\V20200513\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 玩家属性字典类型值
+ * DescribeAuthUsers请求参数结构体
  *
- * @method string getKey() 获取属性字典 key [a-zA-Z0-9-\.]*
- * @method void setKey(string $Key) 设置属性字典 key [a-zA-Z0-9-\.]*
- * @method integer getValue() 获取属性字典 value
- * @method void setValue(integer $Value) 设置属性字典 value
+ * @method integer getLimit() 获取分页大小
+ * @method void setLimit(integer $Limit) 设置分页大小
+ * @method integer getOffset() 获取页偏移量
+ * @method void setOffset(integer $Offset) 设置页偏移量
  */
-class AttributeMap extends AbstractModel
+class DescribeAuthUsersRequest extends AbstractModel
 {
     /**
-     * @var string 属性字典 key [a-zA-Z0-9-\.]*
+     * @var integer 分页大小
      */
-    public $Key;
+    public $Limit;
 
     /**
-     * @var integer 属性字典 value
+     * @var integer 页偏移量
      */
-    public $Value;
+    public $Offset;
 
     /**
-     * @param string $Key 属性字典 key [a-zA-Z0-9-\.]*
-     * @param integer $Value 属性字典 value
+     * @param integer $Limit 分页大小
+     * @param integer $Offset 页偏移量
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class AttributeMap extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Key",$param) and $param["Key"] !== null) {
-            $this->Key = $param["Key"];
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
         }
 
-        if (array_key_exists("Value",$param) and $param["Value"] !== null) {
-            $this->Value = $param["Value"];
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
         }
     }
 }

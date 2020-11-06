@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getDirection() 获取方向，0：出站，1：入站
  * @method void setDirection(integer $Direction) 设置方向，0：出站，1：入站
- * @method string getEdgeId() 获取边ID
- * @method void setEdgeId(string $EdgeId) 设置边ID
+ * @method string getEdgeId() 获取VPC间防火墙开关ID
+ * @method void setEdgeId(string $EdgeId) 设置VPC间防火墙开关ID
  * @method string getArea() 获取nat地域
  * @method void setArea(string $Area) 设置nat地域
  */
@@ -35,7 +35,7 @@ class DeleteAllAccessControlRuleRequest extends AbstractModel
     public $Direction;
 
     /**
-     * @var string 边ID
+     * @var string VPC间防火墙开关ID
      */
     public $EdgeId;
 
@@ -46,7 +46,7 @@ class DeleteAllAccessControlRuleRequest extends AbstractModel
 
     /**
      * @param integer $Direction 方向，0：出站，1：入站
-     * @param string $EdgeId 边ID
+     * @param string $EdgeId VPC间防火墙开关ID
      * @param string $Area nat地域
      */
     function __construct()

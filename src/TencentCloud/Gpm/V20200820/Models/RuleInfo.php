@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 规则信息
  *
- * @method string getRuleName() 获取规则名称
- * @method void setRuleName(string $RuleName) 设置规则名称
+ * @method string getRuleName() 获取规则名称 [a-zA-Z0-9-\.]*
+ * @method void setRuleName(string $RuleName) 设置规则名称 [a-zA-Z0-9-\.]*
  * @method string getCreateTime() 获取创建时间
  * @method void setCreateTime(string $CreateTime) 设置创建时间
  * @method string getRuleDesc() 获取规则描述
@@ -60,7 +60,7 @@ use TencentCloud\Common\AbstractModel;
 class RuleInfo extends AbstractModel
 {
     /**
-     * @var string 规则名称
+     * @var string 规则名称 [a-zA-Z0-9-\.]*
      */
     public $RuleName;
 
@@ -122,7 +122,7 @@ class RuleInfo extends AbstractModel
     public $CreateUin;
 
     /**
-     * @param string $RuleName 规则名称
+     * @param string $RuleName 规则名称 [a-zA-Z0-9-\.]*
      * @param string $CreateTime 创建时间
      * @param string $RuleDesc 规则描述
 注意：此字段可能返回 null，表示取不到有效值。

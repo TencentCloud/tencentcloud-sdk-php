@@ -39,6 +39,7 @@ use TencentCloud\Gse\V20191112\Models as Models;
     3. 使用 COS API 进行上传([参考文档](https://cloud.tencent.com/document/product/436/7742))
 
 具体使用场景可以参考 [GetUploadCredentials](https://cloud.tencent.com/document/product/1165/48727) ,  [GetUploadFederationToken](https://cloud.tencent.com/document/product/1165/48742)和下面 CreateAsset 示例。  
+ * @method Models\CreateAssetWithImageResponse CreateAssetWithImage(Models\CreateAssetWithImageRequest $req) 本接口（CreateAssetWithImage）用于创建生成包镜像信息。
  * @method Models\CreateFleetResponse CreateFleet(Models\CreateFleetRequest $req) 本接口（CreateFleet）用于创建服务器舰队。
  * @method Models\CreateGameServerSessionResponse CreateGameServerSession(Models\CreateGameServerSessionRequest $req) 本接口（CreateGameServerSession）用于创建游戏服务会话。
  * @method Models\CreateGameServerSessionQueueResponse CreateGameServerSessionQueue(Models\CreateGameServerSessionQueueRequest $req) 本接口（CreateGameServerSessionQueue）用于创建游戏服务器会话队列。

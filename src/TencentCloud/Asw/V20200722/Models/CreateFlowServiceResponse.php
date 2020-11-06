@@ -14,23 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cfw\V20190904\Models;
+namespace TencentCloud\Asw\V20200722\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ModifyAllSwitchStatus返回参数结构体
+ * CreateFlowService返回参数结构体
  *
- * @method integer getStatus() 获取开启或者关闭成功与否状态值
- * @method void setStatus(integer $Status) 设置开启或者关闭成功与否状态值
+ * @method string getFlowServiceResource() 获取状态机所属服务资源
+ * @method void setFlowServiceResource(string $FlowServiceResource) 设置状态机所属服务资源
+ * @method string getCreateDate() 获取生成日期
+ * @method void setCreateDate(string $CreateDate) 设置生成日期
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class ModifyAllSwitchStatusResponse extends AbstractModel
+class CreateFlowServiceResponse extends AbstractModel
 {
     /**
-     * @var integer 开启或者关闭成功与否状态值
+     * @var string 状态机所属服务资源
      */
-    public $Status;
+    public $FlowServiceResource;
+
+    /**
+     * @var string 生成日期
+     */
+    public $CreateDate;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +45,8 @@ class ModifyAllSwitchStatusResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Status 开启或者关闭成功与否状态值
+     * @param string $FlowServiceResource 状态机所属服务资源
+     * @param string $CreateDate 生成日期
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,8 +62,12 @@ class ModifyAllSwitchStatusResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists("FlowServiceResource",$param) and $param["FlowServiceResource"] !== null) {
+            $this->FlowServiceResource = $param["FlowServiceResource"];
+        }
+
+        if (array_key_exists("CreateDate",$param) and $param["CreateDate"] !== null) {
+            $this->CreateDate = $param["CreateDate"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

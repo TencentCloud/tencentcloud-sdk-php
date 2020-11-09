@@ -20,8 +20,32 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateStorageService请求参数结构体
  *
- * @method string getPkgId() 获取云存套餐ID
- * @method void setPkgId(string $PkgId) 设置云存套餐ID
+ * @method string getPkgId() 获取云存套餐ID：
+yc1m3d ： 全时3天存储月套餐。
+yc1m7d ： 全时7天存储月套餐。
+yc1m30d ：全时30天存储月套餐。
+yc1y3d ：全时3天存储年套餐。
+yc1y7d ：全时7天存储年套餐。
+yc1y30d ：全时30天存储年套餐。
+ye1m3d ：事件3天存储月套餐。
+ye1m7d ：事件7天存储月套餐。
+ye1m30d ：事件30天存储月套餐 。
+ye1y3d ：事件3天存储年套餐。
+ye1y7d ：事件7天存储年套餐。
+ye1y30d ：事件30天存储年套餐。
+ * @method void setPkgId(string $PkgId) 设置云存套餐ID：
+yc1m3d ： 全时3天存储月套餐。
+yc1m7d ： 全时7天存储月套餐。
+yc1m30d ：全时30天存储月套餐。
+yc1y3d ：全时3天存储年套餐。
+yc1y7d ：全时7天存储年套餐。
+yc1y30d ：全时30天存储年套餐。
+ye1m3d ：事件3天存储月套餐。
+ye1m7d ：事件7天存储月套餐。
+ye1m30d ：事件30天存储月套餐 。
+ye1y3d ：事件3天存储年套餐。
+ye1y7d ：事件7天存储年套餐。
+ye1y30d ：事件30天存储年套餐。
  * @method string getTid() 获取设备TID
  * @method void setTid(string $Tid) 设置设备TID
  * @method integer getOrderCount() 获取订单数量,可一次性创建多个订单
@@ -38,7 +62,19 @@ use TencentCloud\Common\AbstractModel;
 class CreateStorageServiceRequest extends AbstractModel
 {
     /**
-     * @var string 云存套餐ID
+     * @var string 云存套餐ID：
+yc1m3d ： 全时3天存储月套餐。
+yc1m7d ： 全时7天存储月套餐。
+yc1m30d ：全时30天存储月套餐。
+yc1y3d ：全时3天存储年套餐。
+yc1y7d ：全时7天存储年套餐。
+yc1y30d ：全时30天存储年套餐。
+ye1m3d ：事件3天存储月套餐。
+ye1m7d ：事件7天存储月套餐。
+ye1m30d ：事件30天存储月套餐 。
+ye1y3d ：事件3天存储年套餐。
+ye1y7d ：事件7天存储年套餐。
+ye1y30d ：事件30天存储年套餐。
      */
     public $PkgId;
 
@@ -73,7 +109,19 @@ class CreateStorageServiceRequest extends AbstractModel
     public $EnableTime;
 
     /**
-     * @param string $PkgId 云存套餐ID
+     * @param string $PkgId 云存套餐ID：
+yc1m3d ： 全时3天存储月套餐。
+yc1m7d ： 全时7天存储月套餐。
+yc1m30d ：全时30天存储月套餐。
+yc1y3d ：全时3天存储年套餐。
+yc1y7d ：全时7天存储年套餐。
+yc1y30d ：全时30天存储年套餐。
+ye1m3d ：事件3天存储月套餐。
+ye1m7d ：事件7天存储月套餐。
+ye1m30d ：事件30天存储月套餐 。
+ye1y3d ：事件3天存储年套餐。
+ye1y7d ：事件7天存储年套餐。
+ye1y30d ：事件30天存储年套餐。
      * @param string $Tid 设备TID
      * @param integer $OrderCount 订单数量,可一次性创建多个订单
      * @param string $StorageRegion 云存服务所在的区域,如ap-guangzhou,ap-singapore

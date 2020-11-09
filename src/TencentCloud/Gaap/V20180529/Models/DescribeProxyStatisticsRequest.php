@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) 设置起始时间(2019-03-25 12:00:00)
  * @method string getEndTime() 获取结束时间(2019-03-25 12:00:00)
  * @method void setEndTime(string $EndTime) 设置结束时间(2019-03-25 12:00:00)
- * @method array getMetricNames() 获取统计指标名称列表，支持: 入带宽:InBandwidth, 出带宽:OutBandwidth, 并发:Concurrent, 入包量:InPackets, 出包量:OutPackets, 丢包率:PacketLoss, 延迟:Latency
- * @method void setMetricNames(array $MetricNames) 设置统计指标名称列表，支持: 入带宽:InBandwidth, 出带宽:OutBandwidth, 并发:Concurrent, 入包量:InPackets, 出包量:OutPackets, 丢包率:PacketLoss, 延迟:Latency
+ * @method array getMetricNames() 获取统计指标名称列表，支持: 入带宽:InBandwidth, 出带宽:OutBandwidth, 并发:Concurrent, 入包量:InPackets, 出包量:OutPackets, 丢包率:PacketLoss, 延迟:Latency，http请求量：HttpQPS, Https请求量：HttpsQPS
+ * @method void setMetricNames(array $MetricNames) 设置统计指标名称列表，支持: 入带宽:InBandwidth, 出带宽:OutBandwidth, 并发:Concurrent, 入包量:InPackets, 出包量:OutPackets, 丢包率:PacketLoss, 延迟:Latency，http请求量：HttpQPS, Https请求量：HttpsQPS
  * @method integer getGranularity() 获取监控粒度，目前支持60，300，3600，86400，单位：秒。
 当时间范围不超过3天，支持最小粒度60秒；
 当时间范围不超过7天，支持最小粒度300秒；
@@ -55,7 +55,7 @@ class DescribeProxyStatisticsRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var array 统计指标名称列表，支持: 入带宽:InBandwidth, 出带宽:OutBandwidth, 并发:Concurrent, 入包量:InPackets, 出包量:OutPackets, 丢包率:PacketLoss, 延迟:Latency
+     * @var array 统计指标名称列表，支持: 入带宽:InBandwidth, 出带宽:OutBandwidth, 并发:Concurrent, 入包量:InPackets, 出包量:OutPackets, 丢包率:PacketLoss, 延迟:Latency，http请求量：HttpQPS, Https请求量：HttpsQPS
      */
     public $MetricNames;
 
@@ -71,7 +71,7 @@ class DescribeProxyStatisticsRequest extends AbstractModel
      * @param string $ProxyId 通道ID
      * @param string $StartTime 起始时间(2019-03-25 12:00:00)
      * @param string $EndTime 结束时间(2019-03-25 12:00:00)
-     * @param array $MetricNames 统计指标名称列表，支持: 入带宽:InBandwidth, 出带宽:OutBandwidth, 并发:Concurrent, 入包量:InPackets, 出包量:OutPackets, 丢包率:PacketLoss, 延迟:Latency
+     * @param array $MetricNames 统计指标名称列表，支持: 入带宽:InBandwidth, 出带宽:OutBandwidth, 并发:Concurrent, 入包量:InPackets, 出包量:OutPackets, 丢包率:PacketLoss, 延迟:Latency，http请求量：HttpQPS, Https请求量：HttpsQPS
      * @param integer $Granularity 监控粒度，目前支持60，300，3600，86400，单位：秒。
 当时间范围不超过3天，支持最小粒度60秒；
 当时间范围不超过7天，支持最小粒度300秒；

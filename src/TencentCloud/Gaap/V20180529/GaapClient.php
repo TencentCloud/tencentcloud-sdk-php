@@ -76,7 +76,7 @@ use TencentCloud\Gaap\V20180529\Models as Models;
  * @method Models\DescribeProxyGroupStatisticsResponse DescribeProxyGroupStatistics(Models\DescribeProxyGroupStatisticsRequest $req) 该接口用于查询监听器统计数据，包括出入带宽，出入包量，并发数据。支持300, 3600和86400的细粒度，取值为细粒度范围内最大值。
  * @method Models\DescribeProxyStatisticsResponse DescribeProxyStatistics(Models\DescribeProxyStatisticsRequest $req) 该接口用于查询监听器统计数据，包括出入带宽，出入包量，并发，丢包和时延数据。支持300, 3600和86400的细粒度，取值为细粒度范围内最大值。
  * @method Models\DescribeRealServerStatisticsResponse DescribeRealServerStatistics(Models\DescribeRealServerStatisticsRequest $req) 该接口（DescribeRealServerStatistics）用于查询源站健康检查结果的统计数据。源站状态展示位为1：正常或者0：异常。查询的源站需要在监听器或者规则上进行了绑定，查询时需指定绑定的监听器或者规则ID。该接口支持1分钟细粒度的源站状态统计数据展示。
- * @method Models\DescribeRealServersResponse DescribeRealServers(Models\DescribeRealServersRequest $req) 本接口（DescribeRealServers）用于查询源站信息，可以根据项目名查询所有的源站信息，此外支持指定IP机或者域名的源站模糊查询。
+ * @method Models\DescribeRealServersResponse DescribeRealServers(Models\DescribeRealServersRequest $req) 本接口（DescribeRealServers）用于查询源站信息，可以根据项目名查询所有的源站信息，此外支持指定IP或者域名的源站模糊查询。
  * @method Models\DescribeRealServersStatusResponse DescribeRealServersStatus(Models\DescribeRealServersStatusRequest $req) 本接口（DescribeRealServersStatus）用于查询源站是否已被规则或者监听器绑定
  * @method Models\DescribeRegionAndPriceResponse DescribeRegionAndPrice(Models\DescribeRegionAndPriceRequest $req) 该接口（DescribeRegionAndPrice）用于获取源站区域和带宽梯度价格
  * @method Models\DescribeResourcesByTagResponse DescribeResourcesByTag(Models\DescribeResourcesByTagRequest $req) 本接口（DescribeResourcesByTag）用于根据标签来查询对应的资源信息，包括通道，通道组和源站。
@@ -90,7 +90,7 @@ use TencentCloud\Gaap\V20180529\Models as Models;
  * @method Models\DestroyProxiesResponse DestroyProxies(Models\DestroyProxiesRequest $req) 本接口（DestroyProxies）用于销毁。通道销毁后，不再产生任何费用。
  * @method Models\InquiryPriceCreateProxyResponse InquiryPriceCreateProxy(Models\InquiryPriceCreateProxyRequest $req) 本接口（InquiryPriceCreateProxy）用于创建加速通道询价。
  * @method Models\ModifyCertificateResponse ModifyCertificate(Models\ModifyCertificateRequest $req) 本接口（ModifyCertificate）用于修改监听器下的域名对应的证书。该接口仅适用于version3.0的通道。
- * @method Models\ModifyCertificateAttributesResponse ModifyCertificateAttributes(Models\ModifyCertificateAttributesRequest $req) 本接口（ModifyCertificateAttributes）用于修改证书，包括证明名字以及证书内容。
+ * @method Models\ModifyCertificateAttributesResponse ModifyCertificateAttributes(Models\ModifyCertificateAttributesRequest $req) 本接口（ModifyCertificateAttributes）用于修改证书，包括证书名字以及证书内容。
  * @method Models\ModifyDomainResponse ModifyDomain(Models\ModifyDomainRequest $req) 本接口（ModifyDomain）用于监听器下的域名。当通道版本为3.0时，支持对该域名所对应的证书修改。
  * @method Models\ModifyGroupDomainConfigResponse ModifyGroupDomainConfig(Models\ModifyGroupDomainConfigRequest $req) 本接口（ModifyGroupDomainConfig）用于配置通道组就近接入域名。
  * @method Models\ModifyHTTPListenerAttributeResponse ModifyHTTPListenerAttribute(Models\ModifyHTTPListenerAttributeRequest $req) 该接口（ModifyHTTPListenerAttribute）用于修改通道的HTTP监听器配置信息，目前仅支持修改监听器的名称。

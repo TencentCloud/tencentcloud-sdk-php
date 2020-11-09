@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMd5(string $Md5) 设置文件md5校验码（32字符）
  * @method string getOperator() 获取操作人
  * @method void setOperator(string $Operator) 设置操作人
+ * @method string getRemark() 获取备注信息
+ * @method void setRemark(string $Remark) 设置备注信息
+ * @method Contents getContents() 获取版本发布的描述信息，需要国际化，可以为空
+ * @method void setContents(Contents $Contents) 设置版本发布的描述信息，需要国际化，可以为空
  */
 class UploadOtaVersionRequest extends AbstractModel
 {
@@ -66,12 +70,24 @@ class UploadOtaVersionRequest extends AbstractModel
     public $Operator;
 
     /**
+     * @var string 备注信息
+     */
+    public $Remark;
+
+    /**
+     * @var Contents 版本发布的描述信息，需要国际化，可以为空
+     */
+    public $Contents;
+
+    /**
      * @param string $ProductId 产品ID
      * @param string $OtaVersion 固件版本号，格式为x.y.z， x，y 范围0-63，z范围1~524288
      * @param string $VersionUrl 固件版本URL
      * @param integer $FileSize 文件大小，单位：byte
      * @param string $Md5 文件md5校验码（32字符）
      * @param string $Operator 操作人
+     * @param string $Remark 备注信息
+     * @param Contents $Contents 版本发布的描述信息，需要国际化，可以为空
      */
     function __construct()
     {
@@ -108,6 +124,15 @@ class UploadOtaVersionRequest extends AbstractModel
 
         if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
             $this->Operator = $param["Operator"];
+        }
+
+        if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
+            $this->Remark = $param["Remark"];
+        }
+
+        if (array_key_exists("Contents",$param) and $param["Contents"] !== null) {
+            $this->Contents = new Contents();
+            $this->Contents->deserialize($param["Contents"]);
         }
     }
 }

@@ -41,6 +41,7 @@ use TencentCloud\Asr\V20190614\Models as Models;
 <br>• 支持回调或轮询的方式获取结果，结果获取请参考[ 录音文件识别结果查询](https://cloud.tencent.com/document/product/1093/37822)。
 <br>•   请求方法为 HTTP POST , Content-Type为"application/json; charset=utf-8"
 <br>•   签名方法参考 [公共参数](https://cloud.tencent.com/document/api/1093/35640) 中签名方法v3。
+<br>• 默认接口请求频率限制：20次/秒，如您有提高请求频率限制的需求，请提[工单](https://console.cloud.tencent.com/workorder/category)进行咨询。
  * @method Models\DeleteAsrVocabResponse DeleteAsrVocab(Models\DeleteAsrVocabRequest $req) 用户通过本接口进行热词表的删除。
  * @method Models\DeleteCustomizationResponse DeleteCustomization(Models\DeleteCustomizationRequest $req) 用户通过该接口可以删除自学习模型
  * @method Models\DescribeTaskStatusResponse DescribeTaskStatus(Models\DescribeTaskStatusRequest $req) 在调用录音文件识别请求接口后，有回调和轮询两种方式获取识别结果。

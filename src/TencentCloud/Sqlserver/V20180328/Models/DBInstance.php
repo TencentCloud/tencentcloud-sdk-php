@@ -60,8 +60,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVersionName(string $VersionName) 设置实例版本
  * @method integer getRenewFlag() 获取实例续费标记，0-正常续费，1-自动续费，2-到期不续费
  * @method void setRenewFlag(integer $RenewFlag) 设置实例续费标记，0-正常续费，1-自动续费，2-到期不续费
- * @method integer getModel() 获取实例高可用， 1-双机高可用，2-单机
- * @method void setModel(integer $Model) 设置实例高可用， 1-双机高可用，2-单机
+ * @method integer getModel() 获取实例高可用， 1-双机高可用，2-单机，3-跨可用区，4-集群跨可用区，5-集群，9-自研机房
+ * @method void setModel(integer $Model) 设置实例高可用， 1-双机高可用，2-单机，3-跨可用区，4-集群跨可用区，5-集群，9-自研机房
  * @method string getRegion() 获取实例所在地域名称，如 ap-guangzhou
  * @method void setRegion(string $Region) 设置实例所在地域名称，如 ap-guangzhou
  * @method string getZone() 获取实例所在可用区名称，如 ap-guangzhou-1
@@ -204,7 +204,7 @@ class DBInstance extends AbstractModel
     public $RenewFlag;
 
     /**
-     * @var integer 实例高可用， 1-双机高可用，2-单机
+     * @var integer 实例高可用， 1-双机高可用，2-单机，3-跨可用区，4-集群跨可用区，5-集群，9-自研机房
      */
     public $Model;
 
@@ -308,7 +308,7 @@ class DBInstance extends AbstractModel
      * @param integer $Storage 实例存储空间大小，单位G
      * @param string $VersionName 实例版本
      * @param integer $RenewFlag 实例续费标记，0-正常续费，1-自动续费，2-到期不续费
-     * @param integer $Model 实例高可用， 1-双机高可用，2-单机
+     * @param integer $Model 实例高可用， 1-双机高可用，2-单机，3-跨可用区，4-集群跨可用区，5-集群，9-自研机房
      * @param string $Region 实例所在地域名称，如 ap-guangzhou
      * @param string $Zone 实例所在可用区名称，如 ap-guangzhou-1
      * @param string $BackupTime 备份时间点

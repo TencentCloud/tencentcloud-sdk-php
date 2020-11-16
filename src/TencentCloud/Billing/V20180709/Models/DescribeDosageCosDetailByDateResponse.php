@@ -14,37 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ccc\V20200210\Models;
+namespace TencentCloud\Billing\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateSDKLoginToken返回参数结构体
+ * DescribeDosageCosDetailByDate返回参数结构体
  *
- * @method string getToken() 获取SDK 登录 Token。
- * @method void setToken(string $Token) 设置SDK 登录 Token。
- * @method integer getExpiredTime() 获取过期时间戳，Unix 时间戳。
- * @method void setExpiredTime(integer $ExpiredTime) 设置过期时间戳，Unix 时间戳。
- * @method string getSdkURL() 获取SDK 加载路径会随着 SDK 的发布而变动。
- * @method void setSdkURL(string $SdkURL) 设置SDK 加载路径会随着 SDK 的发布而变动。
+ * @method array getDetailSets() 获取用量数组
+ * @method void setDetailSets(array $DetailSets) 设置用量数组
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class CreateSDKLoginTokenResponse extends AbstractModel
+class DescribeDosageCosDetailByDateResponse extends AbstractModel
 {
     /**
-     * @var string SDK 登录 Token。
+     * @var array 用量数组
      */
-    public $Token;
-
-    /**
-     * @var integer 过期时间戳，Unix 时间戳。
-     */
-    public $ExpiredTime;
-
-    /**
-     * @var string SDK 加载路径会随着 SDK 的发布而变动。
-     */
-    public $SdkURL;
+    public $DetailSets;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -52,9 +38,7 @@ class CreateSDKLoginTokenResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Token SDK 登录 Token。
-     * @param integer $ExpiredTime 过期时间戳，Unix 时间戳。
-     * @param string $SdkURL SDK 加载路径会随着 SDK 的发布而变动。
+     * @param array $DetailSets 用量数组
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -70,16 +54,13 @@ class CreateSDKLoginTokenResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Token",$param) and $param["Token"] !== null) {
-            $this->Token = $param["Token"];
-        }
-
-        if (array_key_exists("ExpiredTime",$param) and $param["ExpiredTime"] !== null) {
-            $this->ExpiredTime = $param["ExpiredTime"];
-        }
-
-        if (array_key_exists("SdkURL",$param) and $param["SdkURL"] !== null) {
-            $this->SdkURL = $param["SdkURL"];
+        if (array_key_exists("DetailSets",$param) and $param["DetailSets"] !== null) {
+            $this->DetailSets = [];
+            foreach ($param["DetailSets"] as $key => $value){
+                $obj = new CosDetailSets();
+                $obj->deserialize($value);
+                array_push($this->DetailSets, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

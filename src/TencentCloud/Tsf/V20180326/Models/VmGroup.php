@@ -116,6 +116,26 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeployDesc(string $DeployDesc) 设置部署应用描述信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getUpdateType() 获取滚动发布的更新方式
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUpdateType(integer $UpdateType) 设置滚动发布的更新方式
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getDeployBetaEnable() 获取发布是否启用beta批次
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDeployBetaEnable(boolean $DeployBetaEnable) 设置发布是否启用beta批次
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getDeployBatch() 获取滚动发布的批次比例列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDeployBatch(array $DeployBatch) 设置滚动发布的批次比例列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDeployExeMode() 获取滚动发布的批次执行方式
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDeployExeMode(string $DeployExeMode) 设置滚动发布的批次执行方式
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getDeployWaitTime() 获取滚动发布的每个批次的等待时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDeployWaitTime(integer $DeployWaitTime) 设置滚动发布的每个批次的等待时间
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class VmGroup extends AbstractModel
 {
@@ -264,6 +284,36 @@ class VmGroup extends AbstractModel
     public $DeployDesc;
 
     /**
+     * @var integer 滚动发布的更新方式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UpdateType;
+
+    /**
+     * @var boolean 发布是否启用beta批次
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DeployBetaEnable;
+
+    /**
+     * @var array 滚动发布的批次比例列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DeployBatch;
+
+    /**
+     * @var string 滚动发布的批次执行方式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DeployExeMode;
+
+    /**
+     * @var integer 滚动发布的每个批次的等待时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DeployWaitTime;
+
+    /**
      * @param string $GroupId 部署组ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GroupName 部署组名称
@@ -311,6 +361,16 @@ class VmGroup extends AbstractModel
      * @param integer $UpdatedTime 部署组更新时间戳
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DeployDesc 部署应用描述信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $UpdateType 滚动发布的更新方式
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $DeployBetaEnable 发布是否启用beta批次
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $DeployBatch 滚动发布的批次比例列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DeployExeMode 滚动发布的批次执行方式
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $DeployWaitTime 滚动发布的每个批次的等待时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -420,6 +480,26 @@ class VmGroup extends AbstractModel
 
         if (array_key_exists("DeployDesc",$param) and $param["DeployDesc"] !== null) {
             $this->DeployDesc = $param["DeployDesc"];
+        }
+
+        if (array_key_exists("UpdateType",$param) and $param["UpdateType"] !== null) {
+            $this->UpdateType = $param["UpdateType"];
+        }
+
+        if (array_key_exists("DeployBetaEnable",$param) and $param["DeployBetaEnable"] !== null) {
+            $this->DeployBetaEnable = $param["DeployBetaEnable"];
+        }
+
+        if (array_key_exists("DeployBatch",$param) and $param["DeployBatch"] !== null) {
+            $this->DeployBatch = $param["DeployBatch"];
+        }
+
+        if (array_key_exists("DeployExeMode",$param) and $param["DeployExeMode"] !== null) {
+            $this->DeployExeMode = $param["DeployExeMode"];
+        }
+
+        if (array_key_exists("DeployWaitTime",$param) and $param["DeployWaitTime"] !== null) {
+            $this->DeployWaitTime = $param["DeployWaitTime"];
         }
     }
 }

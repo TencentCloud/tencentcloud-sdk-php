@@ -14,32 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tcb\V20180608\Models;
+namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateStaticStore请求参数结构体
+ * DescribeIpGeolocationDatabaseUrl请求参数结构体
  *
- * @method string getEnvId() 获取环境ID
- * @method void setEnvId(string $EnvId) 设置环境ID
- * @method boolean getEnableUnion() 获取是否启用统一域名
- * @method void setEnableUnion(boolean $EnableUnion) 设置是否启用统一域名
+ * @method string getType() 获取ip地址库协议类型，目前支持"ipv4"和"ipv6"。
+ * @method void setType(string $Type) 设置ip地址库协议类型，目前支持"ipv4"和"ipv6"。
  */
-class CreateStaticStoreRequest extends AbstractModel
+class DescribeIpGeolocationDatabaseUrlRequest extends AbstractModel
 {
     /**
-     * @var string 环境ID
+     * @var string ip地址库协议类型，目前支持"ipv4"和"ipv6"。
      */
-    public $EnvId;
+    public $Type;
 
     /**
-     * @var boolean 是否启用统一域名
-     */
-    public $EnableUnion;
-
-    /**
-     * @param string $EnvId 环境ID
-     * @param boolean $EnableUnion 是否启用统一域名
+     * @param string $Type ip地址库协议类型，目前支持"ipv4"和"ipv6"。
      */
     function __construct()
     {
@@ -54,12 +46,8 @@ class CreateStaticStoreRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("EnvId",$param) and $param["EnvId"] !== null) {
-            $this->EnvId = $param["EnvId"];
-        }
-
-        if (array_key_exists("EnableUnion",$param) and $param["EnableUnion"] !== null) {
-            $this->EnableUnion = $param["EnableUnion"];
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
         }
     }
 }

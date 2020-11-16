@@ -22,12 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getHeaderMode() 获取http 头部设置方式
 add：添加头部，若已存在头部，则会存在重复头部
-set：仅回源头部配置支持，若头部已存在则会覆盖原有头部值，若不存在，则会增加该头部及值
 del：删除头部
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHeaderMode(string $HeaderMode) 设置http 头部设置方式
 add：添加头部，若已存在头部，则会存在重复头部
-set：仅回源头部配置支持，若头部已存在则会覆盖原有头部值，若不存在，则会增加该头部及值
 del：删除头部
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getHeaderName() 获取http 头部名称，最多可设置 100 个字符
@@ -72,7 +70,6 @@ class HttpHeaderPathRule extends AbstractModel
     /**
      * @var string http 头部设置方式
 add：添加头部，若已存在头部，则会存在重复头部
-set：仅回源头部配置支持，若头部已存在则会覆盖原有头部值，若不存在，则会增加该头部及值
 del：删除头部
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -115,7 +112,6 @@ path 时填充绝对路径，如 /xxx/test.html
     /**
      * @param string $HeaderMode http 头部设置方式
 add：添加头部，若已存在头部，则会存在重复头部
-set：仅回源头部配置支持，若头部已存在则会覆盖原有头部值，若不存在，则会增加该头部及值
 del：删除头部
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $HeaderName http 头部名称，最多可设置 100 个字符

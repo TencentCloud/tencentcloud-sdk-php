@@ -20,21 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DetachResourcesTag请求参数结构体
  *
- * @method string getServiceType() 获取资源所属业务名称
- * @method void setServiceType(string $ServiceType) 设置资源所属业务名称
+ * @method string getServiceType() 获取资源所属业务名称（资源六段式中的第三段）
+ * @method void setServiceType(string $ServiceType) 设置资源所属业务名称（资源六段式中的第三段）
  * @method array getResourceIds() 获取资源ID数组，资源个数最多为50
  * @method void setResourceIds(array $ResourceIds) 设置资源ID数组，资源个数最多为50
  * @method string getTagKey() 获取需要解绑的标签键
  * @method void setTagKey(string $TagKey) 设置需要解绑的标签键
- * @method string getResourceRegion() 获取资源所在地域不区分地域的资源不需要传入该字段
- * @method void setResourceRegion(string $ResourceRegion) 设置资源所在地域不区分地域的资源不需要传入该字段
- * @method string getResourcePrefix() 获取资源前缀，cos存储桶不需要传入该字段
- * @method void setResourcePrefix(string $ResourcePrefix) 设置资源前缀，cos存储桶不需要传入该字段
+ * @method string getResourceRegion() 获取资源所在地域，不区分地域的资源不需要传入该字段，区分地域的资源必填
+ * @method void setResourceRegion(string $ResourceRegion) 设置资源所在地域，不区分地域的资源不需要传入该字段，区分地域的资源必填
+ * @method string getResourcePrefix() 获取资源前缀（资源六段式中最后一段"/"前面的部分），cos存储桶不需要传入该字段，其他云资源必填
+ * @method void setResourcePrefix(string $ResourcePrefix) 设置资源前缀（资源六段式中最后一段"/"前面的部分），cos存储桶不需要传入该字段，其他云资源必填
  */
 class DetachResourcesTagRequest extends AbstractModel
 {
     /**
-     * @var string 资源所属业务名称
+     * @var string 资源所属业务名称（资源六段式中的第三段）
      */
     public $ServiceType;
 
@@ -49,21 +49,21 @@ class DetachResourcesTagRequest extends AbstractModel
     public $TagKey;
 
     /**
-     * @var string 资源所在地域不区分地域的资源不需要传入该字段
+     * @var string 资源所在地域，不区分地域的资源不需要传入该字段，区分地域的资源必填
      */
     public $ResourceRegion;
 
     /**
-     * @var string 资源前缀，cos存储桶不需要传入该字段
+     * @var string 资源前缀（资源六段式中最后一段"/"前面的部分），cos存储桶不需要传入该字段，其他云资源必填
      */
     public $ResourcePrefix;
 
     /**
-     * @param string $ServiceType 资源所属业务名称
+     * @param string $ServiceType 资源所属业务名称（资源六段式中的第三段）
      * @param array $ResourceIds 资源ID数组，资源个数最多为50
      * @param string $TagKey 需要解绑的标签键
-     * @param string $ResourceRegion 资源所在地域不区分地域的资源不需要传入该字段
-     * @param string $ResourcePrefix 资源前缀，cos存储桶不需要传入该字段
+     * @param string $ResourceRegion 资源所在地域，不区分地域的资源不需要传入该字段，区分地域的资源必填
+     * @param string $ResourcePrefix 资源前缀（资源六段式中最后一段"/"前面的部分），cos存储桶不需要传入该字段，其他云资源必填
      */
     function __construct()
     {

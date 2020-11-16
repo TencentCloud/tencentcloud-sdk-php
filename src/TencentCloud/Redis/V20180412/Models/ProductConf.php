@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 产品信息
  *
- * @method integer getType() 获取产品类型，2-Redis主从版，3-CKV主从版，4-CKV集群版，5-Redis单机版，7-Redis集群版
- * @method void setType(integer $Type) 设置产品类型，2-Redis主从版，3-CKV主从版，4-CKV集群版，5-Redis单机版，7-Redis集群版
- * @method string getTypeName() 获取产品名称，Redis主从版，CKV主从版，CKV集群版，Redis单机版，Redis集群版
- * @method void setTypeName(string $TypeName) 设置产品名称，Redis主从版，CKV主从版，CKV集群版，Redis单机版，Redis集群版
+ * @method integer getType() 获取产品类型，2 – Redis2.8内存版(标准架构)，3 – CKV 3.2内存版(标准架构)，4 – CKV 3.2内存版(集群架构)，5 – Redis2.8内存版(单机版)，6 – Redis4.0内存版(标准架构)，7 – Redis4.0内存版(集群架构)，8 – Redis5.0内存版(标准架构)，9 – Redis5.0内存版(集群架构)，10 – Redis4.0混合存储版Tendis
+ * @method void setType(integer $Type) 设置产品类型，2 – Redis2.8内存版(标准架构)，3 – CKV 3.2内存版(标准架构)，4 – CKV 3.2内存版(集群架构)，5 – Redis2.8内存版(单机版)，6 – Redis4.0内存版(标准架构)，7 – Redis4.0内存版(集群架构)，8 – Redis5.0内存版(标准架构)，9 – Redis5.0内存版(集群架构)，10 – Redis4.0混合存储版Tendis
+ * @method string getTypeName() 获取产品名称，Redis主从版，CKV主从版，CKV集群版，Redis单机版，Redis集群版，混合存储版Tendis
+ * @method void setTypeName(string $TypeName) 设置产品名称，Redis主从版，CKV主从版，CKV集群版，Redis单机版，Redis集群版，混合存储版Tendis
  * @method integer getMinBuyNum() 获取购买时的最小数量
  * @method void setMinBuyNum(integer $MinBuyNum) 设置购买时的最小数量
  * @method integer getMaxBuyNum() 获取购买时的最大数量
@@ -50,12 +50,12 @@ use TencentCloud\Common\AbstractModel;
 class ProductConf extends AbstractModel
 {
     /**
-     * @var integer 产品类型，2-Redis主从版，3-CKV主从版，4-CKV集群版，5-Redis单机版，7-Redis集群版
+     * @var integer 产品类型，2 – Redis2.8内存版(标准架构)，3 – CKV 3.2内存版(标准架构)，4 – CKV 3.2内存版(集群架构)，5 – Redis2.8内存版(单机版)，6 – Redis4.0内存版(标准架构)，7 – Redis4.0内存版(集群架构)，8 – Redis5.0内存版(标准架构)，9 – Redis5.0内存版(集群架构)，10 – Redis4.0混合存储版Tendis
      */
     public $Type;
 
     /**
-     * @var string 产品名称，Redis主从版，CKV主从版，CKV集群版，Redis单机版，Redis集群版
+     * @var string 产品名称，Redis主从版，CKV主从版，CKV集群版，Redis单机版，Redis集群版，混合存储版Tendis
      */
     public $TypeName;
 
@@ -115,8 +115,8 @@ class ProductConf extends AbstractModel
     public $EnableRepicaReadOnly;
 
     /**
-     * @param integer $Type 产品类型，2-Redis主从版，3-CKV主从版，4-CKV集群版，5-Redis单机版，7-Redis集群版
-     * @param string $TypeName 产品名称，Redis主从版，CKV主从版，CKV集群版，Redis单机版，Redis集群版
+     * @param integer $Type 产品类型，2 – Redis2.8内存版(标准架构)，3 – CKV 3.2内存版(标准架构)，4 – CKV 3.2内存版(集群架构)，5 – Redis2.8内存版(单机版)，6 – Redis4.0内存版(标准架构)，7 – Redis4.0内存版(集群架构)，8 – Redis5.0内存版(标准架构)，9 – Redis5.0内存版(集群架构)，10 – Redis4.0混合存储版Tendis
+     * @param string $TypeName 产品名称，Redis主从版，CKV主从版，CKV集群版，Redis单机版，Redis集群版，混合存储版Tendis
      * @param integer $MinBuyNum 购买时的最小数量
      * @param integer $MaxBuyNum 购买时的最大数量
      * @param boolean $Saleout 产品是否售罄

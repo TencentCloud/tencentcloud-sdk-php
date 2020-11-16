@@ -34,6 +34,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUnblockAmount(float $UnblockAmount) 设置解冻总额，单位（分）
  * @method float getDeductAmount() 获取扣费总额，单位（分）
  * @method void setDeductAmount(float $DeductAmount) 设置扣费总额，单位（分）
+ * @method float getAgentInAmount() 获取资金转入总额，单位（分）
+ * @method void setAgentInAmount(float $AgentInAmount) 设置资金转入总额，单位（分）
+ * @method float getAdvanceRechargeAmount() 获取垫付充值总额，单位（分）
+ * @method void setAdvanceRechargeAmount(float $AdvanceRechargeAmount) 设置垫付充值总额，单位（分）
+ * @method float getWithdrawAmount() 获取提现扣减总额，单位（分）
+ * @method void setWithdrawAmount(float $WithdrawAmount) 设置提现扣减总额，单位（分）
+ * @method float getAgentOutAmount() 获取资金转出总额，单位（分）
+ * @method void setAgentOutAmount(float $AgentOutAmount) 设置资金转出总额，单位（分）
+ * @method float getAdvancePayAmount() 获取还垫付总额，单位（分）
+ * @method void setAdvancePayAmount(float $AdvancePayAmount) 设置还垫付总额，单位（分）
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -75,6 +85,31 @@ class DescribeBillListResponse extends AbstractModel
     public $DeductAmount;
 
     /**
+     * @var float 资金转入总额，单位（分）
+     */
+    public $AgentInAmount;
+
+    /**
+     * @var float 垫付充值总额，单位（分）
+     */
+    public $AdvanceRechargeAmount;
+
+    /**
+     * @var float 提现扣减总额，单位（分）
+     */
+    public $WithdrawAmount;
+
+    /**
+     * @var float 资金转出总额，单位（分）
+     */
+    public $AgentOutAmount;
+
+    /**
+     * @var float 还垫付总额，单位（分）
+     */
+    public $AdvancePayAmount;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -87,6 +122,11 @@ class DescribeBillListResponse extends AbstractModel
      * @param float $BlockAmount 冻结总额，单位（分）
      * @param float $UnblockAmount 解冻总额，单位（分）
      * @param float $DeductAmount 扣费总额，单位（分）
+     * @param float $AgentInAmount 资金转入总额，单位（分）
+     * @param float $AdvanceRechargeAmount 垫付充值总额，单位（分）
+     * @param float $WithdrawAmount 提现扣减总额，单位（分）
+     * @param float $AgentOutAmount 资金转出总额，单位（分）
+     * @param float $AdvancePayAmount 还垫付总额，单位（分）
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -133,6 +173,26 @@ class DescribeBillListResponse extends AbstractModel
 
         if (array_key_exists("DeductAmount",$param) and $param["DeductAmount"] !== null) {
             $this->DeductAmount = $param["DeductAmount"];
+        }
+
+        if (array_key_exists("AgentInAmount",$param) and $param["AgentInAmount"] !== null) {
+            $this->AgentInAmount = $param["AgentInAmount"];
+        }
+
+        if (array_key_exists("AdvanceRechargeAmount",$param) and $param["AdvanceRechargeAmount"] !== null) {
+            $this->AdvanceRechargeAmount = $param["AdvanceRechargeAmount"];
+        }
+
+        if (array_key_exists("WithdrawAmount",$param) and $param["WithdrawAmount"] !== null) {
+            $this->WithdrawAmount = $param["WithdrawAmount"];
+        }
+
+        if (array_key_exists("AgentOutAmount",$param) and $param["AgentOutAmount"] !== null) {
+            $this->AgentOutAmount = $param["AgentOutAmount"];
+        }
+
+        if (array_key_exists("AdvancePayAmount",$param) and $param["AdvancePayAmount"] !== null) {
+            $this->AdvancePayAmount = $param["AdvancePayAmount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

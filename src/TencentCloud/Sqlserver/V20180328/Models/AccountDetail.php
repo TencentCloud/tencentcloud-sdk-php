@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInternalStatus(string $InternalStatus) 设置账户内部状态，正常为enable
  * @method array getDbs() 获取该账户对相关db的读写权限信息
  * @method void setDbs(array $Dbs) 设置该账户对相关db的读写权限信息
+ * @method boolean getIsAdmin() 获取是否为管理员账户
+ * @method void setIsAdmin(boolean $IsAdmin) 设置是否为管理员账户
  */
 class AccountDetail extends AbstractModel
 {
@@ -80,6 +82,11 @@ class AccountDetail extends AbstractModel
     public $Dbs;
 
     /**
+     * @var boolean 是否为管理员账户
+     */
+    public $IsAdmin;
+
+    /**
      * @param string $Name 账户名
      * @param string $Remark 账户备注
      * @param string $CreateTime 账户创建时间
@@ -88,6 +95,7 @@ class AccountDetail extends AbstractModel
      * @param string $PassTime 密码更新时间
      * @param string $InternalStatus 账户内部状态，正常为enable
      * @param array $Dbs 该账户对相关db的读写权限信息
+     * @param boolean $IsAdmin 是否为管理员账户
      */
     function __construct()
     {
@@ -137,6 +145,10 @@ class AccountDetail extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Dbs, $obj);
             }
+        }
+
+        if (array_key_exists("IsAdmin",$param) and $param["IsAdmin"] !== null) {
+            $this->IsAdmin = $param["IsAdmin"];
         }
     }
 }

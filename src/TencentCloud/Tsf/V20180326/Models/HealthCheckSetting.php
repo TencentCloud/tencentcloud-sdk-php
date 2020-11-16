@@ -60,6 +60,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCommand(array $Command) 设置执行命令检查方式，执行的命令。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getType() 获取TSF_DEFAULT：tsf 默认就绪探针。K8S_NATIVE：k8s 原生探针。不填默认为 k8s 原生探针。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setType(string $Type) 设置TSF_DEFAULT：tsf 默认就绪探针。K8S_NATIVE：k8s 原生探针。不填默认为 k8s 原生探针。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class HealthCheckSetting extends AbstractModel
 {
@@ -124,6 +128,12 @@ class HealthCheckSetting extends AbstractModel
     public $Command;
 
     /**
+     * @var string TSF_DEFAULT：tsf 默认就绪探针。K8S_NATIVE：k8s 原生探针。不填默认为 k8s 原生探针。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Type;
+
+    /**
      * @param string $ActionType 健康检查方法。HTTP：通过 HTTP 接口检查；CMD：通过执行命令检查；TCP：通过建立 TCP 连接检查。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $InitialDelaySeconds 容器延时启动健康检查的时间。
@@ -143,6 +153,8 @@ class HealthCheckSetting extends AbstractModel
      * @param string $Path HTTP 健康检查接口的请求路径。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Command 执行命令检查方式，执行的命令。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Type TSF_DEFAULT：tsf 默认就绪探针。K8S_NATIVE：k8s 原生探针。不填默认为 k8s 原生探针。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -196,6 +208,10 @@ class HealthCheckSetting extends AbstractModel
 
         if (array_key_exists("Command",$param) and $param["Command"] !== null) {
             $this->Command = $param["Command"];
+        }
+
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
         }
     }
 }

@@ -14,37 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ccc\V20200210\Models;
+namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateSDKLoginToken返回参数结构体
+ * DescribeIpGeolocationDatabaseUrl返回参数结构体
  *
- * @method string getToken() 获取SDK 登录 Token。
- * @method void setToken(string $Token) 设置SDK 登录 Token。
- * @method integer getExpiredTime() 获取过期时间戳，Unix 时间戳。
- * @method void setExpiredTime(integer $ExpiredTime) 设置过期时间戳，Unix 时间戳。
- * @method string getSdkURL() 获取SDK 加载路径会随着 SDK 的发布而变动。
- * @method void setSdkURL(string $SdkURL) 设置SDK 加载路径会随着 SDK 的发布而变动。
+ * @method string getDownLoadUrl() 获取IP地址库下载链接地址
+ * @method void setDownLoadUrl(string $DownLoadUrl) 设置IP地址库下载链接地址
+ * @method string getExpiredAt() 获取链接到期时间。按照`ISO8601`标准表示，并且使用`UTC`时间。
+ * @method void setExpiredAt(string $ExpiredAt) 设置链接到期时间。按照`ISO8601`标准表示，并且使用`UTC`时间。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class CreateSDKLoginTokenResponse extends AbstractModel
+class DescribeIpGeolocationDatabaseUrlResponse extends AbstractModel
 {
     /**
-     * @var string SDK 登录 Token。
+     * @var string IP地址库下载链接地址
      */
-    public $Token;
+    public $DownLoadUrl;
 
     /**
-     * @var integer 过期时间戳，Unix 时间戳。
+     * @var string 链接到期时间。按照`ISO8601`标准表示，并且使用`UTC`时间。
      */
-    public $ExpiredTime;
-
-    /**
-     * @var string SDK 加载路径会随着 SDK 的发布而变动。
-     */
-    public $SdkURL;
+    public $ExpiredAt;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -52,9 +45,8 @@ class CreateSDKLoginTokenResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Token SDK 登录 Token。
-     * @param integer $ExpiredTime 过期时间戳，Unix 时间戳。
-     * @param string $SdkURL SDK 加载路径会随着 SDK 的发布而变动。
+     * @param string $DownLoadUrl IP地址库下载链接地址
+     * @param string $ExpiredAt 链接到期时间。按照`ISO8601`标准表示，并且使用`UTC`时间。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -70,16 +62,12 @@ class CreateSDKLoginTokenResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Token",$param) and $param["Token"] !== null) {
-            $this->Token = $param["Token"];
+        if (array_key_exists("DownLoadUrl",$param) and $param["DownLoadUrl"] !== null) {
+            $this->DownLoadUrl = $param["DownLoadUrl"];
         }
 
-        if (array_key_exists("ExpiredTime",$param) and $param["ExpiredTime"] !== null) {
-            $this->ExpiredTime = $param["ExpiredTime"];
-        }
-
-        if (array_key_exists("SdkURL",$param) and $param["SdkURL"] !== null) {
-            $this->SdkURL = $param["SdkURL"];
+        if (array_key_exists("ExpiredAt",$param) and $param["ExpiredAt"] !== null) {
+            $this->ExpiredAt = $param["ExpiredAt"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

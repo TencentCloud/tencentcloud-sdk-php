@@ -42,6 +42,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImageId(string $ImageId) 设置生成包支持的操作系统镜像id
  * @method string getOsType() 获取生成包支持的操作系统类型
  * @method void setOsType(string $OsType) 设置生成包支持的操作系统类型
+ * @method string getResourceType() 获取生成包资源类型，ASSET 或者 IMAGE；ASSET 代表是原有生成包类型，IMAGE 为扩充使用镜像类型
+ * @method void setResourceType(string $ResourceType) 设置生成包资源类型，ASSET 或者 IMAGE；ASSET 代表是原有生成包类型，IMAGE 为扩充使用镜像类型
+ * @method string getSharingStatus() 获取镜像资源共享类型，当 ResourceType 为 IMAGE 时该字段有意义，SHARED 表示共享、SHARED_IMAGE 表示未共享；ResourceType 为 ASSET 时这里返回 UNKNOWN_SHARED 用于占位
+ * @method void setSharingStatus(string $SharingStatus) 设置镜像资源共享类型，当 ResourceType 为 IMAGE 时该字段有意义，SHARED 表示共享、SHARED_IMAGE 表示未共享；ResourceType 为 ASSET 时这里返回 UNKNOWN_SHARED 用于占位
  */
 class Asset extends AbstractModel
 {
@@ -101,6 +105,16 @@ class Asset extends AbstractModel
     public $OsType;
 
     /**
+     * @var string 生成包资源类型，ASSET 或者 IMAGE；ASSET 代表是原有生成包类型，IMAGE 为扩充使用镜像类型
+     */
+    public $ResourceType;
+
+    /**
+     * @var string 镜像资源共享类型，当 ResourceType 为 IMAGE 时该字段有意义，SHARED 表示共享、SHARED_IMAGE 表示未共享；ResourceType 为 ASSET 时这里返回 UNKNOWN_SHARED 用于占位
+     */
+    public $SharingStatus;
+
+    /**
      * @param string $AssetId 生成包ID
      * @param string $AssetName 生成包名字，最小长度为1，最大长度为64
      * @param string $AssetVersion 生成包版本，最小长度为1，最大长度为64
@@ -112,6 +126,8 @@ class Asset extends AbstractModel
      * @param string $AssetArn 生成包的全局唯一资源标识符
      * @param string $ImageId 生成包支持的操作系统镜像id
      * @param string $OsType 生成包支持的操作系统类型
+     * @param string $ResourceType 生成包资源类型，ASSET 或者 IMAGE；ASSET 代表是原有生成包类型，IMAGE 为扩充使用镜像类型
+     * @param string $SharingStatus 镜像资源共享类型，当 ResourceType 为 IMAGE 时该字段有意义，SHARED 表示共享、SHARED_IMAGE 表示未共享；ResourceType 为 ASSET 时这里返回 UNKNOWN_SHARED 用于占位
      */
     function __construct()
     {
@@ -168,6 +184,14 @@ class Asset extends AbstractModel
 
         if (array_key_exists("OsType",$param) and $param["OsType"] !== null) {
             $this->OsType = $param["OsType"];
+        }
+
+        if (array_key_exists("ResourceType",$param) and $param["ResourceType"] !== null) {
+            $this->ResourceType = $param["ResourceType"];
+        }
+
+        if (array_key_exists("SharingStatus",$param) and $param["SharingStatus"] !== null) {
+            $this->SharingStatus = $param["SharingStatus"];
         }
     }
 }

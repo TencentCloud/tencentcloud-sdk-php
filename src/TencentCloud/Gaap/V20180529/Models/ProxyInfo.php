@@ -118,6 +118,10 @@ UNKNOWN表示未知状态。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProxyType(integer $ProxyType) 设置通道类型
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getClientIPMethod() 获取通道获取客户端IP的方式，0表示TOA，1表示Proxy Protocol
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setClientIPMethod(array $ClientIPMethod) 设置通道获取客户端IP的方式，0表示TOA，1表示Proxy Protocol
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ProxyInfo extends AbstractModel
 {
@@ -275,6 +279,12 @@ UNKNOWN表示未知状态。
     public $ProxyType;
 
     /**
+     * @var array 通道获取客户端IP的方式，0表示TOA，1表示Proxy Protocol
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ClientIPMethod;
+
+    /**
      * @param string $InstanceId （旧参数，请使用ProxyId）通道实例ID。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CreateTime 创建时间，采用Unix时间戳的方式，表示从1970年1月1日（UTC/GMT的午夜）开始所经过的秒数。
@@ -323,6 +333,8 @@ UNKNOWN表示未知状态。
      * @param integer $ModifyConfigTime 配置变更时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ProxyType 通道类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $ClientIPMethod 通道获取客户端IP的方式，0表示TOA，1表示Proxy Protocol
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -447,6 +459,10 @@ UNKNOWN表示未知状态。
 
         if (array_key_exists("ProxyType",$param) and $param["ProxyType"] !== null) {
             $this->ProxyType = $param["ProxyType"];
+        }
+
+        if (array_key_exists("ClientIPMethod",$param) and $param["ClientIPMethod"] !== null) {
+            $this->ClientIPMethod = $param["ClientIPMethod"];
         }
     }
 }

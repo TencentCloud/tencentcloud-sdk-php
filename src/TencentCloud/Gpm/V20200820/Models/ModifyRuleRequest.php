@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getRuleCode() 获取规则code
  * @method void setRuleCode(string $RuleCode) 设置规则code
- * @method string getRuleName() 获取规则名称
- * @method void setRuleName(string $RuleName) 设置规则名称
+ * @method string getRuleName() 获取规则名称，只能包含数字、字母、. 和 -
+ * @method void setRuleName(string $RuleName) 设置规则名称，只能包含数字、字母、. 和 -
  * @method string getRuleDesc() 获取规则描述，最长1024
  * @method void setRuleDesc(string $RuleDesc) 设置规则描述，最长1024
  * @method array getTags() 获取标签，key-value结构的数组，最多关联50组标签
@@ -37,7 +37,7 @@ class ModifyRuleRequest extends AbstractModel
     public $RuleCode;
 
     /**
-     * @var string 规则名称
+     * @var string 规则名称，只能包含数字、字母、. 和 -
      */
     public $RuleName;
 
@@ -53,7 +53,7 @@ class ModifyRuleRequest extends AbstractModel
 
     /**
      * @param string $RuleCode 规则code
-     * @param string $RuleName 规则名称
+     * @param string $RuleName 规则名称，只能包含数字、字母、. 和 -
      * @param string $RuleDesc 规则描述，最长1024
      * @param array $Tags 标签，key-value结构的数组，最多关联50组标签
      */

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getSdkAppId() 获取用户sdkappid
  * @method void setSdkAppId(string $SdkAppId) 设置用户sdkappid
- * @method integer getStartTime() 获取查询开始时间，5天内。本地unix时间戳（1588031999s）
- * @method void setStartTime(integer $StartTime) 设置查询开始时间，5天内。本地unix时间戳（1588031999s）
+ * @method integer getStartTime() 获取查询开始时间，14天内。本地unix时间戳（1588031999s）
+ * @method void setStartTime(integer $StartTime) 设置查询开始时间，14天内。本地unix时间戳（1588031999s）
  * @method integer getEndTime() 获取查询结束时间，本地unix时间戳（1588031999s）
  * @method void setEndTime(integer $EndTime) 设置查询结束时间，本地unix时间戳（1588031999s）
  * @method string getRoomId() 获取数字房间号
@@ -41,7 +41,7 @@ class DescribeRoomInformationRequest extends AbstractModel
     public $SdkAppId;
 
     /**
-     * @var integer 查询开始时间，5天内。本地unix时间戳（1588031999s）
+     * @var integer 查询开始时间，14天内。本地unix时间戳（1588031999s）
      */
     public $StartTime;
 
@@ -67,7 +67,7 @@ class DescribeRoomInformationRequest extends AbstractModel
 
     /**
      * @param string $SdkAppId 用户sdkappid
-     * @param integer $StartTime 查询开始时间，5天内。本地unix时间戳（1588031999s）
+     * @param integer $StartTime 查询开始时间，14天内。本地unix时间戳（1588031999s）
      * @param integer $EndTime 查询结束时间，本地unix时间戳（1588031999s）
      * @param string $RoomId 数字房间号
      * @param string $PageNumber 分页index，从0开始（PageNumber和PageSize 其中一个不填均默认返回10条数据）

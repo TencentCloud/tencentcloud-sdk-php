@@ -58,6 +58,10 @@ OPEN：公网属性， INTERNAL：内网属性。
  * @method void setExclusiveCluster(ExclusiveCluster $ExclusiveCluster) 设置独占集群信息
  * @method string getClientToken() 获取用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
  * @method void setClientToken(string $ClientToken) 设置用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
+ * @method boolean getSnatPro() 获取是否支持绑定跨地域/跨Vpc绑定IP的功能。
+ * @method void setSnatPro(boolean $SnatPro) 设置是否支持绑定跨地域/跨Vpc绑定IP的功能。
+ * @method array getSnatIps() 获取开启绑定跨地域/跨Vpc绑定IP的功能后，创建SnatIp。
+ * @method void setSnatIps(array $SnatIps) 设置开启绑定跨地域/跨Vpc绑定IP的功能后，创建SnatIp。
  * @method string getClusterTag() 获取Stgw独占集群的标签。
  * @method void setClusterTag(string $ClusterTag) 设置Stgw独占集群的标签。
  */
@@ -147,6 +151,16 @@ OPEN：公网属性， INTERNAL：内网属性。
     public $ClientToken;
 
     /**
+     * @var boolean 是否支持绑定跨地域/跨Vpc绑定IP的功能。
+     */
+    public $SnatPro;
+
+    /**
+     * @var array 开启绑定跨地域/跨Vpc绑定IP的功能后，创建SnatIp。
+     */
+    public $SnatIps;
+
+    /**
      * @var string Stgw独占集群的标签。
      */
     public $ClusterTag;
@@ -171,6 +185,8 @@ OPEN：公网属性， INTERNAL：内网属性。
      * @param string $Vip 指定Vip申请负载均衡
      * @param ExclusiveCluster $ExclusiveCluster 独占集群信息
      * @param string $ClientToken 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
+     * @param boolean $SnatPro 是否支持绑定跨地域/跨Vpc绑定IP的功能。
+     * @param array $SnatIps 开启绑定跨地域/跨Vpc绑定IP的功能后，创建SnatIp。
      * @param string $ClusterTag Stgw独占集群的标签。
      */
     function __construct()
@@ -255,6 +271,19 @@ OPEN：公网属性， INTERNAL：内网属性。
 
         if (array_key_exists("ClientToken",$param) and $param["ClientToken"] !== null) {
             $this->ClientToken = $param["ClientToken"];
+        }
+
+        if (array_key_exists("SnatPro",$param) and $param["SnatPro"] !== null) {
+            $this->SnatPro = $param["SnatPro"];
+        }
+
+        if (array_key_exists("SnatIps",$param) and $param["SnatIps"] !== null) {
+            $this->SnatIps = [];
+            foreach ($param["SnatIps"] as $key => $value){
+                $obj = new SnatIp();
+                $obj->deserialize($value);
+                array_push($this->SnatIps, $obj);
+            }
         }
 
         if (array_key_exists("ClusterTag",$param) and $param["ClusterTag"] !== null) {

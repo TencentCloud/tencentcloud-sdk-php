@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDiskId(string $DiskId) 设置创建此快照的云硬盘ID。
  * @method integer getDiskSize() 获取创建此快照的云硬盘大小，单位GB。
  * @method void setDiskSize(integer $DiskSize) 设置创建此快照的云硬盘大小，单位GB。
- * @method string getSnapshotState() 获取快照的状态。取值范围：<br><li>NORMAL：正常<br><li>CREATING：创建中<br><li>ROLLBACKING：回滚中<br><li>COPYING_FROM_REMOTE：跨地域复制快照拷贝中。
- * @method void setSnapshotState(string $SnapshotState) 设置快照的状态。取值范围：<br><li>NORMAL：正常<br><li>CREATING：创建中<br><li>ROLLBACKING：回滚中<br><li>COPYING_FROM_REMOTE：跨地域复制快照拷贝中。
+ * @method string getSnapshotState() 获取快照的状态。取值范围：<br><li>NORMAL：正常<br><li>CREATING：创建中<br><li>ROLLBACKING：回滚中<br><li>COPYING_FROM_REMOTE：跨地域复制中<br><li>CHECKING_COPIED：复制校验中<br><li>TORECYCLE：待回收。
+ * @method void setSnapshotState(string $SnapshotState) 设置快照的状态。取值范围：<br><li>NORMAL：正常<br><li>CREATING：创建中<br><li>ROLLBACKING：回滚中<br><li>COPYING_FROM_REMOTE：跨地域复制中<br><li>CHECKING_COPIED：复制校验中<br><li>TORECYCLE：待回收。
  * @method string getSnapshotName() 获取快照名称，用户自定义的快照别名。调用[ModifySnapshotAttribute](/document/product/362/15650)可修改此字段。
  * @method void setSnapshotName(string $SnapshotName) 设置快照名称，用户自定义的快照别名。调用[ModifySnapshotAttribute](/document/product/362/15650)可修改此字段。
  * @method integer getPercent() 获取快照创建进度百分比，快照创建成功后此字段恒为100。
@@ -85,7 +85,7 @@ class Snapshot extends AbstractModel
     public $DiskSize;
 
     /**
-     * @var string 快照的状态。取值范围：<br><li>NORMAL：正常<br><li>CREATING：创建中<br><li>ROLLBACKING：回滚中<br><li>COPYING_FROM_REMOTE：跨地域复制快照拷贝中。
+     * @var string 快照的状态。取值范围：<br><li>NORMAL：正常<br><li>CREATING：创建中<br><li>ROLLBACKING：回滚中<br><li>COPYING_FROM_REMOTE：跨地域复制中<br><li>CHECKING_COPIED：复制校验中<br><li>TORECYCLE：待回收。
      */
     public $SnapshotState;
 
@@ -155,7 +155,7 @@ class Snapshot extends AbstractModel
      * @param string $DiskUsage 创建此快照的云硬盘类型。取值范围：<br><li>SYSTEM_DISK：系统盘<br><li>DATA_DISK：数据盘。
      * @param string $DiskId 创建此快照的云硬盘ID。
      * @param integer $DiskSize 创建此快照的云硬盘大小，单位GB。
-     * @param string $SnapshotState 快照的状态。取值范围：<br><li>NORMAL：正常<br><li>CREATING：创建中<br><li>ROLLBACKING：回滚中<br><li>COPYING_FROM_REMOTE：跨地域复制快照拷贝中。
+     * @param string $SnapshotState 快照的状态。取值范围：<br><li>NORMAL：正常<br><li>CREATING：创建中<br><li>ROLLBACKING：回滚中<br><li>COPYING_FROM_REMOTE：跨地域复制中<br><li>CHECKING_COPIED：复制校验中<br><li>TORECYCLE：待回收。
      * @param string $SnapshotName 快照名称，用户自定义的快照别名。调用[ModifySnapshotAttribute](/document/product/362/15650)可修改此字段。
      * @param integer $Percent 快照创建进度百分比，快照创建成功后此字段恒为100。
      * @param string $CreateTime 快照的创建时间。

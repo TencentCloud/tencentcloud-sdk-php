@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
  * @method array getSchemaList() 获取数据库名称数组。
  * @method void setSchemaList(array $SchemaList) 设置数据库名称数组。
+ * @method string getProduct() 获取服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL，默认为"mysql"。
+ * @method void setProduct(string $Product) 设置服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL，默认为"mysql"。
  */
 class DescribeSlowLogTopSqlsRequest extends AbstractModel
 {
@@ -80,6 +82,11 @@ class DescribeSlowLogTopSqlsRequest extends AbstractModel
     public $SchemaList;
 
     /**
+     * @var string 服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL，默认为"mysql"。
+     */
+    public $Product;
+
+    /**
      * @param string $InstanceId 实例 ID 。
      * @param string $StartTime 开始时间，如“2019-09-10 12:13:14”。
      * @param string $EndTime 截止时间，如“2019-09-10 12:13:14”，截止时间与开始时间的间隔最大可为7天。
@@ -88,6 +95,7 @@ class DescribeSlowLogTopSqlsRequest extends AbstractModel
      * @param integer $Limit 返回数量，默认为20，最大值为100。
      * @param integer $Offset 偏移量，默认为0。
      * @param array $SchemaList 数据库名称数组。
+     * @param string $Product 服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL，默认为"mysql"。
      */
     function __construct()
     {
@@ -137,6 +145,10 @@ class DescribeSlowLogTopSqlsRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->SchemaList, $obj);
             }
+        }
+
+        if (array_key_exists("Product",$param) and $param["Product"] !== null) {
+            $this->Product = $param["Product"];
         }
     }
 }

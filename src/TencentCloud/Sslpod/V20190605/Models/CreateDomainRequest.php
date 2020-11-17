@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateDomain请求参数结构体
  *
- * @method integer getServerType() 获取监控的服务器类型 Enums(0,1,2,3)
- * @method void setServerType(integer $ServerType) 设置监控的服务器类型 Enums(0,1,2,3)
+ * @method integer getServerType() 获取监控的服务器类型（0：web，1：smtp，2：imap，3：pops）
+ * @method void setServerType(integer $ServerType) 设置监控的服务器类型（0：web，1：smtp，2：imap，3：pops）
  * @method string getDomain() 获取添加的域名
  * @method void setDomain(string $Domain) 设置添加的域名
  * @method string getPort() 获取添加的端口
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateDomainRequest extends AbstractModel
 {
     /**
-     * @var integer 监控的服务器类型 Enums(0,1,2,3)
+     * @var integer 监控的服务器类型（0：web，1：smtp，2：imap，3：pops）
      */
     public $ServerType;
 
@@ -66,7 +66,7 @@ class CreateDomainRequest extends AbstractModel
     public $Tags;
 
     /**
-     * @param integer $ServerType 监控的服务器类型 Enums(0,1,2,3)
+     * @param integer $ServerType 监控的服务器类型（0：web，1：smtp，2：imap，3：pops）
      * @param string $Domain 添加的域名
      * @param string $Port 添加的端口
      * @param string $IP 指定域名的IP

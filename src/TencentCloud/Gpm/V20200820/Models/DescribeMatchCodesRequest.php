@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeMatchCodes请求参数结构体
  *
- * @method integer getOffset() 获取偏移量
- * @method void setOffset(integer $Offset) 设置偏移量
+ * @method integer getOffset() 获取偏移量，页码
+ * @method void setOffset(integer $Offset) 设置偏移量，页码
  * @method integer getLimit() 获取每页数量
  * @method void setLimit(integer $Limit) 设置每页数量
  */
 class DescribeMatchCodesRequest extends AbstractModel
 {
     /**
-     * @var integer 偏移量
+     * @var integer 偏移量，页码
      */
     public $Offset;
 
@@ -38,7 +38,7 @@ class DescribeMatchCodesRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @param integer $Offset 偏移量
+     * @param integer $Offset 偏移量，页码
      * @param integer $Limit 每页数量
      */
     function __construct()

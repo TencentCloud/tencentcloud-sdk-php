@@ -27,6 +27,7 @@ use TencentCloud\Asw\V20200722\Models as Models;
  * @method Models\DescribeExecutionResponse DescribeExecution(Models\DescribeExecutionRequest $req) 查询执行详细信息
  * @method Models\DescribeExecutionsResponse DescribeExecutions(Models\DescribeExecutionsRequest $req) 对状态机的执行历史进行描述.
  * @method Models\DescribeFlowServiceDetailResponse DescribeFlowServiceDetail(Models\DescribeFlowServiceDetailRequest $req) 查询该用户指定状态机下的详情数据。
+ * @method Models\DescribeFlowServicesResponse DescribeFlowServices(Models\DescribeFlowServicesRequest $req) 查询指定用户下所有状态机，以列表形式返回
  * @method Models\ModifyFlowServiceResponse ModifyFlowService(Models\ModifyFlowServiceRequest $req) 该接口用于修改状态机
  * @method Models\StartExecutionResponse StartExecution(Models\StartExecutionRequest $req) 为指定的状态机启动一次执行
  */

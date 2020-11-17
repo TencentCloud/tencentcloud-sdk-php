@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getCommId() 获取通话 ID（唯一标识一次通话）： sdkappid_roomgString（房间号_createTime（房间创建时间，unix时间戳，单位s）。通过 DescribeRoomInformation（查询房间列表）接口获取。（链接：https://cloud.tencent.com/document/product/647/44050）
  * @method void setCommId(string $CommId) 设置通话 ID（唯一标识一次通话）： sdkappid_roomgString（房间号_createTime（房间创建时间，unix时间戳，单位s）。通过 DescribeRoomInformation（查询房间列表）接口获取。（链接：https://cloud.tencent.com/document/product/647/44050）
- * @method integer getStartTime() 获取查询开始时间，5天内。本地unix时间戳（1588031999s）
- * @method void setStartTime(integer $StartTime) 设置查询开始时间，5天内。本地unix时间戳（1588031999s）
+ * @method integer getStartTime() 获取查询开始时间，14天内。本地unix时间戳（1588031999s）
+ * @method void setStartTime(integer $StartTime) 设置查询开始时间，14天内。本地unix时间戳（1588031999s）
  * @method integer getEndTime() 获取查询结束时间，本地unix时间戳（1588031999s）
  * @method void setEndTime(integer $EndTime) 设置查询结束时间，本地unix时间戳（1588031999s）
  * @method string getUserId() 获取用户id
@@ -39,7 +39,7 @@ class DescribeDetailEventRequest extends AbstractModel
     public $CommId;
 
     /**
-     * @var integer 查询开始时间，5天内。本地unix时间戳（1588031999s）
+     * @var integer 查询开始时间，14天内。本地unix时间戳（1588031999s）
      */
     public $StartTime;
 
@@ -60,7 +60,7 @@ class DescribeDetailEventRequest extends AbstractModel
 
     /**
      * @param string $CommId 通话 ID（唯一标识一次通话）： sdkappid_roomgString（房间号_createTime（房间创建时间，unix时间戳，单位s）。通过 DescribeRoomInformation（查询房间列表）接口获取。（链接：https://cloud.tencent.com/document/product/647/44050）
-     * @param integer $StartTime 查询开始时间，5天内。本地unix时间戳（1588031999s）
+     * @param integer $StartTime 查询开始时间，14天内。本地unix时间戳（1588031999s）
      * @param integer $EndTime 查询结束时间，本地unix时间戳（1588031999s）
      * @param string $UserId 用户id
      * @param string $RoomId 房间号

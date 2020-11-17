@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置获取数量
  * @method string getSearchType() 获取搜索的类型 Enums(none,tags,grade,brand,code,hash,limit)
  * @method void setSearchType(string $SearchType) 设置搜索的类型 Enums(none,tags,grade,brand,code,hash,limit)
- * @method string getTag() 获取标签
- * @method void setTag(string $Tag) 设置标签
+ * @method string getTag() 获取标签，多个标签用逗号分隔
+ * @method void setTag(string $Tag) 设置标签，多个标签用逗号分隔
  * @method string getGrade() 获取等级
  * @method void setGrade(string $Grade) 设置等级
  * @method string getBrand() 获取品牌
@@ -59,7 +59,7 @@ class DescribeDomainsRequest extends AbstractModel
     public $SearchType;
 
     /**
-     * @var string 标签
+     * @var string 标签，多个标签用逗号分隔
      */
     public $Tag;
 
@@ -97,7 +97,7 @@ class DescribeDomainsRequest extends AbstractModel
      * @param integer $Offset 偏移量
      * @param integer $Limit 获取数量
      * @param string $SearchType 搜索的类型 Enums(none,tags,grade,brand,code,hash,limit)
-     * @param string $Tag 标签
+     * @param string $Tag 标签，多个标签用逗号分隔
      * @param string $Grade 等级
      * @param string $Brand 品牌
      * @param string $Code 混合搜索

@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置实例 ID 。
  * @method integer getEventId() 获取事件 ID 。通过“获取实例诊断历史DescribeDBDiagHistory”获取。
  * @method void setEventId(integer $EventId) 设置事件 ID 。通过“获取实例诊断历史DescribeDBDiagHistory”获取。
+ * @method string getProduct() 获取服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL，默认为"mysql"。
+ * @method void setProduct(string $Product) 设置服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL，默认为"mysql"。
  */
 class DescribeDBDiagEventRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class DescribeDBDiagEventRequest extends AbstractModel
     public $EventId;
 
     /**
+     * @var string 服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL，默认为"mysql"。
+     */
+    public $Product;
+
+    /**
      * @param string $InstanceId 实例 ID 。
      * @param integer $EventId 事件 ID 。通过“获取实例诊断历史DescribeDBDiagHistory”获取。
+     * @param string $Product 服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL，默认为"mysql"。
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class DescribeDBDiagEventRequest extends AbstractModel
 
         if (array_key_exists("EventId",$param) and $param["EventId"] !== null) {
             $this->EventId = $param["EventId"];
+        }
+
+        if (array_key_exists("Product",$param) and $param["Product"] !== null) {
+            $this->Product = $param["Product"];
         }
     }
 }

@@ -36,8 +36,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsNonStaticIpMode(boolean $IsNonStaticIpMode) 设置集群VPC-CNI模式是否为非固定IP，默认: FALSE 固定IP。
  * @method boolean getDeletionProtection() 获取是否启用集群删除保护
  * @method void setDeletionProtection(boolean $DeletionProtection) 设置是否启用集群删除保护
- * @method string getKubeProxyMode() 获取集群的网络代理模型
- * @method void setKubeProxyMode(string $KubeProxyMode) 设置集群的网络代理模型
+ * @method string getKubeProxyMode() 获取集群的网络代理模型，目前tke集群支持的网络代理模式有三种：iptables,ipvs,ipvs+bpf，此参数仅在使用ipvs+bpf模式时使用，三种网络模式的参数设置关系如下：
+iptables模式：IPVS和KubeProxyMode都不设置
+ipvs模式: 设置IPVS为true, KubeProxyMode不设置
+ipvs-bpf模式: 设置KubeProxyMode为kube-proxy-bpf
+使用ipvs-bpf的网络模式需要满足以下条件：
+1. 集群版本必须为1.14及以上；
+2. 系统镜像必须是tke定制的镜像如: ubuntu TKE-optimized、centos TKE-optimized；
+ * @method void setKubeProxyMode(string $KubeProxyMode) 设置集群的网络代理模型，目前tke集群支持的网络代理模式有三种：iptables,ipvs,ipvs+bpf，此参数仅在使用ipvs+bpf模式时使用，三种网络模式的参数设置关系如下：
+iptables模式：IPVS和KubeProxyMode都不设置
+ipvs模式: 设置IPVS为true, KubeProxyMode不设置
+ipvs-bpf模式: 设置KubeProxyMode为kube-proxy-bpf
+使用ipvs-bpf的网络模式需要满足以下条件：
+1. 集群版本必须为1.14及以上；
+2. 系统镜像必须是tke定制的镜像如: ubuntu TKE-optimized、centos TKE-optimized；
  * @method boolean getAuditEnabled() 获取是否开启审计开关
  * @method void setAuditEnabled(boolean $AuditEnabled) 设置是否开启审计开关
  * @method string getAuditLogsetId() 获取审计日志上传到的logset日志集
@@ -46,6 +58,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAuditLogTopicId(string $AuditLogTopicId) 设置审计日志上传到的topic
  * @method string getVpcCniType() 获取区分单网卡多IP模式和独立网卡模式
  * @method void setVpcCniType(string $VpcCniType) 设置区分单网卡多IP模式和独立网卡模式
+ * @method string getRuntimeVersion() 获取运行时版本
+ * @method void setRuntimeVersion(string $RuntimeVersion) 设置运行时版本
  */
 class ClusterAdvancedSettings extends AbstractModel
 {
@@ -90,7 +104,13 @@ class ClusterAdvancedSettings extends AbstractModel
     public $DeletionProtection;
 
     /**
-     * @var string 集群的网络代理模型
+     * @var string 集群的网络代理模型，目前tke集群支持的网络代理模式有三种：iptables,ipvs,ipvs+bpf，此参数仅在使用ipvs+bpf模式时使用，三种网络模式的参数设置关系如下：
+iptables模式：IPVS和KubeProxyMode都不设置
+ipvs模式: 设置IPVS为true, KubeProxyMode不设置
+ipvs-bpf模式: 设置KubeProxyMode为kube-proxy-bpf
+使用ipvs-bpf的网络模式需要满足以下条件：
+1. 集群版本必须为1.14及以上；
+2. 系统镜像必须是tke定制的镜像如: ubuntu TKE-optimized、centos TKE-optimized；
      */
     public $KubeProxyMode;
 
@@ -115,6 +135,11 @@ class ClusterAdvancedSettings extends AbstractModel
     public $VpcCniType;
 
     /**
+     * @var string 运行时版本
+     */
+    public $RuntimeVersion;
+
+    /**
      * @param boolean $IPVS 是否启用IPVS
      * @param boolean $AsEnabled 是否启用集群节点自动扩缩容(创建集群流程不支持开启此功能)
      * @param string $ContainerRuntime 集群使用的runtime类型，包括"docker"和"containerd"两种类型，默认为"docker"
@@ -123,11 +148,18 @@ class ClusterAdvancedSettings extends AbstractModel
      * @param string $NetworkType 集群网络类型（包括GR(全局路由)和VPC-CNI两种模式，默认为GR。
      * @param boolean $IsNonStaticIpMode 集群VPC-CNI模式是否为非固定IP，默认: FALSE 固定IP。
      * @param boolean $DeletionProtection 是否启用集群删除保护
-     * @param string $KubeProxyMode 集群的网络代理模型
+     * @param string $KubeProxyMode 集群的网络代理模型，目前tke集群支持的网络代理模式有三种：iptables,ipvs,ipvs+bpf，此参数仅在使用ipvs+bpf模式时使用，三种网络模式的参数设置关系如下：
+iptables模式：IPVS和KubeProxyMode都不设置
+ipvs模式: 设置IPVS为true, KubeProxyMode不设置
+ipvs-bpf模式: 设置KubeProxyMode为kube-proxy-bpf
+使用ipvs-bpf的网络模式需要满足以下条件：
+1. 集群版本必须为1.14及以上；
+2. 系统镜像必须是tke定制的镜像如: ubuntu TKE-optimized、centos TKE-optimized；
      * @param boolean $AuditEnabled 是否开启审计开关
      * @param string $AuditLogsetId 审计日志上传到的logset日志集
      * @param string $AuditLogTopicId 审计日志上传到的topic
      * @param string $VpcCniType 区分单网卡多IP模式和独立网卡模式
+     * @param string $RuntimeVersion 运行时版本
      */
     function __construct()
     {
@@ -193,6 +225,10 @@ class ClusterAdvancedSettings extends AbstractModel
 
         if (array_key_exists("VpcCniType",$param) and $param["VpcCniType"] !== null) {
             $this->VpcCniType = $param["VpcCniType"];
+        }
+
+        if (array_key_exists("RuntimeVersion",$param) and $param["RuntimeVersion"] !== null) {
+            $this->RuntimeVersion = $param["RuntimeVersion"];
         }
     }
 }

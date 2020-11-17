@@ -76,6 +76,10 @@ lc表示最小连接数。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCreateTime() 获取监听器创建时间，Unix时间戳
  * @method void setCreateTime(integer $CreateTime) 设置监听器创建时间，Unix时间戳
+ * @method integer getClientIPMethod() 获取监听器获取客户端 IP 的方式，0表示TOA, 1表示Proxy Protocol
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setClientIPMethod(integer $ClientIPMethod) 设置监听器获取客户端 IP 的方式，0表示TOA, 1表示Proxy Protocol
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TCPListener extends AbstractModel
 {
@@ -164,6 +168,12 @@ lc表示最小连接数。
     public $CreateTime;
 
     /**
+     * @var integer 监听器获取客户端 IP 的方式，0表示TOA, 1表示Proxy Protocol
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ClientIPMethod;
+
+    /**
      * @param string $ListenerId 监听器ID
      * @param string $ListenerName 监听器名称
      * @param integer $Port 监听器端口
@@ -192,6 +202,8 @@ lc表示最小连接数。
      * @param array $RealServerSet 监听器绑定的源站信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CreateTime 监听器创建时间，Unix时间戳
+     * @param integer $ClientIPMethod 监听器获取客户端 IP 的方式，0表示TOA, 1表示Proxy Protocol
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -265,6 +277,10 @@ lc表示最小连接数。
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
             $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("ClientIPMethod",$param) and $param["ClientIPMethod"] !== null) {
+            $this->ClientIPMethod = $param["ClientIPMethod"];
         }
     }
 }

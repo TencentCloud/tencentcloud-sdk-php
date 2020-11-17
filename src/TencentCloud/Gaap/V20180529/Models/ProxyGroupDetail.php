@@ -58,6 +58,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTagSet(array $TagSet) 设置标签列表
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPolicyId() 获取安全策略ID，当设置了安全策略时，存在该字段。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPolicyId(string $PolicyId) 设置安全策略ID，当设置了安全策略时，存在该字段。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getVersion() 获取通道组版本
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVersion(string $Version) 设置通道组版本
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getClientIPMethod() 获取通道获取客户端IP的方式，0表示TOA，1表示Proxy Protocol
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setClientIPMethod(array $ClientIPMethod) 设置通道获取客户端IP的方式，0表示TOA，1表示Proxy Protocol
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ProxyGroupDetail extends AbstractModel
 {
@@ -133,6 +145,24 @@ class ProxyGroupDetail extends AbstractModel
     public $TagSet;
 
     /**
+     * @var string 安全策略ID，当设置了安全策略时，存在该字段。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PolicyId;
+
+    /**
+     * @var string 通道组版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Version;
+
+    /**
+     * @var array 通道获取客户端IP的方式，0表示TOA，1表示Proxy Protocol
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ClientIPMethod;
+
+    /**
      * @param integer $CreateTime 创建时间
      * @param integer $ProjectId 项目ID
      * @param integer $ProxyNum 通道组中通道数量
@@ -151,6 +181,12 @@ class ProxyGroupDetail extends AbstractModel
      * @param boolean $IsOldGroup 是否老通道组，2018-08-03之前创建的通道组为老通道组
      * @param string $GroupId 通道组ID
      * @param array $TagSet 标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $PolicyId 安全策略ID，当设置了安全策略时，存在该字段。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Version 通道组版本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $ClientIPMethod 通道获取客户端IP的方式，0表示TOA，1表示Proxy Protocol
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -222,6 +258,18 @@ class ProxyGroupDetail extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->TagSet, $obj);
             }
+        }
+
+        if (array_key_exists("PolicyId",$param) and $param["PolicyId"] !== null) {
+            $this->PolicyId = $param["PolicyId"];
+        }
+
+        if (array_key_exists("Version",$param) and $param["Version"] !== null) {
+            $this->Version = $param["Version"];
+        }
+
+        if (array_key_exists("ClientIPMethod",$param) and $param["ClientIPMethod"] !== null) {
+            $this->ClientIPMethod = $param["ClientIPMethod"];
         }
     }
 }

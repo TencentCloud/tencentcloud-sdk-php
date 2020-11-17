@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDomainCerts请求参数结构体
  *
- * @method integer getDomainId() 获取域名ID
- * @method void setDomainId(integer $DomainId) 设置域名ID
+ * @method integer getDomainId() 获取域名ID，可通过搜索域名接口获得
+ * @method void setDomainId(integer $DomainId) 设置域名ID，可通过搜索域名接口获得
  */
 class DescribeDomainCertsRequest extends AbstractModel
 {
     /**
-     * @var integer 域名ID
+     * @var integer 域名ID，可通过搜索域名接口获得
      */
     public $DomainId;
 
     /**
-     * @param integer $DomainId 域名ID
+     * @param integer $DomainId 域名ID，可通过搜索域名接口获得
      */
     function __construct()
     {

@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setServerType(integer $ServerType) 设置是否为匹配结果请求服务器资源，0表示否，1表示请求GSE资源
  * @method string getMatchDesc() 获取匹配描述，最长1024
  * @method void setMatchDesc(string $MatchDesc) 设置匹配描述，最长1024
- * @method string getNotifyUrl() 获取只支持https协议
- * @method void setNotifyUrl(string $NotifyUrl) 设置只支持https协议
+ * @method string getNotifyUrl() 获取只支持https 和 http 协议
+ * @method void setNotifyUrl(string $NotifyUrl) 设置只支持https 和 http 协议
  * @method string getServerRegion() 获取游戏服务器队列地域
  * @method void setServerRegion(string $ServerRegion) 设置游戏服务器队列地域
  * @method string getServerQueue() 获取游戏服务器队列
@@ -75,7 +75,7 @@ class CreateMatchRequest extends AbstractModel
     public $MatchDesc;
 
     /**
-     * @var string 只支持https协议
+     * @var string 只支持https 和 http 协议
      */
     public $NotifyUrl;
 
@@ -120,7 +120,7 @@ class CreateMatchRequest extends AbstractModel
      * @param integer $Timeout 超时时间，1-600秒
      * @param integer $ServerType 是否为匹配结果请求服务器资源，0表示否，1表示请求GSE资源
      * @param string $MatchDesc 匹配描述，最长1024
-     * @param string $NotifyUrl 只支持https协议
+     * @param string $NotifyUrl 只支持https 和 http 协议
      * @param string $ServerRegion 游戏服务器队列地域
      * @param string $ServerQueue 游戏服务器队列
      * @param string $CustomPushData 自定义推送数据

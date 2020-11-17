@@ -100,9 +100,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuleName(string $RuleName) 设置规则名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getLogStatus() 获取日志状态，0表示正常，1表示日志集不存在，2表示日志主题不存在，3表示日志集和日志主题都不存在
+ * @method integer getLogStatus() 获取日志状态，0表示正常，1表示日志集不存在，2表示日志主题不存在，3表示日志集和日志主题都不存在。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLogStatus(integer $LogStatus) 设置日志状态，0表示正常，1表示日志集不存在，2表示日志主题不存在，3表示日志集和日志主题都不存在
+ * @method void setLogStatus(integer $LogStatus) 设置日志状态，0表示正常，1表示日志集不存在，2表示日志主题不存在，3表示日志集和日志主题都不存在。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class MatchInfo extends AbstractModel
@@ -244,7 +244,7 @@ class MatchInfo extends AbstractModel
     public $RuleName;
 
     /**
-     * @var integer 日志状态，0表示正常，1表示日志集不存在，2表示日志主题不存在，3表示日志集和日志主题都不存在
+     * @var integer 日志状态，0表示正常，1表示日志集不存在，2表示日志主题不存在，3表示日志集和日志主题都不存在。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LogStatus;
@@ -290,7 +290,7 @@ class MatchInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RuleName 规则名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $LogStatus 日志状态，0表示正常，1表示日志集不存在，2表示日志主题不存在，3表示日志集和日志主题都不存在
+     * @param integer $LogStatus 日志状态，0表示正常，1表示日志集不存在，2表示日志主题不存在，3表示日志集和日志主题都不存在。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

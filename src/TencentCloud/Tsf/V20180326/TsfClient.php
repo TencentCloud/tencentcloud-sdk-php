@@ -134,6 +134,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
  * @method Models\StopTaskBatchResponse StopTaskBatch(Models\StopTaskBatchRequest $req) 停止执行中的任务批次， 非运行中的任务不可调用。
  * @method Models\StopTaskExecuteResponse StopTaskExecute(Models\StopTaskExecuteRequest $req) 停止正在某个节点上执行的任务
  * @method Models\TerminateTaskFlowBatchResponse TerminateTaskFlowBatch(Models\TerminateTaskFlowBatchRequest $req) 停止一个工作流批次
+ * @method Models\UpdateHealthCheckSettingsResponse UpdateHealthCheckSettings(Models\UpdateHealthCheckSettingsRequest $req) 更新健康检查配置
  * @method Models\UpdateRepositoryResponse UpdateRepository(Models\UpdateRepositoryRequest $req) 更新仓库信息
  */
 

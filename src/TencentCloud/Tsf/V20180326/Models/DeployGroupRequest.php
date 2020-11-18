@@ -30,6 +30,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeployDesc(string $DeployDesc) 设置部署应用描述信息
  * @method boolean getForceStart() 获取是否允许强制启动
  * @method void setForceStart(boolean $ForceStart) 设置是否允许强制启动
+ * @method boolean getEnableHealthCheck() 获取是否开启健康检查
+ * @method void setEnableHealthCheck(boolean $EnableHealthCheck) 设置是否开启健康检查
+ * @method HealthCheckSettings getHealthCheckSettings() 获取开启健康检查时，配置健康检查
+ * @method void setHealthCheckSettings(HealthCheckSettings $HealthCheckSettings) 设置开启健康检查时，配置健康检查
+ * @method integer getUpdateType() 获取部署方式，0表示快速更新，1表示滚动更新
+ * @method void setUpdateType(integer $UpdateType) 设置部署方式，0表示快速更新，1表示滚动更新
+ * @method boolean getDeployBetaEnable() 获取是否启用beta批次
+ * @method void setDeployBetaEnable(boolean $DeployBetaEnable) 设置是否启用beta批次
+ * @method array getDeployBatch() 获取滚动发布每个批次参与的实例比率
+ * @method void setDeployBatch(array $DeployBatch) 设置滚动发布每个批次参与的实例比率
+ * @method string getDeployExeMode() 获取滚动发布的执行方式
+ * @method void setDeployExeMode(string $DeployExeMode) 设置滚动发布的执行方式
+ * @method integer getDeployWaitTime() 获取滚动发布每个批次的时间间隔
+ * @method void setDeployWaitTime(integer $DeployWaitTime) 设置滚动发布每个批次的时间间隔
  */
 class DeployGroupRequest extends AbstractModel
 {
@@ -59,11 +73,53 @@ class DeployGroupRequest extends AbstractModel
     public $ForceStart;
 
     /**
+     * @var boolean 是否开启健康检查
+     */
+    public $EnableHealthCheck;
+
+    /**
+     * @var HealthCheckSettings 开启健康检查时，配置健康检查
+     */
+    public $HealthCheckSettings;
+
+    /**
+     * @var integer 部署方式，0表示快速更新，1表示滚动更新
+     */
+    public $UpdateType;
+
+    /**
+     * @var boolean 是否启用beta批次
+     */
+    public $DeployBetaEnable;
+
+    /**
+     * @var array 滚动发布每个批次参与的实例比率
+     */
+    public $DeployBatch;
+
+    /**
+     * @var string 滚动发布的执行方式
+     */
+    public $DeployExeMode;
+
+    /**
+     * @var integer 滚动发布每个批次的时间间隔
+     */
+    public $DeployWaitTime;
+
+    /**
      * @param string $GroupId 部署组ID
      * @param string $PkgId 程序包ID
      * @param string $StartupParameters 部署组启动参数
      * @param string $DeployDesc 部署应用描述信息
      * @param boolean $ForceStart 是否允许强制启动
+     * @param boolean $EnableHealthCheck 是否开启健康检查
+     * @param HealthCheckSettings $HealthCheckSettings 开启健康检查时，配置健康检查
+     * @param integer $UpdateType 部署方式，0表示快速更新，1表示滚动更新
+     * @param boolean $DeployBetaEnable 是否启用beta批次
+     * @param array $DeployBatch 滚动发布每个批次参与的实例比率
+     * @param string $DeployExeMode 滚动发布的执行方式
+     * @param integer $DeployWaitTime 滚动发布每个批次的时间间隔
      */
     function __construct()
     {
@@ -96,6 +152,35 @@ class DeployGroupRequest extends AbstractModel
 
         if (array_key_exists("ForceStart",$param) and $param["ForceStart"] !== null) {
             $this->ForceStart = $param["ForceStart"];
+        }
+
+        if (array_key_exists("EnableHealthCheck",$param) and $param["EnableHealthCheck"] !== null) {
+            $this->EnableHealthCheck = $param["EnableHealthCheck"];
+        }
+
+        if (array_key_exists("HealthCheckSettings",$param) and $param["HealthCheckSettings"] !== null) {
+            $this->HealthCheckSettings = new HealthCheckSettings();
+            $this->HealthCheckSettings->deserialize($param["HealthCheckSettings"]);
+        }
+
+        if (array_key_exists("UpdateType",$param) and $param["UpdateType"] !== null) {
+            $this->UpdateType = $param["UpdateType"];
+        }
+
+        if (array_key_exists("DeployBetaEnable",$param) and $param["DeployBetaEnable"] !== null) {
+            $this->DeployBetaEnable = $param["DeployBetaEnable"];
+        }
+
+        if (array_key_exists("DeployBatch",$param) and $param["DeployBatch"] !== null) {
+            $this->DeployBatch = $param["DeployBatch"];
+        }
+
+        if (array_key_exists("DeployExeMode",$param) and $param["DeployExeMode"] !== null) {
+            $this->DeployExeMode = $param["DeployExeMode"];
+        }
+
+        if (array_key_exists("DeployWaitTime",$param) and $param["DeployWaitTime"] !== null) {
+            $this->DeployWaitTime = $param["DeployWaitTime"];
         }
     }
 }

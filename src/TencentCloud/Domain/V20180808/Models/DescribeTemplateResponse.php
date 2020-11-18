@@ -14,30 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ssl\V20191205\Models;
+namespace TencentCloud\Domain\V20180808\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateCertificate返回参数结构体
+ * DescribeTemplate返回参数结构体
  *
- * @method array getCertificateIds() 获取证书ID列表
- * @method void setCertificateIds(array $CertificateIds) 设置证书ID列表
- * @method array getDealIds() 获取订单号列表
- * @method void setDealIds(array $DealIds) 设置订单号列表
+ * @method TemplateInfo getTemplate() 获取模板信息
+ * @method void setTemplate(TemplateInfo $Template) 设置模板信息
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class CreateCertificateResponse extends AbstractModel
+class DescribeTemplateResponse extends AbstractModel
 {
     /**
-     * @var array 证书ID列表
+     * @var TemplateInfo 模板信息
      */
-    public $CertificateIds;
-
-    /**
-     * @var array 订单号列表
-     */
-    public $DealIds;
+    public $Template;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +38,7 @@ class CreateCertificateResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $CertificateIds 证书ID列表
-     * @param array $DealIds 订单号列表
+     * @param TemplateInfo $Template 模板信息
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,12 +54,9 @@ class CreateCertificateResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CertificateIds",$param) and $param["CertificateIds"] !== null) {
-            $this->CertificateIds = $param["CertificateIds"];
-        }
-
-        if (array_key_exists("DealIds",$param) and $param["DealIds"] !== null) {
-            $this->DealIds = $param["DealIds"];
+        if (array_key_exists("Template",$param) and $param["Template"] !== null) {
+            $this->Template = new TemplateInfo();
+            $this->Template->deserialize($param["Template"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -132,37 +132,41 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOperationState(integer $OperationState) 设置实例执行状态
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getNamespaceId() 获取NamespaceId
+ * @method string getNamespaceId() 获取NamespaceId Ns ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNamespaceId(string $NamespaceId) 设置NamespaceId
+ * @method void setNamespaceId(string $NamespaceId) 设置NamespaceId Ns ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getInstanceZoneId() 获取InstanceZoneId
+ * @method string getInstanceZoneId() 获取InstanceZoneId 可用区ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInstanceZoneId(string $InstanceZoneId) 设置InstanceZoneId
+ * @method void setInstanceZoneId(string $InstanceZoneId) 设置InstanceZoneId 可用区ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getInstanceImportMode() 获取InstanceImportMode
+ * @method string getInstanceImportMode() 获取InstanceImportMode 导入模式
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInstanceImportMode(string $InstanceImportMode) 设置InstanceImportMode
+ * @method void setInstanceImportMode(string $InstanceImportMode) 设置InstanceImportMode 导入模式
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getApplicationType() 获取ApplicationType
+ * @method string getApplicationType() 获取ApplicationType应用类型
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setApplicationType(string $ApplicationType) 设置ApplicationType
+ * @method void setApplicationType(string $ApplicationType) 设置ApplicationType应用类型
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getApplicationResourceType() 获取ApplicationResourceType
+ * @method string getApplicationResourceType() 获取ApplicationResourceType 资源类型
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setApplicationResourceType(string $ApplicationResourceType) 设置ApplicationResourceType
+ * @method void setApplicationResourceType(string $ApplicationResourceType) 设置ApplicationResourceType 资源类型
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getServiceSidecarStatus() 获取ServiceSidecarStatus
+ * @method string getServiceSidecarStatus() 获取sidecar状态
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setServiceSidecarStatus(string $ServiceSidecarStatus) 设置ServiceSidecarStatus
+ * @method void setServiceSidecarStatus(string $ServiceSidecarStatus) 设置sidecar状态
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getGroupName() 获取GroupName
+ * @method string getGroupName() 获取部署组名
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setGroupName(string $GroupName) 设置GroupName
+ * @method void setGroupName(string $GroupName) 设置部署组名
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getNamespaceName() 获取NamespaceName
+ * @method string getNamespaceName() 获取NS名
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNamespaceName(string $NamespaceName) 设置NamespaceName
+ * @method void setNamespaceName(string $NamespaceName) 设置NS名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getReason() 获取健康检查原因
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setReason(string $Reason) 设置健康检查原因
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class Instance extends AbstractModel
@@ -336,52 +340,58 @@ class Instance extends AbstractModel
     public $OperationState;
 
     /**
-     * @var string NamespaceId
+     * @var string NamespaceId Ns ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NamespaceId;
 
     /**
-     * @var string InstanceZoneId
+     * @var string InstanceZoneId 可用区ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceZoneId;
 
     /**
-     * @var string InstanceImportMode
+     * @var string InstanceImportMode 导入模式
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceImportMode;
 
     /**
-     * @var string ApplicationType
+     * @var string ApplicationType应用类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApplicationType;
 
     /**
-     * @var string ApplicationResourceType
+     * @var string ApplicationResourceType 资源类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApplicationResourceType;
 
     /**
-     * @var string ServiceSidecarStatus
+     * @var string sidecar状态
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ServiceSidecarStatus;
 
     /**
-     * @var string GroupName
+     * @var string 部署组名
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupName;
 
     /**
-     * @var string NamespaceName
+     * @var string NS名
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NamespaceName;
+
+    /**
+     * @var string 健康检查原因
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Reason;
 
     /**
      * @param string $InstanceId 机器实例ID
@@ -440,21 +450,23 @@ class Instance extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $OperationState 实例执行状态
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $NamespaceId NamespaceId
+     * @param string $NamespaceId NamespaceId Ns ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $InstanceZoneId InstanceZoneId
+     * @param string $InstanceZoneId InstanceZoneId 可用区ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $InstanceImportMode InstanceImportMode
+     * @param string $InstanceImportMode InstanceImportMode 导入模式
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ApplicationType ApplicationType
+     * @param string $ApplicationType ApplicationType应用类型
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ApplicationResourceType ApplicationResourceType
+     * @param string $ApplicationResourceType ApplicationResourceType 资源类型
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ServiceSidecarStatus ServiceSidecarStatus
+     * @param string $ServiceSidecarStatus sidecar状态
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $GroupName GroupName
+     * @param string $GroupName 部署组名
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $NamespaceName NamespaceName
+     * @param string $NamespaceName NS名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Reason 健康检查原因
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -612,6 +624,10 @@ class Instance extends AbstractModel
 
         if (array_key_exists("NamespaceName",$param) and $param["NamespaceName"] !== null) {
             $this->NamespaceName = $param["NamespaceName"];
+        }
+
+        if (array_key_exists("Reason",$param) and $param["Reason"] !== null) {
+            $this->Reason = $param["Reason"];
         }
     }
 }

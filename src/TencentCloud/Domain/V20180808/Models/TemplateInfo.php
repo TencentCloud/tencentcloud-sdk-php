@@ -22,16 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTemplateId() 获取模板ID
  * @method void setTemplateId(string $TemplateId) 设置模板ID
- * @method string getAuditStatus() 获取认证状态
- * @method void setAuditStatus(string $AuditStatus) 设置认证状态
+ * @method string getAuditStatus() 获取认证状态：未实名认证:NotUpload, 实名审核中:InAudit，已实名认证:Approved，实名审核失败:Reject
+ * @method void setAuditStatus(string $AuditStatus) 设置认证状态：未实名认证:NotUpload, 实名审核中:InAudit，已实名认证:Approved，实名审核失败:Reject
  * @method string getCreatedOn() 获取创建时间
  * @method void setCreatedOn(string $CreatedOn) 设置创建时间
  * @method string getUpdatedOn() 获取更新时间
  * @method void setUpdatedOn(string $UpdatedOn) 设置更新时间
  * @method string getUserUin() 获取用户UIN
  * @method void setUserUin(string $UserUin) 设置用户UIN
- * @method string getIsDefault() 获取是否是默认模板
- * @method void setIsDefault(string $IsDefault) 设置是否是默认模板
+ * @method string getIsDefault() 获取是否是默认模板: 是:yes，否:no
+ * @method void setIsDefault(string $IsDefault) 设置是否是默认模板: 是:yes，否:no
  * @method string getAuditReason() 获取认证失败原因
  * @method void setAuditReason(string $AuditReason) 设置认证失败原因
  * @method CertificateInfo getCertificateInfo() 获取认证信息
@@ -51,7 +51,7 @@ class TemplateInfo extends AbstractModel
     public $TemplateId;
 
     /**
-     * @var string 认证状态
+     * @var string 认证状态：未实名认证:NotUpload, 实名审核中:InAudit，已实名认证:Approved，实名审核失败:Reject
      */
     public $AuditStatus;
 
@@ -71,7 +71,7 @@ class TemplateInfo extends AbstractModel
     public $UserUin;
 
     /**
-     * @var string 是否是默认模板
+     * @var string 是否是默认模板: 是:yes，否:no
      */
     public $IsDefault;
 
@@ -102,11 +102,11 @@ class TemplateInfo extends AbstractModel
 
     /**
      * @param string $TemplateId 模板ID
-     * @param string $AuditStatus 认证状态
+     * @param string $AuditStatus 认证状态：未实名认证:NotUpload, 实名审核中:InAudit，已实名认证:Approved，实名审核失败:Reject
      * @param string $CreatedOn 创建时间
      * @param string $UpdatedOn 更新时间
      * @param string $UserUin 用户UIN
-     * @param string $IsDefault 是否是默认模板
+     * @param string $IsDefault 是否是默认模板: 是:yes，否:no
      * @param string $AuditReason 认证失败原因
      * @param CertificateInfo $CertificateInfo 认证信息
      * @param ContactInfo $ContactInfo 联系人信息

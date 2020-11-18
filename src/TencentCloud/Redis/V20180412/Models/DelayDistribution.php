@@ -20,34 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 延时分布详情
  *
- * @method integer getLadder() 获取分布阶梯
- * @method void setLadder(integer $Ladder) 设置分布阶梯
- * @method integer getSize() 获取大小
- * @method void setSize(integer $Size) 设置大小
- * @method integer getUpdatetime() 获取修改时间
- * @method void setUpdatetime(integer $Updatetime) 设置修改时间
+ * @method integer getLadder() 获取分布阶梯，延时和Ladder值的对应关系：
+[0ms,1ms]: 1；
+[1ms,5ms]: 5；
+[5ms,10ms]: 10；
+[10ms,50ms]: 50；
+[50ms,200ms]: 200；
+[200ms,∞]: -1。
+ * @method void setLadder(integer $Ladder) 设置分布阶梯，延时和Ladder值的对应关系：
+[0ms,1ms]: 1；
+[1ms,5ms]: 5；
+[5ms,10ms]: 10；
+[10ms,50ms]: 50；
+[50ms,200ms]: 200；
+[200ms,∞]: -1。
+ * @method integer getSize() 获取延时处于当前分布阶梯的命令数量，个。
+ * @method void setSize(integer $Size) 设置延时处于当前分布阶梯的命令数量，个。
+ * @method integer getUpdatetime() 获取修改时间。
+ * @method void setUpdatetime(integer $Updatetime) 设置修改时间。
  */
 class DelayDistribution extends AbstractModel
 {
     /**
-     * @var integer 分布阶梯
+     * @var integer 分布阶梯，延时和Ladder值的对应关系：
+[0ms,1ms]: 1；
+[1ms,5ms]: 5；
+[5ms,10ms]: 10；
+[10ms,50ms]: 50；
+[50ms,200ms]: 200；
+[200ms,∞]: -1。
      */
     public $Ladder;
 
     /**
-     * @var integer 大小
+     * @var integer 延时处于当前分布阶梯的命令数量，个。
      */
     public $Size;
 
     /**
-     * @var integer 修改时间
+     * @var integer 修改时间。
      */
     public $Updatetime;
 
     /**
-     * @param integer $Ladder 分布阶梯
-     * @param integer $Size 大小
-     * @param integer $Updatetime 修改时间
+     * @param integer $Ladder 分布阶梯，延时和Ladder值的对应关系：
+[0ms,1ms]: 1；
+[1ms,5ms]: 5；
+[5ms,10ms]: 10；
+[10ms,50ms]: 50；
+[50ms,200ms]: 200；
+[200ms,∞]: -1。
+     * @param integer $Size 延时处于当前分布阶梯的命令数量，个。
+     * @param integer $Updatetime 修改时间。
      */
     function __construct()
     {

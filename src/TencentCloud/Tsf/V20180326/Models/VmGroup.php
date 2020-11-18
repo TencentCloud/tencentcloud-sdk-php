@@ -136,6 +136,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeployWaitTime(integer $DeployWaitTime) 设置滚动发布的每个批次的等待时间
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getEnableHealthCheck() 获取是否开启了健康检查
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEnableHealthCheck(boolean $EnableHealthCheck) 设置是否开启了健康检查
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method HealthCheckSettings getHealthCheckSettings() 获取健康检查配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHealthCheckSettings(HealthCheckSettings $HealthCheckSettings) 设置健康检查配置
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class VmGroup extends AbstractModel
 {
@@ -314,6 +322,18 @@ class VmGroup extends AbstractModel
     public $DeployWaitTime;
 
     /**
+     * @var boolean 是否开启了健康检查
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EnableHealthCheck;
+
+    /**
+     * @var HealthCheckSettings 健康检查配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $HealthCheckSettings;
+
+    /**
      * @param string $GroupId 部署组ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GroupName 部署组名称
@@ -371,6 +391,10 @@ class VmGroup extends AbstractModel
      * @param string $DeployExeMode 滚动发布的批次执行方式
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DeployWaitTime 滚动发布的每个批次的等待时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $EnableHealthCheck 是否开启了健康检查
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HealthCheckSettings $HealthCheckSettings 健康检查配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -500,6 +524,15 @@ class VmGroup extends AbstractModel
 
         if (array_key_exists("DeployWaitTime",$param) and $param["DeployWaitTime"] !== null) {
             $this->DeployWaitTime = $param["DeployWaitTime"];
+        }
+
+        if (array_key_exists("EnableHealthCheck",$param) and $param["EnableHealthCheck"] !== null) {
+            $this->EnableHealthCheck = $param["EnableHealthCheck"];
+        }
+
+        if (array_key_exists("HealthCheckSettings",$param) and $param["HealthCheckSettings"] !== null) {
+            $this->HealthCheckSettings = new HealthCheckSettings();
+            $this->HealthCheckSettings->deserialize($param["HealthCheckSettings"]);
         }
     }
 }

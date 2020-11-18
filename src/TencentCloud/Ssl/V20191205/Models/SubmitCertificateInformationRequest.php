@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCertificateDomain(string $CertificateDomain) 设置绑定证书的域名。
  * @method array getDomainList() 获取上传的域名数组（多域名证书可以上传）。
  * @method void setDomainList(array $DomainList) 设置上传的域名数组（多域名证书可以上传）。
- * @method string getKeyPassword() 获取私钥密码。
- * @method void setKeyPassword(string $KeyPassword) 设置私钥密码。
+ * @method string getKeyPassword() 获取私钥密码（非必填）。
+ * @method void setKeyPassword(string $KeyPassword) 设置私钥密码（非必填）。
  * @method string getOrganizationName() 获取公司名称。
  * @method void setOrganizationName(string $OrganizationName) 设置公司名称。
  * @method string getOrganizationDivision() 获取部门名称。
@@ -50,8 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPhoneAreaCode(string $PhoneAreaCode) 设置公司座机区号。
  * @method string getPhoneNumber() 获取公司座机号码。
  * @method void setPhoneNumber(string $PhoneNumber) 设置公司座机号码。
- * @method string getVerifyType() 获取证书验证方式。
- * @method void setVerifyType(string $VerifyType) 设置证书验证方式。
+ * @method string getVerifyType() 获取证书验证方式。验证类型：DNS_AUTO = 自动DNS验证（仅支持在腾讯云解析且解析状态正常的域名使用该验证类型），DNS = 手动DNS验证，FILE = 文件验证。
+ * @method void setVerifyType(string $VerifyType) 设置证书验证方式。验证类型：DNS_AUTO = 自动DNS验证（仅支持在腾讯云解析且解析状态正常的域名使用该验证类型），DNS = 手动DNS验证，FILE = 文件验证。
  * @method string getAdminFirstName() 获取管理人名。
  * @method void setAdminFirstName(string $AdminFirstName) 设置管理人名。
  * @method string getAdminLastName() 获取管理人姓。
@@ -101,7 +101,7 @@ class SubmitCertificateInformationRequest extends AbstractModel
     public $DomainList;
 
     /**
-     * @var string 私钥密码。
+     * @var string 私钥密码（非必填）。
      */
     public $KeyPassword;
 
@@ -151,7 +151,7 @@ class SubmitCertificateInformationRequest extends AbstractModel
     public $PhoneNumber;
 
     /**
-     * @var string 证书验证方式。
+     * @var string 证书验证方式。验证类型：DNS_AUTO = 自动DNS验证（仅支持在腾讯云解析且解析状态正常的域名使用该验证类型），DNS = 手动DNS验证，FILE = 文件验证。
      */
     public $VerifyType;
 
@@ -211,7 +211,7 @@ class SubmitCertificateInformationRequest extends AbstractModel
      * @param string $CsrContent 上传的 CSR 内容。
      * @param string $CertificateDomain 绑定证书的域名。
      * @param array $DomainList 上传的域名数组（多域名证书可以上传）。
-     * @param string $KeyPassword 私钥密码。
+     * @param string $KeyPassword 私钥密码（非必填）。
      * @param string $OrganizationName 公司名称。
      * @param string $OrganizationDivision 部门名称。
      * @param string $OrganizationAddress 公司详细地址。
@@ -221,7 +221,7 @@ class SubmitCertificateInformationRequest extends AbstractModel
      * @param string $PostalCode 公司邮编。
      * @param string $PhoneAreaCode 公司座机区号。
      * @param string $PhoneNumber 公司座机号码。
-     * @param string $VerifyType 证书验证方式。
+     * @param string $VerifyType 证书验证方式。验证类型：DNS_AUTO = 自动DNS验证（仅支持在腾讯云解析且解析状态正常的域名使用该验证类型），DNS = 手动DNS验证，FILE = 文件验证。
      * @param string $AdminFirstName 管理人名。
      * @param string $AdminLastName 管理人姓。
      * @param string $AdminPhoneNum 管理人手机号码。

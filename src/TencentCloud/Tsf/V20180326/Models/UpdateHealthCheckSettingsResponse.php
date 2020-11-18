@@ -14,30 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ssl\V20191205\Models;
+namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateCertificate返回参数结构体
+ * UpdateHealthCheckSettings返回参数结构体
  *
- * @method array getCertificateIds() 获取证书ID列表
- * @method void setCertificateIds(array $CertificateIds) 设置证书ID列表
- * @method array getDealIds() 获取订单号列表
- * @method void setDealIds(array $DealIds) 设置订单号列表
+ * @method boolean getResult() 获取更新健康检查配置操作是否成功。
+true：操作成功。
+false：操作失败。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setResult(boolean $Result) 设置更新健康检查配置操作是否成功。
+true：操作成功。
+false：操作失败。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class CreateCertificateResponse extends AbstractModel
+class UpdateHealthCheckSettingsResponse extends AbstractModel
 {
     /**
-     * @var array 证书ID列表
+     * @var boolean 更新健康检查配置操作是否成功。
+true：操作成功。
+false：操作失败。
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $CertificateIds;
-
-    /**
-     * @var array 订单号列表
-     */
-    public $DealIds;
+    public $Result;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +47,10 @@ class CreateCertificateResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $CertificateIds 证书ID列表
-     * @param array $DealIds 订单号列表
+     * @param boolean $Result 更新健康检查配置操作是否成功。
+true：操作成功。
+false：操作失败。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,12 +66,8 @@ class CreateCertificateResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CertificateIds",$param) and $param["CertificateIds"] !== null) {
-            $this->CertificateIds = $param["CertificateIds"];
-        }
-
-        if (array_key_exists("DealIds",$param) and $param["DealIds"] !== null) {
-            $this->DealIds = $param["DealIds"];
+        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
+            $this->Result = $param["Result"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

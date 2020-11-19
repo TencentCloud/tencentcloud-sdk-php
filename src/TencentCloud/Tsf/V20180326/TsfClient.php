@@ -39,6 +39,7 @@ use TencentCloud\Tsf\V20180326\Models as Models;
  * @method Models\CreateRepositoryResponse CreateRepository(Models\CreateRepositoryRequest $req) 创建仓库
  * @method Models\CreateServerlessGroupResponse CreateServerlessGroup(Models\CreateServerlessGroupRequest $req) 创建Serverless部署组
  * @method Models\CreateTaskResponse CreateTask(Models\CreateTaskRequest $req) 创建任务
+ * @method Models\CreateTaskFlowResponse CreateTaskFlow(Models\CreateTaskFlowRequest $req) 创建工作流
  * @method Models\DeleteApplicationResponse DeleteApplication(Models\DeleteApplicationRequest $req) 删除应用
  * @method Models\DeleteConfigResponse DeleteConfig(Models\DeleteConfigRequest $req) 删除配置项
  * @method Models\DeleteContainerGroupResponse DeleteContainerGroup(Models\DeleteContainerGroupRequest $req) 删除容器部署组
@@ -114,10 +115,12 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
  * @method Models\ModifyLaneResponse ModifyLane(Models\ModifyLaneRequest $req) 更新泳道信息
  * @method Models\ModifyLaneRuleResponse ModifyLaneRule(Models\ModifyLaneRuleRequest $req) 更新泳道规则
  * @method Models\ModifyMicroserviceResponse ModifyMicroservice(Models\ModifyMicroserviceRequest $req) 修改微服务详情
+ * @method Models\ModifyTaskResponse ModifyTask(Models\ModifyTaskRequest $req) 修改任务
  * @method Models\ModifyUploadInfoResponse ModifyUploadInfo(Models\ModifyUploadInfoRequest $req) 调用该接口和COS的上传接口后，需要调用此接口更新TSF中保存的程序包状态。
 调用此接口完成后，才标志上传包流程结束。
  * @method Models\RedoTaskResponse RedoTask(Models\RedoTaskRequest $req) 重新执行任务
  * @method Models\RedoTaskBatchResponse RedoTaskBatch(Models\RedoTaskBatchRequest $req) 重新执行任务批次
+ * @method Models\RedoTaskExecuteResponse RedoTaskExecute(Models\RedoTaskExecuteRequest $req) 重新执行在某个节点上执行任务。
  * @method Models\RedoTaskFlowBatchResponse RedoTaskFlowBatch(Models\RedoTaskFlowBatchRequest $req) 重新执行工作流批次
  * @method Models\ReleaseConfigResponse ReleaseConfig(Models\ReleaseConfigRequest $req) 发布配置
  * @method Models\ReleasePublicConfigResponse ReleasePublicConfig(Models\ReleasePublicConfigRequest $req) 发布公共配置

@@ -28,6 +28,8 @@ delete：刷新全部资源
  * @method void setFlushType(string $FlushType) 设置刷新类型
 flush：刷新产生更新的资源
 delete：刷新全部资源
+ * @method boolean getUrlEncode() 获取是否对中文字符进行编码后刷新
+ * @method void setUrlEncode(boolean $UrlEncode) 设置是否对中文字符进行编码后刷新
  */
 class PurgePathCacheRequest extends AbstractModel
 {
@@ -44,10 +46,16 @@ delete：刷新全部资源
     public $FlushType;
 
     /**
+     * @var boolean 是否对中文字符进行编码后刷新
+     */
+    public $UrlEncode;
+
+    /**
      * @param array $Paths 目录列表，需要包含协议头部 http:// 或 https://
      * @param string $FlushType 刷新类型
 flush：刷新产生更新的资源
 delete：刷新全部资源
+     * @param boolean $UrlEncode 是否对中文字符进行编码后刷新
      */
     function __construct()
     {
@@ -68,6 +76,10 @@ delete：刷新全部资源
 
         if (array_key_exists("FlushType",$param) and $param["FlushType"] !== null) {
             $this->FlushType = $param["FlushType"];
+        }
+
+        if (array_key_exists("UrlEncode",$param) and $param["UrlEncode"] !== null) {
+            $this->UrlEncode = $param["UrlEncode"];
         }
     }
 }

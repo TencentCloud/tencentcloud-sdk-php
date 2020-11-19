@@ -24,9 +24,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAccessType(integer $AccessType) 设置0:公网 1:集群内访问 2：NodePort
 注意：此字段可能返回 null，表示取不到有效值。
- * @method ProtocolPort getProtocolPorts() 获取容器端口映射
+ * @method array getProtocolPorts() 获取容器端口映射
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setProtocolPorts(ProtocolPort $ProtocolPorts) 设置容器端口映射
+ * @method void setProtocolPorts(array $ProtocolPorts) 设置容器端口映射
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSubnetId() 获取子网ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -42,7 +42,7 @@ class ServiceSetting extends AbstractModel
     public $AccessType;
 
     /**
-     * @var ProtocolPort 容器端口映射
+     * @var array 容器端口映射
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProtocolPorts;
@@ -56,7 +56,7 @@ class ServiceSetting extends AbstractModel
     /**
      * @param integer $AccessType 0:公网 1:集群内访问 2：NodePort
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ProtocolPort $ProtocolPorts 容器端口映射
+     * @param array $ProtocolPorts 容器端口映射
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubnetId 子网ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -79,8 +79,12 @@ class ServiceSetting extends AbstractModel
         }
 
         if (array_key_exists("ProtocolPorts",$param) and $param["ProtocolPorts"] !== null) {
-            $this->ProtocolPorts = new ProtocolPort();
-            $this->ProtocolPorts->deserialize($param["ProtocolPorts"]);
+            $this->ProtocolPorts = [];
+            foreach ($param["ProtocolPorts"] as $key => $value){
+                $obj = new ProtocolPort();
+                $obj->deserialize($value);
+                array_push($this->ProtocolPorts, $obj);
+            }
         }
 
         if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {

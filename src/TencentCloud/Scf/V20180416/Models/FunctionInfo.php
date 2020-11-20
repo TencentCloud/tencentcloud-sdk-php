@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFunctionId(string $FunctionId) 设置函数ID
  * @method string getNamespace() 获取命名空间
  * @method void setNamespace(string $Namespace) 设置命名空间
- * @method string getStatus() 获取函数状态
- * @method void setStatus(string $Status) 设置函数状态
+ * @method string getStatus() 获取函数状态，状态值及流转[参考此处](https://cloud.tencent.com/document/product/583/47175)
+ * @method void setStatus(string $Status) 设置函数状态，状态值及流转[参考此处](https://cloud.tencent.com/document/product/583/47175)
  * @method string getStatusDesc() 获取函数状态详情
  * @method void setStatusDesc(string $StatusDesc) 设置函数状态详情
  * @method string getDescription() 获取函数描述
@@ -42,6 +42,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTags(array $Tags) 设置函数标签
  * @method string getType() 获取函数类型，取值为 HTTP 或者 Event
  * @method void setType(string $Type) 设置函数类型，取值为 HTTP 或者 Event
+ * @method array getStatusReasons() 获取函数状态失败原因
+ * @method void setStatusReasons(array $StatusReasons) 设置函数状态失败原因
+ * @method integer getTotalProvisionedConcurrencyMem() 获取函数所有版本预置并发内存总和
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTotalProvisionedConcurrencyMem(integer $TotalProvisionedConcurrencyMem) 设置函数所有版本预置并发内存总和
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getReservedConcurrencyMem() 获取函数并发保留内存
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setReservedConcurrencyMem(integer $ReservedConcurrencyMem) 设置函数并发保留内存
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class FunctionInfo extends AbstractModel
 {
@@ -76,7 +86,7 @@ class FunctionInfo extends AbstractModel
     public $Namespace;
 
     /**
-     * @var string 函数状态
+     * @var string 函数状态，状态值及流转[参考此处](https://cloud.tencent.com/document/product/583/47175)
      */
     public $Status;
 
@@ -101,17 +111,39 @@ class FunctionInfo extends AbstractModel
     public $Type;
 
     /**
+     * @var array 函数状态失败原因
+     */
+    public $StatusReasons;
+
+    /**
+     * @var integer 函数所有版本预置并发内存总和
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TotalProvisionedConcurrencyMem;
+
+    /**
+     * @var integer 函数并发保留内存
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ReservedConcurrencyMem;
+
+    /**
      * @param string $ModTime 修改时间
      * @param string $AddTime 创建时间
      * @param string $Runtime 运行时
      * @param string $FunctionName 函数名称
      * @param string $FunctionId 函数ID
      * @param string $Namespace 命名空间
-     * @param string $Status 函数状态
+     * @param string $Status 函数状态，状态值及流转[参考此处](https://cloud.tencent.com/document/product/583/47175)
      * @param string $StatusDesc 函数状态详情
      * @param string $Description 函数描述
      * @param array $Tags 函数标签
      * @param string $Type 函数类型，取值为 HTTP 或者 Event
+     * @param array $StatusReasons 函数状态失败原因
+     * @param integer $TotalProvisionedConcurrencyMem 函数所有版本预置并发内存总和
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ReservedConcurrencyMem 函数并发保留内存
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -173,6 +205,23 @@ class FunctionInfo extends AbstractModel
 
         if (array_key_exists("Type",$param) and $param["Type"] !== null) {
             $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("StatusReasons",$param) and $param["StatusReasons"] !== null) {
+            $this->StatusReasons = [];
+            foreach ($param["StatusReasons"] as $key => $value){
+                $obj = new StatusReason();
+                $obj->deserialize($value);
+                array_push($this->StatusReasons, $obj);
+            }
+        }
+
+        if (array_key_exists("TotalProvisionedConcurrencyMem",$param) and $param["TotalProvisionedConcurrencyMem"] !== null) {
+            $this->TotalProvisionedConcurrencyMem = $param["TotalProvisionedConcurrencyMem"];
+        }
+
+        if (array_key_exists("ReservedConcurrencyMem",$param) and $param["ReservedConcurrencyMem"] !== null) {
+            $this->ReservedConcurrencyMem = $param["ReservedConcurrencyMem"];
         }
     }
 }

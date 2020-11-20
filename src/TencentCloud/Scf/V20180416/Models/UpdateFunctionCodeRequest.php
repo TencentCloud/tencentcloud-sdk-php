@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPublish(string $Publish) 设置在更新时是否同步发布新版本，默认为：FALSE，不发布
  * @method Code getCode() 获取函数代码
  * @method void setCode(Code $Code) 设置函数代码
- * @method string getCodeSource() 获取代码来源方式，支持以下'ZipFile', 'Cos', 'Inline', 'TempCos', 'Git' 之一，使用Git来源必须指定此字段
- * @method void setCodeSource(string $CodeSource) 设置代码来源方式，支持以下'ZipFile', 'Cos', 'Inline', 'TempCos', 'Git' 之一，使用Git来源必须指定此字段
+ * @method string getCodeSource() 获取代码来源方式，支持 ZipFile, Cos, Inline 之一
+ * @method void setCodeSource(string $CodeSource) 设置代码来源方式，支持 ZipFile, Cos, Inline 之一
  */
 class UpdateFunctionCodeRequest extends AbstractModel
 {
@@ -96,7 +96,7 @@ class UpdateFunctionCodeRequest extends AbstractModel
     public $Code;
 
     /**
-     * @var string 代码来源方式，支持以下'ZipFile', 'Cos', 'Inline', 'TempCos', 'Git' 之一，使用Git来源必须指定此字段
+     * @var string 代码来源方式，支持 ZipFile, Cos, Inline 之一
      */
     public $CodeSource;
 
@@ -111,7 +111,7 @@ class UpdateFunctionCodeRequest extends AbstractModel
      * @param string $EnvId 函数所属环境
      * @param string $Publish 在更新时是否同步发布新版本，默认为：FALSE，不发布
      * @param Code $Code 函数代码
-     * @param string $CodeSource 代码来源方式，支持以下'ZipFile', 'Cos', 'Inline', 'TempCos', 'Git' 之一，使用Git来源必须指定此字段
+     * @param string $CodeSource 代码来源方式，支持 ZipFile, Cos, Inline 之一
      */
     function __construct()
     {

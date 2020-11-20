@@ -202,6 +202,10 @@ OPEN：公网属性， INTERNAL：内网属性。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMixIpTarget(boolean $MixIpTarget) 设置开启IPv6FullChain负载均衡7层监听器支持混绑IPv4/IPv6目标功能。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getZones() 获取私有网络内网负载均衡，就近接入模式下规则所落在的可用区
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setZones(array $Zones) 设置私有网络内网负载均衡，就近接入模式下规则所落在的可用区
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class LoadBalancer extends AbstractModel
 {
@@ -485,6 +489,12 @@ OPEN：公网属性， INTERNAL：内网属性。
     public $MixIpTarget;
 
     /**
+     * @var array 私有网络内网负载均衡，就近接入模式下规则所落在的可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Zones;
+
+    /**
      * @param string $LoadBalancerId 负载均衡实例 ID。
      * @param string $LoadBalancerName 负载均衡实例的名称。
      * @param string $LoadBalancerType 负载均衡实例的网络类型：
@@ -575,6 +585,8 @@ OPEN：公网属性， INTERNAL：内网属性。
      * @param string $ClusterTag 7层独占标签。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $MixIpTarget 开启IPv6FullChain负载均衡7层监听器支持混绑IPv4/IPv6目标功能。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Zones 私有网络内网负载均衡，就近接入模式下规则所落在的可用区
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -797,6 +809,10 @@ OPEN：公网属性， INTERNAL：内网属性。
 
         if (array_key_exists("MixIpTarget",$param) and $param["MixIpTarget"] !== null) {
             $this->MixIpTarget = $param["MixIpTarget"];
+        }
+
+        if (array_key_exists("Zones",$param) and $param["Zones"] !== null) {
+            $this->Zones = $param["Zones"];
         }
     }
 }

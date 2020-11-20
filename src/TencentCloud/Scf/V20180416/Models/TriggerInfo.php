@@ -40,6 +40,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAddTime(string $AddTime) 设置触发器创建时间
  * @method string getModTime() 获取触发器最后修改时间
  * @method void setModTime(string $ModTime) 设置触发器最后修改时间
+ * @method string getResourceId() 获取触发器最小资源ID
+ * @method void setResourceId(string $ResourceId) 设置触发器最小资源ID
+ * @method string getBindStatus() 获取触发器和云函数绑定状态
+ * @method void setBindStatus(string $BindStatus) 设置触发器和云函数绑定状态
+ * @method string getTriggerAttribute() 获取触发器类型，双向表示两侧控制台均可操作，单向表示SCF控制台单向创建
+ * @method void setTriggerAttribute(string $TriggerAttribute) 设置触发器类型，双向表示两侧控制台均可操作，单向表示SCF控制台单向创建
  */
 class TriggerInfo extends AbstractModel
 {
@@ -90,6 +96,21 @@ class TriggerInfo extends AbstractModel
     public $ModTime;
 
     /**
+     * @var string 触发器最小资源ID
+     */
+    public $ResourceId;
+
+    /**
+     * @var string 触发器和云函数绑定状态
+     */
+    public $BindStatus;
+
+    /**
+     * @var string 触发器类型，双向表示两侧控制台均可操作，单向表示SCF控制台单向创建
+     */
+    public $TriggerAttribute;
+
+    /**
      * @param integer $Enable 使能开关
      * @param string $Qualifier 函数版本或别名
      * @param string $TriggerName 触发器名称
@@ -100,6 +121,9 @@ class TriggerInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AddTime 触发器创建时间
      * @param string $ModTime 触发器最后修改时间
+     * @param string $ResourceId 触发器最小资源ID
+     * @param string $BindStatus 触发器和云函数绑定状态
+     * @param string $TriggerAttribute 触发器类型，双向表示两侧控制台均可操作，单向表示SCF控制台单向创建
      */
     function __construct()
     {
@@ -148,6 +172,18 @@ class TriggerInfo extends AbstractModel
 
         if (array_key_exists("ModTime",$param) and $param["ModTime"] !== null) {
             $this->ModTime = $param["ModTime"];
+        }
+
+        if (array_key_exists("ResourceId",$param) and $param["ResourceId"] !== null) {
+            $this->ResourceId = $param["ResourceId"];
+        }
+
+        if (array_key_exists("BindStatus",$param) and $param["BindStatus"] !== null) {
+            $this->BindStatus = $param["BindStatus"];
+        }
+
+        if (array_key_exists("TriggerAttribute",$param) and $param["TriggerAttribute"] !== null) {
+            $this->TriggerAttribute = $param["TriggerAttribute"];
         }
     }
 }

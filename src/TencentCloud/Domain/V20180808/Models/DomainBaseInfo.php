@@ -112,12 +112,16 @@ RedemptionDoing：赎回中
 TransferPending：待转入中
 TransferTransing：转入中
 TransferFailed：转入失败
- * @method string getRegistrarType() 获取注册类型
-epp （腾讯云自有域名）
-xinnet (新网域名)
- * @method void setRegistrarType(string $RegistrarType) 设置注册类型
-epp （腾讯云自有域名）
-xinnet (新网域名)
+ * @method string getRegistrarType() 获取注册商类型
+epp: DNSPod, Inc.（烟台帝思普网络科技有限公司）
+qcloud: Tencent Cloud Computing (Beijing) Limited Liability Company（腾讯云计算（北京）有限责任公司）
+yunxun: Guangzhou Yunxun Information Technology Co., Ltd.（广州云讯信息科技有限公司）
+xinnet: Xin Net Technology Corporation（北京新网数码信息技术有限公司）
+ * @method void setRegistrarType(string $RegistrarType) 设置注册商类型
+epp: DNSPod, Inc.（烟台帝思普网络科技有限公司）
+qcloud: Tencent Cloud Computing (Beijing) Limited Liability Company（腾讯云计算（北京）有限责任公司）
+yunxun: Guangzhou Yunxun Information Technology Co., Ltd.（广州云讯信息科技有限公司）
+xinnet: Xin Net Technology Corporation（北京新网数码信息技术有限公司）
  */
 class DomainBaseInfo extends AbstractModel
 {
@@ -208,9 +212,11 @@ TransferFailed：转入失败
     public $BuyStatus;
 
     /**
-     * @var string 注册类型
-epp （腾讯云自有域名）
-xinnet (新网域名)
+     * @var string 注册商类型
+epp: DNSPod, Inc.（烟台帝思普网络科技有限公司）
+qcloud: Tencent Cloud Computing (Beijing) Limited Liability Company（腾讯云计算（北京）有限责任公司）
+yunxun: Guangzhou Yunxun Information Technology Co., Ltd.（广州云讯信息科技有限公司）
+xinnet: Xin Net Technology Corporation（北京新网数码信息技术有限公司）
      */
     public $RegistrarType;
 
@@ -261,9 +267,11 @@ RedemptionDoing：赎回中
 TransferPending：待转入中
 TransferTransing：转入中
 TransferFailed：转入失败
-     * @param string $RegistrarType 注册类型
-epp （腾讯云自有域名）
-xinnet (新网域名)
+     * @param string $RegistrarType 注册商类型
+epp: DNSPod, Inc.（烟台帝思普网络科技有限公司）
+qcloud: Tencent Cloud Computing (Beijing) Limited Liability Company（腾讯云计算（北京）有限责任公司）
+yunxun: Guangzhou Yunxun Information Technology Co., Ltd.（广州云讯信息科技有限公司）
+xinnet: Xin Net Technology Corporation（北京新网数码信息技术有限公司）
      */
     function __construct()
     {

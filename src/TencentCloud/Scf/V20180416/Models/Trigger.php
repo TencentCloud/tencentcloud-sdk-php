@@ -36,6 +36,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCustomArgument(string $CustomArgument) 设置客户自定义参数
  * @method string getAvailableStatus() 获取触发器状态
  * @method void setAvailableStatus(string $AvailableStatus) 设置触发器状态
+ * @method string getResourceId() 获取触发器最小资源ID
+ * @method void setResourceId(string $ResourceId) 设置触发器最小资源ID
+ * @method string getBindStatus() 获取触发器和云函数绑定状态
+ * @method void setBindStatus(string $BindStatus) 设置触发器和云函数绑定状态
+ * @method string getTriggerAttribute() 获取触发器类型，双向表示两侧控制台均可操作，单向表示SCF控制台单向创建
+ * @method void setTriggerAttribute(string $TriggerAttribute) 设置触发器类型，双向表示两侧控制台均可操作，单向表示SCF控制台单向创建
  */
 class Trigger extends AbstractModel
 {
@@ -80,6 +86,21 @@ class Trigger extends AbstractModel
     public $AvailableStatus;
 
     /**
+     * @var string 触发器最小资源ID
+     */
+    public $ResourceId;
+
+    /**
+     * @var string 触发器和云函数绑定状态
+     */
+    public $BindStatus;
+
+    /**
+     * @var string 触发器类型，双向表示两侧控制台均可操作，单向表示SCF控制台单向创建
+     */
+    public $TriggerAttribute;
+
+    /**
      * @param string $ModTime 触发器最后修改时间
      * @param string $Type 触发器类型
      * @param string $TriggerDesc 触发器详细配置
@@ -88,6 +109,9 @@ class Trigger extends AbstractModel
      * @param integer $Enable 使能开关
      * @param string $CustomArgument 客户自定义参数
      * @param string $AvailableStatus 触发器状态
+     * @param string $ResourceId 触发器最小资源ID
+     * @param string $BindStatus 触发器和云函数绑定状态
+     * @param string $TriggerAttribute 触发器类型，双向表示两侧控制台均可操作，单向表示SCF控制台单向创建
      */
     function __construct()
     {
@@ -132,6 +156,18 @@ class Trigger extends AbstractModel
 
         if (array_key_exists("AvailableStatus",$param) and $param["AvailableStatus"] !== null) {
             $this->AvailableStatus = $param["AvailableStatus"];
+        }
+
+        if (array_key_exists("ResourceId",$param) and $param["ResourceId"] !== null) {
+            $this->ResourceId = $param["ResourceId"];
+        }
+
+        if (array_key_exists("BindStatus",$param) and $param["BindStatus"] !== null) {
+            $this->BindStatus = $param["BindStatus"];
+        }
+
+        if (array_key_exists("TriggerAttribute",$param) and $param["TriggerAttribute"] !== null) {
+            $this->TriggerAttribute = $param["TriggerAttribute"];
         }
     }
 }

@@ -22,20 +22,20 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取实例ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
  * @method void setInstanceId(string $InstanceId) 设置实例ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
- * @method array getMonday() 获取星期一的可维护时间段，其中每一个时间段的格式形如：10:00-12:00；起始时间按半个小时对齐；最短半个小时，最长三个小时；最多设置两个时间段；下同。
- * @method void setMonday(array $Monday) 设置星期一的可维护时间段，其中每一个时间段的格式形如：10:00-12:00；起始时间按半个小时对齐；最短半个小时，最长三个小时；最多设置两个时间段；下同。
- * @method array getTuesday() 获取星期二的可维护时间窗口。
- * @method void setTuesday(array $Tuesday) 设置星期二的可维护时间窗口。
- * @method array getWednesday() 获取星期三的可维护时间窗口。
- * @method void setWednesday(array $Wednesday) 设置星期三的可维护时间窗口。
- * @method array getThursday() 获取星期四的可维护时间窗口。
- * @method void setThursday(array $Thursday) 设置星期四的可维护时间窗口。
- * @method array getFriday() 获取星期五的可维护时间窗口。
- * @method void setFriday(array $Friday) 设置星期五的可维护时间窗口。
- * @method array getSaturday() 获取星期六的可维护时间窗口。
- * @method void setSaturday(array $Saturday) 设置星期六的可维护时间窗口。
- * @method array getSunday() 获取星期日的可维护时间窗口。
- * @method void setSunday(array $Sunday) 设置星期日的可维护时间窗口。
+ * @method array getMonday() 获取星期一的可维护时间段，其中每一个时间段的格式形如：10:00-12:00；起始时间按半个小时对齐；最短半个小时，最长三个小时；可设置多个时间段。 一周中应至少设置一天的时间窗。下同。
+ * @method void setMonday(array $Monday) 设置星期一的可维护时间段，其中每一个时间段的格式形如：10:00-12:00；起始时间按半个小时对齐；最短半个小时，最长三个小时；可设置多个时间段。 一周中应至少设置一天的时间窗。下同。
+ * @method array getTuesday() 获取星期二的可维护时间窗口。 一周中应至少设置一天的时间窗。
+ * @method void setTuesday(array $Tuesday) 设置星期二的可维护时间窗口。 一周中应至少设置一天的时间窗。
+ * @method array getWednesday() 获取星期三的可维护时间窗口。 一周中应至少设置一天的时间窗。
+ * @method void setWednesday(array $Wednesday) 设置星期三的可维护时间窗口。 一周中应至少设置一天的时间窗。
+ * @method array getThursday() 获取星期四的可维护时间窗口。 一周中应至少设置一天的时间窗。
+ * @method void setThursday(array $Thursday) 设置星期四的可维护时间窗口。 一周中应至少设置一天的时间窗。
+ * @method array getFriday() 获取星期五的可维护时间窗口。 一周中应至少设置一天的时间窗。
+ * @method void setFriday(array $Friday) 设置星期五的可维护时间窗口。 一周中应至少设置一天的时间窗。
+ * @method array getSaturday() 获取星期六的可维护时间窗口。 一周中应至少设置一天的时间窗。
+ * @method void setSaturday(array $Saturday) 设置星期六的可维护时间窗口。 一周中应至少设置一天的时间窗。
+ * @method array getSunday() 获取星期日的可维护时间窗口。 一周中应至少设置一天的时间窗。
+ * @method void setSunday(array $Sunday) 设置星期日的可维护时间窗口。 一周中应至少设置一天的时间窗。
  */
 class AddTimeWindowRequest extends AbstractModel
 {
@@ -45,49 +45,49 @@ class AddTimeWindowRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var array 星期一的可维护时间段，其中每一个时间段的格式形如：10:00-12:00；起始时间按半个小时对齐；最短半个小时，最长三个小时；最多设置两个时间段；下同。
+     * @var array 星期一的可维护时间段，其中每一个时间段的格式形如：10:00-12:00；起始时间按半个小时对齐；最短半个小时，最长三个小时；可设置多个时间段。 一周中应至少设置一天的时间窗。下同。
      */
     public $Monday;
 
     /**
-     * @var array 星期二的可维护时间窗口。
+     * @var array 星期二的可维护时间窗口。 一周中应至少设置一天的时间窗。
      */
     public $Tuesday;
 
     /**
-     * @var array 星期三的可维护时间窗口。
+     * @var array 星期三的可维护时间窗口。 一周中应至少设置一天的时间窗。
      */
     public $Wednesday;
 
     /**
-     * @var array 星期四的可维护时间窗口。
+     * @var array 星期四的可维护时间窗口。 一周中应至少设置一天的时间窗。
      */
     public $Thursday;
 
     /**
-     * @var array 星期五的可维护时间窗口。
+     * @var array 星期五的可维护时间窗口。 一周中应至少设置一天的时间窗。
      */
     public $Friday;
 
     /**
-     * @var array 星期六的可维护时间窗口。
+     * @var array 星期六的可维护时间窗口。 一周中应至少设置一天的时间窗。
      */
     public $Saturday;
 
     /**
-     * @var array 星期日的可维护时间窗口。
+     * @var array 星期日的可维护时间窗口。 一周中应至少设置一天的时间窗。
      */
     public $Sunday;
 
     /**
      * @param string $InstanceId 实例ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
-     * @param array $Monday 星期一的可维护时间段，其中每一个时间段的格式形如：10:00-12:00；起始时间按半个小时对齐；最短半个小时，最长三个小时；最多设置两个时间段；下同。
-     * @param array $Tuesday 星期二的可维护时间窗口。
-     * @param array $Wednesday 星期三的可维护时间窗口。
-     * @param array $Thursday 星期四的可维护时间窗口。
-     * @param array $Friday 星期五的可维护时间窗口。
-     * @param array $Saturday 星期六的可维护时间窗口。
-     * @param array $Sunday 星期日的可维护时间窗口。
+     * @param array $Monday 星期一的可维护时间段，其中每一个时间段的格式形如：10:00-12:00；起始时间按半个小时对齐；最短半个小时，最长三个小时；可设置多个时间段。 一周中应至少设置一天的时间窗。下同。
+     * @param array $Tuesday 星期二的可维护时间窗口。 一周中应至少设置一天的时间窗。
+     * @param array $Wednesday 星期三的可维护时间窗口。 一周中应至少设置一天的时间窗。
+     * @param array $Thursday 星期四的可维护时间窗口。 一周中应至少设置一天的时间窗。
+     * @param array $Friday 星期五的可维护时间窗口。 一周中应至少设置一天的时间窗。
+     * @param array $Saturday 星期六的可维护时间窗口。 一周中应至少设置一天的时间窗。
+     * @param array $Sunday 星期日的可维护时间窗口。 一周中应至少设置一天的时间窗。
      */
     function __construct()
     {

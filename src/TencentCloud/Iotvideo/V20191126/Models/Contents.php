@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTc(string $Tc) 设置中文繁体(Traditional Chinese)，长度不超过300个字符
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDefault() 获取默认语言，最多不超过300个字符
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDefault(string $Default) 设置默认语言，最多不超过300个字符
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Contents extends AbstractModel
 {
@@ -54,11 +58,19 @@ class Contents extends AbstractModel
     public $Tc;
 
     /**
+     * @var string 默认语言，最多不超过300个字符
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Default;
+
+    /**
      * @param string $En 英文，长度不超过300个字符
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Cn 中文简体，长度不超过300个字符
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Tc 中文繁体(Traditional Chinese)，长度不超过300个字符
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Default 默认语言，最多不超过300个字符
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -84,6 +96,10 @@ class Contents extends AbstractModel
 
         if (array_key_exists("Tc",$param) and $param["Tc"] !== null) {
             $this->Tc = $param["Tc"];
+        }
+
+        if (array_key_exists("Default",$param) and $param["Default"] !== null) {
+            $this->Default = $param["Default"];
         }
     }
 }

@@ -20,8 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 汽车票字段信息
  *
- * @method string getName() 获取识别出的字段名称（关键字）。
- * @method void setName(string $Name) 设置识别出的字段名称（关键字）。
+ * @method string getName() 获取识别出的字段名称(关键字)，支持以下字段：
+发票代码、发票号码、日期、票价、始发地、目的地、姓名、时间、发票消费类型、身份证号、省、市。
+ * @method void setName(string $Name) 设置识别出的字段名称(关键字)，支持以下字段：
+发票代码、发票号码、日期、票价、始发地、目的地、姓名、时间、发票消费类型、身份证号、省、市。
  * @method string getValue() 获取识别出的字段名称对应的值，也就是字段Name对应的字符串结果。
  * @method void setValue(string $Value) 设置识别出的字段名称对应的值，也就是字段Name对应的字符串结果。
  * @method Rect getRect() 获取文本行在旋转纠正之后的图像中的像素坐标。
@@ -30,7 +32,8 @@ use TencentCloud\Common\AbstractModel;
 class BusInvoiceInfo extends AbstractModel
 {
     /**
-     * @var string 识别出的字段名称（关键字）。
+     * @var string 识别出的字段名称(关键字)，支持以下字段：
+发票代码、发票号码、日期、票价、始发地、目的地、姓名、时间、发票消费类型、身份证号、省、市。
      */
     public $Name;
 
@@ -45,7 +48,8 @@ class BusInvoiceInfo extends AbstractModel
     public $Rect;
 
     /**
-     * @param string $Name 识别出的字段名称（关键字）。
+     * @param string $Name 识别出的字段名称(关键字)，支持以下字段：
+发票代码、发票号码、日期、票价、始发地、目的地、姓名、时间、发票消费类型、身份证号、省、市。
      * @param string $Value 识别出的字段名称对应的值，也就是字段Name对应的字符串结果。
      * @param Rect $Rect 文本行在旋转纠正之后的图像中的像素坐标。
      */

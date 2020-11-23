@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQosLevel(string $QosLevel) 设置CCN服务质量，'PT'：白金，'AU'：金，'AG'：银，默认为‘AU’。
  * @method string getInstanceChargeType() 获取计费模式，PREPAID：表示预付费，即包年包月，POSTPAID：表示后付费，即按量计费。默认：POSTPAID。
  * @method void setInstanceChargeType(string $InstanceChargeType) 设置计费模式，PREPAID：表示预付费，即包年包月，POSTPAID：表示后付费，即按量计费。默认：POSTPAID。
- * @method string getBandwidthLimitType() 获取限速类型，OUTER_REGION_LIMIT表示地域出口限速，INTER_REGION_LIMIT为地域间限速，默认为OUTER_REGION_LIMIT
- * @method void setBandwidthLimitType(string $BandwidthLimitType) 设置限速类型，OUTER_REGION_LIMIT表示地域出口限速，INTER_REGION_LIMIT为地域间限速，默认为OUTER_REGION_LIMIT
+ * @method string getBandwidthLimitType() 获取限速类型，OUTER_REGION_LIMIT表示地域出口限速，INTER_REGION_LIMIT为地域间限速，默认为OUTER_REGION_LIMIT。预付费模式仅支持地域间限速，后付费模式支持地域间限速和地域出口限速。
+ * @method void setBandwidthLimitType(string $BandwidthLimitType) 设置限速类型，OUTER_REGION_LIMIT表示地域出口限速，INTER_REGION_LIMIT为地域间限速，默认为OUTER_REGION_LIMIT。预付费模式仅支持地域间限速，后付费模式支持地域间限速和地域出口限速。
  * @method array getTags() 获取指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
  * @method void setTags(array $Tags) 设置指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
  */
@@ -56,7 +56,7 @@ class CreateCcnRequest extends AbstractModel
     public $InstanceChargeType;
 
     /**
-     * @var string 限速类型，OUTER_REGION_LIMIT表示地域出口限速，INTER_REGION_LIMIT为地域间限速，默认为OUTER_REGION_LIMIT
+     * @var string 限速类型，OUTER_REGION_LIMIT表示地域出口限速，INTER_REGION_LIMIT为地域间限速，默认为OUTER_REGION_LIMIT。预付费模式仅支持地域间限速，后付费模式支持地域间限速和地域出口限速。
      */
     public $BandwidthLimitType;
 
@@ -70,7 +70,7 @@ class CreateCcnRequest extends AbstractModel
      * @param string $CcnDescription CCN描述信息，最大长度不能超过100个字节。
      * @param string $QosLevel CCN服务质量，'PT'：白金，'AU'：金，'AG'：银，默认为‘AU’。
      * @param string $InstanceChargeType 计费模式，PREPAID：表示预付费，即包年包月，POSTPAID：表示后付费，即按量计费。默认：POSTPAID。
-     * @param string $BandwidthLimitType 限速类型，OUTER_REGION_LIMIT表示地域出口限速，INTER_REGION_LIMIT为地域间限速，默认为OUTER_REGION_LIMIT
+     * @param string $BandwidthLimitType 限速类型，OUTER_REGION_LIMIT表示地域出口限速，INTER_REGION_LIMIT为地域间限速，默认为OUTER_REGION_LIMIT。预付费模式仅支持地域间限速，后付费模式支持地域间限速和地域出口限速。
      * @param array $Tags 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
      */
     function __construct()

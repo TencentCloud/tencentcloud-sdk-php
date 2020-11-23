@@ -78,6 +78,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTagList(array $TagList) 设置实例绑定的标签信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getMasterDBInstanceId() 获取主实例信息，仅在实例为只读实例时返回
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMasterDBInstanceId(string $MasterDBInstanceId) 设置主实例信息，仅在实例为只读实例时返回
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getReadOnlyInstanceNum() 获取只读实例数量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setReadOnlyInstanceNum(integer $ReadOnlyInstanceNum) 设置只读实例数量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getStatusInReadonlyGroup() 获取只读实例在只读组中的状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStatusInReadonlyGroup(string $StatusInReadonlyGroup) 设置只读实例在只读组中的状态
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DBInstance extends AbstractModel
 {
@@ -223,6 +235,24 @@ class DBInstance extends AbstractModel
     public $TagList;
 
     /**
+     * @var string 主实例信息，仅在实例为只读实例时返回
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MasterDBInstanceId;
+
+    /**
+     * @var integer 只读实例数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ReadOnlyInstanceNum;
+
+    /**
+     * @var string 只读实例在只读组中的状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $StatusInReadonlyGroup;
+
+    /**
      * @param string $Region 实例所属地域，如: ap-guangzhou，对应RegionSet的Region字段
      * @param string $Zone 实例所属可用区， 如：ap-guangzhou-3，对应ZoneSet的Zone字段
      * @param integer $ProjectId 项目ID
@@ -251,6 +281,12 @@ class DBInstance extends AbstractModel
      * @param integer $Uid 实例的Uid
      * @param integer $SupportIpv6 实例是否支持Ipv6，1：支持，0：不支持
      * @param array $TagList 实例绑定的标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $MasterDBInstanceId 主实例信息，仅在实例为只读实例时返回
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ReadOnlyInstanceNum 只读实例数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $StatusInReadonlyGroup 只读实例在只读组中的状态
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -386,6 +422,18 @@ class DBInstance extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->TagList, $obj);
             }
+        }
+
+        if (array_key_exists("MasterDBInstanceId",$param) and $param["MasterDBInstanceId"] !== null) {
+            $this->MasterDBInstanceId = $param["MasterDBInstanceId"];
+        }
+
+        if (array_key_exists("ReadOnlyInstanceNum",$param) and $param["ReadOnlyInstanceNum"] !== null) {
+            $this->ReadOnlyInstanceNum = $param["ReadOnlyInstanceNum"];
+        }
+
+        if (array_key_exists("StatusInReadonlyGroup",$param) and $param["StatusInReadonlyGroup"] !== null) {
+            $this->StatusInReadonlyGroup = $param["StatusInReadonlyGroup"];
         }
     }
 }

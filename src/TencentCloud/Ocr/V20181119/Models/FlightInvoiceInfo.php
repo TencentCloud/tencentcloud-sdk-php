@@ -20,15 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 机票行程单识别结果
  *
- * @method string getName() 获取识别出的字段名称（关键字）。
- * @method void setName(string $Name) 设置识别出的字段名称（关键字）。
+ * @method string getName() 获取识别出的字段名称(关键字)，支持以下字段：
+票价、合计金额、填开日期、有效身份证件号码、电子客票号码、验证码、旅客姓名、填开单位、其他税费、燃油附加费、民航发展基金、保险费、销售单位代号、始发地、目的地、航班号、时间、日期、座位等级、承运人、发票消费类型、国内国际标签、印刷序号。
+ * @method void setName(string $Name) 设置识别出的字段名称(关键字)，支持以下字段：
+票价、合计金额、填开日期、有效身份证件号码、电子客票号码、验证码、旅客姓名、填开单位、其他税费、燃油附加费、民航发展基金、保险费、销售单位代号、始发地、目的地、航班号、时间、日期、座位等级、承运人、发票消费类型、国内国际标签、印刷序号。
  * @method string getValue() 获取识别出的字段名称对应的值，也就是字段 Name 对应的字符串结果。
  * @method void setValue(string $Value) 设置识别出的字段名称对应的值，也就是字段 Name 对应的字符串结果。
  */
 class FlightInvoiceInfo extends AbstractModel
 {
     /**
-     * @var string 识别出的字段名称（关键字）。
+     * @var string 识别出的字段名称(关键字)，支持以下字段：
+票价、合计金额、填开日期、有效身份证件号码、电子客票号码、验证码、旅客姓名、填开单位、其他税费、燃油附加费、民航发展基金、保险费、销售单位代号、始发地、目的地、航班号、时间、日期、座位等级、承运人、发票消费类型、国内国际标签、印刷序号。
      */
     public $Name;
 
@@ -38,7 +41,8 @@ class FlightInvoiceInfo extends AbstractModel
     public $Value;
 
     /**
-     * @param string $Name 识别出的字段名称（关键字）。
+     * @param string $Name 识别出的字段名称(关键字)，支持以下字段：
+票价、合计金额、填开日期、有效身份证件号码、电子客票号码、验证码、旅客姓名、填开单位、其他税费、燃油附加费、民航发展基金、保险费、销售单位代号、始发地、目的地、航班号、时间、日期、座位等级、承运人、发票消费类型、国内国际标签、印刷序号。
      * @param string $Value 识别出的字段名称对应的值，也就是字段 Name 对应的字符串结果。
      */
     function __construct()

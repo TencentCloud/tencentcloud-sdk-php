@@ -80,6 +80,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEsInfo(CloudBaseEsInfo $EsInfo) 设置es信息
  * @method boolean getEnableUnion() 获取是否使用统一域名
  * @method void setEnableUnion(boolean $EnableUnion) 设置是否使用统一域名
+ * @method string getOperatorRemark() 获取操作备注
+ * @method void setOperatorRemark(string $OperatorRemark) 设置操作备注
  */
 class CreateCloudBaseRunServerVersionRequest extends AbstractModel
 {
@@ -234,6 +236,11 @@ class CreateCloudBaseRunServerVersionRequest extends AbstractModel
     public $EnableUnion;
 
     /**
+     * @var string 操作备注
+     */
+    public $OperatorRemark;
+
+    /**
      * @param string $EnvId 环境ID
      * @param string $UploadType 枚举（package/repository/image)
      * @param integer $FlowRatio 流量占比
@@ -264,6 +271,7 @@ class CreateCloudBaseRunServerVersionRequest extends AbstractModel
      * @param integer $AccessType 4 代表只能微信链路访问
      * @param CloudBaseEsInfo $EsInfo es信息
      * @param boolean $EnableUnion 是否使用统一域名
+     * @param string $OperatorRemark 操作备注
      */
     function __construct()
     {
@@ -405,6 +413,10 @@ class CreateCloudBaseRunServerVersionRequest extends AbstractModel
 
         if (array_key_exists("EnableUnion",$param) and $param["EnableUnion"] !== null) {
             $this->EnableUnion = $param["EnableUnion"];
+        }
+
+        if (array_key_exists("OperatorRemark",$param) and $param["OperatorRemark"] !== null) {
+            $this->OperatorRemark = $param["OperatorRemark"];
         }
     }
 }

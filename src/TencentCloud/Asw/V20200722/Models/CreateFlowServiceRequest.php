@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setType(string $Type) 设置状态机类型（EXPRESS，STANDARD）
  * @method string getFlowServiceChineseName() 获取状态机所属服务中文名
  * @method void setFlowServiceChineseName(string $FlowServiceChineseName) 设置状态机所属服务中文名
- * @method string getRoleResource() 获取角色资源名
- * @method void setRoleResource(string $RoleResource) 设置角色资源名
+ * @method string getRoleResource() 获取角色资源名, 比如: qcs::cam::uin/20103392:roleName/SomeRoleForYourStateMachine
+ * @method void setRoleResource(string $RoleResource) 设置角色资源名, 比如: qcs::cam::uin/20103392:roleName/SomeRoleForYourStateMachine
  * @method string getDescription() 获取备注
  * @method void setDescription(string $Description) 设置备注
  */
@@ -63,7 +63,7 @@ class CreateFlowServiceRequest extends AbstractModel
     public $FlowServiceChineseName;
 
     /**
-     * @var string 角色资源名
+     * @var string 角色资源名, 比如: qcs::cam::uin/20103392:roleName/SomeRoleForYourStateMachine
      */
     public $RoleResource;
 
@@ -78,7 +78,7 @@ class CreateFlowServiceRequest extends AbstractModel
      * @param boolean $IsNewRole 是不是新的角色
      * @param string $Type 状态机类型（EXPRESS，STANDARD）
      * @param string $FlowServiceChineseName 状态机所属服务中文名
-     * @param string $RoleResource 角色资源名
+     * @param string $RoleResource 角色资源名, 比如: qcs::cam::uin/20103392:roleName/SomeRoleForYourStateMachine
      * @param string $Description 备注
      */
     function __construct()

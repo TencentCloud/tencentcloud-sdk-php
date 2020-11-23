@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setForceRedirect(ForceRedirect $ForceRedirect) 设置访问协议强制跳转配置。
  * @method string getArea() 获取域名加速区域，mainland，overseas或global，分别表示中国境内加速，海外加速或全球加速。
  * @method void setArea(string $Area) 设置域名加速区域，mainland，overseas或global，分别表示中国境内加速，海外加速或全球加速。
+ * @method WebSocket getWebSocket() 获取WebSocket配置
+ * @method void setWebSocket(WebSocket $WebSocket) 设置WebSocket配置
  */
 class UpdateDomainConfigRequest extends AbstractModel
 {
@@ -101,6 +103,11 @@ class UpdateDomainConfigRequest extends AbstractModel
     public $Area;
 
     /**
+     * @var WebSocket WebSocket配置
+     */
+    public $WebSocket;
+
+    /**
      * @param string $Domain 域名。
      * @param Origin $Origin 源站配置。
      * @param integer $ProjectId 项目id。
@@ -112,6 +119,7 @@ class UpdateDomainConfigRequest extends AbstractModel
      * @param Https $Https Https配置。
      * @param ForceRedirect $ForceRedirect 访问协议强制跳转配置。
      * @param string $Area 域名加速区域，mainland，overseas或global，分别表示中国境内加速，海外加速或全球加速。
+     * @param WebSocket $WebSocket WebSocket配置
      */
     function __construct()
     {
@@ -176,6 +184,11 @@ class UpdateDomainConfigRequest extends AbstractModel
 
         if (array_key_exists("Area",$param) and $param["Area"] !== null) {
             $this->Area = $param["Area"];
+        }
+
+        if (array_key_exists("WebSocket",$param) and $param["WebSocket"] !== null) {
+            $this->WebSocket = new WebSocket();
+            $this->WebSocket->deserialize($param["WebSocket"]);
         }
     }
 }

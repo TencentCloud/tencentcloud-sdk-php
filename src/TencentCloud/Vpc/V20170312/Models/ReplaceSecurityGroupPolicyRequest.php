@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSecurityGroupId(string $SecurityGroupId) 设置安全组实例ID，例如sg-33ocnj9n，可通过DescribeSecurityGroups获取。
  * @method SecurityGroupPolicySet getSecurityGroupPolicySet() 获取安全组规则集合对象。
  * @method void setSecurityGroupPolicySet(SecurityGroupPolicySet $SecurityGroupPolicySet) 设置安全组规则集合对象。
+ * @method SecurityGroupPolicySet getOriginalSecurityGroupPolicySet() 获取旧的安全组规则集合对象，可选，日志记录用。
+ * @method void setOriginalSecurityGroupPolicySet(SecurityGroupPolicySet $OriginalSecurityGroupPolicySet) 设置旧的安全组规则集合对象，可选，日志记录用。
  */
 class ReplaceSecurityGroupPolicyRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class ReplaceSecurityGroupPolicyRequest extends AbstractModel
     public $SecurityGroupPolicySet;
 
     /**
+     * @var SecurityGroupPolicySet 旧的安全组规则集合对象，可选，日志记录用。
+     */
+    public $OriginalSecurityGroupPolicySet;
+
+    /**
      * @param string $SecurityGroupId 安全组实例ID，例如sg-33ocnj9n，可通过DescribeSecurityGroups获取。
      * @param SecurityGroupPolicySet $SecurityGroupPolicySet 安全组规则集合对象。
+     * @param SecurityGroupPolicySet $OriginalSecurityGroupPolicySet 旧的安全组规则集合对象，可选，日志记录用。
      */
     function __construct()
     {
@@ -61,6 +69,11 @@ class ReplaceSecurityGroupPolicyRequest extends AbstractModel
         if (array_key_exists("SecurityGroupPolicySet",$param) and $param["SecurityGroupPolicySet"] !== null) {
             $this->SecurityGroupPolicySet = new SecurityGroupPolicySet();
             $this->SecurityGroupPolicySet->deserialize($param["SecurityGroupPolicySet"]);
+        }
+
+        if (array_key_exists("OriginalSecurityGroupPolicySet",$param) and $param["OriginalSecurityGroupPolicySet"] !== null) {
+            $this->OriginalSecurityGroupPolicySet = new SecurityGroupPolicySet();
+            $this->OriginalSecurityGroupPolicySet->deserialize($param["OriginalSecurityGroupPolicySet"]);
         }
     }
 }

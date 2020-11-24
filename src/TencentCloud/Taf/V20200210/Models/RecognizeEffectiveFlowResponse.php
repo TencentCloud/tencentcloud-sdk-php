@@ -14,23 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ecm\V20190719\Models;
+namespace TencentCloud\Taf\V20200210\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateHaVip返回参数结构体
+ * RecognizeEffectiveFlow返回参数结构体
  *
- * @method HaVip getHaVip() 获取HAVIP对象。
- * @method void setHaVip(HaVip $HaVip) 设置HAVIP对象。
+ * @method OutputRecognizeEffectiveFlow getData() 获取业务出参
+ * @method void setData(OutputRecognizeEffectiveFlow $Data) 设置业务出参
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class CreateHaVipResponse extends AbstractModel
+class RecognizeEffectiveFlowResponse extends AbstractModel
 {
     /**
-     * @var HaVip HAVIP对象。
+     * @var OutputRecognizeEffectiveFlow 业务出参
      */
-    public $HaVip;
+    public $Data;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +38,7 @@ class CreateHaVipResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param HaVip $HaVip HAVIP对象。
+     * @param OutputRecognizeEffectiveFlow $Data 业务出参
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,9 +54,9 @@ class CreateHaVipResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("HaVip",$param) and $param["HaVip"] !== null) {
-            $this->HaVip = new HaVip();
-            $this->HaVip->deserialize($param["HaVip"]);
+        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
+            $this->Data = new OutputRecognizeEffectiveFlow();
+            $this->Data->deserialize($param["Data"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

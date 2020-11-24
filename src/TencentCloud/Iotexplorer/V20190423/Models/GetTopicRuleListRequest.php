@@ -14,24 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ecm\V20190719\Models;
+namespace TencentCloud\Iotexplorer\V20190423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DeleteHaVip请求参数结构体
+ * GetTopicRuleList请求参数结构体
  *
- * @method string getHaVipId() 获取HAVIP唯一ID，形如：havip-9o233uri。
- * @method void setHaVipId(string $HaVipId) 设置HAVIP唯一ID，形如：havip-9o233uri。
+ * @method integer getPageNum() 获取请求的页数
+ * @method void setPageNum(integer $PageNum) 设置请求的页数
+ * @method integer getPageSize() 获取分页的大小
+ * @method void setPageSize(integer $PageSize) 设置分页的大小
  */
-class DeleteHaVipRequest extends AbstractModel
+class GetTopicRuleListRequest extends AbstractModel
 {
     /**
-     * @var string HAVIP唯一ID，形如：havip-9o233uri。
+     * @var integer 请求的页数
      */
-    public $HaVipId;
+    public $PageNum;
 
     /**
-     * @param string $HaVipId HAVIP唯一ID，形如：havip-9o233uri。
+     * @var integer 分页的大小
+     */
+    public $PageSize;
+
+    /**
+     * @param integer $PageNum 请求的页数
+     * @param integer $PageSize 分页的大小
      */
     function __construct()
     {
@@ -46,8 +54,12 @@ class DeleteHaVipRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("HaVipId",$param) and $param["HaVipId"] !== null) {
-            $this->HaVipId = $param["HaVipId"];
+        if (array_key_exists("PageNum",$param) and $param["PageNum"] !== null) {
+            $this->PageNum = $param["PageNum"];
+        }
+
+        if (array_key_exists("PageSize",$param) and $param["PageSize"] !== null) {
+            $this->PageSize = $param["PageSize"];
         }
     }
 }

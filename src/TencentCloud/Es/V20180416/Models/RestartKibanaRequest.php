@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ecm\V20190719\Models;
+namespace TencentCloud\Es\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DeleteHaVip请求参数结构体
+ * RestartKibana请求参数结构体
  *
- * @method string getHaVipId() 获取HAVIP唯一ID，形如：havip-9o233uri。
- * @method void setHaVipId(string $HaVipId) 设置HAVIP唯一ID，形如：havip-9o233uri。
+ * @method string getInstanceId() 获取ES实例ID
+ * @method void setInstanceId(string $InstanceId) 设置ES实例ID
  */
-class DeleteHaVipRequest extends AbstractModel
+class RestartKibanaRequest extends AbstractModel
 {
     /**
-     * @var string HAVIP唯一ID，形如：havip-9o233uri。
+     * @var string ES实例ID
      */
-    public $HaVipId;
+    public $InstanceId;
 
     /**
-     * @param string $HaVipId HAVIP唯一ID，形如：havip-9o233uri。
+     * @param string $InstanceId ES实例ID
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class DeleteHaVipRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("HaVipId",$param) and $param["HaVipId"] !== null) {
-            $this->HaVipId = $param["HaVipId"];
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
         }
     }
 }

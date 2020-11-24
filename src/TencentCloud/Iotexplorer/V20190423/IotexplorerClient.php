@@ -30,27 +30,35 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\CreateLoRaGatewayResponse CreateLoRaGateway(Models\CreateLoRaGatewayRequest $req) 创建新 LoRa 网关设备接口
  * @method Models\CreateProjectResponse CreateProject(Models\CreateProjectRequest $req) 为用户提供新建项目的能力，用于集中管理产品和应用。
  * @method Models\CreateStudioProductResponse CreateStudioProduct(Models\CreateStudioProductRequest $req) 为用户提供新建产品的能力，用于管理用户的设备
+ * @method Models\CreateTopicRuleResponse CreateTopicRule(Models\CreateTopicRuleRequest $req) 创建规则
  * @method Models\DeleteDeviceResponse DeleteDevice(Models\DeleteDeviceRequest $req) 删除设备
  * @method Models\DeleteLoRaGatewayResponse DeleteLoRaGateway(Models\DeleteLoRaGatewayRequest $req) 删除  LoRa 网关的接口
  * @method Models\DeleteProjectResponse DeleteProject(Models\DeleteProjectRequest $req) 提供删除某个项目的能力
  * @method Models\DeleteStudioProductResponse DeleteStudioProduct(Models\DeleteStudioProductRequest $req) 提供删除某个项目下产品的能力
+ * @method Models\DeleteTopicRuleResponse DeleteTopicRule(Models\DeleteTopicRuleRequest $req) 删除规则
  * @method Models\DescribeDeviceResponse DescribeDevice(Models\DescribeDeviceRequest $req) 用于查看某个设备的详细信息
  * @method Models\DescribeDeviceDataResponse DescribeDeviceData(Models\DescribeDeviceDataRequest $req) 根据设备产品ID、设备名称，获取设备上报的属性数据。
  * @method Models\DescribeDeviceDataHistoryResponse DescribeDeviceDataHistory(Models\DescribeDeviceDataHistoryRequest $req) 获取设备在指定时间范围内上报的历史数据。
  * @method Models\DescribeModelDefinitionResponse DescribeModelDefinition(Models\DescribeModelDefinitionRequest $req) 查询产品配置的数据模板信息
  * @method Models\DescribeProjectResponse DescribeProject(Models\DescribeProjectRequest $req) 查询项目详情
  * @method Models\DescribeStudioProductResponse DescribeStudioProduct(Models\DescribeStudioProductRequest $req) 提供查看产品详细信息的能力，包括产品的ID、数据协议、认证类型等重要参数
+ * @method Models\DescribeTopicRuleResponse DescribeTopicRule(Models\DescribeTopicRuleRequest $req) 获取规则信息
+ * @method Models\DisableTopicRuleResponse DisableTopicRule(Models\DisableTopicRuleRequest $req) 禁用规则
+ * @method Models\EnableTopicRuleResponse EnableTopicRule(Models\EnableTopicRuleRequest $req) 启用规则
  * @method Models\GetDeviceListResponse GetDeviceList(Models\GetDeviceListRequest $req) 用于查询某个产品下的设备列表
  * @method Models\GetLoRaGatewayListResponse GetLoRaGatewayList(Models\GetLoRaGatewayListRequest $req) 获取 LoRa 网关列表接口
  * @method Models\GetProjectListResponse GetProjectList(Models\GetProjectListRequest $req) 提供查询用户所创建的项目列表查询功能。
  * @method Models\GetStudioProductListResponse GetStudioProductList(Models\GetStudioProductListRequest $req) 提供查询某个项目下所有产品信息的能力。
+ * @method Models\GetTopicRuleListResponse GetTopicRuleList(Models\GetTopicRuleListRequest $req) 获取规则列表
  * @method Models\ListEventHistoryResponse ListEventHistory(Models\ListEventHistoryRequest $req) 获取设备的历史事件
  * @method Models\ModifyLoRaGatewayResponse ModifyLoRaGateway(Models\ModifyLoRaGatewayRequest $req) 修改 LoRa 网关信息
  * @method Models\ModifyModelDefinitionResponse ModifyModelDefinition(Models\ModifyModelDefinitionRequest $req) 提供修改产品的数据模板的能力
  * @method Models\ModifyProjectResponse ModifyProject(Models\ModifyProjectRequest $req) 修改项目
  * @method Models\ModifyStudioProductResponse ModifyStudioProduct(Models\ModifyStudioProductRequest $req) 提供修改产品的名称和描述等信息的能力，对于已发布产品不允许进行修改。
+ * @method Models\ModifyTopicRuleResponse ModifyTopicRule(Models\ModifyTopicRuleRequest $req) 修改规则
  * @method Models\ReleaseStudioProductResponse ReleaseStudioProduct(Models\ReleaseStudioProductRequest $req) 产品开发完成并测试通过后，通过发布产品将产品设置为发布状态
  * @method Models\SearchStudioProductResponse SearchStudioProduct(Models\SearchStudioProductRequest $req) 提供根据产品名称查找产品的能力
+ * @method Models\SearchTopicRuleResponse SearchTopicRule(Models\SearchTopicRuleRequest $req) 搜索规则
  */
 
 class IotexplorerClient extends AbstractClient

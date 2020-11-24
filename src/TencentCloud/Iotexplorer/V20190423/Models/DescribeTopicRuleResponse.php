@@ -14,23 +14,26 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ecm\V20190719\Models;
+namespace TencentCloud\Iotexplorer\V20190423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateHaVip返回参数结构体
+ * DescribeTopicRule返回参数结构体
  *
- * @method HaVip getHaVip() 获取HAVIP对象。
- * @method void setHaVip(HaVip $HaVip) 设置HAVIP对象。
+ * @method TopicRule getRule() 获取规则描述。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRule(TopicRule $Rule) 设置规则描述。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class CreateHaVipResponse extends AbstractModel
+class DescribeTopicRuleResponse extends AbstractModel
 {
     /**
-     * @var HaVip HAVIP对象。
+     * @var TopicRule 规则描述。
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $HaVip;
+    public $Rule;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +41,8 @@ class CreateHaVipResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param HaVip $HaVip HAVIP对象。
+     * @param TopicRule $Rule 规则描述。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,9 +58,9 @@ class CreateHaVipResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("HaVip",$param) and $param["HaVip"] !== null) {
-            $this->HaVip = new HaVip();
-            $this->HaVip->deserialize($param["HaVip"]);
+        if (array_key_exists("Rule",$param) and $param["Rule"] !== null) {
+            $this->Rule = new TopicRule();
+            $this->Rule->deserialize($param["Rule"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

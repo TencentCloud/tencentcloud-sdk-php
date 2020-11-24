@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setToken(string $Token) 设置访问凭证
  * @method integer getExpTime() 获取访问凭证过期时间戳
  * @method void setExpTime(integer $ExpTime) 设置访问凭证过期时间戳
+ * @method string getTokenId() 获取长期凭证的TokenId，短期凭证没有TokenId
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTokenId(string $TokenId) 设置长期凭证的TokenId，短期凭证没有TokenId
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -50,6 +54,12 @@ class CreateInstanceTokenResponse extends AbstractModel
     public $ExpTime;
 
     /**
+     * @var string 长期凭证的TokenId，短期凭证没有TokenId
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TokenId;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -59,6 +69,8 @@ class CreateInstanceTokenResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Token 访问凭证
      * @param integer $ExpTime 访问凭证过期时间戳
+     * @param string $TokenId 长期凭证的TokenId，短期凭证没有TokenId
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -84,6 +96,10 @@ class CreateInstanceTokenResponse extends AbstractModel
 
         if (array_key_exists("ExpTime",$param) and $param["ExpTime"] !== null) {
             $this->ExpTime = $param["ExpTime"];
+        }
+
+        if (array_key_exists("TokenId",$param) and $param["TokenId"] !== null) {
+            $this->TokenId = $param["TokenId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

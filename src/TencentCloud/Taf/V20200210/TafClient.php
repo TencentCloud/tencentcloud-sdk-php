@@ -26,6 +26,7 @@ use TencentCloud\Taf\V20200210\Models as Models;
  * @method Models\DetectFraudKOLResponse DetectFraudKOL(Models\DetectFraudKOLRequest $req) DetectFraudKOL
  * @method Models\EnhanceTaDegreeResponse EnhanceTaDegree(Models\EnhanceTaDegreeRequest $req) 流量反欺诈-虚假TA识别
  * @method Models\RecognizeCustomizedAudienceResponse RecognizeCustomizedAudience(Models\RecognizeCustomizedAudienceRequest $req) 流量反欺诈-流量验准定制版
+ * @method Models\RecognizeEffectiveFlowResponse RecognizeEffectiveFlow(Models\RecognizeEffectiveFlowRequest $req) 筛选敏感易骚扰人群
  * @method Models\RecognizePreciseTargetAudienceResponse RecognizePreciseTargetAudience(Models\RecognizePreciseTargetAudienceRequest $req) 流量反欺诈-流量验准高级版
  * @method Models\RecognizeTargetAudienceResponse RecognizeTargetAudience(Models\RecognizeTargetAudienceRequest $req) 流量反欺诈-流量验准
  * @method Models\SendTrafficSecuritySmsMessageResponse SendTrafficSecuritySmsMessage(Models\SendTrafficSecuritySmsMessageRequest $req) SendTrafficSecuritySmsMessage

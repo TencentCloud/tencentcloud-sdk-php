@@ -14,24 +14,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ecm\V20190719\Models;
+namespace TencentCloud\Taf\V20200210\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DeleteHaVip请求参数结构体
+ * 接口入参
  *
- * @method string getHaVipId() 获取HAVIP唯一ID，形如：havip-9o233uri。
- * @method void setHaVipId(string $HaVipId) 设置HAVIP唯一ID，形如：havip-9o233uri。
+
  */
-class DeleteHaVipRequest extends AbstractModel
+class InputRecognizeEffectiveFlow extends AbstractModel
 {
-    /**
-     * @var string HAVIP唯一ID，形如：havip-9o233uri。
-     */
-    public $HaVipId;
+
 
     /**
-     * @param string $HaVipId HAVIP唯一ID，形如：havip-9o233uri。
+
      */
     function __construct()
     {
@@ -46,8 +42,6 @@ class DeleteHaVipRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("HaVipId",$param) and $param["HaVipId"] !== null) {
-            $this->HaVipId = $param["HaVipId"];
-        }
+
     }
 }

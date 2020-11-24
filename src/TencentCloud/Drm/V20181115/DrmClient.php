@@ -39,7 +39,8 @@ use TencentCloud\Drm\V20181115\Models as Models;
 
  * @method Models\ModifyFairPlayPemResponse ModifyFairPlayPem(Models\ModifyFairPlayPemRequest $req) 本接口用来设置fairplay方案所需的私钥、私钥密钥、ask等信息。
 如需使用fairplay方案，请务必先设置私钥。
- * @method Models\StartEncryptionResponse StartEncryption(Models\StartEncryptionRequest $req) 开发者调用该接口，启动一次内容文件的DRM加密工作流
+ * @method Models\StartEncryptionResponse StartEncryption(Models\StartEncryptionRequest $req) 开发者调用该接口，启动一次内容文件的DRM加密工作流。
+注意：该接口已下线。
  */
 
 class DrmClient extends AbstractClient

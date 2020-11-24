@@ -20,14 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateHaVip请求参数结构体
  *
-
+ * @method string getVpcId() 获取HAVIP所在私有网络ID。
+ * @method void setVpcId(string $VpcId) 设置HAVIP所在私有网络ID。
+ * @method string getSubnetId() 获取HAVIP所在子网ID。
+ * @method void setSubnetId(string $SubnetId) 设置HAVIP所在子网ID。
+ * @method string getHaVipName() 获取HAVIP名称。
+ * @method void setHaVipName(string $HaVipName) 设置HAVIP名称。
+ * @method string getVip() 获取指定虚拟IP地址，必须在VPC网段内且未被占用。不指定则自动分配。
+ * @method void setVip(string $Vip) 设置指定虚拟IP地址，必须在VPC网段内且未被占用。不指定则自动分配。
  */
 class CreateHaVipRequest extends AbstractModel
 {
-
+    /**
+     * @var string HAVIP所在私有网络ID。
+     */
+    public $VpcId;
 
     /**
+     * @var string HAVIP所在子网ID。
+     */
+    public $SubnetId;
 
+    /**
+     * @var string HAVIP名称。
+     */
+    public $HaVipName;
+
+    /**
+     * @var string 指定虚拟IP地址，必须在VPC网段内且未被占用。不指定则自动分配。
+     */
+    public $Vip;
+
+    /**
+     * @param string $VpcId HAVIP所在私有网络ID。
+     * @param string $SubnetId HAVIP所在子网ID。
+     * @param string $HaVipName HAVIP名称。
+     * @param string $Vip 指定虚拟IP地址，必须在VPC网段内且未被占用。不指定则自动分配。
      */
     function __construct()
     {
@@ -42,6 +70,20 @@ class CreateHaVipRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
+            $this->VpcId = $param["VpcId"];
+        }
 
+        if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
+            $this->SubnetId = $param["SubnetId"];
+        }
+
+        if (array_key_exists("HaVipName",$param) and $param["HaVipName"] !== null) {
+            $this->HaVipName = $param["HaVipName"];
+        }
+
+        if (array_key_exists("Vip",$param) and $param["Vip"] !== null) {
+            $this->Vip = $param["Vip"];
+        }
     }
 }

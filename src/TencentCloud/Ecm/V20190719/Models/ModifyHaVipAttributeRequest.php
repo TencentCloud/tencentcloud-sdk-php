@@ -20,14 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyHaVipAttribute请求参数结构体
  *
-
+ * @method string getHaVipId() 获取HAVIP唯一ID，形如：havip-9o233uri。
+ * @method void setHaVipId(string $HaVipId) 设置HAVIP唯一ID，形如：havip-9o233uri。
+ * @method string getHaVipName() 获取HAVIP名称，可任意命名，但不得超过60个字符。
+ * @method void setHaVipName(string $HaVipName) 设置HAVIP名称，可任意命名，但不得超过60个字符。
  */
 class ModifyHaVipAttributeRequest extends AbstractModel
 {
-
+    /**
+     * @var string HAVIP唯一ID，形如：havip-9o233uri。
+     */
+    public $HaVipId;
 
     /**
+     * @var string HAVIP名称，可任意命名，但不得超过60个字符。
+     */
+    public $HaVipName;
 
+    /**
+     * @param string $HaVipId HAVIP唯一ID，形如：havip-9o233uri。
+     * @param string $HaVipName HAVIP名称，可任意命名，但不得超过60个字符。
      */
     function __construct()
     {
@@ -42,6 +54,12 @@ class ModifyHaVipAttributeRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("HaVipId",$param) and $param["HaVipId"] !== null) {
+            $this->HaVipId = $param["HaVipId"];
+        }
 
+        if (array_key_exists("HaVipName",$param) and $param["HaVipName"] !== null) {
+            $this->HaVipName = $param["HaVipName"];
+        }
     }
 }

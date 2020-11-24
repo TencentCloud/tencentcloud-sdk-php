@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyVerContent请求参数结构体
  *
- * @method integer getProductId() 获取产品id,大于0的有符号长整型
- * @method void setProductId(integer $ProductId) 设置产品id,大于0的有符号长整型
+ * @method string getProductId() 获取产品id
+ * @method void setProductId(string $ProductId) 设置产品id
  * @method string getOtaVersion() 获取需要修改的版本号
  * @method void setOtaVersion(string $OtaVersion) 设置需要修改的版本号
  * @method string getOperator() 获取操作人,字符长度<=64
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyVerContentRequest extends AbstractModel
 {
     /**
-     * @var integer 产品id,大于0的有符号长整型
+     * @var string 产品id
      */
     public $ProductId;
 
@@ -59,7 +59,7 @@ class ModifyVerContentRequest extends AbstractModel
     public $Contents;
 
     /**
-     * @param integer $ProductId 产品id,大于0的有符号长整型
+     * @param string $ProductId 产品id
      * @param string $OtaVersion 需要修改的版本号
      * @param string $Operator 操作人,字符长度<=64
      * @param string $Remark 备注信息

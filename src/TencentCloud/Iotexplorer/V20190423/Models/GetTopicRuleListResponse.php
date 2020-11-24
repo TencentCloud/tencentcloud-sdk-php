@@ -14,23 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ecm\V20190719\Models;
+namespace TencentCloud\Iotexplorer\V20190423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateHaVip返回参数结构体
+ * GetTopicRuleList返回参数结构体
  *
- * @method HaVip getHaVip() 获取HAVIP对象。
- * @method void setHaVip(HaVip $HaVip) 设置HAVIP对象。
+ * @method integer getTotalCnt() 获取规则总数量
+ * @method void setTotalCnt(integer $TotalCnt) 设置规则总数量
+ * @method array getRules() 获取规则列表
+ * @method void setRules(array $Rules) 设置规则列表
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class CreateHaVipResponse extends AbstractModel
+class GetTopicRuleListResponse extends AbstractModel
 {
     /**
-     * @var HaVip HAVIP对象。
+     * @var integer 规则总数量
      */
-    public $HaVip;
+    public $TotalCnt;
+
+    /**
+     * @var array 规则列表
+     */
+    public $Rules;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +45,8 @@ class CreateHaVipResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param HaVip $HaVip HAVIP对象。
+     * @param integer $TotalCnt 规则总数量
+     * @param array $Rules 规则列表
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,9 +62,17 @@ class CreateHaVipResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("HaVip",$param) and $param["HaVip"] !== null) {
-            $this->HaVip = new HaVip();
-            $this->HaVip->deserialize($param["HaVip"]);
+        if (array_key_exists("TotalCnt",$param) and $param["TotalCnt"] !== null) {
+            $this->TotalCnt = $param["TotalCnt"];
+        }
+
+        if (array_key_exists("Rules",$param) and $param["Rules"] !== null) {
+            $this->Rules = [];
+            foreach ($param["Rules"] as $key => $value){
+                $obj = new TopicRuleInfo();
+                $obj->deserialize($value);
+                array_push($this->Rules, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ecm\V20190719\Models;
+namespace TencentCloud\Taf\V20200210\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DeleteHaVip请求参数结构体
+ * RecognizeEffectiveFlow请求参数结构体
  *
- * @method string getHaVipId() 获取HAVIP唯一ID，形如：havip-9o233uri。
- * @method void setHaVipId(string $HaVipId) 设置HAVIP唯一ID，形如：havip-9o233uri。
+ * @method InputRecognizeEffectiveFlow getBusinessSecurityData() 获取业务入参
+ * @method void setBusinessSecurityData(InputRecognizeEffectiveFlow $BusinessSecurityData) 设置业务入参
  */
-class DeleteHaVipRequest extends AbstractModel
+class RecognizeEffectiveFlowRequest extends AbstractModel
 {
     /**
-     * @var string HAVIP唯一ID，形如：havip-9o233uri。
+     * @var InputRecognizeEffectiveFlow 业务入参
      */
-    public $HaVipId;
+    public $BusinessSecurityData;
 
     /**
-     * @param string $HaVipId HAVIP唯一ID，形如：havip-9o233uri。
+     * @param InputRecognizeEffectiveFlow $BusinessSecurityData 业务入参
      */
     function __construct()
     {
@@ -46,8 +46,9 @@ class DeleteHaVipRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("HaVipId",$param) and $param["HaVipId"] !== null) {
-            $this->HaVipId = $param["HaVipId"];
+        if (array_key_exists("BusinessSecurityData",$param) and $param["BusinessSecurityData"] !== null) {
+            $this->BusinessSecurityData = new InputRecognizeEffectiveFlow();
+            $this->BusinessSecurityData->deserialize($param["BusinessSecurityData"]);
         }
     }
 }

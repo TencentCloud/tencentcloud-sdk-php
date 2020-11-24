@@ -20,17 +20,37 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeHaVips返回参数结构体
  *
+ * @method integer getTotalCount() 获取符合条件的对象数。
+ * @method void setTotalCount(integer $TotalCount) 设置符合条件的对象数。
+ * @method array getHaVipSet() 获取HAVIP对象数组。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHaVipSet(array $HaVipSet) 设置HAVIP对象数组。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeHaVipsResponse extends AbstractModel
 {
     /**
+     * @var integer 符合条件的对象数。
+     */
+    public $TotalCount;
+
+    /**
+     * @var array HAVIP对象数组。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $HaVipSet;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
+     * @param integer $TotalCount 符合条件的对象数。
+     * @param array $HaVipSet HAVIP对象数组。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -46,6 +66,19 @@ class DescribeHaVipsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("HaVipSet",$param) and $param["HaVipSet"] !== null) {
+            $this->HaVipSet = [];
+            foreach ($param["HaVipSet"] as $key => $value){
+                $obj = new HaVip();
+                $obj->deserialize($value);
+                array_push($this->HaVipSet, $obj);
+            }
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

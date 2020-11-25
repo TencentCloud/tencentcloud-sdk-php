@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZone() 获取可用区英文ID，形如ap-guangzhou-1
  * @method void setZone(string $Zone) 设置可用区英文ID，形如ap-guangzhou-1
+ * @method string getInstanceType() 获取购买实例的类型 HA-高可用型(包括双机高可用，alwaysOn集群)，RO-只读副本型，SI-基础版本型
+ * @method void setInstanceType(string $InstanceType) 设置购买实例的类型 HA-高可用型(包括双机高可用，alwaysOn集群)，RO-只读副本型，SI-基础版本型
  */
 class DescribeProductConfigRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class DescribeProductConfigRequest extends AbstractModel
     public $Zone;
 
     /**
+     * @var string 购买实例的类型 HA-高可用型(包括双机高可用，alwaysOn集群)，RO-只读副本型，SI-基础版本型
+     */
+    public $InstanceType;
+
+    /**
      * @param string $Zone 可用区英文ID，形如ap-guangzhou-1
+     * @param string $InstanceType 购买实例的类型 HA-高可用型(包括双机高可用，alwaysOn集群)，RO-只读副本型，SI-基础版本型
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class DescribeProductConfigRequest extends AbstractModel
         }
         if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
             $this->Zone = $param["Zone"];
+        }
+
+        if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
+            $this->InstanceType = $param["InstanceType"];
         }
     }
 }

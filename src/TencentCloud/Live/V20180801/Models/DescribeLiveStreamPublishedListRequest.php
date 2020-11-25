@@ -44,11 +44,11 @@ UTC 格式，例如：2016-06-29T19:00:00Z。
 默认值：1。
  * @method integer getPageSize() 获取分页大小。
 最大值：100。
-取值范围：1~100 之前的任意整数。
+取值范围：10~100 之前的任意整数。
 默认值：10。
  * @method void setPageSize(integer $PageSize) 设置分页大小。
 最大值：100。
-取值范围：1~100 之前的任意整数。
+取值范围：10~100 之前的任意整数。
 默认值：10。
  * @method string getStreamName() 获取流名称，支持模糊匹配。
  * @method void setStreamName(string $StreamName) 设置流名称，支持模糊匹配。
@@ -89,7 +89,7 @@ UTC 格式，例如：2016-06-29T19:00:00Z。
     /**
      * @var integer 分页大小。
 最大值：100。
-取值范围：1~100 之前的任意整数。
+取值范围：10~100 之前的任意整数。
 默认值：10。
      */
     public $PageSize;
@@ -113,7 +113,7 @@ UTC 格式，例如：2016-06-29T19:00:00Z。
 默认值：1。
      * @param integer $PageSize 分页大小。
 最大值：100。
-取值范围：1~100 之前的任意整数。
+取值范围：10~100 之前的任意整数。
 默认值：10。
      * @param string $StreamName 流名称，支持模糊匹配。
      */

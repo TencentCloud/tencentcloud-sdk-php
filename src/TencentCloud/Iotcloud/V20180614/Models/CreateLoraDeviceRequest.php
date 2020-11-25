@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateLoraDevice请求参数结构体
  *
- * @method string getProductId() 获取产品 ID ，创建产品时腾讯云为用户分配全局唯一的 ID
- * @method void setProductId(string $ProductId) 设置产品 ID ，创建产品时腾讯云为用户分配全局唯一的 ID
+ * @method string getProductId() 获取产品Id ，创建产品时腾讯云为用户分配全局唯一的Id
+ * @method void setProductId(string $ProductId) 设置产品Id ，创建产品时腾讯云为用户分配全局唯一的Id
  * @method string getDeviceName() 获取设备名称
  * @method void setDeviceName(string $DeviceName) 设置设备名称
  * @method string getDeviceType() 获取设备类型 ，目前支持A、B、C三种
@@ -40,7 +40,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateLoraDeviceRequest extends AbstractModel
 {
     /**
-     * @var string 产品 ID ，创建产品时腾讯云为用户分配全局唯一的 ID
+     * @var string 产品Id ，创建产品时腾讯云为用户分配全局唯一的Id
      */
     public $ProductId;
 
@@ -80,7 +80,7 @@ class CreateLoraDeviceRequest extends AbstractModel
     public $Memo;
 
     /**
-     * @param string $ProductId 产品 ID ，创建产品时腾讯云为用户分配全局唯一的 ID
+     * @param string $ProductId 产品Id ，创建产品时腾讯云为用户分配全局唯一的Id
      * @param string $DeviceName 设备名称
      * @param string $DeviceType 设备类型 ，目前支持A、B、C三种
      * @param string $AppEui LoRa应用UUID

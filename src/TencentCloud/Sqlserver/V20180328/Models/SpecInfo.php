@@ -50,6 +50,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPayModeStatus() 获取此规格下支持的付费模式，POST-仅支持按量计费 PRE-仅支持包年包月 ALL-支持所有
  * @method void setPayModeStatus(string $PayModeStatus) 设置此规格下支持的付费模式，POST-仅支持按量计费 PRE-仅支持包年包月 ALL-支持所有
+ * @method string getInstanceType() 获取产品类型，HA-高可用型(包括双机高可用，alwaysOn集群)，RO-只读副本型，SI-基础版本型
+ * @method void setInstanceType(string $InstanceType) 设置产品类型，HA-高可用型(包括双机高可用，alwaysOn集群)，RO-只读副本型，SI-基础版本型
+ * @method string getMultiZonesStatus() 获取跨可用区类型，MultiZones-只支持跨可用区，SameZones-只支持同可用区，ALL-支持所有
+ * @method void setMultiZonesStatus(string $MultiZonesStatus) 设置跨可用区类型，MultiZones-只支持跨可用区，SameZones-只支持同可用区，ALL-支持所有
  */
 class SpecInfo extends AbstractModel
 {
@@ -125,6 +129,16 @@ class SpecInfo extends AbstractModel
     public $PayModeStatus;
 
     /**
+     * @var string 产品类型，HA-高可用型(包括双机高可用，alwaysOn集群)，RO-只读副本型，SI-基础版本型
+     */
+    public $InstanceType;
+
+    /**
+     * @var string 跨可用区类型，MultiZones-只支持跨可用区，SameZones-只支持同可用区，ALL-支持所有
+     */
+    public $MultiZonesStatus;
+
+    /**
      * @param integer $SpecId 实例规格ID，利用DescribeZones返回的SpecId，结合DescribeProductConfig返回的可售卖规格信息，可获悉某个可用区下可购买什么规格的实例
      * @param string $MachineType 机型ID
      * @param string $MachineTypeName 机型中文名称
@@ -140,6 +154,8 @@ class SpecInfo extends AbstractModel
      * @param array $PostPid 此规格对应的按量计费Pid列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PayModeStatus 此规格下支持的付费模式，POST-仅支持按量计费 PRE-仅支持包年包月 ALL-支持所有
+     * @param string $InstanceType 产品类型，HA-高可用型(包括双机高可用，alwaysOn集群)，RO-只读副本型，SI-基础版本型
+     * @param string $MultiZonesStatus 跨可用区类型，MultiZones-只支持跨可用区，SameZones-只支持同可用区，ALL-支持所有
      */
     function __construct()
     {
@@ -208,6 +224,14 @@ class SpecInfo extends AbstractModel
 
         if (array_key_exists("PayModeStatus",$param) and $param["PayModeStatus"] !== null) {
             $this->PayModeStatus = $param["PayModeStatus"];
+        }
+
+        if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
+            $this->InstanceType = $param["InstanceType"];
+        }
+
+        if (array_key_exists("MultiZonesStatus",$param) and $param["MultiZonesStatus"] !== null) {
+            $this->MultiZonesStatus = $param["MultiZonesStatus"];
         }
     }
 }

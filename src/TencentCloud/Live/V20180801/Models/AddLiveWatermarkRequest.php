@@ -21,7 +21,11 @@ use TencentCloud\Common\AbstractModel;
  * AddLiveWatermark请求参数结构体
  *
  * @method string getPictureUrl() 获取水印图片 URL。
+URL中禁止包含的字符：
+ ;(){}$>`#"\'|
  * @method void setPictureUrl(string $PictureUrl) 设置水印图片 URL。
+URL中禁止包含的字符：
+ ;(){}$>`#"\'|
  * @method string getWatermarkName() 获取水印名称。
 最长16字节。
  * @method void setWatermarkName(string $WatermarkName) 设置水印名称。
@@ -32,13 +36,15 @@ use TencentCloud\Common\AbstractModel;
  * @method void setYPosition(integer $YPosition) 设置显示位置，Y轴偏移，单位是百分比，默认 0。
  * @method integer getWidth() 获取水印宽度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。默认原始宽度。
  * @method void setWidth(integer $Width) 设置水印宽度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。默认原始宽度。
- * @method integer getHeight() 获取水印高度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。默认原始高度。
- * @method void setHeight(integer $Height) 设置水印高度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。默认原始高度。
+ * @method integer getHeight() 获取水印高度，占直播原始画面高度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。默认原始高度。
+ * @method void setHeight(integer $Height) 设置水印高度，占直播原始画面高度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。默认原始高度。
  */
 class AddLiveWatermarkRequest extends AbstractModel
 {
     /**
      * @var string 水印图片 URL。
+URL中禁止包含的字符：
+ ;(){}$>`#"\'|
      */
     public $PictureUrl;
 
@@ -64,18 +70,20 @@ class AddLiveWatermarkRequest extends AbstractModel
     public $Width;
 
     /**
-     * @var integer 水印高度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。默认原始高度。
+     * @var integer 水印高度，占直播原始画面高度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。默认原始高度。
      */
     public $Height;
 
     /**
      * @param string $PictureUrl 水印图片 URL。
+URL中禁止包含的字符：
+ ;(){}$>`#"\'|
      * @param string $WatermarkName 水印名称。
 最长16字节。
      * @param integer $XPosition 显示位置，X轴偏移，单位是百分比，默认 0。
      * @param integer $YPosition 显示位置，Y轴偏移，单位是百分比，默认 0。
      * @param integer $Width 水印宽度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。默认原始宽度。
-     * @param integer $Height 水印高度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。默认原始高度。
+     * @param integer $Height 水印高度，占直播原始画面高度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。默认原始高度。
      */
     function __construct()
     {

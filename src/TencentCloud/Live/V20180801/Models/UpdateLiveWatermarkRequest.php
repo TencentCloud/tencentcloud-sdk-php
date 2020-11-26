@@ -25,7 +25,11 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWatermarkId(integer $WatermarkId) 设置水印 ID。
 在添加水印接口 [AddLiveWatermark](/document/product/267/30154) 调用返回值中获取水印 ID。
  * @method string getPictureUrl() 获取水印图片 URL。
+URL中禁止包含的字符：
+ ;(){}$>`#"\'|
  * @method void setPictureUrl(string $PictureUrl) 设置水印图片 URL。
+URL中禁止包含的字符：
+ ;(){}$>`#"\'|
  * @method integer getXPosition() 获取显示位置，X轴偏移，单位是百分比，默认 0。
  * @method void setXPosition(integer $XPosition) 设置显示位置，X轴偏移，单位是百分比，默认 0。
  * @method integer getYPosition() 获取显示位置，Y轴偏移，单位是百分比，默认 0。
@@ -49,6 +53,8 @@ class UpdateLiveWatermarkRequest extends AbstractModel
 
     /**
      * @var string 水印图片 URL。
+URL中禁止包含的字符：
+ ;(){}$>`#"\'|
      */
     public $PictureUrl;
 
@@ -82,6 +88,8 @@ class UpdateLiveWatermarkRequest extends AbstractModel
      * @param integer $WatermarkId 水印 ID。
 在添加水印接口 [AddLiveWatermark](/document/product/267/30154) 调用返回值中获取水印 ID。
      * @param string $PictureUrl 水印图片 URL。
+URL中禁止包含的字符：
+ ;(){}$>`#"\'|
      * @param integer $XPosition 显示位置，X轴偏移，单位是百分比，默认 0。
      * @param integer $YPosition 显示位置，Y轴偏移，单位是百分比，默认 0。
      * @param string $WatermarkName 水印名称。

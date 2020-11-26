@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEntstatus(string $Entstatus) 设置经营状态（在营、注销、吊销、其他）
  * @method string getZsopscope() 获取经营业务范围
  * @method void setZsopscope(string $Zsopscope) 设置经营业务范围
- * @method string getReason() 获取状态信息
- * @method void setReason(string $Reason) 设置状态信息
+ * @method string getReason() 获取查询的状态信息
+ * @method void setReason(string $Reason) 设置查询的状态信息
  * @method string getOriregno() 获取原注册号
  * @method void setOriregno(string $Oriregno) 设置原注册号
  * @method string getVerifyRegno() 获取要核验的工商注册号
@@ -95,7 +95,7 @@ class VerifyBasicBizLicenseResponse extends AbstractModel
     public $Zsopscope;
 
     /**
-     * @var string 状态信息
+     * @var string 查询的状态信息
      */
     public $Reason;
 
@@ -157,7 +157,7 @@ class VerifyBasicBizLicenseResponse extends AbstractModel
      * @param string $Frname 法人姓名
      * @param string $Entstatus 经营状态（在营、注销、吊销、其他）
      * @param string $Zsopscope 经营业务范围
-     * @param string $Reason 状态信息
+     * @param string $Reason 查询的状态信息
      * @param string $Oriregno 原注册号
      * @param string $VerifyRegno 要核验的工商注册号
      * @param string $Regno 工商注册号

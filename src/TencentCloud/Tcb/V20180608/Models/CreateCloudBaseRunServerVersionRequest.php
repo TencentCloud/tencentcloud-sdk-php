@@ -82,6 +82,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnableUnion(boolean $EnableUnion) 设置是否使用统一域名
  * @method string getOperatorRemark() 获取操作备注
  * @method void setOperatorRemark(string $OperatorRemark) 设置操作备注
+ * @method string getServerPath() 获取服务路劲
+ * @method void setServerPath(string $ServerPath) 设置服务路劲
  */
 class CreateCloudBaseRunServerVersionRequest extends AbstractModel
 {
@@ -241,6 +243,11 @@ class CreateCloudBaseRunServerVersionRequest extends AbstractModel
     public $OperatorRemark;
 
     /**
+     * @var string 服务路劲
+     */
+    public $ServerPath;
+
+    /**
      * @param string $EnvId 环境ID
      * @param string $UploadType 枚举（package/repository/image)
      * @param integer $FlowRatio 流量占比
@@ -272,6 +279,7 @@ class CreateCloudBaseRunServerVersionRequest extends AbstractModel
      * @param CloudBaseEsInfo $EsInfo es信息
      * @param boolean $EnableUnion 是否使用统一域名
      * @param string $OperatorRemark 操作备注
+     * @param string $ServerPath 服务路劲
      */
     function __construct()
     {
@@ -417,6 +425,10 @@ class CreateCloudBaseRunServerVersionRequest extends AbstractModel
 
         if (array_key_exists("OperatorRemark",$param) and $param["OperatorRemark"] !== null) {
             $this->OperatorRemark = $param["OperatorRemark"];
+        }
+
+        if (array_key_exists("ServerPath",$param) and $param["ServerPath"] !== null) {
+            $this->ServerPath = $param["ServerPath"];
         }
     }
 }

@@ -48,11 +48,11 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResTextFormat(integer $ResTextFormat) 设置识别结果返回形式。0： 识别结果文本(含分段时间戳)； 1：词级别粒度的[详细识别结果](https://cloud.tencent.com/document/api/1093/37824#SentenceDetail)(不含标点，含语速值)；2：词级别粒度的详细识别结果（包含标点、语速值）
  * @method integer getSourceType() 获取语音数据来源。0：语音 URL；1：语音数据（post body）。
  * @method void setSourceType(integer $SourceType) 设置语音数据来源。0：语音 URL；1：语音数据（post body）。
- * @method integer getSpeakerDiarization() 获取是否开启话者分离，0：不开启，1：开启(仅支持8k_zh/16k_zh引擎模型，单声道音频)
- * @method void setSpeakerDiarization(integer $SpeakerDiarization) 设置是否开启话者分离，0：不开启，1：开启(仅支持8k_zh/16k_zh引擎模型，单声道音频)
- * @method integer getSpeakerNumber() 获取话者分离人数（需配合开启话者分离使用），支持2-10（8k_zh仅支持2， 16k_zh支持2-10）
+ * @method integer getSpeakerDiarization() 获取是否开启说话人分离，0：不开启，1：开启(仅支持8k_zh，16k_zh，16k_zh_video引擎模型，单声道音频)
+ * @method void setSpeakerDiarization(integer $SpeakerDiarization) 设置是否开启说话人分离，0：不开启，1：开启(仅支持8k_zh，16k_zh，16k_zh_video引擎模型，单声道音频)
+ * @method integer getSpeakerNumber() 获取说话人分离人数（需配合开启说话人分离使用），取值范围：0-10，0代表自动分离（目前仅支持≤6个人），1-10代表指定说话人数分离。
 注：话者分离目前是beta版本，请根据您的需要谨慎使用
- * @method void setSpeakerNumber(integer $SpeakerNumber) 设置话者分离人数（需配合开启话者分离使用），支持2-10（8k_zh仅支持2， 16k_zh支持2-10）
+ * @method void setSpeakerNumber(integer $SpeakerNumber) 设置说话人分离人数（需配合开启说话人分离使用），取值范围：0-10，0代表自动分离（目前仅支持≤6个人），1-10代表指定说话人数分离。
 注：话者分离目前是beta版本，请根据您的需要谨慎使用
  * @method string getCallbackUrl() 获取回调 URL，用户自行搭建的用于接收识别结果的服务器地址， 长度小于2048字节。如果用户使用回调方式获取识别结果，需提交该参数；如果用户使用轮询方式获取识别结果，则无需提交该参数。
  * @method void setCallbackUrl(string $CallbackUrl) 设置回调 URL，用户自行搭建的用于接收识别结果的服务器地址， 长度小于2048字节。如果用户使用回调方式获取识别结果，需提交该参数；如果用户使用轮询方式获取识别结果，则无需提交该参数。
@@ -108,12 +108,12 @@ class CreateRecTaskRequest extends AbstractModel
     public $SourceType;
 
     /**
-     * @var integer 是否开启话者分离，0：不开启，1：开启(仅支持8k_zh/16k_zh引擎模型，单声道音频)
+     * @var integer 是否开启说话人分离，0：不开启，1：开启(仅支持8k_zh，16k_zh，16k_zh_video引擎模型，单声道音频)
      */
     public $SpeakerDiarization;
 
     /**
-     * @var integer 话者分离人数（需配合开启话者分离使用），支持2-10（8k_zh仅支持2， 16k_zh支持2-10）
+     * @var integer 说话人分离人数（需配合开启说话人分离使用），取值范围：0-10，0代表自动分离（目前仅支持≤6个人），1-10代表指定说话人数分离。
 注：话者分离目前是beta版本，请根据您的需要谨慎使用
      */
     public $SpeakerNumber;
@@ -183,8 +183,8 @@ class CreateRecTaskRequest extends AbstractModel
      * @param integer $ChannelNum 语音声道数。1：单声道；2：双声道（仅支持 8k_zh 引擎模型）。
      * @param integer $ResTextFormat 识别结果返回形式。0： 识别结果文本(含分段时间戳)； 1：词级别粒度的[详细识别结果](https://cloud.tencent.com/document/api/1093/37824#SentenceDetail)(不含标点，含语速值)；2：词级别粒度的详细识别结果（包含标点、语速值）
      * @param integer $SourceType 语音数据来源。0：语音 URL；1：语音数据（post body）。
-     * @param integer $SpeakerDiarization 是否开启话者分离，0：不开启，1：开启(仅支持8k_zh/16k_zh引擎模型，单声道音频)
-     * @param integer $SpeakerNumber 话者分离人数（需配合开启话者分离使用），支持2-10（8k_zh仅支持2， 16k_zh支持2-10）
+     * @param integer $SpeakerDiarization 是否开启说话人分离，0：不开启，1：开启(仅支持8k_zh，16k_zh，16k_zh_video引擎模型，单声道音频)
+     * @param integer $SpeakerNumber 说话人分离人数（需配合开启说话人分离使用），取值范围：0-10，0代表自动分离（目前仅支持≤6个人），1-10代表指定说话人数分离。
 注：话者分离目前是beta版本，请根据您的需要谨慎使用
      * @param string $CallbackUrl 回调 URL，用户自行搭建的用于接收识别结果的服务器地址， 长度小于2048字节。如果用户使用回调方式获取识别结果，需提交该参数；如果用户使用轮询方式获取识别结果，则无需提交该参数。
      * @param string $Url 语音的URL地址，需要公网可下载。长度小于2048字节，当 SourceType 值为 0 时须填写该字段，为 1 时不需要填写。注意：请确保录音文件时长在5个小时之内，否则可能识别失败。请保证文件的下载速度，否则可能下载失败。

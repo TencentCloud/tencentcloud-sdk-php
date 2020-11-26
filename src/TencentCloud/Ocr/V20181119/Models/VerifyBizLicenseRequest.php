@@ -20,22 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * VerifyBizLicense请求参数结构体
  *
- * @method string getImageBase64() 获取用于入参是营业执照图片的场景，ImageBase64和ImageUrl必选一个输入。
+ * @method string getImageBase64() 获取用于入参是营业执照图片的场景，ImageBase64和ImageUrl必须提供一个，如果都提供，只使用 ImageUrl。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经Base64编码后不超过 7M。图片下载时间不超过 3 秒。
-图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
- * @method void setImageBase64(string $ImageBase64) 设置用于入参是营业执照图片的场景，ImageBase64和ImageUrl必选一个输入。
+ * @method void setImageBase64(string $ImageBase64) 设置用于入参是营业执照图片的场景，ImageBase64和ImageUrl必须提供一个，如果都提供，只使用 ImageUrl。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经Base64编码后不超过 7M。图片下载时间不超过 3 秒。
-图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
- * @method string getImageUrl() 获取用于入参是营业执照图片的场景，ImageBase64和ImageUrl必选一个输入。
+ * @method string getImageUrl() 获取用于入参是营业执照图片的场景，ImageBase64和ImageUrl必须提供一个，如果都提供，只使用 ImageUrl。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经Base64编码后不超过 7M。图片下载时间不超过 3 秒。
-图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
- * @method void setImageUrl(string $ImageUrl) 设置用于入参是营业执照图片的场景，ImageBase64和ImageUrl必选一个输入。
+ * @method void setImageUrl(string $ImageUrl) 设置用于入参是营业执照图片的场景，ImageBase64和ImageUrl必须提供一个，如果都提供，只使用 ImageUrl。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经Base64编码后不超过 7M。图片下载时间不超过 3 秒。
-图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
  * @method string getImageConfig() 获取用于入参是营业执照图片的场景，表示需要校验的参数：RegNum（注册号或者统一社会信用代码），Name（企业名称），Address（经营地址）。选择后会返回相关参数校验结果。RegNum为必选，Name和Address可选。
 格式为{RegNum: true, Name:true/false, Address:true/false}
 
@@ -50,28 +46,26 @@ Config = {"Name":true,"Address":true}
 Config = Json.stringify({"Name":true,"Address":true})
 API 3.0 Explorer 设置方式参考：
 Config = {"Name":true,"Address":true}
- * @method string getRegNum() 获取用于入参是文本的场景，RegNum表示注册号或者统一社会信用代码。RegNum为必选项。
- * @method void setRegNum(string $RegNum) 设置用于入参是文本的场景，RegNum表示注册号或者统一社会信用代码。RegNum为必选项。
+ * @method string getRegNum() 获取用于入参是文本的场景，RegNum表示注册号或者统一社会信用代码。若没有传入营业执照图片，则RegNum为必选项，若图片和RegNum都传入，则只使用RegNum。
+ * @method void setRegNum(string $RegNum) 设置用于入参是文本的场景，RegNum表示注册号或者统一社会信用代码。若没有传入营业执照图片，则RegNum为必选项，若图片和RegNum都传入，则只使用RegNum。
  * @method string getName() 获取用于入参是文本的场景，Name表示企业名称。Name为可选项，填写后会返回Name的校验结果。
  * @method void setName(string $Name) 设置用于入参是文本的场景，Name表示企业名称。Name为可选项，填写后会返回Name的校验结果。
- * @method string getAddress() 获取用于入参是文本的场景，Address表示经营地址，填写后会返回Name的校验结果。
- * @method void setAddress(string $Address) 设置用于入参是文本的场景，Address表示经营地址，填写后会返回Name的校验结果。
+ * @method string getAddress() 获取用于入参是文本的场景，Address表示经营地址，填写后会返回Address的校验结果。
+ * @method void setAddress(string $Address) 设置用于入参是文本的场景，Address表示经营地址，填写后会返回Address的校验结果。
  */
 class VerifyBizLicenseRequest extends AbstractModel
 {
     /**
-     * @var string 用于入参是营业执照图片的场景，ImageBase64和ImageUrl必选一个输入。
+     * @var string 用于入参是营业执照图片的场景，ImageBase64和ImageUrl必须提供一个，如果都提供，只使用 ImageUrl。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经Base64编码后不超过 7M。图片下载时间不超过 3 秒。
-图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
      */
     public $ImageBase64;
 
     /**
-     * @var string 用于入参是营业执照图片的场景，ImageBase64和ImageUrl必选一个输入。
+     * @var string 用于入参是营业执照图片的场景，ImageBase64和ImageUrl必须提供一个，如果都提供，只使用 ImageUrl。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经Base64编码后不超过 7M。图片下载时间不超过 3 秒。
-图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
      */
     public $ImageUrl;
 
@@ -87,7 +81,7 @@ Config = {"Name":true,"Address":true}
     public $ImageConfig;
 
     /**
-     * @var string 用于入参是文本的场景，RegNum表示注册号或者统一社会信用代码。RegNum为必选项。
+     * @var string 用于入参是文本的场景，RegNum表示注册号或者统一社会信用代码。若没有传入营业执照图片，则RegNum为必选项，若图片和RegNum都传入，则只使用RegNum。
      */
     public $RegNum;
 
@@ -97,19 +91,17 @@ Config = {"Name":true,"Address":true}
     public $Name;
 
     /**
-     * @var string 用于入参是文本的场景，Address表示经营地址，填写后会返回Name的校验结果。
+     * @var string 用于入参是文本的场景，Address表示经营地址，填写后会返回Address的校验结果。
      */
     public $Address;
 
     /**
-     * @param string $ImageBase64 用于入参是营业执照图片的场景，ImageBase64和ImageUrl必选一个输入。
+     * @param string $ImageBase64 用于入参是营业执照图片的场景，ImageBase64和ImageUrl必须提供一个，如果都提供，只使用 ImageUrl。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经Base64编码后不超过 7M。图片下载时间不超过 3 秒。
-图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
-     * @param string $ImageUrl 用于入参是营业执照图片的场景，ImageBase64和ImageUrl必选一个输入。
+     * @param string $ImageUrl 用于入参是营业执照图片的场景，ImageBase64和ImageUrl必须提供一个，如果都提供，只使用 ImageUrl。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经Base64编码后不超过 7M。图片下载时间不超过 3 秒。
-图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
      * @param string $ImageConfig 用于入参是营业执照图片的场景，表示需要校验的参数：RegNum（注册号或者统一社会信用代码），Name（企业名称），Address（经营地址）。选择后会返回相关参数校验结果。RegNum为必选，Name和Address可选。
 格式为{RegNum: true, Name:true/false, Address:true/false}
 
@@ -117,9 +109,9 @@ Config = {"Name":true,"Address":true}
 Config = Json.stringify({"Name":true,"Address":true})
 API 3.0 Explorer 设置方式参考：
 Config = {"Name":true,"Address":true}
-     * @param string $RegNum 用于入参是文本的场景，RegNum表示注册号或者统一社会信用代码。RegNum为必选项。
+     * @param string $RegNum 用于入参是文本的场景，RegNum表示注册号或者统一社会信用代码。若没有传入营业执照图片，则RegNum为必选项，若图片和RegNum都传入，则只使用RegNum。
      * @param string $Name 用于入参是文本的场景，Name表示企业名称。Name为可选项，填写后会返回Name的校验结果。
-     * @param string $Address 用于入参是文本的场景，Address表示经营地址，填写后会返回Name的校验结果。
+     * @param string $Address 用于入参是文本的场景，Address表示经营地址，填写后会返回Address的校验结果。
      */
     function __construct()
     {

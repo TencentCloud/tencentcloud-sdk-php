@@ -42,6 +42,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDomainName(string $DomainName) 设置使用此证书的域名名称。
  * @method integer getStatus() 获取证书状态。
  * @method void setStatus(integer $Status) 设置证书状态。
+ * @method array getCertDomains() 获取证书本身标识的域名列表。
+比如: ["*.x.com"]
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCertDomains(array $CertDomains) 设置证书本身标识的域名列表。
+比如: ["*.x.com"]
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCloudCertId() 获取腾讯云ssl的证书Id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCloudCertId(string $CloudCertId) 设置腾讯云ssl的证书Id
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DomainCertInfo extends AbstractModel
 {
@@ -93,6 +103,19 @@ class DomainCertInfo extends AbstractModel
     public $Status;
 
     /**
+     * @var array 证书本身标识的域名列表。
+比如: ["*.x.com"]
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CertDomains;
+
+    /**
+     * @var string 腾讯云ssl的证书Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CloudCertId;
+
+    /**
      * @param integer $CertId 证书Id。
      * @param string $CertName 证书名称。
      * @param string $Description 描述信息。
@@ -104,6 +127,11 @@ class DomainCertInfo extends AbstractModel
      * @param string $CertExpireTime 证书过期时间，UTC格式。
      * @param string $DomainName 使用此证书的域名名称。
      * @param integer $Status 证书状态。
+     * @param array $CertDomains 证书本身标识的域名列表。
+比如: ["*.x.com"]
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CloudCertId 腾讯云ssl的证书Id
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -152,6 +180,14 @@ class DomainCertInfo extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("CertDomains",$param) and $param["CertDomains"] !== null) {
+            $this->CertDomains = $param["CertDomains"];
+        }
+
+        if (array_key_exists("CloudCertId",$param) and $param["CloudCertId"] !== null) {
+            $this->CloudCertId = $param["CloudCertId"];
         }
     }
 }

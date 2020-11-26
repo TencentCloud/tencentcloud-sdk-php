@@ -20,15 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 企业证照单个字段的内容
  *
- * @method string getName() 获取识别出的字段名称。
- * @method void setName(string $Name) 设置识别出的字段名称。
+ * @method string getName() 获取识别出的字段名称（关键字），不同证件类型可能不同，证件类型包含企业登记证书、许可证书、企业执照、三证合一类证书；
+支持以下字段：统一社会信用代码、法定代表人、公司名称、公司地址、注册资金、企业关型、经营范围、成立日期、有效期、开办资金、经费来源、举办单位等；
+ * @method void setName(string $Name) 设置识别出的字段名称（关键字），不同证件类型可能不同，证件类型包含企业登记证书、许可证书、企业执照、三证合一类证书；
+支持以下字段：统一社会信用代码、法定代表人、公司名称、公司地址、注册资金、企业关型、经营范围、成立日期、有效期、开办资金、经费来源、举办单位等；
  * @method string getValue() 获取识别出的字段名称对应的值，也就是字段Name对应的字符串结果。
  * @method void setValue(string $Value) 设置识别出的字段名称对应的值，也就是字段Name对应的字符串结果。
  */
 class EnterpriseLicenseInfo extends AbstractModel
 {
     /**
-     * @var string 识别出的字段名称。
+     * @var string 识别出的字段名称（关键字），不同证件类型可能不同，证件类型包含企业登记证书、许可证书、企业执照、三证合一类证书；
+支持以下字段：统一社会信用代码、法定代表人、公司名称、公司地址、注册资金、企业关型、经营范围、成立日期、有效期、开办资金、经费来源、举办单位等；
      */
     public $Name;
 
@@ -38,7 +41,8 @@ class EnterpriseLicenseInfo extends AbstractModel
     public $Value;
 
     /**
-     * @param string $Name 识别出的字段名称。
+     * @param string $Name 识别出的字段名称（关键字），不同证件类型可能不同，证件类型包含企业登记证书、许可证书、企业执照、三证合一类证书；
+支持以下字段：统一社会信用代码、法定代表人、公司名称、公司地址、注册资金、企业关型、经营范围、成立日期、有效期、开办资金、经费来源、举办单位等；
      * @param string $Value 识别出的字段名称对应的值，也就是字段Name对应的字符串结果。
      */
     function __construct()

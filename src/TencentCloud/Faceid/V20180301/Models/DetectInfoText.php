@@ -104,6 +104,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMobile(string $Mobile) 设置手机号码。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCompareLibType() 获取本次流程最终比对库源类型。包括：
+公安商业库；
+业务方自有库（用户上传照片、客户的混合库、混合部署库）；
+二次验证库；
+人工审核库；
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCompareLibType(string $CompareLibType) 设置本次流程最终比对库源类型。包括：
+公安商业库；
+业务方自有库（用户上传照片、客户的混合库、混合部署库）；
+二次验证库；
+人工审核库；
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DetectInfoText extends AbstractModel
 {
@@ -234,6 +246,16 @@ class DetectInfoText extends AbstractModel
     public $Mobile;
 
     /**
+     * @var string 本次流程最终比对库源类型。包括：
+公安商业库；
+业务方自有库（用户上传照片、客户的混合库、混合部署库）；
+二次验证库；
+人工审核库；
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CompareLibType;
+
+    /**
      * @param integer $ErrCode 本次流程最终验证结果。0为成功
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ErrMsg 本次流程最终验证结果描述。（仅描述用，文案更新时不会通知。）
@@ -275,6 +297,12 @@ class DetectInfoText extends AbstractModel
      * @param array $LivenessDetail 本次流程进行的活体一比一流水。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Mobile 手机号码。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CompareLibType 本次流程最终比对库源类型。包括：
+公安商业库；
+业务方自有库（用户上传照片、客户的混合库、混合部署库）；
+二次验证库；
+人工审核库；
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -377,6 +405,10 @@ class DetectInfoText extends AbstractModel
 
         if (array_key_exists("Mobile",$param) and $param["Mobile"] !== null) {
             $this->Mobile = $param["Mobile"];
+        }
+
+        if (array_key_exists("CompareLibType",$param) and $param["CompareLibType"] !== null) {
+            $this->CompareLibType = $param["CompareLibType"];
         }
     }
 }

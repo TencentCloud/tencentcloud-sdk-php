@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 创建资源实例时同时绑定的标签对说明
  *
- * @method string getResourceType() 获取标签绑定的资源类型，当前支持类型："instance"和"host"
- * @method void setResourceType(string $ResourceType) 设置标签绑定的资源类型，当前支持类型："instance"和"host"
+ * @method string getResourceType() 获取标签绑定的资源类型，云服务器为“instance”，专用宿主机为“host”
+ * @method void setResourceType(string $ResourceType) 设置标签绑定的资源类型，云服务器为“instance”，专用宿主机为“host”
  * @method array getTags() 获取标签对列表
  * @method void setTags(array $Tags) 设置标签对列表
  */
 class TagSpecification extends AbstractModel
 {
     /**
-     * @var string 标签绑定的资源类型，当前支持类型："instance"和"host"
+     * @var string 标签绑定的资源类型，云服务器为“instance”，专用宿主机为“host”
      */
     public $ResourceType;
 
@@ -38,7 +38,7 @@ class TagSpecification extends AbstractModel
     public $Tags;
 
     /**
-     * @param string $ResourceType 标签绑定的资源类型，当前支持类型："instance"和"host"
+     * @param string $ResourceType 标签绑定的资源类型，云服务器为“instance”，专用宿主机为“host”
      * @param array $Tags 标签对列表
      */
     function __construct()

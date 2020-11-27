@@ -14,23 +14,39 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cvm\V20170312\Models;
+namespace TencentCloud\Bda\V20200324\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeSpotTypeConfig返回参数结构体
+ * CreateSegmentationTask返回参数结构体
  *
+ * @method string getTaskID() 获取任务标识ID,可以用与追溯任务状态，查看任务结果
+ * @method void setTaskID(string $TaskID) 设置任务标识ID,可以用与追溯任务状态，查看任务结果
+ * @method float getEstimatedProcessingTime() 获取预估处理时间，单位为秒
+ * @method void setEstimatedProcessingTime(float $EstimatedProcessingTime) 设置预估处理时间，单位为秒
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeSpotTypeConfigResponse extends AbstractModel
+class CreateSegmentationTaskResponse extends AbstractModel
 {
+    /**
+     * @var string 任务标识ID,可以用与追溯任务状态，查看任务结果
+     */
+    public $TaskID;
+
+    /**
+     * @var float 预估处理时间，单位为秒
+     */
+    public $EstimatedProcessingTime;
+
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
+     * @param string $TaskID 任务标识ID,可以用与追溯任务状态，查看任务结果
+     * @param float $EstimatedProcessingTime 预估处理时间，单位为秒
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -46,6 +62,14 @@ class DescribeSpotTypeConfigResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("TaskID",$param) and $param["TaskID"] !== null) {
+            $this->TaskID = $param["TaskID"];
+        }
+
+        if (array_key_exists("EstimatedProcessingTime",$param) and $param["EstimatedProcessingTime"] !== null) {
+            $this->EstimatedProcessingTime = $param["EstimatedProcessingTime"];
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

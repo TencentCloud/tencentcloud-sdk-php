@@ -208,6 +208,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置API绑定的tag信息。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getEnvironments() 获取API已发布的环境信息。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEnvironments(array $Environments) 设置API已发布的环境信息。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ApiInfo extends AbstractModel
 {
@@ -494,6 +498,12 @@ class ApiInfo extends AbstractModel
     public $Tags;
 
     /**
+     * @var array API已发布的环境信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Environments;
+
+    /**
      * @param string $ServiceId API 所在的服务唯一 ID。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ServiceName API 所在的服务的名称。
@@ -587,6 +597,8 @@ class ApiInfo extends AbstractModel
      * @param boolean $EnableCORS 是否开启跨域。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tags API绑定的tag信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Environments API已发布的环境信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -823,6 +835,10 @@ class ApiInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("Environments",$param) and $param["Environments"] !== null) {
+            $this->Environments = $param["Environments"];
         }
     }
 }

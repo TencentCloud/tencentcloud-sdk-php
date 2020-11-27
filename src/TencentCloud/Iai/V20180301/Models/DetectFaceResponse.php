@@ -26,8 +26,24 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImageHeight(integer $ImageHeight) 设置请求的图片高度。
  * @method array getFaceInfos() 获取人脸信息列表。包含人脸坐标信息、属性信息（若需要）、质量分信息（若需要）。
  * @method void setFaceInfos(array $FaceInfos) 设置人脸信息列表。包含人脸坐标信息、属性信息（若需要）、质量分信息（若需要）。
- * @method string getFaceModelVersion() 获取人脸识别所用的算法模型版本。
- * @method void setFaceModelVersion(string $FaceModelVersion) 设置人脸识别所用的算法模型版本。
+ * @method string getFaceModelVersion() 获取人脸识别服务所用的算法模型版本。
+
+目前入参支持 “2.0”和“3.0“ 两个输入。
+
+2020年4月2日开始，默认为“3.0”，之前使用过本接口的账号若未填写本参数默认为“2.0”。
+
+2020年11月26日后开通服务的账号仅支持输入“3.0”。
+
+不同算法模型版本对应的人脸识别算法不同，新版本的整体效果会优于旧版本，建议使用“3.0”版本。
+ * @method void setFaceModelVersion(string $FaceModelVersion) 设置人脸识别服务所用的算法模型版本。
+
+目前入参支持 “2.0”和“3.0“ 两个输入。
+
+2020年4月2日开始，默认为“3.0”，之前使用过本接口的账号若未填写本参数默认为“2.0”。
+
+2020年11月26日后开通服务的账号仅支持输入“3.0”。
+
+不同算法模型版本对应的人脸识别算法不同，新版本的整体效果会优于旧版本，建议使用“3.0”版本。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -49,7 +65,15 @@ class DetectFaceResponse extends AbstractModel
     public $FaceInfos;
 
     /**
-     * @var string 人脸识别所用的算法模型版本。
+     * @var string 人脸识别服务所用的算法模型版本。
+
+目前入参支持 “2.0”和“3.0“ 两个输入。
+
+2020年4月2日开始，默认为“3.0”，之前使用过本接口的账号若未填写本参数默认为“2.0”。
+
+2020年11月26日后开通服务的账号仅支持输入“3.0”。
+
+不同算法模型版本对应的人脸识别算法不同，新版本的整体效果会优于旧版本，建议使用“3.0”版本。
      */
     public $FaceModelVersion;
 
@@ -62,7 +86,15 @@ class DetectFaceResponse extends AbstractModel
      * @param integer $ImageWidth 请求的图片宽度。
      * @param integer $ImageHeight 请求的图片高度。
      * @param array $FaceInfos 人脸信息列表。包含人脸坐标信息、属性信息（若需要）、质量分信息（若需要）。
-     * @param string $FaceModelVersion 人脸识别所用的算法模型版本。
+     * @param string $FaceModelVersion 人脸识别服务所用的算法模型版本。
+
+目前入参支持 “2.0”和“3.0“ 两个输入。
+
+2020年4月2日开始，默认为“3.0”，之前使用过本接口的账号若未填写本参数默认为“2.0”。
+
+2020年11月26日后开通服务的账号仅支持输入“3.0”。
+
+不同算法模型版本对应的人脸识别算法不同，新版本的整体效果会优于旧版本，建议使用“3.0”版本。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -68,6 +68,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setComparemsg(string $Comparemsg) 设置本次一比一结果描述。（仅描述用，文案更新时不会通知。）
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCompareLibType() 获取比对库源类型。包括：
+公安商业库；
+业务方自有库（用户上传照片、客户的混合库、混合部署库）；
+二次验证库；
+人工审核库；
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCompareLibType(string $CompareLibType) 设置比对库源类型。包括：
+公安商业库；
+业务方自有库（用户上传照片、客户的混合库、混合部署库）；
+二次验证库；
+人工审核库；
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DetectDetail extends AbstractModel
 {
@@ -144,6 +156,16 @@ class DetectDetail extends AbstractModel
     public $Comparemsg;
 
     /**
+     * @var string 比对库源类型。包括：
+公安商业库；
+业务方自有库（用户上传照片、客户的混合库、混合部署库）；
+二次验证库；
+人工审核库；
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CompareLibType;
+
+    /**
      * @param string $ReqTime 请求时间戳。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Seq 本次活体一比一请求的唯一标记。
@@ -167,6 +189,12 @@ class DetectDetail extends AbstractModel
      * @param integer $Comparestatus 本次一比一结果。0为成功
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Comparemsg 本次一比一结果描述。（仅描述用，文案更新时不会通知。）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CompareLibType 比对库源类型。包括：
+公安商业库；
+业务方自有库（用户上传照片、客户的混合库、混合部署库）；
+二次验证库；
+人工审核库；
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -228,6 +256,10 @@ class DetectDetail extends AbstractModel
 
         if (array_key_exists("Comparemsg",$param) and $param["Comparemsg"] !== null) {
             $this->Comparemsg = $param["Comparemsg"];
+        }
+
+        if (array_key_exists("CompareLibType",$param) and $param["CompareLibType"] !== null) {
+            $this->CompareLibType = $param["CompareLibType"];
         }
     }
 }

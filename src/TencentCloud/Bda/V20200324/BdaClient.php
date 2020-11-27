@@ -38,6 +38,7 @@ use TencentCloud\Bda\V20200324\Models as Models;
 - 无论您在单个Trace中提供了多少张人体图片，我们都将生成一个对应的轨迹（Trace）信息。即，Trace仅和本次输入的图片序列相关，和图片的个数无关；
 - 输入的图片组中，若有部分图片输入不合法（如图片大小过大、分辨率过大、无法解码等），我们将舍弃这部分图片，确保合法图片被正确搜索。即，我们将尽可能保证请求成功，去除不合法的输入；
 - 构成人体轨迹单张图片大小不得超过2M，分辨率不得超过1920*1080。
+ * @method Models\CreateSegmentationTaskResponse CreateSegmentationTask(Models\CreateSegmentationTaskRequest $req) 本接口为离线人像分割处理接口组中的提交任务接口，可以对提交的资源进行处理视频流/图片流识别视频作品中的人像区域，进行一键抠像、背景替换、人像虚化等后期处理。
  * @method Models\CreateTraceResponse CreateTrace(Models\CreateTraceRequest $req) 将一个人体轨迹添加到一个人员中。一个人员最多允许包含 5 个人体轨迹。同一人的人体轨迹越多，搜索识别效果越好。
 
 >请注意：
@@ -48,6 +49,7 @@ use TencentCloud\Bda\V20200324\Models as Models;
 - 构成人体轨迹单张图片大小限制为2M，分辨率限制为1920*1080。
  * @method Models\DeleteGroupResponse DeleteGroup(Models\DeleteGroupRequest $req) 删除该人体库及包含的所有的人员。
  * @method Models\DeletePersonResponse DeletePerson(Models\DeletePersonRequest $req) 删除人员。
+ * @method Models\DescribeSegmentationTaskResponse DescribeSegmentationTask(Models\DescribeSegmentationTaskRequest $req) 可以查看单条任务的处理情况，包括处理状态，处理结果。
  * @method Models\DetectBodyResponse DetectBody(Models\DetectBodyRequest $req) 检测给定图片中的人体（Body）的位置信息及属性信息。
 
  * @method Models\DetectBodyJointsResponse DetectBodyJoints(Models\DetectBodyJointsRequest $req) 检测图片中人体的14个关键点。建议用于人体图像清晰、无遮挡的场景。支持一张图片中存在多个人体的识别。
@@ -66,6 +68,8 @@ use TencentCloud\Bda\V20200324\Models as Models;
 - 构成人体轨迹单张图片大小不得超过2M，分辨率不得超过1920*1080。
  * @method Models\SegmentCustomizedPortraitPicResponse SegmentCustomizedPortraitPic(Models\SegmentCustomizedPortraitPicRequest $req) 在前后景分割的基础上优化多分类分割，支持对头发、五官等的分割，既作为换发型、挂件等底层技术，也可用于抠人头、抠人脸等玩法
  * @method Models\SegmentPortraitPicResponse SegmentPortraitPic(Models\SegmentPortraitPicRequest $req) 即二分类人像分割，识别传入图片中人体的完整轮廓，进行抠像。
+
+ * @method Models\TerminateSegmentationTaskResponse TerminateSegmentationTask(Models\TerminateSegmentationTaskRequest $req) 终止指定视频人像分割处理任务
  */
 
 class BdaClient extends AbstractClient

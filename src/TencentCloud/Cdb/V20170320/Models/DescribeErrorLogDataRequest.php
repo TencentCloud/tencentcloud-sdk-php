@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(integer $EndTime) 设置结束时间戳。
  * @method array getKeyWords() 获取要匹配的关键字列表，最多支持15个关键字。
  * @method void setKeyWords(array $KeyWords) 设置要匹配的关键字列表，最多支持15个关键字。
- * @method integer getLimit() 获取分页的返回数量，最大为400。
- * @method void setLimit(integer $Limit) 设置分页的返回数量，最大为400。
+ * @method integer getLimit() 获取分页的返回数量，默认为100，最大为400。
+ * @method void setLimit(integer $Limit) 设置分页的返回数量，默认为100，最大为400。
  * @method integer getOffset() 获取偏移量，默认为0。
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
  */
@@ -56,7 +56,7 @@ class DescribeErrorLogDataRequest extends AbstractModel
     public $KeyWords;
 
     /**
-     * @var integer 分页的返回数量，最大为400。
+     * @var integer 分页的返回数量，默认为100，最大为400。
      */
     public $Limit;
 
@@ -70,7 +70,7 @@ class DescribeErrorLogDataRequest extends AbstractModel
      * @param integer $StartTime 开始时间戳。
      * @param integer $EndTime 结束时间戳。
      * @param array $KeyWords 要匹配的关键字列表，最多支持15个关键字。
-     * @param integer $Limit 分页的返回数量，最大为400。
+     * @param integer $Limit 分页的返回数量，默认为100，最大为400。
      * @param integer $Offset 偏移量，默认为0。
      */
     function __construct()

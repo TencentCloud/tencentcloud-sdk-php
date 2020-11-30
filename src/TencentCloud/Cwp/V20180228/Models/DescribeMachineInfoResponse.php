@@ -68,6 +68,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFreeMalwaresLeft(integer $FreeMalwaresLeft) 设置免费木马剩余检测数量。
  * @method integer getFreeVulsLeft() 获取免费漏洞剩余检测数量。
  * @method void setFreeVulsLeft(integer $FreeVulsLeft) 设置免费漏洞剩余检测数量。
+ * @method string getAgentVersion() 获取agent版本号
+ * @method void setAgentVersion(string $AgentVersion) 设置agent版本号
+ * @method string getProVersionDeadline() 获取专业版到期时间(仅预付费)
+ * @method void setProVersionDeadline(string $ProVersionDeadline) 设置专业版到期时间(仅预付费)
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -162,6 +166,16 @@ class DescribeMachineInfoResponse extends AbstractModel
     public $FreeVulsLeft;
 
     /**
+     * @var string agent版本号
+     */
+    public $AgentVersion;
+
+    /**
+     * @var string 专业版到期时间(仅预付费)
+     */
+    public $ProVersionDeadline;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -191,6 +205,8 @@ class DescribeMachineInfoResponse extends AbstractModel
 <li>PREPAY: 表示预付费，即包年包月</li>
      * @param integer $FreeMalwaresLeft 免费木马剩余检测数量。
      * @param integer $FreeVulsLeft 免费漏洞剩余检测数量。
+     * @param string $AgentVersion agent版本号
+     * @param string $ProVersionDeadline 专业版到期时间(仅预付费)
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -268,6 +284,14 @@ class DescribeMachineInfoResponse extends AbstractModel
 
         if (array_key_exists("FreeVulsLeft",$param) and $param["FreeVulsLeft"] !== null) {
             $this->FreeVulsLeft = $param["FreeVulsLeft"];
+        }
+
+        if (array_key_exists("AgentVersion",$param) and $param["AgentVersion"] !== null) {
+            $this->AgentVersion = $param["AgentVersion"];
+        }
+
+        if (array_key_exists("ProVersionDeadline",$param) and $param["ProVersionDeadline"] !== null) {
+            $this->ProVersionDeadline = $param["ProVersionDeadline"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

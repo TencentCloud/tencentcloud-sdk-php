@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cwp\V20180228\Models;
+namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ExportReverseShellEvents请求参数结构体
+ * StopRollback请求参数结构体
  *
- * @method array getFilters() 获取过滤参数
- * @method void setFilters(array $Filters) 设置过滤参数
+ * @method string getInstanceId() 获取撤销回档任务对应的实例Id。
+ * @method void setInstanceId(string $InstanceId) 设置撤销回档任务对应的实例Id。
  */
-class ExportReverseShellEventsRequest extends AbstractModel
+class StopRollbackRequest extends AbstractModel
 {
     /**
-     * @var array 过滤参数
+     * @var string 撤销回档任务对应的实例Id。
      */
-    public $Filters;
+    public $InstanceId;
 
     /**
-     * @param array $Filters 过滤参数
+     * @param string $InstanceId 撤销回档任务对应的实例Id。
      */
     function __construct()
     {
@@ -46,13 +46,8 @@ class ExportReverseShellEventsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
-            $this->Filters = [];
-            foreach ($param["Filters"] as $key => $value){
-                $obj = new Filters();
-                $obj->deserialize($value);
-                array_push($this->Filters, $obj);
-            }
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
         }
     }
 }

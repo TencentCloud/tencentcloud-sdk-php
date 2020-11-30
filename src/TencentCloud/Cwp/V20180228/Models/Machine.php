@@ -74,6 +74,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInvasionNum(integer $InvasionNum) 设置入侵事件数
  * @method RegionInfo getRegionInfo() 获取地域信息
  * @method void setRegionInfo(RegionInfo $RegionInfo) 设置地域信息
+ * @method string getInstanceState() 获取实例状态 TERMINATED_PRO_VERSION 已销毁
+ * @method void setInstanceState(string $InstanceState) 设置实例状态 TERMINATED_PRO_VERSION 已销毁
+ * @method integer getLicenseStatus() 获取授权状态 1 授权 0 未授权
+ * @method void setLicenseStatus(integer $LicenseStatus) 设置授权状态 1 授权 0 未授权
  */
 class Machine extends AbstractModel
 {
@@ -173,6 +177,16 @@ class Machine extends AbstractModel
     public $RegionInfo;
 
     /**
+     * @var string 实例状态 TERMINATED_PRO_VERSION 已销毁
+     */
+    public $InstanceState;
+
+    /**
+     * @var integer 授权状态 1 授权 0 未授权
+     */
+    public $LicenseStatus;
+
+    /**
      * @param string $MachineName 主机名称。
      * @param string $MachineOs 主机系统。
      * @param string $MachineStatus 主机状态。
@@ -200,6 +214,8 @@ class Machine extends AbstractModel
 <li>UNKNOWN：未知</li>
      * @param integer $InvasionNum 入侵事件数
      * @param RegionInfo $RegionInfo 地域信息
+     * @param string $InstanceState 实例状态 TERMINATED_PRO_VERSION 已销毁
+     * @param integer $LicenseStatus 授权状态 1 授权 0 未授权
      */
     function __construct()
     {
@@ -286,6 +302,14 @@ class Machine extends AbstractModel
         if (array_key_exists("RegionInfo",$param) and $param["RegionInfo"] !== null) {
             $this->RegionInfo = new RegionInfo();
             $this->RegionInfo->deserialize($param["RegionInfo"]);
+        }
+
+        if (array_key_exists("InstanceState",$param) and $param["InstanceState"] !== null) {
+            $this->InstanceState = $param["InstanceState"];
+        }
+
+        if (array_key_exists("LicenseStatus",$param) and $param["LicenseStatus"] !== null) {
+            $this->LicenseStatus = $param["LicenseStatus"];
         }
     }
 }

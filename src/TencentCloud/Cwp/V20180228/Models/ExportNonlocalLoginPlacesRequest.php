@@ -20,14 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ExportNonlocalLoginPlaces请求参数结构体
  *
-
+ * @method array getFilters() 获取<li>Status - int - 是否必填：否 - 状态筛选1:正常登录；2：异地登录</li>
+ * @method void setFilters(array $Filters) 设置<li>Status - int - 是否必填：否 - 状态筛选1:正常登录；2：异地登录</li>
  */
 class ExportNonlocalLoginPlacesRequest extends AbstractModel
 {
-
+    /**
+     * @var array <li>Status - int - 是否必填：否 - 状态筛选1:正常登录；2：异地登录</li>
+     */
+    public $Filters;
 
     /**
-
+     * @param array $Filters <li>Status - int - 是否必填：否 - 状态筛选1:正常登录；2：异地登录</li>
      */
     function __construct()
     {
@@ -42,6 +46,13 @@ class ExportNonlocalLoginPlacesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+            $this->Filters = [];
+            foreach ($param["Filters"] as $key => $value){
+                $obj = new Filter();
+                $obj->deserialize($value);
+                array_push($this->Filters, $obj);
+            }
+        }
     }
 }

@@ -32,6 +32,7 @@ use TencentCloud\Cdb\V20170320\Models as Models;
  * @method Models\CreateAuditPolicyResponse CreateAuditPolicy(Models\CreateAuditPolicyRequest $req) 本接口(CreateAuditPolicy)用于创建云数据库实例的审计策略，即将审计规则绑定到具体的云数据库实例上。
  * @method Models\CreateAuditRuleResponse CreateAuditRule(Models\CreateAuditRuleRequest $req) 本接口(CreateAuditRule)用于创建用户在当前地域的审计规则。
  * @method Models\CreateBackupResponse CreateBackup(Models\CreateBackupRequest $req) 本接口(CreateBackup)用于创建数据库备份。
+ * @method Models\CreateCloneInstanceResponse CreateCloneInstance(Models\CreateCloneInstanceRequest $req) 本接口(CreateCloneInstance) 用于从目标源实例创建一个克隆实例，可以指定克隆实例回档到源实例的指定物理备份文件或者指定的回档时间点。
  * @method Models\CreateDBImportJobResponse CreateDBImportJob(Models\CreateDBImportJobRequest $req) 本接口(CreateDBImportJob)用于创建云数据库数据导入任务。
 
 注意，用户进行数据导入任务的文件，必须提前上传到腾讯云。用户须在控制台进行文件导入。
@@ -83,6 +84,7 @@ use TencentCloud\Cdb\V20170320\Models as Models;
  * @method Models\DescribeBackupsResponse DescribeBackups(Models\DescribeBackupsRequest $req) 本接口(DescribeBackups)用于查询云数据库实例的备份数据。
  * @method Models\DescribeBinlogBackupOverviewResponse DescribeBinlogBackupOverview(Models\DescribeBinlogBackupOverviewRequest $req) 本接口(DescribeBinlogBackupOverview)用于查询用户在当前地域总的日志备份概览。
  * @method Models\DescribeBinlogsResponse DescribeBinlogs(Models\DescribeBinlogsRequest $req) 本接口(DescribeBinlogs)用于查询云数据库实例的 binlog 文件列表。
+ * @method Models\DescribeCloneListResponse DescribeCloneList(Models\DescribeCloneListRequest $req) 本接口(DescribeCloneList) 用于查询用户实例的克隆任务列表。
  * @method Models\DescribeDBImportRecordsResponse DescribeDBImportRecords(Models\DescribeDBImportRecordsRequest $req) 本接口(DescribeDBImportRecords)用于查询云数据库导入任务操作日志。
  * @method Models\DescribeDBInstanceCharsetResponse DescribeDBInstanceCharset(Models\DescribeDBInstanceCharsetRequest $req) 本接口(DescribeDBInstanceCharset)用于查询云数据库实例的字符集，获取字符集的名称。
  * @method Models\DescribeDBInstanceConfigResponse DescribeDBInstanceConfig(Models\DescribeDBInstanceConfigRequest $req) 本接口(DescribeDBInstanceConfig)用于云数据库实例的配置信息，包括同步模式，部署模式等。
@@ -161,6 +163,7 @@ use TencentCloud\Cdb\V20170320\Models as Models;
 2、实例状态必须为正常，并且没有其他异步任务在执行中。
  * @method Models\StartBatchRollbackResponse StartBatchRollback(Models\StartBatchRollbackRequest $req) 该接口（StartBatchRollback）用于批量回档云数据库实例的库表。
  * @method Models\StopDBImportJobResponse StopDBImportJob(Models\StopDBImportJobRequest $req) 本接口(StopDBImportJob)用于终止数据导入任务。
+ * @method Models\StopRollbackResponse StopRollback(Models\StopRollbackRequest $req) 本接口(StopRollback) 用于撤销实例正在进行的回档任务，该接口返回一个异步任务id。 撤销结果可以通过 DescribeRequestResult 查询任务的执行情况。
  * @method Models\SwitchForUpgradeResponse SwitchForUpgrade(Models\SwitchForUpgradeRequest $req) 本接口(SwitchForUpgrade)用于切换访问新实例，针对主升级中的实例处于待切换状态时，用户可主动发起该流程。
  * @method Models\UpgradeDBInstanceResponse UpgradeDBInstance(Models\UpgradeDBInstanceRequest $req) 本接口(UpgradeDBInstance)用于升级或降级云数据库实例的配置，实例类型支持主实例、灾备实例和只读实例。
  * @method Models\UpgradeDBInstanceEngineVersionResponse UpgradeDBInstanceEngineVersion(Models\UpgradeDBInstanceEngineVersionRequest $req) 本接口(UpgradeDBInstanceEngineVersion)用于升级云数据库实例版本，实例类型支持主实例、灾备实例和只读实例。

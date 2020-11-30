@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrderBy(string $OrderBy) 设置升序还是降序排列。当前支持：ASC,DESC 。
  * @method integer getOffset() 获取偏移量，默认为0。
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
- * @method integer getLimit() 获取一次性返回的记录数量，最大为400。
- * @method void setLimit(integer $Limit) 设置一次性返回的记录数量，最大为400。
+ * @method integer getLimit() 获取一次性返回的记录数量，默认为100，最大为400。
+ * @method void setLimit(integer $Limit) 设置一次性返回的记录数量，默认为100，最大为400。
  */
 class DescribeSlowLogDataRequest extends AbstractModel
 {
@@ -89,7 +89,7 @@ class DescribeSlowLogDataRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var integer 一次性返回的记录数量，最大为400。
+     * @var integer 一次性返回的记录数量，默认为100，最大为400。
      */
     public $Limit;
 
@@ -103,7 +103,7 @@ class DescribeSlowLogDataRequest extends AbstractModel
      * @param string $SortBy 排序字段。当前支持：Timestamp,QueryTime,LockTime,RowsExamined,RowsSent 。
      * @param string $OrderBy 升序还是降序排列。当前支持：ASC,DESC 。
      * @param integer $Offset 偏移量，默认为0。
-     * @param integer $Limit 一次性返回的记录数量，最大为400。
+     * @param integer $Limit 一次性返回的记录数量，默认为100，最大为400。
      */
     function __construct()
     {

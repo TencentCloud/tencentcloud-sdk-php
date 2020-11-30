@@ -18,20 +18,28 @@ namespace TencentCloud\Cwp\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ExportReverseShellEvents请求参数结构体
+ * 安全事件统计列表
  *
- * @method array getFilters() 获取过滤参数
- * @method void setFilters(array $Filters) 设置过滤参数
+ * @method integer getEventCnt() 获取安全事件数
+ * @method void setEventCnt(integer $EventCnt) 设置安全事件数
+ * @method integer getUuidCnt() 获取受影响机器数
+ * @method void setUuidCnt(integer $UuidCnt) 设置受影响机器数
  */
-class ExportReverseShellEventsRequest extends AbstractModel
+class SecurityEventInfo extends AbstractModel
 {
     /**
-     * @var array 过滤参数
+     * @var integer 安全事件数
      */
-    public $Filters;
+    public $EventCnt;
 
     /**
-     * @param array $Filters 过滤参数
+     * @var integer 受影响机器数
+     */
+    public $UuidCnt;
+
+    /**
+     * @param integer $EventCnt 安全事件数
+     * @param integer $UuidCnt 受影响机器数
      */
     function __construct()
     {
@@ -46,13 +54,12 @@ class ExportReverseShellEventsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
-            $this->Filters = [];
-            foreach ($param["Filters"] as $key => $value){
-                $obj = new Filters();
-                $obj->deserialize($value);
-                array_push($this->Filters, $obj);
-            }
+        if (array_key_exists("EventCnt",$param) and $param["EventCnt"] !== null) {
+            $this->EventCnt = $param["EventCnt"];
+        }
+
+        if (array_key_exists("UuidCnt",$param) and $param["UuidCnt"] !== null) {
+            $this->UuidCnt = $param["UuidCnt"];
         }
     }
 }

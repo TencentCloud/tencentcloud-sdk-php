@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRules请求参数结构体
  *
- * @method integer getPageNumber() 获取当前页号，不传则获取所有有权限的资源。
- * @method void setPageNumber(integer $PageNumber) 设置当前页号，不传则获取所有有权限的资源。
- * @method integer getPageSize() 获取单页大小，不传则获取所有有权限的资源。
- * @method void setPageSize(integer $PageSize) 设置单页大小，不传则获取所有有权限的资源。
+ * @method integer getPageNumber() 获取当前页号，不传则返回第一页
+ * @method void setPageNumber(integer $PageNumber) 设置当前页号，不传则返回第一页
+ * @method integer getPageSize() 获取单页大小，最大 30，不填默认30
+ * @method void setPageSize(integer $PageSize) 设置单页大小，最大 30，不填默认30
  * @method string getSearchType() 获取查询类型（可选）：match表示通过matchCode或者matchName来搜索，rule表示通过ruleCode或者ruleName来搜索，其余类型不做过滤处理。
  * @method void setSearchType(string $SearchType) 设置查询类型（可选）：match表示通过matchCode或者matchName来搜索，rule表示通过ruleCode或者ruleName来搜索，其余类型不做过滤处理。
  * @method string getKeyword() 获取查询关键词，针对SearchType进行具体过滤的内容。
@@ -34,12 +34,12 @@ use TencentCloud\Common\AbstractModel;
 class DescribeRulesRequest extends AbstractModel
 {
     /**
-     * @var integer 当前页号，不传则获取所有有权限的资源。
+     * @var integer 当前页号，不传则返回第一页
      */
     public $PageNumber;
 
     /**
-     * @var integer 单页大小，不传则获取所有有权限的资源。
+     * @var integer 单页大小，最大 30，不填默认30
      */
     public $PageSize;
 
@@ -59,8 +59,8 @@ class DescribeRulesRequest extends AbstractModel
     public $Tags;
 
     /**
-     * @param integer $PageNumber 当前页号，不传则获取所有有权限的资源。
-     * @param integer $PageSize 单页大小，不传则获取所有有权限的资源。
+     * @param integer $PageNumber 当前页号，不传则返回第一页
+     * @param integer $PageSize 单页大小，最大 30，不填默认30
      * @param string $SearchType 查询类型（可选）：match表示通过matchCode或者matchName来搜索，rule表示通过ruleCode或者ruleName来搜索，其余类型不做过滤处理。
      * @param string $Keyword 查询关键词，针对SearchType进行具体过滤的内容。
      * @param array $Tags 标签列表，用于过滤。

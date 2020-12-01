@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UploadCertificate请求参数结构体
  *
- * @method string getCertificatePublicKey() 获取证书公钥。
- * @method void setCertificatePublicKey(string $CertificatePublicKey) 设置证书公钥。
+ * @method string getCertificatePublicKey() 获取证书内容。
+ * @method void setCertificatePublicKey(string $CertificatePublicKey) 设置证书内容。
  * @method string getCertificatePrivateKey() 获取私钥内容，证书类型为 SVR 时必填，为 CA 时可不填。
  * @method void setCertificatePrivateKey(string $CertificatePrivateKey) 设置私钥内容，证书类型为 SVR 时必填，为 CA 时可不填。
  * @method string getCertificateType() 获取证书类型，默认 SVR。CA = 客户端证书，SVR = 服务器证书。
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class UploadCertificateRequest extends AbstractModel
 {
     /**
-     * @var string 证书公钥。
+     * @var string 证书内容。
      */
     public $CertificatePublicKey;
 
@@ -59,7 +59,7 @@ class UploadCertificateRequest extends AbstractModel
     public $ProjectId;
 
     /**
-     * @param string $CertificatePublicKey 证书公钥。
+     * @param string $CertificatePublicKey 证书内容。
      * @param string $CertificatePrivateKey 私钥内容，证书类型为 SVR 时必填，为 CA 时可不填。
      * @param string $CertificateType 证书类型，默认 SVR。CA = 客户端证书，SVR = 服务器证书。
      * @param string $Alias 备注名称。

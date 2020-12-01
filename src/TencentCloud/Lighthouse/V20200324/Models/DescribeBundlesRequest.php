@@ -27,7 +27,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getLimit() 获取返回数量，默认为 20，最大值为 100。关于`Limit`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/product/1207/47578)中的相关小节。
  * @method void setLimit(integer $Limit) 设置返回数量，默认为 20，最大值为 100。关于`Limit`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/product/1207/47578)中的相关小节。
  * @method array getFilters() 获取过滤器列表。
-<li>bundle-id</li>按照【镜像 ID】进行过滤。
+<li>bundle-id</li>按照【套餐 ID】进行过滤。
 类型：String
 必选：否
 <li>support-platform-type</li>按照【系统类型】进行过滤。
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 必选：否
 每次请求的 Filters 的上限为 10，Filter.Values 的上限为 5。参数不支持同时指定 BundleIds 和 Filters。
  * @method void setFilters(array $Filters) 设置过滤器列表。
-<li>bundle-id</li>按照【镜像 ID】进行过滤。
+<li>bundle-id</li>按照【套餐 ID】进行过滤。
 类型：String
 必选：否
 <li>support-platform-type</li>按照【系统类型】进行过滤。
@@ -64,7 +64,7 @@ class DescribeBundlesRequest extends AbstractModel
 
     /**
      * @var array 过滤器列表。
-<li>bundle-id</li>按照【镜像 ID】进行过滤。
+<li>bundle-id</li>按照【套餐 ID】进行过滤。
 类型：String
 必选：否
 <li>support-platform-type</li>按照【系统类型】进行过滤。
@@ -80,7 +80,7 @@ class DescribeBundlesRequest extends AbstractModel
      * @param integer $Offset 偏移量，默认为 0。关于`Offset`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/product/1207/47578)中的相关小节。
      * @param integer $Limit 返回数量，默认为 20，最大值为 100。关于`Limit`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/product/1207/47578)中的相关小节。
      * @param array $Filters 过滤器列表。
-<li>bundle-id</li>按照【镜像 ID】进行过滤。
+<li>bundle-id</li>按照【套餐 ID】进行过滤。
 类型：String
 必选：否
 <li>support-platform-type</li>按照【系统类型】进行过滤。

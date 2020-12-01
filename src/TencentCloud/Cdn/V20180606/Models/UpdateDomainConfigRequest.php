@@ -102,6 +102,10 @@ global：全球加速
  * @method void setUrlRedirect(UrlRedirect $UrlRedirect) 设置URL重定向配置
  * @method array getAccessPort() 获取访问端口配置
  * @method void setAccessPort(array $AccessPort) 设置访问端口配置
+ * @method AdvancedAuthentication getAdvancedAuthentication() 获取时间戳防盗链高级版配置，白名单功能
+ * @method void setAdvancedAuthentication(AdvancedAuthentication $AdvancedAuthentication) 设置时间戳防盗链高级版配置，白名单功能
+ * @method OriginAuthentication getOriginAuthentication() 获取回源鉴权高级版配置，白名单功能
+ * @method void setOriginAuthentication(OriginAuthentication $OriginAuthentication) 设置回源鉴权高级版配置，白名单功能
  */
 class UpdateDomainConfigRequest extends AbstractModel
 {
@@ -283,6 +287,16 @@ global：全球加速
     public $AccessPort;
 
     /**
+     * @var AdvancedAuthentication 时间戳防盗链高级版配置，白名单功能
+     */
+    public $AdvancedAuthentication;
+
+    /**
+     * @var OriginAuthentication 回源鉴权高级版配置，白名单功能
+     */
+    public $OriginAuthentication;
+
+    /**
      * @param string $Domain 域名
      * @param integer $ProjectId 项目 ID
      * @param Origin $Origin 源站配置
@@ -324,6 +338,8 @@ global：全球加速
      * @param AccessControl $AccessControl 访问控制
      * @param UrlRedirect $UrlRedirect URL重定向配置
      * @param array $AccessPort 访问端口配置
+     * @param AdvancedAuthentication $AdvancedAuthentication 时间戳防盗链高级版配置，白名单功能
+     * @param OriginAuthentication $OriginAuthentication 回源鉴权高级版配置，白名单功能
      */
     function __construct()
     {
@@ -501,6 +517,16 @@ global：全球加速
 
         if (array_key_exists("AccessPort",$param) and $param["AccessPort"] !== null) {
             $this->AccessPort = $param["AccessPort"];
+        }
+
+        if (array_key_exists("AdvancedAuthentication",$param) and $param["AdvancedAuthentication"] !== null) {
+            $this->AdvancedAuthentication = new AdvancedAuthentication();
+            $this->AdvancedAuthentication->deserialize($param["AdvancedAuthentication"]);
+        }
+
+        if (array_key_exists("OriginAuthentication",$param) and $param["OriginAuthentication"] !== null) {
+            $this->OriginAuthentication = new OriginAuthentication();
+            $this->OriginAuthentication->deserialize($param["OriginAuthentication"]);
         }
     }
 }

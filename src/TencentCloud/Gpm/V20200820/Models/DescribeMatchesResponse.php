@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotalCount() 获取总记录数
  * @method void setTotalCount(integer $TotalCount) 设置总记录数
- * @method integer getPageNumber() 获取当前页号
- * @method void setPageNumber(integer $PageNumber) 设置当前页号
- * @method integer getPageSize() 获取单页大小
- * @method void setPageSize(integer $PageSize) 设置单页大小
+ * @method integer getPageNumber() 获取当前页号，不填默认返回第一页
+ * @method void setPageNumber(integer $PageNumber) 设置当前页号，不填默认返回第一页
+ * @method integer getPageSize() 获取单页大小，不填默认取 30，最大值不能超过 30
+ * @method void setPageSize(integer $PageSize) 设置单页大小，不填默认取 30，最大值不能超过 30
  * @method string getSearchType() 获取查询类型（可选）：matchName表示匹配名称，matchCode表示匹配code，ruleName表示规则名称，tag表示标签Key/Value
  * @method void setSearchType(string $SearchType) 设置查询类型（可选）：matchName表示匹配名称，matchCode表示匹配code，ruleName表示规则名称，tag表示标签Key/Value
  * @method string getKeyword() 获取查询关键词（可选）
@@ -51,12 +51,12 @@ class DescribeMatchesResponse extends AbstractModel
     public $TotalCount;
 
     /**
-     * @var integer 当前页号
+     * @var integer 当前页号，不填默认返回第一页
      */
     public $PageNumber;
 
     /**
-     * @var integer 单页大小
+     * @var integer 单页大小，不填默认取 30，最大值不能超过 30
      */
     public $PageSize;
 
@@ -79,8 +79,8 @@ class DescribeMatchesResponse extends AbstractModel
      * @param array $MatchInfoList 匹配信息列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalCount 总记录数
-     * @param integer $PageNumber 当前页号
-     * @param integer $PageSize 单页大小
+     * @param integer $PageNumber 当前页号，不填默认返回第一页
+     * @param integer $PageSize 单页大小，不填默认取 30，最大值不能超过 30
      * @param string $SearchType 查询类型（可选）：matchName表示匹配名称，matchCode表示匹配code，ruleName表示规则名称，tag表示标签Key/Value
      * @param string $Keyword 查询关键词（可选）
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。

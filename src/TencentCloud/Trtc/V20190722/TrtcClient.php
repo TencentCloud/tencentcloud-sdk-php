@@ -26,6 +26,7 @@ use TencentCloud\Trtc\V20190722\Models as Models;
  * @method Models\CreateTroubleInfoResponse CreateTroubleInfo(Models\CreateTroubleInfoRequest $req) 创建异常信息
  * @method Models\DescribeAbnormalEventResponse DescribeAbnormalEvent(Models\DescribeAbnormalEventRequest $req) 查询SDKAppID下用户的异常体验事件，返回异常体验ID与可能产生异常体验的原因。可查询5天内数据，查询起止时间不超过1个小时。支持跨天查询。异常体验ID映射见：https://cloud.tencent.com/document/product/647/44916
  * @method Models\DescribeCallDetailResponse DescribeCallDetail(Models\DescribeCallDetailRequest $req) 查询指定时间内的用户列表及用户通话质量数据，可查询14天内数据。DataType 不为null，查询实时数据时，查询起止时间不超过1个小时，每次查询用户不超过6个，支持跨天查询。DataType，UserIds为null时，默认查询6个用户，同时支持每页查询100以内用户个数（PageSize不超过100）。接口用于查询质量问题，不推荐作为计费使用。
+注意：不建议依赖接口做实时类业务逻辑处理
  * @method Models\DescribeDetailEventResponse DescribeDetailEvent(Models\DescribeDetailEventRequest $req) 查询用户某次通话内的进退房，视频开关等详细事件。可查询14天内数据。
  * @method Models\DescribeHistoryScaleResponse DescribeHistoryScale(Models\DescribeHistoryScaleRequest $req) 可查询sdkqppid 每天的房间数和用户数，每分钟1次，可查询最近14天的数据。当天未结束，无法查到当天的房间数与用户数。
  * @method Models\DescribeRealtimeNetworkResponse DescribeRealtimeNetwork(Models\DescribeRealtimeNetworkRequest $req) 查询sdkappid维度下实时网络状态，包括上行丢包与下行丢包。可查询24小时内数据，查询起止时间不超过1个小时。
@@ -38,6 +39,7 @@ use TencentCloud\Trtc\V20190722\Models as Models;
 - 若查询当天用量，由于统计延迟等原因，返回数据可能不够准确。
 - 日结后付费将于次日上午推送账单，建议次日上午9点以后再来查询前一天的用量。
  * @method Models\DescribeRoomInformationResponse DescribeRoomInformation(Models\DescribeRoomInformationRequest $req) 查询sdkappid下的房间列表。默认返回10条通话，一次最多返回100条通话。可查询14天内的数据。
+注意：不建议依赖接口做实时类业务逻辑处理
  * @method Models\DescribeTrtcInteractiveTimeResponse DescribeTrtcInteractiveTime(Models\DescribeTrtcInteractiveTimeRequest $req) 查询音视频互动计费时长。
 - 查询时间小于等于1天时，返回每5分钟粒度的数据；查询时间大于1天时，返回按天汇总的数据。
 - 单次查询统计区间最多不能超过31天。
@@ -49,6 +51,7 @@ use TencentCloud\Trtc\V20190722\Models as Models;
 - 若查询当天用量，由于统计延迟等原因，返回数据可能不够准确。
 - 日结后付费将于次日上午推送账单，建议次日上午9点以后再来查询前一天的用量。
  * @method Models\DescribeUserInformationResponse DescribeUserInformation(Models\DescribeUserInformationRequest $req) 查询指定时间内的用户列表，可查询14天内数据。默认每页查询6个用户，支持每页最大查询100个用户PageSize不超过100）。
+注意：不建议依赖接口做实时类业务逻辑处理
  * @method Models\DismissRoomResponse DismissRoom(Models\DismissRoomRequest $req) 接口说明：把房间所有用户从房间移出，解散房间。支持所有平台，Android、iOS、Windows 和 macOS 需升级到 TRTC SDK 6.6及以上版本。
  * @method Models\DismissRoomByStrRoomIdResponse DismissRoomByStrRoomId(Models\DismissRoomByStrRoomIdRequest $req) 接口说明：把房间所有用户从房间移出，解散房间。支持所有平台，Android、iOS、Windows 和 macOS 需升级到 TRTC SDK 6.6及以上版本。
  * @method Models\RemoveUserResponse RemoveUser(Models\RemoveUserRequest $req) 接口说明：将用户从房间移出，适用于主播/房主/管理员踢人等场景。支持所有平台，Android、iOS、Windows 和 macOS 需升级到 TRTC SDK 6.6及以上版本。

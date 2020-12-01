@@ -28,6 +28,7 @@ file 时填充后缀名，如 jpg、txt
 directory 时填充路径，如 /xxx/test
 path 时填充绝对路径，如 /xxx/test.html
 index 时填充 /
+default 时填充 "no max-age"
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRulePaths(array $RulePaths) 设置CacheType 对应类型下的匹配内容：
 all 时填充 *
@@ -35,6 +36,7 @@ file 时填充后缀名，如 jpg、txt
 directory 时填充路径，如 /xxx/test
 path 时填充绝对路径，如 /xxx/test.html
 index 时填充 /
+default 时填充 "no max-age"
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRuleType() 获取规则类型：
 all：所有文件生效
@@ -42,6 +44,7 @@ file：指定文件后缀生效
 directory：指定路径生效
 path：指定绝对路径生效
 index：首页
+default: 源站无max-age时生效
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuleType(string $RuleType) 设置规则类型：
 all：所有文件生效
@@ -49,6 +52,7 @@ file：指定文件后缀生效
 directory：指定路径生效
 path：指定绝对路径生效
 index：首页
+default: 源站无max-age时生效
 注意：此字段可能返回 null，表示取不到有效值。
  * @method RuleCacheConfig getCacheConfig() 获取缓存配置。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -64,6 +68,7 @@ file 时填充后缀名，如 jpg、txt
 directory 时填充路径，如 /xxx/test
 path 时填充绝对路径，如 /xxx/test.html
 index 时填充 /
+default 时填充 "no max-age"
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RulePaths;
@@ -75,6 +80,7 @@ file：指定文件后缀生效
 directory：指定路径生效
 path：指定绝对路径生效
 index：首页
+default: 源站无max-age时生效
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleType;
@@ -92,6 +98,7 @@ file 时填充后缀名，如 jpg、txt
 directory 时填充路径，如 /xxx/test
 path 时填充绝对路径，如 /xxx/test.html
 index 时填充 /
+default 时填充 "no max-age"
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RuleType 规则类型：
 all：所有文件生效
@@ -99,6 +106,7 @@ file：指定文件后缀生效
 directory：指定路径生效
 path：指定绝对路径生效
 index：首页
+default: 源站无max-age时生效
 注意：此字段可能返回 null，表示取不到有效值。
      * @param RuleCacheConfig $CacheConfig 缓存配置。
 注意：此字段可能返回 null，表示取不到有效值。

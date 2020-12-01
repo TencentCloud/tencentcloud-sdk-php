@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getRedirectStatusCode() 获取重定向状态码，301 | 302
  * @method void setRedirectStatusCode(integer $RedirectStatusCode) 设置重定向状态码，301 | 302
- * @method string getPattern() 获取待匹配的Url模式，支持完全路径匹配和正则匹配，最大长度1024字符。
- * @method void setPattern(string $Pattern) 设置待匹配的Url模式，支持完全路径匹配和正则匹配，最大长度1024字符。
- * @method string getRedirectUrl() 获取目标URL，必须以“/”开头，最大长度1024字符。
- * @method void setRedirectUrl(string $RedirectUrl) 设置目标URL，必须以“/”开头，最大长度1024字符。
+ * @method string getPattern() 获取待匹配的Url，仅支持Url路径，不支持参数。默认完全匹配，支持通配符 *，最多支持5个通配符，最大长度1024字符。
+ * @method void setPattern(string $Pattern) 设置待匹配的Url，仅支持Url路径，不支持参数。默认完全匹配，支持通配符 *，最多支持5个通配符，最大长度1024字符。
+ * @method string getRedirectUrl() 获取目标URL，必须以“/”开头，不包含参数部分。最大长度1024字符。可使用$1, $2, $3, $4, $5分别捕获匹配路径中的通配符号，最多支持10个捕获值。
+ * @method void setRedirectUrl(string $RedirectUrl) 设置目标URL，必须以“/”开头，不包含参数部分。最大长度1024字符。可使用$1, $2, $3, $4, $5分别捕获匹配路径中的通配符号，最多支持10个捕获值。
  */
 class UrlRedirectRule extends AbstractModel
 {
@@ -35,19 +35,19 @@ class UrlRedirectRule extends AbstractModel
     public $RedirectStatusCode;
 
     /**
-     * @var string 待匹配的Url模式，支持完全路径匹配和正则匹配，最大长度1024字符。
+     * @var string 待匹配的Url，仅支持Url路径，不支持参数。默认完全匹配，支持通配符 *，最多支持5个通配符，最大长度1024字符。
      */
     public $Pattern;
 
     /**
-     * @var string 目标URL，必须以“/”开头，最大长度1024字符。
+     * @var string 目标URL，必须以“/”开头，不包含参数部分。最大长度1024字符。可使用$1, $2, $3, $4, $5分别捕获匹配路径中的通配符号，最多支持10个捕获值。
      */
     public $RedirectUrl;
 
     /**
      * @param integer $RedirectStatusCode 重定向状态码，301 | 302
-     * @param string $Pattern 待匹配的Url模式，支持完全路径匹配和正则匹配，最大长度1024字符。
-     * @param string $RedirectUrl 目标URL，必须以“/”开头，最大长度1024字符。
+     * @param string $Pattern 待匹配的Url，仅支持Url路径，不支持参数。默认完全匹配，支持通配符 *，最多支持5个通配符，最大长度1024字符。
+     * @param string $RedirectUrl 目标URL，必须以“/”开头，不包含参数部分。最大长度1024字符。可使用$1, $2, $3, $4, $5分别捕获匹配路径中的通配符号，最多支持10个捕获值。
      */
     function __construct()
     {

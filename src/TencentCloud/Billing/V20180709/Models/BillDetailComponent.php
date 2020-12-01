@@ -52,13 +52,13 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCashPayAmount(string $CashPayAmount) 设置现金支付金额
  * @method string getIncentivePayAmount() 获取赠送账户支付金额
  * @method void setIncentivePayAmount(string $IncentivePayAmount) 设置赠送账户支付金额
- * @method string getItemCode() 获取组件类型代码（未开放的字段）
+ * @method string getItemCode() 获取组件类型代码
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setItemCode(string $ItemCode) 设置组件类型代码（未开放的字段）
+ * @method void setItemCode(string $ItemCode) 设置组件类型代码
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getComponentCode() 获取组件名称代码（未开放的字段）
+ * @method string getComponentCode() 获取组件名称代码
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setComponentCode(string $ComponentCode) 设置组件名称代码（未开放的字段）
+ * @method void setComponentCode(string $ComponentCode) 设置组件名称代码
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getContractPrice() 获取合同价
 注意：此字段可能返回 null，表示取不到有效值。
@@ -148,13 +148,13 @@ class BillDetailComponent extends AbstractModel
     public $IncentivePayAmount;
 
     /**
-     * @var string 组件类型代码（未开放的字段）
+     * @var string 组件类型代码
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ItemCode;
 
     /**
-     * @var string 组件名称代码（未开放的字段）
+     * @var string 组件名称代码
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ComponentCode;
@@ -182,9 +182,9 @@ class BillDetailComponent extends AbstractModel
      * @param string $VoucherPayAmount 代金券支付金额
      * @param string $CashPayAmount 现金支付金额
      * @param string $IncentivePayAmount 赠送账户支付金额
-     * @param string $ItemCode 组件类型代码（未开放的字段）
+     * @param string $ItemCode 组件类型代码
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ComponentCode 组件名称代码（未开放的字段）
+     * @param string $ComponentCode 组件名称代码
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ContractPrice 合同价
 注意：此字段可能返回 null，表示取不到有效值。

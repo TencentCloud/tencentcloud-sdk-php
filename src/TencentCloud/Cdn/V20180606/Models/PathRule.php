@@ -24,25 +24,25 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegex(boolean $Regex) 设置是否是正则匹配。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getPath() 获取匹配的URL路径。
+ * @method string getPath() 获取匹配的URL路径，仅支持Url路径，不支持参数。默认完全匹配，正则模式下支持通配符 *，最多支持5个通配符，最大长度1024字符。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPath(string $Path) 设置匹配的URL路径。
+ * @method void setPath(string $Path) 设置匹配的URL路径，仅支持Url路径，不支持参数。默认完全匹配，正则模式下支持通配符 *，最多支持5个通配符，最大长度1024字符。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getOrigin() 获取路径匹配时的回源源站。暂不支持开了私有读写的COS源。
+ * @method string getOrigin() 获取路径匹配时的回源源站。暂不支持开了私有读写的COS源。不填写时沿用默认源站。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOrigin(string $Origin) 设置路径匹配时的回源源站。暂不支持开了私有读写的COS源。
+ * @method void setOrigin(string $Origin) 设置路径匹配时的回源源站。暂不支持开了私有读写的COS源。不填写时沿用默认源站。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getServerName() 获取路径匹配时回源的Host头部。
+ * @method string getServerName() 获取路径匹配时回源的Host头部。不填写时沿用默认ServerName。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setServerName(string $ServerName) 设置路径匹配时回源的Host头部。
+ * @method void setServerName(string $ServerName) 设置路径匹配时回源的Host头部。不填写时沿用默认ServerName。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getOriginArea() 获取源站所属区域，支持CN，OV。分别表示国内或海外。
+ * @method string getOriginArea() 获取源站所属区域，支持CN，OV。分别表示国内或海外。默认为CN。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOriginArea(string $OriginArea) 设置源站所属区域，支持CN，OV。分别表示国内或海外。
+ * @method void setOriginArea(string $OriginArea) 设置源站所属区域，支持CN，OV。分别表示国内或海外。默认为CN。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getForwardUri() 获取路径匹配时回源的URI路径。
+ * @method string getForwardUri() 获取路径匹配时回源的URI路径，必须以“/”开头，不包含参数部分。最大长度1024字符。可使用$1, $2, $3, $4, $5分别捕获匹配路径中的通配符号，最多支持10个捕获值。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setForwardUri(string $ForwardUri) 设置路径匹配时回源的URI路径。
+ * @method void setForwardUri(string $ForwardUri) 设置路径匹配时回源的URI路径，必须以“/”开头，不包含参数部分。最大长度1024字符。可使用$1, $2, $3, $4, $5分别捕获匹配路径中的通配符号，最多支持10个捕获值。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getRequestHeaders() 获取路径匹配时回源的头部设置。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -58,31 +58,31 @@ class PathRule extends AbstractModel
     public $Regex;
 
     /**
-     * @var string 匹配的URL路径。
+     * @var string 匹配的URL路径，仅支持Url路径，不支持参数。默认完全匹配，正则模式下支持通配符 *，最多支持5个通配符，最大长度1024字符。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Path;
 
     /**
-     * @var string 路径匹配时的回源源站。暂不支持开了私有读写的COS源。
+     * @var string 路径匹配时的回源源站。暂不支持开了私有读写的COS源。不填写时沿用默认源站。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Origin;
 
     /**
-     * @var string 路径匹配时回源的Host头部。
+     * @var string 路径匹配时回源的Host头部。不填写时沿用默认ServerName。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ServerName;
 
     /**
-     * @var string 源站所属区域，支持CN，OV。分别表示国内或海外。
+     * @var string 源站所属区域，支持CN，OV。分别表示国内或海外。默认为CN。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OriginArea;
 
     /**
-     * @var string 路径匹配时回源的URI路径。
+     * @var string 路径匹配时回源的URI路径，必须以“/”开头，不包含参数部分。最大长度1024字符。可使用$1, $2, $3, $4, $5分别捕获匹配路径中的通配符号，最多支持10个捕获值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ForwardUri;
@@ -96,15 +96,15 @@ class PathRule extends AbstractModel
     /**
      * @param boolean $Regex 是否是正则匹配。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Path 匹配的URL路径。
+     * @param string $Path 匹配的URL路径，仅支持Url路径，不支持参数。默认完全匹配，正则模式下支持通配符 *，最多支持5个通配符，最大长度1024字符。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Origin 路径匹配时的回源源站。暂不支持开了私有读写的COS源。
+     * @param string $Origin 路径匹配时的回源源站。暂不支持开了私有读写的COS源。不填写时沿用默认源站。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ServerName 路径匹配时回源的Host头部。
+     * @param string $ServerName 路径匹配时回源的Host头部。不填写时沿用默认ServerName。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $OriginArea 源站所属区域，支持CN，OV。分别表示国内或海外。
+     * @param string $OriginArea 源站所属区域，支持CN，OV。分别表示国内或海外。默认为CN。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ForwardUri 路径匹配时回源的URI路径。
+     * @param string $ForwardUri 路径匹配时回源的URI路径，必须以“/”开头，不包含参数部分。最大长度1024字符。可使用$1, $2, $3, $4, $5分别捕获匹配路径中的通配符号，最多支持10个捕获值。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $RequestHeaders 路径匹配时回源的头部设置。
 注意：此字段可能返回 null，表示取不到有效值。

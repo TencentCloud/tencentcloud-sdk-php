@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateService请求参数结构体
  *
- * @method string getServiceName() 获取用户自定义的服务名称。如果没传，则系统自动生成一个唯一名称。
- * @method void setServiceName(string $ServiceName) 设置用户自定义的服务名称。如果没传，则系统自动生成一个唯一名称。
+ * @method string getServiceName() 获取用户自定义的服务名称。
+ * @method void setServiceName(string $ServiceName) 设置用户自定义的服务名称。
  * @method string getProtocol() 获取服务的前端请求类型。如 http、https、http&https。
  * @method void setProtocol(string $Protocol) 设置服务的前端请求类型。如 http、https、http&https。
  * @method string getServiceDesc() 获取用户自定义的服务描述。
@@ -42,7 +42,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateServiceRequest extends AbstractModel
 {
     /**
-     * @var string 用户自定义的服务名称。如果没传，则系统自动生成一个唯一名称。
+     * @var string 用户自定义的服务名称。
      */
     public $ServiceName;
 
@@ -87,7 +87,7 @@ class CreateServiceRequest extends AbstractModel
     public $Tags;
 
     /**
-     * @param string $ServiceName 用户自定义的服务名称。如果没传，则系统自动生成一个唯一名称。
+     * @param string $ServiceName 用户自定义的服务名称。
      * @param string $Protocol 服务的前端请求类型。如 http、https、http&https。
      * @param string $ServiceDesc 用户自定义的服务描述。
      * @param string $ExclusiveSetName 独立集群名称，用于指定创建服务所在的独立集群。

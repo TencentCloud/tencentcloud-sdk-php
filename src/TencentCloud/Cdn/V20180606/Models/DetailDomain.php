@@ -164,9 +164,9 @@ readonly：域名存在特殊配置，被锁定
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxAge(MaxAge $MaxAge) 设置浏览器缓存过期规则配置（功能灰度中，敬请期待）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method Ipv6 getIpv6() 获取Ipv6 配置（功能灰度中，敬请期待）
+ * @method Ipv6 getIpv6() 获取Ipv6 回源配置（功能灰度中，敬请期待）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIpv6(Ipv6 $Ipv6) 设置Ipv6 配置（功能灰度中，敬请期待）
+ * @method void setIpv6(Ipv6 $Ipv6) 设置Ipv6 回源配置（功能灰度中，敬请期待）
 注意：此字段可能返回 null，表示取不到有效值。
  * @method Compatibility getCompatibility() 获取是否兼容旧版本配置（内部兼容性字段）
 注意：此字段可能返回 null，表示取不到有效值。
@@ -241,6 +241,14 @@ off：不支持
  * @method array getTag() 获取标签配置
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTag(array $Tag) 设置标签配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method AdvancedAuthentication getAdvancedAuthentication() 获取时间戳防盗链高级配置，白名单功能
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAdvancedAuthentication(AdvancedAuthentication $AdvancedAuthentication) 设置时间戳防盗链高级配置，白名单功能
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method OriginAuthentication getOriginAuthentication() 获取回源鉴权高级配置，白名单功能
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOriginAuthentication(OriginAuthentication $OriginAuthentication) 设置回源鉴权高级配置，白名单功能
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class DetailDomain extends AbstractModel
@@ -450,7 +458,7 @@ readonly：域名存在特殊配置，被锁定
     public $MaxAge;
 
     /**
-     * @var Ipv6 Ipv6 配置（功能灰度中，敬请期待）
+     * @var Ipv6 Ipv6 回源配置（功能灰度中，敬请期待）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Ipv6;
@@ -549,6 +557,18 @@ off：不支持
     public $Tag;
 
     /**
+     * @var AdvancedAuthentication 时间戳防盗链高级配置，白名单功能
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AdvancedAuthentication;
+
+    /**
+     * @var OriginAuthentication 回源鉴权高级配置，白名单功能
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OriginAuthentication;
+
+    /**
      * @param string $ResourceId 域名 ID
      * @param integer $AppId 腾讯云账号ID
      * @param string $Domain 加速域名
@@ -621,7 +641,7 @@ readonly：域名存在特殊配置，被锁定
 注意：此字段可能返回 null，表示取不到有效值。
      * @param MaxAge $MaxAge 浏览器缓存过期规则配置（功能灰度中，敬请期待）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Ipv6 $Ipv6 Ipv6 配置（功能灰度中，敬请期待）
+     * @param Ipv6 $Ipv6 Ipv6 回源配置（功能灰度中，敬请期待）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Compatibility $Compatibility 是否兼容旧版本配置（内部兼容性字段）
 注意：此字段可能返回 null，表示取不到有效值。
@@ -659,6 +679,10 @@ off：不支持
      * @param array $AccessPort 访问端口配置
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tag 标签配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AdvancedAuthentication $AdvancedAuthentication 时间戳防盗链高级配置，白名单功能
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OriginAuthentication $OriginAuthentication 回源鉴权高级配置，白名单功能
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -902,6 +926,16 @@ off：不支持
                 $obj->deserialize($value);
                 array_push($this->Tag, $obj);
             }
+        }
+
+        if (array_key_exists("AdvancedAuthentication",$param) and $param["AdvancedAuthentication"] !== null) {
+            $this->AdvancedAuthentication = new AdvancedAuthentication();
+            $this->AdvancedAuthentication->deserialize($param["AdvancedAuthentication"]);
+        }
+
+        if (array_key_exists("OriginAuthentication",$param) and $param["OriginAuthentication"] !== null) {
+            $this->OriginAuthentication = new OriginAuthentication();
+            $this->OriginAuthentication->deserialize($param["OriginAuthentication"]);
         }
     }
 }

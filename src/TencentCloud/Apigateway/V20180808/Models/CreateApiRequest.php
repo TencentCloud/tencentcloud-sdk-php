@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getServiceId() 获取API 所在的服务唯一 ID。
  * @method void setServiceId(string $ServiceId) 设置API 所在的服务唯一 ID。
- * @method string getServiceType() 获取API 的后端服务类型。支持HTTP、MOCK、TSF、CLB、SCF、WEBSOCKET、TARGET（内测）。
- * @method void setServiceType(string $ServiceType) 设置API 的后端服务类型。支持HTTP、MOCK、TSF、CLB、SCF、WEBSOCKET、TARGET（内测）。
+ * @method string getServiceType() 获取API 的后端服务类型。支持HTTP、MOCK、TSF、SCF、WEBSOCKET、TARGET（内测）。
+ * @method void setServiceType(string $ServiceType) 设置API 的后端服务类型。支持HTTP、MOCK、TSF、SCF、WEBSOCKET、TARGET（内测）。
  * @method integer getServiceTimeout() 获取API 的后端服务超时时间，单位是秒。
  * @method void setServiceTimeout(integer $ServiceTimeout) 设置API 的后端服务超时时间，单位是秒。
- * @method string getProtocol() 获取API 的前端请求类型，如 HTTP 或 HTTPS 或者 HTTP 和 HTTPS。
- * @method void setProtocol(string $Protocol) 设置API 的前端请求类型，如 HTTP 或 HTTPS 或者 HTTP 和 HTTPS。
+ * @method string getProtocol() 获取API 的前端请求协议，支持HTTP和WEBSOCKET。
+ * @method void setProtocol(string $Protocol) 设置API 的前端请求协议，支持HTTP和WEBSOCKET。
  * @method ApiRequestConfig getRequestConfig() 获取请求的前端配置。
  * @method void setRequestConfig(ApiRequestConfig $RequestConfig) 设置请求的前端配置。
  * @method string getApiName() 获取用户自定义的 API 名称。
@@ -119,7 +119,7 @@ class CreateApiRequest extends AbstractModel
     public $ServiceId;
 
     /**
-     * @var string API 的后端服务类型。支持HTTP、MOCK、TSF、CLB、SCF、WEBSOCKET、TARGET（内测）。
+     * @var string API 的后端服务类型。支持HTTP、MOCK、TSF、SCF、WEBSOCKET、TARGET（内测）。
      */
     public $ServiceType;
 
@@ -129,7 +129,7 @@ class CreateApiRequest extends AbstractModel
     public $ServiceTimeout;
 
     /**
-     * @var string API 的前端请求类型，如 HTTP 或 HTTPS 或者 HTTP 和 HTTPS。
+     * @var string API 的前端请求协议，支持HTTP和WEBSOCKET。
      */
     public $Protocol;
 
@@ -340,9 +340,9 @@ class CreateApiRequest extends AbstractModel
 
     /**
      * @param string $ServiceId API 所在的服务唯一 ID。
-     * @param string $ServiceType API 的后端服务类型。支持HTTP、MOCK、TSF、CLB、SCF、WEBSOCKET、TARGET（内测）。
+     * @param string $ServiceType API 的后端服务类型。支持HTTP、MOCK、TSF、SCF、WEBSOCKET、TARGET（内测）。
      * @param integer $ServiceTimeout API 的后端服务超时时间，单位是秒。
-     * @param string $Protocol API 的前端请求类型，如 HTTP 或 HTTPS 或者 HTTP 和 HTTPS。
+     * @param string $Protocol API 的前端请求协议，支持HTTP和WEBSOCKET。
      * @param ApiRequestConfig $RequestConfig 请求的前端配置。
      * @param string $ApiName 用户自定义的 API 名称。
      * @param string $ApiDesc 用户自定义的 API 接口描述。

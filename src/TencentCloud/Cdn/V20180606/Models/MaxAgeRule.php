@@ -25,21 +25,25 @@ all：所有文件生效
 file：指定文件后缀生效
 directory：指定路径生效
 path：指定绝对路径生效
+index: 指定主页生效
  * @method void setMaxAgeType(string $MaxAgeType) 设置规则类型：
 all：所有文件生效
 file：指定文件后缀生效
 directory：指定路径生效
 path：指定绝对路径生效
+index: 指定主页生效
  * @method array getMaxAgeContents() 获取MaxAgeType 对应类型下的匹配内容：
 all 时填充 *
 file 时填充后缀名，如 jpg、txt
 directory 时填充路径，如 /xxx/test/
 path 时填充绝对路径，如 /xxx/test.html
+index 时填充 /
  * @method void setMaxAgeContents(array $MaxAgeContents) 设置MaxAgeType 对应类型下的匹配内容：
 all 时填充 *
 file 时填充后缀名，如 jpg、txt
 directory 时填充路径，如 /xxx/test/
 path 时填充绝对路径，如 /xxx/test.html
+index 时填充 /
  * @method integer getMaxAgeTime() 获取MaxAge 时间设置，单位秒
  * @method void setMaxAgeTime(integer $MaxAgeTime) 设置MaxAge 时间设置，单位秒
  */
@@ -51,6 +55,7 @@ all：所有文件生效
 file：指定文件后缀生效
 directory：指定路径生效
 path：指定绝对路径生效
+index: 指定主页生效
      */
     public $MaxAgeType;
 
@@ -60,6 +65,7 @@ all 时填充 *
 file 时填充后缀名，如 jpg、txt
 directory 时填充路径，如 /xxx/test/
 path 时填充绝对路径，如 /xxx/test.html
+index 时填充 /
      */
     public $MaxAgeContents;
 
@@ -74,11 +80,13 @@ all：所有文件生效
 file：指定文件后缀生效
 directory：指定路径生效
 path：指定绝对路径生效
+index: 指定主页生效
      * @param array $MaxAgeContents MaxAgeType 对应类型下的匹配内容：
 all 时填充 *
 file 时填充后缀名，如 jpg、txt
 directory 时填充路径，如 /xxx/test/
 path 时填充绝对路径，如 /xxx/test.html
+index 时填充 /
      * @param integer $MaxAgeTime MaxAge 时间设置，单位秒
      */
     function __construct()

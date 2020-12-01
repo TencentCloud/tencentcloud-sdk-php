@@ -107,7 +107,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
  * @method Models\DisableTaskFlowResponse DisableTaskFlow(Models\DisableTaskFlowRequest $req) 停用工作流
  * @method Models\EnableTaskResponse EnableTask(Models\EnableTaskRequest $req) 启用任务
  * @method Models\EnableTaskFlowResponse EnableTaskFlow(Models\EnableTaskFlowRequest $req) 启用工作流
- * @method Models\ExecuteTaskResponse ExecuteTask(Models\ExecuteTaskRequest $req) 执行一次任务。
+ * @method Models\ExecuteTaskResponse ExecuteTask(Models\ExecuteTaskRequest $req) 手动执行一次任务。
  * @method Models\ExecuteTaskFlowResponse ExecuteTaskFlow(Models\ExecuteTaskFlowRequest $req) 执行一次工作流
  * @method Models\ExpandGroupResponse ExpandGroup(Models\ExpandGroupRequest $req) 虚拟机部署组添加实例
  * @method Models\ModifyContainerGroupResponse ModifyContainerGroup(Models\ModifyContainerGroupRequest $req) 修改容器部署组

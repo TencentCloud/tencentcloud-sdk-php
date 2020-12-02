@@ -14,23 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Vod\V20180717\Models;
+namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeStorageDetails返回参数结构体
+ * DescribeCdnOriginIp返回参数结构体
  *
- * @method array getData() 获取存储统计数据，每5分钟或每天一条数据。
- * @method void setData(array $Data) 设置存储统计数据，每5分钟或每天一条数据。
+ * @method array getIps() 获取回源节点IP详情。
+ * @method void setIps(array $Ips) 设置回源节点IP详情。
+ * @method integer getTotalCount() 获取回源节点IP总个数。
+ * @method void setTotalCount(integer $TotalCount) 设置回源节点IP总个数。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeStorageDetailsResponse extends AbstractModel
+class DescribeCdnOriginIpResponse extends AbstractModel
 {
     /**
-     * @var array 存储统计数据，每5分钟或每天一条数据。
+     * @var array 回源节点IP详情。
      */
-    public $Data;
+    public $Ips;
+
+    /**
+     * @var integer 回源节点IP总个数。
+     */
+    public $TotalCount;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +45,8 @@ class DescribeStorageDetailsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Data 存储统计数据，每5分钟或每天一条数据。
+     * @param array $Ips 回源节点IP详情。
+     * @param integer $TotalCount 回源节点IP总个数。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,13 +62,17 @@ class DescribeStorageDetailsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
-            $this->Data = [];
-            foreach ($param["Data"] as $key => $value){
-                $obj = new StatDataItem();
+        if (array_key_exists("Ips",$param) and $param["Ips"] !== null) {
+            $this->Ips = [];
+            foreach ($param["Ips"] as $key => $value){
+                $obj = new OriginIp();
                 $obj->deserialize($value);
-                array_push($this->Data, $obj);
+                array_push($this->Ips, $obj);
             }
+        }
+
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

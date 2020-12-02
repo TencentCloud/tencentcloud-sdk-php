@@ -14,23 +14,33 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Vod\V20180717\Models;
+namespace TencentCloud\Dbbrain\V20191016\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeStorageDetails返回参数结构体
+ * DescribeAllUserGroup返回参数结构体
  *
- * @method array getData() 获取存储统计数据，每5分钟或每天一条数据。
- * @method void setData(array $Data) 设置存储统计数据，每5分钟或每天一条数据。
+ * @method integer getTotalCount() 获取组总数。
+ * @method void setTotalCount(integer $TotalCount) 设置组总数。
+ * @method array getGroups() 获取组信息。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setGroups(array $Groups) 设置组信息。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeStorageDetailsResponse extends AbstractModel
+class DescribeAllUserGroupResponse extends AbstractModel
 {
     /**
-     * @var array 存储统计数据，每5分钟或每天一条数据。
+     * @var integer 组总数。
      */
-    public $Data;
+    public $TotalCount;
+
+    /**
+     * @var array 组信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Groups;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +48,9 @@ class DescribeStorageDetailsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Data 存储统计数据，每5分钟或每天一条数据。
+     * @param integer $TotalCount 组总数。
+     * @param array $Groups 组信息。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,12 +66,16 @@ class DescribeStorageDetailsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
-            $this->Data = [];
-            foreach ($param["Data"] as $key => $value){
-                $obj = new StatDataItem();
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("Groups",$param) and $param["Groups"] !== null) {
+            $this->Groups = [];
+            foreach ($param["Groups"] as $key => $value){
+                $obj = new GroupItem();
                 $obj->deserialize($value);
-                array_push($this->Data, $obj);
+                array_push($this->Groups, $obj);
             }
         }
 

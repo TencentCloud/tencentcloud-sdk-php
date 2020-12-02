@@ -18,17 +18,24 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeStorageDetails返回参数结构体
+ * DescribeCDNStatDetails返回参数结构体
  *
- * @method array getData() 获取存储统计数据，每5分钟或每天一条数据。
- * @method void setData(array $Data) 设置存储统计数据，每5分钟或每天一条数据。
+ * @method integer getDataInterval() 获取每条数据的时间粒度，单位：分钟。
+ * @method void setDataInterval(integer $DataInterval) 设置每条数据的时间粒度，单位：分钟。
+ * @method array getData() 获取CDN 用量数据。
+ * @method void setData(array $Data) 设置CDN 用量数据。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeStorageDetailsResponse extends AbstractModel
+class DescribeCDNStatDetailsResponse extends AbstractModel
 {
     /**
-     * @var array 存储统计数据，每5分钟或每天一条数据。
+     * @var integer 每条数据的时间粒度，单位：分钟。
+     */
+    public $DataInterval;
+
+    /**
+     * @var array CDN 用量数据。
      */
     public $Data;
 
@@ -38,7 +45,8 @@ class DescribeStorageDetailsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Data 存储统计数据，每5分钟或每天一条数据。
+     * @param integer $DataInterval 每条数据的时间粒度，单位：分钟。
+     * @param array $Data CDN 用量数据。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,6 +62,10 @@ class DescribeStorageDetailsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("DataInterval",$param) and $param["DataInterval"] !== null) {
+            $this->DataInterval = $param["DataInterval"];
+        }
+
         if (array_key_exists("Data",$param) and $param["Data"] !== null) {
             $this->Data = [];
             foreach ($param["Data"] as $key => $value){

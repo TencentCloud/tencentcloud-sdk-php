@@ -14,31 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Vod\V20180717\Models;
+namespace TencentCloud\Dbbrain\V20191016\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeStorageDetails返回参数结构体
+ * ModifyDiagDBInstanceConf返回参数结构体
  *
- * @method array getData() 获取存储统计数据，每5分钟或每天一条数据。
- * @method void setData(array $Data) 设置存储统计数据，每5分钟或每天一条数据。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeStorageDetailsResponse extends AbstractModel
+class ModifyDiagDBInstanceConfResponse extends AbstractModel
 {
-    /**
-     * @var array 存储统计数据，每5分钟或每天一条数据。
-     */
-    public $Data;
-
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
-     * @param array $Data 存储统计数据，每5分钟或每天一条数据。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,15 +46,6 @@ class DescribeStorageDetailsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
-            $this->Data = [];
-            foreach ($param["Data"] as $key => $value){
-                $obj = new StatDataItem();
-                $obj->deserialize($value);
-                array_push($this->Data, $obj);
-            }
-        }
-
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

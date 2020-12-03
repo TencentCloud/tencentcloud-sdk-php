@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClientList(array $ClientList) 设置访问诊断链接的客户端简易信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getArea() 获取域名加速区域
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setArea(string $Area) 设置域名加速区域
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DiagnoseInfo extends AbstractModel
 {
@@ -84,6 +88,12 @@ class DiagnoseInfo extends AbstractModel
     public $ClientList;
 
     /**
+     * @var string 域名加速区域
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Area;
+
+    /**
      * @param string $DiagnoseUrl 待诊断的URL。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DiagnoseLink 由系统生成的诊断链接。
@@ -95,6 +105,8 @@ class DiagnoseInfo extends AbstractModel
      * @param integer $VisitCount 诊断链接当前访问次数，一个诊断链接最多可访问10次。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ClientList 访问诊断链接的客户端简易信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Area 域名加速区域
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -137,6 +149,10 @@ class DiagnoseInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ClientList, $obj);
             }
+        }
+
+        if (array_key_exists("Area",$param) and $param["Area"] !== null) {
+            $this->Area = $param["Area"];
         }
     }
 }

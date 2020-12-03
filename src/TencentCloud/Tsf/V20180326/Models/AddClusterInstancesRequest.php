@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceImportMode(string $InstanceImportMode) 设置云主机导入方式，虚拟机集群必填，容器集群不填写此字段，R：重装TSF系统镜像，M：手动安装agent
  * @method string getOsCustomizeType() 获取镜像定制类型
  * @method void setOsCustomizeType(string $OsCustomizeType) 设置镜像定制类型
+ * @method array getFeatureIdList() 获取镜像特征ID列表
+ * @method void setFeatureIdList(array $FeatureIdList) 设置镜像特征ID列表
  */
 class AddClusterInstancesRequest extends AbstractModel
 {
@@ -87,6 +89,11 @@ class AddClusterInstancesRequest extends AbstractModel
     public $OsCustomizeType;
 
     /**
+     * @var array 镜像特征ID列表
+     */
+    public $FeatureIdList;
+
+    /**
      * @param string $ClusterId 集群ID
      * @param array $InstanceIdList 云主机ID列表
      * @param string $OsName 操作系统名称
@@ -96,6 +103,7 @@ class AddClusterInstancesRequest extends AbstractModel
      * @param string $SgId 安全组设置
      * @param string $InstanceImportMode 云主机导入方式，虚拟机集群必填，容器集群不填写此字段，R：重装TSF系统镜像，M：手动安装agent
      * @param string $OsCustomizeType 镜像定制类型
+     * @param array $FeatureIdList 镜像特征ID列表
      */
     function __construct()
     {
@@ -144,6 +152,10 @@ class AddClusterInstancesRequest extends AbstractModel
 
         if (array_key_exists("OsCustomizeType",$param) and $param["OsCustomizeType"] !== null) {
             $this->OsCustomizeType = $param["OsCustomizeType"];
+        }
+
+        if (array_key_exists("FeatureIdList",$param) and $param["FeatureIdList"] !== null) {
+            $this->FeatureIdList = $param["FeatureIdList"];
         }
     }
 }

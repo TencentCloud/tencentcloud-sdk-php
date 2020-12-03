@@ -25,11 +25,17 @@ use TencentCloud\Tsf\V20180326\Models as Models;
 /**
  * @method Models\AddClusterInstancesResponse AddClusterInstances(Models\AddClusterInstancesRequest $req) 添加云主机节点至TSF集群
  * @method Models\AddInstancesResponse AddInstances(Models\AddInstancesRequest $req) 添加云主机节点至TSF集群
+ * @method Models\BindApiGroupResponse BindApiGroup(Models\BindApiGroupRequest $req) 网关与API分组批量绑定
+ * @method Models\ChangeApiUsableStatusResponse ChangeApiUsableStatus(Models\ChangeApiUsableStatusRequest $req) 启用或禁用API
  * @method Models\ContinueRunFailedTaskBatchResponse ContinueRunFailedTaskBatch(Models\ContinueRunFailedTaskBatchRequest $req) 对执行失败的任务批次执行续跑
+ * @method Models\CreateAllGatewayApiAsyncResponse CreateAllGatewayApiAsync(Models\CreateAllGatewayApiAsyncRequest $req) 一键导入API分组
+ * @method Models\CreateApiGroupResponse CreateApiGroup(Models\CreateApiGroupRequest $req) 创建API分组
+ * @method Models\CreateApiRateLimitRuleResponse CreateApiRateLimitRule(Models\CreateApiRateLimitRuleRequest $req) 创建API限流规则
  * @method Models\CreateApplicationResponse CreateApplication(Models\CreateApplicationRequest $req) 创建应用
  * @method Models\CreateClusterResponse CreateCluster(Models\CreateClusterRequest $req) 创建集群
  * @method Models\CreateConfigResponse CreateConfig(Models\CreateConfigRequest $req) 创建配置项
  * @method Models\CreateContainGroupResponse CreateContainGroup(Models\CreateContainGroupRequest $req) 创建容器部署组
+ * @method Models\CreateGatewayApiResponse CreateGatewayApi(Models\CreateGatewayApiRequest $req) 批量导入API至api分组(也支持新建API到分组)
  * @method Models\CreateGroupResponse CreateGroup(Models\CreateGroupRequest $req) 创建虚拟机部署组
  * @method Models\CreateLaneResponse CreateLane(Models\CreateLaneRequest $req) 创建泳道
  * @method Models\CreateLaneRuleResponse CreateLaneRule(Models\CreateLaneRuleRequest $req) 创建泳道规则
@@ -40,6 +46,7 @@ use TencentCloud\Tsf\V20180326\Models as Models;
  * @method Models\CreateServerlessGroupResponse CreateServerlessGroup(Models\CreateServerlessGroupRequest $req) 创建Serverless部署组
  * @method Models\CreateTaskResponse CreateTask(Models\CreateTaskRequest $req) 创建任务
  * @method Models\CreateTaskFlowResponse CreateTaskFlow(Models\CreateTaskFlowRequest $req) 创建工作流
+ * @method Models\DeleteApiGroupResponse DeleteApiGroup(Models\DeleteApiGroupRequest $req) 删除Api分组
  * @method Models\DeleteApplicationResponse DeleteApplication(Models\DeleteApplicationRequest $req) 删除应用
  * @method Models\DeleteConfigResponse DeleteConfig(Models\DeleteConfigRequest $req) 删除配置项
  * @method Models\DeleteContainerGroupResponse DeleteContainerGroup(Models\DeleteContainerGroupRequest $req) 删除容器部署组
@@ -58,6 +65,10 @@ use TencentCloud\Tsf\V20180326\Models as Models;
  * @method Models\DeployGroupResponse DeployGroup(Models\DeployGroupRequest $req) 部署虚拟机部署组应用
  * @method Models\DeployServerlessGroupResponse DeployServerlessGroup(Models\DeployServerlessGroupRequest $req) 部署Serverless应用
  * @method Models\DescribeApiDetailResponse DescribeApiDetail(Models\DescribeApiDetailRequest $req) 查询API详情
+ * @method Models\DescribeApiGroupResponse DescribeApiGroup(Models\DescribeApiGroupRequest $req) 查询API分组
+ * @method Models\DescribeApiGroupsResponse DescribeApiGroups(Models\DescribeApiGroupsRequest $req) 查询API 分组信息列表
+ * @method Models\DescribeApiRateLimitRulesResponse DescribeApiRateLimitRules(Models\DescribeApiRateLimitRulesRequest $req) 查询API限流规则
+ * @method Models\DescribeApiUseDetailResponse DescribeApiUseDetail(Models\DescribeApiUseDetailRequest $req) 查询网关API监控明细数据
  * @method Models\DescribeApiVersionsResponse DescribeApiVersions(Models\DescribeApiVersionsRequest $req) 查询API 版本
  * @method Models\DescribeApplicationResponse DescribeApplication(Models\DescribeApplicationRequest $req) 获取应用详情
  * @method Models\DescribeApplicationAttributeResponse DescribeApplicationAttribute(Models\DescribeApplicationAttributeRequest $req) 获取应用列表其它字段，如实例数量信息等
@@ -71,11 +82,17 @@ use TencentCloud\Tsf\V20180326\Models as Models;
  * @method Models\DescribeConfigsResponse DescribeConfigs(Models\DescribeConfigsRequest $req) 查询配置项列表
  * @method Models\DescribeContainerGroupDetailResponse DescribeContainerGroupDetail(Models\DescribeContainerGroupDetailRequest $req)  容器部署组详情
  * @method Models\DescribeContainerGroupsResponse DescribeContainerGroups(Models\DescribeContainerGroupsRequest $req) 容器部署组列表
+ * @method Models\DescribeCreateGatewayApiStatusResponse DescribeCreateGatewayApiStatus(Models\DescribeCreateGatewayApiStatusRequest $req) 查询一键导入API分组任务的状态
  * @method Models\DescribeDownloadInfoResponse DescribeDownloadInfo(Models\DescribeDownloadInfoRequest $req) TSF上传的程序包存放在腾讯云对象存储（COS）中，通过该API可以获取从COS下载程序包需要的信息，包括包所在的桶、存储路径、鉴权信息等，之后使用COS API（或SDK）进行下载。
 COS相关文档请查阅：https://cloud.tencent.com/document/product/436
  * @method Models\DescribeFlowLastBatchStateResponse DescribeFlowLastBatchState(Models\DescribeFlowLastBatchStateRequest $req) 查询工作流最新一个批次的状态信息
+ * @method Models\DescribeGatewayAllGroupApisResponse DescribeGatewayAllGroupApis(Models\DescribeGatewayAllGroupApisRequest $req) 查询网关所有分组下Api列表
+ * @method Models\DescribeGatewayMonitorOverviewResponse DescribeGatewayMonitorOverview(Models\DescribeGatewayMonitorOverviewRequest $req) 查询网关监控概览
  * @method Models\DescribeGroupResponse DescribeGroup(Models\DescribeGroupRequest $req) 查询虚拟机部署组详情
+ * @method Models\DescribeGroupBindedGatewaysResponse DescribeGroupBindedGateways(Models\DescribeGroupBindedGatewaysRequest $req) 查询某个API分组已绑定的网关部署组信息列表
+ * @method Models\DescribeGroupGatewaysResponse DescribeGroupGateways(Models\DescribeGroupGatewaysRequest $req) 查询某个网关绑定的API 分组信息列表
  * @method Models\DescribeGroupInstancesResponse DescribeGroupInstances(Models\DescribeGroupInstancesRequest $req) 查询虚拟机部署组云主机列表
+ * @method Models\DescribeGroupUseDetailResponse DescribeGroupUseDetail(Models\DescribeGroupUseDetailRequest $req) 查询网关分组监控明细数据
  * @method Models\DescribeGroupsResponse DescribeGroups(Models\DescribeGroupsRequest $req) 获取虚拟机部署组列表
  * @method Models\DescribeImageRepositoryResponse DescribeImageRepository(Models\DescribeImageRepositoryRequest $req) 镜像仓库列表 
  * @method Models\DescribeImageTagsResponse DescribeImageTags(Models\DescribeImageTagsRequest $req) 镜像版本列表
@@ -105,6 +122,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
 COS相关文档请查阅：https://cloud.tencent.com/document/product/436
  * @method Models\DisableTaskResponse DisableTask(Models\DisableTaskRequest $req) 停用任务
  * @method Models\DisableTaskFlowResponse DisableTaskFlow(Models\DisableTaskFlowRequest $req) 停用工作流
+ * @method Models\DraftApiGroupResponse DraftApiGroup(Models\DraftApiGroupRequest $req) 下线Api分组
  * @method Models\EnableTaskResponse EnableTask(Models\EnableTaskRequest $req) 启用任务
  * @method Models\EnableTaskFlowResponse EnableTaskFlow(Models\EnableTaskFlowRequest $req) 启用工作流
  * @method Models\ExecuteTaskResponse ExecuteTask(Models\ExecuteTaskRequest $req) 手动执行一次任务。
@@ -122,6 +140,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
  * @method Models\RedoTaskBatchResponse RedoTaskBatch(Models\RedoTaskBatchRequest $req) 重新执行任务批次
  * @method Models\RedoTaskExecuteResponse RedoTaskExecute(Models\RedoTaskExecuteRequest $req) 重新执行在某个节点上执行任务。
  * @method Models\RedoTaskFlowBatchResponse RedoTaskFlowBatch(Models\RedoTaskFlowBatchRequest $req) 重新执行工作流批次
+ * @method Models\ReleaseApiGroupResponse ReleaseApiGroup(Models\ReleaseApiGroupRequest $req) 发布Api分组
  * @method Models\ReleaseConfigResponse ReleaseConfig(Models\ReleaseConfigRequest $req) 发布配置
  * @method Models\ReleasePublicConfigResponse ReleasePublicConfig(Models\ReleasePublicConfigRequest $req) 发布公共配置
  * @method Models\RemoveInstancesResponse RemoveInstances(Models\RemoveInstancesRequest $req) 从 TSF 集群中批量移除云主机节点
@@ -137,6 +156,11 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
  * @method Models\StopTaskBatchResponse StopTaskBatch(Models\StopTaskBatchRequest $req) 停止执行中的任务批次， 非运行中的任务不可调用。
  * @method Models\StopTaskExecuteResponse StopTaskExecute(Models\StopTaskExecuteRequest $req) 停止正在某个节点上执行的任务
  * @method Models\TerminateTaskFlowBatchResponse TerminateTaskFlowBatch(Models\TerminateTaskFlowBatchRequest $req) 停止一个工作流批次
+ * @method Models\UnbindApiGroupResponse UnbindApiGroup(Models\UnbindApiGroupRequest $req) API分组批量与网关解绑
+ * @method Models\UpdateApiGroupResponse UpdateApiGroup(Models\UpdateApiGroupRequest $req) 更新Api分组
+ * @method Models\UpdateApiRateLimitRuleResponse UpdateApiRateLimitRule(Models\UpdateApiRateLimitRuleRequest $req) 更新API限流规则
+ * @method Models\UpdateApiRateLimitRulesResponse UpdateApiRateLimitRules(Models\UpdateApiRateLimitRulesRequest $req) 批量更新API限流规则
+ * @method Models\UpdateGatewayApiResponse UpdateGatewayApi(Models\UpdateGatewayApiRequest $req) 更新API
  * @method Models\UpdateHealthCheckSettingsResponse UpdateHealthCheckSettings(Models\UpdateHealthCheckSettingsRequest $req) 更新健康检查配置
  * @method Models\UpdateRepositoryResponse UpdateRepository(Models\UpdateRepositoryRequest $req) 更新仓库信息
  */

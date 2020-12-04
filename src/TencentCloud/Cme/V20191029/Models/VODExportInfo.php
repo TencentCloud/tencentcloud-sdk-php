@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置导出的媒资名称。
  * @method integer getClassId() 获取导出的媒资分类 Id。
  * @method void setClassId(integer $ClassId) 设置导出的媒资分类 Id。
+ * @method array getThirdPartyPublishInfos() 获取第三方平台发布信息列表。
+ * @method void setThirdPartyPublishInfos(array $ThirdPartyPublishInfos) 设置第三方平台发布信息列表。
  */
 class VODExportInfo extends AbstractModel
 {
@@ -38,8 +40,14 @@ class VODExportInfo extends AbstractModel
     public $ClassId;
 
     /**
+     * @var array 第三方平台发布信息列表。
+     */
+    public $ThirdPartyPublishInfos;
+
+    /**
      * @param string $Name 导出的媒资名称。
      * @param integer $ClassId 导出的媒资分类 Id。
+     * @param array $ThirdPartyPublishInfos 第三方平台发布信息列表。
      */
     function __construct()
     {
@@ -60,6 +68,15 @@ class VODExportInfo extends AbstractModel
 
         if (array_key_exists("ClassId",$param) and $param["ClassId"] !== null) {
             $this->ClassId = $param["ClassId"];
+        }
+
+        if (array_key_exists("ThirdPartyPublishInfos",$param) and $param["ThirdPartyPublishInfos"] !== null) {
+            $this->ThirdPartyPublishInfos = [];
+            foreach ($param["ThirdPartyPublishInfos"] as $key => $value){
+                $obj = new ThirdPartyPublishInfo();
+                $obj->deserialize($value);
+                array_push($this->ThirdPartyPublishInfos, $obj);
+            }
         }
     }
 }

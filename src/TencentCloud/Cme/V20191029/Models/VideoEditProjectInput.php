@@ -20,18 +20,30 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 视频编辑项目输入参数
  *
- * @method array getInitTracks() 获取输入的媒体轨道列表，包括视频、音频，等素材组成的多个轨道信息，其中：<li>输入的多个轨道在时间轴上和输出媒体文件的时间轴对齐；</li><li>时间轴上相同时间点的各个轨道的素材进行重叠，视频或者图片按轨道顺序进行图像的叠加，轨道顺序高的素材叠加在上面，音频素材进行混音；</li><li>视频、音频，每一种类型的轨道最多支持10个。</li>
- * @method void setInitTracks(array $InitTracks) 设置输入的媒体轨道列表，包括视频、音频，等素材组成的多个轨道信息，其中：<li>输入的多个轨道在时间轴上和输出媒体文件的时间轴对齐；</li><li>时间轴上相同时间点的各个轨道的素材进行重叠，视频或者图片按轨道顺序进行图像的叠加，轨道顺序高的素材叠加在上面，音频素材进行混音；</li><li>视频、音频，每一种类型的轨道最多支持10个。</li>
+ * @method string getVideoEditTemplateId() 获取视频编辑模板 ID ，通过模板导入项目时填写。
+ * @method void setVideoEditTemplateId(string $VideoEditTemplateId) 设置视频编辑模板 ID ，通过模板导入项目时填写。
+ * @method array getInitTracks() 获取输入的媒体轨道列表，包括视频、音频，等素材组成的多个轨道信息。其中：<li>输入的多个轨道在时间轴上和输出媒体文件的时间轴对齐；</li><li>时间轴上相同时间点的各个轨道的素材进行重叠，视频或者图片按轨道顺序进行图像的叠加，轨道顺序高的素材叠加在上面，音频素材进行混音；</li><li>视频、音频，每一种类型的轨道最多支持10个。</li>
+注：当从模板导入项目时（即 VideoEditTemplateId 不为空时），该参数无效。
+ * @method void setInitTracks(array $InitTracks) 设置输入的媒体轨道列表，包括视频、音频，等素材组成的多个轨道信息。其中：<li>输入的多个轨道在时间轴上和输出媒体文件的时间轴对齐；</li><li>时间轴上相同时间点的各个轨道的素材进行重叠，视频或者图片按轨道顺序进行图像的叠加，轨道顺序高的素材叠加在上面，音频素材进行混音；</li><li>视频、音频，每一种类型的轨道最多支持10个。</li>
+注：当从模板导入项目时（即 VideoEditTemplateId 不为空时），该参数无效。
  */
 class VideoEditProjectInput extends AbstractModel
 {
     /**
-     * @var array 输入的媒体轨道列表，包括视频、音频，等素材组成的多个轨道信息，其中：<li>输入的多个轨道在时间轴上和输出媒体文件的时间轴对齐；</li><li>时间轴上相同时间点的各个轨道的素材进行重叠，视频或者图片按轨道顺序进行图像的叠加，轨道顺序高的素材叠加在上面，音频素材进行混音；</li><li>视频、音频，每一种类型的轨道最多支持10个。</li>
+     * @var string 视频编辑模板 ID ，通过模板导入项目时填写。
+     */
+    public $VideoEditTemplateId;
+
+    /**
+     * @var array 输入的媒体轨道列表，包括视频、音频，等素材组成的多个轨道信息。其中：<li>输入的多个轨道在时间轴上和输出媒体文件的时间轴对齐；</li><li>时间轴上相同时间点的各个轨道的素材进行重叠，视频或者图片按轨道顺序进行图像的叠加，轨道顺序高的素材叠加在上面，音频素材进行混音；</li><li>视频、音频，每一种类型的轨道最多支持10个。</li>
+注：当从模板导入项目时（即 VideoEditTemplateId 不为空时），该参数无效。
      */
     public $InitTracks;
 
     /**
-     * @param array $InitTracks 输入的媒体轨道列表，包括视频、音频，等素材组成的多个轨道信息，其中：<li>输入的多个轨道在时间轴上和输出媒体文件的时间轴对齐；</li><li>时间轴上相同时间点的各个轨道的素材进行重叠，视频或者图片按轨道顺序进行图像的叠加，轨道顺序高的素材叠加在上面，音频素材进行混音；</li><li>视频、音频，每一种类型的轨道最多支持10个。</li>
+     * @param string $VideoEditTemplateId 视频编辑模板 ID ，通过模板导入项目时填写。
+     * @param array $InitTracks 输入的媒体轨道列表，包括视频、音频，等素材组成的多个轨道信息。其中：<li>输入的多个轨道在时间轴上和输出媒体文件的时间轴对齐；</li><li>时间轴上相同时间点的各个轨道的素材进行重叠，视频或者图片按轨道顺序进行图像的叠加，轨道顺序高的素材叠加在上面，音频素材进行混音；</li><li>视频、音频，每一种类型的轨道最多支持10个。</li>
+注：当从模板导入项目时（即 VideoEditTemplateId 不为空时），该参数无效。
      */
     function __construct()
     {
@@ -46,6 +58,10 @@ class VideoEditProjectInput extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("VideoEditTemplateId",$param) and $param["VideoEditTemplateId"] !== null) {
+            $this->VideoEditTemplateId = $param["VideoEditTemplateId"];
+        }
+
         if (array_key_exists("InitTracks",$param) and $param["InitTracks"] !== null) {
             $this->InitTracks = [];
             foreach ($param["InitTracks"] as $key => $value){

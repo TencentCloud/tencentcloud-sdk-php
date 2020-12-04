@@ -26,6 +26,7 @@ use TencentCloud\Ump\V20200918\Models as Models;
  * @method Models\CreateCameraAlertsResponse CreateCameraAlerts(Models\CreateCameraAlertsRequest $req) 上报相机移动、遮挡等告警信息
 
 
+ * @method Models\CreateCaptureResponse CreateCapture(Models\CreateCaptureRequest $req) 场内抓拍上报接口
  * @method Models\CreateMultiBizAlertResponse CreateMultiBizAlert(Models\CreateMultiBizAlertRequest $req) 集团广场的多经点位告警
  * @method Models\CreateProgramStateResponse CreateProgramState(Models\CreateProgramStateRequest $req) 上报所有进程监控信息
  * @method Models\CreateServerStateResponse CreateServerState(Models\CreateServerStateRequest $req) 上报所有服务器硬件监控信息

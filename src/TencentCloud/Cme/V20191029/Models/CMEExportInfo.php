@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClassPath(string $ClassPath) 设置导出的素材分类路径，长度不能超过15字符。
  * @method array getTagSet() 获取导出的素材标签，单个标签不得超过10个字符。
  * @method void setTagSet(array $TagSet) 设置导出的素材标签，单个标签不得超过10个字符。
+ * @method array getThirdPartyPublishInfos() 获取第三方平台发布信息列表。
+ * @method void setThirdPartyPublishInfos(array $ThirdPartyPublishInfos) 设置第三方平台发布信息列表。
  */
 class CMEExportInfo extends AbstractModel
 {
@@ -59,11 +61,17 @@ class CMEExportInfo extends AbstractModel
     public $TagSet;
 
     /**
+     * @var array 第三方平台发布信息列表。
+     */
+    public $ThirdPartyPublishInfos;
+
+    /**
      * @param Entity $Owner 导出的归属者。
      * @param string $Name 导出的素材名称，不得超过30个字符。
      * @param string $Description 导出的素材信息，不得超过50个字符。
      * @param string $ClassPath 导出的素材分类路径，长度不能超过15字符。
      * @param array $TagSet 导出的素材标签，单个标签不得超过10个字符。
+     * @param array $ThirdPartyPublishInfos 第三方平台发布信息列表。
      */
     function __construct()
     {
@@ -97,6 +105,15 @@ class CMEExportInfo extends AbstractModel
 
         if (array_key_exists("TagSet",$param) and $param["TagSet"] !== null) {
             $this->TagSet = $param["TagSet"];
+        }
+
+        if (array_key_exists("ThirdPartyPublishInfos",$param) and $param["ThirdPartyPublishInfos"] !== null) {
+            $this->ThirdPartyPublishInfos = [];
+            foreach ($param["ThirdPartyPublishInfos"] as $key => $value){
+                $obj = new ThirdPartyPublishInfo();
+                $obj->deserialize($value);
+                array_push($this->ThirdPartyPublishInfos, $obj);
+            }
         }
     }
 }

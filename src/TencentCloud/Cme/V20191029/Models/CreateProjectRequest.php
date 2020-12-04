@@ -40,12 +40,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOwner(Entity $Owner) 设置归属者。
  * @method string getDescription() 获取项目描述信息。
  * @method void setDescription(string $Description) 设置项目描述信息。
- * @method SwitcherProjectInput getSwitcherProjectInput() 获取导播台信息，仅当项目类型为 SWITCHER 时有效。
- * @method void setSwitcherProjectInput(SwitcherProjectInput $SwitcherProjectInput) 设置导播台信息，仅当项目类型为 SWITCHER 时有效。
+ * @method SwitcherProjectInput getSwitcherProjectInput() 获取导播台信息，仅当项目类型为 SWITCHER 时必填。
+ * @method void setSwitcherProjectInput(SwitcherProjectInput $SwitcherProjectInput) 设置导播台信息，仅当项目类型为 SWITCHER 时必填。
  * @method LiveStreamClipProjectInput getLiveStreamClipProjectInput() 获取直播剪辑信息，暂未开放，请勿使用。
  * @method void setLiveStreamClipProjectInput(LiveStreamClipProjectInput $LiveStreamClipProjectInput) 设置直播剪辑信息，暂未开放，请勿使用。
- * @method VideoEditProjectInput getVideoEditProjectInput() 获取视频编辑信息。
- * @method void setVideoEditProjectInput(VideoEditProjectInput $VideoEditProjectInput) 设置视频编辑信息。
+ * @method VideoEditProjectInput getVideoEditProjectInput() 获取视频编辑信息，仅当项目类型为 VIDEO_EDIT 时必填。
+ * @method void setVideoEditProjectInput(VideoEditProjectInput $VideoEditProjectInput) 设置视频编辑信息，仅当项目类型为 VIDEO_EDIT 时必填。
  */
 class CreateProjectRequest extends AbstractModel
 {
@@ -84,7 +84,7 @@ class CreateProjectRequest extends AbstractModel
     public $Description;
 
     /**
-     * @var SwitcherProjectInput 导播台信息，仅当项目类型为 SWITCHER 时有效。
+     * @var SwitcherProjectInput 导播台信息，仅当项目类型为 SWITCHER 时必填。
      */
     public $SwitcherProjectInput;
 
@@ -94,7 +94,7 @@ class CreateProjectRequest extends AbstractModel
     public $LiveStreamClipProjectInput;
 
     /**
-     * @var VideoEditProjectInput 视频编辑信息。
+     * @var VideoEditProjectInput 视频编辑信息，仅当项目类型为 VIDEO_EDIT 时必填。
      */
     public $VideoEditProjectInput;
 
@@ -109,9 +109,9 @@ class CreateProjectRequest extends AbstractModel
 <li>9:16。</li>
      * @param Entity $Owner 归属者。
      * @param string $Description 项目描述信息。
-     * @param SwitcherProjectInput $SwitcherProjectInput 导播台信息，仅当项目类型为 SWITCHER 时有效。
+     * @param SwitcherProjectInput $SwitcherProjectInput 导播台信息，仅当项目类型为 SWITCHER 时必填。
      * @param LiveStreamClipProjectInput $LiveStreamClipProjectInput 直播剪辑信息，暂未开放，请勿使用。
-     * @param VideoEditProjectInput $VideoEditProjectInput 视频编辑信息。
+     * @param VideoEditProjectInput $VideoEditProjectInput 视频编辑信息，仅当项目类型为 VIDEO_EDIT 时必填。
      */
     function __construct()
     {

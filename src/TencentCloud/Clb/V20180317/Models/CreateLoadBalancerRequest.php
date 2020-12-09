@@ -54,6 +54,8 @@ OPEN：公网属性， INTERNAL：内网属性。
  * @method void setTags(array $Tags) 设置购买负载均衡同时，给负载均衡打上标签
  * @method string getVip() 获取指定Vip申请负载均衡
  * @method void setVip(string $Vip) 设置指定Vip申请负载均衡
+ * @method string getBandwidthPackageId() 获取带宽包ID，指定此参数时，网络计费方式（InternetAccessible.InternetChargeType）只支持按带宽包计费（BANDWIDTH_PACKAGE）
+ * @method void setBandwidthPackageId(string $BandwidthPackageId) 设置带宽包ID，指定此参数时，网络计费方式（InternetAccessible.InternetChargeType）只支持按带宽包计费（BANDWIDTH_PACKAGE）
  * @method ExclusiveCluster getExclusiveCluster() 获取独占集群信息
  * @method void setExclusiveCluster(ExclusiveCluster $ExclusiveCluster) 设置独占集群信息
  * @method string getClientToken() 获取用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
@@ -141,6 +143,11 @@ OPEN：公网属性， INTERNAL：内网属性。
     public $Vip;
 
     /**
+     * @var string 带宽包ID，指定此参数时，网络计费方式（InternetAccessible.InternetChargeType）只支持按带宽包计费（BANDWIDTH_PACKAGE）
+     */
+    public $BandwidthPackageId;
+
+    /**
      * @var ExclusiveCluster 独占集群信息
      */
     public $ExclusiveCluster;
@@ -183,6 +190,7 @@ OPEN：公网属性， INTERNAL：内网属性。
      * @param string $VipIsp 仅适用于公网负载均衡。CMCC | CTCC | CUCC，分别对应 移动 | 电信 | 联通，如果不指定本参数，则默认使用BGP。可通过 DescribeSingleIsp 接口查询一个地域所支持的Isp。如果指定运营商，则网络计费式只能使用按带宽包计费(BANDWIDTH_PACKAGE)。
      * @param array $Tags 购买负载均衡同时，给负载均衡打上标签
      * @param string $Vip 指定Vip申请负载均衡
+     * @param string $BandwidthPackageId 带宽包ID，指定此参数时，网络计费方式（InternetAccessible.InternetChargeType）只支持按带宽包计费（BANDWIDTH_PACKAGE）
      * @param ExclusiveCluster $ExclusiveCluster 独占集群信息
      * @param string $ClientToken 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
      * @param boolean $SnatPro 是否支持绑定跨地域/跨Vpc绑定IP的功能。
@@ -262,6 +270,10 @@ OPEN：公网属性， INTERNAL：内网属性。
 
         if (array_key_exists("Vip",$param) and $param["Vip"] !== null) {
             $this->Vip = $param["Vip"];
+        }
+
+        if (array_key_exists("BandwidthPackageId",$param) and $param["BandwidthPackageId"] !== null) {
+            $this->BandwidthPackageId = $param["BandwidthPackageId"];
         }
 
         if (array_key_exists("ExclusiveCluster",$param) and $param["ExclusiveCluster"] !== null) {

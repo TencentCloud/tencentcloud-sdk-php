@@ -54,6 +54,34 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApiAccessIpv6(string $ApiAccessIpv6) 设置TcaplusDB SDK连接参数，接入ipv6地址
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getClusterType() 获取集群类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setClusterType(integer $ClusterType) 设置集群类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getClusterStatus() 获取集群状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setClusterStatus(integer $ClusterStatus) 设置集群状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getReadCapacityUnit() 获取读CU
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setReadCapacityUnit(integer $ReadCapacityUnit) 设置读CU
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getWriteCapacityUnit() 获取写CU
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWriteCapacityUnit(integer $WriteCapacityUnit) 设置写CU
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getDiskVolume() 获取磁盘容量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDiskVolume(integer $DiskVolume) 设置磁盘容量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getServerList() 获取独占server机器信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setServerList(array $ServerList) 设置独占server机器信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getProxyList() 获取独占proxy机器信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProxyList(array $ProxyList) 设置独占proxy机器信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ClusterInfo extends AbstractModel
 {
@@ -135,6 +163,48 @@ class ClusterInfo extends AbstractModel
     public $ApiAccessIpv6;
 
     /**
+     * @var integer 集群类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ClusterType;
+
+    /**
+     * @var integer 集群状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ClusterStatus;
+
+    /**
+     * @var integer 读CU
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ReadCapacityUnit;
+
+    /**
+     * @var integer 写CU
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $WriteCapacityUnit;
+
+    /**
+     * @var integer 磁盘容量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DiskVolume;
+
+    /**
+     * @var array 独占server机器信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ServerList;
+
+    /**
+     * @var array 独占proxy机器信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ProxyList;
+
+    /**
      * @param string $ClusterName 集群名称
      * @param string $ClusterId 集群ID
      * @param string $Region 集群所在地域
@@ -151,6 +221,20 @@ class ClusterInfo extends AbstractModel
      * @param string $OldPasswordExpireTime 如果PasswordStatus是unmodifiable说明有旧密码还未过期，此字段将显示旧密码过期的时间，否则为空
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ApiAccessIpv6 TcaplusDB SDK连接参数，接入ipv6地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ClusterType 集群类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ClusterStatus 集群状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ReadCapacityUnit 读CU
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $WriteCapacityUnit 写CU
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $DiskVolume 磁盘容量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $ServerList 独占server机器信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $ProxyList 独占proxy机器信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -224,6 +308,44 @@ class ClusterInfo extends AbstractModel
 
         if (array_key_exists("ApiAccessIpv6",$param) and $param["ApiAccessIpv6"] !== null) {
             $this->ApiAccessIpv6 = $param["ApiAccessIpv6"];
+        }
+
+        if (array_key_exists("ClusterType",$param) and $param["ClusterType"] !== null) {
+            $this->ClusterType = $param["ClusterType"];
+        }
+
+        if (array_key_exists("ClusterStatus",$param) and $param["ClusterStatus"] !== null) {
+            $this->ClusterStatus = $param["ClusterStatus"];
+        }
+
+        if (array_key_exists("ReadCapacityUnit",$param) and $param["ReadCapacityUnit"] !== null) {
+            $this->ReadCapacityUnit = $param["ReadCapacityUnit"];
+        }
+
+        if (array_key_exists("WriteCapacityUnit",$param) and $param["WriteCapacityUnit"] !== null) {
+            $this->WriteCapacityUnit = $param["WriteCapacityUnit"];
+        }
+
+        if (array_key_exists("DiskVolume",$param) and $param["DiskVolume"] !== null) {
+            $this->DiskVolume = $param["DiskVolume"];
+        }
+
+        if (array_key_exists("ServerList",$param) and $param["ServerList"] !== null) {
+            $this->ServerList = [];
+            foreach ($param["ServerList"] as $key => $value){
+                $obj = new ServerDetailInfo();
+                $obj->deserialize($value);
+                array_push($this->ServerList, $obj);
+            }
+        }
+
+        if (array_key_exists("ProxyList",$param) and $param["ProxyList"] !== null) {
+            $this->ProxyList = [];
+            foreach ($param["ProxyList"] as $key => $value){
+                $obj = new ProxyDetailInfo();
+                $obj->deserialize($value);
+                array_push($this->ProxyList, $obj);
+            }
         }
     }
 }

@@ -122,6 +122,8 @@ epp: DNSPod, Inc.（烟台帝思普网络科技有限公司）
 qcloud: Tencent Cloud Computing (Beijing) Limited Liability Company（腾讯云计算（北京）有限责任公司）
 yunxun: Guangzhou Yunxun Information Technology Co., Ltd.（广州云讯信息科技有限公司）
 xinnet: Xin Net Technology Corporation（北京新网数码信息技术有限公司）
+ * @method array getNameServer() 获取域名绑定的ns
+ * @method void setNameServer(array $NameServer) 设置域名绑定的ns
  */
 class DomainBaseInfo extends AbstractModel
 {
@@ -221,6 +223,11 @@ xinnet: Xin Net Technology Corporation（北京新网数码信息技术有限公
     public $RegistrarType;
 
     /**
+     * @var array 域名绑定的ns
+     */
+    public $NameServer;
+
+    /**
      * @param string $DomainId 域名资源ID。
      * @param string $DomainName 域名名称。
      * @param string $RealNameAuditStatus 域名实名认证状态。
@@ -272,6 +279,7 @@ epp: DNSPod, Inc.（烟台帝思普网络科技有限公司）
 qcloud: Tencent Cloud Computing (Beijing) Limited Liability Company（腾讯云计算（北京）有限责任公司）
 yunxun: Guangzhou Yunxun Information Technology Co., Ltd.（广州云讯信息科技有限公司）
 xinnet: Xin Net Technology Corporation（北京新网数码信息技术有限公司）
+     * @param array $NameServer 域名绑定的ns
      */
     function __construct()
     {
@@ -328,6 +336,10 @@ xinnet: Xin Net Technology Corporation（北京新网数码信息技术有限公
 
         if (array_key_exists("RegistrarType",$param) and $param["RegistrarType"] !== null) {
             $this->RegistrarType = $param["RegistrarType"];
+        }
+
+        if (array_key_exists("NameServer",$param) and $param["NameServer"] !== null) {
+            $this->NameServer = $param["NameServer"];
         }
     }
 }

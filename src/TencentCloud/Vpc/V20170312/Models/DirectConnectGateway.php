@@ -66,6 +66,14 @@ NAT类型支持网络地址转换配置，类型确定后不能修改；一个�
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNatGatewayId(string $NatGatewayId) 设置绑定的NAT网关ID。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getVXLANSupport() 获取专线网关是否支持VXLAN架构
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVXLANSupport(array $VXLANSupport) 设置专线网关是否支持VXLAN架构
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getModeType() 获取云联网路由发布模式：`standard`（标准模式）、`exquisite`（精细模式）。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setModeType(string $ModeType) 设置云联网路由发布模式：`standard`（标准模式）、`exquisite`（精细模式）。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DirectConnectGateway extends AbstractModel
 {
@@ -145,6 +153,18 @@ NAT类型支持网络地址转换配置，类型确定后不能修改；一个�
     public $NatGatewayId;
 
     /**
+     * @var array 专线网关是否支持VXLAN架构
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $VXLANSupport;
+
+    /**
+     * @var string 云联网路由发布模式：`standard`（标准模式）、`exquisite`（精细模式）。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ModeType;
+
+    /**
      * @param string $DirectConnectGatewayId 专线网关`ID`。
      * @param string $DirectConnectGatewayName 专线网关名称。
      * @param string $VpcId 专线网关关联`VPC`实例`ID`。
@@ -167,6 +187,10 @@ NAT类型支持网络地址转换配置，类型确定后不能修改；一个�
      * @param boolean $EnableBGP 是否启用BGP。
      * @param boolean $EnableBGPCommunity 开启和关闭BGP的community属性。
      * @param string $NatGatewayId 绑定的NAT网关ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $VXLANSupport 专线网关是否支持VXLAN架构
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ModeType 云联网路由发布模式：`standard`（标准模式）、`exquisite`（精细模式）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -232,6 +256,14 @@ NAT类型支持网络地址转换配置，类型确定后不能修改；一个�
 
         if (array_key_exists("NatGatewayId",$param) and $param["NatGatewayId"] !== null) {
             $this->NatGatewayId = $param["NatGatewayId"];
+        }
+
+        if (array_key_exists("VXLANSupport",$param) and $param["VXLANSupport"] !== null) {
+            $this->VXLANSupport = $param["VXLANSupport"];
+        }
+
+        if (array_key_exists("ModeType",$param) and $param["ModeType"] !== null) {
+            $this->ModeType = $param["ModeType"];
         }
     }
 }

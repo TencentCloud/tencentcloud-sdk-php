@@ -31,7 +31,8 @@ use TencentCloud\Common\AbstractModel;
     },
     {
         "forward": {
-            "api": "http://127.0.0.1:8080"
+            "api": "http://127.0.0.1:8080",
+            "token":"xxx"
         }
     },
     {
@@ -80,7 +81,8 @@ use TencentCloud\Common\AbstractModel;
     },
     {
         "forward": {
-            "api": "http://127.0.0.1:8080"
+            "api": "http://127.0.0.1:8080",
+            "token":"xxx"
         }
     },
     {
@@ -142,7 +144,8 @@ class TopicRulePayload extends AbstractModel
     },
     {
         "forward": {
-            "api": "http://127.0.0.1:8080"
+            "api": "http://127.0.0.1:8080",
+            "token":"xxx"
         }
     },
     {
@@ -206,7 +209,8 @@ class TopicRulePayload extends AbstractModel
     },
     {
         "forward": {
-            "api": "http://127.0.0.1:8080"
+            "api": "http://127.0.0.1:8080",
+            "token":"xxx"
         }
     },
     {

@@ -46,8 +46,8 @@ Oversea：则查询国外数据，
 60：1小时粒度（跨度不支持超过一个月），
 1440：天粒度（跨度不支持超过一个月）。
 默认值：5。
- * @method string getServiceName() 获取服务名称，可选值包括LVB(标准直播)，LEB(快直播)，默认值是LVB。
- * @method void setServiceName(string $ServiceName) 设置服务名称，可选值包括LVB(标准直播)，LEB(快直播)，默认值是LVB。
+ * @method string getServiceName() 获取服务名称，可选值包括LVB(标准直播)，LEB(快直播)，不填则查LVB+LEB总值。
+ * @method void setServiceName(string $ServiceName) 设置服务名称，可选值包括LVB(标准直播)，LEB(快直播)，不填则查LVB+LEB总值。
  */
 class DescribeBillBandwidthAndFluxListRequest extends AbstractModel
 {
@@ -85,7 +85,7 @@ Oversea：则查询国外数据，
     public $Granularity;
 
     /**
-     * @var string 服务名称，可选值包括LVB(标准直播)，LEB(快直播)，默认值是LVB。
+     * @var string 服务名称，可选值包括LVB(标准直播)，LEB(快直播)，不填则查LVB+LEB总值。
      */
     public $ServiceName;
 
@@ -103,7 +103,7 @@ Oversea：则查询国外数据，
 60：1小时粒度（跨度不支持超过一个月），
 1440：天粒度（跨度不支持超过一个月）。
 默认值：5。
-     * @param string $ServiceName 服务名称，可选值包括LVB(标准直播)，LEB(快直播)，默认值是LVB。
+     * @param string $ServiceName 服务名称，可选值包括LVB(标准直播)，LEB(快直播)，不填则查LVB+LEB总值。
      */
     function __construct()
     {

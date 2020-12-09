@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUrl(string $Url) 设置裁剪后的视频地址。
  * @method MediaMetaData getMetaData() 获取裁剪后的视频元信息。目前`Size`，`Rotate`，`VideoDuration`，`AudioDuration` 几个字段暂时缺省，没有真实数据。
  * @method void setMetaData(MediaMetaData $MetaData) 设置裁剪后的视频元信息。目前`Size`，`Rotate`，`VideoDuration`，`AudioDuration` 几个字段暂时缺省，没有真实数据。
+ * @method string getFileId() 获取剪辑固化后的视频的媒体文件的唯一标识。
+ * @method void setFileId(string $FileId) 设置剪辑固化后的视频的媒体文件的唯一标识。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -40,6 +42,11 @@ class SimpleHlsClipResponse extends AbstractModel
     public $MetaData;
 
     /**
+     * @var string 剪辑固化后的视频的媒体文件的唯一标识。
+     */
+    public $FileId;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -47,6 +54,7 @@ class SimpleHlsClipResponse extends AbstractModel
     /**
      * @param string $Url 裁剪后的视频地址。
      * @param MediaMetaData $MetaData 裁剪后的视频元信息。目前`Size`，`Rotate`，`VideoDuration`，`AudioDuration` 几个字段暂时缺省，没有真实数据。
+     * @param string $FileId 剪辑固化后的视频的媒体文件的唯一标识。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -69,6 +77,10 @@ class SimpleHlsClipResponse extends AbstractModel
         if (array_key_exists("MetaData",$param) and $param["MetaData"] !== null) {
             $this->MetaData = new MediaMetaData();
             $this->MetaData->deserialize($param["MetaData"]);
+        }
+
+        if (array_key_exists("FileId",$param) and $param["FileId"] !== null) {
+            $this->FileId = $param["FileId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

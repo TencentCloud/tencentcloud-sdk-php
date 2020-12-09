@@ -34,6 +34,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResourceTags(array $ResourceTags) 设置集群标签列表
  * @method integer getIpv6Enable() 获取集群是否开启IPv6功能
  * @method void setIpv6Enable(integer $Ipv6Enable) 设置集群是否开启IPv6功能
+ * @method array getServerList() 获取独占集群占用的svr机器
+ * @method void setServerList(array $ServerList) 设置独占集群占用的svr机器
+ * @method array getProxyList() 获取独占集群占用的proxy机器
+ * @method void setProxyList(array $ProxyList) 设置独占集群占用的proxy机器
+ * @method integer getClusterType() 获取集群类型1共享2独占
+ * @method void setClusterType(integer $ClusterType) 设置集群类型1共享2独占
  */
 class CreateClusterRequest extends AbstractModel
 {
@@ -73,6 +79,21 @@ class CreateClusterRequest extends AbstractModel
     public $Ipv6Enable;
 
     /**
+     * @var array 独占集群占用的svr机器
+     */
+    public $ServerList;
+
+    /**
+     * @var array 独占集群占用的proxy机器
+     */
+    public $ProxyList;
+
+    /**
+     * @var integer 集群类型1共享2独占
+     */
+    public $ClusterType;
+
+    /**
      * @param string $IdlType 集群数据描述语言类型，如：`PROTO`，`TDR`或`MIX`
      * @param string $ClusterName 集群名称，可使用中文或英文字符，最大长度32个字符
      * @param string $VpcId 集群所绑定的私有网络实例ID，形如：vpc-f49l6u0z
@@ -80,6 +101,9 @@ class CreateClusterRequest extends AbstractModel
      * @param string $Password 集群访问密码，必须是a-zA-Z0-9的字符,且必须包含数字和大小写字母
      * @param array $ResourceTags 集群标签列表
      * @param integer $Ipv6Enable 集群是否开启IPv6功能
+     * @param array $ServerList 独占集群占用的svr机器
+     * @param array $ProxyList 独占集群占用的proxy机器
+     * @param integer $ClusterType 集群类型1共享2独占
      */
     function __construct()
     {
@@ -125,6 +149,28 @@ class CreateClusterRequest extends AbstractModel
 
         if (array_key_exists("Ipv6Enable",$param) and $param["Ipv6Enable"] !== null) {
             $this->Ipv6Enable = $param["Ipv6Enable"];
+        }
+
+        if (array_key_exists("ServerList",$param) and $param["ServerList"] !== null) {
+            $this->ServerList = [];
+            foreach ($param["ServerList"] as $key => $value){
+                $obj = new MachineInfo();
+                $obj->deserialize($value);
+                array_push($this->ServerList, $obj);
+            }
+        }
+
+        if (array_key_exists("ProxyList",$param) and $param["ProxyList"] !== null) {
+            $this->ProxyList = [];
+            foreach ($param["ProxyList"] as $key => $value){
+                $obj = new MachineInfo();
+                $obj->deserialize($value);
+                array_push($this->ProxyList, $obj);
+            }
+        }
+
+        if (array_key_exists("ClusterType",$param) and $param["ClusterType"] !== null) {
+            $this->ClusterType = $param["ClusterType"];
         }
     }
 }

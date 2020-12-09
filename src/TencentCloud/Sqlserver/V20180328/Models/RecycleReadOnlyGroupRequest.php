@@ -20,14 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RecycleReadOnlyGroup请求参数结构体
  *
-
+ * @method string getInstanceId() 获取主实例的ID
+ * @method void setInstanceId(string $InstanceId) 设置主实例的ID
+ * @method string getReadOnlyGroupId() 获取只读组的ID
+ * @method void setReadOnlyGroupId(string $ReadOnlyGroupId) 设置只读组的ID
  */
 class RecycleReadOnlyGroupRequest extends AbstractModel
 {
-
+    /**
+     * @var string 主实例的ID
+     */
+    public $InstanceId;
 
     /**
+     * @var string 只读组的ID
+     */
+    public $ReadOnlyGroupId;
 
+    /**
+     * @param string $InstanceId 主实例的ID
+     * @param string $ReadOnlyGroupId 只读组的ID
      */
     function __construct()
     {
@@ -42,6 +54,12 @@ class RecycleReadOnlyGroupRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
+        }
 
+        if (array_key_exists("ReadOnlyGroupId",$param) and $param["ReadOnlyGroupId"] !== null) {
+            $this->ReadOnlyGroupId = $param["ReadOnlyGroupId"];
+        }
     }
 }

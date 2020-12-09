@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGatewayType(string $GatewayType) 设置网关类型，可选值：
 <li>NORMAL - （默认）标准型，注：云联网只支持标准型</li>
 <li>NAT - NAT型</li>NAT类型支持网络地址转换配置，类型确定后不能修改；一个私有网络可以创建一个NAT类型的专线网关和一个非NAT类型的专线网关
+ * @method string getModeType() 获取云联网路由发布模式，可选值：`standard`（标准模式）、`exquisite`（精细模式）。只有云联网类型专线网关才支持`ModeType`。
+ * @method void setModeType(string $ModeType) 设置云联网路由发布模式，可选值：`standard`（标准模式）、`exquisite`（精细模式）。只有云联网类型专线网关才支持`ModeType`。
  */
 class CreateDirectConnectGatewayRequest extends AbstractModel
 {
@@ -67,6 +69,11 @@ class CreateDirectConnectGatewayRequest extends AbstractModel
     public $GatewayType;
 
     /**
+     * @var string 云联网路由发布模式，可选值：`standard`（标准模式）、`exquisite`（精细模式）。只有云联网类型专线网关才支持`ModeType`。
+     */
+    public $ModeType;
+
+    /**
      * @param string $DirectConnectGatewayName 专线网关名称
      * @param string $NetworkType 关联网络类型，可选值：
 <li>VPC - 私有网络</li>
@@ -76,6 +83,7 @@ class CreateDirectConnectGatewayRequest extends AbstractModel
      * @param string $GatewayType 网关类型，可选值：
 <li>NORMAL - （默认）标准型，注：云联网只支持标准型</li>
 <li>NAT - NAT型</li>NAT类型支持网络地址转换配置，类型确定后不能修改；一个私有网络可以创建一个NAT类型的专线网关和一个非NAT类型的专线网关
+     * @param string $ModeType 云联网路由发布模式，可选值：`standard`（标准模式）、`exquisite`（精细模式）。只有云联网类型专线网关才支持`ModeType`。
      */
     function __construct()
     {
@@ -104,6 +112,10 @@ class CreateDirectConnectGatewayRequest extends AbstractModel
 
         if (array_key_exists("GatewayType",$param) and $param["GatewayType"] !== null) {
             $this->GatewayType = $param["GatewayType"];
+        }
+
+        if (array_key_exists("ModeType",$param) and $param["ModeType"] !== null) {
+            $this->ModeType = $param["ModeType"];
         }
     }
 }

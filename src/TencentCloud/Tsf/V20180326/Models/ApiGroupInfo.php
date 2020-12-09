@@ -32,9 +32,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupContext(string $GroupContext) 设置分组上下文
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getAuthType() 获取鉴权类型。 secret： 秘钥鉴权； none:无鉴权
+ * @method string getAuthType() 获取鉴权类型。 secret： 密钥鉴权； none:无鉴权
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAuthType(string $AuthType) 设置鉴权类型。 secret： 秘钥鉴权； none:无鉴权
+ * @method void setAuthType(string $AuthType) 设置鉴权类型。 secret： 密钥鉴权； none:无鉴权
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatus() 获取发布状态, drafted: 未发布。 released: 发布
 注意：此字段可能返回 null，表示取不到有效值。
@@ -90,7 +90,7 @@ class ApiGroupInfo extends AbstractModel
     public $GroupContext;
 
     /**
-     * @var string 鉴权类型。 secret： 秘钥鉴权； none:无鉴权
+     * @var string 鉴权类型。 secret： 密钥鉴权； none:无鉴权
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AuthType;
@@ -150,7 +150,7 @@ class ApiGroupInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GroupContext 分组上下文
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $AuthType 鉴权类型。 secret： 秘钥鉴权； none:无鉴权
+     * @param string $AuthType 鉴权类型。 secret： 密钥鉴权； none:无鉴权
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Status 发布状态, drafted: 未发布。 released: 发布
 注意：此字段可能返回 null，表示取不到有效值。

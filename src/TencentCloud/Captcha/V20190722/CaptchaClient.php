@@ -30,6 +30,7 @@ use TencentCloud\Captcha\V20190722\Models as Models;
  * @method Models\DescribeCaptchaMiniDataSumResponse DescribeCaptchaMiniDataSum(Models\DescribeCaptchaMiniDataSumRequest $req) 安全验证码小程序插件查询请求数据概况
  * @method Models\DescribeCaptchaMiniOperDataResponse DescribeCaptchaMiniOperData(Models\DescribeCaptchaMiniOperDataRequest $req) 安全验证码小程序插件用户操作数据查询
  * @method Models\DescribeCaptchaMiniResultResponse DescribeCaptchaMiniResult(Models\DescribeCaptchaMiniResultRequest $req) 核查验证码小程序插件票据结果
+ * @method Models\DescribeCaptchaMiniRiskResultResponse DescribeCaptchaMiniRiskResult(Models\DescribeCaptchaMiniRiskResultRequest $req) 核查验证码小程序插件票据接入风控结果(Beta)
  * @method Models\DescribeCaptchaOperDataResponse DescribeCaptchaOperData(Models\DescribeCaptchaOperDataRequest $req) 安全验证码用户操作数据查询，验证码加载耗时type = 1 、拦截情况type = 2、 一周通过平均尝试次数 type = 3、尝试次数分布 type = 4
  * @method Models\DescribeCaptchaResultResponse DescribeCaptchaResult(Models\DescribeCaptchaResultRequest $req) 核查验证码票据结果
  * @method Models\DescribeCaptchaTicketDataResponse DescribeCaptchaTicketData(Models\DescribeCaptchaTicketDataRequest $req) 安全验证码用户操作票据数据查询

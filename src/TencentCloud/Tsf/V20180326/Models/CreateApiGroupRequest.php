@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGroupName(string $GroupName) 设置分组名称, 不能包含中文
  * @method string getGroupContext() 获取分组上下文
  * @method void setGroupContext(string $GroupContext) 设置分组上下文
- * @method string getAuthType() 获取鉴权类型。secret： 秘钥鉴权； none:无鉴权
- * @method void setAuthType(string $AuthType) 设置鉴权类型。secret： 秘钥鉴权； none:无鉴权
+ * @method string getAuthType() 获取鉴权类型。secret： 密钥鉴权； none:无鉴权
+ * @method void setAuthType(string $AuthType) 设置鉴权类型。secret： 密钥鉴权； none:无鉴权
  * @method string getDescription() 获取备注
  * @method void setDescription(string $Description) 设置备注
  * @method string getGroupType() 获取分组类型,默认ms。 ms： 微服务分组； external:外部Api分组
@@ -44,7 +44,7 @@ class CreateApiGroupRequest extends AbstractModel
     public $GroupContext;
 
     /**
-     * @var string 鉴权类型。secret： 秘钥鉴权； none:无鉴权
+     * @var string 鉴权类型。secret： 密钥鉴权； none:无鉴权
      */
     public $AuthType;
 
@@ -61,7 +61,7 @@ class CreateApiGroupRequest extends AbstractModel
     /**
      * @param string $GroupName 分组名称, 不能包含中文
      * @param string $GroupContext 分组上下文
-     * @param string $AuthType 鉴权类型。secret： 秘钥鉴权； none:无鉴权
+     * @param string $AuthType 鉴权类型。secret： 密钥鉴权； none:无鉴权
      * @param string $Description 备注
      * @param string $GroupType 分组类型,默认ms。 ms： 微服务分组； external:外部Api分组
      */

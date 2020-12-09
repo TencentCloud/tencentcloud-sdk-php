@@ -92,6 +92,10 @@ failed：部署失败
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHsts(Hsts $Hsts) 设置Hsts配置
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTlsVersion() 获取Tls版本设置，仅支持部分Advance域名，支持设置 TLSv1, TLSV1.1, TLSV1.2, TLSv1.3，修改时必须开启连续的版本
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTlsVersion(array $TlsVersion) 设置Tls版本设置，仅支持部分Advance域名，支持设置 TLSv1, TLSV1.1, TLSV1.2, TLSv1.3，修改时必须开启连续的版本
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Https extends AbstractModel
 {
@@ -168,6 +172,12 @@ failed：部署失败
     public $Hsts;
 
     /**
+     * @var array Tls版本设置，仅支持部分Advance域名，支持设置 TLSv1, TLSV1.1, TLSV1.2, TLSv1.3，修改时必须开启连续的版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TlsVersion;
+
+    /**
      * @param string $Switch https 配置开关
 on：开启
 off：关闭
@@ -203,6 +213,8 @@ deployed：部署成功
 failed：部署失败
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Hsts $Hsts Hsts配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $TlsVersion Tls版本设置，仅支持部分Advance域名，支持设置 TLSv1, TLSV1.1, TLSV1.2, TLSv1.3，修改时必须开启连续的版本
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -255,6 +267,10 @@ failed：部署失败
         if (array_key_exists("Hsts",$param) and $param["Hsts"] !== null) {
             $this->Hsts = new Hsts();
             $this->Hsts->deserialize($param["Hsts"]);
+        }
+
+        if (array_key_exists("TlsVersion",$param) and $param["TlsVersion"] !== null) {
+            $this->TlsVersion = $param["TlsVersion"];
         }
     }
 }

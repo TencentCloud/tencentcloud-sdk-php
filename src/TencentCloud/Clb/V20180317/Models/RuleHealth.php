@@ -30,9 +30,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUrl(string $Url) 设置转发规则的Url
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getTargets() 获取本规则上绑定的后端的健康检查状态
+ * @method array getTargets() 获取本规则上绑定的后端服务的健康检查状态
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTargets(array $Targets) 设置本规则上绑定的后端的健康检查状态
+ * @method void setTargets(array $Targets) 设置本规则上绑定的后端服务的健康检查状态
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class RuleHealth extends AbstractModel
@@ -55,7 +55,7 @@ class RuleHealth extends AbstractModel
     public $Url;
 
     /**
-     * @var array 本规则上绑定的后端的健康检查状态
+     * @var array 本规则上绑定的后端服务的健康检查状态
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Targets;
@@ -66,7 +66,7 @@ class RuleHealth extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Url 转发规则的Url
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Targets 本规则上绑定的后端的健康检查状态
+     * @param array $Targets 本规则上绑定的后端服务的健康检查状态
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

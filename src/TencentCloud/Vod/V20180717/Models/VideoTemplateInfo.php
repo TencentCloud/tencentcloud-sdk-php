@@ -88,6 +88,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVcrf(integer $Vcrf) 设置视频恒定码率控制因子，取值范围为[1, 51]。
 如果指定该参数，将使用 CRF 的码率控制方式做转码（视频码率将不再生效）。
 如果没有特殊需求，不建议指定该参数。
+ * @method integer getGop() 获取关键帧 I 帧之间的间隔，取值范围：0 和 [1, 100000]，单位：帧数。
+当填 0 或不填时，系统将自动设置 gop 长度。
+ * @method void setGop(integer $Gop) 设置关键帧 I 帧之间的间隔，取值范围：0 和 [1, 100000]，单位：帧数。
+当填 0 或不填时，系统将自动设置 gop 长度。
  */
 class VideoTemplateInfo extends AbstractModel
 {
@@ -158,6 +162,12 @@ class VideoTemplateInfo extends AbstractModel
     public $Vcrf;
 
     /**
+     * @var integer 关键帧 I 帧之间的间隔，取值范围：0 和 [1, 100000]，单位：帧数。
+当填 0 或不填时，系统将自动设置 gop 长度。
+     */
+    public $Gop;
+
+    /**
      * @param string $Codec 视频流的编码格式，可选值：
 <li>libx264：H.264 编码</li>
 <li>libx265：H.265 编码</li>
@@ -192,6 +202,8 @@ class VideoTemplateInfo extends AbstractModel
      * @param integer $Vcrf 视频恒定码率控制因子，取值范围为[1, 51]。
 如果指定该参数，将使用 CRF 的码率控制方式做转码（视频码率将不再生效）。
 如果没有特殊需求，不建议指定该参数。
+     * @param integer $Gop 关键帧 I 帧之间的间隔，取值范围：0 和 [1, 100000]，单位：帧数。
+当填 0 或不填时，系统将自动设置 gop 长度。
      */
     function __construct()
     {
@@ -236,6 +248,10 @@ class VideoTemplateInfo extends AbstractModel
 
         if (array_key_exists("Vcrf",$param) and $param["Vcrf"] !== null) {
             $this->Vcrf = $param["Vcrf"];
+        }
+
+        if (array_key_exists("Gop",$param) and $param["Gop"] !== null) {
+            $this->Gop = $param["Gop"];
         }
     }
 }

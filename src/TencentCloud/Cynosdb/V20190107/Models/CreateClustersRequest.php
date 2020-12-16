@@ -86,6 +86,26 @@ timeRollback，时间点回档
  * @method void setOrderSource(string $OrderSource) 设置订单来源
  * @method array getResourceTags() 获取集群创建需要绑定的tag数组信息
  * @method void setResourceTags(array $ResourceTags) 设置集群创建需要绑定的tag数组信息
+ * @method string getDbMode() 获取Db类型
+当DbType为MYSQL时可选(默认NORMAL)：
+<li>NORMAL</li>
+<li>SERVERLESS</li>
+ * @method void setDbMode(string $DbMode) 设置Db类型
+当DbType为MYSQL时可选(默认NORMAL)：
+<li>NORMAL</li>
+<li>SERVERLESS</li>
+ * @method float getMinCpu() 获取当DbMode为SEVERLESS时的cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回
+ * @method void setMinCpu(float $MinCpu) 设置当DbMode为SEVERLESS时的cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回
+ * @method float getMaxCpu() 获取当DbMode为SEVERLESS时的cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
+ * @method void setMaxCpu(float $MaxCpu) 设置当DbMode为SEVERLESS时的cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
+ * @method string getAutoPause() 获取当DbMode为SEVERLESS时，指定集群是否自动暂停，可选范围
+<li>yes</li>
+<li>no</li>
+ * @method void setAutoPause(string $AutoPause) 设置当DbMode为SEVERLESS时，指定集群是否自动暂停，可选范围
+<li>yes</li>
+<li>no</li>
+ * @method integer getAutoPauseDelay() 获取当DbMode为SEVERLESS时，指定集群自动暂停的延迟，可选范围[60,INF]
+ * @method void setAutoPauseDelay(integer $AutoPauseDelay) 设置当DbMode为SEVERLESS时，指定集群自动暂停的延迟，可选范围[60,INF]
  */
 class CreateClustersRequest extends AbstractModel
 {
@@ -235,6 +255,36 @@ timeRollback，时间点回档
     public $ResourceTags;
 
     /**
+     * @var string Db类型
+当DbType为MYSQL时可选(默认NORMAL)：
+<li>NORMAL</li>
+<li>SERVERLESS</li>
+     */
+    public $DbMode;
+
+    /**
+     * @var float 当DbMode为SEVERLESS时的cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回
+     */
+    public $MinCpu;
+
+    /**
+     * @var float 当DbMode为SEVERLESS时的cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
+     */
+    public $MaxCpu;
+
+    /**
+     * @var string 当DbMode为SEVERLESS时，指定集群是否自动暂停，可选范围
+<li>yes</li>
+<li>no</li>
+     */
+    public $AutoPause;
+
+    /**
+     * @var integer 当DbMode为SEVERLESS时，指定集群自动暂停的延迟，可选范围[60,INF]
+     */
+    public $AutoPauseDelay;
+
+    /**
      * @param string $Zone 可用区
      * @param string $VpcId 所属VPC网络ID
      * @param string $SubnetId 所属子网ID
@@ -268,6 +318,16 @@ timeRollback，时间点回档
      * @param integer $HaCount 实例数量（该参数已不再使用，只做存量兼容处理）
      * @param string $OrderSource 订单来源
      * @param array $ResourceTags 集群创建需要绑定的tag数组信息
+     * @param string $DbMode Db类型
+当DbType为MYSQL时可选(默认NORMAL)：
+<li>NORMAL</li>
+<li>SERVERLESS</li>
+     * @param float $MinCpu 当DbMode为SEVERLESS时的cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回
+     * @param float $MaxCpu 当DbMode为SEVERLESS时的cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
+     * @param string $AutoPause 当DbMode为SEVERLESS时，指定集群是否自动暂停，可选范围
+<li>yes</li>
+<li>no</li>
+     * @param integer $AutoPauseDelay 当DbMode为SEVERLESS时，指定集群自动暂停的延迟，可选范围[60,INF]
      */
     function __construct()
     {
@@ -397,6 +457,26 @@ timeRollback，时间点回档
                 $obj->deserialize($value);
                 array_push($this->ResourceTags, $obj);
             }
+        }
+
+        if (array_key_exists("DbMode",$param) and $param["DbMode"] !== null) {
+            $this->DbMode = $param["DbMode"];
+        }
+
+        if (array_key_exists("MinCpu",$param) and $param["MinCpu"] !== null) {
+            $this->MinCpu = $param["MinCpu"];
+        }
+
+        if (array_key_exists("MaxCpu",$param) and $param["MaxCpu"] !== null) {
+            $this->MaxCpu = $param["MaxCpu"];
+        }
+
+        if (array_key_exists("AutoPause",$param) and $param["AutoPause"] !== null) {
+            $this->AutoPause = $param["AutoPause"];
+        }
+
+        if (array_key_exists("AutoPauseDelay",$param) and $param["AutoPauseDelay"] !== null) {
+            $this->AutoPauseDelay = $param["AutoPauseDelay"];
         }
     }
 }

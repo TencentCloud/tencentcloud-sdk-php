@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubnetId(string $SubnetId) 设置指定子网编号，SubnetId与VpcId必须同时指定或不指定
  * @method array getPrivateIpAddresses() 获取指定主网卡内网IP。条件：SubnetId与VpcId必须同时指定，并且IP数量与InstanceCount相同，多IP主机副网卡内网IP在相同子网内通过DHCP获取。
  * @method void setPrivateIpAddresses(array $PrivateIpAddresses) 设置指定主网卡内网IP。条件：SubnetId与VpcId必须同时指定，并且IP数量与InstanceCount相同，多IP主机副网卡内网IP在相同子网内通过DHCP获取。
+ * @method integer getIpv6AddressCount() 获取为弹性网卡指定随机生成的IPv6地址数量，目前数量不能大于1。
+ * @method void setIpv6AddressCount(integer $Ipv6AddressCount) 设置为弹性网卡指定随机生成的IPv6地址数量，目前数量不能大于1。
  */
 class ZoneInstanceCountISP extends AbstractModel
 {
@@ -66,12 +68,18 @@ class ZoneInstanceCountISP extends AbstractModel
     public $PrivateIpAddresses;
 
     /**
+     * @var integer 为弹性网卡指定随机生成的IPv6地址数量，目前数量不能大于1。
+     */
+    public $Ipv6AddressCount;
+
+    /**
      * @param string $Zone 创建实例的可用区。
      * @param integer $InstanceCount 在当前可用区欲创建的实例数目。
      * @param string $ISP 运营商，CTCC电信，CUCC联通，CMCC移动，多个运营商用英文分号连接";"。多运营商需要开通白名单，请直接联系腾讯云客服。
      * @param string $VpcId 指定私有网络编号，SubnetId与VpcId必须同时指定或不指定
      * @param string $SubnetId 指定子网编号，SubnetId与VpcId必须同时指定或不指定
      * @param array $PrivateIpAddresses 指定主网卡内网IP。条件：SubnetId与VpcId必须同时指定，并且IP数量与InstanceCount相同，多IP主机副网卡内网IP在相同子网内通过DHCP获取。
+     * @param integer $Ipv6AddressCount 为弹性网卡指定随机生成的IPv6地址数量，目前数量不能大于1。
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class ZoneInstanceCountISP extends AbstractModel
 
         if (array_key_exists("PrivateIpAddresses",$param) and $param["PrivateIpAddresses"] !== null) {
             $this->PrivateIpAddresses = $param["PrivateIpAddresses"];
+        }
+
+        if (array_key_exists("Ipv6AddressCount",$param) and $param["Ipv6AddressCount"] !== null) {
+            $this->Ipv6AddressCount = $param["Ipv6AddressCount"];
         }
     }
 }

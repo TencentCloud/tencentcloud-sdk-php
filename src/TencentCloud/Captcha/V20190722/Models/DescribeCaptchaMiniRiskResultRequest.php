@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMacAddress(string $MacAddress) 设置mac 地址或设备唯一标识
  * @method string getImei() 获取手机设备号
  * @method void setImei(string $Imei) 设置手机设备号
- * @method integer getSceneCode() 获取验证场景：1 活动防刷场景，2 登陆保护场景，3 注册保护场景。根据需求选择场景参数。
- * @method void setSceneCode(integer $SceneCode) 设置验证场景：1 活动防刷场景，2 登陆保护场景，3 注册保护场景。根据需求选择场景参数。
+ * @method integer getSceneCode() 获取验证场景：1 活动防刷场景，2 登录保护场景，3 注册保护场景。根据需求选择场景参数。
+ * @method void setSceneCode(integer $SceneCode) 设置验证场景：1 活动防刷场景，2 登录保护场景，3 注册保护场景。根据需求选择场景参数。
  * @method string getWeChatOpenId() 获取用户操作来源的微信开放账号
  * @method void setWeChatOpenId(string $WeChatOpenId) 设置用户操作来源的微信开放账号
  */
@@ -91,7 +91,7 @@ class DescribeCaptchaMiniRiskResultRequest extends AbstractModel
     public $Imei;
 
     /**
-     * @var integer 验证场景：1 活动防刷场景，2 登陆保护场景，3 注册保护场景。根据需求选择场景参数。
+     * @var integer 验证场景：1 活动防刷场景，2 登录保护场景，3 注册保护场景。根据需求选择场景参数。
      */
     public $SceneCode;
 
@@ -110,7 +110,7 @@ class DescribeCaptchaMiniRiskResultRequest extends AbstractModel
      * @param integer $SceneId 场景 ID，网站或应用的业务下有多个场景使用此服务，通过此 ID 区分统计数据
      * @param string $MacAddress mac 地址或设备唯一标识
      * @param string $Imei 手机设备号
-     * @param integer $SceneCode 验证场景：1 活动防刷场景，2 登陆保护场景，3 注册保护场景。根据需求选择场景参数。
+     * @param integer $SceneCode 验证场景：1 活动防刷场景，2 登录保护场景，3 注册保护场景。根据需求选择场景参数。
      * @param string $WeChatOpenId 用户操作来源的微信开放账号
      */
     function __construct()

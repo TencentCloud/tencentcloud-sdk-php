@@ -64,6 +64,8 @@ TypeId为标准架构时，MemSize是实例总内存容量；TypeId为集群架�
  * @method void setNoAuth(boolean $NoAuth) 设置是否支持免密，true-免密实例，false-非免密实例，默认为非免密实例，仅VPC网络的实例支持免密码访问。
  * @method array getNodeSet() 获取实例的节点信息，目前支持传入节点的类型（主节点或者副本节点），节点的可用区。单可用区部署不需要传递此参数。
  * @method void setNodeSet(array $NodeSet) 设置实例的节点信息，目前支持传入节点的类型（主节点或者副本节点），节点的可用区。单可用区部署不需要传递此参数。
+ * @method array getResourceTags() 获取购买实例绑定标签
+ * @method void setResourceTags(array $ResourceTags) 设置购买实例绑定标签
  */
 class CreateInstancesRequest extends AbstractModel
 {
@@ -166,6 +168,11 @@ TypeId为标准架构时，MemSize是实例总内存容量；TypeId为集群架�
     public $NodeSet;
 
     /**
+     * @var array 购买实例绑定标签
+     */
+    public $ResourceTags;
+
+    /**
      * @param integer $ZoneId 实例所属的可用区ID，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。
      * @param integer $TypeId 实例类型：2 – Redis2.8内存版(标准架构)，3 – CKV 3.2内存版(标准架构)，4 – CKV 3.2内存版(集群架构)，6 – Redis4.0内存版(标准架构)，7 – Redis4.0内存版(集群架构)，8 – Redis5.0内存版(标准架构)，9 – Redis5.0内存版(集群架构)。
      * @param integer $MemSize 内存容量，单位为MB， 数值需为1024的整数倍，具体规格以 [查询产品售卖规格](https://cloud.tencent.com/document/api/239/30600) 返回的规格为准。
@@ -188,6 +195,7 @@ TypeId为标准架构时，MemSize是实例总内存容量；TypeId为集群架�
      * @param string $InstanceName 实例名称，长度小于60的中文/英文/数字/"-"/"_"。
      * @param boolean $NoAuth 是否支持免密，true-免密实例，false-非免密实例，默认为非免密实例，仅VPC网络的实例支持免密码访问。
      * @param array $NodeSet 实例的节点信息，目前支持传入节点的类型（主节点或者副本节点），节点的可用区。单可用区部署不需要传递此参数。
+     * @param array $ResourceTags 购买实例绑定标签
      */
     function __construct()
     {
@@ -280,6 +288,15 @@ TypeId为标准架构时，MemSize是实例总内存容量；TypeId为集群架�
                 $obj = new RedisNodeInfo();
                 $obj->deserialize($value);
                 array_push($this->NodeSet, $obj);
+            }
+        }
+
+        if (array_key_exists("ResourceTags",$param) and $param["ResourceTags"] !== null) {
+            $this->ResourceTags = [];
+            foreach ($param["ResourceTags"] as $key => $value){
+                $obj = new ResourceTag();
+                $obj->deserialize($value);
+                array_push($this->ResourceTags, $obj);
             }
         }
     }

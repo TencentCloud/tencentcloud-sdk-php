@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPrivateIPAddressInfo(PrivateIPAddressInfo $PrivateIPAddressInfo) 设置实例的内网ip相关信息。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method PublicIPAddressInfo getPublicIPv6AddressInfo() 获取实例的外网ipv6相关信息。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPublicIPv6AddressInfo(PublicIPAddressInfo $PublicIPv6AddressInfo) 设置实例的外网ipv6相关信息。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AddressInfo extends AbstractModel
 {
@@ -44,9 +48,17 @@ class AddressInfo extends AbstractModel
     public $PrivateIPAddressInfo;
 
     /**
+     * @var PublicIPAddressInfo 实例的外网ipv6相关信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PublicIPv6AddressInfo;
+
+    /**
      * @param PublicIPAddressInfo $PublicIPAddressInfo 实例的外网ip相关信息。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param PrivateIPAddressInfo $PrivateIPAddressInfo 实例的内网ip相关信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PublicIPAddressInfo $PublicIPv6AddressInfo 实例的外网ipv6相关信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -70,6 +82,11 @@ class AddressInfo extends AbstractModel
         if (array_key_exists("PrivateIPAddressInfo",$param) and $param["PrivateIPAddressInfo"] !== null) {
             $this->PrivateIPAddressInfo = new PrivateIPAddressInfo();
             $this->PrivateIPAddressInfo->deserialize($param["PrivateIPAddressInfo"]);
+        }
+
+        if (array_key_exists("PublicIPv6AddressInfo",$param) and $param["PublicIPv6AddressInfo"] !== null) {
+            $this->PublicIPv6AddressInfo = new PublicIPAddressInfo();
+            $this->PublicIPv6AddressInfo->deserialize($param["PublicIPv6AddressInfo"]);
         }
     }
 }

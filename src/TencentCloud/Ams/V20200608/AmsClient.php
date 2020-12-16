@@ -54,6 +54,8 @@ use TencentCloud\Ams\V20200608\Models as Models;
 1. 开通COS存储桶功能，新建存储桶，例如 cms_segments，用来存储 视频转换过程中生成对音频和图片。
 2. 然后在COS控制台，授权天御内容安全主账号 对 cms_segments 存储桶对读写权限。具体授权操作，参考https://cloud.tencent.com/document/product/436/38648
 
+ * @method Models\DescribeAmsListResponse DescribeAmsList(Models\DescribeAmsListRequest $req) 音频审核明细列表
+ * @method Models\DescribeAudioStatResponse DescribeAudioStat(Models\DescribeAudioStatRequest $req) 控制台识别统计
  * @method Models\DescribeBizConfigResponse DescribeBizConfig(Models\DescribeBizConfigRequest $req) 查看单个配置
  * @method Models\DescribeTaskDetailResponse DescribeTaskDetail(Models\DescribeTaskDetailRequest $req) 查看任务详情
  */

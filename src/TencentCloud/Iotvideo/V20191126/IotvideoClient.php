@@ -53,6 +53,7 @@ use TencentCloud\Iotvideo\V20191126\Models as Models;
  * @method Models\DeleteProductResponse DeleteProduct(Models\DeleteProductRequest $req) 本接口（DeleteProduct）用于删除一个物联网智能视频产品。
  * @method Models\DeleteTraceIdsResponse DeleteTraceIds(Models\DeleteTraceIdsRequest $req) 本接口（DeleteTraceIds）用于将设备从日志跟踪白名单中删除，该接口可批量操作，最多支持同时操作100台设备。
  * @method Models\DeliverStorageServiceResponse DeliverStorageService(Models\DeliverStorageServiceRequest $req) 将已购买的云存服务转移到另一设备
+ * @method Models\DescribeAccountBalanceResponse DescribeAccountBalance(Models\DescribeAccountBalanceRequest $req) 客户可通过本接口获取账户余额信息, 默认接口请求频率限制：1次/秒
  * @method Models\DescribeBindDevResponse DescribeBindDev(Models\DescribeBindDevRequest $req) 本接口（DescribeBindDev）用于查询终端用户绑定的设备列表。
  * @method Models\DescribeBindUsrResponse DescribeBindUsr(Models\DescribeBindUsrRequest $req) 本接口（DescribeBindUsr）用于查询设备被分享的所有用户列表。
  * @method Models\DescribeDeviceResponse DescribeDevice(Models\DescribeDeviceRequest $req) 本接口（DescribeDevice）获取设备信息。
@@ -70,6 +71,7 @@ use TencentCloud\Iotvideo\V20191126\Models as Models;
  * @method Models\DescribeProductResponse DescribeProduct(Models\DescribeProductRequest $req) 本接口（DescribeProduct）用于获取单个产品的详细信息。
  * @method Models\DescribeProductsResponse DescribeProducts(Models\DescribeProductsRequest $req) 本接口（DescribeProducts）用于列出用户账号下的物联网智能视频产品列表。
  * @method Models\DescribePubVersionsResponse DescribePubVersions(Models\DescribePubVersionsRequest $req) 本接口（DescribePubVersions）用于获取某一产品发布过的全部固件版本。
+ * @method Models\DescribeRechargeRecordsResponse DescribeRechargeRecords(Models\DescribeRechargeRecordsRequest $req) 客户可通过本接口获取充值记录信息, 一次最多返回50条记录。
  * @method Models\DescribeRegistrationStatusResponse DescribeRegistrationStatus(Models\DescribeRegistrationStatusRequest $req) 本接口（DescribeRegistrationStatus）用于查询终端用户的注册状态。
  * @method Models\DescribeRunLogResponse DescribeRunLog(Models\DescribeRunLogRequest $req) 本接口（DescribeRunLog）用于获取设备运行日志。
  * @method Models\DescribeStorageServiceResponse DescribeStorageService(Models\DescribeStorageServiceRequest $req) 查询云存服务

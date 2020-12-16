@@ -26,19 +26,27 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。关于Offset的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节
  * @method integer getLimit() 获取返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节
  * @method void setLimit(integer $Limit) 设置返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节
- * @method array getFilters() 获取# Name
-按照名称进行过滤，可选
+ * @method array getFilters() 获取<li>**Name**</li>
+按照【**版本名称**】进行过滤
 类型：string
 
-# Status
-按照版本状态过滤，形如VERSION_EDITING，PLAN_IN_PROGRESS等，可选
-类型：string
- * @method void setFilters(array $Filters) 设置# Name
-按照名称进行过滤，可选
+<li>**Status**</li>
+按照【**版本状态**】过滤，形如`VERSION_EDITING`，`PLAN_IN_PROGRESS`等
 类型：string
 
-# Status
-按照版本状态过滤，形如VERSION_EDITING，PLAN_IN_PROGRESS等，可选
+<li>**StackId**</li>
+按照版本所属的【**资源栈ID**】进行过滤，形如`stk-xxxxxx`
+类型：string
+ * @method void setFilters(array $Filters) 设置<li>**Name**</li>
+按照【**版本名称**】进行过滤
+类型：string
+
+<li>**Status**</li>
+按照【**版本状态**】过滤，形如`VERSION_EDITING`，`PLAN_IN_PROGRESS`等
+类型：string
+
+<li>**StackId**</li>
+按照版本所属的【**资源栈ID**】进行过滤，形如`stk-xxxxxx`
 类型：string
  */
 class DescribeStackVersionsRequest extends AbstractModel
@@ -59,12 +67,16 @@ class DescribeStackVersionsRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var array # Name
-按照名称进行过滤，可选
+     * @var array <li>**Name**</li>
+按照【**版本名称**】进行过滤
 类型：string
 
-# Status
-按照版本状态过滤，形如VERSION_EDITING，PLAN_IN_PROGRESS等，可选
+<li>**Status**</li>
+按照【**版本状态**】过滤，形如`VERSION_EDITING`，`PLAN_IN_PROGRESS`等
+类型：string
+
+<li>**StackId**</li>
+按照版本所属的【**资源栈ID**】进行过滤，形如`stk-xxxxxx`
 类型：string
      */
     public $Filters;
@@ -73,12 +85,16 @@ class DescribeStackVersionsRequest extends AbstractModel
      * @param array $VersionIds 按照⼀个或者多个版本ID查询
      * @param integer $Offset 偏移量，默认为0。关于Offset的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节
      * @param integer $Limit 返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节
-     * @param array $Filters # Name
-按照名称进行过滤，可选
+     * @param array $Filters <li>**Name**</li>
+按照【**版本名称**】进行过滤
 类型：string
 
-# Status
-按照版本状态过滤，形如VERSION_EDITING，PLAN_IN_PROGRESS等，可选
+<li>**Status**</li>
+按照【**版本状态**】过滤，形如`VERSION_EDITING`，`PLAN_IN_PROGRESS`等
+类型：string
+
+<li>**StackId**</li>
+按照版本所属的【**资源栈ID**】进行过滤，形如`stk-xxxxxx`
 类型：string
      */
     function __construct()

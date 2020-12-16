@@ -24,6 +24,7 @@ use TencentCloud\Gse\V20191112\Models as Models;
 
 /**
  * @method Models\AttachCcnInstancesResponse AttachCcnInstances(Models\AttachCcnInstancesRequest $req) 本接口（AttachCcnInstances）用于关联云联网实例。
+ * @method Models\CopyFleetResponse CopyFleet(Models\CopyFleetRequest $req) 本接口（CopyFleet）用于复制服务器舰队。
  * @method Models\CreateAliasResponse CreateAlias(Models\CreateAliasRequest $req) 本接口（CreateAlias）用于创建别名。
  * @method Models\CreateAssetResponse CreateAsset(Models\CreateAssetRequest $req) 本接口（CreateAsset）用于创建生成包。
 通过获取上传cos的临时密钥，将文件上传至cos，然后将生成包的zip名称下发给本接口完成资源创建。  

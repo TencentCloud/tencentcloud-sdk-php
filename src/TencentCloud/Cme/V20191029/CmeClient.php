@@ -55,8 +55,10 @@ use TencentCloud\Cme\V20191029\Models as Models;
  * @method Models\DescribeTeamMembersResponse DescribeTeamMembers(Models\DescribeTeamMembersRequest $req) 获取指定成员 ID 的信息，同时支持拉取所有团队成员信息。
  * @method Models\DescribeTeamsResponse DescribeTeams(Models\DescribeTeamsRequest $req) 获取指定团队的信息。
  * @method Models\ExportVideoByEditorTrackDataResponse ExportVideoByEditorTrackData(Models\ExportVideoByEditorTrackDataRequest $req) 使用在线编辑轨道数据直接导出视频。
+ * @method Models\ExportVideoByVideoSegmentationDataResponse ExportVideoByVideoSegmentationData(Models\ExportVideoByVideoSegmentationDataRequest $req) 使用视频智能拆条数据导出视频，将指定的视频拆条片段导出为一个视频。
  * @method Models\ExportVideoEditProjectResponse ExportVideoEditProject(Models\ExportVideoEditProjectRequest $req) 导出视频编辑项目，支持指定输出的模板。
  * @method Models\FlattenListMediaResponse FlattenListMedia(Models\FlattenListMediaRequest $req) 平铺分类路径下及其子分类下的所有素材。
+ * @method Models\GenerateVideoSegmentationSchemeByAiResponse GenerateVideoSegmentationSchemeByAi(Models\GenerateVideoSegmentationSchemeByAiRequest $req) 发起视频智能拆条任务，支持智能生成和平精英集锦、王者荣耀集锦、足球集锦、篮球集锦 、人物集锦、新闻拆条等任务。
  * @method Models\GrantResourceAuthorizationResponse GrantResourceAuthorization(Models\GrantResourceAuthorizationRequest $req) 资源所属实体对目标实体授予目标资源的相应权限。
  * @method Models\ImportMaterialResponse ImportMaterial(Models\ImportMaterialRequest $req) 将云点播媒资文件导入到云剪素材库。
  * @method Models\ImportMediaToProjectResponse ImportMediaToProject(Models\ImportMediaToProjectRequest $req) 将云点播中的媒资添加到素材库中，供后续视频编辑使用。

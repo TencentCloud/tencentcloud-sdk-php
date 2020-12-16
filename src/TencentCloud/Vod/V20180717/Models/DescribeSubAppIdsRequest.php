@@ -20,17 +20,33 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSubAppIds请求参数结构体
  *
+ * @method integer getLimit() 获取分页拉取的最大返回结果数。默认值：200；最大值：200。
+ * @method void setLimit(integer $Limit) 设置分页拉取的最大返回结果数。默认值：200；最大值：200。
+ * @method integer getOffset() 获取分页拉取的起始偏移量。默认值：0。
+ * @method void setOffset(integer $Offset) 设置分页拉取的起始偏移量。默认值：0。
  * @method array getTags() 获取标签信息，查询指定标签的子应用列表。
  * @method void setTags(array $Tags) 设置标签信息，查询指定标签的子应用列表。
  */
 class DescribeSubAppIdsRequest extends AbstractModel
 {
     /**
+     * @var integer 分页拉取的最大返回结果数。默认值：200；最大值：200。
+     */
+    public $Limit;
+
+    /**
+     * @var integer 分页拉取的起始偏移量。默认值：0。
+     */
+    public $Offset;
+
+    /**
      * @var array 标签信息，查询指定标签的子应用列表。
      */
     public $Tags;
 
     /**
+     * @param integer $Limit 分页拉取的最大返回结果数。默认值：200；最大值：200。
+     * @param integer $Offset 分页拉取的起始偏移量。默认值：0。
      * @param array $Tags 标签信息，查询指定标签的子应用列表。
      */
     function __construct()
@@ -46,6 +62,14 @@ class DescribeSubAppIdsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
+        }
+
         if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
             $this->Tags = [];
             foreach ($param["Tags"] as $key => $value){

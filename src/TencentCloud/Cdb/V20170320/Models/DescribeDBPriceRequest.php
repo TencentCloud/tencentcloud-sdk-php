@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceRole(string $InstanceRole) 设置实例类型，默认为 master，支持值包括：master - 表示主实例，ro - 表示只读实例，dr - 表示灾备实例。
  * @method integer getProtectMode() 获取数据复制方式，默认为 0，支持值包括：0 - 表示异步复制，1 - 表示半同步复制，2 - 表示强同步复制。
  * @method void setProtectMode(integer $ProtectMode) 设置数据复制方式，默认为 0，支持值包括：0 - 表示异步复制，1 - 表示半同步复制，2 - 表示强同步复制。
- * @method string getDeviceType() 获取部署策略，取值范围：HA-高可用版两节点，FE-金融版三节点；默认值根据数据复制方式决定，数据复制方式为强同步复制时默认值为FE，数据复制方式非强同步时默认值为HA。
- * @method void setDeviceType(string $DeviceType) 设置部署策略，取值范围：HA-高可用版两节点，FE-金融版三节点；默认值根据数据复制方式决定，数据复制方式为强同步复制时默认值为FE，数据复制方式非强同步时默认值为HA。
+ * @method string getDeviceType() 获取部署策略，取值范围：HA-高可用版
+ * @method void setDeviceType(string $DeviceType) 设置部署策略，取值范围：HA-高可用版
  */
 class DescribeDBPriceRequest extends AbstractModel
 {
@@ -82,7 +82,7 @@ class DescribeDBPriceRequest extends AbstractModel
     public $ProtectMode;
 
     /**
-     * @var string 部署策略，取值范围：HA-高可用版两节点，FE-金融版三节点；默认值根据数据复制方式决定，数据复制方式为强同步复制时默认值为FE，数据复制方式非强同步时默认值为HA。
+     * @var string 部署策略，取值范围：HA-高可用版
      */
     public $DeviceType;
 
@@ -95,7 +95,7 @@ class DescribeDBPriceRequest extends AbstractModel
      * @param integer $Period 实例时长，单位：月，最小值 1，最大值为 36；查询按量计费价格时，该字段无效。
      * @param string $InstanceRole 实例类型，默认为 master，支持值包括：master - 表示主实例，ro - 表示只读实例，dr - 表示灾备实例。
      * @param integer $ProtectMode 数据复制方式，默认为 0，支持值包括：0 - 表示异步复制，1 - 表示半同步复制，2 - 表示强同步复制。
-     * @param string $DeviceType 部署策略，取值范围：HA-高可用版两节点，FE-金融版三节点；默认值根据数据复制方式决定，数据复制方式为强同步复制时默认值为FE，数据复制方式非强同步时默认值为HA。
+     * @param string $DeviceType 部署策略，取值范围：HA-高可用版
      */
     function __construct()
     {

@@ -20,22 +20,30 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 音频轨道上的音频片段信息。
  *
- * @method string getSourceType() 获取音频素材来源类型。取值有：
+ * @method string getSourceType() 获取音频素材来源类型，取值有：
 <ul>
-<li>VOD ：素材来源 VOD 。</li>
-<li>CME ：视频来源 CME 。</li>
+<li>VOD ：素材来源于云点播文件 ；</li>
+<li>CME ：视频来源于制作云媒体文件 ；</li>
+<li>EXTERNAL ：视频来源于媒资绑定。</li>
 </ul>
- * @method void setSourceType(string $SourceType) 设置音频素材来源类型。取值有：
+ * @method void setSourceType(string $SourceType) 设置音频素材来源类型，取值有：
 <ul>
-<li>VOD ：素材来源 VOD 。</li>
-<li>CME ：视频来源 CME 。</li>
+<li>VOD ：素材来源于云点播文件 ；</li>
+<li>CME ：视频来源于制作云媒体文件 ；</li>
+<li>EXTERNAL ：视频来源于媒资绑定。</li>
 </ul>
  * @method string getSourceMedia() 获取音频片段的媒体素材来源，可以是：
-<li>VOD 的媒体文件 ID 。</li>
-<li>CME 的素材 ID 。</li>
+<ul>
+<li>当 SourceType 为 VOD 时，为云点播的媒体文件 ID ；</li>
+<li>当 SourceType 为 CME 时，为制作云的媒体 ID；</li>
+<li>当 SourceType 为 EXTERNAL 时，为媒资绑定的 Definition 与 MediaKey 中间用冒号分隔合并后的字符串，格式为 Definition:MediaKey 。</li>
+</ul>
  * @method void setSourceMedia(string $SourceMedia) 设置音频片段的媒体素材来源，可以是：
-<li>VOD 的媒体文件 ID 。</li>
-<li>CME 的素材 ID 。</li>
+<ul>
+<li>当 SourceType 为 VOD 时，为云点播的媒体文件 ID ；</li>
+<li>当 SourceType 为 CME 时，为制作云的媒体 ID；</li>
+<li>当 SourceType 为 EXTERNAL 时，为媒资绑定的 Definition 与 MediaKey 中间用冒号分隔合并后的字符串，格式为 Definition:MediaKey 。</li>
+</ul>
  * @method float getSourceMediaStartTime() 获取音频片段取自素材文件的起始时间，单位为秒。0 表示从素材开始位置截取。默认为0。
  * @method void setSourceMediaStartTime(float $SourceMediaStartTime) 设置音频片段取自素材文件的起始时间，单位为秒。0 表示从素材开始位置截取。默认为0。
  * @method float getDuration() 获取音频片段的时长，单位为秒。默认和素材本身长度一致，表示截取全部素材。
@@ -44,18 +52,22 @@ use TencentCloud\Common\AbstractModel;
 class AudioTrackItem extends AbstractModel
 {
     /**
-     * @var string 音频素材来源类型。取值有：
+     * @var string 音频素材来源类型，取值有：
 <ul>
-<li>VOD ：素材来源 VOD 。</li>
-<li>CME ：视频来源 CME 。</li>
+<li>VOD ：素材来源于云点播文件 ；</li>
+<li>CME ：视频来源于制作云媒体文件 ；</li>
+<li>EXTERNAL ：视频来源于媒资绑定。</li>
 </ul>
      */
     public $SourceType;
 
     /**
      * @var string 音频片段的媒体素材来源，可以是：
-<li>VOD 的媒体文件 ID 。</li>
-<li>CME 的素材 ID 。</li>
+<ul>
+<li>当 SourceType 为 VOD 时，为云点播的媒体文件 ID ；</li>
+<li>当 SourceType 为 CME 时，为制作云的媒体 ID；</li>
+<li>当 SourceType 为 EXTERNAL 时，为媒资绑定的 Definition 与 MediaKey 中间用冒号分隔合并后的字符串，格式为 Definition:MediaKey 。</li>
+</ul>
      */
     public $SourceMedia;
 
@@ -70,14 +82,18 @@ class AudioTrackItem extends AbstractModel
     public $Duration;
 
     /**
-     * @param string $SourceType 音频素材来源类型。取值有：
+     * @param string $SourceType 音频素材来源类型，取值有：
 <ul>
-<li>VOD ：素材来源 VOD 。</li>
-<li>CME ：视频来源 CME 。</li>
+<li>VOD ：素材来源于云点播文件 ；</li>
+<li>CME ：视频来源于制作云媒体文件 ；</li>
+<li>EXTERNAL ：视频来源于媒资绑定。</li>
 </ul>
      * @param string $SourceMedia 音频片段的媒体素材来源，可以是：
-<li>VOD 的媒体文件 ID 。</li>
-<li>CME 的素材 ID 。</li>
+<ul>
+<li>当 SourceType 为 VOD 时，为云点播的媒体文件 ID ；</li>
+<li>当 SourceType 为 CME 时，为制作云的媒体 ID；</li>
+<li>当 SourceType 为 EXTERNAL 时，为媒资绑定的 Definition 与 MediaKey 中间用冒号分隔合并后的字符串，格式为 Definition:MediaKey 。</li>
+</ul>
      * @param float $SourceMediaStartTime 音频片段取自素材文件的起始时间，单位为秒。0 表示从素材开始位置截取。默认为0。
      * @param float $Duration 音频片段的时长，单位为秒。默认和素材本身长度一致，表示截取全部素材。
      */

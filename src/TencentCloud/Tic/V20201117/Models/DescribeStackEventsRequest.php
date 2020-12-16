@@ -22,48 +22,36 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getEventIds() 获取按照⼀个或者多个事件ID查询
  * @method void setEventIds(array $EventIds) 设置按照⼀个或者多个事件ID查询
- * @method array getFilters() 获取过滤条件
-
-# VersionId
-按照版本ID过滤，VersionId形如 ver-kg8hn58h
+ * @method array getFilters() 获取<li>**VersionId**</li>
+按照【**版本ID**】过滤，VersionId形如 `ver-kg8hn58h`
 类型：string
-必须：否
 
-# StackId
-按照资源栈ID过滤，StackId形如 stk-hz5vn3te
+<li>**StackId**</li>
+按照【**资源栈ID**】过滤，StackId形如 `stk-hz5vn3te`
 类型：string
-必选：否
 
-# Type
-按照事件类型过滤，Type形如 plan, apply, destroy
+<li>**Type**</li>
+按照【**事件类型**】过滤，Type 形如 plan, apply, destroy
 类型：string
-必选：否
 
-# Status
-按照事件状态过滤，Status形如 queueing, running, success, failed
+<li>**Status**</li>
+按照【**事件状态**】过滤，Status形如 queueing, running, success, failed
 类型：string
-必选：否
- * @method void setFilters(array $Filters) 设置过滤条件
+ * @method void setFilters(array $Filters) 设置<li>**VersionId**</li>
+按照【**版本ID**】过滤，VersionId形如 `ver-kg8hn58h`
+类型：string
 
-# VersionId
-按照版本ID过滤，VersionId形如 ver-kg8hn58h
+<li>**StackId**</li>
+按照【**资源栈ID**】过滤，StackId形如 `stk-hz5vn3te`
 类型：string
-必须：否
 
-# StackId
-按照资源栈ID过滤，StackId形如 stk-hz5vn3te
+<li>**Type**</li>
+按照【**事件类型**】过滤，Type 形如 plan, apply, destroy
 类型：string
-必选：否
 
-# Type
-按照事件类型过滤，Type形如 plan, apply, destroy
+<li>**Status**</li>
+按照【**事件状态**】过滤，Status形如 queueing, running, success, failed
 类型：string
-必选：否
-
-# Status
-按照事件状态过滤，Status形如 queueing, running, success, failed
-类型：string
-必选：否
  * @method integer getOffset() 获取偏移量，默认为0。关于Offset的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。关于Offset的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节
  * @method integer getLimit() 获取返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节
@@ -77,27 +65,21 @@ class DescribeStackEventsRequest extends AbstractModel
     public $EventIds;
 
     /**
-     * @var array 过滤条件
-
-# VersionId
-按照版本ID过滤，VersionId形如 ver-kg8hn58h
+     * @var array <li>**VersionId**</li>
+按照【**版本ID**】过滤，VersionId形如 `ver-kg8hn58h`
 类型：string
-必须：否
 
-# StackId
-按照资源栈ID过滤，StackId形如 stk-hz5vn3te
+<li>**StackId**</li>
+按照【**资源栈ID**】过滤，StackId形如 `stk-hz5vn3te`
 类型：string
-必选：否
 
-# Type
-按照事件类型过滤，Type形如 plan, apply, destroy
+<li>**Type**</li>
+按照【**事件类型**】过滤，Type 形如 plan, apply, destroy
 类型：string
-必选：否
 
-# Status
-按照事件状态过滤，Status形如 queueing, running, success, failed
+<li>**Status**</li>
+按照【**事件状态**】过滤，Status形如 queueing, running, success, failed
 类型：string
-必选：否
      */
     public $Filters;
 
@@ -113,27 +95,21 @@ class DescribeStackEventsRequest extends AbstractModel
 
     /**
      * @param array $EventIds 按照⼀个或者多个事件ID查询
-     * @param array $Filters 过滤条件
-
-# VersionId
-按照版本ID过滤，VersionId形如 ver-kg8hn58h
+     * @param array $Filters <li>**VersionId**</li>
+按照【**版本ID**】过滤，VersionId形如 `ver-kg8hn58h`
 类型：string
-必须：否
 
-# StackId
-按照资源栈ID过滤，StackId形如 stk-hz5vn3te
+<li>**StackId**</li>
+按照【**资源栈ID**】过滤，StackId形如 `stk-hz5vn3te`
 类型：string
-必选：否
 
-# Type
-按照事件类型过滤，Type形如 plan, apply, destroy
+<li>**Type**</li>
+按照【**事件类型**】过滤，Type 形如 plan, apply, destroy
 类型：string
-必选：否
 
-# Status
-按照事件状态过滤，Status形如 queueing, running, success, failed
+<li>**Status**</li>
+按照【**事件状态**】过滤，Status形如 queueing, running, success, failed
 类型：string
-必选：否
      * @param integer $Offset 偏移量，默认为0。关于Offset的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节
      * @param integer $Limit 返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节
      */

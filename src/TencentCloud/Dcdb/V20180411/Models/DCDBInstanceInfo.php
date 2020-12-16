@@ -132,6 +132,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDcnDstNum(integer $DcnDstNum) 设置DCN灾备实例数
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getInstanceType() 获取1： 主实例（独享型）, 2: 主实例, 3： 灾备实例, 4： 灾备实例（独享型）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInstanceType(integer $InstanceType) 设置1： 主实例（独享型）, 2: 主实例, 3： 灾备实例, 4： 灾备实例（独享型）
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DCDBInstanceInfo extends AbstractModel
 {
@@ -380,6 +384,12 @@ class DCDBInstanceInfo extends AbstractModel
     public $DcnDstNum;
 
     /**
+     * @var integer 1： 主实例（独享型）, 2: 主实例, 3： 灾备实例, 4： 灾备实例（独享型）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InstanceType;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $InstanceName 实例名称
      * @param integer $AppId 应用ID
@@ -435,6 +445,8 @@ class DCDBInstanceInfo extends AbstractModel
      * @param integer $DcnStatus DCN状态，0-无，1-创建中，2-同步中，3-已断开
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DcnDstNum DCN灾备实例数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $InstanceType 1： 主实例（独享型）, 2: 主实例, 3： 灾备实例, 4： 灾备实例（独享型）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -641,6 +653,10 @@ class DCDBInstanceInfo extends AbstractModel
 
         if (array_key_exists("DcnDstNum",$param) and $param["DcnDstNum"] !== null) {
             $this->DcnDstNum = $param["DcnDstNum"];
+        }
+
+        if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
+            $this->InstanceType = $param["InstanceType"];
         }
     }
 }

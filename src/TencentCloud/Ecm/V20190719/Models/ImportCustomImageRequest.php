@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImageDescription(string $ImageDescription) 设置镜像描述
  * @method string getInitFlag() 获取镜像启动方式，cloudinit或nbd， 默认cloudinit
  * @method void setInitFlag(string $InitFlag) 设置镜像启动方式，cloudinit或nbd， 默认cloudinit
- * @method array getImageUrls() 获取镜像描述，多层镜像按顺序传入
- * @method void setImageUrls(array $ImageUrls) 设置镜像描述，多层镜像按顺序传入
+ * @method array getImageUrls() 获取镜像文件描述，多层镜像按顺序传入
+ * @method void setImageUrls(array $ImageUrls) 设置镜像文件描述，多层镜像按顺序传入
  */
 class ImportCustomImageRequest extends AbstractModel
 {
@@ -68,7 +68,7 @@ class ImportCustomImageRequest extends AbstractModel
     public $InitFlag;
 
     /**
-     * @var array 镜像描述，多层镜像按顺序传入
+     * @var array 镜像文件描述，多层镜像按顺序传入
      */
     public $ImageUrls;
 
@@ -79,7 +79,7 @@ class ImportCustomImageRequest extends AbstractModel
      * @param string $OsVersion 导入镜像的操作系统版本，通过DescribeImportImageOs获取
      * @param string $ImageDescription 镜像描述
      * @param string $InitFlag 镜像启动方式，cloudinit或nbd， 默认cloudinit
-     * @param array $ImageUrls 镜像描述，多层镜像按顺序传入
+     * @param array $ImageUrls 镜像文件描述，多层镜像按顺序传入
      */
     function __construct()
     {

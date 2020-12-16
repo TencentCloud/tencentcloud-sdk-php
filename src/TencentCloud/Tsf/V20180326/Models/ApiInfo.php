@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMethod(string $Method) 设置Api 请求
  * @method string getPathMapping() 获取请求映射
  * @method void setPathMapping(string $PathMapping) 设置请求映射
- * @method string getHost() 获取api所在服务host,限定外部Api填写。格式: "http://127.0.0.1:8080"
- * @method void setHost(string $Host) 设置api所在服务host,限定外部Api填写。格式: "http://127.0.0.1:8080"
+ * @method string getHost() 获取api所在服务host,限定外部Api填写。格式: `http://127.0.0.1:8080`
+ * @method void setHost(string $Host) 设置api所在服务host,限定外部Api填写。格式: `http://127.0.0.1:8080`
  * @method string getDescription() 获取api描述信息
  * @method void setDescription(string $Description) 设置api描述信息
  */
@@ -63,7 +63,7 @@ class ApiInfo extends AbstractModel
     public $PathMapping;
 
     /**
-     * @var string api所在服务host,限定外部Api填写。格式: "http://127.0.0.1:8080"
+     * @var string api所在服务host,限定外部Api填写。格式: `http://127.0.0.1:8080`
      */
     public $Host;
 
@@ -78,7 +78,7 @@ class ApiInfo extends AbstractModel
      * @param string $Path API path
      * @param string $Method Api 请求
      * @param string $PathMapping 请求映射
-     * @param string $Host api所在服务host,限定外部Api填写。格式: "http://127.0.0.1:8080"
+     * @param string $Host api所在服务host,限定外部Api填写。格式: `http://127.0.0.1:8080`
      * @param string $Description api描述信息
      */
     function __construct()

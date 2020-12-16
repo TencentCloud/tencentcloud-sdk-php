@@ -250,6 +250,10 @@ off：不支持
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOriginAuthentication(OriginAuthentication $OriginAuthentication) 设置回源鉴权高级配置，白名单功能
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method Ipv6Access getIpv6Access() 获取Ipv6访问配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIpv6Access(Ipv6Access $Ipv6Access) 设置Ipv6访问配置
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DetailDomain extends AbstractModel
 {
@@ -569,6 +573,12 @@ off：不支持
     public $OriginAuthentication;
 
     /**
+     * @var Ipv6Access Ipv6访问配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Ipv6Access;
+
+    /**
      * @param string $ResourceId 域名 ID
      * @param integer $AppId 腾讯云账号ID
      * @param string $Domain 加速域名
@@ -683,6 +693,8 @@ off：不支持
      * @param AdvancedAuthentication $AdvancedAuthentication 时间戳防盗链高级配置，白名单功能
 注意：此字段可能返回 null，表示取不到有效值。
      * @param OriginAuthentication $OriginAuthentication 回源鉴权高级配置，白名单功能
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Ipv6Access $Ipv6Access Ipv6访问配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -936,6 +948,11 @@ off：不支持
         if (array_key_exists("OriginAuthentication",$param) and $param["OriginAuthentication"] !== null) {
             $this->OriginAuthentication = new OriginAuthentication();
             $this->OriginAuthentication->deserialize($param["OriginAuthentication"]);
+        }
+
+        if (array_key_exists("Ipv6Access",$param) and $param["Ipv6Access"] !== null) {
+            $this->Ipv6Access = new Ipv6Access();
+            $this->Ipv6Access->deserialize($param["Ipv6Access"]);
         }
     }
 }

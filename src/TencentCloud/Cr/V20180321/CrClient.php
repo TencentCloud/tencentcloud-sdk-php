@@ -25,7 +25,10 @@ use TencentCloud\Cr\V20180321\Models as Models;
 /**
  * @method Models\ApplyBlackListResponse ApplyBlackList(Models\ApplyBlackListRequest $req) 提交黑名单后，黑名单中有效期内的号码将停止拨打，适用于到期/逾期提醒、回访场景。
  * @method Models\ApplyCreditAuditResponse ApplyCreditAudit(Models\ApplyCreditAuditRequest $req) 提交信审外呼申请，返回当次请求日期。
+ * @method Models\CreateBotTaskResponse CreateBotTask(Models\CreateBotTaskRequest $req) 创建机器人任务
+ * @method Models\DescribeBotFlowResponse DescribeBotFlow(Models\DescribeBotFlowRequest $req) 查询机器人对话流
  * @method Models\DescribeCreditResultResponse DescribeCreditResult(Models\DescribeCreditResultRequest $req) 根据信审任务ID和请求日期，获取相关信审结果。
+ * @method Models\DescribeFileModelResponse DescribeFileModel(Models\DescribeFileModelRequest $req) 查询机器人文件模板
  * @method Models\DescribeRecordsResponse DescribeRecords(Models\DescribeRecordsRequest $req) 用于获取指定案件的录音地址，次日早上8:00后可查询前日录音。
  * @method Models\DescribeTaskStatusResponse DescribeTaskStatus(Models\DescribeTaskStatusRequest $req) 根据上传文件接口的输出参数DataResId，获取相关上传结果。
  * @method Models\DownloadDialogueTextResponse DownloadDialogueText(Models\DownloadDialogueTextRequest $req) 用于获取指定案件的对话文本内容，次日早上8:00后可查询前日对话文本内容。
@@ -34,6 +37,7 @@ use TencentCloud\Cr\V20180321\Models as Models;
  * @method Models\DownloadReportResponse DownloadReport(Models\DownloadReportRequest $req) 用于下载结果报表。当日23:00后，可获取当日到期/逾期提醒结果，次日00:30后，可获取昨日回访结果。
  * @method Models\QueryInstantDataResponse QueryInstantData(Models\QueryInstantDataRequest $req) 实时数据查询
  * @method Models\QueryProductsResponse QueryProducts(Models\QueryProductsRequest $req) 查询产品列表
+ * @method Models\UploadBotFileResponse UploadBotFile(Models\UploadBotFileRequest $req) 上传机器人文件
  * @method Models\UploadDataFileResponse UploadDataFile(Models\UploadDataFileRequest $req) 上传文件，接口返回数据任务ID，支持xlsx、xls、csv、zip格式。
  * @method Models\UploadDataJsonResponse UploadDataJson(Models\UploadDataJsonRequest $req) 上传Json格式数据，接口返回数据任务ID
  * @method Models\UploadFileResponse UploadFile(Models\UploadFileRequest $req) 客户通过调用该接口上传需催收文档，格式需为excel格式。接口返回任务ID。

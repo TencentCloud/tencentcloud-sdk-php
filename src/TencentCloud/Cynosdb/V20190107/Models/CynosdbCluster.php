@@ -72,6 +72,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTasks(array $Tasks) 设置集群的任务数组
  * @method array getResourceTags() 获取集群绑定的tag数组
  * @method void setResourceTags(array $ResourceTags) 设置集群绑定的tag数组
+ * @method string getDbMode() 获取Db类型(NORMAL, SERVERLESS)
+ * @method void setDbMode(string $DbMode) 设置Db类型(NORMAL, SERVERLESS)
+ * @method string getServerlessStatus() 获取当Db类型为SERVERLESS时，serverless集群状态，可选值:
+resume
+pause
+ * @method void setServerlessStatus(string $ServerlessStatus) 设置当Db类型为SERVERLESS时，serverless集群状态，可选值:
+resume
+pause
  */
 class CynosdbCluster extends AbstractModel
 {
@@ -206,6 +214,18 @@ class CynosdbCluster extends AbstractModel
     public $ResourceTags;
 
     /**
+     * @var string Db类型(NORMAL, SERVERLESS)
+     */
+    public $DbMode;
+
+    /**
+     * @var string 当Db类型为SERVERLESS时，serverless集群状态，可选值:
+resume
+pause
+     */
+    public $ServerlessStatus;
+
+    /**
      * @param string $Status 集群状态
      * @param string $UpdateTime 更新时间
      * @param string $Zone 可用区
@@ -232,6 +252,10 @@ class CynosdbCluster extends AbstractModel
      * @param string $ProcessingTask 正在处理的任务
      * @param array $Tasks 集群的任务数组
      * @param array $ResourceTags 集群绑定的tag数组
+     * @param string $DbMode Db类型(NORMAL, SERVERLESS)
+     * @param string $ServerlessStatus 当Db类型为SERVERLESS时，serverless集群状态，可选值:
+resume
+pause
      */
     function __construct()
     {
@@ -358,6 +382,14 @@ class CynosdbCluster extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ResourceTags, $obj);
             }
+        }
+
+        if (array_key_exists("DbMode",$param) and $param["DbMode"] !== null) {
+            $this->DbMode = $param["DbMode"];
+        }
+
+        if (array_key_exists("ServerlessStatus",$param) and $param["ServerlessStatus"] !== null) {
+            $this->ServerlessStatus = $param["ServerlessStatus"];
         }
     }
 }

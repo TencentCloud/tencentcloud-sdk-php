@@ -106,6 +106,8 @@ global：全球加速
  * @method void setAdvancedAuthentication(AdvancedAuthentication $AdvancedAuthentication) 设置时间戳防盗链高级版配置，白名单功能
  * @method OriginAuthentication getOriginAuthentication() 获取回源鉴权高级版配置，白名单功能
  * @method void setOriginAuthentication(OriginAuthentication $OriginAuthentication) 设置回源鉴权高级版配置，白名单功能
+ * @method Ipv6Access getIpv6Access() 获取Ipv6 访问配置
+ * @method void setIpv6Access(Ipv6Access $Ipv6Access) 设置Ipv6 访问配置
  */
 class UpdateDomainConfigRequest extends AbstractModel
 {
@@ -297,6 +299,11 @@ global：全球加速
     public $OriginAuthentication;
 
     /**
+     * @var Ipv6Access Ipv6 访问配置
+     */
+    public $Ipv6Access;
+
+    /**
      * @param string $Domain 域名
      * @param integer $ProjectId 项目 ID
      * @param Origin $Origin 源站配置
@@ -340,6 +347,7 @@ global：全球加速
      * @param array $AccessPort 访问端口配置
      * @param AdvancedAuthentication $AdvancedAuthentication 时间戳防盗链高级版配置，白名单功能
      * @param OriginAuthentication $OriginAuthentication 回源鉴权高级版配置，白名单功能
+     * @param Ipv6Access $Ipv6Access Ipv6 访问配置
      */
     function __construct()
     {
@@ -527,6 +535,11 @@ global：全球加速
         if (array_key_exists("OriginAuthentication",$param) and $param["OriginAuthentication"] !== null) {
             $this->OriginAuthentication = new OriginAuthentication();
             $this->OriginAuthentication->deserialize($param["OriginAuthentication"]);
+        }
+
+        if (array_key_exists("Ipv6Access",$param) and $param["Ipv6Access"] !== null) {
+            $this->Ipv6Access = new Ipv6Access();
+            $this->Ipv6Access->deserialize($param["Ipv6Access"]);
         }
     }
 }

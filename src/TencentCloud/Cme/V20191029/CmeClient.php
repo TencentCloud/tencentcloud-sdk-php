@@ -45,6 +45,10 @@ use TencentCloud\Cme\V20191029\Models as Models;
  * @method Models\DescribeJoinTeamsResponse DescribeJoinTeams(Models\DescribeJoinTeamsRequest $req) 获取指定的团队成员所加入的团队列表。
  * @method Models\DescribeLoginStatusResponse DescribeLoginStatus(Models\DescribeLoginStatusRequest $req) 查询指定用户的登录态。
  * @method Models\DescribeMaterialsResponse DescribeMaterials(Models\DescribeMaterialsRequest $req) 根据素材 Id 批量获取素材详情。
+ * @method Models\DescribePlatformsResponse DescribePlatforms(Models\DescribePlatformsRequest $req) <li>支持获取所创建的所有平台列表信息；</li>
+<li>支持获取指定的平台列表信息。</li>
+
+
  * @method Models\DescribeProjectsResponse DescribeProjects(Models\DescribeProjectsRequest $req) 支持根据多种条件过滤出项目列表。
  * @method Models\DescribeResourceAuthorizationResponse DescribeResourceAuthorization(Models\DescribeResourceAuthorizationRequest $req) 查询指定资源的授权列表。
  * @method Models\DescribeSharedSpaceResponse DescribeSharedSpace(Models\DescribeSharedSpaceRequest $req) 获取共享空间。当实体A对实体B授权某资源以后，实体B的共享空间就会增加实体A。

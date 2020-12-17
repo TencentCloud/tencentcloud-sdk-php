@@ -28,6 +28,7 @@ use TencentCloud\Common\AbstractModel;
 <li>FileDeleted：视频删除完成；</li>
 <li>PullComplete：视频转拉完成；</li>
 <li>EditMediaComplete：视频编辑完成；</li>
+<li>SplitMediaComplete：视频拆分完成；</li>
 <li>WechatPublishComplete：微信发布完成；</li>
 <li>ComposeMediaComplete：制作媒体文件完成；</li>
 <li>WechatMiniProgramPublishComplete：微信小程序发布完成。</li>
@@ -43,6 +44,7 @@ use TencentCloud\Common\AbstractModel;
 <li>FileDeleted：视频删除完成；</li>
 <li>PullComplete：视频转拉完成；</li>
 <li>EditMediaComplete：视频编辑完成；</li>
+<li>SplitMediaComplete：视频拆分完成；</li>
 <li>WechatPublishComplete：微信发布完成；</li>
 <li>ComposeMediaComplete：制作媒体文件完成；</li>
 <li>WechatMiniProgramPublishComplete：微信小程序发布完成。</li>
@@ -72,33 +74,37 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEditMediaCompleteEvent(EditMediaTask $EditMediaCompleteEvent) 设置视频编辑完成事件，当事件类型为 EditMediaComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method WechatPublishTask getWechatPublishCompleteEvent() 获取微信发布完成事件，当事件类型为 WechatPublishComplete 时有效。
+ * @method SplitMediaTask getSplitMediaCompleteEvent() 获取视频拆条完成事件，当事件类型为 SplitMediaComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWechatPublishCompleteEvent(WechatPublishTask $WechatPublishCompleteEvent) 设置微信发布完成事件，当事件类型为 WechatPublishComplete 时有效。
+ * @method void setSplitMediaCompleteEvent(SplitMediaTask $SplitMediaCompleteEvent) 设置视频拆条完成事件，当事件类型为 SplitMediaComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method TranscodeTask2017 getTranscodeCompleteEvent() 获取视频转码完成事件，当事件类型为 TranscodeComplete 时有效。
+ * @method ComposeMediaTask getComposeMediaCompleteEvent() 获取制作媒体文件任务完成事件，当事件类型为 ComposeMediaComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTranscodeCompleteEvent(TranscodeTask2017 $TranscodeCompleteEvent) 设置视频转码完成事件，当事件类型为 TranscodeComplete 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method ConcatTask2017 getConcatCompleteEvent() 获取视频拼接完成事件，当事件类型为 ConcatComplete 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setConcatCompleteEvent(ConcatTask2017 $ConcatCompleteEvent) 设置视频拼接完成事件，当事件类型为 ConcatComplete 时有效。
+ * @method void setComposeMediaCompleteEvent(ComposeMediaTask $ComposeMediaCompleteEvent) 设置制作媒体文件任务完成事件，当事件类型为 ComposeMediaComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method ClipTask2017 getClipCompleteEvent() 获取视频剪辑完成事件，当事件类型为 ClipComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClipCompleteEvent(ClipTask2017 $ClipCompleteEvent) 设置视频剪辑完成事件，当事件类型为 ClipComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method TranscodeTask2017 getTranscodeCompleteEvent() 获取视频转码完成事件，当事件类型为 TranscodeComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTranscodeCompleteEvent(TranscodeTask2017 $TranscodeCompleteEvent) 设置视频转码完成事件，当事件类型为 TranscodeComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method CreateImageSpriteTask2017 getCreateImageSpriteCompleteEvent() 获取视频截取雪碧图完成事件，当事件类型为 CreateImageSpriteComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateImageSpriteCompleteEvent(CreateImageSpriteTask2017 $CreateImageSpriteCompleteEvent) 设置视频截取雪碧图完成事件，当事件类型为 CreateImageSpriteComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method ConcatTask2017 getConcatCompleteEvent() 获取视频拼接完成事件，当事件类型为 ConcatComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setConcatCompleteEvent(ConcatTask2017 $ConcatCompleteEvent) 设置视频拼接完成事件，当事件类型为 ConcatComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method SnapshotByTimeOffsetTask2017 getSnapshotByTimeOffsetCompleteEvent() 获取视频按时间点截图完成事件，当事件类型为 CreateSnapshotByTimeOffsetComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSnapshotByTimeOffsetCompleteEvent(SnapshotByTimeOffsetTask2017 $SnapshotByTimeOffsetCompleteEvent) 设置视频按时间点截图完成事件，当事件类型为 CreateSnapshotByTimeOffsetComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method ComposeMediaTask getComposeMediaCompleteEvent() 获取制作媒体文件任务完成事件，当事件类型为 ComposeMediaComplete 时有效。
+ * @method WechatPublishTask getWechatPublishCompleteEvent() 获取微信发布完成事件，当事件类型为 WechatPublishComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setComposeMediaCompleteEvent(ComposeMediaTask $ComposeMediaCompleteEvent) 设置制作媒体文件任务完成事件，当事件类型为 ComposeMediaComplete 时有效。
+ * @method void setWechatPublishCompleteEvent(WechatPublishTask $WechatPublishCompleteEvent) 设置微信发布完成事件，当事件类型为 WechatPublishComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method WechatMiniProgramPublishTask getWechatMiniProgramPublishCompleteEvent() 获取微信小程序发布任务完成事件，当事件类型为 WechatMiniProgramPublishComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -119,6 +125,7 @@ class EventContent extends AbstractModel
 <li>FileDeleted：视频删除完成；</li>
 <li>PullComplete：视频转拉完成；</li>
 <li>EditMediaComplete：视频编辑完成；</li>
+<li>SplitMediaComplete：视频拆分完成；</li>
 <li>WechatPublishComplete：微信发布完成；</li>
 <li>ComposeMediaComplete：制作媒体文件完成；</li>
 <li>WechatMiniProgramPublishComplete：微信小程序发布完成。</li>
@@ -162,22 +169,16 @@ class EventContent extends AbstractModel
     public $EditMediaCompleteEvent;
 
     /**
-     * @var WechatPublishTask 微信发布完成事件，当事件类型为 WechatPublishComplete 时有效。
+     * @var SplitMediaTask 视频拆条完成事件，当事件类型为 SplitMediaComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $WechatPublishCompleteEvent;
+    public $SplitMediaCompleteEvent;
 
     /**
-     * @var TranscodeTask2017 视频转码完成事件，当事件类型为 TranscodeComplete 时有效。
+     * @var ComposeMediaTask 制作媒体文件任务完成事件，当事件类型为 ComposeMediaComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $TranscodeCompleteEvent;
-
-    /**
-     * @var ConcatTask2017 视频拼接完成事件，当事件类型为 ConcatComplete 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $ConcatCompleteEvent;
+    public $ComposeMediaCompleteEvent;
 
     /**
      * @var ClipTask2017 视频剪辑完成事件，当事件类型为 ClipComplete 时有效。
@@ -186,10 +187,22 @@ class EventContent extends AbstractModel
     public $ClipCompleteEvent;
 
     /**
+     * @var TranscodeTask2017 视频转码完成事件，当事件类型为 TranscodeComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TranscodeCompleteEvent;
+
+    /**
      * @var CreateImageSpriteTask2017 视频截取雪碧图完成事件，当事件类型为 CreateImageSpriteComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateImageSpriteCompleteEvent;
+
+    /**
+     * @var ConcatTask2017 视频拼接完成事件，当事件类型为 ConcatComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ConcatCompleteEvent;
 
     /**
      * @var SnapshotByTimeOffsetTask2017 视频按时间点截图完成事件，当事件类型为 CreateSnapshotByTimeOffsetComplete 时有效。
@@ -198,10 +211,10 @@ class EventContent extends AbstractModel
     public $SnapshotByTimeOffsetCompleteEvent;
 
     /**
-     * @var ComposeMediaTask 制作媒体文件任务完成事件，当事件类型为 ComposeMediaComplete 时有效。
+     * @var WechatPublishTask 微信发布完成事件，当事件类型为 WechatPublishComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $ComposeMediaCompleteEvent;
+    public $WechatPublishCompleteEvent;
 
     /**
      * @var WechatMiniProgramPublishTask 微信小程序发布任务完成事件，当事件类型为 WechatMiniProgramPublishComplete 时有效。
@@ -217,6 +230,7 @@ class EventContent extends AbstractModel
 <li>FileDeleted：视频删除完成；</li>
 <li>PullComplete：视频转拉完成；</li>
 <li>EditMediaComplete：视频编辑完成；</li>
+<li>SplitMediaComplete：视频拆分完成；</li>
 <li>WechatPublishComplete：微信发布完成；</li>
 <li>ComposeMediaComplete：制作媒体文件完成；</li>
 <li>WechatMiniProgramPublishComplete：微信小程序发布完成。</li>
@@ -236,19 +250,21 @@ class EventContent extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param EditMediaTask $EditMediaCompleteEvent 视频编辑完成事件，当事件类型为 EditMediaComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WechatPublishTask $WechatPublishCompleteEvent 微信发布完成事件，当事件类型为 WechatPublishComplete 时有效。
+     * @param SplitMediaTask $SplitMediaCompleteEvent 视频拆条完成事件，当事件类型为 SplitMediaComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TranscodeTask2017 $TranscodeCompleteEvent 视频转码完成事件，当事件类型为 TranscodeComplete 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param ConcatTask2017 $ConcatCompleteEvent 视频拼接完成事件，当事件类型为 ConcatComplete 时有效。
+     * @param ComposeMediaTask $ComposeMediaCompleteEvent 制作媒体文件任务完成事件，当事件类型为 ComposeMediaComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ClipTask2017 $ClipCompleteEvent 视频剪辑完成事件，当事件类型为 ClipComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param TranscodeTask2017 $TranscodeCompleteEvent 视频转码完成事件，当事件类型为 TranscodeComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateImageSpriteTask2017 $CreateImageSpriteCompleteEvent 视频截取雪碧图完成事件，当事件类型为 CreateImageSpriteComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ConcatTask2017 $ConcatCompleteEvent 视频拼接完成事件，当事件类型为 ConcatComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SnapshotByTimeOffsetTask2017 $SnapshotByTimeOffsetCompleteEvent 视频按时间点截图完成事件，当事件类型为 CreateSnapshotByTimeOffsetComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ComposeMediaTask $ComposeMediaCompleteEvent 制作媒体文件任务完成事件，当事件类型为 ComposeMediaComplete 时有效。
+     * @param WechatPublishTask $WechatPublishCompleteEvent 微信发布完成事件，当事件类型为 WechatPublishComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param WechatMiniProgramPublishTask $WechatMiniProgramPublishCompleteEvent 微信小程序发布任务完成事件，当事件类型为 WechatMiniProgramPublishComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -299,19 +315,14 @@ class EventContent extends AbstractModel
             $this->EditMediaCompleteEvent->deserialize($param["EditMediaCompleteEvent"]);
         }
 
-        if (array_key_exists("WechatPublishCompleteEvent",$param) and $param["WechatPublishCompleteEvent"] !== null) {
-            $this->WechatPublishCompleteEvent = new WechatPublishTask();
-            $this->WechatPublishCompleteEvent->deserialize($param["WechatPublishCompleteEvent"]);
+        if (array_key_exists("SplitMediaCompleteEvent",$param) and $param["SplitMediaCompleteEvent"] !== null) {
+            $this->SplitMediaCompleteEvent = new SplitMediaTask();
+            $this->SplitMediaCompleteEvent->deserialize($param["SplitMediaCompleteEvent"]);
         }
 
-        if (array_key_exists("TranscodeCompleteEvent",$param) and $param["TranscodeCompleteEvent"] !== null) {
-            $this->TranscodeCompleteEvent = new TranscodeTask2017();
-            $this->TranscodeCompleteEvent->deserialize($param["TranscodeCompleteEvent"]);
-        }
-
-        if (array_key_exists("ConcatCompleteEvent",$param) and $param["ConcatCompleteEvent"] !== null) {
-            $this->ConcatCompleteEvent = new ConcatTask2017();
-            $this->ConcatCompleteEvent->deserialize($param["ConcatCompleteEvent"]);
+        if (array_key_exists("ComposeMediaCompleteEvent",$param) and $param["ComposeMediaCompleteEvent"] !== null) {
+            $this->ComposeMediaCompleteEvent = new ComposeMediaTask();
+            $this->ComposeMediaCompleteEvent->deserialize($param["ComposeMediaCompleteEvent"]);
         }
 
         if (array_key_exists("ClipCompleteEvent",$param) and $param["ClipCompleteEvent"] !== null) {
@@ -319,9 +330,19 @@ class EventContent extends AbstractModel
             $this->ClipCompleteEvent->deserialize($param["ClipCompleteEvent"]);
         }
 
+        if (array_key_exists("TranscodeCompleteEvent",$param) and $param["TranscodeCompleteEvent"] !== null) {
+            $this->TranscodeCompleteEvent = new TranscodeTask2017();
+            $this->TranscodeCompleteEvent->deserialize($param["TranscodeCompleteEvent"]);
+        }
+
         if (array_key_exists("CreateImageSpriteCompleteEvent",$param) and $param["CreateImageSpriteCompleteEvent"] !== null) {
             $this->CreateImageSpriteCompleteEvent = new CreateImageSpriteTask2017();
             $this->CreateImageSpriteCompleteEvent->deserialize($param["CreateImageSpriteCompleteEvent"]);
+        }
+
+        if (array_key_exists("ConcatCompleteEvent",$param) and $param["ConcatCompleteEvent"] !== null) {
+            $this->ConcatCompleteEvent = new ConcatTask2017();
+            $this->ConcatCompleteEvent->deserialize($param["ConcatCompleteEvent"]);
         }
 
         if (array_key_exists("SnapshotByTimeOffsetCompleteEvent",$param) and $param["SnapshotByTimeOffsetCompleteEvent"] !== null) {
@@ -329,9 +350,9 @@ class EventContent extends AbstractModel
             $this->SnapshotByTimeOffsetCompleteEvent->deserialize($param["SnapshotByTimeOffsetCompleteEvent"]);
         }
 
-        if (array_key_exists("ComposeMediaCompleteEvent",$param) and $param["ComposeMediaCompleteEvent"] !== null) {
-            $this->ComposeMediaCompleteEvent = new ComposeMediaTask();
-            $this->ComposeMediaCompleteEvent->deserialize($param["ComposeMediaCompleteEvent"]);
+        if (array_key_exists("WechatPublishCompleteEvent",$param) and $param["WechatPublishCompleteEvent"] !== null) {
+            $this->WechatPublishCompleteEvent = new WechatPublishTask();
+            $this->WechatPublishCompleteEvent->deserialize($param["WechatPublishCompleteEvent"]);
         }
 
         if (array_key_exists("WechatMiniProgramPublishCompleteEvent",$param) and $param["WechatMiniProgramPublishCompleteEvent"] !== null) {

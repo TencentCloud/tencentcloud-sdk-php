@@ -28,6 +28,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTemplateId(string $TemplateId) 设置模板ID。
  * @method integer getPayMode() 获取付费模式 0手动在线付费，1使用余额付费。
  * @method void setPayMode(integer $PayMode) 设置付费模式 0手动在线付费，1使用余额付费。
+ * @method integer getAutoRenewFlag() 获取自动续费开关。有两个可选值：
+0 表示关闭，不自动续费（默认值）
+1 表示开启，将自动续费
+ * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置自动续费开关。有两个可选值：
+0 表示关闭，不自动续费（默认值）
+1 表示开启，将自动续费
  */
 class TransferInDomainBatchRequest extends AbstractModel
 {
@@ -52,10 +58,20 @@ class TransferInDomainBatchRequest extends AbstractModel
     public $PayMode;
 
     /**
+     * @var integer 自动续费开关。有两个可选值：
+0 表示关闭，不自动续费（默认值）
+1 表示开启，将自动续费
+     */
+    public $AutoRenewFlag;
+
+    /**
      * @param array $Domains 转入的域名名称数组。
      * @param array $PassWords 域名转移码数组。
      * @param string $TemplateId 模板ID。
      * @param integer $PayMode 付费模式 0手动在线付费，1使用余额付费。
+     * @param integer $AutoRenewFlag 自动续费开关。有两个可选值：
+0 表示关闭，不自动续费（默认值）
+1 表示开启，将自动续费
      */
     function __construct()
     {
@@ -84,6 +100,10 @@ class TransferInDomainBatchRequest extends AbstractModel
 
         if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {
             $this->PayMode = $param["PayMode"];
+        }
+
+        if (array_key_exists("AutoRenewFlag",$param) and $param["AutoRenewFlag"] !== null) {
+            $this->AutoRenewFlag = $param["AutoRenewFlag"];
         }
     }
 }

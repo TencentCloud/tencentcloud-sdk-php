@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setValue(integer $Value) 设置数值
  * @method string getTime() 获取时间
  * @method void setTime(string $Time) 设置时间
+ * @method string getDomain() 获取域名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDomain(string $Domain) 设置域名
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ScdnTopUrlData extends AbstractModel
 {
@@ -45,9 +49,17 @@ class ScdnTopUrlData extends AbstractModel
     public $Time;
 
     /**
+     * @var string 域名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Domain;
+
+    /**
      * @param string $Url Top数据的URL
      * @param integer $Value 数值
      * @param string $Time 时间
+     * @param string $Domain 域名
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -72,6 +84,10 @@ class ScdnTopUrlData extends AbstractModel
 
         if (array_key_exists("Time",$param) and $param["Time"] !== null) {
             $this->Time = $param["Time"];
+        }
+
+        if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
+            $this->Domain = $param["Domain"];
         }
     }
 }

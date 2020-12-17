@@ -30,7 +30,7 @@ use TencentCloud\Ame\V20190916\Models as Models;
  * @method Models\DescribePackageItemsResponse DescribePackageItems(Models\DescribePackageItemsRequest $req) 查询曲库包已核验歌曲列表接口
  * @method Models\DescribePackagesResponse DescribePackages(Models\DescribePackagesRequest $req) 查询已购曲库包列表接口
  * @method Models\DescribeStationsResponse DescribeStations(Models\DescribeStationsRequest $req) 获取素材库列表时使用
- * @method Models\ReportDataResponse ReportData(Models\ReportDataRequest $req) 客户上报用户数据功能，为了更好的为用户提供优质服务
+ * @method Models\ReportDataResponse ReportData(Models\ReportDataRequest $req) 客户上报用户数据功能，为了更好地为用户提供优质服务
  */
 
 class AmeClient extends AbstractClient

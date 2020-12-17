@@ -26,6 +26,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDomains(array $Domains) 设置批量续费的域名。
  * @method integer getPayMode() 获取付费模式 0手动在线付费，1使用余额付费。
  * @method void setPayMode(integer $PayMode) 设置付费模式 0手动在线付费，1使用余额付费。
+ * @method integer getAutoRenewFlag() 获取自动续费开关。有三个可选值：
+0 表示关闭，不自动续费
+1 表示开启，将自动续费
+2 表示不处理，保留域名原有状态（默认值）
+ * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置自动续费开关。有三个可选值：
+0 表示关闭，不自动续费
+1 表示开启，将自动续费
+2 表示不处理，保留域名原有状态（默认值）
  */
 class RenewDomainBatchRequest extends AbstractModel
 {
@@ -45,9 +53,21 @@ class RenewDomainBatchRequest extends AbstractModel
     public $PayMode;
 
     /**
+     * @var integer 自动续费开关。有三个可选值：
+0 表示关闭，不自动续费
+1 表示开启，将自动续费
+2 表示不处理，保留域名原有状态（默认值）
+     */
+    public $AutoRenewFlag;
+
+    /**
      * @param integer $Period 域名续费的年限。
      * @param array $Domains 批量续费的域名。
      * @param integer $PayMode 付费模式 0手动在线付费，1使用余额付费。
+     * @param integer $AutoRenewFlag 自动续费开关。有三个可选值：
+0 表示关闭，不自动续费
+1 表示开启，将自动续费
+2 表示不处理，保留域名原有状态（默认值）
      */
     function __construct()
     {
@@ -72,6 +92,10 @@ class RenewDomainBatchRequest extends AbstractModel
 
         if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {
             $this->PayMode = $param["PayMode"];
+        }
+
+        if (array_key_exists("AutoRenewFlag",$param) and $param["AutoRenewFlag"] !== null) {
+            $this->AutoRenewFlag = $param["AutoRenewFlag"];
         }
     }
 }

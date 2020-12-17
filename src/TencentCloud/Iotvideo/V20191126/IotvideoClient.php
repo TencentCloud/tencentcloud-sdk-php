@@ -39,7 +39,7 @@ use TencentCloud\Iotvideo\V20191126\Models as Models;
  * @method Models\CreateIotModelResponse CreateIotModel(Models\CreateIotModelRequest $req) 本接口（CreateIotModel）用于定义的物模型提交。
 该接口实现了物模型草稿箱的功能，保存用户最后一次编辑的物模型数据。
  * @method Models\CreateProductResponse CreateProduct(Models\CreateProductRequest $req) 本接口（CreateProduct）用于创建一个新的物联网智能视频产品。
- * @method Models\CreateStorageResponse CreateStorage(Models\CreateStorageRequest $req) 本接口（CreateStorage）用于购买云存套餐。
+ * @method Models\CreateStorageResponse CreateStorage(Models\CreateStorageRequest $req) 该接口已经停止维护，请勿使用
  * @method Models\CreateStorageServiceResponse CreateStorageService(Models\CreateStorageServiceRequest $req) 购买云存服务
  * @method Models\CreateTraceIdsResponse CreateTraceIds(Models\CreateTraceIdsRequest $req) 本接口（CreateTraceIds）用于将设备加到日志跟踪白名单。
  * @method Models\CreateUploadPathResponse CreateUploadPath(Models\CreateUploadPathRequest $req) 本接口（CreateUploadPath）用于获取固件上传路径。

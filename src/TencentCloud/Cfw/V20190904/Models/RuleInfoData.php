@@ -30,32 +30,32 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProtocol(string $Protocol) 设置协议
  * @method string getStrategy() 获取策略
  * @method void setStrategy(string $Strategy) 设置策略
- * @method string getDetail() 获取描述
- * @method void setDetail(string $Detail) 设置描述
+ * @method integer getSourceType() 获取访问源类型，1是IP，3是域名，4是IP地址模版，5是域名地址模版
+ * @method void setSourceType(integer $SourceType) 设置访问源类型，1是IP，3是域名，4是IP地址模版，5是域名地址模版
  * @method integer getDirection() 获取方向，0：出站，1：入站
  * @method void setDirection(integer $Direction) 设置方向，0：出站，1：入站
- * @method integer getSourceType() 获取源类型,1是ip,2是域名,3是ip地址簿，4是ip组地址簿
- * @method void setSourceType(integer $SourceType) 设置源类型,1是ip,2是域名,3是ip地址簿，4是ip组地址簿
- * @method integer getTargetType() 获取目的类型,1是ip,2是域名,3是ip地址簿，4是ip组地址簿
- * @method void setTargetType(integer $TargetType) 设置目的类型,1是ip,2是域名,3是ip地址簿，4是ip组地址簿
+ * @method string getDetail() 获取描述
+ * @method void setDetail(string $Detail) 设置描述
+ * @method integer getTargetType() 获取访问目的类型，1是IP，3是域名，4是IP地址模版，5是域名地址模版
+ * @method void setTargetType(integer $TargetType) 设置访问目的类型，1是IP，3是域名，4是IP地址模版，5是域名地址模版
  * @method string getPort() 获取端口
  * @method void setPort(string $Port) 设置端口
  * @method integer getId() 获取id值
  * @method void setId(integer $Id) 设置id值
- * @method string getLogId() 获取log
- * @method void setLogId(string $LogId) 设置log
+ * @method string getLogId() 获取日志id，从告警处创建必传，其它为空
+ * @method void setLogId(string $LogId) 设置日志id，从告警处创建必传，其它为空
  * @method integer getCity() 获取城市Code
  * @method void setCity(integer $City) 设置城市Code
  * @method integer getCountry() 获取国家Code
  * @method void setCountry(integer $Country) 设置国家Code
- * @method string getCloudCode() 获取云厂商，支持多个，以逗号分隔， 1:腾讯云（仅海外）,2:阿里云,3:亚马逊云,4:华为云,5:微软云
- * @method void setCloudCode(string $CloudCode) 设置云厂商，支持多个，以逗号分隔， 1:腾讯云（仅海外）,2:阿里云,3:亚马逊云,4:华为云,5:微软云
+ * @method string getCloudCode() 获取云厂商，支持多个，以逗号分隔， 1:腾讯云（仅中国香港及海外）,2:阿里云,3:亚马逊云,4:华为云,5:微软云
+ * @method void setCloudCode(string $CloudCode) 设置云厂商，支持多个，以逗号分隔， 1:腾讯云（仅中国香港及海外）,2:阿里云,3:亚马逊云,4:华为云,5:微软云
  * @method integer getIsRegion() 获取是否为地域
  * @method void setIsRegion(integer $IsRegion) 设置是否为地域
- * @method string getCityName() 获取地域名
- * @method void setCityName(string $CityName) 设置地域名
- * @method string getCountryName() 获取地域名
- * @method void setCountryName(string $CountryName) 设置地域名
+ * @method string getCityName() 获取城市名
+ * @method void setCityName(string $CityName) 设置城市名
+ * @method string getCountryName() 获取国家名
+ * @method void setCountryName(string $CountryName) 设置国家名
  */
 class RuleInfoData extends AbstractModel
 {
@@ -85,9 +85,9 @@ class RuleInfoData extends AbstractModel
     public $Strategy;
 
     /**
-     * @var string 描述
+     * @var integer 访问源类型，1是IP，3是域名，4是IP地址模版，5是域名地址模版
      */
-    public $Detail;
+    public $SourceType;
 
     /**
      * @var integer 方向，0：出站，1：入站
@@ -95,12 +95,12 @@ class RuleInfoData extends AbstractModel
     public $Direction;
 
     /**
-     * @var integer 源类型,1是ip,2是域名,3是ip地址簿，4是ip组地址簿
+     * @var string 描述
      */
-    public $SourceType;
+    public $Detail;
 
     /**
-     * @var integer 目的类型,1是ip,2是域名,3是ip地址簿，4是ip组地址簿
+     * @var integer 访问目的类型，1是IP，3是域名，4是IP地址模版，5是域名地址模版
      */
     public $TargetType;
 
@@ -115,7 +115,7 @@ class RuleInfoData extends AbstractModel
     public $Id;
 
     /**
-     * @var string log
+     * @var string 日志id，从告警处创建必传，其它为空
      */
     public $LogId;
 
@@ -130,7 +130,7 @@ class RuleInfoData extends AbstractModel
     public $Country;
 
     /**
-     * @var string 云厂商，支持多个，以逗号分隔， 1:腾讯云（仅海外）,2:阿里云,3:亚马逊云,4:华为云,5:微软云
+     * @var string 云厂商，支持多个，以逗号分隔， 1:腾讯云（仅中国香港及海外）,2:阿里云,3:亚马逊云,4:华为云,5:微软云
      */
     public $CloudCode;
 
@@ -140,12 +140,12 @@ class RuleInfoData extends AbstractModel
     public $IsRegion;
 
     /**
-     * @var string 地域名
+     * @var string 城市名
      */
     public $CityName;
 
     /**
-     * @var string 地域名
+     * @var string 国家名
      */
     public $CountryName;
 
@@ -155,19 +155,19 @@ class RuleInfoData extends AbstractModel
      * @param string $TargetIp 访问目的
      * @param string $Protocol 协议
      * @param string $Strategy 策略
-     * @param string $Detail 描述
+     * @param integer $SourceType 访问源类型，1是IP，3是域名，4是IP地址模版，5是域名地址模版
      * @param integer $Direction 方向，0：出站，1：入站
-     * @param integer $SourceType 源类型,1是ip,2是域名,3是ip地址簿，4是ip组地址簿
-     * @param integer $TargetType 目的类型,1是ip,2是域名,3是ip地址簿，4是ip组地址簿
+     * @param string $Detail 描述
+     * @param integer $TargetType 访问目的类型，1是IP，3是域名，4是IP地址模版，5是域名地址模版
      * @param string $Port 端口
      * @param integer $Id id值
-     * @param string $LogId log
+     * @param string $LogId 日志id，从告警处创建必传，其它为空
      * @param integer $City 城市Code
      * @param integer $Country 国家Code
-     * @param string $CloudCode 云厂商，支持多个，以逗号分隔， 1:腾讯云（仅海外）,2:阿里云,3:亚马逊云,4:华为云,5:微软云
+     * @param string $CloudCode 云厂商，支持多个，以逗号分隔， 1:腾讯云（仅中国香港及海外）,2:阿里云,3:亚马逊云,4:华为云,5:微软云
      * @param integer $IsRegion 是否为地域
-     * @param string $CityName 地域名
-     * @param string $CountryName 地域名
+     * @param string $CityName 城市名
+     * @param string $CountryName 国家名
      */
     function __construct()
     {
@@ -202,16 +202,16 @@ class RuleInfoData extends AbstractModel
             $this->Strategy = $param["Strategy"];
         }
 
-        if (array_key_exists("Detail",$param) and $param["Detail"] !== null) {
-            $this->Detail = $param["Detail"];
+        if (array_key_exists("SourceType",$param) and $param["SourceType"] !== null) {
+            $this->SourceType = $param["SourceType"];
         }
 
         if (array_key_exists("Direction",$param) and $param["Direction"] !== null) {
             $this->Direction = $param["Direction"];
         }
 
-        if (array_key_exists("SourceType",$param) and $param["SourceType"] !== null) {
-            $this->SourceType = $param["SourceType"];
+        if (array_key_exists("Detail",$param) and $param["Detail"] !== null) {
+            $this->Detail = $param["Detail"];
         }
 
         if (array_key_exists("TargetType",$param) and $param["TargetType"] !== null) {

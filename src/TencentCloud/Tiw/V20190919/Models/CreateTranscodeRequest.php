@@ -35,11 +35,7 @@ use TencentCloud\Common\AbstractModel;
 
 注意分辨率宽高中间为英文字母"xyz"的"x"
  * @method string getThumbnailResolution() 获取动态PPT转码可以为文件生成该分辨率的缩略图，不传、传空字符串或分辨率格式错误则不生成缩略图，分辨率格式同MinResolution
-
-静态转码这个参数不起作用
  * @method void setThumbnailResolution(string $ThumbnailResolution) 设置动态PPT转码可以为文件生成该分辨率的缩略图，不传、传空字符串或分辨率格式错误则不生成缩略图，分辨率格式同MinResolution
-
-静态转码这个参数不起作用
  * @method string getCompressFileType() 获取转码文件压缩格式，不传、传空字符串或不是指定的格式则不生成压缩文件，目前支持如下压缩格式：
 
 zip： 生成`.zip`压缩包
@@ -76,8 +72,6 @@ class CreateTranscodeRequest extends AbstractModel
 
     /**
      * @var string 动态PPT转码可以为文件生成该分辨率的缩略图，不传、传空字符串或分辨率格式错误则不生成缩略图，分辨率格式同MinResolution
-
-静态转码这个参数不起作用
      */
     public $ThumbnailResolution;
 
@@ -98,8 +92,6 @@ tar.gz： 生成`.tar.gz`压缩包
 
 注意分辨率宽高中间为英文字母"xyz"的"x"
      * @param string $ThumbnailResolution 动态PPT转码可以为文件生成该分辨率的缩略图，不传、传空字符串或分辨率格式错误则不生成缩略图，分辨率格式同MinResolution
-
-静态转码这个参数不起作用
      * @param string $CompressFileType 转码文件压缩格式，不传、传空字符串或不是指定的格式则不生成压缩文件，目前支持如下压缩格式：
 
 zip： 生成`.zip`压缩包

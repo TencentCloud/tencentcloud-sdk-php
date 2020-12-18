@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPosition(string $Position) 设置位置信息
  * @method string getPositionDetails() 获取位置详情
  * @method void setPositionDetails(string $PositionDetails) 设置位置详情
+ * @method string getFrequencyId() 获取频点ID
+ * @method void setFrequencyId(string $FrequencyId) 设置频点ID
  */
 class ModifyLoRaGatewayRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class ModifyLoRaGatewayRequest extends AbstractModel
     public $PositionDetails;
 
     /**
+     * @var string 频点ID
+     */
+    public $FrequencyId;
+
+    /**
      * @param string $Description 描述信息
      * @param string $GatewayId LoRa网关Id
      * @param LoRaGatewayLocation $Location LoRa网关位置坐标
@@ -80,6 +87,7 @@ class ModifyLoRaGatewayRequest extends AbstractModel
      * @param boolean $IsPublic 是否公开可见
      * @param string $Position 位置信息
      * @param string $PositionDetails 位置详情
+     * @param string $FrequencyId 频点ID
      */
     function __construct()
     {
@@ -121,6 +129,10 @@ class ModifyLoRaGatewayRequest extends AbstractModel
 
         if (array_key_exists("PositionDetails",$param) and $param["PositionDetails"] !== null) {
             $this->PositionDetails = $param["PositionDetails"];
+        }
+
+        if (array_key_exists("FrequencyId",$param) and $param["FrequencyId"] !== null) {
+            $this->FrequencyId = $param["FrequencyId"];
         }
     }
 }

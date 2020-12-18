@@ -30,10 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRspImgType(string $RspImgType) 设置返回图像方式（url 或 base64) ，二选一。url有效期为30天。
  * @method integer getPornDetect() 获取历史遗留字段，无需填写。因为融合只需提取人脸特征，不需要鉴黄。
  * @method void setPornDetect(integer $PornDetect) 设置历史遗留字段，无需填写。因为融合只需提取人脸特征，不需要鉴黄。
- * @method integer getCelebrityIdentify() 获取0表示不需要鉴政，1表示需要鉴政。默认值为0。
-请注意，鉴政服务开启后，您需要根据返回结果自行判断是否调整您的业务逻辑。例如提示您的用户图片非法，请更换图片。
- * @method void setCelebrityIdentify(integer $CelebrityIdentify) 设置0表示不需要鉴政，1表示需要鉴政。默认值为0。
-请注意，鉴政服务开启后，您需要根据返回结果自行判断是否调整您的业务逻辑。例如提示您的用户图片非法，请更换图片。
+ * @method integer getCelebrityIdentify() 获取0表示不需要不适宜内容识别，1表示需要不适宜内容识别。默认值为0。
+请注意，不适宜内容识别服务开启后，您需要根据返回结果自行判断是否调整您的业务逻辑。例如提示您的用户图片非法，请更换图片。
+ * @method void setCelebrityIdentify(integer $CelebrityIdentify) 设置0表示不需要不适宜内容识别，1表示需要不适宜内容识别。默认值为0。
+请注意，不适宜内容识别服务开启后，您需要根据返回结果自行判断是否调整您的业务逻辑。例如提示您的用户图片非法，请更换图片。
  */
 class FaceFusionRequest extends AbstractModel
 {
@@ -63,8 +63,8 @@ class FaceFusionRequest extends AbstractModel
     public $PornDetect;
 
     /**
-     * @var integer 0表示不需要鉴政，1表示需要鉴政。默认值为0。
-请注意，鉴政服务开启后，您需要根据返回结果自行判断是否调整您的业务逻辑。例如提示您的用户图片非法，请更换图片。
+     * @var integer 0表示不需要不适宜内容识别，1表示需要不适宜内容识别。默认值为0。
+请注意，不适宜内容识别服务开启后，您需要根据返回结果自行判断是否调整您的业务逻辑。例如提示您的用户图片非法，请更换图片。
      */
     public $CelebrityIdentify;
 
@@ -74,8 +74,8 @@ class FaceFusionRequest extends AbstractModel
      * @param string $Image 图片 base64 数据。请确保人脸为正脸，无旋转。若某些手机拍摄后人脸被旋转，请使用图片的 EXIF 信息对图片进行旋转处理；请勿在 base64 数据中包含头部，如“data:image/jpeg;base64,”。
      * @param string $RspImgType 返回图像方式（url 或 base64) ，二选一。url有效期为30天。
      * @param integer $PornDetect 历史遗留字段，无需填写。因为融合只需提取人脸特征，不需要鉴黄。
-     * @param integer $CelebrityIdentify 0表示不需要鉴政，1表示需要鉴政。默认值为0。
-请注意，鉴政服务开启后，您需要根据返回结果自行判断是否调整您的业务逻辑。例如提示您的用户图片非法，请更换图片。
+     * @param integer $CelebrityIdentify 0表示不需要不适宜内容识别，1表示需要不适宜内容识别。默认值为0。
+请注意，不适宜内容识别服务开启后，您需要根据返回结果自行判断是否调整您的业务逻辑。例如提示您的用户图片非法，请更换图片。
      */
     function __construct()
     {

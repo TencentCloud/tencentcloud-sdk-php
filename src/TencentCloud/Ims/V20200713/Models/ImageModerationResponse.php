@@ -28,31 +28,33 @@ use TencentCloud\Common\AbstractModel;
 建议值，Block：建议屏蔽，Review：建议复审，Pass：建议通过
  * @method void setSuggestion(string $Suggestion) 设置建议您拿到判断结果后的执行操作。
 建议值，Block：建议屏蔽，Review：建议复审，Pass：建议通过
- * @method string getLabel() 获取恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义图片。
- * @method void setLabel(string $Label) 设置恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义图片。
+ * @method string getLabel() 获取恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义图片。
+以及令人反感、不安全或不适宜的内容类型。
+ * @method void setLabel(string $Label) 设置恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义图片。
+以及令人反感、不安全或不适宜的内容类型。
  * @method string getSubLabel() 获取子标签名称，如色情--性行为；当未命中子标签时，返回空字符串；
  * @method void setSubLabel(string $SubLabel) 设置子标签名称，如色情--性行为；当未命中子标签时，返回空字符串；
  * @method integer getScore() 获取机器判断当前分类的置信度，取值范围：0.00~100.00。分数越高，表示越有可能属于当前分类。
 （如：色情 99.99，则该样本属于色情的置信度非常高。）
  * @method void setScore(integer $Score) 设置机器判断当前分类的置信度，取值范围：0.00~100.00。分数越高，表示越有可能属于当前分类。
 （如：色情 99.99，则该样本属于色情的置信度非常高。）
- * @method array getLabelResults() 获取识别模型的审核结果，包括涉黄、性感、涉暴、违法违规、等审核结果。
+ * @method array getLabelResults() 获取智能模型的识别结果，包括涉黄、广告等令人反感、不安全或不适宜的内容类型识别结果。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLabelResults(array $LabelResults) 设置识别模型的审核结果，包括涉黄、性感、涉暴、违法违规、等审核结果。
+ * @method void setLabelResults(array $LabelResults) 设置智能模型的识别结果，包括涉黄、广告等令人反感、不安全或不适宜的内容类型识别结果。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getObjectResults() 获取物体检测模型的审核结果，包括涉政实体、广告台标/二维码等物体坐标信息与内容审核信息。
+ * @method array getObjectResults() 获取物体检测模型的审核结果，包括实体、广告台标/二维码等物体坐标信息与内容审核信息。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setObjectResults(array $ObjectResults) 设置物体检测模型的审核结果，包括涉政实体、广告台标/二维码等物体坐标信息与内容审核信息。
+ * @method void setObjectResults(array $ObjectResults) 设置物体检测模型的审核结果，包括实体、广告台标/二维码等物体坐标信息与内容审核信息。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getOcrResults() 获取OCR识别后的文本审核结果，包括文本所处图片的OCR坐标信息以及图片文本的审核结果。
+ * @method array getOcrResults() 获取OCR识别后的文本识别结果，包括文本所处图片的OCR坐标信息以及图片文本的识别结果。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOcrResults(array $OcrResults) 设置OCR识别后的文本审核结果，包括文本所处图片的OCR坐标信息以及图片文本的审核结果。
+ * @method void setOcrResults(array $OcrResults) 设置OCR识别后的文本识别结果，包括文本所处图片的OCR坐标信息以及图片文本的识别结果。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getLibResults() 获取基于图片风险库识别的结果。
-风险库包括违规黑库与正常白库的结果。
+风险库包括不安全黑库与正常白库的结果。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLibResults(array $LibResults) 设置基于图片风险库识别的结果。
-风险库包括违规黑库与正常白库的结果。
+风险库包括不安全黑库与正常白库的结果。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDataId() 获取请求参数中的DataId。
  * @method void setDataId(string $DataId) 设置请求参数中的DataId。
@@ -82,7 +84,8 @@ class ImageModerationResponse extends AbstractModel
     public $Suggestion;
 
     /**
-     * @var string 恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义图片。
+     * @var string 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义图片。
+以及令人反感、不安全或不适宜的内容类型。
      */
     public $Label;
 
@@ -98,26 +101,26 @@ class ImageModerationResponse extends AbstractModel
     public $Score;
 
     /**
-     * @var array 识别模型的审核结果，包括涉黄、性感、涉暴、违法违规、等审核结果。
+     * @var array 智能模型的识别结果，包括涉黄、广告等令人反感、不安全或不适宜的内容类型识别结果。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LabelResults;
 
     /**
-     * @var array 物体检测模型的审核结果，包括涉政实体、广告台标/二维码等物体坐标信息与内容审核信息。
+     * @var array 物体检测模型的审核结果，包括实体、广告台标/二维码等物体坐标信息与内容审核信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ObjectResults;
 
     /**
-     * @var array OCR识别后的文本审核结果，包括文本所处图片的OCR坐标信息以及图片文本的审核结果。
+     * @var array OCR识别后的文本识别结果，包括文本所处图片的OCR坐标信息以及图片文本的识别结果。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OcrResults;
 
     /**
      * @var array 基于图片风险库识别的结果。
-风险库包括违规黑库与正常白库的结果。
+风险库包括不安全黑库与正常白库的结果。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LibResults;
@@ -149,18 +152,19 @@ class ImageModerationResponse extends AbstractModel
 0：正常，1：可疑；
      * @param string $Suggestion 建议您拿到判断结果后的执行操作。
 建议值，Block：建议屏蔽，Review：建议复审，Pass：建议通过
-     * @param string $Label 恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义图片。
+     * @param string $Label 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义图片。
+以及令人反感、不安全或不适宜的内容类型。
      * @param string $SubLabel 子标签名称，如色情--性行为；当未命中子标签时，返回空字符串；
      * @param integer $Score 机器判断当前分类的置信度，取值范围：0.00~100.00。分数越高，表示越有可能属于当前分类。
 （如：色情 99.99，则该样本属于色情的置信度非常高。）
-     * @param array $LabelResults 识别模型的审核结果，包括涉黄、性感、涉暴、违法违规、等审核结果。
+     * @param array $LabelResults 智能模型的识别结果，包括涉黄、广告等令人反感、不安全或不适宜的内容类型识别结果。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $ObjectResults 物体检测模型的审核结果，包括涉政实体、广告台标/二维码等物体坐标信息与内容审核信息。
+     * @param array $ObjectResults 物体检测模型的审核结果，包括实体、广告台标/二维码等物体坐标信息与内容审核信息。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $OcrResults OCR识别后的文本审核结果，包括文本所处图片的OCR坐标信息以及图片文本的审核结果。
+     * @param array $OcrResults OCR识别后的文本识别结果，包括文本所处图片的OCR坐标信息以及图片文本的识别结果。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $LibResults 基于图片风险库识别的结果。
-风险库包括违规黑库与正常白库的结果。
+风险库包括不安全黑库与正常白库的结果。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DataId 请求参数中的DataId。
      * @param string $BizType 您在入参时所填入的Biztype参数。 -- 该字段暂未开放。

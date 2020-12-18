@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRoomInformation返回参数结构体
  *
- * @method integer getTotal() 获取返回的数据总条数
- * @method void setTotal(integer $Total) 设置返回的数据总条数
+ * @method integer getTotal() 获取返回当页数据总数
+ * @method void setTotal(integer $Total) 设置返回当页数据总数
  * @method array getRoomList() 获取房间信息列表
  * @method void setRoomList(array $RoomList) 设置房间信息列表
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeRoomInformationResponse extends AbstractModel
 {
     /**
-     * @var integer 返回的数据总条数
+     * @var integer 返回当页数据总数
      */
     public $Total;
 
@@ -45,7 +45,7 @@ class DescribeRoomInformationResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Total 返回的数据总条数
+     * @param integer $Total 返回当页数据总数
      * @param array $RoomList 房间信息列表
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

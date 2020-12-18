@@ -22,16 +22,18 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getId() 获取序号
  * @method void setId(integer $Id) 设置序号
- * @method string getLibId() 获取仅当Lable为Custom自定义关键词时有效，表示自定义库id
- * @method void setLibId(string $LibId) 设置仅当Lable为Custom自定义关键词时有效，表示自定义库id
- * @method string getLibName() 获取仅当Lable为Custom自定义关键词时有效，表示自定义库名称
+ * @method string getLibId() 获取仅当Label为Custom自定义关键词时有效，表示自定义库id
+ * @method void setLibId(string $LibId) 设置仅当Label为Custom自定义关键词时有效，表示自定义库id
+ * @method string getLibName() 获取仅当Label为Custom自定义关键词时有效，表示自定义库名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLibName(string $LibName) 设置仅当Lable为Custom自定义关键词时有效，表示自定义库名称
+ * @method void setLibName(string $LibName) 设置仅当Label为Custom自定义关键词时有效，表示自定义库名称
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getImageId() 获取图片ID
  * @method void setImageId(string $ImageId) 设置图片ID
- * @method string getLabel() 获取恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义图片
- * @method void setLabel(string $Label) 设置恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义图片
+ * @method string getLabel() 获取恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
+以及其他令人反感、不安全或不适宜的内容类型。
+ * @method void setLabel(string $Label) 设置恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
+以及其他令人反感、不安全或不适宜的内容类型。
  * @method string getTag() 获取自定义标签
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTag(string $Tag) 设置自定义标签
@@ -47,12 +49,12 @@ class LibDetail extends AbstractModel
     public $Id;
 
     /**
-     * @var string 仅当Lable为Custom自定义关键词时有效，表示自定义库id
+     * @var string 仅当Label为Custom自定义关键词时有效，表示自定义库id
      */
     public $LibId;
 
     /**
-     * @var string 仅当Lable为Custom自定义关键词时有效，表示自定义库名称
+     * @var string 仅当Label为Custom自定义关键词时有效，表示自定义库名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LibName;
@@ -63,7 +65,8 @@ class LibDetail extends AbstractModel
     public $ImageId;
 
     /**
-     * @var string 恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义图片
+     * @var string 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
+以及其他令人反感、不安全或不适宜的内容类型。
      */
     public $Label;
 
@@ -80,11 +83,12 @@ class LibDetail extends AbstractModel
 
     /**
      * @param integer $Id 序号
-     * @param string $LibId 仅当Lable为Custom自定义关键词时有效，表示自定义库id
-     * @param string $LibName 仅当Lable为Custom自定义关键词时有效，表示自定义库名称
+     * @param string $LibId 仅当Label为Custom自定义关键词时有效，表示自定义库id
+     * @param string $LibName 仅当Label为Custom自定义关键词时有效，表示自定义库名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ImageId 图片ID
-     * @param string $Label 恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义图片
+     * @param string $Label 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
+以及其他令人反感、不安全或不适宜的内容类型。
      * @param string $Tag 自定义标签
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Score 命中的模型分值

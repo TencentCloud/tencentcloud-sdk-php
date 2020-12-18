@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGroupId(string $GroupId) 设置部署组ID，不填写时查询全量
  * @method string getSearchWord() 获取模糊查询，部署组名称，不填写时查询全量
  * @method void setSearchWord(string $SearchWord) 设置模糊查询，部署组名称，不填写时查询全量
- * @method string getAppMicroServiceType() 获取部署组类型，精确过滤字段，M：service mesh, P：原生应用， M：网关应用
- * @method void setAppMicroServiceType(string $AppMicroServiceType) 设置部署组类型，精确过滤字段，M：service mesh, P：原生应用， M：网关应用
+ * @method string getAppMicroServiceType() 获取部署组类型，精确过滤字段，M：service mesh, P：原生应用， G：网关应用
+ * @method void setAppMicroServiceType(string $AppMicroServiceType) 设置部署组类型，精确过滤字段，M：service mesh, P：原生应用， G：网关应用
  */
 class DescribeSimpleGroupsRequest extends AbstractModel
 {
@@ -82,7 +82,7 @@ class DescribeSimpleGroupsRequest extends AbstractModel
     public $SearchWord;
 
     /**
-     * @var string 部署组类型，精确过滤字段，M：service mesh, P：原生应用， M：网关应用
+     * @var string 部署组类型，精确过滤字段，M：service mesh, P：原生应用， G：网关应用
      */
     public $AppMicroServiceType;
 
@@ -95,7 +95,7 @@ class DescribeSimpleGroupsRequest extends AbstractModel
      * @param integer $Offset 起始偏移量
      * @param string $GroupId 部署组ID，不填写时查询全量
      * @param string $SearchWord 模糊查询，部署组名称，不填写时查询全量
-     * @param string $AppMicroServiceType 部署组类型，精确过滤字段，M：service mesh, P：原生应用， M：网关应用
+     * @param string $AppMicroServiceType 部署组类型，精确过滤字段，M：service mesh, P：原生应用， G：网关应用
      */
     function __construct()
     {

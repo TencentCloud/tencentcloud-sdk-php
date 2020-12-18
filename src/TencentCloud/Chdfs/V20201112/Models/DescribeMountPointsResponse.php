@@ -14,30 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Facefusion\V20181201\Models;
+namespace TencentCloud\Chdfs\V20201112\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * FaceFusion返回参数结构体
+ * DescribeMountPoints返回参数结构体
  *
- * @method string getImage() 获取RspImgType 为 url 时，返回结果的 url， RspImgType 为 base64 时返回 base64 数据。
- * @method void setImage(string $Image) 设置RspImgType 为 url 时，返回结果的 url， RspImgType 为 base64 时返回 base64 数据。
- * @method array getReviewResultSet() 获取不适宜内容识别结果
- * @method void setReviewResultSet(array $ReviewResultSet) 设置不适宜内容识别结果
+ * @method array getMountPoints() 获取挂载点列表
+ * @method void setMountPoints(array $MountPoints) 设置挂载点列表
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class FaceFusionResponse extends AbstractModel
+class DescribeMountPointsResponse extends AbstractModel
 {
     /**
-     * @var string RspImgType 为 url 时，返回结果的 url， RspImgType 为 base64 时返回 base64 数据。
+     * @var array 挂载点列表
      */
-    public $Image;
-
-    /**
-     * @var array 不适宜内容识别结果
-     */
-    public $ReviewResultSet;
+    public $MountPoints;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +38,7 @@ class FaceFusionResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Image RspImgType 为 url 时，返回结果的 url， RspImgType 为 base64 时返回 base64 数据。
-     * @param array $ReviewResultSet 不适宜内容识别结果
+     * @param array $MountPoints 挂载点列表
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,16 +54,12 @@ class FaceFusionResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Image",$param) and $param["Image"] !== null) {
-            $this->Image = $param["Image"];
-        }
-
-        if (array_key_exists("ReviewResultSet",$param) and $param["ReviewResultSet"] !== null) {
-            $this->ReviewResultSet = [];
-            foreach ($param["ReviewResultSet"] as $key => $value){
-                $obj = new FuseFaceReviewResult();
+        if (array_key_exists("MountPoints",$param) and $param["MountPoints"] !== null) {
+            $this->MountPoints = [];
+            foreach ($param["MountPoints"] as $key => $value){
+                $obj = new MountPoint();
                 $obj->deserialize($value);
-                array_push($this->ReviewResultSet, $obj);
+                array_push($this->MountPoints, $obj);
             }
         }
 

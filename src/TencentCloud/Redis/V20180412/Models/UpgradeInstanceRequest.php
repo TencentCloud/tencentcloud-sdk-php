@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRedisShardNum(integer $RedisShardNum) 设置分片数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
  * @method integer getRedisReplicasNum() 获取副本数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
  * @method void setRedisReplicasNum(integer $RedisReplicasNum) 设置副本数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
+ * @method array getNodeSet() 获取多AZ实例增加副本时的附带信息，非多AZ实例不需要传此参数。多AZ增加副本时此参数为必传参数，传入要增加的副本的信息，包括副本的可用区和副本的类型（NodeType为1）
+ * @method void setNodeSet(array $NodeSet) 设置多AZ实例增加副本时的附带信息，非多AZ实例不需要传此参数。多AZ增加副本时此参数为必传参数，传入要增加的副本的信息，包括副本的可用区和副本的类型（NodeType为1）
  */
 class UpgradeInstanceRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class UpgradeInstanceRequest extends AbstractModel
     public $RedisReplicasNum;
 
     /**
+     * @var array 多AZ实例增加副本时的附带信息，非多AZ实例不需要传此参数。多AZ增加副本时此参数为必传参数，传入要增加的副本的信息，包括副本的可用区和副本的类型（NodeType为1）
+     */
+    public $NodeSet;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param integer $MemSize 分片大小 单位 MB
      * @param integer $RedisShardNum 分片数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
      * @param integer $RedisReplicasNum 副本数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
+     * @param array $NodeSet 多AZ实例增加副本时的附带信息，非多AZ实例不需要传此参数。多AZ增加副本时此参数为必传参数，传入要增加的副本的信息，包括副本的可用区和副本的类型（NodeType为1）
      */
     function __construct()
     {
@@ -84,6 +92,15 @@ class UpgradeInstanceRequest extends AbstractModel
 
         if (array_key_exists("RedisReplicasNum",$param) and $param["RedisReplicasNum"] !== null) {
             $this->RedisReplicasNum = $param["RedisReplicasNum"];
+        }
+
+        if (array_key_exists("NodeSet",$param) and $param["NodeSet"] !== null) {
+            $this->NodeSet = [];
+            foreach ($param["NodeSet"] as $key => $value){
+                $obj = new RedisNodeInfo();
+                $obj->deserialize($value);
+                array_push($this->NodeSet, $obj);
+            }
         }
     }
 }

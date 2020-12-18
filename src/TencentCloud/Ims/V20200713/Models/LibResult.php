@@ -22,10 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getScene() 获取场景识别结果
  * @method void setScene(string $Scene) 设置场景识别结果
- * @method string getSuggestion() 获取建议值，Block：打击，Review：待复审，Pass：正常
- * @method void setSuggestion(string $Suggestion) 设置建议值，Block：打击，Review：待复审，Pass：正常
- * @method string getLabel() 获取恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义图片
- * @method void setLabel(string $Label) 设置恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义图片
+ * @method string getSuggestion() 获取建议您拿到判断结果后的执行操作。
+建议值，Block：建议屏蔽，Review：建议复审，Pass：建议通过
+ * @method void setSuggestion(string $Suggestion) 设置建议您拿到判断结果后的执行操作。
+建议值，Block：建议屏蔽，Review：建议复审，Pass：建议通过
+ * @method string getLabel() 获取恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
+以及令人反感、不安全或不适宜的内容类型。
+ * @method void setLabel(string $Label) 设置恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
+以及令人反感、不安全或不适宜的内容类型。
  * @method string getSubLabel() 获取子标签检测结果
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubLabel(string $SubLabel) 设置子标签检测结果
@@ -45,12 +49,14 @@ class LibResult extends AbstractModel
     public $Scene;
 
     /**
-     * @var string 建议值，Block：打击，Review：待复审，Pass：正常
+     * @var string 建议您拿到判断结果后的执行操作。
+建议值，Block：建议屏蔽，Review：建议复审，Pass：建议通过
      */
     public $Suggestion;
 
     /**
-     * @var string 恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义图片
+     * @var string 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
+以及令人反感、不安全或不适宜的内容类型。
      */
     public $Label;
 
@@ -73,8 +79,10 @@ class LibResult extends AbstractModel
 
     /**
      * @param string $Scene 场景识别结果
-     * @param string $Suggestion 建议值，Block：打击，Review：待复审，Pass：正常
-     * @param string $Label 恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义图片
+     * @param string $Suggestion 建议您拿到判断结果后的执行操作。
+建议值，Block：建议屏蔽，Review：建议复审，Pass：建议通过
+     * @param string $Label 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
+以及令人反感、不安全或不适宜的内容类型。
      * @param string $SubLabel 子标签检测结果
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Score 该标签模型命中的分值

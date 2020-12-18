@@ -18,7 +18,7 @@ namespace TencentCloud\Ims\V20200713\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 实体检测结果明细，当检测场景为政治实体、广告台标、二维码和人脸属性时表示模型检测目标框的标签名称、标签值、标签分数以及检测框的位置信息。
+ * 实体检测结果明细，当检测场景为实体、广告台标、二维码时表示模型检测目标框的标签名称、标签值、标签分数以及检测框的位置信息。
  *
  * @method integer getId() 获取序号
  * @method void setId(integer $Id) 设置序号
@@ -26,10 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置标签名称
  * @method string getValue() 获取标签值，
 当标签为二维码时，表示URL地址，如Name为QrCode时，Value为"http//abc.com/aaa"
-当标签为人脸属性，表示属性值，如Name为Age时 Value为18
  * @method void setValue(string $Value) 设置标签值，
 当标签为二维码时，表示URL地址，如Name为QrCode时，Value为"http//abc.com/aaa"
-当标签为人脸属性，表示属性值，如Name为Age时 Value为18
  * @method integer getScore() 获取分数
  * @method void setScore(integer $Score) 设置分数
  * @method Location getLocation() 获取检测框坐标
@@ -50,7 +48,6 @@ class ObjectDetail extends AbstractModel
     /**
      * @var string 标签值，
 当标签为二维码时，表示URL地址，如Name为QrCode时，Value为"http//abc.com/aaa"
-当标签为人脸属性，表示属性值，如Name为Age时 Value为18
      */
     public $Value;
 
@@ -69,7 +66,6 @@ class ObjectDetail extends AbstractModel
      * @param string $Name 标签名称
      * @param string $Value 标签值，
 当标签为二维码时，表示URL地址，如Name为QrCode时，Value为"http//abc.com/aaa"
-当标签为人脸属性，表示属性值，如Name为Age时 Value为18
      * @param integer $Score 分数
      * @param Location $Location 检测框坐标
      */

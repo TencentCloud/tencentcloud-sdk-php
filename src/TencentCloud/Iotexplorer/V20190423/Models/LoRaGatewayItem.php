@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreatedAt(string $CreatedAt) 设置创建时间
  * @method string getLastSeenAt() 获取最后上报时间
  * @method void setLastSeenAt(string $LastSeenAt) 设置最后上报时间
+ * @method string getFrequencyId() 获取频点ID
+ * @method void setFrequencyId(string $FrequencyId) 设置频点ID
  */
 class LoRaGatewayItem extends AbstractModel
 {
@@ -94,6 +96,11 @@ class LoRaGatewayItem extends AbstractModel
     public $LastSeenAt;
 
     /**
+     * @var string 频点ID
+     */
+    public $FrequencyId;
+
+    /**
      * @param string $GatewayId LoRa 网关Id
      * @param boolean $IsPublic 是否是公开网关
      * @param string $Description 网关描述
@@ -104,6 +111,7 @@ class LoRaGatewayItem extends AbstractModel
      * @param string $UpdatedAt 最后更新时间
      * @param string $CreatedAt 创建时间
      * @param string $LastSeenAt 最后上报时间
+     * @param string $FrequencyId 频点ID
      */
     function __construct()
     {
@@ -157,6 +165,10 @@ class LoRaGatewayItem extends AbstractModel
 
         if (array_key_exists("LastSeenAt",$param) and $param["LastSeenAt"] !== null) {
             $this->LastSeenAt = $param["LastSeenAt"];
+        }
+
+        if (array_key_exists("FrequencyId",$param) and $param["FrequencyId"] !== null) {
+            $this->FrequencyId = $param["FrequencyId"];
         }
     }
 }

@@ -14,33 +14,43 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Facefusion\V20181201\Models;
+namespace TencentCloud\Chdfs\V20201112\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * FuseFace返回参数结构体
+ * DescribeFileSystem返回参数结构体
  *
- * @method string getFusedImage() 获取RspImgType 为 url 时，返回结果的 url， RspImgType 为 base64 时返回 base64 数据。
- * @method void setFusedImage(string $FusedImage) 设置RspImgType 为 url 时，返回结果的 url， RspImgType 为 base64 时返回 base64 数据。
- * @method array getReviewResultSet() 获取不适宜内容识别结果。该数组的顺序和请求中mergeinfo的顺序一致，一一对应
+ * @method FileSystem getFileSystem() 获取文件系统
+ * @method void setFileSystem(FileSystem $FileSystem) 设置文件系统
+ * @method integer getCapacityUsed() 获取已使用容量（byte），包括标准和归档存储
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setReviewResultSet(array $ReviewResultSet) 设置不适宜内容识别结果。该数组的顺序和请求中mergeinfo的顺序一致，一一对应
+ * @method void setCapacityUsed(integer $CapacityUsed) 设置已使用容量（byte），包括标准和归档存储
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getArchiveCapacityUsed() 获取已使用归档存储容量（byte）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setArchiveCapacityUsed(integer $ArchiveCapacityUsed) 设置已使用归档存储容量（byte）
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class FuseFaceResponse extends AbstractModel
+class DescribeFileSystemResponse extends AbstractModel
 {
     /**
-     * @var string RspImgType 为 url 时，返回结果的 url， RspImgType 为 base64 时返回 base64 数据。
+     * @var FileSystem 文件系统
      */
-    public $FusedImage;
+    public $FileSystem;
 
     /**
-     * @var array 不适宜内容识别结果。该数组的顺序和请求中mergeinfo的顺序一致，一一对应
+     * @var integer 已使用容量（byte），包括标准和归档存储
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $ReviewResultSet;
+    public $CapacityUsed;
+
+    /**
+     * @var integer 已使用归档存储容量（byte）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ArchiveCapacityUsed;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -48,8 +58,10 @@ class FuseFaceResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $FusedImage RspImgType 为 url 时，返回结果的 url， RspImgType 为 base64 时返回 base64 数据。
-     * @param array $ReviewResultSet 不适宜内容识别结果。该数组的顺序和请求中mergeinfo的顺序一致，一一对应
+     * @param FileSystem $FileSystem 文件系统
+     * @param integer $CapacityUsed 已使用容量（byte），包括标准和归档存储
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ArchiveCapacityUsed 已使用归档存储容量（byte）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -66,17 +78,17 @@ class FuseFaceResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FusedImage",$param) and $param["FusedImage"] !== null) {
-            $this->FusedImage = $param["FusedImage"];
+        if (array_key_exists("FileSystem",$param) and $param["FileSystem"] !== null) {
+            $this->FileSystem = new FileSystem();
+            $this->FileSystem->deserialize($param["FileSystem"]);
         }
 
-        if (array_key_exists("ReviewResultSet",$param) and $param["ReviewResultSet"] !== null) {
-            $this->ReviewResultSet = [];
-            foreach ($param["ReviewResultSet"] as $key => $value){
-                $obj = new FuseFaceReviewResult();
-                $obj->deserialize($value);
-                array_push($this->ReviewResultSet, $obj);
-            }
+        if (array_key_exists("CapacityUsed",$param) and $param["CapacityUsed"] !== null) {
+            $this->CapacityUsed = $param["CapacityUsed"];
+        }
+
+        if (array_key_exists("ArchiveCapacityUsed",$param) and $param["ArchiveCapacityUsed"] !== null) {
+            $this->ArchiveCapacityUsed = $param["ArchiveCapacityUsed"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

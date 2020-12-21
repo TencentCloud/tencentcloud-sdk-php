@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 音频呻吟审核结果
  *
- * @method string getLabel() 获取固定为Moan
+ * @method string getLabel() 获取固定为Moan（呻吟）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLabel(string $Label) 设置固定为Moan
+ * @method void setLabel(string $Label) 设置固定为Moan（呻吟）
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getScore() 获取分数
  * @method void setScore(integer $Score) 设置分数
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class AudioResultDetailMoanResult extends AbstractModel
 {
     /**
-     * @var string 固定为Moan
+     * @var string 固定为Moan（呻吟）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Label;
@@ -62,7 +62,7 @@ class AudioResultDetailMoanResult extends AbstractModel
     public $SubLabelCode;
 
     /**
-     * @param string $Label 固定为Moan
+     * @param string $Label 固定为Moan（呻吟）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Score 分数
      * @param float $StartTime 开始时间

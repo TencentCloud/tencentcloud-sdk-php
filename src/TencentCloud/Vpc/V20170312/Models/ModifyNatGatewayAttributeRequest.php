@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNatGatewayName(string $NatGatewayName) 设置NAT网关的名称，形如：`test_nat`。
  * @method integer getInternetMaxBandwidthOut() 获取NAT网关最大外网出带宽(单位:Mbps)。
  * @method void setInternetMaxBandwidthOut(integer $InternetMaxBandwidthOut) 设置NAT网关最大外网出带宽(单位:Mbps)。
+ * @method boolean getModifySecurityGroup() 获取是否修改NAT网关绑定的安全组。
+ * @method void setModifySecurityGroup(boolean $ModifySecurityGroup) 设置是否修改NAT网关绑定的安全组。
+ * @method array getSecurityGroupIds() 获取NAT网关绑定的安全组列表，最终状态，空列表表示删除所有安全组，形如: `['sg-1n232323', 'sg-o4242424']`
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置NAT网关绑定的安全组列表，最终状态，空列表表示删除所有安全组，形如: `['sg-1n232323', 'sg-o4242424']`
  */
 class ModifyNatGatewayAttributeRequest extends AbstractModel
 {
@@ -45,9 +49,21 @@ class ModifyNatGatewayAttributeRequest extends AbstractModel
     public $InternetMaxBandwidthOut;
 
     /**
+     * @var boolean 是否修改NAT网关绑定的安全组。
+     */
+    public $ModifySecurityGroup;
+
+    /**
+     * @var array NAT网关绑定的安全组列表，最终状态，空列表表示删除所有安全组，形如: `['sg-1n232323', 'sg-o4242424']`
+     */
+    public $SecurityGroupIds;
+
+    /**
      * @param string $NatGatewayId NAT网关的ID，形如：`nat-df45454`。
      * @param string $NatGatewayName NAT网关的名称，形如：`test_nat`。
      * @param integer $InternetMaxBandwidthOut NAT网关最大外网出带宽(单位:Mbps)。
+     * @param boolean $ModifySecurityGroup 是否修改NAT网关绑定的安全组。
+     * @param array $SecurityGroupIds NAT网关绑定的安全组列表，最终状态，空列表表示删除所有安全组，形如: `['sg-1n232323', 'sg-o4242424']`
      */
     function __construct()
     {
@@ -72,6 +88,14 @@ class ModifyNatGatewayAttributeRequest extends AbstractModel
 
         if (array_key_exists("InternetMaxBandwidthOut",$param) and $param["InternetMaxBandwidthOut"] !== null) {
             $this->InternetMaxBandwidthOut = $param["InternetMaxBandwidthOut"];
+        }
+
+        if (array_key_exists("ModifySecurityGroup",$param) and $param["ModifySecurityGroup"] !== null) {
+            $this->ModifySecurityGroup = $param["ModifySecurityGroup"];
+        }
+
+        if (array_key_exists("SecurityGroupIds",$param) and $param["SecurityGroupIds"] !== null) {
+            $this->SecurityGroupIds = $param["SecurityGroupIds"];
         }
     }
 }

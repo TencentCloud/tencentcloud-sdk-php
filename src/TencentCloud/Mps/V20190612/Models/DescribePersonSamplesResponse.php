@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getTotalCount() 获取符合条件的记录总数。
  * @method void setTotalCount(integer $TotalCount) 设置符合条件的记录总数。
- * @method array getPersonSet() 获取人物信息。
- * @method void setPersonSet(array $PersonSet) 设置人物信息。
+ * @method array getPersonSet() 获取素材信息。
+ * @method void setPersonSet(array $PersonSet) 设置素材信息。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -35,7 +35,7 @@ class DescribePersonSamplesResponse extends AbstractModel
     public $TotalCount;
 
     /**
-     * @var array 人物信息。
+     * @var array 素材信息。
      */
     public $PersonSet;
 
@@ -46,7 +46,7 @@ class DescribePersonSamplesResponse extends AbstractModel
 
     /**
      * @param integer $TotalCount 符合条件的记录总数。
-     * @param array $PersonSet 人物信息。
+     * @param array $PersonSet 素材信息。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -26,7 +26,7 @@ use TencentCloud\Tms\V20200713\Models as Models;
  * @method Models\AccountTipoffAccessResponse AccountTipoffAccess(Models\AccountTipoffAccessRequest $req) 举报恶意账号
  * @method Models\DescribeTextLibResponse DescribeTextLib(Models\DescribeTextLibRequest $req) 控制台获取用户词库列表
  * @method Models\DescribeTextStatResponse DescribeTextStat(Models\DescribeTextStatRequest $req) 控制台识别统计
- * @method Models\TextModerationResponse TextModeration(Models\TextModerationRequest $req) 文本内容检测（Text Moderation）服务使用了深度学习技术，识别涉黄、涉政、涉恐等有害内容，同时支持用户配置词库，打击自定义的违规文本。
+ * @method Models\TextModerationResponse TextModeration(Models\TextModerationRequest $req) 文本内容检测（Text Moderation）服务使用了深度学习技术，识别可能令人反感、不安全或不适宜的文本内容，同时支持用户配置词库黑白名单，打击自定义识别类型的图片。
  */
 
 class TmsClient extends AbstractClient

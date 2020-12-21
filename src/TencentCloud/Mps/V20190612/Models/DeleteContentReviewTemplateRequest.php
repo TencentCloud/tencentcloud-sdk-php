@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteContentReviewTemplate请求参数结构体
  *
- * @method integer getDefinition() 获取内容审核模板唯一标识。
- * @method void setDefinition(integer $Definition) 设置内容审核模板唯一标识。
+ * @method integer getDefinition() 获取内容智能识别模板唯一标识。
+ * @method void setDefinition(integer $Definition) 设置内容智能识别模板唯一标识。
  */
 class DeleteContentReviewTemplateRequest extends AbstractModel
 {
     /**
-     * @var integer 内容审核模板唯一标识。
+     * @var integer 内容智能识别模板唯一标识。
      */
     public $Definition;
 
     /**
-     * @param integer $Definition 内容审核模板唯一标识。
+     * @param integer $Definition 内容智能识别模板唯一标识。
      */
     function __construct()
     {

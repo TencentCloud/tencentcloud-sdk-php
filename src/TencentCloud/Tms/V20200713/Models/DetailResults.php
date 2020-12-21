@@ -20,11 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 文本返回的详细结果
  *
- * @method string getLabel() 获取恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义关键词
- * @method void setLabel(string $Label) 设置恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义关键词
- * @method string getSuggestion() 获取建议值,Block：打击,Review：待复审,Pass：正常
+ * @method string getLabel() 获取恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
+以及令人反感、不安全或不适宜的内容类型。
+ * @method void setLabel(string $Label) 设置恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
+以及令人反感、不安全或不适宜的内容类型。
+ * @method string getSuggestion() 获取建议您拿到判断结果后的执行操作。
+建议值，Block：建议屏蔽，Review：建议复审，Pass：建议通过
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSuggestion(string $Suggestion) 设置建议值,Block：打击,Review：待复审,Pass：正常
+ * @method void setSuggestion(string $Suggestion) 设置建议您拿到判断结果后的执行操作。
+建议值，Block：建议屏蔽，Review：建议复审，Pass：建议通过
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getKeywords() 获取该标签下命中的关键词
 注意：此字段可能返回 null，表示取不到有效值。
@@ -34,28 +38,30 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScore(integer $Score) 设置该标签模型命中的分值
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getLibType() 获取仅当Lable为Custom自定义关键词时有效，表示自定义关键词库类型，1:黑白库，2：自定义库
+ * @method integer getLibType() 获取仅当Label为Custom自定义关键词时有效，表示自定义关键词库类型，1:黑白库，2：自定义库
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLibType(integer $LibType) 设置仅当Lable为Custom自定义关键词时有效，表示自定义关键词库类型，1:黑白库，2：自定义库
+ * @method void setLibType(integer $LibType) 设置仅当Label为Custom自定义关键词时有效，表示自定义关键词库类型，1:黑白库，2：自定义库
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getLibId() 获取仅当Lable为Custom自定义关键词时有效，表示自定义库id
+ * @method string getLibId() 获取仅当Label为Custom自定义关键词时有效，表示自定义库id
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLibId(string $LibId) 设置仅当Lable为Custom自定义关键词时有效，表示自定义库id
+ * @method void setLibId(string $LibId) 设置仅当Label为Custom自定义关键词时有效，表示自定义库id
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getLibName() 获取仅当Lable为Custom自定义关键词时有效，表示自定义库名称
+ * @method string getLibName() 获取仅当Labe为Custom自定义关键词时有效，表示自定义库名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLibName(string $LibName) 设置仅当Lable为Custom自定义关键词时有效，表示自定义库名称
+ * @method void setLibName(string $LibName) 设置仅当Labe为Custom自定义关键词时有效，表示自定义库名称
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class DetailResults extends AbstractModel
 {
     /**
-     * @var string 恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义关键词
+     * @var string 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
+以及令人反感、不安全或不适宜的内容类型。
      */
     public $Label;
 
     /**
-     * @var string 建议值,Block：打击,Review：待复审,Pass：正常
+     * @var string 建议您拿到判断结果后的执行操作。
+建议值，Block：建议屏蔽，Review：建议复审，Pass：建议通过
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Suggestion;
@@ -73,36 +79,38 @@ class DetailResults extends AbstractModel
     public $Score;
 
     /**
-     * @var integer 仅当Lable为Custom自定义关键词时有效，表示自定义关键词库类型，1:黑白库，2：自定义库
+     * @var integer 仅当Label为Custom自定义关键词时有效，表示自定义关键词库类型，1:黑白库，2：自定义库
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LibType;
 
     /**
-     * @var string 仅当Lable为Custom自定义关键词时有效，表示自定义库id
+     * @var string 仅当Label为Custom自定义关键词时有效，表示自定义库id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LibId;
 
     /**
-     * @var string 仅当Lable为Custom自定义关键词时有效，表示自定义库名称
+     * @var string 仅当Labe为Custom自定义关键词时有效，表示自定义库名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LibName;
 
     /**
-     * @param string $Label 恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义关键词
-     * @param string $Suggestion 建议值,Block：打击,Review：待复审,Pass：正常
+     * @param string $Label 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
+以及令人反感、不安全或不适宜的内容类型。
+     * @param string $Suggestion 建议您拿到判断结果后的执行操作。
+建议值，Block：建议屏蔽，Review：建议复审，Pass：建议通过
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Keywords 该标签下命中的关键词
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Score 该标签模型命中的分值
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $LibType 仅当Lable为Custom自定义关键词时有效，表示自定义关键词库类型，1:黑白库，2：自定义库
+     * @param integer $LibType 仅当Label为Custom自定义关键词时有效，表示自定义关键词库类型，1:黑白库，2：自定义库
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $LibId 仅当Lable为Custom自定义关键词时有效，表示自定义库id
+     * @param string $LibId 仅当Label为Custom自定义关键词时有效，表示自定义库id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $LibName 仅当Lable为Custom自定义关键词时有效，表示自定义库名称
+     * @param string $LibName 仅当Labe为Custom自定义关键词时有效，表示自定义库名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

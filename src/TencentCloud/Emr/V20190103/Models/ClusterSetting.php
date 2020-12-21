@@ -34,8 +34,8 @@ POSTPAID_BY_HOUR 按量计费，默认方式。
  * @method void setPlacement(Placement $Placement) 设置实例位置。
  * @method VPCSettings getVPCSettings() 获取实例所在VPC。
  * @method void setVPCSettings(VPCSettings $VPCSettings) 设置实例所在VPC。
- * @method LoginSettings getLoginSettings() 获取实例登陆配置。
- * @method void setLoginSettings(LoginSettings $LoginSettings) 设置实例登陆配置。
+ * @method LoginSettings getLoginSettings() 获取实例登录配置。
+ * @method void setLoginSettings(LoginSettings $LoginSettings) 设置实例登录配置。
  * @method array getTagSpecification() 获取实例标签。
  * @method void setTagSpecification(array $TagSpecification) 设置实例标签。
  * @method MetaDbInfo getMetaDB() 获取元数据库配置。
@@ -50,8 +50,8 @@ POSTPAID_BY_HOUR 按量计费，默认方式。
  * @method void setDisasterRecoverGroupIds(string $DisasterRecoverGroupIds) 设置集群置放群组。
  * @method boolean getCbsEncryptFlag() 获取是否使用cbs加密。
  * @method void setCbsEncryptFlag(boolean $CbsEncryptFlag) 设置是否使用cbs加密。
- * @method boolean getRemoteTcpDefaultPort() 获取是否使用远程登陆，默认为false。
- * @method void setRemoteTcpDefaultPort(boolean $RemoteTcpDefaultPort) 设置是否使用远程登陆，默认为false。
+ * @method boolean getRemoteTcpDefaultPort() 获取是否使用远程登录，默认为false。
+ * @method void setRemoteTcpDefaultPort(boolean $RemoteTcpDefaultPort) 设置是否使用远程登录，默认为false。
  */
 class ClusterSetting extends AbstractModel
 {
@@ -83,7 +83,7 @@ POSTPAID_BY_HOUR 按量计费，默认方式。
     public $VPCSettings;
 
     /**
-     * @var LoginSettings 实例登陆配置。
+     * @var LoginSettings 实例登录配置。
      */
     public $LoginSettings;
 
@@ -123,7 +123,7 @@ POSTPAID_BY_HOUR 按量计费，默认方式。
     public $CbsEncryptFlag;
 
     /**
-     * @var boolean 是否使用远程登陆，默认为false。
+     * @var boolean 是否使用远程登录，默认为false。
      */
     public $RemoteTcpDefaultPort;
 
@@ -135,7 +135,7 @@ POSTPAID_BY_HOUR 按量计费，默认方式。
      * @param array $SecurityGroupIds 集群所使用的安全组，目前仅支持一个。
      * @param Placement $Placement 实例位置。
      * @param VPCSettings $VPCSettings 实例所在VPC。
-     * @param LoginSettings $LoginSettings 实例登陆配置。
+     * @param LoginSettings $LoginSettings 实例登录配置。
      * @param array $TagSpecification 实例标签。
      * @param MetaDbInfo $MetaDB 元数据库配置。
      * @param JobFlowResourceSpec $ResourceSpec 实例硬件配置。
@@ -143,7 +143,7 @@ POSTPAID_BY_HOUR 按量计费，默认方式。
      * @param InstanceChargePrepaid $InstanceChargePrepaid 包年包月配置，只对包年包月集群生效。
      * @param string $DisasterRecoverGroupIds 集群置放群组。
      * @param boolean $CbsEncryptFlag 是否使用cbs加密。
-     * @param boolean $RemoteTcpDefaultPort 是否使用远程登陆，默认为false。
+     * @param boolean $RemoteTcpDefaultPort 是否使用远程登录，默认为false。
      */
     function __construct()
     {

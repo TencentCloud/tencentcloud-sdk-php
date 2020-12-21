@@ -98,6 +98,10 @@ DefenceMode映射如下：
 DefenceMode映射如下：
   observe = '观察模式'
   intercept = '防御模式'
+ * @method array getConditions() 获取查询条件
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setConditions(array $Conditions) 设置查询条件
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ScdnLogTaskDetail extends AbstractModel
 {
@@ -181,6 +185,12 @@ DefenceMode映射如下：
     public $DefenceMode;
 
     /**
+     * @var array 查询条件
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Conditions;
+
+    /**
      * @param string $Domain scdn域名
      * @param string $Mode 防护类型
      * @param string $StartTime 查询任务开始时间
@@ -220,6 +230,8 @@ AttackType映射如下:
 DefenceMode映射如下：
   observe = '观察模式'
   intercept = '防御模式'
+     * @param array $Conditions 查询条件
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -272,6 +284,15 @@ DefenceMode映射如下：
 
         if (array_key_exists("DefenceMode",$param) and $param["DefenceMode"] !== null) {
             $this->DefenceMode = $param["DefenceMode"];
+        }
+
+        if (array_key_exists("Conditions",$param) and $param["Conditions"] !== null) {
+            $this->Conditions = [];
+            foreach ($param["Conditions"] as $key => $value){
+                $obj = new ScdnEventLogConditions();
+                $obj->deserialize($value);
+                array_push($this->Conditions, $obj);
+            }
         }
     }
 }

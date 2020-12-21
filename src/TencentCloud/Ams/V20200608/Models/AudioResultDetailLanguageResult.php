@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 音频小语种检测结果
  *
- * @method string getLabel() 获取语种
+ * @method string getLabel() 获取语言信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLabel(string $Label) 设置语种
+ * @method void setLabel(string $Label) 设置语言信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getScore() 获取得分
 注意：此字段可能返回 null，表示取不到有效值。
@@ -44,7 +44,7 @@ use TencentCloud\Common\AbstractModel;
 class AudioResultDetailLanguageResult extends AbstractModel
 {
     /**
-     * @var string 语种
+     * @var string 语言信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Label;
@@ -74,7 +74,7 @@ class AudioResultDetailLanguageResult extends AbstractModel
     public $SubLabelCode;
 
     /**
-     * @param string $Label 语种
+     * @param string $Label 语言信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Score 得分
 注意：此字段可能返回 null，表示取不到有效值。

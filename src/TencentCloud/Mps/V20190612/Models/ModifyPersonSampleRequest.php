@@ -20,29 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyPersonSample请求参数结构体
  *
- * @method string getPersonId() 获取人物 ID。
- * @method void setPersonId(string $PersonId) 设置人物 ID。
+ * @method string getPersonId() 获取素材 ID。
+ * @method void setPersonId(string $PersonId) 设置素材 ID。
  * @method string getName() 获取名称，长度限制：128 个字符。
  * @method void setName(string $Name) 设置名称，长度限制：128 个字符。
  * @method string getDescription() 获取描述，长度限制：1024 个字符。
  * @method void setDescription(string $Description) 设置描述，长度限制：1024 个字符。
- * @method array getUsages() 获取人物应用场景，可选值：
+ * @method array getUsages() 获取素材应用场景，可选值：
 1. Recognition：用于内容识别，等价于 Recognition.Face。
-2. Review：用于内容审核，等价于 Review.Face。
-3. All：用于内容识别、内容审核，等价于 1+2。
- * @method void setUsages(array $Usages) 设置人物应用场景，可选值：
+2. Review：用于不适宜的内容识别，等价于 Review.Face。
+3. All：用于内容识别、不适宜的内容识别，等价于 1+2。
+ * @method void setUsages(array $Usages) 设置素材应用场景，可选值：
 1. Recognition：用于内容识别，等价于 Recognition.Face。
-2. Review：用于内容审核，等价于 Review.Face。
-3. All：用于内容识别、内容审核，等价于 1+2。
- * @method AiSampleFaceOperation getFaceOperationInfo() 获取人脸操作信息。
- * @method void setFaceOperationInfo(AiSampleFaceOperation $FaceOperationInfo) 设置人脸操作信息。
+2. Review：用于不适宜的内容识别，等价于 Review.Face。
+3. All：用于内容识别、不适宜的内容识别，等价于 1+2。
+ * @method AiSampleFaceOperation getFaceOperationInfo() 获取五官操作信息。
+ * @method void setFaceOperationInfo(AiSampleFaceOperation $FaceOperationInfo) 设置五官操作信息。
  * @method AiSampleTagOperation getTagOperationInfo() 获取标签操作信息。
  * @method void setTagOperationInfo(AiSampleTagOperation $TagOperationInfo) 设置标签操作信息。
  */
 class ModifyPersonSampleRequest extends AbstractModel
 {
     /**
-     * @var string 人物 ID。
+     * @var string 素材 ID。
      */
     public $PersonId;
 
@@ -57,15 +57,15 @@ class ModifyPersonSampleRequest extends AbstractModel
     public $Description;
 
     /**
-     * @var array 人物应用场景，可选值：
+     * @var array 素材应用场景，可选值：
 1. Recognition：用于内容识别，等价于 Recognition.Face。
-2. Review：用于内容审核，等价于 Review.Face。
-3. All：用于内容识别、内容审核，等价于 1+2。
+2. Review：用于不适宜的内容识别，等价于 Review.Face。
+3. All：用于内容识别、不适宜的内容识别，等价于 1+2。
      */
     public $Usages;
 
     /**
-     * @var AiSampleFaceOperation 人脸操作信息。
+     * @var AiSampleFaceOperation 五官操作信息。
      */
     public $FaceOperationInfo;
 
@@ -75,14 +75,14 @@ class ModifyPersonSampleRequest extends AbstractModel
     public $TagOperationInfo;
 
     /**
-     * @param string $PersonId 人物 ID。
+     * @param string $PersonId 素材 ID。
      * @param string $Name 名称，长度限制：128 个字符。
      * @param string $Description 描述，长度限制：1024 个字符。
-     * @param array $Usages 人物应用场景，可选值：
+     * @param array $Usages 素材应用场景，可选值：
 1. Recognition：用于内容识别，等价于 Recognition.Face。
-2. Review：用于内容审核，等价于 Review.Face。
-3. All：用于内容识别、内容审核，等价于 1+2。
-     * @param AiSampleFaceOperation $FaceOperationInfo 人脸操作信息。
+2. Review：用于不适宜的内容识别，等价于 Review.Face。
+3. All：用于内容识别、不适宜的内容识别，等价于 1+2。
+     * @param AiSampleFaceOperation $FaceOperationInfo 五官操作信息。
      * @param AiSampleTagOperation $TagOperationInfo 标签操作信息。
      */
     function __construct()

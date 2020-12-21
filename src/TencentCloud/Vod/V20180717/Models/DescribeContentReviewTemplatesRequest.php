@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeContentReviewTemplates请求参数结构体
  *
- * @method array getDefinitions() 获取内容审核模板唯一标识过滤条件，数组长度限制：100。
- * @method void setDefinitions(array $Definitions) 设置内容审核模板唯一标识过滤条件，数组长度限制：100。
+ * @method array getDefinitions() 获取内容智能识别模板唯一标识过滤条件，数组长度限制：100。
+ * @method void setDefinitions(array $Definitions) 设置内容智能识别模板唯一标识过滤条件，数组长度限制：100。
  * @method integer getOffset() 获取分页偏移量，默认值：0。
  * @method void setOffset(integer $Offset) 设置分页偏移量，默认值：0。
  * @method integer getLimit() 获取返回记录条数，默认值：10，最大值：100。
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeContentReviewTemplatesRequest extends AbstractModel
 {
     /**
-     * @var array 内容审核模板唯一标识过滤条件，数组长度限制：100。
+     * @var array 内容智能识别模板唯一标识过滤条件，数组长度限制：100。
      */
     public $Definitions;
 
@@ -52,7 +52,7 @@ class DescribeContentReviewTemplatesRequest extends AbstractModel
     public $SubAppId;
 
     /**
-     * @param array $Definitions 内容审核模板唯一标识过滤条件，数组长度限制：100。
+     * @param array $Definitions 内容智能识别模板唯一标识过滤条件，数组长度限制：100。
      * @param integer $Offset 分页偏移量，默认值：0。
      * @param integer $Limit 返回记录条数，默认值：10，最大值：100。
      * @param integer $SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。

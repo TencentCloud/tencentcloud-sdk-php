@@ -28,33 +28,17 @@ use TencentCloud\Common\AbstractModel;
 0 未命中
 1 命中
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getLabel() 获取命中的标签
-Porn 色情
-Polity 政治
-Illegal 违法
-Abuse 谩骂
-Terror 暴恐
-Ad 广告
-Moan 呻吟
+ * @method string getLabel() 获取恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
+以及令人反感、不安全或不适宜的内容类型。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLabel(string $Label) 设置命中的标签
-Porn 色情
-Polity 政治
-Illegal 违法
-Abuse 谩骂
-Terror 暴恐
-Ad 广告
-Moan 呻吟
+ * @method void setLabel(string $Label) 设置恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
+以及令人反感、不安全或不适宜的内容类型。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSuggestion() 获取审核建议，可选值：
-Pass 通过，
-Review 建议人审，
-Block 确认违规
+ * @method string getSuggestion() 获取建议您拿到判断结果后的执行操作。
+建议值，Block：建议屏蔽，Review：建议复审，Pass：建议通过
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSuggestion(string $Suggestion) 设置审核建议，可选值：
-Pass 通过，
-Review 建议人审，
-Block 确认违规
+ * @method void setSuggestion(string $Suggestion) 设置建议您拿到判断结果后的执行操作。
+建议值，Block：建议屏蔽，Review：建议复审，Pass：建议通过
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getScore() 获取得分，0-100
 注意：此字段可能返回 null，表示取不到有效值。
@@ -72,12 +56,12 @@ Block 确认违规
  * @method void setDuration(string $Duration) 设置音频时长
  * @method string getExtra() 获取拓展字段
  * @method void setExtra(string $Extra) 设置拓展字段
- * @method array getTextResults() 获取文本审核结果
- * @method void setTextResults(array $TextResults) 设置文本审核结果
- * @method array getMoanResults() 获取音频呻吟审核结果
- * @method void setMoanResults(array $MoanResults) 设置音频呻吟审核结果
- * @method array getLanguageResults() 获取音频语种检测结果
- * @method void setLanguageResults(array $LanguageResults) 设置音频语种检测结果
+ * @method array getTextResults() 获取文本识别结果
+ * @method void setTextResults(array $TextResults) 设置文本识别结果
+ * @method array getMoanResults() 获取音频呻吟检测结果
+ * @method void setMoanResults(array $MoanResults) 设置音频呻吟检测结果
+ * @method array getLanguageResults() 获取音频语言检测结果
+ * @method void setLanguageResults(array $LanguageResults) 设置音频语言检测结果
  */
 class AudioResult extends AbstractModel
 {
@@ -90,23 +74,15 @@ class AudioResult extends AbstractModel
     public $HitFlag;
 
     /**
-     * @var string 命中的标签
-Porn 色情
-Polity 政治
-Illegal 违法
-Abuse 谩骂
-Terror 暴恐
-Ad 广告
-Moan 呻吟
+     * @var string 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
+以及令人反感、不安全或不适宜的内容类型。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Label;
 
     /**
-     * @var string 审核建议，可选值：
-Pass 通过，
-Review 建议人审，
-Block 确认违规
+     * @var string 建议您拿到判断结果后的执行操作。
+建议值，Block：建议屏蔽，Review：建议复审，Pass：建议通过
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Suggestion;
@@ -140,17 +116,17 @@ Block 确认违规
     public $Extra;
 
     /**
-     * @var array 文本审核结果
+     * @var array 文本识别结果
      */
     public $TextResults;
 
     /**
-     * @var array 音频呻吟审核结果
+     * @var array 音频呻吟检测结果
      */
     public $MoanResults;
 
     /**
-     * @var array 音频语种检测结果
+     * @var array 音频语言检测结果
      */
     public $LanguageResults;
 
@@ -159,19 +135,11 @@ Block 确认违规
 0 未命中
 1 命中
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Label 命中的标签
-Porn 色情
-Polity 政治
-Illegal 违法
-Abuse 谩骂
-Terror 暴恐
-Ad 广告
-Moan 呻吟
+     * @param string $Label 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
+以及令人反感、不安全或不适宜的内容类型。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Suggestion 审核建议，可选值：
-Pass 通过，
-Review 建议人审，
-Block 确认违规
+     * @param string $Suggestion 建议您拿到判断结果后的执行操作。
+建议值，Block：建议屏蔽，Review：建议复审，Pass：建议通过
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Score 得分，0-100
 注意：此字段可能返回 null，表示取不到有效值。
@@ -181,9 +149,9 @@ Block 确认违规
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Duration 音频时长
      * @param string $Extra 拓展字段
-     * @param array $TextResults 文本审核结果
-     * @param array $MoanResults 音频呻吟审核结果
-     * @param array $LanguageResults 音频语种检测结果
+     * @param array $TextResults 文本识别结果
+     * @param array $MoanResults 音频呻吟检测结果
+     * @param array $LanguageResults 音频语言检测结果
      */
     function __construct()
     {

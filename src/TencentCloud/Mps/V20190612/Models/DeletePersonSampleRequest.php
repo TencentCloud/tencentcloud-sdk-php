@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeletePersonSample请求参数结构体
  *
- * @method string getPersonId() 获取人物 ID。
- * @method void setPersonId(string $PersonId) 设置人物 ID。
+ * @method string getPersonId() 获取素材 ID。
+ * @method void setPersonId(string $PersonId) 设置素材 ID。
  */
 class DeletePersonSampleRequest extends AbstractModel
 {
     /**
-     * @var string 人物 ID。
+     * @var string 素材 ID。
      */
     public $PersonId;
 
     /**
-     * @param string $PersonId 人物 ID。
+     * @param string $PersonId 素材 ID。
      */
     function __construct()
     {

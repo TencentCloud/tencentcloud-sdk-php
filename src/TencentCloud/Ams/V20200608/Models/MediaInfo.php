@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWidth(integer $Width) 设置宽，单位为像素
  * @method integer getHeight() 获取高，单位为像素
  * @method void setHeight(integer $Height) 设置高，单位为像素
+ * @method string getThumbnail() 获取缩略图
+ * @method void setThumbnail(string $Thumbnail) 设置缩略图
  */
 class MediaInfo extends AbstractModel
 {
@@ -55,11 +57,17 @@ class MediaInfo extends AbstractModel
     public $Height;
 
     /**
+     * @var string 缩略图
+     */
+    public $Thumbnail;
+
+    /**
      * @param string $Codecs 编码格式
      * @param integer $Duration 流检测时分片时长
 注意：此字段可能返回 0，表示取不到有效值。
      * @param integer $Width 宽，单位为像素
      * @param integer $Height 高，单位为像素
+     * @param string $Thumbnail 缩略图
      */
     function __construct()
     {
@@ -88,6 +96,10 @@ class MediaInfo extends AbstractModel
 
         if (array_key_exists("Height",$param) and $param["Height"] !== null) {
             $this->Height = $param["Height"];
+        }
+
+        if (array_key_exists("Thumbnail",$param) and $param["Thumbnail"] !== null) {
+            $this->Thumbnail = $param["Thumbnail"];
         }
     }
 }

@@ -18,7 +18,7 @@ namespace TencentCloud\Facefusion\V20181201\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 人脸融合鉴黄鉴政返回参数item
+ * 人脸融合不适宜内容识别返回参数item
  *
  * @method string getCategory() 获取保留字段
  * @method void setCategory(string $Category) 设置保留字段

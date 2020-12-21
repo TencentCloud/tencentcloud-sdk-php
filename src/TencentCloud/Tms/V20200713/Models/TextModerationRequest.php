@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getContent() 获取文本内容Base64编码。原文长度需小于15000字节，即5000个汉字以内。
  * @method void setContent(string $Content) 设置文本内容Base64编码。原文长度需小于15000字节，即5000个汉字以内。
- * @method string getDataId() 获取数据ID，英文字母、下划线、-组成，不超过64个字符
- * @method void setDataId(string $DataId) 设置数据ID，英文字母、下划线、-组成，不超过64个字符
  * @method string getBizType() 获取该字段用于标识业务场景。您可以在内容安全控制台创建对应的ID，配置不同的内容审核策略，通过接口调用，默认不填为0，后端使用默认策略。 -- 该字段暂未开放。
  * @method void setBizType(string $BizType) 设置该字段用于标识业务场景。您可以在内容安全控制台创建对应的ID，配置不同的内容审核策略，通过接口调用，默认不填为0，后端使用默认策略。 -- 该字段暂未开放。
+ * @method string getDataId() 获取数据ID，英文字母、下划线、-组成，不超过64个字符
+ * @method void setDataId(string $DataId) 设置数据ID，英文字母、下划线、-组成，不超过64个字符
  * @method User getUser() 获取账号相关信息字段，填入后可识别违规风险账号。
  * @method void setUser(User $User) 设置账号相关信息字段，填入后可识别违规风险账号。
  * @method Device getDevice() 获取设备相关信息字段，填入后可识别违规风险设备。
@@ -39,14 +39,14 @@ class TextModerationRequest extends AbstractModel
     public $Content;
 
     /**
-     * @var string 数据ID，英文字母、下划线、-组成，不超过64个字符
-     */
-    public $DataId;
-
-    /**
      * @var string 该字段用于标识业务场景。您可以在内容安全控制台创建对应的ID，配置不同的内容审核策略，通过接口调用，默认不填为0，后端使用默认策略。 -- 该字段暂未开放。
      */
     public $BizType;
+
+    /**
+     * @var string 数据ID，英文字母、下划线、-组成，不超过64个字符
+     */
+    public $DataId;
 
     /**
      * @var User 账号相关信息字段，填入后可识别违规风险账号。
@@ -60,8 +60,8 @@ class TextModerationRequest extends AbstractModel
 
     /**
      * @param string $Content 文本内容Base64编码。原文长度需小于15000字节，即5000个汉字以内。
-     * @param string $DataId 数据ID，英文字母、下划线、-组成，不超过64个字符
      * @param string $BizType 该字段用于标识业务场景。您可以在内容安全控制台创建对应的ID，配置不同的内容审核策略，通过接口调用，默认不填为0，后端使用默认策略。 -- 该字段暂未开放。
+     * @param string $DataId 数据ID，英文字母、下划线、-组成，不超过64个字符
      * @param User $User 账号相关信息字段，填入后可识别违规风险账号。
      * @param Device $Device 设备相关信息字段，填入后可识别违规风险设备。
      */
@@ -82,12 +82,12 @@ class TextModerationRequest extends AbstractModel
             $this->Content = $param["Content"];
         }
 
-        if (array_key_exists("DataId",$param) and $param["DataId"] !== null) {
-            $this->DataId = $param["DataId"];
-        }
-
         if (array_key_exists("BizType",$param) and $param["BizType"] !== null) {
             $this->BizType = $param["BizType"];
+        }
+
+        if (array_key_exists("DataId",$param) and $param["DataId"] !== null) {
+            $this->DataId = $param["DataId"];
         }
 
         if (array_key_exists("User",$param) and $param["User"] !== null) {

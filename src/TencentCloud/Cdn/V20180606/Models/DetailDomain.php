@@ -254,6 +254,10 @@ off：不支持
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIpv6Access(Ipv6Access $Ipv6Access) 设置Ipv6访问配置
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getAdvanceSet() 获取高级配置集合。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAdvanceSet(array $AdvanceSet) 设置高级配置集合。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DetailDomain extends AbstractModel
 {
@@ -579,6 +583,12 @@ off：不支持
     public $Ipv6Access;
 
     /**
+     * @var array 高级配置集合。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AdvanceSet;
+
+    /**
      * @param string $ResourceId 域名 ID
      * @param integer $AppId 腾讯云账号ID
      * @param string $Domain 加速域名
@@ -695,6 +705,8 @@ off：不支持
      * @param OriginAuthentication $OriginAuthentication 回源鉴权高级配置，白名单功能
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Ipv6Access $Ipv6Access Ipv6访问配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $AdvanceSet 高级配置集合。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -953,6 +965,15 @@ off：不支持
         if (array_key_exists("Ipv6Access",$param) and $param["Ipv6Access"] !== null) {
             $this->Ipv6Access = new Ipv6Access();
             $this->Ipv6Access->deserialize($param["Ipv6Access"]);
+        }
+
+        if (array_key_exists("AdvanceSet",$param) and $param["AdvanceSet"] !== null) {
+            $this->AdvanceSet = [];
+            foreach ($param["AdvanceSet"] as $key => $value){
+                $obj = new AdvanceConfig();
+                $obj->deserialize($value);
+                array_push($this->AdvanceSet, $obj);
+            }
         }
     }
 }

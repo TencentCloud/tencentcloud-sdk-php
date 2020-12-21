@@ -20,39 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 违规数据分布
  *
- * @method string getEvilType() 获取违规类型：
-Terror	24001
-Porn	20002
-Polity	20001
-Ad	20105
-Abuse	20007	
-Illegal	20006	
-Spam	25001	
-Moan	26001
- * @method void setEvilType(string $EvilType) 设置违规类型：
-Terror	24001
-Porn	20002
-Polity	20001
-Ad	20105
-Abuse	20007	
-Illegal	20006	
-Spam	25001	
-Moan	26001
+ * @method string getEvilType() 获取----非必选，该参数功能暂未对外开放
+ * @method void setEvilType(string $EvilType) 设置----非必选，该参数功能暂未对外开放
  * @method integer getCount() 获取分布类型总量
  * @method void setCount(integer $Count) 设置分布类型总量
  */
 class EvilCount extends AbstractModel
 {
     /**
-     * @var string 违规类型：
-Terror	24001
-Porn	20002
-Polity	20001
-Ad	20105
-Abuse	20007	
-Illegal	20006	
-Spam	25001	
-Moan	26001
+     * @var string ----非必选，该参数功能暂未对外开放
      */
     public $EvilType;
 
@@ -62,15 +38,7 @@ Moan	26001
     public $Count;
 
     /**
-     * @param string $EvilType 违规类型：
-Terror	24001
-Porn	20002
-Polity	20001
-Ad	20105
-Abuse	20007	
-Illegal	20006	
-Spam	25001	
-Moan	26001
+     * @param string $EvilType ----非必选，该参数功能暂未对外开放
      * @param integer $Count 分布类型总量
      */
     function __construct()

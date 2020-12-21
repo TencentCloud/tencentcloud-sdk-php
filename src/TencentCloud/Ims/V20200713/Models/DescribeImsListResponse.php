@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeImsList返回参数结构体
  *
- * @method array getImsDetailSet() 获取返回列表数据
+ * @method array getImsDetailSet() 获取返回列表数据----非必选，该参数暂未对外开放
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setImsDetailSet(array $ImsDetailSet) 设置返回列表数据
+ * @method void setImsDetailSet(array $ImsDetailSet) 设置返回列表数据----非必选，该参数暂未对外开放
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotalCount() 获取总条数
  * @method void setTotalCount(integer $TotalCount) 设置总条数
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeImsListResponse extends AbstractModel
 {
     /**
-     * @var array 返回列表数据
+     * @var array 返回列表数据----非必选，该参数暂未对外开放
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ImsDetailSet;
@@ -48,7 +48,7 @@ class DescribeImsListResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $ImsDetailSet 返回列表数据
+     * @param array $ImsDetailSet 返回列表数据----非必选，该参数暂未对外开放
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalCount 总条数
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。

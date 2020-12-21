@@ -28,32 +28,16 @@ use TencentCloud\Common\AbstractModel;
 0 未命中
 1 命中
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getLabel() 获取命中的标签
-Porn 色情
-Sexy 性感
-Polity 政治
-Illegal 违法
-Abuse 谩骂
-Terror 暴恐
-Ad 广告
+ * @method string getSuggestion() 获取建议您拿到判断结果后的执行操作。
+建议值，Block：建议屏蔽，Review：建议复审，Pass：建议通过
+ * @method void setSuggestion(string $Suggestion) 设置建议您拿到判断结果后的执行操作。
+建议值，Block：建议屏蔽，Review：建议复审，Pass：建议通过
+ * @method string getLabel() 获取恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
+以及令人反感、不安全或不适宜的内容类型。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLabel(string $Label) 设置命中的标签
-Porn 色情
-Sexy 性感
-Polity 政治
-Illegal 违法
-Abuse 谩骂
-Terror 暴恐
-Ad 广告
+ * @method void setLabel(string $Label) 设置恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
+以及令人反感、不安全或不适宜的内容类型。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSuggestion() 获取审核建议，可选值：
-Pass 通过，
-Review 建议人审，
-Block 确认违规
- * @method void setSuggestion(string $Suggestion) 设置审核建议，可选值：
-Pass 通过，
-Review 建议人审，
-Block 确认违规
  * @method integer getScore() 获取得分
  * @method void setScore(integer $Score) 设置得分
  * @method array getResults() 获取画面截帧图片结果集
@@ -74,25 +58,17 @@ class ImageResult extends AbstractModel
     public $HitFlag;
 
     /**
-     * @var string 命中的标签
-Porn 色情
-Sexy 性感
-Polity 政治
-Illegal 违法
-Abuse 谩骂
-Terror 暴恐
-Ad 广告
+     * @var string 建议您拿到判断结果后的执行操作。
+建议值，Block：建议屏蔽，Review：建议复审，Pass：建议通过
+     */
+    public $Suggestion;
+
+    /**
+     * @var string 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
+以及令人反感、不安全或不适宜的内容类型。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Label;
-
-    /**
-     * @var string 审核建议，可选值：
-Pass 通过，
-Review 建议人审，
-Block 确认违规
-     */
-    public $Suggestion;
 
     /**
      * @var integer 得分
@@ -119,19 +95,11 @@ Block 确认违规
 0 未命中
 1 命中
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Label 命中的标签
-Porn 色情
-Sexy 性感
-Polity 政治
-Illegal 违法
-Abuse 谩骂
-Terror 暴恐
-Ad 广告
+     * @param string $Suggestion 建议您拿到判断结果后的执行操作。
+建议值，Block：建议屏蔽，Review：建议复审，Pass：建议通过
+     * @param string $Label 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
+以及令人反感、不安全或不适宜的内容类型。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Suggestion 审核建议，可选值：
-Pass 通过，
-Review 建议人审，
-Block 确认违规
      * @param integer $Score 得分
      * @param array $Results 画面截帧图片结果集
      * @param string $Url 图片URL地址
@@ -154,12 +122,12 @@ Block 确认违规
             $this->HitFlag = $param["HitFlag"];
         }
 
-        if (array_key_exists("Label",$param) and $param["Label"] !== null) {
-            $this->Label = $param["Label"];
-        }
-
         if (array_key_exists("Suggestion",$param) and $param["Suggestion"] !== null) {
             $this->Suggestion = $param["Suggestion"];
+        }
+
+        if (array_key_exists("Label",$param) and $param["Label"] !== null) {
+            $this->Label = $param["Label"];
         }
 
         if (array_key_exists("Score",$param) and $param["Score"] !== null) {

@@ -56,6 +56,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTagSet() 获取标签键值对。
  * @method void setTagSet(array $TagSet) 设置标签键值对。
+ * @method array getSecurityGroupSet() 获取NAT网关绑定的安全组列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSecurityGroupSet(array $SecurityGroupSet) 设置NAT网关绑定的安全组列表
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class NatGateway extends AbstractModel
 {
@@ -134,6 +138,12 @@ class NatGateway extends AbstractModel
     public $TagSet;
 
     /**
+     * @var array NAT网关绑定的安全组列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SecurityGroupSet;
+
+    /**
      * @param string $NatGatewayId NAT网关的ID。
      * @param string $NatGatewayName NAT网关的名称。
      * @param string $CreatedTime NAT网关创建的时间。
@@ -152,6 +162,8 @@ class NatGateway extends AbstractModel
      * @param string $SubnetId 所属子网ID。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $TagSet 标签键值对。
+     * @param array $SecurityGroupSet NAT网关绑定的安全组列表
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -235,6 +247,10 @@ class NatGateway extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->TagSet, $obj);
             }
+        }
+
+        if (array_key_exists("SecurityGroupSet",$param) and $param["SecurityGroupSet"] !== null) {
+            $this->SecurityGroupSet = $param["SecurityGroupSet"];
         }
     }
 }

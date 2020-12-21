@@ -20,24 +20,24 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePersonSamples请求参数结构体
  *
- * @method string getType() 获取拉取的人物类型，可选值：
-<li>UserDefine：用户自定义人物库；</li>
-<li>Default：系统默认人物库。</li>
+ * @method string getType() 获取拉取的素材类型，可选值：
+<li>UserDefine：用户自定义素材库；</li>
+<li>Default：系统默认素材库。</li>
 
-默认值：UserDefine，拉取用户自定义人物库人物。
-说明：如果是拉取系统默认人物库，只能使用人物名字或者人物 ID + 人物名字的方式进行拉取，且人脸图片只返回一张。
- * @method void setType(string $Type) 设置拉取的人物类型，可选值：
-<li>UserDefine：用户自定义人物库；</li>
-<li>Default：系统默认人物库。</li>
+默认值：UserDefine，拉取用户自定义素材库素材。
+说明：如果是拉取系统默认素材库，只能使用素材名字或者素材 ID + 素材名字的方式进行拉取，且人脸图片只返回一张。
+ * @method void setType(string $Type) 设置拉取的素材类型，可选值：
+<li>UserDefine：用户自定义素材库；</li>
+<li>Default：系统默认素材库。</li>
 
-默认值：UserDefine，拉取用户自定义人物库人物。
-说明：如果是拉取系统默认人物库，只能使用人物名字或者人物 ID + 人物名字的方式进行拉取，且人脸图片只返回一张。
- * @method array getPersonIds() 获取人物 ID，数组长度限制：100。
- * @method void setPersonIds(array $PersonIds) 设置人物 ID，数组长度限制：100。
- * @method array getNames() 获取人物名称，数组长度限制：20。
- * @method void setNames(array $Names) 设置人物名称，数组长度限制：20。
- * @method array getTags() 获取人物标签，数组长度限制：20。
- * @method void setTags(array $Tags) 设置人物标签，数组长度限制：20。
+默认值：UserDefine，拉取用户自定义素材库素材。
+说明：如果是拉取系统默认素材库，只能使用素材名字或者素材 ID + 素材名字的方式进行拉取，且人脸图片只返回一张。
+ * @method array getPersonIds() 获取素材 ID，数组长度限制：100。
+ * @method void setPersonIds(array $PersonIds) 设置素材 ID，数组长度限制：100。
+ * @method array getNames() 获取素材名称，数组长度限制：20。
+ * @method void setNames(array $Names) 设置素材名称，数组长度限制：20。
+ * @method array getTags() 获取素材标签，数组长度限制：20。
+ * @method void setTags(array $Tags) 设置素材标签，数组长度限制：20。
  * @method integer getOffset() 获取分页偏移量，默认值：0。
  * @method void setOffset(integer $Offset) 设置分页偏移量，默认值：0。
  * @method integer getLimit() 获取返回记录条数，默认值：100，最大值：100。
@@ -46,27 +46,27 @@ use TencentCloud\Common\AbstractModel;
 class DescribePersonSamplesRequest extends AbstractModel
 {
     /**
-     * @var string 拉取的人物类型，可选值：
-<li>UserDefine：用户自定义人物库；</li>
-<li>Default：系统默认人物库。</li>
+     * @var string 拉取的素材类型，可选值：
+<li>UserDefine：用户自定义素材库；</li>
+<li>Default：系统默认素材库。</li>
 
-默认值：UserDefine，拉取用户自定义人物库人物。
-说明：如果是拉取系统默认人物库，只能使用人物名字或者人物 ID + 人物名字的方式进行拉取，且人脸图片只返回一张。
+默认值：UserDefine，拉取用户自定义素材库素材。
+说明：如果是拉取系统默认素材库，只能使用素材名字或者素材 ID + 素材名字的方式进行拉取，且人脸图片只返回一张。
      */
     public $Type;
 
     /**
-     * @var array 人物 ID，数组长度限制：100。
+     * @var array 素材 ID，数组长度限制：100。
      */
     public $PersonIds;
 
     /**
-     * @var array 人物名称，数组长度限制：20。
+     * @var array 素材名称，数组长度限制：20。
      */
     public $Names;
 
     /**
-     * @var array 人物标签，数组长度限制：20。
+     * @var array 素材标签，数组长度限制：20。
      */
     public $Tags;
 
@@ -81,15 +81,15 @@ class DescribePersonSamplesRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @param string $Type 拉取的人物类型，可选值：
-<li>UserDefine：用户自定义人物库；</li>
-<li>Default：系统默认人物库。</li>
+     * @param string $Type 拉取的素材类型，可选值：
+<li>UserDefine：用户自定义素材库；</li>
+<li>Default：系统默认素材库。</li>
 
-默认值：UserDefine，拉取用户自定义人物库人物。
-说明：如果是拉取系统默认人物库，只能使用人物名字或者人物 ID + 人物名字的方式进行拉取，且人脸图片只返回一张。
-     * @param array $PersonIds 人物 ID，数组长度限制：100。
-     * @param array $Names 人物名称，数组长度限制：20。
-     * @param array $Tags 人物标签，数组长度限制：20。
+默认值：UserDefine，拉取用户自定义素材库素材。
+说明：如果是拉取系统默认素材库，只能使用素材名字或者素材 ID + 素材名字的方式进行拉取，且人脸图片只返回一张。
+     * @param array $PersonIds 素材 ID，数组长度限制：100。
+     * @param array $Names 素材名称，数组长度限制：20。
+     * @param array $Tags 素材标签，数组长度限制：20。
      * @param integer $Offset 分页偏移量，默认值：0。
      * @param integer $Limit 返回记录条数，默认值：100，最大值：100。
      */

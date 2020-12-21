@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDataSource(integer $DataSource) 设置数据方式， 0：我审，1：人审
  * @method string getUpdateTime() 获取最后更新时间
  * @method void setUpdateTime(string $UpdateTime) 设置最后更新时间
- * @method integer getEvilType() 获取机器审核结果code 100 正常, 20001 政治 20002 色情 20006 涉毒违法 20007 谩骂 24001 暴恐 21000 综合 20105 广告引流 20103 性感
- * @method void setEvilType(integer $EvilType) 设置机器审核结果code 100 正常, 20001 政治 20002 色情 20006 涉毒违法 20007 谩骂 24001 暴恐 21000 综合 20105 广告引流 20103 性感
+ * @method integer getEvilType() 获取----非必选，该参数暂未对外开放
+ * @method void setEvilType(integer $EvilType) 设置----非必选，该参数暂未对外开放
  * @method string getModerationTime() 获取机器审核时间
  * @method void setModerationTime(string $ModerationTime) 设置机器审核时间
  * @method string getUpdateUser() 获取最后更新人
@@ -55,7 +55,7 @@ class ImsDetail extends AbstractModel
     public $UpdateTime;
 
     /**
-     * @var integer 机器审核结果code 100 正常, 20001 政治 20002 色情 20006 涉毒违法 20007 谩骂 24001 暴恐 21000 综合 20105 广告引流 20103 性感
+     * @var integer ----非必选，该参数暂未对外开放
      */
     public $EvilType;
 
@@ -83,7 +83,7 @@ class ImsDetail extends AbstractModel
      * @param string $Content 文本内容
      * @param integer $DataSource 数据方式， 0：我审，1：人审
      * @param string $UpdateTime 最后更新时间
-     * @param integer $EvilType 机器审核结果code 100 正常, 20001 政治 20002 色情 20006 涉毒违法 20007 谩骂 24001 暴恐 21000 综合 20105 广告引流 20103 性感
+     * @param integer $EvilType ----非必选，该参数暂未对外开放
      * @param string $ModerationTime 机器审核时间
      * @param string $UpdateUser 最后更新人
      * @param string $ContentId 内容RequestId

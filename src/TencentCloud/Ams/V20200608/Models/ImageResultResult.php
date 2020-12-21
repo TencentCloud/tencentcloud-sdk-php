@@ -23,20 +23,16 @@ use TencentCloud\Common\AbstractModel;
  * @method string getScene() 获取场景
 Porn 色情
 Sexy 性感
-Polity 政治
-Illegal 违法
 Abuse 谩骂
-Terror 暴恐
 Ad 广告
+等多个识别场景
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScene(string $Scene) 设置场景
 Porn 色情
 Sexy 性感
-Polity 政治
-Illegal 违法
 Abuse 谩骂
-Terror 暴恐
 Ad 广告
+等多个识别场景
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getHitFlag() 获取是否命中
 0 未命中
@@ -46,15 +42,11 @@ Ad 广告
 0 未命中
 1 命中
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSuggestion() 获取审核建议，可选值：
-Pass 通过，
-Review 建议人审，
-Block 确认违规
+ * @method string getSuggestion() 获取建议您拿到判断结果后的执行操作。
+建议值，Block：建议屏蔽，Review：建议复审，Pass：建议通过
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSuggestion(string $Suggestion) 设置审核建议，可选值：
-Pass 通过，
-Review 建议人审，
-Block 确认违规
+ * @method void setSuggestion(string $Suggestion) 设置建议您拿到判断结果后的执行操作。
+建议值，Block：建议屏蔽，Review：建议复审，Pass：建议通过
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLabel() 获取标签
 注意：此字段可能返回 null，表示取不到有效值。
@@ -83,11 +75,9 @@ class ImageResultResult extends AbstractModel
      * @var string 场景
 Porn 色情
 Sexy 性感
-Polity 政治
-Illegal 违法
 Abuse 谩骂
-Terror 暴恐
 Ad 广告
+等多个识别场景
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Scene;
@@ -101,10 +91,8 @@ Ad 广告
     public $HitFlag;
 
     /**
-     * @var string 审核建议，可选值：
-Pass 通过，
-Review 建议人审，
-Block 确认违规
+     * @var string 建议您拿到判断结果后的执行操作。
+建议值，Block：建议屏蔽，Review：建议复审，Pass：建议通过
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Suggestion;
@@ -147,20 +135,16 @@ Block 确认违规
      * @param string $Scene 场景
 Porn 色情
 Sexy 性感
-Polity 政治
-Illegal 违法
 Abuse 谩骂
-Terror 暴恐
 Ad 广告
+等多个识别场景
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $HitFlag 是否命中
 0 未命中
 1 命中
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Suggestion 审核建议，可选值：
-Pass 通过，
-Review 建议人审，
-Block 确认违规
+     * @param string $Suggestion 建议您拿到判断结果后的执行操作。
+建议值，Block：建议屏蔽，Review：建议复审，Pass：建议通过
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Label 标签
 注意：此字段可能返回 null，表示取不到有效值。

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAmsList返回参数结构体
  *
- * @method array getAmsDetailSet() 获取返回列表数据
- * @method void setAmsDetailSet(array $AmsDetailSet) 设置返回列表数据
+ * @method array getAmsDetailSet() 获取返回列表数据----非必选，该参数暂未对外开放
+ * @method void setAmsDetailSet(array $AmsDetailSet) 设置返回列表数据----非必选，该参数暂未对外开放
  * @method integer getTotal() 获取总条数
  * @method void setTotal(integer $Total) 设置总条数
  * @method string getPageToken() 获取分页 token
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeAmsListResponse extends AbstractModel
 {
     /**
-     * @var array 返回列表数据
+     * @var array 返回列表数据----非必选，该参数暂未对外开放
      */
     public $AmsDetailSet;
 
@@ -52,7 +52,7 @@ class DescribeAmsListResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $AmsDetailSet 返回列表数据
+     * @param array $AmsDetailSet 返回列表数据----非必选，该参数暂未对外开放
      * @param integer $Total 总条数
      * @param string $PageToken 分页 token
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。

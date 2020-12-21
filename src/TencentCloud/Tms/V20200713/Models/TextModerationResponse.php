@@ -26,14 +26,14 @@ use TencentCloud\Common\AbstractModel;
  0：正常 1：可疑
  * @method void setEvilFlag(integer $EvilFlag) 设置数据是否属于恶意类型。
  0：正常 1：可疑
- * @method string getLabel() 获取机器识别后判断违规所属类型。
-Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义关键词
- * @method void setLabel(string $Label) 设置机器识别后判断违规所属类型。
-Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义关键词
+ * @method string getLabel() 获取恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
+以及令人反感、不安全或不适宜的内容类型。
+ * @method void setLabel(string $Label) 设置恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
+以及令人反感、不安全或不适宜的内容类型。
  * @method string getSuggestion() 获取建议您拿到判断结果后的执行操作。
-Block：建议打击，Review：建议复审，Normal：建议通过。
+建议值，Block：建议屏蔽，Review：建议复审，Pass：建议通过
  * @method void setSuggestion(string $Suggestion) 设置建议您拿到判断结果后的执行操作。
-Block：建议打击，Review：建议复审，Normal：建议通过。
+建议值，Block：建议屏蔽，Review：建议复审，Pass：建议通过
  * @method array getKeywords() 获取文本命中的关键词信息，用于提示您文本违规的具体原因，可能会返回多个命中的关键词。（如：加我微信）
 如返回值为空，Score不为空，即识别结果（Label）是来自于语义模型判断的返回值。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -56,6 +56,10 @@ Block：建议打击，Review：建议复审，Normal：建议通过。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExtra(string $Extra) 设置扩展字段，用于特定信息返回，不同客户/Biztype下返回信息不同。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDataId() 获取请求参数中的DataId
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDataId(string $DataId) 设置请求参数中的DataId
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -73,14 +77,14 @@ class TextModerationResponse extends AbstractModel
     public $EvilFlag;
 
     /**
-     * @var string 机器识别后判断违规所属类型。
-Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义关键词
+     * @var string 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
+以及令人反感、不安全或不适宜的内容类型。
      */
     public $Label;
 
     /**
      * @var string 建议您拿到判断结果后的执行操作。
-Block：建议打击，Review：建议复审，Normal：建议通过。
+建议值，Block：建议屏蔽，Review：建议复审，Pass：建议通过
      */
     public $Suggestion;
 
@@ -116,6 +120,12 @@ Block：建议打击，Review：建议复审，Normal：建议通过。
     public $Extra;
 
     /**
+     * @var string 请求参数中的DataId
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DataId;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -124,10 +134,10 @@ Block：建议打击，Review：建议复审，Normal：建议通过。
      * @param string $BizType 您在入参时所填入的Biztype参数。 -- 该字段暂未开放。
      * @param integer $EvilFlag 数据是否属于恶意类型。
  0：正常 1：可疑
-     * @param string $Label 机器识别后判断违规所属类型。
-Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义关键词
+     * @param string $Label 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
+以及令人反感、不安全或不适宜的内容类型。
      * @param string $Suggestion 建议您拿到判断结果后的执行操作。
-Block：建议打击，Review：建议复审，Normal：建议通过。
+建议值，Block：建议屏蔽，Review：建议复审，Pass：建议通过
      * @param array $Keywords 文本命中的关键词信息，用于提示您文本违规的具体原因，可能会返回多个命中的关键词。（如：加我微信）
 如返回值为空，Score不为空，即识别结果（Label）是来自于语义模型判断的返回值。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -138,6 +148,8 @@ Block：建议打击，Review：建议复审，Normal：建议通过。
      * @param array $RiskDetails 接口识别样本中存在违规账号风险的检测结果。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Extra 扩展字段，用于特定信息返回，不同客户/Biztype下返回信息不同。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DataId 请求参数中的DataId
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -198,6 +210,10 @@ Block：建议打击，Review：建议复审，Normal：建议通过。
 
         if (array_key_exists("Extra",$param) and $param["Extra"] !== null) {
             $this->Extra = $param["Extra"];
+        }
+
+        if (array_key_exists("DataId",$param) and $param["DataId"] !== null) {
+            $this->DataId = $param["DataId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

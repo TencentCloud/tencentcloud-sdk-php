@@ -24,22 +24,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setKeyword(string $Keyword) 设置关键词，长度限制：128 个字符。
  * @method array getUsages() 获取<b>关键词应用场景，可选值：</b>
 1. Recognition.Ocr：通过光学字符识别技术，进行内容识别；
-2. Recognition.Asr：通过语音识别技术，进行内容识别；
-3. Review.Ocr：通过光学字符识别技术，进行内容审核；
-4. Review.Asr：通过语音识别技术，进行内容审核；
+2. Recognition.Asr：通过音频识别技术，进行内容识别；
+3. Review.Ocr：通过光学字符识别技术，进行不适宜的内容识别；
+4. Review.Asr：通过音频识别技术，进行不适宜的音频识别；
 <b>可合并简写为：</b>
-5. Recognition：通过光学字符识别技术、语音识别技术，进行内容识别，等价于 1+2；
-6. Review：通过光学字符识别技术、语音识别技术，进行内容审核，等价于 3+4；
-7. All：通过光学字符识别技术、语音识别技术，进行内容识别、内容审核，等价于 1+2+3+4。
+5. Recognition：通过光学字符识别技术、音频识别技术，进行内容识别，等价于 1+2；
+6. Review：通过光学字符识别技术、音频识别技术，进行不适宜的内容识别，等价于 3+4；
+7. All：包含以上全部，等价于 1+2+3+4。
  * @method void setUsages(array $Usages) 设置<b>关键词应用场景，可选值：</b>
 1. Recognition.Ocr：通过光学字符识别技术，进行内容识别；
-2. Recognition.Asr：通过语音识别技术，进行内容识别；
-3. Review.Ocr：通过光学字符识别技术，进行内容审核；
-4. Review.Asr：通过语音识别技术，进行内容审核；
+2. Recognition.Asr：通过音频识别技术，进行内容识别；
+3. Review.Ocr：通过光学字符识别技术，进行不适宜的内容识别；
+4. Review.Asr：通过音频识别技术，进行不适宜的音频识别；
 <b>可合并简写为：</b>
-5. Recognition：通过光学字符识别技术、语音识别技术，进行内容识别，等价于 1+2；
-6. Review：通过光学字符识别技术、语音识别技术，进行内容审核，等价于 3+4；
-7. All：通过光学字符识别技术、语音识别技术，进行内容识别、内容审核，等价于 1+2+3+4。
+5. Recognition：通过光学字符识别技术、音频识别技术，进行内容识别，等价于 1+2；
+6. Review：通过光学字符识别技术、音频识别技术，进行不适宜的内容识别，等价于 3+4；
+7. All：包含以上全部，等价于 1+2+3+4。
  * @method AiSampleTagOperation getTagOperationInfo() 获取标签操作信息。
  * @method void setTagOperationInfo(AiSampleTagOperation $TagOperationInfo) 设置标签操作信息。
  */
@@ -53,13 +53,13 @@ class ModifyWordSampleRequest extends AbstractModel
     /**
      * @var array <b>关键词应用场景，可选值：</b>
 1. Recognition.Ocr：通过光学字符识别技术，进行内容识别；
-2. Recognition.Asr：通过语音识别技术，进行内容识别；
-3. Review.Ocr：通过光学字符识别技术，进行内容审核；
-4. Review.Asr：通过语音识别技术，进行内容审核；
+2. Recognition.Asr：通过音频识别技术，进行内容识别；
+3. Review.Ocr：通过光学字符识别技术，进行不适宜的内容识别；
+4. Review.Asr：通过音频识别技术，进行不适宜的音频识别；
 <b>可合并简写为：</b>
-5. Recognition：通过光学字符识别技术、语音识别技术，进行内容识别，等价于 1+2；
-6. Review：通过光学字符识别技术、语音识别技术，进行内容审核，等价于 3+4；
-7. All：通过光学字符识别技术、语音识别技术，进行内容识别、内容审核，等价于 1+2+3+4。
+5. Recognition：通过光学字符识别技术、音频识别技术，进行内容识别，等价于 1+2；
+6. Review：通过光学字符识别技术、音频识别技术，进行不适宜的内容识别，等价于 3+4；
+7. All：包含以上全部，等价于 1+2+3+4。
      */
     public $Usages;
 
@@ -72,13 +72,13 @@ class ModifyWordSampleRequest extends AbstractModel
      * @param string $Keyword 关键词，长度限制：128 个字符。
      * @param array $Usages <b>关键词应用场景，可选值：</b>
 1. Recognition.Ocr：通过光学字符识别技术，进行内容识别；
-2. Recognition.Asr：通过语音识别技术，进行内容识别；
-3. Review.Ocr：通过光学字符识别技术，进行内容审核；
-4. Review.Asr：通过语音识别技术，进行内容审核；
+2. Recognition.Asr：通过音频识别技术，进行内容识别；
+3. Review.Ocr：通过光学字符识别技术，进行不适宜的内容识别；
+4. Review.Asr：通过音频识别技术，进行不适宜的音频识别；
 <b>可合并简写为：</b>
-5. Recognition：通过光学字符识别技术、语音识别技术，进行内容识别，等价于 1+2；
-6. Review：通过光学字符识别技术、语音识别技术，进行内容审核，等价于 3+4；
-7. All：通过光学字符识别技术、语音识别技术，进行内容识别、内容审核，等价于 1+2+3+4。
+5. Recognition：通过光学字符识别技术、音频识别技术，进行内容识别，等价于 1+2；
+6. Review：通过光学字符识别技术、音频识别技术，进行不适宜的内容识别，等价于 3+4；
+7. All：包含以上全部，等价于 1+2+3+4。
      * @param AiSampleTagOperation $TagOperationInfo 标签操作信息。
      */
     function __construct()

@@ -20,29 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeReviewDetails返回参数结构体
  *
- * @method integer getTotalCount() 获取发起内容审核次数。
- * @method void setTotalCount(integer $TotalCount) 设置发起内容审核次数。
- * @method integer getTotalDuration() 获取内容审核总时长。
- * @method void setTotalDuration(integer $TotalDuration) 设置内容审核总时长。
- * @method array getData() 获取内容审核时长统计数据，每天一个数据。
- * @method void setData(array $Data) 设置内容审核时长统计数据，每天一个数据。
+ * @method integer getTotalCount() 获取发起内容智能识别次数。
+ * @method void setTotalCount(integer $TotalCount) 设置发起内容智能识别次数。
+ * @method integer getTotalDuration() 获取内容智能识别总时长。
+ * @method void setTotalDuration(integer $TotalDuration) 设置内容智能识别总时长。
+ * @method array getData() 获取内容智能识别时长统计数据，每天一个数据。
+ * @method void setData(array $Data) 设置内容智能识别时长统计数据，每天一个数据。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeReviewDetailsResponse extends AbstractModel
 {
     /**
-     * @var integer 发起内容审核次数。
+     * @var integer 发起内容智能识别次数。
      */
     public $TotalCount;
 
     /**
-     * @var integer 内容审核总时长。
+     * @var integer 内容智能识别总时长。
      */
     public $TotalDuration;
 
     /**
-     * @var array 内容审核时长统计数据，每天一个数据。
+     * @var array 内容智能识别时长统计数据，每天一个数据。
      */
     public $Data;
 
@@ -52,9 +52,9 @@ class DescribeReviewDetailsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 发起内容审核次数。
-     * @param integer $TotalDuration 内容审核总时长。
-     * @param array $Data 内容审核时长统计数据，每天一个数据。
+     * @param integer $TotalCount 发起内容智能识别次数。
+     * @param integer $TotalDuration 内容智能识别总时长。
+     * @param array $Data 内容智能识别时长统计数据，每天一个数据。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

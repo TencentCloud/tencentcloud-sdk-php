@@ -20,21 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAccountBalance返回参数结构体
  *
- * @method integer getAccountType() 获取账户类型 1=设备接入;2=云存
+ * @method integer getAccountType() 获取账户类型 1=设备接入;2=云存。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAccountType(integer $AccountType) 设置账户类型 1=设备接入;2=云存
+ * @method void setAccountType(integer $AccountType) 设置账户类型 1=设备接入;2=云存。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getBalance() 获取余额
+ * @method integer getBalance() 获取余额, 单位 : 分(人民币)。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBalance(integer $Balance) 设置余额
+ * @method void setBalance(integer $Balance) 设置余额, 单位 : 分(人民币)。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getState() 获取账户状态，1=正常；8=冻结；9=销户
+ * @method integer getState() 获取账户状态，1=正常；8=冻结；9=销户。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setState(integer $State) 设置账户状态，1=正常；8=冻结；9=销户
+ * @method void setState(integer $State) 设置账户状态，1=正常；8=冻结；9=销户。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getLastUpdateTime() 获取最后修改时间，UTC值
+ * @method integer getLastUpdateTime() 获取最后修改时间，UTC值。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLastUpdateTime(integer $LastUpdateTime) 设置最后修改时间，UTC值
+ * @method void setLastUpdateTime(integer $LastUpdateTime) 设置最后修改时间，UTC值。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -42,25 +42,25 @@ use TencentCloud\Common\AbstractModel;
 class DescribeAccountBalanceResponse extends AbstractModel
 {
     /**
-     * @var integer 账户类型 1=设备接入;2=云存
+     * @var integer 账户类型 1=设备接入;2=云存。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AccountType;
 
     /**
-     * @var integer 余额
+     * @var integer 余额, 单位 : 分(人民币)。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Balance;
 
     /**
-     * @var integer 账户状态，1=正常；8=冻结；9=销户
+     * @var integer 账户状态，1=正常；8=冻结；9=销户。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $State;
 
     /**
-     * @var integer 最后修改时间，UTC值
+     * @var integer 最后修改时间，UTC值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LastUpdateTime;
@@ -71,13 +71,13 @@ class DescribeAccountBalanceResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $AccountType 账户类型 1=设备接入;2=云存
+     * @param integer $AccountType 账户类型 1=设备接入;2=云存。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Balance 余额
+     * @param integer $Balance 余额, 单位 : 分(人民币)。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $State 账户状态，1=正常；8=冻结；9=销户
+     * @param integer $State 账户状态，1=正常；8=冻结；9=销户。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $LastUpdateTime 最后修改时间，UTC值
+     * @param integer $LastUpdateTime 最后修改时间，UTC值。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

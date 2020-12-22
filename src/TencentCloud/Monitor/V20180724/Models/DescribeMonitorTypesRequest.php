@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeMonitorTypes请求参数结构体
  *
- * @method string getModule() 获取固定值，为"monitor"
- * @method void setModule(string $Module) 设置固定值，为"monitor"
+ * @method string getModule() 获取模块名，固定值 monitor
+ * @method void setModule(string $Module) 设置模块名，固定值 monitor
  */
 class DescribeMonitorTypesRequest extends AbstractModel
 {
     /**
-     * @var string 固定值，为"monitor"
+     * @var string 模块名，固定值 monitor
      */
     public $Module;
 
     /**
-     * @param string $Module 固定值，为"monitor"
+     * @param string $Module 模块名，固定值 monitor
      */
     function __construct()
     {

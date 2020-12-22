@@ -62,6 +62,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEventId(integer $EventId) 设置事件Id
  * @method string getRegion() 获取地域
  * @method void setRegion(string $Region) 设置地域
+ * @method integer getPolicyExists() 获取策略是否存在 0=不存在 1=存在
+ * @method void setPolicyExists(integer $PolicyExists) 设置策略是否存在 0=不存在 1=存在
  */
 class AlarmHistory extends AbstractModel
 {
@@ -171,6 +173,11 @@ class AlarmHistory extends AbstractModel
     public $Region;
 
     /**
+     * @var integer 策略是否存在 0=不存在 1=存在
+     */
+    public $PolicyExists;
+
+    /**
      * @param string $AlarmId 告警历史Id
      * @param string $MonitorType 监控类型
      * @param string $Namespace 策略类型
@@ -192,6 +199,7 @@ class AlarmHistory extends AbstractModel
      * @param string $AlarmType 告警类型
      * @param integer $EventId 事件Id
      * @param string $Region 地域
+     * @param integer $PolicyExists 策略是否存在 0=不存在 1=存在
      */
     function __construct()
     {
@@ -293,6 +301,10 @@ class AlarmHistory extends AbstractModel
 
         if (array_key_exists("Region",$param) and $param["Region"] !== null) {
             $this->Region = $param["Region"];
+        }
+
+        if (array_key_exists("PolicyExists",$param) and $param["PolicyExists"] !== null) {
+            $this->PolicyExists = $param["PolicyExists"];
         }
     }
 }

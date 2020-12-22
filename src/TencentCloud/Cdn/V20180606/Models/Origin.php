@@ -105,9 +105,9 @@ ip：IP 列表作为源站
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBasePath(string $BasePath) 设置回源路径
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getPathRules() 获取分路径回源配置规则
+ * @method array getPathRules() 获取回源路径重写规则配置
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPathRules(array $PathRules) 设置分路径回源配置规则
+ * @method void setPathRules(array $PathRules) 设置回源路径重写规则配置
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class Origin extends AbstractModel
@@ -188,7 +188,7 @@ ip：IP 列表作为源站
     public $BasePath;
 
     /**
-     * @var array 分路径回源配置规则
+     * @var array 回源路径重写规则配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PathRules;
@@ -233,7 +233,7 @@ ip：IP 列表作为源站
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BasePath 回源路径
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $PathRules 分路径回源配置规则
+     * @param array $PathRules 回源路径重写规则配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

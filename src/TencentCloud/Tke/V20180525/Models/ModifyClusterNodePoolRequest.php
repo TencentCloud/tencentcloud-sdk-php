@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaints(array $Taints) 设置污点
  * @method boolean getEnableAutoscale() 获取是否开启伸缩
  * @method void setEnableAutoscale(boolean $EnableAutoscale) 设置是否开启伸缩
+ * @method string getOsName() 获取操作系统名称
+ * @method void setOsName(string $OsName) 设置操作系统名称
+ * @method string getOsCustomizeType() 获取镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值)
+ * @method void setOsCustomizeType(string $OsCustomizeType) 设置镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值)
  */
 class ModifyClusterNodePoolRequest extends AbstractModel
 {
@@ -80,6 +84,16 @@ class ModifyClusterNodePoolRequest extends AbstractModel
     public $EnableAutoscale;
 
     /**
+     * @var string 操作系统名称
+     */
+    public $OsName;
+
+    /**
+     * @var string 镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值)
+     */
+    public $OsCustomizeType;
+
+    /**
      * @param string $ClusterId 集群ID
      * @param string $NodePoolId 节点池ID
      * @param string $Name 名称
@@ -88,6 +102,8 @@ class ModifyClusterNodePoolRequest extends AbstractModel
      * @param array $Labels 标签
      * @param array $Taints 污点
      * @param boolean $EnableAutoscale 是否开启伸缩
+     * @param string $OsName 操作系统名称
+     * @param string $OsCustomizeType 镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值)
      */
     function __construct()
     {
@@ -142,6 +158,14 @@ class ModifyClusterNodePoolRequest extends AbstractModel
 
         if (array_key_exists("EnableAutoscale",$param) and $param["EnableAutoscale"] !== null) {
             $this->EnableAutoscale = $param["EnableAutoscale"];
+        }
+
+        if (array_key_exists("OsName",$param) and $param["OsName"] !== null) {
+            $this->OsName = $param["OsName"];
+        }
+
+        if (array_key_exists("OsCustomizeType",$param) and $param["OsCustomizeType"] !== null) {
+            $this->OsCustomizeType = $param["OsCustomizeType"];
         }
     }
 }

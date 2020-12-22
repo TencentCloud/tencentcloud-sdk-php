@@ -24,10 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreatedTimestamp(integer $CreatedTimestamp) 设置创建时间
  * @method string getTemplateName() 获取模板名称
  * @method void setTemplateName(string $TemplateName) 设置模板名称
- * @method integer getTemplateStatus() 获取模板状态。1-审核中|0-已通过|其它-不可用
- * @method void setTemplateStatus(integer $TemplateStatus) 设置模板状态。1-审核中|0-已通过|其它-不可用
+ * @method integer getTemplateStatus() 获取模板状态。1-审核中|0-已通过|2-拒绝|其它-不可用
+ * @method void setTemplateStatus(integer $TemplateStatus) 设置模板状态。1-审核中|0-已通过|2-拒绝|其它-不可用
  * @method integer getTemplateID() 获取模板ID
  * @method void setTemplateID(integer $TemplateID) 设置模板ID
+ * @method string getReviewReason() 获取审核原因
+ * @method void setReviewReason(string $ReviewReason) 设置审核原因
  */
 class TemplatesMetadata extends AbstractModel
 {
@@ -42,7 +44,7 @@ class TemplatesMetadata extends AbstractModel
     public $TemplateName;
 
     /**
-     * @var integer 模板状态。1-审核中|0-已通过|其它-不可用
+     * @var integer 模板状态。1-审核中|0-已通过|2-拒绝|其它-不可用
      */
     public $TemplateStatus;
 
@@ -52,10 +54,16 @@ class TemplatesMetadata extends AbstractModel
     public $TemplateID;
 
     /**
+     * @var string 审核原因
+     */
+    public $ReviewReason;
+
+    /**
      * @param integer $CreatedTimestamp 创建时间
      * @param string $TemplateName 模板名称
-     * @param integer $TemplateStatus 模板状态。1-审核中|0-已通过|其它-不可用
+     * @param integer $TemplateStatus 模板状态。1-审核中|0-已通过|2-拒绝|其它-不可用
      * @param integer $TemplateID 模板ID
+     * @param string $ReviewReason 审核原因
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class TemplatesMetadata extends AbstractModel
 
         if (array_key_exists("TemplateID",$param) and $param["TemplateID"] !== null) {
             $this->TemplateID = $param["TemplateID"];
+        }
+
+        if (array_key_exists("ReviewReason",$param) and $param["ReviewReason"] !== null) {
+            $this->ReviewReason = $param["ReviewReason"];
         }
     }
 }

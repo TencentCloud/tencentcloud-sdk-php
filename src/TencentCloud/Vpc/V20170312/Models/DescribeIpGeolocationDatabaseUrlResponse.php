@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeIpGeolocationDatabaseUrl返回参数结构体
  *
- * @method string getDownLoadUrl() 获取IP地址库下载链接地址
- * @method void setDownLoadUrl(string $DownLoadUrl) 设置IP地址库下载链接地址
+ * @method string getDownLoadUrl() 获取IP地理位置库下载链接地址。
+ * @method void setDownLoadUrl(string $DownLoadUrl) 设置IP地理位置库下载链接地址。
  * @method string getExpiredAt() 获取链接到期时间。按照`ISO8601`标准表示，并且使用`UTC`时间。
  * @method void setExpiredAt(string $ExpiredAt) 设置链接到期时间。按照`ISO8601`标准表示，并且使用`UTC`时间。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeIpGeolocationDatabaseUrlResponse extends AbstractModel
 {
     /**
-     * @var string IP地址库下载链接地址
+     * @var string IP地理位置库下载链接地址。
      */
     public $DownLoadUrl;
 
@@ -45,7 +45,7 @@ class DescribeIpGeolocationDatabaseUrlResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $DownLoadUrl IP地址库下载链接地址
+     * @param string $DownLoadUrl IP地理位置库下载链接地址。
      * @param string $ExpiredAt 链接到期时间。按照`ISO8601`标准表示，并且使用`UTC`时间。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

@@ -24,6 +24,28 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLivePackageInfoList(array $LivePackageInfoList) 设置套餐包信息。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getPackageBillMode() 获取套餐包当前计费方式:
+-1: 无计费方式或获取失败
+0: 无计费方式
+201: 月结带宽
+202: 月结流量
+203: 日结带宽
+204: 日结流量
+205: 日结时长
+206: 月结时长
+304: 日结流量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPackageBillMode(integer $PackageBillMode) 设置套餐包当前计费方式:
+-1: 无计费方式或获取失败
+0: 无计费方式
+201: 月结带宽
+202: 月结流量
+203: 日结带宽
+204: 日结流量
+205: 日结时长
+206: 月结时长
+304: 日结流量
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -36,12 +58,38 @@ class DescribeLivePackageInfoResponse extends AbstractModel
     public $LivePackageInfoList;
 
     /**
+     * @var integer 套餐包当前计费方式:
+-1: 无计费方式或获取失败
+0: 无计费方式
+201: 月结带宽
+202: 月结流量
+203: 日结带宽
+204: 日结流量
+205: 日结时长
+206: 月结时长
+304: 日结流量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PackageBillMode;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param array $LivePackageInfoList 套餐包信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $PackageBillMode 套餐包当前计费方式:
+-1: 无计费方式或获取失败
+0: 无计费方式
+201: 月结带宽
+202: 月结流量
+203: 日结带宽
+204: 日结流量
+205: 日结时长
+206: 月结时长
+304: 日结流量
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -65,6 +113,10 @@ class DescribeLivePackageInfoResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->LivePackageInfoList, $obj);
             }
+        }
+
+        if (array_key_exists("PackageBillMode",$param) and $param["PackageBillMode"] !== null) {
+            $this->PackageBillMode = $param["PackageBillMode"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

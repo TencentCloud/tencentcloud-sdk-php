@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateVpnGateway请求参数结构体
  *
- * @method string getVpcId() 获取VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
- * @method void setVpcId(string $VpcId) 设置VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
+ * @method string getVpcId() 获取VPC实例ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口返回值中的VpcId获取。
+ * @method void setVpcId(string $VpcId) 设置VPC实例ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口返回值中的VpcId获取。
  * @method string getVpnGatewayName() 获取VPN网关名称，最大长度不能超过60个字节。
  * @method void setVpnGatewayName(string $VpnGatewayName) 设置VPN网关名称，最大长度不能超过60个字节。
  * @method integer getInternetMaxBandwidthOut() 获取公网带宽设置。可选带宽规格：5, 10, 20, 50, 100；单位：Mbps
@@ -40,7 +40,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateVpnGatewayRequest extends AbstractModel
 {
     /**
-     * @var string VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
+     * @var string VPC实例ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口返回值中的VpcId获取。
      */
     public $VpcId;
 
@@ -80,7 +80,7 @@ class CreateVpnGatewayRequest extends AbstractModel
     public $Tags;
 
     /**
-     * @param string $VpcId VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
+     * @param string $VpcId VPC实例ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口返回值中的VpcId获取。
      * @param string $VpnGatewayName VPN网关名称，最大长度不能超过60个字节。
      * @param integer $InternetMaxBandwidthOut 公网带宽设置。可选带宽规格：5, 10, 20, 50, 100；单位：Mbps
      * @param string $InstanceChargeType VPN网关计费模式，PREPAID：表示预付费，即包年包月，POSTPAID_BY_HOUR：表示后付费，即按量计费。默认：POSTPAID_BY_HOUR，如果指定预付费模式，参数InstanceChargePrepaid必填。

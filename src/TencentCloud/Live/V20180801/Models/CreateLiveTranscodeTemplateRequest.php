@@ -20,11 +20,11 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateLiveTranscodeTemplate请求参数结构体
  *
- * @method string getTemplateName() 获取模板名称，例：900 900p 仅支持字母和数字的组合。
+ * @method string getTemplateName() 获取模板名称，例： 900p 仅支持字母和数字的组合。
 长度限制：
   标准转码：1-10个字符
   极速高清转码：3-10个字符
- * @method void setTemplateName(string $TemplateName) 设置模板名称，例：900 900p 仅支持字母和数字的组合。
+ * @method void setTemplateName(string $TemplateName) 设置模板名称，例： 900p 仅支持字母和数字的组合。
 长度限制：
   标准转码：1-10个字符
   极速高清转码：3-10个字符
@@ -118,7 +118,7 @@ baseline/main/high。默认baseline
 class CreateLiveTranscodeTemplateRequest extends AbstractModel
 {
     /**
-     * @var string 模板名称，例：900 900p 仅支持字母和数字的组合。
+     * @var string 模板名称，例： 900p 仅支持字母和数字的组合。
 长度限制：
   标准转码：1-10个字符
   极速高清转码：3-10个字符
@@ -245,7 +245,7 @@ baseline/main/high。默认baseline
     public $ShortEdgeAsHeight;
 
     /**
-     * @param string $TemplateName 模板名称，例：900 900p 仅支持字母和数字的组合。
+     * @param string $TemplateName 模板名称，例： 900p 仅支持字母和数字的组合。
 长度限制：
   标准转码：1-10个字符
   极速高清转码：3-10个字符

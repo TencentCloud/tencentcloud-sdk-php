@@ -31,15 +31,19 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getUsed() 获取使用量。
 注意：当为流量包时单位为字节。
 当为转码包时单位为分钟。
+当为连麦包时单位为小时。
  * @method void setUsed(integer $Used) 设置使用量。
 注意：当为流量包时单位为字节。
 当为转码包时单位为分钟。
+当为连麦包时单位为小时。
  * @method integer getLeft() 获取剩余量。
 注意：当为流量包时单位为字节。
 当为转码包时单位为分钟。
+当为连麦包时单位为小时。
  * @method void setLeft(integer $Left) 设置剩余量。
 注意：当为流量包时单位为字节。
 当为转码包时单位为分钟。
+当为连麦包时单位为小时。
  * @method string getBuyTime() 获取购买时间。
  * @method void setBuyTime(string $BuyTime) 设置购买时间。
  * @method string getExpireTime() 获取过期时间。
@@ -48,18 +52,26 @@ use TencentCloud\Common\AbstractModel;
 0: 流量包。
 1: 普通转码包。
 2: 极速高清包。
+3: 连麦包。
  * @method void setType(integer $Type) 设置包类型，可选值:
 0: 流量包。
 1: 普通转码包。
 2: 极速高清包。
+3: 连麦包。
  * @method integer getStatus() 获取包状态，可选值:
 0: 未使用。
 1: 使用中。
 2: 已过期。
+3: 已冻结。
+4: 已耗尽。
+5: 已退款
  * @method void setStatus(integer $Status) 设置包状态，可选值:
 0: 未使用。
 1: 使用中。
 2: 已过期。
+3: 已冻结。
+4: 已耗尽。
+5: 已退款
  */
 class LivePackageInfo extends AbstractModel
 {
@@ -79,6 +91,7 @@ class LivePackageInfo extends AbstractModel
      * @var integer 使用量。
 注意：当为流量包时单位为字节。
 当为转码包时单位为分钟。
+当为连麦包时单位为小时。
      */
     public $Used;
 
@@ -86,6 +99,7 @@ class LivePackageInfo extends AbstractModel
      * @var integer 剩余量。
 注意：当为流量包时单位为字节。
 当为转码包时单位为分钟。
+当为连麦包时单位为小时。
      */
     public $Left;
 
@@ -104,6 +118,7 @@ class LivePackageInfo extends AbstractModel
 0: 流量包。
 1: 普通转码包。
 2: 极速高清包。
+3: 连麦包。
      */
     public $Type;
 
@@ -112,6 +127,9 @@ class LivePackageInfo extends AbstractModel
 0: 未使用。
 1: 使用中。
 2: 已过期。
+3: 已冻结。
+4: 已耗尽。
+5: 已退款
      */
     public $Status;
 
@@ -123,19 +141,25 @@ class LivePackageInfo extends AbstractModel
      * @param integer $Used 使用量。
 注意：当为流量包时单位为字节。
 当为转码包时单位为分钟。
+当为连麦包时单位为小时。
      * @param integer $Left 剩余量。
 注意：当为流量包时单位为字节。
 当为转码包时单位为分钟。
+当为连麦包时单位为小时。
      * @param string $BuyTime 购买时间。
      * @param string $ExpireTime 过期时间。
      * @param integer $Type 包类型，可选值:
 0: 流量包。
 1: 普通转码包。
 2: 极速高清包。
+3: 连麦包。
      * @param integer $Status 包状态，可选值:
 0: 未使用。
 1: 使用中。
 2: 已过期。
+3: 已冻结。
+4: 已耗尽。
+5: 已退款
      */
     function __construct()
     {

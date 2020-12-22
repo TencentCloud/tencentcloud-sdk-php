@@ -96,7 +96,11 @@ ProWritable.Pos.setVal.x;
 物模型写入数据时,不需要传入时标信息,平台以当前时标作为数据的时标更新物模型中的时标信息。
  * @method Models\ModifyProductResponse ModifyProduct(Models\ModifyProductRequest $req) 本接口（ModifyProduct）用于编辑物联网智能视频产品的相关信息。
  * @method Models\ModifyVerContentResponse ModifyVerContent(Models\ModifyVerContentRequest $req) 编辑版本描述信息
- * @method Models\RefundStorageServiceResponse RefundStorageService(Models\RefundStorageServiceRequest $req) 退订已购买的云存服务
+ * @method Models\RefundStorageServiceResponse RefundStorageService(Models\RefundStorageServiceRequest $req) 本接口（RefundStorageService）用于退订已购买的云存服务。
+退订时，云存服务对应订单的处理方式 : 
+1. 未开始的订单自动回到已付费订单池
+2. 已开始的订单自动失效
+3. 购买云存接口,优先从已付费订单池中分配订单
  * @method Models\RunDeviceResponse RunDevice(Models\RunDeviceRequest $req) 本接口（RunDevice）用于启用设备，可进行批量操作，每次操作最多100台设备。
  * @method Models\RunDeviceStreamResponse RunDeviceStream(Models\RunDeviceStreamRequest $req) 本接口（RunDeviceStream）用于开启设备推流，可进行批量操作，每次操作最多100台设备。
  * @method Models\RunIotModelResponse RunIotModel(Models\RunIotModelRequest $req) 本接口（RunIotModel）用于对定义的物模型进行发布。

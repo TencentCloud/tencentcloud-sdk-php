@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateEmailIdentity请求参数结构体
  *
- * @method string getEmailIdentity() 获取您的发信域名，建议使用三级以上域名。比如：mail.qcloud.com。
- * @method void setEmailIdentity(string $EmailIdentity) 设置您的发信域名，建议使用三级以上域名。比如：mail.qcloud.com。
+ * @method string getEmailIdentity() 获取您的发信域名，建议使用三级以上域名。例如：mail.qcloud.com。
+ * @method void setEmailIdentity(string $EmailIdentity) 设置您的发信域名，建议使用三级以上域名。例如：mail.qcloud.com。
  */
 class CreateEmailIdentityRequest extends AbstractModel
 {
     /**
-     * @var string 您的发信域名，建议使用三级以上域名。比如：mail.qcloud.com。
+     * @var string 您的发信域名，建议使用三级以上域名。例如：mail.qcloud.com。
      */
     public $EmailIdentity;
 
     /**
-     * @param string $EmailIdentity 您的发信域名，建议使用三级以上域名。比如：mail.qcloud.com。
+     * @param string $EmailIdentity 您的发信域名，建议使用三级以上域名。例如：mail.qcloud.com。
      */
     function __construct()
     {

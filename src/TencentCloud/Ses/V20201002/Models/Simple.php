@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 邮件发送的内容，可以是纯文本(TEXT)，也可以是纯代码(HTML)，或者纯文本+HTML的组合(建议方式)
  *
- * @method string getHtml() 获取Html代码。需要包含所有的代码信息，不要包含外部css，否则会导致显示格式错乱
- * @method void setHtml(string $Html) 设置Html代码。需要包含所有的代码信息，不要包含外部css，否则会导致显示格式错乱
- * @method string getText() 获取纯文本信息，如果没有Html，邮件中会直接显示纯文本；如果有Html，它代表邮件的纯文本样式
- * @method void setText(string $Text) 设置纯文本信息，如果没有Html，邮件中会直接显示纯文本；如果有Html，它代表邮件的纯文本样式
+ * @method string getHtml() 获取base64之后的Html代码。需要包含所有的代码信息，不要包含外部css，否则会导致显示格式错乱
+ * @method void setHtml(string $Html) 设置base64之后的Html代码。需要包含所有的代码信息，不要包含外部css，否则会导致显示格式错乱
+ * @method string getText() 获取base64之后的纯文本信息，如果没有Html，邮件中会直接显示纯文本；如果有Html，它代表邮件的纯文本样式
+ * @method void setText(string $Text) 设置base64之后的纯文本信息，如果没有Html，邮件中会直接显示纯文本；如果有Html，它代表邮件的纯文本样式
  */
 class Simple extends AbstractModel
 {
     /**
-     * @var string Html代码。需要包含所有的代码信息，不要包含外部css，否则会导致显示格式错乱
+     * @var string base64之后的Html代码。需要包含所有的代码信息，不要包含外部css，否则会导致显示格式错乱
      */
     public $Html;
 
     /**
-     * @var string 纯文本信息，如果没有Html，邮件中会直接显示纯文本；如果有Html，它代表邮件的纯文本样式
+     * @var string base64之后的纯文本信息，如果没有Html，邮件中会直接显示纯文本；如果有Html，它代表邮件的纯文本样式
      */
     public $Text;
 
     /**
-     * @param string $Html Html代码。需要包含所有的代码信息，不要包含外部css，否则会导致显示格式错乱
-     * @param string $Text 纯文本信息，如果没有Html，邮件中会直接显示纯文本；如果有Html，它代表邮件的纯文本样式
+     * @param string $Html base64之后的Html代码。需要包含所有的代码信息，不要包含外部css，否则会导致显示格式错乱
+     * @param string $Text base64之后的纯文本信息，如果没有Html，邮件中会直接显示纯文本；如果有Html，它代表邮件的纯文本样式
      */
     function __construct()
     {

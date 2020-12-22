@@ -32,14 +32,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(integer $StartTime) 设置起始时间，默认一天前的时间戳
  * @method integer getEndTime() 获取结束时间，默认当前时间戳
  * @method void setEndTime(integer $EndTime) 设置结束时间，默认当前时间戳
- * @method array getMonitorTypes() 获取根据监控类型过滤 不选默认查所有类型 "MT_QCE"=云产品监控 "MT_CUSTOM"=自定义监控 "MT_PROME"=prometheus监控
- * @method void setMonitorTypes(array $MonitorTypes) 设置根据监控类型过滤 不选默认查所有类型 "MT_QCE"=云产品监控 "MT_CUSTOM"=自定义监控 "MT_PROME"=prometheus监控
+ * @method array getMonitorTypes() 获取根据监控类型过滤 不选默认查所有类型 "MT_QCE"=云产品监控 "
+ * @method void setMonitorTypes(array $MonitorTypes) 设置根据监控类型过滤 不选默认查所有类型 "MT_QCE"=云产品监控 "
  * @method string getAlarmObject() 获取根据告警对象过滤 字符串模糊搜索
  * @method void setAlarmObject(string $AlarmObject) 设置根据告警对象过滤 字符串模糊搜索
  * @method array getAlarmStatus() 获取根据告警状态过滤 ALARM=未恢复 OK=已恢复 NO_CONF=已失效 NO_DATA=数据不足，不选默认查所有
  * @method void setAlarmStatus(array $AlarmStatus) 设置根据告警状态过滤 ALARM=未恢复 OK=已恢复 NO_CONF=已失效 NO_DATA=数据不足，不选默认查所有
- * @method array getProjectIds() 获取根据项目ID过滤，-1=“-“项目 0=默认项目
- * @method void setProjectIds(array $ProjectIds) 设置根据项目ID过滤，-1=“-“项目 0=默认项目
+ * @method array getProjectIds() 获取根据项目ID过滤，-1=无项目 0=默认项目
+ * @method void setProjectIds(array $ProjectIds) 设置根据项目ID过滤，-1=无项目 0=默认项目
  * @method array getInstanceGroupIds() 获取根据实例组ID过滤
  * @method void setInstanceGroupIds(array $InstanceGroupIds) 设置根据实例组ID过滤
  * @method array getNamespaces() 获取根据策略类型过滤
@@ -90,7 +90,7 @@ class DescribeAlarmHistoriesRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var array 根据监控类型过滤 不选默认查所有类型 "MT_QCE"=云产品监控 "MT_CUSTOM"=自定义监控 "MT_PROME"=prometheus监控
+     * @var array 根据监控类型过滤 不选默认查所有类型 "MT_QCE"=云产品监控 "
      */
     public $MonitorTypes;
 
@@ -105,7 +105,7 @@ class DescribeAlarmHistoriesRequest extends AbstractModel
     public $AlarmStatus;
 
     /**
-     * @var array 根据项目ID过滤，-1=“-“项目 0=默认项目
+     * @var array 根据项目ID过滤，-1=无项目 0=默认项目
      */
     public $ProjectIds;
 
@@ -156,10 +156,10 @@ class DescribeAlarmHistoriesRequest extends AbstractModel
      * @param string $Order 默认按首次出现时间倒序排列 "ASC"=正序 "DESC"=逆序
      * @param integer $StartTime 起始时间，默认一天前的时间戳
      * @param integer $EndTime 结束时间，默认当前时间戳
-     * @param array $MonitorTypes 根据监控类型过滤 不选默认查所有类型 "MT_QCE"=云产品监控 "MT_CUSTOM"=自定义监控 "MT_PROME"=prometheus监控
+     * @param array $MonitorTypes 根据监控类型过滤 不选默认查所有类型 "MT_QCE"=云产品监控 "
      * @param string $AlarmObject 根据告警对象过滤 字符串模糊搜索
      * @param array $AlarmStatus 根据告警状态过滤 ALARM=未恢复 OK=已恢复 NO_CONF=已失效 NO_DATA=数据不足，不选默认查所有
-     * @param array $ProjectIds 根据项目ID过滤，-1=“-“项目 0=默认项目
+     * @param array $ProjectIds 根据项目ID过滤，-1=无项目 0=默认项目
      * @param array $InstanceGroupIds 根据实例组ID过滤
      * @param array $Namespaces 根据策略类型过滤
      * @param array $MetricNames 根据指标名过滤

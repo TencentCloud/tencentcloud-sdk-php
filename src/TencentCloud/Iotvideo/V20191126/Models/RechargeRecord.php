@@ -20,57 +20,57 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 充值记录列表
  *
- * @method integer getWaterId() 获取流水记录号
+ * @method integer getWaterId() 获取流水记录号。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWaterId(integer $WaterId) 设置流水记录号
+ * @method void setWaterId(integer $WaterId) 设置流水记录号。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getBalanceBeforeRecharge() 获取充值前的余额
+ * @method integer getBalanceBeforeRecharge() 获取充值前的余额，单位0.01元。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBalanceBeforeRecharge(integer $BalanceBeforeRecharge) 设置充值前的余额
+ * @method void setBalanceBeforeRecharge(integer $BalanceBeforeRecharge) 设置充值前的余额，单位0.01元。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getMoney() 获取充值金额
+ * @method integer getMoney() 获取充值金额，单位0.01元。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMoney(integer $Money) 设置充值金额
+ * @method void setMoney(integer $Money) 设置充值金额，单位0.01元。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getOperateTime() 获取充值时间, UTC值
+ * @method integer getOperateTime() 获取充值时间, UTC值。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOperateTime(integer $OperateTime) 设置充值时间, UTC值
+ * @method void setOperateTime(integer $OperateTime) 设置充值时间, UTC值。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class RechargeRecord extends AbstractModel
 {
     /**
-     * @var integer 流水记录号
+     * @var integer 流水记录号。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WaterId;
 
     /**
-     * @var integer 充值前的余额
+     * @var integer 充值前的余额，单位0.01元。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BalanceBeforeRecharge;
 
     /**
-     * @var integer 充值金额
+     * @var integer 充值金额，单位0.01元。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Money;
 
     /**
-     * @var integer 充值时间, UTC值
+     * @var integer 充值时间, UTC值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OperateTime;
 
     /**
-     * @param integer $WaterId 流水记录号
+     * @param integer $WaterId 流水记录号。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $BalanceBeforeRecharge 充值前的余额
+     * @param integer $BalanceBeforeRecharge 充值前的余额，单位0.01元。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Money 充值金额
+     * @param integer $Money 充值金额，单位0.01元。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $OperateTime 充值时间, UTC值
+     * @param integer $OperateTime 充值时间, UTC值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

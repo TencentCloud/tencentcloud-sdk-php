@@ -23,9 +23,11 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getPackageType() 获取包类型，可选值：
 0：流量包；
 1：转码包。
+2: 连麦包。
  * @method void setPackageType(integer $PackageType) 设置包类型，可选值：
 0：流量包；
 1：转码包。
+2: 连麦包。
  */
 class DescribeLivePackageInfoRequest extends AbstractModel
 {
@@ -33,6 +35,7 @@ class DescribeLivePackageInfoRequest extends AbstractModel
      * @var integer 包类型，可选值：
 0：流量包；
 1：转码包。
+2: 连麦包。
      */
     public $PackageType;
 
@@ -40,6 +43,7 @@ class DescribeLivePackageInfoRequest extends AbstractModel
      * @param integer $PackageType 包类型，可选值：
 0：流量包；
 1：转码包。
+2: 连麦包。
      */
     function __construct()
     {

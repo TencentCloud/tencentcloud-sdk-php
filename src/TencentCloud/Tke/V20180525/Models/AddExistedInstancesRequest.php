@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() 获取集群ID
  * @method void setClusterId(string $ClusterId) 设置集群ID
- * @method array getInstanceIds() 获取实例列表
- * @method void setInstanceIds(array $InstanceIds) 设置实例列表
+ * @method array getInstanceIds() 获取实例列表，不支持竞价实例
+ * @method void setInstanceIds(array $InstanceIds) 设置实例列表，不支持竞价实例
  * @method InstanceAdvancedSettings getInstanceAdvancedSettings() 获取实例额外需要设置参数信息
  * @method void setInstanceAdvancedSettings(InstanceAdvancedSettings $InstanceAdvancedSettings) 设置实例额外需要设置参数信息
  * @method EnhancedService getEnhancedService() 获取增强服务。通过该参数可以指定是否开启云安全、云监控等服务。若不指定该参数，则默认开启云监控、云安全服务。
@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置实例所属安全组。该参数可以通过调用 DescribeSecurityGroups 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。（目前仅支持设置单个sgId）
  * @method string getHostName() 获取重装系统时，可以指定修改实例的HostName(集群为HostName模式时，此参数必传，规则名称除不支持大写字符外与[CVM创建实例](https://cloud.tencent.com/document/product/213/15730)接口HostName一致)
  * @method void setHostName(string $HostName) 设置重装系统时，可以指定修改实例的HostName(集群为HostName模式时，此参数必传，规则名称除不支持大写字符外与[CVM创建实例](https://cloud.tencent.com/document/product/213/15730)接口HostName一致)
+ * @method NodePoolOption getNodePool() 获取节点池选项
+ * @method void setNodePool(NodePoolOption $NodePool) 设置节点池选项
  */
 class AddExistedInstancesRequest extends AbstractModel
 {
@@ -43,7 +45,7 @@ class AddExistedInstancesRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var array 实例列表
+     * @var array 实例列表，不支持竞价实例
      */
     public $InstanceIds;
 
@@ -73,13 +75,19 @@ class AddExistedInstancesRequest extends AbstractModel
     public $HostName;
 
     /**
+     * @var NodePoolOption 节点池选项
+     */
+    public $NodePool;
+
+    /**
      * @param string $ClusterId 集群ID
-     * @param array $InstanceIds 实例列表
+     * @param array $InstanceIds 实例列表，不支持竞价实例
      * @param InstanceAdvancedSettings $InstanceAdvancedSettings 实例额外需要设置参数信息
      * @param EnhancedService $EnhancedService 增强服务。通过该参数可以指定是否开启云安全、云监控等服务。若不指定该参数，则默认开启云监控、云安全服务。
      * @param LoginSettings $LoginSettings 节点登录信息（目前仅支持使用Password或者单个KeyIds）
      * @param array $SecurityGroupIds 实例所属安全组。该参数可以通过调用 DescribeSecurityGroups 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。（目前仅支持设置单个sgId）
      * @param string $HostName 重装系统时，可以指定修改实例的HostName(集群为HostName模式时，此参数必传，规则名称除不支持大写字符外与[CVM创建实例](https://cloud.tencent.com/document/product/213/15730)接口HostName一致)
+     * @param NodePoolOption $NodePool 节点池选项
      */
     function __construct()
     {
@@ -123,6 +131,11 @@ class AddExistedInstancesRequest extends AbstractModel
 
         if (array_key_exists("HostName",$param) and $param["HostName"] !== null) {
             $this->HostName = $param["HostName"];
+        }
+
+        if (array_key_exists("NodePool",$param) and $param["NodePool"] !== null) {
+            $this->NodePool = new NodePoolOption();
+            $this->NodePool->deserialize($param["NodePool"]);
         }
     }
 }

@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndDate(string $EndDate) 设置结束日期
  * @method string getDomain() 获取发信域名
  * @method void setDomain(string $Domain) 设置发信域名
- * @method string getReceivingMailboxType() 获取收件方邮箱类型，比如gmail.com
- * @method void setReceivingMailboxType(string $ReceivingMailboxType) 设置收件方邮箱类型，比如gmail.com
+ * @method string getReceivingMailboxType() 获取收件方邮箱类型，例如gmail.com
+ * @method void setReceivingMailboxType(string $ReceivingMailboxType) 设置收件方邮箱类型，例如gmail.com
  */
 class GetStatisticsReportRequest extends AbstractModel
 {
@@ -47,7 +47,7 @@ class GetStatisticsReportRequest extends AbstractModel
     public $Domain;
 
     /**
-     * @var string 收件方邮箱类型，比如gmail.com
+     * @var string 收件方邮箱类型，例如gmail.com
      */
     public $ReceivingMailboxType;
 
@@ -55,7 +55,7 @@ class GetStatisticsReportRequest extends AbstractModel
      * @param string $StartDate 开始日期
      * @param string $EndDate 结束日期
      * @param string $Domain 发信域名
-     * @param string $ReceivingMailboxType 收件方邮箱类型，比如gmail.com
+     * @param string $ReceivingMailboxType 收件方邮箱类型，例如gmail.com
      */
     function __construct()
     {

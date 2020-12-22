@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SendEmail请求参数结构体
  *
- * @method string getFromEmailAddress() 获取发信邮件地址。比如：noreply@mail.qcloud.com。
- * @method void setFromEmailAddress(string $FromEmailAddress) 设置发信邮件地址。比如：noreply@mail.qcloud.com。
+ * @method string getFromEmailAddress() 获取发信邮件地址。例如：noreply@mail.qcloud.com。
+ * @method void setFromEmailAddress(string $FromEmailAddress) 设置发信邮件地址。例如：noreply@mail.qcloud.com。
  * @method array getDestination() 获取收信人邮箱地址
  * @method void setDestination(array $Destination) 设置收信人邮箱地址
  * @method string getSubject() 获取邮件主题
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class SendEmailRequest extends AbstractModel
 {
     /**
-     * @var string 发信邮件地址。比如：noreply@mail.qcloud.com。
+     * @var string 发信邮件地址。例如：noreply@mail.qcloud.com。
      */
     public $FromEmailAddress;
 
@@ -66,7 +66,7 @@ class SendEmailRequest extends AbstractModel
     public $Simple;
 
     /**
-     * @param string $FromEmailAddress 发信邮件地址。比如：noreply@mail.qcloud.com。
+     * @param string $FromEmailAddress 发信邮件地址。例如：noreply@mail.qcloud.com。
      * @param array $Destination 收信人邮箱地址
      * @param string $Subject 邮件主题
      * @param string $ReplyToAddresses 邮件的“回复”电子邮件地址。可以填写您能收到邮件的邮箱地址，可以是个人邮箱。如果不填，收件人将会回复到腾讯云。

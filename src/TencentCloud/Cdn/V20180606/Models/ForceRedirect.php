@@ -42,6 +42,10 @@ https：强制 https 跳转
  * @method void setRedirectStatusCode(integer $RedirectStatusCode) 设置强制跳转时返回状态码 
 支持 301、302
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCarryHeaders() 获取强制跳转时是否返回增加的头部。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCarryHeaders(string $CarryHeaders) 设置强制跳转时是否返回增加的头部。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ForceRedirect extends AbstractModel
 {
@@ -69,6 +73,12 @@ https：强制 https 跳转
     public $RedirectStatusCode;
 
     /**
+     * @var string 强制跳转时是否返回增加的头部。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CarryHeaders;
+
+    /**
      * @param string $Switch 访问强制跳转配置开关
 on：开启
 off：关闭
@@ -79,6 +89,8 @@ https：强制 https 跳转
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RedirectStatusCode 强制跳转时返回状态码 
 支持 301、302
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CarryHeaders 强制跳转时是否返回增加的头部。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -104,6 +116,10 @@ https：强制 https 跳转
 
         if (array_key_exists("RedirectStatusCode",$param) and $param["RedirectStatusCode"] !== null) {
             $this->RedirectStatusCode = $param["RedirectStatusCode"];
+        }
+
+        if (array_key_exists("CarryHeaders",$param) and $param["CarryHeaders"] !== null) {
+            $this->CarryHeaders = $param["CarryHeaders"];
         }
     }
 }

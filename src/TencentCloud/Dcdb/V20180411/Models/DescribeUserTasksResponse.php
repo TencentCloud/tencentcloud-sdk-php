@@ -14,37 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Gs\V20191118\Models;
+namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateSession返回参数结构体
+ * DescribeUserTasks返回参数结构体
  *
- * @method string getServerSession() 获取服务端session信息，返回给JSSDK
- * @method void setServerSession(string $ServerSession) 设置服务端session信息，返回给JSSDK
- * @method string getRoleNumber() 获取【多人游戏】角色编号；比如1、2、3、4
- * @method void setRoleNumber(string $RoleNumber) 设置【多人游戏】角色编号；比如1、2、3、4
- * @method string getRole() 获取【多人云游】角色；Player表示玩家；Viewer表示观察者
- * @method void setRole(string $Role) 设置【多人云游】角色；Player表示玩家；Viewer表示观察者
+ * @method integer getTotalCount() 获取任务总数
+ * @method void setTotalCount(integer $TotalCount) 设置任务总数
+ * @method array getFlowSet() 获取任务列表
+ * @method void setFlowSet(array $FlowSet) 设置任务列表
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class CreateSessionResponse extends AbstractModel
+class DescribeUserTasksResponse extends AbstractModel
 {
     /**
-     * @var string 服务端session信息，返回给JSSDK
+     * @var integer 任务总数
      */
-    public $ServerSession;
+    public $TotalCount;
 
     /**
-     * @var string 【多人游戏】角色编号；比如1、2、3、4
+     * @var array 任务列表
      */
-    public $RoleNumber;
-
-    /**
-     * @var string 【多人云游】角色；Player表示玩家；Viewer表示观察者
-     */
-    public $Role;
+    public $FlowSet;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -52,9 +45,8 @@ class CreateSessionResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $ServerSession 服务端session信息，返回给JSSDK
-     * @param string $RoleNumber 【多人游戏】角色编号；比如1、2、3、4
-     * @param string $Role 【多人云游】角色；Player表示玩家；Viewer表示观察者
+     * @param integer $TotalCount 任务总数
+     * @param array $FlowSet 任务列表
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -70,16 +62,17 @@ class CreateSessionResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ServerSession",$param) and $param["ServerSession"] !== null) {
-            $this->ServerSession = $param["ServerSession"];
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
         }
 
-        if (array_key_exists("RoleNumber",$param) and $param["RoleNumber"] !== null) {
-            $this->RoleNumber = $param["RoleNumber"];
-        }
-
-        if (array_key_exists("Role",$param) and $param["Role"] !== null) {
-            $this->Role = $param["Role"];
+        if (array_key_exists("FlowSet",$param) and $param["FlowSet"] !== null) {
+            $this->FlowSet = [];
+            foreach ($param["FlowSet"] as $key => $value){
+                $obj = new UserTaskInfo();
+                $obj->deserialize($value);
+                array_push($this->FlowSet, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

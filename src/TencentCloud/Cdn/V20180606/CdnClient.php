@@ -78,6 +78,7 @@ use TencentCloud\Cdn\V20180606\Models as Models;
  * @method Models\DescribePushTasksResponse DescribePushTasks(Models\DescribePushTasksRequest $req) DescribePushTasks  用于查询预热任务提交历史记录及执行进度。
 接口灰度中，暂未全量开放，敬请期待。
  * @method Models\DescribeReportDataResponse DescribeReportData(Models\DescribeReportDataRequest $req) DescribeReportData 用于查询域名/项目维度的日/周/月报表数据。
+ * @method Models\DescribeScdnConfigResponse DescribeScdnConfig(Models\DescribeScdnConfigRequest $req) DescribeScdnConfig 用于查询指定 SCDN 加速域名的安全相关配置
  * @method Models\DescribeScdnTopDataResponse DescribeScdnTopData(Models\DescribeScdnTopDataRequest $req) 获取SCDN的Top数据
  * @method Models\DescribeTrafficPackagesResponse DescribeTrafficPackages(Models\DescribeTrafficPackagesRequest $req) DescribeTrafficPackages 用于查询中国境内 CDN 流量包详情。
  * @method Models\DescribeUrlViolationsResponse DescribeUrlViolations(Models\DescribeUrlViolationsRequest $req) DescribeUrlViolations 用于查询被 CDN 系统扫描到的域名违规 URL 列表及当前状态。
@@ -92,6 +93,7 @@ use TencentCloud\Cdn\V20180606\Models as Models;
  * @method Models\ListClsLogTopicsResponse ListClsLogTopics(Models\ListClsLogTopicsRequest $req) ListClsLogTopics 用于显示日志主题列表。注意：一个日志集下至多含10个日志主题。
  * @method Models\ListClsTopicDomainsResponse ListClsTopicDomains(Models\ListClsTopicDomainsRequest $req) ListClsTopicDomains 用于获取某日志主题下绑定的域名列表。
  * @method Models\ListDiagnoseReportResponse ListDiagnoseReport(Models\ListDiagnoseReportRequest $req) ListDiagnoseReport 用于获取用户诊断URL访问后各个子任务的简要详情。
+ * @method Models\ListScdnDomainsResponse ListScdnDomains(Models\ListScdnDomainsRequest $req) ListScdnDomains 用于查询 SCDN 安全加速域名列表，及域名基本配置信息
  * @method Models\ListScdnLogTasksResponse ListScdnLogTasks(Models\ListScdnLogTasksRequest $req) ListScdnLogTasks 用于查询SCDN日志下载任务列表,以及展示下载任务基本信息
  * @method Models\ListTopDataResponse ListTopData(Models\ListTopDataRequest $req) ListTopData 通过入参 Metric 和 Filter 组合不同，可以查询以下排序数据：
 
@@ -111,8 +113,10 @@ use TencentCloud\Cdn\V20180606\Models as Models;
 默认情况下境内、境外每日预热 URL 限额为各 1000 条，每次最多可提交 20 条。
  * @method Models\SearchClsLogResponse SearchClsLog(Models\SearchClsLogRequest $req) SearchClsLog 用于 CLS 日志检索。支持检索今天，24小时（可选近7中的某一天），近7天的日志数据。
  * @method Models\StartCdnDomainResponse StartCdnDomain(Models\StartCdnDomainRequest $req) StartCdnDomain 用于启用已停用域名的加速服务
+ * @method Models\StartScdnDomainResponse StartScdnDomain(Models\StartScdnDomainRequest $req) StartScdnDomain 用于开启域名的安全防护配置
  * @method Models\StopCdnDomainResponse StopCdnDomain(Models\StopCdnDomainRequest $req) StopCdnDomain 用于停止域名的加速服务。
 注意：停止加速服务后，访问至加速节点的请求将会直接返回 404。为避免对您的业务造成影响，请在停止加速服务前将解析切走。
+ * @method Models\StopScdnDomainResponse StopScdnDomain(Models\StopScdnDomainRequest $req) StopScdnDomain 用于关闭域名的安全防护配置
  * @method Models\UpdateDomainConfigResponse UpdateDomainConfig(Models\UpdateDomainConfigRequest $req) UpdateDomainConfig 用于修改内容分发网络加速域名配置信息
 注意：如果需要更新复杂类型的配置项，必须传递整个对象的所有属性，未传递的属性将使用默认值，建议通过查询接口获取配置属性后，直接修改后传递给本接口。Https配置由于证书的特殊性，更新时不用传递证书和密钥字段。
  * @method Models\UpdateImageConfigResponse UpdateImageConfig(Models\UpdateImageConfigRequest $req) UpdateImageConfig 用于更新控制台图片优化的相关配置，支持Webp、TPG 和 Guetzli。 

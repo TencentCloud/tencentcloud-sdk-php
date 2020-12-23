@@ -14,32 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Gs\V20191118\Models;
+namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * StopGame请求参数结构体
+ * StopScdnDomain请求参数结构体
  *
- * @method string getUserId() 获取游戏用户ID
- * @method void setUserId(string $UserId) 设置游戏用户ID
- * @method string getHostUserId() 获取【多人游戏】游戏主机用户ID
- * @method void setHostUserId(string $HostUserId) 设置【多人游戏】游戏主机用户ID
+ * @method string getDomain() 获取域名
+ * @method void setDomain(string $Domain) 设置域名
  */
-class StopGameRequest extends AbstractModel
+class StopScdnDomainRequest extends AbstractModel
 {
     /**
-     * @var string 游戏用户ID
+     * @var string 域名
      */
-    public $UserId;
+    public $Domain;
 
     /**
-     * @var string 【多人游戏】游戏主机用户ID
-     */
-    public $HostUserId;
-
-    /**
-     * @param string $UserId 游戏用户ID
-     * @param string $HostUserId 【多人游戏】游戏主机用户ID
+     * @param string $Domain 域名
      */
     function __construct()
     {
@@ -54,12 +46,8 @@ class StopGameRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("UserId",$param) and $param["UserId"] !== null) {
-            $this->UserId = $param["UserId"];
-        }
-
-        if (array_key_exists("HostUserId",$param) and $param["HostUserId"] !== null) {
-            $this->HostUserId = $param["HostUserId"];
+        if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
+            $this->Domain = $param["Domain"];
         }
     }
 }

@@ -14,37 +14,36 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Gs\V20191118\Models;
+namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateSession返回参数结构体
+ * ListScdnDomains返回参数结构体
  *
- * @method string getServerSession() 获取服务端session信息，返回给JSSDK
- * @method void setServerSession(string $ServerSession) 设置服务端session信息，返回给JSSDK
- * @method string getRoleNumber() 获取【多人游戏】角色编号；比如1、2、3、4
- * @method void setRoleNumber(string $RoleNumber) 设置【多人游戏】角色编号；比如1、2、3、4
- * @method string getRole() 获取【多人云游】角色；Player表示玩家；Viewer表示观察者
- * @method void setRole(string $Role) 设置【多人云游】角色；Player表示玩家；Viewer表示观察者
+ * @method array getDomainList() 获取域名列表信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDomainList(array $DomainList) 设置域名列表信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTotalCount() 获取域名的总条数。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTotalCount(integer $TotalCount) 设置域名的总条数。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class CreateSessionResponse extends AbstractModel
+class ListScdnDomainsResponse extends AbstractModel
 {
     /**
-     * @var string 服务端session信息，返回给JSSDK
+     * @var array 域名列表信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $ServerSession;
+    public $DomainList;
 
     /**
-     * @var string 【多人游戏】角色编号；比如1、2、3、4
+     * @var integer 域名的总条数。
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $RoleNumber;
-
-    /**
-     * @var string 【多人云游】角色；Player表示玩家；Viewer表示观察者
-     */
-    public $Role;
+    public $TotalCount;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -52,9 +51,10 @@ class CreateSessionResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $ServerSession 服务端session信息，返回给JSSDK
-     * @param string $RoleNumber 【多人游戏】角色编号；比如1、2、3、4
-     * @param string $Role 【多人云游】角色；Player表示玩家；Viewer表示观察者
+     * @param array $DomainList 域名列表信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $TotalCount 域名的总条数。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -70,16 +70,17 @@ class CreateSessionResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ServerSession",$param) and $param["ServerSession"] !== null) {
-            $this->ServerSession = $param["ServerSession"];
+        if (array_key_exists("DomainList",$param) and $param["DomainList"] !== null) {
+            $this->DomainList = [];
+            foreach ($param["DomainList"] as $key => $value){
+                $obj = new ScdnDomain();
+                $obj->deserialize($value);
+                array_push($this->DomainList, $obj);
+            }
         }
 
-        if (array_key_exists("RoleNumber",$param) and $param["RoleNumber"] !== null) {
-            $this->RoleNumber = $param["RoleNumber"];
-        }
-
-        if (array_key_exists("Role",$param) and $param["Role"] !== null) {
-            $this->Role = $param["Role"];
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

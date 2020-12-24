@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCertificateId(string $CertificateId) 设置待绑定自定义域名的证书唯一 ID。针对Protocol 为https或http&https可以选择上传。
  * @method array getPathMappingSet() 获取自定义域名路径映射，最多输入三个Environment，并且只能分别取值“test”、 ”prepub“、”release“。
  * @method void setPathMappingSet(array $PathMappingSet) 设置自定义域名路径映射，最多输入三个Environment，并且只能分别取值“test”、 ”prepub“、”release“。
+ * @method boolean getIsForcedHttps() 获取是否将HTTP请求强制跳转 HTTPS，默认为false。参数为 true时，API网关会将所有使用该自定义域名的 HTTP 协议的请求重定向至 HTTPS 协议进行转发。
+ * @method void setIsForcedHttps(boolean $IsForcedHttps) 设置是否将HTTP请求强制跳转 HTTPS，默认为false。参数为 true时，API网关会将所有使用该自定义域名的 HTTP 协议的请求重定向至 HTTPS 协议进行转发。
  */
 class BindSubDomainRequest extends AbstractModel
 {
@@ -80,6 +82,11 @@ class BindSubDomainRequest extends AbstractModel
     public $PathMappingSet;
 
     /**
+     * @var boolean 是否将HTTP请求强制跳转 HTTPS，默认为false。参数为 true时，API网关会将所有使用该自定义域名的 HTTP 协议的请求重定向至 HTTPS 协议进行转发。
+     */
+    public $IsForcedHttps;
+
+    /**
      * @param string $ServiceId 服务唯一 ID。
      * @param string $SubDomain 待绑定的自定义的域名。
      * @param string $Protocol 服务支持协议，可选值为http、https、http&https。
@@ -88,6 +95,7 @@ class BindSubDomainRequest extends AbstractModel
      * @param string $NetSubDomain 默认域名。
      * @param string $CertificateId 待绑定自定义域名的证书唯一 ID。针对Protocol 为https或http&https可以选择上传。
      * @param array $PathMappingSet 自定义域名路径映射，最多输入三个Environment，并且只能分别取值“test”、 ”prepub“、”release“。
+     * @param boolean $IsForcedHttps 是否将HTTP请求强制跳转 HTTPS，默认为false。参数为 true时，API网关会将所有使用该自定义域名的 HTTP 协议的请求重定向至 HTTPS 协议进行转发。
      */
     function __construct()
     {
@@ -137,6 +145,10 @@ class BindSubDomainRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->PathMappingSet, $obj);
             }
+        }
+
+        if (array_key_exists("IsForcedHttps",$param) and $param["IsForcedHttps"] !== null) {
+            $this->IsForcedHttps = $param["IsForcedHttps"];
         }
     }
 }

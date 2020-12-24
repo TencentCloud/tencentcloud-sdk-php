@@ -88,6 +88,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContents(Contents $Contents) 设置版本发布的描述信息，需要国际化，可以为空
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getAliveInMonthCnt() 获取月活设备数，当月第一天开始有上线的设备数量。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAliveInMonthCnt(integer $AliveInMonthCnt) 设置月活设备数，当月第一天开始有上线的设备数量。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class VersionData extends AbstractModel
 {
@@ -194,6 +198,12 @@ class VersionData extends AbstractModel
     public $Contents;
 
     /**
+     * @var integer 月活设备数，当月第一天开始有上线的设备数量。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AliveInMonthCnt;
+
+    /**
      * @param string $ProductId 产品ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OtaVersion 固件版本号
@@ -227,6 +237,8 @@ class VersionData extends AbstractModel
      * @param string $Remark 备注信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Contents $Contents 版本发布的描述信息，需要国际化，可以为空
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $AliveInMonthCnt 月活设备数，当月第一天开始有上线的设备数量。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -309,6 +321,10 @@ class VersionData extends AbstractModel
         if (array_key_exists("Contents",$param) and $param["Contents"] !== null) {
             $this->Contents = new Contents();
             $this->Contents->deserialize($param["Contents"]);
+        }
+
+        if (array_key_exists("AliveInMonthCnt",$param) and $param["AliveInMonthCnt"] !== null) {
+            $this->AliveInMonthCnt = $param["AliveInMonthCnt"];
         }
     }
 }

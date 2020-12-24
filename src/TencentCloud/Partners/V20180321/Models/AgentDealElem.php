@@ -112,6 +112,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOverdueTime(string $OverdueTime) 设置订单过期时间
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getProductInfo() 获取产品详情
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProductInfo(array $ProductInfo) 设置产品详情
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AgentDealElem extends AbstractModel
 {
@@ -262,6 +266,12 @@ class AgentDealElem extends AbstractModel
     public $OverdueTime;
 
     /**
+     * @var array 产品详情
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ProductInfo;
+
+    /**
      * @param string $DealId 订单自增 ID
      * @param string $DealName 订单号
      * @param string $GoodsCategoryId 商品类型 ID
@@ -307,6 +317,8 @@ class AgentDealElem extends AbstractModel
      * @param string $ActivityId 活动ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OverdueTime 订单过期时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $ProductInfo 产品详情
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -421,6 +433,15 @@ class AgentDealElem extends AbstractModel
 
         if (array_key_exists("OverdueTime",$param) and $param["OverdueTime"] !== null) {
             $this->OverdueTime = $param["OverdueTime"];
+        }
+
+        if (array_key_exists("ProductInfo",$param) and $param["ProductInfo"] !== null) {
+            $this->ProductInfo = [];
+            foreach ($param["ProductInfo"] as $key => $value){
+                $obj = new ProductInfoElem();
+                $obj->deserialize($value);
+                array_push($this->ProductInfo, $obj);
+            }
         }
     }
 }

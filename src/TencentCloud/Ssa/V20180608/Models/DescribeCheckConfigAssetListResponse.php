@@ -14,26 +14,33 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Apigateway\V20180808\Models;
+namespace TencentCloud\Ssa\V20180608\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * BindSubDomain返回参数结构体
+ * DescribeCheckConfigAssetList返回参数结构体
  *
- * @method boolean getResult() 获取绑定操作是否成功。
+ * @method integer getTotal() 获取资产列表总数
+ * @method void setTotal(integer $Total) 设置资产列表总数
+ * @method array getCheckAssetsList() 获取资产列表项
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResult(boolean $Result) 设置绑定操作是否成功。
+ * @method void setCheckAssetsList(array $CheckAssetsList) 设置资产列表项
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class BindSubDomainResponse extends AbstractModel
+class DescribeCheckConfigAssetListResponse extends AbstractModel
 {
     /**
-     * @var boolean 绑定操作是否成功。
+     * @var integer 资产列表总数
+     */
+    public $Total;
+
+    /**
+     * @var array 资产列表项
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Result;
+    public $CheckAssetsList;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -41,7 +48,8 @@ class BindSubDomainResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param boolean $Result 绑定操作是否成功。
+     * @param integer $Total 资产列表总数
+     * @param array $CheckAssetsList 资产列表项
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -58,8 +66,17 @@ class BindSubDomainResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
-            $this->Result = $param["Result"];
+        if (array_key_exists("Total",$param) and $param["Total"] !== null) {
+            $this->Total = $param["Total"];
+        }
+
+        if (array_key_exists("CheckAssetsList",$param) and $param["CheckAssetsList"] !== null) {
+            $this->CheckAssetsList = [];
+            foreach ($param["CheckAssetsList"] as $key => $value){
+                $obj = new CheckAssetItem();
+                $obj->deserialize($value);
+                array_push($this->CheckAssetsList, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

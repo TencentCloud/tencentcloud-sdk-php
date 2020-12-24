@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPathMappingSet(array $PathMappingSet) 设置修改后的路径映射列表。
  * @method string getNetType() 获取网络类型 （'INNER' 或 'OUTER'）
  * @method void setNetType(string $NetType) 设置网络类型 （'INNER' 或 'OUTER'）
+ * @method boolean getIsForcedHttps() 获取是否将HTTP请求强制跳转 HTTPS，默认为false。参数为 true时，API网关会将所有使用该自定义域名的 HTTP 协议的请求重定向至 HTTPS 协议进行转发。
+ * @method void setIsForcedHttps(boolean $IsForcedHttps) 设置是否将HTTP请求强制跳转 HTTPS，默认为false。参数为 true时，API网关会将所有使用该自定义域名的 HTTP 协议的请求重定向至 HTTPS 协议进行转发。
  */
 class ModifySubDomainRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class ModifySubDomainRequest extends AbstractModel
     public $NetType;
 
     /**
+     * @var boolean 是否将HTTP请求强制跳转 HTTPS，默认为false。参数为 true时，API网关会将所有使用该自定义域名的 HTTP 协议的请求重定向至 HTTPS 协议进行转发。
+     */
+    public $IsForcedHttps;
+
+    /**
      * @param string $ServiceId 服务唯一 ID。
      * @param string $SubDomain 待修改路径映射的自定义的域名。
      * @param boolean $IsDefaultMapping 是否修改为使用默认路径映射。为 true，表示使用默认路径映射，为 false，表示使用自定义路径映射。
@@ -80,6 +87,7 @@ class ModifySubDomainRequest extends AbstractModel
      * @param string $Protocol 修改后的自定义域名协议类型。（http，https 或 http&https)
      * @param array $PathMappingSet 修改后的路径映射列表。
      * @param string $NetType 网络类型 （'INNER' 或 'OUTER'）
+     * @param boolean $IsForcedHttps 是否将HTTP请求强制跳转 HTTPS，默认为false。参数为 true时，API网关会将所有使用该自定义域名的 HTTP 协议的请求重定向至 HTTPS 协议进行转发。
      */
     function __construct()
     {
@@ -125,6 +133,10 @@ class ModifySubDomainRequest extends AbstractModel
 
         if (array_key_exists("NetType",$param) and $param["NetType"] !== null) {
             $this->NetType = $param["NetType"];
+        }
+
+        if (array_key_exists("IsForcedHttps",$param) and $param["IsForcedHttps"] !== null) {
+            $this->IsForcedHttps = $param["IsForcedHttps"];
         }
     }
 }

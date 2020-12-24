@@ -14,26 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Apigateway\V20180808\Models;
+namespace TencentCloud\Faceid\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * BindSubDomain返回参数结构体
+ * GetRealNameAuthToken返回参数结构体
  *
- * @method boolean getResult() 获取绑定操作是否成功。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResult(boolean $Result) 设置绑定操作是否成功。
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAuthToken() 获取查询实名认证结果的唯一凭证
+ * @method void setAuthToken(string $AuthToken) 设置查询实名认证结果的唯一凭证
+ * @method string getRedirectURL() 获取实名认证授权地址，认证发起方需要重定向到这个地址获取认证用户的授权
+ * @method void setRedirectURL(string $RedirectURL) 设置实名认证授权地址，认证发起方需要重定向到这个地址获取认证用户的授权
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class BindSubDomainResponse extends AbstractModel
+class GetRealNameAuthTokenResponse extends AbstractModel
 {
     /**
-     * @var boolean 绑定操作是否成功。
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 查询实名认证结果的唯一凭证
      */
-    public $Result;
+    public $AuthToken;
+
+    /**
+     * @var string 实名认证授权地址，认证发起方需要重定向到这个地址获取认证用户的授权
+     */
+    public $RedirectURL;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -41,8 +45,8 @@ class BindSubDomainResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param boolean $Result 绑定操作是否成功。
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AuthToken 查询实名认证结果的唯一凭证
+     * @param string $RedirectURL 实名认证授权地址，认证发起方需要重定向到这个地址获取认证用户的授权
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -58,8 +62,12 @@ class BindSubDomainResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
-            $this->Result = $param["Result"];
+        if (array_key_exists("AuthToken",$param) and $param["AuthToken"] !== null) {
+            $this->AuthToken = $param["AuthToken"];
+        }
+
+        if (array_key_exists("RedirectURL",$param) and $param["RedirectURL"] !== null) {
+            $this->RedirectURL = $param["RedirectURL"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

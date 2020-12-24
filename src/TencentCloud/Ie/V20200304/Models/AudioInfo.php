@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
 6：立体声。
  * @method integer getSampleRate() 获取采样率，单位：Hz。可选项：32000，44100,48000
  * @method void setSampleRate(integer $SampleRate) 设置采样率，单位：Hz。可选项：32000，44100,48000
+ * @method Denoise getDenoise() 获取音频降噪信息
+ * @method void setDenoise(Denoise $Denoise) 设置音频降噪信息
  */
 class AudioInfo extends AbstractModel
 {
@@ -64,6 +66,11 @@ class AudioInfo extends AbstractModel
     public $SampleRate;
 
     /**
+     * @var Denoise 音频降噪信息
+     */
+    public $Denoise;
+
+    /**
      * @param integer $Bitrate 音频码率，取值范围：0 和 [26, 256]，单位：kbps。
 注意：当取值为 0，表示音频码率和原始音频保持一致。
      * @param string $Codec 音频编码器，可选项：aac,mp3,ac3,flac,mp2。
@@ -72,6 +79,7 @@ class AudioInfo extends AbstractModel
 2：双声道，
 6：立体声。
      * @param integer $SampleRate 采样率，单位：Hz。可选项：32000，44100,48000
+     * @param Denoise $Denoise 音频降噪信息
      */
     function __construct()
     {
@@ -100,6 +108,11 @@ class AudioInfo extends AbstractModel
 
         if (array_key_exists("SampleRate",$param) and $param["SampleRate"] !== null) {
             $this->SampleRate = $param["SampleRate"];
+        }
+
+        if (array_key_exists("Denoise",$param) and $param["Denoise"] !== null) {
+            $this->Denoise = new Denoise();
+            $this->Denoise->deserialize($param["Denoise"]);
         }
     }
 }

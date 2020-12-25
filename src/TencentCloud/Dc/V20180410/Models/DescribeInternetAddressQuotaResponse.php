@@ -14,66 +14,66 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cynosdb\V20190107\Models;
+namespace TencentCloud\Dc\V20180410\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateClusters返回参数结构体
+ * DescribeInternetAddressQuota返回参数结构体
  *
- * @method string getTranId() 获取冻结流水ID
+ * @method integer getIpv6PrefixLen() 获取IPv6互联网公网允许的最小前缀长度
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTranId(string $TranId) 设置冻结流水ID
+ * @method void setIpv6PrefixLen(integer $Ipv6PrefixLen) 设置IPv6互联网公网允许的最小前缀长度
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getDealNames() 获取订单号
+ * @method integer getIpv4BgpQuota() 获取BGP类型IPv4互联网地址配额
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDealNames(array $DealNames) 设置订单号
+ * @method void setIpv4BgpQuota(integer $Ipv4BgpQuota) 设置BGP类型IPv4互联网地址配额
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getResourceIds() 获取资源ID列表（异步发货可能无法返回该字段, 强烈建议使用dealNames字段查询接口DescribeResourcesByDealName获取异步发货的资源ID）
+ * @method integer getIpv4OtherQuota() 获取非BGP类型IPv4互联网地址配额
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResourceIds(array $ResourceIds) 设置资源ID列表（异步发货可能无法返回该字段, 强烈建议使用dealNames字段查询接口DescribeResourcesByDealName获取异步发货的资源ID）
+ * @method void setIpv4OtherQuota(integer $Ipv4OtherQuota) 设置非BGP类型IPv4互联网地址配额
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getClusterIds() 获取集群ID列表（异步发货可能不返回该字段, 强烈建议使用dealNames查询接口DescribeResourcesByDealName获取异步发货的集群ID）
+ * @method integer getIpv4BgpNum() 获取BGP类型IPv4互联网地址已使用数量
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setClusterIds(array $ClusterIds) 设置集群ID列表（异步发货可能不返回该字段, 强烈建议使用dealNames查询接口DescribeResourcesByDealName获取异步发货的集群ID）
+ * @method void setIpv4BgpNum(integer $Ipv4BgpNum) 设置BGP类型IPv4互联网地址已使用数量
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getBigDealIds() 获取大订单号
+ * @method integer getIpv4OtherNum() 获取非BGP类型互联网地址已使用数量
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBigDealIds(array $BigDealIds) 设置大订单号
+ * @method void setIpv4OtherNum(integer $Ipv4OtherNum) 设置非BGP类型互联网地址已使用数量
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class CreateClustersResponse extends AbstractModel
+class DescribeInternetAddressQuotaResponse extends AbstractModel
 {
     /**
-     * @var string 冻结流水ID
+     * @var integer IPv6互联网公网允许的最小前缀长度
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $TranId;
+    public $Ipv6PrefixLen;
 
     /**
-     * @var array 订单号
+     * @var integer BGP类型IPv4互联网地址配额
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $DealNames;
+    public $Ipv4BgpQuota;
 
     /**
-     * @var array 资源ID列表（异步发货可能无法返回该字段, 强烈建议使用dealNames字段查询接口DescribeResourcesByDealName获取异步发货的资源ID）
+     * @var integer 非BGP类型IPv4互联网地址配额
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $ResourceIds;
+    public $Ipv4OtherQuota;
 
     /**
-     * @var array 集群ID列表（异步发货可能不返回该字段, 强烈建议使用dealNames查询接口DescribeResourcesByDealName获取异步发货的集群ID）
+     * @var integer BGP类型IPv4互联网地址已使用数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $ClusterIds;
+    public $Ipv4BgpNum;
 
     /**
-     * @var array 大订单号
+     * @var integer 非BGP类型互联网地址已使用数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $BigDealIds;
+    public $Ipv4OtherNum;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -81,15 +81,15 @@ class CreateClustersResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $TranId 冻结流水ID
+     * @param integer $Ipv6PrefixLen IPv6互联网公网允许的最小前缀长度
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $DealNames 订单号
+     * @param integer $Ipv4BgpQuota BGP类型IPv4互联网地址配额
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $ResourceIds 资源ID列表（异步发货可能无法返回该字段, 强烈建议使用dealNames字段查询接口DescribeResourcesByDealName获取异步发货的资源ID）
+     * @param integer $Ipv4OtherQuota 非BGP类型IPv4互联网地址配额
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $ClusterIds 集群ID列表（异步发货可能不返回该字段, 强烈建议使用dealNames查询接口DescribeResourcesByDealName获取异步发货的集群ID）
+     * @param integer $Ipv4BgpNum BGP类型IPv4互联网地址已使用数量
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $BigDealIds 大订单号
+     * @param integer $Ipv4OtherNum 非BGP类型互联网地址已使用数量
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -106,24 +106,24 @@ class CreateClustersResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TranId",$param) and $param["TranId"] !== null) {
-            $this->TranId = $param["TranId"];
+        if (array_key_exists("Ipv6PrefixLen",$param) and $param["Ipv6PrefixLen"] !== null) {
+            $this->Ipv6PrefixLen = $param["Ipv6PrefixLen"];
         }
 
-        if (array_key_exists("DealNames",$param) and $param["DealNames"] !== null) {
-            $this->DealNames = $param["DealNames"];
+        if (array_key_exists("Ipv4BgpQuota",$param) and $param["Ipv4BgpQuota"] !== null) {
+            $this->Ipv4BgpQuota = $param["Ipv4BgpQuota"];
         }
 
-        if (array_key_exists("ResourceIds",$param) and $param["ResourceIds"] !== null) {
-            $this->ResourceIds = $param["ResourceIds"];
+        if (array_key_exists("Ipv4OtherQuota",$param) and $param["Ipv4OtherQuota"] !== null) {
+            $this->Ipv4OtherQuota = $param["Ipv4OtherQuota"];
         }
 
-        if (array_key_exists("ClusterIds",$param) and $param["ClusterIds"] !== null) {
-            $this->ClusterIds = $param["ClusterIds"];
+        if (array_key_exists("Ipv4BgpNum",$param) and $param["Ipv4BgpNum"] !== null) {
+            $this->Ipv4BgpNum = $param["Ipv4BgpNum"];
         }
 
-        if (array_key_exists("BigDealIds",$param) and $param["BigDealIds"] !== null) {
-            $this->BigDealIds = $param["BigDealIds"];
+        if (array_key_exists("Ipv4OtherNum",$param) and $param["Ipv4OtherNum"] !== null) {
+            $this->Ipv4OtherNum = $param["Ipv4OtherNum"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

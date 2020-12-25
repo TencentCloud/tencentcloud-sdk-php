@@ -106,6 +106,26 @@ REJECTED:拒绝
  * @method void setNqaInfo(NQAInfo $NqaInfo) 设置NQA配置信息
  * @method BGPStatus getBgpStatus() 获取BGP状态
  * @method void setBgpStatus(BGPStatus $BgpStatus) 设置BGP状态
+ * @method integer getIPv6Enable() 获取是否开启IPv6
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIPv6Enable(integer $IPv6Enable) 设置是否开启IPv6
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTencentIPv6Address() 获取腾讯侧互联IPv6地址
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTencentIPv6Address(string $TencentIPv6Address) 设置腾讯侧互联IPv6地址
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTencentBackupIPv6Address() 获取腾讯侧备用互联IPv6地址
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTencentBackupIPv6Address(string $TencentBackupIPv6Address) 设置腾讯侧备用互联IPv6地址
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method BGPStatus getBgpIPv6Status() 获取BGPv6状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBgpIPv6Status(BGPStatus $BgpIPv6Status) 设置BGPv6状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCustomerIPv6Address() 获取用户侧互联IPv6地址
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCustomerIPv6Address(string $CustomerIPv6Address) 设置用户侧互联IPv6地址
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DirectConnectTunnelExtra extends AbstractModel
 {
@@ -285,6 +305,36 @@ REJECTED:拒绝
     public $BgpStatus;
 
     /**
+     * @var integer 是否开启IPv6
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IPv6Enable;
+
+    /**
+     * @var string 腾讯侧互联IPv6地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TencentIPv6Address;
+
+    /**
+     * @var string 腾讯侧备用互联IPv6地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TencentBackupIPv6Address;
+
+    /**
+     * @var BGPStatus BGPv6状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BgpIPv6Status;
+
+    /**
+     * @var string 用户侧互联IPv6地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CustomerIPv6Address;
+
+    /**
      * @param string $DirectConnectTunnelId 专用通道ID
      * @param string $DirectConnectId 物理专线ID
      * @param string $State 专用通道状态
@@ -328,6 +378,16 @@ REJECTED:拒绝
      * @param BFDInfo $BfdInfo BFD配置信息
      * @param NQAInfo $NqaInfo NQA配置信息
      * @param BGPStatus $BgpStatus BGP状态
+     * @param integer $IPv6Enable 是否开启IPv6
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TencentIPv6Address 腾讯侧互联IPv6地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TencentBackupIPv6Address 腾讯侧备用互联IPv6地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BGPStatus $BgpIPv6Status BGPv6状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CustomerIPv6Address 用户侧互联IPv6地址
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -486,6 +546,27 @@ REJECTED:拒绝
         if (array_key_exists("BgpStatus",$param) and $param["BgpStatus"] !== null) {
             $this->BgpStatus = new BGPStatus();
             $this->BgpStatus->deserialize($param["BgpStatus"]);
+        }
+
+        if (array_key_exists("IPv6Enable",$param) and $param["IPv6Enable"] !== null) {
+            $this->IPv6Enable = $param["IPv6Enable"];
+        }
+
+        if (array_key_exists("TencentIPv6Address",$param) and $param["TencentIPv6Address"] !== null) {
+            $this->TencentIPv6Address = $param["TencentIPv6Address"];
+        }
+
+        if (array_key_exists("TencentBackupIPv6Address",$param) and $param["TencentBackupIPv6Address"] !== null) {
+            $this->TencentBackupIPv6Address = $param["TencentBackupIPv6Address"];
+        }
+
+        if (array_key_exists("BgpIPv6Status",$param) and $param["BgpIPv6Status"] !== null) {
+            $this->BgpIPv6Status = new BGPStatus();
+            $this->BgpIPv6Status->deserialize($param["BgpIPv6Status"]);
+        }
+
+        if (array_key_exists("CustomerIPv6Address",$param) and $param["CustomerIPv6Address"] !== null) {
+            $this->CustomerIPv6Address = $param["CustomerIPv6Address"];
         }
     }
 }

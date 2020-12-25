@@ -34,14 +34,12 @@ use TencentCloud\Common\AbstractModel;
 <li> MYSQL可选值：5.7 </li>
  * @method void setDbVersion(string $DbVersion) 设置数据库版本，取值范围: 
 <li> MYSQL可选值：5.7 </li>
- * @method integer getCpu() 获取Cpu核数
- * @method void setCpu(integer $Cpu) 设置Cpu核数
- * @method integer getMemory() 获取内存
- * @method void setMemory(integer $Memory) 设置内存
- * @method integer getStorageLimit() 获取存储上限，单位GB
- * @method void setStorageLimit(integer $StorageLimit) 设置存储上限，单位GB
  * @method integer getProjectId() 获取所属项目ID
  * @method void setProjectId(integer $ProjectId) 设置所属项目ID
+ * @method integer getCpu() 获取普通实例Cpu核数
+ * @method void setCpu(integer $Cpu) 设置普通实例Cpu核数
+ * @method integer getMemory() 获取普通实例内存
+ * @method void setMemory(integer $Memory) 设置普通实例内存
  * @method integer getStorage() 获取存储
  * @method void setStorage(integer $Storage) 设置存储
  * @method string getClusterName() 获取集群名称
@@ -70,6 +68,8 @@ timeRollback，时间点回档
  * @method void setExpectTime(string $ExpectTime) 设置时间点回档，指定时间；快照回档，快照时间
  * @method integer getExpectTimeThresh() 获取时间点回档，指定时间允许范围
  * @method void setExpectTimeThresh(integer $ExpectTimeThresh) 设置时间点回档，指定时间允许范围
+ * @method integer getStorageLimit() 获取普通实例存储上限，单位GB
+ * @method void setStorageLimit(integer $StorageLimit) 设置普通实例存储上限，单位GB
  * @method integer getInstanceCount() 获取实例数量
  * @method void setInstanceCount(integer $InstanceCount) 设置实例数量
  * @method integer getTimeSpan() 获取包年包月购买时长
@@ -94,18 +94,26 @@ timeRollback，时间点回档
 当DbType为MYSQL时可选(默认NORMAL)：
 <li>NORMAL</li>
 <li>SERVERLESS</li>
- * @method float getMinCpu() 获取当DbMode为SEVERLESS时的cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回
- * @method void setMinCpu(float $MinCpu) 设置当DbMode为SEVERLESS时的cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回
- * @method float getMaxCpu() 获取当DbMode为SEVERLESS时的cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
- * @method void setMaxCpu(float $MaxCpu) 设置当DbMode为SEVERLESS时的cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
+ * @method float getMinCpu() 获取当DbMode为SEVERLESS时必填
+cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回
+ * @method void setMinCpu(float $MinCpu) 设置当DbMode为SEVERLESS时必填
+cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回
+ * @method float getMaxCpu() 获取当DbMode为SEVERLESS时必填：
+cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
+ * @method void setMaxCpu(float $MaxCpu) 设置当DbMode为SEVERLESS时必填：
+cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
  * @method string getAutoPause() 获取当DbMode为SEVERLESS时，指定集群是否自动暂停，可选范围
 <li>yes</li>
 <li>no</li>
+默认值:yes
  * @method void setAutoPause(string $AutoPause) 设置当DbMode为SEVERLESS时，指定集群是否自动暂停，可选范围
 <li>yes</li>
 <li>no</li>
- * @method integer getAutoPauseDelay() 获取当DbMode为SEVERLESS时，指定集群自动暂停的延迟，可选范围[60,INF]
- * @method void setAutoPauseDelay(integer $AutoPauseDelay) 设置当DbMode为SEVERLESS时，指定集群自动暂停的延迟，可选范围[60,INF]
+默认值:yes
+ * @method integer getAutoPauseDelay() 获取当DbMode为SEVERLESS时，指定集群自动暂停的延迟，单位秒，可选范围[600,691200]
+默认值:600
+ * @method void setAutoPauseDelay(integer $AutoPauseDelay) 设置当DbMode为SEVERLESS时，指定集群自动暂停的延迟，单位秒，可选范围[600,691200]
+默认值:600
  */
 class CreateClustersRequest extends AbstractModel
 {
@@ -137,24 +145,19 @@ class CreateClustersRequest extends AbstractModel
     public $DbVersion;
 
     /**
-     * @var integer Cpu核数
+     * @var integer 所属项目ID
+     */
+    public $ProjectId;
+
+    /**
+     * @var integer 普通实例Cpu核数
      */
     public $Cpu;
 
     /**
-     * @var integer 内存
+     * @var integer 普通实例内存
      */
     public $Memory;
-
-    /**
-     * @var integer 存储上限，单位GB
-     */
-    public $StorageLimit;
-
-    /**
-     * @var integer 所属项目ID
-     */
-    public $ProjectId;
 
     /**
      * @var integer 存储
@@ -215,6 +218,11 @@ timeRollback，时间点回档
     public $ExpectTimeThresh;
 
     /**
+     * @var integer 普通实例存储上限，单位GB
+     */
+    public $StorageLimit;
+
+    /**
      * @var integer 实例数量
      */
     public $InstanceCount;
@@ -263,12 +271,14 @@ timeRollback，时间点回档
     public $DbMode;
 
     /**
-     * @var float 当DbMode为SEVERLESS时的cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回
+     * @var float 当DbMode为SEVERLESS时必填
+cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回
      */
     public $MinCpu;
 
     /**
-     * @var float 当DbMode为SEVERLESS时的cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
+     * @var float 当DbMode为SEVERLESS时必填：
+cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
      */
     public $MaxCpu;
 
@@ -276,11 +286,13 @@ timeRollback，时间点回档
      * @var string 当DbMode为SEVERLESS时，指定集群是否自动暂停，可选范围
 <li>yes</li>
 <li>no</li>
+默认值:yes
      */
     public $AutoPause;
 
     /**
-     * @var integer 当DbMode为SEVERLESS时，指定集群自动暂停的延迟，可选范围[60,INF]
+     * @var integer 当DbMode为SEVERLESS时，指定集群自动暂停的延迟，单位秒，可选范围[600,691200]
+默认值:600
      */
     public $AutoPauseDelay;
 
@@ -292,10 +304,9 @@ timeRollback，时间点回档
 <li> MYSQL </li>
      * @param string $DbVersion 数据库版本，取值范围: 
 <li> MYSQL可选值：5.7 </li>
-     * @param integer $Cpu Cpu核数
-     * @param integer $Memory 内存
-     * @param integer $StorageLimit 存储上限，单位GB
      * @param integer $ProjectId 所属项目ID
+     * @param integer $Cpu 普通实例Cpu核数
+     * @param integer $Memory 普通实例内存
      * @param integer $Storage 存储
      * @param string $ClusterName 集群名称
      * @param string $AdminPassword 账号密码(8-64个字符，至少包含字母、数字、字符（支持的字符：_+-&=!@#$%^*()~）中的两种)
@@ -310,6 +321,7 @@ timeRollback，时间点回档
      * @param string $OriginalClusterId 回档时，传入源集群ID，用于查找源poolId
      * @param string $ExpectTime 时间点回档，指定时间；快照回档，快照时间
      * @param integer $ExpectTimeThresh 时间点回档，指定时间允许范围
+     * @param integer $StorageLimit 普通实例存储上限，单位GB
      * @param integer $InstanceCount 实例数量
      * @param integer $TimeSpan 包年包月购买时长
      * @param string $TimeUnit 包年包月购买时长单位
@@ -322,12 +334,16 @@ timeRollback，时间点回档
 当DbType为MYSQL时可选(默认NORMAL)：
 <li>NORMAL</li>
 <li>SERVERLESS</li>
-     * @param float $MinCpu 当DbMode为SEVERLESS时的cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回
-     * @param float $MaxCpu 当DbMode为SEVERLESS时的cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
+     * @param float $MinCpu 当DbMode为SEVERLESS时必填
+cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回
+     * @param float $MaxCpu 当DbMode为SEVERLESS时必填：
+cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
      * @param string $AutoPause 当DbMode为SEVERLESS时，指定集群是否自动暂停，可选范围
 <li>yes</li>
 <li>no</li>
-     * @param integer $AutoPauseDelay 当DbMode为SEVERLESS时，指定集群自动暂停的延迟，可选范围[60,INF]
+默认值:yes
+     * @param integer $AutoPauseDelay 当DbMode为SEVERLESS时，指定集群自动暂停的延迟，单位秒，可选范围[600,691200]
+默认值:600
      */
     function __construct()
     {
@@ -362,20 +378,16 @@ timeRollback，时间点回档
             $this->DbVersion = $param["DbVersion"];
         }
 
+        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
+            $this->ProjectId = $param["ProjectId"];
+        }
+
         if (array_key_exists("Cpu",$param) and $param["Cpu"] !== null) {
             $this->Cpu = $param["Cpu"];
         }
 
         if (array_key_exists("Memory",$param) and $param["Memory"] !== null) {
             $this->Memory = $param["Memory"];
-        }
-
-        if (array_key_exists("StorageLimit",$param) and $param["StorageLimit"] !== null) {
-            $this->StorageLimit = $param["StorageLimit"];
-        }
-
-        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
-            $this->ProjectId = $param["ProjectId"];
         }
 
         if (array_key_exists("Storage",$param) and $param["Storage"] !== null) {
@@ -420,6 +432,10 @@ timeRollback，时间点回档
 
         if (array_key_exists("ExpectTimeThresh",$param) and $param["ExpectTimeThresh"] !== null) {
             $this->ExpectTimeThresh = $param["ExpectTimeThresh"];
+        }
+
+        if (array_key_exists("StorageLimit",$param) and $param["StorageLimit"] !== null) {
+            $this->StorageLimit = $param["StorageLimit"];
         }
 
         if (array_key_exists("InstanceCount",$param) and $param["InstanceCount"] !== null) {

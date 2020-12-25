@@ -46,6 +46,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBfdInfo(BFDInfo $BfdInfo) 设置BFD配置信息
  * @method NQAInfo getNqaInfo() 获取NQA配置信息
  * @method void setNqaInfo(NQAInfo $NqaInfo) 设置NQA配置信息
+ * @method integer getIPv6Enable() 获取0：停用IPv6
+1: 启用IPv6
+ * @method void setIPv6Enable(integer $IPv6Enable) 设置0：停用IPv6
+1: 启用IPv6
  */
 class ModifyDirectConnectTunnelExtraRequest extends AbstractModel
 {
@@ -115,6 +119,12 @@ class ModifyDirectConnectTunnelExtraRequest extends AbstractModel
     public $NqaInfo;
 
     /**
+     * @var integer 0：停用IPv6
+1: 启用IPv6
+     */
+    public $IPv6Enable;
+
+    /**
      * @param string $DirectConnectTunnelId 专用通道ID
      * @param integer $Vlan 专用通道的Vlan
      * @param BgpPeer $BgpPeer 用户侧BGP，Asn，AuthKey
@@ -128,6 +138,8 @@ class ModifyDirectConnectTunnelExtraRequest extends AbstractModel
      * @param integer $NqaEnable 是否开启NQA
      * @param BFDInfo $BfdInfo BFD配置信息
      * @param NQAInfo $NqaInfo NQA配置信息
+     * @param integer $IPv6Enable 0：停用IPv6
+1: 启用IPv6
      */
     function __construct()
     {
@@ -196,6 +208,10 @@ class ModifyDirectConnectTunnelExtraRequest extends AbstractModel
         if (array_key_exists("NqaInfo",$param) and $param["NqaInfo"] !== null) {
             $this->NqaInfo = new NQAInfo();
             $this->NqaInfo->deserialize($param["NqaInfo"]);
+        }
+
+        if (array_key_exists("IPv6Enable",$param) and $param["IPv6Enable"] !== null) {
+            $this->IPv6Enable = $param["IPv6Enable"];
         }
     }
 }

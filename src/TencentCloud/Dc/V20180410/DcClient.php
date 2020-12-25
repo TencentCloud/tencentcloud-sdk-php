@@ -24,6 +24,7 @@ use TencentCloud\Dc\V20180410\Models as Models;
 
 /**
  * @method Models\AcceptDirectConnectTunnelResponse AcceptDirectConnectTunnel(Models\AcceptDirectConnectTunnelRequest $req) 接受专用通道申请
+ * @method Models\ApplyInternetAddressResponse ApplyInternetAddress(Models\ApplyInternetAddressRequest $req) 申请互联网CIDR地址
  * @method Models\CreateDirectConnectResponse CreateDirectConnect(Models\CreateDirectConnectRequest $req) 申请物理专线接入。
 调用该接口时，请注意：
 账号要进行实名认证，否则不允许申请物理专线；
@@ -37,11 +38,17 @@ use TencentCloud\Dc\V20180410\Models as Models;
  * @method Models\DescribeDirectConnectTunnelExtraResponse DescribeDirectConnectTunnelExtra(Models\DescribeDirectConnectTunnelExtraRequest $req) 本接口（DescribeDirectConnectTunnelExtra）用于查询专用通道扩展信息
  * @method Models\DescribeDirectConnectTunnelsResponse DescribeDirectConnectTunnels(Models\DescribeDirectConnectTunnelsRequest $req) 用于查询专用通道列表。
  * @method Models\DescribeDirectConnectsResponse DescribeDirectConnects(Models\DescribeDirectConnectsRequest $req) 查询物理专线列表。
+ * @method Models\DescribeInternetAddressResponse DescribeInternetAddress(Models\DescribeInternetAddressRequest $req) 获取用户互联网公网地址信息
+ * @method Models\DescribeInternetAddressQuotaResponse DescribeInternetAddressQuota(Models\DescribeInternetAddressQuotaRequest $req) 获取用户互联网公网地址配额
+ * @method Models\DescribeInternetAddressStatisticsResponse DescribeInternetAddressStatistics(Models\DescribeInternetAddressStatisticsRequest $req) 获取用户互联网公网地址分配统计信息
  * @method Models\DescribePublicDirectConnectTunnelRoutesResponse DescribePublicDirectConnectTunnelRoutes(Models\DescribePublicDirectConnectTunnelRoutesRequest $req) 本接口（DescribePublicDirectConnectTunnelRoutes）用于查询互联网通道路由列表
+ * @method Models\DisableInternetAddressResponse DisableInternetAddress(Models\DisableInternetAddressRequest $req) 停用用户申请的公网互联网地址
+ * @method Models\EnableInternetAddressResponse EnableInternetAddress(Models\EnableInternetAddressRequest $req) 启用已停用的互联网公网地址
  * @method Models\ModifyDirectConnectAttributeResponse ModifyDirectConnectAttribute(Models\ModifyDirectConnectAttributeRequest $req) 修改物理专线的属性。
  * @method Models\ModifyDirectConnectTunnelAttributeResponse ModifyDirectConnectTunnelAttribute(Models\ModifyDirectConnectTunnelAttributeRequest $req) 修改专用通道属性
  * @method Models\ModifyDirectConnectTunnelExtraResponse ModifyDirectConnectTunnelExtra(Models\ModifyDirectConnectTunnelExtraRequest $req) 本接口（ModifyDirectConnectTunnelExtra）用于修改专用通道扩展信息
  * @method Models\RejectDirectConnectTunnelResponse RejectDirectConnectTunnel(Models\RejectDirectConnectTunnelRequest $req) 拒绝专用通道申请
+ * @method Models\ReleaseInternetAddressResponse ReleaseInternetAddress(Models\ReleaseInternetAddressRequest $req) 释放已申请的互联网地址
  */
 
 class DcClient extends AbstractClient

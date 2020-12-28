@@ -76,6 +76,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegionId(string $RegionId) 设置区域ID
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getProjectId() 获取项目ID:资源所属项目ID
+ * @method void setProjectId(integer $ProjectId) 设置项目ID:资源所属项目ID
  */
 class BillDetail extends AbstractModel
 {
@@ -200,6 +202,11 @@ class BillDetail extends AbstractModel
     public $RegionId;
 
     /**
+     * @var integer 项目ID:资源所属项目ID
+     */
+    public $ProjectId;
+
+    /**
      * @param string $BusinessCodeName 产品名称：云产品大类，如云服务器CVM、云数据库MySQL
      * @param string $ProductCodeName 子产品名称：云产品子类，如云服务器CVM-标准型S1
      * @param string $PayModeName 计费模式：包年包月和按量计费
@@ -228,6 +235,7 @@ class BillDetail extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RegionId 区域ID
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ProjectId 项目ID:资源所属项目ID
      */
     function __construct()
     {
@@ -342,6 +350,10 @@ class BillDetail extends AbstractModel
 
         if (array_key_exists("RegionId",$param) and $param["RegionId"] !== null) {
             $this->RegionId = $param["RegionId"];
+        }
+
+        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
+            $this->ProjectId = $param["ProjectId"];
         }
     }
 }

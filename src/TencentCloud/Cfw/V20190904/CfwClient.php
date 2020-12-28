@@ -24,11 +24,16 @@ use TencentCloud\Cfw\V20190904\Models as Models;
 
 /**
  * @method Models\CreateAcRulesResponse CreateAcRules(Models\CreateAcRulesRequest $req) 创建规则
+ * @method Models\CreateSecurityGroupApiRulesResponse CreateSecurityGroupApiRules(Models\CreateSecurityGroupApiRulesRequest $req) 创建安全组API规则
  * @method Models\DeleteAcRuleResponse DeleteAcRule(Models\DeleteAcRuleRequest $req) 删除规则
  * @method Models\DeleteAllAccessControlRuleResponse DeleteAllAccessControlRule(Models\DeleteAllAccessControlRuleRequest $req) 全部删除规则
+ * @method Models\DeleteSecurityGroupAllRuleResponse DeleteSecurityGroupAllRule(Models\DeleteSecurityGroupAllRuleRequest $req) 删除全部规则
+ * @method Models\DeleteSecurityGroupRuleResponse DeleteSecurityGroupRule(Models\DeleteSecurityGroupRuleRequest $req) 删除规则
  * @method Models\DescribeAcListsResponse DescribeAcLists(Models\DescribeAcListsRequest $req) 访问控制列表
+ * @method Models\DescribeAssociatedInstanceListResponse DescribeAssociatedInstanceList(Models\DescribeAssociatedInstanceListRequest $req) 获取安全组关联实例列表
  * @method Models\DescribeNatRuleOverviewResponse DescribeNatRuleOverview(Models\DescribeNatRuleOverviewRequest $req) nat规则列表概况
  * @method Models\DescribeRuleOverviewResponse DescribeRuleOverview(Models\DescribeRuleOverviewRequest $req) 查询规则列表概况
+ * @method Models\DescribeSecurityGroupListResponse DescribeSecurityGroupList(Models\DescribeSecurityGroupListRequest $req) 查询安全组规则列表
  * @method Models\DescribeSwitchListsResponse DescribeSwitchLists(Models\DescribeSwitchListsRequest $req) 防火墙开关列表
  * @method Models\DescribeSyncAssetStatusResponse DescribeSyncAssetStatus(Models\DescribeSyncAssetStatusRequest $req) 同步资产状态查询-互联网&VPC
  * @method Models\DescribeTableStatusResponse DescribeTableStatus(Models\DescribeTableStatusRequest $req) 查询规则表状态
@@ -37,6 +42,7 @@ use TencentCloud\Cfw\V20190904\Models as Models;
  * @method Models\ModifyAllRuleStatusResponse ModifyAllRuleStatus(Models\ModifyAllRuleStatusRequest $req) 启用停用全部规则
  * @method Models\ModifyAllSwitchStatusResponse ModifyAllSwitchStatus(Models\ModifyAllSwitchStatusRequest $req) 一键开启和关闭
  * @method Models\ModifyItemSwitchStatusResponse ModifyItemSwitchStatus(Models\ModifyItemSwitchStatusRequest $req) 修改单个防火墙开关
+ * @method Models\ModifySecurityGroupAllRuleStatusResponse ModifySecurityGroupAllRuleStatus(Models\ModifySecurityGroupAllRuleStatusRequest $req) 启用停用全部规则
  * @method Models\ModifySequenceRulesResponse ModifySequenceRules(Models\ModifySequenceRulesRequest $req) 修改规则执行顺序
  * @method Models\ModifyTableStatusResponse ModifyTableStatus(Models\ModifyTableStatusRequest $req) 修改规则表状态
  * @method Models\RunSyncAssetResponse RunSyncAsset(Models\RunSyncAssetRequest $req) 同步资产-互联网&VPC

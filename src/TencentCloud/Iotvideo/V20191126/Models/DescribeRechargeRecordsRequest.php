@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRechargeRecords请求参数结构体
  *
- * @method integer getAccountType() 获取账户类型 1:设备接入 2:云存
- * @method void setAccountType(integer $AccountType) 设置账户类型 1:设备接入 2:云存
- * @method integer getOffset() 获取从第几条记录开始显示
- * @method void setOffset(integer $Offset) 设置从第几条记录开始显示
- * @method integer getLimit() 获取总共查询多少条记录
- * @method void setLimit(integer $Limit) 设置总共查询多少条记录
+ * @method integer getAccountType() 获取账户类型 1:设备接入 2:云存。
+ * @method void setAccountType(integer $AccountType) 设置账户类型 1:设备接入 2:云存。
+ * @method integer getOffset() 获取从第几条记录开始显示, 默认值为0。
+ * @method void setOffset(integer $Offset) 设置从第几条记录开始显示, 默认值为0。
+ * @method integer getLimit() 获取总共查询多少条记录，默认为值50。
+ * @method void setLimit(integer $Limit) 设置总共查询多少条记录，默认为值50。
  */
 class DescribeRechargeRecordsRequest extends AbstractModel
 {
     /**
-     * @var integer 账户类型 1:设备接入 2:云存
+     * @var integer 账户类型 1:设备接入 2:云存。
      */
     public $AccountType;
 
     /**
-     * @var integer 从第几条记录开始显示
+     * @var integer 从第几条记录开始显示, 默认值为0。
      */
     public $Offset;
 
     /**
-     * @var integer 总共查询多少条记录
+     * @var integer 总共查询多少条记录，默认为值50。
      */
     public $Limit;
 
     /**
-     * @param integer $AccountType 账户类型 1:设备接入 2:云存
-     * @param integer $Offset 从第几条记录开始显示
-     * @param integer $Limit 总共查询多少条记录
+     * @param integer $AccountType 账户类型 1:设备接入 2:云存。
+     * @param integer $Offset 从第几条记录开始显示, 默认值为0。
+     * @param integer $Limit 总共查询多少条记录，默认为值50。
      */
     function __construct()
     {

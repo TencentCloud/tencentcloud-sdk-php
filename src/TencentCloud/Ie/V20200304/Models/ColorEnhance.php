@@ -20,18 +20,38 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 颜色增强参数
  *
- * @method string getType() 获取颜色增强类型，可选项：weak,strong。
- * @method void setType(string $Type) 设置颜色增强类型，可选项：weak,strong。
+ * @method string getType() 获取颜色增强类型，可选项：
+1.  tra；
+2.  weak；
+3.  normal;
+4.  strong;
+注意：tra不支持自适应调整，处理速度更快；weak,normal,strong支持基于画面颜色自适应，处理速度更慢。
+ * @method void setType(string $Type) 设置颜色增强类型，可选项：
+1.  tra；
+2.  weak；
+3.  normal;
+4.  strong;
+注意：tra不支持自适应调整，处理速度更快；weak,normal,strong支持基于画面颜色自适应，处理速度更慢。
  */
 class ColorEnhance extends AbstractModel
 {
     /**
-     * @var string 颜色增强类型，可选项：weak,strong。
+     * @var string 颜色增强类型，可选项：
+1.  tra；
+2.  weak；
+3.  normal;
+4.  strong;
+注意：tra不支持自适应调整，处理速度更快；weak,normal,strong支持基于画面颜色自适应，处理速度更慢。
      */
     public $Type;
 
     /**
-     * @param string $Type 颜色增强类型，可选项：weak,strong。
+     * @param string $Type 颜色增强类型，可选项：
+1.  tra；
+2.  weak；
+3.  normal;
+4.  strong;
+注意：tra不支持自适应调整，处理速度更快；weak,normal,strong支持基于画面颜色自适应，处理速度更慢。
      */
     function __construct()
     {

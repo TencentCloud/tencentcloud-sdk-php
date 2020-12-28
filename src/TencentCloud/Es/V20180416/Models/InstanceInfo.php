@@ -160,6 +160,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSceneType(integer $SceneType) 设置场景化模板类型：0、不开启；1、通用场景；2、日志场景；3、搜索场景
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getKibanaConfig() 获取Kibana配置项
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setKibanaConfig(string $KibanaConfig) 设置Kibana配置项
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceInfo extends AbstractModel
 {
@@ -446,6 +450,12 @@ class InstanceInfo extends AbstractModel
     public $SceneType;
 
     /**
+     * @var string Kibana配置项
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $KibanaConfig;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $InstanceName 实例名称
      * @param string $Region 地域
@@ -515,6 +525,8 @@ class InstanceInfo extends AbstractModel
      * @param integer $SecurityType 6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SceneType 场景化模板类型：0、不开启；1、通用场景；2、日志场景；3、搜索场景
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $KibanaConfig Kibana配置项
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -760,6 +772,10 @@ class InstanceInfo extends AbstractModel
 
         if (array_key_exists("SceneType",$param) and $param["SceneType"] !== null) {
             $this->SceneType = $param["SceneType"];
+        }
+
+        if (array_key_exists("KibanaConfig",$param) and $param["KibanaConfig"] !== null) {
+            $this->KibanaConfig = $param["KibanaConfig"];
         }
     }
 }

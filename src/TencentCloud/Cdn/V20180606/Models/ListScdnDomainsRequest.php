@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置分页起始地址
  * @method integer getLimit() 获取列表分页记录条数，最大1000
  * @method void setLimit(integer $Limit) 设置列表分页记录条数，最大1000
+ * @method string getDomain() 获取域名信息
+ * @method void setDomain(string $Domain) 设置域名信息
  */
 class ListScdnDomainsRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class ListScdnDomainsRequest extends AbstractModel
     public $Limit;
 
     /**
+     * @var string 域名信息
+     */
+    public $Domain;
+
+    /**
      * @param integer $Offset 分页起始地址
      * @param integer $Limit 列表分页记录条数，最大1000
+     * @param string $Domain 域名信息
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class ListScdnDomainsRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
+            $this->Domain = $param["Domain"];
         }
     }
 }

@@ -54,6 +54,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDesiredNodesNum(integer $DesiredNodesNum) 设置期望的节点数量
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getNodePoolOs() 获取节点池osName
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNodePoolOs(string $NodePoolOs) 设置节点池osName
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getOsCustomizeType() 获取容器的镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值)
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOsCustomizeType(string $OsCustomizeType) 设置容器的镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值)
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getImageId() 获取镜像id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setImageId(string $ImageId) 设置镜像id
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class NodePool extends AbstractModel
 {
@@ -127,6 +139,24 @@ class NodePool extends AbstractModel
     public $DesiredNodesNum;
 
     /**
+     * @var string 节点池osName
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NodePoolOs;
+
+    /**
+     * @var string 容器的镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OsCustomizeType;
+
+    /**
+     * @var string 镜像id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ImageId;
+
+    /**
      * @param string $NodePoolId NodePoolId 资源池id
      * @param string $Name Name 资源池名称
      * @param string $ClusterInstanceId ClusterInstanceId 集群实例id
@@ -143,6 +173,12 @@ class NodePool extends AbstractModel
      * @param integer $MinNodesNum 最小节点数量
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DesiredNodesNum 期望的节点数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $NodePoolOs 节点池osName
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $OsCustomizeType 容器的镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ImageId 镜像id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -219,6 +255,18 @@ class NodePool extends AbstractModel
 
         if (array_key_exists("DesiredNodesNum",$param) and $param["DesiredNodesNum"] !== null) {
             $this->DesiredNodesNum = $param["DesiredNodesNum"];
+        }
+
+        if (array_key_exists("NodePoolOs",$param) and $param["NodePoolOs"] !== null) {
+            $this->NodePoolOs = $param["NodePoolOs"];
+        }
+
+        if (array_key_exists("OsCustomizeType",$param) and $param["OsCustomizeType"] !== null) {
+            $this->OsCustomizeType = $param["OsCustomizeType"];
+        }
+
+        if (array_key_exists("ImageId",$param) and $param["ImageId"] !== null) {
+            $this->ImageId = $param["ImageId"];
         }
     }
 }

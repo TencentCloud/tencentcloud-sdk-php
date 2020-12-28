@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDdos(ScdnDdosConfig $Ddos) 设置DDOS 防护配置
  * @method ScdnBotConfig getBot() 获取BOT 防护配置
  * @method void setBot(ScdnBotConfig $Bot) 设置BOT 防护配置
+ * @method string getStatus() 获取当前状态，取值online | offline
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStatus(string $Status) 设置当前状态，取值online | offline
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -61,6 +65,12 @@ class DescribeScdnConfigResponse extends AbstractModel
     public $Bot;
 
     /**
+     * @var string 当前状态，取值online | offline
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Status;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -71,6 +81,8 @@ class DescribeScdnConfigResponse extends AbstractModel
      * @param ScdnConfig $CC CC 防护配置
      * @param ScdnDdosConfig $Ddos DDOS 防护配置
      * @param ScdnBotConfig $Bot BOT 防护配置
+     * @param string $Status 当前状态，取值online | offline
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -109,6 +121,10 @@ class DescribeScdnConfigResponse extends AbstractModel
         if (array_key_exists("Bot",$param) and $param["Bot"] !== null) {
             $this->Bot = new ScdnBotConfig();
             $this->Bot->deserialize($param["Bot"]);
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSecurityGroups(array $SecurityGroups) 设置模块默认安全组列表
  * @method integer getDefaultBandWidthIn() 获取默认入带宽，单位：M。范围不得超过带宽上下限，详看DescribeConfig。
  * @method void setDefaultBandWidthIn(integer $DefaultBandWidthIn) 设置默认入带宽，单位：M。范围不得超过带宽上下限，详看DescribeConfig。
+ * @method boolean getDisableWanIp() 获取是否禁止分配外网IP
+ * @method void setDisableWanIp(boolean $DisableWanIp) 设置是否禁止分配外网IP
  */
 class CreateModuleRequest extends AbstractModel
 {
@@ -100,6 +102,11 @@ class CreateModuleRequest extends AbstractModel
     public $DefaultBandWidthIn;
 
     /**
+     * @var boolean 是否禁止分配外网IP
+     */
+    public $DisableWanIp;
+
+    /**
      * @param string $ModuleName 模块名称，如视频直播模块。限制：模块名称不得以空格开头，长度不得超过60个字符。
      * @param integer $DefaultBandWidth 默认带宽，单位：M。范围不得超过带宽上下限，详看DescribeConfig。
      * @param string $DefaultImageId 默认镜像，如img-qsdf3ff2。
@@ -112,6 +119,7 @@ class CreateModuleRequest extends AbstractModel
      * @param array $TagSpecification 标签列表。
      * @param array $SecurityGroups 模块默认安全组列表
      * @param integer $DefaultBandWidthIn 默认入带宽，单位：M。范围不得超过带宽上下限，详看DescribeConfig。
+     * @param boolean $DisableWanIp 是否禁止分配外网IP
      */
     function __construct()
     {
@@ -169,6 +177,10 @@ class CreateModuleRequest extends AbstractModel
 
         if (array_key_exists("DefaultBandWidthIn",$param) and $param["DefaultBandWidthIn"] !== null) {
             $this->DefaultBandWidthIn = $param["DefaultBandWidthIn"];
+        }
+
+        if (array_key_exists("DisableWanIp",$param) and $param["DisableWanIp"] !== null) {
+            $this->DisableWanIp = $param["DisableWanIp"];
         }
     }
 }

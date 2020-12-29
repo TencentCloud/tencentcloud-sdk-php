@@ -24,6 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMemberId(string $MemberId) 设置团队成员 ID。
  * @method string getRemark() 获取团队成员备注。
  * @method void setRemark(string $Remark) 设置团队成员备注。
+ * @method string getRole() 获取团队成员角色，不填则默认添加普通成员。可选值：
+<li>Admin：团队管理员；</li>
+<li>Member：普通成员。</li>
+ * @method void setRole(string $Role) 设置团队成员角色，不填则默认添加普通成员。可选值：
+<li>Admin：团队管理员；</li>
+<li>Member：普通成员。</li>
  */
 class AddMemberInfo extends AbstractModel
 {
@@ -38,8 +44,18 @@ class AddMemberInfo extends AbstractModel
     public $Remark;
 
     /**
+     * @var string 团队成员角色，不填则默认添加普通成员。可选值：
+<li>Admin：团队管理员；</li>
+<li>Member：普通成员。</li>
+     */
+    public $Role;
+
+    /**
      * @param string $MemberId 团队成员 ID。
      * @param string $Remark 团队成员备注。
+     * @param string $Role 团队成员角色，不填则默认添加普通成员。可选值：
+<li>Admin：团队管理员；</li>
+<li>Member：普通成员。</li>
      */
     function __construct()
     {
@@ -60,6 +76,10 @@ class AddMemberInfo extends AbstractModel
 
         if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
             $this->Remark = $param["Remark"];
+        }
+
+        if (array_key_exists("Role",$param) and $param["Role"] !== null) {
+            $this->Role = $param["Role"];
         }
     }
 }

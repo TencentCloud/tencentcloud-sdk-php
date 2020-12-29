@@ -20,6 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTeams返回参数结构体
  *
+ * @method integer getTotalCount() 获取符合条件的记录总数。
+ * @method void setTotalCount(integer $TotalCount) 设置符合条件的记录总数。
  * @method array getTeamSet() 获取团队列表。
  * @method void setTeamSet(array $TeamSet) 设置团队列表。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -27,6 +29,11 @@ use TencentCloud\Common\AbstractModel;
  */
 class DescribeTeamsResponse extends AbstractModel
 {
+    /**
+     * @var integer 符合条件的记录总数。
+     */
+    public $TotalCount;
+
     /**
      * @var array 团队列表。
      */
@@ -38,6 +45,7 @@ class DescribeTeamsResponse extends AbstractModel
     public $RequestId;
 
     /**
+     * @param integer $TotalCount 符合条件的记录总数。
      * @param array $TeamSet 团队列表。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -54,6 +62,10 @@ class DescribeTeamsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
+        }
+
         if (array_key_exists("TeamSet",$param) and $param["TeamSet"] !== null) {
             $this->TeamSet = [];
             foreach ($param["TeamSet"] as $key => $value){

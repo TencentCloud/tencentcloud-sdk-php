@@ -37,7 +37,8 @@ use TencentCloud\Faceid\V20180301\Models as Models;
  * @method Models\GetFaceIdTokenResponse GetFaceIdToken(Models\GetFaceIdTokenRequest $req) 每次调用人脸核身SDK服务前，需先调用本接口获取SDKToken，用来串联核身流程，在验证完成后，用于获取验证结果信息，该token仅能核身一次。
  * @method Models\GetLiveCodeResponse GetLiveCode(Models\GetLiveCodeRequest $req) 使用数字活体检测模式前，需调用本接口获取数字验证码。
  * @method Models\GetRealNameAuthResultResponse GetRealNameAuthResult(Models\GetRealNameAuthResultRequest $req) 获取微信实名认证结果
- * @method Models\GetRealNameAuthTokenResponse GetRealNameAuthToken(Models\GetRealNameAuthTokenRequest $req) 输入姓名和身份证号验证与微信实名的信息是否一致
+ * @method Models\GetRealNameAuthTokenResponse GetRealNameAuthToken(Models\GetRealNameAuthTokenRequest $req) 该接口仅限微信公众号中使用，传入姓名和身份证号获取回调URL，在微信公众号中打开验证姓名和身份证号与微信实名的信息是否一致。
+
  * @method Models\IdCardOCRVerificationResponse IdCardOCRVerification(Models\IdCardOCRVerificationRequest $req) 本接口用于校验姓名和身份证号的真实性和一致性，您可以通过输入姓名和身份证号或传入身份证人像面照片提供所需验证信息。
  * @method Models\IdCardVerificationResponse IdCardVerification(Models\IdCardVerificationRequest $req) 传入姓名和身份证号，校验两者的真实性和一致性。
  * @method Models\ImageRecognitionResponse ImageRecognition(Models\ImageRecognitionRequest $req) 传入照片和身份信息，判断该照片与公安权威库的证件照是否属于同一个人。

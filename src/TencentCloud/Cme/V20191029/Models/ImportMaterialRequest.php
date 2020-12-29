@@ -22,17 +22,27 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getPlatform() 获取平台名称，指定访问的平台。
  * @method void setPlatform(string $Platform) 设置平台名称，指定访问的平台。
- * @method string getVodFileId() 获取云点播媒资 FileId。
- * @method void setVodFileId(string $VodFileId) 设置云点播媒资 FileId。
- * @method Entity getOwner() 获取素材归属者。
- * @method void setOwner(Entity $Owner) 设置素材归属者。
- * @method string getName() 获取素材名称，不能超过30个字符。
- * @method void setName(string $Name) 设置素材名称，不能超过30个字符。
- * @method string getClassPath() 获取素材分类路径，形如："/a/b"，层级数不能超过10，每个层级长度不能超过15字符。若不填则默认为根路径。
- * @method void setClassPath(string $ClassPath) 设置素材分类路径，形如："/a/b"，层级数不能超过10，每个层级长度不能超过15字符。若不填则默认为根路径。
- * @method integer getPreProcessDefinition() 获取素材预处理任务模板 ID。取值：
+ * @method Entity getOwner() 获取媒体归属者，团队或个人。
+ * @method void setOwner(Entity $Owner) 设置媒体归属者，团队或个人。
+ * @method string getName() 获取媒体名称，不能超过30个字符。
+ * @method void setName(string $Name) 设置媒体名称，不能超过30个字符。
+ * @method string getSourceType() 获取导入媒资类型，取值：
+<li>VOD：云点播文件；</li>
+<li>EXTERNAL：媒资绑定。</li>
+注意：如果不填默认为云点播文件。
+ * @method void setSourceType(string $SourceType) 设置导入媒资类型，取值：
+<li>VOD：云点播文件；</li>
+<li>EXTERNAL：媒资绑定。</li>
+注意：如果不填默认为云点播文件。
+ * @method string getVodFileId() 获取云点播媒资 FileId，仅当 SourceType 为 VOD 时有效。
+ * @method void setVodFileId(string $VodFileId) 设置云点播媒资 FileId，仅当 SourceType 为 VOD 时有效。
+ * @method ExternalMediaInfo getExternalMediaInfo() 获取原始媒资文件信息，当 SourceType 取值 EXTERNAL 的时候必填。
+ * @method void setExternalMediaInfo(ExternalMediaInfo $ExternalMediaInfo) 设置原始媒资文件信息，当 SourceType 取值 EXTERNAL 的时候必填。
+ * @method string getClassPath() 获取媒体分类路径，形如："/a/b"，层级数不能超过10，每个层级长度不能超过15字符。若不填则默认为根路径。
+ * @method void setClassPath(string $ClassPath) 设置媒体分类路径，形如："/a/b"，层级数不能超过10，每个层级长度不能超过15字符。若不填则默认为根路径。
+ * @method integer getPreProcessDefinition() 获取媒体预处理任务模板 ID。取值：
 <li>10：进行编辑预处理。</li>
- * @method void setPreProcessDefinition(integer $PreProcessDefinition) 设置素材预处理任务模板 ID。取值：
+ * @method void setPreProcessDefinition(integer $PreProcessDefinition) 设置媒体预处理任务模板 ID。取值：
 <li>10：进行编辑预处理。</li>
  * @method string getOperator() 获取操作者。填写用户的 Id，用于标识调用者及校验操作权限。
  * @method void setOperator(string $Operator) 设置操作者。填写用户的 Id，用于标识调用者及校验操作权限。
@@ -45,27 +55,40 @@ class ImportMaterialRequest extends AbstractModel
     public $Platform;
 
     /**
-     * @var string 云点播媒资 FileId。
-     */
-    public $VodFileId;
-
-    /**
-     * @var Entity 素材归属者。
+     * @var Entity 媒体归属者，团队或个人。
      */
     public $Owner;
 
     /**
-     * @var string 素材名称，不能超过30个字符。
+     * @var string 媒体名称，不能超过30个字符。
      */
     public $Name;
 
     /**
-     * @var string 素材分类路径，形如："/a/b"，层级数不能超过10，每个层级长度不能超过15字符。若不填则默认为根路径。
+     * @var string 导入媒资类型，取值：
+<li>VOD：云点播文件；</li>
+<li>EXTERNAL：媒资绑定。</li>
+注意：如果不填默认为云点播文件。
+     */
+    public $SourceType;
+
+    /**
+     * @var string 云点播媒资 FileId，仅当 SourceType 为 VOD 时有效。
+     */
+    public $VodFileId;
+
+    /**
+     * @var ExternalMediaInfo 原始媒资文件信息，当 SourceType 取值 EXTERNAL 的时候必填。
+     */
+    public $ExternalMediaInfo;
+
+    /**
+     * @var string 媒体分类路径，形如："/a/b"，层级数不能超过10，每个层级长度不能超过15字符。若不填则默认为根路径。
      */
     public $ClassPath;
 
     /**
-     * @var integer 素材预处理任务模板 ID。取值：
+     * @var integer 媒体预处理任务模板 ID。取值：
 <li>10：进行编辑预处理。</li>
      */
     public $PreProcessDefinition;
@@ -77,11 +100,16 @@ class ImportMaterialRequest extends AbstractModel
 
     /**
      * @param string $Platform 平台名称，指定访问的平台。
-     * @param string $VodFileId 云点播媒资 FileId。
-     * @param Entity $Owner 素材归属者。
-     * @param string $Name 素材名称，不能超过30个字符。
-     * @param string $ClassPath 素材分类路径，形如："/a/b"，层级数不能超过10，每个层级长度不能超过15字符。若不填则默认为根路径。
-     * @param integer $PreProcessDefinition 素材预处理任务模板 ID。取值：
+     * @param Entity $Owner 媒体归属者，团队或个人。
+     * @param string $Name 媒体名称，不能超过30个字符。
+     * @param string $SourceType 导入媒资类型，取值：
+<li>VOD：云点播文件；</li>
+<li>EXTERNAL：媒资绑定。</li>
+注意：如果不填默认为云点播文件。
+     * @param string $VodFileId 云点播媒资 FileId，仅当 SourceType 为 VOD 时有效。
+     * @param ExternalMediaInfo $ExternalMediaInfo 原始媒资文件信息，当 SourceType 取值 EXTERNAL 的时候必填。
+     * @param string $ClassPath 媒体分类路径，形如："/a/b"，层级数不能超过10，每个层级长度不能超过15字符。若不填则默认为根路径。
+     * @param integer $PreProcessDefinition 媒体预处理任务模板 ID。取值：
 <li>10：进行编辑预处理。</li>
      * @param string $Operator 操作者。填写用户的 Id，用于标识调用者及校验操作权限。
      */
@@ -102,10 +130,6 @@ class ImportMaterialRequest extends AbstractModel
             $this->Platform = $param["Platform"];
         }
 
-        if (array_key_exists("VodFileId",$param) and $param["VodFileId"] !== null) {
-            $this->VodFileId = $param["VodFileId"];
-        }
-
         if (array_key_exists("Owner",$param) and $param["Owner"] !== null) {
             $this->Owner = new Entity();
             $this->Owner->deserialize($param["Owner"]);
@@ -113,6 +137,19 @@ class ImportMaterialRequest extends AbstractModel
 
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
             $this->Name = $param["Name"];
+        }
+
+        if (array_key_exists("SourceType",$param) and $param["SourceType"] !== null) {
+            $this->SourceType = $param["SourceType"];
+        }
+
+        if (array_key_exists("VodFileId",$param) and $param["VodFileId"] !== null) {
+            $this->VodFileId = $param["VodFileId"];
+        }
+
+        if (array_key_exists("ExternalMediaInfo",$param) and $param["ExternalMediaInfo"] !== null) {
+            $this->ExternalMediaInfo = new ExternalMediaInfo();
+            $this->ExternalMediaInfo->deserialize($param["ExternalMediaInfo"]);
         }
 
         if (array_key_exists("ClassPath",$param) and $param["ClassPath"] !== null) {

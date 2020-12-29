@@ -114,9 +114,9 @@ UNKNOWN表示未知状态。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setModifyConfigTime(integer $ModifyConfigTime) 设置配置变更时间
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getProxyType() 获取通道类型
+ * @method integer getProxyType() 获取通道类型，104表示新的银牌质量通道类型
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setProxyType(integer $ProxyType) 设置通道类型
+ * @method void setProxyType(integer $ProxyType) 设置通道类型，104表示新的银牌质量通道类型
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getClientIPMethod() 获取通道获取客户端IP的方式，0表示TOA，1表示Proxy Protocol
 注意：此字段可能返回 null，表示取不到有效值。
@@ -273,7 +273,7 @@ UNKNOWN表示未知状态。
     public $ModifyConfigTime;
 
     /**
-     * @var integer 通道类型
+     * @var integer 通道类型，104表示新的银牌质量通道类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProxyType;
@@ -332,7 +332,7 @@ UNKNOWN表示未知状态。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ModifyConfigTime 配置变更时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ProxyType 通道类型
+     * @param integer $ProxyType 通道类型，104表示新的银牌质量通道类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ClientIPMethod 通道获取客户端IP的方式，0表示TOA，1表示Proxy Protocol
 注意：此字段可能返回 null，表示取不到有效值。

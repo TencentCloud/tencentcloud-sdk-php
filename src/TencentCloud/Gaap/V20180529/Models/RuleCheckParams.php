@@ -34,6 +34,18 @@ use TencentCloud\Common\AbstractModel;
 当调用ModifyRuleAttribute时，不支持修改该参数。
  * @method void setDomain(string $Domain) 设置健康检查的检查域名。
 当调用ModifyRuleAttribute时，不支持修改该参数。
+ * @method integer getFailedCountInter() 获取源站服务失败统计频率
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFailedCountInter(integer $FailedCountInter) 设置源站服务失败统计频率
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getFailedThreshold() 获取源站健康性检查阀值，超过该阀值会屏蔽服务
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFailedThreshold(integer $FailedThreshold) 设置源站健康性检查阀值，超过该阀值会屏蔽服务
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getBlockInter() 获取源站健康性检测超出阀值后，屏蔽的时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBlockInter(integer $BlockInter) 设置源站健康性检测超出阀值后，屏蔽的时间
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RuleCheckParams extends AbstractModel
 {
@@ -69,6 +81,24 @@ class RuleCheckParams extends AbstractModel
     public $Domain;
 
     /**
+     * @var integer 源站服务失败统计频率
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FailedCountInter;
+
+    /**
+     * @var integer 源站健康性检查阀值，超过该阀值会屏蔽服务
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FailedThreshold;
+
+    /**
+     * @var integer 源站健康性检测超出阀值后，屏蔽的时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BlockInter;
+
+    /**
      * @param integer $DelayLoop 健康检查的时间间隔
      * @param integer $ConnectTimeout 健康检查的响应超时时间
      * @param string $Path 健康检查的检查路径
@@ -76,6 +106,12 @@ class RuleCheckParams extends AbstractModel
      * @param array $StatusCode 确认源站正常的返回码，可选范围[100, 200, 300, 400, 500]
      * @param string $Domain 健康检查的检查域名。
 当调用ModifyRuleAttribute时，不支持修改该参数。
+     * @param integer $FailedCountInter 源站服务失败统计频率
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $FailedThreshold 源站健康性检查阀值，超过该阀值会屏蔽服务
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $BlockInter 源站健康性检测超出阀值后，屏蔽的时间
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -112,6 +148,18 @@ class RuleCheckParams extends AbstractModel
 
         if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
             $this->Domain = $param["Domain"];
+        }
+
+        if (array_key_exists("FailedCountInter",$param) and $param["FailedCountInter"] !== null) {
+            $this->FailedCountInter = $param["FailedCountInter"];
+        }
+
+        if (array_key_exists("FailedThreshold",$param) and $param["FailedThreshold"] !== null) {
+            $this->FailedThreshold = $param["FailedThreshold"];
+        }
+
+        if (array_key_exists("BlockInter",$param) and $param["BlockInter"] !== null) {
+            $this->BlockInter = $param["BlockInter"];
         }
     }
 }

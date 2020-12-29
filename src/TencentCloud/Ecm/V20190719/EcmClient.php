@@ -135,6 +135,7 @@ EIP 如果被封堵，则不能进行解绑定操作。
  * @method Models\ModifyListenerResponse ModifyListener(Models\ModifyListenerRequest $req) 修改负载均衡监听器属性。
  * @method Models\ModifyLoadBalancerAttributesResponse ModifyLoadBalancerAttributes(Models\ModifyLoadBalancerAttributesRequest $req) 修改负载均衡实例的属性。
  * @method Models\ModifyModuleConfigResponse ModifyModuleConfig(Models\ModifyModuleConfigRequest $req) 修改模块配置，已关联实例的模块不支持调整配置。
+ * @method Models\ModifyModuleDisableWanIpResponse ModifyModuleDisableWanIp(Models\ModifyModuleDisableWanIpRequest $req) 修改模块是否禁止分配外网ip的属性。
  * @method Models\ModifyModuleImageResponse ModifyModuleImage(Models\ModifyModuleImageRequest $req) 修改模块的默认镜像
  * @method Models\ModifyModuleIpDirectResponse ModifyModuleIpDirect(Models\ModifyModuleIpDirectRequest $req) 修改模块IP直通。
  * @method Models\ModifyModuleNameResponse ModifyModuleName(Models\ModifyModuleNameRequest $req) 修改模块名称

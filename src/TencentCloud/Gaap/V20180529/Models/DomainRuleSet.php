@@ -100,6 +100,16 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPolyRealServerCertificateAliasInfo(array $PolyRealServerCertificateAliasInfo) 设置多源站证书时，返回多个证书的id和别名
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getDomainStatus() 获取域名的状态。
+0表示运行中，
+1表示变更中，
+2表示删除中。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDomainStatus(integer $DomainStatus) 设置域名的状态。
+0表示运行中，
+1表示变更中，
+2表示删除中。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DomainRuleSet extends AbstractModel
 {
@@ -216,6 +226,15 @@ class DomainRuleSet extends AbstractModel
     public $PolyRealServerCertificateAliasInfo;
 
     /**
+     * @var integer 域名的状态。
+0表示运行中，
+1表示变更中，
+2表示删除中。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DomainStatus;
+
+    /**
      * @param string $Domain 转发规则域名。
      * @param array $RuleSet 该域名对应的转发规则列表。
      * @param string $CertificateId 该域名对应的服务器证书ID，值为default时，表示使用默认证书（监听器配置的证书）。
@@ -255,6 +274,11 @@ class DomainRuleSet extends AbstractModel
      * @param array $PolyClientCertificateAliasInfo 多客户端证书时，返回多个证书的id和别名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $PolyRealServerCertificateAliasInfo 多源站证书时，返回多个证书的id和别名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $DomainStatus 域名的状态。
+0表示运行中，
+1表示变更中，
+2表示删除中。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -355,6 +379,10 @@ class DomainRuleSet extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->PolyRealServerCertificateAliasInfo, $obj);
             }
+        }
+
+        if (array_key_exists("DomainStatus",$param) and $param["DomainStatus"] !== null) {
+            $this->DomainStatus = $param["DomainStatus"];
         }
     }
 }

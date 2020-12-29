@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPlatform(string $Platform) 设置平台名称，指定访问的平台。
  * @method array getTeamIds() 获取团队 ID 列表，限30个。
  * @method void setTeamIds(array $TeamIds) 设置团队 ID 列表，限30个。
+ * @method integer getOffset() 获取分页偏移量，默认值：0。
+ * @method void setOffset(integer $Offset) 设置分页偏移量，默认值：0。
+ * @method integer getLimit() 获取返回记录条数，默认值：20，最大值：30。
+ * @method void setLimit(integer $Limit) 设置返回记录条数，默认值：20，最大值：30。
  */
 class DescribeTeamsRequest extends AbstractModel
 {
@@ -38,8 +42,20 @@ class DescribeTeamsRequest extends AbstractModel
     public $TeamIds;
 
     /**
+     * @var integer 分页偏移量，默认值：0。
+     */
+    public $Offset;
+
+    /**
+     * @var integer 返回记录条数，默认值：20，最大值：30。
+     */
+    public $Limit;
+
+    /**
      * @param string $Platform 平台名称，指定访问的平台。
      * @param array $TeamIds 团队 ID 列表，限30个。
+     * @param integer $Offset 分页偏移量，默认值：0。
+     * @param integer $Limit 返回记录条数，默认值：20，最大值：30。
      */
     function __construct()
     {
@@ -60,6 +76,14 @@ class DescribeTeamsRequest extends AbstractModel
 
         if (array_key_exists("TeamIds",$param) and $param["TeamIds"] !== null) {
             $this->TeamIds = $param["TeamIds"];
+        }
+
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
         }
     }
 }

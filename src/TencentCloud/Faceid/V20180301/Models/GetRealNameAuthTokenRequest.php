@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置姓名
  * @method string getIDCard() 获取身份证号
  * @method void setIDCard(string $IDCard) 设置身份证号
- * @method string getCallbackURL() 获取回调地址。实名认证完成后，将会重定向到这个地址通知认证发起方
- * @method void setCallbackURL(string $CallbackURL) 设置回调地址。实名认证完成后，将会重定向到这个地址通知认证发起方
+ * @method string getCallbackURL() 获取回调地址。实名认证完成后，将会重定向到这个地址通知认证发起方。仅支持http或https协议。
+ * @method void setCallbackURL(string $CallbackURL) 设置回调地址。实名认证完成后，将会重定向到这个地址通知认证发起方。仅支持http或https协议。
  */
 class GetRealNameAuthTokenRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class GetRealNameAuthTokenRequest extends AbstractModel
     public $IDCard;
 
     /**
-     * @var string 回调地址。实名认证完成后，将会重定向到这个地址通知认证发起方
+     * @var string 回调地址。实名认证完成后，将会重定向到这个地址通知认证发起方。仅支持http或https协议。
      */
     public $CallbackURL;
 
     /**
      * @param string $Name 姓名
      * @param string $IDCard 身份证号
-     * @param string $CallbackURL 回调地址。实名认证完成后，将会重定向到这个地址通知认证发起方
+     * @param string $CallbackURL 回调地址。实名认证完成后，将会重定向到这个地址通知认证发起方。仅支持http或https协议。
      */
     function __construct()
     {

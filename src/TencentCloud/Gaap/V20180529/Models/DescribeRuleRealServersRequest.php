@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getRuleId() 获取转发规则ID
  * @method void setRuleId(string $RuleId) 设置转发规则ID
+ * @method integer getOffset() 获取偏移量，默认为0。
+ * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
+ * @method integer getLimit() 获取返回数量，默认为20，最大值为1000。
+ * @method void setLimit(integer $Limit) 设置返回数量，默认为20，最大值为1000。
  */
 class DescribeRuleRealServersRequest extends AbstractModel
 {
@@ -31,7 +35,19 @@ class DescribeRuleRealServersRequest extends AbstractModel
     public $RuleId;
 
     /**
+     * @var integer 偏移量，默认为0。
+     */
+    public $Offset;
+
+    /**
+     * @var integer 返回数量，默认为20，最大值为1000。
+     */
+    public $Limit;
+
+    /**
      * @param string $RuleId 转发规则ID
+     * @param integer $Offset 偏移量，默认为0。
+     * @param integer $Limit 返回数量，默认为20，最大值为1000。
      */
     function __construct()
     {
@@ -48,6 +64,14 @@ class DescribeRuleRealServersRequest extends AbstractModel
         }
         if (array_key_exists("RuleId",$param) and $param["RuleId"] !== null) {
             $this->RuleId = $param["RuleId"];
+        }
+
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
         }
     }
 }

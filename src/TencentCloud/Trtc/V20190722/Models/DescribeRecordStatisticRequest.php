@@ -20,22 +20,25 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRecordStatistic请求参数结构体
  *
- * @method string getStartTime() 获取查询开始日期。
- * @method void setStartTime(string $StartTime) 设置查询开始日期。
- * @method string getEndTime() 获取查询结束日期。
- * @method void setEndTime(string $EndTime) 设置查询结束日期。
+ * @method string getStartTime() 获取查询开始日期，格式为YYYY-MM-DD。
+ * @method void setStartTime(string $StartTime) 设置查询开始日期，格式为YYYY-MM-DD。
+ * @method string getEndTime() 获取查询结束日期，格式为YYYY-MM-DD。
+单次查询统计区间最多不能超过31天。
+ * @method void setEndTime(string $EndTime) 设置查询结束日期，格式为YYYY-MM-DD。
+单次查询统计区间最多不能超过31天。
  * @method integer getSdkAppId() 获取应用ID，可不传。传应用ID时返回的是该应用的用量，不传时返回多个应用的合计值。
  * @method void setSdkAppId(integer $SdkAppId) 设置应用ID，可不传。传应用ID时返回的是该应用的用量，不传时返回多个应用的合计值。
  */
 class DescribeRecordStatisticRequest extends AbstractModel
 {
     /**
-     * @var string 查询开始日期。
+     * @var string 查询开始日期，格式为YYYY-MM-DD。
      */
     public $StartTime;
 
     /**
-     * @var string 查询结束日期。
+     * @var string 查询结束日期，格式为YYYY-MM-DD。
+单次查询统计区间最多不能超过31天。
      */
     public $EndTime;
 
@@ -45,8 +48,9 @@ class DescribeRecordStatisticRequest extends AbstractModel
     public $SdkAppId;
 
     /**
-     * @param string $StartTime 查询开始日期。
-     * @param string $EndTime 查询结束日期。
+     * @param string $StartTime 查询开始日期，格式为YYYY-MM-DD。
+     * @param string $EndTime 查询结束日期，格式为YYYY-MM-DD。
+单次查询统计区间最多不能超过31天。
      * @param integer $SdkAppId 应用ID，可不传。传应用ID时返回的是该应用的用量，不传时返回多个应用的合计值。
      */
     function __construct()

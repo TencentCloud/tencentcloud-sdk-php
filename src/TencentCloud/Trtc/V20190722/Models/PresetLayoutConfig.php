@@ -34,8 +34,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLocationY(integer $LocationY) 设置该画面在输出时的Y偏移，单位为像素值，LocationY与ImageHeight之和不能超过混流输出的总高度，不填默认为0。
  * @method integer getZOrder() 获取该画面在输出时的层级，单位为像素值，不填默认为0。
  * @method void setZOrder(integer $ZOrder) 设置该画面在输出时的层级，单位为像素值，不填默认为0。
- * @method integer getRenderMode() 获取该画面在输出时的显示模式：0为裁剪，1为缩放，不填默认为0。
- * @method void setRenderMode(integer $RenderMode) 设置该画面在输出时的显示模式：0为裁剪，1为缩放，不填默认为0。
+ * @method integer getRenderMode() 获取该画面在输出时的显示模式：0为裁剪，1为缩放，2为缩放并显示黑底。不填默认为0。
+ * @method void setRenderMode(integer $RenderMode) 设置该画面在输出时的显示模式：0为裁剪，1为缩放，2为缩放并显示黑底。不填默认为0。
+ * @method integer getMixInputType() 获取该当前位置用户混入的流类型：0为混入音视频，1为只混入视频，2为只混入音频。默认为0，建议配合指定用户ID使用。
+ * @method void setMixInputType(integer $MixInputType) 设置该当前位置用户混入的流类型：0为混入音视频，1为只混入视频，2为只混入音频。默认为0，建议配合指定用户ID使用。
+ * @method integer getPlaceImageId() 获取占位图ID。实时音视频控制台上传并生成，https://cloud.tencent.com/document/product/647/50769
+ * @method void setPlaceImageId(integer $PlaceImageId) 设置占位图ID。实时音视频控制台上传并生成，https://cloud.tencent.com/document/product/647/50769
  */
 class PresetLayoutConfig extends AbstractModel
 {
@@ -75,9 +79,19 @@ class PresetLayoutConfig extends AbstractModel
     public $ZOrder;
 
     /**
-     * @var integer 该画面在输出时的显示模式：0为裁剪，1为缩放，不填默认为0。
+     * @var integer 该画面在输出时的显示模式：0为裁剪，1为缩放，2为缩放并显示黑底。不填默认为0。
      */
     public $RenderMode;
+
+    /**
+     * @var integer 该当前位置用户混入的流类型：0为混入音视频，1为只混入视频，2为只混入音频。默认为0，建议配合指定用户ID使用。
+     */
+    public $MixInputType;
+
+    /**
+     * @var integer 占位图ID。实时音视频控制台上传并生成，https://cloud.tencent.com/document/product/647/50769
+     */
+    public $PlaceImageId;
 
     /**
      * @param string $UserId 指定显示在该画面上的用户ID。如果不指定用户ID，会按照用户加入房间的顺序自动匹配PresetLayoutConfig中的画面设置。
@@ -87,7 +101,9 @@ class PresetLayoutConfig extends AbstractModel
      * @param integer $LocationX 该画面在输出时的X偏移，单位为像素值，LocationX与ImageWidth之和不能超过混流输出的总宽度，不填默认为0。
      * @param integer $LocationY 该画面在输出时的Y偏移，单位为像素值，LocationY与ImageHeight之和不能超过混流输出的总高度，不填默认为0。
      * @param integer $ZOrder 该画面在输出时的层级，单位为像素值，不填默认为0。
-     * @param integer $RenderMode 该画面在输出时的显示模式：0为裁剪，1为缩放，不填默认为0。
+     * @param integer $RenderMode 该画面在输出时的显示模式：0为裁剪，1为缩放，2为缩放并显示黑底。不填默认为0。
+     * @param integer $MixInputType 该当前位置用户混入的流类型：0为混入音视频，1为只混入视频，2为只混入音频。默认为0，建议配合指定用户ID使用。
+     * @param integer $PlaceImageId 占位图ID。实时音视频控制台上传并生成，https://cloud.tencent.com/document/product/647/50769
      */
     function __construct()
     {
@@ -132,6 +148,14 @@ class PresetLayoutConfig extends AbstractModel
 
         if (array_key_exists("RenderMode",$param) and $param["RenderMode"] !== null) {
             $this->RenderMode = $param["RenderMode"];
+        }
+
+        if (array_key_exists("MixInputType",$param) and $param["MixInputType"] !== null) {
+            $this->MixInputType = $param["MixInputType"];
+        }
+
+        if (array_key_exists("PlaceImageId",$param) and $param["PlaceImageId"] !== null) {
+            $this->PlaceImageId = $param["PlaceImageId"];
         }
     }
 }

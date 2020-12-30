@@ -109,6 +109,10 @@ ip：IP 列表作为源站
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPathRules(array $PathRules) 设置回源路径重写规则配置
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getPathBasedOrigin() 获取分路径回源配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPathBasedOrigin(array $PathBasedOrigin) 设置分路径回源配置
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Origin extends AbstractModel
 {
@@ -194,6 +198,12 @@ ip：IP 列表作为源站
     public $PathRules;
 
     /**
+     * @var array 分路径回源配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PathBasedOrigin;
+
+    /**
      * @param array $Origins 主源站列表
 修改源站时，需要同时填充对应的 OriginType
 注意：此字段可能返回 null，表示取不到有效值。
@@ -234,6 +244,8 @@ ip：IP 列表作为源站
      * @param string $BasePath 回源路径
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $PathRules 回源路径重写规则配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $PathBasedOrigin 分路径回源配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -291,6 +303,15 @@ ip：IP 列表作为源站
                 $obj = new PathRule();
                 $obj->deserialize($value);
                 array_push($this->PathRules, $obj);
+            }
+        }
+
+        if (array_key_exists("PathBasedOrigin",$param) and $param["PathBasedOrigin"] !== null) {
+            $this->PathBasedOrigin = [];
+            foreach ($param["PathBasedOrigin"] as $key => $value){
+                $obj = new PathBasedOriginRule();
+                $obj->deserialize($value);
+                array_push($this->PathBasedOrigin, $obj);
             }
         }
     }

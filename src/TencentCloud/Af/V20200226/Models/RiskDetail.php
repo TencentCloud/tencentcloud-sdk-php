@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 扩展字段，对风险类型的说明
  *
- * @method integer getRiskCode() 获取风险码
- * @method void setRiskCode(integer $RiskCode) 设置风险码
+ * @method integer getRiskCode() 获取风险码 参数详细定义请加微信：TYXGJ-01
+ * @method void setRiskCode(integer $RiskCode) 设置风险码 参数详细定义请加微信：TYXGJ-01
  */
 class RiskDetail extends AbstractModel
 {
     /**
-     * @var integer 风险码
+     * @var integer 风险码 参数详细定义请加微信：TYXGJ-01
      */
     public $RiskCode;
 
     /**
-     * @param integer $RiskCode 风险码
+     * @param integer $RiskCode 风险码 参数详细定义请加微信：TYXGJ-01
      */
     function __construct()
     {

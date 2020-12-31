@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBindStatus(string $BindStatus) 设置触发器和云函数绑定状态
  * @method string getTriggerAttribute() 获取触发器类型，双向表示两侧控制台均可操作，单向表示SCF控制台单向创建
  * @method void setTriggerAttribute(string $TriggerAttribute) 设置触发器类型，双向表示两侧控制台均可操作，单向表示SCF控制台单向创建
+ * @method string getQualifier() 获取触发器绑定的别名或版本
+ * @method void setQualifier(string $Qualifier) 设置触发器绑定的别名或版本
  */
 class Trigger extends AbstractModel
 {
@@ -101,6 +103,11 @@ class Trigger extends AbstractModel
     public $TriggerAttribute;
 
     /**
+     * @var string 触发器绑定的别名或版本
+     */
+    public $Qualifier;
+
+    /**
      * @param string $ModTime 触发器最后修改时间
      * @param string $Type 触发器类型
      * @param string $TriggerDesc 触发器详细配置
@@ -112,6 +119,7 @@ class Trigger extends AbstractModel
      * @param string $ResourceId 触发器最小资源ID
      * @param string $BindStatus 触发器和云函数绑定状态
      * @param string $TriggerAttribute 触发器类型，双向表示两侧控制台均可操作，单向表示SCF控制台单向创建
+     * @param string $Qualifier 触发器绑定的别名或版本
      */
     function __construct()
     {
@@ -168,6 +176,10 @@ class Trigger extends AbstractModel
 
         if (array_key_exists("TriggerAttribute",$param) and $param["TriggerAttribute"] !== null) {
             $this->TriggerAttribute = $param["TriggerAttribute"];
+        }
+
+        if (array_key_exists("Qualifier",$param) and $param["Qualifier"] !== null) {
+            $this->Qualifier = $param["Qualifier"];
         }
     }
 }

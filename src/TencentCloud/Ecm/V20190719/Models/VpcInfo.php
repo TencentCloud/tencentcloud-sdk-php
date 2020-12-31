@@ -50,30 +50,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getAssistantCidrSet() 获取辅助CIDR
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAssistantCidrSet(array $AssistantCidrSet) 设置辅助CIDR
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRegion() 获取地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegion(string $Region) 设置地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDescription() 获取描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRegionName() 获取地域中文名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegionName(string $RegionName) 设置地域中文名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSubnetCount() 获取包含子网数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubnetCount(integer $SubnetCount) 设置包含子网数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getInstanceCount() 获取包含实例数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceCount(integer $InstanceCount) 设置包含实例数量
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class VpcInfo extends AbstractModel
 {
@@ -142,37 +130,31 @@ class VpcInfo extends AbstractModel
     /**
      * @var array 辅助CIDR
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AssistantCidrSet;
 
     /**
      * @var string 地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Region;
 
     /**
      * @var string 描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
     /**
      * @var string 地域中文名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RegionName;
 
     /**
      * @var integer 包含子网数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubnetCount;
 
     /**
      * @var integer 包含实例数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceCount;
 
@@ -193,17 +175,11 @@ class VpcInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $AssistantCidrSet 辅助CIDR
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Region 地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Description 描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RegionName 地域中文名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SubnetCount 包含子网数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $InstanceCount 包含实例数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

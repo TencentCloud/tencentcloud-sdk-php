@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTableStatus请求参数结构体
  *
- * @method string getEdgeId() 获取EdgeId值
- * @method void setEdgeId(string $EdgeId) 设置EdgeId值
- * @method integer getStatus() 获取状态值，0：检查表的状态
- * @method void setStatus(integer $Status) 设置状态值，0：检查表的状态
- * @method string getArea() 获取Nat所在地域
- * @method void setArea(string $Area) 设置Nat所在地域
- * @method integer getDirection() 获取方向，0：出站，1：入站
- * @method void setDirection(integer $Direction) 设置方向，0：出站，1：入站
+ * @method string getEdgeId() 获取EdgeId值两个vpc间的边id vpc填Edgeid，不要填Area；
+ * @method void setEdgeId(string $EdgeId) 设置EdgeId值两个vpc间的边id vpc填Edgeid，不要填Area；
+ * @method integer getStatus() 获取状态值，0：检查表的状态 确实只有一个默认值
+ * @method void setStatus(integer $Status) 设置状态值，0：检查表的状态 确实只有一个默认值
+ * @method string getArea() 获取Nat所在地域 NAT填Area，不要填Edgeid；
+ * @method void setArea(string $Area) 设置Nat所在地域 NAT填Area，不要填Edgeid；
+ * @method integer getDirection() 获取方向，0：出站，1：入站 默认值为 0
+ * @method void setDirection(integer $Direction) 设置方向，0：出站，1：入站 默认值为 0
  */
 class DescribeTableStatusRequest extends AbstractModel
 {
     /**
-     * @var string EdgeId值
+     * @var string EdgeId值两个vpc间的边id vpc填Edgeid，不要填Area；
      */
     public $EdgeId;
 
     /**
-     * @var integer 状态值，0：检查表的状态
+     * @var integer 状态值，0：检查表的状态 确实只有一个默认值
      */
     public $Status;
 
     /**
-     * @var string Nat所在地域
+     * @var string Nat所在地域 NAT填Area，不要填Edgeid；
      */
     public $Area;
 
     /**
-     * @var integer 方向，0：出站，1：入站
+     * @var integer 方向，0：出站，1：入站 默认值为 0
      */
     public $Direction;
 
     /**
-     * @param string $EdgeId EdgeId值
-     * @param integer $Status 状态值，0：检查表的状态
-     * @param string $Area Nat所在地域
-     * @param integer $Direction 方向，0：出站，1：入站
+     * @param string $EdgeId EdgeId值两个vpc间的边id vpc填Edgeid，不要填Area；
+     * @param integer $Status 状态值，0：检查表的状态 确实只有一个默认值
+     * @param string $Area Nat所在地域 NAT填Area，不要填Edgeid；
+     * @param integer $Direction 方向，0：出站，1：入站 默认值为 0
      */
     function __construct()
     {

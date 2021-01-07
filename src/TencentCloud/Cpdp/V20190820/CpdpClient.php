@@ -73,6 +73,7 @@ use TencentCloud\Cpdp\V20190820\Models as Models;
  * @method Models\QueryBankClearResponse QueryBankClear(Models\QueryBankClearRequest $req) 查询银行在途清算结果。查询时间段内交易网的在途清算结果。
  * @method Models\QueryBankTransactionDetailsResponse QueryBankTransactionDetails(Models\QueryBankTransactionDetailsRequest $req) 查询银行时间段内交易明细。查询时间段的会员成功交易。
  * @method Models\QueryBankWithdrawCashDetailsResponse QueryBankWithdrawCashDetails(Models\QueryBankWithdrawCashDetailsRequest $req) 查询银行时间段内清分提现明细。查询银行时间段内清分提现明细接口：若为“见证+收单退款”“见证+收单充值”记录时备注Note为“见证+收单充值,订单号”“见证+收单退款,订单号”，此接口可以查到T0/T1的充值明细和退款记录。查询标志：充值记录仍用3清分选项查询，退款记录同提现用2选项查询。
+ * @method Models\QueryBillDownloadURLResponse QueryBillDownloadURL(Models\QueryBillDownloadURLRequest $req) 获取单笔代发转账对账单下载URL
  * @method Models\QueryCommonTransferRechargeResponse QueryCommonTransferRecharge(Models\QueryCommonTransferRechargeRequest $req) 查询普通转账充值明细。接口用于查询会员主动转账进资金汇总账户的明细情况。若会员使用绑定账号转入，则直接入账到会员子账户。若未使用绑定账号转入，则系统无法自动清分到对应子账户，则转入挂账子账户由平台自行清分。若是 “见证+收单充值”T0充值记录时备注Note为“见证+收单充值,订单号” 此接口可以查到T0到账的“见证+收单充值”充值记录。
  * @method Models\QueryCustAcctIdBalanceResponse QueryCustAcctIdBalance(Models\QueryCustAcctIdBalanceRequest $req) 查询银行子账户余额。查询会员子账户以及平台的功能子账户的余额。
  * @method Models\QueryExchangeRateResponse QueryExchangeRate(Models\QueryExchangeRateRequest $req) 跨境-查询汇率

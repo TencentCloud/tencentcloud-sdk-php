@@ -20,52 +20,52 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSwitchLists请求参数结构体
  *
- * @method integer getStatus() 获取防火墙状态
- * @method void setStatus(integer $Status) 设置防火墙状态
- * @method string getType() 获取资产类型
- * @method void setType(string $Type) 设置资产类型
- * @method string getArea() 获取地域
- * @method void setArea(string $Area) 设置地域
- * @method string getSearchValue() 获取搜索值
- * @method void setSearchValue(string $SearchValue) 设置搜索值
- * @method integer getLimit() 获取条数
- * @method void setLimit(integer $Limit) 设置条数
- * @method integer getOffset() 获取偏移值
- * @method void setOffset(integer $Offset) 设置偏移值
+ * @method integer getStatus() 获取防火墙状态  0: 关闭，1：开启
+ * @method void setStatus(integer $Status) 设置防火墙状态  0: 关闭，1：开启
+ * @method string getType() 获取资产类型 CVM/NAT/VPN/CLB/其它
+ * @method void setType(string $Type) 设置资产类型 CVM/NAT/VPN/CLB/其它
+ * @method string getArea() 获取地域 上海/重庆/广州，等等
+ * @method void setArea(string $Area) 设置地域 上海/重庆/广州，等等
+ * @method string getSearchValue() 获取搜索值  例子："{"common":"106.54.189.45"}"
+ * @method void setSearchValue(string $SearchValue) 设置搜索值  例子："{"common":"106.54.189.45"}"
+ * @method integer getLimit() 获取条数  默认值:10
+ * @method void setLimit(integer $Limit) 设置条数  默认值:10
+ * @method integer getOffset() 获取偏移值 默认值: 0
+ * @method void setOffset(integer $Offset) 设置偏移值 默认值: 0
  * @method string getOrder() 获取排序，desc：降序，asc：升序
  * @method void setOrder(string $Order) 设置排序，desc：降序，asc：升序
- * @method string getBy() 获取排序字段
- * @method void setBy(string $By) 设置排序字段
+ * @method string getBy() 获取排序字段 PortTimes(风险端口数)
+ * @method void setBy(string $By) 设置排序字段 PortTimes(风险端口数)
  */
 class DescribeSwitchListsRequest extends AbstractModel
 {
     /**
-     * @var integer 防火墙状态
+     * @var integer 防火墙状态  0: 关闭，1：开启
      */
     public $Status;
 
     /**
-     * @var string 资产类型
+     * @var string 资产类型 CVM/NAT/VPN/CLB/其它
      */
     public $Type;
 
     /**
-     * @var string 地域
+     * @var string 地域 上海/重庆/广州，等等
      */
     public $Area;
 
     /**
-     * @var string 搜索值
+     * @var string 搜索值  例子："{"common":"106.54.189.45"}"
      */
     public $SearchValue;
 
     /**
-     * @var integer 条数
+     * @var integer 条数  默认值:10
      */
     public $Limit;
 
     /**
-     * @var integer 偏移值
+     * @var integer 偏移值 默认值: 0
      */
     public $Offset;
 
@@ -75,19 +75,19 @@ class DescribeSwitchListsRequest extends AbstractModel
     public $Order;
 
     /**
-     * @var string 排序字段
+     * @var string 排序字段 PortTimes(风险端口数)
      */
     public $By;
 
     /**
-     * @param integer $Status 防火墙状态
-     * @param string $Type 资产类型
-     * @param string $Area 地域
-     * @param string $SearchValue 搜索值
-     * @param integer $Limit 条数
-     * @param integer $Offset 偏移值
+     * @param integer $Status 防火墙状态  0: 关闭，1：开启
+     * @param string $Type 资产类型 CVM/NAT/VPN/CLB/其它
+     * @param string $Area 地域 上海/重庆/广州，等等
+     * @param string $SearchValue 搜索值  例子："{"common":"106.54.189.45"}"
+     * @param integer $Limit 条数  默认值:10
+     * @param integer $Offset 偏移值 默认值: 0
      * @param string $Order 排序，desc：降序，asc：升序
-     * @param string $By 排序字段
+     * @param string $By 排序字段 PortTimes(风险端口数)
      */
     function __construct()
     {

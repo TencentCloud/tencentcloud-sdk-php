@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSecurityGroupList返回参数结构体
  *
- * @method integer getTotal() 获取总条数
- * @method void setTotal(integer $Total) 设置总条数
+ * @method integer getTotal() 获取列表当前规则总条数
+ * @method void setTotal(integer $Total) 设置列表当前规则总条数
  * @method array getData() 获取安全组规则列表数据
  * @method void setData(array $Data) 设置安全组规则列表数据
  * @method integer getAllTotal() 获取不算筛选条数的总条数
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeSecurityGroupListResponse extends AbstractModel
 {
     /**
-     * @var integer 总条数
+     * @var integer 列表当前规则总条数
      */
     public $Total;
 
@@ -62,7 +62,7 @@ class DescribeSecurityGroupListResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Total 总条数
+     * @param integer $Total 列表当前规则总条数
      * @param array $Data 安全组规则列表数据
      * @param integer $AllTotal 不算筛选条数的总条数
      * @param integer $Enable 访问控制规则全部启用/全部停用

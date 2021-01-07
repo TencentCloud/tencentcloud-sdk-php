@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifySecurityGroupAllRuleStatus请求参数结构体
  *
- * @method integer getStatus() 获取状态，0：全部停用，1：全部启用
- * @method void setStatus(integer $Status) 设置状态，0：全部停用，1：全部启用
+ * @method integer getStatus() 获取列表规则状态，0：全部停用，1：全部启用
+ * @method void setStatus(integer $Status) 设置列表规则状态，0：全部停用，1：全部启用
  * @method integer getDirection() 获取方向，0：出站，1：入站
  * @method void setDirection(integer $Direction) 设置方向，0：出站，1：入站
  * @method string getEdgeId() 获取Edge ID值
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifySecurityGroupAllRuleStatusRequest extends AbstractModel
 {
     /**
-     * @var integer 状态，0：全部停用，1：全部启用
+     * @var integer 列表规则状态，0：全部停用，1：全部启用
      */
     public $Status;
 
@@ -52,7 +52,7 @@ class ModifySecurityGroupAllRuleStatusRequest extends AbstractModel
     public $Area;
 
     /**
-     * @param integer $Status 状态，0：全部停用，1：全部启用
+     * @param integer $Status 列表规则状态，0：全部停用，1：全部启用
      * @param integer $Direction 方向，0：出站，1：入站
      * @param string $EdgeId Edge ID值
      * @param string $Area NAT地域

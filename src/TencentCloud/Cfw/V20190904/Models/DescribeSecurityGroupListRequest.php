@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getDirection() 获取0: 出站规则，1：入站规则
  * @method void setDirection(integer $Direction) 设置0: 出站规则，1：入站规则
- * @method string getArea() 获取腾讯云地域的英文简写
- * @method void setArea(string $Area) 设置腾讯云地域的英文简写
+ * @method string getArea() 获取地域代码（例: ap-guangzhou),支持腾讯云全部地域
+ * @method void setArea(string $Area) 设置地域代码（例: ap-guangzhou),支持腾讯云全部地域
  * @method string getSearchValue() 获取搜索值
  * @method void setSearchValue(string $SearchValue) 设置搜索值
  * @method integer getLimit() 获取每页条数
@@ -43,7 +43,7 @@ class DescribeSecurityGroupListRequest extends AbstractModel
     public $Direction;
 
     /**
-     * @var string 腾讯云地域的英文简写
+     * @var string 地域代码（例: ap-guangzhou),支持腾讯云全部地域
      */
     public $Area;
 
@@ -74,7 +74,7 @@ class DescribeSecurityGroupListRequest extends AbstractModel
 
     /**
      * @param integer $Direction 0: 出站规则，1：入站规则
-     * @param string $Area 腾讯云地域的英文简写
+     * @param string $Area 地域代码（例: ap-guangzhou),支持腾讯云全部地域
      * @param string $SearchValue 搜索值
      * @param integer $Limit 每页条数
      * @param integer $Offset 偏移值

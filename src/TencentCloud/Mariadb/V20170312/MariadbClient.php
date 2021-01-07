@@ -23,6 +23,7 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Mariadb\V20170312\Models as Models;
 
 /**
+ * @method Models\AssociateSecurityGroupsResponse AssociateSecurityGroups(Models\AssociateSecurityGroupsRequest $req) 本接口 (AssociateSecurityGroups) 用于安全组批量绑定云资源。
  * @method Models\CloneAccountResponse CloneAccount(Models\CloneAccountRequest $req) 本接口（CloneAccount）用于克隆实例账户。
  * @method Models\CloseDBExtranetAccessResponse CloseDBExtranetAccess(Models\CloseDBExtranetAccessRequest $req) 本接口(CloseDBExtranetAccess)用于关闭云数据库实例的外网访问。关闭外网访问后，外网地址将不可访问，查询实例列表接口将不返回对应实例的外网域名和端口信息。
  * @method Models\CopyAccountPrivilegesResponse CopyAccountPrivileges(Models\CopyAccountPrivilegesRequest $req) 本接口（CopyAccountPrivileges）用于复制云数据库账号的权限。
@@ -44,16 +45,19 @@ use TencentCloud\Mariadb\V20170312\Models as Models;
  * @method Models\DescribeDBPerformanceDetailsResponse DescribeDBPerformanceDetails(Models\DescribeDBPerformanceDetailsRequest $req) 本接口(DescribeDBPerformanceDetails)用于查看实例性能数据详情。
  * @method Models\DescribeDBResourceUsageResponse DescribeDBResourceUsage(Models\DescribeDBResourceUsageRequest $req) 本接口(DescribeDBResourceUsage)用于查看数据库实例资源的使用情况。
  * @method Models\DescribeDBResourceUsageDetailsResponse DescribeDBResourceUsageDetails(Models\DescribeDBResourceUsageDetailsRequest $req) 本接口(DescribeDBResourceUsageDetails)用于查看数据库实例当前性能数据。
+ * @method Models\DescribeDBSecurityGroupsResponse DescribeDBSecurityGroups(Models\DescribeDBSecurityGroupsRequest $req) 本接口（DescribeDBSecurityGroups）用于查询实例安全组信息
  * @method Models\DescribeDBSlowLogsResponse DescribeDBSlowLogs(Models\DescribeDBSlowLogsRequest $req) 本接口(DescribeDBSlowLogs)用于查询慢查询日志列表。
  * @method Models\DescribeDatabasesResponse DescribeDatabases(Models\DescribeDatabasesRequest $req) 本接口（DescribeDatabases）用于查询云数据库实例的数据库列表。
  * @method Models\DescribeFlowResponse DescribeFlow(Models\DescribeFlowRequest $req) 本接口（DescribeFlow）用于查询流程状态。
  * @method Models\DescribeLogFileRetentionPeriodResponse DescribeLogFileRetentionPeriod(Models\DescribeLogFileRetentionPeriodRequest $req) 本接口(DescribeLogFileRetentionPeriod)用于查看数据库备份日志的备份天数的设置情况。
  * @method Models\DescribeOrdersResponse DescribeOrders(Models\DescribeOrdersRequest $req) 本接口（DescribeOrders）用于查询云数据库订单信息。传入订单ID来查询订单关联的云数据库实例，和对应的任务流程ID。
  * @method Models\DescribePriceResponse DescribePrice(Models\DescribePriceRequest $req) 本接口（DescribePrice）用于在购买实例前，查询实例的价格。
+ * @method Models\DescribeProjectSecurityGroupsResponse DescribeProjectSecurityGroups(Models\DescribeProjectSecurityGroupsRequest $req) 本接口（DescribeProjectSecurityGroups）用于查询项目安全组信息
  * @method Models\DescribeRenewalPriceResponse DescribeRenewalPrice(Models\DescribeRenewalPriceRequest $req) 本接口（DescribeRenewalPrice）用于在续费云数据库实例时，查询续费的价格。
  * @method Models\DescribeSaleInfoResponse DescribeSaleInfo(Models\DescribeSaleInfoRequest $req) 本接口(DescribeSaleInfo)用于查询云数据库可售卖的地域和可用区信息。
  * @method Models\DescribeSqlLogsResponse DescribeSqlLogs(Models\DescribeSqlLogsRequest $req) 本接口（DescribeSqlLogs）用于获取实例SQL日志。
  * @method Models\DescribeUpgradePriceResponse DescribeUpgradePrice(Models\DescribeUpgradePriceRequest $req) 本接口（DescribeUpgradePrice）用于在扩容云数据库实例时，查询扩容的价格。
+ * @method Models\DisassociateSecurityGroupsResponse DisassociateSecurityGroups(Models\DisassociateSecurityGroupsRequest $req) 本接口(DisassociateSecurityGroups)用于安全组批量解绑实例。
  * @method Models\FlushBinlogResponse FlushBinlog(Models\FlushBinlogRequest $req) 相当于在mysqld中执行flush logs，完成切分的binlog将展示在实例控制台binlog列表里。
  * @method Models\GrantAccountPrivilegesResponse GrantAccountPrivileges(Models\GrantAccountPrivilegesRequest $req) 本接口（GrantAccountPrivileges）用于给云数据库账号赋权。
 注意：相同用户名，不同Host是不同的账号。
@@ -62,6 +66,7 @@ use TencentCloud\Mariadb\V20170312\Models as Models;
 注意：相同用户名，不同Host是不同的账号。
  * @method Models\ModifyBackupTimeResponse ModifyBackupTime(Models\ModifyBackupTimeRequest $req) 本接口（ModifyBackupTime）用于设置云数据库实例的备份时间。后台系统将根据此配置定期进行实例备份。
  * @method Models\ModifyDBInstanceNameResponse ModifyDBInstanceName(Models\ModifyDBInstanceNameRequest $req) 本接口（ModifyDBInstanceName）用于修改云数据库实例的名称。
+ * @method Models\ModifyDBInstanceSecurityGroupsResponse ModifyDBInstanceSecurityGroups(Models\ModifyDBInstanceSecurityGroupsRequest $req) 本接口（ModifyDBInstanceSecurityGroups）用于修改云数据库安全组
  * @method Models\ModifyDBInstancesProjectResponse ModifyDBInstancesProject(Models\ModifyDBInstancesProjectRequest $req) 本接口（ModifyDBInstancesProject）用于修改云数据库实例所属项目。
  * @method Models\ModifyDBParametersResponse ModifyDBParameters(Models\ModifyDBParametersRequest $req) 本接口(ModifyDBParameters)用于修改数据库参数。
  * @method Models\ModifyLogFileRetentionPeriodResponse ModifyLogFileRetentionPeriod(Models\ModifyLogFileRetentionPeriodRequest $req) 本接口(ModifyLogFileRetentionPeriod)用于修改数据库备份日志保存天数。

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getStatus() 获取状态，0：关闭，1：开启
  * @method void setStatus(integer $Status) 设置状态，0：关闭，1：开启
- * @method integer getType() 获取0: 边界防火墙开关，1：vpc防火墙开关
- * @method void setType(integer $Type) 设置0: 边界防火墙开关，1：vpc防火墙开关
+ * @method integer getType() 获取0: 互联网边界防火墙开关，1：vpc防火墙开关
+ * @method void setType(integer $Type) 设置0: 互联网边界防火墙开关，1：vpc防火墙开关
  * @method array getIds() 获取选中的防火墙开关Id
  * @method void setIds(array $Ids) 设置选中的防火墙开关Id
  * @method integer getChangeType() 获取NAT开关切换类型，1,单个子网，2，同开同关，3，全部
@@ -39,7 +39,7 @@ class ModifyAllSwitchStatusRequest extends AbstractModel
     public $Status;
 
     /**
-     * @var integer 0: 边界防火墙开关，1：vpc防火墙开关
+     * @var integer 0: 互联网边界防火墙开关，1：vpc防火墙开关
      */
     public $Type;
 
@@ -60,7 +60,7 @@ class ModifyAllSwitchStatusRequest extends AbstractModel
 
     /**
      * @param integer $Status 状态，0：关闭，1：开启
-     * @param integer $Type 0: 边界防火墙开关，1：vpc防火墙开关
+     * @param integer $Type 0: 互联网边界防火墙开关，1：vpc防火墙开关
      * @param array $Ids 选中的防火墙开关Id
      * @param integer $ChangeType NAT开关切换类型，1,单个子网，2，同开同关，3，全部
      * @param string $Area NAT实例所在地域

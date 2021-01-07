@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyTableStatus请求参数结构体
  *
- * @method string getEdgeId() 获取EdgeId值
- * @method void setEdgeId(string $EdgeId) 设置EdgeId值
+ * @method string getEdgeId() 获取EdgeId值两个vpc间的边id
+ * @method void setEdgeId(string $EdgeId) 设置EdgeId值两个vpc间的边id
  * @method integer getStatus() 获取状态值，1：锁表，2：解锁表
  * @method void setStatus(integer $Status) 设置状态值，1：锁表，2：解锁表
  * @method string getArea() 获取Nat所在地域
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyTableStatusRequest extends AbstractModel
 {
     /**
-     * @var string EdgeId值
+     * @var string EdgeId值两个vpc间的边id
      */
     public $EdgeId;
 
@@ -52,7 +52,7 @@ class ModifyTableStatusRequest extends AbstractModel
     public $Direction;
 
     /**
-     * @param string $EdgeId EdgeId值
+     * @param string $EdgeId EdgeId值两个vpc间的边id
      * @param integer $Status 状态值，1：锁表，2：解锁表
      * @param string $Area Nat所在地域
      * @param integer $Direction 0： 出向，1：入向

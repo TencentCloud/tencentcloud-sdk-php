@@ -28,11 +28,13 @@ use TencentCloud\Common\AbstractModel;
 MediaEditing：视频编辑（待上线）；
 MediaCutting：视频剪切；
 MediaJoining：视频拼接。
+MediaRecognition：媒体识别；
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(string $Type) 设置编辑处理任务类型，取值：
 MediaEditing：视频编辑（待上线）；
 MediaCutting：视频剪切；
 MediaJoining：视频拼接。
+MediaRecognition：媒体识别；
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getProgress() 获取处理进度，范围：[0,100]
 注意：此字段可能返回 null，表示取不到有效值。
@@ -66,6 +68,10 @@ MediaJoining：视频拼接。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMediaJoiningTaskResult(MediaJoiningTaskResult $MediaJoiningTaskResult) 设置拼接任务处理结果，当Type=MediaJoining时才有效。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method MediaRecognitionTaskResult getMediaRecognitionTaskResult() 获取媒体识别任务处理结果，当Type=MediaRecognition时才有效。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMediaRecognitionTaskResult(MediaRecognitionTaskResult $MediaRecognitionTaskResult) 设置媒体识别任务处理结果，当Type=MediaRecognition时才有效。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class MediaProcessTaskResult extends AbstractModel
 {
@@ -80,6 +86,7 @@ class MediaProcessTaskResult extends AbstractModel
 MediaEditing：视频编辑（待上线）；
 MediaCutting：视频剪切；
 MediaJoining：视频拼接。
+MediaRecognition：媒体识别；
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
@@ -125,12 +132,19 @@ MediaJoining：视频拼接。
     public $MediaJoiningTaskResult;
 
     /**
+     * @var MediaRecognitionTaskResult 媒体识别任务处理结果，当Type=MediaRecognition时才有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MediaRecognitionTaskResult;
+
+    /**
      * @param string $TaskId 编辑处理任务ID。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Type 编辑处理任务类型，取值：
 MediaEditing：视频编辑（待上线）；
 MediaCutting：视频剪切；
 MediaJoining：视频拼接。
+MediaRecognition：媒体识别；
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Progress 处理进度，范围：[0,100]
 注意：此字段可能返回 null，表示取不到有效值。
@@ -147,6 +161,8 @@ MediaJoining：视频拼接。
      * @param MediaCuttingTaskResult $MediaCuttingTaskResult 剪切任务处理结果，当Type=MediaCutting时才有效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param MediaJoiningTaskResult $MediaJoiningTaskResult 拼接任务处理结果，当Type=MediaJoining时才有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MediaRecognitionTaskResult $MediaRecognitionTaskResult 媒体识别任务处理结果，当Type=MediaRecognition时才有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -194,6 +210,11 @@ MediaJoining：视频拼接。
         if (array_key_exists("MediaJoiningTaskResult",$param) and $param["MediaJoiningTaskResult"] !== null) {
             $this->MediaJoiningTaskResult = new MediaJoiningTaskResult();
             $this->MediaJoiningTaskResult->deserialize($param["MediaJoiningTaskResult"]);
+        }
+
+        if (array_key_exists("MediaRecognitionTaskResult",$param) and $param["MediaRecognitionTaskResult"] !== null) {
+            $this->MediaRecognitionTaskResult = new MediaRecognitionTaskResult();
+            $this->MediaRecognitionTaskResult->deserialize($param["MediaRecognitionTaskResult"]);
         }
     }
 }

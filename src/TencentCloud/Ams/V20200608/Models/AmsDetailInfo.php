@@ -48,6 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDetailCount(integer $DetailCount) 设置短音频个数
  * @method string getRequestId() 获取音频审核的请求 id
  * @method void setRequestId(string $RequestId) 设置音频审核的请求 id
+ * @method string getStatus() 获取音频机审状态
+ * @method void setStatus(string $Status) 设置音频机审状态
  */
 class AmsDetailInfo extends AbstractModel
 {
@@ -122,6 +124,11 @@ class AmsDetailInfo extends AbstractModel
     public $RequestId;
 
     /**
+     * @var string 音频机审状态
+     */
+    public $Status;
+
+    /**
      * @param array $Label 标签
      * @param integer $Duration 时长(秒/s)
      * @param string $Name 任务名
@@ -136,6 +143,7 @@ class AmsDetailInfo extends AbstractModel
      * @param string $Content 短音频内容
      * @param integer $DetailCount 短音频个数
      * @param string $RequestId 音频审核的请求 id
+     * @param string $Status 音频机审状态
      */
     function __construct()
     {
@@ -204,6 +212,10 @@ class AmsDetailInfo extends AbstractModel
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
     }
 }

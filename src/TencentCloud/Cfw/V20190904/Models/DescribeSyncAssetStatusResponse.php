@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSyncAssetStatus返回参数结构体
  *
- * @method integer getStatus() 获取0：同步成功，1：资产更新中，2：后台同步调用失败
- * @method void setStatus(integer $Status) 设置0：同步成功，1：资产更新中，2：后台同步调用失败
+ * @method integer getStatus() 获取1-更新中 2-更新完成 3、4-更新失败
+ * @method void setStatus(integer $Status) 设置1-更新中 2-更新完成 3、4-更新失败
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeSyncAssetStatusResponse extends AbstractModel
 {
     /**
-     * @var integer 0：同步成功，1：资产更新中，2：后台同步调用失败
+     * @var integer 1-更新中 2-更新完成 3、4-更新失败
      */
     public $Status;
 
@@ -38,7 +38,7 @@ class DescribeSyncAssetStatusResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Status 0：同步成功，1：资产更新中，2：后台同步调用失败
+     * @param integer $Status 1-更新中 2-更新完成 3、4-更新失败
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

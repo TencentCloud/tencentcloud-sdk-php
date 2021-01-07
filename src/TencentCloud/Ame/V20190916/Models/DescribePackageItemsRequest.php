@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePackageItems请求参数结构体
  *
- * @method string getOrderId() 获取订单id
- * @method void setOrderId(string $OrderId) 设置订单id
- * @method integer getOffset() 获取默认0
- * @method void setOffset(integer $Offset) 设置默认0
+ * @method string getOrderId() 获取订单id，从获取已购曲库包列表中获取
+ * @method void setOrderId(string $OrderId) 设置订单id，从获取已购曲库包列表中获取
+ * @method integer getOffset() 获取默认0，Offset=Offset+Length
+ * @method void setOffset(integer $Offset) 设置默认0，Offset=Offset+Length
  * @method integer getLength() 获取默认20
  * @method void setLength(integer $Length) 设置默认20
  */
 class DescribePackageItemsRequest extends AbstractModel
 {
     /**
-     * @var string 订单id
+     * @var string 订单id，从获取已购曲库包列表中获取
      */
     public $OrderId;
 
     /**
-     * @var integer 默认0
+     * @var integer 默认0，Offset=Offset+Length
      */
     public $Offset;
 
@@ -45,8 +45,8 @@ class DescribePackageItemsRequest extends AbstractModel
     public $Length;
 
     /**
-     * @param string $OrderId 订单id
-     * @param integer $Offset 默认0
+     * @param string $OrderId 订单id，从获取已购曲库包列表中获取
+     * @param integer $Offset 默认0，Offset=Offset+Length
      * @param integer $Length 默认20
      */
     function __construct()

@@ -24,14 +24,18 @@ use TencentCloud\Common\AbstractModel;
 MediaEditing：媒体编辑（待上线）；
 MediaCutting：媒体剪切；
 MediaJoining：媒体拼接。
+MediaRecognition: 媒体识别。
  * @method void setType(string $Type) 设置编辑处理任务类型，可选值：
 MediaEditing：媒体编辑（待上线）；
 MediaCutting：媒体剪切；
 MediaJoining：媒体拼接。
+MediaRecognition: 媒体识别。
  * @method MediaCuttingInfo getMediaCuttingInfo() 获取视频剪切任务参数，Type=MediaCutting时必选。
  * @method void setMediaCuttingInfo(MediaCuttingInfo $MediaCuttingInfo) 设置视频剪切任务参数，Type=MediaCutting时必选。
  * @method MediaJoiningInfo getMediaJoiningInfo() 获取视频拼接任务参数，Type=MediaJoining时必选。
  * @method void setMediaJoiningInfo(MediaJoiningInfo $MediaJoiningInfo) 设置视频拼接任务参数，Type=MediaJoining时必选。
+ * @method MediaRecognitionInfo getMediaRecognitionInfo() 获取媒体识别任务参数，Type=MediaRecognition时必选
+ * @method void setMediaRecognitionInfo(MediaRecognitionInfo $MediaRecognitionInfo) 设置媒体识别任务参数，Type=MediaRecognition时必选
  */
 class MediaProcessInfo extends AbstractModel
 {
@@ -40,6 +44,7 @@ class MediaProcessInfo extends AbstractModel
 MediaEditing：媒体编辑（待上线）；
 MediaCutting：媒体剪切；
 MediaJoining：媒体拼接。
+MediaRecognition: 媒体识别。
      */
     public $Type;
 
@@ -54,12 +59,19 @@ MediaJoining：媒体拼接。
     public $MediaJoiningInfo;
 
     /**
+     * @var MediaRecognitionInfo 媒体识别任务参数，Type=MediaRecognition时必选
+     */
+    public $MediaRecognitionInfo;
+
+    /**
      * @param string $Type 编辑处理任务类型，可选值：
 MediaEditing：媒体编辑（待上线）；
 MediaCutting：媒体剪切；
 MediaJoining：媒体拼接。
+MediaRecognition: 媒体识别。
      * @param MediaCuttingInfo $MediaCuttingInfo 视频剪切任务参数，Type=MediaCutting时必选。
      * @param MediaJoiningInfo $MediaJoiningInfo 视频拼接任务参数，Type=MediaJoining时必选。
+     * @param MediaRecognitionInfo $MediaRecognitionInfo 媒体识别任务参数，Type=MediaRecognition时必选
      */
     function __construct()
     {
@@ -86,6 +98,11 @@ MediaJoining：媒体拼接。
         if (array_key_exists("MediaJoiningInfo",$param) and $param["MediaJoiningInfo"] !== null) {
             $this->MediaJoiningInfo = new MediaJoiningInfo();
             $this->MediaJoiningInfo->deserialize($param["MediaJoiningInfo"]);
+        }
+
+        if (array_key_exists("MediaRecognitionInfo",$param) and $param["MediaRecognitionInfo"] !== null) {
+            $this->MediaRecognitionInfo = new MediaRecognitionInfo();
+            $this->MediaRecognitionInfo->deserialize($param["MediaRecognitionInfo"]);
         }
     }
 }

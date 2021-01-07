@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteAcRule返回参数结构体
  *
- * @method integer getStatus() 获取状态值
- * @method void setStatus(integer $Status) 设置状态值
+ * @method integer getStatus() 获取状态值 0: 删除成功, !0: 删除失败
+ * @method void setStatus(integer $Status) 设置状态值 0: 删除成功, !0: 删除失败
  * @method string getInfo() 获取返回多余的信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInfo(string $Info) 设置返回多余的信息
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class DeleteAcRuleResponse extends AbstractModel
 {
     /**
-     * @var integer 状态值
+     * @var integer 状态值 0: 删除成功, !0: 删除失败
      */
     public $Status;
 
@@ -48,7 +48,7 @@ class DeleteAcRuleResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Status 状态值
+     * @param integer $Status 状态值 0: 删除成功, !0: 删除失败
      * @param string $Info 返回多余的信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。

@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量
  * @method integer getLimit() 获取个数限制
  * @method void setLimit(integer $Limit) 设置个数限制
+ * @method string getInstanceId() 获取实例ID
+ * @method void setInstanceId(string $InstanceId) 设置实例ID
  */
 class GetProjectListRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class GetProjectListRequest extends AbstractModel
     public $Limit;
 
     /**
+     * @var string 实例ID
+     */
+    public $InstanceId;
+
+    /**
      * @param integer $Offset 偏移量
      * @param integer $Limit 个数限制
+     * @param string $InstanceId 实例ID
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class GetProjectListRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
         }
     }
 }

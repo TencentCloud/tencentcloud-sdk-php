@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setItemId(string $ItemId) 设置歌曲ID
  * @method string getIdentityId() 获取在应用前端播放音乐C端用户的唯一标识。无需是账户信息，用户唯一标识即可。
  * @method void setIdentityId(string $IdentityId) 设置在应用前端播放音乐C端用户的唯一标识。无需是账户信息，用户唯一标识即可。
- * @method string getSubItemType() 获取基础版：入参 MP3-64K-FTD-P  获取64kbps歌曲热门片段。
-高级/商用版：入参 MP3-320K-FTD 获取320kbps已核验歌曲完整资源。
- * @method void setSubItemType(string $SubItemType) 设置基础版：入参 MP3-64K-FTD-P  获取64kbps歌曲热门片段。
-高级/商用版：入参 MP3-320K-FTD 获取320kbps已核验歌曲完整资源。
+ * @method string getSubItemType() 获取MP3-64K-FTD-P  为获取64kbps歌曲热门片段。
+MP3-320K-FTD 为获取320kbps已核验歌曲完整资源。
+ * @method void setSubItemType(string $SubItemType) 设置MP3-64K-FTD-P  为获取64kbps歌曲热门片段。
+MP3-320K-FTD 为获取320kbps已核验歌曲完整资源。
  * @method string getSsl() 获取CDN URL Protocol:HTTP or HTTPS/SSL
 Values:Y , N(default)
  * @method void setSsl(string $Ssl) 设置CDN URL Protocol:HTTP or HTTPS/SSL
@@ -46,8 +46,8 @@ class DescribeMusicRequest extends AbstractModel
     public $IdentityId;
 
     /**
-     * @var string 基础版：入参 MP3-64K-FTD-P  获取64kbps歌曲热门片段。
-高级/商用版：入参 MP3-320K-FTD 获取320kbps已核验歌曲完整资源。
+     * @var string MP3-64K-FTD-P  为获取64kbps歌曲热门片段。
+MP3-320K-FTD 为获取320kbps已核验歌曲完整资源。
      */
     public $SubItemType;
 
@@ -60,8 +60,8 @@ Values:Y , N(default)
     /**
      * @param string $ItemId 歌曲ID
      * @param string $IdentityId 在应用前端播放音乐C端用户的唯一标识。无需是账户信息，用户唯一标识即可。
-     * @param string $SubItemType 基础版：入参 MP3-64K-FTD-P  获取64kbps歌曲热门片段。
-高级/商用版：入参 MP3-320K-FTD 获取320kbps已核验歌曲完整资源。
+     * @param string $SubItemType MP3-64K-FTD-P  为获取64kbps歌曲热门片段。
+MP3-320K-FTD 为获取320kbps已核验歌曲完整资源。
      * @param string $Ssl CDN URL Protocol:HTTP or HTTPS/SSL
 Values:Y , N(default)
      */

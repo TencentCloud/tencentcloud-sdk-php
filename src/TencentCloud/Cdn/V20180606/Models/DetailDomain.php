@@ -258,6 +258,14 @@ off：不支持
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAdvanceSet(array $AdvanceSet) 设置高级配置集合。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method OfflineCache getOfflineCache() 获取离线缓存
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOfflineCache(OfflineCache $OfflineCache) 设置离线缓存
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method OriginCombine getOriginCombine() 获取合并回源
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOriginCombine(OriginCombine $OriginCombine) 设置合并回源
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DetailDomain extends AbstractModel
 {
@@ -589,6 +597,18 @@ off：不支持
     public $AdvanceSet;
 
     /**
+     * @var OfflineCache 离线缓存
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OfflineCache;
+
+    /**
+     * @var OriginCombine 合并回源
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OriginCombine;
+
+    /**
      * @param string $ResourceId 域名 ID
      * @param integer $AppId 腾讯云账号ID
      * @param string $Domain 加速域名
@@ -707,6 +727,10 @@ off：不支持
      * @param Ipv6Access $Ipv6Access Ipv6访问配置
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $AdvanceSet 高级配置集合。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OfflineCache $OfflineCache 离线缓存
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OriginCombine $OriginCombine 合并回源
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -974,6 +998,16 @@ off：不支持
                 $obj->deserialize($value);
                 array_push($this->AdvanceSet, $obj);
             }
+        }
+
+        if (array_key_exists("OfflineCache",$param) and $param["OfflineCache"] !== null) {
+            $this->OfflineCache = new OfflineCache();
+            $this->OfflineCache->deserialize($param["OfflineCache"]);
+        }
+
+        if (array_key_exists("OriginCombine",$param) and $param["OriginCombine"] !== null) {
+            $this->OriginCombine = new OriginCombine();
+            $this->OriginCombine->deserialize($param["OriginCombine"]);
         }
     }
 }

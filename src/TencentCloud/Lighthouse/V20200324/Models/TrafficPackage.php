@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTrafficPackageId() 获取流量包ID。
  * @method void setTrafficPackageId(string $TrafficPackageId) 设置流量包ID。
- * @method integer getTrafficUsed() 获取流量包生效周期内的总流量，单位字节。
- * @method void setTrafficUsed(integer $TrafficUsed) 设置流量包生效周期内的总流量，单位字节。
+ * @method integer getTrafficUsed() 获取流量包生效周期内已使用流量，单位字节。
+ * @method void setTrafficUsed(integer $TrafficUsed) 设置流量包生效周期内已使用流量，单位字节。
  * @method integer getTrafficPackageTotal() 获取流量包生效周期内的总流量，单位字节。
  * @method void setTrafficPackageTotal(integer $TrafficPackageTotal) 设置流量包生效周期内的总流量，单位字节。
  * @method integer getTrafficPackageRemaining() 获取流量包生效周期内的剩余流量，单位字节。
@@ -63,7 +63,7 @@ class TrafficPackage extends AbstractModel
     public $TrafficPackageId;
 
     /**
-     * @var integer 流量包生效周期内的总流量，单位字节。
+     * @var integer 流量包生效周期内已使用流量，单位字节。
      */
     public $TrafficUsed;
 
@@ -112,7 +112,7 @@ class TrafficPackage extends AbstractModel
 
     /**
      * @param string $TrafficPackageId 流量包ID。
-     * @param integer $TrafficUsed 流量包生效周期内的总流量，单位字节。
+     * @param integer $TrafficUsed 流量包生效周期内已使用流量，单位字节。
      * @param integer $TrafficPackageTotal 流量包生效周期内的总流量，单位字节。
      * @param integer $TrafficPackageRemaining 流量包生效周期内的剩余流量，单位字节。
      * @param integer $TrafficOverflow 流量包生效周期内超出流量包额度的流量，单位字节。

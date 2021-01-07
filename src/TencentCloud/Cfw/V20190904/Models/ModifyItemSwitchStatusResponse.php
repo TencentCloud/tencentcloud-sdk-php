@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyItemSwitchStatus返回参数结构体
  *
- * @method integer getStatus() 获取修改成功与否状态值
- * @method void setStatus(integer $Status) 设置修改成功与否状态值
+ * @method integer getStatus() 获取修改成功与否状态值 0：修改成功，非 0：修改失败
+ * @method void setStatus(integer $Status) 设置修改成功与否状态值 0：修改成功，非 0：修改失败
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class ModifyItemSwitchStatusResponse extends AbstractModel
 {
     /**
-     * @var integer 修改成功与否状态值
+     * @var integer 修改成功与否状态值 0：修改成功，非 0：修改失败
      */
     public $Status;
 
@@ -38,7 +38,7 @@ class ModifyItemSwitchStatusResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Status 修改成功与否状态值
+     * @param integer $Status 修改成功与否状态值 0：修改成功，非 0：修改失败
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

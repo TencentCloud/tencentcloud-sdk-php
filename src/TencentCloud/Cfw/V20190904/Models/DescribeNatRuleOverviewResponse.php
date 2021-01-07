@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDnatNum(integer $DnatNum) 设置端口转发规则数量
  * @method integer getTotalNum() 获取访问控制规则总数
  * @method void setTotalNum(integer $TotalNum) 设置访问控制规则总数
- * @method integer getRemainNum() 获取访问规则剩余条数
- * @method void setRemainNum(integer $RemainNum) 设置访问规则剩余条数
+ * @method integer getRemainNum() 获取访问控制规则剩余配额
+ * @method void setRemainNum(integer $RemainNum) 设置访问控制规则剩余配额
  * @method integer getBlockNum() 获取阻断规则条数
  * @method void setBlockNum(integer $BlockNum) 设置阻断规则条数
  * @method integer getEnableNum() 获取启用规则条数
@@ -67,7 +67,7 @@ class DescribeNatRuleOverviewResponse extends AbstractModel
     public $TotalNum;
 
     /**
-     * @var integer 访问规则剩余条数
+     * @var integer 访问控制规则剩余配额
      */
     public $RemainNum;
 
@@ -92,7 +92,7 @@ class DescribeNatRuleOverviewResponse extends AbstractModel
      * @param array $EipList 弹性IP列表
      * @param integer $DnatNum 端口转发规则数量
      * @param integer $TotalNum 访问控制规则总数
-     * @param integer $RemainNum 访问规则剩余条数
+     * @param integer $RemainNum 访问控制规则剩余配额
      * @param integer $BlockNum 阻断规则条数
      * @param integer $EnableNum 启用规则条数
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。

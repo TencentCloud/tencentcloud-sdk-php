@@ -71,6 +71,7 @@ use TencentCloud\Cam\V20190116\Models as Models;
  * @method Models\ListSAMLProvidersResponse ListSAMLProviders(Models\ListSAMLProvidersRequest $req) 查询SAML身份提供商列表
  * @method Models\ListUsersResponse ListUsers(Models\ListUsersRequest $req) 拉取子用户
  * @method Models\ListUsersForGroupResponse ListUsersForGroup(Models\ListUsersForGroupRequest $req) 查询用户组关联的用户列表
+ * @method Models\ListWeChatWorkSubAccountsResponse ListWeChatWorkSubAccounts(Models\ListWeChatWorkSubAccountsRequest $req) 获取企业微信子用户列表
  * @method Models\PutRolePermissionsBoundaryResponse PutRolePermissionsBoundary(Models\PutRolePermissionsBoundaryRequest $req) 设置角色权限边界
  * @method Models\PutUserPermissionsBoundaryResponse PutUserPermissionsBoundary(Models\PutUserPermissionsBoundaryRequest $req) 设置用户权限边界
  * @method Models\RemoveUserFromGroupResponse RemoveUserFromGroup(Models\RemoveUserFromGroupRequest $req) 从用户组删除用户

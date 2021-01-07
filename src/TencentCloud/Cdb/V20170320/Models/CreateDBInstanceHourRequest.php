@@ -54,8 +54,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeployMode(integer $DeployMode) 设置多可用区域，默认为 0，支持值包括：0 - 表示单可用区，1 - 表示多可用区，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义。
  * @method string getSlaveZone() 获取备库 1 的可用区信息，默认为 Zone 的值，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义。
  * @method void setSlaveZone(string $SlaveZone) 设置备库 1 的可用区信息，默认为 Zone 的值，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义。
- * @method string getBackupZone() 获取备库 2 的可用区信息，默认为空，购买三节点主实例时可指定该参数，购买其他类型实例时指定该参数无意义。
- * @method void setBackupZone(string $BackupZone) 设置备库 2 的可用区信息，默认为空，购买三节点主实例时可指定该参数，购买其他类型实例时指定该参数无意义。
+ * @method string getBackupZone() 获取备库 2 的可用区信息，默认为空，购买三节点主实例时可指定该参数。
+ * @method void setBackupZone(string $BackupZone) 设置备库 2 的可用区信息，默认为空，购买三节点主实例时可指定该参数。
  * @method array getSecurityGroup() 获取安全组参数，可使用 [查询项目安全组信息](https://cloud.tencent.com/document/api/236/15850) 接口查询某个项目的安全组详情。
  * @method void setSecurityGroup(array $SecurityGroup) 设置安全组参数，可使用 [查询项目安全组信息](https://cloud.tencent.com/document/api/236/15850) 接口查询某个项目的安全组详情。
  * @method RoGroup getRoGroup() 获取只读实例信息。购买只读实例时，该参数必传。
@@ -165,7 +165,7 @@ class CreateDBInstanceHourRequest extends AbstractModel
     public $SlaveZone;
 
     /**
-     * @var string 备库 2 的可用区信息，默认为空，购买三节点主实例时可指定该参数，购买其他类型实例时指定该参数无意义。
+     * @var string 备库 2 的可用区信息，默认为空，购买三节点主实例时可指定该参数。
      */
     public $BackupZone;
 
@@ -237,7 +237,7 @@ class CreateDBInstanceHourRequest extends AbstractModel
      * @param integer $ProtectMode 数据复制方式，默认为 0，支持值包括：0 - 表示异步复制，1 - 表示半同步复制，2 - 表示强同步复制，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义。
      * @param integer $DeployMode 多可用区域，默认为 0，支持值包括：0 - 表示单可用区，1 - 表示多可用区，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义。
      * @param string $SlaveZone 备库 1 的可用区信息，默认为 Zone 的值，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义。
-     * @param string $BackupZone 备库 2 的可用区信息，默认为空，购买三节点主实例时可指定该参数，购买其他类型实例时指定该参数无意义。
+     * @param string $BackupZone 备库 2 的可用区信息，默认为空，购买三节点主实例时可指定该参数。
      * @param array $SecurityGroup 安全组参数，可使用 [查询项目安全组信息](https://cloud.tencent.com/document/api/236/15850) 接口查询某个项目的安全组详情。
      * @param RoGroup $RoGroup 只读实例信息。购买只读实例时，该参数必传。
      * @param integer $AutoRenewFlag 购买按量计费实例该字段无意义。

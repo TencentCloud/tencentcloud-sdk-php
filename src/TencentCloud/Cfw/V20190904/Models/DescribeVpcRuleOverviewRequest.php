@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeVpcRuleOverview请求参数结构体
  *
- * @method string getEdgeId() 获取边id
- * @method void setEdgeId(string $EdgeId) 设置边id
+ * @method string getEdgeId() 获取EdgeId值两个vpc间的边id  不是必填项可以为空，就是所有vpc间的访问控制规则
+ * @method void setEdgeId(string $EdgeId) 设置EdgeId值两个vpc间的边id  不是必填项可以为空，就是所有vpc间的访问控制规则
  */
 class DescribeVpcRuleOverviewRequest extends AbstractModel
 {
     /**
-     * @var string 边id
+     * @var string EdgeId值两个vpc间的边id  不是必填项可以为空，就是所有vpc间的访问控制规则
      */
     public $EdgeId;
 
     /**
-     * @param string $EdgeId 边id
+     * @param string $EdgeId EdgeId值两个vpc间的边id  不是必填项可以为空，就是所有vpc间的访问控制规则
      */
     function __construct()
     {

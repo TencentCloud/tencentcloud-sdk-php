@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeviceName(string $DeviceName) 设置设备名称
  * @method integer getQos() 获取服务质量等级，取值为0或1
  * @method void setQos(integer $Qos) 设置服务质量等级，取值为0或1
+ * @method string getPayloadEncoding() 获取Payload内容的编码格式，取值为base64或空。base64表示云端将收到的请求数据进行base64解码后下发到设备，空则直接将原始内容下发到设备
+ * @method void setPayloadEncoding(string $PayloadEncoding) 设置Payload内容的编码格式，取值为base64或空。base64表示云端将收到的请求数据进行base64解码后下发到设备，空则直接将原始内容下发到设备
  */
 class PublishMessageRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class PublishMessageRequest extends AbstractModel
     public $Qos;
 
     /**
+     * @var string Payload内容的编码格式，取值为base64或空。base64表示云端将收到的请求数据进行base64解码后下发到设备，空则直接将原始内容下发到设备
+     */
+    public $PayloadEncoding;
+
+    /**
      * @param string $Topic 消息发往的主题。命名规则：${ProductId}/${DeviceName}/[a-zA-Z0-9:_-]{1,128}
      * @param string $Payload 消息内容
      * @param string $ProductId 产品ID
      * @param string $DeviceName 设备名称
      * @param integer $Qos 服务质量等级，取值为0或1
+     * @param string $PayloadEncoding Payload内容的编码格式，取值为base64或空。base64表示云端将收到的请求数据进行base64解码后下发到设备，空则直接将原始内容下发到设备
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class PublishMessageRequest extends AbstractModel
 
         if (array_key_exists("Qos",$param) and $param["Qos"] !== null) {
             $this->Qos = $param["Qos"];
+        }
+
+        if (array_key_exists("PayloadEncoding",$param) and $param["PayloadEncoding"] !== null) {
+            $this->PayloadEncoding = $param["PayloadEncoding"];
         }
     }
 }

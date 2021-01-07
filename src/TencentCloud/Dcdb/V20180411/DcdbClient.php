@@ -23,6 +23,7 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Dcdb\V20180411\Models as Models;
 
 /**
+ * @method Models\AssociateSecurityGroupsResponse AssociateSecurityGroups(Models\AssociateSecurityGroupsRequest $req) 本接口 (AssociateSecurityGroups) 用于安全组批量绑定云资源。
  * @method Models\CloneAccountResponse CloneAccount(Models\CloneAccountRequest $req) 本接口（CloneAccount）用于克隆实例账户。
  * @method Models\CloseDBExtranetAccessResponse CloseDBExtranetAccess(Models\CloseDBExtranetAccessRequest $req) 本接口(CloseDBExtranetAccess)用于关闭云数据库实例的外网访问。关闭外网访问后，外网地址将不可访问，查询实例列表接口将不返回对应实例的外网域名和端口信息。
  * @method Models\CopyAccountPrivilegesResponse CopyAccountPrivileges(Models\CopyAccountPrivilegesRequest $req) 本接口（CopyAccountPrivileges）用于复制云数据库账号的权限。
@@ -35,6 +36,7 @@ use TencentCloud\Dcdb\V20180411\Models as Models;
  * @method Models\DescribeAccountsResponse DescribeAccounts(Models\DescribeAccountsRequest $req) 本接口（DescribeAccounts）用于查询指定云数据库实例的账号列表。
  * @method Models\DescribeDBLogFilesResponse DescribeDBLogFiles(Models\DescribeDBLogFilesRequest $req) 本接口(DescribeDBLogFiles)用于获取数据库的各种日志列表，包括冷备、binlog、errlog和slowlog。
  * @method Models\DescribeDBParametersResponse DescribeDBParameters(Models\DescribeDBParametersRequest $req) 本接口(DescribeDBParameters)用于获取数据库的当前参数设置。
+ * @method Models\DescribeDBSecurityGroupsResponse DescribeDBSecurityGroups(Models\DescribeDBSecurityGroupsRequest $req) 本接口（DescribeDBSecurityGroups）用于查询实例安全组信息
  * @method Models\DescribeDBSyncModeResponse DescribeDBSyncMode(Models\DescribeDBSyncModeRequest $req) 本接口（DescribeDBSyncMode）用于查询云数据库实例的同步模式。
  * @method Models\DescribeDCDBInstancesResponse DescribeDCDBInstances(Models\DescribeDCDBInstancesRequest $req) 查询云数据库实例列表，支持通过项目ID、实例ID、内网地址、实例名称等来筛选实例。
 如果不指定任何筛选条件，则默认返回10条实例记录，单次请求最多支持返回100条实例记录。
@@ -47,16 +49,19 @@ use TencentCloud\Dcdb\V20180411\Models as Models;
  * @method Models\DescribeDatabaseTableResponse DescribeDatabaseTable(Models\DescribeDatabaseTableRequest $req) 本接口（DescribeDatabaseTable）用于查询云数据库实例的表信息。
  * @method Models\DescribeDatabasesResponse DescribeDatabases(Models\DescribeDatabasesRequest $req) 本接口（DescribeDatabases）用于查询云数据库实例的数据库列表。
  * @method Models\DescribeOrdersResponse DescribeOrders(Models\DescribeOrdersRequest $req) 本接口（DescribeOrders）用于查询分布式数据库订单信息。传入订单ID来查询订单关联的分布式数据库实例，和对应的任务流程ID。
+ * @method Models\DescribeProjectSecurityGroupsResponse DescribeProjectSecurityGroups(Models\DescribeProjectSecurityGroupsRequest $req) 本接口（DescribeProjectSecurityGroups）用于查询项目安全组信息
  * @method Models\DescribeProjectsResponse DescribeProjects(Models\DescribeProjectsRequest $req) 本接口（DescribeProjects）用于查询项目列表
  * @method Models\DescribeShardSpecResponse DescribeShardSpec(Models\DescribeShardSpecRequest $req) 查询可创建的分布式数据库可售卖的分片规格配置。
  * @method Models\DescribeSqlLogsResponse DescribeSqlLogs(Models\DescribeSqlLogsRequest $req) 本接口（DescribeSqlLogs）用于获取实例SQL日志。
  * @method Models\DescribeUserTasksResponse DescribeUserTasks(Models\DescribeUserTasksRequest $req) 本接口（DescribeUserTasks）用于拉取用户任务列表
+ * @method Models\DisassociateSecurityGroupsResponse DisassociateSecurityGroups(Models\DisassociateSecurityGroupsRequest $req) 本接口(DisassociateSecurityGroups)用于安全组批量解绑实例。
  * @method Models\FlushBinlogResponse FlushBinlog(Models\FlushBinlogRequest $req) 相当于在所有分片的mysqld中执行flush logs，完成切分的binlog将展示在各个分片控制台binlog列表里。
  * @method Models\GrantAccountPrivilegesResponse GrantAccountPrivileges(Models\GrantAccountPrivilegesRequest $req) 本接口（GrantAccountPrivileges）用于给云数据库账号赋权。
 注意：相同用户名，不同Host是不同的账号。
  * @method Models\InitDCDBInstancesResponse InitDCDBInstances(Models\InitDCDBInstancesRequest $req) 本接口(InitDCDBInstances)用于初始化云数据库实例，包括设置默认字符集、表名大小写敏感等。
  * @method Models\ModifyAccountDescriptionResponse ModifyAccountDescription(Models\ModifyAccountDescriptionRequest $req) 本接口（ModifyAccountDescription）用于修改云数据库账号备注。
 注意：相同用户名，不同Host是不同的账号。
+ * @method Models\ModifyDBInstanceSecurityGroupsResponse ModifyDBInstanceSecurityGroups(Models\ModifyDBInstanceSecurityGroupsRequest $req) 本接口（ModifyDBInstanceSecurityGroups）用于修改云数据库安全组
  * @method Models\ModifyDBInstancesProjectResponse ModifyDBInstancesProject(Models\ModifyDBInstancesProjectRequest $req) 本接口（ModifyDBInstancesProject）用于修改云数据库实例所属项目。
  * @method Models\ModifyDBParametersResponse ModifyDBParameters(Models\ModifyDBParametersRequest $req) 本接口(ModifyDBParameters)用于修改数据库参数。
  * @method Models\ModifyDBSyncModeResponse ModifyDBSyncMode(Models\ModifyDBSyncModeRequest $req) 本接口（ModifyDBSyncMode）用于修改云数据库实例的同步模式。

@@ -82,6 +82,7 @@ use TencentCloud\Tcr\V20190924\Models as Models;
  * @method Models\ModifyRepositoryInfoPersonalResponse ModifyRepositoryInfoPersonal(Models\ModifyRepositoryInfoPersonalRequest $req) 用于在个人版镜像仓库中更新容器镜像描述
  * @method Models\ModifyUserPasswordPersonalResponse ModifyUserPasswordPersonal(Models\ModifyUserPasswordPersonalRequest $req) 修改个人用户登录密码
  * @method Models\ModifyWebhookTriggerResponse ModifyWebhookTrigger(Models\ModifyWebhookTriggerRequest $req) 更新触发器
+ * @method Models\RenewInstanceResponse RenewInstance(Models\RenewInstanceRequest $req) 预付费实例续费，同时支持按量计费转包年包月
  * @method Models\ValidateNamespaceExistPersonalResponse ValidateNamespaceExistPersonal(Models\ValidateNamespaceExistPersonalRequest $req) 查询个人版用户命名空间是否存在
  * @method Models\ValidateRepositoryExistPersonalResponse ValidateRepositoryExistPersonal(Models\ValidateRepositoryExistPersonalRequest $req) 用于判断个人版仓库是否存在
  */

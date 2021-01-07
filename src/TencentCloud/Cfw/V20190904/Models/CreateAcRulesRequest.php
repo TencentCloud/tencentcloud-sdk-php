@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getData() 获取创建规则数据
  * @method void setData(array $Data) 设置创建规则数据
- * @method integer getType() 获取0：添加，1：插入
- * @method void setType(integer $Type) 设置0：添加，1：插入
+ * @method integer getType() 获取0：添加（默认），1：插入
+ * @method void setType(integer $Type) 设置0：添加（默认），1：插入
  * @method string getEdgeId() 获取边id
  * @method void setEdgeId(string $EdgeId) 设置边id
  * @method integer getEnable() 获取访问控制规则状态
@@ -45,7 +45,7 @@ class CreateAcRulesRequest extends AbstractModel
     public $Data;
 
     /**
-     * @var integer 0：添加，1：插入
+     * @var integer 0：添加（默认），1：插入
      */
     public $Type;
 
@@ -81,7 +81,7 @@ class CreateAcRulesRequest extends AbstractModel
 
     /**
      * @param array $Data 创建规则数据
-     * @param integer $Type 0：添加，1：插入
+     * @param integer $Type 0：添加（默认），1：插入
      * @param string $EdgeId 边id
      * @param integer $Enable 访问控制规则状态
      * @param integer $Overwrite 0：添加，1：覆盖

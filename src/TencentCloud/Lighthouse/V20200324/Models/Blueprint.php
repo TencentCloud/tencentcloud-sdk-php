@@ -38,10 +38,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBlueprintType(string $BlueprintType) 设置镜像类型，如 APP_OS、PURE_OS。
  * @method string getImageUrl() 获取镜像图片 URL。
  * @method void setImageUrl(string $ImageUrl) 设置镜像图片 URL。
- * @method integer getRequiredSystemDiskSize() 获取镜像所需系统盘大小
- * @method void setRequiredSystemDiskSize(integer $RequiredSystemDiskSize) 设置镜像所需系统盘大小
- * @method string getBlueprintState() 获取镜像状态，取值：ONLINE、OFFLINE
- * @method void setBlueprintState(string $BlueprintState) 设置镜像状态，取值：ONLINE、OFFLINE
+ * @method integer getRequiredSystemDiskSize() 获取镜像所需系统盘大小。
+ * @method void setRequiredSystemDiskSize(integer $RequiredSystemDiskSize) 设置镜像所需系统盘大小。
+ * @method string getBlueprintState() 获取镜像状态。
+ * @method void setBlueprintState(string $BlueprintState) 设置镜像状态。
  */
 class Blueprint extends AbstractModel
 {
@@ -91,12 +91,12 @@ class Blueprint extends AbstractModel
     public $ImageUrl;
 
     /**
-     * @var integer 镜像所需系统盘大小
+     * @var integer 镜像所需系统盘大小。
      */
     public $RequiredSystemDiskSize;
 
     /**
-     * @var string 镜像状态，取值：ONLINE、OFFLINE
+     * @var string 镜像状态。
      */
     public $BlueprintState;
 
@@ -110,8 +110,8 @@ class Blueprint extends AbstractModel
      * @param string $PlatformType 操作系统平台类型，如 LINUX_UNIX、WINDOWS。
      * @param string $BlueprintType 镜像类型，如 APP_OS、PURE_OS。
      * @param string $ImageUrl 镜像图片 URL。
-     * @param integer $RequiredSystemDiskSize 镜像所需系统盘大小
-     * @param string $BlueprintState 镜像状态，取值：ONLINE、OFFLINE
+     * @param integer $RequiredSystemDiskSize 镜像所需系统盘大小。
+     * @param string $BlueprintState 镜像状态。
      */
     function __construct()
     {

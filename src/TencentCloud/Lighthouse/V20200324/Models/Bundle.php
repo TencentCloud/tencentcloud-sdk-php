@@ -54,6 +54,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBundleType(string $BundleType) 设置套餐类型。
 取值范围：
 <li> GENERAL_BUNDLE：通用型</li><li> STORAGE_BUNDLE：存储型 </li>
+ * @method string getBundleDisplayLabel() 获取套餐展示标签.
+取值范围:
+"ACTIVITY": 活动套餐,
+"NORMAL": 普通套餐
+ * @method void setBundleDisplayLabel(string $BundleDisplayLabel) 设置套餐展示标签.
+取值范围:
+"ACTIVITY": 活动套餐,
+"NORMAL": 普通套餐
  */
 class Bundle extends AbstractModel
 {
@@ -127,6 +135,14 @@ class Bundle extends AbstractModel
     public $BundleType;
 
     /**
+     * @var string 套餐展示标签.
+取值范围:
+"ACTIVITY": 活动套餐,
+"NORMAL": 普通套餐
+     */
+    public $BundleDisplayLabel;
+
+    /**
      * @param string $BundleId 套餐 ID。
      * @param integer $Memory 内存大小，单位 GB。
      * @param string $SystemDiskType 系统盘类型。
@@ -144,6 +160,10 @@ class Bundle extends AbstractModel
      * @param string $BundleType 套餐类型。
 取值范围：
 <li> GENERAL_BUNDLE：通用型</li><li> STORAGE_BUNDLE：存储型 </li>
+     * @param string $BundleDisplayLabel 套餐展示标签.
+取值范围:
+"ACTIVITY": 活动套餐,
+"NORMAL": 普通套餐
      */
     function __construct()
     {
@@ -209,6 +229,10 @@ class Bundle extends AbstractModel
 
         if (array_key_exists("BundleType",$param) and $param["BundleType"] !== null) {
             $this->BundleType = $param["BundleType"];
+        }
+
+        if (array_key_exists("BundleDisplayLabel",$param) and $param["BundleDisplayLabel"] !== null) {
+            $this->BundleDisplayLabel = $param["BundleDisplayLabel"];
         }
     }
 }

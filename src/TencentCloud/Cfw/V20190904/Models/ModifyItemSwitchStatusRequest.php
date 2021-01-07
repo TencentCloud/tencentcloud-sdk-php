@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setId(integer $Id) 设置id值
  * @method integer getStatus() 获取状态值，0: 关闭 ,1:开启
  * @method void setStatus(integer $Status) 设置状态值，0: 关闭 ,1:开启
- * @method integer getType() 获取0: 边界防火墙开关，1：vpc防火墙开关
- * @method void setType(integer $Type) 设置0: 边界防火墙开关，1：vpc防火墙开关
+ * @method integer getType() 获取0: 互联网边界边界防火墙开关，1：vpc防火墙开关
+ * @method void setType(integer $Type) 设置0: 互联网边界边界防火墙开关，1：vpc防火墙开关
  */
 class ModifyItemSwitchStatusRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class ModifyItemSwitchStatusRequest extends AbstractModel
     public $Status;
 
     /**
-     * @var integer 0: 边界防火墙开关，1：vpc防火墙开关
+     * @var integer 0: 互联网边界边界防火墙开关，1：vpc防火墙开关
      */
     public $Type;
 
     /**
      * @param integer $Id id值
      * @param integer $Status 状态值，0: 关闭 ,1:开启
-     * @param integer $Type 0: 边界防火墙开关，1：vpc防火墙开关
+     * @param integer $Type 0: 互联网边界边界防火墙开关，1：vpc防火墙开关
      */
     function __construct()
     {

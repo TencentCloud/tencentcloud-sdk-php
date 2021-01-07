@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setData(array $Data) 设置修改数据
  * @method string getArea() 获取NAT地域
  * @method void setArea(string $Area) 设置NAT地域
- * @method integer getDirection() 获取0：出向，1：入向
- * @method void setDirection(integer $Direction) 设置0：出向，1：入向
+ * @method integer getDirection() 获取方向，0：出向，1：入向
+ * @method void setDirection(integer $Direction) 设置方向，0：出向，1：入向
  */
 class ModifySequenceRulesRequest extends AbstractModel
 {
@@ -47,7 +47,7 @@ class ModifySequenceRulesRequest extends AbstractModel
     public $Area;
 
     /**
-     * @var integer 0：出向，1：入向
+     * @var integer 方向，0：出向，1：入向
      */
     public $Direction;
 
@@ -55,7 +55,7 @@ class ModifySequenceRulesRequest extends AbstractModel
      * @param string $EdgeId 边Id值
      * @param array $Data 修改数据
      * @param string $Area NAT地域
-     * @param integer $Direction 0：出向，1：入向
+     * @param integer $Direction 方向，0：出向，1：入向
      */
     function __construct()
     {

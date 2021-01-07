@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCountryCode(string $CountryCode) 设置区号
  * @method string getEmail() 获取邮箱
  * @method void setEmail(string $Email) 设置邮箱
+ * @method string getCreateTime() 获取创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCreateTime(string $CreateTime) 设置创建时间
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SubAccountInfo extends AbstractModel
 {
@@ -80,6 +84,12 @@ class SubAccountInfo extends AbstractModel
     public $Email;
 
     /**
+     * @var string 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CreateTime;
+
+    /**
      * @param integer $Uin 子用户用户 ID
      * @param string $Name 子用户用户名
      * @param integer $Uid 子用户 UID
@@ -88,6 +98,8 @@ class SubAccountInfo extends AbstractModel
      * @param string $PhoneNum 手机号
      * @param string $CountryCode 区号
      * @param string $Email 邮箱
+     * @param string $CreateTime 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -132,6 +144,10 @@ class SubAccountInfo extends AbstractModel
 
         if (array_key_exists("Email",$param) and $param["Email"] !== null) {
             $this->Email = $param["Email"];
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
         }
     }
 }

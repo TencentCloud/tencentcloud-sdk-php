@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePackages请求参数结构体
  *
- * @method integer getOffset() 获取默认0
- * @method void setOffset(integer $Offset) 设置默认0
+ * @method integer getOffset() 获取默认0，Offset=Offset+Length
+ * @method void setOffset(integer $Offset) 设置默认0，Offset=Offset+Length
  * @method integer getLength() 获取默认20
  * @method void setLength(integer $Length) 设置默认20
  */
 class DescribePackagesRequest extends AbstractModel
 {
     /**
-     * @var integer 默认0
+     * @var integer 默认0，Offset=Offset+Length
      */
     public $Offset;
 
@@ -38,7 +38,7 @@ class DescribePackagesRequest extends AbstractModel
     public $Length;
 
     /**
-     * @param integer $Offset 默认0
+     * @param integer $Offset 默认0，Offset=Offset+Length
      * @param integer $Length 默认20
      */
     function __construct()

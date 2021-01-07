@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getHaVipId() 获取HAVIP的ID，是HAVIP的唯一标识。
  * @method void setHaVipId(string $HaVipId) 设置HAVIP的ID，是HAVIP的唯一标识。
  * @method string getHaVipName() 获取HAVIP名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHaVipName(string $HaVipName) 设置HAVIP名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVip() 获取虚拟IP地址。
  * @method void setVip(string $Vip) 设置虚拟IP地址。
  * @method string getVpcId() 获取HAVIP所在私有网络ID。
@@ -35,13 +33,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getNetworkInterfaceId() 获取HAVIP关联弹性网卡ID。
  * @method void setNetworkInterfaceId(string $NetworkInterfaceId) 设置HAVIP关联弹性网卡ID。
  * @method string getInstanceId() 获取被绑定的实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceId(string $InstanceId) 设置被绑定的实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAddressIp() 获取绑定EIP。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAddressIp(string $AddressIp) 设置绑定EIP。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getState() 获取状态：
 AVAILABLE：运行中。
 UNBIND：未绑定。
@@ -51,9 +45,7 @@ UNBIND：未绑定。
  * @method string getCreatedTime() 获取创建时间。
  * @method void setCreatedTime(string $CreatedTime) 设置创建时间。
  * @method string getBusiness() 获取使用havip的业务标识。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBusiness(string $Business) 设置使用havip的业务标识。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class HaVip extends AbstractModel
 {
@@ -64,7 +56,6 @@ class HaVip extends AbstractModel
 
     /**
      * @var string HAVIP名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HaVipName;
 
@@ -90,13 +81,11 @@ class HaVip extends AbstractModel
 
     /**
      * @var string 被绑定的实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceId;
 
     /**
      * @var string 绑定EIP。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AddressIp;
 
@@ -114,28 +103,23 @@ UNBIND：未绑定。
 
     /**
      * @var string 使用havip的业务标识。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Business;
 
     /**
      * @param string $HaVipId HAVIP的ID，是HAVIP的唯一标识。
      * @param string $HaVipName HAVIP名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Vip 虚拟IP地址。
      * @param string $VpcId HAVIP所在私有网络ID。
      * @param string $SubnetId HAVIP所在子网ID。
      * @param string $NetworkInterfaceId HAVIP关联弹性网卡ID。
      * @param string $InstanceId 被绑定的实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AddressIp 绑定EIP。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $State 状态：
 AVAILABLE：运行中。
 UNBIND：未绑定。
      * @param string $CreatedTime 创建时间。
      * @param string $Business 使用havip的业务标识。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

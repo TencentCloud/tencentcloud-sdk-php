@@ -66,6 +66,8 @@ OPEN：公网属性， INTERNAL：内网属性。
  * @method void setSnatIps(array $SnatIps) 设置开启绑定跨地域/跨Vpc绑定IP的功能后，创建SnatIp。
  * @method string getClusterTag() 获取Stgw独占集群的标签。
  * @method void setClusterTag(string $ClusterTag) 设置Stgw独占集群的标签。
+ * @method string getEipAddressId() 获取EIP 的唯一 ID，形如：eip-11112222，仅适用于内网负载均衡绑定EIP
+ * @method void setEipAddressId(string $EipAddressId) 设置EIP 的唯一 ID，形如：eip-11112222，仅适用于内网负载均衡绑定EIP
  */
 class CreateLoadBalancerRequest extends AbstractModel
 {
@@ -173,6 +175,11 @@ OPEN：公网属性， INTERNAL：内网属性。
     public $ClusterTag;
 
     /**
+     * @var string EIP 的唯一 ID，形如：eip-11112222，仅适用于内网负载均衡绑定EIP
+     */
+    public $EipAddressId;
+
+    /**
      * @param string $LoadBalancerType 负载均衡实例的网络类型：
 OPEN：公网属性， INTERNAL：内网属性。
      * @param integer $Forward 负载均衡实例的类型。1：通用的负载均衡实例，目前只支持传入1
@@ -196,6 +203,7 @@ OPEN：公网属性， INTERNAL：内网属性。
      * @param boolean $SnatPro 是否支持绑定跨地域/跨Vpc绑定IP的功能。
      * @param array $SnatIps 开启绑定跨地域/跨Vpc绑定IP的功能后，创建SnatIp。
      * @param string $ClusterTag Stgw独占集群的标签。
+     * @param string $EipAddressId EIP 的唯一 ID，形如：eip-11112222，仅适用于内网负载均衡绑定EIP
      */
     function __construct()
     {
@@ -300,6 +308,10 @@ OPEN：公网属性， INTERNAL：内网属性。
 
         if (array_key_exists("ClusterTag",$param) and $param["ClusterTag"] !== null) {
             $this->ClusterTag = $param["ClusterTag"];
+        }
+
+        if (array_key_exists("EipAddressId",$param) and $param["EipAddressId"] !== null) {
+            $this->EipAddressId = $param["EipAddressId"];
         }
     }
 }

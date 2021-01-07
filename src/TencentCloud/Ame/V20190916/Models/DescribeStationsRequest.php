@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getLimit() 获取条数，必须大于0
  * @method void setLimit(integer $Limit) 设置条数，必须大于0
- * @method integer getOffset() 获取offset (Default = 0)，(当前页-1) * Limit
- * @method void setOffset(integer $Offset) 设置offset (Default = 0)，(当前页-1) * Limit
+ * @method integer getOffset() 获取offset (Default = 0)，Offset=Offset+Limit
+ * @method void setOffset(integer $Offset) 设置offset (Default = 0)，Offset=Offset+Limit
  */
 class DescribeStationsRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class DescribeStationsRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var integer offset (Default = 0)，(当前页-1) * Limit
+     * @var integer offset (Default = 0)，Offset=Offset+Limit
      */
     public $Offset;
 
     /**
      * @param integer $Limit 条数，必须大于0
-     * @param integer $Offset offset (Default = 0)，(当前页-1) * Limit
+     * @param integer $Offset offset (Default = 0)，Offset=Offset+Limit
      */
     function __construct()
     {

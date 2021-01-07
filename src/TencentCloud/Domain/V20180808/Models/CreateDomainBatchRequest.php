@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateDomainBatch请求参数结构体
  *
- * @method string getTemplateId() 获取模板ID
- * @method void setTemplateId(string $TemplateId) 设置模板ID
+ * @method string getTemplateId() 获取模板ID。详情请查看：[获取模板列表](https://cloud.tencent.com/document/product/242/48940)
+ * @method void setTemplateId(string $TemplateId) 设置模板ID。详情请查看：[获取模板列表](https://cloud.tencent.com/document/product/242/48940)
  * @method integer getPeriod() 获取购买域名的年限，可选值：[1-10]
  * @method void setPeriod(integer $Period) 设置购买域名的年限，可选值：[1-10]
  * @method array getDomains() 获取批量购买的域名,最多为4000个
@@ -38,7 +38,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateDomainBatchRequest extends AbstractModel
 {
     /**
-     * @var string 模板ID
+     * @var string 模板ID。详情请查看：[获取模板列表](https://cloud.tencent.com/document/product/242/48940)
      */
     public $TemplateId;
 
@@ -65,7 +65,7 @@ class CreateDomainBatchRequest extends AbstractModel
     public $AutoRenewFlag;
 
     /**
-     * @param string $TemplateId 模板ID
+     * @param string $TemplateId 模板ID。详情请查看：[获取模板列表](https://cloud.tencent.com/document/product/242/48940)
      * @param integer $Period 购买域名的年限，可选值：[1-10]
      * @param array $Domains 批量购买的域名,最多为4000个
      * @param integer $PayMode 付费模式 0手动在线付费，1使用余额付费

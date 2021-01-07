@@ -22,13 +22,13 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getFileName() 获取目标文件名，不能带特殊字符（如/等），无需后缀名，最长200字符。
 
-注1：部分子服务支持站位符，形式为： {parameter}
-预设parameter：
+注1：部分子服务支持占位符，形式为： {parameter}
+预设parameter有：
 index：序号；
  * @method void setFileName(string $FileName) 设置目标文件名，不能带特殊字符（如/等），无需后缀名，最长200字符。
 
-注1：部分子服务支持站位符，形式为： {parameter}
-预设parameter：
+注1：部分子服务支持占位符，形式为： {parameter}
+预设parameter有：
 index：序号；
  * @method string getFormat() 获取媒体封装格式，最长5字符，具体格式支持根据子任务确定。
  * @method void setFormat(string $Format) 设置媒体封装格式，最长5字符，具体格式支持根据子任务确定。
@@ -46,8 +46,8 @@ class MediaTargetInfo extends AbstractModel
     /**
      * @var string 目标文件名，不能带特殊字符（如/等），无需后缀名，最长200字符。
 
-注1：部分子服务支持站位符，形式为： {parameter}
-预设parameter：
+注1：部分子服务支持占位符，形式为： {parameter}
+预设parameter有：
 index：序号；
      */
     public $FileName;
@@ -72,8 +72,8 @@ NoListFile：不存储结果列表。
     /**
      * @param string $FileName 目标文件名，不能带特殊字符（如/等），无需后缀名，最长200字符。
 
-注1：部分子服务支持站位符，形式为： {parameter}
-预设parameter：
+注1：部分子服务支持占位符，形式为： {parameter}
+预设parameter有：
 index：序号；
      * @param string $Format 媒体封装格式，最长5字符，具体格式支持根据子任务确定。
      * @param TargetVideoInfo $TargetVideoInfo 视频流信息。

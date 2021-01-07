@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteAllAccessControlRule请求参数结构体
  *
- * @method integer getDirection() 获取方向，0：出站，1：入站
- * @method void setDirection(integer $Direction) 设置方向，0：出站，1：入站
- * @method string getEdgeId() 获取VPC间防火墙开关ID
- * @method void setEdgeId(string $EdgeId) 设置VPC间防火墙开关ID
- * @method string getArea() 获取nat地域
- * @method void setArea(string $Area) 设置nat地域
+ * @method integer getDirection() 获取方向，0：出站，1：入站  默认值是 0
+ * @method void setDirection(integer $Direction) 设置方向，0：出站，1：入站  默认值是 0
+ * @method string getEdgeId() 获取VPC间防火墙开关ID  全部删除 EdgeId和Area只填写一个，不填写则不删除vpc间防火墙开关 ，默认值为‘’
+ * @method void setEdgeId(string $EdgeId) 设置VPC间防火墙开关ID  全部删除 EdgeId和Area只填写一个，不填写则不删除vpc间防火墙开关 ，默认值为‘’
+ * @method string getArea() 获取nat地域 全部删除 EdgeId和Area只填写一个，不填写则不删除nat防火墙开关 默认值为‘’
+ * @method void setArea(string $Area) 设置nat地域 全部删除 EdgeId和Area只填写一个，不填写则不删除nat防火墙开关 默认值为‘’
  */
 class DeleteAllAccessControlRuleRequest extends AbstractModel
 {
     /**
-     * @var integer 方向，0：出站，1：入站
+     * @var integer 方向，0：出站，1：入站  默认值是 0
      */
     public $Direction;
 
     /**
-     * @var string VPC间防火墙开关ID
+     * @var string VPC间防火墙开关ID  全部删除 EdgeId和Area只填写一个，不填写则不删除vpc间防火墙开关 ，默认值为‘’
      */
     public $EdgeId;
 
     /**
-     * @var string nat地域
+     * @var string nat地域 全部删除 EdgeId和Area只填写一个，不填写则不删除nat防火墙开关 默认值为‘’
      */
     public $Area;
 
     /**
-     * @param integer $Direction 方向，0：出站，1：入站
-     * @param string $EdgeId VPC间防火墙开关ID
-     * @param string $Area nat地域
+     * @param integer $Direction 方向，0：出站，1：入站  默认值是 0
+     * @param string $EdgeId VPC间防火墙开关ID  全部删除 EdgeId和Area只填写一个，不填写则不删除vpc间防火墙开关 ，默认值为‘’
+     * @param string $Area nat地域 全部删除 EdgeId和Area只填写一个，不填写则不删除nat防火墙开关 默认值为‘’
      */
     function __construct()
     {

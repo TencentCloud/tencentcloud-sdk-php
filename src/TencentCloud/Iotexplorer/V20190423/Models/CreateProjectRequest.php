@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProjectName(string $ProjectName) 设置项目名称
  * @method string getProjectDesc() 获取项目描述
  * @method void setProjectDesc(string $ProjectDesc) 设置项目描述
+ * @method string getInstanceId() 获取实例ID，不带实例ID，默认为公共实例
+ * @method void setInstanceId(string $InstanceId) 设置实例ID，不带实例ID，默认为公共实例
  */
 class CreateProjectRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class CreateProjectRequest extends AbstractModel
     public $ProjectDesc;
 
     /**
+     * @var string 实例ID，不带实例ID，默认为公共实例
+     */
+    public $InstanceId;
+
+    /**
      * @param string $ProjectName 项目名称
      * @param string $ProjectDesc 项目描述
+     * @param string $InstanceId 实例ID，不带实例ID，默认为公共实例
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class CreateProjectRequest extends AbstractModel
 
         if (array_key_exists("ProjectDesc",$param) and $param["ProjectDesc"] !== null) {
             $this->ProjectDesc = $param["ProjectDesc"];
+        }
+
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
         }
     }
 }

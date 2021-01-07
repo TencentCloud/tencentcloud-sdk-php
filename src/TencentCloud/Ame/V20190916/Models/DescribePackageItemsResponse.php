@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePackageItems返回参数结构体
  *
- * @method array getPackageItems() 获取歌曲信息数组
+ * @method array getPackageItems() 获取已核销歌曲信息列表
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPackageItems(array $PackageItems) 设置歌曲信息数组
+ * @method void setPackageItems(array $PackageItems) 设置已核销歌曲信息列表
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribePackageItemsResponse extends AbstractModel
 {
     /**
-     * @var array 歌曲信息数组
+     * @var array 已核销歌曲信息列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PackageItems;
@@ -41,7 +41,7 @@ class DescribePackageItemsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $PackageItems 歌曲信息数组
+     * @param array $PackageItems 已核销歌曲信息列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

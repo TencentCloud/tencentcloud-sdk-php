@@ -24,7 +24,9 @@ use TencentCloud\Gs\V20191118\Models as Models;
 
 /**
  * @method Models\CreateSessionResponse CreateSession(Models\CreateSessionRequest $req) 创建会话
+ * @method Models\SaveGameArchiveResponse SaveGameArchive(Models\SaveGameArchiveRequest $req) 保存游戏存档
  * @method Models\StopGameResponse StopGame(Models\StopGameRequest $req) 强制退出游戏
+ * @method Models\SwitchGameArchiveResponse SwitchGameArchive(Models\SwitchGameArchiveRequest $req) 切换游戏存档
  * @method Models\TrylockWorkerResponse TrylockWorker(Models\TrylockWorkerRequest $req) 尝试锁定机器
  */
 

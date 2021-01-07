@@ -108,6 +108,10 @@ global：全球加速
  * @method void setOriginAuthentication(OriginAuthentication $OriginAuthentication) 设置回源鉴权高级版配置，白名单功能
  * @method Ipv6Access getIpv6Access() 获取Ipv6 访问配置
  * @method void setIpv6Access(Ipv6Access $Ipv6Access) 设置Ipv6 访问配置
+ * @method OfflineCache getOfflineCache() 获取离线缓存
+ * @method void setOfflineCache(OfflineCache $OfflineCache) 设置离线缓存
+ * @method OriginCombine getOriginCombine() 获取合并回源
+ * @method void setOriginCombine(OriginCombine $OriginCombine) 设置合并回源
  */
 class UpdateDomainConfigRequest extends AbstractModel
 {
@@ -304,6 +308,16 @@ global：全球加速
     public $Ipv6Access;
 
     /**
+     * @var OfflineCache 离线缓存
+     */
+    public $OfflineCache;
+
+    /**
+     * @var OriginCombine 合并回源
+     */
+    public $OriginCombine;
+
+    /**
      * @param string $Domain 域名
      * @param integer $ProjectId 项目 ID
      * @param Origin $Origin 源站配置
@@ -348,6 +362,8 @@ global：全球加速
      * @param AdvancedAuthentication $AdvancedAuthentication 时间戳防盗链高级版配置，白名单功能
      * @param OriginAuthentication $OriginAuthentication 回源鉴权高级版配置，白名单功能
      * @param Ipv6Access $Ipv6Access Ipv6 访问配置
+     * @param OfflineCache $OfflineCache 离线缓存
+     * @param OriginCombine $OriginCombine 合并回源
      */
     function __construct()
     {
@@ -540,6 +556,16 @@ global：全球加速
         if (array_key_exists("Ipv6Access",$param) and $param["Ipv6Access"] !== null) {
             $this->Ipv6Access = new Ipv6Access();
             $this->Ipv6Access->deserialize($param["Ipv6Access"]);
+        }
+
+        if (array_key_exists("OfflineCache",$param) and $param["OfflineCache"] !== null) {
+            $this->OfflineCache = new OfflineCache();
+            $this->OfflineCache->deserialize($param["OfflineCache"]);
+        }
+
+        if (array_key_exists("OriginCombine",$param) and $param["OriginCombine"] !== null) {
+            $this->OriginCombine = new OriginCombine();
+            $this->OriginCombine->deserialize($param["OriginCombine"]);
         }
     }
 }

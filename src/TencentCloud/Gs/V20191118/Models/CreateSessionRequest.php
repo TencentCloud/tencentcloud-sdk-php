@@ -52,6 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHostUserId(string $HostUserId) 设置【多人云游】游戏主机用户ID
  * @method string getRole() 获取【多人云游】角色；Player表示玩家；Viewer表示观察者
  * @method void setRole(string $Role) 设置【多人云游】角色；Player表示玩家；Viewer表示观察者
+ * @method string getGameContext() 获取游戏相关参数
+ * @method void setGameContext(string $GameContext) 设置游戏相关参数
  */
 class CreateSessionRequest extends AbstractModel
 {
@@ -136,6 +138,11 @@ class CreateSessionRequest extends AbstractModel
     public $Role;
 
     /**
+     * @var string 游戏相关参数
+     */
+    public $GameContext;
+
+    /**
      * @param string $ClientSession 客户端session信息，从JSSDK请求中获得
      * @param string $UserId 游戏用户ID
      * @param string $GameId 游戏ID
@@ -152,6 +159,7 @@ class CreateSessionRequest extends AbstractModel
      * @param integer $Optimization 优化项，便于客户灰度开启新的优化项，默认为0
      * @param string $HostUserId 【多人云游】游戏主机用户ID
      * @param string $Role 【多人云游】角色；Player表示玩家；Viewer表示观察者
+     * @param string $GameContext 游戏相关参数
      */
     function __construct()
     {
@@ -228,6 +236,10 @@ class CreateSessionRequest extends AbstractModel
 
         if (array_key_exists("Role",$param) and $param["Role"] !== null) {
             $this->Role = $param["Role"];
+        }
+
+        if (array_key_exists("GameContext",$param) and $param["GameContext"] !== null) {
+            $this->GameContext = $param["GameContext"];
         }
     }
 }

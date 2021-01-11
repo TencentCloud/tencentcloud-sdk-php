@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置数据偏移量，默认值为 0
  * @method integer getLimit() 获取返回数据长度，默认值为 20
  * @method void setLimit(integer $Limit) 设置返回数据长度，默认值为 20
- * @method string getOrderBy() 获取根据哪个字段进行返回结果排序,支持以下字段：AddTime, ModTime，默认ModTime
- * @method void setOrderBy(string $OrderBy) 设置根据哪个字段进行返回结果排序,支持以下字段：AddTime, ModTime，默认ModTime
+ * @method string getOrderBy() 获取根据哪个字段进行返回结果排序,支持以下字段：add_time，mod_time，默认mod_time
+ * @method void setOrderBy(string $OrderBy) 设置根据哪个字段进行返回结果排序,支持以下字段：add_time，mod_time，默认mod_time
  * @method string getOrder() 获取以升序还是降序的方式返回结果，可选值 ASC 和 DESC，默认DESC
  * @method void setOrder(string $Order) 设置以升序还是降序的方式返回结果，可选值 ASC 和 DESC，默认DESC
  * @method array getFilters() 获取* Qualifier:
@@ -60,7 +60,7 @@ class ListTriggersRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string 根据哪个字段进行返回结果排序,支持以下字段：AddTime, ModTime，默认ModTime
+     * @var string 根据哪个字段进行返回结果排序,支持以下字段：add_time，mod_time，默认mod_time
      */
     public $OrderBy;
 
@@ -80,7 +80,7 @@ class ListTriggersRequest extends AbstractModel
      * @param string $Namespace 命名空间，默认是default
      * @param integer $Offset 数据偏移量，默认值为 0
      * @param integer $Limit 返回数据长度，默认值为 20
-     * @param string $OrderBy 根据哪个字段进行返回结果排序,支持以下字段：AddTime, ModTime，默认ModTime
+     * @param string $OrderBy 根据哪个字段进行返回结果排序,支持以下字段：add_time，mod_time，默认mod_time
      * @param string $Order 以升序还是降序的方式返回结果，可选值 ASC 和 DESC，默认DESC
      * @param array $Filters * Qualifier:
 函数版本，别名

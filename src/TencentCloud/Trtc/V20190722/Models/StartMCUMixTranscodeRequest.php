@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEncodeParams(EncodeParams $EncodeParams) 设置混流输出编码参数。
  * @method LayoutParams getLayoutParams() 获取混流输出布局参数。
  * @method void setLayoutParams(LayoutParams $LayoutParams) 设置混流输出布局参数。
+ * @method PublishCdnParams getPublishCdnParams() 获取第三方CDN转推参数。
+ * @method void setPublishCdnParams(PublishCdnParams $PublishCdnParams) 设置第三方CDN转推参数。
  */
 class StartMCUMixTranscodeRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class StartMCUMixTranscodeRequest extends AbstractModel
     public $LayoutParams;
 
     /**
+     * @var PublishCdnParams 第三方CDN转推参数。
+     */
+    public $PublishCdnParams;
+
+    /**
      * @param integer $SdkAppId TRTC的SDKAppId。
      * @param integer $RoomId 房间号。
      * @param OutputParams $OutputParams 混流输出控制参数。
      * @param EncodeParams $EncodeParams 混流输出编码参数。
      * @param LayoutParams $LayoutParams 混流输出布局参数。
+     * @param PublishCdnParams $PublishCdnParams 第三方CDN转推参数。
      */
     function __construct()
     {
@@ -99,6 +107,11 @@ class StartMCUMixTranscodeRequest extends AbstractModel
         if (array_key_exists("LayoutParams",$param) and $param["LayoutParams"] !== null) {
             $this->LayoutParams = new LayoutParams();
             $this->LayoutParams->deserialize($param["LayoutParams"]);
+        }
+
+        if (array_key_exists("PublishCdnParams",$param) and $param["PublishCdnParams"] !== null) {
+            $this->PublishCdnParams = new PublishCdnParams();
+            $this->PublishCdnParams->deserialize($param["PublishCdnParams"]);
         }
     }
 }

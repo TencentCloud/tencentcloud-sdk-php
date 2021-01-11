@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 任务视频Url形式下载信息。
  *
- * @method string getUrl() 获取视频 URL。音视频支持mp4、ts等格式；直播流支持flv、rtmp格式。
-注意：目前智能编辑还不支持直播流场景。
- * @method void setUrl(string $Url) 设置视频 URL。音视频支持mp4、ts等格式；直播流支持flv、rtmp格式。
-注意：目前智能编辑还不支持直播流场景。
+ * @method string getUrl() 获取视频 URL。
+注意：编辑理解仅支持mp4、flv等格式的点播文件，不支持hls；
+ * @method void setUrl(string $Url) 设置视频 URL。
+注意：编辑理解仅支持mp4、flv等格式的点播文件，不支持hls；
  * @method integer getFormat() 获取视频地址格式，可选值： 
 0：音视频 ;
 1：直播流。 
@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
 class UrlInfo extends AbstractModel
 {
     /**
-     * @var string 视频 URL。音视频支持mp4、ts等格式；直播流支持flv、rtmp格式。
-注意：目前智能编辑还不支持直播流场景。
+     * @var string 视频 URL。
+注意：编辑理解仅支持mp4、flv等格式的点播文件，不支持hls；
      */
     public $Url;
 
@@ -57,8 +57,8 @@ class UrlInfo extends AbstractModel
     public $Host;
 
     /**
-     * @param string $Url 视频 URL。音视频支持mp4、ts等格式；直播流支持flv、rtmp格式。
-注意：目前智能编辑还不支持直播流场景。
+     * @param string $Url 视频 URL。
+注意：编辑理解仅支持mp4、flv等格式的点播文件，不支持hls；
      * @param integer $Format 视频地址格式，可选值： 
 0：音视频 ;
 1：直播流。 

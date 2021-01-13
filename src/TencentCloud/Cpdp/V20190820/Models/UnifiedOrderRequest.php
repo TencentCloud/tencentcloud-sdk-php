@@ -82,6 +82,8 @@ development: 开发环境
  * @method void setWxAppId(string $WxAppId) 设置微信商户应用ID
  * @method string getWxSubAppId() 获取微信商户子应用ID
  * @method void setWxSubAppId(string $WxSubAppId) 设置微信商户子应用ID
+ * @method string getPaymentNotifyUrl() 获取支付通知地址
+ * @method void setPaymentNotifyUrl(string $PaymentNotifyUrl) 设置支付通知地址
  */
 class UnifiedOrderRequest extends AbstractModel
 {
@@ -217,6 +219,11 @@ development: 开发环境
     public $WxSubAppId;
 
     /**
+     * @var string 支付通知地址
+     */
+    public $PaymentNotifyUrl;
+
+    /**
      * @param string $CurrencyType ISO 货币代码，CNY
      * @param string $MidasAppId 聚鑫分配的支付主MidasAppId
      * @param string $OutTradeNo 支付订单号，仅支持数字、字母、下划线（_）、横杠字符（-）、点（.）的组合
@@ -248,6 +255,7 @@ development: 开发环境
 缺省: release
      * @param string $WxAppId 微信商户应用ID
      * @param string $WxSubAppId 微信商户子应用ID
+     * @param string $PaymentNotifyUrl 支付通知地址
      */
     function __construct()
     {
@@ -365,6 +373,10 @@ development: 开发环境
 
         if (array_key_exists("WxSubAppId",$param) and $param["WxSubAppId"] !== null) {
             $this->WxSubAppId = $param["WxSubAppId"];
+        }
+
+        if (array_key_exists("PaymentNotifyUrl",$param) and $param["PaymentNotifyUrl"] !== null) {
+            $this->PaymentNotifyUrl = $param["PaymentNotifyUrl"];
         }
     }
 }

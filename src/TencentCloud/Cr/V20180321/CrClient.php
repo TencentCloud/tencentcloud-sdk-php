@@ -36,8 +36,11 @@ use TencentCloud\Cr\V20180321\Models as Models;
 <p>注意：录音清单中的录音下载链接仅次日20:00之前有效，请及时下载。</p>
  * @method Models\DownloadReportResponse DownloadReport(Models\DownloadReportRequest $req) 用于下载结果报表。当日23:00后，可获取当日到期/逾期提醒结果，次日00:30后，可获取昨日回访结果。
  * @method Models\ExportBotDataResponse ExportBotData(Models\ExportBotDataRequest $req) 导出机器人数据
+ * @method Models\QueryBotListResponse QueryBotList(Models\QueryBotListRequest $req) 查询机器人任务状态列表
  * @method Models\QueryInstantDataResponse QueryInstantData(Models\QueryInstantDataRequest $req) 实时数据查询
  * @method Models\QueryProductsResponse QueryProducts(Models\QueryProductsRequest $req) 查询产品列表
+ * @method Models\QueryRecordListResponse QueryRecordList(Models\QueryRecordListRequest $req) 查询录音列表
+ * @method Models\UploadBotDataResponse UploadBotData(Models\UploadBotDataRequest $req) 上传机器人任务数据
  * @method Models\UploadBotFileResponse UploadBotFile(Models\UploadBotFileRequest $req) 上传机器人文件
  * @method Models\UploadDataFileResponse UploadDataFile(Models\UploadDataFileRequest $req) 上传文件，接口返回数据任务ID，支持xlsx、xls、csv、zip格式。
  * @method Models\UploadDataJsonResponse UploadDataJson(Models\UploadDataJsonRequest $req) 上传Json格式数据，接口返回数据任务ID

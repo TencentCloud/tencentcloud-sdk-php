@@ -112,9 +112,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLastHeartbeatTime(integer $LastHeartbeatTime) 设置上次心跳时间
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getRegistrationId() 获取实例注册id
+ * @method string getRegistrationId() 获取实例注册id
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRegistrationId(integer $RegistrationId) 设置实例注册id
+ * @method void setRegistrationId(string $RegistrationId) 设置实例注册id
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getHiddenStatus() 获取屏蔽状态，hidden 为屏蔽，unhidden 为未屏蔽
 注意：此字段可能返回 null，表示取不到有效值。
@@ -262,7 +262,7 @@ class MsInstance extends AbstractModel
     public $LastHeartbeatTime;
 
     /**
-     * @var integer 实例注册id
+     * @var string 实例注册id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RegistrationId;
@@ -320,7 +320,7 @@ class MsInstance extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $LastHeartbeatTime 上次心跳时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $RegistrationId 实例注册id
+     * @param string $RegistrationId 实例注册id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $HiddenStatus 屏蔽状态，hidden 为屏蔽，unhidden 为未屏蔽
 注意：此字段可能返回 null，表示取不到有效值。

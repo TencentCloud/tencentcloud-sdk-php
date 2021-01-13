@@ -24,12 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setListenerId(string $ListenerId) 设置监听器ID
  * @method integer getPort() 获取绑定端口
  * @method void setPort(integer $Port) 设置绑定端口
- * @method string getInstanceId() 获取子机ID
- * @method void setInstanceId(string $InstanceId) 设置子机ID
- * @method string getEniIp() 获取弹性网卡ip
- * @method void setEniIp(string $EniIp) 设置弹性网卡ip
- * @method integer getWeight() 获取子机权重，范围[0, 100]。绑定时如果不存在，则默认为10。
- * @method void setWeight(integer $Weight) 设置子机权重，范围[0, 100]。绑定时如果不存在，则默认为10。
+ * @method string getInstanceId() 获取子机ID。表示绑定主网卡主IP
+ * @method void setInstanceId(string $InstanceId) 设置子机ID。表示绑定主网卡主IP
+ * @method string getEniIp() 获取弹性网卡ip或其他内网IP。如果是双栈IPV6子机，必须传该参数。
+ * @method void setEniIp(string $EniIp) 设置弹性网卡ip或其他内网IP。如果是双栈IPV6子机，必须传该参数。
+ * @method integer getWeight() 获取子机权重，范围[0, 100]。绑定时如果不存在，则默认为10
+ * @method void setWeight(integer $Weight) 设置子机权重，范围[0, 100]。绑定时如果不存在，则默认为10
  * @method string getLocationId() 获取七层规则ID
  * @method void setLocationId(string $LocationId) 设置七层规则ID
  */
@@ -46,17 +46,17 @@ class BatchTarget extends AbstractModel
     public $Port;
 
     /**
-     * @var string 子机ID
+     * @var string 子机ID。表示绑定主网卡主IP
      */
     public $InstanceId;
 
     /**
-     * @var string 弹性网卡ip
+     * @var string 弹性网卡ip或其他内网IP。如果是双栈IPV6子机，必须传该参数。
      */
     public $EniIp;
 
     /**
-     * @var integer 子机权重，范围[0, 100]。绑定时如果不存在，则默认为10。
+     * @var integer 子机权重，范围[0, 100]。绑定时如果不存在，则默认为10
      */
     public $Weight;
 
@@ -68,9 +68,9 @@ class BatchTarget extends AbstractModel
     /**
      * @param string $ListenerId 监听器ID
      * @param integer $Port 绑定端口
-     * @param string $InstanceId 子机ID
-     * @param string $EniIp 弹性网卡ip
-     * @param integer $Weight 子机权重，范围[0, 100]。绑定时如果不存在，则默认为10。
+     * @param string $InstanceId 子机ID。表示绑定主网卡主IP
+     * @param string $EniIp 弹性网卡ip或其他内网IP。如果是双栈IPV6子机，必须传该参数。
+     * @param integer $Weight 子机权重，范围[0, 100]。绑定时如果不存在，则默认为10
      * @param string $LocationId 七层规则ID
      */
     function __construct()

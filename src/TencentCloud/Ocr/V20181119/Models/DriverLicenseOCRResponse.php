@@ -28,16 +28,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNationality(string $Nationality) 设置国籍
  * @method string getAddress() 获取住址
  * @method void setAddress(string $Address) 设置住址
- * @method string getDateOfBirth() 获取出生日期
- * @method void setDateOfBirth(string $DateOfBirth) 设置出生日期
- * @method string getDateOfFirstIssue() 获取初次领证日期
- * @method void setDateOfFirstIssue(string $DateOfFirstIssue) 设置初次领证日期
+ * @method string getDateOfBirth() 获取出生日期（YYYY-MM-DD）
+ * @method void setDateOfBirth(string $DateOfBirth) 设置出生日期（YYYY-MM-DD）
+ * @method string getDateOfFirstIssue() 获取初次领证日期（YYYY-MM-DD）
+ * @method void setDateOfFirstIssue(string $DateOfFirstIssue) 设置初次领证日期（YYYY-MM-DD）
  * @method string getClass() 获取准驾车型
  * @method void setClass(string $Class) 设置准驾车型
- * @method string getStartDate() 获取有效期开始时间
- * @method void setStartDate(string $StartDate) 设置有效期开始时间
- * @method string getEndDate() 获取有效期截止时间
- * @method void setEndDate(string $EndDate) 设置有效期截止时间
+ * @method string getStartDate() 获取有效期开始时间（YYYY-MM-DD）
+ * @method void setStartDate(string $StartDate) 设置有效期开始时间（YYYY-MM-DD）
+ * @method string getEndDate() 获取有效期截止时间（YYYY-MM-DD）
+ * @method void setEndDate(string $EndDate) 设置有效期截止时间（YYYY-MM-DD）
  * @method string getCardCode() 获取证号
  * @method void setCardCode(string $CardCode) 设置证号
  * @method string getArchivesCode() 获取档案编号
@@ -64,6 +64,8 @@ WARN_DRIVER_LICENSE_COPY_CARD 复印件告警
 WARN_DRIVER_LICENSE_SCREENED_CARD 翻拍件告警
 WARN_DRIVER_LICENSE_PS_CARD ps告警
 注：告警信息可以同时存在多个
+ * @method string getIssuingAuthority() 获取发证单位
+ * @method void setIssuingAuthority(string $IssuingAuthority) 设置发证单位
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -90,12 +92,12 @@ class DriverLicenseOCRResponse extends AbstractModel
     public $Address;
 
     /**
-     * @var string 出生日期
+     * @var string 出生日期（YYYY-MM-DD）
      */
     public $DateOfBirth;
 
     /**
-     * @var string 初次领证日期
+     * @var string 初次领证日期（YYYY-MM-DD）
      */
     public $DateOfFirstIssue;
 
@@ -105,12 +107,12 @@ class DriverLicenseOCRResponse extends AbstractModel
     public $Class;
 
     /**
-     * @var string 有效期开始时间
+     * @var string 有效期开始时间（YYYY-MM-DD）
      */
     public $StartDate;
 
     /**
-     * @var string 有效期截止时间
+     * @var string 有效期截止时间（YYYY-MM-DD）
      */
     public $EndDate;
 
@@ -148,6 +150,11 @@ WARN_DRIVER_LICENSE_PS_CARD ps告警
     public $RecognizeWarnMsg;
 
     /**
+     * @var string 发证单位
+     */
+    public $IssuingAuthority;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -157,11 +164,11 @@ WARN_DRIVER_LICENSE_PS_CARD ps告警
      * @param string $Sex 性别
      * @param string $Nationality 国籍
      * @param string $Address 住址
-     * @param string $DateOfBirth 出生日期
-     * @param string $DateOfFirstIssue 初次领证日期
+     * @param string $DateOfBirth 出生日期（YYYY-MM-DD）
+     * @param string $DateOfFirstIssue 初次领证日期（YYYY-MM-DD）
      * @param string $Class 准驾车型
-     * @param string $StartDate 有效期开始时间
-     * @param string $EndDate 有效期截止时间
+     * @param string $StartDate 有效期开始时间（YYYY-MM-DD）
+     * @param string $EndDate 有效期截止时间（YYYY-MM-DD）
      * @param string $CardCode 证号
      * @param string $ArchivesCode 档案编号
      * @param string $Record 记录
@@ -175,6 +182,7 @@ WARN_DRIVER_LICENSE_COPY_CARD 复印件告警
 WARN_DRIVER_LICENSE_SCREENED_CARD 翻拍件告警
 WARN_DRIVER_LICENSE_PS_CARD ps告警
 注：告警信息可以同时存在多个
+     * @param string $IssuingAuthority 发证单位
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -244,6 +252,10 @@ WARN_DRIVER_LICENSE_PS_CARD ps告警
 
         if (array_key_exists("RecognizeWarnMsg",$param) and $param["RecognizeWarnMsg"] !== null) {
             $this->RecognizeWarnMsg = $param["RecognizeWarnMsg"];
+        }
+
+        if (array_key_exists("IssuingAuthority",$param) and $param["IssuingAuthority"] !== null) {
+            $this->IssuingAuthority = $param["IssuingAuthority"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

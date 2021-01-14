@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAssetId(string $AssetId) 设置资产组ES的_id
  * @method string getDetail() 获取详情
  * @method void setDetail(string $Detail) 设置详情
+ * @method string getRemarks() 获取备注内容
+ * @method void setRemarks(string $Remarks) 设置备注内容
  */
 class CheckAssetItem extends AbstractModel
 {
@@ -111,6 +113,11 @@ class CheckAssetItem extends AbstractModel
     public $Detail;
 
     /**
+     * @var string 备注内容
+     */
+    public $Remarks;
+
+    /**
      * @param integer $Id 检查项下资产组ID
      * @param string $Instid 资产组实例id
      * @param string $Url 处置跳转URL
@@ -124,6 +131,7 @@ class CheckAssetItem extends AbstractModel
      * @param string $AssetInfo 资产组信息
      * @param string $AssetId 资产组ES的_id
      * @param string $Detail 详情
+     * @param string $Remarks 备注内容
      */
     function __construct()
     {
@@ -184,6 +192,10 @@ class CheckAssetItem extends AbstractModel
 
         if (array_key_exists("Detail",$param) and $param["Detail"] !== null) {
             $this->Detail = $param["Detail"];
+        }
+
+        if (array_key_exists("Remarks",$param) and $param["Remarks"] !== null) {
+            $this->Remarks = $param["Remarks"];
         }
     }
 }

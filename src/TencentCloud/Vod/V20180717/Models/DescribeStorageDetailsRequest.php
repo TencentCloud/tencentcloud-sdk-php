@@ -48,11 +48,11 @@ use TencentCloud\Common\AbstractModel;
 当该字段为1时，表示以管理员身份查询所有子应用（含主应用）的用量合计。
  * @method string getArea() 获取查询的存储区域，有效值：
 <li>Chinese Mainland：中国境内（不包含港澳台）。</li>
-<li>outside Chinese Mainland：中国境外。</li>
+<li>Outside Chinese Mainland：中国境外。</li>
 默认值为 Chinese Mainland。
  * @method void setArea(string $Area) 设置查询的存储区域，有效值：
 <li>Chinese Mainland：中国境内（不包含港澳台）。</li>
-<li>outside Chinese Mainland：中国境外。</li>
+<li>Outside Chinese Mainland：中国境外。</li>
 默认值为 Chinese Mainland。
  */
 class DescribeStorageDetailsRequest extends AbstractModel
@@ -93,7 +93,7 @@ class DescribeStorageDetailsRequest extends AbstractModel
     /**
      * @var string 查询的存储区域，有效值：
 <li>Chinese Mainland：中国境内（不包含港澳台）。</li>
-<li>outside Chinese Mainland：中国境外。</li>
+<li>Outside Chinese Mainland：中国境外。</li>
 默认值为 Chinese Mainland。
      */
     public $Area;
@@ -114,7 +114,7 @@ class DescribeStorageDetailsRequest extends AbstractModel
 当该字段为1时，表示以管理员身份查询所有子应用（含主应用）的用量合计。
      * @param string $Area 查询的存储区域，有效值：
 <li>Chinese Mainland：中国境内（不包含港澳台）。</li>
-<li>outside Chinese Mainland：中国境外。</li>
+<li>Outside Chinese Mainland：中国境外。</li>
 默认值为 Chinese Mainland。
      */
     function __construct()

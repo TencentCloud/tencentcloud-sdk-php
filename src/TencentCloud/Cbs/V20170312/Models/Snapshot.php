@@ -54,8 +54,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImageCount(integer $ImageCount) 设置快照关联的镜像个数。
  * @method string getSnapshotType() 获取快照类型，目前该项取值可以为PRIVATE_SNAPSHOT或者SHARED_SNAPSHOT
  * @method void setSnapshotType(string $SnapshotType) 设置快照类型，目前该项取值可以为PRIVATE_SNAPSHOT或者SHARED_SNAPSHOT
- * @method integer getShareReference() 获取快照当前被共享数
- * @method void setShareReference(integer $ShareReference) 设置快照当前被共享数
+ * @method integer getShareReference() 获取快照当前被共享数。
+ * @method void setShareReference(integer $ShareReference) 设置快照当前被共享数。
+ * @method string getTimeStartShare() 获取快照开始共享的时间。
+ * @method void setTimeStartShare(string $TimeStartShare) 设置快照开始共享的时间。
  */
 class Snapshot extends AbstractModel
 {
@@ -145,9 +147,14 @@ class Snapshot extends AbstractModel
     public $SnapshotType;
 
     /**
-     * @var integer 快照当前被共享数
+     * @var integer 快照当前被共享数。
      */
     public $ShareReference;
+
+    /**
+     * @var string 快照开始共享的时间。
+     */
+    public $TimeStartShare;
 
     /**
      * @param string $SnapshotId 快照ID。
@@ -167,7 +174,8 @@ class Snapshot extends AbstractModel
      * @param array $Images 快照关联的镜像列表。
      * @param integer $ImageCount 快照关联的镜像个数。
      * @param string $SnapshotType 快照类型，目前该项取值可以为PRIVATE_SNAPSHOT或者SHARED_SNAPSHOT
-     * @param integer $ShareReference 快照当前被共享数
+     * @param integer $ShareReference 快照当前被共享数。
+     * @param string $TimeStartShare 快照开始共享的时间。
      */
     function __construct()
     {
@@ -258,6 +266,10 @@ class Snapshot extends AbstractModel
 
         if (array_key_exists("ShareReference",$param) and $param["ShareReference"] !== null) {
             $this->ShareReference = $param["ShareReference"];
+        }
+
+        if (array_key_exists("TimeStartShare",$param) and $param["TimeStartShare"] !== null) {
+            $this->TimeStartShare = $param["TimeStartShare"];
         }
     }
 }

@@ -44,6 +44,28 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLaunchConfigurationName(string $LaunchConfigurationName) 设置启动配置显示名称。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超60个字节。
  * @method string getUserData() 获取经过 Base64 编码后的自定义数据，最大长度不超过16KB。如果要清空UserData，则指定其为空字符串
  * @method void setUserData(string $UserData) 设置经过 Base64 编码后的自定义数据，最大长度不超过16KB。如果要清空UserData，则指定其为空字符串
+ * @method array getSecurityGroupIds() 获取实例所属安全组。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的`SecurityGroupId`字段来获取。
+若指定该参数，请至少提供一个安全组，列表顺序有先后。
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置实例所属安全组。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的`SecurityGroupId`字段来获取。
+若指定该参数，请至少提供一个安全组，列表顺序有先后。
+ * @method InternetAccessible getInternetAccessible() 获取公网带宽相关信息设置。
+ * @method void setInternetAccessible(InternetAccessible $InternetAccessible) 设置公网带宽相关信息设置。
+ * @method string getInstanceChargeType() 获取实例计费类型。具体取值范围如下：
+<br><li>POSTPAID_BY_HOUR：按小时后付费
+<br><li>SPOTPAID：竞价付费
+<br><li>PREPAID：预付费，即包年包月
+ * @method void setInstanceChargeType(string $InstanceChargeType) 设置实例计费类型。具体取值范围如下：
+<br><li>POSTPAID_BY_HOUR：按小时后付费
+<br><li>SPOTPAID：竞价付费
+<br><li>PREPAID：预付费，即包年包月
+ * @method InstanceChargePrepaid getInstanceChargePrepaid() 获取预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。
+若修改实例的付费模式为预付费，则该参数必传；从预付费修改为其他付费模式时，本字段原信息会自动丢弃。
+ * @method void setInstanceChargePrepaid(InstanceChargePrepaid $InstanceChargePrepaid) 设置预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。
+若修改实例的付费模式为预付费，则该参数必传；从预付费修改为其他付费模式时，本字段原信息会自动丢弃。
+ * @method InstanceMarketOptionsRequest getInstanceMarketOptions() 获取实例的市场相关选项，如竞价实例相关参数。
+若修改实例的付费模式为竞价付费，则该参数必传；从竞价付费修改为其他付费模式时，本字段原信息会自动丢弃。
+ * @method void setInstanceMarketOptions(InstanceMarketOptionsRequest $InstanceMarketOptions) 设置实例的市场相关选项，如竞价实例相关参数。
+若修改实例的付费模式为竞价付费，则该参数必传；从竞价付费修改为其他付费模式时，本字段原信息会自动丢弃。
  */
 class ModifyLaunchConfigurationAttributesRequest extends AbstractModel
 {
@@ -84,6 +106,37 @@ class ModifyLaunchConfigurationAttributesRequest extends AbstractModel
     public $UserData;
 
     /**
+     * @var array 实例所属安全组。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的`SecurityGroupId`字段来获取。
+若指定该参数，请至少提供一个安全组，列表顺序有先后。
+     */
+    public $SecurityGroupIds;
+
+    /**
+     * @var InternetAccessible 公网带宽相关信息设置。
+     */
+    public $InternetAccessible;
+
+    /**
+     * @var string 实例计费类型。具体取值范围如下：
+<br><li>POSTPAID_BY_HOUR：按小时后付费
+<br><li>SPOTPAID：竞价付费
+<br><li>PREPAID：预付费，即包年包月
+     */
+    public $InstanceChargeType;
+
+    /**
+     * @var InstanceChargePrepaid 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。
+若修改实例的付费模式为预付费，则该参数必传；从预付费修改为其他付费模式时，本字段原信息会自动丢弃。
+     */
+    public $InstanceChargePrepaid;
+
+    /**
+     * @var InstanceMarketOptionsRequest 实例的市场相关选项，如竞价实例相关参数。
+若修改实例的付费模式为竞价付费，则该参数必传；从竞价付费修改为其他付费模式时，本字段原信息会自动丢弃。
+     */
+    public $InstanceMarketOptions;
+
+    /**
      * @param string $LaunchConfigurationId 启动配置ID
      * @param string $ImageId 指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-8toqc6s3`。镜像类型分为四种：<br/><li>公共镜像</li><li>自定义镜像</li><li>共享镜像</li><li>服务市场镜像</li><br/>可通过以下方式获取可用的镜像ID：<br/><li>`公共镜像`、`自定义镜像`、`共享镜像`的镜像ID可通过登录[控制台](https://console.cloud.tencent.com/cvm/image?rid=1&imageType=PUBLIC_IMAGE)查询；`服务镜像市场`的镜像ID可通过[云市场](https://market.cloud.tencent.com/list)查询。</li><li>通过调用接口 [DescribeImages](https://cloud.tencent.com/document/api/213/15715) ，取返回信息中的`ImageId`字段。</li>
      * @param array $InstanceTypes 实例类型列表，不同实例机型指定了不同的资源规格，最多支持10种实例机型。
@@ -96,6 +149,17 @@ class ModifyLaunchConfigurationAttributesRequest extends AbstractModel
 如果 InstanceTypes 中一款机型不存在或者已下线，则无论 InstanceTypesCheckPolicy 采用何种取值，都会校验报错。
      * @param string $LaunchConfigurationName 启动配置显示名称。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超60个字节。
      * @param string $UserData 经过 Base64 编码后的自定义数据，最大长度不超过16KB。如果要清空UserData，则指定其为空字符串
+     * @param array $SecurityGroupIds 实例所属安全组。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的`SecurityGroupId`字段来获取。
+若指定该参数，请至少提供一个安全组，列表顺序有先后。
+     * @param InternetAccessible $InternetAccessible 公网带宽相关信息设置。
+     * @param string $InstanceChargeType 实例计费类型。具体取值范围如下：
+<br><li>POSTPAID_BY_HOUR：按小时后付费
+<br><li>SPOTPAID：竞价付费
+<br><li>PREPAID：预付费，即包年包月
+     * @param InstanceChargePrepaid $InstanceChargePrepaid 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。
+若修改实例的付费模式为预付费，则该参数必传；从预付费修改为其他付费模式时，本字段原信息会自动丢弃。
+     * @param InstanceMarketOptionsRequest $InstanceMarketOptions 实例的市场相关选项，如竞价实例相关参数。
+若修改实例的付费模式为竞价付费，则该参数必传；从竞价付费修改为其他付费模式时，本字段原信息会自动丢弃。
      */
     function __construct()
     {
@@ -132,6 +196,29 @@ class ModifyLaunchConfigurationAttributesRequest extends AbstractModel
 
         if (array_key_exists("UserData",$param) and $param["UserData"] !== null) {
             $this->UserData = $param["UserData"];
+        }
+
+        if (array_key_exists("SecurityGroupIds",$param) and $param["SecurityGroupIds"] !== null) {
+            $this->SecurityGroupIds = $param["SecurityGroupIds"];
+        }
+
+        if (array_key_exists("InternetAccessible",$param) and $param["InternetAccessible"] !== null) {
+            $this->InternetAccessible = new InternetAccessible();
+            $this->InternetAccessible->deserialize($param["InternetAccessible"]);
+        }
+
+        if (array_key_exists("InstanceChargeType",$param) and $param["InstanceChargeType"] !== null) {
+            $this->InstanceChargeType = $param["InstanceChargeType"];
+        }
+
+        if (array_key_exists("InstanceChargePrepaid",$param) and $param["InstanceChargePrepaid"] !== null) {
+            $this->InstanceChargePrepaid = new InstanceChargePrepaid();
+            $this->InstanceChargePrepaid->deserialize($param["InstanceChargePrepaid"]);
+        }
+
+        if (array_key_exists("InstanceMarketOptions",$param) and $param["InstanceMarketOptions"] !== null) {
+            $this->InstanceMarketOptions = new InstanceMarketOptionsRequest();
+            $this->InstanceMarketOptions->deserialize($param["InstanceMarketOptions"]);
         }
     }
 }

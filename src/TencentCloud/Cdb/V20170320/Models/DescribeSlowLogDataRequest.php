@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
  * @method integer getLimit() 获取一次性返回的记录数量，默认为100，最大为400。
  * @method void setLimit(integer $Limit) 设置一次性返回的记录数量，默认为100，最大为400。
+ * @method string getInstType() 获取仅在实例为主实例或者灾备实例时生效，可选值：slave，代表拉取从机的日志。
+ * @method void setInstType(string $InstType) 设置仅在实例为主实例或者灾备实例时生效，可选值：slave，代表拉取从机的日志。
  */
 class DescribeSlowLogDataRequest extends AbstractModel
 {
@@ -94,6 +96,11 @@ class DescribeSlowLogDataRequest extends AbstractModel
     public $Limit;
 
     /**
+     * @var string 仅在实例为主实例或者灾备实例时生效，可选值：slave，代表拉取从机的日志。
+     */
+    public $InstType;
+
+    /**
      * @param string $InstanceId 实例 ID。
      * @param integer $StartTime 开始时间戳。
      * @param integer $EndTime 结束时间戳。
@@ -104,6 +111,7 @@ class DescribeSlowLogDataRequest extends AbstractModel
      * @param string $OrderBy 升序还是降序排列。当前支持：ASC,DESC 。
      * @param integer $Offset 偏移量，默认为0。
      * @param integer $Limit 一次性返回的记录数量，默认为100，最大为400。
+     * @param string $InstType 仅在实例为主实例或者灾备实例时生效，可选值：slave，代表拉取从机的日志。
      */
     function __construct()
     {
@@ -156,6 +164,10 @@ class DescribeSlowLogDataRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("InstType",$param) and $param["InstType"] !== null) {
+            $this->InstType = $param["InstType"];
         }
     }
 }

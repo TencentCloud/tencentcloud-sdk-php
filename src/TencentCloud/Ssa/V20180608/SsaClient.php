@@ -28,12 +28,14 @@ use TencentCloud\Ssa\V20180608\Models as Models;
  * @method Models\DescribeAssetsMappingListResponse DescribeAssetsMappingList(Models\DescribeAssetsMappingListRequest $req) 资产测绘-测绘列表
  * @method Models\DescribeCheckConfigAssetListResponse DescribeCheckConfigAssetList(Models\DescribeCheckConfigAssetListRequest $req) 云安全配置管理资产组列表
  * @method Models\DescribeCheckConfigDetailResponse DescribeCheckConfigDetail(Models\DescribeCheckConfigDetailRequest $req) 云安全配置检查项详情
+ * @method Models\DescribeComplianceAssetListResponse DescribeComplianceAssetList(Models\DescribeComplianceAssetListRequest $req) 合规管理-资产列表
  * @method Models\DescribeComplianceDetailResponse DescribeComplianceDetail(Models\DescribeComplianceDetailRequest $req) 合规管理检查项详情
  * @method Models\DescribeComplianceListResponse DescribeComplianceList(Models\DescribeComplianceListRequest $req) 合规管理总览页检查项列表
  * @method Models\DescribeConfigListResponse DescribeConfigList(Models\DescribeConfigListRequest $req) 云配置检查项总览页检查项列表
  * @method Models\DescribeEventDetailResponse DescribeEventDetail(Models\DescribeEventDetailRequest $req) 获取安全事件详情
  * @method Models\DescribeLeakDetectionListResponse DescribeLeakDetectionList(Models\DescribeLeakDetectionListRequest $req) 获取泄露列表
  * @method Models\DescribeSafetyEventListResponse DescribeSafetyEventList(Models\DescribeSafetyEventListRequest $req) 获取安全事件列表
+ * @method Models\DescribeVulDetailResponse DescribeVulDetail(Models\DescribeVulDetailRequest $req) 漏洞列表页，获取漏洞详情信息
  * @method Models\DescribeVulListResponse DescribeVulList(Models\DescribeVulListRequest $req) 漏洞管理页，获取漏洞列表
  * @method Models\SaDivulgeDataQueryPubResponse SaDivulgeDataQueryPub(Models\SaDivulgeDataQueryPubRequest $req) 查询【通用字段】【泄露监测数据列表】
  */

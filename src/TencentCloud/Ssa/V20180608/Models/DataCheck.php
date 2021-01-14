@@ -50,6 +50,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAssetTotal(integer $AssetTotal) 设置总资产数
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRemarks() 获取备注内容
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRemarks(string $Remarks) 设置备注内容
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DataCheck extends AbstractModel
 {
@@ -105,6 +109,12 @@ class DataCheck extends AbstractModel
     public $AssetTotal;
 
     /**
+     * @var string 备注内容
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Remarks;
+
+    /**
      * @param string $Id 检查项唯一标识符uuid
      * @param string $Name 检查项名称
      * @param string $Type 检查项类型
@@ -119,6 +129,8 @@ class DataCheck extends AbstractModel
      * @param integer $IsChecked 0-检测中,1-结束检测
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AssetTotal 总资产数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Remarks 备注内容
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -168,6 +180,10 @@ class DataCheck extends AbstractModel
 
         if (array_key_exists("AssetTotal",$param) and $param["AssetTotal"] !== null) {
             $this->AssetTotal = $param["AssetTotal"];
+        }
+
+        if (array_key_exists("Remarks",$param) and $param["Remarks"] !== null) {
+            $this->Remarks = $param["Remarks"];
         }
     }
 }

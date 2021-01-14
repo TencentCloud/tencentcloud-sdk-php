@@ -23,7 +23,11 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Mgobe\V20201014\Models as Models;
 
 /**
+ * @method Models\ChangeRoomPlayerProfileResponse ChangeRoomPlayerProfile(Models\ChangeRoomPlayerProfileRequest $req) 修改房间玩家自定义属性
+ * @method Models\ChangeRoomPlayerStatusResponse ChangeRoomPlayerStatus(Models\ChangeRoomPlayerStatusRequest $req) 修改玩家自定义状态
  * @method Models\DismissRoomResponse DismissRoom(Models\DismissRoomRequest $req) 通过game_id、room_id解散房间
+ * @method Models\ModifyRoomResponse ModifyRoom(Models\ModifyRoomRequest $req) 修改房间
+ * @method Models\RemoveRoomPlayerResponse RemoveRoomPlayer(Models\RemoveRoomPlayerRequest $req) 踢出房间玩家
  */
 
 class MgobeClient extends AbstractClient

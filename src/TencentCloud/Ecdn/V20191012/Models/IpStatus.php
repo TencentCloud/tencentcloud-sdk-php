@@ -34,6 +34,8 @@ offline：下线状态
  * @method void setStatus(string $Status) 设置节点状态
 online：上线状态，正常调度服务中
 offline：下线状态
+ * @method string getCreateTime() 获取节点 IP 添加时间
+ * @method void setCreateTime(string $CreateTime) 设置节点 IP 添加时间
  */
 class IpStatus extends AbstractModel
 {
@@ -65,6 +67,11 @@ offline：下线状态
     public $Status;
 
     /**
+     * @var string 节点 IP 添加时间
+     */
+    public $CreateTime;
+
+    /**
      * @param string $Ip 节点 IP
      * @param string $District 节点所属区域
      * @param string $Isp 节点所属运营商
@@ -72,6 +79,7 @@ offline：下线状态
      * @param string $Status 节点状态
 online：上线状态，正常调度服务中
 offline：下线状态
+     * @param string $CreateTime 节点 IP 添加时间
      */
     function __construct()
     {
@@ -104,6 +112,10 @@ offline：下线状态
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
         }
     }
 }

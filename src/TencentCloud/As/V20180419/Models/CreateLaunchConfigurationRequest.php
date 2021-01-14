@@ -49,9 +49,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getInstanceChargeType() 获取实例计费类型，CVM默认值按照POSTPAID_BY_HOUR处理。
 <br><li>POSTPAID_BY_HOUR：按小时后付费
 <br><li>SPOTPAID：竞价付费
+<br><li>PREPAID：预付费，即包年包月
  * @method void setInstanceChargeType(string $InstanceChargeType) 设置实例计费类型，CVM默认值按照POSTPAID_BY_HOUR处理。
 <br><li>POSTPAID_BY_HOUR：按小时后付费
 <br><li>SPOTPAID：竞价付费
+<br><li>PREPAID：预付费，即包年包月
  * @method InstanceMarketOptionsRequest getInstanceMarketOptions() 获取实例的市场相关选项，如竞价实例相关参数，若指定实例的付费模式为竞价付费则该参数必传。
  * @method void setInstanceMarketOptions(InstanceMarketOptionsRequest $InstanceMarketOptions) 设置实例的市场相关选项，如竞价实例相关参数，若指定实例的付费模式为竞价付费则该参数必传。
  * @method array getInstanceTypes() 获取实例机型列表，不同实例机型指定了不同的资源规格，最多支持10种实例机型。
@@ -144,6 +146,7 @@ class CreateLaunchConfigurationRequest extends AbstractModel
      * @var string 实例计费类型，CVM默认值按照POSTPAID_BY_HOUR处理。
 <br><li>POSTPAID_BY_HOUR：按小时后付费
 <br><li>SPOTPAID：竞价付费
+<br><li>PREPAID：预付费，即包年包月
      */
     public $InstanceChargeType;
 
@@ -210,6 +213,7 @@ class CreateLaunchConfigurationRequest extends AbstractModel
      * @param string $InstanceChargeType 实例计费类型，CVM默认值按照POSTPAID_BY_HOUR处理。
 <br><li>POSTPAID_BY_HOUR：按小时后付费
 <br><li>SPOTPAID：竞价付费
+<br><li>PREPAID：预付费，即包年包月
      * @param InstanceMarketOptionsRequest $InstanceMarketOptions 实例的市场相关选项，如竞价实例相关参数，若指定实例的付费模式为竞价付费则该参数必传。
      * @param array $InstanceTypes 实例机型列表，不同实例机型指定了不同的资源规格，最多支持10种实例机型。
 `InstanceType`和`InstanceTypes`参数互斥，二者必填一个且只能填写一个。

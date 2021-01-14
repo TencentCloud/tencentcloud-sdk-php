@@ -68,6 +68,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAssetTotal(integer $AssetTotal) 设置资产总数
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRemarks() 获取忽略内容
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRemarks(string $Remarks) 设置忽略内容
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DataCompliance extends AbstractModel
 {
@@ -160,6 +164,12 @@ class DataCompliance extends AbstractModel
     public $AssetTotal;
 
     /**
+     * @var string 忽略内容
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Remarks;
+
+    /**
      * @param string $Id 等保唯一标识符
      * @param string $CheckItemId 检查项唯一标识符
      * @param string $Name 检查项名称
@@ -183,6 +193,8 @@ class DataCompliance extends AbstractModel
      * @param string $Title 等保检查项完整名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AssetTotal 资产总数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Remarks 忽略内容
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -260,6 +272,10 @@ class DataCompliance extends AbstractModel
 
         if (array_key_exists("AssetTotal",$param) and $param["AssetTotal"] !== null) {
             $this->AssetTotal = $param["AssetTotal"];
+        }
+
+        if (array_key_exists("Remarks",$param) and $param["Remarks"] !== null) {
+            $this->Remarks = $param["Remarks"];
         }
     }
 }

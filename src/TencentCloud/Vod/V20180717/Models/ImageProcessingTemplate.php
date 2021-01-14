@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
 <li>长度限制：3。</li>
  * @method void setOperations(array $Operations) 设置图片处理操作数组，操作将以数组顺序执行。
 <li>长度限制：3。</li>
+ * @method string getCreateTime() 获取模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+ * @method void setCreateTime(string $CreateTime) 设置模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
  */
 class ImageProcessingTemplate extends AbstractModel
 {
@@ -68,6 +70,11 @@ class ImageProcessingTemplate extends AbstractModel
     public $Operations;
 
     /**
+     * @var string 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     */
+    public $CreateTime;
+
+    /**
      * @param integer $Definition 图片处理模板唯一标识。
      * @param string $Type 模板类型，取值范围：
 <li>Preset：系统预置模板；</li>
@@ -76,6 +83,7 @@ class ImageProcessingTemplate extends AbstractModel
      * @param string $Comment 模板描述信息。
      * @param array $Operations 图片处理操作数组，操作将以数组顺序执行。
 <li>长度限制：3。</li>
+     * @param string $CreateTime 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
      */
     function __construct()
     {
@@ -113,6 +121,10 @@ class ImageProcessingTemplate extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Operations, $obj);
             }
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
         }
     }
 }

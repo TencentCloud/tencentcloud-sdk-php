@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getArea() 获取点播存储的计费区域，可能值：
 <li>Chinese Mainland：中国境内（不包含港澳台）。</li>
-<li>outside Chinese Mainland：中国境外。</li>
+<li>Outside Chinese Mainland：中国境外。</li>
  * @method void setArea(string $Area) 设置点播存储的计费区域，可能值：
 <li>Chinese Mainland：中国境内（不包含港澳台）。</li>
-<li>outside Chinese Mainland：中国境外。</li>
+<li>Outside Chinese Mainland：中国境外。</li>
  * @method integer getTotalStorage() 获取当前总存储量，单位是字节。
  * @method void setTotalStorage(integer $TotalStorage) 设置当前总存储量，单位是字节。
  * @method integer getInfrequentStorage() 获取当前低频存储量，单位是字节。
@@ -38,7 +38,7 @@ class StorageStatData extends AbstractModel
     /**
      * @var string 点播存储的计费区域，可能值：
 <li>Chinese Mainland：中国境内（不包含港澳台）。</li>
-<li>outside Chinese Mainland：中国境外。</li>
+<li>Outside Chinese Mainland：中国境外。</li>
      */
     public $Area;
 
@@ -60,7 +60,7 @@ class StorageStatData extends AbstractModel
     /**
      * @param string $Area 点播存储的计费区域，可能值：
 <li>Chinese Mainland：中国境内（不包含港澳台）。</li>
-<li>outside Chinese Mainland：中国境外。</li>
+<li>Outside Chinese Mainland：中国境外。</li>
      * @param integer $TotalStorage 当前总存储量，单位是字节。
      * @param integer $InfrequentStorage 当前低频存储量，单位是字节。
      * @param integer $StandardStorage 当前标准存储量，单位是字节。

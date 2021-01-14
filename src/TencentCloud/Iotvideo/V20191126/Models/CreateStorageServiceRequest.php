@@ -33,6 +33,8 @@ ye1m30d ：事件30天存储月套餐 。
 ye1y3d ：事件3天存储年套餐。
 ye1y7d ：事件7天存储年套餐。
 ye1y30d ：事件30天存储年套餐。
+yc1w7d : 全时7天存储周套餐。
+ye1w7d : 事件7天存储周套餐。
  * @method void setPkgId(string $PkgId) 设置云存套餐ID：
 yc1m3d ： 全时3天存储月套餐。
 yc1m7d ： 全时7天存储月套餐。
@@ -46,12 +48,14 @@ ye1m30d ：事件30天存储月套餐 。
 ye1y3d ：事件3天存储年套餐。
 ye1y7d ：事件7天存储年套餐。
 ye1y30d ：事件30天存储年套餐。
+yc1w7d : 全时7天存储周套餐。
+ye1w7d : 事件7天存储周套餐。
  * @method string getTid() 获取设备TID
  * @method void setTid(string $Tid) 设置设备TID
  * @method integer getOrderCount() 获取订单数量,可一次性创建多个订单
  * @method void setOrderCount(integer $OrderCount) 设置订单数量,可一次性创建多个订单
- * @method string getStorageRegion() 获取云存服务所在的区域,如ap-guangzhou,ap-singapore
- * @method void setStorageRegion(string $StorageRegion) 设置云存服务所在的区域,如ap-guangzhou,ap-singapore
+ * @method string getStorageRegion() 获取云存服务所在的区域,如ap-guangzhou,ap-singapore, na-siliconvalley, eu-frankfurt
+ * @method void setStorageRegion(string $StorageRegion) 设置云存服务所在的区域,如ap-guangzhou,ap-singapore, na-siliconvalley, eu-frankfurt
  * @method integer getChnNum() 获取视频流通道号。(对于存在多路视频流的设备，如NVR设备，与设备实际视频流通道号对应)
  * @method void setChnNum(integer $ChnNum) 设置视频流通道号。(对于存在多路视频流的设备，如NVR设备，与设备实际视频流通道号对应)
  * @method string getAccessId() 获取设备主人用户在IoT Video平台的注册ID。该参数用于验证Paas/Saas平台的设备/用户关系链是否一致
@@ -75,6 +79,8 @@ ye1m30d ：事件30天存储月套餐 。
 ye1y3d ：事件3天存储年套餐。
 ye1y7d ：事件7天存储年套餐。
 ye1y30d ：事件30天存储年套餐。
+yc1w7d : 全时7天存储周套餐。
+ye1w7d : 事件7天存储周套餐。
      */
     public $PkgId;
 
@@ -89,7 +95,7 @@ ye1y30d ：事件30天存储年套餐。
     public $OrderCount;
 
     /**
-     * @var string 云存服务所在的区域,如ap-guangzhou,ap-singapore
+     * @var string 云存服务所在的区域,如ap-guangzhou,ap-singapore, na-siliconvalley, eu-frankfurt
      */
     public $StorageRegion;
 
@@ -122,9 +128,11 @@ ye1m30d ：事件30天存储月套餐 。
 ye1y3d ：事件3天存储年套餐。
 ye1y7d ：事件7天存储年套餐。
 ye1y30d ：事件30天存储年套餐。
+yc1w7d : 全时7天存储周套餐。
+ye1w7d : 事件7天存储周套餐。
      * @param string $Tid 设备TID
      * @param integer $OrderCount 订单数量,可一次性创建多个订单
-     * @param string $StorageRegion 云存服务所在的区域,如ap-guangzhou,ap-singapore
+     * @param string $StorageRegion 云存服务所在的区域,如ap-guangzhou,ap-singapore, na-siliconvalley, eu-frankfurt
      * @param integer $ChnNum 视频流通道号。(对于存在多路视频流的设备，如NVR设备，与设备实际视频流通道号对应)
      * @param string $AccessId 设备主人用户在IoT Video平台的注册ID。该参数用于验证Paas/Saas平台的设备/用户关系链是否一致
      * @param integer $EnableTime 服务生效时间,若不指定此参数，服务立即生效

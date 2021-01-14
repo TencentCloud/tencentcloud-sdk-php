@@ -56,7 +56,7 @@ use TencentCloud\Common\AbstractModel;
 默认为中国大陆。
  * @method array getDistricts() 获取用户所在地区，Area 为 Chinese Mainland 时，取值为以下地区信息，当 Area 为其它值时， 忽略 Districts 参数。
 <li>Beijing：北京。</li>
-<li>Inner Mongoria：内蒙古。</li>
+<li>Inner Mongolia：内蒙古。</li>
 <li>Shanxi：山西。</li>
 <li>Hebei：河北。</li>
 <li>Tianjin：天津。</li>
@@ -87,11 +87,11 @@ use TencentCloud\Common\AbstractModel;
 <li>Guangxi：广西。</li>
 <li>Hainan：海南。</li>
 <li>Hong Kong, Macao and Taiwan：港澳台。</li>
-<li>outside Chinese Mainland：海外。</li>
+<li>Outside Chinese Mainland：海外。</li>
 <li>Other：其他 。</li>
  * @method void setDistricts(array $Districts) 设置用户所在地区，Area 为 Chinese Mainland 时，取值为以下地区信息，当 Area 为其它值时， 忽略 Districts 参数。
 <li>Beijing：北京。</li>
-<li>Inner Mongoria：内蒙古。</li>
+<li>Inner Mongolia：内蒙古。</li>
 <li>Shanxi：山西。</li>
 <li>Hebei：河北。</li>
 <li>Tianjin：天津。</li>
@@ -122,7 +122,7 @@ use TencentCloud\Common\AbstractModel;
 <li>Guangxi：广西。</li>
 <li>Hainan：海南。</li>
 <li>Hong Kong, Macao and Taiwan：港澳台。</li>
-<li>outside Chinese Mainland：海外。</li>
+<li>Outside Chinese Mainland：海外。</li>
 <li>Other：其他 。</li>
  * @method array getIsps() 获取用户所属运营商信息，Area 为 Chinese Mainland 时，取值为以下运营商信息。当 Area 为其它值时忽略 Isps 参数。
 <li>China Telecom：中国电信。 </li>
@@ -130,7 +130,7 @@ use TencentCloud\Common\AbstractModel;
 <li>CERNET：教育网。</li>
 <li>Great Wall Broadband Network：长城宽带。</li>
 <li>China Mobile：中国移动。</li>
-<li>China Mobile Tieton：中国铁通。</li>
+<li>China Mobile Tietong：中国铁通。</li>
 <li>ISPs outside Chinese Mainland：海外运营商。</li>
 <li>Other ISPs：其他运营商。</li>
  * @method void setIsps(array $Isps) 设置用户所属运营商信息，Area 为 Chinese Mainland 时，取值为以下运营商信息。当 Area 为其它值时忽略 Isps 参数。
@@ -139,7 +139,7 @@ use TencentCloud\Common\AbstractModel;
 <li>CERNET：教育网。</li>
 <li>Great Wall Broadband Network：长城宽带。</li>
 <li>China Mobile：中国移动。</li>
-<li>China Mobile Tieton：中国铁通。</li>
+<li>China Mobile Tietong：中国铁通。</li>
 <li>ISPs outside Chinese Mainland：海外运营商。</li>
 <li>Other ISPs：其他运营商。</li>
  * @method integer getDataInterval() 获取每条数据的时间粒度，单位：分钟，取值有：
@@ -195,7 +195,7 @@ class DescribeCDNStatDetailsRequest extends AbstractModel
     /**
      * @var array 用户所在地区，Area 为 Chinese Mainland 时，取值为以下地区信息，当 Area 为其它值时， 忽略 Districts 参数。
 <li>Beijing：北京。</li>
-<li>Inner Mongoria：内蒙古。</li>
+<li>Inner Mongolia：内蒙古。</li>
 <li>Shanxi：山西。</li>
 <li>Hebei：河北。</li>
 <li>Tianjin：天津。</li>
@@ -226,7 +226,7 @@ class DescribeCDNStatDetailsRequest extends AbstractModel
 <li>Guangxi：广西。</li>
 <li>Hainan：海南。</li>
 <li>Hong Kong, Macao and Taiwan：港澳台。</li>
-<li>outside Chinese Mainland：海外。</li>
+<li>Outside Chinese Mainland：海外。</li>
 <li>Other：其他 。</li>
      */
     public $Districts;
@@ -238,7 +238,7 @@ class DescribeCDNStatDetailsRequest extends AbstractModel
 <li>CERNET：教育网。</li>
 <li>Great Wall Broadband Network：长城宽带。</li>
 <li>China Mobile：中国移动。</li>
-<li>China Mobile Tieton：中国铁通。</li>
+<li>China Mobile Tietong：中国铁通。</li>
 <li>ISPs outside Chinese Mainland：海外运营商。</li>
 <li>Other ISPs：其他运营商。</li>
      */
@@ -277,7 +277,7 @@ class DescribeCDNStatDetailsRequest extends AbstractModel
 默认为中国大陆。
      * @param array $Districts 用户所在地区，Area 为 Chinese Mainland 时，取值为以下地区信息，当 Area 为其它值时， 忽略 Districts 参数。
 <li>Beijing：北京。</li>
-<li>Inner Mongoria：内蒙古。</li>
+<li>Inner Mongolia：内蒙古。</li>
 <li>Shanxi：山西。</li>
 <li>Hebei：河北。</li>
 <li>Tianjin：天津。</li>
@@ -308,7 +308,7 @@ class DescribeCDNStatDetailsRequest extends AbstractModel
 <li>Guangxi：广西。</li>
 <li>Hainan：海南。</li>
 <li>Hong Kong, Macao and Taiwan：港澳台。</li>
-<li>outside Chinese Mainland：海外。</li>
+<li>Outside Chinese Mainland：海外。</li>
 <li>Other：其他 。</li>
      * @param array $Isps 用户所属运营商信息，Area 为 Chinese Mainland 时，取值为以下运营商信息。当 Area 为其它值时忽略 Isps 参数。
 <li>China Telecom：中国电信。 </li>
@@ -316,7 +316,7 @@ class DescribeCDNStatDetailsRequest extends AbstractModel
 <li>CERNET：教育网。</li>
 <li>Great Wall Broadband Network：长城宽带。</li>
 <li>China Mobile：中国移动。</li>
-<li>China Mobile Tieton：中国铁通。</li>
+<li>China Mobile Tietong：中国铁通。</li>
 <li>ISPs outside Chinese Mainland：海外运营商。</li>
 <li>Other ISPs：其他运营商。</li>
      * @param integer $DataInterval 每条数据的时间粒度，单位：分钟，取值有：

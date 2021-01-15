@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setItems(array $Items) 设置明细条目。VatInvoiceInfos中关于明细项的具体条目。
  * @method integer getPdfPageSize() 获取图片为PDF时，返回PDF的总页数，默认为0
  * @method void setPdfPageSize(integer $PdfPageSize) 设置图片为PDF时，返回PDF的总页数，默认为0
+ * @method float getAngle() 获取图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负。点击查看<a href="https://cloud.tencent.com/document/product/866/45139">如何纠正倾斜文本</a>
+ * @method void setAngle(float $Angle) 设置图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负。点击查看<a href="https://cloud.tencent.com/document/product/866/45139">如何纠正倾斜文本</a>
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -47,6 +49,11 @@ class VatInvoiceOCRResponse extends AbstractModel
     public $PdfPageSize;
 
     /**
+     * @var float 图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负。点击查看<a href="https://cloud.tencent.com/document/product/866/45139">如何纠正倾斜文本</a>
+     */
+    public $Angle;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -55,6 +62,7 @@ class VatInvoiceOCRResponse extends AbstractModel
      * @param array $VatInvoiceInfos 检测到的文本信息，具体内容请点击左侧链接。
      * @param array $Items 明细条目。VatInvoiceInfos中关于明细项的具体条目。
      * @param integer $PdfPageSize 图片为PDF时，返回PDF的总页数，默认为0
+     * @param float $Angle 图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负。点击查看<a href="https://cloud.tencent.com/document/product/866/45139">如何纠正倾斜文本</a>
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -90,6 +98,10 @@ class VatInvoiceOCRResponse extends AbstractModel
 
         if (array_key_exists("PdfPageSize",$param) and $param["PdfPageSize"] !== null) {
             $this->PdfPageSize = $param["PdfPageSize"];
+        }
+
+        if (array_key_exists("Angle",$param) and $param["Angle"] !== null) {
+            $this->Angle = $param["Angle"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

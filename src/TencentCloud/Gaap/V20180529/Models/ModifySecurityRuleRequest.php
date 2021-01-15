@@ -26,6 +26,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAliasName(string $AliasName) 设置规则名：不得超过30个字符，超过部分会被截断。
  * @method string getPolicyId() 获取安全策略ID
  * @method void setPolicyId(string $PolicyId) 设置安全策略ID
+ * @method string getRuleAction() 获取安全规则动作
+ * @method void setRuleAction(string $RuleAction) 设置安全规则动作
+ * @method string getSourceCidr() 获取规则关联地址，格式需要满足CIDR网络地址规范
+ * @method void setSourceCidr(string $SourceCidr) 设置规则关联地址，格式需要满足CIDR网络地址规范
+ * @method string getProtocol() 获取协议类型
+ * @method void setProtocol(string $Protocol) 设置协议类型
+ * @method string getDestPortRange() 获取端口范围，支持以下格式
+单个端口: 80
+多个端口: 80,443
+连续端口: 3306-20000
+所有端口: ALL
+ * @method void setDestPortRange(string $DestPortRange) 设置端口范围，支持以下格式
+单个端口: 80
+多个端口: 80,443
+连续端口: 3306-20000
+所有端口: ALL
  */
 class ModifySecurityRuleRequest extends AbstractModel
 {
@@ -45,9 +61,41 @@ class ModifySecurityRuleRequest extends AbstractModel
     public $PolicyId;
 
     /**
+     * @var string 安全规则动作
+     */
+    public $RuleAction;
+
+    /**
+     * @var string 规则关联地址，格式需要满足CIDR网络地址规范
+     */
+    public $SourceCidr;
+
+    /**
+     * @var string 协议类型
+     */
+    public $Protocol;
+
+    /**
+     * @var string 端口范围，支持以下格式
+单个端口: 80
+多个端口: 80,443
+连续端口: 3306-20000
+所有端口: ALL
+     */
+    public $DestPortRange;
+
+    /**
      * @param string $RuleId 规则ID
      * @param string $AliasName 规则名：不得超过30个字符，超过部分会被截断。
      * @param string $PolicyId 安全策略ID
+     * @param string $RuleAction 安全规则动作
+     * @param string $SourceCidr 规则关联地址，格式需要满足CIDR网络地址规范
+     * @param string $Protocol 协议类型
+     * @param string $DestPortRange 端口范围，支持以下格式
+单个端口: 80
+多个端口: 80,443
+连续端口: 3306-20000
+所有端口: ALL
      */
     function __construct()
     {
@@ -72,6 +120,22 @@ class ModifySecurityRuleRequest extends AbstractModel
 
         if (array_key_exists("PolicyId",$param) and $param["PolicyId"] !== null) {
             $this->PolicyId = $param["PolicyId"];
+        }
+
+        if (array_key_exists("RuleAction",$param) and $param["RuleAction"] !== null) {
+            $this->RuleAction = $param["RuleAction"];
+        }
+
+        if (array_key_exists("SourceCidr",$param) and $param["SourceCidr"] !== null) {
+            $this->SourceCidr = $param["SourceCidr"];
+        }
+
+        if (array_key_exists("Protocol",$param) and $param["Protocol"] !== null) {
+            $this->Protocol = $param["Protocol"];
+        }
+
+        if (array_key_exists("DestPortRange",$param) and $param["DestPortRange"] !== null) {
+            $this->DestPortRange = $param["DestPortRange"];
         }
     }
 }

@@ -40,7 +40,9 @@ use TencentCloud\Tiw\V20190919\Models as Models;
  * @method Models\SetVideoGenerationTaskCallbackResponse SetVideoGenerationTaskCallback(Models\SetVideoGenerationTaskCallbackRequest $req) 设置录制视频生成回调地址
  * @method Models\SetVideoGenerationTaskCallbackKeyResponse SetVideoGenerationTaskCallbackKey(Models\SetVideoGenerationTaskCallbackKeyRequest $req) 设置视频生成回调鉴权密钥
  * @method Models\StartOnlineRecordResponse StartOnlineRecord(Models\StartOnlineRecordRequest $req) 发起一个实时录制任务
+ * @method Models\StartWhiteboardPushResponse StartWhiteboardPush(Models\StartWhiteboardPushRequest $req) 发起一个白板推流任务
  * @method Models\StopOnlineRecordResponse StopOnlineRecord(Models\StopOnlineRecordRequest $req) 停止实时录制
+ * @method Models\StopWhiteboardPushResponse StopWhiteboardPush(Models\StopWhiteboardPushRequest $req) 停止白板推流任务
  */
 
 class TiwClient extends AbstractClient

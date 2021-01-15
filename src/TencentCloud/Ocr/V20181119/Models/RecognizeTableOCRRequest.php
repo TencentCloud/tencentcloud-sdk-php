@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsPdf(boolean $IsPdf) 设置是否开启PDF识别，默认值为false，开启后可同时支持图片和PDF的识别。
  * @method integer getPdfPageNumber() 获取需要识别的PDF页面的对应页码，仅支持PDF单页识别，当上传文件为PDF且IsPdf参数值为true时有效，默认值为1。
  * @method void setPdfPageNumber(integer $PdfPageNumber) 设置需要识别的PDF页面的对应页码，仅支持PDF单页识别，当上传文件为PDF且IsPdf参数值为true时有效，默认值为1。
+ * @method string getTableLanguage() 获取语言，zh：中英文（默认）jap：日文
+ * @method void setTableLanguage(string $TableLanguage) 设置语言，zh：中英文（默认）jap：日文
  */
 class RecognizeTableOCRRequest extends AbstractModel
 {
@@ -64,6 +66,11 @@ class RecognizeTableOCRRequest extends AbstractModel
     public $PdfPageNumber;
 
     /**
+     * @var string 语言，zh：中英文（默认）jap：日文
+     */
+    public $TableLanguage;
+
+    /**
      * @param string $ImageBase64 图片/PDF的 Base64 值。
 要求图片/PDF经Base64编码后不超过 7M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。
 图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
@@ -72,6 +79,7 @@ class RecognizeTableOCRRequest extends AbstractModel
 图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。
      * @param boolean $IsPdf 是否开启PDF识别，默认值为false，开启后可同时支持图片和PDF的识别。
      * @param integer $PdfPageNumber 需要识别的PDF页面的对应页码，仅支持PDF单页识别，当上传文件为PDF且IsPdf参数值为true时有效，默认值为1。
+     * @param string $TableLanguage 语言，zh：中英文（默认）jap：日文
      */
     function __construct()
     {
@@ -100,6 +108,10 @@ class RecognizeTableOCRRequest extends AbstractModel
 
         if (array_key_exists("PdfPageNumber",$param) and $param["PdfPageNumber"] !== null) {
             $this->PdfPageNumber = $param["PdfPageNumber"];
+        }
+
+        if (array_key_exists("TableLanguage",$param) and $param["TableLanguage"] !== null) {
+            $this->TableLanguage = $param["TableLanguage"];
         }
     }
 }

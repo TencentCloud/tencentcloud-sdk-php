@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteEmailTemplate请求参数结构体
  *
- * @method integer getTemplateID() 获取删除发信模版
- * @method void setTemplateID(integer $TemplateID) 设置删除发信模版
+ * @method integer getTemplateID() 获取模版ID
+ * @method void setTemplateID(integer $TemplateID) 设置模版ID
  */
 class DeleteEmailTemplateRequest extends AbstractModel
 {
     /**
-     * @var integer 删除发信模版
+     * @var integer 模版ID
      */
     public $TemplateID;
 
     /**
-     * @param integer $TemplateID 删除发信模版
+     * @param integer $TemplateID 模版ID
      */
     function __construct()
     {

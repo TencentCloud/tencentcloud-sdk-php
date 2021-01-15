@@ -22,10 +22,22 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getDefinition() 获取视频转动图模板 ID
  * @method void setDefinition(integer $Definition) 设置视频转动图模板 ID
- * @method float getStartTimeOffset() 获取动图在视频中的开始时间，单位为秒。
- * @method void setStartTimeOffset(float $StartTimeOffset) 设置动图在视频中的开始时间，单位为秒。
- * @method float getEndTimeOffset() 获取动图在视频中的结束时间，单位为秒。
- * @method void setEndTimeOffset(float $EndTimeOffset) 设置动图在视频中的结束时间，单位为秒。
+ * @method float getStartTimeOffset() 获取动图在视频中的起始时间偏移，单位为秒。
+<li>不填或填0，表示从视频的起始位置开始；</li>
+<li>当数值大于0时（假设为 n），表示从视频的第 n 秒位置开始；</li>
+<li>当数值小于0时（假设为 -n），表示从视频结束 n 秒前的位置开始。</li>
+ * @method void setStartTimeOffset(float $StartTimeOffset) 设置动图在视频中的起始时间偏移，单位为秒。
+<li>不填或填0，表示从视频的起始位置开始；</li>
+<li>当数值大于0时（假设为 n），表示从视频的第 n 秒位置开始；</li>
+<li>当数值小于0时（假设为 -n），表示从视频结束 n 秒前的位置开始。</li>
+ * @method float getEndTimeOffset() 获取动图在视频中的终止时间偏移，单位为秒。
+<li>不填或填0，表示持续到视频的末尾终止；</li>
+<li>当数值大于0时（假设为 n），表示持续到视频第 n 秒时终止；</li>
+<li>当数值小于0时（假设为 -n），表示持续到视频结束 n 秒前终止。</li>
+ * @method void setEndTimeOffset(float $EndTimeOffset) 设置动图在视频中的终止时间偏移，单位为秒。
+<li>不填或填0，表示持续到视频的末尾终止；</li>
+<li>当数值大于0时（假设为 n），表示持续到视频第 n 秒时终止；</li>
+<li>当数值小于0时（假设为 -n），表示持续到视频结束 n 秒前终止。</li>
  */
 class AnimatedGraphicTaskInput extends AbstractModel
 {
@@ -35,19 +47,31 @@ class AnimatedGraphicTaskInput extends AbstractModel
     public $Definition;
 
     /**
-     * @var float 动图在视频中的开始时间，单位为秒。
+     * @var float 动图在视频中的起始时间偏移，单位为秒。
+<li>不填或填0，表示从视频的起始位置开始；</li>
+<li>当数值大于0时（假设为 n），表示从视频的第 n 秒位置开始；</li>
+<li>当数值小于0时（假设为 -n），表示从视频结束 n 秒前的位置开始。</li>
      */
     public $StartTimeOffset;
 
     /**
-     * @var float 动图在视频中的结束时间，单位为秒。
+     * @var float 动图在视频中的终止时间偏移，单位为秒。
+<li>不填或填0，表示持续到视频的末尾终止；</li>
+<li>当数值大于0时（假设为 n），表示持续到视频第 n 秒时终止；</li>
+<li>当数值小于0时（假设为 -n），表示持续到视频结束 n 秒前终止。</li>
      */
     public $EndTimeOffset;
 
     /**
      * @param integer $Definition 视频转动图模板 ID
-     * @param float $StartTimeOffset 动图在视频中的开始时间，单位为秒。
-     * @param float $EndTimeOffset 动图在视频中的结束时间，单位为秒。
+     * @param float $StartTimeOffset 动图在视频中的起始时间偏移，单位为秒。
+<li>不填或填0，表示从视频的起始位置开始；</li>
+<li>当数值大于0时（假设为 n），表示从视频的第 n 秒位置开始；</li>
+<li>当数值小于0时（假设为 -n），表示从视频结束 n 秒前的位置开始。</li>
+     * @param float $EndTimeOffset 动图在视频中的终止时间偏移，单位为秒。
+<li>不填或填0，表示持续到视频的末尾终止；</li>
+<li>当数值大于0时（假设为 n），表示持续到视频第 n 秒时终止；</li>
+<li>当数值小于0时（假设为 -n），表示持续到视频结束 n 秒前终止。</li>
      */
     function __construct()
     {

@@ -28,6 +28,20 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTitles(array $Titles) 设置表格标题
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getType() 获取图像中的文本块类型，0 为非表格文本，
+1 为有线表格，2 为无线表格
+（接口暂不支持日文无线表格识别，若传入日文无线表格，返回0）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setType(integer $Type) 设置图像中的文本块类型，0 为非表格文本，
+1 为有线表格，2 为无线表格
+（接口暂不支持日文无线表格识别，若传入日文无线表格，返回0）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTableCoordPoint() 获取表格主体四个顶点坐标（依次为左上角，
+右上角，右下角，左下角）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTableCoordPoint(array $TableCoordPoint) 设置表格主体四个顶点坐标（依次为左上角，
+右上角，右下角，左下角）
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TableDetectInfo extends AbstractModel
 {
@@ -44,9 +58,31 @@ class TableDetectInfo extends AbstractModel
     public $Titles;
 
     /**
+     * @var integer 图像中的文本块类型，0 为非表格文本，
+1 为有线表格，2 为无线表格
+（接口暂不支持日文无线表格识别，若传入日文无线表格，返回0）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Type;
+
+    /**
+     * @var array 表格主体四个顶点坐标（依次为左上角，
+右上角，右下角，左下角）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TableCoordPoint;
+
+    /**
      * @param array $Cells 单元格内容
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Titles 表格标题
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Type 图像中的文本块类型，0 为非表格文本，
+1 为有线表格，2 为无线表格
+（接口暂不支持日文无线表格识别，若传入日文无线表格，返回0）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $TableCoordPoint 表格主体四个顶点坐标（依次为左上角，
+右上角，右下角，左下角）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -77,6 +113,19 @@ class TableDetectInfo extends AbstractModel
                 $obj = new TableTitle();
                 $obj->deserialize($value);
                 array_push($this->Titles, $obj);
+            }
+        }
+
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("TableCoordPoint",$param) and $param["TableCoordPoint"] !== null) {
+            $this->TableCoordPoint = [];
+            foreach ($param["TableCoordPoint"] as $key => $value){
+                $obj = new Coord();
+                $obj->deserialize($value);
+                array_push($this->TableCoordPoint, $obj);
             }
         }
     }

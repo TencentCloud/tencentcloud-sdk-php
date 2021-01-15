@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateEmailAddress请求参数结构体
  *
- * @method string getEmailAddress() 获取您的发信地址，上限为10个
- * @method void setEmailAddress(string $EmailAddress) 设置您的发信地址，上限为10个
+ * @method string getEmailAddress() 获取您的发信地址（发信地址总数上限为10个）
+ * @method void setEmailAddress(string $EmailAddress) 设置您的发信地址（发信地址总数上限为10个）
  * @method string getEmailSenderName() 获取发件人别名
  * @method void setEmailSenderName(string $EmailSenderName) 设置发件人别名
  */
 class CreateEmailAddressRequest extends AbstractModel
 {
     /**
-     * @var string 您的发信地址，上限为10个
+     * @var string 您的发信地址（发信地址总数上限为10个）
      */
     public $EmailAddress;
 
@@ -38,7 +38,7 @@ class CreateEmailAddressRequest extends AbstractModel
     public $EmailSenderName;
 
     /**
-     * @param string $EmailAddress 您的发信地址，上限为10个
+     * @param string $EmailAddress 您的发信地址（发信地址总数上限为10个）
      * @param string $EmailSenderName 发件人别名
      */
     function __construct()

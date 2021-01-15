@@ -26,16 +26,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFromEmailAddress(string $FromEmailAddress) 设置发信邮件地址。请填写发件人邮箱地址，例如：noreply@mail.qcloud.com。如需填写发件人说明，请按照 
 发信人 &lt;邮件地址&gt; 的方式填写，例如：
 腾讯云团队 &lt;noreply@mail.qcloud.com&gt;
- * @method array getDestination() 获取收信人邮箱地址，最多支持群发50人。
- * @method void setDestination(array $Destination) 设置收信人邮箱地址，最多支持群发50人。
+ * @method array getDestination() 获取收信人邮箱地址，最多支持群发50人。注意：邮件内容会显示所有收件人地址，非群发邮件请多次调用API发送。
+ * @method void setDestination(array $Destination) 设置收信人邮箱地址，最多支持群发50人。注意：邮件内容会显示所有收件人地址，非群发邮件请多次调用API发送。
  * @method string getSubject() 获取邮件主题
  * @method void setSubject(string $Subject) 设置邮件主题
- * @method string getReplyToAddresses() 获取邮件的“回复”电子邮件地址。可以填写您能收到邮件的邮箱地址，可以是个人邮箱。如果不填，收件人将会回复到腾讯云。注意：邮件内容会显示所有收件人地址，非群发邮件请多次调用API发送。
- * @method void setReplyToAddresses(string $ReplyToAddresses) 设置邮件的“回复”电子邮件地址。可以填写您能收到邮件的邮箱地址，可以是个人邮箱。如果不填，收件人将会回复到腾讯云。注意：邮件内容会显示所有收件人地址，非群发邮件请多次调用API发送。
+ * @method string getReplyToAddresses() 获取邮件的“回复”电子邮件地址。可以填写您能收到邮件的邮箱地址，可以是个人邮箱。如果不填，收件人将会回复到腾讯云。
+ * @method void setReplyToAddresses(string $ReplyToAddresses) 设置邮件的“回复”电子邮件地址。可以填写您能收到邮件的邮箱地址，可以是个人邮箱。如果不填，收件人将会回复到腾讯云。
  * @method Template getTemplate() 获取使用模板发送时，填写的模板相关参数
  * @method void setTemplate(Template $Template) 设置使用模板发送时，填写的模板相关参数
  * @method Simple getSimple() 获取使用API直接发送内容时，填写的邮件内容
  * @method void setSimple(Simple $Simple) 设置使用API直接发送内容时，填写的邮件内容
+ * @method array getAttachments() 获取需要发送附件时，填写附件相关参数。
+ * @method void setAttachments(array $Attachments) 设置需要发送附件时，填写附件相关参数。
  */
 class SendEmailRequest extends AbstractModel
 {
@@ -47,7 +49,7 @@ class SendEmailRequest extends AbstractModel
     public $FromEmailAddress;
 
     /**
-     * @var array 收信人邮箱地址，最多支持群发50人。
+     * @var array 收信人邮箱地址，最多支持群发50人。注意：邮件内容会显示所有收件人地址，非群发邮件请多次调用API发送。
      */
     public $Destination;
 
@@ -57,7 +59,7 @@ class SendEmailRequest extends AbstractModel
     public $Subject;
 
     /**
-     * @var string 邮件的“回复”电子邮件地址。可以填写您能收到邮件的邮箱地址，可以是个人邮箱。如果不填，收件人将会回复到腾讯云。注意：邮件内容会显示所有收件人地址，非群发邮件请多次调用API发送。
+     * @var string 邮件的“回复”电子邮件地址。可以填写您能收到邮件的邮箱地址，可以是个人邮箱。如果不填，收件人将会回复到腾讯云。
      */
     public $ReplyToAddresses;
 
@@ -72,14 +74,20 @@ class SendEmailRequest extends AbstractModel
     public $Simple;
 
     /**
+     * @var array 需要发送附件时，填写附件相关参数。
+     */
+    public $Attachments;
+
+    /**
      * @param string $FromEmailAddress 发信邮件地址。请填写发件人邮箱地址，例如：noreply@mail.qcloud.com。如需填写发件人说明，请按照 
 发信人 &lt;邮件地址&gt; 的方式填写，例如：
 腾讯云团队 &lt;noreply@mail.qcloud.com&gt;
-     * @param array $Destination 收信人邮箱地址，最多支持群发50人。
+     * @param array $Destination 收信人邮箱地址，最多支持群发50人。注意：邮件内容会显示所有收件人地址，非群发邮件请多次调用API发送。
      * @param string $Subject 邮件主题
-     * @param string $ReplyToAddresses 邮件的“回复”电子邮件地址。可以填写您能收到邮件的邮箱地址，可以是个人邮箱。如果不填，收件人将会回复到腾讯云。注意：邮件内容会显示所有收件人地址，非群发邮件请多次调用API发送。
+     * @param string $ReplyToAddresses 邮件的“回复”电子邮件地址。可以填写您能收到邮件的邮箱地址，可以是个人邮箱。如果不填，收件人将会回复到腾讯云。
      * @param Template $Template 使用模板发送时，填写的模板相关参数
      * @param Simple $Simple 使用API直接发送内容时，填写的邮件内容
+     * @param array $Attachments 需要发送附件时，填写附件相关参数。
      */
     function __construct()
     {
@@ -118,6 +126,15 @@ class SendEmailRequest extends AbstractModel
         if (array_key_exists("Simple",$param) and $param["Simple"] !== null) {
             $this->Simple = new Simple();
             $this->Simple->deserialize($param["Simple"]);
+        }
+
+        if (array_key_exists("Attachments",$param) and $param["Attachments"] !== null) {
+            $this->Attachments = [];
+            foreach ($param["Attachments"] as $key => $value){
+                $obj = new Attachment();
+                $obj->deserialize($value);
+                array_push($this->Attachments, $obj);
+            }
         }
     }
 }

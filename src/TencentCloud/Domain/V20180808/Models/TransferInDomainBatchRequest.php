@@ -34,6 +34,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置自动续费开关。有两个可选值：
 0 表示关闭，不自动续费（默认值）
 1 表示开启，将自动续费
+ * @method boolean getLockTransfer() 获取true： 开启60天内禁止转移注册商锁定
+false：关闭60天内禁止转移注册商锁定
+默认 true
+ * @method void setLockTransfer(boolean $LockTransfer) 设置true： 开启60天内禁止转移注册商锁定
+false：关闭60天内禁止转移注册商锁定
+默认 true
  */
 class TransferInDomainBatchRequest extends AbstractModel
 {
@@ -65,6 +71,13 @@ class TransferInDomainBatchRequest extends AbstractModel
     public $AutoRenewFlag;
 
     /**
+     * @var boolean true： 开启60天内禁止转移注册商锁定
+false：关闭60天内禁止转移注册商锁定
+默认 true
+     */
+    public $LockTransfer;
+
+    /**
      * @param array $Domains 转入的域名名称数组。
      * @param array $PassWords 域名转移码数组。
      * @param string $TemplateId 模板ID。
@@ -72,6 +85,9 @@ class TransferInDomainBatchRequest extends AbstractModel
      * @param integer $AutoRenewFlag 自动续费开关。有两个可选值：
 0 表示关闭，不自动续费（默认值）
 1 表示开启，将自动续费
+     * @param boolean $LockTransfer true： 开启60天内禁止转移注册商锁定
+false：关闭60天内禁止转移注册商锁定
+默认 true
      */
     function __construct()
     {
@@ -104,6 +120,10 @@ class TransferInDomainBatchRequest extends AbstractModel
 
         if (array_key_exists("AutoRenewFlag",$param) and $param["AutoRenewFlag"] !== null) {
             $this->AutoRenewFlag = $param["AutoRenewFlag"];
+        }
+
+        if (array_key_exists("LockTransfer",$param) and $param["LockTransfer"] !== null) {
+            $this->LockTransfer = $param["LockTransfer"];
         }
     }
 }

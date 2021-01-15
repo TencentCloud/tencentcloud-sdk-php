@@ -31,9 +31,11 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getType() 获取服务发现类型，取值如下：
 <li> 1 = ServiceMonitor</li>
 <li> 2 = PodMonitor</li>
+<li> 3 = PodMonitor</li>
  * @method void setType(integer $Type) 设置服务发现类型，取值如下：
 <li> 1 = ServiceMonitor</li>
 <li> 2 = PodMonitor</li>
+<li> 3 = PodMonitor</li>
  * @method string getYaml() 获取服务发现配置信息
  * @method void setYaml(string $Yaml) 设置服务发现配置信息
  */
@@ -59,6 +61,7 @@ class DeleteServiceDiscoveryRequest extends AbstractModel
      * @var integer 服务发现类型，取值如下：
 <li> 1 = ServiceMonitor</li>
 <li> 2 = PodMonitor</li>
+<li> 3 = PodMonitor</li>
      */
     public $Type;
 
@@ -75,6 +78,7 @@ class DeleteServiceDiscoveryRequest extends AbstractModel
      * @param integer $Type 服务发现类型，取值如下：
 <li> 1 = ServiceMonitor</li>
 <li> 2 = PodMonitor</li>
+<li> 3 = PodMonitor</li>
      * @param string $Yaml 服务发现配置信息
      */
     function __construct()

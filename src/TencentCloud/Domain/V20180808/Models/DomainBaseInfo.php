@@ -124,6 +124,12 @@ yunxun: Guangzhou Yunxun Information Technology Co., Ltd.（广州云讯信息�
 xinnet: Xin Net Technology Corporation（北京新网数码信息技术有限公司）
  * @method array getNameServer() 获取域名绑定的ns
  * @method void setNameServer(array $NameServer) 设置域名绑定的ns
+ * @method boolean getLockTransfer() 获取true：开启锁定
+false：关闭锁定
+ * @method void setLockTransfer(boolean $LockTransfer) 设置true：开启锁定
+false：关闭锁定
+ * @method string getLockEndTime() 获取锁定结束时间
+ * @method void setLockEndTime(string $LockEndTime) 设置锁定结束时间
  */
 class DomainBaseInfo extends AbstractModel
 {
@@ -228,6 +234,17 @@ xinnet: Xin Net Technology Corporation（北京新网数码信息技术有限公
     public $NameServer;
 
     /**
+     * @var boolean true：开启锁定
+false：关闭锁定
+     */
+    public $LockTransfer;
+
+    /**
+     * @var string 锁定结束时间
+     */
+    public $LockEndTime;
+
+    /**
      * @param string $DomainId 域名资源ID。
      * @param string $DomainName 域名名称。
      * @param string $RealNameAuditStatus 域名实名认证状态。
@@ -280,6 +297,9 @@ qcloud: Tencent Cloud Computing (Beijing) Limited Liability Company（腾讯云�
 yunxun: Guangzhou Yunxun Information Technology Co., Ltd.（广州云讯信息科技有限公司）
 xinnet: Xin Net Technology Corporation（北京新网数码信息技术有限公司）
      * @param array $NameServer 域名绑定的ns
+     * @param boolean $LockTransfer true：开启锁定
+false：关闭锁定
+     * @param string $LockEndTime 锁定结束时间
      */
     function __construct()
     {
@@ -340,6 +360,14 @@ xinnet: Xin Net Technology Corporation（北京新网数码信息技术有限公
 
         if (array_key_exists("NameServer",$param) and $param["NameServer"] !== null) {
             $this->NameServer = $param["NameServer"];
+        }
+
+        if (array_key_exists("LockTransfer",$param) and $param["LockTransfer"] !== null) {
+            $this->LockTransfer = $param["LockTransfer"];
+        }
+
+        if (array_key_exists("LockEndTime",$param) and $param["LockEndTime"] !== null) {
+            $this->LockEndTime = $param["LockEndTime"];
         }
     }
 }

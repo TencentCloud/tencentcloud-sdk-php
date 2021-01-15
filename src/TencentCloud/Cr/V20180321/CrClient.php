@@ -31,6 +31,7 @@ use TencentCloud\Cr\V20180321\Models as Models;
  * @method Models\DescribeFileModelResponse DescribeFileModel(Models\DescribeFileModelRequest $req) 查询机器人文件模板
  * @method Models\DescribeRecordsResponse DescribeRecords(Models\DescribeRecordsRequest $req) 用于获取指定案件的录音地址，次日早上8:00后可查询前日录音。
  * @method Models\DescribeTaskStatusResponse DescribeTaskStatus(Models\DescribeTaskStatusRequest $req) 根据上传文件接口的输出参数DataResId，获取相关上传结果。
+ * @method Models\DownloadBotRecordResponse DownloadBotRecord(Models\DownloadBotRecordRequest $req) 下载任务录音与文本，第二天12点后可使用此接口获取对应的录音与文本
  * @method Models\DownloadDialogueTextResponse DownloadDialogueText(Models\DownloadDialogueTextRequest $req) 用于获取指定案件的对话文本内容，次日早上8:00后可查询前日对话文本内容。
  * @method Models\DownloadRecordListResponse DownloadRecordList(Models\DownloadRecordListRequest $req) <p>用于获取录音下载链接清单，次日早上8:00后可查询前日录音清单。</p>
 <p>注意：录音清单中的录音下载链接仅次日20:00之前有效，请及时下载。</p>

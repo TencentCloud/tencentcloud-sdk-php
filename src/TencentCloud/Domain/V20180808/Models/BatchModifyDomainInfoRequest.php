@@ -24,6 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDomains(array $Domains) 设置批量修改的域名。
  * @method string getTemplateId() 获取模板ID。
  * @method void setTemplateId(string $TemplateId) 设置模板ID。
+ * @method boolean getLockTransfer() 获取true： 开启60天内禁止转移注册商锁定
+false：关闭60天内禁止转移注册商锁定
+默认 true
+ * @method void setLockTransfer(boolean $LockTransfer) 设置true： 开启60天内禁止转移注册商锁定
+false：关闭60天内禁止转移注册商锁定
+默认 true
  */
 class BatchModifyDomainInfoRequest extends AbstractModel
 {
@@ -38,8 +44,18 @@ class BatchModifyDomainInfoRequest extends AbstractModel
     public $TemplateId;
 
     /**
+     * @var boolean true： 开启60天内禁止转移注册商锁定
+false：关闭60天内禁止转移注册商锁定
+默认 true
+     */
+    public $LockTransfer;
+
+    /**
      * @param array $Domains 批量修改的域名。
      * @param string $TemplateId 模板ID。
+     * @param boolean $LockTransfer true： 开启60天内禁止转移注册商锁定
+false：关闭60天内禁止转移注册商锁定
+默认 true
      */
     function __construct()
     {
@@ -60,6 +76,10 @@ class BatchModifyDomainInfoRequest extends AbstractModel
 
         if (array_key_exists("TemplateId",$param) and $param["TemplateId"] !== null) {
             $this->TemplateId = $param["TemplateId"];
+        }
+
+        if (array_key_exists("LockTransfer",$param) and $param["LockTransfer"] !== null) {
+            $this->LockTransfer = $param["LockTransfer"];
         }
     }
 }

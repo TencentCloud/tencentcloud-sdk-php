@@ -20,19 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * BindingPolicyObject请求参数结构体
  *
- * @method integer getGroupId() 获取策略分组Id
- * @method void setGroupId(integer $GroupId) 设置策略分组Id
+ * @method integer getGroupId() 获取策略组id，如传入PolicyId则该字段可传入任意值
+ * @method void setGroupId(integer $GroupId) 设置策略组id，如传入PolicyId则该字段可传入任意值
  * @method string getModule() 获取必填。固定值"monitor"
  * @method void setModule(string $Module) 设置必填。固定值"monitor"
  * @method integer getInstanceGroupId() 获取实例分组ID
  * @method void setInstanceGroupId(integer $InstanceGroupId) 设置实例分组ID
  * @method array getDimensions() 获取需要绑定的对象维度信息
  * @method void setDimensions(array $Dimensions) 设置需要绑定的对象维度信息
+ * @method string getPolicyId() 获取告警策略ID，使用此字段时GroupId可传入任意值
+ * @method void setPolicyId(string $PolicyId) 设置告警策略ID，使用此字段时GroupId可传入任意值
  */
 class BindingPolicyObjectRequest extends AbstractModel
 {
     /**
-     * @var integer 策略分组Id
+     * @var integer 策略组id，如传入PolicyId则该字段可传入任意值
      */
     public $GroupId;
 
@@ -52,10 +54,16 @@ class BindingPolicyObjectRequest extends AbstractModel
     public $Dimensions;
 
     /**
-     * @param integer $GroupId 策略分组Id
+     * @var string 告警策略ID，使用此字段时GroupId可传入任意值
+     */
+    public $PolicyId;
+
+    /**
+     * @param integer $GroupId 策略组id，如传入PolicyId则该字段可传入任意值
      * @param string $Module 必填。固定值"monitor"
      * @param integer $InstanceGroupId 实例分组ID
      * @param array $Dimensions 需要绑定的对象维度信息
+     * @param string $PolicyId 告警策略ID，使用此字段时GroupId可传入任意值
      */
     function __construct()
     {
@@ -89,6 +97,10 @@ class BindingPolicyObjectRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Dimensions, $obj);
             }
+        }
+
+        if (array_key_exists("PolicyId",$param) and $param["PolicyId"] !== null) {
+            $this->PolicyId = $param["PolicyId"];
         }
     }
 }

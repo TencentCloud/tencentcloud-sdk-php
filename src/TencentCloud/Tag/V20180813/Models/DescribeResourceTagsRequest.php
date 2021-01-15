@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setServiceType(string $ServiceType) 设置业务类型
  * @method string getResourcePrefix() 获取资源前缀
  * @method void setResourcePrefix(string $ResourcePrefix) 设置资源前缀
- * @method string getResourceId() 获取资源唯一标识
- * @method void setResourceId(string $ResourceId) 设置资源唯一标识
+ * @method string getResourceId() 获取资源唯一标识。只输入ResourceId进行查询可能会查询较慢，或者无法匹配到结果，建议在输入ResourceId的同时也输入ServiceType、ResourcePrefix和ResourceRegion（不区分地域的资源可忽略该参数）
+ * @method void setResourceId(string $ResourceId) 设置资源唯一标识。只输入ResourceId进行查询可能会查询较慢，或者无法匹配到结果，建议在输入ResourceId的同时也输入ServiceType、ResourcePrefix和ResourceRegion（不区分地域的资源可忽略该参数）
  * @method integer getOffset() 获取数据偏移量，默认为 0, 必须为Limit参数的整数倍
  * @method void setOffset(integer $Offset) 设置数据偏移量，默认为 0, 必须为Limit参数的整数倍
  * @method integer getLimit() 获取每页大小，默认为 15
@@ -60,7 +60,7 @@ class DescribeResourceTagsRequest extends AbstractModel
     public $ResourcePrefix;
 
     /**
-     * @var string 资源唯一标识
+     * @var string 资源唯一标识。只输入ResourceId进行查询可能会查询较慢，或者无法匹配到结果，建议在输入ResourceId的同时也输入ServiceType、ResourcePrefix和ResourceRegion（不区分地域的资源可忽略该参数）
      */
     public $ResourceId;
 
@@ -84,7 +84,7 @@ class DescribeResourceTagsRequest extends AbstractModel
      * @param string $ResourceRegion 资源所在地域
      * @param string $ServiceType 业务类型
      * @param string $ResourcePrefix 资源前缀
-     * @param string $ResourceId 资源唯一标识
+     * @param string $ResourceId 资源唯一标识。只输入ResourceId进行查询可能会查询较慢，或者无法匹配到结果，建议在输入ResourceId的同时也输入ServiceType、ResourcePrefix和ResourceRegion（不区分地域的资源可忽略该参数）
      * @param integer $Offset 数据偏移量，默认为 0, 必须为Limit参数的整数倍
      * @param integer $Limit 每页大小，默认为 15
      * @param integer $CosResourceId 是否是cos的资源（0或者1），输入的ResourceId为cos资源时必填

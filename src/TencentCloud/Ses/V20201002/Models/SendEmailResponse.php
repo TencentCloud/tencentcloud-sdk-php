@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SendEmail返回参数结构体
  *
- * @method string getMessageId() 获取接受消息时生成的消息的唯一标识符。
- * @method void setMessageId(string $MessageId) 设置接受消息时生成的消息的唯一标识符。
+ * @method string getMessageId() 获取接受消息生成的唯一消息标识符。
+ * @method void setMessageId(string $MessageId) 设置接受消息生成的唯一消息标识符。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class SendEmailResponse extends AbstractModel
 {
     /**
-     * @var string 接受消息时生成的消息的唯一标识符。
+     * @var string 接受消息生成的唯一消息标识符。
      */
     public $MessageId;
 
@@ -38,7 +38,7 @@ class SendEmailResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $MessageId 接受消息时生成的消息的唯一标识符。
+     * @param string $MessageId 接受消息生成的唯一消息标识符。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

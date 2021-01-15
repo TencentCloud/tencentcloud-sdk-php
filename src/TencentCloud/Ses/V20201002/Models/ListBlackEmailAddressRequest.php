@@ -20,14 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ListBlackEmailAddress请求参数结构体
  *
- * @method string getStartDate() 获取开始日期
- * @method void setStartDate(string $StartDate) 设置开始日期
- * @method string getEndDate() 获取结束日期
- * @method void setEndDate(string $EndDate) 设置结束日期
+ * @method string getStartDate() 获取开始日期，格式为YYYY-MM-DD
+ * @method void setStartDate(string $StartDate) 设置开始日期，格式为YYYY-MM-DD
+ * @method string getEndDate() 获取结束日期，格式为YYYY-MM-DD
+ * @method void setEndDate(string $EndDate) 设置结束日期，格式为YYYY-MM-DD
  * @method integer getLimit() 获取规范，配合Offset使用
  * @method void setLimit(integer $Limit) 设置规范，配合Offset使用
- * @method integer getOffset() 获取规范，配合Limit使用
- * @method void setOffset(integer $Offset) 设置规范，配合Limit使用
+ * @method integer getOffset() 获取规范，配合Limit使用，Limit最大取值为100
+ * @method void setOffset(integer $Offset) 设置规范，配合Limit使用，Limit最大取值为100
  * @method string getEmailAddress() 获取可以指定邮箱进行查询
  * @method void setEmailAddress(string $EmailAddress) 设置可以指定邮箱进行查询
  * @method string getTaskID() 获取可以指定任务ID进行查询
@@ -36,12 +36,12 @@ use TencentCloud\Common\AbstractModel;
 class ListBlackEmailAddressRequest extends AbstractModel
 {
     /**
-     * @var string 开始日期
+     * @var string 开始日期，格式为YYYY-MM-DD
      */
     public $StartDate;
 
     /**
-     * @var string 结束日期
+     * @var string 结束日期，格式为YYYY-MM-DD
      */
     public $EndDate;
 
@@ -51,7 +51,7 @@ class ListBlackEmailAddressRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var integer 规范，配合Limit使用
+     * @var integer 规范，配合Limit使用，Limit最大取值为100
      */
     public $Offset;
 
@@ -66,10 +66,10 @@ class ListBlackEmailAddressRequest extends AbstractModel
     public $TaskID;
 
     /**
-     * @param string $StartDate 开始日期
-     * @param string $EndDate 结束日期
+     * @param string $StartDate 开始日期，格式为YYYY-MM-DD
+     * @param string $EndDate 结束日期，格式为YYYY-MM-DD
      * @param integer $Limit 规范，配合Offset使用
-     * @param integer $Offset 规范，配合Limit使用
+     * @param integer $Offset 规范，配合Limit使用，Limit最大取值为100
      * @param string $EmailAddress 可以指定邮箱进行查询
      * @param string $TaskID 可以指定任务ID进行查询
      */

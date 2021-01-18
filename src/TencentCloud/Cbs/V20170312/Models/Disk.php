@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDiskSize(integer $DiskSize) 设置云硬盘大小，单位GB。
  * @method string getDiskState() 获取云盘状态。取值范围：<br><li>UNATTACHED：未挂载<br><li>ATTACHING：挂载中<br><li>ATTACHED：已挂载<br><li>DETACHING：解挂中<br><li>EXPANDING：扩容中<br><li>ROLLBACKING：回滚中<br><li>TORECYCLE：待回收<br><li>DUMPING：拷贝硬盘中。
  * @method void setDiskState(string $DiskState) 设置云盘状态。取值范围：<br><li>UNATTACHED：未挂载<br><li>ATTACHING：挂载中<br><li>ATTACHED：已挂载<br><li>DETACHING：解挂中<br><li>EXPANDING：扩容中<br><li>ROLLBACKING：回滚中<br><li>TORECYCLE：待回收<br><li>DUMPING：拷贝硬盘中。
- * @method string getDiskType() 获取云盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：SSD表示SSD云硬盘。
- * @method void setDiskType(string $DiskType) 设置云盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：SSD表示SSD云硬盘。
+ * @method string getDiskType() 获取硬盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：表示SSD云硬盘<br><li>CLOUD_HSSD：表示增强型SSD云硬盘<br><li>CLOUD_TSSD：表示极速型SSD云硬盘。
+ * @method void setDiskType(string $DiskType) 设置硬盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：表示SSD云硬盘<br><li>CLOUD_HSSD：表示增强型SSD云硬盘<br><li>CLOUD_TSSD：表示极速型SSD云硬盘。
  * @method boolean getAttached() 获取云盘是否挂载到云主机上。取值范围：<br><li>false:表示未挂载<br><li>true:表示已挂载。
  * @method void setAttached(boolean $Attached) 设置云盘是否挂载到云主机上。取值范围：<br><li>false:表示未挂载<br><li>true:表示已挂载。
  * @method string getInstanceId() 获取云硬盘挂载的云主机ID。
@@ -108,6 +108,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSnapshotSize(integer $SnapshotSize) 设置云盘拥有的快照总容量，单位为MB。
  * @method boolean getBackupDisk() 获取云盘因欠费销毁或者期销毁时， 是否使用快照备份数据的标识。True， 销毁时创建快照进行数据备份。False 表示直接销毁，不进行数据备份。
  * @method void setBackupDisk(boolean $BackupDisk) 设置云盘因欠费销毁或者期销毁时， 是否使用快照备份数据的标识。True， 销毁时创建快照进行数据备份。False 表示直接销毁，不进行数据备份。
+ * @method integer getThroughputPerformance() 获取云硬盘额外性能值，单位MB/s。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setThroughputPerformance(integer $ThroughputPerformance) 设置云硬盘额外性能值，单位MB/s。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Disk extends AbstractModel
 {
@@ -157,7 +161,7 @@ class Disk extends AbstractModel
     public $DiskState;
 
     /**
-     * @var string 云盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：SSD表示SSD云硬盘。
+     * @var string 硬盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：表示SSD云硬盘<br><li>CLOUD_HSSD：表示增强型SSD云硬盘<br><li>CLOUD_TSSD：表示极速型SSD云硬盘。
      */
     public $DiskType;
 
@@ -288,6 +292,12 @@ class Disk extends AbstractModel
     public $BackupDisk;
 
     /**
+     * @var integer 云硬盘额外性能值，单位MB/s。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ThroughputPerformance;
+
+    /**
      * @param string $DiskId 云硬盘ID。
      * @param string $DiskUsage 云硬盘类型。取值范围：<br><li>SYSTEM_DISK：系统盘<br><li>DATA_DISK：数据盘。
      * @param string $DiskChargeType 付费模式。取值范围：<br><li>PREPAID：预付费，即包年包月<br><li>POSTPAID_BY_HOUR：后付费，即按量计费。
@@ -297,7 +307,7 @@ class Disk extends AbstractModel
      * @param string $DiskName 云硬盘名称。
      * @param integer $DiskSize 云硬盘大小，单位GB。
      * @param string $DiskState 云盘状态。取值范围：<br><li>UNATTACHED：未挂载<br><li>ATTACHING：挂载中<br><li>ATTACHED：已挂载<br><li>DETACHING：解挂中<br><li>EXPANDING：扩容中<br><li>ROLLBACKING：回滚中<br><li>TORECYCLE：待回收<br><li>DUMPING：拷贝硬盘中。
-     * @param string $DiskType 云盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：SSD表示SSD云硬盘。
+     * @param string $DiskType 硬盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：表示SSD云硬盘<br><li>CLOUD_HSSD：表示增强型SSD云硬盘<br><li>CLOUD_TSSD：表示极速型SSD云硬盘。
      * @param boolean $Attached 云盘是否挂载到云主机上。取值范围：<br><li>false:表示未挂载<br><li>true:表示已挂载。
      * @param string $InstanceId 云硬盘挂载的云主机ID。
      * @param string $CreateTime 云硬盘的创建时间。
@@ -332,6 +342,8 @@ class Disk extends AbstractModel
      * @param integer $SnapshotCount 云盘拥有的快照总数。
      * @param integer $SnapshotSize 云盘拥有的快照总容量，单位为MB。
      * @param boolean $BackupDisk 云盘因欠费销毁或者期销毁时， 是否使用快照备份数据的标识。True， 销毁时创建快照进行数据备份。False 表示直接销毁，不进行数据备份。
+     * @param integer $ThroughputPerformance 云硬盘额外性能值，单位MB/s。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -482,6 +494,10 @@ class Disk extends AbstractModel
 
         if (array_key_exists("BackupDisk",$param) and $param["BackupDisk"] !== null) {
             $this->BackupDisk = $param["BackupDisk"];
+        }
+
+        if (array_key_exists("ThroughputPerformance",$param) and $param["ThroughputPerformance"] !== null) {
+            $this->ThroughputPerformance = $param["ThroughputPerformance"];
         }
     }
 }

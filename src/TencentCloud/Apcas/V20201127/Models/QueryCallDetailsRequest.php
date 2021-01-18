@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * QueryCallDetails请求参数结构体
  *
- * @method integer getType() 获取请求类型:1,人群特征洞察统计 2购车意向预测统计
- * @method void setType(integer $Type) 设置请求类型:1,人群特征洞察统计 2购车意向预测统计
+ * @method integer getType() 获取请求类型 1:人群特征洞察统计 2:购车意向预测统计
+ * @method void setType(integer $Type) 设置请求类型 1:人群特征洞察统计 2:购车意向预测统计
  * @method integer getStartTime() 获取开始时间戳（毫秒）
  * @method void setStartTime(integer $StartTime) 设置开始时间戳（毫秒）
- * @method integer getEndTime() 获取结束时间戳(毫秒）
- * @method void setEndTime(integer $EndTime) 设置结束时间戳(毫秒）
+ * @method integer getEndTime() 获取结束时间戳（毫秒）
+ * @method void setEndTime(integer $EndTime) 设置结束时间戳（毫秒）
  * @method integer getPageNumber() 获取页数
  * @method void setPageNumber(integer $PageNumber) 设置页数
  * @method integer getPageSize() 获取每页个数
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class QueryCallDetailsRequest extends AbstractModel
 {
     /**
-     * @var integer 请求类型:1,人群特征洞察统计 2购车意向预测统计
+     * @var integer 请求类型 1:人群特征洞察统计 2:购车意向预测统计
      */
     public $Type;
 
@@ -44,7 +44,7 @@ class QueryCallDetailsRequest extends AbstractModel
     public $StartTime;
 
     /**
-     * @var integer 结束时间戳(毫秒）
+     * @var integer 结束时间戳（毫秒）
      */
     public $EndTime;
 
@@ -59,9 +59,9 @@ class QueryCallDetailsRequest extends AbstractModel
     public $PageSize;
 
     /**
-     * @param integer $Type 请求类型:1,人群特征洞察统计 2购车意向预测统计
+     * @param integer $Type 请求类型 1:人群特征洞察统计 2:购车意向预测统计
      * @param integer $StartTime 开始时间戳（毫秒）
-     * @param integer $EndTime 结束时间戳(毫秒）
+     * @param integer $EndTime 结束时间戳（毫秒）
      * @param integer $PageNumber 页数
      * @param integer $PageSize 每页个数
      */

@@ -84,6 +84,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOperatorRemark(string $OperatorRemark) 设置操作备注
  * @method string getServerPath() 获取服务路劲
  * @method void setServerPath(string $ServerPath) 设置服务路劲
+ * @method string getImageReuseKey() 获取镜像复用的key
+ * @method void setImageReuseKey(string $ImageReuseKey) 设置镜像复用的key
+ * @method array getSidecarSpecs() 获取容器的描述文件
+ * @method void setSidecarSpecs(array $SidecarSpecs) 设置容器的描述文件
  */
 class CreateCloudBaseRunServerVersionRequest extends AbstractModel
 {
@@ -248,6 +252,16 @@ class CreateCloudBaseRunServerVersionRequest extends AbstractModel
     public $ServerPath;
 
     /**
+     * @var string 镜像复用的key
+     */
+    public $ImageReuseKey;
+
+    /**
+     * @var array 容器的描述文件
+     */
+    public $SidecarSpecs;
+
+    /**
      * @param string $EnvId 环境ID
      * @param string $UploadType 枚举（package/repository/image)
      * @param integer $FlowRatio 流量占比
@@ -280,6 +294,8 @@ class CreateCloudBaseRunServerVersionRequest extends AbstractModel
      * @param boolean $EnableUnion 是否使用统一域名
      * @param string $OperatorRemark 操作备注
      * @param string $ServerPath 服务路劲
+     * @param string $ImageReuseKey 镜像复用的key
+     * @param array $SidecarSpecs 容器的描述文件
      */
     function __construct()
     {
@@ -429,6 +445,19 @@ class CreateCloudBaseRunServerVersionRequest extends AbstractModel
 
         if (array_key_exists("ServerPath",$param) and $param["ServerPath"] !== null) {
             $this->ServerPath = $param["ServerPath"];
+        }
+
+        if (array_key_exists("ImageReuseKey",$param) and $param["ImageReuseKey"] !== null) {
+            $this->ImageReuseKey = $param["ImageReuseKey"];
+        }
+
+        if (array_key_exists("SidecarSpecs",$param) and $param["SidecarSpecs"] !== null) {
+            $this->SidecarSpecs = [];
+            foreach ($param["SidecarSpecs"] as $key => $value){
+                $obj = new CloudBaseRunSideSpec();
+                $obj->deserialize($value);
+                array_push($this->SidecarSpecs, $obj);
+            }
         }
     }
 }

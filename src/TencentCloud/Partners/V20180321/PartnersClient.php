@@ -37,6 +37,7 @@ use TencentCloud\Partners\V20180321\Models as Models;
  * @method Models\DescribeClientBalanceResponse DescribeClientBalance(Models\DescribeClientBalanceRequest $req) 为合作伙伴提供查询客户余额能力。调用者必须是合作伙伴，只能查询自己名下客户余额
  * @method Models\DescribeRebateInfosResponse DescribeRebateInfos(Models\DescribeRebateInfosRequest $req) 代理商可查询自己名下全部返佣信息
  * @method Models\DescribeSalesmansResponse DescribeSalesmans(Models\DescribeSalesmansRequest $req) 代理商查询名下业务员列表信息
+ * @method Models\DescribeUnbindClientListResponse DescribeUnbindClientList(Models\DescribeUnbindClientListRequest $req) 代理商名下客户解绑记录查询接口
  * @method Models\ModifyClientRemarkResponse ModifyClientRemark(Models\ModifyClientRemarkRequest $req) 代理商可以对名下客户添加备注、修改备注
  * @method Models\RemovePayRelationForClientResponse RemovePayRelationForClient(Models\RemovePayRelationForClientRequest $req) 合作伙伴为客户消除强代付关系
  */

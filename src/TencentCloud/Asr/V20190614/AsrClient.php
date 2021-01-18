@@ -23,6 +23,7 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Asr\V20190614\Models as Models;
 
 /**
+ * @method Models\CloseAsyncRecognitionTaskResponse CloseAsyncRecognitionTask(Models\CloseAsyncRecognitionTaskRequest $req) 本接口用于关闭语音流异步识别任务。
  * @method Models\CreateAsrVocabResponse CreateAsrVocab(Models\CreateAsrVocabRequest $req) 用户通过本接口进行热词表的创建。
 <br>•   默认最多可创建30个热词表。
 <br>•   每个热词表最多可添加128个词，每个词最长10个字，不能超出限制。

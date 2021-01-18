@@ -20,17 +20,17 @@ use TencentCloud\Common\AbstractModel;
 /**
  * QueryCallStat请求参数结构体
  *
- * @method integer getType() 获取请求类型:1,人群特征洞察统计 2购车意向预测统计
- * @method void setType(integer $Type) 设置请求类型:1,人群特征洞察统计 2购车意向预测统计
+ * @method integer getType() 获取请求类型 1:人群特征洞察统计 2:购车意向预测统计
+ * @method void setType(integer $Type) 设置请求类型 1:人群特征洞察统计 2:购车意向预测统计
  * @method integer getStartTime() 获取开始时间戳（毫秒）
  * @method void setStartTime(integer $StartTime) 设置开始时间戳（毫秒）
- * @method integer getEndTime() 获取结束时间戳(毫秒）
- * @method void setEndTime(integer $EndTime) 设置结束时间戳(毫秒）
+ * @method integer getEndTime() 获取结束时间戳（毫秒）
+ * @method void setEndTime(integer $EndTime) 设置结束时间戳（毫秒）
  */
 class QueryCallStatRequest extends AbstractModel
 {
     /**
-     * @var integer 请求类型:1,人群特征洞察统计 2购车意向预测统计
+     * @var integer 请求类型 1:人群特征洞察统计 2:购车意向预测统计
      */
     public $Type;
 
@@ -40,14 +40,14 @@ class QueryCallStatRequest extends AbstractModel
     public $StartTime;
 
     /**
-     * @var integer 结束时间戳(毫秒）
+     * @var integer 结束时间戳（毫秒）
      */
     public $EndTime;
 
     /**
-     * @param integer $Type 请求类型:1,人群特征洞察统计 2购车意向预测统计
+     * @param integer $Type 请求类型 1:人群特征洞察统计 2:购车意向预测统计
      * @param integer $StartTime 开始时间戳（毫秒）
-     * @param integer $EndTime 结束时间戳(毫秒）
+     * @param integer $EndTime 结束时间戳（毫秒）
      */
     function __construct()
     {

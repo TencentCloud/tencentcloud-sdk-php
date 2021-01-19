@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVlan(integer $Vlan) 设置专用通道的Vlan
  * @method BgpPeer getBgpPeer() 获取用户侧BGP，Asn，AuthKey
  * @method void setBgpPeer(BgpPeer $BgpPeer) 设置用户侧BGP，Asn，AuthKey
- * @method RouteFilterPrefix getRouteFilterPrefixes() 获取用户侧网段地址
- * @method void setRouteFilterPrefixes(RouteFilterPrefix $RouteFilterPrefixes) 设置用户侧网段地址
+ * @method RouteFilterPrefix getRouteFilterPrefixes() 获取用户侧过滤网段地址
+ * @method void setRouteFilterPrefixes(RouteFilterPrefix $RouteFilterPrefixes) 设置用户侧过滤网段地址
  * @method string getTencentAddress() 获取腾讯侧互联IP
  * @method void setTencentAddress(string $TencentAddress) 设置腾讯侧互联IP
  * @method string getTencentBackupAddress() 获取腾讯侧备用互联IP
@@ -50,6 +50,8 @@ use TencentCloud\Common\AbstractModel;
 1: 启用IPv6
  * @method void setIPv6Enable(integer $IPv6Enable) 设置0：停用IPv6
 1: 启用IPv6
+ * @method array getCustomerIDCRoutes() 获取去往用户侧的路由信息
+ * @method void setCustomerIDCRoutes(array $CustomerIDCRoutes) 设置去往用户侧的路由信息
  */
 class ModifyDirectConnectTunnelExtraRequest extends AbstractModel
 {
@@ -69,7 +71,7 @@ class ModifyDirectConnectTunnelExtraRequest extends AbstractModel
     public $BgpPeer;
 
     /**
-     * @var RouteFilterPrefix 用户侧网段地址
+     * @var RouteFilterPrefix 用户侧过滤网段地址
      */
     public $RouteFilterPrefixes;
 
@@ -125,10 +127,15 @@ class ModifyDirectConnectTunnelExtraRequest extends AbstractModel
     public $IPv6Enable;
 
     /**
+     * @var array 去往用户侧的路由信息
+     */
+    public $CustomerIDCRoutes;
+
+    /**
      * @param string $DirectConnectTunnelId 专用通道ID
      * @param integer $Vlan 专用通道的Vlan
      * @param BgpPeer $BgpPeer 用户侧BGP，Asn，AuthKey
-     * @param RouteFilterPrefix $RouteFilterPrefixes 用户侧网段地址
+     * @param RouteFilterPrefix $RouteFilterPrefixes 用户侧过滤网段地址
      * @param string $TencentAddress 腾讯侧互联IP
      * @param string $TencentBackupAddress 腾讯侧备用互联IP
      * @param string $CustomerAddress 用户侧互联IP
@@ -140,6 +147,7 @@ class ModifyDirectConnectTunnelExtraRequest extends AbstractModel
      * @param NQAInfo $NqaInfo NQA配置信息
      * @param integer $IPv6Enable 0：停用IPv6
 1: 启用IPv6
+     * @param array $CustomerIDCRoutes 去往用户侧的路由信息
      */
     function __construct()
     {
@@ -212,6 +220,15 @@ class ModifyDirectConnectTunnelExtraRequest extends AbstractModel
 
         if (array_key_exists("IPv6Enable",$param) and $param["IPv6Enable"] !== null) {
             $this->IPv6Enable = $param["IPv6Enable"];
+        }
+
+        if (array_key_exists("CustomerIDCRoutes",$param) and $param["CustomerIDCRoutes"] !== null) {
+            $this->CustomerIDCRoutes = [];
+            foreach ($param["CustomerIDCRoutes"] as $key => $value){
+                $obj = new RouteFilterPrefix();
+                $obj->deserialize($value);
+                array_push($this->CustomerIDCRoutes, $obj);
+            }
         }
     }
 }

@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 导播台项目输入信息
  *
- * @method string getStopTime() 获取导播台停止时间。
- * @method void setStopTime(string $StopTime) 设置导播台停止时间。
- * @method SwitcherPgmOutputConfig getPgmOutputConfig() 获取导播台主监输出配置信息。
- * @method void setPgmOutputConfig(SwitcherPgmOutputConfig $PgmOutputConfig) 设置导播台主监输出配置信息。
+ * @method string getStopTime() 获取导播台停止时间，格式按照 ISO 8601 标准表示。若不填，该值默认为当前时间加七天。
+ * @method void setStopTime(string $StopTime) 设置导播台停止时间，格式按照 ISO 8601 标准表示。若不填，该值默认为当前时间加七天。
+ * @method SwitcherPgmOutputConfig getPgmOutputConfig() 获取导播台主监输出配置信息。若不填，默认输出 720P。
+ * @method void setPgmOutputConfig(SwitcherPgmOutputConfig $PgmOutputConfig) 设置导播台主监输出配置信息。若不填，默认输出 720P。
  */
 class SwitcherProjectInput extends AbstractModel
 {
     /**
-     * @var string 导播台停止时间。
+     * @var string 导播台停止时间，格式按照 ISO 8601 标准表示。若不填，该值默认为当前时间加七天。
      */
     public $StopTime;
 
     /**
-     * @var SwitcherPgmOutputConfig 导播台主监输出配置信息。
+     * @var SwitcherPgmOutputConfig 导播台主监输出配置信息。若不填，默认输出 720P。
      */
     public $PgmOutputConfig;
 
     /**
-     * @param string $StopTime 导播台停止时间。
-     * @param SwitcherPgmOutputConfig $PgmOutputConfig 导播台主监输出配置信息。
+     * @param string $StopTime 导播台停止时间，格式按照 ISO 8601 标准表示。若不填，该值默认为当前时间加七天。
+     * @param SwitcherPgmOutputConfig $PgmOutputConfig 导播台主监输出配置信息。若不填，默认输出 720P。
      */
     function __construct()
     {

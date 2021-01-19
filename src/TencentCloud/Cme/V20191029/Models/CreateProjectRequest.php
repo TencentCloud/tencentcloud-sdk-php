@@ -32,14 +32,16 @@ use TencentCloud\Common\AbstractModel;
 <li>VIDEO_SEGMENTATION：视频拆条。</li>
  * @method string getName() 获取项目名称，不可超过30个字符。
  * @method void setName(string $Name) 设置项目名称，不可超过30个字符。
+ * @method Entity getOwner() 获取项目归属者。
+ * @method void setOwner(Entity $Owner) 设置项目归属者。
  * @method string getAspectRatio() 获取画布宽高比，取值有：
 <li>16:9；</li>
 <li>9:16。</li>
+该字段即将废弃，当项目类型为 VIDEO_EDIT 时，请在 VideoEditProjectInput 信息中填写该值；当项目类型为 VIDEO_SEGMENTATION 时，请在VideoSegmentationProjectInput 中填写该值。其他项目类型可不填。
  * @method void setAspectRatio(string $AspectRatio) 设置画布宽高比，取值有：
 <li>16:9；</li>
 <li>9:16。</li>
- * @method Entity getOwner() 获取归属者。
- * @method void setOwner(Entity $Owner) 设置归属者。
+该字段即将废弃，当项目类型为 VIDEO_EDIT 时，请在 VideoEditProjectInput 信息中填写该值；当项目类型为 VIDEO_SEGMENTATION 时，请在VideoSegmentationProjectInput 中填写该值。其他项目类型可不填。
  * @method string getDescription() 获取项目描述信息。
  * @method void setDescription(string $Description) 设置项目描述信息。
  * @method SwitcherProjectInput getSwitcherProjectInput() 获取导播台信息，仅当项目类型为 SWITCHER 时必填。
@@ -72,16 +74,17 @@ class CreateProjectRequest extends AbstractModel
     public $Name;
 
     /**
+     * @var Entity 项目归属者。
+     */
+    public $Owner;
+
+    /**
      * @var string 画布宽高比，取值有：
 <li>16:9；</li>
 <li>9:16。</li>
+该字段即将废弃，当项目类型为 VIDEO_EDIT 时，请在 VideoEditProjectInput 信息中填写该值；当项目类型为 VIDEO_SEGMENTATION 时，请在VideoSegmentationProjectInput 中填写该值。其他项目类型可不填。
      */
     public $AspectRatio;
-
-    /**
-     * @var Entity 归属者。
-     */
-    public $Owner;
 
     /**
      * @var string 项目描述信息。
@@ -115,10 +118,11 @@ class CreateProjectRequest extends AbstractModel
 <li>SWITCHER：导播台。</li>
 <li>VIDEO_SEGMENTATION：视频拆条。</li>
      * @param string $Name 项目名称，不可超过30个字符。
+     * @param Entity $Owner 项目归属者。
      * @param string $AspectRatio 画布宽高比，取值有：
 <li>16:9；</li>
 <li>9:16。</li>
-     * @param Entity $Owner 归属者。
+该字段即将废弃，当项目类型为 VIDEO_EDIT 时，请在 VideoEditProjectInput 信息中填写该值；当项目类型为 VIDEO_SEGMENTATION 时，请在VideoSegmentationProjectInput 中填写该值。其他项目类型可不填。
      * @param string $Description 项目描述信息。
      * @param SwitcherProjectInput $SwitcherProjectInput 导播台信息，仅当项目类型为 SWITCHER 时必填。
      * @param LiveStreamClipProjectInput $LiveStreamClipProjectInput 直播剪辑信息，暂未开放，请勿使用。
@@ -150,13 +154,13 @@ class CreateProjectRequest extends AbstractModel
             $this->Name = $param["Name"];
         }
 
-        if (array_key_exists("AspectRatio",$param) and $param["AspectRatio"] !== null) {
-            $this->AspectRatio = $param["AspectRatio"];
-        }
-
         if (array_key_exists("Owner",$param) and $param["Owner"] !== null) {
             $this->Owner = new Entity();
             $this->Owner->deserialize($param["Owner"]);
+        }
+
+        if (array_key_exists("AspectRatio",$param) and $param["AspectRatio"] !== null) {
+            $this->AspectRatio = $param["AspectRatio"];
         }
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {

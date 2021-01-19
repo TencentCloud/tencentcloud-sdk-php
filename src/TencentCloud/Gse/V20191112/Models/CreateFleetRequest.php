@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubNetId(string $SubNetId) 设置VPC 子网，对等连接已不再使用
  * @method integer getGameServerSessionProtectionTimeLimit() 获取时限保护超时时间，默认60分钟，最小值5，最大值1440；当NewGameSessionProtectionPolicy为TimeLimitProtection时参数有效
  * @method void setGameServerSessionProtectionTimeLimit(integer $GameServerSessionProtectionTimeLimit) 设置时限保护超时时间，默认60分钟，最小值5，最大值1440；当NewGameSessionProtectionPolicy为TimeLimitProtection时参数有效
+ * @method array getTags() 获取标签列表，最大长度50组
+ * @method void setTags(array $Tags) 设置标签列表，最大长度50组
  */
 class CreateFleetRequest extends AbstractModel
 {
@@ -108,6 +110,11 @@ class CreateFleetRequest extends AbstractModel
     public $GameServerSessionProtectionTimeLimit;
 
     /**
+     * @var array 标签列表，最大长度50组
+     */
+    public $Tags;
+
+    /**
      * @param string $AssetId 生成包 Id
      * @param string $Description 描述，最小长度0，最大长度100
      * @param array $InboundPermissions 网络配置
@@ -120,6 +127,7 @@ class CreateFleetRequest extends AbstractModel
      * @param RuntimeConfiguration $RuntimeConfiguration 进程配置
      * @param string $SubNetId VPC 子网，对等连接已不再使用
      * @param integer $GameServerSessionProtectionTimeLimit 时限保护超时时间，默认60分钟，最小值5，最大值1440；当NewGameSessionProtectionPolicy为TimeLimitProtection时参数有效
+     * @param array $Tags 标签列表，最大长度50组
      */
     function __construct()
     {
@@ -187,6 +195,15 @@ class CreateFleetRequest extends AbstractModel
 
         if (array_key_exists("GameServerSessionProtectionTimeLimit",$param) and $param["GameServerSessionProtectionTimeLimit"] !== null) {
             $this->GameServerSessionProtectionTimeLimit = $param["GameServerSessionProtectionTimeLimit"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

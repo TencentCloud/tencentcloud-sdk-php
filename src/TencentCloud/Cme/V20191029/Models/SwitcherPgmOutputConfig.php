@@ -28,14 +28,14 @@ use TencentCloud\Common\AbstractModel;
 <li>10001：分辨率为1080 P；</li>
 <li>10002：分辨率为720 P；</li>
 <li>10003：分辨率为480 P。</li>
- * @method integer getWidth() 获取导播台输出宽。
- * @method void setWidth(integer $Width) 设置导播台输出宽。
- * @method integer getHeight() 获取导播台输出高。
- * @method void setHeight(integer $Height) 设置导播台输出高。
- * @method integer getFps() 获取导播台输出帧率。
- * @method void setFps(integer $Fps) 设置导播台输出帧率。
- * @method integer getBitRate() 获取导播台输出码率。
- * @method void setBitRate(integer $BitRate) 设置导播台输出码率。
+ * @method integer getWidth() 获取导播台输出宽，单位：像素。
+ * @method void setWidth(integer $Width) 设置导播台输出宽，单位：像素。
+ * @method integer getHeight() 获取导播台输出高，单位：像素。
+ * @method void setHeight(integer $Height) 设置导播台输出高，单位：像素。
+ * @method integer getFps() 获取导播台输出帧率，单位：帧/秒
+ * @method void setFps(integer $Fps) 设置导播台输出帧率，单位：帧/秒
+ * @method integer getBitRate() 获取导播台输出码率， 单位：bit/s。
+ * @method void setBitRate(integer $BitRate) 设置导播台输出码率， 单位：bit/s。
  */
 class SwitcherPgmOutputConfig extends AbstractModel
 {
@@ -48,22 +48,22 @@ class SwitcherPgmOutputConfig extends AbstractModel
     public $TemplateId;
 
     /**
-     * @var integer 导播台输出宽。
+     * @var integer 导播台输出宽，单位：像素。
      */
     public $Width;
 
     /**
-     * @var integer 导播台输出高。
+     * @var integer 导播台输出高，单位：像素。
      */
     public $Height;
 
     /**
-     * @var integer 导播台输出帧率。
+     * @var integer 导播台输出帧率，单位：帧/秒
      */
     public $Fps;
 
     /**
-     * @var integer 导播台输出码率。
+     * @var integer 导播台输出码率， 单位：bit/s。
      */
     public $BitRate;
 
@@ -72,10 +72,10 @@ class SwitcherPgmOutputConfig extends AbstractModel
 <li>10001：分辨率为1080 P；</li>
 <li>10002：分辨率为720 P；</li>
 <li>10003：分辨率为480 P。</li>
-     * @param integer $Width 导播台输出宽。
-     * @param integer $Height 导播台输出高。
-     * @param integer $Fps 导播台输出帧率。
-     * @param integer $BitRate 导播台输出码率。
+     * @param integer $Width 导播台输出宽，单位：像素。
+     * @param integer $Height 导播台输出高，单位：像素。
+     * @param integer $Fps 导播台输出帧率，单位：帧/秒
+     * @param integer $BitRate 导播台输出码率， 单位：bit/s。
      */
     function __construct()
     {

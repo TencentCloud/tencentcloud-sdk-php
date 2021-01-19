@@ -78,6 +78,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBillingStatus(string $BillingStatus) 设置计费状态：未开通、已开通、异常、欠费隔离、销毁、解冻
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTags() 获取标签列表，最大长度50组
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTags(array $Tags) 设置标签列表，最大长度50组
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class FleetAttributes extends AbstractModel
 {
@@ -175,6 +179,12 @@ class FleetAttributes extends AbstractModel
     public $BillingStatus;
 
     /**
+     * @var array 标签列表，最大长度50组
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Tags;
+
+    /**
      * @param string $AssetId 生成包 Id
      * @param string $CreationTime 创建服务器舰队时间
      * @param string $Description 描述
@@ -203,6 +213,8 @@ class FleetAttributes extends AbstractModel
      * @param integer $GameServerSessionProtectionTimeLimit 时限保护超时时间，默认60分钟，最小值5，最大值1440
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BillingStatus 计费状态：未开通、已开通、异常、欠费隔离、销毁、解冻
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Tags 标签列表，最大长度50组
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -281,6 +293,15 @@ class FleetAttributes extends AbstractModel
 
         if (array_key_exists("BillingStatus",$param) and $param["BillingStatus"] !== null) {
             $this->BillingStatus = $param["BillingStatus"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

@@ -48,6 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSelectedScalingType(string $SelectedScalingType) 设置是否选择扩缩容：SCALING_SELECTED 或者 SCALING_UNSELECTED；默认是 SCALING_UNSELECTED
  * @method string getSelectedCcnType() 获取是否选择云联网：CCN_SELECTED 或者 CCN_UNSELECTED；默认是 CCN_UNSELECTED
  * @method void setSelectedCcnType(string $SelectedCcnType) 设置是否选择云联网：CCN_SELECTED 或者 CCN_UNSELECTED；默认是 CCN_UNSELECTED
+ * @method array getTags() 获取标签列表，最大长度50组
+ * @method void setTags(array $Tags) 设置标签列表，最大长度50组
  */
 class CopyFleetRequest extends AbstractModel
 {
@@ -122,6 +124,11 @@ class CopyFleetRequest extends AbstractModel
     public $SelectedCcnType;
 
     /**
+     * @var array 标签列表，最大长度50组
+     */
+    public $Tags;
+
+    /**
      * @param string $FleetId 服务器舰队 Id
      * @param integer $CopyNumber 复制数量，最小值1，最大值为剩余配额，可以根据[获取用户配额](https://cloud.tencent.com/document/product/1165/48732)接口获取。
      * @param string $AssetId 生成包 Id
@@ -136,6 +143,7 @@ class CopyFleetRequest extends AbstractModel
      * @param integer $GameServerSessionProtectionTimeLimit 时限保护超时时间，默认60分钟，最小值5，最大值1440；当NewGameSessionProtectionPolicy为TimeLimitProtection时参数有效
      * @param string $SelectedScalingType 是否选择扩缩容：SCALING_SELECTED 或者 SCALING_UNSELECTED；默认是 SCALING_UNSELECTED
      * @param string $SelectedCcnType 是否选择云联网：CCN_SELECTED 或者 CCN_UNSELECTED；默认是 CCN_UNSELECTED
+     * @param array $Tags 标签列表，最大长度50组
      */
     function __construct()
     {
@@ -211,6 +219,15 @@ class CopyFleetRequest extends AbstractModel
 
         if (array_key_exists("SelectedCcnType",$param) and $param["SelectedCcnType"] !== null) {
             $this->SelectedCcnType = $param["SelectedCcnType"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

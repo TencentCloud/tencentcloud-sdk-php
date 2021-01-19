@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrientation(string $Orientation) 设置构图方式，可选以下值：horizontal、vertical、square，分别代表以下含义：横图、竖图、方图
  * @method string getImageSenseType() 获取图片类型，可选以下值：照片、插画
  * @method void setImageSenseType(string $ImageSenseType) 设置图片类型，可选以下值：照片、插画
+ * @method array getLayeredGalleryIds() 获取分层图库id数组，可选以下数值：1(基础)，2(精选)，3(高级)
+ * @method void setLayeredGalleryIds(array $LayeredGalleryIds) 设置分层图库id数组，可选以下数值：1(基础)，2(精选)，3(高级)
  */
 class DescribeImagesRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class DescribeImagesRequest extends AbstractModel
     public $ImageSenseType;
 
     /**
+     * @var array 分层图库id数组，可选以下数值：1(基础)，2(精选)，3(高级)
+     */
+    public $LayeredGalleryIds;
+
+    /**
      * @param integer $Offset 页偏移量
      * @param integer $Limit 页大小
      * @param string $Keyword 搜索关键字
      * @param string $Orientation 构图方式，可选以下值：horizontal、vertical、square，分别代表以下含义：横图、竖图、方图
      * @param string $ImageSenseType 图片类型，可选以下值：照片、插画
+     * @param array $LayeredGalleryIds 分层图库id数组，可选以下数值：1(基础)，2(精选)，3(高级)
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class DescribeImagesRequest extends AbstractModel
 
         if (array_key_exists("ImageSenseType",$param) and $param["ImageSenseType"] !== null) {
             $this->ImageSenseType = $param["ImageSenseType"];
+        }
+
+        if (array_key_exists("LayeredGalleryIds",$param) and $param["LayeredGalleryIds"] !== null) {
+            $this->LayeredGalleryIds = $param["LayeredGalleryIds"];
         }
     }
 }

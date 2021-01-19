@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreationTime(string $CreationTime) 设置创建时间
  * @method string getLastUpdatedTime() 获取上次修改此数据对象的时间
  * @method void setLastUpdatedTime(string $LastUpdatedTime) 设置上次修改此数据对象的时间
+ * @method array getTags() 获取标签列表，最大长度50组
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTags(array $Tags) 设置标签列表，最大长度50组
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Alias extends AbstractModel
 {
@@ -76,6 +80,12 @@ class Alias extends AbstractModel
     public $LastUpdatedTime;
 
     /**
+     * @var array 标签列表，最大长度50组
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Tags;
+
+    /**
      * @param string $AliasId 别名的唯一标识符
      * @param string $AliasArn 别名的全局唯一资源标识符
      * @param string $Name 名字，长度不小于1字符不超过1024字符
@@ -84,6 +94,8 @@ class Alias extends AbstractModel
      * @param RoutingStrategy $RoutingStrategy 别名的路由配置
      * @param string $CreationTime 创建时间
      * @param string $LastUpdatedTime 上次修改此数据对象的时间
+     * @param array $Tags 标签列表，最大长度50组
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -125,6 +137,15 @@ class Alias extends AbstractModel
 
         if (array_key_exists("LastUpdatedTime",$param) and $param["LastUpdatedTime"] !== null) {
             $this->LastUpdatedTime = $param["LastUpdatedTime"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

@@ -27,7 +27,7 @@ use TencentCloud\Cme\V20191029\Models as Models;
  * @method Models\CreateClassResponse CreateClass(Models\CreateClassRequest $req) 新增分类，用于管理素材。
 <li>分类层数不能超过10；</li>
 <li>子分类数不能超过10。</li>
- * @method Models\CreateLinkResponse CreateLink(Models\CreateLinkRequest $req)  创建素材链接或分类路径链接，将源资源信息链接到目标。
+ * @method Models\CreateLinkResponse CreateLink(Models\CreateLinkRequest $req)  创建媒体链接或分类路径链接，将源资源信息链接到目标。
  * @method Models\CreateProjectResponse CreateProject(Models\CreateProjectRequest $req) 创建云剪的编辑项目，支持创建视频剪辑、直播剪辑、导播台项目以及视频拆条项目。
 
  * @method Models\CreateTeamResponse CreateTeam(Models\CreateTeamRequest $req) 创建一个团队。
@@ -58,14 +58,14 @@ use TencentCloud\Cme\V20191029\Models as Models;
  * @method Models\DescribeTasksResponse DescribeTasks(Models\DescribeTasksRequest $req) 获取任务列表，支持条件筛选，返回对应的任务基础信息列表。
  * @method Models\DescribeTeamMembersResponse DescribeTeamMembers(Models\DescribeTeamMembersRequest $req) 获取指定成员 ID 的信息，同时支持拉取所有团队成员信息。
  * @method Models\DescribeTeamsResponse DescribeTeams(Models\DescribeTeamsRequest $req) 获取指定团队的信息，拉取团队信息列表。
- * @method Models\ExportVideoByEditorTrackDataResponse ExportVideoByEditorTrackData(Models\ExportVideoByEditorTrackDataRequest $req) 使用在线编辑轨道数据直接导出视频。
+ * @method Models\ExportVideoByEditorTrackDataResponse ExportVideoByEditorTrackData(Models\ExportVideoByEditorTrackDataRequest $req) 使用视频合成协议导出视频，支持导出到CME云媒资和VOD云媒资。
  * @method Models\ExportVideoByVideoSegmentationDataResponse ExportVideoByVideoSegmentationData(Models\ExportVideoByVideoSegmentationDataRequest $req) 使用视频智能拆条数据导出视频，将指定的视频拆条片段导出为一个视频。
  * @method Models\ExportVideoEditProjectResponse ExportVideoEditProject(Models\ExportVideoEditProjectRequest $req) 导出视频编辑项目，支持指定输出的模板。
  * @method Models\FlattenListMediaResponse FlattenListMedia(Models\FlattenListMediaRequest $req) 平铺分类路径下及其子分类下的所有素材。
  * @method Models\GenerateVideoSegmentationSchemeByAiResponse GenerateVideoSegmentationSchemeByAi(Models\GenerateVideoSegmentationSchemeByAiRequest $req) 发起视频智能拆条任务，支持智能生成和平精英集锦、王者荣耀集锦、足球集锦、篮球集锦 、人物集锦、新闻拆条等任务。
  * @method Models\GrantResourceAuthorizationResponse GrantResourceAuthorization(Models\GrantResourceAuthorizationRequest $req) 资源所属实体对目标实体授予目标资源的相应权限。
  * @method Models\ImportMaterialResponse ImportMaterial(Models\ImportMaterialRequest $req) 将云点播媒资文件导入到云剪媒体资源库。
- * @method Models\ImportMediaToProjectResponse ImportMediaToProject(Models\ImportMediaToProjectRequest $req) 将云点播中的媒资或者用户自有媒资文件添加到媒体库中，供后续视频编辑使用。
+ * @method Models\ImportMediaToProjectResponse ImportMediaToProject(Models\ImportMediaToProjectRequest $req) 将云点播中的媒资或者用户自有媒资文件添加到媒体库中，跟项目关联，供后续视频编辑使用。目前仅普通编辑项目和智能视频拆条项目有效。
  * @method Models\ListMediaResponse ListMedia(Models\ListMediaRequest $req)  浏览当前分类路径下的资源，包括素材和子分类。
  * @method Models\ModifyMaterialResponse ModifyMaterial(Models\ModifyMaterialRequest $req) 修改素材信息，支持修改素材名称、分类路径、标签等信息。
  * @method Models\ModifyProjectResponse ModifyProject(Models\ModifyProjectRequest $req) 修改云剪编辑项目的信息。

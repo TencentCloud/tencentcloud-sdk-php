@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateLink返回参数结构体
  *
- * @method string getMaterialId() 获取新建链接的素材 Id。
- * @method void setMaterialId(string $MaterialId) 设置新建链接的素材 Id。
+ * @method string getMaterialId() 获取新建链接的媒体 Id。
+ * @method void setMaterialId(string $MaterialId) 设置新建链接的媒体 Id。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateLinkResponse extends AbstractModel
 {
     /**
-     * @var string 新建链接的素材 Id。
+     * @var string 新建链接的媒体 Id。
      */
     public $MaterialId;
 
@@ -38,7 +38,7 @@ class CreateLinkResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $MaterialId 新建链接的素材 Id。
+     * @param string $MaterialId 新建链接的媒体 Id。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDescription(string $Description) 设置视频发布描述信息。
  * @method array getTags() 获取视频标签。
  * @method void setTags(array $Tags) 设置视频标签。
- * @method integer getCategory() 获取视频分类，详见企鹅号官网视频分类。
- * @method void setCategory(integer $Category) 设置视频分类，详见企鹅号官网视频分类。
+ * @method integer getCategory() 获取视频分类，详见[企鹅号官网](https://open.om.qq.com/resources/resourcesCenter)视频分类。
+ * @method void setCategory(integer $Category) 设置视频分类，详见[企鹅号官网](https://open.om.qq.com/resources/resourcesCenter)视频分类。
  */
 class PenguinMediaPlatformPublishInfo extends AbstractModel
 {
@@ -47,7 +47,7 @@ class PenguinMediaPlatformPublishInfo extends AbstractModel
     public $Tags;
 
     /**
-     * @var integer 视频分类，详见企鹅号官网视频分类。
+     * @var integer 视频分类，详见[企鹅号官网](https://open.om.qq.com/resources/resourcesCenter)视频分类。
      */
     public $Category;
 
@@ -55,7 +55,7 @@ class PenguinMediaPlatformPublishInfo extends AbstractModel
      * @param string $Title 视频发布标题。
      * @param string $Description 视频发布描述信息。
      * @param array $Tags 视频标签。
-     * @param integer $Category 视频分类，详见企鹅号官网视频分类。
+     * @param integer $Category 视频分类，详见[企鹅号官网](https://open.om.qq.com/resources/resourcesCenter)视频分类。
      */
     function __construct()
     {

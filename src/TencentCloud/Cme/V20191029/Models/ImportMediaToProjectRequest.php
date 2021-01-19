@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
 <li>VOD：云点播文件；</li>
 <li>EXTERNAL：媒资绑定。</li>
 注意：如果不填默认为云点播文件。
- * @method string getVodFileId() 获取云点播媒资文件Id，当 SourceType 取值 VOD 或者缺省的时候必填。
- * @method void setVodFileId(string $VodFileId) 设置云点播媒资文件Id，当 SourceType 取值 VOD 或者缺省的时候必填。
+ * @method string getVodFileId() 获取云点播媒资文件 Id，当 SourceType 取值 VOD 或者缺省的时候必填。
+ * @method void setVodFileId(string $VodFileId) 设置云点播媒资文件 Id，当 SourceType 取值 VOD 或者缺省的时候必填。
  * @method ExternalMediaInfo getExternalMediaInfo() 获取原始媒资文件信息，当 SourceType 取值 EXTERNAL 的时候必填。
  * @method void setExternalMediaInfo(ExternalMediaInfo $ExternalMediaInfo) 设置原始媒资文件信息，当 SourceType 取值 EXTERNAL 的时候必填。
  * @method string getName() 获取媒体名称，不能超过30个字符。
@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPreProcessDefinition(integer $PreProcessDefinition) 设置媒体预处理任务模板 ID，取值：
 <li>10：进行编辑预处理。</li>
 注意：如果填0则不进行处理。
+ * @method string getOperator() 获取操作者。填写用户的 Id，用于标识调用者及校验项目和媒体文件访问权限。
+ * @method void setOperator(string $Operator) 设置操作者。填写用户的 Id，用于标识调用者及校验项目和媒体文件访问权限。
  */
 class ImportMediaToProjectRequest extends AbstractModel
 {
@@ -66,7 +68,7 @@ class ImportMediaToProjectRequest extends AbstractModel
     public $SourceType;
 
     /**
-     * @var string 云点播媒资文件Id，当 SourceType 取值 VOD 或者缺省的时候必填。
+     * @var string 云点播媒资文件 Id，当 SourceType 取值 VOD 或者缺省的时候必填。
      */
     public $VodFileId;
 
@@ -88,18 +90,24 @@ class ImportMediaToProjectRequest extends AbstractModel
     public $PreProcessDefinition;
 
     /**
+     * @var string 操作者。填写用户的 Id，用于标识调用者及校验项目和媒体文件访问权限。
+     */
+    public $Operator;
+
+    /**
      * @param string $Platform 平台名称，指定访问的平台。
      * @param string $ProjectId 项目 Id。
      * @param string $SourceType 导入媒资类型，取值：
 <li>VOD：云点播文件；</li>
 <li>EXTERNAL：媒资绑定。</li>
 注意：如果不填默认为云点播文件。
-     * @param string $VodFileId 云点播媒资文件Id，当 SourceType 取值 VOD 或者缺省的时候必填。
+     * @param string $VodFileId 云点播媒资文件 Id，当 SourceType 取值 VOD 或者缺省的时候必填。
      * @param ExternalMediaInfo $ExternalMediaInfo 原始媒资文件信息，当 SourceType 取值 EXTERNAL 的时候必填。
      * @param string $Name 媒体名称，不能超过30个字符。
      * @param integer $PreProcessDefinition 媒体预处理任务模板 ID，取值：
 <li>10：进行编辑预处理。</li>
 注意：如果填0则不进行处理。
+     * @param string $Operator 操作者。填写用户的 Id，用于标识调用者及校验项目和媒体文件访问权限。
      */
     function __construct()
     {
@@ -141,6 +149,10 @@ class ImportMediaToProjectRequest extends AbstractModel
 
         if (array_key_exists("PreProcessDefinition",$param) and $param["PreProcessDefinition"] !== null) {
             $this->PreProcessDefinition = $param["PreProcessDefinition"];
+        }
+
+        if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
+            $this->Operator = $param["Operator"];
         }
     }
 }

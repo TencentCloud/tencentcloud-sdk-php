@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRoutingStrategy(RoutingStrategy $RoutingStrategy) 设置别名的路由配置
  * @method string getDescription() 获取别名的可读说明，长度不小于1字符不超过1024字符
  * @method void setDescription(string $Description) 设置别名的可读说明，长度不小于1字符不超过1024字符
+ * @method array getTags() 获取标签列表，最大长度50组
+ * @method void setTags(array $Tags) 设置标签列表，最大长度50组
  */
 class CreateAliasRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class CreateAliasRequest extends AbstractModel
     public $Description;
 
     /**
+     * @var array 标签列表，最大长度50组
+     */
+    public $Tags;
+
+    /**
      * @param string $Name 名字，长度不小于1字符不超过1024字符
      * @param RoutingStrategy $RoutingStrategy 别名的路由配置
      * @param string $Description 别名的可读说明，长度不小于1字符不超过1024字符
+     * @param array $Tags 标签列表，最大长度50组
      */
     function __construct()
     {
@@ -73,6 +81,15 @@ class CreateAliasRequest extends AbstractModel
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

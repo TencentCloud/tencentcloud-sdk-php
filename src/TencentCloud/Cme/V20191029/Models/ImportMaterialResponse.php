@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ImportMaterial返回参数结构体
  *
- * @method string getMaterialId() 获取素材 Id。
- * @method void setMaterialId(string $MaterialId) 设置素材 Id。
- * @method string getPreProcessTaskId() 获取素材预处理任务 ID，如果未指定发起预处理任务则为空。
- * @method void setPreProcessTaskId(string $PreProcessTaskId) 设置素材预处理任务 ID，如果未指定发起预处理任务则为空。
+ * @method string getMaterialId() 获取媒体 Id。
+ * @method void setMaterialId(string $MaterialId) 设置媒体 Id。
+ * @method string getPreProcessTaskId() 获取媒体文预处理任务 ID，如果未指定发起预处理任务则为空。
+ * @method void setPreProcessTaskId(string $PreProcessTaskId) 设置媒体文预处理任务 ID，如果未指定发起预处理任务则为空。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class ImportMaterialResponse extends AbstractModel
 {
     /**
-     * @var string 素材 Id。
+     * @var string 媒体 Id。
      */
     public $MaterialId;
 
     /**
-     * @var string 素材预处理任务 ID，如果未指定发起预处理任务则为空。
+     * @var string 媒体文预处理任务 ID，如果未指定发起预处理任务则为空。
      */
     public $PreProcessTaskId;
 
@@ -45,8 +45,8 @@ class ImportMaterialResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $MaterialId 素材 Id。
-     * @param string $PreProcessTaskId 素材预处理任务 ID，如果未指定发起预处理任务则为空。
+     * @param string $MaterialId 媒体 Id。
+     * @param string $PreProcessTaskId 媒体文预处理任务 ID，如果未指定发起预处理任务则为空。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

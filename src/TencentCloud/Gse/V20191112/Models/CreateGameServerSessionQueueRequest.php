@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPlayerLatencyPolicies(array $PlayerLatencyPolicies) 设置延迟策略集合
  * @method integer getTimeoutInSeconds() 获取超时时间（单位秒，默认值为600秒）
  * @method void setTimeoutInSeconds(integer $TimeoutInSeconds) 设置超时时间（单位秒，默认值为600秒）
+ * @method array getTags() 获取标签列表，最大长度50组
+ * @method void setTags(array $Tags) 设置标签列表，最大长度50组
  */
 class CreateGameServerSessionQueueRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class CreateGameServerSessionQueueRequest extends AbstractModel
     public $TimeoutInSeconds;
 
     /**
+     * @var array 标签列表，最大长度50组
+     */
+    public $Tags;
+
+    /**
      * @param string $Name 游戏服务器会话队列名称，长度1~128
      * @param array $Destinations 目的服务器舰队（可为别名）列表
      * @param array $PlayerLatencyPolicies 延迟策略集合
      * @param integer $TimeoutInSeconds 超时时间（单位秒，默认值为600秒）
+     * @param array $Tags 标签列表，最大长度50组
      */
     function __construct()
     {
@@ -94,6 +102,15 @@ class CreateGameServerSessionQueueRequest extends AbstractModel
 
         if (array_key_exists("TimeoutInSeconds",$param) and $param["TimeoutInSeconds"] !== null) {
             $this->TimeoutInSeconds = $param["TimeoutInSeconds"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

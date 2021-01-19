@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOperateSystem(string $OperateSystem) 设置生成包可运行的操作系统，若传入参数为CentOS7.16则不需要传入ImageId字段，否则，需要传入Imageid字段（该方式是为了兼容之前的版本，后续建议使用ImageId来替代该字段）
  * @method string getImageId() 获取生成包支持的操作系统镜像id，若传入OperateSystem字段的值是CentOS7.16，则不需要传入该值；如果不是，则需要通过[DescribeAssetSystems](https://cloud.tencent.com/document/product/1165/49191)接口获取asset支持的操作系统ImageId进行传入
  * @method void setImageId(string $ImageId) 设置生成包支持的操作系统镜像id，若传入OperateSystem字段的值是CentOS7.16，则不需要传入该值；如果不是，则需要通过[DescribeAssetSystems](https://cloud.tencent.com/document/product/1165/49191)接口获取asset支持的操作系统ImageId进行传入
+ * @method array getTags() 获取标签列表，最大长度50组
+ * @method void setTags(array $Tags) 设置标签列表，最大长度50组
  */
 class CreateAssetRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class CreateAssetRequest extends AbstractModel
     public $ImageId;
 
     /**
+     * @var array 标签列表，最大长度50组
+     */
+    public $Tags;
+
+    /**
      * @param string $BucketKey 生成包的ZIP包名，例如：server.zip
      * @param string $AssetName 生成包名字，最小长度为1，最大长度为64
      * @param string $AssetVersion 生成包版本，最小长度为1，最大长度为64
      * @param string $AssetRegion 生成包所在地域，详见产品支持的 [地域列表](https://cloud.tencent.com/document/api/1165/42053#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8)
      * @param string $OperateSystem 生成包可运行的操作系统，若传入参数为CentOS7.16则不需要传入ImageId字段，否则，需要传入Imageid字段（该方式是为了兼容之前的版本，后续建议使用ImageId来替代该字段）
      * @param string $ImageId 生成包支持的操作系统镜像id，若传入OperateSystem字段的值是CentOS7.16，则不需要传入该值；如果不是，则需要通过[DescribeAssetSystems](https://cloud.tencent.com/document/product/1165/49191)接口获取asset支持的操作系统ImageId进行传入
+     * @param array $Tags 标签列表，最大长度50组
      */
     function __construct()
     {
@@ -108,6 +116,15 @@ class CreateAssetRequest extends AbstractModel
 
         if (array_key_exists("ImageId",$param) and $param["ImageId"] !== null) {
             $this->ImageId = $param["ImageId"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

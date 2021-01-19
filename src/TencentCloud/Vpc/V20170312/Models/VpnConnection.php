@@ -50,6 +50,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIKEOptionsSpecification(IKEOptionsSpecification $IKEOptionsSpecification) 设置IKE选项。
  * @method IPSECOptionsSpecification getIPSECOptionsSpecification() 获取IPSEC选择。
  * @method void setIPSECOptionsSpecification(IPSECOptionsSpecification $IPSECOptionsSpecification) 设置IPSEC选择。
+ * @method boolean getEnableHealthCheck() 获取是否支持健康状态探测
+ * @method void setEnableHealthCheck(boolean $EnableHealthCheck) 设置是否支持健康状态探测
+ * @method string getHealthCheckLocalIp() 获取本端探测ip
+ * @method void setHealthCheckLocalIp(string $HealthCheckLocalIp) 设置本端探测ip
+ * @method string getHealthCheckRemoteIp() 获取对端探测ip
+ * @method void setHealthCheckRemoteIp(string $HealthCheckRemoteIp) 设置对端探测ip
+ * @method string getHealthCheckStatus() 获取通道健康检查状态，AVAILABLE：正常，UNAVAILABLE：不正常。 未配置健康检查不返回该对象
+ * @method void setHealthCheckStatus(string $HealthCheckStatus) 设置通道健康检查状态，AVAILABLE：正常，UNAVAILABLE：不正常。 未配置健康检查不返回该对象
  */
 class VpnConnection extends AbstractModel
 {
@@ -129,6 +137,26 @@ class VpnConnection extends AbstractModel
     public $IPSECOptionsSpecification;
 
     /**
+     * @var boolean 是否支持健康状态探测
+     */
+    public $EnableHealthCheck;
+
+    /**
+     * @var string 本端探测ip
+     */
+    public $HealthCheckLocalIp;
+
+    /**
+     * @var string 对端探测ip
+     */
+    public $HealthCheckRemoteIp;
+
+    /**
+     * @var string 通道健康检查状态，AVAILABLE：正常，UNAVAILABLE：不正常。 未配置健康检查不返回该对象
+     */
+    public $HealthCheckStatus;
+
+    /**
      * @param string $VpnConnectionId 通道实例ID。
      * @param string $VpnConnectionName 通道名称。
      * @param string $VpcId VPC实例ID。
@@ -144,6 +172,10 @@ class VpnConnection extends AbstractModel
      * @param array $SecurityPolicyDatabaseSet SPD。
      * @param IKEOptionsSpecification $IKEOptionsSpecification IKE选项。
      * @param IPSECOptionsSpecification $IPSECOptionsSpecification IPSEC选择。
+     * @param boolean $EnableHealthCheck 是否支持健康状态探测
+     * @param string $HealthCheckLocalIp 本端探测ip
+     * @param string $HealthCheckRemoteIp 对端探测ip
+     * @param string $HealthCheckStatus 通道健康检查状态，AVAILABLE：正常，UNAVAILABLE：不正常。 未配置健康检查不返回该对象
      */
     function __construct()
     {
@@ -223,6 +255,22 @@ class VpnConnection extends AbstractModel
         if (array_key_exists("IPSECOptionsSpecification",$param) and $param["IPSECOptionsSpecification"] !== null) {
             $this->IPSECOptionsSpecification = new IPSECOptionsSpecification();
             $this->IPSECOptionsSpecification->deserialize($param["IPSECOptionsSpecification"]);
+        }
+
+        if (array_key_exists("EnableHealthCheck",$param) and $param["EnableHealthCheck"] !== null) {
+            $this->EnableHealthCheck = $param["EnableHealthCheck"];
+        }
+
+        if (array_key_exists("HealthCheckLocalIp",$param) and $param["HealthCheckLocalIp"] !== null) {
+            $this->HealthCheckLocalIp = $param["HealthCheckLocalIp"];
+        }
+
+        if (array_key_exists("HealthCheckRemoteIp",$param) and $param["HealthCheckRemoteIp"] !== null) {
+            $this->HealthCheckRemoteIp = $param["HealthCheckRemoteIp"];
+        }
+
+        if (array_key_exists("HealthCheckStatus",$param) and $param["HealthCheckStatus"] !== null) {
+            $this->HealthCheckStatus = $param["HealthCheckStatus"];
         }
     }
 }

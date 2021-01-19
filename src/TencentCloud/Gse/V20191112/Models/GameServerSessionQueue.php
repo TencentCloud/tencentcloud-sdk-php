@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTimeoutInSeconds() 获取超时时间
  * @method void setTimeoutInSeconds(integer $TimeoutInSeconds) 设置超时时间
+ * @method array getTags() 获取标签列表，最大长度50组
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTags(array $Tags) 设置标签列表，最大长度50组
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class GameServerSessionQueue extends AbstractModel
 {
@@ -65,6 +69,12 @@ class GameServerSessionQueue extends AbstractModel
     public $TimeoutInSeconds;
 
     /**
+     * @var array 标签列表，最大长度50组
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Tags;
+
+    /**
      * @param string $Name 服务部署组名字
      * @param string $GameServerSessionQueueArn 服务部署组资源
      * @param array $Destinations 目的fleet（可为别名）列表
@@ -72,6 +82,8 @@ class GameServerSessionQueue extends AbstractModel
      * @param array $PlayerLatencyPolicies 延迟策略集合
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TimeoutInSeconds 超时时间
+     * @param array $Tags 标签列表，最大长度50组
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -114,6 +126,15 @@ class GameServerSessionQueue extends AbstractModel
 
         if (array_key_exists("TimeoutInSeconds",$param) and $param["TimeoutInSeconds"] !== null) {
             $this->TimeoutInSeconds = $param["TimeoutInSeconds"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

@@ -46,6 +46,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResourceType(string $ResourceType) 设置生成包资源类型，ASSET 或者 IMAGE；ASSET 代表是原有生成包类型，IMAGE 为扩充使用镜像类型
  * @method string getSharingStatus() 获取镜像资源共享类型，当 ResourceType 为 IMAGE 时该字段有意义，SHARED 表示共享、SHARED_IMAGE 表示未共享；ResourceType 为 ASSET 时这里返回 UNKNOWN_SHARED 用于占位
  * @method void setSharingStatus(string $SharingStatus) 设置镜像资源共享类型，当 ResourceType 为 IMAGE 时该字段有意义，SHARED 表示共享、SHARED_IMAGE 表示未共享；ResourceType 为 ASSET 时这里返回 UNKNOWN_SHARED 用于占位
+ * @method array getTags() 获取标签列表，最大长度50组
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTags(array $Tags) 设置标签列表，最大长度50组
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Asset extends AbstractModel
 {
@@ -115,6 +119,12 @@ class Asset extends AbstractModel
     public $SharingStatus;
 
     /**
+     * @var array 标签列表，最大长度50组
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Tags;
+
+    /**
      * @param string $AssetId 生成包ID
      * @param string $AssetName 生成包名字，最小长度为1，最大长度为64
      * @param string $AssetVersion 生成包版本，最小长度为1，最大长度为64
@@ -128,6 +138,8 @@ class Asset extends AbstractModel
      * @param string $OsType 生成包支持的操作系统类型
      * @param string $ResourceType 生成包资源类型，ASSET 或者 IMAGE；ASSET 代表是原有生成包类型，IMAGE 为扩充使用镜像类型
      * @param string $SharingStatus 镜像资源共享类型，当 ResourceType 为 IMAGE 时该字段有意义，SHARED 表示共享、SHARED_IMAGE 表示未共享；ResourceType 为 ASSET 时这里返回 UNKNOWN_SHARED 用于占位
+     * @param array $Tags 标签列表，最大长度50组
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -192,6 +204,15 @@ class Asset extends AbstractModel
 
         if (array_key_exists("SharingStatus",$param) and $param["SharingStatus"] !== null) {
             $this->SharingStatus = $param["SharingStatus"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

@@ -24,19 +24,19 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPlatform(string $Platform) 设置平台名称，指定访问的平台。
  * @method string getType() 获取链接类型，取值有:
 <li>CLASS: 分类链接；</li>
-<li> MATERIAL：素材链接。</li>
+<li> MATERIAL：媒体文件链接。</li>
  * @method void setType(string $Type) 设置链接类型，取值有:
 <li>CLASS: 分类链接；</li>
-<li> MATERIAL：素材链接。</li>
+<li> MATERIAL：媒体文件链接。</li>
  * @method string getName() 获取链接名称，不能超过30个字符。
  * @method void setName(string $Name) 设置链接名称，不能超过30个字符。
- * @method Entity getOwner() 获取链接归属实体。
- * @method void setOwner(Entity $Owner) 设置链接归属实体。
+ * @method Entity getOwner() 获取链接归属者。
+ * @method void setOwner(Entity $Owner) 设置链接归属者。
  * @method string getDestinationId() 获取目标资源Id。取值：
-<li>当 Type 为 MATERIAL 时填素材 ID；</li>
+<li>当 Type 为 MATERIAL 时填媒体 ID；</li>
 <li>当 Type 为 CLASS 时填写分类路径。</li>
  * @method void setDestinationId(string $DestinationId) 设置目标资源Id。取值：
-<li>当 Type 为 MATERIAL 时填素材 ID；</li>
+<li>当 Type 为 MATERIAL 时填媒体 ID；</li>
 <li>当 Type 为 CLASS 时填写分类路径。</li>
  * @method Entity getDestinationOwner() 获取目标资源归属者。
  * @method void setDestinationOwner(Entity $DestinationOwner) 设置目标资源归属者。
@@ -55,7 +55,7 @@ class CreateLinkRequest extends AbstractModel
     /**
      * @var string 链接类型，取值有:
 <li>CLASS: 分类链接；</li>
-<li> MATERIAL：素材链接。</li>
+<li> MATERIAL：媒体文件链接。</li>
      */
     public $Type;
 
@@ -65,13 +65,13 @@ class CreateLinkRequest extends AbstractModel
     public $Name;
 
     /**
-     * @var Entity 链接归属实体。
+     * @var Entity 链接归属者。
      */
     public $Owner;
 
     /**
      * @var string 目标资源Id。取值：
-<li>当 Type 为 MATERIAL 时填素材 ID；</li>
+<li>当 Type 为 MATERIAL 时填媒体 ID；</li>
 <li>当 Type 为 CLASS 时填写分类路径。</li>
      */
     public $DestinationId;
@@ -95,11 +95,11 @@ class CreateLinkRequest extends AbstractModel
      * @param string $Platform 平台名称，指定访问的平台。
      * @param string $Type 链接类型，取值有:
 <li>CLASS: 分类链接；</li>
-<li> MATERIAL：素材链接。</li>
+<li> MATERIAL：媒体文件链接。</li>
      * @param string $Name 链接名称，不能超过30个字符。
-     * @param Entity $Owner 链接归属实体。
+     * @param Entity $Owner 链接归属者。
      * @param string $DestinationId 目标资源Id。取值：
-<li>当 Type 为 MATERIAL 时填素材 ID；</li>
+<li>当 Type 为 MATERIAL 时填媒体 ID；</li>
 <li>当 Type 为 CLASS 时填写分类路径。</li>
      * @param Entity $DestinationOwner 目标资源归属者。
      * @param string $ClassPath 链接的分类路径，如填"/a/b"则代表链接属于该分类路径，不填则默认为根路径。

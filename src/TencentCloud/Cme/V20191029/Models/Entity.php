@@ -18,7 +18,7 @@ namespace TencentCloud\Cme\V20191029\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 用于描述资源的归属实体。
+ * 用于描述资源的归属，归属者为个人或者团队。
  *
  * @method string getType() 获取类型，取值有：
 <li>PERSON：个人。</li>

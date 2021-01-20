@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateVpnConnection请求参数结构体
  *
- * @method string getVpcId() 获取VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
- * @method void setVpcId(string $VpcId) 设置VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
+ * @method string getVpcId() 获取VPC实例ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口返回值中的VpcId获取。
+ * @method void setVpcId(string $VpcId) 设置VPC实例ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口返回值中的VpcId获取。
  * @method string getVpnGatewayId() 获取VPN网关实例ID。
  * @method void setVpnGatewayId(string $VpnGatewayId) 设置VPN网关实例ID。
  * @method string getCustomerGatewayId() 获取对端网关ID，例如：cgw-2wqq41m9，可通过DescribeCustomerGateways接口查询对端网关。
@@ -38,11 +38,17 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIPSECOptionsSpecification(IPSECOptionsSpecification $IPSECOptionsSpecification) 设置IPSec配置，腾讯云提供IPSec安全会话设置
  * @method array getTags() 获取指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
  * @method void setTags(array $Tags) 设置指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
+ * @method boolean getEnableHealthCheck() 获取是否支持隧道内健康检查
+ * @method void setEnableHealthCheck(boolean $EnableHealthCheck) 设置是否支持隧道内健康检查
+ * @method string getHealthCheckLocalIp() 获取健康检查本端地址
+ * @method void setHealthCheckLocalIp(string $HealthCheckLocalIp) 设置健康检查本端地址
+ * @method string getHealthCheckRemoteIp() 获取健康检查对端地址
+ * @method void setHealthCheckRemoteIp(string $HealthCheckRemoteIp) 设置健康检查对端地址
  */
 class CreateVpnConnectionRequest extends AbstractModel
 {
     /**
-     * @var string VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
+     * @var string VPC实例ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口返回值中的VpcId获取。
      */
     public $VpcId;
 
@@ -87,7 +93,22 @@ class CreateVpnConnectionRequest extends AbstractModel
     public $Tags;
 
     /**
-     * @param string $VpcId VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
+     * @var boolean 是否支持隧道内健康检查
+     */
+    public $EnableHealthCheck;
+
+    /**
+     * @var string 健康检查本端地址
+     */
+    public $HealthCheckLocalIp;
+
+    /**
+     * @var string 健康检查对端地址
+     */
+    public $HealthCheckRemoteIp;
+
+    /**
+     * @param string $VpcId VPC实例ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口返回值中的VpcId获取。
      * @param string $VpnGatewayId VPN网关实例ID。
      * @param string $CustomerGatewayId 对端网关ID，例如：cgw-2wqq41m9，可通过DescribeCustomerGateways接口查询对端网关。
      * @param string $VpnConnectionName 通道名称，可任意命名，但不得超过60个字符。
@@ -96,6 +117,9 @@ class CreateVpnConnectionRequest extends AbstractModel
      * @param IKEOptionsSpecification $IKEOptionsSpecification IKE配置（Internet Key Exchange，因特网密钥交换），IKE具有一套自我保护机制，用户配置网络安全协议
      * @param IPSECOptionsSpecification $IPSECOptionsSpecification IPSec配置，腾讯云提供IPSec安全会话设置
      * @param array $Tags 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
+     * @param boolean $EnableHealthCheck 是否支持隧道内健康检查
+     * @param string $HealthCheckLocalIp 健康检查本端地址
+     * @param string $HealthCheckRemoteIp 健康检查对端地址
      */
     function __construct()
     {
@@ -156,6 +180,18 @@ class CreateVpnConnectionRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("EnableHealthCheck",$param) and $param["EnableHealthCheck"] !== null) {
+            $this->EnableHealthCheck = $param["EnableHealthCheck"];
+        }
+
+        if (array_key_exists("HealthCheckLocalIp",$param) and $param["HealthCheckLocalIp"] !== null) {
+            $this->HealthCheckLocalIp = $param["HealthCheckLocalIp"];
+        }
+
+        if (array_key_exists("HealthCheckRemoteIp",$param) and $param["HealthCheckRemoteIp"] !== null) {
+            $this->HealthCheckRemoteIp = $param["HealthCheckRemoteIp"];
         }
     }
 }

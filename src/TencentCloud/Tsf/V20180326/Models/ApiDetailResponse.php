@@ -18,7 +18,7 @@ namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ApiDetailResponse
+ * ApiDetailResponse描述
  *
  * @method array getRequest() 获取API 请求参数
  * @method void setRequest(array $Request) 设置API 请求参数
@@ -39,6 +39,10 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getStatus() 获取API 状态 0:离线 1:在线，默认0
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(integer $Status) 设置API 状态 0:离线 1:在线，默认0
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDescription() 获取API 描述
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDescription(string $Description) 设置API 描述
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class ApiDetailResponse extends AbstractModel
@@ -78,6 +82,12 @@ class ApiDetailResponse extends AbstractModel
     public $Status;
 
     /**
+     * @var string API 描述
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Description;
+
+    /**
      * @param array $Request API 请求参数
      * @param array $Response API 响应参数
 注意：此字段可能返回 null，表示取不到有效值。
@@ -87,6 +97,8 @@ class ApiDetailResponse extends AbstractModel
      * @param boolean $CanRun API  能否调试
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status API 状态 0:离线 1:在线，默认0
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Description API 描述
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -139,6 +151,10 @@ class ApiDetailResponse extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
+            $this->Description = $param["Description"];
         }
     }
 }

@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getEnvironmentIds() 获取环境（命名空间）数组，每次最多删除20个。
  * @method void setEnvironmentIds(array $EnvironmentIds) 设置环境（命名空间）数组，每次最多删除20个。
+ * @method string getClusterId() 获取Pulsar 集群的ID
+ * @method void setClusterId(string $ClusterId) 设置Pulsar 集群的ID
  */
 class DeleteEnvironmentsRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class DeleteEnvironmentsRequest extends AbstractModel
     public $EnvironmentIds;
 
     /**
+     * @var string Pulsar 集群的ID
+     */
+    public $ClusterId;
+
+    /**
      * @param array $EnvironmentIds 环境（命名空间）数组，每次最多删除20个。
+     * @param string $ClusterId Pulsar 集群的ID
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class DeleteEnvironmentsRequest extends AbstractModel
         }
         if (array_key_exists("EnvironmentIds",$param) and $param["EnvironmentIds"] !== null) {
             $this->EnvironmentIds = $param["EnvironmentIds"];
+        }
+
+        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
+            $this->ClusterId = $param["ClusterId"];
         }
     }
 }

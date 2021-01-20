@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMsgTTL(integer $MsgTTL) 设置未消费消息过期时间，单位：秒，最大1296000。
  * @method string getRemark() 获取备注，字符串最长不超过128。
  * @method void setRemark(string $Remark) 设置备注，字符串最长不超过128。
+ * @method string getClusterId() 获取Pulsar 集群的ID
+ * @method void setClusterId(string $ClusterId) 设置Pulsar 集群的ID
  */
 class ModifyEnvironmentAttributesRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class ModifyEnvironmentAttributesRequest extends AbstractModel
     public $Remark;
 
     /**
+     * @var string Pulsar 集群的ID
+     */
+    public $ClusterId;
+
+    /**
      * @param string $EnvironmentId 环境（命名空间）名称。
      * @param integer $MsgTTL 未消费消息过期时间，单位：秒，最大1296000。
      * @param string $Remark 备注，字符串最长不超过128。
+     * @param string $ClusterId Pulsar 集群的ID
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class ModifyEnvironmentAttributesRequest extends AbstractModel
 
         if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
             $this->Remark = $param["Remark"];
+        }
+
+        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
+            $this->ClusterId = $param["ClusterId"];
         }
     }
 }

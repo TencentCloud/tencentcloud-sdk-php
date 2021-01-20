@@ -140,6 +140,14 @@ Public：公网属性， Private：内网属性。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsolation(integer $Isolation) 设置0：表示未被隔离，1：表示被隔离。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getSecurityGroup() 获取负载均衡绑定的安全组列表。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSecurityGroup(array $SecurityGroup) 设置负载均衡绑定的安全组列表。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getLoadBalancerPassToTarget() 获取负载均衡安全组上移特性是否开启标识。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLoadBalancerPassToTarget(integer $LoadBalancerPassToTarget) 设置负载均衡安全组上移特性是否开启标识。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class LoadBalancerDetail extends AbstractModel
 {
@@ -324,6 +332,18 @@ Public：公网属性， Private：内网属性。
     public $Isolation;
 
     /**
+     * @var array 负载均衡绑定的安全组列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SecurityGroup;
+
+    /**
+     * @var integer 负载均衡安全组上移特性是否开启标识。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LoadBalancerPassToTarget;
+
+    /**
      * @param string $LoadBalancerId 负载均衡实例 ID。
      * @param string $LoadBalancerName 负载均衡实例的名称。
      * @param string $LoadBalancerType 负载均衡实例的网络类型：
@@ -383,6 +403,10 @@ Public：公网属性， Private：内网属性。
      * @param integer $TargetWeight 后端目标转发权重。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Isolation 0：表示未被隔离，1：表示被隔离。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $SecurityGroup 负载均衡绑定的安全组列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $LoadBalancerPassToTarget 负载均衡安全组上移特性是否开启标识。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -524,6 +548,14 @@ Public：公网属性， Private：内网属性。
 
         if (array_key_exists("Isolation",$param) and $param["Isolation"] !== null) {
             $this->Isolation = $param["Isolation"];
+        }
+
+        if (array_key_exists("SecurityGroup",$param) and $param["SecurityGroup"] !== null) {
+            $this->SecurityGroup = $param["SecurityGroup"];
+        }
+
+        if (array_key_exists("LoadBalancerPassToTarget",$param) and $param["LoadBalancerPassToTarget"] !== null) {
+            $this->LoadBalancerPassToTarget = $param["LoadBalancerPassToTarget"];
         }
     }
 }

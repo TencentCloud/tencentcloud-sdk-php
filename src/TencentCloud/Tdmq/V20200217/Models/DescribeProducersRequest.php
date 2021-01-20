@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置返回数量，不填则默认为10，最大值为20。
  * @method string getProducerName() 获取生产者名称，模糊匹配。
  * @method void setProducerName(string $ProducerName) 设置生产者名称，模糊匹配。
+ * @method string getClusterId() 获取Pulsar 集群的ID
+ * @method void setClusterId(string $ClusterId) 设置Pulsar 集群的ID
  */
 class DescribeProducersRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class DescribeProducersRequest extends AbstractModel
     public $ProducerName;
 
     /**
+     * @var string Pulsar 集群的ID
+     */
+    public $ClusterId;
+
+    /**
      * @param string $EnvironmentId 环境（命名空间）名称。
      * @param string $TopicName 主题名。
      * @param integer $Offset 起始下标，不填默认为0。
      * @param integer $Limit 返回数量，不填则默认为10，最大值为20。
      * @param string $ProducerName 生产者名称，模糊匹配。
+     * @param string $ClusterId Pulsar 集群的ID
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class DescribeProducersRequest extends AbstractModel
 
         if (array_key_exists("ProducerName",$param) and $param["ProducerName"] !== null) {
             $this->ProducerName = $param["ProducerName"];
+        }
+
+        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
+            $this->ClusterId = $param["ClusterId"];
         }
     }
 }

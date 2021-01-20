@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
 5 ：事务消息。
  * @method string getRemark() 获取备注，128字符以内。
  * @method void setRemark(string $Remark) 设置备注，128字符以内。
+ * @method string getClusterId() 获取Pulsar 集群的ID
+ * @method void setClusterId(string $ClusterId) 设置Pulsar 集群的ID
  */
 class CreateTopicRequest extends AbstractModel
 {
@@ -74,6 +76,11 @@ class CreateTopicRequest extends AbstractModel
     public $Remark;
 
     /**
+     * @var string Pulsar 集群的ID
+     */
+    public $ClusterId;
+
+    /**
      * @param string $EnvironmentId 环境（命名空间）名称。
      * @param string $TopicName 主题名，不支持中字以及除了短线和下划线外的特殊字符且不超过32个字符。
      * @param integer $Partitions 0：非分区topic，无分区；非0：具体分区topic的分区数，最大不允许超过128。
@@ -84,6 +91,7 @@ class CreateTopicRequest extends AbstractModel
 4 ：死信队列；
 5 ：事务消息。
      * @param string $Remark 备注，128字符以内。
+     * @param string $ClusterId Pulsar 集群的ID
      */
     function __construct()
     {
@@ -116,6 +124,10 @@ class CreateTopicRequest extends AbstractModel
 
         if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
             $this->Remark = $param["Remark"];
+        }
+
+        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
+            $this->ClusterId = $param["ClusterId"];
         }
     }
 }

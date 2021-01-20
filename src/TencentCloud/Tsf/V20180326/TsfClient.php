@@ -41,6 +41,7 @@ use TencentCloud\Tsf\V20180326\Models as Models;
  * @method Models\CreateLaneRuleResponse CreateLaneRule(Models\CreateLaneRuleRequest $req) 创建泳道规则
  * @method Models\CreateMicroserviceResponse CreateMicroservice(Models\CreateMicroserviceRequest $req) 新增微服务
  * @method Models\CreateNamespaceResponse CreateNamespace(Models\CreateNamespaceRequest $req) 创建命名空间
+ * @method Models\CreatePathRewritesResponse CreatePathRewrites(Models\CreatePathRewritesRequest $req) 创建路径重写
  * @method Models\CreatePublicConfigResponse CreatePublicConfig(Models\CreatePublicConfigRequest $req) 创建公共配置项
  * @method Models\CreateRepositoryResponse CreateRepository(Models\CreateRepositoryRequest $req) 创建仓库
  * @method Models\CreateServerlessGroupResponse CreateServerlessGroup(Models\CreateServerlessGroupRequest $req) 创建Serverless部署组
@@ -55,6 +56,7 @@ use TencentCloud\Tsf\V20180326\Models as Models;
  * @method Models\DeleteLaneResponse DeleteLane(Models\DeleteLaneRequest $req) 删除泳道
  * @method Models\DeleteMicroserviceResponse DeleteMicroservice(Models\DeleteMicroserviceRequest $req) 删除微服务
  * @method Models\DeleteNamespaceResponse DeleteNamespace(Models\DeleteNamespaceRequest $req) 删除命名空间
+ * @method Models\DeletePathRewritesResponse DeletePathRewrites(Models\DeletePathRewritesRequest $req) 删除路径重写
  * @method Models\DeletePkgsResponse DeletePkgs(Models\DeletePkgsRequest $req) 从软件仓库批量删除程序包。
 一次最多支持删除1000个包，数量超过1000，返回UpperDeleteLimit错误。
  * @method Models\DeletePublicConfigResponse DeletePublicConfig(Models\DeletePublicConfigRequest $req) 删除公共配置项
@@ -101,6 +103,8 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
  * @method Models\DescribeMicroserviceResponse DescribeMicroservice(Models\DescribeMicroserviceRequest $req) 查询微服务详情
  * @method Models\DescribeMicroservicesResponse DescribeMicroservices(Models\DescribeMicroservicesRequest $req) 获取微服务列表
  * @method Models\DescribeMsApiListResponse DescribeMsApiList(Models\DescribeMsApiListRequest $req) 查询服务API列表
+ * @method Models\DescribePathRewriteResponse DescribePathRewrite(Models\DescribePathRewriteRequest $req) 查询路径重写
+ * @method Models\DescribePathRewritesResponse DescribePathRewrites(Models\DescribePathRewritesRequest $req) 查询路径重写列表
  * @method Models\DescribePkgsResponse DescribePkgs(Models\DescribePkgsRequest $req) 无
  * @method Models\DescribePodInstancesResponse DescribePodInstances(Models\DescribePodInstancesRequest $req) 获取部署组实例列表
  * @method Models\DescribePublicConfigResponse DescribePublicConfig(Models\DescribePublicConfigRequest $req) 查询公共配置（单条）
@@ -133,6 +137,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
  * @method Models\ModifyLaneResponse ModifyLane(Models\ModifyLaneRequest $req) 更新泳道信息
  * @method Models\ModifyLaneRuleResponse ModifyLaneRule(Models\ModifyLaneRuleRequest $req) 更新泳道规则
  * @method Models\ModifyMicroserviceResponse ModifyMicroservice(Models\ModifyMicroserviceRequest $req) 修改微服务详情
+ * @method Models\ModifyPathRewriteResponse ModifyPathRewrite(Models\ModifyPathRewriteRequest $req) 修改路径重写
  * @method Models\ModifyTaskResponse ModifyTask(Models\ModifyTaskRequest $req) 修改任务
  * @method Models\ModifyUploadInfoResponse ModifyUploadInfo(Models\ModifyUploadInfoRequest $req) 调用该接口和COS的上传接口后，需要调用此接口更新TSF中保存的程序包状态。
 调用此接口完成后，才标志上传包流程结束。

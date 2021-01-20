@@ -206,6 +206,10 @@ OPEN：公网属性， INTERNAL：内网属性。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZones(array $Zones) 设置私有网络内网负载均衡，就近接入模式下规则所落在的可用区
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getNfvInfo() 获取CLB是否为NFV，空：不是，l7nfv：七层是NFV。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNfvInfo(string $NfvInfo) 设置CLB是否为NFV，空：不是，l7nfv：七层是NFV。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class LoadBalancer extends AbstractModel
 {
@@ -495,6 +499,12 @@ OPEN：公网属性， INTERNAL：内网属性。
     public $Zones;
 
     /**
+     * @var string CLB是否为NFV，空：不是，l7nfv：七层是NFV。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NfvInfo;
+
+    /**
      * @param string $LoadBalancerId 负载均衡实例 ID。
      * @param string $LoadBalancerName 负载均衡实例的名称。
      * @param string $LoadBalancerType 负载均衡实例的网络类型：
@@ -587,6 +597,8 @@ OPEN：公网属性， INTERNAL：内网属性。
      * @param boolean $MixIpTarget 开启IPv6FullChain负载均衡7层监听器支持混绑IPv4/IPv6目标功能。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Zones 私有网络内网负载均衡，就近接入模式下规则所落在的可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $NfvInfo CLB是否为NFV，空：不是，l7nfv：七层是NFV。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -813,6 +825,10 @@ OPEN：公网属性， INTERNAL：内网属性。
 
         if (array_key_exists("Zones",$param) and $param["Zones"] !== null) {
             $this->Zones = $param["Zones"];
+        }
+
+        if (array_key_exists("NfvInfo",$param) and $param["NfvInfo"] !== null) {
+            $this->NfvInfo = $param["NfvInfo"];
         }
     }
 }

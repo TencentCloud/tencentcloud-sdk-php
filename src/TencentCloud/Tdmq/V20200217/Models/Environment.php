@@ -18,10 +18,10 @@ namespace TencentCloud\Tdmq\V20200217\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 环境信息
+ * 命名空间信息
  *
- * @method string getEnvironmentId() 获取环境（命名空间）名称
- * @method void setEnvironmentId(string $EnvironmentId) 设置环境（命名空间）名称
+ * @method string getEnvironmentId() 获取命名空间名称
+ * @method void setEnvironmentId(string $EnvironmentId) 设置命名空间名称
  * @method string getRemark() 获取说明
  * @method void setRemark(string $Remark) 设置说明
  * @method integer getMsgTTL() 获取未消费消息过期时间，单位：秒，最大1296000（15天）
@@ -30,11 +30,15 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) 设置创建时间
  * @method string getUpdateTime() 获取最近修改时间
  * @method void setUpdateTime(string $UpdateTime) 设置最近修改时间
+ * @method string getNamespaceId() 获取命名空间ID
+ * @method void setNamespaceId(string $NamespaceId) 设置命名空间ID
+ * @method string getNamespaceName() 获取命名空间名称
+ * @method void setNamespaceName(string $NamespaceName) 设置命名空间名称
  */
 class Environment extends AbstractModel
 {
     /**
-     * @var string 环境（命名空间）名称
+     * @var string 命名空间名称
      */
     public $EnvironmentId;
 
@@ -59,11 +63,23 @@ class Environment extends AbstractModel
     public $UpdateTime;
 
     /**
-     * @param string $EnvironmentId 环境（命名空间）名称
+     * @var string 命名空间ID
+     */
+    public $NamespaceId;
+
+    /**
+     * @var string 命名空间名称
+     */
+    public $NamespaceName;
+
+    /**
+     * @param string $EnvironmentId 命名空间名称
      * @param string $Remark 说明
      * @param integer $MsgTTL 未消费消息过期时间，单位：秒，最大1296000（15天）
      * @param string $CreateTime 创建时间
      * @param string $UpdateTime 最近修改时间
+     * @param string $NamespaceId 命名空间ID
+     * @param string $NamespaceName 命名空间名称
      */
     function __construct()
     {
@@ -96,6 +112,14 @@ class Environment extends AbstractModel
 
         if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
             $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("NamespaceId",$param) and $param["NamespaceId"] !== null) {
+            $this->NamespaceId = $param["NamespaceId"];
+        }
+
+        if (array_key_exists("NamespaceName",$param) and $param["NamespaceName"] !== null) {
+            $this->NamespaceName = $param["NamespaceName"];
         }
     }
 }

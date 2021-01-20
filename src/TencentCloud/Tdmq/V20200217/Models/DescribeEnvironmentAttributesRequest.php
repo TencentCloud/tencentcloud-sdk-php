@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getEnvironmentId() 获取环境（命名空间）名称。
  * @method void setEnvironmentId(string $EnvironmentId) 设置环境（命名空间）名称。
+ * @method string getClusterId() 获取Pulsar 集群的ID
+ * @method void setClusterId(string $ClusterId) 设置Pulsar 集群的ID
  */
 class DescribeEnvironmentAttributesRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class DescribeEnvironmentAttributesRequest extends AbstractModel
     public $EnvironmentId;
 
     /**
+     * @var string Pulsar 集群的ID
+     */
+    public $ClusterId;
+
+    /**
      * @param string $EnvironmentId 环境（命名空间）名称。
+     * @param string $ClusterId Pulsar 集群的ID
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class DescribeEnvironmentAttributesRequest extends AbstractModel
         }
         if (array_key_exists("EnvironmentId",$param) and $param["EnvironmentId"] !== null) {
             $this->EnvironmentId = $param["EnvironmentId"];
+        }
+
+        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
+            $this->ClusterId = $param["ClusterId"];
         }
     }
 }

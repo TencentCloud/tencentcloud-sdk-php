@@ -38,6 +38,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubnetId(string $SubnetId) 设置私有网络子网ID
  * @method string getClusterVersion() 获取集群版本
  * @method void setClusterVersion(string $ClusterVersion) 设置集群版本
+ * @method integer getMaxNodePodNum() 获取集群中每个Node上最大的Pod数量。取值范围4～256。不为2的幂值时会向上取最接近的2的幂值。
+ * @method void setMaxNodePodNum(integer $MaxNodePodNum) 设置集群中每个Node上最大的Pod数量。取值范围4～256。不为2的幂值时会向上取最接近的2的幂值。
+ * @method integer getMaxClusterServiceNum() 获取集群最大的service数量。取值范围32～32768，不为2的幂值时会向上取最接近的2的幂值。
+ * @method void setMaxClusterServiceNum(integer $MaxClusterServiceNum) 设置集群最大的service数量。取值范围32～32768，不为2的幂值时会向上取最接近的2的幂值。
+ * @method string getProgramId() 获取需要绑定的数据集ID
+ * @method void setProgramId(string $ProgramId) 设置需要绑定的数据集ID
  */
 class CreateClusterRequest extends AbstractModel
 {
@@ -87,6 +93,21 @@ class CreateClusterRequest extends AbstractModel
     public $ClusterVersion;
 
     /**
+     * @var integer 集群中每个Node上最大的Pod数量。取值范围4～256。不为2的幂值时会向上取最接近的2的幂值。
+     */
+    public $MaxNodePodNum;
+
+    /**
+     * @var integer 集群最大的service数量。取值范围32～32768，不为2的幂值时会向上取最接近的2的幂值。
+     */
+    public $MaxClusterServiceNum;
+
+    /**
+     * @var string 需要绑定的数据集ID
+     */
+    public $ProgramId;
+
+    /**
      * @param string $ClusterName 集群名称
      * @param string $ClusterType 集群类型
      * @param string $VpcId 私有网络ID
@@ -96,6 +117,9 @@ class CreateClusterRequest extends AbstractModel
      * @param string $TsfZoneId 集群所属TSF可用区
      * @param string $SubnetId 私有网络子网ID
      * @param string $ClusterVersion 集群版本
+     * @param integer $MaxNodePodNum 集群中每个Node上最大的Pod数量。取值范围4～256。不为2的幂值时会向上取最接近的2的幂值。
+     * @param integer $MaxClusterServiceNum 集群最大的service数量。取值范围32～32768，不为2的幂值时会向上取最接近的2的幂值。
+     * @param string $ProgramId 需要绑定的数据集ID
      */
     function __construct()
     {
@@ -144,6 +168,18 @@ class CreateClusterRequest extends AbstractModel
 
         if (array_key_exists("ClusterVersion",$param) and $param["ClusterVersion"] !== null) {
             $this->ClusterVersion = $param["ClusterVersion"];
+        }
+
+        if (array_key_exists("MaxNodePodNum",$param) and $param["MaxNodePodNum"] !== null) {
+            $this->MaxNodePodNum = $param["MaxNodePodNum"];
+        }
+
+        if (array_key_exists("MaxClusterServiceNum",$param) and $param["MaxClusterServiceNum"] !== null) {
+            $this->MaxClusterServiceNum = $param["MaxClusterServiceNum"];
+        }
+
+        if (array_key_exists("ProgramId",$param) and $param["ProgramId"] !== null) {
+            $this->ProgramId = $param["ProgramId"];
         }
     }
 }

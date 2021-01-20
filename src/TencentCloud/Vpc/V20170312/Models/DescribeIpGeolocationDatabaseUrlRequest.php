@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeIpGeolocationDatabaseUrl请求参数结构体
  *
- * @method string getType() 获取IP地理位置库协议类型，目前支持"ipv4"和"ipv6"。
- * @method void setType(string $Type) 设置IP地理位置库协议类型，目前支持"ipv4"和"ipv6"。
+ * @method string getType() 获取IP地理位置库协议类型，目前仅支持"ipv4"。
+ * @method void setType(string $Type) 设置IP地理位置库协议类型，目前仅支持"ipv4"。
  */
 class DescribeIpGeolocationDatabaseUrlRequest extends AbstractModel
 {
     /**
-     * @var string IP地理位置库协议类型，目前支持"ipv4"和"ipv6"。
+     * @var string IP地理位置库协议类型，目前仅支持"ipv4"。
      */
     public $Type;
 
     /**
-     * @param string $Type IP地理位置库协议类型，目前支持"ipv4"和"ipv6"。
+     * @param string $Type IP地理位置库协议类型，目前仅支持"ipv4"。
      */
     function __construct()
     {

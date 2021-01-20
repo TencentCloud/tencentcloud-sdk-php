@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTimeoutInstanceIds(array $TimeoutInstanceIds) 设置添加集群超时的节点列表
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getFailedReasons() 获取失败的节点的失败原因
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFailedReasons(array $FailedReasons) 设置失败的节点的失败原因
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AddInstanceResult extends AbstractModel
 {
@@ -54,11 +58,19 @@ class AddInstanceResult extends AbstractModel
     public $TimeoutInstanceIds;
 
     /**
+     * @var array 失败的节点的失败原因
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FailedReasons;
+
+    /**
      * @param array $FailedInstanceIds 添加集群失败的节点列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SuccInstanceIds 添加集群成功的节点列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $TimeoutInstanceIds 添加集群超时的节点列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $FailedReasons 失败的节点的失败原因
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -84,6 +96,10 @@ class AddInstanceResult extends AbstractModel
 
         if (array_key_exists("TimeoutInstanceIds",$param) and $param["TimeoutInstanceIds"] !== null) {
             $this->TimeoutInstanceIds = $param["TimeoutInstanceIds"];
+        }
+
+        if (array_key_exists("FailedReasons",$param) and $param["FailedReasons"] !== null) {
+            $this->FailedReasons = $param["FailedReasons"];
         }
     }
 }

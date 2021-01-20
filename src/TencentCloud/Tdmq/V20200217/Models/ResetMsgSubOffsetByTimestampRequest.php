@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubscription(string $Subscription) 设置订阅者名称。
  * @method integer getToTimestamp() 获取时间戳，精确到毫秒。
  * @method void setToTimestamp(integer $ToTimestamp) 设置时间戳，精确到毫秒。
+ * @method string getClusterId() 获取Pulsar 集群的ID
+ * @method void setClusterId(string $ClusterId) 设置Pulsar 集群的ID
  */
 class ResetMsgSubOffsetByTimestampRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class ResetMsgSubOffsetByTimestampRequest extends AbstractModel
     public $ToTimestamp;
 
     /**
+     * @var string Pulsar 集群的ID
+     */
+    public $ClusterId;
+
+    /**
      * @param string $EnvironmentId 环境（命名空间）名称。
      * @param string $TopicName 主题名称。
      * @param string $Subscription 订阅者名称。
      * @param integer $ToTimestamp 时间戳，精确到毫秒。
+     * @param string $ClusterId Pulsar 集群的ID
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class ResetMsgSubOffsetByTimestampRequest extends AbstractModel
 
         if (array_key_exists("ToTimestamp",$param) and $param["ToTimestamp"] !== null) {
             $this->ToTimestamp = $param["ToTimestamp"];
+        }
+
+        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
+            $this->ClusterId = $param["ClusterId"];
         }
     }
 }

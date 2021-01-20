@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsIdempotent(boolean $IsIdempotent) 设置是否幂等创建，若否不允许创建同名的订阅关系。
  * @method string getRemark() 获取备注，128个字符以内。
  * @method void setRemark(string $Remark) 设置备注，128个字符以内。
+ * @method string getClusterId() 获取Pulsar 集群的ID
+ * @method void setClusterId(string $ClusterId) 设置Pulsar 集群的ID
+ * @method boolean getAutoCreatePolicyTopic() 获取是否自动创建死信和重试主题，True 表示创建，False表示不创建，默认自动创建死信和重试主题。
+ * @method void setAutoCreatePolicyTopic(boolean $AutoCreatePolicyTopic) 设置是否自动创建死信和重试主题，True 表示创建，False表示不创建，默认自动创建死信和重试主题。
  */
 class CreateSubscriptionRequest extends AbstractModel
 {
@@ -59,11 +63,23 @@ class CreateSubscriptionRequest extends AbstractModel
     public $Remark;
 
     /**
+     * @var string Pulsar 集群的ID
+     */
+    public $ClusterId;
+
+    /**
+     * @var boolean 是否自动创建死信和重试主题，True 表示创建，False表示不创建，默认自动创建死信和重试主题。
+     */
+    public $AutoCreatePolicyTopic;
+
+    /**
      * @param string $EnvironmentId 环境（命名空间）名称。
      * @param string $TopicName 主题名称。
      * @param string $SubscriptionName 订阅者名称，不支持中字以及除了短线和下划线外的特殊字符且不超过150个字符。
      * @param boolean $IsIdempotent 是否幂等创建，若否不允许创建同名的订阅关系。
      * @param string $Remark 备注，128个字符以内。
+     * @param string $ClusterId Pulsar 集群的ID
+     * @param boolean $AutoCreatePolicyTopic 是否自动创建死信和重试主题，True 表示创建，False表示不创建，默认自动创建死信和重试主题。
      */
     function __construct()
     {
@@ -96,6 +112,14 @@ class CreateSubscriptionRequest extends AbstractModel
 
         if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
             $this->Remark = $param["Remark"];
+        }
+
+        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
+            $this->ClusterId = $param["ClusterId"];
+        }
+
+        if (array_key_exists("AutoCreatePolicyTopic",$param) and $param["AutoCreatePolicyTopic"] !== null) {
+            $this->AutoCreatePolicyTopic = $param["AutoCreatePolicyTopic"];
         }
     }
 }

@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPartitions(integer $Partitions) 设置分区数，必须大于或者等于原分区数，若想维持原分区数请输入原数目，修改分区数仅对非全局顺序消息起效果，不允许超过128个分区。
  * @method string getRemark() 获取备注，128字符以内。
  * @method void setRemark(string $Remark) 设置备注，128字符以内。
+ * @method string getClusterId() 获取Pulsar 集群的ID
+ * @method void setClusterId(string $ClusterId) 设置Pulsar 集群的ID
  */
 class ModifyTopicRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class ModifyTopicRequest extends AbstractModel
     public $Remark;
 
     /**
+     * @var string Pulsar 集群的ID
+     */
+    public $ClusterId;
+
+    /**
      * @param string $EnvironmentId 环境（命名空间）名称。
      * @param string $TopicName 主题名。
      * @param integer $Partitions 分区数，必须大于或者等于原分区数，若想维持原分区数请输入原数目，修改分区数仅对非全局顺序消息起效果，不允许超过128个分区。
      * @param string $Remark 备注，128字符以内。
+     * @param string $ClusterId Pulsar 集群的ID
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class ModifyTopicRequest extends AbstractModel
 
         if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
             $this->Remark = $param["Remark"];
+        }
+
+        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
+            $this->ClusterId = $param["ClusterId"];
         }
     }
 }

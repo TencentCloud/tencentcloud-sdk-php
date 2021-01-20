@@ -32,6 +32,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIKEOptionsSpecification(IKEOptionsSpecification $IKEOptionsSpecification) 设置IKE配置（Internet Key Exchange，因特网密钥交换），IKE具有一套自我保护机制，用户配置网络安全协议。
  * @method IPSECOptionsSpecification getIPSECOptionsSpecification() 获取IPSec配置，腾讯云提供IPSec安全会话设置。
  * @method void setIPSECOptionsSpecification(IPSECOptionsSpecification $IPSECOptionsSpecification) 设置IPSec配置，腾讯云提供IPSec安全会话设置。
+ * @method boolean getEnableHealthCheck() 获取是否启用通道健康检查
+ * @method void setEnableHealthCheck(boolean $EnableHealthCheck) 设置是否启用通道健康检查
+ * @method string getHealthCheckLocalIp() 获取本端通道探测ip
+ * @method void setHealthCheckLocalIp(string $HealthCheckLocalIp) 设置本端通道探测ip
+ * @method string getHealthCheckRemoteIp() 获取对端通道探测ip
+ * @method void setHealthCheckRemoteIp(string $HealthCheckRemoteIp) 设置对端通道探测ip
  */
 class ModifyVpnConnectionAttributeRequest extends AbstractModel
 {
@@ -66,12 +72,30 @@ class ModifyVpnConnectionAttributeRequest extends AbstractModel
     public $IPSECOptionsSpecification;
 
     /**
+     * @var boolean 是否启用通道健康检查
+     */
+    public $EnableHealthCheck;
+
+    /**
+     * @var string 本端通道探测ip
+     */
+    public $HealthCheckLocalIp;
+
+    /**
+     * @var string 对端通道探测ip
+     */
+    public $HealthCheckRemoteIp;
+
+    /**
      * @param string $VpnConnectionId VPN通道实例ID。形如：vpnx-f49l6u0z。
      * @param string $VpnConnectionName VPN通道名称，可任意命名，但不得超过60个字符。
      * @param string $PreShareKey 预共享密钥。
      * @param array $SecurityPolicyDatabases SPD策略组，例如：{"10.0.0.5/24":["172.123.10.5/16"]}，10.0.0.5/24是vpc内网段172.123.10.5/16是IDC网段。用户指定VPC内哪些网段可以和您IDC中哪些网段通信。
      * @param IKEOptionsSpecification $IKEOptionsSpecification IKE配置（Internet Key Exchange，因特网密钥交换），IKE具有一套自我保护机制，用户配置网络安全协议。
      * @param IPSECOptionsSpecification $IPSECOptionsSpecification IPSec配置，腾讯云提供IPSec安全会话设置。
+     * @param boolean $EnableHealthCheck 是否启用通道健康检查
+     * @param string $HealthCheckLocalIp 本端通道探测ip
+     * @param string $HealthCheckRemoteIp 对端通道探测ip
      */
     function __construct()
     {
@@ -115,6 +139,18 @@ class ModifyVpnConnectionAttributeRequest extends AbstractModel
         if (array_key_exists("IPSECOptionsSpecification",$param) and $param["IPSECOptionsSpecification"] !== null) {
             $this->IPSECOptionsSpecification = new IPSECOptionsSpecification();
             $this->IPSECOptionsSpecification->deserialize($param["IPSECOptionsSpecification"]);
+        }
+
+        if (array_key_exists("EnableHealthCheck",$param) and $param["EnableHealthCheck"] !== null) {
+            $this->EnableHealthCheck = $param["EnableHealthCheck"];
+        }
+
+        if (array_key_exists("HealthCheckLocalIp",$param) and $param["HealthCheckLocalIp"] !== null) {
+            $this->HealthCheckLocalIp = $param["HealthCheckLocalIp"];
+        }
+
+        if (array_key_exists("HealthCheckRemoteIp",$param) and $param["HealthCheckRemoteIp"] !== null) {
+            $this->HealthCheckRemoteIp = $param["HealthCheckRemoteIp"];
         }
     }
 }

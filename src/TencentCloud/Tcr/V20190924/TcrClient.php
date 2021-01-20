@@ -25,6 +25,7 @@ use TencentCloud\Tcr\V20190924\Models as Models;
 /**
  * @method Models\BatchDeleteImagePersonalResponse BatchDeleteImagePersonal(Models\BatchDeleteImagePersonalRequest $req) 用于在个人版镜像仓库中批量删除Tag
  * @method Models\BatchDeleteRepositoryPersonalResponse BatchDeleteRepositoryPersonal(Models\BatchDeleteRepositoryPersonalRequest $req) 用于个人版镜像仓库中批量删除镜像仓库
+ * @method Models\CheckInstanceNameResponse CheckInstanceName(Models\CheckInstanceNameRequest $req) 检查待创建的实例名称是否符合规范
  * @method Models\CreateApplicationTriggerPersonalResponse CreateApplicationTriggerPersonal(Models\CreateApplicationTriggerPersonalRequest $req) 用于创建应用更新触发器
  * @method Models\CreateImageLifecyclePersonalResponse CreateImageLifecyclePersonal(Models\CreateImageLifecyclePersonalRequest $req) 用于在个人版中创建清理策略
  * @method Models\CreateInstanceResponse CreateInstance(Models\CreateInstanceRequest $req) 创建实例

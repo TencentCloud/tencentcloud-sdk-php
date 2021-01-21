@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getTotalCount() 获取记录数。
  * @method void setTotalCount(integer $TotalCount) 设置记录数。
- * @method array getEnvironmentRoleSets() 获取环境角色集合。
- * @method void setEnvironmentRoleSets(array $EnvironmentRoleSets) 设置环境角色集合。
+ * @method array getEnvironmentRoleSets() 获取命名空间角色集合。
+ * @method void setEnvironmentRoleSets(array $EnvironmentRoleSets) 设置命名空间角色集合。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -35,7 +35,7 @@ class DescribeEnvironmentRolesResponse extends AbstractModel
     public $TotalCount;
 
     /**
-     * @var array 环境角色集合。
+     * @var array 命名空间角色集合。
      */
     public $EnvironmentRoleSets;
 
@@ -46,7 +46,7 @@ class DescribeEnvironmentRolesResponse extends AbstractModel
 
     /**
      * @param integer $TotalCount 记录数。
-     * @param array $EnvironmentRoleSets 环境角色集合。
+     * @param array $EnvironmentRoleSets 命名空间角色集合。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

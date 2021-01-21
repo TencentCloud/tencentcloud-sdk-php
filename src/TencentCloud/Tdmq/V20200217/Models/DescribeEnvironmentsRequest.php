@@ -20,17 +20,19 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeEnvironments请求参数结构体
  *
- * @method string getEnvironmentId() 获取环境（命名空间）名称，模糊搜索。
- * @method void setEnvironmentId(string $EnvironmentId) 设置环境（命名空间）名称，模糊搜索。
+ * @method string getEnvironmentId() 获取命名空间名称，模糊搜索。
+ * @method void setEnvironmentId(string $EnvironmentId) 设置命名空间名称，模糊搜索。
  * @method integer getOffset() 获取起始下标，不填默认为0。
  * @method void setOffset(integer $Offset) 设置起始下标，不填默认为0。
  * @method integer getLimit() 获取返回数量，不填则默认为10，最大值为20。
  * @method void setLimit(integer $Limit) 设置返回数量，不填则默认为10，最大值为20。
+ * @method string getClusterId() 获取Pulsar 集群的ID
+ * @method void setClusterId(string $ClusterId) 设置Pulsar 集群的ID
  */
 class DescribeEnvironmentsRequest extends AbstractModel
 {
     /**
-     * @var string 环境（命名空间）名称，模糊搜索。
+     * @var string 命名空间名称，模糊搜索。
      */
     public $EnvironmentId;
 
@@ -45,9 +47,15 @@ class DescribeEnvironmentsRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @param string $EnvironmentId 环境（命名空间）名称，模糊搜索。
+     * @var string Pulsar 集群的ID
+     */
+    public $ClusterId;
+
+    /**
+     * @param string $EnvironmentId 命名空间名称，模糊搜索。
      * @param integer $Offset 起始下标，不填默认为0。
      * @param integer $Limit 返回数量，不填则默认为10，最大值为20。
+     * @param string $ClusterId Pulsar 集群的ID
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class DescribeEnvironmentsRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
+            $this->ClusterId = $param["ClusterId"];
         }
     }
 }

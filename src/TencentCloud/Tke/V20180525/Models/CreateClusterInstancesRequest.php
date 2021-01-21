@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRunInstancePara(string $RunInstancePara) 设置CVM创建透传参数，json化字符串格式，如需要保证扩展集群节点请求幂等性需要在此参数添加ClientToken字段，详见[CVM创建实例](https://cloud.tencent.com/document/product/213/15730)接口。
  * @method InstanceAdvancedSettings getInstanceAdvancedSettings() 获取实例额外需要设置参数信息
  * @method void setInstanceAdvancedSettings(InstanceAdvancedSettings $InstanceAdvancedSettings) 设置实例额外需要设置参数信息
+ * @method array getSkipValidateOptions() 获取校验规则相关选项，可配置跳过某些校验规则。目前支持GlobalRouteCIDRCheck（跳过GlobalRouter的相关校验），VpcCniCIDRCheck（跳过VpcCni相关校验）
+ * @method void setSkipValidateOptions(array $SkipValidateOptions) 设置校验规则相关选项，可配置跳过某些校验规则。目前支持GlobalRouteCIDRCheck（跳过GlobalRouter的相关校验），VpcCniCIDRCheck（跳过VpcCni相关校验）
  */
 class CreateClusterInstancesRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class CreateClusterInstancesRequest extends AbstractModel
     public $InstanceAdvancedSettings;
 
     /**
+     * @var array 校验规则相关选项，可配置跳过某些校验规则。目前支持GlobalRouteCIDRCheck（跳过GlobalRouter的相关校验），VpcCniCIDRCheck（跳过VpcCni相关校验）
+     */
+    public $SkipValidateOptions;
+
+    /**
      * @param string $ClusterId 集群 ID，请填写 查询集群列表 接口中返回的 clusterId 字段
      * @param string $RunInstancePara CVM创建透传参数，json化字符串格式，如需要保证扩展集群节点请求幂等性需要在此参数添加ClientToken字段，详见[CVM创建实例](https://cloud.tencent.com/document/product/213/15730)接口。
      * @param InstanceAdvancedSettings $InstanceAdvancedSettings 实例额外需要设置参数信息
+     * @param array $SkipValidateOptions 校验规则相关选项，可配置跳过某些校验规则。目前支持GlobalRouteCIDRCheck（跳过GlobalRouter的相关校验），VpcCniCIDRCheck（跳过VpcCni相关校验）
      */
     function __construct()
     {
@@ -73,6 +81,10 @@ class CreateClusterInstancesRequest extends AbstractModel
         if (array_key_exists("InstanceAdvancedSettings",$param) and $param["InstanceAdvancedSettings"] !== null) {
             $this->InstanceAdvancedSettings = new InstanceAdvancedSettings();
             $this->InstanceAdvancedSettings->deserialize($param["InstanceAdvancedSettings"]);
+        }
+
+        if (array_key_exists("SkipValidateOptions",$param) and $param["SkipValidateOptions"] !== null) {
+            $this->SkipValidateOptions = $param["SkipValidateOptions"];
         }
     }
 }

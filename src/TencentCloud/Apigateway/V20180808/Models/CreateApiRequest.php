@@ -110,6 +110,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTargetNamespaceId(string $TargetNamespaceId) 设置tsf serverless 命名空间ID。（内测中）
  * @method string getUserType() 获取用户类型。
  * @method void setUserType(string $UserType) 设置用户类型。
+ * @method boolean getIsBase64Encoded() 获取是否打开Base64编码，只有后端是scf时才会生效。
+ * @method void setIsBase64Encoded(boolean $IsBase64Encoded) 设置是否打开Base64编码，只有后端是scf时才会生效。
  */
 class CreateApiRequest extends AbstractModel
 {
@@ -339,6 +341,11 @@ class CreateApiRequest extends AbstractModel
     public $UserType;
 
     /**
+     * @var boolean 是否打开Base64编码，只有后端是scf时才会生效。
+     */
+    public $IsBase64Encoded;
+
+    /**
      * @param string $ServiceId API 所在的服务唯一 ID。
      * @param string $ServiceType API 的后端服务类型。支持HTTP、MOCK、TSF、SCF、WEBSOCKET、TARGET（内测）。
      * @param integer $ServiceTimeout API 的后端服务超时时间，单位是秒。
@@ -384,6 +391,7 @@ class CreateApiRequest extends AbstractModel
      * @param array $ResponseErrorCodes 用户自定义错误码配置。
      * @param string $TargetNamespaceId tsf serverless 命名空间ID。（内测中）
      * @param string $UserType 用户类型。
+     * @param boolean $IsBase64Encoded 是否打开Base64编码，只有后端是scf时才会生效。
      */
     function __construct()
     {
@@ -612,6 +620,10 @@ class CreateApiRequest extends AbstractModel
 
         if (array_key_exists("UserType",$param) and $param["UserType"] !== null) {
             $this->UserType = $param["UserType"];
+        }
+
+        if (array_key_exists("IsBase64Encoded",$param) and $param["IsBase64Encoded"] !== null) {
+            $this->IsBase64Encoded = $param["IsBase64Encoded"];
         }
     }
 }

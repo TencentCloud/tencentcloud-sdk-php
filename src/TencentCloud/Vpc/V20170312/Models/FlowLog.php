@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFlowLogDescription(string $FlowLogDescription) 设置流日志描述信息
  * @method string getCreatedTime() 获取流日志创建时间
  * @method void setCreatedTime(string $CreatedTime) 设置流日志创建时间
+ * @method array getTagSet() 获取标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
+ * @method void setTagSet(array $TagSet) 设置标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
  */
 class FlowLog extends AbstractModel
 {
@@ -94,6 +96,11 @@ class FlowLog extends AbstractModel
     public $CreatedTime;
 
     /**
+     * @var array 标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
+     */
+    public $TagSet;
+
+    /**
      * @param string $VpcId 私用网络ID或者统一ID，建议使用统一ID
      * @param string $FlowLogId 流日志唯一ID
      * @param string $FlowLogName 流日志实例名字
@@ -104,6 +111,7 @@ class FlowLog extends AbstractModel
      * @param string $CloudLogState 流日志存储ID状态
      * @param string $FlowLogDescription 流日志描述信息
      * @param string $CreatedTime 流日志创建时间
+     * @param array $TagSet 标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
      */
     function __construct()
     {
@@ -156,6 +164,15 @@ class FlowLog extends AbstractModel
 
         if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
             $this->CreatedTime = $param["CreatedTime"];
+        }
+
+        if (array_key_exists("TagSet",$param) and $param["TagSet"] !== null) {
+            $this->TagSet = [];
+            foreach ($param["TagSet"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->TagSet, $obj);
+            }
         }
     }
 }

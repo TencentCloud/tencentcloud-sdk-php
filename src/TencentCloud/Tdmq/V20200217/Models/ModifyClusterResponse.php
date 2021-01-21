@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyCluster返回参数结构体
  *
- * @method string getClusterId() 获取集群的ID
- * @method void setClusterId(string $ClusterId) 设置集群的ID
+ * @method string getClusterId() 获取Pulsar 集群的ID
+ * @method void setClusterId(string $ClusterId) 设置Pulsar 集群的ID
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class ModifyClusterResponse extends AbstractModel
 {
     /**
-     * @var string 集群的ID
+     * @var string Pulsar 集群的ID
      */
     public $ClusterId;
 
@@ -38,7 +38,7 @@ class ModifyClusterResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $ClusterId 集群的ID
+     * @param string $ClusterId Pulsar 集群的ID
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

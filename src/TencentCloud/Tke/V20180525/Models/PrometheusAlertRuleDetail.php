@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTemplateId(string $TemplateId) 设置如果该告警来至模板下发，则TemplateId为模板id
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getInterval() 获取计算周期
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInterval(string $Interval) 设置计算周期
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class PrometheusAlertRuleDetail extends AbstractModel
 {
@@ -69,12 +73,20 @@ class PrometheusAlertRuleDetail extends AbstractModel
     public $TemplateId;
 
     /**
+     * @var string 计算周期
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Interval;
+
+    /**
      * @param string $Name 规则名称
      * @param array $Rules 规则列表
      * @param string $UpdatedAt 最后修改时间
      * @param PrometheusNotification $Notification 告警渠道
      * @param string $Id 告警 id
      * @param string $TemplateId 如果该告警来至模板下发，则TemplateId为模板id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Interval 计算周期
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -118,6 +130,10 @@ class PrometheusAlertRuleDetail extends AbstractModel
 
         if (array_key_exists("TemplateId",$param) and $param["TemplateId"] !== null) {
             $this->TemplateId = $param["TemplateId"];
+        }
+
+        if (array_key_exists("Interval",$param) and $param["Interval"] !== null) {
+            $this->Interval = $param["Interval"];
         }
     }
 }

@@ -44,6 +44,8 @@ tar.gz： 生成`.tar.gz`压缩包
 
 zip： 生成`.zip`压缩包
 tar.gz： 生成`.tar.gz`压缩包
+ * @method string getExtraData() 获取内部参数
+ * @method void setExtraData(string $ExtraData) 设置内部参数
  */
 class CreateTranscodeRequest extends AbstractModel
 {
@@ -84,6 +86,11 @@ tar.gz： 生成`.tar.gz`压缩包
     public $CompressFileType;
 
     /**
+     * @var string 内部参数
+     */
+    public $ExtraData;
+
+    /**
      * @param integer $SdkAppId 客户的SdkAppId
      * @param string $Url 需要进行转码文件地址
      * @param boolean $IsStaticPPT 是否为静态PPT，默认为False；
@@ -96,6 +103,7 @@ tar.gz： 生成`.tar.gz`压缩包
 
 zip： 生成`.zip`压缩包
 tar.gz： 生成`.tar.gz`压缩包
+     * @param string $ExtraData 内部参数
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ tar.gz： 生成`.tar.gz`压缩包
 
         if (array_key_exists("CompressFileType",$param) and $param["CompressFileType"] !== null) {
             $this->CompressFileType = $param["CompressFileType"];
+        }
+
+        if (array_key_exists("ExtraData",$param) and $param["ExtraData"] !== null) {
+            $this->ExtraData = $param["ExtraData"];
         }
     }
 }

@@ -212,6 +212,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnvironments(array $Environments) 设置API已发布的环境信息。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getIsBase64Encoded() 获取是否开启Base64编码，只有后端为scf时才会生效。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsBase64Encoded(boolean $IsBase64Encoded) 设置是否开启Base64编码，只有后端为scf时才会生效。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getIsBase64Trigger() 获取是否开启Base64编码的header触发，只有后端为scf时才会生效。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsBase64Trigger(boolean $IsBase64Trigger) 设置是否开启Base64编码的header触发，只有后端为scf时才会生效。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getBase64EncodedTriggerRules() 获取Header触发规则，总规则数量不超过10。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBase64EncodedTriggerRules(array $Base64EncodedTriggerRules) 设置Header触发规则，总规则数量不超过10。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ApiInfo extends AbstractModel
 {
@@ -504,6 +516,24 @@ class ApiInfo extends AbstractModel
     public $Environments;
 
     /**
+     * @var boolean 是否开启Base64编码，只有后端为scf时才会生效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsBase64Encoded;
+
+    /**
+     * @var boolean 是否开启Base64编码的header触发，只有后端为scf时才会生效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsBase64Trigger;
+
+    /**
+     * @var array Header触发规则，总规则数量不超过10。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Base64EncodedTriggerRules;
+
+    /**
      * @param string $ServiceId API 所在的服务唯一 ID。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ServiceName API 所在的服务的名称。
@@ -599,6 +629,12 @@ class ApiInfo extends AbstractModel
      * @param array $Tags API绑定的tag信息。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Environments API已发布的环境信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $IsBase64Encoded 是否开启Base64编码，只有后端为scf时才会生效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $IsBase64Trigger 是否开启Base64编码的header触发，只有后端为scf时才会生效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Base64EncodedTriggerRules Header触发规则，总规则数量不超过10。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -839,6 +875,23 @@ class ApiInfo extends AbstractModel
 
         if (array_key_exists("Environments",$param) and $param["Environments"] !== null) {
             $this->Environments = $param["Environments"];
+        }
+
+        if (array_key_exists("IsBase64Encoded",$param) and $param["IsBase64Encoded"] !== null) {
+            $this->IsBase64Encoded = $param["IsBase64Encoded"];
+        }
+
+        if (array_key_exists("IsBase64Trigger",$param) and $param["IsBase64Trigger"] !== null) {
+            $this->IsBase64Trigger = $param["IsBase64Trigger"];
+        }
+
+        if (array_key_exists("Base64EncodedTriggerRules",$param) and $param["Base64EncodedTriggerRules"] !== null) {
+            $this->Base64EncodedTriggerRules = [];
+            foreach ($param["Base64EncodedTriggerRules"] as $key => $value){
+                $obj = new Base64EncodedTriggerRule();
+                $obj->deserialize($value);
+                array_push($this->Base64EncodedTriggerRules, $obj);
+            }
         }
     }
 }

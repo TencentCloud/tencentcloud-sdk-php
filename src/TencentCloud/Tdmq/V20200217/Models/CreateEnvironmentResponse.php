@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateEnvironment返回参数结构体
  *
- * @method string getEnvironmentId() 获取命名空间名称。
- * @method void setEnvironmentId(string $EnvironmentId) 设置命名空间名称。
+ * @method string getEnvironmentId() 获取环境（命名空间）名称。
+ * @method void setEnvironmentId(string $EnvironmentId) 设置环境（命名空间）名称。
  * @method integer getMsgTTL() 获取未消费消息过期时间，单位：秒。
  * @method void setMsgTTL(integer $MsgTTL) 设置未消费消息过期时间，单位：秒。
  * @method string getRemark() 获取说明，128个字符以内。
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateEnvironmentResponse extends AbstractModel
 {
     /**
-     * @var string 命名空间名称。
+     * @var string 环境（命名空间）名称。
      */
     public $EnvironmentId;
 
@@ -62,7 +62,7 @@ class CreateEnvironmentResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $EnvironmentId 命名空间名称。
+     * @param string $EnvironmentId 环境（命名空间）名称。
      * @param integer $MsgTTL 未消费消息过期时间，单位：秒。
      * @param string $Remark 说明，128个字符以内。
 注意：此字段可能返回 null，表示取不到有效值。

@@ -20,19 +20,19 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyEnvironmentAttributes请求参数结构体
  *
- * @method string getEnvironmentId() 获取环境（命名空间）名称。
- * @method void setEnvironmentId(string $EnvironmentId) 设置环境（命名空间）名称。
+ * @method string getEnvironmentId() 获取命名空间名称。
+ * @method void setEnvironmentId(string $EnvironmentId) 设置命名空间名称。
  * @method integer getMsgTTL() 获取未消费消息过期时间，单位：秒，最大1296000。
  * @method void setMsgTTL(integer $MsgTTL) 设置未消费消息过期时间，单位：秒，最大1296000。
  * @method string getRemark() 获取备注，字符串最长不超过128。
  * @method void setRemark(string $Remark) 设置备注，字符串最长不超过128。
- * @method string getClusterId() 获取Pulsar 集群的ID
- * @method void setClusterId(string $ClusterId) 设置Pulsar 集群的ID
+ * @method string getClusterId() 获取集群ID
+ * @method void setClusterId(string $ClusterId) 设置集群ID
  */
 class ModifyEnvironmentAttributesRequest extends AbstractModel
 {
     /**
-     * @var string 环境（命名空间）名称。
+     * @var string 命名空间名称。
      */
     public $EnvironmentId;
 
@@ -47,15 +47,15 @@ class ModifyEnvironmentAttributesRequest extends AbstractModel
     public $Remark;
 
     /**
-     * @var string Pulsar 集群的ID
+     * @var string 集群ID
      */
     public $ClusterId;
 
     /**
-     * @param string $EnvironmentId 环境（命名空间）名称。
+     * @param string $EnvironmentId 命名空间名称。
      * @param integer $MsgTTL 未消费消息过期时间，单位：秒，最大1296000。
      * @param string $Remark 备注，字符串最长不超过128。
-     * @param string $ClusterId Pulsar 集群的ID
+     * @param string $ClusterId 集群ID
      */
     function __construct()
     {

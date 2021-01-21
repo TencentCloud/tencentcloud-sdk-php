@@ -14,30 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tdmq\V20200217\Models;
+namespace TencentCloud\Tiw\V20190919\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeEnvironments返回参数结构体
+ * DescribeWhiteboardPushCallback返回参数结构体
  *
- * @method integer getTotalCount() 获取命名空间记录数。
- * @method void setTotalCount(integer $TotalCount) 设置命名空间记录数。
- * @method array getEnvironmentSet() 获取命名空间集合数组。
- * @method void setEnvironmentSet(array $EnvironmentSet) 设置命名空间集合数组。
+ * @method string getCallback() 获取白板推流事件回调地址，如果未设置回调地址，该字段为空字符串
+ * @method void setCallback(string $Callback) 设置白板推流事件回调地址，如果未设置回调地址，该字段为空字符串
+ * @method string getCallbackKey() 获取白板推流回调鉴权密钥
+ * @method void setCallbackKey(string $CallbackKey) 设置白板推流回调鉴权密钥
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeEnvironmentsResponse extends AbstractModel
+class DescribeWhiteboardPushCallbackResponse extends AbstractModel
 {
     /**
-     * @var integer 命名空间记录数。
+     * @var string 白板推流事件回调地址，如果未设置回调地址，该字段为空字符串
      */
-    public $TotalCount;
+    public $Callback;
 
     /**
-     * @var array 命名空间集合数组。
+     * @var string 白板推流回调鉴权密钥
      */
-    public $EnvironmentSet;
+    public $CallbackKey;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +45,8 @@ class DescribeEnvironmentsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 命名空间记录数。
-     * @param array $EnvironmentSet 命名空间集合数组。
+     * @param string $Callback 白板推流事件回调地址，如果未设置回调地址，该字段为空字符串
+     * @param string $CallbackKey 白板推流回调鉴权密钥
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,17 +62,12 @@ class DescribeEnvironmentsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists("Callback",$param) and $param["Callback"] !== null) {
+            $this->Callback = $param["Callback"];
         }
 
-        if (array_key_exists("EnvironmentSet",$param) and $param["EnvironmentSet"] !== null) {
-            $this->EnvironmentSet = [];
-            foreach ($param["EnvironmentSet"] as $key => $value){
-                $obj = new Environment();
-                $obj->deserialize($value);
-                array_push($this->EnvironmentSet, $obj);
-            }
+        if (array_key_exists("CallbackKey",$param) and $param["CallbackKey"] !== null) {
+            $this->CallbackKey = $param["CallbackKey"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

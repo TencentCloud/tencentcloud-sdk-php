@@ -74,6 +74,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCpu() 获取CPU核数
  * @method void setCpu(integer $Cpu) 设置CPU核数
+ * @method string getRange() 获取分片ShardKey的范围（总共64个哈希值），例如： 0-31，32-63
+ * @method void setRange(string $Range) 设置分片ShardKey的范围（总共64个哈希值），例如： 0-31，32-63
  */
 class DCDBShardInfo extends AbstractModel
 {
@@ -201,6 +203,11 @@ class DCDBShardInfo extends AbstractModel
     public $Cpu;
 
     /**
+     * @var string 分片ShardKey的范围（总共64个哈希值），例如： 0-31，32-63
+     */
+    public $Range;
+
+    /**
      * @param string $InstanceId 所属实例Id
      * @param string $ShardSerialId 分片SQL透传Id，用于将sql透传到指定分片执行
      * @param string $ShardInstanceId 全局唯一的分片Id
@@ -228,6 +235,7 @@ class DCDBShardInfo extends AbstractModel
      * @param array $ShardSlaveZones 分片的从可用区列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Cpu CPU核数
+     * @param string $Range 分片ShardKey的范围（总共64个哈希值），例如： 0-31，32-63
      */
     function __construct()
     {
@@ -336,6 +344,10 @@ class DCDBShardInfo extends AbstractModel
 
         if (array_key_exists("Cpu",$param) and $param["Cpu"] !== null) {
             $this->Cpu = $param["Cpu"];
+        }
+
+        if (array_key_exists("Range",$param) and $param["Range"] !== null) {
+            $this->Range = $param["Range"];
         }
     }
 }

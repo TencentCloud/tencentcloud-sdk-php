@@ -68,6 +68,8 @@ VIDEO_GENERATION_MODE - 视频生成模式（内测中，需邮件申请开通�
  * @method void setChatGroupId(string $ChatGroupId) 设置聊天群组ID，此字段仅适用于`视频生成模式`
 
 在`视频生成模式`下，默认会记录白板群组内的非白板信令消息，如果指定了`ChatGroupId`，则会记录指定群ID的聊天消息。
+ * @method string getExtraData() 获取内部参数
+ * @method void setExtraData(string $ExtraData) 设置内部参数
  */
 class StartOnlineRecordRequest extends AbstractModel
 {
@@ -148,6 +150,11 @@ VIDEO_GENERATION_MODE - 视频生成模式（内测中，需邮件申请开通�
     public $ChatGroupId;
 
     /**
+     * @var string 内部参数
+     */
+    public $ExtraData;
+
+    /**
      * @param integer $SdkAppId 客户的SdkAppId
      * @param integer $RoomId 需要录制的房间号，取值范围: (1, 4294967295)
      * @param string $RecordUserId 用于录制服务进房的用户ID，格式为`tic_record_user_${RoomId}_${Random}`，其中 `${RoomId} `与录制房间号对应，`${Random}`为一个随机字符串。
@@ -172,6 +179,7 @@ VIDEO_GENERATION_MODE - 视频生成模式（内测中，需邮件申请开通�
      * @param string $ChatGroupId 聊天群组ID，此字段仅适用于`视频生成模式`
 
 在`视频生成模式`下，默认会记录白板群组内的非白板信令消息，如果指定了`ChatGroupId`，则会记录指定群ID的聊天消息。
+     * @param string $ExtraData 内部参数
      */
     function __construct()
     {
@@ -240,6 +248,10 @@ VIDEO_GENERATION_MODE - 视频生成模式（内测中，需邮件申请开通�
 
         if (array_key_exists("ChatGroupId",$param) and $param["ChatGroupId"] !== null) {
             $this->ChatGroupId = $param["ChatGroupId"];
+        }
+
+        if (array_key_exists("ExtraData",$param) and $param["ExtraData"] !== null) {
+            $this->ExtraData = $param["ExtraData"];
         }
     }
 }

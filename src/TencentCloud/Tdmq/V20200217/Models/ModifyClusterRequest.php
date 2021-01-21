@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyCluster请求参数结构体
  *
- * @method string getClusterId() 获取集群Id，需要更新的集群Id。
- * @method void setClusterId(string $ClusterId) 设置集群Id，需要更新的集群Id。
+ * @method string getClusterId() 获取Pulsar 集群的ID，需要更新的集群Id。
+ * @method void setClusterId(string $ClusterId) 设置Pulsar 集群的ID，需要更新的集群Id。
  * @method string getClusterName() 获取更新后的集群名称。
  * @method void setClusterName(string $ClusterName) 设置更新后的集群名称。
  * @method string getRemark() 获取说明信息。
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyClusterRequest extends AbstractModel
 {
     /**
-     * @var string 集群Id，需要更新的集群Id。
+     * @var string Pulsar 集群的ID，需要更新的集群Id。
      */
     public $ClusterId;
 
@@ -45,7 +45,7 @@ class ModifyClusterRequest extends AbstractModel
     public $Remark;
 
     /**
-     * @param string $ClusterId 集群Id，需要更新的集群Id。
+     * @param string $ClusterId Pulsar 集群的ID，需要更新的集群Id。
      * @param string $ClusterName 更新后的集群名称。
      * @param string $Remark 说明信息。
      */

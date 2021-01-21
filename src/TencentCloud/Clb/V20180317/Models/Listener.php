@@ -74,9 +74,13 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSessionType(string $SessionType) 设置会话保持类型。NORMAL表示默认会话保持类型。QUIC_CID 表示根据Quic Connection ID做会话保持。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getKeepaliveEnable() 获取是否开启长连接（本参数仅对于HTTP/HTTPS监听器有意义）
+ * @method integer getKeepaliveEnable() 获取是否开启长连接，1开启，0关闭，（本参数仅对于HTTP/HTTPS监听器有意义）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setKeepaliveEnable(integer $KeepaliveEnable) 设置是否开启长连接（本参数仅对于HTTP/HTTPS监听器有意义）
+ * @method void setKeepaliveEnable(integer $KeepaliveEnable) 设置是否开启长连接，1开启，0关闭，（本参数仅对于HTTP/HTTPS监听器有意义）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getToa() 获取仅支持Nat64 CLB TCP监听器
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setToa(boolean $Toa) 设置仅支持Nat64 CLB TCP监听器
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class Listener extends AbstractModel
@@ -169,10 +173,16 @@ class Listener extends AbstractModel
     public $SessionType;
 
     /**
-     * @var integer 是否开启长连接（本参数仅对于HTTP/HTTPS监听器有意义）
+     * @var integer 是否开启长连接，1开启，0关闭，（本参数仅对于HTTP/HTTPS监听器有意义）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $KeepaliveEnable;
+
+    /**
+     * @var boolean 仅支持Nat64 CLB TCP监听器
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Toa;
 
     /**
      * @param string $ListenerId 负载均衡监听器 ID
@@ -202,7 +212,9 @@ class Listener extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SessionType 会话保持类型。NORMAL表示默认会话保持类型。QUIC_CID 表示根据Quic Connection ID做会话保持。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $KeepaliveEnable 是否开启长连接（本参数仅对于HTTP/HTTPS监听器有意义）
+     * @param integer $KeepaliveEnable 是否开启长连接，1开启，0关闭，（本参数仅对于HTTP/HTTPS监听器有意义）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $Toa 仅支持Nat64 CLB TCP监听器
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -288,6 +300,10 @@ class Listener extends AbstractModel
 
         if (array_key_exists("KeepaliveEnable",$param) and $param["KeepaliveEnable"] !== null) {
             $this->KeepaliveEnable = $param["KeepaliveEnable"];
+        }
+
+        if (array_key_exists("Toa",$param) and $param["Toa"] !== null) {
+            $this->Toa = $param["Toa"];
         }
     }
 }

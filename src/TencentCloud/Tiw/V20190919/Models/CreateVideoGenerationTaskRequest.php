@@ -48,6 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRecordControl(RecordControl $RecordControl) 设置视频生成控制参数，用于更精细地指定需要生成哪些流，某一路流是否禁用音频，是否只录制小画面等
 
 此参数与开始录制接口提供的RecordControl参数互斥，在本接口与开始录制接口都提供了RecordControl参数时，优先使用本接口指定的RecordControl参数进行视频生成控制，否则使用开始录制接口提供的RecordControl参数进行视频拼生成控制。
+ * @method string getExtraData() 获取内部参数
+ * @method void setExtraData(string $ExtraData) 设置内部参数
  */
 class CreateVideoGenerationTaskRequest extends AbstractModel
 {
@@ -90,6 +92,11 @@ class CreateVideoGenerationTaskRequest extends AbstractModel
     public $RecordControl;
 
     /**
+     * @var string 内部参数
+     */
+    public $ExtraData;
+
+    /**
      * @param string $OnlineRecordTaskId 录制任务的TaskId
      * @param integer $SdkAppId 客户的SdkAppId
      * @param Whiteboard $Whiteboard 视频生成的白板参数，例如白板宽高等。
@@ -104,6 +111,7 @@ class CreateVideoGenerationTaskRequest extends AbstractModel
      * @param RecordControl $RecordControl 视频生成控制参数，用于更精细地指定需要生成哪些流，某一路流是否禁用音频，是否只录制小画面等
 
 此参数与开始录制接口提供的RecordControl参数互斥，在本接口与开始录制接口都提供了RecordControl参数时，优先使用本接口指定的RecordControl参数进行视频生成控制，否则使用开始录制接口提供的RecordControl参数进行视频拼生成控制。
+     * @param string $ExtraData 内部参数
      */
     function __construct()
     {
@@ -144,6 +152,10 @@ class CreateVideoGenerationTaskRequest extends AbstractModel
         if (array_key_exists("RecordControl",$param) and $param["RecordControl"] !== null) {
             $this->RecordControl = new RecordControl();
             $this->RecordControl->deserialize($param["RecordControl"]);
+        }
+
+        if (array_key_exists("ExtraData",$param) and $param["ExtraData"] !== null) {
+            $this->ExtraData = $param["ExtraData"];
         }
     }
 }

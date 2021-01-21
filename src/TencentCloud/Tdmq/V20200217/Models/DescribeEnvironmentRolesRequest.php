@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeEnvironmentRoles请求参数结构体
  *
- * @method string getEnvironmentId() 获取环境（命名空间）
- * @method void setEnvironmentId(string $EnvironmentId) 设置环境（命名空间）
+ * @method string getEnvironmentId() 获取环境（命名空间）名称。
+ * @method void setEnvironmentId(string $EnvironmentId) 设置环境（命名空间）名称。
  * @method integer getOffset() 获取起始下标，不填默认为0。
  * @method void setOffset(integer $Offset) 设置起始下标，不填默认为0。
  * @method integer getLimit() 获取返回数量，不填则默认为10，最大值为20。
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeEnvironmentRolesRequest extends AbstractModel
 {
     /**
-     * @var string 环境（命名空间）
+     * @var string 环境（命名空间）名称。
      */
     public $EnvironmentId;
 
@@ -59,7 +59,7 @@ class DescribeEnvironmentRolesRequest extends AbstractModel
     public $RoleName;
 
     /**
-     * @param string $EnvironmentId 环境（命名空间）
+     * @param string $EnvironmentId 环境（命名空间）名称。
      * @param integer $Offset 起始下标，不填默认为0。
      * @param integer $Limit 返回数量，不填则默认为10，最大值为20。
      * @param string $ClusterId Pulsar 集群的ID

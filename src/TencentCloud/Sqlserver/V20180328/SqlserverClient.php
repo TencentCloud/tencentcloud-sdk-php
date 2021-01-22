@@ -71,6 +71,7 @@ use TencentCloud\Sqlserver\V20180328\Models as Models;
  * @method Models\ModifyBackupNameResponse ModifyBackupName(Models\ModifyBackupNameRequest $req) 本接口(ModifyBackupName)用于修改备份名称。
  * @method Models\ModifyBackupStrategyResponse ModifyBackupStrategy(Models\ModifyBackupStrategyRequest $req) 本接口（ModifyBackupStrategy）用于修改备份策略
  * @method Models\ModifyDBInstanceNameResponse ModifyDBInstanceName(Models\ModifyDBInstanceNameRequest $req) 本接口（ModifyDBInstanceName）用于修改实例名字。
+ * @method Models\ModifyDBInstanceNetworkResponse ModifyDBInstanceNetwork(Models\ModifyDBInstanceNetworkRequest $req) 本接口（ModifyDBInstanceNetwork）用于修改运行中实例的网络，仅支持从VPC网络到VPC网络的转换
  * @method Models\ModifyDBInstanceProjectResponse ModifyDBInstanceProject(Models\ModifyDBInstanceProjectRequest $req) 本接口（ModifyDBInstanceProject）用于修改数据库实例所属项目。
  * @method Models\ModifyDBInstanceRenewFlagResponse ModifyDBInstanceRenewFlag(Models\ModifyDBInstanceRenewFlagRequest $req) 本接口（ModifyDBInstanceRenewFlag）用于修改实例续费标记
  * @method Models\ModifyDBInstanceSecurityGroupsResponse ModifyDBInstanceSecurityGroups(Models\ModifyDBInstanceSecurityGroupsRequest $req) 本接口(ModifyDBInstanceSecurityGroups)用于修改实例绑定的安全组。

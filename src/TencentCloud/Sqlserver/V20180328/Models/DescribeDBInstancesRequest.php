@@ -60,6 +60,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) 设置实例所属VPC的唯一字符串ID，格式如：vpc-xxx，传空字符串(“”)则按照基础网络筛选。
  * @method string getSubnetId() 获取实例所属子网的唯一字符串ID，格式如： subnet-xxx，传空字符串(“”)则按照基础网络筛选。
  * @method void setSubnetId(string $SubnetId) 设置实例所属子网的唯一字符串ID，格式如： subnet-xxx，传空字符串(“”)则按照基础网络筛选。
+ * @method array getVipSet() 获取实例内网地址列表，格式如：172.1.0.12
+ * @method void setVipSet(array $VipSet) 设置实例内网地址列表，格式如：172.1.0.12
+ * @method array getInstanceNameSet() 获取实例名称列表，模糊查询
+ * @method void setInstanceNameSet(array $InstanceNameSet) 设置实例名称列表，模糊查询
+ * @method array getVersionSet() 获取实例版本代号列表，格式如：2008R2，2012SP3等
+ * @method void setVersionSet(array $VersionSet) 设置实例版本代号列表，格式如：2008R2，2012SP3等
+ * @method string getZone() 获取实例可用区，格式如：ap-guangzhou-2
+ * @method void setZone(string $Zone) 设置实例可用区，格式如：ap-guangzhou-2
+ * @method array getTagKeys() 获取实例标签列表
+ * @method void setTagKeys(array $TagKeys) 设置实例标签列表
+ * @method string getSearchKey() 获取模糊查询关键字，支持实例id、实例名、内网ip
+ * @method void setSearchKey(string $SearchKey) 设置模糊查询关键字，支持实例id、实例名、内网ip
  */
 class DescribeDBInstancesRequest extends AbstractModel
 {
@@ -116,6 +128,36 @@ class DescribeDBInstancesRequest extends AbstractModel
     public $SubnetId;
 
     /**
+     * @var array 实例内网地址列表，格式如：172.1.0.12
+     */
+    public $VipSet;
+
+    /**
+     * @var array 实例名称列表，模糊查询
+     */
+    public $InstanceNameSet;
+
+    /**
+     * @var array 实例版本代号列表，格式如：2008R2，2012SP3等
+     */
+    public $VersionSet;
+
+    /**
+     * @var string 实例可用区，格式如：ap-guangzhou-2
+     */
+    public $Zone;
+
+    /**
+     * @var array 实例标签列表
+     */
+    public $TagKeys;
+
+    /**
+     * @var string 模糊查询关键字，支持实例id、实例名、内网ip
+     */
+    public $SearchKey;
+
+    /**
      * @param integer $ProjectId 项目ID
      * @param integer $Status 实例状态。取值范围：
 <li>1：申请中</li>
@@ -136,6 +178,12 @@ class DescribeDBInstancesRequest extends AbstractModel
      * @param integer $PayMode 付费类型检索 1-包年包月，0-按量计费
      * @param string $VpcId 实例所属VPC的唯一字符串ID，格式如：vpc-xxx，传空字符串(“”)则按照基础网络筛选。
      * @param string $SubnetId 实例所属子网的唯一字符串ID，格式如： subnet-xxx，传空字符串(“”)则按照基础网络筛选。
+     * @param array $VipSet 实例内网地址列表，格式如：172.1.0.12
+     * @param array $InstanceNameSet 实例名称列表，模糊查询
+     * @param array $VersionSet 实例版本代号列表，格式如：2008R2，2012SP3等
+     * @param string $Zone 实例可用区，格式如：ap-guangzhou-2
+     * @param array $TagKeys 实例标签列表
+     * @param string $SearchKey 模糊查询关键字，支持实例id、实例名、内网ip
      */
     function __construct()
     {
@@ -180,6 +228,30 @@ class DescribeDBInstancesRequest extends AbstractModel
 
         if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
             $this->SubnetId = $param["SubnetId"];
+        }
+
+        if (array_key_exists("VipSet",$param) and $param["VipSet"] !== null) {
+            $this->VipSet = $param["VipSet"];
+        }
+
+        if (array_key_exists("InstanceNameSet",$param) and $param["InstanceNameSet"] !== null) {
+            $this->InstanceNameSet = $param["InstanceNameSet"];
+        }
+
+        if (array_key_exists("VersionSet",$param) and $param["VersionSet"] !== null) {
+            $this->VersionSet = $param["VersionSet"];
+        }
+
+        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
+            $this->Zone = $param["Zone"];
+        }
+
+        if (array_key_exists("TagKeys",$param) and $param["TagKeys"] !== null) {
+            $this->TagKeys = $param["TagKeys"];
+        }
+
+        if (array_key_exists("SearchKey",$param) and $param["SearchKey"] !== null) {
+            $this->SearchKey = $param["SearchKey"];
         }
     }
 }

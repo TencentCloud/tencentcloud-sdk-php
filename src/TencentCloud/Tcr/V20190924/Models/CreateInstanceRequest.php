@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getRegistryName() 获取企业版实例名称
  * @method void setRegistryName(string $RegistryName) 设置企业版实例名称
- * @method string getRegistryType() 获取企业版实例类型
- * @method void setRegistryType(string $RegistryType) 设置企业版实例类型
+ * @method string getRegistryType() 获取企业版实例类型（basic 基础版；standard 标准版；premium 高级版）
+ * @method void setRegistryType(string $RegistryType) 设置企业版实例类型（basic 基础版；standard 标准版；premium 高级版）
  * @method TagSpecification getTagSpecification() 获取云标签描述
  * @method void setTagSpecification(TagSpecification $TagSpecification) 设置云标签描述
  * @method integer getRegistryChargeType() 获取实例计费类型，0表示按量计费，1表示预付费，当前版本只支持后付费，默认为按量计费
@@ -37,7 +37,7 @@ class CreateInstanceRequest extends AbstractModel
     public $RegistryName;
 
     /**
-     * @var string 企业版实例类型
+     * @var string 企业版实例类型（basic 基础版；standard 标准版；premium 高级版）
      */
     public $RegistryType;
 
@@ -53,7 +53,7 @@ class CreateInstanceRequest extends AbstractModel
 
     /**
      * @param string $RegistryName 企业版实例名称
-     * @param string $RegistryType 企业版实例类型
+     * @param string $RegistryType 企业版实例类型（basic 基础版；standard 标准版；premium 高级版）
      * @param TagSpecification $TagSpecification 云标签描述
      * @param integer $RegistryChargeType 实例计费类型，0表示按量计费，1表示预付费，当前版本只支持后付费，默认为按量计费
      */

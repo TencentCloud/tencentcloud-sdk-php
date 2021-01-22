@@ -36,6 +36,7 @@ use TencentCloud\Tke\V20180525\Models as Models;
  * @method Models\CreateClusterNodePoolFromExistingAsgResponse CreateClusterNodePoolFromExistingAsg(Models\CreateClusterNodePoolFromExistingAsgRequest $req) 从伸缩组创建节点池
  * @method Models\CreateClusterRouteResponse CreateClusterRoute(Models\CreateClusterRouteRequest $req) 创建集群路由
  * @method Models\CreateClusterRouteTableResponse CreateClusterRouteTable(Models\CreateClusterRouteTableRequest $req) 创建集群路由表
+ * @method Models\CreateEKSClusterResponse CreateEKSCluster(Models\CreateEKSClusterRequest $req) 创建弹性集群
  * @method Models\CreatePrometheusDashboardResponse CreatePrometheusDashboard(Models\CreatePrometheusDashboardRequest $req) 创建grafana监控面板
  * @method Models\CreatePrometheusTemplateResponse CreatePrometheusTemplate(Models\CreatePrometheusTemplateRequest $req) 创建一个云原生Prometheus模板实例
  * @method Models\DeleteClusterResponse DeleteCluster(Models\DeleteClusterRequest $req) 删除集群(YUNAPI V3版本)
@@ -46,6 +47,7 @@ use TencentCloud\Tke\V20180525\Models as Models;
  * @method Models\DeleteClusterNodePoolResponse DeleteClusterNodePool(Models\DeleteClusterNodePoolRequest $req) 删除节点池
  * @method Models\DeleteClusterRouteResponse DeleteClusterRoute(Models\DeleteClusterRouteRequest $req) 删除集群路由
  * @method Models\DeleteClusterRouteTableResponse DeleteClusterRouteTable(Models\DeleteClusterRouteTableRequest $req) 删除集群路由表
+ * @method Models\DeleteEKSClusterResponse DeleteEKSCluster(Models\DeleteEKSClusterRequest $req) 删除弹性集群(yunapiv3)
  * @method Models\DeletePrometheusTemplateResponse DeletePrometheusTemplate(Models\DeletePrometheusTemplateRequest $req) 删除一个云原生Promehtheus配置模板
  * @method Models\DeletePrometheusTemplateSyncResponse DeletePrometheusTemplateSync(Models\DeletePrometheusTemplateSyncRequest $req) 取消模板同步，这将会删除目标中该模板所生产的配置
  * @method Models\DescribeAvailableClusterVersionResponse DescribeAvailableClusterVersion(Models\DescribeAvailableClusterVersionRequest $req) 获取集群可以升级的所有版本
@@ -61,6 +63,8 @@ use TencentCloud\Tke\V20180525\Models as Models;
  * @method Models\DescribeClusterRoutesResponse DescribeClusterRoutes(Models\DescribeClusterRoutesRequest $req) 查询集群路由
  * @method Models\DescribeClusterSecurityResponse DescribeClusterSecurity(Models\DescribeClusterSecurityRequest $req) 集群的密钥信息
  * @method Models\DescribeClustersResponse DescribeClusters(Models\DescribeClustersRequest $req) 查询集群列表
+ * @method Models\DescribeEKSClusterCredentialResponse DescribeEKSClusterCredential(Models\DescribeEKSClusterCredentialRequest $req) 获取弹性容器集群的接入认证信息
+ * @method Models\DescribeEKSClustersResponse DescribeEKSClusters(Models\DescribeEKSClustersRequest $req) 查询弹性集群列表
  * @method Models\DescribeExistedInstancesResponse DescribeExistedInstances(Models\DescribeExistedInstancesRequest $req) 查询已经存在的节点，判断是否可以加入集群
  * @method Models\DescribeImagesResponse DescribeImages(Models\DescribeImagesRequest $req) 获取镜像信息
  * @method Models\DescribePrometheusAgentInstancesResponse DescribePrometheusAgentInstances(Models\DescribePrometheusAgentInstancesRequest $req) 获取关联目标集群的实例列表
@@ -83,6 +87,7 @@ use TencentCloud\Tke\V20180525\Models as Models;
  * @method Models\RemoveNodeFromNodePoolResponse RemoveNodeFromNodePool(Models\RemoveNodeFromNodePoolRequest $req) 移出节点池节点，但保留在集群内
  * @method Models\SyncPrometheusTemplateResponse SyncPrometheusTemplate(Models\SyncPrometheusTemplateRequest $req) 同步模板到实例或者集群
  * @method Models\UpdateClusterVersionResponse UpdateClusterVersion(Models\UpdateClusterVersionRequest $req) 升级集群 Master 组件到指定版本
+ * @method Models\UpdateEKSClusterResponse UpdateEKSCluster(Models\UpdateEKSClusterRequest $req) 修改弹性集群名称等属性 
  * @method Models\UpgradeClusterInstancesResponse UpgradeClusterInstances(Models\UpgradeClusterInstancesRequest $req) 给集群的一批work节点进行升级 
  */
 

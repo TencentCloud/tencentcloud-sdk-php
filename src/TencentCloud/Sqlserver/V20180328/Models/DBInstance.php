@@ -100,6 +100,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHAFlag(string $HAFlag) 设置容灾类型，MIRROR-镜像，ALWAYSON-AlwaysOn, SINGLE-单例
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getResourceTags() 获取实例绑定的标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setResourceTags(array $ResourceTags) 设置实例绑定的标签列表
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DBInstance extends AbstractModel
 {
@@ -288,6 +292,12 @@ class DBInstance extends AbstractModel
     public $HAFlag;
 
     /**
+     * @var array 实例绑定的标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ResourceTags;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $Name 实例名称
      * @param integer $ProjectId 实例所在项目ID
@@ -327,6 +337,8 @@ class DBInstance extends AbstractModel
      * @param string $ROFlag 只读标识，RO-只读实例，MASTER-有RO实例的主实例，空值-没有只读组的非RO实例
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $HAFlag 容灾类型，MIRROR-镜像，ALWAYSON-AlwaysOn, SINGLE-单例
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $ResourceTags 实例绑定的标签列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -484,6 +496,15 @@ class DBInstance extends AbstractModel
 
         if (array_key_exists("HAFlag",$param) and $param["HAFlag"] !== null) {
             $this->HAFlag = $param["HAFlag"];
+        }
+
+        if (array_key_exists("ResourceTags",$param) and $param["ResourceTags"] !== null) {
+            $this->ResourceTags = [];
+            foreach ($param["ResourceTags"] as $key => $value){
+                $obj = new ResourceTag();
+                $obj->deserialize($value);
+                array_push($this->ResourceTags, $obj);
+            }
         }
     }
 }

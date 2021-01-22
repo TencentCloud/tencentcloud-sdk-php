@@ -58,6 +58,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoVoucher(integer $AutoVoucher) 设置是否自动使用代金券；1 - 是，0 - 否，默认不使用
  * @method array getVoucherIds() 获取代金券ID数组，目前单个订单只能使用一张
  * @method void setVoucherIds(array $VoucherIds) 设置代金券ID数组，目前单个订单只能使用一张
+ * @method array getResourceTags() 获取新建实例绑定的标签集合
+ * @method void setResourceTags(array $ResourceTags) 设置新建实例绑定的标签集合
  */
 class CreateReadOnlyDBInstancesRequest extends AbstractModel
 {
@@ -157,6 +159,11 @@ class CreateReadOnlyDBInstancesRequest extends AbstractModel
     public $VoucherIds;
 
     /**
+     * @var array 新建实例绑定的标签集合
+     */
+    public $ResourceTags;
+
+    /**
      * @param string $InstanceId 主实例ID，格式如：mssql-3l3fgqn7
      * @param string $Zone 实例可用区，类似ap-guangzhou-1（广州一区）；实例可售卖区域可以通过接口DescribeZones获取
      * @param integer $ReadOnlyGroupType 只读组类型选项，1-按照一个实例一个只读组的方式发货，2-新建只读组后发货，所有实例都在这个只读组下面， 3-发货的所有实例都在已有的只读组下面
@@ -176,6 +183,7 @@ class CreateReadOnlyDBInstancesRequest extends AbstractModel
      * @param array $SecurityGroupList 安全组列表，填写形如sg-xxx的安全组ID
      * @param integer $AutoVoucher 是否自动使用代金券；1 - 是，0 - 否，默认不使用
      * @param array $VoucherIds 代金券ID数组，目前单个订单只能使用一张
+     * @param array $ResourceTags 新建实例绑定的标签集合
      */
     function __construct()
     {
@@ -264,6 +272,15 @@ class CreateReadOnlyDBInstancesRequest extends AbstractModel
 
         if (array_key_exists("VoucherIds",$param) and $param["VoucherIds"] !== null) {
             $this->VoucherIds = $param["VoucherIds"];
+        }
+
+        if (array_key_exists("ResourceTags",$param) and $param["ResourceTags"] !== null) {
+            $this->ResourceTags = [];
+            foreach ($param["ResourceTags"] as $key => $value){
+                $obj = new ResourceTag();
+                $obj->deserialize($value);
+                array_push($this->ResourceTags, $obj);
+            }
         }
     }
 }

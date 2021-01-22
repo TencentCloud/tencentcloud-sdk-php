@@ -58,6 +58,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) 设置可维护时间窗配置，每天可维护的开始时间
  * @method integer getSpan() 获取可维护时间窗配置，持续时间，单位：小时
  * @method void setSpan(integer $Span) 设置可维护时间窗配置，持续时间，单位：小时
+ * @method array getResourceTags() 获取新建实例绑定的标签集合
+ * @method void setResourceTags(array $ResourceTags) 设置新建实例绑定的标签集合
  */
 class CreateBasicDBInstancesRequest extends AbstractModel
 {
@@ -157,6 +159,11 @@ class CreateBasicDBInstancesRequest extends AbstractModel
     public $Span;
 
     /**
+     * @var array 新建实例绑定的标签集合
+     */
+    public $ResourceTags;
+
+    /**
      * @param string $Zone 实例可用区，类似ap-guangzhou-1（广州一区）；实例可售卖区域可以通过接口DescribeZones获取
      * @param integer $Cpu 实例的CPU核心数
      * @param integer $Memory 实例内存大小，单位GB
@@ -176,6 +183,7 @@ class CreateBasicDBInstancesRequest extends AbstractModel
      * @param array $Weekly 可维护时间窗配置，以周为单位，表示周几允许维护，1-7分别代表周一到周末
      * @param string $StartTime 可维护时间窗配置，每天可维护的开始时间
      * @param integer $Span 可维护时间窗配置，持续时间，单位：小时
+     * @param array $ResourceTags 新建实例绑定的标签集合
      */
     function __construct()
     {
@@ -264,6 +272,15 @@ class CreateBasicDBInstancesRequest extends AbstractModel
 
         if (array_key_exists("Span",$param) and $param["Span"] !== null) {
             $this->Span = $param["Span"];
+        }
+
+        if (array_key_exists("ResourceTags",$param) and $param["ResourceTags"] !== null) {
+            $this->ResourceTags = [];
+            foreach ($param["ResourceTags"] as $key => $value){
+                $obj = new ResourceTag();
+                $obj->deserialize($value);
+                array_push($this->ResourceTags, $obj);
+            }
         }
     }
 }

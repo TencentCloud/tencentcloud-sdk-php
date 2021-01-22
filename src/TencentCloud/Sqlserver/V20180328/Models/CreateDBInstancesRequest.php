@@ -58,6 +58,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHAType(string $HAType) 设置购买高可用实例的类型：DUAL-双机高可用  CLUSTER-集群，默认值为DUAL
  * @method boolean getMultiZones() 获取是否跨可用区部署，默认值为false
  * @method void setMultiZones(boolean $MultiZones) 设置是否跨可用区部署，默认值为false
+ * @method array getResourceTags() 获取新建实例绑定的标签集合
+ * @method void setResourceTags(array $ResourceTags) 设置新建实例绑定的标签集合
  */
 class CreateDBInstancesRequest extends AbstractModel
 {
@@ -157,6 +159,11 @@ class CreateDBInstancesRequest extends AbstractModel
     public $MultiZones;
 
     /**
+     * @var array 新建实例绑定的标签集合
+     */
+    public $ResourceTags;
+
+    /**
      * @param string $Zone 实例可用区，类似ap-guangzhou-1（广州一区）；实例可售卖区域可以通过接口DescribeZones获取
      * @param integer $Memory 实例内存大小，单位GB
      * @param integer $Storage 实例磁盘大小，单位GB
@@ -176,6 +183,7 @@ class CreateDBInstancesRequest extends AbstractModel
      * @param integer $Span 可维护时间窗配置，持续时间，单位：小时
      * @param string $HAType 购买高可用实例的类型：DUAL-双机高可用  CLUSTER-集群，默认值为DUAL
      * @param boolean $MultiZones 是否跨可用区部署，默认值为false
+     * @param array $ResourceTags 新建实例绑定的标签集合
      */
     function __construct()
     {
@@ -264,6 +272,15 @@ class CreateDBInstancesRequest extends AbstractModel
 
         if (array_key_exists("MultiZones",$param) and $param["MultiZones"] !== null) {
             $this->MultiZones = $param["MultiZones"];
+        }
+
+        if (array_key_exists("ResourceTags",$param) and $param["ResourceTags"] !== null) {
+            $this->ResourceTags = [];
+            foreach ($param["ResourceTags"] as $key => $value){
+                $obj = new ResourceTag();
+                $obj->deserialize($value);
+                array_push($this->ResourceTags, $obj);
+            }
         }
     }
 }

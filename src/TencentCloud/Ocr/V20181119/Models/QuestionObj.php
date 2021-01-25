@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQuestionOptions(string $QuestionOptions) 设置选择题选项，包含1个或多个option
  * @method string getQuestionSubquestion() 获取所有子题的question属性
  * @method void setQuestionSubquestion(string $QuestionSubquestion) 设置所有子题的question属性
+ * @method array getQuestionImageCoords() 获取示意图检测框在的图片中的像素坐标
+ * @method void setQuestionImageCoords(array $QuestionImageCoords) 设置示意图检测框在的图片中的像素坐标
  */
 class QuestionObj extends AbstractModel
 {
@@ -68,6 +70,11 @@ class QuestionObj extends AbstractModel
     public $QuestionSubquestion;
 
     /**
+     * @var array 示意图检测框在的图片中的像素坐标
+     */
+    public $QuestionImageCoords;
+
+    /**
      * @param string $QuestionTextNo 题号
      * @param integer $QuestionTextType 题型：
 1: "选择题"
@@ -76,6 +83,7 @@ class QuestionObj extends AbstractModel
      * @param string $QuestionText 题干
      * @param string $QuestionOptions 选择题选项，包含1个或多个option
      * @param string $QuestionSubquestion 所有子题的question属性
+     * @param array $QuestionImageCoords 示意图检测框在的图片中的像素坐标
      */
     function __construct()
     {
@@ -108,6 +116,15 @@ class QuestionObj extends AbstractModel
 
         if (array_key_exists("QuestionSubquestion",$param) and $param["QuestionSubquestion"] !== null) {
             $this->QuestionSubquestion = $param["QuestionSubquestion"];
+        }
+
+        if (array_key_exists("QuestionImageCoords",$param) and $param["QuestionImageCoords"] !== null) {
+            $this->QuestionImageCoords = [];
+            foreach ($param["QuestionImageCoords"] as $key => $value){
+                $obj = new Rect();
+                $obj->deserialize($value);
+                array_push($this->QuestionImageCoords, $obj);
+            }
         }
     }
 }

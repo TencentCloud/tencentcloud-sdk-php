@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateLoadBalancer请求参数结构体
  *
- * @method string getEcmRegion() 获取区域。
- * @method void setEcmRegion(string $EcmRegion) 设置区域。
+ * @method string getEcmRegion() 获取ECM区域，形如ap-xian-ecm。
+ * @method void setEcmRegion(string $EcmRegion) 设置ECM区域，形如ap-xian-ecm。
  * @method string getLoadBalancerType() 获取负载均衡实例的网络类型。目前只支持传入OPEN，表示公网属性。
  * @method void setLoadBalancerType(string $LoadBalancerType) 设置负载均衡实例的网络类型。目前只支持传入OPEN，表示公网属性。
  * @method string getVipIsp() 获取CMCC | CTCC | CUCC，分别对应 移动 | 电信 | 联通。
@@ -38,11 +38,13 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInternetAccessible(LoadBalancerInternetAccessible $InternetAccessible) 设置负载均衡的带宽限制等信息。
  * @method array getTags() 获取标签。
  * @method void setTags(array $Tags) 设置标签。
+ * @method array getSecurityGroups() 获取安全组。
+ * @method void setSecurityGroups(array $SecurityGroups) 设置安全组。
  */
 class CreateLoadBalancerRequest extends AbstractModel
 {
     /**
-     * @var string 区域。
+     * @var string ECM区域，形如ap-xian-ecm。
      */
     public $EcmRegion;
 
@@ -83,7 +85,12 @@ class CreateLoadBalancerRequest extends AbstractModel
     public $Tags;
 
     /**
-     * @param string $EcmRegion 区域。
+     * @var array 安全组。
+     */
+    public $SecurityGroups;
+
+    /**
+     * @param string $EcmRegion ECM区域，形如ap-xian-ecm。
      * @param string $LoadBalancerType 负载均衡实例的网络类型。目前只支持传入OPEN，表示公网属性。
      * @param string $VipIsp CMCC | CTCC | CUCC，分别对应 移动 | 电信 | 联通。
      * @param string $LoadBalancerName 负载均衡实例的名称，只在创建一个实例的时候才会生效。规则：1-50 个英文、汉字、数字、连接线“-”或下划线“_”。
@@ -92,6 +99,7 @@ class CreateLoadBalancerRequest extends AbstractModel
      * @param integer $Number 创建负载均衡的个数，默认值 1。
      * @param LoadBalancerInternetAccessible $InternetAccessible 负载均衡的带宽限制等信息。
      * @param array $Tags 标签。
+     * @param array $SecurityGroups 安全组。
      */
     function __construct()
     {
@@ -142,6 +150,10 @@ class CreateLoadBalancerRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("SecurityGroups",$param) and $param["SecurityGroups"] !== null) {
+            $this->SecurityGroups = $param["SecurityGroups"];
         }
     }
 }

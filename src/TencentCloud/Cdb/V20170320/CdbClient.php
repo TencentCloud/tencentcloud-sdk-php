@@ -99,7 +99,7 @@ use TencentCloud\Cdb\V20170320\Models as Models;
  * @method Models\DescribeDBSwitchRecordsResponse DescribeDBSwitchRecords(Models\DescribeDBSwitchRecordsRequest $req) 本接口(DescribeDBSwitchRecords)用于查询云数据库实例切换记录。
  * @method Models\DescribeDBZoneConfigResponse DescribeDBZoneConfig(Models\DescribeDBZoneConfigRequest $req) 本接口(DescribeDBZoneConfig)用于查询可创建的云数据库各地域可售卖的规格配置。
  * @method Models\DescribeDataBackupOverviewResponse DescribeDataBackupOverview(Models\DescribeDataBackupOverviewRequest $req) 本接口(DescribeDataBackupOverview)用于查询用户在当前地域总的数据备份概览。
- * @method Models\DescribeDatabasesResponse DescribeDatabases(Models\DescribeDatabasesRequest $req) 本接口(DescribeDatabases)用于查询云数据库实例的数据库信息。
+ * @method Models\DescribeDatabasesResponse DescribeDatabases(Models\DescribeDatabasesRequest $req) 本接口(DescribeDatabases)用于查询云数据库实例的数据库信息，仅支持主实例和灾备实例，不支持只读实例。
  * @method Models\DescribeDefaultParamsResponse DescribeDefaultParams(Models\DescribeDefaultParamsRequest $req) 该接口（DescribeDefaultParams）用于查询默认的可设置参数列表。
  * @method Models\DescribeDeployGroupListResponse DescribeDeployGroupList(Models\DescribeDeployGroupListRequest $req) 本接口(DescribeDeployGroupList)用于查询用户的置放群组列表，可以指定置放群组 ID 或置放群组名称。
  * @method Models\DescribeDeviceMonitorInfoResponse DescribeDeviceMonitorInfo(Models\DescribeDeviceMonitorInfoRequest $req) 本接口（DescribeDeviceMonitorInfo）用于查询云数据库物理机当天的监控信息，暂只支持内存488G、硬盘6T的实例查询。
@@ -116,7 +116,7 @@ use TencentCloud\Cdb\V20170320\Models as Models;
  * @method Models\DescribeSlowLogDataResponse DescribeSlowLogData(Models\DescribeSlowLogDataRequest $req) 条件检索实例的慢日志。只允许查看一个月之内的慢日志
  * @method Models\DescribeSlowLogsResponse DescribeSlowLogs(Models\DescribeSlowLogsRequest $req) 本接口(DescribeSlowLogs)用于获取云数据库实例的慢查询日志。
  * @method Models\DescribeSupportedPrivilegesResponse DescribeSupportedPrivileges(Models\DescribeSupportedPrivilegesRequest $req) 本接口(DescribeSupportedPrivileges)用于查询云数据库的支持的权限信息，包括全局权限，数据库权限，表权限以及列权限。
- * @method Models\DescribeTablesResponse DescribeTables(Models\DescribeTablesRequest $req) 本接口(DescribeTables)用于查询云数据库实例的数据库表信息。
+ * @method Models\DescribeTablesResponse DescribeTables(Models\DescribeTablesRequest $req) 本接口(DescribeTables)用于查询云数据库实例的数据库表信息，仅支持主实例和灾备实例，不支持只读实例。
  * @method Models\DescribeTagsOfInstanceIdsResponse DescribeTagsOfInstanceIds(Models\DescribeTagsOfInstanceIdsRequest $req) 本接口(DescribeTagsOfInstanceIds)用于获取云数据库实例的标签信息。
  * @method Models\DescribeTasksResponse DescribeTasks(Models\DescribeTasksRequest $req) 本接口(DescribeTasks)用于查询云数据库实例任务列表。
  * @method Models\DescribeTimeWindowResponse DescribeTimeWindow(Models\DescribeTimeWindowRequest $req) 本接口(DescribeTimeWindow)用于查询云数据库实例的维护时间窗口。

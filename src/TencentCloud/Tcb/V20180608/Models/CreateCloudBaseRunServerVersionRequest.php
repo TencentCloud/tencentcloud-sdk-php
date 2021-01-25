@@ -82,8 +82,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnableUnion(boolean $EnableUnion) 设置是否使用统一域名
  * @method string getOperatorRemark() 获取操作备注
  * @method void setOperatorRemark(string $OperatorRemark) 设置操作备注
- * @method string getServerPath() 获取服务路劲
- * @method void setServerPath(string $ServerPath) 设置服务路劲
+ * @method string getServerPath() 获取服务路径
+ * @method void setServerPath(string $ServerPath) 设置服务路径
  * @method string getImageReuseKey() 获取镜像复用的key
  * @method void setImageReuseKey(string $ImageReuseKey) 设置镜像复用的key
  * @method array getSidecarSpecs() 获取容器的描述文件
@@ -247,7 +247,7 @@ class CreateCloudBaseRunServerVersionRequest extends AbstractModel
     public $OperatorRemark;
 
     /**
-     * @var string 服务路劲
+     * @var string 服务路径
      */
     public $ServerPath;
 
@@ -293,7 +293,7 @@ class CreateCloudBaseRunServerVersionRequest extends AbstractModel
      * @param CloudBaseEsInfo $EsInfo es信息
      * @param boolean $EnableUnion 是否使用统一域名
      * @param string $OperatorRemark 操作备注
-     * @param string $ServerPath 服务路劲
+     * @param string $ServerPath 服务路径
      * @param string $ImageReuseKey 镜像复用的key
      * @param array $SidecarSpecs 容器的描述文件
      */

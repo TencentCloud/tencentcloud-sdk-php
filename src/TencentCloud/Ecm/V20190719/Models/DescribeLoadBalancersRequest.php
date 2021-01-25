@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
 tag-key - String - 是否必填：否 - （过滤条件）按照标签的键过滤。
  * @method void setFilters(array $Filters) 设置每次请求的`Filters`的上限为10，`Filter.Values`的上限为100。详细的过滤条件如下：
 tag-key - String - 是否必填：否 - （过滤条件）按照标签的键过滤。
+ * @method string getSecurityGroup() 获取安全组。
+ * @method void setSecurityGroup(string $SecurityGroup) 设置安全组。
  */
 class DescribeLoadBalancersRequest extends AbstractModel
 {
@@ -100,6 +102,11 @@ tag-key - String - 是否必填：否 - （过滤条件）按照标签的键过�
     public $Filters;
 
     /**
+     * @var string 安全组。
+     */
+    public $SecurityGroup;
+
+    /**
      * @param string $EcmRegion 区域。如果不传则默认查询所有区域。
      * @param array $LoadBalancerIds 负载均衡实例 ID。
      * @param string $LoadBalancerName 负载均衡实例的名称。
@@ -112,6 +119,7 @@ tag-key - String - 是否必填：否 - （过滤条件）按照标签的键过�
      * @param string $VpcId 负载均衡实例所属私有网络唯一ID，如 vpc-bhqkbhdx。
      * @param array $Filters 每次请求的`Filters`的上限为10，`Filter.Values`的上限为100。详细的过滤条件如下：
 tag-key - String - 是否必填：否 - （过滤条件）按照标签的键过滤。
+     * @param string $SecurityGroup 安全组。
      */
     function __construct()
     {
@@ -169,6 +177,10 @@ tag-key - String - 是否必填：否 - （过滤条件）按照标签的键过�
                 $obj->deserialize($value);
                 array_push($this->Filters, $obj);
             }
+        }
+
+        if (array_key_exists("SecurityGroup",$param) and $param["SecurityGroup"] !== null) {
+            $this->SecurityGroup = $param["SecurityGroup"];
         }
     }
 }

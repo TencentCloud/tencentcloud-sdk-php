@@ -136,6 +136,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeployable(boolean $Deployable) 设置是否可部署。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTags() 获取标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTags(array $Tags) 设置标签列表
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Certificates extends AbstractModel
 {
@@ -314,6 +318,12 @@ class Certificates extends AbstractModel
     public $Deployable;
 
     /**
+     * @var array 标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Tags;
+
+    /**
      * @param string $OwnerUin 用户 UIN。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProjectId 项目 ID。
@@ -371,6 +381,8 @@ class Certificates extends AbstractModel
      * @param array $BoundResource 关联的云资源，暂不可用
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Deployable 是否可部署。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Tags 标签列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -502,6 +514,15 @@ class Certificates extends AbstractModel
 
         if (array_key_exists("Deployable",$param) and $param["Deployable"] !== null) {
             $this->Deployable = $param["Deployable"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tags();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

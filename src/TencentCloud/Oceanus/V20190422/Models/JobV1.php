@@ -124,6 +124,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSchedulerType(integer $SchedulerType) 设置作业所在集群类型
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getClusterStatus() 获取作业所在集群状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setClusterStatus(integer $ClusterStatus) 设置作业所在集群状态
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class JobV1 extends AbstractModel
 {
@@ -284,6 +288,12 @@ class JobV1 extends AbstractModel
     public $SchedulerType;
 
     /**
+     * @var integer 作业所在集群状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ClusterStatus;
+
+    /**
      * @param string $JobId 作业ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Region 地域
@@ -335,6 +345,8 @@ class JobV1 extends AbstractModel
      * @param string $WebUIUrl 作业管理WEB UI 入口
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SchedulerType 作业所在集群类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ClusterStatus 作业所在集群状态
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -452,6 +464,10 @@ class JobV1 extends AbstractModel
 
         if (array_key_exists("SchedulerType",$param) and $param["SchedulerType"] !== null) {
             $this->SchedulerType = $param["SchedulerType"];
+        }
+
+        if (array_key_exists("ClusterStatus",$param) and $param["ClusterStatus"] !== null) {
+            $this->ClusterStatus = $param["ClusterStatus"];
         }
     }
 }

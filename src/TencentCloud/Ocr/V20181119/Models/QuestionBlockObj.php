@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getQuestionArr() 获取数学试题识别结构化信息数组
  * @method void setQuestionArr(array $QuestionArr) 设置数学试题识别结构化信息数组
+ * @method Rect getQuestionBboxCoord() 获取题目主体区域检测框在图片中的像素坐标
+ * @method void setQuestionBboxCoord(Rect $QuestionBboxCoord) 设置题目主体区域检测框在图片中的像素坐标
  */
 class QuestionBlockObj extends AbstractModel
 {
@@ -31,7 +33,13 @@ class QuestionBlockObj extends AbstractModel
     public $QuestionArr;
 
     /**
+     * @var Rect 题目主体区域检测框在图片中的像素坐标
+     */
+    public $QuestionBboxCoord;
+
+    /**
      * @param array $QuestionArr 数学试题识别结构化信息数组
+     * @param Rect $QuestionBboxCoord 题目主体区域检测框在图片中的像素坐标
      */
     function __construct()
     {
@@ -53,6 +61,11 @@ class QuestionBlockObj extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->QuestionArr, $obj);
             }
+        }
+
+        if (array_key_exists("QuestionBboxCoord",$param) and $param["QuestionBboxCoord"] !== null) {
+            $this->QuestionBboxCoord = new Rect();
+            $this->QuestionBboxCoord->deserialize($param["QuestionBboxCoord"]);
         }
     }
 }

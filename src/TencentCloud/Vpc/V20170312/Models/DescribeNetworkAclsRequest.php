@@ -20,8 +20,6 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeNetworkAcls请求参数结构体
  *
- * @method array getNetworkAclIds() 获取网络ACL实例ID数组。形如：[acl-12345678]。每次请求的实例的上限为100。参数不支持同时指定NetworkAclIds和Filters。
- * @method void setNetworkAclIds(array $NetworkAclIds) 设置网络ACL实例ID数组。形如：[acl-12345678]。每次请求的实例的上限为100。参数不支持同时指定NetworkAclIds和Filters。
  * @method array getFilters() 获取过滤条件，参数不支持同时指定NetworkAclIds和Filters。
 <li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-12345678。</li>
 <li>network-acl-id - String - （过滤条件）网络ACL实例ID，形如：acl-12345678。</li>
@@ -30,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
 <li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-12345678。</li>
 <li>network-acl-id - String - （过滤条件）网络ACL实例ID，形如：acl-12345678。</li>
 <li>network-acl-name - String - （过滤条件）网络ACL实例名称。</li>
+ * @method array getNetworkAclIds() 获取网络ACL实例ID数组。形如：[acl-12345678]。每次请求的实例的上限为100。参数不支持同时指定NetworkAclIds和Filters。
+ * @method void setNetworkAclIds(array $NetworkAclIds) 设置网络ACL实例ID数组。形如：[acl-12345678]。每次请求的实例的上限为100。参数不支持同时指定NetworkAclIds和Filters。
  * @method integer getOffset() 获取偏移量，默认为0。
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
  * @method integer getLimit() 获取返回数量，默认为20，最小值为1，最大值为100。
@@ -38,17 +38,17 @@ use TencentCloud\Common\AbstractModel;
 class DescribeNetworkAclsRequest extends AbstractModel
 {
     /**
-     * @var array 网络ACL实例ID数组。形如：[acl-12345678]。每次请求的实例的上限为100。参数不支持同时指定NetworkAclIds和Filters。
-     */
-    public $NetworkAclIds;
-
-    /**
      * @var array 过滤条件，参数不支持同时指定NetworkAclIds和Filters。
 <li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-12345678。</li>
 <li>network-acl-id - String - （过滤条件）网络ACL实例ID，形如：acl-12345678。</li>
 <li>network-acl-name - String - （过滤条件）网络ACL实例名称。</li>
      */
     public $Filters;
+
+    /**
+     * @var array 网络ACL实例ID数组。形如：[acl-12345678]。每次请求的实例的上限为100。参数不支持同时指定NetworkAclIds和Filters。
+     */
+    public $NetworkAclIds;
 
     /**
      * @var integer 偏移量，默认为0。
@@ -61,11 +61,11 @@ class DescribeNetworkAclsRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @param array $NetworkAclIds 网络ACL实例ID数组。形如：[acl-12345678]。每次请求的实例的上限为100。参数不支持同时指定NetworkAclIds和Filters。
      * @param array $Filters 过滤条件，参数不支持同时指定NetworkAclIds和Filters。
 <li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-12345678。</li>
 <li>network-acl-id - String - （过滤条件）网络ACL实例ID，形如：acl-12345678。</li>
 <li>network-acl-name - String - （过滤条件）网络ACL实例名称。</li>
+     * @param array $NetworkAclIds 网络ACL实例ID数组。形如：[acl-12345678]。每次请求的实例的上限为100。参数不支持同时指定NetworkAclIds和Filters。
      * @param integer $Offset 偏移量，默认为0。
      * @param integer $Limit 返回数量，默认为20，最小值为1，最大值为100。
      */
@@ -82,10 +82,6 @@ class DescribeNetworkAclsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("NetworkAclIds",$param) and $param["NetworkAclIds"] !== null) {
-            $this->NetworkAclIds = $param["NetworkAclIds"];
-        }
-
         if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
             $this->Filters = [];
             foreach ($param["Filters"] as $key => $value){
@@ -93,6 +89,10 @@ class DescribeNetworkAclsRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Filters, $obj);
             }
+        }
+
+        if (array_key_exists("NetworkAclIds",$param) and $param["NetworkAclIds"] !== null) {
+            $this->NetworkAclIds = $param["NetworkAclIds"];
         }
 
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {

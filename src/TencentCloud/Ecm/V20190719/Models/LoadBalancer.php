@@ -74,6 +74,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNetworkAttributes(LoadBalancerInternetAccessible $NetworkAttributes) 设置负载均衡实例的网络属性。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getSecureGroups() 获取安全组。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSecureGroups(array $SecureGroups) 设置安全组。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getLoadBalancerPassToTarget() 获取后端机器是否放通来自ELB的流量。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLoadBalancerPassToTarget(boolean $LoadBalancerPassToTarget) 设置后端机器是否放通来自ELB的流量。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class LoadBalancer extends AbstractModel
 {
@@ -157,6 +165,18 @@ class LoadBalancer extends AbstractModel
     public $NetworkAttributes;
 
     /**
+     * @var array 安全组。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SecureGroups;
+
+    /**
+     * @var boolean 后端机器是否放通来自ELB的流量。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LoadBalancerPassToTarget;
+
+    /**
      * @param string $Region 区域。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Position $Position 位置信息。
@@ -183,6 +203,10 @@ class LoadBalancer extends AbstractModel
      * @param string $VipIsp 负载均衡IP地址所属的ISP。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param LoadBalancerInternetAccessible $NetworkAttributes 负载均衡实例的网络属性。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $SecureGroups 安全组。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $LoadBalancerPassToTarget 后端机器是否放通来自ELB的流量。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -255,6 +279,14 @@ class LoadBalancer extends AbstractModel
         if (array_key_exists("NetworkAttributes",$param) and $param["NetworkAttributes"] !== null) {
             $this->NetworkAttributes = new LoadBalancerInternetAccessible();
             $this->NetworkAttributes->deserialize($param["NetworkAttributes"]);
+        }
+
+        if (array_key_exists("SecureGroups",$param) and $param["SecureGroups"] !== null) {
+            $this->SecureGroups = $param["SecureGroups"];
+        }
+
+        if (array_key_exists("LoadBalancerPassToTarget",$param) and $param["LoadBalancerPassToTarget"] !== null) {
+            $this->LoadBalancerPassToTarget = $param["LoadBalancerPassToTarget"];
         }
     }
 }

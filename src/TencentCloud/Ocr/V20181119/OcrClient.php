@@ -42,7 +42,7 @@ use TencentCloud\Ocr\V20181119\Models as Models;
 
 另外，本接口还支持复印件、翻拍和PS告警功能。
  * @method Models\DutyPaidProofOCRResponse DutyPaidProofOCR(Models\DutyPaidProofOCRRequest $req) 本接口支持对完税证明的税号、纳税人识别号、纳税人名称、金额合计大写、金额合计小写、填发日期、税务机关、填票人等关键字段的识别。
- * @method Models\EduPaperOCRResponse EduPaperOCR(Models\EduPaperOCRRequest $req) 本接口支持数学试题内容的识别和结构化输出，包括通用文本解析和小学/初中/高中数学公式解析能力（包括91种题型，180种符号）。
+ * @method Models\EduPaperOCRResponse EduPaperOCR(Models\EduPaperOCRRequest $req) 本接口支持数学试题内容的识别和结构化输出，包括通用文本解析和小学/初中/高中数学公式解析能力（包括91种题型，180种符号），公式返回格式为 Latex 格式文本。
  * @method Models\EnglishOCRResponse EnglishOCR(Models\EnglishOCRRequest $req) 本接口支持图像英文文字的检测和识别，返回文字框位置与文字内容。支持多场景、任意版面下的英文、字母、数字和常见字符的识别，同时覆盖英文印刷体和英文手写体识别。
  * @method Models\EnterpriseLicenseOCRResponse EnterpriseLicenseOCR(Models\EnterpriseLicenseOCRRequest $req) 本接口支持智能化识别各类企业登记证书、许可证书、企业执照、三证合一类证书，结构化输出统一社会信用代码、公司名称、法定代表人、公司地址、注册资金、企业类型、经营范围等关键字段。
  * @method Models\EstateCertOCRResponse EstateCertOCR(Models\EstateCertOCRRequest $req) 本接口支持不动产权证关键字段的识别，包括使用期限、面积、用途、权利性质、权利类型、坐落、共有情况、权利人、权利其他状况等。

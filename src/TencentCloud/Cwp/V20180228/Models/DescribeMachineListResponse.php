@@ -18,26 +18,26 @@ namespace TencentCloud\Cwp\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ExportMalwares返回参数结构体
+ * DescribeMachineList返回参数结构体
  *
- * @method string getDownloadUrl() 获取导出文件下载链接地址。
- * @method void setDownloadUrl(string $DownloadUrl) 设置导出文件下载链接地址。
- * @method string getTaskId() 获取任务id
- * @method void setTaskId(string $TaskId) 设置任务id
+ * @method array getMachines() 获取主机列表
+ * @method void setMachines(array $Machines) 设置主机列表
+ * @method integer getTotalCount() 获取主机数量
+ * @method void setTotalCount(integer $TotalCount) 设置主机数量
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class ExportMalwaresResponse extends AbstractModel
+class DescribeMachineListResponse extends AbstractModel
 {
     /**
-     * @var string 导出文件下载链接地址。
+     * @var array 主机列表
      */
-    public $DownloadUrl;
+    public $Machines;
 
     /**
-     * @var string 任务id
+     * @var integer 主机数量
      */
-    public $TaskId;
+    public $TotalCount;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +45,8 @@ class ExportMalwaresResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $DownloadUrl 导出文件下载链接地址。
-     * @param string $TaskId 任务id
+     * @param array $Machines 主机列表
+     * @param integer $TotalCount 主机数量
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,12 +62,17 @@ class ExportMalwaresResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DownloadUrl",$param) and $param["DownloadUrl"] !== null) {
-            $this->DownloadUrl = $param["DownloadUrl"];
+        if (array_key_exists("Machines",$param) and $param["Machines"] !== null) {
+            $this->Machines = [];
+            foreach ($param["Machines"] as $key => $value){
+                $obj = new Machine();
+                $obj->deserialize($value);
+                array_push($this->Machines, $obj);
+            }
         }
 
-        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
-            $this->TaskId = $param["TaskId"];
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

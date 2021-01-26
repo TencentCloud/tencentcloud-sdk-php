@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setThumbUrl(string $ThumbUrl) 设置图片缩略图
  * @method string getVendor() 获取图片供应商
  * @method void setVendor(string $Vendor) 设置图片供应商
+ * @method string getKeywords() 获取图片关键词
+ * @method void setKeywords(string $Keywords) 设置图片关键词
  */
 class ImageItem extends AbstractModel
 {
@@ -66,12 +68,18 @@ class ImageItem extends AbstractModel
     public $Vendor;
 
     /**
+     * @var string 图片关键词
+     */
+    public $Keywords;
+
+    /**
      * @param integer $ImageId 图片ID
      * @param string $Title 图片标题
      * @param string $Description 图片描述
      * @param string $PreviewUrl 图片预览链接
      * @param string $ThumbUrl 图片缩略图
      * @param string $Vendor 图片供应商
+     * @param string $Keywords 图片关键词
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class ImageItem extends AbstractModel
 
         if (array_key_exists("Vendor",$param) and $param["Vendor"] !== null) {
             $this->Vendor = $param["Vendor"];
+        }
+
+        if (array_key_exists("Keywords",$param) and $param["Keywords"] !== null) {
+            $this->Keywords = $param["Keywords"];
         }
     }
 }

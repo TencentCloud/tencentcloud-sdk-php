@@ -58,12 +58,15 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\DescribeComponentInfoResponse DescribeComponentInfo(Models\DescribeComponentInfoRequest $req) 本接口 (DescribeComponentInfo) 用于获取组件信息数据。
  * @method Models\DescribeComponentStatisticsResponse DescribeComponentStatistics(Models\DescribeComponentStatisticsRequest $req) 本接口 (DescribeComponentStatistics) 用于获取组件统计列表数据。
  * @method Models\DescribeComponentsResponse DescribeComponents(Models\DescribeComponentsRequest $req) 本接口 (DescribeComponents) 用于获取组件列表数据。
+ * @method Models\DescribeExportMachinesResponse DescribeExportMachines(Models\DescribeExportMachinesRequest $req) 本接口 (DescribeExportMachines) 用于导出区域主机列表。
  * @method Models\DescribeHistoryAccountsResponse DescribeHistoryAccounts(Models\DescribeHistoryAccountsRequest $req) 本接口 (DescribeHistoryAccounts) 用于获取帐号变更历史列表数据。
  * @method Models\DescribeImpactedHostsResponse DescribeImpactedHosts(Models\DescribeImpactedHostsRequest $req) 本接口 (DescribeImpactedHosts) 用于获取漏洞受影响机器列表。
  * @method Models\DescribeLoginWhiteListResponse DescribeLoginWhiteList(Models\DescribeLoginWhiteListRequest $req) 获取异地登录白名单列表
  * @method Models\DescribeMachineInfoResponse DescribeMachineInfo(Models\DescribeMachineInfoRequest $req) 本接口（DescribeMachineInfo）用于获取机器详细信息。
+ * @method Models\DescribeMachineListResponse DescribeMachineList(Models\DescribeMachineListRequest $req) 本接口 (DescribeMachineList) 用于网页防篡改获取区域主机列表。
  * @method Models\DescribeMachinesResponse DescribeMachines(Models\DescribeMachinesRequest $req) 本接口 (DescribeMachines) 用于获取区域主机列表。
  * @method Models\DescribeMaliciousRequestsResponse DescribeMaliciousRequests(Models\DescribeMaliciousRequestsRequest $req) 本接口 (DescribeMaliciousRequests) 用于获取恶意请求数据。
+ * @method Models\DescribeMalwareInfoResponse DescribeMalwareInfo(Models\DescribeMalwareInfoRequest $req) 查看恶意文件详情
  * @method Models\DescribeMalwaresResponse DescribeMalwares(Models\DescribeMalwaresRequest $req) 本接口（DescribeMalwares）用于获取木马事件列表。
  * @method Models\DescribeNonlocalLoginPlacesResponse DescribeNonlocalLoginPlaces(Models\DescribeNonlocalLoginPlacesRequest $req) 本接口(DescribeNonlocalLoginPlaces)用于获取异地登录事件。
  * @method Models\DescribeOpenPortStatisticsResponse DescribeOpenPortStatistics(Models\DescribeOpenPortStatisticsRequest $req) 本接口 (DescribeOpenPortStatistics) 用于获取端口统计列表。
@@ -79,6 +82,7 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\DescribeProcessesResponse DescribeProcesses(Models\DescribeProcessesRequest $req) 本接口 (DescribeProcesses) 用于获取进程列表数据。
  * @method Models\DescribeReverseShellEventsResponse DescribeReverseShellEvents(Models\DescribeReverseShellEventsRequest $req) 获取反弹Shell列表
  * @method Models\DescribeReverseShellRulesResponse DescribeReverseShellRules(Models\DescribeReverseShellRulesRequest $req) 获取反弹Shell规则列表
+ * @method Models\DescribeScanMalwareScheduleResponse DescribeScanMalwareSchedule(Models\DescribeScanMalwareScheduleRequest $req) 查询木马扫描进度
  * @method Models\DescribeSecurityDynamicsResponse DescribeSecurityDynamics(Models\DescribeSecurityDynamicsRequest $req) 本接口 (DescribeSecurityDynamics) 用于获取安全事件消息数据。
  * @method Models\DescribeSecurityEventsCntResponse DescribeSecurityEventsCnt(Models\DescribeSecurityEventsCntRequest $req) 概览页抽屉侧边弹窗：安全概览“立即处理”页面中的相关事件数统计接口。
  * @method Models\DescribeSecurityTrendsResponse DescribeSecurityTrends(Models\DescribeSecurityTrendsRequest $req) 本接口 (DescribeSecurityTrends) 用于获取安全事件统计数据。
@@ -108,12 +112,14 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\ExportNonlocalLoginPlacesResponse ExportNonlocalLoginPlaces(Models\ExportNonlocalLoginPlacesRequest $req) 本接口 (ExportNonlocalLoginPlaces) 用于导出异地登录事件记录CSV文件。
  * @method Models\ExportPrivilegeEventsResponse ExportPrivilegeEvents(Models\ExportPrivilegeEventsRequest $req) 导出本地提权事件
  * @method Models\ExportReverseShellEventsResponse ExportReverseShellEvents(Models\ExportReverseShellEventsRequest $req) 导出反弹Shell事件
+ * @method Models\ExportTasksResponse ExportTasks(Models\ExportTasksRequest $req) 用于异步导出数据量大的日志文件
  * @method Models\IgnoreImpactedHostsResponse IgnoreImpactedHosts(Models\IgnoreImpactedHostsRequest $req) 本接口 (IgnoreImpactedHosts) 用于忽略漏洞。
  * @method Models\InquiryPriceOpenProVersionPrepaidResponse InquiryPriceOpenProVersionPrepaid(Models\InquiryPriceOpenProVersionPrepaidRequest $req) 本接口 (InquiryPriceOpenProVersionPrepaid) 用于开通专业版询价(预付费)。
  * @method Models\MisAlarmNonlocalLoginPlacesResponse MisAlarmNonlocalLoginPlaces(Models\MisAlarmNonlocalLoginPlacesRequest $req) 本接口{MisAlarmNonlocalLoginPlaces}将设置当前地点为常用登录地。
  * @method Models\ModifyAlarmAttributeResponse ModifyAlarmAttribute(Models\ModifyAlarmAttributeRequest $req) 本接口（ModifyAlarmAttribute）用于修改告警设置。
  * @method Models\ModifyAutoOpenProVersionConfigResponse ModifyAutoOpenProVersionConfig(Models\ModifyAutoOpenProVersionConfigRequest $req) 本接口 (ModifyAutoOpenProVersionConfig) 用于设置新增主机自动开通专业版配置。
  * @method Models\ModifyLoginWhiteListResponse ModifyLoginWhiteList(Models\ModifyLoginWhiteListRequest $req) 编辑白名单规则
+ * @method Models\ModifyMalwareTimingScanSettingsResponse ModifyMalwareTimingScanSettings(Models\ModifyMalwareTimingScanSettingsRequest $req) 定时扫描设置
  * @method Models\ModifyProVersionRenewFlagResponse ModifyProVersionRenewFlag(Models\ModifyProVersionRenewFlagRequest $req) 本接口 (ModifyProVersionRenewFlag) 用于修改专业版包年包月续费标识。
  * @method Models\OpenProVersionResponse OpenProVersion(Models\OpenProVersionRequest $req) 本接口 (OpenProVersion) 用于开通专业版。
  * @method Models\OpenProVersionPrepaidResponse OpenProVersionPrepaid(Models\OpenProVersionPrepaidRequest $req) 本接口 (OpenProVersionPrepaid) 用于开通专业版(包年包月)。

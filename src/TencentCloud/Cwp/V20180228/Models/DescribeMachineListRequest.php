@@ -18,7 +18,7 @@ namespace TencentCloud\Cwp\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeMachines请求参数结构体
+ * DescribeMachineList请求参数结构体
  *
  * @method string getMachineType() 获取云主机类型。
 <li>CVM：表示虚拟主机</li>
@@ -42,10 +42,8 @@ use TencentCloud\Common\AbstractModel;
 <li>Status - String - 是否必填：否 - 客户端在线状态（OFFLINE: 离线 | ONLINE: 在线 | UNINSTALLED：未安装）</li>
 <li>Version - String  是否必填：否 - 当前防护版本（ PRO_VERSION：专业版 | BASIC_VERSION：基础版）</li>
 每个过滤条件只支持一个值，暂不支持多个值“或”关系查询
- * @method array getProjectIds() 获取机器所属业务ID列表
- * @method void setProjectIds(array $ProjectIds) 设置机器所属业务ID列表
  */
-class DescribeMachinesRequest extends AbstractModel
+class DescribeMachineListRequest extends AbstractModel
 {
     /**
      * @var string 云主机类型。
@@ -79,11 +77,6 @@ class DescribeMachinesRequest extends AbstractModel
     public $Filters;
 
     /**
-     * @var array 机器所属业务ID列表
-     */
-    public $ProjectIds;
-
-    /**
      * @param string $MachineType 云主机类型。
 <li>CVM：表示虚拟主机</li>
 <li>BM:  表示黑石物理机</li>
@@ -95,7 +88,6 @@ class DescribeMachinesRequest extends AbstractModel
 <li>Status - String - 是否必填：否 - 客户端在线状态（OFFLINE: 离线 | ONLINE: 在线 | UNINSTALLED：未安装）</li>
 <li>Version - String  是否必填：否 - 当前防护版本（ PRO_VERSION：专业版 | BASIC_VERSION：基础版）</li>
 每个过滤条件只支持一个值，暂不支持多个值“或”关系查询
-     * @param array $ProjectIds 机器所属业务ID列表
      */
     function __construct()
     {
@@ -129,14 +121,10 @@ class DescribeMachinesRequest extends AbstractModel
         if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
             $this->Filters = [];
             foreach ($param["Filters"] as $key => $value){
-                $obj = new Filter();
+                $obj = new AssetFilters();
                 $obj->deserialize($value);
                 array_push($this->Filters, $obj);
             }
-        }
-
-        if (array_key_exists("ProjectIds",$param) and $param["ProjectIds"] !== null) {
-            $this->ProjectIds = $param["ProjectIds"];
         }
     }
 }

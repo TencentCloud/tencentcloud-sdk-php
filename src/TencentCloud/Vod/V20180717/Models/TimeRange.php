@@ -24,9 +24,9 @@ use TencentCloud\Common\AbstractModel;
 <li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。</li>
  * @method void setAfter(string $After) 设置<li>大于等于此时间（起始时间）。</li>
 <li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。</li>
- * @method string getBefore() 获取<li>小于等于此时间（结束时间）。</li>
+ * @method string getBefore() 获取<li>小于此时间（结束时间）。</li>
 <li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。</li>
- * @method void setBefore(string $Before) 设置<li>小于等于此时间（结束时间）。</li>
+ * @method void setBefore(string $Before) 设置<li>小于此时间（结束时间）。</li>
 <li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。</li>
  */
 class TimeRange extends AbstractModel
@@ -38,7 +38,7 @@ class TimeRange extends AbstractModel
     public $After;
 
     /**
-     * @var string <li>小于等于此时间（结束时间）。</li>
+     * @var string <li>小于此时间（结束时间）。</li>
 <li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。</li>
      */
     public $Before;
@@ -46,7 +46,7 @@ class TimeRange extends AbstractModel
     /**
      * @param string $After <li>大于等于此时间（起始时间）。</li>
 <li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。</li>
-     * @param string $Before <li>小于等于此时间（结束时间）。</li>
+     * @param string $Before <li>小于此时间（结束时间）。</li>
 <li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。</li>
      */
     function __construct()

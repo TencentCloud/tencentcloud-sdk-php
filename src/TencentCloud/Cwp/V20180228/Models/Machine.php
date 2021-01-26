@@ -78,6 +78,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceState(string $InstanceState) 设置实例状态 TERMINATED_PRO_VERSION 已销毁
  * @method integer getLicenseStatus() 获取授权状态 1 授权 0 未授权
  * @method void setLicenseStatus(integer $LicenseStatus) 设置授权状态 1 授权 0 未授权
+ * @method integer getProjectId() 获取项目ID
+ * @method void setProjectId(integer $ProjectId) 设置项目ID
  */
 class Machine extends AbstractModel
 {
@@ -187,6 +189,11 @@ class Machine extends AbstractModel
     public $LicenseStatus;
 
     /**
+     * @var integer 项目ID
+     */
+    public $ProjectId;
+
+    /**
      * @param string $MachineName 主机名称。
      * @param string $MachineOs 主机系统。
      * @param string $MachineStatus 主机状态。
@@ -216,6 +223,7 @@ class Machine extends AbstractModel
      * @param RegionInfo $RegionInfo 地域信息
      * @param string $InstanceState 实例状态 TERMINATED_PRO_VERSION 已销毁
      * @param integer $LicenseStatus 授权状态 1 授权 0 未授权
+     * @param integer $ProjectId 项目ID
      */
     function __construct()
     {
@@ -310,6 +318,10 @@ class Machine extends AbstractModel
 
         if (array_key_exists("LicenseStatus",$param) and $param["LicenseStatus"] !== null) {
             $this->LicenseStatus = $param["LicenseStatus"];
+        }
+
+        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
+            $this->ProjectId = $param["ProjectId"];
         }
     }
 }

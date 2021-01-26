@@ -20,18 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteNonlocalLoginPlaces请求参数结构体
  *
- * @method array getIds() 获取异地登录事件ID数组。
- * @method void setIds(array $Ids) 设置异地登录事件ID数组。
+ * @method string getDelType() 获取删除异地登录事件的方式，可选值："Ids"、"Ip"、"All"，默认为Ids
+ * @method void setDelType(string $DelType) 设置删除异地登录事件的方式，可选值："Ids"、"Ip"、"All"，默认为Ids
+ * @method array getIds() 获取异地登录事件ID数组。DelType为Ids或DelType未填时此项必填
+ * @method void setIds(array $Ids) 设置异地登录事件ID数组。DelType为Ids或DelType未填时此项必填
+ * @method array getIp() 获取异地登录事件的Ip。DelType为Ip时必填
+ * @method void setIp(array $Ip) 设置异地登录事件的Ip。DelType为Ip时必填
  */
 class DeleteNonlocalLoginPlacesRequest extends AbstractModel
 {
     /**
-     * @var array 异地登录事件ID数组。
+     * @var string 删除异地登录事件的方式，可选值："Ids"、"Ip"、"All"，默认为Ids
+     */
+    public $DelType;
+
+    /**
+     * @var array 异地登录事件ID数组。DelType为Ids或DelType未填时此项必填
      */
     public $Ids;
 
     /**
-     * @param array $Ids 异地登录事件ID数组。
+     * @var array 异地登录事件的Ip。DelType为Ip时必填
+     */
+    public $Ip;
+
+    /**
+     * @param string $DelType 删除异地登录事件的方式，可选值："Ids"、"Ip"、"All"，默认为Ids
+     * @param array $Ids 异地登录事件ID数组。DelType为Ids或DelType未填时此项必填
+     * @param array $Ip 异地登录事件的Ip。DelType为Ip时必填
      */
     function __construct()
     {
@@ -46,8 +62,16 @@ class DeleteNonlocalLoginPlacesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("DelType",$param) and $param["DelType"] !== null) {
+            $this->DelType = $param["DelType"];
+        }
+
         if (array_key_exists("Ids",$param) and $param["Ids"] !== null) {
             $this->Ids = $param["Ids"];
+        }
+
+        if (array_key_exists("Ip",$param) and $param["Ip"] !== null) {
+            $this->Ip = $param["Ip"];
         }
     }
 }

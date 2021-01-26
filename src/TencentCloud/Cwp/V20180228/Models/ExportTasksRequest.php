@@ -18,20 +18,20 @@ namespace TencentCloud\Cwp\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ExportPrivilegeEvents请求参数结构体
+ * ExportTasks请求参数结构体
  *
- * @method array getFilters() 获取过滤参数
- * @method void setFilters(array $Filters) 设置过滤参数
+ * @method string getTaskId() 获取任务ID
+ * @method void setTaskId(string $TaskId) 设置任务ID
  */
-class ExportPrivilegeEventsRequest extends AbstractModel
+class ExportTasksRequest extends AbstractModel
 {
     /**
-     * @var array 过滤参数
+     * @var string 任务ID
      */
-    public $Filters;
+    public $TaskId;
 
     /**
-     * @param array $Filters 过滤参数
+     * @param string $TaskId 任务ID
      */
     function __construct()
     {
@@ -46,13 +46,8 @@ class ExportPrivilegeEventsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
-            $this->Filters = [];
-            foreach ($param["Filters"] as $key => $value){
-                $obj = new Filters();
-                $obj->deserialize($value);
-                array_push($this->Filters, $obj);
-            }
+        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
+            $this->TaskId = $param["TaskId"];
         }
     }
 }

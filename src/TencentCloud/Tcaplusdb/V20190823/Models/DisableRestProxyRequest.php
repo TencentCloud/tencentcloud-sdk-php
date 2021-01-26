@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cwp\V20180228\Models;
+namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ExportPrivilegeEvents请求参数结构体
+ * DisableRestProxy请求参数结构体
  *
- * @method array getFilters() 获取过滤参数
- * @method void setFilters(array $Filters) 设置过滤参数
+ * @method string getClusterId() 获取对应appid
+ * @method void setClusterId(string $ClusterId) 设置对应appid
  */
-class ExportPrivilegeEventsRequest extends AbstractModel
+class DisableRestProxyRequest extends AbstractModel
 {
     /**
-     * @var array 过滤参数
+     * @var string 对应appid
      */
-    public $Filters;
+    public $ClusterId;
 
     /**
-     * @param array $Filters 过滤参数
+     * @param string $ClusterId 对应appid
      */
     function __construct()
     {
@@ -46,13 +46,8 @@ class ExportPrivilegeEventsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
-            $this->Filters = [];
-            foreach ($param["Filters"] as $key => $value){
-                $obj = new Filters();
-                $obj->deserialize($value);
-                array_push($this->Filters, $obj);
-            }
+        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
+            $this->ClusterId = $param["ClusterId"];
         }
     }
 }

@@ -102,8 +102,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDiscount(integer $Discount) 设置订单级别折扣（单位为分）
  * @method string getStoreNo() 获取门店编码
  * @method void setStoreNo(string $StoreNo) 设置门店编码
- * @method integer getInvoiceChannel() 获取开票渠道。0：线上渠道，1：线下渠道。不填默认为线上渠道
- * @method void setInvoiceChannel(integer $InvoiceChannel) 设置开票渠道。0：线上渠道，1：线下渠道。不填默认为线上渠道
+ * @method integer getInvoiceChannel() 获取开票渠道。0：APP渠道，1：线下渠道，2：小程序渠道。不填默认为APP渠道
+ * @method void setInvoiceChannel(integer $InvoiceChannel) 设置开票渠道。0：APP渠道，1：线下渠道，2：小程序渠道。不填默认为APP渠道
  */
 class CreateInvoiceRequest extends AbstractModel
 {
@@ -289,7 +289,7 @@ class CreateInvoiceRequest extends AbstractModel
     public $StoreNo;
 
     /**
-     * @var integer 开票渠道。0：线上渠道，1：线下渠道。不填默认为线上渠道
+     * @var integer 开票渠道。0：APP渠道，1：线下渠道，2：小程序渠道。不填默认为APP渠道
      */
     public $InvoiceChannel;
 
@@ -335,7 +335,7 @@ class CreateInvoiceRequest extends AbstractModel
      * @param string $OrderDate 订单下单时间（格式 YYYYMMDD）
      * @param integer $Discount 订单级别折扣（单位为分）
      * @param string $StoreNo 门店编码
-     * @param integer $InvoiceChannel 开票渠道。0：线上渠道，1：线下渠道。不填默认为线上渠道
+     * @param integer $InvoiceChannel 开票渠道。0：APP渠道，1：线下渠道，2：小程序渠道。不填默认为APP渠道
      */
     function __construct()
     {

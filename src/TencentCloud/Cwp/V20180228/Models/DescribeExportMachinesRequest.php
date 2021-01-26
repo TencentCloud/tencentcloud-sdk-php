@@ -18,7 +18,7 @@ namespace TencentCloud\Cwp\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeMachines请求参数结构体
+ * DescribeExportMachines请求参数结构体
  *
  * @method string getMachineType() 获取云主机类型。
 <li>CVM：表示虚拟主机</li>
@@ -45,7 +45,7 @@ use TencentCloud\Common\AbstractModel;
  * @method array getProjectIds() 获取机器所属业务ID列表
  * @method void setProjectIds(array $ProjectIds) 设置机器所属业务ID列表
  */
-class DescribeMachinesRequest extends AbstractModel
+class DescribeExportMachinesRequest extends AbstractModel
 {
     /**
      * @var string 云主机类型。

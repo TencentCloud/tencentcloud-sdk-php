@@ -20,14 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ExportMaliciousRequests请求参数结构体
  *
-
+ * @method array getFilters() 获取过滤参数
+ * @method void setFilters(array $Filters) 设置过滤参数
  */
 class ExportMaliciousRequestsRequest extends AbstractModel
 {
-
+    /**
+     * @var array 过滤参数
+     */
+    public $Filters;
 
     /**
-
+     * @param array $Filters 过滤参数
      */
     function __construct()
     {
@@ -42,6 +46,13 @@ class ExportMaliciousRequestsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+            $this->Filters = [];
+            foreach ($param["Filters"] as $key => $value){
+                $obj = new Filters();
+                $obj->deserialize($value);
+                array_push($this->Filters, $obj);
+            }
+        }
     }
 }

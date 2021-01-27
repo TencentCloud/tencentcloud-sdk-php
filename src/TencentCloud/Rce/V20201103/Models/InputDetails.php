@@ -14,32 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Gpm\V20200820\Models;
+namespace TencentCloud\Rce\V20201103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * matchCode和匹配票据 ID组合结构
+ * 入参的详细参数信息
  *
- * @method string getMatchCode() 获取匹配Code
- * @method void setMatchCode(string $MatchCode) 设置匹配Code
- * @method string getMatchTicketId() 获取匹配票据 ID
- * @method void setMatchTicketId(string $MatchTicketId) 设置匹配票据 ID
+ * @method string getFieldName() 获取字段名称
+ * @method void setFieldName(string $FieldName) 设置字段名称
+ * @method string getFieldValue() 获取字段值
+ * @method void setFieldValue(string $FieldValue) 设置字段值
  */
-class MTicket extends AbstractModel
+class InputDetails extends AbstractModel
 {
     /**
-     * @var string 匹配Code
+     * @var string 字段名称
      */
-    public $MatchCode;
+    public $FieldName;
 
     /**
-     * @var string 匹配票据 ID
+     * @var string 字段值
      */
-    public $MatchTicketId;
+    public $FieldValue;
 
     /**
-     * @param string $MatchCode 匹配Code
-     * @param string $MatchTicketId 匹配票据 ID
+     * @param string $FieldName 字段名称
+     * @param string $FieldValue 字段值
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class MTicket extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MatchCode",$param) and $param["MatchCode"] !== null) {
-            $this->MatchCode = $param["MatchCode"];
+        if (array_key_exists("FieldName",$param) and $param["FieldName"] !== null) {
+            $this->FieldName = $param["FieldName"];
         }
 
-        if (array_key_exists("MatchTicketId",$param) and $param["MatchTicketId"] !== null) {
-            $this->MatchTicketId = $param["MatchTicketId"];
+        if (array_key_exists("FieldValue",$param) and $param["FieldValue"] !== null) {
+            $this->FieldValue = $param["FieldValue"];
         }
     }
 }

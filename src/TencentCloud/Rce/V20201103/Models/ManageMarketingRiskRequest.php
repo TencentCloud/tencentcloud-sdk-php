@@ -14,32 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Gpm\V20200820\Models;
+namespace TencentCloud\Rce\V20201103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * matchCode和匹配票据 ID组合结构
+ * ManageMarketingRisk请求参数结构体
  *
- * @method string getMatchCode() 获取匹配Code
- * @method void setMatchCode(string $MatchCode) 设置匹配Code
- * @method string getMatchTicketId() 获取匹配票据 ID
- * @method void setMatchTicketId(string $MatchTicketId) 设置匹配票据 ID
+ * @method InputManageMarketingRisk getBusinessSecurityData() 获取业务入参
+ * @method void setBusinessSecurityData(InputManageMarketingRisk $BusinessSecurityData) 设置业务入参
  */
-class MTicket extends AbstractModel
+class ManageMarketingRiskRequest extends AbstractModel
 {
     /**
-     * @var string 匹配Code
+     * @var InputManageMarketingRisk 业务入参
      */
-    public $MatchCode;
+    public $BusinessSecurityData;
 
     /**
-     * @var string 匹配票据 ID
-     */
-    public $MatchTicketId;
-
-    /**
-     * @param string $MatchCode 匹配Code
-     * @param string $MatchTicketId 匹配票据 ID
+     * @param InputManageMarketingRisk $BusinessSecurityData 业务入参
      */
     function __construct()
     {
@@ -54,12 +46,9 @@ class MTicket extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MatchCode",$param) and $param["MatchCode"] !== null) {
-            $this->MatchCode = $param["MatchCode"];
-        }
-
-        if (array_key_exists("MatchTicketId",$param) and $param["MatchTicketId"] !== null) {
-            $this->MatchTicketId = $param["MatchTicketId"];
+        if (array_key_exists("BusinessSecurityData",$param) and $param["BusinessSecurityData"] !== null) {
+            $this->BusinessSecurityData = new InputManageMarketingRisk();
+            $this->BusinessSecurityData->deserialize($param["BusinessSecurityData"]);
         }
     }
 }

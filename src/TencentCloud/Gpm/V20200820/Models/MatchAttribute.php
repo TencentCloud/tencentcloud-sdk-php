@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setType(integer $Type) 设置属性类型: 0 数值; 1 string; 默认 0
  * @method float getNumberValue() 获取数字属性值 默认 0.0
  * @method void setNumberValue(float $NumberValue) 设置数字属性值 默认 0.0
- * @method string getStringValue() 获取字符串属性值 长度 1024 默认 ""
- * @method void setStringValue(string $StringValue) 设置字符串属性值 长度 1024 默认 ""
+ * @method string getStringValue() 获取字符串属性值 长度 128 默认 ""
+ * @method void setStringValue(string $StringValue) 设置字符串属性值 长度 128 默认 ""
  * @method array getListValue() 获取list 属性值
  * @method void setListValue(array $ListValue) 设置list 属性值
  * @method array getMapValue() 获取字典属性值
@@ -51,7 +51,7 @@ class MatchAttribute extends AbstractModel
     public $NumberValue;
 
     /**
-     * @var string 字符串属性值 长度 1024 默认 ""
+     * @var string 字符串属性值 长度 128 默认 ""
      */
     public $StringValue;
 
@@ -69,7 +69,7 @@ class MatchAttribute extends AbstractModel
      * @param string $Name 属性名 长度 128 [a-zA-Z0-9-\.]*
      * @param integer $Type 属性类型: 0 数值; 1 string; 默认 0
      * @param float $NumberValue 数字属性值 默认 0.0
-     * @param string $StringValue 字符串属性值 长度 1024 默认 ""
+     * @param string $StringValue 字符串属性值 长度 128 默认 ""
      * @param array $ListValue list 属性值
      * @param array $MapValue 字典属性值
      */

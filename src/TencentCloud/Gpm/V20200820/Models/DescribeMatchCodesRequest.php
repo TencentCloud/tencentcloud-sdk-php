@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量，页码
  * @method integer getLimit() 获取每页数量
  * @method void setLimit(integer $Limit) 设置每页数量
+ * @method string getMatchCode() 获取搜索的字符串
+ * @method void setMatchCode(string $MatchCode) 设置搜索的字符串
  */
 class DescribeMatchCodesRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class DescribeMatchCodesRequest extends AbstractModel
     public $Limit;
 
     /**
+     * @var string 搜索的字符串
+     */
+    public $MatchCode;
+
+    /**
      * @param integer $Offset 偏移量，页码
      * @param integer $Limit 每页数量
+     * @param string $MatchCode 搜索的字符串
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class DescribeMatchCodesRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("MatchCode",$param) and $param["MatchCode"] !== null) {
+            $this->MatchCode = $param["MatchCode"];
         }
     }
 }

@@ -18,10 +18,10 @@ namespace TencentCloud\Gpm\V20200820\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 匹配请求信息
+ * 匹配票据信息
  *
- * @method string getId() 获取MatchTicketId 长度 128 [a-zA-Z0-9-\.]*
- * @method void setId(string $Id) 设置MatchTicketId 长度 128 [a-zA-Z0-9-\.]*
+ * @method string getId() 获取匹配票据 ID长度 128 [a-zA-Z0-9-\.]*
+ * @method void setId(string $Id) 设置匹配票据 ID长度 128 [a-zA-Z0-9-\.]*
  * @method string getMatchCode() 获取匹配 Code
  * @method void setMatchCode(string $MatchCode) 设置匹配 Code
  * @method string getMatchResult() 获取根据 MatchType 取不同的结构序列化结果
@@ -54,7 +54,7 @@ use TencentCloud\Common\AbstractModel;
 class MatchTicket extends AbstractModel
 {
     /**
-     * @var string MatchTicketId 长度 128 [a-zA-Z0-9-\.]*
+     * @var string 匹配票据 ID长度 128 [a-zA-Z0-9-\.]*
      */
     public $Id;
 
@@ -109,7 +109,7 @@ class MatchTicket extends AbstractModel
     public $EndTime;
 
     /**
-     * @param string $Id MatchTicketId 长度 128 [a-zA-Z0-9-\.]*
+     * @param string $Id 匹配票据 ID长度 128 [a-zA-Z0-9-\.]*
      * @param string $MatchCode 匹配 Code
      * @param string $MatchResult 根据 MatchType 取不同的结构序列化结果
 注意：此字段可能返回 null，表示取不到有效值。

@@ -24,6 +24,7 @@ use TencentCloud\Sqlserver\V20180328\Models as Models;
 
 /**
  * @method Models\AssociateSecurityGroupsResponse AssociateSecurityGroups(Models\AssociateSecurityGroupsRequest $req) 本接口(AssociateSecurityGroups)用于安全组批量绑定实例。
+ * @method Models\CloneDBResponse CloneDB(Models\CloneDBRequest $req) 本接口（CloneDB）用于克隆数据库，只支持克隆到本实例，克隆时必须指定新库名称。
  * @method Models\CompleteExpansionResponse CompleteExpansion(Models\CompleteExpansionRequest $req) 本接口（CompleteExpansion）在实例发起扩容后，实例状态处于“升级待切换”时，可立即完成实例升级切换操作，无需等待可维护时间窗。本接口需要在实例低峰时调用，在完全切换成功前，存在部分库不可访问的风险。
  * @method Models\CompleteMigrationResponse CompleteMigration(Models\CompleteMigrationRequest $req) 本接口（CompleteMigration）作用是完成一个迁移任务
  * @method Models\CreateAccountResponse CreateAccount(Models\CreateAccountRequest $req) 本接口（CreateAccount）用于创建实例账号

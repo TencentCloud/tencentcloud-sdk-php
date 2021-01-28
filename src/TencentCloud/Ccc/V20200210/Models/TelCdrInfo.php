@@ -36,10 +36,76 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSeatUser(SeatUserInfo $SeatUser) 设置坐席信息
  * @method integer getEndStatus() 获取结束状态 0 未知 1 正常通话 2 未接通
  * @method void setEndStatus(integer $EndStatus) 设置结束状态 0 未知 1 正常通话 2 未接通
- * @method string getSkillGroup() 获取技能组
- * @method void setSkillGroup(string $SkillGroup) 设置技能组
+ * @method string getSkillGroup() 获取技能组名称
+ * @method void setSkillGroup(string $SkillGroup) 设置技能组名称
  * @method string getCallerLocation() 获取主叫归属地
  * @method void setCallerLocation(string $CallerLocation) 设置主叫归属地
+ * @method integer getIVRDuration() 获取IVR 阶段耗时
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIVRDuration(integer $IVRDuration) 设置IVR 阶段耗时
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getRingTimestamp() 获取振铃时间戳，UNIX 秒级时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRingTimestamp(integer $RingTimestamp) 设置振铃时间戳，UNIX 秒级时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getAcceptTimestamp() 获取接听时间戳，UNIX 秒级时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAcceptTimestamp(integer $AcceptTimestamp) 设置接听时间戳，UNIX 秒级时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getEndedTimestamp() 获取结束时间戳，UNIX 秒级时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEndedTimestamp(integer $EndedTimestamp) 设置结束时间戳，UNIX 秒级时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getIVRKeyPressed() 获取IVR 按键信息 ，e.g. ["1","2","3"]
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIVRKeyPressed(array $IVRKeyPressed) 设置IVR 按键信息 ，e.g. ["1","2","3"]
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getHungUpSide() 获取挂机方 seat 坐席 user 用户
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHungUpSide(string $HungUpSide) 设置挂机方 seat 坐席 user 用户
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getServeParticipants() 获取服务参与者列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setServeParticipants(array $ServeParticipants) 设置服务参与者列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getSkillGroupId() 获取技能组ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSkillGroupId(integer $SkillGroupId) 设置技能组ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getEndStatusString() 获取ok 正常结束 
+unconnected	未接通
+seatGiveUp	坐席未接
+seatForward	坐席转接
+ivrGiveUp	IVR期间用户放弃
+waitingGiveUp	会话排队期间用户放弃
+ringingGiveUp	会话振铃期间用户放弃
+error	系统错误
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEndStatusString(string $EndStatusString) 设置ok 正常结束 
+unconnected	未接通
+seatGiveUp	坐席未接
+seatForward	坐席转接
+ivrGiveUp	IVR期间用户放弃
+waitingGiveUp	会话排队期间用户放弃
+ringingGiveUp	会话振铃期间用户放弃
+error	系统错误
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getStartTimestamp() 获取会话开始时间戳，UNIX 秒级时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStartTimestamp(integer $StartTimestamp) 设置会话开始时间戳，UNIX 秒级时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getQueuedTimestamp() 获取进入排队时间，Unix 秒级时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setQueuedTimestamp(integer $QueuedTimestamp) 设置进入排队时间，Unix 秒级时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getPostIVRKeyPressed() 获取后置IVR按键信息（e.g. [{"Key":"1","Label":"非常满意"}]）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPostIVRKeyPressed(array $PostIVRKeyPressed) 设置后置IVR按键信息（e.g. [{"Key":"1","Label":"非常满意"}]）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getQueuedSkillGroupId() 获取排队技能组Id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setQueuedSkillGroupId(integer $QueuedSkillGroupId) 设置排队技能组Id
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TelCdrInfo extends AbstractModel
 {
@@ -84,7 +150,7 @@ class TelCdrInfo extends AbstractModel
     public $EndStatus;
 
     /**
-     * @var string 技能组
+     * @var string 技能组名称
      */
     public $SkillGroup;
 
@@ -92,6 +158,91 @@ class TelCdrInfo extends AbstractModel
      * @var string 主叫归属地
      */
     public $CallerLocation;
+
+    /**
+     * @var integer IVR 阶段耗时
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IVRDuration;
+
+    /**
+     * @var integer 振铃时间戳，UNIX 秒级时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RingTimestamp;
+
+    /**
+     * @var integer 接听时间戳，UNIX 秒级时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AcceptTimestamp;
+
+    /**
+     * @var integer 结束时间戳，UNIX 秒级时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EndedTimestamp;
+
+    /**
+     * @var array IVR 按键信息 ，e.g. ["1","2","3"]
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IVRKeyPressed;
+
+    /**
+     * @var string 挂机方 seat 坐席 user 用户
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $HungUpSide;
+
+    /**
+     * @var array 服务参与者列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ServeParticipants;
+
+    /**
+     * @var integer 技能组ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SkillGroupId;
+
+    /**
+     * @var string ok 正常结束 
+unconnected	未接通
+seatGiveUp	坐席未接
+seatForward	坐席转接
+ivrGiveUp	IVR期间用户放弃
+waitingGiveUp	会话排队期间用户放弃
+ringingGiveUp	会话振铃期间用户放弃
+error	系统错误
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EndStatusString;
+
+    /**
+     * @var integer 会话开始时间戳，UNIX 秒级时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $StartTimestamp;
+
+    /**
+     * @var integer 进入排队时间，Unix 秒级时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $QueuedTimestamp;
+
+    /**
+     * @var array 后置IVR按键信息（e.g. [{"Key":"1","Label":"非常满意"}]）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PostIVRKeyPressed;
+
+    /**
+     * @var integer 排队技能组Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $QueuedSkillGroupId;
 
     /**
      * @param string $Caller 主叫号码
@@ -102,8 +253,41 @@ class TelCdrInfo extends AbstractModel
      * @param string $RecordURL 录音信息
      * @param SeatUserInfo $SeatUser 坐席信息
      * @param integer $EndStatus 结束状态 0 未知 1 正常通话 2 未接通
-     * @param string $SkillGroup 技能组
+     * @param string $SkillGroup 技能组名称
      * @param string $CallerLocation 主叫归属地
+     * @param integer $IVRDuration IVR 阶段耗时
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $RingTimestamp 振铃时间戳，UNIX 秒级时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $AcceptTimestamp 接听时间戳，UNIX 秒级时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $EndedTimestamp 结束时间戳，UNIX 秒级时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $IVRKeyPressed IVR 按键信息 ，e.g. ["1","2","3"]
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $HungUpSide 挂机方 seat 坐席 user 用户
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $ServeParticipants 服务参与者列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $SkillGroupId 技能组ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $EndStatusString ok 正常结束 
+unconnected	未接通
+seatGiveUp	坐席未接
+seatForward	坐席转接
+ivrGiveUp	IVR期间用户放弃
+waitingGiveUp	会话排队期间用户放弃
+ringingGiveUp	会话振铃期间用户放弃
+error	系统错误
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $StartTimestamp 会话开始时间戳，UNIX 秒级时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $QueuedTimestamp 进入排队时间，Unix 秒级时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $PostIVRKeyPressed 后置IVR按键信息（e.g. [{"Key":"1","Label":"非常满意"}]）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $QueuedSkillGroupId 排队技能组Id
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -157,6 +341,68 @@ class TelCdrInfo extends AbstractModel
 
         if (array_key_exists("CallerLocation",$param) and $param["CallerLocation"] !== null) {
             $this->CallerLocation = $param["CallerLocation"];
+        }
+
+        if (array_key_exists("IVRDuration",$param) and $param["IVRDuration"] !== null) {
+            $this->IVRDuration = $param["IVRDuration"];
+        }
+
+        if (array_key_exists("RingTimestamp",$param) and $param["RingTimestamp"] !== null) {
+            $this->RingTimestamp = $param["RingTimestamp"];
+        }
+
+        if (array_key_exists("AcceptTimestamp",$param) and $param["AcceptTimestamp"] !== null) {
+            $this->AcceptTimestamp = $param["AcceptTimestamp"];
+        }
+
+        if (array_key_exists("EndedTimestamp",$param) and $param["EndedTimestamp"] !== null) {
+            $this->EndedTimestamp = $param["EndedTimestamp"];
+        }
+
+        if (array_key_exists("IVRKeyPressed",$param) and $param["IVRKeyPressed"] !== null) {
+            $this->IVRKeyPressed = $param["IVRKeyPressed"];
+        }
+
+        if (array_key_exists("HungUpSide",$param) and $param["HungUpSide"] !== null) {
+            $this->HungUpSide = $param["HungUpSide"];
+        }
+
+        if (array_key_exists("ServeParticipants",$param) and $param["ServeParticipants"] !== null) {
+            $this->ServeParticipants = [];
+            foreach ($param["ServeParticipants"] as $key => $value){
+                $obj = new ServeParticipant();
+                $obj->deserialize($value);
+                array_push($this->ServeParticipants, $obj);
+            }
+        }
+
+        if (array_key_exists("SkillGroupId",$param) and $param["SkillGroupId"] !== null) {
+            $this->SkillGroupId = $param["SkillGroupId"];
+        }
+
+        if (array_key_exists("EndStatusString",$param) and $param["EndStatusString"] !== null) {
+            $this->EndStatusString = $param["EndStatusString"];
+        }
+
+        if (array_key_exists("StartTimestamp",$param) and $param["StartTimestamp"] !== null) {
+            $this->StartTimestamp = $param["StartTimestamp"];
+        }
+
+        if (array_key_exists("QueuedTimestamp",$param) and $param["QueuedTimestamp"] !== null) {
+            $this->QueuedTimestamp = $param["QueuedTimestamp"];
+        }
+
+        if (array_key_exists("PostIVRKeyPressed",$param) and $param["PostIVRKeyPressed"] !== null) {
+            $this->PostIVRKeyPressed = [];
+            foreach ($param["PostIVRKeyPressed"] as $key => $value){
+                $obj = new IVRKeyPressedElement();
+                $obj->deserialize($value);
+                array_push($this->PostIVRKeyPressed, $obj);
+            }
+        }
+
+        if (array_key_exists("QueuedSkillGroupId",$param) and $param["QueuedSkillGroupId"] !== null) {
+            $this->QueuedSkillGroupId = $param["QueuedSkillGroupId"];
         }
     }
 }

@@ -21,24 +21,32 @@ use TencentCloud\Common\AbstractModel;
  * 预付费订单的费用。
  *
  * @method float getOriginalPrice() 获取预付费云盘或快照预支费用的原价，单位：元。
- * @method void setOriginalPrice(float $OriginalPrice) 设置预付费云盘或快照预支费用的原价，单位：元。
- * @method float getDiscountPrice() 获取预付费云盘或快照预支费用的折扣价，单位：元。
- * @method void setDiscountPrice(float $DiscountPrice) 设置预付费云盘或快照预支费用的折扣价，单位：元。
- * @method string getOriginalPriceHigh() 获取高精度预付费云盘或快照预支费用的原价，单位：元
- * @method void setOriginalPriceHigh(string $OriginalPriceHigh) 设置高精度预付费云盘或快照预支费用的原价，单位：元
- * @method string getDiscountPriceHigh() 获取高精度预付费云盘或快照预支费用的折扣价，单位：元
- * @method void setDiscountPriceHigh(string $DiscountPriceHigh) 设置高精度预付费云盘或快照预支费用的折扣价，单位：元
- * @method string getUnitPrice() 获取后付费云盘原单价，单位：元。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUnitPrice(string $UnitPrice) 设置后付费云盘原单价，单位：元。
+ * @method void setOriginalPrice(float $OriginalPrice) 设置预付费云盘或快照预支费用的原价，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method float getDiscountPrice() 获取预付费云盘或快照预支费用的折扣价，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDiscountPrice(float $DiscountPrice) 设置预付费云盘或快照预支费用的折扣价，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getOriginalPriceHigh() 获取高精度预付费云盘或快照预支费用的原价，单位：元
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOriginalPriceHigh(string $OriginalPriceHigh) 设置高精度预付费云盘或快照预支费用的原价，单位：元
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDiscountPriceHigh() 获取高精度预付费云盘或快照预支费用的折扣价，单位：元
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDiscountPriceHigh(string $DiscountPriceHigh) 设置高精度预付费云盘或快照预支费用的折扣价，单位：元
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method float getUnitPrice() 获取后付费云盘原单价，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUnitPrice(float $UnitPrice) 设置后付费云盘原单价，单位：元。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getChargeUnit() 获取后付费云盘的计价单元，取值范围：<br><li>HOUR：表示后付费云盘的计价单元是按小时计算。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setChargeUnit(string $ChargeUnit) 设置后付费云盘的计价单元，取值范围：<br><li>HOUR：表示后付费云盘的计价单元是按小时计算。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUnitPriceDiscount() 获取后付费云盘折扣单价，单位：元。
+ * @method float getUnitPriceDiscount() 获取后付费云盘折扣单价，单位：元。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUnitPriceDiscount(string $UnitPriceDiscount) 设置后付费云盘折扣单价，单位：元。
+ * @method void setUnitPriceDiscount(float $UnitPriceDiscount) 设置后付费云盘折扣单价，单位：元。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUnitPriceHigh() 获取高精度后付费云盘原单价, 单位：元
 注意：此字段可能返回 null，表示取不到有效值。
@@ -53,26 +61,30 @@ class PrepayPrice extends AbstractModel
 {
     /**
      * @var float 预付费云盘或快照预支费用的原价，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OriginalPrice;
 
     /**
      * @var float 预付费云盘或快照预支费用的折扣价，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DiscountPrice;
 
     /**
      * @var string 高精度预付费云盘或快照预支费用的原价，单位：元
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OriginalPriceHigh;
 
     /**
      * @var string 高精度预付费云盘或快照预支费用的折扣价，单位：元
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DiscountPriceHigh;
 
     /**
-     * @var string 后付费云盘原单价，单位：元。
+     * @var float 后付费云盘原单价，单位：元。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UnitPrice;
@@ -84,7 +96,7 @@ class PrepayPrice extends AbstractModel
     public $ChargeUnit;
 
     /**
-     * @var string 后付费云盘折扣单价，单位：元。
+     * @var float 后付费云盘折扣单价，单位：元。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UnitPriceDiscount;
@@ -103,14 +115,18 @@ class PrepayPrice extends AbstractModel
 
     /**
      * @param float $OriginalPrice 预付费云盘或快照预支费用的原价，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param float $DiscountPrice 预付费云盘或快照预支费用的折扣价，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OriginalPriceHigh 高精度预付费云盘或快照预支费用的原价，单位：元
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DiscountPriceHigh 高精度预付费云盘或快照预支费用的折扣价，单位：元
-     * @param string $UnitPrice 后付费云盘原单价，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param float $UnitPrice 后付费云盘原单价，单位：元。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ChargeUnit 后付费云盘的计价单元，取值范围：<br><li>HOUR：表示后付费云盘的计价单元是按小时计算。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $UnitPriceDiscount 后付费云盘折扣单价，单位：元。
+     * @param float $UnitPriceDiscount 后付费云盘折扣单价，单位：元。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UnitPriceHigh 高精度后付费云盘原单价, 单位：元
 注意：此字段可能返回 null，表示取不到有效值。

@@ -24,14 +24,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTimeStamp(integer $StartTimeStamp) 设置起始时间戳，Unix 时间戳
  * @method integer getEndTimeStamp() 获取结束时间戳，Unix 时间戳
  * @method void setEndTimeStamp(integer $EndTimeStamp) 设置结束时间戳，Unix 时间戳
- * @method integer getLimit() 获取返回记录条数，上限 100
- * @method void setLimit(integer $Limit) 设置返回记录条数，上限 100
- * @method integer getOffset() 获取偏移量
- * @method void setOffset(integer $Offset) 设置偏移量
- * @method integer getInstanceId() 获取实例 ID
- * @method void setInstanceId(integer $InstanceId) 设置实例 ID
- * @method integer getSdkAppId() 获取应用ID。
- * @method void setSdkAppId(integer $SdkAppId) 设置应用ID。
+ * @method integer getLimit() 获取返回数据条数，上限（deprecated）
+ * @method void setLimit(integer $Limit) 设置返回数据条数，上限（deprecated）
+ * @method integer getOffset() 获取偏移（deprecated）
+ * @method void setOffset(integer $Offset) 设置偏移（deprecated）
+ * @method integer getInstanceId() 获取实例 ID（deprecated）
+ * @method void setInstanceId(integer $InstanceId) 设置实例 ID（deprecated）
+ * @method integer getSdkAppId() 获取应用 ID
+ * @method void setSdkAppId(integer $SdkAppId) 设置应用 ID
+ * @method integer getPageSize() 获取分页尺寸，上限 100
+ * @method void setPageSize(integer $PageSize) 设置分页尺寸，上限 100
+ * @method integer getPageNumber() 获取分页页码，从 0 开始
+ * @method void setPageNumber(integer $PageNumber) 设置分页页码，从 0 开始
  */
 class DescribeTelCdrRequest extends AbstractModel
 {
@@ -46,32 +50,44 @@ class DescribeTelCdrRequest extends AbstractModel
     public $EndTimeStamp;
 
     /**
-     * @var integer 返回记录条数，上限 100
+     * @var integer 返回数据条数，上限（deprecated）
      */
     public $Limit;
 
     /**
-     * @var integer 偏移量
+     * @var integer 偏移（deprecated）
      */
     public $Offset;
 
     /**
-     * @var integer 实例 ID
+     * @var integer 实例 ID（deprecated）
      */
     public $InstanceId;
 
     /**
-     * @var integer 应用ID。
+     * @var integer 应用 ID
      */
     public $SdkAppId;
 
     /**
+     * @var integer 分页尺寸，上限 100
+     */
+    public $PageSize;
+
+    /**
+     * @var integer 分页页码，从 0 开始
+     */
+    public $PageNumber;
+
+    /**
      * @param integer $StartTimeStamp 起始时间戳，Unix 时间戳
      * @param integer $EndTimeStamp 结束时间戳，Unix 时间戳
-     * @param integer $Limit 返回记录条数，上限 100
-     * @param integer $Offset 偏移量
-     * @param integer $InstanceId 实例 ID
-     * @param integer $SdkAppId 应用ID。
+     * @param integer $Limit 返回数据条数，上限（deprecated）
+     * @param integer $Offset 偏移（deprecated）
+     * @param integer $InstanceId 实例 ID（deprecated）
+     * @param integer $SdkAppId 应用 ID
+     * @param integer $PageSize 分页尺寸，上限 100
+     * @param integer $PageNumber 分页页码，从 0 开始
      */
     function __construct()
     {
@@ -108,6 +124,14 @@ class DescribeTelCdrRequest extends AbstractModel
 
         if (array_key_exists("SdkAppId",$param) and $param["SdkAppId"] !== null) {
             $this->SdkAppId = $param["SdkAppId"];
+        }
+
+        if (array_key_exists("PageSize",$param) and $param["PageSize"] !== null) {
+            $this->PageSize = $param["PageSize"];
+        }
+
+        if (array_key_exists("PageNumber",$param) and $param["PageNumber"] !== null) {
+            $this->PageNumber = $param["PageNumber"];
         }
     }
 }

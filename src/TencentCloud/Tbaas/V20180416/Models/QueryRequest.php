@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setChaincodeName(string $ChaincodeName) 设置业务所属智能合约名称，可在智能合约详情或列表中获取
  * @method string getChannelName() 获取业务所属通道名称，可在通道详情或列表中获取
  * @method void setChannelName(string $ChannelName) 设置业务所属通道名称，可在通道详情或列表中获取
- * @method array getPeers() 获取执行该查询交易的节点列表（包括节点名称和节点所属组织名称，详见数据结构一节），可以在通道详情中获取该通道上的节点名称极其所属组织名称
- * @method void setPeers(array $Peers) 设置执行该查询交易的节点列表（包括节点名称和节点所属组织名称，详见数据结构一节），可以在通道详情中获取该通道上的节点名称极其所属组织名称
+ * @method array getPeers() 获取执行该查询交易的节点列表（包括节点名称和节点所属组织名称，详见数据结构一节），可以在通道详情中获取该通道上的节点名称及其所属组织名称
+ * @method void setPeers(array $Peers) 设置执行该查询交易的节点列表（包括节点名称和节点所属组织名称，详见数据结构一节），可以在通道详情中获取该通道上的节点名称及其所属组织名称
  * @method string getFuncName() 获取该笔交易查询需要调用的智能合约中的函数名称
  * @method void setFuncName(string $FuncName) 设置该笔交易查询需要调用的智能合约中的函数名称
  * @method string getGroupName() 获取调用合约的组织名称，可以在组织管理列表中获取当前组织的名称
@@ -67,7 +67,7 @@ class QueryRequest extends AbstractModel
     public $ChannelName;
 
     /**
-     * @var array 执行该查询交易的节点列表（包括节点名称和节点所属组织名称，详见数据结构一节），可以在通道详情中获取该通道上的节点名称极其所属组织名称
+     * @var array 执行该查询交易的节点列表（包括节点名称和节点所属组织名称，详见数据结构一节），可以在通道详情中获取该通道上的节点名称及其所属组织名称
      */
     public $Peers;
 
@@ -92,7 +92,7 @@ class QueryRequest extends AbstractModel
      * @param string $ClusterId 区块链网络ID，可在区块链网络详情或列表中获取
      * @param string $ChaincodeName 业务所属智能合约名称，可在智能合约详情或列表中获取
      * @param string $ChannelName 业务所属通道名称，可在通道详情或列表中获取
-     * @param array $Peers 执行该查询交易的节点列表（包括节点名称和节点所属组织名称，详见数据结构一节），可以在通道详情中获取该通道上的节点名称极其所属组织名称
+     * @param array $Peers 执行该查询交易的节点列表（包括节点名称和节点所属组织名称，详见数据结构一节），可以在通道详情中获取该通道上的节点名称及其所属组织名称
      * @param string $FuncName 该笔交易查询需要调用的智能合约中的函数名称
      * @param string $GroupName 调用合约的组织名称，可以在组织管理列表中获取当前组织的名称
      * @param array $Args 被调用的函数参数列表

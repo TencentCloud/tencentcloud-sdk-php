@@ -36,6 +36,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAvailablePortType(array $AvailablePortType) 设置接入点可用的端口类型列表。1000BASE-T代表千兆电口，1000BASE-LX代表千兆单模光口10km，1000BASE-ZX代表千兆单模光口80km,10GBASE-LR代表万兆单模光口10km,10GBASE-ZR代表万兆单模光口80km,10GBASE-LH代表万兆单模光口40km,100GBASE-LR4代表100G单模光口10km
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method Coordinate getCoordinate() 获取接入点经纬度
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCoordinate(Coordinate $Coordinate) 设置接入点经纬度
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCity() 获取接入点所在城市
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCity(string $City) 设置接入点所在城市
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AccessPoint extends AbstractModel
 {
@@ -76,6 +84,18 @@ class AccessPoint extends AbstractModel
     public $AvailablePortType;
 
     /**
+     * @var Coordinate 接入点经纬度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Coordinate;
+
+    /**
+     * @var string 接入点所在城市
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $City;
+
+    /**
      * @param string $AccessPointName 接入点的名称。
      * @param string $AccessPointId 接入点唯一ID。
      * @param string $State 接入点的状态。可用，不可用。
@@ -83,6 +103,10 @@ class AccessPoint extends AbstractModel
      * @param array $LineOperator 接入点支持的运营商列表。
      * @param string $RegionId 接入点管理的大区ID。
      * @param array $AvailablePortType 接入点可用的端口类型列表。1000BASE-T代表千兆电口，1000BASE-LX代表千兆单模光口10km，1000BASE-ZX代表千兆单模光口80km,10GBASE-LR代表万兆单模光口10km,10GBASE-ZR代表万兆单模光口80km,10GBASE-LH代表万兆单模光口40km,100GBASE-LR4代表100G单模光口10km
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Coordinate $Coordinate 接入点经纬度
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $City 接入点所在城市
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -124,6 +148,15 @@ class AccessPoint extends AbstractModel
 
         if (array_key_exists("AvailablePortType",$param) and $param["AvailablePortType"] !== null) {
             $this->AvailablePortType = $param["AvailablePortType"];
+        }
+
+        if (array_key_exists("Coordinate",$param) and $param["Coordinate"] !== null) {
+            $this->Coordinate = new Coordinate();
+            $this->Coordinate->deserialize($param["Coordinate"]);
+        }
+
+        if (array_key_exists("City",$param) and $param["City"] !== null) {
+            $this->City = $param["City"];
         }
     }
 }

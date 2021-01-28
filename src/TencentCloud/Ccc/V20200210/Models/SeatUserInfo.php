@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置坐席名称
  * @method string getMail() 获取坐席邮箱
  * @method void setMail(string $Mail) 设置坐席邮箱
- * @method string getPhone() 获取坐席电话号码
- * @method void setPhone(string $Phone) 设置坐席电话号码
+ * @method string getPhone() 获取坐席电话号码（带0086前缀）
+ * @method void setPhone(string $Phone) 设置坐席电话号码（带0086前缀）
  * @method string getNick() 获取坐席昵称
  * @method void setNick(string $Nick) 设置坐席昵称
  * @method string getUserId() 获取用户ID
@@ -52,7 +52,7 @@ class SeatUserInfo extends AbstractModel
     public $Mail;
 
     /**
-     * @var string 坐席电话号码
+     * @var string 坐席电话号码（带0086前缀）
      */
     public $Phone;
 
@@ -81,7 +81,7 @@ class SeatUserInfo extends AbstractModel
     /**
      * @param string $Name 坐席名称
      * @param string $Mail 坐席邮箱
-     * @param string $Phone 坐席电话号码
+     * @param string $Phone 坐席电话号码（带0086前缀）
      * @param string $Nick 坐席昵称
      * @param string $UserId 用户ID
      * @param array $SkillGroupNameList 坐席关联的技能组列表

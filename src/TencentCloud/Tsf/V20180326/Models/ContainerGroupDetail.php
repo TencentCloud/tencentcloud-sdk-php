@@ -164,6 +164,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxUnavailable(string $MaxUnavailable) 设置kubernetes滚动更新策略的MaxUnavailable参数
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method HealthCheckSettings getHealthCheckSettings() 获取部署组健康检查设置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHealthCheckSettings(HealthCheckSettings $HealthCheckSettings) 设置部署组健康检查设置
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ContainerGroupDetail extends AbstractModel
 {
@@ -384,6 +388,12 @@ class ContainerGroupDetail extends AbstractModel
     public $MaxUnavailable;
 
     /**
+     * @var HealthCheckSettings 部署组健康检查设置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $HealthCheckSettings;
+
+    /**
      * @param string $GroupId 部署组ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GroupName 分组名称
@@ -455,6 +465,8 @@ class ContainerGroupDetail extends AbstractModel
      * @param string $MaxSurge kubernetes滚动更新策略的MaxSurge参数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MaxUnavailable kubernetes滚动更新策略的MaxUnavailable参数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HealthCheckSettings $HealthCheckSettings 部署组健康检查设置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -622,6 +634,11 @@ class ContainerGroupDetail extends AbstractModel
 
         if (array_key_exists("MaxUnavailable",$param) and $param["MaxUnavailable"] !== null) {
             $this->MaxUnavailable = $param["MaxUnavailable"];
+        }
+
+        if (array_key_exists("HealthCheckSettings",$param) and $param["HealthCheckSettings"] !== null) {
+            $this->HealthCheckSettings = new HealthCheckSettings();
+            $this->HealthCheckSettings->deserialize($param["HealthCheckSettings"]);
         }
     }
 }

@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getCaptchaAppId() 获取验证码应用ID
  * @method void setCaptchaAppId(integer $CaptchaAppId) 设置验证码应用ID
- * @method integer getStart() 获取查询开始时间
- * @method void setStart(integer $Start) 设置查询开始时间
- * @method integer getEnd() 获取查询结束时间
- * @method void setEnd(integer $End) 设置查询结束时间
- * @method integer getType() 获取查询类型
- * @method void setType(integer $Type) 设置查询类型
+ * @method integer getStart() 获取查询开始时间 例如：2019112900
+ * @method void setStart(integer $Start) 设置查询开始时间 例如：2019112900
+ * @method integer getEnd() 获取查询结束时间 例如：2019112902
+ * @method void setEnd(integer $End) 设置查询结束时间 例如：2019112902
+ * @method integer getType() 获取查询类型 安全验证码小程序插件分类查询数据接口，请求量type=0、通过量type=1、验证量type=2、拦截量type=3 小时级查询（五小时左右延迟）
+ * @method void setType(integer $Type) 设置查询类型 安全验证码小程序插件分类查询数据接口，请求量type=0、通过量type=1、验证量type=2、拦截量type=3 小时级查询（五小时左右延迟）
  */
 class DescribeCaptchaMiniDataRequest extends AbstractModel
 {
@@ -37,25 +37,25 @@ class DescribeCaptchaMiniDataRequest extends AbstractModel
     public $CaptchaAppId;
 
     /**
-     * @var integer 查询开始时间
+     * @var integer 查询开始时间 例如：2019112900
      */
     public $Start;
 
     /**
-     * @var integer 查询结束时间
+     * @var integer 查询结束时间 例如：2019112902
      */
     public $End;
 
     /**
-     * @var integer 查询类型
+     * @var integer 查询类型 安全验证码小程序插件分类查询数据接口，请求量type=0、通过量type=1、验证量type=2、拦截量type=3 小时级查询（五小时左右延迟）
      */
     public $Type;
 
     /**
      * @param integer $CaptchaAppId 验证码应用ID
-     * @param integer $Start 查询开始时间
-     * @param integer $End 查询结束时间
-     * @param integer $Type 查询类型
+     * @param integer $Start 查询开始时间 例如：2019112900
+     * @param integer $End 查询结束时间 例如：2019112902
+     * @param integer $Type 查询类型 安全验证码小程序插件分类查询数据接口，请求量type=0、通过量type=1、验证量type=2、拦截量type=3 小时级查询（五小时左右延迟）
      */
     function __construct()
     {

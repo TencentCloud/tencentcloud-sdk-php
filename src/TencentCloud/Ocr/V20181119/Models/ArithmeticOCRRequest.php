@@ -38,6 +38,18 @@ use TencentCloud\Common\AbstractModel;
 支持的图片大小：所下载图片经 Base64 编码后不超过 3M。图片下载时间不超过 3 秒。
 图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。
 非腾讯云存储的 Url 速度和稳定性可能受一定影响。
+ * @method boolean getSupportHorizontalImage() 获取用于选择是否支持横屏拍摄。打开则支持横屏拍摄图片角度判断，角度信息在返回参数的angle中，默认值为true
+ * @method void setSupportHorizontalImage(boolean $SupportHorizontalImage) 设置用于选择是否支持横屏拍摄。打开则支持横屏拍摄图片角度判断，角度信息在返回参数的angle中，默认值为true
+ * @method boolean getRejectNonArithmeticPic() 获取是否拒绝非速算图，打开则拒绝非速算图(注：非速算图是指风景人物等明显不是速算图片的图片)，默认值为false
+ * @method void setRejectNonArithmeticPic(boolean $RejectNonArithmeticPic) 设置是否拒绝非速算图，打开则拒绝非速算图(注：非速算图是指风景人物等明显不是速算图片的图片)，默认值为false
+ * @method boolean getEnableDispRelatedVertical() 获取是否展开耦合算式中的竖式计算，默认值为false
+ * @method void setEnableDispRelatedVertical(boolean $EnableDispRelatedVertical) 设置是否展开耦合算式中的竖式计算，默认值为false
+ * @method boolean getEnableDispMidResult() 获取是否展示竖式算式的中间结果和格式控制字符，默认值为false
+ * @method void setEnableDispMidResult(boolean $EnableDispMidResult) 设置是否展示竖式算式的中间结果和格式控制字符，默认值为false
+ * @method boolean getEnablePdfRecognize() 获取是否开启pdf识别，默认值为true
+ * @method void setEnablePdfRecognize(boolean $EnablePdfRecognize) 设置是否开启pdf识别，默认值为true
+ * @method integer getPdfPageIndex() 获取pdf页码，从0开始，默认为0
+ * @method void setPdfPageIndex(integer $PdfPageIndex) 设置pdf页码，从0开始，默认为0
  */
 class ArithmeticOCRRequest extends AbstractModel
 {
@@ -59,6 +71,36 @@ class ArithmeticOCRRequest extends AbstractModel
     public $ImageUrl;
 
     /**
+     * @var boolean 用于选择是否支持横屏拍摄。打开则支持横屏拍摄图片角度判断，角度信息在返回参数的angle中，默认值为true
+     */
+    public $SupportHorizontalImage;
+
+    /**
+     * @var boolean 是否拒绝非速算图，打开则拒绝非速算图(注：非速算图是指风景人物等明显不是速算图片的图片)，默认值为false
+     */
+    public $RejectNonArithmeticPic;
+
+    /**
+     * @var boolean 是否展开耦合算式中的竖式计算，默认值为false
+     */
+    public $EnableDispRelatedVertical;
+
+    /**
+     * @var boolean 是否展示竖式算式的中间结果和格式控制字符，默认值为false
+     */
+    public $EnableDispMidResult;
+
+    /**
+     * @var boolean 是否开启pdf识别，默认值为true
+     */
+    public $EnablePdfRecognize;
+
+    /**
+     * @var integer pdf页码，从0开始，默认为0
+     */
+    public $PdfPageIndex;
+
+    /**
      * @param string $ImageBase64 图片的 Base64 值。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经Base64编码后不超过 3M。图片下载时间不超过 3 秒。
@@ -68,6 +110,12 @@ class ArithmeticOCRRequest extends AbstractModel
 支持的图片大小：所下载图片经 Base64 编码后不超过 3M。图片下载时间不超过 3 秒。
 图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。
 非腾讯云存储的 Url 速度和稳定性可能受一定影响。
+     * @param boolean $SupportHorizontalImage 用于选择是否支持横屏拍摄。打开则支持横屏拍摄图片角度判断，角度信息在返回参数的angle中，默认值为true
+     * @param boolean $RejectNonArithmeticPic 是否拒绝非速算图，打开则拒绝非速算图(注：非速算图是指风景人物等明显不是速算图片的图片)，默认值为false
+     * @param boolean $EnableDispRelatedVertical 是否展开耦合算式中的竖式计算，默认值为false
+     * @param boolean $EnableDispMidResult 是否展示竖式算式的中间结果和格式控制字符，默认值为false
+     * @param boolean $EnablePdfRecognize 是否开启pdf识别，默认值为true
+     * @param integer $PdfPageIndex pdf页码，从0开始，默认为0
      */
     function __construct()
     {
@@ -88,6 +136,30 @@ class ArithmeticOCRRequest extends AbstractModel
 
         if (array_key_exists("ImageUrl",$param) and $param["ImageUrl"] !== null) {
             $this->ImageUrl = $param["ImageUrl"];
+        }
+
+        if (array_key_exists("SupportHorizontalImage",$param) and $param["SupportHorizontalImage"] !== null) {
+            $this->SupportHorizontalImage = $param["SupportHorizontalImage"];
+        }
+
+        if (array_key_exists("RejectNonArithmeticPic",$param) and $param["RejectNonArithmeticPic"] !== null) {
+            $this->RejectNonArithmeticPic = $param["RejectNonArithmeticPic"];
+        }
+
+        if (array_key_exists("EnableDispRelatedVertical",$param) and $param["EnableDispRelatedVertical"] !== null) {
+            $this->EnableDispRelatedVertical = $param["EnableDispRelatedVertical"];
+        }
+
+        if (array_key_exists("EnableDispMidResult",$param) and $param["EnableDispMidResult"] !== null) {
+            $this->EnableDispMidResult = $param["EnableDispMidResult"];
+        }
+
+        if (array_key_exists("EnablePdfRecognize",$param) and $param["EnablePdfRecognize"] !== null) {
+            $this->EnablePdfRecognize = $param["EnablePdfRecognize"];
+        }
+
+        if (array_key_exists("PdfPageIndex",$param) and $param["PdfPageIndex"] !== null) {
+            $this->PdfPageIndex = $param["PdfPageIndex"];
         }
     }
 }

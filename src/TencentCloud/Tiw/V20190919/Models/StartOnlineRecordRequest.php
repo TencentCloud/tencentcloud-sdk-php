@@ -68,8 +68,14 @@ VIDEO_GENERATION_MODE - 视频生成模式（内测中，需邮件申请开通�
  * @method void setChatGroupId(string $ChatGroupId) 设置聊天群组ID，此字段仅适用于`视频生成模式`
 
 在`视频生成模式`下，默认会记录白板群组内的非白板信令消息，如果指定了`ChatGroupId`，则会记录指定群ID的聊天消息。
- * @method string getExtraData() 获取内部参数
- * @method void setExtraData(string $ExtraData) 设置内部参数
+ * @method integer getAutoStopTimeout() 获取自动停止录制超时时间，单位秒，取值范围[300, 86400], 默认值为300秒。
+
+当超过设定时间房间内没有音视频上行且没有白板操作的时候，录制服务会自动停止当前录制任务。
+ * @method void setAutoStopTimeout(integer $AutoStopTimeout) 设置自动停止录制超时时间，单位秒，取值范围[300, 86400], 默认值为300秒。
+
+当超过设定时间房间内没有音视频上行且没有白板操作的时候，录制服务会自动停止当前录制任务。
+ * @method string getExtraData() 获取内部参数，可忽略
+ * @method void setExtraData(string $ExtraData) 设置内部参数，可忽略
  */
 class StartOnlineRecordRequest extends AbstractModel
 {
@@ -150,7 +156,14 @@ VIDEO_GENERATION_MODE - 视频生成模式（内测中，需邮件申请开通�
     public $ChatGroupId;
 
     /**
-     * @var string 内部参数
+     * @var integer 自动停止录制超时时间，单位秒，取值范围[300, 86400], 默认值为300秒。
+
+当超过设定时间房间内没有音视频上行且没有白板操作的时候，录制服务会自动停止当前录制任务。
+     */
+    public $AutoStopTimeout;
+
+    /**
+     * @var string 内部参数，可忽略
      */
     public $ExtraData;
 
@@ -179,7 +192,10 @@ VIDEO_GENERATION_MODE - 视频生成模式（内测中，需邮件申请开通�
      * @param string $ChatGroupId 聊天群组ID，此字段仅适用于`视频生成模式`
 
 在`视频生成模式`下，默认会记录白板群组内的非白板信令消息，如果指定了`ChatGroupId`，则会记录指定群ID的聊天消息。
-     * @param string $ExtraData 内部参数
+     * @param integer $AutoStopTimeout 自动停止录制超时时间，单位秒，取值范围[300, 86400], 默认值为300秒。
+
+当超过设定时间房间内没有音视频上行且没有白板操作的时候，录制服务会自动停止当前录制任务。
+     * @param string $ExtraData 内部参数，可忽略
      */
     function __construct()
     {
@@ -248,6 +264,10 @@ VIDEO_GENERATION_MODE - 视频生成模式（内测中，需邮件申请开通�
 
         if (array_key_exists("ChatGroupId",$param) and $param["ChatGroupId"] !== null) {
             $this->ChatGroupId = $param["ChatGroupId"];
+        }
+
+        if (array_key_exists("AutoStopTimeout",$param) and $param["AutoStopTimeout"] !== null) {
+            $this->AutoStopTimeout = $param["AutoStopTimeout"];
         }
 
         if (array_key_exists("ExtraData",$param) and $param["ExtraData"] !== null) {

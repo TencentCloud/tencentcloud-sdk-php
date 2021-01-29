@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 函数代码
  *
- * @method string getCosBucketName() 获取对象存储桶名称
- * @method void setCosBucketName(string $CosBucketName) 设置对象存储桶名称
+ * @method string getCosBucketName() 获取对象存储桶名称（填写存储桶名称自定义部分，不包含-appid）
+ * @method void setCosBucketName(string $CosBucketName) 设置对象存储桶名称（填写存储桶名称自定义部分，不包含-appid）
  * @method string getCosObjectName() 获取对象存储对象路径
  * @method void setCosObjectName(string $CosObjectName) 设置对象存储对象路径
  * @method string getZipFile() 获取包含函数代码文件及其依赖项的 zip 格式文件，使用该接口时要求将 zip 文件的内容转成 base64 编码，最大支持20M
@@ -52,7 +52,7 @@ use TencentCloud\Common\AbstractModel;
 class Code extends AbstractModel
 {
     /**
-     * @var string 对象存储桶名称
+     * @var string 对象存储桶名称（填写存储桶名称自定义部分，不包含-appid）
      */
     public $CosBucketName;
 
@@ -122,7 +122,7 @@ class Code extends AbstractModel
     public $GitUserNameSecret;
 
     /**
-     * @param string $CosBucketName 对象存储桶名称
+     * @param string $CosBucketName 对象存储桶名称（填写存储桶名称自定义部分，不包含-appid）
      * @param string $CosObjectName 对象存储对象路径
      * @param string $ZipFile 包含函数代码文件及其依赖项的 zip 格式文件，使用该接口时要求将 zip 文件的内容转成 base64 编码，最大支持20M
      * @param string $CosBucketRegion 对象存储的地域，地域为北京时需要传入ap-beijing,北京一区时需要传递ap-beijing-1，其他的地域不需要传递。

@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreatedTime(string $CreatedTime) 设置创建时间。
  * @method array getTagSet() 获取标签键值对。
  * @method void setTagSet(array $TagSet) 设置标签键值对。
+ * @method array getLocalCidrForCcn() 获取local路由是否发布云联网。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLocalCidrForCcn(array $LocalCidrForCcn) 设置local路由是否发布云联网。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RouteTable extends AbstractModel
 {
@@ -80,6 +84,12 @@ class RouteTable extends AbstractModel
     public $TagSet;
 
     /**
+     * @var array local路由是否发布云联网。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LocalCidrForCcn;
+
+    /**
      * @param string $VpcId VPC实例ID。
      * @param string $RouteTableId 路由表实例ID，例如：rtb-azd4dt1c。
      * @param string $RouteTableName 路由表名称。
@@ -88,6 +98,8 @@ class RouteTable extends AbstractModel
      * @param boolean $Main 是否默认路由表。
      * @param string $CreatedTime 创建时间。
      * @param array $TagSet 标签键值对。
+     * @param array $LocalCidrForCcn local路由是否发布云联网。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -146,6 +158,15 @@ class RouteTable extends AbstractModel
                 $obj = new Tag();
                 $obj->deserialize($value);
                 array_push($this->TagSet, $obj);
+            }
+        }
+
+        if (array_key_exists("LocalCidrForCcn",$param) and $param["LocalCidrForCcn"] !== null) {
+            $this->LocalCidrForCcn = [];
+            foreach ($param["LocalCidrForCcn"] as $key => $value){
+                $obj = new CidrForCcn();
+                $obj->deserialize($value);
+                array_push($this->LocalCidrForCcn, $obj);
             }
         }
     }

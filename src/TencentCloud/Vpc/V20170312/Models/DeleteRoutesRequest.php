@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getRouteTableId() 获取路由表实例ID。
  * @method void setRouteTableId(string $RouteTableId) 设置路由表实例ID。
- * @method array getRoutes() 获取路由策略对象。
- * @method void setRoutes(array $Routes) 设置路由策略对象。
+ * @method array getRoutes() 获取路由策略对象，删除路由策略时，仅需使用Route的RouteId字段。
+ * @method void setRoutes(array $Routes) 设置路由策略对象，删除路由策略时，仅需使用Route的RouteId字段。
  */
 class DeleteRoutesRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class DeleteRoutesRequest extends AbstractModel
     public $RouteTableId;
 
     /**
-     * @var array 路由策略对象。
+     * @var array 路由策略对象，删除路由策略时，仅需使用Route的RouteId字段。
      */
     public $Routes;
 
     /**
      * @param string $RouteTableId 路由表实例ID。
-     * @param array $Routes 路由策略对象。
+     * @param array $Routes 路由策略对象，删除路由策略时，仅需使用Route的RouteId字段。
      */
     function __construct()
     {

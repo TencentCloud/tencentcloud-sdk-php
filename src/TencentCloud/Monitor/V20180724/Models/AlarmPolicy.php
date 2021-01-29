@@ -138,6 +138,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOriginId(string $OriginId) 设置用于实例、实例组绑定和解绑接口（BindingPolicyObject、UnBindingAllPolicyObject、UnBindingPolicyObject）的策略 ID
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTagInstances() 获取标签
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTagInstances(array $TagInstances) 设置标签
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AlarmPolicy extends AbstractModel
 {
@@ -313,6 +317,12 @@ class AlarmPolicy extends AbstractModel
     public $OriginId;
 
     /**
+     * @var array 标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TagInstances;
+
+    /**
      * @param string $PolicyId 告警策略 ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PolicyName 告警策略名称
@@ -371,6 +381,8 @@ class AlarmPolicy extends AbstractModel
      * @param string $RuleType 触发条件类型 STATIC=静态阈值 DYNAMIC=动态类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OriginId 用于实例、实例组绑定和解绑接口（BindingPolicyObject、UnBindingAllPolicyObject、UnBindingPolicyObject）的策略 ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $TagInstances 标签
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -509,6 +521,15 @@ class AlarmPolicy extends AbstractModel
 
         if (array_key_exists("OriginId",$param) and $param["OriginId"] !== null) {
             $this->OriginId = $param["OriginId"];
+        }
+
+        if (array_key_exists("TagInstances",$param) and $param["TagInstances"] !== null) {
+            $this->TagInstances = [];
+            foreach ($param["TagInstances"] as $key => $value){
+                $obj = new TagInstance();
+                $obj->deserialize($value);
+                array_push($this->TagInstances, $obj);
+            }
         }
     }
 }

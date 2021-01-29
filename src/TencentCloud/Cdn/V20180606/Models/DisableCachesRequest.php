@@ -20,21 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DisableCaches请求参数结构体
  *
- * @method array getUrls() 获取需要禁用的 URL 列表
+ * @method array getUrls() 获取禁用的 URL 列表（分协议生效，必须包含http://或https://）
 每次最多可提交 100 条，每日最多可提交 3000 条
- * @method void setUrls(array $Urls) 设置需要禁用的 URL 列表
+ * @method void setUrls(array $Urls) 设置禁用的 URL 列表（分协议生效，必须包含http://或https://）
 每次最多可提交 100 条，每日最多可提交 3000 条
  */
 class DisableCachesRequest extends AbstractModel
 {
     /**
-     * @var array 需要禁用的 URL 列表
+     * @var array 禁用的 URL 列表（分协议生效，必须包含http://或https://）
 每次最多可提交 100 条，每日最多可提交 3000 条
      */
     public $Urls;
 
     /**
-     * @param array $Urls 需要禁用的 URL 列表
+     * @param array $Urls 禁用的 URL 列表（分协议生效，必须包含http://或https://）
 每次最多可提交 100 条，每日最多可提交 3000 条
      */
     function __construct()

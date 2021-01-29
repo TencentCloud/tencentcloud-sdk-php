@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getCaptchaAppId() 获取验证码应用ID
  * @method void setCaptchaAppId(integer $CaptchaAppId) 设置验证码应用ID
- * @method integer getStart() 获取查询开始时间
- * @method void setStart(integer $Start) 设置查询开始时间
+ * @method integer getStart() 获取查询开始时间 例如：20200909
+ * @method void setStart(integer $Start) 设置查询开始时间 例如：20200909
  */
 class DescribeCaptchaTicketDataRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class DescribeCaptchaTicketDataRequest extends AbstractModel
     public $CaptchaAppId;
 
     /**
-     * @var integer 查询开始时间
+     * @var integer 查询开始时间 例如：20200909
      */
     public $Start;
 
     /**
      * @param integer $CaptchaAppId 验证码应用ID
-     * @param integer $Start 查询开始时间
+     * @param integer $Start 查询开始时间 例如：20200909
      */
     function __construct()
     {

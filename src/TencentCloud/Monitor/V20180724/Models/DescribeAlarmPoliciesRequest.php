@@ -52,6 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRuleTypes(array $RuleTypes) 设置根据触发条件筛选 不传展示全部策略 STATIC=展示静态阈值策略 DYNAMIC=展示动态阈值策略
  * @method array getEnable() 获取启停，1：启用   0：停止
  * @method void setEnable(array $Enable) 设置启停，1：启用   0：停止
+ * @method integer getNotBindingNoticeRule() 获取是否未配置通知规则，1：未配置，0：配置
+ * @method void setNotBindingNoticeRule(integer $NotBindingNoticeRule) 设置是否未配置通知规则，1：未配置，0：配置
  */
 class DescribeAlarmPoliciesRequest extends AbstractModel
 {
@@ -136,6 +138,11 @@ class DescribeAlarmPoliciesRequest extends AbstractModel
     public $Enable;
 
     /**
+     * @var integer 是否未配置通知规则，1：未配置，0：配置
+     */
+    public $NotBindingNoticeRule;
+
+    /**
      * @param string $Module 固定值，为"monitor"
      * @param integer $PageNumber 页数，从 1 开始计数，默认 1
      * @param integer $PageSize 每页的数量，取值1~100，默认20
@@ -152,6 +159,7 @@ class DescribeAlarmPoliciesRequest extends AbstractModel
      * @param array $NoticeIds 告警通知id列表
      * @param array $RuleTypes 根据触发条件筛选 不传展示全部策略 STATIC=展示静态阈值策略 DYNAMIC=展示动态阈值策略
      * @param array $Enable 启停，1：启用   0：停止
+     * @param integer $NotBindingNoticeRule 是否未配置通知规则，1：未配置，0：配置
      */
     function __construct()
     {
@@ -228,6 +236,10 @@ class DescribeAlarmPoliciesRequest extends AbstractModel
 
         if (array_key_exists("Enable",$param) and $param["Enable"] !== null) {
             $this->Enable = $param["Enable"];
+        }
+
+        if (array_key_exists("NotBindingNoticeRule",$param) and $param["NotBindingNoticeRule"] !== null) {
+            $this->NotBindingNoticeRule = $param["NotBindingNoticeRule"];
         }
     }
 }

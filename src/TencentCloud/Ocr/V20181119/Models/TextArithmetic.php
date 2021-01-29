@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDetectedText() 获取识别出的文本行内容
  * @method void setDetectedText(string $DetectedText) 设置识别出的文本行内容
- * @method boolean getResult() 获取算式运算结果
- * @method void setResult(boolean $Result) 设置算式运算结果
+ * @method boolean getResult() 获取算式运算结果，true-正确   false-错误或非法参数
+ * @method void setResult(boolean $Result) 设置算式运算结果，true-正确   false-错误或非法参数
  * @method integer getConfidence() 获取保留字段，暂不支持
  * @method void setConfidence(integer $Confidence) 设置保留字段，暂不支持
  * @method array getPolygon() 获取原图文本行坐标，以四个顶点坐标表示（保留字段，暂不支持）
@@ -58,6 +58,8 @@ use TencentCloud\Common\AbstractModel;
 ‘9’: 竖式乘除法
 ‘10’: 脱式计算
 ‘11’: 解方程
+ * @method string getAnswer() 获取错题推荐答案，算式运算结果正确返回为""，算式运算结果错误返回推荐答案 (注：暂不支持多个关系运算符（如1<10<7）、无关系运算符（如frac(1,2)+frac(2,3)）、单位换算（如1元=100角）错题的推荐答案返回)
+ * @method void setAnswer(string $Answer) 设置错题推荐答案，算式运算结果正确返回为""，算式运算结果错误返回推荐答案 (注：暂不支持多个关系运算符（如1<10<7）、无关系运算符（如frac(1,2)+frac(2,3)）、单位换算（如1元=100角）错题的推荐答案返回)
  */
 class TextArithmetic extends AbstractModel
 {
@@ -67,7 +69,7 @@ class TextArithmetic extends AbstractModel
     public $DetectedText;
 
     /**
-     * @var boolean 算式运算结果
+     * @var boolean 算式运算结果，true-正确   false-错误或非法参数
      */
     public $Result;
 
@@ -109,8 +111,13 @@ class TextArithmetic extends AbstractModel
     public $ExpressionType;
 
     /**
+     * @var string 错题推荐答案，算式运算结果正确返回为""，算式运算结果错误返回推荐答案 (注：暂不支持多个关系运算符（如1<10<7）、无关系运算符（如frac(1,2)+frac(2,3)）、单位换算（如1元=100角）错题的推荐答案返回)
+     */
+    public $Answer;
+
+    /**
      * @param string $DetectedText 识别出的文本行内容
-     * @param boolean $Result 算式运算结果
+     * @param boolean $Result 算式运算结果，true-正确   false-错误或非法参数
      * @param integer $Confidence 保留字段，暂不支持
      * @param array $Polygon 原图文本行坐标，以四个顶点坐标表示（保留字段，暂不支持）
 注意：此字段可能返回 null，表示取不到有效值。
@@ -128,6 +135,7 @@ class TextArithmetic extends AbstractModel
 ‘9’: 竖式乘除法
 ‘10’: 脱式计算
 ‘11’: 解方程
+     * @param string $Answer 错题推荐答案，算式运算结果正确返回为""，算式运算结果错误返回推荐答案 (注：暂不支持多个关系运算符（如1<10<7）、无关系运算符（如frac(1,2)+frac(2,3)）、单位换算（如1元=100角）错题的推荐答案返回)
      */
     function __construct()
     {
@@ -174,6 +182,10 @@ class TextArithmetic extends AbstractModel
 
         if (array_key_exists("ExpressionType",$param) and $param["ExpressionType"] !== null) {
             $this->ExpressionType = $param["ExpressionType"];
+        }
+
+        if (array_key_exists("Answer",$param) and $param["Answer"] !== null) {
+            $this->Answer = $param["Answer"];
         }
     }
 }

@@ -100,6 +100,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupInfo(array $GroupInfo) 设置策略信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getViewName() 获取显示名称ViewName
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setViewName(string $ViewName) 设置显示名称ViewName
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DescribeProductEventListEvents extends AbstractModel
 {
@@ -224,6 +228,12 @@ class DescribeProductEventListEvents extends AbstractModel
     public $GroupInfo;
 
     /**
+     * @var string 显示名称ViewName
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ViewName;
+
+    /**
      * @param integer $EventId 事件ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EventCName 事件中文名
@@ -263,6 +273,8 @@ class DescribeProductEventListEvents extends AbstractModel
      * @param integer $IsAlarmConfig 是否配置告警
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $GroupInfo 策略信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ViewName 显示名称ViewName
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -371,6 +383,10 @@ class DescribeProductEventListEvents extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->GroupInfo, $obj);
             }
+        }
+
+        if (array_key_exists("ViewName",$param) and $param["ViewName"] !== null) {
+            $this->ViewName = $param["ViewName"];
         }
     }
 }

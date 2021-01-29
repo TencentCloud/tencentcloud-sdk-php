@@ -68,6 +68,10 @@ CCN：云联网路由，系统默认下发，不可编辑与删除。
  * @method void setDestinationIpv6CidrBlock(string $DestinationIpv6CidrBlock) 设置目的IPv6网段，取值不能在私有网络网段内，例如：2402:4e00:1000:810b::/64。
  * @method string getRouteItemId() 获取路由唯一策略ID。
  * @method void setRouteItemId(string $RouteItemId) 设置路由唯一策略ID。
+ * @method boolean getPublishedToVbc() 获取路由策略是否发布到云联网。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPublishedToVbc(boolean $PublishedToVbc) 设置路由策略是否发布到云联网。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Route extends AbstractModel
 {
@@ -136,6 +140,12 @@ CCN：云联网路由，系统默认下发，不可编辑与删除。
     public $RouteItemId;
 
     /**
+     * @var boolean 路由策略是否发布到云联网。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PublishedToVbc;
+
+    /**
      * @param string $DestinationCidrBlock 目的网段，取值不能在私有网络网段内，例如：112.20.51.0/24。
      * @param string $GatewayType 下一跳类型，目前我们支持的类型有：
 CVM：公网网关类型的云服务器；
@@ -160,6 +170,8 @@ CCN：云联网路由，系统默认下发，不可编辑与删除。
      * @param string $RouteTableId 路由表实例ID，例如：rtb-azd4dt1c。
      * @param string $DestinationIpv6CidrBlock 目的IPv6网段，取值不能在私有网络网段内，例如：2402:4e00:1000:810b::/64。
      * @param string $RouteItemId 路由唯一策略ID。
+     * @param boolean $PublishedToVbc 路由策略是否发布到云联网。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -212,6 +224,10 @@ CCN：云联网路由，系统默认下发，不可编辑与删除。
 
         if (array_key_exists("RouteItemId",$param) and $param["RouteItemId"] !== null) {
             $this->RouteItemId = $param["RouteItemId"];
+        }
+
+        if (array_key_exists("PublishedToVbc",$param) and $param["PublishedToVbc"] !== null) {
+            $this->PublishedToVbc = $param["PublishedToVbc"];
         }
     }
 }

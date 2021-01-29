@@ -25,17 +25,25 @@ use TencentCloud\Tbaas\V20180416\Models as Models;
 /**
  * @method Models\ApplyUserCertResponse ApplyUserCert(Models\ApplyUserCertRequest $req) 申请用户证书
  * @method Models\BlockByNumberHandlerResponse BlockByNumberHandler(Models\BlockByNumberHandlerRequest $req) Bcos根据块高查询区块信息
+ * @method Models\CreateChaincodeAndInstallForUserResponse CreateChaincodeAndInstallForUser(Models\CreateChaincodeAndInstallForUserRequest $req) 创建并安装合约
  * @method Models\DeployDynamicContractHandlerResponse DeployDynamicContractHandler(Models\DeployDynamicContractHandlerRequest $req) 动态部署合约
  * @method Models\DownloadUserCertResponse DownloadUserCert(Models\DownloadUserCertRequest $req) 下载用户证书
  * @method Models\GetBlockListResponse GetBlockList(Models\GetBlockListRequest $req) 查看当前网络下的所有区块列表，分页展示
  * @method Models\GetBlockListHandlerResponse GetBlockListHandler(Models\GetBlockListHandlerRequest $req) Bcos分页查询当前群组下的区块列表
  * @method Models\GetBlockTransactionListForUserResponse GetBlockTransactionListForUser(Models\GetBlockTransactionListForUserRequest $req) 获取区块内的交易列表
+ * @method Models\GetChaincodeCompileLogForUserResponse GetChaincodeCompileLogForUser(Models\GetChaincodeCompileLogForUserRequest $req) 获取合约编译日志
+ * @method Models\GetChaincodeInitializeResultForUserResponse GetChaincodeInitializeResultForUser(Models\GetChaincodeInitializeResultForUserRequest $req) 实例化结果查询
+ * @method Models\GetChaincodeLogForUserResponse GetChaincodeLogForUser(Models\GetChaincodeLogForUserRequest $req) 获取合约容器日志
+ * @method Models\GetChannelListForUserResponse GetChannelListForUser(Models\GetChannelListForUserRequest $req) 获取通道列表
+ * @method Models\GetClusterListForUserResponse GetClusterListForUser(Models\GetClusterListForUserRequest $req) 获取该用户的网络列表。网络信息中包含组织信息，但仅包含该用户所在组织的信息。
  * @method Models\GetClusterSummaryResponse GetClusterSummary(Models\GetClusterSummaryRequest $req) 获取区块链网络概要
  * @method Models\GetInvokeTxResponse GetInvokeTx(Models\GetInvokeTxRequest $req) Invoke异步调用结果查询
  * @method Models\GetLatesdTransactionListResponse GetLatesdTransactionList(Models\GetLatesdTransactionListRequest $req) 获取最新交易列表
+ * @method Models\GetPeerLogForUserResponse GetPeerLogForUser(Models\GetPeerLogForUserRequest $req) 获取节点日志
  * @method Models\GetTransByHashHandlerResponse GetTransByHashHandler(Models\GetTransByHashHandlerRequest $req) Bcos根据交易哈希查看交易详细信息
  * @method Models\GetTransListHandlerResponse GetTransListHandler(Models\GetTransListHandlerRequest $req) Bcos分页查询当前群组的交易信息列表
  * @method Models\GetTransactionDetailForUserResponse GetTransactionDetailForUser(Models\GetTransactionDetailForUserRequest $req) 获取交易详情
+ * @method Models\InitializeChaincodeForUserResponse InitializeChaincodeForUser(Models\InitializeChaincodeForUserRequest $req) 实例化合约
  * @method Models\InvokeResponse Invoke(Models\InvokeRequest $req) 新增交易
  * @method Models\QueryResponse Query(Models\QueryRequest $req) 查询交易
  * @method Models\SendTransactionHandlerResponse SendTransactionHandler(Models\SendTransactionHandlerRequest $req) Bcos发送交易

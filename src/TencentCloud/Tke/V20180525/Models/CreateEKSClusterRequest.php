@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExtraParam(string $ExtraParam) 设置扩展参数。须是map[string]string 的json 格式。
  * @method boolean getEnableVpcCoreDNS() 获取是否在用户集群内开启Dns。默认为true
  * @method void setEnableVpcCoreDNS(boolean $EnableVpcCoreDNS) 设置是否在用户集群内开启Dns。默认为true
+ * @method array getTagSpecification() 获取标签描述列表。通过指定该参数可以同时绑定标签到相应的资源实例，当前仅支持绑定标签到集群实例。
+ * @method void setTagSpecification(array $TagSpecification) 设置标签描述列表。通过指定该参数可以同时绑定标签到相应的资源实例，当前仅支持绑定标签到集群实例。
  */
 class CreateEKSClusterRequest extends AbstractModel
 {
@@ -87,6 +89,11 @@ class CreateEKSClusterRequest extends AbstractModel
     public $EnableVpcCoreDNS;
 
     /**
+     * @var array 标签描述列表。通过指定该参数可以同时绑定标签到相应的资源实例，当前仅支持绑定标签到集群实例。
+     */
+    public $TagSpecification;
+
+    /**
      * @param string $K8SVersion k8s版本号。可为1.14.4, 1.12.8。
      * @param string $VpcId vpc 的Id
      * @param string $ClusterName 集群名称
@@ -96,6 +103,7 @@ class CreateEKSClusterRequest extends AbstractModel
      * @param array $DnsServers 集群自定义的Dns服务器信息
      * @param string $ExtraParam 扩展参数。须是map[string]string 的json 格式。
      * @param boolean $EnableVpcCoreDNS 是否在用户集群内开启Dns。默认为true
+     * @param array $TagSpecification 标签描述列表。通过指定该参数可以同时绑定标签到相应的资源实例，当前仅支持绑定标签到集群实例。
      */
     function __construct()
     {
@@ -149,6 +157,15 @@ class CreateEKSClusterRequest extends AbstractModel
 
         if (array_key_exists("EnableVpcCoreDNS",$param) and $param["EnableVpcCoreDNS"] !== null) {
             $this->EnableVpcCoreDNS = $param["EnableVpcCoreDNS"];
+        }
+
+        if (array_key_exists("TagSpecification",$param) and $param["TagSpecification"] !== null) {
+            $this->TagSpecification = [];
+            foreach ($param["TagSpecification"] as $key => $value){
+                $obj = new TagSpecification();
+                $obj->deserialize($value);
+                array_push($this->TagSpecification, $obj);
+            }
         }
     }
 }

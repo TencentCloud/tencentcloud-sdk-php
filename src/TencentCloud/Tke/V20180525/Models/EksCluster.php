@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNeedDeleteCbs(boolean $NeedDeleteCbs) 设置将来删除集群时是否要删除cbs。默认为 FALSE
  * @method boolean getEnableVpcCoreDNS() 获取是否在用户集群内开启Dns。默认为TRUE
  * @method void setEnableVpcCoreDNS(boolean $EnableVpcCoreDNS) 设置是否在用户集群内开启Dns。默认为TRUE
+ * @method array getTagSpecification() 获取标签描述列表。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTagSpecification(array $TagSpecification) 设置标签描述列表。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class EksCluster extends AbstractModel
 {
@@ -108,6 +112,12 @@ class EksCluster extends AbstractModel
     public $EnableVpcCoreDNS;
 
     /**
+     * @var array 标签描述列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TagSpecification;
+
+    /**
      * @param string $ClusterId 集群Id
      * @param string $ClusterName 集群名称
      * @param string $VpcId Vpc Id
@@ -120,6 +130,8 @@ class EksCluster extends AbstractModel
      * @param array $DnsServers 集群的自定义dns 服务器信息
      * @param boolean $NeedDeleteCbs 将来删除集群时是否要删除cbs。默认为 FALSE
      * @param boolean $EnableVpcCoreDNS 是否在用户集群内开启Dns。默认为TRUE
+     * @param array $TagSpecification 标签描述列表。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -185,6 +197,15 @@ class EksCluster extends AbstractModel
 
         if (array_key_exists("EnableVpcCoreDNS",$param) and $param["EnableVpcCoreDNS"] !== null) {
             $this->EnableVpcCoreDNS = $param["EnableVpcCoreDNS"];
+        }
+
+        if (array_key_exists("TagSpecification",$param) and $param["TagSpecification"] !== null) {
+            $this->TagSpecification = [];
+            foreach ($param["TagSpecification"] as $key => $value){
+                $obj = new TagSpecification();
+                $obj->deserialize($value);
+                array_push($this->TagSpecification, $obj);
+            }
         }
     }
 }

@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegionId(integer $RegionId) 设置该地域对应的数字编号
  * @method string getRegionState() 获取可用状态，UNAVAILABLE表示不可用，AVAILABLE表示可用
  * @method void setRegionState(string $RegionState) 设置可用状态，UNAVAILABLE表示不可用，AVAILABLE表示可用
+ * @method integer getSupportInternational() 获取该地域是否支持国际站售卖，0：不支持，1：支持
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSupportInternational(integer $SupportInternational) 设置该地域是否支持国际站售卖，0：不支持，1：支持
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RegionInfo extends AbstractModel
 {
@@ -52,10 +56,18 @@ class RegionInfo extends AbstractModel
     public $RegionState;
 
     /**
+     * @var integer 该地域是否支持国际站售卖，0：不支持，1：支持
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SupportInternational;
+
+    /**
      * @param string $Region 该地域对应的英文名称
      * @param string $RegionName 该地域对应的中文名称
      * @param integer $RegionId 该地域对应的数字编号
      * @param string $RegionState 可用状态，UNAVAILABLE表示不可用，AVAILABLE表示可用
+     * @param integer $SupportInternational 该地域是否支持国际站售卖，0：不支持，1：支持
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -84,6 +96,10 @@ class RegionInfo extends AbstractModel
 
         if (array_key_exists("RegionState",$param) and $param["RegionState"] !== null) {
             $this->RegionState = $param["RegionState"];
+        }
+
+        if (array_key_exists("SupportInternational",$param) and $param["SupportInternational"] !== null) {
+            $this->SupportInternational = $param["SupportInternational"];
         }
     }
 }

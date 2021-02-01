@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPath(string $Path) 设置Server路径
  * @method boolean getReadOnly() 获取是否只读
  * @method void setReadOnly(boolean $ReadOnly) 设置是否只读
+ * @method string getSecretName() 获取secret名称
+ * @method void setSecretName(string $SecretName) 设置secret名称
+ * @method boolean getEnableEmptyDirVolume() 获取临时目录
+ * @method void setEnableEmptyDirVolume(boolean $EnableEmptyDirVolume) 设置临时目录
  */
 class CloudBaseRunNfsVolumeSource extends AbstractModel
 {
@@ -45,9 +49,21 @@ class CloudBaseRunNfsVolumeSource extends AbstractModel
     public $ReadOnly;
 
     /**
+     * @var string secret名称
+     */
+    public $SecretName;
+
+    /**
+     * @var boolean 临时目录
+     */
+    public $EnableEmptyDirVolume;
+
+    /**
      * @param string $Server NFS挂载Server
      * @param string $Path Server路径
      * @param boolean $ReadOnly 是否只读
+     * @param string $SecretName secret名称
+     * @param boolean $EnableEmptyDirVolume 临时目录
      */
     function __construct()
     {
@@ -72,6 +88,14 @@ class CloudBaseRunNfsVolumeSource extends AbstractModel
 
         if (array_key_exists("ReadOnly",$param) and $param["ReadOnly"] !== null) {
             $this->ReadOnly = $param["ReadOnly"];
+        }
+
+        if (array_key_exists("SecretName",$param) and $param["SecretName"] !== null) {
+            $this->SecretName = $param["SecretName"];
+        }
+
+        if (array_key_exists("EnableEmptyDirVolume",$param) and $param["EnableEmptyDirVolume"] !== null) {
+            $this->EnableEmptyDirVolume = $param["EnableEmptyDirVolume"];
         }
     }
 }

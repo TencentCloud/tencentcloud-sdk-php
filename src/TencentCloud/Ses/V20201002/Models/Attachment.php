@@ -18,7 +18,7 @@ namespace TencentCloud\Ses\V20201002\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 附件结构，包含附件名和base之后的附件内容。
+ * 附件结构，包含附件名和base64之后的附件内容。
  *
  * @method string getFileName() 获取附件名称，最大支持255个字符长度，不支持部分附件类型，详情请参考[附件类型](https://cloud.tencent.com/document/product/1288/51951)。
  * @method void setFileName(string $FileName) 设置附件名称，最大支持255个字符长度，不支持部分附件类型，详情请参考[附件类型](https://cloud.tencent.com/document/product/1288/51951)。

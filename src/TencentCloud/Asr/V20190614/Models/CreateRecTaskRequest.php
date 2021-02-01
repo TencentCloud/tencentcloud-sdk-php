@@ -31,6 +31,10 @@ use TencentCloud\Common\AbstractModel;
 • 16k_ca：16k 粤语；
 • 16k_ja：16k 日语；
 • 16k_wuu-SH：16k 上海话方言；
+• 16k_zh_edu 中文教育；
+• 16k_en_edu 英文教育；
+• 16k_zh_medical  医疗；
+• 16k_th 泰语；
  * @method void setEngineModelType(string $EngineModelType) 设置引擎模型类型。
 电话场景：
 • 8k_en：电话 8k 英语；
@@ -42,6 +46,10 @@ use TencentCloud\Common\AbstractModel;
 • 16k_ca：16k 粤语；
 • 16k_ja：16k 日语；
 • 16k_wuu-SH：16k 上海话方言；
+• 16k_zh_edu 中文教育；
+• 16k_en_edu 英文教育；
+• 16k_zh_medical  医疗；
+• 16k_th 泰语；
  * @method integer getChannelNum() 获取识别声道数。1：单声道；2：双声道（仅支持 8k_zh 引擎模）。注意：录音识别会自动将音频转码为填写的识别声道数
  * @method void setChannelNum(integer $ChannelNum) 设置识别声道数。1：单声道；2：双声道（仅支持 8k_zh 引擎模）。注意：录音识别会自动将音频转码为填写的识别声道数
  * @method integer getResTextFormat() 获取识别结果返回形式。0： 识别结果文本(含分段时间戳)； 1：词级别粒度的[详细识别结果](https://cloud.tencent.com/document/api/1093/37824#SentenceDetail)(不含标点，含语速值)；2：词级别粒度的详细识别结果（包含标点、语速值）
@@ -54,8 +62,8 @@ use TencentCloud\Common\AbstractModel;
 注：话者分离目前是beta版本，请根据您的需要谨慎使用
  * @method void setSpeakerNumber(integer $SpeakerNumber) 设置说话人分离人数（需配合开启说话人分离使用），取值范围：0-10，0代表自动分离（目前仅支持≤6个人），1-10代表指定说话人数分离。
 注：话者分离目前是beta版本，请根据您的需要谨慎使用
- * @method string getCallbackUrl() 获取回调 URL，用户自行搭建的用于接收识别结果的服务URL。如果用户使用轮询方式获取识别结果，则无需提交该参数。回调格式&内容详见：[录音识别回调说明](https://github.com/yunjianfei/qcloud-documents/blob/master/product/%E5%A4%A7%E6%95%B0%E6%8D%AE%E4%B8%8EAI/%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB/%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB%20API%202017/%E5%BD%95%E9%9F%B3%E8%AF%86%E5%88%AB%E5%9B%9E%E8%B0%83%E8%AF%B4%E6%98%8E.md)
- * @method void setCallbackUrl(string $CallbackUrl) 设置回调 URL，用户自行搭建的用于接收识别结果的服务URL。如果用户使用轮询方式获取识别结果，则无需提交该参数。回调格式&内容详见：[录音识别回调说明](https://github.com/yunjianfei/qcloud-documents/blob/master/product/%E5%A4%A7%E6%95%B0%E6%8D%AE%E4%B8%8EAI/%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB/%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB%20API%202017/%E5%BD%95%E9%9F%B3%E8%AF%86%E5%88%AB%E5%9B%9E%E8%B0%83%E8%AF%B4%E6%98%8E.md)
+ * @method string getCallbackUrl() 获取回调 URL，用户自行搭建的用于接收识别结果的服务URL。如果用户使用轮询方式获取识别结果，则无需提交该参数。回调格式&内容详见：[录音识别回调说明](https://cloud.tencent.com/document/product/1093/52632)
+ * @method void setCallbackUrl(string $CallbackUrl) 设置回调 URL，用户自行搭建的用于接收识别结果的服务URL。如果用户使用轮询方式获取识别结果，则无需提交该参数。回调格式&内容详见：[录音识别回调说明](https://cloud.tencent.com/document/product/1093/52632)
  * @method string getUrl() 获取语音的URL地址，需要公网可下载。长度小于2048字节，当 SourceType 值为 0 时须填写该字段，为 1 时不需要填写。注意：请确保录音文件时长在5个小时之内，否则可能识别失败。请保证文件的下载速度，否则可能下载失败。
  * @method void setUrl(string $Url) 设置语音的URL地址，需要公网可下载。长度小于2048字节，当 SourceType 值为 0 时须填写该字段，为 1 时不需要填写。注意：请确保录音文件时长在5个小时之内，否则可能识别失败。请保证文件的下载速度，否则可能下载失败。
  * @method string getData() 获取语音数据，当SourceType 值为1时必须填写，为0可不写。要base64编码(采用python语言时注意读取文件应该为string而不是byte，以byte格式读取后要decode()。编码后的数据不可带有回车换行符)。音频数据要小于5MB。
@@ -68,8 +76,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFilterDirty(integer $FilterDirty) 设置是否过滤脏词（目前支持中文普通话引擎）。0：不过滤脏词；1：过滤脏词；2：将脏词替换为 * 。默认值为 0。
  * @method integer getFilterModal() 获取是否过语气词（目前支持中文普通话引擎）。0：不过滤语气词；1：部分过滤；2：严格过滤 。默认值为 0。
  * @method void setFilterModal(integer $FilterModal) 设置是否过语气词（目前支持中文普通话引擎）。0：不过滤语气词；1：部分过滤；2：严格过滤 。默认值为 0。
- * @method integer getConvertNumMode() 获取是否进行阿拉伯数字智能转换（目前支持中文普通话引擎）。0：不转换，直接输出中文数字，1：根据场景智能转换为阿拉伯数字。默认值为 1。
- * @method void setConvertNumMode(integer $ConvertNumMode) 设置是否进行阿拉伯数字智能转换（目前支持中文普通话引擎）。0：不转换，直接输出中文数字，1：根据场景智能转换为阿拉伯数字。默认值为 1。
+ * @method integer getConvertNumMode() 获取是否进行阿拉伯数字智能转换（目前支持中文普通话引擎）。0：不转换，直接输出中文数字，1：根据场景智能转换为阿拉伯数字，3: 打开数学相关数字转换。默认值为 1。
+ * @method void setConvertNumMode(integer $ConvertNumMode) 设置是否进行阿拉伯数字智能转换（目前支持中文普通话引擎）。0：不转换，直接输出中文数字，1：根据场景智能转换为阿拉伯数字，3: 打开数学相关数字转换。默认值为 1。
  * @method string getExtra() 获取附加参数
  * @method void setExtra(string $Extra) 设置附加参数
  * @method integer getFilterPunc() 获取是否过滤标点符号（目前支持中文普通话引擎）。 0：不过滤，1：过滤句末标点，2：过滤所有标点。默认为0。
@@ -89,6 +97,10 @@ class CreateRecTaskRequest extends AbstractModel
 • 16k_ca：16k 粤语；
 • 16k_ja：16k 日语；
 • 16k_wuu-SH：16k 上海话方言；
+• 16k_zh_edu 中文教育；
+• 16k_en_edu 英文教育；
+• 16k_zh_medical  医疗；
+• 16k_th 泰语；
      */
     public $EngineModelType;
 
@@ -119,7 +131,7 @@ class CreateRecTaskRequest extends AbstractModel
     public $SpeakerNumber;
 
     /**
-     * @var string 回调 URL，用户自行搭建的用于接收识别结果的服务URL。如果用户使用轮询方式获取识别结果，则无需提交该参数。回调格式&内容详见：[录音识别回调说明](https://github.com/yunjianfei/qcloud-documents/blob/master/product/%E5%A4%A7%E6%95%B0%E6%8D%AE%E4%B8%8EAI/%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB/%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB%20API%202017/%E5%BD%95%E9%9F%B3%E8%AF%86%E5%88%AB%E5%9B%9E%E8%B0%83%E8%AF%B4%E6%98%8E.md)
+     * @var string 回调 URL，用户自行搭建的用于接收识别结果的服务URL。如果用户使用轮询方式获取识别结果，则无需提交该参数。回调格式&内容详见：[录音识别回调说明](https://cloud.tencent.com/document/product/1093/52632)
      */
     public $CallbackUrl;
 
@@ -154,7 +166,7 @@ class CreateRecTaskRequest extends AbstractModel
     public $FilterModal;
 
     /**
-     * @var integer 是否进行阿拉伯数字智能转换（目前支持中文普通话引擎）。0：不转换，直接输出中文数字，1：根据场景智能转换为阿拉伯数字。默认值为 1。
+     * @var integer 是否进行阿拉伯数字智能转换（目前支持中文普通话引擎）。0：不转换，直接输出中文数字，1：根据场景智能转换为阿拉伯数字，3: 打开数学相关数字转换。默认值为 1。
      */
     public $ConvertNumMode;
 
@@ -180,20 +192,24 @@ class CreateRecTaskRequest extends AbstractModel
 • 16k_ca：16k 粤语；
 • 16k_ja：16k 日语；
 • 16k_wuu-SH：16k 上海话方言；
+• 16k_zh_edu 中文教育；
+• 16k_en_edu 英文教育；
+• 16k_zh_medical  医疗；
+• 16k_th 泰语；
      * @param integer $ChannelNum 识别声道数。1：单声道；2：双声道（仅支持 8k_zh 引擎模）。注意：录音识别会自动将音频转码为填写的识别声道数
      * @param integer $ResTextFormat 识别结果返回形式。0： 识别结果文本(含分段时间戳)； 1：词级别粒度的[详细识别结果](https://cloud.tencent.com/document/api/1093/37824#SentenceDetail)(不含标点，含语速值)；2：词级别粒度的详细识别结果（包含标点、语速值）
      * @param integer $SourceType 语音数据来源。0：语音 URL；1：语音数据（post body）。
      * @param integer $SpeakerDiarization 是否开启说话人分离，0：不开启，1：开启(仅支持8k_zh，16k_zh，16k_zh_video引擎模型，单声道音频)
      * @param integer $SpeakerNumber 说话人分离人数（需配合开启说话人分离使用），取值范围：0-10，0代表自动分离（目前仅支持≤6个人），1-10代表指定说话人数分离。
 注：话者分离目前是beta版本，请根据您的需要谨慎使用
-     * @param string $CallbackUrl 回调 URL，用户自行搭建的用于接收识别结果的服务URL。如果用户使用轮询方式获取识别结果，则无需提交该参数。回调格式&内容详见：[录音识别回调说明](https://github.com/yunjianfei/qcloud-documents/blob/master/product/%E5%A4%A7%E6%95%B0%E6%8D%AE%E4%B8%8EAI/%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB/%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB%20API%202017/%E5%BD%95%E9%9F%B3%E8%AF%86%E5%88%AB%E5%9B%9E%E8%B0%83%E8%AF%B4%E6%98%8E.md)
+     * @param string $CallbackUrl 回调 URL，用户自行搭建的用于接收识别结果的服务URL。如果用户使用轮询方式获取识别结果，则无需提交该参数。回调格式&内容详见：[录音识别回调说明](https://cloud.tencent.com/document/product/1093/52632)
      * @param string $Url 语音的URL地址，需要公网可下载。长度小于2048字节，当 SourceType 值为 0 时须填写该字段，为 1 时不需要填写。注意：请确保录音文件时长在5个小时之内，否则可能识别失败。请保证文件的下载速度，否则可能下载失败。
      * @param string $Data 语音数据，当SourceType 值为1时必须填写，为0可不写。要base64编码(采用python语言时注意读取文件应该为string而不是byte，以byte格式读取后要decode()。编码后的数据不可带有回车换行符)。音频数据要小于5MB。
      * @param integer $DataLen 数据长度，非必填（此数据长度为数据未进行base64编码时的数据长度）。
      * @param string $HotwordId 热词id。用于调用对应的热词表，如果在调用语音识别服务时，不进行单独的热词id设置，自动生效默认热词；如果进行了单独的热词id设置，那么将生效单独设置的热词id。
      * @param integer $FilterDirty 是否过滤脏词（目前支持中文普通话引擎）。0：不过滤脏词；1：过滤脏词；2：将脏词替换为 * 。默认值为 0。
      * @param integer $FilterModal 是否过语气词（目前支持中文普通话引擎）。0：不过滤语气词；1：部分过滤；2：严格过滤 。默认值为 0。
-     * @param integer $ConvertNumMode 是否进行阿拉伯数字智能转换（目前支持中文普通话引擎）。0：不转换，直接输出中文数字，1：根据场景智能转换为阿拉伯数字。默认值为 1。
+     * @param integer $ConvertNumMode 是否进行阿拉伯数字智能转换（目前支持中文普通话引擎）。0：不转换，直接输出中文数字，1：根据场景智能转换为阿拉伯数字，3: 打开数学相关数字转换。默认值为 1。
      * @param string $Extra 附加参数
      * @param integer $FilterPunc 是否过滤标点符号（目前支持中文普通话引擎）。 0：不过滤，1：过滤句末标点，2：过滤所有标点。默认为0。
      */

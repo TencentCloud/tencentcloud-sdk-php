@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setServiceName(string $ServiceName) 设置服务名
  * @method string getCIBusiness() 获取build类型,枚举值有: cloudbaserun, framework-ci
  * @method void setCIBusiness(string $CIBusiness) 设置build类型,枚举值有: cloudbaserun, framework-ci
+ * @method string getServiceVersion() 获取服务版本
+ * @method void setServiceVersion(string $ServiceVersion) 设置服务版本
  */
 class DescribeCloudBaseBuildServiceRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class DescribeCloudBaseBuildServiceRequest extends AbstractModel
     public $CIBusiness;
 
     /**
+     * @var string 服务版本
+     */
+    public $ServiceVersion;
+
+    /**
      * @param string $EnvId 环境id
      * @param string $ServiceName 服务名
      * @param string $CIBusiness build类型,枚举值有: cloudbaserun, framework-ci
+     * @param string $ServiceVersion 服务版本
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class DescribeCloudBaseBuildServiceRequest extends AbstractModel
 
         if (array_key_exists("CIBusiness",$param) and $param["CIBusiness"] !== null) {
             $this->CIBusiness = $param["CIBusiness"];
+        }
+
+        if (array_key_exists("ServiceVersion",$param) and $param["ServiceVersion"] !== null) {
+            $this->ServiceVersion = $param["ServiceVersion"];
         }
     }
 }

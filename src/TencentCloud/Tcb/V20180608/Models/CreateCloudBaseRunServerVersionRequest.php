@@ -88,6 +88,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImageReuseKey(string $ImageReuseKey) 设置镜像复用的key
  * @method array getSidecarSpecs() 获取容器的描述文件
  * @method void setSidecarSpecs(array $SidecarSpecs) 设置容器的描述文件
+ * @method CloudBaseSecurityContext getSecurity() 获取安全特性
+ * @method void setSecurity(CloudBaseSecurityContext $Security) 设置安全特性
  */
 class CreateCloudBaseRunServerVersionRequest extends AbstractModel
 {
@@ -262,6 +264,11 @@ class CreateCloudBaseRunServerVersionRequest extends AbstractModel
     public $SidecarSpecs;
 
     /**
+     * @var CloudBaseSecurityContext 安全特性
+     */
+    public $Security;
+
+    /**
      * @param string $EnvId 环境ID
      * @param string $UploadType 枚举（package/repository/image)
      * @param integer $FlowRatio 流量占比
@@ -296,6 +303,7 @@ class CreateCloudBaseRunServerVersionRequest extends AbstractModel
      * @param string $ServerPath 服务路径
      * @param string $ImageReuseKey 镜像复用的key
      * @param array $SidecarSpecs 容器的描述文件
+     * @param CloudBaseSecurityContext $Security 安全特性
      */
     function __construct()
     {
@@ -458,6 +466,11 @@ class CreateCloudBaseRunServerVersionRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->SidecarSpecs, $obj);
             }
+        }
+
+        if (array_key_exists("Security",$param) and $param["Security"] !== null) {
+            $this->Security = new CloudBaseSecurityContext();
+            $this->Security->deserialize($param["Security"]);
         }
     }
 }

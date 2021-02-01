@@ -24,10 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSdkAppId(integer $SdkAppId) 设置客户的SdkAppId
  * @method integer getRoomId() 获取需要推流白板的房间号，取值范围: (1, 4294967295)
  * @method void setRoomId(integer $RoomId) 设置需要推流白板的房间号，取值范围: (1, 4294967295)
- * @method string getPushUserId() 获取用于白板推流服务进房进行推流的用户ID，
-该ID必须是一个单独的未在SDK中使用的ID，白板推流服务使用这个用户ID进入房间进行白板音视频推流，若该ID和SDK中使用的ID重复，会导致SDK和白板推流服务互踢，影响正常推流。
- * @method void setPushUserId(string $PushUserId) 设置用于白板推流服务进房进行推流的用户ID，
-该ID必须是一个单独的未在SDK中使用的ID，白板推流服务使用这个用户ID进入房间进行白板音视频推流，若该ID和SDK中使用的ID重复，会导致SDK和白板推流服务互踢，影响正常推流。
+ * @method string getPushUserId() 获取用于白板推流服务进房进行推流的用户ID，最大长度不能大于60个字节，该ID必须是一个单独的未在SDK中使用的ID，白板推流服务使用这个用户ID进入房间进行白板音视频推流，若该ID和SDK中使用的ID重复，会导致SDK和白板推流服务互踢，影响正常推流。
+ * @method void setPushUserId(string $PushUserId) 设置用于白板推流服务进房进行推流的用户ID，最大长度不能大于60个字节，该ID必须是一个单独的未在SDK中使用的ID，白板推流服务使用这个用户ID进入房间进行白板音视频推流，若该ID和SDK中使用的ID重复，会导致SDK和白板推流服务互踢，影响正常推流。
  * @method string getPushUserSig() 获取与PushUserId对应的签名
  * @method void setPushUserSig(string $PushUserSig) 设置与PushUserId对应的签名
  * @method Whiteboard getWhiteboard() 获取白板参数，例如白板宽高、背景颜色等
@@ -72,8 +70,7 @@ class StartWhiteboardPushRequest extends AbstractModel
     public $RoomId;
 
     /**
-     * @var string 用于白板推流服务进房进行推流的用户ID，
-该ID必须是一个单独的未在SDK中使用的ID，白板推流服务使用这个用户ID进入房间进行白板音视频推流，若该ID和SDK中使用的ID重复，会导致SDK和白板推流服务互踢，影响正常推流。
+     * @var string 用于白板推流服务进房进行推流的用户ID，最大长度不能大于60个字节，该ID必须是一个单独的未在SDK中使用的ID，白板推流服务使用这个用户ID进入房间进行白板音视频推流，若该ID和SDK中使用的ID重复，会导致SDK和白板推流服务互踢，影响正常推流。
      */
     public $PushUserId;
 
@@ -123,8 +120,7 @@ class StartWhiteboardPushRequest extends AbstractModel
     /**
      * @param integer $SdkAppId 客户的SdkAppId
      * @param integer $RoomId 需要推流白板的房间号，取值范围: (1, 4294967295)
-     * @param string $PushUserId 用于白板推流服务进房进行推流的用户ID，
-该ID必须是一个单独的未在SDK中使用的ID，白板推流服务使用这个用户ID进入房间进行白板音视频推流，若该ID和SDK中使用的ID重复，会导致SDK和白板推流服务互踢，影响正常推流。
+     * @param string $PushUserId 用于白板推流服务进房进行推流的用户ID，最大长度不能大于60个字节，该ID必须是一个单独的未在SDK中使用的ID，白板推流服务使用这个用户ID进入房间进行白板音视频推流，若该ID和SDK中使用的ID重复，会导致SDK和白板推流服务互踢，影响正常推流。
      * @param string $PushUserSig 与PushUserId对应的签名
      * @param Whiteboard $Whiteboard 白板参数，例如白板宽高、背景颜色等
      * @param integer $AutoStopTimeout 自动停止推流超时时间，单位秒，取值范围[300, 259200], 默认值为1800秒。

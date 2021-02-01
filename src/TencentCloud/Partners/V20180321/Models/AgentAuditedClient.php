@@ -42,8 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setThisMonthAmt(integer $ThisMonthAmt) 设置本月消费金额
  * @method integer getHasOverdueBill() 获取是否欠费,0：不欠费；1：欠费
  * @method void setHasOverdueBill(integer $HasOverdueBill) 设置是否欠费,0：不欠费；1：欠费
- * @method string getClientType() 获取客户类型：可以为new(新拓)/assign(指定)/old(存量)/空
- * @method void setClientType(string $ClientType) 设置客户类型：可以为new(新拓)/assign(指定)/old(存量)/空
+ * @method string getClientType() 获取客户类型：可以为new(新拓)/assign(指定)/old(存量)/direct(直销)/direct_newopp(直销(新商机))/空
+ * @method void setClientType(string $ClientType) 设置客户类型：可以为new(新拓)/assign(指定)/old(存量)/direct(直销)/direct_newopp(直销(新商机))/空
  * @method string getProjectType() 获取项目类型：可以为self(自拓项目)/platform(合作项目)/repeat(复算项目  )/空
  * @method void setProjectType(string $ProjectType) 设置项目类型：可以为self(自拓项目)/platform(合作项目)/repeat(复算项目  )/空
  * @method string getSalesUin() 获取业务员ID
@@ -117,7 +117,7 @@ class AgentAuditedClient extends AbstractModel
     public $HasOverdueBill;
 
     /**
-     * @var string 客户类型：可以为new(新拓)/assign(指定)/old(存量)/空
+     * @var string 客户类型：可以为new(新拓)/assign(指定)/old(存量)/direct(直销)/direct_newopp(直销(新商机))/空
      */
     public $ClientType;
 
@@ -156,7 +156,7 @@ class AgentAuditedClient extends AbstractModel
      * @param integer $LastMonthAmt 上月消费金额
      * @param integer $ThisMonthAmt 本月消费金额
      * @param integer $HasOverdueBill 是否欠费,0：不欠费；1：欠费
-     * @param string $ClientType 客户类型：可以为new(新拓)/assign(指定)/old(存量)/空
+     * @param string $ClientType 客户类型：可以为new(新拓)/assign(指定)/old(存量)/direct(直销)/direct_newopp(直销(新商机))/空
      * @param string $ProjectType 项目类型：可以为self(自拓项目)/platform(合作项目)/repeat(复算项目  )/空
      * @param string $SalesUin 业务员ID
 注意：此字段可能返回 null，表示取不到有效值。

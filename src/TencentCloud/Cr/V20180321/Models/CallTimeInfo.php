@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 产品拨打时间信息
  *
- * @method string getStartTime() 获取产品开始拨打时间，HHmmss格式
- * @method void setStartTime(string $StartTime) 设置产品开始拨打时间，HHmmss格式
- * @method string getEndTime() 获取产品结束拨打时间，HHmmss格式
- * @method void setEndTime(string $EndTime) 设置产品结束拨打时间，HHmmss格式
+ * @method string getStartTime() 获取产品开始拨打时间，HHmmss格式,默认090000
+ * @method void setStartTime(string $StartTime) 设置产品开始拨打时间，HHmmss格式,默认090000
+ * @method string getEndTime() 获取产品结束拨打时间，HHmmss格式.默认200000
+ * @method void setEndTime(string $EndTime) 设置产品结束拨打时间，HHmmss格式.默认200000
  */
 class CallTimeInfo extends AbstractModel
 {
     /**
-     * @var string 产品开始拨打时间，HHmmss格式
+     * @var string 产品开始拨打时间，HHmmss格式,默认090000
      */
     public $StartTime;
 
     /**
-     * @var string 产品结束拨打时间，HHmmss格式
+     * @var string 产品结束拨打时间，HHmmss格式.默认200000
      */
     public $EndTime;
 
     /**
-     * @param string $StartTime 产品开始拨打时间，HHmmss格式
-     * @param string $EndTime 产品结束拨打时间，HHmmss格式
+     * @param string $StartTime 产品开始拨打时间，HHmmss格式,默认090000
+     * @param string $EndTime 产品结束拨打时间，HHmmss格式.默认200000
      */
     function __construct()
     {

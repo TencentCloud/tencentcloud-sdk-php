@@ -194,6 +194,8 @@ if [AvailableGameServerSessions] >= [400] for [5] minutes, then scaling by [curr
  * @method Models\StopGameServerSessionPlacementResponse StopGameServerSessionPlacement(Models\StopGameServerSessionPlacementRequest $req) 本接口（StopGameServerSessionPlacement）用于停止放置游戏服务器会话。
  * @method Models\UpdateAliasResponse UpdateAlias(Models\UpdateAliasRequest $req) 本接口（UpdateAlias）用于更新别名的属性。
  * @method Models\UpdateAssetResponse UpdateAsset(Models\UpdateAssetRequest $req) 本接口（UpdateAsset）用于修改生成包信息。
+ * @method Models\UpdateBucketAccelerateOptResponse UpdateBucketAccelerateOpt(Models\UpdateBucketAccelerateOptRequest $req) 本接口（UpdateBucketAccelerateOpt）用于开启cos全球加速。
+ * @method Models\UpdateBucketCORSOptResponse UpdateBucketCORSOpt(Models\UpdateBucketCORSOptRequest $req) 本接口（UpdateBucketCORSOpt）用于设置cos跨域访问。
  * @method Models\UpdateFleetAttributesResponse UpdateFleetAttributes(Models\UpdateFleetAttributesRequest $req) 本接口（UpdateFleetAttributes）用于更新服务器舰队属性。
  * @method Models\UpdateFleetCapacityResponse UpdateFleetCapacity(Models\UpdateFleetCapacityRequest $req) 本接口（UpdateFleetCapacity）用于更新服务器舰队容量配置。
  * @method Models\UpdateFleetNameResponse UpdateFleetName(Models\UpdateFleetNameRequest $req) 本接口（UpdateFleetName）用于更新服务器舰队名称。

@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCosUrl(string $CosUrl) 设置录音文件地址
  * @method string getDialogueLog() 获取对话日志。JSON格式
  * @method void setDialogueLog(string $DialogueLog) 设置对话日志。JSON格式
+ * @method string getCosFileName() 获取录音文件名
+ * @method void setCosFileName(string $CosFileName) 设置录音文件名
  */
 class RecordInfo extends AbstractModel
 {
@@ -80,6 +82,11 @@ class RecordInfo extends AbstractModel
     public $DialogueLog;
 
     /**
+     * @var string 录音文件名
+     */
+    public $CosFileName;
+
+    /**
      * @param string $BotId 任务Id
      * @param string $BotName 任务名称
      * @param string $BizDate 任务日期
@@ -88,6 +95,7 @@ class RecordInfo extends AbstractModel
      * @param integer $Duration 通话时长
      * @param string $CosUrl 录音文件地址
      * @param string $DialogueLog 对话日志。JSON格式
+     * @param string $CosFileName 录音文件名
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ class RecordInfo extends AbstractModel
 
         if (array_key_exists("DialogueLog",$param) and $param["DialogueLog"] !== null) {
             $this->DialogueLog = $param["DialogueLog"];
+        }
+
+        if (array_key_exists("CosFileName",$param) and $param["CosFileName"] !== null) {
+            $this->CosFileName = $param["CosFileName"];
         }
     }
 }

@@ -48,6 +48,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMem(integer $Mem) 设置内存大小（单位：M）
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method CloudBaseSecurityContext getSecurity() 获取安全特性
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSecurity(CloudBaseSecurityContext $Security) 设置安全特性
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CloudBaseRunSideSpec extends AbstractModel
 {
@@ -94,6 +98,12 @@ class CloudBaseRunSideSpec extends AbstractModel
     public $Mem;
 
     /**
+     * @var CloudBaseSecurityContext 安全特性
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Security;
+
+    /**
      * @param string $ContainerImage 容器镜像
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ContainerPort 容器端口
@@ -107,6 +117,8 @@ class CloudBaseRunSideSpec extends AbstractModel
      * @param integer $Cpu CPU大小
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Mem 内存大小（单位：M）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CloudBaseSecurityContext $Security 安全特性
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -148,6 +160,11 @@ class CloudBaseRunSideSpec extends AbstractModel
 
         if (array_key_exists("Mem",$param) and $param["Mem"] !== null) {
             $this->Mem = $param["Mem"];
+        }
+
+        if (array_key_exists("Security",$param) and $param["Security"] !== null) {
+            $this->Security = new CloudBaseSecurityContext();
+            $this->Security->deserialize($param["Security"]);
         }
     }
 }

@@ -24,7 +24,10 @@ use TencentCloud\Cr\V20180321\Models as Models;
 
 /**
  * @method Models\ApplyBlackListResponse ApplyBlackList(Models\ApplyBlackListRequest $req) 提交黑名单后，黑名单中有效期内的号码将停止拨打，适用于到期/逾期提醒、回访场景。
+ * @method Models\ApplyBlackListDataResponse ApplyBlackListData(Models\ApplyBlackListDataRequest $req) 提交机器人黑名单申请
  * @method Models\ApplyCreditAuditResponse ApplyCreditAudit(Models\ApplyCreditAuditRequest $req) 提交信审外呼申请，返回当次请求日期。
+ * @method Models\ChangeBotCallStatusResponse ChangeBotCallStatus(Models\ChangeBotCallStatusRequest $req) 更新机器人任务作业状态
+ * @method Models\ChangeBotTaskStatusResponse ChangeBotTaskStatus(Models\ChangeBotTaskStatusRequest $req) 更新机器人任务状态
  * @method Models\CreateBotTaskResponse CreateBotTask(Models\CreateBotTaskRequest $req) 创建机器人任务
  * @method Models\DescribeBotFlowResponse DescribeBotFlow(Models\DescribeBotFlowRequest $req) 查询机器人对话流
  * @method Models\DescribeCreditResultResponse DescribeCreditResult(Models\DescribeCreditResultRequest $req) 根据信审任务ID和请求日期，获取相关信审结果。
@@ -38,9 +41,11 @@ use TencentCloud\Cr\V20180321\Models as Models;
  * @method Models\DownloadReportResponse DownloadReport(Models\DownloadReportRequest $req) 用于下载结果报表。当日23:00后，可获取当日到期/逾期提醒结果，次日00:30后，可获取昨日回访结果。
  * @method Models\ExportBotDataResponse ExportBotData(Models\ExportBotDataRequest $req) 导出机器人数据
  * @method Models\QueryBotListResponse QueryBotList(Models\QueryBotListRequest $req) 查询机器人任务状态列表
+ * @method Models\QueryCallListResponse QueryCallList(Models\QueryCallListRequest $req) 机器人任务查询
  * @method Models\QueryInstantDataResponse QueryInstantData(Models\QueryInstantDataRequest $req) 实时数据查询
  * @method Models\QueryProductsResponse QueryProducts(Models\QueryProductsRequest $req) 查询产品列表
  * @method Models\QueryRecordListResponse QueryRecordList(Models\QueryRecordListRequest $req) 查询录音列表
+ * @method Models\UpdateBotTaskResponse UpdateBotTask(Models\UpdateBotTaskRequest $req) 更新机器人任务
  * @method Models\UploadBotDataResponse UploadBotData(Models\UploadBotDataRequest $req) 上传机器人任务数据
  * @method Models\UploadBotFileResponse UploadBotFile(Models\UploadBotFileRequest $req) 上传机器人文件
  * @method Models\UploadDataFileResponse UploadDataFile(Models\UploadDataFileRequest $req) 上传文件，接口返回数据任务ID，支持xlsx、xls、csv、zip格式。

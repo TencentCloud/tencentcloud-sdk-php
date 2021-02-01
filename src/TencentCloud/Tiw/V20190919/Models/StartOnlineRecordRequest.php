@@ -24,9 +24,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSdkAppId(integer $SdkAppId) 设置客户的SdkAppId
  * @method integer getRoomId() 获取需要录制的房间号，取值范围: (1, 4294967295)
  * @method void setRoomId(integer $RoomId) 设置需要录制的房间号，取值范围: (1, 4294967295)
- * @method string getRecordUserId() 获取用于录制服务进房的用户ID，格式为`tic_record_user_${RoomId}_${Random}`，其中 `${RoomId} `与录制房间号对应，`${Random}`为一个随机字符串。
+ * @method string getRecordUserId() 获取用于录制服务进房的用户ID，最大长度不能大于60个字节，格式为`tic_record_user_${RoomId}_${Random}`，其中 `${RoomId} `与录制房间号对应，`${Random}`为一个随机字符串。
 该ID必须是一个单独的未在SDK中使用的ID，录制服务使用这个用户ID进入房间进行音视频与白板录制，若该ID和SDK中使用的ID重复，会导致SDK和录制服务互踢，影响正常录制。
- * @method void setRecordUserId(string $RecordUserId) 设置用于录制服务进房的用户ID，格式为`tic_record_user_${RoomId}_${Random}`，其中 `${RoomId} `与录制房间号对应，`${Random}`为一个随机字符串。
+ * @method void setRecordUserId(string $RecordUserId) 设置用于录制服务进房的用户ID，最大长度不能大于60个字节，格式为`tic_record_user_${RoomId}_${Random}`，其中 `${RoomId} `与录制房间号对应，`${Random}`为一个随机字符串。
 该ID必须是一个单独的未在SDK中使用的ID，录制服务使用这个用户ID进入房间进行音视频与白板录制，若该ID和SDK中使用的ID重复，会导致SDK和录制服务互踢，影响正常录制。
  * @method string getRecordUserSig() 获取与RecordUserId对应的签名
  * @method void setRecordUserSig(string $RecordUserSig) 设置与RecordUserId对应的签名
@@ -90,7 +90,7 @@ class StartOnlineRecordRequest extends AbstractModel
     public $RoomId;
 
     /**
-     * @var string 用于录制服务进房的用户ID，格式为`tic_record_user_${RoomId}_${Random}`，其中 `${RoomId} `与录制房间号对应，`${Random}`为一个随机字符串。
+     * @var string 用于录制服务进房的用户ID，最大长度不能大于60个字节，格式为`tic_record_user_${RoomId}_${Random}`，其中 `${RoomId} `与录制房间号对应，`${Random}`为一个随机字符串。
 该ID必须是一个单独的未在SDK中使用的ID，录制服务使用这个用户ID进入房间进行音视频与白板录制，若该ID和SDK中使用的ID重复，会导致SDK和录制服务互踢，影响正常录制。
      */
     public $RecordUserId;
@@ -170,7 +170,7 @@ VIDEO_GENERATION_MODE - 视频生成模式（内测中，需邮件申请开通�
     /**
      * @param integer $SdkAppId 客户的SdkAppId
      * @param integer $RoomId 需要录制的房间号，取值范围: (1, 4294967295)
-     * @param string $RecordUserId 用于录制服务进房的用户ID，格式为`tic_record_user_${RoomId}_${Random}`，其中 `${RoomId} `与录制房间号对应，`${Random}`为一个随机字符串。
+     * @param string $RecordUserId 用于录制服务进房的用户ID，最大长度不能大于60个字节，格式为`tic_record_user_${RoomId}_${Random}`，其中 `${RoomId} `与录制房间号对应，`${Random}`为一个随机字符串。
 该ID必须是一个单独的未在SDK中使用的ID，录制服务使用这个用户ID进入房间进行音视频与白板录制，若该ID和SDK中使用的ID重复，会导致SDK和录制服务互踢，影响正常录制。
      * @param string $RecordUserSig 与RecordUserId对应的签名
      * @param string $GroupId （已废弃，设置无效）白板的 IM 群组 Id，默认同房间号

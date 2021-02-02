@@ -46,6 +46,22 @@ use TencentCloud\Common\AbstractModel;
 206: 月结时长
 304: 日结流量
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTotalPage() 获取总页数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTotalPage(integer $TotalPage) 设置总页数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTotalNum() 获取数据总条数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTotalNum(integer $TotalNum) 设置数据总条数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getPageNum() 获取当前页数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPageNum(integer $PageNum) 设置当前页数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getPageSize() 获取当前每页数量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPageSize(integer $PageSize) 设置当前每页数量
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -73,6 +89,30 @@ class DescribeLivePackageInfoResponse extends AbstractModel
     public $PackageBillMode;
 
     /**
+     * @var integer 总页数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TotalPage;
+
+    /**
+     * @var integer 数据总条数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TotalNum;
+
+    /**
+     * @var integer 当前页数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PageNum;
+
+    /**
+     * @var integer 当前每页数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PageSize;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -90,6 +130,14 @@ class DescribeLivePackageInfoResponse extends AbstractModel
 205: 日结时长
 206: 月结时长
 304: 日结流量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $TotalPage 总页数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $TotalNum 数据总条数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $PageNum 当前页数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $PageSize 当前每页数量
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -117,6 +165,22 @@ class DescribeLivePackageInfoResponse extends AbstractModel
 
         if (array_key_exists("PackageBillMode",$param) and $param["PackageBillMode"] !== null) {
             $this->PackageBillMode = $param["PackageBillMode"];
+        }
+
+        if (array_key_exists("TotalPage",$param) and $param["TotalPage"] !== null) {
+            $this->TotalPage = $param["TotalPage"];
+        }
+
+        if (array_key_exists("TotalNum",$param) and $param["TotalNum"] !== null) {
+            $this->TotalNum = $param["TotalNum"];
+        }
+
+        if (array_key_exists("PageNum",$param) and $param["PageNum"] !== null) {
+            $this->PageNum = $param["PageNum"];
+        }
+
+        if (array_key_exists("PageSize",$param) and $param["PageSize"] !== null) {
+            $this->PageSize = $param["PageSize"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

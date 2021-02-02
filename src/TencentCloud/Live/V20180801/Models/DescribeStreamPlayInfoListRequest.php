@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAppName(string $AppName) 设置推流路径，与播放地址中的AppName保持一致，会精确匹配，在同时传递了StreamName时生效。
 若不填，则为查询总体播放数据。
 注意：按AppName查询请先联系工单申请，开通后配置生效预计需要5个工作日左右，具体时间以最终回复为准。
+ * @method string getServiceName() 获取服务名称，可选值包括LVB(标准直播)，LEB(快直播)，不填则查LVB+LEB总值。
+ * @method void setServiceName(string $ServiceName) 设置服务名称，可选值包括LVB(标准直播)，LEB(快直播)，不填则查LVB+LEB总值。
  */
 class DescribeStreamPlayInfoListRequest extends AbstractModel
 {
@@ -74,6 +76,11 @@ class DescribeStreamPlayInfoListRequest extends AbstractModel
     public $AppName;
 
     /**
+     * @var string 服务名称，可选值包括LVB(标准直播)，LEB(快直播)，不填则查LVB+LEB总值。
+     */
+    public $ServiceName;
+
+    /**
      * @param string $StartTime 开始时间，北京时间，格式为yyyy-mm-dd HH:MM:SS
      * @param string $EndTime 结束时间，北京时间，格式为yyyy-mm-dd HH:MM:SS，
 结束时间 和 开始时间跨度不支持超过24小时，支持距当前时间30天内的数据查询。
@@ -84,6 +91,7 @@ class DescribeStreamPlayInfoListRequest extends AbstractModel
      * @param string $AppName 推流路径，与播放地址中的AppName保持一致，会精确匹配，在同时传递了StreamName时生效。
 若不填，则为查询总体播放数据。
 注意：按AppName查询请先联系工单申请，开通后配置生效预计需要5个工作日左右，具体时间以最终回复为准。
+     * @param string $ServiceName 服务名称，可选值包括LVB(标准直播)，LEB(快直播)，不填则查LVB+LEB总值。
      */
     function __construct()
     {
@@ -116,6 +124,10 @@ class DescribeStreamPlayInfoListRequest extends AbstractModel
 
         if (array_key_exists("AppName",$param) and $param["AppName"] !== null) {
             $this->AppName = $param["AppName"];
+        }
+
+        if (array_key_exists("ServiceName",$param) and $param["ServiceName"] !== null) {
+            $this->ServiceName = $param["ServiceName"];
         }
     }
 }

@@ -46,6 +46,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGameServerSessionProtectionTimeLimit(integer $GameServerSessionProtectionTimeLimit) 设置时限保护超时时间，默认60分钟，最小值5，最大值1440；当NewGameSessionProtectionPolicy为TimeLimitProtection时参数有效
  * @method array getTags() 获取标签列表，最大长度50组
  * @method void setTags(array $Tags) 设置标签列表，最大长度50组
+ * @method DiskInfo getSystemDiskInfo() 获取系统盘，储存类型为 SSD 云硬盘（CLOUD_SSD）时，100-500GB；储存类型为高性能云硬盘（CLOUD_PREMIUM）时，50-500GB；容量以1为单位
+ * @method void setSystemDiskInfo(DiskInfo $SystemDiskInfo) 设置系统盘，储存类型为 SSD 云硬盘（CLOUD_SSD）时，100-500GB；储存类型为高性能云硬盘（CLOUD_PREMIUM）时，50-500GB；容量以1为单位
+ * @method array getDataDiskInfo() 获取数据盘，储存类型为 SSD 云硬盘（CLOUD_SSD）时，100-32000GB；储存类型为高性能云硬盘（CLOUD_PREMIUM）时，10-32000GB；容量以10为单位
+ * @method void setDataDiskInfo(array $DataDiskInfo) 设置数据盘，储存类型为 SSD 云硬盘（CLOUD_SSD）时，100-32000GB；储存类型为高性能云硬盘（CLOUD_PREMIUM）时，10-32000GB；容量以10为单位
  */
 class CreateFleetRequest extends AbstractModel
 {
@@ -115,6 +119,16 @@ class CreateFleetRequest extends AbstractModel
     public $Tags;
 
     /**
+     * @var DiskInfo 系统盘，储存类型为 SSD 云硬盘（CLOUD_SSD）时，100-500GB；储存类型为高性能云硬盘（CLOUD_PREMIUM）时，50-500GB；容量以1为单位
+     */
+    public $SystemDiskInfo;
+
+    /**
+     * @var array 数据盘，储存类型为 SSD 云硬盘（CLOUD_SSD）时，100-32000GB；储存类型为高性能云硬盘（CLOUD_PREMIUM）时，10-32000GB；容量以10为单位
+     */
+    public $DataDiskInfo;
+
+    /**
      * @param string $AssetId 生成包 Id
      * @param string $Description 描述，最小长度0，最大长度100
      * @param array $InboundPermissions 网络配置
@@ -128,6 +142,8 @@ class CreateFleetRequest extends AbstractModel
      * @param string $SubNetId VPC 子网，对等连接已不再使用
      * @param integer $GameServerSessionProtectionTimeLimit 时限保护超时时间，默认60分钟，最小值5，最大值1440；当NewGameSessionProtectionPolicy为TimeLimitProtection时参数有效
      * @param array $Tags 标签列表，最大长度50组
+     * @param DiskInfo $SystemDiskInfo 系统盘，储存类型为 SSD 云硬盘（CLOUD_SSD）时，100-500GB；储存类型为高性能云硬盘（CLOUD_PREMIUM）时，50-500GB；容量以1为单位
+     * @param array $DataDiskInfo 数据盘，储存类型为 SSD 云硬盘（CLOUD_SSD）时，100-32000GB；储存类型为高性能云硬盘（CLOUD_PREMIUM）时，10-32000GB；容量以10为单位
      */
     function __construct()
     {
@@ -203,6 +219,20 @@ class CreateFleetRequest extends AbstractModel
                 $obj = new Tag();
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
+            }
+        }
+
+        if (array_key_exists("SystemDiskInfo",$param) and $param["SystemDiskInfo"] !== null) {
+            $this->SystemDiskInfo = new DiskInfo();
+            $this->SystemDiskInfo->deserialize($param["SystemDiskInfo"]);
+        }
+
+        if (array_key_exists("DataDiskInfo",$param) and $param["DataDiskInfo"] !== null) {
+            $this->DataDiskInfo = [];
+            foreach ($param["DataDiskInfo"] as $key => $value){
+                $obj = new DiskInfo();
+                $obj->deserialize($value);
+                array_push($this->DataDiskInfo, $obj);
             }
         }
     }

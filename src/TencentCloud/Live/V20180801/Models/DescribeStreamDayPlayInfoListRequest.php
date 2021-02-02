@@ -30,6 +30,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPageNum(integer $PageNum) 设置页号，范围[1,1000]，默认值是1。
  * @method integer getPageSize() 获取每页个数，范围[100,1000]，默认值是1000。
  * @method void setPageSize(integer $PageSize) 设置每页个数，范围[100,1000]，默认值是1000。
+ * @method string getMainlandOrOversea() 获取可选值：
+Mainland：查询国内数据，
+Oversea：则查询国外数据，
+默认：查询国内+国外的数据。
+ * @method void setMainlandOrOversea(string $MainlandOrOversea) 设置可选值：
+Mainland：查询国内数据，
+Oversea：则查询国外数据，
+默认：查询国内+国外的数据。
+ * @method string getServiceName() 获取服务名称，可选值包括LVB(标准直播)，LEB(快直播)，不填则查LVB+LEB总值。
+ * @method void setServiceName(string $ServiceName) 设置服务名称，可选值包括LVB(标准直播)，LEB(快直播)，不填则查LVB+LEB总值。
  */
 class DescribeStreamDayPlayInfoListRequest extends AbstractModel
 {
@@ -55,11 +65,29 @@ class DescribeStreamDayPlayInfoListRequest extends AbstractModel
     public $PageSize;
 
     /**
+     * @var string 可选值：
+Mainland：查询国内数据，
+Oversea：则查询国外数据，
+默认：查询国内+国外的数据。
+     */
+    public $MainlandOrOversea;
+
+    /**
+     * @var string 服务名称，可选值包括LVB(标准直播)，LEB(快直播)，不填则查LVB+LEB总值。
+     */
+    public $ServiceName;
+
+    /**
      * @param string $DayTime 日期，格式：YYYY-mm-dd。
 第二天凌晨3点出昨天的数据，建议在这个时间点之后查询最新数据。支持最近3个月的数据查询。
      * @param string $PlayDomain 播放域名。
      * @param integer $PageNum 页号，范围[1,1000]，默认值是1。
      * @param integer $PageSize 每页个数，范围[100,1000]，默认值是1000。
+     * @param string $MainlandOrOversea 可选值：
+Mainland：查询国内数据，
+Oversea：则查询国外数据，
+默认：查询国内+国外的数据。
+     * @param string $ServiceName 服务名称，可选值包括LVB(标准直播)，LEB(快直播)，不填则查LVB+LEB总值。
      */
     function __construct()
     {
@@ -88,6 +116,14 @@ class DescribeStreamDayPlayInfoListRequest extends AbstractModel
 
         if (array_key_exists("PageSize",$param) and $param["PageSize"] !== null) {
             $this->PageSize = $param["PageSize"];
+        }
+
+        if (array_key_exists("MainlandOrOversea",$param) and $param["MainlandOrOversea"] !== null) {
+            $this->MainlandOrOversea = $param["MainlandOrOversea"];
+        }
+
+        if (array_key_exists("ServiceName",$param) and $param["ServiceName"] !== null) {
+            $this->ServiceName = $param["ServiceName"];
         }
     }
 }

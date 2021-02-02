@@ -134,6 +134,22 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMonitorVersion(string $MonitorVersion) 设置监控版本: 1m-分钟粒度监控，5s-5秒粒度监控
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getClientLimitMin() 获取客户端最大连接数可设置的最小值
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setClientLimitMin(integer $ClientLimitMin) 设置客户端最大连接数可设置的最小值
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getClientLimitMax() 获取客户端最大连接数可设置的最大值
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setClientLimitMax(integer $ClientLimitMax) 设置客户端最大连接数可设置的最大值
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getNodeSet() 获取实例的节点详细信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNodeSet(array $NodeSet) 设置实例的节点详细信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRegion() 获取实例所在的地域信息，比如ap-guangzhou
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRegion(string $Region) 设置实例所在的地域信息，比如ap-guangzhou
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceSet extends AbstractModel
 {
@@ -375,6 +391,30 @@ class InstanceSet extends AbstractModel
     public $MonitorVersion;
 
     /**
+     * @var integer 客户端最大连接数可设置的最小值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ClientLimitMin;
+
+    /**
+     * @var integer 客户端最大连接数可设置的最大值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ClientLimitMax;
+
+    /**
+     * @var array 实例的节点详细信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NodeSet;
+
+    /**
+     * @var string 实例所在的地域信息，比如ap-guangzhou
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Region;
+
+    /**
      * @param string $InstanceName 实例名称
      * @param string $InstanceId 实例Id
      * @param integer $Appid 用户的Appid
@@ -431,6 +471,14 @@ class InstanceSet extends AbstractModel
      * @param integer $DiskSize Tendis实例的磁盘大小
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MonitorVersion 监控版本: 1m-分钟粒度监控，5s-5秒粒度监控
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ClientLimitMin 客户端最大连接数可设置的最小值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ClientLimitMax 客户端最大连接数可设置的最大值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $NodeSet 实例的节点详细信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Region 实例所在的地域信息，比如ap-guangzhou
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -634,6 +682,27 @@ class InstanceSet extends AbstractModel
 
         if (array_key_exists("MonitorVersion",$param) and $param["MonitorVersion"] !== null) {
             $this->MonitorVersion = $param["MonitorVersion"];
+        }
+
+        if (array_key_exists("ClientLimitMin",$param) and $param["ClientLimitMin"] !== null) {
+            $this->ClientLimitMin = $param["ClientLimitMin"];
+        }
+
+        if (array_key_exists("ClientLimitMax",$param) and $param["ClientLimitMax"] !== null) {
+            $this->ClientLimitMax = $param["ClientLimitMax"];
+        }
+
+        if (array_key_exists("NodeSet",$param) and $param["NodeSet"] !== null) {
+            $this->NodeSet = [];
+            foreach ($param["NodeSet"] as $key => $value){
+                $obj = new RedisNodeInfo();
+                $obj->deserialize($value);
+                array_push($this->NodeSet, $obj);
+            }
+        }
+
+        if (array_key_exists("Region",$param) and $param["Region"] !== null) {
+            $this->Region = $param["Region"];
         }
     }
 }

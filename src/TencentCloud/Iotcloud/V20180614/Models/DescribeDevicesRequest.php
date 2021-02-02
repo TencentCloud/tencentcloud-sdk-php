@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFirmwareVersion(string $FirmwareVersion) 设置设备固件版本号，若不带此参数会返回所有固件版本的设备。传"None-FirmwareVersion"查询无版本号的设备
  * @method string getDeviceName() 获取需要过滤的设备名称
  * @method void setDeviceName(string $DeviceName) 设置需要过滤的设备名称
+ * @method integer getEnableState() 获取设备是否启用，0禁用状态1启用状态，默认不区分
+ * @method void setEnableState(integer $EnableState) 设置设备是否启用，0禁用状态1启用状态，默认不区分
  */
 class DescribeDevicesRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class DescribeDevicesRequest extends AbstractModel
     public $DeviceName;
 
     /**
+     * @var integer 设备是否启用，0禁用状态1启用状态，默认不区分
+     */
+    public $EnableState;
+
+    /**
      * @param string $ProductId 需要查看设备列表的产品 ID
      * @param integer $Offset 偏移量，Offset从0开始
      * @param integer $Limit 分页的大小，数值范围 10-250
      * @param string $FirmwareVersion 设备固件版本号，若不带此参数会返回所有固件版本的设备。传"None-FirmwareVersion"查询无版本号的设备
      * @param string $DeviceName 需要过滤的设备名称
+     * @param integer $EnableState 设备是否启用，0禁用状态1启用状态，默认不区分
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class DescribeDevicesRequest extends AbstractModel
 
         if (array_key_exists("DeviceName",$param) and $param["DeviceName"] !== null) {
             $this->DeviceName = $param["DeviceName"];
+        }
+
+        if (array_key_exists("EnableState",$param) and $param["EnableState"] !== null) {
+            $this->EnableState = $param["EnableState"];
         }
     }
 }

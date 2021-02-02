@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取实例 ID。
  * @method void setInstanceId(string $InstanceId) 设置实例 ID。
- * @method string getDstSlave() 获取模板从实例。可选值："first" - 第一备机；"second" - 第二备机。默认值为 "first"，仅多可用区实例支持设置为 "second"。
- * @method void setDstSlave(string $DstSlave) 设置模板从实例。可选值："first" - 第一备机；"second" - 第二备机。默认值为 "first"，仅多可用区实例支持设置为 "second"。
+ * @method string getDstSlave() 获取目标从实例。可选值："first" - 第一备机；"second" - 第二备机。默认值为 "first"，仅多可用区实例支持设置为 "second"。
+ * @method void setDstSlave(string $DstSlave) 设置目标从实例。可选值："first" - 第一备机；"second" - 第二备机。默认值为 "first"，仅多可用区实例支持设置为 "second"。
  * @method boolean getForceSwitch() 获取是否强制切换。默认为 False。注意，若设置强制切换为 True，实例存在丢失数据的风险，请谨慎使用。
  * @method void setForceSwitch(boolean $ForceSwitch) 设置是否强制切换。默认为 False。注意，若设置强制切换为 True，实例存在丢失数据的风险，请谨慎使用。
  * @method boolean getWaitSwitch() 获取是否时间窗内切换。默认为 False，即不在时间窗内切换。注意，如果设置了 ForceSwitch 参数为 True，则该参数不生效。
@@ -37,7 +37,7 @@ class SwitchDBInstanceMasterSlaveRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string 模板从实例。可选值："first" - 第一备机；"second" - 第二备机。默认值为 "first"，仅多可用区实例支持设置为 "second"。
+     * @var string 目标从实例。可选值："first" - 第一备机；"second" - 第二备机。默认值为 "first"，仅多可用区实例支持设置为 "second"。
      */
     public $DstSlave;
 
@@ -53,7 +53,7 @@ class SwitchDBInstanceMasterSlaveRequest extends AbstractModel
 
     /**
      * @param string $InstanceId 实例 ID。
-     * @param string $DstSlave 模板从实例。可选值："first" - 第一备机；"second" - 第二备机。默认值为 "first"，仅多可用区实例支持设置为 "second"。
+     * @param string $DstSlave 目标从实例。可选值："first" - 第一备机；"second" - 第二备机。默认值为 "first"，仅多可用区实例支持设置为 "second"。
      * @param boolean $ForceSwitch 是否强制切换。默认为 False。注意，若设置强制切换为 True，实例存在丢失数据的风险，请谨慎使用。
      * @param boolean $WaitSwitch 是否时间窗内切换。默认为 False，即不在时间窗内切换。注意，如果设置了 ForceSwitch 参数为 True，则该参数不生效。
      */

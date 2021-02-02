@@ -23,7 +23,7 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Cwp\V20180228\Models as Models;
 
 /**
- * @method Models\AddLoginWhiteListResponse AddLoginWhiteList(Models\AddLoginWhiteListRequest $req) 本接口（AddLoginWhiteList）用于添加白名单规则
+ * @method Models\AddLoginWhiteListResponse AddLoginWhiteList(Models\AddLoginWhiteListRequest $req) 本接口用于新增异地登录白名单规则。
  * @method Models\AddMachineTagResponse AddMachineTag(Models\AddMachineTagRequest $req) 增加机器关联标签
  * @method Models\CloseProVersionResponse CloseProVersion(Models\CloseProVersionRequest $req) 本接口 (CloseProVersion) 用于关闭专业版。
  * @method Models\CreateBaselineStrategyResponse CreateBaselineStrategy(Models\CreateBaselineStrategyRequest $req) 根据策略信息创建基线策略
@@ -34,7 +34,7 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\DeleteBashEventsResponse DeleteBashEvents(Models\DeleteBashEventsRequest $req) 根据Ids删除高危命令事件
  * @method Models\DeleteBashRulesResponse DeleteBashRules(Models\DeleteBashRulesRequest $req) 删除高危命令规则
  * @method Models\DeleteBruteAttacksResponse DeleteBruteAttacks(Models\DeleteBruteAttacksRequest $req) 本接口 (DeleteBruteAttacks) 用于删除暴力破解记录。
- * @method Models\DeleteLoginWhiteListResponse DeleteLoginWhiteList(Models\DeleteLoginWhiteListRequest $req) 删除白名单规则
+ * @method Models\DeleteLoginWhiteListResponse DeleteLoginWhiteList(Models\DeleteLoginWhiteListRequest $req) 本接口用于删除异地登录白名单规则。
  * @method Models\DeleteMachineResponse DeleteMachine(Models\DeleteMachineRequest $req) 本接口（DeleteMachine）用于卸载云镜客户端。
  * @method Models\DeleteMachineTagResponse DeleteMachineTag(Models\DeleteMachineTagRequest $req) 删除服务器关联的标签
  * @method Models\DeleteMaliciousRequestsResponse DeleteMaliciousRequests(Models\DeleteMaliciousRequestsRequest $req) 本接口 (DeleteMaliciousRequests) 用于删除恶意请求记录。
@@ -118,7 +118,7 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\MisAlarmNonlocalLoginPlacesResponse MisAlarmNonlocalLoginPlaces(Models\MisAlarmNonlocalLoginPlacesRequest $req) 本接口{MisAlarmNonlocalLoginPlaces}将设置当前地点为常用登录地。
  * @method Models\ModifyAlarmAttributeResponse ModifyAlarmAttribute(Models\ModifyAlarmAttributeRequest $req) 本接口（ModifyAlarmAttribute）用于修改告警设置。
  * @method Models\ModifyAutoOpenProVersionConfigResponse ModifyAutoOpenProVersionConfig(Models\ModifyAutoOpenProVersionConfigRequest $req) 本接口 (ModifyAutoOpenProVersionConfig) 用于设置新增主机自动开通专业版配置。
- * @method Models\ModifyLoginWhiteListResponse ModifyLoginWhiteList(Models\ModifyLoginWhiteListRequest $req) 编辑白名单规则
+ * @method Models\ModifyLoginWhiteListResponse ModifyLoginWhiteList(Models\ModifyLoginWhiteListRequest $req) 本接口用于编辑异地登录白名单规则。
  * @method Models\ModifyMalwareTimingScanSettingsResponse ModifyMalwareTimingScanSettings(Models\ModifyMalwareTimingScanSettingsRequest $req) 定时扫描设置
  * @method Models\ModifyProVersionRenewFlagResponse ModifyProVersionRenewFlag(Models\ModifyProVersionRenewFlagRequest $req) 本接口 (ModifyProVersionRenewFlag) 用于修改专业版包年包月续费标识。
  * @method Models\OpenProVersionResponse OpenProVersion(Models\OpenProVersionRequest $req) 本接口 (OpenProVersion) 用于开通专业版。

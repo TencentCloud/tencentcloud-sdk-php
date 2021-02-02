@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAlias(string $Alias) 设置备注名称。
  * @method integer getProjectId() 获取项目 ID。
  * @method void setProjectId(integer $ProjectId) 设置项目 ID。
+ * @method string getCertificateUse() 获取证书用途/证书来源。“CLB，CDN，WAF，LIVE，DDOS”
+ * @method void setCertificateUse(string $CertificateUse) 设置证书用途/证书来源。“CLB，CDN，WAF，LIVE，DDOS”
  */
 class UploadCertificateRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class UploadCertificateRequest extends AbstractModel
     public $ProjectId;
 
     /**
+     * @var string 证书用途/证书来源。“CLB，CDN，WAF，LIVE，DDOS”
+     */
+    public $CertificateUse;
+
+    /**
      * @param string $CertificatePublicKey 证书内容。
      * @param string $CertificatePrivateKey 私钥内容，证书类型为 SVR 时必填，为 CA 时可不填。
      * @param string $CertificateType 证书类型，默认 SVR。CA = 客户端证书，SVR = 服务器证书。
      * @param string $Alias 备注名称。
      * @param integer $ProjectId 项目 ID。
+     * @param string $CertificateUse 证书用途/证书来源。“CLB，CDN，WAF，LIVE，DDOS”
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class UploadCertificateRequest extends AbstractModel
 
         if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
             $this->ProjectId = $param["ProjectId"];
+        }
+
+        if (array_key_exists("CertificateUse",$param) and $param["CertificateUse"] !== null) {
+            $this->CertificateUse = $param["CertificateUse"];
         }
     }
 }

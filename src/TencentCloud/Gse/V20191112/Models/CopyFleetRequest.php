@@ -50,6 +50,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSelectedCcnType(string $SelectedCcnType) 设置是否选择云联网：CCN_SELECTED 或者 CCN_UNSELECTED；默认是 CCN_UNSELECTED
  * @method array getTags() 获取标签列表，最大长度50组
  * @method void setTags(array $Tags) 设置标签列表，最大长度50组
+ * @method DiskInfo getSystemDiskInfo() 获取系统盘，储存类型为 SSD 云硬盘（CLOUD_SSD）时，100-500GB；储存类型为高性能云硬盘（CLOUD_PREMIUM）时，50-500GB；容量以1为单位
+ * @method void setSystemDiskInfo(DiskInfo $SystemDiskInfo) 设置系统盘，储存类型为 SSD 云硬盘（CLOUD_SSD）时，100-500GB；储存类型为高性能云硬盘（CLOUD_PREMIUM）时，50-500GB；容量以1为单位
+ * @method array getDataDiskInfo() 获取数据盘，储存类型为 SSD 云硬盘（CLOUD_SSD）时，100-32000GB；储存类型为高性能云硬盘（CLOUD_PREMIUM）时，10-32000GB；容量以10为单位
+ * @method void setDataDiskInfo(array $DataDiskInfo) 设置数据盘，储存类型为 SSD 云硬盘（CLOUD_SSD）时，100-32000GB；储存类型为高性能云硬盘（CLOUD_PREMIUM）时，10-32000GB；容量以10为单位
+ * @method string getSelectedTimerType() 获取是否选择复制定时器策略：TIMER_SELECTED 或者 TIMER_UNSELECTED；默认是 TIMER_UNSELECTED
+ * @method void setSelectedTimerType(string $SelectedTimerType) 设置是否选择复制定时器策略：TIMER_SELECTED 或者 TIMER_UNSELECTED；默认是 TIMER_UNSELECTED
  */
 class CopyFleetRequest extends AbstractModel
 {
@@ -129,6 +135,21 @@ class CopyFleetRequest extends AbstractModel
     public $Tags;
 
     /**
+     * @var DiskInfo 系统盘，储存类型为 SSD 云硬盘（CLOUD_SSD）时，100-500GB；储存类型为高性能云硬盘（CLOUD_PREMIUM）时，50-500GB；容量以1为单位
+     */
+    public $SystemDiskInfo;
+
+    /**
+     * @var array 数据盘，储存类型为 SSD 云硬盘（CLOUD_SSD）时，100-32000GB；储存类型为高性能云硬盘（CLOUD_PREMIUM）时，10-32000GB；容量以10为单位
+     */
+    public $DataDiskInfo;
+
+    /**
+     * @var string 是否选择复制定时器策略：TIMER_SELECTED 或者 TIMER_UNSELECTED；默认是 TIMER_UNSELECTED
+     */
+    public $SelectedTimerType;
+
+    /**
      * @param string $FleetId 服务器舰队 Id
      * @param integer $CopyNumber 复制数量，最小值1，最大值为剩余配额，可以根据[获取用户配额](https://cloud.tencent.com/document/product/1165/48732)接口获取。
      * @param string $AssetId 生成包 Id
@@ -144,6 +165,9 @@ class CopyFleetRequest extends AbstractModel
      * @param string $SelectedScalingType 是否选择扩缩容：SCALING_SELECTED 或者 SCALING_UNSELECTED；默认是 SCALING_UNSELECTED
      * @param string $SelectedCcnType 是否选择云联网：CCN_SELECTED 或者 CCN_UNSELECTED；默认是 CCN_UNSELECTED
      * @param array $Tags 标签列表，最大长度50组
+     * @param DiskInfo $SystemDiskInfo 系统盘，储存类型为 SSD 云硬盘（CLOUD_SSD）时，100-500GB；储存类型为高性能云硬盘（CLOUD_PREMIUM）时，50-500GB；容量以1为单位
+     * @param array $DataDiskInfo 数据盘，储存类型为 SSD 云硬盘（CLOUD_SSD）时，100-32000GB；储存类型为高性能云硬盘（CLOUD_PREMIUM）时，10-32000GB；容量以10为单位
+     * @param string $SelectedTimerType 是否选择复制定时器策略：TIMER_SELECTED 或者 TIMER_UNSELECTED；默认是 TIMER_UNSELECTED
      */
     function __construct()
     {
@@ -228,6 +252,24 @@ class CopyFleetRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("SystemDiskInfo",$param) and $param["SystemDiskInfo"] !== null) {
+            $this->SystemDiskInfo = new DiskInfo();
+            $this->SystemDiskInfo->deserialize($param["SystemDiskInfo"]);
+        }
+
+        if (array_key_exists("DataDiskInfo",$param) and $param["DataDiskInfo"] !== null) {
+            $this->DataDiskInfo = [];
+            foreach ($param["DataDiskInfo"] as $key => $value){
+                $obj = new DiskInfo();
+                $obj->deserialize($value);
+                array_push($this->DataDiskInfo, $obj);
+            }
+        }
+
+        if (array_key_exists("SelectedTimerType",$param) and $param["SelectedTimerType"] !== null) {
+            $this->SelectedTimerType = $param["SelectedTimerType"];
         }
     }
 }

@@ -20,8 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetFunctionLogs请求参数结构体
  *
- * @method string getFunctionName() 获取函数的名称
- * @method void setFunctionName(string $FunctionName) 设置函数的名称
+ * @method string getFunctionName() 获取函数的名称。
+- 为保证[获取函数运行日志](https://cloud.tencent.com/document/product/583/18583)接口`GetFunctionLogs`兼容性，输入参数`FunctionName`仍为非必填项，但建议填写该参数，否则可能导致日志获取失败。
+- 函数关联日志服务后，建议使用[日志服务](https://cloud.tencent.com/document/product/614/16875)相关接口以获得最佳日志检索体验。
+ * @method void setFunctionName(string $FunctionName) 设置函数的名称。
+- 为保证[获取函数运行日志](https://cloud.tencent.com/document/product/583/18583)接口`GetFunctionLogs`兼容性，输入参数`FunctionName`仍为非必填项，但建议填写该参数，否则可能导致日志获取失败。
+- 函数关联日志服务后，建议使用[日志服务](https://cloud.tencent.com/document/product/614/16875)相关接口以获得最佳日志检索体验。
  * @method integer getOffset() 获取数据的偏移量，Offset+Limit不能大于10000
  * @method void setOffset(integer $Offset) 设置数据的偏移量，Offset+Limit不能大于10000
  * @method integer getLimit() 获取返回数据的长度，Offset+Limit不能大于10000
@@ -48,7 +52,9 @@ use TencentCloud\Common\AbstractModel;
 class GetFunctionLogsRequest extends AbstractModel
 {
     /**
-     * @var string 函数的名称
+     * @var string 函数的名称。
+- 为保证[获取函数运行日志](https://cloud.tencent.com/document/product/583/18583)接口`GetFunctionLogs`兼容性，输入参数`FunctionName`仍为非必填项，但建议填写该参数，否则可能导致日志获取失败。
+- 函数关联日志服务后，建议使用[日志服务](https://cloud.tencent.com/document/product/614/16875)相关接口以获得最佳日志检索体验。
      */
     public $FunctionName;
 
@@ -108,7 +114,9 @@ class GetFunctionLogsRequest extends AbstractModel
     public $SearchContext;
 
     /**
-     * @param string $FunctionName 函数的名称
+     * @param string $FunctionName 函数的名称。
+- 为保证[获取函数运行日志](https://cloud.tencent.com/document/product/583/18583)接口`GetFunctionLogs`兼容性，输入参数`FunctionName`仍为非必填项，但建议填写该参数，否则可能导致日志获取失败。
+- 函数关联日志服务后，建议使用[日志服务](https://cloud.tencent.com/document/product/614/16875)相关接口以获得最佳日志检索体验。
      * @param integer $Offset 数据的偏移量，Offset+Limit不能大于10000
      * @param integer $Limit 返回数据的长度，Offset+Limit不能大于10000
      * @param string $Order 以升序还是降序的方式对日志进行排序，可选值 desc和 asc

@@ -22,28 +22,28 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getImage() 获取人体图片 Base64 数据。
 图片 base64 编码后大小不可超过5M。
-图片分辨率不得超过 2048*2048。
+图片分辨率不得超过 1920 * 1080 。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
  * @method void setImage(string $Image) 设置人体图片 Base64 数据。
 图片 base64 编码后大小不可超过5M。
-图片分辨率不得超过 2048*2048。
+图片分辨率不得超过 1920 * 1080 。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+ * @method integer getMaxBodyNum() 获取最多检测的人体数目，默认值为1（仅检测图片中面积最大的那个人体）； 最大值10 ，检测图片中面积最大的10个人体。
+ * @method void setMaxBodyNum(integer $MaxBodyNum) 设置最多检测的人体数目，默认值为1（仅检测图片中面积最大的那个人体）； 最大值10 ，检测图片中面积最大的10个人体。
  * @method string getUrl() 获取人体图片 Url 。
 Url、Image必须提供一个，如果都提供，只使用 Url。
 图片 base64 编码后大小不可超过5M。 
-图片分辨率不得超过 2048*2048。
+图片分辨率不得超过 1920 * 1080 。
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
 非腾讯云存储的Url速度和稳定性可能受一定影响。 
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
  * @method void setUrl(string $Url) 设置人体图片 Url 。
 Url、Image必须提供一个，如果都提供，只使用 Url。
 图片 base64 编码后大小不可超过5M。 
-图片分辨率不得超过 2048*2048。
+图片分辨率不得超过 1920 * 1080 。
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
 非腾讯云存储的Url速度和稳定性可能受一定影响。 
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
- * @method integer getMaxBodyNum() 获取最多检测的人体数目，默认值为1（仅检测图片中面积最大的那个人体）； 最大值10 ，检测图片中面积最大的10个人体。
- * @method void setMaxBodyNum(integer $MaxBodyNum) 设置最多检测的人体数目，默认值为1（仅检测图片中面积最大的那个人体）； 最大值10 ，检测图片中面积最大的10个人体。
  * @method AttributesOptions getAttributesOptions() 获取是否返回年龄、性别、朝向等属性。 
 可选项有 Age、Bag、Gender、UpperBodyCloth、LowerBodyCloth、Orientation。  
 如果此参数为空则为不需要返回。 
@@ -62,26 +62,26 @@ class DetectBodyRequest extends AbstractModel
     /**
      * @var string 人体图片 Base64 数据。
 图片 base64 编码后大小不可超过5M。
-图片分辨率不得超过 2048*2048。
+图片分辨率不得超过 1920 * 1080 。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
      */
     public $Image;
 
     /**
+     * @var integer 最多检测的人体数目，默认值为1（仅检测图片中面积最大的那个人体）； 最大值10 ，检测图片中面积最大的10个人体。
+     */
+    public $MaxBodyNum;
+
+    /**
      * @var string 人体图片 Url 。
 Url、Image必须提供一个，如果都提供，只使用 Url。
 图片 base64 编码后大小不可超过5M。 
-图片分辨率不得超过 2048*2048。
+图片分辨率不得超过 1920 * 1080 。
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
 非腾讯云存储的Url速度和稳定性可能受一定影响。 
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
      */
     public $Url;
-
-    /**
-     * @var integer 最多检测的人体数目，默认值为1（仅检测图片中面积最大的那个人体）； 最大值10 ，检测图片中面积最大的10个人体。
-     */
-    public $MaxBodyNum;
 
     /**
      * @var AttributesOptions 是否返回年龄、性别、朝向等属性。 
@@ -96,16 +96,16 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
     /**
      * @param string $Image 人体图片 Base64 数据。
 图片 base64 编码后大小不可超过5M。
-图片分辨率不得超过 2048*2048。
+图片分辨率不得超过 1920 * 1080 。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+     * @param integer $MaxBodyNum 最多检测的人体数目，默认值为1（仅检测图片中面积最大的那个人体）； 最大值10 ，检测图片中面积最大的10个人体。
      * @param string $Url 人体图片 Url 。
 Url、Image必须提供一个，如果都提供，只使用 Url。
 图片 base64 编码后大小不可超过5M。 
-图片分辨率不得超过 2048*2048。
+图片分辨率不得超过 1920 * 1080 。
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
 非腾讯云存储的Url速度和稳定性可能受一定影响。 
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
-     * @param integer $MaxBodyNum 最多检测的人体数目，默认值为1（仅检测图片中面积最大的那个人体）； 最大值10 ，检测图片中面积最大的10个人体。
      * @param AttributesOptions $AttributesOptions 是否返回年龄、性别、朝向等属性。 
 可选项有 Age、Bag、Gender、UpperBodyCloth、LowerBodyCloth、Orientation。  
 如果此参数为空则为不需要返回。 
@@ -130,12 +130,12 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
             $this->Image = $param["Image"];
         }
 
-        if (array_key_exists("Url",$param) and $param["Url"] !== null) {
-            $this->Url = $param["Url"];
-        }
-
         if (array_key_exists("MaxBodyNum",$param) and $param["MaxBodyNum"] !== null) {
             $this->MaxBodyNum = $param["MaxBodyNum"];
+        }
+
+        if (array_key_exists("Url",$param) and $param["Url"] !== null) {
+            $this->Url = $param["Url"];
         }
 
         if (array_key_exists("AttributesOptions",$param) and $param["AttributesOptions"] !== null) {

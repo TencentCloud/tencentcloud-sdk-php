@@ -36,6 +36,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreatedTime(string $CreatedTime) 设置插件创建时间。按照 ISO8601 标准表示，并且使用 UTC 时间。格式为：YYYY-MM-DDThh:mm:ssZ。
  * @method string getModifiedTime() 获取插件修改时间。按照 ISO8601 标准表示，并且使用 UTC 时间。格式为：YYYY-MM-DDThh:mm:ssZ。
  * @method void setModifiedTime(string $ModifiedTime) 设置插件修改时间。按照 ISO8601 标准表示，并且使用 UTC 时间。格式为：YYYY-MM-DDThh:mm:ssZ。
+ * @method integer getAttachedApiTotalCount() 获取插件绑定的API总数。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAttachedApiTotalCount(integer $AttachedApiTotalCount) 设置插件绑定的API总数。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getAttachedApis() 获取插件绑定的API信息。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAttachedApis(array $AttachedApis) 设置插件绑定的API信息。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Plugin extends AbstractModel
 {
@@ -76,6 +84,18 @@ class Plugin extends AbstractModel
     public $ModifiedTime;
 
     /**
+     * @var integer 插件绑定的API总数。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AttachedApiTotalCount;
+
+    /**
+     * @var array 插件绑定的API信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AttachedApis;
+
+    /**
      * @param string $PluginId 插件ID。
      * @param string $PluginName 插件名称。
      * @param string $PluginType 插件类型。
@@ -84,6 +104,10 @@ class Plugin extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreatedTime 插件创建时间。按照 ISO8601 标准表示，并且使用 UTC 时间。格式为：YYYY-MM-DDThh:mm:ssZ。
      * @param string $ModifiedTime 插件修改时间。按照 ISO8601 标准表示，并且使用 UTC 时间。格式为：YYYY-MM-DDThh:mm:ssZ。
+     * @param integer $AttachedApiTotalCount 插件绑定的API总数。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $AttachedApis 插件绑定的API信息。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -124,6 +148,19 @@ class Plugin extends AbstractModel
 
         if (array_key_exists("ModifiedTime",$param) and $param["ModifiedTime"] !== null) {
             $this->ModifiedTime = $param["ModifiedTime"];
+        }
+
+        if (array_key_exists("AttachedApiTotalCount",$param) and $param["AttachedApiTotalCount"] !== null) {
+            $this->AttachedApiTotalCount = $param["AttachedApiTotalCount"];
+        }
+
+        if (array_key_exists("AttachedApis",$param) and $param["AttachedApis"] !== null) {
+            $this->AttachedApis = [];
+            foreach ($param["AttachedApis"] as $key => $value){
+                $obj = new AttachedApiInfo();
+                $obj->deserialize($value);
+                array_push($this->AttachedApis, $obj);
+            }
         }
     }
 }

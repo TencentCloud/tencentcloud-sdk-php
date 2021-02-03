@@ -34,6 +34,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVendor(string $Vendor) 设置图片供应商
  * @method array getMarshals() 获取图片售卖组合信息
  * @method void setMarshals(array $Marshals) 设置图片售卖组合信息
+ * @method integer getWidth() 获取宽
+ * @method void setWidth(integer $Width) 设置宽
+ * @method integer getHeight() 获取高
+ * @method void setHeight(integer $Height) 设置高
+ * @method string getImageFormat() 获取图片格式 jpg/eps/psd/...
+ * @method void setImageFormat(string $ImageFormat) 设置图片格式 jpg/eps/psd/...
+ * @method string getImageSenseType() 获取图片类型 摄影图片、插画、漫画、图表、矢量、psd、全景、gif、模板
+ * @method void setImageSenseType(string $ImageSenseType) 设置图片类型 摄影图片、插画、漫画、图表、矢量、psd、全景、gif、模板
+ * @method string getKeywords() 获取关键词，多关键词用空格分隔
+ * @method void setKeywords(string $Keywords) 设置关键词，多关键词用空格分隔
+ * @method integer getLayeredGalleryId() 获取分层图库id
+ * @method void setLayeredGalleryId(integer $LayeredGalleryId) 设置分层图库id
+ * @method string getOrientation() 获取构图方式：horizontal:横图、vertical:竖图、square:方图
+ * @method void setOrientation(string $Orientation) 设置构图方式：horizontal:横图、vertical:竖图、square:方图
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -75,6 +89,41 @@ class DescribeImageResponse extends AbstractModel
     public $Marshals;
 
     /**
+     * @var integer 宽
+     */
+    public $Width;
+
+    /**
+     * @var integer 高
+     */
+    public $Height;
+
+    /**
+     * @var string 图片格式 jpg/eps/psd/...
+     */
+    public $ImageFormat;
+
+    /**
+     * @var string 图片类型 摄影图片、插画、漫画、图表、矢量、psd、全景、gif、模板
+     */
+    public $ImageSenseType;
+
+    /**
+     * @var string 关键词，多关键词用空格分隔
+     */
+    public $Keywords;
+
+    /**
+     * @var integer 分层图库id
+     */
+    public $LayeredGalleryId;
+
+    /**
+     * @var string 构图方式：horizontal:横图、vertical:竖图、square:方图
+     */
+    public $Orientation;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -87,6 +136,13 @@ class DescribeImageResponse extends AbstractModel
      * @param string $ThumbUrl 图片缩略图
      * @param string $Vendor 图片供应商
      * @param array $Marshals 图片售卖组合信息
+     * @param integer $Width 宽
+     * @param integer $Height 高
+     * @param string $ImageFormat 图片格式 jpg/eps/psd/...
+     * @param string $ImageSenseType 图片类型 摄影图片、插画、漫画、图表、矢量、psd、全景、gif、模板
+     * @param string $Keywords 关键词，多关键词用空格分隔
+     * @param integer $LayeredGalleryId 分层图库id
+     * @param string $Orientation 构图方式：horizontal:横图、vertical:竖图、square:方图
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -133,6 +189,34 @@ class DescribeImageResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Marshals, $obj);
             }
+        }
+
+        if (array_key_exists("Width",$param) and $param["Width"] !== null) {
+            $this->Width = $param["Width"];
+        }
+
+        if (array_key_exists("Height",$param) and $param["Height"] !== null) {
+            $this->Height = $param["Height"];
+        }
+
+        if (array_key_exists("ImageFormat",$param) and $param["ImageFormat"] !== null) {
+            $this->ImageFormat = $param["ImageFormat"];
+        }
+
+        if (array_key_exists("ImageSenseType",$param) and $param["ImageSenseType"] !== null) {
+            $this->ImageSenseType = $param["ImageSenseType"];
+        }
+
+        if (array_key_exists("Keywords",$param) and $param["Keywords"] !== null) {
+            $this->Keywords = $param["Keywords"];
+        }
+
+        if (array_key_exists("LayeredGalleryId",$param) and $param["LayeredGalleryId"] !== null) {
+            $this->LayeredGalleryId = $param["LayeredGalleryId"];
+        }
+
+        if (array_key_exists("Orientation",$param) and $param["Orientation"] !== null) {
+            $this->Orientation = $param["Orientation"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrderDirection(string $OrderDirection) 设置排序方向，可选的值为"DESC"和"ASC"，默认为"DESC"，按创建时间逆序排序
  * @method array getTagFilters() 获取标签过滤条件
  * @method void setTagFilters(array $TagFilters) 设置标签过滤条件
+ * @method string getSubscribeVersion() 获取订阅实例版本;txdts-旧版数据订阅，kafka-kafka版本数据订阅
+ * @method void setSubscribeVersion(string $SubscribeVersion) 设置订阅实例版本;txdts-旧版数据订阅，kafka-kafka版本数据订阅
  */
 class DescribeSubscribesRequest extends AbstractModel
 {
@@ -108,6 +110,11 @@ class DescribeSubscribesRequest extends AbstractModel
     public $TagFilters;
 
     /**
+     * @var string 订阅实例版本;txdts-旧版数据订阅，kafka-kafka版本数据订阅
+     */
+    public $SubscribeVersion;
+
+    /**
      * @param string $SubscribeId 数据订阅的实例ID
      * @param string $SubscribeName 数据订阅的实例名称
      * @param string $InstanceId 绑定数据库实例的ID
@@ -120,6 +127,7 @@ class DescribeSubscribesRequest extends AbstractModel
      * @param integer $Limit 单次返回的记录数量
      * @param string $OrderDirection 排序方向，可选的值为"DESC"和"ASC"，默认为"DESC"，按创建时间逆序排序
      * @param array $TagFilters 标签过滤条件
+     * @param string $SubscribeVersion 订阅实例版本;txdts-旧版数据订阅，kafka-kafka版本数据订阅
      */
     function __construct()
     {
@@ -185,6 +193,10 @@ class DescribeSubscribesRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->TagFilters, $obj);
             }
+        }
+
+        if (array_key_exists("SubscribeVersion",$param) and $param["SubscribeVersion"] !== null) {
+            $this->SubscribeVersion = $param["SubscribeVersion"];
         }
     }
 }

@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVendor(string $Vendor) 设置图片供应商
  * @method string getKeywords() 获取图片关键词
  * @method void setKeywords(string $Keywords) 设置图片关键词
+ * @method integer getWidth() 获取宽
+ * @method void setWidth(integer $Width) 设置宽
+ * @method integer getHeight() 获取高
+ * @method void setHeight(integer $Height) 设置高
  */
 class ImageItem extends AbstractModel
 {
@@ -73,6 +77,16 @@ class ImageItem extends AbstractModel
     public $Keywords;
 
     /**
+     * @var integer 宽
+     */
+    public $Width;
+
+    /**
+     * @var integer 高
+     */
+    public $Height;
+
+    /**
      * @param integer $ImageId 图片ID
      * @param string $Title 图片标题
      * @param string $Description 图片描述
@@ -80,6 +94,8 @@ class ImageItem extends AbstractModel
      * @param string $ThumbUrl 图片缩略图
      * @param string $Vendor 图片供应商
      * @param string $Keywords 图片关键词
+     * @param integer $Width 宽
+     * @param integer $Height 高
      */
     function __construct()
     {
@@ -120,6 +136,14 @@ class ImageItem extends AbstractModel
 
         if (array_key_exists("Keywords",$param) and $param["Keywords"] !== null) {
             $this->Keywords = $param["Keywords"];
+        }
+
+        if (array_key_exists("Width",$param) and $param["Width"] !== null) {
+            $this->Width = $param["Width"];
+        }
+
+        if (array_key_exists("Height",$param) and $param["Height"] !== null) {
+            $this->Height = $param["Height"];
         }
     }
 }

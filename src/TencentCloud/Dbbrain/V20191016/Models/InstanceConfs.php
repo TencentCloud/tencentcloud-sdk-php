@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDailyInspection() 获取数据库巡检开关, Yes/No。
  * @method void setDailyInspection(string $DailyInspection) 设置数据库巡检开关, Yes/No。
+ * @method string getOverviewDisplay() 获取实例概览开关，Yes/No。
+ * @method void setOverviewDisplay(string $OverviewDisplay) 设置实例概览开关，Yes/No。
  */
 class InstanceConfs extends AbstractModel
 {
@@ -31,7 +33,13 @@ class InstanceConfs extends AbstractModel
     public $DailyInspection;
 
     /**
+     * @var string 实例概览开关，Yes/No。
+     */
+    public $OverviewDisplay;
+
+    /**
      * @param string $DailyInspection 数据库巡检开关, Yes/No。
+     * @param string $OverviewDisplay 实例概览开关，Yes/No。
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class InstanceConfs extends AbstractModel
         }
         if (array_key_exists("DailyInspection",$param) and $param["DailyInspection"] !== null) {
             $this->DailyInspection = $param["DailyInspection"];
+        }
+
+        if (array_key_exists("OverviewDisplay",$param) and $param["OverviewDisplay"] !== null) {
+            $this->OverviewDisplay = $param["OverviewDisplay"];
         }
     }
 }

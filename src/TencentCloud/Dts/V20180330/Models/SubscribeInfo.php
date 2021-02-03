@@ -70,6 +70,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置自动续费标识。0-不自动续费，1-自动续费
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSubscribeVersion() 获取订阅实例版本；txdts-旧版数据订阅,kafka-kafka版本数据订阅
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSubscribeVersion(string $SubscribeVersion) 设置订阅实例版本；txdts-旧版数据订阅,kafka-kafka版本数据订阅
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SubscribeInfo extends AbstractModel
 {
@@ -191,6 +195,12 @@ class SubscribeInfo extends AbstractModel
     public $AutoRenewFlag;
 
     /**
+     * @var string 订阅实例版本；txdts-旧版数据订阅,kafka-kafka版本数据订阅
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SubscribeVersion;
+
+    /**
      * @param string $SubscribeId 数据订阅的实例ID
      * @param string $SubscribeName 数据订阅实例的名称
      * @param string $ChannelId 数据订阅实例绑定的通道ID
@@ -215,6 +225,8 @@ class SubscribeInfo extends AbstractModel
      * @param array $Tags 标签
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AutoRenewFlag 自动续费标识。0-不自动续费，1-自动续费
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SubscribeVersion 订阅实例版本；txdts-旧版数据订阅,kafka-kafka版本数据订阅
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -325,6 +337,10 @@ class SubscribeInfo extends AbstractModel
 
         if (array_key_exists("AutoRenewFlag",$param) and $param["AutoRenewFlag"] !== null) {
             $this->AutoRenewFlag = $param["AutoRenewFlag"];
+        }
+
+        if (array_key_exists("SubscribeVersion",$param) and $param["SubscribeVersion"] !== null) {
+            $this->SubscribeVersion = $param["SubscribeVersion"];
         }
     }
 }

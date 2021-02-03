@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoDelete(integer $AutoDelete) 设置1: 作业配置达到上限之后，自动删除可删除的最早版本
  * @method string getCOSBucket() 获取作业使用的 COS 存储桶名
  * @method void setCOSBucket(string $COSBucket) 设置作业使用的 COS 存储桶名
+ * @method boolean getLogCollect() 获取是否采集作业日志
+ * @method void setLogCollect(boolean $LogCollect) 设置是否采集作业日志
  */
 class CreateJobConfigRequest extends AbstractModel
 {
@@ -87,6 +89,11 @@ class CreateJobConfigRequest extends AbstractModel
     public $COSBucket;
 
     /**
+     * @var boolean 是否采集作业日志
+     */
+    public $LogCollect;
+
+    /**
      * @param string $JobId 作业Id
      * @param string $EntrypointClass 主类
      * @param string $ProgramArgs 主类入参
@@ -96,6 +103,7 @@ class CreateJobConfigRequest extends AbstractModel
      * @param array $Properties 系统参数
      * @param integer $AutoDelete 1: 作业配置达到上限之后，自动删除可删除的最早版本
      * @param string $COSBucket 作业使用的 COS 存储桶名
+     * @param boolean $LogCollect 是否采集作业日志
      */
     function __construct()
     {
@@ -154,6 +162,10 @@ class CreateJobConfigRequest extends AbstractModel
 
         if (array_key_exists("COSBucket",$param) and $param["COSBucket"] !== null) {
             $this->COSBucket = $param["COSBucket"];
+        }
+
+        if (array_key_exists("LogCollect",$param) and $param["LogCollect"] !== null) {
+            $this->LogCollect = $param["LogCollect"];
         }
     }
 }

@@ -36,6 +36,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLicenseScope(string $LicenseScope) 设置授权范围
  * @method boolean getIsVip() 获取是否支持VIP购买
  * @method void setIsVip(boolean $IsVip) 设置是否支持VIP购买
+ * @method integer getLicenseScopeId() 获取授权范围id
+ * @method void setLicenseScopeId(integer $LicenseScopeId) 设置授权范围id
+ * @method string getDimensionsName() 获取尺寸
+ * @method void setDimensionsName(string $DimensionsName) 设置尺寸
+ * @method integer getDimensionsNameId() 获取尺寸id
+ * @method void setDimensionsNameId(integer $DimensionsNameId) 设置尺寸id
  */
 class ImageMarshal extends AbstractModel
 {
@@ -80,6 +86,21 @@ class ImageMarshal extends AbstractModel
     public $IsVip;
 
     /**
+     * @var integer 授权范围id
+     */
+    public $LicenseScopeId;
+
+    /**
+     * @var string 尺寸
+     */
+    public $DimensionsName;
+
+    /**
+     * @var integer 尺寸id
+     */
+    public $DimensionsNameId;
+
+    /**
      * @param integer $MarshalId 售卖组合唯一标识
      * @param integer $Height 图片高度
      * @param integer $Width 图片宽度
@@ -88,6 +109,9 @@ class ImageMarshal extends AbstractModel
      * @param integer $Price 图片价格(单位:分)
      * @param string $LicenseScope 授权范围
      * @param boolean $IsVip 是否支持VIP购买
+     * @param integer $LicenseScopeId 授权范围id
+     * @param string $DimensionsName 尺寸
+     * @param integer $DimensionsNameId 尺寸id
      */
     function __construct()
     {
@@ -132,6 +156,18 @@ class ImageMarshal extends AbstractModel
 
         if (array_key_exists("IsVip",$param) and $param["IsVip"] !== null) {
             $this->IsVip = $param["IsVip"];
+        }
+
+        if (array_key_exists("LicenseScopeId",$param) and $param["LicenseScopeId"] !== null) {
+            $this->LicenseScopeId = $param["LicenseScopeId"];
+        }
+
+        if (array_key_exists("DimensionsName",$param) and $param["DimensionsName"] !== null) {
+            $this->DimensionsName = $param["DimensionsName"];
+        }
+
+        if (array_key_exists("DimensionsNameId",$param) and $param["DimensionsNameId"] !== null) {
+            $this->DimensionsNameId = $param["DimensionsNameId"];
         }
     }
 }

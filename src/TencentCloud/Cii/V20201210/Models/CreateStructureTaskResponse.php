@@ -14,30 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Gpm\V20200820\Models;
+namespace TencentCloud\Cii\V20201210\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * StartMatching返回参数结构体
+ * CreateStructureTask返回参数结构体
  *
- * @method integer getErrCode() 获取错误码。
- * @method void setErrCode(integer $ErrCode) 设置错误码。
- * @method string getMatchTicketId() 获取匹配票据 ID长度 128。
- * @method void setMatchTicketId(string $MatchTicketId) 设置匹配票据 ID长度 128。
+ * @method string getTaskId() 获取本次结构化任务的ID
+ * @method void setTaskId(string $TaskId) 设置本次结构化任务的ID
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class StartMatchingResponse extends AbstractModel
+class CreateStructureTaskResponse extends AbstractModel
 {
     /**
-     * @var integer 错误码。
+     * @var string 本次结构化任务的ID
      */
-    public $ErrCode;
-
-    /**
-     * @var string 匹配票据 ID长度 128。
-     */
-    public $MatchTicketId;
+    public $TaskId;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +38,7 @@ class StartMatchingResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $ErrCode 错误码。
-     * @param string $MatchTicketId 匹配票据 ID长度 128。
+     * @param string $TaskId 本次结构化任务的ID
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,12 +54,8 @@ class StartMatchingResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ErrCode",$param) and $param["ErrCode"] !== null) {
-            $this->ErrCode = $param["ErrCode"];
-        }
-
-        if (array_key_exists("MatchTicketId",$param) and $param["MatchTicketId"] !== null) {
-            $this->MatchTicketId = $param["MatchTicketId"];
+        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
+            $this->TaskId = $param["TaskId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

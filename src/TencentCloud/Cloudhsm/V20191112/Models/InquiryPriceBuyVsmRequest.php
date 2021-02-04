@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPayMode(integer $PayMode) 设置付费模式：0表示按需计费/后付费，1表示预付费
  * @method string getTimeSpan() 获取商品的时间大小
  * @method void setTimeSpan(string $TimeSpan) 设置商品的时间大小
- * @method string getTimeUnit() 获取商品的时间单位
- * @method void setTimeUnit(string $TimeUnit) 设置商品的时间单位
+ * @method string getTimeUnit() 获取商品的时间单位，m表示月，y表示年
+ * @method void setTimeUnit(string $TimeUnit) 设置商品的时间单位，m表示月，y表示年
  * @method string getCurrency() 获取货币类型，默认为CNY
  * @method void setCurrency(string $Currency) 设置货币类型，默认为CNY
  * @method string getType() 获取默认为CREATE，可选RENEW
@@ -51,7 +51,7 @@ class InquiryPriceBuyVsmRequest extends AbstractModel
     public $TimeSpan;
 
     /**
-     * @var string 商品的时间单位
+     * @var string 商品的时间单位，m表示月，y表示年
      */
     public $TimeUnit;
 
@@ -69,7 +69,7 @@ class InquiryPriceBuyVsmRequest extends AbstractModel
      * @param integer $GoodsNum 需购买实例的数量
      * @param integer $PayMode 付费模式：0表示按需计费/后付费，1表示预付费
      * @param string $TimeSpan 商品的时间大小
-     * @param string $TimeUnit 商品的时间单位
+     * @param string $TimeUnit 商品的时间单位，m表示月，y表示年
      * @param string $Currency 货币类型，默认为CNY
      * @param string $Type 默认为CREATE，可选RENEW
      */

@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAllUserContact请求参数结构体
  *
- * @method string getProduct() 获取服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL。
- * @method void setProduct(string $Product) 设置服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL。
+ * @method string getProduct() 获取服务产品类型，固定值：mysql。
+ * @method void setProduct(string $Product) 设置服务产品类型，固定值：mysql。
  * @method array getNames() 获取联系人名数组，支持模糊搜索。
  * @method void setNames(array $Names) 设置联系人名数组，支持模糊搜索。
  */
 class DescribeAllUserContactRequest extends AbstractModel
 {
     /**
-     * @var string 服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL。
+     * @var string 服务产品类型，固定值：mysql。
      */
     public $Product;
 
@@ -38,7 +38,7 @@ class DescribeAllUserContactRequest extends AbstractModel
     public $Names;
 
     /**
-     * @param string $Product 服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL。
+     * @param string $Product 服务产品类型，固定值：mysql。
      * @param array $Names 联系人名数组，支持模糊搜索。
      */
     function __construct()

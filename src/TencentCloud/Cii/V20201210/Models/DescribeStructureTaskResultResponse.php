@@ -14,36 +14,42 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Gpm\V20200820\Models;
+namespace TencentCloud\Cii\V20201210\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeMatchingProgress返回参数结构体
+ * DescribeStructureTaskResult返回参数结构体
  *
- * @method array getMatchTickets() 获取匹配票据列表
+ * @method integer getStatus() 获取结果状态：
+0：返回成功
+1：结果未生成
+2：结果生成失败
+ * @method void setStatus(integer $Status) 设置结果状态：
+0：返回成功
+1：结果未生成
+2：结果生成失败
+ * @method array getResults() 获取结构化识别结果数组，每个数组元素对应一个图片的结构化结果，顺序和输入参数的ImageList或FileList对应。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMatchTickets(array $MatchTickets) 设置匹配票据列表
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getErrCode() 获取错误码
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setErrCode(integer $ErrCode) 设置错误码
+ * @method void setResults(array $Results) 设置结构化识别结果数组，每个数组元素对应一个图片的结构化结果，顺序和输入参数的ImageList或FileList对应。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeMatchingProgressResponse extends AbstractModel
+class DescribeStructureTaskResultResponse extends AbstractModel
 {
     /**
-     * @var array 匹配票据列表
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer 结果状态：
+0：返回成功
+1：结果未生成
+2：结果生成失败
      */
-    public $MatchTickets;
+    public $Status;
 
     /**
-     * @var integer 错误码
+     * @var array 结构化识别结果数组，每个数组元素对应一个图片的结构化结果，顺序和输入参数的ImageList或FileList对应。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $ErrCode;
+    public $Results;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -51,9 +57,11 @@ class DescribeMatchingProgressResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $MatchTickets 匹配票据列表
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ErrCode 错误码
+     * @param integer $Status 结果状态：
+0：返回成功
+1：结果未生成
+2：结果生成失败
+     * @param array $Results 结构化识别结果数组，每个数组元素对应一个图片的结构化结果，顺序和输入参数的ImageList或FileList对应。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -70,17 +78,17 @@ class DescribeMatchingProgressResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MatchTickets",$param) and $param["MatchTickets"] !== null) {
-            $this->MatchTickets = [];
-            foreach ($param["MatchTickets"] as $key => $value){
-                $obj = new MatchTicket();
-                $obj->deserialize($value);
-                array_push($this->MatchTickets, $obj);
-            }
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
 
-        if (array_key_exists("ErrCode",$param) and $param["ErrCode"] !== null) {
-            $this->ErrCode = $param["ErrCode"];
+        if (array_key_exists("Results",$param) and $param["Results"] !== null) {
+            $this->Results = [];
+            foreach ($param["Results"] as $key => $value){
+                $obj = new ResultObject();
+                $obj->deserialize($value);
+                array_push($this->Results, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

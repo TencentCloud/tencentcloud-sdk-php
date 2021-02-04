@@ -90,6 +90,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSidecarSpecs(array $SidecarSpecs) 设置容器的描述文件
  * @method CloudBaseSecurityContext getSecurity() 获取安全特性
  * @method void setSecurity(CloudBaseSecurityContext $Security) 设置安全特性
+ * @method array getServiceVolumes() 获取服务磁盘挂载
+ * @method void setServiceVolumes(array $ServiceVolumes) 设置服务磁盘挂载
  */
 class CreateCloudBaseRunServerVersionRequest extends AbstractModel
 {
@@ -269,6 +271,11 @@ class CreateCloudBaseRunServerVersionRequest extends AbstractModel
     public $Security;
 
     /**
+     * @var array 服务磁盘挂载
+     */
+    public $ServiceVolumes;
+
+    /**
      * @param string $EnvId 环境ID
      * @param string $UploadType 枚举（package/repository/image)
      * @param integer $FlowRatio 流量占比
@@ -304,6 +311,7 @@ class CreateCloudBaseRunServerVersionRequest extends AbstractModel
      * @param string $ImageReuseKey 镜像复用的key
      * @param array $SidecarSpecs 容器的描述文件
      * @param CloudBaseSecurityContext $Security 安全特性
+     * @param array $ServiceVolumes 服务磁盘挂载
      */
     function __construct()
     {
@@ -471,6 +479,15 @@ class CreateCloudBaseRunServerVersionRequest extends AbstractModel
         if (array_key_exists("Security",$param) and $param["Security"] !== null) {
             $this->Security = new CloudBaseSecurityContext();
             $this->Security->deserialize($param["Security"]);
+        }
+
+        if (array_key_exists("ServiceVolumes",$param) and $param["ServiceVolumes"] !== null) {
+            $this->ServiceVolumes = [];
+            foreach ($param["ServiceVolumes"] as $key => $value){
+                $obj = new CloudRunServiceVolume();
+                $obj->deserialize($value);
+                array_push($this->ServiceVolumes, $obj);
+            }
         }
     }
 }

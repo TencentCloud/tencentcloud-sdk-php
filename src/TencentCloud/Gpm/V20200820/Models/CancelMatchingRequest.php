@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getMatchCode() 获取匹配 Code
  * @method void setMatchCode(string $MatchCode) 设置匹配 Code
- * @method string getMatchTicketId() 获取要取消的匹配请求 Id
- * @method void setMatchTicketId(string $MatchTicketId) 设置要取消的匹配请求 Id
+ * @method string getMatchTicketId() 获取要取消的匹配匹配票据 ID
+ * @method void setMatchTicketId(string $MatchTicketId) 设置要取消的匹配匹配票据 ID
  */
 class CancelMatchingRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class CancelMatchingRequest extends AbstractModel
     public $MatchCode;
 
     /**
-     * @var string 要取消的匹配请求 Id
+     * @var string 要取消的匹配匹配票据 ID
      */
     public $MatchTicketId;
 
     /**
      * @param string $MatchCode 匹配 Code
-     * @param string $MatchTicketId 要取消的匹配请求 Id
+     * @param string $MatchTicketId 要取消的匹配匹配票据 ID
      */
     function __construct()
     {

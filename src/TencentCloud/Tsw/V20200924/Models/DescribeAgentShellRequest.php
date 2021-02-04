@@ -14,24 +14,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Gpm\V20200820\Models;
+namespace TencentCloud\Tsw\V20200924\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeMatchingProgress请求参数结构体
+ * DescribeAgentShell请求参数结构体
  *
- * @method array getMatchTicketIds() 获取匹配票据 ID列表, 列表长度 12。
- * @method void setMatchTicketIds(array $MatchTicketIds) 设置匹配票据 ID列表, 列表长度 12。
+
  */
-class DescribeMatchingProgressRequest extends AbstractModel
+class DescribeAgentShellRequest extends AbstractModel
 {
-    /**
-     * @var array 匹配票据 ID列表, 列表长度 12。
-     */
-    public $MatchTicketIds;
+
 
     /**
-     * @param array $MatchTicketIds 匹配票据 ID列表, 列表长度 12。
+
      */
     function __construct()
     {
@@ -46,13 +42,6 @@ class DescribeMatchingProgressRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MatchTicketIds",$param) and $param["MatchTicketIds"] !== null) {
-            $this->MatchTicketIds = [];
-            foreach ($param["MatchTicketIds"] as $key => $value){
-                $obj = new MTicket();
-                $obj->deserialize($value);
-                array_push($this->MatchTicketIds, $obj);
-            }
-        }
+
     }
 }

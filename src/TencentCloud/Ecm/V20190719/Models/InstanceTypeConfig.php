@@ -38,6 +38,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExtInfo(string $ExtInfo) 设置机型额外信息 是一个json字符串，如果存在则表示特殊机型，格式如下：{"dataDiskSize":3200,"systemDiskSize":60, "systemDiskSizeShow":"系统盘默认60G","dataDiskSizeShow":"本地NVMe SSD 硬盘3200 GB"}
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method float getVgpu() 获取GPU卡数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVgpu(float $Vgpu) 设置GPU卡数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getGpuModelName() 获取GPU型号
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setGpuModelName(string $GpuModelName) 设置GPU型号
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceTypeConfig extends AbstractModel
 {
@@ -83,6 +91,18 @@ class InstanceTypeConfig extends AbstractModel
     public $ExtInfo;
 
     /**
+     * @var float GPU卡数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Vgpu;
+
+    /**
+     * @var string GPU型号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $GpuModelName;
+
+    /**
      * @param InstanceFamilyConfig $InstanceFamilyConfig 机型族配置信息
      * @param string $InstanceType 机型
      * @param integer $Vcpu CPU核数
@@ -91,6 +111,10 @@ class InstanceTypeConfig extends AbstractModel
      * @param string $CpuModelName 处理器型号
      * @param InstanceFamilyTypeConfig $InstanceFamilyTypeConfig 机型族类别配置信息
      * @param string $ExtInfo 机型额外信息 是一个json字符串，如果存在则表示特殊机型，格式如下：{"dataDiskSize":3200,"systemDiskSize":60, "systemDiskSizeShow":"系统盘默认60G","dataDiskSizeShow":"本地NVMe SSD 硬盘3200 GB"}
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param float $Vgpu GPU卡数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $GpuModelName GPU型号
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -138,6 +162,14 @@ class InstanceTypeConfig extends AbstractModel
 
         if (array_key_exists("ExtInfo",$param) and $param["ExtInfo"] !== null) {
             $this->ExtInfo = $param["ExtInfo"];
+        }
+
+        if (array_key_exists("Vgpu",$param) and $param["Vgpu"] !== null) {
+            $this->Vgpu = $param["Vgpu"];
+        }
+
+        if (array_key_exists("GpuModelName",$param) and $param["GpuModelName"] !== null) {
+            $this->GpuModelName = $param["GpuModelName"];
         }
     }
 }

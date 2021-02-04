@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Gpm\V20200820\Models;
+namespace TencentCloud\Cii\V20201210\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeMatchingProgress请求参数结构体
+ * DescribeStructCompareData请求参数结构体
  *
- * @method array getMatchTicketIds() 获取匹配票据 ID列表, 列表长度 12。
- * @method void setMatchTicketIds(array $MatchTicketIds) 设置匹配票据 ID列表, 列表长度 12。
+ * @method string getTaskId() 获取结构化任务ID
+ * @method void setTaskId(string $TaskId) 设置结构化任务ID
  */
-class DescribeMatchingProgressRequest extends AbstractModel
+class DescribeStructCompareDataRequest extends AbstractModel
 {
     /**
-     * @var array 匹配票据 ID列表, 列表长度 12。
+     * @var string 结构化任务ID
      */
-    public $MatchTicketIds;
+    public $TaskId;
 
     /**
-     * @param array $MatchTicketIds 匹配票据 ID列表, 列表长度 12。
+     * @param string $TaskId 结构化任务ID
      */
     function __construct()
     {
@@ -46,13 +46,8 @@ class DescribeMatchingProgressRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MatchTicketIds",$param) and $param["MatchTicketIds"] !== null) {
-            $this->MatchTicketIds = [];
-            foreach ($param["MatchTicketIds"] as $key => $value){
-                $obj = new MTicket();
-                $obj->deserialize($value);
-                array_push($this->MatchTicketIds, $obj);
-            }
+        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
+            $this->TaskId = $param["TaskId"];
         }
     }
 }

@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMatchCode(string $MatchCode) 设置匹配 Code。
  * @method array getPlayers() 获取玩家信息 最多 200 条。
  * @method void setPlayers(array $Players) 设置玩家信息 最多 200 条。
- * @method string getMatchTicketId() 获取请求 Id 默认空字符串，为空则由 GPM 自动生成 长度 128，只能包含数字、字母、. 和 -
- * @method void setMatchTicketId(string $MatchTicketId) 设置请求 Id 默认空字符串，为空则由 GPM 自动生成 长度 128，只能包含数字、字母、. 和 -
+ * @method string getMatchTicketId() 获取匹配票据 ID 默认空字符串，为空则由 GPM 自动生成 长度 128，只能包含数字、字母、. 和 -
+ * @method void setMatchTicketId(string $MatchTicketId) 设置匹配票据 ID 默认空字符串，为空则由 GPM 自动生成 长度 128，只能包含数字、字母、. 和 -
  */
 class StartMatchingRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class StartMatchingRequest extends AbstractModel
     public $Players;
 
     /**
-     * @var string 请求 Id 默认空字符串，为空则由 GPM 自动生成 长度 128，只能包含数字、字母、. 和 -
+     * @var string 匹配票据 ID 默认空字符串，为空则由 GPM 自动生成 长度 128，只能包含数字、字母、. 和 -
      */
     public $MatchTicketId;
 
     /**
      * @param string $MatchCode 匹配 Code。
      * @param array $Players 玩家信息 最多 200 条。
-     * @param string $MatchTicketId 请求 Id 默认空字符串，为空则由 GPM 自动生成 长度 128，只能包含数字、字母、. 和 -
+     * @param string $MatchTicketId 匹配票据 ID 默认空字符串，为空则由 GPM 自动生成 长度 128，只能包含数字、字母、. 和 -
      */
     function __construct()
     {

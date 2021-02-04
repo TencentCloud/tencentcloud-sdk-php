@@ -14,30 +14,26 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Gpm\V20200820\Models;
+namespace TencentCloud\Tsw\V20200924\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * StartMatching返回参数结构体
+ * DescribeAgentShell返回参数结构体
  *
- * @method integer getErrCode() 获取错误码。
- * @method void setErrCode(integer $ErrCode) 设置错误码。
- * @method string getMatchTicketId() 获取匹配票据 ID长度 128。
- * @method void setMatchTicketId(string $MatchTicketId) 设置匹配票据 ID长度 128。
+ * @method AgentShell getResult() 获取接入信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setResult(AgentShell $Result) 设置接入信息
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class StartMatchingResponse extends AbstractModel
+class DescribeAgentShellResponse extends AbstractModel
 {
     /**
-     * @var integer 错误码。
+     * @var AgentShell 接入信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $ErrCode;
-
-    /**
-     * @var string 匹配票据 ID长度 128。
-     */
-    public $MatchTicketId;
+    public $Result;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +41,8 @@ class StartMatchingResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $ErrCode 错误码。
-     * @param string $MatchTicketId 匹配票据 ID长度 128。
+     * @param AgentShell $Result 接入信息
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,12 +58,9 @@ class StartMatchingResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ErrCode",$param) and $param["ErrCode"] !== null) {
-            $this->ErrCode = $param["ErrCode"];
-        }
-
-        if (array_key_exists("MatchTicketId",$param) and $param["MatchTicketId"] !== null) {
-            $this->MatchTicketId = $param["MatchTicketId"];
+        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
+            $this->Result = new AgentShell();
+            $this->Result->deserialize($param["Result"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

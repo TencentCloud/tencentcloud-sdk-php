@@ -52,6 +52,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSecurity(CloudBaseSecurityContext $Security) 设置安全特性
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getVolumeMountInfos() 获取挂载信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVolumeMountInfos(array $VolumeMountInfos) 设置挂载信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CloudBaseRunSideSpec extends AbstractModel
 {
@@ -104,6 +108,12 @@ class CloudBaseRunSideSpec extends AbstractModel
     public $Security;
 
     /**
+     * @var array 挂载信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $VolumeMountInfos;
+
+    /**
      * @param string $ContainerImage 容器镜像
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ContainerPort 容器端口
@@ -119,6 +129,8 @@ class CloudBaseRunSideSpec extends AbstractModel
      * @param integer $Mem 内存大小（单位：M）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CloudBaseSecurityContext $Security 安全特性
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $VolumeMountInfos 挂载信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -165,6 +177,15 @@ class CloudBaseRunSideSpec extends AbstractModel
         if (array_key_exists("Security",$param) and $param["Security"] !== null) {
             $this->Security = new CloudBaseSecurityContext();
             $this->Security->deserialize($param["Security"]);
+        }
+
+        if (array_key_exists("VolumeMountInfos",$param) and $param["VolumeMountInfos"] !== null) {
+            $this->VolumeMountInfos = [];
+            foreach ($param["VolumeMountInfos"] as $key => $value){
+                $obj = new CloudBaseRunVolumeMount();
+                $obj->deserialize($value);
+                array_push($this->VolumeMountInfos, $obj);
+            }
         }
     }
 }

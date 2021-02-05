@@ -50,8 +50,8 @@ is-primary - Boolean - 是否必填：否 - （过滤条件）按照是否主网
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
  * @method integer getLimit() 获取返回数量，默认为20，最大值为100。
  * @method void setLimit(integer $Limit) 设置返回数量，默认为20，最大值为100。
- * @method string getEcmRegion() 获取ECM 地域
- * @method void setEcmRegion(string $EcmRegion) 设置ECM 地域
+ * @method string getEcmRegion() 获取ECM 地域，形如ap-xian-ecm。
+ * @method void setEcmRegion(string $EcmRegion) 设置ECM 地域，形如ap-xian-ecm。
  */
 class DescribeNetworkInterfacesRequest extends AbstractModel
 {
@@ -87,7 +87,7 @@ is-primary - Boolean - 是否必填：否 - （过滤条件）按照是否主网
     public $Limit;
 
     /**
-     * @var string ECM 地域
+     * @var string ECM 地域，形如ap-xian-ecm。
      */
     public $EcmRegion;
 
@@ -107,7 +107,7 @@ tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值
 is-primary - Boolean - 是否必填：否 - （过滤条件）按照是否主网卡进行过滤。值为true时，仅过滤主网卡；值为false时，仅过滤辅助网卡；次过滤参数为提供时，同时过滤主网卡和辅助网卡。
      * @param integer $Offset 偏移量，默认为0。
      * @param integer $Limit 返回数量，默认为20，最大值为100。
-     * @param string $EcmRegion ECM 地域
+     * @param string $EcmRegion ECM 地域，形如ap-xian-ecm。
      */
     function __construct()
     {

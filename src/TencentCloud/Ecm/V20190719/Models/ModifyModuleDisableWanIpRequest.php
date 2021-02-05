@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getModuleId() 获取模块ID
  * @method void setModuleId(string $ModuleId) 设置模块ID
- * @method boolean getDisableWanIp() 获取是否禁止分配外网ip
- * @method void setDisableWanIp(boolean $DisableWanIp) 设置是否禁止分配外网ip
+ * @method boolean getDisableWanIp() 获取是否禁止分配外网ip,true：统一分配外网ip，false：禁止分配外网ip.
+ * @method void setDisableWanIp(boolean $DisableWanIp) 设置是否禁止分配外网ip,true：统一分配外网ip，false：禁止分配外网ip.
  */
 class ModifyModuleDisableWanIpRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class ModifyModuleDisableWanIpRequest extends AbstractModel
     public $ModuleId;
 
     /**
-     * @var boolean 是否禁止分配外网ip
+     * @var boolean 是否禁止分配外网ip,true：统一分配外网ip，false：禁止分配外网ip.
      */
     public $DisableWanIp;
 
     /**
      * @param string $ModuleId 模块ID
-     * @param boolean $DisableWanIp 是否禁止分配外网ip
+     * @param boolean $DisableWanIp 是否禁止分配外网ip,true：统一分配外网ip，false：禁止分配外网ip.
      */
     function __construct()
     {

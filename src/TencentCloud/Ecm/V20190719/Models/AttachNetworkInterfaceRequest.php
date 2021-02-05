@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNetworkInterfaceId(string $NetworkInterfaceId) 设置弹性网卡实例ID，例如：eni-m6dyj72l。
  * @method string getInstanceId() 获取实例ID。形如：ein-r8hr2upy。
  * @method void setInstanceId(string $InstanceId) 设置实例ID。形如：ein-r8hr2upy。
- * @method string getEcmRegion() 获取ECM 地域
- * @method void setEcmRegion(string $EcmRegion) 设置ECM 地域
+ * @method string getEcmRegion() 获取ECM 地域，形如ap-xian-ecm。
+ * @method void setEcmRegion(string $EcmRegion) 设置ECM 地域，形如ap-xian-ecm。
  */
 class AttachNetworkInterfaceRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class AttachNetworkInterfaceRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string ECM 地域
+     * @var string ECM 地域，形如ap-xian-ecm。
      */
     public $EcmRegion;
 
     /**
      * @param string $NetworkInterfaceId 弹性网卡实例ID，例如：eni-m6dyj72l。
      * @param string $InstanceId 实例ID。形如：ein-r8hr2upy。
-     * @param string $EcmRegion ECM 地域
+     * @param string $EcmRegion ECM 地域，形如ap-xian-ecm。
      */
     function __construct()
     {

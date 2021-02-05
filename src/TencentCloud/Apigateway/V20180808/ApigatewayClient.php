@@ -48,7 +48,7 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
  * @method Models\DemoteServiceUsagePlanResponse DemoteServiceUsagePlan(Models\DemoteServiceUsagePlanRequest $req) 本接口（DemoteServiceUsagePlan）用于将某个服务在某个环境的使用计划，降级到API上。
 如果服务内没有API不允许进行此操作。
 如果当前环境没有发布，不允许进行此操作。
- * @method Models\DescribeApiResponse DescribeApi(Models\DescribeApiRequest $req) 本接口（DescribeApi）用于查询用户部署于 API 网关的 API 接口的详细信息。​
+ * @method Models\DescribeApiResponse DescribeApi(Models\DescribeApiRequest $req) 本接口（DescribeApi）用于查询用户 API 网关的 API 接口的详细信息。​
  * @method Models\DescribeApiEnvironmentStrategyResponse DescribeApiEnvironmentStrategy(Models\DescribeApiEnvironmentStrategyRequest $req) 本接口（DescribeApiEnvironmentStrategy）用于展示API绑定的限流策略。
  * @method Models\DescribeApiKeyResponse DescribeApiKey(Models\DescribeApiKeyRequest $req) 本接口（DescribeApiKey）用于查询密钥详情。
 用户在创建密钥后，可用此接口查询一个 API 密钥的详情，该接口会显示密钥 Key。

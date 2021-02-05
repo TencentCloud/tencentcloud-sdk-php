@@ -26,6 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTerminateDelay(boolean $TerminateDelay) 设置是否定时销毁，默认为否。
  * @method string getTerminateTime() 获取定时销毁的时间，格式形如："2019-08-05 12:01:30"，若非定时销毁，则此参数被忽略。
  * @method void setTerminateTime(string $TerminateTime) 设置定时销毁的时间，格式形如："2019-08-05 12:01:30"，若非定时销毁，则此参数被忽略。
+ * @method boolean getAssociatedResourceDestroy() 获取是否关联删除已绑定的弹性网卡和弹性IP，默认为true。
+当为true时，一并删除弹性网卡和弹性IP；
+当为false时，只销毁主机，保留弹性网卡和弹性IP。
+ * @method void setAssociatedResourceDestroy(boolean $AssociatedResourceDestroy) 设置是否关联删除已绑定的弹性网卡和弹性IP，默认为true。
+当为true时，一并删除弹性网卡和弹性IP；
+当为false时，只销毁主机，保留弹性网卡和弹性IP。
  */
 class TerminateInstancesRequest extends AbstractModel
 {
@@ -45,9 +51,19 @@ class TerminateInstancesRequest extends AbstractModel
     public $TerminateTime;
 
     /**
+     * @var boolean 是否关联删除已绑定的弹性网卡和弹性IP，默认为true。
+当为true时，一并删除弹性网卡和弹性IP；
+当为false时，只销毁主机，保留弹性网卡和弹性IP。
+     */
+    public $AssociatedResourceDestroy;
+
+    /**
      * @param array $InstanceIdSet 待销毁的实例ID列表。
      * @param boolean $TerminateDelay 是否定时销毁，默认为否。
      * @param string $TerminateTime 定时销毁的时间，格式形如："2019-08-05 12:01:30"，若非定时销毁，则此参数被忽略。
+     * @param boolean $AssociatedResourceDestroy 是否关联删除已绑定的弹性网卡和弹性IP，默认为true。
+当为true时，一并删除弹性网卡和弹性IP；
+当为false时，只销毁主机，保留弹性网卡和弹性IP。
      */
     function __construct()
     {
@@ -72,6 +88,10 @@ class TerminateInstancesRequest extends AbstractModel
 
         if (array_key_exists("TerminateTime",$param) and $param["TerminateTime"] !== null) {
             $this->TerminateTime = $param["TerminateTime"];
+        }
+
+        if (array_key_exists("AssociatedResourceDestroy",$param) and $param["AssociatedResourceDestroy"] !== null) {
+            $this->AssociatedResourceDestroy = $param["AssociatedResourceDestroy"];
         }
     }
 }

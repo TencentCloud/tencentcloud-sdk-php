@@ -18,16 +18,16 @@ namespace TencentCloud\Ecm\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DetachNetworkInterface请求参数结构体
+ * ModifyPrivateIpAddressesAttribute请求参数结构体
  *
  * @method string getNetworkInterfaceId() 获取弹性网卡实例ID，例如：eni-m6dyj72l。
  * @method void setNetworkInterfaceId(string $NetworkInterfaceId) 设置弹性网卡实例ID，例如：eni-m6dyj72l。
- * @method string getInstanceId() 获取实例ID。形如：ein-hcs7jkg4
- * @method void setInstanceId(string $InstanceId) 设置实例ID。形如：ein-hcs7jkg4
- * @method string getEcmRegion() 获取ECM 地域，形如ap-xian-ecm。
- * @method void setEcmRegion(string $EcmRegion) 设置ECM 地域，形如ap-xian-ecm。
+ * @method array getPrivateIpAddresses() 获取指定的内网IP信息。
+ * @method void setPrivateIpAddresses(array $PrivateIpAddresses) 设置指定的内网IP信息。
+ * @method string getEcmRegion() 获取ECM 节点Region信息，形如ap-xian-ecm。
+ * @method void setEcmRegion(string $EcmRegion) 设置ECM 节点Region信息，形如ap-xian-ecm。
  */
-class DetachNetworkInterfaceRequest extends AbstractModel
+class ModifyPrivateIpAddressesAttributeRequest extends AbstractModel
 {
     /**
      * @var string 弹性网卡实例ID，例如：eni-m6dyj72l。
@@ -35,19 +35,19 @@ class DetachNetworkInterfaceRequest extends AbstractModel
     public $NetworkInterfaceId;
 
     /**
-     * @var string 实例ID。形如：ein-hcs7jkg4
+     * @var array 指定的内网IP信息。
      */
-    public $InstanceId;
+    public $PrivateIpAddresses;
 
     /**
-     * @var string ECM 地域，形如ap-xian-ecm。
+     * @var string ECM 节点Region信息，形如ap-xian-ecm。
      */
     public $EcmRegion;
 
     /**
      * @param string $NetworkInterfaceId 弹性网卡实例ID，例如：eni-m6dyj72l。
-     * @param string $InstanceId 实例ID。形如：ein-hcs7jkg4
-     * @param string $EcmRegion ECM 地域，形如ap-xian-ecm。
+     * @param array $PrivateIpAddresses 指定的内网IP信息。
+     * @param string $EcmRegion ECM 节点Region信息，形如ap-xian-ecm。
      */
     function __construct()
     {
@@ -66,8 +66,13 @@ class DetachNetworkInterfaceRequest extends AbstractModel
             $this->NetworkInterfaceId = $param["NetworkInterfaceId"];
         }
 
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists("PrivateIpAddresses",$param) and $param["PrivateIpAddresses"] !== null) {
+            $this->PrivateIpAddresses = [];
+            foreach ($param["PrivateIpAddresses"] as $key => $value){
+                $obj = new PrivateIpAddressSpecification();
+                $obj->deserialize($value);
+                array_push($this->PrivateIpAddresses, $obj);
+            }
         }
 
         if (array_key_exists("EcmRegion",$param) and $param["EcmRegion"] !== null) {

@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceName(string $InstanceName) 设置实例名称，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
  * @method ModifyInstanceAttributesConfig getConfig() 获取实例配置
  * @method void setConfig(ModifyInstanceAttributesConfig $Config) 设置实例配置
+ * @method DynamicRetentionTime getDynamicRetentionConfig() 获取动态消息保留策略配置
+ * @method void setDynamicRetentionConfig(DynamicRetentionTime $DynamicRetentionConfig) 设置动态消息保留策略配置
+ * @method integer getRebalanceTime() 获取修改升配置rebalance时间
+ * @method void setRebalanceTime(integer $RebalanceTime) 设置修改升配置rebalance时间
  */
 class ModifyInstanceAttributesRequest extends AbstractModel
 {
@@ -52,10 +56,22 @@ class ModifyInstanceAttributesRequest extends AbstractModel
     public $Config;
 
     /**
+     * @var DynamicRetentionTime 动态消息保留策略配置
+     */
+    public $DynamicRetentionConfig;
+
+    /**
+     * @var integer 修改升配置rebalance时间
+     */
+    public $RebalanceTime;
+
+    /**
      * @param string $InstanceId 实例id
      * @param integer $MsgRetentionTime 实例日志的最长保留时间，单位分钟，最大30天，0代表不开启日志保留时间回收策略
      * @param string $InstanceName 实例名称，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
      * @param ModifyInstanceAttributesConfig $Config 实例配置
+     * @param DynamicRetentionTime $DynamicRetentionConfig 动态消息保留策略配置
+     * @param integer $RebalanceTime 修改升配置rebalance时间
      */
     function __construct()
     {
@@ -85,6 +101,15 @@ class ModifyInstanceAttributesRequest extends AbstractModel
         if (array_key_exists("Config",$param) and $param["Config"] !== null) {
             $this->Config = new ModifyInstanceAttributesConfig();
             $this->Config->deserialize($param["Config"]);
+        }
+
+        if (array_key_exists("DynamicRetentionConfig",$param) and $param["DynamicRetentionConfig"] !== null) {
+            $this->DynamicRetentionConfig = new DynamicRetentionTime();
+            $this->DynamicRetentionConfig->deserialize($param["DynamicRetentionConfig"]);
+        }
+
+        if (array_key_exists("RebalanceTime",$param) and $param["RebalanceTime"] !== null) {
+            $this->RebalanceTime = $param["RebalanceTime"];
         }
     }
 }

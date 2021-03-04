@@ -50,6 +50,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConfig(Config $Config) 设置高级配置
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method TopicRetentionTimeConfigRsp getRetentionTimeConfig() 获取消息保留时间配置(用于动态配置变更记录)
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRetentionTimeConfig(TopicRetentionTimeConfigRsp $RetentionTimeConfig) 设置消息保留时间配置(用于动态配置变更记录)
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TopicDetail extends AbstractModel
 {
@@ -117,6 +121,12 @@ class TopicDetail extends AbstractModel
     public $Config;
 
     /**
+     * @var TopicRetentionTimeConfigRsp 消息保留时间配置(用于动态配置变更记录)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RetentionTimeConfig;
+
+    /**
      * @param string $TopicName 主题名称
      * @param string $TopicId 主题ID
      * @param integer $PartitionNum 分区数
@@ -131,6 +141,8 @@ class TopicDetail extends AbstractModel
      * @param integer $ForwardStatus 数据备份cos 状态： 1 不开启数据备份，0 开启数据备份
      * @param integer $ForwardInterval 数据备份到cos的周期频率
      * @param Config $Config 高级配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TopicRetentionTimeConfigRsp $RetentionTimeConfig 消息保留时间配置(用于动态配置变更记录)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -193,6 +205,11 @@ class TopicDetail extends AbstractModel
         if (array_key_exists("Config",$param) and $param["Config"] !== null) {
             $this->Config = new Config();
             $this->Config->deserialize($param["Config"]);
+        }
+
+        if (array_key_exists("RetentionTimeConfig",$param) and $param["RetentionTimeConfig"] !== null) {
+            $this->RetentionTimeConfig = new TopicRetentionTimeConfigRsp();
+            $this->RetentionTimeConfig->deserialize($param["RetentionTimeConfig"]);
         }
     }
 }

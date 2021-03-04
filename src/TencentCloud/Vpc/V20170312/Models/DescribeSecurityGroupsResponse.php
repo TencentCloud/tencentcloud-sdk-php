@@ -21,7 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * DescribeSecurityGroups返回参数结构体
  *
  * @method array getSecurityGroupSet() 获取安全组对象。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSecurityGroupSet(array $SecurityGroupSet) 设置安全组对象。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotalCount() 获取符合条件的实例数量。
  * @method void setTotalCount(integer $TotalCount) 设置符合条件的实例数量。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -31,6 +33,7 @@ class DescribeSecurityGroupsResponse extends AbstractModel
 {
     /**
      * @var array 安全组对象。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SecurityGroupSet;
 
@@ -46,6 +49,7 @@ class DescribeSecurityGroupsResponse extends AbstractModel
 
     /**
      * @param array $SecurityGroupSet 安全组对象。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalCount 符合条件的实例数量。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

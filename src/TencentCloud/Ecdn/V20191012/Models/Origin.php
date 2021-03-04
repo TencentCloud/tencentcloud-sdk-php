@@ -20,10 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 源站配置。
  *
- * @method array getOrigins() 获取主源站列表，默认格式为 ["ip1:port1", "ip2:port2"]。
-支持在源站列表中配置权重，配置IP源站权重格式为 ["ip1:port1:weight1", "ip2:port2:weight2"]。
- * @method void setOrigins(array $Origins) 设置主源站列表，默认格式为 ["ip1:port1", "ip2:port2"]。
-支持在源站列表中配置权重，配置IP源站权重格式为 ["ip1:port1:weight1", "ip2:port2:weight2"]。
+ * @method array getOrigins() 获取主源站列表，IP与域名源站不可混填。配置源站端口["origin1:port1", "origin2:port2"]，配置回源权重["origin1::weight1", "origin2::weight2"]，同时配置端口与权重 ["origin1:port1:weight1", "origin2:port2:weight2"]，权重值有效范围为0-100。
+ * @method void setOrigins(array $Origins) 设置主源站列表，IP与域名源站不可混填。配置源站端口["origin1:port1", "origin2:port2"]，配置回源权重["origin1::weight1", "origin2::weight2"]，同时配置端口与权重 ["origin1:port1:weight1", "origin2:port2:weight2"]，权重值有效范围为0-100。
  * @method string getOriginType() 获取主源站类型，支持domain，ip，分别表示域名源站，ip源站。
 设置Origins时必须填写。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -35,8 +33,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setServerName(string $ServerName) 设置回源时Host头部值。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOriginPullProtocol() 获取回源协议类型，支持http，follow，https，分别表示强制http回源，协议跟随回源，https回源。
+不传入的情况下默认为http回源.
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOriginPullProtocol(string $OriginPullProtocol) 设置回源协议类型，支持http，follow，https，分别表示强制http回源，协议跟随回源，https回源。
+不传入的情况下默认为http回源.
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getBackupOrigins() 获取备份源站列表。
  * @method void setBackupOrigins(array $BackupOrigins) 设置备份源站列表。
@@ -50,8 +50,7 @@ use TencentCloud\Common\AbstractModel;
 class Origin extends AbstractModel
 {
     /**
-     * @var array 主源站列表，默认格式为 ["ip1:port1", "ip2:port2"]。
-支持在源站列表中配置权重，配置IP源站权重格式为 ["ip1:port1:weight1", "ip2:port2:weight2"]。
+     * @var array 主源站列表，IP与域名源站不可混填。配置源站端口["origin1:port1", "origin2:port2"]，配置回源权重["origin1::weight1", "origin2::weight2"]，同时配置端口与权重 ["origin1:port1:weight1", "origin2:port2:weight2"]，权重值有效范围为0-100。
      */
     public $Origins;
 
@@ -70,6 +69,7 @@ class Origin extends AbstractModel
 
     /**
      * @var string 回源协议类型，支持http，follow，https，分别表示强制http回源，协议跟随回源，https回源。
+不传入的情况下默认为http回源.
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OriginPullProtocol;
@@ -87,14 +87,14 @@ class Origin extends AbstractModel
     public $BackupOriginType;
 
     /**
-     * @param array $Origins 主源站列表，默认格式为 ["ip1:port1", "ip2:port2"]。
-支持在源站列表中配置权重，配置IP源站权重格式为 ["ip1:port1:weight1", "ip2:port2:weight2"]。
+     * @param array $Origins 主源站列表，IP与域名源站不可混填。配置源站端口["origin1:port1", "origin2:port2"]，配置回源权重["origin1::weight1", "origin2::weight2"]，同时配置端口与权重 ["origin1:port1:weight1", "origin2:port2:weight2"]，权重值有效范围为0-100。
      * @param string $OriginType 主源站类型，支持domain，ip，分别表示域名源站，ip源站。
 设置Origins时必须填写。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ServerName 回源时Host头部值。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OriginPullProtocol 回源协议类型，支持http，follow，https，分别表示强制http回源，协议跟随回源，https回源。
+不传入的情况下默认为http回源.
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $BackupOrigins 备份源站列表。
      * @param string $BackupOriginType 备份源站类型，同OriginType。

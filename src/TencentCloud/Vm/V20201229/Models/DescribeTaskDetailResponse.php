@@ -86,13 +86,17 @@ Block 确认违规
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdatedAt(string $UpdatedAt) 设置更新时间，格式为 ISO 8601
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getImageSegments() 获取图片结果
+ * @method array getImageSegments() 获取视频中截帧审核的结果。
+数据有效期为24小时，如需要储存更长时间请在已配置的COS储存桶中设置。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setImageSegments(array $ImageSegments) 设置图片结果
+ * @method void setImageSegments(array $ImageSegments) 设置视频中截帧审核的结果。
+数据有效期为24小时，如需要储存更长时间请在已配置的COS储存桶中设置。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getAudioSegments() 获取音频结果
+ * @method array getAudioSegments() 获取视频中音频审核的结果。
+数据有效期为24小时，如需要储存更长时间请在已配置的COS储存桶中设置。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAudioSegments(array $AudioSegments) 设置音频结果
+ * @method void setAudioSegments(array $AudioSegments) 设置视频中音频审核的结果。
+数据有效期为24小时，如需要储存更长时间请在已配置的COS储存桶中设置。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getErrorType() 获取如果返回的状态为ERROR，该字段会标记错误类型。
 可选值：：
@@ -197,13 +201,15 @@ Block 确认违规
     public $UpdatedAt;
 
     /**
-     * @var array 图片结果
+     * @var array 视频中截帧审核的结果。
+数据有效期为24小时，如需要储存更长时间请在已配置的COS储存桶中设置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ImageSegments;
 
     /**
-     * @var array 音频结果
+     * @var array 视频中音频审核的结果。
+数据有效期为24小时，如需要储存更长时间请在已配置的COS储存桶中设置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AudioSegments;
@@ -263,9 +269,11 @@ Block 确认违规
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdatedAt 更新时间，格式为 ISO 8601
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $ImageSegments 图片结果
+     * @param array $ImageSegments 视频中截帧审核的结果。
+数据有效期为24小时，如需要储存更长时间请在已配置的COS储存桶中设置。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $AudioSegments 音频结果
+     * @param array $AudioSegments 视频中音频审核的结果。
+数据有效期为24小时，如需要储存更长时间请在已配置的COS储存桶中设置。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ErrorType 如果返回的状态为ERROR，该字段会标记错误类型。
 可选值：：

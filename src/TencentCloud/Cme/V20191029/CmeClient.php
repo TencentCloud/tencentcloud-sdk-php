@@ -62,7 +62,9 @@ use TencentCloud\Cme\V20191029\Models as Models;
  * @method Models\ExportVideoByVideoSegmentationDataResponse ExportVideoByVideoSegmentationData(Models\ExportVideoByVideoSegmentationDataRequest $req) 使用视频智能拆条数据导出视频，将指定的视频拆条片段导出为一个视频。
  * @method Models\ExportVideoEditProjectResponse ExportVideoEditProject(Models\ExportVideoEditProjectRequest $req) 导出视频编辑项目，支持指定输出的模板。
  * @method Models\FlattenListMediaResponse FlattenListMedia(Models\FlattenListMediaRequest $req) 平铺分类路径下及其子分类下的所有素材。
- * @method Models\GenerateVideoSegmentationSchemeByAiResponse GenerateVideoSegmentationSchemeByAi(Models\GenerateVideoSegmentationSchemeByAiRequest $req) 发起视频智能拆条任务，支持智能生成和平精英集锦、王者荣耀集锦、足球集锦、篮球集锦 、人物集锦、新闻拆条等任务。
+ * @method Models\GenerateVideoSegmentationSchemeByAiResponse GenerateVideoSegmentationSchemeByAi(Models\GenerateVideoSegmentationSchemeByAiRequest $req) <li>发起视频智能拆条任务，支持智能生成和平精英集锦、王者荣耀集锦、足球集锦、篮球集锦 、人物集锦、新闻拆条等任务。</li>
+<li>和平精英集锦和王者荣耀集锦根据击杀场景进行拆条，足球集锦和篮球集锦根据进球场景进行拆条，人物集锦根据人物人脸特征进行拆条，新闻拆条根据导播进行拆条。</li>
+<li>【本接口内测中，暂不建议使用】</li>
  * @method Models\GrantResourceAuthorizationResponse GrantResourceAuthorization(Models\GrantResourceAuthorizationRequest $req) 资源所属实体对目标实体授予目标资源的相应权限。
  * @method Models\ImportMaterialResponse ImportMaterial(Models\ImportMaterialRequest $req) 将云点播媒资文件导入到云剪媒体资源库。
  * @method Models\ImportMediaToProjectResponse ImportMediaToProject(Models\ImportMediaToProjectRequest $req) 将云点播中的媒资或者用户自有媒资文件添加到媒体库中，跟项目关联，供后续视频编辑使用。目前仅普通编辑项目和智能视频拆条项目有效。

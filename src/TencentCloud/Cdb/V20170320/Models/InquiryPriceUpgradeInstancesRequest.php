@@ -30,8 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCpu(integer $Cpu) 设置升级后的核心数目，单位：核，为保证传入 CPU 值有效，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/product/236/17229) 接口获取可升级的核心数目，当未指定该值时，将按照 Memory 大小补全一个默认值。
  * @method integer getProtectMode() 获取数据复制方式，支持值包括：0 - 异步复制，1 - 半同步复制，2 - 强同步复制，升级主实例时可指定该参数，升级只读实例或者灾备实例时指定该参数无意义。
  * @method void setProtectMode(integer $ProtectMode) 设置数据复制方式，支持值包括：0 - 异步复制，1 - 半同步复制，2 - 强同步复制，升级主实例时可指定该参数，升级只读实例或者灾备实例时指定该参数无意义。
- * @method string getDeviceType() 获取部署策略，取值范围：HA-高可用版
- * @method void setDeviceType(string $DeviceType) 设置部署策略，取值范围：HA-高可用版
+ * @method string getDeviceType() 获取实例隔离类型。支持值包括： "UNIVERSAL" - 通用型实例， "EXCLUSIVE" - 独享型实例， "BASIC" - 基础版实例。 不指定则默认为通用型实例。
+ * @method void setDeviceType(string $DeviceType) 设置实例隔离类型。支持值包括： "UNIVERSAL" - 通用型实例， "EXCLUSIVE" - 独享型实例， "BASIC" - 基础版实例。 不指定则默认为通用型实例。
+ * @method integer getInstanceNodes() 获取实例节点数。对于 RO 和 基础版实例， 该值默认为1。 如果需要询价三节点实例， 请将该值设置为3。其余主实例该值默认为2。
+ * @method void setInstanceNodes(integer $InstanceNodes) 设置实例节点数。对于 RO 和 基础版实例， 该值默认为1。 如果需要询价三节点实例， 请将该值设置为3。其余主实例该值默认为2。
  */
 class InquiryPriceUpgradeInstancesRequest extends AbstractModel
 {
@@ -61,9 +63,14 @@ class InquiryPriceUpgradeInstancesRequest extends AbstractModel
     public $ProtectMode;
 
     /**
-     * @var string 部署策略，取值范围：HA-高可用版
+     * @var string 实例隔离类型。支持值包括： "UNIVERSAL" - 通用型实例， "EXCLUSIVE" - 独享型实例， "BASIC" - 基础版实例。 不指定则默认为通用型实例。
      */
     public $DeviceType;
+
+    /**
+     * @var integer 实例节点数。对于 RO 和 基础版实例， 该值默认为1。 如果需要询价三节点实例， 请将该值设置为3。其余主实例该值默认为2。
+     */
+    public $InstanceNodes;
 
     /**
      * @param string $InstanceId 实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。
@@ -71,7 +78,8 @@ class InquiryPriceUpgradeInstancesRequest extends AbstractModel
      * @param integer $Volume 升级后的硬盘大小，单位：GB，为保证传入 Volume 值有效，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/product/236/17229) 接口获取可升级的硬盘范围。
      * @param integer $Cpu 升级后的核心数目，单位：核，为保证传入 CPU 值有效，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/product/236/17229) 接口获取可升级的核心数目，当未指定该值时，将按照 Memory 大小补全一个默认值。
      * @param integer $ProtectMode 数据复制方式，支持值包括：0 - 异步复制，1 - 半同步复制，2 - 强同步复制，升级主实例时可指定该参数，升级只读实例或者灾备实例时指定该参数无意义。
-     * @param string $DeviceType 部署策略，取值范围：HA-高可用版
+     * @param string $DeviceType 实例隔离类型。支持值包括： "UNIVERSAL" - 通用型实例， "EXCLUSIVE" - 独享型实例， "BASIC" - 基础版实例。 不指定则默认为通用型实例。
+     * @param integer $InstanceNodes 实例节点数。对于 RO 和 基础版实例， 该值默认为1。 如果需要询价三节点实例， 请将该值设置为3。其余主实例该值默认为2。
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class InquiryPriceUpgradeInstancesRequest extends AbstractModel
 
         if (array_key_exists("DeviceType",$param) and $param["DeviceType"] !== null) {
             $this->DeviceType = $param["DeviceType"];
+        }
+
+        if (array_key_exists("InstanceNodes",$param) and $param["InstanceNodes"] !== null) {
+            $this->InstanceNodes = $param["InstanceNodes"];
         }
     }
 }

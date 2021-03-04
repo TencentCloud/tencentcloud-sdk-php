@@ -28,6 +28,7 @@ use TencentCloud\Oceanus\V20190422\Models as Models;
  * @method Models\CreateResourceResponse CreateResource(Models\CreateResourceRequest $req) 创建资源接口
  * @method Models\CreateResourceConfigResponse CreateResourceConfig(Models\CreateResourceConfigRequest $req) 创建资源配置接口
  * @method Models\DeleteTableConfigResponse DeleteTableConfig(Models\DeleteTableConfigRequest $req) 删除作业表配置
+ * @method Models\DescribeJobConfigsResponse DescribeJobConfigs(Models\DescribeJobConfigsRequest $req) 查询作业配置列表，一次最多查询100个
  * @method Models\DescribeJobsResponse DescribeJobs(Models\DescribeJobsRequest $req) 查询作业
  * @method Models\DescribeSystemResourcesResponse DescribeSystemResources(Models\DescribeSystemResourcesRequest $req) 描述系统资源接口
  * @method Models\RunJobsResponse RunJobs(Models\RunJobsRequest $req) 批量启动或者恢复作业，批量操作数量上限20

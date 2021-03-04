@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
  * @method array getSecurityGroupIds() 获取要修改的安全组 ID 列表，一个或者多个安全组 ID 组成的数组。
  * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置要修改的安全组 ID 列表，一个或者多个安全组 ID 组成的数组。
+ * @method boolean getForReadonlyInstance() 获取当传入只读实例ID时，默认操作的是对应只读组的安全组。如果需要操作只读实例ID的安全组， 需要将该入参置为True
+ * @method void setForReadonlyInstance(boolean $ForReadonlyInstance) 设置当传入只读实例ID时，默认操作的是对应只读组的安全组。如果需要操作只读实例ID的安全组， 需要将该入参置为True
  */
 class ModifyDBInstanceSecurityGroupsRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class ModifyDBInstanceSecurityGroupsRequest extends AbstractModel
     public $SecurityGroupIds;
 
     /**
+     * @var boolean 当传入只读实例ID时，默认操作的是对应只读组的安全组。如果需要操作只读实例ID的安全组， 需要将该入参置为True
+     */
+    public $ForReadonlyInstance;
+
+    /**
      * @param string $InstanceId 实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      * @param array $SecurityGroupIds 要修改的安全组 ID 列表，一个或者多个安全组 ID 组成的数组。
+     * @param boolean $ForReadonlyInstance 当传入只读实例ID时，默认操作的是对应只读组的安全组。如果需要操作只读实例ID的安全组， 需要将该入参置为True
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class ModifyDBInstanceSecurityGroupsRequest extends AbstractModel
 
         if (array_key_exists("SecurityGroupIds",$param) and $param["SecurityGroupIds"] !== null) {
             $this->SecurityGroupIds = $param["SecurityGroupIds"];
+        }
+
+        if (array_key_exists("ForReadonlyInstance",$param) and $param["ForReadonlyInstance"] !== null) {
+            $this->ForReadonlyInstance = $param["ForReadonlyInstance"];
         }
     }
 }

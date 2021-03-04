@@ -30,6 +30,7 @@ use TencentCloud\Tcr\V20190924\Models as Models;
  * @method Models\CreateImageLifecyclePersonalResponse CreateImageLifecyclePersonal(Models\CreateImageLifecyclePersonalRequest $req) 用于在个人版中创建清理策略
  * @method Models\CreateInstanceResponse CreateInstance(Models\CreateInstanceRequest $req) 创建实例
  * @method Models\CreateInstanceTokenResponse CreateInstanceToken(Models\CreateInstanceTokenRequest $req) 创建实例的临时或长期访问凭证
+ * @method Models\CreateInternalEndpointDnsResponse CreateInternalEndpointDns(Models\CreateInternalEndpointDnsRequest $req) 创建tcr内网私有域名解析
  * @method Models\CreateNamespaceResponse CreateNamespace(Models\CreateNamespaceRequest $req) 用于在企业版中创建命名空间
  * @method Models\CreateNamespacePersonalResponse CreateNamespacePersonal(Models\CreateNamespacePersonalRequest $req) 创建个人版镜像仓库命名空间，此命名空间全局唯一
  * @method Models\CreateRepositoryResponse CreateRepository(Models\CreateRepositoryRequest $req) 用于企业版创建镜像仓库
@@ -43,6 +44,7 @@ use TencentCloud\Tcr\V20190924\Models as Models;
  * @method Models\DeleteImagePersonalResponse DeleteImagePersonal(Models\DeleteImagePersonalRequest $req) 用于在个人版中删除tag
  * @method Models\DeleteInstanceResponse DeleteInstance(Models\DeleteInstanceRequest $req) 删除镜像仓库企业版实例
  * @method Models\DeleteInstanceTokenResponse DeleteInstanceToken(Models\DeleteInstanceTokenRequest $req) 删除长期访问凭证
+ * @method Models\DeleteInternalEndpointDnsResponse DeleteInternalEndpointDns(Models\DeleteInternalEndpointDnsRequest $req) 删除tcr内网私有域名解析
  * @method Models\DeleteNamespaceResponse DeleteNamespace(Models\DeleteNamespaceRequest $req) 删除命名空间
  * @method Models\DeleteNamespacePersonalResponse DeleteNamespacePersonal(Models\DeleteNamespacePersonalRequest $req) 删除共享版命名空间
  * @method Models\DeleteRepositoryResponse DeleteRepository(Models\DeleteRepositoryRequest $req) 删除镜像仓库
@@ -60,6 +62,7 @@ use TencentCloud\Tcr\V20190924\Models as Models;
  * @method Models\DescribeInstanceStatusResponse DescribeInstanceStatus(Models\DescribeInstanceStatusRequest $req) 查询实例当前状态以及过程信息
  * @method Models\DescribeInstanceTokenResponse DescribeInstanceToken(Models\DescribeInstanceTokenRequest $req) 查询长期访问凭证信息
  * @method Models\DescribeInstancesResponse DescribeInstances(Models\DescribeInstancesRequest $req) 查询实例信息
+ * @method Models\DescribeInternalEndpointDnsStatusResponse DescribeInternalEndpointDnsStatus(Models\DescribeInternalEndpointDnsStatusRequest $req) 批量查询vpc是否已经添加私有域名解析
  * @method Models\DescribeInternalEndpointsResponse DescribeInternalEndpoints(Models\DescribeInternalEndpointsRequest $req) 查询实例内网访问VPC链接
  * @method Models\DescribeNamespacePersonalResponse DescribeNamespacePersonal(Models\DescribeNamespacePersonalRequest $req) 查询个人版命名空间信息
  * @method Models\DescribeNamespacesResponse DescribeNamespaces(Models\DescribeNamespacesRequest $req) 查询命名空间列表或指定命名空间信息

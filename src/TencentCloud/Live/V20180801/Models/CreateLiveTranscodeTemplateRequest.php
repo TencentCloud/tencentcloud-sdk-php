@@ -50,22 +50,22 @@ origin: 保持原始编码格式
 origin: 保持原始编码格式
  * @method string getDescription() 获取模板描述。
  * @method void setDescription(string $Description) 设置模板描述。
+ * @method integer getNeedVideo() 获取是否保留视频，0：否，1：是。默认1。
+ * @method void setNeedVideo(integer $NeedVideo) 设置是否保留视频，0：否，1：是。默认1。
  * @method integer getWidth() 获取宽，默认0。
 范围[0-3000]
 数值必须是2的倍数，0是原始宽度
  * @method void setWidth(integer $Width) 设置宽，默认0。
 范围[0-3000]
 数值必须是2的倍数，0是原始宽度
- * @method integer getNeedVideo() 获取是否保留视频，0：否，1：是。默认1。
- * @method void setNeedVideo(integer $NeedVideo) 设置是否保留视频，0：否，1：是。默认1。
  * @method integer getNeedAudio() 获取是否保留音频，0：否，1：是。默认1。
  * @method void setNeedAudio(integer $NeedAudio) 设置是否保留音频，0：否，1：是。默认1。
  * @method integer getHeight() 获取高，默认0。
 范围[0-3000]
-数值必须是2的倍数，0是原始宽度
+数值必须是2的倍数，0是原始高度。
  * @method void setHeight(integer $Height) 设置高，默认0。
 范围[0-3000]
-数值必须是2的倍数，0是原始宽度
+数值必须是2的倍数，0是原始高度。
  * @method integer getFps() 获取帧率，默认0。
 范围0-60fps
  * @method void setFps(integer $Fps) 设置帧率，默认0。
@@ -157,16 +157,16 @@ origin: 保持原始编码格式
     public $Description;
 
     /**
+     * @var integer 是否保留视频，0：否，1：是。默认1。
+     */
+    public $NeedVideo;
+
+    /**
      * @var integer 宽，默认0。
 范围[0-3000]
 数值必须是2的倍数，0是原始宽度
      */
     public $Width;
-
-    /**
-     * @var integer 是否保留视频，0：否，1：是。默认1。
-     */
-    public $NeedVideo;
 
     /**
      * @var integer 是否保留音频，0：否，1：是。默认1。
@@ -176,7 +176,7 @@ origin: 保持原始编码格式
     /**
      * @var integer 高，默认0。
 范围[0-3000]
-数值必须是2的倍数，0是原始宽度
+数值必须是2的倍数，0是原始高度。
      */
     public $Height;
 
@@ -260,14 +260,14 @@ baseline/main/high。默认baseline
 
 origin: 保持原始编码格式
      * @param string $Description 模板描述。
+     * @param integer $NeedVideo 是否保留视频，0：否，1：是。默认1。
      * @param integer $Width 宽，默认0。
 范围[0-3000]
 数值必须是2的倍数，0是原始宽度
-     * @param integer $NeedVideo 是否保留视频，0：否，1：是。默认1。
      * @param integer $NeedAudio 是否保留音频，0：否，1：是。默认1。
      * @param integer $Height 高，默认0。
 范围[0-3000]
-数值必须是2的倍数，0是原始宽度
+数值必须是2的倍数，0是原始高度。
      * @param integer $Fps 帧率，默认0。
 范围0-60fps
      * @param integer $Gop 关键帧间隔，单位：秒。
@@ -330,12 +330,12 @@ baseline/main/high。默认baseline
             $this->Description = $param["Description"];
         }
 
-        if (array_key_exists("Width",$param) and $param["Width"] !== null) {
-            $this->Width = $param["Width"];
-        }
-
         if (array_key_exists("NeedVideo",$param) and $param["NeedVideo"] !== null) {
             $this->NeedVideo = $param["NeedVideo"];
+        }
+
+        if (array_key_exists("Width",$param) and $param["Width"] !== null) {
+            $this->Width = $param["Width"];
         }
 
         if (array_key_exists("NeedAudio",$param) and $param["NeedAudio"] !== null) {

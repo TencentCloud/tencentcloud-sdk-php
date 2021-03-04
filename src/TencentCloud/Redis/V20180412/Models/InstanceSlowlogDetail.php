@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCommandLine(string $CommandLine) 设置详细命令行信息
  * @method string getExecuteTime() 获取执行时间
  * @method void setExecuteTime(string $ExecuteTime) 设置执行时间
+ * @method string getNode() 获取节点ID
+ * @method void setNode(string $Node) 设置节点ID
  */
 class InstanceSlowlogDetail extends AbstractModel
 {
@@ -59,11 +61,17 @@ class InstanceSlowlogDetail extends AbstractModel
     public $ExecuteTime;
 
     /**
+     * @var string 节点ID
+     */
+    public $Node;
+
+    /**
      * @param integer $Duration 慢查询耗时
      * @param string $Client 客户端地址
      * @param string $Command 命令
      * @param string $CommandLine 详细命令行信息
      * @param string $ExecuteTime 执行时间
+     * @param string $Node 节点ID
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class InstanceSlowlogDetail extends AbstractModel
 
         if (array_key_exists("ExecuteTime",$param) and $param["ExecuteTime"] !== null) {
             $this->ExecuteTime = $param["ExecuteTime"];
+        }
+
+        if (array_key_exists("Node",$param) and $param["Node"] !== null) {
+            $this->Node = $param["Node"];
         }
     }
 }

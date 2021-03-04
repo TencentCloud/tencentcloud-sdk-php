@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStrategyName(string $StrategyName) 设置用户自定义的策略名称。
  * @method string getStrategyType() 获取策略类型。支持WHITE（白名单）和BLACK（黑名单）。
  * @method void setStrategyType(string $StrategyType) 设置策略类型。支持WHITE（白名单）和BLACK（黑名单）。
- * @method string getStrategyData() 获取策略详情。
- * @method void setStrategyData(string $StrategyData) 设置策略详情。
+ * @method string getStrategyData() 获取策略详情，多个ip 使用\n 分隔符分开。
+ * @method void setStrategyData(string $StrategyData) 设置策略详情，多个ip 使用\n 分隔符分开。
  */
 class CreateIPStrategyRequest extends AbstractModel
 {
@@ -47,7 +47,7 @@ class CreateIPStrategyRequest extends AbstractModel
     public $StrategyType;
 
     /**
-     * @var string 策略详情。
+     * @var string 策略详情，多个ip 使用\n 分隔符分开。
      */
     public $StrategyData;
 
@@ -55,7 +55,7 @@ class CreateIPStrategyRequest extends AbstractModel
      * @param string $ServiceId 服务的唯一ID。
      * @param string $StrategyName 用户自定义的策略名称。
      * @param string $StrategyType 策略类型。支持WHITE（白名单）和BLACK（黑名单）。
-     * @param string $StrategyData 策略详情。
+     * @param string $StrategyData 策略详情，多个ip 使用\n 分隔符分开。
      */
     function __construct()
     {

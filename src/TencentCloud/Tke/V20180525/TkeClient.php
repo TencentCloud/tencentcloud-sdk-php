@@ -69,6 +69,7 @@ use TencentCloud\Tke\V20180525\Models as Models;
  * @method Models\DescribeImagesResponse DescribeImages(Models\DescribeImagesRequest $req) 获取镜像信息
  * @method Models\DescribePrometheusAgentInstancesResponse DescribePrometheusAgentInstances(Models\DescribePrometheusAgentInstancesRequest $req) 获取关联目标集群的实例列表
  * @method Models\DescribePrometheusAgentsResponse DescribePrometheusAgents(Models\DescribePrometheusAgentsRequest $req) 获取被关联集群列表
+ * @method Models\DescribePrometheusAlertHistoryResponse DescribePrometheusAlertHistory(Models\DescribePrometheusAlertHistoryRequest $req) 获取告警历史
  * @method Models\DescribePrometheusAlertRuleResponse DescribePrometheusAlertRule(Models\DescribePrometheusAlertRuleRequest $req) 获取告警规则列表
  * @method Models\DescribePrometheusOverviewsResponse DescribePrometheusOverviews(Models\DescribePrometheusOverviewsRequest $req) 获取实例列表
  * @method Models\DescribePrometheusTargetsResponse DescribePrometheusTargets(Models\DescribePrometheusTargetsRequest $req) 获取targets信息

@@ -21,9 +21,21 @@ use TencentCloud\Common\AbstractModel;
  * DescribeReportData请求参数结构体
  *
  * @method string getStartTime() 获取查询起始时间：yyyy-MM-dd
+当报表类型为daily，起始时间和结束时间必须为同一天
+当报表类型为weekly，起始时间须为周一，结束时间须为同一周的周日
+当报表类型为monthly，起始时间须为自然月第一天，即1号，结束时间须为该自然月最后一天
  * @method void setStartTime(string $StartTime) 设置查询起始时间：yyyy-MM-dd
+当报表类型为daily，起始时间和结束时间必须为同一天
+当报表类型为weekly，起始时间须为周一，结束时间须为同一周的周日
+当报表类型为monthly，起始时间须为自然月第一天，即1号，结束时间须为该自然月最后一天
  * @method string getEndTime() 获取查询结束时间：yyyy-MM-dd
+当报表类型为daily，起始时间和结束时间必须为同一天
+当报表类型为weekly，起始时间须为周一，结束时间须为同一周的周日
+当报表类型为monthly，起始时间须为自然月第一天，即1号，结束时间须为该自然月最后一天
  * @method void setEndTime(string $EndTime) 设置查询结束时间：yyyy-MM-dd
+当报表类型为daily，起始时间和结束时间必须为同一天
+当报表类型为weekly，起始时间须为周一，结束时间须为同一周的周日
+当报表类型为monthly，起始时间须为自然月第一天，即1号，结束时间须为该自然月最后一天
  * @method string getReportType() 获取报表类型
 daily：日报表
 weekly：周报表（周一至周日）
@@ -49,11 +61,17 @@ class DescribeReportDataRequest extends AbstractModel
 {
     /**
      * @var string 查询起始时间：yyyy-MM-dd
+当报表类型为daily，起始时间和结束时间必须为同一天
+当报表类型为weekly，起始时间须为周一，结束时间须为同一周的周日
+当报表类型为monthly，起始时间须为自然月第一天，即1号，结束时间须为该自然月最后一天
      */
     public $StartTime;
 
     /**
      * @var string 查询结束时间：yyyy-MM-dd
+当报表类型为daily，起始时间和结束时间必须为同一天
+当报表类型为weekly，起始时间须为周一，结束时间须为同一周的周日
+当报表类型为monthly，起始时间须为自然月第一天，即1号，结束时间须为该自然月最后一天
      */
     public $EndTime;
 
@@ -89,7 +107,13 @@ overseas：中国境外
 
     /**
      * @param string $StartTime 查询起始时间：yyyy-MM-dd
+当报表类型为daily，起始时间和结束时间必须为同一天
+当报表类型为weekly，起始时间须为周一，结束时间须为同一周的周日
+当报表类型为monthly，起始时间须为自然月第一天，即1号，结束时间须为该自然月最后一天
      * @param string $EndTime 查询结束时间：yyyy-MM-dd
+当报表类型为daily，起始时间和结束时间必须为同一天
+当报表类型为weekly，起始时间须为周一，结束时间须为同一周的周日
+当报表类型为monthly，起始时间须为自然月第一天，即1号，结束时间须为该自然月最后一天
      * @param string $ReportType 报表类型
 daily：日报表
 weekly：周报表（周一至周日）

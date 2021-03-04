@@ -38,7 +38,7 @@ use TencentCloud\Asr\V20190614\Models as Models;
 <br>• 默认单账号限制并发数为20路，如您有提高并发限制的需求，请提[工单](https://console.cloud.tencent.com/workorder/category)进行咨询。
  * @method Models\CreateCustomizationResponse CreateCustomization(Models\CreateCustomizationRequest $req) 用户使用该接口可以创建自学习模型，以供识别调用
  * @method Models\CreateRecTaskResponse CreateRecTask(Models\CreateRecTaskRequest $req) 本接口服务对时长5小时以内的录音文件进行识别，异步返回识别全部结果。
-<br>• 支持中文普通话、英语、粤语、日语和上海话方言
+<br>• 支持中文普通话、英语、粤语、日语
 <br>• 支持通用、音视频领域
 <br>• 支持wav、mp3、m4a、flv、mp4、wma、3gp、amr、aac、ogg-opus、flac格式
 <br>• 支持语音 URL 和本地语音文件两种请求方式

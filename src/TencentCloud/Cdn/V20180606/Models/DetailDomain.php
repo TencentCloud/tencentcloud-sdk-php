@@ -266,6 +266,14 @@ off：不支持
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOriginCombine(OriginCombine $OriginCombine) 设置合并回源
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method PostSize getPostMaxSize() 获取POST上传配置项
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPostMaxSize(PostSize $PostMaxSize) 设置POST上传配置项
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method Quic getQuic() 获取Quic配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setQuic(Quic $Quic) 设置Quic配置
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DetailDomain extends AbstractModel
 {
@@ -609,6 +617,18 @@ off：不支持
     public $OriginCombine;
 
     /**
+     * @var PostSize POST上传配置项
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PostMaxSize;
+
+    /**
+     * @var Quic Quic配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Quic;
+
+    /**
      * @param string $ResourceId 域名 ID
      * @param integer $AppId 腾讯云账号ID
      * @param string $Domain 加速域名
@@ -731,6 +751,10 @@ off：不支持
      * @param OfflineCache $OfflineCache 离线缓存
 注意：此字段可能返回 null，表示取不到有效值。
      * @param OriginCombine $OriginCombine 合并回源
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PostSize $PostMaxSize POST上传配置项
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Quic $Quic Quic配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -1008,6 +1032,16 @@ off：不支持
         if (array_key_exists("OriginCombine",$param) and $param["OriginCombine"] !== null) {
             $this->OriginCombine = new OriginCombine();
             $this->OriginCombine->deserialize($param["OriginCombine"]);
+        }
+
+        if (array_key_exists("PostMaxSize",$param) and $param["PostMaxSize"] !== null) {
+            $this->PostMaxSize = new PostSize();
+            $this->PostMaxSize->deserialize($param["PostMaxSize"]);
+        }
+
+        if (array_key_exists("Quic",$param) and $param["Quic"] !== null) {
+            $this->Quic = new Quic();
+            $this->Quic->deserialize($param["Quic"]);
         }
     }
 }

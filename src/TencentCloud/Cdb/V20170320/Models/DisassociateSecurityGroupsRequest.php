@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSecurityGroupId(string $SecurityGroupId) 设置安全组 ID。
  * @method array getInstanceIds() 获取实例 ID 列表，一个或者多个实例 ID 组成的数组。
  * @method void setInstanceIds(array $InstanceIds) 设置实例 ID 列表，一个或者多个实例 ID 组成的数组。
+ * @method boolean getForReadonlyInstance() 获取当传入只读实例ID时，默认操作的是对应只读组的安全组。如果需要操作只读实例ID的安全组， 需要将该入参置为True
+ * @method void setForReadonlyInstance(boolean $ForReadonlyInstance) 设置当传入只读实例ID时，默认操作的是对应只读组的安全组。如果需要操作只读实例ID的安全组， 需要将该入参置为True
  */
 class DisassociateSecurityGroupsRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class DisassociateSecurityGroupsRequest extends AbstractModel
     public $InstanceIds;
 
     /**
+     * @var boolean 当传入只读实例ID时，默认操作的是对应只读组的安全组。如果需要操作只读实例ID的安全组， 需要将该入参置为True
+     */
+    public $ForReadonlyInstance;
+
+    /**
      * @param string $SecurityGroupId 安全组 ID。
      * @param array $InstanceIds 实例 ID 列表，一个或者多个实例 ID 组成的数组。
+     * @param boolean $ForReadonlyInstance 当传入只读实例ID时，默认操作的是对应只读组的安全组。如果需要操作只读实例ID的安全组， 需要将该入参置为True
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class DisassociateSecurityGroupsRequest extends AbstractModel
 
         if (array_key_exists("InstanceIds",$param) and $param["InstanceIds"] !== null) {
             $this->InstanceIds = $param["InstanceIds"];
+        }
+
+        if (array_key_exists("ForReadonlyInstance",$param) and $param["ForReadonlyInstance"] !== null) {
+            $this->ForReadonlyInstance = $param["ForReadonlyInstance"];
         }
     }
 }

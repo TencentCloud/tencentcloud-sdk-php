@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDescription(string $Description) 设置CMK的描述
  * @method string getKeyState() 获取CMK的状态， 取值为：Enabled | Disabled | PendingDelete | PendingImport | Archived
  * @method void setKeyState(string $KeyState) 设置CMK的状态， 取值为：Enabled | Disabled | PendingDelete | PendingImport | Archived
- * @method string getKeyUsage() 获取CMK用途，取值为: ENCRYPT_DECRYPT | ASYMMETRIC_DECRYPT_RSA_2048 | ASYMMETRIC_DECRYPT_SM2 | ASYMMETRIC_SIGN_VERIFY_SM2
- * @method void setKeyUsage(string $KeyUsage) 设置CMK用途，取值为: ENCRYPT_DECRYPT | ASYMMETRIC_DECRYPT_RSA_2048 | ASYMMETRIC_DECRYPT_SM2 | ASYMMETRIC_SIGN_VERIFY_SM2
+ * @method string getKeyUsage() 获取CMK用途，取值为: ENCRYPT_DECRYPT | ASYMMETRIC_DECRYPT_RSA_2048 | ASYMMETRIC_DECRYPT_SM2 | ASYMMETRIC_SIGN_VERIFY_SM2 | ASYMMETRIC_SIGN_VERIFY_RSA_2048 | ASYMMETRIC_SIGN_VERIFY_ECC
+ * @method void setKeyUsage(string $KeyUsage) 设置CMK用途，取值为: ENCRYPT_DECRYPT | ASYMMETRIC_DECRYPT_RSA_2048 | ASYMMETRIC_DECRYPT_SM2 | ASYMMETRIC_SIGN_VERIFY_SM2 | ASYMMETRIC_SIGN_VERIFY_RSA_2048 | ASYMMETRIC_SIGN_VERIFY_ECC
  * @method integer getType() 获取CMK类型，2 表示符合FIPS标准，4表示符合国密标准
  * @method void setType(integer $Type) 设置CMK类型，2 表示符合FIPS标准，4表示符合国密标准
  * @method integer getCreatorUin() 获取创建者
@@ -85,7 +85,7 @@ class KeyMetadata extends AbstractModel
     public $KeyState;
 
     /**
-     * @var string CMK用途，取值为: ENCRYPT_DECRYPT | ASYMMETRIC_DECRYPT_RSA_2048 | ASYMMETRIC_DECRYPT_SM2 | ASYMMETRIC_SIGN_VERIFY_SM2
+     * @var string CMK用途，取值为: ENCRYPT_DECRYPT | ASYMMETRIC_DECRYPT_RSA_2048 | ASYMMETRIC_DECRYPT_SM2 | ASYMMETRIC_SIGN_VERIFY_SM2 | ASYMMETRIC_SIGN_VERIFY_RSA_2048 | ASYMMETRIC_SIGN_VERIFY_ECC
      */
     public $KeyUsage;
 
@@ -143,7 +143,7 @@ class KeyMetadata extends AbstractModel
      * @param integer $CreateTime 密钥创建时间
      * @param string $Description CMK的描述
      * @param string $KeyState CMK的状态， 取值为：Enabled | Disabled | PendingDelete | PendingImport | Archived
-     * @param string $KeyUsage CMK用途，取值为: ENCRYPT_DECRYPT | ASYMMETRIC_DECRYPT_RSA_2048 | ASYMMETRIC_DECRYPT_SM2 | ASYMMETRIC_SIGN_VERIFY_SM2
+     * @param string $KeyUsage CMK用途，取值为: ENCRYPT_DECRYPT | ASYMMETRIC_DECRYPT_RSA_2048 | ASYMMETRIC_DECRYPT_SM2 | ASYMMETRIC_SIGN_VERIFY_SM2 | ASYMMETRIC_SIGN_VERIFY_RSA_2048 | ASYMMETRIC_SIGN_VERIFY_ECC
      * @param integer $Type CMK类型，2 表示符合FIPS标准，4表示符合国密标准
      * @param integer $CreatorUin 创建者
      * @param boolean $KeyRotationEnabled 是否开启了密钥轮换功能

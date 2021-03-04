@@ -26,12 +26,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
  * @method array getFilters() 获取过滤条件。
 <li>HttpMethod - String - 是否必填：否 - 攻击方法(POST|GET)</li>
-<li>MachineIp - String - 是否必填：否 - 主机内网IP</li>
 <li>DateRange - String - 是否必填：否 - 时间范围(存储最近3个月的数据)，如最近一个月["2019-11-17", "2019-12-17"]</li>
+<li>VulType - String 威胁类型 - 是否必填: 否</li>
+<li>SrcIp - String 攻击源IP - 是否必填: 否</li>
+<li>DstIp - String 攻击目标IP - 是否必填: 否</li>
+<li>SrcPort - String 攻击源端口 - 是否必填: 否</li>
+<li>DstPort - String 攻击目标端口 - 是否必填: 否</li>
  * @method void setFilters(array $Filters) 设置过滤条件。
 <li>HttpMethod - String - 是否必填：否 - 攻击方法(POST|GET)</li>
-<li>MachineIp - String - 是否必填：否 - 主机内网IP</li>
 <li>DateRange - String - 是否必填：否 - 时间范围(存储最近3个月的数据)，如最近一个月["2019-11-17", "2019-12-17"]</li>
+<li>VulType - String 威胁类型 - 是否必填: 否</li>
+<li>SrcIp - String 攻击源IP - 是否必填: 否</li>
+<li>DstIp - String 攻击目标IP - 是否必填: 否</li>
+<li>SrcPort - String 攻击源端口 - 是否必填: 否</li>
+<li>DstPort - String 攻击目标端口 - 是否必填: 否</li>
  * @method string getUuid() 获取主机安全客户端ID
  * @method void setUuid(string $Uuid) 设置主机安全客户端ID
  * @method string getQuuid() 获取云主机机器ID
@@ -52,8 +60,12 @@ class DescribeAttackLogsRequest extends AbstractModel
     /**
      * @var array 过滤条件。
 <li>HttpMethod - String - 是否必填：否 - 攻击方法(POST|GET)</li>
-<li>MachineIp - String - 是否必填：否 - 主机内网IP</li>
 <li>DateRange - String - 是否必填：否 - 时间范围(存储最近3个月的数据)，如最近一个月["2019-11-17", "2019-12-17"]</li>
+<li>VulType - String 威胁类型 - 是否必填: 否</li>
+<li>SrcIp - String 攻击源IP - 是否必填: 否</li>
+<li>DstIp - String 攻击目标IP - 是否必填: 否</li>
+<li>SrcPort - String 攻击源端口 - 是否必填: 否</li>
+<li>DstPort - String 攻击目标端口 - 是否必填: 否</li>
      */
     public $Filters;
 
@@ -72,8 +84,12 @@ class DescribeAttackLogsRequest extends AbstractModel
      * @param integer $Offset 偏移量，默认为0。
      * @param array $Filters 过滤条件。
 <li>HttpMethod - String - 是否必填：否 - 攻击方法(POST|GET)</li>
-<li>MachineIp - String - 是否必填：否 - 主机内网IP</li>
 <li>DateRange - String - 是否必填：否 - 时间范围(存储最近3个月的数据)，如最近一个月["2019-11-17", "2019-12-17"]</li>
+<li>VulType - String 威胁类型 - 是否必填: 否</li>
+<li>SrcIp - String 攻击源IP - 是否必填: 否</li>
+<li>DstIp - String 攻击目标IP - 是否必填: 否</li>
+<li>SrcPort - String 攻击源端口 - 是否必填: 否</li>
+<li>DstPort - String 攻击目标端口 - 是否必填: 否</li>
      * @param string $Uuid 主机安全客户端ID
      * @param string $Quuid 云主机机器ID
      */

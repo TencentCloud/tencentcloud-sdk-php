@@ -60,8 +60,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubnetId(integer $SubnetId) 设置RO实例所在私有网络子网ID
  * @method string getDeviceType() 获取RO实例规格描述，目前可取值 CUSTOM
  * @method void setDeviceType(string $DeviceType) 设置RO实例规格描述，目前可取值 CUSTOM
- * @method string getEngineVersion() 获取RO实例数据库引擎版本，可能返回值：5.1、5.5、5.6和5.7
- * @method void setEngineVersion(string $EngineVersion) 设置RO实例数据库引擎版本，可能返回值：5.1、5.5、5.6和5.7
+ * @method string getEngineVersion() 获取RO实例数据库引擎版本，可能返回值：5.1、5.5、5.6、5.7、8.0
+ * @method void setEngineVersion(string $EngineVersion) 设置RO实例数据库引擎版本，可能返回值：5.1、5.5、5.6、5.7、8.0
  * @method string getDeadlineTime() 获取RO实例到期时间，时间格式：yyyy-mm-dd hh:mm:ss，如实例为按量计费模式，则此字段值为0000-00-00 00:00:00
  * @method void setDeadlineTime(string $DeadlineTime) 设置RO实例到期时间，时间格式：yyyy-mm-dd hh:mm:ss，如实例为按量计费模式，则此字段值为0000-00-00 00:00:00
  * @method integer getPayType() 获取RO实例计费类型，可能返回值：0-包年包月，1-按量计费，2-后付费月结
@@ -170,7 +170,7 @@ class RoInstanceInfo extends AbstractModel
     public $DeviceType;
 
     /**
-     * @var string RO实例数据库引擎版本，可能返回值：5.1、5.5、5.6和5.7
+     * @var string RO实例数据库引擎版本，可能返回值：5.1、5.5、5.6、5.7、8.0
      */
     public $EngineVersion;
 
@@ -205,7 +205,7 @@ class RoInstanceInfo extends AbstractModel
      * @param integer $VpcId RO实例所在私有网络ID
      * @param integer $SubnetId RO实例所在私有网络子网ID
      * @param string $DeviceType RO实例规格描述，目前可取值 CUSTOM
-     * @param string $EngineVersion RO实例数据库引擎版本，可能返回值：5.1、5.5、5.6和5.7
+     * @param string $EngineVersion RO实例数据库引擎版本，可能返回值：5.1、5.5、5.6、5.7、8.0
      * @param string $DeadlineTime RO实例到期时间，时间格式：yyyy-mm-dd hh:mm:ss，如实例为按量计费模式，则此字段值为0000-00-00 00:00:00
      * @param integer $PayType RO实例计费类型，可能返回值：0-包年包月，1-按量计费，2-后付费月结
      */

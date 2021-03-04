@@ -20,19 +20,19 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteAcRule请求参数结构体
  *
- * @method integer getId() 获取删除规则对应的id值 669872
- * @method void setId(integer $Id) 设置删除规则对应的id值 669872
+ * @method integer getId() 获取删除规则对应的id值, 对应获取规则列表接口的Id 值
+ * @method void setId(integer $Id) 设置删除规则对应的id值, 对应获取规则列表接口的Id 值
  * @method integer getDirection() 获取方向，0：出站，1：入站
  * @method void setDirection(integer $Direction) 设置方向，0：出站，1：入站
  * @method string getEdgeId() 获取EdgeId值两个vpc间的边id
  * @method void setEdgeId(string $EdgeId) 设置EdgeId值两个vpc间的边id
- * @method string getArea() 获取NAT地域
- * @method void setArea(string $Area) 设置NAT地域
+ * @method string getArea() 获取NAT地域， 如ap-shanghai/ap-guangzhou/ap-chongqing等
+ * @method void setArea(string $Area) 设置NAT地域， 如ap-shanghai/ap-guangzhou/ap-chongqing等
  */
 class DeleteAcRuleRequest extends AbstractModel
 {
     /**
-     * @var integer 删除规则对应的id值 669872
+     * @var integer 删除规则对应的id值, 对应获取规则列表接口的Id 值
      */
     public $Id;
 
@@ -47,15 +47,15 @@ class DeleteAcRuleRequest extends AbstractModel
     public $EdgeId;
 
     /**
-     * @var string NAT地域
+     * @var string NAT地域， 如ap-shanghai/ap-guangzhou/ap-chongqing等
      */
     public $Area;
 
     /**
-     * @param integer $Id 删除规则对应的id值 669872
+     * @param integer $Id 删除规则对应的id值, 对应获取规则列表接口的Id 值
      * @param integer $Direction 方向，0：出站，1：入站
      * @param string $EdgeId EdgeId值两个vpc间的边id
-     * @param string $Area NAT地域
+     * @param string $Area NAT地域， 如ap-shanghai/ap-guangzhou/ap-chongqing等
      */
     function __construct()
     {

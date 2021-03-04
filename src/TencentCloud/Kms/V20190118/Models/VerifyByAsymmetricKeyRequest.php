@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setKeyId(string $KeyId) 设置密钥的唯一标识
  * @method string getSignatureValue() 获取签名值，通过调用KMS签名接口生成
  * @method void setSignatureValue(string $SignatureValue) 设置签名值，通过调用KMS签名接口生成
- * @method string getMessage() 获取消息原文或消息摘要。如果提供的是消息原文，则消息原文的长度（Base64编码前的长度）不超过4096字节。如果提供的是消息摘要，SM2签名算法的消息摘要长度（Base64编码前的长度）必须等于32字节
- * @method void setMessage(string $Message) 设置消息原文或消息摘要。如果提供的是消息原文，则消息原文的长度（Base64编码前的长度）不超过4096字节。如果提供的是消息摘要，SM2签名算法的消息摘要长度（Base64编码前的长度）必须等于32字节
- * @method string getAlgorithm() 获取签名算法，支持的算法：SM2DSA
- * @method void setAlgorithm(string $Algorithm) 设置签名算法，支持的算法：SM2DSA
+ * @method string getMessage() 获取消息原文或消息摘要。如果提供的是消息原文，则消息原文的长度（Base64编码前的长度）不超过4096字节。如果提供的是消息摘要，则消息摘要长度（Base64编码前的长度）必须等于32字节
+ * @method void setMessage(string $Message) 设置消息原文或消息摘要。如果提供的是消息原文，则消息原文的长度（Base64编码前的长度）不超过4096字节。如果提供的是消息摘要，则消息摘要长度（Base64编码前的长度）必须等于32字节
+ * @method string getAlgorithm() 获取签名算法，支持的算法：SM2DSA，ECC_P256_R1，RSA_PSS_SHA_256，RSA_PKCS1_SHA_256
+ * @method void setAlgorithm(string $Algorithm) 设置签名算法，支持的算法：SM2DSA，ECC_P256_R1，RSA_PSS_SHA_256，RSA_PKCS1_SHA_256
  * @method string getMessageType() 获取消息类型：RAW，DIGEST，如果不传，默认为RAW，表示消息原文。
  * @method void setMessageType(string $MessageType) 设置消息类型：RAW，DIGEST，如果不传，默认为RAW，表示消息原文。
  */
@@ -44,12 +44,12 @@ class VerifyByAsymmetricKeyRequest extends AbstractModel
     public $SignatureValue;
 
     /**
-     * @var string 消息原文或消息摘要。如果提供的是消息原文，则消息原文的长度（Base64编码前的长度）不超过4096字节。如果提供的是消息摘要，SM2签名算法的消息摘要长度（Base64编码前的长度）必须等于32字节
+     * @var string 消息原文或消息摘要。如果提供的是消息原文，则消息原文的长度（Base64编码前的长度）不超过4096字节。如果提供的是消息摘要，则消息摘要长度（Base64编码前的长度）必须等于32字节
      */
     public $Message;
 
     /**
-     * @var string 签名算法，支持的算法：SM2DSA
+     * @var string 签名算法，支持的算法：SM2DSA，ECC_P256_R1，RSA_PSS_SHA_256，RSA_PKCS1_SHA_256
      */
     public $Algorithm;
 
@@ -61,8 +61,8 @@ class VerifyByAsymmetricKeyRequest extends AbstractModel
     /**
      * @param string $KeyId 密钥的唯一标识
      * @param string $SignatureValue 签名值，通过调用KMS签名接口生成
-     * @param string $Message 消息原文或消息摘要。如果提供的是消息原文，则消息原文的长度（Base64编码前的长度）不超过4096字节。如果提供的是消息摘要，SM2签名算法的消息摘要长度（Base64编码前的长度）必须等于32字节
-     * @param string $Algorithm 签名算法，支持的算法：SM2DSA
+     * @param string $Message 消息原文或消息摘要。如果提供的是消息原文，则消息原文的长度（Base64编码前的长度）不超过4096字节。如果提供的是消息摘要，则消息摘要长度（Base64编码前的长度）必须等于32字节
+     * @param string $Algorithm 签名算法，支持的算法：SM2DSA，ECC_P256_R1，RSA_PSS_SHA_256，RSA_PKCS1_SHA_256
      * @param string $MessageType 消息类型：RAW，DIGEST，如果不传，默认为RAW，表示消息原文。
      */
     function __construct()

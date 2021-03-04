@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPeakInNetwork(string $PeakInNetwork) 设置入带宽数据。
  * @method string getPeakOutNetwork() 获取出带宽数据。
  * @method void setPeakOutNetwork(string $PeakOutNetwork) 设置出带宽数据。
+ * @method string getChargeNetwork() 获取计费带宽。单位bps
+ * @method void setChargeNetwork(string $ChargeNetwork) 设置计费带宽。单位bps
  */
 class PeakNetwork extends AbstractModel
 {
@@ -45,9 +47,15 @@ class PeakNetwork extends AbstractModel
     public $PeakOutNetwork;
 
     /**
+     * @var string 计费带宽。单位bps
+     */
+    public $ChargeNetwork;
+
+    /**
      * @param string $RecordTime 记录时间。
      * @param string $PeakInNetwork 入带宽数据。
      * @param string $PeakOutNetwork 出带宽数据。
+     * @param string $ChargeNetwork 计费带宽。单位bps
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class PeakNetwork extends AbstractModel
 
         if (array_key_exists("PeakOutNetwork",$param) and $param["PeakOutNetwork"] !== null) {
             $this->PeakOutNetwork = $param["PeakOutNetwork"];
+        }
+
+        if (array_key_exists("ChargeNetwork",$param) and $param["ChargeNetwork"] !== null) {
+            $this->ChargeNetwork = $param["ChargeNetwork"];
         }
     }
 }

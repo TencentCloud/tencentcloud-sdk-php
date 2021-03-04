@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * MCU混流输出流编码参数
  *
- * @method integer getAudioSampleRate() 获取混流-输出流音频采样率。取值为[48000, 44100, 32000,24000,, 16000, 12000, 8000]，单位是Hz。
- * @method void setAudioSampleRate(integer $AudioSampleRate) 设置混流-输出流音频采样率。取值为[48000, 44100, 32000,24000,, 16000, 12000, 8000]，单位是Hz。
+ * @method integer getAudioSampleRate() 获取混流-输出流音频采样率。取值为[48000, 44100, 32000, 24000, 16000, 8000]，单位是Hz。
+ * @method void setAudioSampleRate(integer $AudioSampleRate) 设置混流-输出流音频采样率。取值为[48000, 44100, 32000, 24000, 16000, 8000]，单位是Hz。
  * @method integer getAudioBitrate() 获取混流-输出流音频码率。取值范围[8,500]，单位为Kbps。
  * @method void setAudioBitrate(integer $AudioBitrate) 设置混流-输出流音频码率。取值范围[8,500]，单位为Kbps。
  * @method integer getAudioChannels() 获取混流-输出流音频声道数，取值范围[1,2]，1表示混流输出音频为单声道，2表示混流输出音频为双声道。
@@ -44,7 +44,7 @@ use TencentCloud\Common\AbstractModel;
 class EncodeParams extends AbstractModel
 {
     /**
-     * @var integer 混流-输出流音频采样率。取值为[48000, 44100, 32000,24000,, 16000, 12000, 8000]，单位是Hz。
+     * @var integer 混流-输出流音频采样率。取值为[48000, 44100, 32000, 24000, 16000, 8000]，单位是Hz。
      */
     public $AudioSampleRate;
 
@@ -94,7 +94,7 @@ class EncodeParams extends AbstractModel
     public $BackgroundImageId;
 
     /**
-     * @param integer $AudioSampleRate 混流-输出流音频采样率。取值为[48000, 44100, 32000,24000,, 16000, 12000, 8000]，单位是Hz。
+     * @param integer $AudioSampleRate 混流-输出流音频采样率。取值为[48000, 44100, 32000, 24000, 16000, 8000]，单位是Hz。
      * @param integer $AudioBitrate 混流-输出流音频码率。取值范围[8,500]，单位为Kbps。
      * @param integer $AudioChannels 混流-输出流音频声道数，取值范围[1,2]，1表示混流输出音频为单声道，2表示混流输出音频为双声道。
      * @param integer $VideoWidth 混流-输出流宽，音视频输出时必填。取值范围[0,1920]，单位为像素值。

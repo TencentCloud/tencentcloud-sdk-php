@@ -26,6 +26,7 @@ use TencentCloud\Ump\V20200918\Models as Models;
  * @method Models\CreateCameraAlertsResponse CreateCameraAlerts(Models\CreateCameraAlertsRequest $req) 上报相机移动、遮挡等告警信息
 
 
+ * @method Models\CreateCameraStateResponse CreateCameraState(Models\CreateCameraStateRequest $req) 上报当前场内所有相机的当前状态
  * @method Models\CreateCaptureResponse CreateCapture(Models\CreateCaptureRequest $req) 场内抓拍上报接口
  * @method Models\CreateMultiBizAlertResponse CreateMultiBizAlert(Models\CreateMultiBizAlertRequest $req) 集团广场的多经点位告警
  * @method Models\CreateProgramStateResponse CreateProgramState(Models\CreateProgramStateRequest $req) 上报所有进程监控信息
@@ -40,6 +41,8 @@ mac为空返回对应GroupCode和MallId全量配置
  * @method Models\DescribeMultiBizBaseImageResponse DescribeMultiBizBaseImage(Models\DescribeMultiBizBaseImageRequest $req) 获取多经点位底图
  * @method Models\DescribeTasksResponse DescribeTasks(Models\DescribeTasksRequest $req) 查询集团广场对应的任务列表
  * @method Models\DescribeZonesResponse DescribeZones(Models\DescribeZonesRequest $req) 获取集团广场的点位列表
+ * @method Models\ModifyMultiBizConfigResponse ModifyMultiBizConfig(Models\ModifyMultiBizConfigRequest $req) 集团广场的多经点位配置更新
+ * @method Models\ReportServiceRegisterResponse ReportServiceRegister(Models\ReportServiceRegisterRequest $req) 上报服务注册自身的服务地址作为回调地址, 用于信息回传。
  * @method Models\SearchImageResponse SearchImage(Models\SearchImageRequest $req) 以图搜图
  */
 

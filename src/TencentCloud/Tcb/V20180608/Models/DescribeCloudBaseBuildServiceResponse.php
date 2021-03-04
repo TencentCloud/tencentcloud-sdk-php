@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDownloadHeaders(array $DownloadHeaders) 设置下载Httpheader
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getOutDate() 获取下载链接是否过期
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOutDate(boolean $OutDate) 设置下载链接是否过期
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -74,6 +78,12 @@ class DescribeCloudBaseBuildServiceResponse extends AbstractModel
     public $DownloadHeaders;
 
     /**
+     * @var boolean 下载链接是否过期
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OutDate;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -86,6 +96,8 @@ class DescribeCloudBaseBuildServiceResponse extends AbstractModel
      * @param string $DownloadUrl 下载链接
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $DownloadHeaders 下载Httpheader
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $OutDate 下载链接是否过期
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -134,6 +146,10 @@ class DescribeCloudBaseBuildServiceResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->DownloadHeaders, $obj);
             }
+        }
+
+        if (array_key_exists("OutDate",$param) and $param["OutDate"] !== null) {
+            $this->OutDate = $param["OutDate"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

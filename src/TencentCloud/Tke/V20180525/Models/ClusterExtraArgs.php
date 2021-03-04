@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKubeScheduler(array $KubeScheduler) 设置kube-scheduler自定义参数
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getEtcd() 获取etcd自定义参数，只支持独立集群
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEtcd(array $Etcd) 设置etcd自定义参数，只支持独立集群
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ClusterExtraArgs extends AbstractModel
 {
@@ -54,11 +58,19 @@ class ClusterExtraArgs extends AbstractModel
     public $KubeScheduler;
 
     /**
+     * @var array etcd自定义参数，只支持独立集群
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Etcd;
+
+    /**
      * @param array $KubeAPIServer kube-apiserver自定义参数，参数格式为["k1=v1", "k1=v2"]， 例如["max-requests-inflight=500","feature-gates=PodShareProcessNamespace=true,DynamicKubeletConfig=true"]
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $KubeControllerManager kube-controller-manager自定义参数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $KubeScheduler kube-scheduler自定义参数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Etcd etcd自定义参数，只支持独立集群
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -84,6 +96,10 @@ class ClusterExtraArgs extends AbstractModel
 
         if (array_key_exists("KubeScheduler",$param) and $param["KubeScheduler"] !== null) {
             $this->KubeScheduler = $param["KubeScheduler"];
+        }
+
+        if (array_key_exists("Etcd",$param) and $param["Etcd"] !== null) {
+            $this->Etcd = $param["Etcd"];
         }
     }
 }

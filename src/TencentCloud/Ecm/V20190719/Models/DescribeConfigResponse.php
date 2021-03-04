@@ -22,9 +22,17 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method NetworkStorageRange getNetworkStorageRange() 获取网络带宽硬盘大小的范围信息。
  * @method void setNetworkStorageRange(NetworkStorageRange $NetworkStorageRange) 设置网络带宽硬盘大小的范围信息。
- * @method array getImageWhiteSet() 获取镜像操作系统白名单
+ * @method array getImageWhiteSet() 获取镜像操作系统白名单。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setImageWhiteSet(array $ImageWhiteSet) 设置镜像操作系统白名单
+ * @method void setImageWhiteSet(array $ImageWhiteSet) 设置镜像操作系统白名单。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getInstanceNetworkLimitConfigs() 获取网络限额信息。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInstanceNetworkLimitConfigs(array $InstanceNetworkLimitConfigs) 设置网络限额信息。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method ImageLimitConfig getImageLimits() 获取镜像限额信息。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setImageLimits(ImageLimitConfig $ImageLimits) 设置镜像限额信息。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,10 +45,22 @@ class DescribeConfigResponse extends AbstractModel
     public $NetworkStorageRange;
 
     /**
-     * @var array 镜像操作系统白名单
+     * @var array 镜像操作系统白名单。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ImageWhiteSet;
+
+    /**
+     * @var array 网络限额信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InstanceNetworkLimitConfigs;
+
+    /**
+     * @var ImageLimitConfig 镜像限额信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ImageLimits;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -49,7 +69,11 @@ class DescribeConfigResponse extends AbstractModel
 
     /**
      * @param NetworkStorageRange $NetworkStorageRange 网络带宽硬盘大小的范围信息。
-     * @param array $ImageWhiteSet 镜像操作系统白名单
+     * @param array $ImageWhiteSet 镜像操作系统白名单。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $InstanceNetworkLimitConfigs 网络限额信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ImageLimitConfig $ImageLimits 镜像限额信息。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -73,6 +97,20 @@ class DescribeConfigResponse extends AbstractModel
 
         if (array_key_exists("ImageWhiteSet",$param) and $param["ImageWhiteSet"] !== null) {
             $this->ImageWhiteSet = $param["ImageWhiteSet"];
+        }
+
+        if (array_key_exists("InstanceNetworkLimitConfigs",$param) and $param["InstanceNetworkLimitConfigs"] !== null) {
+            $this->InstanceNetworkLimitConfigs = [];
+            foreach ($param["InstanceNetworkLimitConfigs"] as $key => $value){
+                $obj = new InstanceNetworkLimitConfig();
+                $obj->deserialize($value);
+                array_push($this->InstanceNetworkLimitConfigs, $obj);
+            }
+        }
+
+        if (array_key_exists("ImageLimits",$param) and $param["ImageLimits"] !== null) {
+            $this->ImageLimits = new ImageLimitConfig();
+            $this->ImageLimits->deserialize($param["ImageLimits"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

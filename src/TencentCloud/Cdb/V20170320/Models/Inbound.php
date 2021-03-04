@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIpProtocol(string $IpProtocol) 设置网络协议，支持 UDP、TCP 等
  * @method string getDir() 获取规则限定的方向，进站规则为 INPUT
  * @method void setDir(string $Dir) 设置规则限定的方向，进站规则为 INPUT
+ * @method string getDesc() 获取规则描述
+ * @method void setDesc(string $Desc) 设置规则描述
  */
 class Inbound extends AbstractModel
 {
@@ -59,11 +61,17 @@ class Inbound extends AbstractModel
     public $Dir;
 
     /**
+     * @var string 规则描述
+     */
+    public $Desc;
+
+    /**
      * @param string $Action 策略，ACCEPT 或者 DROP
      * @param string $CidrIp 来源 IP 或 IP 段，例如192.168.0.0/16
      * @param string $PortRange 端口
      * @param string $IpProtocol 网络协议，支持 UDP、TCP 等
      * @param string $Dir 规则限定的方向，进站规则为 INPUT
+     * @param string $Desc 规则描述
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class Inbound extends AbstractModel
 
         if (array_key_exists("Dir",$param) and $param["Dir"] !== null) {
             $this->Dir = $param["Dir"];
+        }
+
+        if (array_key_exists("Desc",$param) and $param["Desc"] !== null) {
+            $this->Desc = $param["Desc"];
         }
     }
 }

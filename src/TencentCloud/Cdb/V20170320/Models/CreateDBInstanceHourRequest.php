@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMemory(integer $Memory) 设置实例内存大小，单位：MB，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的内存规格。
  * @method integer getVolume() 获取实例硬盘大小，单位：GB，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的硬盘范围。
  * @method void setVolume(integer $Volume) 设置实例硬盘大小，单位：GB，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的硬盘范围。
- * @method string getEngineVersion() 获取MySQL 版本，值包括：5.5、5.6 和 5.7，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的实例版本。
- * @method void setEngineVersion(string $EngineVersion) 设置MySQL 版本，值包括：5.5、5.6 和 5.7，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的实例版本。
+ * @method string getEngineVersion() 获取MySQL 版本，值包括：5.5、5.6 、5.7 、8.0，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的实例版本。
+ * @method void setEngineVersion(string $EngineVersion) 设置MySQL 版本，值包括：5.5、5.6 、5.7 、8.0，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的实例版本。
  * @method string getUniqVpcId() 获取私有网络 ID，如果不传则默认选择基础网络，请使用 [查询私有网络列表](/document/api/215/15778) 。
  * @method void setUniqVpcId(string $UniqVpcId) 设置私有网络 ID，如果不传则默认选择基础网络，请使用 [查询私有网络列表](/document/api/215/15778) 。
  * @method string getUniqSubnetId() 获取私有网络下的子网 ID，如果设置了 UniqVpcId，则 UniqSubnetId 必填，请使用[查询子网列表](/document/api/215/15784)。
@@ -70,12 +70,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeployGroupId(string $DeployGroupId) 设置置放群组 ID。
  * @method string getClientToken() 获取用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间在当天内唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
  * @method void setClientToken(string $ClientToken) 设置用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间在当天内唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
- * @method string getDeviceType() 获取实例类型。支持值包括： "HA" - 高可用版实例， "BASIC" - 基础版实例。 不指定则默认为高可用版。
- * @method void setDeviceType(string $DeviceType) 设置实例类型。支持值包括： "HA" - 高可用版实例， "BASIC" - 基础版实例。 不指定则默认为高可用版。
+ * @method string getDeviceType() 获取实例隔离类型。支持值包括： "UNIVERSAL" - 通用型实例， "EXCLUSIVE" - 独享型实例， "BASIC" - 基础版实例。 不指定则默认为通用型实例。
+ * @method void setDeviceType(string $DeviceType) 设置实例隔离类型。支持值包括： "UNIVERSAL" - 通用型实例， "EXCLUSIVE" - 独享型实例， "BASIC" - 基础版实例。 不指定则默认为通用型实例。
  * @method integer getParamTemplateId() 获取参数模板id。
  * @method void setParamTemplateId(integer $ParamTemplateId) 设置参数模板id。
  * @method array getAlarmPolicyList() 获取告警策略id数组。
  * @method void setAlarmPolicyList(array $AlarmPolicyList) 设置告警策略id数组。
+ * @method integer getInstanceNodes() 获取实例节点数。对于 RO 和 基础版实例， 该值默认为1。 如果需要购买三节点实例， 请将该值设置为3 或指定 BackupZone 参数。当购买主实例，且未指定该参数和 BackupZone 参数时，该值默认是 2， 即购买两节点实例。
+ * @method void setInstanceNodes(integer $InstanceNodes) 设置实例节点数。对于 RO 和 基础版实例， 该值默认为1。 如果需要购买三节点实例， 请将该值设置为3 或指定 BackupZone 参数。当购买主实例，且未指定该参数和 BackupZone 参数时，该值默认是 2， 即购买两节点实例。
+ * @method integer getCpu() 获取实例cpu核数， 如果不传将根据memory指定的内存值自动填充对应的cpu值。
+ * @method void setCpu(integer $Cpu) 设置实例cpu核数， 如果不传将根据memory指定的内存值自动填充对应的cpu值。
+ * @method integer getAutoSyncFlag() 获取是否自动发起灾备同步功能。该参数仅对购买灾备实例生效。 可选值为：0 - 不自动发起灾备同步；1 - 自动发起灾备同步。
+ * @method void setAutoSyncFlag(integer $AutoSyncFlag) 设置是否自动发起灾备同步功能。该参数仅对购买灾备实例生效。 可选值为：0 - 不自动发起灾备同步；1 - 自动发起灾备同步。
  */
 class CreateDBInstanceHourRequest extends AbstractModel
 {
@@ -95,7 +101,7 @@ class CreateDBInstanceHourRequest extends AbstractModel
     public $Volume;
 
     /**
-     * @var string MySQL 版本，值包括：5.5、5.6 和 5.7，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的实例版本。
+     * @var string MySQL 版本，值包括：5.5、5.6 、5.7 、8.0，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的实例版本。
      */
     public $EngineVersion;
 
@@ -205,7 +211,7 @@ class CreateDBInstanceHourRequest extends AbstractModel
     public $ClientToken;
 
     /**
-     * @var string 实例类型。支持值包括： "HA" - 高可用版实例， "BASIC" - 基础版实例。 不指定则默认为高可用版。
+     * @var string 实例隔离类型。支持值包括： "UNIVERSAL" - 通用型实例， "EXCLUSIVE" - 独享型实例， "BASIC" - 基础版实例。 不指定则默认为通用型实例。
      */
     public $DeviceType;
 
@@ -220,10 +226,25 @@ class CreateDBInstanceHourRequest extends AbstractModel
     public $AlarmPolicyList;
 
     /**
+     * @var integer 实例节点数。对于 RO 和 基础版实例， 该值默认为1。 如果需要购买三节点实例， 请将该值设置为3 或指定 BackupZone 参数。当购买主实例，且未指定该参数和 BackupZone 参数时，该值默认是 2， 即购买两节点实例。
+     */
+    public $InstanceNodes;
+
+    /**
+     * @var integer 实例cpu核数， 如果不传将根据memory指定的内存值自动填充对应的cpu值。
+     */
+    public $Cpu;
+
+    /**
+     * @var integer 是否自动发起灾备同步功能。该参数仅对购买灾备实例生效。 可选值为：0 - 不自动发起灾备同步；1 - 自动发起灾备同步。
+     */
+    public $AutoSyncFlag;
+
+    /**
      * @param integer $GoodsNum 实例数量，默认值为 1，最小值 1，最大值为 100。
      * @param integer $Memory 实例内存大小，单位：MB，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的内存规格。
      * @param integer $Volume 实例硬盘大小，单位：GB，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的硬盘范围。
-     * @param string $EngineVersion MySQL 版本，值包括：5.5、5.6 和 5.7，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的实例版本。
+     * @param string $EngineVersion MySQL 版本，值包括：5.5、5.6 、5.7 、8.0，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的实例版本。
      * @param string $UniqVpcId 私有网络 ID，如果不传则默认选择基础网络，请使用 [查询私有网络列表](/document/api/215/15778) 。
      * @param string $UniqSubnetId 私有网络下的子网 ID，如果设置了 UniqVpcId，则 UniqSubnetId 必填，请使用[查询子网列表](/document/api/215/15784)。
      * @param integer $ProjectId 项目 ID，不填为默认项目。请使用 [查询项目列表](https://cloud.tencent.com/document/product/378/4400) 接口获取项目 ID。
@@ -245,9 +266,12 @@ class CreateDBInstanceHourRequest extends AbstractModel
      * @param array $ResourceTags 实例标签信息。
      * @param string $DeployGroupId 置放群组 ID。
      * @param string $ClientToken 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间在当天内唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
-     * @param string $DeviceType 实例类型。支持值包括： "HA" - 高可用版实例， "BASIC" - 基础版实例。 不指定则默认为高可用版。
+     * @param string $DeviceType 实例隔离类型。支持值包括： "UNIVERSAL" - 通用型实例， "EXCLUSIVE" - 独享型实例， "BASIC" - 基础版实例。 不指定则默认为通用型实例。
      * @param integer $ParamTemplateId 参数模板id。
      * @param array $AlarmPolicyList 告警策略id数组。
+     * @param integer $InstanceNodes 实例节点数。对于 RO 和 基础版实例， 该值默认为1。 如果需要购买三节点实例， 请将该值设置为3 或指定 BackupZone 参数。当购买主实例，且未指定该参数和 BackupZone 参数时，该值默认是 2， 即购买两节点实例。
+     * @param integer $Cpu 实例cpu核数， 如果不传将根据memory指定的内存值自动填充对应的cpu值。
+     * @param integer $AutoSyncFlag 是否自动发起灾备同步功能。该参数仅对购买灾备实例生效。 可选值为：0 - 不自动发起灾备同步；1 - 自动发起灾备同步。
      */
     function __construct()
     {
@@ -383,6 +407,18 @@ class CreateDBInstanceHourRequest extends AbstractModel
 
         if (array_key_exists("AlarmPolicyList",$param) and $param["AlarmPolicyList"] !== null) {
             $this->AlarmPolicyList = $param["AlarmPolicyList"];
+        }
+
+        if (array_key_exists("InstanceNodes",$param) and $param["InstanceNodes"] !== null) {
+            $this->InstanceNodes = $param["InstanceNodes"];
+        }
+
+        if (array_key_exists("Cpu",$param) and $param["Cpu"] !== null) {
+            $this->Cpu = $param["Cpu"];
+        }
+
+        if (array_key_exists("AutoSyncFlag",$param) and $param["AutoSyncFlag"] !== null) {
+            $this->AutoSyncFlag = $param["AutoSyncFlag"];
         }
     }
 }

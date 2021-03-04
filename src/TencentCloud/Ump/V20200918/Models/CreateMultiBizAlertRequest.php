@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
 3: 即侵占又消失
  * @method string getImage() 获取图片base64字符串
  * @method void setImage(string $Image) 设置图片base64字符串
+ * @method array getWarnings() 获取告警列表
+ * @method void setWarnings(array $Warnings) 设置告警列表
  */
 class CreateMultiBizAlertRequest extends AbstractModel
 {
@@ -82,6 +84,11 @@ class CreateMultiBizAlertRequest extends AbstractModel
     public $Image;
 
     /**
+     * @var array 告警列表
+     */
+    public $Warnings;
+
+    /**
      * @param string $GroupCode 集团编码
      * @param integer $MallId 广场ID
      * @param integer $ZoneId 点位ID
@@ -92,6 +99,7 @@ class CreateMultiBizAlertRequest extends AbstractModel
 2: 消失
 3: 即侵占又消失
      * @param string $Image 图片base64字符串
+     * @param array $Warnings 告警列表
      */
     function __construct()
     {
@@ -132,6 +140,15 @@ class CreateMultiBizAlertRequest extends AbstractModel
 
         if (array_key_exists("Image",$param) and $param["Image"] !== null) {
             $this->Image = $param["Image"];
+        }
+
+        if (array_key_exists("Warnings",$param) and $param["Warnings"] !== null) {
+            $this->Warnings = [];
+            foreach ($param["Warnings"] as $key => $value){
+                $obj = new MultiBizWarning();
+                $obj->deserialize($value);
+                array_push($this->Warnings, $obj);
+            }
         }
     }
 }

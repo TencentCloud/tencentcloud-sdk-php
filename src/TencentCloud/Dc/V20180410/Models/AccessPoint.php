@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCity(string $City) 设置接入点所在城市
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getArea() 获取接入点地域名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setArea(string $Area) 设置接入点地域名称
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AccessPoint extends AbstractModel
 {
@@ -96,6 +100,12 @@ class AccessPoint extends AbstractModel
     public $City;
 
     /**
+     * @var string 接入点地域名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Area;
+
+    /**
      * @param string $AccessPointName 接入点的名称。
      * @param string $AccessPointId 接入点唯一ID。
      * @param string $State 接入点的状态。可用，不可用。
@@ -107,6 +117,8 @@ class AccessPoint extends AbstractModel
      * @param Coordinate $Coordinate 接入点经纬度
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $City 接入点所在城市
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Area 接入点地域名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -157,6 +169,10 @@ class AccessPoint extends AbstractModel
 
         if (array_key_exists("City",$param) and $param["City"] !== null) {
             $this->City = $param["City"];
+        }
+
+        if (array_key_exists("Area",$param) and $param["Area"] !== null) {
+            $this->Area = $param["Area"];
         }
     }
 }

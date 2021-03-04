@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSessionType(string $SessionType) 设置会话保持类型。不传或传NORMAL表示默认会话保持类型。QUIC_CID 表示根据Quic Connection ID做会话保持。QUIC_CID只支持UDP协议。
  * @method integer getKeepaliveEnable() 获取是否开启长连接，此参数仅适用于HTTP/HTTPS监听器，0:关闭；1:开启， 默认关闭
  * @method void setKeepaliveEnable(integer $KeepaliveEnable) 设置是否开启长连接，此参数仅适用于HTTP/HTTPS监听器，0:关闭；1:开启， 默认关闭
+ * @method integer getEndPort() 获取创建端口段监听器时必须传入此参数，用以标识结束端口。同时，入参Ports只允许传入一个成员，用以标识开始端口。【如果您需要体验端口段功能，请通过 [工单申请](https://console.cloud.tencent.com/workorder/category)】。
+ * @method void setEndPort(integer $EndPort) 设置创建端口段监听器时必须传入此参数，用以标识结束端口。同时，入参Ports只允许传入一个成员，用以标识开始端口。【如果您需要体验端口段功能，请通过 [工单申请](https://console.cloud.tencent.com/workorder/category)】。
  */
 class CreateListenerRequest extends AbstractModel
 {
@@ -111,6 +113,11 @@ class CreateListenerRequest extends AbstractModel
     public $KeepaliveEnable;
 
     /**
+     * @var integer 创建端口段监听器时必须传入此参数，用以标识结束端口。同时，入参Ports只允许传入一个成员，用以标识开始端口。【如果您需要体验端口段功能，请通过 [工单申请](https://console.cloud.tencent.com/workorder/category)】。
+     */
+    public $EndPort;
+
+    /**
      * @param string $LoadBalancerId 负载均衡实例 ID
      * @param array $Ports 要将监听器创建到哪些端口，每个端口对应一个新的监听器
      * @param string $Protocol 监听器协议： TCP | UDP | HTTP | HTTPS | TCP_SSL（TCP_SSL 正在内测中，如需使用请通过工单申请）
@@ -124,6 +131,7 @@ class CreateListenerRequest extends AbstractModel
      * @param string $TargetType 后端目标类型，NODE表示绑定普通节点，TARGETGROUP表示绑定目标组。
      * @param string $SessionType 会话保持类型。不传或传NORMAL表示默认会话保持类型。QUIC_CID 表示根据Quic Connection ID做会话保持。QUIC_CID只支持UDP协议。
      * @param integer $KeepaliveEnable 是否开启长连接，此参数仅适用于HTTP/HTTPS监听器，0:关闭；1:开启， 默认关闭
+     * @param integer $EndPort 创建端口段监听器时必须传入此参数，用以标识结束端口。同时，入参Ports只允许传入一个成员，用以标识开始端口。【如果您需要体验端口段功能，请通过 [工单申请](https://console.cloud.tencent.com/workorder/category)】。
      */
     function __construct()
     {
@@ -186,6 +194,10 @@ class CreateListenerRequest extends AbstractModel
 
         if (array_key_exists("KeepaliveEnable",$param) and $param["KeepaliveEnable"] !== null) {
             $this->KeepaliveEnable = $param["KeepaliveEnable"];
+        }
+
+        if (array_key_exists("EndPort",$param) and $param["EndPort"] !== null) {
+            $this->EndPort = $param["EndPort"];
         }
     }
 }

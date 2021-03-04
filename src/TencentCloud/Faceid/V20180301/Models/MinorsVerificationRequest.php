@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIdCard(string $IdCard) 设置身份证号码。
  * @method string getName() 获取姓名。
  * @method void setName(string $Name) 设置姓名。
+ * @method Encryption getEncryption() 获取敏感数据加密信息。对传入信息（姓名、身份证号、手机号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+ * @method void setEncryption(Encryption $Encryption) 设置敏感数据加密信息。对传入信息（姓名、身份证号、手机号）有加密需求的用户可使用此参数，详情请点击左侧链接。
  */
 class MinorsVerificationRequest extends AbstractModel
 {
@@ -64,6 +66,11 @@ class MinorsVerificationRequest extends AbstractModel
     public $Name;
 
     /**
+     * @var Encryption 敏感数据加密信息。对传入信息（姓名、身份证号、手机号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+     */
+    public $Encryption;
+
+    /**
      * @param string $Type 参与校验的参数类型。
 0：使用手机号进行校验；
 1：使用姓名与身份证号进行校验。
@@ -72,6 +79,7 @@ class MinorsVerificationRequest extends AbstractModel
 手机号验证只限制在腾讯健康守护可信模型覆盖的数据范围内，与手机号本身在运营商是否实名无关联，不在范围会提示“手机号未实名”，建议客户与传入姓名和身份证号信息组合使用。
      * @param string $IdCard 身份证号码。
      * @param string $Name 姓名。
+     * @param Encryption $Encryption 敏感数据加密信息。对传入信息（姓名、身份证号、手机号）有加密需求的用户可使用此参数，详情请点击左侧链接。
      */
     function __construct()
     {
@@ -100,6 +108,11 @@ class MinorsVerificationRequest extends AbstractModel
 
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
             $this->Name = $param["Name"];
+        }
+
+        if (array_key_exists("Encryption",$param) and $param["Encryption"] !== null) {
+            $this->Encryption = new Encryption();
+            $this->Encryption->deserialize($param["Encryption"]);
         }
     }
 }

@@ -42,7 +42,7 @@ use TencentCloud\Cdb\V20170320\Models as Models;
 
 1. 首先请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口查询可创建的实例规格信息，然后请使用 [查询数据库价格](https://cloud.tencent.com/document/api/236/18566) 接口查询可创建实例的售卖价格；
 2. 单次创建实例最大支持 100 个，实例时长最大支持 36 个月；
-3. 支持创建 MySQL 5.5 、 MySQL 5.6 、 MySQL 5.7 版本；
+3. 支持创建 MySQL 5.5 、 MySQL 5.6 、 MySQL 5.7 、 MySQL 8.0 版本；
 4. 支持创建主实例、只读实例、灾备实例；
 5. 当入参指定 Port，ParamList 或 Password 时，该实例会进行初始化操作；
  * @method Models\CreateDBInstanceHourResponse CreateDBInstanceHour(Models\CreateDBInstanceHourRequest $req) 本接口(CreateDBInstanceHour)用于创建按量计费的实例，可通过传入实例规格、MySQL 版本号和数量等信息创建云数据库实例，支持主实例、灾备实例和只读实例的创建。
@@ -51,7 +51,7 @@ use TencentCloud\Cdb\V20170320\Models as Models;
 
 1. 首先请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口查询可创建的实例规格信息，然后请使用 [查询数据库价格](https://cloud.tencent.com/document/api/236/18566) 接口查询可创建实例的售卖价格；
 2. 单次创建实例最大支持 100 个，实例时长最大支持 36 个月；
-3. 支持创建 MySQL 5.5、MySQL 5.6 和 MySQL 5.7 版本；
+3. 支持创建 MySQL 5.5、MySQL 5.6 、MySQL 5.7 和 MySQL 8.0 版本；
 4. 支持创建主实例、灾备实例和只读实例；
 5. 当入参指定 Port，ParamList 或 Password 时，该实例会进行初始化操作；
  * @method Models\CreateDeployGroupResponse CreateDeployGroup(Models\CreateDeployGroupRequest $req) 本接口(CreateDeployGroup)用于创建放置实例的置放群组

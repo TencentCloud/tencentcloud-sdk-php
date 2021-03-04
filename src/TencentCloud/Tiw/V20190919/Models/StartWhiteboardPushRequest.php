@@ -56,6 +56,8 @@ use TencentCloud\Common\AbstractModel;
 如果实时音视频的云端录制模式选择为 `全局自动录制` 模式，可忽略此参数。
  * @method string getExtraData() 获取内部参数，不需要关注此参数
  * @method void setExtraData(string $ExtraData) 设置内部参数，不需要关注此参数
+ * @method string getPrivateMapKey() 获取TRTC高级权限控制参数，如果在实时音视频开启了高级权限控制功能，必须提供PrivateMapKey才能保证正常推流。
+ * @method void setPrivateMapKey(string $PrivateMapKey) 设置TRTC高级权限控制参数，如果在实时音视频开启了高级权限控制功能，必须提供PrivateMapKey才能保证正常推流。
  */
 class StartWhiteboardPushRequest extends AbstractModel
 {
@@ -118,6 +120,11 @@ class StartWhiteboardPushRequest extends AbstractModel
     public $ExtraData;
 
     /**
+     * @var string TRTC高级权限控制参数，如果在实时音视频开启了高级权限控制功能，必须提供PrivateMapKey才能保证正常推流。
+     */
+    public $PrivateMapKey;
+
+    /**
      * @param integer $SdkAppId 客户的SdkAppId
      * @param integer $RoomId 需要推流白板的房间号，取值范围: (1, 4294967295)
      * @param string $PushUserId 用于白板推流服务进房进行推流的用户ID，最大长度不能大于60个字节，该ID必须是一个单独的未在SDK中使用的ID，白板推流服务使用这个用户ID进入房间进行白板音视频推流，若该ID和SDK中使用的ID重复，会导致SDK和白板推流服务互踢，影响正常推流。
@@ -136,6 +143,7 @@ class StartWhiteboardPushRequest extends AbstractModel
 
 如果实时音视频的云端录制模式选择为 `全局自动录制` 模式，可忽略此参数。
      * @param string $ExtraData 内部参数，不需要关注此参数
+     * @param string $PrivateMapKey TRTC高级权限控制参数，如果在实时音视频开启了高级权限控制功能，必须提供PrivateMapKey才能保证正常推流。
      */
     function __construct()
     {
@@ -190,6 +198,10 @@ class StartWhiteboardPushRequest extends AbstractModel
 
         if (array_key_exists("ExtraData",$param) and $param["ExtraData"] !== null) {
             $this->ExtraData = $param["ExtraData"];
+        }
+
+        if (array_key_exists("PrivateMapKey",$param) and $param["PrivateMapKey"] !== null) {
+            $this->PrivateMapKey = $param["PrivateMapKey"];
         }
     }
 }

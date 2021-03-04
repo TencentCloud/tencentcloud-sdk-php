@@ -33,11 +33,25 @@ use TencentCloud\Common\AbstractModel;
  * @method string getCameraIp() 获取摄像头IP
  * @method void setCameraIp(string $CameraIp) 设置摄像头IP
  * @method integer getCameraState() 获取摄像头状态:
-0: 异常
-1: 正常
+0: 异常 (不再使用)
+1: 正常 (不再使用)
+10: 初始化
+11: 未知状态 (因服务内部错误产生)
+12: 网络异常
+13: 未授权
+14: 相机App异常
+15: 相机取流异常
+16: 正常
  * @method void setCameraState(integer $CameraState) 设置摄像头状态:
-0: 异常
-1: 正常
+0: 异常 (不再使用)
+1: 正常 (不再使用)
+10: 初始化
+11: 未知状态 (因服务内部错误产生)
+12: 网络异常
+13: 未授权
+14: 相机App异常
+15: 相机取流异常
+16: 正常
  * @method array getZones() 获取点位列表
  * @method void setZones(array $Zones) 设置点位列表
  * @method string getPixel() 获取像素:
@@ -48,6 +62,10 @@ use TencentCloud\Common\AbstractModel;
 130W(1280*960)
 200W(1920*1080)
 400W(2560*1440)
+ * @method string getRTSP() 获取相机Rtsp地址
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRTSP(string $RTSP) 设置相机Rtsp地址
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CameraZones extends AbstractModel
 {
@@ -75,8 +93,15 @@ class CameraZones extends AbstractModel
 
     /**
      * @var integer 摄像头状态:
-0: 异常
-1: 正常
+0: 异常 (不再使用)
+1: 正常 (不再使用)
+10: 初始化
+11: 未知状态 (因服务内部错误产生)
+12: 网络异常
+13: 未授权
+14: 相机App异常
+15: 相机取流异常
+16: 正常
      */
     public $CameraState;
 
@@ -94,6 +119,12 @@ class CameraZones extends AbstractModel
     public $Pixel;
 
     /**
+     * @var string 相机Rtsp地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RTSP;
+
+    /**
      * @param integer $CameraId 摄像头ID
      * @param string $CameraName 摄像头名称
      * @param integer $CameraFeature 摄像头功能:
@@ -101,13 +132,22 @@ class CameraZones extends AbstractModel
 2: 人体
      * @param string $CameraIp 摄像头IP
      * @param integer $CameraState 摄像头状态:
-0: 异常
-1: 正常
+0: 异常 (不再使用)
+1: 正常 (不再使用)
+10: 初始化
+11: 未知状态 (因服务内部错误产生)
+12: 网络异常
+13: 未授权
+14: 相机App异常
+15: 相机取流异常
+16: 正常
      * @param array $Zones 点位列表
      * @param string $Pixel 像素:
 130W(1280*960)
 200W(1920*1080)
 400W(2560*1440)
+     * @param string $RTSP 相机Rtsp地址
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -153,6 +193,10 @@ class CameraZones extends AbstractModel
 
         if (array_key_exists("Pixel",$param) and $param["Pixel"] !== null) {
             $this->Pixel = $param["Pixel"];
+        }
+
+        if (array_key_exists("RTSP",$param) and $param["RTSP"] !== null) {
+            $this->RTSP = $param["RTSP"];
         }
     }
 }

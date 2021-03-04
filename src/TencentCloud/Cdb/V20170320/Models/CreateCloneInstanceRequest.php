@@ -50,8 +50,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSlaveZone(string $SlaveZone) 设置新产生的克隆实例备库 1 的可用区信息，默认同源实例 Zone 的值。
  * @method string getBackupZone() 获取备库 2 的可用区信息，默认为空，克隆强同步主实例时可指定该参数。
  * @method void setBackupZone(string $BackupZone) 设置备库 2 的可用区信息，默认为空，克隆强同步主实例时可指定该参数。
- * @method string getDeviceType() 获取克隆实例类型。支持值包括： "HA" - 高可用版实例， "EXCLUSIVE" - 独享型实例。 不指定则默认为高可用版。
- * @method void setDeviceType(string $DeviceType) 设置克隆实例类型。支持值包括： "HA" - 高可用版实例， "EXCLUSIVE" - 独享型实例。 不指定则默认为高可用版。
+ * @method string getDeviceType() 获取克隆实例类型。支持值包括： "UNIVERSAL" - 通用型实例， "EXCLUSIVE" - 独享型实例。 不指定则默认为通用型。
+ * @method void setDeviceType(string $DeviceType) 设置克隆实例类型。支持值包括： "UNIVERSAL" - 通用型实例， "EXCLUSIVE" - 独享型实例。 不指定则默认为通用型。
+ * @method integer getInstanceNodes() 获取新克隆实例节点数。如果需要克隆出三节点实例， 请将该值设置为3 或指定 BackupZone 参数。如果需要克隆出两节点实例，请将该值设置为2。默认克隆出两节点实例。
+ * @method void setInstanceNodes(integer $InstanceNodes) 设置新克隆实例节点数。如果需要克隆出三节点实例， 请将该值设置为3 或指定 BackupZone 参数。如果需要克隆出两节点实例，请将该值设置为2。默认克隆出两节点实例。
  */
 class CreateCloneInstanceRequest extends AbstractModel
 {
@@ -131,9 +133,14 @@ class CreateCloneInstanceRequest extends AbstractModel
     public $BackupZone;
 
     /**
-     * @var string 克隆实例类型。支持值包括： "HA" - 高可用版实例， "EXCLUSIVE" - 独享型实例。 不指定则默认为高可用版。
+     * @var string 克隆实例类型。支持值包括： "UNIVERSAL" - 通用型实例， "EXCLUSIVE" - 独享型实例。 不指定则默认为通用型。
      */
     public $DeviceType;
+
+    /**
+     * @var integer 新克隆实例节点数。如果需要克隆出三节点实例， 请将该值设置为3 或指定 BackupZone 参数。如果需要克隆出两节点实例，请将该值设置为2。默认克隆出两节点实例。
+     */
+    public $InstanceNodes;
 
     /**
      * @param string $InstanceId 克隆源实例Id。
@@ -151,7 +158,8 @@ class CreateCloneInstanceRequest extends AbstractModel
      * @param integer $DeployMode 多可用区域，默认为 0，支持值包括：0 - 表示单可用区，1 - 表示多可用区。
      * @param string $SlaveZone 新产生的克隆实例备库 1 的可用区信息，默认同源实例 Zone 的值。
      * @param string $BackupZone 备库 2 的可用区信息，默认为空，克隆强同步主实例时可指定该参数。
-     * @param string $DeviceType 克隆实例类型。支持值包括： "HA" - 高可用版实例， "EXCLUSIVE" - 独享型实例。 不指定则默认为高可用版。
+     * @param string $DeviceType 克隆实例类型。支持值包括： "UNIVERSAL" - 通用型实例， "EXCLUSIVE" - 独享型实例。 不指定则默认为通用型。
+     * @param integer $InstanceNodes 新克隆实例节点数。如果需要克隆出三节点实例， 请将该值设置为3 或指定 BackupZone 参数。如果需要克隆出两节点实例，请将该值设置为2。默认克隆出两节点实例。
      */
     function __construct()
     {
@@ -233,6 +241,10 @@ class CreateCloneInstanceRequest extends AbstractModel
 
         if (array_key_exists("DeviceType",$param) and $param["DeviceType"] !== null) {
             $this->DeviceType = $param["DeviceType"];
+        }
+
+        if (array_key_exists("InstanceNodes",$param) and $param["InstanceNodes"] !== null) {
+            $this->InstanceNodes = $param["InstanceNodes"];
         }
     }
 }

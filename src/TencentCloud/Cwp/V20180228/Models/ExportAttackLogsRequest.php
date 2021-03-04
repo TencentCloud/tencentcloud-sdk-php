@@ -20,18 +20,62 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ExportAttackLogs请求参数结构体
  *
- * @method array getFilters() 获取过滤参数
- * @method void setFilters(array $Filters) 设置过滤参数
+ * @method array getFilters() 获取过滤条件。
+<li>HttpMethod - String - 是否必填：否 - 攻击方法(POST|GET)</li>
+<li>DateRange - String - 是否必填：否 - 时间范围(存储最近3个月的数据)，如最近一个月["2019-11-17", "2019-12-17"]</li>
+<li>VulType - String 威胁类型 - 是否必填: 否</li>
+<li>SrcIp - String 攻击源IP - 是否必填: 否</li>
+<li>DstIp - String 攻击目标IP - 是否必填: 否</li>
+<li>SrcPort - String 攻击源端口 - 是否必填: 否</li>
+<li>DstPort - String 攻击目标端口 - 是否必填: 否</li>
+ * @method void setFilters(array $Filters) 设置过滤条件。
+<li>HttpMethod - String - 是否必填：否 - 攻击方法(POST|GET)</li>
+<li>DateRange - String - 是否必填：否 - 时间范围(存储最近3个月的数据)，如最近一个月["2019-11-17", "2019-12-17"]</li>
+<li>VulType - String 威胁类型 - 是否必填: 否</li>
+<li>SrcIp - String 攻击源IP - 是否必填: 否</li>
+<li>DstIp - String 攻击目标IP - 是否必填: 否</li>
+<li>SrcPort - String 攻击源端口 - 是否必填: 否</li>
+<li>DstPort - String 攻击目标端口 - 是否必填: 否</li>
+ * @method string getUuid() 获取主机安全客户端ID
+ * @method void setUuid(string $Uuid) 设置主机安全客户端ID
+ * @method string getQuuid() 获取云主机机器ID
+ * @method void setQuuid(string $Quuid) 设置云主机机器ID
  */
 class ExportAttackLogsRequest extends AbstractModel
 {
     /**
-     * @var array 过滤参数
+     * @var array 过滤条件。
+<li>HttpMethod - String - 是否必填：否 - 攻击方法(POST|GET)</li>
+<li>DateRange - String - 是否必填：否 - 时间范围(存储最近3个月的数据)，如最近一个月["2019-11-17", "2019-12-17"]</li>
+<li>VulType - String 威胁类型 - 是否必填: 否</li>
+<li>SrcIp - String 攻击源IP - 是否必填: 否</li>
+<li>DstIp - String 攻击目标IP - 是否必填: 否</li>
+<li>SrcPort - String 攻击源端口 - 是否必填: 否</li>
+<li>DstPort - String 攻击目标端口 - 是否必填: 否</li>
      */
     public $Filters;
 
     /**
-     * @param array $Filters 过滤参数
+     * @var string 主机安全客户端ID
+     */
+    public $Uuid;
+
+    /**
+     * @var string 云主机机器ID
+     */
+    public $Quuid;
+
+    /**
+     * @param array $Filters 过滤条件。
+<li>HttpMethod - String - 是否必填：否 - 攻击方法(POST|GET)</li>
+<li>DateRange - String - 是否必填：否 - 时间范围(存储最近3个月的数据)，如最近一个月["2019-11-17", "2019-12-17"]</li>
+<li>VulType - String 威胁类型 - 是否必填: 否</li>
+<li>SrcIp - String 攻击源IP - 是否必填: 否</li>
+<li>DstIp - String 攻击目标IP - 是否必填: 否</li>
+<li>SrcPort - String 攻击源端口 - 是否必填: 否</li>
+<li>DstPort - String 攻击目标端口 - 是否必填: 否</li>
+     * @param string $Uuid 主机安全客户端ID
+     * @param string $Quuid 云主机机器ID
      */
     function __construct()
     {
@@ -53,6 +97,14 @@ class ExportAttackLogsRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Filters, $obj);
             }
+        }
+
+        if (array_key_exists("Uuid",$param) and $param["Uuid"] !== null) {
+            $this->Uuid = $param["Uuid"];
+        }
+
+        if (array_key_exists("Quuid",$param) and $param["Quuid"] !== null) {
+            $this->Quuid = $param["Quuid"];
         }
     }
 }

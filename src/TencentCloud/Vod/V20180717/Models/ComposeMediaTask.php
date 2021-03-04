@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOutput(ComposeMediaTaskOutput $Output) 设置制作媒体文件任务的输出。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method MediaMetaData getMetaData() 获取原始视频的元信息。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMetaData(MediaMetaData $MetaData) 设置原始视频的元信息。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ComposeMediaTask extends AbstractModel
 {
@@ -84,6 +88,12 @@ class ComposeMediaTask extends AbstractModel
     public $Output;
 
     /**
+     * @var MediaMetaData 原始视频的元信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MetaData;
+
+    /**
      * @param string $TaskId 任务 ID。
      * @param string $Status 任务流状态，取值：
 <li>PROCESSING：处理中；</li>
@@ -95,6 +105,8 @@ class ComposeMediaTask extends AbstractModel
      * @param ComposeMediaTaskInput $Input 制作媒体文件任务的输入。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ComposeMediaTaskOutput $Output 制作媒体文件任务的输出。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MediaMetaData $MetaData 原始视频的元信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -134,6 +146,11 @@ class ComposeMediaTask extends AbstractModel
         if (array_key_exists("Output",$param) and $param["Output"] !== null) {
             $this->Output = new ComposeMediaTaskOutput();
             $this->Output->deserialize($param["Output"]);
+        }
+
+        if (array_key_exists("MetaData",$param) and $param["MetaData"] !== null) {
+            $this->MetaData = new MediaMetaData();
+            $this->MetaData->deserialize($param["MetaData"]);
         }
     }
 }

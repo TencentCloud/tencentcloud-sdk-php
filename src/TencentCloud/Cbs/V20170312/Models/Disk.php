@@ -106,8 +106,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSnapshotCount(integer $SnapshotCount) 设置云盘拥有的快照总数。
  * @method integer getSnapshotSize() 获取云盘拥有的快照总容量，单位为MB。
  * @method void setSnapshotSize(integer $SnapshotSize) 设置云盘拥有的快照总容量，单位为MB。
- * @method boolean getBackupDisk() 获取云盘因欠费销毁或者期销毁时， 是否使用快照备份数据的标识。True， 销毁时创建快照进行数据备份。False 表示直接销毁，不进行数据备份。
- * @method void setBackupDisk(boolean $BackupDisk) 设置云盘因欠费销毁或者期销毁时， 是否使用快照备份数据的标识。True， 销毁时创建快照进行数据备份。False 表示直接销毁，不进行数据备份。
+ * @method boolean getBackupDisk() 获取云硬盘因欠费销毁或者到期销毁时， 是否使用快照备份数据的标识。true表示销毁时创建快照进行数据备份。false表示直接销毁，不进行数据备份。
+ * @method void setBackupDisk(boolean $BackupDisk) 设置云硬盘因欠费销毁或者到期销毁时， 是否使用快照备份数据的标识。true表示销毁时创建快照进行数据备份。false表示直接销毁，不进行数据备份。
  * @method integer getThroughputPerformance() 获取云硬盘额外性能值，单位MB/s。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setThroughputPerformance(integer $ThroughputPerformance) 设置云硬盘额外性能值，单位MB/s。
@@ -287,7 +287,7 @@ class Disk extends AbstractModel
     public $SnapshotSize;
 
     /**
-     * @var boolean 云盘因欠费销毁或者期销毁时， 是否使用快照备份数据的标识。True， 销毁时创建快照进行数据备份。False 表示直接销毁，不进行数据备份。
+     * @var boolean 云硬盘因欠费销毁或者到期销毁时， 是否使用快照备份数据的标识。true表示销毁时创建快照进行数据备份。false表示直接销毁，不进行数据备份。
      */
     public $BackupDisk;
 
@@ -341,7 +341,7 @@ class Disk extends AbstractModel
      * @param array $InstanceIdList 对于非共享型云盘，该参数为空数组。对于共享型云盘，则表示该云盘当前被挂载到的CVM实例InstanceId
      * @param integer $SnapshotCount 云盘拥有的快照总数。
      * @param integer $SnapshotSize 云盘拥有的快照总容量，单位为MB。
-     * @param boolean $BackupDisk 云盘因欠费销毁或者期销毁时， 是否使用快照备份数据的标识。True， 销毁时创建快照进行数据备份。False 表示直接销毁，不进行数据备份。
+     * @param boolean $BackupDisk 云硬盘因欠费销毁或者到期销毁时， 是否使用快照备份数据的标识。true表示销毁时创建快照进行数据备份。false表示直接销毁，不进行数据备份。
      * @param integer $ThroughputPerformance 云硬盘额外性能值，单位MB/s。
 注意：此字段可能返回 null，表示取不到有效值。
      */

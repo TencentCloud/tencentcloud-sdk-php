@@ -106,6 +106,8 @@ hlg。
 此时，VideoCodec会强制设置为h265, 编码位深为10
  * @method VideoEnhance getVideoEnhance() 获取画质增强参数信息。
  * @method void setVideoEnhance(VideoEnhance $VideoEnhance) 设置画质增强参数信息。
+ * @method HiddenMarkInfo getHiddenMarkInfo() 获取数字水印参数信息。
+ * @method void setHiddenMarkInfo(HiddenMarkInfo $HiddenMarkInfo) 设置数字水印参数信息。
  */
 class VideoInfo extends AbstractModel
 {
@@ -201,6 +203,11 @@ hlg。
     public $VideoEnhance;
 
     /**
+     * @var HiddenMarkInfo 数字水印参数信息。
+     */
+    public $HiddenMarkInfo;
+
+    /**
      * @param integer $Fps 视频帧率，取值范围：[0, 60]，单位：Hz。
 注意：当取值为 0，表示帧率和原始视频保持一致。
      * @param integer $Width 宽度，取值范围：0 和 [128, 4096]
@@ -244,6 +251,7 @@ hdr10,
 hlg。
 此时，VideoCodec会强制设置为h265, 编码位深为10
      * @param VideoEnhance $VideoEnhance 画质增强参数信息。
+     * @param HiddenMarkInfo $HiddenMarkInfo 数字水印参数信息。
      */
     function __construct()
     {
@@ -311,6 +319,11 @@ hlg。
         if (array_key_exists("VideoEnhance",$param) and $param["VideoEnhance"] !== null) {
             $this->VideoEnhance = new VideoEnhance();
             $this->VideoEnhance->deserialize($param["VideoEnhance"]);
+        }
+
+        if (array_key_exists("HiddenMarkInfo",$param) and $param["HiddenMarkInfo"] !== null) {
+            $this->HiddenMarkInfo = new HiddenMarkInfo();
+            $this->HiddenMarkInfo->deserialize($param["HiddenMarkInfo"]);
         }
     }
 }

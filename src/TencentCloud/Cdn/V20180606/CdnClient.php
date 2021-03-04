@@ -46,7 +46,7 @@ use TencentCloud\Cdn\V20180606\Models as Models;
  * @method Models\DescribeCdnDomainLogsResponse DescribeCdnDomainLogs(Models\DescribeCdnDomainLogsRequest $req) DescribeCdnDomainLogs 用于查询访问日志下载地址，仅支持 30 天以内的境内、境外访问日志下载链接查询。
  * @method Models\DescribeCdnIpResponse DescribeCdnIp(Models\DescribeCdnIpRequest $req) DescribeCdnIp 用于查询 CDN IP 归属。
 （注意：此接口请求频率限制以 CDN 侧限制为准：200次/10分钟）  
- * @method Models\DescribeCdnOriginIpResponse DescribeCdnOriginIp(Models\DescribeCdnOriginIpRequest $req) 本接口（DescribeCdnOriginIp）用于查询 CDN 回源节点的IP信息。（注：使用此接口需开启对应白名单）
+ * @method Models\DescribeCdnOriginIpResponse DescribeCdnOriginIp(Models\DescribeCdnOriginIpRequest $req) 本接口（DescribeCdnOriginIp）用于查询 CDN 回源节点的IP信息。（注：此接口即将下线，不再进行维护，请通过DescribeIpStatus 接口进行查询）
  * @method Models\DescribeCertDomainsResponse DescribeCertDomains(Models\DescribeCertDomainsRequest $req) DescribeCertDomains 用于校验SSL证书并提取证书中包含的域名。
  * @method Models\DescribeDiagnoseReportResponse DescribeDiagnoseReport(Models\DescribeDiagnoseReportRequest $req) DescribeDiagnoseReport 用于获取指定报告id的内容
  * @method Models\DescribeDistrictIspDataResponse DescribeDistrictIspData(Models\DescribeDistrictIspDataRequest $req) 查询指定域名的区域、运营商明细数据

@@ -25,6 +25,7 @@ use TencentCloud\Asw\V20200722\Models as Models;
 /**
  * @method Models\CreateFlowServiceResponse CreateFlowService(Models\CreateFlowServiceRequest $req) 该接口用于生成状态机服务
  * @method Models\DescribeExecutionResponse DescribeExecution(Models\DescribeExecutionRequest $req) 查询执行详细信息
+ * @method Models\DescribeExecutionHistoryResponse DescribeExecutionHistory(Models\DescribeExecutionHistoryRequest $req) 一次执行会有很多步骤，经过很多节点，这个接口描述某一次执行的事件的历史
  * @method Models\DescribeExecutionsResponse DescribeExecutions(Models\DescribeExecutionsRequest $req) 对状态机的执行历史进行描述.
  * @method Models\DescribeFlowServiceDetailResponse DescribeFlowServiceDetail(Models\DescribeFlowServiceDetailRequest $req) 查询该用户指定状态机下的详情数据。
  * @method Models\DescribeFlowServicesResponse DescribeFlowServices(Models\DescribeFlowServicesRequest $req) 查询指定用户下所有状态机，以列表形式返回

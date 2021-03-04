@@ -38,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMax(string $Max) 设置参数最大值
  * @method integer getStatus() 获取参数状态, 1: 修改中， 2：修改完成
  * @method void setStatus(integer $Status) 设置参数状态, 1: 修改中， 2：修改完成
+ * @method string getUnit() 获取参数单位
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUnit(string $Unit) 设置参数单位
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceIntegerParam extends AbstractModel
 {
@@ -87,6 +91,12 @@ class InstanceIntegerParam extends AbstractModel
     public $Status;
 
     /**
+     * @var string 参数单位
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Unit;
+
+    /**
      * @param string $ParamName 参数名
      * @param string $ValueType 参数类型：integer
      * @param string $NeedRestart 修改后是否需要重启：true，false
@@ -96,6 +106,8 @@ class InstanceIntegerParam extends AbstractModel
      * @param string $Min 参数最小值
      * @param string $Max 参数最大值
      * @param integer $Status 参数状态, 1: 修改中， 2：修改完成
+     * @param string $Unit 参数单位
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -144,6 +156,10 @@ class InstanceIntegerParam extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("Unit",$param) and $param["Unit"] !== null) {
+            $this->Unit = $param["Unit"];
         }
     }
 }

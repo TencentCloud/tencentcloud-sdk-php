@@ -70,6 +70,26 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCvm(integer $Cvm) 设置ckafka售卖类型
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getInstanceType() 获取ckafka实例类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInstanceType(string $InstanceType) 设置ckafka实例类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDiskType() 获取磁盘类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDiskType(string $DiskType) 设置磁盘类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getMaxTopicNumber() 获取当前规格最大Topic数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMaxTopicNumber(integer $MaxTopicNumber) 设置当前规格最大Topic数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getMaxPartitionNumber() 获取当前规格最大Partition数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMaxPartitionNumber(integer $MaxPartitionNumber) 设置当前规格最大Partition数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRebalanceTime() 获取计划升级配置时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRebalanceTime(string $RebalanceTime) 设置计划升级配置时间
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceDetail extends AbstractModel
 {
@@ -187,6 +207,36 @@ class InstanceDetail extends AbstractModel
     public $Cvm;
 
     /**
+     * @var string ckafka实例类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InstanceType;
+
+    /**
+     * @var string 磁盘类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DiskType;
+
+    /**
+     * @var integer 当前规格最大Topic数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MaxTopicNumber;
+
+    /**
+     * @var integer 当前规格最大Partition数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MaxPartitionNumber;
+
+    /**
+     * @var string 计划升级配置时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RebalanceTime;
+
+    /**
      * @param string $InstanceId 实例id
      * @param string $InstanceName 实例名称
      * @param string $Vip 访问实例的vip 信息
@@ -211,6 +261,16 @@ class InstanceDetail extends AbstractModel
      * @param array $ZoneIds 跨可用区
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Cvm ckafka售卖类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $InstanceType ckafka实例类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DiskType 磁盘类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $MaxTopicNumber 当前规格最大Topic数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $MaxPartitionNumber 当前规格最大Partition数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RebalanceTime 计划升级配置时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -322,6 +382,26 @@ class InstanceDetail extends AbstractModel
 
         if (array_key_exists("Cvm",$param) and $param["Cvm"] !== null) {
             $this->Cvm = $param["Cvm"];
+        }
+
+        if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
+            $this->InstanceType = $param["InstanceType"];
+        }
+
+        if (array_key_exists("DiskType",$param) and $param["DiskType"] !== null) {
+            $this->DiskType = $param["DiskType"];
+        }
+
+        if (array_key_exists("MaxTopicNumber",$param) and $param["MaxTopicNumber"] !== null) {
+            $this->MaxTopicNumber = $param["MaxTopicNumber"];
+        }
+
+        if (array_key_exists("MaxPartitionNumber",$param) and $param["MaxPartitionNumber"] !== null) {
+            $this->MaxPartitionNumber = $param["MaxPartitionNumber"];
+        }
+
+        if (array_key_exists("RebalanceTime",$param) and $param["RebalanceTime"] !== null) {
+            $this->RebalanceTime = $param["RebalanceTime"];
         }
     }
 }

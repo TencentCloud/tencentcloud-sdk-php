@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 分片参数
  *
- * @method integer getShardKey() 获取分片参数 KEY，整形
- * @method void setShardKey(integer $ShardKey) 设置分片参数 KEY，整形
+ * @method integer getShardKey() 获取分片参数 KEY，整形, 范围 [1,1000]
+ * @method void setShardKey(integer $ShardKey) 设置分片参数 KEY，整形, 范围 [1,1000]
  * @method string getShardValue() 获取分片参数 VALUE
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setShardValue(string $ShardValue) 设置分片参数 VALUE
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class ShardArgument extends AbstractModel
 {
     /**
-     * @var integer 分片参数 KEY，整形
+     * @var integer 分片参数 KEY，整形, 范围 [1,1000]
      */
     public $ShardKey;
 
@@ -41,7 +41,7 @@ class ShardArgument extends AbstractModel
     public $ShardValue;
 
     /**
-     * @param integer $ShardKey 分片参数 KEY，整形
+     * @param integer $ShardKey 分片参数 KEY，整形, 范围 [1,1000]
      * @param string $ShardValue 分片参数 VALUE
 注意：此字段可能返回 null，表示取不到有效值。
      */

@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取查询指定源实例的克隆任务列表。
  * @method void setInstanceId(string $InstanceId) 设置查询指定源实例的克隆任务列表。
- * @method integer getOffset() 获取分页查询时的偏移量。
- * @method void setOffset(integer $Offset) 设置分页查询时的偏移量。
- * @method integer getLimit() 获取分页查询时的每页条目数。
- * @method void setLimit(integer $Limit) 设置分页查询时的每页条目数。
+ * @method integer getOffset() 获取分页查询时的偏移量，默认值为0。
+ * @method void setOffset(integer $Offset) 设置分页查询时的偏移量，默认值为0。
+ * @method integer getLimit() 获取分页查询时的每页条目数，默认值为20。
+ * @method void setLimit(integer $Limit) 设置分页查询时的每页条目数，默认值为20。
  */
 class DescribeCloneListRequest extends AbstractModel
 {
@@ -35,19 +35,19 @@ class DescribeCloneListRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var integer 分页查询时的偏移量。
+     * @var integer 分页查询时的偏移量，默认值为0。
      */
     public $Offset;
 
     /**
-     * @var integer 分页查询时的每页条目数。
+     * @var integer 分页查询时的每页条目数，默认值为20。
      */
     public $Limit;
 
     /**
      * @param string $InstanceId 查询指定源实例的克隆任务列表。
-     * @param integer $Offset 分页查询时的偏移量。
-     * @param integer $Limit 分页查询时的每页条目数。
+     * @param integer $Offset 分页查询时的偏移量，默认值为0。
+     * @param integer $Limit 分页查询时的每页条目数，默认值为20。
      */
     function __construct()
     {

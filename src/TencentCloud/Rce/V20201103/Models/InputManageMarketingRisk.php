@@ -22,8 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method AccountInfo getAccount() 获取账号信息。
  * @method void setAccount(AccountInfo $Account) 设置账号信息。
- * @method string getSceneCode() 获取场景code
- * @method void setSceneCode(string $SceneCode) 设置场景code
+ * @method string getSceneCode() 获取场景code;
+e_activity_antirush；活动防刷场景e_login_protection；登陆保护场景e_register_protection：注册保护场景
+ * @method void setSceneCode(string $SceneCode) 设置场景code;
+e_activity_antirush；活动防刷场景e_login_protection；登陆保护场景e_register_protection：注册保护场景
  * @method string getUserIp() 获取登录来源的外网IP
  * @method void setUserIp(string $UserIp) 设置登录来源的外网IP
  * @method integer getPostTime() 获取用户操作时间戳，单位秒（格林威治时间精确到秒，如1501590972）。
@@ -65,7 +67,129 @@ use TencentCloud\Common\AbstractModel;
 1：Android
 2：IOS
  * @method array getDetails() 获取详细信息
+FieldName 清单
+Android serial_number String 否 设备序列号
+Android carrier String 否 运营商；-1: 获取失败，0: 其他，1: 移动，2: 联通，3: 电信，4: 铁通
+Android mcc_mnc String 否 netOperator MCC+MNC
+Android model String 否 手机型号
+Android os_system String 否 操作系统
+Android vendor_id String 否 设备品牌 “华为”“oppo”“小米”
+Android device_version String 否 设备版本
+Android android_api_level String 否 安卓API等级
+Android phone_chip_info String 否 手机芯片信息
+Android resolution_w String 否 屏幕分辨率宽，保留整数
+Android resolution_h String 否 屏幕分辨率高，保留整数
+Android brightness String 否 屏幕亮度
+Android bluetooth_address String 否 蓝牙地址
+Android baseband_version String 否 基带版本
+Android kernel_version String 否 kernel 版本
+Android cpu_core String 否 CPU 核数
+Android cpu_model String 否 CPU 型号
+Android memory String 否 内存容量，单位转换为 GB
+Android storage String 否 存储容量，单位转换为 GB
+Android volume String 否 手机音量
+Android battery_power String 否 电池电量
+Android language String 否 语言
+Android package_name String 否 软件包名
+Android app_version String 否 app 版本号
+Android app_name String 否 app 显示名称
+Android is_debug String 否 是否 debug；0 为正常模式，1 为 debug 模式；其他值无效
+Android is_root String 否 是否越狱；0 为正常，1 为越狱；其他值无效
+Android is_proxy String 否 是否启动代理；0 为未开启，1 为开启；其他值无效
+Android is_emulator String 否 是否模拟器；0 为未开启，1 为开启；其他值无效
+Android charge_status String 否 充电状态；1-不在充电，2-USB充电，3-电源充电
+Android network_type String 否 网络类型：2G/3G/4G/5G/WiFi/WWAN/other
+Android wifi_mac String 否 WiFi MAC地址
+IOS model String 否 机器型号 iPhone11
+IOS memory String 否 内存容量，单位转换为 GB
+IOS os_system String 否 操作系统
+IOS device_version String 否 设备版本
+IOS phone_chip_info String 否 手机芯片信息
+IOS device_name String 否 设备名称 "xxx 的 iPhone"，"xxx's IPhone" 等等
+IOS uptime String 否 开机时间
+IOS language String 否 系统语言
+IOS carrier String 否 运营商
+IOS cpu_model String 否 CPU 型号
+IOS cpu_core String 否 CPU 个数
+IOS volume String 否 手机音量
+IOS battery_power String 否 电池电量
+IOS resolution_w String 否 屏幕分辨率宽，保留整数
+IOS resolution_h String 否 屏幕分辨率高，保留整数
+IOS package_name String 否 app 包名
+IOS app_version String 否 app 版本号
+IOS app_name String 否 app 显示名称
+IOS is_debug String 否 是否 debug；0 为正常模式，1 为 debug 模式；其他值无效
+IOS is_root String 否 是否越狱；0 为正常，1 为越狱；其他值无效
+IOS is_proxy String 否 是否启动代理；0 为未开启，1 为开启；其他值无效
+IOS is_emulator String 否 是否模拟器；0 为未开启，1 为开启；其他值无效
+IOS charge_status String 否 充电状态；1-不在充电，2-USB充电，3-电源充电
+IOS network_type String 否 网络类型：2G/3G/4G/5G/WiFi/WWAN/other
+IOS wifi_mac String 否 WiFi MAC地址
+其他 os_system String 否 操作系统
+其他 browser String 否 浏览器信息
+其他 from_url String 否 来源链接
  * @method void setDetails(array $Details) 设置详细信息
+FieldName 清单
+Android serial_number String 否 设备序列号
+Android carrier String 否 运营商；-1: 获取失败，0: 其他，1: 移动，2: 联通，3: 电信，4: 铁通
+Android mcc_mnc String 否 netOperator MCC+MNC
+Android model String 否 手机型号
+Android os_system String 否 操作系统
+Android vendor_id String 否 设备品牌 “华为”“oppo”“小米”
+Android device_version String 否 设备版本
+Android android_api_level String 否 安卓API等级
+Android phone_chip_info String 否 手机芯片信息
+Android resolution_w String 否 屏幕分辨率宽，保留整数
+Android resolution_h String 否 屏幕分辨率高，保留整数
+Android brightness String 否 屏幕亮度
+Android bluetooth_address String 否 蓝牙地址
+Android baseband_version String 否 基带版本
+Android kernel_version String 否 kernel 版本
+Android cpu_core String 否 CPU 核数
+Android cpu_model String 否 CPU 型号
+Android memory String 否 内存容量，单位转换为 GB
+Android storage String 否 存储容量，单位转换为 GB
+Android volume String 否 手机音量
+Android battery_power String 否 电池电量
+Android language String 否 语言
+Android package_name String 否 软件包名
+Android app_version String 否 app 版本号
+Android app_name String 否 app 显示名称
+Android is_debug String 否 是否 debug；0 为正常模式，1 为 debug 模式；其他值无效
+Android is_root String 否 是否越狱；0 为正常，1 为越狱；其他值无效
+Android is_proxy String 否 是否启动代理；0 为未开启，1 为开启；其他值无效
+Android is_emulator String 否 是否模拟器；0 为未开启，1 为开启；其他值无效
+Android charge_status String 否 充电状态；1-不在充电，2-USB充电，3-电源充电
+Android network_type String 否 网络类型：2G/3G/4G/5G/WiFi/WWAN/other
+Android wifi_mac String 否 WiFi MAC地址
+IOS model String 否 机器型号 iPhone11
+IOS memory String 否 内存容量，单位转换为 GB
+IOS os_system String 否 操作系统
+IOS device_version String 否 设备版本
+IOS phone_chip_info String 否 手机芯片信息
+IOS device_name String 否 设备名称 "xxx 的 iPhone"，"xxx's IPhone" 等等
+IOS uptime String 否 开机时间
+IOS language String 否 系统语言
+IOS carrier String 否 运营商
+IOS cpu_model String 否 CPU 型号
+IOS cpu_core String 否 CPU 个数
+IOS volume String 否 手机音量
+IOS battery_power String 否 电池电量
+IOS resolution_w String 否 屏幕分辨率宽，保留整数
+IOS resolution_h String 否 屏幕分辨率高，保留整数
+IOS package_name String 否 app 包名
+IOS app_version String 否 app 版本号
+IOS app_name String 否 app 显示名称
+IOS is_debug String 否 是否 debug；0 为正常模式，1 为 debug 模式；其他值无效
+IOS is_root String 否 是否越狱；0 为正常，1 为越狱；其他值无效
+IOS is_proxy String 否 是否启动代理；0 为未开启，1 为开启；其他值无效
+IOS is_emulator String 否 是否模拟器；0 为未开启，1 为开启；其他值无效
+IOS charge_status String 否 充电状态；1-不在充电，2-USB充电，3-电源充电
+IOS network_type String 否 网络类型：2G/3G/4G/5G/WiFi/WWAN/other
+IOS wifi_mac String 否 WiFi MAC地址
+其他 os_system String 否 操作系统
+其他 browser String 否 浏览器信息
+其他 from_url String 否 来源链接
  * @method SponsorInfo getSponsor() 获取可选填写。详情请跳转至SponsorInfo查看。
  * @method void setSponsor(SponsorInfo $Sponsor) 设置可选填写。详情请跳转至SponsorInfo查看。
  * @method OnlineScamInfo getOnlineScam() 获取可选填写。详情请跳转至OnlineScamInfo查看。
@@ -79,7 +203,8 @@ class InputManageMarketingRisk extends AbstractModel
     public $Account;
 
     /**
-     * @var string 场景code
+     * @var string 场景code;
+e_activity_antirush；活动防刷场景e_login_protection；登陆保护场景e_register_protection：注册保护场景
      */
     public $SceneCode;
 
@@ -169,6 +294,67 @@ class InputManageMarketingRisk extends AbstractModel
 
     /**
      * @var array 详细信息
+FieldName 清单
+Android serial_number String 否 设备序列号
+Android carrier String 否 运营商；-1: 获取失败，0: 其他，1: 移动，2: 联通，3: 电信，4: 铁通
+Android mcc_mnc String 否 netOperator MCC+MNC
+Android model String 否 手机型号
+Android os_system String 否 操作系统
+Android vendor_id String 否 设备品牌 “华为”“oppo”“小米”
+Android device_version String 否 设备版本
+Android android_api_level String 否 安卓API等级
+Android phone_chip_info String 否 手机芯片信息
+Android resolution_w String 否 屏幕分辨率宽，保留整数
+Android resolution_h String 否 屏幕分辨率高，保留整数
+Android brightness String 否 屏幕亮度
+Android bluetooth_address String 否 蓝牙地址
+Android baseband_version String 否 基带版本
+Android kernel_version String 否 kernel 版本
+Android cpu_core String 否 CPU 核数
+Android cpu_model String 否 CPU 型号
+Android memory String 否 内存容量，单位转换为 GB
+Android storage String 否 存储容量，单位转换为 GB
+Android volume String 否 手机音量
+Android battery_power String 否 电池电量
+Android language String 否 语言
+Android package_name String 否 软件包名
+Android app_version String 否 app 版本号
+Android app_name String 否 app 显示名称
+Android is_debug String 否 是否 debug；0 为正常模式，1 为 debug 模式；其他值无效
+Android is_root String 否 是否越狱；0 为正常，1 为越狱；其他值无效
+Android is_proxy String 否 是否启动代理；0 为未开启，1 为开启；其他值无效
+Android is_emulator String 否 是否模拟器；0 为未开启，1 为开启；其他值无效
+Android charge_status String 否 充电状态；1-不在充电，2-USB充电，3-电源充电
+Android network_type String 否 网络类型：2G/3G/4G/5G/WiFi/WWAN/other
+Android wifi_mac String 否 WiFi MAC地址
+IOS model String 否 机器型号 iPhone11
+IOS memory String 否 内存容量，单位转换为 GB
+IOS os_system String 否 操作系统
+IOS device_version String 否 设备版本
+IOS phone_chip_info String 否 手机芯片信息
+IOS device_name String 否 设备名称 "xxx 的 iPhone"，"xxx's IPhone" 等等
+IOS uptime String 否 开机时间
+IOS language String 否 系统语言
+IOS carrier String 否 运营商
+IOS cpu_model String 否 CPU 型号
+IOS cpu_core String 否 CPU 个数
+IOS volume String 否 手机音量
+IOS battery_power String 否 电池电量
+IOS resolution_w String 否 屏幕分辨率宽，保留整数
+IOS resolution_h String 否 屏幕分辨率高，保留整数
+IOS package_name String 否 app 包名
+IOS app_version String 否 app 版本号
+IOS app_name String 否 app 显示名称
+IOS is_debug String 否 是否 debug；0 为正常模式，1 为 debug 模式；其他值无效
+IOS is_root String 否 是否越狱；0 为正常，1 为越狱；其他值无效
+IOS is_proxy String 否 是否启动代理；0 为未开启，1 为开启；其他值无效
+IOS is_emulator String 否 是否模拟器；0 为未开启，1 为开启；其他值无效
+IOS charge_status String 否 充电状态；1-不在充电，2-USB充电，3-电源充电
+IOS network_type String 否 网络类型：2G/3G/4G/5G/WiFi/WWAN/other
+IOS wifi_mac String 否 WiFi MAC地址
+其他 os_system String 否 操作系统
+其他 browser String 否 浏览器信息
+其他 from_url String 否 来源链接
      */
     public $Details;
 
@@ -184,7 +370,8 @@ class InputManageMarketingRisk extends AbstractModel
 
     /**
      * @param AccountInfo $Account 账号信息。
-     * @param string $SceneCode 场景code
+     * @param string $SceneCode 场景code;
+e_activity_antirush；活动防刷场景e_login_protection；登陆保护场景e_register_protection：注册保护场景
      * @param string $UserIp 登录来源的外网IP
      * @param integer $PostTime 用户操作时间戳，单位秒（格林威治时间精确到秒，如1501590972）。
      * @param string $UserId 用户唯一标识。
@@ -206,6 +393,67 @@ class InputManageMarketingRisk extends AbstractModel
 1：Android
 2：IOS
      * @param array $Details 详细信息
+FieldName 清单
+Android serial_number String 否 设备序列号
+Android carrier String 否 运营商；-1: 获取失败，0: 其他，1: 移动，2: 联通，3: 电信，4: 铁通
+Android mcc_mnc String 否 netOperator MCC+MNC
+Android model String 否 手机型号
+Android os_system String 否 操作系统
+Android vendor_id String 否 设备品牌 “华为”“oppo”“小米”
+Android device_version String 否 设备版本
+Android android_api_level String 否 安卓API等级
+Android phone_chip_info String 否 手机芯片信息
+Android resolution_w String 否 屏幕分辨率宽，保留整数
+Android resolution_h String 否 屏幕分辨率高，保留整数
+Android brightness String 否 屏幕亮度
+Android bluetooth_address String 否 蓝牙地址
+Android baseband_version String 否 基带版本
+Android kernel_version String 否 kernel 版本
+Android cpu_core String 否 CPU 核数
+Android cpu_model String 否 CPU 型号
+Android memory String 否 内存容量，单位转换为 GB
+Android storage String 否 存储容量，单位转换为 GB
+Android volume String 否 手机音量
+Android battery_power String 否 电池电量
+Android language String 否 语言
+Android package_name String 否 软件包名
+Android app_version String 否 app 版本号
+Android app_name String 否 app 显示名称
+Android is_debug String 否 是否 debug；0 为正常模式，1 为 debug 模式；其他值无效
+Android is_root String 否 是否越狱；0 为正常，1 为越狱；其他值无效
+Android is_proxy String 否 是否启动代理；0 为未开启，1 为开启；其他值无效
+Android is_emulator String 否 是否模拟器；0 为未开启，1 为开启；其他值无效
+Android charge_status String 否 充电状态；1-不在充电，2-USB充电，3-电源充电
+Android network_type String 否 网络类型：2G/3G/4G/5G/WiFi/WWAN/other
+Android wifi_mac String 否 WiFi MAC地址
+IOS model String 否 机器型号 iPhone11
+IOS memory String 否 内存容量，单位转换为 GB
+IOS os_system String 否 操作系统
+IOS device_version String 否 设备版本
+IOS phone_chip_info String 否 手机芯片信息
+IOS device_name String 否 设备名称 "xxx 的 iPhone"，"xxx's IPhone" 等等
+IOS uptime String 否 开机时间
+IOS language String 否 系统语言
+IOS carrier String 否 运营商
+IOS cpu_model String 否 CPU 型号
+IOS cpu_core String 否 CPU 个数
+IOS volume String 否 手机音量
+IOS battery_power String 否 电池电量
+IOS resolution_w String 否 屏幕分辨率宽，保留整数
+IOS resolution_h String 否 屏幕分辨率高，保留整数
+IOS package_name String 否 app 包名
+IOS app_version String 否 app 版本号
+IOS app_name String 否 app 显示名称
+IOS is_debug String 否 是否 debug；0 为正常模式，1 为 debug 模式；其他值无效
+IOS is_root String 否 是否越狱；0 为正常，1 为越狱；其他值无效
+IOS is_proxy String 否 是否启动代理；0 为未开启，1 为开启；其他值无效
+IOS is_emulator String 否 是否模拟器；0 为未开启，1 为开启；其他值无效
+IOS charge_status String 否 充电状态；1-不在充电，2-USB充电，3-电源充电
+IOS network_type String 否 网络类型：2G/3G/4G/5G/WiFi/WWAN/other
+IOS wifi_mac String 否 WiFi MAC地址
+其他 os_system String 否 操作系统
+其他 browser String 否 浏览器信息
+其他 from_url String 否 来源链接
      * @param SponsorInfo $Sponsor 可选填写。详情请跳转至SponsorInfo查看。
      * @param OnlineScamInfo $OnlineScam 可选填写。详情请跳转至OnlineScamInfo查看。
      */

@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGroupId(string $GroupId) 设置分组ID
  * @method integer getShardCount() 获取分片数量
  * @method void setShardCount(integer $ShardCount) 设置分片数量
- * @method ShardArgument getShardArguments() 获取分片参数
- * @method void setShardArguments(ShardArgument $ShardArguments) 设置分片参数
+ * @method array getShardArguments() 获取分片参数
+ * @method void setShardArguments(array $ShardArguments) 设置分片参数
  * @method AdvanceSettings getAdvanceSettings() 获取高级设置
  * @method void setAdvanceSettings(AdvanceSettings $AdvanceSettings) 设置高级设置
  * @method string getSuccessOperator() 获取判断任务成功的操作符 GT/GTE
@@ -101,7 +101,7 @@ class ModifyTaskRequest extends AbstractModel
     public $ShardCount;
 
     /**
-     * @var ShardArgument 分片参数
+     * @var array 分片参数
      */
     public $ShardArguments;
 
@@ -145,7 +145,7 @@ class ModifyTaskRequest extends AbstractModel
      * @param integer $TimeOut 超时时间，单位 ms
      * @param string $GroupId 分组ID
      * @param integer $ShardCount 分片数量
-     * @param ShardArgument $ShardArguments 分片参数
+     * @param array $ShardArguments 分片参数
      * @param AdvanceSettings $AdvanceSettings 高级设置
      * @param string $SuccessOperator 判断任务成功的操作符 GT/GTE
      * @param integer $SuccessRatio 判断任务成功率的阈值
@@ -204,8 +204,12 @@ class ModifyTaskRequest extends AbstractModel
         }
 
         if (array_key_exists("ShardArguments",$param) and $param["ShardArguments"] !== null) {
-            $this->ShardArguments = new ShardArgument();
-            $this->ShardArguments->deserialize($param["ShardArguments"]);
+            $this->ShardArguments = [];
+            foreach ($param["ShardArguments"] as $key => $value){
+                $obj = new ShardArgument();
+                $obj->deserialize($value);
+                array_push($this->ShardArguments, $obj);
+            }
         }
 
         if (array_key_exists("AdvanceSettings",$param) and $param["AdvanceSettings"] !== null) {

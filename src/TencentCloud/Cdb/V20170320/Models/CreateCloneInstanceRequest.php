@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSecurityGroup(array $SecurityGroup) 设置安全组参数，可使用 [查询项目安全组信息](https://cloud.tencent.com/document/api/236/15850) 接口查询某个项目的安全组详情。
  * @method array getResourceTags() 获取实例标签信息。
  * @method void setResourceTags(array $ResourceTags) 设置实例标签信息。
- * @method integer getCpu() 获取实例Cpu核数，需要不低于克隆源实例。
- * @method void setCpu(integer $Cpu) 设置实例Cpu核数，需要不低于克隆源实例。
+ * @method integer getCpu() 获取实例Cpu核数，需要不低于克隆源实例，默认和源实例相同。
+ * @method void setCpu(integer $Cpu) 设置实例Cpu核数，需要不低于克隆源实例，默认和源实例相同。
  * @method integer getProtectMode() 获取数据复制方式，默认为 0，支持值包括：0 - 表示异步复制，1 - 表示半同步复制，2 - 表示强同步复制。
  * @method void setProtectMode(integer $ProtectMode) 设置数据复制方式，默认为 0，支持值包括：0 - 表示异步复制，1 - 表示半同步复制，2 - 表示强同步复制。
  * @method integer getDeployMode() 获取多可用区域，默认为 0，支持值包括：0 - 表示单可用区，1 - 表示多可用区。
@@ -108,7 +108,7 @@ class CreateCloneInstanceRequest extends AbstractModel
     public $ResourceTags;
 
     /**
-     * @var integer 实例Cpu核数，需要不低于克隆源实例。
+     * @var integer 实例Cpu核数，需要不低于克隆源实例，默认和源实例相同。
      */
     public $Cpu;
 
@@ -153,7 +153,7 @@ class CreateCloneInstanceRequest extends AbstractModel
      * @param string $InstanceName 新产生的克隆实例名称。
      * @param array $SecurityGroup 安全组参数，可使用 [查询项目安全组信息](https://cloud.tencent.com/document/api/236/15850) 接口查询某个项目的安全组详情。
      * @param array $ResourceTags 实例标签信息。
-     * @param integer $Cpu 实例Cpu核数，需要不低于克隆源实例。
+     * @param integer $Cpu 实例Cpu核数，需要不低于克隆源实例，默认和源实例相同。
      * @param integer $ProtectMode 数据复制方式，默认为 0，支持值包括：0 - 表示异步复制，1 - 表示半同步复制，2 - 表示强同步复制。
      * @param integer $DeployMode 多可用区域，默认为 0，支持值包括：0 - 表示单可用区，1 - 表示多可用区。
      * @param string $SlaveZone 新产生的克隆实例备库 1 的可用区信息，默认同源实例 Zone 的值。

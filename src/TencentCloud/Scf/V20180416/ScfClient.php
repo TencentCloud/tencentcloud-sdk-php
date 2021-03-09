@@ -42,6 +42,7 @@ use TencentCloud\Scf\V20180416\Models as Models;
  * @method Models\DeleteProvisionedConcurrencyConfigResponse DeleteProvisionedConcurrencyConfig(Models\DeleteProvisionedConcurrencyConfigRequest $req) 删除函数版本的预置并发配置。
  * @method Models\DeleteReservedConcurrencyConfigResponse DeleteReservedConcurrencyConfig(Models\DeleteReservedConcurrencyConfigRequest $req) 删除函数的保留并发配置。
  * @method Models\DeleteTriggerResponse DeleteTrigger(Models\DeleteTriggerRequest $req) 该接口根据参数传入删除已有的触发方式。
+ * @method Models\GetAccountResponse GetAccount(Models\GetAccountRequest $req) 获取账户信息
  * @method Models\GetAliasResponse GetAlias(Models\GetAliasRequest $req) 获取别名的详细信息，包括名称、描述、版本、路由信息等。
  * @method Models\GetFunctionResponse GetFunction(Models\GetFunctionRequest $req) 该接口获取某个函数的详细信息，包括名称、代码、处理方法、关联触发器和超时时间等字段。
  * @method Models\GetFunctionAddressResponse GetFunctionAddress(Models\GetFunctionAddressRequest $req) 该接口用于获取函数代码包的下载地址。

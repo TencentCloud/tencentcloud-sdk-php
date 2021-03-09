@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMetaData(MediaMetaData $MetaData) 设置剪辑后的视频元信息。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getSegmentSet() 获取<span id="p_segmentset">剪辑后的视频片段信息。</span>
+ * @method void setSegmentSet(array $SegmentSet) 设置<span id="p_segmentset">剪辑后的视频片段信息。</span>
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -57,6 +59,11 @@ class LiveRealTimeClipResponse extends AbstractModel
     public $MetaData;
 
     /**
+     * @var array <span id="p_segmentset">剪辑后的视频片段信息。</span>
+     */
+    public $SegmentSet;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -67,6 +74,7 @@ class LiveRealTimeClipResponse extends AbstractModel
      * @param string $VodTaskId 剪辑固化后的视频任务流 ID。
      * @param MediaMetaData $MetaData 剪辑后的视频元信息。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $SegmentSet <span id="p_segmentset">剪辑后的视频片段信息。</span>
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -97,6 +105,15 @@ class LiveRealTimeClipResponse extends AbstractModel
         if (array_key_exists("MetaData",$param) and $param["MetaData"] !== null) {
             $this->MetaData = new MediaMetaData();
             $this->MetaData->deserialize($param["MetaData"]);
+        }
+
+        if (array_key_exists("SegmentSet",$param) and $param["SegmentSet"] !== null) {
+            $this->SegmentSet = [];
+            foreach ($param["SegmentSet"] as $key => $value){
+                $obj = new LiveRealTimeClipMediaSegmentInfo();
+                $obj->deserialize($value);
+                array_push($this->SegmentSet, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

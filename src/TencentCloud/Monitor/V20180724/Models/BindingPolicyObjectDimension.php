@@ -24,8 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegion(string $Region) 设置地域名
  * @method integer getRegionId() 获取地域ID
  * @method void setRegionId(integer $RegionId) 设置地域ID
- * @method string getDimensions() 获取维度信息
- * @method void setDimensions(string $Dimensions) 设置维度信息
+ * @method string getDimensions() 获取实例的维度信息，格式为
+{"unInstanceId":"ins-00jvv9mo"}。不同云产品的维度信息不同，详见
+[产品策略类型和命名空间](https://cloud.tencent.com/document/product/248/50397)
+ * @method void setDimensions(string $Dimensions) 设置实例的维度信息，格式为
+{"unInstanceId":"ins-00jvv9mo"}。不同云产品的维度信息不同，详见
+[产品策略类型和命名空间](https://cloud.tencent.com/document/product/248/50397)
  * @method string getEventDimensions() 获取事件维度信息
  * @method void setEventDimensions(string $EventDimensions) 设置事件维度信息
  */
@@ -42,7 +46,9 @@ class BindingPolicyObjectDimension extends AbstractModel
     public $RegionId;
 
     /**
-     * @var string 维度信息
+     * @var string 实例的维度信息，格式为
+{"unInstanceId":"ins-00jvv9mo"}。不同云产品的维度信息不同，详见
+[产品策略类型和命名空间](https://cloud.tencent.com/document/product/248/50397)
      */
     public $Dimensions;
 
@@ -54,7 +60,9 @@ class BindingPolicyObjectDimension extends AbstractModel
     /**
      * @param string $Region 地域名
      * @param integer $RegionId 地域ID
-     * @param string $Dimensions 维度信息
+     * @param string $Dimensions 实例的维度信息，格式为
+{"unInstanceId":"ins-00jvv9mo"}。不同云产品的维度信息不同，详见
+[产品策略类型和命名空间](https://cloud.tencent.com/document/product/248/50397)
      * @param string $EventDimensions 事件维度信息
      */
     function __construct()

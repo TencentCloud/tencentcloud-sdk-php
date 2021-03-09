@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterId(string $ClusterId) 设置集群ID
  * @method array getInstanceIds() 获取实例列表，不支持竞价实例
  * @method void setInstanceIds(array $InstanceIds) 设置实例列表，不支持竞价实例
- * @method InstanceAdvancedSettings getInstanceAdvancedSettings() 获取实例额外需要设置参数信息
- * @method void setInstanceAdvancedSettings(InstanceAdvancedSettings $InstanceAdvancedSettings) 设置实例额外需要设置参数信息
+ * @method InstanceAdvancedSettings getInstanceAdvancedSettings() 获取实例额外需要设置参数信息(默认值)
+ * @method void setInstanceAdvancedSettings(InstanceAdvancedSettings $InstanceAdvancedSettings) 设置实例额外需要设置参数信息(默认值)
  * @method EnhancedService getEnhancedService() 获取增强服务。通过该参数可以指定是否开启云安全、云监控等服务。若不指定该参数，则默认开启云监控、云安全服务。
  * @method void setEnhancedService(EnhancedService $EnhancedService) 设置增强服务。通过该参数可以指定是否开启云安全、云监控等服务。若不指定该参数，则默认开启云监控、云安全服务。
  * @method LoginSettings getLoginSettings() 获取节点登录信息（目前仅支持使用Password或者单个KeyIds）
@@ -52,7 +52,7 @@ class AddExistedInstancesRequest extends AbstractModel
     public $InstanceIds;
 
     /**
-     * @var InstanceAdvancedSettings 实例额外需要设置参数信息
+     * @var InstanceAdvancedSettings 实例额外需要设置参数信息(默认值)
      */
     public $InstanceAdvancedSettings;
 
@@ -89,7 +89,7 @@ class AddExistedInstancesRequest extends AbstractModel
     /**
      * @param string $ClusterId 集群ID
      * @param array $InstanceIds 实例列表，不支持竞价实例
-     * @param InstanceAdvancedSettings $InstanceAdvancedSettings 实例额外需要设置参数信息
+     * @param InstanceAdvancedSettings $InstanceAdvancedSettings 实例额外需要设置参数信息(默认值)
      * @param EnhancedService $EnhancedService 增强服务。通过该参数可以指定是否开启云安全、云监控等服务。若不指定该参数，则默认开启云监控、云安全服务。
      * @param LoginSettings $LoginSettings 节点登录信息（目前仅支持使用Password或者单个KeyIds）
      * @param string $HostName 重装系统时，可以指定修改实例的HostName(集群为HostName模式时，此参数必传，规则名称除不支持大写字符外与[CVM创建实例](https://cloud.tencent.com/document/product/213/15730)接口HostName一致)

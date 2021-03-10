@@ -102,6 +102,10 @@ DefenceMode映射如下：
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConditions(array $Conditions) 设置查询条件
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getArea() 获取mainland或overseas
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setArea(string $Area) 设置mainland或overseas
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ScdnLogTaskDetail extends AbstractModel
 {
@@ -191,6 +195,12 @@ DefenceMode映射如下：
     public $Conditions;
 
     /**
+     * @var string mainland或overseas
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Area;
+
+    /**
      * @param string $Domain scdn域名
      * @param string $Mode 防护类型
      * @param string $StartTime 查询任务开始时间
@@ -231,6 +241,8 @@ DefenceMode映射如下：
   observe = '观察模式'
   intercept = '防御模式'
      * @param array $Conditions 查询条件
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Area mainland或overseas
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -293,6 +305,10 @@ DefenceMode映射如下：
                 $obj->deserialize($value);
                 array_push($this->Conditions, $obj);
             }
+        }
+
+        if (array_key_exists("Area",$param) and $param["Area"] !== null) {
+            $this->Area = $param["Area"];
         }
     }
 }

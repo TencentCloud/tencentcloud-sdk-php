@@ -94,6 +94,10 @@ DefenceMode 映射如下：
  * @method void setAttackTypes(array $AttackTypes) 设置指定攻击类型查询, 与 AttackType 参数同时有值时使用 AttackTypes 参数，不填默认查询全部攻击类型
  * @method array getConditions() 获取查询条件
  * @method void setConditions(array $Conditions) 设置查询条件
+ * @method string getSource() 获取来源产品 cdn ecdn
+ * @method void setSource(string $Source) 设置来源产品 cdn ecdn
+ * @method string getArea() 获取地域：mainland 或 overseas
+ * @method void setArea(string $Area) 设置地域：mainland 或 overseas
  */
 class CreateScdnLogTaskRequest extends AbstractModel
 {
@@ -175,6 +179,16 @@ DefenceMode 映射如下：
     public $Conditions;
 
     /**
+     * @var string 来源产品 cdn ecdn
+     */
+    public $Source;
+
+    /**
+     * @var string 地域：mainland 或 overseas
+     */
+    public $Area;
+
+    /**
      * @param string $Mode 防护类型
 Mode 映射如下：
   waf = "Web攻击"
@@ -212,6 +226,8 @@ DefenceMode 映射如下：
      * @param array $Domains 指定域名查询, 与 Domain 参数同时有值时使用 Domains 参数，不填默认查询全部域名，指定域名查询时最多支持同时选择 5 个域名查询
      * @param array $AttackTypes 指定攻击类型查询, 与 AttackType 参数同时有值时使用 AttackTypes 参数，不填默认查询全部攻击类型
      * @param array $Conditions 查询条件
+     * @param string $Source 来源产品 cdn ecdn
+     * @param string $Area 地域：mainland 或 overseas
      */
     function __construct()
     {
@@ -269,6 +285,14 @@ DefenceMode 映射如下：
                 $obj->deserialize($value);
                 array_push($this->Conditions, $obj);
             }
+        }
+
+        if (array_key_exists("Source",$param) and $param["Source"] !== null) {
+            $this->Source = $param["Source"];
+        }
+
+        if (array_key_exists("Area",$param) and $param["Area"] !== null) {
+            $this->Area = $param["Area"];
         }
     }
 }

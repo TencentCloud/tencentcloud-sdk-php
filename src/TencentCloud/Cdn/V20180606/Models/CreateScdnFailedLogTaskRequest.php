@@ -18,28 +18,28 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ListScdnLogTasks请求参数结构体
+ * CreateScdnFailedLogTask请求参数结构体
  *
- * @method string getSource() 获取产品来源 cdn/ecdn
- * @method void setSource(string $Source) 设置产品来源 cdn/ecdn
- * @method string getArea() 获取地域：mainland 或 overseas 为空表示查询所有地域
- * @method void setArea(string $Area) 设置地域：mainland 或 overseas 为空表示查询所有地域
+ * @method string getTaskId() 获取重试失败任务的taskID
+ * @method void setTaskId(string $TaskId) 设置重试失败任务的taskID
+ * @method string getArea() 获取地域：mainland或overseas
+ * @method void setArea(string $Area) 设置地域：mainland或overseas
  */
-class ListScdnLogTasksRequest extends AbstractModel
+class CreateScdnFailedLogTaskRequest extends AbstractModel
 {
     /**
-     * @var string 产品来源 cdn/ecdn
+     * @var string 重试失败任务的taskID
      */
-    public $Source;
+    public $TaskId;
 
     /**
-     * @var string 地域：mainland 或 overseas 为空表示查询所有地域
+     * @var string 地域：mainland或overseas
      */
     public $Area;
 
     /**
-     * @param string $Source 产品来源 cdn/ecdn
-     * @param string $Area 地域：mainland 或 overseas 为空表示查询所有地域
+     * @param string $TaskId 重试失败任务的taskID
+     * @param string $Area 地域：mainland或overseas
      */
     function __construct()
     {
@@ -54,8 +54,8 @@ class ListScdnLogTasksRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Source",$param) and $param["Source"] !== null) {
-            $this->Source = $param["Source"];
+        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
+            $this->TaskId = $param["TaskId"];
         }
 
         if (array_key_exists("Area",$param) and $param["Area"] !== null) {

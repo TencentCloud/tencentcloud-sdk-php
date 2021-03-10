@@ -18,28 +18,28 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ListScdnLogTasks请求参数结构体
+ * 门神子规则开关状态
  *
- * @method string getSource() 获取产品来源 cdn/ecdn
- * @method void setSource(string $Source) 设置产品来源 cdn/ecdn
- * @method string getArea() 获取地域：mainland 或 overseas 为空表示查询所有地域
- * @method void setArea(string $Area) 设置地域：mainland 或 overseas 为空表示查询所有地域
+ * @method string getSwitch() 获取子规则状态，on|off
+ * @method void setSwitch(string $Switch) 设置子规则状态，on|off
+ * @method array getSubIds() 获取规则id列表
+ * @method void setSubIds(array $SubIds) 设置规则id列表
  */
-class ListScdnLogTasksRequest extends AbstractModel
+class WafSubRuleStatus extends AbstractModel
 {
     /**
-     * @var string 产品来源 cdn/ecdn
+     * @var string 子规则状态，on|off
      */
-    public $Source;
+    public $Switch;
 
     /**
-     * @var string 地域：mainland 或 overseas 为空表示查询所有地域
+     * @var array 规则id列表
      */
-    public $Area;
+    public $SubIds;
 
     /**
-     * @param string $Source 产品来源 cdn/ecdn
-     * @param string $Area 地域：mainland 或 overseas 为空表示查询所有地域
+     * @param string $Switch 子规则状态，on|off
+     * @param array $SubIds 规则id列表
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class ListScdnLogTasksRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Source",$param) and $param["Source"] !== null) {
-            $this->Source = $param["Source"];
+        if (array_key_exists("Switch",$param) and $param["Switch"] !== null) {
+            $this->Switch = $param["Switch"];
         }
 
-        if (array_key_exists("Area",$param) and $param["Area"] !== null) {
-            $this->Area = $param["Area"];
+        if (array_key_exists("SubIds",$param) and $param["SubIds"] !== null) {
+            $this->SubIds = $param["SubIds"];
         }
     }
 }

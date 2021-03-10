@@ -38,6 +38,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRules(array $Rules) 设置类型拦截规则
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getLevel() 获取waf规则等级，可取100|200|300
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLevel(integer $Level) 设置waf规则等级，可取100|200|300
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getSubRuleSwitch() 获取waf子规则开关
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSubRuleSwitch(array $SubRuleSwitch) 设置waf子规则开关
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ScdnWafConfig extends AbstractModel
 {
@@ -71,6 +79,18 @@ class ScdnWafConfig extends AbstractModel
     public $Rules;
 
     /**
+     * @var integer waf规则等级，可取100|200|300
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Level;
+
+    /**
+     * @var array waf子规则开关
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SubRuleSwitch;
+
+    /**
      * @param string $Switch on|off
      * @param string $Mode intercept|observe，默认intercept
 注意：此字段可能返回 null，表示取不到有效值。
@@ -79,6 +99,10 @@ class ScdnWafConfig extends AbstractModel
      * @param string $WebShellSwitch webshell拦截开关，on|off，默认off
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Rules 类型拦截规则
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Level waf规则等级，可取100|200|300
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $SubRuleSwitch waf子规则开关
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -117,6 +141,19 @@ class ScdnWafConfig extends AbstractModel
                 $obj = new ScdnWafRule();
                 $obj->deserialize($value);
                 array_push($this->Rules, $obj);
+            }
+        }
+
+        if (array_key_exists("Level",$param) and $param["Level"] !== null) {
+            $this->Level = $param["Level"];
+        }
+
+        if (array_key_exists("SubRuleSwitch",$param) and $param["SubRuleSwitch"] !== null) {
+            $this->SubRuleSwitch = [];
+            foreach ($param["SubRuleSwitch"] as $key => $value){
+                $obj = new WafSubRuleStatus();
+                $obj->deserialize($value);
+                array_push($this->SubRuleSwitch, $obj);
             }
         }
     }

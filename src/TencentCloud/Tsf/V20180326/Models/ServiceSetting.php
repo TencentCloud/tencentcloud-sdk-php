@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 容器网络设置。
  *
- * @method integer getAccessType() 获取0:公网 1:集群内访问 2：NodePort
+ * @method integer getAccessType() 获取0:公网, 1:集群内访问, 2：NodePort, 3: VPC 内网访问
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAccessType(integer $AccessType) 设置0:公网 1:集群内访问 2：NodePort
+ * @method void setAccessType(integer $AccessType) 设置0:公网, 1:集群内访问, 2：NodePort, 3: VPC 内网访问
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getProtocolPorts() 获取容器端口映射
 注意：此字段可能返回 null，表示取不到有效值。
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class ServiceSetting extends AbstractModel
 {
     /**
-     * @var integer 0:公网 1:集群内访问 2：NodePort
+     * @var integer 0:公网, 1:集群内访问, 2：NodePort, 3: VPC 内网访问
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AccessType;
@@ -54,7 +54,7 @@ class ServiceSetting extends AbstractModel
     public $SubnetId;
 
     /**
-     * @param integer $AccessType 0:公网 1:集群内访问 2：NodePort
+     * @param integer $AccessType 0:公网, 1:集群内访问, 2：NodePort, 3: VPC 内网访问
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ProtocolPorts 容器端口映射
 注意：此字段可能返回 null，表示取不到有效值。

@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUploadType(string $UploadType) 设置备份用户上传类型，COS_URL-备份放在用户的对象存储上，提供URL。COS_UPLOAD-备份放在业务的对象存储上，用户上传
  * @method array getBackupFiles() 获取备份文件列表，UploadType确定，COS_URL则保存URL，COS_UPLOAD则保存备份名称
  * @method void setBackupFiles(array $BackupFiles) 设置备份文件列表，UploadType确定，COS_URL则保存URL，COS_UPLOAD则保存备份名称
- * @method integer getStatus() 获取迁移任务状态，
- * @method void setStatus(integer $Status) 设置迁移任务状态，
+ * @method integer getStatus() 获取迁移任务状态，2-创建完成，7-全量导入中，8-等待增量，9-导入成功，10-导入失败，12-增量导入中
+ * @method void setStatus(integer $Status) 设置迁移任务状态，2-创建完成，7-全量导入中，8-等待增量，9-导入成功，10-导入失败，12-增量导入中
  * @method string getCreateTime() 获取迁移任务创建时间
  * @method void setCreateTime(string $CreateTime) 设置迁移任务创建时间
  * @method string getStartTime() 获取迁移任务开始时间
@@ -101,7 +101,7 @@ class Migration extends AbstractModel
     public $BackupFiles;
 
     /**
-     * @var integer 迁移任务状态，
+     * @var integer 迁移任务状态，2-创建完成，7-全量导入中，8-等待增量，9-导入成功，10-导入失败，12-增量导入中
      */
     public $Status;
 
@@ -151,7 +151,7 @@ class Migration extends AbstractModel
      * @param string $RecoveryType 迁移任务恢复类型
      * @param string $UploadType 备份用户上传类型，COS_URL-备份放在用户的对象存储上，提供URL。COS_UPLOAD-备份放在业务的对象存储上，用户上传
      * @param array $BackupFiles 备份文件列表，UploadType确定，COS_URL则保存URL，COS_UPLOAD则保存备份名称
-     * @param integer $Status 迁移任务状态，
+     * @param integer $Status 迁移任务状态，2-创建完成，7-全量导入中，8-等待增量，9-导入成功，10-导入失败，12-增量导入中
      * @param string $CreateTime 迁移任务创建时间
      * @param string $StartTime 迁移任务开始时间
      * @param string $EndTime 迁移任务结束时间

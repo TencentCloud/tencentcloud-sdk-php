@@ -38,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAclRuleNumbers(integer $AclRuleNumbers) 设置Acl 规则数
  * @method string getBot() 获取Bot 状态默认为‘/’，取值 close | open
  * @method void setBot(string $Bot) 设置Bot 状态默认为‘/’，取值 close | open
+ * @method string getArea() 获取域名加速区域，取值global | mainland |  overseas
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setArea(string $Area) 设置域名加速区域，取值global | mainland |  overseas
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ScdnDomain extends AbstractModel
 {
@@ -87,6 +91,12 @@ class ScdnDomain extends AbstractModel
     public $Bot;
 
     /**
+     * @var string 域名加速区域，取值global | mainland |  overseas
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Area;
+
+    /**
      * @param string $Domain 域名
      * @param string $Status 当前状态，取值online | offline | process
      * @param string $Waf Waf 状态默认为‘/’，取值 close | intercept | observe
@@ -96,6 +106,8 @@ class ScdnDomain extends AbstractModel
      * @param string $ProjectId 项目ID
      * @param integer $AclRuleNumbers Acl 规则数
      * @param string $Bot Bot 状态默认为‘/’，取值 close | open
+     * @param string $Area 域名加速区域，取值global | mainland |  overseas
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -144,6 +156,10 @@ class ScdnDomain extends AbstractModel
 
         if (array_key_exists("Bot",$param) and $param["Bot"] !== null) {
             $this->Bot = $param["Bot"];
+        }
+
+        if (array_key_exists("Area",$param) and $param["Area"] !== null) {
+            $this->Area = $param["Area"];
         }
     }
 }

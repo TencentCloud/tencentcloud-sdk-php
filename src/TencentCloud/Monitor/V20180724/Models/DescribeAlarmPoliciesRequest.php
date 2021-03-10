@@ -30,28 +30,54 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPolicyName(string $PolicyName) 设置按策略名称模糊搜索
  * @method array getMonitorTypes() 获取根据监控类型过滤 不选默认查所有类型 "MT_QCE"=云产品监控
  * @method void setMonitorTypes(array $MonitorTypes) 设置根据监控类型过滤 不选默认查所有类型 "MT_QCE"=云产品监控
- * @method array getNamespaces() 获取根据命名空间过滤
- * @method void setNamespaces(array $Namespaces) 设置根据命名空间过滤
- * @method string getDimensions() 获取告警对象列表
- * @method void setDimensions(string $Dimensions) 设置告警对象列表
- * @method array getReceiverUids() 获取根据接收人搜索
- * @method void setReceiverUids(array $ReceiverUids) 设置根据接收人搜索
- * @method array getReceiverGroups() 获取根据接收组搜索
- * @method void setReceiverGroups(array $ReceiverGroups) 设置根据接收组搜索
+ * @method array getNamespaces() 获取根据命名空间过滤，不同策略类型的值详见
+[策略类型列表](https://cloud.tencent.com/document/product/248/50397)
+ * @method void setNamespaces(array $Namespaces) 设置根据命名空间过滤，不同策略类型的值详见
+[策略类型列表](https://cloud.tencent.com/document/product/248/50397)
+ * @method string getDimensions() 获取告警对象列表，外层数组，对应多个实例
+内层数组，每个数组对应一个实例，里面的object对应的是这个实例的维度信息。格式为
+[
+	[{"name":"unInstanceId","value":"ins-qr888845g"}],
+	[{"name":"unInstanceId","value":"ins-qr8d555g"}]
+	...
+]
+不同云产品参数示例详见
+[维度信息Dimensions列表](https://cloud.tencent.com/document/product/248/50397)
+ * @method void setDimensions(string $Dimensions) 设置告警对象列表，外层数组，对应多个实例
+内层数组，每个数组对应一个实例，里面的object对应的是这个实例的维度信息。格式为
+[
+	[{"name":"unInstanceId","value":"ins-qr888845g"}],
+	[{"name":"unInstanceId","value":"ins-qr8d555g"}]
+	...
+]
+不同云产品参数示例详见
+[维度信息Dimensions列表](https://cloud.tencent.com/document/product/248/50397)
+ * @method array getReceiverUids() 获取根据接收人的uid搜索，需要调用访问管理的api查询。详见
+[拉取子用户](https://cloud.tencent.com/document/product/598/34587)
+ * @method void setReceiverUids(array $ReceiverUids) 设置根据接收人的uid搜索，需要调用访问管理的api查询。详见
+[拉取子用户](https://cloud.tencent.com/document/product/598/34587)
+ * @method array getReceiverGroups() 获取根据接收组的uid搜索，需要调用访问管理的api查询，详见
+[查询用户组列表](https://cloud.tencent.com/document/product/598/34589)
+ * @method void setReceiverGroups(array $ReceiverGroups) 设置根据接收组的uid搜索，需要调用访问管理的api查询，详见
+[查询用户组列表](https://cloud.tencent.com/document/product/598/34589)
  * @method array getPolicyType() 获取根据默认策略筛选 不传展示全部策略 DEFAULT=展示默认策略 NOT_DEFAULT=展示非默认策略
  * @method void setPolicyType(array $PolicyType) 设置根据默认策略筛选 不传展示全部策略 DEFAULT=展示默认策略 NOT_DEFAULT=展示非默认策略
- * @method string getField() 获取排序字段
- * @method void setField(string $Field) 设置排序字段
+ * @method string getField() 获取排序字段，例如按照最后修改时间排序，Field: "UpdateTime"
+ * @method void setField(string $Field) 设置排序字段，例如按照最后修改时间排序，Field: "UpdateTime"
  * @method string getOrder() 获取排序顺序：升序：ASC  降序：DESC
  * @method void setOrder(string $Order) 设置排序顺序：升序：ASC  降序：DESC
- * @method array getProjectIds() 获取项目id数组
- * @method void setProjectIds(array $ProjectIds) 设置项目id数组
- * @method array getNoticeIds() 获取告警通知id列表
- * @method void setNoticeIds(array $NoticeIds) 设置告警通知id列表
+ * @method array getProjectIds() 获取策略所属项目的id数组，可在此页面查看
+[项目管理](https://console.cloud.tencent.com/project)
+ * @method void setProjectIds(array $ProjectIds) 设置策略所属项目的id数组，可在此页面查看
+[项目管理](https://console.cloud.tencent.com/project)
+ * @method array getNoticeIds() 获取通知模版的id列表，可查询通知模版列表获取。
+[查询通知模板列表](https://cloud.tencent.com/document/product/248/51280)
+ * @method void setNoticeIds(array $NoticeIds) 设置通知模版的id列表，可查询通知模版列表获取。
+[查询通知模板列表](https://cloud.tencent.com/document/product/248/51280)
  * @method array getRuleTypes() 获取根据触发条件筛选 不传展示全部策略 STATIC=展示静态阈值策略 DYNAMIC=展示动态阈值策略
  * @method void setRuleTypes(array $RuleTypes) 设置根据触发条件筛选 不传展示全部策略 STATIC=展示静态阈值策略 DYNAMIC=展示动态阈值策略
- * @method array getEnable() 获取启停，1：启用   0：停止
- * @method void setEnable(array $Enable) 设置启停，1：启用   0：停止
+ * @method array getEnable() 获取告警启停筛选，[1]：启用   [0]：停止，全部[0, 1]
+ * @method void setEnable(array $Enable) 设置告警启停筛选，[1]：启用   [0]：停止，全部[0, 1]
  * @method integer getNotBindingNoticeRule() 获取是否未配置通知规则，1：未配置，0：配置
  * @method void setNotBindingNoticeRule(integer $NotBindingNoticeRule) 设置是否未配置通知规则，1：未配置，0：配置
  */
@@ -83,22 +109,33 @@ class DescribeAlarmPoliciesRequest extends AbstractModel
     public $MonitorTypes;
 
     /**
-     * @var array 根据命名空间过滤
+     * @var array 根据命名空间过滤，不同策略类型的值详见
+[策略类型列表](https://cloud.tencent.com/document/product/248/50397)
      */
     public $Namespaces;
 
     /**
-     * @var string 告警对象列表
+     * @var string 告警对象列表，外层数组，对应多个实例
+内层数组，每个数组对应一个实例，里面的object对应的是这个实例的维度信息。格式为
+[
+	[{"name":"unInstanceId","value":"ins-qr888845g"}],
+	[{"name":"unInstanceId","value":"ins-qr8d555g"}]
+	...
+]
+不同云产品参数示例详见
+[维度信息Dimensions列表](https://cloud.tencent.com/document/product/248/50397)
      */
     public $Dimensions;
 
     /**
-     * @var array 根据接收人搜索
+     * @var array 根据接收人的uid搜索，需要调用访问管理的api查询。详见
+[拉取子用户](https://cloud.tencent.com/document/product/598/34587)
      */
     public $ReceiverUids;
 
     /**
-     * @var array 根据接收组搜索
+     * @var array 根据接收组的uid搜索，需要调用访问管理的api查询，详见
+[查询用户组列表](https://cloud.tencent.com/document/product/598/34589)
      */
     public $ReceiverGroups;
 
@@ -108,7 +145,7 @@ class DescribeAlarmPoliciesRequest extends AbstractModel
     public $PolicyType;
 
     /**
-     * @var string 排序字段
+     * @var string 排序字段，例如按照最后修改时间排序，Field: "UpdateTime"
      */
     public $Field;
 
@@ -118,12 +155,14 @@ class DescribeAlarmPoliciesRequest extends AbstractModel
     public $Order;
 
     /**
-     * @var array 项目id数组
+     * @var array 策略所属项目的id数组，可在此页面查看
+[项目管理](https://console.cloud.tencent.com/project)
      */
     public $ProjectIds;
 
     /**
-     * @var array 告警通知id列表
+     * @var array 通知模版的id列表，可查询通知模版列表获取。
+[查询通知模板列表](https://cloud.tencent.com/document/product/248/51280)
      */
     public $NoticeIds;
 
@@ -133,7 +172,7 @@ class DescribeAlarmPoliciesRequest extends AbstractModel
     public $RuleTypes;
 
     /**
-     * @var array 启停，1：启用   0：停止
+     * @var array 告警启停筛选，[1]：启用   [0]：停止，全部[0, 1]
      */
     public $Enable;
 
@@ -148,17 +187,30 @@ class DescribeAlarmPoliciesRequest extends AbstractModel
      * @param integer $PageSize 每页的数量，取值1~100，默认20
      * @param string $PolicyName 按策略名称模糊搜索
      * @param array $MonitorTypes 根据监控类型过滤 不选默认查所有类型 "MT_QCE"=云产品监控
-     * @param array $Namespaces 根据命名空间过滤
-     * @param string $Dimensions 告警对象列表
-     * @param array $ReceiverUids 根据接收人搜索
-     * @param array $ReceiverGroups 根据接收组搜索
+     * @param array $Namespaces 根据命名空间过滤，不同策略类型的值详见
+[策略类型列表](https://cloud.tencent.com/document/product/248/50397)
+     * @param string $Dimensions 告警对象列表，外层数组，对应多个实例
+内层数组，每个数组对应一个实例，里面的object对应的是这个实例的维度信息。格式为
+[
+	[{"name":"unInstanceId","value":"ins-qr888845g"}],
+	[{"name":"unInstanceId","value":"ins-qr8d555g"}]
+	...
+]
+不同云产品参数示例详见
+[维度信息Dimensions列表](https://cloud.tencent.com/document/product/248/50397)
+     * @param array $ReceiverUids 根据接收人的uid搜索，需要调用访问管理的api查询。详见
+[拉取子用户](https://cloud.tencent.com/document/product/598/34587)
+     * @param array $ReceiverGroups 根据接收组的uid搜索，需要调用访问管理的api查询，详见
+[查询用户组列表](https://cloud.tencent.com/document/product/598/34589)
      * @param array $PolicyType 根据默认策略筛选 不传展示全部策略 DEFAULT=展示默认策略 NOT_DEFAULT=展示非默认策略
-     * @param string $Field 排序字段
+     * @param string $Field 排序字段，例如按照最后修改时间排序，Field: "UpdateTime"
      * @param string $Order 排序顺序：升序：ASC  降序：DESC
-     * @param array $ProjectIds 项目id数组
-     * @param array $NoticeIds 告警通知id列表
+     * @param array $ProjectIds 策略所属项目的id数组，可在此页面查看
+[项目管理](https://console.cloud.tencent.com/project)
+     * @param array $NoticeIds 通知模版的id列表，可查询通知模版列表获取。
+[查询通知模板列表](https://cloud.tencent.com/document/product/248/51280)
      * @param array $RuleTypes 根据触发条件筛选 不传展示全部策略 STATIC=展示静态阈值策略 DYNAMIC=展示动态阈值策略
-     * @param array $Enable 启停，1：启用   0：停止
+     * @param array $Enable 告警启停筛选，[1]：启用   [0]：停止，全部[0, 1]
      * @param integer $NotBindingNoticeRule 是否未配置通知规则，1：未配置，0：配置
      */
     function __construct()

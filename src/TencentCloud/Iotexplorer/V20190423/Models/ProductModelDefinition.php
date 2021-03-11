@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCategoryModel(string $CategoryModel) 设置产品所属分类的模型快照（产品创建时刻的）
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getNetTypeModel() 获取产品的连接类型的模型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNetTypeModel(string $NetTypeModel) 设置产品的连接类型的模型
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ProductModelDefinition extends AbstractModel
 {
@@ -62,11 +66,19 @@ class ProductModelDefinition extends AbstractModel
     public $CategoryModel;
 
     /**
+     * @var string 产品的连接类型的模型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NetTypeModel;
+
+    /**
      * @param string $ProductId 产品ID
      * @param string $ModelDefine 模型定义
      * @param integer $UpdateTime 更新时间，秒级时间戳
      * @param integer $CreateTime 创建时间，秒级时间戳
      * @param string $CategoryModel 产品所属分类的模型快照（产品创建时刻的）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $NetTypeModel 产品的连接类型的模型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -100,6 +112,10 @@ class ProductModelDefinition extends AbstractModel
 
         if (array_key_exists("CategoryModel",$param) and $param["CategoryModel"] !== null) {
             $this->CategoryModel = $param["CategoryModel"];
+        }
+
+        if (array_key_exists("NetTypeModel",$param) and $param["NetTypeModel"] !== null) {
+            $this->NetTypeModel = $param["NetTypeModel"];
         }
     }
 }

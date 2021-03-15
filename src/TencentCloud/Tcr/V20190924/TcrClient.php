@@ -76,6 +76,7 @@ use TencentCloud\Tcr\V20190924\Models as Models;
  * @method Models\DescribeWebhookTriggerResponse DescribeWebhookTrigger(Models\DescribeWebhookTriggerRequest $req) 查询触发器
  * @method Models\DescribeWebhookTriggerLogResponse DescribeWebhookTriggerLog(Models\DescribeWebhookTriggerLogRequest $req) 获取触发器日志
  * @method Models\DuplicateImagePersonalResponse DuplicateImagePersonal(Models\DuplicateImagePersonalRequest $req) 用于在个人版镜像仓库中复制镜像版本
+ * @method Models\ManageExternalEndpointResponse ManageExternalEndpoint(Models\ManageExternalEndpointRequest $req) 管理实例公网访问
  * @method Models\ManageImageLifecycleGlobalPersonalResponse ManageImageLifecycleGlobalPersonal(Models\ManageImageLifecycleGlobalPersonalRequest $req) 用于设置个人版全局镜像版本自动清理策略
  * @method Models\ManageInternalEndpointResponse ManageInternalEndpoint(Models\ManageInternalEndpointRequest $req) 管理实例内网访问VPC链接
  * @method Models\ModifyApplicationTriggerPersonalResponse ModifyApplicationTriggerPersonal(Models\ModifyApplicationTriggerPersonalRequest $req) 用于修改应用更新触发器

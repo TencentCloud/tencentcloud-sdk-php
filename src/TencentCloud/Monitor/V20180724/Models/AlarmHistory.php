@@ -64,6 +64,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegion(string $Region) 设置地域
  * @method integer getPolicyExists() 获取策略是否存在 0=不存在 1=存在
  * @method void setPolicyExists(integer $PolicyExists) 设置策略是否存在 0=不存在 1=存在
+ * @method array getMetricsInfo() 获取指标信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMetricsInfo(array $MetricsInfo) 设置指标信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AlarmHistory extends AbstractModel
 {
@@ -178,6 +182,12 @@ class AlarmHistory extends AbstractModel
     public $PolicyExists;
 
     /**
+     * @var array 指标信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MetricsInfo;
+
+    /**
      * @param string $AlarmId 告警历史Id
      * @param string $MonitorType 监控类型
      * @param string $Namespace 策略类型
@@ -200,6 +210,8 @@ class AlarmHistory extends AbstractModel
      * @param integer $EventId 事件Id
      * @param string $Region 地域
      * @param integer $PolicyExists 策略是否存在 0=不存在 1=存在
+     * @param array $MetricsInfo 指标信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -305,6 +317,15 @@ class AlarmHistory extends AbstractModel
 
         if (array_key_exists("PolicyExists",$param) and $param["PolicyExists"] !== null) {
             $this->PolicyExists = $param["PolicyExists"];
+        }
+
+        if (array_key_exists("MetricsInfo",$param) and $param["MetricsInfo"] !== null) {
+            $this->MetricsInfo = [];
+            foreach ($param["MetricsInfo"] as $key => $value){
+                $obj = new AlarmHistoryMetric();
+                $obj->deserialize($value);
+                array_push($this->MetricsInfo, $obj);
+            }
         }
     }
 }

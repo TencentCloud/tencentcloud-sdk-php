@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
 OPEN：公网属性， INTERNAL：内网属性。
  * @method void setLoadBalancerType(string $LoadBalancerType) 设置负载均衡实例的网络类型：
 OPEN：公网属性， INTERNAL：内网属性。
- * @method integer getForward() 获取负载均衡实例的类型。1：通用的负载均衡实例，目前只支持传入1
- * @method void setForward(integer $Forward) 设置负载均衡实例的类型。1：通用的负载均衡实例，目前只支持传入1
+ * @method integer getForward() 获取负载均衡实例的类型。1：通用的负载均衡实例，目前只支持传入1。
+ * @method void setForward(integer $Forward) 设置负载均衡实例的类型。1：通用的负载均衡实例，目前只支持传入1。
  * @method string getLoadBalancerName() 获取负载均衡实例的名称，只在创建一个实例的时候才会生效。规则：1-60 个英文、汉字、数字、连接线“-”或下划线“_”。
 注意：如果名称与系统中已有负载均衡实例的名称相同，则系统将会自动生成此次创建的负载均衡实例的名称。
  * @method void setLoadBalancerName(string $LoadBalancerName) 设置负载均衡实例的名称，只在创建一个实例的时候才会生效。规则：1-60 个英文、汉字、数字、连接线“-”或下划线“_”。
@@ -44,20 +44,20 @@ OPEN：公网属性， INTERNAL：内网属性。
 注：主可用区是需要承载流量的可用区，备可用区默认不承载流量，主可用区不可用时才使用备可用区，平台将为您自动选择最佳备可用区。可通过 DescribeMasterZones 接口查询一个地域的主可用区的列表。
  * @method void setMasterZoneId(string $MasterZoneId) 设置仅适用于公网负载均衡。设置跨可用区容灾时的主可用区ID，例如 100001 或 ap-guangzhou-1
 注：主可用区是需要承载流量的可用区，备可用区默认不承载流量，主可用区不可用时才使用备可用区，平台将为您自动选择最佳备可用区。可通过 DescribeMasterZones 接口查询一个地域的主可用区的列表。
- * @method string getZoneId() 获取仅适用于公网负载均衡。可用区ID，指定可用区以创建负载均衡实例。如：ap-guangzhou-1
- * @method void setZoneId(string $ZoneId) 设置仅适用于公网负载均衡。可用区ID，指定可用区以创建负载均衡实例。如：ap-guangzhou-1
+ * @method string getZoneId() 获取仅适用于公网负载均衡。可用区ID，指定可用区以创建负载均衡实例。如：ap-guangzhou-1。
+ * @method void setZoneId(string $ZoneId) 设置仅适用于公网负载均衡。可用区ID，指定可用区以创建负载均衡实例。如：ap-guangzhou-1。
  * @method InternetAccessible getInternetAccessible() 获取仅适用于公网负载均衡。负载均衡的网络计费模式。
  * @method void setInternetAccessible(InternetAccessible $InternetAccessible) 设置仅适用于公网负载均衡。负载均衡的网络计费模式。
  * @method string getVipIsp() 获取仅适用于公网负载均衡。CMCC | CTCC | CUCC，分别对应 移动 | 电信 | 联通，如果不指定本参数，则默认使用BGP。可通过 DescribeSingleIsp 接口查询一个地域所支持的Isp。如果指定运营商，则网络计费式只能使用按带宽包计费(BANDWIDTH_PACKAGE)。
  * @method void setVipIsp(string $VipIsp) 设置仅适用于公网负载均衡。CMCC | CTCC | CUCC，分别对应 移动 | 电信 | 联通，如果不指定本参数，则默认使用BGP。可通过 DescribeSingleIsp 接口查询一个地域所支持的Isp。如果指定运营商，则网络计费式只能使用按带宽包计费(BANDWIDTH_PACKAGE)。
- * @method array getTags() 获取购买负载均衡同时，给负载均衡打上标签
- * @method void setTags(array $Tags) 设置购买负载均衡同时，给负载均衡打上标签
- * @method string getVip() 获取指定Vip申请负载均衡
- * @method void setVip(string $Vip) 设置指定Vip申请负载均衡
- * @method string getBandwidthPackageId() 获取带宽包ID，指定此参数时，网络计费方式（InternetAccessible.InternetChargeType）只支持按带宽包计费（BANDWIDTH_PACKAGE）
- * @method void setBandwidthPackageId(string $BandwidthPackageId) 设置带宽包ID，指定此参数时，网络计费方式（InternetAccessible.InternetChargeType）只支持按带宽包计费（BANDWIDTH_PACKAGE）
- * @method ExclusiveCluster getExclusiveCluster() 获取独占集群信息
- * @method void setExclusiveCluster(ExclusiveCluster $ExclusiveCluster) 设置独占集群信息
+ * @method array getTags() 获取购买负载均衡同时，给负载均衡打上标签。
+ * @method void setTags(array $Tags) 设置购买负载均衡同时，给负载均衡打上标签。
+ * @method string getVip() 获取指定Vip申请负载均衡。
+ * @method void setVip(string $Vip) 设置指定Vip申请负载均衡。
+ * @method string getBandwidthPackageId() 获取带宽包ID，指定此参数时，网络计费方式（InternetAccessible.InternetChargeType）只支持按带宽包计费（BANDWIDTH_PACKAGE）。
+ * @method void setBandwidthPackageId(string $BandwidthPackageId) 设置带宽包ID，指定此参数时，网络计费方式（InternetAccessible.InternetChargeType）只支持按带宽包计费（BANDWIDTH_PACKAGE）。
+ * @method ExclusiveCluster getExclusiveCluster() 获取独占集群信息。
+ * @method void setExclusiveCluster(ExclusiveCluster $ExclusiveCluster) 设置独占集群信息。
  * @method string getClientToken() 获取用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
  * @method void setClientToken(string $ClientToken) 设置用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
  * @method boolean getSnatPro() 获取是否支持绑定跨地域/跨Vpc绑定IP的功能。
@@ -66,8 +66,8 @@ OPEN：公网属性， INTERNAL：内网属性。
  * @method void setSnatIps(array $SnatIps) 设置开启绑定跨地域/跨Vpc绑定IP的功能后，创建SnatIp。
  * @method string getClusterTag() 获取Stgw独占集群的标签。
  * @method void setClusterTag(string $ClusterTag) 设置Stgw独占集群的标签。
- * @method string getEipAddressId() 获取EIP 的唯一 ID，形如：eip-11112222，仅适用于内网负载均衡绑定EIP
- * @method void setEipAddressId(string $EipAddressId) 设置EIP 的唯一 ID，形如：eip-11112222，仅适用于内网负载均衡绑定EIP
+ * @method string getEipAddressId() 获取EIP 的唯一 ID，形如：eip-11112222，仅适用于内网负载均衡绑定EIP。
+ * @method void setEipAddressId(string $EipAddressId) 设置EIP 的唯一 ID，形如：eip-11112222，仅适用于内网负载均衡绑定EIP。
  */
 class CreateLoadBalancerRequest extends AbstractModel
 {
@@ -78,7 +78,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     public $LoadBalancerType;
 
     /**
-     * @var integer 负载均衡实例的类型。1：通用的负载均衡实例，目前只支持传入1
+     * @var integer 负载均衡实例的类型。1：通用的负载均衡实例，目前只支持传入1。
      */
     public $Forward;
 
@@ -120,7 +120,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     public $MasterZoneId;
 
     /**
-     * @var string 仅适用于公网负载均衡。可用区ID，指定可用区以创建负载均衡实例。如：ap-guangzhou-1
+     * @var string 仅适用于公网负载均衡。可用区ID，指定可用区以创建负载均衡实例。如：ap-guangzhou-1。
      */
     public $ZoneId;
 
@@ -135,22 +135,22 @@ OPEN：公网属性， INTERNAL：内网属性。
     public $VipIsp;
 
     /**
-     * @var array 购买负载均衡同时，给负载均衡打上标签
+     * @var array 购买负载均衡同时，给负载均衡打上标签。
      */
     public $Tags;
 
     /**
-     * @var string 指定Vip申请负载均衡
+     * @var string 指定Vip申请负载均衡。
      */
     public $Vip;
 
     /**
-     * @var string 带宽包ID，指定此参数时，网络计费方式（InternetAccessible.InternetChargeType）只支持按带宽包计费（BANDWIDTH_PACKAGE）
+     * @var string 带宽包ID，指定此参数时，网络计费方式（InternetAccessible.InternetChargeType）只支持按带宽包计费（BANDWIDTH_PACKAGE）。
      */
     public $BandwidthPackageId;
 
     /**
-     * @var ExclusiveCluster 独占集群信息
+     * @var ExclusiveCluster 独占集群信息。
      */
     public $ExclusiveCluster;
 
@@ -175,14 +175,14 @@ OPEN：公网属性， INTERNAL：内网属性。
     public $ClusterTag;
 
     /**
-     * @var string EIP 的唯一 ID，形如：eip-11112222，仅适用于内网负载均衡绑定EIP
+     * @var string EIP 的唯一 ID，形如：eip-11112222，仅适用于内网负载均衡绑定EIP。
      */
     public $EipAddressId;
 
     /**
      * @param string $LoadBalancerType 负载均衡实例的网络类型：
 OPEN：公网属性， INTERNAL：内网属性。
-     * @param integer $Forward 负载均衡实例的类型。1：通用的负载均衡实例，目前只支持传入1
+     * @param integer $Forward 负载均衡实例的类型。1：通用的负载均衡实例，目前只支持传入1。
      * @param string $LoadBalancerName 负载均衡实例的名称，只在创建一个实例的时候才会生效。规则：1-60 个英文、汉字、数字、连接线“-”或下划线“_”。
 注意：如果名称与系统中已有负载均衡实例的名称相同，则系统将会自动生成此次创建的负载均衡实例的名称。
      * @param string $VpcId 负载均衡后端目标设备所属的网络 ID，如vpc-12345678，可以通过 DescribeVpcEx 接口获取。 不传此参数则默认为基础网络（"0"）。
@@ -192,18 +192,18 @@ OPEN：公网属性， INTERNAL：内网属性。
      * @param integer $Number 创建负载均衡的个数，默认值 1。
      * @param string $MasterZoneId 仅适用于公网负载均衡。设置跨可用区容灾时的主可用区ID，例如 100001 或 ap-guangzhou-1
 注：主可用区是需要承载流量的可用区，备可用区默认不承载流量，主可用区不可用时才使用备可用区，平台将为您自动选择最佳备可用区。可通过 DescribeMasterZones 接口查询一个地域的主可用区的列表。
-     * @param string $ZoneId 仅适用于公网负载均衡。可用区ID，指定可用区以创建负载均衡实例。如：ap-guangzhou-1
+     * @param string $ZoneId 仅适用于公网负载均衡。可用区ID，指定可用区以创建负载均衡实例。如：ap-guangzhou-1。
      * @param InternetAccessible $InternetAccessible 仅适用于公网负载均衡。负载均衡的网络计费模式。
      * @param string $VipIsp 仅适用于公网负载均衡。CMCC | CTCC | CUCC，分别对应 移动 | 电信 | 联通，如果不指定本参数，则默认使用BGP。可通过 DescribeSingleIsp 接口查询一个地域所支持的Isp。如果指定运营商，则网络计费式只能使用按带宽包计费(BANDWIDTH_PACKAGE)。
-     * @param array $Tags 购买负载均衡同时，给负载均衡打上标签
-     * @param string $Vip 指定Vip申请负载均衡
-     * @param string $BandwidthPackageId 带宽包ID，指定此参数时，网络计费方式（InternetAccessible.InternetChargeType）只支持按带宽包计费（BANDWIDTH_PACKAGE）
-     * @param ExclusiveCluster $ExclusiveCluster 独占集群信息
+     * @param array $Tags 购买负载均衡同时，给负载均衡打上标签。
+     * @param string $Vip 指定Vip申请负载均衡。
+     * @param string $BandwidthPackageId 带宽包ID，指定此参数时，网络计费方式（InternetAccessible.InternetChargeType）只支持按带宽包计费（BANDWIDTH_PACKAGE）。
+     * @param ExclusiveCluster $ExclusiveCluster 独占集群信息。
      * @param string $ClientToken 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
      * @param boolean $SnatPro 是否支持绑定跨地域/跨Vpc绑定IP的功能。
      * @param array $SnatIps 开启绑定跨地域/跨Vpc绑定IP的功能后，创建SnatIp。
      * @param string $ClusterTag Stgw独占集群的标签。
-     * @param string $EipAddressId EIP 的唯一 ID，形如：eip-11112222，仅适用于内网负载均衡绑定EIP
+     * @param string $EipAddressId EIP 的唯一 ID，形如：eip-11112222，仅适用于内网负载均衡绑定EIP。
      */
     function __construct()
     {

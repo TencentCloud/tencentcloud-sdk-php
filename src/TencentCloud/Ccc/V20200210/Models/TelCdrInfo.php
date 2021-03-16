@@ -178,6 +178,10 @@ notInService       不在服务区
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQueuedSkillGroupId(integer $QueuedSkillGroupId) 设置排队技能组Id
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSessionId() 获取会话 ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSessionId(string $SessionId) 设置会话 ID
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TelCdrInfo extends AbstractModel
 {
@@ -353,6 +357,12 @@ notInService       不在服务区
     public $QueuedSkillGroupId;
 
     /**
+     * @var string 会话 ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SessionId;
+
+    /**
      * @param string $Caller 主叫号码
      * @param string $Callee 被叫号码
      * @param integer $Time 呼叫发起时间戳，Unix 时间戳
@@ -431,6 +441,8 @@ notInService       不在服务区
      * @param array $PostIVRKeyPressed 后置IVR按键信息（e.g. [{"Key":"1","Label":"非常满意"}]）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $QueuedSkillGroupId 排队技能组Id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SessionId 会话 ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -547,6 +559,10 @@ notInService       不在服务区
 
         if (array_key_exists("QueuedSkillGroupId",$param) and $param["QueuedSkillGroupId"] !== null) {
             $this->QueuedSkillGroupId = $param["QueuedSkillGroupId"];
+        }
+
+        if (array_key_exists("SessionId",$param) and $param["SessionId"] !== null) {
+            $this->SessionId = $param["SessionId"];
         }
     }
 }

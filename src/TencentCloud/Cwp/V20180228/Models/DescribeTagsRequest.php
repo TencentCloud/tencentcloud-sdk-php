@@ -28,6 +28,20 @@ use TencentCloud\Common\AbstractModel;
 <li>BM:  表示黑石物理机</li>
  * @method string getMachineRegion() 获取机器所属地域。如：ap-guangzhou，ap-shanghai
  * @method void setMachineRegion(string $MachineRegion) 设置机器所属地域。如：ap-guangzhou，ap-shanghai
+ * @method array getFilters() 获取过滤条件。
+<li>Keywords - String - 是否必填：否 - 查询关键字(机器名称/机器IP </li>
+<li>Status - String - 是否必填：否 - 客户端在线状态（OFFLINE: 离线 | ONLINE: 在线 | UNINSTALLED：未安装 | SHUTDOWN 已关机）</li>
+<li>Version - String  是否必填：否 - 当前防护版本（ PRO_VERSION：专业版 | BASIC_VERSION：基础版）</li>
+<li>Risk - String 是否必填: 否 - 风险主机( yes ) </li>
+<li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )
+每个过滤条件只支持一个值，暂不支持多个值“或”关系查询
+ * @method void setFilters(array $Filters) 设置过滤条件。
+<li>Keywords - String - 是否必填：否 - 查询关键字(机器名称/机器IP </li>
+<li>Status - String - 是否必填：否 - 客户端在线状态（OFFLINE: 离线 | ONLINE: 在线 | UNINSTALLED：未安装 | SHUTDOWN 已关机）</li>
+<li>Version - String  是否必填：否 - 当前防护版本（ PRO_VERSION：专业版 | BASIC_VERSION：基础版）</li>
+<li>Risk - String 是否必填: 否 - 风险主机( yes ) </li>
+<li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )
+每个过滤条件只支持一个值，暂不支持多个值“或”关系查询
  */
 class DescribeTagsRequest extends AbstractModel
 {
@@ -44,10 +58,28 @@ class DescribeTagsRequest extends AbstractModel
     public $MachineRegion;
 
     /**
+     * @var array 过滤条件。
+<li>Keywords - String - 是否必填：否 - 查询关键字(机器名称/机器IP </li>
+<li>Status - String - 是否必填：否 - 客户端在线状态（OFFLINE: 离线 | ONLINE: 在线 | UNINSTALLED：未安装 | SHUTDOWN 已关机）</li>
+<li>Version - String  是否必填：否 - 当前防护版本（ PRO_VERSION：专业版 | BASIC_VERSION：基础版）</li>
+<li>Risk - String 是否必填: 否 - 风险主机( yes ) </li>
+<li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )
+每个过滤条件只支持一个值，暂不支持多个值“或”关系查询
+     */
+    public $Filters;
+
+    /**
      * @param string $MachineType 云主机类型。
 <li>CVM：表示虚拟主机</li>
 <li>BM:  表示黑石物理机</li>
      * @param string $MachineRegion 机器所属地域。如：ap-guangzhou，ap-shanghai
+     * @param array $Filters 过滤条件。
+<li>Keywords - String - 是否必填：否 - 查询关键字(机器名称/机器IP </li>
+<li>Status - String - 是否必填：否 - 客户端在线状态（OFFLINE: 离线 | ONLINE: 在线 | UNINSTALLED：未安装 | SHUTDOWN 已关机）</li>
+<li>Version - String  是否必填：否 - 当前防护版本（ PRO_VERSION：专业版 | BASIC_VERSION：基础版）</li>
+<li>Risk - String 是否必填: 否 - 风险主机( yes ) </li>
+<li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )
+每个过滤条件只支持一个值，暂不支持多个值“或”关系查询
      */
     function __construct()
     {
@@ -68,6 +100,15 @@ class DescribeTagsRequest extends AbstractModel
 
         if (array_key_exists("MachineRegion",$param) and $param["MachineRegion"] !== null) {
             $this->MachineRegion = $param["MachineRegion"];
+        }
+
+        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+            $this->Filters = [];
+            foreach ($param["Filters"] as $key => $value){
+                $obj = new Filters();
+                $obj->deserialize($value);
+                array_push($this->Filters, $obj);
+            }
         }
     }
 }

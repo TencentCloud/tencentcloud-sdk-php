@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVersionName(string $VersionName) 设置版本名称（只有Result为succ的时候，才会返回VersionName)
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRunId() 获取操作记录id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRunId(string $RunId) 设置操作记录id
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -46,6 +50,12 @@ class CreateCloudBaseRunServerVersionResponse extends AbstractModel
     public $VersionName;
 
     /**
+     * @var string 操作记录id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RunId;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -54,6 +64,8 @@ class CreateCloudBaseRunServerVersionResponse extends AbstractModel
      * @param string $Result 状态(creating/succ)
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VersionName 版本名称（只有Result为succ的时候，才会返回VersionName)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RunId 操作记录id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -76,6 +88,10 @@ class CreateCloudBaseRunServerVersionResponse extends AbstractModel
 
         if (array_key_exists("VersionName",$param) and $param["VersionName"] !== null) {
             $this->VersionName = $param["VersionName"];
+        }
+
+        if (array_key_exists("RunId",$param) and $param["RunId"] !== null) {
+            $this->RunId = $param["RunId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

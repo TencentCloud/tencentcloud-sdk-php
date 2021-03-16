@@ -28,10 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRule(string $Rule) 设置正则表达式
  * @method integer getId() 获取规则ID(新增时不填)
  * @method void setId(integer $Id) 设置规则ID(新增时不填)
- * @method string getUuid() 获取客户端ID(IsGlobal为1时，Uuid或Hostip必填一个)
- * @method void setUuid(string $Uuid) 设置客户端ID(IsGlobal为1时，Uuid或Hostip必填一个)
- * @method string getHostip() 获取主机IP(IsGlobal为1时，Uuid或Hostip必填一个)
- * @method void setHostip(string $Hostip) 设置主机IP(IsGlobal为1时，Uuid或Hostip必填一个)
+ * @method string getUuid() 获取客户端ID(IsGlobal为0时，Uuid或Hostip必填一个)
+ * @method void setUuid(string $Uuid) 设置客户端ID(IsGlobal为0时，Uuid或Hostip必填一个)
+ * @method string getHostip() 获取主机IP(IsGlobal为0时，Uuid或Hostip必填一个)
+ * @method void setHostip(string $Hostip) 设置主机IP(IsGlobal为0时，Uuid或Hostip必填一个)
  * @method integer getIsGlobal() 获取是否全局规则(默认否)
  * @method void setIsGlobal(integer $IsGlobal) 设置是否全局规则(默认否)
  */
@@ -58,12 +58,12 @@ class EditBashRuleRequest extends AbstractModel
     public $Id;
 
     /**
-     * @var string 客户端ID(IsGlobal为1时，Uuid或Hostip必填一个)
+     * @var string 客户端ID(IsGlobal为0时，Uuid或Hostip必填一个)
      */
     public $Uuid;
 
     /**
-     * @var string 主机IP(IsGlobal为1时，Uuid或Hostip必填一个)
+     * @var string 主机IP(IsGlobal为0时，Uuid或Hostip必填一个)
      */
     public $Hostip;
 
@@ -77,8 +77,8 @@ class EditBashRuleRequest extends AbstractModel
      * @param integer $Level 危险等级(1: 高危 2:中危 3: 低危)
      * @param string $Rule 正则表达式
      * @param integer $Id 规则ID(新增时不填)
-     * @param string $Uuid 客户端ID(IsGlobal为1时，Uuid或Hostip必填一个)
-     * @param string $Hostip 主机IP(IsGlobal为1时，Uuid或Hostip必填一个)
+     * @param string $Uuid 客户端ID(IsGlobal为0时，Uuid或Hostip必填一个)
+     * @param string $Hostip 主机IP(IsGlobal为0时，Uuid或Hostip必填一个)
      * @param integer $IsGlobal 是否全局规则(默认否)
      */
     function __construct()

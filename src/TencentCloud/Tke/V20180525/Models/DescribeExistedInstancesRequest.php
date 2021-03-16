@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。关于Offset的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
  * @method integer getLimit() 获取返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
  * @method void setLimit(integer $Limit) 设置返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
+ * @method array getIpAddresses() 获取根据多个实例IP进行过滤
+ * @method void setIpAddresses(array $IpAddresses) 设置根据多个实例IP进行过滤
  */
 class DescribeExistedInstancesRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class DescribeExistedInstancesRequest extends AbstractModel
     public $Limit;
 
     /**
+     * @var array 根据多个实例IP进行过滤
+     */
+    public $IpAddresses;
+
+    /**
      * @param string $ClusterId 集群 ID，请填写查询集群列表 接口中返回的 ClusterId 字段（仅通过ClusterId获取需要过滤条件中的VPCID。节点状态比较时会使用该地域下所有集群中的节点进行比较。参数不支持同时指定InstanceIds和ClusterId。
      * @param array $InstanceIds 按照一个或者多个实例ID查询。实例ID形如：ins-xxxxxxxx。（此参数的具体格式可参考API简介的id.N一节）。每次请求的实例的上限为100。参数不支持同时指定InstanceIds和Filters。
      * @param array $Filters 过滤条件,字段和详见[CVM查询实例](https://cloud.tencent.com/document/api/213/15728)如果设置了ClusterId，会附加集群的VPCID作为查询字段，在此情况下如果在Filter中指定了"vpc-id"作为过滤字段，指定的VPCID必须与集群的VPCID相同。
@@ -80,6 +87,7 @@ class DescribeExistedInstancesRequest extends AbstractModel
      * @param string $VagueInstanceName 实例名称进行过滤
      * @param integer $Offset 偏移量，默认为0。关于Offset的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
      * @param integer $Limit 返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
+     * @param array $IpAddresses 根据多个实例IP进行过滤
      */
     function __construct()
     {
@@ -125,6 +133,10 @@ class DescribeExistedInstancesRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("IpAddresses",$param) and $param["IpAddresses"] !== null) {
+            $this->IpAddresses = $param["IpAddresses"];
         }
     }
 }

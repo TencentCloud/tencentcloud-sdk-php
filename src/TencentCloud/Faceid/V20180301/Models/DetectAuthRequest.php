@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
 Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
  * @method void setImageBase64(string $ImageBase64) 设置用于人脸比对的照片，图片的Base64值；
 Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
+ * @method Encryption getEncryption() 获取敏感数据加密信息。对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+ * @method void setEncryption(Encryption $Encryption) 设置敏感数据加密信息。对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。
  */
 class DetectAuthRequest extends AbstractModel
 {
@@ -79,6 +81,11 @@ Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。请
     public $ImageBase64;
 
     /**
+     * @var Encryption 敏感数据加密信息。对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+     */
+    public $Encryption;
+
+    /**
      * @param string $RuleId 用于细分客户使用场景，申请开通服务后，可以在腾讯云慧眼人脸核身控制台（https://console.cloud.tencent.com/faceid） 自助接入里面创建，审核通过后即可调用。如有疑问，请加慧眼小助手微信（faceid001）进行咨询。
      * @param string $TerminalType 本接口不需要传递此参数。
      * @param string $IdCard 身份标识（未使用OCR服务时，必须传入）。
@@ -88,6 +95,7 @@ Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。请
      * @param string $Extra 透传字段，在获取验证结果时返回。
      * @param string $ImageBase64 用于人脸比对的照片，图片的Base64值；
 Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
+     * @param Encryption $Encryption 敏感数据加密信息。对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。
      */
     function __construct()
     {
@@ -128,6 +136,11 @@ Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。请
 
         if (array_key_exists("ImageBase64",$param) and $param["ImageBase64"] !== null) {
             $this->ImageBase64 = $param["ImageBase64"];
+        }
+
+        if (array_key_exists("Encryption",$param) and $param["Encryption"] !== null) {
+            $this->Encryption = new Encryption();
+            $this->Encryption->deserialize($param["Encryption"]);
         }
     }
 }

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getEnvironmentId() 获取环境（命名空间）名称。
  * @method void setEnvironmentId(string $EnvironmentId) 设置环境（命名空间）名称。
- * @method string getTopicName() 获取主题名，不支持中字以及除了短线和下划线外的特殊字符且不超过32个字符。
- * @method void setTopicName(string $TopicName) 设置主题名，不支持中字以及除了短线和下划线外的特殊字符且不超过32个字符。
+ * @method string getTopicName() 获取主题名，不支持中字以及除了短线和下划线外的特殊字符且不超过64个字符。
+ * @method void setTopicName(string $TopicName) 设置主题名，不支持中字以及除了短线和下划线外的特殊字符且不超过64个字符。
  * @method integer getPartitions() 获取0：非分区topic，无分区；非0：具体分区topic的分区数，最大不允许超过128。
  * @method void setPartitions(integer $Partitions) 设置0：非分区topic，无分区；非0：具体分区topic的分区数，最大不允许超过128。
  * @method integer getTopicType() 获取0： 普通消息；
@@ -51,7 +51,7 @@ class CreateTopicRequest extends AbstractModel
     public $EnvironmentId;
 
     /**
-     * @var string 主题名，不支持中字以及除了短线和下划线外的特殊字符且不超过32个字符。
+     * @var string 主题名，不支持中字以及除了短线和下划线外的特殊字符且不超过64个字符。
      */
     public $TopicName;
 
@@ -82,7 +82,7 @@ class CreateTopicRequest extends AbstractModel
 
     /**
      * @param string $EnvironmentId 环境（命名空间）名称。
-     * @param string $TopicName 主题名，不支持中字以及除了短线和下划线外的特殊字符且不超过32个字符。
+     * @param string $TopicName 主题名，不支持中字以及除了短线和下划线外的特殊字符且不超过64个字符。
      * @param integer $Partitions 0：非分区topic，无分区；非0：具体分区topic的分区数，最大不允许超过128。
      * @param integer $TopicType 0： 普通消息；
 1 ：全局顺序消息；

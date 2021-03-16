@@ -84,6 +84,7 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\DescribeProcessesResponse DescribeProcesses(Models\DescribeProcessesRequest $req) 本接口 (DescribeProcesses) 用于获取进程列表数据。
  * @method Models\DescribeReverseShellEventsResponse DescribeReverseShellEvents(Models\DescribeReverseShellEventsRequest $req) 获取反弹Shell列表
  * @method Models\DescribeReverseShellRulesResponse DescribeReverseShellRules(Models\DescribeReverseShellRulesRequest $req) 获取反弹Shell规则列表
+ * @method Models\DescribeRiskDnsListResponse DescribeRiskDnsList(Models\DescribeRiskDnsListRequest $req) 入侵检测，获取恶意请求列表
  * @method Models\DescribeScanMalwareScheduleResponse DescribeScanMalwareSchedule(Models\DescribeScanMalwareScheduleRequest $req) 查询木马扫描进度
  * @method Models\DescribeSecurityDynamicsResponse DescribeSecurityDynamics(Models\DescribeSecurityDynamicsRequest $req) 本接口 (DescribeSecurityDynamics) 用于获取安全事件消息数据。
  * @method Models\DescribeSecurityEventsCntResponse DescribeSecurityEventsCnt(Models\DescribeSecurityEventsCntRequest $req) 概览页抽屉侧边弹窗：安全概览“立即处理”页面中的相关事件数统计接口。
@@ -135,6 +136,7 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\TrustMalwaresResponse TrustMalwares(Models\TrustMalwaresRequest $req) 本接口(TrustMalwares)将被识别木马文件设为信任。
  * @method Models\UntrustMaliciousRequestResponse UntrustMaliciousRequest(Models\UntrustMaliciousRequestRequest $req) 本接口 (UntrustMaliciousRequest) 用于取消信任恶意请求。
  * @method Models\UntrustMalwaresResponse UntrustMalwares(Models\UntrustMalwaresRequest $req) 本接口（UntrustMalwares）用于取消信任木马文件。
+ * @method Models\UpdateBaselineStrategyResponse UpdateBaselineStrategy(Models\UpdateBaselineStrategyRequest $req) 根据基线策略id更新策略信息
  */
 
 class CwpClient extends AbstractClient

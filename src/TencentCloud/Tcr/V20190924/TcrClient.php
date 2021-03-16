@@ -52,6 +52,7 @@ use TencentCloud\Tcr\V20190924\Models as Models;
  * @method Models\DeleteWebhookTriggerResponse DeleteWebhookTrigger(Models\DeleteWebhookTriggerRequest $req) 删除触发器
  * @method Models\DescribeApplicationTriggerLogPersonalResponse DescribeApplicationTriggerLogPersonal(Models\DescribeApplicationTriggerLogPersonalRequest $req) 用于查询应用更新触发器触发日志
  * @method Models\DescribeApplicationTriggerPersonalResponse DescribeApplicationTriggerPersonal(Models\DescribeApplicationTriggerPersonalRequest $req) 用于查询应用更新触发器
+ * @method Models\DescribeExternalEndpointStatusResponse DescribeExternalEndpointStatus(Models\DescribeExternalEndpointStatusRequest $req) 查询实例公网访问入口状态
  * @method Models\DescribeFavorRepositoryPersonalResponse DescribeFavorRepositoryPersonal(Models\DescribeFavorRepositoryPersonalRequest $req) 查询个人收藏仓库
  * @method Models\DescribeImageFilterPersonalResponse DescribeImageFilterPersonal(Models\DescribeImageFilterPersonalRequest $req) 用于在个人版中查询与指定tag镜像内容相同的tag列表
  * @method Models\DescribeImageLifecycleGlobalPersonalResponse DescribeImageLifecycleGlobalPersonal(Models\DescribeImageLifecycleGlobalPersonalRequest $req) 用于获取个人版全局镜像版本自动清理策略

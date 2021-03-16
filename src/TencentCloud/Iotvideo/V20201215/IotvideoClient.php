@@ -25,6 +25,7 @@ use TencentCloud\Iotvideo\V20201215\Models as Models;
 /**
  * @method Models\CheckForwardAuthResponse CheckForwardAuth(Models\CheckForwardAuthRequest $req) 判断是否开启的转发的权限
  * @method Models\CreateBatchResponse CreateBatch(Models\CreateBatchRequest $req) 创建批次
+ * @method Models\CreateCloudStorageResponse CreateCloudStorage(Models\CreateCloudStorageRequest $req) 开通云存服务
  * @method Models\CreateForwardRuleResponse CreateForwardRule(Models\CreateForwardRuleRequest $req) 创建转发规则
  * @method Models\CreateProductResponse CreateProduct(Models\CreateProductRequest $req) 创建产品
  * @method Models\DeleteDeviceResponse DeleteDevice(Models\DeleteDeviceRequest $req) 删除设备
@@ -33,6 +34,11 @@ use TencentCloud\Iotvideo\V20201215\Models as Models;
  * @method Models\DescribeBatchResponse DescribeBatch(Models\DescribeBatchRequest $req) 获取批次详情
  * @method Models\DescribeBatchsResponse DescribeBatchs(Models\DescribeBatchsRequest $req) 获取批次列表
  * @method Models\DescribeCategoryResponse DescribeCategory(Models\DescribeCategoryRequest $req) 获取Category详情
+ * @method Models\DescribeCloudStorageResponse DescribeCloudStorage(Models\DescribeCloudStorageRequest $req) 获取设备云存服务详情
+ * @method Models\DescribeCloudStorageDateResponse DescribeCloudStorageDate(Models\DescribeCloudStorageDateRequest $req) 获取具有云存的日期
+ * @method Models\DescribeCloudStorageEventsResponse DescribeCloudStorageEvents(Models\DescribeCloudStorageEventsRequest $req) 拉取云存事件列表
+ * @method Models\DescribeCloudStorageThumbnailResponse DescribeCloudStorageThumbnail(Models\DescribeCloudStorageThumbnailRequest $req) 拉取云存事件缩略图
+ * @method Models\DescribeCloudStorageTimeResponse DescribeCloudStorageTime(Models\DescribeCloudStorageTimeRequest $req) 获取某一天云存时间轴
  * @method Models\DescribeDeviceResponse DescribeDevice(Models\DescribeDeviceRequest $req) 查看设备详情
  * @method Models\DescribeDeviceActionHistoryResponse DescribeDeviceActionHistory(Models\DescribeDeviceActionHistoryRequest $req) 为用户提供获取动作历史的能力。
  * @method Models\DescribeDeviceCommLogResponse DescribeDeviceCommLog(Models\DescribeDeviceCommLogRequest $req) 获取设备在指定时间范围内的通讯日志

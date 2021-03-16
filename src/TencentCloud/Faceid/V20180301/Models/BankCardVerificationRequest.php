@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
 目前默认：0 身份证，其他证件类型需求可以联系小助手faceid001确认。
  * @method void setCertType(integer $CertType) 设置证件类型，请确认该证件为开户时使用的证件类型，未用于开户的证件信息不支持验证。
 目前默认：0 身份证，其他证件类型需求可以联系小助手faceid001确认。
+ * @method Encryption getEncryption() 获取敏感数据加密信息。对传入信息（姓名、身份证号、银行卡号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+ * @method void setEncryption(Encryption $Encryption) 设置敏感数据加密信息。对传入信息（姓名、身份证号、银行卡号）有加密需求的用户可使用此参数，详情请点击左侧链接。
  */
 class BankCardVerificationRequest extends AbstractModel
 {
@@ -55,11 +57,17 @@ class BankCardVerificationRequest extends AbstractModel
     public $CertType;
 
     /**
+     * @var Encryption 敏感数据加密信息。对传入信息（姓名、身份证号、银行卡号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+     */
+    public $Encryption;
+
+    /**
      * @param string $IdCard 开户证件号，与CertType参数的证件类型一致，如：身份证，则传入身份证号。
      * @param string $Name 姓名
      * @param string $BankCard 银行卡
      * @param integer $CertType 证件类型，请确认该证件为开户时使用的证件类型，未用于开户的证件信息不支持验证。
 目前默认：0 身份证，其他证件类型需求可以联系小助手faceid001确认。
+     * @param Encryption $Encryption 敏感数据加密信息。对传入信息（姓名、身份证号、银行卡号）有加密需求的用户可使用此参数，详情请点击左侧链接。
      */
     function __construct()
     {
@@ -88,6 +96,11 @@ class BankCardVerificationRequest extends AbstractModel
 
         if (array_key_exists("CertType",$param) and $param["CertType"] !== null) {
             $this->CertType = $param["CertType"];
+        }
+
+        if (array_key_exists("Encryption",$param) and $param["Encryption"] !== null) {
+            $this->Encryption = new Encryption();
+            $this->Encryption->deserialize($param["Encryption"]);
         }
     }
 }

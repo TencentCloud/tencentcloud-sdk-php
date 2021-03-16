@@ -46,6 +46,7 @@ use TencentCloud\Scf\V20180416\Models as Models;
  * @method Models\GetAliasResponse GetAlias(Models\GetAliasRequest $req) 获取别名的详细信息，包括名称、描述、版本、路由信息等。
  * @method Models\GetFunctionResponse GetFunction(Models\GetFunctionRequest $req) 该接口获取某个函数的详细信息，包括名称、代码、处理方法、关联触发器和超时时间等字段。
  * @method Models\GetFunctionAddressResponse GetFunctionAddress(Models\GetFunctionAddressRequest $req) 该接口用于获取函数代码包的下载地址。
+ * @method Models\GetFunctionEventInvokeConfigResponse GetFunctionEventInvokeConfig(Models\GetFunctionEventInvokeConfigRequest $req) 获取函数异步重试配置，包括重试次数和消息保留时间
  * @method Models\GetFunctionLogsResponse GetFunctionLogs(Models\GetFunctionLogsRequest $req) 该接口根据指定的日志查询条件返回函数运行日志。
  * @method Models\GetLayerVersionResponse GetLayerVersion(Models\GetLayerVersionRequest $req) 获取层版本详细信息，包括用于下载层中文件的链接。
  * @method Models\GetProvisionedConcurrencyConfigResponse GetProvisionedConcurrencyConfig(Models\GetProvisionedConcurrencyConfigRequest $req) 获取函数或函数某一版本的预置并发详情。
@@ -68,6 +69,7 @@ use TencentCloud\Scf\V20180416\Models as Models;
  * @method Models\UpdateAliasResponse UpdateAlias(Models\UpdateAliasRequest $req) 更新别名的配置
  * @method Models\UpdateFunctionCodeResponse UpdateFunctionCode(Models\UpdateFunctionCodeRequest $req) 该接口根据传入参数更新函数代码。
  * @method Models\UpdateFunctionConfigurationResponse UpdateFunctionConfiguration(Models\UpdateFunctionConfigurationRequest $req) 该接口根据传入参数更新函数配置。
+ * @method Models\UpdateFunctionEventInvokeConfigResponse UpdateFunctionEventInvokeConfig(Models\UpdateFunctionEventInvokeConfigRequest $req) 更新函数的异步重试配置，包括重试次数和消息保留时间
  * @method Models\UpdateNamespaceResponse UpdateNamespace(Models\UpdateNamespaceRequest $req) 更新命名空间
  */
 

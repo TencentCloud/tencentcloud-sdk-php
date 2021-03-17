@@ -24,22 +24,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPlatform(string $Platform) 设置平台名称，指定访问的平台。
  * @method array getSearchScopes() 获取指定搜索空间，数组长度不得超过5。
  * @method void setSearchScopes(array $SearchScopes) 设置指定搜索空间，数组长度不得超过5。
- * @method array getMaterialTypes() 获取素材类型，取值：
+ * @method array getMaterialTypes() 获取媒体类型，取值：
 <li>AUDIO：音频；</li>
 <li>VIDEO：视频 ；</li>
 <li>IMAGE：图片。</li>
- * @method void setMaterialTypes(array $MaterialTypes) 设置素材类型，取值：
+ * @method void setMaterialTypes(array $MaterialTypes) 设置媒体类型，取值：
 <li>AUDIO：音频；</li>
 <li>VIDEO：视频 ；</li>
 <li>IMAGE：图片。</li>
- * @method string getText() 获取搜索文本，模糊匹配素材名称或描述信息，匹配项越多，匹配度越高，排序越优先。长度限制：15个字符。
- * @method void setText(string $Text) 设置搜索文本，模糊匹配素材名称或描述信息，匹配项越多，匹配度越高，排序越优先。长度限制：15个字符。
+ * @method string getText() 获取搜索文本，模糊匹配媒体名称或描述信息，匹配项越多，匹配度越高，排序越优先。长度限制：15个字符。
+ * @method void setText(string $Text) 设置搜索文本，模糊匹配媒体名称或描述信息，匹配项越多，匹配度越高，排序越优先。长度限制：15个字符。
  * @method string getResolution() 获取按画质检索，取值为：LD/SD/HD/FHD/2K/4K。
  * @method void setResolution(string $Resolution) 设置按画质检索，取值为：LD/SD/HD/FHD/2K/4K。
- * @method IntegerRange getDurationRange() 获取按素材时长检索，单位s。
- * @method void setDurationRange(IntegerRange $DurationRange) 设置按素材时长检索，单位s。
- * @method TimeRange getCreateTimeRange() 获取按照素材创建时间检索。
- * @method void setCreateTimeRange(TimeRange $CreateTimeRange) 设置按照素材创建时间检索。
+ * @method IntegerRange getDurationRange() 获取按媒体时长检索，单位s。
+ * @method void setDurationRange(IntegerRange $DurationRange) 设置按媒体时长检索，单位s。
+ * @method TimeRange getCreateTimeRange() 获取按照媒体创建时间检索。
+ * @method void setCreateTimeRange(TimeRange $CreateTimeRange) 设置按照媒体创建时间检索。
  * @method array getTags() 获取按标签检索，填入检索的标签名。
  * @method void setTags(array $Tags) 设置按标签检索，填入检索的标签名。
  * @method SortBy getSort() 获取排序方式。Sort.Field 可选值：CreateTime。指定 Text 搜索时，将根据匹配度排序，该字段无效。
@@ -48,8 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量。默认值：0。
  * @method integer getLimit() 获取返回记录条数，默认值：50。
  * @method void setLimit(integer $Limit) 设置返回记录条数，默认值：50。
- * @method string getOperator() 获取操作者。填写用户的 Id，用于标识调用者及校验操作权限。
- * @method void setOperator(string $Operator) 设置操作者。填写用户的 Id，用于标识调用者及校验操作权限。
+ * @method string getOperator() 获取操作者。填写用户的 Id，用于标识调用者及校验媒体访问权限。
+ * @method void setOperator(string $Operator) 设置操作者。填写用户的 Id，用于标识调用者及校验媒体访问权限。
  */
 class SearchMaterialRequest extends AbstractModel
 {
@@ -64,7 +64,7 @@ class SearchMaterialRequest extends AbstractModel
     public $SearchScopes;
 
     /**
-     * @var array 素材类型，取值：
+     * @var array 媒体类型，取值：
 <li>AUDIO：音频；</li>
 <li>VIDEO：视频 ；</li>
 <li>IMAGE：图片。</li>
@@ -72,7 +72,7 @@ class SearchMaterialRequest extends AbstractModel
     public $MaterialTypes;
 
     /**
-     * @var string 搜索文本，模糊匹配素材名称或描述信息，匹配项越多，匹配度越高，排序越优先。长度限制：15个字符。
+     * @var string 搜索文本，模糊匹配媒体名称或描述信息，匹配项越多，匹配度越高，排序越优先。长度限制：15个字符。
      */
     public $Text;
 
@@ -82,12 +82,12 @@ class SearchMaterialRequest extends AbstractModel
     public $Resolution;
 
     /**
-     * @var IntegerRange 按素材时长检索，单位s。
+     * @var IntegerRange 按媒体时长检索，单位s。
      */
     public $DurationRange;
 
     /**
-     * @var TimeRange 按照素材创建时间检索。
+     * @var TimeRange 按照媒体创建时间检索。
      */
     public $CreateTimeRange;
 
@@ -112,26 +112,26 @@ class SearchMaterialRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string 操作者。填写用户的 Id，用于标识调用者及校验操作权限。
+     * @var string 操作者。填写用户的 Id，用于标识调用者及校验媒体访问权限。
      */
     public $Operator;
 
     /**
      * @param string $Platform 平台名称，指定访问的平台。
      * @param array $SearchScopes 指定搜索空间，数组长度不得超过5。
-     * @param array $MaterialTypes 素材类型，取值：
+     * @param array $MaterialTypes 媒体类型，取值：
 <li>AUDIO：音频；</li>
 <li>VIDEO：视频 ；</li>
 <li>IMAGE：图片。</li>
-     * @param string $Text 搜索文本，模糊匹配素材名称或描述信息，匹配项越多，匹配度越高，排序越优先。长度限制：15个字符。
+     * @param string $Text 搜索文本，模糊匹配媒体名称或描述信息，匹配项越多，匹配度越高，排序越优先。长度限制：15个字符。
      * @param string $Resolution 按画质检索，取值为：LD/SD/HD/FHD/2K/4K。
-     * @param IntegerRange $DurationRange 按素材时长检索，单位s。
-     * @param TimeRange $CreateTimeRange 按照素材创建时间检索。
+     * @param IntegerRange $DurationRange 按媒体时长检索，单位s。
+     * @param TimeRange $CreateTimeRange 按照媒体创建时间检索。
      * @param array $Tags 按标签检索，填入检索的标签名。
      * @param SortBy $Sort 排序方式。Sort.Field 可选值：CreateTime。指定 Text 搜索时，将根据匹配度排序，该字段无效。
      * @param integer $Offset 偏移量。默认值：0。
      * @param integer $Limit 返回记录条数，默认值：50。
-     * @param string $Operator 操作者。填写用户的 Id，用于标识调用者及校验操作权限。
+     * @param string $Operator 操作者。填写用户的 Id，用于标识调用者及校验媒体访问权限。
      */
     function __construct()
     {

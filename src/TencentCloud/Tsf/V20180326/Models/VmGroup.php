@@ -144,6 +144,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHealthCheckSettings(HealthCheckSettings $HealthCheckSettings) 设置健康检查配置
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPackageType() 获取程序包类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPackageType(string $PackageType) 设置程序包类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getStartScript() 获取启动脚本 base64编码
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStartScript(string $StartScript) 设置启动脚本 base64编码
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getStopScript() 获取停止脚本 base64编码
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStopScript(string $StopScript) 设置停止脚本 base64编码
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class VmGroup extends AbstractModel
 {
@@ -334,6 +346,24 @@ class VmGroup extends AbstractModel
     public $HealthCheckSettings;
 
     /**
+     * @var string 程序包类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PackageType;
+
+    /**
+     * @var string 启动脚本 base64编码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $StartScript;
+
+    /**
+     * @var string 停止脚本 base64编码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $StopScript;
+
+    /**
      * @param string $GroupId 部署组ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GroupName 部署组名称
@@ -395,6 +425,12 @@ class VmGroup extends AbstractModel
      * @param boolean $EnableHealthCheck 是否开启了健康检查
 注意：此字段可能返回 null，表示取不到有效值。
      * @param HealthCheckSettings $HealthCheckSettings 健康检查配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $PackageType 程序包类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $StartScript 启动脚本 base64编码
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $StopScript 停止脚本 base64编码
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -533,6 +569,18 @@ class VmGroup extends AbstractModel
         if (array_key_exists("HealthCheckSettings",$param) and $param["HealthCheckSettings"] !== null) {
             $this->HealthCheckSettings = new HealthCheckSettings();
             $this->HealthCheckSettings->deserialize($param["HealthCheckSettings"]);
+        }
+
+        if (array_key_exists("PackageType",$param) and $param["PackageType"] !== null) {
+            $this->PackageType = $param["PackageType"];
+        }
+
+        if (array_key_exists("StartScript",$param) and $param["StartScript"] !== null) {
+            $this->StartScript = $param["StartScript"];
+        }
+
+        if (array_key_exists("StopScript",$param) and $param["StopScript"] !== null) {
+            $this->StopScript = $param["StopScript"];
         }
     }
 }

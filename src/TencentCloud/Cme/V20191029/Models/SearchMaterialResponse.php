@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getTotalCount() 获取符合记录总条数。
  * @method void setTotalCount(integer $TotalCount) 设置符合记录总条数。
- * @method array getMaterialInfoSet() 获取素材信息，仅返回基础信息。
- * @method void setMaterialInfoSet(array $MaterialInfoSet) 设置素材信息，仅返回基础信息。
+ * @method array getMaterialInfoSet() 获取媒体信息，仅返回基础信息。
+ * @method void setMaterialInfoSet(array $MaterialInfoSet) 设置媒体信息，仅返回基础信息。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -35,7 +35,7 @@ class SearchMaterialResponse extends AbstractModel
     public $TotalCount;
 
     /**
-     * @var array 素材信息，仅返回基础信息。
+     * @var array 媒体信息，仅返回基础信息。
      */
     public $MaterialInfoSet;
 
@@ -46,7 +46,7 @@ class SearchMaterialResponse extends AbstractModel
 
     /**
      * @param integer $TotalCount 符合记录总条数。
-     * @param array $MaterialInfoSet 素材信息，仅返回基础信息。
+     * @param array $MaterialInfoSet 媒体信息，仅返回基础信息。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -39,6 +39,7 @@ use TencentCloud\Common\AbstractModel;
 <li>militant：武装分子。</li>
 <li>explosion：爆炸火灾。</li>
 <li>terrorists：暴恐人物。</li>
+<li>scenario：暴恐画面。</li>
  * @method void setLabel(string $Label) 设置视频暴恐结果标签，取值范围：
 <li>guns：武器枪支。</li>
 <li>crowd：人群聚集。</li>
@@ -48,6 +49,7 @@ use TencentCloud\Common\AbstractModel;
 <li>militant：武装分子。</li>
 <li>explosion：爆炸火灾。</li>
 <li>terrorists：暴恐人物。</li>
+<li>scenario：暴恐画面。</li>
  * @method array getSegmentSet() 获取有暴恐嫌疑的视频片段列表。
  * @method void setSegmentSet(array $SegmentSet) 设置有暴恐嫌疑的视频片段列表。
  */
@@ -76,6 +78,7 @@ class AiReviewTerrorismTaskOutput extends AbstractModel
 <li>militant：武装分子。</li>
 <li>explosion：爆炸火灾。</li>
 <li>terrorists：暴恐人物。</li>
+<li>scenario：暴恐画面。</li>
      */
     public $Label;
 
@@ -99,6 +102,7 @@ class AiReviewTerrorismTaskOutput extends AbstractModel
 <li>militant：武装分子。</li>
 <li>explosion：爆炸火灾。</li>
 <li>terrorists：暴恐人物。</li>
+<li>scenario：暴恐画面。</li>
      * @param array $SegmentSet 有暴恐嫌疑的视频片段列表。
      */
     function __construct()

@@ -26,8 +26,13 @@ use TencentCloud\Tbaas\V20180416\Models as Models;
  * @method Models\ApplyUserCertResponse ApplyUserCert(Models\ApplyUserCertRequest $req) 申请用户证书
  * @method Models\BlockByNumberHandlerResponse BlockByNumberHandler(Models\BlockByNumberHandlerRequest $req) Bcos根据块高查询区块信息
  * @method Models\CreateChaincodeAndInstallForUserResponse CreateChaincodeAndInstallForUser(Models\CreateChaincodeAndInstallForUserRequest $req) 创建并安装合约
+ * @method Models\DeployDynamicBcosContractResponse DeployDynamicBcosContract(Models\DeployDynamicBcosContractRequest $req) 动态部署并发布Bcos合约
  * @method Models\DeployDynamicContractHandlerResponse DeployDynamicContractHandler(Models\DeployDynamicContractHandlerRequest $req) 动态部署合约
  * @method Models\DownloadUserCertResponse DownloadUserCert(Models\DownloadUserCertRequest $req) 下载用户证书
+ * @method Models\GetBcosBlockByNumberResponse GetBcosBlockByNumber(Models\GetBcosBlockByNumberRequest $req) 使用块高查询Bcos区块信息
+ * @method Models\GetBcosBlockListResponse GetBcosBlockList(Models\GetBcosBlockListRequest $req) Bcos分页查询当前群组下的区块列表
+ * @method Models\GetBcosTransByHashResponse GetBcosTransByHash(Models\GetBcosTransByHashRequest $req) Bcos根据交易哈希查看交易详细信息
+ * @method Models\GetBcosTransListResponse GetBcosTransList(Models\GetBcosTransListRequest $req) Bcos分页查询当前群组的交易信息列表
  * @method Models\GetBlockListResponse GetBlockList(Models\GetBlockListRequest $req) 查看当前网络下的所有区块列表，分页展示
  * @method Models\GetBlockListHandlerResponse GetBlockListHandler(Models\GetBlockListHandlerRequest $req) Bcos分页查询当前群组下的区块列表
  * @method Models\GetBlockTransactionListForUserResponse GetBlockTransactionListForUser(Models\GetBlockTransactionListForUserRequest $req) 获取区块内的交易列表
@@ -45,6 +50,7 @@ use TencentCloud\Tbaas\V20180416\Models as Models;
  * @method Models\GetTransactionDetailForUserResponse GetTransactionDetailForUser(Models\GetTransactionDetailForUserRequest $req) 获取交易详情
  * @method Models\InitializeChaincodeForUserResponse InitializeChaincodeForUser(Models\InitializeChaincodeForUserRequest $req) 实例化合约
  * @method Models\InvokeResponse Invoke(Models\InvokeRequest $req) 新增交易
+ * @method Models\InvokeBcosTransResponse InvokeBcosTrans(Models\InvokeBcosTransRequest $req) 执行Bcos交易，支持动态部署的合约
  * @method Models\QueryResponse Query(Models\QueryRequest $req) 查询交易
  * @method Models\SendTransactionHandlerResponse SendTransactionHandler(Models\SendTransactionHandlerRequest $req) Bcos发送交易
  * @method Models\SrvInvokeResponse SrvInvoke(Models\SrvInvokeRequest $req) trustsql服务统一接口

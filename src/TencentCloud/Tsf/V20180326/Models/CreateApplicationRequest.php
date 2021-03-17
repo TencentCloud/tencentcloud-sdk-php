@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setApplicationRuntimeType(string $ApplicationRuntimeType) 设置应用runtime类型
  * @method string getProgramId() 获取需要绑定的数据集ID
  * @method void setProgramId(string $ProgramId) 设置需要绑定的数据集ID
+ * @method array getServiceConfigList() 获取服务配置信息列表
+ * @method void setServiceConfigList(array $ServiceConfigList) 设置服务配置信息列表
  */
 class CreateApplicationRequest extends AbstractModel
 {
@@ -80,6 +82,11 @@ class CreateApplicationRequest extends AbstractModel
     public $ProgramId;
 
     /**
+     * @var array 服务配置信息列表
+     */
+    public $ServiceConfigList;
+
+    /**
      * @param string $ApplicationName 应用名称
      * @param string $ApplicationType 应用类型，V：虚拟机应用；C：容器应用；S：serverless应用
      * @param string $MicroserviceType 应用微服务类型，M：service mesh应用；N：普通应用；G：网关应用
@@ -88,6 +95,7 @@ class CreateApplicationRequest extends AbstractModel
      * @param string $ApplicationResourceType 应用资源类型，废弃参数
      * @param string $ApplicationRuntimeType 应用runtime类型
      * @param string $ProgramId 需要绑定的数据集ID
+     * @param array $ServiceConfigList 服务配置信息列表
      */
     function __construct()
     {
@@ -132,6 +140,15 @@ class CreateApplicationRequest extends AbstractModel
 
         if (array_key_exists("ProgramId",$param) and $param["ProgramId"] !== null) {
             $this->ProgramId = $param["ProgramId"];
+        }
+
+        if (array_key_exists("ServiceConfigList",$param) and $param["ServiceConfigList"] !== null) {
+            $this->ServiceConfigList = [];
+            foreach ($param["ServiceConfigList"] as $key => $value){
+                $obj = new ServiceConfig();
+                $obj->deserialize($value);
+                array_push($this->ServiceConfigList, $obj);
+            }
         }
     }
 }

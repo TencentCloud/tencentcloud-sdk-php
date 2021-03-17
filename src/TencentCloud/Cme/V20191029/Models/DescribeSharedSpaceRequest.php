@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getPlatform() 获取平台名称，指定访问的平台。
  * @method void setPlatform(string $Platform) 设置平台名称，指定访问的平台。
- * @method Entity getAuthorizee() 获取被授权目标实体。
- * @method void setAuthorizee(Entity $Authorizee) 设置被授权目标实体。
+ * @method Entity getAuthorizee() 获取被授权目标,，个人或团队。
+ * @method void setAuthorizee(Entity $Authorizee) 设置被授权目标,，个人或团队。
  * @method string getOperator() 获取操作者。填写用户的 Id，用于标识调用者及校验操作权限。
  * @method void setOperator(string $Operator) 设置操作者。填写用户的 Id，用于标识调用者及校验操作权限。
  */
@@ -35,7 +35,7 @@ class DescribeSharedSpaceRequest extends AbstractModel
     public $Platform;
 
     /**
-     * @var Entity 被授权目标实体。
+     * @var Entity 被授权目标,，个人或团队。
      */
     public $Authorizee;
 
@@ -46,7 +46,7 @@ class DescribeSharedSpaceRequest extends AbstractModel
 
     /**
      * @param string $Platform 平台名称，指定访问的平台。
-     * @param Entity $Authorizee 被授权目标实体。
+     * @param Entity $Authorizee 被授权目标,，个人或团队。
      * @param string $Operator 操作者。填写用户的 Id，用于标识调用者及校验操作权限。
      */
     function __construct()

@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPlatform(string $Platform) 设置平台名称，指定访问的平台。
  * @method string getTaskId() 获取任务 Id。
  * @method void setTaskId(string $TaskId) 设置任务 Id。
+ * @method string getOperator() 获取操作者。填写用户的 Id，用于标识调用者及校验对任务的访问权限。
+ * @method void setOperator(string $Operator) 设置操作者。填写用户的 Id，用于标识调用者及校验对任务的访问权限。
  */
 class DescribeTaskDetailRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class DescribeTaskDetailRequest extends AbstractModel
     public $TaskId;
 
     /**
+     * @var string 操作者。填写用户的 Id，用于标识调用者及校验对任务的访问权限。
+     */
+    public $Operator;
+
+    /**
      * @param string $Platform 平台名称，指定访问的平台。
      * @param string $TaskId 任务 Id。
+     * @param string $Operator 操作者。填写用户的 Id，用于标识调用者及校验对任务的访问权限。
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class DescribeTaskDetailRequest extends AbstractModel
 
         if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
             $this->TaskId = $param["TaskId"];
+        }
+
+        if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
+            $this->Operator = $param["Operator"];
         }
     }
 }

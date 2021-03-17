@@ -22,16 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getPlatform() 获取平台名称，指定访问的平台。
  * @method void setPlatform(string $Platform) 设置平台名称，指定访问的平台。
- * @method string getClassPath() 获取素材分类路径，例如填写"/a/b"，则代表平铺该分类路径下及其子分类路径下的素材信息。
- * @method void setClassPath(string $ClassPath) 设置素材分类路径，例如填写"/a/b"，则代表平铺该分类路径下及其子分类路径下的素材信息。
- * @method Entity getOwner() 获取素材路径的归属者。
- * @method void setOwner(Entity $Owner) 设置素材路径的归属者。
+ * @method string getClassPath() 获取媒体分类路径，例如填写"/a/b"，则代表平铺该分类路径下及其子分类路径下的媒体信息。
+ * @method void setClassPath(string $ClassPath) 设置媒体分类路径，例如填写"/a/b"，则代表平铺该分类路径下及其子分类路径下的媒体信息。
+ * @method Entity getOwner() 获取媒体分类的归属者。
+ * @method void setOwner(Entity $Owner) 设置媒体分类的归属者。
  * @method integer getOffset() 获取分页偏移量，默认值：0。
  * @method void setOffset(integer $Offset) 设置分页偏移量，默认值：0。
  * @method integer getLimit() 获取返回记录条数，默认值：10，最大值：50。
  * @method void setLimit(integer $Limit) 设置返回记录条数，默认值：10，最大值：50。
- * @method string getOperator() 获取操作者。填写用户的 Id，用于标识调用者及校验操作权限。
- * @method void setOperator(string $Operator) 设置操作者。填写用户的 Id，用于标识调用者及校验操作权限。
+ * @method string getOperator() 获取操作者。填写用户的 Id，用于标识调用者及校验媒体访问权限。
+ * @method void setOperator(string $Operator) 设置操作者。填写用户的 Id，用于标识调用者及校验媒体访问权限。
  */
 class FlattenListMediaRequest extends AbstractModel
 {
@@ -41,12 +41,12 @@ class FlattenListMediaRequest extends AbstractModel
     public $Platform;
 
     /**
-     * @var string 素材分类路径，例如填写"/a/b"，则代表平铺该分类路径下及其子分类路径下的素材信息。
+     * @var string 媒体分类路径，例如填写"/a/b"，则代表平铺该分类路径下及其子分类路径下的媒体信息。
      */
     public $ClassPath;
 
     /**
-     * @var Entity 素材路径的归属者。
+     * @var Entity 媒体分类的归属者。
      */
     public $Owner;
 
@@ -61,17 +61,17 @@ class FlattenListMediaRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string 操作者。填写用户的 Id，用于标识调用者及校验操作权限。
+     * @var string 操作者。填写用户的 Id，用于标识调用者及校验媒体访问权限。
      */
     public $Operator;
 
     /**
      * @param string $Platform 平台名称，指定访问的平台。
-     * @param string $ClassPath 素材分类路径，例如填写"/a/b"，则代表平铺该分类路径下及其子分类路径下的素材信息。
-     * @param Entity $Owner 素材路径的归属者。
+     * @param string $ClassPath 媒体分类路径，例如填写"/a/b"，则代表平铺该分类路径下及其子分类路径下的媒体信息。
+     * @param Entity $Owner 媒体分类的归属者。
      * @param integer $Offset 分页偏移量，默认值：0。
      * @param integer $Limit 返回记录条数，默认值：10，最大值：50。
-     * @param string $Operator 操作者。填写用户的 Id，用于标识调用者及校验操作权限。
+     * @param string $Operator 操作者。填写用户的 Id，用于标识调用者及校验媒体访问权限。
      */
     function __construct()
     {

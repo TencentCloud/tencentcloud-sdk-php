@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRepositoryType(string $RepositoryType) 设置程序包仓库类型
  * @method string getRepositoryId() 获取程序包仓库id
  * @method void setRepositoryId(string $RepositoryId) 设置程序包仓库id
+ * @method array getPackageTypeList() 获取程序包类型数组支持（fatjar jar war tar.gz zip）
+ * @method void setPackageTypeList(array $PackageTypeList) 设置程序包类型数组支持（fatjar jar war tar.gz zip）
  */
 class DescribePkgsRequest extends AbstractModel
 {
@@ -80,6 +82,11 @@ class DescribePkgsRequest extends AbstractModel
     public $RepositoryId;
 
     /**
+     * @var array 程序包类型数组支持（fatjar jar war tar.gz zip）
+     */
+    public $PackageTypeList;
+
+    /**
      * @param string $ApplicationId 应用ID（只传入应用ID，返回该应用下所有软件包信息）
      * @param string $SearchWord 查询关键字（支持根据包ID，包名，包版本号搜索）
      * @param string $OrderBy 排序关键字（默认为"UploadTime"：上传时间）
@@ -88,6 +95,7 @@ class DescribePkgsRequest extends AbstractModel
      * @param integer $Limit 返回数量限制
      * @param string $RepositoryType 程序包仓库类型
      * @param string $RepositoryId 程序包仓库id
+     * @param array $PackageTypeList 程序包类型数组支持（fatjar jar war tar.gz zip）
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ class DescribePkgsRequest extends AbstractModel
 
         if (array_key_exists("RepositoryId",$param) and $param["RepositoryId"] !== null) {
             $this->RepositoryId = $param["RepositoryId"];
+        }
+
+        if (array_key_exists("PackageTypeList",$param) and $param["PackageTypeList"] !== null) {
+            $this->PackageTypeList = $param["PackageTypeList"];
         }
     }
 }

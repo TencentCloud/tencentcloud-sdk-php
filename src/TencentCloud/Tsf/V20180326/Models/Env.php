@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getName() 获取环境变量名称
  * @method void setName(string $Name) 设置环境变量名称
- * @method string getValue() 获取服务端口
- * @method void setValue(string $Value) 设置服务端口
+ * @method string getValue() 获取环境变量值
+ * @method void setValue(string $Value) 设置环境变量值
  */
 class Env extends AbstractModel
 {
@@ -33,13 +33,13 @@ class Env extends AbstractModel
     public $Name;
 
     /**
-     * @var string 服务端口
+     * @var string 环境变量值
      */
     public $Value;
 
     /**
      * @param string $Name 环境变量名称
-     * @param string $Value 服务端口
+     * @param string $Value 环境变量值
      */
     function __construct()
     {

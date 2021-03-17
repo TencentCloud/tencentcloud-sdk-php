@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeployExeMode(string $DeployExeMode) 设置滚动发布的执行方式
  * @method integer getDeployWaitTime() 获取滚动发布每个批次的时间间隔
  * @method void setDeployWaitTime(integer $DeployWaitTime) 设置滚动发布每个批次的时间间隔
+ * @method string getStartScript() 获取启动脚本 base64编码
+ * @method void setStartScript(string $StartScript) 设置启动脚本 base64编码
+ * @method string getStopScript() 获取停止脚本 base64编码
+ * @method void setStopScript(string $StopScript) 设置停止脚本 base64编码
  */
 class DeployGroupRequest extends AbstractModel
 {
@@ -108,6 +112,16 @@ class DeployGroupRequest extends AbstractModel
     public $DeployWaitTime;
 
     /**
+     * @var string 启动脚本 base64编码
+     */
+    public $StartScript;
+
+    /**
+     * @var string 停止脚本 base64编码
+     */
+    public $StopScript;
+
+    /**
      * @param string $GroupId 部署组ID
      * @param string $PkgId 程序包ID
      * @param string $StartupParameters 部署组启动参数
@@ -120,6 +134,8 @@ class DeployGroupRequest extends AbstractModel
      * @param array $DeployBatch 滚动发布每个批次参与的实例比率
      * @param string $DeployExeMode 滚动发布的执行方式
      * @param integer $DeployWaitTime 滚动发布每个批次的时间间隔
+     * @param string $StartScript 启动脚本 base64编码
+     * @param string $StopScript 停止脚本 base64编码
      */
     function __construct()
     {
@@ -181,6 +197,14 @@ class DeployGroupRequest extends AbstractModel
 
         if (array_key_exists("DeployWaitTime",$param) and $param["DeployWaitTime"] !== null) {
             $this->DeployWaitTime = $param["DeployWaitTime"];
+        }
+
+        if (array_key_exists("StartScript",$param) and $param["StartScript"] !== null) {
+            $this->StartScript = $param["StartScript"];
+        }
+
+        if (array_key_exists("StopScript",$param) and $param["StopScript"] !== null) {
+            $this->StopScript = $param["StopScript"];
         }
     }
 }

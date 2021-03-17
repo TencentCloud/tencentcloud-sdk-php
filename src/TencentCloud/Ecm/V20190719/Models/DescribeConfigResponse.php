@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setImageLimits(ImageLimitConfig $ImageLimits) 设置镜像限额信息。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getDefaultIPDirect() 获取默认是否IP直通，用于模块创建，虚机购买等具有直通参数场景时的默认参数。
+ * @method void setDefaultIPDirect(boolean $DefaultIPDirect) 设置默认是否IP直通，用于模块创建，虚机购买等具有直通参数场景时的默认参数。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -63,6 +65,11 @@ class DescribeConfigResponse extends AbstractModel
     public $ImageLimits;
 
     /**
+     * @var boolean 默认是否IP直通，用于模块创建，虚机购买等具有直通参数场景时的默认参数。
+     */
+    public $DefaultIPDirect;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -75,6 +82,7 @@ class DescribeConfigResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ImageLimitConfig $ImageLimits 镜像限额信息。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $DefaultIPDirect 默认是否IP直通，用于模块创建，虚机购买等具有直通参数场景时的默认参数。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -111,6 +119,10 @@ class DescribeConfigResponse extends AbstractModel
         if (array_key_exists("ImageLimits",$param) and $param["ImageLimits"] !== null) {
             $this->ImageLimits = new ImageLimitConfig();
             $this->ImageLimits->deserialize($param["ImageLimits"]);
+        }
+
+        if (array_key_exists("DefaultIPDirect",$param) and $param["DefaultIPDirect"] !== null) {
+            $this->DefaultIPDirect = $param["DefaultIPDirect"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getPlatform() 获取平台名称，指定访问的平台。
  * @method void setPlatform(string $Platform) 设置平台名称，指定访问的平台。
- * @method string getMaterialId() 获取素材 Id。
- * @method void setMaterialId(string $MaterialId) 设置素材 Id。
- * @method string getOperator() 获取操作者。填写用户的 Id，用于标识调用者及校验操作权限。
- * @method void setOperator(string $Operator) 设置操作者。填写用户的 Id，用于标识调用者及校验操作权限。
+ * @method string getMaterialId() 获取媒体 Id。
+ * @method void setMaterialId(string $MaterialId) 设置媒体 Id。
+ * @method string getOperator() 获取操作者。填写用户的 Id，用于标识调用者及校验媒体删除权限。
+ * @method void setOperator(string $Operator) 设置操作者。填写用户的 Id，用于标识调用者及校验媒体删除权限。
  */
 class DeleteMaterialRequest extends AbstractModel
 {
@@ -35,19 +35,19 @@ class DeleteMaterialRequest extends AbstractModel
     public $Platform;
 
     /**
-     * @var string 素材 Id。
+     * @var string 媒体 Id。
      */
     public $MaterialId;
 
     /**
-     * @var string 操作者。填写用户的 Id，用于标识调用者及校验操作权限。
+     * @var string 操作者。填写用户的 Id，用于标识调用者及校验媒体删除权限。
      */
     public $Operator;
 
     /**
      * @param string $Platform 平台名称，指定访问的平台。
-     * @param string $MaterialId 素材 Id。
-     * @param string $Operator 操作者。填写用户的 Id，用于标识调用者及校验操作权限。
+     * @param string $MaterialId 媒体 Id。
+     * @param string $Operator 操作者。填写用户的 Id，用于标识调用者及校验媒体删除权限。
      */
     function __construct()
     {

@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAspectRatio(string $AspectRatio) 设置画布宽高比，取值有：
 <li>16:9；</li>
 <li>9:16。</li>
- * @method Entity getOwner() 获取归属者。
- * @method void setOwner(Entity $Owner) 设置归属者。
+ * @method Entity getOwner() 获取项目归属者。
+ * @method void setOwner(Entity $Owner) 设置项目归属者。
  */
 class ModifyProjectRequest extends AbstractModel
 {
@@ -60,7 +60,7 @@ class ModifyProjectRequest extends AbstractModel
     public $AspectRatio;
 
     /**
-     * @var Entity 归属者。
+     * @var Entity 项目归属者。
      */
     public $Owner;
 
@@ -71,7 +71,7 @@ class ModifyProjectRequest extends AbstractModel
      * @param string $AspectRatio 画布宽高比，取值有：
 <li>16:9；</li>
 <li>9:16。</li>
-     * @param Entity $Owner 归属者。
+     * @param Entity $Owner 项目归属者。
      */
     function __construct()
     {

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeExternalEndpointStatus返回参数结构体
  *
- * @method string getStatus() 获取开启公网访问状态，包括开启中，开启成功以及关闭和更新失败等
- * @method void setStatus(string $Status) 设置开启公网访问状态，包括开启中，开启成功以及关闭和更新失败等
+ * @method string getStatus() 获取开启公网访问状态，开启中（Opening）、已开启（Opened）、关闭（Closed）
+ * @method void setStatus(string $Status) 设置开启公网访问状态，开启中（Opening）、已开启（Opened）、关闭（Closed）
  * @method string getReason() 获取原因
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReason(string $Reason) 设置原因
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeExternalEndpointStatusResponse extends AbstractModel
 {
     /**
-     * @var string 开启公网访问状态，包括开启中，开启成功以及关闭和更新失败等
+     * @var string 开启公网访问状态，开启中（Opening）、已开启（Opened）、关闭（Closed）
      */
     public $Status;
 
@@ -48,7 +48,7 @@ class DescribeExternalEndpointStatusResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Status 开启公网访问状态，包括开启中，开启成功以及关闭和更新失败等
+     * @param string $Status 开启公网访问状态，开启中（Opening）、已开启（Opened）、关闭（Closed）
      * @param string $Reason 原因
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。

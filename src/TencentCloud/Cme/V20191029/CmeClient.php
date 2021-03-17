@@ -35,7 +35,7 @@ use TencentCloud\Cme\V20191029\Models as Models;
 <li>分类路径必须存在；</li>
 <li>分类下没有绑定素材。</li>
  * @method Models\DeleteLoginStatusResponse DeleteLoginStatus(Models\DeleteLoginStatusRequest $req) 删除用户登录态，使用户登出云剪平台。
- * @method Models\DeleteMaterialResponse DeleteMaterial(Models\DeleteMaterialRequest $req) 根据素材 Id 删除素材。
+ * @method Models\DeleteMaterialResponse DeleteMaterial(Models\DeleteMaterialRequest $req) 根据媒体 Id 删除媒体。
  * @method Models\DeleteProjectResponse DeleteProject(Models\DeleteProjectRequest $req) 删除云剪编辑项目。
  * @method Models\DeleteTeamResponse DeleteTeam(Models\DeleteTeamRequest $req) 删除一个团队。
 <li>要删除的团队必须没有归属的素材；</li>
@@ -44,14 +44,14 @@ use TencentCloud\Cme\V20191029\Models as Models;
  * @method Models\DescribeClassResponse DescribeClass(Models\DescribeClassRequest $req) 获取指定归属者下所有的分类信息。
  * @method Models\DescribeJoinTeamsResponse DescribeJoinTeams(Models\DescribeJoinTeamsRequest $req) 获取指定的团队成员所加入的团队列表。
  * @method Models\DescribeLoginStatusResponse DescribeLoginStatus(Models\DescribeLoginStatusRequest $req) 查询指定用户的登录态。
- * @method Models\DescribeMaterialsResponse DescribeMaterials(Models\DescribeMaterialsRequest $req) 根据素材 Id 批量获取素材详情。
+ * @method Models\DescribeMaterialsResponse DescribeMaterials(Models\DescribeMaterialsRequest $req) 根据媒体 Id 批量获取媒体详情。
  * @method Models\DescribePlatformsResponse DescribePlatforms(Models\DescribePlatformsRequest $req) <li>支持获取所创建的所有平台列表信息；</li>
 <li>支持获取指定的平台列表信息。</li>
 
 
  * @method Models\DescribeProjectsResponse DescribeProjects(Models\DescribeProjectsRequest $req) 支持根据多种条件过滤出项目列表。
  * @method Models\DescribeResourceAuthorizationResponse DescribeResourceAuthorization(Models\DescribeResourceAuthorizationRequest $req) 查询指定资源的授权列表。
- * @method Models\DescribeSharedSpaceResponse DescribeSharedSpace(Models\DescribeSharedSpaceRequest $req) 获取共享空间。当实体A对实体B授权某资源以后，实体B的共享空间就会增加实体A。
+ * @method Models\DescribeSharedSpaceResponse DescribeSharedSpace(Models\DescribeSharedSpaceRequest $req) 获取共享空间。当个人或团队A对个人或团队B授权某资源以后，个人或团队B的共享空间就会增加个人或团队A。
  * @method Models\DescribeTaskDetailResponse DescribeTaskDetail(Models\DescribeTaskDetailRequest $req) 获取任务详情信息，包含下面几个部分：
 <li>任务基础信息：包括任务状态、错误信息、创建时间等；</li>
 <li>导出项目输出信息：包括输出的素材 Id 等。</li>
@@ -61,23 +61,32 @@ use TencentCloud\Cme\V20191029\Models as Models;
  * @method Models\ExportVideoByEditorTrackDataResponse ExportVideoByEditorTrackData(Models\ExportVideoByEditorTrackDataRequest $req) 使用视频合成协议导出视频，支持导出到CME云媒资和VOD云媒资。
  * @method Models\ExportVideoByVideoSegmentationDataResponse ExportVideoByVideoSegmentationData(Models\ExportVideoByVideoSegmentationDataRequest $req) 使用视频智能拆条数据导出视频，将指定的视频拆条片段导出为一个视频。
  * @method Models\ExportVideoEditProjectResponse ExportVideoEditProject(Models\ExportVideoEditProjectRequest $req) 导出视频编辑项目，支持指定输出的模板。
- * @method Models\FlattenListMediaResponse FlattenListMedia(Models\FlattenListMediaRequest $req) 平铺分类路径下及其子分类下的所有素材。
+ * @method Models\FlattenListMediaResponse FlattenListMedia(Models\FlattenListMediaRequest $req) 平铺分类路径下及其子分类下的所有媒体基础信息。
  * @method Models\GenerateVideoSegmentationSchemeByAiResponse GenerateVideoSegmentationSchemeByAi(Models\GenerateVideoSegmentationSchemeByAiRequest $req) <li>发起视频智能拆条任务，支持智能生成和平精英集锦、王者荣耀集锦、足球集锦、篮球集锦 、人物集锦、新闻拆条等任务。</li>
 <li>和平精英集锦和王者荣耀集锦根据击杀场景进行拆条，足球集锦和篮球集锦根据进球场景进行拆条，人物集锦根据人物人脸特征进行拆条，新闻拆条根据导播进行拆条。</li>
 <li>【本接口内测中，暂不建议使用】</li>
- * @method Models\GrantResourceAuthorizationResponse GrantResourceAuthorization(Models\GrantResourceAuthorizationRequest $req) 资源所属实体对目标实体授予目标资源的相应权限。
+ * @method Models\GrantResourceAuthorizationResponse GrantResourceAuthorization(Models\GrantResourceAuthorizationRequest $req) 资源归属者对目标个人或团队授予目标资源的相应权限。
  * @method Models\ImportMaterialResponse ImportMaterial(Models\ImportMaterialRequest $req) 将云点播媒资文件导入到云剪媒体资源库。
  * @method Models\ImportMediaToProjectResponse ImportMediaToProject(Models\ImportMediaToProjectRequest $req) 将云点播中的媒资或者用户自有媒资文件添加到媒体库中，跟项目关联，供后续视频编辑使用。目前仅普通编辑项目和智能视频拆条项目有效。
- * @method Models\ListMediaResponse ListMedia(Models\ListMediaRequest $req)  浏览当前分类路径下的资源，包括素材和子分类。
- * @method Models\ModifyMaterialResponse ModifyMaterial(Models\ModifyMaterialRequest $req) 修改素材信息，支持修改素材名称、分类路径、标签等信息。
+ * @method Models\ListMediaResponse ListMedia(Models\ListMediaRequest $req)  浏览当前分类路径下的资源，包括媒体文件和子分类，返回媒资基础信息和分类信息。
+ * @method Models\ModifyMaterialResponse ModifyMaterial(Models\ModifyMaterialRequest $req) 修改媒体信息，支持修改媒体名称、分类路径、标签等信息。
  * @method Models\ModifyProjectResponse ModifyProject(Models\ModifyProjectRequest $req) 修改云剪编辑项目的信息。
  * @method Models\ModifyTeamResponse ModifyTeam(Models\ModifyTeamRequest $req) 修改团队信息，目前支持修改的操作有：
 <li>修改团队名称。</li>
  * @method Models\ModifyTeamMemberResponse ModifyTeamMember(Models\ModifyTeamMemberRequest $req) 修改团队成员信息，包括成员备注、角色等。
  * @method Models\MoveClassResponse MoveClass(Models\MoveClassRequest $req) 移动某一个分类到另外一个分类下，也可用于分类重命名。
-<li>如果 SourceClassPath = /素材/视频/NBA，DestinationClassPath = /素材/视频/篮球，当 DestinationClassPath 不存在时候，操作结果为重命名 ClassPath，如果 DestinationClassPath 存在时候，操作结果为产生新目录 /素材/视频/篮球/NBA。</li>
+如果 SourceClassPath = /素材/视频/NBA，DestinationClassPath = /素材/视频/篮球
+<li>当 DestinationClassPath 不存在时候，操作结果为重命名 ClassPath；</li>
+<li>当 DestinationClassPath 存在时候，操作结果为产生新目录 /素材/视频/篮球/NBA</li>
+ * @method Models\MoveResourceResponse MoveResource(Models\MoveResourceRequest $req) 移动资源，支持跨个人或团队移动媒体以及分类。如果填写了Operator，则需要校验用户对媒体和分类资源的访问以及写权限。
+<li>当原始资源为媒体时，该接口效果为将该媒体移动到目标分类下面；</li>
+<li>当原始资源为分类时，该接口效果为将原始分类移动到目标分类或者是重命名。</li>
+ 如果 SourceResource.Resource.Id = /素材/视频/NBA，DestinationResource.Resource.Id= /素材/视频/篮球 
+<li>当 DestinationResource.Resource.Id 不存在时候且原始资源与目标资源归属相同，操作结果为重命名原始分类；</li>
+<li>当 DestinationResource.Resource.Id 存在时候，操作结果为产生新目录 /素材/视频/篮球/NBA</li>
+
  * @method Models\RevokeResourceAuthorizationResponse RevokeResourceAuthorization(Models\RevokeResourceAuthorizationRequest $req)  资源所属实体对目标实体回收目标资源的相应权限，若原本没有相应权限则不产生变更。
- * @method Models\SearchMaterialResponse SearchMaterial(Models\SearchMaterialRequest $req) 根据检索条件搜索素材，返回素材的基本信息。
+ * @method Models\SearchMaterialResponse SearchMaterial(Models\SearchMaterialRequest $req) 根据检索条件搜索媒体，返回媒体的基本信息。
  */
 
 class CmeClient extends AbstractClient

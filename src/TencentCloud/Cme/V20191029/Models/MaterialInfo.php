@@ -18,67 +18,79 @@ namespace TencentCloud\Cme\V20191029\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 素材详情信息
+ * 媒体详情信息
  *
- * @method MaterialBasicInfo getBasicInfo() 获取素材基本信息。
- * @method void setBasicInfo(MaterialBasicInfo $BasicInfo) 设置素材基本信息。
- * @method VideoMaterial getVideoMaterial() 获取视频素材信息。
+ * @method MaterialBasicInfo getBasicInfo() 获取媒体基本信息。
+ * @method void setBasicInfo(MaterialBasicInfo $BasicInfo) 设置媒体基本信息。
+ * @method VideoMaterial getVideoMaterial() 获取视频媒体信息。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVideoMaterial(VideoMaterial $VideoMaterial) 设置视频素材信息。
+ * @method void setVideoMaterial(VideoMaterial $VideoMaterial) 设置视频媒体信息。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method AudioMaterial getAudioMaterial() 获取音频素材信息。
+ * @method AudioMaterial getAudioMaterial() 获取音频媒体信息。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAudioMaterial(AudioMaterial $AudioMaterial) 设置音频素材信息。
+ * @method void setAudioMaterial(AudioMaterial $AudioMaterial) 设置音频媒体信息。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method ImageMaterial getImageMaterial() 获取图片素材信息。
+ * @method ImageMaterial getImageMaterial() 获取图片媒体信息。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setImageMaterial(ImageMaterial $ImageMaterial) 设置图片素材信息。
+ * @method void setImageMaterial(ImageMaterial $ImageMaterial) 设置图片媒体信息。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method LinkMaterial getLinkMaterial() 获取链接素材信息。
+ * @method LinkMaterial getLinkMaterial() 获取链接媒体信息。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLinkMaterial(LinkMaterial $LinkMaterial) 设置链接素材信息。
+ * @method void setLinkMaterial(LinkMaterial $LinkMaterial) 设置链接媒体信息。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method OtherMaterial getOtherMaterial() 获取其他类型媒体信息。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOtherMaterial(OtherMaterial $OtherMaterial) 设置其他类型媒体信息。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class MaterialInfo extends AbstractModel
 {
     /**
-     * @var MaterialBasicInfo 素材基本信息。
+     * @var MaterialBasicInfo 媒体基本信息。
      */
     public $BasicInfo;
 
     /**
-     * @var VideoMaterial 视频素材信息。
+     * @var VideoMaterial 视频媒体信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VideoMaterial;
 
     /**
-     * @var AudioMaterial 音频素材信息。
+     * @var AudioMaterial 音频媒体信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AudioMaterial;
 
     /**
-     * @var ImageMaterial 图片素材信息。
+     * @var ImageMaterial 图片媒体信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ImageMaterial;
 
     /**
-     * @var LinkMaterial 链接素材信息。
+     * @var LinkMaterial 链接媒体信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LinkMaterial;
 
     /**
-     * @param MaterialBasicInfo $BasicInfo 素材基本信息。
-     * @param VideoMaterial $VideoMaterial 视频素材信息。
+     * @var OtherMaterial 其他类型媒体信息。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AudioMaterial $AudioMaterial 音频素材信息。
+     */
+    public $OtherMaterial;
+
+    /**
+     * @param MaterialBasicInfo $BasicInfo 媒体基本信息。
+     * @param VideoMaterial $VideoMaterial 视频媒体信息。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ImageMaterial $ImageMaterial 图片素材信息。
+     * @param AudioMaterial $AudioMaterial 音频媒体信息。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LinkMaterial $LinkMaterial 链接素材信息。
+     * @param ImageMaterial $ImageMaterial 图片媒体信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LinkMaterial $LinkMaterial 链接媒体信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OtherMaterial $OtherMaterial 其他类型媒体信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -117,6 +129,11 @@ class MaterialInfo extends AbstractModel
         if (array_key_exists("LinkMaterial",$param) and $param["LinkMaterial"] !== null) {
             $this->LinkMaterial = new LinkMaterial();
             $this->LinkMaterial->deserialize($param["LinkMaterial"]);
+        }
+
+        if (array_key_exists("OtherMaterial",$param) and $param["OtherMaterial"] !== null) {
+            $this->OtherMaterial = new OtherMaterial();
+            $this->OtherMaterial->deserialize($param["OtherMaterial"]);
         }
     }
 }

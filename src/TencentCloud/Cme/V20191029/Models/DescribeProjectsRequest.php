@@ -26,8 +26,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProjectIds(array $ProjectIds) 设置项目 Id 列表，N 从 0 开始取值，最大 19。
  * @method array getAspectRatioSet() 获取画布宽高比集合。
  * @method void setAspectRatioSet(array $AspectRatioSet) 设置画布宽高比集合。
- * @method array getCategorySet() 获取项目类别集合。
- * @method void setCategorySet(array $CategorySet) 设置项目类别集合。
+ * @method array getCategorySet() 获取项目类别，取值有：
+<li>VIDEO_EDIT：视频编辑。</li>
+<li>SWITCHER：导播台。</li>
+<li>VIDEO_SEGMENTATION：视频拆条。</li>
+ * @method void setCategorySet(array $CategorySet) 设置项目类别，取值有：
+<li>VIDEO_EDIT：视频编辑。</li>
+<li>SWITCHER：导播台。</li>
+<li>VIDEO_SEGMENTATION：视频拆条。</li>
  * @method SortBy getSort() 获取列表排序，支持下列排序字段：
 <li>CreateTime：创建时间；</li>
 <li>UpdateTime：更新时间。</li>
@@ -40,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置分页返回的起始偏移量，默认值：0。
  * @method integer getLimit() 获取分页返回的记录条数，默认值：10。
  * @method void setLimit(integer $Limit) 设置分页返回的记录条数，默认值：10。
+ * @method string getOperator() 获取操作者。填写用户的 Id，用于标识调用者及校验项目访问权限。
+ * @method void setOperator(string $Operator) 设置操作者。填写用户的 Id，用于标识调用者及校验项目访问权限。
  */
 class DescribeProjectsRequest extends AbstractModel
 {
@@ -59,7 +67,10 @@ class DescribeProjectsRequest extends AbstractModel
     public $AspectRatioSet;
 
     /**
-     * @var array 项目类别集合。
+     * @var array 项目类别，取值有：
+<li>VIDEO_EDIT：视频编辑。</li>
+<li>SWITCHER：导播台。</li>
+<li>VIDEO_SEGMENTATION：视频拆条。</li>
      */
     public $CategorySet;
 
@@ -86,16 +97,25 @@ class DescribeProjectsRequest extends AbstractModel
     public $Limit;
 
     /**
+     * @var string 操作者。填写用户的 Id，用于标识调用者及校验项目访问权限。
+     */
+    public $Operator;
+
+    /**
      * @param string $Platform 平台名称，指定访问的平台。
      * @param array $ProjectIds 项目 Id 列表，N 从 0 开始取值，最大 19。
      * @param array $AspectRatioSet 画布宽高比集合。
-     * @param array $CategorySet 项目类别集合。
+     * @param array $CategorySet 项目类别，取值有：
+<li>VIDEO_EDIT：视频编辑。</li>
+<li>SWITCHER：导播台。</li>
+<li>VIDEO_SEGMENTATION：视频拆条。</li>
      * @param SortBy $Sort 列表排序，支持下列排序字段：
 <li>CreateTime：创建时间；</li>
 <li>UpdateTime：更新时间。</li>
      * @param Entity $Owner 项目归属者。
      * @param integer $Offset 分页返回的起始偏移量，默认值：0。
      * @param integer $Limit 分页返回的记录条数，默认值：10。
+     * @param string $Operator 操作者。填写用户的 Id，用于标识调用者及校验项目访问权限。
      */
     function __construct()
     {
@@ -142,6 +162,10 @@ class DescribeProjectsRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
+            $this->Operator = $param["Operator"];
         }
     }
 }

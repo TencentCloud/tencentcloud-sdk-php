@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置分页返回的起始偏移量，默认值：0。
  * @method integer getLimit() 获取分页返回的记录条数，默认值：10。
  * @method void setLimit(integer $Limit) 设置分页返回的记录条数，默认值：10。
+ * @method string getOperator() 获取操作者。填写用户的 Id，用于标识调用者及校验对任务的访问权限。
+ * @method void setOperator(string $Operator) 设置操作者。填写用户的 Id，用于标识调用者及校验对任务的访问权限。
  */
 class DescribeTasksRequest extends AbstractModel
 {
@@ -78,6 +80,11 @@ class DescribeTasksRequest extends AbstractModel
     public $Limit;
 
     /**
+     * @var string 操作者。填写用户的 Id，用于标识调用者及校验对任务的访问权限。
+     */
+    public $Operator;
+
+    /**
      * @param string $Platform 平台名称，指定访问的平台。
      * @param string $ProjectId 项目 Id。
      * @param array $TaskTypeSet 任务类型集合，取值有：
@@ -88,6 +95,7 @@ class DescribeTasksRequest extends AbstractModel
 <li>FAIL：失败。</li>
      * @param integer $Offset 分页返回的起始偏移量，默认值：0。
      * @param integer $Limit 分页返回的记录条数，默认值：10。
+     * @param string $Operator 操作者。填写用户的 Id，用于标识调用者及校验对任务的访问权限。
      */
     function __construct()
     {
@@ -124,6 +132,10 @@ class DescribeTasksRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
+            $this->Operator = $param["Operator"];
         }
     }
 }

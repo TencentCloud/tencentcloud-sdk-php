@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeMaterials返回参数结构体
  *
- * @method array getMaterialInfoSet() 获取素材列表信息。
- * @method void setMaterialInfoSet(array $MaterialInfoSet) 设置素材列表信息。
+ * @method array getMaterialInfoSet() 获取媒体列表信息。
+ * @method void setMaterialInfoSet(array $MaterialInfoSet) 设置媒体列表信息。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeMaterialsResponse extends AbstractModel
 {
     /**
-     * @var array 素材列表信息。
+     * @var array 媒体列表信息。
      */
     public $MaterialInfoSet;
 
@@ -38,7 +38,7 @@ class DescribeMaterialsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $MaterialInfoSet 素材列表信息。
+     * @param array $MaterialInfoSet 媒体列表信息。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

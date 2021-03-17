@@ -22,19 +22,19 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getPlatform() 获取平台名称，指定访问的平台。
  * @method void setPlatform(string $Platform) 设置平台名称，指定访问的平台。
- * @method Entity getOwner() 获取资源所属实体。
- * @method void setOwner(Entity $Owner) 设置资源所属实体。
+ * @method Entity getOwner() 获取资源归属者，个人或者团队。
+ * @method void setOwner(Entity $Owner) 设置资源归属者，个人或者团队。
  * @method array getResources() 获取被授权资源。
  * @method void setResources(array $Resources) 设置被授权资源。
- * @method array getAuthorizees() 获取被授权目标实体。
- * @method void setAuthorizees(array $Authorizees) 设置被授权目标实体。
+ * @method array getAuthorizees() 获取被授权目标，个人或者团队。
+ * @method void setAuthorizees(array $Authorizees) 设置被授权目标，个人或者团队。
  * @method array getPermissions() 获取详细授权值。 取值有：
-<li>R：可读，可以浏览素材，但不能使用该素材（将其添加到 Project），或复制到自己的媒资库中</li>
+<li>R：可读，可以浏览媒体，但不能使用该媒体文件（将其添加到 Project），或复制到自己的媒资库中</li>
 <li>X：可用，可以使用该素材（将其添加到 Project），但不能将其复制到自己的媒资库中，意味着被授权者无法将该资源进一步扩散给其他个人或团队。</li>
 <li>C：可复制，既可以使用该素材（将其添加到 Project），也可以将其复制到自己的媒资库中。</li>
 <li>W：可修改、删除媒资。</li>
  * @method void setPermissions(array $Permissions) 设置详细授权值。 取值有：
-<li>R：可读，可以浏览素材，但不能使用该素材（将其添加到 Project），或复制到自己的媒资库中</li>
+<li>R：可读，可以浏览媒体，但不能使用该媒体文件（将其添加到 Project），或复制到自己的媒资库中</li>
 <li>X：可用，可以使用该素材（将其添加到 Project），但不能将其复制到自己的媒资库中，意味着被授权者无法将该资源进一步扩散给其他个人或团队。</li>
 <li>C：可复制，既可以使用该素材（将其添加到 Project），也可以将其复制到自己的媒资库中。</li>
 <li>W：可修改、删除媒资。</li>
@@ -49,7 +49,7 @@ class GrantResourceAuthorizationRequest extends AbstractModel
     public $Platform;
 
     /**
-     * @var Entity 资源所属实体。
+     * @var Entity 资源归属者，个人或者团队。
      */
     public $Owner;
 
@@ -59,13 +59,13 @@ class GrantResourceAuthorizationRequest extends AbstractModel
     public $Resources;
 
     /**
-     * @var array 被授权目标实体。
+     * @var array 被授权目标，个人或者团队。
      */
     public $Authorizees;
 
     /**
      * @var array 详细授权值。 取值有：
-<li>R：可读，可以浏览素材，但不能使用该素材（将其添加到 Project），或复制到自己的媒资库中</li>
+<li>R：可读，可以浏览媒体，但不能使用该媒体文件（将其添加到 Project），或复制到自己的媒资库中</li>
 <li>X：可用，可以使用该素材（将其添加到 Project），但不能将其复制到自己的媒资库中，意味着被授权者无法将该资源进一步扩散给其他个人或团队。</li>
 <li>C：可复制，既可以使用该素材（将其添加到 Project），也可以将其复制到自己的媒资库中。</li>
 <li>W：可修改、删除媒资。</li>
@@ -79,11 +79,11 @@ class GrantResourceAuthorizationRequest extends AbstractModel
 
     /**
      * @param string $Platform 平台名称，指定访问的平台。
-     * @param Entity $Owner 资源所属实体。
+     * @param Entity $Owner 资源归属者，个人或者团队。
      * @param array $Resources 被授权资源。
-     * @param array $Authorizees 被授权目标实体。
+     * @param array $Authorizees 被授权目标，个人或者团队。
      * @param array $Permissions 详细授权值。 取值有：
-<li>R：可读，可以浏览素材，但不能使用该素材（将其添加到 Project），或复制到自己的媒资库中</li>
+<li>R：可读，可以浏览媒体，但不能使用该媒体文件（将其添加到 Project），或复制到自己的媒资库中</li>
 <li>X：可用，可以使用该素材（将其添加到 Project），但不能将其复制到自己的媒资库中，意味着被授权者无法将该资源进一步扩散给其他个人或团队。</li>
 <li>C：可复制，既可以使用该素材（将其添加到 Project），也可以将其复制到自己的媒资库中。</li>
 <li>W：可修改、删除媒资。</li>

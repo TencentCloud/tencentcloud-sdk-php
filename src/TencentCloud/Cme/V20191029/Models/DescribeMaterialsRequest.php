@@ -22,16 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getPlatform() 获取平台名称，指定访问的平台。
  * @method void setPlatform(string $Platform) 设置平台名称，指定访问的平台。
- * @method array getMaterialIds() 获取素材 ID 列表，N 从 0 开始取值，最大 19。
- * @method void setMaterialIds(array $MaterialIds) 设置素材 ID 列表，N 从 0 开始取值，最大 19。
+ * @method array getMaterialIds() 获取媒体 ID 列表，N 从 0 开始取值，最大 19。
+ * @method void setMaterialIds(array $MaterialIds) 设置媒体 ID 列表，N 从 0 开始取值，最大 19。
  * @method SortBy getSort() 获取列表排序，支持下列排序字段：
 <li>CreateTime：创建时间；</li>
 <li>UpdateTime：更新时间。</li>
  * @method void setSort(SortBy $Sort) 设置列表排序，支持下列排序字段：
 <li>CreateTime：创建时间；</li>
 <li>UpdateTime：更新时间。</li>
- * @method string getOperator() 获取操作者。填写用户的 Id，用于标识调用者及校验操作权限。
- * @method void setOperator(string $Operator) 设置操作者。填写用户的 Id，用于标识调用者及校验操作权限。
+ * @method string getOperator() 获取操作者。填写用户的 Id，用于标识调用者及校验媒体的访问权限。
+ * @method void setOperator(string $Operator) 设置操作者。填写用户的 Id，用于标识调用者及校验媒体的访问权限。
  */
 class DescribeMaterialsRequest extends AbstractModel
 {
@@ -41,7 +41,7 @@ class DescribeMaterialsRequest extends AbstractModel
     public $Platform;
 
     /**
-     * @var array 素材 ID 列表，N 从 0 开始取值，最大 19。
+     * @var array 媒体 ID 列表，N 从 0 开始取值，最大 19。
      */
     public $MaterialIds;
 
@@ -53,17 +53,17 @@ class DescribeMaterialsRequest extends AbstractModel
     public $Sort;
 
     /**
-     * @var string 操作者。填写用户的 Id，用于标识调用者及校验操作权限。
+     * @var string 操作者。填写用户的 Id，用于标识调用者及校验媒体的访问权限。
      */
     public $Operator;
 
     /**
      * @param string $Platform 平台名称，指定访问的平台。
-     * @param array $MaterialIds 素材 ID 列表，N 从 0 开始取值，最大 19。
+     * @param array $MaterialIds 媒体 ID 列表，N 从 0 开始取值，最大 19。
      * @param SortBy $Sort 列表排序，支持下列排序字段：
 <li>CreateTime：创建时间；</li>
 <li>UpdateTime：更新时间。</li>
-     * @param string $Operator 操作者。填写用户的 Id，用于标识调用者及校验操作权限。
+     * @param string $Operator 操作者。填写用户的 Id，用于标识调用者及校验媒体的访问权限。
      */
     function __construct()
     {

@@ -22,14 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getPlatform() 获取平台名称，指定访问的平台。
  * @method void setPlatform(string $Platform) 设置平台名称，指定访问的平台。
- * @method string getMaterialId() 获取素材 Id。
- * @method void setMaterialId(string $MaterialId) 设置素材 Id。
- * @method Entity getOwner() 获取素材归属。
- * @method void setOwner(Entity $Owner) 设置素材归属。
- * @method string getName() 获取素材名称，不能超过30个字符。
- * @method void setName(string $Name) 设置素材名称，不能超过30个字符。
- * @method string getClassPath() 获取素材分类路径，例如填写"/a/b"，则代表该素材存储的路径为"/a/b"。
- * @method void setClassPath(string $ClassPath) 设置素材分类路径，例如填写"/a/b"，则代表该素材存储的路径为"/a/b"。
+ * @method string getMaterialId() 获取媒体 Id。
+ * @method void setMaterialId(string $MaterialId) 设置媒体 Id。
+ * @method Entity getOwner() 获取媒体或分类路径归属。
+ * @method void setOwner(Entity $Owner) 设置媒体或分类路径归属。
+ * @method string getName() 获取媒体名称，不能超过30个字符。
+ * @method void setName(string $Name) 设置媒体名称，不能超过30个字符。
+ * @method string getClassPath() 获取媒体分类路径，例如填写"/a/b"，则代表该媒体存储的路径为"/a/b"。若修改分类路径，则 Owner 字段必填。
+ * @method void setClassPath(string $ClassPath) 设置媒体分类路径，例如填写"/a/b"，则代表该媒体存储的路径为"/a/b"。若修改分类路径，则 Owner 字段必填。
  * @method string getOperator() 获取操作者。填写用户的 Id，用于标识调用者及校验操作权限。
  * @method void setOperator(string $Operator) 设置操作者。填写用户的 Id，用于标识调用者及校验操作权限。
  */
@@ -41,22 +41,22 @@ class ModifyMaterialRequest extends AbstractModel
     public $Platform;
 
     /**
-     * @var string 素材 Id。
+     * @var string 媒体 Id。
      */
     public $MaterialId;
 
     /**
-     * @var Entity 素材归属。
+     * @var Entity 媒体或分类路径归属。
      */
     public $Owner;
 
     /**
-     * @var string 素材名称，不能超过30个字符。
+     * @var string 媒体名称，不能超过30个字符。
      */
     public $Name;
 
     /**
-     * @var string 素材分类路径，例如填写"/a/b"，则代表该素材存储的路径为"/a/b"。
+     * @var string 媒体分类路径，例如填写"/a/b"，则代表该媒体存储的路径为"/a/b"。若修改分类路径，则 Owner 字段必填。
      */
     public $ClassPath;
 
@@ -67,10 +67,10 @@ class ModifyMaterialRequest extends AbstractModel
 
     /**
      * @param string $Platform 平台名称，指定访问的平台。
-     * @param string $MaterialId 素材 Id。
-     * @param Entity $Owner 素材归属。
-     * @param string $Name 素材名称，不能超过30个字符。
-     * @param string $ClassPath 素材分类路径，例如填写"/a/b"，则代表该素材存储的路径为"/a/b"。
+     * @param string $MaterialId 媒体 Id。
+     * @param Entity $Owner 媒体或分类路径归属。
+     * @param string $Name 媒体名称，不能超过30个字符。
+     * @param string $ClassPath 媒体分类路径，例如填写"/a/b"，则代表该媒体存储的路径为"/a/b"。若修改分类路径，则 Owner 字段必填。
      * @param string $Operator 操作者。填写用户的 Id，用于标识调用者及校验操作权限。
      */
     function __construct()

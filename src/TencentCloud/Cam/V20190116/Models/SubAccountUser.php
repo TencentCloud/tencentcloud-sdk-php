@@ -34,6 +34,12 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getUserType() 获取用户类型(1:主账号;2:子用户;3:企业微信子用户;4:协作者;5:消息接收人)
  * @method void setUserType(integer $UserType) 设置用户类型(1:主账号;2:子用户;3:企业微信子用户;4:协作者;5:消息接收人)
+ * @method string getLastLoginIp() 获取最近登录IP
+ * @method void setLastLoginIp(string $LastLoginIp) 设置最近登录IP
+ * @method string getLastLoginTime() 获取最近登录时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLastLoginTime(string $LastLoginTime) 设置最近登录时间
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SubAccountUser extends AbstractModel
 {
@@ -69,6 +75,17 @@ class SubAccountUser extends AbstractModel
     public $UserType;
 
     /**
+     * @var string 最近登录IP
+     */
+    public $LastLoginIp;
+
+    /**
+     * @var string 最近登录时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LastLoginTime;
+
+    /**
      * @param integer $Uin 子用户用户 ID
      * @param string $Name 子用户用户名
      * @param integer $Uid 子用户 UID
@@ -76,6 +93,9 @@ class SubAccountUser extends AbstractModel
      * @param string $CreateTime 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $UserType 用户类型(1:主账号;2:子用户;3:企业微信子用户;4:协作者;5:消息接收人)
+     * @param string $LastLoginIp 最近登录IP
+     * @param string $LastLoginTime 最近登录时间
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -112,6 +132,14 @@ class SubAccountUser extends AbstractModel
 
         if (array_key_exists("UserType",$param) and $param["UserType"] !== null) {
             $this->UserType = $param["UserType"];
+        }
+
+        if (array_key_exists("LastLoginIp",$param) and $param["LastLoginIp"] !== null) {
+            $this->LastLoginIp = $param["LastLoginIp"];
+        }
+
+        if (array_key_exists("LastLoginTime",$param) and $param["LastLoginTime"] !== null) {
+            $this->LastLoginTime = $param["LastLoginTime"];
         }
     }
 }

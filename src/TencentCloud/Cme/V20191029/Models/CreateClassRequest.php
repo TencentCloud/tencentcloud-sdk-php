@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOwner(Entity $Owner) 设置归属者。
  * @method string getClassPath() 获取分类路径。
  * @method void setClassPath(string $ClassPath) 设置分类路径。
- * @method string getOperator() 获取操作者。填写用户的 Id，用于标识调用者及校验操作权限。
- * @method void setOperator(string $Operator) 设置操作者。填写用户的 Id，用于标识调用者及校验操作权限。
+ * @method string getOperator() 获取操作者。填写用户的 Id，用于标识调用者及校验分类创建权限。
+ * @method void setOperator(string $Operator) 设置操作者。填写用户的 Id，用于标识调用者及校验分类创建权限。
  */
 class CreateClassRequest extends AbstractModel
 {
@@ -47,7 +47,7 @@ class CreateClassRequest extends AbstractModel
     public $ClassPath;
 
     /**
-     * @var string 操作者。填写用户的 Id，用于标识调用者及校验操作权限。
+     * @var string 操作者。填写用户的 Id，用于标识调用者及校验分类创建权限。
      */
     public $Operator;
 
@@ -55,7 +55,7 @@ class CreateClassRequest extends AbstractModel
      * @param string $Platform 平台名称，指定访问的平台。
      * @param Entity $Owner 归属者。
      * @param string $ClassPath 分类路径。
-     * @param string $Operator 操作者。填写用户的 Id，用于标识调用者及校验操作权限。
+     * @param string $Operator 操作者。填写用户的 Id，用于标识调用者及校验分类创建权限。
      */
     function __construct()
     {

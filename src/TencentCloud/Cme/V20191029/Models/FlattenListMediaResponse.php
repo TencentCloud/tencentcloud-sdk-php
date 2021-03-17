@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getTotalCount() 获取符合条件的记录总数。
  * @method void setTotalCount(integer $TotalCount) 设置符合条件的记录总数。
- * @method array getMaterialInfoSet() 获取该分类路径下及其子分类下的所有素材。
- * @method void setMaterialInfoSet(array $MaterialInfoSet) 设置该分类路径下及其子分类下的所有素材。
+ * @method array getMaterialInfoSet() 获取该分类路径下及其子分类下的所有媒体基础信息列表。
+ * @method void setMaterialInfoSet(array $MaterialInfoSet) 设置该分类路径下及其子分类下的所有媒体基础信息列表。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -35,7 +35,7 @@ class FlattenListMediaResponse extends AbstractModel
     public $TotalCount;
 
     /**
-     * @var array 该分类路径下及其子分类下的所有素材。
+     * @var array 该分类路径下及其子分类下的所有媒体基础信息列表。
      */
     public $MaterialInfoSet;
 
@@ -46,7 +46,7 @@ class FlattenListMediaResponse extends AbstractModel
 
     /**
      * @param integer $TotalCount 符合条件的记录总数。
-     * @param array $MaterialInfoSet 该分类路径下及其子分类下的所有素材。
+     * @param array $MaterialInfoSet 该分类路径下及其子分类下的所有媒体基础信息列表。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

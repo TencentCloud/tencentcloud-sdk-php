@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPlatform(string $Platform) 设置平台名称，指定访问的平台。
  * @method string getTeamId() 获取团队 ID。
  * @method void setTeamId(string $TeamId) 设置团队 ID。
- * @method array getMemberIds() 获取成员 ID 列表，限指定30个指定成员。
- * @method void setMemberIds(array $MemberIds) 设置成员 ID 列表，限指定30个指定成员。
+ * @method array getMemberIds() 获取成员 ID 列表，限指定30个指定成员。如不填，则返回指定团队下的所有成员。
+ * @method void setMemberIds(array $MemberIds) 设置成员 ID 列表，限指定30个指定成员。如不填，则返回指定团队下的所有成员。
  * @method integer getOffset() 获取分页偏移量，默认值：0
  * @method void setOffset(integer $Offset) 设置分页偏移量，默认值：0
  * @method integer getLimit() 获取返回记录条数，默认值：30，最大值：30。
@@ -46,7 +46,7 @@ class DescribeTeamMembersRequest extends AbstractModel
     public $TeamId;
 
     /**
-     * @var array 成员 ID 列表，限指定30个指定成员。
+     * @var array 成员 ID 列表，限指定30个指定成员。如不填，则返回指定团队下的所有成员。
      */
     public $MemberIds;
 
@@ -68,7 +68,7 @@ class DescribeTeamMembersRequest extends AbstractModel
     /**
      * @param string $Platform 平台名称，指定访问的平台。
      * @param string $TeamId 团队 ID。
-     * @param array $MemberIds 成员 ID 列表，限指定30个指定成员。
+     * @param array $MemberIds 成员 ID 列表，限指定30个指定成员。如不填，则返回指定团队下的所有成员。
      * @param integer $Offset 分页偏移量，默认值：0
      * @param integer $Limit 返回记录条数，默认值：30，最大值：30。
      * @param string $Operator 操作者。填写用户的 Id，用于标识调用者及校验操作权限。

@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ListMedia返回参数结构体
  *
- * @method integer getMaterialTotalCount() 获取符合条件的素材记录总数。
- * @method void setMaterialTotalCount(integer $MaterialTotalCount) 设置符合条件的素材记录总数。
- * @method array getMaterialInfoSet() 获取浏览分类路径下的素材列表信息。
- * @method void setMaterialInfoSet(array $MaterialInfoSet) 设置浏览分类路径下的素材列表信息。
+ * @method integer getMaterialTotalCount() 获取符合条件的媒体记录总数。
+ * @method void setMaterialTotalCount(integer $MaterialTotalCount) 设置符合条件的媒体记录总数。
+ * @method array getMaterialInfoSet() 获取浏览分类路径下的媒体列表信息。
+ * @method void setMaterialInfoSet(array $MaterialInfoSet) 设置浏览分类路径下的媒体列表信息。
  * @method array getClassInfoSet() 获取浏览分类路径下的一级子类。
  * @method void setClassInfoSet(array $ClassInfoSet) 设置浏览分类路径下的一级子类。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -32,12 +32,12 @@ use TencentCloud\Common\AbstractModel;
 class ListMediaResponse extends AbstractModel
 {
     /**
-     * @var integer 符合条件的素材记录总数。
+     * @var integer 符合条件的媒体记录总数。
      */
     public $MaterialTotalCount;
 
     /**
-     * @var array 浏览分类路径下的素材列表信息。
+     * @var array 浏览分类路径下的媒体列表信息。
      */
     public $MaterialInfoSet;
 
@@ -52,8 +52,8 @@ class ListMediaResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $MaterialTotalCount 符合条件的素材记录总数。
-     * @param array $MaterialInfoSet 浏览分类路径下的素材列表信息。
+     * @param integer $MaterialTotalCount 符合条件的媒体记录总数。
+     * @param array $MaterialInfoSet 浏览分类路径下的媒体列表信息。
      * @param array $ClassInfoSet 浏览分类路径下的一级子类。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

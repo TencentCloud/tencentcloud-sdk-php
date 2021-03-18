@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量，取值从0开始
  * @method integer getLimit() 获取分页个数，默认为20， 取值应为1~50
  * @method void setLimit(integer $Limit) 设置分页个数，默认为20， 取值应为1~50
+ * @method array getPodNameList() 获取过滤字段
+ * @method void setPodNameList(array $PodNameList) 设置过滤字段
  */
 class DescribePodInstancesRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class DescribePodInstancesRequest extends AbstractModel
     public $Limit;
 
     /**
+     * @var array 过滤字段
+     */
+    public $PodNameList;
+
+    /**
      * @param string $GroupId 实例所属groupId
      * @param integer $Offset 偏移量，取值从0开始
      * @param integer $Limit 分页个数，默认为20， 取值应为1~50
+     * @param array $PodNameList 过滤字段
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class DescribePodInstancesRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("PodNameList",$param) and $param["PodNameList"] !== null) {
+            $this->PodNameList = $param["PodNameList"];
         }
     }
 }

@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTargetHealth请求参数结构体
  *
- * @method array getLoadBalancerIds() 获取要查询的负载均衡实例 ID列表
- * @method void setLoadBalancerIds(array $LoadBalancerIds) 设置要查询的负载均衡实例 ID列表
+ * @method array getLoadBalancerIds() 获取要查询的负载均衡实例ID列表。
+ * @method void setLoadBalancerIds(array $LoadBalancerIds) 设置要查询的负载均衡实例ID列表。
  */
 class DescribeTargetHealthRequest extends AbstractModel
 {
     /**
-     * @var array 要查询的负载均衡实例 ID列表
+     * @var array 要查询的负载均衡实例ID列表。
      */
     public $LoadBalancerIds;
 
     /**
-     * @param array $LoadBalancerIds 要查询的负载均衡实例 ID列表
+     * @param array $LoadBalancerIds 要查询的负载均衡实例ID列表。
      */
     function __construct()
     {

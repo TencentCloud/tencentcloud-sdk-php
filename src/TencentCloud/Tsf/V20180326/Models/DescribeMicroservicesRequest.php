@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置分页个数
  * @method array getStatus() 获取状态过滤，online、offline、single_online
  * @method void setStatus(array $Status) 设置状态过滤，online、offline、single_online
+ * @method array getMicroserviceIdList() 获取IdList
+ * @method void setMicroserviceIdList(array $MicroserviceIdList) 设置IdList
  */
 class DescribeMicroservicesRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class DescribeMicroservicesRequest extends AbstractModel
     public $Status;
 
     /**
+     * @var array IdList
+     */
+    public $MicroserviceIdList;
+
+    /**
      * @param string $NamespaceId 命名空间ID
      * @param string $SearchWord 搜索字段
      * @param string $OrderBy 排序字段
@@ -80,6 +87,7 @@ class DescribeMicroservicesRequest extends AbstractModel
      * @param integer $Offset 偏移量
      * @param integer $Limit 分页个数
      * @param array $Status 状态过滤，online、offline、single_online
+     * @param array $MicroserviceIdList IdList
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class DescribeMicroservicesRequest extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("MicroserviceIdList",$param) and $param["MicroserviceIdList"] !== null) {
+            $this->MicroserviceIdList = $param["MicroserviceIdList"];
         }
     }
 }

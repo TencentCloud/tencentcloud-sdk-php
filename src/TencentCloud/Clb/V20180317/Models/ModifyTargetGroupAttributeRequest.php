@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyTargetGroupAttribute请求参数结构体
  *
- * @method string getTargetGroupId() 获取目标组的ID
- * @method void setTargetGroupId(string $TargetGroupId) 设置目标组的ID
- * @method string getTargetGroupName() 获取目标组的新名称
- * @method void setTargetGroupName(string $TargetGroupName) 设置目标组的新名称
- * @method integer getPort() 获取目标组的新默认端口
- * @method void setPort(integer $Port) 设置目标组的新默认端口
+ * @method string getTargetGroupId() 获取目标组的ID。
+ * @method void setTargetGroupId(string $TargetGroupId) 设置目标组的ID。
+ * @method string getTargetGroupName() 获取目标组的新名称。
+ * @method void setTargetGroupName(string $TargetGroupName) 设置目标组的新名称。
+ * @method integer getPort() 获取目标组的新默认端口。
+ * @method void setPort(integer $Port) 设置目标组的新默认端口。
  */
 class ModifyTargetGroupAttributeRequest extends AbstractModel
 {
     /**
-     * @var string 目标组的ID
+     * @var string 目标组的ID。
      */
     public $TargetGroupId;
 
     /**
-     * @var string 目标组的新名称
+     * @var string 目标组的新名称。
      */
     public $TargetGroupName;
 
     /**
-     * @var integer 目标组的新默认端口
+     * @var integer 目标组的新默认端口。
      */
     public $Port;
 
     /**
-     * @param string $TargetGroupId 目标组的ID
-     * @param string $TargetGroupName 目标组的新名称
-     * @param integer $Port 目标组的新默认端口
+     * @param string $TargetGroupId 目标组的ID。
+     * @param string $TargetGroupName 目标组的新名称。
+     * @param integer $Port 目标组的新默认端口。
      */
     function __construct()
     {

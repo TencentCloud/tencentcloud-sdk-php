@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RegisterTargetsWithClassicalLB请求参数结构体
  *
- * @method string getLoadBalancerId() 获取负载均衡实例 ID
- * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡实例 ID
- * @method array getTargets() 获取后端服务信息
- * @method void setTargets(array $Targets) 设置后端服务信息
+ * @method string getLoadBalancerId() 获取负载均衡实例ID。
+ * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡实例ID。
+ * @method array getTargets() 获取后端服务信息。
+ * @method void setTargets(array $Targets) 设置后端服务信息。
  */
 class RegisterTargetsWithClassicalLBRequest extends AbstractModel
 {
     /**
-     * @var string 负载均衡实例 ID
+     * @var string 负载均衡实例ID。
      */
     public $LoadBalancerId;
 
     /**
-     * @var array 后端服务信息
+     * @var array 后端服务信息。
      */
     public $Targets;
 
     /**
-     * @param string $LoadBalancerId 负载均衡实例 ID
-     * @param array $Targets 后端服务信息
+     * @param string $LoadBalancerId 负载均衡实例ID。
+     * @param array $Targets 后端服务信息。
      */
     function __construct()
     {

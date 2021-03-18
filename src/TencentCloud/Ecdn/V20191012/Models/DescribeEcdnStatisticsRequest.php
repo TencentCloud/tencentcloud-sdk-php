@@ -28,32 +28,18 @@ use TencentCloud\Common\AbstractModel;
 flux：流量，单位为 byte
 bandwidth：带宽，单位为 bps
 request：请求数，单位为 次
-delay：响应时间，单位为ms
 2xx：返回 2xx 状态码汇总或者 2 开头状态码数据，单位为 个
 3xx：返回 3xx 状态码汇总或者 3 开头状态码数据，单位为 个
 4xx：返回 4xx 状态码汇总或者 4 开头状态码数据，单位为 个
 5xx：返回 5xx 状态码汇总或者 5 开头状态码数据，单位为 个
-static_request ： 静态请求数，单位为 次
-static_flux：静态流量，单位为 byte
-static_bandwidth ： 静态带宽，单位为 bps
-dynamic_request：动态请求数，单位为 次
-dynamic_flux：动态流量，单位为 byte
-dynamic_bandwidth：动态带宽，单位为 bps
  * @method void setMetrics(array $Metrics) 设置指定查询指标，支持的类型有：
 flux：流量，单位为 byte
 bandwidth：带宽，单位为 bps
 request：请求数，单位为 次
-delay：响应时间，单位为ms
 2xx：返回 2xx 状态码汇总或者 2 开头状态码数据，单位为 个
 3xx：返回 3xx 状态码汇总或者 3 开头状态码数据，单位为 个
 4xx：返回 4xx 状态码汇总或者 4 开头状态码数据，单位为 个
 5xx：返回 5xx 状态码汇总或者 5 开头状态码数据，单位为 个
-static_request ： 静态请求数，单位为 次
-static_flux：静态流量，单位为 byte
-static_bandwidth ： 静态带宽，单位为 bps
-dynamic_request：动态请求数，单位为 次
-dynamic_flux：动态流量，单位为 byte
-dynamic_bandwidth：动态带宽，单位为 bps
  * @method integer getInterval() 获取时间粒度，支持以下几种模式：
 1 天	 1，5，15，30，60，120，240，1440 
 2 ~ 3 天	15，30，60，120，240，1440
@@ -74,6 +60,16 @@ dynamic_bandwidth：动态带宽，单位为 bps
 未填充域名情况下，指定项目查询，若填充了具体域名信息，以域名为主
  * @method void setProjects(array $Projects) 设置指定要查询的项目 ID，[前往查看项目 ID](https://console.cloud.tencent.com/project)
 未填充域名情况下，指定项目查询，若填充了具体域名信息，以域名为主
+ * @method string getArea() 获取统计区域:
+mainland: 境内
+oversea: 境外
+global: 全部
+默认 global
+ * @method void setArea(string $Area) 设置统计区域:
+mainland: 境内
+oversea: 境外
+global: 全部
+默认 global
  */
 class DescribeEcdnStatisticsRequest extends AbstractModel
 {
@@ -92,17 +88,10 @@ class DescribeEcdnStatisticsRequest extends AbstractModel
 flux：流量，单位为 byte
 bandwidth：带宽，单位为 bps
 request：请求数，单位为 次
-delay：响应时间，单位为ms
 2xx：返回 2xx 状态码汇总或者 2 开头状态码数据，单位为 个
 3xx：返回 3xx 状态码汇总或者 3 开头状态码数据，单位为 个
 4xx：返回 4xx 状态码汇总或者 4 开头状态码数据，单位为 个
 5xx：返回 5xx 状态码汇总或者 5 开头状态码数据，单位为 个
-static_request ： 静态请求数，单位为 次
-static_flux：静态流量，单位为 byte
-static_bandwidth ： 静态带宽，单位为 bps
-dynamic_request：动态请求数，单位为 次
-dynamic_flux：动态流量，单位为 byte
-dynamic_bandwidth：动态带宽，单位为 bps
      */
     public $Metrics;
 
@@ -129,23 +118,25 @@ dynamic_bandwidth：动态带宽，单位为 bps
     public $Projects;
 
     /**
+     * @var string 统计区域:
+mainland: 境内
+oversea: 境外
+global: 全部
+默认 global
+     */
+    public $Area;
+
+    /**
      * @param string $StartTime 查询起始时间，如：2019-12-13 00:00:00
      * @param string $EndTime 查询结束时间，如：2019-12-13 23:59:59
      * @param array $Metrics 指定查询指标，支持的类型有：
 flux：流量，单位为 byte
 bandwidth：带宽，单位为 bps
 request：请求数，单位为 次
-delay：响应时间，单位为ms
 2xx：返回 2xx 状态码汇总或者 2 开头状态码数据，单位为 个
 3xx：返回 3xx 状态码汇总或者 3 开头状态码数据，单位为 个
 4xx：返回 4xx 状态码汇总或者 4 开头状态码数据，单位为 个
 5xx：返回 5xx 状态码汇总或者 5 开头状态码数据，单位为 个
-static_request ： 静态请求数，单位为 次
-static_flux：静态流量，单位为 byte
-static_bandwidth ： 静态带宽，单位为 bps
-dynamic_request：动态请求数，单位为 次
-dynamic_flux：动态流量，单位为 byte
-dynamic_bandwidth：动态带宽，单位为 bps
      * @param integer $Interval 时间粒度，支持以下几种模式：
 1 天	 1，5，15，30，60，120，240，1440 
 2 ~ 3 天	15，30，60，120，240，1440
@@ -156,6 +147,11 @@ dynamic_bandwidth：动态带宽，单位为 bps
 最多可一次性查询30个加速域名。
      * @param array $Projects 指定要查询的项目 ID，[前往查看项目 ID](https://console.cloud.tencent.com/project)
 未填充域名情况下，指定项目查询，若填充了具体域名信息，以域名为主
+     * @param string $Area 统计区域:
+mainland: 境内
+oversea: 境外
+global: 全部
+默认 global
      */
     function __construct()
     {
@@ -192,6 +188,10 @@ dynamic_bandwidth：动态带宽，单位为 bps
 
         if (array_key_exists("Projects",$param) and $param["Projects"] !== null) {
             $this->Projects = $param["Projects"];
+        }
+
+        if (array_key_exists("Area",$param) and $param["Area"] !== null) {
+            $this->Area = $param["Area"];
         }
     }
 }

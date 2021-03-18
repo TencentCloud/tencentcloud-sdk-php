@@ -28,26 +28,14 @@ use TencentCloud\Common\AbstractModel;
 起止时间不超过90天。
  * @method void setEndTime(string $EndTime) 设置查询结束时间，如：2019-12-13 23:59:59。
 起止时间不超过90天。
- * @method array getMetrics() 获取统计指标名称。flux：流量，单位为 byte
+ * @method array getMetrics() 获取统计指标名称:
+flux：流量，单位为 byte
 bandwidth：带宽，单位为 bps
 request：请求数，单位为 次
-delay：响应时间，单位为ms
-static_request ： 静态请求数，单位为 次
-static_flux：静态流量，单位为 byte
-static_bandwidth ： 静态带宽，单位为 bps
-dynamic_request：动态请求数，单位为 次
-dynamic_flux：动态流量，单位为 byte
-dynamic_bandwidth：动态带宽，单位为 bps
- * @method void setMetrics(array $Metrics) 设置统计指标名称。flux：流量，单位为 byte
+ * @method void setMetrics(array $Metrics) 设置统计指标名称:
+flux：流量，单位为 byte
 bandwidth：带宽，单位为 bps
 request：请求数，单位为 次
-delay：响应时间，单位为ms
-static_request ： 静态请求数，单位为 次
-static_flux：静态流量，单位为 byte
-static_bandwidth ： 静态带宽，单位为 bps
-dynamic_request：动态请求数，单位为 次
-dynamic_flux：动态流量，单位为 byte
-dynamic_bandwidth：动态带宽，单位为 bps
  * @method array getDomains() 获取指定查询域名列表
  * @method void setDomains(array $Domains) 设置指定查询域名列表
  * @method array getProjects() 获取指定要查询的项目 ID，[前往查看项目 ID](https://console.cloud.tencent.com/project)
@@ -58,6 +46,16 @@ dynamic_bandwidth：动态带宽，单位为 bps
  * @method void setOffset(integer $Offset) 设置列表分页起始地址，默认0。
  * @method integer getLimit() 获取列表分页记录条数，默认1000，最大3000。
  * @method void setLimit(integer $Limit) 设置列表分页记录条数，默认1000，最大3000。
+ * @method string getArea() 获取统计区域:
+mainland: 境内
+oversea: 境外
+global: 全部
+默认 global
+ * @method void setArea(string $Area) 设置统计区域:
+mainland: 境内
+oversea: 境外
+global: 全部
+默认 global
  */
 class DescribeEcdnDomainStatisticsRequest extends AbstractModel
 {
@@ -74,16 +72,10 @@ class DescribeEcdnDomainStatisticsRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var array 统计指标名称。flux：流量，单位为 byte
+     * @var array 统计指标名称:
+flux：流量，单位为 byte
 bandwidth：带宽，单位为 bps
 request：请求数，单位为 次
-delay：响应时间，单位为ms
-static_request ： 静态请求数，单位为 次
-static_flux：静态流量，单位为 byte
-static_bandwidth ： 静态带宽，单位为 bps
-dynamic_request：动态请求数，单位为 次
-dynamic_flux：动态流量，单位为 byte
-dynamic_bandwidth：动态带宽，单位为 bps
      */
     public $Metrics;
 
@@ -109,25 +101,33 @@ dynamic_bandwidth：动态带宽，单位为 bps
     public $Limit;
 
     /**
+     * @var string 统计区域:
+mainland: 境内
+oversea: 境外
+global: 全部
+默认 global
+     */
+    public $Area;
+
+    /**
      * @param string $StartTime 查询起始时间，如：2019-12-13 00:00:00。
 起止时间不超过90天。
      * @param string $EndTime 查询结束时间，如：2019-12-13 23:59:59。
 起止时间不超过90天。
-     * @param array $Metrics 统计指标名称。flux：流量，单位为 byte
+     * @param array $Metrics 统计指标名称:
+flux：流量，单位为 byte
 bandwidth：带宽，单位为 bps
 request：请求数，单位为 次
-delay：响应时间，单位为ms
-static_request ： 静态请求数，单位为 次
-static_flux：静态流量，单位为 byte
-static_bandwidth ： 静态带宽，单位为 bps
-dynamic_request：动态请求数，单位为 次
-dynamic_flux：动态流量，单位为 byte
-dynamic_bandwidth：动态带宽，单位为 bps
      * @param array $Domains 指定查询域名列表
      * @param array $Projects 指定要查询的项目 ID，[前往查看项目 ID](https://console.cloud.tencent.com/project)
 未填充域名情况下，指定项目查询，若填充了具体域名信息，以域名为主
      * @param integer $Offset 列表分页起始地址，默认0。
      * @param integer $Limit 列表分页记录条数，默认1000，最大3000。
+     * @param string $Area 统计区域:
+mainland: 境内
+oversea: 境外
+global: 全部
+默认 global
      */
     function __construct()
     {
@@ -168,6 +168,10 @@ dynamic_bandwidth：动态带宽，单位为 bps
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("Area",$param) and $param["Area"] !== null) {
+            $this->Area = $param["Area"];
         }
     }
 }

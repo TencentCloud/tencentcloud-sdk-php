@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeListeners请求参数结构体
  *
- * @method string getLoadBalancerId() 获取负载均衡实例 ID
- * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡实例 ID
- * @method array getListenerIds() 获取要查询的负载均衡监听器 ID数组
- * @method void setListenerIds(array $ListenerIds) 设置要查询的负载均衡监听器 ID数组
- * @method string getProtocol() 获取要查询的监听器协议类型，取值 TCP | UDP | HTTP | HTTPS | TCP_SSL
- * @method void setProtocol(string $Protocol) 设置要查询的监听器协议类型，取值 TCP | UDP | HTTP | HTTPS | TCP_SSL
- * @method integer getPort() 获取要查询的监听器的端口
- * @method void setPort(integer $Port) 设置要查询的监听器的端口
+ * @method string getLoadBalancerId() 获取负载均衡实例ID。
+ * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡实例ID。
+ * @method array getListenerIds() 获取要查询的负载均衡监听器ID数组。
+ * @method void setListenerIds(array $ListenerIds) 设置要查询的负载均衡监听器ID数组。
+ * @method string getProtocol() 获取要查询的监听器协议类型，取值 TCP | UDP | HTTP | HTTPS | TCP_SSL。
+ * @method void setProtocol(string $Protocol) 设置要查询的监听器协议类型，取值 TCP | UDP | HTTP | HTTPS | TCP_SSL。
+ * @method integer getPort() 获取要查询的监听器的端口。
+ * @method void setPort(integer $Port) 设置要查询的监听器的端口。
  */
 class DescribeListenersRequest extends AbstractModel
 {
     /**
-     * @var string 负载均衡实例 ID
+     * @var string 负载均衡实例ID。
      */
     public $LoadBalancerId;
 
     /**
-     * @var array 要查询的负载均衡监听器 ID数组
+     * @var array 要查询的负载均衡监听器ID数组。
      */
     public $ListenerIds;
 
     /**
-     * @var string 要查询的监听器协议类型，取值 TCP | UDP | HTTP | HTTPS | TCP_SSL
+     * @var string 要查询的监听器协议类型，取值 TCP | UDP | HTTP | HTTPS | TCP_SSL。
      */
     public $Protocol;
 
     /**
-     * @var integer 要查询的监听器的端口
+     * @var integer 要查询的监听器的端口。
      */
     public $Port;
 
     /**
-     * @param string $LoadBalancerId 负载均衡实例 ID
-     * @param array $ListenerIds 要查询的负载均衡监听器 ID数组
-     * @param string $Protocol 要查询的监听器协议类型，取值 TCP | UDP | HTTP | HTTPS | TCP_SSL
-     * @param integer $Port 要查询的监听器的端口
+     * @param string $LoadBalancerId 负载均衡实例ID。
+     * @param array $ListenerIds 要查询的负载均衡监听器ID数组。
+     * @param string $Protocol 要查询的监听器协议类型，取值 TCP | UDP | HTTP | HTTPS | TCP_SSL。
+     * @param integer $Port 要查询的监听器的端口。
      */
     function __construct()
     {

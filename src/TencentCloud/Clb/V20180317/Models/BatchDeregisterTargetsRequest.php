@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * BatchDeregisterTargets请求参数结构体
  *
- * @method string getLoadBalancerId() 获取负载均衡ID
- * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡ID
- * @method array getTargets() 获取解绑目标
- * @method void setTargets(array $Targets) 设置解绑目标
+ * @method string getLoadBalancerId() 获取负载均衡ID。
+ * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡ID。
+ * @method array getTargets() 获取解绑目标。
+ * @method void setTargets(array $Targets) 设置解绑目标。
  */
 class BatchDeregisterTargetsRequest extends AbstractModel
 {
     /**
-     * @var string 负载均衡ID
+     * @var string 负载均衡ID。
      */
     public $LoadBalancerId;
 
     /**
-     * @var array 解绑目标
+     * @var array 解绑目标。
      */
     public $Targets;
 
     /**
-     * @param string $LoadBalancerId 负载均衡ID
-     * @param array $Targets 解绑目标
+     * @param string $LoadBalancerId 负载均衡ID。
+     * @param array $Targets 解绑目标。
      */
     function __construct()
     {

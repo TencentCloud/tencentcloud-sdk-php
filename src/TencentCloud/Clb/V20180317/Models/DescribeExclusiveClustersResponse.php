@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeExclusiveClusters返回参数结构体
  *
- * @method array getClusterSet() 获取集群列表
- * @method void setClusterSet(array $ClusterSet) 设置集群列表
- * @method integer getTotalCount() 获取集群总数目
- * @method void setTotalCount(integer $TotalCount) 设置集群总数目
+ * @method array getClusterSet() 获取集群列表。
+ * @method void setClusterSet(array $ClusterSet) 设置集群列表。
+ * @method integer getTotalCount() 获取集群总数量。
+ * @method void setTotalCount(integer $TotalCount) 设置集群总数量。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeExclusiveClustersResponse extends AbstractModel
 {
     /**
-     * @var array 集群列表
+     * @var array 集群列表。
      */
     public $ClusterSet;
 
     /**
-     * @var integer 集群总数目
+     * @var integer 集群总数量。
      */
     public $TotalCount;
 
@@ -45,8 +45,8 @@ class DescribeExclusiveClustersResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $ClusterSet 集群列表
-     * @param integer $TotalCount 集群总数目
+     * @param array $ClusterSet 集群列表。
+     * @param integer $TotalCount 集群总数量。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

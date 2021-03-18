@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRewrite请求参数结构体
  *
- * @method string getLoadBalancerId() 获取负载均衡实例ID
- * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡实例ID
- * @method array getSourceListenerIds() 获取负载均衡监听器ID数组
- * @method void setSourceListenerIds(array $SourceListenerIds) 设置负载均衡监听器ID数组
- * @method array getSourceLocationIds() 获取负载均衡转发规则的ID数组
- * @method void setSourceLocationIds(array $SourceLocationIds) 设置负载均衡转发规则的ID数组
+ * @method string getLoadBalancerId() 获取负载均衡实例ID。
+ * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡实例ID。
+ * @method array getSourceListenerIds() 获取负载均衡监听器ID数组。
+ * @method void setSourceListenerIds(array $SourceListenerIds) 设置负载均衡监听器ID数组。
+ * @method array getSourceLocationIds() 获取负载均衡转发规则的ID数组。
+ * @method void setSourceLocationIds(array $SourceLocationIds) 设置负载均衡转发规则的ID数组。
  */
 class DescribeRewriteRequest extends AbstractModel
 {
     /**
-     * @var string 负载均衡实例ID
+     * @var string 负载均衡实例ID。
      */
     public $LoadBalancerId;
 
     /**
-     * @var array 负载均衡监听器ID数组
+     * @var array 负载均衡监听器ID数组。
      */
     public $SourceListenerIds;
 
     /**
-     * @var array 负载均衡转发规则的ID数组
+     * @var array 负载均衡转发规则的ID数组。
      */
     public $SourceLocationIds;
 
     /**
-     * @param string $LoadBalancerId 负载均衡实例ID
-     * @param array $SourceListenerIds 负载均衡监听器ID数组
-     * @param array $SourceLocationIds 负载均衡转发规则的ID数组
+     * @param string $LoadBalancerId 负载均衡实例ID。
+     * @param array $SourceListenerIds 负载均衡监听器ID数组。
+     * @param array $SourceLocationIds 负载均衡转发规则的ID数组。
      */
     function __construct()
     {

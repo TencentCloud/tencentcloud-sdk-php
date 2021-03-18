@@ -20,14 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyDomainAttributes请求参数结构体
  *
- * @method string getLoadBalancerId() 获取负载均衡实例 ID
- * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡实例 ID
- * @method string getListenerId() 获取负载均衡监听器 ID
- * @method void setListenerId(string $ListenerId) 设置负载均衡监听器 ID
- * @method string getDomain() 获取域名（必须是已经创建的转发规则下的域名）
- * @method void setDomain(string $Domain) 设置域名（必须是已经创建的转发规则下的域名）
- * @method string getNewDomain() 获取要修改的新域名
- * @method void setNewDomain(string $NewDomain) 设置要修改的新域名
+ * @method string getLoadBalancerId() 获取负载均衡实例ID。
+ * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡实例ID。
+ * @method string getListenerId() 获取负载均衡监听器ID。
+ * @method void setListenerId(string $ListenerId) 设置负载均衡监听器ID。
+ * @method string getDomain() 获取域名（必须是已经创建的转发规则下的域名）。
+ * @method void setDomain(string $Domain) 设置域名（必须是已经创建的转发规则下的域名）。
+ * @method string getNewDomain() 获取要修改的新域名。
+ * @method void setNewDomain(string $NewDomain) 设置要修改的新域名。
  * @method CertificateInput getCertificate() 获取域名相关的证书信息，注意，仅对启用SNI的监听器适用。
  * @method void setCertificate(CertificateInput $Certificate) 设置域名相关的证书信息，注意，仅对启用SNI的监听器适用。
  * @method boolean getHttp2() 获取是否开启Http2，注意，只有HTTPS域名才能开启Http2。
@@ -40,22 +40,22 @@ use TencentCloud\Common\AbstractModel;
 class ModifyDomainAttributesRequest extends AbstractModel
 {
     /**
-     * @var string 负载均衡实例 ID
+     * @var string 负载均衡实例ID。
      */
     public $LoadBalancerId;
 
     /**
-     * @var string 负载均衡监听器 ID
+     * @var string 负载均衡监听器ID。
      */
     public $ListenerId;
 
     /**
-     * @var string 域名（必须是已经创建的转发规则下的域名）
+     * @var string 域名（必须是已经创建的转发规则下的域名）。
      */
     public $Domain;
 
     /**
-     * @var string 要修改的新域名
+     * @var string 要修改的新域名。
      */
     public $NewDomain;
 
@@ -80,10 +80,10 @@ class ModifyDomainAttributesRequest extends AbstractModel
     public $NewDefaultServerDomain;
 
     /**
-     * @param string $LoadBalancerId 负载均衡实例 ID
-     * @param string $ListenerId 负载均衡监听器 ID
-     * @param string $Domain 域名（必须是已经创建的转发规则下的域名）
-     * @param string $NewDomain 要修改的新域名
+     * @param string $LoadBalancerId 负载均衡实例ID。
+     * @param string $ListenerId 负载均衡监听器ID。
+     * @param string $Domain 域名（必须是已经创建的转发规则下的域名）。
+     * @param string $NewDomain 要修改的新域名。
      * @param CertificateInput $Certificate 域名相关的证书信息，注意，仅对启用SNI的监听器适用。
      * @param boolean $Http2 是否开启Http2，注意，只有HTTPS域名才能开启Http2。
      * @param boolean $DefaultServer 是否设为默认域名，注意，一个监听器下只能设置一个默认域名。

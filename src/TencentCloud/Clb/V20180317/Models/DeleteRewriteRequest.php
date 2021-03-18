@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteRewrite请求参数结构体
  *
- * @method string getLoadBalancerId() 获取负载均衡实例ID
- * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡实例ID
- * @method string getSourceListenerId() 获取源监听器ID
- * @method void setSourceListenerId(string $SourceListenerId) 设置源监听器ID
- * @method string getTargetListenerId() 获取目标监听器ID
- * @method void setTargetListenerId(string $TargetListenerId) 设置目标监听器ID
- * @method array getRewriteInfos() 获取转发规则之间的重定向关系
- * @method void setRewriteInfos(array $RewriteInfos) 设置转发规则之间的重定向关系
+ * @method string getLoadBalancerId() 获取负载均衡实例ID。
+ * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡实例ID。
+ * @method string getSourceListenerId() 获取源监听器ID。
+ * @method void setSourceListenerId(string $SourceListenerId) 设置源监听器ID。
+ * @method string getTargetListenerId() 获取目标监听器ID。
+ * @method void setTargetListenerId(string $TargetListenerId) 设置目标监听器ID。
+ * @method array getRewriteInfos() 获取转发规则之间的重定向关系。
+ * @method void setRewriteInfos(array $RewriteInfos) 设置转发规则之间的重定向关系。
  */
 class DeleteRewriteRequest extends AbstractModel
 {
     /**
-     * @var string 负载均衡实例ID
+     * @var string 负载均衡实例ID。
      */
     public $LoadBalancerId;
 
     /**
-     * @var string 源监听器ID
+     * @var string 源监听器ID。
      */
     public $SourceListenerId;
 
     /**
-     * @var string 目标监听器ID
+     * @var string 目标监听器ID。
      */
     public $TargetListenerId;
 
     /**
-     * @var array 转发规则之间的重定向关系
+     * @var array 转发规则之间的重定向关系。
      */
     public $RewriteInfos;
 
     /**
-     * @param string $LoadBalancerId 负载均衡实例ID
-     * @param string $SourceListenerId 源监听器ID
-     * @param string $TargetListenerId 目标监听器ID
-     * @param array $RewriteInfos 转发规则之间的重定向关系
+     * @param string $LoadBalancerId 负载均衡实例ID。
+     * @param string $SourceListenerId 源监听器ID。
+     * @param string $TargetListenerId 目标监听器ID。
+     * @param array $RewriteInfos 转发规则之间的重定向关系。
      */
     function __construct()
     {

@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeClassicalLBByInstanceId返回参数结构体
  *
- * @method array getLoadBalancerInfoList() 获取负载均衡相关信息列表
- * @method void setLoadBalancerInfoList(array $LoadBalancerInfoList) 设置负载均衡相关信息列表
+ * @method array getLoadBalancerInfoList() 获取负载均衡相关信息列表。
+ * @method void setLoadBalancerInfoList(array $LoadBalancerInfoList) 设置负载均衡相关信息列表。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeClassicalLBByInstanceIdResponse extends AbstractModel
 {
     /**
-     * @var array 负载均衡相关信息列表
+     * @var array 负载均衡相关信息列表。
      */
     public $LoadBalancerInfoList;
 
@@ -38,7 +38,7 @@ class DescribeClassicalLBByInstanceIdResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $LoadBalancerInfoList 负载均衡相关信息列表
+     * @param array $LoadBalancerInfoList 负载均衡相关信息列表。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeLoadBalancerTraffic返回参数结构体
  *
- * @method array getLoadBalancerTraffic() 获取按出带宽从高到低排序后的负载均衡信息
+ * @method array getLoadBalancerTraffic() 获取按出带宽从高到低排序后的负载均衡信息。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLoadBalancerTraffic(array $LoadBalancerTraffic) 设置按出带宽从高到低排序后的负载均衡信息
+ * @method void setLoadBalancerTraffic(array $LoadBalancerTraffic) 设置按出带宽从高到低排序后的负载均衡信息。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeLoadBalancerTrafficResponse extends AbstractModel
 {
     /**
-     * @var array 按出带宽从高到低排序后的负载均衡信息
+     * @var array 按出带宽从高到低排序后的负载均衡信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LoadBalancerTraffic;
@@ -41,7 +41,7 @@ class DescribeLoadBalancerTrafficResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $LoadBalancerTraffic 按出带宽从高到低排序后的负载均衡信息
+     * @param array $LoadBalancerTraffic 按出带宽从高到低排序后的负载均衡信息。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

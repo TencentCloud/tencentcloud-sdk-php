@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getLimit() 获取返回负载均衡列表数目，默认20，最大值100。
  * @method void setLimit(integer $Limit) 设置返回负载均衡列表数目，默认20，最大值100。
- * @method integer getOffset() 获取返回负载均衡列表起始偏移量，默认0
- * @method void setOffset(integer $Offset) 设置返回负载均衡列表起始偏移量，默认0
+ * @method integer getOffset() 获取返回负载均衡列表起始偏移量，默认0。
+ * @method void setOffset(integer $Offset) 设置返回负载均衡列表起始偏移量，默认0。
  * @method array getFields() 获取选择返回的Fields列表，默认添加LoadBalancerId和LoadBalancerName。
  * @method void setFields(array $Fields) 设置选择返回的Fields列表，默认添加LoadBalancerId和LoadBalancerName。
  * @method string getTargetType() 获取当Fields包含TargetId、TargetAddress、TargetPort、TargetWeight等Fields时，必选选择导出目标组的Target或者非目标组Target，值范围NODE、GROUP。
@@ -59,7 +59,7 @@ class DescribeLoadBalancersDetailRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var integer 返回负载均衡列表起始偏移量，默认0
+     * @var integer 返回负载均衡列表起始偏移量，默认0。
      */
     public $Offset;
 
@@ -90,7 +90,7 @@ class DescribeLoadBalancersDetailRequest extends AbstractModel
 
     /**
      * @param integer $Limit 返回负载均衡列表数目，默认20，最大值100。
-     * @param integer $Offset 返回负载均衡列表起始偏移量，默认0
+     * @param integer $Offset 返回负载均衡列表起始偏移量，默认0。
      * @param array $Fields 选择返回的Fields列表，默认添加LoadBalancerId和LoadBalancerName。
      * @param string $TargetType 当Fields包含TargetId、TargetAddress、TargetPort、TargetWeight等Fields时，必选选择导出目标组的Target或者非目标组Target，值范围NODE、GROUP。
      * @param array $Filters 查询负载均衡详细信息列表条件，详细的过滤条件如下：

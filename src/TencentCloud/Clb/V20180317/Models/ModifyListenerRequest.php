@@ -20,41 +20,41 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyListener请求参数结构体
  *
- * @method string getLoadBalancerId() 获取负载均衡实例 ID
- * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡实例 ID
- * @method string getListenerId() 获取负载均衡监听器 ID
- * @method void setListenerId(string $ListenerId) 设置负载均衡监听器 ID
- * @method string getListenerName() 获取新的监听器名称
- * @method void setListenerName(string $ListenerName) 设置新的监听器名称
+ * @method string getLoadBalancerId() 获取负载均衡实例ID。
+ * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡实例ID。
+ * @method string getListenerId() 获取负载均衡监听器ID。
+ * @method void setListenerId(string $ListenerId) 设置负载均衡监听器ID。
+ * @method string getListenerName() 获取新的监听器名称。
+ * @method void setListenerName(string $ListenerName) 设置新的监听器名称。
  * @method integer getSessionExpireTime() 获取会话保持时间，单位：秒。可选值：30~3600，默认 0，表示不开启。此参数仅适用于TCP/UDP监听器。
  * @method void setSessionExpireTime(integer $SessionExpireTime) 设置会话保持时间，单位：秒。可选值：30~3600，默认 0，表示不开启。此参数仅适用于TCP/UDP监听器。
- * @method HealthCheck getHealthCheck() 获取健康检查相关参数，此参数仅适用于TCP/UDP/TCP_SSL监听器
- * @method void setHealthCheck(HealthCheck $HealthCheck) 设置健康检查相关参数，此参数仅适用于TCP/UDP/TCP_SSL监听器
- * @method CertificateInput getCertificate() 获取证书相关信息，此参数仅适用于HTTPS/TCP_SSL监听器
- * @method void setCertificate(CertificateInput $Certificate) 设置证书相关信息，此参数仅适用于HTTPS/TCP_SSL监听器
+ * @method HealthCheck getHealthCheck() 获取健康检查相关参数，此参数仅适用于TCP/UDP/TCP_SSL监听器。
+ * @method void setHealthCheck(HealthCheck $HealthCheck) 设置健康检查相关参数，此参数仅适用于TCP/UDP/TCP_SSL监听器。
+ * @method CertificateInput getCertificate() 获取证书相关信息，此参数仅适用于HTTPS/TCP_SSL监听器。
+ * @method void setCertificate(CertificateInput $Certificate) 设置证书相关信息，此参数仅适用于HTTPS/TCP_SSL监听器。
  * @method string getScheduler() 获取监听器转发的方式。可选值：WRR、LEAST_CONN
 分别表示按权重轮询、最小连接数， 默认为 WRR。
  * @method void setScheduler(string $Scheduler) 设置监听器转发的方式。可选值：WRR、LEAST_CONN
 分别表示按权重轮询、最小连接数， 默认为 WRR。
- * @method integer getSniSwitch() 获取是否开启SNI特性，此参数仅适用于HTTPS监听器。注意：未开启SNI的监听器可以开启SNI；已开启SNI的监听器不能关闭SNI
- * @method void setSniSwitch(integer $SniSwitch) 设置是否开启SNI特性，此参数仅适用于HTTPS监听器。注意：未开启SNI的监听器可以开启SNI；已开启SNI的监听器不能关闭SNI
- * @method integer getKeepaliveEnable() 获取是否开启长连接，此参数仅适用于HTTP/HTTPS监听器
- * @method void setKeepaliveEnable(integer $KeepaliveEnable) 设置是否开启长连接，此参数仅适用于HTTP/HTTPS监听器
+ * @method integer getSniSwitch() 获取是否开启SNI特性，此参数仅适用于HTTPS监听器。注意：未开启SNI的监听器可以开启SNI；已开启SNI的监听器不能关闭SNI。
+ * @method void setSniSwitch(integer $SniSwitch) 设置是否开启SNI特性，此参数仅适用于HTTPS监听器。注意：未开启SNI的监听器可以开启SNI；已开启SNI的监听器不能关闭SNI。
+ * @method integer getKeepaliveEnable() 获取是否开启长连接，此参数仅适用于HTTP/HTTPS监听器。
+ * @method void setKeepaliveEnable(integer $KeepaliveEnable) 设置是否开启长连接，此参数仅适用于HTTP/HTTPS监听器。
  */
 class ModifyListenerRequest extends AbstractModel
 {
     /**
-     * @var string 负载均衡实例 ID
+     * @var string 负载均衡实例ID。
      */
     public $LoadBalancerId;
 
     /**
-     * @var string 负载均衡监听器 ID
+     * @var string 负载均衡监听器ID。
      */
     public $ListenerId;
 
     /**
-     * @var string 新的监听器名称
+     * @var string 新的监听器名称。
      */
     public $ListenerName;
 
@@ -64,12 +64,12 @@ class ModifyListenerRequest extends AbstractModel
     public $SessionExpireTime;
 
     /**
-     * @var HealthCheck 健康检查相关参数，此参数仅适用于TCP/UDP/TCP_SSL监听器
+     * @var HealthCheck 健康检查相关参数，此参数仅适用于TCP/UDP/TCP_SSL监听器。
      */
     public $HealthCheck;
 
     /**
-     * @var CertificateInput 证书相关信息，此参数仅适用于HTTPS/TCP_SSL监听器
+     * @var CertificateInput 证书相关信息，此参数仅适用于HTTPS/TCP_SSL监听器。
      */
     public $Certificate;
 
@@ -80,26 +80,26 @@ class ModifyListenerRequest extends AbstractModel
     public $Scheduler;
 
     /**
-     * @var integer 是否开启SNI特性，此参数仅适用于HTTPS监听器。注意：未开启SNI的监听器可以开启SNI；已开启SNI的监听器不能关闭SNI
+     * @var integer 是否开启SNI特性，此参数仅适用于HTTPS监听器。注意：未开启SNI的监听器可以开启SNI；已开启SNI的监听器不能关闭SNI。
      */
     public $SniSwitch;
 
     /**
-     * @var integer 是否开启长连接，此参数仅适用于HTTP/HTTPS监听器
+     * @var integer 是否开启长连接，此参数仅适用于HTTP/HTTPS监听器。
      */
     public $KeepaliveEnable;
 
     /**
-     * @param string $LoadBalancerId 负载均衡实例 ID
-     * @param string $ListenerId 负载均衡监听器 ID
-     * @param string $ListenerName 新的监听器名称
+     * @param string $LoadBalancerId 负载均衡实例ID。
+     * @param string $ListenerId 负载均衡监听器ID。
+     * @param string $ListenerName 新的监听器名称。
      * @param integer $SessionExpireTime 会话保持时间，单位：秒。可选值：30~3600，默认 0，表示不开启。此参数仅适用于TCP/UDP监听器。
-     * @param HealthCheck $HealthCheck 健康检查相关参数，此参数仅适用于TCP/UDP/TCP_SSL监听器
-     * @param CertificateInput $Certificate 证书相关信息，此参数仅适用于HTTPS/TCP_SSL监听器
+     * @param HealthCheck $HealthCheck 健康检查相关参数，此参数仅适用于TCP/UDP/TCP_SSL监听器。
+     * @param CertificateInput $Certificate 证书相关信息，此参数仅适用于HTTPS/TCP_SSL监听器。
      * @param string $Scheduler 监听器转发的方式。可选值：WRR、LEAST_CONN
 分别表示按权重轮询、最小连接数， 默认为 WRR。
-     * @param integer $SniSwitch 是否开启SNI特性，此参数仅适用于HTTPS监听器。注意：未开启SNI的监听器可以开启SNI；已开启SNI的监听器不能关闭SNI
-     * @param integer $KeepaliveEnable 是否开启长连接，此参数仅适用于HTTP/HTTPS监听器
+     * @param integer $SniSwitch 是否开启SNI特性，此参数仅适用于HTTPS监听器。注意：未开启SNI的监听器可以开启SNI；已开启SNI的监听器不能关闭SNI。
+     * @param integer $KeepaliveEnable 是否开启长连接，此参数仅适用于HTTP/HTTPS监听器。
      */
     function __construct()
     {

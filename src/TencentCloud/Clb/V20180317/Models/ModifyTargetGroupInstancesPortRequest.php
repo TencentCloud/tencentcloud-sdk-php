@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyTargetGroupInstancesPort请求参数结构体
  *
- * @method string getTargetGroupId() 获取目标组ID
- * @method void setTargetGroupId(string $TargetGroupId) 设置目标组ID
- * @method array getTargetGroupInstances() 获取待修改端口的服务器数组
- * @method void setTargetGroupInstances(array $TargetGroupInstances) 设置待修改端口的服务器数组
+ * @method string getTargetGroupId() 获取目标组ID。
+ * @method void setTargetGroupId(string $TargetGroupId) 设置目标组ID。
+ * @method array getTargetGroupInstances() 获取待修改端口的服务器数组。
+ * @method void setTargetGroupInstances(array $TargetGroupInstances) 设置待修改端口的服务器数组。
  */
 class ModifyTargetGroupInstancesPortRequest extends AbstractModel
 {
     /**
-     * @var string 目标组ID
+     * @var string 目标组ID。
      */
     public $TargetGroupId;
 
     /**
-     * @var array 待修改端口的服务器数组
+     * @var array 待修改端口的服务器数组。
      */
     public $TargetGroupInstances;
 
     /**
-     * @param string $TargetGroupId 目标组ID
-     * @param array $TargetGroupInstances 待修改端口的服务器数组
+     * @param string $TargetGroupId 目标组ID。
+     * @param array $TargetGroupInstances 待修改端口的服务器数组。
      */
     function __construct()
     {

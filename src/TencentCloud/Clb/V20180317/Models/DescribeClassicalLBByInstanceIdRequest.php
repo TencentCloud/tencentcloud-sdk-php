@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeClassicalLBByInstanceId请求参数结构体
  *
- * @method array getInstanceIds() 获取后端实例ID列表
- * @method void setInstanceIds(array $InstanceIds) 设置后端实例ID列表
+ * @method array getInstanceIds() 获取后端实例ID列表。
+ * @method void setInstanceIds(array $InstanceIds) 设置后端实例ID列表。
  */
 class DescribeClassicalLBByInstanceIdRequest extends AbstractModel
 {
     /**
-     * @var array 后端实例ID列表
+     * @var array 后端实例ID列表。
      */
     public $InstanceIds;
 
     /**
-     * @param array $InstanceIds 后端实例ID列表
+     * @param array $InstanceIds 后端实例ID列表。
      */
     function __construct()
     {

@@ -20,43 +20,43 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteRule请求参数结构体
  *
- * @method string getLoadBalancerId() 获取负载均衡实例 ID
- * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡实例 ID
- * @method string getListenerId() 获取负载均衡监听器 ID
- * @method void setListenerId(string $ListenerId) 设置负载均衡监听器 ID
- * @method array getLocationIds() 获取要删除的转发规则的ID组成的数组
- * @method void setLocationIds(array $LocationIds) 设置要删除的转发规则的ID组成的数组
- * @method string getDomain() 获取要删除的转发规则的域名，已提供LocationIds参数时本参数不生效
- * @method void setDomain(string $Domain) 设置要删除的转发规则的域名，已提供LocationIds参数时本参数不生效
- * @method string getUrl() 获取要删除的转发规则的转发路径，已提供LocationIds参数时本参数不生效
- * @method void setUrl(string $Url) 设置要删除的转发规则的转发路径，已提供LocationIds参数时本参数不生效
+ * @method string getLoadBalancerId() 获取负载均衡实例ID。
+ * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡实例ID。
+ * @method string getListenerId() 获取负载均衡监听器ID。
+ * @method void setListenerId(string $ListenerId) 设置负载均衡监听器ID。
+ * @method array getLocationIds() 获取要删除的转发规则的ID组成的数组。
+ * @method void setLocationIds(array $LocationIds) 设置要删除的转发规则的ID组成的数组。
+ * @method string getDomain() 获取要删除的转发规则的域名，已提供LocationIds参数时本参数不生效。
+ * @method void setDomain(string $Domain) 设置要删除的转发规则的域名，已提供LocationIds参数时本参数不生效。
+ * @method string getUrl() 获取要删除的转发规则的转发路径，已提供LocationIds参数时本参数不生效。
+ * @method void setUrl(string $Url) 设置要删除的转发规则的转发路径，已提供LocationIds参数时本参数不生效。
  * @method string getNewDefaultServerDomain() 获取监听器下必须配置一个默认域名，当需要删除默认域名时，可以指定另一个域名作为新的默认域名。
  * @method void setNewDefaultServerDomain(string $NewDefaultServerDomain) 设置监听器下必须配置一个默认域名，当需要删除默认域名时，可以指定另一个域名作为新的默认域名。
  */
 class DeleteRuleRequest extends AbstractModel
 {
     /**
-     * @var string 负载均衡实例 ID
+     * @var string 负载均衡实例ID。
      */
     public $LoadBalancerId;
 
     /**
-     * @var string 负载均衡监听器 ID
+     * @var string 负载均衡监听器ID。
      */
     public $ListenerId;
 
     /**
-     * @var array 要删除的转发规则的ID组成的数组
+     * @var array 要删除的转发规则的ID组成的数组。
      */
     public $LocationIds;
 
     /**
-     * @var string 要删除的转发规则的域名，已提供LocationIds参数时本参数不生效
+     * @var string 要删除的转发规则的域名，已提供LocationIds参数时本参数不生效。
      */
     public $Domain;
 
     /**
-     * @var string 要删除的转发规则的转发路径，已提供LocationIds参数时本参数不生效
+     * @var string 要删除的转发规则的转发路径，已提供LocationIds参数时本参数不生效。
      */
     public $Url;
 
@@ -66,11 +66,11 @@ class DeleteRuleRequest extends AbstractModel
     public $NewDefaultServerDomain;
 
     /**
-     * @param string $LoadBalancerId 负载均衡实例 ID
-     * @param string $ListenerId 负载均衡监听器 ID
-     * @param array $LocationIds 要删除的转发规则的ID组成的数组
-     * @param string $Domain 要删除的转发规则的域名，已提供LocationIds参数时本参数不生效
-     * @param string $Url 要删除的转发规则的转发路径，已提供LocationIds参数时本参数不生效
+     * @param string $LoadBalancerId 负载均衡实例ID。
+     * @param string $ListenerId 负载均衡监听器ID。
+     * @param array $LocationIds 要删除的转发规则的ID组成的数组。
+     * @param string $Domain 要删除的转发规则的域名，已提供LocationIds参数时本参数不生效。
+     * @param string $Url 要删除的转发规则的转发路径，已提供LocationIds参数时本参数不生效。
      * @param string $NewDefaultServerDomain 监听器下必须配置一个默认域名，当需要删除默认域名时，可以指定另一个域名作为新的默认域名。
      */
     function __construct()

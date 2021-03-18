@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMicroserviceType(string $MicroserviceType) 设置应用的微服务类型
  * @method array getApplicationResourceTypeList() 获取应用资源类型数组
  * @method void setApplicationResourceTypeList(array $ApplicationResourceTypeList) 设置应用资源类型数组
+ * @method array getApplicationIdList() 获取IdList
+ * @method void setApplicationIdList(array $ApplicationIdList) 设置IdList
  */
 class DescribeApplicationsRequest extends AbstractModel
 {
@@ -80,6 +82,11 @@ class DescribeApplicationsRequest extends AbstractModel
     public $ApplicationResourceTypeList;
 
     /**
+     * @var array IdList
+     */
+    public $ApplicationIdList;
+
+    /**
      * @param string $SearchWord 搜索字段
      * @param string $OrderBy 排序字段
      * @param integer $OrderType 排序类型
@@ -88,6 +95,7 @@ class DescribeApplicationsRequest extends AbstractModel
      * @param string $ApplicationType 应用类型
      * @param string $MicroserviceType 应用的微服务类型
      * @param array $ApplicationResourceTypeList 应用资源类型数组
+     * @param array $ApplicationIdList IdList
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ class DescribeApplicationsRequest extends AbstractModel
 
         if (array_key_exists("ApplicationResourceTypeList",$param) and $param["ApplicationResourceTypeList"] !== null) {
             $this->ApplicationResourceTypeList = $param["ApplicationResourceTypeList"];
+        }
+
+        if (array_key_exists("ApplicationIdList",$param) and $param["ApplicationIdList"] !== null) {
+            $this->ApplicationIdList = $param["ApplicationIdList"];
         }
     }
 }

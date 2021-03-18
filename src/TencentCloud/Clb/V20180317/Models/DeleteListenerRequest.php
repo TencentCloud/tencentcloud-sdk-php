@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteListener请求参数结构体
  *
- * @method string getLoadBalancerId() 获取负载均衡实例 ID
- * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡实例 ID
- * @method string getListenerId() 获取要删除的监听器 ID
- * @method void setListenerId(string $ListenerId) 设置要删除的监听器 ID
+ * @method string getLoadBalancerId() 获取负载均衡实例ID。
+ * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡实例ID。
+ * @method string getListenerId() 获取要删除的监听器ID。
+ * @method void setListenerId(string $ListenerId) 设置要删除的监听器ID。
  */
 class DeleteListenerRequest extends AbstractModel
 {
     /**
-     * @var string 负载均衡实例 ID
+     * @var string 负载均衡实例ID。
      */
     public $LoadBalancerId;
 
     /**
-     * @var string 要删除的监听器 ID
+     * @var string 要删除的监听器ID。
      */
     public $ListenerId;
 
     /**
-     * @param string $LoadBalancerId 负载均衡实例 ID
-     * @param string $ListenerId 要删除的监听器 ID
+     * @param string $LoadBalancerId 负载均衡实例ID。
+     * @param string $ListenerId 要删除的监听器ID。
      */
     function __construct()
     {

@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteLoadBalancerSnatIps请求参数结构体
  *
- * @method string getLoadBalancerId() 获取负载均衡唯一Id，如lb-12345678
- * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡唯一Id，如lb-12345678
- * @method array getIps() 获取删除SnatIp地址数组
- * @method void setIps(array $Ips) 设置删除SnatIp地址数组
+ * @method string getLoadBalancerId() 获取负载均衡唯一ID，例如：lb-12345678。
+ * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡唯一ID，例如：lb-12345678。
+ * @method array getIps() 获取删除SnatIp地址数组。
+ * @method void setIps(array $Ips) 设置删除SnatIp地址数组。
  */
 class DeleteLoadBalancerSnatIpsRequest extends AbstractModel
 {
     /**
-     * @var string 负载均衡唯一Id，如lb-12345678
+     * @var string 负载均衡唯一ID，例如：lb-12345678。
      */
     public $LoadBalancerId;
 
     /**
-     * @var array 删除SnatIp地址数组
+     * @var array 删除SnatIp地址数组。
      */
     public $Ips;
 
     /**
-     * @param string $LoadBalancerId 负载均衡唯一Id，如lb-12345678
-     * @param array $Ips 删除SnatIp地址数组
+     * @param string $LoadBalancerId 负载均衡唯一ID，例如：lb-12345678。
+     * @param array $Ips 删除SnatIp地址数组。
      */
     function __construct()
     {

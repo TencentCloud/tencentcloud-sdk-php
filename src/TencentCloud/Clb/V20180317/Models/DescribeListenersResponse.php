@@ -20,11 +20,11 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeListeners返回参数结构体
  *
- * @method array getListeners() 获取监听器列表
- * @method void setListeners(array $Listeners) 设置监听器列表
- * @method integer getTotalCount() 获取总的监听器个数
+ * @method array getListeners() 获取监听器列表。
+ * @method void setListeners(array $Listeners) 设置监听器列表。
+ * @method integer getTotalCount() 获取总的监听器个数（根据端口、协议、监听器ID过滤后）。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTotalCount(integer $TotalCount) 设置总的监听器个数
+ * @method void setTotalCount(integer $TotalCount) 设置总的监听器个数（根据端口、协议、监听器ID过滤后）。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -32,12 +32,12 @@ use TencentCloud\Common\AbstractModel;
 class DescribeListenersResponse extends AbstractModel
 {
     /**
-     * @var array 监听器列表
+     * @var array 监听器列表。
      */
     public $Listeners;
 
     /**
-     * @var integer 总的监听器个数
+     * @var integer 总的监听器个数（根据端口、协议、监听器ID过滤后）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalCount;
@@ -48,8 +48,8 @@ class DescribeListenersResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Listeners 监听器列表
-     * @param integer $TotalCount 总的监听器个数
+     * @param array $Listeners 监听器列表。
+     * @param integer $TotalCount 总的监听器个数（根据端口、协议、监听器ID过滤后）。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

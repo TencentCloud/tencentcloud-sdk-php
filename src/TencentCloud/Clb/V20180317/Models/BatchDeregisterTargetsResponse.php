@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * BatchDeregisterTargets返回参数结构体
  *
- * @method array getFailListenerIdSet() 获取解绑失败的监听器ID
- * @method void setFailListenerIdSet(array $FailListenerIdSet) 设置解绑失败的监听器ID
+ * @method array getFailListenerIdSet() 获取解绑失败的监听器ID。
+ * @method void setFailListenerIdSet(array $FailListenerIdSet) 设置解绑失败的监听器ID。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class BatchDeregisterTargetsResponse extends AbstractModel
 {
     /**
-     * @var array 解绑失败的监听器ID
+     * @var array 解绑失败的监听器ID。
      */
     public $FailListenerIdSet;
 
@@ -38,7 +38,7 @@ class BatchDeregisterTargetsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $FailListenerIdSet 解绑失败的监听器ID
+     * @param array $FailListenerIdSet 解绑失败的监听器ID。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

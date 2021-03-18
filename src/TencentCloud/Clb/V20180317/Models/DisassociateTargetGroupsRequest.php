@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DisassociateTargetGroups请求参数结构体
  *
- * @method array getAssociations() 获取待解绑的规则关系数组
- * @method void setAssociations(array $Associations) 设置待解绑的规则关系数组
+ * @method array getAssociations() 获取待解绑的规则关系数组。
+ * @method void setAssociations(array $Associations) 设置待解绑的规则关系数组。
  */
 class DisassociateTargetGroupsRequest extends AbstractModel
 {
     /**
-     * @var array 待解绑的规则关系数组
+     * @var array 待解绑的规则关系数组。
      */
     public $Associations;
 
     /**
-     * @param array $Associations 待解绑的规则关系数组
+     * @param array $Associations 待解绑的规则关系数组。
      */
     function __construct()
     {

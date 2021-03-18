@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeClassicalLBTargets请求参数结构体
  *
- * @method string getLoadBalancerId() 获取负载均衡实例 ID
- * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡实例 ID
+ * @method string getLoadBalancerId() 获取负载均衡实例 ID。
+ * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡实例 ID。
  */
 class DescribeClassicalLBTargetsRequest extends AbstractModel
 {
     /**
-     * @var string 负载均衡实例 ID
+     * @var string 负载均衡实例 ID。
      */
     public $LoadBalancerId;
 
     /**
-     * @param string $LoadBalancerId 负载均衡实例 ID
+     * @param string $LoadBalancerId 负载均衡实例 ID。
      */
     function __construct()
     {

@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeExclusiveClusters请求参数结构体
  *
- * @method integer getLimit() 获取返回集群列表数目，默认20，最大值100
- * @method void setLimit(integer $Limit) 设置返回集群列表数目，默认20，最大值100
- * @method integer getOffset() 获取返回集群列表起始偏移量，默认0
- * @method void setOffset(integer $Offset) 设置返回集群列表起始偏移量，默认0
+ * @method integer getLimit() 获取返回集群列表数目，默认值为20，最大值为100。
+ * @method void setLimit(integer $Limit) 设置返回集群列表数目，默认值为20，最大值为100。
+ * @method integer getOffset() 获取返回集群列表起始偏移量，默认为0。
+ * @method void setOffset(integer $Offset) 设置返回集群列表起始偏移量，默认为0。
  * @method array getFilters() 获取查询集群列表条件，详细的过滤条件如下：
 <li> cluster-type - String - 是否必填：否 - （过滤条件）按照 集群 的类型过滤，包括"TGW","STGW","VPCGW"。</li>
 <li> cluster-id - String - 是否必填：否 - （过滤条件）按照 集群 的唯一ID过滤，如 ："tgw-12345678","stgw-12345678","vpcgw-12345678"。</li>
@@ -48,12 +48,12 @@ use TencentCloud\Common\AbstractModel;
 class DescribeExclusiveClustersRequest extends AbstractModel
 {
     /**
-     * @var integer 返回集群列表数目，默认20，最大值100
+     * @var integer 返回集群列表数目，默认值为20，最大值为100。
      */
     public $Limit;
 
     /**
-     * @var integer 返回集群列表起始偏移量，默认0
+     * @var integer 返回集群列表起始偏移量，默认为0。
      */
     public $Offset;
 
@@ -72,8 +72,8 @@ class DescribeExclusiveClustersRequest extends AbstractModel
     public $Filters;
 
     /**
-     * @param integer $Limit 返回集群列表数目，默认20，最大值100
-     * @param integer $Offset 返回集群列表起始偏移量，默认0
+     * @param integer $Limit 返回集群列表数目，默认值为20，最大值为100。
+     * @param integer $Offset 返回集群列表起始偏移量，默认为0。
      * @param array $Filters 查询集群列表条件，详细的过滤条件如下：
 <li> cluster-type - String - 是否必填：否 - （过滤条件）按照 集群 的类型过滤，包括"TGW","STGW","VPCGW"。</li>
 <li> cluster-id - String - 是否必填：否 - （过滤条件）按照 集群 的唯一ID过滤，如 ："tgw-12345678","stgw-12345678","vpcgw-12345678"。</li>

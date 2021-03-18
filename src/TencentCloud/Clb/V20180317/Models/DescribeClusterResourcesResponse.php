@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeClusterResources返回参数结构体
  *
- * @method array getClusterResourceSet() 获取集群中资源列表
- * @method void setClusterResourceSet(array $ClusterResourceSet) 设置集群中资源列表
- * @method integer getTotalCount() 获取集群中资源总数
- * @method void setTotalCount(integer $TotalCount) 设置集群中资源总数
+ * @method array getClusterResourceSet() 获取集群中资源列表。
+ * @method void setClusterResourceSet(array $ClusterResourceSet) 设置集群中资源列表。
+ * @method integer getTotalCount() 获取集群中资源总数。
+ * @method void setTotalCount(integer $TotalCount) 设置集群中资源总数。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeClusterResourcesResponse extends AbstractModel
 {
     /**
-     * @var array 集群中资源列表
+     * @var array 集群中资源列表。
      */
     public $ClusterResourceSet;
 
     /**
-     * @var integer 集群中资源总数
+     * @var integer 集群中资源总数。
      */
     public $TotalCount;
 
@@ -45,8 +45,8 @@ class DescribeClusterResourcesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $ClusterResourceSet 集群中资源列表
-     * @param integer $TotalCount 集群中资源总数
+     * @param array $ClusterResourceSet 集群中资源列表。
+     * @param integer $TotalCount 集群中资源总数。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

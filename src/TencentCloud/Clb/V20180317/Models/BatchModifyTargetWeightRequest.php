@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * BatchModifyTargetWeight请求参数结构体
  *
- * @method string getLoadBalancerId() 获取负载均衡实例 ID
- * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡实例 ID
- * @method array getModifyList() 获取要批量修改权重的列表
- * @method void setModifyList(array $ModifyList) 设置要批量修改权重的列表
+ * @method string getLoadBalancerId() 获取负载均衡实例 ID。
+ * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡实例 ID。
+ * @method array getModifyList() 获取要批量修改权重的列表。
+ * @method void setModifyList(array $ModifyList) 设置要批量修改权重的列表。
  */
 class BatchModifyTargetWeightRequest extends AbstractModel
 {
     /**
-     * @var string 负载均衡实例 ID
+     * @var string 负载均衡实例 ID。
      */
     public $LoadBalancerId;
 
     /**
-     * @var array 要批量修改权重的列表
+     * @var array 要批量修改权重的列表。
      */
     public $ModifyList;
 
     /**
-     * @param string $LoadBalancerId 负载均衡实例 ID
-     * @param array $ModifyList 要批量修改权重的列表
+     * @param string $LoadBalancerId 负载均衡实例 ID。
+     * @param array $ModifyList 要批量修改权重的列表。
      */
     function __construct()
     {

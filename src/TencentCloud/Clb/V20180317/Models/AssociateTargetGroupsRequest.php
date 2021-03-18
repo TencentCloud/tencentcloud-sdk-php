@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AssociateTargetGroups请求参数结构体
  *
- * @method array getAssociations() 获取绑定的关系数组
- * @method void setAssociations(array $Associations) 设置绑定的关系数组
+ * @method array getAssociations() 获取绑定的关系数组。
+ * @method void setAssociations(array $Associations) 设置绑定的关系数组。
  */
 class AssociateTargetGroupsRequest extends AbstractModel
 {
     /**
-     * @var array 绑定的关系数组
+     * @var array 绑定的关系数组。
      */
     public $Associations;
 
     /**
-     * @param array $Associations 绑定的关系数组
+     * @param array $Associations 绑定的关系数组。
      */
     function __construct()
     {

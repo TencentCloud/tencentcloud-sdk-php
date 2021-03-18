@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeClassicalLBTargets返回参数结构体
  *
- * @method array getTargets() 获取后端服务列表
+ * @method array getTargets() 获取后端服务列表。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTargets(array $Targets) 设置后端服务列表
+ * @method void setTargets(array $Targets) 设置后端服务列表。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeClassicalLBTargetsResponse extends AbstractModel
 {
     /**
-     * @var array 后端服务列表
+     * @var array 后端服务列表。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Targets;
@@ -41,7 +41,7 @@ class DescribeClassicalLBTargetsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Targets 后端服务列表
+     * @param array $Targets 后端服务列表。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateTopic请求参数结构体
  *
- * @method string getTopicName() 获取日志主题的名字
- * @method void setTopicName(string $TopicName) 设置日志主题的名字
- * @method integer getPartitionCount() 获取主题分区 partition个数，不传参默认创建1个，最大创建允许10个，分裂/合并操作会改变分区数量，整体上限50个。
- * @method void setPartitionCount(integer $PartitionCount) 设置主题分区 partition个数，不传参默认创建1个，最大创建允许10个，分裂/合并操作会改变分区数量，整体上限50个。
+ * @method string getTopicName() 获取日志主题的名称。
+ * @method void setTopicName(string $TopicName) 设置日志主题的名称。
+ * @method integer getPartitionCount() 获取主题分区Partition的数量，不传参默认创建1个，最大创建允许10个，分裂/合并操作会改变分区数量，整体上限50个。
+ * @method void setPartitionCount(integer $PartitionCount) 设置主题分区Partition的数量，不传参默认创建1个，最大创建允许10个，分裂/合并操作会改变分区数量，整体上限50个。
  */
 class CreateTopicRequest extends AbstractModel
 {
     /**
-     * @var string 日志主题的名字
+     * @var string 日志主题的名称。
      */
     public $TopicName;
 
     /**
-     * @var integer 主题分区 partition个数，不传参默认创建1个，最大创建允许10个，分裂/合并操作会改变分区数量，整体上限50个。
+     * @var integer 主题分区Partition的数量，不传参默认创建1个，最大创建允许10个，分裂/合并操作会改变分区数量，整体上限50个。
      */
     public $PartitionCount;
 
     /**
-     * @param string $TopicName 日志主题的名字
-     * @param integer $PartitionCount 主题分区 partition个数，不传参默认创建1个，最大创建允许10个，分裂/合并操作会改变分区数量，整体上限50个。
+     * @param string $TopicName 日志主题的名称。
+     * @param integer $PartitionCount 主题分区Partition的数量，不传参默认创建1个，最大创建允许10个，分裂/合并操作会改变分区数量，整体上限50个。
      */
     function __construct()
     {

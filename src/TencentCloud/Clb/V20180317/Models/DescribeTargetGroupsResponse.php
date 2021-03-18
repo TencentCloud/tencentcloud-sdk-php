@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTargetGroups返回参数结构体
  *
- * @method integer getTotalCount() 获取显示的结果数量
- * @method void setTotalCount(integer $TotalCount) 设置显示的结果数量
- * @method array getTargetGroupSet() 获取显示的目标组信息集合
- * @method void setTargetGroupSet(array $TargetGroupSet) 设置显示的目标组信息集合
+ * @method integer getTotalCount() 获取显示的结果数量。
+ * @method void setTotalCount(integer $TotalCount) 设置显示的结果数量。
+ * @method array getTargetGroupSet() 获取显示的目标组信息集合。
+ * @method void setTargetGroupSet(array $TargetGroupSet) 设置显示的目标组信息集合。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeTargetGroupsResponse extends AbstractModel
 {
     /**
-     * @var integer 显示的结果数量
+     * @var integer 显示的结果数量。
      */
     public $TotalCount;
 
     /**
-     * @var array 显示的目标组信息集合
+     * @var array 显示的目标组信息集合。
      */
     public $TargetGroupSet;
 
@@ -45,8 +45,8 @@ class DescribeTargetGroupsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 显示的结果数量
-     * @param array $TargetGroupSet 显示的目标组信息集合
+     * @param integer $TotalCount 显示的结果数量。
+     * @param array $TargetGroupSet 显示的目标组信息集合。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

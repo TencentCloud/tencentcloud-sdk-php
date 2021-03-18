@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteLoadBalancer请求参数结构体
  *
- * @method array getLoadBalancerIds() 获取要删除的负载均衡实例 ID数组，数组大小最大支持20
- * @method void setLoadBalancerIds(array $LoadBalancerIds) 设置要删除的负载均衡实例 ID数组，数组大小最大支持20
+ * @method array getLoadBalancerIds() 获取要删除的负载均衡实例 ID数组，数组大小最大支持20。
+ * @method void setLoadBalancerIds(array $LoadBalancerIds) 设置要删除的负载均衡实例 ID数组，数组大小最大支持20。
  */
 class DeleteLoadBalancerRequest extends AbstractModel
 {
     /**
-     * @var array 要删除的负载均衡实例 ID数组，数组大小最大支持20
+     * @var array 要删除的负载均衡实例 ID数组，数组大小最大支持20。
      */
     public $LoadBalancerIds;
 
     /**
-     * @param array $LoadBalancerIds 要删除的负载均衡实例 ID数组，数组大小最大支持20
+     * @param array $LoadBalancerIds 要删除的负载均衡实例 ID数组，数组大小最大支持20。
      */
     function __construct()
     {

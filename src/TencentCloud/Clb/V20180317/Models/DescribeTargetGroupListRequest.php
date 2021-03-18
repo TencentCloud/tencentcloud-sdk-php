@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTargetGroupList请求参数结构体
  *
- * @method array getTargetGroupIds() 获取目标组ID数组
- * @method void setTargetGroupIds(array $TargetGroupIds) 设置目标组ID数组
- * @method array getFilters() 获取过滤条件数组，支持TargetGroupVpcId和TargetGroupName。与TargetGroupIds互斥，优先使用目标组ID，
- * @method void setFilters(array $Filters) 设置过滤条件数组，支持TargetGroupVpcId和TargetGroupName。与TargetGroupIds互斥，优先使用目标组ID，
- * @method integer getOffset() 获取显示的偏移起始量
- * @method void setOffset(integer $Offset) 设置显示的偏移起始量
- * @method integer getLimit() 获取显示条数限制，默认为20
- * @method void setLimit(integer $Limit) 设置显示条数限制，默认为20
+ * @method array getTargetGroupIds() 获取目标组ID数组。
+ * @method void setTargetGroupIds(array $TargetGroupIds) 设置目标组ID数组。
+ * @method array getFilters() 获取过滤条件数组，支持TargetGroupVpcId和TargetGroupName。与TargetGroupIds互斥，优先使用目标组ID。
+ * @method void setFilters(array $Filters) 设置过滤条件数组，支持TargetGroupVpcId和TargetGroupName。与TargetGroupIds互斥，优先使用目标组ID。
+ * @method integer getOffset() 获取显示的偏移起始量。
+ * @method void setOffset(integer $Offset) 设置显示的偏移起始量。
+ * @method integer getLimit() 获取显示条数限制，默认为20。
+ * @method void setLimit(integer $Limit) 设置显示条数限制，默认为20。
  */
 class DescribeTargetGroupListRequest extends AbstractModel
 {
     /**
-     * @var array 目标组ID数组
+     * @var array 目标组ID数组。
      */
     public $TargetGroupIds;
 
     /**
-     * @var array 过滤条件数组，支持TargetGroupVpcId和TargetGroupName。与TargetGroupIds互斥，优先使用目标组ID，
+     * @var array 过滤条件数组，支持TargetGroupVpcId和TargetGroupName。与TargetGroupIds互斥，优先使用目标组ID。
      */
     public $Filters;
 
     /**
-     * @var integer 显示的偏移起始量
+     * @var integer 显示的偏移起始量。
      */
     public $Offset;
 
     /**
-     * @var integer 显示条数限制，默认为20
+     * @var integer 显示条数限制，默认为20。
      */
     public $Limit;
 
     /**
-     * @param array $TargetGroupIds 目标组ID数组
-     * @param array $Filters 过滤条件数组，支持TargetGroupVpcId和TargetGroupName。与TargetGroupIds互斥，优先使用目标组ID，
-     * @param integer $Offset 显示的偏移起始量
-     * @param integer $Limit 显示条数限制，默认为20
+     * @param array $TargetGroupIds 目标组ID数组。
+     * @param array $Filters 过滤条件数组，支持TargetGroupVpcId和TargetGroupName。与TargetGroupIds互斥，优先使用目标组ID。
+     * @param integer $Offset 显示的偏移起始量。
+     * @param integer $Limit 显示条数限制，默认为20。
      */
     function __construct()
     {

@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateLoadBalancerSnatIps请求参数结构体
  *
- * @method string getLoadBalancerId() 获取负载均衡唯一性Id，如lb-12345678
- * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡唯一性Id，如lb-12345678
- * @method array getSnatIps() 获取添加SnatIp信息，可指定Ip申请，或者指定子网自动申请
- * @method void setSnatIps(array $SnatIps) 设置添加SnatIp信息，可指定Ip申请，或者指定子网自动申请
+ * @method string getLoadBalancerId() 获取负载均衡唯一性ID，例如：lb-12345678。
+ * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡唯一性ID，例如：lb-12345678。
+ * @method array getSnatIps() 获取添加SnatIp信息，可指定IP申请，或者指定子网自动申请。
+ * @method void setSnatIps(array $SnatIps) 设置添加SnatIp信息，可指定IP申请，或者指定子网自动申请。
  */
 class CreateLoadBalancerSnatIpsRequest extends AbstractModel
 {
     /**
-     * @var string 负载均衡唯一性Id，如lb-12345678
+     * @var string 负载均衡唯一性ID，例如：lb-12345678。
      */
     public $LoadBalancerId;
 
     /**
-     * @var array 添加SnatIp信息，可指定Ip申请，或者指定子网自动申请
+     * @var array 添加SnatIp信息，可指定IP申请，或者指定子网自动申请。
      */
     public $SnatIps;
 
     /**
-     * @param string $LoadBalancerId 负载均衡唯一性Id，如lb-12345678
-     * @param array $SnatIps 添加SnatIp信息，可指定Ip申请，或者指定子网自动申请
+     * @param string $LoadBalancerId 负载均衡唯一性ID，例如：lb-12345678。
+     * @param array $SnatIps 添加SnatIp信息，可指定IP申请，或者指定子网自动申请。
      */
     function __construct()
     {

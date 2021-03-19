@@ -14,32 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cdn\V20180606\Models;
+namespace TencentCloud\Iotexplorer\V20190423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Waf子规则开关状态
+ * 搜索关键词
  *
- * @method string getSwitch() 获取子规则状态，on|off
- * @method void setSwitch(string $Switch) 设置子规则状态，on|off
- * @method array getSubIds() 获取规则id列表
- * @method void setSubIds(array $SubIds) 设置规则id列表
+ * @method string getKey() 获取搜索条件的Key
+ * @method void setKey(string $Key) 设置搜索条件的Key
+ * @method string getValue() 获取搜索条件的值
+ * @method void setValue(string $Value) 设置搜索条件的值
  */
-class WafSubRuleStatus extends AbstractModel
+class SearchKeyword extends AbstractModel
 {
     /**
-     * @var string 子规则状态，on|off
+     * @var string 搜索条件的Key
      */
-    public $Switch;
+    public $Key;
 
     /**
-     * @var array 规则id列表
+     * @var string 搜索条件的值
      */
-    public $SubIds;
+    public $Value;
 
     /**
-     * @param string $Switch 子规则状态，on|off
-     * @param array $SubIds 规则id列表
+     * @param string $Key 搜索条件的Key
+     * @param string $Value 搜索条件的值
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class WafSubRuleStatus extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Switch",$param) and $param["Switch"] !== null) {
-            $this->Switch = $param["Switch"];
+        if (array_key_exists("Key",$param) and $param["Key"] !== null) {
+            $this->Key = $param["Key"];
         }
 
-        if (array_key_exists("SubIds",$param) and $param["SubIds"] !== null) {
-            $this->SubIds = $param["SubIds"];
+        if (array_key_exists("Value",$param) and $param["Value"] !== null) {
+            $this->Value = $param["Value"];
         }
     }
 }

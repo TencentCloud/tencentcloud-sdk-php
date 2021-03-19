@@ -14,37 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Lighthouse\V20200324\Models;
+namespace TencentCloud\Iotexplorer\V20190423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeFirewallRules返回参数结构体
+ * ListFirmwares返回参数结构体
  *
- * @method integer getTotalCount() 获取符合条件的防火墙规则数量。
- * @method void setTotalCount(integer $TotalCount) 设置符合条件的防火墙规则数量。
- * @method array getFirewallRuleSet() 获取防火墙规则详细信息列表。
- * @method void setFirewallRuleSet(array $FirewallRuleSet) 设置防火墙规则详细信息列表。
- * @method integer getFirewallVersion() 获取防火墙版本号。
- * @method void setFirewallVersion(integer $FirewallVersion) 设置防火墙版本号。
+ * @method integer getTotalCount() 获取固件总数
+ * @method void setTotalCount(integer $TotalCount) 设置固件总数
+ * @method array getFirmwares() 获取固件列表
+ * @method void setFirmwares(array $Firmwares) 设置固件列表
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeFirewallRulesResponse extends AbstractModel
+class ListFirmwaresResponse extends AbstractModel
 {
     /**
-     * @var integer 符合条件的防火墙规则数量。
+     * @var integer 固件总数
      */
     public $TotalCount;
 
     /**
-     * @var array 防火墙规则详细信息列表。
+     * @var array 固件列表
      */
-    public $FirewallRuleSet;
-
-    /**
-     * @var integer 防火墙版本号。
-     */
-    public $FirewallVersion;
+    public $Firmwares;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -52,9 +45,8 @@ class DescribeFirewallRulesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 符合条件的防火墙规则数量。
-     * @param array $FirewallRuleSet 防火墙规则详细信息列表。
-     * @param integer $FirewallVersion 防火墙版本号。
+     * @param integer $TotalCount 固件总数
+     * @param array $Firmwares 固件列表
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -74,17 +66,13 @@ class DescribeFirewallRulesResponse extends AbstractModel
             $this->TotalCount = $param["TotalCount"];
         }
 
-        if (array_key_exists("FirewallRuleSet",$param) and $param["FirewallRuleSet"] !== null) {
-            $this->FirewallRuleSet = [];
-            foreach ($param["FirewallRuleSet"] as $key => $value){
-                $obj = new FirewallRuleInfo();
+        if (array_key_exists("Firmwares",$param) and $param["Firmwares"] !== null) {
+            $this->Firmwares = [];
+            foreach ($param["Firmwares"] as $key => $value){
+                $obj = new FirmwareInfo();
                 $obj->deserialize($value);
-                array_push($this->FirewallRuleSet, $obj);
+                array_push($this->Firmwares, $obj);
             }
-        }
-
-        if (array_key_exists("FirewallVersion",$param) and $param["FirewallVersion"] !== null) {
-            $this->FirewallVersion = $param["FirewallVersion"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

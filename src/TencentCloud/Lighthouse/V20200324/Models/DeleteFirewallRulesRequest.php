@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置实例 ID。
  * @method array getFirewallRules() 获取防火墙规则列表。
  * @method void setFirewallRules(array $FirewallRules) 设置防火墙规则列表。
+ * @method integer getFirewallVersion() 获取防火墙当前版本。用户每次更新防火墙规则时版本会自动加1，防止规则已过期，不填不考虑冲突。
+ * @method void setFirewallVersion(integer $FirewallVersion) 设置防火墙当前版本。用户每次更新防火墙规则时版本会自动加1，防止规则已过期，不填不考虑冲突。
  */
 class DeleteFirewallRulesRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class DeleteFirewallRulesRequest extends AbstractModel
     public $FirewallRules;
 
     /**
+     * @var integer 防火墙当前版本。用户每次更新防火墙规则时版本会自动加1，防止规则已过期，不填不考虑冲突。
+     */
+    public $FirewallVersion;
+
+    /**
      * @param string $InstanceId 实例 ID。
      * @param array $FirewallRules 防火墙规则列表。
+     * @param integer $FirewallVersion 防火墙当前版本。用户每次更新防火墙规则时版本会自动加1，防止规则已过期，不填不考虑冲突。
      */
     function __construct()
     {
@@ -65,6 +73,10 @@ class DeleteFirewallRulesRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->FirewallRules, $obj);
             }
+        }
+
+        if (array_key_exists("FirewallVersion",$param) and $param["FirewallVersion"] !== null) {
+            $this->FirewallVersion = $param["FirewallVersion"];
         }
     }
 }

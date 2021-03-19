@@ -41,6 +41,7 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\DescribeDeviceResponse DescribeDevice(Models\DescribeDeviceRequest $req) 用于查看某个设备的详细信息
  * @method Models\DescribeDeviceDataResponse DescribeDeviceData(Models\DescribeDeviceDataRequest $req) 根据设备产品ID、设备名称，获取设备上报的属性数据。
  * @method Models\DescribeDeviceDataHistoryResponse DescribeDeviceDataHistory(Models\DescribeDeviceDataHistoryRequest $req) 获取设备在指定时间范围内上报的历史数据。
+ * @method Models\DescribeFirmwareTaskResponse DescribeFirmwareTask(Models\DescribeFirmwareTaskRequest $req) 查询固件升级任务列表
  * @method Models\DescribeLoRaFrequencyResponse DescribeLoRaFrequency(Models\DescribeLoRaFrequencyRequest $req) 提供查询LoRa自定义频点详情的能力
  * @method Models\DescribeModelDefinitionResponse DescribeModelDefinition(Models\DescribeModelDefinitionRequest $req) 查询产品配置的数据模板信息
  * @method Models\DescribeProjectResponse DescribeProject(Models\DescribeProjectRequest $req) 查询项目详情
@@ -54,6 +55,7 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\GetStudioProductListResponse GetStudioProductList(Models\GetStudioProductListRequest $req) 提供查询某个项目下所有产品信息的能力。
  * @method Models\GetTopicRuleListResponse GetTopicRuleList(Models\GetTopicRuleListRequest $req) 获取规则列表
  * @method Models\ListEventHistoryResponse ListEventHistory(Models\ListEventHistoryRequest $req) 获取设备的历史事件
+ * @method Models\ListFirmwaresResponse ListFirmwares(Models\ListFirmwaresRequest $req) 本接口（ListFirmwares）用于获取固件列表 
  * @method Models\ModifyLoRaFrequencyResponse ModifyLoRaFrequency(Models\ModifyLoRaFrequencyRequest $req) 修改LoRa自定义频点
  * @method Models\ModifyLoRaGatewayResponse ModifyLoRaGateway(Models\ModifyLoRaGatewayRequest $req) 修改 LoRa 网关信息
  * @method Models\ModifyModelDefinitionResponse ModifyModelDefinition(Models\ModifyModelDefinitionRequest $req) 提供修改产品的数据模板的能力
@@ -64,6 +66,8 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\ReleaseStudioProductResponse ReleaseStudioProduct(Models\ReleaseStudioProductRequest $req) 产品开发完成并测试通过后，通过发布产品将产品设置为发布状态
  * @method Models\SearchStudioProductResponse SearchStudioProduct(Models\SearchStudioProductRequest $req) 提供根据产品名称查找产品的能力
  * @method Models\SearchTopicRuleResponse SearchTopicRule(Models\SearchTopicRuleRequest $req) 搜索规则
+ * @method Models\UpdateFirmwareResponse UpdateFirmware(Models\UpdateFirmwareRequest $req) 本接口（UpdateFirmware）用于对指定设备发起固件升级请求 
+ * @method Models\UploadFirmwareResponse UploadFirmware(Models\UploadFirmwareRequest $req) 本接口（UploadFirmware）用于上传设备固件至平台
  */
 
 class IotexplorerClient extends AbstractClient

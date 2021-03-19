@@ -20,13 +20,17 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCdnLogs返回参数结构体
  *
- * @method array getDomesticCdnLogs() 获取国内CDN节点的日志下载列表。
+ * @method integer getTotalCount() 获取日志下载链接总数量。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDomesticCdnLogs(array $DomesticCdnLogs) 设置国内CDN节点的日志下载列表。
+ * @method void setTotalCount(integer $TotalCount) 设置日志下载链接总数量。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getOverseaCdnLogs() 获取海外CDN节点的日志下载列表。如果域名没有开启海外加速，忽略该参数。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOverseaCdnLogs(array $OverseaCdnLogs) 设置海外CDN节点的日志下载列表。如果域名没有开启海外加速，忽略该参数。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getDomesticCdnLogs() 获取国内CDN节点的日志下载列表。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDomesticCdnLogs(array $DomesticCdnLogs) 设置国内CDN节点的日志下载列表。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -34,10 +38,10 @@ use TencentCloud\Common\AbstractModel;
 class DescribeCdnLogsResponse extends AbstractModel
 {
     /**
-     * @var array 国内CDN节点的日志下载列表。
+     * @var integer 日志下载链接总数量。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $DomesticCdnLogs;
+    public $TotalCount;
 
     /**
      * @var array 海外CDN节点的日志下载列表。如果域名没有开启海外加速，忽略该参数。
@@ -46,14 +50,22 @@ class DescribeCdnLogsResponse extends AbstractModel
     public $OverseaCdnLogs;
 
     /**
+     * @var array 国内CDN节点的日志下载列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DomesticCdnLogs;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
-     * @param array $DomesticCdnLogs 国内CDN节点的日志下载列表。
+     * @param integer $TotalCount 日志下载链接总数量。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $OverseaCdnLogs 海外CDN节点的日志下载列表。如果域名没有开启海外加速，忽略该参数。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $DomesticCdnLogs 国内CDN节点的日志下载列表。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -70,13 +82,8 @@ class DescribeCdnLogsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DomesticCdnLogs",$param) and $param["DomesticCdnLogs"] !== null) {
-            $this->DomesticCdnLogs = [];
-            foreach ($param["DomesticCdnLogs"] as $key => $value){
-                $obj = new CdnLogInfo();
-                $obj->deserialize($value);
-                array_push($this->DomesticCdnLogs, $obj);
-            }
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
         }
 
         if (array_key_exists("OverseaCdnLogs",$param) and $param["OverseaCdnLogs"] !== null) {
@@ -85,6 +92,15 @@ class DescribeCdnLogsResponse extends AbstractModel
                 $obj = new CdnLogInfo();
                 $obj->deserialize($value);
                 array_push($this->OverseaCdnLogs, $obj);
+            }
+        }
+
+        if (array_key_exists("DomesticCdnLogs",$param) and $param["DomesticCdnLogs"] !== null) {
+            $this->DomesticCdnLogs = [];
+            foreach ($param["DomesticCdnLogs"] as $key => $value){
+                $obj = new CdnLogInfo();
+                $obj->deserialize($value);
+                array_push($this->DomesticCdnLogs, $obj);
             }
         }
 

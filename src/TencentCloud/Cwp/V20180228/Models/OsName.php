@@ -14,32 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cdn\V20180606\Models;
+namespace TencentCloud\Cwp\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Waf子规则开关状态
+ * 操作系统名称
  *
- * @method string getSwitch() 获取子规则状态，on|off
- * @method void setSwitch(string $Switch) 设置子规则状态，on|off
- * @method array getSubIds() 获取规则id列表
- * @method void setSubIds(array $SubIds) 设置规则id列表
+ * @method string getName() 获取系统名称
+ * @method void setName(string $Name) 设置系统名称
+ * @method integer getMachineOSType() 获取操作系统类型枚举值
+ * @method void setMachineOSType(integer $MachineOSType) 设置操作系统类型枚举值
  */
-class WafSubRuleStatus extends AbstractModel
+class OsName extends AbstractModel
 {
     /**
-     * @var string 子规则状态，on|off
+     * @var string 系统名称
      */
-    public $Switch;
+    public $Name;
 
     /**
-     * @var array 规则id列表
+     * @var integer 操作系统类型枚举值
      */
-    public $SubIds;
+    public $MachineOSType;
 
     /**
-     * @param string $Switch 子规则状态，on|off
-     * @param array $SubIds 规则id列表
+     * @param string $Name 系统名称
+     * @param integer $MachineOSType 操作系统类型枚举值
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class WafSubRuleStatus extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Switch",$param) and $param["Switch"] !== null) {
-            $this->Switch = $param["Switch"];
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
         }
 
-        if (array_key_exists("SubIds",$param) and $param["SubIds"] !== null) {
-            $this->SubIds = $param["SubIds"];
+        if (array_key_exists("MachineOSType",$param) and $param["MachineOSType"] !== null) {
+            $this->MachineOSType = $param["MachineOSType"];
         }
     }
 }

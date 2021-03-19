@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
 如 2018120101-test.vod2.mqcloud.com。
  * @method string getUrl() 获取日志下载链接，24小时内下载有效。
  * @method void setUrl(string $Url) 设置日志下载链接，24小时内下载有效。
+ * @method string getStartTime() 获取日志起始时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+ * @method void setStartTime(string $StartTime) 设置日志起始时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+ * @method string getEndTime() 获取日志结束时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+ * @method void setEndTime(string $EndTime) 设置日志结束时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
  */
 class CdnLogInfo extends AbstractModel
 {
@@ -48,10 +52,22 @@ class CdnLogInfo extends AbstractModel
     public $Url;
 
     /**
+     * @var string 日志起始时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     */
+    public $StartTime;
+
+    /**
+     * @var string 日志结束时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     */
+    public $EndTime;
+
+    /**
      * @param string $Date 日志所属日期， 格式为：yyyy-MM-dd ，如2018-03-01。
      * @param string $Name 日志名称，格式为：日期小时-域名
 如 2018120101-test.vod2.mqcloud.com。
      * @param string $Url 日志下载链接，24小时内下载有效。
+     * @param string $StartTime 日志起始时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * @param string $EndTime 日志结束时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
     function __construct()
     {
@@ -76,6 +92,14 @@ class CdnLogInfo extends AbstractModel
 
         if (array_key_exists("Url",$param) and $param["Url"] !== null) {
             $this->Url = $param["Url"];
+        }
+
+        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
+            $this->StartTime = $param["StartTime"];
+        }
+
+        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
+            $this->EndTime = $param["EndTime"];
         }
     }
 }

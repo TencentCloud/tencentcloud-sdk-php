@@ -52,6 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBlueprintName(string $BlueprintName) 设置镜像名称。
  * @method boolean getSupportAutomationTools() 获取镜像是否支持自动化助手。
  * @method void setSupportAutomationTools(boolean $SupportAutomationTools) 设置镜像是否支持自动化助手。
+ * @method integer getRequiredMemorySize() 获取镜像所需内存大小, 单位: GB
+ * @method void setRequiredMemorySize(integer $RequiredMemorySize) 设置镜像所需内存大小, 单位: GB
  */
 class Blueprint extends AbstractModel
 {
@@ -128,6 +130,11 @@ class Blueprint extends AbstractModel
     public $SupportAutomationTools;
 
     /**
+     * @var integer 镜像所需内存大小, 单位: GB
+     */
+    public $RequiredMemorySize;
+
+    /**
      * @param string $BlueprintId 镜像 ID  ，是 Blueprint 的唯一标识。
      * @param string $DisplayTitle 镜像对外展示标题。
      * @param string $DisplayVersion 镜像对外展示版本。
@@ -144,6 +151,7 @@ class Blueprint extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BlueprintName 镜像名称。
      * @param boolean $SupportAutomationTools 镜像是否支持自动化助手。
+     * @param integer $RequiredMemorySize 镜像所需内存大小, 单位: GB
      */
     function __construct()
     {
@@ -212,6 +220,10 @@ class Blueprint extends AbstractModel
 
         if (array_key_exists("SupportAutomationTools",$param) and $param["SupportAutomationTools"] !== null) {
             $this->SupportAutomationTools = $param["SupportAutomationTools"];
+        }
+
+        if (array_key_exists("RequiredMemorySize",$param) and $param["RequiredMemorySize"] !== null) {
+            $this->RequiredMemorySize = $param["RequiredMemorySize"];
         }
     }
 }

@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量
  * @method integer getLimit() 获取分页个数
  * @method void setLimit(integer $Limit) 设置分页个数
+ * @method array getGroupIds() 获取可选，根据部署组ID进行过滤
+ * @method void setGroupIds(array $GroupIds) 设置可选，根据部署组ID进行过滤
  */
 class DescribeMicroserviceRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class DescribeMicroserviceRequest extends AbstractModel
     public $Limit;
 
     /**
+     * @var array 可选，根据部署组ID进行过滤
+     */
+    public $GroupIds;
+
+    /**
      * @param string $MicroserviceId 微服务ID
      * @param integer $Offset 偏移量
      * @param integer $Limit 分页个数
+     * @param array $GroupIds 可选，根据部署组ID进行过滤
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class DescribeMicroserviceRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("GroupIds",$param) and $param["GroupIds"] !== null) {
+            $this->GroupIds = $param["GroupIds"];
         }
     }
 }

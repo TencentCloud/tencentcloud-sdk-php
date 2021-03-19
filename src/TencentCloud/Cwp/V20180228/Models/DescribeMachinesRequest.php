@@ -34,13 +34,17 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
  * @method array getFilters() 获取过滤条件。
 <li>Keywords - String - 是否必填：否 - 查询关键字 </li>
-<li>Status - String - 是否必填：否 - 客户端在线状态（OFFLINE: 离线 | ONLINE: 在线 | UNINSTALLED：未安装）</li>
+<li>Status - String - 是否必填：否 - 客户端在线状态（OFFLINE: 离线/关机 | ONLINE: 在线 | UNINSTALLED：未安装 | AGENT_OFFLINE 离线| AGENT_SHUTDOWN 已关机）</li>
 <li>Version - String  是否必填：否 - 当前防护版本（ PRO_VERSION：专业版 | BASIC_VERSION：基础版）</li>
+<li>Risk - String 是否必填: 否 - 风险主机( yes ) </li>
+<li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )
 每个过滤条件只支持一个值，暂不支持多个值“或”关系查询
  * @method void setFilters(array $Filters) 设置过滤条件。
 <li>Keywords - String - 是否必填：否 - 查询关键字 </li>
-<li>Status - String - 是否必填：否 - 客户端在线状态（OFFLINE: 离线 | ONLINE: 在线 | UNINSTALLED：未安装）</li>
+<li>Status - String - 是否必填：否 - 客户端在线状态（OFFLINE: 离线/关机 | ONLINE: 在线 | UNINSTALLED：未安装 | AGENT_OFFLINE 离线| AGENT_SHUTDOWN 已关机）</li>
 <li>Version - String  是否必填：否 - 当前防护版本（ PRO_VERSION：专业版 | BASIC_VERSION：基础版）</li>
+<li>Risk - String 是否必填: 否 - 风险主机( yes ) </li>
+<li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )
 每个过滤条件只支持一个值，暂不支持多个值“或”关系查询
  * @method array getProjectIds() 获取机器所属业务ID列表
  * @method void setProjectIds(array $ProjectIds) 设置机器所属业务ID列表
@@ -72,8 +76,10 @@ class DescribeMachinesRequest extends AbstractModel
     /**
      * @var array 过滤条件。
 <li>Keywords - String - 是否必填：否 - 查询关键字 </li>
-<li>Status - String - 是否必填：否 - 客户端在线状态（OFFLINE: 离线 | ONLINE: 在线 | UNINSTALLED：未安装）</li>
+<li>Status - String - 是否必填：否 - 客户端在线状态（OFFLINE: 离线/关机 | ONLINE: 在线 | UNINSTALLED：未安装 | AGENT_OFFLINE 离线| AGENT_SHUTDOWN 已关机）</li>
 <li>Version - String  是否必填：否 - 当前防护版本（ PRO_VERSION：专业版 | BASIC_VERSION：基础版）</li>
+<li>Risk - String 是否必填: 否 - 风险主机( yes ) </li>
+<li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )
 每个过滤条件只支持一个值，暂不支持多个值“或”关系查询
      */
     public $Filters;
@@ -92,8 +98,10 @@ class DescribeMachinesRequest extends AbstractModel
      * @param integer $Offset 偏移量，默认为0。
      * @param array $Filters 过滤条件。
 <li>Keywords - String - 是否必填：否 - 查询关键字 </li>
-<li>Status - String - 是否必填：否 - 客户端在线状态（OFFLINE: 离线 | ONLINE: 在线 | UNINSTALLED：未安装）</li>
+<li>Status - String - 是否必填：否 - 客户端在线状态（OFFLINE: 离线/关机 | ONLINE: 在线 | UNINSTALLED：未安装 | AGENT_OFFLINE 离线| AGENT_SHUTDOWN 已关机）</li>
 <li>Version - String  是否必填：否 - 当前防护版本（ PRO_VERSION：专业版 | BASIC_VERSION：基础版）</li>
+<li>Risk - String 是否必填: 否 - 风险主机( yes ) </li>
+<li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )
 每个过滤条件只支持一个值，暂不支持多个值“或”关系查询
      * @param array $ProjectIds 机器所属业务ID列表
      */

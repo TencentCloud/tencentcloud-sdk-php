@@ -27,11 +27,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getMachineStatus() 获取主机状态。
 <li>OFFLINE: 离线  </li>
 <li>ONLINE: 在线</li>
-<li>MACHINE_STOPPED: 已关机</li>
+<li>SHUTDOWN: 已关机</li>
  * @method void setMachineStatus(string $MachineStatus) 设置主机状态。
 <li>OFFLINE: 离线  </li>
 <li>ONLINE: 在线</li>
-<li>MACHINE_STOPPED: 已关机</li>
+<li>SHUTDOWN: 已关机</li>
  * @method string getUuid() 获取云镜客户端唯一Uuid，若客户端长时间不在线将返回空字符。
  * @method void setUuid(string $Uuid) 设置云镜客户端唯一Uuid，若客户端长时间不在线将返回空字符。
  * @method string getQuuid() 获取CVM或BM机器唯一Uuid。
@@ -80,6 +80,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLicenseStatus(integer $LicenseStatus) 设置授权状态 1 授权 0 未授权
  * @method integer getProjectId() 获取项目ID
  * @method void setProjectId(integer $ProjectId) 设置项目ID
+ * @method integer getHasAssetScan() 获取是否有资产扫描接口，0无，1有
+ * @method void setHasAssetScan(integer $HasAssetScan) 设置是否有资产扫描接口，0无，1有
  */
 class Machine extends AbstractModel
 {
@@ -97,7 +99,7 @@ class Machine extends AbstractModel
      * @var string 主机状态。
 <li>OFFLINE: 离线  </li>
 <li>ONLINE: 在线</li>
-<li>MACHINE_STOPPED: 已关机</li>
+<li>SHUTDOWN: 已关机</li>
      */
     public $MachineStatus;
 
@@ -194,12 +196,17 @@ class Machine extends AbstractModel
     public $ProjectId;
 
     /**
+     * @var integer 是否有资产扫描接口，0无，1有
+     */
+    public $HasAssetScan;
+
+    /**
      * @param string $MachineName 主机名称。
      * @param string $MachineOs 主机系统。
      * @param string $MachineStatus 主机状态。
 <li>OFFLINE: 离线  </li>
 <li>ONLINE: 在线</li>
-<li>MACHINE_STOPPED: 已关机</li>
+<li>SHUTDOWN: 已关机</li>
      * @param string $Uuid 云镜客户端唯一Uuid，若客户端长时间不在线将返回空字符。
      * @param string $Quuid CVM或BM机器唯一Uuid。
      * @param integer $VulNum 漏洞数。
@@ -224,6 +231,7 @@ class Machine extends AbstractModel
      * @param string $InstanceState 实例状态 TERMINATED_PRO_VERSION 已销毁
      * @param integer $LicenseStatus 授权状态 1 授权 0 未授权
      * @param integer $ProjectId 项目ID
+     * @param integer $HasAssetScan 是否有资产扫描接口，0无，1有
      */
     function __construct()
     {
@@ -322,6 +330,10 @@ class Machine extends AbstractModel
 
         if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
             $this->ProjectId = $param["ProjectId"];
+        }
+
+        if (array_key_exists("HasAssetScan",$param) and $param["HasAssetScan"] !== null) {
+            $this->HasAssetScan = $param["HasAssetScan"];
         }
     }
 }

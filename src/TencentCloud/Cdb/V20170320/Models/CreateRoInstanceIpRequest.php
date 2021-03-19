@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置只读实例ID，格式如：cdbro-3i70uj0k，与云数据库控制台页面中显示的只读实例ID相同。
  * @method string getUniqSubnetId() 获取子网描述符，例如：subnet-1typ0s7d。
  * @method void setUniqSubnetId(string $UniqSubnetId) 设置子网描述符，例如：subnet-1typ0s7d。
- * @method string getUniqVpcId() 获取vpc描述符，例如：vpc-xxx,如果传了该字段则UniqSubnetId必传
- * @method void setUniqVpcId(string $UniqVpcId) 设置vpc描述符，例如：vpc-xxx,如果传了该字段则UniqSubnetId必传
+ * @method string getUniqVpcId() 获取vpc描述符，例如：vpc-a23yt67j,如果传了该字段则UniqSubnetId必传
+ * @method void setUniqVpcId(string $UniqVpcId) 设置vpc描述符，例如：vpc-a23yt67j,如果传了该字段则UniqSubnetId必传
  */
 class CreateRoInstanceIpRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class CreateRoInstanceIpRequest extends AbstractModel
     public $UniqSubnetId;
 
     /**
-     * @var string vpc描述符，例如：vpc-xxx,如果传了该字段则UniqSubnetId必传
+     * @var string vpc描述符，例如：vpc-a23yt67j,如果传了该字段则UniqSubnetId必传
      */
     public $UniqVpcId;
 
     /**
      * @param string $InstanceId 只读实例ID，格式如：cdbro-3i70uj0k，与云数据库控制台页面中显示的只读实例ID相同。
      * @param string $UniqSubnetId 子网描述符，例如：subnet-1typ0s7d。
-     * @param string $UniqVpcId vpc描述符，例如：vpc-xxx,如果传了该字段则UniqSubnetId必传
+     * @param string $UniqVpcId vpc描述符，例如：vpc-a23yt67j,如果传了该字段则UniqSubnetId必传
      */
     function __construct()
     {

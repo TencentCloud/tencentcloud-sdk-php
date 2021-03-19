@@ -32,6 +32,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZoneName(string $ZoneName) 设置可用区名称，如：广州一区
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getZoneRegion() 获取可用区所属地域，如：ap-guangzhou
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setZoneRegion(string $ZoneRegion) 设置可用区所属地域，如：ap-guangzhou
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getLocalZone() 获取可用区是否是LocalZone可用区，如：false
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLocalZone(boolean $LocalZone) 设置可用区是否是LocalZone可用区，如：false
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ZoneInfo extends AbstractModel
 {
@@ -54,11 +62,27 @@ class ZoneInfo extends AbstractModel
     public $ZoneName;
 
     /**
+     * @var string 可用区所属地域，如：ap-guangzhou
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ZoneRegion;
+
+    /**
+     * @var boolean 可用区是否是LocalZone可用区，如：false
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LocalZone;
+
+    /**
      * @param integer $ZoneId 可用区数值形式的唯一ID，如：100001
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Zone 可用区字符串形式的唯一ID，如：ap-guangzhou-1
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ZoneName 可用区名称，如：广州一区
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ZoneRegion 可用区所属地域，如：ap-guangzhou
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $LocalZone 可用区是否是LocalZone可用区，如：false
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -84,6 +108,14 @@ class ZoneInfo extends AbstractModel
 
         if (array_key_exists("ZoneName",$param) and $param["ZoneName"] !== null) {
             $this->ZoneName = $param["ZoneName"];
+        }
+
+        if (array_key_exists("ZoneRegion",$param) and $param["ZoneRegion"] !== null) {
+            $this->ZoneRegion = $param["ZoneRegion"];
+        }
+
+        if (array_key_exists("LocalZone",$param) and $param["LocalZone"] !== null) {
+            $this->LocalZone = $param["LocalZone"];
         }
     }
 }

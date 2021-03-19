@@ -14,32 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cdn\V20180606\Models;
+namespace TencentCloud\Iotexplorer\V20190423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Waf子规则开关状态
+ * UploadFirmware返回参数结构体
  *
- * @method string getSwitch() 获取子规则状态，on|off
- * @method void setSwitch(string $Switch) 设置子规则状态，on|off
- * @method array getSubIds() 获取规则id列表
- * @method void setSubIds(array $SubIds) 设置规则id列表
+ * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class WafSubRuleStatus extends AbstractModel
+class UploadFirmwareResponse extends AbstractModel
 {
     /**
-     * @var string 子规则状态，on|off
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public $Switch;
+    public $RequestId;
 
     /**
-     * @var array 规则id列表
-     */
-    public $SubIds;
-
-    /**
-     * @param string $Switch 子规则状态，on|off
-     * @param array $SubIds 规则id列表
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {
@@ -54,12 +46,8 @@ class WafSubRuleStatus extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Switch",$param) and $param["Switch"] !== null) {
-            $this->Switch = $param["Switch"];
-        }
-
-        if (array_key_exists("SubIds",$param) and $param["SubIds"] !== null) {
-            $this->SubIds = $param["SubIds"];
+        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
+            $this->RequestId = $param["RequestId"];
         }
     }
 }

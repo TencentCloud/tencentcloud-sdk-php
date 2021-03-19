@@ -72,6 +72,8 @@ CCN：云联网路由，系统默认下发，不可编辑与删除。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPublishedToVbc(boolean $PublishedToVbc) 设置路由策略是否发布到云联网。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCreatedTime() 获取路由策略创建时间
+ * @method void setCreatedTime(string $CreatedTime) 设置路由策略创建时间
  */
 class Route extends AbstractModel
 {
@@ -146,6 +148,11 @@ CCN：云联网路由，系统默认下发，不可编辑与删除。
     public $PublishedToVbc;
 
     /**
+     * @var string 路由策略创建时间
+     */
+    public $CreatedTime;
+
+    /**
      * @param string $DestinationCidrBlock 目的网段，取值不能在私有网络网段内，例如：112.20.51.0/24。
      * @param string $GatewayType 下一跳类型，目前我们支持的类型有：
 CVM：公网网关类型的云服务器；
@@ -172,6 +179,7 @@ CCN：云联网路由，系统默认下发，不可编辑与删除。
      * @param string $RouteItemId 路由唯一策略ID。
      * @param boolean $PublishedToVbc 路由策略是否发布到云联网。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CreatedTime 路由策略创建时间
      */
     function __construct()
     {
@@ -228,6 +236,10 @@ CCN：云联网路由，系统默认下发，不可编辑与删除。
 
         if (array_key_exists("PublishedToVbc",$param) and $param["PublishedToVbc"] !== null) {
             $this->PublishedToVbc = $param["PublishedToVbc"];
+        }
+
+        if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
+            $this->CreatedTime = $param["CreatedTime"];
         }
     }
 }

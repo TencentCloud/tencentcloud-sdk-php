@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置返回结果偏移，最小值0
  * @method integer getLimit() 获取结果返回最大数量，最小值0，最大值100
  * @method void setLimit(integer $Limit) 设置结果返回最大数量，最小值0，最大值100
+ * @method string getIpAddress() 获取CVM实例公网IP
+ * @method void setIpAddress(string $IpAddress) 设置CVM实例公网IP
  */
 class DescribeInstancesExtendRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class DescribeInstancesExtendRequest extends AbstractModel
     public $Limit;
 
     /**
+     * @var string CVM实例公网IP
+     */
+    public $IpAddress;
+
+    /**
      * @param string $FleetId 服务器舰队ID
      * @param integer $Offset 返回结果偏移，最小值0
      * @param integer $Limit 结果返回最大数量，最小值0，最大值100
+     * @param string $IpAddress CVM实例公网IP
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class DescribeInstancesExtendRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("IpAddress",$param) and $param["IpAddress"] !== null) {
+            $this->IpAddress = $param["IpAddress"];
         }
     }
 }

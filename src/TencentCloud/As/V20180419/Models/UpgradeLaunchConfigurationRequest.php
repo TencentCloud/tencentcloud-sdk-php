@@ -76,6 +76,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceNameSettings(InstanceNameSettings $InstanceNameSettings) 设置云服务器实例名（InstanceName）的相关设置。
  * @method InstanceChargePrepaid getInstanceChargePrepaid() 获取预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
  * @method void setInstanceChargePrepaid(InstanceChargePrepaid $InstanceChargePrepaid) 设置预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
+ * @method string getDiskTypePolicy() 获取云盘类型选择策略，取值范围：
+<br><li>ORIGINAL：使用设置的云盘类型
+<br><li>AUTOMATIC：自动选择当前可用的云盘类型
+ * @method void setDiskTypePolicy(string $DiskTypePolicy) 设置云盘类型选择策略，取值范围：
+<br><li>ORIGINAL：使用设置的云盘类型
+<br><li>AUTOMATIC：自动选择当前可用的云盘类型
  */
 class UpgradeLaunchConfigurationRequest extends AbstractModel
 {
@@ -188,6 +194,13 @@ class UpgradeLaunchConfigurationRequest extends AbstractModel
     public $InstanceChargePrepaid;
 
     /**
+     * @var string 云盘类型选择策略，取值范围：
+<br><li>ORIGINAL：使用设置的云盘类型
+<br><li>AUTOMATIC：自动选择当前可用的云盘类型
+     */
+    public $DiskTypePolicy;
+
+    /**
      * @param string $LaunchConfigurationId 启动配置ID。
      * @param string $ImageId 指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-8toqc6s3`。镜像类型分为四种：<br/><li>公共镜像</li><li>自定义镜像</li><li>共享镜像</li><li>服务市场镜像</li><br/>可通过以下方式获取可用的镜像ID：<br/><li>`公共镜像`、`自定义镜像`、`共享镜像`的镜像ID可通过登录[控制台](https://console.cloud.tencent.com/cvm/image?rid=1&imageType=PUBLIC_IMAGE)查询；`服务镜像市场`的镜像ID可通过[云市场](https://market.cloud.tencent.com/list)查询。</li><li>通过调用接口 [DescribeImages](https://cloud.tencent.com/document/api/213/15715) ，取返回信息中的`ImageId`字段。</li>
      * @param array $InstanceTypes 实例机型列表，不同实例机型指定了不同的资源规格，最多支持5种实例机型。
@@ -216,6 +229,9 @@ class UpgradeLaunchConfigurationRequest extends AbstractModel
      * @param HostNameSettings $HostNameSettings 云服务器主机名（HostName）的相关设置。
      * @param InstanceNameSettings $InstanceNameSettings 云服务器实例名（InstanceName）的相关设置。
      * @param InstanceChargePrepaid $InstanceChargePrepaid 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
+     * @param string $DiskTypePolicy 云盘类型选择策略，取值范围：
+<br><li>ORIGINAL：使用设置的云盘类型
+<br><li>AUTOMATIC：自动选择当前可用的云盘类型
      */
     function __construct()
     {
@@ -326,6 +342,10 @@ class UpgradeLaunchConfigurationRequest extends AbstractModel
         if (array_key_exists("InstanceChargePrepaid",$param) and $param["InstanceChargePrepaid"] !== null) {
             $this->InstanceChargePrepaid = new InstanceChargePrepaid();
             $this->InstanceChargePrepaid->deserialize($param["InstanceChargePrepaid"]);
+        }
+
+        if (array_key_exists("DiskTypePolicy",$param) and $param["DiskTypePolicy"] !== null) {
+            $this->DiskTypePolicy = $param["DiskTypePolicy"];
         }
     }
 }

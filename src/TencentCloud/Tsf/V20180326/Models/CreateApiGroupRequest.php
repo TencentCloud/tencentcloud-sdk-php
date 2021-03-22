@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDescription(string $Description) 设置备注
  * @method string getGroupType() 获取分组类型,默认ms。 ms： 微服务分组； external:外部Api分组
  * @method void setGroupType(string $GroupType) 设置分组类型,默认ms。 ms： 微服务分组； external:外部Api分组
+ * @method string getGatewayInstanceId() 获取网关实体ID
+ * @method void setGatewayInstanceId(string $GatewayInstanceId) 设置网关实体ID
  */
 class CreateApiGroupRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class CreateApiGroupRequest extends AbstractModel
     public $GroupType;
 
     /**
+     * @var string 网关实体ID
+     */
+    public $GatewayInstanceId;
+
+    /**
      * @param string $GroupName 分组名称, 不能包含中文
      * @param string $GroupContext 分组上下文
      * @param string $AuthType 鉴权类型。secret： 密钥鉴权； none:无鉴权
      * @param string $Description 备注
      * @param string $GroupType 分组类型,默认ms。 ms： 微服务分组； external:外部Api分组
+     * @param string $GatewayInstanceId 网关实体ID
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class CreateApiGroupRequest extends AbstractModel
 
         if (array_key_exists("GroupType",$param) and $param["GroupType"] !== null) {
             $this->GroupType = $param["GroupType"];
+        }
+
+        if (array_key_exists("GatewayInstanceId",$param) and $param["GatewayInstanceId"] !== null) {
+            $this->GatewayInstanceId = $param["GatewayInstanceId"];
         }
     }
 }

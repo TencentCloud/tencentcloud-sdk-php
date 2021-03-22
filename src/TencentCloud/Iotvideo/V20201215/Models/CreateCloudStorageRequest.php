@@ -24,8 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProductId(string $ProductId) 设置产品ID
  * @method string getDeviceName() 获取设备名称
  * @method void setDeviceName(string $DeviceName) 设置设备名称
- * @method string getPackageId() 获取云存套餐ID
- * @method void setPackageId(string $PackageId) 设置云存套餐ID
+ * @method string getPackageId() 获取云存套餐ID：
+yc1m3d：全时3天存储月套餐。
+ye1m3d：事件3天存储套餐。
+ * @method void setPackageId(string $PackageId) 设置云存套餐ID：
+yc1m3d：全时3天存储月套餐。
+ye1m3d：事件3天存储套餐。
  */
 class CreateCloudStorageRequest extends AbstractModel
 {
@@ -40,14 +44,18 @@ class CreateCloudStorageRequest extends AbstractModel
     public $DeviceName;
 
     /**
-     * @var string 云存套餐ID
+     * @var string 云存套餐ID：
+yc1m3d：全时3天存储月套餐。
+ye1m3d：事件3天存储套餐。
      */
     public $PackageId;
 
     /**
      * @param string $ProductId 产品ID
      * @param string $DeviceName 设备名称
-     * @param string $PackageId 云存套餐ID
+     * @param string $PackageId 云存套餐ID：
+yc1m3d：全时3天存储月套餐。
+ye1m3d：事件3天存储套餐。
      */
     function __construct()
     {

@@ -47,6 +47,7 @@ use TencentCloud\Tsf\V20180326\Models as Models;
  * @method Models\CreateServerlessGroupResponse CreateServerlessGroup(Models\CreateServerlessGroupRequest $req) 创建Serverless部署组
  * @method Models\CreateTaskResponse CreateTask(Models\CreateTaskRequest $req) 创建任务
  * @method Models\CreateTaskFlowResponse CreateTaskFlow(Models\CreateTaskFlowRequest $req) 创建工作流
+ * @method Models\CreateUnitRuleResponse CreateUnitRule(Models\CreateUnitRuleRequest $req) 创建单元化规则
  * @method Models\DeleteApiGroupResponse DeleteApiGroup(Models\DeleteApiGroupRequest $req) 删除Api分组
  * @method Models\DeleteApplicationResponse DeleteApplication(Models\DeleteApplicationRequest $req) 删除应用
  * @method Models\DeleteConfigResponse DeleteConfig(Models\DeleteConfigRequest $req) 删除配置项
@@ -63,6 +64,8 @@ use TencentCloud\Tsf\V20180326\Models as Models;
  * @method Models\DeleteRepositoryResponse DeleteRepository(Models\DeleteRepositoryRequest $req) 删除仓库
  * @method Models\DeleteServerlessGroupResponse DeleteServerlessGroup(Models\DeleteServerlessGroupRequest $req) 删除Serverless部署组
  * @method Models\DeleteTaskResponse DeleteTask(Models\DeleteTaskRequest $req) 删除任务
+ * @method Models\DeleteUnitNamespacesResponse DeleteUnitNamespaces(Models\DeleteUnitNamespacesRequest $req) 删除单元化命名空间
+ * @method Models\DeleteUnitRuleResponse DeleteUnitRule(Models\DeleteUnitRuleRequest $req) 删除单元化规则
  * @method Models\DeployContainerGroupResponse DeployContainerGroup(Models\DeployContainerGroupRequest $req) 部署容器应用
  * @method Models\DeployGroupResponse DeployGroup(Models\DeployGroupRequest $req) 部署虚拟机部署组应用
  * @method Models\DeployServerlessGroupResponse DeployServerlessGroup(Models\DeployServerlessGroupRequest $req) 部署Serverless应用
@@ -87,6 +90,7 @@ use TencentCloud\Tsf\V20180326\Models as Models;
  * @method Models\DescribeCreateGatewayApiStatusResponse DescribeCreateGatewayApiStatus(Models\DescribeCreateGatewayApiStatusRequest $req) 查询一键导入API分组任务的状态
  * @method Models\DescribeDownloadInfoResponse DescribeDownloadInfo(Models\DescribeDownloadInfoRequest $req) TSF上传的程序包存放在腾讯云对象存储（COS）中，通过该API可以获取从COS下载程序包需要的信息，包括包所在的桶、存储路径、鉴权信息等，之后使用COS API（或SDK）进行下载。
 COS相关文档请查阅：https://cloud.tencent.com/document/product/436
+ * @method Models\DescribeEnabledUnitRuleResponse DescribeEnabledUnitRule(Models\DescribeEnabledUnitRuleRequest $req) 查询生效的单元化规则
  * @method Models\DescribeFlowLastBatchStateResponse DescribeFlowLastBatchState(Models\DescribeFlowLastBatchStateRequest $req) 查询工作流最新一个批次的状态信息
  * @method Models\DescribeGatewayAllGroupApisResponse DescribeGatewayAllGroupApis(Models\DescribeGatewayAllGroupApisRequest $req) 查询网关所有分组下Api列表
  * @method Models\DescribeGatewayMonitorOverviewResponse DescribeGatewayMonitorOverview(Models\DescribeGatewayMonitorOverviewRequest $req) 查询网关监控概览
@@ -123,13 +127,21 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
  * @method Models\DescribeSimpleNamespacesResponse DescribeSimpleNamespaces(Models\DescribeSimpleNamespacesRequest $req) 查询简单命名空间列表 
  * @method Models\DescribeTaskDetailResponse DescribeTaskDetail(Models\DescribeTaskDetailRequest $req) 查询任务详情
  * @method Models\DescribeTaskLastStatusResponse DescribeTaskLastStatus(Models\DescribeTaskLastStatusRequest $req) 查询任务最近一次执行状态
+ * @method Models\DescribeUnitNamespacesResponse DescribeUnitNamespaces(Models\DescribeUnitNamespacesRequest $req) 查询单元化命名空间列表
+ * @method Models\DescribeUnitRuleResponse DescribeUnitRule(Models\DescribeUnitRuleRequest $req) 查询单元化规则详情
+ * @method Models\DescribeUnitRulesResponse DescribeUnitRules(Models\DescribeUnitRulesRequest $req) 查询单元化规则列表
  * @method Models\DescribeUploadInfoResponse DescribeUploadInfo(Models\DescribeUploadInfoRequest $req) TSF会将软件包上传到腾讯云对象存储（COS）。调用此接口获取上传信息，如目标地域，桶，包Id，存储路径，鉴权信息等，之后请使用COS API（或SDK）进行上传。
 COS相关文档请查阅：https://cloud.tencent.com/document/product/436
+ * @method Models\DescribeUsableUnitNamespacesResponse DescribeUsableUnitNamespaces(Models\DescribeUsableUnitNamespacesRequest $req) 查询可用于被导入的命名空间列表
  * @method Models\DisableTaskResponse DisableTask(Models\DisableTaskRequest $req) 停用任务
  * @method Models\DisableTaskFlowResponse DisableTaskFlow(Models\DisableTaskFlowRequest $req) 停用工作流
+ * @method Models\DisableUnitRouteResponse DisableUnitRoute(Models\DisableUnitRouteRequest $req) 禁用单元化路由
+ * @method Models\DisableUnitRuleResponse DisableUnitRule(Models\DisableUnitRuleRequest $req) 禁用单元化规则
  * @method Models\DraftApiGroupResponse DraftApiGroup(Models\DraftApiGroupRequest $req) 下线Api分组
  * @method Models\EnableTaskResponse EnableTask(Models\EnableTaskRequest $req) 启用任务
  * @method Models\EnableTaskFlowResponse EnableTaskFlow(Models\EnableTaskFlowRequest $req) 启用工作流
+ * @method Models\EnableUnitRouteResponse EnableUnitRoute(Models\EnableUnitRouteRequest $req) 启用单元化路由
+ * @method Models\EnableUnitRuleResponse EnableUnitRule(Models\EnableUnitRuleRequest $req) 启用单元化规则
  * @method Models\ExecuteTaskResponse ExecuteTask(Models\ExecuteTaskRequest $req) 手动执行一次任务。
  * @method Models\ExecuteTaskFlowResponse ExecuteTaskFlow(Models\ExecuteTaskFlowRequest $req) 执行一次工作流
  * @method Models\ExpandGroupResponse ExpandGroup(Models\ExpandGroupRequest $req) 虚拟机部署组添加实例
@@ -166,9 +178,11 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
  * @method Models\UpdateApiGroupResponse UpdateApiGroup(Models\UpdateApiGroupRequest $req) 更新Api分组
  * @method Models\UpdateApiRateLimitRuleResponse UpdateApiRateLimitRule(Models\UpdateApiRateLimitRuleRequest $req) 更新API限流规则
  * @method Models\UpdateApiRateLimitRulesResponse UpdateApiRateLimitRules(Models\UpdateApiRateLimitRulesRequest $req) 批量更新API限流规则
+ * @method Models\UpdateApiTimeoutsResponse UpdateApiTimeouts(Models\UpdateApiTimeoutsRequest $req) 批量更新API超时
  * @method Models\UpdateGatewayApiResponse UpdateGatewayApi(Models\UpdateGatewayApiRequest $req) 更新API
  * @method Models\UpdateHealthCheckSettingsResponse UpdateHealthCheckSettings(Models\UpdateHealthCheckSettingsRequest $req) 更新健康检查配置
  * @method Models\UpdateRepositoryResponse UpdateRepository(Models\UpdateRepositoryRequest $req) 更新仓库信息
+ * @method Models\UpdateUnitRuleResponse UpdateUnitRule(Models\UpdateUnitRuleRequest $req) 更新单元化规则
  */
 
 class TsfClient extends AbstractClient

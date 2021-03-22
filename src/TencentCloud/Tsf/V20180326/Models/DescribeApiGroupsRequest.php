@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrderBy(string $OrderBy) 设置排序字段："created_time"或"group_context"
  * @method integer getOrderType() 获取排序类型：0(ASC)或1(DESC)
  * @method void setOrderType(integer $OrderType) 设置排序类型：0(ASC)或1(DESC)
+ * @method string getGatewayInstanceId() 获取网关实体ID
+ * @method void setGatewayInstanceId(string $GatewayInstanceId) 设置网关实体ID
  */
 class DescribeApiGroupsRequest extends AbstractModel
 {
@@ -80,6 +82,11 @@ class DescribeApiGroupsRequest extends AbstractModel
     public $OrderType;
 
     /**
+     * @var string 网关实体ID
+     */
+    public $GatewayInstanceId;
+
+    /**
      * @param string $SearchWord 搜索关键字
      * @param integer $Offset 偏移量，默认为0
      * @param integer $Limit 每页条数，默认为20
@@ -88,6 +95,7 @@ class DescribeApiGroupsRequest extends AbstractModel
      * @param string $Status 发布状态, drafted: 未发布。 released: 发布
      * @param string $OrderBy 排序字段："created_time"或"group_context"
      * @param integer $OrderType 排序类型：0(ASC)或1(DESC)
+     * @param string $GatewayInstanceId 网关实体ID
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ class DescribeApiGroupsRequest extends AbstractModel
 
         if (array_key_exists("OrderType",$param) and $param["OrderType"] !== null) {
             $this->OrderType = $param["OrderType"];
+        }
+
+        if (array_key_exists("GatewayInstanceId",$param) and $param["GatewayInstanceId"] !== null) {
+            $this->GatewayInstanceId = $param["GatewayInstanceId"];
         }
     }
 }

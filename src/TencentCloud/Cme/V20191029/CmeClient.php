@@ -59,6 +59,7 @@ use TencentCloud\Cme\V20191029\Models as Models;
  * @method Models\DescribeTeamMembersResponse DescribeTeamMembers(Models\DescribeTeamMembersRequest $req) 获取指定成员 ID 的信息，同时支持拉取所有团队成员信息。
  * @method Models\DescribeTeamsResponse DescribeTeams(Models\DescribeTeamsRequest $req) 获取指定团队的信息，拉取团队信息列表。
  * @method Models\ExportVideoByEditorTrackDataResponse ExportVideoByEditorTrackData(Models\ExportVideoByEditorTrackDataRequest $req) 使用视频合成协议导出视频，支持导出到CME云媒资和VOD云媒资。
+ * @method Models\ExportVideoByTemplateResponse ExportVideoByTemplate(Models\ExportVideoByTemplateRequest $req) 使用视频编辑模板直接导出视频。
  * @method Models\ExportVideoByVideoSegmentationDataResponse ExportVideoByVideoSegmentationData(Models\ExportVideoByVideoSegmentationDataRequest $req) 使用视频智能拆条数据导出视频，将指定的视频拆条片段导出为一个视频。
  * @method Models\ExportVideoEditProjectResponse ExportVideoEditProject(Models\ExportVideoEditProjectRequest $req) 导出视频编辑项目，支持指定输出的模板。
  * @method Models\FlattenListMediaResponse FlattenListMedia(Models\FlattenListMediaRequest $req) 平铺分类路径下及其子分类下的所有媒体基础信息。

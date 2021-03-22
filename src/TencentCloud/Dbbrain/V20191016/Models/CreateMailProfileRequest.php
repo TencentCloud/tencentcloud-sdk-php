@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProfileType(string $ProfileType) 设置配置类型，支持值包括："dbScan_mail_configuration" - 数据库巡检邮件配置，"scheduler_mail_configuration" - 定期生成邮件配置。
  * @method string getProduct() 获取服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL。
  * @method void setProduct(string $Product) 设置服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL。
- * @method array getBindInstanceIds() 获取配置绑定的实例ID，当配置级别为"Instance"时需要传入，只能为一个实例。
- * @method void setBindInstanceIds(array $BindInstanceIds) 设置配置绑定的实例ID，当配置级别为"Instance"时需要传入，只能为一个实例。
+ * @method array getBindInstanceIds() 获取配置绑定的实例ID，当配置级别为"Instance"时需要传入且只能为一个实例；当配置级别为“User”时，此参数不填。
+ * @method void setBindInstanceIds(array $BindInstanceIds) 设置配置绑定的实例ID，当配置级别为"Instance"时需要传入且只能为一个实例；当配置级别为“User”时，此参数不填。
  */
 class CreateMailProfileRequest extends AbstractModel
 {
@@ -61,7 +61,7 @@ class CreateMailProfileRequest extends AbstractModel
     public $Product;
 
     /**
-     * @var array 配置绑定的实例ID，当配置级别为"Instance"时需要传入，只能为一个实例。
+     * @var array 配置绑定的实例ID，当配置级别为"Instance"时需要传入且只能为一个实例；当配置级别为“User”时，此参数不填。
      */
     public $BindInstanceIds;
 
@@ -71,7 +71,7 @@ class CreateMailProfileRequest extends AbstractModel
      * @param string $ProfileName 配置名称，需要保持唯一性，数据库巡检邮件配置名称自拟；定期生成邮件配置命名格式："scheduler_" + {instanceId}，如"schduler_cdb-test"。
      * @param string $ProfileType 配置类型，支持值包括："dbScan_mail_configuration" - 数据库巡检邮件配置，"scheduler_mail_configuration" - 定期生成邮件配置。
      * @param string $Product 服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL。
-     * @param array $BindInstanceIds 配置绑定的实例ID，当配置级别为"Instance"时需要传入，只能为一个实例。
+     * @param array $BindInstanceIds 配置绑定的实例ID，当配置级别为"Instance"时需要传入且只能为一个实例；当配置级别为“User”时，此参数不填。
      */
     function __construct()
     {

@@ -72,6 +72,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceMarketOptions(InstanceMarketOptionsRequest $InstanceMarketOptions) 设置实例的市场相关选项，如竞价实例相关参数。
 若修改实例的付费模式为竞价付费，则该参数必传；从竞价付费修改为其他付费模式时，本字段原信息会自动丢弃。
 本字段属复杂类型，修改时采取整字段全覆盖模式。即只修改复杂类型内部一个子字段时，也请提供全部所需子字段。
+ * @method string getDiskTypePolicy() 获取云盘类型选择策略，取值范围：
+<br><li>ORIGINAL：使用设置的云盘类型。
+<br><li>AUTOMATIC：自动选择当前可用的云盘类型。
+ * @method void setDiskTypePolicy(string $DiskTypePolicy) 设置云盘类型选择策略，取值范围：
+<br><li>ORIGINAL：使用设置的云盘类型。
+<br><li>AUTOMATIC：自动选择当前可用的云盘类型。
  */
 class ModifyLaunchConfigurationAttributesRequest extends AbstractModel
 {
@@ -146,6 +152,13 @@ class ModifyLaunchConfigurationAttributesRequest extends AbstractModel
     public $InstanceMarketOptions;
 
     /**
+     * @var string 云盘类型选择策略，取值范围：
+<br><li>ORIGINAL：使用设置的云盘类型。
+<br><li>AUTOMATIC：自动选择当前可用的云盘类型。
+     */
+    public $DiskTypePolicy;
+
+    /**
      * @param string $LaunchConfigurationId 启动配置ID
      * @param string $ImageId 指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-8toqc6s3`。镜像类型分为四种：<br/><li>公共镜像</li><li>自定义镜像</li><li>共享镜像</li><li>服务市场镜像</li><br/>可通过以下方式获取可用的镜像ID：<br/><li>`公共镜像`、`自定义镜像`、`共享镜像`的镜像ID可通过登录[控制台](https://console.cloud.tencent.com/cvm/image?rid=1&imageType=PUBLIC_IMAGE)查询；`服务镜像市场`的镜像ID可通过[云市场](https://market.cloud.tencent.com/list)查询。</li><li>通过调用接口 [DescribeImages](https://cloud.tencent.com/document/api/213/15715) ，取返回信息中的`ImageId`字段。</li>
      * @param array $InstanceTypes 实例类型列表，不同实例机型指定了不同的资源规格，最多支持10种实例机型。
@@ -172,6 +185,9 @@ class ModifyLaunchConfigurationAttributesRequest extends AbstractModel
      * @param InstanceMarketOptionsRequest $InstanceMarketOptions 实例的市场相关选项，如竞价实例相关参数。
 若修改实例的付费模式为竞价付费，则该参数必传；从竞价付费修改为其他付费模式时，本字段原信息会自动丢弃。
 本字段属复杂类型，修改时采取整字段全覆盖模式。即只修改复杂类型内部一个子字段时，也请提供全部所需子字段。
+     * @param string $DiskTypePolicy 云盘类型选择策略，取值范围：
+<br><li>ORIGINAL：使用设置的云盘类型。
+<br><li>AUTOMATIC：自动选择当前可用的云盘类型。
      */
     function __construct()
     {
@@ -231,6 +247,10 @@ class ModifyLaunchConfigurationAttributesRequest extends AbstractModel
         if (array_key_exists("InstanceMarketOptions",$param) and $param["InstanceMarketOptions"] !== null) {
             $this->InstanceMarketOptions = new InstanceMarketOptionsRequest();
             $this->InstanceMarketOptions->deserialize($param["InstanceMarketOptions"]);
+        }
+
+        if (array_key_exists("DiskTypePolicy",$param) and $param["DiskTypePolicy"] !== null) {
+            $this->DiskTypePolicy = $param["DiskTypePolicy"];
         }
     }
 }

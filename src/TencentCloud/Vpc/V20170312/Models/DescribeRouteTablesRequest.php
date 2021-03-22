@@ -20,8 +20,6 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRouteTables请求参数结构体
  *
- * @method array getRouteTableIds() 获取路由表实例ID，例如：rtb-azd4dt1c。
- * @method void setRouteTableIds(array $RouteTableIds) 设置路由表实例ID，例如：rtb-azd4dt1c。
  * @method array getFilters() 获取过滤条件，参数不支持同时指定RouteTableIds和Filters。
 <li>route-table-id - String - （过滤条件）路由表实例ID。</li>
 <li>route-table-name - String - （过滤条件）路由表名称。</li>
@@ -29,6 +27,7 @@ use TencentCloud\Common\AbstractModel;
 <li>association.main - String - （过滤条件）是否主路由表。</li>
 <li>tag-key - String -是否必填：否- （过滤条件）按照标签键进行过滤。</li>
 <li>tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。使用请参考示例2。</li>
+<li>is-need-router-info - String - （过滤条件）是否需要获取路由策略信息，默认不获取，减少耗时，当控制台需要拉取路由策略信息时，改为true，返回具体的路由策略，。</li>
  * @method void setFilters(array $Filters) 设置过滤条件，参数不支持同时指定RouteTableIds和Filters。
 <li>route-table-id - String - （过滤条件）路由表实例ID。</li>
 <li>route-table-name - String - （过滤条件）路由表名称。</li>
@@ -36,6 +35,9 @@ use TencentCloud\Common\AbstractModel;
 <li>association.main - String - （过滤条件）是否主路由表。</li>
 <li>tag-key - String -是否必填：否- （过滤条件）按照标签键进行过滤。</li>
 <li>tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。使用请参考示例2。</li>
+<li>is-need-router-info - String - （过滤条件）是否需要获取路由策略信息，默认不获取，减少耗时，当控制台需要拉取路由策略信息时，改为true，返回具体的路由策略，。</li>
+ * @method array getRouteTableIds() 获取路由表实例ID，例如：rtb-azd4dt1c。
+ * @method void setRouteTableIds(array $RouteTableIds) 设置路由表实例ID，例如：rtb-azd4dt1c。
  * @method string getOffset() 获取偏移量。
  * @method void setOffset(string $Offset) 设置偏移量。
  * @method string getLimit() 获取请求对象个数。
@@ -44,11 +46,6 @@ use TencentCloud\Common\AbstractModel;
 class DescribeRouteTablesRequest extends AbstractModel
 {
     /**
-     * @var array 路由表实例ID，例如：rtb-azd4dt1c。
-     */
-    public $RouteTableIds;
-
-    /**
      * @var array 过滤条件，参数不支持同时指定RouteTableIds和Filters。
 <li>route-table-id - String - （过滤条件）路由表实例ID。</li>
 <li>route-table-name - String - （过滤条件）路由表名称。</li>
@@ -56,8 +53,14 @@ class DescribeRouteTablesRequest extends AbstractModel
 <li>association.main - String - （过滤条件）是否主路由表。</li>
 <li>tag-key - String -是否必填：否- （过滤条件）按照标签键进行过滤。</li>
 <li>tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。使用请参考示例2。</li>
+<li>is-need-router-info - String - （过滤条件）是否需要获取路由策略信息，默认不获取，减少耗时，当控制台需要拉取路由策略信息时，改为true，返回具体的路由策略，。</li>
      */
     public $Filters;
+
+    /**
+     * @var array 路由表实例ID，例如：rtb-azd4dt1c。
+     */
+    public $RouteTableIds;
 
     /**
      * @var string 偏移量。
@@ -70,7 +73,6 @@ class DescribeRouteTablesRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @param array $RouteTableIds 路由表实例ID，例如：rtb-azd4dt1c。
      * @param array $Filters 过滤条件，参数不支持同时指定RouteTableIds和Filters。
 <li>route-table-id - String - （过滤条件）路由表实例ID。</li>
 <li>route-table-name - String - （过滤条件）路由表名称。</li>
@@ -78,6 +80,8 @@ class DescribeRouteTablesRequest extends AbstractModel
 <li>association.main - String - （过滤条件）是否主路由表。</li>
 <li>tag-key - String -是否必填：否- （过滤条件）按照标签键进行过滤。</li>
 <li>tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。使用请参考示例2。</li>
+<li>is-need-router-info - String - （过滤条件）是否需要获取路由策略信息，默认不获取，减少耗时，当控制台需要拉取路由策略信息时，改为true，返回具体的路由策略，。</li>
+     * @param array $RouteTableIds 路由表实例ID，例如：rtb-azd4dt1c。
      * @param string $Offset 偏移量。
      * @param string $Limit 请求对象个数。
      */
@@ -94,10 +98,6 @@ class DescribeRouteTablesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RouteTableIds",$param) and $param["RouteTableIds"] !== null) {
-            $this->RouteTableIds = $param["RouteTableIds"];
-        }
-
         if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
             $this->Filters = [];
             foreach ($param["Filters"] as $key => $value){
@@ -105,6 +105,10 @@ class DescribeRouteTablesRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Filters, $obj);
             }
+        }
+
+        if (array_key_exists("RouteTableIds",$param) and $param["RouteTableIds"] !== null) {
+            $this->RouteTableIds = $param["RouteTableIds"];
         }
 
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {

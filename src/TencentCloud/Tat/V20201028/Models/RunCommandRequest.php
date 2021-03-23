@@ -46,6 +46,32 @@ use TencentCloud\Common\AbstractModel;
 <li> True：保存
 <li> False：不保存
 默认为 False。
+ * @method boolean getEnableParameter() 获取是否启用自定义参数功能。
+一旦创建，此值不提供修改。
+默认值：false。
+ * @method void setEnableParameter(boolean $EnableParameter) 设置是否启用自定义参数功能。
+一旦创建，此值不提供修改。
+默认值：false。
+ * @method string getDefaultParameters() 获取启用自定义参数功能时，自定义参数的默认取值。字段类型为json encoded string。如：{\"varA\": \"222\"}。
+key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
+如果 Parameters 未提供，将使用这里的默认值进行替换。
+自定义参数最多20个。
+自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。
+ * @method void setDefaultParameters(string $DefaultParameters) 设置启用自定义参数功能时，自定义参数的默认取值。字段类型为json encoded string。如：{\"varA\": \"222\"}。
+key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
+如果 Parameters 未提供，将使用这里的默认值进行替换。
+自定义参数最多20个。
+自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。
+ * @method string getParameters() 获取Command 的自定义参数。字段类型为json encoded string。如：{\"varA\": \"222\"}。
+key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
+如果未提供该参数取值，将使用 DefaultParameters 进行替换。
+自定义参数最多20个。
+自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。
+ * @method void setParameters(string $Parameters) 设置Command 的自定义参数。字段类型为json encoded string。如：{\"varA\": \"222\"}。
+key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
+如果未提供该参数取值，将使用 DefaultParameters 进行替换。
+自定义参数最多20个。
+自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。
  */
 class RunCommandRequest extends AbstractModel
 {
@@ -95,6 +121,31 @@ class RunCommandRequest extends AbstractModel
     public $SaveCommand;
 
     /**
+     * @var boolean 是否启用自定义参数功能。
+一旦创建，此值不提供修改。
+默认值：false。
+     */
+    public $EnableParameter;
+
+    /**
+     * @var string 启用自定义参数功能时，自定义参数的默认取值。字段类型为json encoded string。如：{\"varA\": \"222\"}。
+key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
+如果 Parameters 未提供，将使用这里的默认值进行替换。
+自定义参数最多20个。
+自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。
+     */
+    public $DefaultParameters;
+
+    /**
+     * @var string Command 的自定义参数。字段类型为json encoded string。如：{\"varA\": \"222\"}。
+key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
+如果未提供该参数取值，将使用 DefaultParameters 进行替换。
+自定义参数最多20个。
+自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。
+     */
+    public $Parameters;
+
+    /**
      * @param string $Content Base64编码后的命令内容，长度不可超过64KB。
      * @param array $InstanceIds 待执行命令的实例ID列表。 支持实例类型：
 <li> CVM
@@ -108,6 +159,19 @@ class RunCommandRequest extends AbstractModel
 <li> True：保存
 <li> False：不保存
 默认为 False。
+     * @param boolean $EnableParameter 是否启用自定义参数功能。
+一旦创建，此值不提供修改。
+默认值：false。
+     * @param string $DefaultParameters 启用自定义参数功能时，自定义参数的默认取值。字段类型为json encoded string。如：{\"varA\": \"222\"}。
+key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
+如果 Parameters 未提供，将使用这里的默认值进行替换。
+自定义参数最多20个。
+自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。
+     * @param string $Parameters Command 的自定义参数。字段类型为json encoded string。如：{\"varA\": \"222\"}。
+key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
+如果未提供该参数取值，将使用 DefaultParameters 进行替换。
+自定义参数最多20个。
+自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。
      */
     function __construct()
     {
@@ -152,6 +216,18 @@ class RunCommandRequest extends AbstractModel
 
         if (array_key_exists("SaveCommand",$param) and $param["SaveCommand"] !== null) {
             $this->SaveCommand = $param["SaveCommand"];
+        }
+
+        if (array_key_exists("EnableParameter",$param) and $param["EnableParameter"] !== null) {
+            $this->EnableParameter = $param["EnableParameter"];
+        }
+
+        if (array_key_exists("DefaultParameters",$param) and $param["DefaultParameters"] !== null) {
+            $this->DefaultParameters = $param["DefaultParameters"];
+        }
+
+        if (array_key_exists("Parameters",$param) and $param["Parameters"] !== null) {
+            $this->Parameters = $param["Parameters"];
         }
     }
 }

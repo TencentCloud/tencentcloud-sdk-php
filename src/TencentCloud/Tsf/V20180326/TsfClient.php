@@ -26,6 +26,7 @@ use TencentCloud\Tsf\V20180326\Models as Models;
  * @method Models\AddClusterInstancesResponse AddClusterInstances(Models\AddClusterInstancesRequest $req) 添加云主机节点至TSF集群
  * @method Models\AddInstancesResponse AddInstances(Models\AddInstancesRequest $req) 添加云主机节点至TSF集群
  * @method Models\BindApiGroupResponse BindApiGroup(Models\BindApiGroupRequest $req) 网关与API分组批量绑定
+ * @method Models\BindPluginResponse BindPlugin(Models\BindPluginRequest $req) 插件与网关分组/API批量绑定
  * @method Models\ChangeApiUsableStatusResponse ChangeApiUsableStatus(Models\ChangeApiUsableStatusRequest $req) 启用或禁用API
  * @method Models\ContinueRunFailedTaskBatchResponse ContinueRunFailedTaskBatch(Models\ContinueRunFailedTaskBatchRequest $req) 对执行失败的任务批次执行续跑
  * @method Models\CreateAllGatewayApiAsyncResponse CreateAllGatewayApiAsync(Models\CreateAllGatewayApiAsyncRequest $req) 一键导入API分组
@@ -100,6 +101,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
  * @method Models\DescribeGroupInstancesResponse DescribeGroupInstances(Models\DescribeGroupInstancesRequest $req) 查询虚拟机部署组云主机列表
  * @method Models\DescribeGroupUseDetailResponse DescribeGroupUseDetail(Models\DescribeGroupUseDetailRequest $req) 查询网关分组监控明细数据
  * @method Models\DescribeGroupsResponse DescribeGroups(Models\DescribeGroupsRequest $req) 获取虚拟机部署组列表
+ * @method Models\DescribeGroupsWithPluginResponse DescribeGroupsWithPlugin(Models\DescribeGroupsWithPluginRequest $req) 查询某个插件下绑定或未绑定的API分组
  * @method Models\DescribeImageRepositoryResponse DescribeImageRepository(Models\DescribeImageRepositoryRequest $req) 镜像仓库列表 
  * @method Models\DescribeImageTagsResponse DescribeImageTags(Models\DescribeImageTagsRequest $req) 镜像版本列表
  * @method Models\DescribeLaneRulesResponse DescribeLaneRules(Models\DescribeLaneRulesRequest $req) 查询泳道规则列表
@@ -110,6 +112,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
  * @method Models\DescribePathRewriteResponse DescribePathRewrite(Models\DescribePathRewriteRequest $req) 查询路径重写
  * @method Models\DescribePathRewritesResponse DescribePathRewrites(Models\DescribePathRewritesRequest $req) 查询路径重写列表
  * @method Models\DescribePkgsResponse DescribePkgs(Models\DescribePkgsRequest $req) 无
+ * @method Models\DescribePluginInstancesResponse DescribePluginInstances(Models\DescribePluginInstancesRequest $req) 分页查询网关分组/API绑定（或未绑定）的插件列表
  * @method Models\DescribePodInstancesResponse DescribePodInstances(Models\DescribePodInstancesRequest $req) 获取部署组实例列表
  * @method Models\DescribePublicConfigResponse DescribePublicConfig(Models\DescribePublicConfigRequest $req) 查询公共配置（单条）
  * @method Models\DescribePublicConfigReleaseLogsResponse DescribePublicConfigReleaseLogs(Models\DescribePublicConfigReleaseLogsRequest $req) 查询公共配置发布历史

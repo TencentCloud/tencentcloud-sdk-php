@@ -50,6 +50,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEniId(string $EniId) 设置弹性网卡唯一ID
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getZoneId() 获取后端服务的可用区ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setZoneId(integer $ZoneId) 设置后端服务的可用区ID
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TargetGroupBackend extends AbstractModel
 {
@@ -109,6 +113,12 @@ class TargetGroupBackend extends AbstractModel
     public $EniId;
 
     /**
+     * @var integer 后端服务的可用区ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ZoneId;
+
+    /**
      * @param string $TargetGroupId 目标组ID
      * @param string $Type 后端服务的类型，可取：CVM、ENI（即将支持）
      * @param string $InstanceId 后端服务的唯一 ID
@@ -123,6 +133,8 @@ class TargetGroupBackend extends AbstractModel
      * @param string $RegisteredTime 后端服务被绑定的时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EniId 弹性网卡唯一ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ZoneId 后端服务的可用区ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -176,6 +188,10 @@ class TargetGroupBackend extends AbstractModel
 
         if (array_key_exists("EniId",$param) and $param["EniId"] !== null) {
             $this->EniId = $param["EniId"];
+        }
+
+        if (array_key_exists("ZoneId",$param) and $param["ZoneId"] !== null) {
+            $this->ZoneId = $param["ZoneId"];
         }
     }
 }

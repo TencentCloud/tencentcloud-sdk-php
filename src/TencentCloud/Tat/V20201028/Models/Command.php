@@ -38,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreatedTime(string $CreatedTime) 设置命令创建时间。
  * @method string getUpdatedTime() 获取命令更新时间。
  * @method void setUpdatedTime(string $UpdatedTime) 设置命令更新时间。
+ * @method boolean getEnableParameter() 获取是否启用自定义参数功能。
+ * @method void setEnableParameter(boolean $EnableParameter) 设置是否启用自定义参数功能。
+ * @method string getDefaultParameters() 获取自定义参数的默认取值。
+ * @method void setDefaultParameters(string $DefaultParameters) 设置自定义参数的默认取值。
  */
 class Command extends AbstractModel
 {
@@ -87,6 +91,16 @@ class Command extends AbstractModel
     public $UpdatedTime;
 
     /**
+     * @var boolean 是否启用自定义参数功能。
+     */
+    public $EnableParameter;
+
+    /**
+     * @var string 自定义参数的默认取值。
+     */
+    public $DefaultParameters;
+
+    /**
      * @param string $CommandId 命令ID。
      * @param string $CommandName 命令名称。
      * @param string $Description 命令描述。
@@ -96,6 +110,8 @@ class Command extends AbstractModel
      * @param integer $Timeout 命令超时时间。
      * @param string $CreatedTime 命令创建时间。
      * @param string $UpdatedTime 命令更新时间。
+     * @param boolean $EnableParameter 是否启用自定义参数功能。
+     * @param string $DefaultParameters 自定义参数的默认取值。
      */
     function __construct()
     {
@@ -144,6 +160,14 @@ class Command extends AbstractModel
 
         if (array_key_exists("UpdatedTime",$param) and $param["UpdatedTime"] !== null) {
             $this->UpdatedTime = $param["UpdatedTime"];
+        }
+
+        if (array_key_exists("EnableParameter",$param) and $param["EnableParameter"] !== null) {
+            $this->EnableParameter = $param["EnableParameter"];
+        }
+
+        if (array_key_exists("DefaultParameters",$param) and $param["DefaultParameters"] !== null) {
+            $this->DefaultParameters = $param["DefaultParameters"];
         }
     }
 }

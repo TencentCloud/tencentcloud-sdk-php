@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置计划名称
  * @method string getTimeTemplateId() 获取时间模板ID
  * @method void setTimeTemplateId(string $TimeTemplateId) 设置时间模板ID
+ * @method integer getEventId() 获取触发录制的事件类别 1:全部
+ * @method void setEventId(integer $EventId) 设置触发录制的事件类别 1:全部
  * @method array getDevices() 获取该录制计划绑定的设备列表
  * @method void setDevices(array $Devices) 设置该录制计划绑定的设备列表
  */
@@ -40,6 +42,11 @@ class CreateRecordPlanRequest extends AbstractModel
     public $TimeTemplateId;
 
     /**
+     * @var integer 触发录制的事件类别 1:全部
+     */
+    public $EventId;
+
+    /**
      * @var array 该录制计划绑定的设备列表
      */
     public $Devices;
@@ -47,6 +54,7 @@ class CreateRecordPlanRequest extends AbstractModel
     /**
      * @param string $Name 计划名称
      * @param string $TimeTemplateId 时间模板ID
+     * @param integer $EventId 触发录制的事件类别 1:全部
      * @param array $Devices 该录制计划绑定的设备列表
      */
     function __construct()
@@ -68,6 +76,10 @@ class CreateRecordPlanRequest extends AbstractModel
 
         if (array_key_exists("TimeTemplateId",$param) and $param["TimeTemplateId"] !== null) {
             $this->TimeTemplateId = $param["TimeTemplateId"];
+        }
+
+        if (array_key_exists("EventId",$param) and $param["EventId"] !== null) {
+            $this->EventId = $param["EventId"];
         }
 
         if (array_key_exists("Devices",$param) and $param["Devices"] !== null) {

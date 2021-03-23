@@ -50,6 +50,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreatedTime(string $CreatedTime) 设置执行活动创建时间。
  * @method string getUpdatedTime() 获取执行活动更新时间。
  * @method void setUpdatedTime(string $UpdatedTime) 设置执行活动更新时间。
+ * @method string getParameters() 获取自定义参数取值。
+ * @method void setParameters(string $Parameters) 设置自定义参数取值。
+ * @method string getDefaultParameters() 获取自定义参数的默认取值。
+ * @method void setDefaultParameters(string $DefaultParameters) 设置自定义参数的默认取值。
  */
 class Invocation extends AbstractModel
 {
@@ -105,6 +109,16 @@ class Invocation extends AbstractModel
     public $UpdatedTime;
 
     /**
+     * @var string 自定义参数取值。
+     */
+    public $Parameters;
+
+    /**
+     * @var string 自定义参数的默认取值。
+     */
+    public $DefaultParameters;
+
+    /**
      * @param string $InvocationId 执行活动ID。
      * @param string $CommandId 命令ID。
      * @param string $InvocationStatus 执行任务状态。取值范围：
@@ -120,6 +134,8 @@ class Invocation extends AbstractModel
      * @param string $EndTime 执行活动结束时间。
      * @param string $CreatedTime 执行活动创建时间。
      * @param string $UpdatedTime 执行活动更新时间。
+     * @param string $Parameters 自定义参数取值。
+     * @param string $DefaultParameters 自定义参数的默认取值。
      */
     function __construct()
     {
@@ -173,6 +189,14 @@ class Invocation extends AbstractModel
 
         if (array_key_exists("UpdatedTime",$param) and $param["UpdatedTime"] !== null) {
             $this->UpdatedTime = $param["UpdatedTime"];
+        }
+
+        if (array_key_exists("Parameters",$param) and $param["Parameters"] !== null) {
+            $this->Parameters = $param["Parameters"];
+        }
+
+        if (array_key_exists("DefaultParameters",$param) and $param["DefaultParameters"] !== null) {
+            $this->DefaultParameters = $param["DefaultParameters"];
         }
     }
 }

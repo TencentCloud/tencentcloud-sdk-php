@@ -32,6 +32,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWorkingDirectory(string $WorkingDirectory) 设置命令执行路径，默认：/root。
  * @method integer getTimeout() 获取命令超时时间，默认60秒。取值范围[1, 86400]。
  * @method void setTimeout(integer $Timeout) 设置命令超时时间，默认60秒。取值范围[1, 86400]。
+ * @method boolean getEnableParameter() 获取是否启用自定义参数功能。
+一旦创建，此值不提供修改。
+默认值：false。
+ * @method void setEnableParameter(boolean $EnableParameter) 设置是否启用自定义参数功能。
+一旦创建，此值不提供修改。
+默认值：false。
+ * @method string getDefaultParameters() 获取启用自定义参数功能时，自定义参数的默认取值。字段类型为json encoded string。如：{\"varA\": \"222\"}。
+key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
+如果InvokeCommand时未提供参数取值，将使用这里的默认值进行替换。
+自定义参数最多20个。
+自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。
+ * @method void setDefaultParameters(string $DefaultParameters) 设置启用自定义参数功能时，自定义参数的默认取值。字段类型为json encoded string。如：{\"varA\": \"222\"}。
+key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
+如果InvokeCommand时未提供参数取值，将使用这里的默认值进行替换。
+自定义参数最多20个。
+自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。
  */
 class CreateCommandRequest extends AbstractModel
 {
@@ -66,12 +82,36 @@ class CreateCommandRequest extends AbstractModel
     public $Timeout;
 
     /**
+     * @var boolean 是否启用自定义参数功能。
+一旦创建，此值不提供修改。
+默认值：false。
+     */
+    public $EnableParameter;
+
+    /**
+     * @var string 启用自定义参数功能时，自定义参数的默认取值。字段类型为json encoded string。如：{\"varA\": \"222\"}。
+key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
+如果InvokeCommand时未提供参数取值，将使用这里的默认值进行替换。
+自定义参数最多20个。
+自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。
+     */
+    public $DefaultParameters;
+
+    /**
      * @param string $CommandName 命令名称。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超60个字节。
      * @param string $Content Base64编码后的命令内容，长度不可超过64KB。
      * @param string $Description 命令描述。不超过120字符。
      * @param string $CommandType 命令类型，目前仅支持取值：SHELL。默认：SHELL。
      * @param string $WorkingDirectory 命令执行路径，默认：/root。
      * @param integer $Timeout 命令超时时间，默认60秒。取值范围[1, 86400]。
+     * @param boolean $EnableParameter 是否启用自定义参数功能。
+一旦创建，此值不提供修改。
+默认值：false。
+     * @param string $DefaultParameters 启用自定义参数功能时，自定义参数的默认取值。字段类型为json encoded string。如：{\"varA\": \"222\"}。
+key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
+如果InvokeCommand时未提供参数取值，将使用这里的默认值进行替换。
+自定义参数最多20个。
+自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。
      */
     function __construct()
     {
@@ -108,6 +148,14 @@ class CreateCommandRequest extends AbstractModel
 
         if (array_key_exists("Timeout",$param) and $param["Timeout"] !== null) {
             $this->Timeout = $param["Timeout"];
+        }
+
+        if (array_key_exists("EnableParameter",$param) and $param["EnableParameter"] !== null) {
+            $this->EnableParameter = $param["EnableParameter"];
+        }
+
+        if (array_key_exists("DefaultParameters",$param) and $param["DefaultParameters"] !== null) {
+            $this->DefaultParameters = $param["DefaultParameters"];
         }
     }
 }

@@ -66,6 +66,10 @@ OPEN：公网属性， INTERNAL：内网属性。
  * @method void setSnatIps(array $SnatIps) 设置开启绑定跨地域/跨Vpc绑定IP的功能后，创建SnatIp。
  * @method string getClusterTag() 获取Stgw独占集群的标签。
  * @method void setClusterTag(string $ClusterTag) 设置Stgw独占集群的标签。
+ * @method string getSlaveZoneId() 获取仅适用于公网负载均衡。设置跨可用区容灾时的备可用区ID，例如 100001 或 ap-guangzhou-1
+注：备可用区是主可用区故障后，需要承载流量的可用区。可通过 DescribeMasterZones 接口查询一个地域的主/备可用区的列表。
+ * @method void setSlaveZoneId(string $SlaveZoneId) 设置仅适用于公网负载均衡。设置跨可用区容灾时的备可用区ID，例如 100001 或 ap-guangzhou-1
+注：备可用区是主可用区故障后，需要承载流量的可用区。可通过 DescribeMasterZones 接口查询一个地域的主/备可用区的列表。
  * @method string getEipAddressId() 获取EIP 的唯一 ID，形如：eip-11112222，仅适用于内网负载均衡绑定EIP。
  * @method void setEipAddressId(string $EipAddressId) 设置EIP 的唯一 ID，形如：eip-11112222，仅适用于内网负载均衡绑定EIP。
  */
@@ -175,6 +179,12 @@ OPEN：公网属性， INTERNAL：内网属性。
     public $ClusterTag;
 
     /**
+     * @var string 仅适用于公网负载均衡。设置跨可用区容灾时的备可用区ID，例如 100001 或 ap-guangzhou-1
+注：备可用区是主可用区故障后，需要承载流量的可用区。可通过 DescribeMasterZones 接口查询一个地域的主/备可用区的列表。
+     */
+    public $SlaveZoneId;
+
+    /**
      * @var string EIP 的唯一 ID，形如：eip-11112222，仅适用于内网负载均衡绑定EIP。
      */
     public $EipAddressId;
@@ -203,6 +213,8 @@ OPEN：公网属性， INTERNAL：内网属性。
      * @param boolean $SnatPro 是否支持绑定跨地域/跨Vpc绑定IP的功能。
      * @param array $SnatIps 开启绑定跨地域/跨Vpc绑定IP的功能后，创建SnatIp。
      * @param string $ClusterTag Stgw独占集群的标签。
+     * @param string $SlaveZoneId 仅适用于公网负载均衡。设置跨可用区容灾时的备可用区ID，例如 100001 或 ap-guangzhou-1
+注：备可用区是主可用区故障后，需要承载流量的可用区。可通过 DescribeMasterZones 接口查询一个地域的主/备可用区的列表。
      * @param string $EipAddressId EIP 的唯一 ID，形如：eip-11112222，仅适用于内网负载均衡绑定EIP。
      */
     function __construct()
@@ -308,6 +320,10 @@ OPEN：公网属性， INTERNAL：内网属性。
 
         if (array_key_exists("ClusterTag",$param) and $param["ClusterTag"] !== null) {
             $this->ClusterTag = $param["ClusterTag"];
+        }
+
+        if (array_key_exists("SlaveZoneId",$param) and $param["SlaveZoneId"] !== null) {
+            $this->SlaveZoneId = $param["SlaveZoneId"];
         }
 
         if (array_key_exists("EipAddressId",$param) and $param["EipAddressId"] !== null) {

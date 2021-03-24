@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIdList(array $IdList) 设置资源ID搜索，可选，当不为空数组时表示获取指定资源的资源列表；
  * @method string getName() 获取资源名称搜索，可选，当不为空字符串时表示按名称搜索资源；
  * @method void setName(string $Name) 设置资源名称搜索，可选，当不为空字符串时表示按名称搜索资源；
- * @method array getIpList() 获取IP搜索列表，可选，当不为空时表示安装IP搜索资源；
- * @method void setIpList(array $IpList) 设置IP搜索列表，可选，当不为空时表示安装IP搜索资源；
+ * @method array getIpList() 获取IP搜索列表，可选，当不为空时表示按照IP搜索资源；
+ * @method void setIpList(array $IpList) 设置IP搜索列表，可选，当不为空时表示按照IP搜索资源；
  * @method array getStatus() 获取资源状态搜索列表，可选，取值为[0（运行中）, 1（清洗中）, 2（封堵中）]，当填空数组时不进行状态搜索；
  * @method void setStatus(array $Status) 设置资源状态搜索列表，可选，取值为[0（运行中）, 1（清洗中）, 2（封堵中）]，当填空数组时不进行状态搜索；
  * @method integer getExpire() 获取即将到期搜索；可选，取值为[0（不搜索），1（搜索即将到期的资源）]
@@ -75,7 +75,7 @@ class DescribeResourceListRequest extends AbstractModel
     public $Name;
 
     /**
-     * @var array IP搜索列表，可选，当不为空时表示安装IP搜索资源；
+     * @var array IP搜索列表，可选，当不为空时表示按照IP搜索资源；
      */
     public $IpList;
 
@@ -120,7 +120,7 @@ class DescribeResourceListRequest extends AbstractModel
      * @param array $Line 线路搜索，可选，只有当获取高防IP资源列表是可以选填，取值为[1（BGP线路），2（南京电信），3（南京联通），99（第三方合作线路）]，当获取其他产品时请填空数组；
      * @param array $IdList 资源ID搜索，可选，当不为空数组时表示获取指定资源的资源列表；
      * @param string $Name 资源名称搜索，可选，当不为空字符串时表示按名称搜索资源；
-     * @param array $IpList IP搜索列表，可选，当不为空时表示安装IP搜索资源；
+     * @param array $IpList IP搜索列表，可选，当不为空时表示按照IP搜索资源；
      * @param array $Status 资源状态搜索列表，可选，取值为[0（运行中）, 1（清洗中）, 2（封堵中）]，当填空数组时不进行状态搜索；
      * @param integer $Expire 即将到期搜索；可选，取值为[0（不搜索），1（搜索即将到期的资源）]
      * @param array $OderBy 排序字段，可选

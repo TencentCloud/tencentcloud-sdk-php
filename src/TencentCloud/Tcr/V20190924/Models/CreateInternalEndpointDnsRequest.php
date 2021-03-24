@@ -26,10 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) 设置私有网络id
  * @method string getEniLBIp() 获取tcr内网访问链路ip
  * @method void setEniLBIp(string $EniLBIp) 设置tcr内网访问链路ip
- * @method boolean getUsePublicDomain() 获取true：use instance name as subdomain
-false: use instancename+"-vpc" as subdomain
- * @method void setUsePublicDomain(boolean $UsePublicDomain) 设置true：use instance name as subdomain
-false: use instancename+"-vpc" as subdomain
+ * @method boolean getUsePublicDomain() 获取true：为默认域名，公网域名一致
+false: 使用vpc域名
+默认为vpc域名
+ * @method void setUsePublicDomain(boolean $UsePublicDomain) 设置true：为默认域名，公网域名一致
+false: 使用vpc域名
+默认为vpc域名
  */
 class CreateInternalEndpointDnsRequest extends AbstractModel
 {
@@ -49,8 +51,9 @@ class CreateInternalEndpointDnsRequest extends AbstractModel
     public $EniLBIp;
 
     /**
-     * @var boolean true：use instance name as subdomain
-false: use instancename+"-vpc" as subdomain
+     * @var boolean true：为默认域名，公网域名一致
+false: 使用vpc域名
+默认为vpc域名
      */
     public $UsePublicDomain;
 
@@ -58,8 +61,9 @@ false: use instancename+"-vpc" as subdomain
      * @param string $InstanceId tcr实例id
      * @param string $VpcId 私有网络id
      * @param string $EniLBIp tcr内网访问链路ip
-     * @param boolean $UsePublicDomain true：use instance name as subdomain
-false: use instancename+"-vpc" as subdomain
+     * @param boolean $UsePublicDomain true：为默认域名，公网域名一致
+false: 使用vpc域名
+默认为vpc域名
      */
     function __construct()
     {

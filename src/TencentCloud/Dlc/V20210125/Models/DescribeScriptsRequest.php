@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置返回数量，默认为10，最大值为100。
  * @method integer getOffset() 获取偏移量，默认为0。
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
- * @method string getSortBy() 获取按字段爱旭，支持如下字段类型，update-time
- * @method void setSortBy(string $SortBy) 设置按字段爱旭，支持如下字段类型，update-time
+ * @method string getSortBy() 获取按字段排序，支持如下字段类型，update-time
+ * @method void setSortBy(string $SortBy) 设置按字段排序，支持如下字段类型，update-time
  * @method string getSorting() 获取排序方式，desc表示正序，asc表示反序
  * @method void setSorting(string $Sorting) 设置排序方式，desc表示正序，asc表示反序
  * @method array getFilters() 获取过滤条件，如下支持的过滤类型，传参Name应为其一
@@ -48,7 +48,7 @@ class DescribeScriptsRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var string 按字段爱旭，支持如下字段类型，update-time
+     * @var string 按字段排序，支持如下字段类型，update-time
      */
     public $SortBy;
 
@@ -67,7 +67,7 @@ script-name-keyword - String - （过滤条件）数据表名称,形如：script
     /**
      * @param integer $Limit 返回数量，默认为10，最大值为100。
      * @param integer $Offset 偏移量，默认为0。
-     * @param string $SortBy 按字段爱旭，支持如下字段类型，update-time
+     * @param string $SortBy 按字段排序，支持如下字段类型，update-time
      * @param string $Sorting 排序方式，desc表示正序，asc表示反序
      * @param array $Filters 过滤条件，如下支持的过滤类型，传参Name应为其一
 script-id - String - （过滤条件）script-id取值形如：157de0d1-26b4-4df2-a2d0-b64afc406c25。

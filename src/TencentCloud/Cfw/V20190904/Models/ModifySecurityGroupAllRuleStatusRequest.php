@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDirection(integer $Direction) 设置方向，0：出站，1：入站
  * @method string getEdgeId() 获取Edge ID值
  * @method void setEdgeId(string $EdgeId) 设置Edge ID值
- * @method string getArea() 获取NAT地域
- * @method void setArea(string $Area) 设置NAT地域
+ * @method string getArea() 获取NAT地域, 腾讯云地域的英文简写
+ * @method void setArea(string $Area) 设置NAT地域, 腾讯云地域的英文简写
  */
 class ModifySecurityGroupAllRuleStatusRequest extends AbstractModel
 {
@@ -47,7 +47,7 @@ class ModifySecurityGroupAllRuleStatusRequest extends AbstractModel
     public $EdgeId;
 
     /**
-     * @var string NAT地域
+     * @var string NAT地域, 腾讯云地域的英文简写
      */
     public $Area;
 
@@ -55,7 +55,7 @@ class ModifySecurityGroupAllRuleStatusRequest extends AbstractModel
      * @param integer $Status 列表规则状态，0：全部停用，1：全部启用
      * @param integer $Direction 方向，0：出站，1：入站
      * @param string $EdgeId Edge ID值
-     * @param string $Area NAT地域
+     * @param string $Area NAT地域, 腾讯云地域的英文简写
      */
     function __construct()
     {

@@ -33,7 +33,6 @@ use TencentCloud\Common\AbstractModel;
 "Key": "Type" 此字段弃用
 "Key": "ElasticLimit" 表示资源实例的弹性防护值
 "Key": "DDoSAI" 表示资源实例的DDoS AI防护开关
-"Key": "Bandwidth" 表示资源实例的保底防护值
 "Key": "OverloadCount" 表示资源实例受到超过弹性防护值的次数
 "Key": "Status" 表示资源实例的状态(idle:运行中, attacking:攻击中, blocking:封堵中, isolate:隔离中)
 "Key": "Lbid" 此字段弃用
@@ -50,6 +49,10 @@ use TencentCloud\Common\AbstractModel;
 "Key": "DefendStatus" 表示资源实例的DDoS防护状态(防护开启或临时关闭)
 "Key": "UndefendExpire" 表示资源实例的DDoS防护临时关闭结束时间
 "Key": "Tgw" 表示资源实例是否是新资源
+"Key": "Bandwidth" 表示资源实例的保底防护值，只针对高防包和高防IP
+"Key": "DdosMax" 表示资源实例的保底防护值，只针对高防IP专业版
+"Key": "GFBandwidth" 表示资源实例的保底业务带宽，只针对高防IP
+"Key": "ServiceBandwidth" 表示资源实例的保底业务带宽，只针对高防IP专业版
  * @method void setServicePacks(array $ServicePacks) 设置资源记录列表，返回Key值说明：
 "Key": "CreateTime" 表示资源实例购买时间
 "Key": "Region" 表示资源实例的地域
@@ -61,7 +64,6 @@ use TencentCloud\Common\AbstractModel;
 "Key": "Type" 此字段弃用
 "Key": "ElasticLimit" 表示资源实例的弹性防护值
 "Key": "DDoSAI" 表示资源实例的DDoS AI防护开关
-"Key": "Bandwidth" 表示资源实例的保底防护值
 "Key": "OverloadCount" 表示资源实例受到超过弹性防护值的次数
 "Key": "Status" 表示资源实例的状态(idle:运行中, attacking:攻击中, blocking:封堵中, isolate:隔离中)
 "Key": "Lbid" 此字段弃用
@@ -78,6 +80,10 @@ use TencentCloud\Common\AbstractModel;
 "Key": "DefendStatus" 表示资源实例的DDoS防护状态(防护开启或临时关闭)
 "Key": "UndefendExpire" 表示资源实例的DDoS防护临时关闭结束时间
 "Key": "Tgw" 表示资源实例是否是新资源
+"Key": "Bandwidth" 表示资源实例的保底防护值，只针对高防包和高防IP
+"Key": "DdosMax" 表示资源实例的保底防护值，只针对高防IP专业版
+"Key": "GFBandwidth" 表示资源实例的保底业务带宽，只针对高防IP
+"Key": "ServiceBandwidth" 表示资源实例的保底业务带宽，只针对高防IP专业版
  * @method string getBusiness() 获取大禹子产品代号（bgp表示独享包；bgp-multip表示共享包；bgpip表示高防IP；net表示高防IP专业版）
  * @method void setBusiness(string $Business) 设置大禹子产品代号（bgp表示独享包；bgp-multip表示共享包；bgpip表示高防IP；net表示高防IP专业版）
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -102,7 +108,6 @@ class DescribeResourceListResponse extends AbstractModel
 "Key": "Type" 此字段弃用
 "Key": "ElasticLimit" 表示资源实例的弹性防护值
 "Key": "DDoSAI" 表示资源实例的DDoS AI防护开关
-"Key": "Bandwidth" 表示资源实例的保底防护值
 "Key": "OverloadCount" 表示资源实例受到超过弹性防护值的次数
 "Key": "Status" 表示资源实例的状态(idle:运行中, attacking:攻击中, blocking:封堵中, isolate:隔离中)
 "Key": "Lbid" 此字段弃用
@@ -119,6 +124,10 @@ class DescribeResourceListResponse extends AbstractModel
 "Key": "DefendStatus" 表示资源实例的DDoS防护状态(防护开启或临时关闭)
 "Key": "UndefendExpire" 表示资源实例的DDoS防护临时关闭结束时间
 "Key": "Tgw" 表示资源实例是否是新资源
+"Key": "Bandwidth" 表示资源实例的保底防护值，只针对高防包和高防IP
+"Key": "DdosMax" 表示资源实例的保底防护值，只针对高防IP专业版
+"Key": "GFBandwidth" 表示资源实例的保底业务带宽，只针对高防IP
+"Key": "ServiceBandwidth" 表示资源实例的保底业务带宽，只针对高防IP专业版
      */
     public $ServicePacks;
 
@@ -145,7 +154,6 @@ class DescribeResourceListResponse extends AbstractModel
 "Key": "Type" 此字段弃用
 "Key": "ElasticLimit" 表示资源实例的弹性防护值
 "Key": "DDoSAI" 表示资源实例的DDoS AI防护开关
-"Key": "Bandwidth" 表示资源实例的保底防护值
 "Key": "OverloadCount" 表示资源实例受到超过弹性防护值的次数
 "Key": "Status" 表示资源实例的状态(idle:运行中, attacking:攻击中, blocking:封堵中, isolate:隔离中)
 "Key": "Lbid" 此字段弃用
@@ -162,6 +170,10 @@ class DescribeResourceListResponse extends AbstractModel
 "Key": "DefendStatus" 表示资源实例的DDoS防护状态(防护开启或临时关闭)
 "Key": "UndefendExpire" 表示资源实例的DDoS防护临时关闭结束时间
 "Key": "Tgw" 表示资源实例是否是新资源
+"Key": "Bandwidth" 表示资源实例的保底防护值，只针对高防包和高防IP
+"Key": "DdosMax" 表示资源实例的保底防护值，只针对高防IP专业版
+"Key": "GFBandwidth" 表示资源实例的保底业务带宽，只针对高防IP
+"Key": "ServiceBandwidth" 表示资源实例的保底业务带宽，只针对高防IP专业版
      * @param string $Business 大禹子产品代号（bgp表示独享包；bgp-multip表示共享包；bgpip表示高防IP；net表示高防IP专业版）
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

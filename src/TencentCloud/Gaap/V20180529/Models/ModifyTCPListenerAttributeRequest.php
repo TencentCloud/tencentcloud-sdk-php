@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConnectTimeout(integer $ConnectTimeout) 设置源站健康检查响应超时时间，单位：秒。超时时间取值在[2，60]之间。超时时间应小于健康检查时间间隔DelayLoop。
  * @method integer getHealthCheck() 获取是否开启健康检查，1开启，0关闭。
  * @method void setHealthCheck(integer $HealthCheck) 设置是否开启健康检查，1开启，0关闭。
+ * @method integer getFailoverSwitch() 获取源站是否开启主备模式：1开启，0关闭，DOMAIN类型源站不支持开启
+ * @method void setFailoverSwitch(integer $FailoverSwitch) 设置源站是否开启主备模式：1开启，0关闭，DOMAIN类型源站不支持开启
  */
 class ModifyTCPListenerAttributeRequest extends AbstractModel
 {
@@ -80,6 +82,11 @@ class ModifyTCPListenerAttributeRequest extends AbstractModel
     public $HealthCheck;
 
     /**
+     * @var integer 源站是否开启主备模式：1开启，0关闭，DOMAIN类型源站不支持开启
+     */
+    public $FailoverSwitch;
+
+    /**
      * @param string $ListenerId 监听器ID
      * @param string $GroupId 通道组ID，ProxyId和GroupId必须设置一个，但不能同时设置。
      * @param string $ProxyId 通道ID，ProxyId和GroupId必须设置一个，但不能同时设置。
@@ -88,6 +95,7 @@ class ModifyTCPListenerAttributeRequest extends AbstractModel
      * @param integer $DelayLoop 源站健康检查时间间隔，单位：秒。时间间隔取值在[5，300]之间。
      * @param integer $ConnectTimeout 源站健康检查响应超时时间，单位：秒。超时时间取值在[2，60]之间。超时时间应小于健康检查时间间隔DelayLoop。
      * @param integer $HealthCheck 是否开启健康检查，1开启，0关闭。
+     * @param integer $FailoverSwitch 源站是否开启主备模式：1开启，0关闭，DOMAIN类型源站不支持开启
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ class ModifyTCPListenerAttributeRequest extends AbstractModel
 
         if (array_key_exists("HealthCheck",$param) and $param["HealthCheck"] !== null) {
             $this->HealthCheck = $param["HealthCheck"];
+        }
+
+        if (array_key_exists("FailoverSwitch",$param) and $param["FailoverSwitch"] !== null) {
+            $this->FailoverSwitch = $param["FailoverSwitch"];
         }
     }
 }

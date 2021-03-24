@@ -22,6 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getGroups() 获取安全组详情。
  * @method void setGroups(array $Groups) 设置安全组详情。
+ * @method string getVIP() 获取实例VIP
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVIP(string $VIP) 设置实例VIP
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getVPort() 获取实例端口
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVPort(integer $VPort) 设置实例端口
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -33,12 +41,28 @@ class DescribeDBSecurityGroupsResponse extends AbstractModel
     public $Groups;
 
     /**
+     * @var string 实例VIP
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $VIP;
+
+    /**
+     * @var integer 实例端口
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $VPort;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param array $Groups 安全组详情。
+     * @param string $VIP 实例VIP
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $VPort 实例端口
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -61,6 +85,14 @@ class DescribeDBSecurityGroupsResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Groups, $obj);
             }
+        }
+
+        if (array_key_exists("VIP",$param) and $param["VIP"] !== null) {
+            $this->VIP = $param["VIP"];
+        }
+
+        if (array_key_exists("VPort",$param) and $param["VPort"] !== null) {
+            $this->VPort = $param["VPort"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -78,8 +78,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRuleTypes(array $RuleTypes) 设置根据触发条件筛选 不传展示全部策略 STATIC=展示静态阈值策略 DYNAMIC=展示动态阈值策略
  * @method array getEnable() 获取告警启停筛选，[1]：启用   [0]：停止，全部[0, 1]
  * @method void setEnable(array $Enable) 设置告警启停筛选，[1]：启用   [0]：停止，全部[0, 1]
- * @method integer getNotBindingNoticeRule() 获取是否未配置通知规则，1：未配置，0：配置
- * @method void setNotBindingNoticeRule(integer $NotBindingNoticeRule) 设置是否未配置通知规则，1：未配置，0：配置
+ * @method integer getNotBindingNoticeRule() 获取传 1 查询未配置通知规则的告警策略；不传或传其他数值，查询所有策略。
+ * @method void setNotBindingNoticeRule(integer $NotBindingNoticeRule) 设置传 1 查询未配置通知规则的告警策略；不传或传其他数值，查询所有策略。
  */
 class DescribeAlarmPoliciesRequest extends AbstractModel
 {
@@ -177,7 +177,7 @@ class DescribeAlarmPoliciesRequest extends AbstractModel
     public $Enable;
 
     /**
-     * @var integer 是否未配置通知规则，1：未配置，0：配置
+     * @var integer 传 1 查询未配置通知规则的告警策略；不传或传其他数值，查询所有策略。
      */
     public $NotBindingNoticeRule;
 
@@ -211,7 +211,7 @@ class DescribeAlarmPoliciesRequest extends AbstractModel
 [查询通知模板列表](https://cloud.tencent.com/document/product/248/51280)
      * @param array $RuleTypes 根据触发条件筛选 不传展示全部策略 STATIC=展示静态阈值策略 DYNAMIC=展示动态阈值策略
      * @param array $Enable 告警启停筛选，[1]：启用   [0]：停止，全部[0, 1]
-     * @param integer $NotBindingNoticeRule 是否未配置通知规则，1：未配置，0：配置
+     * @param integer $NotBindingNoticeRule 传 1 查询未配置通知规则的告警策略；不传或传其他数值，查询所有策略。
      */
     function __construct()
     {

@@ -48,6 +48,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMetaData(MediaMetaData $MetaData) 设置原始视频的元信息。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSessionContext() 获取来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
+ * @method void setSessionContext(string $SessionContext) 设置来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
+ * @method string getSessionId() 获取用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
+ * @method void setSessionId(string $SessionId) 设置用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
  */
 class ComposeMediaTask extends AbstractModel
 {
@@ -94,6 +98,16 @@ class ComposeMediaTask extends AbstractModel
     public $MetaData;
 
     /**
+     * @var string 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
+     */
+    public $SessionContext;
+
+    /**
+     * @var string 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
+     */
+    public $SessionId;
+
+    /**
      * @param string $TaskId 任务 ID。
      * @param string $Status 任务流状态，取值：
 <li>PROCESSING：处理中；</li>
@@ -108,6 +122,8 @@ class ComposeMediaTask extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param MediaMetaData $MetaData 原始视频的元信息。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SessionContext 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
+     * @param string $SessionId 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
      */
     function __construct()
     {
@@ -151,6 +167,14 @@ class ComposeMediaTask extends AbstractModel
         if (array_key_exists("MetaData",$param) and $param["MetaData"] !== null) {
             $this->MetaData = new MediaMetaData();
             $this->MetaData->deserialize($param["MetaData"]);
+        }
+
+        if (array_key_exists("SessionContext",$param) and $param["SessionContext"] !== null) {
+            $this->SessionContext = $param["SessionContext"];
+        }
+
+        if (array_key_exists("SessionId",$param) and $param["SessionId"] !== null) {
+            $this->SessionId = $param["SessionId"];
         }
     }
 }

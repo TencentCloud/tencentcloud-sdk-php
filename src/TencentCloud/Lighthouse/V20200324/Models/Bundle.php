@@ -58,10 +58,12 @@ use TencentCloud\Common\AbstractModel;
 取值范围:
 "ACTIVITY": 活动套餐,
 "NORMAL": 普通套餐
+"CAREFREE": 无忧套餐
  * @method void setBundleDisplayLabel(string $BundleDisplayLabel) 设置套餐展示标签.
 取值范围:
 "ACTIVITY": 活动套餐,
 "NORMAL": 普通套餐
+"CAREFREE": 无忧套餐
  */
 class Bundle extends AbstractModel
 {
@@ -139,6 +141,7 @@ class Bundle extends AbstractModel
 取值范围:
 "ACTIVITY": 活动套餐,
 "NORMAL": 普通套餐
+"CAREFREE": 无忧套餐
      */
     public $BundleDisplayLabel;
 
@@ -164,6 +167,7 @@ class Bundle extends AbstractModel
 取值范围:
 "ACTIVITY": 活动套餐,
 "NORMAL": 普通套餐
+"CAREFREE": 无忧套餐
      */
     function __construct()
     {

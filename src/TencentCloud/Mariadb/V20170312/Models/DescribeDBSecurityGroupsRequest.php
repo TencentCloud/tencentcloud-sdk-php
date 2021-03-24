@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getProduct() 获取数据库引擎名称，本接口取值：mariadb。
  * @method void setProduct(string $Product) 设置数据库引擎名称，本接口取值：mariadb。
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
+ * @method string getInstanceId() 获取实例ID。
+ * @method void setInstanceId(string $InstanceId) 设置实例ID。
  */
 class DescribeDBSecurityGroupsRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class DescribeDBSecurityGroupsRequest extends AbstractModel
     public $Product;
 
     /**
-     * @var string 实例ID
+     * @var string 实例ID。
      */
     public $InstanceId;
 
     /**
      * @param string $Product 数据库引擎名称，本接口取值：mariadb。
-     * @param string $InstanceId 实例ID
+     * @param string $InstanceId 实例ID。
      */
     function __construct()
     {

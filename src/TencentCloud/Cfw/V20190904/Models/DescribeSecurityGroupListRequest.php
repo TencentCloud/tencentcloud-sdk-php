@@ -26,12 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setArea(string $Area) 设置地域代码（例: ap-guangzhou),支持腾讯云全部地域
  * @method string getSearchValue() 获取搜索值
  * @method void setSearchValue(string $SearchValue) 设置搜索值
- * @method integer getLimit() 获取每页条数
- * @method void setLimit(integer $Limit) 设置每页条数
- * @method integer getOffset() 获取偏移值
- * @method void setOffset(integer $Offset) 设置偏移值
- * @method string getStatus() 获取'': 全部，'0'：筛选停用规则，'1'：筛选启用规则
- * @method void setStatus(string $Status) 设置'': 全部，'0'：筛选停用规则，'1'：筛选启用规则
+ * @method integer getLimit() 获取每页条数，默认为10
+ * @method void setLimit(integer $Limit) 设置每页条数，默认为10
+ * @method integer getOffset() 获取偏移值，默认为0
+ * @method void setOffset(integer $Offset) 设置偏移值，默认为0
+ * @method string getStatus() 获取状态，'': 全部，'0'：筛选停用规则，'1'：筛选启用规则
+ * @method void setStatus(string $Status) 设置状态，'': 全部，'0'：筛选停用规则，'1'：筛选启用规则
  * @method integer getFilter() 获取0: 不过滤，1：过滤掉正常规则，保留下发异常规则
  * @method void setFilter(integer $Filter) 设置0: 不过滤，1：过滤掉正常规则，保留下发异常规则
  */
@@ -53,17 +53,17 @@ class DescribeSecurityGroupListRequest extends AbstractModel
     public $SearchValue;
 
     /**
-     * @var integer 每页条数
+     * @var integer 每页条数，默认为10
      */
     public $Limit;
 
     /**
-     * @var integer 偏移值
+     * @var integer 偏移值，默认为0
      */
     public $Offset;
 
     /**
-     * @var string '': 全部，'0'：筛选停用规则，'1'：筛选启用规则
+     * @var string 状态，'': 全部，'0'：筛选停用规则，'1'：筛选启用规则
      */
     public $Status;
 
@@ -76,9 +76,9 @@ class DescribeSecurityGroupListRequest extends AbstractModel
      * @param integer $Direction 0: 出站规则，1：入站规则
      * @param string $Area 地域代码（例: ap-guangzhou),支持腾讯云全部地域
      * @param string $SearchValue 搜索值
-     * @param integer $Limit 每页条数
-     * @param integer $Offset 偏移值
-     * @param string $Status '': 全部，'0'：筛选停用规则，'1'：筛选启用规则
+     * @param integer $Limit 每页条数，默认为10
+     * @param integer $Offset 偏移值，默认为0
+     * @param string $Status 状态，'': 全部，'0'：筛选停用规则，'1'：筛选启用规则
      * @param integer $Filter 0: 不过滤，1：过滤掉正常规则，保留下发异常规则
      */
     function __construct()

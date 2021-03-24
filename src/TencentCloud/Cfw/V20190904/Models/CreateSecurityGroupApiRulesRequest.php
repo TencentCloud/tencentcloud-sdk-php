@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setData(array $Data) 设置创建规则数据
  * @method integer getDirection() 获取方向，0：出站，1：入站
  * @method void setDirection(integer $Direction) 设置方向，0：出站，1：入站
- * @method integer getType() 获取0：后插，1：前插，2：中插
- * @method void setType(integer $Type) 设置0：后插，1：前插，2：中插
+ * @method integer getType() 获取插入类型，0：后插，1：前插，2：中插
+ * @method void setType(integer $Type) 设置插入类型，0：后插，1：前插，2：中插
  * @method string getArea() 获取腾讯云地域的英文简写
  * @method void setArea(string $Area) 设置腾讯云地域的英文简写
  */
@@ -42,7 +42,7 @@ class CreateSecurityGroupApiRulesRequest extends AbstractModel
     public $Direction;
 
     /**
-     * @var integer 0：后插，1：前插，2：中插
+     * @var integer 插入类型，0：后插，1：前插，2：中插
      */
     public $Type;
 
@@ -54,7 +54,7 @@ class CreateSecurityGroupApiRulesRequest extends AbstractModel
     /**
      * @param array $Data 创建规则数据
      * @param integer $Direction 方向，0：出站，1：入站
-     * @param integer $Type 0：后插，1：前插，2：中插
+     * @param integer $Type 插入类型，0：后插，1：前插，2：中插
      * @param string $Area 腾讯云地域的英文简写
      */
     function __construct()

@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getQueryTime() 获取查询时间点，精确到分钟粒度，支持最近1个月的数据查询，数据延迟为5分钟左右，如果要查询实时的数据，建议传递5分钟前的时间点，格式为yyyy-mm-dd HH:MM:00。（只精确至分钟，秒数填00）。
  * @method void setQueryTime(string $QueryTime) 设置查询时间点，精确到分钟粒度，支持最近1个月的数据查询，数据延迟为5分钟左右，如果要查询实时的数据，建议传递5分钟前的时间点，格式为yyyy-mm-dd HH:MM:00。（只精确至分钟，秒数填00）。
+ * @method array getPlayDomains() 获取播放域名列表，若不填，表示总体数据。
+ * @method void setPlayDomains(array $PlayDomains) 设置播放域名列表，若不填，表示总体数据。
  */
 class DescribeAllStreamPlayInfoListRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class DescribeAllStreamPlayInfoListRequest extends AbstractModel
     public $QueryTime;
 
     /**
+     * @var array 播放域名列表，若不填，表示总体数据。
+     */
+    public $PlayDomains;
+
+    /**
      * @param string $QueryTime 查询时间点，精确到分钟粒度，支持最近1个月的数据查询，数据延迟为5分钟左右，如果要查询实时的数据，建议传递5分钟前的时间点，格式为yyyy-mm-dd HH:MM:00。（只精确至分钟，秒数填00）。
+     * @param array $PlayDomains 播放域名列表，若不填，表示总体数据。
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class DescribeAllStreamPlayInfoListRequest extends AbstractModel
         }
         if (array_key_exists("QueryTime",$param) and $param["QueryTime"] !== null) {
             $this->QueryTime = $param["QueryTime"];
+        }
+
+        if (array_key_exists("PlayDomains",$param) and $param["PlayDomains"] !== null) {
+            $this->PlayDomains = $param["PlayDomains"];
         }
     }
 }

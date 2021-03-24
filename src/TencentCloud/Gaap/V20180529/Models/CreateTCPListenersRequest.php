@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRealServerPorts(array $RealServerPorts) 设置源站端口列表，该参数仅支持v1版本监听器和通道组监听器。
  * @method integer getClientIPMethod() 获取监听器获取客户端 IP 的方式，0表示 TOA, 1表示Proxy Protocol
  * @method void setClientIPMethod(integer $ClientIPMethod) 设置监听器获取客户端 IP 的方式，0表示 TOA, 1表示Proxy Protocol
+ * @method integer getFailoverSwitch() 获取源站是否开启主备模式：1开启，0关闭，DOMAIN类型源站不支持开启
+ * @method void setFailoverSwitch(integer $FailoverSwitch) 设置源站是否开启主备模式：1开启，0关闭，DOMAIN类型源站不支持开启
  */
 class CreateTCPListenersRequest extends AbstractModel
 {
@@ -101,6 +103,11 @@ class CreateTCPListenersRequest extends AbstractModel
     public $ClientIPMethod;
 
     /**
+     * @var integer 源站是否开启主备模式：1开启，0关闭，DOMAIN类型源站不支持开启
+     */
+    public $FailoverSwitch;
+
+    /**
      * @param string $ListenerName 监听器名称。
      * @param array $Ports 监听器端口列表。
      * @param string $Scheduler 监听器源站调度策略，支持轮询（rr），加权轮询（wrr），最小连接数（lc）。
@@ -112,6 +119,7 @@ class CreateTCPListenersRequest extends AbstractModel
      * @param integer $ConnectTimeout 源站健康检查响应超时时间，单位：秒。超时时间取值在[2，60]之间。超时时间应小于健康检查时间间隔DelayLoop。
      * @param array $RealServerPorts 源站端口列表，该参数仅支持v1版本监听器和通道组监听器。
      * @param integer $ClientIPMethod 监听器获取客户端 IP 的方式，0表示 TOA, 1表示Proxy Protocol
+     * @param integer $FailoverSwitch 源站是否开启主备模式：1开启，0关闭，DOMAIN类型源站不支持开启
      */
     function __construct()
     {
@@ -168,6 +176,10 @@ class CreateTCPListenersRequest extends AbstractModel
 
         if (array_key_exists("ClientIPMethod",$param) and $param["ClientIPMethod"] !== null) {
             $this->ClientIPMethod = $param["ClientIPMethod"];
+        }
+
+        if (array_key_exists("FailoverSwitch",$param) and $param["FailoverSwitch"] !== null) {
+            $this->FailoverSwitch = $param["FailoverSwitch"];
         }
     }
 }

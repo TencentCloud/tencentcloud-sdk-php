@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 售卖配置详情
  *
- * @method string getDevice() 获取设备类型
- * @method void setDevice(string $Device) 设置设备类型
- * @method string getType() 获取售卖规格描述
- * @method void setType(string $Type) 设置售卖规格描述
- * @method string getCdbType() 获取实例类型
- * @method void setCdbType(string $CdbType) 设置实例类型
+ * @method string getDevice() 获取设备类型（废弃）
+ * @method void setDevice(string $Device) 设置设备类型（废弃）
+ * @method string getType() 获取售卖规格描述（废弃）
+ * @method void setType(string $Type) 设置售卖规格描述（废弃）
+ * @method string getCdbType() 获取实例类型（废弃）
+ * @method void setCdbType(string $CdbType) 设置实例类型（废弃）
  * @method integer getMemory() 获取内存大小，单位为MB
  * @method void setMemory(integer $Memory) 设置内存大小，单位为MB
  * @method integer getCpu() 获取CPU核心数
@@ -44,25 +44,33 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIops(integer $Iops) 设置每秒IO数量
  * @method string getInfo() 获取应用场景描述
  * @method void setInfo(string $Info) 设置应用场景描述
- * @method integer getStatus() 获取状态值
- * @method void setStatus(integer $Status) 设置状态值
- * @method integer getTag() 获取标签值
- * @method void setTag(integer $Tag) 设置标签值
+ * @method integer getStatus() 获取状态值，0 表示该规格对外售卖
+ * @method void setStatus(integer $Status) 设置状态值，0 表示该规格对外售卖
+ * @method integer getTag() 获取标签值（废弃）
+ * @method void setTag(integer $Tag) 设置标签值（废弃）
+ * @method string getDeviceType() 获取实例类型，可能的取值范围有：UNIVERSAL (通用型), EXCLUSIVE (独享型), BASIC (基础型)
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDeviceType(string $DeviceType) 设置实例类型，可能的取值范围有：UNIVERSAL (通用型), EXCLUSIVE (独享型), BASIC (基础型)
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDeviceTypeName() 获取实例类型描述，可能的取值范围有：通用型， 独享型， 基础型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDeviceTypeName(string $DeviceTypeName) 设置实例类型描述，可能的取值范围有：通用型， 独享型， 基础型
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SellConfig extends AbstractModel
 {
     /**
-     * @var string 设备类型
+     * @var string 设备类型（废弃）
      */
     public $Device;
 
     /**
-     * @var string 售卖规格描述
+     * @var string 售卖规格描述（废弃）
      */
     public $Type;
 
     /**
-     * @var string 实例类型
+     * @var string 实例类型（废弃）
      */
     public $CdbType;
 
@@ -112,19 +120,31 @@ class SellConfig extends AbstractModel
     public $Info;
 
     /**
-     * @var integer 状态值
+     * @var integer 状态值，0 表示该规格对外售卖
      */
     public $Status;
 
     /**
-     * @var integer 标签值
+     * @var integer 标签值（废弃）
      */
     public $Tag;
 
     /**
-     * @param string $Device 设备类型
-     * @param string $Type 售卖规格描述
-     * @param string $CdbType 实例类型
+     * @var string 实例类型，可能的取值范围有：UNIVERSAL (通用型), EXCLUSIVE (独享型), BASIC (基础型)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DeviceType;
+
+    /**
+     * @var string 实例类型描述，可能的取值范围有：通用型， 独享型， 基础型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DeviceTypeName;
+
+    /**
+     * @param string $Device 设备类型（废弃）
+     * @param string $Type 售卖规格描述（废弃）
+     * @param string $CdbType 实例类型（废弃）
      * @param integer $Memory 内存大小，单位为MB
      * @param integer $Cpu CPU核心数
      * @param integer $VolumeMin 磁盘最小规格，单位为GB
@@ -134,8 +154,12 @@ class SellConfig extends AbstractModel
      * @param integer $Qps 每秒查询数量
      * @param integer $Iops 每秒IO数量
      * @param string $Info 应用场景描述
-     * @param integer $Status 状态值
-     * @param integer $Tag 标签值
+     * @param integer $Status 状态值，0 表示该规格对外售卖
+     * @param integer $Tag 标签值（废弃）
+     * @param string $DeviceType 实例类型，可能的取值范围有：UNIVERSAL (通用型), EXCLUSIVE (独享型), BASIC (基础型)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DeviceTypeName 实例类型描述，可能的取值范围有：通用型， 独享型， 基础型
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -204,6 +228,14 @@ class SellConfig extends AbstractModel
 
         if (array_key_exists("Tag",$param) and $param["Tag"] !== null) {
             $this->Tag = $param["Tag"];
+        }
+
+        if (array_key_exists("DeviceType",$param) and $param["DeviceType"] !== null) {
+            $this->DeviceType = $param["DeviceType"];
+        }
+
+        if (array_key_exists("DeviceTypeName",$param) and $param["DeviceTypeName"] !== null) {
+            $this->DeviceTypeName = $param["DeviceTypeName"];
         }
     }
 }

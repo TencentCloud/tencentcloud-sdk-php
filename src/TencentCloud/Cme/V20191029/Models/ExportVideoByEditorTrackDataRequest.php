@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExportDestination(string $ExportDestination) 设置导出目标。
 <li>CME：云剪，即导出为云剪素材；</li>
 <li>VOD：云点播，即导出为云点播媒资。</li>
- * @method string getTrackData() 获取在线编辑轨道数据。
- * @method void setTrackData(string $TrackData) 设置在线编辑轨道数据。
+ * @method string getTrackData() 获取在线编辑轨道数据。轨道数据相关介绍，请查看 [视频合成协议](https://cloud.tencent.com/document/product/1156/51225)。
+ * @method void setTrackData(string $TrackData) 设置在线编辑轨道数据。轨道数据相关介绍，请查看 [视频合成协议](https://cloud.tencent.com/document/product/1156/51225)。
  * @method CMEExportInfo getCMEExportInfo() 获取导出的云剪素材信息。指定 ExportDestination = CME 时有效。
  * @method void setCMEExportInfo(CMEExportInfo $CMEExportInfo) 设置导出的云剪素材信息。指定 ExportDestination = CME 时有效。
  * @method VODExportInfo getVODExportInfo() 获取导出的云点播媒资信息。指定 ExportDestination = VOD 时有效。
@@ -68,7 +68,7 @@ class ExportVideoByEditorTrackDataRequest extends AbstractModel
     public $ExportDestination;
 
     /**
-     * @var string 在线编辑轨道数据。
+     * @var string 在线编辑轨道数据。轨道数据相关介绍，请查看 [视频合成协议](https://cloud.tencent.com/document/product/1156/51225)。
      */
     public $TrackData;
 
@@ -96,7 +96,7 @@ class ExportVideoByEditorTrackDataRequest extends AbstractModel
      * @param string $ExportDestination 导出目标。
 <li>CME：云剪，即导出为云剪素材；</li>
 <li>VOD：云点播，即导出为云点播媒资。</li>
-     * @param string $TrackData 在线编辑轨道数据。
+     * @param string $TrackData 在线编辑轨道数据。轨道数据相关介绍，请查看 [视频合成协议](https://cloud.tencent.com/document/product/1156/51225)。
      * @param CMEExportInfo $CMEExportInfo 导出的云剪素材信息。指定 ExportDestination = CME 时有效。
      * @param VODExportInfo $VODExportInfo 导出的云点播媒资信息。指定 ExportDestination = VOD 时有效。
      * @param string $Operator 操作者。填写用户的 Id，用于标识调用者及校验导出操作权限。

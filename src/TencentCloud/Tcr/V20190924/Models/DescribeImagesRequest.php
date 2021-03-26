@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNamespaceName(string $NamespaceName) 设置命名空间名称
  * @method string getRepositoryName() 获取镜像仓库名称
  * @method void setRepositoryName(string $RepositoryName) 设置镜像仓库名称
- * @method string getImageVersion() 获取指定镜像版本(Tag)，不填默认返回仓库内全部容器镜像
- * @method void setImageVersion(string $ImageVersion) 设置指定镜像版本(Tag)，不填默认返回仓库内全部容器镜像
+ * @method string getImageVersion() 获取指定镜像版本进行查找，当前为模糊搜索
+ * @method void setImageVersion(string $ImageVersion) 设置指定镜像版本进行查找，当前为模糊搜索
  * @method integer getLimit() 获取每页个数，用于分页，默认20
  * @method void setLimit(integer $Limit) 设置每页个数，用于分页，默认20
  * @method integer getOffset() 获取页数，默认值为1
@@ -51,7 +51,7 @@ class DescribeImagesRequest extends AbstractModel
     public $RepositoryName;
 
     /**
-     * @var string 指定镜像版本(Tag)，不填默认返回仓库内全部容器镜像
+     * @var string 指定镜像版本进行查找，当前为模糊搜索
      */
     public $ImageVersion;
 
@@ -69,7 +69,7 @@ class DescribeImagesRequest extends AbstractModel
      * @param string $RegistryId 实例ID
      * @param string $NamespaceName 命名空间名称
      * @param string $RepositoryName 镜像仓库名称
-     * @param string $ImageVersion 指定镜像版本(Tag)，不填默认返回仓库内全部容器镜像
+     * @param string $ImageVersion 指定镜像版本进行查找，当前为模糊搜索
      * @param integer $Limit 每页个数，用于分页，默认20
      * @param integer $Offset 页数，默认值为1
      */

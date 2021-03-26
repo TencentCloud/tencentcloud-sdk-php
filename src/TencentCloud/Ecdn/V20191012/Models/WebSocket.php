@@ -20,8 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * WebSocket配置。
  *
- * @method string getSwitch() 获取WebSocket配置开关，on或off。
- * @method void setSwitch(string $Switch) 设置WebSocket配置开关，on或off。
+ * @method string getSwitch() 获取WebSocket 超时配置开关, 开关为off时，平台仍支持WebSocket连接，此时超时时间默认为15秒，若需要调整超时时间，将开关置为on.
+
+* WebSocket 为内测功能,如需使用,请联系腾讯云工程师开白.
+ * @method void setSwitch(string $Switch) 设置WebSocket 超时配置开关, 开关为off时，平台仍支持WebSocket连接，此时超时时间默认为15秒，若需要调整超时时间，将开关置为on.
+
+* WebSocket 为内测功能,如需使用,请联系腾讯云工程师开白.
  * @method integer getTimeout() 获取设置超时时间，单位为秒，最大超时时间65秒。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTimeout(integer $Timeout) 设置设置超时时间，单位为秒，最大超时时间65秒。
@@ -30,7 +34,9 @@ use TencentCloud\Common\AbstractModel;
 class WebSocket extends AbstractModel
 {
     /**
-     * @var string WebSocket配置开关，on或off。
+     * @var string WebSocket 超时配置开关, 开关为off时，平台仍支持WebSocket连接，此时超时时间默认为15秒，若需要调整超时时间，将开关置为on.
+
+* WebSocket 为内测功能,如需使用,请联系腾讯云工程师开白.
      */
     public $Switch;
 
@@ -41,7 +47,9 @@ class WebSocket extends AbstractModel
     public $Timeout;
 
     /**
-     * @param string $Switch WebSocket配置开关，on或off。
+     * @param string $Switch WebSocket 超时配置开关, 开关为off时，平台仍支持WebSocket连接，此时超时时间默认为15秒，若需要调整超时时间，将开关置为on.
+
+* WebSocket 为内测功能,如需使用,请联系腾讯云工程师开白.
      * @param integer $Timeout 设置超时时间，单位为秒，最大超时时间65秒。
 注意：此字段可能返回 null，表示取不到有效值。
      */

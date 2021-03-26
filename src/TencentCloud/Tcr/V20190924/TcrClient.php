@@ -83,6 +83,7 @@ use TencentCloud\Tcr\V20190924\Models as Models;
  * @method Models\ManageExternalEndpointResponse ManageExternalEndpoint(Models\ManageExternalEndpointRequest $req) 管理实例公网访问
  * @method Models\ManageImageLifecycleGlobalPersonalResponse ManageImageLifecycleGlobalPersonal(Models\ManageImageLifecycleGlobalPersonalRequest $req) 用于设置个人版全局镜像版本自动清理策略
  * @method Models\ManageInternalEndpointResponse ManageInternalEndpoint(Models\ManageInternalEndpointRequest $req) 管理实例内网访问VPC链接
+ * @method Models\ManageReplicationResponse ManageReplication(Models\ManageReplicationRequest $req) 管理实例同步
  * @method Models\ModifyApplicationTriggerPersonalResponse ModifyApplicationTriggerPersonal(Models\ModifyApplicationTriggerPersonalRequest $req) 用于修改应用更新触发器
  * @method Models\ModifyInstanceTokenResponse ModifyInstanceToken(Models\ModifyInstanceTokenRequest $req) 更新实例内指定长期访问凭证的启用状态
  * @method Models\ModifyNamespaceResponse ModifyNamespace(Models\ModifyNamespaceRequest $req) 更新命名空间信息，当前仅支持修改命名空间访问级别

@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setScriptName(string $ScriptName) 设置脚本名称，最大不能超过255个字符。
  * @method string getSQLStatement() 获取base64编码后的sql语句
  * @method void setSQLStatement(string $SQLStatement) 设置base64编码后的sql语句
- * @method string getScriptDesc() 获取脚本描述,
- * @method void setScriptDesc(string $ScriptDesc) 设置脚本描述,
+ * @method string getScriptDesc() 获取脚本描述， 不能超过50个字符
+ * @method void setScriptDesc(string $ScriptDesc) 设置脚本描述， 不能超过50个字符
  * @method string getDatabaseName() 获取数据库名称
  * @method void setDatabaseName(string $DatabaseName) 设置数据库名称
  */
@@ -42,7 +42,7 @@ class CreateScriptRequest extends AbstractModel
     public $SQLStatement;
 
     /**
-     * @var string 脚本描述,
+     * @var string 脚本描述， 不能超过50个字符
      */
     public $ScriptDesc;
 
@@ -54,7 +54,7 @@ class CreateScriptRequest extends AbstractModel
     /**
      * @param string $ScriptName 脚本名称，最大不能超过255个字符。
      * @param string $SQLStatement base64编码后的sql语句
-     * @param string $ScriptDesc 脚本描述,
+     * @param string $ScriptDesc 脚本描述， 不能超过50个字符
      * @param string $DatabaseName 数据库名称
      */
     function __construct()

@@ -34,12 +34,12 @@ task-state - String - （任务状态过滤）取值范围 0(初始化)， 1(运
 task-sql-keyword - String - （SQL语句关键字）取值形如：DROP TABLE。
  * @method string getSortBy() 获取排序字段，支持如下字段类型，create-time
  * @method void setSortBy(string $SortBy) 设置排序字段，支持如下字段类型，create-time
- * @method string getSorting() 获取排序方式，desc表示正序，asc表示反序
- * @method void setSorting(string $Sorting) 设置排序方式，desc表示正序，asc表示反序
- * @method string getStartTime() 获取起始时间点，格式为yyyy-mm-dd HH:MM:SS。
- * @method void setStartTime(string $StartTime) 设置起始时间点，格式为yyyy-mm-dd HH:MM:SS。
- * @method string getEndTime() 获取结束时间点，格式为yyyy-mm-dd HH:MM:SS时间跨度在(0,30天]，支持最近45天数据查询。
- * @method void setEndTime(string $EndTime) 设置结束时间点，格式为yyyy-mm-dd HH:MM:SS时间跨度在(0,30天]，支持最近45天数据查询。
+ * @method string getSorting() 获取排序方式，desc表示正序，asc表示反序， 默认为asc。
+ * @method void setSorting(string $Sorting) 设置排序方式，desc表示正序，asc表示反序， 默认为asc。
+ * @method string getStartTime() 获取起始时间点，格式为yyyy-mm-dd HH:MM:SS。默认为45天前的当前时刻
+ * @method void setStartTime(string $StartTime) 设置起始时间点，格式为yyyy-mm-dd HH:MM:SS。默认为45天前的当前时刻
+ * @method string getEndTime() 获取结束时间点，格式为yyyy-mm-dd HH:MM:SS时间跨度在(0,30天]，支持最近45天数据查询。默认为当前时刻
+ * @method void setEndTime(string $EndTime) 设置结束时间点，格式为yyyy-mm-dd HH:MM:SS时间跨度在(0,30天]，支持最近45天数据查询。默认为当前时刻
  */
 class DescribeTasksRequest extends AbstractModel
 {
@@ -67,17 +67,17 @@ task-sql-keyword - String - （SQL语句关键字）取值形如：DROP TABLE。
     public $SortBy;
 
     /**
-     * @var string 排序方式，desc表示正序，asc表示反序
+     * @var string 排序方式，desc表示正序，asc表示反序， 默认为asc。
      */
     public $Sorting;
 
     /**
-     * @var string 起始时间点，格式为yyyy-mm-dd HH:MM:SS。
+     * @var string 起始时间点，格式为yyyy-mm-dd HH:MM:SS。默认为45天前的当前时刻
      */
     public $StartTime;
 
     /**
-     * @var string 结束时间点，格式为yyyy-mm-dd HH:MM:SS时间跨度在(0,30天]，支持最近45天数据查询。
+     * @var string 结束时间点，格式为yyyy-mm-dd HH:MM:SS时间跨度在(0,30天]，支持最近45天数据查询。默认为当前时刻
      */
     public $EndTime;
 
@@ -89,9 +89,9 @@ task-id - String - （任务ID过滤）task-id取值形如：e386471f-139a-4e59-
 task-state - String - （任务状态过滤）取值范围 0(初始化)， 1(运行中)， 2(成功)， -1(失败)。
 task-sql-keyword - String - （SQL语句关键字）取值形如：DROP TABLE。
      * @param string $SortBy 排序字段，支持如下字段类型，create-time
-     * @param string $Sorting 排序方式，desc表示正序，asc表示反序
-     * @param string $StartTime 起始时间点，格式为yyyy-mm-dd HH:MM:SS。
-     * @param string $EndTime 结束时间点，格式为yyyy-mm-dd HH:MM:SS时间跨度在(0,30天]，支持最近45天数据查询。
+     * @param string $Sorting 排序方式，desc表示正序，asc表示反序， 默认为asc。
+     * @param string $StartTime 起始时间点，格式为yyyy-mm-dd HH:MM:SS。默认为45天前的当前时刻
+     * @param string $EndTime 结束时间点，格式为yyyy-mm-dd HH:MM:SS时间跨度在(0,30天]，支持最近45天数据查询。默认为当前时刻
      */
     function __construct()
     {

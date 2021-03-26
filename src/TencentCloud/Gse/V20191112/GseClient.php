@@ -62,6 +62,7 @@ use TencentCloud\Gse\V20191112\Models as Models;
  * @method Models\DescribeFleetCapacityResponse DescribeFleetCapacity(Models\DescribeFleetCapacityRequest $req) 本接口（DescribeFleetCapacity）用于查询服务部署容量配置。
  * @method Models\DescribeFleetEventsResponse DescribeFleetEvents(Models\DescribeFleetEventsRequest $req) 本接口（DescribeFleetEvents）用于查询服务器舰队相关的事件列表。
  * @method Models\DescribeFleetPortSettingsResponse DescribeFleetPortSettings(Models\DescribeFleetPortSettingsRequest $req) 本接口（DescribeFleetPortSettings）用于获取服务器舰队安全组信息。
+ * @method Models\DescribeFleetRelatedResourcesResponse DescribeFleetRelatedResources(Models\DescribeFleetRelatedResourcesRequest $req) 本接口（DescribeFleetRelatedResources）用于获取与游戏服务器舰队关联的资源信息，如别名、队列
  * @method Models\DescribeFleetStatisticDetailsResponse DescribeFleetStatisticDetails(Models\DescribeFleetStatisticDetailsRequest $req) 本接口（DescribeFleetStatisticDetails）用于查询服务部署统计详情。
  * @method Models\DescribeFleetStatisticFlowsResponse DescribeFleetStatisticFlows(Models\DescribeFleetStatisticFlowsRequest $req) 本接口（DescribeFleetStatisticFlows）用于查询服务部署统计用量。
  * @method Models\DescribeFleetStatisticSummaryResponse DescribeFleetStatisticSummary(Models\DescribeFleetStatisticSummaryRequest $req) 本接口（DescribeFleetStatisticSummary）用于查询服务部署统计汇总信息。
@@ -82,6 +83,7 @@ use TencentCloud\Gse\V20191112\Models as Models;
  * @method Models\DescribeUserQuotaResponse DescribeUserQuota(Models\DescribeUserQuotaRequest $req) 本接口（DescribeUserQuota）获取用户单个模块配额。
  * @method Models\DescribeUserQuotasResponse DescribeUserQuotas(Models\DescribeUserQuotasRequest $req) 本接口（DescribeUserQuotas）用于获取用户配额
  * @method Models\DetachCcnInstancesResponse DetachCcnInstances(Models\DetachCcnInstancesRequest $req) 本接口（DetachCcnInstances）用于解关联云联网实例。
+ * @method Models\GetGameServerInstanceLogUrlResponse GetGameServerInstanceLogUrl(Models\GetGameServerInstanceLogUrlRequest $req) 本接口用于获取游戏服务器实例的日志URL。
  * @method Models\GetGameServerSessionLogUrlResponse GetGameServerSessionLogUrl(Models\GetGameServerSessionLogUrlRequest $req) 本接口（GetGameServerSessionLogUrl）用于获取游戏服务器会话的日志URL。
  * @method Models\GetInstanceAccessResponse GetInstanceAccess(Models\GetInstanceAccessRequest $req) 本接口（GetInstanceAccess）用于获取实例登录所需要的凭据。
  * @method Models\GetUploadCredentialsResponse GetUploadCredentials(Models\GetUploadCredentialsRequest $req) 本接口（GetUploadCredentials）获取上传文件授权信息。

@@ -133,6 +133,9 @@ use TencentCloud\Vod\V20180717\Models as Models;
    1. 可以查询最近365天内的视频处理统计数据。
    2. 查询时间跨度不超过90天。
  * @method Models\DescribePersonSamplesResponse DescribePersonSamples(Models\DescribePersonSamplesRequest $req) 该接口用于查询素材样本信息，支持根据素材 ID、名称、标签，分页查询。
+ * @method Models\DescribePrepaidProductsResponse DescribePrepaidProducts(Models\DescribePrepaidProductsRequest $req) 该接口可以查询用户已经购买的预付费商品的信息，包括：
+    1. 商品的类型、生效和失效日期。
+    2. 商品中每种资源的额度和剩余额度。
  * @method Models\DescribeProcedureTemplatesResponse DescribeProcedureTemplates(Models\DescribeProcedureTemplatesRequest $req) 根据任务流模板名字，获取任务流模板详情列表。
  * @method Models\DescribeReviewDetailsResponse DescribeReviewDetails(Models\DescribeReviewDetailsRequest $req) <b>本接口已不推荐使用，用 [DescribeMediaProcessUsageData](/document/product/266/41464) 替代</b>
 

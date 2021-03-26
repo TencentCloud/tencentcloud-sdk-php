@@ -46,8 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGameServerSessionProtectionTimeLimit(integer $GameServerSessionProtectionTimeLimit) 设置时限保护超时时间，默认60分钟，最小值5，最大值1440；当NewGameSessionProtectionPolicy为TimeLimitProtection时参数有效
  * @method string getSelectedScalingType() 获取是否选择扩缩容：SCALING_SELECTED 或者 SCALING_UNSELECTED；默认是 SCALING_UNSELECTED
  * @method void setSelectedScalingType(string $SelectedScalingType) 设置是否选择扩缩容：SCALING_SELECTED 或者 SCALING_UNSELECTED；默认是 SCALING_UNSELECTED
- * @method string getSelectedCcnType() 获取是否选择云联网：CCN_SELECTED 或者 CCN_UNSELECTED；默认是 CCN_UNSELECTED
- * @method void setSelectedCcnType(string $SelectedCcnType) 设置是否选择云联网：CCN_SELECTED 或者 CCN_UNSELECTED；默认是 CCN_UNSELECTED
+ * @method string getSelectedCcnType() 获取是否选择云联网：CCN_SELECTED_BEFORE_CREATE（创建前关联）， CCN_SELECTED_AFTER_CREATE（创建后关联）或者 CCN_UNSELECTED（不关联）；默认是 CCN_UNSELECTED
+ * @method void setSelectedCcnType(string $SelectedCcnType) 设置是否选择云联网：CCN_SELECTED_BEFORE_CREATE（创建前关联）， CCN_SELECTED_AFTER_CREATE（创建后关联）或者 CCN_UNSELECTED（不关联）；默认是 CCN_UNSELECTED
  * @method array getTags() 获取标签列表，最大长度50组
  * @method void setTags(array $Tags) 设置标签列表，最大长度50组
  * @method DiskInfo getSystemDiskInfo() 获取系统盘，储存类型为 SSD 云硬盘（CLOUD_SSD）时，100-500GB；储存类型为高性能云硬盘（CLOUD_PREMIUM）时，50-500GB；容量以1为单位
@@ -56,6 +56,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDataDiskInfo(array $DataDiskInfo) 设置数据盘，储存类型为 SSD 云硬盘（CLOUD_SSD）时，100-32000GB；储存类型为高性能云硬盘（CLOUD_PREMIUM）时，10-32000GB；容量以10为单位
  * @method string getSelectedTimerType() 获取是否选择复制定时器策略：TIMER_SELECTED 或者 TIMER_UNSELECTED；默认是 TIMER_UNSELECTED
  * @method void setSelectedTimerType(string $SelectedTimerType) 设置是否选择复制定时器策略：TIMER_SELECTED 或者 TIMER_UNSELECTED；默认是 TIMER_UNSELECTED
+ * @method array getCcnInfos() 获取云联网信息，包含对应的账号信息及所属id
+ * @method void setCcnInfos(array $CcnInfos) 设置云联网信息，包含对应的账号信息及所属id
  */
 class CopyFleetRequest extends AbstractModel
 {
@@ -125,7 +127,7 @@ class CopyFleetRequest extends AbstractModel
     public $SelectedScalingType;
 
     /**
-     * @var string 是否选择云联网：CCN_SELECTED 或者 CCN_UNSELECTED；默认是 CCN_UNSELECTED
+     * @var string 是否选择云联网：CCN_SELECTED_BEFORE_CREATE（创建前关联）， CCN_SELECTED_AFTER_CREATE（创建后关联）或者 CCN_UNSELECTED（不关联）；默认是 CCN_UNSELECTED
      */
     public $SelectedCcnType;
 
@@ -150,6 +152,11 @@ class CopyFleetRequest extends AbstractModel
     public $SelectedTimerType;
 
     /**
+     * @var array 云联网信息，包含对应的账号信息及所属id
+     */
+    public $CcnInfos;
+
+    /**
      * @param string $FleetId 服务器舰队 Id
      * @param integer $CopyNumber 复制数量，最小值1，最大值为剩余配额，可以根据[获取用户配额](https://cloud.tencent.com/document/product/1165/48732)接口获取。
      * @param string $AssetId 生成包 Id
@@ -163,11 +170,12 @@ class CopyFleetRequest extends AbstractModel
      * @param RuntimeConfiguration $RuntimeConfiguration 进程配置
      * @param integer $GameServerSessionProtectionTimeLimit 时限保护超时时间，默认60分钟，最小值5，最大值1440；当NewGameSessionProtectionPolicy为TimeLimitProtection时参数有效
      * @param string $SelectedScalingType 是否选择扩缩容：SCALING_SELECTED 或者 SCALING_UNSELECTED；默认是 SCALING_UNSELECTED
-     * @param string $SelectedCcnType 是否选择云联网：CCN_SELECTED 或者 CCN_UNSELECTED；默认是 CCN_UNSELECTED
+     * @param string $SelectedCcnType 是否选择云联网：CCN_SELECTED_BEFORE_CREATE（创建前关联）， CCN_SELECTED_AFTER_CREATE（创建后关联）或者 CCN_UNSELECTED（不关联）；默认是 CCN_UNSELECTED
      * @param array $Tags 标签列表，最大长度50组
      * @param DiskInfo $SystemDiskInfo 系统盘，储存类型为 SSD 云硬盘（CLOUD_SSD）时，100-500GB；储存类型为高性能云硬盘（CLOUD_PREMIUM）时，50-500GB；容量以1为单位
      * @param array $DataDiskInfo 数据盘，储存类型为 SSD 云硬盘（CLOUD_SSD）时，100-32000GB；储存类型为高性能云硬盘（CLOUD_PREMIUM）时，10-32000GB；容量以10为单位
      * @param string $SelectedTimerType 是否选择复制定时器策略：TIMER_SELECTED 或者 TIMER_UNSELECTED；默认是 TIMER_UNSELECTED
+     * @param array $CcnInfos 云联网信息，包含对应的账号信息及所属id
      */
     function __construct()
     {
@@ -270,6 +278,15 @@ class CopyFleetRequest extends AbstractModel
 
         if (array_key_exists("SelectedTimerType",$param) and $param["SelectedTimerType"] !== null) {
             $this->SelectedTimerType = $param["SelectedTimerType"];
+        }
+
+        if (array_key_exists("CcnInfos",$param) and $param["CcnInfos"] !== null) {
+            $this->CcnInfos = [];
+            foreach ($param["CcnInfos"] as $key => $value){
+                $obj = new CcnInfo();
+                $obj->deserialize($value);
+                array_push($this->CcnInfos, $obj);
+            }
         }
     }
 }

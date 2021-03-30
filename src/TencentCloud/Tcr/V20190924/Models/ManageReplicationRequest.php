@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRule(ReplicationRule $Rule) 设置同步规则
  * @method string getDescription() 获取规则描述
  * @method void setDescription(string $Description) 设置规则描述
+ * @method integer getDestinationRegionId() 获取目标实例的地域ID，如广州是1
+ * @method void setDestinationRegionId(integer $DestinationRegionId) 设置目标实例的地域ID，如广州是1
  */
 class ManageReplicationRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class ManageReplicationRequest extends AbstractModel
     public $Description;
 
     /**
+     * @var integer 目标实例的地域ID，如广州是1
+     */
+    public $DestinationRegionId;
+
+    /**
      * @param string $SourceRegistryId 复制源实例ID
      * @param string $DestinationRegistryId 复制目标实例ID
      * @param ReplicationRule $Rule 同步规则
      * @param string $Description 规则描述
+     * @param integer $DestinationRegionId 目标实例的地域ID，如广州是1
      */
     function __construct()
     {
@@ -85,6 +93,10 @@ class ManageReplicationRequest extends AbstractModel
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("DestinationRegionId",$param) and $param["DestinationRegionId"] !== null) {
+            $this->DestinationRegionId = $param["DestinationRegionId"];
         }
     }
 }

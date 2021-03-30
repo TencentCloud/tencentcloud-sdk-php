@@ -24,8 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTemplateId(string $TemplateId) 设置时间模板ID
  * @method string getName() 获取时间模板名称
  * @method void setName(string $Name) 设置时间模板名称
- * @method integer getIsAllWeek() 获取是否全时录制，即7*24小时录制
- * @method void setIsAllWeek(integer $IsAllWeek) 设置是否全时录制，即7*24小时录制
+ * @method integer getIsAllWeek() 获取是否全时录制，即7*24小时录制。
+0：非全时录制；1：全时录制。默认1
+ * @method void setIsAllWeek(integer $IsAllWeek) 设置是否全时录制，即7*24小时录制。
+0：非全时录制；1：全时录制。默认1
  * @method array getTimeTemplateSpecs() 获取录制时间片段
  * @method void setTimeTemplateSpecs(array $TimeTemplateSpecs) 设置录制时间片段
  */
@@ -42,7 +44,8 @@ class UpdateTimeTemplateRequest extends AbstractModel
     public $Name;
 
     /**
-     * @var integer 是否全时录制，即7*24小时录制
+     * @var integer 是否全时录制，即7*24小时录制。
+0：非全时录制；1：全时录制。默认1
      */
     public $IsAllWeek;
 
@@ -54,7 +57,8 @@ class UpdateTimeTemplateRequest extends AbstractModel
     /**
      * @param string $TemplateId 时间模板ID
      * @param string $Name 时间模板名称
-     * @param integer $IsAllWeek 是否全时录制，即7*24小时录制
+     * @param integer $IsAllWeek 是否全时录制，即7*24小时录制。
+0：非全时录制；1：全时录制。默认1
      * @param array $TimeTemplateSpecs 录制时间片段
      */
     function __construct()

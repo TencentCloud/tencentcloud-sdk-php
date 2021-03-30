@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getGroupId() 获取分组ID
  * @method void setGroupId(string $GroupId) 设置分组ID
- * @method integer getOffset() 获取偏移量
- * @method void setOffset(integer $Offset) 设置偏移量
+ * @method integer getOffset() 获取偏移量，默认0
+ * @method void setOffset(integer $Offset) 设置偏移量，默认0
  * @method integer getLimit() 获取限制值，默认200
  * @method void setLimit(integer $Limit) 设置限制值，默认200
  * @method string getNickName() 获取设备名称，根据设备名称模糊匹配时必填
@@ -37,7 +37,7 @@ class DescribeGroupDevicesRequest extends AbstractModel
     public $GroupId;
 
     /**
-     * @var integer 偏移量
+     * @var integer 偏移量，默认0
      */
     public $Offset;
 
@@ -53,7 +53,7 @@ class DescribeGroupDevicesRequest extends AbstractModel
 
     /**
      * @param string $GroupId 分组ID
-     * @param integer $Offset 偏移量
+     * @param integer $Offset 偏移量，默认0
      * @param integer $Limit 限制值，默认200
      * @param string $NickName 设备名称，根据设备名称模糊匹配时必填
      */

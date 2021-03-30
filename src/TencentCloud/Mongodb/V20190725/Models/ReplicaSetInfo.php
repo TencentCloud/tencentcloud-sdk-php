@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Iotvideoindustry\V20201201\Models;
+namespace TencentCloud\Mongodb\V20190725\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeGroupByPath请求参数结构体
+ * 分片信息
  *
- * @method string getGroupPath() 获取分组路径，格式为/aaa(/bbb/ccc)
- * @method void setGroupPath(string $GroupPath) 设置分组路径，格式为/aaa(/bbb/ccc)
+ * @method string getReplicaSetId() 获取分片名称
+ * @method void setReplicaSetId(string $ReplicaSetId) 设置分片名称
  */
-class DescribeGroupByPathRequest extends AbstractModel
+class ReplicaSetInfo extends AbstractModel
 {
     /**
-     * @var string 分组路径，格式为/aaa(/bbb/ccc)
+     * @var string 分片名称
      */
-    public $GroupPath;
+    public $ReplicaSetId;
 
     /**
-     * @param string $GroupPath 分组路径，格式为/aaa(/bbb/ccc)
+     * @param string $ReplicaSetId 分片名称
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class DescribeGroupByPathRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("GroupPath",$param) and $param["GroupPath"] !== null) {
-            $this->GroupPath = $param["GroupPath"];
+        if (array_key_exists("ReplicaSetId",$param) and $param["ReplicaSetId"] !== null) {
+            $this->ReplicaSetId = $param["ReplicaSetId"];
         }
     }
 }

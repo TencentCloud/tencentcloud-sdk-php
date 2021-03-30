@@ -14,37 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cdb\V20170320\Models;
+namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeDatabases返回参数结构体
+ * DescribeVodDomains返回参数结构体
  *
- * @method integer getTotalCount() 获取符合查询条件的实例总数。
- * @method void setTotalCount(integer $TotalCount) 设置符合查询条件的实例总数。
- * @method array getItems() 获取返回的实例信息。
- * @method void setItems(array $Items) 设置返回的实例信息。
- * @method array getDatabaseList() 获取数据库名以及字符集
- * @method void setDatabaseList(array $DatabaseList) 设置数据库名以及字符集
+ * @method integer getTotalCount() 获取域名总数量。
+ * @method void setTotalCount(integer $TotalCount) 设置域名总数量。
+ * @method array getDomainSet() 获取域名信息列表。
+ * @method void setDomainSet(array $DomainSet) 设置域名信息列表。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeDatabasesResponse extends AbstractModel
+class DescribeVodDomainsResponse extends AbstractModel
 {
     /**
-     * @var integer 符合查询条件的实例总数。
+     * @var integer 域名总数量。
      */
     public $TotalCount;
 
     /**
-     * @var array 返回的实例信息。
+     * @var array 域名信息列表。
      */
-    public $Items;
-
-    /**
-     * @var array 数据库名以及字符集
-     */
-    public $DatabaseList;
+    public $DomainSet;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -52,9 +45,8 @@ class DescribeDatabasesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 符合查询条件的实例总数。
-     * @param array $Items 返回的实例信息。
-     * @param array $DatabaseList 数据库名以及字符集
+     * @param integer $TotalCount 域名总数量。
+     * @param array $DomainSet 域名信息列表。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -74,16 +66,12 @@ class DescribeDatabasesResponse extends AbstractModel
             $this->TotalCount = $param["TotalCount"];
         }
 
-        if (array_key_exists("Items",$param) and $param["Items"] !== null) {
-            $this->Items = $param["Items"];
-        }
-
-        if (array_key_exists("DatabaseList",$param) and $param["DatabaseList"] !== null) {
-            $this->DatabaseList = [];
-            foreach ($param["DatabaseList"] as $key => $value){
-                $obj = new DatabasesWithCharacterLists();
+        if (array_key_exists("DomainSet",$param) and $param["DomainSet"] !== null) {
+            $this->DomainSet = [];
+            foreach ($param["DomainSet"] as $key => $value){
+                $obj = new DomainDetailInfo();
                 $obj->deserialize($value);
-                array_push($this->DatabaseList, $obj);
+                array_push($this->DomainSet, $obj);
             }
         }
 

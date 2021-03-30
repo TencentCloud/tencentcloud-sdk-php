@@ -27,9 +27,15 @@ use TencentCloud\Common\AbstractModel;
  * @method string getZone() 获取实例可用区信息，格式如 "ap-shanghai-1"。
  * @method void setZone(string $Zone) 设置实例可用区信息，格式如 "ap-shanghai-1"。
  * @method SlaveConfig getSlaveConfig() 获取备库的配置信息。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSlaveConfig(SlaveConfig $SlaveConfig) 设置备库的配置信息。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method BackupConfig getBackupConfig() 获取强同步实例第二备库的配置信息。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBackupConfig(BackupConfig $BackupConfig) 设置强同步实例第二备库的配置信息。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getSwitched() 获取是否切换备库。
+ * @method void setSwitched(boolean $Switched) 设置是否切换备库。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -52,13 +58,20 @@ class DescribeDBInstanceConfigResponse extends AbstractModel
 
     /**
      * @var SlaveConfig 备库的配置信息。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SlaveConfig;
 
     /**
      * @var BackupConfig 强同步实例第二备库的配置信息。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BackupConfig;
+
+    /**
+     * @var boolean 是否切换备库。
+     */
+    public $Switched;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -70,7 +83,10 @@ class DescribeDBInstanceConfigResponse extends AbstractModel
      * @param integer $DeployMode 主实例部署方式，可能的返回值：0 - 单可用部署，1 - 多可用区部署。
      * @param string $Zone 实例可用区信息，格式如 "ap-shanghai-1"。
      * @param SlaveConfig $SlaveConfig 备库的配置信息。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param BackupConfig $BackupConfig 强同步实例第二备库的配置信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $Switched 是否切换备库。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -106,6 +122,10 @@ class DescribeDBInstanceConfigResponse extends AbstractModel
         if (array_key_exists("BackupConfig",$param) and $param["BackupConfig"] !== null) {
             $this->BackupConfig = new BackupConfig();
             $this->BackupConfig->deserialize($param["BackupConfig"]);
+        }
+
+        if (array_key_exists("Switched",$param) and $param["Switched"] !== null) {
+            $this->Switched = $param["Switched"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

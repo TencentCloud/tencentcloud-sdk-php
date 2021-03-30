@@ -46,7 +46,7 @@ use TencentCloud\Iotvideoindustry\V20201201\Models as Models;
  * @method Models\DescribeStatisticDetailsResponse DescribeStatisticDetails(Models\DescribeStatisticDetailsRequest $req) 本接口(DescribeStatisticDetails)用于查询指定统计项详情，返回结果按天为单位聚合，支持的最大时间查询范围为31天。
  * @method Models\DescribeStatisticSummaryResponse DescribeStatisticSummary(Models\DescribeStatisticSummaryRequest $req) 本接口(DescribeStatisticSummary)用于查询用户昨日的概览数据。
  * @method Models\DescribeSubGroupsResponse DescribeSubGroups(Models\DescribeSubGroupsRequest $req) 本接口(DescribeSubGroups)用于查询分组下的子分组列表。
- * @method Models\GetRecordDatesByDevResponse GetRecordDatesByDev(Models\GetRecordDatesByDevRequest $req) 本接口()用于查询设备含有录像文件的日期列表。
+ * @method Models\GetRecordDatesByDevResponse GetRecordDatesByDev(Models\GetRecordDatesByDevRequest $req) 本接口(GetRecordDatesByDev)用于查询设备含有录像文件的日期列表。
  * @method Models\GetRecordPlanByDevResponse GetRecordPlanByDev(Models\GetRecordPlanByDevRequest $req) 本接口(GetRecordPlanByDev)用于根据设备ID查询其绑定的录制计划.
  * @method Models\GetRecordPlanByIdResponse GetRecordPlanById(Models\GetRecordPlanByIdRequest $req) 本接口(GetRecordPlanById)用于根据录制计划ID获取录制计划。
  * @method Models\GetRecordPlansResponse GetRecordPlans(Models\GetRecordPlansRequest $req) 本接口(GetRecordPlans)用于获取用户的全部录制计划。

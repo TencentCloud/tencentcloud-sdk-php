@@ -14,37 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cdb\V20170320\Models;
+namespace TencentCloud\Mongodb\V20190725\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeDatabases返回参数结构体
+ * CreateBackupDownloadTask返回参数结构体
  *
- * @method integer getTotalCount() 获取符合查询条件的实例总数。
- * @method void setTotalCount(integer $TotalCount) 设置符合查询条件的实例总数。
- * @method array getItems() 获取返回的实例信息。
- * @method void setItems(array $Items) 设置返回的实例信息。
- * @method array getDatabaseList() 获取数据库名以及字符集
- * @method void setDatabaseList(array $DatabaseList) 设置数据库名以及字符集
+ * @method array getTasks() 获取下载任务状态
+ * @method void setTasks(array $Tasks) 设置下载任务状态
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeDatabasesResponse extends AbstractModel
+class CreateBackupDownloadTaskResponse extends AbstractModel
 {
     /**
-     * @var integer 符合查询条件的实例总数。
+     * @var array 下载任务状态
      */
-    public $TotalCount;
-
-    /**
-     * @var array 返回的实例信息。
-     */
-    public $Items;
-
-    /**
-     * @var array 数据库名以及字符集
-     */
-    public $DatabaseList;
+    public $Tasks;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -52,9 +38,7 @@ class DescribeDatabasesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 符合查询条件的实例总数。
-     * @param array $Items 返回的实例信息。
-     * @param array $DatabaseList 数据库名以及字符集
+     * @param array $Tasks 下载任务状态
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -70,20 +54,12 @@ class DescribeDatabasesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
-        }
-
-        if (array_key_exists("Items",$param) and $param["Items"] !== null) {
-            $this->Items = $param["Items"];
-        }
-
-        if (array_key_exists("DatabaseList",$param) and $param["DatabaseList"] !== null) {
-            $this->DatabaseList = [];
-            foreach ($param["DatabaseList"] as $key => $value){
-                $obj = new DatabasesWithCharacterLists();
+        if (array_key_exists("Tasks",$param) and $param["Tasks"] !== null) {
+            $this->Tasks = [];
+            foreach ($param["Tasks"] as $key => $value){
+                $obj = new BackupDownloadTaskStatus();
                 $obj->deserialize($value);
-                array_push($this->DatabaseList, $obj);
+                array_push($this->Tasks, $obj);
             }
         }
 

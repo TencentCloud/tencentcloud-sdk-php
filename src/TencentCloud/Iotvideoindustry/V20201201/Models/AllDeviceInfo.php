@@ -24,13 +24,13 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeviceId(string $DeviceId) 设置设备唯一标识
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getDeviceType() 获取设备类型
+ * @method integer getDeviceType() 获取设备类型；2：IPC
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDeviceType(integer $DeviceType) 设置设备类型
+ * @method void setDeviceType(integer $DeviceType) 设置设备类型；2：IPC
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getStatus() 获取设备状态
+ * @method integer getStatus() 获取设备状态；0：设备不在线；1：设备在线；2：设备隔离中；3：设备未注册
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatus(integer $Status) 设置设备状态
+ * @method void setStatus(integer $Status) 设置设备状态；0：设备不在线；1：设备在线；2：设备隔离中；3：设备未注册
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCreateTime() 获取创建时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -52,9 +52,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeviceCode(string $DeviceCode) 设置设备编码
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getIsRecord() 获取是否存在录像
+ * @method integer getIsRecord() 获取是否存在录像,，0:不存在；1：存在
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIsRecord(integer $IsRecord) 设置是否存在录像
+ * @method void setIsRecord(integer $IsRecord) 设置是否存在录像,，0:不存在；1：存在
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class AllDeviceInfo extends AbstractModel
@@ -66,13 +66,13 @@ class AllDeviceInfo extends AbstractModel
     public $DeviceId;
 
     /**
-     * @var integer 设备类型
+     * @var integer 设备类型；2：IPC
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeviceType;
 
     /**
-     * @var integer 设备状态
+     * @var integer 设备状态；0：设备不在线；1：设备在线；2：设备隔离中；3：设备未注册
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
@@ -108,7 +108,7 @@ class AllDeviceInfo extends AbstractModel
     public $DeviceCode;
 
     /**
-     * @var integer 是否存在录像
+     * @var integer 是否存在录像,，0:不存在；1：存在
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsRecord;
@@ -116,9 +116,9 @@ class AllDeviceInfo extends AbstractModel
     /**
      * @param string $DeviceId 设备唯一标识
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $DeviceType 设备类型
+     * @param integer $DeviceType 设备类型；2：IPC
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Status 设备状态
+     * @param integer $Status 设备状态；0：设备不在线；1：设备在线；2：设备隔离中；3：设备未注册
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CreateTime 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -130,7 +130,7 @@ class AllDeviceInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DeviceCode 设备编码
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $IsRecord 是否存在录像
+     * @param integer $IsRecord 是否存在录像,，0:不存在；1：存在
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

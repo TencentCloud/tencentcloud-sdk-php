@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Iotvideoindustry\V20201201\Models;
+namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeGroupByPath请求参数结构体
+ * 字幕信息。
  *
- * @method string getGroupPath() 获取分组路径，格式为/aaa(/bbb/ccc)
- * @method void setGroupPath(string $GroupPath) 设置分组路径，格式为/aaa(/bbb/ccc)
+ * @method array getSubtitleSet() 获取字幕信息列表。
+ * @method void setSubtitleSet(array $SubtitleSet) 设置字幕信息列表。
  */
-class DescribeGroupByPathRequest extends AbstractModel
+class MediaSubtitleInfo extends AbstractModel
 {
     /**
-     * @var string 分组路径，格式为/aaa(/bbb/ccc)
+     * @var array 字幕信息列表。
      */
-    public $GroupPath;
+    public $SubtitleSet;
 
     /**
-     * @param string $GroupPath 分组路径，格式为/aaa(/bbb/ccc)
+     * @param array $SubtitleSet 字幕信息列表。
      */
     function __construct()
     {
@@ -46,8 +46,13 @@ class DescribeGroupByPathRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("GroupPath",$param) and $param["GroupPath"] !== null) {
-            $this->GroupPath = $param["GroupPath"];
+        if (array_key_exists("SubtitleSet",$param) and $param["SubtitleSet"] !== null) {
+            $this->SubtitleSet = [];
+            foreach ($param["SubtitleSet"] as $key => $value){
+                $obj = new MediaSubtitleItem();
+                $obj->deserialize($value);
+                array_push($this->SubtitleSet, $obj);
+            }
         }
     }
 }

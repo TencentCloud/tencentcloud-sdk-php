@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAllDeviceList请求参数结构体
  *
- * @method integer getOffset() 获取偏移量
- * @method void setOffset(integer $Offset) 设置偏移量
+ * @method integer getOffset() 获取偏移量，默认0
+ * @method void setOffset(integer $Offset) 设置偏移量，默认0
  * @method integer getLimit() 获取限制，默认200
  * @method void setLimit(integer $Limit) 设置限制，默认200
  * @method string getNickName() 获取设备名称，需要模糊匹配设备名称时为必填
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeAllDeviceListRequest extends AbstractModel
 {
     /**
-     * @var integer 偏移量
+     * @var integer 偏移量，默认0
      */
     public $Offset;
 
@@ -52,7 +52,7 @@ class DescribeAllDeviceListRequest extends AbstractModel
     public $DeviceIds;
 
     /**
-     * @param integer $Offset 偏移量
+     * @param integer $Offset 偏移量，默认0
      * @param integer $Limit 限制，默认200
      * @param string $NickName 设备名称，需要模糊匹配设备名称时为必填
      * @param array $DeviceIds DeviceId列表，需要精确查找设备时为必填

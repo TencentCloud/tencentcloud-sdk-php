@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLogType() 获取审计日志存储类型。目前支持的值包括："storage" - 存储型。
  * @method void setLogType(string $LogType) 设置审计日志存储类型。目前支持的值包括："storage" - 存储型。
+ * @method string getIsClosing() 获取是否正在关闭审计。目前支持的值包括："false"-否，"true"-是
+ * @method void setIsClosing(string $IsClosing) 设置是否正在关闭审计。目前支持的值包括："false"-否，"true"-是
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -43,6 +45,11 @@ class DescribeAuditConfigResponse extends AbstractModel
     public $LogType;
 
     /**
+     * @var string 是否正在关闭审计。目前支持的值包括："false"-否，"true"-是
+     */
+    public $IsClosing;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -51,6 +58,7 @@ class DescribeAuditConfigResponse extends AbstractModel
      * @param integer $LogExpireDay 审计日志保存时长。目前支持的值包括：[0，30，180，365，1095，1825]。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LogType 审计日志存储类型。目前支持的值包括："storage" - 存储型。
+     * @param string $IsClosing 是否正在关闭审计。目前支持的值包括："false"-否，"true"-是
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -72,6 +80,10 @@ class DescribeAuditConfigResponse extends AbstractModel
 
         if (array_key_exists("LogType",$param) and $param["LogType"] !== null) {
             $this->LogType = $param["LogType"];
+        }
+
+        if (array_key_exists("IsClosing",$param) and $param["IsClosing"] !== null) {
+            $this->IsClosing = $param["IsClosing"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDeviceId() 获取设备唯一标识
  * @method void setDeviceId(string $DeviceId) 设置设备唯一标识
- * @method integer getOffset() 获取偏移量
- * @method void setOffset(integer $Offset) 设置偏移量
- * @method integer getLimit() 获取限制量
- * @method void setLimit(integer $Limit) 设置限制量
+ * @method integer getOffset() 获取偏移量，默认0
+ * @method void setOffset(integer $Offset) 设置偏移量，默认0
+ * @method integer getLimit() 获取限制量，默认200
+ * @method void setLimit(integer $Limit) 设置限制量，默认200
  */
 class GetRecordDatesByDevRequest extends AbstractModel
 {
@@ -35,19 +35,19 @@ class GetRecordDatesByDevRequest extends AbstractModel
     public $DeviceId;
 
     /**
-     * @var integer 偏移量
+     * @var integer 偏移量，默认0
      */
     public $Offset;
 
     /**
-     * @var integer 限制量
+     * @var integer 限制量，默认200
      */
     public $Limit;
 
     /**
      * @param string $DeviceId 设备唯一标识
-     * @param integer $Offset 偏移量
-     * @param integer $Limit 限制量
+     * @param integer $Offset 偏移量，默认0
+     * @param integer $Limit 限制量，默认200
      */
     function __construct()
     {

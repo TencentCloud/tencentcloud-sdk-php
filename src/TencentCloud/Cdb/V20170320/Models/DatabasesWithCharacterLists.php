@@ -14,24 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Iotvideoindustry\V20201201\Models;
+namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeGroupByPath请求参数结构体
+ * 数据库名以及字符集
  *
- * @method string getGroupPath() 获取分组路径，格式为/aaa(/bbb/ccc)
- * @method void setGroupPath(string $GroupPath) 设置分组路径，格式为/aaa(/bbb/ccc)
+ * @method string getDatabaseName() 获取数据库名
+ * @method void setDatabaseName(string $DatabaseName) 设置数据库名
+ * @method string getCharacterSet() 获取字符集类型
+ * @method void setCharacterSet(string $CharacterSet) 设置字符集类型
  */
-class DescribeGroupByPathRequest extends AbstractModel
+class DatabasesWithCharacterLists extends AbstractModel
 {
     /**
-     * @var string 分组路径，格式为/aaa(/bbb/ccc)
+     * @var string 数据库名
      */
-    public $GroupPath;
+    public $DatabaseName;
 
     /**
-     * @param string $GroupPath 分组路径，格式为/aaa(/bbb/ccc)
+     * @var string 字符集类型
+     */
+    public $CharacterSet;
+
+    /**
+     * @param string $DatabaseName 数据库名
+     * @param string $CharacterSet 字符集类型
      */
     function __construct()
     {
@@ -46,8 +54,12 @@ class DescribeGroupByPathRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("GroupPath",$param) and $param["GroupPath"] !== null) {
-            $this->GroupPath = $param["GroupPath"];
+        if (array_key_exists("DatabaseName",$param) and $param["DatabaseName"] !== null) {
+            $this->DatabaseName = $param["DatabaseName"];
+        }
+
+        if (array_key_exists("CharacterSet",$param) and $param["CharacterSet"] !== null) {
+            $this->CharacterSet = $param["CharacterSet"];
         }
     }
 }

@@ -60,6 +60,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMiniProgramReviewInfo(MediaMiniProgramReviewInfo $MiniProgramReviewInfo) 设置小程序审核信息。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method MediaSubtitleInfo getSubtitleInfo() 获取字幕信息。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSubtitleInfo(MediaSubtitleInfo $SubtitleInfo) 设置字幕信息。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFileId() 获取媒体文件唯一标识 ID。
  * @method void setFileId(string $FileId) 设置媒体文件唯一标识 ID。
  */
@@ -126,6 +130,12 @@ class MediaInfo extends AbstractModel
     public $MiniProgramReviewInfo;
 
     /**
+     * @var MediaSubtitleInfo 字幕信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SubtitleInfo;
+
+    /**
      * @var string 媒体文件唯一标识 ID。
      */
     public $FileId;
@@ -150,6 +160,8 @@ class MediaInfo extends AbstractModel
      * @param MediaAdaptiveDynamicStreamingInfo $AdaptiveDynamicStreamingInfo 转自适应码流信息。包括规格、加密类型、打包格式等相关信息。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param MediaMiniProgramReviewInfo $MiniProgramReviewInfo 小程序审核信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MediaSubtitleInfo $SubtitleInfo 字幕信息。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FileId 媒体文件唯一标识 ID。
      */
@@ -214,6 +226,11 @@ class MediaInfo extends AbstractModel
         if (array_key_exists("MiniProgramReviewInfo",$param) and $param["MiniProgramReviewInfo"] !== null) {
             $this->MiniProgramReviewInfo = new MediaMiniProgramReviewInfo();
             $this->MiniProgramReviewInfo->deserialize($param["MiniProgramReviewInfo"]);
+        }
+
+        if (array_key_exists("SubtitleInfo",$param) and $param["SubtitleInfo"] !== null) {
+            $this->SubtitleInfo = new MediaSubtitleInfo();
+            $this->SubtitleInfo->deserialize($param["SubtitleInfo"]);
         }
 
         if (array_key_exists("FileId",$param) and $param["FileId"] !== null) {

@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLicenseScopeId(integer $LicenseScopeId) 设置授权场景Id
  * @method integer getDimensionsNameId() 获取尺寸名称Id
  * @method void setDimensionsNameId(integer $DimensionsNameId) 设置尺寸名称Id
+ * @method string getUserId() 获取平台用户标识
+ * @method void setUserId(string $UserId) 设置平台用户标识
  */
 class ImageInfo extends AbstractModel
 {
@@ -45,9 +47,15 @@ class ImageInfo extends AbstractModel
     public $DimensionsNameId;
 
     /**
+     * @var string 平台用户标识
+     */
+    public $UserId;
+
+    /**
      * @param integer $ImageId 图片Id
      * @param integer $LicenseScopeId 授权场景Id
      * @param integer $DimensionsNameId 尺寸名称Id
+     * @param string $UserId 平台用户标识
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class ImageInfo extends AbstractModel
 
         if (array_key_exists("DimensionsNameId",$param) and $param["DimensionsNameId"] !== null) {
             $this->DimensionsNameId = $param["DimensionsNameId"];
+        }
+
+        if (array_key_exists("UserId",$param) and $param["UserId"] !== null) {
+            $this->UserId = $param["UserId"];
         }
     }
 }

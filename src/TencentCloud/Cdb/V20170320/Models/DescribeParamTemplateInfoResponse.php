@@ -24,12 +24,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTemplateId(integer $TemplateId) 设置参数模板 ID。
  * @method string getName() 获取参数模板名称。
  * @method void setName(string $Name) 设置参数模板名称。
- * @method string getEngineVersion() 获取参数模板描述
- * @method void setEngineVersion(string $EngineVersion) 设置参数模板描述
+ * @method string getEngineVersion() 获取参数模板对应实例版本
+ * @method void setEngineVersion(string $EngineVersion) 设置参数模板对应实例版本
  * @method integer getTotalCount() 获取参数模板中的参数数量
  * @method void setTotalCount(integer $TotalCount) 设置参数模板中的参数数量
  * @method array getItems() 获取参数详情
  * @method void setItems(array $Items) 设置参数详情
+ * @method string getDescription() 获取参数模板描述
+ * @method void setDescription(string $Description) 设置参数模板描述
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -46,7 +48,7 @@ class DescribeParamTemplateInfoResponse extends AbstractModel
     public $Name;
 
     /**
-     * @var string 参数模板描述
+     * @var string 参数模板对应实例版本
      */
     public $EngineVersion;
 
@@ -61,6 +63,11 @@ class DescribeParamTemplateInfoResponse extends AbstractModel
     public $Items;
 
     /**
+     * @var string 参数模板描述
+     */
+    public $Description;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -68,9 +75,10 @@ class DescribeParamTemplateInfoResponse extends AbstractModel
     /**
      * @param integer $TemplateId 参数模板 ID。
      * @param string $Name 参数模板名称。
-     * @param string $EngineVersion 参数模板描述
+     * @param string $EngineVersion 参数模板对应实例版本
      * @param integer $TotalCount 参数模板中的参数数量
      * @param array $Items 参数详情
+     * @param string $Description 参数模板描述
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -109,6 +117,10 @@ class DescribeParamTemplateInfoResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Items, $obj);
             }
+        }
+
+        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
+            $this->Description = $param["Description"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

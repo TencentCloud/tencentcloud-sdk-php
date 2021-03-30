@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateTimeTemplate返回参数结构体
  *
- * @method string getStatus() 获取操作结果
- * @method void setStatus(string $Status) 设置操作结果
+ * @method string getStatus() 获取操作结果，“OK”表示成功，其他表示失败。
+ * @method void setStatus(string $Status) 设置操作结果，“OK”表示成功，其他表示失败。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class UpdateTimeTemplateResponse extends AbstractModel
 {
     /**
-     * @var string 操作结果
+     * @var string 操作结果，“OK”表示成功，其他表示失败。
      */
     public $Status;
 
@@ -38,7 +38,7 @@ class UpdateTimeTemplateResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Status 操作结果
+     * @param string $Status 操作结果，“OK”表示成功，其他表示失败。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

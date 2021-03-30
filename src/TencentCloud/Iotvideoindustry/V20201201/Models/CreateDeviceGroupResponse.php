@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateDeviceGroup返回参数结构体
  *
- * @method string getStatus() 获取响应结果
+ * @method string getStatus() 获取响应结果，“OK”为成功，其他为失败
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatus(string $Status) 设置响应结果
+ * @method void setStatus(string $Status) 设置响应结果，“OK”为成功，其他为失败
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGroupId() 获取分组ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateDeviceGroupResponse extends AbstractModel
 {
     /**
-     * @var string 响应结果
+     * @var string 响应结果，“OK”为成功，其他为失败
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
@@ -51,7 +51,7 @@ class CreateDeviceGroupResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Status 响应结果
+     * @param string $Status 响应结果，“OK”为成功，其他为失败
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GroupId 分组ID
 注意：此字段可能返回 null，表示取不到有效值。

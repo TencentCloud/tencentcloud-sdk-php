@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGroupId(string $GroupId) 设置分组ID
  * @method string getGroupName() 获取分组名称，根据名称模糊匹配子分组时为必填
  * @method void setGroupName(string $GroupName) 设置分组名称，根据名称模糊匹配子分组时为必填
- * @method integer getOffset() 获取偏移量
- * @method void setOffset(integer $Offset) 设置偏移量
+ * @method integer getOffset() 获取偏移量，默认0
+ * @method void setOffset(integer $Offset) 设置偏移量，默认0
  * @method integer getLimit() 获取限制数，默认200
  * @method void setLimit(integer $Limit) 设置限制数，默认200
  * @method integer getOnlyGroup() 获取是否统计子分组下的设备数，0：统计，1：不统计
@@ -44,7 +44,7 @@ class DescribeSubGroupsRequest extends AbstractModel
     public $GroupName;
 
     /**
-     * @var integer 偏移量
+     * @var integer 偏移量，默认0
      */
     public $Offset;
 
@@ -61,7 +61,7 @@ class DescribeSubGroupsRequest extends AbstractModel
     /**
      * @param string $GroupId 分组ID
      * @param string $GroupName 分组名称，根据名称模糊匹配子分组时为必填
-     * @param integer $Offset 偏移量
+     * @param integer $Offset 偏移量，默认0
      * @param integer $Limit 限制数，默认200
      * @param integer $OnlyGroup 是否统计子分组下的设备数，0：统计，1：不统计
      */

@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Iotvideoindustry\V20201201\Models;
+namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeGroupByPath请求参数结构体
+ * DescribeDrmDataKey请求参数结构体
  *
- * @method string getGroupPath() 获取分组路径，格式为/aaa(/bbb/ccc)
- * @method void setGroupPath(string $GroupPath) 设置分组路径，格式为/aaa(/bbb/ccc)
+ * @method array getEdkList() 获取加密后的数据密钥列表，最大支持10个。
+ * @method void setEdkList(array $EdkList) 设置加密后的数据密钥列表，最大支持10个。
  */
-class DescribeGroupByPathRequest extends AbstractModel
+class DescribeDrmDataKeyRequest extends AbstractModel
 {
     /**
-     * @var string 分组路径，格式为/aaa(/bbb/ccc)
+     * @var array 加密后的数据密钥列表，最大支持10个。
      */
-    public $GroupPath;
+    public $EdkList;
 
     /**
-     * @param string $GroupPath 分组路径，格式为/aaa(/bbb/ccc)
+     * @param array $EdkList 加密后的数据密钥列表，最大支持10个。
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class DescribeGroupByPathRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("GroupPath",$param) and $param["GroupPath"] !== null) {
-            $this->GroupPath = $param["GroupPath"];
+        if (array_key_exists("EdkList",$param) and $param["EdkList"] !== null) {
+            $this->EdkList = $param["EdkList"];
         }
     }
 }

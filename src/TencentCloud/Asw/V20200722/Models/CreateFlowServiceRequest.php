@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRoleResource(string $RoleResource) 设置角色资源名, 比如: qcs::cam::uin/20103392:roleName/SomeRoleForYourStateMachine
  * @method string getDescription() 获取备注
  * @method void setDescription(string $Description) 设置备注
+ * @method boolean getEnableCLS() 获取是否开启CLS日志投递功能
+ * @method void setEnableCLS(boolean $EnableCLS) 设置是否开启CLS日志投递功能
+ * @method string getInput() 获取该状态机的默认输入
+ * @method void setInput(string $Input) 设置该状态机的默认输入
  */
 class CreateFlowServiceRequest extends AbstractModel
 {
@@ -73,6 +77,16 @@ class CreateFlowServiceRequest extends AbstractModel
     public $Description;
 
     /**
+     * @var boolean 是否开启CLS日志投递功能
+     */
+    public $EnableCLS;
+
+    /**
+     * @var string 该状态机的默认输入
+     */
+    public $Input;
+
+    /**
      * @param string $Definition 定义文本（JSON格式）
      * @param string $FlowServiceName 状态机所属服务名
      * @param boolean $IsNewRole 是不是新的角色
@@ -80,6 +94,8 @@ class CreateFlowServiceRequest extends AbstractModel
      * @param string $FlowServiceChineseName 状态机所属服务中文名
      * @param string $RoleResource 角色资源名, 比如: qcs::cam::uin/20103392:roleName/SomeRoleForYourStateMachine
      * @param string $Description 备注
+     * @param boolean $EnableCLS 是否开启CLS日志投递功能
+     * @param string $Input 该状态机的默认输入
      */
     function __construct()
     {
@@ -120,6 +136,14 @@ class CreateFlowServiceRequest extends AbstractModel
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("EnableCLS",$param) and $param["EnableCLS"] !== null) {
+            $this->EnableCLS = $param["EnableCLS"];
+        }
+
+        if (array_key_exists("Input",$param) and $param["Input"] !== null) {
+            $this->Input = $param["Input"];
         }
     }
 }

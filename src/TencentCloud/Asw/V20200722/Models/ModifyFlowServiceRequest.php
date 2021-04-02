@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRoleResource(string $RoleResource) 设置角色资源名
  * @method string getDescription() 获取状态机备注
  * @method void setDescription(string $Description) 设置状态机备注
+ * @method boolean getEnableCLS() 获取是否允许日志投递
+ * @method void setEnableCLS(boolean $EnableCLS) 设置是否允许日志投递
  */
 class ModifyFlowServiceRequest extends AbstractModel
 {
@@ -80,6 +82,11 @@ class ModifyFlowServiceRequest extends AbstractModel
     public $Description;
 
     /**
+     * @var boolean 是否允许日志投递
+     */
+    public $EnableCLS;
+
+    /**
      * @param string $FlowServiceResource 状态机资源名
      * @param string $Definition 定义JSON
      * @param string $FlowServiceName 状态机所属服务名
@@ -88,6 +95,7 @@ class ModifyFlowServiceRequest extends AbstractModel
      * @param string $Type 状态机类型
      * @param string $RoleResource 角色资源名
      * @param string $Description 状态机备注
+     * @param boolean $EnableCLS 是否允许日志投递
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ class ModifyFlowServiceRequest extends AbstractModel
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("EnableCLS",$param) and $param["EnableCLS"] !== null) {
+            $this->EnableCLS = $param["EnableCLS"];
         }
     }
 }

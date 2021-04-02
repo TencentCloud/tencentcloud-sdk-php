@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getTaskId() 获取黑石异步任务ID
  * @method void setTaskId(integer $TaskId) 设置黑石异步任务ID
+ * @method string getImageId() 获取镜像ID
+ * @method void setImageId(string $ImageId) 设置镜像ID
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -33,12 +35,18 @@ class CreateCustomImageResponse extends AbstractModel
     public $TaskId;
 
     /**
+     * @var string 镜像ID
+     */
+    public $ImageId;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param integer $TaskId 黑石异步任务ID
+     * @param string $ImageId 镜像ID
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -56,6 +64,10 @@ class CreateCustomImageResponse extends AbstractModel
         }
         if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
             $this->TaskId = $param["TaskId"];
+        }
+
+        if (array_key_exists("ImageId",$param) and $param["ImageId"] !== null) {
+            $this->ImageId = $param["ImageId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

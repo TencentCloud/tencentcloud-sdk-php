@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getServerSession() 获取服务端session信息，返回给JSSDK
  * @method void setServerSession(string $ServerSession) 设置服务端session信息，返回给JSSDK
- * @method string getRoleNumber() 获取【多人游戏】角色编号；比如1、2、3、4
- * @method void setRoleNumber(string $RoleNumber) 设置【多人游戏】角色编号；比如1、2、3、4
- * @method string getRole() 获取【多人云游】角色；Player表示玩家；Viewer表示观察者
- * @method void setRole(string $Role) 设置【多人云游】角色；Player表示玩家；Viewer表示观察者
+ * @method string getRoleNumber() 获取【已废弃】
+ * @method void setRoleNumber(string $RoleNumber) 设置【已废弃】
+ * @method string getRole() 获取【互动云游】角色；Player表示玩家；Viewer表示观察者
+ * @method void setRole(string $Role) 设置【互动云游】角色；Player表示玩家；Viewer表示观察者
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -37,12 +37,12 @@ class CreateSessionResponse extends AbstractModel
     public $ServerSession;
 
     /**
-     * @var string 【多人游戏】角色编号；比如1、2、3、4
+     * @var string 【已废弃】
      */
     public $RoleNumber;
 
     /**
-     * @var string 【多人云游】角色；Player表示玩家；Viewer表示观察者
+     * @var string 【互动云游】角色；Player表示玩家；Viewer表示观察者
      */
     public $Role;
 
@@ -53,8 +53,8 @@ class CreateSessionResponse extends AbstractModel
 
     /**
      * @param string $ServerSession 服务端session信息，返回给JSSDK
-     * @param string $RoleNumber 【多人游戏】角色编号；比如1、2、3、4
-     * @param string $Role 【多人云游】角色；Player表示玩家；Viewer表示观察者
+     * @param string $RoleNumber 【已废弃】
+     * @param string $Role 【互动云游】角色；Player表示玩家；Viewer表示观察者
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDeleteStream() 获取删除流，可选项：video,audio。
  * @method void setDeleteStream(string $DeleteStream) 设置删除流，可选项：video,audio。
+ * @method string getFlvFlags() 获取Flv 参数，目前支持add_keyframe_index
+ * @method void setFlvFlags(string $FlvFlags) 设置Flv 参数，目前支持add_keyframe_index
  */
 class MuxInfo extends AbstractModel
 {
@@ -31,7 +33,13 @@ class MuxInfo extends AbstractModel
     public $DeleteStream;
 
     /**
+     * @var string Flv 参数，目前支持add_keyframe_index
+     */
+    public $FlvFlags;
+
+    /**
      * @param string $DeleteStream 删除流，可选项：video,audio。
+     * @param string $FlvFlags Flv 参数，目前支持add_keyframe_index
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class MuxInfo extends AbstractModel
         }
         if (array_key_exists("DeleteStream",$param) and $param["DeleteStream"] !== null) {
             $this->DeleteStream = $param["DeleteStream"];
+        }
+
+        if (array_key_exists("FlvFlags",$param) and $param["FlvFlags"] !== null) {
+            $this->FlvFlags = $param["FlvFlags"];
         }
     }
 }

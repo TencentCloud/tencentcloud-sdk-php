@@ -42,6 +42,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNetworkConfig(string $NetworkConfig) 设置网络配置
  * @method string getFreeQuota() 获取免费额度的"basic", 不使用的用""
  * @method void setFreeQuota(string $FreeQuota) 设置免费额度的"basic", 不使用的用""
+ * @method boolean getAutoDeployOnCodeChange() 获取是否代码变更触发自动部署
+ * @method void setAutoDeployOnCodeChange(boolean $AutoDeployOnCodeChange) 设置是否代码变更触发自动部署
+ * @method string getRepoUrl() 获取私有仓库地址
+ * @method void setRepoUrl(string $RepoUrl) 设置私有仓库地址
  */
 class CreateAndDeployCloudBaseProjectRequest extends AbstractModel
 {
@@ -101,6 +105,16 @@ class CreateAndDeployCloudBaseProjectRequest extends AbstractModel
     public $FreeQuota;
 
     /**
+     * @var boolean 是否代码变更触发自动部署
+     */
+    public $AutoDeployOnCodeChange;
+
+    /**
+     * @var string 私有仓库地址
+     */
+    public $RepoUrl;
+
+    /**
      * @param string $Name 项目名
      * @param CodeSource $Source 来源
      * @param string $EnvId 环境id
@@ -112,6 +126,8 @@ class CreateAndDeployCloudBaseProjectRequest extends AbstractModel
      * @param array $Tags 标签
      * @param string $NetworkConfig 网络配置
      * @param string $FreeQuota 免费额度的"basic", 不使用的用""
+     * @param boolean $AutoDeployOnCodeChange 是否代码变更触发自动部署
+     * @param string $RepoUrl 私有仓库地址
      */
     function __construct()
     {
@@ -174,6 +190,14 @@ class CreateAndDeployCloudBaseProjectRequest extends AbstractModel
 
         if (array_key_exists("FreeQuota",$param) and $param["FreeQuota"] !== null) {
             $this->FreeQuota = $param["FreeQuota"];
+        }
+
+        if (array_key_exists("AutoDeployOnCodeChange",$param) and $param["AutoDeployOnCodeChange"] !== null) {
+            $this->AutoDeployOnCodeChange = $param["AutoDeployOnCodeChange"];
+        }
+
+        if (array_key_exists("RepoUrl",$param) and $param["RepoUrl"] !== null) {
+            $this->RepoUrl = $param["RepoUrl"];
         }
     }
 }

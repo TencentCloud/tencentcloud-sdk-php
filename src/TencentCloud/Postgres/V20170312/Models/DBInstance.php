@@ -90,6 +90,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatusInReadonlyGroup(string $StatusInReadonlyGroup) 设置只读实例在只读组中的状态
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getOfflineTime() 获取下线时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOfflineTime(string $OfflineTime) 设置下线时间
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DBInstance extends AbstractModel
 {
@@ -253,6 +257,12 @@ class DBInstance extends AbstractModel
     public $StatusInReadonlyGroup;
 
     /**
+     * @var string 下线时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OfflineTime;
+
+    /**
      * @param string $Region 实例所属地域，如: ap-guangzhou，对应RegionSet的Region字段
      * @param string $Zone 实例所属可用区， 如：ap-guangzhou-3，对应ZoneSet的Zone字段
      * @param integer $ProjectId 项目ID
@@ -287,6 +297,8 @@ class DBInstance extends AbstractModel
      * @param integer $ReadOnlyInstanceNum 只读实例数量
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StatusInReadonlyGroup 只读实例在只读组中的状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $OfflineTime 下线时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -434,6 +446,10 @@ class DBInstance extends AbstractModel
 
         if (array_key_exists("StatusInReadonlyGroup",$param) and $param["StatusInReadonlyGroup"] !== null) {
             $this->StatusInReadonlyGroup = $param["StatusInReadonlyGroup"];
+        }
+
+        if (array_key_exists("OfflineTime",$param) and $param["OfflineTime"] !== null) {
+            $this->OfflineTime = $param["OfflineTime"];
         }
     }
 }

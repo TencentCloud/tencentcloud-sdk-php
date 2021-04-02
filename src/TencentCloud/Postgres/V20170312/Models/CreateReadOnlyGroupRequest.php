@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxReplayLatency(integer $MaxReplayLatency) 设置延迟空间大小阈值，单位MB
  * @method integer getMinDelayEliminateReserve() 获取延迟剔除最小保留实例数
  * @method void setMinDelayEliminateReserve(integer $MinDelayEliminateReserve) 设置延迟剔除最小保留实例数
+ * @method array getSecurityGroupIds() 获取安全组id
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置安全组id
  */
 class CreateReadOnlyGroupRequest extends AbstractModel
 {
@@ -94,6 +96,11 @@ class CreateReadOnlyGroupRequest extends AbstractModel
     public $MinDelayEliminateReserve;
 
     /**
+     * @var array 安全组id
+     */
+    public $SecurityGroupIds;
+
+    /**
      * @param string $MasterDBInstanceId 主实例ID
      * @param string $Name 只读组名称
      * @param integer $ProjectId 项目ID
@@ -104,6 +111,7 @@ class CreateReadOnlyGroupRequest extends AbstractModel
      * @param integer $MaxReplayLag 延迟时间大小阈值，单位ms
      * @param integer $MaxReplayLatency 延迟空间大小阈值，单位MB
      * @param integer $MinDelayEliminateReserve 延迟剔除最小保留实例数
+     * @param array $SecurityGroupIds 安全组id
      */
     function __construct()
     {
@@ -156,6 +164,10 @@ class CreateReadOnlyGroupRequest extends AbstractModel
 
         if (array_key_exists("MinDelayEliminateReserve",$param) and $param["MinDelayEliminateReserve"] !== null) {
             $this->MinDelayEliminateReserve = $param["MinDelayEliminateReserve"];
+        }
+
+        if (array_key_exists("SecurityGroupIds",$param) and $param["SecurityGroupIds"] !== null) {
+            $this->SecurityGroupIds = $param["SecurityGroupIds"];
         }
     }
 }

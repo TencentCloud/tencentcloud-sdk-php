@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
 支持的图片大小：所下载图片经 Base64 编码后不超过 3M。图片下载时间不超过 3 秒。
 图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。
 非腾讯云存储的 Url 速度和稳定性可能受一定影响。
+ * @method Encryption getEncryption() 获取敏感数据加密信息。对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+ * @method void setEncryption(Encryption $Encryption) 设置敏感数据加密信息。对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。
  */
 class IdCardOCRVerificationRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class IdCardOCRVerificationRequest extends AbstractModel
     public $ImageUrl;
 
     /**
+     * @var Encryption 敏感数据加密信息。对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+     */
+    public $Encryption;
+
+    /**
      * @param string $IdCard 身份证号
 姓名和身份证号、ImageBase64、ImageUrl三者必须提供其中之一。若都提供了，则按照姓名和身份证号>ImageBase64>ImageUrl的优先级使用参数。
      * @param string $Name 姓名
@@ -84,6 +91,7 @@ class IdCardOCRVerificationRequest extends AbstractModel
 支持的图片大小：所下载图片经 Base64 编码后不超过 3M。图片下载时间不超过 3 秒。
 图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。
 非腾讯云存储的 Url 速度和稳定性可能受一定影响。
+     * @param Encryption $Encryption 敏感数据加密信息。对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。
      */
     function __construct()
     {
@@ -112,6 +120,11 @@ class IdCardOCRVerificationRequest extends AbstractModel
 
         if (array_key_exists("ImageUrl",$param) and $param["ImageUrl"] !== null) {
             $this->ImageUrl = $param["ImageUrl"];
+        }
+
+        if (array_key_exists("Encryption",$param) and $param["Encryption"] !== null) {
+            $this->Encryption = new Encryption();
+            $this->Encryption->deserialize($param["Encryption"]);
         }
     }
 }

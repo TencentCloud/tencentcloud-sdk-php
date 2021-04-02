@@ -26,32 +26,32 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserId(string $UserId) 设置游戏用户ID
  * @method string getGameId() 获取游戏ID
  * @method void setGameId(string $GameId) 设置游戏ID
- * @method string getGameRegion() 获取游戏区域，ap-guangzhou、ap-shanghai、ap-beijing、ap-chengdu、ap-chongqing、ap-nanjing等
- * @method void setGameRegion(string $GameRegion) 设置游戏区域，ap-guangzhou、ap-shanghai、ap-beijing、ap-chengdu、ap-chongqing、ap-nanjing等
+ * @method string getGameRegion() 获取【已废弃】只在TrylockWorker时生效
+ * @method void setGameRegion(string $GameRegion) 设置【已废弃】只在TrylockWorker时生效
  * @method string getGameParas() 获取游戏参数
  * @method void setGameParas(string $GameParas) 设置游戏参数
- * @method string getResolution() 获取分辨率,，可设置为1080p或720p
- * @method void setResolution(string $Resolution) 设置分辨率,，可设置为1080p或720p
+ * @method string getResolution() 获取分辨率,，可设置为1080p或720p或1920x1080格式
+ * @method void setResolution(string $Resolution) 设置分辨率,，可设置为1080p或720p或1920x1080格式
  * @method string getImageUrl() 获取背景图url，格式为png或jpeg，宽高1920*1080
  * @method void setImageUrl(string $ImageUrl) 设置背景图url，格式为png或jpeg，宽高1920*1080
- * @method integer getSetNo() 获取【废弃】资源池编号
- * @method void setSetNo(integer $SetNo) 设置【废弃】资源池编号
- * @method integer getBitrate() 获取单位Mbps，固定码率，后端不动态调整(MaxBitrate和MinBitrate将无效)
- * @method void setBitrate(integer $Bitrate) 设置单位Mbps，固定码率，后端不动态调整(MaxBitrate和MinBitrate将无效)
- * @method integer getMaxBitrate() 获取单位Mbps，动态调整最大码率
- * @method void setMaxBitrate(integer $MaxBitrate) 设置单位Mbps，动态调整最大码率
- * @method integer getMinBitrate() 获取单位Mbps，动态调整最小码率
- * @method void setMinBitrate(integer $MinBitrate) 设置单位Mbps，动态调整最小码率
+ * @method integer getSetNo() 获取【已废弃】
+ * @method void setSetNo(integer $SetNo) 设置【已废弃】
+ * @method integer getBitrate() 获取单位Mbps，固定码率，有一定浮动范围，后端不动态调整(MaxBitrate和MinBitrate将无效)
+ * @method void setBitrate(integer $Bitrate) 设置单位Mbps，固定码率，有一定浮动范围，后端不动态调整(MaxBitrate和MinBitrate将无效)
+ * @method integer getMaxBitrate() 获取单位Mbps，动态调整最大码率，有一定浮动范围
+ * @method void setMaxBitrate(integer $MaxBitrate) 设置单位Mbps，动态调整最大码率，有一定浮动范围
+ * @method integer getMinBitrate() 获取单位Mbps，动态调整最小码率，有一定浮动范围
+ * @method void setMinBitrate(integer $MinBitrate) 设置单位Mbps，动态调整最小码率，有一定浮动范围
  * @method integer getFps() 获取帧率，可设置为30、45、60、90、120、144
  * @method void setFps(integer $Fps) 设置帧率，可设置为30、45、60、90、120、144
- * @method string getUserIp() 获取游戏用户IP，用于就近调度，例如125.127.178.228
- * @method void setUserIp(string $UserIp) 设置游戏用户IP，用于就近调度，例如125.127.178.228
- * @method integer getOptimization() 获取优化项，便于客户灰度开启新的优化项，默认为0
- * @method void setOptimization(integer $Optimization) 设置优化项，便于客户灰度开启新的优化项，默认为0
- * @method string getHostUserId() 获取【多人云游】游戏主机用户ID
- * @method void setHostUserId(string $HostUserId) 设置【多人云游】游戏主机用户ID
- * @method string getRole() 获取【多人云游】角色；Player表示玩家；Viewer表示观察者
- * @method void setRole(string $Role) 设置【多人云游】角色；Player表示玩家；Viewer表示观察者
+ * @method string getUserIp() 获取【已废弃】只在TrylockWorker时生效
+ * @method void setUserIp(string $UserIp) 设置【已废弃】只在TrylockWorker时生效
+ * @method integer getOptimization() 获取【已废弃】优化项，便于客户灰度开启新的优化项，默认为0
+ * @method void setOptimization(integer $Optimization) 设置【已废弃】优化项，便于客户灰度开启新的优化项，默认为0
+ * @method string getHostUserId() 获取【互动云游】游戏主机用户ID
+ * @method void setHostUserId(string $HostUserId) 设置【互动云游】游戏主机用户ID
+ * @method string getRole() 获取【互动云游】角色；Player表示玩家；Viewer表示观察者
+ * @method void setRole(string $Role) 设置【互动云游】角色；Player表示玩家；Viewer表示观察者
  * @method string getGameContext() 获取游戏相关参数
  * @method void setGameContext(string $GameContext) 设置游戏相关参数
  */
@@ -73,7 +73,7 @@ class CreateSessionRequest extends AbstractModel
     public $GameId;
 
     /**
-     * @var string 游戏区域，ap-guangzhou、ap-shanghai、ap-beijing、ap-chengdu、ap-chongqing、ap-nanjing等
+     * @var string 【已废弃】只在TrylockWorker时生效
      */
     public $GameRegion;
 
@@ -83,7 +83,7 @@ class CreateSessionRequest extends AbstractModel
     public $GameParas;
 
     /**
-     * @var string 分辨率,，可设置为1080p或720p
+     * @var string 分辨率,，可设置为1080p或720p或1920x1080格式
      */
     public $Resolution;
 
@@ -93,22 +93,22 @@ class CreateSessionRequest extends AbstractModel
     public $ImageUrl;
 
     /**
-     * @var integer 【废弃】资源池编号
+     * @var integer 【已废弃】
      */
     public $SetNo;
 
     /**
-     * @var integer 单位Mbps，固定码率，后端不动态调整(MaxBitrate和MinBitrate将无效)
+     * @var integer 单位Mbps，固定码率，有一定浮动范围，后端不动态调整(MaxBitrate和MinBitrate将无效)
      */
     public $Bitrate;
 
     /**
-     * @var integer 单位Mbps，动态调整最大码率
+     * @var integer 单位Mbps，动态调整最大码率，有一定浮动范围
      */
     public $MaxBitrate;
 
     /**
-     * @var integer 单位Mbps，动态调整最小码率
+     * @var integer 单位Mbps，动态调整最小码率，有一定浮动范围
      */
     public $MinBitrate;
 
@@ -118,22 +118,22 @@ class CreateSessionRequest extends AbstractModel
     public $Fps;
 
     /**
-     * @var string 游戏用户IP，用于就近调度，例如125.127.178.228
+     * @var string 【已废弃】只在TrylockWorker时生效
      */
     public $UserIp;
 
     /**
-     * @var integer 优化项，便于客户灰度开启新的优化项，默认为0
+     * @var integer 【已废弃】优化项，便于客户灰度开启新的优化项，默认为0
      */
     public $Optimization;
 
     /**
-     * @var string 【多人云游】游戏主机用户ID
+     * @var string 【互动云游】游戏主机用户ID
      */
     public $HostUserId;
 
     /**
-     * @var string 【多人云游】角色；Player表示玩家；Viewer表示观察者
+     * @var string 【互动云游】角色；Player表示玩家；Viewer表示观察者
      */
     public $Role;
 
@@ -146,19 +146,19 @@ class CreateSessionRequest extends AbstractModel
      * @param string $ClientSession 客户端session信息，从JSSDK请求中获得
      * @param string $UserId 游戏用户ID
      * @param string $GameId 游戏ID
-     * @param string $GameRegion 游戏区域，ap-guangzhou、ap-shanghai、ap-beijing、ap-chengdu、ap-chongqing、ap-nanjing等
+     * @param string $GameRegion 【已废弃】只在TrylockWorker时生效
      * @param string $GameParas 游戏参数
-     * @param string $Resolution 分辨率,，可设置为1080p或720p
+     * @param string $Resolution 分辨率,，可设置为1080p或720p或1920x1080格式
      * @param string $ImageUrl 背景图url，格式为png或jpeg，宽高1920*1080
-     * @param integer $SetNo 【废弃】资源池编号
-     * @param integer $Bitrate 单位Mbps，固定码率，后端不动态调整(MaxBitrate和MinBitrate将无效)
-     * @param integer $MaxBitrate 单位Mbps，动态调整最大码率
-     * @param integer $MinBitrate 单位Mbps，动态调整最小码率
+     * @param integer $SetNo 【已废弃】
+     * @param integer $Bitrate 单位Mbps，固定码率，有一定浮动范围，后端不动态调整(MaxBitrate和MinBitrate将无效)
+     * @param integer $MaxBitrate 单位Mbps，动态调整最大码率，有一定浮动范围
+     * @param integer $MinBitrate 单位Mbps，动态调整最小码率，有一定浮动范围
      * @param integer $Fps 帧率，可设置为30、45、60、90、120、144
-     * @param string $UserIp 游戏用户IP，用于就近调度，例如125.127.178.228
-     * @param integer $Optimization 优化项，便于客户灰度开启新的优化项，默认为0
-     * @param string $HostUserId 【多人云游】游戏主机用户ID
-     * @param string $Role 【多人云游】角色；Player表示玩家；Viewer表示观察者
+     * @param string $UserIp 【已废弃】只在TrylockWorker时生效
+     * @param integer $Optimization 【已废弃】优化项，便于客户灰度开启新的优化项，默认为0
+     * @param string $HostUserId 【互动云游】游戏主机用户ID
+     * @param string $Role 【互动云游】角色；Player表示玩家；Viewer表示观察者
      * @param string $GameContext 游戏相关参数
      */
     function __construct()

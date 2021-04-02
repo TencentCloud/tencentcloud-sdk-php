@@ -18,12 +18,12 @@ namespace TencentCloud\Ft\V20200304\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 人脸框位置
+ * 人脸框信息
  *
- * @method integer getX() 获取人脸框左上角横坐标。
- * @method void setX(integer $X) 设置人脸框左上角横坐标。
  * @method integer getY() 获取人脸框左上角纵坐标。
  * @method void setY(integer $Y) 设置人脸框左上角纵坐标。
+ * @method integer getX() 获取人脸框左上角横坐标。
+ * @method void setX(integer $X) 设置人脸框左上角横坐标。
  * @method integer getWidth() 获取人脸框宽度。
  * @method void setWidth(integer $Width) 设置人脸框宽度。
  * @method integer getHeight() 获取人脸框高度。
@@ -32,14 +32,14 @@ use TencentCloud\Common\AbstractModel;
 class FaceRect extends AbstractModel
 {
     /**
-     * @var integer 人脸框左上角横坐标。
-     */
-    public $X;
-
-    /**
      * @var integer 人脸框左上角纵坐标。
      */
     public $Y;
+
+    /**
+     * @var integer 人脸框左上角横坐标。
+     */
+    public $X;
 
     /**
      * @var integer 人脸框宽度。
@@ -52,8 +52,8 @@ class FaceRect extends AbstractModel
     public $Height;
 
     /**
-     * @param integer $X 人脸框左上角横坐标。
      * @param integer $Y 人脸框左上角纵坐标。
+     * @param integer $X 人脸框左上角横坐标。
      * @param integer $Width 人脸框宽度。
      * @param integer $Height 人脸框高度。
      */
@@ -70,12 +70,12 @@ class FaceRect extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("X",$param) and $param["X"] !== null) {
-            $this->X = $param["X"];
-        }
-
         if (array_key_exists("Y",$param) and $param["Y"] !== null) {
             $this->Y = $param["Y"];
+        }
+
+        if (array_key_exists("X",$param) and $param["X"] !== null) {
+            $this->X = $param["X"];
         }
 
         if (array_key_exists("Width",$param) and $param["Width"] !== null) {

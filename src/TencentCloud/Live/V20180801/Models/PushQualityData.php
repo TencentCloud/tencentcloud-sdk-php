@@ -58,6 +58,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMetaAudioRate(integer $MetaAudioRate) 设置metadata 中的音频码率，单位: kbps。
  * @method integer getMateFps() 获取metadata 中的帧率。
  * @method void setMateFps(integer $MateFps) 设置metadata 中的帧率。
+ * @method string getStreamParam() 获取推流参数
+ * @method void setStreamParam(string $StreamParam) 设置推流参数
  */
 class PushQualityData extends AbstractModel
 {
@@ -157,6 +159,11 @@ class PushQualityData extends AbstractModel
     public $MateFps;
 
     /**
+     * @var string 推流参数
+     */
+    public $StreamParam;
+
+    /**
      * @param string $Time 数据时间，格式: %Y-%m-%d %H:%M:%S.%ms，精确到毫秒级。
      * @param string $PushDomain 推流域名。
      * @param string $AppName 推流路径。
@@ -176,6 +183,7 @@ class PushQualityData extends AbstractModel
      * @param integer $MetaVideoRate metadata 中的视频码率，单位: kbps。
      * @param integer $MetaAudioRate metadata 中的音频码率，单位: kbps。
      * @param integer $MateFps metadata 中的帧率。
+     * @param string $StreamParam 推流参数
      */
     function __construct()
     {
@@ -264,6 +272,10 @@ class PushQualityData extends AbstractModel
 
         if (array_key_exists("MateFps",$param) and $param["MateFps"] !== null) {
             $this->MateFps = $param["MateFps"];
+        }
+
+        if (array_key_exists("StreamParam",$param) and $param["StreamParam"] !== null) {
+            $this->StreamParam = $param["StreamParam"];
         }
     }
 }

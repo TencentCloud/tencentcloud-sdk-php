@@ -48,6 +48,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRawCode(string $RawCode) 设置源码
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getBranch() 获取代码分支
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBranch(string $Branch) 设置代码分支
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CodeSource extends AbstractModel
 {
@@ -94,6 +98,12 @@ class CodeSource extends AbstractModel
     public $RawCode;
 
     /**
+     * @var string 代码分支
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Branch;
+
+    /**
      * @param string $Type 类型, 可能的枚举: "coding","package","package_url","github","gitlab","gitee","rawcode"
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Url 下载链接
@@ -107,6 +117,8 @@ class CodeSource extends AbstractModel
      * @param string $CodingPackageVersion coding版本名, type为coding的时候需要填写
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RawCode 源码
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Branch 代码分支
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -148,6 +160,10 @@ class CodeSource extends AbstractModel
 
         if (array_key_exists("RawCode",$param) and $param["RawCode"] !== null) {
             $this->RawCode = $param["RawCode"];
+        }
+
+        if (array_key_exists("Branch",$param) and $param["Branch"] !== null) {
+            $this->Branch = $param["Branch"];
         }
     }
 }

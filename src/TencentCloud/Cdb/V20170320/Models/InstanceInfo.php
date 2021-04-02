@@ -119,9 +119,7 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZoneId(integer $ZoneId) 设置可用区 ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getInstanceNodes() 获取节点数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceNodes(integer $InstanceNodes) 设置节点数
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceInfo extends AbstractModel
 {
@@ -340,7 +338,6 @@ class InstanceInfo extends AbstractModel
 
     /**
      * @var integer 节点数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceNodes;
 
@@ -395,7 +392,6 @@ class InstanceInfo extends AbstractModel
      * @param integer $ZoneId 可用区 ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $InstanceNodes 节点数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -44,6 +44,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFlowServiceChineseName(string $FlowServiceChineseName) 设置状态机所属服务中文名
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getEnableCLS() 获取是否开启日志CLS服务
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEnableCLS(boolean $EnableCLS) 设置是否开启日志CLS服务
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCLSUrl() 获取CLS日志查看地址
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCLSUrl(string $CLSUrl) 设置CLS日志查看地址
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getFlowInput() 获取工作流提示输入
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFlowInput(string $FlowInput) 设置工作流提示输入
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -94,6 +106,24 @@ class DescribeFlowServiceDetailResponse extends AbstractModel
     public $FlowServiceChineseName;
 
     /**
+     * @var boolean 是否开启日志CLS服务
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EnableCLS;
+
+    /**
+     * @var string CLS日志查看地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CLSUrl;
+
+    /**
+     * @var string 工作流提示输入
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FlowInput;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -110,6 +140,12 @@ class DescribeFlowServiceDetailResponse extends AbstractModel
      * @param string $Description 备注
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FlowServiceChineseName 状态机所属服务中文名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $EnableCLS 是否开启日志CLS服务
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CLSUrl CLS日志查看地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $FlowInput 工作流提示输入
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -156,6 +192,18 @@ class DescribeFlowServiceDetailResponse extends AbstractModel
 
         if (array_key_exists("FlowServiceChineseName",$param) and $param["FlowServiceChineseName"] !== null) {
             $this->FlowServiceChineseName = $param["FlowServiceChineseName"];
+        }
+
+        if (array_key_exists("EnableCLS",$param) and $param["EnableCLS"] !== null) {
+            $this->EnableCLS = $param["EnableCLS"];
+        }
+
+        if (array_key_exists("CLSUrl",$param) and $param["CLSUrl"] !== null) {
+            $this->CLSUrl = $param["CLSUrl"];
+        }
+
+        if (array_key_exists("FlowInput",$param) and $param["FlowInput"] !== null) {
+            $this->FlowInput = $param["FlowInput"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

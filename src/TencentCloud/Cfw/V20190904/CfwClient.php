@@ -31,6 +31,7 @@ use TencentCloud\Cfw\V20190904\Models as Models;
  * @method Models\DeleteSecurityGroupRuleResponse DeleteSecurityGroupRule(Models\DeleteSecurityGroupRuleRequest $req) 删除规则
  * @method Models\DescribeAcListsResponse DescribeAcLists(Models\DescribeAcListsRequest $req) 访问控制列表
  * @method Models\DescribeAssociatedInstanceListResponse DescribeAssociatedInstanceList(Models\DescribeAssociatedInstanceListRequest $req) 获取安全组关联实例列表
+ * @method Models\DescribeCfwEipsResponse DescribeCfwEips(Models\DescribeCfwEipsRequest $req) 查询防火墙弹性公网ip
  * @method Models\DescribeNatRuleOverviewResponse DescribeNatRuleOverview(Models\DescribeNatRuleOverviewRequest $req) nat规则列表概况
  * @method Models\DescribeRuleOverviewResponse DescribeRuleOverview(Models\DescribeRuleOverviewRequest $req) 查询规则列表概况
  * @method Models\DescribeSecurityGroupListResponse DescribeSecurityGroupList(Models\DescribeSecurityGroupListRequest $req) 查询安全组规则列表
@@ -38,6 +39,7 @@ use TencentCloud\Cfw\V20190904\Models as Models;
  * @method Models\DescribeSyncAssetStatusResponse DescribeSyncAssetStatus(Models\DescribeSyncAssetStatusRequest $req) 同步资产状态查询-互联网&VPC
  * @method Models\DescribeTableStatusResponse DescribeTableStatus(Models\DescribeTableStatusRequest $req) 查询规则表状态
  * @method Models\DescribeVpcRuleOverviewResponse DescribeVpcRuleOverview(Models\DescribeVpcRuleOverviewRequest $req) vpc规则列表概况
+ * @method Models\ExpandCfwVerticalResponse ExpandCfwVertical(Models\ExpandCfwVerticalRequest $req) 防火墙垂直扩容
  * @method Models\ModifyAcRuleResponse ModifyAcRule(Models\ModifyAcRuleRequest $req) 修改规则
  * @method Models\ModifyAllRuleStatusResponse ModifyAllRuleStatus(Models\ModifyAllRuleStatusRequest $req) 启用停用全部规则
  * @method Models\ModifyAllSwitchStatusResponse ModifyAllSwitchStatus(Models\ModifyAllSwitchStatusRequest $req) 一键开启和关闭
@@ -46,6 +48,7 @@ use TencentCloud\Cfw\V20190904\Models as Models;
  * @method Models\ModifySequenceRulesResponse ModifySequenceRules(Models\ModifySequenceRulesRequest $req) 修改规则执行顺序
  * @method Models\ModifyTableStatusResponse ModifyTableStatus(Models\ModifyTableStatusRequest $req) 修改规则表状态
  * @method Models\RunSyncAssetResponse RunSyncAsset(Models\RunSyncAssetRequest $req) 同步资产-互联网&VPC
+ * @method Models\SetNatFwDnatRuleResponse SetNatFwDnatRule(Models\SetNatFwDnatRuleRequest $req) 配置防火墙Dnat规则
  */
 
 class CfwClient extends AbstractClient

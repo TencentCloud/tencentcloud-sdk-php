@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 手动加入的节点
  *
- * @method integer getJoining() 获取加入中节的点数量
- * @method void setJoining(integer $Joining) 设置加入中节的点数量
+ * @method integer getJoining() 获取加入中的节点数量
+ * @method void setJoining(integer $Joining) 设置加入中的节点数量
  * @method integer getInitializing() 获取初始化中的节点数量
  * @method void setInitializing(integer $Initializing) 设置初始化中的节点数量
  * @method integer getNormal() 获取正常的节点数量
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class ManuallyAdded extends AbstractModel
 {
     /**
-     * @var integer 加入中节的点数量
+     * @var integer 加入中的节点数量
      */
     public $Joining;
 
@@ -52,7 +52,7 @@ class ManuallyAdded extends AbstractModel
     public $Total;
 
     /**
-     * @param integer $Joining 加入中节的点数量
+     * @param integer $Joining 加入中的节点数量
      * @param integer $Initializing 初始化中的节点数量
      * @param integer $Normal 正常的节点数量
      * @param integer $Total 节点总数

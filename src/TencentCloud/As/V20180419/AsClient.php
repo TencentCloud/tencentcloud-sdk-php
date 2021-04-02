@@ -25,6 +25,7 @@ use TencentCloud\As\V20180419\Models as Models;
 /**
  * @method Models\AttachInstancesResponse AttachInstances(Models\AttachInstancesRequest $req) 本接口（AttachInstances）用于将 CVM 实例添加到伸缩组。
 
+ * @method Models\ClearLaunchConfigurationAttributesResponse ClearLaunchConfigurationAttributes(Models\ClearLaunchConfigurationAttributesRequest $req) 本接口（ClearLaunchConfigurationAttributes）用于将启动配置内的特定属性完全清空。
  * @method Models\CompleteLifecycleActionResponse CompleteLifecycleAction(Models\CompleteLifecycleActionRequest $req) 本接口（CompleteLifecycleAction）用于完成生命周期动作。
 
 * 用户通过调用本接口，指定一个具体的生命周期挂钩的结果（“CONITNUE”或者“ABANDON”）。如果一直不调用本接口，则生命周期挂钩会在超时后按照“DefaultResult”进行处理。

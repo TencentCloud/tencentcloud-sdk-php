@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
 * 注意：仅当请求携带 CoverData 时此返回值有效。 *
  * @method void setCoverUrl(string $CoverUrl) 设置新的视频封面 URL。
 * 注意：仅当请求携带 CoverData 时此返回值有效。 *
+ * @method array getAddedSubtitleSet() 获取新增的字幕信息。
+ * @method void setAddedSubtitleSet(array $AddedSubtitleSet) 设置新增的字幕信息。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -36,6 +38,11 @@ class ModifyMediaInfoResponse extends AbstractModel
     public $CoverUrl;
 
     /**
+     * @var array 新增的字幕信息。
+     */
+    public $AddedSubtitleSet;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -43,6 +50,7 @@ class ModifyMediaInfoResponse extends AbstractModel
     /**
      * @param string $CoverUrl 新的视频封面 URL。
 * 注意：仅当请求携带 CoverData 时此返回值有效。 *
+     * @param array $AddedSubtitleSet 新增的字幕信息。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -60,6 +68,15 @@ class ModifyMediaInfoResponse extends AbstractModel
         }
         if (array_key_exists("CoverUrl",$param) and $param["CoverUrl"] !== null) {
             $this->CoverUrl = $param["CoverUrl"];
+        }
+
+        if (array_key_exists("AddedSubtitleSet",$param) and $param["AddedSubtitleSet"] !== null) {
+            $this->AddedSubtitleSet = [];
+            foreach ($param["AddedSubtitleSet"] as $key => $value){
+                $obj = new MediaSubtitleItem();
+                $obj->deserialize($value);
+                array_push($this->AddedSubtitleSet, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

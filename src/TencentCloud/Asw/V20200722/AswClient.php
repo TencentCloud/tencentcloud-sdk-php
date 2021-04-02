@@ -31,6 +31,7 @@ use TencentCloud\Asw\V20200722\Models as Models;
  * @method Models\DescribeFlowServicesResponse DescribeFlowServices(Models\DescribeFlowServicesRequest $req) 查询指定用户下所有状态机，以列表形式返回
  * @method Models\ModifyFlowServiceResponse ModifyFlowService(Models\ModifyFlowServiceRequest $req) 该接口用于修改状态机
  * @method Models\StartExecutionResponse StartExecution(Models\StartExecutionRequest $req) 为指定的状态机启动一次执行
+ * @method Models\StopExecutionResponse StopExecution(Models\StopExecutionRequest $req) 终止某个状态机
  */
 
 class AswClient extends AbstractClient

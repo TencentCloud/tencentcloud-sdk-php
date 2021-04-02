@@ -48,6 +48,14 @@ use TencentCloud\Common\AbstractModel;
 同一个请求里，ClearTags 与 AddTags 不能同时出现。
  * @method void setClearTags(integer $ClearTags) 设置取值 1 表示清空媒体文件所有标签，其他值无意义。
 同一个请求里，ClearTags 与 AddTags 不能同时出现。
+ * @method array getAddSubtitles() 获取新增一组字幕。单个媒体文件最多 16 个字幕。同一个请求中，AddSubtitles 中指定的字幕 Id 必须与 DeleteSubtitleIds 都不相同。
+ * @method void setAddSubtitles(array $AddSubtitles) 设置新增一组字幕。单个媒体文件最多 16 个字幕。同一个请求中，AddSubtitles 中指定的字幕 Id 必须与 DeleteSubtitleIds 都不相同。
+ * @method array getDeleteSubtitleIds() 获取待删除字幕的唯一标识。同一个请求中，AddSubtitles 中指定的字幕 Id 必须与 DeleteSubtitleIds 都不相同。
+ * @method void setDeleteSubtitleIds(array $DeleteSubtitleIds) 设置待删除字幕的唯一标识。同一个请求中，AddSubtitles 中指定的字幕 Id 必须与 DeleteSubtitleIds 都不相同。
+ * @method integer getClearSubtitles() 获取取值 1 表示清空媒体文件所有的字幕信息，其他值无意义。
+同一个请求里，ClearSubtitles 与 AddSubtitles不能同时出现。
+ * @method void setClearSubtitles(integer $ClearSubtitles) 设置取值 1 表示清空媒体文件所有的字幕信息，其他值无意义。
+同一个请求里，ClearSubtitles 与 AddSubtitles不能同时出现。
  * @method integer getSubAppId() 获取点播[子应用](/document/product/266/14574) ID 。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
  * @method void setSubAppId(integer $SubAppId) 设置点播[子应用](/document/product/266/14574) ID 。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
  */
@@ -116,6 +124,22 @@ class ModifyMediaInfoRequest extends AbstractModel
     public $ClearTags;
 
     /**
+     * @var array 新增一组字幕。单个媒体文件最多 16 个字幕。同一个请求中，AddSubtitles 中指定的字幕 Id 必须与 DeleteSubtitleIds 都不相同。
+     */
+    public $AddSubtitles;
+
+    /**
+     * @var array 待删除字幕的唯一标识。同一个请求中，AddSubtitles 中指定的字幕 Id 必须与 DeleteSubtitleIds 都不相同。
+     */
+    public $DeleteSubtitleIds;
+
+    /**
+     * @var integer 取值 1 表示清空媒体文件所有的字幕信息，其他值无意义。
+同一个请求里，ClearSubtitles 与 AddSubtitles不能同时出现。
+     */
+    public $ClearSubtitles;
+
+    /**
      * @var integer 点播[子应用](/document/product/266/14574) ID 。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     public $SubAppId;
@@ -135,6 +159,10 @@ class ModifyMediaInfoRequest extends AbstractModel
      * @param array $DeleteTags 要删除的一组标签。同一个请求里，AddTags 参数必须与 DeleteTags 都不同。
      * @param integer $ClearTags 取值 1 表示清空媒体文件所有标签，其他值无意义。
 同一个请求里，ClearTags 与 AddTags 不能同时出现。
+     * @param array $AddSubtitles 新增一组字幕。单个媒体文件最多 16 个字幕。同一个请求中，AddSubtitles 中指定的字幕 Id 必须与 DeleteSubtitleIds 都不相同。
+     * @param array $DeleteSubtitleIds 待删除字幕的唯一标识。同一个请求中，AddSubtitles 中指定的字幕 Id 必须与 DeleteSubtitleIds 都不相同。
+     * @param integer $ClearSubtitles 取值 1 表示清空媒体文件所有的字幕信息，其他值无意义。
+同一个请求里，ClearSubtitles 与 AddSubtitles不能同时出现。
      * @param integer $SubAppId 点播[子应用](/document/product/266/14574) ID 。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     function __construct()
@@ -201,6 +229,23 @@ class ModifyMediaInfoRequest extends AbstractModel
 
         if (array_key_exists("ClearTags",$param) and $param["ClearTags"] !== null) {
             $this->ClearTags = $param["ClearTags"];
+        }
+
+        if (array_key_exists("AddSubtitles",$param) and $param["AddSubtitles"] !== null) {
+            $this->AddSubtitles = [];
+            foreach ($param["AddSubtitles"] as $key => $value){
+                $obj = new MediaSubtitleInput();
+                $obj->deserialize($value);
+                array_push($this->AddSubtitles, $obj);
+            }
+        }
+
+        if (array_key_exists("DeleteSubtitleIds",$param) and $param["DeleteSubtitleIds"] !== null) {
+            $this->DeleteSubtitleIds = $param["DeleteSubtitleIds"];
+        }
+
+        if (array_key_exists("ClearSubtitles",$param) and $param["ClearSubtitles"] !== null) {
+            $this->ClearSubtitles = $param["ClearSubtitles"];
         }
 
         if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {

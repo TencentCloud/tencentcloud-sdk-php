@@ -78,6 +78,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDiskTypePolicy(string $DiskTypePolicy) 设置云盘类型选择策略，取值范围：
 <br><li>ORIGINAL：使用设置的云盘类型。
 <br><li>AUTOMATIC：自动选择当前可用的云盘类型。
+ * @method SystemDisk getSystemDisk() 获取实例系统盘配置信息。
+ * @method void setSystemDisk(SystemDisk $SystemDisk) 设置实例系统盘配置信息。
+ * @method array getDataDisks() 获取实例数据盘配置信息。最多支持指定11块数据盘。采取整体修改，因此请提供修改后的全部值。
+ * @method void setDataDisks(array $DataDisks) 设置实例数据盘配置信息。最多支持指定11块数据盘。采取整体修改，因此请提供修改后的全部值。
  */
 class ModifyLaunchConfigurationAttributesRequest extends AbstractModel
 {
@@ -159,6 +163,16 @@ class ModifyLaunchConfigurationAttributesRequest extends AbstractModel
     public $DiskTypePolicy;
 
     /**
+     * @var SystemDisk 实例系统盘配置信息。
+     */
+    public $SystemDisk;
+
+    /**
+     * @var array 实例数据盘配置信息。最多支持指定11块数据盘。采取整体修改，因此请提供修改后的全部值。
+     */
+    public $DataDisks;
+
+    /**
      * @param string $LaunchConfigurationId 启动配置ID
      * @param string $ImageId 指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-8toqc6s3`。镜像类型分为四种：<br/><li>公共镜像</li><li>自定义镜像</li><li>共享镜像</li><li>服务市场镜像</li><br/>可通过以下方式获取可用的镜像ID：<br/><li>`公共镜像`、`自定义镜像`、`共享镜像`的镜像ID可通过登录[控制台](https://console.cloud.tencent.com/cvm/image?rid=1&imageType=PUBLIC_IMAGE)查询；`服务镜像市场`的镜像ID可通过[云市场](https://market.cloud.tencent.com/list)查询。</li><li>通过调用接口 [DescribeImages](https://cloud.tencent.com/document/api/213/15715) ，取返回信息中的`ImageId`字段。</li>
      * @param array $InstanceTypes 实例类型列表，不同实例机型指定了不同的资源规格，最多支持10种实例机型。
@@ -188,6 +202,8 @@ class ModifyLaunchConfigurationAttributesRequest extends AbstractModel
      * @param string $DiskTypePolicy 云盘类型选择策略，取值范围：
 <br><li>ORIGINAL：使用设置的云盘类型。
 <br><li>AUTOMATIC：自动选择当前可用的云盘类型。
+     * @param SystemDisk $SystemDisk 实例系统盘配置信息。
+     * @param array $DataDisks 实例数据盘配置信息。最多支持指定11块数据盘。采取整体修改，因此请提供修改后的全部值。
      */
     function __construct()
     {
@@ -251,6 +267,20 @@ class ModifyLaunchConfigurationAttributesRequest extends AbstractModel
 
         if (array_key_exists("DiskTypePolicy",$param) and $param["DiskTypePolicy"] !== null) {
             $this->DiskTypePolicy = $param["DiskTypePolicy"];
+        }
+
+        if (array_key_exists("SystemDisk",$param) and $param["SystemDisk"] !== null) {
+            $this->SystemDisk = new SystemDisk();
+            $this->SystemDisk->deserialize($param["SystemDisk"]);
+        }
+
+        if (array_key_exists("DataDisks",$param) and $param["DataDisks"] !== null) {
+            $this->DataDisks = [];
+            foreach ($param["DataDisks"] as $key => $value){
+                $obj = new DataDisk();
+                $obj->deserialize($value);
+                array_push($this->DataDisks, $obj);
+            }
         }
     }
 }

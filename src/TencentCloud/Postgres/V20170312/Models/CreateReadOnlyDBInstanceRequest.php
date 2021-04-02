@@ -58,6 +58,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReadOnlyGroupId(string $ReadOnlyGroupId) 设置只读组ID。
  * @method Tag getTagList() 获取实例需要绑定的Tag信息，默认为空
  * @method void setTagList(Tag $TagList) 设置实例需要绑定的Tag信息，默认为空
+ * @method array getSecurityGroupIds() 获取安全组id
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置安全组id
  */
 class CreateReadOnlyDBInstanceRequest extends AbstractModel
 {
@@ -157,6 +159,11 @@ class CreateReadOnlyDBInstanceRequest extends AbstractModel
     public $TagList;
 
     /**
+     * @var array 安全组id
+     */
+    public $SecurityGroupIds;
+
+    /**
      * @param string $SpecCode 售卖规格ID。该参数可以通过调用DescribeProductConfig的返回值中的SpecCode字段来获取。
      * @param string $DBVersion PostgreSQL内核版本，目前强制和主实例保持一致
      * @param integer $Storage 实例容量大小，单位：GB。
@@ -176,6 +183,7 @@ class CreateReadOnlyDBInstanceRequest extends AbstractModel
      * @param integer $NeedSupportIpv6 是否需要支持Ipv6，1：是，0：否
      * @param string $ReadOnlyGroupId 只读组ID。
      * @param Tag $TagList 实例需要绑定的Tag信息，默认为空
+     * @param array $SecurityGroupIds 安全组id
      */
     function __construct()
     {
@@ -265,6 +273,10 @@ class CreateReadOnlyDBInstanceRequest extends AbstractModel
         if (array_key_exists("TagList",$param) and $param["TagList"] !== null) {
             $this->TagList = new Tag();
             $this->TagList->deserialize($param["TagList"]);
+        }
+
+        if (array_key_exists("SecurityGroupIds",$param) and $param["SecurityGroupIds"] !== null) {
+            $this->SecurityGroupIds = $param["SecurityGroupIds"];
         }
     }
 }

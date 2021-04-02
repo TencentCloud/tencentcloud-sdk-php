@@ -38,6 +38,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSampleRate(integer $SampleRate) 设置采样率，单位：Hz。可选项：32000，44100,48000
  * @method Denoise getDenoise() 获取音频降噪信息
  * @method void setDenoise(Denoise $Denoise) 设置音频降噪信息
+ * @method integer getEnableMuteAudio() 获取开启添加静音，可选项：
+0：不开启，
+1：开启，
+默认不开启
+ * @method void setEnableMuteAudio(integer $EnableMuteAudio) 设置开启添加静音，可选项：
+0：不开启，
+1：开启，
+默认不开启
  */
 class AudioInfo extends AbstractModel
 {
@@ -71,6 +79,14 @@ class AudioInfo extends AbstractModel
     public $Denoise;
 
     /**
+     * @var integer 开启添加静音，可选项：
+0：不开启，
+1：开启，
+默认不开启
+     */
+    public $EnableMuteAudio;
+
+    /**
      * @param integer $Bitrate 音频码率，取值范围：0 和 [26, 256]，单位：kbps。
 注意：当取值为 0，表示音频码率和原始音频保持一致。
      * @param string $Codec 音频编码器，可选项：aac,mp3,ac3,flac,mp2。
@@ -80,6 +96,10 @@ class AudioInfo extends AbstractModel
 6：立体声。
      * @param integer $SampleRate 采样率，单位：Hz。可选项：32000，44100,48000
      * @param Denoise $Denoise 音频降噪信息
+     * @param integer $EnableMuteAudio 开启添加静音，可选项：
+0：不开启，
+1：开启，
+默认不开启
      */
     function __construct()
     {
@@ -113,6 +133,10 @@ class AudioInfo extends AbstractModel
         if (array_key_exists("Denoise",$param) and $param["Denoise"] !== null) {
             $this->Denoise = new Denoise();
             $this->Denoise->deserialize($param["Denoise"]);
+        }
+
+        if (array_key_exists("EnableMuteAudio",$param) and $param["EnableMuteAudio"] !== null) {
+            $this->EnableMuteAudio = $param["EnableMuteAudio"];
         }
     }
 }

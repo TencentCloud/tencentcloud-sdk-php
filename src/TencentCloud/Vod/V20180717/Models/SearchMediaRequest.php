@@ -114,6 +114,12 @@ use TencentCloud\Common\AbstractModel;
 <li>keyFrameDescInfo（打点信息）。</li>
 <li>adaptiveDynamicStreamingInfo（转自适应码流信息）。</li>
 <li>miniProgramReviewInfo（小程序审核信息）。</li>
+ * @method array getStorageRegions() 获取媒体文件存储地区，如 ap-chongqing，参见[地域列表](https://cloud.tencent.com/document/product/266/9760#.E5.B7.B2.E6.94.AF.E6.8C.81.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8)。
+<li>单个存储地区长度限制：20个字符。</li>
+<li>数组长度限制：20。</li>
+ * @method void setStorageRegions(array $StorageRegions) 设置媒体文件存储地区，如 ap-chongqing，参见[地域列表](https://cloud.tencent.com/document/product/266/9760#.E5.B7.B2.E6.94.AF.E6.8C.81.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8)。
+<li>单个存储地区长度限制：20个字符。</li>
+<li>数组长度限制：20。</li>
  * @method integer getSubAppId() 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
  * @method void setSubAppId(integer $SubAppId) 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
  * @method string getText() 获取（不推荐：应使用 Names、NamePrefixes 或 Descriptions 替代）
@@ -263,6 +269,13 @@ class SearchMediaRequest extends AbstractModel
     public $Filters;
 
     /**
+     * @var array 媒体文件存储地区，如 ap-chongqing，参见[地域列表](https://cloud.tencent.com/document/product/266/9760#.E5.B7.B2.E6.94.AF.E6.8C.81.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8)。
+<li>单个存储地区长度限制：20个字符。</li>
+<li>数组长度限制：20。</li>
+     */
+    public $StorageRegions;
+
+    /**
      * @var integer 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     public $SubAppId;
@@ -357,6 +370,9 @@ class SearchMediaRequest extends AbstractModel
 <li>keyFrameDescInfo（打点信息）。</li>
 <li>adaptiveDynamicStreamingInfo（转自适应码流信息）。</li>
 <li>miniProgramReviewInfo（小程序审核信息）。</li>
+     * @param array $StorageRegions 媒体文件存储地区，如 ap-chongqing，参见[地域列表](https://cloud.tencent.com/document/product/266/9760#.E5.B7.B2.E6.94.AF.E6.8C.81.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8)。
+<li>单个存储地区长度限制：20个字符。</li>
+<li>数组长度限制：20。</li>
      * @param integer $SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      * @param string $Text （不推荐：应使用 Names、NamePrefixes 或 Descriptions 替代）
 搜索文本，模糊匹配媒体文件名称或描述信息，匹配项越多，匹配度越高，排序越优先。长度限制：64个字符。
@@ -450,6 +466,10 @@ class SearchMediaRequest extends AbstractModel
 
         if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
             $this->Filters = $param["Filters"];
+        }
+
+        if (array_key_exists("StorageRegions",$param) and $param["StorageRegions"] !== null) {
+            $this->StorageRegions = $param["StorageRegions"];
         }
 
         if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {

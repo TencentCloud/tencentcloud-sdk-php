@@ -38,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setValidDate(string $ValidDate) 设置证件有效期限
  * @method string getAuthority() 获取签发机关
  * @method void setAuthority(string $Authority) 设置签发机关
+ * @method string getVisaNum() 获取签发次数
+ * @method void setVisaNum(string $VisaNum) 设置签发次数
+ * @method string getPassNo() 获取通行证号码
+ * @method void setPassNo(string $PassNo) 设置通行证号码
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -85,6 +89,16 @@ class HmtResidentPermitOCRResponse extends AbstractModel
     public $Authority;
 
     /**
+     * @var string 签发次数
+     */
+    public $VisaNum;
+
+    /**
+     * @var string 通行证号码
+     */
+    public $PassNo;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -99,6 +113,8 @@ class HmtResidentPermitOCRResponse extends AbstractModel
 1-反面
      * @param string $ValidDate 证件有效期限
      * @param string $Authority 签发机关
+     * @param string $VisaNum 签发次数
+     * @param string $PassNo 通行证号码
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -144,6 +160,14 @@ class HmtResidentPermitOCRResponse extends AbstractModel
 
         if (array_key_exists("Authority",$param) and $param["Authority"] !== null) {
             $this->Authority = $param["Authority"];
+        }
+
+        if (array_key_exists("VisaNum",$param) and $param["VisaNum"] !== null) {
+            $this->VisaNum = $param["VisaNum"];
+        }
+
+        if (array_key_exists("PassNo",$param) and $param["PassNo"] !== null) {
+            $this->PassNo = $param["PassNo"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -170,6 +170,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHardwareResourceType(string $HardwareResourceType) 设置资源类型, host/pod
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getIsDynamicSpec() 获取是否浮动规格，1是，0否
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsDynamicSpec(integer $IsDynamicSpec) 设置是否浮动规格，1是，0否
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDynamicPodSpec() 获取浮动规格值json字符串
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDynamicPodSpec(string $DynamicPodSpec) 设置浮动规格值json字符串
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class NodeHardwareInfo extends AbstractModel
 {
@@ -397,6 +405,18 @@ class NodeHardwareInfo extends AbstractModel
     public $HardwareResourceType;
 
     /**
+     * @var integer 是否浮动规格，1是，0否
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsDynamicSpec;
+
+    /**
+     * @var string 浮动规格值json字符串
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DynamicPodSpec;
+
+    /**
      * @param integer $AppId 用户APPID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SerialNo 序列号
@@ -471,6 +491,10 @@ class NodeHardwareInfo extends AbstractModel
      * @param integer $AutoFlag 是否是自动扩缩容节点，0为普通节点，1为自动扩缩容节点。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $HardwareResourceType 资源类型, host/pod
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $IsDynamicSpec 是否浮动规格，1是，0否
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DynamicPodSpec 浮动规格值json字符串
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -643,6 +667,14 @@ class NodeHardwareInfo extends AbstractModel
 
         if (array_key_exists("HardwareResourceType",$param) and $param["HardwareResourceType"] !== null) {
             $this->HardwareResourceType = $param["HardwareResourceType"];
+        }
+
+        if (array_key_exists("IsDynamicSpec",$param) and $param["IsDynamicSpec"] !== null) {
+            $this->IsDynamicSpec = $param["IsDynamicSpec"];
+        }
+
+        if (array_key_exists("DynamicPodSpec",$param) and $param["DynamicPodSpec"] !== null) {
+            $this->DynamicPodSpec = $param["DynamicPodSpec"];
         }
     }
 }

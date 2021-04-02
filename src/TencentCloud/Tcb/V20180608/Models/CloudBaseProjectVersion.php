@@ -114,6 +114,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFailType(string $FailType) 设置错误类型
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRepoUrl() 获取私有仓库地址
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRepoUrl(string $RepoUrl) 设置私有仓库地址
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getAutoDeployOnCodeChange() 获取是否私有仓库代码变更触发自动部署
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAutoDeployOnCodeChange(boolean $AutoDeployOnCodeChange) 设置是否私有仓库代码变更触发自动部署
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CloudBaseProjectVersion extends AbstractModel
 {
@@ -241,6 +249,18 @@ class CloudBaseProjectVersion extends AbstractModel
     public $FailType;
 
     /**
+     * @var string 私有仓库地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RepoUrl;
+
+    /**
+     * @var boolean 是否私有仓库代码变更触发自动部署
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AutoDeployOnCodeChange;
+
+    /**
      * @param string $Name 项目名
      * @param string $Sam SAM json
 注意：此字段可能返回 null，表示取不到有效值。
@@ -287,6 +307,10 @@ class CloudBaseProjectVersion extends AbstractModel
      * @param string $ExtensionId 扩展id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FailType 错误类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RepoUrl 私有仓库地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $AutoDeployOnCodeChange 是否私有仓库代码变更触发自动部署
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -382,6 +406,14 @@ class CloudBaseProjectVersion extends AbstractModel
 
         if (array_key_exists("FailType",$param) and $param["FailType"] !== null) {
             $this->FailType = $param["FailType"];
+        }
+
+        if (array_key_exists("RepoUrl",$param) and $param["RepoUrl"] !== null) {
+            $this->RepoUrl = $param["RepoUrl"];
+        }
+
+        if (array_key_exists("AutoDeployOnCodeChange",$param) and $param["AutoDeployOnCodeChange"] !== null) {
+            $this->AutoDeployOnCodeChange = $param["AutoDeployOnCodeChange"];
         }
     }
 }

@@ -74,6 +74,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClickHouseClusterType(string $ClickHouseClusterType) 设置使用clickhouse集群扩容时，选择的机器分组类型。new为新增，old为选择旧分组
  * @method string getYarnNodeLabel() 获取规则扩容指定 yarn node label
  * @method void setYarnNodeLabel(string $YarnNodeLabel) 设置规则扩容指定 yarn node label
+ * @method PodParameter getPodParameter() 获取POD自定义权限和自定义参数
+ * @method void setPodParameter(PodParameter $PodParameter) 设置POD自定义权限和自定义参数
+ * @method integer getMasterCount() 获取扩容的Master节点的数量。
+ * @method void setMasterCount(integer $MasterCount) 设置扩容的Master节点的数量。
  */
 class ScaleOutInstanceRequest extends AbstractModel
 {
@@ -181,6 +185,16 @@ class ScaleOutInstanceRequest extends AbstractModel
     public $YarnNodeLabel;
 
     /**
+     * @var PodParameter POD自定义权限和自定义参数
+     */
+    public $PodParameter;
+
+    /**
+     * @var integer 扩容的Master节点的数量。
+     */
+    public $MasterCount;
+
+    /**
      * @param string $TimeUnit 扩容的时间单位。取值范围：
 <li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
 <li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
@@ -208,6 +222,8 @@ class ScaleOutInstanceRequest extends AbstractModel
      * @param string $ClickHouseClusterName 使用clickhouse集群扩容时，选择的机器分组名称
      * @param string $ClickHouseClusterType 使用clickhouse集群扩容时，选择的机器分组类型。new为新增，old为选择旧分组
      * @param string $YarnNodeLabel 规则扩容指定 yarn node label
+     * @param PodParameter $PodParameter POD自定义权限和自定义参数
+     * @param integer $MasterCount 扩容的Master节点的数量。
      */
     function __construct()
     {
@@ -307,6 +323,15 @@ class ScaleOutInstanceRequest extends AbstractModel
 
         if (array_key_exists("YarnNodeLabel",$param) and $param["YarnNodeLabel"] !== null) {
             $this->YarnNodeLabel = $param["YarnNodeLabel"];
+        }
+
+        if (array_key_exists("PodParameter",$param) and $param["PodParameter"] !== null) {
+            $this->PodParameter = new PodParameter();
+            $this->PodParameter->deserialize($param["PodParameter"]);
+        }
+
+        if (array_key_exists("MasterCount",$param) and $param["MasterCount"] !== null) {
+            $this->MasterCount = $param["MasterCount"];
         }
     }
 }

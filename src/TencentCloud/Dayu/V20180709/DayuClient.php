@@ -56,6 +56,7 @@ use TencentCloud\Dayu\V20180709\Models as Models;
  * @method Models\DescribeBaradDataResponse DescribeBaradData(Models\DescribeBaradDataRequest $req) 为大禹子产品提供业务转发指标数据的接口
  * @method Models\DescribeBasicCCThresholdResponse DescribeBasicCCThreshold(Models\DescribeBasicCCThresholdRequest $req) 获取基础防护CC防护阈值
  * @method Models\DescribeBasicDeviceThresholdResponse DescribeBasicDeviceThreshold(Models\DescribeBasicDeviceThresholdRequest $req) 获取基础防护黑洞阈值
+ * @method Models\DescribeBizHttpStatusResponse DescribeBizHttpStatus(Models\DescribeBizHttpStatusRequest $req) 获取业务流量状态码统计
  * @method Models\DescribeBizTrendResponse DescribeBizTrend(Models\DescribeBizTrendRequest $req) 获取业务流量曲线
  * @method Models\DescribeCCAlarmThresholdResponse DescribeCCAlarmThreshold(Models\DescribeCCAlarmThresholdRequest $req) 获取高防包、高防IP、高防IP专业版、棋牌盾产品设置CC攻击的告警通知阈值
  * @method Models\DescribeCCEvListResponse DescribeCCEvList(Models\DescribeCCEvListRequest $req) 获取CC攻击事件列表

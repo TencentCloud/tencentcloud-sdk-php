@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeMachine请求参数结构体
  *
- * @method integer getIpv6Enable() 获取是否按ipv6过滤
- * @method void setIpv6Enable(integer $Ipv6Enable) 设置是否按ipv6过滤
+ * @method integer getIpv6Enable() 获取不为0，表示查询支持ipv6的机器
+ * @method void setIpv6Enable(integer $Ipv6Enable) 设置不为0，表示查询支持ipv6的机器
  */
 class DescribeMachineRequest extends AbstractModel
 {
     /**
-     * @var integer 是否按ipv6过滤
+     * @var integer 不为0，表示查询支持ipv6的机器
      */
     public $Ipv6Enable;
 
     /**
-     * @param integer $Ipv6Enable 是否按ipv6过滤
+     * @param integer $Ipv6Enable 不为0，表示查询支持ipv6的机器
      */
     function __construct()
     {

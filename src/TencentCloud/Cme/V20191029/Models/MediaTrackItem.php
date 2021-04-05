@@ -21,13 +21,15 @@ use TencentCloud\Common\AbstractModel;
  * 媒体轨道的片段信息
  *
  * @method string getType() 获取片段类型。取值有：
-<li>Video：视频片段。</li>
-<li>Audio：音频片段。</li>
-<li>Empty：空白片段。</li>
+<li>Video：视频片段；</li>
+<li>Audio：音频片段；</li>
+<li>Empty：空白片段；</li>
+<li>Transition：转场。</li>
  * @method void setType(string $Type) 设置片段类型。取值有：
-<li>Video：视频片段。</li>
-<li>Audio：音频片段。</li>
-<li>Empty：空白片段。</li>
+<li>Video：视频片段；</li>
+<li>Audio：音频片段；</li>
+<li>Empty：空白片段；</li>
+<li>Transition：转场。</li>
  * @method VideoTrackItem getVideoItem() 获取视频片段，当 Type = Video 时有效。
  * @method void setVideoItem(VideoTrackItem $VideoItem) 设置视频片段，当 Type = Video 时有效。
  * @method AudioTrackItem getAudioItem() 获取音频片段，当 Type = Audio 时有效。
@@ -36,14 +38,17 @@ use TencentCloud\Common\AbstractModel;
 <li>使用 EmptyTrackItem 进行占位，来定位某个Item。</li>
  * @method void setEmptyItem(EmptyTrackItem $EmptyItem) 设置空白片段，当 Type = Empty 时有效。空片段用于时间轴的占位。<li>如需要两个音频片段之间有一段时间的静音，可以用 EmptyTrackItem 来进行占位。</li>
 <li>使用 EmptyTrackItem 进行占位，来定位某个Item。</li>
+ * @method MediaTransitionItem getTransitionItem() 获取转场，当 Type = Transition 时有效。
+ * @method void setTransitionItem(MediaTransitionItem $TransitionItem) 设置转场，当 Type = Transition 时有效。
  */
 class MediaTrackItem extends AbstractModel
 {
     /**
      * @var string 片段类型。取值有：
-<li>Video：视频片段。</li>
-<li>Audio：音频片段。</li>
-<li>Empty：空白片段。</li>
+<li>Video：视频片段；</li>
+<li>Audio：音频片段；</li>
+<li>Empty：空白片段；</li>
+<li>Transition：转场。</li>
      */
     public $Type;
 
@@ -64,14 +69,21 @@ class MediaTrackItem extends AbstractModel
     public $EmptyItem;
 
     /**
+     * @var MediaTransitionItem 转场，当 Type = Transition 时有效。
+     */
+    public $TransitionItem;
+
+    /**
      * @param string $Type 片段类型。取值有：
-<li>Video：视频片段。</li>
-<li>Audio：音频片段。</li>
-<li>Empty：空白片段。</li>
+<li>Video：视频片段；</li>
+<li>Audio：音频片段；</li>
+<li>Empty：空白片段；</li>
+<li>Transition：转场。</li>
      * @param VideoTrackItem $VideoItem 视频片段，当 Type = Video 时有效。
      * @param AudioTrackItem $AudioItem 音频片段，当 Type = Audio 时有效。
      * @param EmptyTrackItem $EmptyItem 空白片段，当 Type = Empty 时有效。空片段用于时间轴的占位。<li>如需要两个音频片段之间有一段时间的静音，可以用 EmptyTrackItem 来进行占位。</li>
 <li>使用 EmptyTrackItem 进行占位，来定位某个Item。</li>
+     * @param MediaTransitionItem $TransitionItem 转场，当 Type = Transition 时有效。
      */
     function __construct()
     {
@@ -103,6 +115,11 @@ class MediaTrackItem extends AbstractModel
         if (array_key_exists("EmptyItem",$param) and $param["EmptyItem"] !== null) {
             $this->EmptyItem = new EmptyTrackItem();
             $this->EmptyItem->deserialize($param["EmptyItem"]);
+        }
+
+        if (array_key_exists("TransitionItem",$param) and $param["TransitionItem"] !== null) {
+            $this->TransitionItem = new MediaTransitionItem();
+            $this->TransitionItem->deserialize($param["TransitionItem"]);
         }
     }
 }

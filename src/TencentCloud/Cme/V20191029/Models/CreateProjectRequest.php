@@ -26,10 +26,12 @@ use TencentCloud\Common\AbstractModel;
 <li>VIDEO_EDIT：视频编辑。</li>
 <li>SWITCHER：导播台。</li>
 <li>VIDEO_SEGMENTATION：视频拆条。</li>
+<li>STREAM_CONNECT：云转推。</li>
  * @method void setCategory(string $Category) 设置项目类别，取值有：
 <li>VIDEO_EDIT：视频编辑。</li>
 <li>SWITCHER：导播台。</li>
 <li>VIDEO_SEGMENTATION：视频拆条。</li>
+<li>STREAM_CONNECT：云转推。</li>
  * @method string getName() 获取项目名称，不可超过30个字符。
  * @method void setName(string $Name) 设置项目名称，不可超过30个字符。
  * @method Entity getOwner() 获取项目归属者。
@@ -48,6 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVideoEditProjectInput(VideoEditProjectInput $VideoEditProjectInput) 设置视频编辑信息，仅当项目类型为 VIDEO_EDIT 时必填。
  * @method VideoSegmentationProjectInput getVideoSegmentationProjectInput() 获取视频拆条信息，仅当项目类型为 VIDEO_SEGMENTATION  时必填。
  * @method void setVideoSegmentationProjectInput(VideoSegmentationProjectInput $VideoSegmentationProjectInput) 设置视频拆条信息，仅当项目类型为 VIDEO_SEGMENTATION  时必填。
+ * @method StreamConnectProjectInput getStreamConnectProjectInput() 获取云转推项目信息，仅当项目类型为 STREAM_CONNECT 时必填。
+ * @method void setStreamConnectProjectInput(StreamConnectProjectInput $StreamConnectProjectInput) 设置云转推项目信息，仅当项目类型为 STREAM_CONNECT 时必填。
  */
 class CreateProjectRequest extends AbstractModel
 {
@@ -61,6 +65,7 @@ class CreateProjectRequest extends AbstractModel
 <li>VIDEO_EDIT：视频编辑。</li>
 <li>SWITCHER：导播台。</li>
 <li>VIDEO_SEGMENTATION：视频拆条。</li>
+<li>STREAM_CONNECT：云转推。</li>
      */
     public $Category;
 
@@ -106,11 +111,17 @@ class CreateProjectRequest extends AbstractModel
     public $VideoSegmentationProjectInput;
 
     /**
+     * @var StreamConnectProjectInput 云转推项目信息，仅当项目类型为 STREAM_CONNECT 时必填。
+     */
+    public $StreamConnectProjectInput;
+
+    /**
      * @param string $Platform 平台名称，指定访问的平台。
      * @param string $Category 项目类别，取值有：
 <li>VIDEO_EDIT：视频编辑。</li>
 <li>SWITCHER：导播台。</li>
 <li>VIDEO_SEGMENTATION：视频拆条。</li>
+<li>STREAM_CONNECT：云转推。</li>
      * @param string $Name 项目名称，不可超过30个字符。
      * @param Entity $Owner 项目归属者。
      * @param string $AspectRatio 画布宽高比。
@@ -120,6 +131,7 @@ class CreateProjectRequest extends AbstractModel
      * @param LiveStreamClipProjectInput $LiveStreamClipProjectInput 直播剪辑信息，暂未开放，请勿使用。
      * @param VideoEditProjectInput $VideoEditProjectInput 视频编辑信息，仅当项目类型为 VIDEO_EDIT 时必填。
      * @param VideoSegmentationProjectInput $VideoSegmentationProjectInput 视频拆条信息，仅当项目类型为 VIDEO_SEGMENTATION  时必填。
+     * @param StreamConnectProjectInput $StreamConnectProjectInput 云转推项目信息，仅当项目类型为 STREAM_CONNECT 时必填。
      */
     function __construct()
     {
@@ -177,6 +189,11 @@ class CreateProjectRequest extends AbstractModel
         if (array_key_exists("VideoSegmentationProjectInput",$param) and $param["VideoSegmentationProjectInput"] !== null) {
             $this->VideoSegmentationProjectInput = new VideoSegmentationProjectInput();
             $this->VideoSegmentationProjectInput->deserialize($param["VideoSegmentationProjectInput"]);
+        }
+
+        if (array_key_exists("StreamConnectProjectInput",$param) and $param["StreamConnectProjectInput"] !== null) {
+            $this->StreamConnectProjectInput = new StreamConnectProjectInput();
+            $this->StreamConnectProjectInput->deserialize($param["StreamConnectProjectInput"]);
         }
     }
 }

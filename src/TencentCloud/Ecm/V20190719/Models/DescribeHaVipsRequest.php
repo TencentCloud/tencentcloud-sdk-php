@@ -32,10 +32,10 @@ havip-id - String - HAVIP唯一ID，形如：havip-9o233uri。
 havip-name - String - HAVIP名称。
 vpc-id - String - HAVIP所在私有网络ID。
 subnet-id - String - HAVIP所在子网ID。
- * @method integer getOffset() 获取偏移量。
- * @method void setOffset(integer $Offset) 设置偏移量。
- * @method integer getLimit() 获取返回数量。
- * @method void setLimit(integer $Limit) 设置返回数量。
+ * @method integer getOffset() 获取偏移量，默认值是0。
+ * @method void setOffset(integer $Offset) 设置偏移量，默认值是0。
+ * @method integer getLimit() 获取返回数量，默认值是20，最大是100。
+ * @method void setLimit(integer $Limit) 设置返回数量，默认值是20，最大是100。
  * @method string getEcmRegion() 获取Ecm 区域，不填代表全部区域。
  * @method void setEcmRegion(string $EcmRegion) 设置Ecm 区域，不填代表全部区域。
  */
@@ -56,12 +56,12 @@ subnet-id - String - HAVIP所在子网ID。
     public $Filters;
 
     /**
-     * @var integer 偏移量。
+     * @var integer 偏移量，默认值是0。
      */
     public $Offset;
 
     /**
-     * @var integer 返回数量。
+     * @var integer 返回数量，默认值是20，最大是100。
      */
     public $Limit;
 
@@ -77,8 +77,8 @@ havip-id - String - HAVIP唯一ID，形如：havip-9o233uri。
 havip-name - String - HAVIP名称。
 vpc-id - String - HAVIP所在私有网络ID。
 subnet-id - String - HAVIP所在子网ID。
-     * @param integer $Offset 偏移量。
-     * @param integer $Limit 返回数量。
+     * @param integer $Offset 偏移量，默认值是0。
+     * @param integer $Limit 返回数量，默认值是20，最大是100。
      * @param string $EcmRegion Ecm 区域，不填代表全部区域。
      */
     function __construct()

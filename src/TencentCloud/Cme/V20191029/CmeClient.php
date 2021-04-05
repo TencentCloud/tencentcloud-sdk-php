@@ -28,7 +28,7 @@ use TencentCloud\Cme\V20191029\Models as Models;
 <li>分类层数不能超过10；</li>
 <li>子分类数不能超过10。</li>
  * @method Models\CreateLinkResponse CreateLink(Models\CreateLinkRequest $req)  创建媒体链接或分类路径链接，将源资源信息链接到目标。
- * @method Models\CreateProjectResponse CreateProject(Models\CreateProjectRequest $req) 创建云剪的编辑项目，支持创建视频剪辑、直播剪辑、导播台项目以及视频拆条项目。
+ * @method Models\CreateProjectResponse CreateProject(Models\CreateProjectRequest $req) 创建云剪的编辑项目，支持创建视频剪辑、直播剪辑、导播台、视频拆条、录制回放以及云转推项目。
 
  * @method Models\CreateTeamResponse CreateTeam(Models\CreateTeamRequest $req) 创建一个团队。
  * @method Models\DeleteClassResponse DeleteClass(Models\DeleteClassRequest $req) 删除分类信息，删除时检验下述限制：

@@ -42,6 +42,8 @@ use TencentCloud\Iotcloud\V20180614\Models as Models;
  * @method Models\DescribeAllDevicesResponse DescribeAllDevices(Models\DescribeAllDevicesRequest $req) 查询所有设备列表
  * @method Models\DescribeDeviceResponse DescribeDevice(Models\DescribeDeviceRequest $req) 本接口（DescribeDevice）用于查看设备信息
  * @method Models\DescribeDeviceClientKeyResponse DescribeDeviceClientKey(Models\DescribeDeviceClientKeyRequest $req) 获取证书认证类型设备的私钥，刚生成或者重置设备后仅可调用一次 
+ * @method Models\DescribeDeviceResourceResponse DescribeDeviceResource(Models\DescribeDeviceResourceRequest $req) 本接口（DescribeDeviceResource）用于查询设备资源详情。 
+ * @method Models\DescribeDeviceResourcesResponse DescribeDeviceResources(Models\DescribeDeviceResourcesRequest $req) 本接口（DescribeDeviceResources）用于查询设备资源列表。 
  * @method Models\DescribeDeviceShadowResponse DescribeDeviceShadow(Models\DescribeDeviceShadowRequest $req) 本接口（DescribeDeviceShadow）用于查询虚拟设备信息。 
  * @method Models\DescribeDevicesResponse DescribeDevices(Models\DescribeDevicesRequest $req) 本接口（DescribeDevices）用于查询物联网通信设备的设备列表。 
  * @method Models\DescribeFirmwareResponse DescribeFirmware(Models\DescribeFirmwareRequest $req) 查询固件信息
@@ -53,14 +55,19 @@ use TencentCloud\Iotcloud\V20180614\Models as Models;
  * @method Models\DescribeLoraDeviceResponse DescribeLoraDevice(Models\DescribeLoraDeviceRequest $req) 获取lora类型设备的详细信息 
  * @method Models\DescribeMultiDevTaskResponse DescribeMultiDevTask(Models\DescribeMultiDevTaskRequest $req) 本接口（DescribeMultiDevTask）用于查询批量创建设备任务的执行状态。
  * @method Models\DescribeMultiDevicesResponse DescribeMultiDevices(Models\DescribeMultiDevicesRequest $req) 本接口（DescribeMultiDevices）用于查询批量创建设备的执行结果。
+ * @method Models\DescribeProductResourceResponse DescribeProductResource(Models\DescribeProductResourceRequest $req) 本接口（DescribeProductResource）用于查询产品资源详情。 
+ * @method Models\DescribeProductResourcesResponse DescribeProductResources(Models\DescribeProductResourcesRequest $req) 本接口（DescribeProductResources）用于查询产品资源列表。 
  * @method Models\DescribeProductTaskResponse DescribeProductTask(Models\DescribeProductTaskRequest $req) 本接口（DescribeProductTask）用于查看产品级别的任务信息
  * @method Models\DescribeProductTasksResponse DescribeProductTasks(Models\DescribeProductTasksRequest $req) 本接口（DescribeProductTasks）用于查看产品级别的任务列表
  * @method Models\DescribeProductsResponse DescribeProducts(Models\DescribeProductsRequest $req) 本接口（DescribeProducts）用于列出产品列表。 
+ * @method Models\DescribePushResourceTaskStatisticsResponse DescribePushResourceTaskStatistics(Models\DescribePushResourceTaskStatisticsRequest $req) 查询推送资源任务统计信息
+ * @method Models\DescribeResourceTasksResponse DescribeResourceTasks(Models\DescribeResourceTasksRequest $req) 查询资源推送任务列表
  * @method Models\DescribeTaskResponse DescribeTask(Models\DescribeTaskRequest $req) 本接口（DescribeTask）用于查询一个已创建任务的详情，任务保留一个月 
  * @method Models\DescribeTasksResponse DescribeTasks(Models\DescribeTasksRequest $req) 本接口（DescribeTasks）用于查询已创建的任务列表，任务保留一个月 
  * @method Models\DisableTopicRuleResponse DisableTopicRule(Models\DisableTopicRuleRequest $req) 本接口（DisableTopicRule）用于禁用规则
  * @method Models\EditFirmwareResponse EditFirmware(Models\EditFirmwareRequest $req) 编辑固件信息
  * @method Models\EnableTopicRuleResponse EnableTopicRule(Models\EnableTopicRuleRequest $req) 本接口（EnableTopicRule）用于启用规则 
+ * @method Models\GetUserResourceInfoResponse GetUserResourceInfo(Models\GetUserResourceInfoRequest $req) 本接口（GetUserResourceInfo）用于查询用户资源使用信息。
  * @method Models\PublishAsDeviceResponse PublishAsDevice(Models\PublishAsDeviceRequest $req) 模拟lora类型的设备端向服务器端发送消息
  * @method Models\PublishBroadcastMessageResponse PublishBroadcastMessage(Models\PublishBroadcastMessageRequest $req) 发布广播消息
  * @method Models\PublishMessageResponse PublishMessage(Models\PublishMessageRequest $req) 本接口（PublishMessage）用于向某个主题发消息。 

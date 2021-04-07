@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 负载均衡的带宽限制等信息。
  *
- * @method integer getInternetMaxBandwidthOut() 获取最大出带宽，单位Mbps。
- * @method void setInternetMaxBandwidthOut(integer $InternetMaxBandwidthOut) 设置最大出带宽，单位Mbps。
+ * @method integer getInternetMaxBandwidthOut() 获取最大出带宽，单位Mbps。默认值10
+ * @method void setInternetMaxBandwidthOut(integer $InternetMaxBandwidthOut) 设置最大出带宽，单位Mbps。默认值10
  */
 class LoadBalancerInternetAccessible extends AbstractModel
 {
     /**
-     * @var integer 最大出带宽，单位Mbps。
+     * @var integer 最大出带宽，单位Mbps。默认值10
      */
     public $InternetMaxBandwidthOut;
 
     /**
-     * @param integer $InternetMaxBandwidthOut 最大出带宽，单位Mbps。
+     * @param integer $InternetMaxBandwidthOut 最大出带宽，单位Mbps。默认值10
      */
     function __construct()
     {

@@ -38,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLinkMaterial(LinkMaterial $LinkMaterial) 设置链接媒体信息。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method VideoEditTemplateMaterial getVideoEditTemplateMaterial() 获取模板媒体信息。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVideoEditTemplateMaterial(VideoEditTemplateMaterial $VideoEditTemplateMaterial) 设置模板媒体信息。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method OtherMaterial getOtherMaterial() 获取其他类型媒体信息。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOtherMaterial(OtherMaterial $OtherMaterial) 设置其他类型媒体信息。
@@ -75,6 +79,12 @@ class MaterialInfo extends AbstractModel
     public $LinkMaterial;
 
     /**
+     * @var VideoEditTemplateMaterial 模板媒体信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $VideoEditTemplateMaterial;
+
+    /**
      * @var OtherMaterial 其他类型媒体信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -89,6 +99,8 @@ class MaterialInfo extends AbstractModel
      * @param ImageMaterial $ImageMaterial 图片媒体信息。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param LinkMaterial $LinkMaterial 链接媒体信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VideoEditTemplateMaterial $VideoEditTemplateMaterial 模板媒体信息。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param OtherMaterial $OtherMaterial 其他类型媒体信息。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -129,6 +141,11 @@ class MaterialInfo extends AbstractModel
         if (array_key_exists("LinkMaterial",$param) and $param["LinkMaterial"] !== null) {
             $this->LinkMaterial = new LinkMaterial();
             $this->LinkMaterial->deserialize($param["LinkMaterial"]);
+        }
+
+        if (array_key_exists("VideoEditTemplateMaterial",$param) and $param["VideoEditTemplateMaterial"] !== null) {
+            $this->VideoEditTemplateMaterial = new VideoEditTemplateMaterial();
+            $this->VideoEditTemplateMaterial->deserialize($param["VideoEditTemplateMaterial"]);
         }
 
         if (array_key_exists("OtherMaterial",$param) and $param["OtherMaterial"] !== null) {

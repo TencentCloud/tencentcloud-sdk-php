@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getFsLimit() 获取文件系统容量限制大小，输入范围0-1073741824, 单位为GB；其中输入值为0时，表示不限制文件系统容量。
  * @method void setFsLimit(integer $FsLimit) 设置文件系统容量限制大小，输入范围0-1073741824, 单位为GB；其中输入值为0时，表示不限制文件系统容量。
- * @method string getFileSystemId() 获取文件系统ID
- * @method void setFileSystemId(string $FileSystemId) 设置文件系统ID
+ * @method string getFileSystemId() 获取文件系统ID，目前仅支持标准型文件系统。
+ * @method void setFileSystemId(string $FileSystemId) 设置文件系统ID，目前仅支持标准型文件系统。
  */
 class UpdateCfsFileSystemSizeLimitRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class UpdateCfsFileSystemSizeLimitRequest extends AbstractModel
     public $FsLimit;
 
     /**
-     * @var string 文件系统ID
+     * @var string 文件系统ID，目前仅支持标准型文件系统。
      */
     public $FileSystemId;
 
     /**
      * @param integer $FsLimit 文件系统容量限制大小，输入范围0-1073741824, 单位为GB；其中输入值为0时，表示不限制文件系统容量。
-     * @param string $FileSystemId 文件系统ID
+     * @param string $FileSystemId 文件系统ID，目前仅支持标准型文件系统。
      */
     function __construct()
     {

@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFaultReportContactNumber(string $FaultReportContactNumber) 设置报障联系电话。
  * @method boolean getSignLaw() 获取物理专线申请者补签用户使用协议
  * @method void setSignLaw(boolean $SignLaw) 设置物理专线申请者补签用户使用协议
+ * @method integer getBandwidth() 获取物理专线带宽
+ * @method void setBandwidth(integer $Bandwidth) 设置物理专线带宽
  */
 class ModifyDirectConnectAttributeRequest extends AbstractModel
 {
@@ -108,6 +110,11 @@ class ModifyDirectConnectAttributeRequest extends AbstractModel
     public $SignLaw;
 
     /**
+     * @var integer 物理专线带宽
+     */
+    public $Bandwidth;
+
+    /**
      * @param string $DirectConnectId 物理专线的ID。
      * @param string $DirectConnectName 物理专线名称。
      * @param string $CircuitCode 运营商或者服务商为物理专线提供的电路编码。
@@ -120,6 +127,7 @@ class ModifyDirectConnectAttributeRequest extends AbstractModel
      * @param string $FaultReportContactPerson 报障联系人。
      * @param string $FaultReportContactNumber 报障联系电话。
      * @param boolean $SignLaw 物理专线申请者补签用户使用协议
+     * @param integer $Bandwidth 物理专线带宽
      */
     function __construct()
     {
@@ -180,6 +188,10 @@ class ModifyDirectConnectAttributeRequest extends AbstractModel
 
         if (array_key_exists("SignLaw",$param) and $param["SignLaw"] !== null) {
             $this->SignLaw = $param["SignLaw"];
+        }
+
+        if (array_key_exists("Bandwidth",$param) and $param["Bandwidth"] !== null) {
+            $this->Bandwidth = $param["Bandwidth"];
         }
     }
 }

@@ -23,6 +23,11 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Lighthouse\V20200324\Models as Models;
 
 /**
+ * @method Models\ApplyInstanceSnapshotResponse ApplyInstanceSnapshot(Models\ApplyInstanceSnapshotRequest $req) 本接口（ApplyInstanceSnapshot）用于回滚指定实例的系统盘快照。
+<li>仅支持回滚到原系统盘。</li>
+<li>用于回滚的快照必须处于 NORMAL 状态。快照状态可以通 DescribeSnapshots 接口查询，见输出参数中 SnapshotState 字段解释。</li>
+<li>回滚快照时，实例的状态必须为 STOPPED 或 RUNNING，可通过 DescribeInstances 接口查询实例状态。处于 RUNNING 状态的实例会强制关机，然后回滚快照。</li>
+ * @method Models\CreateBlueprintResponse CreateBlueprint(Models\CreateBlueprintRequest $req) 本接口 (CreateBlueprint) 用于创建镜像。
  * @method Models\CreateFirewallRulesResponse CreateFirewallRules(Models\CreateFirewallRulesRequest $req) 本接口（CreateFirewallRules）用于在实例上添加防火墙规则。
 
 
@@ -34,6 +39,8 @@ use TencentCloud\Lighthouse\V20200324\Models as Models;
 * CidrBlock 字段允许输入符合 cidr 格式标准的任意字符串。租户之间网络隔离规则优先于防火墙中的内网规则。
 * Action 字段只允许输入 ACCEPT 或 DROP。
 * FirewallRuleDescription 字段长度不得超过 64。
+ * @method Models\CreateInstanceSnapshotResponse CreateInstanceSnapshot(Models\CreateInstanceSnapshotRequest $req) 本接口（CreateInstanceSnapshot）用于创建指定实例的系统盘快照。
+ * @method Models\DeleteBlueprintsResponse DeleteBlueprints(Models\DeleteBlueprintsRequest $req) 本接口 (DeleteBlueprints) 用于删除镜像。
  * @method Models\DeleteFirewallRulesResponse DeleteFirewallRules(Models\DeleteFirewallRulesRequest $req) 本接口（DeleteFirewallRules）用于删除实例的防火墙规则。
 
 * FirewallVersion 用于指定要操作的防火墙的版本。传入 FirewallVersion 版本号若不等于当前防火墙的最新版本，将返回失败；若不传 FirewallVersion 则直接删除指定的规则。
@@ -44,6 +51,8 @@ use TencentCloud\Lighthouse\V20200324\Models as Models;
 * CidrBlock 字段允许输入符合 cidr 格式标准的任意字符串。租户之间网络隔离规则优先于防火墙中的内网规则。
 * Action 字段只允许输入 ACCEPT 或 DROP。
 * FirewallRuleDescription 字段长度不得超过 64。
+ * @method Models\DeleteSnapshotsResponse DeleteSnapshots(Models\DeleteSnapshotsRequest $req) 本接口（DeleteSnapshots）用于删除快照。
+快照必须处于 NORMAL 状态，快照状态可以通过 DescribeSnapshots 接口查询，见输出参数中 SnapshotState 字段解释。
  * @method Models\DescribeBlueprintsResponse DescribeBlueprints(Models\DescribeBlueprintsRequest $req) 本接口（DescribeBlueprints）用于查询镜像信息。
  * @method Models\DescribeBundlesResponse DescribeBundles(Models\DescribeBundlesRequest $req) 本接口（DescribeBundles）用于查询套餐信息。
  * @method Models\DescribeFirewallRulesResponse DescribeFirewallRules(Models\DescribeFirewallRulesRequest $req) 本接口（DescribeFirewallRules）用于查询实例的防火墙规则。
@@ -54,6 +63,10 @@ use TencentCloud\Lighthouse\V20200324\Models as Models;
 * 如果参数为空，返回当前用户一定数量（Limit 所指定的数量，默认为 20）的实例。
 * 支持查询实例的最新操作（LatestOperation）以及最新操作状态（LatestOperationState）。
  * @method Models\DescribeInstancesTrafficPackagesResponse DescribeInstancesTrafficPackages(Models\DescribeInstancesTrafficPackagesRequest $req) 本接口（DescribeInstancesTrafficPackages）用于查询一个或多个实例的流量包详情。
+ * @method Models\DescribeSnapshotsResponse DescribeSnapshots(Models\DescribeSnapshotsRequest $req) 本接口（DescribeSnapshots）用于查询快照的详细信息。
+ * @method Models\ModifyBlueprintAttributeResponse ModifyBlueprintAttribute(Models\ModifyBlueprintAttributeRequest $req) 本接口 (ModifyBlueprintAttribute) 用于修改镜像属性。
+ * @method Models\ModifySnapshotAttributeResponse ModifySnapshotAttribute(Models\ModifySnapshotAttributeRequest $req) 本接口（ModifySnapshotAttribute）用于修改指定快照的属性。
+<li>“快照名称”仅为方便用户自己管理之用，腾讯云并不以此名称作为提交工单或是进行快照管理操作的依据。</li>
  * @method Models\RebootInstancesResponse RebootInstances(Models\RebootInstancesRequest $req) 本接口（RebootInstances）用于重启实例。
 
 * 只有状态为 RUNNING 的实例才可以进行此操作。

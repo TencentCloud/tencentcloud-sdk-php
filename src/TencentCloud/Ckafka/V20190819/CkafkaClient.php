@@ -30,6 +30,7 @@ use TencentCloud\Ckafka\V20190819\Models as Models;
  * @method Models\CreateTopicIpWhiteListResponse CreateTopicIpWhiteList(Models\CreateTopicIpWhiteListRequest $req) 创建主题ip白名单
  * @method Models\CreateUserResponse CreateUser(Models\CreateUserRequest $req) 添加用户
  * @method Models\DeleteAclResponse DeleteAcl(Models\DeleteAclRequest $req) 删除ACL
+ * @method Models\DeleteAclRuleResponse DeleteAclRule(Models\DeleteAclRuleRequest $req) 删除ACL规则
  * @method Models\DeleteTopicResponse DeleteTopic(Models\DeleteTopicRequest $req) 删除ckafka主题
  * @method Models\DeleteTopicIpWhiteListResponse DeleteTopicIpWhiteList(Models\DeleteTopicIpWhiteListRequest $req) 删除主题IP白名单
  * @method Models\DeleteUserResponse DeleteUser(Models\DeleteUserRequest $req) 删除用户

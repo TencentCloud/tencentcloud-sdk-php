@@ -24,8 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置实例ID
  * @method array getSessionId() 获取会话ID列表
  * @method void setSessionId(array $SessionId) 设置会话ID列表
- * @method string getShardId() 获取分片ID
- * @method void setShardId(string $ShardId) 设置分片ID
+ * @method string getShardId() 获取分片ID，与ShardSerialId设置一个
+ * @method void setShardId(string $ShardId) 设置分片ID，与ShardSerialId设置一个
+ * @method string getShardSerialId() 获取分片序列ID，与ShardId设置一个
+ * @method void setShardSerialId(string $ShardSerialId) 设置分片序列ID，与ShardId设置一个
  */
 class KillSessionRequest extends AbstractModel
 {
@@ -40,14 +42,20 @@ class KillSessionRequest extends AbstractModel
     public $SessionId;
 
     /**
-     * @var string 分片ID
+     * @var string 分片ID，与ShardSerialId设置一个
      */
     public $ShardId;
 
     /**
+     * @var string 分片序列ID，与ShardId设置一个
+     */
+    public $ShardSerialId;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param array $SessionId 会话ID列表
-     * @param string $ShardId 分片ID
+     * @param string $ShardId 分片ID，与ShardSerialId设置一个
+     * @param string $ShardSerialId 分片序列ID，与ShardId设置一个
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class KillSessionRequest extends AbstractModel
 
         if (array_key_exists("ShardId",$param) and $param["ShardId"] !== null) {
             $this->ShardId = $param["ShardId"];
+        }
+
+        if (array_key_exists("ShardSerialId",$param) and $param["ShardSerialId"] !== null) {
+            $this->ShardSerialId = $param["ShardSerialId"];
         }
     }
 }

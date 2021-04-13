@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * cmq地域信息
  *
- * @method string getCmqRegion() 获取cmq地域
- * @method void setCmqRegion(string $CmqRegion) 设置cmq地域
  * @method string getCmqRegionName() 获取地域描述
  * @method void setCmqRegionName(string $CmqRegionName) 设置地域描述
+ * @method string getCmqRegion() 获取cmq地域
+ * @method void setCmqRegion(string $CmqRegion) 设置cmq地域
  */
 class CmqRegionInfo extends AbstractModel
 {
-    /**
-     * @var string cmq地域
-     */
-    public $CmqRegion;
-
     /**
      * @var string 地域描述
      */
     public $CmqRegionName;
 
     /**
-     * @param string $CmqRegion cmq地域
+     * @var string cmq地域
+     */
+    public $CmqRegion;
+
+    /**
      * @param string $CmqRegionName 地域描述
+     * @param string $CmqRegion cmq地域
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class CmqRegionInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CmqRegion",$param) and $param["CmqRegion"] !== null) {
-            $this->CmqRegion = $param["CmqRegion"];
-        }
-
         if (array_key_exists("CmqRegionName",$param) and $param["CmqRegionName"] !== null) {
             $this->CmqRegionName = $param["CmqRegionName"];
+        }
+
+        if (array_key_exists("CmqRegion",$param) and $param["CmqRegion"] !== null) {
+            $this->CmqRegion = $param["CmqRegion"];
         }
     }
 }

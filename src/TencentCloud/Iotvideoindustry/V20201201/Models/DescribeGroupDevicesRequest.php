@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置限制值，默认200
  * @method string getNickName() 获取设备名称，根据设备名称模糊匹配时必填
  * @method void setNickName(string $NickName) 设置设备名称，根据设备名称模糊匹配时必填
+ * @method integer getRecordable() 获取过滤不可录制设备
+ * @method void setRecordable(integer $Recordable) 设置过滤不可录制设备
  */
 class DescribeGroupDevicesRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class DescribeGroupDevicesRequest extends AbstractModel
     public $NickName;
 
     /**
+     * @var integer 过滤不可录制设备
+     */
+    public $Recordable;
+
+    /**
      * @param string $GroupId 分组ID
      * @param integer $Offset 偏移量，默认0
      * @param integer $Limit 限制值，默认200
      * @param string $NickName 设备名称，根据设备名称模糊匹配时必填
+     * @param integer $Recordable 过滤不可录制设备
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class DescribeGroupDevicesRequest extends AbstractModel
 
         if (array_key_exists("NickName",$param) and $param["NickName"] !== null) {
             $this->NickName = $param["NickName"];
+        }
+
+        if (array_key_exists("Recordable",$param) and $param["Recordable"] !== null) {
+            $this->Recordable = $param["Recordable"];
         }
     }
 }

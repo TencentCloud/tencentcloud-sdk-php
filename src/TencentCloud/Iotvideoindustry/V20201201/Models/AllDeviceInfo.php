@@ -56,6 +56,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsRecord(integer $IsRecord) 设置是否存在录像,，0:不存在；1：存在
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getRecordable() 获取该设备是否可录制
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRecordable(integer $Recordable) 设置该设备是否可录制
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AllDeviceInfo extends AbstractModel
 {
@@ -114,6 +118,12 @@ class AllDeviceInfo extends AbstractModel
     public $IsRecord;
 
     /**
+     * @var integer 该设备是否可录制
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Recordable;
+
+    /**
      * @param string $DeviceId 设备唯一标识
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DeviceType 设备类型；2：IPC
@@ -131,6 +141,8 @@ class AllDeviceInfo extends AbstractModel
      * @param string $DeviceCode 设备编码
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IsRecord 是否存在录像,，0:不存在；1：存在
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Recordable 该设备是否可录制
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -180,6 +192,10 @@ class AllDeviceInfo extends AbstractModel
 
         if (array_key_exists("IsRecord",$param) and $param["IsRecord"] !== null) {
             $this->IsRecord = $param["IsRecord"];
+        }
+
+        if (array_key_exists("Recordable",$param) and $param["Recordable"] !== null) {
+            $this->Recordable = $param["Recordable"];
         }
     }
 }

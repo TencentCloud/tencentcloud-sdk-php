@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
  * @method string getBackupName() 获取备份文件名，用来过滤指定文件的下载任务
  * @method void setBackupName(string $BackupName) 设置备份文件名，用来过滤指定文件的下载任务
- * @method string getStartTime() 获取指定要查询任务的时间范围，StartTime指定开始时间
- * @method void setStartTime(string $StartTime) 设置指定要查询任务的时间范围，StartTime指定开始时间
- * @method string getEndTime() 获取指定要查询任务的时间范围，StartTime指定结束时间
- * @method void setEndTime(string $EndTime) 设置指定要查询任务的时间范围，StartTime指定结束时间
+ * @method string getStartTime() 获取指定要查询任务的时间范围，StartTime指定开始时间，不填默认不限制开始时间
+ * @method void setStartTime(string $StartTime) 设置指定要查询任务的时间范围，StartTime指定开始时间，不填默认不限制开始时间
+ * @method string getEndTime() 获取指定要查询任务的时间范围，EndTime指定结束时间，不填默认不限制结束时间
+ * @method void setEndTime(string $EndTime) 设置指定要查询任务的时间范围，EndTime指定结束时间，不填默认不限制结束时间
  * @method integer getLimit() 获取此次查询返回的条数，取值范围为1-100，默认为20
  * @method void setLimit(integer $Limit) 设置此次查询返回的条数，取值范围为1-100，默认为20
  * @method integer getOffset() 获取指定此次查询返回的页数，默认为0
@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrderBy(string $OrderBy) 设置排序字段，取值为createTime，finishTime两种，默认为createTime
  * @method string getOrderByType() 获取排序方式，取值为asc，desc两种，默认desc
  * @method void setOrderByType(string $OrderByType) 设置排序方式，取值为asc，desc两种，默认desc
- * @method array getStatus() 获取根据任务状态过滤。0-等待执行，1-正在下载，2-下载完成，3-下载失败，4-等待重试
- * @method void setStatus(array $Status) 设置根据任务状态过滤。0-等待执行，1-正在下载，2-下载完成，3-下载失败，4-等待重试
+ * @method array getStatus() 获取根据任务状态过滤。0-等待执行，1-正在下载，2-下载完成，3-下载失败，4-等待重试。不填默认返回所有类型
+ * @method void setStatus(array $Status) 设置根据任务状态过滤。0-等待执行，1-正在下载，2-下载完成，3-下载失败，4-等待重试。不填默认返回所有类型
  */
 class DescribeBackupDownloadTaskRequest extends AbstractModel
 {
@@ -52,12 +52,12 @@ class DescribeBackupDownloadTaskRequest extends AbstractModel
     public $BackupName;
 
     /**
-     * @var string 指定要查询任务的时间范围，StartTime指定开始时间
+     * @var string 指定要查询任务的时间范围，StartTime指定开始时间，不填默认不限制开始时间
      */
     public $StartTime;
 
     /**
-     * @var string 指定要查询任务的时间范围，StartTime指定结束时间
+     * @var string 指定要查询任务的时间范围，EndTime指定结束时间，不填默认不限制结束时间
      */
     public $EndTime;
 
@@ -82,20 +82,20 @@ class DescribeBackupDownloadTaskRequest extends AbstractModel
     public $OrderByType;
 
     /**
-     * @var array 根据任务状态过滤。0-等待执行，1-正在下载，2-下载完成，3-下载失败，4-等待重试
+     * @var array 根据任务状态过滤。0-等待执行，1-正在下载，2-下载完成，3-下载失败，4-等待重试。不填默认返回所有类型
      */
     public $Status;
 
     /**
      * @param string $InstanceId 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
      * @param string $BackupName 备份文件名，用来过滤指定文件的下载任务
-     * @param string $StartTime 指定要查询任务的时间范围，StartTime指定开始时间
-     * @param string $EndTime 指定要查询任务的时间范围，StartTime指定结束时间
+     * @param string $StartTime 指定要查询任务的时间范围，StartTime指定开始时间，不填默认不限制开始时间
+     * @param string $EndTime 指定要查询任务的时间范围，EndTime指定结束时间，不填默认不限制结束时间
      * @param integer $Limit 此次查询返回的条数，取值范围为1-100，默认为20
      * @param integer $Offset 指定此次查询返回的页数，默认为0
      * @param string $OrderBy 排序字段，取值为createTime，finishTime两种，默认为createTime
      * @param string $OrderByType 排序方式，取值为asc，desc两种，默认desc
-     * @param array $Status 根据任务状态过滤。0-等待执行，1-正在下载，2-下载完成，3-下载失败，4-等待重试
+     * @param array $Status 根据任务状态过滤。0-等待执行，1-正在下载，2-下载完成，3-下载失败，4-等待重试。不填默认返回所有类型
      */
     function __construct()
     {

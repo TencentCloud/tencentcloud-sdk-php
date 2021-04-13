@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSpecCode(string $SpecCode) 设置规格信息标识
  * @method integer getStatus() 获取规格有效标志，取值：0-停止售卖，1-开放售卖
  * @method void setStatus(integer $Status) 设置规格有效标志，取值：0-停止售卖，1-开放售卖
- * @method integer getCpu() 获取规格有效标志，取值：0-停止售卖，1-开放售卖
- * @method void setCpu(integer $Cpu) 设置规格有效标志，取值：0-停止售卖，1-开放售卖
+ * @method integer getCpu() 获取计算资源规格，单位为CPU核心数
+ * @method void setCpu(integer $Cpu) 设置计算资源规格，单位为CPU核心数
  * @method integer getMemory() 获取内存规格，单位为MB
  * @method void setMemory(integer $Memory) 设置内存规格，单位为MB
  * @method integer getDefaultStorage() 获取默认磁盘规格，单位MB
@@ -76,7 +76,7 @@ class SpecItem extends AbstractModel
     public $Status;
 
     /**
-     * @var integer 规格有效标志，取值：0-停止售卖，1-开放售卖
+     * @var integer 计算资源规格，单位为CPU核心数
      */
     public $Cpu;
 
@@ -173,7 +173,7 @@ class SpecItem extends AbstractModel
     /**
      * @param string $SpecCode 规格信息标识
      * @param integer $Status 规格有效标志，取值：0-停止售卖，1-开放售卖
-     * @param integer $Cpu 规格有效标志，取值：0-停止售卖，1-开放售卖
+     * @param integer $Cpu 计算资源规格，单位为CPU核心数
      * @param integer $Memory 内存规格，单位为MB
      * @param integer $DefaultStorage 默认磁盘规格，单位MB
      * @param integer $MaxStorage 最大磁盘规格，单位MB

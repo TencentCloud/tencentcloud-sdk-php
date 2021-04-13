@@ -20,26 +20,30 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 资源类型
  *
- * @method string getResourceName() 获取资源名称
- * @method void setResourceName(string $ResourceName) 设置资源名称
  * @method string getResourceType() 获取资源类型
  * @method void setResourceType(string $ResourceType) 设置资源类型
+ * @method string getResourceName() 获取资源名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setResourceName(string $ResourceName) 设置资源名称
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Resource extends AbstractModel
 {
-    /**
-     * @var string 资源名称
-     */
-    public $ResourceName;
-
     /**
      * @var string 资源类型
      */
     public $ResourceType;
 
     /**
-     * @param string $ResourceName 资源名称
+     * @var string 资源名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ResourceName;
+
+    /**
      * @param string $ResourceType 资源类型
+     * @param string $ResourceName 资源名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -54,12 +58,12 @@ class Resource extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ResourceName",$param) and $param["ResourceName"] !== null) {
-            $this->ResourceName = $param["ResourceName"];
-        }
-
         if (array_key_exists("ResourceType",$param) and $param["ResourceType"] !== null) {
             $this->ResourceType = $param["ResourceType"];
+        }
+
+        if (array_key_exists("ResourceName",$param) and $param["ResourceName"] !== null) {
+            $this->ResourceName = $param["ResourceName"];
         }
     }
 }

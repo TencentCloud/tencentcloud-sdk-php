@@ -50,6 +50,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTotalIpAddressCount(integer $TotalIpAddressCount) 设置子网`IPv4`总数。
  * @method array getTagSet() 获取标签键值对。
  * @method void setTagSet(array $TagSet) 设置标签键值对。
+ * @method string getCdcId() 获取CDC实例ID。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCdcId(string $CdcId) 设置CDC实例ID。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getIsCdcSubnet() 获取是否是CDC所属子网。0:否 1:是
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsCdcSubnet(integer $IsCdcSubnet) 设置是否是CDC所属子网。0:否 1:是
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Subnet extends AbstractModel
 {
@@ -129,6 +137,18 @@ class Subnet extends AbstractModel
     public $TagSet;
 
     /**
+     * @var string CDC实例ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CdcId;
+
+    /**
+     * @var integer 是否是CDC所属子网。0:否 1:是
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsCdcSubnet;
+
+    /**
      * @param string $VpcId `VPC`实例`ID`。
      * @param string $SubnetId 子网实例`ID`，例如：subnet-bthucmmy。
      * @param string $SubnetName 子网名称。
@@ -144,6 +164,10 @@ class Subnet extends AbstractModel
      * @param boolean $IsRemoteVpcSnat 是否为 `SNAT` 地址池子网。
      * @param integer $TotalIpAddressCount 子网`IPv4`总数。
      * @param array $TagSet 标签键值对。
+     * @param string $CdcId CDC实例ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $IsCdcSubnet 是否是CDC所属子网。0:否 1:是
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -221,6 +245,14 @@ class Subnet extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->TagSet, $obj);
             }
+        }
+
+        if (array_key_exists("CdcId",$param) and $param["CdcId"] !== null) {
+            $this->CdcId = $param["CdcId"];
+        }
+
+        if (array_key_exists("IsCdcSubnet",$param) and $param["IsCdcSubnet"] !== null) {
+            $this->IsCdcSubnet = $param["IsCdcSubnet"];
         }
     }
 }

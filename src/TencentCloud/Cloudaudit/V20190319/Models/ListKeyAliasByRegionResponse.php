@@ -20,24 +20,24 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ListKeyAliasByRegion返回参数结构体
  *
- * @method array getKeyMetadatas() 获取密钥别名
- * @method void setKeyMetadatas(array $KeyMetadatas) 设置密钥别名
  * @method integer getTotalCount() 获取CMK的总数量
  * @method void setTotalCount(integer $TotalCount) 设置CMK的总数量
+ * @method array getKeyMetadatas() 获取密钥别名
+ * @method void setKeyMetadatas(array $KeyMetadatas) 设置密钥别名
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class ListKeyAliasByRegionResponse extends AbstractModel
 {
     /**
-     * @var array 密钥别名
-     */
-    public $KeyMetadatas;
-
-    /**
      * @var integer CMK的总数量
      */
     public $TotalCount;
+
+    /**
+     * @var array 密钥别名
+     */
+    public $KeyMetadatas;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +45,8 @@ class ListKeyAliasByRegionResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $KeyMetadatas 密钥别名
      * @param integer $TotalCount CMK的总数量
+     * @param array $KeyMetadatas 密钥别名
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,6 +62,10 @@ class ListKeyAliasByRegionResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
+        }
+
         if (array_key_exists("KeyMetadatas",$param) and $param["KeyMetadatas"] !== null) {
             $this->KeyMetadatas = [];
             foreach ($param["KeyMetadatas"] as $key => $value){
@@ -69,10 +73,6 @@ class ListKeyAliasByRegionResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->KeyMetadatas, $obj);
             }
-        }
-
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

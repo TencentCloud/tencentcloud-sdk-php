@@ -23,7 +23,9 @@ use TencentCloud\Common\AbstractModel;
  * @method DownInfo getDownInfo() 获取媒体源资源下载信息。
  * @method void setDownInfo(DownInfo $DownInfo) 设置媒体源资源下载信息。
  * @method string getId() 获取媒体源ID标记，用于多个输入源时，请内媒体源的定位，对于多输入的任务，一般要求必选。
+ID只能包含字母、数字、下划线、中划线，长读不能超过128。
  * @method void setId(string $Id) 设置媒体源ID标记，用于多个输入源时，请内媒体源的定位，对于多输入的任务，一般要求必选。
+ID只能包含字母、数字、下划线、中划线，长读不能超过128。
  * @method string getType() 获取媒体源类型，具体类型如下：
 Video：视频
 Image：图片
@@ -42,6 +44,7 @@ class MediaSourceInfo extends AbstractModel
 
     /**
      * @var string 媒体源ID标记，用于多个输入源时，请内媒体源的定位，对于多输入的任务，一般要求必选。
+ID只能包含字母、数字、下划线、中划线，长读不能超过128。
      */
     public $Id;
 
@@ -56,6 +59,7 @@ Audio：音频
     /**
      * @param DownInfo $DownInfo 媒体源资源下载信息。
      * @param string $Id 媒体源ID标记，用于多个输入源时，请内媒体源的定位，对于多输入的任务，一般要求必选。
+ID只能包含字母、数字、下划线、中划线，长读不能超过128。
      * @param string $Type 媒体源类型，具体类型如下：
 Video：视频
 Image：图片

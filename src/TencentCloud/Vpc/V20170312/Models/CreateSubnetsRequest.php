@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubnets(array $Subnets) 设置子网对象列表。
  * @method array getTags() 获取指定绑定的标签列表，注意这里的标签集合为列表中所有子网对象所共享，不能为每个子网对象单独指定标签，例如：[{"Key": "city", "Value": "shanghai"}]
  * @method void setTags(array $Tags) 设置指定绑定的标签列表，注意这里的标签集合为列表中所有子网对象所共享，不能为每个子网对象单独指定标签，例如：[{"Key": "city", "Value": "shanghai"}]
+ * @method string getCdcId() 获取需要增加到的CDC实例ID。
+ * @method void setCdcId(string $CdcId) 设置需要增加到的CDC实例ID。
  */
 class CreateSubnetsRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class CreateSubnetsRequest extends AbstractModel
     public $Tags;
 
     /**
+     * @var string 需要增加到的CDC实例ID。
+     */
+    public $CdcId;
+
+    /**
      * @param string $VpcId `VPC`实例`ID`。形如：`vpc-6v2ht8q5`
      * @param array $Subnets 子网对象列表。
      * @param array $Tags 指定绑定的标签列表，注意这里的标签集合为列表中所有子网对象所共享，不能为每个子网对象单独指定标签，例如：[{"Key": "city", "Value": "shanghai"}]
+     * @param string $CdcId 需要增加到的CDC实例ID。
      */
     function __construct()
     {
@@ -82,6 +90,10 @@ class CreateSubnetsRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("CdcId",$param) and $param["CdcId"] !== null) {
+            $this->CdcId = $param["CdcId"];
         }
     }
 }

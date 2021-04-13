@@ -20,17 +20,33 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ReplaceRoutes返回参数结构体
  *
+ * @method array getOldRouteSet() 获取原路由策略信息。
+ * @method void setOldRouteSet(array $OldRouteSet) 设置原路由策略信息。
+ * @method array getNewRouteSet() 获取修改后的路由策略信息。
+ * @method void setNewRouteSet(array $NewRouteSet) 设置修改后的路由策略信息。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class ReplaceRoutesResponse extends AbstractModel
 {
     /**
+     * @var array 原路由策略信息。
+     */
+    public $OldRouteSet;
+
+    /**
+     * @var array 修改后的路由策略信息。
+     */
+    public $NewRouteSet;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
+     * @param array $OldRouteSet 原路由策略信息。
+     * @param array $NewRouteSet 修改后的路由策略信息。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -46,6 +62,24 @@ class ReplaceRoutesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("OldRouteSet",$param) and $param["OldRouteSet"] !== null) {
+            $this->OldRouteSet = [];
+            foreach ($param["OldRouteSet"] as $key => $value){
+                $obj = new Route();
+                $obj->deserialize($value);
+                array_push($this->OldRouteSet, $obj);
+            }
+        }
+
+        if (array_key_exists("NewRouteSet",$param) and $param["NewRouteSet"] !== null) {
+            $this->NewRouteSet = [];
+            foreach ($param["NewRouteSet"] as $key => $value){
+                $obj = new Route();
+                $obj->deserialize($value);
+                array_push($this->NewRouteSet, $obj);
+            }
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

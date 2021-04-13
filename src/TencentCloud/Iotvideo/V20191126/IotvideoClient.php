@@ -81,6 +81,7 @@ use TencentCloud\Iotvideo\V20191126\Models as Models;
  * @method Models\DisableDeviceResponse DisableDevice(Models\DisableDeviceRequest $req) 本接口（DisableDevice）用于禁用设备，可进行批量操作，每次操作最多100台设备。
  * @method Models\DisableDeviceStreamResponse DisableDeviceStream(Models\DisableDeviceStreamRequest $req) 本接口（DisableDeviceStream）用于停止设备推流，可进行批量操作，每次操作最多100台设备。
  * @method Models\DisableOtaVersionResponse DisableOtaVersion(Models\DisableOtaVersionRequest $req) 本接口（DisableOtaVersion）用于禁用固件版本。
+ * @method Models\ModifyDeviceResponse ModifyDevice(Models\ModifyDeviceRequest $req) 修改设备信息
  * @method Models\ModifyDeviceActionResponse ModifyDeviceAction(Models\ModifyDeviceActionRequest $req) 本接口（ModifyDeviceAction）用于修改设备物模型的行为（Action）。
 
 可对ctlVal数据属性进行写入,如:Action.takePhoto.ctlVal,设备在线且成功发送到设备才返回,物模型写入数据时,不需要传入时标信息,平台以当前时标作为数据的时标更新物模型中的时标信息。

@@ -36,6 +36,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExtraInformation(string $ExtraInformation) 设置扩展信息
  * @method integer getCreateTime() 获取创建时间
  * @method void setCreateTime(integer $CreateTime) 设置创建时间
+ * @method integer getGroupStatus() 获取分组状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setGroupStatus(integer $GroupStatus) 设置分组状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getError() 获取设备不存在时产生的错误
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setError(string $Error) 设置设备不存在时产生的错误
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class GroupInfo extends AbstractModel
 {
@@ -80,6 +88,18 @@ class GroupInfo extends AbstractModel
     public $CreateTime;
 
     /**
+     * @var integer 分组状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $GroupStatus;
+
+    /**
+     * @var string 设备不存在时产生的错误
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Error;
+
+    /**
      * @param string $GroupId 分组ID
      * @param string $GroupName 分组名称
      * @param string $GroupType 分组类型
@@ -88,6 +108,10 @@ class GroupInfo extends AbstractModel
      * @param string $GroupDescribe 分组描述
      * @param string $ExtraInformation 扩展信息
      * @param integer $CreateTime 创建时间
+     * @param integer $GroupStatus 分组状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Error 设备不存在时产生的错误
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -132,6 +156,14 @@ class GroupInfo extends AbstractModel
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
             $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("GroupStatus",$param) and $param["GroupStatus"] !== null) {
+            $this->GroupStatus = $param["GroupStatus"];
+        }
+
+        if (array_key_exists("Error",$param) and $param["Error"] !== null) {
+            $this->Error = $param["Error"];
         }
     }
 }

@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTopicName(string $TopicName) 设置日志主题的名称。
  * @method integer getPartitionCount() 获取主题分区Partition的数量，不传参默认创建1个，最大创建允许10个，分裂/合并操作会改变分区数量，整体上限50个。
  * @method void setPartitionCount(integer $PartitionCount) 设置主题分区Partition的数量，不传参默认创建1个，最大创建允许10个，分裂/合并操作会改变分区数量，整体上限50个。
+ * @method string getTopicType() 获取日志类型，ACCESS：访问日志，HEALTH：健康检查日志，默认ACCESS。
+ * @method void setTopicType(string $TopicType) 设置日志类型，ACCESS：访问日志，HEALTH：健康检查日志，默认ACCESS。
  */
 class CreateTopicRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class CreateTopicRequest extends AbstractModel
     public $PartitionCount;
 
     /**
+     * @var string 日志类型，ACCESS：访问日志，HEALTH：健康检查日志，默认ACCESS。
+     */
+    public $TopicType;
+
+    /**
      * @param string $TopicName 日志主题的名称。
      * @param integer $PartitionCount 主题分区Partition的数量，不传参默认创建1个，最大创建允许10个，分裂/合并操作会改变分区数量，整体上限50个。
+     * @param string $TopicType 日志类型，ACCESS：访问日志，HEALTH：健康检查日志，默认ACCESS。
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class CreateTopicRequest extends AbstractModel
 
         if (array_key_exists("PartitionCount",$param) and $param["PartitionCount"] !== null) {
             $this->PartitionCount = $param["PartitionCount"];
+        }
+
+        if (array_key_exists("TopicType",$param) and $param["TopicType"] !== null) {
+            $this->TopicType = $param["TopicType"];
         }
     }
 }

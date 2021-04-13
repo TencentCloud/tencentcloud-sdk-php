@@ -42,8 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) 设置私有网络ID，如果不设置该参数则默认选择基础网络
  * @method string getSubnetId() 获取私有网络下的子网ID，如果设置了 VpcId，则 SubnetId必填
  * @method void setSubnetId(string $SubnetId) 设置私有网络下的子网ID，如果设置了 VpcId，则 SubnetId必填
- * @method string getPassword() 获取实例密码，不设置该参数则需要在创建完成后通过设置密码接口初始化实例密码。密码必须是8-16位字符，且至少包含字母、数字和字符 !@#%^*() 中的两种
- * @method void setPassword(string $Password) 设置实例密码，不设置该参数则需要在创建完成后通过设置密码接口初始化实例密码。密码必须是8-16位字符，且至少包含字母、数字和字符 !@#%^*() 中的两种
+ * @method string getPassword() 获取实例密码，不设置该参数则默认密码规则为 实例ID+"@"+主账户uin。举例实例id为cmgo-higv73ed，uin为100000001，则默认密码为"cmgo-higv73ed@100000001"。密码必须是8-16位字符，且至少包含字母、数字和字符 !@#%^*() 中的两种
+ * @method void setPassword(string $Password) 设置实例密码，不设置该参数则默认密码规则为 实例ID+"@"+主账户uin。举例实例id为cmgo-higv73ed，uin为100000001，则默认密码为"cmgo-higv73ed@100000001"。密码必须是8-16位字符，且至少包含字母、数字和字符 !@#%^*() 中的两种
  * @method integer getProjectId() 获取项目ID，不设置为默认项目
  * @method void setProjectId(integer $ProjectId) 设置项目ID，不设置为默认项目
  * @method array getTags() 获取实例标签信息
@@ -113,7 +113,7 @@ class CreateDBInstanceHourRequest extends AbstractModel
     public $SubnetId;
 
     /**
-     * @var string 实例密码，不设置该参数则需要在创建完成后通过设置密码接口初始化实例密码。密码必须是8-16位字符，且至少包含字母、数字和字符 !@#%^*() 中的两种
+     * @var string 实例密码，不设置该参数则默认密码规则为 实例ID+"@"+主账户uin。举例实例id为cmgo-higv73ed，uin为100000001，则默认密码为"cmgo-higv73ed@100000001"。密码必须是8-16位字符，且至少包含字母、数字和字符 !@#%^*() 中的两种
      */
     public $Password;
 
@@ -154,7 +154,7 @@ class CreateDBInstanceHourRequest extends AbstractModel
      * @param string $ClusterType 实例类型，REPLSET-副本集，SHARD-分片集群
      * @param string $VpcId 私有网络ID，如果不设置该参数则默认选择基础网络
      * @param string $SubnetId 私有网络下的子网ID，如果设置了 VpcId，则 SubnetId必填
-     * @param string $Password 实例密码，不设置该参数则需要在创建完成后通过设置密码接口初始化实例密码。密码必须是8-16位字符，且至少包含字母、数字和字符 !@#%^*() 中的两种
+     * @param string $Password 实例密码，不设置该参数则默认密码规则为 实例ID+"@"+主账户uin。举例实例id为cmgo-higv73ed，uin为100000001，则默认密码为"cmgo-higv73ed@100000001"。密码必须是8-16位字符，且至少包含字母、数字和字符 !@#%^*() 中的两种
      * @param integer $ProjectId 项目ID，不设置为默认项目
      * @param array $Tags 实例标签信息
      * @param integer $Clone 1:正式实例,2:临时实例,3:只读实例，4：灾备实例

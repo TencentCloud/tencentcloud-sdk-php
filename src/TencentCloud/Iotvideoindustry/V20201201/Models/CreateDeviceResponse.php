@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeviceId(string $DeviceId) 设置设备唯一标识
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getVirtualGroupId() 获取设备虚拟组信息，仅在创建NVR/VMS时返回该值
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVirtualGroupId(string $VirtualGroupId) 设置设备虚拟组信息，仅在创建NVR/VMS时返回该值
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -46,6 +50,12 @@ class CreateDeviceResponse extends AbstractModel
     public $DeviceId;
 
     /**
+     * @var string 设备虚拟组信息，仅在创建NVR/VMS时返回该值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $VirtualGroupId;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -54,6 +64,8 @@ class CreateDeviceResponse extends AbstractModel
      * @param string $DeviceCode 设备编码
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DeviceId 设备唯一标识
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $VirtualGroupId 设备虚拟组信息，仅在创建NVR/VMS时返回该值
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -76,6 +88,10 @@ class CreateDeviceResponse extends AbstractModel
 
         if (array_key_exists("DeviceId",$param) and $param["DeviceId"] !== null) {
             $this->DeviceId = $param["DeviceId"];
+        }
+
+        if (array_key_exists("VirtualGroupId",$param) and $param["VirtualGroupId"] !== null) {
+            $this->VirtualGroupId = $param["VirtualGroupId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

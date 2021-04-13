@@ -22,6 +22,30 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getBalance() 获取云账户信息中的”展示可用余额”字段，单位为"分"
  * @method void setBalance(integer $Balance) 设置云账户信息中的”展示可用余额”字段，单位为"分"
+ * @method integer getUin() 获取查询的用户Uin
+ * @method void setUin(integer $Uin) 设置查询的用户Uin
+ * @method float getRealBalance() 获取当前真实可用余额
+ * @method void setRealBalance(float $RealBalance) 设置当前真实可用余额
+ * @method float getCashAccountBalance() 获取现金账户余额
+ * @method void setCashAccountBalance(float $CashAccountBalance) 设置现金账户余额
+ * @method float getIncomeIntoAccountBalance() 获取收益转入账户余额
+ * @method void setIncomeIntoAccountBalance(float $IncomeIntoAccountBalance) 设置收益转入账户余额
+ * @method float getPresentAccountBalance() 获取赠送账户余额
+ * @method void setPresentAccountBalance(float $PresentAccountBalance) 设置赠送账户余额
+ * @method float getFreezeAmount() 获取冻结金额
+ * @method void setFreezeAmount(float $FreezeAmount) 设置冻结金额
+ * @method float getOweAmount() 获取欠费金额
+ * @method void setOweAmount(float $OweAmount) 设置欠费金额
+ * @method boolean getIsAllowArrears() 获取是否允许欠费消费
+ * @method void setIsAllowArrears(boolean $IsAllowArrears) 设置是否允许欠费消费
+ * @method boolean getIsCreditLimited() 获取是否限制信用额度
+ * @method void setIsCreditLimited(boolean $IsCreditLimited) 设置是否限制信用额度
+ * @method float getCreditAmount() 获取信用额度
+ * @method void setCreditAmount(float $CreditAmount) 设置信用额度
+ * @method float getCreditBalance() 获取可用信用额度
+ * @method void setCreditBalance(float $CreditBalance) 设置可用信用额度
+ * @method float getRealCreditBalance() 获取真实可用信用额度
+ * @method void setRealCreditBalance(float $RealCreditBalance) 设置真实可用信用额度
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -33,12 +57,84 @@ class DescribeAccountBalanceResponse extends AbstractModel
     public $Balance;
 
     /**
+     * @var integer 查询的用户Uin
+     */
+    public $Uin;
+
+    /**
+     * @var float 当前真实可用余额
+     */
+    public $RealBalance;
+
+    /**
+     * @var float 现金账户余额
+     */
+    public $CashAccountBalance;
+
+    /**
+     * @var float 收益转入账户余额
+     */
+    public $IncomeIntoAccountBalance;
+
+    /**
+     * @var float 赠送账户余额
+     */
+    public $PresentAccountBalance;
+
+    /**
+     * @var float 冻结金额
+     */
+    public $FreezeAmount;
+
+    /**
+     * @var float 欠费金额
+     */
+    public $OweAmount;
+
+    /**
+     * @var boolean 是否允许欠费消费
+     */
+    public $IsAllowArrears;
+
+    /**
+     * @var boolean 是否限制信用额度
+     */
+    public $IsCreditLimited;
+
+    /**
+     * @var float 信用额度
+     */
+    public $CreditAmount;
+
+    /**
+     * @var float 可用信用额度
+     */
+    public $CreditBalance;
+
+    /**
+     * @var float 真实可用信用额度
+     */
+    public $RealCreditBalance;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param integer $Balance 云账户信息中的”展示可用余额”字段，单位为"分"
+     * @param integer $Uin 查询的用户Uin
+     * @param float $RealBalance 当前真实可用余额
+     * @param float $CashAccountBalance 现金账户余额
+     * @param float $IncomeIntoAccountBalance 收益转入账户余额
+     * @param float $PresentAccountBalance 赠送账户余额
+     * @param float $FreezeAmount 冻结金额
+     * @param float $OweAmount 欠费金额
+     * @param boolean $IsAllowArrears 是否允许欠费消费
+     * @param boolean $IsCreditLimited 是否限制信用额度
+     * @param float $CreditAmount 信用额度
+     * @param float $CreditBalance 可用信用额度
+     * @param float $RealCreditBalance 真实可用信用额度
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -56,6 +152,54 @@ class DescribeAccountBalanceResponse extends AbstractModel
         }
         if (array_key_exists("Balance",$param) and $param["Balance"] !== null) {
             $this->Balance = $param["Balance"];
+        }
+
+        if (array_key_exists("Uin",$param) and $param["Uin"] !== null) {
+            $this->Uin = $param["Uin"];
+        }
+
+        if (array_key_exists("RealBalance",$param) and $param["RealBalance"] !== null) {
+            $this->RealBalance = $param["RealBalance"];
+        }
+
+        if (array_key_exists("CashAccountBalance",$param) and $param["CashAccountBalance"] !== null) {
+            $this->CashAccountBalance = $param["CashAccountBalance"];
+        }
+
+        if (array_key_exists("IncomeIntoAccountBalance",$param) and $param["IncomeIntoAccountBalance"] !== null) {
+            $this->IncomeIntoAccountBalance = $param["IncomeIntoAccountBalance"];
+        }
+
+        if (array_key_exists("PresentAccountBalance",$param) and $param["PresentAccountBalance"] !== null) {
+            $this->PresentAccountBalance = $param["PresentAccountBalance"];
+        }
+
+        if (array_key_exists("FreezeAmount",$param) and $param["FreezeAmount"] !== null) {
+            $this->FreezeAmount = $param["FreezeAmount"];
+        }
+
+        if (array_key_exists("OweAmount",$param) and $param["OweAmount"] !== null) {
+            $this->OweAmount = $param["OweAmount"];
+        }
+
+        if (array_key_exists("IsAllowArrears",$param) and $param["IsAllowArrears"] !== null) {
+            $this->IsAllowArrears = $param["IsAllowArrears"];
+        }
+
+        if (array_key_exists("IsCreditLimited",$param) and $param["IsCreditLimited"] !== null) {
+            $this->IsCreditLimited = $param["IsCreditLimited"];
+        }
+
+        if (array_key_exists("CreditAmount",$param) and $param["CreditAmount"] !== null) {
+            $this->CreditAmount = $param["CreditAmount"];
+        }
+
+        if (array_key_exists("CreditBalance",$param) and $param["CreditBalance"] !== null) {
+            $this->CreditBalance = $param["CreditBalance"];
+        }
+
+        if (array_key_exists("RealCreditBalance",$param) and $param["RealCreditBalance"] !== null) {
+            $this->RealCreditBalance = $param["RealCreditBalance"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

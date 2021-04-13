@@ -20,13 +20,13 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 告警策略触发条件
  *
- * @method string getMetricName() 获取指标名
+ * @method string getMetricName() 获取指标名或事件名，支持的指标可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询，支持的事件可以从 [DescribeAlarmEvents](https://cloud.tencent.com/document/product/248/51284) 查询 。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMetricName(string $MetricName) 设置指标名
+ * @method void setMetricName(string $MetricName) 设置指标名或事件名，支持的指标可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询，支持的事件可以从 [DescribeAlarmEvents](https://cloud.tencent.com/document/product/248/51284) 查询 。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getPeriod() 获取秒数 统计周期
+ * @method integer getPeriod() 获取秒数 统计周期，支持的值可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPeriod(integer $Period) 设置秒数 统计周期
+ * @method void setPeriod(integer $Period) 设置秒数 统计周期，支持的值可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOperator() 获取英文运算符
 intelligent=无阈值智能检测
@@ -46,6 +46,7 @@ cycle_increase=环比增长
 cycle_decrease=环比下降
 cycle_wave=环比波动
 re=正则匹配
+支持的值可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOperator(string $Operator) 设置英文运算符
 intelligent=无阈值智能检测
@@ -65,14 +66,15 @@ cycle_increase=环比增长
 cycle_decrease=环比下降
 cycle_wave=环比波动
 re=正则匹配
+支持的值可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getValue() 获取阈值
+ * @method string getValue() 获取阈值，支持的范围可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setValue(string $Value) 设置阈值
+ * @method void setValue(string $Value) 设置阈值，支持的范围可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getContinuePeriod() 获取周期数 持续通知周期 1=持续1个周期 2=持续2个周期...
+ * @method integer getContinuePeriod() 获取周期数 持续通知周期 1=持续1个周期 2=持续2个周期...，支持的值可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setContinuePeriod(integer $ContinuePeriod) 设置周期数 持续通知周期 1=持续1个周期 2=持续2个周期...
+ * @method void setContinuePeriod(integer $ContinuePeriod) 设置周期数 持续通知周期 1=持续1个周期 2=持续2个周期...，支持的值可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getNoticeFrequency() 获取秒数 告警间隔  0=不重复 300=每5分钟告警一次 600=每10分钟告警一次 900=每15分钟告警一次 1800=每30分钟告警一次 3600=每1小时告警一次 7200=每2小时告警一次 10800=每3小时告警一次 21600=每6小时告警一次 43200=每12小时告警一次 86400=每1天告警一次
 注意：此字段可能返回 null，表示取不到有效值。
@@ -94,21 +96,21 @@ re=正则匹配
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUnit(string $Unit) 设置单位，用于出参
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRuleType() 获取触发条件类型 STATIC=静态阈值 DYNAMIC=动态阈值
+ * @method string getRuleType() 获取触发条件类型 STATIC=静态阈值 DYNAMIC=动态阈值。创建或编辑策略时，如不填则默认为 STATIC。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRuleType(string $RuleType) 设置触发条件类型 STATIC=静态阈值 DYNAMIC=动态阈值
+ * @method void setRuleType(string $RuleType) 设置触发条件类型 STATIC=静态阈值 DYNAMIC=动态阈值。创建或编辑策略时，如不填则默认为 STATIC。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class AlarmPolicyRule extends AbstractModel
 {
     /**
-     * @var string 指标名
+     * @var string 指标名或事件名，支持的指标可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询，支持的事件可以从 [DescribeAlarmEvents](https://cloud.tencent.com/document/product/248/51284) 查询 。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MetricName;
 
     /**
-     * @var integer 秒数 统计周期
+     * @var integer 秒数 统计周期，支持的值可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Period;
@@ -132,18 +134,19 @@ cycle_increase=环比增长
 cycle_decrease=环比下降
 cycle_wave=环比波动
 re=正则匹配
+支持的值可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Operator;
 
     /**
-     * @var string 阈值
+     * @var string 阈值，支持的范围可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Value;
 
     /**
-     * @var integer 周期数 持续通知周期 1=持续1个周期 2=持续2个周期...
+     * @var integer 周期数 持续通知周期 1=持续1个周期 2=持续2个周期...，支持的值可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ContinuePeriod;
@@ -179,15 +182,15 @@ re=正则匹配
     public $Unit;
 
     /**
-     * @var string 触发条件类型 STATIC=静态阈值 DYNAMIC=动态阈值
+     * @var string 触发条件类型 STATIC=静态阈值 DYNAMIC=动态阈值。创建或编辑策略时，如不填则默认为 STATIC。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleType;
 
     /**
-     * @param string $MetricName 指标名
+     * @param string $MetricName 指标名或事件名，支持的指标可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询，支持的事件可以从 [DescribeAlarmEvents](https://cloud.tencent.com/document/product/248/51284) 查询 。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Period 秒数 统计周期
+     * @param integer $Period 秒数 统计周期，支持的值可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Operator 英文运算符
 intelligent=无阈值智能检测
@@ -207,10 +210,11 @@ cycle_increase=环比增长
 cycle_decrease=环比下降
 cycle_wave=环比波动
 re=正则匹配
+支持的值可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Value 阈值
+     * @param string $Value 阈值，支持的范围可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ContinuePeriod 周期数 持续通知周期 1=持续1个周期 2=持续2个周期...
+     * @param integer $ContinuePeriod 周期数 持续通知周期 1=持续1个周期 2=持续2个周期...，支持的值可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $NoticeFrequency 秒数 告警间隔  0=不重复 300=每5分钟告警一次 600=每10分钟告警一次 900=每15分钟告警一次 1800=每30分钟告警一次 3600=每1小时告警一次 7200=每2小时告警一次 10800=每3小时告警一次 21600=每6小时告警一次 43200=每12小时告警一次 86400=每1天告警一次
 注意：此字段可能返回 null，表示取不到有效值。
@@ -222,7 +226,7 @@ re=正则匹配
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Unit 单位，用于出参
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $RuleType 触发条件类型 STATIC=静态阈值 DYNAMIC=动态阈值
+     * @param string $RuleType 触发条件类型 STATIC=静态阈值 DYNAMIC=动态阈值。创建或编辑策略时，如不填则默认为 STATIC。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

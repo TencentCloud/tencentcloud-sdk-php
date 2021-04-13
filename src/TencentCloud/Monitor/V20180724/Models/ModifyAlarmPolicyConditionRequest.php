@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setModule(string $Module) 设置模块名，固定值 monitor
  * @method string getPolicyId() 获取告警策略 ID
  * @method void setPolicyId(string $PolicyId) 设置告警策略 ID
+ * @method integer getConditionTemplateId() 获取触发条件模板 Id，可不传
+ * @method void setConditionTemplateId(integer $ConditionTemplateId) 设置触发条件模板 Id，可不传
  * @method AlarmPolicyCondition getCondition() 获取指标触发条件
  * @method void setCondition(AlarmPolicyCondition $Condition) 设置指标触发条件
  * @method AlarmPolicyEventCondition getEventCondition() 获取事件触发条件
@@ -42,6 +44,11 @@ class ModifyAlarmPolicyConditionRequest extends AbstractModel
     public $PolicyId;
 
     /**
+     * @var integer 触发条件模板 Id，可不传
+     */
+    public $ConditionTemplateId;
+
+    /**
      * @var AlarmPolicyCondition 指标触发条件
      */
     public $Condition;
@@ -54,6 +61,7 @@ class ModifyAlarmPolicyConditionRequest extends AbstractModel
     /**
      * @param string $Module 模块名，固定值 monitor
      * @param string $PolicyId 告警策略 ID
+     * @param integer $ConditionTemplateId 触发条件模板 Id，可不传
      * @param AlarmPolicyCondition $Condition 指标触发条件
      * @param AlarmPolicyEventCondition $EventCondition 事件触发条件
      */
@@ -76,6 +84,10 @@ class ModifyAlarmPolicyConditionRequest extends AbstractModel
 
         if (array_key_exists("PolicyId",$param) and $param["PolicyId"] !== null) {
             $this->PolicyId = $param["PolicyId"];
+        }
+
+        if (array_key_exists("ConditionTemplateId",$param) and $param["ConditionTemplateId"] !== null) {
+            $this->ConditionTemplateId = $param["ConditionTemplateId"];
         }
 
         if (array_key_exists("Condition",$param) and $param["Condition"] !== null) {

@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getModule() 获取固定值，为"monitor"
  * @method void setModule(string $Module) 设置固定值，为"monitor"
- * @method integer getGroupId() 获取策略组id，如传入PolicyId则该字段可传入任意值
- * @method void setGroupId(integer $GroupId) 设置策略组id，如传入PolicyId则该字段可传入任意值
- * @method string getPolicyId() 获取告警策略ID，使用此字段时GroupId可传入任意值
- * @method void setPolicyId(string $PolicyId) 设置告警策略ID，使用此字段时GroupId可传入任意值
+ * @method integer getGroupId() 获取策略组id，如传入 PolicyId 则该字段被忽略可传入任意值如 0
+ * @method void setGroupId(integer $GroupId) 设置策略组id，如传入 PolicyId 则该字段被忽略可传入任意值如 0
+ * @method string getPolicyId() 获取告警策略ID，使用此字段时 GroupId 会被忽略
+ * @method void setPolicyId(string $PolicyId) 设置告警策略ID，使用此字段时 GroupId 会被忽略
  */
 class UnBindingAllPolicyObjectRequest extends AbstractModel
 {
@@ -35,19 +35,19 @@ class UnBindingAllPolicyObjectRequest extends AbstractModel
     public $Module;
 
     /**
-     * @var integer 策略组id，如传入PolicyId则该字段可传入任意值
+     * @var integer 策略组id，如传入 PolicyId 则该字段被忽略可传入任意值如 0
      */
     public $GroupId;
 
     /**
-     * @var string 告警策略ID，使用此字段时GroupId可传入任意值
+     * @var string 告警策略ID，使用此字段时 GroupId 会被忽略
      */
     public $PolicyId;
 
     /**
      * @param string $Module 固定值，为"monitor"
-     * @param integer $GroupId 策略组id，如传入PolicyId则该字段可传入任意值
-     * @param string $PolicyId 告警策略ID，使用此字段时GroupId可传入任意值
+     * @param integer $GroupId 策略组id，如传入 PolicyId 则该字段被忽略可传入任意值如 0
+     * @param string $PolicyId 告警策略ID，使用此字段时 GroupId 会被忽略
      */
     function __construct()
     {

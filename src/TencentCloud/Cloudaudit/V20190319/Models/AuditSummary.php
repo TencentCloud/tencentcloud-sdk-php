@@ -20,22 +20,17 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 跟踪集概览
  *
- * @method string getAuditName() 获取跟踪集名称
- * @method void setAuditName(string $AuditName) 设置跟踪集名称
  * @method integer getAuditStatus() 获取跟踪集状态，1：开启，0：关闭
  * @method void setAuditStatus(integer $AuditStatus) 设置跟踪集状态，1：开启，0：关闭
  * @method string getCosBucketName() 获取COS存储桶名称
  * @method void setCosBucketName(string $CosBucketName) 设置COS存储桶名称
+ * @method string getAuditName() 获取跟踪集名称
+ * @method void setAuditName(string $AuditName) 设置跟踪集名称
  * @method string getLogFilePrefix() 获取日志前缀
  * @method void setLogFilePrefix(string $LogFilePrefix) 设置日志前缀
  */
 class AuditSummary extends AbstractModel
 {
-    /**
-     * @var string 跟踪集名称
-     */
-    public $AuditName;
-
     /**
      * @var integer 跟踪集状态，1：开启，0：关闭
      */
@@ -47,14 +42,19 @@ class AuditSummary extends AbstractModel
     public $CosBucketName;
 
     /**
+     * @var string 跟踪集名称
+     */
+    public $AuditName;
+
+    /**
      * @var string 日志前缀
      */
     public $LogFilePrefix;
 
     /**
-     * @param string $AuditName 跟踪集名称
      * @param integer $AuditStatus 跟踪集状态，1：开启，0：关闭
      * @param string $CosBucketName COS存储桶名称
+     * @param string $AuditName 跟踪集名称
      * @param string $LogFilePrefix 日志前缀
      */
     function __construct()
@@ -70,16 +70,16 @@ class AuditSummary extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AuditName",$param) and $param["AuditName"] !== null) {
-            $this->AuditName = $param["AuditName"];
-        }
-
         if (array_key_exists("AuditStatus",$param) and $param["AuditStatus"] !== null) {
             $this->AuditStatus = $param["AuditStatus"];
         }
 
         if (array_key_exists("CosBucketName",$param) and $param["CosBucketName"] !== null) {
             $this->CosBucketName = $param["CosBucketName"];
+        }
+
+        if (array_key_exists("AuditName",$param) and $param["AuditName"] !== null) {
+            $this->AuditName = $param["AuditName"];
         }
 
         if (array_key_exists("LogFilePrefix",$param) and $param["LogFilePrefix"] !== null) {

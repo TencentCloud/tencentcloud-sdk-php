@@ -210,6 +210,14 @@ OPEN：公网属性， INTERNAL：内网属性。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNfvInfo(string $NfvInfo) 设置CLB是否为NFV，空：不是，l7nfv：七层是NFV。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getHealthLogSetId() 获取负载均衡日志服务(CLS)的健康检查日志集ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHealthLogSetId(string $HealthLogSetId) 设置负载均衡日志服务(CLS)的健康检查日志集ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getHealthLogTopicId() 获取负载均衡日志服务(CLS)的健康检查日志主题ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHealthLogTopicId(string $HealthLogTopicId) 设置负载均衡日志服务(CLS)的健康检查日志主题ID
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class LoadBalancer extends AbstractModel
 {
@@ -505,6 +513,18 @@ OPEN：公网属性， INTERNAL：内网属性。
     public $NfvInfo;
 
     /**
+     * @var string 负载均衡日志服务(CLS)的健康检查日志集ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $HealthLogSetId;
+
+    /**
+     * @var string 负载均衡日志服务(CLS)的健康检查日志主题ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $HealthLogTopicId;
+
+    /**
      * @param string $LoadBalancerId 负载均衡实例 ID。
      * @param string $LoadBalancerName 负载均衡实例的名称。
      * @param string $LoadBalancerType 负载均衡实例的网络类型：
@@ -599,6 +619,10 @@ OPEN：公网属性， INTERNAL：内网属性。
      * @param array $Zones 私有网络内网负载均衡，就近接入模式下规则所落在的可用区
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NfvInfo CLB是否为NFV，空：不是，l7nfv：七层是NFV。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $HealthLogSetId 负载均衡日志服务(CLS)的健康检查日志集ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $HealthLogTopicId 负载均衡日志服务(CLS)的健康检查日志主题ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -829,6 +853,14 @@ OPEN：公网属性， INTERNAL：内网属性。
 
         if (array_key_exists("NfvInfo",$param) and $param["NfvInfo"] !== null) {
             $this->NfvInfo = $param["NfvInfo"];
+        }
+
+        if (array_key_exists("HealthLogSetId",$param) and $param["HealthLogSetId"] !== null) {
+            $this->HealthLogSetId = $param["HealthLogSetId"];
+        }
+
+        if (array_key_exists("HealthLogTopicId",$param) and $param["HealthLogTopicId"] !== null) {
+            $this->HealthLogTopicId = $param["HealthLogTopicId"];
         }
     }
 }

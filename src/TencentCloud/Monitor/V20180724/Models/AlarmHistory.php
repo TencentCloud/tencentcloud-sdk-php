@@ -54,8 +54,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReceiverGroups(array $ReceiverGroups) 设置接收组列表
  * @method array getNoticeWays() 获取告警渠道列表 SMS=短信 EMAIL=邮件 CALL=电话 WECHAT=微信
  * @method void setNoticeWays(array $NoticeWays) 设置告警渠道列表 SMS=短信 EMAIL=邮件 CALL=电话 WECHAT=微信
- * @method string getOriginId() 获取兼容告警1.0策略组 Id
- * @method void setOriginId(string $OriginId) 设置兼容告警1.0策略组 Id
+ * @method string getOriginId() 获取可用于实例、实例组的绑定和解绑接口（[BindingPolicyObject](https://cloud.tencent.com/document/product/248/40421)、[UnBindingAllPolicyObject](https://cloud.tencent.com/document/product/248/40568)、[UnBindingPolicyObject](https://cloud.tencent.com/document/product/248/40567)）的策略 ID
+ * @method void setOriginId(string $OriginId) 设置可用于实例、实例组的绑定和解绑接口（[BindingPolicyObject](https://cloud.tencent.com/document/product/248/40421)、[UnBindingAllPolicyObject](https://cloud.tencent.com/document/product/248/40568)、[UnBindingPolicyObject](https://cloud.tencent.com/document/product/248/40567)）的策略 ID
  * @method string getAlarmType() 获取告警类型
  * @method void setAlarmType(string $AlarmType) 设置告警类型
  * @method integer getEventId() 获取事件Id
@@ -157,7 +157,7 @@ class AlarmHistory extends AbstractModel
     public $NoticeWays;
 
     /**
-     * @var string 兼容告警1.0策略组 Id
+     * @var string 可用于实例、实例组的绑定和解绑接口（[BindingPolicyObject](https://cloud.tencent.com/document/product/248/40421)、[UnBindingAllPolicyObject](https://cloud.tencent.com/document/product/248/40568)、[UnBindingPolicyObject](https://cloud.tencent.com/document/product/248/40567)）的策略 ID
      */
     public $OriginId;
 
@@ -205,7 +205,7 @@ class AlarmHistory extends AbstractModel
      * @param array $ReceiverUids 接收人列表
      * @param array $ReceiverGroups 接收组列表
      * @param array $NoticeWays 告警渠道列表 SMS=短信 EMAIL=邮件 CALL=电话 WECHAT=微信
-     * @param string $OriginId 兼容告警1.0策略组 Id
+     * @param string $OriginId 可用于实例、实例组的绑定和解绑接口（[BindingPolicyObject](https://cloud.tencent.com/document/product/248/40421)、[UnBindingAllPolicyObject](https://cloud.tencent.com/document/product/248/40568)、[UnBindingPolicyObject](https://cloud.tencent.com/document/product/248/40567)）的策略 ID
      * @param string $AlarmType 告警类型
      * @param integer $EventId 事件Id
      * @param string $Region 地域

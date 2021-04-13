@@ -24,6 +24,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUrl(string $Url) 设置文件链接。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getFileSize() 获取文件大小，部分任务支持，单位：字节
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFileSize(integer $FileSize) 设置文件大小，部分任务支持，单位：字节
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method MediaResultInfo getMediaInfo() 获取媒体信息，对于媒体文件，部分任务支持返回
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMediaInfo(MediaResultInfo $MediaInfo) 设置媒体信息，对于媒体文件，部分任务支持返回
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskResultFile extends AbstractModel
 {
@@ -34,7 +42,23 @@ class TaskResultFile extends AbstractModel
     public $Url;
 
     /**
+     * @var integer 文件大小，部分任务支持，单位：字节
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FileSize;
+
+    /**
+     * @var MediaResultInfo 媒体信息，对于媒体文件，部分任务支持返回
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MediaInfo;
+
+    /**
      * @param string $Url 文件链接。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $FileSize 文件大小，部分任务支持，单位：字节
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MediaResultInfo $MediaInfo 媒体信息，对于媒体文件，部分任务支持返回
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -52,6 +76,15 @@ class TaskResultFile extends AbstractModel
         }
         if (array_key_exists("Url",$param) and $param["Url"] !== null) {
             $this->Url = $param["Url"];
+        }
+
+        if (array_key_exists("FileSize",$param) and $param["FileSize"] !== null) {
+            $this->FileSize = $param["FileSize"];
+        }
+
+        if (array_key_exists("MediaInfo",$param) and $param["MediaInfo"] !== null) {
+            $this->MediaInfo = new MediaResultInfo();
+            $this->MediaInfo->deserialize($param["MediaInfo"]);
         }
     }
 }

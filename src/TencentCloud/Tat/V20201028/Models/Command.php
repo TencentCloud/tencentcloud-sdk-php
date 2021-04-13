@@ -42,6 +42,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnableParameter(boolean $EnableParameter) 设置是否启用自定义参数功能。
  * @method string getDefaultParameters() 获取自定义参数的默认取值。
  * @method void setDefaultParameters(string $DefaultParameters) 设置自定义参数的默认取值。
+ * @method string getFormattedDescription() 获取命令的结构化描述。公共命令有值，用户命令为空字符串。
+ * @method void setFormattedDescription(string $FormattedDescription) 设置命令的结构化描述。公共命令有值，用户命令为空字符串。
+ * @method string getCreatedBy() 获取命令创建者。TAT 代表公共命令，USER 代表个人命令。
+ * @method void setCreatedBy(string $CreatedBy) 设置命令创建者。TAT 代表公共命令，USER 代表个人命令。
  */
 class Command extends AbstractModel
 {
@@ -101,6 +105,16 @@ class Command extends AbstractModel
     public $DefaultParameters;
 
     /**
+     * @var string 命令的结构化描述。公共命令有值，用户命令为空字符串。
+     */
+    public $FormattedDescription;
+
+    /**
+     * @var string 命令创建者。TAT 代表公共命令，USER 代表个人命令。
+     */
+    public $CreatedBy;
+
+    /**
      * @param string $CommandId 命令ID。
      * @param string $CommandName 命令名称。
      * @param string $Description 命令描述。
@@ -112,6 +126,8 @@ class Command extends AbstractModel
      * @param string $UpdatedTime 命令更新时间。
      * @param boolean $EnableParameter 是否启用自定义参数功能。
      * @param string $DefaultParameters 自定义参数的默认取值。
+     * @param string $FormattedDescription 命令的结构化描述。公共命令有值，用户命令为空字符串。
+     * @param string $CreatedBy 命令创建者。TAT 代表公共命令，USER 代表个人命令。
      */
     function __construct()
     {
@@ -168,6 +184,14 @@ class Command extends AbstractModel
 
         if (array_key_exists("DefaultParameters",$param) and $param["DefaultParameters"] !== null) {
             $this->DefaultParameters = $param["DefaultParameters"];
+        }
+
+        if (array_key_exists("FormattedDescription",$param) and $param["FormattedDescription"] !== null) {
+            $this->FormattedDescription = $param["FormattedDescription"];
+        }
+
+        if (array_key_exists("CreatedBy",$param) and $param["CreatedBy"] !== null) {
+            $this->CreatedBy = $param["CreatedBy"];
         }
     }
 }

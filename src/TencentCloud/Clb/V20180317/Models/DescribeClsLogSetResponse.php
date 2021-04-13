@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getLogsetId() 获取日志集的 ID。
  * @method void setLogsetId(string $LogsetId) 设置日志集的 ID。
+ * @method string getHealthLogsetId() 获取健康检查日志集的 ID。
+ * @method void setHealthLogsetId(string $HealthLogsetId) 设置健康检查日志集的 ID。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -33,12 +35,18 @@ class DescribeClsLogSetResponse extends AbstractModel
     public $LogsetId;
 
     /**
+     * @var string 健康检查日志集的 ID。
+     */
+    public $HealthLogsetId;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param string $LogsetId 日志集的 ID。
+     * @param string $HealthLogsetId 健康检查日志集的 ID。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -56,6 +64,10 @@ class DescribeClsLogSetResponse extends AbstractModel
         }
         if (array_key_exists("LogsetId",$param) and $param["LogsetId"] !== null) {
             $this->LogsetId = $param["LogsetId"];
+        }
+
+        if (array_key_exists("HealthLogsetId",$param) and $param["HealthLogsetId"] !== null) {
+            $this->HealthLogsetId = $param["HealthLogsetId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

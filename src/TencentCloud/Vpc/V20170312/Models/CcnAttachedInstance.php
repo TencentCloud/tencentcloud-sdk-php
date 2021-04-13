@@ -66,6 +66,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCcnUin(string $CcnUin) 设置云联网所属UIN（根账号）。
  * @method string getInstanceArea() 获取关联实例所属的大地域，如: CHINA_MAINLAND
  * @method void setInstanceArea(string $InstanceArea) 设置关联实例所属的大地域，如: CHINA_MAINLAND
+ * @method string getDescription() 获取备注
+ * @method void setDescription(string $Description) 设置备注
  */
 class CcnAttachedInstance extends AbstractModel
 {
@@ -137,6 +139,11 @@ class CcnAttachedInstance extends AbstractModel
     public $InstanceArea;
 
     /**
+     * @var string 备注
+     */
+    public $Description;
+
+    /**
      * @param string $CcnId 云联网实例ID。
      * @param string $InstanceType 关联实例类型：
 <li>`VPC`：私有网络</li>
@@ -160,6 +167,7 @@ class CcnAttachedInstance extends AbstractModel
      * @param string $AttachedTime 关联时间。
      * @param string $CcnUin 云联网所属UIN（根账号）。
      * @param string $InstanceArea 关联实例所属的大地域，如: CHINA_MAINLAND
+     * @param string $Description 备注
      */
     function __construct()
     {
@@ -216,6 +224,10 @@ class CcnAttachedInstance extends AbstractModel
 
         if (array_key_exists("InstanceArea",$param) and $param["InstanceArea"] !== null) {
             $this->InstanceArea = $param["InstanceArea"];
+        }
+
+        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
+            $this->Description = $param["Description"];
         }
     }
 }

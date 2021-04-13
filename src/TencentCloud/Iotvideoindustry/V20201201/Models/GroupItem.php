@@ -60,6 +60,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(integer $CreateTime) 设置创建时间
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getGroupStatus() 获取分组状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setGroupStatus(integer $GroupStatus) 设置分组状态
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class GroupItem extends AbstractModel
 {
@@ -124,6 +128,12 @@ class GroupItem extends AbstractModel
     public $CreateTime;
 
     /**
+     * @var integer 分组状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $GroupStatus;
+
+    /**
      * @param string $GroupName 分组名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ParentId 父分组ID
@@ -143,6 +153,8 @@ class GroupItem extends AbstractModel
      * @param string $GroupType 分组类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CreateTime 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $GroupStatus 分组状态
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -196,6 +208,10 @@ class GroupItem extends AbstractModel
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
             $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("GroupStatus",$param) and $param["GroupStatus"] !== null) {
+            $this->GroupStatus = $param["GroupStatus"];
         }
     }
 }

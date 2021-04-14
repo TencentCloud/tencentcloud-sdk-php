@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置Name 资源池名称
  * @method string getClusterInstanceId() 获取ClusterInstanceId 集群实例id
  * @method void setClusterInstanceId(string $ClusterInstanceId) 设置ClusterInstanceId 集群实例id
- * @method string getLifeState() 获取LifeState 状态
- * @method void setLifeState(string $LifeState) 设置LifeState 状态
+ * @method string getLifeState() 获取LifeState 状态，当前节点池生命周期状态包括：creating，normal，updating，deleting，deleted
+ * @method void setLifeState(string $LifeState) 设置LifeState 状态，当前节点池生命周期状态包括：creating，normal，updating，deleting，deleted
  * @method string getLaunchConfigurationId() 获取LaunchConfigurationId 配置
  * @method void setLaunchConfigurationId(string $LaunchConfigurationId) 设置LaunchConfigurationId 配置
  * @method string getAutoscalingGroupId() 获取AutoscalingGroupId 分组id
@@ -93,7 +93,7 @@ class NodePool extends AbstractModel
     public $ClusterInstanceId;
 
     /**
-     * @var string LifeState 状态
+     * @var string LifeState 状态，当前节点池生命周期状态包括：creating，normal，updating，deleting，deleted
      */
     public $LifeState;
 
@@ -180,7 +180,7 @@ class NodePool extends AbstractModel
      * @param string $NodePoolId NodePoolId 资源池id
      * @param string $Name Name 资源池名称
      * @param string $ClusterInstanceId ClusterInstanceId 集群实例id
-     * @param string $LifeState LifeState 状态
+     * @param string $LifeState LifeState 状态，当前节点池生命周期状态包括：creating，normal，updating，deleting，deleted
      * @param string $LaunchConfigurationId LaunchConfigurationId 配置
      * @param string $AutoscalingGroupId AutoscalingGroupId 分组id
      * @param array $Labels Labels 标签

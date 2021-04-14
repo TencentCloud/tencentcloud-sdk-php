@@ -84,9 +84,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setComparemsg(string $Comparemsg) 设置本次流程最终一比一结果描述。（仅描述用，文案更新时不会通知。）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSim() 获取本次流程活体一比一的分数。
+ * @method string getSim() 获取本次流程活体一比一的分数，取值范围 [0.00, 100.00]。相似度大于等于70时才判断为同一人，也可根据具体场景自行调整阈值（阈值70的误通过率为千分之一，阈值80的误通过率是万分之一）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSim(string $Sim) 设置本次流程活体一比一的分数。
+ * @method void setSim(string $Sim) 设置本次流程活体一比一的分数，取值范围 [0.00, 100.00]。相似度大于等于70时才判断为同一人，也可根据具体场景自行调整阈值（阈值70的误通过率为千分之一，阈值80的误通过率是万分之一）
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLocation() 获取地理位置经纬度。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -216,7 +216,7 @@ class DetectInfoText extends AbstractModel
     public $Comparemsg;
 
     /**
-     * @var string 本次流程活体一比一的分数。
+     * @var string 本次流程活体一比一的分数，取值范围 [0.00, 100.00]。相似度大于等于70时才判断为同一人，也可根据具体场景自行调整阈值（阈值70的误通过率为千分之一，阈值80的误通过率是万分之一）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Sim;
@@ -288,7 +288,7 @@ class DetectInfoText extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Comparemsg 本次流程最终一比一结果描述。（仅描述用，文案更新时不会通知。）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Sim 本次流程活体一比一的分数。
+     * @param string $Sim 本次流程活体一比一的分数，取值范围 [0.00, 100.00]。相似度大于等于70时才判断为同一人，也可根据具体场景自行调整阈值（阈值70的误通过率为千分之一，阈值80的误通过率是万分之一）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Location 地理位置经纬度。
 注意：此字段可能返回 null，表示取不到有效值。

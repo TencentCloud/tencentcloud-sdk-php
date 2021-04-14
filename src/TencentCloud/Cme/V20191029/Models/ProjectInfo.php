@@ -32,12 +32,14 @@ use TencentCloud\Common\AbstractModel;
 <li>SWITCHER：导播台。</li>
 <li>VIDEO_SEGMENTATION：视频拆条。</li>
 <li>STREAM_CONNECT：云转推。</li>
+<li>RECORD_REPLAY：录制回放。</li>
  * @method void setCategory(string $Category) 设置项目类别，取值：
 项目类别，取值有：
 <li>VIDEO_EDIT：视频编辑。</li>
 <li>SWITCHER：导播台。</li>
 <li>VIDEO_SEGMENTATION：视频拆条。</li>
 <li>STREAM_CONNECT：云转推。</li>
+<li>RECORD_REPLAY：录制回放。</li>
  * @method Entity getOwner() 获取归属者。
  * @method void setOwner(Entity $Owner) 设置归属者。
  * @method string getCoverUrl() 获取项目封面图片地址。
@@ -71,6 +73,7 @@ class ProjectInfo extends AbstractModel
 <li>SWITCHER：导播台。</li>
 <li>VIDEO_SEGMENTATION：视频拆条。</li>
 <li>STREAM_CONNECT：云转推。</li>
+<li>RECORD_REPLAY：录制回放。</li>
      */
     public $Category;
 
@@ -104,6 +107,7 @@ class ProjectInfo extends AbstractModel
 <li>SWITCHER：导播台。</li>
 <li>VIDEO_SEGMENTATION：视频拆条。</li>
 <li>STREAM_CONNECT：云转推。</li>
+<li>RECORD_REPLAY：录制回放。</li>
      * @param Entity $Owner 归属者。
      * @param string $CoverUrl 项目封面图片地址。
      * @param string $CreateTime 项目创建时间，格式按照 ISO 8601 标准表示。

@@ -27,11 +27,13 @@ use TencentCloud\Common\AbstractModel;
 <li>SWITCHER：导播台。</li>
 <li>VIDEO_SEGMENTATION：视频拆条。</li>
 <li>STREAM_CONNECT：云转推。</li>
+<li>RECORD_REPLAY：录制回放。</li>
  * @method void setCategory(string $Category) 设置项目类别，取值有：
 <li>VIDEO_EDIT：视频编辑。</li>
 <li>SWITCHER：导播台。</li>
 <li>VIDEO_SEGMENTATION：视频拆条。</li>
 <li>STREAM_CONNECT：云转推。</li>
+<li>RECORD_REPLAY：录制回放。</li>
  * @method string getName() 获取项目名称，不可超过30个字符。
  * @method void setName(string $Name) 设置项目名称，不可超过30个字符。
  * @method Entity getOwner() 获取项目归属者。
@@ -52,6 +54,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVideoSegmentationProjectInput(VideoSegmentationProjectInput $VideoSegmentationProjectInput) 设置视频拆条信息，仅当项目类型为 VIDEO_SEGMENTATION  时必填。
  * @method StreamConnectProjectInput getStreamConnectProjectInput() 获取云转推项目信息，仅当项目类型为 STREAM_CONNECT 时必填。
  * @method void setStreamConnectProjectInput(StreamConnectProjectInput $StreamConnectProjectInput) 设置云转推项目信息，仅当项目类型为 STREAM_CONNECT 时必填。
+ * @method RecordReplayProjectInput getRecordReplayProjectInput() 获取录制回放项目信息，仅当项目类型为 RECORD_REPLAY 时必填。
+ * @method void setRecordReplayProjectInput(RecordReplayProjectInput $RecordReplayProjectInput) 设置录制回放项目信息，仅当项目类型为 RECORD_REPLAY 时必填。
  */
 class CreateProjectRequest extends AbstractModel
 {
@@ -66,6 +70,7 @@ class CreateProjectRequest extends AbstractModel
 <li>SWITCHER：导播台。</li>
 <li>VIDEO_SEGMENTATION：视频拆条。</li>
 <li>STREAM_CONNECT：云转推。</li>
+<li>RECORD_REPLAY：录制回放。</li>
      */
     public $Category;
 
@@ -116,12 +121,18 @@ class CreateProjectRequest extends AbstractModel
     public $StreamConnectProjectInput;
 
     /**
+     * @var RecordReplayProjectInput 录制回放项目信息，仅当项目类型为 RECORD_REPLAY 时必填。
+     */
+    public $RecordReplayProjectInput;
+
+    /**
      * @param string $Platform 平台名称，指定访问的平台。
      * @param string $Category 项目类别，取值有：
 <li>VIDEO_EDIT：视频编辑。</li>
 <li>SWITCHER：导播台。</li>
 <li>VIDEO_SEGMENTATION：视频拆条。</li>
 <li>STREAM_CONNECT：云转推。</li>
+<li>RECORD_REPLAY：录制回放。</li>
      * @param string $Name 项目名称，不可超过30个字符。
      * @param Entity $Owner 项目归属者。
      * @param string $AspectRatio 画布宽高比。
@@ -132,6 +143,7 @@ class CreateProjectRequest extends AbstractModel
      * @param VideoEditProjectInput $VideoEditProjectInput 视频编辑信息，仅当项目类型为 VIDEO_EDIT 时必填。
      * @param VideoSegmentationProjectInput $VideoSegmentationProjectInput 视频拆条信息，仅当项目类型为 VIDEO_SEGMENTATION  时必填。
      * @param StreamConnectProjectInput $StreamConnectProjectInput 云转推项目信息，仅当项目类型为 STREAM_CONNECT 时必填。
+     * @param RecordReplayProjectInput $RecordReplayProjectInput 录制回放项目信息，仅当项目类型为 RECORD_REPLAY 时必填。
      */
     function __construct()
     {
@@ -194,6 +206,11 @@ class CreateProjectRequest extends AbstractModel
         if (array_key_exists("StreamConnectProjectInput",$param) and $param["StreamConnectProjectInput"] !== null) {
             $this->StreamConnectProjectInput = new StreamConnectProjectInput();
             $this->StreamConnectProjectInput->deserialize($param["StreamConnectProjectInput"]);
+        }
+
+        if (array_key_exists("RecordReplayProjectInput",$param) and $param["RecordReplayProjectInput"] !== null) {
+            $this->RecordReplayProjectInput = new RecordReplayProjectInput();
+            $this->RecordReplayProjectInput->deserialize($param["RecordReplayProjectInput"]);
         }
     }
 }

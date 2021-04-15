@@ -32,6 +32,7 @@ use TencentCloud\Gme\V20180711\Models as Models;
 <p style="color:red">如果在提交语音检测任务时未设置 Callback 字段，则需要通过本接口获取检测结果</p>
  * @method Models\DescribeUserInAndOutTimeResponse DescribeUserInAndOutTime(Models\DescribeUserInAndOutTimeRequest $req) 拉取用户在房间得进出时间
  * @method Models\ModifyAppStatusResponse ModifyAppStatus(Models\ModifyAppStatusRequest $req) 本接口(ModifyAppStatus)用于修改应用总开关状态。
+ * @method Models\ModifyRoomInfoResponse ModifyRoomInfo(Models\ModifyRoomInfoRequest $req) 修改房间信息
  * @method Models\ScanVoiceResponse ScanVoice(Models\ScanVoiceRequest $req) 本接口(ScanVoice)用于提交语音检测任务，检测任务列表最多支持100个。使用前请您登录[控制台 - 服务配置](https://console.cloud.tencent.com/gamegme/conf)开启语音分析服务。
 </br></br>
 

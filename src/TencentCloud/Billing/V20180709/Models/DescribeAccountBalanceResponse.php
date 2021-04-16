@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAccountBalance返回参数结构体
  *
- * @method integer getBalance() 获取云账户信息中的”展示可用余额”字段，单位为"分"
- * @method void setBalance(integer $Balance) 设置云账户信息中的”展示可用余额”字段，单位为"分"
+ * @method integer getBalance() 获取接口做过变更,为兼容老接口,本字段与RealBalance相同,为当前真实可用余额,单位 分
+ * @method void setBalance(integer $Balance) 设置接口做过变更,为兼容老接口,本字段与RealBalance相同,为当前真实可用余额,单位 分
  * @method integer getUin() 获取查询的用户Uin
  * @method void setUin(integer $Uin) 设置查询的用户Uin
- * @method float getRealBalance() 获取当前真实可用余额
- * @method void setRealBalance(float $RealBalance) 设置当前真实可用余额
- * @method float getCashAccountBalance() 获取现金账户余额
- * @method void setCashAccountBalance(float $CashAccountBalance) 设置现金账户余额
- * @method float getIncomeIntoAccountBalance() 获取收益转入账户余额
- * @method void setIncomeIntoAccountBalance(float $IncomeIntoAccountBalance) 设置收益转入账户余额
- * @method float getPresentAccountBalance() 获取赠送账户余额
- * @method void setPresentAccountBalance(float $PresentAccountBalance) 设置赠送账户余额
- * @method float getFreezeAmount() 获取冻结金额
- * @method void setFreezeAmount(float $FreezeAmount) 设置冻结金额
- * @method float getOweAmount() 获取欠费金额
- * @method void setOweAmount(float $OweAmount) 设置欠费金额
+ * @method float getRealBalance() 获取当前真实可用余额,单位 分
+ * @method void setRealBalance(float $RealBalance) 设置当前真实可用余额,单位 分
+ * @method float getCashAccountBalance() 获取现金账户余额,单位 分
+ * @method void setCashAccountBalance(float $CashAccountBalance) 设置现金账户余额,单位 分
+ * @method float getIncomeIntoAccountBalance() 获取收益转入账户余额,单位 分
+ * @method void setIncomeIntoAccountBalance(float $IncomeIntoAccountBalance) 设置收益转入账户余额,单位 分
+ * @method float getPresentAccountBalance() 获取赠送账户余额,单位 分
+ * @method void setPresentAccountBalance(float $PresentAccountBalance) 设置赠送账户余额,单位 分
+ * @method float getFreezeAmount() 获取冻结金额,单位 分
+ * @method void setFreezeAmount(float $FreezeAmount) 设置冻结金额,单位 分
+ * @method float getOweAmount() 获取欠费金额,单位 分
+ * @method void setOweAmount(float $OweAmount) 设置欠费金额,单位 分
  * @method boolean getIsAllowArrears() 获取是否允许欠费消费
  * @method void setIsAllowArrears(boolean $IsAllowArrears) 设置是否允许欠费消费
  * @method boolean getIsCreditLimited() 获取是否限制信用额度
@@ -52,7 +52,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeAccountBalanceResponse extends AbstractModel
 {
     /**
-     * @var integer 云账户信息中的”展示可用余额”字段，单位为"分"
+     * @var integer 接口做过变更,为兼容老接口,本字段与RealBalance相同,为当前真实可用余额,单位 分
      */
     public $Balance;
 
@@ -62,32 +62,32 @@ class DescribeAccountBalanceResponse extends AbstractModel
     public $Uin;
 
     /**
-     * @var float 当前真实可用余额
+     * @var float 当前真实可用余额,单位 分
      */
     public $RealBalance;
 
     /**
-     * @var float 现金账户余额
+     * @var float 现金账户余额,单位 分
      */
     public $CashAccountBalance;
 
     /**
-     * @var float 收益转入账户余额
+     * @var float 收益转入账户余额,单位 分
      */
     public $IncomeIntoAccountBalance;
 
     /**
-     * @var float 赠送账户余额
+     * @var float 赠送账户余额,单位 分
      */
     public $PresentAccountBalance;
 
     /**
-     * @var float 冻结金额
+     * @var float 冻结金额,单位 分
      */
     public $FreezeAmount;
 
     /**
-     * @var float 欠费金额
+     * @var float 欠费金额,单位 分
      */
     public $OweAmount;
 
@@ -122,14 +122,14 @@ class DescribeAccountBalanceResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Balance 云账户信息中的”展示可用余额”字段，单位为"分"
+     * @param integer $Balance 接口做过变更,为兼容老接口,本字段与RealBalance相同,为当前真实可用余额,单位 分
      * @param integer $Uin 查询的用户Uin
-     * @param float $RealBalance 当前真实可用余额
-     * @param float $CashAccountBalance 现金账户余额
-     * @param float $IncomeIntoAccountBalance 收益转入账户余额
-     * @param float $PresentAccountBalance 赠送账户余额
-     * @param float $FreezeAmount 冻结金额
-     * @param float $OweAmount 欠费金额
+     * @param float $RealBalance 当前真实可用余额,单位 分
+     * @param float $CashAccountBalance 现金账户余额,单位 分
+     * @param float $IncomeIntoAccountBalance 收益转入账户余额,单位 分
+     * @param float $PresentAccountBalance 赠送账户余额,单位 分
+     * @param float $FreezeAmount 冻结金额,单位 分
+     * @param float $OweAmount 欠费金额,单位 分
      * @param boolean $IsAllowArrears 是否允许欠费消费
      * @param boolean $IsCreditLimited 是否限制信用额度
      * @param float $CreditAmount 信用额度

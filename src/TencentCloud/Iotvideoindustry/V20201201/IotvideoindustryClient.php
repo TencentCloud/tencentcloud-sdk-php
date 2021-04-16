@@ -42,10 +42,15 @@ use TencentCloud\Iotvideoindustry\V20201201\Models as Models;
  * @method Models\DescribeGroupByPathResponse DescribeGroupByPath(Models\DescribeGroupByPathRequest $req) 根据分组路径查询分组
  * @method Models\DescribeGroupDevicesResponse DescribeGroupDevices(Models\DescribeGroupDevicesRequest $req) 本接口(DescribeGroupDevices)用于查询分组下的设备列表。
  * @method Models\DescribeGroupsResponse DescribeGroups(Models\DescribeGroupsRequest $req) 本接口(DescribeGroups)用于批量查询分组信息。
+ * @method Models\DescribeRecordStreamResponse DescribeRecordStream(Models\DescribeRecordStreamRequest $req) 获取回放视频流(NVR录制用)
+RecordId和StartTime/EndTime互斥
+当存在RecordId时，StartTime和EndTime无效
+当RecordId为空，StartTime和EndTime生效
  * @method Models\DescribeSIPServerResponse DescribeSIPServer(Models\DescribeSIPServerRequest $req) 本接口用于获取SIP服务器相关配置，用户可以通过这些配置项，将设备通过GB28181协议注册到本服务。
  * @method Models\DescribeStatisticDetailsResponse DescribeStatisticDetails(Models\DescribeStatisticDetailsRequest $req) 本接口(DescribeStatisticDetails)用于查询指定统计项详情，返回结果按天为单位聚合，支持的最大时间查询范围为31天。
  * @method Models\DescribeStatisticSummaryResponse DescribeStatisticSummary(Models\DescribeStatisticSummaryRequest $req) 本接口(DescribeStatisticSummary)用于查询用户昨日的概览数据。
  * @method Models\DescribeSubGroupsResponse DescribeSubGroups(Models\DescribeSubGroupsRequest $req) 本接口(DescribeSubGroups)用于查询分组下的子分组列表。
+ * @method Models\DescribeVideoListResponse DescribeVideoList(Models\DescribeVideoListRequest $req) 根据时间获取回放文件列表(云端录制用)
  * @method Models\GetRecordDatesByDevResponse GetRecordDatesByDev(Models\GetRecordDatesByDevRequest $req) 本接口(GetRecordDatesByDev)用于查询设备含有录像文件的日期列表。
  * @method Models\GetRecordPlanByDevResponse GetRecordPlanByDev(Models\GetRecordPlanByDevRequest $req) 本接口(GetRecordPlanByDev)用于根据设备ID查询其绑定的录制计划.
  * @method Models\GetRecordPlanByIdResponse GetRecordPlanById(Models\GetRecordPlanByIdRequest $req) 本接口(GetRecordPlanById)用于根据录制计划ID获取录制计划。

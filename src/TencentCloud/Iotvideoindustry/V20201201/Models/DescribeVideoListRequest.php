@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移
  * @method integer getLimit() 获取限制
  * @method void setLimit(integer $Limit) 设置限制
+ * @method string getDeviceId() 获取设备Id
+ * @method void setDeviceId(string $DeviceId) 设置设备Id
  */
 class DescribeVideoListRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class DescribeVideoListRequest extends AbstractModel
     public $Limit;
 
     /**
+     * @var string 设备Id
+     */
+    public $DeviceId;
+
+    /**
      * @param integer $StartTime 开始时间戳，秒级
      * @param integer $EndTime 结束时间戳，秒级
      * @param integer $Offset 偏移
      * @param integer $Limit 限制
+     * @param string $DeviceId 设备Id
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class DescribeVideoListRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("DeviceId",$param) and $param["DeviceId"] !== null) {
+            $this->DeviceId = $param["DeviceId"];
         }
     }
 }

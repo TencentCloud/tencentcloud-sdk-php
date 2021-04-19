@@ -18,20 +18,20 @@ namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DestroyDBInstance请求参数结构体
+ * DisIsolateDBInstances返回参数结构体
  *
- * @method string getDBInstanceId() 获取待下线实例ID
- * @method void setDBInstanceId(string $DBInstanceId) 设置待下线实例ID
+ * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DestroyDBInstanceRequest extends AbstractModel
+class DisIsolateDBInstancesResponse extends AbstractModel
 {
     /**
-     * @var string 待下线实例ID
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public $DBInstanceId;
+    public $RequestId;
 
     /**
-     * @param string $DBInstanceId 待下线实例ID
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class DestroyDBInstanceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DBInstanceId",$param) and $param["DBInstanceId"] !== null) {
-            $this->DBInstanceId = $param["DBInstanceId"];
+        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
+            $this->RequestId = $param["RequestId"];
         }
     }
 }

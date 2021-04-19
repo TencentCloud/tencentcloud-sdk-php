@@ -18,20 +18,20 @@ namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DestroyDBInstance请求参数结构体
+ * IsolateDBInstances请求参数结构体
  *
- * @method string getDBInstanceId() 获取待下线实例ID
- * @method void setDBInstanceId(string $DBInstanceId) 设置待下线实例ID
+ * @method array getDBInstanceIdSet() 获取实例ID集合
+ * @method void setDBInstanceIdSet(array $DBInstanceIdSet) 设置实例ID集合
  */
-class DestroyDBInstanceRequest extends AbstractModel
+class IsolateDBInstancesRequest extends AbstractModel
 {
     /**
-     * @var string 待下线实例ID
+     * @var array 实例ID集合
      */
-    public $DBInstanceId;
+    public $DBInstanceIdSet;
 
     /**
-     * @param string $DBInstanceId 待下线实例ID
+     * @param array $DBInstanceIdSet 实例ID集合
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class DestroyDBInstanceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DBInstanceId",$param) and $param["DBInstanceId"] !== null) {
-            $this->DBInstanceId = $param["DBInstanceId"];
+        if (array_key_exists("DBInstanceIdSet",$param) and $param["DBInstanceIdSet"] !== null) {
+            $this->DBInstanceIdSet = $param["DBInstanceIdSet"];
         }
     }
 }

@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPureAudioStream(integer $PureAudioStream) 设置取值范围[0,1]， 填0：直播流为音视频(默认); 填1：直播流为纯音频
  * @method string getRecordId() 获取自定义录制文件名称前缀。请先在实时音视频控制台开通录制功能，https://cloud.tencent.com/document/product/647/50768
  * @method void setRecordId(string $RecordId) 设置自定义录制文件名称前缀。请先在实时音视频控制台开通录制功能，https://cloud.tencent.com/document/product/647/50768
- * @method integer getRecordAudioOnly() 获取取值范围[0,1]，填0无实际含义; 填1：指定录制文件格式为mp3
- * @method void setRecordAudioOnly(integer $RecordAudioOnly) 设置取值范围[0,1]，填0无实际含义; 填1：指定录制文件格式为mp3
+ * @method integer getRecordAudioOnly() 获取取值范围[0,1]，填0无实际含义; 填1：指定录制文件格式为mp3。此参数不建议使用，建议在实时音视频控制台配置纯音频录制模板。
+ * @method void setRecordAudioOnly(integer $RecordAudioOnly) 设置取值范围[0,1]，填0无实际含义; 填1：指定录制文件格式为mp3。此参数不建议使用，建议在实时音视频控制台配置纯音频录制模板。
  */
 class OutputParams extends AbstractModel
 {
@@ -47,7 +47,7 @@ class OutputParams extends AbstractModel
     public $RecordId;
 
     /**
-     * @var integer 取值范围[0,1]，填0无实际含义; 填1：指定录制文件格式为mp3
+     * @var integer 取值范围[0,1]，填0无实际含义; 填1：指定录制文件格式为mp3。此参数不建议使用，建议在实时音视频控制台配置纯音频录制模板。
      */
     public $RecordAudioOnly;
 
@@ -55,7 +55,7 @@ class OutputParams extends AbstractModel
      * @param string $StreamId 直播流 ID，由用户自定义设置，该流 ID 不能与用户旁路的流 ID 相同。
      * @param integer $PureAudioStream 取值范围[0,1]， 填0：直播流为音视频(默认); 填1：直播流为纯音频
      * @param string $RecordId 自定义录制文件名称前缀。请先在实时音视频控制台开通录制功能，https://cloud.tencent.com/document/product/647/50768
-     * @param integer $RecordAudioOnly 取值范围[0,1]，填0无实际含义; 填1：指定录制文件格式为mp3
+     * @param integer $RecordAudioOnly 取值范围[0,1]，填0无实际含义; 填1：指定录制文件格式为mp3。此参数不建议使用，建议在实时音视频控制台配置纯音频录制模板。
      */
     function __construct()
     {

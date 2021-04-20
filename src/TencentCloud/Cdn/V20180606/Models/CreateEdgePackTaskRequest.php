@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCosBucket(string $CosBucket) 设置apk 所在的 cos 存储桶, 如 edgepack-xxxxxxxx
  * @method string getCosUriFrom() 获取apk 源文件的存储路径, 如 /apk/xxxx.apk
  * @method void setCosUriFrom(string $CosUriFrom) 设置apk 源文件的存储路径, 如 /apk/xxxx.apk
- * @method string getCosUriTo() 获取拓展之后的 apk 目标存储路径,如 /out/xxxx.apk
- * @method void setCosUriTo(string $CosUriTo) 设置拓展之后的 apk 目标存储路径,如 /out/xxxx.apk
  * @method integer getBlockID() 获取BlockID 的值, WALLE为1903654775(0x71777777)，VasDolly为2282837503(0x881155ff),传0或不传时默认为 WALLE 方案
  * @method void setBlockID(integer $BlockID) 设置BlockID 的值, WALLE为1903654775(0x71777777)，VasDolly为2282837503(0x881155ff),传0或不传时默认为 WALLE 方案
+ * @method string getCosUriTo() 获取拓展之后的 apk 目标存储路径,如 /out/xxxx.apk
+ * @method void setCosUriTo(string $CosUriTo) 设置拓展之后的 apk 目标存储路径,如 /out/xxxx.apk
  */
 class CreateEdgePackTaskRequest extends AbstractModel
 {
@@ -42,20 +42,20 @@ class CreateEdgePackTaskRequest extends AbstractModel
     public $CosUriFrom;
 
     /**
-     * @var string 拓展之后的 apk 目标存储路径,如 /out/xxxx.apk
-     */
-    public $CosUriTo;
-
-    /**
      * @var integer BlockID 的值, WALLE为1903654775(0x71777777)，VasDolly为2282837503(0x881155ff),传0或不传时默认为 WALLE 方案
      */
     public $BlockID;
 
     /**
+     * @var string 拓展之后的 apk 目标存储路径,如 /out/xxxx.apk
+     */
+    public $CosUriTo;
+
+    /**
      * @param string $CosBucket apk 所在的 cos 存储桶, 如 edgepack-xxxxxxxx
      * @param string $CosUriFrom apk 源文件的存储路径, 如 /apk/xxxx.apk
-     * @param string $CosUriTo 拓展之后的 apk 目标存储路径,如 /out/xxxx.apk
      * @param integer $BlockID BlockID 的值, WALLE为1903654775(0x71777777)，VasDolly为2282837503(0x881155ff),传0或不传时默认为 WALLE 方案
+     * @param string $CosUriTo 拓展之后的 apk 目标存储路径,如 /out/xxxx.apk
      */
     function __construct()
     {
@@ -78,12 +78,12 @@ class CreateEdgePackTaskRequest extends AbstractModel
             $this->CosUriFrom = $param["CosUriFrom"];
         }
 
-        if (array_key_exists("CosUriTo",$param) and $param["CosUriTo"] !== null) {
-            $this->CosUriTo = $param["CosUriTo"];
-        }
-
         if (array_key_exists("BlockID",$param) and $param["BlockID"] !== null) {
             $this->BlockID = $param["BlockID"];
+        }
+
+        if (array_key_exists("CosUriTo",$param) and $param["CosUriTo"] !== null) {
+            $this->CosUriTo = $param["CosUriTo"];
         }
     }
 }

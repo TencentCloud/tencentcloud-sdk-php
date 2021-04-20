@@ -92,6 +92,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClustersZone(ClustersZone $ClustersZone) 设置集群所在的可用区
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getClustersVersion() 获取集群版本
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setClustersVersion(string $ClustersVersion) 设置集群版本
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Cluster extends AbstractModel
 {
@@ -216,6 +220,12 @@ class Cluster extends AbstractModel
     public $ClustersZone;
 
     /**
+     * @var string 集群版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ClustersVersion;
+
+    /**
      * @param string $ClusterId 集群唯一ID
      * @param string $ClusterName 集群名称
      * @param string $ClusterType 集群类型，如TGW，STGW，VPCGW
@@ -251,6 +261,8 @@ class Cluster extends AbstractModel
      * @param string $Isp 集群的Isp属性，如："BGP","CMCC","CUCC","CTCC","INTERNAL"。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ClustersZone $ClustersZone 集群所在的可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ClustersVersion 集群版本
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -349,6 +361,10 @@ class Cluster extends AbstractModel
         if (array_key_exists("ClustersZone",$param) and $param["ClustersZone"] !== null) {
             $this->ClustersZone = new ClustersZone();
             $this->ClustersZone->deserialize($param["ClustersZone"]);
+        }
+
+        if (array_key_exists("ClustersVersion",$param) and $param["ClustersVersion"] !== null) {
+            $this->ClustersVersion = $param["ClustersVersion"];
         }
     }
 }

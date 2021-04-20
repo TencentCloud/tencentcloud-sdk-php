@@ -124,6 +124,22 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSignLaw(boolean $SignLaw) 设置物理专线是否已签署用户协议
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getLocalZone() 获取物理专线是否为LocalZone
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLocalZone(boolean $LocalZone) 设置物理专线是否为LocalZone
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getVlanZeroDirectConnectTunnelCount() 获取该物理专线下vlan 0的专线通道数量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVlanZeroDirectConnectTunnelCount(integer $VlanZeroDirectConnectTunnelCount) 设置该物理专线下vlan 0的专线通道数量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getOtherVlanDirectConnectTunnelCount() 获取该物理专线下非vlan 0的专线通道数量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOtherVlanDirectConnectTunnelCount(integer $OtherVlanDirectConnectTunnelCount) 设置该物理专线下非vlan 0的专线通道数量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getMinBandwidth() 获取物理专线最小带宽
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMinBandwidth(integer $MinBandwidth) 设置物理专线最小带宽
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DirectConnect extends AbstractModel
 {
@@ -292,6 +308,30 @@ class DirectConnect extends AbstractModel
     public $SignLaw;
 
     /**
+     * @var boolean 物理专线是否为LocalZone
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LocalZone;
+
+    /**
+     * @var integer 该物理专线下vlan 0的专线通道数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $VlanZeroDirectConnectTunnelCount;
+
+    /**
+     * @var integer 该物理专线下非vlan 0的专线通道数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OtherVlanDirectConnectTunnelCount;
+
+    /**
+     * @var integer 物理专线最小带宽
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MinBandwidth;
+
+    /**
      * @param string $DirectConnectId 物理专线ID。
      * @param string $DirectConnectName 物理专线的名称。
      * @param string $AccessPointId 物理专线的接入点ID。
@@ -343,6 +383,14 @@ class DirectConnect extends AbstractModel
      * @param string $StartTime 物理专线开通时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $SignLaw 物理专线是否已签署用户协议
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $LocalZone 物理专线是否为LocalZone
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $VlanZeroDirectConnectTunnelCount 该物理专线下vlan 0的专线通道数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $OtherVlanDirectConnectTunnelCount 该物理专线下非vlan 0的专线通道数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $MinBandwidth 物理专线最小带宽
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -473,6 +521,22 @@ class DirectConnect extends AbstractModel
 
         if (array_key_exists("SignLaw",$param) and $param["SignLaw"] !== null) {
             $this->SignLaw = $param["SignLaw"];
+        }
+
+        if (array_key_exists("LocalZone",$param) and $param["LocalZone"] !== null) {
+            $this->LocalZone = $param["LocalZone"];
+        }
+
+        if (array_key_exists("VlanZeroDirectConnectTunnelCount",$param) and $param["VlanZeroDirectConnectTunnelCount"] !== null) {
+            $this->VlanZeroDirectConnectTunnelCount = $param["VlanZeroDirectConnectTunnelCount"];
+        }
+
+        if (array_key_exists("OtherVlanDirectConnectTunnelCount",$param) and $param["OtherVlanDirectConnectTunnelCount"] !== null) {
+            $this->OtherVlanDirectConnectTunnelCount = $param["OtherVlanDirectConnectTunnelCount"];
+        }
+
+        if (array_key_exists("MinBandwidth",$param) and $param["MinBandwidth"] !== null) {
+            $this->MinBandwidth = $param["MinBandwidth"];
         }
     }
 }

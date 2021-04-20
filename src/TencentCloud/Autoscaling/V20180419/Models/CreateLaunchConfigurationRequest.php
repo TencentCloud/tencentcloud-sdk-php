@@ -79,7 +79,9 @@ use TencentCloud\Common\AbstractModel;
  * @method HostNameSettings getHostNameSettings() 获取云服务器主机名（HostName）的相关设置。
  * @method void setHostNameSettings(HostNameSettings $HostNameSettings) 设置云服务器主机名（HostName）的相关设置。
  * @method InstanceNameSettings getInstanceNameSettings() 获取云服务器实例名（InstanceName）的相关设置。
+如果用户在启动配置中设置此字段，则伸缩组创建出的实例 InstanceName 参照此字段进行设置，并传递给 CVM；如果用户未在启动配置中设置此字段，则伸缩组创建出的实例 InstanceName 按照“as-{{ 伸缩组AutoScalingGroupName }}”进行设置，并传递给 CVM。
  * @method void setInstanceNameSettings(InstanceNameSettings $InstanceNameSettings) 设置云服务器实例名（InstanceName）的相关设置。
+如果用户在启动配置中设置此字段，则伸缩组创建出的实例 InstanceName 参照此字段进行设置，并传递给 CVM；如果用户未在启动配置中设置此字段，则伸缩组创建出的实例 InstanceName 按照“as-{{ 伸缩组AutoScalingGroupName }}”进行设置，并传递给 CVM。
  * @method InstanceChargePrepaid getInstanceChargePrepaid() 获取预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
  * @method void setInstanceChargePrepaid(InstanceChargePrepaid $InstanceChargePrepaid) 设置预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
  * @method string getDiskTypePolicy() 获取云盘类型选择策略，默认取值 ORIGINAL，取值范围：
@@ -194,6 +196,7 @@ class CreateLaunchConfigurationRequest extends AbstractModel
 
     /**
      * @var InstanceNameSettings 云服务器实例名（InstanceName）的相关设置。
+如果用户在启动配置中设置此字段，则伸缩组创建出的实例 InstanceName 参照此字段进行设置，并传递给 CVM；如果用户未在启动配置中设置此字段，则伸缩组创建出的实例 InstanceName 按照“as-{{ 伸缩组AutoScalingGroupName }}”进行设置，并传递给 CVM。
      */
     public $InstanceNameSettings;
 
@@ -240,6 +243,7 @@ class CreateLaunchConfigurationRequest extends AbstractModel
      * @param string $CamRoleName CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。
      * @param HostNameSettings $HostNameSettings 云服务器主机名（HostName）的相关设置。
      * @param InstanceNameSettings $InstanceNameSettings 云服务器实例名（InstanceName）的相关设置。
+如果用户在启动配置中设置此字段，则伸缩组创建出的实例 InstanceName 参照此字段进行设置，并传递给 CVM；如果用户未在启动配置中设置此字段，则伸缩组创建出的实例 InstanceName 按照“as-{{ 伸缩组AutoScalingGroupName }}”进行设置，并传递给 CVM。
      * @param InstanceChargePrepaid $InstanceChargePrepaid 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
      * @param string $DiskTypePolicy 云盘类型选择策略，默认取值 ORIGINAL，取值范围：
 <br><li>ORIGINAL：使用设置的云盘类型

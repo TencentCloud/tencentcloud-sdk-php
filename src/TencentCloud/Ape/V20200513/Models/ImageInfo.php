@@ -28,6 +28,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDimensionsNameId(integer $DimensionsNameId) 设置尺寸名称Id
  * @method string getUserId() 获取平台用户标识
  * @method void setUserId(string $UserId) 设置平台用户标识
+ * @method integer getDownloadPrice() 获取平台用户下载图片购买的价格(单位:分)
+ * @method void setDownloadPrice(integer $DownloadPrice) 设置平台用户下载图片购买的价格(单位:分)
+ * @method string getDownloadType() 获取下载类型。匹配集合中的任意元素：
+<li>Single: 单张购买下载</li>
+<li>BasicEnterpriseMember: 企业基础会员下载</li>
+<li>AdvancedEnterpriseMember: 企业高级会员下载</li>
+<li>DistinguishedEnterpriseMember: 企业尊享会员下载</li>
+ * @method void setDownloadType(string $DownloadType) 设置下载类型。匹配集合中的任意元素：
+<li>Single: 单张购买下载</li>
+<li>BasicEnterpriseMember: 企业基础会员下载</li>
+<li>AdvancedEnterpriseMember: 企业高级会员下载</li>
+<li>DistinguishedEnterpriseMember: 企业尊享会员下载</li>
  */
 class ImageInfo extends AbstractModel
 {
@@ -52,10 +64,30 @@ class ImageInfo extends AbstractModel
     public $UserId;
 
     /**
+     * @var integer 平台用户下载图片购买的价格(单位:分)
+     */
+    public $DownloadPrice;
+
+    /**
+     * @var string 下载类型。匹配集合中的任意元素：
+<li>Single: 单张购买下载</li>
+<li>BasicEnterpriseMember: 企业基础会员下载</li>
+<li>AdvancedEnterpriseMember: 企业高级会员下载</li>
+<li>DistinguishedEnterpriseMember: 企业尊享会员下载</li>
+     */
+    public $DownloadType;
+
+    /**
      * @param integer $ImageId 图片Id
      * @param integer $LicenseScopeId 授权场景Id
      * @param integer $DimensionsNameId 尺寸名称Id
      * @param string $UserId 平台用户标识
+     * @param integer $DownloadPrice 平台用户下载图片购买的价格(单位:分)
+     * @param string $DownloadType 下载类型。匹配集合中的任意元素：
+<li>Single: 单张购买下载</li>
+<li>BasicEnterpriseMember: 企业基础会员下载</li>
+<li>AdvancedEnterpriseMember: 企业高级会员下载</li>
+<li>DistinguishedEnterpriseMember: 企业尊享会员下载</li>
      */
     function __construct()
     {
@@ -84,6 +116,14 @@ class ImageInfo extends AbstractModel
 
         if (array_key_exists("UserId",$param) and $param["UserId"] !== null) {
             $this->UserId = $param["UserId"];
+        }
+
+        if (array_key_exists("DownloadPrice",$param) and $param["DownloadPrice"] !== null) {
+            $this->DownloadPrice = $param["DownloadPrice"];
+        }
+
+        if (array_key_exists("DownloadType",$param) and $param["DownloadType"] !== null) {
+            $this->DownloadType = $param["DownloadType"];
         }
     }
 }

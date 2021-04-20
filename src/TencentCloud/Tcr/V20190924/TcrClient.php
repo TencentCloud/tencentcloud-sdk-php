@@ -37,6 +37,8 @@ use TencentCloud\Tcr\V20190924\Models as Models;
  * @method Models\CreateRepositoryResponse CreateRepository(Models\CreateRepositoryRequest $req) 用于企业版创建镜像仓库
  * @method Models\CreateRepositoryPersonalResponse CreateRepositoryPersonal(Models\CreateRepositoryPersonalRequest $req) 用于在个人版仓库中创建镜像仓库
  * @method Models\CreateSecurityPolicyResponse CreateSecurityPolicy(Models\CreateSecurityPolicyRequest $req) 创建实例公网访问白名单策略
+ * @method Models\CreateTagRetentionExecutionResponse CreateTagRetentionExecution(Models\CreateTagRetentionExecutionRequest $req) 手动执行版本保留
+ * @method Models\CreateTagRetentionRuleResponse CreateTagRetentionRule(Models\CreateTagRetentionRuleRequest $req) 创建版本保留规则
  * @method Models\CreateUserPersonalResponse CreateUserPersonal(Models\CreateUserPersonalRequest $req) 创建个人用户
  * @method Models\CreateWebhookTriggerResponse CreateWebhookTrigger(Models\CreateWebhookTriggerRequest $req) 创建触发器
  * @method Models\DeleteApplicationTriggerPersonalResponse DeleteApplicationTriggerPersonal(Models\DeleteApplicationTriggerPersonalRequest $req) 用于删除应用更新触发器
@@ -52,6 +54,7 @@ use TencentCloud\Tcr\V20190924\Models as Models;
  * @method Models\DeleteRepositoryResponse DeleteRepository(Models\DeleteRepositoryRequest $req) 删除镜像仓库
  * @method Models\DeleteRepositoryPersonalResponse DeleteRepositoryPersonal(Models\DeleteRepositoryPersonalRequest $req) 用于个人版镜像仓库中删除
  * @method Models\DeleteSecurityPolicyResponse DeleteSecurityPolicy(Models\DeleteSecurityPolicyRequest $req) 删除实例公网访问白名单策略
+ * @method Models\DeleteTagRetentionRuleResponse DeleteTagRetentionRule(Models\DeleteTagRetentionRuleRequest $req) 删除版本保留规则
  * @method Models\DeleteWebhookTriggerResponse DeleteWebhookTrigger(Models\DeleteWebhookTriggerRequest $req) 删除触发器
  * @method Models\DescribeApplicationTriggerLogPersonalResponse DescribeApplicationTriggerLogPersonal(Models\DescribeApplicationTriggerLogPersonalRequest $req) 用于查询应用更新触发器触发日志
  * @method Models\DescribeApplicationTriggerPersonalResponse DescribeApplicationTriggerPersonal(Models\DescribeApplicationTriggerPersonalRequest $req) 用于查询应用更新触发器
@@ -77,6 +80,9 @@ use TencentCloud\Tcr\V20190924\Models as Models;
  * @method Models\DescribeRepositoryOwnerPersonalResponse DescribeRepositoryOwnerPersonal(Models\DescribeRepositoryOwnerPersonalRequest $req) 用于在个人版中获取用户全部的镜像仓库列表
  * @method Models\DescribeRepositoryPersonalResponse DescribeRepositoryPersonal(Models\DescribeRepositoryPersonalRequest $req) 查询个人版仓库信息
  * @method Models\DescribeSecurityPoliciesResponse DescribeSecurityPolicies(Models\DescribeSecurityPoliciesRequest $req) 查询实例公网访问白名单策略
+ * @method Models\DescribeTagRetentionExecutionResponse DescribeTagRetentionExecution(Models\DescribeTagRetentionExecutionRequest $req) 查询版本保留执行记录
+ * @method Models\DescribeTagRetentionExecutionTaskResponse DescribeTagRetentionExecutionTask(Models\DescribeTagRetentionExecutionTaskRequest $req) 查询版本保留执行任务
+ * @method Models\DescribeTagRetentionRulesResponse DescribeTagRetentionRules(Models\DescribeTagRetentionRulesRequest $req) 查询版本保留规则
  * @method Models\DescribeUserQuotaPersonalResponse DescribeUserQuotaPersonal(Models\DescribeUserQuotaPersonalRequest $req) 查询个人用户配额
  * @method Models\DescribeWebhookTriggerResponse DescribeWebhookTrigger(Models\DescribeWebhookTriggerRequest $req) 查询触发器
  * @method Models\DescribeWebhookTriggerLogResponse DescribeWebhookTriggerLog(Models\DescribeWebhookTriggerLogRequest $req) 获取触发器日志
@@ -93,6 +99,7 @@ use TencentCloud\Tcr\V20190924\Models as Models;
  * @method Models\ModifyRepositoryAccessPersonalResponse ModifyRepositoryAccessPersonal(Models\ModifyRepositoryAccessPersonalRequest $req) 用于更新个人版镜像仓库的访问属性
  * @method Models\ModifyRepositoryInfoPersonalResponse ModifyRepositoryInfoPersonal(Models\ModifyRepositoryInfoPersonalRequest $req) 用于在个人版镜像仓库中更新容器镜像描述
  * @method Models\ModifySecurityPolicyResponse ModifySecurityPolicy(Models\ModifySecurityPolicyRequest $req) 更新实例公网访问白名单
+ * @method Models\ModifyTagRetentionRuleResponse ModifyTagRetentionRule(Models\ModifyTagRetentionRuleRequest $req) 更新版本保留规则
  * @method Models\ModifyUserPasswordPersonalResponse ModifyUserPasswordPersonal(Models\ModifyUserPasswordPersonalRequest $req) 修改个人用户登录密码
  * @method Models\ModifyWebhookTriggerResponse ModifyWebhookTrigger(Models\ModifyWebhookTriggerRequest $req) 更新触发器
  * @method Models\RenewInstanceResponse RenewInstance(Models\RenewInstanceRequest $req) 预付费实例续费，同时支持按量计费转包年包月

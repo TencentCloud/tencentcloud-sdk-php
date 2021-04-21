@@ -52,6 +52,12 @@ use TencentCloud\Common\AbstractModel;
 1: 启用IPv6
  * @method array getCustomerIDCRoutes() 获取去往用户侧的路由信息
  * @method void setCustomerIDCRoutes(array $CustomerIDCRoutes) 设置去往用户侧的路由信息
+ * @method integer getJumboEnable() 获取是否开启巨帧
+1：开启
+0：不开启
+ * @method void setJumboEnable(integer $JumboEnable) 设置是否开启巨帧
+1：开启
+0：不开启
  */
 class ModifyDirectConnectTunnelExtraRequest extends AbstractModel
 {
@@ -132,6 +138,13 @@ class ModifyDirectConnectTunnelExtraRequest extends AbstractModel
     public $CustomerIDCRoutes;
 
     /**
+     * @var integer 是否开启巨帧
+1：开启
+0：不开启
+     */
+    public $JumboEnable;
+
+    /**
      * @param string $DirectConnectTunnelId 专用通道ID
      * @param integer $Vlan 专用通道的Vlan
      * @param BgpPeer $BgpPeer 用户侧BGP，Asn，AuthKey
@@ -148,6 +161,9 @@ class ModifyDirectConnectTunnelExtraRequest extends AbstractModel
      * @param integer $IPv6Enable 0：停用IPv6
 1: 启用IPv6
      * @param array $CustomerIDCRoutes 去往用户侧的路由信息
+     * @param integer $JumboEnable 是否开启巨帧
+1：开启
+0：不开启
      */
     function __construct()
     {
@@ -229,6 +245,10 @@ class ModifyDirectConnectTunnelExtraRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->CustomerIDCRoutes, $obj);
             }
+        }
+
+        if (array_key_exists("JumboEnable",$param) and $param["JumboEnable"] !== null) {
+            $this->JumboEnable = $param["JumboEnable"];
         }
     }
 }

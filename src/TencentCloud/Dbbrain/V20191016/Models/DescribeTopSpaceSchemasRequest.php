@@ -18,22 +18,18 @@ namespace TencentCloud\Dbbrain\V20191016\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeTopSpaceTableTimeSeries请求参数结构体
+ * DescribeTopSpaceSchemas请求参数结构体
  *
  * @method string getInstanceId() 获取实例 ID 。
  * @method void setInstanceId(string $InstanceId) 设置实例 ID 。
- * @method integer getLimit() 获取返回的Top表数量，最大值为100，默认为20。
- * @method void setLimit(integer $Limit) 设置返回的Top表数量，最大值为100，默认为20。
- * @method string getSortBy() 获取筛选Top表所用的排序字段，可选字段包含DataLength、IndexLength、TotalLength、DataFree、FragRatio、TableRows、PhysicalFileSize，默认为 PhysicalFileSize。
- * @method void setSortBy(string $SortBy) 设置筛选Top表所用的排序字段，可选字段包含DataLength、IndexLength、TotalLength、DataFree、FragRatio、TableRows、PhysicalFileSize，默认为 PhysicalFileSize。
- * @method string getStartDate() 获取开始日期，最早为当日的前第29天，默认为截止日期的前第6天。
- * @method void setStartDate(string $StartDate) 设置开始日期，最早为当日的前第29天，默认为截止日期的前第6天。
- * @method string getEndDate() 获取截止日期，最早为当日的前第29天，默认为当日。
- * @method void setEndDate(string $EndDate) 设置截止日期，最早为当日的前第29天，默认为当日。
+ * @method integer getLimit() 获取返回的Top库数量，最大值为100，默认为20。
+ * @method void setLimit(integer $Limit) 设置返回的Top库数量，最大值为100，默认为20。
+ * @method string getSortBy() 获取筛选Top库所用的排序字段，可选字段包含DataLength、IndexLength、TotalLength、DataFree、FragRatio、TableRows、PhysicalFileSize（仅云数据库 MySQL实例支持），云数据库 MySQL实例默认为 PhysicalFileSize，其他产品实例默认为TotalLength。
+ * @method void setSortBy(string $SortBy) 设置筛选Top库所用的排序字段，可选字段包含DataLength、IndexLength、TotalLength、DataFree、FragRatio、TableRows、PhysicalFileSize（仅云数据库 MySQL实例支持），云数据库 MySQL实例默认为 PhysicalFileSize，其他产品实例默认为TotalLength。
  * @method string getProduct() 获取服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL，默认为"mysql"。
  * @method void setProduct(string $Product) 设置服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL，默认为"mysql"。
  */
-class DescribeTopSpaceTableTimeSeriesRequest extends AbstractModel
+class DescribeTopSpaceSchemasRequest extends AbstractModel
 {
     /**
      * @var string 实例 ID 。
@@ -41,24 +37,14 @@ class DescribeTopSpaceTableTimeSeriesRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var integer 返回的Top表数量，最大值为100，默认为20。
+     * @var integer 返回的Top库数量，最大值为100，默认为20。
      */
     public $Limit;
 
     /**
-     * @var string 筛选Top表所用的排序字段，可选字段包含DataLength、IndexLength、TotalLength、DataFree、FragRatio、TableRows、PhysicalFileSize，默认为 PhysicalFileSize。
+     * @var string 筛选Top库所用的排序字段，可选字段包含DataLength、IndexLength、TotalLength、DataFree、FragRatio、TableRows、PhysicalFileSize（仅云数据库 MySQL实例支持），云数据库 MySQL实例默认为 PhysicalFileSize，其他产品实例默认为TotalLength。
      */
     public $SortBy;
-
-    /**
-     * @var string 开始日期，最早为当日的前第29天，默认为截止日期的前第6天。
-     */
-    public $StartDate;
-
-    /**
-     * @var string 截止日期，最早为当日的前第29天，默认为当日。
-     */
-    public $EndDate;
 
     /**
      * @var string 服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL，默认为"mysql"。
@@ -67,10 +53,8 @@ class DescribeTopSpaceTableTimeSeriesRequest extends AbstractModel
 
     /**
      * @param string $InstanceId 实例 ID 。
-     * @param integer $Limit 返回的Top表数量，最大值为100，默认为20。
-     * @param string $SortBy 筛选Top表所用的排序字段，可选字段包含DataLength、IndexLength、TotalLength、DataFree、FragRatio、TableRows、PhysicalFileSize，默认为 PhysicalFileSize。
-     * @param string $StartDate 开始日期，最早为当日的前第29天，默认为截止日期的前第6天。
-     * @param string $EndDate 截止日期，最早为当日的前第29天，默认为当日。
+     * @param integer $Limit 返回的Top库数量，最大值为100，默认为20。
+     * @param string $SortBy 筛选Top库所用的排序字段，可选字段包含DataLength、IndexLength、TotalLength、DataFree、FragRatio、TableRows、PhysicalFileSize（仅云数据库 MySQL实例支持），云数据库 MySQL实例默认为 PhysicalFileSize，其他产品实例默认为TotalLength。
      * @param string $Product 服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL，默认为"mysql"。
      */
     function __construct()
@@ -96,14 +80,6 @@ class DescribeTopSpaceTableTimeSeriesRequest extends AbstractModel
 
         if (array_key_exists("SortBy",$param) and $param["SortBy"] !== null) {
             $this->SortBy = $param["SortBy"];
-        }
-
-        if (array_key_exists("StartDate",$param) and $param["StartDate"] !== null) {
-            $this->StartDate = $param["StartDate"];
-        }
-
-        if (array_key_exists("EndDate",$param) and $param["EndDate"] !== null) {
-            $this->EndDate = $param["EndDate"];
         }
 
         if (array_key_exists("Product",$param) and $param["Product"] !== null) {

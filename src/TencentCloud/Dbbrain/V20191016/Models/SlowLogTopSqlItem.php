@@ -60,6 +60,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRowsExaminedRatio(float $RowsExaminedRatio) 设置总扫描行数占比
  * @method float getRowsSentRatio() 获取总返回行数占比
  * @method void setRowsSentRatio(float $RowsSentRatio) 设置总返回行数占比
+ * @method float getQueryTimeAvg() 获取平均执行时间
+ * @method void setQueryTimeAvg(float $QueryTimeAvg) 设置平均执行时间
+ * @method float getRowsSentAvg() 获取平均返回行数
+ * @method void setRowsSentAvg(float $RowsSentAvg) 设置平均返回行数
+ * @method float getLockTimeAvg() 获取平均锁等待时间
+ * @method void setLockTimeAvg(float $LockTimeAvg) 设置平均锁等待时间
+ * @method float getRowsExaminedAvg() 获取平均扫描行数
+ * @method void setRowsExaminedAvg(float $RowsExaminedAvg) 设置平均扫描行数
  */
 class SlowLogTopSqlItem extends AbstractModel
 {
@@ -164,6 +172,26 @@ class SlowLogTopSqlItem extends AbstractModel
     public $RowsSentRatio;
 
     /**
+     * @var float 平均执行时间
+     */
+    public $QueryTimeAvg;
+
+    /**
+     * @var float 平均返回行数
+     */
+    public $RowsSentAvg;
+
+    /**
+     * @var float 平均锁等待时间
+     */
+    public $LockTimeAvg;
+
+    /**
+     * @var float 平均扫描行数
+     */
+    public $RowsExaminedAvg;
+
+    /**
      * @param float $LockTime sql总锁等待时间
      * @param float $LockTimeMax 最大锁等待时间
      * @param float $LockTimeMin 最小锁等待时间
@@ -184,6 +212,10 @@ class SlowLogTopSqlItem extends AbstractModel
      * @param float $LockTimeRatio sql总锁等待时间占比
      * @param float $RowsExaminedRatio 总扫描行数占比
      * @param float $RowsSentRatio 总返回行数占比
+     * @param float $QueryTimeAvg 平均执行时间
+     * @param float $RowsSentAvg 平均返回行数
+     * @param float $LockTimeAvg 平均锁等待时间
+     * @param float $RowsExaminedAvg 平均扫描行数
      */
     function __construct()
     {
@@ -276,6 +308,22 @@ class SlowLogTopSqlItem extends AbstractModel
 
         if (array_key_exists("RowsSentRatio",$param) and $param["RowsSentRatio"] !== null) {
             $this->RowsSentRatio = $param["RowsSentRatio"];
+        }
+
+        if (array_key_exists("QueryTimeAvg",$param) and $param["QueryTimeAvg"] !== null) {
+            $this->QueryTimeAvg = $param["QueryTimeAvg"];
+        }
+
+        if (array_key_exists("RowsSentAvg",$param) and $param["RowsSentAvg"] !== null) {
+            $this->RowsSentAvg = $param["RowsSentAvg"];
+        }
+
+        if (array_key_exists("LockTimeAvg",$param) and $param["LockTimeAvg"] !== null) {
+            $this->LockTimeAvg = $param["LockTimeAvg"];
+        }
+
+        if (array_key_exists("RowsExaminedAvg",$param) and $param["RowsExaminedAvg"] !== null) {
+            $this->RowsExaminedAvg = $param["RowsExaminedAvg"];
         }
     }
 }

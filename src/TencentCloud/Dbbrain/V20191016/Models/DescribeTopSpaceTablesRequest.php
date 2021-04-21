@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取实例 ID 。
  * @method void setInstanceId(string $InstanceId) 设置实例 ID 。
- * @method integer getLimit() 获取返回的Top表数量，最大值为20，默认为最大值。
- * @method void setLimit(integer $Limit) 设置返回的Top表数量，最大值为20，默认为最大值。
- * @method string getSortBy() 获取筛选Top表所用的排序字段，可选字段包含DataLength、IndexLength、TotalLength、DataFree、FragRatio、TableRows、PhysicalFileSize，默认为 PhysicalFileSize。
- * @method void setSortBy(string $SortBy) 设置筛选Top表所用的排序字段，可选字段包含DataLength、IndexLength、TotalLength、DataFree、FragRatio、TableRows、PhysicalFileSize，默认为 PhysicalFileSize。
+ * @method integer getLimit() 获取返回的Top表数量，最大值为100，默认为20。
+ * @method void setLimit(integer $Limit) 设置返回的Top表数量，最大值为100，默认为20。
+ * @method string getSortBy() 获取筛选Top表所用的排序字段，可选字段包含DataLength、IndexLength、TotalLength、DataFree、FragRatio、TableRows、PhysicalFileSize（仅云数据库 MySQL实例支持），云数据库 MySQL实例默认为 PhysicalFileSize，其他产品实例默认为TotalLength。
+ * @method void setSortBy(string $SortBy) 设置筛选Top表所用的排序字段，可选字段包含DataLength、IndexLength、TotalLength、DataFree、FragRatio、TableRows、PhysicalFileSize（仅云数据库 MySQL实例支持），云数据库 MySQL实例默认为 PhysicalFileSize，其他产品实例默认为TotalLength。
  * @method string getProduct() 获取服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL，默认为"mysql"。
  * @method void setProduct(string $Product) 设置服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL，默认为"mysql"。
  */
@@ -37,12 +37,12 @@ class DescribeTopSpaceTablesRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var integer 返回的Top表数量，最大值为20，默认为最大值。
+     * @var integer 返回的Top表数量，最大值为100，默认为20。
      */
     public $Limit;
 
     /**
-     * @var string 筛选Top表所用的排序字段，可选字段包含DataLength、IndexLength、TotalLength、DataFree、FragRatio、TableRows、PhysicalFileSize，默认为 PhysicalFileSize。
+     * @var string 筛选Top表所用的排序字段，可选字段包含DataLength、IndexLength、TotalLength、DataFree、FragRatio、TableRows、PhysicalFileSize（仅云数据库 MySQL实例支持），云数据库 MySQL实例默认为 PhysicalFileSize，其他产品实例默认为TotalLength。
      */
     public $SortBy;
 
@@ -53,8 +53,8 @@ class DescribeTopSpaceTablesRequest extends AbstractModel
 
     /**
      * @param string $InstanceId 实例 ID 。
-     * @param integer $Limit 返回的Top表数量，最大值为20，默认为最大值。
-     * @param string $SortBy 筛选Top表所用的排序字段，可选字段包含DataLength、IndexLength、TotalLength、DataFree、FragRatio、TableRows、PhysicalFileSize，默认为 PhysicalFileSize。
+     * @param integer $Limit 返回的Top表数量，最大值为100，默认为20。
+     * @param string $SortBy 筛选Top表所用的排序字段，可选字段包含DataLength、IndexLength、TotalLength、DataFree、FragRatio、TableRows、PhysicalFileSize（仅云数据库 MySQL实例支持），云数据库 MySQL实例默认为 PhysicalFileSize，其他产品实例默认为TotalLength。
      * @param string $Product 服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL，默认为"mysql"。
      */
     function __construct()

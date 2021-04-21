@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPageSize(integer $PageSize) 设置每页大小，最大100。 
 取值：1~100之前的任意整数。
 默认值：10。
+ * @method string getStreamName() 获取搜索的推流 id 名称。
+ * @method void setStreamName(string $StreamName) 设置搜索的推流 id 名称。
  */
 class DescribeLiveForbidStreamListRequest extends AbstractModel
 {
@@ -44,10 +46,16 @@ class DescribeLiveForbidStreamListRequest extends AbstractModel
     public $PageSize;
 
     /**
+     * @var string 搜索的推流 id 名称。
+     */
+    public $StreamName;
+
+    /**
      * @param integer $PageNum 取得第几页，默认1。
      * @param integer $PageSize 每页大小，最大100。 
 取值：1~100之前的任意整数。
 默认值：10。
+     * @param string $StreamName 搜索的推流 id 名称。
      */
     function __construct()
     {
@@ -68,6 +76,10 @@ class DescribeLiveForbidStreamListRequest extends AbstractModel
 
         if (array_key_exists("PageSize",$param) and $param["PageSize"] !== null) {
             $this->PageSize = $param["PageSize"];
+        }
+
+        if (array_key_exists("StreamName",$param) and $param["StreamName"] !== null) {
+            $this->StreamName = $param["StreamName"];
         }
     }
 }

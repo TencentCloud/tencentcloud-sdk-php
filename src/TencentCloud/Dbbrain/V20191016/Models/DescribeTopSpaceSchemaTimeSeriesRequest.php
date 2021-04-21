@@ -18,14 +18,14 @@ namespace TencentCloud\Dbbrain\V20191016\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeTopSpaceTableTimeSeries请求参数结构体
+ * DescribeTopSpaceSchemaTimeSeries请求参数结构体
  *
- * @method string getInstanceId() 获取实例 ID 。
- * @method void setInstanceId(string $InstanceId) 设置实例 ID 。
- * @method integer getLimit() 获取返回的Top表数量，最大值为100，默认为20。
- * @method void setLimit(integer $Limit) 设置返回的Top表数量，最大值为100，默认为20。
- * @method string getSortBy() 获取筛选Top表所用的排序字段，可选字段包含DataLength、IndexLength、TotalLength、DataFree、FragRatio、TableRows、PhysicalFileSize，默认为 PhysicalFileSize。
- * @method void setSortBy(string $SortBy) 设置筛选Top表所用的排序字段，可选字段包含DataLength、IndexLength、TotalLength、DataFree、FragRatio、TableRows、PhysicalFileSize，默认为 PhysicalFileSize。
+ * @method string getInstanceId() 获取实例ID。
+ * @method void setInstanceId(string $InstanceId) 设置实例ID。
+ * @method integer getLimit() 获取返回的Top库数量，最大值为100，默认为20。
+ * @method void setLimit(integer $Limit) 设置返回的Top库数量，最大值为100，默认为20。
+ * @method string getSortBy() 获取筛选Top库所用的排序字段，可选字段包含DataLength、IndexLength、TotalLength、DataFree、FragRatio、TableRows、PhysicalFileSize（仅云数据库 MySQL实例支持），云数据库 MySQL实例默认为 PhysicalFileSize，其他产品实例默认为TotalLength。
+ * @method void setSortBy(string $SortBy) 设置筛选Top库所用的排序字段，可选字段包含DataLength、IndexLength、TotalLength、DataFree、FragRatio、TableRows、PhysicalFileSize（仅云数据库 MySQL实例支持），云数据库 MySQL实例默认为 PhysicalFileSize，其他产品实例默认为TotalLength。
  * @method string getStartDate() 获取开始日期，最早为当日的前第29天，默认为截止日期的前第6天。
  * @method void setStartDate(string $StartDate) 设置开始日期，最早为当日的前第29天，默认为截止日期的前第6天。
  * @method string getEndDate() 获取截止日期，最早为当日的前第29天，默认为当日。
@@ -33,20 +33,20 @@ use TencentCloud\Common\AbstractModel;
  * @method string getProduct() 获取服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL，默认为"mysql"。
  * @method void setProduct(string $Product) 设置服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL，默认为"mysql"。
  */
-class DescribeTopSpaceTableTimeSeriesRequest extends AbstractModel
+class DescribeTopSpaceSchemaTimeSeriesRequest extends AbstractModel
 {
     /**
-     * @var string 实例 ID 。
+     * @var string 实例ID。
      */
     public $InstanceId;
 
     /**
-     * @var integer 返回的Top表数量，最大值为100，默认为20。
+     * @var integer 返回的Top库数量，最大值为100，默认为20。
      */
     public $Limit;
 
     /**
-     * @var string 筛选Top表所用的排序字段，可选字段包含DataLength、IndexLength、TotalLength、DataFree、FragRatio、TableRows、PhysicalFileSize，默认为 PhysicalFileSize。
+     * @var string 筛选Top库所用的排序字段，可选字段包含DataLength、IndexLength、TotalLength、DataFree、FragRatio、TableRows、PhysicalFileSize（仅云数据库 MySQL实例支持），云数据库 MySQL实例默认为 PhysicalFileSize，其他产品实例默认为TotalLength。
      */
     public $SortBy;
 
@@ -66,9 +66,9 @@ class DescribeTopSpaceTableTimeSeriesRequest extends AbstractModel
     public $Product;
 
     /**
-     * @param string $InstanceId 实例 ID 。
-     * @param integer $Limit 返回的Top表数量，最大值为100，默认为20。
-     * @param string $SortBy 筛选Top表所用的排序字段，可选字段包含DataLength、IndexLength、TotalLength、DataFree、FragRatio、TableRows、PhysicalFileSize，默认为 PhysicalFileSize。
+     * @param string $InstanceId 实例ID。
+     * @param integer $Limit 返回的Top库数量，最大值为100，默认为20。
+     * @param string $SortBy 筛选Top库所用的排序字段，可选字段包含DataLength、IndexLength、TotalLength、DataFree、FragRatio、TableRows、PhysicalFileSize（仅云数据库 MySQL实例支持），云数据库 MySQL实例默认为 PhysicalFileSize，其他产品实例默认为TotalLength。
      * @param string $StartDate 开始日期，最早为当日的前第29天，默认为截止日期的前第6天。
      * @param string $EndDate 截止日期，最早为当日的前第29天，默认为当日。
      * @param string $Product 服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL，默认为"mysql"。

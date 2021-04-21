@@ -14,37 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Iotvideoindustry\V20201201\Models;
+namespace TencentCloud\Mariadb\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeVideoList返回参数结构体
+ * DescribeInstanceNodeInfo返回参数结构体
  *
- * @method integer getTotalCount() 获取总数
- * @method void setTotalCount(integer $TotalCount) 设置总数
- * @method RecordTaskItem getVideoList() 获取已废弃
- * @method void setVideoList(RecordTaskItem $VideoList) 设置已废弃
- * @method array getRecordList() 获取录像详情列表
- * @method void setRecordList(array $RecordList) 设置录像详情列表
+ * @method integer getTotalCount() 获取节点总个数
+ * @method void setTotalCount(integer $TotalCount) 设置节点总个数
+ * @method array getNodesInfo() 获取节点信息
+ * @method void setNodesInfo(array $NodesInfo) 设置节点信息
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeVideoListResponse extends AbstractModel
+class DescribeInstanceNodeInfoResponse extends AbstractModel
 {
     /**
-     * @var integer 总数
+     * @var integer 节点总个数
      */
     public $TotalCount;
 
     /**
-     * @var RecordTaskItem 已废弃
+     * @var array 节点信息
      */
-    public $VideoList;
-
-    /**
-     * @var array 录像详情列表
-     */
-    public $RecordList;
+    public $NodesInfo;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -52,9 +45,8 @@ class DescribeVideoListResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 总数
-     * @param RecordTaskItem $VideoList 已废弃
-     * @param array $RecordList 录像详情列表
+     * @param integer $TotalCount 节点总个数
+     * @param array $NodesInfo 节点信息
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -74,17 +66,12 @@ class DescribeVideoListResponse extends AbstractModel
             $this->TotalCount = $param["TotalCount"];
         }
 
-        if (array_key_exists("VideoList",$param) and $param["VideoList"] !== null) {
-            $this->VideoList = new RecordTaskItem();
-            $this->VideoList->deserialize($param["VideoList"]);
-        }
-
-        if (array_key_exists("RecordList",$param) and $param["RecordList"] !== null) {
-            $this->RecordList = [];
-            foreach ($param["RecordList"] as $key => $value){
-                $obj = new RecordTaskItem();
+        if (array_key_exists("NodesInfo",$param) and $param["NodesInfo"] !== null) {
+            $this->NodesInfo = [];
+            foreach ($param["NodesInfo"] as $key => $value){
+                $obj = new NodeInfo();
                 $obj->deserialize($value);
-                array_push($this->RecordList, $obj);
+                array_push($this->NodesInfo, $obj);
             }
         }
 

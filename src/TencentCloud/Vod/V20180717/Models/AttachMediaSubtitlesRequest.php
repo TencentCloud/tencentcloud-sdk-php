@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAdaptiveDynamicStreamingDefinition(integer $AdaptiveDynamicStreamingDefinition) 设置[转自适应码流模板号](https://cloud.tencent.com/document/product/266/34071#zsy)。
  * @method array getSubtitleIds() 获取字幕的唯一标识。
  * @method void setSubtitleIds(array $SubtitleIds) 设置字幕的唯一标识。
+ * @method integer getSubAppId() 获取点播[子应用](/document/product/266/14574) ID 。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+ * @method void setSubAppId(integer $SubAppId) 设置点播[子应用](/document/product/266/14574) ID 。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
  */
 class AttachMediaSubtitlesRequest extends AbstractModel
 {
@@ -58,12 +60,18 @@ class AttachMediaSubtitlesRequest extends AbstractModel
     public $SubtitleIds;
 
     /**
+     * @var integer 点播[子应用](/document/product/266/14574) ID 。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+     */
+    public $SubAppId;
+
+    /**
      * @param string $FileId 媒体文件唯一标识。
      * @param string $Operation 操作。取值如下：
 <li>Attach：关联字幕。</li>
 <li>Detach：解除关联字幕。</li>
      * @param integer $AdaptiveDynamicStreamingDefinition [转自适应码流模板号](https://cloud.tencent.com/document/product/266/34071#zsy)。
      * @param array $SubtitleIds 字幕的唯一标识。
+     * @param integer $SubAppId 点播[子应用](/document/product/266/14574) ID 。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     function __construct()
     {
@@ -92,6 +100,10 @@ class AttachMediaSubtitlesRequest extends AbstractModel
 
         if (array_key_exists("SubtitleIds",$param) and $param["SubtitleIds"] !== null) {
             $this->SubtitleIds = $param["SubtitleIds"];
+        }
+
+        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
+            $this->SubAppId = $param["SubAppId"];
         }
     }
 }

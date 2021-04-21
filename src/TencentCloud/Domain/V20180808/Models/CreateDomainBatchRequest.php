@@ -26,14 +26,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPeriod(integer $Period) 设置购买域名的年限，可选值：[1-10]
  * @method array getDomains() 获取批量购买的域名,最多为4000个
  * @method void setDomains(array $Domains) 设置批量购买的域名,最多为4000个
- * @method integer getPayMode() 获取付费模式 0手动在线付费，1使用余额付费
- * @method void setPayMode(integer $PayMode) 设置付费模式 0手动在线付费，1使用余额付费
+ * @method integer getPayMode() 获取付费模式 0手动在线付费，1使用余额付费，2使用特惠包
+ * @method void setPayMode(integer $PayMode) 设置付费模式 0手动在线付费，1使用余额付费，2使用特惠包
  * @method integer getAutoRenewFlag() 获取自动续费开关。有两个可选值：
 0 表示关闭，不自动续费（默认值）
 1 表示开启，将自动续费
  * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置自动续费开关。有两个可选值：
 0 表示关闭，不自动续费（默认值）
 1 表示开启，将自动续费
+ * @method string getPackageResourceId() 获取使用的特惠包ID，PayMode为2时必填
+ * @method void setPackageResourceId(string $PackageResourceId) 设置使用的特惠包ID，PayMode为2时必填
  */
 class CreateDomainBatchRequest extends AbstractModel
 {
@@ -53,7 +55,7 @@ class CreateDomainBatchRequest extends AbstractModel
     public $Domains;
 
     /**
-     * @var integer 付费模式 0手动在线付费，1使用余额付费
+     * @var integer 付费模式 0手动在线付费，1使用余额付费，2使用特惠包
      */
     public $PayMode;
 
@@ -65,13 +67,19 @@ class CreateDomainBatchRequest extends AbstractModel
     public $AutoRenewFlag;
 
     /**
+     * @var string 使用的特惠包ID，PayMode为2时必填
+     */
+    public $PackageResourceId;
+
+    /**
      * @param string $TemplateId 模板ID。详情请查看：[获取模板列表](https://cloud.tencent.com/document/product/242/48940)
      * @param integer $Period 购买域名的年限，可选值：[1-10]
      * @param array $Domains 批量购买的域名,最多为4000个
-     * @param integer $PayMode 付费模式 0手动在线付费，1使用余额付费
+     * @param integer $PayMode 付费模式 0手动在线付费，1使用余额付费，2使用特惠包
      * @param integer $AutoRenewFlag 自动续费开关。有两个可选值：
 0 表示关闭，不自动续费（默认值）
 1 表示开启，将自动续费
+     * @param string $PackageResourceId 使用的特惠包ID，PayMode为2时必填
      */
     function __construct()
     {
@@ -104,6 +112,10 @@ class CreateDomainBatchRequest extends AbstractModel
 
         if (array_key_exists("AutoRenewFlag",$param) and $param["AutoRenewFlag"] !== null) {
             $this->AutoRenewFlag = $param["AutoRenewFlag"];
+        }
+
+        if (array_key_exists("PackageResourceId",$param) and $param["PackageResourceId"] !== null) {
+            $this->PackageResourceId = $param["PackageResourceId"];
         }
     }
 }

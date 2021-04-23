@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
 填1时，当InputStreamList中个数为1时，且OutputParams.OutputStreamType为1时，不执行取消操作，执行拷贝流操作
  * @method void setAllowCopy(integer $AllowCopy) 设置取值范围[0,1]
 填1时，当InputStreamList中个数为1时，且OutputParams.OutputStreamType为1时，不执行取消操作，执行拷贝流操作
+ * @method integer getPassInputSei() 获取取值范围[0,1]
+填1时，透传原始流的sei
+ * @method void setPassInputSei(integer $PassInputSei) 设置取值范围[0,1]
+填1时，透传原始流的sei
  */
 class CommonMixControlParams extends AbstractModel
 {
@@ -44,10 +48,18 @@ class CommonMixControlParams extends AbstractModel
     public $AllowCopy;
 
     /**
+     * @var integer 取值范围[0,1]
+填1时，透传原始流的sei
+     */
+    public $PassInputSei;
+
+    /**
      * @param integer $UseMixCropCenter 取值范围[0,1]。
 填1时，当参数中图层分辨率参数与视频实际分辨率不一致时，自动从视频中按图层设置的分辨率比例进行裁剪。
      * @param integer $AllowCopy 取值范围[0,1]
 填1时，当InputStreamList中个数为1时，且OutputParams.OutputStreamType为1时，不执行取消操作，执行拷贝流操作
+     * @param integer $PassInputSei 取值范围[0,1]
+填1时，透传原始流的sei
      */
     function __construct()
     {
@@ -68,6 +80,10 @@ class CommonMixControlParams extends AbstractModel
 
         if (array_key_exists("AllowCopy",$param) and $param["AllowCopy"] !== null) {
             $this->AllowCopy = $param["AllowCopy"];
+        }
+
+        if (array_key_exists("PassInputSei",$param) and $param["PassInputSei"] !== null) {
+            $this->PassInputSei = $param["PassInputSei"];
         }
     }
 }

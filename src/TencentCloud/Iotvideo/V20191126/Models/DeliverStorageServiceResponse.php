@@ -37,7 +37,15 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getEndTime() 获取服务失效时间
  * @method void setEndTime(integer $EndTime) 设置服务失效时间
  * @method integer getStatus() 获取服务状态
+1：正常使用中
+2：待续费。设备云存服务已到期，但是历史云存数据未过期。续费后仍可查看这些历史数据。
+3：已过期。查询不到设备保存在云端的数据。
+4：等待服务生效。
  * @method void setStatus(integer $Status) 设置服务状态
+1：正常使用中
+2：待续费。设备云存服务已到期，但是历史云存数据未过期。续费后仍可查看这些历史数据。
+3：已过期。查询不到设备保存在云端的数据。
+4：等待服务生效。
  * @method array getData() 获取新增的云存定单列表
  * @method void setData(array $Data) 设置新增的云存定单列表
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -87,6 +95,10 @@ class DeliverStorageServiceResponse extends AbstractModel
 
     /**
      * @var integer 服务状态
+1：正常使用中
+2：待续费。设备云存服务已到期，但是历史云存数据未过期。续费后仍可查看这些历史数据。
+3：已过期。查询不到设备保存在云端的数据。
+4：等待服务生效。
      */
     public $Status;
 
@@ -110,6 +122,10 @@ class DeliverStorageServiceResponse extends AbstractModel
      * @param integer $StartTime 服务开始时间
      * @param integer $EndTime 服务失效时间
      * @param integer $Status 服务状态
+1：正常使用中
+2：待续费。设备云存服务已到期，但是历史云存数据未过期。续费后仍可查看这些历史数据。
+3：已过期。查询不到设备保存在云端的数据。
+4：等待服务生效。
      * @param array $Data 新增的云存定单列表
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

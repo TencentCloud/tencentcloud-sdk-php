@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAppIdType(string $AppIdType) 设置用户类型。保留类型，serverless用户使用。
  * @method array getTags() 获取标签。
  * @method void setTags(array $Tags) 设置标签。
+ * @method string getInstanceId() 获取独享实例id
+ * @method void setInstanceId(string $InstanceId) 设置独享实例id
  */
 class CreateServiceRequest extends AbstractModel
 {
@@ -87,6 +89,11 @@ class CreateServiceRequest extends AbstractModel
     public $Tags;
 
     /**
+     * @var string 独享实例id
+     */
+    public $InstanceId;
+
+    /**
      * @param string $ServiceName 用户自定义的服务名称。
      * @param string $Protocol 服务的前端请求类型。如 http、https、http&https。
      * @param string $ServiceDesc 用户自定义的服务描述。
@@ -96,6 +103,7 @@ class CreateServiceRequest extends AbstractModel
      * @param string $SetServerName 集群名称。保留字段，tsf serverlss类型使用。
      * @param string $AppIdType 用户类型。保留类型，serverless用户使用。
      * @param array $Tags 标签。
+     * @param string $InstanceId 独享实例id
      */
     function __construct()
     {
@@ -149,6 +157,10 @@ class CreateServiceRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
         }
     }
 }

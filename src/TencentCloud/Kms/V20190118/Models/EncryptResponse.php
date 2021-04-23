@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Encrypt返回参数结构体
  *
- * @method string getCiphertextBlob() 获取加密后经过base64编码的密文
- * @method void setCiphertextBlob(string $CiphertextBlob) 设置加密后经过base64编码的密文
+ * @method string getCiphertextBlob() 获取加密后的密文，base64编码。注意：本字段中打包了密文和密钥的相关信息，不是对明文的直接加密结果，只有将该字段作为Decrypt接口的输入参数，才可以解密出原文。
+ * @method void setCiphertextBlob(string $CiphertextBlob) 设置加密后的密文，base64编码。注意：本字段中打包了密文和密钥的相关信息，不是对明文的直接加密结果，只有将该字段作为Decrypt接口的输入参数，才可以解密出原文。
  * @method string getKeyId() 获取加密使用的CMK的全局唯一标识
  * @method void setKeyId(string $KeyId) 设置加密使用的CMK的全局唯一标识
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class EncryptResponse extends AbstractModel
 {
     /**
-     * @var string 加密后经过base64编码的密文
+     * @var string 加密后的密文，base64编码。注意：本字段中打包了密文和密钥的相关信息，不是对明文的直接加密结果，只有将该字段作为Decrypt接口的输入参数，才可以解密出原文。
      */
     public $CiphertextBlob;
 
@@ -45,7 +45,7 @@ class EncryptResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $CiphertextBlob 加密后经过base64编码的密文
+     * @param string $CiphertextBlob 加密后的密文，base64编码。注意：本字段中打包了密文和密钥的相关信息，不是对明文的直接加密结果，只有将该字段作为Decrypt接口的输入参数，才可以解密出原文。
      * @param string $KeyId 加密使用的CMK的全局唯一标识
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

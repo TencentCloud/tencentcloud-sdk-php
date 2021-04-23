@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getPlatform() 获取平台名称，指定访问的平台。
  * @method void setPlatform(string $Platform) 设置平台名称，指定访问的平台。
+ * @method string getName() 获取项目名称，不可超过30个字符。
+ * @method void setName(string $Name) 设置项目名称，不可超过30个字符。
+ * @method Entity getOwner() 获取项目归属者。
+ * @method void setOwner(Entity $Owner) 设置项目归属者。
  * @method string getCategory() 获取项目类别，取值有：
 <li>VIDEO_EDIT：视频编辑。</li>
 <li>SWITCHER：导播台。</li>
@@ -34,10 +38,6 @@ use TencentCloud\Common\AbstractModel;
 <li>VIDEO_SEGMENTATION：视频拆条。</li>
 <li>STREAM_CONNECT：云转推。</li>
 <li>RECORD_REPLAY：录制回放。</li>
- * @method string getName() 获取项目名称，不可超过30个字符。
- * @method void setName(string $Name) 设置项目名称，不可超过30个字符。
- * @method Entity getOwner() 获取项目归属者。
- * @method void setOwner(Entity $Owner) 设置项目归属者。
  * @method string getAspectRatio() 获取画布宽高比。
 该字段已经废弃，请使用具体项目输入中的 AspectRatio 字段。
  * @method void setAspectRatio(string $AspectRatio) 设置画布宽高比。
@@ -65,16 +65,6 @@ class CreateProjectRequest extends AbstractModel
     public $Platform;
 
     /**
-     * @var string 项目类别，取值有：
-<li>VIDEO_EDIT：视频编辑。</li>
-<li>SWITCHER：导播台。</li>
-<li>VIDEO_SEGMENTATION：视频拆条。</li>
-<li>STREAM_CONNECT：云转推。</li>
-<li>RECORD_REPLAY：录制回放。</li>
-     */
-    public $Category;
-
-    /**
      * @var string 项目名称，不可超过30个字符。
      */
     public $Name;
@@ -83,6 +73,16 @@ class CreateProjectRequest extends AbstractModel
      * @var Entity 项目归属者。
      */
     public $Owner;
+
+    /**
+     * @var string 项目类别，取值有：
+<li>VIDEO_EDIT：视频编辑。</li>
+<li>SWITCHER：导播台。</li>
+<li>VIDEO_SEGMENTATION：视频拆条。</li>
+<li>STREAM_CONNECT：云转推。</li>
+<li>RECORD_REPLAY：录制回放。</li>
+     */
+    public $Category;
 
     /**
      * @var string 画布宽高比。
@@ -127,14 +127,14 @@ class CreateProjectRequest extends AbstractModel
 
     /**
      * @param string $Platform 平台名称，指定访问的平台。
+     * @param string $Name 项目名称，不可超过30个字符。
+     * @param Entity $Owner 项目归属者。
      * @param string $Category 项目类别，取值有：
 <li>VIDEO_EDIT：视频编辑。</li>
 <li>SWITCHER：导播台。</li>
 <li>VIDEO_SEGMENTATION：视频拆条。</li>
 <li>STREAM_CONNECT：云转推。</li>
 <li>RECORD_REPLAY：录制回放。</li>
-     * @param string $Name 项目名称，不可超过30个字符。
-     * @param Entity $Owner 项目归属者。
      * @param string $AspectRatio 画布宽高比。
 该字段已经废弃，请使用具体项目输入中的 AspectRatio 字段。
      * @param string $Description 项目描述信息。
@@ -162,10 +162,6 @@ class CreateProjectRequest extends AbstractModel
             $this->Platform = $param["Platform"];
         }
 
-        if (array_key_exists("Category",$param) and $param["Category"] !== null) {
-            $this->Category = $param["Category"];
-        }
-
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
             $this->Name = $param["Name"];
         }
@@ -173,6 +169,10 @@ class CreateProjectRequest extends AbstractModel
         if (array_key_exists("Owner",$param) and $param["Owner"] !== null) {
             $this->Owner = new Entity();
             $this->Owner->deserialize($param["Owner"]);
+        }
+
+        if (array_key_exists("Category",$param) and $param["Category"] !== null) {
+            $this->Category = $param["Category"];
         }
 
         if (array_key_exists("AspectRatio",$param) and $param["AspectRatio"] !== null) {

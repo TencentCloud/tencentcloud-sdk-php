@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStrategy() 获取限流值。
  * @method void setStrategy(integer $Strategy) 设置限流值。
+ * @method integer getMaxStrategy() 获取最大限流值
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMaxStrategy(integer $MaxStrategy) 设置最大限流值
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ServiceEnvironmentStrategy extends AbstractModel
 {
@@ -62,12 +66,20 @@ class ServiceEnvironmentStrategy extends AbstractModel
     public $Strategy;
 
     /**
+     * @var integer 最大限流值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MaxStrategy;
+
+    /**
      * @param string $EnvironmentName 环境名。
      * @param string $Url 访问服务对应环境的url。
      * @param integer $Status 发布状态。
      * @param string $VersionName 发布的版本号。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Strategy 限流值。
+     * @param integer $MaxStrategy 最大限流值
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -100,6 +112,10 @@ class ServiceEnvironmentStrategy extends AbstractModel
 
         if (array_key_exists("Strategy",$param) and $param["Strategy"] !== null) {
             $this->Strategy = $param["Strategy"];
+        }
+
+        if (array_key_exists("MaxStrategy",$param) and $param["MaxStrategy"] !== null) {
+            $this->MaxStrategy = $param["MaxStrategy"];
         }
     }
 }

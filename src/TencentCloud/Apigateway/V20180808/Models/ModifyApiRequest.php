@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setApiDesc(string $ApiDesc) 设置用户自定义的 API 接口描述。
  * @method string getApiType() 获取API 类型，支持NORMAL和TSF，默认为NORMAL。
  * @method void setApiType(string $ApiType) 设置API 类型，支持NORMAL和TSF，默认为NORMAL。
- * @method string getAuthType() 获取API 鉴权类型。支持SECRET、NONE、OAUTH。默认为NONE。
- * @method void setAuthType(string $AuthType) 设置API 鉴权类型。支持SECRET、NONE、OAUTH。默认为NONE。
+ * @method string getAuthType() 获取API 鉴权类型。支持SECRET、NONE、OAUTH、APP。默认为NONE。
+ * @method void setAuthType(string $AuthType) 设置API 鉴权类型。支持SECRET、NONE、OAUTH、APP。默认为NONE。
  * @method boolean getAuthRequired() 获取是否需要签名认证，True 表示需要，False 表示不需要。待废弃。
  * @method void setAuthRequired(boolean $AuthRequired) 设置是否需要签名认证，True 表示需要，False 表示不需要。待废弃。
  * @method integer getServiceTimeout() 获取API 的后端服务超时时间，单位是秒。
@@ -155,7 +155,7 @@ class ModifyApiRequest extends AbstractModel
     public $ApiType;
 
     /**
-     * @var string API 鉴权类型。支持SECRET、NONE、OAUTH。默认为NONE。
+     * @var string API 鉴权类型。支持SECRET、NONE、OAUTH、APP。默认为NONE。
      */
     public $AuthType;
 
@@ -367,7 +367,7 @@ class ModifyApiRequest extends AbstractModel
      * @param string $ApiName 用户自定义的 API 名称。
      * @param string $ApiDesc 用户自定义的 API 接口描述。
      * @param string $ApiType API 类型，支持NORMAL和TSF，默认为NORMAL。
-     * @param string $AuthType API 鉴权类型。支持SECRET、NONE、OAUTH。默认为NONE。
+     * @param string $AuthType API 鉴权类型。支持SECRET、NONE、OAUTH、APP。默认为NONE。
      * @param boolean $AuthRequired 是否需要签名认证，True 表示需要，False 表示不需要。待废弃。
      * @param integer $ServiceTimeout API 的后端服务超时时间，单位是秒。
      * @param string $Protocol API 的前端请求类型，如 HTTP 或 HTTPS 或者 HTTP 和 HTTPS。

@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置返回数量，默认为 20，最大值为 100。
  * @method integer getOffset() 获取偏移量，默认为 0。
  * @method void setOffset(integer $Offset) 设置偏移量，默认为 0。
- * @method array getFilters() 获取过滤条件。支持ServiceId、ServiceName、NotUsagePlanId、Environment、IpVersion。
- * @method void setFilters(array $Filters) 设置过滤条件。支持ServiceId、ServiceName、NotUsagePlanId、Environment、IpVersion。
+ * @method array getFilters() 获取过滤条件。支持ServiceId、ServiceName、NotUsagePlanId、Environment、IpVersion。InstanceId
+ * @method void setFilters(array $Filters) 设置过滤条件。支持ServiceId、ServiceName、NotUsagePlanId、Environment、IpVersion。InstanceId
  */
 class DescribeServicesStatusRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class DescribeServicesStatusRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var array 过滤条件。支持ServiceId、ServiceName、NotUsagePlanId、Environment、IpVersion。
+     * @var array 过滤条件。支持ServiceId、ServiceName、NotUsagePlanId、Environment、IpVersion。InstanceId
      */
     public $Filters;
 
     /**
      * @param integer $Limit 返回数量，默认为 20，最大值为 100。
      * @param integer $Offset 偏移量，默认为 0。
-     * @param array $Filters 过滤条件。支持ServiceId、ServiceName、NotUsagePlanId、Environment、IpVersion。
+     * @param array $Filters 过滤条件。支持ServiceId、ServiceName、NotUsagePlanId、Environment、IpVersion。InstanceId
      */
     function __construct()
     {

@@ -76,6 +76,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置服务绑定的标签。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getInstanceId() 获取独享实例id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInstanceId(string $InstanceId) 设置独享实例id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getInstanceName() 获取独享实例name
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInstanceName(string $InstanceName) 设置独享实例name
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSetType() 获取集群类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSetType(string $SetType) 设置集群类型
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -194,6 +206,24 @@ class DescribeServiceResponse extends AbstractModel
     public $Tags;
 
     /**
+     * @var string 独享实例id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InstanceId;
+
+    /**
+     * @var string 独享实例name
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InstanceName;
+
+    /**
+     * @var string 集群类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SetType;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -226,6 +256,12 @@ class DescribeServiceResponse extends AbstractModel
      * @param integer $SetId 预留字段。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tags 服务绑定的标签。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $InstanceId 独享实例id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $InstanceName 独享实例name
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SetType 集群类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -339,6 +375,18 @@ class DescribeServiceResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("InstanceName",$param) and $param["InstanceName"] !== null) {
+            $this->InstanceName = $param["InstanceName"];
+        }
+
+        if (array_key_exists("SetType",$param) and $param["SetType"] !== null) {
+            $this->SetType = $param["SetType"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

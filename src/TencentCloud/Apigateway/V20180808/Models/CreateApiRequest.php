@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setApiDesc(string $ApiDesc) 设置用户自定义的 API 接口描述。
  * @method string getApiType() 获取API 类型，支持NORMAL（普通API）和TSF（微服务API），默认为NORMAL。
  * @method void setApiType(string $ApiType) 设置API 类型，支持NORMAL（普通API）和TSF（微服务API），默认为NORMAL。
- * @method string getAuthType() 获取API 鉴权类型。支持SECRET（密钥对鉴权）、NONE（免鉴权）、OAUTH。默认为NONE。
- * @method void setAuthType(string $AuthType) 设置API 鉴权类型。支持SECRET（密钥对鉴权）、NONE（免鉴权）、OAUTH。默认为NONE。
+ * @method string getAuthType() 获取API 鉴权类型。支持SECRET（密钥对鉴权）、NONE（免鉴权）、OAUTH、APP（应用认证）。默认为NONE。
+ * @method void setAuthType(string $AuthType) 设置API 鉴权类型。支持SECRET（密钥对鉴权）、NONE（免鉴权）、OAUTH、APP（应用认证）。默认为NONE。
  * @method boolean getEnableCORS() 获取是否开启跨域。
  * @method void setEnableCORS(boolean $EnableCORS) 设置是否开启跨域。
  * @method array getConstantParameters() 获取常量参数。
@@ -156,7 +156,7 @@ class CreateApiRequest extends AbstractModel
     public $ApiType;
 
     /**
-     * @var string API 鉴权类型。支持SECRET（密钥对鉴权）、NONE（免鉴权）、OAUTH。默认为NONE。
+     * @var string API 鉴权类型。支持SECRET（密钥对鉴权）、NONE（免鉴权）、OAUTH、APP（应用认证）。默认为NONE。
      */
     public $AuthType;
 
@@ -354,7 +354,7 @@ class CreateApiRequest extends AbstractModel
      * @param string $ApiName 用户自定义的 API 名称。
      * @param string $ApiDesc 用户自定义的 API 接口描述。
      * @param string $ApiType API 类型，支持NORMAL（普通API）和TSF（微服务API），默认为NORMAL。
-     * @param string $AuthType API 鉴权类型。支持SECRET（密钥对鉴权）、NONE（免鉴权）、OAUTH。默认为NONE。
+     * @param string $AuthType API 鉴权类型。支持SECRET（密钥对鉴权）、NONE（免鉴权）、OAUTH、APP（应用认证）。默认为NONE。
      * @param boolean $EnableCORS 是否开启跨域。
      * @param array $ConstantParameters 常量参数。
      * @param array $RequestParameters 前端请求参数。

@@ -22,8 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getMusicId() 获取歌曲Id
  * @method void setMusicId(string $MusicId) 设置歌曲Id
- * @method string getMusicType() 获取歌曲类型，请填写：MP3-320K-FTD
- * @method void setMusicType(string $MusicType) 设置歌曲类型，请填写：MP3-320K-FTD
+ * @method string getMusicType() 获取MP3-320K-FTD-P  为获取320kbps歌曲热门片段。
+MP3-320K-FTD 为获取320kbps已核验歌曲完整资源。
+ * @method void setMusicType(string $MusicType) 设置MP3-320K-FTD-P  为获取320kbps歌曲热门片段。
+MP3-320K-FTD 为获取320kbps已核验歌曲完整资源。
  */
 class DescribeCloudMusicRequest extends AbstractModel
 {
@@ -33,13 +35,15 @@ class DescribeCloudMusicRequest extends AbstractModel
     public $MusicId;
 
     /**
-     * @var string 歌曲类型，请填写：MP3-320K-FTD
+     * @var string MP3-320K-FTD-P  为获取320kbps歌曲热门片段。
+MP3-320K-FTD 为获取320kbps已核验歌曲完整资源。
      */
     public $MusicType;
 
     /**
      * @param string $MusicId 歌曲Id
-     * @param string $MusicType 歌曲类型，请填写：MP3-320K-FTD
+     * @param string $MusicType MP3-320K-FTD-P  为获取320kbps歌曲热门片段。
+MP3-320K-FTD 为获取320kbps已核验歌曲完整资源。
      */
     function __construct()
     {

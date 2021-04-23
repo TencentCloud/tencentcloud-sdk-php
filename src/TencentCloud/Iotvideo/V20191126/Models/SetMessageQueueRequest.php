@@ -31,6 +31,7 @@ use TencentCloud\Common\AbstractModel;
 3.控制状态变更
 4.状态信息变更
 5.事件发布
+6.系统事件
  * @method void setMsgType(string $MsgType) 设置消息类型,整型值（0-31）之间以“,”分隔
 0：在线状态变更
 1.固件版本变更
@@ -38,6 +39,7 @@ use TencentCloud\Common\AbstractModel;
 3.控制状态变更
 4.状态信息变更
 5.事件发布
+6.系统事件
  * @method string getTopic() 获取消息队列主题，不超过32字符
  * @method void setTopic(string $Topic) 设置消息队列主题，不超过32字符
  * @method string getInstance() 获取kafka消息队列的实例名，不超过64字符
@@ -65,6 +67,7 @@ class SetMessageQueueRequest extends AbstractModel
 3.控制状态变更
 4.状态信息变更
 5.事件发布
+6.系统事件
      */
     public $MsgType;
 
@@ -93,6 +96,7 @@ class SetMessageQueueRequest extends AbstractModel
 3.控制状态变更
 4.状态信息变更
 5.事件发布
+6.系统事件
      * @param string $Topic 消息队列主题，不超过32字符
      * @param string $Instance kafka消息队列的实例名，不超过64字符
      * @param string $MsgRegion 消息地域，不超过32字符

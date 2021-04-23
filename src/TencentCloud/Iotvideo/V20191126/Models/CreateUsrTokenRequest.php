@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUniqueId(string $UniqueId) 设置终端唯一ID，用于区分同一个用户的多个终端
  * @method integer getTtlMinutes() 获取Token的TTL(time to alive)分钟数
  * @method void setTtlMinutes(integer $TtlMinutes) 设置Token的TTL(time to alive)分钟数
+ * @method string getOldAccessToken() 获取旧的AccessToken。续期Token时，此参数为必须。
+ * @method void setOldAccessToken(string $OldAccessToken) 设置旧的AccessToken。续期Token时，此参数为必须。
  */
 class CreateUsrTokenRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class CreateUsrTokenRequest extends AbstractModel
     public $TtlMinutes;
 
     /**
+     * @var string 旧的AccessToken。续期Token时，此参数为必须。
+     */
+    public $OldAccessToken;
+
+    /**
      * @param string $AccessId 终端用户在IoT Video上的唯一标识ID
      * @param string $UniqueId 终端唯一ID，用于区分同一个用户的多个终端
      * @param integer $TtlMinutes Token的TTL(time to alive)分钟数
+     * @param string $OldAccessToken 旧的AccessToken。续期Token时，此参数为必须。
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class CreateUsrTokenRequest extends AbstractModel
 
         if (array_key_exists("TtlMinutes",$param) and $param["TtlMinutes"] !== null) {
             $this->TtlMinutes = $param["TtlMinutes"];
+        }
+
+        if (array_key_exists("OldAccessToken",$param) and $param["OldAccessToken"] !== null) {
+            $this->OldAccessToken = $param["OldAccessToken"];
         }
     }
 }

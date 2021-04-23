@@ -25,7 +25,19 @@ use TencentCloud\Common\AbstractModel;
  * @method string getPkgId() 获取云存套餐ID
  * @method void setPkgId(string $PkgId) 设置云存套餐ID
  * @method integer getStatus() 获取定单服务状态
+1;订单正在使用。
+2:订单未开始。
+3:订单已经使用过，现在暂时未开始使用(该订单从其他服务转移而来)。
+4:订单已过期。
+5:订单已被退订。
+6:定单已被转移到其他云存服务。
  * @method void setStatus(integer $Status) 设置定单服务状态
+1;订单正在使用。
+2:订单未开始。
+3:订单已经使用过，现在暂时未开始使用(该订单从其他服务转移而来)。
+4:订单已过期。
+5:订单已被退订。
+6:定单已被转移到其他云存服务。
  * @method integer getStartTime() 获取定单服务生效时间
  * @method void setStartTime(integer $StartTime) 设置定单服务生效时间
  * @method integer getEndTime() 获取定单服务失效时间
@@ -45,6 +57,12 @@ class StorageOrder extends AbstractModel
 
     /**
      * @var integer 定单服务状态
+1;订单正在使用。
+2:订单未开始。
+3:订单已经使用过，现在暂时未开始使用(该订单从其他服务转移而来)。
+4:订单已过期。
+5:订单已被退订。
+6:定单已被转移到其他云存服务。
      */
     public $Status;
 
@@ -62,6 +80,12 @@ class StorageOrder extends AbstractModel
      * @param string $OrderId 定单唯一性ID
      * @param string $PkgId 云存套餐ID
      * @param integer $Status 定单服务状态
+1;订单正在使用。
+2:订单未开始。
+3:订单已经使用过，现在暂时未开始使用(该订单从其他服务转移而来)。
+4:订单已过期。
+5:订单已被退订。
+6:定单已被转移到其他云存服务。
      * @param integer $StartTime 定单服务生效时间
      * @param integer $EndTime 定单服务失效时间
      */

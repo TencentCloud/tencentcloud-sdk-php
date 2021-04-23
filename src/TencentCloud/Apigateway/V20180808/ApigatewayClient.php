@@ -31,6 +31,8 @@ use TencentCloud\Apigateway\V20180808\Models as Models;
 将密钥绑定到某个使用计划，并将此使用计划绑定到某个服务发布的环境上，调用者方可使用此密钥调用这个服务中的 API，可使用本接口为使用计划绑定密钥。
  * @method Models\BindSubDomainResponse BindSubDomain(Models\BindSubDomainRequest $req) 本接口（BindSubDomain）用于绑定自定义域名到服务。
 API 网关中每个服务都会提供一个默认的域名供用户调用，但当用户想使用自己的已有域名时，也可以将自定义域名绑定到此服务，在做好备案、与默认域名的 CNAME 后，可直接调用自定义域名。
+ * @method Models\BuildAPIDocResponse BuildAPIDoc(Models\BuildAPIDocRequest $req) 构建 API 文档
+ * @method Models\CreateAPIDocResponse CreateAPIDoc(Models\CreateAPIDocRequest $req) 创建 API 文档
  * @method Models\CreateApiResponse CreateApi(Models\CreateApiRequest $req) 本接口（CreateApi）用于创建 API 接口，创建 API 前，用户需要先创建服务，每个 API 都有自己归属的服务。
  * @method Models\CreateApiKeyResponse CreateApiKey(Models\CreateApiKeyRequest $req) 本接口（CreateApiKey）用于创建一对新的 API 密钥。
  * @method Models\CreateIPStrategyResponse CreateIPStrategy(Models\CreateIPStrategyRequest $req) 本接口（CreateIPStrategy）用于创建服务IP策略。
@@ -38,6 +40,7 @@ API 网关中每个服务都会提供一个默认的域名供用户调用，但�
 API 网关使用的最大单元为服务，每个服务中可创建多个 API 接口。每个服务有一个默认域名供客户调用，用户也可绑定自定义域名到此服务中。
  * @method Models\CreateUsagePlanResponse CreateUsagePlan(Models\CreateUsagePlanRequest $req) 本接口（CreateUsagePlan）用于创建使用计划。
 用户在使用 API 网关时，需要创建使用计划并将其绑定到服务的环境中使用。
+ * @method Models\DeleteAPIDocResponse DeleteAPIDoc(Models\DeleteAPIDocRequest $req) 删除 API 文档
  * @method Models\DeleteApiResponse DeleteApi(Models\DeleteApiRequest $req) 本接口（DeleteApi）用于删除已经创建的API。
  * @method Models\DeleteApiKeyResponse DeleteApiKey(Models\DeleteApiKeyRequest $req) 本接口（DeleteApiKey）用于删除一对 API 密钥。
  * @method Models\DeleteIPStrategyResponse DeleteIPStrategy(Models\DeleteIPStrategyRequest $req) 本接口（DeleteIPStrategy）用于删除服务IP策略。
@@ -48,6 +51,8 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
  * @method Models\DemoteServiceUsagePlanResponse DemoteServiceUsagePlan(Models\DemoteServiceUsagePlanRequest $req) 本接口（DemoteServiceUsagePlan）用于将某个服务在某个环境的使用计划，降级到API上。
 如果服务内没有API不允许进行此操作。
 如果当前环境没有发布，不允许进行此操作。
+ * @method Models\DescribeAPIDocDetailResponse DescribeAPIDocDetail(Models\DescribeAPIDocDetailRequest $req) 查询 API 文档详情
+ * @method Models\DescribeAPIDocsResponse DescribeAPIDocs(Models\DescribeAPIDocsRequest $req) 查询 API 文档列表
  * @method Models\DescribeApiResponse DescribeApi(Models\DescribeApiRequest $req) 本接口（DescribeApi）用于查询用户 API 网关的 API 接口的详细信息。​
  * @method Models\DescribeApiEnvironmentStrategyResponse DescribeApiEnvironmentStrategy(Models\DescribeApiEnvironmentStrategyRequest $req) 本接口（DescribeApiEnvironmentStrategy）用于展示API绑定的限流策略。
  * @method Models\DescribeApiKeyResponse DescribeApiKey(Models\DescribeApiKeyRequest $req) 本接口（DescribeApiKey）用于查询密钥详情。
@@ -85,6 +90,7 @@ API 网关可绑定自定义域名到服务，用于服务调用。此接口用�
  * @method Models\DisableApiKeyResponse DisableApiKey(Models\DisableApiKeyRequest $req) 本接口（DisableApiKey）用于禁用一对 API 密钥。
  * @method Models\EnableApiKeyResponse EnableApiKey(Models\EnableApiKeyRequest $req) 本接口（EnableApiKey）用于启动一对被禁用的 API 密钥。
  * @method Models\GenerateApiDocumentResponse GenerateApiDocument(Models\GenerateApiDocumentRequest $req) 本接口（GenerateApiDocument）用于自动生成 API 文档和 SDK，一个服务的一个环境生成一份文档和 SDK。
+ * @method Models\ModifyAPIDocResponse ModifyAPIDoc(Models\ModifyAPIDocRequest $req) 修改 API 文档
  * @method Models\ModifyApiResponse ModifyApi(Models\ModifyApiRequest $req) 本接口（ModifyApi）用于修改 API 接口，可调用此接口对已经配置的 API 接口进行编辑修改。修改后的 API 需要重新发布 API 所在的服务到对应环境方能生效。
  * @method Models\ModifyApiEnvironmentStrategyResponse ModifyApiEnvironmentStrategy(Models\ModifyApiEnvironmentStrategyRequest $req) 本接口（ModifyApiEnvironmentStrategy）用于修改API限流策略
  * @method Models\ModifyApiIncrementResponse ModifyApiIncrement(Models\ModifyApiIncrementRequest $req) 提供增量更新API能力，主要是给程序调用（区别于ModifyApi，该接口是需要传入API的全量参数，对console使用较友好）
@@ -95,6 +101,7 @@ API 网关可绑定自定义域名到服务，用于服务调用。此接口用�
  * @method Models\ModifyUsagePlanResponse ModifyUsagePlan(Models\ModifyUsagePlanRequest $req) 本接口（ModifyUsagePlan）用于修改使用计划的名称，描述及 QPS。
  * @method Models\ReleaseServiceResponse ReleaseService(Models\ReleaseServiceRequest $req) 本接口（ReleaseService）用于发布服务。
 API 网关的服务创建后，需要发布到某个环境方生效后，使用者才能进行调用，此接口用于发布服务到环境，如 release 环境。
+ * @method Models\ResetAPIDocPasswordResponse ResetAPIDocPassword(Models\ResetAPIDocPasswordRequest $req) 重置API文档密码
  * @method Models\UnBindEnvironmentResponse UnBindEnvironment(Models\UnBindEnvironmentRequest $req) 本接口（UnBindEnvironment）用于将使用计划从特定环境解绑。
  * @method Models\UnBindIPStrategyResponse UnBindIPStrategy(Models\UnBindIPStrategyRequest $req) 本接口（UnBindIPStrategy）用于服务解绑IP策略。
  * @method Models\UnBindSecretIdsResponse UnBindSecretIds(Models\UnBindSecretIdsRequest $req) 本接口（UnBindSecretIds）用于为使用计划解绑密钥。

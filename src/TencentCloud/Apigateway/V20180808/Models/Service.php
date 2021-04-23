@@ -84,6 +84,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置服务绑定的标签
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getInstanceId() 获取独享实例
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInstanceId(string $InstanceId) 设置独享实例
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSetType() 获取集群类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSetType(string $SetType) 设置集群类型
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Service extends AbstractModel
 {
@@ -184,6 +192,18 @@ class Service extends AbstractModel
     public $Tags;
 
     /**
+     * @var string 独享实例
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InstanceId;
+
+    /**
+     * @var string 集群类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SetType;
+
+    /**
      * @param integer $InnerHttpsPort 内网访问https端口。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ServiceDesc 用户自定义的服务描述。
@@ -215,6 +235,10 @@ class Service extends AbstractModel
      * @param integer $TradeIsolateStatus 服务的计费状态。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tags 服务绑定的标签
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $InstanceId 独享实例
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SetType 集群类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -297,6 +321,14 @@ class Service extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("SetType",$param) and $param["SetType"] !== null) {
+            $this->SetType = $param["SetType"];
         }
     }
 }

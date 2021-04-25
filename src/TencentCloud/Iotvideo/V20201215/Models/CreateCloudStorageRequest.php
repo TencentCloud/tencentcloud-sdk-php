@@ -25,11 +25,35 @@ use TencentCloud\Common\AbstractModel;
  * @method string getDeviceName() 获取设备名称
  * @method void setDeviceName(string $DeviceName) 设置设备名称
  * @method string getPackageId() 获取云存套餐ID：
-yc1m3d：全时3天存储月套餐。
-ye1m3d：事件3天存储套餐。
+yc1m3d ： 全时3天存储月套餐。
+yc1m7d ： 全时7天存储月套餐。
+yc1m30d ：全时30天存储月套餐。
+yc1y3d ：全时3天存储年套餐。
+yc1y7d ：全时7天存储年套餐。
+yc1y30d ：全时30天存储年套餐。
+ye1m3d ：事件3天存储月套餐。
+ye1m7d ：事件7天存储月套餐。
+ye1m30d ：事件30天存储月套餐 。
+ye1y3d ：事件3天存储年套餐。
+ye1y7d ：事件7天存储年套餐。
+ye1y30d ：事件30天存储年套餐。
+yc1w7d : 全时7天存储周套餐。
+ye1w7d : 事件7天存储周套餐。
  * @method void setPackageId(string $PackageId) 设置云存套餐ID：
-yc1m3d：全时3天存储月套餐。
-ye1m3d：事件3天存储套餐。
+yc1m3d ： 全时3天存储月套餐。
+yc1m7d ： 全时7天存储月套餐。
+yc1m30d ：全时30天存储月套餐。
+yc1y3d ：全时3天存储年套餐。
+yc1y7d ：全时7天存储年套餐。
+yc1y30d ：全时30天存储年套餐。
+ye1m3d ：事件3天存储月套餐。
+ye1m7d ：事件7天存储月套餐。
+ye1m30d ：事件30天存储月套餐 。
+ye1y3d ：事件3天存储年套餐。
+ye1y7d ：事件7天存储年套餐。
+ye1y30d ：事件30天存储年套餐。
+yc1w7d : 全时7天存储周套餐。
+ye1w7d : 事件7天存储周套餐。
  */
 class CreateCloudStorageRequest extends AbstractModel
 {
@@ -45,8 +69,20 @@ class CreateCloudStorageRequest extends AbstractModel
 
     /**
      * @var string 云存套餐ID：
-yc1m3d：全时3天存储月套餐。
-ye1m3d：事件3天存储套餐。
+yc1m3d ： 全时3天存储月套餐。
+yc1m7d ： 全时7天存储月套餐。
+yc1m30d ：全时30天存储月套餐。
+yc1y3d ：全时3天存储年套餐。
+yc1y7d ：全时7天存储年套餐。
+yc1y30d ：全时30天存储年套餐。
+ye1m3d ：事件3天存储月套餐。
+ye1m7d ：事件7天存储月套餐。
+ye1m30d ：事件30天存储月套餐 。
+ye1y3d ：事件3天存储年套餐。
+ye1y7d ：事件7天存储年套餐。
+ye1y30d ：事件30天存储年套餐。
+yc1w7d : 全时7天存储周套餐。
+ye1w7d : 事件7天存储周套餐。
      */
     public $PackageId;
 
@@ -54,8 +90,20 @@ ye1m3d：事件3天存储套餐。
      * @param string $ProductId 产品ID
      * @param string $DeviceName 设备名称
      * @param string $PackageId 云存套餐ID：
-yc1m3d：全时3天存储月套餐。
-ye1m3d：事件3天存储套餐。
+yc1m3d ： 全时3天存储月套餐。
+yc1m7d ： 全时7天存储月套餐。
+yc1m30d ：全时30天存储月套餐。
+yc1y3d ：全时3天存储年套餐。
+yc1y7d ：全时7天存储年套餐。
+yc1y30d ：全时30天存储年套餐。
+ye1m3d ：事件3天存储月套餐。
+ye1m7d ：事件7天存储月套餐。
+ye1m30d ：事件30天存储月套餐 。
+ye1y3d ：事件3天存储年套餐。
+ye1y7d ：事件7天存储年套餐。
+ye1y30d ：事件30天存储年套餐。
+yc1w7d : 全时7天存储周套餐。
+ye1w7d : 事件7天存储周套餐。
      */
     function __construct()
     {

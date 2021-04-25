@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExecStartTime(string $ExecStartTime) 设置命令执行开始时间。
  * @method string getExecEndTime() 获取命令执行结束时间。
  * @method void setExecEndTime(string $ExecEndTime) 设置命令执行结束时间。
+ * @method integer getDropped() 获取命令最终输出被截断的字节数。
+ * @method void setDropped(integer $Dropped) 设置命令最终输出被截断的字节数。
  */
 class TaskResult extends AbstractModel
 {
@@ -52,10 +54,16 @@ class TaskResult extends AbstractModel
     public $ExecEndTime;
 
     /**
+     * @var integer 命令最终输出被截断的字节数。
+     */
+    public $Dropped;
+
+    /**
      * @param integer $ExitCode 命令执行ExitCode。
      * @param string $Output Base64编码后的命令输出。最大长度24KB。
      * @param string $ExecStartTime 命令执行开始时间。
      * @param string $ExecEndTime 命令执行结束时间。
+     * @param integer $Dropped 命令最终输出被截断的字节数。
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class TaskResult extends AbstractModel
 
         if (array_key_exists("ExecEndTime",$param) and $param["ExecEndTime"] !== null) {
             $this->ExecEndTime = $param["ExecEndTime"];
+        }
+
+        if (array_key_exists("Dropped",$param) and $param["Dropped"] !== null) {
+            $this->Dropped = $param["Dropped"];
         }
     }
 }

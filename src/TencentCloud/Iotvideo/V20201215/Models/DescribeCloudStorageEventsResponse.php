@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setListover(boolean $Listover) 设置拉取结果是否已经结束
  * @method integer getTotal() 获取拉取结果数量
  * @method void setTotal(integer $Total) 设置拉取结果数量
+ * @method string getVideoURL() 获取视频播放URL
+ * @method void setVideoURL(string $VideoURL) 设置视频播放URL
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -54,6 +56,11 @@ class DescribeCloudStorageEventsResponse extends AbstractModel
     public $Total;
 
     /**
+     * @var string 视频播放URL
+     */
+    public $VideoURL;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -63,6 +70,7 @@ class DescribeCloudStorageEventsResponse extends AbstractModel
      * @param string $Context 请求上下文, 用作查询游标
      * @param boolean $Listover 拉取结果是否已经结束
      * @param integer $Total 拉取结果数量
+     * @param string $VideoURL 视频播放URL
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -97,6 +105,10 @@ class DescribeCloudStorageEventsResponse extends AbstractModel
 
         if (array_key_exists("Total",$param) and $param["Total"] !== null) {
             $this->Total = $param["Total"];
+        }
+
+        if (array_key_exists("VideoURL",$param) and $param["VideoURL"] !== null) {
+            $this->VideoURL = $param["VideoURL"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -78,9 +78,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUploadType(string $UploadType) 设置枚举（package/repository/image)
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRepoType() 获取Repo的类型(coding/gitlab/github/coding)
+ * @method string getRepoType() 获取Repo的类型(gitlab/github/coding)
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRepoType(string $RepoType) 设置Repo的类型(coding/gitlab/github/coding)
+ * @method void setRepoType(string $RepoType) 设置Repo的类型(gitlab/github/coding)
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRepo() 获取地址
 注意：此字段可能返回 null，表示取不到有效值。
@@ -241,7 +241,7 @@ class DescribeCloudBaseRunServerVersionResponse extends AbstractModel
     public $UploadType;
 
     /**
-     * @var string Repo的类型(coding/gitlab/github/coding)
+     * @var string Repo的类型(gitlab/github/coding)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RepoType;
@@ -353,7 +353,7 @@ class DescribeCloudBaseRunServerVersionResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UploadType 枚举（package/repository/image)
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $RepoType Repo的类型(coding/gitlab/github/coding)
+     * @param string $RepoType Repo的类型(gitlab/github/coding)
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Repo 地址
 注意：此字段可能返回 null，表示取不到有效值。

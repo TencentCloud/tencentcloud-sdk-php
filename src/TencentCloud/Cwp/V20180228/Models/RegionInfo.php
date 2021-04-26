@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegionId(integer $RegionId) 设置地域ID
  * @method string getRegionCode() 获取地域代码，如 gz，sh，bj
  * @method void setRegionCode(string $RegionCode) 设置地域代码，如 gz，sh，bj
+ * @method string getRegionNameEn() 获取地域英文名
+ * @method void setRegionNameEn(string $RegionNameEn) 设置地域英文名
  */
 class RegionInfo extends AbstractModel
 {
@@ -52,10 +54,16 @@ class RegionInfo extends AbstractModel
     public $RegionCode;
 
     /**
+     * @var string 地域英文名
+     */
+    public $RegionNameEn;
+
+    /**
      * @param string $Region 地域标志，如 ap-guangzhou，ap-shanghai，ap-beijing
      * @param string $RegionName 地域中文名，如华南地区（广州），华东地区（上海金融），华北地区（北京）
      * @param integer $RegionId 地域ID
      * @param string $RegionCode 地域代码，如 gz，sh，bj
+     * @param string $RegionNameEn 地域英文名
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class RegionInfo extends AbstractModel
 
         if (array_key_exists("RegionCode",$param) and $param["RegionCode"] !== null) {
             $this->RegionCode = $param["RegionCode"];
+        }
+
+        if (array_key_exists("RegionNameEn",$param) and $param["RegionNameEn"] !== null) {
+            $this->RegionNameEn = $param["RegionNameEn"];
         }
     }
 }

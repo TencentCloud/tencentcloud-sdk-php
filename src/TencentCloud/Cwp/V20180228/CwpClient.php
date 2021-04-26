@@ -67,6 +67,7 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\DescribeMachineInfoResponse DescribeMachineInfo(Models\DescribeMachineInfoRequest $req) 本接口（DescribeMachineInfo）用于获取机器详细信息。
  * @method Models\DescribeMachineListResponse DescribeMachineList(Models\DescribeMachineListRequest $req) 本接口 (DescribeMachineList) 用于网页防篡改获取区域主机列表。
  * @method Models\DescribeMachineOsListResponse DescribeMachineOsList(Models\DescribeMachineOsListRequest $req) 查询可筛选操作系统列表.
+ * @method Models\DescribeMachineRegionsResponse DescribeMachineRegions(Models\DescribeMachineRegionsRequest $req) 获取机器地域列表
  * @method Models\DescribeMachinesResponse DescribeMachines(Models\DescribeMachinesRequest $req) 本接口 (DescribeMachines) 用于获取区域主机列表。
  * @method Models\DescribeMaliciousRequestsResponse DescribeMaliciousRequests(Models\DescribeMaliciousRequestsRequest $req) 本接口 (DescribeMaliciousRequests) 用于获取恶意请求数据。
  * @method Models\DescribeMalwareInfoResponse DescribeMalwareInfo(Models\DescribeMalwareInfoRequest $req) 查看恶意文件详情

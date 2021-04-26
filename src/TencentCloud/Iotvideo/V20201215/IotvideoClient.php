@@ -61,6 +61,7 @@ use TencentCloud\Iotvideo\V20201215\Models as Models;
  * @method Models\DescribeProductResponse DescribeProduct(Models\DescribeProductRequest $req) 获取产品详情
  * @method Models\DescribeProductsResponse DescribeProducts(Models\DescribeProductsRequest $req) 获取产品列表
  * @method Models\EditFirmwareResponse EditFirmware(Models\EditFirmwareRequest $req) 本接口用于编辑固件信息
+ * @method Models\GenerateSignedVideoURLResponse GenerateSignedVideoURL(Models\GenerateSignedVideoURLRequest $req) 获取视频防盗链播放URL
  * @method Models\GetAllFirmwareVersionResponse GetAllFirmwareVersion(Models\GetAllFirmwareVersionRequest $req) 本接口（GetAllFirmwareVersion）用于获取所有的版本列表 
  * @method Models\GetFirmwareURLResponse GetFirmwareURL(Models\GetFirmwareURLRequest $req) 本接口（GetFirmwareURL）用于获取固件存储的URL 
  * @method Models\ImportModelDefinitionResponse ImportModelDefinition(Models\ImportModelDefinitionRequest $req) 导入其它产品的数据模板，覆盖现有数据模板的物模型和产品分类信息

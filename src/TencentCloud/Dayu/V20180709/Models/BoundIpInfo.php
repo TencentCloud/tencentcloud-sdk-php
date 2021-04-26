@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeviceType(string $DeviceType) 设置产品分类下的子类型，取值[cvm（CVM），lb（负载均衡器），eni（弹性网卡），vpngw（VPN），natgw（NAT），waf（WAF），fpc（金融），gaap（GAAP），other（托管IP），eip（黑石弹性IP）]
  * @method string getInstanceId() 获取IP所属的资源实例ID，当绑定新IP时必须填写此字段；例如是弹性网卡的IP，则InstanceId填写弹性网卡的ID(eni-*); 如果绑定的是托管IP没有对应的资源实例ID，请填写"none";
  * @method void setInstanceId(string $InstanceId) 设置IP所属的资源实例ID，当绑定新IP时必须填写此字段；例如是弹性网卡的IP，则InstanceId填写弹性网卡的ID(eni-*); 如果绑定的是托管IP没有对应的资源实例ID，请填写"none";
+ * @method integer getIspCode() 获取运营商，0：电信；1：联通；2：移动；5：BGP
+ * @method void setIspCode(integer $IspCode) 设置运营商，0：电信；1：联通；2：移动；5：BGP
  */
 class BoundIpInfo extends AbstractModel
 {
@@ -52,10 +54,16 @@ class BoundIpInfo extends AbstractModel
     public $InstanceId;
 
     /**
+     * @var integer 运营商，0：电信；1：联通；2：移动；5：BGP
+     */
+    public $IspCode;
+
+    /**
      * @param string $Ip IP地址
      * @param string $BizType 绑定的产品分类，取值[public（CVM、CLB产品），bm（黑石产品），eni（弹性网卡），vpngw（VPN网关）， natgw（NAT网关），waf（Web应用安全产品），fpc（金融产品），gaap（GAAP产品）, other(托管IP)]
      * @param string $DeviceType 产品分类下的子类型，取值[cvm（CVM），lb（负载均衡器），eni（弹性网卡），vpngw（VPN），natgw（NAT），waf（WAF），fpc（金融），gaap（GAAP），other（托管IP），eip（黑石弹性IP）]
      * @param string $InstanceId IP所属的资源实例ID，当绑定新IP时必须填写此字段；例如是弹性网卡的IP，则InstanceId填写弹性网卡的ID(eni-*); 如果绑定的是托管IP没有对应的资源实例ID，请填写"none";
+     * @param integer $IspCode 运营商，0：电信；1：联通；2：移动；5：BGP
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class BoundIpInfo extends AbstractModel
 
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("IspCode",$param) and $param["IspCode"] !== null) {
+            $this->IspCode = $param["IspCode"];
         }
     }
 }

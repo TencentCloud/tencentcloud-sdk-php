@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePicture请求参数结构体
  *
- * @method integer getSdkAppId() 获取应用id
- * @method void setSdkAppId(integer $SdkAppId) 设置应用id
- * @method integer getPictureId() 获取图片id,不传时返回该应用下所有图片
- * @method void setPictureId(integer $PictureId) 设置图片id,不传时返回该应用下所有图片
- * @method integer getPageSize() 获取每页数量
- * @method void setPageSize(integer $PageSize) 设置每页数量
- * @method integer getPageNo() 获取页码
- * @method void setPageNo(integer $PageNo) 设置页码
+ * @method integer getSdkAppId() 获取应用ID
+ * @method void setSdkAppId(integer $SdkAppId) 设置应用ID
+ * @method integer getPictureId() 获取图片ID，不填时返回该应用下所有图片
+ * @method void setPictureId(integer $PictureId) 设置图片ID，不填时返回该应用下所有图片
+ * @method integer getPageSize() 获取每页数量，不填时默认为10
+ * @method void setPageSize(integer $PageSize) 设置每页数量，不填时默认为10
+ * @method integer getPageNo() 获取页码，不填时默认为1
+ * @method void setPageNo(integer $PageNo) 设置页码，不填时默认为1
  */
 class DescribePictureRequest extends AbstractModel
 {
     /**
-     * @var integer 应用id
+     * @var integer 应用ID
      */
     public $SdkAppId;
 
     /**
-     * @var integer 图片id,不传时返回该应用下所有图片
+     * @var integer 图片ID，不填时返回该应用下所有图片
      */
     public $PictureId;
 
     /**
-     * @var integer 每页数量
+     * @var integer 每页数量，不填时默认为10
      */
     public $PageSize;
 
     /**
-     * @var integer 页码
+     * @var integer 页码，不填时默认为1
      */
     public $PageNo;
 
     /**
-     * @param integer $SdkAppId 应用id
-     * @param integer $PictureId 图片id,不传时返回该应用下所有图片
-     * @param integer $PageSize 每页数量
-     * @param integer $PageNo 页码
+     * @param integer $SdkAppId 应用ID
+     * @param integer $PictureId 图片ID，不填时返回该应用下所有图片
+     * @param integer $PageSize 每页数量，不填时默认为10
+     * @param integer $PageNo 页码，不填时默认为1
      */
     function __construct()
     {

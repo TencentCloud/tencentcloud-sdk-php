@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDefinition(integer $Definition) 设置转自适应码流模板 ID。
  * @method array getWatermarkSet() 获取水印列表，支持多张图片或文字水印，最大可支持 10 张。
  * @method void setWatermarkSet(array $WatermarkSet) 设置水印列表，支持多张图片或文字水印，最大可支持 10 张。
- * @method array getSubtitleSet() 获取字幕列表，元素为字幕 ID，支持多个字幕，最大可支持10个。
- * @method void setSubtitleSet(array $SubtitleSet) 设置字幕列表，元素为字幕 ID，支持多个字幕，最大可支持10个。
+ * @method array getSubtitleSet() 获取字幕列表，元素为字幕 ID，支持多个字幕，最大可支持16个。
+ * @method void setSubtitleSet(array $SubtitleSet) 设置字幕列表，元素为字幕 ID，支持多个字幕，最大可支持16个。
  */
 class AdaptiveDynamicStreamingTaskInput extends AbstractModel
 {
@@ -40,14 +40,14 @@ class AdaptiveDynamicStreamingTaskInput extends AbstractModel
     public $WatermarkSet;
 
     /**
-     * @var array 字幕列表，元素为字幕 ID，支持多个字幕，最大可支持10个。
+     * @var array 字幕列表，元素为字幕 ID，支持多个字幕，最大可支持16个。
      */
     public $SubtitleSet;
 
     /**
      * @param integer $Definition 转自适应码流模板 ID。
      * @param array $WatermarkSet 水印列表，支持多张图片或文字水印，最大可支持 10 张。
-     * @param array $SubtitleSet 字幕列表，元素为字幕 ID，支持多个字幕，最大可支持10个。
+     * @param array $SubtitleSet 字幕列表，元素为字幕 ID，支持多个字幕，最大可支持16个。
      */
     function __construct()
     {

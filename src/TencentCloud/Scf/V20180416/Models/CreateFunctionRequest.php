@@ -62,6 +62,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInitTimeout(integer $InitTimeout) 设置函数初始化超时时间
  * @method array getTags() 获取函数 Tag 参数，以键值对数组形式传入
  * @method void setTags(array $Tags) 设置函数 Tag 参数，以键值对数组形式传入
+ * @method string getAsyncRunEnable() 获取是否开启异步属性，TRUE 为开启，FALSE为关闭
+ * @method void setAsyncRunEnable(string $AsyncRunEnable) 设置是否开启异步属性，TRUE 为开启，FALSE为关闭
+ * @method string getTraceEnable() 获取是否开启事件追踪，TRUE 为开启，FALSE为关闭
+ * @method void setTraceEnable(string $TraceEnable) 设置是否开启事件追踪，TRUE 为开启，FALSE为关闭
  */
 class CreateFunctionRequest extends AbstractModel
 {
@@ -171,6 +175,16 @@ class CreateFunctionRequest extends AbstractModel
     public $Tags;
 
     /**
+     * @var string 是否开启异步属性，TRUE 为开启，FALSE为关闭
+     */
+    public $AsyncRunEnable;
+
+    /**
+     * @var string 是否开启事件追踪，TRUE 为开启，FALSE为关闭
+     */
+    public $TraceEnable;
+
+    /**
      * @param string $FunctionName 创建的函数名称，函数名称支持26个英文字母大小写、数字、连接符和下划线，第一个字符只能以字母开头，最后一个字符不能为连接符或者下划线，名称长度2-60
      * @param Code $Code 函数代码. 注意：不能同时指定Cos、ZipFile或 DemoId。
      * @param string $Handler 函数处理方法名称，名称格式支持 "文件名称.方法名称" 形式（java 名称格式 包名.类名::方法名），文件名称和函数名称之间以"."隔开，文件名称和函数名称要求以字母开始和结尾，中间允许插入字母、数字、下划线和连接符，文件名称和函数名字的长度要求是 2-60 个字符
@@ -192,6 +206,8 @@ class CreateFunctionRequest extends AbstractModel
      * @param CfsConfig $CfsConfig 文件系统配置参数，用于云函数挂载文件系统
      * @param integer $InitTimeout 函数初始化超时时间
      * @param array $Tags 函数 Tag 参数，以键值对数组形式传入
+     * @param string $AsyncRunEnable 是否开启异步属性，TRUE 为开启，FALSE为关闭
+     * @param string $TraceEnable 是否开启事件追踪，TRUE 为开启，FALSE为关闭
      */
     function __construct()
     {
@@ -304,6 +320,14 @@ class CreateFunctionRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("AsyncRunEnable",$param) and $param["AsyncRunEnable"] !== null) {
+            $this->AsyncRunEnable = $param["AsyncRunEnable"];
+        }
+
+        if (array_key_exists("TraceEnable",$param) and $param["TraceEnable"] !== null) {
+            $this->TraceEnable = $param["TraceEnable"];
         }
     }
 }

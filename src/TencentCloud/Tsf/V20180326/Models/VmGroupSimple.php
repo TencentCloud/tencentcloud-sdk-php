@@ -88,6 +88,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeployDesc(string $DeployDesc) 设置部署应用描述信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAlias() 获取部署组备注
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAlias(string $Alias) 设置部署组备注
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class VmGroupSimple extends AbstractModel
 {
@@ -194,6 +198,12 @@ class VmGroupSimple extends AbstractModel
     public $DeployDesc;
 
     /**
+     * @var string 部署组备注
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Alias;
+
+    /**
      * @param string $GroupId 部署组ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GroupName 部署组名称
@@ -227,6 +237,8 @@ class VmGroupSimple extends AbstractModel
      * @param integer $UpdatedTime 部署组更新时间戳
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DeployDesc 部署应用描述信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Alias 部署组备注
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -308,6 +320,10 @@ class VmGroupSimple extends AbstractModel
 
         if (array_key_exists("DeployDesc",$param) and $param["DeployDesc"] !== null) {
             $this->DeployDesc = $param["DeployDesc"];
+        }
+
+        if (array_key_exists("Alias",$param) and $param["Alias"] !== null) {
+            $this->Alias = $param["Alias"];
         }
     }
 }

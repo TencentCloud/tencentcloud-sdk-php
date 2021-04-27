@@ -36,6 +36,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupApis(array $GroupApis) 设置分组API列表
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getGatewayInstanceType() 获取网关实例的类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setGatewayInstanceType(string $GatewayInstanceType) 设置网关实例的类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getGatewayInstanceId() 获取网关实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setGatewayInstanceId(string $GatewayInstanceId) 设置网关实例ID
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class GatewayApiGroupVo extends AbstractModel
 {
@@ -64,6 +72,18 @@ class GatewayApiGroupVo extends AbstractModel
     public $GroupApis;
 
     /**
+     * @var string 网关实例的类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $GatewayInstanceType;
+
+    /**
+     * @var string 网关实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $GatewayInstanceId;
+
+    /**
      * @param string $GroupId 分组ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GroupName 分组名称
@@ -71,6 +91,10 @@ class GatewayApiGroupVo extends AbstractModel
      * @param integer $GroupApiCount 分组下API个数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $GroupApis 分组API列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $GatewayInstanceType 网关实例的类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $GatewayInstanceId 网关实例ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -105,6 +129,14 @@ class GatewayApiGroupVo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->GroupApis, $obj);
             }
+        }
+
+        if (array_key_exists("GatewayInstanceType",$param) and $param["GatewayInstanceType"] !== null) {
+            $this->GatewayInstanceType = $param["GatewayInstanceType"];
+        }
+
+        if (array_key_exists("GatewayInstanceId",$param) and $param["GatewayInstanceId"] !== null) {
+            $this->GatewayInstanceId = $param["GatewayInstanceId"];
         }
     }
 }

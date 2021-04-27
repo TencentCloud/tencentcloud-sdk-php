@@ -18,39 +18,23 @@ namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 环境变量
+ * k8s env 的 ResourceFieldRef
  *
- * @method string getName() 获取环境变量名称
- * @method void setName(string $Name) 设置环境变量名称
- * @method string getValue() 获取环境变量值
- * @method void setValue(string $Value) 设置环境变量值
- * @method ValueFrom getValueFrom() 获取k8s ValueFrom
+ * @method string getResource() 获取k8s 的 Resource
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setValueFrom(ValueFrom $ValueFrom) 设置k8s ValueFrom
+ * @method void setResource(string $Resource) 设置k8s 的 Resource
 注意：此字段可能返回 null，表示取不到有效值。
  */
-class Env extends AbstractModel
+class ResourceFieldRef extends AbstractModel
 {
     /**
-     * @var string 环境变量名称
-     */
-    public $Name;
-
-    /**
-     * @var string 环境变量值
-     */
-    public $Value;
-
-    /**
-     * @var ValueFrom k8s ValueFrom
+     * @var string k8s 的 Resource
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $ValueFrom;
+    public $Resource;
 
     /**
-     * @param string $Name 环境变量名称
-     * @param string $Value 环境变量值
-     * @param ValueFrom $ValueFrom k8s ValueFrom
+     * @param string $Resource k8s 的 Resource
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -66,17 +50,8 @@ class Env extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
-        }
-
-        if (array_key_exists("Value",$param) and $param["Value"] !== null) {
-            $this->Value = $param["Value"];
-        }
-
-        if (array_key_exists("ValueFrom",$param) and $param["ValueFrom"] !== null) {
-            $this->ValueFrom = new ValueFrom();
-            $this->ValueFrom->deserialize($param["ValueFrom"]);
+        if (array_key_exists("Resource",$param) and $param["Resource"] !== null) {
+            $this->Resource = $param["Resource"];
         }
     }
 }

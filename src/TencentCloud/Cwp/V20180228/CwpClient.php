@@ -63,6 +63,7 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\DescribeGeneralStatResponse DescribeGeneralStat(Models\DescribeGeneralStatRequest $req) 获取主机安全相关统计
  * @method Models\DescribeHistoryAccountsResponse DescribeHistoryAccounts(Models\DescribeHistoryAccountsRequest $req) 本接口 (DescribeHistoryAccounts) 用于获取帐号变更历史列表数据。
  * @method Models\DescribeImpactedHostsResponse DescribeImpactedHosts(Models\DescribeImpactedHostsRequest $req) 本接口 (DescribeImpactedHosts) 用于获取漏洞受影响机器列表。
+ * @method Models\DescribeImportMachineInfoResponse DescribeImportMachineInfo(Models\DescribeImportMachineInfoRequest $req) 查询批量导入机器信息
  * @method Models\DescribeLoginWhiteListResponse DescribeLoginWhiteList(Models\DescribeLoginWhiteListRequest $req) 获取异地登录白名单列表
  * @method Models\DescribeMachineInfoResponse DescribeMachineInfo(Models\DescribeMachineInfoRequest $req) 本接口（DescribeMachineInfo）用于获取机器详细信息。
  * @method Models\DescribeMachineListResponse DescribeMachineList(Models\DescribeMachineListRequest $req) 本接口 (DescribeMachineList) 用于网页防篡改获取区域主机列表。
@@ -118,6 +119,8 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\ExportPrivilegeEventsResponse ExportPrivilegeEvents(Models\ExportPrivilegeEventsRequest $req) 导出本地提权事件
  * @method Models\ExportReverseShellEventsResponse ExportReverseShellEvents(Models\ExportReverseShellEventsRequest $req) 导出反弹Shell事件
  * @method Models\ExportTasksResponse ExportTasks(Models\ExportTasksRequest $req) 用于异步导出数据量大的日志文件
+ * @method Models\ExportVulDetectionExcelResponse ExportVulDetectionExcel(Models\ExportVulDetectionExcelRequest $req) 导出本次漏洞检测Excel
+ * @method Models\ExportVulDetectionReportResponse ExportVulDetectionReport(Models\ExportVulDetectionReportRequest $req) 导出漏洞检测报告。
  * @method Models\IgnoreImpactedHostsResponse IgnoreImpactedHosts(Models\IgnoreImpactedHostsRequest $req) 本接口 (IgnoreImpactedHosts) 用于忽略漏洞。
  * @method Models\InquiryPriceOpenProVersionPrepaidResponse InquiryPriceOpenProVersionPrepaid(Models\InquiryPriceOpenProVersionPrepaidRequest $req) 本接口 (InquiryPriceOpenProVersionPrepaid) 用于开通专业版询价(预付费)。
  * @method Models\MisAlarmNonlocalLoginPlacesResponse MisAlarmNonlocalLoginPlaces(Models\MisAlarmNonlocalLoginPlacesRequest $req) 本接口{MisAlarmNonlocalLoginPlaces}将设置当前地点为常用登录地。

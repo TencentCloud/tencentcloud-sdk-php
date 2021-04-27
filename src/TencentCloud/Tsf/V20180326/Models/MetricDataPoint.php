@@ -18,39 +18,47 @@ namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 环境变量
+ * 监控统计数据点
  *
- * @method string getName() 获取环境变量名称
- * @method void setName(string $Name) 设置环境变量名称
- * @method string getValue() 获取环境变量值
- * @method void setValue(string $Value) 设置环境变量值
- * @method ValueFrom getValueFrom() 获取k8s ValueFrom
+ * @method string getKey() 获取数据点键
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setValueFrom(ValueFrom $ValueFrom) 设置k8s ValueFrom
+ * @method void setKey(string $Key) 设置数据点键
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getValue() 获取数据点值
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setValue(string $Value) 设置数据点值
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTag() 获取数据点标签
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTag(string $Tag) 设置数据点标签
 注意：此字段可能返回 null，表示取不到有效值。
  */
-class Env extends AbstractModel
+class MetricDataPoint extends AbstractModel
 {
     /**
-     * @var string 环境变量名称
+     * @var string 数据点键
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Name;
+    public $Key;
 
     /**
-     * @var string 环境变量值
+     * @var string 数据点值
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Value;
 
     /**
-     * @var ValueFrom k8s ValueFrom
+     * @var string 数据点标签
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $ValueFrom;
+    public $Tag;
 
     /**
-     * @param string $Name 环境变量名称
-     * @param string $Value 环境变量值
-     * @param ValueFrom $ValueFrom k8s ValueFrom
+     * @param string $Key 数据点键
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Value 数据点值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Tag 数据点标签
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -66,17 +74,16 @@ class Env extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists("Key",$param) and $param["Key"] !== null) {
+            $this->Key = $param["Key"];
         }
 
         if (array_key_exists("Value",$param) and $param["Value"] !== null) {
             $this->Value = $param["Value"];
         }
 
-        if (array_key_exists("ValueFrom",$param) and $param["ValueFrom"] !== null) {
-            $this->ValueFrom = new ValueFrom();
-            $this->ValueFrom->deserialize($param["ValueFrom"]);
+        if (array_key_exists("Tag",$param) and $param["Tag"] !== null) {
+            $this->Tag = $param["Tag"];
         }
     }
 }

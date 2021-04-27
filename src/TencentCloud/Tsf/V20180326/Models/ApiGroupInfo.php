@@ -68,6 +68,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupType(string $GroupType) 设置分组类型。 ms： 微服务分组； external:外部Api分组
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getGatewayInstanceType() 获取网关实例的类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setGatewayInstanceType(string $GatewayInstanceType) 设置网关实例的类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getGatewayInstanceId() 获取网关实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setGatewayInstanceId(string $GatewayInstanceId) 设置网关实例ID
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ApiGroupInfo extends AbstractModel
 {
@@ -144,6 +152,18 @@ class ApiGroupInfo extends AbstractModel
     public $GroupType;
 
     /**
+     * @var string 网关实例的类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $GatewayInstanceType;
+
+    /**
+     * @var string 网关实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $GatewayInstanceId;
+
+    /**
      * @param string $GroupId Api Group Id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GroupName Api Group 名称
@@ -167,6 +187,10 @@ class ApiGroupInfo extends AbstractModel
      * @param string $Description 描述
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GroupType 分组类型。 ms： 微服务分组； external:外部Api分组
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $GatewayInstanceType 网关实例的类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $GatewayInstanceId 网关实例ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -233,6 +257,14 @@ class ApiGroupInfo extends AbstractModel
 
         if (array_key_exists("GroupType",$param) and $param["GroupType"] !== null) {
             $this->GroupType = $param["GroupType"];
+        }
+
+        if (array_key_exists("GatewayInstanceType",$param) and $param["GatewayInstanceType"] !== null) {
+            $this->GatewayInstanceType = $param["GatewayInstanceType"];
+        }
+
+        if (array_key_exists("GatewayInstanceId",$param) and $param["GatewayInstanceId"] !== null) {
+            $this->GatewayInstanceId = $param["GatewayInstanceId"];
         }
     }
 }

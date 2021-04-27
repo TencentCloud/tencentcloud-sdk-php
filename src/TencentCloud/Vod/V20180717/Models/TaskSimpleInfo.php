@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTaskId() 获取任务 ID。
  * @method void setTaskId(string $TaskId) 设置任务 ID。
+ * @method string getStatus() 获取任务状态。取值：WAITING（等待中）、PROCESSING（处理中）、FINISH（已完成）。
+ * @method void setStatus(string $Status) 设置任务状态。取值：WAITING（等待中）、PROCESSING（处理中）、FINISH（已完成）。
+ * @method string getFileId() 获取视频 ID。
+ * @method void setFileId(string $FileId) 设置视频 ID。
  * @method string getTaskType() 获取任务类型，取值：
 <li>Procedure：视频处理任务；</li>
 <li>EditMedia：视频编辑任务</li>
@@ -59,6 +63,16 @@ class TaskSimpleInfo extends AbstractModel
      * @var string 任务 ID。
      */
     public $TaskId;
+
+    /**
+     * @var string 任务状态。取值：WAITING（等待中）、PROCESSING（处理中）、FINISH（已完成）。
+     */
+    public $Status;
+
+    /**
+     * @var string 视频 ID。
+     */
+    public $FileId;
 
     /**
      * @var string 任务类型，取值：
@@ -101,6 +115,8 @@ class TaskSimpleInfo extends AbstractModel
 
     /**
      * @param string $TaskId 任务 ID。
+     * @param string $Status 任务状态。取值：WAITING（等待中）、PROCESSING（处理中）、FINISH（已完成）。
+     * @param string $FileId 视频 ID。
      * @param string $TaskType 任务类型，取值：
 <li>Procedure：视频处理任务；</li>
 <li>EditMedia：视频编辑任务</li>
@@ -132,6 +148,14 @@ class TaskSimpleInfo extends AbstractModel
         }
         if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
             $this->TaskId = $param["TaskId"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("FileId",$param) and $param["FileId"] !== null) {
+            $this->FileId = $param["FileId"];
         }
 
         if (array_key_exists("TaskType",$param) and $param["TaskType"] !== null) {

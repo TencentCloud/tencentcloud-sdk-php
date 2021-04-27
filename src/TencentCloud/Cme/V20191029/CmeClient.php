@@ -43,6 +43,7 @@ use TencentCloud\Cme\V20191029\Models as Models;
 <li>要删除的团队必须没有归属的素材；</li>
 <li>要删除的团队必须没有归属的分类。</li>
  * @method Models\DeleteTeamMembersResponse DeleteTeamMembers(Models\DeleteTeamMembersRequest $req) 将团队成员从团队中删除，默认只有 Owner 及管理员才有此权限。
+ * @method Models\DescribeAccountsResponse DescribeAccounts(Models\DescribeAccountsRequest $req) 获取用户账号信息。
  * @method Models\DescribeClassResponse DescribeClass(Models\DescribeClassRequest $req) 获取指定归属者下所有的分类信息。
  * @method Models\DescribeJoinTeamsResponse DescribeJoinTeams(Models\DescribeJoinTeamsRequest $req) 获取指定的团队成员所加入的团队列表。
  * @method Models\DescribeLoginStatusResponse DescribeLoginStatus(Models\DescribeLoginStatusRequest $req) 查询指定用户的登录态。

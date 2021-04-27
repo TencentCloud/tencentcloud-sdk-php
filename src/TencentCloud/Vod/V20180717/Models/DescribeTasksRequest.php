@@ -24,6 +24,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(string $Status) 设置过滤条件：任务状态，可选值：WAITING（等待中）、PROCESSING（处理中）、FINISH（已完成）。
  * @method string getFileId() 获取过滤条件：文件 ID。
  * @method void setFileId(string $FileId) 设置过滤条件：文件 ID。
+ * @method TimeRange getCreateTime() 获取过滤条件：任务创建时间。
+ * @method void setCreateTime(TimeRange $CreateTime) 设置过滤条件：任务创建时间。
+ * @method TimeRange getFinishTime() 获取过滤条件：任务结束时间。
+ * @method void setFinishTime(TimeRange $FinishTime) 设置过滤条件：任务结束时间。
+ * @method SortBy getSort() 获取排序方式。Sort.Field 可选：
+<li> CreateTime 任务创建时间。</li>
+<li>FinishTime 任务结束时间。</li>
+ * @method void setSort(SortBy $Sort) 设置排序方式。Sort.Field 可选：
+<li> CreateTime 任务创建时间。</li>
+<li>FinishTime 任务结束时间。</li>
  * @method integer getLimit() 获取返回记录条数，默认值：10，最大值：100。
  * @method void setLimit(integer $Limit) 设置返回记录条数，默认值：10，最大值：100。
  * @method string getScrollToken() 获取翻页标识，分批拉取时使用：当单次请求无法拉取所有数据，接口将会返回 ScrollToken，下一次请求携带该 Token，将会从下一条记录开始获取。
@@ -44,6 +54,23 @@ class DescribeTasksRequest extends AbstractModel
     public $FileId;
 
     /**
+     * @var TimeRange 过滤条件：任务创建时间。
+     */
+    public $CreateTime;
+
+    /**
+     * @var TimeRange 过滤条件：任务结束时间。
+     */
+    public $FinishTime;
+
+    /**
+     * @var SortBy 排序方式。Sort.Field 可选：
+<li> CreateTime 任务创建时间。</li>
+<li>FinishTime 任务结束时间。</li>
+     */
+    public $Sort;
+
+    /**
      * @var integer 返回记录条数，默认值：10，最大值：100。
      */
     public $Limit;
@@ -61,6 +88,11 @@ class DescribeTasksRequest extends AbstractModel
     /**
      * @param string $Status 过滤条件：任务状态，可选值：WAITING（等待中）、PROCESSING（处理中）、FINISH（已完成）。
      * @param string $FileId 过滤条件：文件 ID。
+     * @param TimeRange $CreateTime 过滤条件：任务创建时间。
+     * @param TimeRange $FinishTime 过滤条件：任务结束时间。
+     * @param SortBy $Sort 排序方式。Sort.Field 可选：
+<li> CreateTime 任务创建时间。</li>
+<li>FinishTime 任务结束时间。</li>
      * @param integer $Limit 返回记录条数，默认值：10，最大值：100。
      * @param string $ScrollToken 翻页标识，分批拉取时使用：当单次请求无法拉取所有数据，接口将会返回 ScrollToken，下一次请求携带该 Token，将会从下一条记录开始获取。
      * @param integer $SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
@@ -84,6 +116,21 @@ class DescribeTasksRequest extends AbstractModel
 
         if (array_key_exists("FileId",$param) and $param["FileId"] !== null) {
             $this->FileId = $param["FileId"];
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = new TimeRange();
+            $this->CreateTime->deserialize($param["CreateTime"]);
+        }
+
+        if (array_key_exists("FinishTime",$param) and $param["FinishTime"] !== null) {
+            $this->FinishTime = new TimeRange();
+            $this->FinishTime->deserialize($param["FinishTime"]);
+        }
+
+        if (array_key_exists("Sort",$param) and $param["Sort"] !== null) {
+            $this->Sort = new SortBy();
+            $this->Sort->deserialize($param["Sort"]);
         }
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {

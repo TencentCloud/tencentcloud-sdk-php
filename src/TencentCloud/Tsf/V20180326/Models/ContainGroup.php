@@ -76,6 +76,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMemLimit(string $MemLimit) 设置最大分配的内存 MiB 数，对应 K8S limit
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAlias() 获取部署组备注
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAlias(string $Alias) 设置部署组备注
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ContainGroup extends AbstractModel
 {
@@ -164,6 +168,12 @@ class ContainGroup extends AbstractModel
     public $MemLimit;
 
     /**
+     * @var string 部署组备注
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Alias;
+
+    /**
      * @param string $GroupId 部署组ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GroupName 分组名称
@@ -191,6 +201,8 @@ class ContainGroup extends AbstractModel
      * @param string $MemRequest 初始分配的内存 MiB 数，对应 K8S request
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MemLimit 最大分配的内存 MiB 数，对应 K8S limit
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Alias 部署组备注
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -260,6 +272,10 @@ class ContainGroup extends AbstractModel
 
         if (array_key_exists("MemLimit",$param) and $param["MemLimit"] !== null) {
             $this->MemLimit = $param["MemLimit"];
+        }
+
+        if (array_key_exists("Alias",$param) and $param["Alias"] !== null) {
+            $this->Alias = $param["Alias"];
         }
     }
 }

@@ -34,32 +34,20 @@ use TencentCloud\Common\AbstractModel;
 [策略类型列表](https://cloud.tencent.com/document/product/248/50397)
  * @method void setNamespaces(array $Namespaces) 设置根据命名空间过滤，不同策略类型的值详见
 [策略类型列表](https://cloud.tencent.com/document/product/248/50397)
- * @method string getDimensions() 获取告警对象列表，外层数组，对应多个实例
-内层数组，每个数组对应一个实例，里面的object对应的是这个实例的维度信息。格式为
-[
-	[{"name":"unInstanceId","value":"ins-qr888845g"}],
-	[{"name":"unInstanceId","value":"ins-qr8d555g"}]
-	...
-]
-不同云产品参数示例详见
-[维度信息Dimensions列表](https://cloud.tencent.com/document/product/248/50397)
- * @method void setDimensions(string $Dimensions) 设置告警对象列表，外层数组，对应多个实例
-内层数组，每个数组对应一个实例，里面的object对应的是这个实例的维度信息。格式为
-[
-	[{"name":"unInstanceId","value":"ins-qr888845g"}],
-	[{"name":"unInstanceId","value":"ins-qr8d555g"}]
-	...
-]
-不同云产品参数示例详见
-[维度信息Dimensions列表](https://cloud.tencent.com/document/product/248/50397)
- * @method array getReceiverUids() 获取根据接收人的uid搜索，需要调用访问管理的api查询。详见
-[拉取子用户](https://cloud.tencent.com/document/product/598/34587)
- * @method void setReceiverUids(array $ReceiverUids) 设置根据接收人的uid搜索，需要调用访问管理的api查询。详见
-[拉取子用户](https://cloud.tencent.com/document/product/598/34587)
- * @method array getReceiverGroups() 获取根据接收组的uid搜索，需要调用访问管理的api查询，详见
-[查询用户组列表](https://cloud.tencent.com/document/product/598/34589)
- * @method void setReceiverGroups(array $ReceiverGroups) 设置根据接收组的uid搜索，需要调用访问管理的api查询，详见
-[查询用户组列表](https://cloud.tencent.com/document/product/598/34589)
+ * @method string getDimensions() 获取告警对象列表，JSON 字符串。外层数组，对应多个实例，内层为对象的维度。例如“云服务器-基础监控”可写为：
+`[ {"Dimensions": {"unInstanceId": "ins-qr8d555g"}}, {"Dimensions": {"unInstanceId": "ins-qr8d555h"}} ]`
+具体也可以参考下方的示例 2。
+
+不同云产品参数示例详见 [维度信息Dimensions列表](https://cloud.tencent.com/document/product/248/50397)
+ * @method void setDimensions(string $Dimensions) 设置告警对象列表，JSON 字符串。外层数组，对应多个实例，内层为对象的维度。例如“云服务器-基础监控”可写为：
+`[ {"Dimensions": {"unInstanceId": "ins-qr8d555g"}}, {"Dimensions": {"unInstanceId": "ins-qr8d555h"}} ]`
+具体也可以参考下方的示例 2。
+
+不同云产品参数示例详见 [维度信息Dimensions列表](https://cloud.tencent.com/document/product/248/50397)
+ * @method array getReceiverUids() 获取根据接收人搜索，可以使用“访问管理”的 [拉取子用户 ListUsers](https://cloud.tencent.com/document/product/598/34587) 接口获取用户列表 或 [查询子用户 GetUser](https://cloud.tencent.com/document/product/598/34590) 接口查询子用户详情，此处填入返回结果中的 `Uid` 字段
+ * @method void setReceiverUids(array $ReceiverUids) 设置根据接收人搜索，可以使用“访问管理”的 [拉取子用户 ListUsers](https://cloud.tencent.com/document/product/598/34587) 接口获取用户列表 或 [查询子用户 GetUser](https://cloud.tencent.com/document/product/598/34590) 接口查询子用户详情，此处填入返回结果中的 `Uid` 字段
+ * @method array getReceiverGroups() 获取根据接收组搜索，可以使用“访问管理”的 [查询用户组列表 ListGroups](https://cloud.tencent.com/document/product/598/34589) 接口获取用户组列表 或 [列出用户关联的用户组 ListGroupsForUser](https://cloud.tencent.com/document/product/598/34588) 查询某个子用户所在的用户组列表 ，此处填入返回结果中的 `GroupId ` 字段
+ * @method void setReceiverGroups(array $ReceiverGroups) 设置根据接收组搜索，可以使用“访问管理”的 [查询用户组列表 ListGroups](https://cloud.tencent.com/document/product/598/34589) 接口获取用户组列表 或 [列出用户关联的用户组 ListGroupsForUser](https://cloud.tencent.com/document/product/598/34588) 查询某个子用户所在的用户组列表 ，此处填入返回结果中的 `GroupId ` 字段
  * @method array getPolicyType() 获取根据默认策略筛选 不传展示全部策略 DEFAULT=展示默认策略 NOT_DEFAULT=展示非默认策略
  * @method void setPolicyType(array $PolicyType) 设置根据默认策略筛选 不传展示全部策略 DEFAULT=展示默认策略 NOT_DEFAULT=展示非默认策略
  * @method string getField() 获取排序字段，例如按照最后修改时间排序，Field: "UpdateTime"
@@ -71,9 +59,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProjectIds(array $ProjectIds) 设置策略所属项目的id数组，可在此页面查看
 [项目管理](https://console.cloud.tencent.com/project)
  * @method array getNoticeIds() 获取通知模版的id列表，可查询通知模版列表获取。
-[查询通知模板列表](https://cloud.tencent.com/document/product/248/51280)
+可使用 [查询通知模板列表](https://cloud.tencent.com/document/product/248/51280) 接口查询。
  * @method void setNoticeIds(array $NoticeIds) 设置通知模版的id列表，可查询通知模版列表获取。
-[查询通知模板列表](https://cloud.tencent.com/document/product/248/51280)
+可使用 [查询通知模板列表](https://cloud.tencent.com/document/product/248/51280) 接口查询。
  * @method array getRuleTypes() 获取根据触发条件筛选 不传展示全部策略 STATIC=展示静态阈值策略 DYNAMIC=展示动态阈值策略
  * @method void setRuleTypes(array $RuleTypes) 设置根据触发条件筛选 不传展示全部策略 STATIC=展示静态阈值策略 DYNAMIC=展示动态阈值策略
  * @method array getEnable() 获取告警启停筛选，[1]：启用   [0]：停止，全部[0, 1]
@@ -115,27 +103,21 @@ class DescribeAlarmPoliciesRequest extends AbstractModel
     public $Namespaces;
 
     /**
-     * @var string 告警对象列表，外层数组，对应多个实例
-内层数组，每个数组对应一个实例，里面的object对应的是这个实例的维度信息。格式为
-[
-	[{"name":"unInstanceId","value":"ins-qr888845g"}],
-	[{"name":"unInstanceId","value":"ins-qr8d555g"}]
-	...
-]
-不同云产品参数示例详见
-[维度信息Dimensions列表](https://cloud.tencent.com/document/product/248/50397)
+     * @var string 告警对象列表，JSON 字符串。外层数组，对应多个实例，内层为对象的维度。例如“云服务器-基础监控”可写为：
+`[ {"Dimensions": {"unInstanceId": "ins-qr8d555g"}}, {"Dimensions": {"unInstanceId": "ins-qr8d555h"}} ]`
+具体也可以参考下方的示例 2。
+
+不同云产品参数示例详见 [维度信息Dimensions列表](https://cloud.tencent.com/document/product/248/50397)
      */
     public $Dimensions;
 
     /**
-     * @var array 根据接收人的uid搜索，需要调用访问管理的api查询。详见
-[拉取子用户](https://cloud.tencent.com/document/product/598/34587)
+     * @var array 根据接收人搜索，可以使用“访问管理”的 [拉取子用户 ListUsers](https://cloud.tencent.com/document/product/598/34587) 接口获取用户列表 或 [查询子用户 GetUser](https://cloud.tencent.com/document/product/598/34590) 接口查询子用户详情，此处填入返回结果中的 `Uid` 字段
      */
     public $ReceiverUids;
 
     /**
-     * @var array 根据接收组的uid搜索，需要调用访问管理的api查询，详见
-[查询用户组列表](https://cloud.tencent.com/document/product/598/34589)
+     * @var array 根据接收组搜索，可以使用“访问管理”的 [查询用户组列表 ListGroups](https://cloud.tencent.com/document/product/598/34589) 接口获取用户组列表 或 [列出用户关联的用户组 ListGroupsForUser](https://cloud.tencent.com/document/product/598/34588) 查询某个子用户所在的用户组列表 ，此处填入返回结果中的 `GroupId ` 字段
      */
     public $ReceiverGroups;
 
@@ -162,7 +144,7 @@ class DescribeAlarmPoliciesRequest extends AbstractModel
 
     /**
      * @var array 通知模版的id列表，可查询通知模版列表获取。
-[查询通知模板列表](https://cloud.tencent.com/document/product/248/51280)
+可使用 [查询通知模板列表](https://cloud.tencent.com/document/product/248/51280) 接口查询。
      */
     public $NoticeIds;
 
@@ -189,26 +171,20 @@ class DescribeAlarmPoliciesRequest extends AbstractModel
      * @param array $MonitorTypes 根据监控类型过滤 不选默认查所有类型 "MT_QCE"=云产品监控
      * @param array $Namespaces 根据命名空间过滤，不同策略类型的值详见
 [策略类型列表](https://cloud.tencent.com/document/product/248/50397)
-     * @param string $Dimensions 告警对象列表，外层数组，对应多个实例
-内层数组，每个数组对应一个实例，里面的object对应的是这个实例的维度信息。格式为
-[
-	[{"name":"unInstanceId","value":"ins-qr888845g"}],
-	[{"name":"unInstanceId","value":"ins-qr8d555g"}]
-	...
-]
-不同云产品参数示例详见
-[维度信息Dimensions列表](https://cloud.tencent.com/document/product/248/50397)
-     * @param array $ReceiverUids 根据接收人的uid搜索，需要调用访问管理的api查询。详见
-[拉取子用户](https://cloud.tencent.com/document/product/598/34587)
-     * @param array $ReceiverGroups 根据接收组的uid搜索，需要调用访问管理的api查询，详见
-[查询用户组列表](https://cloud.tencent.com/document/product/598/34589)
+     * @param string $Dimensions 告警对象列表，JSON 字符串。外层数组，对应多个实例，内层为对象的维度。例如“云服务器-基础监控”可写为：
+`[ {"Dimensions": {"unInstanceId": "ins-qr8d555g"}}, {"Dimensions": {"unInstanceId": "ins-qr8d555h"}} ]`
+具体也可以参考下方的示例 2。
+
+不同云产品参数示例详见 [维度信息Dimensions列表](https://cloud.tencent.com/document/product/248/50397)
+     * @param array $ReceiverUids 根据接收人搜索，可以使用“访问管理”的 [拉取子用户 ListUsers](https://cloud.tencent.com/document/product/598/34587) 接口获取用户列表 或 [查询子用户 GetUser](https://cloud.tencent.com/document/product/598/34590) 接口查询子用户详情，此处填入返回结果中的 `Uid` 字段
+     * @param array $ReceiverGroups 根据接收组搜索，可以使用“访问管理”的 [查询用户组列表 ListGroups](https://cloud.tencent.com/document/product/598/34589) 接口获取用户组列表 或 [列出用户关联的用户组 ListGroupsForUser](https://cloud.tencent.com/document/product/598/34588) 查询某个子用户所在的用户组列表 ，此处填入返回结果中的 `GroupId ` 字段
      * @param array $PolicyType 根据默认策略筛选 不传展示全部策略 DEFAULT=展示默认策略 NOT_DEFAULT=展示非默认策略
      * @param string $Field 排序字段，例如按照最后修改时间排序，Field: "UpdateTime"
      * @param string $Order 排序顺序：升序：ASC  降序：DESC
      * @param array $ProjectIds 策略所属项目的id数组，可在此页面查看
 [项目管理](https://console.cloud.tencent.com/project)
      * @param array $NoticeIds 通知模版的id列表，可查询通知模版列表获取。
-[查询通知模板列表](https://cloud.tencent.com/document/product/248/51280)
+可使用 [查询通知模板列表](https://cloud.tencent.com/document/product/248/51280) 接口查询。
      * @param array $RuleTypes 根据触发条件筛选 不传展示全部策略 STATIC=展示静态阈值策略 DYNAMIC=展示动态阈值策略
      * @param array $Enable 告警启停筛选，[1]：启用   [0]：停止，全部[0, 1]
      * @param integer $NotBindingNoticeRule 传 1 查询未配置通知规则的告警策略；不传或传其他数值，查询所有策略。

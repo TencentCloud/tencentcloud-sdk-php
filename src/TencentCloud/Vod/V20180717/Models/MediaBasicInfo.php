@@ -66,6 +66,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(string $Status) 设置文件状态：Normal：正常，Forbidden：封禁。
 
 *注意：此字段暂不支持。
+ * @method string getStorageClass() 获取媒体文件的存储类别：
+<li>STANDARD：标准存储。</li>
+<li>STANDARD_IA：低频存储。</li>
+ * @method void setStorageClass(string $StorageClass) 设置媒体文件的存储类别：
+<li>STANDARD：标准存储。</li>
+<li>STANDARD_IA：低频存储。</li>
  */
 class MediaBasicInfo extends AbstractModel
 {
@@ -161,6 +167,13 @@ class MediaBasicInfo extends AbstractModel
     public $Status;
 
     /**
+     * @var string 媒体文件的存储类别：
+<li>STANDARD：标准存储。</li>
+<li>STANDARD_IA：低频存储。</li>
+     */
+    public $StorageClass;
+
+    /**
      * @param string $Name 媒体文件名称。
      * @param string $Description 媒体文件描述。
      * @param string $CreateTime 媒体文件的创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
@@ -184,6 +197,9 @@ class MediaBasicInfo extends AbstractModel
      * @param string $Status 文件状态：Normal：正常，Forbidden：封禁。
 
 *注意：此字段暂不支持。
+     * @param string $StorageClass 媒体文件的存储类别：
+<li>STANDARD：标准存储。</li>
+<li>STANDARD_IA：低频存储。</li>
      */
     function __construct()
     {
@@ -265,6 +281,10 @@ class MediaBasicInfo extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("StorageClass",$param) and $param["StorageClass"] !== null) {
+            $this->StorageClass = $param["StorageClass"];
         }
     }
 }

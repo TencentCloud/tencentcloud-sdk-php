@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTid(string $Tid) 设置设备ID
  * @method string getAccessId() 获取用户ID
  * @method void setAccessId(string $AccessId) 设置用户ID
- * @method string getNick() 获取设备昵称
- * @method void setNick(string $Nick) 设置设备昵称
+ * @method string getNick() 获取设备昵称，最多不超过64个字符
+ * @method void setNick(string $Nick) 设置设备昵称，最多不超过64个字符
  */
 class ModifyDeviceRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class ModifyDeviceRequest extends AbstractModel
     public $AccessId;
 
     /**
-     * @var string 设备昵称
+     * @var string 设备昵称，最多不超过64个字符
      */
     public $Nick;
 
     /**
      * @param string $Tid 设备ID
      * @param string $AccessId 用户ID
-     * @param string $Nick 设备昵称
+     * @param string $Nick 设备昵称，最多不超过64个字符
      */
     function __construct()
     {

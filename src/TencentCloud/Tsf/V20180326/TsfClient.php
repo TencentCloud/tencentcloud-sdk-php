@@ -86,6 +86,7 @@ use TencentCloud\Tsf\V20180326\Models as Models;
  * @method Models\DescribeConfigReleasesResponse DescribeConfigReleases(Models\DescribeConfigReleasesRequest $req) 查询配置发布信息
  * @method Models\DescribeConfigSummaryResponse DescribeConfigSummary(Models\DescribeConfigSummaryRequest $req) 查询配置汇总列表
  * @method Models\DescribeConfigsResponse DescribeConfigs(Models\DescribeConfigsRequest $req) 查询配置项列表
+ * @method Models\DescribeContainerEventsResponse DescribeContainerEvents(Models\DescribeContainerEventsRequest $req) 获取容器事件列表
  * @method Models\DescribeContainerGroupDetailResponse DescribeContainerGroupDetail(Models\DescribeContainerGroupDetailRequest $req)  容器部署组详情
  * @method Models\DescribeContainerGroupsResponse DescribeContainerGroups(Models\DescribeContainerGroupsRequest $req) 容器部署组列表
  * @method Models\DescribeCreateGatewayApiStatusResponse DescribeCreateGatewayApiStatus(Models\DescribeCreateGatewayApiStatusRequest $req) 查询一键导入API分组任务的状态
@@ -130,6 +131,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
  * @method Models\DescribeSimpleNamespacesResponse DescribeSimpleNamespaces(Models\DescribeSimpleNamespacesRequest $req) 查询简单命名空间列表 
  * @method Models\DescribeTaskDetailResponse DescribeTaskDetail(Models\DescribeTaskDetailRequest $req) 查询任务详情
  * @method Models\DescribeTaskLastStatusResponse DescribeTaskLastStatus(Models\DescribeTaskLastStatusRequest $req) 查询任务最近一次执行状态
+ * @method Models\DescribeUnitApiUseDetailResponse DescribeUnitApiUseDetail(Models\DescribeUnitApiUseDetailRequest $req) 查询网关API监控明细数据（仅单元化网关），非单元化网关使用DescribeApiUseDetail
  * @method Models\DescribeUnitNamespacesResponse DescribeUnitNamespaces(Models\DescribeUnitNamespacesRequest $req) 查询单元化命名空间列表
  * @method Models\DescribeUnitRuleResponse DescribeUnitRule(Models\DescribeUnitRuleRequest $req) 查询单元化规则详情
  * @method Models\DescribeUnitRulesResponse DescribeUnitRules(Models\DescribeUnitRulesRequest $req) 查询单元化规则列表

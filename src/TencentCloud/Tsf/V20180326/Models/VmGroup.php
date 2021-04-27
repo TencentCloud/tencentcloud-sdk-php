@@ -156,6 +156,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStopScript(string $StopScript) 设置停止脚本 base64编码
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAlias() 获取部署组备注
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAlias(string $Alias) 设置部署组备注
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class VmGroup extends AbstractModel
 {
@@ -364,6 +368,12 @@ class VmGroup extends AbstractModel
     public $StopScript;
 
     /**
+     * @var string 部署组备注
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Alias;
+
+    /**
      * @param string $GroupId 部署组ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GroupName 部署组名称
@@ -431,6 +441,8 @@ class VmGroup extends AbstractModel
      * @param string $StartScript 启动脚本 base64编码
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StopScript 停止脚本 base64编码
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Alias 部署组备注
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -581,6 +593,10 @@ class VmGroup extends AbstractModel
 
         if (array_key_exists("StopScript",$param) and $param["StopScript"] !== null) {
             $this->StopScript = $param["StopScript"];
+        }
+
+        if (array_key_exists("Alias",$param) and $param["Alias"] !== null) {
+            $this->Alias = $param["Alias"];
         }
     }
 }

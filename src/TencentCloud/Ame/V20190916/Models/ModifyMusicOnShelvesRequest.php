@@ -20,18 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyMusicOnShelves请求参数结构体
  *
- * @method MusicDetailInfo getMusicDetailInfos() 获取无
- * @method void setMusicDetailInfos(MusicDetailInfo $MusicDetailInfos) 设置无
+ * @method MusicDetailInfo getMusicDetailInfos() 获取歌曲变更信息
+ * @method void setMusicDetailInfos(MusicDetailInfo $MusicDetailInfos) 设置歌曲变更信息
+ * @method string getAmeKey() 获取ame对接资源方密钥
+ * @method void setAmeKey(string $AmeKey) 设置ame对接资源方密钥
  */
 class ModifyMusicOnShelvesRequest extends AbstractModel
 {
     /**
-     * @var MusicDetailInfo 无
+     * @var MusicDetailInfo 歌曲变更信息
      */
     public $MusicDetailInfos;
 
     /**
-     * @param MusicDetailInfo $MusicDetailInfos 无
+     * @var string ame对接资源方密钥
+     */
+    public $AmeKey;
+
+    /**
+     * @param MusicDetailInfo $MusicDetailInfos 歌曲变更信息
+     * @param string $AmeKey ame对接资源方密钥
      */
     function __construct()
     {
@@ -49,6 +57,10 @@ class ModifyMusicOnShelvesRequest extends AbstractModel
         if (array_key_exists("MusicDetailInfos",$param) and $param["MusicDetailInfos"] !== null) {
             $this->MusicDetailInfos = new MusicDetailInfo();
             $this->MusicDetailInfos->deserialize($param["MusicDetailInfos"]);
+        }
+
+        if (array_key_exists("AmeKey",$param) and $param["AmeKey"] !== null) {
+            $this->AmeKey = $param["AmeKey"];
         }
     }
 }

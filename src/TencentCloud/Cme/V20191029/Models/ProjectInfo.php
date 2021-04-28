@@ -42,9 +42,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOwner(Entity $Owner) 设置归属者。
  * @method string getCoverUrl() 获取项目封面图片地址。
  * @method void setCoverUrl(string $CoverUrl) 设置项目封面图片地址。
- * @method StreamConnectProjectInfo getStreamConnectProjectInfo() 获取云转推项目信息。
+ * @method StreamConnectProjectInfo getStreamConnectProjectInfo() 获取云转推项目信息，仅当项目类别取值 STREAM_CONNECT 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStreamConnectProjectInfo(StreamConnectProjectInfo $StreamConnectProjectInfo) 设置云转推项目信息。
+ * @method void setStreamConnectProjectInfo(StreamConnectProjectInfo $StreamConnectProjectInfo) 设置云转推项目信息，仅当项目类别取值 STREAM_CONNECT 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取项目创建时间，格式按照 ISO 8601 标准表示。
  * @method void setCreateTime(string $CreateTime) 设置项目创建时间，格式按照 ISO 8601 标准表示。
@@ -89,7 +89,7 @@ class ProjectInfo extends AbstractModel
     public $CoverUrl;
 
     /**
-     * @var StreamConnectProjectInfo 云转推项目信息。
+     * @var StreamConnectProjectInfo 云转推项目信息，仅当项目类别取值 STREAM_CONNECT 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StreamConnectProjectInfo;
@@ -116,7 +116,7 @@ class ProjectInfo extends AbstractModel
 <li>RECORD_REPLAY：录制回放。</li>
      * @param Entity $Owner 归属者。
      * @param string $CoverUrl 项目封面图片地址。
-     * @param StreamConnectProjectInfo $StreamConnectProjectInfo 云转推项目信息。
+     * @param StreamConnectProjectInfo $StreamConnectProjectInfo 云转推项目信息，仅当项目类别取值 STREAM_CONNECT 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 项目创建时间，格式按照 ISO 8601 标准表示。
      * @param string $UpdateTime 项目更新时间，格式按照 ISO 8601 标准表示。

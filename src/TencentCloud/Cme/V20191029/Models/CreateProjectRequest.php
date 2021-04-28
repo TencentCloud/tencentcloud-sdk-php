@@ -38,6 +38,14 @@ use TencentCloud\Common\AbstractModel;
 <li>VIDEO_SEGMENTATION：视频拆条。</li>
 <li>STREAM_CONNECT：云转推。</li>
 <li>RECORD_REPLAY：录制回放。</li>
+ * @method string getMode() 获取项目模式，一个项目可以有多种模式并相互切换。
+当 Category 为 VIDEO_EDIT 时，可选模式有：
+<li>Default：默认模式。</li>
+<li>VideoEditTemplate：视频编辑模板制作模式。</li>
+ * @method void setMode(string $Mode) 设置项目模式，一个项目可以有多种模式并相互切换。
+当 Category 为 VIDEO_EDIT 时，可选模式有：
+<li>Default：默认模式。</li>
+<li>VideoEditTemplate：视频编辑模板制作模式。</li>
  * @method string getAspectRatio() 获取画布宽高比。
 该字段已经废弃，请使用具体项目输入中的 AspectRatio 字段。
  * @method void setAspectRatio(string $AspectRatio) 设置画布宽高比。
@@ -83,6 +91,14 @@ class CreateProjectRequest extends AbstractModel
 <li>RECORD_REPLAY：录制回放。</li>
      */
     public $Category;
+
+    /**
+     * @var string 项目模式，一个项目可以有多种模式并相互切换。
+当 Category 为 VIDEO_EDIT 时，可选模式有：
+<li>Default：默认模式。</li>
+<li>VideoEditTemplate：视频编辑模板制作模式。</li>
+     */
+    public $Mode;
 
     /**
      * @var string 画布宽高比。
@@ -135,6 +151,10 @@ class CreateProjectRequest extends AbstractModel
 <li>VIDEO_SEGMENTATION：视频拆条。</li>
 <li>STREAM_CONNECT：云转推。</li>
 <li>RECORD_REPLAY：录制回放。</li>
+     * @param string $Mode 项目模式，一个项目可以有多种模式并相互切换。
+当 Category 为 VIDEO_EDIT 时，可选模式有：
+<li>Default：默认模式。</li>
+<li>VideoEditTemplate：视频编辑模板制作模式。</li>
      * @param string $AspectRatio 画布宽高比。
 该字段已经废弃，请使用具体项目输入中的 AspectRatio 字段。
      * @param string $Description 项目描述信息。
@@ -173,6 +193,10 @@ class CreateProjectRequest extends AbstractModel
 
         if (array_key_exists("Category",$param) and $param["Category"] !== null) {
             $this->Category = $param["Category"];
+        }
+
+        if (array_key_exists("Mode",$param) and $param["Mode"] !== null) {
+            $this->Mode = $param["Mode"];
         }
 
         if (array_key_exists("AspectRatio",$param) and $param["AspectRatio"] !== null) {

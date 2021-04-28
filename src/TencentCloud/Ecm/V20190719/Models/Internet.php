@@ -20,13 +20,13 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 实例的网络相关信息。
  *
- * @method array getPrivateIPAddressSet() 获取实例的内网相关信息列表。
+ * @method array getPrivateIPAddressSet() 获取实例的内网相关信息列表。顺序为主网卡在前，辅助网卡按绑定先后顺序排列。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPrivateIPAddressSet(array $PrivateIPAddressSet) 设置实例的内网相关信息列表。
+ * @method void setPrivateIPAddressSet(array $PrivateIPAddressSet) 设置实例的内网相关信息列表。顺序为主网卡在前，辅助网卡按绑定先后顺序排列。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getPublicIPAddressSet() 获取实例的公网相关信息列表。
+ * @method array getPublicIPAddressSet() 获取实例的公网相关信息列表。顺序为主网卡在前，辅助网卡按绑定先后顺序排列。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPublicIPAddressSet(array $PublicIPAddressSet) 设置实例的公网相关信息列表。
+ * @method void setPublicIPAddressSet(array $PublicIPAddressSet) 设置实例的公网相关信息列表。顺序为主网卡在前，辅助网卡按绑定先后顺序排列。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getInstanceNetworkInfoSet() 获取实例网络相关信息。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -36,13 +36,13 @@ use TencentCloud\Common\AbstractModel;
 class Internet extends AbstractModel
 {
     /**
-     * @var array 实例的内网相关信息列表。
+     * @var array 实例的内网相关信息列表。顺序为主网卡在前，辅助网卡按绑定先后顺序排列。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PrivateIPAddressSet;
 
     /**
-     * @var array 实例的公网相关信息列表。
+     * @var array 实例的公网相关信息列表。顺序为主网卡在前，辅助网卡按绑定先后顺序排列。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PublicIPAddressSet;
@@ -54,9 +54,9 @@ class Internet extends AbstractModel
     public $InstanceNetworkInfoSet;
 
     /**
-     * @param array $PrivateIPAddressSet 实例的内网相关信息列表。
+     * @param array $PrivateIPAddressSet 实例的内网相关信息列表。顺序为主网卡在前，辅助网卡按绑定先后顺序排列。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $PublicIPAddressSet 实例的公网相关信息列表。
+     * @param array $PublicIPAddressSet 实例的公网相关信息列表。顺序为主网卡在前，辅助网卡按绑定先后顺序排列。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $InstanceNetworkInfoSet 实例网络相关信息。
 注意：此字段可能返回 null，表示取不到有效值。

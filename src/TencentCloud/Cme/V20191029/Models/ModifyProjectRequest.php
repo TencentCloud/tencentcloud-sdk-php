@@ -34,6 +34,14 @@ use TencentCloud\Common\AbstractModel;
 <li>9:16。</li>
  * @method Entity getOwner() 获取项目归属者。
  * @method void setOwner(Entity $Owner) 设置项目归属者。
+ * @method string getMode() 获取项目模式，一个项目可以有多种模式并相互切换。
+当 Category 为 VIDEO_EDIT 时，可选模式有：
+<li>Defualt：默认模式。</li>
+<li>VideoEditTemplate：视频编辑模板制作模式。</li>
+ * @method void setMode(string $Mode) 设置项目模式，一个项目可以有多种模式并相互切换。
+当 Category 为 VIDEO_EDIT 时，可选模式有：
+<li>Defualt：默认模式。</li>
+<li>VideoEditTemplate：视频编辑模板制作模式。</li>
  */
 class ModifyProjectRequest extends AbstractModel
 {
@@ -65,6 +73,14 @@ class ModifyProjectRequest extends AbstractModel
     public $Owner;
 
     /**
+     * @var string 项目模式，一个项目可以有多种模式并相互切换。
+当 Category 为 VIDEO_EDIT 时，可选模式有：
+<li>Defualt：默认模式。</li>
+<li>VideoEditTemplate：视频编辑模板制作模式。</li>
+     */
+    public $Mode;
+
+    /**
      * @param string $Platform 平台名称，指定访问的平台。
      * @param string $ProjectId 项目 Id。
      * @param string $Name 项目名称，不可超过30个字符。
@@ -72,6 +88,10 @@ class ModifyProjectRequest extends AbstractModel
 <li>16:9；</li>
 <li>9:16。</li>
      * @param Entity $Owner 项目归属者。
+     * @param string $Mode 项目模式，一个项目可以有多种模式并相互切换。
+当 Category 为 VIDEO_EDIT 时，可选模式有：
+<li>Defualt：默认模式。</li>
+<li>VideoEditTemplate：视频编辑模板制作模式。</li>
      */
     function __construct()
     {
@@ -105,6 +125,10 @@ class ModifyProjectRequest extends AbstractModel
         if (array_key_exists("Owner",$param) and $param["Owner"] !== null) {
             $this->Owner = new Entity();
             $this->Owner->deserialize($param["Owner"]);
+        }
+
+        if (array_key_exists("Mode",$param) and $param["Mode"] !== null) {
+            $this->Mode = $param["Mode"];
         }
     }
 }

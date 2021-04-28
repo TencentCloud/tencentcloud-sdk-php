@@ -38,6 +38,14 @@ use TencentCloud\Common\AbstractModel;
 <li>VIDEO_SEGMENTATION：视频拆条。</li>
 <li>STREAM_CONNECT：云转推。</li>
 <li>RECORD_REPLAY：录制回放。</li>
+ * @method array getModes() 获取项目模式，一个项目可以有多种模式并相互切换。
+当 Category 为 VIDEO_EDIT 时，可选模式有：
+<li>Default：默认模式。</li>
+<li>VideoEditTemplate：视频编辑模板制作模式。</li>
+ * @method void setModes(array $Modes) 设置项目模式，一个项目可以有多种模式并相互切换。
+当 Category 为 VIDEO_EDIT 时，可选模式有：
+<li>Default：默认模式。</li>
+<li>VideoEditTemplate：视频编辑模板制作模式。</li>
  * @method SortBy getSort() 获取列表排序，支持下列排序字段：
 <li>CreateTime：创建时间；</li>
 <li>UpdateTime：更新时间。</li>
@@ -81,6 +89,14 @@ class DescribeProjectsRequest extends AbstractModel
     public $CategorySet;
 
     /**
+     * @var array 项目模式，一个项目可以有多种模式并相互切换。
+当 Category 为 VIDEO_EDIT 时，可选模式有：
+<li>Default：默认模式。</li>
+<li>VideoEditTemplate：视频编辑模板制作模式。</li>
+     */
+    public $Modes;
+
+    /**
      * @var SortBy 列表排序，支持下列排序字段：
 <li>CreateTime：创建时间；</li>
 <li>UpdateTime：更新时间。</li>
@@ -117,6 +133,10 @@ class DescribeProjectsRequest extends AbstractModel
 <li>VIDEO_SEGMENTATION：视频拆条。</li>
 <li>STREAM_CONNECT：云转推。</li>
 <li>RECORD_REPLAY：录制回放。</li>
+     * @param array $Modes 项目模式，一个项目可以有多种模式并相互切换。
+当 Category 为 VIDEO_EDIT 时，可选模式有：
+<li>Default：默认模式。</li>
+<li>VideoEditTemplate：视频编辑模板制作模式。</li>
      * @param SortBy $Sort 列表排序，支持下列排序字段：
 <li>CreateTime：创建时间；</li>
 <li>UpdateTime：更新时间。</li>
@@ -152,6 +172,10 @@ class DescribeProjectsRequest extends AbstractModel
 
         if (array_key_exists("CategorySet",$param) and $param["CategorySet"] !== null) {
             $this->CategorySet = $param["CategorySet"];
+        }
+
+        if (array_key_exists("Modes",$param) and $param["Modes"] !== null) {
+            $this->Modes = $param["Modes"];
         }
 
         if (array_key_exists("Sort",$param) and $param["Sort"] !== null) {

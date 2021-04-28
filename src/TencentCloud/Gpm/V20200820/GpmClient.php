@@ -40,6 +40,7 @@ use TencentCloud\Gpm\V20200820\Models as Models;
  * @method Models\ModifyRuleResponse ModifyRule(Models\ModifyRuleRequest $req) 修改规则（描述、标签）
  * @method Models\ModifyTokenResponse ModifyToken(Models\ModifyTokenRequest $req) 修改匹配Token。
  * @method Models\StartMatchingResponse StartMatching(Models\StartMatchingRequest $req) 支持传入一个玩家或多个玩家发起匹配，在同一个请求内的玩家将被分到同一个对局。
+ * @method Models\StartMatchingBackfillResponse StartMatchingBackfill(Models\StartMatchingBackfillRequest $req) 通过调用StartMatchingBackfill，用户可以传入一个回填的匹配请求，GPM为回填请求搜索符合条件的ticket并形成一个新的match。
  */
 
 class GpmClient extends AbstractClient

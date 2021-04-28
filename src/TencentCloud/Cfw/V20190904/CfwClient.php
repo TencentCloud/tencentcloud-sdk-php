@@ -43,6 +43,10 @@ use TencentCloud\Cfw\V20190904\Models as Models;
  * @method Models\ModifyAcRuleResponse ModifyAcRule(Models\ModifyAcRuleRequest $req) 修改规则
  * @method Models\ModifyAllRuleStatusResponse ModifyAllRuleStatus(Models\ModifyAllRuleStatusRequest $req) 启用停用全部规则
  * @method Models\ModifyAllSwitchStatusResponse ModifyAllSwitchStatus(Models\ModifyAllSwitchStatusRequest $req) 一键开启和关闭
+ * @method Models\ModifyBlockIgnoreListResponse ModifyBlockIgnoreList(Models\ModifyBlockIgnoreListRequest $req) 支持对拦截列表、忽略列表如下操作：
+批量增加拦截IP、忽略IP/域名
+批量删除拦截IP、忽略IP/域名
+批量修改拦截IP、忽略IP/域名生效事件
  * @method Models\ModifyItemSwitchStatusResponse ModifyItemSwitchStatus(Models\ModifyItemSwitchStatusRequest $req) 修改单个防火墙开关
  * @method Models\ModifySecurityGroupAllRuleStatusResponse ModifySecurityGroupAllRuleStatus(Models\ModifySecurityGroupAllRuleStatusRequest $req) 启用停用全部规则
  * @method Models\ModifySequenceRulesResponse ModifySequenceRules(Models\ModifySequenceRulesRequest $req) 修改规则执行顺序

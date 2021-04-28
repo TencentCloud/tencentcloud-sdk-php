@@ -62,6 +62,12 @@ all：所有协议
 ipv4：指定查询 ipv4 对应指标
 ipv6：指定查询 ipv6 对应指标
 指定IP协议查询时，不可同时指定省份、运营商查询
+ * @method string getInterval() 获取时间粒度，支持以下几种模式（默认5min）：
+min：1 分钟粒度，支持近 60 天内的数据查询，每次查询时间区间不超过10分钟，可返回 1 分钟粒度明细数据
+5min：5 分钟粒度，支持近 60 天内的数据查询，每次查询时间区间不超过3 小时，可返回 5 分钟粒度明细数据
+ * @method void setInterval(string $Interval) 设置时间粒度，支持以下几种模式（默认5min）：
+min：1 分钟粒度，支持近 60 天内的数据查询，每次查询时间区间不超过10分钟，可返回 1 分钟粒度明细数据
+5min：5 分钟粒度，支持近 60 天内的数据查询，每次查询时间区间不超过3 小时，可返回 5 分钟粒度明细数据
  */
 class DescribeDistrictIspDataRequest extends AbstractModel
 {
@@ -119,6 +125,13 @@ ipv6：指定查询 ipv6 对应指标
     public $IpProtocol;
 
     /**
+     * @var string 时间粒度，支持以下几种模式（默认5min）：
+min：1 分钟粒度，支持近 60 天内的数据查询，每次查询时间区间不超过10分钟，可返回 1 分钟粒度明细数据
+5min：5 分钟粒度，支持近 60 天内的数据查询，每次查询时间区间不超过3 小时，可返回 5 分钟粒度明细数据
+     */
+    public $Interval;
+
+    /**
      * @param array $Domains 域名列表，最多支持20个域名
      * @param string $StartTime 查询起始时间，如：2018-09-04 10:40:00，返回结果大于等于指定时间
 支持近 60 天内的数据查询，每次查询时间区间为 3 小时
@@ -140,6 +153,9 @@ all：所有协议
 ipv4：指定查询 ipv4 对应指标
 ipv6：指定查询 ipv6 对应指标
 指定IP协议查询时，不可同时指定省份、运营商查询
+     * @param string $Interval 时间粒度，支持以下几种模式（默认5min）：
+min：1 分钟粒度，支持近 60 天内的数据查询，每次查询时间区间不超过10分钟，可返回 1 分钟粒度明细数据
+5min：5 分钟粒度，支持近 60 天内的数据查询，每次查询时间区间不超过3 小时，可返回 5 分钟粒度明细数据
      */
     function __construct()
     {
@@ -184,6 +200,10 @@ ipv6：指定查询 ipv6 对应指标
 
         if (array_key_exists("IpProtocol",$param) and $param["IpProtocol"] !== null) {
             $this->IpProtocol = $param["IpProtocol"];
+        }
+
+        if (array_key_exists("Interval",$param) and $param["Interval"] !== null) {
+            $this->Interval = $param["Interval"];
         }
     }
 }

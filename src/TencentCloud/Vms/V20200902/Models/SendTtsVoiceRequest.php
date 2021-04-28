@@ -29,7 +29,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getVoiceSdkAppid() 获取在[语音控制台](https://console.cloud.tencent.com/vms)添加应用后生成的实际SdkAppid，示例如1400006666。
  * @method void setVoiceSdkAppid(string $VoiceSdkAppid) 设置在[语音控制台](https://console.cloud.tencent.com/vms)添加应用后生成的实际SdkAppid，示例如1400006666。
  * @method array getTemplateParamSet() 获取模板参数，若模板没有参数，请提供为空数组。
+注：语音消息的内容长度不超过350字。
  * @method void setTemplateParamSet(array $TemplateParamSet) 设置模板参数，若模板没有参数，请提供为空数组。
+注：语音消息的内容长度不超过350字。
  * @method integer getPlayTimes() 获取播放次数，可选，最多3次，默认2次。
  * @method void setPlayTimes(integer $PlayTimes) 设置播放次数，可选，最多3次，默认2次。
  * @method string getSessionContext() 获取用户的 session 内容，腾讯 server 回包中会原样返回。
@@ -55,6 +57,7 @@ class SendTtsVoiceRequest extends AbstractModel
 
     /**
      * @var array 模板参数，若模板没有参数，请提供为空数组。
+注：语音消息的内容长度不超过350字。
      */
     public $TemplateParamSet;
 
@@ -74,6 +77,7 @@ class SendTtsVoiceRequest extends AbstractModel
 例如：+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号。
      * @param string $VoiceSdkAppid 在[语音控制台](https://console.cloud.tencent.com/vms)添加应用后生成的实际SdkAppid，示例如1400006666。
      * @param array $TemplateParamSet 模板参数，若模板没有参数，请提供为空数组。
+注：语音消息的内容长度不超过350字。
      * @param integer $PlayTimes 播放次数，可选，最多3次，默认2次。
      * @param string $SessionContext 用户的 session 内容，腾讯 server 回包中会原样返回。
      */

@@ -28,10 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnvId(string $EnvId) 设置环境id
  * @method string getSnapshotName() 获取版本历史名
  * @method void setSnapshotName(string $SnapshotName) 设置版本历史名
- * @method integer getOffset() 获取偏移量
- * @method void setOffset(integer $Offset) 设置偏移量
- * @method integer getLimit() 获取限制大小
- * @method void setLimit(integer $Limit) 设置限制大小
+ * @method integer getOffset() 获取偏移量。默认0
+ * @method void setOffset(integer $Offset) 设置偏移量。默认0
+ * @method integer getLimit() 获取限制大小。默认10，最大20
+ * @method void setLimit(integer $Limit) 设置限制大小。默认10，最大20
  */
 class DescribeCloudBaseRunVersionSnapshotRequest extends AbstractModel
 {
@@ -56,12 +56,12 @@ class DescribeCloudBaseRunVersionSnapshotRequest extends AbstractModel
     public $SnapshotName;
 
     /**
-     * @var integer 偏移量
+     * @var integer 偏移量。默认0
      */
     public $Offset;
 
     /**
-     * @var integer 限制大小
+     * @var integer 限制大小。默认10，最大20
      */
     public $Limit;
 
@@ -70,8 +70,8 @@ class DescribeCloudBaseRunVersionSnapshotRequest extends AbstractModel
      * @param string $VersionName 版本名
      * @param string $EnvId 环境id
      * @param string $SnapshotName 版本历史名
-     * @param integer $Offset 偏移量
-     * @param integer $Limit 限制大小
+     * @param integer $Offset 偏移量。默认0
+     * @param integer $Limit 限制大小。默认10，最大20
      */
     function __construct()
     {

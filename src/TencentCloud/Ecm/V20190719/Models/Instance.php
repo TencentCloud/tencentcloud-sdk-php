@@ -162,6 +162,10 @@ PROTECTIVELY_ISOLATED：表示被安全隔离的实例。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setISP(string $ISP) 设置实例运营商字段。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method PhysicalPosition getPhysicalPosition() 获取物理位置信息。注意该字段目前为保留字段，均为空值。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPhysicalPosition(PhysicalPosition $PhysicalPosition) 设置物理位置信息。注意该字段目前为保留字段，均为空值。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Instance extends AbstractModel
 {
@@ -345,6 +349,12 @@ PROTECTIVELY_ISOLATED：表示被安全隔离的实例。
     public $ISP;
 
     /**
+     * @var PhysicalPosition 物理位置信息。注意该字段目前为保留字段，均为空值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PhysicalPosition;
+
+    /**
      * @param string $InstanceId 实例ID。
      * @param string $InstanceName 实例名称，如ens-34241f3s。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -415,6 +425,8 @@ PROTECTIVELY_ISOLATED：表示被安全隔离的实例。
      * @param VirtualPrivateCloud $VirtualPrivateCloud VPC属性
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ISP 实例运营商字段。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PhysicalPosition $PhysicalPosition 物理位置信息。注意该字段目前为保留字段，均为空值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -553,6 +565,11 @@ PROTECTIVELY_ISOLATED：表示被安全隔离的实例。
 
         if (array_key_exists("ISP",$param) and $param["ISP"] !== null) {
             $this->ISP = $param["ISP"];
+        }
+
+        if (array_key_exists("PhysicalPosition",$param) and $param["PhysicalPosition"] !== null) {
+            $this->PhysicalPosition = new PhysicalPosition();
+            $this->PhysicalPosition->deserialize($param["PhysicalPosition"]);
         }
     }
 }

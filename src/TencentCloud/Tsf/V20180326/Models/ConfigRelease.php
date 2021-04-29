@@ -68,6 +68,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReleaseDesc(string $ReleaseDesc) 设置发布描述
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getApplicationId() 获取应用ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setApplicationId(string $ApplicationId) 设置应用ID
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ConfigRelease extends AbstractModel
 {
@@ -144,6 +148,12 @@ class ConfigRelease extends AbstractModel
     public $ReleaseDesc;
 
     /**
+     * @var string 应用ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ApplicationId;
+
+    /**
      * @param string $ConfigReleaseId 配置项发布ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ConfigId 配置项ID
@@ -167,6 +177,8 @@ class ConfigRelease extends AbstractModel
      * @param string $ClusterName 集群名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ReleaseDesc 发布描述
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ApplicationId 应用ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -228,6 +240,10 @@ class ConfigRelease extends AbstractModel
 
         if (array_key_exists("ReleaseDesc",$param) and $param["ReleaseDesc"] !== null) {
             $this->ReleaseDesc = $param["ReleaseDesc"];
+        }
+
+        if (array_key_exists("ApplicationId",$param) and $param["ApplicationId"] !== null) {
+            $this->ApplicationId = $param["ApplicationId"];
         }
     }
 }

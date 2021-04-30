@@ -28,10 +28,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(TimeRange $CreateTime) 设置过滤条件：任务创建时间。
  * @method TimeRange getFinishTime() 获取过滤条件：任务结束时间。
  * @method void setFinishTime(TimeRange $FinishTime) 设置过滤条件：任务结束时间。
- * @method SortBy getSort() 获取排序方式。Sort.Field 可选：
+ * @method SortBy getSort() 获取(该字段暂不支持)
+排序方式。Sort.Field 可选：
 <li> CreateTime 任务创建时间。</li>
 <li>FinishTime 任务结束时间。</li>
- * @method void setSort(SortBy $Sort) 设置排序方式。Sort.Field 可选：
+ * @method void setSort(SortBy $Sort) 设置(该字段暂不支持)
+排序方式。Sort.Field 可选：
 <li> CreateTime 任务创建时间。</li>
 <li>FinishTime 任务结束时间。</li>
  * @method integer getLimit() 获取返回记录条数，默认值：10，最大值：100。
@@ -64,7 +66,8 @@ class DescribeTasksRequest extends AbstractModel
     public $FinishTime;
 
     /**
-     * @var SortBy 排序方式。Sort.Field 可选：
+     * @var SortBy (该字段暂不支持)
+排序方式。Sort.Field 可选：
 <li> CreateTime 任务创建时间。</li>
 <li>FinishTime 任务结束时间。</li>
      */
@@ -90,7 +93,8 @@ class DescribeTasksRequest extends AbstractModel
      * @param string $FileId 过滤条件：文件 ID。
      * @param TimeRange $CreateTime 过滤条件：任务创建时间。
      * @param TimeRange $FinishTime 过滤条件：任务结束时间。
-     * @param SortBy $Sort 排序方式。Sort.Field 可选：
+     * @param SortBy $Sort (该字段暂不支持)
+排序方式。Sort.Field 可选：
 <li> CreateTime 任务创建时间。</li>
 <li>FinishTime 任务结束时间。</li>
      * @param integer $Limit 返回记录条数，默认值：10，最大值：100。

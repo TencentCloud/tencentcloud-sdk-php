@@ -14,23 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cme\V20191029\Models;
+namespace TencentCloud\Tsw\V20210412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * HandleStreamConnectProject返回参数结构体
+ * DescribeToken返回参数结构体
  *
- * @method string getStreamInputRtmpPushUrl() 获取输入源推流地址，当 Operation 取值 AddInput 且 InputType 为 RtmpPush 类型时有效。
- * @method void setStreamInputRtmpPushUrl(string $StreamInputRtmpPushUrl) 设置输入源推流地址，当 Operation 取值 AddInput 且 InputType 为 RtmpPush 类型时有效。
+ * @method string getResult() 获取token
+ * @method void setResult(string $Result) 设置token
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class HandleStreamConnectProjectResponse extends AbstractModel
+class DescribeTokenResponse extends AbstractModel
 {
     /**
-     * @var string 输入源推流地址，当 Operation 取值 AddInput 且 InputType 为 RtmpPush 类型时有效。
+     * @var string token
      */
-    public $StreamInputRtmpPushUrl;
+    public $Result;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +38,7 @@ class HandleStreamConnectProjectResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $StreamInputRtmpPushUrl 输入源推流地址，当 Operation 取值 AddInput 且 InputType 为 RtmpPush 类型时有效。
+     * @param string $Result token
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,8 +54,8 @@ class HandleStreamConnectProjectResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("StreamInputRtmpPushUrl",$param) and $param["StreamInputRtmpPushUrl"] !== null) {
-            $this->StreamInputRtmpPushUrl = $param["StreamInputRtmpPushUrl"];
+        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
+            $this->Result = $param["Result"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

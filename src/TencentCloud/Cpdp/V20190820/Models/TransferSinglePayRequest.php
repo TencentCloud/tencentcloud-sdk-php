@@ -44,8 +44,8 @@ use TencentCloud\Common\AbstractModel;
 微信为open_id；
 支付宝为会员alipay_user_id;
 平安为收款方银行账号
- * @method string getPayeeName() 获取收款方姓名，微信，支付宝可选；平安模式下必传
- * @method void setPayeeName(string $PayeeName) 设置收款方姓名，微信，支付宝可选；平安模式下必传
+ * @method string getPayeeName() 获取收款方姓名。支付宝可选；微信，平安模式下必传
+ * @method void setPayeeName(string $PayeeName) 设置收款方姓名。支付宝可选；微信，平安模式下必传
  * @method string getPayeeExtends() 获取收款方附加信息，平安接入使用。需要以JSON格式提供以下字段：
 PayeeBankName：收款人开户行名称
  CcyCode：货币类型（RMB-人民币）
@@ -102,7 +102,7 @@ class TransferSinglePayRequest extends AbstractModel
     public $PayeeId;
 
     /**
-     * @var string 收款方姓名，微信，支付宝可选；平安模式下必传
+     * @var string 收款方姓名。支付宝可选；微信，平安模式下必传
      */
     public $PayeeName;
 
@@ -147,7 +147,7 @@ PayeeBankName：收款人开户行名称
 微信为open_id；
 支付宝为会员alipay_user_id;
 平安为收款方银行账号
-     * @param string $PayeeName 收款方姓名，微信，支付宝可选；平安模式下必传
+     * @param string $PayeeName 收款方姓名。支付宝可选；微信，平安模式下必传
      * @param string $PayeeExtends 收款方附加信息，平安接入使用。需要以JSON格式提供以下字段：
 PayeeBankName：收款人开户行名称
  CcyCode：货币类型（RMB-人民币）

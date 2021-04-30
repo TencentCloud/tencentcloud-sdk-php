@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getProjectId() 获取项目 Id。
  * @method void setProjectId(string $ProjectId) 设置项目 Id。
+ * @method array getRtmpPushInputInfoSet() 获取输入源推流信息。
+ <li> 当 Catagory 为 STREAM_CONNECT 时，数组返回长度为 2 ，第 0 个代表主输入源，第 1 个代表备输入源。只有当各自输入源类型为推流时才有有效内容。</li>
+ * @method void setRtmpPushInputInfoSet(array $RtmpPushInputInfoSet) 设置输入源推流信息。
+ <li> 当 Catagory 为 STREAM_CONNECT 时，数组返回长度为 2 ，第 0 个代表主输入源，第 1 个代表备输入源。只有当各自输入源类型为推流时才有有效内容。</li>
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -33,12 +37,20 @@ class CreateProjectResponse extends AbstractModel
     public $ProjectId;
 
     /**
+     * @var array 输入源推流信息。
+ <li> 当 Catagory 为 STREAM_CONNECT 时，数组返回长度为 2 ，第 0 个代表主输入源，第 1 个代表备输入源。只有当各自输入源类型为推流时才有有效内容。</li>
+     */
+    public $RtmpPushInputInfoSet;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param string $ProjectId 项目 Id。
+     * @param array $RtmpPushInputInfoSet 输入源推流信息。
+ <li> 当 Catagory 为 STREAM_CONNECT 时，数组返回长度为 2 ，第 0 个代表主输入源，第 1 个代表备输入源。只有当各自输入源类型为推流时才有有效内容。</li>
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -56,6 +68,15 @@ class CreateProjectResponse extends AbstractModel
         }
         if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
             $this->ProjectId = $param["ProjectId"];
+        }
+
+        if (array_key_exists("RtmpPushInputInfoSet",$param) and $param["RtmpPushInputInfoSet"] !== null) {
+            $this->RtmpPushInputInfoSet = [];
+            foreach ($param["RtmpPushInputInfoSet"] as $key => $value){
+                $obj = new RtmpPushInputInfo();
+                $obj->deserialize($value);
+                array_push($this->RtmpPushInputInfoSet, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

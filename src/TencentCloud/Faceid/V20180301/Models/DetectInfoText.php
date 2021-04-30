@@ -105,13 +105,13 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMobile(string $Mobile) 设置手机号码。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCompareLibType() 获取本次流程最终比对库源类型。包括：
-公安商业库；
+权威库；
 业务方自有库（用户上传照片、客户的混合库、混合部署库）；
 二次验证库；
 人工审核库；
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCompareLibType(string $CompareLibType) 设置本次流程最终比对库源类型。包括：
-公安商业库；
+权威库；
 业务方自有库（用户上传照片、客户的混合库、混合部署库）；
 二次验证库；
 人工审核库；
@@ -247,7 +247,7 @@ class DetectInfoText extends AbstractModel
 
     /**
      * @var string 本次流程最终比对库源类型。包括：
-公安商业库；
+权威库；
 业务方自有库（用户上传照片、客户的混合库、混合部署库）；
 二次验证库；
 人工审核库；
@@ -299,7 +299,7 @@ class DetectInfoText extends AbstractModel
      * @param string $Mobile 手机号码。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CompareLibType 本次流程最终比对库源类型。包括：
-公安商业库；
+权威库；
 业务方自有库（用户上传照片、客户的混合库、混合部署库）；
 二次验证库；
 人工审核库；

@@ -25,6 +25,7 @@ use TencentCloud\Tsw\V20210412\Models as Models;
 /**
  * @method Models\DescribeComponentAlertObjectResponse DescribeComponentAlertObject(Models\DescribeComponentAlertObjectRequest $req) 获取告警对象-组件告警
  * @method Models\DescribeServiceAlertObjectResponse DescribeServiceAlertObject(Models\DescribeServiceAlertObjectRequest $req) 获取告警对象-服务告警表
+ * @method Models\DescribeTokenResponse DescribeToken(Models\DescribeTokenRequest $req) 查询token
  */
 
 class TswClient extends AbstractClient

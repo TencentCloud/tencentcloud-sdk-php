@@ -58,6 +58,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSelectedTimerType(string $SelectedTimerType) 设置是否选择复制定时器策略：TIMER_SELECTED 或者 TIMER_UNSELECTED；默认是 TIMER_UNSELECTED
  * @method array getCcnInfos() 获取云联网信息，包含对应的账号信息及所属id
  * @method void setCcnInfos(array $CcnInfos) 设置云联网信息，包含对应的账号信息及所属id
+ * @method integer getInternetMaxBandwidthOut() 获取fleet公网出带宽最大值，默认100Mbps，范围1-200Mbps
+ * @method void setInternetMaxBandwidthOut(integer $InternetMaxBandwidthOut) 设置fleet公网出带宽最大值，默认100Mbps，范围1-200Mbps
  */
 class CopyFleetRequest extends AbstractModel
 {
@@ -157,6 +159,11 @@ class CopyFleetRequest extends AbstractModel
     public $CcnInfos;
 
     /**
+     * @var integer fleet公网出带宽最大值，默认100Mbps，范围1-200Mbps
+     */
+    public $InternetMaxBandwidthOut;
+
+    /**
      * @param string $FleetId 服务器舰队 Id
      * @param integer $CopyNumber 复制数量，最小值1，最大值为剩余配额，可以根据[获取用户配额](https://cloud.tencent.com/document/product/1165/48732)接口获取。
      * @param string $AssetId 生成包 Id
@@ -176,6 +183,7 @@ class CopyFleetRequest extends AbstractModel
      * @param array $DataDiskInfo 数据盘，储存类型为 SSD 云硬盘（CLOUD_SSD）时，100-32000GB；储存类型为高性能云硬盘（CLOUD_PREMIUM）时，10-32000GB；容量以10为单位
      * @param string $SelectedTimerType 是否选择复制定时器策略：TIMER_SELECTED 或者 TIMER_UNSELECTED；默认是 TIMER_UNSELECTED
      * @param array $CcnInfos 云联网信息，包含对应的账号信息及所属id
+     * @param integer $InternetMaxBandwidthOut fleet公网出带宽最大值，默认100Mbps，范围1-200Mbps
      */
     function __construct()
     {
@@ -287,6 +295,10 @@ class CopyFleetRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->CcnInfos, $obj);
             }
+        }
+
+        if (array_key_exists("InternetMaxBandwidthOut",$param) and $param["InternetMaxBandwidthOut"] !== null) {
+            $this->InternetMaxBandwidthOut = $param["InternetMaxBandwidthOut"];
         }
     }
 }

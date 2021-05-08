@@ -24,10 +24,21 @@ use TencentCloud\Tem\V20201221\Models as Models;
 
 /**
  * @method Models\CreateCosTokenResponse CreateCosToken(Models\CreateCosTokenRequest $req) 生成Cos临时秘钥
- * @method Models\CreateNamespaceResponse CreateNamespace(Models\CreateNamespaceRequest $req) 创建命名空间
- * @method Models\DescribeNamespacesResponse DescribeNamespaces(Models\DescribeNamespacesRequest $req) 获取租户命名空间列表
+ * @method Models\CreateCosTokenV2Response CreateCosTokenV2(Models\CreateCosTokenV2Request $req) 生成Cos临时秘钥
+ * @method Models\CreateNamespaceResponse CreateNamespace(Models\CreateNamespaceRequest $req) 创建环境
+ * @method Models\CreateResourceResponse CreateResource(Models\CreateResourceRequest $req) 绑定云资源
+ * @method Models\CreateServiceV2Response CreateServiceV2(Models\CreateServiceV2Request $req) 创建服务
+ * @method Models\DeleteIngressResponse DeleteIngress(Models\DeleteIngressRequest $req) 删除 Ingress 规则
+ * @method Models\DeployServiceV2Response DeployServiceV2(Models\DeployServiceV2Request $req) 服务部署
+ - 创建新版本
+ - 部署新版本
+ - 一个服务只能有一个版本，所以前端无需关心版本及版本ID
+ * @method Models\DescribeIngressResponse DescribeIngress(Models\DescribeIngressRequest $req) 查询 Ingress 规则
+ * @method Models\DescribeIngressesResponse DescribeIngresses(Models\DescribeIngressesRequest $req) 查询 Ingress 规则列表
+ * @method Models\DescribeNamespacesResponse DescribeNamespaces(Models\DescribeNamespacesRequest $req) 获取租户环境列表
+ * @method Models\DescribeServiceRunPodListV2Response DescribeServiceRunPodListV2(Models\DescribeServiceRunPodListV2Request $req) 获取服务下面运行pod列表
  * @method Models\ModifyIngressResponse ModifyIngress(Models\ModifyIngressRequest $req) 创建或者更新 Ingress 规则
- * @method Models\ModifyNamespaceResponse ModifyNamespace(Models\ModifyNamespaceRequest $req) 编辑命名空间
+ * @method Models\ModifyNamespaceResponse ModifyNamespace(Models\ModifyNamespaceRequest $req) 编辑环境
  */
 
 class TemClient extends AbstractClient

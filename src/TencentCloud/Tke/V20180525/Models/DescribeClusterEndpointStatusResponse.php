@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeClusterEndpointStatus返回参数结构体
  *
- * @method string getStatus() 获取查询集群访问端口状态（Created 开启成功，Creating 开启中中，NotFound 未开启）
+ * @method string getStatus() 获取查询集群访问端口状态（Created 开启成功，Creating 开启中，NotFound 未开启）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatus(string $Status) 设置查询集群访问端口状态（Created 开启成功，Creating 开启中中，NotFound 未开启）
+ * @method void setStatus(string $Status) 设置查询集群访问端口状态（Created 开启成功，Creating 开启中，NotFound 未开启）
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getErrorMsg() 获取开启访问入口失败信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeClusterEndpointStatusResponse extends AbstractModel
 {
     /**
-     * @var string 查询集群访问端口状态（Created 开启成功，Creating 开启中中，NotFound 未开启）
+     * @var string 查询集群访问端口状态（Created 开启成功，Creating 开启中，NotFound 未开启）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
@@ -51,7 +51,7 @@ class DescribeClusterEndpointStatusResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Status 查询集群访问端口状态（Created 开启成功，Creating 开启中中，NotFound 未开启）
+     * @param string $Status 查询集群访问端口状态（Created 开启成功，Creating 开启中，NotFound 未开启）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ErrorMsg 开启访问入口失败信息
 注意：此字段可能返回 null，表示取不到有效值。

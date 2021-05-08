@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNickName(string $NickName) 设置设备名称
  * @method string getPassWord() 获取设备密码
  * @method void setPassWord(string $PassWord) 设置设备密码
+ * @method integer getDeviceType() 获取设备类型 2:国标IPC设备; 3:NVR设备
+ * @method void setDeviceType(integer $DeviceType) 设置设备类型 2:国标IPC设备; 3:NVR设备
  * @method string getGroupId() 获取设备需要绑定的分组ID，参数为空则默认绑定到根分组
  * @method void setGroupId(string $GroupId) 设置设备需要绑定的分组ID，参数为空则默认绑定到根分组
  */
@@ -40,6 +42,11 @@ class CreateDeviceRequest extends AbstractModel
     public $PassWord;
 
     /**
+     * @var integer 设备类型 2:国标IPC设备; 3:NVR设备
+     */
+    public $DeviceType;
+
+    /**
      * @var string 设备需要绑定的分组ID，参数为空则默认绑定到根分组
      */
     public $GroupId;
@@ -47,6 +54,7 @@ class CreateDeviceRequest extends AbstractModel
     /**
      * @param string $NickName 设备名称
      * @param string $PassWord 设备密码
+     * @param integer $DeviceType 设备类型 2:国标IPC设备; 3:NVR设备
      * @param string $GroupId 设备需要绑定的分组ID，参数为空则默认绑定到根分组
      */
     function __construct()
@@ -68,6 +76,10 @@ class CreateDeviceRequest extends AbstractModel
 
         if (array_key_exists("PassWord",$param) and $param["PassWord"] !== null) {
             $this->PassWord = $param["PassWord"];
+        }
+
+        if (array_key_exists("DeviceType",$param) and $param["DeviceType"] !== null) {
+            $this->DeviceType = $param["DeviceType"];
         }
 
         if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {

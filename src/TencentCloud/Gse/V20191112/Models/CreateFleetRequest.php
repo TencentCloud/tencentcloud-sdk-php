@@ -52,6 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDataDiskInfo(array $DataDiskInfo) 设置数据盘，储存类型为 SSD 云硬盘（CLOUD_SSD）时，100-32000GB；储存类型为高性能云硬盘（CLOUD_PREMIUM）时，10-32000GB；容量以10为单位
  * @method array getCcnInfos() 获取云联网信息，包含对应的账号信息及所属id
  * @method void setCcnInfos(array $CcnInfos) 设置云联网信息，包含对应的账号信息及所属id
+ * @method integer getInternetMaxBandwidthOut() 获取fleet公网出带宽最大值，默认100Mbps，范围1-200Mbps
+ * @method void setInternetMaxBandwidthOut(integer $InternetMaxBandwidthOut) 设置fleet公网出带宽最大值，默认100Mbps，范围1-200Mbps
  */
 class CreateFleetRequest extends AbstractModel
 {
@@ -136,6 +138,11 @@ class CreateFleetRequest extends AbstractModel
     public $CcnInfos;
 
     /**
+     * @var integer fleet公网出带宽最大值，默认100Mbps，范围1-200Mbps
+     */
+    public $InternetMaxBandwidthOut;
+
+    /**
      * @param string $AssetId 生成包 Id
      * @param string $Description 描述，最小长度0，最大长度100
      * @param array $InboundPermissions 网络配置
@@ -152,6 +159,7 @@ class CreateFleetRequest extends AbstractModel
      * @param DiskInfo $SystemDiskInfo 系统盘，储存类型为 SSD 云硬盘（CLOUD_SSD）时，100-500GB；储存类型为高性能云硬盘（CLOUD_PREMIUM）时，50-500GB；容量以1为单位
      * @param array $DataDiskInfo 数据盘，储存类型为 SSD 云硬盘（CLOUD_SSD）时，100-32000GB；储存类型为高性能云硬盘（CLOUD_PREMIUM）时，10-32000GB；容量以10为单位
      * @param array $CcnInfos 云联网信息，包含对应的账号信息及所属id
+     * @param integer $InternetMaxBandwidthOut fleet公网出带宽最大值，默认100Mbps，范围1-200Mbps
      */
     function __construct()
     {
@@ -251,6 +259,10 @@ class CreateFleetRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->CcnInfos, $obj);
             }
+        }
+
+        if (array_key_exists("InternetMaxBandwidthOut",$param) and $param["InternetMaxBandwidthOut"] !== null) {
+            $this->InternetMaxBandwidthOut = $param["InternetMaxBandwidthOut"];
         }
     }
 }

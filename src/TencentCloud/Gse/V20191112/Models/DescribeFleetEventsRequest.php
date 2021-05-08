@@ -26,6 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置分页时返回服务器舰队事件的数量，默认为20，最大值为100
  * @method integer getOffset() 获取分页时的数据偏移量，默认为0
  * @method void setOffset(integer $Offset) 设置分页时的数据偏移量，默认为0
+ * @method string getEventCode() 获取事件代码
+ * @method void setEventCode(string $EventCode) 设置事件代码
+ * @method string getStartTime() 获取发生事件的开始时间
+ * @method void setStartTime(string $StartTime) 设置发生事件的开始时间
+ * @method string getEndTime() 获取发生事件的结束时间
+ * @method void setEndTime(string $EndTime) 设置发生事件的结束时间
  */
 class DescribeFleetEventsRequest extends AbstractModel
 {
@@ -45,9 +51,27 @@ class DescribeFleetEventsRequest extends AbstractModel
     public $Offset;
 
     /**
+     * @var string 事件代码
+     */
+    public $EventCode;
+
+    /**
+     * @var string 发生事件的开始时间
+     */
+    public $StartTime;
+
+    /**
+     * @var string 发生事件的结束时间
+     */
+    public $EndTime;
+
+    /**
      * @param string $FleetId 服务器舰队 Id
      * @param integer $Limit 分页时返回服务器舰队事件的数量，默认为20，最大值为100
      * @param integer $Offset 分页时的数据偏移量，默认为0
+     * @param string $EventCode 事件代码
+     * @param string $StartTime 发生事件的开始时间
+     * @param string $EndTime 发生事件的结束时间
      */
     function __construct()
     {
@@ -72,6 +96,18 @@ class DescribeFleetEventsRequest extends AbstractModel
 
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
             $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("EventCode",$param) and $param["EventCode"] !== null) {
+            $this->EventCode = $param["EventCode"];
+        }
+
+        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
+            $this->StartTime = $param["StartTime"];
+        }
+
+        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
+            $this->EndTime = $param["EndTime"];
         }
     }
 }

@@ -22,10 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method AccountInfo getAccount() 获取账号信息。
  * @method void setAccount(AccountInfo $Account) 设置账号信息。
- * @method string getSceneCode() 获取场景code;
-e_activity_antirush；活动防刷场景e_login_protection；登陆保护场景e_register_protection：注册保护场景
- * @method void setSceneCode(string $SceneCode) 设置场景code;
-e_activity_antirush；活动防刷场景e_login_protection；登陆保护场景e_register_protection：注册保护场景
+ * @method string getSceneCode() 获取场景类型：场景SceneCode, 控制台上新建对应的场景并获取对应的值；
+例如：e_register_protection_1521184361
+控制台链接：https://console.cloud.tencent.com/rce/risk/sceneroot；
+ * @method void setSceneCode(string $SceneCode) 设置场景类型：场景SceneCode, 控制台上新建对应的场景并获取对应的值；
+例如：e_register_protection_1521184361
+控制台链接：https://console.cloud.tencent.com/rce/risk/sceneroot；
  * @method string getUserIp() 获取登录来源的外网IP
  * @method void setUserIp(string $UserIp) 设置登录来源的外网IP
  * @method integer getPostTime() 获取用户操作时间戳，单位秒（格林威治时间精确到秒，如1501590972）。
@@ -203,8 +205,9 @@ class InputManageMarketingRisk extends AbstractModel
     public $Account;
 
     /**
-     * @var string 场景code;
-e_activity_antirush；活动防刷场景e_login_protection；登陆保护场景e_register_protection：注册保护场景
+     * @var string 场景类型：场景SceneCode, 控制台上新建对应的场景并获取对应的值；
+例如：e_register_protection_1521184361
+控制台链接：https://console.cloud.tencent.com/rce/risk/sceneroot；
      */
     public $SceneCode;
 
@@ -370,8 +373,9 @@ IOS wifi_mac String 否 WiFi MAC地址
 
     /**
      * @param AccountInfo $Account 账号信息。
-     * @param string $SceneCode 场景code;
-e_activity_antirush；活动防刷场景e_login_protection；登陆保护场景e_register_protection：注册保护场景
+     * @param string $SceneCode 场景类型：场景SceneCode, 控制台上新建对应的场景并获取对应的值；
+例如：e_register_protection_1521184361
+控制台链接：https://console.cloud.tencent.com/rce/risk/sceneroot；
      * @param string $UserIp 登录来源的外网IP
      * @param integer $PostTime 用户操作时间戳，单位秒（格林威治时间精确到秒，如1501590972）。
      * @param string $UserId 用户唯一标识。

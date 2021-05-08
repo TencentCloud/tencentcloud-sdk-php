@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getTagInfos() 获取标签信息，格式为“$TagKey : $TagValue ”，中间分隔符为“空格”+“:”+“空格”
  * @method void setTagInfos(array $TagInfos) 设置标签信息，格式为“$TagKey : $TagValue ”，中间分隔符为“空格”+“:”+“空格”
- * @method integer getLimit() 获取分页大小
- * @method void setLimit(integer $Limit) 设置分页大小
- * @method integer getOffset() 获取分页offset
- * @method void setOffset(integer $Offset) 设置分页offset
+ * @method integer getLimit() 获取分页大小，默认1000
+ * @method void setLimit(integer $Limit) 设置分页大小，默认1000
+ * @method integer getOffset() 获取分页offset，默认0
+ * @method void setOffset(integer $Offset) 设置分页offset，默认0
  */
 class GetCustomizationListRequest extends AbstractModel
 {
@@ -35,19 +35,19 @@ class GetCustomizationListRequest extends AbstractModel
     public $TagInfos;
 
     /**
-     * @var integer 分页大小
+     * @var integer 分页大小，默认1000
      */
     public $Limit;
 
     /**
-     * @var integer 分页offset
+     * @var integer 分页offset，默认0
      */
     public $Offset;
 
     /**
      * @param array $TagInfos 标签信息，格式为“$TagKey : $TagValue ”，中间分隔符为“空格”+“:”+“空格”
-     * @param integer $Limit 分页大小
-     * @param integer $Offset 分页offset
+     * @param integer $Limit 分页大小，默认1000
+     * @param integer $Offset 分页offset，默认0
      */
     function __construct()
     {

@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getServiceId() 获取待删除服务的唯一 ID。
  * @method void setServiceId(string $ServiceId) 设置待删除服务的唯一 ID。
+ * @method integer getSkipVerification() 获取跳过删除前置条件校验（仅支持独享实例上的服务）
+ * @method void setSkipVerification(integer $SkipVerification) 设置跳过删除前置条件校验（仅支持独享实例上的服务）
  */
 class DeleteServiceRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class DeleteServiceRequest extends AbstractModel
     public $ServiceId;
 
     /**
+     * @var integer 跳过删除前置条件校验（仅支持独享实例上的服务）
+     */
+    public $SkipVerification;
+
+    /**
      * @param string $ServiceId 待删除服务的唯一 ID。
+     * @param integer $SkipVerification 跳过删除前置条件校验（仅支持独享实例上的服务）
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class DeleteServiceRequest extends AbstractModel
         }
         if (array_key_exists("ServiceId",$param) and $param["ServiceId"] !== null) {
             $this->ServiceId = $param["ServiceId"];
+        }
+
+        if (array_key_exists("SkipVerification",$param) and $param["SkipVerification"] !== null) {
+            $this->SkipVerification = $param["SkipVerification"];
         }
     }
 }

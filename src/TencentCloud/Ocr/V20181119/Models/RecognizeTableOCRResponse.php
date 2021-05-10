@@ -26,10 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setData(string $Data) 设置Base64 编码后的 Excel 数据。
  * @method integer getPdfPageSize() 获取图片为PDF时，返回PDF的总页数，默认为0
  * @method void setPdfPageSize(integer $PdfPageSize) 设置图片为PDF时，返回PDF的总页数，默认为0
- * @method float getAngle() 获取图片旋转角度（角度制），文本的水平
-方向为 0°；顺时针为正，逆时针为负
- * @method void setAngle(float $Angle) 设置图片旋转角度（角度制），文本的水平
-方向为 0°；顺时针为正，逆时针为负
+ * @method float getAngle() 获取图片旋转角度（角度制），文本的水平方向为0°，统一以逆时针方向旋转，逆时针为负，角度范围为-360°至0°。
+ * @method void setAngle(float $Angle) 设置图片旋转角度（角度制），文本的水平方向为0°，统一以逆时针方向旋转，逆时针为负，角度范围为-360°至0°。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -51,8 +49,7 @@ class RecognizeTableOCRResponse extends AbstractModel
     public $PdfPageSize;
 
     /**
-     * @var float 图片旋转角度（角度制），文本的水平
-方向为 0°；顺时针为正，逆时针为负
+     * @var float 图片旋转角度（角度制），文本的水平方向为0°，统一以逆时针方向旋转，逆时针为负，角度范围为-360°至0°。
      */
     public $Angle;
 
@@ -65,8 +62,7 @@ class RecognizeTableOCRResponse extends AbstractModel
      * @param array $TableDetections 检测到的文本信息，具体内容请点击左侧链接。
      * @param string $Data Base64 编码后的 Excel 数据。
      * @param integer $PdfPageSize 图片为PDF时，返回PDF的总页数，默认为0
-     * @param float $Angle 图片旋转角度（角度制），文本的水平
-方向为 0°；顺时针为正，逆时针为负
+     * @param float $Angle 图片旋转角度（角度制），文本的水平方向为0°，统一以逆时针方向旋转，逆时针为负，角度范围为-360°至0°。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

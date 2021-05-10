@@ -52,6 +52,8 @@ use TencentCloud\Common\AbstractModel;
 <li>CNY：表示人民币。</li>
  * @method integer getRouterCount() 获取扩容的Router节点数量。
  * @method void setRouterCount(integer $RouterCount) 设置扩容的Router节点数量。
+ * @method integer getMasterCount() 获取扩容的Master节点数量。
+ * @method void setMasterCount(integer $MasterCount) 设置扩容的Master节点数量。
  */
 class InquiryPriceScaleOutInstanceRequest extends AbstractModel
 {
@@ -108,6 +110,11 @@ class InquiryPriceScaleOutInstanceRequest extends AbstractModel
     public $RouterCount;
 
     /**
+     * @var integer 扩容的Master节点数量。
+     */
+    public $MasterCount;
+
+    /**
      * @param string $TimeUnit 扩容的时间单位。取值范围：
 <li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
 <li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
@@ -124,6 +131,7 @@ class InquiryPriceScaleOutInstanceRequest extends AbstractModel
      * @param string $Currency 货币种类。取值范围：
 <li>CNY：表示人民币。</li>
      * @param integer $RouterCount 扩容的Router节点数量。
+     * @param integer $MasterCount 扩容的Master节点数量。
      */
     function __construct()
     {
@@ -172,6 +180,10 @@ class InquiryPriceScaleOutInstanceRequest extends AbstractModel
 
         if (array_key_exists("RouterCount",$param) and $param["RouterCount"] !== null) {
             $this->RouterCount = $param["RouterCount"];
+        }
+
+        if (array_key_exists("MasterCount",$param) and $param["MasterCount"] !== null) {
+            $this->MasterCount = $param["MasterCount"];
         }
     }
 }

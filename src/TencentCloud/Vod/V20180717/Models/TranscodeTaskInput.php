@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWatermarkSet(array $WatermarkSet) 设置水印列表，支持多张图片或文字水印，最大可支持 10 张。
  * @method array getMosaicSet() 获取马赛克列表，最大可支持 10 张。
  * @method void setMosaicSet(array $MosaicSet) 设置马赛克列表，最大可支持 10 张。
+ * @method array getHeadTailSet() 获取片头片尾列表，支持多片头片尾，最大可支持 10 个。
+ * @method void setHeadTailSet(array $HeadTailSet) 设置片头片尾列表，支持多片头片尾，最大可支持 10 个。
  * @method float getStartTimeOffset() 获取转码后的视频的起始时间偏移，单位：秒。
 <li>不填或填0，表示转码后的视频从原始视频的起始位置开始；</li>
 <li>当数值大于0时（假设为 n），表示转码后的视频从原始视频的第 n 秒位置开始；</li>
@@ -61,6 +63,11 @@ class TranscodeTaskInput extends AbstractModel
     public $MosaicSet;
 
     /**
+     * @var array 片头片尾列表，支持多片头片尾，最大可支持 10 个。
+     */
+    public $HeadTailSet;
+
+    /**
      * @var float 转码后的视频的起始时间偏移，单位：秒。
 <li>不填或填0，表示转码后的视频从原始视频的起始位置开始；</li>
 <li>当数值大于0时（假设为 n），表示转码后的视频从原始视频的第 n 秒位置开始；</li>
@@ -80,6 +87,7 @@ class TranscodeTaskInput extends AbstractModel
      * @param integer $Definition 视频转码模板 ID。
      * @param array $WatermarkSet 水印列表，支持多张图片或文字水印，最大可支持 10 张。
      * @param array $MosaicSet 马赛克列表，最大可支持 10 张。
+     * @param array $HeadTailSet 片头片尾列表，支持多片头片尾，最大可支持 10 个。
      * @param float $StartTimeOffset 转码后的视频的起始时间偏移，单位：秒。
 <li>不填或填0，表示转码后的视频从原始视频的起始位置开始；</li>
 <li>当数值大于0时（假设为 n），表示转码后的视频从原始视频的第 n 秒位置开始；</li>
@@ -121,6 +129,15 @@ class TranscodeTaskInput extends AbstractModel
                 $obj = new MosaicInput();
                 $obj->deserialize($value);
                 array_push($this->MosaicSet, $obj);
+            }
+        }
+
+        if (array_key_exists("HeadTailSet",$param) and $param["HeadTailSet"] !== null) {
+            $this->HeadTailSet = [];
+            foreach ($param["HeadTailSet"] as $key => $value){
+                $obj = new HeadTailTaskInput();
+                $obj->deserialize($value);
+                array_push($this->HeadTailSet, $obj);
             }
         }
 

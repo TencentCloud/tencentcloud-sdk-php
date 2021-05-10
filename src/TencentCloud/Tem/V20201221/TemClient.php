@@ -30,9 +30,6 @@ use TencentCloud\Tem\V20201221\Models as Models;
  * @method Models\CreateServiceV2Response CreateServiceV2(Models\CreateServiceV2Request $req) 创建服务
  * @method Models\DeleteIngressResponse DeleteIngress(Models\DeleteIngressRequest $req) 删除 Ingress 规则
  * @method Models\DeployServiceV2Response DeployServiceV2(Models\DeployServiceV2Request $req) 服务部署
- - 创建新版本
- - 部署新版本
- - 一个服务只能有一个版本，所以前端无需关心版本及版本ID
  * @method Models\DescribeIngressResponse DescribeIngress(Models\DescribeIngressRequest $req) 查询 Ingress 规则
  * @method Models\DescribeIngressesResponse DescribeIngresses(Models\DescribeIngressesRequest $req) 查询 Ingress 规则列表
  * @method Models\DescribeNamespacesResponse DescribeNamespaces(Models\DescribeNamespacesRequest $req) 获取租户环境列表

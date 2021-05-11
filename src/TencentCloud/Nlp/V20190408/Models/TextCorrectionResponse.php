@@ -21,7 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * TextCorrection返回参数结构体
  *
  * @method array getCCITokens() 获取纠错详情
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCCITokens(array $CCITokens) 设置纠错详情
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getResultText() 获取纠错后的文本
  * @method void setResultText(string $ResultText) 设置纠错后的文本
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -31,6 +33,7 @@ class TextCorrectionResponse extends AbstractModel
 {
     /**
      * @var array 纠错详情
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CCITokens;
 
@@ -46,6 +49,7 @@ class TextCorrectionResponse extends AbstractModel
 
     /**
      * @param array $CCITokens 纠错详情
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ResultText 纠错后的文本
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

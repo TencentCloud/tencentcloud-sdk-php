@@ -20,34 +20,46 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 实体关系查询返回的Object类型
  *
- * @method array getId() 获取object对应id
- * @method void setId(array $Id) 设置object对应id
- * @method array getName() 获取object对应name
- * @method void setName(array $Name) 设置object对应name
  * @method array getPopular() 获取object对应popular值
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPopular(array $Popular) 设置object对应popular值
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getId() 获取object对应id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setId(array $Id) 设置object对应id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getName() 获取object对应name
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setName(array $Name) 设置object对应name
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class EntityRelationObject extends AbstractModel
 {
     /**
+     * @var array object对应popular值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Popular;
+
+    /**
      * @var array object对应id
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Id;
 
     /**
      * @var array object对应name
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
-     * @var array object对应popular值
-     */
-    public $Popular;
-
-    /**
-     * @param array $Id object对应id
-     * @param array $Name object对应name
      * @param array $Popular object对应popular值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Id object对应id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Name object对应name
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -62,16 +74,16 @@ class EntityRelationObject extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Popular",$param) and $param["Popular"] !== null) {
+            $this->Popular = $param["Popular"];
+        }
+
         if (array_key_exists("Id",$param) and $param["Id"] !== null) {
             $this->Id = $param["Id"];
         }
 
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
             $this->Name = $param["Name"];
-        }
-
-        if (array_key_exists("Popular",$param) and $param["Popular"] !== null) {
-            $this->Popular = $param["Popular"];
         }
     }
 }

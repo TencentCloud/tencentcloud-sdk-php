@@ -28,10 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPageSize(integer $PageSize) 设置页大小
  * @method integer getPageNum() 获取第几页,从0开始
  * @method void setPageNum(integer $PageNum) 设置第几页,从0开始
- * @method string getStartTime() 获取起始时间
- * @method void setStartTime(string $StartTime) 设置起始时间
- * @method string getEndTime() 获取终止时间
- * @method void setEndTime(string $EndTime) 设置终止时间
+ * @method string getStartTime() 获取起始时间 2021-03-27 12:00:00
+ * @method void setStartTime(string $StartTime) 设置起始时间 2021-03-27 12:00:00
+ * @method string getEndTime() 获取终止时间 2021-03-27 12:00:00
+ * @method void setEndTime(string $EndTime) 设置终止时间 2021-03-27 12:00:00
  */
 class DescribeCloudBaseProjectVersionListRequest extends AbstractModel
 {
@@ -56,12 +56,12 @@ class DescribeCloudBaseProjectVersionListRequest extends AbstractModel
     public $PageNum;
 
     /**
-     * @var string 起始时间
+     * @var string 起始时间 2021-03-27 12:00:00
      */
     public $StartTime;
 
     /**
-     * @var string 终止时间
+     * @var string 终止时间 2021-03-27 12:00:00
      */
     public $EndTime;
 
@@ -70,8 +70,8 @@ class DescribeCloudBaseProjectVersionListRequest extends AbstractModel
      * @param string $ProjectName 项目名称
      * @param integer $PageSize 页大小
      * @param integer $PageNum 第几页,从0开始
-     * @param string $StartTime 起始时间
-     * @param string $EndTime 终止时间
+     * @param string $StartTime 起始时间 2021-03-27 12:00:00
+     * @param string $EndTime 终止时间 2021-03-27 12:00:00
      */
     function __construct()
     {

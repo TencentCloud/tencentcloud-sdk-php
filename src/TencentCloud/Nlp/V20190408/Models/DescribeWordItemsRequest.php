@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDictId() 获取自定义词库ID。
  * @method void setDictId(string $DictId) 设置自定义词库ID。
- * @method integer getLimit() 获取每页数据量，范围为1~100，默认为10。
- * @method void setLimit(integer $Limit) 设置每页数据量，范围为1~100，默认为10。
  * @method integer getOffset() 获取分页偏移量，从0开始，默认为0。
  * @method void setOffset(integer $Offset) 设置分页偏移量，从0开始，默认为0。
+ * @method integer getLimit() 获取每页数据量，范围为1~100，默认为10。
+ * @method void setLimit(integer $Limit) 设置每页数据量，范围为1~100，默认为10。
  * @method string getText() 获取待检索的词条文本，支持模糊匹配。
  * @method void setText(string $Text) 设置待检索的词条文本，支持模糊匹配。
  */
@@ -37,14 +37,14 @@ class DescribeWordItemsRequest extends AbstractModel
     public $DictId;
 
     /**
-     * @var integer 每页数据量，范围为1~100，默认为10。
-     */
-    public $Limit;
-
-    /**
      * @var integer 分页偏移量，从0开始，默认为0。
      */
     public $Offset;
+
+    /**
+     * @var integer 每页数据量，范围为1~100，默认为10。
+     */
+    public $Limit;
 
     /**
      * @var string 待检索的词条文本，支持模糊匹配。
@@ -53,8 +53,8 @@ class DescribeWordItemsRequest extends AbstractModel
 
     /**
      * @param string $DictId 自定义词库ID。
-     * @param integer $Limit 每页数据量，范围为1~100，默认为10。
      * @param integer $Offset 分页偏移量，从0开始，默认为0。
+     * @param integer $Limit 每页数据量，范围为1~100，默认为10。
      * @param string $Text 待检索的词条文本，支持模糊匹配。
      */
     function __construct()
@@ -74,12 +74,12 @@ class DescribeWordItemsRequest extends AbstractModel
             $this->DictId = $param["DictId"];
         }
 
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
-        }
-
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
             $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
         }
 
         if (array_key_exists("Text",$param) and $param["Text"] !== null) {

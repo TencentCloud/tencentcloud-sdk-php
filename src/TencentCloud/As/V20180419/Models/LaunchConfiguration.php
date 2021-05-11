@@ -80,6 +80,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceNameSettings(InstanceNameSettings $InstanceNameSettings) 设置云服务器实例名（InstanceName）的相关设置。
  * @method InstanceChargePrepaid getInstanceChargePrepaid() 获取预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
  * @method void setInstanceChargePrepaid(InstanceChargePrepaid $InstanceChargePrepaid) 设置预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
+ * @method string getDiskTypePolicy() 获取云盘类型选择策略。取值范围：
+<br><li>ORIGINAL：使用设置的云盘类型
+<br><li>AUTOMATIC：自动选择当前可用区下可用的云盘类型
+ * @method void setDiskTypePolicy(string $DiskTypePolicy) 设置云盘类型选择策略。取值范围：
+<br><li>ORIGINAL：使用设置的云盘类型
+<br><li>AUTOMATIC：自动选择当前可用区下可用的云盘类型
  */
 class LaunchConfiguration extends AbstractModel
 {
@@ -218,6 +224,13 @@ class LaunchConfiguration extends AbstractModel
     public $InstanceChargePrepaid;
 
     /**
+     * @var string 云盘类型选择策略。取值范围：
+<br><li>ORIGINAL：使用设置的云盘类型
+<br><li>AUTOMATIC：自动选择当前可用区下可用的云盘类型
+     */
+    public $DiskTypePolicy;
+
+    /**
      * @param integer $ProjectId 实例所属项目ID。
      * @param string $LaunchConfigurationId 启动配置ID。
      * @param string $LaunchConfigurationName 启动配置名称。
@@ -248,6 +261,9 @@ class LaunchConfiguration extends AbstractModel
      * @param HostNameSettings $HostNameSettings 云服务器主机名（HostName）的相关设置。
      * @param InstanceNameSettings $InstanceNameSettings 云服务器实例名（InstanceName）的相关设置。
      * @param InstanceChargePrepaid $InstanceChargePrepaid 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
+     * @param string $DiskTypePolicy 云盘类型选择策略。取值范围：
+<br><li>ORIGINAL：使用设置的云盘类型
+<br><li>AUTOMATIC：自动选择当前可用区下可用的云盘类型
      */
     function __construct()
     {
@@ -387,6 +403,10 @@ class LaunchConfiguration extends AbstractModel
         if (array_key_exists("InstanceChargePrepaid",$param) and $param["InstanceChargePrepaid"] !== null) {
             $this->InstanceChargePrepaid = new InstanceChargePrepaid();
             $this->InstanceChargePrepaid->deserialize($param["InstanceChargePrepaid"]);
+        }
+
+        if (array_key_exists("DiskTypePolicy",$param) and $param["DiskTypePolicy"] !== null) {
+            $this->DiskTypePolicy = $param["DiskTypePolicy"];
         }
     }
 }

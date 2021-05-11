@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getResourceIds() 获取需要查询的资源ID数组
  * @method void setResourceIds(array $ResourceIds) 设置需要查询的资源ID数组
- * @method integer getOffset() 获取偏移量
- * @method void setOffset(integer $Offset) 设置偏移量
- * @method integer getLimit() 获取条数限制
- * @method void setLimit(integer $Limit) 设置条数限制
- * @method array getFilters() 获取查询资源配置列表， 如果不填写，返回该ResourceId下所有作业配置列表
- * @method void setFilters(array $Filters) 设置查询资源配置列表， 如果不填写，返回该ResourceId下所有作业配置列表
+ * @method integer getOffset() 获取偏移量，仅当设置 Limit 参数时有效
+ * @method void setOffset(integer $Offset) 设置偏移量，仅当设置 Limit 参数时有效
+ * @method integer getLimit() 获取条数限制，默认返回 20 条
+ * @method void setLimit(integer $Limit) 设置条数限制，默认返回 20 条
+ * @method array getFilters() 获取查询资源配置列表， 如果不填写，返回该 ResourceIds.N 下所有作业配置列表
+ * @method void setFilters(array $Filters) 设置查询资源配置列表， 如果不填写，返回该 ResourceIds.N 下所有作业配置列表
  * @method string getClusterId() 获取集群ID
  * @method void setClusterId(string $ClusterId) 设置集群ID
  */
@@ -39,17 +39,17 @@ class DescribeSystemResourcesRequest extends AbstractModel
     public $ResourceIds;
 
     /**
-     * @var integer 偏移量
+     * @var integer 偏移量，仅当设置 Limit 参数时有效
      */
     public $Offset;
 
     /**
-     * @var integer 条数限制
+     * @var integer 条数限制，默认返回 20 条
      */
     public $Limit;
 
     /**
-     * @var array 查询资源配置列表， 如果不填写，返回该ResourceId下所有作业配置列表
+     * @var array 查询资源配置列表， 如果不填写，返回该 ResourceIds.N 下所有作业配置列表
      */
     public $Filters;
 
@@ -60,9 +60,9 @@ class DescribeSystemResourcesRequest extends AbstractModel
 
     /**
      * @param array $ResourceIds 需要查询的资源ID数组
-     * @param integer $Offset 偏移量
-     * @param integer $Limit 条数限制
-     * @param array $Filters 查询资源配置列表， 如果不填写，返回该ResourceId下所有作业配置列表
+     * @param integer $Offset 偏移量，仅当设置 Limit 参数时有效
+     * @param integer $Limit 条数限制，默认返回 20 条
+     * @param array $Filters 查询资源配置列表， 如果不填写，返回该 ResourceIds.N 下所有作业配置列表
      * @param string $ClusterId 集群ID
      */
     function __construct()

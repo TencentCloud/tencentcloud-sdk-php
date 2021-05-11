@@ -74,6 +74,14 @@ NAT类型支持网络地址转换配置，类型确定后不能修改；一个�
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setModeType(string $ModeType) 设置云联网路由发布模式：`standard`（标准模式）、`exquisite`（精细模式）。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getLocalZone() 获取是否为localZone专线网关。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLocalZone(boolean $LocalZone) 设置是否为localZone专线网关。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getZone() 获取专线网关所在可用区
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setZone(string $Zone) 设置专线网关所在可用区
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DirectConnectGateway extends AbstractModel
 {
@@ -165,6 +173,18 @@ NAT类型支持网络地址转换配置，类型确定后不能修改；一个�
     public $ModeType;
 
     /**
+     * @var boolean 是否为localZone专线网关。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LocalZone;
+
+    /**
+     * @var string 专线网关所在可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Zone;
+
+    /**
      * @param string $DirectConnectGatewayId 专线网关`ID`。
      * @param string $DirectConnectGatewayName 专线网关名称。
      * @param string $VpcId 专线网关关联`VPC`实例`ID`。
@@ -191,6 +211,10 @@ NAT类型支持网络地址转换配置，类型确定后不能修改；一个�
      * @param array $VXLANSupport 专线网关是否支持VXLAN架构
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ModeType 云联网路由发布模式：`standard`（标准模式）、`exquisite`（精细模式）。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $LocalZone 是否为localZone专线网关。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Zone 专线网关所在可用区
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -264,6 +288,14 @@ NAT类型支持网络地址转换配置，类型确定后不能修改；一个�
 
         if (array_key_exists("ModeType",$param) and $param["ModeType"] !== null) {
             $this->ModeType = $param["ModeType"];
+        }
+
+        if (array_key_exists("LocalZone",$param) and $param["LocalZone"] !== null) {
+            $this->LocalZone = $param["LocalZone"];
+        }
+
+        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
+            $this->Zone = $param["Zone"];
         }
     }
 }

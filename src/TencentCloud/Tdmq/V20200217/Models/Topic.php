@@ -108,6 +108,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(string $UpdateTime) 设置最近修改时间。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getProducerLimit() 获取生产者上限。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProducerLimit(string $ProducerLimit) 设置生产者上限。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getConsumerLimit() 获取消费者上限。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setConsumerLimit(string $ConsumerLimit) 设置消费者上限。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Topic extends AbstractModel
 {
@@ -232,6 +240,18 @@ class Topic extends AbstractModel
     public $UpdateTime;
 
     /**
+     * @var string 生产者上限。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ProducerLimit;
+
+    /**
+     * @var string 消费者上限。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ConsumerLimit;
+
+    /**
      * @param string $AverageMsgSize 最后一次间隔内发布消息的平均byte大小。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ConsumerCount 消费者数量。
@@ -275,6 +295,10 @@ class Topic extends AbstractModel
      * @param string $CreateTime 创建时间。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdateTime 最近修改时间。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ProducerLimit 生产者上限。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ConsumerLimit 消费者上限。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -369,6 +393,14 @@ class Topic extends AbstractModel
 
         if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
             $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("ProducerLimit",$param) and $param["ProducerLimit"] !== null) {
+            $this->ProducerLimit = $param["ProducerLimit"];
+        }
+
+        if (array_key_exists("ConsumerLimit",$param) and $param["ConsumerLimit"] !== null) {
+            $this->ConsumerLimit = $param["ConsumerLimit"];
         }
     }
 }

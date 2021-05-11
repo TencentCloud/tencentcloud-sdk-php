@@ -18,23 +18,23 @@ namespace TencentCloud\Nlp\V20190408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 命名实体识别结果
+ * 命名实体识别结果  
  *
- * @method integer getBeginOffset() 获取起始位置
- * @method void setBeginOffset(integer $BeginOffset) 设置起始位置
- * @method integer getLength() 获取长度
- * @method void setLength(integer $Length) 设置长度
- * @method string getType() 获取命名实体类型
- * @method void setType(string $Type) 设置命名实体类型
  * @method string getWord() 获取基础词
  * @method void setWord(string $Word) 设置基础词
+ * @method integer getLength() 获取长度
+ * @method void setLength(integer $Length) 设置长度
+ * @method integer getBeginOffset() 获取起始位置
+ * @method void setBeginOffset(integer $BeginOffset) 设置起始位置
+ * @method string getType() 获取命名实体类型
+ * @method void setType(string $Type) 设置命名实体类型
  */
 class NerToken extends AbstractModel
 {
     /**
-     * @var integer 起始位置
+     * @var string 基础词
      */
-    public $BeginOffset;
+    public $Word;
 
     /**
      * @var integer 长度
@@ -42,20 +42,20 @@ class NerToken extends AbstractModel
     public $Length;
 
     /**
+     * @var integer 起始位置
+     */
+    public $BeginOffset;
+
+    /**
      * @var string 命名实体类型
      */
     public $Type;
 
     /**
-     * @var string 基础词
-     */
-    public $Word;
-
-    /**
-     * @param integer $BeginOffset 起始位置
-     * @param integer $Length 长度
-     * @param string $Type 命名实体类型
      * @param string $Word 基础词
+     * @param integer $Length 长度
+     * @param integer $BeginOffset 起始位置
+     * @param string $Type 命名实体类型
      */
     function __construct()
     {
@@ -70,20 +70,20 @@ class NerToken extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BeginOffset",$param) and $param["BeginOffset"] !== null) {
-            $this->BeginOffset = $param["BeginOffset"];
+        if (array_key_exists("Word",$param) and $param["Word"] !== null) {
+            $this->Word = $param["Word"];
         }
 
         if (array_key_exists("Length",$param) and $param["Length"] !== null) {
             $this->Length = $param["Length"];
         }
 
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists("BeginOffset",$param) and $param["BeginOffset"] !== null) {
+            $this->BeginOffset = $param["BeginOffset"];
         }
 
-        if (array_key_exists("Word",$param) and $param["Word"] !== null) {
-            $this->Word = $param["Word"];
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
         }
     }
 }

@@ -25,7 +25,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getCreateTime() 获取词条创建时间。
  * @method void setCreateTime(string $CreateTime) 设置词条创建时间。
  * @method string getPos() 获取词条的词性。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPos(string $Pos) 设置词条的词性。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class WordItem extends AbstractModel
 {
@@ -41,6 +43,7 @@ class WordItem extends AbstractModel
 
     /**
      * @var string 词条的词性。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Pos;
 
@@ -48,6 +51,7 @@ class WordItem extends AbstractModel
      * @param string $Text 词条文本内容。
      * @param string $CreateTime 词条创建时间。
      * @param string $Pos 词条的词性。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

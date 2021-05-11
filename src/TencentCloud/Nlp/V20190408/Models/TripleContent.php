@@ -20,42 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 三元组查询返回的元记录
  *
- * @method string getId() 获取实体id
- * @method void setId(string $Id) 设置实体id
- * @method string getName() 获取实体名称
- * @method void setName(string $Name) 设置实体名称
- * @method integer getOrder() 获取实体order
- * @method void setOrder(integer $Order) 设置实体order
  * @method integer getPopular() 获取实体流行度
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPopular(integer $Popular) 设置实体流行度
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getName() 获取实体名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setName(string $Name) 设置实体名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getOrder() 获取实体order
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOrder(integer $Order) 设置实体order
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getId() 获取实体id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setId(string $Id) 设置实体id
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TripleContent extends AbstractModel
 {
     /**
-     * @var string 实体id
+     * @var integer 实体流行度
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Id;
+    public $Popular;
 
     /**
      * @var string 实体名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var integer 实体order
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Order;
 
     /**
-     * @var integer 实体流行度
+     * @var string 实体id
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Popular;
+    public $Id;
 
     /**
-     * @param string $Id 实体id
-     * @param string $Name 实体名称
-     * @param integer $Order 实体order
      * @param integer $Popular 实体流行度
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Name 实体名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Order 实体order
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Id 实体id
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -70,8 +86,8 @@ class TripleContent extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
-            $this->Id = $param["Id"];
+        if (array_key_exists("Popular",$param) and $param["Popular"] !== null) {
+            $this->Popular = $param["Popular"];
         }
 
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
@@ -82,8 +98,8 @@ class TripleContent extends AbstractModel
             $this->Order = $param["Order"];
         }
 
-        if (array_key_exists("Popular",$param) and $param["Popular"] !== null) {
-            $this->Popular = $param["Popular"];
+        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
+            $this->Id = $param["Id"];
         }
     }
 }

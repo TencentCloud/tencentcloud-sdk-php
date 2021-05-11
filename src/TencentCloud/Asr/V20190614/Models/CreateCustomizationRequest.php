@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getModelName() 获取自学习模型名称，需在1-20字符之间
  * @method void setModelName(string $ModelName) 设置自学习模型名称，需在1-20字符之间
- * @method string getTextUrl() 获取文本文件的下载地址，服务会从该地址下载文件， 以训练模型，目前仅支持腾讯云cos
- * @method void setTextUrl(string $TextUrl) 设置文本文件的下载地址，服务会从该地址下载文件， 以训练模型，目前仅支持腾讯云cos
+ * @method string getTextUrl() 获取文本文件的下载地址，服务会从该地址下载文件，目前仅支持腾讯云cos
+ * @method void setTextUrl(string $TextUrl) 设置文本文件的下载地址，服务会从该地址下载文件，目前仅支持腾讯云cos
  * @method string getModelType() 获取自学习模型类型，填写8k或者16k
  * @method void setModelType(string $ModelType) 设置自学习模型类型，填写8k或者16k
  * @method array getTagInfos() 获取标签信息
@@ -37,7 +37,7 @@ class CreateCustomizationRequest extends AbstractModel
     public $ModelName;
 
     /**
-     * @var string 文本文件的下载地址，服务会从该地址下载文件， 以训练模型，目前仅支持腾讯云cos
+     * @var string 文本文件的下载地址，服务会从该地址下载文件，目前仅支持腾讯云cos
      */
     public $TextUrl;
 
@@ -53,7 +53,7 @@ class CreateCustomizationRequest extends AbstractModel
 
     /**
      * @param string $ModelName 自学习模型名称，需在1-20字符之间
-     * @param string $TextUrl 文本文件的下载地址，服务会从该地址下载文件， 以训练模型，目前仅支持腾讯云cos
+     * @param string $TextUrl 文本文件的下载地址，服务会从该地址下载文件，目前仅支持腾讯云cos
      * @param string $ModelType 自学习模型类型，填写8k或者16k
      * @param array $TagInfos 标签信息
      */

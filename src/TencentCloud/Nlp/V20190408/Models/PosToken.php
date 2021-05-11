@@ -20,21 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 分词&词性标注结果
  *
- * @method integer getBeginOffset() 获取起始位置
- * @method void setBeginOffset(integer $BeginOffset) 设置起始位置
- * @method integer getLength() 获取长度
- * @method void setLength(integer $Length) 设置长度
- * @method string getPos() 获取词性
- * @method void setPos(string $Pos) 设置词性
  * @method string getWord() 获取基础词
  * @method void setWord(string $Word) 设置基础词
+ * @method integer getLength() 获取长度
+ * @method void setLength(integer $Length) 设置长度
+ * @method integer getBeginOffset() 获取起始位置
+ * @method void setBeginOffset(integer $BeginOffset) 设置起始位置
+ * @method string getPos() 获取词性
+ * @method void setPos(string $Pos) 设置词性
  */
 class PosToken extends AbstractModel
 {
     /**
-     * @var integer 起始位置
+     * @var string 基础词
      */
-    public $BeginOffset;
+    public $Word;
 
     /**
      * @var integer 长度
@@ -42,20 +42,20 @@ class PosToken extends AbstractModel
     public $Length;
 
     /**
+     * @var integer 起始位置
+     */
+    public $BeginOffset;
+
+    /**
      * @var string 词性
      */
     public $Pos;
 
     /**
-     * @var string 基础词
-     */
-    public $Word;
-
-    /**
-     * @param integer $BeginOffset 起始位置
-     * @param integer $Length 长度
-     * @param string $Pos 词性
      * @param string $Word 基础词
+     * @param integer $Length 长度
+     * @param integer $BeginOffset 起始位置
+     * @param string $Pos 词性
      */
     function __construct()
     {
@@ -70,20 +70,20 @@ class PosToken extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BeginOffset",$param) and $param["BeginOffset"] !== null) {
-            $this->BeginOffset = $param["BeginOffset"];
+        if (array_key_exists("Word",$param) and $param["Word"] !== null) {
+            $this->Word = $param["Word"];
         }
 
         if (array_key_exists("Length",$param) and $param["Length"] !== null) {
             $this->Length = $param["Length"];
         }
 
-        if (array_key_exists("Pos",$param) and $param["Pos"] !== null) {
-            $this->Pos = $param["Pos"];
+        if (array_key_exists("BeginOffset",$param) and $param["BeginOffset"] !== null) {
+            $this->BeginOffset = $param["BeginOffset"];
         }
 
-        if (array_key_exists("Word",$param) and $param["Word"] !== null) {
-            $this->Word = $param["Word"];
+        if (array_key_exists("Pos",$param) and $param["Pos"] !== null) {
+            $this->Pos = $param["Pos"];
         }
     }
 }

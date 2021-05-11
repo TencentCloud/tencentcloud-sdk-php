@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getQuery() 获取用户请求的query
  * @method void setQuery(string $Query) 设置用户请求的query
- * @method integer getFlag() 获取0: 通用闲聊, 1:儿童闲聊, 默认是通用闲聊
- * @method void setFlag(integer $Flag) 设置0: 通用闲聊, 1:儿童闲聊, 默认是通用闲聊
  * @method string getOpenId() 获取服务的id,  主要用于儿童闲聊接口，比如手Q的openid
  * @method void setOpenId(string $OpenId) 设置服务的id,  主要用于儿童闲聊接口，比如手Q的openid
+ * @method integer getFlag() 获取0: 通用闲聊, 1:儿童闲聊, 默认是通用闲聊
+ * @method void setFlag(integer $Flag) 设置0: 通用闲聊, 1:儿童闲聊, 默认是通用闲聊
  */
 class ChatBotRequest extends AbstractModel
 {
@@ -35,19 +35,19 @@ class ChatBotRequest extends AbstractModel
     public $Query;
 
     /**
-     * @var integer 0: 通用闲聊, 1:儿童闲聊, 默认是通用闲聊
-     */
-    public $Flag;
-
-    /**
      * @var string 服务的id,  主要用于儿童闲聊接口，比如手Q的openid
      */
     public $OpenId;
 
     /**
+     * @var integer 0: 通用闲聊, 1:儿童闲聊, 默认是通用闲聊
+     */
+    public $Flag;
+
+    /**
      * @param string $Query 用户请求的query
-     * @param integer $Flag 0: 通用闲聊, 1:儿童闲聊, 默认是通用闲聊
      * @param string $OpenId 服务的id,  主要用于儿童闲聊接口，比如手Q的openid
+     * @param integer $Flag 0: 通用闲聊, 1:儿童闲聊, 默认是通用闲聊
      */
     function __construct()
     {
@@ -66,12 +66,12 @@ class ChatBotRequest extends AbstractModel
             $this->Query = $param["Query"];
         }
 
-        if (array_key_exists("Flag",$param) and $param["Flag"] !== null) {
-            $this->Flag = $param["Flag"];
-        }
-
         if (array_key_exists("OpenId",$param) and $param["OpenId"] !== null) {
             $this->OpenId = $param["OpenId"];
+        }
+
+        if (array_key_exists("Flag",$param) and $param["Flag"] !== null) {
+            $this->Flag = $param["Flag"];
         }
     }
 }

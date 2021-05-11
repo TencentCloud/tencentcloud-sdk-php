@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResourceLoc(ResourceLoc $ResourceLoc) 设置资源位置
  * @method string getName() 获取资源名称
  * @method void setName(string $Name) 设置资源名称
- * @method integer getResourceType() 获取资源类型，占时只支持jar，填1
- * @method void setResourceType(integer $ResourceType) 设置资源类型，占时只支持jar，填1
+ * @method integer getResourceType() 获取资源类型。目前只支持 JAR，取值为 1
+ * @method void setResourceType(integer $ResourceType) 设置资源类型。目前只支持 JAR，取值为 1
  * @method string getRemark() 获取资源描述
  * @method void setRemark(string $Remark) 设置资源描述
  * @method string getResourceConfigRemark() 获取资源版本描述
@@ -44,7 +44,7 @@ class CreateResourceRequest extends AbstractModel
     public $Name;
 
     /**
-     * @var integer 资源类型，占时只支持jar，填1
+     * @var integer 资源类型。目前只支持 JAR，取值为 1
      */
     public $ResourceType;
 
@@ -61,7 +61,7 @@ class CreateResourceRequest extends AbstractModel
     /**
      * @param ResourceLoc $ResourceLoc 资源位置
      * @param string $Name 资源名称
-     * @param integer $ResourceType 资源类型，占时只支持jar，填1
+     * @param integer $ResourceType 资源类型。目前只支持 JAR，取值为 1
      * @param string $Remark 资源描述
      * @param string $ResourceConfigRemark 资源版本描述
      */

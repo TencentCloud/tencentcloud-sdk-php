@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getResourceId() 获取资源ID
  * @method void setResourceId(string $ResourceId) 设置资源ID
- * @method integer getOffset() 获取偏移量
- * @method void setOffset(integer $Offset) 设置偏移量
- * @method integer getLimit() 获取返回值大小
- * @method void setLimit(integer $Limit) 设置返回值大小
+ * @method integer getOffset() 获取偏移量，仅当设置 Limit 时该参数有效
+ * @method void setOffset(integer $Offset) 设置偏移量，仅当设置 Limit 时该参数有效
+ * @method integer getLimit() 获取返回值大小，不填则返回全量数据
+ * @method void setLimit(integer $Limit) 设置返回值大小，不填则返回全量数据
  * @method array getResourceConfigVersions() 获取资源配置Versions集合
  * @method void setResourceConfigVersions(array $ResourceConfigVersions) 设置资源配置Versions集合
  * @method integer getJobConfigVersion() 获取作业配置版本
@@ -41,12 +41,12 @@ class DescribeResourceConfigsRequest extends AbstractModel
     public $ResourceId;
 
     /**
-     * @var integer 偏移量
+     * @var integer 偏移量，仅当设置 Limit 时该参数有效
      */
     public $Offset;
 
     /**
-     * @var integer 返回值大小
+     * @var integer 返回值大小，不填则返回全量数据
      */
     public $Limit;
 
@@ -67,8 +67,8 @@ class DescribeResourceConfigsRequest extends AbstractModel
 
     /**
      * @param string $ResourceId 资源ID
-     * @param integer $Offset 偏移量
-     * @param integer $Limit 返回值大小
+     * @param integer $Offset 偏移量，仅当设置 Limit 时该参数有效
+     * @param integer $Limit 返回值大小，不填则返回全量数据
      * @param array $ResourceConfigVersions 资源配置Versions集合
      * @param integer $JobConfigVersion 作业配置版本
      * @param string $JobId 作业ID

@@ -20,24 +20,24 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ChatBot返回参数结构体
  *
- * @method float getConfidence() 获取对于当前输出回复的自信度
- * @method void setConfidence(float $Confidence) 设置对于当前输出回复的自信度
  * @method string getReply() 获取闲聊回复
  * @method void setReply(string $Reply) 设置闲聊回复
+ * @method float getConfidence() 获取对于当前输出回复的自信度
+ * @method void setConfidence(float $Confidence) 设置对于当前输出回复的自信度
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class ChatBotResponse extends AbstractModel
 {
     /**
-     * @var float 对于当前输出回复的自信度
-     */
-    public $Confidence;
-
-    /**
      * @var string 闲聊回复
      */
     public $Reply;
+
+    /**
+     * @var float 对于当前输出回复的自信度
+     */
+    public $Confidence;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +45,8 @@ class ChatBotResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param float $Confidence 对于当前输出回复的自信度
      * @param string $Reply 闲聊回复
+     * @param float $Confidence 对于当前输出回复的自信度
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,12 +62,12 @@ class ChatBotResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Confidence",$param) and $param["Confidence"] !== null) {
-            $this->Confidence = $param["Confidence"];
-        }
-
         if (array_key_exists("Reply",$param) and $param["Reply"] !== null) {
             $this->Reply = $param["Reply"];
+        }
+
+        if (array_key_exists("Confidence",$param) and $param["Confidence"] !== null) {
+            $this->Confidence = $param["Confidence"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

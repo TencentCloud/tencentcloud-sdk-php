@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConsumerHasBacklog(boolean $ConsumerHasBacklog) 设置是否仅展示消息堆积的订阅。
  * @method boolean getConsumerHasExpired() 获取是否仅展示存在消息超期丢弃的订阅。
  * @method void setConsumerHasExpired(boolean $ConsumerHasExpired) 设置是否仅展示存在消息超期丢弃的订阅。
+ * @method array getSubscriptionNames() 获取按照订阅名过滤，精确查询。
+ * @method void setSubscriptionNames(array $SubscriptionNames) 设置按照订阅名过滤，精确查询。
  */
 class FilterSubscription extends AbstractModel
 {
@@ -45,9 +47,15 @@ class FilterSubscription extends AbstractModel
     public $ConsumerHasExpired;
 
     /**
+     * @var array 按照订阅名过滤，精确查询。
+     */
+    public $SubscriptionNames;
+
+    /**
      * @param boolean $ConsumerHasCount 是否仅展示包含真实消费者的订阅。
      * @param boolean $ConsumerHasBacklog 是否仅展示消息堆积的订阅。
      * @param boolean $ConsumerHasExpired 是否仅展示存在消息超期丢弃的订阅。
+     * @param array $SubscriptionNames 按照订阅名过滤，精确查询。
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class FilterSubscription extends AbstractModel
 
         if (array_key_exists("ConsumerHasExpired",$param) and $param["ConsumerHasExpired"] !== null) {
             $this->ConsumerHasExpired = $param["ConsumerHasExpired"];
+        }
+
+        if (array_key_exists("SubscriptionNames",$param) and $param["SubscriptionNames"] !== null) {
+            $this->SubscriptionNames = $param["SubscriptionNames"];
         }
     }
 }

@@ -20,15 +20,20 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 实体关系查询返回Subject
  *
+ * @method array getPopular() 获取Subject对应popular
+ * @method void setPopular(array $Popular) 设置Subject对应popular
  * @method array getId() 获取Subject对应id
  * @method void setId(array $Id) 设置Subject对应id
  * @method array getName() 获取Subject对应name
  * @method void setName(array $Name) 设置Subject对应name
- * @method array getPopular() 获取Subject对应popular
- * @method void setPopular(array $Popular) 设置Subject对应popular
  */
 class EntityRelationSubject extends AbstractModel
 {
+    /**
+     * @var array Subject对应popular
+     */
+    public $Popular;
+
     /**
      * @var array Subject对应id
      */
@@ -40,14 +45,9 @@ class EntityRelationSubject extends AbstractModel
     public $Name;
 
     /**
-     * @var array Subject对应popular
-     */
-    public $Popular;
-
-    /**
+     * @param array $Popular Subject对应popular
      * @param array $Id Subject对应id
      * @param array $Name Subject对应name
-     * @param array $Popular Subject对应popular
      */
     function __construct()
     {
@@ -62,16 +62,16 @@ class EntityRelationSubject extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Popular",$param) and $param["Popular"] !== null) {
+            $this->Popular = $param["Popular"];
+        }
+
         if (array_key_exists("Id",$param) and $param["Id"] !== null) {
             $this->Id = $param["Id"];
         }
 
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
             $this->Name = $param["Name"];
-        }
-
-        if (array_key_exists("Popular",$param) and $param["Popular"] !== null) {
-            $this->Popular = $param["Popular"];
         }
     }
 }

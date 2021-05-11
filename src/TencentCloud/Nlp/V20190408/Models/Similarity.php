@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 文本相似度
  *
- * @method float getScore() 获取相似度分数
- * @method void setScore(float $Score) 设置相似度分数
  * @method string getText() 获取目标文本句子
  * @method void setText(string $Text) 设置目标文本句子
+ * @method float getScore() 获取相似度分数
+ * @method void setScore(float $Score) 设置相似度分数
  */
 class Similarity extends AbstractModel
 {
-    /**
-     * @var float 相似度分数
-     */
-    public $Score;
-
     /**
      * @var string 目标文本句子
      */
     public $Text;
 
     /**
-     * @param float $Score 相似度分数
+     * @var float 相似度分数
+     */
+    public $Score;
+
+    /**
      * @param string $Text 目标文本句子
+     * @param float $Score 相似度分数
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class Similarity extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Score",$param) and $param["Score"] !== null) {
-            $this->Score = $param["Score"];
-        }
-
         if (array_key_exists("Text",$param) and $param["Text"] !== null) {
             $this->Text = $param["Text"];
+        }
+
+        if (array_key_exists("Score",$param) and $param["Score"] !== null) {
+            $this->Score = $param["Score"];
         }
     }
 }

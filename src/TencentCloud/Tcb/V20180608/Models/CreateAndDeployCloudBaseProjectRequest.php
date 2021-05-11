@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setType(string $Type) 设置项目类型, 枚举值为: framework-oneclick,qci-extension-cicd
  * @method array getParameters() 获取环境变量
  * @method void setParameters(array $Parameters) 设置环境变量
- * @method string getEnvAlias() 获取环境别名
- * @method void setEnvAlias(string $EnvAlias) 设置环境别名
+ * @method string getEnvAlias() 获取环境别名。要以a-z开头，不能包含a-zA-z0-9-以外的字符
+ * @method void setEnvAlias(string $EnvAlias) 设置环境别名。要以a-z开头，不能包含a-zA-z0-9-以外的字符
  * @method string getRcJson() 获取rc.json的内容
  * @method void setRcJson(string $RcJson) 设置rc.json的内容
  * @method string getAddonConfig() 获取插件配置内容
@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTags(array $Tags) 设置标签
  * @method string getNetworkConfig() 获取网络配置
  * @method void setNetworkConfig(string $NetworkConfig) 设置网络配置
- * @method string getFreeQuota() 获取免费额度的"basic", 不使用的用""
- * @method void setFreeQuota(string $FreeQuota) 设置免费额度的"basic", 不使用的用""
+ * @method string getFreeQuota() 获取用户享有的免费额度级别，目前只能为“basic”，不传该字段或该字段为空，标识不享受免费额度。
+ * @method void setFreeQuota(string $FreeQuota) 设置用户享有的免费额度级别，目前只能为“basic”，不传该字段或该字段为空，标识不享受免费额度。
  * @method boolean getAutoDeployOnCodeChange() 获取是否代码变更触发自动部署
  * @method void setAutoDeployOnCodeChange(boolean $AutoDeployOnCodeChange) 设置是否代码变更触发自动部署
  * @method string getRepoUrl() 获取私有仓库地址
@@ -75,7 +75,7 @@ class CreateAndDeployCloudBaseProjectRequest extends AbstractModel
     public $Parameters;
 
     /**
-     * @var string 环境别名
+     * @var string 环境别名。要以a-z开头，不能包含a-zA-z0-9-以外的字符
      */
     public $EnvAlias;
 
@@ -100,7 +100,7 @@ class CreateAndDeployCloudBaseProjectRequest extends AbstractModel
     public $NetworkConfig;
 
     /**
-     * @var string 免费额度的"basic", 不使用的用""
+     * @var string 用户享有的免费额度级别，目前只能为“basic”，不传该字段或该字段为空，标识不享受免费额度。
      */
     public $FreeQuota;
 
@@ -120,12 +120,12 @@ class CreateAndDeployCloudBaseProjectRequest extends AbstractModel
      * @param string $EnvId 环境id
      * @param string $Type 项目类型, 枚举值为: framework-oneclick,qci-extension-cicd
      * @param array $Parameters 环境变量
-     * @param string $EnvAlias 环境别名
+     * @param string $EnvAlias 环境别名。要以a-z开头，不能包含a-zA-z0-9-以外的字符
      * @param string $RcJson rc.json的内容
      * @param string $AddonConfig 插件配置内容
      * @param array $Tags 标签
      * @param string $NetworkConfig 网络配置
-     * @param string $FreeQuota 免费额度的"basic", 不使用的用""
+     * @param string $FreeQuota 用户享有的免费额度级别，目前只能为“basic”，不传该字段或该字段为空，标识不享受免费额度。
      * @param boolean $AutoDeployOnCodeChange 是否代码变更触发自动部署
      * @param string $RepoUrl 私有仓库地址
      */

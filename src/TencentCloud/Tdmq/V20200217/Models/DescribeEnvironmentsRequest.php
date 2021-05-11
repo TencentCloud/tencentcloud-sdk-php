@@ -28,6 +28,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置返回数量，不填则默认为10，最大值为20。
  * @method string getClusterId() 获取Pulsar 集群的ID
  * @method void setClusterId(string $ClusterId) 设置Pulsar 集群的ID
+ * @method array getFilters() 获取* EnvironmentId
+按照名称空间进行过滤，精确查询。
+类型：String
+必选：否
+ * @method void setFilters(array $Filters) 设置* EnvironmentId
+按照名称空间进行过滤，精确查询。
+类型：String
+必选：否
  */
 class DescribeEnvironmentsRequest extends AbstractModel
 {
@@ -52,10 +60,22 @@ class DescribeEnvironmentsRequest extends AbstractModel
     public $ClusterId;
 
     /**
+     * @var array * EnvironmentId
+按照名称空间进行过滤，精确查询。
+类型：String
+必选：否
+     */
+    public $Filters;
+
+    /**
      * @param string $EnvironmentId 命名空间名称，模糊搜索。
      * @param integer $Offset 起始下标，不填默认为0。
      * @param integer $Limit 返回数量，不填则默认为10，最大值为20。
      * @param string $ClusterId Pulsar 集群的ID
+     * @param array $Filters * EnvironmentId
+按照名称空间进行过滤，精确查询。
+类型：String
+必选：否
      */
     function __construct()
     {
@@ -84,6 +104,15 @@ class DescribeEnvironmentsRequest extends AbstractModel
 
         if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
             $this->ClusterId = $param["ClusterId"];
+        }
+
+        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+            $this->Filters = [];
+            foreach ($param["Filters"] as $key => $value){
+                $obj = new Filter();
+                $obj->deserialize($value);
+                array_push($this->Filters, $obj);
+            }
         }
     }
 }

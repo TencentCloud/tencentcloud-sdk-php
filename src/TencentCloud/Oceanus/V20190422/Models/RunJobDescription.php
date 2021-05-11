@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setJobId(string $JobId) 设置作业Id
  * @method integer getRunType() 获取运行类型，1：启动，2：恢复
  * @method void setRunType(integer $RunType) 设置运行类型，1：启动，2：恢复
- * @method string getStartMode() 获取SQL类型作业启动参数：指定数据源消费起始时间点
- * @method void setStartMode(string $StartMode) 设置SQL类型作业启动参数：指定数据源消费起始时间点
- * @method integer getJobConfigVersion() 获取已发布上线的作业配置版本
- * @method void setJobConfigVersion(integer $JobConfigVersion) 设置已发布上线的作业配置版本
+ * @method string getStartMode() 获取已废弃。旧版 SQL 类型作业启动参数：指定数据源消费起始时间点
+ * @method void setStartMode(string $StartMode) 设置已废弃。旧版 SQL 类型作业启动参数：指定数据源消费起始时间点
+ * @method integer getJobConfigVersion() 获取当前作业的某个版本
+ * @method void setJobConfigVersion(integer $JobConfigVersion) 设置当前作业的某个版本
  */
 class RunJobDescription extends AbstractModel
 {
@@ -42,20 +42,20 @@ class RunJobDescription extends AbstractModel
     public $RunType;
 
     /**
-     * @var string SQL类型作业启动参数：指定数据源消费起始时间点
+     * @var string 已废弃。旧版 SQL 类型作业启动参数：指定数据源消费起始时间点
      */
     public $StartMode;
 
     /**
-     * @var integer 已发布上线的作业配置版本
+     * @var integer 当前作业的某个版本
      */
     public $JobConfigVersion;
 
     /**
      * @param string $JobId 作业Id
      * @param integer $RunType 运行类型，1：启动，2：恢复
-     * @param string $StartMode SQL类型作业启动参数：指定数据源消费起始时间点
-     * @param integer $JobConfigVersion 已发布上线的作业配置版本
+     * @param string $StartMode 已废弃。旧版 SQL 类型作业启动参数：指定数据源消费起始时间点
+     * @param integer $JobConfigVersion 当前作业的某个版本
      */
     function __construct()
     {

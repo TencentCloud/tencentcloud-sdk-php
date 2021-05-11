@@ -20,24 +20,27 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeWordItems返回参数结构体
  *
- * @method array getWordItems() 获取词条信息列表。
- * @method void setWordItems(array $WordItems) 设置词条信息列表。
  * @method integer getTotalCount() 获取词条记录总条数。
  * @method void setTotalCount(integer $TotalCount) 设置词条记录总条数。
+ * @method array getWordItems() 获取词条信息列表。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWordItems(array $WordItems) 设置词条信息列表。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeWordItemsResponse extends AbstractModel
 {
     /**
-     * @var array 词条信息列表。
-     */
-    public $WordItems;
-
-    /**
      * @var integer 词条记录总条数。
      */
     public $TotalCount;
+
+    /**
+     * @var array 词条信息列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $WordItems;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +48,9 @@ class DescribeWordItemsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $WordItems 词条信息列表。
      * @param integer $TotalCount 词条记录总条数。
+     * @param array $WordItems 词条信息列表。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,6 +66,10 @@ class DescribeWordItemsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
+        }
+
         if (array_key_exists("WordItems",$param) and $param["WordItems"] !== null) {
             $this->WordItems = [];
             foreach ($param["WordItems"] as $key => $value){
@@ -69,10 +77,6 @@ class DescribeWordItemsResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->WordItems, $obj);
             }
-        }
-
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

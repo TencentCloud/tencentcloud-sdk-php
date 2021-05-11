@@ -20,15 +20,20 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 文本纠错结果
  *
+ * @method string getWord() 获取错别字内容
+ * @method void setWord(string $Word) 设置错别字内容
  * @method integer getBeginOffset() 获取错别字的起始位置，从0开始
  * @method void setBeginOffset(integer $BeginOffset) 设置错别字的起始位置，从0开始
  * @method string getCorrectWord() 获取错别字纠错结果
  * @method void setCorrectWord(string $CorrectWord) 设置错别字纠错结果
- * @method string getWord() 获取错别字内容
- * @method void setWord(string $Word) 设置错别字内容
  */
 class CCIToken extends AbstractModel
 {
+    /**
+     * @var string 错别字内容
+     */
+    public $Word;
+
     /**
      * @var integer 错别字的起始位置，从0开始
      */
@@ -40,14 +45,9 @@ class CCIToken extends AbstractModel
     public $CorrectWord;
 
     /**
-     * @var string 错别字内容
-     */
-    public $Word;
-
-    /**
+     * @param string $Word 错别字内容
      * @param integer $BeginOffset 错别字的起始位置，从0开始
      * @param string $CorrectWord 错别字纠错结果
-     * @param string $Word 错别字内容
      */
     function __construct()
     {
@@ -62,16 +62,16 @@ class CCIToken extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Word",$param) and $param["Word"] !== null) {
+            $this->Word = $param["Word"];
+        }
+
         if (array_key_exists("BeginOffset",$param) and $param["BeginOffset"] !== null) {
             $this->BeginOffset = $param["BeginOffset"];
         }
 
         if (array_key_exists("CorrectWord",$param) and $param["CorrectWord"] !== null) {
             $this->CorrectWord = $param["CorrectWord"];
-        }
-
-        if (array_key_exists("Word",$param) and $param["Word"] !== null) {
-            $this->Word = $param["Word"];
         }
     }
 }

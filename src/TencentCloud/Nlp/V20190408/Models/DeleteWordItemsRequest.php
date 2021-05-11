@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteWordItems请求参数结构体
  *
- * @method array getWordItems() 获取待删除的词条集合。
- * @method void setWordItems(array $WordItems) 设置待删除的词条集合。
  * @method string getDictId() 获取自定义词库ID。
  * @method void setDictId(string $DictId) 设置自定义词库ID。
+ * @method array getWordItems() 获取待删除的词条集合。
+ * @method void setWordItems(array $WordItems) 设置待删除的词条集合。
  */
 class DeleteWordItemsRequest extends AbstractModel
 {
-    /**
-     * @var array 待删除的词条集合。
-     */
-    public $WordItems;
-
     /**
      * @var string 自定义词库ID。
      */
     public $DictId;
 
     /**
-     * @param array $WordItems 待删除的词条集合。
+     * @var array 待删除的词条集合。
+     */
+    public $WordItems;
+
+    /**
      * @param string $DictId 自定义词库ID。
+     * @param array $WordItems 待删除的词条集合。
      */
     function __construct()
     {
@@ -54,6 +54,10 @@ class DeleteWordItemsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("DictId",$param) and $param["DictId"] !== null) {
+            $this->DictId = $param["DictId"];
+        }
+
         if (array_key_exists("WordItems",$param) and $param["WordItems"] !== null) {
             $this->WordItems = [];
             foreach ($param["WordItems"] as $key => $value){
@@ -61,10 +65,6 @@ class DeleteWordItemsRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->WordItems, $obj);
             }
-        }
-
-        if (array_key_exists("DictId",$param) and $param["DictId"] !== null) {
-            $this->DictId = $param["DictId"];
         }
     }
 }

@@ -22,10 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTokenId() 获取实例长期访问凭证 ID
  * @method void setTokenId(string $TokenId) 设置实例长期访问凭证 ID
- * @method boolean getEnable() 获取启用或禁用实例长期访问凭证
- * @method void setEnable(boolean $Enable) 设置启用或禁用实例长期访问凭证
  * @method string getRegistryId() 获取实例 ID
  * @method void setRegistryId(string $RegistryId) 设置实例 ID
+ * @method boolean getEnable() 获取启用或禁用实例长期访问凭证
+ * @method void setEnable(boolean $Enable) 设置启用或禁用实例长期访问凭证
+ * @method string getDesc() 获取访问凭证描述
+ * @method void setDesc(string $Desc) 设置访问凭证描述
+ * @method integer getModifyFlag() 获取1为修改描述 2为启动禁用，不填写默认为修改启动禁用
+ * @method void setModifyFlag(integer $ModifyFlag) 设置1为修改描述 2为启动禁用，不填写默认为修改启动禁用
  */
 class ModifyInstanceTokenRequest extends AbstractModel
 {
@@ -35,19 +39,31 @@ class ModifyInstanceTokenRequest extends AbstractModel
     public $TokenId;
 
     /**
-     * @var boolean 启用或禁用实例长期访问凭证
-     */
-    public $Enable;
-
-    /**
      * @var string 实例 ID
      */
     public $RegistryId;
 
     /**
+     * @var boolean 启用或禁用实例长期访问凭证
+     */
+    public $Enable;
+
+    /**
+     * @var string 访问凭证描述
+     */
+    public $Desc;
+
+    /**
+     * @var integer 1为修改描述 2为启动禁用，不填写默认为修改启动禁用
+     */
+    public $ModifyFlag;
+
+    /**
      * @param string $TokenId 实例长期访问凭证 ID
-     * @param boolean $Enable 启用或禁用实例长期访问凭证
      * @param string $RegistryId 实例 ID
+     * @param boolean $Enable 启用或禁用实例长期访问凭证
+     * @param string $Desc 访问凭证描述
+     * @param integer $ModifyFlag 1为修改描述 2为启动禁用，不填写默认为修改启动禁用
      */
     function __construct()
     {
@@ -66,12 +82,20 @@ class ModifyInstanceTokenRequest extends AbstractModel
             $this->TokenId = $param["TokenId"];
         }
 
+        if (array_key_exists("RegistryId",$param) and $param["RegistryId"] !== null) {
+            $this->RegistryId = $param["RegistryId"];
+        }
+
         if (array_key_exists("Enable",$param) and $param["Enable"] !== null) {
             $this->Enable = $param["Enable"];
         }
 
-        if (array_key_exists("RegistryId",$param) and $param["RegistryId"] !== null) {
-            $this->RegistryId = $param["RegistryId"];
+        if (array_key_exists("Desc",$param) and $param["Desc"] !== null) {
+            $this->Desc = $param["Desc"];
+        }
+
+        if (array_key_exists("ModifyFlag",$param) and $param["ModifyFlag"] !== null) {
+            $this->ModifyFlag = $param["ModifyFlag"];
         }
     }
 }

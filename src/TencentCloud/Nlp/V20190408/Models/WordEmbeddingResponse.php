@@ -20,24 +20,24 @@ use TencentCloud\Common\AbstractModel;
 /**
  * WordEmbedding返回参数结构体
  *
- * @method integer getDimension() 获取词向量的维度
- * @method void setDimension(integer $Dimension) 设置词向量的维度
  * @method array getVector() 获取词向量数组
  * @method void setVector(array $Vector) 设置词向量数组
+ * @method integer getDimension() 获取词向量的维度
+ * @method void setDimension(integer $Dimension) 设置词向量的维度
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class WordEmbeddingResponse extends AbstractModel
 {
     /**
-     * @var integer 词向量的维度
-     */
-    public $Dimension;
-
-    /**
      * @var array 词向量数组
      */
     public $Vector;
+
+    /**
+     * @var integer 词向量的维度
+     */
+    public $Dimension;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +45,8 @@ class WordEmbeddingResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Dimension 词向量的维度
      * @param array $Vector 词向量数组
+     * @param integer $Dimension 词向量的维度
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,12 +62,12 @@ class WordEmbeddingResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Dimension",$param) and $param["Dimension"] !== null) {
-            $this->Dimension = $param["Dimension"];
-        }
-
         if (array_key_exists("Vector",$param) and $param["Vector"] !== null) {
             $this->Vector = $param["Vector"];
+        }
+
+        if (array_key_exists("Dimension",$param) and $param["Dimension"] !== null) {
+            $this->Dimension = $param["Dimension"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

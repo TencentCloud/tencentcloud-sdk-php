@@ -30,9 +30,9 @@ md5hash：MD5（自定义密钥 + 文件路径 + timestamp）
 仅允许大小写字母与数字，长度 6~32 位
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getExpireTime() 获取签名过期时间设置
-单位为秒，最大可设置为 31536000
+单位为秒，最大可设置为 630720000
  * @method void setExpireTime(integer $ExpireTime) 设置签名过期时间设置
-单位为秒，最大可设置为 31536000
+单位为秒，最大可设置为 630720000
  * @method array getFileExtensions() 获取鉴权/不做鉴权的文件扩展名列表设置
 如果包含字符 *  则表示所有文件
  * @method void setFileExtensions(array $FileExtensions) 设置鉴权/不做鉴权的文件扩展名列表设置
@@ -67,7 +67,7 @@ class AuthenticationTypeD extends AbstractModel
 
     /**
      * @var integer 签名过期时间设置
-单位为秒，最大可设置为 31536000
+单位为秒，最大可设置为 630720000
      */
     public $ExpireTime;
 
@@ -107,7 +107,7 @@ hex：十六进制
 仅允许大小写字母与数字，长度 6~32 位
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ExpireTime 签名过期时间设置
-单位为秒，最大可设置为 31536000
+单位为秒，最大可设置为 630720000
      * @param array $FileExtensions 鉴权/不做鉴权的文件扩展名列表设置
 如果包含字符 *  则表示所有文件
      * @param string $FilterType whitelist：白名单，表示对除了 FileExtensions 列表之外的所有类型进行鉴权

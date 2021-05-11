@@ -33,6 +33,7 @@ use TencentCloud\Tcb\V20180608\Models as Models;
  * @method Models\CreatePostpayPackageResponse CreatePostpayPackage(Models\CreatePostpayPackageRequest $req) 开通后付费资源
  * @method Models\CreateStaticStoreResponse CreateStaticStore(Models\CreateStaticStoreRequest $req) 创建静态托管资源，包括COS和CDN，异步任务创建，查看创建结果需要根据DescribeStaticStore接口来查看
  * @method Models\CreateWxCloudBaseRunEnvResponse CreateWxCloudBaseRunEnv(Models\CreateWxCloudBaseRunEnvRequest $req) 创建微信云托管
+ * @method Models\CreateWxCloudBaseRunServerDBClusterResponse CreateWxCloudBaseRunServerDBCluster(Models\CreateWxCloudBaseRunServerDBClusterRequest $req) 开通微信云托管MySQL数据库服务
  * @method Models\DeleteCloudBaseProjectLatestVersionResponse DeleteCloudBaseProjectLatestVersion(Models\DeleteCloudBaseProjectLatestVersionRequest $req) 删除云项目
  * @method Models\DeleteEndUserResponse DeleteEndUser(Models\DeleteEndUserRequest $req) 删除终端用户
  * @method Models\DeleteWxGatewayRouteResponse DeleteWxGatewayRoute(Models\DeleteWxGatewayRouteRequest $req) 删除安全网关路由

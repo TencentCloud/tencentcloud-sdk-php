@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClsLogsetName(string $ClsLogsetName) 设置cls日志集
  * @method string getClsLogTopicId() 获取cls日志主题
  * @method void setClsLogTopicId(string $ClsLogTopicId) 设置cls日志主题
+ * @method string getClsLogsetId() 获取cls日志集id
+ * @method void setClsLogsetId(string $ClsLogsetId) 设置cls日志集id
+ * @method string getClsLogTopicName() 获取cls日志名称
+ * @method void setClsLogTopicName(string $ClsLogTopicName) 设置cls日志名称
  */
 class LogOutputConf extends AbstractModel
 {
@@ -45,9 +49,21 @@ class LogOutputConf extends AbstractModel
     public $ClsLogTopicId;
 
     /**
+     * @var string cls日志集id
+     */
+    public $ClsLogsetId;
+
+    /**
+     * @var string cls日志名称
+     */
+    public $ClsLogTopicName;
+
+    /**
      * @param string $OutputType 日志消费端类型
      * @param string $ClsLogsetName cls日志集
      * @param string $ClsLogTopicId cls日志主题
+     * @param string $ClsLogsetId cls日志集id
+     * @param string $ClsLogTopicName cls日志名称
      */
     function __construct()
     {
@@ -72,6 +88,14 @@ class LogOutputConf extends AbstractModel
 
         if (array_key_exists("ClsLogTopicId",$param) and $param["ClsLogTopicId"] !== null) {
             $this->ClsLogTopicId = $param["ClsLogTopicId"];
+        }
+
+        if (array_key_exists("ClsLogsetId",$param) and $param["ClsLogsetId"] !== null) {
+            $this->ClsLogsetId = $param["ClsLogsetId"];
+        }
+
+        if (array_key_exists("ClsLogTopicName",$param) and $param["ClsLogTopicName"] !== null) {
+            $this->ClsLogTopicName = $param["ClsLogTopicName"];
         }
     }
 }

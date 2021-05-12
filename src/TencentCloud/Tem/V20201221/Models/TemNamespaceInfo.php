@@ -54,6 +54,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTcbEnvStatus(string $TcbEnvStatus) 设置tcb环境状态
  * @method string getClusterStatus() 获取eks cluster status
  * @method void setClusterStatus(string $ClusterStatus) 设置eks cluster status
+ * @method boolean getEnableTswTraceService() 获取是否开启tsw
+ * @method void setEnableTswTraceService(boolean $EnableTswTraceService) 设置是否开启tsw
  */
 class TemNamespaceInfo extends AbstractModel
 {
@@ -139,6 +141,11 @@ class TemNamespaceInfo extends AbstractModel
     public $ClusterStatus;
 
     /**
+     * @var boolean 是否开启tsw
+     */
+    public $EnableTswTraceService;
+
+    /**
      * @param string $NamespaceId 命名空间id
      * @param string $Channel 渠道
      * @param string $NamespaceName 命名空间名称
@@ -156,6 +163,7 @@ class TemNamespaceInfo extends AbstractModel
      * @param string $SubnetId 子网络
      * @param string $TcbEnvStatus tcb环境状态
      * @param string $ClusterStatus eks cluster status
+     * @param boolean $EnableTswTraceService 是否开启tsw
      */
     function __construct()
     {
@@ -232,6 +240,10 @@ class TemNamespaceInfo extends AbstractModel
 
         if (array_key_exists("ClusterStatus",$param) and $param["ClusterStatus"] !== null) {
             $this->ClusterStatus = $param["ClusterStatus"];
+        }
+
+        if (array_key_exists("EnableTswTraceService",$param) and $param["EnableTswTraceService"] !== null) {
+            $this->EnableTswTraceService = $param["EnableTswTraceService"];
         }
     }
 }

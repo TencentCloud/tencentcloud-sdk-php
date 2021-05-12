@@ -40,9 +40,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFeeRenew(integer $FeeRenew) 设置溢价词的续费价格
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getRealPrice() 获取域名真实价格
+ * @method integer getRealPrice() 获取域名真实价格, 溢价词时价格跟年限有关，非溢价词时价格为1年的价格
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRealPrice(integer $RealPrice) 设置域名真实价格
+ * @method void setRealPrice(integer $RealPrice) 设置域名真实价格, 溢价词时价格跟年限有关，非溢价词时价格为1年的价格
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getFeeTransfer() 获取溢价词的转入价格
 注意：此字段可能返回 null，表示取不到有效值。
@@ -102,7 +102,7 @@ class CheckDomainResponse extends AbstractModel
     public $FeeRenew;
 
     /**
-     * @var integer 域名真实价格
+     * @var integer 域名真实价格, 溢价词时价格跟年限有关，非溢价词时价格为1年的价格
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RealPrice;
@@ -144,7 +144,7 @@ class CheckDomainResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FeeRenew 溢价词的续费价格
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $RealPrice 域名真实价格
+     * @param integer $RealPrice 域名真实价格, 溢价词时价格跟年限有关，非溢价词时价格为1年的价格
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FeeTransfer 溢价词的转入价格
 注意：此字段可能返回 null，表示取不到有效值。

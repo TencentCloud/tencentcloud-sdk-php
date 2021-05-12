@@ -26,6 +26,7 @@ use TencentCloud\Ic\V20190307\Models as Models;
  * @method Models\DescribeAppResponse DescribeApp(Models\DescribeAppRequest $req) 根据应用id查询物联卡应用详情
  * @method Models\DescribeCardResponse DescribeCard(Models\DescribeCardRequest $req) 查询卡片详细信息
  * @method Models\DescribeCardsResponse DescribeCards(Models\DescribeCardsRequest $req) 查询卡片列表信息
+ * @method Models\ModifyUserCardRemarkResponse ModifyUserCardRemark(Models\ModifyUserCardRemarkRequest $req) 编辑卡片备注
  * @method Models\RenewCardsResponse RenewCards(Models\RenewCardsRequest $req) 批量为卡片续费，此接口建议调用至少间隔10s,如果出现返回deal lock failed相关的错误，请过10s再重试。
 续费的必要条件：
 1、单次续费的卡片不可以超过 100张。

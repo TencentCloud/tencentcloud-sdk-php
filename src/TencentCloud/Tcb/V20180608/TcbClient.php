@@ -73,6 +73,7 @@ use TencentCloud\Tcb\V20180608\Models as Models;
  * @method Models\ModifyEndUserResponse ModifyEndUser(Models\ModifyEndUserRequest $req) 管理终端用户
  * @method Models\ModifyEnvResponse ModifyEnv(Models\ModifyEnvRequest $req) 更新环境信息
  * @method Models\ReinstateEnvResponse ReinstateEnv(Models\ReinstateEnvRequest $req) 针对已隔离的免费环境，可以通过本接口将其恢复访问。
+ * @method Models\RollUpdateCloudBaseRunServerVersionResponse RollUpdateCloudBaseRunServerVersion(Models\RollUpdateCloudBaseRunServerVersionRequest $req) 针对特定的版本，进行滚动更新
  */
 
 class TcbClient extends AbstractClient

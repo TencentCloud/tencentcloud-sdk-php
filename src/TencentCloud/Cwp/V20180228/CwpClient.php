@@ -29,6 +29,8 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\CreateBaselineStrategyResponse CreateBaselineStrategy(Models\CreateBaselineStrategyRequest $req) 根据策略信息创建基线策略
  * @method Models\CreateOpenPortTaskResponse CreateOpenPortTask(Models\CreateOpenPortTaskRequest $req) 本接口 (CreateOpenPortTask) 用于创建实时获取端口任务。
  * @method Models\CreateProcessTaskResponse CreateProcessTask(Models\CreateProcessTaskRequest $req) 本接口 (CreateProcessTask) 用于创建实时拉取进程任务。
+ * @method Models\CreateSearchLogResponse CreateSearchLog(Models\CreateSearchLogRequest $req) 添加历史搜索记录
+ * @method Models\CreateSearchTemplateResponse CreateSearchTemplate(Models\CreateSearchTemplateRequest $req) 添加检索模板
  * @method Models\CreateUsualLoginPlacesResponse CreateUsualLoginPlaces(Models\CreateUsualLoginPlacesRequest $req) 此接口（CreateUsualLoginPlaces）用于添加常用登录地。
  * @method Models\DeleteAttackLogsResponse DeleteAttackLogs(Models\DeleteAttackLogsRequest $req) 删除网络攻击日志
  * @method Models\DeleteBashEventsResponse DeleteBashEvents(Models\DeleteBashEventsRequest $req) 根据Ids删除高危命令事件
@@ -44,6 +46,7 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\DeletePrivilegeRulesResponse DeletePrivilegeRules(Models\DeletePrivilegeRulesRequest $req) 删除本地提权规则
  * @method Models\DeleteReverseShellEventsResponse DeleteReverseShellEvents(Models\DeleteReverseShellEventsRequest $req) 根据Ids删除反弹Shell事件
  * @method Models\DeleteReverseShellRulesResponse DeleteReverseShellRules(Models\DeleteReverseShellRulesRequest $req) 删除反弹Shell规则
+ * @method Models\DeleteSearchTemplateResponse DeleteSearchTemplate(Models\DeleteSearchTemplateRequest $req) 删除检索模板
  * @method Models\DeleteTagsResponse DeleteTags(Models\DeleteTagsRequest $req) 删除标签
  * @method Models\DeleteUsualLoginPlacesResponse DeleteUsualLoginPlaces(Models\DeleteUsualLoginPlacesRequest $req) 本接口（DeleteUsualLoginPlaces）用于删除常用登录地。
  * @method Models\DescribeAccountStatisticsResponse DescribeAccountStatistics(Models\DescribeAccountStatisticsRequest $req) 本接口 (DescribeAccountStatistics) 用于获取帐号统计列表数据。
@@ -59,12 +62,16 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\DescribeComponentInfoResponse DescribeComponentInfo(Models\DescribeComponentInfoRequest $req) 本接口 (DescribeComponentInfo) 用于获取组件信息数据。
  * @method Models\DescribeComponentStatisticsResponse DescribeComponentStatistics(Models\DescribeComponentStatisticsRequest $req) 本接口 (DescribeComponentStatistics) 用于获取组件统计列表数据。
  * @method Models\DescribeComponentsResponse DescribeComponents(Models\DescribeComponentsRequest $req) 本接口 (DescribeComponents) 用于获取组件列表数据。
+ * @method Models\DescribeESAggregationsResponse DescribeESAggregations(Models\DescribeESAggregationsRequest $req) 获取ES字段聚合结果
  * @method Models\DescribeESHitsResponse DescribeESHits(Models\DescribeESHitsRequest $req) 获取ES查询文档列表
  * @method Models\DescribeExportMachinesResponse DescribeExportMachines(Models\DescribeExportMachinesRequest $req) 本接口 (DescribeExportMachines) 用于导出区域主机列表。
  * @method Models\DescribeGeneralStatResponse DescribeGeneralStat(Models\DescribeGeneralStatRequest $req) 获取主机安全相关统计
  * @method Models\DescribeHistoryAccountsResponse DescribeHistoryAccounts(Models\DescribeHistoryAccountsRequest $req) 本接口 (DescribeHistoryAccounts) 用于获取帐号变更历史列表数据。
+ * @method Models\DescribeHistoryServiceResponse DescribeHistoryService(Models\DescribeHistoryServiceRequest $req) 查询日志检索服务信息
  * @method Models\DescribeImpactedHostsResponse DescribeImpactedHosts(Models\DescribeImpactedHostsRequest $req) 本接口 (DescribeImpactedHosts) 用于获取漏洞受影响机器列表。
  * @method Models\DescribeImportMachineInfoResponse DescribeImportMachineInfo(Models\DescribeImportMachineInfoRequest $req) 查询批量导入机器信息
+ * @method Models\DescribeIndexListResponse DescribeIndexList(Models\DescribeIndexListRequest $req) 获取索引列表
+ * @method Models\DescribeLogStorageStatisticResponse DescribeLogStorageStatistic(Models\DescribeLogStorageStatisticRequest $req) 获取日志检索容量使用统计
  * @method Models\DescribeLoginWhiteListResponse DescribeLoginWhiteList(Models\DescribeLoginWhiteListRequest $req) 获取异地登录白名单列表
  * @method Models\DescribeMachineInfoResponse DescribeMachineInfo(Models\DescribeMachineInfoRequest $req) 本接口（DescribeMachineInfo）用于获取机器详细信息。
  * @method Models\DescribeMachineListResponse DescribeMachineList(Models\DescribeMachineListRequest $req) 本接口 (DescribeMachineList) 用于网页防篡改获取区域主机列表。
@@ -90,6 +97,9 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\DescribeReverseShellRulesResponse DescribeReverseShellRules(Models\DescribeReverseShellRulesRequest $req) 获取反弹Shell规则列表
  * @method Models\DescribeRiskDnsListResponse DescribeRiskDnsList(Models\DescribeRiskDnsListRequest $req) 入侵检测，获取恶意请求列表
  * @method Models\DescribeScanMalwareScheduleResponse DescribeScanMalwareSchedule(Models\DescribeScanMalwareScheduleRequest $req) 查询木马扫描进度
+ * @method Models\DescribeSearchExportListResponse DescribeSearchExportList(Models\DescribeSearchExportListRequest $req) 导出ES查询文档列表
+ * @method Models\DescribeSearchLogsResponse DescribeSearchLogs(Models\DescribeSearchLogsRequest $req) 获取历史搜索记录
+ * @method Models\DescribeSearchTemplatesResponse DescribeSearchTemplates(Models\DescribeSearchTemplatesRequest $req) 获取快速检索列表
  * @method Models\DescribeSecurityDynamicsResponse DescribeSecurityDynamics(Models\DescribeSecurityDynamicsRequest $req) 本接口 (DescribeSecurityDynamics) 用于获取安全事件消息数据。
  * @method Models\DescribeSecurityEventsCntResponse DescribeSecurityEventsCnt(Models\DescribeSecurityEventsCntRequest $req) 概览页抽屉侧边弹窗：安全概览“立即处理”页面中的相关事件数统计接口。
  * @method Models\DescribeSecurityTrendsResponse DescribeSecurityTrends(Models\DescribeSecurityTrendsRequest $req) 本接口 (DescribeSecurityTrends) 用于获取安全事件统计数据。

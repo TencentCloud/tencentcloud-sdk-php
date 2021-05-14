@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOpenTo(string $OpenTo) 设置经营期限至（YYYY-MM-DD）
  * @method string getFrName() 获取法人姓名
  * @method void setFrName(string $FrName) 设置法人姓名
- * @method string getEnterpriseStatus() 获取经营状态（在营、注销、吊销、其他）
- * @method void setEnterpriseStatus(string $EnterpriseStatus) 设置经营状态（在营、注销、吊销、其他）
+ * @method string getEnterpriseStatus() 获取经营状态，包括：成立、筹建、存续、在营、开业、在册、正常经营、开业登记中、登记成立、撤销、撤销登记、非正常户、告解、个体暂时吊销、个体转企业、吊销（未注销）、拟注销、已注销、（待）迁入、（待）迁出、停业、歇业、清算等。
+ * @method void setEnterpriseStatus(string $EnterpriseStatus) 设置经营状态，包括：成立、筹建、存续、在营、开业、在册、正常经营、开业登记中、登记成立、撤销、撤销登记、非正常户、告解、个体暂时吊销、个体转企业、吊销（未注销）、拟注销、已注销、（待）迁入、（待）迁出、停业、歇业、清算等。
  * @method string getOperateScopeAndForm() 获取经营（业务）范围及方式
  * @method void setOperateScopeAndForm(string $OperateScopeAndForm) 设置经营（业务）范围及方式
  * @method string getRegCap() 获取注册资金（单位:万元）
@@ -124,7 +124,7 @@ class VerifyBizLicenseResponse extends AbstractModel
     public $FrName;
 
     /**
-     * @var string 经营状态（在营、注销、吊销、其他）
+     * @var string 经营状态，包括：成立、筹建、存续、在营、开业、在册、正常经营、开业登记中、登记成立、撤销、撤销登记、非正常户、告解、个体暂时吊销、个体转企业、吊销（未注销）、拟注销、已注销、（待）迁入、（待）迁出、停业、歇业、清算等。
      */
     public $EnterpriseStatus;
 
@@ -275,7 +275,7 @@ class VerifyBizLicenseResponse extends AbstractModel
      * @param string $OpenFrom 经营期限自（YYYY-MM-DD）
      * @param string $OpenTo 经营期限至（YYYY-MM-DD）
      * @param string $FrName 法人姓名
-     * @param string $EnterpriseStatus 经营状态（在营、注销、吊销、其他）
+     * @param string $EnterpriseStatus 经营状态，包括：成立、筹建、存续、在营、开业、在册、正常经营、开业登记中、登记成立、撤销、撤销登记、非正常户、告解、个体暂时吊销、个体转企业、吊销（未注销）、拟注销、已注销、（待）迁入、（待）迁出、停业、歇业、清算等。
      * @param string $OperateScopeAndForm 经营（业务）范围及方式
      * @param string $RegCap 注册资金（单位:万元）
      * @param string $RegCapCur 注册币种

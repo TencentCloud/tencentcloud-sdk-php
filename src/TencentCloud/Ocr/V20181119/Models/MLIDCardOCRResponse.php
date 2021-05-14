@@ -61,15 +61,17 @@ MyKad  身份证
 MyPR    永居证
 MyTentera   军官证
 MyKAS    临时身份证
-POLIS  警察
+POLIS  警察证
 IKAD   劳工证
+MyKid 儿童卡
  * @method void setType(string $Type) 设置证件类型
 MyKad  身份证
 MyPR    永居证
 MyTentera   军官证
 MyKAS    临时身份证
-POLIS  警察
+POLIS  警察证
 IKAD   劳工证
+MyKid 儿童卡
  * @method string getBirthday() 获取出生日期（目前该字段仅支持IKAD劳工证）
  * @method void setBirthday(string $Birthday) 设置出生日期（目前该字段仅支持IKAD劳工证）
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -129,8 +131,9 @@ MyKad  身份证
 MyPR    永居证
 MyTentera   军官证
 MyKAS    临时身份证
-POLIS  警察
+POLIS  警察证
 IKAD   劳工证
+MyKid 儿童卡
      */
     public $Type;
 
@@ -168,8 +171,9 @@ MyKad  身份证
 MyPR    永居证
 MyTentera   军官证
 MyKAS    临时身份证
-POLIS  警察
+POLIS  警察证
 IKAD   劳工证
+MyKid 儿童卡
      * @param string $Birthday 出生日期（目前该字段仅支持IKAD劳工证）
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

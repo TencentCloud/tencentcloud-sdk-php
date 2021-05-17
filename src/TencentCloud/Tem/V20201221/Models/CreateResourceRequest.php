@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getNamespaceId() 获取命名空间 Id
  * @method void setNamespaceId(string $NamespaceId) 设置命名空间 Id
- * @method string getResourceType() 获取资源类型
- * @method void setResourceType(string $ResourceType) 设置资源类型
+ * @method string getResourceType() 获取资源类型，目前支持文件系统：CFS；日志服务：CLS；注册中心：TSE_SRE
+ * @method void setResourceType(string $ResourceType) 设置资源类型，目前支持文件系统：CFS；日志服务：CLS；注册中心：TSE_SRE
  * @method string getResourceId() 获取资源 Id
  * @method void setResourceId(string $ResourceId) 设置资源 Id
- * @method integer getSourceChannel() 获取来源
- * @method void setSourceChannel(integer $SourceChannel) 设置来源
+ * @method integer getSourceChannel() 获取来源渠道
+ * @method void setSourceChannel(integer $SourceChannel) 设置来源渠道
  */
 class CreateResourceRequest extends AbstractModel
 {
@@ -37,7 +37,7 @@ class CreateResourceRequest extends AbstractModel
     public $NamespaceId;
 
     /**
-     * @var string 资源类型
+     * @var string 资源类型，目前支持文件系统：CFS；日志服务：CLS；注册中心：TSE_SRE
      */
     public $ResourceType;
 
@@ -47,15 +47,15 @@ class CreateResourceRequest extends AbstractModel
     public $ResourceId;
 
     /**
-     * @var integer 来源
+     * @var integer 来源渠道
      */
     public $SourceChannel;
 
     /**
      * @param string $NamespaceId 命名空间 Id
-     * @param string $ResourceType 资源类型
+     * @param string $ResourceType 资源类型，目前支持文件系统：CFS；日志服务：CLS；注册中心：TSE_SRE
      * @param string $ResourceId 资源 Id
-     * @param integer $SourceChannel 来源
+     * @param integer $SourceChannel 来源渠道
      */
     function __construct()
     {

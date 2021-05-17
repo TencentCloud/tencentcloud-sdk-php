@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * IKE配置（Internet Key Exchange，因特网密钥交换），IKE具有一套自我保护机制，用户配置网络安全协议
  *
- * @method string getPropoEncryAlgorithm() 获取加密算法，可选值：'3DES-CBC', 'AES-CBC-128', 'AES-CBS-192', 'AES-CBC-256', 'DES-CBC'，默认为3DES-CBC
- * @method void setPropoEncryAlgorithm(string $PropoEncryAlgorithm) 设置加密算法，可选值：'3DES-CBC', 'AES-CBC-128', 'AES-CBS-192', 'AES-CBC-256', 'DES-CBC'，默认为3DES-CBC
- * @method string getPropoAuthenAlgorithm() 获取认证算法：可选值：'MD5', 'SHA1'，默认为MD5
- * @method void setPropoAuthenAlgorithm(string $PropoAuthenAlgorithm) 设置认证算法：可选值：'MD5', 'SHA1'，默认为MD5
+ * @method string getPropoEncryAlgorithm() 获取加密算法，可选值：'3DES-CBC', 'AES-CBC-128', 'AES-CBS-192', 'AES-CBC-256', 'DES-CBC'，'SM4', 默认为3DES-CBC
+ * @method void setPropoEncryAlgorithm(string $PropoEncryAlgorithm) 设置加密算法，可选值：'3DES-CBC', 'AES-CBC-128', 'AES-CBS-192', 'AES-CBC-256', 'DES-CBC'，'SM4', 默认为3DES-CBC
+ * @method string getPropoAuthenAlgorithm() 获取认证算法：可选值：'MD5', 'SHA1'，'SHA-256' 默认为MD5
+ * @method void setPropoAuthenAlgorithm(string $PropoAuthenAlgorithm) 设置认证算法：可选值：'MD5', 'SHA1'，'SHA-256' 默认为MD5
  * @method string getExchangeMode() 获取协商模式：可选值：'AGGRESSIVE', 'MAIN'，默认为MAIN
  * @method void setExchangeMode(string $ExchangeMode) 设置协商模式：可选值：'AGGRESSIVE', 'MAIN'，默认为MAIN
  * @method string getLocalIdentity() 获取本端标识类型：可选值：'ADDRESS', 'FQDN'，默认为ADDRESS
@@ -48,12 +48,12 @@ use TencentCloud\Common\AbstractModel;
 class IKEOptionsSpecification extends AbstractModel
 {
     /**
-     * @var string 加密算法，可选值：'3DES-CBC', 'AES-CBC-128', 'AES-CBS-192', 'AES-CBC-256', 'DES-CBC'，默认为3DES-CBC
+     * @var string 加密算法，可选值：'3DES-CBC', 'AES-CBC-128', 'AES-CBS-192', 'AES-CBC-256', 'DES-CBC'，'SM4', 默认为3DES-CBC
      */
     public $PropoEncryAlgorithm;
 
     /**
-     * @var string 认证算法：可选值：'MD5', 'SHA1'，默认为MD5
+     * @var string 认证算法：可选值：'MD5', 'SHA1'，'SHA-256' 默认为MD5
      */
     public $PropoAuthenAlgorithm;
 
@@ -108,8 +108,8 @@ class IKEOptionsSpecification extends AbstractModel
     public $IKEVersion;
 
     /**
-     * @param string $PropoEncryAlgorithm 加密算法，可选值：'3DES-CBC', 'AES-CBC-128', 'AES-CBS-192', 'AES-CBC-256', 'DES-CBC'，默认为3DES-CBC
-     * @param string $PropoAuthenAlgorithm 认证算法：可选值：'MD5', 'SHA1'，默认为MD5
+     * @param string $PropoEncryAlgorithm 加密算法，可选值：'3DES-CBC', 'AES-CBC-128', 'AES-CBS-192', 'AES-CBC-256', 'DES-CBC'，'SM4', 默认为3DES-CBC
+     * @param string $PropoAuthenAlgorithm 认证算法：可选值：'MD5', 'SHA1'，'SHA-256' 默认为MD5
      * @param string $ExchangeMode 协商模式：可选值：'AGGRESSIVE', 'MAIN'，默认为MAIN
      * @param string $LocalIdentity 本端标识类型：可选值：'ADDRESS', 'FQDN'，默认为ADDRESS
      * @param string $RemoteIdentity 对端标识类型：可选值：'ADDRESS', 'FQDN'，默认为ADDRESS

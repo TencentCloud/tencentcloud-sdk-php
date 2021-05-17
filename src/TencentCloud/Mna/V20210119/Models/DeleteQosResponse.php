@@ -14,36 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tke\V20180525\Models;
+namespace TencentCloud\Mna\V20210119\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * SetNodePoolNodeProtection返回参数结构体
+ * DeleteQos返回参数结构体
  *
- * @method array getSucceedInstanceIds() 获取成功设置的节点id
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSucceedInstanceIds(array $SucceedInstanceIds) 设置成功设置的节点id
-注意：此字段可能返回 null，表示取不到有效值。
- * @method array getFailedInstanceIds() 获取没有成功设置的节点id
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFailedInstanceIds(array $FailedInstanceIds) 设置没有成功设置的节点id
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSessionId() 获取单次加速唯一 Id
+ * @method void setSessionId(string $SessionId) 设置单次加速唯一 Id
+ * @method integer getDuration() 获取本次加速会话持续时间（单位秒）
+ * @method void setDuration(integer $Duration) 设置本次加速会话持续时间（单位秒）
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class SetNodePoolNodeProtectionResponse extends AbstractModel
+class DeleteQosResponse extends AbstractModel
 {
     /**
-     * @var array 成功设置的节点id
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 单次加速唯一 Id
      */
-    public $SucceedInstanceIds;
+    public $SessionId;
 
     /**
-     * @var array 没有成功设置的节点id
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer 本次加速会话持续时间（单位秒）
      */
-    public $FailedInstanceIds;
+    public $Duration;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -51,10 +45,8 @@ class SetNodePoolNodeProtectionResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $SucceedInstanceIds 成功设置的节点id
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $FailedInstanceIds 没有成功设置的节点id
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SessionId 单次加速唯一 Id
+     * @param integer $Duration 本次加速会话持续时间（单位秒）
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -70,12 +62,12 @@ class SetNodePoolNodeProtectionResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SucceedInstanceIds",$param) and $param["SucceedInstanceIds"] !== null) {
-            $this->SucceedInstanceIds = $param["SucceedInstanceIds"];
+        if (array_key_exists("SessionId",$param) and $param["SessionId"] !== null) {
+            $this->SessionId = $param["SessionId"];
         }
 
-        if (array_key_exists("FailedInstanceIds",$param) and $param["FailedInstanceIds"] !== null) {
-            $this->FailedInstanceIds = $param["FailedInstanceIds"];
+        if (array_key_exists("Duration",$param) and $param["Duration"] !== null) {
+            $this->Duration = $param["Duration"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

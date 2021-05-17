@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeIngress返回参数结构体
  *
- * @method IngressInfo getResult() 获取ingressInfo
- * @method void setResult(IngressInfo $Result) 设置ingressInfo
+ * @method IngressInfo getResult() 获取Ingress 规则配置
+ * @method void setResult(IngressInfo $Result) 设置Ingress 规则配置
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeIngressResponse extends AbstractModel
 {
     /**
-     * @var IngressInfo ingressInfo
+     * @var IngressInfo Ingress 规则配置
      */
     public $Result;
 
@@ -38,7 +38,7 @@ class DescribeIngressResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param IngressInfo $Result ingressInfo
+     * @param IngressInfo $Result Ingress 规则配置
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

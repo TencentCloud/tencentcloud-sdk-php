@@ -20,14 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SetNodePoolNodeProtection请求参数结构体
  *
-
+ * @method string getClusterId() 获取集群id
+ * @method void setClusterId(string $ClusterId) 设置集群id
+ * @method string getNodePoolId() 获取节点池id
+ * @method void setNodePoolId(string $NodePoolId) 设置节点池id
+ * @method array getInstanceIds() 获取节点id
+ * @method void setInstanceIds(array $InstanceIds) 设置节点id
+ * @method boolean getProtectedFromScaleIn() 获取节点是否需要移出保护
+ * @method void setProtectedFromScaleIn(boolean $ProtectedFromScaleIn) 设置节点是否需要移出保护
  */
 class SetNodePoolNodeProtectionRequest extends AbstractModel
 {
-
+    /**
+     * @var string 集群id
+     */
+    public $ClusterId;
 
     /**
+     * @var string 节点池id
+     */
+    public $NodePoolId;
 
+    /**
+     * @var array 节点id
+     */
+    public $InstanceIds;
+
+    /**
+     * @var boolean 节点是否需要移出保护
+     */
+    public $ProtectedFromScaleIn;
+
+    /**
+     * @param string $ClusterId 集群id
+     * @param string $NodePoolId 节点池id
+     * @param array $InstanceIds 节点id
+     * @param boolean $ProtectedFromScaleIn 节点是否需要移出保护
      */
     function __construct()
     {
@@ -42,6 +70,20 @@ class SetNodePoolNodeProtectionRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
+            $this->ClusterId = $param["ClusterId"];
+        }
 
+        if (array_key_exists("NodePoolId",$param) and $param["NodePoolId"] !== null) {
+            $this->NodePoolId = $param["NodePoolId"];
+        }
+
+        if (array_key_exists("InstanceIds",$param) and $param["InstanceIds"] !== null) {
+            $this->InstanceIds = $param["InstanceIds"];
+        }
+
+        if (array_key_exists("ProtectedFromScaleIn",$param) and $param["ProtectedFromScaleIn"] !== null) {
+            $this->ProtectedFromScaleIn = $param["ProtectedFromScaleIn"];
+        }
     }
 }

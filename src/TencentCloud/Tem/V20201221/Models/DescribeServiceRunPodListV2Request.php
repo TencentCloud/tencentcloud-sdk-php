@@ -24,14 +24,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNamespaceId(string $NamespaceId) 设置环境id
  * @method string getServiceId() 获取服务名id
  * @method void setServiceId(string $ServiceId) 设置服务名id
- * @method integer getLimit() 获取单页条数
- * @method void setLimit(integer $Limit) 设置单页条数
- * @method integer getOffset() 获取分页下标
- * @method void setOffset(integer $Offset) 设置分页下标
- * @method string getStatus() 获取pod状态
- * @method void setStatus(string $Status) 设置pod状态
- * @method string getPodName() 获取名字
- * @method void setPodName(string $PodName) 设置名字
+ * @method integer getLimit() 获取单页条数，默认值20
+ * @method void setLimit(integer $Limit) 设置单页条数，默认值20
+ * @method integer getOffset() 获取分页下标，默认值0
+ * @method void setOffset(integer $Offset) 设置分页下标，默认值0
+ * @method string getStatus() 获取实例状态 
+- Running 
+- Pending 
+- Error
+ * @method void setStatus(string $Status) 设置实例状态 
+- Running 
+- Pending 
+- Error
+ * @method string getPodName() 获取实例名字
+ * @method void setPodName(string $PodName) 设置实例名字
  * @method integer getSourceChannel() 获取来源渠道
  * @method void setSourceChannel(integer $SourceChannel) 设置来源渠道
  */
@@ -48,22 +54,25 @@ class DescribeServiceRunPodListV2Request extends AbstractModel
     public $ServiceId;
 
     /**
-     * @var integer 单页条数
+     * @var integer 单页条数，默认值20
      */
     public $Limit;
 
     /**
-     * @var integer 分页下标
+     * @var integer 分页下标，默认值0
      */
     public $Offset;
 
     /**
-     * @var string pod状态
+     * @var string 实例状态 
+- Running 
+- Pending 
+- Error
      */
     public $Status;
 
     /**
-     * @var string 名字
+     * @var string 实例名字
      */
     public $PodName;
 
@@ -75,10 +84,13 @@ class DescribeServiceRunPodListV2Request extends AbstractModel
     /**
      * @param string $NamespaceId 环境id
      * @param string $ServiceId 服务名id
-     * @param integer $Limit 单页条数
-     * @param integer $Offset 分页下标
-     * @param string $Status pod状态
-     * @param string $PodName 名字
+     * @param integer $Limit 单页条数，默认值20
+     * @param integer $Offset 分页下标，默认值0
+     * @param string $Status 实例状态 
+- Running 
+- Pending 
+- Error
+     * @param string $PodName 实例名字
      * @param integer $SourceChannel 来源渠道
      */
     function __construct()

@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNamespaceId(string $NamespaceId) 设置namespace id
  * @method string getEksNamespace() 获取namespace
  * @method void setEksNamespace(string $EksNamespace) 设置namespace
- * @method integer getSourceChannel() 获取来源
- * @method void setSourceChannel(integer $SourceChannel) 设置来源
+ * @method integer getSourceChannel() 获取来源渠道
+ * @method void setSourceChannel(integer $SourceChannel) 设置来源渠道
  */
 class DescribeIngressesRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class DescribeIngressesRequest extends AbstractModel
     public $EksNamespace;
 
     /**
-     * @var integer 来源
+     * @var integer 来源渠道
      */
     public $SourceChannel;
 
     /**
      * @param string $NamespaceId namespace id
      * @param string $EksNamespace namespace
-     * @param integer $SourceChannel 来源
+     * @param integer $SourceChannel 来源渠道
      */
     function __construct()
     {

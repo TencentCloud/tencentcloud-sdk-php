@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnableStaticIp(boolean $EnableStaticIp) 设置是否开启固定IP模式
  * @method array getSubnets() 获取使用的容器子网
  * @method void setSubnets(array $Subnets) 设置使用的容器子网
+ * @method integer getExpiredSeconds() 获取在固定IP模式下，Pod销毁后退还IP的时间，传参必须大于300；不传默认IP永不销毁。
+ * @method void setExpiredSeconds(integer $ExpiredSeconds) 设置在固定IP模式下，Pod销毁后退还IP的时间，传参必须大于300；不传默认IP永不销毁。
  */
 class EnableVpcCniNetworkTypeRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class EnableVpcCniNetworkTypeRequest extends AbstractModel
     public $Subnets;
 
     /**
+     * @var integer 在固定IP模式下，Pod销毁后退还IP的时间，传参必须大于300；不传默认IP永不销毁。
+     */
+    public $ExpiredSeconds;
+
+    /**
      * @param string $ClusterId 集群ID
      * @param string $VpcCniType 开启vpc-cni的模式，tke-route-eni开启的是策略路由模式，tke-direct-eni开启的是独立网卡模式
      * @param boolean $EnableStaticIp 是否开启固定IP模式
      * @param array $Subnets 使用的容器子网
+     * @param integer $ExpiredSeconds 在固定IP模式下，Pod销毁后退还IP的时间，传参必须大于300；不传默认IP永不销毁。
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class EnableVpcCniNetworkTypeRequest extends AbstractModel
 
         if (array_key_exists("Subnets",$param) and $param["Subnets"] !== null) {
             $this->Subnets = $param["Subnets"];
+        }
+
+        if (array_key_exists("ExpiredSeconds",$param) and $param["ExpiredSeconds"] !== null) {
+            $this->ExpiredSeconds = $param["ExpiredSeconds"];
         }
     }
 }

@@ -35,6 +35,8 @@ use TencentCloud\Iotvideo\V20201215\Models as Models;
  * @method Models\DeleteFirmwareResponse DeleteFirmware(Models\DeleteFirmwareRequest $req) 本接口（DeleteFirmware）用于删除固件 
  * @method Models\DeleteForwardRuleResponse DeleteForwardRule(Models\DeleteForwardRuleRequest $req) 删除转发规则
  * @method Models\DeleteProductResponse DeleteProduct(Models\DeleteProductRequest $req) 删除产品
+ * @method Models\DescribeBalanceResponse DescribeBalance(Models\DescribeBalanceRequest $req) 查询账户余额
+ * @method Models\DescribeBalanceTransactionsResponse DescribeBalanceTransactions(Models\DescribeBalanceTransactionsRequest $req) 拉取账户流水
  * @method Models\DescribeBatchResponse DescribeBatch(Models\DescribeBatchRequest $req) 获取批次详情
  * @method Models\DescribeBatchsResponse DescribeBatchs(Models\DescribeBatchsRequest $req) 获取批次列表
  * @method Models\DescribeCategoryResponse DescribeCategory(Models\DescribeCategoryRequest $req) 获取Category详情

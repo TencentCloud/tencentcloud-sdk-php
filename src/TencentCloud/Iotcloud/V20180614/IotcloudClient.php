@@ -23,6 +23,7 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Iotcloud\V20180614\Models as Models;
 
 /**
+ * @method Models\BatchUpdateFirmwareResponse BatchUpdateFirmware(Models\BatchUpdateFirmwareRequest $req) 本接口（BatchUpdateFirmware）用于批量更新设备固件 
  * @method Models\BindDevicesResponse BindDevices(Models\BindDevicesRequest $req) 本接口（BindDevices）用于网关设备批量绑定子设备 
  * @method Models\CancelDeviceFirmwareTaskResponse CancelDeviceFirmwareTask(Models\CancelDeviceFirmwareTaskRequest $req) 取消设备升级任务
  * @method Models\CancelTaskResponse CancelTask(Models\CancelTaskRequest $req) 本接口（CancelTask）用于取消一个未被调度的任务。 
@@ -67,6 +68,7 @@ use TencentCloud\Iotcloud\V20180614\Models as Models;
  * @method Models\DisableTopicRuleResponse DisableTopicRule(Models\DisableTopicRuleRequest $req) 本接口（DisableTopicRule）用于禁用规则
  * @method Models\EditFirmwareResponse EditFirmware(Models\EditFirmwareRequest $req) 编辑固件信息
  * @method Models\EnableTopicRuleResponse EnableTopicRule(Models\EnableTopicRuleRequest $req) 本接口（EnableTopicRule）用于启用规则 
+ * @method Models\GetCOSURLResponse GetCOSURL(Models\GetCOSURLRequest $req) 本接口（GetCOSURL）用于获取固件存储在COS的URL 
  * @method Models\GetUserResourceInfoResponse GetUserResourceInfo(Models\GetUserResourceInfoRequest $req) 本接口（GetUserResourceInfo）用于查询用户资源使用信息。
  * @method Models\PublishAsDeviceResponse PublishAsDevice(Models\PublishAsDeviceRequest $req) 模拟lora类型的设备端向服务器端发送消息
  * @method Models\PublishBroadcastMessageResponse PublishBroadcastMessage(Models\PublishBroadcastMessageRequest $req) 发布广播消息

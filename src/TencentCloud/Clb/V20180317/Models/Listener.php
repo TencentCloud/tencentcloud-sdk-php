@@ -82,6 +82,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setToa(boolean $Toa) 设置仅支持Nat64 CLB TCP监听器
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getDeregisterTargetRst() 获取解绑后端目标时，是否发RST给客户端，（此参数仅对于TCP监听器有意义）。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDeregisterTargetRst(boolean $DeregisterTargetRst) 设置解绑后端目标时，是否发RST给客户端，（此参数仅对于TCP监听器有意义）。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Listener extends AbstractModel
 {
@@ -185,6 +189,12 @@ class Listener extends AbstractModel
     public $Toa;
 
     /**
+     * @var boolean 解绑后端目标时，是否发RST给客户端，（此参数仅对于TCP监听器有意义）。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DeregisterTargetRst;
+
+    /**
      * @param string $ListenerId 负载均衡监听器 ID
      * @param string $Protocol 监听器协议
      * @param integer $Port 监听器端口
@@ -215,6 +225,8 @@ class Listener extends AbstractModel
      * @param integer $KeepaliveEnable 是否开启长连接，1开启，0关闭，（本参数仅对于HTTP/HTTPS监听器有意义）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Toa 仅支持Nat64 CLB TCP监听器
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $DeregisterTargetRst 解绑后端目标时，是否发RST给客户端，（此参数仅对于TCP监听器有意义）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -304,6 +316,10 @@ class Listener extends AbstractModel
 
         if (array_key_exists("Toa",$param) and $param["Toa"] !== null) {
             $this->Toa = $param["Toa"];
+        }
+
+        if (array_key_exists("DeregisterTargetRst",$param) and $param["DeregisterTargetRst"] !== null) {
+            $this->DeregisterTargetRst = $param["DeregisterTargetRst"];
         }
     }
 }

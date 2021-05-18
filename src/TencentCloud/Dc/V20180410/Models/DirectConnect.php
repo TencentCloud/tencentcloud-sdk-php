@@ -128,13 +128,13 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLocalZone(boolean $LocalZone) 设置物理专线是否为LocalZone
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getVlanZeroDirectConnectTunnelCount() 获取该物理专线下vlan 0的专线通道数量
+ * @method integer getVlanZeroDirectConnectTunnelCount() 获取该物理专线下vlan 0的专用通道数量
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVlanZeroDirectConnectTunnelCount(integer $VlanZeroDirectConnectTunnelCount) 设置该物理专线下vlan 0的专线通道数量
+ * @method void setVlanZeroDirectConnectTunnelCount(integer $VlanZeroDirectConnectTunnelCount) 设置该物理专线下vlan 0的专用通道数量
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getOtherVlanDirectConnectTunnelCount() 获取该物理专线下非vlan 0的专线通道数量
+ * @method integer getOtherVlanDirectConnectTunnelCount() 获取该物理专线下非vlan 0的专用通道数量
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOtherVlanDirectConnectTunnelCount(integer $OtherVlanDirectConnectTunnelCount) 设置该物理专线下非vlan 0的专线通道数量
+ * @method void setOtherVlanDirectConnectTunnelCount(integer $OtherVlanDirectConnectTunnelCount) 设置该物理专线下非vlan 0的专用通道数量
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMinBandwidth() 获取物理专线最小带宽
 注意：此字段可能返回 null，表示取不到有效值。
@@ -314,13 +314,13 @@ class DirectConnect extends AbstractModel
     public $LocalZone;
 
     /**
-     * @var integer 该物理专线下vlan 0的专线通道数量
+     * @var integer 该物理专线下vlan 0的专用通道数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VlanZeroDirectConnectTunnelCount;
 
     /**
-     * @var integer 该物理专线下非vlan 0的专线通道数量
+     * @var integer 该物理专线下非vlan 0的专用通道数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OtherVlanDirectConnectTunnelCount;
@@ -386,9 +386,9 @@ class DirectConnect extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $LocalZone 物理专线是否为LocalZone
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $VlanZeroDirectConnectTunnelCount 该物理专线下vlan 0的专线通道数量
+     * @param integer $VlanZeroDirectConnectTunnelCount 该物理专线下vlan 0的专用通道数量
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $OtherVlanDirectConnectTunnelCount 该物理专线下非vlan 0的专线通道数量
+     * @param integer $OtherVlanDirectConnectTunnelCount 该物理专线下非vlan 0的专用通道数量
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MinBandwidth 物理专线最小带宽
 注意：此字段可能返回 null，表示取不到有效值。

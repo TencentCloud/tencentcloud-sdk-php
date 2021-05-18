@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置返回的Top库数量，最大值为100，默认为20。
  * @method string getSortBy() 获取筛选Top库所用的排序字段，可选字段包含DataLength、IndexLength、TotalLength、DataFree、FragRatio、TableRows、PhysicalFileSize（仅云数据库 MySQL实例支持），云数据库 MySQL实例默认为 PhysicalFileSize，其他产品实例默认为TotalLength。
  * @method void setSortBy(string $SortBy) 设置筛选Top库所用的排序字段，可选字段包含DataLength、IndexLength、TotalLength、DataFree、FragRatio、TableRows、PhysicalFileSize（仅云数据库 MySQL实例支持），云数据库 MySQL实例默认为 PhysicalFileSize，其他产品实例默认为TotalLength。
- * @method string getStartDate() 获取开始日期，最早为当日的前第29天，默认为截止日期的前第6天。
- * @method void setStartDate(string $StartDate) 设置开始日期，最早为当日的前第29天，默认为截止日期的前第6天。
- * @method string getEndDate() 获取截止日期，最早为当日的前第29天，默认为当日。
- * @method void setEndDate(string $EndDate) 设置截止日期，最早为当日的前第29天，默认为当日。
+ * @method string getStartDate() 获取开始日期，如“2021-01-01”，最早为当日的前第29天，默认为截止日期的前第6天。
+ * @method void setStartDate(string $StartDate) 设置开始日期，如“2021-01-01”，最早为当日的前第29天，默认为截止日期的前第6天。
+ * @method string getEndDate() 获取截止日期，如“2021-01-01”，最早为当日的前第29天，默认为当日。
+ * @method void setEndDate(string $EndDate) 设置截止日期，如“2021-01-01”，最早为当日的前第29天，默认为当日。
  * @method string getProduct() 获取服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL，默认为"mysql"。
  * @method void setProduct(string $Product) 设置服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL，默认为"mysql"。
  */
@@ -51,12 +51,12 @@ class DescribeTopSpaceSchemaTimeSeriesRequest extends AbstractModel
     public $SortBy;
 
     /**
-     * @var string 开始日期，最早为当日的前第29天，默认为截止日期的前第6天。
+     * @var string 开始日期，如“2021-01-01”，最早为当日的前第29天，默认为截止日期的前第6天。
      */
     public $StartDate;
 
     /**
-     * @var string 截止日期，最早为当日的前第29天，默认为当日。
+     * @var string 截止日期，如“2021-01-01”，最早为当日的前第29天，默认为当日。
      */
     public $EndDate;
 
@@ -69,8 +69,8 @@ class DescribeTopSpaceSchemaTimeSeriesRequest extends AbstractModel
      * @param string $InstanceId 实例ID。
      * @param integer $Limit 返回的Top库数量，最大值为100，默认为20。
      * @param string $SortBy 筛选Top库所用的排序字段，可选字段包含DataLength、IndexLength、TotalLength、DataFree、FragRatio、TableRows、PhysicalFileSize（仅云数据库 MySQL实例支持），云数据库 MySQL实例默认为 PhysicalFileSize，其他产品实例默认为TotalLength。
-     * @param string $StartDate 开始日期，最早为当日的前第29天，默认为截止日期的前第6天。
-     * @param string $EndDate 截止日期，最早为当日的前第29天，默认为当日。
+     * @param string $StartDate 开始日期，如“2021-01-01”，最早为当日的前第29天，默认为截止日期的前第6天。
+     * @param string $EndDate 截止日期，如“2021-01-01”，最早为当日的前第29天，默认为当日。
      * @param string $Product 服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL，默认为"mysql"。
      */
     function __construct()

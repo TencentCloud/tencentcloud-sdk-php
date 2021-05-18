@@ -18,7 +18,7 @@ namespace TencentCloud\Dc\V20180410\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 专线通道路由
+ * 专用通道路由
  *
  * @method string getRouteId() 获取专用通道路由ID
  * @method void setRouteId(string $RouteId) 设置专用通道路由ID

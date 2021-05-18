@@ -20,17 +20,24 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeClientBalance返回参数结构体
  *
- * @method integer getBalance() 获取账户余额，单位分
- * @method void setBalance(integer $Balance) 设置账户余额，单位分
+ * @method integer getBalance() 获取账户可用余额，单位分 （可用余额 = 现金余额 - 冻结金额）
+ * @method void setBalance(integer $Balance) 设置账户可用余额，单位分 （可用余额 = 现金余额 - 冻结金额）
+ * @method integer getCash() 获取账户现金余额，单位分
+ * @method void setCash(integer $Cash) 设置账户现金余额，单位分
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeClientBalanceResponse extends AbstractModel
 {
     /**
-     * @var integer 账户余额，单位分
+     * @var integer 账户可用余额，单位分 （可用余额 = 现金余额 - 冻结金额）
      */
     public $Balance;
+
+    /**
+     * @var integer 账户现金余额，单位分
+     */
+    public $Cash;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +45,8 @@ class DescribeClientBalanceResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Balance 账户余额，单位分
+     * @param integer $Balance 账户可用余额，单位分 （可用余额 = 现金余额 - 冻结金额）
+     * @param integer $Cash 账户现金余额，单位分
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -56,6 +64,10 @@ class DescribeClientBalanceResponse extends AbstractModel
         }
         if (array_key_exists("Balance",$param) and $param["Balance"] !== null) {
             $this->Balance = $param["Balance"];
+        }
+
+        if (array_key_exists("Cash",$param) and $param["Cash"] !== null) {
+            $this->Cash = $param["Cash"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

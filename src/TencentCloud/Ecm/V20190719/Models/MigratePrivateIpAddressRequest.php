@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * MigratePrivateIpAddress请求参数结构体
  *
- * @method string getEcmRegion() 获取ECM 地域
- * @method void setEcmRegion(string $EcmRegion) 设置ECM 地域
- * @method string getSourceNetworkInterfaceId() 获取当内网IP绑定的弹性网卡实例ID，例如：eni-11112222。
- * @method void setSourceNetworkInterfaceId(string $SourceNetworkInterfaceId) 设置当内网IP绑定的弹性网卡实例ID，例如：eni-11112222。
+ * @method string getEcmRegion() 获取ECM 地域，形如ap-xian-ecm。
+ * @method void setEcmRegion(string $EcmRegion) 设置ECM 地域，形如ap-xian-ecm。
+ * @method string getSourceNetworkInterfaceId() 获取当前内网IP绑定的弹性网卡实例ID，例如：eni-11112222。
+ * @method void setSourceNetworkInterfaceId(string $SourceNetworkInterfaceId) 设置当前内网IP绑定的弹性网卡实例ID，例如：eni-11112222。
  * @method string getDestinationNetworkInterfaceId() 获取待迁移的目的弹性网卡实例ID。
  * @method void setDestinationNetworkInterfaceId(string $DestinationNetworkInterfaceId) 设置待迁移的目的弹性网卡实例ID。
  * @method string getPrivateIpAddress() 获取迁移的内网IP地址，例如：10.0.0.6。
@@ -32,12 +32,12 @@ use TencentCloud\Common\AbstractModel;
 class MigratePrivateIpAddressRequest extends AbstractModel
 {
     /**
-     * @var string ECM 地域
+     * @var string ECM 地域，形如ap-xian-ecm。
      */
     public $EcmRegion;
 
     /**
-     * @var string 当内网IP绑定的弹性网卡实例ID，例如：eni-11112222。
+     * @var string 当前内网IP绑定的弹性网卡实例ID，例如：eni-11112222。
      */
     public $SourceNetworkInterfaceId;
 
@@ -52,8 +52,8 @@ class MigratePrivateIpAddressRequest extends AbstractModel
     public $PrivateIpAddress;
 
     /**
-     * @param string $EcmRegion ECM 地域
-     * @param string $SourceNetworkInterfaceId 当内网IP绑定的弹性网卡实例ID，例如：eni-11112222。
+     * @param string $EcmRegion ECM 地域，形如ap-xian-ecm。
+     * @param string $SourceNetworkInterfaceId 当前内网IP绑定的弹性网卡实例ID，例如：eni-11112222。
      * @param string $DestinationNetworkInterfaceId 待迁移的目的弹性网卡实例ID。
      * @param string $PrivateIpAddress 迁移的内网IP地址，例如：10.0.0.6。
      */

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * MigrateNetworkInterface请求参数结构体
  *
- * @method string getEcmRegion() 获取ECM 地域
- * @method void setEcmRegion(string $EcmRegion) 设置ECM 地域
+ * @method string getEcmRegion() 获取ECM 地域，形如ap-xian-ecm。
+ * @method void setEcmRegion(string $EcmRegion) 设置ECM 地域，形如ap-xian-ecm。
  * @method string getNetworkInterfaceId() 获取弹性网卡实例ID，例如：eni-m6dyj72l。
  * @method void setNetworkInterfaceId(string $NetworkInterfaceId) 设置弹性网卡实例ID，例如：eni-m6dyj72l。
  * @method string getSourceInstanceId() 获取弹性网卡当前绑定的ECM实例ID。形如：ein-r8hr2upy。
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class MigrateNetworkInterfaceRequest extends AbstractModel
 {
     /**
-     * @var string ECM 地域
+     * @var string ECM 地域，形如ap-xian-ecm。
      */
     public $EcmRegion;
 
@@ -52,7 +52,7 @@ class MigrateNetworkInterfaceRequest extends AbstractModel
     public $DestinationInstanceId;
 
     /**
-     * @param string $EcmRegion ECM 地域
+     * @param string $EcmRegion ECM 地域，形如ap-xian-ecm。
      * @param string $NetworkInterfaceId 弹性网卡实例ID，例如：eni-m6dyj72l。
      * @param string $SourceInstanceId 弹性网卡当前绑定的ECM实例ID。形如：ein-r8hr2upy。
      * @param string $DestinationInstanceId 待迁移的目的ECM实例ID。

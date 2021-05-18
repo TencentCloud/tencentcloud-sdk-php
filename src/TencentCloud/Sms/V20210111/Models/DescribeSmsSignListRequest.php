@@ -18,12 +18,12 @@ namespace TencentCloud\Sms\V20210111\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeSmsTemplateList请求参数结构体
+ * DescribeSmsSignList请求参数结构体
  *
- * @method array getTemplateIdSet() 获取模板 ID 数组。
-注：默认数组长度最大100。
- * @method void setTemplateIdSet(array $TemplateIdSet) 设置模板 ID 数组。
-注：默认数组长度最大100。
+ * @method array getSignIdSet() 获取签名 ID 数组。
+注：默认数组最大长度100。
+ * @method void setSignIdSet(array $SignIdSet) 设置签名 ID 数组。
+注：默认数组最大长度100。
  * @method integer getInternational() 获取是否国际/港澳台短信：
 0：表示国内短信。
 1：表示国际/港澳台短信。
@@ -31,13 +31,13 @@ use TencentCloud\Common\AbstractModel;
 0：表示国内短信。
 1：表示国际/港澳台短信。
  */
-class DescribeSmsTemplateListRequest extends AbstractModel
+class DescribeSmsSignListRequest extends AbstractModel
 {
     /**
-     * @var array 模板 ID 数组。
-注：默认数组长度最大100。
+     * @var array 签名 ID 数组。
+注：默认数组最大长度100。
      */
-    public $TemplateIdSet;
+    public $SignIdSet;
 
     /**
      * @var integer 是否国际/港澳台短信：
@@ -47,8 +47,8 @@ class DescribeSmsTemplateListRequest extends AbstractModel
     public $International;
 
     /**
-     * @param array $TemplateIdSet 模板 ID 数组。
-注：默认数组长度最大100。
+     * @param array $SignIdSet 签名 ID 数组。
+注：默认数组最大长度100。
      * @param integer $International 是否国际/港澳台短信：
 0：表示国内短信。
 1：表示国际/港澳台短信。
@@ -66,8 +66,8 @@ class DescribeSmsTemplateListRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TemplateIdSet",$param) and $param["TemplateIdSet"] !== null) {
-            $this->TemplateIdSet = $param["TemplateIdSet"];
+        if (array_key_exists("SignIdSet",$param) and $param["SignIdSet"] !== null) {
+            $this->SignIdSet = $param["SignIdSet"];
         }
 
         if (array_key_exists("International",$param) and $param["International"] !== null) {

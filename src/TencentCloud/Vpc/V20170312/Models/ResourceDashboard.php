@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * VPC资源看板（各资源个数）
  *
- * @method string getVpcId() 获取Vpc实例ID，例如：vpc-f1xjkw1b。
- * @method void setVpcId(string $VpcId) 设置Vpc实例ID，例如：vpc-f1xjkw1b。
+ * @method string getVpcId() 获取Vpc实例ID，例如：vpc-bq4bzxpj。
+ * @method void setVpcId(string $VpcId) 设置Vpc实例ID，例如：vpc-bq4bzxpj。
  * @method string getSubnetId() 获取子网实例ID，例如：subnet-bthucmmy。
  * @method void setSubnetId(string $SubnetId) 设置子网实例ID，例如：subnet-bthucmmy。
  * @method integer getClassiclink() 获取基础网络互通。
@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDcg(integer $Dcg) 设置专线网关。
  * @method integer getPcx() 获取对等连接。
  * @method void setPcx(integer $Pcx) 设置对等连接。
- * @method integer getIp() 获取当前已使用的IP总数。
- * @method void setIp(integer $Ip) 设置当前已使用的IP总数。
+ * @method integer getIp() 获取统计当前除云服务器 IP、弹性网卡IP和网络探测IP以外的所有已使用的IP总数。云服务器 IP、弹性网卡IP和网络探测IP单独计数。
+ * @method void setIp(integer $Ip) 设置统计当前除云服务器 IP、弹性网卡IP和网络探测IP以外的所有已使用的IP总数。云服务器 IP、弹性网卡IP和网络探测IP单独计数。
  * @method integer getNat() 获取NAT网关。
  * @method void setNat(integer $Nat) 设置NAT网关。
  * @method integer getVpngw() 获取VPN网关。
@@ -108,7 +108,7 @@ use TencentCloud\Common\AbstractModel;
 class ResourceDashboard extends AbstractModel
 {
     /**
-     * @var string Vpc实例ID，例如：vpc-f1xjkw1b。
+     * @var string Vpc实例ID，例如：vpc-bq4bzxpj。
      */
     public $VpcId;
 
@@ -133,7 +133,7 @@ class ResourceDashboard extends AbstractModel
     public $Pcx;
 
     /**
-     * @var integer 当前已使用的IP总数。
+     * @var integer 统计当前除云服务器 IP、弹性网卡IP和网络探测IP以外的所有已使用的IP总数。云服务器 IP、弹性网卡IP和网络探测IP单独计数。
      */
     public $Ip;
 
@@ -318,12 +318,12 @@ class ResourceDashboard extends AbstractModel
     public $RouteTable;
 
     /**
-     * @param string $VpcId Vpc实例ID，例如：vpc-f1xjkw1b。
+     * @param string $VpcId Vpc实例ID，例如：vpc-bq4bzxpj。
      * @param string $SubnetId 子网实例ID，例如：subnet-bthucmmy。
      * @param integer $Classiclink 基础网络互通。
      * @param integer $Dcg 专线网关。
      * @param integer $Pcx 对等连接。
-     * @param integer $Ip 当前已使用的IP总数。
+     * @param integer $Ip 统计当前除云服务器 IP、弹性网卡IP和网络探测IP以外的所有已使用的IP总数。云服务器 IP、弹性网卡IP和网络探测IP单独计数。
      * @param integer $Nat NAT网关。
      * @param integer $Vpngw VPN网关。
      * @param integer $FlowLog 流日志。

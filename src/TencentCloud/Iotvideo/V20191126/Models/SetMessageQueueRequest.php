@@ -25,21 +25,21 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getMsgQueueType() 获取消息队列类型 1-CMQ; 2-Ckafka
  * @method void setMsgQueueType(integer $MsgQueueType) 设置消息队列类型 1-CMQ; 2-Ckafka
  * @method string getMsgType() 获取消息类型,整型值（0-31）之间以“,”分隔
-0：在线状态变更
-1.固件版本变更
-2.设置参数变更
-3.控制状态变更
-4.状态信息变更
-5.事件发布
-6.系统事件
+0.设备在线状态变更
+1.常亮属性(ProConst)变更
+2.可写属性(ProWritable)变更
+3.只读属性(ProReadonly)变更
+4.设备控制(Action)
+5.设备事件(Event)
+6.系统事件(System)
  * @method void setMsgType(string $MsgType) 设置消息类型,整型值（0-31）之间以“,”分隔
-0：在线状态变更
-1.固件版本变更
-2.设置参数变更
-3.控制状态变更
-4.状态信息变更
-5.事件发布
-6.系统事件
+0.设备在线状态变更
+1.常亮属性(ProConst)变更
+2.可写属性(ProWritable)变更
+3.只读属性(ProReadonly)变更
+4.设备控制(Action)
+5.设备事件(Event)
+6.系统事件(System)
  * @method string getTopic() 获取消息队列主题，不超过32字符
  * @method void setTopic(string $Topic) 设置消息队列主题，不超过32字符
  * @method string getInstance() 获取kafka消息队列的实例名，不超过64字符
@@ -61,13 +61,13 @@ class SetMessageQueueRequest extends AbstractModel
 
     /**
      * @var string 消息类型,整型值（0-31）之间以“,”分隔
-0：在线状态变更
-1.固件版本变更
-2.设置参数变更
-3.控制状态变更
-4.状态信息变更
-5.事件发布
-6.系统事件
+0.设备在线状态变更
+1.常亮属性(ProConst)变更
+2.可写属性(ProWritable)变更
+3.只读属性(ProReadonly)变更
+4.设备控制(Action)
+5.设备事件(Event)
+6.系统事件(System)
      */
     public $MsgType;
 
@@ -90,13 +90,13 @@ class SetMessageQueueRequest extends AbstractModel
      * @param string $ProductId 产品ID
      * @param integer $MsgQueueType 消息队列类型 1-CMQ; 2-Ckafka
      * @param string $MsgType 消息类型,整型值（0-31）之间以“,”分隔
-0：在线状态变更
-1.固件版本变更
-2.设置参数变更
-3.控制状态变更
-4.状态信息变更
-5.事件发布
-6.系统事件
+0.设备在线状态变更
+1.常亮属性(ProConst)变更
+2.可写属性(ProWritable)变更
+3.只读属性(ProReadonly)变更
+4.设备控制(Action)
+5.设备事件(Event)
+6.系统事件(System)
      * @param string $Topic 消息队列主题，不超过32字符
      * @param string $Instance kafka消息队列的实例名，不超过64字符
      * @param string $MsgRegion 消息地域，不超过32字符
